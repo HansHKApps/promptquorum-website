@@ -11,11 +11,11 @@ export const app: ToolRecord = {
   categories: ['general-chat-clients'],
   interfaces: ['web'],
   locality: 'hybrid',
-  platforms: ['web'],
+  platforms: ['web', 'selfhosted', 'win', 'mac', 'linux', 'ios'], // README: web/self-host, Desktop App (Win/macOS/Linux; newest release with installers v2.15.8), iOS app for the hosted NextChatAI service; no Android build found
   worksWith: ['Ollama', 'OpenAI API', 'LocalAI'],
   engine: 'external',
   license: 'MIT',
-  price: 'free',
+  price: 'free', // self-hosted app is free; hosted NextChatAI (pay-as-you-go per repo description) and Enterprise Edition (contact only) priced separately, not reviewed; schema has no price-note field
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/ChatGPTNextWeb/NextChat README: a ~5MB compact client / ~100kb first-screen web app that only calls a configured LLM API (OpenAI-compatible, RWKV-Runner, LocalAI, etc.) — it never runs inference itself, so no GPU/VRAM of its own; verified 2026-09-13
   stars: 88938,
   addedDate: '2026-09-04',

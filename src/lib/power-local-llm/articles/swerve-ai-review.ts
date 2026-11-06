@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-en.webp',
@@ -49,14 +49,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories is a free, closed-source iPhone app for roleplay chats and branching stories, run as an online service, not local AI.** Reviewed version: 1.33.0, updated October 23, 2026, from public sources only, without hands-on testing.',
+      '**Swerve: AI Chat & Stories is an iPhone app for roleplay chats and branching stories, free to download with in-app purchases and with no public repository found; it runs as an online service, not local AI.** Reviewed version: 1.33.0, updated October 23, 2026, from public sources only, without hands-on testing.',
     quickAnswerTop: {
       en: {
         question: 'Is Swerve worth installing for AI character chat and stories on an iPhone?',
         answer:
           'Maybe, if you want a large library of ready-made characters and story controls in a mobile app and accept an online service. If you want characters that stay on local hardware, or a privacy notice without ad-network sharing, look at the local alternatives below.',
         bullets: [
-          'More than 500,000 community-created characters, plus your own, public or private.',
+          'The App Store listing says there are more than 500,000 community-created characters, plus your own, public or private.',
           'Story controls: multi-character scenes, personas, pinned memory, swipe, edit and branch from any message.',
           'Free download; a Pro tier and gem packs are in-app purchases.',
           'The privacy notice says identifiers and internet activity were sold or shared with ad networks in the past 12 months.',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Where it runs: the listing, website and notice name no AI model or host, and no on-device mode is documented.',
           'Age: rated 18+ on the App Store, with frequent sexual content or nudity listed in the age-rating details.',
           'Language: the listing is English only.',
-          'Openness: closed source; no public repository was found.',
+          'Openness: no public repository was found.',
         ],
       },
       getItSwerve: {
@@ -139,13 +139,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Attribute': 'Platform', 'Swerve': 'iPhone, iOS 18.0+' },
           { 'Attribute': 'Price', 'Swerve': 'Free, in-app purchases' },
-          { 'Attribute': 'License', 'Swerve': 'Closed source' },
+          { 'Attribute': 'License', 'Swerve': 'No public repository found' },
           { 'Attribute': 'Runs offline', 'Swerve': 'No on-device mode documented' },
           { 'Attribute': 'Group chats', 'Swerve': 'Yes, several characters per story' },
           { 'Attribute': 'Lorebooks / world info', 'Swerve': 'Not stated in the listing' },
           { 'Attribute': 'Age rating', 'Swerve': '18+' },
           { 'Attribute': 'Version / last update', 'Swerve': '1.33.0 / October 23, 2026' },
-          { 'Attribute': 'Store rating', 'Swerve': '4.7 of 5, about 37,000 App Store ratings (US)' },
+          { 'Attribute': 'Store rating', 'Swerve': '4.7 of 5, tens of thousands of ratings (US App Store)' },
           { 'Attribute': 'Interface language', 'Swerve': 'English' },
         ],
         note: 'Attributes follow the roleplay comparison used in the Local AI App Directory. They come from the App Store listing and website, which do not cover every feature.',
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Benefit': 'Large character library',
-            'What it means in real use': 'More than 500,000 community characters to start from.',
+            'What it means in real use': 'More than 500,000 community characters to start from, according to the listing.',
             'Limitation / caveat': 'Quality and moderation vary by character; none were tested here.',
           },
           {
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': 'Swerve',
             'Platforms': 'iPhone',
-            'Price and license': 'Freemium, closed source',
+            'Price and license': 'Freemium, no public repository found',
             'Where it runs': 'Developer\'s cloud service',
             'Key difference': 'Ready-made community characters; no desktop or Android build yet',
           },
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay)',
             'Platforms': 'Mac, Windows',
-            'Price and license': 'Freemium, closed source',
+            'Price and license': 'Freemium, no public repository found',
             'Where it runs': 'On your own computer',
             'Key difference': 'Characters run locally; desktop only',
           },
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Who Should Use Swerve',
         items: [
-          '**Adults who want ready-made characters on a phone.** The 500,000+ library saves building a cast from scratch.',
+          '**Adults who want ready-made characters on a phone.** The library the listing puts at 500,000+ characters saves building a cast from scratch.',
           '**Story players who like to steer.** Branching, editing and pinned memory give control over each scene.',
           '**Anyone happy with a cloud service.** Nothing in the listing promises offline or on-device use.',
         ],
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Anyone who needs offline or on-device chat.** [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay) runs characters on your own computer.',
           '**Android, Mac or Windows users.** Only an iPhone build exists; [RisuAI](/power-local-llm/risuai-review) covers web, desktop and mobile.',
-          '**Anyone who needs open source or a strict privacy posture.** The code is not public; read the notice under Pricing, Privacy and Data first.',
+          '**Anyone who needs open source or a strict privacy posture.** No public repository was found; read the notice under Pricing, Privacy and Data first.',
           '**Anyone under 18.** The app is rated and intended for adults.',
         ],
       },
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Swerve is a good fit on paper for adult iPhone users who want a big character catalog and fine control over interactive stories, and who are comfortable with a cloud service.',
-          'The caveats are transparency and privacy: it is closed source, names no AI provider, and its privacy notice describes sharing with ad networks.',
+          'The caveats are transparency and privacy: no public repository was found, it names no AI provider, and its privacy notice describes sharing with ad networks.',
           'If you want characters on your own hardware, start with [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay); if you want open source, try [RisuAI](/power-local-llm/risuai-review) or [Agnai](/power-local-llm/agnai-review).',
         ],
       },
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-de.webp',
@@ -385,14 +385,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories ist eine kostenlose, nicht quelloffene iPhone-App für KI-Charakter-Chats und verzweigte Geschichten, als Online-Dienst statt lokaler KI.** Geprüfte Version: 1.33.0, aktualisiert am 23. Oktober 2026, nur aus öffentlichen Quellen, ohne praktische Tests.',
+      '**Swerve: AI Chat & Stories ist eine iPhone-App für KI-Charakter-Chats und verzweigte Geschichten, kostenlos ladbar mit In-App-Käufen und ohne gefundenes öffentliches Repository; sie läuft als Online-Dienst statt als lokale KI.** Geprüfte Version: 1.33.0, aktualisiert am 23. Oktober 2026, nur aus öffentlichen Quellen, ohne praktische Tests.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich Swerve für KI-Charakter-Chat und Geschichten auf dem iPhone?',
         answer:
           'Vielleicht, wenn Sie eine große Bibliothek fertiger Charaktere und Story-Steuerung in einer mobilen App wollen und einen Online-Dienst akzeptieren. Wenn Sie Charaktere auf eigener Hardware oder einen Datenschutzhinweis ohne Weitergabe an Werbenetzwerke bevorzugen, sehen Sie sich die lokalen Alternativen unten an.',
         bullets: [
-          'Mehr als 500.000 Community-Charaktere, dazu eigene, öffentlich oder privat.',
+          'Laut App-Store-Eintrag mehr als 500.000 Community-Charaktere, dazu eigene, öffentlich oder privat.',
           'Story-Steuerung: Szenen mit mehreren Charakteren, Personas, fixiertes Gedächtnis, Wischen, Bearbeiten und Verzweigen ab jeder Nachricht.',
           'Kostenloser Download; ein Pro-Tarif und Gem-Pakete sind In-App-Käufe.',
           'Laut Datenschutzhinweis wurden Kennungen und Internetaktivität in den letzten 12 Monaten an Werbenetzwerke verkauft oder weitergegeben.',
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wo sie läuft: Eintrag, Website und Hinweis nennen kein KI-Modell und keinen Host; ein On-Device-Modus ist nicht dokumentiert.',
           'Alter: im App Store ab 18 Jahren eingestuft; die Altersdetails nennen häufige sexuelle Inhalte oder Nacktheit.',
           'Sprache: Der Eintrag ist nur auf Englisch.',
-          'Offenheit: nicht quelloffen; ein öffentliches Repository wurde nicht gefunden.',
+          'Offenheit: kein öffentlicher Quellcode bekannt; ein öffentliches Repository wurde nicht gefunden.',
         ],
       },
       getItSwerve: {
@@ -475,13 +475,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Merkmal': 'Plattform', 'Swerve': 'iPhone, iOS 18.0+' },
           { 'Merkmal': 'Preis', 'Swerve': 'Kostenlos, In-App-Käufe' },
-          { 'Merkmal': 'Lizenz', 'Swerve': 'Nicht quelloffen' },
+          { 'Merkmal': 'Lizenz', 'Swerve': 'Kein öffentliches Repository gefunden' },
           { 'Merkmal': 'Läuft offline', 'Swerve': 'Kein On-Device-Modus dokumentiert' },
           { 'Merkmal': 'Gruppenchats', 'Swerve': 'Ja, mehrere Charaktere pro Story' },
           { 'Merkmal': 'Lorebooks / World Info', 'Swerve': 'Im Eintrag nicht genannt' },
           { 'Merkmal': 'Altersfreigabe', 'Swerve': '18+' },
           { 'Merkmal': 'Version / letztes Update', 'Swerve': '1.33.0 / 23. Oktober 2026' },
-          { 'Merkmal': 'App-Store-Bewertung', 'Swerve': '4,7 von 5, rund 37.000 Bewertungen (US-Store)' },
+          { 'Merkmal': 'App-Store-Bewertung', 'Swerve': '4,7 von 5, zehntausende Bewertungen (US-App-Store)' },
           { 'Merkmal': 'Sprache der Oberfläche', 'Swerve': 'Englisch' },
         ],
         note: 'Die Merkmale folgen dem Rollenspiel-Vergleich des Local AI App Directory. Sie stammen aus App-Store-Eintrag und Website, die nicht jede Funktion abdecken.',
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Vorteil': 'Große Charakterbibliothek',
-            'Was das im Alltag bedeutet': 'Mehr als 500.000 Community-Charaktere als Ausgangspunkt.',
+            'Was das im Alltag bedeutet': 'Laut Eintrag mehr als 500.000 Community-Charaktere als Ausgangspunkt.',
             'Einschränkung / Hinweis': 'Qualität und Moderation schwanken je Charakter; hier wurde keiner getestet.',
           },
           {
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': 'Swerve',
             'Plattformen': 'iPhone',
-            'Preis und Lizenz': 'Freemium, nicht quelloffen',
+            'Preis und Lizenz': 'Freemium, kein öffentliches Repository gefunden',
             'Wo sie läuft': 'Cloud-Dienst des Entwicklers',
             'Wichtigster Unterschied': 'Fertige Community-Charaktere; noch kein Desktop- oder Android-Build',
           },
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay)',
             'Plattformen': 'Mac, Windows',
-            'Preis und Lizenz': 'Freemium, nicht quelloffen',
+            'Preis und Lizenz': 'Freemium, kein öffentliches Repository gefunden',
             'Wo sie läuft': 'Auf Ihrem eigenen Computer',
             'Wichtigster Unterschied': 'Charaktere laufen lokal; nur Desktop',
           },
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Für wen Swerve geeignet ist',
         items: [
-          '**Erwachsene, die fertige Charaktere auf dem Handy wollen.** Die Bibliothek mit über 500.000 Charakteren erspart es, eine Besetzung selbst aufzubauen.',
+          '**Erwachsene, die fertige Charaktere auf dem Handy wollen.** Die laut Eintrag über 500.000 Charaktere umfassende Bibliothek erspart es, eine Besetzung selbst aufzubauen.',
           '**Story-Spieler, die gern steuern.** Verzweigen, Bearbeiten und fixiertes Gedächtnis geben Kontrolle über jede Szene.',
           '**Alle, die mit einem Cloud-Dienst zufrieden sind.** Der Eintrag verspricht keine Offline- oder On-Device-Nutzung.',
         ],
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Alle, die Offline- oder On-Device-Chat brauchen.** [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay) führt Charaktere auf Ihrem eigenen Computer aus.',
           '**Android-, Mac- oder Windows-Nutzer.** Es gibt nur einen iPhone-Build; [RisuAI](/de/power-local-llm/risuai-review) deckt Web, Desktop und Mobil ab.',
-          '**Alle, die Open Source oder strengen Datenschutz brauchen.** Der Code ist nicht öffentlich; lesen Sie zuerst den Hinweis unter „Preise, Datenschutz und Daten“.',
+          '**Alle, die Open Source oder strengen Datenschutz brauchen.** Es wurde kein öffentliches Repository gefunden; lesen Sie zuerst den Hinweis unter „Preise, Datenschutz und Daten“.',
           '**Alle unter 18.** Die App ist für Erwachsene eingestuft und gedacht.',
         ],
       },
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           'Swerve passt auf dem Papier zu erwachsenen iPhone-Nutzern, die einen großen Charakterkatalog und feine Kontrolle über interaktive Geschichten wollen und mit einem Cloud-Dienst leben können.',
-          'Die Vorbehalte betreffen Transparenz und Datenschutz: Die App ist nicht quelloffen, nennt keinen KI-Anbieter, und ihr Datenschutzhinweis beschreibt eine Weitergabe an Werbenetzwerke.',
+          'Die Vorbehalte betreffen Transparenz und Datenschutz: Es wurde kein öffentliches Repository gefunden, die App nennt keinen KI-Anbieter, und ihr Datenschutzhinweis beschreibt eine Weitergabe an Werbenetzwerke.',
           'Wenn Sie Charaktere auf eigener Hardware wollen, beginnen Sie mit [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay); für Open Source probieren Sie [RisuAI](/de/power-local-llm/risuai-review) oder [Agnai](/de/power-local-llm/agnai-review).',
         ],
       },
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-fr.webp',
@@ -724,14 +724,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories est une appli iPhone gratuite et propriétaire de chat avec personnages IA et d’histoires à embranchements, en service en ligne, pas en IA locale.** Version testée : 1.33.0, mise à jour le 23 octobre 2026, d’après des sources publiques, sans essais pratiques.',
+      '**Swerve: AI Chat & Stories est une appli iPhone de chat avec personnages IA et d’histoires à embranchements, gratuite à télécharger avec achats intégrés, sans dépôt public trouvé, en service en ligne et non en IA locale.** Version 1.33.0 (23 octobre 2026), sources publiques, sans essais pratiques.',
     quickAnswerTop: {
       fr: {
         question: 'Swerve vaut-il l’installation pour le chat avec personnages IA et les histoires sur iPhone ?',
         answer:
           'Peut-être, si vous voulez une grande bibliothèque de personnages prêts à l’emploi et des commandes d’histoire dans une application mobile, et si vous acceptez un service en ligne. Si vous préférez des personnages sur votre propre matériel, ou un avis de confidentialité sans partage avec des réseaux publicitaires, consultez les alternatives locales ci-dessous.',
         bullets: [
-          'Plus de 500 000 personnages créés par la communauté, plus les vôtres, publics ou privés.',
+          'Selon la fiche App Store, plus de 500 000 personnages créés par la communauté, plus les vôtres, publics ou privés.',
           'Commandes d’histoire : scènes multi-personnages, personas, mémoire épinglée, balayage, modification et embranchement depuis n’importe quel message.',
           'Téléchargement gratuit ; une offre Pro et des packs de gems sont des achats intégrés.',
           'L’avis de confidentialité indique que des identifiants et de l’activité Internet ont été vendus ou partagés avec des réseaux publicitaires au cours des 12 derniers mois.',
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Où elle tourne : la fiche, le site et l’avis ne citent ni modèle d’IA ni hébergeur, et aucun mode sur l’appareil n’est documenté.',
           'Âge : classée 18+ sur l’App Store, avec des contenus sexuels ou de nudité fréquents indiqués dans les détails de classement.',
           'Langue : la fiche est uniquement en anglais.',
-          'Ouverture : code non public ; aucun dépôt public n’a été trouvé.',
+          'Ouverture : pas de code public connu ; aucun dépôt public n’a été trouvé.',
         ],
       },
       getItSwerve: {
@@ -814,13 +814,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Critère': 'Plateforme', 'Swerve': 'iPhone, iOS 18.0+' },
           { 'Critère': 'Prix', 'Swerve': 'Gratuit, achats intégrés' },
-          { 'Critère': 'Licence', 'Swerve': 'Code non public' },
+          { 'Critère': 'Licence', 'Swerve': 'Aucun dépôt public trouvé' },
           { 'Critère': 'Fonctionne hors ligne', 'Swerve': 'Aucun mode local documenté' },
           { 'Critère': 'Chats de groupe', 'Swerve': 'Oui, plusieurs personnages par histoire' },
           { 'Critère': 'Lorebooks / world info', 'Swerve': 'Non mentionné dans la fiche' },
           { 'Critère': 'Classement par âge', 'Swerve': '18+' },
           { 'Critère': 'Version / dernière MAJ', 'Swerve': '1.33.0 / 23 octobre 2026' },
-          { 'Critère': 'Note App Store', 'Swerve': '4.7 sur 5, environ 37 000 notes (store US)' },
+          { 'Critère': 'Note App Store', 'Swerve': '4.7 sur 5, des dizaines de milliers de notes (App Store US)' },
           { 'Critère': 'Langue de l’interface', 'Swerve': 'Anglais' },
         ],
         note: 'Les critères suivent la comparaison de jeu de rôle du Local AI App Directory. Ils proviennent de la fiche App Store et du site, qui ne couvrent pas toutes les fonctions.',
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Avantage': 'Grande bibliothèque de personnages',
-            'Ce que cela donne en pratique': 'Plus de 500 000 personnages de la communauté pour commencer.',
+            'Ce que cela donne en pratique': 'Plus de 500 000 personnages de la communauté selon la fiche, pour commencer.',
             'Limite / réserve': 'Qualité et modération varient selon le personnage ; aucun n’a été testé ici.',
           },
           {
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Application': 'Swerve',
             'Plateformes': 'iPhone',
-            'Prix et licence': 'Freemium, code non public',
+            'Prix et licence': 'Freemium, aucun dépôt public trouvé',
             'Où elle tourne': 'Service cloud du développeur',
             'Différence principale': 'Personnages communautaires prêts à l’emploi ; pas encore de version bureau ni Android',
           },
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Application': '[Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay)',
             'Plateformes': 'Mac, Windows',
-            'Prix et licence': 'Freemium, code non public',
+            'Prix et licence': 'Freemium, aucun dépôt public trouvé',
             'Où elle tourne': 'Sur votre propre ordinateur',
             'Différence principale': 'Personnages exécutés en local ; bureau uniquement',
           },
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Pour qui Swerve est adapté',
         items: [
-          '**Les adultes qui veulent des personnages prêts à l’emploi sur mobile.** La bibliothèque de plus de 500 000 personnages évite de constituer une distribution de zéro.',
+          '**Les adultes qui veulent des personnages prêts à l’emploi sur mobile.** La bibliothèque de plus de 500 000 personnages annoncée par la fiche évite de constituer une distribution de zéro.',
           '**Les joueurs d’histoires qui aiment piloter.** Embranchements, modification et mémoire épinglée donnent le contrôle de chaque scène.',
           '**Ceux qui sont à l’aise avec un service cloud.** Rien dans la fiche ne promet un usage hors ligne ou sur l’appareil.',
         ],
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ceux qui ont besoin d’un chat hors ligne ou sur l’appareil.** [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay) exécute les personnages sur votre propre ordinateur.',
           '**Les utilisateurs d’Android, de Mac ou de Windows.** Seule une version iPhone existe ; [RisuAI](/fr/power-local-llm/risuai-review) couvre web, bureau et mobile.',
-          '**Ceux qui exigent l’open source ou une confidentialité stricte.** Le code n’est pas public ; lisez d’abord l’avis sous « Prix, confidentialité et données ».',
+          '**Ceux qui exigent l’open source ou une confidentialité stricte.** Aucun dépôt public n’a été trouvé ; lisez d’abord l’avis sous « Prix, confidentialité et données ».',
           '**Les moins de 18 ans.** L’application est classée et destinée aux adultes.',
         ],
       },
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Sur le papier, Swerve convient aux adultes sur iPhone qui veulent un grand catalogue de personnages et un contrôle fin des histoires interactives, et qui acceptent un service cloud.',
-          'Les réserves tiennent à la transparence et à la confidentialité : le code n’est pas public, aucun fournisseur d’IA n’est cité, et l’avis de confidentialité décrit un partage avec des réseaux publicitaires.',
+          'Les réserves tiennent à la transparence et à la confidentialité : aucun dépôt public n’a été trouvé, aucun fournisseur d’IA n’est cité, et l’avis de confidentialité décrit un partage avec des réseaux publicitaires.',
           'Si vous voulez des personnages sur votre propre matériel, commencez par [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay) ; pour l’open source, essayez [RisuAI](/fr/power-local-llm/risuai-review) ou [Agnai](/fr/power-local-llm/agnai-review).',
         ],
       },
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-ja.webp',
@@ -1060,14 +1060,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories は、AIキャラクターとチャットし、分岐するストーリーを遊べる無料のクローズドソースiPhoneアプリです。ローカルAIアプリではなく、オンラインサービスです。** App Storeの掲載情報によると、iOS 18.0以降が必要です。このレビューはバージョン1.33.0（最終更新日：2026年10月23日）が対象で、公開されている掲載情報、公式サイト、プライバシー通知、利用規約に基づいており、実機での検証は行っていません。',
+      '**Swerve: AI Chat & Stories は、AIキャラクターとチャットし、分岐するストーリーを遊べるiPhoneアプリで、ダウンロードは無料でアプリ内課金があり、公開リポジトリは見つかっていません。ローカルAIアプリではなく、オンラインサービスです。** App Storeの掲載情報によると、iOS 18.0以降が必要です。このレビューはバージョン1.33.0（最終更新日：2026年10月23日）が対象で、公開されている掲載情報、公式サイト、プライバシー通知、利用規約に基づいており、実機での検証は行っていません。',
     quickAnswerTop: {
       ja: {
         question: 'iPhoneでAIキャラクターチャットやストーリーを楽しむなら、Swerveは入れる価値がありますか？',
         answer:
           '用意済みキャラクターの大きなライブラリとストーリー操作をモバイルアプリで使いたく、オンラインサービスで構わないなら、検討の余地があります。自分のハードウェアで動くキャラクターや、広告ネットワークへの共有がないプライバシー通知を求めるなら、後述のローカルの代替を確認してください。',
         bullets: [
-          'コミュニティ作成のキャラクターが50万体以上。自作も公開・非公開で作れます。',
+          'App Storeの掲載情報によると、コミュニティ作成のキャラクターが50万体以上。自作も公開・非公開で作れます。',
           'ストーリー操作：複数キャラクターの場面、ペルソナ、固定メモリ、スワイプ、編集、任意のメッセージからの分岐。',
           'ダウンロードは無料。Proプランとジェムパックはアプリ内課金です。',
           'プライバシー通知には、識別子とインターネット活動を過去12か月に広告ネットワークへ販売または共有したと記載されています。',
@@ -1113,7 +1113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '動作場所：掲載情報、公式サイト、通知のいずれもAIモデルやホストを明示しておらず、オンデバイスモードの記載もありません。',
           '年齢：App Storeでは18+。年齢区分の詳細には、性的な内容やヌードが頻繁に含まれると記載されています。',
           '言語：掲載情報は英語のみです。',
-          'オープン性：クローズドソース。公開リポジトリは見つかりませんでした。',
+          'オープン性：公開コードは確認できていません。公開リポジトリは見つかりませんでした。',
         ],
       },
       getItSwerve: {
@@ -1150,13 +1150,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '項目': 'プラットフォーム', 'Swerve': 'iPhone、iOS 18.0以降' },
           { '項目': '価格', 'Swerve': '無料（アプリ内課金あり）' },
-          { '項目': 'ライセンス', 'Swerve': 'クローズドソース' },
+          { '項目': 'ライセンス', 'Swerve': '公開リポジトリは見つかっていません' },
           { '項目': 'オフライン動作', 'Swerve': 'オンデバイスモードの記載なし' },
           { '項目': 'グループチャット', 'Swerve': '可（1つのストーリーに複数キャラ）' },
           { '項目': 'ロアブック／ワールド情報', 'Swerve': '掲載情報に記載なし' },
           { '項目': '年齢区分', 'Swerve': '18+' },
           { '項目': 'バージョン／最終更新', 'Swerve': '1.33.0／2026年10月23日' },
-          { '項目': 'App Storeの評価', 'Swerve': '5段階中4.7、約3万7千件（米国ストア）' },
+          { '項目': 'App Storeの評価', 'Swerve': '5段階中4.7、数万件の評価（米国App Store）' },
           { '項目': 'UI言語', 'Swerve': '英語' },
         ],
         note: '項目はLocal AI App Directoryのロールプレイ比較に準じています。内容はApp Storeの掲載情報と公式サイトに基づいており、すべての機能を網羅しているわけではありません。',
@@ -1209,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'メリット': '大規模なキャラクターライブラリ',
-            '実際の使い勝手': '50万体以上のコミュニティキャラクターから始められます。',
+            '実際の使い勝手': '掲載情報によると掲載情報によると50万体以上のコミュニティキャラクターから始められます。',
             '制約・注意点': '品質とコンテンツ管理はキャラクターごとに異なり、ここでは検証していません。',
           },
           {
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'アプリ': 'Swerve',
             '対応プラットフォーム': 'iPhone',
-            '価格とライセンス': 'フリーミアム、クローズドソース',
+            '価格とライセンス': 'フリーミアム、公開リポジトリは見つかっていません',
             '動作場所': '開発元のクラウドサービス',
             '主な違い': '用意済みのコミュニティキャラクター。デスクトップ版・Android版はまだなし',
           },
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'アプリ': '[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay)',
             '対応プラットフォーム': 'Mac、Windows',
-            '価格とライセンス': 'フリーミアム、クローズドソース',
+            '価格とライセンス': 'フリーミアム、公開リポジトリは見つかっていません',
             '動作場所': '自分のコンピューター上',
             '主な違い': 'キャラクターがローカルで動作。デスクトップのみ',
           },
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Swerveが向いている人',
         items: [
-          '**用意済みのキャラクターをスマホで使いたい成人。** 50万体以上のライブラリがあるので、一からキャラクターを揃える手間が省けます。',
+          '**用意済みのキャラクターをスマホで使いたい成人。** 掲載情報で50万体以上とされるライブラリがあるので、一からキャラクターを揃える手間が省けます。',
           '**ストーリーを自分で操作したいプレイヤー。** 分岐、編集、固定メモリで各場面をコントロールできます。',
           '**クラウドサービスで問題ない人。** 掲載情報にはオフラインやオンデバイスでの利用の記載はありません。',
         ],
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**オフラインやオンデバイスのチャットが必要な人。** [Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay)なら自分のコンピューター上でキャラクターを動かせます。',
           '**Android、Mac、Windowsのユーザー。** iPhone版しかありません。[RisuAI](/ja/power-local-llm/risuai-review)はWeb、デスクトップ、モバイルに対応しています。',
-          '**オープンソースや厳格なプライバシーが必要な人。** コードは非公開です。まず「料金・プライバシー・データ」の通知の内容を確認してください。',
+          '**オープンソースや厳格なプライバシーが必要な人。** 公開リポジトリは見つかっていません。まず「料金・プライバシー・データ」の通知の内容を確認してください。',
           '**18歳未満の人。** このアプリは成人向けの区分・想定です。',
         ],
       },
@@ -1333,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '結論',
         content: [
           'Swerveは、大規模なキャラクターカタログとインタラクティブなストーリーの細かな操作を求め、クラウドサービスで構わない成人のiPhoneユーザーに、紙の上では適しています。',
-          '注意点は透明性とプライバシーです。クローズドソースで、AIプロバイダーは明記されておらず、プライバシー通知には広告ネットワークへの共有が記載されています。',
+          '注意点は透明性とプライバシーです。公開リポジトリは見つかっておらず、AIプロバイダーは明記されておらず、プライバシー通知には広告ネットワークへの共有が記載されています。',
           '自分のハードウェアでキャラクターを動かしたいなら[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay)から、オープンソースなら[RisuAI](/ja/power-local-llm/risuai-review)や[Agnai](/ja/power-local-llm/agnai-review)を試してください。',
         ],
       },
@@ -1366,7 +1366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-zh.webp',
@@ -1396,14 +1396,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories 是一款免费、闭源的iPhone应用，用于与AI角色聊天并游玩分支故事；它是在线服务，而非本地AI应用。** 根据App Store页面，它需要iOS 18.0或更高版本。本评测针对1.33.0版本（最后更新于2026年10月23日），依据公开的页面、官网、隐私声明和条款，并非实际上手测试。',
+      '**Swerve: AI Chat & Stories 是一款用于与AI角色聊天并游玩分支故事的iPhone应用，可免费下载并含应用内购买，未找到公开代码仓库；它是在线服务，而非本地AI应用。** 根据App Store页面，它需要iOS 18.0或更高版本。本评测针对1.33.0版本（最后更新于2026年10月23日），依据公开的页面、官网、隐私声明和条款，并非实际上手测试。',
     quickAnswerTop: {
       zh: {
         question: '想在iPhone上玩AI角色聊天和故事，Swerve值得安装吗？',
         answer:
           '如果你想在手机应用里使用大量现成角色和故事控制功能，并且接受在线服务，可以考虑。如果你更看重角色在自有硬件上运行，或希望隐私声明中没有向广告网络共享数据，请看下文的本地替代品。',
         bullets: [
-          '超过50万个社区创建的角色，也可自建角色并选择公开或私有。',
+          'App Store页面称有超过50万个社区创建的角色，也可自建角色并选择公开或私有。',
           '故事控制：多角色场景、人设、固定记忆、滑动换回复、编辑，并可从任意消息开启新分支。',
           '免费下载；Pro档位和宝石包为应用内购买。',
           '隐私声明称，过去12个月内标识符和互联网活动数据曾被出售或共享给广告网络。',
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '运行位置：页面、官网和声明均未说明所用AI模型或托管方，也没有记载设备端模式。',
           '年龄：App Store分级为18+，年龄分级详情列出频繁出现的性内容或裸露。',
           '语言：页面仅提供英文。',
-          '开放性：闭源；未找到公开代码仓库。',
+          '开放性：未找到公开代码仓库。',
         ],
       },
       getItSwerve: {
@@ -1486,13 +1486,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '属性': '平台', 'Swerve': 'iPhone，iOS 18.0+' },
           { '属性': '价格', 'Swerve': '免费，含应用内购买' },
-          { '属性': '许可证', 'Swerve': '闭源' },
+          { '属性': '许可证', 'Swerve': '未找到公开代码仓库' },
           { '属性': '可离线运行', 'Swerve': '未记载设备端模式' },
           { '属性': '群聊', 'Swerve': '支持，一个故事可有多个角色' },
           { '属性': '设定集 / 世界信息', 'Swerve': '页面未说明' },
           { '属性': '年龄分级', 'Swerve': '18+' },
           { '属性': '版本 / 最近更新', 'Swerve': '1.33.0 / 2026年10月23日' },
-          { '属性': 'App Store评分', 'Swerve': '4.7 / 5，约3.7万个评分（美国商店）' },
+          { '属性': 'App Store评分', 'Swerve': '4.7 / 5，数万个评分（美国App Store）' },
           { '属性': '界面语言', 'Swerve': '英语' },
         ],
         note: '这些属性沿用Local AI App Directory的角色扮演对比项，来自App Store页面和官网，并未覆盖所有功能。',
@@ -1545,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '优势': '庞大的角色库',
-            '实际使用中的意义': '可从超过50万个社区角色开始。',
+            '实际使用中的意义': '据页面称，据页面称，可从超过50万个社区角色开始。',
             '局限 / 注意事项': '角色质量和审核情况因角色而异，此处均未测试。',
           },
           {
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '应用': 'Swerve',
             '平台': 'iPhone',
-            '价格与许可证': '免费增值，闭源',
+            '价格与许可证': '免费增值，未找到公开代码仓库',
             '运行位置': '开发者的云端服务',
             '主要区别': '现成的社区角色；暂无桌面版或Android版',
           },
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '应用': '[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay)',
             '平台': 'Mac、Windows',
-            '价格与许可证': '免费增值，闭源',
+            '价格与许可证': '免费增值，未找到公开代码仓库',
             '运行位置': '在你自己的电脑上',
             '主要区别': '角色在本地运行；仅限桌面',
           },
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: '适合使用Swerve的人',
         items: [
-          '**想在手机上使用现成角色的成年人。** 50万个以上的角色库省去了从零搭建阵容的工作。',
+          '**想在手机上使用现成角色的成年人。** 页面称有50万个以上的角色库，省去了从零搭建阵容的工作。',
           '**喜欢掌控剧情的故事玩家。** 分支、编辑和固定记忆让你能控制每一个场景。',
           '**能接受云端服务的人。** 页面没有承诺离线或设备端使用。',
         ],
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**需要离线或设备端聊天的人。** [Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay)在你自己的电脑上运行角色。',
           '**Android、Mac或Windows用户。** 目前只有iPhone版；[RisuAI](/zh/power-local-llm/risuai-review)覆盖网页、桌面和移动端。',
-          '**需要开源或严格隐私保障的人。** 代码不公开；请先阅读“价格、隐私与数据”中的声明。',
+          '**需要开源或严格隐私保障的人。** 未找到公开代码仓库；请先阅读“价格、隐私与数据”中的声明。',
           '**18岁以下的人。** 该应用按成年人分级，也面向成年人。',
         ],
       },
@@ -1669,7 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '从纸面上看，Swerve适合想要庞大角色库和精细互动故事控制、并能接受云端服务的成年iPhone用户。',
-          '需要注意的是透明度和隐私：它是闭源的，没有点名AI提供方，隐私声明还描述了向广告网络的共享。',
+          '需要注意的是透明度和隐私：未找到公开代码仓库，也没有点名AI提供方，隐私声明还描述了向广告网络的共享。',
           '如果想让角色在自有硬件上运行，请先看[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay)；想要开源，可试试[RisuAI](/zh/power-local-llm/risuai-review)或[Agnai](/zh/power-local-llm/agnai-review)。',
         ],
       },
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-es.webp',
@@ -1735,14 +1735,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories es una app gratuita y de código cerrado para iPhone de chat con personajes de IA e historias ramificadas, como servicio en línea, no IA local.** Versión analizada: 1.33.0, actualizada el 23 de octubre de 2026, según fuentes públicas, sin pruebas prácticas.',
+      '**Swerve: AI Chat & Stories es una app para iPhone de chat con personajes de IA e historias ramificadas, de descarga gratuita con compras en la app, sin repositorio público encontrado, servicio en línea, no IA local.** Versión 1.33.0 (23 de octubre de 2026), fuentes públicas, sin pruebas prácticas.',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena instalar Swerve para chatear con personajes de IA y jugar historias en el iPhone?',
         answer:
           'Quizá, si quieres una gran biblioteca de personajes ya hechos y controles de historia en una app móvil, y aceptas un servicio en línea. Si prefieres personajes en tu propio hardware, o un aviso de privacidad sin compartición con redes publicitarias, mira las alternativas locales de abajo.',
         bullets: [
-          'Más de 500.000 personajes creados por la comunidad, además de los tuyos, públicos o privados.',
+          'Según la ficha de la App Store, más de 500.000 personajes creados por la comunidad, además de los tuyos, públicos o privados.',
           'Controles de historia: escenas con varios personajes, personas, memoria fijada, deslizar, editar y ramificar desde cualquier mensaje.',
           'Descarga gratuita; un nivel Pro y paquetes de gemas son compras dentro de la app.',
           'El aviso de privacidad dice que identificadores y actividad en internet se vendieron o compartieron con redes publicitarias en los últimos 12 meses.',
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dónde se ejecuta: la ficha, el sitio y el aviso no nombran ningún modelo de IA ni proveedor de alojamiento, y no se documenta un modo en el dispositivo.',
           'Edad: clasificada 18+ en la App Store, con contenido sexual o desnudez frecuentes en los detalles de clasificación.',
           'Idioma: la ficha está solo en inglés.',
-          'Apertura: código cerrado; no se encontró un repositorio público.',
+          'Apertura: sin código público conocido; no se encontró un repositorio público.',
         ],
       },
       getItSwerve: {
@@ -1825,13 +1825,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Atributo': 'Plataforma', 'Swerve': 'iPhone, iOS 18.0+' },
           { 'Atributo': 'Precio', 'Swerve': 'Gratis, compras en la app' },
-          { 'Atributo': 'Licencia', 'Swerve': 'Código cerrado' },
+          { 'Atributo': 'Licencia', 'Swerve': 'No se encontró un repositorio público' },
           { 'Atributo': 'Funciona sin conexión', 'Swerve': 'Sin modo local documentado' },
           { 'Atributo': 'Chats grupales', 'Swerve': 'Sí, varios personajes por historia' },
           { 'Atributo': 'Lorebooks / world info', 'Swerve': 'No se menciona en la ficha' },
           { 'Atributo': 'Clasificación por edad', 'Swerve': '18+' },
           { 'Atributo': 'Versión / última act.', 'Swerve': '1.33.0 / 23 de octubre de 2026' },
-          { 'Atributo': 'Valoración en la tienda', 'Swerve': '4.7 de 5, unas 37.000 valoraciones de la App Store (EE. UU.)' },
+          { 'Atributo': 'Valoración en la tienda', 'Swerve': '4.7 de 5, decenas de miles de valoraciones (App Store de EE. UU.)' },
           { 'Atributo': 'Idioma de la interfaz', 'Swerve': 'Inglés' },
         ],
         note: 'Los atributos siguen la comparativa de rol del Local AI App Directory. Proceden de la ficha de la App Store y del sitio web, que no cubren todas las funciones.',
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Ventaja': 'Gran biblioteca de personajes',
-            'Qué significa en el uso real': 'Más de 500.000 personajes de la comunidad para empezar.',
+            'Qué significa en el uso real': 'Más de 500.000 personajes de la comunidad según la ficha para empezar.',
             'Limitación / salvedad': 'La calidad y la moderación varían según el personaje; aquí no se probó ninguno.',
           },
           {
@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': 'Swerve',
             'Plataformas': 'iPhone',
-            'Precio y licencia': 'Freemium, código cerrado',
+            'Precio y licencia': 'Freemium, no se encontró un repositorio público',
             'Dónde se ejecuta': 'Servicio en la nube del desarrollador',
             'Diferencia clave': 'Personajes de la comunidad ya hechos; aún sin versión de escritorio ni Android',
           },
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay)',
             'Plataformas': 'Mac, Windows',
-            'Precio y licencia': 'Freemium, código cerrado',
+            'Precio y licencia': 'Freemium, no se encontró un repositorio público',
             'Dónde se ejecuta': 'En tu propio ordenador',
             'Diferencia clave': 'Los personajes se ejecutan en local; solo escritorio',
           },
@@ -1950,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Para quién es Swerve',
         items: [
-          '**Adultos que quieren personajes ya hechos en el móvil.** La biblioteca de más de 500.000 personajes evita montar un reparto desde cero.',
+          '**Adultos que quieren personajes ya hechos en el móvil.** La biblioteca de más de 500.000 personajes que indica la ficha evita montar un reparto desde cero.',
           '**Jugadores de historias a los que les gusta dirigir.** Ramificar, editar y la memoria fijada dan control sobre cada escena.',
           '**Quien se sienta cómodo con un servicio en la nube.** Nada en la ficha promete uso sin conexión ni en el dispositivo.',
         ],
@@ -1961,7 +1961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Quien necesite chat sin conexión o en el dispositivo.** [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay) ejecuta los personajes en tu propio ordenador.',
           '**Usuarios de Android, Mac o Windows.** Solo existe una versión para iPhone; [RisuAI](/es/power-local-llm/risuai-review) cubre web, escritorio y móvil.',
-          '**Quien necesite código abierto o una privacidad estricta.** El código no es público; lee primero el aviso en «Precios, privacidad y datos».',
+          '**Quien necesite código abierto o una privacidad estricta.** No se encontró un repositorio público; lee primero el aviso en «Precios, privacidad y datos».',
           '**Menores de 18 años.** La app está clasificada y pensada para adultos.',
         ],
       },
@@ -2008,7 +2008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           'Swerve encaja, sobre el papel, con adultos usuarios de iPhone que quieren un gran catálogo de personajes y un control detallado de historias interactivas, y que están cómodos con un servicio en la nube.',
-          'Las salvedades son la transparencia y la privacidad: es de código cerrado, no nombra ningún proveedor de IA y su aviso de privacidad describe compartición con redes publicitarias.',
+          'Las salvedades son la transparencia y la privacidad: no se encontró un repositorio público, no nombra ningún proveedor de IA y su aviso de privacidad describe compartición con redes publicitarias.',
           'Si quieres personajes en tu propio hardware, empieza por [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay); si quieres código abierto, prueba [RisuAI](/es/power-local-llm/risuai-review) o [Agnai](/es/power-local-llm/agnai-review).',
         ],
       },
@@ -2041,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-pt.webp',
@@ -2071,14 +2071,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories é um app gratuito e de código fechado para iPhone de chat com personagens de IA e histórias ramificadas, como serviço online, não IA local.** Versão analisada: 1.33.0, atualizada em 23 de outubro de 2026, com base em fontes públicas, sem testes práticos.',
+      '**Swerve: AI Chat & Stories é um app para iPhone de chat com personagens de IA e histórias ramificadas, de download gratuito com compras no app, sem repositório público encontrado, como serviço online e não IA local.** Versão 1.33.0 (23 de outubro de 2026), fontes públicas, sem testes práticos.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena instalar o Swerve para chat com personagens de IA e histórias no iPhone?',
         answer:
           'Talvez, se você quer uma grande biblioteca de personagens prontos e controles de história em um app de celular e aceita um serviço online. Se você prefere personagens no seu próprio hardware, ou um aviso de privacidade sem compartilhamento com redes de anúncios, veja as alternativas locais abaixo.',
         bullets: [
-          'Mais de 500.000 personagens criados pela comunidade, além dos seus, públicos ou privados.',
+          'Segundo a página da App Store, mais de 500.000 personagens criados pela comunidade, além dos seus, públicos ou privados.',
           'Controles de história: cenas com vários personagens, personas, memória fixada, deslizar, editar e ramificar a partir de qualquer mensagem.',
           'Download gratuito; um nível Pro e pacotes de gemas são compras no app.',
           'O aviso de privacidade diz que identificadores e atividade na internet foram vendidos ou compartilhados com redes de anúncios nos últimos 12 meses.',
@@ -2124,7 +2124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Onde roda: a página, o site e o aviso não citam nenhum modelo de IA nem provedor de hospedagem, e não há modo no dispositivo documentado.',
           'Idade: classificado 18+ na App Store, com conteúdo sexual ou nudez frequentes nos detalhes da classificação.',
           'Idioma: a página está apenas em inglês.',
-          'Abertura: código fechado; nenhum repositório público foi encontrado.',
+          'Abertura: sem código público conhecido; nenhum repositório público foi encontrado.',
         ],
       },
       getItSwerve: {
@@ -2161,13 +2161,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Atributo': 'Plataforma', 'Swerve': 'iPhone, iOS 18.0+' },
           { 'Atributo': 'Preço', 'Swerve': 'Grátis, compras no app' },
-          { 'Atributo': 'Licença', 'Swerve': 'Código fechado' },
+          { 'Atributo': 'Licença', 'Swerve': 'Nenhum repositório público encontrado' },
           { 'Atributo': 'Funciona offline', 'Swerve': 'Sem modo local documentado' },
           { 'Atributo': 'Chats em grupo', 'Swerve': 'Sim, vários personagens por história' },
           { 'Atributo': 'Lorebooks / world info', 'Swerve': 'Não citado na página' },
           { 'Atributo': 'Classificação etária', 'Swerve': '18+' },
           { 'Atributo': 'Versão / última atualização', 'Swerve': '1.33.0 / 23 de outubro de 2026' },
-          { 'Atributo': 'Avaliação na loja', 'Swerve': '4,7 de 5, cerca de 37 mil avaliações da App Store (EUA)' },
+          { 'Atributo': 'Avaliação na loja', 'Swerve': '4,7 de 5, dezenas de milhares de avaliações (App Store dos EUA)' },
           { 'Atributo': 'Idioma da interface', 'Swerve': 'Inglês' },
         ],
         note: 'Os atributos seguem a comparação de roleplay do Local AI App Directory. Vêm da página da App Store e do site, que não cobrem todos os recursos.',
@@ -2220,7 +2220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Vantagem': 'Grande biblioteca de personagens',
-            'O que significa no uso real': 'Mais de 500.000 personagens da comunidade para começar.',
+            'O que significa no uso real': 'Mais de 500.000 personagens da comunidade, segundo a página, para começar.',
             'Limitação / ressalva': 'Qualidade e moderação variam por personagem; nenhum foi testado aqui.',
           },
           {
@@ -2254,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': 'Swerve',
             'Plataformas': 'iPhone',
-            'Preço e licença': 'Freemium, código fechado',
+            'Preço e licença': 'Freemium, nenhum repositório público encontrado',
             'Onde roda': 'Serviço na nuvem do desenvolvedor',
             'Diferença principal': 'Personagens da comunidade prontos; ainda sem versão desktop ou Android',
           },
@@ -2275,7 +2275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay)',
             'Plataformas': 'Mac, Windows',
-            'Preço e licença': 'Freemium, código fechado',
+            'Preço e licença': 'Freemium, nenhum repositório público encontrado',
             'Onde roda': 'No seu próprio computador',
             'Diferença principal': 'Personagens rodam localmente; só desktop',
           },
@@ -2286,7 +2286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Para quem o Swerve serve',
         items: [
-          '**Adultos que querem personagens prontos no celular.** A biblioteca com mais de 500.000 personagens evita montar um elenco do zero.',
+          '**Adultos que querem personagens prontos no celular.** A biblioteca de mais de 500.000 personagens citada na página evita montar um elenco do zero.',
           '**Jogadores de histórias que gostam de conduzir.** Ramificar, editar e a memória fixada dão controle sobre cada cena.',
           '**Quem se sente à vontade com um serviço na nuvem.** Nada na página promete uso offline ou no dispositivo.',
         ],
@@ -2297,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Quem precisa de chat offline ou no dispositivo.** O [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay) roda os personagens no seu próprio computador.',
           '**Usuários de Android, Mac ou Windows.** Só existe uma versão para iPhone; o [RisuAI](/pt/power-local-llm/risuai-review) cobre web, desktop e celular.',
-          '**Quem precisa de código aberto ou de privacidade rigorosa.** O código não é público; leia primeiro o aviso em «Preços, privacidade e dados».',
+          '**Quem precisa de código aberto ou de privacidade rigorosa.** Nenhum repositório público foi encontrado; leia primeiro o aviso em «Preços, privacidade e dados».',
           '**Menores de 18 anos.** O app é classificado e destinado a adultos.',
         ],
       },
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           'No papel, o Swerve combina com adultos usuários de iPhone que querem um grande catálogo de personagens e controle detalhado de histórias interativas, e que aceitam um serviço na nuvem.',
-          'As ressalvas são transparência e privacidade: o código é fechado, nenhum provedor de IA é citado e o aviso de privacidade descreve compartilhamento com redes de anúncios.',
+          'As ressalvas são transparência e privacidade: nenhum repositório público foi encontrado, nenhum provedor de IA é citado e o aviso de privacidade descreve compartilhamento com redes de anúncios.',
           'Se você quer personagens no seu próprio hardware, comece pelo [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay); se quer código aberto, experimente o [RisuAI](/pt/power-local-llm/risuai-review) ou o [Agnai](/pt/power-local-llm/agnai-review).',
         ],
       },
@@ -2377,7 +2377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-ar.webp',
@@ -2407,14 +2407,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories تطبيق iPhone مجاني ومغلق المصدر للدردشة مع شخصيات الذكاء الاصطناعي وقصص متفرعة، كخدمة عبر الإنترنت لا ذكاء اصطناعيًا محليًا.** الإصدار المراجَع: 1.33.0، حُدّث في 23 أكتوبر 2026، اعتمادًا على مصادر عامة فقط ودون اختبار عملي.',
+      '**Swerve: AI Chat & Stories تطبيق iPhone للدردشة مع شخصيات الذكاء الاصطناعي وقصص متفرعة، مجاني التنزيل مع عمليات شراء داخل التطبيق، دون مستودع عام معروف، وهو خدمة إنترنت لا ذكاء اصطناعيًا محليًا.** الإصدار 1.33.0 (23 أكتوبر 2026)، من مصادر عامة ودون اختبار عملي.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق Swerve التثبيت للدردشة مع شخصيات الذكاء الاصطناعي ولعب القصص على iPhone؟',
         answer:
           'ربما، إذا كنت تريد مكتبة كبيرة من الشخصيات الجاهزة وأدوات تحكم في القصة داخل تطبيق للجوال وتقبل خدمة عبر الإنترنت. وإذا كنت تفضّل شخصيات تعمل على جهازك، أو إشعار خصوصية بلا مشاركة مع شبكات الإعلانات، فراجع البدائل المحلية أدناه.',
         bullets: [
-          'أكثر من 500,000 شخصية أنشأها المجتمع، إضافة إلى شخصياتك العامة أو الخاصة.',
+          'بحسب صفحة App Store، أكثر من 500,000 شخصية أنشأها المجتمع، إضافة إلى شخصياتك العامة أو الخاصة.',
           'أدوات التحكم في القصة: مشاهد متعددة الشخصيات وشخصيات مستخدم وذاكرة مثبّتة والسحب للتبديل والتعديل والتفرّع من أي رسالة.',
           'التنزيل مجاني؛ أما مستوى Pro وحزم الجواهر فهي مشتريات داخل التطبيق.',
           'يقول إشعار الخصوصية إن المعرّفات والنشاط على الإنترنت بيعت أو شوركت مع شبكات الإعلانات خلال آخر 12 شهرًا.',
@@ -2460,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مكان التشغيل: لا تذكر الصفحة ولا الموقع ولا الإشعار أي نموذج ذكاء اصطناعي أو مضيفًا، ولا يوجد وضع على الجهاز موثّق.',
           'العمر: مصنّف +18 في App Store، وتذكر تفاصيل التصنيف محتوى جنسيًا أو عريًا متكررًا.',
           'اللغة: الصفحة متوفرة بالإنجليزية فقط.',
-          'الانفتاح: مغلق المصدر؛ ولم يُعثر على مستودع عام.',
+          'الانفتاح: لا يوجد شيفرة عامة معروفة؛ ولم يُعثر على مستودع عام.',
         ],
       },
       getItSwerve: {
@@ -2497,13 +2497,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الخاصية': 'المنصة', 'Swerve': 'iPhone، iOS 18.0+' },
           { 'الخاصية': 'السعر', 'Swerve': 'مجاني مع مشتريات داخل التطبيق' },
-          { 'الخاصية': 'الترخيص', 'Swerve': 'مغلق المصدر' },
+          { 'الخاصية': 'الترخيص', 'Swerve': 'لم يُعثر على مستودع عام' },
           { 'الخاصية': 'يعمل دون إنترنت', 'Swerve': 'لا يوجد وضع على الجهاز موثّق' },
           { 'الخاصية': 'دردشات جماعية', 'Swerve': 'نعم، عدة شخصيات في القصة' },
           { 'الخاصية': 'كتب المعلومات / world info', 'Swerve': 'غير مذكورة في الصفحة' },
           { 'الخاصية': 'التصنيف العمري', 'Swerve': '+18' },
           { 'الخاصية': 'الإصدار / آخر تحديث', 'Swerve': '1.33.0 / 23 أكتوبر 2026' },
-          { 'الخاصية': 'تقييم المتجر', 'Swerve': '4.7 من 5، نحو 37,000 تقييم في App Store (الولايات المتحدة)' },
+          { 'الخاصية': 'تقييم المتجر', 'Swerve': '4.7 من 5، عشرات الآلاف من التقييمات (App Store الأمريكي)' },
           { 'الخاصية': 'لغة الواجهة', 'Swerve': 'الإنجليزية' },
         ],
         note: 'تتبع الخصائص مقارنة لعب الأدوار في Local AI App Directory. وهي مأخوذة من صفحة App Store والموقع الرسمي اللذين لا يغطيان كل الميزات.',
@@ -2556,7 +2556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'الميزة': 'مكتبة شخصيات كبيرة',
-            'ما تعنيه في الاستخدام الفعلي': 'أكثر من 500,000 شخصية من المجتمع للبدء بها.',
+            'ما تعنيه في الاستخدام الفعلي': 'أكثر من 500,000 شخصية من المجتمع بحسب الصفحة للبدء بها.',
             'القيد / التحفظ': 'تختلف الجودة والإشراف من شخصية لأخرى، ولم تُختبر أي منها هنا.',
           },
           {
@@ -2590,7 +2590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'التطبيق': 'Swerve',
             'المنصات': 'iPhone',
-            'السعر والترخيص': 'فريميوم، مغلق المصدر',
+            'السعر والترخيص': 'فريميوم، لم يُعثر على مستودع عام',
             'مكان التشغيل': 'خدمة سحابية للمطوّر',
             'الفرق الأساسي': 'شخصيات مجتمع جاهزة؛ لا توجد نسخة سطح مكتب أو Android بعد',
           },
@@ -2611,7 +2611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'التطبيق': '[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay)',
             'المنصات': 'Mac وWindows',
-            'السعر والترخيص': 'فريميوم، مغلق المصدر',
+            'السعر والترخيص': 'فريميوم، لم يُعثر على مستودع عام',
             'مكان التشغيل': 'على حاسوبك',
             'الفرق الأساسي': 'تعمل الشخصيات محليًا؛ سطح المكتب فقط',
           },
@@ -2622,7 +2622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'لمن يناسب Swerve',
         items: [
-          '**البالغون الذين يريدون شخصيات جاهزة على الجوال.** توفّر المكتبة التي تضم أكثر من 500,000 شخصية عناء بناء طاقم من الصفر.',
+          '**البالغون الذين يريدون شخصيات جاهزة على الجوال.** توفّر المكتبة التي تذكر الصفحة أنها تضم أكثر من 500,000 شخصية عناء بناء طاقم من الصفر.',
           '**لاعبو القصص الذين يحبون توجيه الأحداث.** يمنحك التفرّع والتعديل والذاكرة المثبّتة تحكمًا في كل مشهد.',
           '**من يرتاح لخدمة سحابية.** لا شيء في الصفحة يعد بالاستخدام دون إنترنت أو على الجهاز.',
         ],
@@ -2633,7 +2633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**من يحتاج إلى دردشة دون إنترنت أو على الجهاز.** يشغّل [Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay) الشخصيات على حاسوبك.',
           '**مستخدمو Android أو Mac أو Windows.** توجد نسخة iPhone فقط؛ ويغطي [RisuAI](/ar/power-local-llm/risuai-review) الويب وسطح المكتب والجوال.',
-          '**من يحتاج إلى مصدر مفتوح أو خصوصية صارمة.** الشيفرة غير عامة؛ اقرأ أولًا الإشعار تحت «الأسعار والخصوصية والبيانات».',
+          '**من يحتاج إلى مصدر مفتوح أو خصوصية صارمة.** لم يُعثر على مستودع عام؛ اقرأ أولًا الإشعار تحت «الأسعار والخصوصية والبيانات».',
           '**من هم دون 18 عامًا.** التطبيق مصنّف للبالغين وموجّه لهم.',
         ],
       },
@@ -2680,7 +2680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           'يناسب Swerve نظريًا مستخدمي iPhone البالغين الذين يريدون كتالوج شخصيات كبيرًا وتحكمًا دقيقًا في القصص التفاعلية ويرتاحون لخدمة سحابية.',
-          'التحفظات تتعلق بالشفافية والخصوصية: فهو مغلق المصدر، ولا يسمّي أي مزوّد للذكاء الاصطناعي، ويصف إشعار خصوصيته مشاركة مع شبكات الإعلانات.',
+          'التحفظات تتعلق بالشفافية والخصوصية: ولم يُعثر على مستودع عام، ولا يسمّي أي مزوّد للذكاء الاصطناعي، ويصف إشعار خصوصيته مشاركة مع شبكات الإعلانات.',
           'إذا كنت تريد شخصيات على جهازك فابدأ بـ [Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay)؛ وإذا أردت مصدرًا مفتوحًا فجرّب [RisuAI](/ar/power-local-llm/risuai-review) أو [Agnai](/ar/power-local-llm/agnai-review).',
         ],
       },
@@ -2713,7 +2713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-ko.webp',
@@ -2743,14 +2743,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories는 AI 캐릭터와 채팅하고 분기형 스토리를 즐기는 무료 비공개 소스 iPhone 앱이며, 로컬 AI 앱이 아니라 온라인 서비스입니다.** App Store 페이지에 따르면 iOS 18.0 이상이 필요합니다. 이 리뷰는 2026년 10월 23일에 마지막으로 업데이트된 버전 1.33.0을 다루며, 직접 사용해 본 결과가 아니라 공개된 페이지, 웹사이트, 개인정보 고지, 약관에 근거합니다.',
+      '**Swerve: AI Chat & Stories는 AI 캐릭터와 채팅하고 분기형 스토리를 즐기는 iPhone 앱으로, 무료로 내려받을 수 있고 앱 내 구매가 있으며 공개 저장소는 찾지 못했습니다. 로컬 AI 앱이 아니라 온라인 서비스입니다.** iOS 18.0 이상이 필요하며, 이 리뷰는 버전 1.33.0(2026년 10월 23일 업데이트)을 공개 자료만으로 다루고 직접 사용해 본 결과는 아닙니다.',
     quickAnswerTop: {
       ko: {
         question: 'iPhone에서 AI 캐릭터 채팅과 스토리를 즐기려면 Swerve를 설치할 만한가요?',
         answer:
           '모바일 앱에서 준비된 캐릭터 라이브러리와 스토리 제어 기능을 쓰고 싶고 온라인 서비스를 받아들일 수 있다면 고려해 볼 만합니다. 자신의 하드웨어에서 실행되는 캐릭터나 광고 네트워크 공유가 없는 개인정보 고지를 원한다면 아래의 로컬 대안을 확인하십시오.',
         bullets: [
-          '커뮤니티가 만든 캐릭터 50만 개 이상이며, 직접 만든 캐릭터도 공개 또는 비공개로 둘 수 있습니다.',
+          'App Store 페이지에 따르면 커뮤니티가 만든 캐릭터 50만 개 이상이며, 직접 만든 캐릭터도 공개 또는 비공개로 둘 수 있습니다.',
           '스토리 제어: 다중 캐릭터 장면, 페르소나, 고정 메모리, 스와이프, 편집, 임의 메시지에서 분기.',
           '다운로드는 무료이며 Pro 등급과 젬 패키지는 인앱 결제입니다.',
           '개인정보 고지에 따르면 식별자와 인터넷 활동이 지난 12개월 동안 광고 네트워크에 판매되거나 공유되었습니다.',
@@ -2796,7 +2796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '실행 위치: 페이지, 웹사이트, 고지 어디에도 AI 모델이나 호스트가 명시되어 있지 않으며 온디바이스 모드도 문서화되어 있지 않습니다.',
           '연령: App Store에서 18+로 분류되며, 연령 등급 상세에 빈번한 성적 콘텐츠 또는 노출이 명시되어 있습니다.',
           '언어: 페이지는 영어로만 제공됩니다.',
-          '공개성: 비공개 소스이며 공개 저장소는 찾지 못했습니다.',
+          '공개성: 공개된 소스 코드는 확인되지 않았으며 공개 저장소는 찾지 못했습니다.',
         ],
       },
       getItSwerve: {
@@ -2833,13 +2833,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '항목': '플랫폼', 'Swerve': 'iPhone, iOS 18.0 이상' },
           { '항목': '가격', 'Swerve': '무료, 인앱 결제' },
-          { '항목': '라이선스', 'Swerve': '비공개 소스' },
+          { '항목': '라이선스', 'Swerve': '공개 저장소 없음(확인 기준)' },
           { '항목': '오프라인 실행', 'Swerve': '온디바이스 모드 문서 없음' },
           { '항목': '그룹 채팅', 'Swerve': '예, 한 스토리에 여러 캐릭터' },
           { '항목': '로어북 / 월드 정보', 'Swerve': '페이지에 명시 없음' },
           { '항목': '연령 등급', 'Swerve': '18+' },
           { '항목': '버전 / 마지막 업데이트', 'Swerve': '1.33.0 / 2026년 10월 23일' },
-          { '항목': '스토어 평점', 'Swerve': '5점 만점에 4.7점, 약 3만 7천 건의 App Store 평가(미국)' },
+          { '항목': '스토어 평점', 'Swerve': '5점 만점에 4.7점, 수만 건의 평가(미국 App Store)' },
           { '항목': '인터페이스 언어', 'Swerve': '영어' },
         ],
         note: '항목은 Local AI App Directory의 롤플레이 비교 기준을 따릅니다. App Store 페이지와 웹사이트에서 가져왔으며 모든 기능을 다루지는 않습니다.',
@@ -2892,7 +2892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '장점': '대규모 캐릭터 라이브러리',
-            '실제 사용에서의 의미': '50만 개 이상의 커뮤니티 캐릭터로 시작할 수 있습니다.',
+            '실제 사용에서의 의미': '페이지에 따르면 페이지에 따르면 50만 개 이상의 커뮤니티 캐릭터로 시작할 수 있습니다.',
             '한계 / 주의점': '품질과 콘텐츠 관리는 캐릭터마다 다르며 여기서는 테스트하지 않았습니다.',
           },
           {
@@ -2926,7 +2926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '앱': 'Swerve',
             '플랫폼': 'iPhone',
-            '가격 및 라이선스': '프리미엄, 비공개 소스',
+            '가격 및 라이선스': '프리미엄, 공개 저장소 없음(확인 기준)',
             '실행 위치': '개발사의 클라우드 서비스',
             '핵심 차이': '준비된 커뮤니티 캐릭터. 데스크톱·Android 빌드는 아직 없음',
           },
@@ -2947,7 +2947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '앱': '[Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay)',
             '플랫폼': 'Mac, Windows',
-            '가격 및 라이선스': '프리미엄, 비공개 소스',
+            '가격 및 라이선스': '프리미엄, 공개 저장소 없음(확인 기준)',
             '실행 위치': '내 컴퓨터',
             '핵심 차이': '캐릭터가 로컬에서 실행. 데스크톱 전용',
           },
@@ -2958,7 +2958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Swerve가 적합한 사용자',
         items: [
-          '**휴대폰에서 준비된 캐릭터를 쓰고 싶은 성인.** 50만 개 이상의 라이브러리 덕분에 출연진을 처음부터 만들 필요가 없습니다.',
+          '**휴대폰에서 준비된 캐릭터를 쓰고 싶은 성인.** 페이지에서 밝힌 페이지에서 밝힌 50만 개 이상의 라이브러리 덕분에 출연진을 처음부터 만들 필요가 없습니다.',
           '**스토리를 직접 이끌고 싶은 플레이어.** 분기, 편집, 고정 메모리로 각 장면을 제어할 수 있습니다.',
           '**클라우드 서비스가 괜찮은 사용자.** 페이지 어디에도 오프라인이나 온디바이스 사용을 약속하는 내용은 없습니다.',
         ],
@@ -2969,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**오프라인 또는 온디바이스 채팅이 필요한 사용자.** [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay)는 내 컴퓨터에서 캐릭터를 실행합니다.',
           '**Android, Mac, Windows 사용자.** iPhone 빌드만 있으며, [RisuAI](/ko/power-local-llm/risuai-review)는 웹, 데스크톱, 모바일을 지원합니다.',
-          '**오픈 소스나 엄격한 개인정보 보호가 필요한 사용자.** 코드는 공개되어 있지 않으므로 먼저 "가격, 개인정보 및 데이터"의 고지를 읽으십시오.',
+          '**오픈 소스나 엄격한 개인정보 보호가 필요한 사용자.** 공개 저장소는 찾지 못했으므로 먼저 "가격, 개인정보 및 데이터"의 고지를 읽으십시오.',
           '**만 18세 미만.** 이 앱은 성인 등급이며 성인을 대상으로 합니다.',
         ],
       },
@@ -3016,7 +3016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           'Swerve는 대규모 캐릭터 카탈로그와 인터랙티브 스토리에 대한 세밀한 제어를 원하고 클라우드 서비스를 받아들일 수 있는 성인 iPhone 사용자에게 서류상으로는 잘 맞습니다.',
-          '유의점은 투명성과 개인정보입니다. 비공개 소스이고, AI 제공업체를 밝히지 않으며, 개인정보 고지에는 광고 네트워크와의 공유가 기술되어 있습니다.',
+          '유의점은 투명성과 개인정보입니다. 공개 저장소는 찾지 못했고, AI 제공업체를 밝히지 않으며, 개인정보 고지에는 광고 네트워크와의 공유가 기술되어 있습니다.',
           '자신의 하드웨어에서 캐릭터를 실행하고 싶다면 [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay)부터 시작하고, 오픈 소스를 원한다면 [RisuAI](/ko/power-local-llm/risuai-review)나 [Agnai](/ko/power-local-llm/agnai-review)를 써 보십시오.',
         ],
       },

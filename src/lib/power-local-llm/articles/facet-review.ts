@@ -1,11 +1,11 @@
 // Facet Review: Local Photo Scoring, Culling and Gallery
 // Slug: facet-review
 // Companion to: immich-review, photoprism-review, pixlstash-review
-// Sources (read 2026-10-28, re-verified 2026-11-02, no hands-on testing): ncoevoet.github.io/facet, the GitHub repo and API (ncoevoet/facet: v1.27.0 published 2026-10-27, last push 2026-10-28, LICENSE = MIT,
+// Sources (read 2026-10-28, re-verified 2026-11-02, no hands-on testing): ncoevoet.github.io/facet, the GitHub repo and API (ncoevoet/facet: v1.28.0 published 2026-11-05, last push 2026-11-05, LICENSE = MIT,
 // API licence NOASSERTION), README.md, docs/INSTALLATION.md (profiles, first-run download sizes, feature requirements, commercial install), docs/THIRD_PARTY_MODELS.md, docs/CONFIGURATION.md
 // (vlm_backend, updates), docs/AGENTS.md (MCP endpoint, on by default), docs/DEPLOYMENT.md, docs/GETTING_STARTED.md, viewer.py (default host 0.0.0.0) and client source (OSM tiles, Photon dialog).
 // The request came from the site owner (link from localhosted.com), not from the maker: no maker comment, no founder-review badge.
-// Facet is NOT an LLM chat app. Offline use after the first-run model download is unverified (stated in the review). Last upstream update 2026-10-30 => no stale warning. 2026-11-02: v1.27.0 docs describe a per-user Windows MSI that no release ships (build from clone / CI artifact); 24gb download 19.3 GB.
+// Facet is NOT an LLM chat app. Offline use after the first-run model download is unverified (stated in the review). Last upstream update 2026-11-05 (v1.28.0 published 2026-11-05T23:00Z, pushed_at 2026-11-05T23:00Z) => no stale warning. 2026-11-06 refresh: v1.28.0 adds a 12gb VRAM profile (NVIDIA 11.5-14 GB; 8gb now 6-11.5 GB; 12gb/16gb download 14.6 GB; SigLIP 2, TOPIQ and VLM tagging on 12gb/16gb/24gb) per docs/INSTALLATION.md and the release notes. 2026-11-02: v1.28.0 docs describe a per-user Windows MSI that no release ships (build from clone / CI artifact); 24gb download 19.3 GB.
 // Directory-tile caveat: license MIT for the code; pyiqa (TOPIQ, LIQE) and InsightFace weights are non-commercial, licensing.mode: commercial swaps them out (stated in the review).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -16,14 +16,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-en.webp',
     title: 'Facet Review: Local Photo Scoring, Culling and Gallery',
     seoTitle: 'Facet Review: Local Photo Scoring, Culling, Gallery',
     intro:
-      'Facet is a free, MIT-licensed photo-analysis tool that you run yourself: it scores each photo, finds bursts and near-duplicates, groups faces and lets you search your library in plain words through a web gallery. It is not a chat or LLM app; the AI is image scoring, embeddings and face models. This review reflects its README, documentation, GitHub releases and source as checked on 2 November 2026.',
+      'Facet is a free, MIT-licensed photo-analysis tool that you run yourself: it scores each photo, finds bursts and near-duplicates, groups faces and lets you search your library in plain words through a web gallery. It is not a chat or LLM app; the AI is image scoring, embeddings and face models. This review reflects its README, documentation, GitHub releases and source as checked on 6 November 2026.',
     metaDescription:
       'Facet review: free MIT-licensed tool that scores, culls and browses photos locally, with face grouping and search. Setup, model licences, privacy.',
     twitterDescription:
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.27.0) is a free, MIT-licensed tool that scores, culls and browses a local photo library through a web gallery, with face grouping and plain-language search running on your own machine.** Per the project\'s model-licence page, some default model weights are not licensed for commercial use.',
+      '**Facet (v1.28.0) is a free, MIT-licensed tool that scores, culls and browses a local photo library through a web gallery, with face grouping and plain-language search running on your own machine.** Per the project\'s model-licence page, some default model weights are not licensed for commercial use.',
     quickAnswerTop: {
       en: {
         question: 'Does Facet keep your photos and AI scoring on your own machine?',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Per its README, yes: a scan only reads your photos, results go to Facet\'s own database, and the models run on your hardware after a first-run download. A few things reach outside, such as an update check, map tiles and an optional remote vision-language server. PromptQuorum has not inspected the network traffic.',
         bullets: [
           'Scores each photo on 9 dimensions, groups bursts, look-alikes and faces, and surfaces top picks.',
-          'Plain-language search uses SigLIP 2 on the 16gb and 24gb GPU profiles and a CLIP model on the legacy and 8gb profiles.',
+          'Plain-language search uses SigLIP 2 on the 12gb, 16gb and 24gb GPU profiles and a CLIP model on the legacy and 8gb profiles.',
           'Runs on a CPU with the legacy profile; an NVIDIA GPU or a large-memory Apple Silicon Mac unlocks the strongest models.',
           'Installed with Docker or an install script; no installer, app-store build or release binary is published, but the docs describe a Windows MSI you build or take from a CI run.',
           'Per its docs, the viewer is open to anyone who can reach its port until you set a password.',
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance: v1.27.0 was released on 29 October 2026 and the repository received a push on 30 October 2026, so no stale-project warning applies.',
+          'Maintenance: v1.28.0 was released on 5 November 2026 and the repository received a push on 5 November 2026, so no stale-project warning applies.',
           'Operator: the README calls it a single-developer project without commercial support; the code is on GitHub under the MIT licence.',
           'Setup: Docker Compose or an install script plus a first scan that downloads the models; a terminal is required.',
           'Cost: free; no paid tier was found. The word "Edition" in the docs is an access level, not a product edition.',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'This review is based on the project\'s website, README, documentation, GitHub releases and parts of its source, checked on 2 November 2026. PromptQuorum has not installed Facet, so scoring accuracy, search relevance and speed are not assessed.',
+              'This review is based on the project\'s website, README, documentation, GitHub releases and parts of its source, checked on 6 November 2026. PromptQuorum has not installed Facet, so scoring accuracy, search relevance and speed are not assessed.',
           },
         ],
       },
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Version reviewed: v1.27.0, published on 29 October 2026 per the GitHub release; the last push to the repository was on 30 October 2026. Installing needs a terminal, Git and Docker or Python, so this is a developer-style setup rather than a double-click install. No separate privacy-policy page was found on the project site or in the documentation read; privacy statements are in the README.',
+          'Version reviewed: v1.28.0, published on 5 November 2026 per the GitHub release; the last push to the repository was on 5 November 2026. Installing needs a terminal, Git and Docker or Python, so this is a developer-style setup rather than a double-click install. No separate privacy-policy page was found on the project site or in the documentation read; privacy statements are in the README.',
       },
       requirements: {
         id: 'requirements',
@@ -225,11 +225,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Item: 'Profiles',
-            'What the sources say': 'legacy: CPU only; 8gb: NVIDIA 6-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA 20 GB or more',
+            'What the sources say': 'legacy: CPU only; 8gb: NVIDIA 6-11.5 GB; 12gb: NVIDIA 11.5-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA 20 GB or more',
           },
           {
             Item: 'First-run download',
-            'What the sources say': 'Roughly 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) or 19.3 GB (24gb), once, per the docs',
+            'What the sources say': 'Roughly 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (12gb/16gb) or 19.3 GB (24gb), once, per the docs',
           },
           {
             Item: 'Apple Silicon',
@@ -308,12 +308,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The core AI is image-based: quality-scoring models, embeddings for search, face models and subject detection; written tags, captions and critiques come from an optional vision-language model.**',
         ],
         items: [
-          '**Quality scores.** The 16gb and 24gb profiles use TOPIQ for the aesthetic score, while legacy and 8gb use CLIP embeddings with an aesthetic head; the docs list supplementary scorers such as LIQE as available on any profile.',
-          '**Search.** Typed queries like "sunset on the beach" match embeddings: SigLIP 2 on the 16gb and 24gb profiles, OpenCLIP ViT-L-14 on legacy and 8gb.',
+          '**Quality scores.** The 12gb, 16gb and 24gb profiles use TOPIQ for the aesthetic score, while legacy and 8gb use CLIP embeddings with an aesthetic head; the docs list supplementary scorers such as LIQE as available on any profile.',
+          '**Search.** Typed queries like "sunset on the beach" match embeddings: SigLIP 2 on the 12gb, 16gb and 24gb profiles, OpenCLIP ViT-L-14 on legacy and 8gb.',
           '**Faces.** InsightFace detects and recognises faces and clustering groups them into people; optional MediaPipe blendshapes sharpen the blink and smile reads.',
           '**Subjects.** BiRefNet separates subject from background to judge focus and framing.',
           '**My Taste.** Your A/B comparisons, ratings and culling choices feed a weight optimiser and a personal ranking.',
-          '**Vision-language model.** Tags, captions and critiques run in-process on the 16gb and 24gb profiles, or on a remote Ollama or OpenAI-compatible server set with vlm_backend, where the image is sent to that server.',
+          '**Vision-language model.** Tags, captions and critiques run in-process on the 12gb, 16gb and 24gb profiles, or on a remote Ollama or OpenAI-compatible server set with vlm_backend, where the image is sent to that server.',
         ],
         note:
           'These are the project\'s own statements. PromptQuorum did not test score quality, search relevance or face-grouping accuracy.',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AI quality.** Score accuracy, face grouping, search relevance and scan speed were not tested; the README itself calls the aesthetic score approximate.',
           '**Offline use.** Whether Facet works fully offline after the first model download was not verified.',
-          '**Release stability.** The v1.23.1 notes say v1.23.0 shipped without the CUDA Docker image, and six versions were released between 24 and 29 October 2026, so expect fast change.',
+          '**Release stability.** The v1.23.1 notes say v1.23.0 shipped without the CUDA Docker image, and seven versions were released between 24 October and 5 November 2026, so expect fast change.',
           '**Support.** The README describes a single-developer project without the support of commercial cullers.',
           '**Install steps.** The setup commands come from the docs and were not run by PromptQuorum.',
         ],
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Does Facet need a GPU?',
             a:
-              'No. The legacy profile runs scoring, faces, tags, culling and the gallery on a CPU, only slower; TOPIQ, SigLIP 2 and the built-in captions need the 16gb or 24gb NVIDIA profiles unless you point vlm_backend at a remote server.',
+              'No. The legacy profile runs scoring, faces, tags, culling and the gallery on a CPU, only slower; TOPIQ, SigLIP 2 and the built-in captions need the 12gb, 16gb or 24gb NVIDIA profiles unless you point vlm_backend at a remote server.',
           },
           {
             q: 'Does Facet change or delete my photos?',
@@ -446,11 +446,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Facet website](https://ncoevoet.github.io/facet/) — feature overview and quick start, checked 2 November 2026.',
-          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md) — features, requirements, licensing and comparisons, checked 2 November 2026.',
-          '[Facet documentation](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, deployment and AI-agent pages, checked 2 November 2026.',
-          '[Third-party models and licences](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence of each model, checked 2 November 2026.',
-          '[Facet on GitHub](https://github.com/ncoevoet/facet/releases) — releases and commit activity, checked 2 November 2026.',
+          '[Facet website](https://ncoevoet.github.io/facet/) — feature overview and quick start, checked 6 November 2026.',
+          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md) — features, requirements, licensing and comparisons, checked 6 November 2026.',
+          '[Facet documentation](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, deployment and AI-agent pages, checked 6 November 2026.',
+          '[Third-party models and licences](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence of each model, checked 6 November 2026.',
+          '[Facet on GitHub](https://github.com/ncoevoet/facet/releases) — releases and commit activity, checked 6 November 2026.',
         ],
       },
       relatedReading: {
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/facet-review',
       inLanguage: 'en',
       datePublished: '2026-10-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -542,14 +542,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-de.webp',
     title: 'Facet-Rezension: lokale Foto-Bewertung, Aussortieren und Galerie',
     seoTitle: 'Facet-Rezension: Fotos lokal bewerten und aussortieren',
     intro:
-      'Facet ist ein kostenloses, MIT-lizenziertes Werkzeug zur Fotoanalyse, das Sie selbst betreiben: Es bewertet jedes Foto, findet Serienbilder und Beinahe-Duplikate, gruppiert Gesichter und lässt Sie Ihre Bibliothek in einer Weboberfläche in natürlicher Sprache durchsuchen. Es ist keine Chat- oder LLM-App; die KI besteht aus Bildbewertung, Embeddings und Gesichtsmodellen. Diese Rezension stützt sich auf README, Dokumentation, GitHub-Releases und Quellcode, geprüft am 2. November 2026.',
+      'Facet ist ein kostenloses, MIT-lizenziertes Werkzeug zur Fotoanalyse, das Sie selbst betreiben: Es bewertet jedes Foto, findet Serienbilder und Beinahe-Duplikate, gruppiert Gesichter und lässt Sie Ihre Bibliothek in einer Weboberfläche in natürlicher Sprache durchsuchen. Es ist keine Chat- oder LLM-App; die KI besteht aus Bildbewertung, Embeddings und Gesichtsmodellen. Diese Rezension stützt sich auf README, Dokumentation, GitHub-Releases und Quellcode, geprüft am 6. November 2026.',
     metaDescription:
       'Facet-Rezension: kostenloses MIT-Werkzeug zum lokalen Bewerten und Aussortieren von Fotos, mit Gesichtsgruppen und Suche. Lizenzen, Datenschutz.',
     twitterDescription:
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.27.0) ist ein kostenloses, MIT-lizenziertes Werkzeug, das eine lokale Fotobibliothek bewertet, aussortiert und in einer Weboberfläche durchsuchbar macht, mit Gesichtsgruppierung und Suche in natürlicher Sprache auf Ihrem eigenen Rechner.** Laut Lizenzseite des Projekts sind einige Standardmodelle nicht für kommerzielle Nutzung lizenziert.',
+      '**Facet (v1.28.0) ist ein kostenloses, MIT-lizenziertes Werkzeug, das eine lokale Fotobibliothek bewertet, aussortiert und in einer Weboberfläche durchsuchbar macht, mit Gesichtsgruppierung und Suche in natürlicher Sprache auf Ihrem eigenen Rechner.** Laut Lizenzseite des Projekts sind einige Standardmodelle nicht für kommerzielle Nutzung lizenziert.',
     quickAnswerTop: {
       de: {
         question: 'Bleiben Ihre Fotos und die KI-Bewertung bei Facet auf Ihrem eigenen Rechner?',
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Laut README ja: Ein Scan liest Ihre Fotos nur, die Ergebnisse landen in Facets eigener Datenbank, und die Modelle laufen nach einem Download beim ersten Start auf Ihrer Hardware. Einiges greift nach außen, etwa die Update-Prüfung, Kartenkacheln und ein optionaler Remote-Server für Vision-Language-Modelle. PromptQuorum hat den Netzwerkverkehr nicht untersucht.',
         bullets: [
           'Bewertet jedes Foto in 9 Dimensionen, gruppiert Serienbilder, ähnliche Aufnahmen und Gesichter und zeigt Top-Picks.',
-          'Die Suche in natürlicher Sprache nutzt SigLIP 2 auf den GPU-Profilen 16gb und 24gb und ein CLIP-Modell auf legacy und 8gb.',
+          'Die Suche in natürlicher Sprache nutzt SigLIP 2 auf den GPU-Profilen 12gb, 16gb und 24gb und ein CLIP-Modell auf legacy und 8gb.',
           'Läuft mit dem Profil legacy auf einer CPU; eine NVIDIA-GPU oder ein Apple-Silicon-Mac mit viel Speicher schaltet die stärksten Modelle frei.',
           'Installation per Docker oder Installationsskript; veröffentlicht werden weder Installer noch App-Store-Version noch Release-Binärdatei, doch die Dokumentation beschreibt für Windows eine MSI, die Sie selbst bauen oder aus einem CI-Lauf nehmen.',
           'Laut Dokumentation ist der Viewer für jeden erreichbar, der seinen Port erreicht, bis Sie ein Passwort setzen.',
@@ -671,7 +671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Pflege: v1.27.0 erschien am 29. Oktober 2026, und das Repository erhielt am 30. Oktober 2026 einen Push; ein Warnhinweis auf ein veraltetes Projekt gilt daher nicht.',
+          'Pflege: v1.28.0 erschien am 5. November 2026, und das Repository erhielt am 5. November 2026 einen Push; ein Warnhinweis auf ein veraltetes Projekt gilt daher nicht.',
           'Betreiber: Laut README ist es ein Ein-Entwickler-Projekt ohne kommerziellen Support; der Code liegt auf GitHub unter der MIT-Lizenz.',
           'Einrichtung: Docker Compose oder ein Installationsskript plus ein erster Scan, der die Modelle herunterlädt; ein Terminal ist nötig.',
           'Kosten: kostenlos; ein Bezahltarif wurde nicht gefunden. „Edition“ in der Dokumentation bezeichnet eine Zugriffsstufe, keine Produktedition.',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Diese Rezension stützt sich auf Website, README, Dokumentation, GitHub-Releases und Teile des Quellcodes, geprüft am 2. November 2026. PromptQuorum hat Facet nicht installiert, daher werden Bewertungsgenauigkeit, Suchqualität und Geschwindigkeit nicht beurteilt.',
+              'Diese Rezension stützt sich auf Website, README, Dokumentation, GitHub-Releases und Teile des Quellcodes, geprüft am 6. November 2026. PromptQuorum hat Facet nicht installiert, daher werden Bewertungsgenauigkeit, Suchqualität und Geschwindigkeit nicht beurteilt.',
           },
         ],
       },
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Geprüfte Version: v1.27.0, laut GitHub-Release am 29. Oktober 2026 veröffentlicht; der letzte Push ins Repository erfolgte am 30. Oktober 2026. Die Installation erfordert ein Terminal, Git und Docker oder Python, ist also eine Entwickler-Einrichtung und keine Installation per Doppelklick. Eine eigene Datenschutzseite wurde weder auf der Projektseite noch in der gelesenen Dokumentation gefunden; Datenschutzaussagen stehen in der README.',
+          'Geprüfte Version: v1.28.0, laut GitHub-Release am 5. November 2026 veröffentlicht; der letzte Push ins Repository erfolgte am 5. November 2026. Die Installation erfordert ein Terminal, Git und Docker oder Python, ist also eine Entwickler-Einrichtung und keine Installation per Doppelklick. Eine eigene Datenschutzseite wurde weder auf der Projektseite noch in der gelesenen Dokumentation gefunden; Datenschutzaussagen stehen in der README.',
       },
       requirements: {
         id: 'requirements',
@@ -751,11 +751,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Punkt: 'Profile',
-            'Angaben der Quellen': 'legacy: nur CPU; 8gb: NVIDIA 6-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA ab 20 GB',
+            'Angaben der Quellen': 'legacy: nur CPU; 8gb: NVIDIA 6-11.5 GB; 12gb: NVIDIA 11.5-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA ab 20 GB',
           },
           {
             Punkt: 'Download beim ersten Start',
-            'Angaben der Quellen': 'Laut Dokumentation einmalig rund 4,7 GB (legacy), 6,9 GB (8gb), 14,6 GB (16gb) oder 19,3 GB (24gb)',
+            'Angaben der Quellen': 'Laut Dokumentation einmalig rund 4,7 GB (legacy), 6,9 GB (8gb), 14,6 GB (12gb/16gb) oder 19,3 GB (24gb)',
           },
           {
             Punkt: 'Apple Silicon',
@@ -837,12 +837,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Die Kern-KI arbeitet mit Bildern: Modelle zur Qualitätsbewertung, Embeddings für die Suche, Gesichtsmodelle und Motiverkennung; geschriebene Tags, Beschreibungen und Kritiken stammen von einem optionalen Vision-Language-Modell.**',
         ],
         items: [
-          '**Qualitätswerte.** Die Profile 16gb und 24gb nutzen TOPIQ für den ästhetischen Wert, legacy und 8gb dagegen CLIP-Embeddings mit einem Ästhetik-Kopf; die Dokumentation führt ergänzende Bewerter wie LIQE als auf jedem Profil verfügbar auf.',
-          '**Suche.** Eingaben wie „Sonnenuntergang am Strand“ werden mit Embeddings abgeglichen: SigLIP 2 auf 16gb und 24gb, OpenCLIP ViT-L-14 auf legacy und 8gb.',
+          '**Qualitätswerte.** Die Profile 12gb, 16gb und 24gb nutzen TOPIQ für den ästhetischen Wert, legacy und 8gb dagegen CLIP-Embeddings mit einem Ästhetik-Kopf; die Dokumentation führt ergänzende Bewerter wie LIQE als auf jedem Profil verfügbar auf.',
+          '**Suche.** Eingaben wie „Sonnenuntergang am Strand“ werden mit Embeddings abgeglichen: SigLIP 2 auf 12gb, 16gb und 24gb, OpenCLIP ViT-L-14 auf legacy und 8gb.',
           '**Gesichter.** InsightFace erkennt Gesichter, und ein Clustering gruppiert sie zu Personen; optionale MediaPipe-Blendshapes verbessern die Erkennung von Blinzeln und Lächeln.',
           '**Motive.** BiRefNet trennt Motiv und Hintergrund, um Schärfe und Bildausschnitt zu beurteilen.',
           '**My Taste.** Ihre A/B-Vergleiche, Bewertungen und Aussortier-Entscheidungen speisen einen Gewichtungs-Optimierer und ein persönliches Ranking.',
-          '**Vision-Language-Modell.** Tags, Beschreibungen und Kritiken laufen auf 16gb und 24gb im selben Prozess oder auf einem entfernten Ollama- oder OpenAI-kompatiblen Server, den vlm_backend festlegt; dann wird das Bild an diesen Server gesendet.',
+          '**Vision-Language-Modell.** Tags, Beschreibungen und Kritiken laufen auf 12gb, 16gb und 24gb im selben Prozess oder auf einem entfernten Ollama- oder OpenAI-kompatiblen Server, den vlm_backend festlegt; dann wird das Bild an diesen Server gesendet.',
         ],
         note:
           'Das sind die eigenen Angaben des Projekts. PromptQuorum hat weder Bewertungsqualität noch Suchrelevanz noch Genauigkeit der Gesichtsgruppierung getestet.',
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**KI-Qualität.** Bewertungsgenauigkeit, Gesichtsgruppierung, Suchrelevanz und Scangeschwindigkeit wurden nicht getestet; die README selbst nennt den ästhetischen Wert ungefähr.',
           '**Offline-Betrieb.** Ob Facet nach dem ersten Modell-Download vollständig offline funktioniert, wurde nicht überprüft.',
-          '**Release-Stabilität.** Laut den Hinweisen zu v1.23.1 wurde v1.23.0 ohne das CUDA-Docker-Image veröffentlicht, und zwischen dem 24. und 29. Oktober 2026 erschienen sechs Versionen; rechnen Sie also mit schnellen Änderungen.',
+          '**Release-Stabilität.** Laut den Hinweisen zu v1.23.1 wurde v1.23.0 ohne das CUDA-Docker-Image veröffentlicht, und zwischen dem 24. Oktober und dem 5. November 2026 erschienen sieben Versionen; rechnen Sie also mit schnellen Änderungen.',
           '**Support.** Die README beschreibt ein Ein-Entwickler-Projekt ohne den Support kommerzieller Aussortier-Werkzeuge.',
           '**Installationsschritte.** Die Einrichtungsbefehle stammen aus der Dokumentation und wurden von PromptQuorum nicht ausgeführt.',
         ],
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Braucht Facet eine GPU?',
             a:
-              'Nein. Das Profil legacy führt Bewertung, Gesichter, Tags, Aussortieren und Galerie auf einer CPU aus, nur langsamer; TOPIQ, SigLIP 2 und die integrierten Beschreibungen erfordern die NVIDIA-Profile 16gb oder 24gb, es sei denn, vlm_backend zeigt auf einen entfernten Server.',
+              'Nein. Das Profil legacy führt Bewertung, Gesichter, Tags, Aussortieren und Galerie auf einer CPU aus, nur langsamer; TOPIQ, SigLIP 2 und die integrierten Beschreibungen erfordern die NVIDIA-Profile 12gb, 16gb oder 24gb, es sei denn, vlm_backend zeigt auf einen entfernten Server.',
           },
           {
             q: 'Verändert oder löscht Facet meine Fotos?',
@@ -976,11 +976,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Facet-Website](https://ncoevoet.github.io/facet/) — Funktionsüberblick und Schnellstart, geprüft am 2. November 2026.',
-          '[Facet-README](https://github.com/ncoevoet/facet/blob/master/README.md) — Funktionen, Anforderungen, Lizenzen und Vergleiche, geprüft am 2. November 2026.',
-          '[Facet-Dokumentation](https://github.com/ncoevoet/facet/tree/master/docs) — Installation, Konfiguration, Deployment und KI-Agenten-Seiten, geprüft am 2. November 2026.',
-          '[Modelle und Lizenzen von Drittanbietern](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — Lizenz jedes Modells, geprüft am 2. November 2026.',
-          '[Facet auf GitHub](https://github.com/ncoevoet/facet/releases) — Releases und Commit-Aktivität, geprüft am 2. November 2026.',
+          '[Facet-Website](https://ncoevoet.github.io/facet/) — Funktionsüberblick und Schnellstart, geprüft am 6. November 2026.',
+          '[Facet-README](https://github.com/ncoevoet/facet/blob/master/README.md) — Funktionen, Anforderungen, Lizenzen und Vergleiche, geprüft am 6. November 2026.',
+          '[Facet-Dokumentation](https://github.com/ncoevoet/facet/tree/master/docs) — Installation, Konfiguration, Deployment und KI-Agenten-Seiten, geprüft am 6. November 2026.',
+          '[Modelle und Lizenzen von Drittanbietern](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — Lizenz jedes Modells, geprüft am 6. November 2026.',
+          '[Facet auf GitHub](https://github.com/ncoevoet/facet/releases) — Releases und Commit-Aktivität, geprüft am 6. November 2026.',
         ],
       },
       relatedReading: {
@@ -999,14 +999,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-es.webp',
     title: 'Análisis de Facet: puntuación, selección y galería de fotos en local',
     seoTitle: 'Análisis de Facet: puntuar y seleccionar fotos en local',
     intro:
-      'Facet es una herramienta gratuita de análisis de fotos con licencia MIT que ejecutas tú mismo: puntúa cada foto, detecta ráfagas y casi duplicados, agrupa caras y te deja buscar en tu biblioteca con lenguaje natural desde una galería web. No es una app de chat ni de LLM; la IA consiste en puntuación de imágenes, embeddings y modelos de caras. Este análisis refleja su README, su documentación, las versiones de GitHub y el código fuente, revisados el 2 de noviembre de 2026.',
+      'Facet es una herramienta gratuita de análisis de fotos con licencia MIT que ejecutas tú mismo: puntúa cada foto, detecta ráfagas y casi duplicados, agrupa caras y te deja buscar en tu biblioteca con lenguaje natural desde una galería web. No es una app de chat ni de LLM; la IA consiste en puntuación de imágenes, embeddings y modelos de caras. Este análisis refleja su README, su documentación, las versiones de GitHub y el código fuente, revisados el 6 de noviembre de 2026.',
     metaDescription:
       'Análisis de Facet: herramienta gratuita MIT que puntúa, selecciona y explora fotos en local, con caras agrupadas y búsqueda. Licencias y privacidad.',
     twitterDescription:
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.27.0) es una herramienta gratuita con licencia MIT que puntúa, selecciona y explora una biblioteca de fotos local en una galería web, con agrupación de caras y búsqueda en lenguaje natural en tu equipo.** Según su página de licencias, algunos pesos por defecto no están licenciados para uso comercial.',
+      '**Facet (v1.28.0) es una herramienta gratuita con licencia MIT que puntúa, selecciona y explora una biblioteca de fotos local en una galería web, con agrupación de caras y búsqueda en lenguaje natural en tu equipo.** Según su página de licencias, algunos pesos por defecto no están licenciados para uso comercial.',
     quickAnswerTop: {
       es: {
         question: '¿Facet mantiene tus fotos y la puntuación con IA en tu propio equipo?',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Según su README, sí: un escaneo solo lee tus fotos, los resultados van a la base de datos propia de Facet y los modelos se ejecutan en tu hardware tras una descarga en el primer uso. Algunas cosas salen al exterior, como la comprobación de actualizaciones, los mosaicos del mapa y un servidor remoto opcional de modelos de visión y lenguaje. PromptQuorum no ha inspeccionado el tráfico de red.',
         bullets: [
           'Puntúa cada foto en 9 dimensiones, agrupa ráfagas, fotos parecidas y caras, y muestra las mejores.',
-          'La búsqueda en lenguaje natural usa SigLIP 2 en los perfiles de GPU 16gb y 24gb y un modelo CLIP en legacy y 8gb.',
+          'La búsqueda en lenguaje natural usa SigLIP 2 en los perfiles de GPU 12gb, 16gb y 24gb y un modelo CLIP en legacy y 8gb.',
           'Funciona en CPU con el perfil legacy; una GPU NVIDIA o un Mac con Apple Silicon con mucha memoria desbloquea los modelos más potentes.',
           'Se instala con Docker o un script de instalación; no se publica instalador, versión en tienda de apps ni binario de release, pero la documentación describe un MSI para Windows que compilas tú o tomas de una ejecución de CI.',
           'Según su documentación, el visor está abierto a cualquiera que alcance su puerto hasta que establezcas una contraseña.',
@@ -1128,7 +1128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Mantenimiento: la v1.27.0 se publicó el 29 de octubre de 2026 y el repositorio recibió un push el 30 de octubre de 2026, así que no se aplica ningún aviso de proyecto abandonado.',
+          'Mantenimiento: la v1.28.0 se publicó el 5 de noviembre de 2026 y el repositorio recibió un push el 5 de noviembre de 2026, así que no se aplica ningún aviso de proyecto abandonado.',
           'Responsable: el README lo describe como un proyecto de un solo desarrollador sin soporte comercial; el código está en GitHub con licencia MIT.',
           'Instalación: Docker Compose o un script de instalación, más un primer escaneo que descarga los modelos; hace falta una terminal.',
           'Coste: gratuito; no se encontró ningún plan de pago. «Edition» en la documentación es un nivel de acceso, no una edición del producto.',
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Este análisis se basa en el sitio web, el README, la documentación, las versiones de GitHub y partes del código fuente del proyecto, revisados el 2 de noviembre de 2026. PromptQuorum no ha instalado Facet, por lo que no se evalúan la precisión de la puntuación, la relevancia de la búsqueda ni la velocidad.',
+              'Este análisis se basa en el sitio web, el README, la documentación, las versiones de GitHub y partes del código fuente del proyecto, revisados el 6 de noviembre de 2026. PromptQuorum no ha instalado Facet, por lo que no se evalúan la precisión de la puntuación, la relevancia de la búsqueda ni la velocidad.',
           },
         ],
       },
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Versión revisada: v1.27.0, publicada el 29 de octubre de 2026 según el release de GitHub; el último push al repositorio fue el 30 de octubre de 2026. Instalar requiere una terminal, Git y Docker o Python, así que es una instalación para desarrolladores y no un instalador de doble clic. No se encontró una página de política de privacidad aparte en el sitio del proyecto ni en la documentación leída; las declaraciones de privacidad están en el README.',
+          'Versión revisada: v1.28.0, publicada el 5 de noviembre de 2026 según el release de GitHub; el último push al repositorio fue el 5 de noviembre de 2026. Instalar requiere una terminal, Git y Docker o Python, así que es una instalación para desarrolladores y no un instalador de doble clic. No se encontró una página de política de privacidad aparte en el sitio del proyecto ni en la documentación leída; las declaraciones de privacidad están en el README.',
       },
       requirements: {
         id: 'requirements',
@@ -1208,12 +1208,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Elemento: 'Perfiles',
-            'Qué dicen las fuentes': 'legacy: solo CPU; 8gb: NVIDIA 6-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA 20 GB o más',
+            'Qué dicen las fuentes': 'legacy: solo CPU; 8gb: NVIDIA 6-11.5 GB; 12gb: NVIDIA 11.5-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA 20 GB o más',
           },
           {
             Elemento: 'Descarga en el primer uso',
             'Qué dicen las fuentes':
-              'Según la documentación, una sola vez, unos 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) o 19.3 GB (24gb)',
+              'Según la documentación, una sola vez, unos 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (12gb/16gb) o 19.3 GB (24gb)',
           },
           {
             Elemento: 'Apple Silicon',
@@ -1293,12 +1293,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La IA central trabaja con imágenes: modelos de puntuación de calidad, embeddings para la búsqueda, modelos de caras y detección del sujeto; las etiquetas, descripciones y críticas escritas proceden de un modelo opcional de visión y lenguaje.**',
         ],
         items: [
-          '**Puntuaciones de calidad.** Los perfiles 16gb y 24gb usan TOPIQ para la puntuación estética, mientras que legacy y 8gb usan embeddings CLIP con una cabeza estética; la documentación indica que puntuadores complementarios como LIQE están disponibles en cualquier perfil.',
-          '**Búsqueda.** Consultas como «atardecer en la playa» se comparan con embeddings: SigLIP 2 en 16gb y 24gb, OpenCLIP ViT-L-14 en legacy y 8gb.',
+          '**Puntuaciones de calidad.** Los perfiles 12gb, 16gb y 24gb usan TOPIQ para la puntuación estética, mientras que legacy y 8gb usan embeddings CLIP con una cabeza estética; la documentación indica que puntuadores complementarios como LIQE están disponibles en cualquier perfil.',
+          '**Búsqueda.** Consultas como «atardecer en la playa» se comparan con embeddings: SigLIP 2 en 12gb, 16gb y 24gb, OpenCLIP ViT-L-14 en legacy y 8gb.',
           '**Caras.** InsightFace detecta y reconoce caras y un agrupamiento las reúne en personas; los blendshapes opcionales de MediaPipe afinan la lectura de parpadeo y sonrisa.',
           '**Sujetos.** BiRefNet separa el sujeto del fondo para juzgar el enfoque y el encuadre.',
           '**My Taste.** Tus comparaciones A/B, valoraciones y decisiones de selección alimentan un optimizador de pesos y una clasificación personal.',
-          '**Modelo de visión y lenguaje.** Etiquetas, descripciones y críticas se ejecutan en el mismo proceso con los perfiles 16gb y 24gb, o en un servidor remoto de Ollama o compatible con OpenAI indicado con vlm_backend; en ese caso la imagen se envía a ese servidor.',
+          '**Modelo de visión y lenguaje.** Etiquetas, descripciones y críticas se ejecutan en el mismo proceso con los perfiles 12gb, 16gb y 24gb, o en un servidor remoto de Ollama o compatible con OpenAI indicado con vlm_backend; en ese caso la imagen se envía a ese servidor.',
         ],
         note:
           'Son declaraciones del propio proyecto. PromptQuorum no probó la calidad de la puntuación, la relevancia de la búsqueda ni la precisión de la agrupación de caras.',
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Calidad de la IA.** No se probaron la precisión de la puntuación, la agrupación de caras, la relevancia de la búsqueda ni la velocidad de escaneo; el propio README llama aproximada a la puntuación estética.',
           '**Uso sin conexión.** No se verificó si Facet funciona del todo sin conexión tras la primera descarga de modelos.',
-          '**Estabilidad de las versiones.** Las notas de la v1.23.1 dicen que la v1.23.0 salió sin la imagen CUDA de Docker, y entre el 24 y el 29 de octubre de 2026 se publicaron seis versiones, así que espera cambios rápidos.',
+          '**Estabilidad de las versiones.** Las notas de la v1.23.1 dicen que la v1.23.0 salió sin la imagen CUDA de Docker, y entre el 24 de octubre y el 5 de noviembre de 2026 se publicaron siete versiones, así que espera cambios rápidos.',
           '**Soporte.** El README describe un proyecto de un solo desarrollador, sin el soporte de las herramientas comerciales de selección.',
           '**Pasos de instalación.** Los comandos de instalación proceden de la documentación y PromptQuorum no los ejecutó.',
         ],
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Facet necesita una GPU?',
             a:
-              'No. El perfil legacy ejecuta puntuación, caras, etiquetas, selección y galería en una CPU, solo que más despacio; TOPIQ, SigLIP 2 y las descripciones integradas requieren los perfiles NVIDIA 16gb o 24gb, salvo que apuntes vlm_backend a un servidor remoto.',
+              'No. El perfil legacy ejecuta puntuación, caras, etiquetas, selección y galería en una CPU, solo que más despacio; TOPIQ, SigLIP 2 y las descripciones integradas requieren los perfiles NVIDIA 12gb, 16gb o 24gb, salvo que apuntes vlm_backend a un servidor remoto.',
           },
           {
             q: '¿Facet modifica o borra mis fotos?',
@@ -1432,11 +1432,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Sitio web de Facet](https://ncoevoet.github.io/facet/) — resumen de funciones e inicio rápido, revisado el 2 de noviembre de 2026.',
-          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — funciones, requisitos, licencias y comparaciones, revisado el 2 de noviembre de 2026.',
-          '[Documentación de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalación, configuración, despliegue y páginas de agentes de IA, revisadas el 2 de noviembre de 2026.',
-          '[Modelos y licencias de terceros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licencia de cada modelo, revisada el 2 de noviembre de 2026.',
-          '[Facet en GitHub](https://github.com/ncoevoet/facet/releases) — versiones y actividad de commits, revisadas el 2 de noviembre de 2026.',
+          '[Sitio web de Facet](https://ncoevoet.github.io/facet/) — resumen de funciones e inicio rápido, revisado el 6 de noviembre de 2026.',
+          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — funciones, requisitos, licencias y comparaciones, revisado el 6 de noviembre de 2026.',
+          '[Documentación de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalación, configuración, despliegue y páginas de agentes de IA, revisadas el 6 de noviembre de 2026.',
+          '[Modelos y licencias de terceros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licencia de cada modelo, revisada el 6 de noviembre de 2026.',
+          '[Facet en GitHub](https://github.com/ncoevoet/facet/releases) — versiones y actividad de commits, revisadas el 6 de noviembre de 2026.',
         ],
       },
       relatedReading: {
@@ -1455,14 +1455,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-fr.webp',
     title: 'Avis sur Facet : notation, tri et galerie de photos en local',
     seoTitle: 'Avis sur Facet : noter et trier ses photos en local',
     intro:
-      'Facet est un outil gratuit d’analyse de photos sous licence MIT que vous exécutez vous-même : il note chaque photo, repère les rafales et les quasi-doublons, regroupe les visages et vous permet de chercher dans votre photothèque en langage naturel via une galerie web. Ce n’est pas une application de chat ni de LLM ; l’IA se compose de notation d’images, d’embeddings et de modèles de visages. Cet avis reflète son README, sa documentation, ses versions GitHub et son code source, consultés le 2 novembre 2026.',
+      'Facet est un outil gratuit d’analyse de photos sous licence MIT que vous exécutez vous-même : il note chaque photo, repère les rafales et les quasi-doublons, regroupe les visages et vous permet de chercher dans votre photothèque en langage naturel via une galerie web. Ce n’est pas une application de chat ni de LLM ; l’IA se compose de notation d’images, d’embeddings et de modèles de visages. Cet avis reflète son README, sa documentation, ses versions GitHub et son code source, consultés le 6 novembre 2026.',
     metaDescription:
       'Avis sur Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.',
     twitterDescription:
@@ -1484,7 +1484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.27.0) est un outil gratuit sous licence MIT qui note, trie et parcourt une photothèque locale dans une galerie web, avec regroupement des visages et recherche en langage naturel sur votre machine.** Selon sa page de licences, certains poids par défaut n’ont pas de licence d’usage commercial.',
+      '**Facet (v1.28.0) est un outil gratuit sous licence MIT qui note, trie et parcourt une photothèque locale dans une galerie web, avec regroupement des visages et recherche en langage naturel sur votre machine.** Selon sa page de licences, certains poids par défaut n’ont pas de licence d’usage commercial.',
     quickAnswerTop: {
       fr: {
         question: 'Facet garde-t-il vos photos et la notation par IA sur votre propre machine ?',
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Selon son README, oui : un scan se contente de lire vos photos, les résultats vont dans la base de données propre à Facet et les modèles s’exécutent sur votre matériel après un téléchargement au premier lancement. Quelques éléments sortent vers l’extérieur, comme la vérification des mises à jour, les tuiles de carte et un serveur distant facultatif de modèles vision-langage. PromptQuorum n’a pas inspecté le trafic réseau.',
         bullets: [
           'Note chaque photo selon 9 dimensions, regroupe rafales, photos similaires et visages, et fait ressortir les meilleures.',
-          'La recherche en langage naturel utilise SigLIP 2 sur les profils GPU 16gb et 24gb et un modèle CLIP sur legacy et 8gb.',
+          'La recherche en langage naturel utilise SigLIP 2 sur les profils GPU 12gb, 16gb et 24gb et un modèle CLIP sur legacy et 8gb.',
           'Fonctionne sur CPU avec le profil legacy ; un GPU NVIDIA ou un Mac Apple Silicon doté de beaucoup de mémoire débloque les modèles les plus puissants.',
           'S’installe avec Docker ou un script d’installation ; aucun installeur, version sur une boutique d’applications ni binaire de release n’est publié, mais la documentation décrit pour Windows un MSI à compiler soi-même ou à récupérer dans une exécution CI.',
           'Selon sa documentation, le visualiseur est ouvert à toute personne qui atteint son port tant que vous n’avez pas défini de mot de passe.',
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance : la v1.27.0 est sortie le 29 octobre 2026 et le dépôt a reçu un push le 30 octobre 2026, donc aucun avertissement de projet abandonné ne s’applique.',
+          'Maintenance : la v1.28.0 est sortie le 5 novembre 2026 et le dépôt a reçu un push le 5 novembre 2026, donc aucun avertissement de projet abandonné ne s’applique.',
           'Responsable : le README le décrit comme un projet d’un seul développeur sans support commercial ; le code est sur GitHub sous licence MIT.',
           'Installation : Docker Compose ou un script d’installation, puis un premier scan qui télécharge les modèles ; un terminal est nécessaire.',
           'Coût : gratuit ; aucune offre payante n’a été trouvée. « Edition » dans la documentation désigne un niveau d’accès, pas une édition du produit.',
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Cet avis s’appuie sur le site web, le README, la documentation, les versions GitHub et une partie du code source du projet, consultés le 2 novembre 2026. PromptQuorum n’a pas installé Facet : la précision de la notation, la pertinence de la recherche et la vitesse ne sont donc pas évaluées.',
+              'Cet avis s’appuie sur le site web, le README, la documentation, les versions GitHub et une partie du code source du projet, consultés le 6 novembre 2026. PromptQuorum n’a pas installé Facet : la précision de la notation, la pertinence de la recherche et la vitesse ne sont donc pas évaluées.',
           },
         ],
       },
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Version examinée : v1.27.0, publiée le 29 octobre 2026 selon la release GitHub ; le dernier push dans le dépôt date du 30 octobre 2026. L’installation exige un terminal, Git et Docker ou Python : c’est une mise en place pour développeurs, pas une installation par double-clic. Aucune page de politique de confidentialité distincte n’a été trouvée sur le site du projet ni dans la documentation lue ; les déclarations de confidentialité figurent dans le README.',
+          'Version examinée : v1.28.0, publiée le 5 novembre 2026 selon la release GitHub ; le dernier push dans le dépôt date du 5 novembre 2026. L’installation exige un terminal, Git et Docker ou Python : c’est une mise en place pour développeurs, pas une installation par double-clic. Aucune page de politique de confidentialité distincte n’a été trouvée sur le site du projet ni dans la documentation lue ; les déclarations de confidentialité figurent dans le README.',
       },
       requirements: {
         id: 'requirements',
@@ -1664,12 +1664,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Élément': 'Profils',
-            'Ce que disent les sources': 'legacy : CPU seul ; 8gb : NVIDIA 6-14 Go ; 16gb : NVIDIA 14-20 Go ; 24gb : NVIDIA 20 Go ou plus',
+            'Ce que disent les sources': 'legacy : CPU seul ; 8gb : NVIDIA 6-11.5 Go ; 12gb : NVIDIA 11.5-14 Go ; 16gb : NVIDIA 14-20 Go ; 24gb : NVIDIA 20 Go ou plus',
           },
           {
             'Élément': 'Téléchargement initial',
             'Ce que disent les sources':
-              'Selon la documentation, une seule fois, environ 4.7 Go (legacy), 6.9 Go (8gb), 14.6 Go (16gb) ou 19.3 Go (24gb)',
+              'Selon la documentation, une seule fois, environ 4.7 Go (legacy), 6.9 Go (8gb), 14.6 Go (12gb/16gb) ou 19.3 Go (24gb)',
           },
           {
             'Élément': 'Apple Silicon',
@@ -1751,12 +1751,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**L’IA centrale travaille sur les images : modèles de notation de la qualité, embeddings pour la recherche, modèles de visages et détection du sujet ; les étiquettes, légendes et critiques rédigées viennent d’un modèle vision-langage facultatif.**',
         ],
         items: [
-          '**Notes de qualité.** Les profils 16gb et 24gb utilisent TOPIQ pour la note esthétique, tandis que legacy et 8gb utilisent des embeddings CLIP avec une tête esthétique ; la documentation indique que des évaluateurs complémentaires comme LIQE sont disponibles sur tous les profils.',
-          '**Recherche.** Des requêtes comme « coucher de soleil sur la plage » sont comparées aux embeddings : SigLIP 2 sur 16gb et 24gb, OpenCLIP ViT-L-14 sur legacy et 8gb.',
+          '**Notes de qualité.** Les profils 12gb, 16gb et 24gb utilisent TOPIQ pour la note esthétique, tandis que legacy et 8gb utilisent des embeddings CLIP avec une tête esthétique ; la documentation indique que des évaluateurs complémentaires comme LIQE sont disponibles sur tous les profils.',
+          '**Recherche.** Des requêtes comme « coucher de soleil sur la plage » sont comparées aux embeddings : SigLIP 2 sur 12gb, 16gb et 24gb, OpenCLIP ViT-L-14 sur legacy et 8gb.',
           '**Visages.** InsightFace détecte et reconnaît les visages, puis un regroupement les réunit en personnes ; les blendshapes MediaPipe facultatifs affinent la lecture des clignements et des sourires.',
           '**Sujets.** BiRefNet sépare le sujet de l’arrière-plan pour juger la mise au point et le cadrage.',
           '**My Taste.** Vos comparaisons A/B, notes et décisions de tri alimentent un optimiseur de pondérations et un classement personnel.',
-          '**Modèle vision-langage.** Étiquettes, légendes et critiques s’exécutent dans le même processus sur les profils 16gb et 24gb, ou sur un serveur distant Ollama ou compatible OpenAI défini par vlm_backend ; l’image est alors envoyée à ce serveur.',
+          '**Modèle vision-langage.** Étiquettes, légendes et critiques s’exécutent dans le même processus sur les profils 12gb, 16gb et 24gb, ou sur un serveur distant Ollama ou compatible OpenAI défini par vlm_backend ; l’image est alors envoyée à ce serveur.',
         ],
         note:
           'Ce sont les déclarations du projet lui-même. PromptQuorum n’a testé ni la qualité des notes, ni la pertinence de la recherche, ni la précision du regroupement des visages.',
@@ -1806,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualité de l’IA.** La précision de la notation, le regroupement des visages, la pertinence de la recherche et la vitesse de scan n’ont pas été testés ; le README qualifie lui-même la note esthétique d’approximative.',
           '**Usage hors connexion.** Nous n’avons pas vérifié si Facet fonctionne entièrement hors ligne après le premier téléchargement des modèles.',
-          '**Stabilité des versions.** Les notes de la v1.23.1 indiquent que la v1.23.0 est sortie sans l’image Docker CUDA, et six versions ont paru entre le 24 et le 29 octobre 2026 : attendez-vous à des changements rapides.',
+          '**Stabilité des versions.** Les notes de la v1.23.1 indiquent que la v1.23.0 est sortie sans l’image Docker CUDA, et sept versions ont paru entre le 24 octobre et le 5 novembre 2026 : attendez-vous à des changements rapides.',
           '**Support.** Le README décrit un projet d’un seul développeur, sans le support des outils de tri commerciaux.',
           '**Étapes d’installation.** Les commandes proviennent de la documentation et PromptQuorum ne les a pas exécutées.',
         ],
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Facet a-t-il besoin d’un GPU ?',
             a:
-              'Non. Le profil legacy exécute notation, visages, étiquettes, tri et galerie sur un CPU, simplement plus lentement ; TOPIQ, SigLIP 2 et les légendes intégrées exigent les profils NVIDIA 16gb ou 24gb, sauf si vous pointez vlm_backend vers un serveur distant.',
+              'Non. Le profil legacy exécute notation, visages, étiquettes, tri et galerie sur un CPU, simplement plus lentement ; TOPIQ, SigLIP 2 et les légendes intégrées exigent les profils NVIDIA 12gb, 16gb ou 24gb, sauf si vous pointez vlm_backend vers un serveur distant.',
           },
           {
             q: 'Facet modifie-t-il ou supprime-t-il mes photos ?',
@@ -1890,11 +1890,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Site web de Facet](https://ncoevoet.github.io/facet/) — présentation des fonctions et démarrage rapide, consultés le 2 novembre 2026.',
-          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — fonctions, prérequis, licences et comparaisons, consultés le 2 novembre 2026.',
-          '[Documentation de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, déploiement et pages sur les agents d’IA, consultées le 2 novembre 2026.',
-          '[Modèles et licences tiers](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence de chaque modèle, consultée le 2 novembre 2026.',
-          '[Facet sur GitHub](https://github.com/ncoevoet/facet/releases) — versions et activité des commits, consultées le 2 novembre 2026.',
+          '[Site web de Facet](https://ncoevoet.github.io/facet/) — présentation des fonctions et démarrage rapide, consultés le 6 novembre 2026.',
+          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — fonctions, prérequis, licences et comparaisons, consultés le 6 novembre 2026.',
+          '[Documentation de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, déploiement et pages sur les agents d’IA, consultées le 6 novembre 2026.',
+          '[Modèles et licences tiers](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence de chaque modèle, consultée le 6 novembre 2026.',
+          '[Facet sur GitHub](https://github.com/ncoevoet/facet/releases) — versions et activité des commits, consultées le 6 novembre 2026.',
         ],
       },
       relatedReading: {
@@ -1913,14 +1913,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-ja.webp',
     title: 'Facetレビュー：ローカルで写真を採点・選別・閲覧',
     seoTitle: 'Facetレビュー：写真をローカルで採点・選別・閲覧できるツール',
     intro:
-      'Facetは、自分で動かす無料のMITライセンスの写真分析ツールです。写真を1枚ずつ採点し、連写やほぼ同じ写真を見つけ、顔をグループ化し、Webギャラリーから自然な言葉でライブラリを検索できます。チャットやLLMのアプリではなく、AIは画像の採点、埋め込み、顔モデルです。このレビューは、2026年11月2日に確認したREADME、ドキュメント、GitHubのリリース、ソースコードに基づいています。',
+      'Facetは、自分で動かす無料のMITライセンスの写真分析ツールです。写真を1枚ずつ採点し、連写やほぼ同じ写真を見つけ、顔をグループ化し、Webギャラリーから自然な言葉でライブラリを検索できます。チャットやLLMのアプリではなく、AIは画像の採点、埋め込み、顔モデルです。このレビューは、2026年11月6日に確認したREADME、ドキュメント、GitHubのリリース、ソースコードに基づいています。',
     metaDescription: 'Facetのレビュー。写真をローカルで採点・選別・閲覧できる無料のMITツールで、顔のグループ化と自然言語検索に対応。導入方法、モデルのライセンス、プライバシーを解説します。',
     twitterDescription:
       'Facetレビュー：写真の採点・選別・ギャラリーを自分の環境で動かすツール。DockerまたはスクリプトでのセットアップとCPU／GPUプロファイル、既定モデルの非商用ライセンス、任意のリモートVLM、確認できなかった点を整理します。',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet（v1.27.0）は、ローカルの写真ライブラリを採点・選別し、Webギャラリーで閲覧できる無料のMITライセンスのツールで、顔のグループ化と自然言語検索が自分のマシン上で動きます。**プロジェクトのモデルライセンスのページによれば、既定モデルの重みの一部は商用利用が許諾されていません。チャット機能はありません。',
+      '**Facet（v1.28.0）は、ローカルの写真ライブラリを採点・選別し、Webギャラリーで閲覧できる無料のMITライセンスのツールで、顔のグループ化と自然言語検索が自分のマシン上で動きます。**プロジェクトのモデルライセンスのページによれば、既定モデルの重みの一部は商用利用が許諾されていません。チャット機能はありません。',
     quickAnswerTop: {
       ja: {
         question: 'Facetは写真とAIの採点を自分のマシン上にとどめますか。',
@@ -1948,7 +1948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'READMEによれば、はい。スキャンは写真を読み取るだけで、結果はFacet自身のデータベースに保存され、モデルは初回のダウンロード後に自分のハードウェアで動きます。更新確認、地図タイル、任意のリモート視覚言語サーバーなど、外部に出る通信もあります。PromptQuorumはネットワーク通信を調べていません。',
         bullets: [
           '写真を9つの観点で採点し、連写・類似写真・顔をグループ化して上位の写真を示します。',
-          '自然言語検索は、GPUプロファイルの16gbと24gbではSigLIP 2、legacyと8gbではCLIPモデルを使います。',
+          '自然言語検索は、GPUプロファイルの12gb、16gb、24gbではSigLIP 2、legacyと8gbではCLIPモデルを使います。',
           'legacyプロファイルならCPUで動き、NVIDIA GPUまたはメモリの多いApple Siliconを搭載したMacで最も強力なモデルが使えます。',
           'インストールはDockerまたはインストールスクリプトで、インストーラー、アプリストア版、リリースのバイナリは公開されていませんが、ドキュメントにはWindows用MSIをビルドするかCI実行の成果物から入手する方法があります。',
           'ドキュメントによれば、ビューアはパスワードを設定するまで、ポートに届く人なら誰でも開けます。',
@@ -2038,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'メンテナンス：v1.27.0は2026年10月29日に公開され、リポジトリには2026年10月30日にプッシュがあったため、放置プロジェクトの警告は該当しません。',
+          'メンテナンス：v1.28.0は2026年11月5日に公開され、リポジトリには2026年11月5日にプッシュがあったため、放置プロジェクトの警告は該当しません。',
           '運営：READMEは、商用サポートのない個人開発プロジェクトと説明しています。コードはMITライセンスでGitHubにあります。',
           '導入：Docker Composeまたはインストールスクリプトと、モデルをダウンロードする初回スキャンが必要で、ターミナルを使います。',
           '費用：無料で、有料プランは見つかりませんでした。ドキュメントの「Edition」はアクセスレベルであり、製品のエディションではありません。',
@@ -2048,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'このレビューは、2026年11月2日に確認したプロジェクトのWebサイト、README、ドキュメント、GitHubのリリース、ソースコードの一部に基づいています。PromptQuorumはFacetをインストールしていないため、採点の精度、検索の適合度、速度は評価していません。',
+              'このレビューは、2026年11月6日に確認したプロジェクトのWebサイト、README、ドキュメント、GitHubのリリース、ソースコードの一部に基づいています。PromptQuorumはFacetをインストールしていないため、採点の精度、検索の適合度、速度は評価していません。',
           },
         ],
       },
@@ -2102,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          '確認したバージョンはv1.27.0で、GitHubのリリースによると2026年10月29日に公開されました。リポジトリへの最後のプッシュは2026年10月30日です。インストールにはターミナル、Git、DockerまたはPythonが必要で、ダブルクリックで入るものではなく開発者向けの導入です。プロジェクトのサイトにも読んだドキュメントにも、独立したプライバシーポリシーのページは見つかりませんでした。プライバシーに関する記述はREADMEにあります。',
+          '確認したバージョンはv1.28.0で、GitHubのリリースによると2026年11月5日に公開されました。リポジトリへの最後のプッシュは2026年11月5日です。インストールにはターミナル、Git、DockerまたはPythonが必要で、ダブルクリックで入るものではなく開発者向けの導入です。プロジェクトのサイトにも読んだドキュメントにも、独立したプライバシーポリシーのページは見つかりませんでした。プライバシーに関する記述はREADMEにあります。',
       },
       requirements: {
         id: 'requirements',
@@ -2118,11 +2118,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '項目': 'プロファイル',
-            '情報源の記載': 'legacy：CPUのみ、8gb：NVIDIA 6〜14 GB、16gb：NVIDIA 14〜20 GB、24gb：NVIDIA 20 GB以上',
+            '情報源の記載': 'legacy：CPUのみ、8gb：NVIDIA 6〜11.5 GB、12gb：NVIDIA 11.5〜14 GB、16gb：NVIDIA 14〜20 GB、24gb：NVIDIA 20 GB以上',
           },
           {
             '項目': '初回ダウンロード',
-            '情報源の記載': 'ドキュメントによれば一度だけで、legacyは約4.7 GB、8gbは約6.9 GB、16gbは約14.6 GB、24gbは約19.3 GB',
+            '情報源の記載': 'ドキュメントによれば一度だけで、legacyは約4.7 GB、8gbは約6.9 GB、12gbと16gbは約14.6 GB、24gbは約19.3 GB',
           },
           {
             '項目': 'Apple Silicon',
@@ -2194,12 +2194,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**中核のAIは画像向けで、品質を採点するモデル、検索用の埋め込み、顔モデル、被写体の検出です。文章のタグ、キャプション、講評は任意の視覚言語モデルが生成します。**',
         ],
         items: [
-          '**品質スコア。**16gbと24gbのプロファイルは美的スコアにTOPIQを使い、legacyと8gbは美的ヘッドを持つCLIP埋め込みを使います。LIQEなどの補助的な採点モデルは、どのプロファイルでも使えるとドキュメントに記載されています。',
-          '**検索。**「海辺の夕日」のような入力を埋め込みと照合します。16gbと24gbではSigLIP 2、legacyと8gbではOpenCLIP ViT-L-14です。',
+          '**品質スコア。**12gb、16gb、24gbのプロファイルは美的スコアにTOPIQを使い、legacyと8gbは美的ヘッドを持つCLIP埋め込みを使います。LIQEなどの補助的な採点モデルは、どのプロファイルでも使えるとドキュメントに記載されています。',
+          '**検索。**「海辺の夕日」のような入力を埋め込みと照合します。12gb、16gb、24gbではSigLIP 2、legacyと8gbではOpenCLIP ViT-L-14です。',
           '**顔。**InsightFaceが顔を検出・認識し、クラスタリングで人物にまとめます。任意のMediaPipe blendshapesで、まばたきと笑顔の判定が精密になります。',
           '**被写体。**BiRefNetが被写体と背景を分け、ピントと構図を判断します。',
           '**My Taste。**A/B比較、評価、選別の判断が、重みの最適化と個人用ランキングに反映されます。',
-          '**視覚言語モデル。**タグ、キャプション、講評は、16gbと24gbでは同一プロセス内で動き、vlm_backendで指定したリモートのOllamaまたはOpenAI互換サーバーでも動かせます。その場合、画像はそのサーバーに送られます。',
+          '**視覚言語モデル。**タグ、キャプション、講評は、12gb、16gb、24gbでは同一プロセス内で動き、vlm_backendで指定したリモートのOllamaまたはOpenAI互換サーバーでも動かせます。その場合、画像はそのサーバーに送られます。',
         ],
         note: 'これらはプロジェクト自身の説明です。PromptQuorumは、スコアの品質、検索の適合度、顔のグループ化の精度を試していません。',
       },
@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AIの品質。**採点の精度、顔のグループ化、検索の適合度、スキャン速度は試していません。README自身も美的スコアを概算としています。',
           '**オフライン利用。**最初のモデルのダウンロード後に、Facetが完全にオフラインで動くかどうかは確認していません。',
-          '**リリースの安定性。**v1.23.1のノートによると、v1.23.0はCUDA版のDockerイメージなしで公開されました。2026年10月24日から29日のあいだに6つのバージョンが出ているため、変更が速い点に注意してください。',
+          '**リリースの安定性。**v1.23.1のノートによると、v1.23.0はCUDA版のDockerイメージなしで公開されました。2026年10月24日から11月5日のあいだに7つのバージョンが出ているため、変更が速い点に注意してください。',
           '**サポート。**READMEは、商用の選別ツールのようなサポートのない個人開発プロジェクトと説明しています。',
           '**インストール手順。**セットアップのコマンドはドキュメントによるもので、PromptQuorumは実行していません。',
         ],
@@ -2293,7 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'FacetにGPUは必要ですか。',
             a:
-              'いいえ。legacyプロファイルなら、採点、顔、タグ、選別、ギャラリーをCPUで実行できます。ただし遅くなります。TOPIQ、SigLIP 2、内蔵のキャプションにはNVIDIAの16gbまたは24gbプロファイルが必要で、vlm_backendをリモートサーバーに向ける場合は別です。',
+              'いいえ。legacyプロファイルなら、採点、顔、タグ、選別、ギャラリーをCPUで実行できます。ただし遅くなります。TOPIQ、SigLIP 2、内蔵のキャプションにはNVIDIAの12gb、16gbまたは24gbプロファイルが必要で、vlm_backendをリモートサーバーに向ける場合は別です。',
           },
           {
             q: 'Facetは写真を変更したり削除したりしますか。',
@@ -2326,11 +2326,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         items: [
-          '[Facetのウェブサイト](https://ncoevoet.github.io/facet/)：機能の概要とクイックスタート。2026年11月2日に確認。',
-          '[FacetのREADME](https://github.com/ncoevoet/facet/blob/master/README.md)：機能、要件、ライセンス、他ツールとの比較。2026年11月2日に確認。',
-          '[Facetのドキュメント](https://github.com/ncoevoet/facet/tree/master/docs)：インストール、設定、デプロイ、AIエージェントのページ。2026年11月2日に確認。',
-          '[サードパーティのモデルとライセンス](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各モデルのライセンス。2026年11月2日に確認。',
-          '[GitHubのFacet](https://github.com/ncoevoet/facet/releases)：リリースとコミットの状況。2026年11月2日に確認。',
+          '[Facetのウェブサイト](https://ncoevoet.github.io/facet/)：機能の概要とクイックスタート。2026年11月6日に確認。',
+          '[FacetのREADME](https://github.com/ncoevoet/facet/blob/master/README.md)：機能、要件、ライセンス、他ツールとの比較。2026年11月6日に確認。',
+          '[Facetのドキュメント](https://github.com/ncoevoet/facet/tree/master/docs)：インストール、設定、デプロイ、AIエージェントのページ。2026年11月6日に確認。',
+          '[サードパーティのモデルとライセンス](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各モデルのライセンス。2026年11月6日に確認。',
+          '[GitHubのFacet](https://github.com/ncoevoet/facet/releases)：リリースとコミットの状況。2026年11月6日に確認。',
         ],
       },
       relatedReading: {
@@ -2349,14 +2349,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-pt.webp',
     title: 'Análise do Facet: pontuação, seleção e galeria de fotos locais',
     seoTitle: 'Análise do Facet: pontuar e selecionar fotos localmente',
     intro:
-      'O Facet é uma ferramenta gratuita de análise de fotos, sob licença MIT, que você mesmo executa: ela pontua cada foto, encontra rajadas e quase duplicatas, agrupa rostos e deixa você pesquisar a biblioteca em linguagem natural por uma galeria web. Não é um app de chat nem de LLM; a IA é pontuação de imagens, embeddings e modelos de rostos. Esta análise reflete o README, a documentação, as versões do GitHub e o código-fonte, conferidos em 2 de novembro de 2026.',
+      'O Facet é uma ferramenta gratuita de análise de fotos, sob licença MIT, que você mesmo executa: ela pontua cada foto, encontra rajadas e quase duplicatas, agrupa rostos e deixa você pesquisar a biblioteca em linguagem natural por uma galeria web. Não é um app de chat nem de LLM; a IA é pontuação de imagens, embeddings e modelos de rostos. Esta análise reflete o README, a documentação, as versões do GitHub e o código-fonte, conferidos em 6 de novembro de 2026.',
     metaDescription:
       'Análise do Facet: ferramenta gratuita MIT que pontua, seleciona e navega fotos localmente, com rostos agrupados e busca. Instalação, licenças, privacidade.',
     twitterDescription:
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**O Facet (v1.27.0) é uma ferramenta gratuita, sob licença MIT, que pontua, seleciona e navega uma biblioteca de fotos local em uma galeria web, com agrupamento de rostos e busca em linguagem natural no seu computador.** Segundo a página de licenças, alguns pesos padrão não têm licença para uso comercial.',
+      '**O Facet (v1.28.0) é uma ferramenta gratuita, sob licença MIT, que pontua, seleciona e navega uma biblioteca de fotos local em uma galeria web, com agrupamento de rostos e busca em linguagem natural no seu computador.** Segundo a página de licenças, alguns pesos padrão não têm licença para uso comercial.',
     quickAnswerTop: {
       pt: {
         question: 'O Facet mantém suas fotos e a pontuação por IA no seu próprio computador?',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Segundo o README, sim: uma varredura apenas lê suas fotos, os resultados vão para o banco de dados do próprio Facet e os modelos rodam no seu hardware depois de um download no primeiro uso. Algumas coisas saem para fora, como a verificação de atualizações, os blocos do mapa e um servidor remoto opcional de modelos de visão e linguagem. A PromptQuorum não inspecionou o tráfego de rede.',
         bullets: [
           'Pontua cada foto em 9 dimensões, agrupa rajadas, fotos parecidas e rostos, e destaca as melhores.',
-          'A busca em linguagem natural usa o SigLIP 2 nos perfis de GPU 16gb e 24gb e um modelo CLIP em legacy e 8gb.',
+          'A busca em linguagem natural usa o SigLIP 2 nos perfis de GPU 12gb, 16gb e 24gb e um modelo CLIP em legacy e 8gb.',
           'Roda em CPU com o perfil legacy; uma GPU NVIDIA ou um Mac com Apple Silicon e muita memória libera os modelos mais fortes.',
           'Instala-se com Docker ou um script de instalação; não é publicado instalador, versão em loja de apps nem binário de release, mas a documentação descreve um MSI para Windows que você compila ou obtém de uma execução de CI.',
           'Segundo a documentação, o visualizador fica aberto a qualquer pessoa que alcance a porta até você definir uma senha.',
@@ -2478,7 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Manutenção: a v1.27.0 foi lançada em 29 de outubro de 2026 e o repositório recebeu um push em 30 de outubro de 2026, então nenhum aviso de projeto abandonado se aplica.',
+          'Manutenção: a v1.28.0 foi lançada em 5 de novembro de 2026 e o repositório recebeu um push em 5 de novembro de 2026, então nenhum aviso de projeto abandonado se aplica.',
           'Responsável: o README o descreve como um projeto de um único desenvolvedor, sem suporte comercial; o código está no GitHub sob licença MIT.',
           'Instalação: Docker Compose ou um script de instalação, mais uma primeira varredura que baixa os modelos; é preciso um terminal.',
           'Custo: gratuito; nenhum plano pago foi encontrado. «Edition» na documentação é um nível de acesso, não uma edição do produto.',
@@ -2488,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Esta análise se baseia no site, no README, na documentação, nas versões do GitHub e em partes do código-fonte do projeto, conferidos em 2 de novembro de 2026. A PromptQuorum não instalou o Facet, então precisão da pontuação, relevância da busca e velocidade não são avaliadas.',
+              'Esta análise se baseia no site, no README, na documentação, nas versões do GitHub e em partes do código-fonte do projeto, conferidos em 6 de novembro de 2026. A PromptQuorum não instalou o Facet, então precisão da pontuação, relevância da busca e velocidade não são avaliadas.',
           },
         ],
       },
@@ -2542,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Versão analisada: v1.27.0, publicada em 29 de outubro de 2026 segundo o release do GitHub; o último push no repositório foi em 30 de outubro de 2026. A instalação exige terminal, Git e Docker ou Python, então é uma configuração para desenvolvedores, não uma instalação com duplo clique. Nenhuma página separada de política de privacidade foi encontrada no site do projeto nem na documentação lida; as declarações de privacidade estão no README.',
+          'Versão analisada: v1.28.0, publicada em 5 de novembro de 2026 segundo o release do GitHub; o último push no repositório foi em 5 de novembro de 2026. A instalação exige terminal, Git e Docker ou Python, então é uma configuração para desenvolvedores, não uma instalação com duplo clique. Nenhuma página separada de política de privacidade foi encontrada no site do projeto nem na documentação lida; as declarações de privacidade estão no README.',
       },
       requirements: {
         id: 'requirements',
@@ -2558,12 +2558,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Item: 'Perfis',
-            'O que dizem as fontes': 'legacy: só CPU; 8gb: NVIDIA 6-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA 20 GB ou mais',
+            'O que dizem as fontes': 'legacy: só CPU; 8gb: NVIDIA 6-11.5 GB; 12gb: NVIDIA 11.5-14 GB; 16gb: NVIDIA 14-20 GB; 24gb: NVIDIA 20 GB ou mais',
           },
           {
             Item: 'Download no primeiro uso',
             'O que dizem as fontes':
-              'Segundo a documentação, uma única vez, cerca de 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) ou 19.3 GB (24gb)',
+              'Segundo a documentação, uma única vez, cerca de 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (12gb/16gb) ou 19.3 GB (24gb)',
           },
           {
             Item: 'Apple Silicon',
@@ -2642,12 +2642,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A IA central trabalha com imagens: modelos de pontuação de qualidade, embeddings para a busca, modelos de rostos e detecção do assunto; tags, legendas e críticas escritas vêm de um modelo opcional de visão e linguagem.**',
         ],
         items: [
-          '**Notas de qualidade.** Os perfis 16gb e 24gb usam o TOPIQ para a nota estética, enquanto legacy e 8gb usam embeddings CLIP com uma cabeça estética; a documentação lista avaliadores complementares como o LIQE como disponíveis em qualquer perfil.',
-          '**Busca.** Consultas como «pôr do sol na praia» são comparadas com embeddings: SigLIP 2 em 16gb e 24gb, OpenCLIP ViT-L-14 em legacy e 8gb.',
+          '**Notas de qualidade.** Os perfis 12gb, 16gb e 24gb usam o TOPIQ para a nota estética, enquanto legacy e 8gb usam embeddings CLIP com uma cabeça estética; a documentação lista avaliadores complementares como o LIQE como disponíveis em qualquer perfil.',
+          '**Busca.** Consultas como «pôr do sol na praia» são comparadas com embeddings: SigLIP 2 em 12gb, 16gb e 24gb, OpenCLIP ViT-L-14 em legacy e 8gb.',
           '**Rostos.** O InsightFace detecta e reconhece rostos e um agrupamento os reúne em pessoas; os blendshapes opcionais do MediaPipe refinam a leitura de piscadas e sorrisos.',
           '**Assuntos.** O BiRefNet separa o assunto do fundo para julgar foco e enquadramento.',
           '**My Taste.** Suas comparações A/B, avaliações e decisões de seleção alimentam um otimizador de pesos e um ranking pessoal.',
-          '**Modelo de visão e linguagem.** Tags, legendas e críticas rodam no mesmo processo nos perfis 16gb e 24gb, ou em um servidor remoto Ollama ou compatível com OpenAI definido em vlm_backend; nesse caso a imagem é enviada a esse servidor.',
+          '**Modelo de visão e linguagem.** Tags, legendas e críticas rodam no mesmo processo nos perfis 12gb, 16gb e 24gb, ou em um servidor remoto Ollama ou compatível com OpenAI definido em vlm_backend; nesse caso a imagem é enviada a esse servidor.',
         ],
         note:
           'São declarações do próprio projeto. A PromptQuorum não testou a qualidade da pontuação, a relevância da busca nem a precisão do agrupamento de rostos.',
@@ -2697,7 +2697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualidade da IA.** Precisão da pontuação, agrupamento de rostos, relevância da busca e velocidade de varredura não foram testados; o próprio README chama a nota estética de aproximada.',
           '**Uso offline.** Não verificamos se o Facet funciona totalmente offline depois do primeiro download dos modelos.',
-          '**Estabilidade das versões.** As notas da v1.23.1 dizem que a v1.23.0 saiu sem a imagem CUDA do Docker, e seis versões foram lançadas entre 24 e 29 de outubro de 2026, então espere mudanças rápidas.',
+          '**Estabilidade das versões.** As notas da v1.23.1 dizem que a v1.23.0 saiu sem a imagem CUDA do Docker, e sete versões foram lançadas entre 24 de outubro e 5 de novembro de 2026, então espere mudanças rápidas.',
           '**Suporte.** O README descreve um projeto de um único desenvolvedor, sem o suporte das ferramentas comerciais de seleção.',
           '**Etapas de instalação.** Os comandos de instalação vêm da documentação e a PromptQuorum não os executou.',
         ],
@@ -2747,7 +2747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'O Facet precisa de GPU?',
             a:
-              'Não. O perfil legacy executa pontuação, rostos, tags, seleção e galeria em CPU, só que mais devagar; TOPIQ, SigLIP 2 e as legendas integradas exigem os perfis NVIDIA 16gb ou 24gb, a menos que você aponte vlm_backend para um servidor remoto.',
+              'Não. O perfil legacy executa pontuação, rostos, tags, seleção e galeria em CPU, só que mais devagar; TOPIQ, SigLIP 2 e as legendas integradas exigem os perfis NVIDIA 12gb, 16gb ou 24gb, a menos que você aponte vlm_backend para um servidor remoto.',
           },
           {
             q: 'O Facet altera ou apaga minhas fotos?',
@@ -2781,11 +2781,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Site do Facet](https://ncoevoet.github.io/facet/) — visão geral dos recursos e início rápido, conferidos em 2 de novembro de 2026.',
-          '[README do Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — recursos, requisitos, licenças e comparações, conferidos em 2 de novembro de 2026.',
-          '[Documentação do Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalação, configuração, implantação e páginas sobre agentes de IA, conferidas em 2 de novembro de 2026.',
-          '[Modelos e licenças de terceiros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licença de cada modelo, conferida em 2 de novembro de 2026.',
-          '[Facet no GitHub](https://github.com/ncoevoet/facet/releases) — versões e atividade de commits, conferidas em 2 de novembro de 2026.',
+          '[Site do Facet](https://ncoevoet.github.io/facet/) — visão geral dos recursos e início rápido, conferidos em 6 de novembro de 2026.',
+          '[README do Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — recursos, requisitos, licenças e comparações, conferidos em 6 de novembro de 2026.',
+          '[Documentação do Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalação, configuração, implantação e páginas sobre agentes de IA, conferidas em 6 de novembro de 2026.',
+          '[Modelos e licenças de terceiros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licença de cada modelo, conferida em 6 de novembro de 2026.',
+          '[Facet no GitHub](https://github.com/ncoevoet/facet/releases) — versões e atividade de commits, conferidas em 6 de novembro de 2026.',
         ],
       },
       relatedReading: {
@@ -2804,14 +2804,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-ar.webp',
     title: 'مراجعة Facet: تقييم الصور وفرزها ومعرضها محليًا',
     seoTitle: 'مراجعة Facet: تقييم الصور وفرزها على جهازك',
     intro:
-      'Facet أداة مجانية بترخيص MIT لتحليل الصور تشغّلها بنفسك: تقيّم كل صورة، وتكتشف اللقطات المتتابعة والصور شبه المكررة، وتجمّع الوجوه، وتتيح لك البحث في مكتبتك بلغة طبيعية عبر معرض ويب. وهي ليست تطبيق دردشة ولا تطبيق LLM؛ فالذكاء الاصطناعي فيها تقييم للصور وتمثيلات embeddings ونماذج للوجوه. تعكس هذه المراجعة ملف README والوثائق وإصدارات GitHub والشيفرة المصدرية كما اطّلعنا عليها في 2 نوفمبر 2026.',
+      'Facet أداة مجانية بترخيص MIT لتحليل الصور تشغّلها بنفسك: تقيّم كل صورة، وتكتشف اللقطات المتتابعة والصور شبه المكررة، وتجمّع الوجوه، وتتيح لك البحث في مكتبتك بلغة طبيعية عبر معرض ويب. وهي ليست تطبيق دردشة ولا تطبيق LLM؛ فالذكاء الاصطناعي فيها تقييم للصور وتمثيلات embeddings ونماذج للوجوه. تعكس هذه المراجعة ملف README والوثائق وإصدارات GitHub والشيفرة المصدرية كما اطّلعنا عليها في 6 نوفمبر 2026.',
     metaDescription:
       'مراجعة Facet: أداة مجانية بترخيص MIT تقيّم الصور وتفرزها وتتصفحها محليًا، مع تجميع الوجوه والبحث بلغة طبيعية. الإعداد وتراخيص النماذج والخصوصية.',
     twitterDescription:
@@ -2833,7 +2833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (الإصدار v1.27.0) أداة مجانية بترخيص MIT تقيّم مكتبة صور محلية وتفرزها وتتصفحها عبر معرض ويب، مع تجميع الوجوه والبحث بلغة طبيعية على جهازك الخاص.** بحسب صفحة التراخيص في المشروع، بعض أوزان النماذج الافتراضية فيها غير مرخّصة للاستخدام التجاري. ولا تتضمن أي ميزة دردشة.',
+      '**Facet (الإصدار v1.28.0) أداة مجانية بترخيص MIT تقيّم مكتبة صور محلية وتفرزها وتتصفحها عبر معرض ويب، مع تجميع الوجوه والبحث بلغة طبيعية على جهازك الخاص.** بحسب صفحة التراخيص في المشروع، بعض أوزان النماذج الافتراضية فيها غير مرخّصة للاستخدام التجاري. ولا تتضمن أي ميزة دردشة.',
     quickAnswerTop: {
       ar: {
         question: 'هل يُبقي Facet صورك وتقييم الذكاء الاصطناعي على جهازك؟',
@@ -2841,7 +2841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'بحسب ملف README، نعم: يقرأ الفحص صورك فقط، وتُحفظ النتائج في قاعدة بيانات Facet الخاصة، وتعمل النماذج على عتادك بعد تنزيل عند أول استخدام. وتخرج بعض الطلبات إلى الخارج، مثل فحص التحديثات وبلاطات الخريطة وخادم بعيد اختياري لنماذج الرؤية واللغة. لم تفحص PromptQuorum حركة الشبكة.',
         bullets: [
           'يقيّم كل صورة في 9 أبعاد، ويجمّع اللقطات المتتابعة والصور المتشابهة والوجوه، ويبرز أفضل الصور.',
-          'يستخدم البحث بلغة طبيعية SigLIP 2 في ملفي GPU هما 16gb و24gb، ونموذج CLIP في legacy و8gb.',
+          'يستخدم البحث بلغة طبيعية SigLIP 2 في ثلاثة ملفات GPU هي 12gb و16gb و24gb، ونموذج CLIP في legacy و8gb.',
           'يعمل على المعالج المركزي بملف legacy؛ وتتيح بطاقة NVIDIA أو جهاز Mac بمعالج Apple Silicon وذاكرة كبيرة أقوى النماذج.',
           'يُثبَّت عبر Docker أو برنامج تثبيت نصي؛ ولا يُنشر مثبّت ولا نسخة في متجر تطبيقات ولا ملف تنفيذي ضمن الإصدارات، لكن الوثائق تصف حزمة MSI لنظام Windows تبنيها بنفسك أو تأخذها من تشغيل CI.',
           'بحسب الوثائق، المعرض مفتوح لأي شخص يصل إلى منفذه إلى أن تضع كلمة مرور.',
@@ -2933,7 +2933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الصيانة: صدر v1.27.0 في 29 أكتوبر 2026 وتلقّى المستودع دفعة تحديثات في 30 أكتوبر 2026، فلا ينطبق تحذير المشروع المهجور.',
+          'الصيانة: صدر v1.28.0 في 5 نوفمبر 2026 وتلقّى المستودع دفعة تحديثات في 5 نوفمبر 2026، فلا ينطبق تحذير المشروع المهجور.',
           'الجهة المشغّلة: يصفه ملف README بأنه مشروع لمطوّر واحد دون دعم تجاري؛ والشيفرة على GitHub بترخيص MIT.',
           'الإعداد: Docker Compose أو برنامج تثبيت نصي، مع فحص أول ينزّل النماذج؛ ويلزم استخدام الطرفية.',
           'التكلفة: مجاني؛ ولم نعثر على خطة مدفوعة. وكلمة «Edition» في الوثائق مستوى وصول وليست إصدارًا من المنتج.',
@@ -2943,7 +2943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'تستند هذه المراجعة إلى موقع المشروع وملف README والوثائق وإصدارات GitHub وأجزاء من الشيفرة المصدرية، كما اطّلعنا عليها في 2 نوفمبر 2026. لم تثبّت PromptQuorum أداة Facet، ولذلك لا نقيّم دقة التقييم ولا ملاءمة نتائج البحث ولا السرعة.',
+              'تستند هذه المراجعة إلى موقع المشروع وملف README والوثائق وإصدارات GitHub وأجزاء من الشيفرة المصدرية، كما اطّلعنا عليها في 6 نوفمبر 2026. لم تثبّت PromptQuorum أداة Facet، ولذلك لا نقيّم دقة التقييم ولا ملاءمة نتائج البحث ولا السرعة.',
           },
         ],
       },
@@ -2997,7 +2997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'الإصدار الذي راجعناه: v1.27.0، نُشر في 29 أكتوبر 2026 بحسب إصدار GitHub؛ وكان آخر دفع إلى المستودع في 30 أكتوبر 2026. يتطلب التثبيت طرفية وGit وDocker أو Python، فهو إعداد بأسلوب المطوّرين وليس تثبيتًا بنقرتين. لم نعثر على صفحة سياسة خصوصية مستقلة في موقع المشروع ولا في الوثائق التي قرأناها؛ وتصريحات الخصوصية موجودة في ملف README.',
+          'الإصدار الذي راجعناه: v1.28.0، نُشر في 5 نوفمبر 2026 بحسب إصدار GitHub؛ وكان آخر دفع إلى المستودع في 5 نوفمبر 2026. يتطلب التثبيت طرفية وGit وDocker أو Python، فهو إعداد بأسلوب المطوّرين وليس تثبيتًا بنقرتين. لم نعثر على صفحة سياسة خصوصية مستقلة في موقع المشروع ولا في الوثائق التي قرأناها؛ وتصريحات الخصوصية موجودة في ملف README.',
       },
       requirements: {
         id: 'requirements',
@@ -3013,11 +3013,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'البند': 'الملفات الشخصية',
-            'ما تقوله المصادر': 'legacy: معالج مركزي فقط؛ 8gb: NVIDIA ‏6-14 GB؛ 16gb: NVIDIA ‏14-20 GB؛ 24gb: NVIDIA ‏20 GB فأكثر',
+            'ما تقوله المصادر': 'legacy: معالج مركزي فقط؛ 8gb: NVIDIA ‏6-11.5 GB؛ 12gb: NVIDIA ‏11.5-14 GB؛ 16gb: NVIDIA ‏14-20 GB؛ 24gb: NVIDIA ‏20 GB فأكثر',
           },
           {
             'البند': 'التنزيل عند أول تشغيل',
-            'ما تقوله المصادر': 'مرة واحدة بحسب الوثائق: نحو 4.7 GB (legacy) أو 6.9 GB (8gb) أو 14.6 GB (16gb) أو 19.3 GB (24gb)',
+            'ما تقوله المصادر': 'مرة واحدة بحسب الوثائق: نحو 4.7 GB (legacy) أو 6.9 GB (8gb) أو 14.6 GB (12gb/16gb) أو 19.3 GB (24gb)',
           },
           {
             'البند': 'Apple Silicon',
@@ -3094,12 +3094,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الذكاء الاصطناعي الأساسي قائم على الصور: نماذج لتقييم الجودة، وتمثيلات embeddings للبحث، ونماذج للوجوه، وكشف للموضوع؛ أما الوسوم والأوصاف والنقد المكتوب فتأتي من نموذج رؤية ولغة اختياري.**',
         ],
         items: [
-          '**درجات الجودة.** يستخدم الملفان 16gb و24gb نموذج TOPIQ للدرجة الجمالية، بينما يستخدم legacy و8gb تمثيلات CLIP مع رأس جمالي؛ وتدرج الوثائق مقيّمات إضافية مثل LIQE بوصفها متاحة في أي ملف.',
-          '**البحث.** تُطابَق استعلامات مثل «غروب الشمس على الشاطئ» مع التمثيلات: SigLIP 2 في 16gb و24gb، وOpenCLIP ViT-L-14 في legacy و8gb.',
+          '**درجات الجودة.** تستخدم الملفات 12gb و16gb و24gb نموذج TOPIQ للدرجة الجمالية، بينما يستخدم legacy و8gb تمثيلات CLIP مع رأس جمالي؛ وتدرج الوثائق مقيّمات إضافية مثل LIQE بوصفها متاحة في أي ملف.',
+          '**البحث.** تُطابَق استعلامات مثل «غروب الشمس على الشاطئ» مع التمثيلات: SigLIP 2 في 12gb و16gb و24gb، وOpenCLIP ViT-L-14 في legacy و8gb.',
           '**الوجوه.** يكتشف InsightFace الوجوه ويتعرف عليها ويجمّعها التجميع في أشخاص؛ وتحسّن blendshapes الاختيارية من MediaPipe قراءة الرمش والابتسامة.',
           '**الموضوعات.** يفصل BiRefNet الموضوع عن الخلفية للحكم على البؤرة والتأطير.',
           '**My Taste.** تغذّي مقارناتك A/B وتقييماتك وقراراتك في الفرز محسّن أوزان وترتيبًا شخصيًا.',
-          '**نموذج الرؤية واللغة.** تعمل الوسوم والأوصاف والنقد داخل العملية نفسها في الملفين 16gb و24gb، أو على خادم Ollama أو خادم متوافق مع OpenAI بعيد يحدده vlm_backend؛ وعندها تُرسل الصورة إلى ذلك الخادم.',
+          '**نموذج الرؤية واللغة.** تعمل الوسوم والأوصاف والنقد داخل العملية نفسها في الملفات 12gb و16gb و24gb، أو على خادم Ollama أو خادم متوافق مع OpenAI بعيد يحدده vlm_backend؛ وعندها تُرسل الصورة إلى ذلك الخادم.',
         ],
         note:
           'هذه تصريحات المشروع نفسه. لم تختبر PromptQuorum جودة الدرجات ولا ملاءمة نتائج البحث ولا دقة تجميع الوجوه.',
@@ -3149,7 +3149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**جودة الذكاء الاصطناعي.** لم تُختبر دقة التقييم ولا تجميع الوجوه ولا ملاءمة البحث ولا سرعة الفحص؛ وملف README نفسه يصف الدرجة الجمالية بأنها تقريبية.',
           '**الاستخدام دون اتصال.** لم نتحقق مما إذا كان Facet يعمل دون اتصال بالكامل بعد أول تنزيل للنماذج.',
-          '**استقرار الإصدارات.** تقول ملاحظات v1.23.1 إن v1.23.0 صدر دون صورة Docker الخاصة بـ CUDA، وصدرت ستة إصدارات بين 24 و29 أكتوبر 2026، فتوقّع تغيرات سريعة.',
+          '**استقرار الإصدارات.** تقول ملاحظات v1.23.1 إن v1.23.0 صدر دون صورة Docker الخاصة بـ CUDA، وصدرت سبعة إصدارات بين 24 أكتوبر و5 نوفمبر 2026، فتوقّع تغيرات سريعة.',
           '**الدعم.** يصف ملف README مشروعًا لمطوّر واحد دون دعم الأدوات التجارية للفرز.',
           '**خطوات التثبيت.** أوامر الإعداد مأخوذة من الوثائق ولم تنفّذها PromptQuorum.',
         ],
@@ -3198,7 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل يحتاج Facet إلى بطاقة رسوميات؟',
             a:
-              'لا. يشغّل ملف legacy التقييم والوجوه والوسوم والفرز والمعرض على معالج مركزي، لكن ببطء أكبر؛ أما TOPIQ وSigLIP 2 والأوصاف المدمجة فتتطلب ملفي NVIDIA هما 16gb أو 24gb، إلا إذا وجّهت vlm_backend إلى خادم بعيد.',
+              'لا. يشغّل ملف legacy التقييم والوجوه والوسوم والفرز والمعرض على معالج مركزي، لكن ببطء أكبر؛ أما TOPIQ وSigLIP 2 والأوصاف المدمجة فتتطلب ملفات NVIDIA هي 12gb أو 16gb أو 24gb، إلا إذا وجّهت vlm_backend إلى خادم بعيد.',
           },
           {
             q: 'هل يغيّر Facet صوري أو يحذفها؟',
@@ -3231,11 +3231,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[موقع Facet](https://ncoevoet.github.io/facet/) — نظرة عامة على الميزات والبدء السريع، اطّلعنا عليه في 2 نوفمبر 2026.',
-          '[ملف README لـ Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — الميزات والمتطلبات والتراخيص والمقارنات، اطّلعنا عليه في 2 نوفمبر 2026.',
-          '[وثائق Facet](https://github.com/ncoevoet/facet/tree/master/docs) — التثبيت والإعداد والنشر وصفحات وكلاء الذكاء الاصطناعي، اطّلعنا عليها في 2 نوفمبر 2026.',
-          '[النماذج والتراخيص من جهات خارجية](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — ترخيص كل نموذج، اطّلعنا عليه في 2 نوفمبر 2026.',
-          '[Facet على GitHub](https://github.com/ncoevoet/facet/releases) — الإصدارات ونشاط الإيداعات، اطّلعنا عليهما في 2 نوفمبر 2026.',
+          '[موقع Facet](https://ncoevoet.github.io/facet/) — نظرة عامة على الميزات والبدء السريع، اطّلعنا عليه في 6 نوفمبر 2026.',
+          '[ملف README لـ Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — الميزات والمتطلبات والتراخيص والمقارنات، اطّلعنا عليه في 6 نوفمبر 2026.',
+          '[وثائق Facet](https://github.com/ncoevoet/facet/tree/master/docs) — التثبيت والإعداد والنشر وصفحات وكلاء الذكاء الاصطناعي، اطّلعنا عليها في 6 نوفمبر 2026.',
+          '[النماذج والتراخيص من جهات خارجية](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — ترخيص كل نموذج، اطّلعنا عليه في 6 نوفمبر 2026.',
+          '[Facet على GitHub](https://github.com/ncoevoet/facet/releases) — الإصدارات ونشاط الإيداعات، اطّلعنا عليهما في 6 نوفمبر 2026.',
         ],
       },
       relatedReading: {
@@ -3254,14 +3254,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-zh.webp',
     title: 'Facet 评测：本地照片评分、筛选与图库',
     seoTitle: 'Facet 评测：在自己的电脑上为照片评分、筛选和浏览的免费工具',
     intro:
-      'Facet 是一款免费、采用 MIT 许可证、由你自己运行的照片分析工具：它为每张照片评分，找出连拍和近似重复的照片，对人脸分组，并让你通过网页图库用自然语言搜索照片库。它不是聊天或 LLM 应用；其中的 AI 是图像评分、嵌入向量和人脸模型。本评测依据 2026 年 11 月 2 日查看的 README、文档、GitHub 发布版本和源代码。',
+      'Facet 是一款免费、采用 MIT 许可证、由你自己运行的照片分析工具：它为每张照片评分，找出连拍和近似重复的照片，对人脸分组，并让你通过网页图库用自然语言搜索照片库。它不是聊天或 LLM 应用；其中的 AI 是图像评分、嵌入向量和人脸模型。本评测依据 2026 年 11 月 6 日查看的 README、文档、GitHub 发布版本和源代码。',
     metaDescription: 'Facet 评测：免费的 MIT 许可证工具，可在本地为照片评分、筛选和浏览，支持人脸分组与自然语言搜索。涵盖安装方式、模型许可证、隐私以及我们未能核实的内容。',
     twitterDescription: 'Facet 评测：一款自托管的照片评分、筛选与图库工具。通过 Docker 或脚本安装，提供 CPU 与 GPU 配置档，默认模型权重不可商用，可选远程视觉语言模型，以及我们未能核实的内容。',
     audience: '拥有大型本地照片库的摄影师和自托管用户，想了解安装难度、AI 在哪里运行、模型许可证允许什么，以及哪些内容来源并未证实。',
@@ -3280,7 +3280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet（v1.27.0）是一款免费、采用 MIT 许可证的工具，通过网页图库为本地照片库评分、筛选和浏览，人脸分组与自然语言搜索都在你自己的机器上运行。**据项目的模型许可证页面，其默认模型权重中有一部分未获商业使用许可。它没有聊天功能。',
+      '**Facet（v1.28.0）是一款免费、采用 MIT 许可证的工具，通过网页图库为本地照片库评分、筛选和浏览，人脸分组与自然语言搜索都在你自己的机器上运行。**据项目的模型许可证页面，其默认模型权重中有一部分未获商业使用许可。它没有聊天功能。',
     quickAnswerTop: {
       zh: {
         question: 'Facet 会把照片和 AI 评分留在你自己的机器上吗？',
@@ -3288,7 +3288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '据其 README，会：扫描只读取照片，结果写入 Facet 自己的数据库，模型在首次下载后于你的硬件上运行。也有一些内容会连到外部，例如更新检查、地图瓦片和可选的远程视觉语言服务器。PromptQuorum 没有检查网络流量。',
         bullets: [
           '从 9 个维度为每张照片评分，对连拍、相似照片和人脸分组，并列出精选照片。',
-          '自然语言搜索在 16gb 和 24gb 的 GPU 配置档上使用 SigLIP 2，在 legacy 和 8gb 上使用 CLIP 模型。',
+          '自然语言搜索在 12gb、16gb 和 24gb 的 GPU 配置档上使用 SigLIP 2，在 legacy 和 8gb 上使用 CLIP 模型。',
           '用 legacy 配置档可在 CPU 上运行；NVIDIA 显卡或大内存的 Apple Silicon Mac 可启用最强的模型。',
           '通过 Docker 或安装脚本安装；项目未发布安装程序、应用商店版本或发布的二进制文件，但文档介绍了 Windows 的 MSI，需要自行构建或从 CI 运行产物获取。',
           '据其文档，在你设置密码之前，任何能访问其端口的人都可以打开查看器。',
@@ -3378,7 +3378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '维护情况：v1.27.0 于 2026 年 10 月 29 日发布，仓库在 2026 年 10 月 30 日有过推送，因此不适用停更项目警告。',
+          '维护情况：v1.28.0 于 2026 年 11 月 5 日发布，仓库在 2026 年 11 月 5 日有过推送，因此不适用停更项目警告。',
           '运营方：README 称其为没有商业支持的单人开发项目；代码在 GitHub 上，采用 MIT 许可证。',
           '安装：使用 Docker Compose 或安装脚本，并进行一次下载模型的首次扫描；需要终端。',
           '费用：免费；未发现付费套餐。文档中的“Edition”是访问级别，不是产品版本。',
@@ -3388,7 +3388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              '本评测依据 2026 年 11 月 2 日查看的项目网站、README、文档、GitHub 发布版本以及部分源代码。PromptQuorum 没有安装 Facet，因此不评估评分准确度、搜索相关性和速度。',
+              '本评测依据 2026 年 11 月 6 日查看的项目网站、README、文档、GitHub 发布版本以及部分源代码。PromptQuorum 没有安装 Facet，因此不评估评分准确度、搜索相关性和速度。',
           },
         ],
       },
@@ -3442,7 +3442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          '评测的版本：v1.27.0，据 GitHub 发布页于 2026 年 10 月 29 日发布；仓库最近一次推送在 2026 年 10 月 30 日。安装需要终端、Git 以及 Docker 或 Python，属于开发者式的部署，而不是双击安装。在项目网站和我们读过的文档中，没有找到独立的隐私政策页面；隐私相关说明在 README 中。',
+          '评测的版本：v1.28.0，据 GitHub 发布页于 2026 年 11 月 5 日发布；仓库最近一次推送在 2026 年 11 月 5 日。安装需要终端、Git 以及 Docker 或 Python，属于开发者式的部署，而不是双击安装。在项目网站和我们读过的文档中，没有找到独立的隐私政策页面；隐私相关说明在 README 中。',
       },
       requirements: {
         id: 'requirements',
@@ -3458,11 +3458,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '项目': '配置档',
-            '来源说明': 'legacy：仅 CPU；8gb：NVIDIA 6-14 GB；16gb：NVIDIA 14-20 GB；24gb：NVIDIA 20 GB 及以上',
+            '来源说明': 'legacy：仅 CPU；8gb：NVIDIA 6-11.5 GB；12gb：NVIDIA 11.5-14 GB；16gb：NVIDIA 14-20 GB；24gb：NVIDIA 20 GB 及以上',
           },
           {
             '项目': '首次下载',
-            '来源说明': '据文档只需一次：legacy 约 4.7 GB，8gb 约 6.9 GB，16gb 约 14.6 GB，24gb 约 19.3 GB',
+            '来源说明': '据文档只需一次：legacy 约 4.7 GB，8gb 约 6.9 GB，12gb 和 16gb 约 14.6 GB，24gb 约 19.3 GB',
           },
           {
             '项目': 'Apple Silicon',
@@ -3534,12 +3534,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**核心 AI 面向图像：质量评分模型、用于搜索的嵌入向量、人脸模型和主体检测；文字形式的标签、说明和点评则来自可选的视觉语言模型。**',
         ],
         items: [
-          '**质量评分。**16gb 和 24gb 配置档用 TOPIQ 计算美学分，legacy 和 8gb 则使用带美学头的 CLIP 嵌入；文档称 LIQE 等补充评分器可在任何配置档上使用。',
-          '**搜索。**像“海滩上的日落”这样的输入会与嵌入向量匹配：16gb 和 24gb 用 SigLIP 2，legacy 和 8gb 用 OpenCLIP ViT-L-14。',
+          '**质量评分。**12gb、16gb 和 24gb 配置档用 TOPIQ 计算美学分，legacy 和 8gb 则使用带美学头的 CLIP 嵌入；文档称 LIQE 等补充评分器可在任何配置档上使用。',
+          '**搜索。**像“海滩上的日落”这样的输入会与嵌入向量匹配：12gb、16gb 和 24gb 用 SigLIP 2，legacy 和 8gb 用 OpenCLIP ViT-L-14。',
           '**人脸。**InsightFace 检测并识别人脸，再由聚类归为人物；可选的 MediaPipe blendshapes 能提高闭眼和微笑的判断。',
           '**主体。**BiRefNet 区分主体与背景，用来判断对焦和取景。',
           '**My Taste。**你的 A/B 对比、评分和筛选决定会输入权重优化器和个人排序。',
-          '**视觉语言模型。**标签、说明和点评在 16gb 和 24gb 配置档上于同一进程内运行，也可由 vlm_backend 指定远程 Ollama 或兼容 OpenAI 的服务器运行；此时图像会发送到该服务器。',
+          '**视觉语言模型。**标签、说明和点评在 12gb、16gb 和 24gb 配置档上于同一进程内运行，也可由 vlm_backend 指定远程 Ollama 或兼容 OpenAI 的服务器运行；此时图像会发送到该服务器。',
         ],
         note: '以上是项目自己的说法。PromptQuorum 没有测试评分质量、搜索相关性或人脸分组的准确度。',
       },
@@ -3586,7 +3586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AI 质量。**评分准确度、人脸分组、搜索相关性和扫描速度均未测试；README 本身也称美学评分是近似值。',
           '**离线使用。**首次下载模型之后 Facet 能否完全离线运行，我们没有核实。',
-          '**发布稳定性。**v1.23.1 的发布说明称 v1.23.0 发布时缺少 CUDA 版 Docker 镜像，并且在 2026 年 10 月 24 日至 29 日之间发布了六个版本，因此请预期变化很快。',
+          '**发布稳定性。**v1.23.1 的发布说明称 v1.23.0 发布时缺少 CUDA 版 Docker 镜像，并且在 2026 年 10 月 24 日至 11 月 5 日之间发布了七个版本，因此请预期变化很快。',
           '**支持。**README 称这是没有商业筛选工具那样支持的单人开发项目。',
           '**安装步骤。**设置命令来自文档，PromptQuorum 没有运行过。',
         ],
@@ -3633,7 +3633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Facet 需要 GPU 吗？',
             a:
-              '不需要。legacy 配置档在 CPU 上就能运行评分、人脸、标签、筛选和图库，只是更慢；TOPIQ、SigLIP 2 和内置说明生成需要 NVIDIA 的 16gb 或 24gb 配置档，除非你把 vlm_backend 指向远程服务器。',
+              '不需要。legacy 配置档在 CPU 上就能运行评分、人脸、标签、筛选和图库，只是更慢；TOPIQ、SigLIP 2 和内置说明生成需要 NVIDIA 的 12gb、16gb 或 24gb 配置档，除非你把 vlm_backend 指向远程服务器。',
           },
           {
             q: 'Facet 会修改或删除我的照片吗？',
@@ -3663,11 +3663,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         items: [
-          '[Facet 网站](https://ncoevoet.github.io/facet/)：功能概览与快速开始，2026 年 11 月 2 日查看。',
-          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md)：功能、要求、许可证与对比，2026 年 11 月 2 日查看。',
-          '[Facet 文档](https://github.com/ncoevoet/facet/tree/master/docs)：安装、配置、部署和 AI 代理页面，2026 年 11 月 2 日查看。',
-          '[第三方模型与许可证](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各模型的许可证，2026 年 11 月 2 日查看。',
-          '[GitHub 上的 Facet](https://github.com/ncoevoet/facet/releases)：发布版本与提交活动，2026 年 11 月 2 日查看。',
+          '[Facet 网站](https://ncoevoet.github.io/facet/)：功能概览与快速开始，2026 年 11 月 6 日查看。',
+          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md)：功能、要求、许可证与对比，2026 年 11 月 6 日查看。',
+          '[Facet 文档](https://github.com/ncoevoet/facet/tree/master/docs)：安装、配置、部署和 AI 代理页面，2026 年 11 月 6 日查看。',
+          '[第三方模型与许可证](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各模型的许可证，2026 年 11 月 6 日查看。',
+          '[GitHub 上的 Facet](https://github.com/ncoevoet/facet/releases)：发布版本与提交活动，2026 年 11 月 6 日查看。',
         ],
       },
       relatedReading: {
@@ -3686,14 +3686,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-ko.webp',
     title: 'Facet 리뷰: 로컬 사진 점수화·선별·갤러리',
     seoTitle: 'Facet 리뷰: 내 컴퓨터에서 사진 점수화·선별·갤러리',
     intro:
-      'Facet은 직접 실행하는 무료 MIT 라이선스 사진 분석 도구입니다. 사진마다 점수를 매기고, 연사와 거의 같은 사진을 찾고, 얼굴을 묶고, 웹 갤러리에서 자연어로 라이브러리를 검색할 수 있습니다. 채팅이나 LLM 앱이 아니며, AI는 이미지 점수화, 임베딩, 얼굴 모델로 이루어져 있습니다. 이 리뷰는 2026년 11월 2일에 확인한 README, 문서, GitHub 릴리스, 소스 코드를 바탕으로 합니다.',
+      'Facet은 직접 실행하는 무료 MIT 라이선스 사진 분석 도구입니다. 사진마다 점수를 매기고, 연사와 거의 같은 사진을 찾고, 얼굴을 묶고, 웹 갤러리에서 자연어로 라이브러리를 검색할 수 있습니다. 채팅이나 LLM 앱이 아니며, AI는 이미지 점수화, 임베딩, 얼굴 모델로 이루어져 있습니다. 이 리뷰는 2026년 11월 6일에 확인한 README, 문서, GitHub 릴리스, 소스 코드를 바탕으로 합니다.',
     metaDescription: 'Facet 리뷰: 사진을 로컬에서 점수화·선별·탐색하는 무료 MIT 도구로, 얼굴 묶기와 자연어 검색을 지원합니다. 설치 방법, 모델 라이선스, 개인정보를 다룹니다.',
     twitterDescription:
       'Facet 리뷰: 사진 점수화·선별·갤러리를 직접 호스팅하는 도구입니다. Docker 또는 스크립트 설치, CPU·GPU 프로파일, 상업용이 아닌 기본 모델 가중치, 선택적 원격 VLM, 확인하지 못한 사항을 정리했습니다.',
@@ -3714,7 +3714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet(v1.27.0)은 로컬 사진 라이브러리를 웹 갤러리로 점수화·선별·탐색하는 무료 MIT 라이선스 도구이며, 얼굴 묶기와 자연어 검색이 내 컴퓨터에서 실행됩니다.** 프로젝트의 모델 라이선스 페이지에 따르면 기본 모델 가중치 일부는 상업적 사용이 허용되지 않습니다. 채팅 기능은 없습니다.',
+      '**Facet(v1.28.0)은 로컬 사진 라이브러리를 웹 갤러리로 점수화·선별·탐색하는 무료 MIT 라이선스 도구이며, 얼굴 묶기와 자연어 검색이 내 컴퓨터에서 실행됩니다.** 프로젝트의 모델 라이선스 페이지에 따르면 기본 모델 가중치 일부는 상업적 사용이 허용되지 않습니다. 채팅 기능은 없습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Facet은 사진과 AI 점수화를 내 컴퓨터 안에 두나요?',
@@ -3722,7 +3722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'README에 따르면 그렇습니다. 스캔은 사진을 읽기만 하고, 결과는 Facet 자체 데이터베이스에 저장되며, 모델은 처음 내려받은 뒤 내 하드웨어에서 실행됩니다. 업데이트 확인, 지도 타일, 선택적 원격 비전·언어 서버처럼 외부로 나가는 요청도 있습니다. PromptQuorum은 네트워크 트래픽을 확인하지 않았습니다.',
         bullets: [
           '사진을 9가지 항목으로 점수화하고, 연사·유사 사진·얼굴을 묶어 상위 사진을 보여 줍니다.',
-          '자연어 검색은 GPU 프로파일 16gb와 24gb에서는 SigLIP 2를, legacy와 8gb에서는 CLIP 모델을 사용합니다.',
+          '자연어 검색은 GPU 프로파일 12gb, 16gb, 24gb에서는 SigLIP 2를, legacy와 8gb에서는 CLIP 모델을 사용합니다.',
           'legacy 프로파일로 CPU에서 실행되며, NVIDIA GPU나 메모리가 큰 Apple Silicon Mac이면 가장 강력한 모델을 쓸 수 있습니다.',
           'Docker 또는 설치 스크립트로 설치하며, 설치 프로그램·앱 스토어 버전·릴리스 바이너리는 공개되지 않지만 문서에는 직접 빌드하거나 CI 실행 결과물에서 받는 Windows용 MSI가 설명되어 있습니다.',
           '문서에 따르면 뷰어는 비밀번호를 설정하기 전까지 포트에 접근할 수 있는 누구에게나 열려 있습니다.',
@@ -3813,7 +3813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '유지보수: v1.27.0이 2026년 10월 29일에 릴리스되었고 저장소에 2026년 10월 30일 푸시가 있었으므로 방치된 프로젝트 경고는 해당되지 않습니다.',
+          '유지보수: v1.28.0이 2026년 11월 5일에 릴리스되었고 저장소에 2026년 11월 5일 푸시가 있었으므로 방치된 프로젝트 경고는 해당되지 않습니다.',
           '운영: README는 상업적 지원이 없는 1인 개발 프로젝트라고 설명하며, 코드는 GitHub에서 MIT 라이선스로 공개되어 있습니다.',
           '설치: Docker Compose 또는 설치 스크립트와, 모델을 내려받는 첫 스캔이 필요하며 터미널을 사용합니다.',
           '비용: 무료이며 유료 요금제는 찾지 못했습니다. 문서의 "Edition"은 접근 수준이며 제품 에디션이 아닙니다.',
@@ -3823,7 +3823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              '이 리뷰는 2026년 11월 2일에 확인한 프로젝트 웹사이트, README, 문서, GitHub 릴리스, 소스 코드 일부를 바탕으로 합니다. PromptQuorum은 Facet을 설치하지 않았으므로 점수의 정확도, 검색 적합도, 속도는 평가하지 않았습니다.',
+              '이 리뷰는 2026년 11월 6일에 확인한 프로젝트 웹사이트, README, 문서, GitHub 릴리스, 소스 코드 일부를 바탕으로 합니다. PromptQuorum은 Facet을 설치하지 않았으므로 점수의 정확도, 검색 적합도, 속도는 평가하지 않았습니다.',
           },
         ],
       },
@@ -3877,7 +3877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          '확인한 버전은 v1.27.0이며 GitHub 릴리스에 따르면 2026년 10월 29일에 공개되었습니다. 저장소의 마지막 푸시는 2026년 10월 30일입니다. 설치에는 터미널, Git, Docker 또는 Python이 필요하므로 더블클릭으로 설치하는 방식이 아니라 개발자용 설정입니다. 프로젝트 사이트와 읽은 문서에서는 별도의 개인정보 처리방침 페이지를 찾지 못했으며, 개인정보 관련 설명은 README에 있습니다.',
+          '확인한 버전은 v1.28.0이며 GitHub 릴리스에 따르면 2026년 11월 5일에 공개되었습니다. 저장소의 마지막 푸시는 2026년 11월 5일입니다. 설치에는 터미널, Git, Docker 또는 Python이 필요하므로 더블클릭으로 설치하는 방식이 아니라 개발자용 설정입니다. 프로젝트 사이트와 읽은 문서에서는 별도의 개인정보 처리방침 페이지를 찾지 못했으며, 개인정보 관련 설명은 README에 있습니다.',
       },
       requirements: {
         id: 'requirements',
@@ -3893,11 +3893,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '항목': '프로파일',
-            '출처의 설명': 'legacy: CPU만, 8gb: NVIDIA 6-14 GB, 16gb: NVIDIA 14-20 GB, 24gb: NVIDIA 20 GB 이상',
+            '출처의 설명': 'legacy: CPU만, 8gb: NVIDIA 6-11.5 GB, 12gb: NVIDIA 11.5-14 GB, 16gb: NVIDIA 14-20 GB, 24gb: NVIDIA 20 GB 이상',
           },
           {
             '항목': '첫 실행 다운로드',
-            '출처의 설명': '문서에 따르면 한 번만, legacy 약 4.7 GB, 8gb 약 6.9 GB, 16gb 약 14.6 GB, 24gb 약 19.3 GB',
+            '출처의 설명': '문서에 따르면 한 번만, legacy 약 4.7 GB, 8gb 약 6.9 GB, 12gb·16gb 약 14.6 GB, 24gb 약 19.3 GB',
           },
           {
             '항목': 'Apple Silicon',
@@ -3969,12 +3969,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**핵심 AI는 이미지를 다룹니다. 품질 점수 모델, 검색용 임베딩, 얼굴 모델, 피사체 검출이며, 글로 된 태그·캡션·평가는 선택적 비전·언어 모델이 만듭니다.**',
         ],
         items: [
-          '**품질 점수.** 16gb와 24gb 프로파일은 미적 점수에 TOPIQ를 쓰고, legacy와 8gb는 미적 헤드가 붙은 CLIP 임베딩을 씁니다. 문서는 LIQE 같은 보조 평가기를 모든 프로파일에서 쓸 수 있다고 나열합니다.',
-          '**검색.** "해변의 일몰" 같은 입력을 임베딩과 대조합니다. 16gb와 24gb에서는 SigLIP 2, legacy와 8gb에서는 OpenCLIP ViT-L-14입니다.',
+          '**품질 점수.** 12gb, 16gb, 24gb 프로파일은 미적 점수에 TOPIQ를 쓰고, legacy와 8gb는 미적 헤드가 붙은 CLIP 임베딩을 씁니다. 문서는 LIQE 같은 보조 평가기를 모든 프로파일에서 쓸 수 있다고 나열합니다.',
+          '**검색.** "해변의 일몰" 같은 입력을 임베딩과 대조합니다. 12gb, 16gb, 24gb에서는 SigLIP 2, legacy와 8gb에서는 OpenCLIP ViT-L-14입니다.',
           '**얼굴.** InsightFace가 얼굴을 검출·인식하고 클러스터링이 이를 인물로 묶으며, 선택적인 MediaPipe blendshapes가 눈 감음과 미소 판독을 더 정확하게 합니다.',
           '**피사체.** BiRefNet이 피사체와 배경을 분리해 초점과 구도를 판단합니다.',
           '**My Taste.** A/B 비교, 평점, 선별 결정이 가중치 최적화기와 개인 순위에 반영됩니다.',
-          '**비전·언어 모델.** 태그·캡션·평가는 16gb와 24gb 프로파일에서는 같은 프로세스 안에서, 또는 vlm_backend로 지정한 원격 Ollama나 OpenAI 호환 서버에서 실행되며, 이 경우 이미지가 해당 서버로 전송됩니다.',
+          '**비전·언어 모델.** 태그·캡션·평가는 12gb, 16gb, 24gb 프로파일에서는 같은 프로세스 안에서, 또는 vlm_backend로 지정한 원격 Ollama나 OpenAI 호환 서버에서 실행되며, 이 경우 이미지가 해당 서버로 전송됩니다.',
         ],
         note: '이는 프로젝트 자체의 설명입니다. PromptQuorum은 점수 품질, 검색 적합도, 얼굴 묶기 정확도를 테스트하지 않았습니다.',
       },
@@ -4021,7 +4021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AI 품질.** 점수 정확도, 얼굴 묶기, 검색 적합도, 스캔 속도는 테스트하지 않았으며, README 자체도 미적 점수를 근사치라고 합니다.',
           '**오프라인 사용.** 첫 모델 다운로드 이후 Facet이 완전히 오프라인으로 동작하는지는 확인하지 못했습니다.',
-          '**릴리스 안정성.** v1.23.1 노트에 따르면 v1.23.0은 CUDA Docker 이미지 없이 배포되었고, 2026년 10월 24일부터 29일 사이에 여섯 버전이 나왔으므로 변경이 빠르다는 점에 유의하십시오.',
+          '**릴리스 안정성.** v1.23.1 노트에 따르면 v1.23.0은 CUDA Docker 이미지 없이 배포되었고, 2026년 10월 24일부터 11월 5일 사이에 일곱 버전이 나왔으므로 변경이 빠르다는 점에 유의하십시오.',
           '**지원.** README는 상업용 선별 도구 같은 지원이 없는 1인 개발 프로젝트라고 설명합니다.',
           '**설치 단계.** 설정 명령은 문서에서 가져온 것이며 PromptQuorum이 실행하지 않았습니다.',
         ],
@@ -4068,7 +4068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Facet에 GPU가 필요한가요?',
             a:
-              '아니요. legacy 프로파일은 점수화, 얼굴, 태그, 선별, 갤러리를 CPU에서 실행하며 속도만 느립니다. TOPIQ, SigLIP 2, 내장 캡션에는 NVIDIA 16gb 또는 24gb 프로파일이 필요하고, vlm_backend를 원격 서버로 지정하면 예외입니다.',
+              '아니요. legacy 프로파일은 점수화, 얼굴, 태그, 선별, 갤러리를 CPU에서 실행하며 속도만 느립니다. TOPIQ, SigLIP 2, 내장 캡션에는 NVIDIA 12gb, 16gb 또는 24gb 프로파일이 필요하고, vlm_backend를 원격 서버로 지정하면 예외입니다.',
           },
           {
             q: 'Facet이 내 사진을 바꾸거나 삭제하나요?',
@@ -4101,11 +4101,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[Facet 웹사이트](https://ncoevoet.github.io/facet/): 기능 개요와 빠른 시작, 2026년 11월 2일 확인.',
-          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md): 기능, 요구 사항, 라이선스, 비교, 2026년 11월 2일 확인.',
-          '[Facet 문서](https://github.com/ncoevoet/facet/tree/master/docs): 설치, 설정, 배포, AI 에이전트 페이지, 2026년 11월 2일 확인.',
-          '[서드파티 모델과 라이선스](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md): 모델별 라이선스, 2026년 11월 2일 확인.',
-          '[GitHub의 Facet](https://github.com/ncoevoet/facet/releases): 릴리스와 커밋 활동, 2026년 11월 2일 확인.',
+          '[Facet 웹사이트](https://ncoevoet.github.io/facet/): 기능 개요와 빠른 시작, 2026년 11월 6일 확인.',
+          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md): 기능, 요구 사항, 라이선스, 비교, 2026년 11월 6일 확인.',
+          '[Facet 문서](https://github.com/ncoevoet/facet/tree/master/docs): 설치, 설정, 배포, AI 에이전트 페이지, 2026년 11월 6일 확인.',
+          '[서드파티 모델과 라이선스](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md): 모델별 라이선스, 2026년 11월 6일 확인.',
+          '[GitHub의 Facet](https://github.com/ncoevoet/facet/releases): 릴리스와 커밋 활동, 2026년 11월 6일 확인.',
         ],
       },
       relatedReading: {

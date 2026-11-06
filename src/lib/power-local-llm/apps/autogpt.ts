@@ -41,6 +41,6 @@ export const app: ToolRecord = {
   // would misattribute the Platform's tag to Classic. Repo-wide stats
   // (stars/issues/push date) verified 2026-09-20 instead — see the article.
   lastVerifiedDate: '2026-09-20',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-06', // GitHub API (latest release or push, whichever is newer), read 2026-11-06
   lastUpstreamUpdateSource: 'https://github.com/Significant-Gravitas/AutoGPT',
 }

@@ -14,6 +14,23 @@ const st = {
 const upd = (slug: string, lang: Language) =>
   formatDisplayDate(localAiApps.find((a) => a.slug === slug)?.lastUpstreamUpdate, lang)
 
+// Aider is past the site's 90-day "quiet" line (App Maintenance Recency rule): visible note next to every Aider recommendation.
+const AIDER_URL = 'https://github.com/Aider-AI/aider'
+const aiderQuiet = (lang: Language): string => {
+  const d = upd('aider', lang)
+  switch (lang) {
+    case 'de': return `Hinweis zu Aider: Das Repository ist nicht archiviert, das letzte Upstream-Update war jedoch am ${d} (Quelle: [Aider-AI/aider auf GitHub](${AIDER_URL})). Das liegt mehr als drei Monate zurück, das Projekt ist also ruhig geworden — prüfen Sie die aktuelle Aktivität, bevor Sie sich darauf verlassen.`
+    case 'fr': return `Remarque sur Aider : son dépôt n'est pas archivé, mais sa dernière mise à jour en amont date du ${d} (source : [Aider-AI/aider sur GitHub](${AIDER_URL})). C'est plus de trois mois, le projet est donc devenu calme — vérifiez son activité récente avant de vous y fier.`
+    case 'es': return `Nota sobre Aider: su repositorio no está archivado, pero su última actualización upstream fue el ${d} (fuente: [Aider-AI/aider en GitHub](${AIDER_URL})). Han pasado más de tres meses, así que el proyecto se ha quedado tranquilo — comprueba su actividad reciente antes de depender de él.`
+    case 'pt': return `Nota sobre o Aider: o repositório não está arquivado, mas a última atualização upstream foi em ${d} (fonte: [Aider-AI/aider no GitHub](${AIDER_URL})). Já se passaram mais de três meses, então o projeto está parado — verifique a atividade recente antes de depender dele.`
+    case 'ja': return `Aiderに関する注記：リポジトリはアーカイブされていませんが、プロジェクトの最終更新は${d}です（出典：[GitHubのAider-AI/aider](${AIDER_URL})）。3か月以上更新がなく、動きが止まっています。利用を決める前に最近のアクティビティをご確認ください。`
+    case 'zh': return `关于Aider的说明：其仓库未被归档，但上游最近一次更新是${d}（来源：[GitHub上的Aider-AI/aider](${AIDER_URL})）。距今已超过三个月，项目已趋于沉寂——依赖它之前请先核实其近期活跃度。`
+    case 'ar': return `ملاحظة حول Aider: مستودعه غير مؤرشف، لكن آخر تحديث للمشروع الأصلي كان في ${d} (المصدر: [Aider-AI/aider على GitHub](${AIDER_URL})). مضى أكثر من ثلاثة أشهر، لذا أصبح المشروع هادئًا — تحقق من نشاطه الأخير قبل الاعتماد عليه.`
+    case 'ko': return `Aider 관련 참고: 저장소는 아카이브되지 않았지만 프로젝트의 마지막 업스트림 업데이트는 ${d}입니다(출처: [GitHub의 Aider-AI/aider](${AIDER_URL})). 3개월 넘게 업데이트가 없어 활동이 뜸해졌습니다. 의존하기 전에 최근 활동을 확인하십시오.`
+    default: return `Aider note: its repository is not archived, but its last upstream update was ${d} (source: [Aider-AI/aider on GitHub](${AIDER_URL})). That is more than three months ago, so the project has gone quiet — check its recent activity before relying on it.`
+  }
+}
+
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     designSkin: 'hub',
@@ -22,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: 'Developers evaluating early full-codebase-generation agents, or researching how the AI coding-agent category evolved',
     primaryTerm: 'GPT Engineer',
@@ -139,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Much Does GPT Engineer Cost?',
         content: "**GPT Engineer itself is free under the MIT license — there is no subscription or fee for the CLI tool.** You pay only for API usage from whichever LLM provider you configure, typically OpenAI, since the tool defaults to calling the OpenAI API for each generation or improvement run.",
         items: [
-          'GPT Engineer (the open-source CLI): free forever under the MIT license, self-hosted, no usage caps, no account required to run the tool itself',
+          'GPT Engineer (the open-source CLI): the tool itself is free under the MIT license, self-hosted, with no usage caps and no account required; API costs of the model provider you configure are separate',
           'Model API costs: by default, GPT Engineer calls the OpenAI API using your own `OPENAI_API_KEY`, so cost depends entirely on the OpenAI model you configure and how many tokens a given generation or "improve" run consumes',
           'Local/custom model option: the documentation describes configuring alternative model backends, which can avoid per-token OpenAI charges if you run a compatible local model instead',
           'Not to be confused with: [gptengineer.app](https://gptengineer.app), the commercial platform referenced in this project\'s README, since rebranded as [Lovable](https://lovable.dev) and redirecting to lovable.dev; it has its own independent pricing and is outside the scope of this review',
@@ -205,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A task better served by a terminal coding agent whose repository is not archived — [Aider](/power-local-llm/aider-review) is the direct alternative recommended in GPT Engineer\'s own README',
           'Use GPT Engineer instead only for historical reference, research into early coding-agent design, or maintaining your own already-forked copy',
         ],
-        note: "GPT Engineer's own README is explicit about this: it points CLI users toward Aider and points users who want a supported, hosted product toward gptengineer.app (now Lovable) — treat those as the project's own recommended next steps, not just this review's opinion.",
+        note: "GPT Engineer's own README is explicit about this: it points CLI users toward Aider and points users who want a supported, hosted product toward gptengineer.app (now Lovable) — treat those as the project's own recommended next steps, not just this review's opinion." + ' ' + aiderQuiet('en'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -216,7 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Core Job': 'Full-codebase generation from one prompt', 'License': 'MIT', 'Status': 'Archived (read-only)', 'Best For': 'Historical reference, existing forks' },
           { 'Tool': '[Aider](/power-local-llm/aider-review)', 'Core Job': 'Terminal AI pair-programming on existing repos', 'License': 'Apache 2.0', 'Status': 'Not archived (updated ' + upd('aider', 'en') + ')', 'Best For': 'Ongoing coding work in a real repo' },
           { 'Tool': '[OpenHands](/power-local-llm/openhands-review)', 'Core Job': 'Autonomous coding agent in a sandboxed runtime', 'License': 'MIT', 'Status': 'Not archived (updated ' + upd('openhands', 'en') + ')', 'Best For': 'End-to-end tasks needing code execution' },
-          { 'Tool': '[AutoGPT](/power-local-llm/autogpt-local-review)', 'Core Job': 'General-purpose autonomous agent', 'License': 'MIT (classic) / commercial platform', 'Status': 'Not archived (updated ' + upd('autogpt', 'en') + ')', 'Best For': 'Comparing early-2023 autonomous-agent designs' },
+          { 'Tool': '[AutoGPT](/power-local-llm/autogpt-local-review)', 'Core Job': 'General-purpose autonomous agent', 'License': 'MIT (classic) / Polyform Shield (platform)', 'Status': 'Not archived (updated ' + upd('autogpt', 'en') + ')', 'Best For': 'Comparing early-2023 autonomous-agent designs' },
         ],
         note: "This table compares GPT Engineer against coding-agent tools with the closest workflow overlap. It excludes multi-agent orchestration frameworks like [CrewAI](/power-local-llm/crewai-review) or [AutoGen](/power-local-llm/autogen-review), which solve a different problem — coordinating several communicating agents rather than generating a codebase from one prompt.",
       },
@@ -288,13 +305,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die frühe Tools zur vollständigen Codebasis-Generierung bewerten oder erforschen, wie sich die Kategorie der KI-Coding-Agenten entwickelt hat',
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer Review: Auf GitHub archiviert, App jetzt Lovable',
     seoTitle: 'GPT Engineer: Auf GitHub archiviert, App jetzt Lovable',
-    intro: "GPT Engineer ist ein kostenloses, quelloffenes (MIT-lizenziertes) Python-Kommandozeilentool, ursprünglich von [Anton Osika](https://github.com/AntonOsika) entwickelt, das aus einer Prompt-Datei in natürlicher Sprache eine vollständige Codebasis generiert und einen \"Improve\"-Modus zur iterativen Weiterentwicklung bestehenden Codes bietet — unter [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Das Repository ist zum Zeitpunkt dieser Bewertung archiviert (nur lesbar)** — GitHub kennzeichnet es als archiviert, die eigene GitHub-Beschreibung lautet \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", und die README verweist Besucher an anderer Stelle hin: an [gptengineer.app](https://gptengineer.app) für \"die Weiterentwicklung als eigenständiger, verwalteter Dienst\" und an [Aider](/de/power-local-llm/aider-review) für \"eine gut gepflegte, hackbare CLI\".",
+    intro: "GPT Engineer ist ein kostenloses, quelloffenes (MIT-lizenziertes) Python-Kommandozeilentool, ursprünglich von [Anton Osika](https://github.com/AntonOsika) entwickelt, das aus einer Prompt-Datei in natürlicher Sprache eine vollständige Codebasis generiert und einen \"Improve\"-Modus zur iterativen Weiterentwicklung bestehenden Codes bietet — unter [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Das Repository ist zum Zeitpunkt dieser Bewertung archiviert (nur lesbar)** — GitHub kennzeichnet es als archiviert, die eigene GitHub-Beschreibung lautet \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", und die README verweist Besucher an anderer Stelle hin: an [gptengineer.app](https://gptengineer.app) für \"die Weiterentwicklung als meinungsstarker (vorkonfigurierter), verwalteter Dienst\" und an [Aider](/de/power-local-llm/aider-review) für \"eine gut gepflegte, hackbare CLI\".",
     metaDescription: "GPT Engineers GitHub-Repo ist archiviert (MIT, letztes Release 0.3.1 im Jahr 2024), gptengineer.app heißt jetzt Lovable. Die README empfiehlt Aider.",
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -405,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was kostet GPT Engineer?',
         content: "**GPT Engineer selbst ist unter der MIT-Lizenz kostenlos — es gibt kein Abonnement oder Gebühren für das CLI-Tool.** Sie zahlen lediglich API-Nutzungskosten des von Ihnen konfigurierten LLM-Anbieters, in der Regel OpenAI, da das Tool standardmäßig die OpenAI-API für jeden Generierungs- oder Verbesserungslauf aufruft.",
         items: [
-          'GPT Engineer (das quelloffene CLI): für immer kostenlos unter der MIT-Lizenz, selbst gehostet, keine Nutzungsobergrenzen, kein Konto zur Ausführung des Tools selbst erforderlich',
+          'GPT Engineer (das quelloffene CLI): das Tool selbst ist unter der MIT-Lizenz kostenlos, selbst gehostet, ohne Nutzungsobergrenzen und ohne Konto; API-Kosten des konfigurierten Modellanbieters kommen separat hinzu',
           'Modell-API-Kosten: Standardmäßig ruft GPT Engineer die OpenAI-API mit Ihrem eigenen `OPENAI_API_KEY` auf, die Kosten hängen also vollständig vom konfigurierten OpenAI-Modell und der Tokenanzahl eines Generierungs- oder "Improve"-Laufs ab',
           'Lokale/benutzerdefinierte Modelloption: Die Dokumentation beschreibt die Konfiguration alternativer Modell-Backends, was Kosten pro OpenAI-Token vermeiden kann, wenn Sie stattdessen ein kompatibles lokales Modell betreiben',
           'Nicht zu verwechseln mit: [gptengineer.app](https://gptengineer.app), der in dieser Projekt-README referenzierten kommerziellen Plattform, inzwischen in [Lovable](https://lovable.dev) umbenannt und auf lovable.dev weitergeleitet; sie hat eine eigene, unabhängige Preisgestaltung, außerhalb des Umfangs dieser Bewertung',
@@ -471,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine Aufgabe, die besser von einem Terminal-Coding-Agenten mit nicht archiviertem Repository erledigt wird — [Aider](/de/power-local-llm/aider-review) ist die direkte Alternative, die GPT Engineers eigene README empfiehlt',
           'Nutzen Sie GPT Engineer stattdessen nur als historische Referenz, für Forschung zu frühen Coding-Agenten-Designs oder zur Pflege Ihres eigenen bereits geforkten Exemplars',
         ],
-        note: "GPT Engineers eigene README ist hierzu eindeutig: Sie verweist CLI-Nutzer auf Aider und Nutzer, die ein unterstütztes, gehostetes Produkt möchten, auf gptengineer.app (heute Lovable) — behandeln Sie das als die eigenen empfohlenen nächsten Schritte des Projekts, nicht nur als Meinung dieser Bewertung.",
+        note: "GPT Engineers eigene README ist hierzu eindeutig: Sie verweist CLI-Nutzer auf Aider und Nutzer, die ein unterstütztes, gehostetes Produkt möchten, auf gptengineer.app (heute Lovable) — behandeln Sie das als die eigenen empfohlenen nächsten Schritte des Projekts, nicht nur als Meinung dieser Bewertung." + ' ' + aiderQuiet('de'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -482,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Kernaufgabe': 'Vollständige Codebasis-Generierung aus einer Prompt', 'Lizenz': 'MIT', 'Status': 'Archiviert (nur lesbar)', 'Am besten für': 'Historische Referenz, bestehende Forks' },
           { 'Tool': '[Aider](/de/power-local-llm/aider-review)', 'Kernaufgabe': 'KI-Pair-Programming im Terminal an bestehenden Repos', 'Lizenz': 'Apache 2.0', 'Status': 'Nicht archiviert (Update ' + upd('aider', 'de') + ')', 'Am besten für': 'Laufende Coding-Arbeit in einem echten Repo' },
           { 'Tool': '[OpenHands](/de/power-local-llm/openhands-review)', 'Kernaufgabe': 'Autonomer Coding-Agent in sandboxed Laufzeitumgebung', 'Lizenz': 'MIT', 'Status': 'Nicht archiviert (Update ' + upd('openhands', 'de') + ')', 'Am besten für': 'Durchgängige Aufgaben mit Code-Ausführung' },
-          { 'Tool': '[AutoGPT](/de/power-local-llm/autogpt-local-review)', 'Kernaufgabe': 'Universeller autonomer Agent', 'Lizenz': 'MIT (klassisch) / kommerzielle Plattform', 'Status': 'Nicht archiviert (Update ' + upd('autogpt', 'de') + ')', 'Am besten für': 'Vergleich früher Autonomer-Agenten-Designs von 2023' },
+          { 'Tool': '[AutoGPT](/de/power-local-llm/autogpt-local-review)', 'Kernaufgabe': 'Universeller autonomer Agent', 'Lizenz': 'MIT (klassisch) / Polyform Shield (Plattform)', 'Status': 'Nicht archiviert (Update ' + upd('autogpt', 'de') + ')', 'Am besten für': 'Vergleich früher Autonomer-Agenten-Designs von 2023' },
         ],
         note: "Diese Tabelle vergleicht GPT Engineer mit Coding-Agenten-Tools mit der größten Workflow-Überschneidung. Sie schließt Multi-Agent-Orchestrierungs-Frameworks wie [CrewAI](/de/power-local-llm/crewai-review) oder [AutoGen](/de/power-local-llm/autogen-review) aus, die ein anderes Problem lösen — die Koordination mehrerer kommunizierender Agenten statt der Generierung einer Codebasis aus einer Prompt.",
       },
@@ -554,13 +571,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs évaluant les premiers agents de génération de code complet, ou étudiant l\'évolution de la catégorie des agents de codage IA',
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer : archivé sur GitHub, l’app est devenue Lovable',
     seoTitle: 'GPT Engineer : archivé sur GitHub, l’app est Lovable',
-    intro: "GPT Engineer est un outil en ligne de commande Python gratuit et open source (licence MIT), créé à l'origine par [Anton Osika](https://github.com/AntonOsika), qui génère une base de code complète à partir d'un fichier de prompt en langage naturel et propose un mode \"improve\" pour faire évoluer du code existant — sur [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Le dépôt est archivé (lecture seule) au moment de cette évaluation** — GitHub le marque comme archivé, sa propre description GitHub indique \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", et son README oriente les visiteurs ailleurs : vers [gptengineer.app](https://gptengineer.app) pour \"l'évolution en tant que service géré et normatif\", et vers [Aider](/fr/power-local-llm/aider-review) pour \"une CLI hackable bien maintenue\".",
+    intro: "GPT Engineer est un outil en ligne de commande Python gratuit et open source (licence MIT), créé à l'origine par [Anton Osika](https://github.com/AntonOsika), qui génère une base de code complète à partir d'un fichier de prompt en langage naturel et propose un mode \"improve\" pour faire évoluer du code existant — sur [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Le dépôt est archivé (lecture seule) au moment de cette évaluation** — GitHub le marque comme archivé, sa propre description GitHub indique \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", et son README oriente les visiteurs ailleurs : vers [gptengineer.app](https://gptengineer.app) pour \"l'évolution sous la forme d'un service géré et orienté (opinionated)\", et vers [Aider](/fr/power-local-llm/aider-review) pour \"une CLI hackable bien maintenue\".",
     metaDescription: "Le dépôt GitHub de GPT Engineer est archivé (MIT, dernière version 0.3.1 en 2024) et gptengineer.app est devenu Lovable. Son README recommande Aider.",
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -627,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'De l\'expérience codegen au dépôt archivé',
         content: [
           "**GPT Engineer a été lancé en avril 2023 comme l'un des premiers outils largement utilisés du type \"décrivez une application, obtenez une base de code complète\", et son dépôt GitHub est désormais archivé.** [Anton Osika](https://github.com/AntonOsika) a créé le dépôt [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) le 29 avril 2023, et il a rapidement grandi pendant la vague d'intérêt de 2023 pour les agents de codage autonomes qui a suivi AutoGPT et BabyAGI.",
-          "Une organisation, gpt-engineer-org, a été créée en décembre 2023 et a brièvement détenu une copie du projet (l'URL GitHub github.com/gpt-engineer-org/gpt-engineer redirige, au moment de cette évaluation, vers le dépôt AntonOsika d'origine). Le site web répertorié de l'organisation gpt-engineer-org est [gptengineer.app](https://gptengineer.app), un produit géré et normatif no-code/low-code que le README de GPT Engineer décrit comme \"l'évolution\" de l'outil CLI d'origine.",
+          "Une organisation, gpt-engineer-org, a été créée en décembre 2023 et a brièvement détenu une copie du projet (l'URL GitHub github.com/gpt-engineer-org/gpt-engineer redirige, au moment de cette évaluation, vers le dépôt AntonOsika d'origine). Le site web répertorié de l'organisation gpt-engineer-org est [gptengineer.app](https://gptengineer.app), un produit géré, avec des choix imposés, no-code/low-code que le README de GPT Engineer décrit comme \"l'évolution\" de l'outil CLI d'origine.",
           "La plateforme commerciale de gptengineer.app a ensuite été renommée [Lovable](https://lovable.dev) : selon la [page GPT Engineer de Lovable](https://lovable.dev/en/gpt-engineer), ce changement de nom vise à éviter toute confusion avec l'outil open source, et gptengineer.app redirige désormais vers lovable.dev. La description du dépôt GitHub indique \"Precursor to: lovable.dev\". Cette évaluation couvre uniquement l'outil CLI open source `gpt-engineer` d'origine, pas gptengineer.app ni Lovable, qui sont des produits commerciaux avec leurs propres conditions, tarifs et support distincts.",
           "La dernière version taguée sur GitHub est `v0.3.1` (6 juin 2024), correspondant à la dernière version publiée sur PyPI. La dernière modification de code fusionnée dans la branche principale date du " + upd('gpt-engineer', 'fr') + ", et les commits suivants sur cette branche ne modifient que le README (le dernier le " + formatDisplayDate('2024-11-17', 'fr') + "). L'indicateur d'archivage de GitHub a ensuite été défini, ce qui signifie que le dépôt est en lecture seule : aucun nouveau commit, issue ou pull request ne peut y être fusionné.",
         ],
@@ -671,7 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Combien coûte GPT Engineer ?',
         content: "**GPT Engineer lui-même est gratuit sous licence MIT — il n'y a ni abonnement ni frais pour l'outil CLI.** Vous ne payez que l'usage de l'API du fournisseur LLM que vous configurez, généralement OpenAI, puisque l'outil appelle par défaut l'API OpenAI pour chaque génération ou amélioration.",
         items: [
-          'GPT Engineer (la CLI open source) : gratuit pour toujours sous licence MIT, auto-hébergé, sans limite d\'usage, aucun compte requis pour exécuter l\'outil lui-même',
+          'GPT Engineer (la CLI open source) : l\'outil lui-même est gratuit sous licence MIT, auto-hébergé, sans limite d\'usage ni compte ; les coûts d\'API du fournisseur de modèle configuré s\'y ajoutent séparément',
           'Coûts d\'API du modèle : par défaut, GPT Engineer appelle l\'API OpenAI avec votre propre `OPENAI_API_KEY`, donc le coût dépend entièrement du modèle OpenAI configuré et du nombre de tokens consommés par une exécution donnée',
           'Option de modèle local/personnalisé : la documentation décrit la configuration de backends de modèles alternatifs, ce qui peut éviter les frais par token OpenAI si vous exécutez plutôt un modèle local compatible',
           'À ne pas confondre avec : [gptengineer.app](https://gptengineer.app), la plateforme commerciale référencée dans le README de ce projet, depuis renommée [Lovable](https://lovable.dev) et redirigée vers lovable.dev, avec sa propre tarification indépendante, hors du périmètre de cette évaluation',
@@ -737,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Une tâche mieux servie par un agent de codage en terminal dont le dépôt n\'est pas archivé — [Aider](/fr/power-local-llm/aider-review) est l\'alternative directe recommandée dans le propre README de GPT Engineer',
           'Utilisez plutôt GPT Engineer uniquement pour référence historique, recherche sur les premiers designs d\'agents de codage, ou maintenance de votre propre copie déjà forkée',
         ],
-        note: "Le propre README de GPT Engineer est explicite à ce sujet : il oriente les utilisateurs de CLI vers Aider et ceux qui veulent un produit supporté et hébergé vers gptengineer.app (aujourd'hui Lovable) — considérez cela comme les propres recommandations du projet, pas seulement l'avis de cette évaluation.",
+        note: "Le propre README de GPT Engineer est explicite à ce sujet : il oriente les utilisateurs de CLI vers Aider et ceux qui veulent un produit supporté et hébergé vers gptengineer.app (aujourd'hui Lovable) — considérez cela comme les propres recommandations du projet, pas seulement l'avis de cette évaluation." + ' ' + aiderQuiet('fr'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -748,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Rôle principal': 'Génération de base de code complète à partir d\'un prompt', 'Licence': 'MIT', 'Statut': 'Archivé (lecture seule)', 'Idéal pour': 'Référence historique, forks existants' },
           { 'Outil': '[Aider](/fr/power-local-llm/aider-review)', 'Rôle principal': 'Pair-programming IA en terminal sur des dépôts existants', 'Licence': 'Apache 2.0', 'Statut': 'Non archivé (mis à jour le ' + upd('aider', 'fr') + ')', 'Idéal pour': 'Travail de codage continu dans un vrai dépôt' },
           { 'Outil': '[OpenHands](/fr/power-local-llm/openhands-review)', 'Rôle principal': 'Agent de codage autonome en environnement sandboxé', 'Licence': 'MIT', 'Statut': 'Non archivé (mis à jour le ' + upd('openhands', 'fr') + ')', 'Idéal pour': 'Tâches de bout en bout nécessitant l\'exécution de code' },
-          { 'Outil': '[AutoGPT](/fr/power-local-llm/autogpt-local-review)', 'Rôle principal': 'Agent autonome généraliste', 'Licence': 'MIT (classique) / plateforme commerciale', 'Statut': 'Non archivé (mis à jour le ' + upd('autogpt', 'fr') + ')', 'Idéal pour': 'Comparer les premiers designs d\'agents autonomes de 2023' },
+          { 'Outil': '[AutoGPT](/fr/power-local-llm/autogpt-local-review)', 'Rôle principal': 'Agent autonome généraliste', 'Licence': 'MIT (classique) / Polyform Shield (plateforme)', 'Statut': 'Non archivé (mis à jour le ' + upd('autogpt', 'fr') + ')', 'Idéal pour': 'Comparer les premiers designs d\'agents autonomes de 2023' },
         ],
         note: "Ce tableau compare GPT Engineer à des outils d'agents de codage ayant le plus de recouvrement fonctionnel. Il exclut les frameworks d'orchestration multi-agents comme [CrewAI](/fr/power-local-llm/crewai-review) ou [AutoGen](/fr/power-local-llm/autogen-review), qui résolvent un problème différent — coordonner plusieurs agents communicants plutôt que générer une base de code à partir d'un prompt.",
       },
@@ -820,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que evalúan los primeros agentes de generación de código completo, o que investigan cómo evolucionó la categoría de agentes de codificación con IA',
     primaryTerm: 'GPT Engineer',
@@ -937,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuánto cuesta GPT Engineer?',
         content: "**GPT Engineer en sí es gratuito bajo licencia MIT — no hay suscripción ni cuota por la herramienta CLI.** Solo pagas el uso de la API del proveedor de LLM que configures, normalmente OpenAI, ya que la herramienta llama por defecto a la API de OpenAI en cada generación o mejora.",
         items: [
-          'GPT Engineer (la CLI de código abierto): gratis para siempre bajo licencia MIT, autoalojado, sin límites de uso, sin necesidad de cuenta para ejecutar la herramienta',
+          'GPT Engineer (la CLI de código abierto): la herramienta en sí es gratuita bajo licencia MIT, autoalojada, sin límites de uso ni cuenta; los costos de API del proveedor de modelos configurado son aparte',
           'Costos de la API del modelo: por defecto, GPT Engineer llama a la API de OpenAI con tu propia `OPENAI_API_KEY`, por lo que el costo depende totalmente del modelo de OpenAI configurado y de cuántos tokens consuma una ejecución dada',
           'Opción de modelo local/personalizado: la documentación describe cómo configurar backends de modelos alternativos, lo que puede evitar cargos por token de OpenAI si ejecutas en su lugar un modelo local compatible',
           'No confundir con: [gptengineer.app](https://gptengineer.app), la plataforma comercial referenciada en el README de este proyecto, renombrada desde entonces como [Lovable](https://lovable.dev) y redirigida a lovable.dev, con su propio precio independiente, fuera del alcance de esta evaluación',
@@ -1003,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una tarea mejor atendida por un agente de codificación en terminal cuyo repositorio no esté archivado — [Aider](/es/power-local-llm/aider-review) es la alternativa directa recomendada en el propio README de GPT Engineer',
           'Usa GPT Engineer en cambio solo como referencia histórica, para investigar los primeros diseños de agentes de codificación, o para mantener tu propia copia ya bifurcada',
         ],
-        note: "El propio README de GPT Engineer es explícito al respecto: dirige a los usuarios de CLI hacia Aider y a quienes quieren un producto soportado y alojado hacia gptengineer.app (hoy Lovable) — trata esto como las propias recomendaciones del proyecto, no solo como la opinión de esta evaluación.",
+        note: "El propio README de GPT Engineer es explícito al respecto: dirige a los usuarios de CLI hacia Aider y a quienes quieren un producto soportado y alojado hacia gptengineer.app (hoy Lovable) — trata esto como las propias recomendaciones del proyecto, no solo como la opinión de esta evaluación." + ' ' + aiderQuiet('es'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -1014,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Función principal': 'Generación de base de código completa desde un prompt', 'Licencia': 'MIT', 'Estado': 'Archivado (solo lectura)', 'Ideal para': 'Referencia histórica, forks existentes' },
           { 'Herramienta': '[Aider](/es/power-local-llm/aider-review)', 'Función principal': 'Programación en pareja con IA en terminal sobre repos existentes', 'Licencia': 'Apache 2.0', 'Estado': 'No archivado (actualizado el ' + upd('aider', 'es') + ')', 'Ideal para': 'Trabajo de codificación continuo en un repo real' },
           { 'Herramienta': '[OpenHands](/es/power-local-llm/openhands-review)', 'Función principal': 'Agente de codificación autónomo en un entorno sandboxed', 'Licencia': 'MIT', 'Estado': 'No archivado (actualizado el ' + upd('openhands', 'es') + ')', 'Ideal para': 'Tareas de extremo a extremo que requieren ejecución de código' },
-          { 'Herramienta': '[AutoGPT](/es/power-local-llm/autogpt-local-review)', 'Función principal': 'Agente autónomo de propósito general', 'Licencia': 'MIT (clásico) / plataforma comercial', 'Estado': 'No archivado (actualizado el ' + upd('autogpt', 'es') + ')', 'Ideal para': 'Comparar los primeros diseños de agentes autónomos de 2023' },
+          { 'Herramienta': '[AutoGPT](/es/power-local-llm/autogpt-local-review)', 'Función principal': 'Agente autónomo de propósito general', 'Licencia': 'MIT (clásico) / Polyform Shield (plataforma)', 'Estado': 'No archivado (actualizado el ' + upd('autogpt', 'es') + ')', 'Ideal para': 'Comparar los primeros diseños de agentes autónomos de 2023' },
         ],
         note: "Esta tabla compara GPT Engineer con herramientas de agentes de codificación con el mayor solapamiento de flujo de trabajo. Excluye frameworks de orquestación multiagente como [CrewAI](/es/power-local-llm/crewai-review) o [AutoGen](/es/power-local-llm/autogen-review), que resuelven un problema distinto — coordinar varios agentes comunicantes en lugar de generar una base de código a partir de un prompt.",
       },
@@ -1086,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores avaliando os primeiros agentes de geração completa de código, ou pesquisando como a categoria de agentes de codificação com IA evoluiu',
     primaryTerm: 'GPT Engineer',
@@ -1203,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quanto custa o GPT Engineer?',
         content: "**O GPT Engineer em si é gratuito sob licença MIT — não há assinatura ou taxa pela ferramenta CLI.** Você paga apenas pelo uso da API do provedor de LLM que configurar, normalmente a OpenAI, já que a ferramenta chama por padrão a API da OpenAI a cada geração ou melhoria.",
         items: [
-          'GPT Engineer (a CLI de código aberto): gratuito para sempre sob licença MIT, auto-hospedado, sem limites de uso, sem necessidade de conta para executar a ferramenta em si',
+          'GPT Engineer (a CLI de código aberto): a ferramenta em si é gratuita sob licença MIT, auto-hospedada, sem limites de uso nem conta; os custos de API do provedor de modelo configurado são separados',
           'Custos de API do modelo: por padrão, o GPT Engineer chama a API da OpenAI com sua própria `OPENAI_API_KEY`, então o custo depende inteiramente do modelo da OpenAI configurado e de quantos tokens uma execução consome',
           'Opção de modelo local/personalizado: a documentação descreve a configuração de backends de modelos alternativos, o que pode evitar cobranças por token da OpenAI se você executar um modelo local compatível',
           'Não confundir com: [gptengineer.app](https://gptengineer.app), a plataforma comercial referenciada no README deste projeto, renomeada desde então como [Lovable](https://lovable.dev) e redirecionada para lovable.dev, com preços próprios e independentes, fora do escopo desta avaliação',
@@ -1269,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uma tarefa mais bem atendida por um agente de codificação de terminal com repositório não arquivado — [Aider](/pt/power-local-llm/aider-review) é a alternativa direta recomendada no próprio README do GPT Engineer',
           'Use o GPT Engineer em vez disso apenas como referência histórica, para pesquisa sobre os primeiros designs de agentes de codificação, ou para manter sua própria cópia já bifurcada',
         ],
-        note: "O próprio README do GPT Engineer é explícito quanto a isso: direciona usuários de CLI para o Aider e usuários que querem um produto suportado e hospedado para o gptengineer.app (hoje Lovable) — trate isso como as recomendações do próprio projeto, não apenas como a opinião desta avaliação.",
+        note: "O próprio README do GPT Engineer é explícito quanto a isso: direciona usuários de CLI para o Aider e usuários que querem um produto suportado e hospedado para o gptengineer.app (hoje Lovable) — trate isso como as recomendações do próprio projeto, não apenas como a opinião desta avaliação." + ' ' + aiderQuiet('pt'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -1280,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Função principal': 'Geração de base de código completa a partir de um prompt', 'Licença': 'MIT', 'Status': 'Arquivado (somente leitura)', 'Melhor para': 'Referência histórica, forks existentes' },
           { 'Ferramenta': '[Aider](/pt/power-local-llm/aider-review)', 'Função principal': 'Programação em par com IA no terminal em repositórios existentes', 'Licença': 'Apache 2.0', 'Status': 'Não arquivado (atualizado em ' + upd('aider', 'pt') + ')', 'Melhor para': 'Trabalho de codificação contínuo em um repositório real' },
           { 'Ferramenta': '[OpenHands](/pt/power-local-llm/openhands-review)', 'Função principal': 'Agente de codificação autônomo em ambiente isolado', 'Licença': 'MIT', 'Status': 'Não arquivado (atualizado em ' + upd('openhands', 'pt') + ')', 'Melhor para': 'Tarefas de ponta a ponta que exigem execução de código' },
-          { 'Ferramenta': '[AutoGPT](/pt/power-local-llm/autogpt-local-review)', 'Função principal': 'Agente autônomo de uso geral', 'Licença': 'MIT (clássico) / plataforma comercial', 'Status': 'Não arquivado (atualizado em ' + upd('autogpt', 'pt') + ')', 'Melhor para': 'Comparar os primeiros designs de agentes autônomos de 2023' },
+          { 'Ferramenta': '[AutoGPT](/pt/power-local-llm/autogpt-local-review)', 'Função principal': 'Agente autônomo de uso geral', 'Licença': 'MIT (clássico) / Polyform Shield (plataforma)', 'Status': 'Não arquivado (atualizado em ' + upd('autogpt', 'pt') + ')', 'Melhor para': 'Comparar os primeiros designs de agentes autônomos de 2023' },
         ],
         note: "Esta tabela compara o GPT Engineer com ferramentas de agentes de codificação com a maior sobreposição de fluxo de trabalho. Exclui frameworks de orquestração multiagente como [CrewAI](/pt/power-local-llm/crewai-review) ou [AutoGen](/pt/power-local-llm/autogen-review), que resolvem um problema diferente — coordenar vários agentes comunicantes em vez de gerar uma base de código a partir de um prompt.",
       },
@@ -1352,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: '初期のフルコードベース生成エージェントを評価する、またはAIコーディングエージェントというカテゴリーがどう変化したかを調べる開発者',
     primaryTerm: 'GPT Engineer',
@@ -1469,7 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'GPT Engineerの料金は？',
         content: "**GPT Engineer自体はMITライセンスの下で無料であり、CLIツールへのサブスクリプションや料金は発生しない。** 支払うのは設定したLLMプロバイダー（通常はOpenAI）のAPI利用料のみであり、ツールはデフォルトで各生成・改善実行のたびにOpenAI APIを呼び出す。",
         items: [
-          'GPT Engineer（オープンソースCLI）：MITライセンスの下で永久に無料、セルフホスト、利用上限なし、ツール自体の実行にアカウント不要',
+          'GPT Engineer（オープンソースCLI）：ツール自体はMITライセンスの下で無料、セルフホスト、利用上限なし、アカウント不要。設定したモデルプロバイダーのAPI料金は別途かかります',
           'モデルAPIコスト：デフォルトでは、GPT Engineerは自分の`OPENAI_API_KEY`を使ってOpenAI APIを呼び出すため、コストは設定したOpenAIモデルと、生成・改善実行が消費するトークン数に完全に依存する',
           'ローカル/カスタムモデルの選択肢：ドキュメントには代替モデルバックエンドの設定方法が説明されており、互換性のあるローカルモデルを代わりに実行すればOpenAIのトークン課金を避けられる可能性がある',
           '混同しないこと：[gptengineer.app](https://gptengineer.app)は、本プロジェクトのREADMEで言及されている商用プラットフォームで、その後[Lovable](https://lovable.dev)に改称されlovable.devへリダイレクトされる。独自の独立した料金体系を持ち、本レビューの対象外である',
@@ -1535,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'リポジトリがアーカイブされていないターミナルコーディングエージェントの方が適したタスク — [Aider](/ja/power-local-llm/aider-review)はGPT Engineer自身のREADMEが推奨する直接の代替である',
           'GPT Engineerは代わりに、歴史的な参考資料として、初期のコーディングエージェント設計の研究として、あるいはすでにフォークした自分自身のコピーを保守する目的にのみ使用すること',
         ],
-        note: "GPT Engineer自身のREADMEはこの点について明確である：CLIユーザーはAiderへ、サポート付きのホスト型製品を求めるユーザーはgptengineer.app（現Lovable）へ案内している — これを単なる本レビューの意見ではなく、プロジェクト自身が推奨する次のステップとして扱うこと。",
+        note: "GPT Engineer自身のREADMEはこの点について明確である：CLIユーザーはAiderへ、サポート付きのホスト型製品を求めるユーザーはgptengineer.app（現Lovable）へ案内している — これを単なる本レビューの意見ではなく、プロジェクト自身が推奨する次のステップとして扱うこと。" + ' ' + aiderQuiet('ja'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -1544,9 +1561,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['ツール', '主な役割', 'ライセンス', 'ステータス', '最適な用途'],
         rows: [
           { 'ツール': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', '主な役割': '単一プロンプトからのフルコードベース生成', 'ライセンス': 'MIT', 'ステータス': 'アーカイブ済み（読み取り専用）', '最適な用途': '歴史的参考資料、既存フォーク' },
-          { 'ツール': '[Aider](/ja/power-local-llm/aider-review)', '主な役割': '既存リポジトリでのターミナルAIペアプログラミング', 'ライセンス': 'Apache 2.0', 'ステータス': 'アーカイブなし（' + upd('aider', 'ja') + '更新）', '最適な用途': '実際のリポジトリでの継続的なコーディング作業' },
-          { 'ツール': '[OpenHands](/ja/power-local-llm/openhands-review)', '主な役割': 'サンドボックス実行環境内の自律型コーディングエージェント', 'ライセンス': 'MIT', 'ステータス': 'アーカイブなし（' + upd('openhands', 'ja') + '更新）', '最適な用途': 'コード実行が必要な一気通貫タスク' },
-          { 'ツール': '[AutoGPT](/ja/power-local-llm/autogpt-local-review)', '主な役割': '汎用自律型エージェント', 'ライセンス': 'MIT（クラシック）/ 商用プラットフォーム', 'ステータス': 'アーカイブなし（' + upd('autogpt', 'ja') + '更新）', '最適な用途': '2023年初期の自律型エージェント設計の比較' },
+          { 'ツール': '[Aider](/ja/power-local-llm/aider-review)', '主な役割': '既存リポジトリでのターミナルAIペアプログラミング', 'ライセンス': 'Apache 2.0', 'ステータス': 'アーカイブされていない（' + upd('aider', 'ja') + '更新）', '最適な用途': '実際のリポジトリでの継続的なコーディング作業' },
+          { 'ツール': '[OpenHands](/ja/power-local-llm/openhands-review)', '主な役割': 'サンドボックス実行環境内の自律型コーディングエージェント', 'ライセンス': 'MIT', 'ステータス': 'アーカイブされていない（' + upd('openhands', 'ja') + '更新）', '最適な用途': 'コード実行が必要な一気通貫タスク' },
+          { 'ツール': '[AutoGPT](/ja/power-local-llm/autogpt-local-review)', '主な役割': '汎用自律型エージェント', 'ライセンス': 'MIT（クラシック）/ Polyform Shield（プラットフォーム）', 'ステータス': 'アーカイブされていない（' + upd('autogpt', 'ja') + '更新）', '最適な用途': '2023年初期の自律型エージェント設計の比較' },
         ],
         note: "この表は、ワークフローの重なりが最も大きいコーディングエージェントツールとGPT Engineerを比較している。[CrewAI](/ja/power-local-llm/crewai-review)や[AutoGen](/ja/power-local-llm/autogen-review)のようなマルチエージェントオーケストレーションフレームワークは対象外である。これらは単一プロンプトからコードベースを生成するのではなく、複数の通信し合うエージェントを調整するという異なる問題を解決している。",
       },
@@ -1560,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: "GitHubのアーカイブフラグは、リポジトリが読み取り専用であることを意味する — 新しいコミット、issueへの応答、プルリクエストのマージは不可能である。高いスター数が能動的な保守を意味すると仮定するのではなく、現在のステータスを直接確認すること（GitHubのリポジトリページには「This repository has been archived」というバナーが表示される）。",
           },
           {
-            title: '誤解2：GPT EngineerをgptengineerApp.appやLovableと混同する',
+            title: '誤解2：GPT Engineerをgptengineer.appやLovableと混同する',
             content: "GPT Engineer（本レビューの対象）は元のオープンソースCLIである。[gptengineer.app](https://gptengineer.app)はCLIの「進化形」として構築された商用プラットフォームで、その後[Lovable](https://lovable.dev)に改称され、旧ドメインはリダイレクトされる。CLIリポジトリ自身の説明文は、自らをLovableの前身と記している。これら2つの製品の価格、サポート、利用規約は、このオープンソースCLIとは独立しており、本レビューの対象外である。",
           },
           {
@@ -1618,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: '正在评估早期全代码库生成智能体、或研究AI编码智能体这一类别如何演变的开发者',
     primaryTerm: 'GPT Engineer',
@@ -1735,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'GPT Engineer的价格是多少？',
         content: "**GPT Engineer本身在MIT许可证下是免费的——该CLI工具没有订阅费或使用费。** 你仅需为所配置的LLM提供商（通常为OpenAI）的API使用付费，因为该工具默认在每次生成或改进运行时调用OpenAI API。",
         items: [
-          'GPT Engineer（开源CLI）：在MIT许可证下永久免费，自行托管，无使用上限，运行该工具本身无需账户',
+          'GPT Engineer（开源CLI）：该工具本身在MIT许可证下免费、可自行托管、无使用上限、无需账户；所配置模型提供商的API费用另计',
           '模型API成本：默认情况下，GPT Engineer使用你自己的`OPENAI_API_KEY`调用OpenAI API，因此成本完全取决于所配置的OpenAI模型以及某次生成或"改进"运行所消耗的令牌数量',
           '本地/自定义模型选项：文档中描述了如何配置替代模型后端，如果改为运行兼容的本地模型，可避免按OpenAI令牌计费',
           '不要与之混淆：[gptengineer.app](https://gptengineer.app)是本项目README中提及的商业平台，后来已更名为[Lovable](https://lovable.dev)并重定向到lovable.dev，拥有自己独立的定价，不在本评测范围之内',
@@ -1801,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '更适合由仓库未归档的终端编码智能体来完成的任务——[Aider](/zh/power-local-llm/aider-review)是GPT Engineer自身README推荐的直接替代方案',
           '相反，仅将GPT Engineer用作历史参考、早期编码智能体设计的研究，或用于维护你自己已经复刻的副本',
         ],
-        note: "GPT Engineer自身的README对此十分明确：它将CLI用户引导至Aider，将希望获得受支持的托管产品的用户引导至gptengineer.app（现为Lovable）——请将其视为项目自身推荐的后续步骤，而不仅仅是本评测的观点。",
+        note: "GPT Engineer自身的README对此十分明确：它将CLI用户引导至Aider，将希望获得受支持的托管产品的用户引导至gptengineer.app（现为Lovable）——请将其视为项目自身推荐的后续步骤，而不仅仅是本评测的观点。" + ' ' + aiderQuiet('zh'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -1812,7 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', '核心作用': '根据单个提示生成完整代码库', '许可证': 'MIT', '状态': '已归档（只读）', '最适合': '历史参考、现有复刻分支' },
           { '工具': '[Aider](/zh/power-local-llm/aider-review)', '核心作用': '在现有仓库上进行终端AI结对编程', '许可证': 'Apache 2.0', '状态': '未归档（' + upd('aider', 'zh') + '更新）', '最适合': '在真实仓库中持续开展编码工作' },
           { '工具': '[OpenHands](/zh/power-local-llm/openhands-review)', '核心作用': '沙箱运行环境中的自主编码智能体', '许可证': 'MIT', '状态': '未归档（' + upd('openhands', 'zh') + '更新）', '最适合': '需要执行代码的端到端任务' },
-          { '工具': '[AutoGPT](/zh/power-local-llm/autogpt-local-review)', '核心作用': '通用自主智能体', '许可证': 'MIT（经典版）/ 商业平台', '状态': '未归档（' + upd('autogpt', 'zh') + '更新）', '最适合': '比较2023年早期的自主智能体设计' },
+          { '工具': '[AutoGPT](/zh/power-local-llm/autogpt-local-review)', '核心作用': '通用自主智能体', '许可证': 'MIT（经典版）/ Polyform Shield（平台）', '状态': '未归档（' + upd('autogpt', 'zh') + '更新）', '最适合': '比较2023年早期的自主智能体设计' },
         ],
         note: "本表将GPT Engineer与工作流程重叠度最高的编码智能体工具进行比较，不包括[CrewAI](/zh/power-local-llm/crewai-review)或[AutoGen](/zh/power-local-llm/autogen-review)等多智能体编排框架——它们解决的是不同的问题：协调多个相互通信的智能体，而非根据一个提示生成代码库。",
       },
@@ -1884,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: 'مطورون يقيّمون عملاء التوليد الكامل للأكواد المبكرة، أو يبحثون في كيفية تطور فئة عملاء البرمجة بالذكاء الاصطناعي',
     primaryTerm: 'GPT Engineer',
@@ -2001,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كم تكلفة GPT Engineer؟',
         content: "**GPT Engineer نفسها مجانية بموجب ترخيص MIT — لا يوجد اشتراك أو رسوم مقابل أداة سطر الأوامر.** أنت تدفع فقط مقابل استخدام واجهة برمجة تطبيقات مزوّد النموذج اللغوي الذي تُعدّه، وعادةً ما يكون OpenAI، لأن الأداة تستدعي افتراضيًا واجهة برمجة تطبيقات OpenAI في كل عملية توليد أو تحسين.",
         items: [
-          'GPT Engineer (واجهة سطر الأوامر مفتوحة المصدر): مجانية إلى الأبد بموجب ترخيص MIT، مستضافة ذاتيًا، دون حدود استخدام، ولا حاجة إلى حساب لتشغيل الأداة نفسها',
+          'GPT Engineer (واجهة سطر الأوامر مفتوحة المصدر): الأداة نفسها مجانية بموجب ترخيص MIT، مستضافة ذاتيًا، دون حدود استخدام ودون حساب؛ وتُحتسب رسوم واجهة برمجة تطبيقات مزوّد النموذج الذي تُعدّه بشكل منفصل',
           'تكاليف واجهة برمجة تطبيقات النموذج: افتراضيًا، تستدعي GPT Engineer واجهة برمجة تطبيقات OpenAI باستخدام `OPENAI_API_KEY` الخاص بك، لذا تعتمد التكلفة كليًا على نموذج OpenAI المُعدّ وعدد الرموز (tokens) التي تستهلكها عملية معينة',
           'خيار النموذج المحلي/المخصص: تصف الوثائق كيفية إعداد خلفيات نماذج بديلة، ما قد يتجنب رسوم OpenAI لكل رمز إذا شغّلت بدلاً منها نموذجًا محليًا متوافقًا',
           'لا تخلط بينه وبين: [gptengineer.app](https://gptengineer.app)، منصة تجارية مذكورة في ملف README لهذا المشروع، أُعيدت تسميتها لاحقًا إلى [Lovable](https://lovable.dev) ويعيد نطاقها التوجيه إلى lovable.dev، ولها تسعيرها المستقل الخاص، وهي خارج نطاق هذه المراجعة',
@@ -2067,7 +2084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مهمة يخدمها بشكل أفضل عميل برمجة طرفية مستودعه غير مؤرشف — [Aider](/ar/power-local-llm/aider-review) هو البديل المباشر الموصى به في ملف README الخاص بـ GPT Engineer نفسه',
           'استخدم GPT Engineer بدلاً من ذلك فقط كمرجع تاريخي، أو لبحث تصاميم عملاء البرمجة المبكرة، أو لصيانة نسختك المتفرعة بالفعل',
         ],
-        note: "ملف README الخاص بـ GPT Engineer صريح في هذا الشأن: يوجّه مستخدمي سطر الأوامر إلى Aider، ومن يريدون منتجًا مدعومًا ومُستضافًا إلى gptengineer.app (الذي أصبح Lovable) — تعامل مع هذا باعتباره الخطوات التالية التي يوصي بها المشروع نفسه، وليس مجرد رأي هذه المراجعة.",
+        note: "ملف README الخاص بـ GPT Engineer صريح في هذا الشأن: يوجّه مستخدمي سطر الأوامر إلى Aider، ومن يريدون منتجًا مدعومًا ومُستضافًا إلى gptengineer.app (الذي أصبح Lovable) — تعامل مع هذا باعتباره الخطوات التالية التي يوصي بها المشروع نفسه، وليس مجرد رأي هذه المراجعة." + ' ' + aiderQuiet('ar'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -2078,7 +2095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'الوظيفة الأساسية': 'توليد قاعدة كود كاملة من تعليمة واحدة', 'الترخيص': 'MIT', 'الحالة': 'مؤرشف (للقراءة فقط)', 'الأنسب لـ': 'مرجع تاريخي، فروع موجودة' },
           { 'الأداة': '[Aider](/ar/power-local-llm/aider-review)', 'الوظيفة الأساسية': 'برمجة زوجية بالذكاء الاصطناعي عبر الطرفية على مستودعات موجودة', 'الترخيص': 'Apache 2.0', 'الحالة': 'غير مؤرشف (تحديث ' + upd('aider', 'ar') + ')', 'الأنسب لـ': 'عمل برمجي مستمر في مستودع حقيقي' },
           { 'الأداة': '[OpenHands](/ar/power-local-llm/openhands-review)', 'الوظيفة الأساسية': 'عميل برمجة مستقل في بيئة تشغيل معزولة', 'الترخيص': 'MIT', 'الحالة': 'غير مؤرشف (تحديث ' + upd('openhands', 'ar') + ')', 'الأنسب لـ': 'مهام شاملة تحتاج إلى تنفيذ الكود' },
-          { 'الأداة': '[AutoGPT](/ar/power-local-llm/autogpt-local-review)', 'الوظيفة الأساسية': 'عميل مستقل عام الغرض', 'الترخيص': 'MIT (كلاسيكي) / منصة تجارية', 'الحالة': 'غير مؤرشف (تحديث ' + upd('autogpt', 'ar') + ')', 'الأنسب لـ': 'مقارنة تصاميم العملاء المستقلين المبكرة لعام 2023' },
+          { 'الأداة': '[AutoGPT](/ar/power-local-llm/autogpt-local-review)', 'الوظيفة الأساسية': 'عميل مستقل عام الغرض', 'الترخيص': 'MIT (كلاسيكي) / Polyform Shield (المنصة)', 'الحالة': 'غير مؤرشف (تحديث ' + upd('autogpt', 'ar') + ')', 'الأنسب لـ': 'مقارنة تصاميم العملاء المستقلين المبكرة لعام 2023' },
         ],
         note: "يقارن هذا الجدول GPT Engineer بأدوات عملاء البرمجة الأقرب من حيث تداخل سير العمل. يستثني أطر عمل تنسيق متعدد العملاء مثل [CrewAI](/ar/power-local-llm/crewai-review) أو [AutoGen](/ar/power-local-llm/autogen-review)، التي تحل مشكلة مختلفة — تنسيق عدة عملاء متواصلين بدلاً من توليد قاعدة كود من تعليمة واحدة.",
       },
@@ -2150,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
     publishDate: '2026-09-11',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     educationalLevel: 'Intermediate',
     audience: '초기의 전체 코드베이스 생성 에이전트를 평가하거나, AI 코딩 에이전트 카테고리가 어떻게 발전해왔는지 조사하는 개발자',
     primaryTerm: 'GPT Engineer',
@@ -2267,7 +2284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'GPT Engineer의 비용은 얼마인가?',
         content: "**GPT Engineer 자체는 MIT 라이선스로 무료이며 — CLI 도구에 대한 구독료나 요금은 없다.** 비용은 설정한 LLM 제공업체(보통 OpenAI)의 API 사용료뿐이며, 이 도구는 기본적으로 각 생성/개선 실행마다 OpenAI API를 호출한다.",
         items: [
-          'GPT Engineer(오픈소스 CLI): MIT 라이선스 하에 영구히 무료이며, 자체 호스팅이 가능하고, 사용 제한이 없으며, 도구 자체를 실행하는 데 계정이 필요하지 않다',
+          'GPT Engineer(오픈소스 CLI): 도구 자체는 MIT 라이선스 하에 무료이며 자체 호스팅이 가능하고 사용 제한과 계정이 없습니다. 설정한 모델 제공업체의 API 비용은 별도입니다',
           '모델 API 비용: 기본적으로 GPT Engineer는 자신의 `OPENAI_API_KEY`로 OpenAI API를 호출하므로, 비용은 전적으로 설정한 OpenAI 모델과 특정 실행이 소비하는 토큰 수에 달려 있다',
           '로컬/커스텀 모델 옵션: 문서에는 대체 모델 백엔드를 설정하는 방법이 설명되어 있으며, 호환되는 로컬 모델을 대신 실행하면 OpenAI 토큰당 요금을 피할 수 있다',
           '혼동하지 말 것: [gptengineer.app](https://gptengineer.app)은 이 프로젝트의 README에서 언급되는 상업용 플랫폼으로, 이후 [Lovable](https://lovable.dev)로 이름이 바뀌어 lovable.dev로 리다이렉트된다. 독자적인 가격 체계를 가지고 있으며 본 리뷰의 범위 밖이다',
@@ -2333,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '저장소가 아카이브되지 않은 터미널 코딩 에이전트가 더 적합한 작업 — [Aider](/ko/power-local-llm/aider-review)는 GPT Engineer 자체 README가 추천하는 직접적인 대안이다',
           '대신 GPT Engineer는 역사적 참고 자료로만, 초기 코딩 에이전트 설계에 대한 연구용으로만, 또는 이미 포크한 자신의 사본을 유지보수하는 용도로만 사용하라',
         ],
-        note: "GPT Engineer 자체 README는 이 점에 대해 명확하다: CLI 사용자에게는 Aider를, 지원되는 호스팅 제품을 원하는 사용자에게는 gptengineer.app(현 Lovable)을 안내한다 — 이를 단순히 본 리뷰의 의견이 아니라 프로젝트 자체가 권장하는 다음 단계로 받아들여야 한다.",
+        note: "GPT Engineer 자체 README는 이 점에 대해 명확하다: CLI 사용자에게는 Aider를, 지원되는 호스팅 제품을 원하는 사용자에게는 gptengineer.app(현 Lovable)을 안내한다 — 이를 단순히 본 리뷰의 의견이 아니라 프로젝트 자체가 권장하는 다음 단계로 받아들여야 한다." + ' ' + aiderQuiet('ko'),
       },
       comparisonTable: {
         id: 'gpt-engineer-vs-alternatives',
@@ -2344,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', '핵심 역할': '단일 프롬프트로부터 전체 코드베이스 생성', '라이선스': 'MIT', '상태': '아카이브됨(읽기 전용)', '최적 용도': '역사적 참고 자료, 기존 포크' },
           { '도구': '[Aider](/ko/power-local-llm/aider-review)', '핵심 역할': '기존 저장소에서의 터미널 AI 페어 프로그래밍', '라이선스': 'Apache 2.0', '상태': '아카이브 안 됨(' + upd('aider', 'ko') + ' 업데이트)', '최적 용도': '실제 저장소에서의 지속적인 코딩 작업' },
           { '도구': '[OpenHands](/ko/power-local-llm/openhands-review)', '핵심 역할': '샌드박스 실행 환경 내 자율 코딩 에이전트', '라이선스': 'MIT', '상태': '아카이브 안 됨(' + upd('openhands', 'ko') + ' 업데이트)', '최적 용도': '코드 실행이 필요한 엔드투엔드 작업' },
-          { '도구': '[AutoGPT](/ko/power-local-llm/autogpt-local-review)', '핵심 역할': '범용 자율 에이전트', '라이선스': 'MIT(클래식) / 상업용 플랫폼', '상태': '아카이브 안 됨(' + upd('autogpt', 'ko') + ' 업데이트)', '최적 용도': '2023년 초기 자율 에이전트 설계 비교' },
+          { '도구': '[AutoGPT](/ko/power-local-llm/autogpt-local-review)', '핵심 역할': '범용 자율 에이전트', '라이선스': 'MIT(클래식) / Polyform Shield(플랫폼)', '상태': '아카이브 안 됨(' + upd('autogpt', 'ko') + ' 업데이트)', '최적 용도': '2023년 초기 자율 에이전트 설계 비교' },
         ],
         note: "이 표는 워크플로가 가장 겹치는 코딩 에이전트 도구들과 GPT Engineer를 비교한다. [CrewAI](/ko/power-local-llm/crewai-review)나 [AutoGen](/ko/power-local-llm/autogen-review) 같은 멀티 에이전트 오케스트레이션 프레임워크는 제외되는데, 이들은 단일 프롬프트로부터 코드베이스를 생성하는 것이 아니라 여러 소통하는 에이전트를 조율한다는 다른 문제를 해결하기 때문이다.",
       },
