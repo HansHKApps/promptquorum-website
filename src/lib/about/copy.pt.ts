@@ -65,14 +65,15 @@ export const pt: AboutCopy = {
     'Independência em relação ao controle é o tema de tudo neste site. É por isso que o diretório é neutro, por isso que cada entrada tem um link para a fonte oficial e por isso que publicamos em nove idiomas.',
   believeItalic:
     'Não achamos que a IA na nuvem seja ruim. Acreditamos que você deveria ter uma escolha de verdade, e que escolher o local deveria ser tão fácil quanto escolher a nuvem.',
-  ecosystemH2: 'Um ecossistema, quatro partes que funcionam juntas',
+  ecosystemH2: 'Um ecossistema, cinco partes que funcionam juntas',
   ecosystemLead:
-    'A PromptQuorum não é apenas um aplicativo, nem apenas um diretório. São quatro partes construídas em torno do mesmo objetivo, para que você possa ir de "o que eu deveria rodar?" a uma configuração funcionando sem sair do site.',
+    'A PromptQuorum não é apenas um aplicativo, nem apenas um diretório. São cinco partes construídas em torno do mesmo objetivo, para que você possa ir de "o que eu deveria rodar?" a uma configuração funcionando sem sair do site.',
   connectsLabel: 'Funciona com o resto:',
   findLabel: 'Encontrar',
   learnLabel: 'Aprender',
   useLabel: 'Usar',
   askLabel: 'Perguntar',
+  hansLabel: 'Conversar',
   partFindTitle: 'O Diretório de IA Local',
   partFindOneLiner: 'O mapa estruturado e pesquisável do software de IA local.',
   partFindBody:
@@ -93,10 +94,16 @@ export const pt: AboutCopy = {
   partAskBody:
     'Um servidor público, somente leitura, para o Model Context Protocol. Claude, Cursor e qualquer assistente compatível com MCP podem pesquisar no diretório, buscar detalhes de aplicativos, ler guias e explicar licenças. Sem conta e sem chave de API. Quando a sua IA responde a uma pergunta sobre IA local, ela pode recorrer à PromptQuorum em vez de adivinhar.',
   partAskConnects: 'ele lê o mesmo diretório e os mesmos guias que este site, para que o seu assistente responda a partir da mesma fonte que você.',
+  partHansTitle: 'Ask Hans',
+  partHansOneLiner: 'Pergunte com suas palavras e receba uma resposta do diretório.',
+  partHansBody:
+    'Um assistente de chat com IA neste site. Pergunte qual aplicativo serve para uma tarefa, o que roda no seu hardware ou como funciona uma licença, e ele responde a partir do mesmo diretório e dos mesmos guias. Ele se baseia em IA, então confira os detalhes importantes nas fichas do diretório e nos guias. Sua conversa fica na aba do seu navegador e não guardamos o texto das perguntas nem das respostas.',
+  partHansConnects: 'ele usa as mesmas ferramentas que o servidor MCP, então você recebe as respostas do diretório sem configurar um assistente próprio.',
   ctaOpenDirectory: 'Abrir o diretório',
   ctaReadGuides: 'Ler os guias',
   ctaAboutApp: 'Sobre o aplicativo',
   ctaSeeHowToConnect: 'Ver como conectar',
+  ctaAskHans: 'Abrir o Ask Hans',
   practiceH3: 'Como funciona na prática',
   practiceIntro: 'Digamos que você tenha 16 GB de RAM e queira conversar com seus próprios PDFs offline.',
   practiceSteps: [
