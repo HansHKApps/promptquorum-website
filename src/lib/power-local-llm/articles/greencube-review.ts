@@ -2,8 +2,8 @@
 // Slug: greencube-review
 // Companion to: gpt4all-review, jan-review, msty-review, hanoki-review (desktop chat apps)
 // Sources: greencube.app (home, /buy, /what-you-get, /your-data, /download), the privacy policy at legal.greencube.app (effective 2026-10-13),
-// the installer GreenCube-setup.exe and the updater feed models.greencube.app/updates/latest.json (version 0.1.47, 2026-10-17),
-// all checked 2026-10-30 — no hands-on testing. The maker has not yet reviewed this page (no founder block).
+// the installer GreenCube-setup.exe and the updater feed models.greencube.app/updates/latest.json (version 0.1.49, 2026-11-05),
+// all checked 2026-10-30, feed/installer re-checked 2026-11-06 — no hands-on testing. Founder-reviewed 2026-11-06: Hector Gras (GreenCube) read the finished review, called it fair and clear and sent corrections + a note (fromTheMaker).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -13,14 +13,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-en.webp',
     title: 'GreenCube Review: One-Time-Purchase Offline AI for Windows',
     seoTitle: 'GreenCube Review: One-Time-Purchase Offline AI for Windows',
     intro:
-      'GreenCube is a Windows desktop app that runs Google\'s Gemma 4 models on your own PC for chat, coding, image generation and reading files, sold for a single payment of 9.99 euros instead of a subscription. It is a young product (version 0.1.47, updated on 17 October 2026) from a Spanish company, so this review sticks to what its website, installer feed and privacy policy say, as checked on 30 October 2026.',
+      'GreenCube is a Windows desktop app that runs Google\'s Gemma 4 models on your own PC for chat, coding, image generation and reading files, sold for a single payment of 9.99 euros instead of a subscription. It is a young product (version 0.1.49, updated on 5 November 2026) from a Spanish company, so this review sticks to what its website, installer feed and privacy policy say, as checked on 30 October 2026, with the founder\'s corrections and a re-check of the update feed on 6 November 2026.',
     metaDescription:
       'GreenCube review: Windows desktop AI sold once for 9.99 euros, running Gemma 4 offline. Requirements, hardware tiers, data flow and open questions.',
     twitterDescription:
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube (version 0.1.47, updated 17 October 2026) is a Windows 10 and 11 app that runs Gemma 4 on your own PC and, according to its maker, keeps chats, files and images on the machine.** It is closed source and Windows-only. PromptQuorum has not installed or tested it; every statement here comes from the maker\'s website, its installer feed and its privacy policy.',
+      '**GreenCube (version 0.1.49, updated 5 November 2026) is a Windows 10 and 11 app that runs Gemma 4 on your own PC and, according to its maker, keeps chats, files and images on the machine.** It is closed source and Windows-only. PromptQuorum has not installed or tested it; every statement here comes from the maker\'s website, its installer feed and its privacy policy.',
     quickAnswerTop: {
       en: {
         question: 'Does GreenCube really work offline?',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Image generation needs at least 12 GB of RAM.',
           'There is one version and one price, with a 15-day refund window.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -64,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'How to Get Started', anchor: 'getting-started' },
       { label: 'Features Confirmed by the Sources', anchor: 'key-features' },
       { label: 'Data Flow and Content Policy', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
       { label: 'Competitors and Alternatives', anchor: 'vs-alternatives' },
@@ -88,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance: the latest build, 0.1.47, was published on 17 October 2026, so no stale-project warning applies.',
+          'Maintenance: the latest build, 0.1.49, was published on 5 November 2026, so no stale-project warning applies.',
           'Cost: one payment with no renewal; the website offers a full refund within 15 days on request.',
           'Device: Windows 10 or 11 with 8 GB of RAM or more; there is no macOS or Linux version.',
           'Models: Gemma 4 E2B or E4B, picked by your hardware tier.',
@@ -97,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'This review is based on the maker\'s website, installer feed and privacy policy, checked on 30 October 2026. PromptQuorum has not installed, tested or benchmarked the app.',
+            text: 'This review is based on the maker\'s website, installer feed and privacy policy, checked on 30 October 2026, with the founder\'s corrections and a re-check of the update feed on 6 November 2026. PromptQuorum has not installed, tested or benchmarked the app.',
           },
         ],
       },
@@ -105,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'What Is GreenCube?',
         content: [
-          '**GreenCube is a desktop AI assistant that runs on your own Windows PC, with no message limit, no credits and no monthly fee.** The website lists chat and writing, code and web-page generation, image generation, reading PDFs and photos, and study tools such as flashcards and quizzes, plus export to PowerPoint and Word. Diagrams and Automations are shown as coming soon.',
+          '**GreenCube is a desktop AI assistant that runs on your own Windows PC, with no message limit, no credits and no monthly fee.** The website lists chat and writing, code and web-page generation, image generation, reading PDFs and photos, and study tools such as flashcards and quizzes, plus export to PowerPoint and Word. Diagrams has shipped, so the app also draws diagrams and charts on request; Automations is still shown as coming soon.',
           'It is published by Edunexis SL of Cartagena, Spain, under the product name [GreenCube](https://greencube.app). The maker\'s own FAQ is candid about the trade-off: the biggest cloud AIs are smarter, and GreenCube offers no limits, offline use and ownership instead.',
         ],
       },
@@ -118,13 +119,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Item', 'Details'],
         rows: [
           { 'Item': 'Platform', 'Details': 'Windows 10 and 11' },
-          { 'Item': 'Download', 'Details': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { 'Item': 'Download', 'Details': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { 'Item': 'Price', 'Details': '€9.99 (US$9.99), paid once' },
           { 'Item': 'Website', 'Details': '[greencube.app](https://greencube.app)' },
           { 'Item': 'Privacy policy', 'Details': '[GreenCube privacy policy](https://legal.greencube.app/privacy)' },
           { 'Item': 'Source code', 'Details': 'None found for the app' },
         ],
-        note: 'Version reviewed: 0.1.47, published on 17 October 2026 per the maker\'s [update feed](https://models.greencube.app/updates/latest.json). The purchase page\'s structured data says "1.0", which does not match the feed; this review follows the feed because it describes the build users receive. The only public repository of the maker\'s GitHub organization is the website, not the app.',
+        note: 'Version reviewed: 0.1.49, published on 5 November 2026 per the maker\'s [update feed](https://models.greencube.app/updates/latest.json). The purchase page\'s structured data said "1.0" when first checked; the founder says that was a mistake and it is now fixed. This review follows the feed because it describes the build users receive. The only public repository of the maker\'s GitHub organization is the website, not the app.',
       },
       requirements: {
         id: 'requirements',
@@ -132,14 +133,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCube needs Windows 10 or 11 and about 8 GB of RAM; memory decides how much fits and a graphics card decides how fast it runs.**',
         ],
-        columns: ['Tier', 'What the website says'],
+        columns: ['Tier', 'Requirement'],
         rows: [
-          { 'Tier': 'Seed', 'What the website says': 'About 8 GB RAM, no graphics card' },
-          { 'Tier': 'Sprout', 'What the website says': '16 GB RAM or more without a card, or 8 GB with a card' },
-          { 'Tier': 'Bloom', 'What the website says': 'Card with 8 GB or more, or a 4 GB card with 16 GB RAM' },
-          { 'Tier': 'Thrive', 'What the website says': 'Card with 8 GB or more and 24 GB RAM or more' },
+          { 'Tier': 'Seed', 'Requirement': 'About 8 GB RAM, no graphics card' },
+          { 'Tier': 'Sprout', 'Requirement': '16 GB RAM, or 8 GB RAM with a 4 GB card' },
+          { 'Tier': 'Bloom', 'Requirement': 'Card with 8 GB or more, or a 4 GB card with 16 GB RAM' },
+          { 'Tier': 'Thrive', 'Requirement': 'Card with 8 GB or more and 24 GB RAM or more' },
         ],
-        note: 'Without a graphics card it works but is slower. Image generation needs at least 12 GB of RAM. The installer is 14.1 MB; the model download adds a few gigabytes.',
+        note: 'Without a graphics card it works but is slower. Image generation needs at least 12 GB of RAM. The installer is 36.8 MB; the model download adds a few gigabytes. The Sprout row follows the founder\'s correction; the other rows follow the website.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -198,6 +199,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Hector Gras, the founder of GreenCube, read this review, described it as fair and clear, and sent the corrections now applied here: the current version, Diagrams having shipped, the installer\'s new name and size, the Sprout tier requirement, and the purchase-page version number, which the founder says was the team\'s mistake and is fixed. The note below is the founder\'s own words, not PromptQuorum\'s independent assessment. The founder also offered a free licence for testing; PromptQuorum has not yet run the app.',
+          '"I\'m 16, and I started GreenCube because I think AI is meant to be owned, not rented. In the 1970s, computers were giant machines that a few companies like IBM owned, and everyone else rented time on them. Then Apple put a personal computer on ordinary people\'s desks. Today AI lives in data centres, and you pay every month to borrow it, with limits. GreenCube is my bet that it moves onto your own PC: you pay once, it works offline, and what you write stays yours. Next, we\'re making the study tools better and the app faster on everyday computers."',
+        ],
+        note: '— Hector Gras, founder of GreenCube',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use It',
@@ -213,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Hands-on quality.** PromptQuorum did not run the app, so answer quality, speed and image results are not assessed.',
           '**Runtime and models.** Only Gemma 4 E2B and E4B are named; no public source names the inference engine or lists other models.',
-          '**Version and age.** The feed says 0.1.47 while the purchase page says 1.0, and no changelog or release history is published.',
+          '**Version and age.** The app is still on a 0.1.x version number, and no changelog or release history is published.',
           '**Independent checks.** The app has no public source code and no third-party review of its network traffic or its content settings.',
         ],
       },
@@ -264,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GreenCube website](https://greencube.app) — product overview, pricing, hardware tiers and FAQ, checked 30 October 2026.',
           '[GreenCube purchase page](https://greencube.app/buy) — price, refund window and structured data.',
-          '[GreenCube update feed](https://models.greencube.app/updates/latest.json) — version 0.1.47, published 17 October 2026.',
+          '[GreenCube update feed](https://models.greencube.app/updates/latest.json) — version 0.1.49, published 5 November 2026.',
           '[GreenCube privacy policy](https://legal.greencube.app/privacy) — data handling and legal basis, effective 13 October 2026.',
         ],
       },
@@ -288,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/greencube-review',
       inLanguage: 'en',
       datePublished: '2026-10-30',
-      dateModified: '2026-10-30',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Beginner',
@@ -316,14 +326,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-de.webp',
     title: 'GreenCube-Rezension: Offline-KI für Windows im Einmalkauf',
     seoTitle: 'GreenCube-Rezension: Offline-KI für Windows im Einmalkauf',
     intro:
-      'GreenCube ist eine Windows-Desktop-App, die Googles Gemma-4-Modelle auf Ihrem eigenen PC für Chat, Programmierung, Bildgenerierung und das Lesen von Dateien ausführt – verkauft für eine einmalige Zahlung von 9,99 Euro statt im Abo. Das Produkt ist jung (Version 0.1.47, aktualisiert am 17. Oktober 2026) und stammt von einem spanischen Unternehmen; diese Rezension beschränkt sich daher auf das, was Website, Installer-Feed und Datenschutzerklärung aussagen, geprüft am 30. Oktober 2026.',
+      'GreenCube ist eine Windows-Desktop-App, die Googles Gemma-4-Modelle auf Ihrem eigenen PC für Chat, Programmierung, Bildgenerierung und das Lesen von Dateien ausführt – verkauft für eine einmalige Zahlung von 9,99 Euro statt im Abo. Das Produkt ist jung (Version 0.1.49, aktualisiert am 5. November 2026) und stammt von einem spanischen Unternehmen; diese Rezension beschränkt sich daher auf das, was Website, Installer-Feed und Datenschutzerklärung aussagen, geprüft am 30. Oktober 2026, ergänzt um die Korrekturen des Gründers und eine erneute Prüfung des Feeds am 6. November 2026.',
     metaDescription:
       'GreenCube-Rezension: Windows-KI für einmalig 9,99 Euro, die Gemma 4 offline ausführt. Anforderungen, Hardwarestufen, Datenfluss und offene Fragen.',
     twitterDescription:
@@ -344,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube (Version 0.1.47, aktualisiert am 17. Oktober 2026) ist eine App für Windows 10 und 11, die Gemma 4 auf Ihrem eigenen PC ausführt und laut Entwickler Chats, Dateien und Bilder auf dem Rechner behält.** Sie ist nicht quelloffen und nur für Windows erhältlich. PromptQuorum hat sie weder installiert noch getestet; jede Angabe hier stammt von der Website des Entwicklers, seinem Installer-Feed und seiner Datenschutzerklärung.',
+      '**GreenCube (Version 0.1.49, aktualisiert am 5. November 2026) ist eine App für Windows 10 und 11, die Gemma 4 auf Ihrem eigenen PC ausführt und laut Entwickler Chats, Dateien und Bilder auf dem Rechner behält.** Sie ist nicht quelloffen und nur für Windows erhältlich. PromptQuorum hat sie weder installiert noch getestet; jede Angabe hier stammt von der Website des Entwicklers, seinem Installer-Feed und seiner Datenschutzerklärung.',
     quickAnswerTop: {
       de: {
         question: 'Funktioniert GreenCube wirklich offline?',
@@ -356,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Bildgenerierung braucht mindestens 12 GB RAM.',
           'Es gibt eine Version zu einem Preis, mit 15 Tagen Rückgaberecht.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -367,6 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'So starten Sie', anchor: 'getting-started' },
       { label: 'Durch die Quellen bestätigte Funktionen', anchor: 'key-features' },
       { label: 'Datenfluss und Inhaltsrichtlinie', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Für wen es sich eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
       { label: 'Alternativen und Mitbewerber', anchor: 'vs-alternatives' },
@@ -391,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Pflege: Der neueste Build, 0.1.47, wurde am 17. Oktober 2026 veröffentlicht; ein Warnhinweis für veraltete Projekte entfällt daher.',
+          'Pflege: Der neueste Build, 0.1.49, wurde am 5. November 2026 veröffentlicht; ein Warnhinweis für veraltete Projekte entfällt daher.',
           'Kosten: eine Zahlung ohne Verlängerung; laut Website gibt es auf Anfrage eine volle Erstattung innerhalb von 15 Tagen.',
           'Gerät: Windows 10 oder 11 mit mindestens 8 GB RAM; es gibt keine Version für macOS oder Linux.',
           'Modelle: Gemma 4 E2B oder E4B, gewählt nach Ihrer Hardwarestufe.',
@@ -400,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Diese Rezension basiert auf der Website des Entwicklers, dem Installer-Feed und der Datenschutzerklärung, geprüft am 30. Oktober 2026. PromptQuorum hat die App weder installiert noch getestet oder einem Benchmark unterzogen.',
+            text: 'Diese Rezension basiert auf der Website des Entwicklers, dem Installer-Feed und der Datenschutzerklärung, geprüft am 30. Oktober 2026, ergänzt um die Korrekturen des Gründers und eine erneute Prüfung des Feeds am 6. November 2026. PromptQuorum hat die App weder installiert noch getestet oder einem Benchmark unterzogen.',
           },
         ],
       },
@@ -408,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'Was ist GreenCube?',
         content: [
-          '**GreenCube ist ein Desktop-KI-Assistent, der auf Ihrem eigenen Windows-PC läuft – ohne Nachrichtenlimit, ohne Credits und ohne monatliche Gebühr.** Die Website nennt Chat und Schreiben, die Erzeugung von Code und Webseiten, Bildgenerierung, das Lesen von PDFs und Fotos sowie Lernwerkzeuge wie Karteikarten und Quizze, dazu den Export nach PowerPoint und Word. Diagramme und Automatisierungen werden als „demnächst“ angezeigt.',
+          '**GreenCube ist ein Desktop-KI-Assistent, der auf Ihrem eigenen Windows-PC läuft – ohne Nachrichtenlimit, ohne Credits und ohne monatliche Gebühr.** Die Website nennt Chat und Schreiben, die Erzeugung von Code und Webseiten, Bildgenerierung, das Lesen von PDFs und Fotos sowie Lernwerkzeuge wie Karteikarten und Quizze, dazu den Export nach PowerPoint und Word. Diagramme sind inzwischen verfügbar, die App zeichnet also auf Wunsch Diagramme und Grafiken; Automatisierungen werden weiterhin als „demnächst“ angezeigt.',
           'Herausgeber ist Edunexis SL aus Cartagena, Spanien, unter dem Produktnamen [GreenCube](https://greencube.app). Die eigene FAQ des Entwicklers benennt den Kompromiss offen: Die größten Cloud-KIs sind klüger, und GreenCube bietet stattdessen keine Limits, Offline-Nutzung und Eigentum.',
         ],
       },
@@ -421,13 +432,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Punkt', 'Details'],
         rows: [
           { 'Punkt': 'Plattform', 'Details': 'Windows 10 und 11' },
-          { 'Punkt': 'Download', 'Details': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { 'Punkt': 'Download', 'Details': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { 'Punkt': 'Preis', 'Details': '9,99 € (9,99 US-$), einmalig bezahlt' },
           { 'Punkt': 'Website', 'Details': '[greencube.app](https://greencube.app)' },
           { 'Punkt': 'Datenschutzerklärung', 'Details': '[Datenschutzerklärung von GreenCube](https://legal.greencube.app/privacy)' },
           { 'Punkt': 'Quellcode', 'Details': 'Keiner für die App gefunden' },
         ],
-        note: 'Geprüfte Version: 0.1.47, laut [Update-Feed](https://models.greencube.app/updates/latest.json) des Entwicklers am 17. Oktober 2026 veröffentlicht. Die strukturierten Daten der Kaufseite nennen „1.0“, was nicht zum Feed passt; diese Rezension folgt dem Feed, weil er den Build beschreibt, den Nutzer erhalten. Das einzige öffentliche Repository der GitHub-Organisation des Entwicklers ist die Website, nicht die App.',
+        note: 'Geprüfte Version: 0.1.49, laut [Update-Feed](https://models.greencube.app/updates/latest.json) des Entwicklers am 5. November 2026 veröffentlicht. Die strukturierten Daten der Kaufseite nannten bei der ersten Prüfung „1.0“; laut Gründer war das ein Fehler und ist inzwischen behoben. Diese Rezension folgt dem Feed, weil er den Build beschreibt, den Nutzer erhalten. Das einzige öffentliche Repository der GitHub-Organisation des Entwicklers ist die Website, nicht die App.',
       },
       requirements: {
         id: 'requirements',
@@ -435,14 +446,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCube braucht Windows 10 oder 11 und etwa 8 GB RAM; der Arbeitsspeicher entscheidet, was hineinpasst, und eine Grafikkarte, wie schnell es läuft.**',
         ],
-        columns: ['Stufe', 'Laut Website'],
+        columns: ['Stufe', 'Anforderung'],
         rows: [
-          { 'Stufe': 'Seed', 'Laut Website': 'Etwa 8 GB RAM, keine Grafikkarte' },
-          { 'Stufe': 'Sprout', 'Laut Website': '16 GB RAM oder mehr ohne Karte, oder 8 GB mit Karte' },
-          { 'Stufe': 'Bloom', 'Laut Website': 'Karte mit 8 GB oder mehr, oder 4-GB-Karte mit 16 GB RAM' },
-          { 'Stufe': 'Thrive', 'Laut Website': 'Karte mit 8 GB oder mehr und 24 GB RAM oder mehr' },
+          { 'Stufe': 'Seed', 'Anforderung': 'Etwa 8 GB RAM, keine Grafikkarte' },
+          { 'Stufe': 'Sprout', 'Anforderung': '16 GB RAM, oder 8 GB RAM mit 4-GB-Karte' },
+          { 'Stufe': 'Bloom', 'Anforderung': 'Karte mit 8 GB oder mehr, oder 4-GB-Karte mit 16 GB RAM' },
+          { 'Stufe': 'Thrive', 'Anforderung': 'Karte mit 8 GB oder mehr und 24 GB RAM oder mehr' },
         ],
-        note: 'Ohne Grafikkarte funktioniert die App, ist aber langsamer. Die Bildgenerierung braucht mindestens 12 GB RAM. Der Installer ist 14,1 MB groß; der Modell-Download kommt mit einigen Gigabyte hinzu.',
+        note: 'Ohne Grafikkarte funktioniert die App, ist aber langsamer. Die Bildgenerierung braucht mindestens 12 GB RAM. Der Installer ist 36,8 MB groß; der Modell-Download kommt mit einigen Gigabyte hinzu. Die Sprout-Zeile folgt der Korrektur des Gründers; die übrigen Zeilen folgen der Website.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -501,6 +512,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Hector Gras, der Gründer von GreenCube, hat diese Rezension gelesen, sie als fair und klar bezeichnet und die hier nun umgesetzten Korrekturen geschickt: aktuelle Version, Diagramme sind erschienen, neuer Name und neue Größe des Installers, die Anforderung der Sprout-Stufe und die Versionsnummer der Kaufseite, die laut Gründer ein Fehler des Teams war und behoben ist. Die folgende Notiz sind die eigenen Worte des Gründers, keine unabhängige Einschätzung von PromptQuorum. Der Gründer hat außerdem eine kostenlose Lizenz zum Testen angeboten; PromptQuorum hat die App bisher nicht ausgeführt.',
+          '„Ich bin 16 und habe GreenCube gegründet, weil KI meiner Meinung nach besessen und nicht gemietet werden sollte. In den 1970er-Jahren waren Computer riesige Maschinen, die einigen wenigen Firmen wie IBM gehörten, und alle anderen mieteten Rechenzeit darauf. Dann stellte Apple einen Personal Computer auf die Schreibtische gewöhnlicher Menschen. Heute lebt KI in Rechenzentren, und man zahlt jeden Monat, um sie sich auszuleihen – mit Limits. GreenCube ist meine Wette darauf, dass sie auf den eigenen PC wandert: Man zahlt einmal, es funktioniert offline, und was man schreibt, bleibt einem selbst. Als Nächstes verbessern wir die Lernwerkzeuge und machen die App auf normalen Computern schneller.“',
+        ],
+        note: '— Hector Gras, Gründer von GreenCube',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Für wen es sich eignet',
@@ -516,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Praxisqualität.** PromptQuorum hat die App nicht ausgeführt; Antwortqualität, Geschwindigkeit und Bildergebnisse sind daher nicht bewertet.',
           '**Laufzeit und Modelle.** Genannt werden nur Gemma 4 E2B und E4B; keine öffentliche Quelle nennt die Inferenz-Engine oder weitere Modelle.',
-          '**Version und Alter.** Der Feed nennt 0.1.47, die Kaufseite 1.0, und es gibt weder ein Änderungsprotokoll noch einen Veröffentlichungsverlauf.',
+          '**Version und Alter.** Die App trägt weiterhin eine Versionsnummer 0.1.x, und es gibt weder ein Änderungsprotokoll noch einen Veröffentlichungsverlauf.',
           '**Unabhängige Prüfungen.** Die App hat keinen öffentlichen Quellcode und keine unabhängige Prüfung ihres Netzwerkverkehrs oder ihrer Inhaltseinstellungen.',
         ],
       },
@@ -567,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GreenCube-Website](https://greencube.app) — Produktüberblick, Preise, Hardwarestufen und FAQ, geprüft am 30. Oktober 2026.',
           '[GreenCube-Kaufseite](https://greencube.app/buy) — Preis, Rückgabefrist und strukturierte Daten.',
-          '[GreenCube-Update-Feed](https://models.greencube.app/updates/latest.json) — Version 0.1.47, veröffentlicht am 17. Oktober 2026.',
+          '[GreenCube-Update-Feed](https://models.greencube.app/updates/latest.json) — Version 0.1.49, veröffentlicht am 5. November 2026.',
           '[Datenschutzerklärung von GreenCube](https://legal.greencube.app/privacy) — Datenverarbeitung und Rechtsgrundlage, gültig ab 13. Oktober 2026.',
         ],
       },
@@ -587,14 +607,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-es.webp',
     title: 'Reseña de GreenCube: IA sin conexión de pago único para Windows',
     seoTitle: 'Reseña de GreenCube: IA sin conexión de pago único',
     intro:
-      'GreenCube es una app de escritorio para Windows que ejecuta los modelos Gemma 4 de Google en tu propio PC para chatear, programar, generar imágenes y leer archivos, y se vende por un único pago de 9.99 euros en lugar de una suscripción. Es un producto joven (versión 0.1.47, actualizada el 17 de octubre de 2026) de una empresa española, así que esta reseña se limita a lo que dicen su web, su canal de actualizaciones del instalador y su política de privacidad, consultados el 30 de octubre de 2026.',
+      'GreenCube es una app de escritorio para Windows que ejecuta los modelos Gemma 4 de Google en tu propio PC para chatear, programar, generar imágenes y leer archivos, y se vende por un único pago de 9.99 euros en lugar de una suscripción. Es un producto joven (versión 0.1.49, actualizada el 5 de noviembre de 2026) de una empresa española, así que esta reseña se limita a lo que dicen su web, su canal de actualizaciones del instalador y su política de privacidad, consultados el 30 de octubre de 2026, con las correcciones del fundador y una nueva consulta del canal el 6 de noviembre de 2026.',
     metaDescription:
       'Reseña de GreenCube: IA de escritorio para Windows de pago único (9.99 euros) que ejecuta Gemma 4 sin conexión. Requisitos, niveles, datos y dudas.',
     twitterDescription:
@@ -615,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube (versión 0.1.47, actualizada el 17 de octubre de 2026) es una app para Windows 10 y 11 que ejecuta Gemma 4 en tu propio PC y, según su desarrollador, mantiene los chats, los archivos y las imágenes en el equipo.** Es de código cerrado y solo para Windows. PromptQuorum no la ha instalado ni probado; todo lo que se afirma aquí procede de la web del desarrollador, su canal de actualizaciones del instalador y su política de privacidad.',
+      '**GreenCube (versión 0.1.49, actualizada el 5 de noviembre de 2026) es una app para Windows 10 y 11 que ejecuta Gemma 4 en tu propio PC y, según su desarrollador, mantiene los chats, los archivos y las imágenes en el equipo.** Es de código cerrado y solo para Windows. PromptQuorum no la ha instalado ni probado; todo lo que se afirma aquí procede de la web del desarrollador, su canal de actualizaciones del instalador y su política de privacidad.',
     quickAnswerTop: {
       es: {
         question: '¿GreenCube funciona de verdad sin conexión?',
@@ -627,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La generación de imágenes requiere al menos 12 GB de RAM.',
           'Hay una sola versión y un solo precio, con 15 días para pedir el reembolso.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -638,6 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cómo empezar', anchor: 'getting-started' },
       { label: 'Funciones confirmadas por las fuentes', anchor: 'key-features' },
       { label: 'Flujo de datos y política de contenido', anchor: 'privacy' },
+      { label: 'La palabra del desarrollador', anchor: 'from-the-maker' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
       { label: 'Competidores y alternativas', anchor: 'vs-alternatives' },
@@ -662,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Mantenimiento: la última compilación, la 0.1.47, se publicó el 17 de octubre de 2026, así que no se aplica ningún aviso de proyecto obsoleto.',
+          'Mantenimiento: la última compilación, la 0.1.49, se publicó el 5 de noviembre de 2026, así que no se aplica ningún aviso de proyecto obsoleto.',
           'Coste: un solo pago sin renovación; según la web, hay reembolso completo en 15 días si lo pides.',
           'Dispositivo: Windows 10 u 11 con 8 GB de RAM o más; no hay versión para macOS ni Linux.',
           'Modelos: Gemma 4 E2B o E4B, según el nivel de tu hardware.',
@@ -671,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta reseña se basa en la web del desarrollador, su canal de actualizaciones del instalador y su política de privacidad, consultados el 30 de octubre de 2026. PromptQuorum no ha instalado, probado ni medido la app.',
+            text: 'Esta reseña se basa en la web del desarrollador, su canal de actualizaciones del instalador y su política de privacidad, consultados el 30 de octubre de 2026, con las correcciones del fundador y una nueva consulta del canal el 6 de noviembre de 2026. PromptQuorum no ha instalado, probado ni medido la app.',
           },
         ],
       },
@@ -679,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: '¿Qué es GreenCube?',
         content: [
-          '**GreenCube es un asistente de IA de escritorio que se ejecuta en tu propio PC con Windows, sin límite de mensajes, sin créditos y sin cuota mensual.** La web enumera chat y redacción, generación de código y de páginas web, generación de imágenes, lectura de PDF y fotos, y herramientas de estudio como tarjetas de memoria y cuestionarios, además de exportación a PowerPoint y Word. Diagramas y Automatizaciones aparecen como próximamente.',
+          '**GreenCube es un asistente de IA de escritorio que se ejecuta en tu propio PC con Windows, sin límite de mensajes, sin créditos y sin cuota mensual.** La web enumera chat y redacción, generación de código y de páginas web, generación de imágenes, lectura de PDF y fotos, y herramientas de estudio como tarjetas de memoria y cuestionarios, además de exportación a PowerPoint y Word. Diagramas ya está disponible, así que la app también dibuja diagramas y gráficos a petición; Automatizaciones sigue apareciendo como próximamente.',
           'La publica Edunexis SL, de Cartagena (España), con el nombre de producto [GreenCube](https://greencube.app). Las propias preguntas frecuentes del desarrollador son sinceras sobre el equilibrio: las IA en la nube más grandes son más inteligentes, y GreenCube ofrece a cambio ausencia de límites, uso sin conexión y propiedad.',
         ],
       },
@@ -692,13 +713,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Elemento', 'Detalles'],
         rows: [
           { 'Elemento': 'Plataforma', 'Detalles': 'Windows 10 y 11' },
-          { 'Elemento': 'Descarga', 'Detalles': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { 'Elemento': 'Descarga', 'Detalles': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { 'Elemento': 'Precio', 'Detalles': '€9.99 (US$9.99), pago único' },
           { 'Elemento': 'Sitio web', 'Detalles': '[greencube.app](https://greencube.app)' },
           { 'Elemento': 'Política de privacidad', 'Detalles': '[Política de privacidad de GreenCube](https://legal.greencube.app/privacy)' },
           { 'Elemento': 'Código fuente', 'Detalles': 'No se encontró para la app' },
         ],
-        note: 'Versión revisada: 0.1.47, publicada el 17 de octubre de 2026 según el [canal de actualizaciones](https://models.greencube.app/updates/latest.json) del desarrollador. Los datos estructurados de la página de compra indican «1.0», lo que no coincide con el canal; esta reseña sigue el canal porque describe la compilación que reciben los usuarios. El único repositorio público de la organización de GitHub del desarrollador es el sitio web, no la app.',
+        note: 'Versión revisada: 0.1.49, publicada el 5 de noviembre de 2026 según el [canal de actualizaciones](https://models.greencube.app/updates/latest.json) del desarrollador. Los datos estructurados de la página de compra indicaban «1.0» en la primera revisión; según el fundador fue un error y ya está corregido. Esta reseña sigue el canal porque describe la compilación que reciben los usuarios. El único repositorio público de la organización de GitHub del desarrollador es el sitio web, no la app.',
       },
       requirements: {
         id: 'requirements',
@@ -706,14 +727,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCube necesita Windows 10 u 11 y unos 8 GB de RAM; la memoria decide cuánto cabe y una tarjeta gráfica decide la velocidad.**',
         ],
-        columns: ['Nivel', 'Qué dice la web'],
+        columns: ['Nivel', 'Requisito'],
         rows: [
-          { 'Nivel': 'Seed', 'Qué dice la web': 'Unos 8 GB de RAM, sin tarjeta gráfica' },
-          { 'Nivel': 'Sprout', 'Qué dice la web': '16 GB de RAM o más sin tarjeta, u 8 GB con tarjeta' },
-          { 'Nivel': 'Bloom', 'Qué dice la web': 'Tarjeta de 8 GB o más, o una de 4 GB con 16 GB de RAM' },
-          { 'Nivel': 'Thrive', 'Qué dice la web': 'Tarjeta de 8 GB o más y 24 GB de RAM o más' },
+          { 'Nivel': 'Seed', 'Requisito': 'Unos 8 GB de RAM, sin tarjeta gráfica' },
+          { 'Nivel': 'Sprout', 'Requisito': '16 GB de RAM, u 8 GB de RAM con tarjeta de 4 GB' },
+          { 'Nivel': 'Bloom', 'Requisito': 'Tarjeta de 8 GB o más, o una de 4 GB con 16 GB de RAM' },
+          { 'Nivel': 'Thrive', 'Requisito': 'Tarjeta de 8 GB o más y 24 GB de RAM o más' },
         ],
-        note: 'Sin tarjeta gráfica funciona, pero más despacio. La generación de imágenes requiere al menos 12 GB de RAM. El instalador pesa 14.1 MB; la descarga del modelo añade unos pocos gigabytes.',
+        note: 'Sin tarjeta gráfica funciona, pero más despacio. La generación de imágenes requiere al menos 12 GB de RAM. El instalador pesa 36.8 MB; la descarga del modelo añade unos pocos gigabytes. La fila Sprout sigue la corrección del fundador; las demás filas siguen la web.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -772,6 +793,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del desarrollador',
+        content: [
+          'Hector Gras, fundador de GreenCube, leyó esta reseña, la calificó de justa y clara y envió las correcciones que ahora se aplican aquí: la versión actual, que Diagramas ya está disponible, el nuevo nombre y tamaño del instalador, el requisito del nivel Sprout y el número de versión de la página de compra, que según el fundador fue un error del equipo y ya está corregido. La nota de abajo son palabras propias del fundador, no una valoración independiente de PromptQuorum. El fundador también ofreció una licencia gratuita para probar la app; PromptQuorum todavía no la ha ejecutado.',
+          '«Tengo 16 años y empecé GreenCube porque creo que la IA está para tenerla en propiedad, no para alquilarla. En los años 70, los equipos eran máquinas gigantes que pertenecían a unas pocas empresas como IBM, y todos los demás alquilaban tiempo en ellas. Luego Apple puso un PC personal en los escritorios de la gente corriente. Hoy la IA vive en centros de datos y se paga cada mes por tomarla prestada, con límites. GreenCube es mi apuesta de que pase a tu propio PC: pagas una vez, funciona sin conexión y lo que escribes sigue siendo tuyo. Lo siguiente es mejorar las herramientas de estudio y hacer la app más rápida en equipos cotidianos.»',
+        ],
+        note: '— Hector Gras, fundador de GreenCube',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quién es',
@@ -787,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Calidad en la práctica.** PromptQuorum no ejecutó la app, así que no se evalúan la calidad de las respuestas, la velocidad ni los resultados de las imágenes.',
           '**Motor y modelos.** Solo se nombran Gemma 4 E2B y E4B; ninguna fuente pública nombra el motor de inferencia ni enumera otros modelos.',
-          '**Versión y antigüedad.** El canal indica 0.1.47 mientras que la página de compra indica 1.0, y no se publica ningún registro de cambios ni historial de versiones.',
+          '**Versión y antigüedad.** La app sigue en una versión 0.1.x y no se publica ningún registro de cambios ni historial de versiones.',
           '**Verificaciones independientes.** La app no tiene código fuente público ni ninguna reseña de terceros sobre su tráfico de red o sus ajustes de contenido.',
         ],
       },
@@ -838,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Sitio web de GreenCube](https://greencube.app) — resumen del producto, precio, niveles de hardware y preguntas frecuentes, consultado el 30 de octubre de 2026.',
           '[Página de compra de GreenCube](https://greencube.app/buy) — precio, plazo de reembolso y datos estructurados.',
-          '[Canal de actualizaciones de GreenCube](https://models.greencube.app/updates/latest.json) — versión 0.1.47, publicada el 17 de octubre de 2026.',
+          '[Canal de actualizaciones de GreenCube](https://models.greencube.app/updates/latest.json) — versión 0.1.49, publicada el 5 de noviembre de 2026.',
           '[Política de privacidad de GreenCube](https://legal.greencube.app/privacy) — tratamiento de datos y base jurídica, vigente desde el 13 de octubre de 2026.',
         ],
       },
@@ -858,14 +888,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-fr.webp',
     title: 'Test de GreenCube : IA hors ligne en achat unique sous Windows',
     seoTitle: 'Test de GreenCube : IA hors ligne en achat unique, Windows',
     intro:
-      'GreenCube est une application de bureau Windows qui exécute les modèles Gemma 4 de Google sur votre propre PC pour discuter, programmer, générer des images et lire des fichiers, vendue pour un paiement unique de 9,99 euros au lieu d\'un abonnement. C\'est un produit récent (version 0.1.47, mise à jour le 17 octobre 2026) d\'une société espagnole : ce test se limite donc à ce que disent son site, son flux d\'installation et sa politique de confidentialité, consultés le 30 octobre 2026.',
+      'GreenCube est une application de bureau Windows qui exécute les modèles Gemma 4 de Google sur votre propre PC pour discuter, programmer, générer des images et lire des fichiers, vendue pour un paiement unique de 9,99 euros au lieu d\'un abonnement. C\'est un produit récent (version 0.1.49, mise à jour le 5 novembre 2026) d\'une société espagnole : ce test se limite donc à ce que disent son site, son flux d\'installation et sa politique de confidentialité, consultés le 30 octobre 2026, complétés par les corrections du fondateur et une nouvelle vérification du flux le 6 novembre 2026.',
     metaDescription:
       'Test de GreenCube : IA de bureau Windows vendue 9,99 euros en une fois, avec Gemma 4 hors ligne. Configuration, niveaux matériels, données et limites.',
     twitterDescription:
@@ -886,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube (version 0.1.47, mise à jour le 17 octobre 2026) est une application pour Windows 10 et 11 qui exécute Gemma 4 sur votre propre PC et, selon son éditeur, garde conversations, fichiers et images sur la machine.** Elle est à code fermé et réservée à Windows. PromptQuorum ne l\'a ni installée ni testée ; tout ce qui suit provient du site de l\'éditeur, de son flux d\'installation et de sa politique de confidentialité.',
+      '**GreenCube (version 0.1.49, mise à jour le 5 novembre 2026) est une application pour Windows 10 et 11 qui exécute Gemma 4 sur votre propre PC et, selon son éditeur, garde conversations, fichiers et images sur la machine.** Elle est à code fermé et réservée à Windows. PromptQuorum ne l\'a ni installée ni testée ; tout ce qui suit provient du site de l\'éditeur, de son flux d\'installation et de sa politique de confidentialité.',
     quickAnswerTop: {
       fr: {
         question: 'GreenCube fonctionne-t-elle vraiment hors ligne ?',
@@ -898,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La génération d\'images exige au moins 12 Go de RAM.',
           'Il n\'existe qu\'une version et qu\'un prix, avec 15 jours pour demander un remboursement.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -909,6 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pour démarrer', anchor: 'getting-started' },
       { label: 'Fonctions confirmées par les sources', anchor: 'key-features' },
       { label: 'Flux de données et politique de contenu', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'À qui elle s\'adresse', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
       { label: 'Concurrents et alternatives', anchor: 'vs-alternatives' },
@@ -933,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance : la dernière version, 0.1.47, a été publiée le 17 octobre 2026 ; aucun avertissement de projet abandonné ne s\'applique donc.',
+          'Maintenance : la dernière version, 0.1.49, a été publiée le 5 novembre 2026 ; aucun avertissement de projet abandonné ne s\'applique donc.',
           'Coût : un seul paiement sans renouvellement ; selon le site, un remboursement intégral est possible sur demande dans les 15 jours.',
           'Appareil : Windows 10 ou 11 avec 8 Go de RAM ou plus ; il n\'existe pas de version macOS ni Linux.',
           'Modèles : Gemma 4 E2B ou E4B, choisis selon votre niveau matériel.',
@@ -942,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Ce test repose sur le site de l\'éditeur, son flux d\'installation et sa politique de confidentialité, consultés le 30 octobre 2026. PromptQuorum n\'a ni installé, ni testé, ni mesuré l\'application.',
+            text: 'Ce test repose sur le site de l\'éditeur, son flux d\'installation et sa politique de confidentialité, consultés le 30 octobre 2026, complétés par les corrections du fondateur et une nouvelle vérification du flux le 6 novembre 2026. PromptQuorum n\'a ni installé, ni testé, ni mesuré l\'application.',
           },
         ],
       },
@@ -950,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'Qu\'est-ce que GreenCube ?',
         content: [
-          '**GreenCube est un assistant IA de bureau qui s\'exécute sur votre propre PC Windows, sans limite de messages, sans crédits et sans abonnement mensuel.** Le site liste le chat et la rédaction, la génération de code et de pages web, la génération d\'images, la lecture de PDF et de photos, ainsi que des outils d\'étude comme les fiches de révision et les quiz, avec export vers PowerPoint et Word. Les fonctions Diagrammes et Automatisations sont annoncées comme « bientôt disponibles ».',
+          '**GreenCube est un assistant IA de bureau qui s\'exécute sur votre propre PC Windows, sans limite de messages, sans crédits et sans abonnement mensuel.** Le site liste le chat et la rédaction, la génération de code et de pages web, la génération d\'images, la lecture de PDF et de photos, ainsi que des outils d\'étude comme les fiches de révision et les quiz, avec export vers PowerPoint et Word. La fonction Diagrammes est désormais disponible : l\'application dessine aussi des diagrammes et des graphiques sur demande ; Automatisations reste annoncée comme « bientôt disponible ».',
           'Elle est publiée par Edunexis SL, basée à Carthagène (Espagne), sous le nom de produit [GreenCube](https://greencube.app). La FAQ de l\'éditeur est franche sur le compromis : les plus grandes IA du cloud sont plus intelligentes, et GreenCube propose en échange l\'absence de limites, l\'usage hors ligne et la propriété.',
         ],
       },
@@ -963,13 +994,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Élément', 'Détails'],
         rows: [
           { 'Élément': 'Plateforme', 'Détails': 'Windows 10 et 11' },
-          { 'Élément': 'Téléchargement', 'Détails': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { 'Élément': 'Téléchargement', 'Détails': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { 'Élément': 'Prix', 'Détails': '9,99 € (9,99 $US), payé une seule fois' },
           { 'Élément': 'Site web', 'Détails': '[greencube.app](https://greencube.app)' },
           { 'Élément': 'Politique de confidentialité', 'Détails': '[Politique de confidentialité de GreenCube](https://legal.greencube.app/privacy)' },
           { 'Élément': 'Code source', 'Détails': 'Aucun trouvé pour l\'application' },
         ],
-        note: 'Version testée : 0.1.47, publiée le 17 octobre 2026 d\'après le [flux de mises à jour](https://models.greencube.app/updates/latest.json) de l\'éditeur. Les données structurées de la page d\'achat indiquent « 1.0 », ce qui ne correspond pas au flux ; ce test suit le flux, car il décrit la version que reçoivent les utilisateurs. Le seul dépôt public de l\'organisation GitHub de l\'éditeur est le site web, pas l\'application.',
+        note: 'Version testée : 0.1.49, publiée le 5 novembre 2026 d\'après le [flux de mises à jour](https://models.greencube.app/updates/latest.json) de l\'éditeur. Les données structurées de la page d\'achat indiquaient « 1.0 » lors de la première vérification ; selon le fondateur, c\'était une erreur, désormais corrigée. Ce test suit le flux, car il décrit la version que reçoivent les utilisateurs. Le seul dépôt public de l\'organisation GitHub de l\'éditeur est le site web, pas l\'application.',
       },
       requirements: {
         id: 'requirements',
@@ -977,14 +1008,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCube exige Windows 10 ou 11 et environ 8 Go de RAM ; la mémoire décide de ce qui tient, et une carte graphique de la vitesse d\'exécution.**',
         ],
-        columns: ['Niveau', 'Ce que dit le site'],
+        columns: ['Niveau', 'Configuration requise'],
         rows: [
-          { 'Niveau': 'Seed', 'Ce que dit le site': 'Environ 8 Go de RAM, sans carte graphique' },
-          { 'Niveau': 'Sprout', 'Ce que dit le site': '16 Go de RAM ou plus sans carte, ou 8 Go avec une carte' },
-          { 'Niveau': 'Bloom', 'Ce que dit le site': 'Carte de 8 Go ou plus, ou carte de 4 Go avec 16 Go de RAM' },
-          { 'Niveau': 'Thrive', 'Ce que dit le site': 'Carte de 8 Go ou plus et 24 Go de RAM ou plus' },
+          { 'Niveau': 'Seed', 'Configuration requise': 'Environ 8 Go de RAM, sans carte graphique' },
+          { 'Niveau': 'Sprout', 'Configuration requise': '16 Go de RAM, ou 8 Go de RAM avec carte de 4 Go' },
+          { 'Niveau': 'Bloom', 'Configuration requise': 'Carte de 8 Go ou plus, ou carte de 4 Go avec 16 Go de RAM' },
+          { 'Niveau': 'Thrive', 'Configuration requise': 'Carte de 8 Go ou plus et 24 Go de RAM ou plus' },
         ],
-        note: 'Sans carte graphique, l\'application fonctionne mais plus lentement. La génération d\'images exige au moins 12 Go de RAM. L\'installateur pèse 14,1 Mo ; le téléchargement du modèle ajoute quelques gigaoctets.',
+        note: 'Sans carte graphique, l\'application fonctionne mais plus lentement. La génération d\'images exige au moins 12 Go de RAM. L\'installateur pèse 36,8 Mo ; le téléchargement du modèle ajoute quelques gigaoctets. La ligne Sprout suit la correction du fondateur ; les autres lignes suivent le site.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1043,6 +1074,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Hector Gras, fondateur de GreenCube, a lu ce test, l\'a jugé juste et clair, et a envoyé les corrections désormais appliquées ici : la version actuelle, la sortie de la fonction Diagrammes, le nouveau nom et la nouvelle taille de l\'installateur, la configuration requise du palier Sprout et le numéro de version de la page d\'achat, qui, selon le fondateur, était une erreur de l\'équipe et est corrigé. La note ci-dessous reprend les mots mêmes du fondateur, et non une évaluation indépendante de PromptQuorum. Le fondateur a aussi proposé une licence gratuite pour tester l\'application ; PromptQuorum ne l\'a pas encore lancée.',
+          '« J\'ai 16 ans et j\'ai lancé GreenCube parce que je pense que l\'IA est faite pour être possédée, pas louée. Dans les années 1970, les ordinateurs étaient des machines géantes appartenant à quelques entreprises comme IBM, et tous les autres y louaient du temps de calcul. Puis Apple a posé un ordinateur personnel sur le bureau de monsieur Tout-le-monde. Aujourd\'hui, l\'IA vit dans des centres de données et on paie chaque mois pour l\'emprunter, avec des limites. GreenCube est mon pari qu\'elle s\'installe sur votre propre PC : vous payez une fois, elle fonctionne hors ligne et ce que vous écrivez reste à vous. Prochaine étape : améliorer les outils d\'étude et rendre l\'application plus rapide sur les ordinateurs de tous les jours. »',
+        ],
+        note: '— Hector Gras, fondateur de GreenCube',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'À qui elle s\'adresse',
@@ -1058,7 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualité à l\'usage.** PromptQuorum n\'a pas exécuté l\'application ; qualité des réponses, vitesse et résultats d\'images ne sont donc pas évalués.',
           '**Moteur et modèles.** Seuls Gemma 4 E2B et E4B sont nommés ; aucune source publique ne nomme le moteur d\'inférence ni ne liste d\'autres modèles.',
-          '**Version et ancienneté.** Le flux indique 0.1.47 alors que la page d\'achat indique 1.0, et aucun journal des modifications ni historique de versions n\'est publié.',
+          '**Version et ancienneté.** L\'application reste en version 0.1.x, et aucun journal des modifications ni historique de versions n\'est publié.',
           '**Vérifications indépendantes.** L\'application n\'a pas de code source public ni d\'examen tiers de son trafic réseau ou de ses réglages de contenu.',
         ],
       },
@@ -1109,7 +1149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Site web de GreenCube](https://greencube.app) — présentation du produit, tarifs, niveaux matériels et FAQ, consultés le 30 octobre 2026.',
           '[Page d\'achat de GreenCube](https://greencube.app/buy) — prix, délai de remboursement et données structurées.',
-          '[Flux de mises à jour de GreenCube](https://models.greencube.app/updates/latest.json) — version 0.1.47, publiée le 17 octobre 2026.',
+          '[Flux de mises à jour de GreenCube](https://models.greencube.app/updates/latest.json) — version 0.1.49, publiée le 5 novembre 2026.',
           '[Politique de confidentialité de GreenCube](https://legal.greencube.app/privacy) — traitement des données et base juridique, en vigueur depuis le 13 octobre 2026.',
         ],
       },
@@ -1129,14 +1169,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-ja.webp',
     title: 'GreenCubeレビュー：買い切りで使えるWindows向けオフラインAI',
     seoTitle: 'GreenCubeレビュー｜Windows向け買い切りAI',
     intro:
-      'GreenCubeは、GoogleのGemma 4モデルを自分のPC上で動かし、チャット、コーディング、画像生成、ファイルの読み取りに使えるWindowsデスクトップアプリで、サブスクリプションではなく9.99ユーロの1回払いで販売されています。バージョン0.1.47（2026年10月17日更新）のできて間もない製品でスペインの企業が手がけているため、このレビューは2026年10月30日に確認した公式サイト、インストーラーの更新フィード、プライバシーポリシーの記載の範囲にとどめています。',
+      'GreenCubeは、GoogleのGemma 4モデルを自分のPC上で動かし、チャット、コーディング、画像生成、ファイルの読み取りに使えるWindowsデスクトップアプリで、サブスクリプションではなく9.99ユーロの1回払いで販売されています。バージョン0.1.49（2026年11月5日更新）のできて間もない製品でスペインの企業が手がけているため、このレビューは2026年10月30日に確認し、2026年11月6日に創業者の訂正とフィードの再確認を反映した公式サイト、インストーラーの更新フィード、プライバシーポリシーの記載の範囲にとどめています。',
     metaDescription:
       'GreenCubeレビュー：9.99ユーロの買い切りでGemma 4をオフライン実行するWindows向けAI。動作要件、ハードウェア区分、データの流れ、未確認事項を整理。',
     twitterDescription:
@@ -1157,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube（バージョン0.1.47、2026年10月17日更新）は、Gemma 4を自分のPC上で動かすWindows 10・11向けアプリで、開発者によれば、チャット、ファイル、画像はPC内にとどまります。** クローズドソースでWindows専用です。PromptQuorumはインストールも検証も行っておらず、ここでの記述はすべて開発者の公式サイト、インストーラーの更新フィード、プライバシーポリシーに基づきます。',
+      '**GreenCube（バージョン0.1.49、2026年11月5日更新）は、Gemma 4を自分のPC上で動かすWindows 10・11向けアプリで、開発者によれば、チャット、ファイル、画像はPC内にとどまります。** クローズドソースでWindows専用です。PromptQuorumはインストールも検証も行っておらず、ここでの記述はすべて開発者の公式サイト、インストーラーの更新フィード、プライバシーポリシーに基づきます。',
     quickAnswerTop: {
       ja: {
         question: 'GreenCubeは本当にオフラインで動作しますか？',
@@ -1169,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '画像生成には12GB以上のRAMが必要です。',
           'バージョンも価格も1種類で、返金期間は15日間です。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1180,6 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '使い始める手順', anchor: 'getting-started' },
       { label: '情報源で確認できた機能', anchor: 'key-features' },
       { label: 'データの流れとコンテンツ方針', anchor: 'privacy' },
+      { label: '開発者より', anchor: 'from-the-maker' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかった点', anchor: 'who-should-not-use' },
       { label: '競合・代替アプリ', anchor: 'vs-alternatives' },
@@ -1204,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'メンテナンス：最新ビルドの0.1.47は2026年10月17日に公開されており、放置プロジェクトの警告は該当しません。',
+          'メンテナンス：最新ビルドの0.1.49は2026年11月5日に公開されており、放置プロジェクトの警告は該当しません。',
           '費用：更新料のない1回払いで、公式サイトによれば、希望すれば15日以内に全額返金されます。',
           '対応端末：RAM 8GB以上のWindows 10または11で、macOS版とLinux版はありません。',
           'モデル：ハードウェア区分に応じてGemma 4 E2BまたはE4Bを使います。',
@@ -1213,7 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'このレビューは、2026年10月30日に確認した開発者の公式サイト、更新フィード、プライバシーポリシーに基づきます。PromptQuorumはこのアプリをインストール・検証・ベンチマークしていません。',
+            text: 'このレビューは、2026年10月30日に確認し、2026年11月6日に創業者の訂正とフィードの再確認を反映した開発者の公式サイト、更新フィード、プライバシーポリシーに基づきます。PromptQuorumはこのアプリをインストール・検証・ベンチマークしていません。',
           },
         ],
       },
@@ -1221,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'GreenCubeとは',
         content: [
-          '**GreenCubeは、自分のWindows PC上で動くデスクトップAIアシスタントで、メッセージ数の制限もクレジットも月額料金もありません。** 公式サイトには、チャットと文章作成、コードとWebページの生成、画像生成、PDFや写真の読み取り、暗記カードやクイズなどの学習ツール、PowerPointとWordへのエクスポートが挙げられています。図表と自動化は「近日公開」と表示されています。',
+          '**GreenCubeは、自分のWindows PC上で動くデスクトップAIアシスタントで、メッセージ数の制限もクレジットも月額料金もありません。** 公式サイトには、チャットと文章作成、コードとWebページの生成、画像生成、PDFや写真の読み取り、暗記カードやクイズなどの学習ツール、PowerPointとWordへのエクスポートが挙げられています。図表機能はすでに公開されており、依頼に応じて図表やグラフを描画します。自動化は引き続き「近日公開」と表示されています。',
           'スペイン・カルタヘナのEdunexis SLが[GreenCube](https://greencube.app)という製品名で公開しています。開発者自身のFAQはトレードオフを率直に認めており、最大級のクラウドAIのほうが賢い一方、GreenCubeは制限のなさ、オフライン利用、所有を提供するとしています。',
         ],
       },
@@ -1234,13 +1275,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['項目', '内容'],
         rows: [
           { '項目': '対応OS', '内容': 'Windows 10・11' },
-          { '項目': 'ダウンロード', '内容': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { '項目': 'ダウンロード', '内容': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { '項目': '価格', '内容': '€9.99（US$9.99）、1回払い' },
           { '項目': '公式サイト', '内容': '[greencube.app](https://greencube.app)' },
           { '項目': 'プライバシーポリシー', '内容': '[GreenCubeのプライバシーポリシー](https://legal.greencube.app/privacy)' },
           { '項目': 'ソースコード', '内容': 'アプリのものは見つかりませんでした' },
         ],
-        note: '確認したバージョン：0.1.47。開発者の[更新フィード](https://models.greencube.app/updates/latest.json)によれば2026年10月17日公開です。購入ページの構造化データには「1.0」とありフィードと一致しませんが、このレビューはユーザーが受け取るビルドを示すフィードに従っています。開発者のGitHub組織で公開されているリポジトリは、アプリではなくWebサイトだけです。',
+        note: '確認したバージョン：0.1.49。開発者の[更新フィード](https://models.greencube.app/updates/latest.json)によれば2026年11月5日公開です。購入ページの構造化データは最初の確認時に「1.0」となっていましたが、創業者によればこれは誤りで、すでに修正されています。このレビューは、ユーザーが受け取るビルドを示すフィードに従っています。開発者のGitHub組織で公開されているリポジトリは、アプリではなくWebサイトだけです。',
       },
       requirements: {
         id: 'requirements',
@@ -1248,14 +1289,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCubeにはWindows 10または11と約8GBのRAMが必要で、メモリが載せられるモデルの大きさを、グラフィックスカードが動作の速さを左右します。**',
         ],
-        columns: ['区分', '公式サイトの記載'],
+        columns: ['区分', '要件'],
         rows: [
-          { '区分': 'Seed', '公式サイトの記載': 'RAM約8GB、グラフィックスカードなし' },
-          { '区分': 'Sprout', '公式サイトの記載': 'カードなしでRAM 16GB以上、またはカードありでRAM 8GB' },
-          { '区分': 'Bloom', '公式サイトの記載': '8GB以上のカード、または4GBのカードとRAM 16GB' },
-          { '区分': 'Thrive', '公式サイトの記載': '8GB以上のカードとRAM 24GB以上' },
+          { '区分': 'Seed', '要件': 'RAM約8GB、グラフィックスカードなし' },
+          { '区分': 'Sprout', '要件': 'RAM 16GB、またはRAM 8GBと4GBのカード' },
+          { '区分': 'Bloom', '要件': '8GB以上のカード、または4GBのカードとRAM 16GB' },
+          { '区分': 'Thrive', '要件': '8GB以上のカードとRAM 24GB以上' },
         ],
-        note: 'グラフィックスカードがなくても動作しますが、速度は遅くなります。画像生成には12GB以上のRAMが必要です。インストーラーは14.1MBで、モデルのダウンロードに数GBが加わります。',
+        note: 'グラフィックスカードがなくても動作しますが、速度は遅くなります。画像生成には12GB以上のRAMが必要です。インストーラーは36.8MBで、モデルのダウンロードに数GBが加わります。 Sproutの行は創業者による訂正に基づき、そのほかの行は公式サイトに基づきます。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1314,6 +1355,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者より',
+        content: [
+          'GreenCubeの創業者であるHector Gras氏は、このレビューを読み、公平で分かりやすいと評価したうえで、ここに反映した訂正を送ってくれました。現在のバージョン、図表機能の公開、インストーラーの新しい名称とサイズ、Sproutの要件、そして購入ページのバージョン表記（創業者によればチームの誤りで、すでに修正済み）です。以下の文章は創業者自身の言葉であり、PromptQuorumの独立した評価ではありません。創業者はテスト用の無償ライセンスも提案してくれましたが、PromptQuorumはまだアプリを実行していません。',
+          '「私は16歳で、AIは借りるものではなく所有するものだと考えてGreenCubeを始めました。1970年代、コンピューターはIBMのような少数の企業が所有する巨大な機械で、ほかの人は使用時間を借りていました。そこにAppleが、普通の人の机にパーソナルコンピューターを置きました。今のAIはデータセンターにあり、毎月お金を払って、制限付きで借りています。GreenCubeは、それを自分のPCに移すという私の挑戦です。支払いは一度きりで、オフラインで動き、書いたものは自分のものです。次は、学習ツールの改善と、普通のPCでのアプリの高速化に取り組みます。」',
+        ],
+        note: '— Hector Gras、GreenCube創業者',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '向いている人',
@@ -1329,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**実際の使用感。** PromptQuorumはアプリを動かしていないため、回答の質、速度、画像の出来は評価していません。',
           '**実行エンジンとモデル。** 名前が挙がっているのはGemma 4 E2BとE4Bだけで、推論エンジンやほかのモデルを示す公開情報はありません。',
-          '**バージョンと経過期間。** フィードは0.1.47、購入ページは1.0としており、変更履歴やリリース履歴も公開されていません。',
+          '**バージョンと経過期間。** アプリはまだ0.1.x系のバージョン番号で、変更履歴やリリース履歴も公開されていません。',
           '**第三者による確認。** アプリのソースコードは公開されておらず、通信やコンテンツ設定を第三者が検証したレビューもありません。',
         ],
       },
@@ -1380,7 +1430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GreenCube公式サイト](https://greencube.app) — 製品概要、価格、ハードウェア区分、FAQ（2026年10月30日確認）。',
           '[GreenCube購入ページ](https://greencube.app/buy) — 価格、返金期間、構造化データ。',
-          '[GreenCube更新フィード](https://models.greencube.app/updates/latest.json) — バージョン0.1.47、2026年10月17日公開。',
+          '[GreenCube更新フィード](https://models.greencube.app/updates/latest.json) — バージョン0.1.49、2026年11月5日公開。',
           '[GreenCubeのプライバシーポリシー](https://legal.greencube.app/privacy) — データの扱いと法的根拠（施行日：2026年10月13日）。',
         ],
       },
@@ -1400,14 +1450,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-pt.webp',
     title: 'Análise do GreenCube: IA offline de compra única para Windows',
     seoTitle: 'Análise do GreenCube: IA offline de compra única',
     intro:
-      'O GreenCube é um app para Windows que executa os modelos Gemma 4 do Google no seu próprio PC para conversar, programar, gerar imagens e ler arquivos, vendido por um único pagamento de 9,99 euros em vez de uma assinatura. É um produto jovem (versão 0.1.47, atualizada em 17 de outubro de 2026) de uma empresa espanhola, por isso esta análise se limita ao que dizem o site, o feed do instalador e a política de privacidade, consultados em 30 de outubro de 2026.',
+      'O GreenCube é um app para Windows que executa os modelos Gemma 4 do Google no seu próprio PC para conversar, programar, gerar imagens e ler arquivos, vendido por um único pagamento de 9,99 euros em vez de uma assinatura. É um produto jovem (versão 0.1.49, atualizada em 5 de novembro de 2026) de uma empresa espanhola, por isso esta análise se limita ao que dizem o site, o feed do instalador e a política de privacidade, consultados em 30 de outubro de 2026, com as correções do fundador e nova verificação do feed em 6 de novembro de 2026.',
     metaDescription:
       'Análise do GreenCube: IA para Windows vendida uma vez por 9,99 euros, com Gemma 4 offline. Requisitos, níveis de hardware, dados e dúvidas em aberto.',
     twitterDescription:
@@ -1428,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**O GreenCube (versão 0.1.47, atualizada em 17 de outubro de 2026) é um app para Windows 10 e 11 que executa o Gemma 4 no seu próprio PC e, segundo o desenvolvedor, mantém conversas, arquivos e imagens na máquina.** É de código fechado e só para Windows. O PromptQuorum não o instalou nem o testou; tudo o que está aqui vem do site do desenvolvedor, do feed do instalador e da política de privacidade.',
+      '**O GreenCube (versão 0.1.49, atualizada em 5 de novembro de 2026) é um app para Windows 10 e 11 que executa o Gemma 4 no seu próprio PC e, segundo o desenvolvedor, mantém conversas, arquivos e imagens na máquina.** É de código fechado e só para Windows. O PromptQuorum não o instalou nem o testou; tudo o que está aqui vem do site do desenvolvedor, do feed do instalador e da política de privacidade.',
     quickAnswerTop: {
       pt: {
         question: 'O GreenCube realmente funciona offline?',
@@ -1440,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A geração de imagens exige pelo menos 12 GB de RAM.',
           'Há uma só versão e um só preço, com prazo de reembolso de 15 dias.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1451,6 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Como começar', anchor: 'getting-started' },
       { label: 'Recursos confirmados pelas fontes', anchor: 'key-features' },
       { label: 'Fluxo de dados e política de conteúdo', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Para quem é', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
       { label: 'Concorrentes e alternativas', anchor: 'vs-alternatives' },
@@ -1475,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Manutenção: a versão mais recente, 0.1.47, foi publicada em 17 de outubro de 2026, então nenhum aviso de projeto abandonado se aplica.',
+          'Manutenção: a versão mais recente, 0.1.49, foi publicada em 5 de novembro de 2026, então nenhum aviso de projeto abandonado se aplica.',
           'Custo: um único pagamento, sem renovação; segundo o site, há reembolso integral em até 15 dias mediante pedido.',
           'Aparelho: Windows 10 ou 11 com 8 GB de RAM ou mais; não há versão para macOS nem Linux.',
           'Modelos: Gemma 4 E2B ou E4B, escolhidos pelo nível do seu hardware.',
@@ -1484,7 +1535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta análise se baseia no site do desenvolvedor, no feed do instalador e na política de privacidade, consultados em 30 de outubro de 2026. O PromptQuorum não instalou, testou nem mediu o app.',
+            text: 'Esta análise se baseia no site do desenvolvedor, no feed do instalador e na política de privacidade, consultados em 30 de outubro de 2026, com as correções do fundador e nova verificação do feed em 6 de novembro de 2026. O PromptQuorum não instalou, testou nem mediu o app.',
           },
         ],
       },
@@ -1492,7 +1543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'O que é o GreenCube?',
         content: [
-          '**O GreenCube é um assistente de IA para desktop que roda no seu próprio PC com Windows, sem limite de mensagens, sem créditos e sem mensalidade.** O site lista chat e redação, geração de código e de páginas web, geração de imagens, leitura de PDFs e fotos e ferramentas de estudo como flashcards e quizzes, além de exportação para PowerPoint e Word. Diagramas e Automações aparecem como «em breve».',
+          '**O GreenCube é um assistente de IA para desktop que roda no seu próprio PC com Windows, sem limite de mensagens, sem créditos e sem mensalidade.** O site lista chat e redação, geração de código e de páginas web, geração de imagens, leitura de PDFs e fotos e ferramentas de estudo como flashcards e quizzes, além de exportação para PowerPoint e Word. Diagramas já está disponível, então o app também desenha diagramas e gráficos sob demanda; Automações continua aparecendo como «em breve».',
           'Ele é publicado pela Edunexis SL, de Cartagena, na Espanha, com o nome de produto [GreenCube](https://greencube.app). O FAQ do próprio desenvolvedor é franco sobre a troca: as maiores IAs na nuvem são mais inteligentes, e o GreenCube oferece, em vez disso, ausência de limites, uso offline e propriedade.',
         ],
       },
@@ -1505,13 +1556,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Item', 'Detalhes'],
         rows: [
           { 'Item': 'Plataforma', 'Detalhes': 'Windows 10 e 11' },
-          { 'Item': 'Download', 'Detalhes': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { 'Item': 'Download', 'Detalhes': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { 'Item': 'Preço', 'Detalhes': '€ 9,99 (US$ 9,99), pagos uma só vez' },
           { 'Item': 'Site', 'Detalhes': '[greencube.app](https://greencube.app)' },
           { 'Item': 'Política de privacidade', 'Detalhes': '[Política de privacidade do GreenCube](https://legal.greencube.app/privacy)' },
           { 'Item': 'Código-fonte', 'Detalhes': 'Não encontrado para o app' },
         ],
-        note: 'Versão analisada: 0.1.47, publicada em 17 de outubro de 2026 segundo o [feed de atualizações](https://models.greencube.app/updates/latest.json) do desenvolvedor. Os dados estruturados da página de compra dizem «1.0», o que não coincide com o feed; esta análise segue o feed porque ele descreve a versão que os usuários recebem. O único repositório público da organização do desenvolvedor no GitHub é o do site, não o do app.',
+        note: 'Versão analisada: 0.1.49, publicada em 5 de novembro de 2026 segundo o [feed de atualizações](https://models.greencube.app/updates/latest.json) do desenvolvedor. Os dados estruturados da página de compra diziam «1.0» na primeira verificação; segundo o fundador, foi um erro e já foi corrigido. Esta análise segue o feed porque ele descreve a versão que os usuários recebem. O único repositório público da organização do desenvolvedor no GitHub é o do site, não o do app.',
       },
       requirements: {
         id: 'requirements',
@@ -1519,14 +1570,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O GreenCube exige Windows 10 ou 11 e cerca de 8 GB de RAM; a memória decide o que cabe e a placa de vídeo decide a velocidade.**',
         ],
-        columns: ['Nível', 'O que o site diz'],
+        columns: ['Nível', 'Requisito'],
         rows: [
-          { 'Nível': 'Seed', 'O que o site diz': 'Cerca de 8 GB de RAM, sem placa de vídeo' },
-          { 'Nível': 'Sprout', 'O que o site diz': '16 GB de RAM ou mais sem placa, ou 8 GB com placa' },
-          { 'Nível': 'Bloom', 'O que o site diz': 'Placa com 8 GB ou mais, ou placa de 4 GB com 16 GB de RAM' },
-          { 'Nível': 'Thrive', 'O que o site diz': 'Placa com 8 GB ou mais e 24 GB de RAM ou mais' },
+          { 'Nível': 'Seed', 'Requisito': 'Cerca de 8 GB de RAM, sem placa de vídeo' },
+          { 'Nível': 'Sprout', 'Requisito': '16 GB de RAM, ou 8 GB de RAM com placa de 4 GB' },
+          { 'Nível': 'Bloom', 'Requisito': 'Placa com 8 GB ou mais, ou placa de 4 GB com 16 GB de RAM' },
+          { 'Nível': 'Thrive', 'Requisito': 'Placa com 8 GB ou mais e 24 GB de RAM ou mais' },
         ],
-        note: 'Sem placa de vídeo ele funciona, mas é mais lento. A geração de imagens exige pelo menos 12 GB de RAM. O instalador tem 14.1 MB; o download do modelo soma alguns gigabytes.',
+        note: 'Sem placa de vídeo ele funciona, mas é mais lento. A geração de imagens exige pelo menos 12 GB de RAM. O instalador tem 36.8 MB; o download do modelo soma alguns gigabytes. A linha Sprout segue a correção do fundador; as demais linhas seguem o site.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1585,6 +1636,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do desenvolvedor',
+        content: [
+          'Hector Gras, fundador do GreenCube, leu esta análise, a considerou justa e clara e enviou as correções agora aplicadas aqui: a versão atual, o lançamento de Diagramas, o novo nome e tamanho do instalador, o requisito do nível Sprout e o número de versão da página de compra, que segundo o fundador foi um erro da equipe e já foi corrigido. A nota abaixo reúne as palavras do próprio fundador, não uma avaliação independente do PromptQuorum. O fundador também ofereceu uma licença gratuita para testes; o PromptQuorum ainda não executou o app.',
+          '"Tenho 16 anos e comecei o GreenCube porque acredito que a IA deve ser possuída, não alugada. Nos anos 1970, os computadores eram máquinas gigantes que pertenciam a poucas empresas, como a IBM, e todo mundo alugava tempo nelas. Então a Apple colocou um computador pessoal na mesa de pessoas comuns. Hoje a IA vive em data centers e você paga todo mês para tomá-la emprestada, com limites. O GreenCube é a minha aposta de que ela vá para o seu próprio PC: você paga uma vez, funciona offline e o que você escreve continua sendo seu. Em seguida, vamos melhorar as ferramentas de estudo e deixar o app mais rápido em computadores comuns."',
+        ],
+        note: '— Hector Gras, fundador do GreenCube',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quem é',
@@ -1600,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualidade no uso real.** O PromptQuorum não executou o app, então qualidade das respostas, velocidade e resultados de imagem não foram avaliados.',
           '**Motor e modelos.** Apenas o Gemma 4 E2B e o E4B são citados; nenhuma fonte pública nomeia o motor de inferência nem lista outros modelos.',
-          '**Versão e idade.** O feed diz 0.1.47 enquanto a página de compra diz 1.0, e não há changelog nem histórico de versões publicado.',
+          '**Versão e idade.** O app ainda está na versão 0.1.x, e não há changelog nem histórico de versões publicado.',
           '**Verificações independentes.** O app não tem código-fonte público nem revisão de terceiros do tráfego de rede ou das configurações de conteúdo.',
         ],
       },
@@ -1651,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Site do GreenCube](https://greencube.app) — visão geral do produto, preços, níveis de hardware e FAQ, consultados em 30 de outubro de 2026.',
           '[Página de compra do GreenCube](https://greencube.app/buy) — preço, prazo de reembolso e dados estruturados.',
-          '[Feed de atualizações do GreenCube](https://models.greencube.app/updates/latest.json) — versão 0.1.47, publicada em 17 de outubro de 2026.',
+          '[Feed de atualizações do GreenCube](https://models.greencube.app/updates/latest.json) — versão 0.1.49, publicada em 5 de novembro de 2026.',
           '[Política de privacidade do GreenCube](https://legal.greencube.app/privacy) — tratamento de dados e base legal, em vigor desde 13 de outubro de 2026.',
         ],
       },
@@ -1671,14 +1731,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-ar.webp',
     title: 'مراجعة GreenCube: ذكاء اصطناعي دون إنترنت لـ Windows بدفعة واحدة',
     seoTitle: 'مراجعة GreenCube: ذكاء اصطناعي دون إنترنت لـ Windows',
     intro:
-      'GreenCube تطبيق سطح مكتب لـ Windows يشغّل نماذج Gemma 4 من Google على جهازك الشخصي للدردشة والبرمجة وتوليد الصور وقراءة الملفات، ويُباع بدفعة واحدة قدرها 9.99 يورو بدلًا من اشتراك. هو منتج حديث (الإصدار 0.1.47، حُدّث في 17 أكتوبر 2026) من شركة إسبانية، لذلك تقتصر هذه المراجعة على ما يذكره موقعه وخلاصة التحديثات في مثبّته وسياسة الخصوصية، بحسب الاطلاع عليها في 30 أكتوبر 2026.',
+      'GreenCube تطبيق سطح مكتب لـ Windows يشغّل نماذج Gemma 4 من Google على جهازك الشخصي للدردشة والبرمجة وتوليد الصور وقراءة الملفات، ويُباع بدفعة واحدة قدرها 9.99 يورو بدلًا من اشتراك. هو منتج حديث (الإصدار 0.1.49، حُدّث في 5 نوفمبر 2026) من شركة إسبانية، لذلك تقتصر هذه المراجعة على ما يذكره موقعه وخلاصة التحديثات في مثبّته وسياسة الخصوصية، بحسب الاطلاع عليها في 30 أكتوبر 2026، مع تصحيحات المؤسس وإعادة فحص خلاصة التحديثات في 6 نوفمبر 2026.',
     metaDescription:
       'مراجعة GreenCube: ذكاء اصطناعي لـ Windows يُباع مرة واحدة بـ 9.99 يورو ويشغّل Gemma 4 دون إنترنت. المتطلبات والعتاد وتدفق البيانات وما لم يُتحقق منه.',
     twitterDescription:
@@ -1699,7 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube (الإصدار 0.1.47، حُدّث في 17 أكتوبر 2026) تطبيق لنظامي Windows 10 و11 يشغّل Gemma 4 على جهازك، وتبقى المحادثات والملفات والصور على الجهاز بحسب مطوّره.** وهو مغلق المصدر ويعمل على Windows فقط. لم يثبّته PromptQuorum ولم يختبره؛ وكل ما يرد هنا مصدره موقع المطوّر وخلاصة التحديثات في المثبّت وسياسة الخصوصية.',
+      '**GreenCube (الإصدار 0.1.49، حُدّث في 5 نوفمبر 2026) تطبيق لنظامي Windows 10 و11 يشغّل Gemma 4 على جهازك، وتبقى المحادثات والملفات والصور على الجهاز بحسب مطوّره.** وهو مغلق المصدر ويعمل على Windows فقط. لم يثبّته PromptQuorum ولم يختبره؛ وكل ما يرد هنا مصدره موقع المطوّر وخلاصة التحديثات في المثبّت وسياسة الخصوصية.',
     quickAnswerTop: {
       ar: {
         question: 'هل يعمل GreenCube فعلًا دون إنترنت؟',
@@ -1711,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتطلب توليد الصور 12 GB على الأقل من RAM.',
           'هناك إصدار واحد وسعر واحد، مع مهلة استرداد مدتها 15 يومًا.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1722,6 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'كيف تبدأ', anchor: 'getting-started' },
       { label: 'الميزات التي أكدتها المصادر', anchor: 'key-features' },
       { label: 'تدفق البيانات وسياسة المحتوى', anchor: 'privacy' },
+      { label: 'من مطوّر التطبيق', anchor: 'from-the-maker' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
       { label: 'المنافسون والبدائل', anchor: 'vs-alternatives' },
@@ -1746,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الصيانة: صدر أحدث إصدار، 0.1.47، في 17 أكتوبر 2026، فلا ينطبق تحذير المشروع المتوقف.',
+          'الصيانة: صدر أحدث إصدار، 0.1.49، في 5 نوفمبر 2026، فلا ينطبق تحذير المشروع المتوقف.',
           'التكلفة: دفعة واحدة دون تجديد؛ ويقول الموقع إن الاسترداد الكامل متاح خلال 15 يومًا عند الطلب.',
           'الجهاز: Windows 10 أو 11 بذاكرة RAM لا تقل عن 8 GB؛ ولا توجد نسخة لـ macOS أو Linux.',
           'النماذج: Gemma 4 E2B أو E4B بحسب مستوى عتادك.',
@@ -1755,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'تستند هذه المراجعة إلى موقع المطوّر وخلاصة التحديثات في المثبّت وسياسة الخصوصية، بحسب الاطلاع عليها في 30 أكتوبر 2026. لم يثبّت PromptQuorum التطبيق ولم يختبره أو يقِس أداءه.',
+            text: 'تستند هذه المراجعة إلى موقع المطوّر وخلاصة التحديثات في المثبّت وسياسة الخصوصية، بحسب الاطلاع عليها في 30 أكتوبر 2026، مع تصحيحات المؤسس وإعادة فحص خلاصة التحديثات في 6 نوفمبر 2026. لم يثبّت PromptQuorum التطبيق ولم يختبره أو يقِس أداءه.',
           },
         ],
       },
@@ -1763,7 +1824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'ما هو GreenCube؟',
         content: [
-          '**GreenCube مساعد ذكاء اصطناعي لسطح المكتب يعمل على جهاز Windows الخاص بك، دون حد للرسائل ودون أرصدة ودون رسوم شهرية.** يسرد الموقع الدردشة والكتابة، وتوليد الشيفرة وصفحات الويب، وتوليد الصور، وقراءة ملفات PDF والصور، وأدوات الدراسة مثل البطاقات التعليمية والاختبارات، إضافة إلى التصدير إلى PowerPoint وWord. أما الرسوم التوضيحية والأتمتة فتُعرضان على أنهما قادمتان قريبًا.',
+          '**GreenCube مساعد ذكاء اصطناعي لسطح المكتب يعمل على جهاز Windows الخاص بك، دون حد للرسائل ودون أرصدة ودون رسوم شهرية.** يسرد الموقع الدردشة والكتابة، وتوليد الشيفرة وصفحات الويب، وتوليد الصور، وقراءة ملفات PDF والصور، وأدوات الدراسة مثل البطاقات التعليمية والاختبارات، إضافة إلى التصدير إلى PowerPoint وWord. وقد صدرت ميزة الرسوم التوضيحية فعلًا، فيرسم التطبيق الآن مخططات ورسومًا بيانية عند الطلب، بينما لا تزال الأتمتة معروضة على أنها قادمة قريبًا.',
           'ينشره Edunexis SL من قرطاجنة في إسبانيا تحت اسم المنتج [GreenCube](https://greencube.app). وتتحدث الأسئلة الشائعة لدى المطوّر نفسه بصراحة عن المفاضلة: أكبر أنظمة الذكاء الاصطناعي السحابية أذكى، ويقدّم GreenCube بدلًا من ذلك استخدامًا بلا حدود ودون إنترنت وملكية.',
         ],
       },
@@ -1776,13 +1837,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['البند', 'التفاصيل'],
         rows: [
           { 'البند': 'المنصة', 'التفاصيل': 'Windows 10 و11' },
-          { 'البند': 'التنزيل', 'التفاصيل': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { 'البند': 'التنزيل', 'التفاصيل': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { 'البند': 'السعر', 'التفاصيل': '9.99 € (9.99 US$)، تُدفع مرة واحدة' },
           { 'البند': 'الموقع', 'التفاصيل': '[greencube.app](https://greencube.app)' },
           { 'البند': 'سياسة الخصوصية', 'التفاصيل': '[سياسة خصوصية GreenCube](https://legal.greencube.app/privacy)' },
           { 'البند': 'الشيفرة المصدرية', 'التفاصيل': 'لم نعثر على شيفرة للتطبيق' },
         ],
-        note: 'الإصدار المراجَع: 0.1.47، صدر في 17 أكتوبر 2026 بحسب [خلاصة التحديثات](https://models.greencube.app/updates/latest.json) لدى المطوّر. تذكر البيانات المنظمة في صفحة الشراء الرقم «1.0»، وهو لا يطابق الخلاصة؛ وتتبع هذه المراجعة الخلاصة لأنها تصف النسخة التي يتلقاها المستخدمون. المستودع العلني الوحيد في منظمة المطوّر على GitHub هو الموقع، وليس التطبيق.',
+        note: 'الإصدار المراجَع: 0.1.49، صدر في 5 نوفمبر 2026 بحسب [خلاصة التحديثات](https://models.greencube.app/updates/latest.json) لدى المطوّر. كانت البيانات المنظمة في صفحة الشراء تذكر الرقم «1.0» عند الفحص الأول؛ ويقول المؤسس إن ذلك كان خطأً وقد جرى إصلاحه. وتتبع هذه المراجعة الخلاصة لأنها تصف النسخة التي يتلقاها المستخدمون. المستودع العلني الوحيد في منظمة المطوّر على GitHub هو الموقع، وليس التطبيق.',
       },
       requirements: {
         id: 'requirements',
@@ -1790,14 +1851,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يتطلب GreenCube نظام Windows 10 أو 11 ونحو 8 GB من RAM؛ فالذاكرة تحدد ما يتسع له التشغيل، وبطاقة الرسوميات تحدد سرعته.**',
         ],
-        columns: ['المستوى', 'ما يقوله الموقع'],
+        columns: ['المستوى', 'المتطلبات'],
         rows: [
-          { 'المستوى': 'Seed', 'ما يقوله الموقع': 'نحو 8 GB من RAM، دون بطاقة رسوميات' },
-          { 'المستوى': 'Sprout', 'ما يقوله الموقع': '16 GB من RAM أو أكثر دون بطاقة، أو 8 GB مع بطاقة' },
-          { 'المستوى': 'Bloom', 'ما يقوله الموقع': 'بطاقة بذاكرة 8 GB أو أكثر، أو بطاقة 4 GB مع 16 GB من RAM' },
-          { 'المستوى': 'Thrive', 'ما يقوله الموقع': 'بطاقة بذاكرة 8 GB أو أكثر مع 24 GB من RAM أو أكثر' },
+          { 'المستوى': 'Seed', 'المتطلبات': 'نحو 8 GB من RAM، دون بطاقة رسوميات' },
+          { 'المستوى': 'Sprout', 'المتطلبات': '16 GB من RAM، أو 8 GB من RAM مع بطاقة 4 GB' },
+          { 'المستوى': 'Bloom', 'المتطلبات': 'بطاقة بذاكرة 8 GB أو أكثر، أو بطاقة 4 GB مع 16 GB من RAM' },
+          { 'المستوى': 'Thrive', 'المتطلبات': 'بطاقة بذاكرة 8 GB أو أكثر مع 24 GB من RAM أو أكثر' },
         ],
-        note: 'يعمل دون بطاقة رسوميات لكن ببطء أكبر. يتطلب توليد الصور 12 GB على الأقل من RAM. حجم المثبّت 14.1 MB، ويضيف تنزيل النموذج بضعة غيغابايت.',
+        note: 'يعمل دون بطاقة رسوميات لكن ببطء أكبر. يتطلب توليد الصور 12 GB على الأقل من RAM. حجم المثبّت 36.8 MB، ويضيف تنزيل النموذج بضعة غيغابايت. يتبع صف Sprout تصحيح المؤسس، وتتبع الصفوف الأخرى الموقع.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1856,6 +1917,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من مطوّر التطبيق',
+        content: [
+          'قرأ Hector Gras، مؤسس GreenCube، هذه المراجعة ووصفها بأنها منصفة وواضحة، وأرسل التصحيحات المطبّقة هنا الآن: الإصدار الحالي، وصدور ميزة الرسوم التوضيحية، والاسم والحجم الجديدان للمثبّت، ومتطلبات مستوى Sprout، ورقم الإصدار في صفحة الشراء الذي قال المؤسس إنه كان خطأً من الفريق وقد جرى إصلاحه. الملاحظة أدناه هي كلمات المؤسس نفسه، وليست تقييمًا مستقلًا من PromptQuorum. كما عرض المؤسس ترخيصًا مجانيًا للاختبار؛ ولم يشغّل PromptQuorum التطبيق حتى الآن.',
+          '"عمري 16 عامًا، وبدأت GreenCube لأنني أؤمن بأن الذكاء الاصطناعي خُلق ليُمتلك لا ليُستأجر. في السبعينيات كانت الحواسيب آلات ضخمة تملكها شركات قليلة مثل IBM، وكان الجميع يستأجرون وقتًا عليها. ثم وضعت Apple حاسوبًا شخصيًا على مكاتب الناس العاديين. واليوم يعيش الذكاء الاصطناعي في مراكز البيانات، وتدفع كل شهر لتستعيره، مع حدود. GreenCube هو رهاني على أن ينتقل إلى جهازك الخاص: تدفع مرة واحدة، ويعمل دون اتصال، وما تكتبه يبقى ملكك. وفي الخطوة التالية نحسّن أدوات الدراسة ونجعل التطبيق أسرع على الحواسيب اليومية."',
+        ],
+        note: '— Hector Gras، مؤسس GreenCube',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'لمن يناسب',
@@ -1871,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الجودة في الاستخدام الفعلي.** لم يشغّل PromptQuorum التطبيق، لذا لم تُقيَّم جودة الإجابات ولا السرعة ولا نتائج الصور.',
           '**محرك التشغيل والنماذج.** لم يُذكر سوى Gemma 4 E2B وE4B؛ ولا يذكر أي مصدر علني محرك الاستدلال ولا قائمة بنماذج أخرى.',
-          '**الإصدار والعمر.** تقول الخلاصة 0.1.47 بينما تقول صفحة الشراء 1.0، ولا يُنشر سجل تغييرات ولا تاريخ إصدارات.',
+          '**الإصدار والعمر.** لا يزال رقم إصدار التطبيق 0.1.x، ولا يُنشر سجل تغييرات ولا تاريخ إصدارات.',
           '**فحوص مستقلة.** لا شيفرة مصدرية علنية للتطبيق، ولا مراجعة من طرف ثالث لحركة شبكته أو لإعدادات المحتوى فيه.',
         ],
       },
@@ -1922,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[موقع GreenCube](https://greencube.app) — نظرة عامة على المنتج والأسعار ومستويات العتاد والأسئلة الشائعة، بحسب الاطلاع عليه في 30 أكتوبر 2026.',
           '[صفحة شراء GreenCube](https://greencube.app/buy) — السعر ومهلة الاسترداد والبيانات المنظمة.',
-          '[خلاصة تحديثات GreenCube](https://models.greencube.app/updates/latest.json) — الإصدار 0.1.47، صدر في 17 أكتوبر 2026.',
+          '[خلاصة تحديثات GreenCube](https://models.greencube.app/updates/latest.json) — الإصدار 0.1.49، صدر في 5 نوفمبر 2026.',
           '[سياسة خصوصية GreenCube](https://legal.greencube.app/privacy) — معالجة البيانات والأساس القانوني، سارية من 13 أكتوبر 2026.',
         ],
       },
@@ -1942,14 +2012,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-zh.webp',
     title: 'GreenCube 评测：Windows 上一次性买断的离线 AI',
     seoTitle: 'GreenCube 评测：Windows 买断制离线 AI',
     intro:
-      'GreenCube 是一款 Windows 桌面应用，在你自己的电脑上运行 Google 的 Gemma 4 模型，用于聊天、编程、图像生成和读取文件，不按订阅收费，只需一次性支付 9.99 欧元。它是一款很新的产品（0.1.47 版，2026 年 10 月 17 日更新），出自一家西班牙公司，因此本评测只依据其官网、安装程序更新源和隐私政策的说法（2026 年 10 月 30 日查阅）。',
+      'GreenCube 是一款 Windows 桌面应用，在你自己的电脑上运行 Google 的 Gemma 4 模型，用于聊天、编程、图像生成和读取文件，不按订阅收费，只需一次性支付 9.99 欧元。它是一款很新的产品（0.1.49 版，2026 年 11 月 5 日更新），出自一家西班牙公司，因此本评测只依据其官网、安装程序更新源和隐私政策的说法（2026 年 10 月 30 日查阅，并于 2026 年 11 月 6 日纳入创始人的更正、重新核对更新源）。',
     metaDescription:
       'GreenCube 评测：一次付费 9.99 欧元的 Windows 桌面 AI，离线运行 Gemma 4。系统要求、硬件档位、数据流向及未经证实的问题。',
     twitterDescription:
@@ -1970,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube（0.1.47 版，2026 年 10 月 17 日更新）是一款适用于 Windows 10 和 11 的应用，在你自己的电脑上运行 Gemma 4，据开发者称，聊天、文件和图像都保留在本机。** 它是闭源应用，仅支持 Windows。PromptQuorum 没有安装或测试过它；这里的每项陈述都来自开发者的官网、安装程序更新源和隐私政策。',
+      '**GreenCube（0.1.49 版，2026 年 11 月 5 日更新）是一款适用于 Windows 10 和 11 的应用，在你自己的电脑上运行 Gemma 4，据开发者称，聊天、文件和图像都保留在本机。** 它是闭源应用，仅支持 Windows。PromptQuorum 没有安装或测试过它；这里的每项陈述都来自开发者的官网、安装程序更新源和隐私政策。',
     quickAnswerTop: {
       zh: {
         question: 'GreenCube 真的能离线使用吗？',
@@ -1982,7 +2052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '图像生成至少需要 12 GB 内存（RAM）。',
           '只有一个版本、一个价格，并提供 15 天退款期。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1993,6 +2063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '上手步骤', anchor: 'getting-started' },
       { label: '资料已确认的功能', anchor: 'key-features' },
       { label: '数据流向与内容政策', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '适合谁', anchor: 'who-should-use' },
       { label: '我们无法核实的内容', anchor: 'who-should-not-use' },
       { label: '竞品与替代方案', anchor: 'vs-alternatives' },
@@ -2017,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '维护：最新版本 0.1.47 于 2026 年 10 月 17 日发布，因此不适用项目停更警告。',
+          '维护：最新版本 0.1.49 于 2026 年 11 月 5 日发布，因此不适用项目停更警告。',
           '费用：一次付款、无需续费；官网称 15 天内可应要求全额退款。',
           '设备：需要 8 GB 或更多内存的 Windows 10 或 11；没有 macOS 或 Linux 版本。',
           '模型：Gemma 4 E2B 或 E4B，由你的硬件档位决定。',
@@ -2026,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '本评测依据 2026 年 10 月 30 日查阅的开发者官网、安装程序更新源和隐私政策。PromptQuorum 没有安装、测试或对该应用做基准测试。',
+            text: '本评测依据 2026 年 10 月 30 日查阅，并于 2026 年 11 月 6 日纳入创始人的更正、重新核对更新源的开发者官网、安装程序更新源和隐私政策。PromptQuorum 没有安装、测试或对该应用做基准测试。',
           },
         ],
       },
@@ -2034,7 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'GreenCube 是什么？',
         content: [
-          '**GreenCube 是一款在你自己的 Windows 电脑上运行的桌面 AI 助手，没有消息数量限制、没有积分，也没有月费。** 官网列出的功能包括聊天与写作、代码和网页生成、图像生成、读取 PDF 和照片，以及闪卡和测验等学习工具，还可导出为 PowerPoint 和 Word。图表和自动化显示为“即将推出”。',
+          '**GreenCube 是一款在你自己的 Windows 电脑上运行的桌面 AI 助手，没有消息数量限制、没有积分，也没有月费。** 官网列出的功能包括聊天与写作、代码和网页生成、图像生成、读取 PDF 和照片，以及闪卡和测验等学习工具，还可导出为 PowerPoint 和 Word。图表功能已经上线，可按需绘制图表和示意图；自动化仍显示为“即将推出”。',
           '它由西班牙卡塔赫纳的 Edunexis SL 以产品名 [GreenCube](https://greencube.app) 发布。开发者自己的常见问题对取舍毫不讳言：最大的云端 AI 更聪明，而 GreenCube 提供的是无限制、离线使用和拥有权。',
         ],
       },
@@ -2047,13 +2118,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['项目', '详情'],
         rows: [
           { '项目': '平台', '详情': 'Windows 10 和 11' },
-          { '项目': '下载', '详情': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { '项目': '下载', '详情': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { '项目': '价格', '详情': '€9.99（US$9.99），一次性付费' },
           { '项目': '官网', '详情': '[greencube.app](https://greencube.app)' },
           { '项目': '隐私政策', '详情': '[GreenCube 隐私政策](https://legal.greencube.app/privacy)' },
           { '项目': '源代码', '详情': '未找到该应用的源代码' },
         ],
-        note: '评测版本：0.1.47，据开发者的[更新源](https://models.greencube.app/updates/latest.json)于 2026 年 10 月 17 日发布。购买页面的结构化数据写的是“1.0”，与更新源不符；本评测以更新源为准，因为它描述的是用户实际收到的版本。开发者 GitHub 组织唯一的公开仓库是网站，不是应用。',
+        note: '评测版本：0.1.49，据开发者的[更新源](https://models.greencube.app/updates/latest.json)于 2026 年 11 月 5 日发布。购买页面的结构化数据在首次查阅时写的是“1.0”；创始人表示这是一个错误，现已修正。本评测以更新源为准，因为它描述的是用户实际收到的版本。开发者 GitHub 组织唯一的公开仓库是网站，不是应用。',
       },
       requirements: {
         id: 'requirements',
@@ -2061,14 +2132,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCube 需要 Windows 10 或 11 以及约 8 GB 内存；内存决定能装下多大的模型，显卡决定运行速度。**',
         ],
-        columns: ['档位', '官网所述'],
+        columns: ['档位', '要求'],
         rows: [
-          { '档位': 'Seed', '官网所述': '约 8 GB 内存，无显卡' },
-          { '档位': 'Sprout', '官网所述': '无显卡时 16 GB 或更多内存，或有显卡时 8 GB 内存' },
-          { '档位': 'Bloom', '官网所述': '8 GB 或以上显存的显卡，或 4 GB 显卡搭配 16 GB 内存' },
-          { '档位': 'Thrive', '官网所述': '8 GB 或以上显存的显卡，且内存 24 GB 或更多' },
+          { '档位': 'Seed', '要求': '约 8 GB 内存，无显卡' },
+          { '档位': 'Sprout', '要求': '16 GB 内存，或 8 GB 内存加 4 GB 显卡' },
+          { '档位': 'Bloom', '要求': '8 GB 或以上显存的显卡，或 4 GB 显卡搭配 16 GB 内存' },
+          { '档位': 'Thrive', '要求': '8 GB 或以上显存的显卡，且内存 24 GB 或更多' },
         ],
-        note: '没有显卡也能运行，但速度较慢。图像生成至少需要 12 GB 内存。安装程序为 14.1 MB；模型下载还要再增加几 GB。',
+        note: '没有显卡也能运行，但速度较慢。图像生成至少需要 12 GB 内存。安装程序为 36.8 MB；模型下载还要再增加几 GB。 Sprout 一行依据创始人的更正，其余各行依据官网。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2127,6 +2198,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'GreenCube 创始人 Hector Gras 阅读了本评测，认为它公允而清晰，并发来了现已在此采用的更正：当前版本、图表功能已上线、安装程序的新名称和大小、Sprout 档位的要求，以及购买页面的版本号（创始人表示这是团队的失误，现已修正）。下面的说明是创始人本人的话，不代表 PromptQuorum 的独立评价。创始人还提出提供免费许可证供测试；PromptQuorum 目前尚未运行该应用。',
+          '“我今年 16 岁，创办 GreenCube 是因为我认为 AI 应该被拥有，而不是被租用。20 世纪 70 年代，电脑是少数几家公司（如 IBM）拥有的庞然大物，其他人只能租用机时。后来 Apple 把个人电脑放到了普通人的桌上。如今 AI 住在数据中心里，你每月付费借用，还有各种限制。GreenCube 是我的一次尝试：让 AI 搬到你自己的电脑上——一次付费，离线可用，你写的内容始终属于你。接下来，我们会改进学习工具，并让应用在日常电脑上运行得更快。”',
+        ],
+        note: '— Hector Gras，GreenCube 创始人',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '适合谁',
@@ -2142,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**实际质量。** PromptQuorum 没有运行该应用，因此未评估回答质量、速度和图像效果。',
           '**运行时与模型。** 资料只提到 Gemma 4 E2B 和 E4B；没有公开资料说明推理引擎或列出其他模型。',
-          '**版本与年限。** 更新源写的是 0.1.47，而购买页面写的是 1.0，也没有公布更新日志或发布历史。',
+          '**版本与年限。** 应用的版本号仍为 0.1.x，也没有公布更新日志或发布历史。',
           '**独立核查。** 该应用没有公开源代码，也没有第三方对其网络流量或内容设置的审查。',
         ],
       },
@@ -2193,7 +2273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GreenCube 官网](https://greencube.app) — 产品概述、定价、硬件档位和常见问题，2026 年 10 月 30 日查阅。',
           '[GreenCube 购买页面](https://greencube.app/buy) — 价格、退款期和结构化数据。',
-          '[GreenCube 更新源](https://models.greencube.app/updates/latest.json) — 0.1.47 版，2026 年 10 月 17 日发布。',
+          '[GreenCube 更新源](https://models.greencube.app/updates/latest.json) — 0.1.49 版，2026 年 11 月 5 日发布。',
           '[GreenCube 隐私政策](https://legal.greencube.app/privacy) — 数据处理和法律依据，2026 年 10 月 13 日生效。',
         ],
       },
@@ -2213,14 +2293,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/greencube-review-hero-ko.webp',
     title: 'GreenCube 리뷰: Windows용 1회 구매 오프라인 AI',
     seoTitle: 'GreenCube 리뷰: Windows 오프라인 AI 1회 구매',
     intro:
-      'GreenCube는 Google의 Gemma 4 모델을 내 PC에서 실행해 채팅, 코딩, 이미지 생성, 파일 읽기를 할 수 있는 Windows 데스크톱 앱으로, 구독 대신 9.99유로를 한 번 결제하는 방식으로 판매됩니다. 버전 0.1.47(2026년 10월 17일 업데이트)의 신생 제품이며 스페인 회사가 만들었으므로, 이 리뷰는 2026년 10월 30일에 확인한 웹사이트, 설치 프로그램 피드, 개인정보 처리방침의 내용으로 한정합니다.',
+      'GreenCube는 Google의 Gemma 4 모델을 내 PC에서 실행해 채팅, 코딩, 이미지 생성, 파일 읽기를 할 수 있는 Windows 데스크톱 앱으로, 구독 대신 9.99유로를 한 번 결제하는 방식으로 판매됩니다. 버전 0.1.49(2026년 11월 5일 업데이트)의 신생 제품이며 스페인 회사가 만들었으므로, 이 리뷰는 2026년 10월 30일에 확인하고 2026년 11월 6일에 창업자의 정정과 피드 재확인을 반영한 웹사이트, 설치 프로그램 피드, 개인정보 처리방침의 내용으로 한정합니다.',
     metaDescription:
       'GreenCube 리뷰: 9.99유로 1회 결제 Windows 데스크톱 AI로, Gemma 4를 오프라인에서 실행합니다. 요구 사항, 하드웨어 등급, 데이터 흐름, 미확인 사항을 정리했습니다.',
     twitterDescription:
@@ -2241,7 +2321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Windows PC', 'Gemma 4'],
     leadAnswerBlock:
-      '**GreenCube(버전 0.1.47, 2026년 10월 17일 업데이트)는 Gemma 4를 내 PC에서 실행하는 Windows 10·11용 앱이며, 개발자에 따르면 채팅, 파일, 이미지를 PC 안에 보관합니다.** 클로즈드 소스이고 Windows 전용입니다. PromptQuorum은 앱을 설치하거나 테스트하지 않았으며, 여기 적힌 모든 내용은 개발자의 웹사이트, 설치 프로그램 피드, 개인정보 처리방침에서 가져왔습니다.',
+      '**GreenCube(버전 0.1.49, 2026년 11월 5일 업데이트)는 Gemma 4를 내 PC에서 실행하는 Windows 10·11용 앱이며, 개발자에 따르면 채팅, 파일, 이미지를 PC 안에 보관합니다.** 클로즈드 소스이고 Windows 전용입니다. PromptQuorum은 앱을 설치하거나 테스트하지 않았으며, 여기 적힌 모든 내용은 개발자의 웹사이트, 설치 프로그램 피드, 개인정보 처리방침에서 가져왔습니다.',
     quickAnswerTop: {
       ko: {
         question: 'GreenCube는 정말 오프라인으로 작동합니까?',
@@ -2253,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이미지 생성에는 RAM이 최소 12GB 필요합니다.',
           '버전은 하나, 가격도 하나이며 15일 환불 기간이 있습니다.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2264,6 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '시작하는 방법', anchor: 'getting-started' },
       { label: '자료로 확인된 기능', anchor: 'key-features' },
       { label: '데이터 흐름과 콘텐츠 정책', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '이런 분께 적합합니다', anchor: 'who-should-use' },
       { label: '확인하지 못한 점', anchor: 'who-should-not-use' },
       { label: '경쟁 앱과 대안', anchor: 'vs-alternatives' },
@@ -2288,7 +2369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '유지보수: 최신 빌드 0.1.47은 2026년 10월 17일에 공개되었으므로 방치 프로젝트 경고는 해당하지 않습니다.',
+          '유지보수: 최신 빌드 0.1.49은 2026년 11월 5일에 공개되었으므로 방치 프로젝트 경고는 해당하지 않습니다.',
           '비용: 갱신 없이 한 번 결제하며, 웹사이트에 따르면 요청 시 15일 이내에 전액 환불받을 수 있습니다.',
           '기기: RAM 8GB 이상의 Windows 10 또는 11이 필요하며 macOS나 Linux 버전은 없습니다.',
           '모델: 하드웨어 등급에 따라 Gemma 4 E2B 또는 E4B가 선택됩니다.',
@@ -2297,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 리뷰는 2026년 10월 30일에 확인한 개발자의 웹사이트, 설치 프로그램 피드, 개인정보 처리방침을 바탕으로 합니다. PromptQuorum은 이 앱을 설치, 테스트, 벤치마크하지 않았습니다.',
+            text: '이 리뷰는 2026년 10월 30일에 확인하고 2026년 11월 6일에 창업자의 정정과 피드 재확인을 반영한 개발자의 웹사이트, 설치 프로그램 피드, 개인정보 처리방침을 바탕으로 합니다. PromptQuorum은 이 앱을 설치, 테스트, 벤치마크하지 않았습니다.',
           },
         ],
       },
@@ -2305,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-greencube',
         title: 'GreenCube란?',
         content: [
-          '**GreenCube는 메시지 한도, 크레딧, 월 요금 없이 내 Windows PC에서 실행되는 데스크톱 AI 어시스턴트입니다.** 웹사이트에는 채팅과 글쓰기, 코드 및 웹 페이지 생성, 이미지 생성, PDF와 사진 읽기, 플래시카드와 퀴즈 같은 학습 도구, PowerPoint와 Word 내보내기가 나와 있습니다. 다이어그램과 자동화는 출시 예정으로 표시됩니다.',
+          '**GreenCube는 메시지 한도, 크레딧, 월 요금 없이 내 Windows PC에서 실행되는 데스크톱 AI 어시스턴트입니다.** 웹사이트에는 채팅과 글쓰기, 코드 및 웹 페이지 생성, 이미지 생성, PDF와 사진 읽기, 플래시카드와 퀴즈 같은 학습 도구, PowerPoint와 Word 내보내기가 나와 있습니다. 다이어그램 기능은 이미 출시되어 요청 시 다이어그램과 차트를 그려 주며, 자동화는 여전히 출시 예정으로 표시됩니다.',
           '스페인 카르타헤나의 Edunexis SL이 [GreenCube](https://greencube.app)라는 제품명으로 게시합니다. 개발자의 FAQ는 장단점을 솔직히 밝힙니다. 가장 큰 클라우드 AI가 더 똑똑하며, GreenCube는 대신 무제한, 오프라인 사용, 소유를 제공한다는 것입니다.',
         ],
       },
@@ -2318,13 +2399,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['항목', '세부 내용'],
         rows: [
           { '항목': '플랫폼', '세부 내용': 'Windows 10, 11' },
-          { '항목': '다운로드', '세부 내용': '[GreenCube-setup.exe](https://greencube.app/download)' },
+          { '항목': '다운로드', '세부 내용': '[GreenCube-windows-x64-setup.exe](https://greencube.app/download)' },
           { '항목': '가격', '세부 내용': '€9.99(US$9.99), 1회 결제' },
           { '항목': '웹사이트', '세부 내용': '[greencube.app](https://greencube.app)' },
           { '항목': '개인정보 처리방침', '세부 내용': '[GreenCube 개인정보 처리방침](https://legal.greencube.app/privacy)' },
           { '항목': '소스 코드', '세부 내용': '앱의 소스 코드는 찾지 못했습니다' },
         ],
-        note: '확인한 버전: 0.1.47, 개발자의 [업데이트 피드](https://models.greencube.app/updates/latest.json)에 따르면 2026년 10월 17일에 공개되었습니다. 구매 페이지의 구조화 데이터에는 "1.0"으로 되어 있어 피드와 일치하지 않으며, 이 리뷰는 사용자가 실제로 받는 빌드를 설명하는 피드를 따릅니다. 개발자의 GitHub 조직에서 공개된 저장소는 웹사이트용 하나뿐이며 앱의 저장소는 아닙니다.',
+        note: '확인한 버전: 0.1.49, 개발자의 [업데이트 피드](https://models.greencube.app/updates/latest.json)에 따르면 2026년 11월 5일에 공개되었습니다. 구매 페이지의 구조화 데이터에는 처음 확인했을 때 "1.0"으로 되어 있었으나, 창업자는 이것이 실수였으며 현재는 수정되었다고 밝혔습니다. 이 리뷰는 사용자가 실제로 받는 빌드를 설명하는 피드를 따릅니다. 개발자의 GitHub 조직에서 공개된 저장소는 웹사이트용 하나뿐이며 앱의 저장소는 아닙니다.',
       },
       requirements: {
         id: 'requirements',
@@ -2332,14 +2413,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**GreenCube에는 Windows 10 또는 11과 약 8GB의 RAM이 필요하며, 메모리가 실행 가능한 범위를, 그래픽 카드가 실행 속도를 좌우합니다.**',
         ],
-        columns: ['등급', '웹사이트의 설명'],
+        columns: ['등급', '요구 사항'],
         rows: [
-          { '등급': 'Seed', '웹사이트의 설명': 'RAM 약 8GB, 그래픽 카드 없음' },
-          { '등급': 'Sprout', '웹사이트의 설명': '카드 없이 RAM 16GB 이상, 또는 카드와 함께 8GB' },
-          { '등급': 'Bloom', '웹사이트의 설명': '8GB 이상의 카드, 또는 RAM 16GB와 4GB 카드' },
-          { '등급': 'Thrive', '웹사이트의 설명': '8GB 이상의 카드와 RAM 24GB 이상' },
+          { '등급': 'Seed', '요구 사항': 'RAM 약 8GB, 그래픽 카드 없음' },
+          { '등급': 'Sprout', '요구 사항': 'RAM 16GB, 또는 RAM 8GB와 4GB 카드' },
+          { '등급': 'Bloom', '요구 사항': '8GB 이상의 카드, 또는 RAM 16GB와 4GB 카드' },
+          { '등급': 'Thrive', '요구 사항': '8GB 이상의 카드와 RAM 24GB 이상' },
         ],
-        note: '그래픽 카드가 없어도 작동하지만 더 느립니다. 이미지 생성에는 RAM이 최소 12GB 필요합니다. 설치 프로그램은 14.1MB이며, 모델 다운로드가 수 기가바이트 더해집니다.',
+        note: '그래픽 카드가 없어도 작동하지만 더 느립니다. 이미지 생성에는 RAM이 최소 12GB 필요합니다. 설치 프로그램은 36.8MB이며, 모델 다운로드가 수 기가바이트 더해집니다. Sprout 행은 창업자의 정정을 따르고, 나머지 행은 웹사이트를 따릅니다.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2398,6 +2479,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'GreenCube의 창업자 Hector Gras는 이 리뷰를 읽고 공정하고 명확하다고 평가했으며, 여기에 반영된 정정 사항을 보내왔습니다. 현재 버전, 다이어그램 기능 출시, 설치 프로그램의 새 이름과 크기, Sprout 등급의 요구 사양, 그리고 구매 페이지의 버전 표기(창업자에 따르면 팀의 실수였고 이미 수정됨)입니다. 아래 글은 창업자 본인의 말이며 PromptQuorum의 독립적인 평가가 아닙니다. 창업자는 테스트용 무료 라이선스도 제안했으나, PromptQuorum은 아직 앱을 실행해 보지 않았습니다.',
+          '"저는 16살이고, AI는 빌려 쓰는 것이 아니라 소유하는 것이어야 한다고 생각해서 GreenCube를 시작했습니다. 1970년대의 컴퓨터는 IBM 같은 소수 기업이 소유한 거대한 기계였고, 나머지 사람들은 그 사용 시간을 빌렸습니다. 그러다 Apple이 평범한 사람들의 책상 위에 개인용 컴퓨터를 올려놓았습니다. 오늘날 AI는 데이터 센터에 있고, 사람들은 매달 비용을 내고 제한을 받으며 빌려 씁니다. GreenCube는 그것이 여러분의 PC로 옮겨 온다는 저의 도전입니다. 한 번만 결제하면 오프라인에서 작동하고, 직접 쓴 내용은 계속 여러분의 것입니다. 다음으로는 학습 도구를 개선하고 일반 컴퓨터에서 앱을 더 빠르게 만들겠습니다."',
+        ],
+        note: '— Hector Gras, GreenCube 창업자',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '이런 분께 적합합니다',
@@ -2413,7 +2503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**직접 써 본 품질.** PromptQuorum은 앱을 실행하지 않았으므로 답변 품질, 속도, 이미지 결과는 평가하지 않았습니다.',
           '**런타임과 모델.** Gemma 4 E2B와 E4B만 언급되며, 추론 엔진이나 다른 모델을 밝힌 공개 자료는 없습니다.',
-          '**버전과 연혁.** 피드에는 0.1.47, 구매 페이지에는 1.0으로 되어 있고, 변경 이력이나 릴리스 기록은 공개되어 있지 않습니다.',
+          '**버전과 연혁.** 앱의 버전 번호는 아직 0.1.x이며, 변경 이력이나 릴리스 기록은 공개되어 있지 않습니다.',
           '**독립적인 검증.** 앱의 소스 코드는 공개되어 있지 않고, 네트워크 트래픽이나 콘텐츠 설정에 대한 제3자 리뷰도 없습니다.',
         ],
       },
@@ -2464,7 +2554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GreenCube 웹사이트](https://greencube.app) — 제품 개요, 가격, 하드웨어 등급, FAQ. 2026년 10월 30일 확인.',
           '[GreenCube 구매 페이지](https://greencube.app/buy) — 가격, 환불 기간, 구조화 데이터.',
-          '[GreenCube 업데이트 피드](https://models.greencube.app/updates/latest.json) — 버전 0.1.47, 2026년 10월 17일 공개.',
+          '[GreenCube 업데이트 피드](https://models.greencube.app/updates/latest.json) — 버전 0.1.49, 2026년 11월 5일 공개.',
           '[GreenCube 개인정보 처리방침](https://legal.greencube.app/privacy) — 데이터 처리와 법적 근거, 2026년 10월 13일 시행.',
         ],
       },
