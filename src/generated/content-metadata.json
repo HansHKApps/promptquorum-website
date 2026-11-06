@@ -938,7 +938,7 @@
       "images": []
     },
     "nextchat-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -4227,7 +4227,7 @@
       "images": []
     },
     "prompt-engineering-history": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-03-01",
       "hasSections": true,
@@ -4272,7 +4272,7 @@
       ]
     },
     "ai-hallucinations-how-to-stop": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -4963,7 +4963,7 @@
       "images": []
     },
     "prompt-chaining": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": "2026-11-02 — Anthropic workflow description, Claude prompting guide, LangChain documentation and the Wu et al. and Khattab et al. papers re-checked against the primary sources",
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -5030,7 +5030,7 @@
       "images": []
     },
     "self-consistency-prompting": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -5168,7 +5168,7 @@
       ]
     },
     "best-prompt-optimization-tools-teams": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -6751,7 +6751,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-11-01",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6769,7 +6769,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 349 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 350 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7770,7 +7770,7 @@
       "images": []
     },
     "enterprise-rag-vector-database-deployment-guide-2026": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -8013,7 +8013,7 @@
       "images": []
     },
     "digitalocean-vs-aws-cloud-for-ai-companies": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -8067,7 +8067,7 @@
       "images": []
     },
     "enterprise-llm-inference-servers-vllm-tgi-nim-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -8373,7 +8373,7 @@
       "images": []
     },
     "gpt-engineer-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -9674,7 +9674,7 @@
       "images": []
     },
     "local-llm-voice-audio-compared": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -10322,7 +10322,7 @@
       "images": []
     },
     "vllm-explained": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -11006,7 +11006,7 @@
       "images": []
     },
     "swerve-ai-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-17",
       "hasSections": true,
@@ -11275,6 +11275,24 @@
       ],
       "images": []
     },
+    "sablate-review": {
+      "dateModified": "2026-11-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "transcriptionsuite-review": {
       "dateModified": "2026-10-18",
       "lastFactChecked": null,
@@ -11492,7 +11510,7 @@
       "images": []
     },
     "facet-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-28",
       "hasSections": true,
@@ -13148,7 +13166,7 @@
       "images": []
     },
     "aquavoice-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-03",
       "hasSections": true,
@@ -13688,7 +13706,7 @@
       "images": []
     },
     "self-hosted-ai-starter-kit-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
@@ -14210,7 +14228,7 @@
       "images": []
     },
     "lucebox-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
@@ -14595,7 +14613,7 @@
       ]
     },
     "q4KMVsQ80": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -15437,7 +15455,7 @@
       "images": []
     },
     "bestQuantization6gbVram": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-23",
       "hasSections": true,
@@ -16049,7 +16067,7 @@
       "images": []
     },
     "ggufVsGptqVsAwq": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,

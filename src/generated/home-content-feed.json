@@ -247,7 +247,7 @@
     "title": "From GPT-2 to Today: How Prompt Engineering Evolved",
     "excerpt": "Prompt engineering is not dead, it changed: a sourced timeline from GPT-3 few-shot prompting (2020) through chain-of-thought and ChatGPT to context design.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -256,7 +256,7 @@
     "title": "Wie sich Prompt Engineering entwickelt hat: Von GPT-3 zu Context Design",
     "excerpt": "Prompt Engineering ist nicht tot, sondern gewandelt: belegte Zeitleiste von GPT-3 Few-Shot (2020) über Chain-of-Thought und ChatGPT bis Context Design.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -265,7 +265,7 @@
     "title": "Comment l'ingénierie des prompts a évolué : De GPT-3 au Context Design",
     "excerpt": "Le prompt engineering n'est pas mort, il a changé : chronologie sourcée du few-shot de GPT-3 (2020) au chain-of-thought, à ChatGPT puis au context design.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -274,7 +274,7 @@
     "title": "プロンプトエンジニアリングはどのように進化したか：GPT-3からContext Designへ",
     "excerpt": "プロンプトエンジニアリングは終わらず形を変えました。GPT-3のフューショット（2020年）から思考の連鎖、ChatGPT、コンテキスト設計までを出典付きで解説します。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -283,7 +283,7 @@
     "title": "从GPT-2到今天：提示词工程的演变",
     "excerpt": "提示词工程没有消亡而是转型：附来源的时间线，从2020年GPT-3少样本提示，到思维链、ChatGPT与上下文设计，梳理2020至2026年的演变。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -292,7 +292,7 @@
     "title": "De GPT-2 a hoy: Cómo evolucionó el Prompt Engineering",
     "excerpt": "El prompt engineering no ha muerto, ha cambiado: cronología con fuentes del few-shot de GPT-3 (2020) al chain-of-thought, ChatGPT y el context design.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -301,7 +301,7 @@
     "title": "De GPT-2 até hoje: Como evoluiu o Prompt Engineering",
     "excerpt": "O prompt engineering não morreu, mudou: linha do tempo com fontes do few-shot do GPT-3 (2020) ao chain-of-thought, ao ChatGPT e ao context design.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -310,7 +310,7 @@
     "title": "من ⁨GPT-2⁩ حتى اليوم: كيف تطورت هندسة البرومبت",
     "excerpt": "هندسة البرومبت لم تمت بل تغيّرت: خط زمني موثّق من التعلّم بأمثلة قليلة في GPT-3 (2020) إلى سلسلة الأفكار وChatGPT وصولًا إلى تصميم السياق.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -319,7 +319,7 @@
     "title": "GPT-2부터 현재까지: 프롬프트 엔지니어링의 진화",
     "excerpt": "프롬프트 엔지니어링은 사라지지 않고 변했습니다. GPT-3 퓨샷(2020)에서 사고 연쇄, ChatGPT, 컨텍스트 설계까지 출처와 함께 정리한 타임라인입니다.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-engineering/how-prompt-engineering-evolved",
     "cluster": "prompt-engineering"
   },
@@ -409,7 +409,7 @@
     "title": "AI Hallucinations: Why AI Makes Things Up — and How to Stop Them",
     "excerpt": "Why AI hallucinates, real cases, and how to detect hallucinations: check sources, compare answers, then cut errors with prompts, RAG and human review.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -418,7 +418,7 @@
     "title": "KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt",
     "excerpt": "Warum KI halluziniert, reale Fälle und wie Sie Halluzinationen erkennen: Quellen prüfen, Antworten vergleichen, Fehler mit Prompts, RAG und Review senken.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -427,7 +427,7 @@
     "title": "Hallucinations IA: Pourquoi l'IA Invente des Choses — et Comment les Arrêter",
     "excerpt": "Pourquoi l'IA hallucine, cas réels et détection des hallucinations : vérifiez les sources, comparez les réponses, réduisez les erreurs (prompts, RAG).",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -436,7 +436,7 @@
     "title": "AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法",
     "excerpt": "AIがもっともらしい嘘を出す理由、実際の事例、幻覚の検出法を解説。出典確認や回答比較で見抜き、プロンプト・RAG・人の確認で減らす方法を紹介します。",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -445,7 +445,7 @@
     "title": "AI幻觉：为什么AI会编造东西——以及如何停止它们",
     "excerpt": "解析AI幻觉的成因与真实案例，教你检测幻觉：核对来源、多次提问对比，并通过提示词、RAG检索增强与人工审核降低错误，附检测方法与提示词示例。",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -454,7 +454,7 @@
     "title": "Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas",
     "excerpt": "Por qué la IA alucina, casos reales y cómo detectar alucinaciones: verifica fuentes, compara respuestas y reduce errores con prompts, RAG y revisión.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -463,7 +463,7 @@
     "title": "Alucinações de IA: Por que a IA inventa coisas — e como pará-las",
     "excerpt": "Por que a IA alucina, casos reais e como detectar alucinações: verifique fontes, compare respostas e reduza erros com prompts, RAG e revisão humana.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -472,7 +472,7 @@
     "title": "هلوسات الذكاء الاصطناعي: لماذا تخترع الذكاء الاصطناعي الأشياء — وكيف توقفها",
     "excerpt": "لماذا تهلوس نماذج الذكاء الاصطناعي، وحالات واقعية، وكيفية اكتشاف الهلوسة: تحقق من المصادر وقارن الإجابات وقلّل الأخطاء بالتعليمات والمراجعة البشرية.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -481,7 +481,7 @@
     "title": "AI 환각: AI가 사실을 꾸며내는 이유와 이를 막는 방법",
     "excerpt": "AI가 환각을 일으키는 이유와 실제 사례, 환각 탐지법을 설명합니다. 출처 확인과 답변 비교로 찾고 프롬프트·RAG·검토로 줄이는 방법을 다룹니다.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-03-22",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
     "cluster": "prompt-engineering"
   },
@@ -3244,7 +3244,7 @@
     "title": "Prompt Chaining: Examples, LangChain Code and Patterns",
     "excerpt": "Prompt chaining explained: what it is, worked examples, a LangChain code sample, common patterns and when a single prompt is the better choice.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3253,7 +3253,7 @@
     "title": "Prompt Chaining: Beispiele, LangChain-Code und Muster",
     "excerpt": "Prompt Chaining erklärt: Definition, Beispiele für Prompt-Ketten, ein LangChain-Codebeispiel, typische Muster und wann ein einzelner Prompt reicht.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3262,7 +3262,7 @@
     "title": "Chaînage de prompts : exemples et code LangChain",
     "excerpt": "Chaînage de prompts expliqué : définition, exemples de chaînes, exemple de code LangChain, schémas courants et cas où un seul prompt suffit.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3271,7 +3271,7 @@
     "title": "プロンプトチェーンの例とLangChainコード",
     "excerpt": "プロンプトチェーン（プロンプトチェイニング）とは何かを、具体例、LangChainのコード例、代表的なパターン、単一プロンプトで十分なケースまで解説します。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3280,7 +3280,7 @@
     "title": "提示链：复杂任务分步示例与LangChain代码",
     "excerpt": "提示链（Prompt Chaining）详解：定义、复杂任务的分步示例、LangChain代码示例、常见模式，以及什么时候单个提示就已足够。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3289,7 +3289,7 @@
     "title": "Encadenamiento de prompts: ejemplos y código LangChain",
     "excerpt": "Encadenamiento de prompts explicado: qué es, ejemplos de cadenas, un código de ejemplo con LangChain, patrones habituales y cuándo basta un solo prompt.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3298,7 +3298,7 @@
     "title": "Encadeamento de prompts: exemplos e código LangChain",
     "excerpt": "Encadeamento de prompts explicado: o que é, exemplos de cadeias, um código de exemplo com LangChain, padrões comuns e quando um único prompt basta.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3307,7 +3307,7 @@
     "title": "ربط البرومبتات: أمثلة وكود LangChain وأنماط",
     "excerpt": "شرح ربط البرومبتات (Prompt Chaining): تعريفه وأمثلة عملية وكود LangChain وأنماط شائعة، ومتى يكفي برومبت واحد بدلًا من سلسلة.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3316,7 +3316,7 @@
     "title": "프롬프트 체이닝: 예시와 LangChain 코드 예제",
     "excerpt": "프롬프트 체이닝이란 무엇인지, 복잡한 작업을 단계로 나누는 예시, LangChain 코드 예제, 대표 패턴과 단일 프롬프트가 나은 경우를 설명합니다.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-engineering/prompt-chaining",
     "cluster": "prompt-engineering"
   },
@@ -3487,7 +3487,7 @@
     "title": "Self-Consistency Prompting: Generate Multiple Answers, Pick the One That's Right",
     "excerpt": "Self-consistency prompting samples several reasoning paths and picks the majority answer. In the original paper, GSM8K accuracy rose from 56.5% to 74.4%.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3496,7 +3496,7 @@
     "title": "Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen",
     "excerpt": "Self-Consistency Prompting zieht mehrere Lösungswege und wählt die Mehrheitsantwort. Im Originalpaper stieg die GSM8K-Genauigkeit von 56,5% auf 74,4%.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3505,7 +3505,7 @@
     "title": "Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus",
     "excerpt": "Le Self-Consistency Prompting échantillonne des chemins de raisonnement et retient la réponse majoritaire. Dans l'article, GSM8K passe de 56.5% à 74.4%.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3514,7 +3514,7 @@
     "title": "Self-Consistencyプロンプト：複数の答えから正解を選ぶ",
     "excerpt": "Self-Consistencyプロンプトは複数の推論パスをサンプリングし、多数派の答えを採用します。原論文ではGSM8Kの正答率が56.5%から74.4%に上がりました。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3523,7 +3523,7 @@
     "title": "Self-Consistency提示：生成多个答案，选出正确的那个",
     "excerpt": "Self-Consistency提示采样多条推理路径并选取多数答案。原论文中GSM8K准确率从56.5%提高到74.4%，本文说明原理、适用场景与成本。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3532,7 +3532,7 @@
     "title": "Self-Consistency Prompting: genera múltiples respuestas y elige la correcta",
     "excerpt": "El self-consistency prompting muestrea caminos de razonamiento y elige la respuesta mayoritaria. En el artículo original, GSM8K sube del 56.5% al 74.4%.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3541,7 +3541,7 @@
     "title": "Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente",
     "excerpt": "O self-consistency prompting amostra vários caminhos de raciocínio e escolhe a resposta majoritária. No artigo original, o GSM8K subiu de 56,5% para 74,4%.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3550,7 +3550,7 @@
     "title": "برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة",
     "excerpt": "الاتساق الذاتي يأخذ عدة مسارات استدلالية ويختار الإجابة الأغلبية. في الورقة الأصلية ارتفعت دقة GSM8K من 56.5٪ إلى 74.4٪. كيفية التطبيق والتكلفة.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3559,7 +3559,7 @@
     "title": "자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오",
     "excerpt": "자기 일관성 프롬프팅은 여러 추론 경로를 샘플링해 다수결 답변을 선택합니다. 원본 논문에서 GSM8K 정확도는 56.5%에서 74.4%로 올랐습니다.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-engineering/self-consistency-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3973,7 +3973,7 @@
     "title": "Best Prompt Optimization Tools for Teams",
     "excerpt": "Compare Braintrust, DSPy, Promptfoo, Vellum, Helicone and PromptPerfect for team prompt work: pricing, A/B testing, CI/CD and 2026 vendor status.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -3982,7 +3982,7 @@
     "title": "Die besten Prompt-Optimierungs-Tools für Teams",
     "excerpt": "Braintrust, DSPy, Promptfoo, Vellum, Helicone und PromptPerfect im Vergleich: Preise, A/B-Tests, CI/CD und Anbieter-Status für Teams, Stand 2026.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -3991,7 +3991,7 @@
     "title": "Meilleurs outils d'optimisation de prompts pour les équipes",
     "excerpt": "Comparez Braintrust, DSPy, Promptfoo, Vellum, Helicone et PromptPerfect : tarifs, tests A/B, CI/CD et changements de statut des éditeurs en 2026.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -4000,7 +4000,7 @@
     "title": "チームのためのベストプロンプト最適化ツール",
     "excerpt": "Braintrust、DSPy、Promptfoo、Vellum、Helicone、PromptPerfectをチーム向けに比較。料金、A/Bテスト、CI/CD、2026年のベンダー状況の変化を公式情報で確認しました。",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -4009,7 +4009,7 @@
     "title": "2026年团队提示优化最佳工具",
     "excerpt": "对比Braintrust、DSPy、Promptfoo、Vellum、Helicone和PromptPerfect：价格、A/B测试、CI/CD，并标注2026年厂商状态变化，信息均核对官方页面。",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -4018,7 +4018,7 @@
     "title": "Mejores herramientas de optimización de prompts para equipos",
     "excerpt": "Optimiza y mejora prompts en equipo y mide su rendimiento: Braintrust, DSPy, Promptfoo, Vellum y Helicone, con precios y estado verificados.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -4027,7 +4027,7 @@
     "title": "Melhores ferramentas de otimização de prompts para equipes",
     "excerpt": "Compare Braintrust, DSPy, Promptfoo, Vellum, Helicone e PromptPerfect para equipes: preços, testes A/B, CI/CD e status dos fornecedores em 2026.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -4036,7 +4036,7 @@
     "title": "أفضل أدوات تحسين التعليمات للفرق",
     "excerpt": "قارن Braintrust وDSPy وPromptfoo وVellum وHelicone وPromptPerfect للفرق: الأسعار واختبار A/B وCI/CD وتغيّر حالة الموردين في 2026.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -4045,7 +4045,7 @@
     "title": "팀을 위한 최고의 프롬프트 최적화 도구",
     "excerpt": "Braintrust, DSPy, Promptfoo, Vellum, Helicone을 팀 기준으로 비교합니다. 가격, A/B 테스트, CI/CD와 2026년 공급사 상태 변화를 확인했습니다.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-engineering/best-prompt-optimization-tools-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -9481,7 +9481,7 @@
     "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
     "excerpt": "NextChat review: free MIT-licensed chat UI with one-click Vercel deploy and Docker setup, plus an October 2026 MCP security fix not yet in a release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9490,7 +9490,7 @@
     "title": "NextChat-Rezension 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy",
     "excerpt": "NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Ein-Klick-Vercel-Deploy und Docker, dazu eine MCP-Sicherheitskorrektur vom Oktober 2026 ohne Release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/de/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9499,7 +9499,7 @@
     "title": "NextChat : avis 2026 sur l'interface de chat légère à déploiement en un clic",
     "excerpt": "Avis NextChat : chat gratuit sous licence MIT, déploiement Vercel en un clic et Docker, avec un correctif de sécurité MCP d'octobre 2026 hors release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/fr/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9508,7 +9508,7 @@
     "title": "NextChatレビュー2026：軽量でワンクリックデプロイのチャットUI",
     "excerpt": "NextChatレビュー：MITライセンスの無料チャットUI。Vercelワンクリック導入とDocker設定、リリース未反映の2026年10月MCPセキュリティ修正も解説。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ja/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9517,7 +9517,7 @@
     "title": "NextChat 2026评测：轻量级、一键部署的聊天界面",
     "excerpt": "NextChat评测：MIT许可证的免费聊天界面，支持Vercel一键部署与Docker，并说明尚未进入正式版本的2026年10月MCP安全修复。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/zh/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9526,7 +9526,7 @@
     "title": "NextChat: análisis 2026 de la interfaz de chat ligera con despliegue en un clic",
     "excerpt": "Reseña de NextChat: chat gratuito con licencia MIT, despliegue en Vercel con un clic y Docker, y un parche de seguridad MCP de octubre de 2026 sin release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/es/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9535,7 +9535,7 @@
     "title": "NextChat: análise 2026 da interface de chat leve com deploy em um clique",
     "excerpt": "Análise do NextChat: chat gratuito com licença MIT, deploy na Vercel com um clique e Docker, e correção de segurança do MCP de outubro de 2026 sem release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/pt/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9544,7 +9544,7 @@
     "title": "مراجعة NextChat 2026: واجهة دردشة خفيفة بنشر بنقرة واحدة",
     "excerpt": "مراجعة NextChat: واجهة دردشة مجانية برخصة MIT مع نشر بنقرة على Vercel وDocker، مع إصلاح أمني لـ MCP في أكتوبر 2026 غير مضمَّن بعد في إصدار.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ar/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9553,7 +9553,7 @@
     "title": "NextChat 리뷰 2026: 가벼운 원클릭 배포 채팅 UI",
     "excerpt": "NextChat 리뷰: MIT 라이선스 무료 채팅 UI, Vercel 원클릭 배포와 Docker 설정, 릴리스에 아직 없는 2026년 10월 MCP 보안 수정까지 정리.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ko/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -22519,82 +22519,82 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 349 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 349 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 350 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 350 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 349 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 349 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 350 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 350 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/de/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 349 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 349 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 350 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 350 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/fr/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす349のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを349件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす350のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを350件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/ja/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：349款软件，在本地运行AI（2026）",
-    "excerpt": "对比349款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：350款软件，在本地运行AI（2026）",
+    "excerpt": "对比350款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/zh/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 349 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 349 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 350 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 350 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/es/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 349 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 349 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 350 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 350 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/pt/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 349 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 349 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 350 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 350 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/ar/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 349개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 349개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 350개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 350개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-01",
+    "dateModified": "2026-11-06",
     "url": "/ko/directory",
     "cluster": "power-local-llm"
   },
@@ -25681,7 +25681,7 @@
     "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
     "excerpt": "Self-hosted vs managed vector database for enterprise RAG: SLA and SSO tiers by vendor, multi-tenant isolation, migration and a procurement checklist.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25690,7 +25690,7 @@
     "title": "Vektordatenbank für Unternehmen: Self-Hosted vs. Managed Cloud (2026)",
     "excerpt": "Self-Hosted vs. Managed Vektordatenbank für Enterprise-RAG: SLA- und SSO-Stufen je Anbieter, Mandantentrennung, Migration und Beschaffungs-Checkliste.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25699,7 +25699,7 @@
     "title": "Base de données vectorielle en entreprise : auto-hébergée ou managée (2026)",
     "excerpt": "Base vectorielle auto-hébergée ou managée pour le RAG d'entreprise : paliers SLA et SSO par fournisseur, multi-tenant, migration et checklist d'achat.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25708,7 +25708,7 @@
     "title": "エンタープライズRAGベクトルDB導入：セルフホスト vs マネージド(2026)",
     "excerpt": "エンタープライズ規模のセルフホスト vs マネージドベクトルDB：マルチテナント分離、SLAとセキュリティ体制、数十億ベクトルの容量計画、コミット利用型課金、ベンダー調達チェックリスト。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25717,7 +25717,7 @@
     "title": "企业级RAG向量数据库部署：自托管 vs 托管云(2026)",
     "excerpt": "企业级RAG向量数据库自托管与托管云对比：各供应商SLA与SSO套餐等级、多租户隔离、数十亿向量容量规划、供应商锁定与迁移策略、采购检查清单。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25726,7 +25726,7 @@
     "title": "Base de Datos Vectorial para Empresas: ¿Autoalojada o Gestionada? (2026)",
     "excerpt": "Base vectorial autoalojada o gestionada para RAG empresarial: niveles de SLA y SSO por proveedor, multiinquilino, migración y lista de compra.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25735,7 +25735,7 @@
     "title": "Banco de Dados Vetorial para Empresas: Self-Hosted ou Gerenciado? (2026)",
     "excerpt": "Banco vetorial self-hosted ou gerenciado para RAG empresarial: níveis de SLA e SSO por fornecedor, multi-tenant, migração e checklist de compra.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25744,7 +25744,7 @@
     "title": "نشر قاعدة بيانات المتجهات للمؤسسات: استضافة ذاتية أم مُدارة؟ (2026)",
     "excerpt": "قاعدة بيانات المتجهات المستضافة ذاتيًا أم المُدارة لـ RAG المؤسسي: مستويات SLA وSSO لكل مزوّد، وعزل المستأجرين، والترحيل، وقائمة التحقق من الشراء.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25753,7 +25753,7 @@
     "title": "기업용 RAG 벡터 데이터베이스 배포: 자체 호스팅 vs 매니지드(2026)",
     "excerpt": "기업 규모의 자체 호스팅 vs 매니지드 벡터 데이터베이스 비교: 멀티테넌트 격리, SLA와 보안 태세, 수십억 벡터 용량 계획, 약정 사용량 요금제, 벤더 조달 체크리스트.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -26572,7 +26572,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud for AI Companies Compared in 2026",
     "excerpt": "Compare 8 AI clouds, from DigitalOcean and AWS to CoreWeave, RunPod and Lambda, on H100 price, GPU availability and workload fit for AI teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26581,7 +26581,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud für KI-Unternehmen im Vergleich 2026",
     "excerpt": "8 KI-Clouds im Vergleich, von DigitalOcean und AWS bis CoreWeave, RunPod und Lambda: H100-Preis, GPU-Verfügbarkeit und Workload-Eignung für KI-Teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26590,7 +26590,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod : comparatif des clouds pour entreprises IA en 2026",
     "excerpt": "Comparatif de 8 clouds IA, de DigitalOcean et AWS à CoreWeave, RunPod et Lambda : prix du H100, disponibilité des GPU et adéquation aux charges de travail.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26599,7 +26599,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業向けクラウド比較",
     "excerpt": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月2日に確認。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26608,7 +26608,7 @@
     "title": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司云服务对比",
     "excerpt": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-02。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26617,7 +26617,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativa de nubes para empresas de IA en 2026",
     "excerpt": "Compara 8 nubes de IA, de DigitalOcean y AWS a CoreWeave, RunPod y Lambda, por precio del H100, disponibilidad de GPU y ajuste a tu carga de trabajo.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26626,7 +26626,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativo de nuvens para empresas de IA em 2026",
     "excerpt": "Compare 8 nuvens de IA, do DigitalOcean e da AWS à CoreWeave, RunPod e Lambda, por preço do H100, disponibilidade de GPU e adequação à carga de trabalho.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26635,7 +26635,7 @@
     "title": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: مقارنة السحابات لشركات الذكاء الاصطناعي في 2026",
     "excerpt": "قارن 8 سحابات ذكاء اصطناعي، من DigitalOcean وAWS إلى CoreWeave وRunPod وLambda، من حيث سعر H100 وتوفر GPU وملاءمة حمل العمل.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26644,7 +26644,7 @@
     "title": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업용 클라우드 비교",
     "excerpt": "DigitalOcean, AWS, CoreWeave, RunPod 등 AI 클라우드 8곳을 H100 가격, GPU 가용성, 워크로드 적합성으로 비교합니다.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26815,7 +26815,7 @@
     "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
     "excerpt": "vLLM vs TGI vs NVIDIA NIM vs Ollama for enterprise LLM inference: multi-GPU, Kubernetes, licensing cost, and why TGI is now in maintenance mode.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26824,7 +26824,7 @@
     "title": "Enterprise-LLM-Inferenzserver 2026: vLLM, TGI und NVIDIA NIM im Vergleich",
     "excerpt": "vLLM vs TGI vs NVIDIA NIM vs Ollama für Enterprise-Inferenz: Multi-GPU-Betrieb, Kubernetes, Lizenzkosten und warum TGI jetzt im Wartungsmodus ist.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26833,7 +26833,7 @@
     "title": "Serveurs d'inférence LLM en entreprise 2026 : comparatif vLLM, TGI, NVIDIA NIM et Ollama",
     "excerpt": "vLLM, TGI, NVIDIA NIM et Ollama pour l'inférence en entreprise : multi-GPU, Kubernetes, coût des licences et pourquoi TGI est en mode maintenance.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26842,7 +26842,7 @@
     "title": "vLLM・TGI・NVIDIA NIM比較:エンタープライズLLM推論サーバー2026",
     "excerpt": "vLLM、TGI、NVIDIA NIM、Ollamaをエンタープライズ推論で比較。マルチGPU、Kubernetes、ライセンス費用、TGIがメンテナンスモードである理由。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26851,7 +26851,7 @@
     "title": "企业级LLM推理服务器2026:vLLM对比TGI对比NVIDIA NIM",
     "excerpt": "vLLM、TGI、NVIDIA NIM 与 Ollama 企业推理对比：多 GPU、Kubernetes、许可成本，以及 TGI 为何进入维护模式。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26860,7 +26860,7 @@
     "title": "Servidores de inferencia LLM empresarial 2026: vLLM vs TGI vs NVIDIA NIM",
     "excerpt": "vLLM, TGI, NVIDIA NIM y Ollama para inferencia empresarial: multi-GPU, Kubernetes, coste de licencias y por qué TGI está en modo de mantenimiento.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26869,7 +26869,7 @@
     "title": "Servidores de inferência LLM para empresas 2026: vLLM vs TGI vs NVIDIA NIM",
     "excerpt": "vLLM, TGI, NVIDIA NIM e Ollama para inferência corporativa: multi-GPU, Kubernetes, custo de licenças e por que o TGI está em modo de manutenção.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26878,7 +26878,7 @@
     "title": "خوادم استدلال نماذج اللغة الكبيرة للمؤسسات 2026: مقارنة vLLM وTGI وNVIDIA NIM",
     "excerpt": "مقارنة vLLM وTGI وNVIDIA NIM وOllama للاستدلال المؤسسي: عدة GPU وKubernetes وتكلفة التراخيص ولماذا دخل TGI وضع الصيانة.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26887,7 +26887,7 @@
     "title": "엔터프라이즈 LLM 추론 서버 2026: vLLM vs TGI vs NVIDIA NIM 비교",
     "excerpt": "엔터프라이즈 추론용 vLLM, TGI, NVIDIA NIM, Ollama 비교: 멀티 GPU, Kubernetes, 라이선스 비용, TGI가 유지보수 모드인 이유.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -28192,7 +28192,7 @@
     "title": "GPT Engineer Review: Archived on GitHub, App Now Lovable",
     "excerpt": "GPT Engineer's GitHub repo is archived (MIT, last release 0.3.1 in 2024), and gptengineer.app is now Lovable. Its README recommends Aider instead.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28201,7 +28201,7 @@
     "title": "GPT Engineer Review: Auf GitHub archiviert, App jetzt Lovable",
     "excerpt": "GPT Engineers GitHub-Repo ist archiviert (MIT, letztes Release 0.3.1 im Jahr 2024), gptengineer.app heißt jetzt Lovable. Die README empfiehlt Aider.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28210,7 +28210,7 @@
     "title": "GPT Engineer : archivé sur GitHub, l’app est devenue Lovable",
     "excerpt": "Le dépôt GitHub de GPT Engineer est archivé (MIT, dernière version 0.3.1 en 2024) et gptengineer.app est devenu Lovable. Son README recommande Aider.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28219,7 +28219,7 @@
     "title": "GPT Engineerレビュー：アーカイブ済み、アプリはLovableに",
     "excerpt": "GPT EngineerのGitHubリポジトリはアーカイブ済み（MIT、最終リリース0.3.1は2024年）。gptengineer.appはLovableに改称。READMEはAiderを推奨。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28228,7 +28228,7 @@
     "title": "GPT Engineer评测：GitHub已归档，应用现为Lovable",
     "excerpt": "GPT Engineer的GitHub仓库已归档（MIT，最后发布0.3.1于2024年），gptengineer.app已更名为Lovable。其README推荐Aider。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28237,7 +28237,7 @@
     "title": "GPT Engineer: archivado en GitHub, la app ahora es Lovable",
     "excerpt": "El repositorio de GPT Engineer en GitHub está archivado (MIT, última versión 0.3.1 en 2024) y gptengineer.app ahora es Lovable. Su README recomienda Aider.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28246,7 +28246,7 @@
     "title": "GPT Engineer: arquivado no GitHub, o app virou Lovable",
     "excerpt": "O repositório do GPT Engineer no GitHub está arquivado (MIT, última versão 0.3.1 em 2024) e o gptengineer.app virou Lovable. O README recomenda o Aider.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28255,7 +28255,7 @@
     "title": "مراجعة GPT Engineer: مؤرشف على GitHub والتطبيق أصبح Lovable",
     "excerpt": "مستودع GPT Engineer على GitHub مؤرشف (MIT، آخر إصدار 0.3.1 في 2024) وتطبيق gptengineer.app أصبح Lovable. يوصي ملف README بـ Aider.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28264,7 +28264,7 @@
     "title": "GPT Engineer 리뷰: GitHub 아카이브, 앱은 Lovable로",
     "excerpt": "GPT Engineer 저장소는 아카이브되었고(MIT, 릴리스 0.3.1은 2024년) 앱은 Lovable로 바뀌었다. README는 Aider를 추천한다.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/gpt-engineer-review",
     "cluster": "power-local-llm"
   },
@@ -28307,7 +28307,7 @@
   {
     "lang": "zh",
     "title": "Pydantic AI 评测：功能、Structured Outputs、替代方案",
-    "excerpt": "Pydantic AI是Pydantic团队推出的免费、MIT许可证Python智能体框架——类型安全的结构化输出、依赖注入、模型无关支持。已验证的GitHub数据和安装步骤。",
+    "excerpt": "Pydantic AI是Pydantic团队推出的免费、MIT许可证Python智能体框架：类型安全的输出、安装步骤、定价、许可证与替代方案。",
     "publishDate": "2026-09-11",
     "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/pydantic-ai-review",
@@ -34022,81 +34022,81 @@
   {
     "lang": "en",
     "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-    "excerpt": "Compare 38 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
+    "excerpt": "Compare 39 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten",
-    "excerpt": "Vergleich von 38 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
+    "excerpt": "Vergleich von 39 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux",
-    "excerpt": "Comparez 38 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
+    "excerpt": "Comparez 39 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント",
-    "excerpt": "ローカル音声ツール38種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル音声ツール39種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "本地语音工具对比(2026):语音合成、语音转文字与语音助手",
-    "excerpt": "并排对比38款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
+    "excerpt": "并排对比39款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz",
-    "excerpt": "Compara 38 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
+    "excerpt": "Compara 39 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz",
-    "excerpt": "Compare 38 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
+    "excerpt": "Compare 39 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون",
-    "excerpt": "قارن 38 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
+    "excerpt": "قارن 39 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트",
-    "excerpt": "로컬 음성 도구 38개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 음성 도구 39개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
@@ -36940,7 +36940,7 @@
     "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
     "excerpt": "vLLM is the free, Apache 2.0-licensed inference server built around PagedAttention and continuous batching. What it is, how it differs from Ollama, TGI, and TensorRT-LLM, and how to run it.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -36949,7 +36949,7 @@
     "title": "vLLM erklärt: Hochleistungs-LLM-Serving mit PagedAttention (2026)",
     "excerpt": "vLLM ist der kostenlose, Apache-2.0-lizenzierte Inferenz-Server rund um PagedAttention und Continuous Batching. Was es ist, Unterschiede zu Ollama, TGI und TensorRT-LLM, und wie man es betreibt.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -36958,7 +36958,7 @@
     "title": "vLLM expliqué : le serveur LLM haute performance avec PagedAttention (2026)",
     "excerpt": "vLLM est le serveur d'inférence gratuit, sous licence Apache 2.0, construit autour de PagedAttention et du batching continu. Ce que c'est, ses différences avec Ollama, TGI et TensorRT-LLM, et comment l'exécuter.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -36967,7 +36967,7 @@
     "title": "vLLMとは？PagedAttentionで実現する高スループット推論サーバーを解説（2026）",
     "excerpt": "vLLMは、PagedAttentionとcontinuous batchingを中心に構築された、無料でApache 2.0ライセンスの推論サーバーです。それが何か、Ollama・TGI・TensorRT-LLMとの違い、実行方法を解説。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -36976,7 +36976,7 @@
     "title": "vLLM详解：基于PagedAttention的高吞吐量推理服务（2026）",
     "excerpt": "vLLM是围绕PagedAttention和连续批处理构建的免费、Apache 2.0许可推理服务器。它是什么、与Ollama、TGI和TensorRT-LLM有何不同，以及如何运行它。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -36985,7 +36985,7 @@
     "title": "vLLM explicado: servidor de inferencia LLM de alto rendimiento con PagedAttention (2026)",
     "excerpt": "vLLM es el servidor de inferencia gratuito, con licencia Apache 2.0, construido sobre PagedAttention y el batching continuo. Qué es, en qué se diferencia de Ollama, TGI y TensorRT-LLM, y cómo ejecutarlo.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -36994,7 +36994,7 @@
     "title": "vLLM explicado: serving de LLM de alto desempenho com PagedAttention (2026)",
     "excerpt": "vLLM é o servidor de inferência gratuito, sob licença Apache 2.0, construído em torno do PagedAttention e do continuous batching. O que é, como difere de Ollama, TGI e TensorRT-LLM, e como executá-lo.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -37003,7 +37003,7 @@
     "title": "شرح vLLM: خادم استدلال نماذج اللغة عالي الإنتاجية مع PagedAttention (2026)",
     "excerpt": "vLLM هو خادم الاستدلال المجاني المرخّص بموجب Apache 2.0 والمبني حول PagedAttention والتجميع المستمر. ما هو، وكيف يختلف عن Ollama وTGI وTensorRT-LLM، وكيفية تشغيله.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -37012,7 +37012,7 @@
     "title": "vLLM이란? PagedAttention 기반 고성능 LLM 서빙 엔진 해설 (2026)",
     "excerpt": "vLLM은 PagedAttention과 continuous batching을 중심으로 구축된 무료, Apache 2.0 라이선스 추론 서버입니다. 정의, Ollama·TGI·TensorRT-LLM과의 차이, 실행 방법을 설명합니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/vllm-explained",
     "cluster": "power-local-llm"
   },
@@ -40018,7 +40018,7 @@
     "title": "Swerve Review: AI Story and Character Chat for iPhone",
     "excerpt": "Swerve AI review for iPhone: free download with in-app purchases, 18+ rating, what the privacy notice says about chats, and Android and web status.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40027,7 +40027,7 @@
     "title": "Swerve Rezension: KI-Story- und Charakter-Chat für das iPhone",
     "excerpt": "Swerve Rezension: kostenlose iPhone-App für KI-Charakter-Chat und verzweigte Geschichten. In-App-Käufe, 18+, Cloud, Datenschutz, lokale Alternativen.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40036,7 +40036,7 @@
     "title": "Test de Swerve : chat d’histoires et de personnages IA sur iPhone",
     "excerpt": "Test de Swerve AI sur iPhone : appli gratuite avec achats intégrés, classement 18+, ce que dit l’avis de confidentialité et statut d’Android et du web.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40045,7 +40045,7 @@
     "title": "Swerveレビュー：iPhone向けAIストーリー＆キャラクターチャット",
     "excerpt": "Swerveのレビュー。AIキャラクターとのチャットとインタラクティブなストーリーを楽しめる無料のiPhoneアプリ。アプリ内課金、18+、クラウド、プライバシー、ローカルの代替も紹介。",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40054,7 +40054,7 @@
     "title": "Swerve评测：面向iPhone的AI故事与角色聊天应用",
     "excerpt": "Swerve评测：免费的iPhone应用，支持AI角色聊天与互动故事。含应用内购买、18+分级、云端服务、隐私声明、局限性，以及可本地运行的角色扮演替代品。",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40063,7 +40063,7 @@
     "title": "Reseña de Swerve: chat de historias y personajes con IA para iPhone",
     "excerpt": "Reseña de Swerve AI para iPhone: qué es, descarga gratis con compras en la app, clasificación 18+, qué dice su aviso de privacidad y si hay Android.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40072,7 +40072,7 @@
     "title": "Análise do Swerve: chat de histórias e personagens com IA para iPhone",
     "excerpt": "Análise do Swerve: app gratuito para iPhone de chat com personagens de IA e histórias ramificadas. Compras no app, 18+, nuvem, privacidade, alternativas.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40081,7 +40081,7 @@
     "title": "مراجعة Swerve: دردشة قصص وشخصيات بالذكاء الاصطناعي على iPhone",
     "excerpt": "مراجعة Swerve: تطبيق iPhone مجاني للدردشة مع شخصيات الذكاء الاصطناعي وقصص متفرعة. مشتريات داخل التطبيق وتصنيف +18 وخدمة سحابية وخصوصية وبدائل محلية.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40090,7 +40090,7 @@
     "title": "Swerve 리뷰: iPhone용 AI 스토리·캐릭터 채팅 앱",
     "excerpt": "Swerve 리뷰: AI 캐릭터 채팅과 인터랙티브 스토리를 제공하는 무료 iPhone 앱. 인앱 결제, 18+ 등급, 클라우드 서비스, 개인정보 고지, 한계, 로컬 대안을 정리했습니다.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/swerve-ai-review",
     "cluster": "power-local-llm"
   },
@@ -41230,6 +41230,87 @@
   },
   {
     "lang": "en",
+    "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
+    "excerpt": "Sablate review: subtitles, translation and burn-in for Windows and Mac that, per its maker, run on your own computer. Free tier, Pro $29 once. Not tested.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Sablate Rezension: Untertitel und Einbrennen für Windows und Mac",
+    "excerpt": "Sablate Rezension: Untertitel, Übersetzung und Einbrennen für Windows und Mac, laut Hersteller lokal. Gratis-Tarif, Pro $29 einmalig. Nicht getestet.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/de/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Sablate : sous-titres et incrustation pour Windows et Mac",
+    "excerpt": "Test de Sablate : sous-titres, traduction et incrustation pour Windows et Mac, en local selon l'éditeur. Offre gratuite, Pro $29 une fois. Non testé.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/fr/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Sablate レビュー：Windows・Mac向け字幕生成と焼き込みアプリ",
+    "excerpt": "Sablateのレビュー：Windows・Mac向け、開発元によるとお使いのPC上で動作する字幕生成・翻訳・焼き込みアプリ。無料版あり、Proは$29の買い切り。実機検証なし。",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/ja/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Sablate评测：适用于Windows和Mac的字幕与压制工具",
+    "excerpt": "Sablate评测：适用于Windows和Mac的字幕、翻译与压制工具，据开发者称在你的电脑上运行。提供免费版，Pro一次性$29，未经实测。",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/zh/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Sablate: subtítulos e incrustación para Windows y Mac",
+    "excerpt": "Reseña de Sablate: subtítulos, traducción e incrustación para Windows y Mac, locales según su fabricante. Plan gratis, Pro $29 único. No probada.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/es/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Sablate: legendas e gravação no vídeo para Windows e Mac",
+    "excerpt": "Análise do Sablate: legendas, tradução e gravação no vídeo para Windows e Mac, locais segundo o fabricante. Plano grátis, Pro $29 únicos. Não testado.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/pt/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Sablate: ترجمات نصية ودمجها في الفيديو لأجهزة Windows وMac",
+    "excerpt": "مراجعة Sablate: ترجمات نصية وترجمة ودمج في الفيديو لأجهزة Windows وMac تعمل على حاسوبك بحسب مطوّرها. خطة مجانية وPro بسعر $29 لمرة واحدة. لم يُختبر.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/ar/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Sablate 리뷰: Windows·Mac용 자막 생성과 번인",
+    "excerpt": "Sablate 리뷰: 개발사에 따르면 내 컴퓨터에서 실행되는 Windows·Mac용 자막, 번역, 번인 앱. 무료 플랜, Pro 일회성 $29. 직접 테스트하지 않았습니다.",
+    "publishDate": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "url": "/ko/power-local-llm/sablate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
     "excerpt": "TranscriptionSuite review: free GPL-3.0 speech-to-text app for Windows, macOS and Linux with speaker labels, live mode and an API. Not hands-on tested.",
     "publishDate": "2026-10-18",
@@ -42205,7 +42286,7 @@
     "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
     "excerpt": "Facet review: free MIT-licensed tool that scores, culls and browses photos locally, with face grouping and search. Setup, model licences, privacy.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42214,7 +42295,7 @@
     "title": "Facet-Rezension: lokale Foto-Bewertung, Aussortieren und Galerie",
     "excerpt": "Facet-Rezension: kostenloses MIT-Werkzeug zum lokalen Bewerten und Aussortieren von Fotos, mit Gesichtsgruppen und Suche. Lizenzen, Datenschutz.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42223,7 +42304,7 @@
     "title": "Avis sur Facet : notation, tri et galerie de photos en local",
     "excerpt": "Avis sur Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42232,7 +42313,7 @@
     "title": "Facetレビュー：ローカルで写真を採点・選別・閲覧",
     "excerpt": "Facetのレビュー。写真をローカルで採点・選別・閲覧できる無料のMITツールで、顔のグループ化と自然言語検索に対応。導入方法、モデルのライセンス、プライバシーを解説します。",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42241,7 +42322,7 @@
     "title": "Facet 评测：本地照片评分、筛选与图库",
     "excerpt": "Facet 评测：免费的 MIT 许可证工具，可在本地为照片评分、筛选和浏览，支持人脸分组与自然语言搜索。涵盖安装方式、模型许可证、隐私以及我们未能核实的内容。",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42250,7 +42331,7 @@
     "title": "Análisis de Facet: puntuación, selección y galería de fotos en local",
     "excerpt": "Análisis de Facet: herramienta gratuita MIT que puntúa, selecciona y explora fotos en local, con caras agrupadas y búsqueda. Licencias y privacidad.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42259,7 +42340,7 @@
     "title": "Análise do Facet: pontuação, seleção e galeria de fotos locais",
     "excerpt": "Análise do Facet: ferramenta gratuita MIT que pontua, seleciona e navega fotos localmente, com rostos agrupados e busca. Instalação, licenças, privacidade.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42268,7 +42349,7 @@
     "title": "مراجعة Facet: تقييم الصور وفرزها ومعرضها محليًا",
     "excerpt": "مراجعة Facet: أداة مجانية بترخيص MIT تقيّم الصور وتفرزها وتتصفحها محليًا، مع تجميع الوجوه والبحث بلغة طبيعية. الإعداد وتراخيص النماذج والخصوصية.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -42277,7 +42358,7 @@
     "title": "Facet 리뷰: 로컬 사진 점수화·선별·갤러리",
     "excerpt": "Facet 리뷰: 사진을 로컬에서 점수화·선별·탐색하는 무료 MIT 도구로, 얼굴 묶기와 자연어 검색을 지원합니다. 설치 방법, 모델 라이선스, 개인정보를 다룹니다.",
     "publishDate": "2026-10-28",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
@@ -49657,7 +49738,7 @@
     "title": "AquaVoice Review: Pricing, Privacy and AI Prompt Dictation",
     "excerpt": "AquaVoice review: current plans and prices, what its privacy pages say about hosting and data, platforms, and daily use dictating AI prompts.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49666,7 +49747,7 @@
     "title": "AquaVoice-Rezension: Preise, Datenschutz und Diktat für KI-Prompts",
     "excerpt": "AquaVoice-Rezension: aktuelle Tarife, was die Datenschutzseiten zu Hosting und Daten sagen, Plattformen und Alltagseinsatz beim Diktieren von KI-Prompts.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49675,7 +49756,7 @@
     "title": "Avis sur AquaVoice : tarifs, confidentialité et dictée pour vos prompts IA",
     "excerpt": "Avis AquaVoice : tarifs actuels, ce que disent les pages de confidentialité sur l’hébergement, plateformes et usage quotidien pour dicter des prompts IA.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49684,7 +49765,7 @@
     "title": "AquaVoiceレビュー:AIプロンプトのための音声ディクテーション",
     "excerpt": "AquaVoiceレビュー。Claude CodeとWhatsAppへの音声入力、話すとAIに文脈を多く渡せる理由、多言語での結果、日常利用で見えた制限をまとめました。",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49693,7 +49774,7 @@
     "title": "AquaVoice 评测：面向 AI 提示词的语音听写",
     "excerpt": "AquaVoice 评测：向 Claude Code 和 WhatsApp 口述提示词，为什么说话能给 AI 更多上下文，多语言表现，以及日常使用中发现的局限。",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49702,7 +49783,7 @@
     "title": "Reseña de AquaVoice: precios, privacidad y dictado por voz para prompts de IA",
     "excerpt": "Reseña de AquaVoice: planes y precios actuales, qué dicen sus páginas de privacidad sobre alojamiento y datos, plataformas y uso diario al dictar prompts.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49711,7 +49792,7 @@
     "title": "Análise do AquaVoice: preços, privacidade e ditado por voz para prompts de IA",
     "excerpt": "Análise do AquaVoice: planos e preços atuais, o que as páginas de privacidade dizem sobre hospedagem e dados, plataformas e uso diário para ditar prompts.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49720,7 +49801,7 @@
     "title": "مراجعة AquaVoice: الإملاء الصوتي لأوامر الذكاء الاصطناعي",
     "excerpt": "مراجعة AquaVoice: الأسعار الحالية وما تقوله صفحات الخصوصية عن الاستضافة والبيانات، والمنصات، والاستخدام اليومي لإملاء أوامر الذكاء الاصطناعي.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -49729,7 +49810,7 @@
     "title": "AquaVoice 리뷰: AI 프롬프트를 위한 음성 받아쓰기",
     "excerpt": "AquaVoice 리뷰: Claude Code와 WhatsApp에 프롬프트 받아쓰기, 말하기가 AI에 더 많은 맥락을 주는 이유, 다국어 결과, 일상 사용에서 확인한 한계.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/aquavoice-review",
     "cluster": "power-local-llm"
   },
@@ -52087,7 +52168,7 @@
     "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
     "excerpt": "What n8n's Self-hosted AI Starter Kit bundles (n8n, Ollama, Qdrant, PostgreSQL), how to install it, what its demo does, and n8n's testing-only note.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52096,7 +52177,7 @@
     "title": "Self-Hosted-AI-Starter-Kit-Rezension: n8n + Ollama + Qdrant in einer Compose-Datei",
     "excerpt": "Was das n8n Self-hosted AI Starter Kit bündelt (n8n, Ollama, Qdrant, PostgreSQL), Installation, Demo-Workflow und der Hinweis „nur zum Testen\".",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52105,7 +52186,7 @@
     "title": "Self-Hosted AI Starter Kit: test de n8n + Ollama + Qdrant en un seul fichier Compose",
     "excerpt": "Ce que contient le Self-hosted AI Starter Kit de n8n (n8n, Ollama, Qdrant, PostgreSQL), l'installation, le workflow de démo et la mention « tests ».",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52114,7 +52195,7 @@
     "title": "Self-Hosted AI Starter Kitレビュー: n8n + Ollama + Qdrantを1つのComposeファイルで",
     "excerpt": "n8n公式のSelf-hosted AI Starter Kitが含む構成（n8n、Ollama、Qdrant、PostgreSQL）、導入手順、デモの内容、n8nが示す「テスト用」の注記を解説します。",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52123,7 +52204,7 @@
     "title": "Self-Hosted AI Starter Kit评测：一个Compose文件搞定n8n + Ollama + Qdrant",
     "excerpt": "介绍n8n的Self-hosted AI Starter Kit包含的组件（n8n、Ollama、Qdrant、PostgreSQL）、安装步骤、演示工作流的内容，以及n8n文档中的“仅供测试”说明。",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52132,7 +52213,7 @@
     "title": "Self-Hosted AI Starter Kit: análisis de n8n + Ollama + Qdrant en un solo archivo Compose",
     "excerpt": "Qué incluye el Self-hosted AI Starter Kit de n8n (n8n, Ollama, Qdrant, PostgreSQL), su instalación, qué hace la demo y la nota «solo para pruebas».",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52141,7 +52222,7 @@
     "title": "Self-Hosted AI Starter Kit: análise de n8n + Ollama + Qdrant em um único arquivo Compose",
     "excerpt": "O que o Self-hosted AI Starter Kit da n8n reúne (n8n, Ollama, Qdrant, PostgreSQL), a instalação, o que a demo faz e o aviso «apenas para testes».",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52150,7 +52231,7 @@
     "title": "مراجعة Self-Hosted AI Starter Kit: n8n وOllama وQdrant في ملف Compose واحد",
     "excerpt": "ما يضمّه Self-hosted AI Starter Kit من n8n (n8n وOllama وQdrant وPostgreSQL)، وطريقة التثبيت، والعرض التجريبي، وتنبيه «للاختبار فقط».",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -52159,7 +52240,7 @@
     "title": "Self-Hosted AI Starter Kit 리뷰: 하나의 Compose 파일로 만나는 n8n + Ollama + Qdrant",
     "excerpt": "n8n Self-hosted AI Starter Kit 구성(n8n, Ollama, Qdrant, PostgreSQL), 설치 방법, 데모 워크플로, '테스트 전용' 안내를 정리했습니다.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/self-hosted-ai-starter-kit-review",
     "cluster": "power-local-llm"
   },
@@ -54436,7 +54517,7 @@
     "title": "Lucebox Review: Hand-Tuned Inference Engine and the Company Behind It",
     "excerpt": "Lucebox is a free, Apache-2.0 inference engine from AGMI AI, Inc., which also sells the Lucebox Zero 495 workstation. What it does and who it fits.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54445,7 +54526,7 @@
     "title": "Lucebox Review: Handoptimierte Inferenz-Engine und das Unternehmen dahinter",
     "excerpt": "Lucebox ist eine kostenlose Apache-2.0-Inferenz-Engine von AGMI AI, Inc., die auch die Workstation Lucebox Zero 495 verkauft. Funktion und Eignung.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54454,7 +54535,7 @@
     "title": "Lucebox Review: moteur d'inférence optimisé à la main et entreprise derrière",
     "excerpt": "Lucebox est un moteur d'inférence gratuit sous Apache-2.0 d'AGMI AI, Inc., qui vend aussi la station Lucebox Zero 495. Rôle, installation, public.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54463,7 +54544,7 @@
     "title": "Luceboxレビュー:手作業でチューニングされた推論エンジンと開発企業",
     "excerpt": "Luceboxは、GPU別に手作業でチューニングされたカーネルと投機的デコードを備えた無料・オープンソースのローカル推論サーバーです。インストール方法、性能、向いている人を解説します。",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54472,7 +54553,7 @@
     "title": "Lucebox评测:手工调优的推理引擎及其背后的公司",
     "excerpt": "Lucebox是一款免费、开源的本地推理服务器,提供针对特定GPU手工调优的内核和推测解码。以下是它的安装方式、性能表现,以及适合哪些人使用。",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54481,7 +54562,7 @@
     "title": "Lucebox Review: motor de inferencia ajustado a mano y la empresa detrás",
     "excerpt": "Lucebox es un motor de inferencia gratuito Apache-2.0 de AGMI AI, Inc., que también vende la estación Lucebox Zero 495. Qué hace y para quién es.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54490,7 +54571,7 @@
     "title": "Lucebox Review: motor de inferência ajustado à mão e a empresa por trás",
     "excerpt": "O Lucebox é um motor de inferência gratuito Apache-2.0 da AGMI AI, Inc., que também vende a estação Lucebox Zero 495. O que faz e para quem serve.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54499,7 +54580,7 @@
     "title": "مراجعة Lucebox: محرك استدلال مضبوط يدويًا والشركة التي تقف خلفه",
     "excerpt": "Lucebox خادم استدلال محلي مجاني ومفتوح المصدر بنواة محسَّنة يدويًا لكل GPU وفك ترميز تخميني. إليك كيفية تثبيته وأدائه ولمن يناسب.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -54508,7 +54589,7 @@
     "title": "Lucebox 리뷰: 직접 튜닝한 추론 엔진과 그 뒤의 회사",
     "excerpt": "Lucebox는 GPU별로 직접 튜닝된 커널과 투기적 디코딩을 제공하는 무료 오픈소스 로컬 추론 서버입니다. 설치 방법, 성능, 적합한 대상을 설명합니다.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/power-local-llm/lucebox-review",
     "cluster": "power-local-llm"
   },
@@ -56080,8 +56161,8 @@
   },
   {
     "lang": "ja",
-    "title": "Q4_K_M量化とは何ですか？",
-    "excerpt": "Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。",
+    "title": "Q4_K_M量子化とは何ですか？",
+    "excerpt": "Q4_K_Mは中品質のK-Quant 4ビット量子化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-11-06",
     "url": "/ja/prompt-bites/what-is-q4-k-m-quantization",
@@ -56116,7 +56197,7 @@
   },
   {
     "lang": "ar",
-    "title": "ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟",
+    "title": "ما هو تكميم ⁨Q4⁩_⁨K⁩_⁨M⁩؟",
     "excerpt": "Q4_K_M تكميم 4-bit من عائلة k-quant بجودة متوسطة: حيرة أقل من Q4_0 وحجم أصغر من Q8_0. ملف Llama 3.1 8B بصيغته 4.58 GiB. استخدمه افتراضيًا في Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-11-06",
@@ -56137,7 +56218,7 @@
     "title": "Q4_K_M vs Q8_0: Which Should You Pick?",
     "excerpt": "Q4_K_M for 8 GB VRAM or less, Q8_0 for 12+ GB. On Llama 3 8B, Q4_K_M is 4.58 GiB at +2.8% perplexity vs f16; Q8_0 is 7.96 GiB at +0.02%. Sourced.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56146,7 +56227,7 @@
     "title": "Q4_K_M vs. Q8_0: Was sollten Sie wählen?",
     "excerpt": "Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Bei Llama 3 8B ist Q4_K_M 4,58 GiB groß (+2,8 % Perplexität vs. f16), Q8_0 7,96 GiB (+0,02 %).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56155,7 +56236,7 @@
     "title": "Q4_K_M ou Q8_0 : lequel choisir ?",
     "excerpt": "Q4_K_M avec 8 Go de VRAM ou moins, Q8_0 dès 12 Go. Sur Llama 3 8B, Q4_K_M fait 4,58 GiB (+2,8 % de perplexité vs f16), Q8_0 7,96 GiB (+0,02 %).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56164,7 +56245,7 @@
     "title": "Q4_K_M vs Q8_0：どちらを選ぶべきですか？",
     "excerpt": "VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Llama 3 8Bではf16比でQ4_K_Mは4.58 GiB・パープレキシティ+2.8%、Q8_0は7.96 GiB・+0.02%です。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56173,7 +56254,7 @@
     "title": "Q4_K_M与Q8_0：该如何选择？",
     "excerpt": "显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。在Llama 3 8B上，Q4_K_M为4.58 GiB，困惑度比f16高2.8%；Q8_0为7.96 GiB，仅高0.02%。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56182,7 +56263,7 @@
     "title": "Q4_K_M vs Q8_0: ¿cuál elegir?",
     "excerpt": "Q4_K_M con 8 GB de VRAM o menos, Q8_0 con 12+ GB. En Llama 3 8B, Q4_K_M ocupa 4,58 GiB (+2,8 % de perplejidad vs f16); Q8_0 ocupa 7,96 GiB (+0,02 %).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56191,7 +56272,7 @@
     "title": "Q4_K_M vs Q8_0: qual escolher?",
     "excerpt": "Q4_K_M com 8 GB de VRAM ou menos, Q8_0 com 12+ GB. No Llama 3 8B, Q4_K_M tem 4,58 GiB (+2,8% de perplexidade vs f16); Q8_0 tem 7,96 GiB (+0,02%).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56200,7 +56281,7 @@
     "title": "⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩: أيهما تختار؟",
     "excerpt": "استخدم Q4_K_M مع 8 GB VRAM أو أقل، وQ8_0 مع 12+ GB. في Llama 3 8B حجم Q4_K_M هو 4.58 GiB (حيرة أعلى بـ 2.8% من f16) وحجم Q8_0 هو 7.96 GiB (+0.02%).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -56209,7 +56290,7 @@
     "title": "Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?",
     "excerpt": "VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0. Llama 3 8B: Q4_K_M 4.58 GiB(퍼플렉시티 +2.8%), Q8_0 7.96 GiB(+0.02%).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-bites/q4-k-m-vs-q8-0",
     "cluster": "prompt-bites"
   },
@@ -59701,7 +59782,7 @@
     "title": "Best Quantization for 6 GB VRAM: Which Level Fits?",
     "excerpt": "Pick Q4_K_M for 8B models on 6 GB VRAM: a 4.6–5.0 GB file plus a 4k-token KV cache still fits. Q5_K_M is tight; Q6_K and Q8_0 do not fit. Sizes sourced.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59710,7 +59791,7 @@
     "title": "Beste Quantisierung für 6 GB VRAM: Welche Stufe passt?",
     "excerpt": "Q4_K_M für 8B-Modelle bei 6 GB VRAM: 4,6–5,0 GB Datei plus 4k-Token-KV-Cache passen noch. Q5_K_M ist knapp, Q6_K und Q8_0 passen nicht. Mit Quellen.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59719,7 +59800,7 @@
     "title": "Meilleure quantisation pour 6 Go de VRAM : quel niveau choisir ?",
     "excerpt": "Q4_K_M pour les modèles 8B avec 6 Go de VRAM : un fichier de 4.6–5.0 Go plus un cache KV de 4k tokens tient encore. Q5_K_M est juste ; Q6_K et Q8_0 non.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59728,7 +59809,7 @@
     "title": "6 GB VRAM に最適な量子化レベルは？",
     "excerpt": "6 GB VRAMの8BモデルはQ4_K_Mが適合：4.6〜5.0 GBのファイルに4kトークンのKVキャッシュを足しても収まります。Q5_K_Mは余裕なし、Q6_K以上は不可。",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59737,7 +59818,7 @@
     "title": "6 GB 显存最佳量化等级是哪个？",
     "excerpt": "6 GB 显存跑 8B 模型选 Q4_K_M：4.6–5.0 GB 的文件加上 4k tokens 的 KV 缓存仍可容纳。Q5_K_M 余量很小，Q6_K 及以上放不下。",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59746,7 +59827,7 @@
     "title": "¿Mejor cuantización para 6 GB de VRAM: qué nivel cabe?",
     "excerpt": "Q4_K_M para modelos 8B con 6 GB de VRAM: un archivo de 4.6–5.0 GB más una caché KV de 4k tokens aún cabe. Q5_K_M queda justo; Q6_K y Q8_0 no caben.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59755,7 +59836,7 @@
     "title": "Melhor quantização para 6 GB de VRAM: qual nível cabe?",
     "excerpt": "Q4_K_M para modelos 8B com 6 GB de VRAM: um arquivo de 4.6–5.0 GB mais cache KV de 4k tokens ainda cabe. Q5_K_M fica apertado; Q6_K e Q8_0 não cabem.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59764,7 +59845,7 @@
     "title": "أفضل تكميم لـ⁨6 GB VRAM⁩: أي مستوى يتسع؟",
     "excerpt": "اختر Q4_K_M لنماذج 8B مع 6 GB VRAM: ملف بحجم 4.6–5.0 GB مع ذاكرة KV لسياق 4k رمز يتسع. Q5_K_M ضيق، و Q6_K و Q8_0 لا يتسعان.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -59773,7 +59854,7 @@
     "title": "6GB VRAM에 최적화된 양자화: 어떤 레벨이 적합한가?",
     "excerpt": "6GB VRAM의 8B 모델에는 Q4_K_M이 적합합니다. 4.6~5.0GB 파일과 4k 토큰 KV 캐시가 들어갑니다. Q5_K_M은 여유가 없고 Q6_K 이상은 불가합니다.",
     "publishDate": "2026-05-23",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-bites/best-quantization-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62372,81 +62453,81 @@
   {
     "lang": "en",
     "title": "GGUF vs GPTQ vs AWQ: Differences, Speed and Which to Use",
-    "excerpt": "GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-only formats for vLLM serving. Compare speed, quality, tools and commands.",
+    "excerpt": "GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-focused formats for vLLM serving. Compare speed, quality, tools and commands.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "GGUF vs. GPTQ vs. AWQ: Unterschiede, Geschwindigkeit und Auswahl",
-    "excerpt": "GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen.",
+    "excerpt": "GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-orientierte Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/de/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "GGUF vs GPTQ vs AWQ : différences, vitesse et choix",
-    "excerpt": "GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats GPU pour vLLM. Comparez vitesse, qualité, outils et commandes.",
+    "excerpt": "GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats orientés GPU pour vLLM. Comparez vitesse, qualité, outils et commandes.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/fr/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "GGUF vs GPTQ vs AWQ: 違い・速度・選び方",
-    "excerpt": "GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU専用形式です。速度・品質・ツール・コマンドを比較します。",
+    "excerpt": "GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU中心の形式です。速度・品質・ツール・コマンドを比較します。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/ja/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "GGUF 对比 GPTQ 对比 AWQ：差异、速度与选择",
-    "excerpt": "GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM 的纯 GPU 格式。对比速度、质量、工具与命令。",
+    "excerpt": "GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM、以 GPU 为主的格式。对比速度、质量、工具与命令。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/zh/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "GGUF vs GPTQ vs AWQ: diferencias, velocidad y cuál usar",
-    "excerpt": "GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos solo GPU para vLLM. Compara velocidad, calidad, herramientas y comandos.",
+    "excerpt": "GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos orientados a GPU para vLLM. Compara velocidad, calidad, herramientas y comandos.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/es/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "GGUF vs GPTQ vs AWQ: diferenças, velocidade e qual usar",
-    "excerpt": "GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos só de GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos.",
+    "excerpt": "GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos voltados a GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/pt/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "GGUF مقابل GPTQ مقابل AWQ: الفروق والسرعة وأيّها تختار",
-    "excerpt": "يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان لـ GPU فقط لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر.",
+    "excerpt": "يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان موجَّهان أساسًا لـ GPU لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/ar/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "GGUF 대 GPTQ 대 AWQ: 차이, 속도, 선택 기준",
-    "excerpt": "GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 전용 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다.",
+    "excerpt": "GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 중심 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-06",
     "url": "/ko/prompt-bites/gguf-vs-gptq-vs-awq",
     "cluster": "prompt-bites"
   },
