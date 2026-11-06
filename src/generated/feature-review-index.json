@@ -1054,6 +1054,11 @@
     "urlSlug": "trilium-notes-review",
     "url": "/power-local-llm/trilium-notes-review"
   },
+  "ramen": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ramen-review",
+    "url": "/power-local-llm/ramen-review"
+  },
   "llm-vision": {
     "cluster": "power-local-llm",
     "urlSlug": "llm-vision-review",
