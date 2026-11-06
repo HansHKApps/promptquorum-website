@@ -63,7 +63,7 @@ BOUNDARIES
 CATEGORY
 - With every answer call set_category once with one key from the category list, or "default". Call it BEFORE you write the answer text, and never repeat or restate the answer after a tool call.`
 
-export function buildSystemPrompt(pageLang = 'de'): string {
+export function buildSystemPrompt(pageLang = 'de', detectedLang?: string): string {
   const categoryList = ASK_HANS_CATEGORIES.map((c) => `- ${c.key}: ${c.label_en}`).join('\n')
   const linkList = ASK_HANS_CATEGORIES.filter((c) => c.key !== 'default')
     .map((c) => `- ${c.key}: ${c.links.map((l) => `${l.title} https://www.promptquorum.com${l.url.replace(/^\/(?:de|fr|ja|zh|es|pt|ar|ko)(?=\/|$)/, '')}`).join(' | ')}`)
@@ -71,7 +71,7 @@ export function buildSystemPrompt(pageLang = 'de'): string {
   return `${ASK_HANS_SYSTEM_PROMPT}
 
 PAGE LANGUAGE: ${pageLang} (the language of the page the visitor is on; use it only when the message language is unclear)
-
+${detectedLang ? `DETECTED LANGUAGE OF THE LATEST MESSAGE: ${detectedLang} (automatic detection; it is the SITE LANGUAGE unless the message is clearly in another language). Tool calls already use it by default.\n` : ''}
 CATEGORY LIST (keys for set_category)
 ${categoryList}
 

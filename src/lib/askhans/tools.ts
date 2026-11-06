@@ -36,7 +36,7 @@ import { normalizePagePath } from './paths'
 import { topicsFromToolInput, topicsFromToolResult, mergeTopics, type AnswerTopics } from './topics'
 
 const OS = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
-const LANG = z.string().optional().describe('Language code; defaults to the visitor\'s page language')
+const LANG = z.string().optional().describe('Ignored: the answer language is fixed by the visitor\'s message')
 
 interface ToolDef {
   description: string
@@ -59,13 +59,13 @@ const TOOLS: Record<string, ToolDef> = {
       limit: z.number().int().min(1).max(10).optional(),
     }),
     run: (a: { query: string; lang?: string; cluster?: string; limit?: number }, c) =>
-      searchPromptquorum({ ...a, lang: a.lang ?? c.lang, limit: a.limit ?? 5 }),
+      searchPromptquorum({ ...a, lang: c.lang, limit: a.limit ?? 5 }),
   },
   get_article: {
     description: 'Full content of one PromptQuorum article by cluster + slug (taken from a search result URL). The result carries the article url: link it whenever you use its content.',
     schema: z.object({ cluster: z.string(), slug: z.string(), lang: LANG }),
     run: (a: { cluster: string; slug: string; lang?: string }, c) => {
-      const res = getArticle({ ...a, lang: a.lang ?? c.lang })
+      const res = getArticle({ ...a, lang: c.lang })
       // getArticle returns no URL; without one the model cannot link the article it just read from.
       const prefix = res.lang === 'en' ? '' : `/${res.lang}`
       const title = typeof res.article.title === 'string' ? res.article.title : res.slug
@@ -219,7 +219,7 @@ const TOOLS: Record<string, ToolDef> = {
       lang: LANG,
       limit: z.number().int().min(1).max(10).optional(),
     }),
-    run: (a: { app?: string; topic?: string; lang?: string; limit?: number }, c) => findRelatedContent({ ...a, lang: a.lang ?? c.lang }),
+    run: (a: { app?: string; topic?: string; lang?: string; limit?: number }, c) => findRelatedContent({ ...a, lang: c.lang }),
   },
 }
 
