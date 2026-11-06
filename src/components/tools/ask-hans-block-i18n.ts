@@ -265,6 +265,41 @@ const ASK_UI = {
     ar: 'الموضوع تصنيف واحد لكل سؤال. تعرض الأدوات والتطبيقات والفئات ما بحث عنه Ask Hans، لذا قد يظهر السؤال الواحد في عدة صفوف ولا يساوي مجموع الجداول عدد الأسئلة. تبدأ الجداول من اليوم الذي بدأ فيه العدّ.',
     ko: '주제는 질문마다 하나의 라벨입니다. 도구, 앱, 카테고리는 Ask Hans가 조회한 내용을 보여 주므로 질문 하나가 여러 행에 나타날 수 있으며, 각 표의 합계는 질문 수와 일치하지 않습니다. 표는 집계를 시작한 날부터 시작됩니다.',
   },
+  ratingHeading: {
+    en: 'Ratings', de: 'Bewertungen', fr: 'Évaluations', ja: '評価', zh: '评分',
+    es: 'Valoraciones', pt: 'Avaliações', ar: 'التقييمات', ko: '평가',
+  },
+  ratingCount: {
+    en: 'People who rated', de: 'Personen, die bewertet haben', fr: "Personnes ayant noté", ja: '評価した人数', zh: '评分人数',
+    es: 'Personas que valoraron', pt: 'Pessoas que avaliaram', ar: 'عدد من قيّموا', ko: '평가한 사람 수',
+  },
+  ratingAvg: {
+    en: 'Average stars (of 5)', de: 'Durchschnitt Sterne (von 5)', fr: 'Moyenne en étoiles (sur 5)', ja: '平均の星の数（5点満点）', zh: '平均星级（满分 5）',
+    es: 'Estrellas de media (de 5)', pt: 'Média de estrelas (de 5)', ar: 'متوسط النجوم (من 5)', ko: '평균 별점 (5점 만점)',
+  },
+  ratingLow: {
+    en: 'Rated 1 to 3 stars', de: 'Mit 1 bis 3 Sternen bewertet', fr: 'Notés de 1 à 3 étoiles', ja: '星1〜3の評価', zh: '1 至 3 星评分',
+    es: 'Valoradas con 1 a 3 estrellas', pt: 'Avaliadas com 1 a 3 estrelas', ar: 'تقييمات من 1 إلى 3 نجوم', ko: '별 1~3개 평가',
+  },
+  ratingMail: {
+    en: 'Of those, started an email to me', de: 'Davon haben mir eine E-Mail begonnen', fr: 'Dont ont commencé un e-mail', ja: 'うちメールを書き始めた人数', zh: '其中开始写邮件的人数',
+    es: 'De ellas, empezaron un correo', pt: 'Dessas, começaram um e-mail', ar: 'منهم من بدأ رسالة بريد', ko: '그중 이메일 작성을 시작한 수',
+  },
+  ratingNote: {
+    en: 'Anonymous: one star click counts once, no names, no IP addresses, no question text. "Started an email" counts clicks on the write-email button in the pop-up; it cannot see whether the email was sent.',
+    de: 'Anonym: Ein Sternklick zählt einmal, keine Namen, keine IP-Adressen, kein Fragetext. „E-Mail begonnen“ zählt Klicks auf die Schaltfläche zum E-Mail-Schreiben im Pop-up; ob die E-Mail abgeschickt wurde, ist nicht erkennbar.',
+    fr: "Anonyme : un clic sur une étoile compte une fois, sans nom, sans adresse IP, sans texte de question. « E-mail commencé » compte les clics sur le bouton d'écriture dans la fenêtre ; on ne voit pas si l'e-mail a été envoyé.",
+    ja: '匿名です。星のクリックは1回として数え、氏名、IPアドレス、質問文は保存しません。「メールを書き始めた人数」はポップアップのメール作成ボタンのクリック数で、送信されたかどうかは分かりません。',
+    zh: '匿名统计：点击一次星星计一次，不含姓名、IP 地址和提问内容。“开始写邮件”统计的是弹窗中写邮件按钮的点击次数，无法得知邮件是否已发送。',
+    es: 'Anónimo: un clic en una estrella cuenta una vez, sin nombres, sin direcciones IP, sin el texto de las preguntas. «Empezaron un correo» cuenta los clics en el botón de escribir del aviso; no se sabe si el correo llegó a enviarse.',
+    pt: 'Anônimo: um clique em uma estrela conta uma vez, sem nomes, sem endereços IP, sem o texto das perguntas. «Começaram um e-mail» conta os cliques no botão de escrever do aviso; não dá para saber se o e-mail foi enviado.',
+    ar: 'مجهول الهوية: نقرة النجمة تُحسب مرة واحدة، بلا أسماء ولا عناوين IP ولا نص الأسئلة. يحصي «بدأ رسالة بريد» النقرات على زر كتابة الرسالة في النافذة، ولا يمكن معرفة ما إذا أُرسلت الرسالة.',
+    ko: '익명 집계입니다. 별 클릭은 1회로 세며 이름, IP 주소, 질문 내용은 저장하지 않습니다. "이메일 작성 시작"은 팝업의 이메일 작성 버튼 클릭 수이며, 실제 발송 여부는 알 수 없습니다.',
+  },
+  ratingNone: {
+    en: 'No ratings yet', de: 'Noch keine Bewertungen', fr: 'Pas encore d’évaluations', ja: 'まだ評価はありません', zh: '暂无评分',
+    es: 'Aún no hay valoraciones', pt: 'Ainda não há avaliações', ar: 'لا توجد تقييمات بعد', ko: '아직 평가가 없습니다',
+  },
   statCalls: {
     en: 'Tool calls', de: 'Werkzeugaufrufe', fr: "Appels d'outils", ja: 'ツール呼び出し数', zh: '工具调用次数',
     es: 'Llamadas a herramientas', pt: 'Chamadas de ferramentas', ar: 'استدعاءات الأدوات', ko: '도구 호출 수',

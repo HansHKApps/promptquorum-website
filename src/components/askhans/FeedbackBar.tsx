@@ -91,6 +91,8 @@ export function FeedbackBar({ lastQuestion, lastAnswer }: { lastQuestion?: strin
     } catch {
       // clipboard can be unavailable (insecure context / no permission): the email still has the details
     }
+    // anonymous counter for the public report: how many people chose to write (no rating, no text)
+    void fetch('/api/ask/feedback', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ event: 'mail', lang }), keepalive: true }).catch(() => {})
     window.location.href = `mailto:${ASK_HANS_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 

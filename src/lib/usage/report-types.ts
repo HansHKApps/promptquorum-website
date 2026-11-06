@@ -16,6 +16,16 @@ export interface ReportRow {
   allTime?: number
 }
 
+/** Ask Hans star-rating feedback (anonymous counters). `mail` = visitors who pressed "write an email" in the low-rating pop-up. */
+export interface FeedbackStats {
+  count: WindowCounts
+  sum: WindowCounts
+  /** ratings of 1-3 stars */
+  low: WindowCounts
+  mail: WindowCounts
+  all: { count: number; sum: number; low: number; mail: number }
+}
+
 export interface UsageReportBase {
   generatedAt: string
   /** ISO date (UTC) the all-visitor totals started, or null */
@@ -34,6 +44,8 @@ export interface UsageReportBase {
   dirCats: ReportRow[]
   tools: ReportRow[]
   langs: ReportRow[]
+  /** Ask Hans only */
+  feedback?: FeedbackStats
 }
 
 export const zeroCounts = (): WindowCounts => ({ today: 0, yesterday: 0, last7: 0, last30: 0 })
