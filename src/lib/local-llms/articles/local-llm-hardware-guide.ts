@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-en.svg',
-          imageCaption: 'Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified (about 8 GB left after macOS) is the practical minimum for 7B models on a Mac.',
+          imageCaption: 'Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, from $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified (about 8 GB left after macOS) is the practical minimum for 7B models on a Mac.',
           imageAlt: 'Local LLM hardware on Mac: unified memory tiers from the 8 GB M-series to the Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
@@ -1296,7 +1296,7 @@ schema: {
           ],
           columns: ['Mac', 'Memoria GPU', 'Mejor para', 'Limitación'],
           image: '/images/mac-hardware-comparison-es.svg',
-          imageCaption: 'Comparación de hardware Mac: serie M 8 GB (modelos de 3-4B), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B en Q4_K_M ~12-15 tok/seg, $2.499), Mac Studio M5 Ultra (hasta 512GB, capacidad para GLM-5.3, $5.499). 16 GB unificada (unos 8 GB libres tras macOS) es el mínimo práctico para modelos de 7B en un Mac.',
+          imageCaption: 'Comparación de hardware Mac: serie M 8 GB (modelos de 3-4B), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B en Q4_K_M ~12-15 tok/seg, desde $2.499), Mac Studio M5 Ultra (hasta 512GB, capacidad para GLM-5.3, $5.499). 16 GB unificada (unos 8 GB libres tras macOS) es el mínimo práctico para modelos de 7B en un Mac.',
           imageAlt: 'Hardware para LLM locales en Mac: niveles de memoria unificada, de la serie M de 8 GB al Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
@@ -2145,7 +2145,7 @@ schema: {
           ],
           columns: ['Mac', 'ذاكرة GPU', 'الأفضل لـ', 'القيد'],
           image: '/images/mac-hardware-comparison-ar.svg',
-          imageCaption: 'مقارنة عتاد Mac: سلسلة M بذاكرة 8 GB (نماذج 3-4B)، M3 Pro 16" (18GB، 7-8B)، Mac mini M6 (16–32GB، 7-8B عند 16GB / 14B عند 32GB، $899)، M5 Pro (64GB، 32B، $1,699)، M5 Max (128GB، 70B عند Q4_K_M ~12-15 tok/sec، $2,499)، Mac Studio M5 Ultra (حتى 512GB، سعة لـ GLM-5.3، $5,499). 16 GB موحدة (يبقى نحو 8 GB بعد macOS) هو الحد الأدنى العملي لنماذج 7B على Mac.',
+          imageCaption: 'مقارنة عتاد Mac: سلسلة M بذاكرة 8 GB (نماذج 3-4B)، M3 Pro 16" (18GB، 7-8B)، Mac mini M6 (16–32GB، 7-8B عند 16GB / 14B عند 32GB، $899)، M5 Pro (64GB، 32B، $1,699)، M5 Max (128GB، 70B عند Q4_K_M ~12-15 tok/sec، من $2,499)، Mac Studio M5 Ultra (حتى 512GB، سعة لـ GLM-5.3، $5,499). 16 GB موحدة (يبقى نحو 8 GB بعد macOS) هو الحد الأدنى العملي لنماذج 7B على Mac.',
           imageAlt: 'عتاد Mac لـ LLM المحلي: مستويات الذاكرة الموحدة من سلسلة M بسعة 8 GB إلى Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
@@ -2994,7 +2994,7 @@ schema: {
           ],
           columns: ['Mac', 'Memória de GPU', 'Melhor Para', 'Limitação'],
           image: '/images/mac-hardware-comparison-pt.svg',
-          imageCaption: 'Comparação de hardware Mac: série M 8 GB (modelos 3-4B), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B em Q4_K_M ~12-15 tok/sec, $2.499), Mac Studio M5 Ultra (até 512GB, capacidade para GLM-5.3, $5.499). 16 GB unificada (cerca de 8 GB livres depois do macOS) é o mínimo prático para modelos 7B em um Mac.',
+          imageCaption: 'Comparação de hardware Mac: série M 8 GB (modelos 3-4B), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B em Q4_K_M ~12-15 tok/sec, a partir de $2.499), Mac Studio M5 Ultra (até 512GB, capacidade para GLM-5.3, $5.499). 16 GB unificada (cerca de 8 GB livres depois do macOS) é o mínimo prático para modelos 7B em um Mac.',
           imageAlt: 'Hardware para LLM local no Mac: níveis de memória unificada, da série M de 8 GB ao Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
@@ -3843,7 +3843,7 @@ schema: {
           ],
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-de.svg',
-          imageCaption: 'Mac-Hardware-Vergleich: 8 GB M-Serie (3-4B-Modelle), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B bei Q4_K_M ~12-15 tok/sec, $2.499), Mac Studio M5 Ultra (bis 512GB, GLM-5.3-Kapazität, $5.499). 16 GB unified (rund 8 GB frei nach macOS) ist das praktische Minimum für 7B-Modelle auf einem Mac.',
+          imageCaption: 'Mac-Hardware-Vergleich: 8 GB M-Serie (3-4B-Modelle), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B bei Q4_K_M ~12-15 tok/sec, ab $2.499), Mac Studio M5 Ultra (bis 512GB, GLM-5.3-Kapazität, $5.499). 16 GB unified (rund 8 GB frei nach macOS) ist das praktische Minimum für 7B-Modelle auf einem Mac.',
           imageAlt: 'Mac-Hardware für lokale LLMs: Stufen des einheitlichen Speichers von der 8-GB-M-Serie bis zum Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
@@ -4693,7 +4693,7 @@ schema: {
           ],
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-fr.svg',
-          imageCaption: 'Comparaison du matériel Mac : série M 8 Go (modèles 3-4B), M3 Pro 16" (18 Go, 7-8B), Mac mini M6 (16–32 Go, 7-8B avec 16 Go / 14B avec 32 Go, 899 $), M5 Pro (64 Go, 32B, 1 699 $), M5 Max (128 Go, 70B en Q4_K_M ~12-15 tok/sec, 2 499 $), Mac Studio M5 Ultra (jusqu\'à 512 Go, capacité GLM-5.3, 5 499 $). 16 Go unifiés (environ 8 Go libres après macOS) est le minimum pratique pour les modèles 7B sur un Mac.',
+          imageCaption: 'Comparaison du matériel Mac : série M 8 Go (modèles 3-4B), M3 Pro 16" (18 Go, 7-8B), Mac mini M6 (16–32 Go, 7-8B avec 16 Go / 14B avec 32 Go, 899 $), M5 Pro (64 Go, 32B, 1 699 $), M5 Max (128 Go, 70B en Q4_K_M ~12-15 tok/sec, à partir de 2 499 $), Mac Studio M5 Ultra (jusqu\'à 512 Go, capacité GLM-5.3, 5 499 $). 16 Go unifiés (environ 8 Go libres après macOS) est le minimum pratique pour les modèles 7B sur un Mac.',
           imageAlt: 'Matériel Mac pour LLM local : niveaux de mémoire unifiée, de la série M 8 Go au Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
@@ -5542,7 +5542,7 @@ schema: {
           ],
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-ja.svg',
-          imageCaption: 'Macハードウェア比較：8 GB Mシリーズ（3〜4Bモデル）、M3 Pro 16"（18GB、7〜8B）、Mac mini M6（16〜32GB、16GBで7-8B / 32GBで14B、$899）、M5 Pro（64GB、32B、$1,699）、M5 Max（128GB、70BをQ4_K_Mで約12〜15 tok/sec、$2,499）、Mac Studio M5 Ultra（最大512GB、GLM-5.3級の容量、$5,499）。16 GBユニファイド（macOS分を除いて約8 GB）がMacで7Bモデルを使うための実用的な最小値です。',
+          imageCaption: 'Macハードウェア比較：8 GB Mシリーズ（3〜4Bモデル）、M3 Pro 16"（18GB、7〜8B）、Mac mini M6（16〜32GB、16GBで7-8B / 32GBで14B、$899）、M5 Pro（64GB、32B、$1,699）、M5 Max（128GB、70BをQ4_K_Mで約12〜15 tok/sec、$2,499から）、Mac Studio M5 Ultra（最大512GB、GLM-5.3級の容量、$5,499）。16 GBユニファイド（macOS分を除いて約8 GB）がMacで7Bモデルを使うための実用的な最小値です。',
           imageAlt: 'MacでローカルLLMを動かすハードウェア：8GB Mシリーズ〜Mac Studio M5 Ultraのユニファイドメモリ階層',
         },
         serverVsConsumer: {
@@ -6391,7 +6391,7 @@ schema: {
           ],
           columns: ['Mac', 'GPU内存', '最适合', '局限'],
           image: '/images/mac-hardware-comparison-zh.svg',
-          imageCaption: 'Mac 硬件对比：8 GB M 系列（3-4B 模型），M3 Pro 16"（18GB，7-8B），Mac mini M6（16–32GB，16GB 时 7-8B / 32GB 时 14B，$899），M5 Pro（64GB，32B，$1,699），M5 Max（128GB，Q4_K_M 下的 70B ~12-15 tok/sec，$2,499），Mac Studio M5 Ultra（最高 512GB，具备 GLM-5.3 级容量，$5,499）。16 GB 统一内存（扣除 macOS 后约剩 8 GB）是 Mac 上 7B 模型的实用最低配置。',
+          imageCaption: 'Mac 硬件对比：8 GB M 系列（3-4B 模型），M3 Pro 16"（18GB，7-8B），Mac mini M6（16–32GB，16GB 时 7-8B / 32GB 时 14B，$899），M5 Pro（64GB，32B，$1,699），M5 Max（128GB，Q4_K_M 下的 70B ~12-15 tok/sec，起售价 $2,499），Mac Studio M5 Ultra（最高 512GB，具备 GLM-5.3 级容量，$5,499）。16 GB 统一内存（扣除 macOS 后约剩 8 GB）是 Mac 上 7B 模型的实用最低配置。',
           imageAlt: 'Mac上的本地LLM硬件：从8GB M系列到Mac Studio M5 Ultra的统一内存档位',
         },
         serverVsConsumer: {
@@ -7237,7 +7237,7 @@ schema: {
           ],
           columns: ['Mac', 'GPU 메모리', '최적 용도', '제한'],
           image: '/images/mac-hardware-comparison-en.svg',
-          imageCaption: 'Mac 하드웨어 비교: M3 MacBook Pro 16"(18GB, 7B), Mac mini M6(16~32GB, 16GB에서 7~8B / 32GB에서 14B, $899), M5 Pro(64GB, 30B, $1,699), M5 Max(128GB, Q4_K_M에서 70B, $2,499), Mac Studio M5 Ultra(최대 512GB, GLM-5.3급 용량, $5,499). M5 Max는 듀얼 RTX 4090 데스크톱에 필적하는 70B 모델을 처리하는 최초의 Mac입니다.',
+          imageCaption: 'Mac 하드웨어 비교: M3 MacBook Pro 16"(18GB, 7B), Mac mini M6(16~32GB, 16GB에서 7~8B / 32GB에서 14B, $899), M5 Pro(64GB, 30B, $1,699), M5 Max(128GB, Q4_K_M에서 70B, $2,499부터), Mac Studio M5 Ultra(최대 512GB, GLM-5.3급 용량, $5,499). M5 Max는 듀얼 RTX 4090 데스크톱에 필적하는 70B 모델을 처리하는 최초의 Mac입니다.',
           imageAlt: 'Mac용 로컬 LLM 하드웨어: 8GB M 시리즈부터 Mac Studio M5 Ultra까지 통합 메모리 단계',
         },
         serverVsConsumer: {

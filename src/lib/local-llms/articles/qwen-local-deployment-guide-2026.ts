@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'How much VRAM do I need to run Qwen3 8B locally?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B Q4_K_M requires 5.5 GB of VRAM. An NVIDIA RTX 3060 12 GB, RTX 4060, or Apple M-series chip with 16 GB of unified memory all run it comfortably. At 8 GB of VRAM you have headroom for context and system RAM.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B Q4_K_M requires 5.5 GB of VRAM. An NVIDIA RTX 3060 12 GB, RTX 4060, or Apple M-series chip with 16 GB of unified memory (about 8 GB usable after macOS, so keep the context short) all run it. At 8 GB of VRAM you have headroom for context and system RAM.' },
         },
         {
           '@type': 'Question',
