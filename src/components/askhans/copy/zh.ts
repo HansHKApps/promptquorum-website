@@ -61,7 +61,7 @@ export const copy: AskCopy = {
   consentPrivacyHref: '/zh/privacy',
   consentSaveLabel: "在此设备上保存我的对话 7 天",
   consentSaveOn: "保存在此电脑的浏览器中，为期 7 天。你可以随时删除。",
-  consentSaveOff: "不会保存任何内容。关闭页面后，你的对话即消失。",
+  consentSaveOff: "你的对话不会被保存，关闭页面后即消失。",
   consentYes: '是，我同意',
   consentNo: '不，谢谢',
   consentQuestionLabel: '您的问题（将在您做出选择后发送）：',

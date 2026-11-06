@@ -61,7 +61,7 @@ export const copy: AskCopy = {
   consentPrivacyHref: '/ja/privacy',
   consentSaveLabel: "会話をこの端末に7日間保存する",
   consentSaveOn: "このコンピューターのブラウザに7日間保存されます。いつでも削除できます。",
-  consentSaveOff: "何も保存されません。ページを閉じると会話は消えます。",
+  consentSaveOff: "会話は保存されません。ページを閉じると消えます。",
   consentYes: 'はい、同意します',
   consentNo: 'いいえ、結構です',
   consentQuestionLabel: 'ご質問(選択後に送信されます):',

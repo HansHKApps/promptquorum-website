@@ -61,7 +61,7 @@ export const copy: AskCopy = {
   consentPrivacyHref: '/pt/privacy',
   consentSaveLabel: "Salvar minhas conversas neste dispositivo por 7 dias",
   consentSaveOn: "Salvas no seu navegador, neste computador, por 7 dias. Você pode excluí-las a qualquer momento.",
-  consentSaveOff: "Nada é salvo. Suas conversas desaparecem quando você fecha a página.",
+  consentSaveOff: "Suas conversas não são salvas. Elas desaparecem quando você fecha a página.",
   consentYes: 'Sim, concordo',
   consentNo: 'Não, obrigado',
   consentQuestionLabel: 'Sua pergunta (será enviada após a sua escolha):',

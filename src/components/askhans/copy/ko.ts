@@ -61,7 +61,7 @@ export const copy: AskCopy = {
   consentPrivacyHref: '/ko/privacy',
   consentSaveLabel: "대화를 이 기기에 7일간 저장",
   consentSaveOn: "이 컴퓨터의 브라우저에 7일간 저장됩니다. 언제든 삭제할 수 있습니다.",
-  consentSaveOff: "아무것도 저장되지 않습니다. 페이지를 닫으면 대화가 사라집니다.",
+  consentSaveOff: "대화는 저장되지 않습니다. 페이지를 닫으면 사라집니다.",
   consentYes: '예, 동의합니다',
   consentNo: '아니요, 괜찮습니다',
   consentQuestionLabel: '질문 (선택 후 전송됩니다):',
