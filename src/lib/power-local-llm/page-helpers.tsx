@@ -1271,6 +1271,7 @@ const HUB_THEMES: Array<{
       'transcriptionsuite-review',
       'whisper-notes-review',
       'aiko-review',
+      'weesper-neon-flow-review',
       'lyonesse-review',
       'willow-inference-server-review',
     ],

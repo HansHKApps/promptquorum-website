@@ -5178,7 +5178,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "faster-whisper": {
@@ -9959,6 +9959,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "trilium-notes-review",
         "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
         "url": "/power-local-llm/trilium-notes-review",
@@ -10004,17 +10012,9 @@
         "url": "/power-local-llm/kai-9000-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "photoview-review",
-        "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
-        "url": "/power-local-llm/photoview-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "FluidVoice": {
@@ -12016,7 +12016,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 249,
+    "totalCount": 250,
     "capped": true
   },
   "Qdrant": {
@@ -13459,6 +13459,20 @@
         "title": "Aiko Review: On-Device Whisper Transcription for Mac and iPhone",
         "url": "/power-local-llm/aiko-review",
         "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Weesper Neon Flow": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],

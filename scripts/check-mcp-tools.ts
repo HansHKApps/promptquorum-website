@@ -18,6 +18,9 @@ import { compareApps, explainLicense, getLatest, findRelatedContent, searchApps,
 import { estimateVram, fitModel, kvCacheGib } from '../src/lib/vram'
 import { recommendModels, listLocalModels } from '../src/lib/mcp/model-tools'
 import { localLlmCatalog } from '../src/lib/local-llm-catalog'
+import { readFileSync } from 'node:fs'
+import { MCP_TOOL_NAMES } from '../src/lib/mcp/usage'
+import { NEW_TOOL_COPY, TOOL_ASK } from '../src/components/tools/mcp-docs-i18n'
 
 let failures = 0
 const fail = (msg: string) => { failures++; console.error('FAIL', msg) }
@@ -166,6 +169,27 @@ check(checkHardwareCompatibility({ slug: 'ollama' }).suggestedModels === null, '
 const stackWithModels = recommendStack({ goal: 'coding assistant', os: 'mac', ramGb: 32 })
 check(stackWithModels.suggestedModels !== null && stackWithModels.suggestedModels.models.length > 0, 'recommend_stack must carry suggested models when memory is known')
 check(recommendStack({ goal: 'coding assistant' }).suggestedModels === null, 'recommend_stack without memory must not guess models')
+
+// 13. docs page parity: a registered tool must be listed on /mcp-stats (the TOOLS display array in
+// McpStatsContent.tsx is a plain list, so tsc cannot catch an omission) and carry copy in all 9 locales.
+const statsSource = readFileSync(new URL('../src/components/tools/McpStatsContent.tsx', import.meta.url), 'utf8')
+const toolsArray = statsSource.match(/const TOOLS: McpToolName\[\] = \[([\s\S]*?)\n\]/)?.[1] ?? ''
+const LEGACY_DOC_TOOLS = new Set(['search_promptquorum', 'get_article', 'list_clusters', 'get_app_details', 'list_categories', 'search_apps', 'compare_apps', 'explain_license'])
+const LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
+check(toolsArray.length > 0, 'could not find the TOOLS array in McpStatsContent.tsx')
+for (const name of MCP_TOOL_NAMES) {
+  check(toolsArray.includes(`'${name}'`), `/mcp-stats does not list registered tool ${name} (add it to TOOLS in McpStatsContent.tsx)`)
+  check(name in TOOL_ASK, `${name}: no example question in TOOL_ASK`)
+  for (const l of LOCALES) check((TOOL_ASK[name]?.[l] ?? '').trim().length > 0, `${name}: empty TOOL_ASK[${l}]`)
+  if (!LEGACY_DOC_TOOLS.has(name)) {
+    const copy = NEW_TOOL_COPY[name]
+    check(!!copy, `${name}: no NEW_TOOL_COPY entry (title/desc for the docs page)`)
+    for (const l of LOCALES) {
+      check((copy?.title[l] ?? '').trim().length > 0, `${name}: empty NEW_TOOL_COPY title [${l}]`)
+      check((copy?.desc[l] ?? '').trim().length > 0, `${name}: empty NEW_TOOL_COPY desc [${l}]`)
+    }
+  }
+}
 
 if (failures) { console.error(`${failures} check(s) failed`); process.exit(1) }
 console.log('MCP tool checks passed')

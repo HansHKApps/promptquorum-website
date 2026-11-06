@@ -33,8 +33,8 @@ const LEGACY_TOOL_KEYS: Partial<Record<McpToolName, { titleKey: Parameters<typeo
 
 // Display order inside each group.
 const TOOLS: McpToolName[] = [
-  'find_best_apps', 'search_apps', 'recommend_stack', 'find_local_alternative', 'get_app_alternatives', 'get_app_details', 'list_categories',
-  'compare_apps', 'check_hardware_compatibility', 'estimate_vram', 'explain_license',
+  'find_best_apps', 'search_apps', 'recommend_stack', 'find_local_alternative', 'get_app_alternatives', 'get_app_details', 'list_categories', 'list_local_models',
+  'compare_apps', 'check_hardware_compatibility', 'estimate_vram', 'recommend_models', 'explain_license',
   'search_promptquorum', 'get_article', 'find_related_content', 'list_pages', 'get_page', 'get_hands_on_test', 'get_latest', 'list_clusters',
   'start', 'set_consent', 'my_profile', 'forget_me', 'set_language',
 ]
