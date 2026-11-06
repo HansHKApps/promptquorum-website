@@ -43,9 +43,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is GPT Engineer still maintained, and should I use it in 2026?',
-        answer: "No — the [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) GitHub repository is archived (GitHub's read-only state, confirmed via the GitHub API), meaning no new commits, issues, or pull requests can be merged into it. Its last tagged release was `v0.3.1` in June 2024, and its last PyPI publish (`gpt-engineer` 0.3.1) was also June 2024. The project's own README points to [gptengineer.app](https://gptengineer.app) as \"the evolution\" (that commercial platform has since been rebranded as [Lovable](https://lovable.dev), and the old domain redirects there) and explicitly recommends [Aider](/power-local-llm/aider-review) as \"a well maintained hackable CLI\" for readers who want an actively developed alternative.",
+        answer: "No — the [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) GitHub repository is archived (GitHub's read-only state, confirmed via the GitHub API), meaning no new commits, issues, or pull requests can be merged into it. Its last tagged release was `v0.3.1` in June 2024, and its last PyPI publish (`gpt-engineer` 0.3.1) was also June 2024. The project's own README points to [gptengineer.app](https://gptengineer.app) as \"the evolution\" (that commercial platform has since been rebranded as [Lovable](https://lovable.dev), and the old domain redirects there) and explicitly recommends [Aider](/power-local-llm/aider-review) as \"a well maintained hackable CLI\" for readers who want an alternative whose repository is not archived.",
         bullets: [
-          'Repository: AntonOsika/gpt-engineer on GitHub, created April 2023, ' + st.en('gpt-engineer') + ' stars and 7,200+ forks — now archived (read-only)',
+          'Repository: AntonOsika/gpt-engineer on GitHub, created April 2023, ' + st.en('gpt-engineer') + ' stars — now archived (read-only)',
           'License: MIT — free to use, modify, and self-host, including commercially, even though the repo is no longer accepting changes',
           'Install (archived, last release): `pip install gpt-engineer` — PyPI package `gpt-engineer`, last published version 0.3.1 (June 6, 2024)',
           'Core concept: write a `prompt` text file describing the software you want, run `gpte <project_dir>` to generate it, or `gpte <project_dir> -i` to improve existing code',
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'MIT license — free to use, modify, and self-host, though the repository can no longer accept changes',
-          'GitHub repository AntonOsika/gpt-engineer has over ' + st.en('gpt-engineer', 'bare') + ' stars and 7,200 forks (created April 2023) and is archived',
+          'GitHub repository AntonOsika/gpt-engineer has over ' + st.en('gpt-engineer', 'bare') + ' stars (created April 2023) and is archived',
           'PyPI package `gpt-engineer`, last published version 0.3.1 (June 6, 2024) — no releases since',
           'Core concept: a `prompt` text file describing desired software, generated via `gpte <project_dir>`, with an `-i` flag to improve existing code from a new prompt',
           'The project\'s own GitHub description calls it a "precursor to" lovable.dev; the commercial platform gptengineer.app was rebranded as Lovable and its domain now redirects there',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Do I need Docker or a GPU to run GPT Engineer?', a: 'No GPU is required for the default setup, since generation happens by calling the OpenAI API. Docker is one of several documented installation options, not a requirement — pip install works without it.' },
-          { q: 'Can GPT Engineer run against a local model instead of OpenAI?', a: 'The project documentation describes configuring custom model backends, including local and Azure-hosted options, though OpenAI is the default and the most tested path given the project is no longer actively maintained.' },
+          { q: 'Can GPT Engineer run against a local model instead of OpenAI?', a: 'The project documentation describes configuring custom model backends, including local and Azure-hosted options, though OpenAI is the default path and the project is no longer actively maintained.' },
         ],
       },
       whoShouldUse: {
@@ -199,8 +199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'When Should You NOT Use GPT Engineer?',
         content: "**Skip GPT Engineer for any real project you plan to maintain, or any workflow where you expect bug fixes, security patches, or new-model compatibility from the upstream project — the repository cannot ship any of those anymore.**",
         items: [
-          'A production codebase, client project, or anything you intend to maintain long-term — an archived tool with no upstream fixes is a liability for ongoing work',
-          'A workflow that needs current OpenAI model support out of the box — the last tested release is from June 2024 and predates several subsequent OpenAI model generations',
+          'A production codebase, client project, or anything you intend to maintain long-term — an archived tool with no upstream fixes carries risk for ongoing work',
+          'A workflow that needs current OpenAI model support out of the box — the last released version is from June 2024 and predates several subsequent OpenAI model generations',
           'A team that needs commercial support, an SLA, or a vendor to escalate bugs to — there is no maintainer accepting issues or pull requests on the archived repository',
           'A task better served by a terminal coding agent whose repository is not archived — [Aider](/power-local-llm/aider-review) is the direct alternative recommended in GPT Engineer\'s own README',
           'Use GPT Engineer instead only for historical reference, research into early coding-agent design, or maintaining your own already-forked copy',
@@ -215,8 +215,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Core Job': 'Full-codebase generation from one prompt', 'License': 'MIT', 'Status': 'Archived (read-only)', 'Best For': 'Historical reference, existing forks' },
           { 'Tool': '[Aider](/power-local-llm/aider-review)', 'Core Job': 'Terminal AI pair-programming on existing repos', 'License': 'Apache 2.0', 'Status': 'Not archived (updated ' + upd('aider', 'en') + ')', 'Best For': 'Ongoing coding work in a real repo' },
-          { 'Tool': '[OpenHands](/power-local-llm/openhands-review)', 'Core Job': 'Autonomous coding agent in a sandboxed runtime', 'License': 'MIT', 'Status': 'Active', 'Best For': 'End-to-end tasks needing code execution' },
-          { 'Tool': '[AutoGPT](/power-local-llm/autogpt-local-review)', 'Core Job': 'General-purpose autonomous agent', 'License': 'MIT (classic) / commercial platform', 'Status': 'Active (platform); classic mode legacy', 'Best For': 'Comparing early-2023 autonomous-agent designs' },
+          { 'Tool': '[OpenHands](/power-local-llm/openhands-review)', 'Core Job': 'Autonomous coding agent in a sandboxed runtime', 'License': 'MIT', 'Status': 'Not archived (updated ' + upd('openhands', 'en') + ')', 'Best For': 'End-to-end tasks needing code execution' },
+          { 'Tool': '[AutoGPT](/power-local-llm/autogpt-local-review)', 'Core Job': 'General-purpose autonomous agent', 'License': 'MIT (classic) / commercial platform', 'Status': 'Not archived (updated ' + upd('autogpt', 'en') + ')', 'Best For': 'Comparing early-2023 autonomous-agent designs' },
         ],
         note: "This table compares GPT Engineer against coding-agent tools with the closest workflow overlap. It excludes multi-agent orchestration frameworks like [CrewAI](/power-local-llm/crewai-review) or [AutoGen](/power-local-llm/autogen-review), which solve a different problem — coordinating several communicating agents rather than generating a codebase from one prompt.",
       },
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 3: Expecting current-model compatibility out of the box',
-            content: "The last tested, released version is from June 2024. OpenAI's model lineup and API have changed since then, so an unmaintained integration can behave unpredictably with current models — verify compatibility yourself, or expect to patch your own fork, before relying on it for anything beyond experimentation.",
+            content: "The last released version is from June 2024. OpenAI's model lineup and API have changed since then, so an unmaintained integration can behave unpredictably with current models — verify compatibility yourself, or expect to patch your own fork, before relying on it for anything beyond experimentation.",
           },
         ],
       },
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does GPT Engineer require an OpenAI API key?', a: 'By default, yes — GPT Engineer calls the OpenAI API using an `OPENAI_API_KEY` environment variable or `.env` file. Its documentation separately describes configuring custom or local model backends.' },
           { q: 'What license is GPT Engineer released under?', a: 'MIT, which permits free commercial use, modification, and self-hosting, independent of the repository\'s archived status.' },
           { q: 'Who created GPT Engineer?', a: 'Anton Osika created the AntonOsika/gpt-engineer repository in April 2023. A related GitHub organization, gpt-engineer-org, was created in December 2023 and lists gptengineer.app as its website; as of this review, the gpt-engineer-org/gpt-engineer GitHub URL redirects back to the original AntonOsika/gpt-engineer repository.' },
-          { q: 'How many GitHub stars does GPT Engineer have?', a: 'The AntonOsika/gpt-engineer repository has over ' + st.en('gpt-engineer', 'bare') + ' GitHub stars and 7,200 forks, accumulated before the repository was archived.' },
+          { q: 'How many GitHub stars does GPT Engineer have?', a: 'The AntonOsika/gpt-engineer repository has over ' + st.en('gpt-engineer', 'bare') + ' GitHub stars, accumulated before the repository was archived.' },
           { q: 'Can I still use GPT Engineer even though it is archived?', a: 'Yes — the MIT license lets you clone, run, fork, and modify your own copy indefinitely. What you lose is the ability to get upstream bug fixes, new-model support, or have pull requests merged into the original repository.' },
         ],
       },
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Wird GPT Engineer noch gepflegt, und sollte ich es 2026 verwenden?',
         answer: "Nein — das GitHub-Repository [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) ist archiviert (GitHubs schreibgeschützter Zustand, per GitHub API bestätigt), das heißt, es können keine neuen Commits, Issues oder Pull Requests mehr gemergt werden. Das letzte getaggte Release war `v0.3.1` im Juni 2024, ebenso die letzte PyPI-Veröffentlichung (`gpt-engineer` 0.3.1). Die eigene README des Projekts verweist auf [gptengineer.app](https://gptengineer.app) als \"die Weiterentwicklung\" (diese kommerzielle Plattform wurde inzwischen in [Lovable](https://lovable.dev) umbenannt, die alte Domain leitet dorthin weiter) und empfiehlt ausdrücklich [Aider](/de/power-local-llm/aider-review) als \"eine gut gepflegte, hackbare CLI\" für Leser, die eine Alternative mit nicht archiviertem Repository suchen.",
         bullets: [
-          'Repository: AntonOsika/gpt-engineer auf GitHub, erstellt im April 2023, ' + st.de('gpt-engineer') + ' Stars und 7.200 Forks — inzwischen archiviert (nur lesbar)',
+          'Repository: AntonOsika/gpt-engineer auf GitHub, erstellt im April 2023, ' + st.de('gpt-engineer') + ' Stars — inzwischen archiviert (nur lesbar)',
           'Lizenz: MIT — kostenlos nutzbar, veränderbar und selbst hostbar, auch kommerziell, obwohl das Repository keine Änderungen mehr annimmt',
           'Installation (archiviert, letztes Release): `pip install gpt-engineer` — PyPI-Paket `gpt-engineer`, letzte veröffentlichte Version 0.3.1 (6. Juni 2024)',
           'Kernkonzept: Eine `prompt`-Textdatei beschreibt die gewünschte Software, `gpte <project_dir>` generiert sie, `gpte <project_dir> -i` verbessert bestehenden Code',
@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'MIT-Lizenz — kostenlos nutzbar, veränderbar und selbst hostbar, wobei das Repository keine Änderungen mehr annehmen kann',
-          'Das GitHub-Repository AntonOsika/gpt-engineer hat über ' + st.de('gpt-engineer', 'bare') + ' Stars und 7.200 Forks (erstellt im April 2023) und ist archiviert',
+          'Das GitHub-Repository AntonOsika/gpt-engineer hat über ' + st.de('gpt-engineer', 'bare') + ' Stars (erstellt im April 2023) und ist archiviert',
           'PyPI-Paket `gpt-engineer`, letzte veröffentlichte Version 0.3.1 (6. Juni 2024) — seitdem keine weiteren Releases',
           'Kernkonzept: Eine `prompt`-Textdatei beschreibt die gewünschte Software, generiert über `gpte <project_dir>`, mit einem `-i`-Flag zur Verbesserung bestehenden Codes anhand einer neuen Prompt',
           'Die eigene GitHub-Beschreibung des Projekts nennt es einen "Vorläufer" von lovable.dev; die kommerzielle Plattform gptengineer.app wurde in Lovable umbenannt, ihre Domain leitet inzwischen dorthin weiter',
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Benötige ich Docker oder eine GPU, um GPT Engineer auszuführen?', a: 'Für die Standardeinrichtung ist keine GPU erforderlich, da die Generierung durch Aufruf der OpenAI-API erfolgt. Docker ist eine von mehreren dokumentierten Installationsoptionen, keine Voraussetzung — pip install funktioniert auch ohne.' },
-          { q: 'Kann GPT Engineer gegen ein lokales Modell statt OpenAI laufen?', a: 'Die Projektdokumentation beschreibt die Konfiguration benutzerdefinierter Modell-Backends, einschließlich lokaler und Azure-gehosteter Optionen, wobei OpenAI der Standard und der am besten getestete Weg ist, da das Projekt nicht mehr aktiv gepflegt wird.' },
+          { q: 'Kann GPT Engineer gegen ein lokales Modell statt OpenAI laufen?', a: 'Die Projektdokumentation beschreibt die Konfiguration benutzerdefinierter Modell-Backends, einschließlich lokaler und Azure-gehosteter Optionen, wobei OpenAI der Standardweg ist und das Projekt nicht mehr aktiv gepflegt wird.' },
         ],
       },
       whoShouldUse: {
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Meiden Sie GPT Engineer für jedes reale Projekt, das Sie pflegen wollen, oder jeden Workflow, bei dem Sie Bugfixes, Sicherheitspatches oder Kompatibilität mit neuen Modellen vom Upstream-Projekt erwarten — das Repository kann davon nichts mehr liefern.**",
         items: [
           'Eine Produktions-Codebasis, ein Kundenprojekt oder alles, das Sie langfristig pflegen wollen — ein archiviertes Tool ohne Upstream-Fixes ist ein Risiko für laufende Arbeit',
-          'Ein Workflow, der aktuelle OpenAI-Modellunterstützung von Haus aus benötigt — das letzte getestete Release stammt von Juni 2024 und liegt vor mehreren nachfolgenden OpenAI-Modellgenerationen',
+          'Ein Workflow, der aktuelle OpenAI-Modellunterstützung von Haus aus benötigt — das zuletzt veröffentlichte Release stammt von Juni 2024 und liegt vor mehreren nachfolgenden OpenAI-Modellgenerationen',
           'Ein Team, das kommerziellen Support, ein SLA oder einen Ansprechpartner für Bugs benötigt — es gibt keinen Maintainer mehr, der Issues oder Pull Requests am archivierten Repository annimmt',
           'Eine Aufgabe, die besser von einem Terminal-Coding-Agenten mit nicht archiviertem Repository erledigt wird — [Aider](/de/power-local-llm/aider-review) ist die direkte Alternative, die GPT Engineers eigene README empfiehlt',
           'Nutzen Sie GPT Engineer stattdessen nur als historische Referenz, für Forschung zu frühen Coding-Agenten-Designs oder zur Pflege Ihres eigenen bereits geforkten Exemplars',
@@ -481,8 +481,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Kernaufgabe': 'Vollständige Codebasis-Generierung aus einer Prompt', 'Lizenz': 'MIT', 'Status': 'Archiviert (nur lesbar)', 'Am besten für': 'Historische Referenz, bestehende Forks' },
           { 'Tool': '[Aider](/de/power-local-llm/aider-review)', 'Kernaufgabe': 'KI-Pair-Programming im Terminal an bestehenden Repos', 'Lizenz': 'Apache 2.0', 'Status': 'Nicht archiviert (Update ' + upd('aider', 'de') + ')', 'Am besten für': 'Laufende Coding-Arbeit in einem echten Repo' },
-          { 'Tool': '[OpenHands](/de/power-local-llm/openhands-review)', 'Kernaufgabe': 'Autonomer Coding-Agent in sandboxed Laufzeitumgebung', 'Lizenz': 'MIT', 'Status': 'Aktiv', 'Am besten für': 'Durchgängige Aufgaben mit Code-Ausführung' },
-          { 'Tool': '[AutoGPT](/de/power-local-llm/autogpt-local-review)', 'Kernaufgabe': 'Universeller autonomer Agent', 'Lizenz': 'MIT (klassisch) / kommerzielle Plattform', 'Status': 'Aktiv (Plattform); klassischer Modus veraltet', 'Am besten für': 'Vergleich früher Autonomer-Agenten-Designs von 2023' },
+          { 'Tool': '[OpenHands](/de/power-local-llm/openhands-review)', 'Kernaufgabe': 'Autonomer Coding-Agent in sandboxed Laufzeitumgebung', 'Lizenz': 'MIT', 'Status': 'Nicht archiviert (Update ' + upd('openhands', 'de') + ')', 'Am besten für': 'Durchgängige Aufgaben mit Code-Ausführung' },
+          { 'Tool': '[AutoGPT](/de/power-local-llm/autogpt-local-review)', 'Kernaufgabe': 'Universeller autonomer Agent', 'Lizenz': 'MIT (klassisch) / kommerzielle Plattform', 'Status': 'Nicht archiviert (Update ' + upd('autogpt', 'de') + ')', 'Am besten für': 'Vergleich früher Autonomer-Agenten-Designs von 2023' },
         ],
         note: "Diese Tabelle vergleicht GPT Engineer mit Coding-Agenten-Tools mit der größten Workflow-Überschneidung. Sie schließt Multi-Agent-Orchestrierungs-Frameworks wie [CrewAI](/de/power-local-llm/crewai-review) oder [AutoGen](/de/power-local-llm/autogen-review) aus, die ein anderes Problem lösen — die Koordination mehrerer kommunizierender Agenten statt der Generierung einer Codebasis aus einer Prompt.",
       },
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 3: Kompatibilität mit aktuellen Modellen von Haus aus erwarten',
-            content: "Die letzte getestete, veröffentlichte Version stammt von Juni 2024. OpenAIs Modell-Lineup und API haben sich seitdem verändert, sodass eine ungepflegte Integration mit aktuellen Modellen unvorhersehbar reagieren kann — prüfen Sie die Kompatibilität selbst, oder rechnen Sie damit, Ihren eigenen Fork zu patchen, bevor Sie sich für mehr als Experimente darauf verlassen.",
+            content: "Die zuletzt veröffentlichte Version stammt von Juni 2024. OpenAIs Modell-Lineup und API haben sich seitdem verändert, sodass eine ungepflegte Integration mit aktuellen Modellen unvorhersehbar reagieren kann — prüfen Sie die Kompatibilität selbst, oder rechnen Sie damit, Ihren eigenen Fork zu patchen, bevor Sie sich für mehr als Experimente darauf verlassen.",
           },
         ],
       },
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Benötigt GPT Engineer einen OpenAI-API-Schlüssel?', a: 'Standardmäßig ja — GPT Engineer ruft die OpenAI-API mit einer `OPENAI_API_KEY`-Umgebungsvariable oder .env-Datei auf. Die Dokumentation beschreibt separat die Konfiguration benutzerdefinierter oder lokaler Modell-Backends.' },
           { q: 'Unter welcher Lizenz wird GPT Engineer veröffentlicht?', a: 'MIT, was kostenlose kommerzielle Nutzung, Veränderung und Selbsthosting erlaubt, unabhängig vom archivierten Status des Repositorys.' },
           { q: 'Wer hat GPT Engineer erstellt?', a: 'Anton Osika erstellte das Repository AntonOsika/gpt-engineer im April 2023. Eine verwandte GitHub-Organisation, gpt-engineer-org, wurde im Dezember 2023 erstellt und listet gptengineer.app als Website; zum Zeitpunkt dieser Bewertung leitet die GitHub-URL gpt-engineer-org/gpt-engineer zurück zum ursprünglichen Repository AntonOsika/gpt-engineer.' },
-          { q: 'Wie viele GitHub-Stars hat GPT Engineer?', a: 'Das Repository AntonOsika/gpt-engineer hat über ' + st.de('gpt-engineer', 'bare') + ' GitHub-Stars und 7.200 Forks, angesammelt vor der Archivierung des Repositorys.' },
+          { q: 'Wie viele GitHub-Stars hat GPT Engineer?', a: 'Das Repository AntonOsika/gpt-engineer hat über ' + st.de('gpt-engineer', 'bare') + ' GitHub-Stars, angesammelt vor der Archivierung des Repositorys.' },
           { q: 'Kann ich GPT Engineer trotz Archivierung noch nutzen?', a: 'Ja — die MIT-Lizenz erlaubt Ihnen, Ihre eigene Kopie unbegrenzt zu klonen, auszuführen, zu forken und zu verändern. Was Sie verlieren, ist die Möglichkeit, Upstream-Bugfixes, neue Modellunterstützung zu erhalten oder Pull Requests ins ursprüngliche Repository mergen zu lassen.' },
         ],
       },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'GPT Engineer est-il encore maintenu, et faut-il l\'utiliser en 2026 ?',
         answer: "Non — le dépôt GitHub [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) est archivé (état lecture seule de GitHub, confirmé via l'API GitHub), ce qui signifie qu'aucun nouveau commit, issue ou pull request ne peut y être fusionné. Sa dernière version taguée était `v0.3.1` en juin 2024, tout comme sa dernière publication PyPI (`gpt-engineer` 0.3.1). Le README du projet renvoie vers [gptengineer.app](https://gptengineer.app) comme \"l'évolution\" (cette plateforme commerciale a depuis été renommée [Lovable](https://lovable.dev), et l'ancien domaine y redirige) et recommande explicitement [Aider](/fr/power-local-llm/aider-review) comme \"une CLI hackable bien maintenue\" pour les lecteurs qui veulent une alternative dont le dépôt n'est pas archivé.",
         bullets: [
-          'Dépôt : AntonOsika/gpt-engineer sur GitHub, créé en avril 2023, ' + st.fr('gpt-engineer') + ' étoiles et 7 200 forks — désormais archivé (lecture seule)',
+          'Dépôt : AntonOsika/gpt-engineer sur GitHub, créé en avril 2023, ' + st.fr('gpt-engineer') + ' étoiles — désormais archivé (lecture seule)',
           'Licence : MIT — utilisation, modification et auto-hébergement gratuits, y compris à des fins commerciales, même si le dépôt n\'accepte plus de modifications',
           'Installation (archivé, dernière version) : `pip install gpt-engineer` — paquet PyPI `gpt-engineer`, dernière version publiée 0.3.1 (6 juin 2024)',
           'Concept central : un fichier texte `prompt` décrit le logiciel souhaité, `gpte <project_dir>` le génère, `gpte <project_dir> -i` améliore du code existant',
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Licence MIT — utilisation, modification et auto-hébergement gratuits, bien que le dépôt ne puisse plus accepter de modifications',
-          'Le dépôt GitHub AntonOsika/gpt-engineer compte plus de ' + st.fr('gpt-engineer', 'bare') + ' étoiles et 7 200 forks (créé en avril 2023) et est archivé',
+          'Le dépôt GitHub AntonOsika/gpt-engineer compte plus de ' + st.fr('gpt-engineer', 'bare') + ' étoiles (créé en avril 2023) et est archivé',
           'Paquet PyPI `gpt-engineer`, dernière version publiée 0.3.1 (6 juin 2024) — aucune publication depuis',
           'Concept central : un fichier texte `prompt` décrivant le logiciel souhaité, généré via `gpte <project_dir>`, avec un indicateur `-i` pour améliorer du code existant à partir d\'un nouveau prompt',
           'La propre description GitHub du projet le qualifie de "précurseur" de lovable.dev ; la plateforme commerciale gptengineer.app a été renommée Lovable et son domaine y redirige désormais',
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Ai-je besoin de Docker ou d\'un GPU pour exécuter GPT Engineer ?', a: 'Aucun GPU n\'est requis pour la configuration par défaut, la génération se faisant via l\'appel à l\'API OpenAI. Docker est l\'une des options d\'installation documentées, pas une obligation — pip install fonctionne sans.' },
-          { q: 'GPT Engineer peut-il fonctionner avec un modèle local au lieu d\'OpenAI ?', a: 'La documentation du projet décrit la configuration de backends de modèles personnalisés, y compris des options locales et hébergées sur Azure, bien qu\'OpenAI reste le choix par défaut et le mieux testé, le projet n\'étant plus activement maintenu.' },
+          { q: 'GPT Engineer peut-il fonctionner avec un modèle local au lieu d\'OpenAI ?', a: 'La documentation du projet décrit la configuration de backends de modèles personnalisés, y compris des options locales et hébergées sur Azure, bien qu\'OpenAI reste le choix par défaut, le projet n\'étant plus activement maintenu.' },
         ],
       },
       whoShouldUse: {
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Évitez GPT Engineer pour tout projet réel que vous comptez maintenir, ou tout workflow où vous attendez des correctifs de bugs, des correctifs de sécurité ou une compatibilité avec les nouveaux modèles de la part du projet en amont — le dépôt ne peut plus rien livrer de tout cela.**",
         items: [
           'Une base de code de production, un projet client, ou tout ce que vous comptez maintenir à long terme — un outil archivé sans correctifs en amont est un risque pour un travail continu',
-          'Un workflow nécessitant une prise en charge des modèles OpenAI actuels d\'entrée de jeu — la dernière version testée date de juin 2024 et précède plusieurs générations de modèles OpenAI ultérieures',
+          'Un workflow nécessitant une prise en charge des modèles OpenAI actuels d\'entrée de jeu — la dernière version publiée date de juin 2024 et précède plusieurs générations de modèles OpenAI ultérieures',
           'Une équipe ayant besoin de support commercial, d\'un SLA, ou d\'un fournisseur à qui remonter des bugs — il n\'y a plus de mainteneur acceptant issues ou pull requests sur le dépôt archivé',
           'Une tâche mieux servie par un agent de codage en terminal dont le dépôt n\'est pas archivé — [Aider](/fr/power-local-llm/aider-review) est l\'alternative directe recommandée dans le propre README de GPT Engineer',
           'Utilisez plutôt GPT Engineer uniquement pour référence historique, recherche sur les premiers designs d\'agents de codage, ou maintenance de votre propre copie déjà forkée',
@@ -747,8 +747,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Outil': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Rôle principal': 'Génération de base de code complète à partir d\'un prompt', 'Licence': 'MIT', 'Statut': 'Archivé (lecture seule)', 'Idéal pour': 'Référence historique, forks existants' },
           { 'Outil': '[Aider](/fr/power-local-llm/aider-review)', 'Rôle principal': 'Pair-programming IA en terminal sur des dépôts existants', 'Licence': 'Apache 2.0', 'Statut': 'Non archivé (mis à jour le ' + upd('aider', 'fr') + ')', 'Idéal pour': 'Travail de codage continu dans un vrai dépôt' },
-          { 'Outil': '[OpenHands](/fr/power-local-llm/openhands-review)', 'Rôle principal': 'Agent de codage autonome en environnement sandboxé', 'Licence': 'MIT', 'Statut': 'Actif', 'Idéal pour': 'Tâches de bout en bout nécessitant l\'exécution de code' },
-          { 'Outil': '[AutoGPT](/fr/power-local-llm/autogpt-local-review)', 'Rôle principal': 'Agent autonome généraliste', 'Licence': 'MIT (classique) / plateforme commerciale', 'Statut': 'Actif (plateforme) ; mode classique hérité', 'Idéal pour': 'Comparer les premiers designs d\'agents autonomes de 2023' },
+          { 'Outil': '[OpenHands](/fr/power-local-llm/openhands-review)', 'Rôle principal': 'Agent de codage autonome en environnement sandboxé', 'Licence': 'MIT', 'Statut': 'Non archivé (mis à jour le ' + upd('openhands', 'fr') + ')', 'Idéal pour': 'Tâches de bout en bout nécessitant l\'exécution de code' },
+          { 'Outil': '[AutoGPT](/fr/power-local-llm/autogpt-local-review)', 'Rôle principal': 'Agent autonome généraliste', 'Licence': 'MIT (classique) / plateforme commerciale', 'Statut': 'Non archivé (mis à jour le ' + upd('autogpt', 'fr') + ')', 'Idéal pour': 'Comparer les premiers designs d\'agents autonomes de 2023' },
         ],
         note: "Ce tableau compare GPT Engineer à des outils d'agents de codage ayant le plus de recouvrement fonctionnel. Il exclut les frameworks d'orchestration multi-agents comme [CrewAI](/fr/power-local-llm/crewai-review) ou [AutoGen](/fr/power-local-llm/autogen-review), qui résolvent un problème différent — coordonner plusieurs agents communicants plutôt que générer une base de code à partir d'un prompt.",
       },
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 3 : s\'attendre à une compatibilité avec les modèles actuels d\'entrée de jeu',
-            content: "La dernière version testée et publiée date de juin 2024. La gamme de modèles et l'API d'OpenAI ont changé depuis, donc une intégration non maintenue peut se comporter de manière imprévisible avec les modèles actuels — vérifiez la compatibilité vous-même, ou attendez-vous à devoir patcher votre propre fork, avant de vous y fier au-delà de l'expérimentation.",
+            content: "La dernière version publiée date de juin 2024. La gamme de modèles et l'API d'OpenAI ont changé depuis, donc une intégration non maintenue peut se comporter de manière imprévisible avec les modèles actuels — vérifiez la compatibilité vous-même, ou attendez-vous à devoir patcher votre propre fork, avant de vous y fier au-delà de l'expérimentation.",
           },
         ],
       },
@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'GPT Engineer nécessite-t-il une clé API OpenAI ?', a: 'Par défaut, oui — GPT Engineer appelle l\'API OpenAI via une variable d\'environnement `OPENAI_API_KEY` ou un fichier .env. Sa documentation décrit séparément la configuration de backends de modèles personnalisés ou locaux.' },
           { q: 'Sous quelle licence GPT Engineer est-il publié ?', a: 'MIT, ce qui autorise un usage commercial gratuit, la modification et l\'auto-hébergement, indépendamment du statut archivé du dépôt.' },
           { q: 'Qui a créé GPT Engineer ?', a: 'Anton Osika a créé le dépôt AntonOsika/gpt-engineer en avril 2023. Une organisation GitHub liée, gpt-engineer-org, a été créée en décembre 2023 et liste gptengineer.app comme site web ; au moment de cette évaluation, l\'URL GitHub gpt-engineer-org/gpt-engineer redirige vers le dépôt d\'origine AntonOsika/gpt-engineer.' },
-          { q: 'Combien d\'étoiles GitHub GPT Engineer a-t-il ?', a: 'Le dépôt AntonOsika/gpt-engineer compte plus de ' + st.fr('gpt-engineer', 'bare') + ' étoiles GitHub et 7 200 forks, accumulées avant l\'archivage du dépôt.' },
+          { q: 'Combien d\'étoiles GitHub GPT Engineer a-t-il ?', a: 'Le dépôt AntonOsika/gpt-engineer compte plus de ' + st.fr('gpt-engineer', 'bare') + ' étoiles GitHub, accumulées avant l\'archivage du dépôt.' },
           { q: 'Puis-je encore utiliser GPT Engineer malgré son archivage ?', a: 'Oui — la licence MIT vous permet de cloner, exécuter, forker et modifier votre propre copie indéfiniment. Ce que vous perdez, c\'est la capacité d\'obtenir des correctifs en amont, une prise en charge de nouveaux modèles, ou de faire fusionner des pull requests dans le dépôt d\'origine.' },
         ],
       },
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Sigue manteniéndose GPT Engineer, y debería usarlo en 2026?',
         answer: "No — el repositorio de GitHub [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) está archivado (el estado de solo lectura de GitHub, confirmado mediante la API de GitHub), lo que significa que no se pueden fusionar nuevos commits, issues ni pull requests. Su última versión etiquetada fue `v0.3.1` en junio de 2024, al igual que su última publicación en PyPI (`gpt-engineer` 0.3.1). El propio README del proyecto remite a [gptengineer.app](https://gptengineer.app) como \"la evolución\" (esa plataforma comercial se ha renombrado desde entonces como [Lovable](https://lovable.dev), y el dominio antiguo redirige allí) y recomienda explícitamente [Aider](/es/power-local-llm/aider-review) como \"una CLI hackeable bien mantenida\" para quienes buscan una alternativa cuyo repositorio no esté archivado.",
         bullets: [
-          'Repositorio: AntonOsika/gpt-engineer en GitHub, creado en abril de 2023, ' + st.es('gpt-engineer') + ' estrellas y 7.200 forks — ahora archivado (solo lectura)',
+          'Repositorio: AntonOsika/gpt-engineer en GitHub, creado en abril de 2023, ' + st.es('gpt-engineer') + ' estrellas — ahora archivado (solo lectura)',
           'Licencia: MIT — uso, modificación y autoalojamiento gratuitos, incluso comercial, aunque el repositorio ya no acepta cambios',
           'Instalación (archivado, última versión): `pip install gpt-engineer` — paquete de PyPI `gpt-engineer`, última versión publicada 0.3.1 (6 de junio de 2024)',
           'Concepto central: un archivo de texto `prompt` describe el software deseado, `gpte <project_dir>` lo genera, `gpte <project_dir> -i` mejora código existente',
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Licencia MIT — uso, modificación y autoalojamiento gratuitos, aunque el repositorio ya no puede aceptar cambios',
-          'El repositorio de GitHub AntonOsika/gpt-engineer tiene más de ' + st.es('gpt-engineer', 'bare') + ' estrellas y 7.200 forks (creado en abril de 2023) y está archivado',
+          'El repositorio de GitHub AntonOsika/gpt-engineer tiene más de ' + st.es('gpt-engineer', 'bare') + ' estrellas (creado en abril de 2023) y está archivado',
           'Paquete de PyPI `gpt-engineer`, última versión publicada 0.3.1 (6 de junio de 2024) — sin publicaciones desde entonces',
           'Concepto central: un archivo de texto `prompt` que describe el software deseado, generado mediante `gpte <project_dir>`, con una opción `-i` para mejorar código existente a partir de un nuevo prompt',
           'La propia descripción de GitHub del proyecto lo llama "precursor" de lovable.dev; la plataforma comercial gptengineer.app se renombró como Lovable y su dominio redirige ahora allí',
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: '¿Necesito Docker o una GPU para ejecutar GPT Engineer?', a: 'No se requiere GPU para la configuración por defecto, ya que la generación ocurre llamando a la API de OpenAI. Docker es una de varias opciones de instalación documentadas, no un requisito — pip install funciona sin él.' },
-          { q: '¿Puede GPT Engineer usar un modelo local en lugar de OpenAI?', a: 'La documentación del proyecto describe la configuración de backends de modelos personalizados, incluyendo opciones locales y alojadas en Azure, aunque OpenAI es la ruta predeterminada y mejor probada, dado que el proyecto ya no se mantiene activamente.' },
+          { q: '¿Puede GPT Engineer usar un modelo local en lugar de OpenAI?', a: 'La documentación del proyecto describe la configuración de backends de modelos personalizados, incluyendo opciones locales y alojadas en Azure, aunque OpenAI es la ruta predeterminada y el proyecto ya no se mantiene activamente.' },
         ],
       },
       whoShouldUse: {
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evita GPT Engineer para cualquier proyecto real que planees mantener, o cualquier flujo de trabajo donde esperes correcciones de errores, parches de seguridad o compatibilidad con nuevos modelos por parte del proyecto original — el repositorio ya no puede entregar nada de eso.**",
         items: [
           'Una base de código de producción, un proyecto de cliente, o cualquier cosa que pretendas mantener a largo plazo — una herramienta archivada sin correcciones del proyecto original es un riesgo para el trabajo continuo',
-          'Un flujo de trabajo que necesite soporte de los modelos actuales de OpenAI de fábrica — la última versión probada es de junio de 2024 y es anterior a varias generaciones posteriores de modelos de OpenAI',
+          'Un flujo de trabajo que necesite soporte de los modelos actuales de OpenAI de fábrica — la última versión publicada es de junio de 2024 y es anterior a varias generaciones posteriores de modelos de OpenAI',
           'Un equipo que necesite soporte comercial, un SLA, o un proveedor al que escalar errores — ya no hay un mantenedor aceptando issues o pull requests en el repositorio archivado',
           'Una tarea mejor atendida por un agente de codificación en terminal cuyo repositorio no esté archivado — [Aider](/es/power-local-llm/aider-review) es la alternativa directa recomendada en el propio README de GPT Engineer',
           'Usa GPT Engineer en cambio solo como referencia histórica, para investigar los primeros diseños de agentes de codificación, o para mantener tu propia copia ya bifurcada',
@@ -1013,8 +1013,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Herramienta': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Función principal': 'Generación de base de código completa desde un prompt', 'Licencia': 'MIT', 'Estado': 'Archivado (solo lectura)', 'Ideal para': 'Referencia histórica, forks existentes' },
           { 'Herramienta': '[Aider](/es/power-local-llm/aider-review)', 'Función principal': 'Programación en pareja con IA en terminal sobre repos existentes', 'Licencia': 'Apache 2.0', 'Estado': 'No archivado (actualizado el ' + upd('aider', 'es') + ')', 'Ideal para': 'Trabajo de codificación continuo en un repo real' },
-          { 'Herramienta': '[OpenHands](/es/power-local-llm/openhands-review)', 'Función principal': 'Agente de codificación autónomo en un entorno sandboxed', 'Licencia': 'MIT', 'Estado': 'Activo', 'Ideal para': 'Tareas de extremo a extremo que requieren ejecución de código' },
-          { 'Herramienta': '[AutoGPT](/es/power-local-llm/autogpt-local-review)', 'Función principal': 'Agente autónomo de propósito general', 'Licencia': 'MIT (clásico) / plataforma comercial', 'Estado': 'Activo (plataforma); modo clásico heredado', 'Ideal para': 'Comparar los primeros diseños de agentes autónomos de 2023' },
+          { 'Herramienta': '[OpenHands](/es/power-local-llm/openhands-review)', 'Función principal': 'Agente de codificación autónomo en un entorno sandboxed', 'Licencia': 'MIT', 'Estado': 'No archivado (actualizado el ' + upd('openhands', 'es') + ')', 'Ideal para': 'Tareas de extremo a extremo que requieren ejecución de código' },
+          { 'Herramienta': '[AutoGPT](/es/power-local-llm/autogpt-local-review)', 'Función principal': 'Agente autónomo de propósito general', 'Licencia': 'MIT (clásico) / plataforma comercial', 'Estado': 'No archivado (actualizado el ' + upd('autogpt', 'es') + ')', 'Ideal para': 'Comparar los primeros diseños de agentes autónomos de 2023' },
         ],
         note: "Esta tabla compara GPT Engineer con herramientas de agentes de codificación con el mayor solapamiento de flujo de trabajo. Excluye frameworks de orquestación multiagente como [CrewAI](/es/power-local-llm/crewai-review) o [AutoGen](/es/power-local-llm/autogen-review), que resuelven un problema distinto — coordinar varios agentes comunicantes en lugar de generar una base de código a partir de un prompt.",
       },
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 3: esperar compatibilidad con los modelos actuales de fábrica',
-            content: "La última versión probada y publicada es de junio de 2024. La gama de modelos y la API de OpenAI han cambiado desde entonces, por lo que una integración sin mantenimiento puede comportarse de forma impredecible con los modelos actuales — verifica la compatibilidad tú mismo, o espera tener que parchear tu propio fork, antes de confiar en ella más allá de la experimentación.",
+            content: "La última versión publicada es de junio de 2024. La gama de modelos y la API de OpenAI han cambiado desde entonces, por lo que una integración sin mantenimiento puede comportarse de forma impredecible con los modelos actuales — verifica la compatibilidad tú mismo, o espera tener que parchear tu propio fork, antes de confiar en ella más allá de la experimentación.",
           },
         ],
       },
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿GPT Engineer requiere una clave de API de OpenAI?', a: 'Por defecto, sí — GPT Engineer llama a la API de OpenAI usando una variable de entorno `OPENAI_API_KEY` o un archivo .env. Su documentación describe por separado la configuración de backends de modelos personalizados o locales.' },
           { q: '¿Bajo qué licencia se publica GPT Engineer?', a: 'MIT, que permite uso comercial gratuito, modificación y autoalojamiento, independientemente del estado archivado del repositorio.' },
           { q: '¿Quién creó GPT Engineer?', a: 'Anton Osika creó el repositorio AntonOsika/gpt-engineer en abril de 2023. Una organización de GitHub relacionada, gpt-engineer-org, se creó en diciembre de 2023 y lista gptengineer.app como su sitio web; al momento de esta evaluación, la URL de GitHub gpt-engineer-org/gpt-engineer redirige al repositorio original AntonOsika/gpt-engineer.' },
-          { q: '¿Cuántas estrellas de GitHub tiene GPT Engineer?', a: 'El repositorio AntonOsika/gpt-engineer tiene más de ' + st.es('gpt-engineer', 'bare') + ' estrellas de GitHub y 7.200 forks, acumuladas antes de que el repositorio fuera archivado.' },
+          { q: '¿Cuántas estrellas de GitHub tiene GPT Engineer?', a: 'El repositorio AntonOsika/gpt-engineer tiene más de ' + st.es('gpt-engineer', 'bare') + ' estrellas de GitHub, acumuladas antes de que el repositorio fuera archivado.' },
           { q: '¿Puedo seguir usando GPT Engineer aunque esté archivado?', a: 'Sí — la licencia MIT te permite clonar, ejecutar, bifurcar y modificar tu propia copia indefinidamente. Lo que pierdes es la capacidad de obtener correcciones del proyecto original, soporte de nuevos modelos, o que se fusionen pull requests en el repositorio original.' },
         ],
       },
@@ -1109,7 +1109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'O GPT Engineer ainda é mantido, e devo usá-lo em 2026?',
         answer: "Não — o repositório do GitHub [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) está arquivado (o estado somente leitura do GitHub, confirmado via API do GitHub), o que significa que nenhum novo commit, issue ou pull request pode ser mesclado. Sua última versão marcada foi `v0.3.1` em junho de 2024, assim como sua última publicação no PyPI (`gpt-engineer` 0.3.1). O próprio README do projeto aponta para o [gptengineer.app](https://gptengineer.app) como \"a evolução\" (essa plataforma comercial foi renomeada desde então como [Lovable](https://lovable.dev), e o domínio antigo redireciona para lá) e recomenda explicitamente o [Aider](/pt/power-local-llm/aider-review) como \"uma CLI hackeável bem mantida\" para leitores que querem uma alternativa com repositório não arquivado.",
         bullets: [
-          'Repositório: AntonOsika/gpt-engineer no GitHub, criado em abril de 2023, ' + st.pt('gpt-engineer') + ' estrelas e 7.200 forks — agora arquivado (somente leitura)',
+          'Repositório: AntonOsika/gpt-engineer no GitHub, criado em abril de 2023, ' + st.pt('gpt-engineer') + ' estrelas — agora arquivado (somente leitura)',
           'Licença: MIT — uso, modificação e auto-hospedagem gratuitos, inclusive comercial, embora o repositório não aceite mais mudanças',
           'Instalação (arquivado, última versão): `pip install gpt-engineer` — pacote PyPI `gpt-engineer`, última versão publicada 0.3.1 (6 de junho de 2024)',
           'Conceito central: um arquivo de texto `prompt` descreve o software desejado, `gpte <project_dir>` o gera, `gpte <project_dir> -i` melhora código existente',
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Licença MIT — uso, modificação e auto-hospedagem gratuitos, embora o repositório não possa mais aceitar mudanças',
-          'O repositório do GitHub AntonOsika/gpt-engineer tem mais de ' + st.pt('gpt-engineer', 'bare') + ' estrelas e 7.200 forks (criado em abril de 2023) e está arquivado',
+          'O repositório do GitHub AntonOsika/gpt-engineer tem mais de ' + st.pt('gpt-engineer', 'bare') + ' estrelas (criado em abril de 2023) e está arquivado',
           'Pacote PyPI `gpt-engineer`, última versão publicada 0.3.1 (6 de junho de 2024) — sem publicações desde então',
           'Conceito central: um arquivo de texto `prompt` descrevendo o software desejado, gerado via `gpte <project_dir>`, com uma opção `-i` para melhorar código existente a partir de um novo prompt',
           'A própria descrição do GitHub do projeto o chama de "precursor" do lovable.dev; a plataforma comercial gptengineer.app foi renomeada como Lovable e seu domínio agora redireciona para lá',
@@ -1230,7 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Preciso de Docker ou GPU para executar o GPT Engineer?', a: 'Nenhuma GPU é necessária para a configuração padrão, já que a geração acontece chamando a API da OpenAI. Docker é uma das várias opções de instalação documentadas, não um requisito — pip install funciona sem ele.' },
-          { q: 'O GPT Engineer pode rodar com um modelo local em vez da OpenAI?', a: 'A documentação do projeto descreve a configuração de backends de modelos personalizados, incluindo opções locais e hospedadas no Azure, embora a OpenAI seja o caminho padrão e mais testado, dado que o projeto não é mais mantido ativamente.' },
+          { q: 'O GPT Engineer pode rodar com um modelo local em vez da OpenAI?', a: 'A documentação do projeto descreve a configuração de backends de modelos personalizados, incluindo opções locais e hospedadas no Azure, embora a OpenAI seja o caminho padrão e o projeto não seja mais mantido ativamente.' },
         ],
       },
       whoShouldUse: {
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evite o GPT Engineer para qualquer projeto real que você pretenda manter, ou qualquer fluxo de trabalho em que espere correções de bugs, patches de segurança ou compatibilidade com novos modelos vindos do projeto original — o repositório não pode mais entregar nada disso.**",
         items: [
           'Uma base de código de produção, um projeto de cliente, ou qualquer coisa que você pretenda manter a longo prazo — uma ferramenta arquivada sem correções do projeto original é um risco para trabalho contínuo',
-          'Um fluxo de trabalho que precise de suporte aos modelos atuais da OpenAI de fábrica — a última versão testada é de junho de 2024 e é anterior a várias gerações posteriores de modelos da OpenAI',
+          'Um fluxo de trabalho que precise de suporte aos modelos atuais da OpenAI de fábrica — a última versão lançada é de junho de 2024 e é anterior a várias gerações posteriores de modelos da OpenAI',
           'Uma equipe que precise de suporte comercial, um SLA, ou um fornecedor para escalar bugs — não há mais um mantenedor aceitando issues ou pull requests no repositório arquivado',
           'Uma tarefa mais bem atendida por um agente de codificação de terminal com repositório não arquivado — [Aider](/pt/power-local-llm/aider-review) é a alternativa direta recomendada no próprio README do GPT Engineer',
           'Use o GPT Engineer em vez disso apenas como referência histórica, para pesquisa sobre os primeiros designs de agentes de codificação, ou para manter sua própria cópia já bifurcada',
@@ -1279,8 +1279,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ferramenta': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'Função principal': 'Geração de base de código completa a partir de um prompt', 'Licença': 'MIT', 'Status': 'Arquivado (somente leitura)', 'Melhor para': 'Referência histórica, forks existentes' },
           { 'Ferramenta': '[Aider](/pt/power-local-llm/aider-review)', 'Função principal': 'Programação em par com IA no terminal em repositórios existentes', 'Licença': 'Apache 2.0', 'Status': 'Não arquivado (atualizado em ' + upd('aider', 'pt') + ')', 'Melhor para': 'Trabalho de codificação contínuo em um repositório real' },
-          { 'Ferramenta': '[OpenHands](/pt/power-local-llm/openhands-review)', 'Função principal': 'Agente de codificação autônomo em ambiente isolado', 'Licença': 'MIT', 'Status': 'Ativo', 'Melhor para': 'Tarefas de ponta a ponta que exigem execução de código' },
-          { 'Ferramenta': '[AutoGPT](/pt/power-local-llm/autogpt-local-review)', 'Função principal': 'Agente autônomo de uso geral', 'Licença': 'MIT (clássico) / plataforma comercial', 'Status': 'Ativo (plataforma); modo clássico legado', 'Melhor para': 'Comparar os primeiros designs de agentes autônomos de 2023' },
+          { 'Ferramenta': '[OpenHands](/pt/power-local-llm/openhands-review)', 'Função principal': 'Agente de codificação autônomo em ambiente isolado', 'Licença': 'MIT', 'Status': 'Não arquivado (atualizado em ' + upd('openhands', 'pt') + ')', 'Melhor para': 'Tarefas de ponta a ponta que exigem execução de código' },
+          { 'Ferramenta': '[AutoGPT](/pt/power-local-llm/autogpt-local-review)', 'Função principal': 'Agente autônomo de uso geral', 'Licença': 'MIT (clássico) / plataforma comercial', 'Status': 'Não arquivado (atualizado em ' + upd('autogpt', 'pt') + ')', 'Melhor para': 'Comparar os primeiros designs de agentes autônomos de 2023' },
         ],
         note: "Esta tabela compara o GPT Engineer com ferramentas de agentes de codificação com a maior sobreposição de fluxo de trabalho. Exclui frameworks de orquestração multiagente como [CrewAI](/pt/power-local-llm/crewai-review) ou [AutoGen](/pt/power-local-llm/autogen-review), que resolvem um problema diferente — coordenar vários agentes comunicantes em vez de gerar uma base de código a partir de um prompt.",
       },
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 3: esperar compatibilidade com os modelos atuais de fábrica',
-            content: "A última versão testada e lançada é de junho de 2024. A linha de modelos e a API da OpenAI mudaram desde então, então uma integração sem manutenção pode se comportar de forma imprevisível com os modelos atuais — verifique a compatibilidade você mesmo, ou espere ter que corrigir seu próprio fork, antes de confiar nela além de experimentação.",
+            content: "A última versão lançada é de junho de 2024. A linha de modelos e a API da OpenAI mudaram desde então, então uma integração sem manutenção pode se comportar de forma imprevisível com os modelos atuais — verifique a compatibilidade você mesmo, ou espere ter que corrigir seu próprio fork, antes de confiar nela além de experimentação.",
           },
         ],
       },
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O GPT Engineer exige uma chave de API da OpenAI?', a: 'Por padrão, sim — o GPT Engineer chama a API da OpenAI usando uma variável de ambiente `OPENAI_API_KEY` ou arquivo .env. Sua documentação descreve separadamente a configuração de backends de modelos personalizados ou locais.' },
           { q: 'Sob qual licença o GPT Engineer é publicado?', a: 'MIT, que permite uso comercial gratuito, modificação e auto-hospedagem, independentemente do status arquivado do repositório.' },
           { q: 'Quem criou o GPT Engineer?', a: 'Anton Osika criou o repositório AntonOsika/gpt-engineer em abril de 2023. Uma organização relacionada no GitHub, gpt-engineer-org, foi criada em dezembro de 2023 e lista o gptengineer.app como seu site; no momento desta avaliação, a URL do GitHub gpt-engineer-org/gpt-engineer redireciona para o repositório original AntonOsika/gpt-engineer.' },
-          { q: 'Quantas estrelas no GitHub o GPT Engineer tem?', a: 'O repositório AntonOsika/gpt-engineer tem mais de ' + st.pt('gpt-engineer', 'bare') + ' estrelas no GitHub e 7.200 forks, acumuladas antes de o repositório ser arquivado.' },
+          { q: 'Quantas estrelas no GitHub o GPT Engineer tem?', a: 'O repositório AntonOsika/gpt-engineer tem mais de ' + st.pt('gpt-engineer', 'bare') + ' estrelas no GitHub, acumuladas antes de o repositório ser arquivado.' },
           { q: 'Ainda posso usar o GPT Engineer mesmo estando arquivado?', a: 'Sim — a licença MIT permite que você clone, execute, bifurque e modifique sua própria cópia indefinidamente. O que você perde é a capacidade de obter correções do projeto original, suporte a novos modelos, ou ter pull requests mesclados no repositório original.' },
         ],
       },
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'GPT Engineerはまだ保守されていますか、2026年に使うべきですか？',
         answer: "いいえ — [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)のGitHubリポジトリはアーカイブ済み（GitHub APIによって確認されたGitHubの読み取り専用状態）であり、新しいコミット、issue、プルリクエストをマージできないことを意味する。最後のタグ付きリリースは2024年6月の`v0.3.1`で、最後のPyPI公開（`gpt-engineer` 0.3.1）も同じく2024年6月だった。プロジェクト自身のREADMEは、[gptengineer.app](https://gptengineer.app)を「進化形」として案内しており（この商用プラットフォームはその後[Lovable](https://lovable.dev)に改称され、旧ドメインはそちらへリダイレクトされる）、アーカイブされていないCLIを求める読者向けに、明示的に[Aider](/ja/power-local-llm/aider-review)を「よく整備されたハッカブルなCLI」として推奨している。",
         bullets: [
-          'リポジトリ：GitHub上のAntonOsika/gpt-engineer、2023年4月作成、' + st.ja('gpt-engineer') + 'のスターと7,200以上のフォーク — 現在はアーカイブ（読み取り専用）',
+          'リポジトリ：GitHub上のAntonOsika/gpt-engineer、2023年4月作成、' + st.ja('gpt-engineer') + 'のスター — 現在はアーカイブ（読み取り専用）',
           'ライセンス：MIT — 商用利用を含め、無料で使用・改変・セルフホスト可能。ただしリポジトリはもはや変更を受け付けない',
           'インストール（アーカイブ済み、最終リリース）：`pip install gpt-engineer` — PyPIパッケージ名`gpt-engineer`、最終公開バージョン0.3.1（2024年6月6日）',
           '中核概念：欲しいソフトウェアを記述した`prompt`テキストファイルを用意し、`gpte <project_dir>`で生成、または`gpte <project_dir> -i`で既存コードを改善',
@@ -1408,7 +1408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'MITライセンス — 商用利用を含め無料で使用・改変・セルフホスト可能。ただしリポジトリはもう変更を受け付けられない',
-          'GitHubリポジトリAntonOsika/gpt-engineerは' + st.ja('gpt-engineer', 'bare') + 'を超えるスターと7,200フォークを持つ（2023年4月作成）。アーカイブ済み',
+          'GitHubリポジトリAntonOsika/gpt-engineerは' + st.ja('gpt-engineer', 'bare') + 'を超えるスターを持つ（2023年4月作成）。アーカイブ済み',
           'PyPIパッケージ`gpt-engineer`、最終公開バージョン0.3.1（2024年6月6日）— それ以降のリリースなし',
           '中核概念：望むソフトウェアを記述した`prompt`テキストファイルを`gpte <project_dir>`で生成、`-i`フラグで新しいプロンプトから既存コードを改善',
           'プロジェクト自身のGitHub説明文は、これをlovable.devの「前身」と呼んでいる。商用プラットフォームgptengineer.appはLovableに改称され、そのドメインは現在リダイレクトされる',
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'GPT Engineerを実行するのにDockerやGPUは必要ですか？', a: '生成はOpenAI APIの呼び出しによって行われるため、デフォルト設定ではGPUは不要である。Dockerはドキュメント化された複数のインストール方法の1つであり、必須ではない — pip installはDockerなしでも機能する。' },
-          { q: 'GPT EngineerはOpenAIの代わりにローカルモデルで動作しますか？', a: 'プロジェクトのドキュメントにはローカルおよびAzureホスト型を含むカスタムモデルバックエンドの設定方法が説明されているが、プロジェクトがもはや能動的に保守されていないため、OpenAIがデフォルトかつ最もテストされた経路である。' },
+          { q: 'GPT EngineerはOpenAIの代わりにローカルモデルで動作しますか？', a: 'プロジェクトのドキュメントにはローカルおよびAzureホスト型を含むカスタムモデルバックエンドの設定方法が説明されているが、OpenAIがデフォルトの経路であり、プロジェクトはもはや能動的には保守されていない。' },
         ],
       },
       whoShouldUse: {
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**長期的に保守する予定の実プロジェクト、あるいは上流プロジェクトからバグ修正、セキュリティパッチ、新モデルへの互換性を期待するようなワークフローでは、GPT Engineerを避けること — このリポジトリはもうそのいずれも提供できない。**",
         items: [
           '長期的に保守するつもりのプロダクションのコードベース、クライアントプロジェクト、その他あらゆるもの — 上流の修正がないアーカイブ済みツールは、継続的な作業にとってリスクとなる',
-          'デフォルトで現行のOpenAIモデル対応を必要とするワークフロー — 最後にテストされたリリースは2024年6月であり、その後の複数のOpenAIモデル世代より前のものである',
+          'デフォルトで現行のOpenAIモデル対応を必要とするワークフロー — 最後にリリースされたバージョンは2024年6月であり、その後の複数のOpenAIモデル世代より前のものである',
           '商用サポート、SLA、バグをエスカレーションできるベンダーを必要とするチーム — アーカイブされたリポジトリでissueやプルリクエストを受け付ける保守担当者はもういない',
           'リポジトリがアーカイブされていないターミナルコーディングエージェントの方が適したタスク — [Aider](/ja/power-local-llm/aider-review)はGPT Engineer自身のREADMEが推奨する直接の代替である',
           'GPT Engineerは代わりに、歴史的な参考資料として、初期のコーディングエージェント設計の研究として、あるいはすでにフォークした自分自身のコピーを保守する目的にのみ使用すること',
@@ -1545,8 +1545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'ツール': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', '主な役割': '単一プロンプトからのフルコードベース生成', 'ライセンス': 'MIT', 'ステータス': 'アーカイブ済み（読み取り専用）', '最適な用途': '歴史的参考資料、既存フォーク' },
           { 'ツール': '[Aider](/ja/power-local-llm/aider-review)', '主な役割': '既存リポジトリでのターミナルAIペアプログラミング', 'ライセンス': 'Apache 2.0', 'ステータス': 'アーカイブなし（' + upd('aider', 'ja') + '更新）', '最適な用途': '実際のリポジトリでの継続的なコーディング作業' },
-          { 'ツール': '[OpenHands](/ja/power-local-llm/openhands-review)', '主な役割': 'サンドボックス実行環境内の自律型コーディングエージェント', 'ライセンス': 'MIT', 'ステータス': 'アクティブ', '最適な用途': 'コード実行が必要な一気通貫タスク' },
-          { 'ツール': '[AutoGPT](/ja/power-local-llm/autogpt-local-review)', '主な役割': '汎用自律型エージェント', 'ライセンス': 'MIT（クラシック）/ 商用プラットフォーム', 'ステータス': 'アクティブ（プラットフォーム）；クラシックモードはレガシー', '最適な用途': '2023年初期の自律型エージェント設計の比較' },
+          { 'ツール': '[OpenHands](/ja/power-local-llm/openhands-review)', '主な役割': 'サンドボックス実行環境内の自律型コーディングエージェント', 'ライセンス': 'MIT', 'ステータス': 'アーカイブなし（' + upd('openhands', 'ja') + '更新）', '最適な用途': 'コード実行が必要な一気通貫タスク' },
+          { 'ツール': '[AutoGPT](/ja/power-local-llm/autogpt-local-review)', '主な役割': '汎用自律型エージェント', 'ライセンス': 'MIT（クラシック）/ 商用プラットフォーム', 'ステータス': 'アーカイブなし（' + upd('autogpt', 'ja') + '更新）', '最適な用途': '2023年初期の自律型エージェント設計の比較' },
         ],
         note: "この表は、ワークフローの重なりが最も大きいコーディングエージェントツールとGPT Engineerを比較している。[CrewAI](/ja/power-local-llm/crewai-review)や[AutoGen](/ja/power-local-llm/autogen-review)のようなマルチエージェントオーケストレーションフレームワークは対象外である。これらは単一プロンプトからコードベースを生成するのではなく、複数の通信し合うエージェントを調整するという異なる問題を解決している。",
       },
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解3：現行モデルへの互換性がデフォルトで期待できると考える',
-            content: "最後にテスト・リリースされたバージョンは2024年6月のものである。それ以降、OpenAIのモデルラインナップとAPIは変化しており、保守されていない連携は現行モデルに対して予測不能な挙動を示す可能性がある — 実験を超えて依存する前に、自分自身で互換性を確認するか、自分のフォークにパッチを当てることを覚悟すること。",
+            content: "最後にリリースされたバージョンは2024年6月のものである。それ以降、OpenAIのモデルラインナップとAPIは変化しており、保守されていない連携は現行モデルに対して予測不能な挙動を示す可能性がある — 実験を超えて依存する前に、自分自身で互換性を確認するか、自分のフォークにパッチを当てることを覚悟すること。",
           },
         ],
       },
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'GPT EngineerはOpenAI APIキーが必要ですか？', a: 'デフォルトでは、はい — GPT Engineerは`OPENAI_API_KEY`環境変数または.envファイルを使ってOpenAI APIを呼び出す。カスタムまたはローカルモデルバックエンドの設定については、ドキュメントで別途説明されている。' },
           { q: 'GPT Engineerはどのライセンスでリリースされていますか？', a: 'MITであり、リポジトリのアーカイブ状態とは無関係に、無料での商用利用、改変、セルフホストが許可されている。' },
           { q: 'GPT Engineerを作ったのは誰ですか？', a: 'Anton Osika氏が2023年4月にAntonOsika/gpt-engineerリポジトリを作成した。関連するGitHub組織gpt-engineer-orgは2023年12月に作成され、gptengineer.appを自らのウェブサイトとして掲載している。本レビュー時点で、GitHub URLのgpt-engineer-org/gpt-engineerは元のAntonOsika/gpt-engineerリポジトリへリダイレクトされる。' },
-          { q: 'GPT EngineerのGitHubスター数はいくつですか？', a: 'AntonOsika/gpt-engineerリポジトリは、' + st.ja('gpt-engineer', 'bare') + 'を超えるGitHubスターと7,200のフォークを持ち、これらはリポジトリがアーカイブされる前に蓄積されたものである。' },
+          { q: 'GPT EngineerのGitHubスター数はいくつですか？', a: 'AntonOsika/gpt-engineerリポジトリは、' + st.ja('gpt-engineer', 'bare') + 'を超えるGitHubスターを持ち、これらはリポジトリがアーカイブされる前に蓄積されたものである。' },
           { q: 'アーカイブされていても、GPT Engineerはまだ使えますか？', a: 'はい — MITライセンスにより、自分のコピーを無期限にクローン・実行・フォーク・改変できる。失われるのは、上流のバグ修正や新モデル対応を得たり、元のリポジトリにプルリクエストをマージしてもらったりする能力である。' },
         ],
       },
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'GPT Engineer还在维护吗？2026年我应该使用它吗？',
         answer: "不建议——[AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)的GitHub仓库已被归档（经GitHub API确认的GitHub只读状态），意味着无法再合并任何新的提交、issue或拉取请求。其最后一个打标签的版本是2024年6月的`v0.3.1`，最后一次PyPI发布（`gpt-engineer` 0.3.1）同样是在2024年6月。项目自身的README将[gptengineer.app](https://gptengineer.app)称为“演进版本”（这个商业平台后来已更名为[Lovable](https://lovable.dev)，旧域名会重定向到那里），并明确向希望使用仓库未归档的替代方案的读者推荐[Aider](/zh/power-local-llm/aider-review)，称其为“维护良好、可黑客化的CLI”。",
         bullets: [
-          '仓库：GitHub上的AntonOsika/gpt-engineer，创建于2023年4月，拥有' + st.zh('gpt-engineer') + '个星标和7,200个复刻——现已归档（只读）',
+          '仓库：GitHub上的AntonOsika/gpt-engineer，创建于2023年4月，拥有' + st.zh('gpt-engineer') + '个星标——现已归档（只读）',
           '许可证：MIT——可免费使用、修改及自行托管，包括商业用途，尽管该仓库已不再接受变更',
           '安装（已归档，最后版本）：`pip install gpt-engineer`——PyPI包名`gpt-engineer`，最后发布版本0.3.1（2024年6月6日）',
           '核心概念：编写一个描述所需软件的`prompt`文本文件，运行`gpte <project_dir>`生成它，或运行`gpte <project_dir> -i`来改进现有代码',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'MIT许可证——可免费使用、修改及自行托管，尽管该仓库已无法再接受任何变更',
-          'GitHub仓库AntonOsika/gpt-engineer拥有超过' + st.zh('gpt-engineer', 'bare') + '个星标和7,200个复刻（创建于2023年4月），已被归档',
+          'GitHub仓库AntonOsika/gpt-engineer拥有超过' + st.zh('gpt-engineer', 'bare') + '个星标（创建于2023年4月），已被归档',
           'PyPI包`gpt-engineer`，最后发布版本0.3.1（2024年6月6日）——此后再无发布',
           '核心概念：一个描述所需软件的`prompt`文本文件，通过`gpte <project_dir>`生成，配合`-i`标志可根据新提示改进现有代码',
           '项目自身的GitHub描述称其为lovable.dev的"前身"；商业平台gptengineer.app已更名为Lovable，其域名现在会重定向到那里',
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: '运行GPT Engineer需要Docker或GPU吗？', a: '默认设置下无需GPU，因为生成过程是通过调用OpenAI API完成的。Docker只是文档记录的多种安装方式之一，并非必需——不使用Docker，pip install同样可行。' },
-          { q: 'GPT Engineer能使用本地模型而非OpenAI吗？', a: '项目文档描述了如何配置自定义模型后端，包括本地和Azure托管选项，不过由于该项目已不再积极维护，OpenAI仍是默认且经过最多测试的路径。' },
+          { q: 'GPT Engineer能使用本地模型而非OpenAI吗？', a: '项目文档描述了如何配置自定义模型后端，包括本地和Azure托管选项，不过OpenAI是默认路径，且该项目已不再积极维护。' },
         ],
       },
       whoShouldUse: {
@@ -1796,7 +1796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**对于任何你打算长期维护的真实项目，或者任何你期望上游项目提供错误修复、安全补丁或新模型兼容性的工作流程，都应避免使用GPT Engineer——该仓库现在无法再提供其中任何一项。**",
         items: [
           '生产环境代码库、客户项目，或任何你打算长期维护的东西——一个没有上游修复的已归档工具，对持续性工作而言是一种风险',
-          '需要开箱即用支持当前OpenAI模型的工作流程——最后一次测试的版本是2024年6月的，早于此后多代OpenAI模型',
+          '需要开箱即用支持当前OpenAI模型的工作流程——最后发布的版本是2024年6月的，早于此后多代OpenAI模型',
           '需要商业支持、SLA，或需要能将错误上报给厂商的团队——已归档的仓库不再有维护者接受issue或拉取请求',
           '更适合由仓库未归档的终端编码智能体来完成的任务——[Aider](/zh/power-local-llm/aider-review)是GPT Engineer自身README推荐的直接替代方案',
           '相反，仅将GPT Engineer用作历史参考、早期编码智能体设计的研究，或用于维护你自己已经复刻的副本',
@@ -1811,8 +1811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '工具': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', '核心作用': '根据单个提示生成完整代码库', '许可证': 'MIT', '状态': '已归档（只读）', '最适合': '历史参考、现有复刻分支' },
           { '工具': '[Aider](/zh/power-local-llm/aider-review)', '核心作用': '在现有仓库上进行终端AI结对编程', '许可证': 'Apache 2.0', '状态': '未归档（' + upd('aider', 'zh') + '更新）', '最适合': '在真实仓库中持续开展编码工作' },
-          { '工具': '[OpenHands](/zh/power-local-llm/openhands-review)', '核心作用': '沙箱运行环境中的自主编码智能体', '许可证': 'MIT', '状态': '活跃', '最适合': '需要执行代码的端到端任务' },
-          { '工具': '[AutoGPT](/zh/power-local-llm/autogpt-local-review)', '核心作用': '通用自主智能体', '许可证': 'MIT（经典版）/ 商业平台', '状态': '活跃（平台版）；经典模式已成遗留', '最适合': '比较2023年早期的自主智能体设计' },
+          { '工具': '[OpenHands](/zh/power-local-llm/openhands-review)', '核心作用': '沙箱运行环境中的自主编码智能体', '许可证': 'MIT', '状态': '未归档（' + upd('openhands', 'zh') + '更新）', '最适合': '需要执行代码的端到端任务' },
+          { '工具': '[AutoGPT](/zh/power-local-llm/autogpt-local-review)', '核心作用': '通用自主智能体', '许可证': 'MIT（经典版）/ 商业平台', '状态': '未归档（' + upd('autogpt', 'zh') + '更新）', '最适合': '比较2023年早期的自主智能体设计' },
         ],
         note: "本表将GPT Engineer与工作流程重叠度最高的编码智能体工具进行比较，不包括[CrewAI](/zh/power-local-llm/crewai-review)或[AutoGen](/zh/power-local-llm/autogen-review)等多智能体编排框架——它们解决的是不同的问题：协调多个相互通信的智能体，而非根据一个提示生成代码库。",
       },
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区3：期望开箱即用地兼容当前模型',
-            content: "最后经过测试并发布的版本是2024年6月的版本。此后OpenAI的模型阵容和API已发生变化，因此一个无人维护的集成在面对当前模型时可能表现出不可预测的行为——在依赖它进行实验之外的用途之前，请自行验证兼容性，或做好为自己的复刻分支打补丁的准备。",
+            content: "最后发布的版本是2024年6月的版本。此后OpenAI的模型阵容和API已发生变化，因此一个无人维护的集成在面对当前模型时可能表现出不可预测的行为——在依赖它进行实验之外的用途之前，请自行验证兼容性，或做好为自己的复刻分支打补丁的准备。",
           },
         ],
       },
@@ -1847,7 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'GPT Engineer需要OpenAI API密钥吗？', a: '默认情况下是的——GPT Engineer通过`OPENAI_API_KEY`环境变量或.env文件调用OpenAI API。其文档另有说明如何配置自定义或本地模型后端。' },
           { q: 'GPT Engineer采用哪种许可证发布？', a: 'MIT许可证，允许免费商业使用、修改及自行托管，与仓库的归档状态无关。' },
           { q: 'GPT Engineer是谁创建的？', a: 'Anton Osika于2023年4月创建了AntonOsika/gpt-engineer仓库。一个相关的GitHub组织gpt-engineer-org于2023年12月成立，并将gptengineer.app列为其网站；截至本评测时，GitHub网址gpt-engineer-org/gpt-engineer会重定向回最初的AntonOsika/gpt-engineer仓库。' },
-          { q: 'GPT Engineer有多少GitHub星标？', a: 'AntonOsika/gpt-engineer仓库拥有超过' + st.zh('gpt-engineer', 'bare') + '个GitHub星标和7,200个复刻——这些均是在该仓库被归档之前积累的。' },
+          { q: 'GPT Engineer有多少GitHub星标？', a: 'AntonOsika/gpt-engineer仓库拥有超过' + st.zh('gpt-engineer', 'bare') + '个GitHub星标——这些均是在该仓库被归档之前积累的。' },
           { q: '尽管已被归档，我还能使用GPT Engineer吗？', a: '可以——MIT许可证仍允许你无限期地克隆、运行、复刻及修改自己的副本。你失去的是获得上游错误修复、新模型支持，或让拉取请求合并进原始仓库的能力。' },
         ],
       },
@@ -1907,7 +1907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل ما زال GPT Engineer مُصانًا، وهل يجب استخدامه في 2026؟',
         answer: "لا — مستودع [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) على GitHub مؤرشف (حالة القراءة فقط في GitHub، مؤكدة عبر واجهة برمجة تطبيقات GitHub)، ما يعني تعذّر دمج أي تعديلات (commits) أو مشكلات (issues) أو طلبات سحب (pull requests) جديدة فيه بعد الآن. كان آخر إصدار موسوم هو `v0.3.1` في يونيو 2024، وكذلك آخر نشر على PyPI (`gpt-engineer` 0.3.1). يشير ملف README الخاص بالمشروع إلى [gptengineer.app](https://gptengineer.app) باعتباره «التطور» (أُعيدت تسمية هذه المنصة التجارية لاحقًا إلى [Lovable](https://lovable.dev)، ويعيد النطاق القديم التوجيه إليها)، ويوصي صراحةً بـ [Aider](/ar/power-local-llm/aider-review) باعتبارها «واجهة سطر أوامر قابلة للتعديل ومُصانة جيدًا» للقرّاء الراغبين في بديل مستودعه غير مؤرشف.",
         bullets: [
-          'المستودع: AntonOsika/gpt-engineer على GitHub، أُنشئ في أبريل 2023، ' + st.ar('gpt-engineer') + ' نجمة و7,200 عملية fork — أصبح الآن مؤرشفًا (للقراءة فقط)',
+          'المستودع: AntonOsika/gpt-engineer على GitHub، أُنشئ في أبريل 2023، ' + st.ar('gpt-engineer') + ' نجمة — أصبح الآن مؤرشفًا (للقراءة فقط)',
           'الترخيص: MIT — مجاني للاستخدام والتعديل والاستضافة الذاتية، بما في ذلك تجاريًا، رغم أن المستودع لم يعد يقبل أي تغييرات',
           'التثبيت (مؤرشف، آخر إصدار): `pip install gpt-engineer` — اسم الحزمة على PyPI هو `gpt-engineer`، وآخر إصدار منشور هو 0.3.1 (6 يونيو 2024)',
           'المفهوم الأساسي: ملف نصي باسم `prompt` يصف البرمجية المطلوبة، وينشئها `gpte <project_dir>`، بينما يُحسّن الخيار `gpte <project_dir> -i` الكود الموجود',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'ترخيص MIT — استخدام وتعديل واستضافة ذاتية مجانية، رغم أن المستودع لم يعد يقبل أي تغييرات',
-          'يزيد مستودع GitHub الخاص بـ AntonOsika/gpt-engineer على ' + st.ar('gpt-engineer', 'bare') + ' نجمة و7,200 عملية fork (أُنشئ في أبريل 2023)، وهو مؤرشف',
+          'يزيد مستودع GitHub الخاص بـ AntonOsika/gpt-engineer على ' + st.ar('gpt-engineer', 'bare') + ' نجمة (أُنشئ في أبريل 2023)، وهو مؤرشف',
           'حزمة PyPI باسم `gpt-engineer`، آخر إصدار منشور 0.3.1 (6 يونيو 2024) — لا إصدارات منذ ذلك الحين',
           'المفهوم الأساسي: ملف نصي باسم `prompt` يصف البرمجية المطلوبة، يُولَّد عبر `gpte <project_dir>`، مع خيار `-i` لتحسين كود موجود من تعليمات جديدة',
           'وصف المشروع نفسه على GitHub يسميه «سلف» lovable.dev؛ أما المنصة التجارية gptengineer.app فقد أُعيدت تسميتها إلى Lovable، ويعيد نطاقها الآن التوجيه إليها',
@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'هل أحتاج إلى Docker أو وحدة معالجة رسومات (GPU) لتشغيل GPT Engineer؟', a: 'لا حاجة إلى وحدة معالجة رسومات للإعداد الافتراضي، لأن التوليد يتم عبر استدعاء واجهة برمجة تطبيقات OpenAI. Docker هو أحد عدة خيارات تثبيت موثقة، وليس شرطًا — يعمل pip install دونه.' },
-          { q: 'هل يمكن لـ GPT Engineer العمل مع نموذج محلي بدلاً من OpenAI؟', a: 'تصف وثائق المشروع إعداد خلفيات نماذج مخصصة، بما فيها خيارات محلية ومستضافة على Azure، رغم أن OpenAI هو المسار الافتراضي والأكثر اختبارًا نظرًا لأن المشروع لم يعد مُصانًا بشكل نشط.' },
+          { q: 'هل يمكن لـ GPT Engineer العمل مع نموذج محلي بدلاً من OpenAI؟', a: 'تصف وثائق المشروع إعداد خلفيات نماذج مخصصة، بما فيها خيارات محلية ومستضافة على Azure، رغم أن OpenAI هو المسار الافتراضي وأن المشروع لم يعد مُصانًا بشكل نشط.' },
         ],
       },
       whoShouldUse: {
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**تجنّب GPT Engineer لأي مشروع حقيقي تخطط لصيانته، أو أي سير عمل تتوقع فيه إصلاحات أخطاء أو تصحيحات أمان أو توافقًا مع نماذج جديدة من المشروع الأصلي — لم يعد بإمكان المستودع تقديم أي من ذلك.**",
         items: [
           'قاعدة كود إنتاجية، أو مشروع عميل، أو أي شيء تنوي صيانته على المدى الطويل — أداة مؤرشفة بلا إصلاحات من المصدر الأصلي هي خطر على العمل المستمر',
-          'سير عمل يحتاج إلى دعم نماذج OpenAI الحالية جاهزًا للاستخدام — آخر إصدار مُختبر يعود إلى يونيو 2024 ويسبق عدة أجيال لاحقة من نماذج OpenAI',
+          'سير عمل يحتاج إلى دعم نماذج OpenAI الحالية جاهزًا للاستخدام — آخر إصدار منشور يعود إلى يونيو 2024 ويسبق عدة أجيال لاحقة من نماذج OpenAI',
           'فريق يحتاج إلى دعم تجاري أو اتفاقية مستوى خدمة (SLA) أو مورّد يمكن تصعيد الأخطاء إليه — لم يعد هناك قائم على الصيانة يقبل المشكلات أو طلبات السحب على المستودع المؤرشف',
           'مهمة يخدمها بشكل أفضل عميل برمجة طرفية مستودعه غير مؤرشف — [Aider](/ar/power-local-llm/aider-review) هو البديل المباشر الموصى به في ملف README الخاص بـ GPT Engineer نفسه',
           'استخدم GPT Engineer بدلاً من ذلك فقط كمرجع تاريخي، أو لبحث تصاميم عملاء البرمجة المبكرة، أو لصيانة نسختك المتفرعة بالفعل',
@@ -2077,8 +2077,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الأداة': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', 'الوظيفة الأساسية': 'توليد قاعدة كود كاملة من تعليمة واحدة', 'الترخيص': 'MIT', 'الحالة': 'مؤرشف (للقراءة فقط)', 'الأنسب لـ': 'مرجع تاريخي، فروع موجودة' },
           { 'الأداة': '[Aider](/ar/power-local-llm/aider-review)', 'الوظيفة الأساسية': 'برمجة زوجية بالذكاء الاصطناعي عبر الطرفية على مستودعات موجودة', 'الترخيص': 'Apache 2.0', 'الحالة': 'غير مؤرشف (تحديث ' + upd('aider', 'ar') + ')', 'الأنسب لـ': 'عمل برمجي مستمر في مستودع حقيقي' },
-          { 'الأداة': '[OpenHands](/ar/power-local-llm/openhands-review)', 'الوظيفة الأساسية': 'عميل برمجة مستقل في بيئة تشغيل معزولة', 'الترخيص': 'MIT', 'الحالة': 'نشط', 'الأنسب لـ': 'مهام شاملة تحتاج إلى تنفيذ الكود' },
-          { 'الأداة': '[AutoGPT](/ar/power-local-llm/autogpt-local-review)', 'الوظيفة الأساسية': 'عميل مستقل عام الغرض', 'الترخيص': 'MIT (كلاسيكي) / منصة تجارية', 'الحالة': 'نشط (المنصة)؛ الوضع الكلاسيكي قديم', 'الأنسب لـ': 'مقارنة تصاميم العملاء المستقلين المبكرة لعام 2023' },
+          { 'الأداة': '[OpenHands](/ar/power-local-llm/openhands-review)', 'الوظيفة الأساسية': 'عميل برمجة مستقل في بيئة تشغيل معزولة', 'الترخيص': 'MIT', 'الحالة': 'غير مؤرشف (تحديث ' + upd('openhands', 'ar') + ')', 'الأنسب لـ': 'مهام شاملة تحتاج إلى تنفيذ الكود' },
+          { 'الأداة': '[AutoGPT](/ar/power-local-llm/autogpt-local-review)', 'الوظيفة الأساسية': 'عميل مستقل عام الغرض', 'الترخيص': 'MIT (كلاسيكي) / منصة تجارية', 'الحالة': 'غير مؤرشف (تحديث ' + upd('autogpt', 'ar') + ')', 'الأنسب لـ': 'مقارنة تصاميم العملاء المستقلين المبكرة لعام 2023' },
         ],
         note: "يقارن هذا الجدول GPT Engineer بأدوات عملاء البرمجة الأقرب من حيث تداخل سير العمل. يستثني أطر عمل تنسيق متعدد العملاء مثل [CrewAI](/ar/power-local-llm/crewai-review) أو [AutoGen](/ar/power-local-llm/autogen-review)، التي تحل مشكلة مختلفة — تنسيق عدة عملاء متواصلين بدلاً من توليد قاعدة كود من تعليمة واحدة.",
       },
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ الثالث: توقع التوافق مع النماذج الحالية جاهزًا للاستخدام',
-            content: 'آخر إصدار مُختبر ومنشور يعود إلى يونيو 2024. تغيرت تشكيلة نماذج OpenAI وواجهة برمجة تطبيقاتها منذ ذلك الحين، لذا قد يتصرف تكامل غير مُصان بشكل غير متوقع مع النماذج الحالية — تحقق من التوافق بنفسك، أو توقع الحاجة إلى تصحيح فرعك الخاص، قبل الاعتماد عليه فيما يتجاوز التجريب.',
+            content: 'آخر إصدار منشور يعود إلى يونيو 2024. تغيرت تشكيلة نماذج OpenAI وواجهة برمجة تطبيقاتها منذ ذلك الحين، لذا قد يتصرف تكامل غير مُصان بشكل غير متوقع مع النماذج الحالية — تحقق من التوافق بنفسك، أو توقع الحاجة إلى تصحيح فرعك الخاص، قبل الاعتماد عليه فيما يتجاوز التجريب.',
           },
         ],
       },
@@ -2113,7 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يتطلب GPT Engineer مفتاح API من OpenAI؟', a: 'افتراضيًا، نعم — تستدعي GPT Engineer واجهة برمجة تطبيقات OpenAI باستخدام متغير بيئة `OPENAI_API_KEY` أو ملف .env. تصف وثائقها بشكل منفصل إعداد خلفيات نماذج مخصصة أو محلية.' },
           { q: 'بأي ترخيص تُنشر GPT Engineer؟', a: 'MIT، الذي يسمح بالاستخدام التجاري المجاني والتعديل والاستضافة الذاتية، بغض النظر عن حالة أرشفة المستودع.' },
           { q: 'من أنشأ GPT Engineer؟', a: 'أنشأ Anton Osika مستودع AntonOsika/gpt-engineer في أبريل 2023. أُنشئت منظمة GitHub ذات صلة، gpt-engineer-org، في ديسمبر 2023، وتُدرج gptengineer.app كموقعها الإلكتروني؛ وقت إعداد هذه المراجعة، يُعيد رابط GitHub gpt-engineer-org/gpt-engineer التوجيه إلى المستودع الأصلي AntonOsika/gpt-engineer.' },
-          { q: 'كم عدد نجوم GitHub التي حصل عليها GPT Engineer؟', a: 'يزيد مستودع AntonOsika/gpt-engineer على ' + st.ar('gpt-engineer', 'bare') + ' نجمة على GitHub و7,200 عملية fork — تراكمت قبل أرشفة المستودع.' },
+          { q: 'كم عدد نجوم GitHub التي حصل عليها GPT Engineer؟', a: 'يزيد مستودع AntonOsika/gpt-engineer على ' + st.ar('gpt-engineer', 'bare') + ' نجمة على GitHub — تراكمت قبل أرشفة المستودع.' },
           { q: 'هل يمكنني الاستمرار في استخدام GPT Engineer رغم أرشفته؟', a: 'نعم — يسمح لك ترخيص MIT باستنساخ وتشغيل وتفريع وتعديل نسختك الخاصة إلى أجل غير مسمى. ما تفقده هو القدرة على الحصول على إصلاحات من المصدر الأصلي أو دعم نماذج جديدة أو دمج طلبات سحب في المستودع الأصلي.' },
         ],
       },
@@ -2173,7 +2173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'GPT Engineer는 아직 유지보수되고 있나요? 2026년에 사용해도 될까요?',
         answer: "아니요 — [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) GitHub 저장소는 아카이브됨(GitHub API로 확인된 GitHub의 읽기 전용 상태) 상태이며, 이는 새로운 커밋, 이슈, 풀 리퀘스트를 더 이상 병합할 수 없음을 의미한다. 마지막 태그 버전은 2024년 6월의 `v0.3.1`이었고, 마지막 PyPI 게시(`gpt-engineer` 0.3.1)도 마찬가지로 2024년 6월이었다. 프로젝트 자체 README는 [gptengineer.app](https://gptengineer.app)을 \"진화형\"으로 안내하며(이 상업용 플랫폼은 이후 [Lovable](https://lovable.dev)로 이름이 바뀌었고 이전 도메인은 그쪽으로 리다이렉트된다), 저장소가 아카이브되지 않은 대안을 원하는 독자에게 명시적으로 [Aider](/ko/power-local-llm/aider-review)를 \"잘 관리되는 해킹 가능한 CLI\"로 추천한다.",
         bullets: [
-          '저장소: GitHub의 AntonOsika/gpt-engineer, 2023년 4월 생성, ' + st.ko('gpt-engineer') + '개 스타와 7,200개 이상의 포크 — 현재는 아카이브(읽기 전용)됨',
+          '저장소: GitHub의 AntonOsika/gpt-engineer, 2023년 4월 생성, ' + st.ko('gpt-engineer') + '개 스타 — 현재는 아카이브(읽기 전용)됨',
           '라이선스: MIT — 상업적 이용을 포함해 무료로 사용, 수정, 자체 호스팅 가능하지만, 저장소는 더 이상 변경 사항을 받지 않음',
           '설치(아카이브됨, 마지막 버전): `pip install gpt-engineer` — PyPI 패키지명 `gpt-engineer`, 마지막 게시 버전 0.3.1(2024년 6월 6일)',
           '핵심 개념: 원하는 소프트웨어를 설명하는 `prompt` 텍스트 파일을 작성하고, `gpte <project_dir>`로 생성하거나 `gpte <project_dir> -i`로 기존 코드를 개선',
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'MIT 라이선스 — 무료로 사용, 수정, 자체 호스팅 가능하지만 저장소는 더 이상 변경을 받을 수 없음',
-          'GitHub 저장소 AntonOsika/gpt-engineer는 ' + st.ko('gpt-engineer', 'bare') + '개 넘는 스타와 7,200개 이상의 포크를 기록했으며(2023년 4월 생성) 아카이브됨',
+          'GitHub 저장소 AntonOsika/gpt-engineer는 ' + st.ko('gpt-engineer', 'bare') + '개 넘는 스타를 기록했으며(2023년 4월 생성) 아카이브됨',
           'PyPI 패키지 `gpt-engineer`, 마지막 게시 버전 0.3.1(2024년 6월 6일) — 이후 게시 없음',
           '핵심 개념: 원하는 소프트웨어를 설명하는 `prompt` 텍스트 파일을 `gpte <project_dir>`로 생성하며, `-i` 플래그로 새 프롬프트를 기반으로 기존 코드를 개선',
           '프로젝트 자체 GitHub 설명은 이를 lovable.dev의 "전신"이라고 부른다. 상업용 플랫폼 gptengineer.app은 Lovable로 이름이 바뀌었고 도메인은 이제 그쪽으로 리다이렉트된다',
@@ -2294,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'GPT Engineer를 실행하는 데 Docker나 GPU가 필요한가요?', a: '생성 작업이 OpenAI API 호출을 통해 이루어지므로 기본 설정에는 GPU가 필요하지 않다. Docker는 문서화된 여러 설치 방법 중 하나일 뿐 필수는 아니다 — pip install만으로도 작동한다.' },
-          { q: 'GPT Engineer는 OpenAI 대신 로컬 모델로 실행할 수 있나요?', a: '프로젝트 문서에는 로컬 및 Azure 호스팅 옵션을 포함한 커스텀 모델 백엔드 설정 방법이 설명되어 있지만, 프로젝트가 더 이상 능동적으로 유지보수되지 않기 때문에 OpenAI가 기본값이자 가장 많이 테스트된 경로다.' },
+          { q: 'GPT Engineer는 OpenAI 대신 로컬 모델로 실행할 수 있나요?', a: '프로젝트 문서에는 로컬 및 Azure 호스팅 옵션을 포함한 커스텀 모델 백엔드 설정 방법이 설명되어 있지만, OpenAI가 기본값이며 프로젝트는 더 이상 능동적으로 유지보수되지 않는다.' },
         ],
       },
       whoShouldUse: {
@@ -2328,7 +2328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**유지보수할 계획이 있는 실제 프로젝트, 또는 상류 프로젝트로부터 버그 수정, 보안 패치, 신규 모델 호환성을 기대하는 워크플로에는 GPT Engineer를 피하라 — 저장소는 더 이상 그 무엇도 제공할 수 없다.**",
         items: [
           '장기적으로 유지보수할 계획인 프로덕션 코드베이스, 클라이언트 프로젝트, 그 밖의 모든 것 — 상류의 수정이 없는 아카이브된 도구는 지속적인 작업에 위험 요소다',
-          '기본적으로 현재의 OpenAI 모델 지원이 필요한 워크플로 — 마지막으로 테스트된 릴리스는 2024년 6월이며, 이후 여러 세대의 OpenAI 모델보다 앞선 것이다',
+          '기본적으로 현재의 OpenAI 모델 지원이 필요한 워크플로 — 마지막으로 릴리스된 버전은 2024년 6월이며, 이후 여러 세대의 OpenAI 모델보다 앞선 것이다',
           '상업적 지원, SLA, 또는 버그를 보고할 벤더가 필요한 팀 — 아카이브된 저장소에서는 더 이상 이슈나 풀 리퀘스트를 받아들이는 관리자가 없다',
           '저장소가 아카이브되지 않은 터미널 코딩 에이전트가 더 적합한 작업 — [Aider](/ko/power-local-llm/aider-review)는 GPT Engineer 자체 README가 추천하는 직접적인 대안이다',
           '대신 GPT Engineer는 역사적 참고 자료로만, 초기 코딩 에이전트 설계에 대한 연구용으로만, 또는 이미 포크한 자신의 사본을 유지보수하는 용도로만 사용하라',
@@ -2343,8 +2343,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '도구': '[GPT Engineer](https://github.com/AntonOsika/gpt-engineer)', '핵심 역할': '단일 프롬프트로부터 전체 코드베이스 생성', '라이선스': 'MIT', '상태': '아카이브됨(읽기 전용)', '최적 용도': '역사적 참고 자료, 기존 포크' },
           { '도구': '[Aider](/ko/power-local-llm/aider-review)', '핵심 역할': '기존 저장소에서의 터미널 AI 페어 프로그래밍', '라이선스': 'Apache 2.0', '상태': '아카이브 안 됨(' + upd('aider', 'ko') + ' 업데이트)', '최적 용도': '실제 저장소에서의 지속적인 코딩 작업' },
-          { '도구': '[OpenHands](/ko/power-local-llm/openhands-review)', '핵심 역할': '샌드박스 실행 환경 내 자율 코딩 에이전트', '라이선스': 'MIT', '상태': '활발함', '최적 용도': '코드 실행이 필요한 엔드투엔드 작업' },
-          { '도구': '[AutoGPT](/ko/power-local-llm/autogpt-local-review)', '핵심 역할': '범용 자율 에이전트', '라이선스': 'MIT(클래식) / 상업용 플랫폼', '상태': '활발함(플랫폼); 클래식 모드는 레거시', '최적 용도': '2023년 초기 자율 에이전트 설계 비교' },
+          { '도구': '[OpenHands](/ko/power-local-llm/openhands-review)', '핵심 역할': '샌드박스 실행 환경 내 자율 코딩 에이전트', '라이선스': 'MIT', '상태': '아카이브 안 됨(' + upd('openhands', 'ko') + ' 업데이트)', '최적 용도': '코드 실행이 필요한 엔드투엔드 작업' },
+          { '도구': '[AutoGPT](/ko/power-local-llm/autogpt-local-review)', '핵심 역할': '범용 자율 에이전트', '라이선스': 'MIT(클래식) / 상업용 플랫폼', '상태': '아카이브 안 됨(' + upd('autogpt', 'ko') + ' 업데이트)', '최적 용도': '2023년 초기 자율 에이전트 설계 비교' },
         ],
         note: "이 표는 워크플로가 가장 겹치는 코딩 에이전트 도구들과 GPT Engineer를 비교한다. [CrewAI](/ko/power-local-llm/crewai-review)나 [AutoGen](/ko/power-local-llm/autogen-review) 같은 멀티 에이전트 오케스트레이션 프레임워크는 제외되는데, 이들은 단일 프롬프트로부터 코드베이스를 생성하는 것이 아니라 여러 소통하는 에이전트를 조율한다는 다른 문제를 해결하기 때문이다.",
       },
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '실수 3: 현재 모델과의 호환성을 기본적으로 기대함',
-            content: "마지막으로 테스트되고 릴리스된 버전은 2024년 6월의 것이다. 그 이후 OpenAI의 모델 라인업과 API가 변경되었으므로, 유지보수되지 않는 연동은 현재 모델에서 예측할 수 없게 동작할 수 있다 — 실험 이상의 용도로 의존하기 전에 직접 호환성을 확인하거나 자신의 포크를 패치할 각오를 하라.",
+            content: "마지막으로 릴리스된 버전은 2024년 6월의 것이다. 그 이후 OpenAI의 모델 라인업과 API가 변경되었으므로, 유지보수되지 않는 연동은 현재 모델에서 예측할 수 없게 동작할 수 있다 — 실험 이상의 용도로 의존하기 전에 직접 호환성을 확인하거나 자신의 포크를 패치할 각오를 하라.",
           },
         ],
       },
@@ -2379,7 +2379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'GPT Engineer는 OpenAI API 키가 필요한가요?', a: '기본적으로는 그렇다 — GPT Engineer는 `OPENAI_API_KEY` 환경 변수나 .env 파일을 사용해 OpenAI API를 호출한다. 커스텀 또는 로컬 모델 백엔드 설정 방법은 문서에 별도로 설명되어 있다.' },
           { q: 'GPT Engineer는 어떤 라이선스로 배포되나요?', a: 'MIT이며, 저장소의 아카이브 상태와 무관하게 무료 상업적 이용, 수정, 자체 호스팅을 허용한다.' },
           { q: 'GPT Engineer는 누가 만들었나요?', a: 'Anton Osika가 2023년 4월 AntonOsika/gpt-engineer 저장소를 만들었다. 관련 GitHub 조직인 gpt-engineer-org는 2023년 12월에 만들어졌으며 gptengineer.app을 자체 웹사이트로 등록하고 있다. 본 리뷰 시점 기준, GitHub URL인 gpt-engineer-org/gpt-engineer는 원래의 AntonOsika/gpt-engineer 저장소로 리다이렉트된다.' },
-          { q: 'GPT Engineer의 GitHub 스타 수는 몇 개인가요?', a: 'AntonOsika/gpt-engineer 저장소는 ' + st.ko('gpt-engineer', 'bare') + '개 넘는 GitHub 스타와 7,200개 이상의 포크를 기록했으며, 이는 저장소가 아카이브되기 전에 쌓인 것이다.' },
+          { q: 'GPT Engineer의 GitHub 스타 수는 몇 개인가요?', a: 'AntonOsika/gpt-engineer 저장소는 ' + st.ko('gpt-engineer', 'bare') + '개 넘는 GitHub 스타를 기록했으며, 이는 저장소가 아카이브되기 전에 쌓인 것이다.' },
           { q: '아카이브되었어도 GPT Engineer를 계속 사용할 수 있나요?', a: '네 — MIT 라이선스는 자신의 사본을 무기한으로 클론, 실행, 포크, 수정할 수 있도록 허용한다. 잃는 것은 상류로부터 버그 수정이나 신규 모델 지원을 받거나, 원래 저장소에 풀 리퀘스트를 병합할 수 있는 능력이다.' },
         ],
       },
