@@ -60,4 +60,5 @@ export const app: ToolRecord = {
   lastVerifiedDate: '2026-11-06',
   lastUpstreamUpdate: '2026-11-06', // GitHub API MatthewLeibel/ramen-releases: v1.0.0 published 2026-11-06T05:20:10Z, read 2026-11-06
   lastUpstreamUpdateSource: 'https://github.com/MatthewLeibel/ramen-releases/releases/tag/v1.0.0',
+  founderReviewedDate: '2026-11-06', // Matthew (founder) checked the finished write-up against the RAMen pages and installer on 2026-11-06 and called it all correct, plus answered the saved-chats FAQ; drives the Founder-reviewed banner + star. Maker note (fromTheMaker / founder record) still to come.
 }

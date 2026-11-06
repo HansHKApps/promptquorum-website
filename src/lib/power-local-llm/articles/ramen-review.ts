@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "What happens to my saved chats if I stop paying?",
-            "a": "The license agreement says RAMen continues on the free plan, which remembers the last 3 chats, one at a time. The sources do not say what happens to older saved chats."
+            "a": "RAMen continues on the free plan, which keeps the 3 most recently used saved chats and clears older saved copies from disk as new chats are saved (the maker confirmed this to PromptQuorum on 6 November 2026). The conversations themselves stay in your app, because RAMen saves the model's working memory, not the chat text, so an older chat still works; it is simply read again from the start, like plain llama.cpp."
           },
           {
             "q": "Does RAMen work offline?",
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "Was passiert mit meinen gespeicherten Chats, wenn ich nicht mehr zahle?",
-            "a": "Die Lizenzvereinbarung sagt, dass RAMen im kostenlosen Tarif weiterläuft, der sich die letzten 3 Chats merkt, jeweils einen. Die Quellen sagen nicht, was mit älteren gespeicherten Chats geschieht."
+            "a": "RAMen läuft im kostenlosen Tarif weiter, der die 3 zuletzt verwendeten gespeicherten Chats behält und ältere gespeicherte Kopien von der Festplatte löscht, sobald neue Chats gespeichert werden (der Hersteller hat das PromptQuorum am 6. November 2026 bestätigt). Die Unterhaltungen selbst bleiben in Ihrer App erhalten, weil RAMen den Arbeitsspeicher des Modells sichert, nicht den Chattext; ein älterer Chat funktioniert also weiterhin, wird aber wie bei reinem llama.cpp von vorn neu eingelesen."
           },
           {
             "q": "Funktioniert RAMen offline?",
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "¿Qué pasa con mis chats guardados si dejo de pagar?",
-            "a": "El acuerdo de licencia dice que RAMen continúa con el plan gratuito, que recuerda los últimos 3 chats, uno a la vez. Las fuentes no dicen qué ocurre con los chats guardados más antiguos."
+            "a": "RAMen continúa con el plan gratuito, que conserva los 3 chats guardados usados más recientemente y borra del disco las copias guardadas más antiguas a medida que se guardan chats nuevos (el creador se lo confirmó a PromptQuorum el 6 de noviembre de 2026). Las conversaciones en sí permanecen en tu app, porque RAMen guarda la memoria de trabajo del modelo, no el texto del chat; un chat antiguo sigue funcionando, solo que se vuelve a leer desde el principio, como con llama.cpp a secas."
           },
           {
             "q": "¿RAMen funciona sin conexión?",
@@ -1732,7 +1732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "Que deviennent mes chats enregistrés si j’arrête de payer ?",
-            "a": "Le contrat de licence indique que RAMen continue avec l’offre gratuite, qui mémorise les 3 derniers chats, un à la fois. Les sources ne disent pas ce qu’il advient des chats enregistrés plus anciens."
+            "a": "RAMen continue avec l’offre gratuite, qui conserve les 3 chats enregistrés utilisés le plus récemment et efface du disque les copies enregistrées plus anciennes à mesure que de nouveaux chats sont enregistrés (le fabricant l’a confirmé à PromptQuorum le 6 novembre 2026). Les conversations elles-mêmes restent dans votre application, car RAMen enregistre la mémoire de travail du modèle, pas le texte du chat ; un chat plus ancien fonctionne donc toujours, il est simplement relu depuis le début, comme avec llama.cpp seul."
           },
           {
             "q": "RAMen fonctionne-t-il hors ligne ?",
@@ -2155,7 +2155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "支払いをやめると、保存したチャットはどうなりますか？",
-            "a": "ライセンス契約によると、RAMenは無料プランで動作を続けます。無料プランは直近3件のチャットを、1つずつ記憶します。それより古い保存済みチャットがどうなるかは、情報源に記載がありません。"
+            "a": "RAMenは無料プランで動作を続けます。無料プランでは、最近使った保存済みチャット3件が保持され、新しいチャットが保存されるたびに、それより古い保存コピーがディスクから削除されます（メーカーが2026年11月6日にPromptQuorumへ確認）。会話そのものはアプリに残ります。RAMenが保存するのはチャットの文章ではなくモデルの作業メモリだからです。そのため古いチャットも引き続き使えますが、素のllama.cppと同様に最初から読み直されます。"
           },
           {
             "q": "RAMenはオフラインで動きますか？",
@@ -2578,7 +2578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "O que acontece com os meus chats salvos se eu parar de pagar?",
-            "a": "O contrato de licença diz que o RAMen continua no plano gratuito, que lembra dos últimos 3 chats, um por vez. As fontes não dizem o que acontece com os chats salvos mais antigos."
+            "a": "O RAMen continua no plano gratuito, que mantém os 3 chats salvos usados mais recentemente e apaga do disco as cópias salvas mais antigas à medida que novos chats são salvos (o criador confirmou isso ao PromptQuorum em 6 de novembro de 2026). As conversas em si continuam no seu app, porque o RAMen salva a memória de trabalho do modelo, não o texto do chat; um chat mais antigo ainda funciona, apenas é lido de novo desde o início, como no llama.cpp puro."
           },
           {
             "q": "O RAMen funciona offline?",
@@ -3001,7 +3001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "ماذا يحدث لمحادثاتي المحفوظة إن توقفت عن الدفع؟",
-            "a": "تقول اتفاقية الترخيص إن RAMen يستمر على الخطة المجانية التي تتذكر آخر 3 محادثات، واحدة في كل مرة. ولا تذكر المصادر ما يحدث للمحادثات المحفوظة الأقدم."
+            "a": "يستمر RAMen على الخطة المجانية التي تحتفظ بآخر 3 محادثات محفوظة جرى استخدامها، وتمسح من القرص النسخ المحفوظة الأقدم كلما حُفظت محادثات جديدة (أكدت الشركة الصانعة ذلك لـ PromptQuorum في 6 نوفمبر 2026). أما المحادثات نفسها فتبقى في تطبيقك، لأن RAMen يحفظ الذاكرة العاملة للنموذج لا نص المحادثة؛ فتظل المحادثة الأقدم تعمل، لكنها تُقرأ من جديد من البداية كما في llama.cpp العادي."
           },
           {
             "q": "هل يعمل RAMen دون اتصال بالإنترنت؟",
@@ -3424,7 +3424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "如果我停止付费，已保存的聊天会怎样？",
-            "a": "许可协议称，RAMen 会继续以免费方案运行，该方案记住最近 3 次聊天，一次一个。资料没有说明更早保存的聊天会怎样。"
+            "a": "RAMen 会继续以免费方案运行：该方案保留最近使用的 3 个已保存聊天，并在保存新聊天时从磁盘清除更早的保存副本（厂商已于 2026 年 11 月 6 日向 PromptQuorum 确认）。对话本身仍保留在你的应用中，因为 RAMen 保存的是模型的工作内存，而不是聊天文本；因此较早的聊天仍可使用，只是会像普通 llama.cpp 一样从头重新读取。"
           },
           {
             "q": "RAMen 可以离线使用吗？",
@@ -3847,7 +3847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "q": "결제를 중단하면 저장된 채팅은 어떻게 됩니까?",
-            "a": "라이선스 계약에 따르면 RAMen은 최근 채팅 3개를 한 번에 하나씩 기억하는 무료 플랜으로 계속 작동합니다. 이전에 저장된 채팅이 어떻게 되는지는 출처에 나와 있지 않습니다."
+            "a": "RAMen은 무료 플랜으로 계속 작동하며, 무료 플랜은 가장 최근에 사용한 저장 채팅 3개를 유지하고 새 채팅이 저장될 때마다 그보다 오래된 저장본을 디스크에서 삭제합니다(개발사가 2026년 11월 6일 PromptQuorum에 확인). 대화 자체는 앱에 그대로 남습니다. RAMen이 저장하는 것은 채팅 텍스트가 아니라 모델의 작업 메모리이기 때문입니다. 따라서 오래된 채팅도 계속 사용할 수 있으며, 일반 llama.cpp처럼 처음부터 다시 읽을 뿐입니다."
           },
           {
             "q": "RAMen은 오프라인에서 작동합니까?",
