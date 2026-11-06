@@ -47,6 +47,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'big-agi':                                 'big-agi',
   'nextchat':                                'nextchat',
   'page-assist':                             'page-assist',
+  'lastbrowser':                             'lastbrowser',
   'chatbox':                                 'chatbox',
   'continue-dev':                            'continue-dev',
   'cline':                                   'cline',

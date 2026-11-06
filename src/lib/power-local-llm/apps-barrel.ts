@@ -51,6 +51,7 @@ import { app as app_lobechat } from './apps/lobechat'
 import { app as app_big_agi } from './apps/big-agi'
 import { app as app_nextchat } from './apps/nextchat'
 import { app as app_page_assist } from './apps/page-assist'
+import { app as app_lastbrowser } from './apps/lastbrowser'
 import { app as app_chatbox } from './apps/chatbox'
 import { app as app_continue_dev } from './apps/continue-dev'
 import { app as app_cline } from './apps/cline'
@@ -401,6 +402,7 @@ export const localAiApps: ToolRecord[] = [
   app_big_agi,
   app_nextchat,
   app_page_assist,
+  app_lastbrowser,
   app_chatbox,
   app_continue_dev,
   app_cline,

@@ -910,6 +910,7 @@ const HUB_THEMES: Array<{
       'local-llm-chat-assistants-compared',
       'lm-studio-review',
       'sidekick-review',
+      'lastbrowser-review',
     ],
   },
   {
