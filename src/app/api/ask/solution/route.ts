@@ -83,7 +83,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   if (process.env.ASK_HANS_ENABLED !== 'true') return errorResponse('disabled', 404)
   if (!process.env.ANTHROPIC_API_KEY) return errorResponse('unavailable', 503)
 
-  let body: { visitId?: unknown; lang?: unknown; process?: unknown; answers?: unknown } | null
+  let body: { visitId?: unknown; lang?: unknown; process?: unknown; answers?: unknown; stats?: unknown } | null
   try {
     body = (await req.json()) as typeof body
   } catch {
@@ -190,7 +190,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         return
       }
       const uniqueTools = [...new Set(toolsUsed)]
-      await bumpPower(processId, uniqueTools)
+      if (body.stats === true) await bumpPower(processId, uniqueTools)
       const overview = await getSiteOverview(lang).catch(() => undefined)
       send({ t: 'done', tools: uniqueTools, overview })
     } catch (err) {

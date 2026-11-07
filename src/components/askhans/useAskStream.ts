@@ -19,7 +19,7 @@ const CLIENT_TIMEOUT_MS = 70_000
 const SOLUTION_CLIENT_TIMEOUT_MS = 125_000
 
 export async function streamAnswer(
-  body: { visitId: string; lang: string; messages: { role: 'user' | 'assistant'; content: string }[] },
+  body: { visitId: string; lang: string; stats?: boolean; messages: { role: 'user' | 'assistant'; content: string }[] },
   onEvent: (e: AskStreamEvent) => void,
   options: { endpoint?: string; timeoutMs?: number; signal?: AbortSignal } = {},
 ): Promise<void> {
@@ -28,7 +28,7 @@ export async function streamAnswer(
 
 /** Power Mode: POST /api/ask/solution. Same event stream (text, tool, done, error). */
 export async function streamSolution(
-  body: { visitId: string; lang: string; process: string; answers: unknown },
+  body: { visitId: string; lang: string; process: string; answers: unknown; stats?: boolean },
   onEvent: (e: AskStreamEvent) => void,
   signal?: AbortSignal,
 ): Promise<void> {

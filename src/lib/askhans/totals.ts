@@ -1,6 +1,5 @@
 // Ask Hans — aggregated usage totals (server only). Anonymous counters: no visitor ID, no text, no IP.
-// They count everything (not only visitors who agreed to the detailed statistics) so the numbers are honest
-// totals, e.g. for the /askhans page and the homepage tile.
+// Since 2026-11-07 (owner decision) they count only visitors who said "Yes" to the statistics.
 //
 //   askhans:total        hash  { requests, answers, opens, since }   lifetime
 //   askhans:day:<date>   hash  same field names, per UTC day (shared with the consent-based counters)
@@ -8,7 +7,7 @@
 import { redis } from '@/lib/redis'
 
 const TOTAL_KEY = 'askhans:total'
-const DAY_TTL_S = 400 * 86_400
+const DAY_TTL_S = 90 * 86_400
 
 export type TotalField = 'requests' | 'answers' | 'opens'
 

@@ -227,7 +227,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       setView({ k: 'run', process })
       let acc = ''
       await streamSolution(
-        { visitId: getVisitId(), lang, process, answers },
+        { visitId: getVisitId(), lang, process, answers, stats: consent?.value === 'yes' },
         (ev) => {
           // A cancelled run (Esc, Back or Cancel) must not change the screen when its last events arrive.
           if (ctl.signal.aborted) return
@@ -252,7 +252,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         ctl.signal,
       )
     },
-    [answersFor, texts, saveProfileOn, tx.run.tool, tx.run.writing, tx.run.estimating, getVisitId, lang],
+    [answersFor, texts, saveProfileOn, tx.run.tool, tx.run.writing, tx.run.estimating, getVisitId, lang, consent?.value],
   )
 
   const openSaved = (a: SavedAudit) => {
