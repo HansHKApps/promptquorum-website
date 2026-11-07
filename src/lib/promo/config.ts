@@ -8,11 +8,14 @@ import type { PromoPlacement, PromoVariant } from './types'
  */
 export const PROMO_PROVIDER: 'house' | 'ad-tag' = 'house'
 
-/** Reserved heights (px) so a slot never shifts the page: [mobile, >=640px]. Sized for the longest locale. */
+/**
+ * Reserved heights (px) so a slot never shifts the page: [below 640px, 640px and up]. Measured on 2026-11-07 across all 9
+ * locales and all 4 products: the longest text is FR/DE. Phones narrower than ~360px can grow a little past the mobile value.
+ */
 export const PROMO_RESERVED_HEIGHT: Record<PromoVariant, readonly [number, number]> = {
-  strip: [150, 100],
-  card: [400, 230],
-  callout: [470, 300],
+  strip: [176, 112],
+  card: [410, 295],
+  callout: [475, 325],
 }
 
 /** Share of the article body after which the P2 slot goes (brief: ~40%). */
