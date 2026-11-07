@@ -22,12 +22,13 @@ export const copy: PowerCopy = {
     step: (n, total) => `Etapa ${n} de ${total}`,
     optional: 'opcional',
     required: 'Escolha pelo menos uma opção para continuar.',
+    multiHint: 'Escolha tudo o que se aplica.',
     notePlaceholder: 'Mais alguma coisa que devemos saber? (opcional, máx. 300 caracteres)',
     privacy: 'Para escrever o relatório, suas respostas são enviadas ao serviço de IA indicado no aviso. Elas não são armazenadas em nossos servidores.',
   },
   steps: {
     hardware: { q: 'Qual computador você tem?', label: 'Computador' },
-    goals: { q: 'O que você quer fazer com ele? (escolha tudo o que se aplica)', label: 'Objetivos' },
+    goals: { q: 'O que você quer fazer com ele?', label: 'Objetivos' },
     connectivity: { q: 'Precisa funcionar totalmente offline?', label: 'Conexão' },
     price: { q: 'Software pago é aceitável?', label: 'Custo do software' },
     experience: { q: 'Qual é a sua experiência em instalar esse tipo de software?', label: 'Experiência' },
@@ -55,7 +56,7 @@ export const copy: PowerCopy = {
     auditGoals: { q: 'O que você quer alcançar? (escolha todas que se aplicam)', label: 'Objetivos' },
     recommendation: { q: 'Qual melhoria?', label: 'Melhoria escolhida' },
     mobile: { q: 'Conte-nos sobre o seu celular.', label: 'Celular' },
-    mobileGoals: { q: 'O que a IA deve fazer no seu celular? (escolha tudo o que se aplica)', label: 'Objetivos' },
+    mobileGoals: { q: 'O que a IA deve fazer no seu celular?', label: 'Objetivos' },
   },
   opt: {
     chat: 'Conversar e escrever',

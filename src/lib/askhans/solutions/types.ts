@@ -57,6 +57,8 @@ export interface StepDef {
   options?: readonly string[]
   /** Step is skipped unless the earlier step `step` has one of `includes` selected. */
   showIf?: { step: string; includes: readonly string[] }
+  /** Multi step: picking one of these clears all other picks, and picking any other option clears these (e.g. "I don't know"). */
+  exclusive?: readonly string[]
   /** Hardware step only: offer "I have nothing yet". */
   allowNone?: boolean
   /** Multi step: at least one option required. Single steps are always required. Text step: may stay empty. */

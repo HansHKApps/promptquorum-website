@@ -23,6 +23,8 @@ export interface PowerCopy {
     step: (n: number, total: number) => string
     optional: string
     required: string
+    /** Shown under every multi-select question. */
+    multiHint: string
     notePlaceholder: string
     privacy: string
   }

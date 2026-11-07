@@ -48,7 +48,9 @@ const SITE = 'https://www.promptquorum.com'
 const WANT_FOR_GOAL: Record<string, string> = { image: 'image', voice: 'audio', music: 'audio', coding: 'code', docs: 'docs', chat: 'chat', translate: 'chat' }
 function directoryQuery(process: ProcessId, choices: Record<string, string[]>): string {
   if (process !== 'solution') return ''
-  const want = WANT_FOR_GOAL[choices.goal?.[0] ?? '']
+  // Several goals: the directory filter takes one key, so only a single-goal run gets a pre-filtered link.
+  const goals = choices.goal ?? []
+  const want = goals.length === 1 ? WANT_FOR_GOAL[goals[0]] : undefined
   return want ? `?want=${want}` : ''
 }
 
@@ -443,6 +445,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         <h2 id="pm-step-title" ref={headingRef} tabIndex={-1} className="mt-0.5 text-[16px] font-bold leading-snug text-foreground outline-none">
           {copy?.q ?? step.id}
         </h2>
+        {step.kind === 'multi' && <p className="mt-1 text-[12px] font-medium text-muted-foreground">{tx.wizard.multiHint}</p>}
         {copy?.hint && <p className="mt-1 text-[12px] text-muted-foreground">{copy.hint}</p>}
         <div className="mt-3">
           {(step.kind === 'single' || step.kind === 'multi') && step.options && (
@@ -451,6 +454,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
               labels={tx.opt}
               selected={choices[step.id] ?? []}
               multi={step.kind === 'multi'}
+              exclusive={step.exclusive}
               ariaLabel={copy?.q ?? step.id}
               onChange={(v) => setChoices((c) => ({ ...c, [step.id]: v }))}
             />

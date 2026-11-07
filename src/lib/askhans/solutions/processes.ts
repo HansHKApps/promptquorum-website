@@ -12,12 +12,12 @@ export const MAX_TEXT_CHARS = 300
 
 /** Audit My AI Setup: what the visitor uses, has, does, struggles with and wants. Option ids are shared with the copy files. */
 const AUDIT_STEPS: readonly StepDef[] = [
-  { id: 'auditSetup', kind: 'multi', textField: true, options: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud', 's-local', 's-embedded', 's-none'] },
+  { id: 'auditSetup', kind: 'multi', exclusive: ['s-none'], textField: true, options: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud', 's-local', 's-embedded', 's-none'] },
   // Only asked when a paid-looking cloud service is in the setup; needed for an honest savings estimate.
-  { id: 'auditSpend', kind: 'single', options: ['m-none', 'm-1', 'm-2', 'm-3', 'm-4', 'm-unknown'], showIf: { step: 'auditSetup', includes: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud'] } },
+  { id: 'auditSpend', kind: 'multi', exclusive: ['m-unknown'], options: ['m-none', 'm-1', 'm-2', 'm-3', 'm-4', 'm-unknown'], showIf: { step: 'auditSetup', includes: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud'] } },
   { id: 'hardware', kind: 'hardware', askCpu: true },
   { id: 'auditUses', kind: 'multi', options: ['u-write', 'u-code', 'u-image', 'u-video', 'u-audio', 'u-office', 'u-data', 'u-pkm', 'u-auto', 'u-other'] },
-  { id: 'auditProblems', kind: 'multi', textField: true, options: ['p-cost', 'p-toomany', 'p-which', 'p-privacy', 'p-slow', 'p-offline', 'p-automate', 'p-control', 'p-satisfied'] },
+  { id: 'auditProblems', kind: 'multi', exclusive: ['p-satisfied'], textField: true, options: ['p-cost', 'p-toomany', 'p-which', 'p-privacy', 'p-slow', 'p-offline', 'p-automate', 'p-control', 'p-satisfied'] },
   { id: 'auditGoals', kind: 'multi', options: ['g-save', 'g-productive', 'g-privacy', 'g-lesscloud', 'g-power', 'g-simplify', 'g-automate', 'g-complete'] },
 ]
 
@@ -33,7 +33,7 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
       { id: 'goals', kind: 'multi', options: GOALS },
       { id: 'connectivity', kind: 'single', options: ['offline', 'online-ok'] },
       { id: 'price', kind: 'single', options: ['free-only', 'paid-ok'] },
-      { id: 'experience', kind: 'single', options: ['beginner', 'intermediate', 'advanced'] },
+      { id: 'experience', kind: 'multi', options: ['beginner', 'intermediate', 'advanced'] },
       { id: 'priority', kind: 'single', options: ['speed', 'balanced', 'quality'] },
       { id: 'note', kind: 'note' },
     ],
@@ -44,9 +44,9 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     steps: [
       { id: 'hardware', kind: 'hardware', allowNone: true },
       { id: 'goals', kind: 'multi', options: GOALS },
-      { id: 'budget', kind: 'single', options: ['b1', 'b2', 'b3', 'b4'] },
-      { id: 'usage', kind: 'single', options: ['dedicated', 'shared'] },
-      { id: 'parallel', kind: 'single', options: ['one', 'few', 'many'] },
+      { id: 'budget', kind: 'multi', options: ['b1', 'b2', 'b3', 'b4'] },
+      { id: 'usage', kind: 'multi', options: ['dedicated', 'shared'] },
+      { id: 'parallel', kind: 'multi', options: ['one', 'few', 'many'] },
       { id: 'note', kind: 'note' },
     ],
   },
@@ -54,15 +54,15 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     id: 'solution',
     icon: 'Workflow',
     steps: [
-      { id: 'goal', kind: 'single', options: ['video', 'image', 'voice', 'music', 'coding', 'docs', 'chat', 'translate'] },
-      { id: 'videoType', kind: 'single', options: ['text-to-video', 'image-to-video', 'video-edit', 'video-upscale'], showIf: { step: 'goal', includes: ['video'] } },
-      { id: 'videoLength', kind: 'single', options: ['clips', 'minute', 'long'], showIf: { step: 'goal', includes: ['video'] } },
-      { id: 'imageType', kind: 'single', options: ['text-to-image', 'edit', 'upscale', 'characters'], showIf: { step: 'goal', includes: ['image'] } },
-      { id: 'imageStyle', kind: 'single', options: ['realistic', 'illustration', 'anime', 'style-any'], showIf: { step: 'goal', includes: ['image'] } },
-      { id: 'imageSize', kind: 'single', options: ['res-web', 'res-print', 'res-any'], showIf: { step: 'goal', includes: ['image'] } },
-      { id: 'voiceType', kind: 'single', options: ['speak', 'clone', 'transcribe', 'assistant'], showIf: { step: 'goal', includes: ['voice'] } },
-      { id: 'codingType', kind: 'single', options: ['autocomplete', 'agent', 'review'], showIf: { step: 'goal', includes: ['coding'] } },
-      { id: 'docsType', kind: 'single', options: ['docs-few', 'docs-many', 'docs-team'], showIf: { step: 'goal', includes: ['docs'] } },
+      { id: 'goal', kind: 'multi', options: ['video', 'image', 'voice', 'music', 'coding', 'docs', 'chat', 'translate'] },
+      { id: 'videoType', kind: 'multi', options: ['text-to-video', 'image-to-video', 'video-edit', 'video-upscale'], showIf: { step: 'goal', includes: ['video'] } },
+      { id: 'videoLength', kind: 'multi', options: ['clips', 'minute', 'long'], showIf: { step: 'goal', includes: ['video'] } },
+      { id: 'imageType', kind: 'multi', options: ['text-to-image', 'edit', 'upscale', 'characters'], showIf: { step: 'goal', includes: ['image'] } },
+      { id: 'imageStyle', kind: 'multi', exclusive: ['style-any'], options: ['realistic', 'illustration', 'anime', 'style-any'], showIf: { step: 'goal', includes: ['image'] } },
+      { id: 'imageSize', kind: 'multi', exclusive: ['res-any'], options: ['res-web', 'res-print', 'res-any'], showIf: { step: 'goal', includes: ['image'] } },
+      { id: 'voiceType', kind: 'multi', options: ['speak', 'clone', 'transcribe', 'assistant'], showIf: { step: 'goal', includes: ['voice'] } },
+      { id: 'codingType', kind: 'multi', options: ['autocomplete', 'agent', 'review'], showIf: { step: 'goal', includes: ['coding'] } },
+      { id: 'docsType', kind: 'multi', options: ['docs-few', 'docs-many', 'docs-team'], showIf: { step: 'goal', includes: ['docs'] } },
       { id: 'hardware', kind: 'hardware' },
       { id: 'quality', kind: 'single', options: ['fast', 'balanced', 'best'] },
       { id: 'tradeoff', kind: 'single', options: ['tradeoff-accept', 'tradeoff-cloud'], showIf: { step: 'quality', includes: ['best'] } },
