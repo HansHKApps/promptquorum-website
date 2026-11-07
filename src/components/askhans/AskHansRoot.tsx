@@ -26,7 +26,15 @@ import { useIsDesktop } from './useIsDesktop'
 import { WelcomeBox } from './WelcomeBox'
 
 // Power Mode (guided setups + report exports) is loaded only when a visitor opens it.
-const PowerShell = dynamic(() => import('./power/PowerShell').then((m) => m.PowerShell), { ssr: false })
+const PowerShell = dynamic(() => import('./power/PowerShell').then((m) => m.PowerShell), {
+  ssr: false,
+  // Without this the Power Mode panel is blank while its chunk loads.
+  loading: () => (
+    <div className="flex min-h-0 flex-1 items-center justify-center bg-muted/20" role="status" aria-busy="true">
+      <span className="h-6 w-6 animate-spin rounded-full border-2 border-border border-t-primary" />
+    </div>
+  ),
+})
 
 const newConversation = (): Conversation => ({ id: uid(), messages: [], category: DEFAULT_CATEGORY_KEY, startedAt: Date.now() })
 

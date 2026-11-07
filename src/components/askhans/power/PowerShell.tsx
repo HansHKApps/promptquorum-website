@@ -316,7 +316,17 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     const last = view.index >= steps.length - 1
     const valid = stepValid(step, view.process)
     body = (
-      <section className={GROUP} aria-labelledby="pm-step-title">
+      <section
+        className={GROUP}
+        aria-labelledby="pm-step-title"
+        onKeyDown={(e) => {
+          // Enter advances a valid step, except inside the note box or on a focused button/checkbox (they handle Enter themselves).
+          const el = e.target as HTMLElement
+          if (e.key !== 'Enter' || e.shiftKey || !valid || el.tagName === 'TEXTAREA' || el.tagName === 'BUTTON' || (el.tagName === 'INPUT' && (el as HTMLInputElement).type === 'checkbox')) return
+          e.preventDefault()
+          next(view.process, view.index)
+        }}
+      >
         <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.wizard.step(view.index + 1, steps.length)}</p>
         <h2 id="pm-step-title" ref={headingRef} tabIndex={-1} className="mt-0.5 text-[16px] font-bold leading-snug text-foreground outline-none">
           {copy?.q ?? step.id}
@@ -351,7 +361,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             </>
           )}
         </div>
-        {!valid && step.kind === 'multi' && <p className="mt-2 text-[12px] text-muted-foreground">{tx.wizard.required}</p>}
+        {!valid && (step.kind === 'multi' || step.kind === 'single') && <p className="mt-2 text-[12px] text-muted-foreground">{tx.wizard.required}</p>}
         <div className="mt-4 flex justify-end">
           <button
             type="button"
