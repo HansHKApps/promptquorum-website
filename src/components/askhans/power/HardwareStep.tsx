@@ -20,6 +20,21 @@ interface Props {
   onSaveChange: (v: boolean) => void
 }
 
+// VRAM from the makers' spec pages (nvidia.com GeForce RTX 30/40 series pages, amd.com Radeon RX 7900 XTX page).
+// The VRAM size is part of the label because some cards ship in more than one memory size.
+const GPU_PRESETS = {
+  nvidia: [
+    { name: 'RTX 3060', vram: 12 },
+    { name: 'RTX 4060', vram: 8 },
+    { name: 'RTX 4060 Ti', vram: 16 },
+    { name: 'RTX 4070', vram: 12 },
+    { name: 'RTX 4080', vram: 16 },
+    { name: 'RTX 3090', vram: 24 },
+    { name: 'RTX 4090', vram: 24 },
+  ],
+  amd: [{ name: 'RX 7900 XTX', vram: 24 }],
+} as const
+
 export function HardwareStep({ tx, draft, onChange, allowNone, save, onSaveChange }: Props) {
   const [saved] = useState(() => (typeof window === 'undefined' ? null : savedHardware()))
   const set = (patch: Partial<HardwareDraft>) => onChange({ ...draft, ...patch })
@@ -79,6 +94,20 @@ export function HardwareStep({ tx, draft, onChange, allowNone, save, onSaveChang
             onChange={(ram, ramUnknown) => set({ ram, ramUnknown })}
           />
           {mac && <p className="-mt-2 text-[12px] leading-snug text-muted-foreground">{tx.hw.macNote}</p>}
+          {(draft.gpu === 'nvidia' || draft.gpu === 'amd') && (
+            <div role="group" aria-label={tx.hw.vram} className="flex flex-wrap gap-1.5">
+              {GPU_PRESETS[draft.gpu].map((g) => (
+                <button
+                  key={g.name}
+                  type="button"
+                  onClick={() => set({ vram: String(g.vram), vramUnknown: false })}
+                  className="rounded-full border border-border bg-white px-3 py-1.5 text-[13px] font-medium text-foreground hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                >
+                  {g.name} · {g.vram} GB
+                </button>
+              ))}
+            </div>
+          )}
           {(draft.gpu === 'nvidia' || draft.gpu === 'amd') && (
             <NumberField
               id="pm-vram"

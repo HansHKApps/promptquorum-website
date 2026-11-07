@@ -147,6 +147,7 @@ export const copy: PowerCopy = {
     storage: 'Freier Speicherplatz, in GB',
   },
   run: {
+    estimating: 'Die Leistung Ihrer Hardware wird abgeschätzt…',
     writing: 'Ihr Bericht wird geschrieben …',
     tool: 'Das PromptQuorum-Verzeichnis und die Ratgeber werden geprüft …',
     cancel: 'Abbrechen',
