@@ -132,6 +132,11 @@ const user = buildSolutionUserMessage('max', answers)
 check(user.includes('FACTS') && user.includes('<note>hello</note>'), 'user message must carry facts and the fenced note')
 for (const id of PROCESS_ORDER) check(buildSolutionSystemPrompt(id, 'de').includes('REPORT LANGUAGE: de') && buildSolutionSystemPrompt(id, 'de').includes('OUTLINE'), `system prompt incomplete for ${id}`)
 
+const vidFacts = JSON.parse(buildFacts({ hardware: { ...mac, storageGb: null }, choices: { goal: ['video'] } }) as string)
+check(vidFacts.generation?.modelFitApplies === false && vidFacts.generation.storageGuidance.ifUnknown && vidFacts.generation.stitchingNote, 'video goal must carry generation facts (no LLM fit, storage default, stitching note)')
+check(!JSON.parse(buildFacts({ hardware: mac, choices: { goals: ['chat'] } }) as string).generation, 'chat goal must not carry generation facts')
+check(buildSolutionSystemPrompt('solution', 'en').includes('Quick test plan') && buildSolutionSystemPrompt('solution', 'en').includes('Next actions'), 'solution outline missing new sections')
+
 // ---- 5. exports -------------------------------------------------------------------------------------
 const doc: ReportDoc = {
   title: 'Your report: <b>MAX</b>',
