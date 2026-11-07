@@ -3,7 +3,7 @@
 // browser: the formatted report opens in a hidden frame and the print dialog offers "Save as PDF".
 
 import { parseBlocks, parseInline, type Inline } from './blocks'
-import type { ReportDoc } from './reportDoc'
+import { fileStem, type ReportDoc } from './reportDoc'
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
@@ -59,7 +59,7 @@ export function buildHtml(doc: ReportDoc): string {
 <html lang="${esc(doc.lang === 'pt' ? 'pt-BR' : doc.lang)}" dir="${doc.dir}">
 <head>
 <meta charset="utf-8">
-<title>${esc(doc.title)}</title>
+<title>${esc(fileStem(doc))}</title>
 <style>${CSS}</style>
 </head>
 <body>
@@ -86,12 +86,21 @@ export function printReport(doc: ReportDoc): void {
   frame.onload = () => {
     const w = frame.contentWindow
     if (!w) return
-    const done = () => setTimeout(() => frame.remove(), 500)
+    // The browser proposes the page title as the PDF file name: use the report's file name while printing.
+    const oldTitle = document.title
+    document.title = fileStem(doc)
+    const done = () => setTimeout(() => {
+      document.title = oldTitle
+      frame.remove()
+    }, 500)
     w.addEventListener('afterprint', done)
     w.focus()
     w.print()
     // Some browsers never fire afterprint for a hidden frame: remove it eventually anyway.
-    setTimeout(() => frame.remove(), 120_000)
+    setTimeout(() => {
+      if (frame.isConnected) document.title = oldTitle
+      frame.remove()
+    }, 120_000)
   }
   document.body.appendChild(frame)
 }
