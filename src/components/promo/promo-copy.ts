@@ -1,74 +1,75 @@
-// COPY for the promo slots, all 9 locales. Brand and tool names (PromptQuorum, Ask Hans, Power Mode, MCP) stay
-// untranslated. Claims match the live /askhans page: Ask Hans recommends one app with sources and is "in
-// development"; Power Mode makes one report. No "tested"/"always"/"every entry reviewed" wording, no live-data promise.
+// COPY for the promo slots, all 9 locales: headline, one supporting line, button. Marketing voice, but every claim
+// matches the live product: Ask Hans recommends one app with reasons and sources; Power Mode builds one report with
+// hardware, apps and next steps (export as PDF, Word or Markdown); the directory covers {count} apps and lists
+// hardware needs; MCP is read-only and connects with one config entry. No "free", "best", "always" or accuracy claims.
+// Brand and tool names (PromptQuorum, Ask Hans, Power Mode, MCP) stay untranslated.
 // `{count}` is the directory tool count read at build time (src/generated/promo-facts.json), never hardcoded.
 import type { Lang } from '@/hooks/useLang'
 import type { PromoTarget } from '@/lib/promo/types'
 
 export interface PromoText {
-  hook: string
+  headline: string
   /** used when no count is available */
-  hookNoCount?: string
+  headlineNoCount?: string
+  sub: string
   cta: string
-  /** small label under the hook (Ask Hans / Power Mode are in development) */
-  note?: string
   /** callout variant of MCP: label above the config snippet */
   snippetLabel?: string
 }
 
 export const PROMO_COPY: Record<Lang, Record<PromoTarget, PromoText>> = {
   en: {
-    directory: { hook: 'Which local AI apps run on your computer? Browse {count} apps.', hookNoCount: 'Which local AI apps run on your computer? Browse the directory.', cta: 'Browse the directory' },
-    'ask-hans': { hook: 'Describe your goal and computer. Ask Hans recommends one app, with sources.', cta: 'Ask Hans', note: 'In development, can make mistakes.' },
-    'power-mode': { hook: 'Get one full report for your setup: hardware, apps, next steps.', cta: 'Open Power Mode', note: 'In development, can make mistakes.' },
-    mcp: { hook: 'Connect PromptQuorum to your own AI. One line of config.', cta: 'Set up MCP', snippetLabel: 'Example config (formats vary by client)' },
+    directory: { headline: '{count} local AI apps. Find the one that runs on your PC.', headlineNoCount: 'Find the local AI app that runs on your PC.', sub: 'Browse by category and see which apps fit your hardware.', cta: 'Explore the directory' },
+    'ask-hans': { headline: 'Stop searching. Just ask Hans.', sub: 'Tell Ask Hans your goal and your computer. Get one app recommendation with the reasons and the sources.', cta: 'Ask Hans now' },
+    'power-mode': { headline: 'Your whole local AI setup in one report.', sub: 'Answer a few guided questions. Get hardware, apps and next steps in one document, as PDF, Word or Markdown.', cta: 'Start Power Mode' },
+    mcp: { headline: 'Plug PromptQuorum into your own AI.', sub: 'Guides and app data inside your assistant, connected with one line of config.', cta: 'Connect now', snippetLabel: 'Example config (formats vary by client)' },
   },
   de: {
-    directory: { hook: 'Welche lokalen KI-Apps laufen auf Ihrem Computer? Stöbern Sie in {count} Apps.', hookNoCount: 'Welche lokalen KI-Apps laufen auf Ihrem Computer? Stöbern Sie im Verzeichnis.', cta: 'Verzeichnis ansehen' },
-    'ask-hans': { hook: 'Beschreiben Sie Ihr Ziel und Ihren Computer. Ask Hans empfiehlt eine App, mit Quellen.', cta: 'Ask Hans', note: 'In Entwicklung, kann Fehler machen.' },
-    'power-mode': { hook: 'Ein vollständiger Bericht für Ihr Setup: Hardware, Apps, nächste Schritte.', cta: 'Power Mode öffnen', note: 'In Entwicklung, kann Fehler machen.' },
-    mcp: { hook: 'Verbinden Sie PromptQuorum mit Ihrer eigenen KI. Eine Zeile Konfiguration.', cta: 'MCP einrichten', snippetLabel: 'Beispielkonfiguration (Format je nach Client)' },
+    directory: { headline: '{count} lokale KI-Apps. Finden Sie die, die auf Ihrem PC läuft.', headlineNoCount: 'Finden Sie die lokale KI-App, die auf Ihrem PC läuft.', sub: 'Nach Kategorie stöbern und sehen, welche Apps zu Ihrer Hardware passen.', cta: 'Verzeichnis entdecken' },
+    'ask-hans': { headline: 'Schluss mit Suchen. Fragen Sie einfach Hans.', sub: 'Nennen Sie Ask Hans Ihr Ziel und Ihren Computer. Sie erhalten eine App-Empfehlung mit Begründung und Quellen.', cta: 'Jetzt Ask Hans fragen' },
+    'power-mode': { headline: 'Ihr komplettes lokales KI-Setup in einem Bericht.', sub: 'Beantworten Sie ein paar geführte Fragen. Hardware, Apps und nächste Schritte landen in einem Dokument, als PDF, Word oder Markdown.', cta: 'Power Mode starten' },
+    mcp: { headline: 'Verbinden Sie PromptQuorum mit Ihrer eigenen KI.', sub: 'Ratgeber und App-Daten direkt in Ihrem Assistenten, verbunden mit einer Zeile Konfiguration.', cta: 'Jetzt verbinden', snippetLabel: 'Beispielkonfiguration (Format je nach Client)' },
   },
   fr: {
-    directory: { hook: 'Quelles applications d’IA locale fonctionnent sur votre ordinateur ? Parcourez {count} applications.', hookNoCount: 'Quelles applications d’IA locale fonctionnent sur votre ordinateur ? Parcourez l’annuaire.', cta: 'Parcourir l’annuaire' },
-    'ask-hans': { hook: 'Décrivez votre objectif et votre ordinateur. Ask Hans recommande une application, avec ses sources.', cta: 'Ask Hans', note: 'En développement, peut se tromper.' },
-    'power-mode': { hook: 'Obtenez un rapport complet pour votre configuration : matériel, applications, prochaines étapes.', cta: 'Ouvrir Power Mode', note: 'En développement, peut se tromper.' },
-    mcp: { hook: 'Connectez PromptQuorum à votre propre IA. Une ligne de configuration.', cta: 'Configurer MCP', snippetLabel: 'Exemple de configuration (le format varie selon le client)' },
+    directory: { headline: '{count} applications d’IA locale. Trouvez celle qui tourne sur votre PC.', headlineNoCount: 'Trouvez l’application d’IA locale qui tourne sur votre PC.', sub: 'Parcourez par catégorie et voyez quelles applications conviennent à votre matériel.', cta: 'Explorer l’annuaire' },
+    'ask-hans': { headline: 'Arrêtez de chercher. Demandez à Hans.', sub: 'Décrivez à Ask Hans votre objectif et votre ordinateur. Recevez une application recommandée, avec les raisons et les sources.', cta: 'Demander à Ask Hans' },
+    'power-mode': { headline: 'Toute votre configuration d’IA locale dans un seul rapport.', sub: 'Répondez à quelques questions guidées. Matériel, applications et prochaines étapes dans un document, en PDF, Word ou Markdown.', cta: 'Lancer Power Mode' },
+    mcp: { headline: 'Branchez PromptQuorum sur votre propre IA.', sub: 'Guides et données d’applications dans votre assistant, connectés avec une seule ligne de configuration.', cta: 'Connecter maintenant', snippetLabel: 'Exemple de configuration (le format varie selon le client)' },
   },
   es: {
-    directory: { hook: '¿Qué aplicaciones de IA local funcionan en tu ordenador? Explora {count} aplicaciones.', hookNoCount: '¿Qué aplicaciones de IA local funcionan en tu ordenador? Explora el directorio.', cta: 'Explorar el directorio' },
-    'ask-hans': { hook: 'Describe tu objetivo y tu ordenador. Ask Hans recomienda una aplicación, con fuentes.', cta: 'Ask Hans', note: 'En desarrollo, puede cometer errores.' },
-    'power-mode': { hook: 'Obtén un informe completo para tu configuración: hardware, aplicaciones, próximos pasos.', cta: 'Abrir Power Mode', note: 'En desarrollo, puede cometer errores.' },
-    mcp: { hook: 'Conecta PromptQuorum con tu propia IA. Una línea de configuración.', cta: 'Configurar MCP', snippetLabel: 'Configuración de ejemplo (el formato varía según el cliente)' },
+    directory: { headline: '{count} aplicaciones de IA local. Encuentra la que funciona en tu PC.', headlineNoCount: 'Encuentra la aplicación de IA local que funciona en tu PC.', sub: 'Explora por categoría y descubre qué aplicaciones encajan con tu hardware.', cta: 'Explorar el directorio' },
+    'ask-hans': { headline: 'Deja de buscar. Pregúntale a Hans.', sub: 'Cuéntale a Ask Hans tu objetivo y tu ordenador. Recibe una aplicación recomendada, con los motivos y las fuentes.', cta: 'Preguntar a Ask Hans' },
+    'power-mode': { headline: 'Toda tu configuración de IA local en un solo informe.', sub: 'Responde unas pocas preguntas guiadas. Hardware, aplicaciones y próximos pasos en un documento, en PDF, Word o Markdown.', cta: 'Iniciar Power Mode' },
+    mcp: { headline: 'Conecta PromptQuorum a tu propia IA.', sub: 'Guías y datos de aplicaciones dentro de tu asistente, conectados con una sola línea de configuración.', cta: 'Conectar ahora', snippetLabel: 'Configuración de ejemplo (el formato varía según el cliente)' },
   },
   pt: {
-    directory: { hook: 'Quais aplicativos de IA local rodam no seu computador? Explore {count} aplicativos.', hookNoCount: 'Quais aplicativos de IA local rodam no seu computador? Explore o diretório.', cta: 'Explorar o diretório' },
-    'ask-hans': { hook: 'Descreva seu objetivo e seu computador. O Ask Hans recomenda um aplicativo, com fontes.', cta: 'Ask Hans', note: 'Em desenvolvimento, pode cometer erros.' },
-    'power-mode': { hook: 'Receba um relatório completo para a sua configuração: hardware, aplicativos, próximos passos.', cta: 'Abrir Power Mode', note: 'Em desenvolvimento, pode cometer erros.' },
-    mcp: { hook: 'Conecte o PromptQuorum à sua própria IA. Uma linha de configuração.', cta: 'Configurar MCP', snippetLabel: 'Configuração de exemplo (o formato varia por cliente)' },
+    directory: { headline: '{count} aplicativos de IA local. Encontre o que roda no seu PC.', headlineNoCount: 'Encontre o aplicativo de IA local que roda no seu PC.', sub: 'Explore por categoria e veja quais aplicativos combinam com o seu hardware.', cta: 'Explorar o diretório' },
+    'ask-hans': { headline: 'Chega de procurar. Pergunte ao Hans.', sub: 'Conte ao Ask Hans o seu objetivo e o seu computador. Receba um aplicativo recomendado, com os motivos e as fontes.', cta: 'Perguntar ao Ask Hans' },
+    'power-mode': { headline: 'Toda a sua configuração de IA local em um relatório.', sub: 'Responda a algumas perguntas guiadas. Hardware, aplicativos e próximos passos em um documento, em PDF, Word ou Markdown.', cta: 'Iniciar o Power Mode' },
+    mcp: { headline: 'Conecte o PromptQuorum à sua própria IA.', sub: 'Guias e dados de aplicativos dentro do seu assistente, conectados com uma única linha de configuração.', cta: 'Conectar agora', snippetLabel: 'Configuração de exemplo (o formato varia por cliente)' },
   },
   ja: {
-    directory: { hook: 'お使いのパソコンで動くローカルAIアプリは？ {count}個のアプリを見る。', hookNoCount: 'お使いのパソコンで動くローカルAIアプリは？ ディレクトリを見る。', cta: 'ディレクトリを見る' },
-    'ask-hans': { hook: '目的とパソコンの環境を入力すると、Ask Hansが出典付きでアプリを1つおすすめします。', cta: 'Ask Hans', note: '開発中のため、誤りを含む場合があります。' },
-    'power-mode': { hook: 'お使いの環境に合わせた総合レポートを1つ作成：ハードウェア、アプリ、次のステップ。', cta: 'Power Modeを開く', note: '開発中のため、誤りを含む場合があります。' },
-    mcp: { hook: 'PromptQuorumをお使いのAIに接続。設定は1行です。', cta: 'MCPを設定する', snippetLabel: '設定例（形式はクライアントにより異なります）' },
+    directory: { headline: 'ローカルAIアプリ{count}本。あなたのPCで動く1本が見つかる。', headlineNoCount: 'あなたのPCで動くローカルAIアプリが見つかる。', sub: 'カテゴリ別に探して、お使いのハードウェアに合うアプリを確認できます。', cta: 'ディレクトリを見る' },
+    'ask-hans': { headline: '探すのは終わり。Hansに聞くだけ。', sub: '目的とパソコンの環境をAsk Hansに伝えるだけで、理由と出典付きでアプリを1つおすすめします。', cta: 'Ask Hansに聞く' },
+    'power-mode': { headline: 'ローカルAI環境のすべてを、1つのレポートに。', sub: 'いくつかの質問に答えるだけで、ハードウェア、アプリ、次のステップが1つの文書に。PDF、Word、Markdownで保存できます。', cta: 'Power Modeを始める' },
+    mcp: { headline: 'PromptQuorumを、あなたのAIにつなごう。', sub: 'ガイドとアプリデータを、お使いのアシスタントから。設定は1行で接続できます。', cta: '今すぐ接続', snippetLabel: '設定例（形式はクライアントにより異なります）' },
   },
   zh: {
-    directory: { hook: '哪些本地 AI 应用能在您的电脑上运行？浏览 {count} 个应用。', hookNoCount: '哪些本地 AI 应用能在您的电脑上运行？浏览应用目录。', cta: '浏览应用目录' },
-    'ask-hans': { hook: '描述您的目标和电脑配置，Ask Hans 会推荐一款应用，并附上来源。', cta: 'Ask Hans', note: '开发中，可能出错。' },
-    'power-mode': { hook: '为您的配置生成一份完整报告：硬件、应用、后续步骤。', cta: '打开 Power Mode', note: '开发中，可能出错。' },
-    mcp: { hook: '将 PromptQuorum 连接到您自己的 AI，只需一行配置。', cta: '设置 MCP', snippetLabel: '配置示例（格式因客户端而异）' },
+    directory: { headline: '{count} 款本地 AI 应用，找到能在您电脑上运行的那一款。', headlineNoCount: '找到能在您电脑上运行的本地 AI 应用。', sub: '按类别浏览，查看哪些应用适合您的硬件。', cta: '探索应用目录' },
+    'ask-hans': { headline: '别再到处搜索，直接问 Hans。', sub: '告诉 Ask Hans 您的目标和电脑配置，即可获得一款应用推荐，并附上理由和来源。', cta: '立即问 Ask Hans' },
+    'power-mode': { headline: '您的整套本地 AI 方案，一份报告搞定。', sub: '回答几个引导问题，硬件、应用和后续步骤汇总成一份文档，可导出为 PDF、Word 或 Markdown。', cta: '开始使用 Power Mode' },
+    mcp: { headline: '把 PromptQuorum 接入您自己的 AI。', sub: '指南和应用数据直接用在您的助手里，一行配置即可连接。', cta: '立即连接', snippetLabel: '配置示例（格式因客户端而异）' },
   },
   ko: {
-    directory: { hook: '내 컴퓨터에서 돌아가는 로컬 AI 앱은? {count}개 앱을 둘러보세요.', hookNoCount: '내 컴퓨터에서 돌아가는 로컬 AI 앱은? 디렉터리를 둘러보세요.', cta: '디렉터리 보기' },
-    'ask-hans': { hook: '목표와 컴퓨터를 설명하면 Ask Hans가 출처와 함께 앱 하나를 추천합니다.', cta: 'Ask Hans', note: '개발 중이며 오류가 있을 수 있습니다.' },
-    'power-mode': { hook: '내 환경에 맞는 전체 보고서 하나: 하드웨어, 앱, 다음 단계.', cta: 'Power Mode 열기', note: '개발 중이며 오류가 있을 수 있습니다.' },
-    mcp: { hook: 'PromptQuorum을 나만의 AI에 연결하세요. 설정은 한 줄입니다.', cta: 'MCP 설정하기', snippetLabel: '설정 예시(형식은 클라이언트마다 다름)' },
+    directory: { headline: '로컬 AI 앱 {count}개. 내 PC에서 돌아가는 앱을 찾아보세요.', headlineNoCount: '내 PC에서 돌아가는 로컬 AI 앱을 찾아보세요.', sub: '카테고리별로 둘러보고 내 하드웨어에 맞는 앱을 확인하세요.', cta: '디렉터리 둘러보기' },
+    'ask-hans': { headline: '그만 검색하세요. Hans에게 물어보세요.', sub: '목표와 컴퓨터를 Ask Hans에게 알려 주세요. 이유와 출처를 곁들여 앱 하나를 추천해 드립니다.', cta: 'Ask Hans에게 묻기' },
+    'power-mode': { headline: '로컬 AI 환경 전체를 보고서 하나에.', sub: '안내에 따라 몇 가지 질문에 답하면 하드웨어, 앱, 다음 단계가 문서 하나로 정리됩니다. PDF, Word, Markdown으로 저장할 수 있습니다.', cta: 'Power Mode 시작하기' },
+    mcp: { headline: 'PromptQuorum을 나만의 AI에 연결하세요.', sub: '가이드와 앱 데이터를 사용 중인 어시스턴트에서 바로, 설정 한 줄로 연결합니다.', cta: '지금 연결하기', snippetLabel: '설정 예시(형식은 클라이언트마다 다름)' },
   },
   ar: {
-    directory: { hook: 'ما تطبيقات الذكاء الاصطناعي المحلية التي تعمل على حاسوبك؟ تصفّح {count} تطبيقاً.', hookNoCount: 'ما تطبيقات الذكاء الاصطناعي المحلية التي تعمل على حاسوبك؟ تصفّح الدليل.', cta: 'تصفّح الدليل' },
-    'ask-hans': { hook: 'صف هدفك وحاسوبك. يوصي Ask Hans بتطبيق واحد مع المصادر.', cta: 'Ask Hans', note: 'قيد التطوير وقد يخطئ.' },
-    'power-mode': { hook: 'احصل على تقرير كامل واحد لإعدادك: العتاد والتطبيقات والخطوات التالية.', cta: 'افتح Power Mode', note: 'قيد التطوير وقد يخطئ.' },
-    mcp: { hook: 'اربط PromptQuorum بالذكاء الاصطناعي الخاص بك. سطر واحد من الإعداد.', cta: 'إعداد MCP', snippetLabel: 'مثال على الإعداد (يختلف التنسيق حسب العميل)' },
+    directory: { headline: '{count} تطبيقاً للذكاء الاصطناعي المحلي. اعثر على ما يعمل على حاسوبك.', headlineNoCount: 'اعثر على تطبيق الذكاء الاصطناعي المحلي الذي يعمل على حاسوبك.', sub: 'تصفّح حسب الفئة وتعرّف على التطبيقات المناسبة لعتادك.', cta: 'استكشف الدليل' },
+    'ask-hans': { headline: 'كفى بحثاً. اسأل Hans فقط.', sub: 'أخبر Ask Hans بهدفك وحاسوبك. ستحصل على توصية بتطبيق واحد مع الأسباب والمصادر.', cta: 'اسأل Ask Hans الآن' },
+    'power-mode': { headline: 'إعداد الذكاء الاصطناعي المحلي كاملاً في تقرير واحد.', sub: 'أجب عن بضعة أسئلة موجَّهة. العتاد والتطبيقات والخطوات التالية في مستند واحد بصيغة PDF أو Word أو Markdown.', cta: 'ابدأ Power Mode' },
+    mcp: { headline: 'اربط PromptQuorum بالذكاء الاصطناعي الخاص بك.', sub: 'الأدلة وبيانات التطبيقات داخل مساعدك، بسطر واحد من الإعداد.', cta: 'اتصل الآن', snippetLabel: 'مثال على الإعداد (يختلف التنسيق حسب العميل)' },
   },
 }

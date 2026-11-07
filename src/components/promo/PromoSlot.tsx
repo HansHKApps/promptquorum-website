@@ -23,6 +23,14 @@ import { PROMO_COPY } from './promo-copy'
 
 const LINK_PATH: Partial<Record<PromoTarget, string>> = { directory: '/directory', mcp: '/mcp-stats' }
 
+// Bold, per-target color from the hub palette tokens (CSS variables). Full class strings so Tailwind keeps them.
+const THEME: Record<PromoTarget, { bg: string; btn: string; ring: string }> = {
+  'ask-hans': { bg: 'bg-gradient-to-br from-hub-violet via-hub-orchid to-hub-rose', btn: 'text-hub-violet-ink', ring: 'ring-hub-orchid-edge' },
+  'power-mode': { bg: 'bg-gradient-to-br from-hub-orange to-hub-amber', btn: 'text-hub-orange-ink', ring: 'ring-hub-amber-edge' },
+  directory: { bg: 'bg-gradient-to-br from-hub-cyan to-hub-blue', btn: 'text-hub-cyan-ink', ring: 'ring-hub-cyan-edge' },
+  mcp: { bg: 'bg-gradient-to-br from-hub-indigo to-hub-indigo-ink', btn: 'text-hub-indigo-ink', ring: 'ring-hub-indigo-edge' },
+}
+
 export interface PromoSlotProps {
   target: PromoTarget
   placement: PromoPlacement
@@ -71,13 +79,14 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
 
   const text = (PROMO_COPY[lang] ?? PROMO_COPY.en)[target]
   const count = facts.directoryToolCount
-  const hook = target === 'directory' ? (count > 0 ? text.hook.replace('{count}', count.toLocaleString(lang)) : (text.hookNoCount ?? text.hook)) : text.hook
+  const headline = target === 'directory' ? (count > 0 ? text.headline.replace('{count}', count.toLocaleString(lang)) : (text.headlineNoCount ?? text.headline)) : text.headline
   const showSnippet = target === 'mcp' && variant === 'callout'
   const snippet = JSON.stringify({ mcpServers: { promptquorum: { url: facts.mcpServerUrl } } })
+  const theme = THEME[target]
   const [hMobile, hDesktop] = PROMO_RESERVED_HEIGHT[variant]
   const linkPath = LINK_PATH[target]
   const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${promoSource(target, placement)}` : undefined
-  const ctaClass = 'inline-flex shrink-0 items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
+  const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg transition-transform hover:bg-white/95 motion-safe:hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
   const click = (e: React.MouseEvent<HTMLElement>) => {
     trackPromo('promo_click', ctx)
     // Ask Hans / Power Mode open in place (real <button>, focus returns to it on close); the others are links.
@@ -99,30 +108,34 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
       data-promo-target={target}
       data-promo-placement={placement}
       data-promo-variant={variant}
-      aria-label={hook}
+      aria-label={headline}
       style={{ ['--promo-h' as string]: `${hMobile}px`, ['--promo-h-sm' as string]: `${hDesktop}px` }}
-      className={`my-8 flex min-h-[var(--promo-h)] flex-col justify-center gap-3 rounded-xl border border-primary/20 bg-primary/5 p-5 sm:min-h-[var(--promo-h-sm)] ${className}`}
+      className={`my-8 flex min-h-[var(--promo-h)] flex-col justify-center gap-4 rounded-2xl p-5 text-white shadow-xl ring-1 sm:min-h-[var(--promo-h-sm)] sm:p-7 ${theme.bg} ${theme.ring} ${className}`}
     >
       {PROMO_PROVIDER === 'ad-tag' ? (
         // Third-party tag mounts here, inside the same reserved box. Wired when real advertising starts.
         <div data-ad-slot={`${target}-${placement}`} className="min-h-[inherit]" />
+      ) : variant === 'strip' ? (
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+          <p className="text-lg font-extrabold leading-snug sm:text-xl">{headline}</p>
+          {cta}
+        </div>
       ) : (
         <>
-          <div className={`flex gap-4 ${stack ? 'flex-col items-start' : 'items-center'}`}>
-            {variant !== 'strip' && <PromoGraphic target={target} />}
+          <div className={`flex gap-5 ${stack ? 'flex-col items-start' : 'flex-col items-start sm:flex-row sm:items-center'}`}>
+            <PromoGraphic target={target} />
             <div className="min-w-0 flex-1">
-              <p className="text-base font-semibold leading-snug text-foreground">{hook}</p>
-              {text.note && <p className="mt-1 text-xs text-muted-foreground">{text.note}</p>}
+              <p className="text-2xl font-extrabold leading-tight sm:text-3xl">{headline}</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/90 sm:text-base">{text.sub}</p>
             </div>
-            {variant === 'strip' && cta}
           </div>
           {showSnippet && (
             <div>
-              {text.snippetLabel && <p className="mb-1 text-xs text-muted-foreground">{text.snippetLabel}</p>}
-              <code dir="ltr" className="block overflow-x-auto whitespace-nowrap rounded-md bg-background px-3 py-2 text-left text-xs text-foreground">{snippet}</code>
+              {text.snippetLabel && <p className="mb-1 text-xs text-white/80">{text.snippetLabel}</p>}
+              <code dir="ltr" className="block overflow-x-auto whitespace-nowrap rounded-lg bg-black/40 px-3 py-2 text-left text-xs text-white">{snippet}</code>
             </div>
           )}
-          {variant !== 'strip' && <div>{cta}</div>}
+          <div>{cta}</div>
         </>
       )}
     </aside>

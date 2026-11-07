@@ -10,9 +10,9 @@ export const PROMO_PROVIDER: 'house' | 'ad-tag' = 'house'
 
 /** Reserved heights (px) so a slot never shifts the page: [mobile, >=640px]. Sized for the longest locale. */
 export const PROMO_RESERVED_HEIGHT: Record<PromoVariant, readonly [number, number]> = {
-  strip: [96, 72],
-  card: [176, 136],
-  callout: [280, 216],
+  strip: [150, 100],
+  card: [400, 230],
+  callout: [470, 300],
 }
 
 /** Share of the article body after which the P2 slot goes (brief: ~40%). */
