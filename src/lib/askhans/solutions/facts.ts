@@ -155,6 +155,33 @@ export function mobileFacts(m: MobileAnswers) {
   }
 }
 
+const DIFFUSION_GOALS = ['image', 'video', 'voice', 'music', 'audio']
+
+/**
+ * Image/video/audio generation is NOT covered by the language-model fit table. The AI must not present
+ * modelFit as a verdict for these goals; verdicts there are judgment, and the report must say so.
+ */
+export function generationFacts(a: SolutionAnswers) {
+  const goals = wantedGoals(a).filter((g) => DIFFUSION_GOALS.includes(g))
+  if (!goals.length || !a.hardware) return null
+  const storage = a.hardware.storageGb
+  return {
+    goals,
+    modelFitApplies: false,
+    dataQuality:
+      'modelFit is computed for language models only. PromptQuorum has NO measured memory, speed or size data for image, video or audio models on this machine. Any verdict for these goals is a judgment from the directory hardware fields, not a measurement. Say this in a "Data quality" banner at the top of the report and in the verdict labels ("judgment, not measured").',
+    memoryKind: a.hardware.gpu === 'apple' || a.hardware.device === 'mac' ? 'Apple Silicon unified memory (shared by CPU and GPU, not upgradeable, no separate VRAM). A VRAM figure in the directory is written for discrete GPUs and is unverified on Apple Silicon unless a tool says otherwise.' : 'See memoryBudget.',
+    storageGuidance: {
+      freeStorageGb: storage,
+      rule: 'Rule-of-thumb order of magnitude (estimate, not measured): one image or video model is roughly 2-15 GB on disk, a visitor usually wants several, plus working space for outputs (video clips add up quickly). About 30 GB free is a practical minimum for a first image or video setup.',
+      ifUnknown: storage === null ? 'Free storage was not given: state the 30 GB practical minimum as the default and tell the visitor to check their free space before downloading models.' : null,
+      ifTight: storage !== null && storage < 30 ? 'Free storage is below the 30 GB practical minimum: warn plainly and suggest an external drive for models.' : null,
+    },
+    stitchingNote: goals.includes('video') ? 'A video longer than a few seconds is built from many short clips. Stitched clips almost always show style and character drift unless consistency techniques are used (same seed, same style and character description, reference images, IP-Adapter-style conditioning). Say this.' : null,
+    languageNote: 'Prompt fields accept any language, but most image/video models follow English prompts best. Say so when the visitor mentions a non-English language, and say plainly when the directory has no data on the app\'s interface language.',
+  }
+}
+
 /** The facts block handed to the AI. Plain JSON text. */
 export function buildFacts(a: SolutionAnswers): string {
   const facts: Record<string, unknown> = {
@@ -167,6 +194,8 @@ export function buildFacts(a: SolutionAnswers): string {
     facts.upgradePath = upgradeFacts(a.hardware)
     facts.modelFit = modelFitTable(mem)
     facts.stackCandidates = stackCandidates(a, mem)
+    const gen = generationFacts(a)
+    if (gen) facts.generation = gen
   }
   if (a.mobile) facts.mobile = mobileFacts(a.mobile)
   return JSON.stringify(facts)
