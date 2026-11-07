@@ -1,4 +1,4 @@
-// Ask Hans Power Mode — the four guided processes as plain data. Adding a process = adding an entry here,
+// Ask Hans Power Mode — the guided processes as plain data. Adding a process = adding an entry here,
 // its labels to the copy dictionaries and its report brief to prompt.ts. The questions are deterministic
 // forms (no AI involved); the AI only writes the final report.
 

@@ -64,7 +64,7 @@ const DOCS = {
     'MCP 페이지와 같은 질문, 같은 도구입니다. Ask Hans는 조금 더 짧게 답하고, 각 앱에 신뢰도 라벨을 붙이며, 후속 질문을 제안합니다. 답변은 경우에 따라 다릅니다.',
   ),
 
-  powerHeading: d('Power Mode: four guided reports', 'Power-Modus: vier geführte Berichte', 'Mode Power : quatre rapports guidés', 'パワーモード：4つのガイド付きレポート', '专业模式：四种引导式报告', 'Modo Power: cuatro informes guiados', 'Modo Power: quatro relatórios guiados', 'الوضع المتقدم: أربعة تقارير موجَّهة', '파워 모드: 안내형 보고서 4가지'),
+  powerHeading: d('Power Mode: five guided reports', 'Power-Modus: fünf geführte Berichte', 'Mode Power : cinq rapports guidés', 'パワーモード：5つのガイド付きレポート', '专业模式：五种引导式报告', 'Modo Power: cinco informes guiados', 'Modo Power: cinco relatórios guiados', 'الوضع المتقدم: خمسة تقارير موجَّهة', '파워 모드: 안내형 보고서 5가지'),
   powerIntro: d(
     'Power Mode turns Ask Hans from a chat into a guided process. Switch it on with the Power Mode switch in the Ask Hans window, the Power Mode card on the welcome screen or the card in the search window. You answer a few fixed questions, then Ask Hans writes one complete report.',
     'Der Power-Modus macht aus Ask Hans einen geführten Ablauf statt eines Chats. Sie schalten ihn über den Schalter „Power-Modus“ im Ask-Hans-Fenster, die Power-Modus-Karte auf dem Startbildschirm oder die Karte im Suchfenster ein. Sie beantworten ein paar feste Fragen, danach schreibt Ask Hans einen vollständigen Bericht.',
