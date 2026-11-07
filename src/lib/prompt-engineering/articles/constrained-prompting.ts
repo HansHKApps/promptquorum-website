@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-en.webp',
       title: 'Constrained Prompting',
       intro: '**Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do — using "must," "must not," and "only" language — so outputs stay inside clearly defined boundaries.** This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
@@ -349,6 +350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Techniken',
+      designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-de.webp',
       title: 'Constrained Prompting: Strukturierte Prompts für zuverlässige Ausgaben',
       intro: '**Constrained Prompting ist eine Technik, bei der Sie dem Modell nicht nur sagen, was es tun soll, sondern auch, was es unbedingt tun und nicht tun muss – damit die Ausgaben innerhalb klar definierter Grenzen bleiben.** Dies ist essentiell, wenn Sie zuverlässige Formate, sichere Inhalte oder strikte Einhaltung interner Richtlinien benötigen.',
@@ -767,6 +769,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-es.webp',
       title: 'Constrained Prompting: Salidas estructuradas para respuestas fiables',
       intro: '**El constrained prompting es una técnica en la que le dices al modelo no solo qué hacer, sino también qué debe y no debe hacer — usando lenguaje como "debe", "no debe" y "solo" — para que las salidas permanezcan dentro de límites claramente definidos.** Es esencial cuando necesitas formatos fiables, contenido seguro o cumplimiento estricto de reglas internas.',
@@ -1112,6 +1115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-ar.webp',
       title: 'الموجّهات المقيّدة: مخرجات منظّمة لاستجابات موثوقة',
       intro: '**الموجّهات المقيّدة تقنية تُخبر فيها النموذج ليس فقط بما يفعله، بل أيضًا بما يجب وما لا يجب فعله — باستخدام لغة مثل "يجب"، "لا يجب"، و"فقط" — حتى تظل المخرجات ضمن حدود محددة بوضوح.** إنها ضرورية عند الحاجة إلى تنسيقات موثوقة أو محتوى آمن أو امتثال صارم للقواعد الداخلية.',
@@ -1452,6 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-pt.webp',
       title: 'Constrained Prompting: Saídas estruturadas para respostas confiáveis',
       intro: '**O constrained prompting é uma técnica em que você diz ao modelo não apenas o que fazer, mas também o que deve e não deve fazer — usando linguagem como "deve", "não deve" e "apenas" — para que as saídas permaneçam dentro de limites claramente definidos.** É essencial quando você precisa de formatos confiáveis, conteúdo seguro ou conformidade estrita com regras internas.',
@@ -1790,6 +1795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques de Prompting',
+  designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-fr.webp',
   title: 'Prompting avec Contraintes : Structures Garanties pour Modèles de Langage',
   intro: '**Le prompting avec contraintes signifie ajouter des règles explicites — format, longueur, contenu, limites de sécurité — directement dans un prompt pour que les sorties IA restent prévisibles et réutilisables.** C\'est essentiel quand vous avez besoin de formats fiables, de contenu sécurisé, ou de respect strict des règles internes.',
@@ -2212,6 +2218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
   ja: {
   theme: 'プロンプティング技法',
+  designSkin: 'hub',
     heroImage: '/images/constrained-prompting-overview-hero-ja.webp',
   title: '制約付きプロンプティング：完全ガイド',
   seoTitle: '制約付きプロンプティング：構造化AIの完全ガイド',
@@ -2721,6 +2728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     zh: {
   theme: '提示工程技术',
+  designSkin: 'hub',
       heroImage: '/images/constrained-prompting-overview-hero-zh.webp',
   title: '受限提示：完整指南',
   seoTitle: '受限提示：结构化输出完整指南',
@@ -3231,6 +3239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/constrained-prompting-overview-hero-ko.webp',
     title: '제약 프롬프팅: 구조화된 AI 출력 완벽 가이드',
     intro: '**제약 프롬프팅은 모델에게 무엇을 해야 하는지뿐만 아니라 반드시 해야 할 것과 절대 해서는 안 되는 것을 명시적으로 지정하는 기법입니다. "반드시", "절대 안 됨", "오직"과 같은 언어를 사용하여 출력 결과가 명확히 정의된 경계 내에 머물도록 합니다.** 신뢰할 수 있는 형식, 안전한 콘텐츠, 또는 내부 규정의 엄격한 준수가 필요할 때 필수적인 기법입니다.',

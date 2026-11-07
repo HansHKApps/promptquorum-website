@@ -4,6 +4,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-en.webp',
     title: 'Best Tools for Structured Output and JSON Mode (2026)',
     seoTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
@@ -379,6 +380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Tools & Plattformen',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-de.webp',
     title: 'Beste Tools für Structured Output und JSON Mode (2026)',
     seoTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
@@ -772,6 +774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-es.webp',
     title: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
     seoTitle: 'Mejores herramientas de Structured Output y JSON Mode 2026',
@@ -1145,6 +1148,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-pt.webp',
     title: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
     seoTitle: 'Melhores ferramentas de Structured Output e JSON Mode 2026',
@@ -1518,6 +1522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Outils & Plateformes',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-fr.webp',
     title: 'Meilleurs outils pour Structured Output et JSON Mode (2026)',
     seoTitle: 'Meilleurs outils Structured Output et JSON Mode 2026',
@@ -1903,6 +1908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'ツール＆プラットフォーム',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-ja.webp',
     title: 'Structured Output対応ツール2026：用途別ランキング',
     seoTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
@@ -2300,6 +2306,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: '工具与平台',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-zh.webp',
     title: '2026年Structured Output最佳工具：用途排名',
     seoTitle: '结构化输出与JSON模式最佳工具对比（2026）',
@@ -2699,6 +2706,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ar: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-ar.webp',
     title: 'أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode⁩ (⁨2026⁩)',
     seoTitle: 'أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode 2026⁩',
@@ -3071,6 +3079,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-ko.webp',
     title: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
     seoTitle: '2026년 Structured Output JSON Mode 최고의 한국어 도구',

@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-en.webp',
     title: 'Build Your Own Prompt Framework: 5-Step Design Process',
     seoTitle: 'Build a Custom Prompt Framework: 5-Step Process',
@@ -255,6 +256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-de.webp',
     title: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
     seoTitle: 'Eigenes Prompt-Framework entwickeln: 5-Schritte-Anleitung',
@@ -440,6 +442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-es.webp',
     title: 'Construye tu propio framework de prompts: proceso de 5 pasos',
     seoTitle: 'Crear un framework de prompts personalizado: 5 pasos',
@@ -687,6 +690,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-pt.webp',
     title: 'Construa seu próprio framework de prompts: processo de 5 etapas',
     seoTitle: 'Criar um framework de prompts personalizado: 5 etapas',
@@ -934,6 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-fr.webp',
     title: 'Créer son propre framework de prompts : processus en 5 étapes',
     seoTitle: 'Créer un framework de prompts personnalisé : 5 étapes',
@@ -1130,6 +1135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'フレームワーク',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-ja.webp',
     title: '独自プロンプトフレームワークの構築：5ステップ設計プロセス',
     seoTitle: 'カスタムプロンプトフレームワーク構築：5ステップ手順',
@@ -1339,6 +1345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '框架',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-zh.webp',
     title: '构建自己的Prompt框架：5步设计流程',
     seoTitle: '构建自定义Prompt框架：5步设计流程指南',
@@ -1548,6 +1555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-ar.webp',
     title: 'بناء إطار عمل خاص بك للأوامر: عملية من ⁨5⁩ خطوات',
     seoTitle: 'بناء إطار عمل ⁨Prompt⁩ مخصص: عملية ⁨5⁩ خطوات',
@@ -1794,6 +1802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     heroImage: '/images/build-your-own-framework-overview-hero-ko.webp',
     title: '나만의 프롬프트 프레임워크 만들기: 5단계 프로세스',
     seoTitle: '커스텀 프롬프트 프레임워크 만들기: 5단계 가이드',

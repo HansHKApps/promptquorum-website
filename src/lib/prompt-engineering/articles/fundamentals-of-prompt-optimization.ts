@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-en.webp',
       title: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
       seoTitle: 'How to Optimize Prompts in 2026: 6 Levers + 6-Step Process',
@@ -555,6 +556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-de.webp',
       title: 'So optimierst du Prompts: Prompt-Optimierungstechniken und Best Practices',
       seoTitle: 'Prompts optimieren 2026: 6 Hebel und 6-Schritte-Prozess',
@@ -1147,6 +1149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-es.webp',
       title: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',
       seoTitle: 'Cómo optimizar prompts en 2026: 6 palancas, 6 pasos',
@@ -1784,6 +1787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-ar.webp',
       title: 'كيفية تحسين الموجّهات: تقنيات وأفضل الممارسات',
       seoTitle: 'تحسين الموجّهات ⁨2026⁩: ⁨6⁩ رافعات وعملية من ⁨6⁩ خطوات',
@@ -2418,6 +2422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-fr.webp',
       title: 'Fondamentaux de l\'optimisation des prompts',
       seoTitle: 'Optimiser les prompts 2026: 6 leviers, 6 étapes pratiques',
@@ -3007,6 +3012,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-ja.webp',
       title: 'プロンプト最適化の基礎',
       seoTitle: '2026年プロンプト最適化ガイド：6つのレバーと6ステップ',
@@ -3604,6 +3610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-zh.webp',
       title: '如何优化提示词：提示词优化技巧与最佳实践',
       seoTitle: '2026年提示词优化指南：6个杠杆与6步流程详解',
@@ -4173,6 +4180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-pt.webp',
       title: 'Como otimizar prompts: técnicas e melhores práticas de otimização de prompts',
       seoTitle: 'Como otimizar prompts em 2026: 6 alavancas, 6 passos',
@@ -4694,6 +4702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Fundamentals',
+    designSkin: 'hub',
     heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-ko.webp',
     title: '프롬프트 최적화 방법: 기술과 모범 사례',
     seoTitle: '프롬프트 최적화 2026: 6가지 레버, 6단계 프로세스',

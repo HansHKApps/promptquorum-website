@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RISEN Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'The RISEN Framework is a 5-step iterative structure for improving AI outputs through structured revision cycles. Instead of accepting the first draft or rewriting from scratch, you use RISEN to systematically refine, audit, evaluate, and plan next improvements. Each step has a distinct purpose: Refine improves the draft, Inspect documents every change, Summarize explains what the new version does, Evaluate scores against criteria, and Next Steps recommends further edits. RISEN turns "make this better" into a transparent, repeatable workflow.',
       leadAnswerBlock: '**RISEN is a 5-step iterative refinement framework: Refine improves the draft, Inspect lists every change with justification, Summarize explains the new version, Evaluate scores it against criteria (1-5 scale), and Next Steps recommends 3 focused improvements for the next cycle. Use RISEN when you already have a draft and want controlled, auditable improvement with an audit trail. The Inspect step uniquely forces the model to document changes — making revisions traceable. In 2026, RISEN is built into PromptQuorum as a multi-model dispatch option, letting you test the same RISEN cycle across GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro simultaneously to compare refinement approaches.**',
@@ -418,6 +419,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RISEN-Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'Das RISEN-Framework ist eine 5-stufige iterative Struktur zur systematischen Verbesserung von KI-Ausgaben durch strukturierte Revisionszyklen. Statt den ersten Entwurf zu akzeptieren oder von Grund auf neu zu schreiben, nutzen Sie RISEN für kontrollierte Verbesserung mit vollständiger Audit-Spur. Jeder Schritt hat einen eindeutigen Zweck: Refine verbessert den Entwurf, Inspect dokumentiert jede Änderung, Summarize erklärt die neue Version, Evaluate bewertet gegen Kriterien, und Next Steps empfiehlt weitere Verbesserungen. RISEN verwandelt „machen Sie das besser" in einen transparenten, wiederholbaren Arbeitsablauf.',
       leadAnswerBlock: '**RISEN ist eine 5-stufige iterative Verbesserungsschleife: Refine verbessert den Entwurf, Inspect listet jede Änderung mit Begründung auf, Summarize erklärt die neue Version, Evaluate bewertet sie gegen Kriterien (1–5 Skala), und Next Steps empfiehlt 3 fokussierte Verbesserungen für den nächsten Zyklus. Verwenden Sie RISEN, wenn Sie bereits einen Entwurf haben und kontrollierte, nachverfolgbare Verbesserung mit Audit-Trail wünschen. Der Inspect-Schritt zwingt das Modell eindeutig dazu, Änderungen zu dokumentieren — wodurch Revisionen nachverfolgbar werden. 2026 ist RISEN in PromptQuorum als Multi-Modell-Dispatch-Option integriert, mit der Sie denselben RISEN-Zyklus über GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro parallel testen können, um Verbesserungsansätze zu vergleichen.**',
@@ -837,6 +839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework RISEN: Refinar, Inspeccionar, Resumir, Evaluar, Próximos Pasos (2026)',
       intro: 'El Framework RISEN es una estructura iterativa de 5 pasos para mejorar los outputs de IA mediante ciclos de revisión estructurados. En lugar de aceptar el primer borrador o reescribir desde cero, usas RISEN para refinar, auditar, evaluar y planificar siguientes mejoras de forma sistemática. Cada paso tiene un propósito distinto: Refinar mejora el borrador, Inspeccionar documenta cada cambio, Resumir explica la nueva versión, Evaluar puntúa según criterios, y Próximos Pasos recomienda ediciones adicionales. RISEN convierte "mejora esto" en un flujo de trabajo transparente y repetible.',
       leadAnswerBlock: '**RISEN es un bucle iterativo de 5 pasos: Refinar mejora el borrador, Inspeccionar lista cada cambio con justificación, Resumir explica la nueva versión, Evaluar la puntúa según criterios (escala 1-5), y Próximos Pasos recomienda 3 mejoras enfocadas para el siguiente ciclo. Usa RISEN cuando ya tienes un borrador y quieres mejora controlada y auditable con rastro de auditoría. El paso Inspeccionar es único: obliga al modelo a documentar los cambios — haciendo las revisiones trazables. En 2026, RISEN está integrado en PromptQuorum como opción de despacho multi-modelo, permitiéndote probar el mismo ciclo RISEN en GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro simultáneamente.**',
@@ -1245,6 +1248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'إطار ⁨RISEN⁩: تحسين، فحص، تلخيص، تقييم، الخطوات التالية (⁨2026⁩)',
       intro: 'إطار RISEN هو هيكل تكراري من 5 خطوات لتحسين مخرجات الذكاء الاصطناعي من خلال دورات مراجعة منظمة. بدلاً من قبول المسودة الأولى أو إعادة الكتابة من البداية، تستخدم RISEN للتحسين والتدقيق والتقييم والتخطيط للتحسينات اللاحقة بشكل منهجي. لكل خطوة غرض مميز: تُحسِّن خطوة Refine المسودة، وتُوثّق خطوة Inspect كل تغيير، وتُفسِّر خطوة Summarize النسخة الجديدة، وتُقيّم خطوة Evaluate وفق معايير، وتُوصي خطوة Next Steps بتعديلات إضافية. يُحوّل RISEN عبارة "حسِّن هذا" إلى سير عمل شفاف وقابل للتكرار.',
       leadAnswerBlock: '**RISEN هو حلقة تكرارية من 5 خطوات: تُحسِّن Refine المسودة، وتُدرج Inspect كل تغيير مع مبرره، وتُفسِّر Summarize النسخة الجديدة، وتُقيّم Evaluate وفق معايير (مقياس 1-5)، وتُوصي Next Steps بـ3 تحسينات محددة للدورة التالية. استخدم RISEN عندما لديك مسودة وتريد تحسيناً مضبوطاً وقابلاً للتدقيق مع سجل تدقيق. خطوة Inspect فريدة: تُلزم النموذج بتوثيق التغييرات — مما يجعل المراجعات قابلة للتتبع. في 2026، تم دمج RISEN في PromptQuorum كخيار إرسال متعدد النماذج، مما يُتيح اختبار دورة RISEN نفسها على GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro في آنٍ واحد.**',
@@ -1654,6 +1658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework RISEN: Refinar, Inspecionar, Resumir, Avaliar, Próximos Passos (2026)',
       intro: 'O Framework RISEN é uma estrutura iterativa de 5 etapas para melhorar os outputs de IA por meio de ciclos de revisão estruturados. Em vez de aceitar o primeiro rascunho ou reescrever do zero, você usa o RISEN para refinar, auditar, avaliar e planejar as próximas melhorias de forma sistemática. Cada etapa tem um propósito distinto: Refinar melhora o rascunho, Inspecionar documenta cada mudança, Resumir explica a nova versão, Avaliar pontua com base em critérios e Próximos Passos recomenda edições adicionais. O RISEN transforma "melhore isso" em um fluxo de trabalho transparente e repetível.',
       leadAnswerBlock: '**RISEN é um loop iterativo de 5 etapas: Refinar melhora o rascunho, Inspecionar lista cada mudança com justificativa, Resumir explica a nova versão, Avaliar a pontua com base em critérios (escala 1-5) e Próximos Passos recomenda 3 melhorias focadas para o próximo ciclo. Use o RISEN quando você já tem um rascunho e quer melhoria controlada e auditável com trilha de auditoria. A etapa Inspecionar é única: obriga o modelo a documentar as mudanças — tornando as revisões rastreáveis. Em 2026, o RISEN está integrado ao PromptQuorum como opção de envio multi-modelo, permitindo que você teste o mesmo ciclo RISEN no GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro simultaneamente para comparar abordagens de refinamento.**',
@@ -2060,6 +2065,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework RISEN : Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'Le Framework RISEN est une structure itérative en 5 étapes pour améliorer systématiquement les résultats de l\'IA via des cycles de révision structurés. Au lieu d\'accepter le premier brouillon ou de tout réécrire, utilisez RISEN pour une amélioration contrôlée avec traçabilité intégrale. Chaque étape a un objectif distinct : Refine améliore le brouillon, Inspect documente chaque changement, Summarize explique la nouvelle version, Evaluate l\'évalue contre des critères, et Next Steps recommande des améliorations futures. RISEN transforme « améliorez ceci » en workflow transparent et reproductible.',
       leadAnswerBlock: '**RISEN est une boucle itérative en 5 étapes : Refine améliore le brouillon, Inspect liste chaque changement avec justification, Summarize explique la nouvelle version, Evaluate la note selon des critères (échelle 1–5), et Next Steps recommande 3 améliorations ciblées pour le prochain cycle. Utilisez RISEN quand vous avez déjà un brouillon et souhaitez une amélioration contrôlée et traçable avec audit trail. L\'étape Inspect force le modèle à documenter les changements — rendant les révisions traçables. En 2026, RISEN est intégré à PromptQuorum comme option multi-modèles, permettant de tester le même cycle RISEN sur GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro en parallèle.**',
@@ -2524,6 +2530,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RISENフレームワーク：Refine、Inspect、Summarize、Evaluate、Next Steps（2026年）',
       intro: 'RISENフレームワークは、5段階の反復プロセスでAI出力を体系的に改善するツールです。初期ドラフトを受け入れたり、ゼロから書き直したりするのではなく、制御された改善と完全な監査証跡を使います。各ステップには明確な目的があります。Refineはドラフトを改善し、Inspectはすべての変更を記録し、Summarizeは新しいバージョンを説明し、Evaluateは基準に対して評価し、Next Stepsは次の改善を推奨します。RISENは「これを改善して」を構造化された再現可能なワークフローに変えます。',
       leadAnswerBlock: '**RISENは5段階の反復ループです：Refineはドラフトを改善し、Inspectは各変更を正当化を含めてリストアップし、Summarizeは新バージョンを説明し、Evaluateは基準に対して評価（1～5スケール）し、Next Stepsは次サイクルの3つの焦点を絞った改善を推奨します。既にドラフトがあり、制御された追跡可能な改善と監査証跡が必要な場合にRISENを使用します。Inspectステップは、モデルに変更を記録することを強制します。2026年、RISENはPromptQuorumにマルチモデルディスパッチオプションとして統合され、同じRISENサイクルをGPT-5.6、Claude Sonnet 5、Gemini 3.1 Proで並行してテストして改善アプローチを比較できます。**',
@@ -2943,6 +2950,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RISEN框架：Refine、Inspect、Summarize、Evaluate、Next Steps（2026）',
       intro: 'RISEN框架是一个5阶段的迭代系统，用来通过结构化的修订循环来系统性地改进AI生成的内容。与其接受初稿或从零开始重写，不如使用RISEN进行受控改进，建立完整的审计记录。每个阶段都有不同的目的：Refine改进草稿，Inspect记录每一个变更，Summarize解释新版本是什么，Evaluate用标准打分，Next Steps推荐进一步改进。RISEN把"把这个改得更好"转变为一个透明、可重复的工作流程。',
       leadAnswerBlock: '**RISEN是一个5阶段的迭代优化框架：Refine改进草稿，Inspect列举每一个变更及其理由，Summarize解释新版本的作用，Evaluate按标准打分（1-5分），Next Steps推荐下一阶段的3个重点改进。在已经有初稿的时候使用RISEN，通过可跟踪的改进获得受控的、可审计的升级。Inspect步骤的独特之处在于强制模型记录所有变更——让修订变成可追踪的。在2026年，RISEN内置于PromptQuorum中，成为多模型分发选项，让您可以在GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro上同时测试RISEN循环，比较不同的改进方法。**',
@@ -3314,6 +3322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RISEN 프레임워크: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'RISEN 프레임워크는 구조화된 수정 사이클을 통해 AI 출력을 개선하기 위한 5단계 반복 구조입니다. 첫 번째 초안을 그대로 수용하거나 처음부터 다시 작성하는 대신, RISEN을 사용하여 체계적으로 다듬고, 감사하고, 평가하며, 다음 개선 사항을 계획합니다. 각 단계는 고유한 목적을 가지고 있습니다. Refine은 초안을 개선하고, Inspect는 모든 변경 사항을 기록하며, Summarize는 새 버전이 무엇을 하는지 설명하고, Evaluate는 기준에 따라 점수를 매기며, Next Steps는 추가 편집을 권장합니다. RISEN은 "더 좋게 만들어라"라는 막연한 요청을 투명하고 반복 가능한 워크플로로 전환합니다.',
       leadAnswerBlock: '**RISEN은 5단계 반복 개선 프레임워크입니다. Refine은 초안을 개선하고, Inspect는 정당성을 포함한 모든 변경 사항을 나열하며, Summarize는 새 버전을 설명하고, Evaluate는 기준에 따라 점수(1-5 척도)를 매기며, Next Steps는 다음 사이클을 위한 3가지 집중적인 개선 사항을 권장합니다. 이미 초안이 있고 감사 추적을 통해 통제된 개선을 원할 때 RISEN을 사용하십시오. Inspect 단계는 모델이 변경 사항을 문서화하도록 강제하여 수정 사항을 추적 가능하게 만드는 독특한 특징입니다. 2026년에 RISEN은 PromptQuorum에 멀티 모델 디스패치 옵션으로 내장되어, GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에서 동일한 RISEN 사이클을 동시에 테스트하여 개선 방식을 비교할 수 있습니다.**',

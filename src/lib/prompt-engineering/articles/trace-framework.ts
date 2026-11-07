@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'The TRACE Framework',
       seoTitle: 'TRACE Framework: Prompts That Show AI Reasoning 2026',
       intro: '**The TRACE Framework turns AI reasoning from a black box into a visible, step-by-step process.** It asks models to Think, Reason, Analyze, Conclude, and Explain — so you can see where the logic holds and where it breaks. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
@@ -318,6 +319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Das TRACE Framework',
       seoTitle: 'TRACE Framework: Prompts, die KI-Denken offenbaren 2026',
       intro: '**Das TRACE Framework macht das Reasoning von KI-Modellen sichtbar — statt nur eine Antwort zu liefern, zeigt das Modell jeden Schritt seines Denkprozesses.** Die fünf Stufen Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern) und Explain (Erklären) geben Ihnen die Möglichkeit, Logikfehler und falsche Annahmen zu erkennen, bevor sie Entscheidungen beeinflussen. PromptQuorum bietet TRACE als native Option an, die alle Benutzer direkt nutzen können.',
@@ -688,6 +690,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'El Framework TRACE',
       seoTitle: 'Framework TRACE: prompts que muestran el razonamiento IA',
       intro: '**El Framework TRACE convierte el razonamiento de la IA de una caja negra en un proceso visible paso a paso.** Pide a los modelos Pensar, Razonar, Analizar, Concluir y Explicar — para que puedas ver dónde la lógica se sostiene y dónde se rompe. PromptQuorum incluye el Framework TRACE como opción integrada que cualquier usuario puede seleccionar y usar directamente dentro de la app.',
@@ -998,6 +1001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'إطار ⁨TRACE⁩',
       seoTitle: 'إطار ⁨TRACE⁩: استدلال ذكاء اصطناعي شفاف ⁨2026⁩',
       intro: '**إطار TRACE يحوّل استدلال الذكاء الاصطناعي من صندوق أسود إلى عملية مرئية خطوة بخطوة.** يطلب من النماذج التفكير والاستدلال والتحليل والاستنتاج والشرح — حتى تتمكن من رؤية أين تصمد المنطق وأين تنهار. PromptQuorum يتضمن إطار TRACE كخيار مدمج يمكن لأي مستخدم تحديده واستخدامه مباشرة داخل التطبيق.',
@@ -1307,6 +1311,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'O Framework TRACE',
       seoTitle: 'Framework TRACE: Prompts que revelam o raciocínio da IA 2026',
       intro: '**O Framework TRACE transforma o raciocínio da IA de uma caixa preta em um processo visível, passo a passo.** Ele pede aos modelos que Pensem, Raciocinem, Analisem, Concluam e Expliquem — para que você possa ver onde a lógica se sustenta e onde ela falha. O PromptQuorum inclui o Framework TRACE como opção integrada que qualquer usuário pode selecionar e usar diretamente no aplicativo.',
@@ -1609,6 +1614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Le Framework TRACE',
       seoTitle: 'Framework TRACE : Rendre visible la réflexion de l\'IA 2026',
       intro: '**Le Framework TRACE rend le raisonnement des modèles IA visible — au lieu de donner uniquement une réponse, le modèle détaille chaque étape de sa réflexion.** Les cinq étapes (Réfléchir, Raisonner, Analyser, Conclure, Expliquer) vous permettent de détecter les hypothèses erronées et les failles logiques avant qu\'elles n\'influencent vos décisions. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
@@ -1972,6 +1978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'TRACEフレームワーク',
       seoTitle: 'TRACEフレームワーク完全ガイド：AIの推論プロセスを5段階で可視化する方法（2026年版）',
       intro: '**TRACEフレームワークは、AIモデルの推論プロセスを「ブラックボックス」から可視化された段階的な思考へと変えます。** 考える（Think）→推論する（Reason）→分析する（Analyze）→結論を出す（Conclude）→説明する（Explain）の5つのステップにより、論理の欠陥や誤った前提を早期に発見できます。PromptQuorumではTRACEフレームワークをネイティブに統合しており、すべてのユーザーが直接利用できます。',
@@ -2365,6 +2372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'TRACE框架',
       seoTitle: 'TRACE框架完整指南：用5步让AI推理过程全程透明（2026年实战版）',
       intro: '**TRACE框架将AI模型的推理过程从"黑盒"变成可见的逐步思考。** 通过思考（Think）→推理（Reason）→分析（Analyze）→结论（Conclude）→解释（Explain）5个步骤，你可以在错误影响决策之前发现模型的逻辑漏洞和错误假设。PromptQuorum原生集成了TRACE框架，所有用户都可以直接使用。',
@@ -2760,6 +2768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'TRACE 프레임워크',
       seoTitle: 'TRACE 프레임워크: AI 추론을 가시화하는 프롬프트 2026',
       intro: '**TRACE 프레임워크는 AI의 추론 과정을 블랙박스에서 단계별로 가시화된 프로세스로 전환합니다.** 모델에게 Think(생각), Reason(추론), Analyze(분석), Conclude(결론), Explain(설명)을 수행하도록 요청함으로써, 논리가 성립되는 지점과 무너지는 지점을 직접 확인할 수 있습니다. PromptQuorum은 TRACE 프레임워크를 기본 옵션으로 제공하며, 모든 사용자가 앱 내에서 직접 선택하여 활용할 수 있습니다.',

@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-en.webp',
     title: 'Prompt Engineering for Content Teams: Templates, Review Flows, and Quality Checks',
     dateModified: '2026-08-31',
@@ -211,6 +212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-de.webp',
     title: 'Prompt Engineering für Content-Teams: Templates, Review-Prozesse und Qualitätschecks',
     seoTitle: 'Prompt Engineering für Content-Teams: Templates & Reviews',
@@ -344,6 +346,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-es.webp',
     title: 'Prompt engineering para equipos de contenido: plantillas, flujos de revisión y controles de calidad',
     seoTitle: 'Prompt engineering para equipos de contenido: plantillas',
@@ -501,6 +504,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automação',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-pt.webp',
     title: 'Prompt engineering para equipes de conteúdo: modelos, fluxos de revisão e controles de qualidade',
     seoTitle: 'Prompt engineering para equipes de conteúdo: modelos e revisões',
@@ -659,6 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-fr.webp',
     title: "Prompt Engineering pour les équipes contenu : templates, flux de validation et contrôles qualité",
     seoTitle: "Prompt Engineering pour équipes contenu : templates et révisions",
@@ -809,6 +814,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-ja.webp',
     title: 'コンテンツチームのためのプロンプトエンジニアリング：テンプレート、レビューフロー、品質チェック',
     seoTitle: 'コンテンツチームのプロンプトエンジニアリング：テンプレートとレビュー',
@@ -959,6 +965,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'evergreen',
     theme: '工作流与自动化',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-zh.webp',
     title: '内容团队的提示词工程：模板、审核流程和质量检查',
     seoTitle: '内容团队提示词工程：模板与审核',
@@ -1109,6 +1116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-ar.webp',
     title: 'هندسة البرومبت لفرق المحتوى: القوالب وسير مراجعة المحتوى ومعايير الجودة',
     seoTitle: 'هندسة البرومبت لفرق المحتوى: القوالب والمراجعة',
@@ -1281,6 +1289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'evergreen',
     theme: '워크플로우 및 자동화',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-content-teams-overview-hero-ko.webp',
     title: '콘텐츠 팀을 위한 프롬프트 엔지니어링: 템플릿, 검토 흐름 및 품질 점검',
     seoTitle: '콘텐츠 팀을 위한 프롬프트 엔지니어링: 템플릿 및 검토',

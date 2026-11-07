@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-en.webp',
     title: 'Prompt Engineering for Support Operations: Consistent, Accurate Response Templates',
     dateModified: '2026-08-31',
@@ -204,6 +205,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-de.webp',
     title: 'Prompt Engineering für Support-Operationen: Konsistente, genaue Antwort-Templates',
     seoTitle: 'Prompt Engineering für Support-Teams: Vorlagen-Leitfaden',
@@ -397,6 +399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-es.webp',
     title: 'Prompt engineering para operaciones de soporte: plantillas de respuesta consistentes y precisas',
     seoTitle: 'Prompts de soporte: guía de plantillas',
@@ -571,6 +574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automação',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-pt.webp',
     title: 'Prompt engineering para operações de suporte: modelos de resposta consistentes e precisos',
     seoTitle: 'Prompts de suporte: guia de modelos',
@@ -746,6 +750,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-fr.webp',
     title: 'Prompt Engineering pour les opérations support : templates de réponses cohérents et précis',
     seoTitle: 'Prompts Support : Guide des Templates et Escalade',
@@ -916,6 +921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-ja.webp',
     title: 'サポートオペレーションのプロンプトエンジニアリング：一貫性のある正確な回答テンプレート',
     seoTitle: 'サポートプロンプト：テンプレート設計ガイド',
@@ -1107,6 +1113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'evergreen',
     theme: '工作流与自动化',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-zh.webp',
     title: '支持运营的提示词工程：一致、准确的响应模板',
     seoTitle: '客支团队提示词工程：完整指南',
@@ -1258,6 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-ar.webp',
     title: 'هندسة البرومبت لعمليات الدعم: قوالب استجابة متسقة ودقيقة',
     seoTitle: 'هندسة البرومبت لفِرق الدعم: دليل القوالب',
@@ -1432,6 +1440,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'evergreen',
     theme: '워크플로우 및 자동화',
+    designSkin: 'hub',
     heroImage: '/images/pe-for-support-operations-overview-hero-ko.webp',
     title: '고객 지원 운영을 위한 프롬프트 엔지니어링: 일관되고 정확한 응답 템플릿',
     seoTitle: '지원팀을 위한 프롬프트 엔지니어링: 템플릿 가이드',

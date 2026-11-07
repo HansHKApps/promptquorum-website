@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-04-19',
       last_full_refresh: '2026-10-19',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-en.webp',
       title: 'What Is Prompt Engineering? — PromptQuorum Guide',
       seoTitle: 'What Is Prompt Engineering in 2026? Beginner Guide',
@@ -385,6 +386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     // Non-English languages fall back to English in the renderer
     de: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-de.webp',
       title: 'Was ist Prompt Engineering? — PromptQuorum Leitfaden',
       seoTitle: 'Was ist Prompt Engineering? Einsteiger-Guide 2026',
@@ -749,6 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-es.webp',
       title: '¿Qué es el Prompt Engineering? — Guía PromptQuorum',
       seoTitle: '¿Qué es el prompt engineering en 2026? Guía básica',
@@ -1114,6 +1117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-ar.webp',
       title: 'ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩',
       seoTitle: 'هندسة الطلبات ⁨2026⁩: دليل المبتدئين الشامل',
@@ -1479,6 +1483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-pt.webp',
       title: 'O que é Prompt Engineering? — Guia PromptQuorum',
       seoTitle: 'O que é prompt engineering em 2026? Guia para iniciantes',
@@ -1810,6 +1815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Fondamentaux',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-fr.webp',
       title: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
       seoTitle: 'Ingénierie de prompt (prompt engineering) : guide 2026',
@@ -2174,6 +2180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: '基礎',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-ja.webp',
       title: 'プロンプトエンジニアリングとは？',
       seoTitle: 'プロンプトエンジニアリングとは？2026年入門ガイド',
@@ -2536,6 +2543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: '基础知识',
+      designSkin: 'hub',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-zh.webp',
       title: '什么是提示工程？ — PromptQuorum 指南',
       seoTitle: '什么是提示工程？2026年初学者完全指南',
@@ -2900,6 +2908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-04-19',
       last_full_refresh: '2026-10-19',
       theme: 'Fundamentals',
+      designSkin: 'hub',
     heroImage: '/images/what-is-prompt-engineering-overview-hero-ko.webp',
       title: '프롬프트 엔지니어링이란? — PromptQuorum 가이드',
       seoTitle: '2026년 프롬프트 엔지니어링이란? 입문자 가이드',

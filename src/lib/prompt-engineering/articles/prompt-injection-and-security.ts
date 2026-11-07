@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       last_full_refresh: '2026-08-29',
       next_refresh_due: '2027-02-28',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-en.webp',
       title: 'Prompt Injection & Security: How to Defend AI Systems',
       intro: 'Prompt injection — embedding malicious instructions in user input or documents to override system-prompt controls — is OWASP LLM #1. Learn attack types, jailbreaking differences, and 5 layered defenses.',
@@ -425,6 +426,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     },
     de: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-de.webp',
       title: 'Prompt Injection & Sicherheit: So verteidigen Sie KI-Systeme',
       seoTitle: 'Prompt Injection 2026: KI-Systeme absichern',
@@ -835,6 +837,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-es.webp',
       title: 'Prompt injection y seguridad: cómo defender los sistemas de IA',
       intro: 'La prompt injection — incrustar instrucciones maliciosas en la entrada del usuario o en documentos para anular los controles del system prompt — es el OWASP LLM #1. Aprende los tipos de ataque, las diferencias con el jailbreaking y 5 defensas por capas.',
@@ -1177,6 +1180,7 @@ def is_injection_attempt(text: str) -> bool:`,
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-ar.webp',
       title: 'حقن البرومبت والأمان: كيفية الدفاع عن أنظمة الذكاء الاصطناعي',
       intro: 'حقن البرومبت — إدراج تعليمات خبيثة في مدخلات المستخدم أو في المستندات لتجاوز ضوابط system prompt — يُصنَّف كـ OWASP LLM رقم 1. تعرّف على أنواع الهجمات والفروق بينها وبين jailbreaking، و5 طبقات من الدفاعات.',
@@ -1518,6 +1522,7 @@ def is_injection_attempt(text: str) -> bool:`,
     },
     pt: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-pt.webp',
       title: 'Prompt injection e segurança: como defender sistemas de IA',
       intro: 'A prompt injection — incorporar instruções maliciosas na entrada do usuário ou em documentos para anular os controles do system prompt — é a OWASP LLM #1. Aprenda os tipos de ataque, as diferenças com o jailbreaking e 5 defesas em camadas.',
@@ -1861,6 +1866,7 @@ def is_injection_attempt(text: str) -> bool:`,
     },
     fr: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-fr.webp',
       title: 'Prompt Injection & Sécurité : Comment défendre les systèmes IA',
       intro: 'L\'injection de prompt — l\'intégration d\'instructions malveillantes dans les entrées utilisateur ou les documents pour contourner les contrôles du system prompt — est OWASP LLM #1. Découvrez les types d\'attaques, les différences avec le jailbreaking et 5 niveaux de défense.',
@@ -2269,6 +2275,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     },
     ja: {
       theme: 'テクニック',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-ja.webp',
       title: 'プロンプトインジェクションとセキュリティ：AIシステムを守る方法',
       intro: 'プロンプトインジェクション — ユーザー入力やドキュメントに悪意ある指示を埋め込み、システムプロンプトの制御を無効化する攻撃 — はOWASP LLM第1位のリスクです。攻撃の種類、ジェイルブレーキングとの違い、5層の防御策を解説します。',
@@ -2676,6 +2683,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     },
     zh: {
       theme: '技术',
+      designSkin: 'hub',
       heroImage: '/images/prompt-injection-and-security-overview-hero-zh.webp',
       title: '提示词注入与安全：如何防御AI系统',
       intro: '提示词注入——将恶意指令嵌入用户输入或文档以绕过系统提示词控制——是OWASP LLM #1。了解攻击类型、与越狱的区别以及5层防御体系。',
@@ -3085,6 +3093,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/prompt-injection-and-security-overview-hero-ko.webp',
     title: '프롬프트 인젝션과 보안: AI 시스템 방어 방법',
     intro: '프롬프트 인젝션 — 시스템 프롬프트 제어를 무력화하기 위해 사용자 입력이나 문서에 악의적 지시를 삽입하는 공격 — 은 OWASP LLM #1입니다. 공격 유형, 탈옥과의 차이, 그리고 5계층 방어 체계를 학습하십시오.',

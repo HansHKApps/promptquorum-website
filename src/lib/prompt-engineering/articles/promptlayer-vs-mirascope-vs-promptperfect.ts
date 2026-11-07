@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-en.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: Pick One',
@@ -417,6 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   de: {
     theme: 'Tools & Plattformen',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-de.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect: Vergleich 2026',
@@ -836,6 +838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   es: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-es.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: elige uno',
@@ -1247,6 +1250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ar: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ar.webp',
     title: '⁨PromptLayer⁩ مقابل ⁨Mirascope⁩ مقابل ⁨PromptPerfect⁩ (⁨2026⁩)',
     seoTitle: '⁨PromptLayer⁩ مقابل ⁨Mirascope⁩ مقابل ⁨PromptPerfect 2026⁩',
@@ -1663,6 +1667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Ferramentas e Plataformas',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-pt.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: escolha um',
@@ -1973,6 +1978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Outils & Plateformes',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-fr.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'Comparatif PromptLayer, Mirascope et PromptPerfect 2026',
@@ -2382,6 +2388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ja: {
     theme: 'ツール & プラットフォーム',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ja.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect（2026年）',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026年：1つを選ぶ',
@@ -2787,6 +2794,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   zh: {
     theme: '工具与平台',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-zh.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 对比 2026：选一款',
@@ -3191,6 +3199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ko.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect 비교 (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: 하나를 선택하십시오',

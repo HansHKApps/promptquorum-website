@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-en.webp',
     title: 'Prompt Security Testing: Tools and Methods to Detect Injection Vulnerabilities',
     dateModified: '2026-08-31',
@@ -190,6 +191,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Team-Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-de.webp',
     title: 'Prompt-Security-Testing: Injection-Erkennung Tools & Methoden (2026)',
     seoTitle: 'Prompt-Injection-Tests: Garak und PyRIT erklärt',
@@ -359,6 +361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-es.webp',
     title: 'Pruebas de seguridad de prompts: herramientas y métodos para detectar vulnerabilidades de injection',
     seoTitle: 'Pruebas de injection de prompts: herramientas Garak y PyRIT',
@@ -532,6 +535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     theme: 'Governança de Equipe',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-pt.webp',
     title: 'Testes de segurança de prompts: ferramentas e métodos para detectar vulnerabilidades de injeção',
     seoTitle: 'Testes de injeção de prompt: ferramentas Garak e PyRIT',
@@ -705,6 +709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-fr.webp',
     title: 'Tests de sécurité des prompts : outils et méthodes pour détecter les vulnérabilités d\'injection',
     seoTitle: 'Tests d\'injection: Garak et PyRIT expliqués',
@@ -873,6 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-ja.webp',
     title: 'プロンプトセキュリティテスト：インジェクション脆弱性を検出するためのツールと方法',
     seoTitle: 'プロンプトセキュリティテスト：インジェクション脆弱性を検出する',
@@ -1042,6 +1048,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '团队治理',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-zh.webp',
     title: '提示词安全测试：检测注入漏洞的工具和方法',
     seoTitle: '提示词安全测试：检测注入漏洞',
@@ -1211,6 +1218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-ko.webp',
     title: '프롬프트 보안 테스트: 인젝션 취약점 탐지 도구와 방법',
     seoTitle: '프롬프트 인젝션 테스트: Garak와 PyRIT 도구',
@@ -1384,6 +1392,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-security-tools-overview-hero-ar.webp',
     title: 'اختبار أمان الـ ⁨prompts⁩: أدوات وأساليب للكشف عن ثغرات الـ ⁨injection⁩',
     seoTitle: 'اختبار ⁨Prompt Injection⁩: أدوات ⁨Garak⁩ و⁨PyRIT⁩',

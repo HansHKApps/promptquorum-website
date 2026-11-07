@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-en.webp',
     title: 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
     intro: 'Tree-of-Thought and ReAct prompting are two advanced reasoning techniques: Tree-of-Thought explores multiple possible solution paths like a decision tree, while ReAct interleaves reasoning with explicit "actions" such as searching or retrieving information. Both aim to make complex problem-solving more reliable and transparent.',
@@ -435,6 +436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Techniken',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-de.webp',
     title: 'Tree of Thought & ReAct: Fortgeschrittene Reasoning-Techniken für komplexe Probleme',
     intro: 'Tree-of-Thought und ReAct Prompting sind zwei fortgeschrittene Reasoning-Techniken: Tree-of-Thought erkundet mehrere mögliche Lösungspfade wie einen Entscheidungsbaum, während ReAct Reasoning mit expliziten Aktionen wie Suche oder Informationsabruf verschränkt.',
@@ -772,6 +774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-es.webp',
     title: 'Tree of Thought y ReAct: Razonamiento avanzado para problemas difíciles',
     intro: 'Tree-of-Thought y ReAct Prompting son dos técnicas de razonamiento avanzadas: Tree-of-Thought explora múltiples caminos de solución posibles como un árbol de decisiones, mientras que ReAct entrelaza el razonamiento con "acciones" explícitas como buscar o recuperar información. Ambas buscan hacer la resolución de problemas complejos más fiable y transparente.',
@@ -1087,6 +1090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-ar.webp',
     title: '⁨Tree of Thought⁩ و ⁨ReAct⁩: الاستدلال المتقدم للمسائل الصعبة',
     intro: 'Tree-of-Thought و ReAct Prompting تقنيتان متقدمتان للاستدلال: يستكشف Tree-of-Thought مسارات الحل المتعددة الممكنة كشجرة قرارات، بينما يتشابك ReAct الاستدلال مع "الإجراءات" الصريحة مثل البحث أو استرجاع المعلومات. كلتا التقنيتين تهدفان إلى جعل حل المشكلات المعقدة أكثر موثوقية وشفافية.',
@@ -1401,6 +1405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-pt.webp',
     title: 'Tree of Thought e ReAct: Raciocínio avançado para problemas difíceis',
     intro: 'Tree-of-Thought e ReAct Prompting são duas técnicas avançadas de raciocínio: o Tree-of-Thought explora múltiplos caminhos de solução possíveis como uma árvore de decisão, enquanto o ReAct intercala o raciocínio com "ações" explícitas, como buscar ou recuperar informações. Ambas visam tornar a resolução de problemas complexos mais confiável e transparente.',
@@ -1721,6 +1726,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-fr.webp',
     title: 'Tree of Thought et ReAct : Techniques de raisonnement avancées pour les problèmes complexes',
     intro: 'Tree-of-Thought et ReAct Prompting sont deux techniques de raisonnement avancées : Tree-of-Thought explore plusieurs chemins de solution possibles comme un arbre de décision, tandis que ReAct entrelace le raisonnement avec des actions explicites telles que la recherche ou la récupération d\'informations.',
@@ -2092,6 +2098,7 @@ Réponse finale : [conclusion synthétisée]`,
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'テクニック',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-ja.webp',
     title: 'Tree of Thought & ReAct: 複雑な問題のための高度なReasoningテクニック',
     intro: 'Tree-of-Thoughtと ReAct プロンプティングは2つの高度なReasoning手法です。Tree-of-Thoughtは決定木のような複数の解決経路を探索し、ReAct は推論と検索や情報取得などの明示的な「アクション」を交互に実行します。',
@@ -2464,6 +2471,7 @@ Final Answer: [総合結論]`,
   zh: {
     freshness_tier: 'semi_annual',
     theme: '技巧',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-zh.webp',
     title: '树思考与 ReAct: 复杂问题的高级推理技术',
     intro: '树思考（Tree-of-Thought）和 ReAct 提示是两种高级推理技术：树思考探索多条可能的解决路径，就像决策树一样，而 ReAct 将推理与显式"行动"（如搜索或信息检索）交织在一起。',
@@ -2612,6 +2620,7 @@ Final Answer: [総合結論]`,
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/tree-of-thought-react-overview-hero-ko.webp',
     title: 'Tree of Thought와 ReAct: 복잡한 문제를 위한 고급 추론 기법',
     intro: 'Tree-of-Thought와 ReAct 프롬프팅은 두 가지 고급 추론 기법입니다. Tree-of-Thought는 의사결정 트리처럼 여러 가능한 해결 경로를 탐색하고, ReAct는 추론과 검색 또는 정보 검색과 같은 명시적 "행동"을 교차하여 실행합니다. 두 기법 모두 복잡한 문제 해결을 더 신뢰할 수 있고 투명하게 만드는 것을 목표로 합니다.',

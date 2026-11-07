@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-en.webp',
     title: 'Multi-Model Prompt Testing: Compare Outputs Across GPT-5.6, Claude, and Gemini',
     dateModified: '2026-09-01',
@@ -267,6 +268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisierung',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-de.webp',
     title: 'Multi-Modell-Prompt-Testing: Ausgaben über GPT-5.6, Claude und Gemini vergleichen',
     seoTitle: 'Multi-Modell-Tests: GPT-5.6, Claude, Gemini',
@@ -444,6 +446,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-es.webp',
     title: 'Pruebas de prompts multi-modelo: Comparar resultados en GPT-5.6, Claude y Gemini',
     dateModified: '2026-09-01',
@@ -692,6 +695,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-pt.webp',
     title: 'Testes de prompts multi-modelo: Compare resultados entre GPT-5.6, Claude e Gemini',
     dateModified: '2026-09-01',
@@ -941,6 +945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisation',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-fr.webp',
     title: 'Test de prompts multi-modèles : comparer les sorties de GPT-5.6, Claude et Gemini',
     seoTitle: 'Test de prompts multi-modèles : GPT-5.6, Claude, Gemini',
@@ -1118,6 +1123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'ワークフローと自動化',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-ja.webp',
     title: 'マルチモデルプロンプトテスト：GPT-5.6、Claude、Geminiの出力比較',
     seoTitle: 'マルチモデルプロンプトテスト：GPT-5.6、Claude、Gemini比較',
@@ -1295,6 +1301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '工作流与自动化',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-zh.webp',
     title: '多模型提示词测试：比较GPT-5.6、Claude和Gemini的输出',
     seoTitle: '多模型提示词测试：GPT-5.6、Claude、Gemini比较',
@@ -1473,6 +1480,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-ar.webp',
     title: 'اختبار النماذج المتعددة للـ ⁨prompt⁩: مقارنة المخرجات عبر ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩',
     dateModified: '2026-09-01',
@@ -1722,6 +1730,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: '워크플로우 및 자동화',
+    designSkin: 'hub',
     heroImage: '/images/multi-model-prompt-testing-overview-hero-ko.webp',
     title: '멀티모델 프롬프트 테스트: GPT-5.6, Claude, Gemini 출력 비교',
     dateModified: '2026-09-01',

@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       last_full_refresh: '2026-08-31',
       next_refresh_due: '2027-02-28',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-en.webp',
       title: 'Which Prompt Framework Should You Use?',
       intro: 'The right prompt framework depends on your task, your experience level, and whether you are optimizing for creativity, precision, or reliable reasoning. PromptQuorum makes this choice easier by including multiple frameworks, an automatic selector, and a custom framework builder directly in the app.',
@@ -261,6 +262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-de.webp',
       title: 'Welches Prompt-Framework ist das richtige für Sie? (2026)',
       intro: 'Die Wahl des richtigen Prompt-Frameworks hängt von Ihrer Aufgabe, Ihrem Erfahrungsgrad und davon ab, ob Sie Kreativität, Präzision oder zuverlässiges Reasoning optimieren. PromptQuorum erleichtert diese Entscheidung mit mehreren integrierten Frameworks, einem automatischen Selektor und einem benutzerdefinierten Framework-Builder.',
@@ -497,6 +499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-es.webp',
       title: '¿Qué framework de prompts deberías usar?',
       intro: 'El framework de prompt correcto depende de tu tarea, tu nivel de experiencia y si estás optimizando para creatividad, precisión o razonamiento fiable. PromptQuorum facilita esta elección al incluir múltiples frameworks, un selector automático y un constructor de frameworks personalizados directamente en la app.',
@@ -749,6 +752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-ar.webp',
       title: 'أي إطار طلب يجب استخدامه؟',
       intro: 'يعتمد إطار الطلب الصحيح على مهمتك ومستوى خبرتك وما إذا كنت تُحسّن للإبداع أو الدقة أو الاستدلال الموثوق. PromptQuorum يُسهّل هذا الاختيار بتضمين أطر متعددة ومحدد تلقائي وباني أطر مخصصة مباشرة في التطبيق.',
@@ -1000,6 +1004,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-pt.webp',
       title: 'Qual framework de prompt você deve usar?',
       intro: 'O framework de prompt correto depende da sua tarefa, do seu nível de experiência e se você está otimizando para criatividade, precisão ou raciocínio confiável. O PromptQuorum facilita essa escolha ao incluir múltiplos frameworks, um seletor automático e um construtor de frameworks personalizados diretamente no aplicativo.',
@@ -1250,6 +1255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-fr.webp',
       title: 'Quel framework de prompt choisir ? (2026)',
       intro: 'Le bon framework de prompt dépend de votre tâche, de votre niveau d\'expérience et de ce que vous optimisez : créativité, précision ou raisonnement fiable. PromptQuorum simplifie ce choix avec plusieurs frameworks intégrés, un sélecteur automatique et un éditeur de frameworks personnalisés.',
@@ -1534,6 +1540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-ja.webp',
       title: 'どのPromptフレームワークを使うべきか？（2026）',
       intro: '適切なプロンプトフレームワークは、タスク、経験レベル、そして創造性・精度・信頼性の高い推論のいずれを最適化するかによって異なります。PromptQuorumは複数のフレームワーク、自動セレクター、カスタムフレームワークビルダーをアプリに直接組み込み、この選択を容易にします。',
@@ -1818,6 +1825,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-zh.webp',
       title: '应该选择哪种提示词框架？（2026）',
       intro: '合适的提示词框架取决于您的任务、经验水平以及您是在优化创造力、精确性还是可靠推理。PromptQuorum通过在应用中直接集成多个框架、自动选择器和自定义框架构建器，使这一选择更加简单。',
@@ -2111,6 +2119,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/which-framework-to-use-overview-hero-ko.webp',
       title: '어떤 프롬프트 프레임워크를 사용해야 합니까?',
       intro: '올바른 프롬프트 프레임워크는 작업 유형, 경험 수준, 그리고 창의성·정밀도·안정적 추론 중 무엇을 최적화하느냐에 따라 달라집니다. PromptQuorum은 다양한 프레임워크, 자동 선택기, 커스텀 프레임워크 빌더를 앱 내에 직접 제공하여 이 선택을 더욱 쉽게 해 줍니다.',
