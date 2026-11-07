@@ -9,7 +9,7 @@
 // Stream events (one JSON object per line), a subset of /api/ask:
 //   {t:'text', v}     report text delta
 //   {t:'tool', v}     a tool is being used (name only)
-//   {t:'done', tools}
+//   {t:'done', tools, overview}   overview = site overview block (src/lib/home/overview.ts)
 //   {t:'error', code} code: disabled | unavailable | rate | limit | refused | failed | rephrase
 
 import { NextRequest } from 'next/server'
@@ -17,6 +17,7 @@ import { createHash } from 'crypto'
 import Anthropic from '@anthropic-ai/sdk'
 import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
+import { getSiteOverview } from '@/lib/home/overview'
 import { bumpPower } from '@/lib/askhans/totals'
 import { ASK_HANS_SOLUTION_DEFAULT_MODEL, ASK_HANS_SOLUTION_LIMITS } from '@/lib/askhans/config'
 import { parseAnswers } from '@/lib/askhans/solutions/processes'
@@ -190,7 +191,8 @@ export async function POST(req: NextRequest): Promise<Response> {
       }
       const uniqueTools = [...new Set(toolsUsed)]
       await bumpPower(processId, uniqueTools)
-      send({ t: 'done', tools: uniqueTools })
+      const overview = await getSiteOverview(lang).catch(() => undefined)
+      send({ t: 'done', tools: uniqueTools, overview })
     } catch (err) {
       console.error('[askhans-solution] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
       send({ t: 'error', code: classify(err) })

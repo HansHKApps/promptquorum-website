@@ -8,6 +8,7 @@ import { mdToPlain, writePlain } from '../share'
 import { useAskCopy } from '../copy'
 import { AskIcon } from '../icons'
 import { Markdown } from '../markdown'
+import { OverviewStrip } from '../OverviewStrip'
 import type { PowerCopy } from './copy'
 import { downloadBlob } from './export/download'
 import { buildMarkdown, fileStem, type ReportDoc } from './export/reportDoc'
@@ -111,6 +112,7 @@ export function ReportView({ tx, doc, streaming, status, onExport }: Props) {
               <strong className="text-foreground">{doc.labels.disclaimerHeading}.</strong> {doc.labels.disclaimerText}
             </p>
           </section>
+          {doc.overview && <OverviewStrip overview={doc.overview} className="mt-3" />}
 
           <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-border pt-3" role="group" aria-label={tx.report.download}>
             <button type="button" onClick={copy} className={BTN}>

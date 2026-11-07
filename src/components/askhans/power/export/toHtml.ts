@@ -38,6 +38,10 @@ table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 1
 th { background: #eef2ff; text-align: start; }
 th, td { border: 0.75pt solid #d1d5db; padding: 4pt 6pt; vertical-align: top; }
 tr { break-inside: avoid; }
+.ov { margin-top: 14pt; padding: 8pt 10pt; border: 0.75pt solid #c7d2fe; background: #f5f7ff; border-radius: 4pt; break-inside: avoid; }
+.ov h2 { margin-top: 0; }
+.ov .tiles { display: flex; flex-wrap: wrap; gap: 4pt 14pt; margin: 6pt 0; padding: 0; list-style: none; font-size: 9.5pt; }
+.ov .tiles strong { font-size: 12pt; }
 .foot { margin-top: 18pt; padding-top: 6pt; border-top: 0.75pt solid #d1d5db; font-size: 9pt; color: #555; }
 `
 
@@ -54,6 +58,13 @@ export function buildHtml(doc: ReportDoc): string {
         .join('')}</tbody></table>`
     })
     .join('\n')
+
+  const o = doc.overview
+  const overviewHtml = o
+    ? `<div class="ov"><h2>${esc(o.title)}</h2><p>${esc(o.blurb)}</p><ul class="tiles">${o.tiles
+        .map((t) => `<li><strong>${esc(t.value)}</strong> ${esc(t.label)}</li>`)
+        .join('')}</ul><p>${o.links.map((k) => `<a href="${esc(k.href)}">${esc(k.label)}</a>`).join(' · ')}</p></div>`
+    : ''
 
   return `<!doctype html>
 <html lang="${esc(doc.lang === 'pt' ? 'pt-BR' : doc.lang)}" dir="${doc.dir}">
@@ -73,6 +84,7 @@ ${bodyHtml}
 <h2>${esc(l.referencesHeading)}</h2>
 <ul>${doc.references.map((r) => `<li><a href="${esc(r.url)}">${esc(r.label)}</a></li>`).join('')}</ul>
 <div class="foot"><strong>${esc(l.disclaimerHeading)}.</strong> ${esc(l.disclaimerText)}</div>
+${overviewHtml}
 </body>
 </html>`
 }

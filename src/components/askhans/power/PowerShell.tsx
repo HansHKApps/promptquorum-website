@@ -91,6 +91,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const [status, setStatus] = useState<string | undefined>()
   const [error, setError] = useState<AskErrorCode | null>(null)
   const [runStamp, setRunStamp] = useState('')
+  const [overview, setOverview] = useState<ReportDoc['overview']>(undefined)
   // Date and running number of this report's file name; one per report, shared by every download format
   const [fileId, setFileId] = useState<{ date: string; seq: number | null } | null>(null)
   const abortRef = useRef<AbortController | null>(null)
@@ -207,6 +208,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       const ctl = new AbortController()
       abortRef.current = ctl
       setText('')
+      setOverview(undefined)
       setError(null)
       // Stage 1: memory estimate (the server computes FACTS first); after a few seconds, if no directory lookup
       // has started yet, the model is composing: stage 3. Tool events switch to stage 2 in between.
@@ -228,6 +230,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             setStatus(undefined)
           } else if (ev.t === 'tool') setStatus(tx.run.tool)
           else if (ev.t === 'done') {
+            setOverview(ev.overview)
             if (!acc.trim()) setError('failed')
             else {
               if (process === 'audit') setAuditReport(acc)
@@ -345,6 +348,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       ]),
       inputs: inputLines(reportProcess),
       body: text,
+      overview,
       references: [
         { label: tx.doc.refDirectory, url: `${SITE}${localizeAskPath('/directory', lang)}${directoryQuery(reportProcess, choices)}` },
         { label: tx.doc.refHardwareTool, url: `${SITE}${localizeAskPath('/tools/what-can-i-run', lang)}` },
@@ -361,7 +365,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         disclaimerText: tx.doc.disclaimerText,
       },
     }
-  }, [reportProcess, choices, texts, fileId, tx, runStamp, lang, ac.dir, inputLines, text])
+  }, [reportProcess, choices, texts, fileId, tx, runStamp, lang, ac.dir, inputLines, text, overview])
 
   // ---- rendering --------------------------------------------------------------------------------
   const backLabel = view.k === 'menu' ? tx.menu.back : tx.wizard.back
