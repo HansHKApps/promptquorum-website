@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-en.webp',
@@ -64,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Features', anchor: 'features' },
       { label: 'Models and Hardware', anchor: 'models-hardware' },
       { label: 'Privacy, License and Cost', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Trade-Offs: Benefits vs. Limitations', anchor: 'tradeoffs' },
       { label: 'Sablate vs. Alternatives', anchor: 'vs-alternatives' },
       { label: 'Who Should Use Sablate', anchor: 'who-should-use' },
@@ -90,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Local claim: transcription, offline translation and rendering run on the device; cloud engines are optional and use your own key.',
-          'License and maker: proprietary, published under the brand Sablate; no company name, country or address appears on the pages we read.',
+          'License and maker: proprietary, made by FuumiSoft, a small independent studio in Turkey, per the developer (the website does not yet say so; not independently verified).',
           'Price: free for videos up to 10 minutes, Pro for $29 once or $5.99 a month, with a 30-day refund on the one-time license.',
           'Maintenance: version 1.0.2 was released on 19 October 2026, so the project is actively updated, but it launched only on 1 September 2026.',
           'Gaps: no speaker labels, no Linux or mobile version, and no usage-statistics opt-out was found.',
@@ -157,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Sablate Is',
         content: [
           '**Sablate is a subtitle workflow for files already on your disk, not a live-captioning or dictation tool.** You add a video or audio file; the app transcribes it with Whisper, lets you add translation layers on top, offers an editor for timing and text, applies a caption style and exports the result.',
-          'The only maker name on the site is the brand Sablate, with no company, country or address on the pages we read. The pages say it does not download from YouTube, dub, clone voices, auto-clip or label speakers.',
+          'Per the developer, Furkan Bağcı, Sablate is made by FuumiSoft, a small independent software studio in Turkey that also makes File Arbor and Vidray; the website does not yet state this, and PromptQuorum has not verified it independently. The pages say it does not download from YouTube, dub, clone voices, auto-clip or label speakers.',
           'This review draws on the website, changelog, documentation, privacy policy and terms. It involved no hands-on testing, so accuracy, speed and stability are not rated here.',
         ],
       },
@@ -205,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'Models and Hardware',
         content: [
-          '**The app runs Whisper through faster-whisper, with four tiers.** The documentation names Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1.62 GB) and Best (large-v3, 3.09 GB); the download page gives a range of 75 MB to 2.9 GB. Free includes Fast and Balanced, and Pro adds Accurate and Best.',
+          '**The app runs Whisper through faster-whisper, with four tiers.** The documentation names Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1.62 GB) and Best (large-v3, 3.09 GB); the download page gives a range of 75 MB to 2.9 GB. Per the developer, both describe the same files: the documentation counts in decimal units and the download page in binary units. Free includes Fast and Balanced, and Pro adds Accurate and Best.',
           'An NVIDIA GPU is used automatically and its CUDA runtime downloads on first use; without one the app runs on the CPU, and on macOS it runs on the CPU. The site gives no RAM or GPU minimum. The Windows install takes about 1.3 GB of disk. The site claims a GPU makes transcription roughly 5 to 10 times faster; PromptQuorum did not measure speed or accuracy.',
         ],
       },
@@ -217,6 +218,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The network is still used elsewhere. The documentation lists an update check every few hours, a license check about once a day on Pro, anonymous usage statistics and an optional feature-suggestion form. The statistics go to PostHog in the EU and, per the policy, include the app version, system, processor type, plan and whether a GPU exists, but never audio, video, transcripts, file names or keys. The pages we read describe no setting to turn the statistics off. The code is closed and PromptQuorum did not examine network traffic, so these statements are the maker\'s own.',
           'It is a freemium, proprietary product. Free covers videos up to 10 minutes and 3 jobs a month with a credit line or corner mark on exports; Pro costs $29 once or $5.99 a month and is active on one device at a time. The site lists prices in US dollars and does not mention VAT. The one-time license has a 30-day refund; monthly payments are not refunded.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "From the Maker",
+        content: [
+          "Furkan Bağcı, the developer of Sablate at FuumiSoft, read this review and wrote that he checked it against the Sablate pages and found nothing technically wrong. He added who makes the app (now stated above) and explained that the model sizes on the documentation page and the download page describe the same files, in decimal and binary units. The note below is the developer's own words, not PromptQuorum's independent assessment; PromptQuorum has not run the app.",
+          "“Sablate exists to do the whole subtitle job on the computer where the footage already is: Whisper transcription, translation, editing and burn-in in one window, with no upload and no per-minute fee. The app is closed source, so rather than ask people to take 'private' on trust, the documentation lists every outbound call it makes (the update check, the Pro license check, anonymous usage statistics and the optional feedback form), and the privacy policy lists exactly what the statistics contain. Cloud engines are only there for people who bring their own key, and the app says so each time one is picked.”",
+        ],
+        note: "— Furkan Bağcı, FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -343,6 +353,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I try it before paying?',
             a: 'Yes: the free plan has no account or credit card, but it limits video length to 10 minutes and jobs to 3 a month. No separate trial is mentioned.',
           },
+          {
+            q: "Who makes Sablate?",
+            a: "According to its developer, Furkan Bağcı, Sablate is made by FuumiSoft, a small independent software studio in Turkey that also makes File Arbor and Vidray. The Sablate website does not state this clearly yet, and PromptQuorum has not verified it independently.",
+          },
         ],
       },
       verdict: {
@@ -350,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Sablate is a good fit if you want to turn video on a Windows PC or Mac into translated, styled, burned-in captions where, per the maker, the work stays on your own computer, and you accept closed-source software. It has a usable free tier, a one-time Pro price and a recent release.',
-          'The caveats are scope and verifiability: no Linux or mobile version, no speaker labels, closed code, no maker identity on the pages we read, privacy claims that PromptQuorum could not check and a product that is only a couple of months old. Try the free plan on a short clip before you buy.',
+          'The caveats are scope and verifiability: no Linux or mobile version, no speaker labels, closed code, a maker (FuumiSoft, Turkey) that only the developer\'s message names, not the website, privacy claims that PromptQuorum could not check and a product that is only a couple of months old. Try the free plan on a short clip before you buy.',
         ],
       },
       sources: {
@@ -363,6 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Changelog](https://sablate.com/changelog) — version history; version 1.0.2 dated 19 October 2026.',
           '[Privacy policy](https://sablate.com/legal/privacy) — data handling, dated October 2026.',
           '[Terms of use](https://sablate.com/legal/terms) — license, refund and device terms.',
+          "Message from the developer (Furkan Bağcı, 7 November 2026) — maker details, model-size units and the founder note; his own statements, not independently verified.",
         ],
       },
       relatedReading: {
@@ -382,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-de.webp',
@@ -434,6 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funktionen', anchor: 'features' },
       { label: 'Modelle und Hardware', anchor: 'models-hardware' },
       { label: 'Datenschutz, Lizenz und Kosten', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Abwägungen: Vorteile und Einschränkungen', anchor: 'tradeoffs' },
       { label: 'Sablate im Vergleich zu Alternativen', anchor: 'vs-alternatives' },
       { label: 'Für wen Sablate geeignet ist', anchor: 'who-should-use' },
@@ -460,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Lokale Aussage: Transkription, Offline-Übersetzung und Rendering laufen auf dem Gerät; Cloud-Dienste sind optional und nutzen Ihren eigenen Schlüssel.',
-          'Lizenz und Hersteller: proprietär, veröffentlicht unter der Marke Sablate; auf den gelesenen Seiten erscheinen weder Firmenname noch Land oder Adresse.',
+          'Lizenz und Hersteller: proprietär, laut Entwickler von FuumiSoft, einem kleinen unabhängigen Studio in der Türkei (die Website nennt das noch nicht; nicht unabhängig geprüft).',
           'Preis: kostenlos für Videos bis 10 Minuten, Pro für $29 einmalig oder $5.99 im Monat, mit 30 Tagen Erstattungsmöglichkeit auf die Einmal-Lizenz laut Hersteller.',
           'Pflege: Version 1.0.2 erschien am 19. Oktober 2026, das Projekt wird also aktiv aktualisiert, ist aber erst am 1. September 2026 gestartet.',
           'Lücken: keine Sprecherzuordnung, keine Version für Linux oder Mobilgeräte, und es wurde keine Möglichkeit gefunden, die Nutzungsstatistik abzuschalten.',
@@ -527,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Sablate ist',
         content: [
           '**Sablate ist ein Untertitel-Workflow für Dateien, die bereits auf Ihrer Festplatte liegen, kein Werkzeug für Live-Untertitel oder Diktat.** Sie fügen eine Video- oder Audiodatei hinzu; die App transkribiert sie mit Whisper, lässt Sie Übersetzungsebenen darüberlegen, bietet einen Editor für Timing und Text, wendet einen Untertitelstil an und exportiert das Ergebnis.',
-          'Der einzige Herstellername auf der Website ist die Marke Sablate, ohne Firma, Land oder Adresse auf den gelesenen Seiten. Laut diesen Seiten lädt die App nicht von YouTube herunter, synchronisiert keine Stimmen, klont keine Stimmen, schneidet keine Clips automatisch und ordnet keine Sprecher zu.',
+          'Laut dem Entwickler Furkan Bağcı stammt Sablate von FuumiSoft, einem kleinen unabhängigen Softwarestudio in der Türkei, das auch File Arbor und Vidray entwickelt; die Website sagt das bisher nicht, und PromptQuorum hat es nicht unabhängig geprüft. Laut diesen Seiten lädt die App nicht von YouTube herunter, synchronisiert keine Stimmen, klont keine Stimmen, schneidet keine Clips automatisch und ordnet keine Sprecher zu.',
           'Diese Rezension stützt sich auf Website, Änderungsprotokoll, Dokumentation, Datenschutzerklärung und Nutzungsbedingungen. Es gab keinen eigenen Praxistest, daher werden Genauigkeit, Geschwindigkeit und Stabilität hier nicht bewertet.',
         ],
       },
@@ -575,7 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'Modelle und Hardware',
         content: [
-          '**Die App führt Whisper über faster-whisper aus, mit vier Stufen.** Die Dokumentation nennt Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1,62 GB) und Best (large-v3, 3,09 GB); die Download-Seite nennt eine Spanne von 75 MB bis 2,9 GB. Kostenlos enthält Fast und Balanced, Pro ergänzt Accurate und Best.',
+          '**Die App führt Whisper über faster-whisper aus, mit vier Stufen.** Die Dokumentation nennt Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1,62 GB) und Best (large-v3, 3,09 GB); die Download-Seite nennt eine Spanne von 75 MB bis 2,9 GB. Laut Entwickler beschreiben beide dieselben Dateien: Die Dokumentation rechnet in Dezimaleinheiten, die Download-Seite in Binäreinheiten. Kostenlos enthält Fast und Balanced, Pro ergänzt Accurate und Best.',
           'Eine NVIDIA-GPU wird automatisch genutzt, und ihre CUDA-Laufzeit wird beim ersten Einsatz heruntergeladen; ohne GPU läuft die App auf der CPU, und unter macOS läuft sie auf der CPU. Die Website nennt keine Mindestanforderung an RAM oder GPU. Die Windows-Installation belegt etwa 1,3 GB Speicherplatz. Die Website behauptet, eine GPU beschleunige die Transkription um etwa das 5- bis 10-Fache; PromptQuorum hat weder Geschwindigkeit noch Genauigkeit gemessen.',
         ],
       },
@@ -587,6 +603,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das Netzwerk wird dennoch an anderer Stelle genutzt. Die Dokumentation nennt eine Update-Prüfung alle paar Stunden, eine Lizenzprüfung etwa einmal täglich in Pro, anonyme Nutzungsstatistik und ein optionales Formular für Funktionsvorschläge. Die Statistik geht an PostHog in der EU und enthält laut Erklärung die App-Version, das System, den Prozessortyp, den Tarif und ob eine GPU vorhanden ist, aber nie Audio, Video, Transkripte, Dateinamen oder Schlüssel. Die gelesenen Seiten beschreiben keine Einstellung, um die Statistik abzuschalten. Der Code ist geschlossen, und PromptQuorum hat den Netzwerkverkehr nicht untersucht; diese Aussagen stammen also vom Hersteller selbst.',
           'Es ist ein proprietäres Freemium-Produkt. Kostenlos deckt Videos bis 10 Minuten und 3 Aufträge im Monat ab, mit einem Credit-Hinweis oder einer Eckenmarkierung auf den Exporten; Pro kostet $29 einmalig oder $5.99 im Monat und ist jeweils auf einem Gerät aktiv. Die Website nennt Preise in US-Dollar und erwähnt keine Mehrwertsteuer. Für die Einmal-Lizenz gibt es laut Hersteller 30 Tage Erstattung; Monatszahlungen werden nicht erstattet.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "Vom Entwickler",
+        content: [
+          "Furkan Bağcı, Entwickler von Sablate bei FuumiSoft, hat diese Rezension gelesen und geschrieben, er habe sie mit den Sablate-Seiten abgeglichen und nichts technisch Falsches gefunden. Er ergänzte, wer hinter der App steht (jetzt oben genannt), und erklärte, dass die Modellgrößen auf der Dokumentationsseite und der Download-Seite dieselben Dateien beschreiben, einmal in Dezimal-, einmal in Binäreinheiten. Die folgende Notiz sind die eigenen Worte des Entwicklers, keine unabhängige Einschätzung von PromptQuorum; PromptQuorum hat die App nicht ausgeführt.",
+          "„Sablate gibt es, um die ganze Untertitelarbeit auf dem Computer zu erledigen, auf dem das Material bereits liegt: Whisper-Transkription, Übersetzung, Bearbeitung und Einbrennen in einem Fenster, ohne Upload und ohne Gebühr pro Minute. Die App ist Closed Source. Statt die Leute bitten zu müssen, „privat“ einfach zu glauben, listet die Dokumentation jeden ausgehenden Aufruf auf (die Update-Prüfung, die Pro-Lizenzprüfung, anonyme Nutzungsstatistik und das optionale Feedback-Formular), und die Datenschutzerklärung nennt genau, was die Statistik enthält. Cloud-Engines gibt es nur für Menschen, die einen eigenen Schlüssel mitbringen, und die App weist jedes Mal darauf hin, wenn eine ausgewählt wird.“",
+        ],
+        note: "— Furkan Bağcı, FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -713,6 +738,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Kann ich es vor dem Kauf ausprobieren?',
             a: 'Ja: Der kostenlose Tarif braucht kein Konto und keine Kreditkarte, begrenzt aber die Videolänge auf 10 Minuten und die Aufträge auf 3 im Monat. Eine eigene Testphase wird nicht erwähnt.',
           },
+          {
+            q: "Wer steckt hinter Sablate?",
+            a: "Laut seinem Entwickler Furkan Bağcı wird Sablate von FuumiSoft hergestellt, einem kleinen unabhängigen Softwarestudio in der Türkei, das auch File Arbor und Vidray entwickelt. Die Sablate-Website sagt das bisher nicht deutlich, und PromptQuorum hat es nicht unabhängig geprüft.",
+          },
         ],
       },
       verdict: {
@@ -720,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           'Sablate passt, wenn Sie Videos auf einem Windows-PC oder Mac in übersetzte, gestaltete, eingebrannte Untertitel verwandeln möchten, wobei die Arbeit laut Hersteller auf Ihrem eigenen Computer bleibt, und wenn Sie Software mit geschlossenem Quellcode akzeptieren. Es gibt einen nutzbaren kostenlosen Tarif, einen einmaligen Pro-Preis und ein aktuelles Release.',
-          'Die Einschränkungen betreffen Umfang und Überprüfbarkeit: keine Version für Linux oder Mobilgeräte, keine Sprecherzuordnung, geschlossener Code, keine Herstellerangabe auf den gelesenen Seiten, Datenschutzaussagen, die PromptQuorum nicht prüfen konnte, und ein Produkt, das erst wenige Monate alt ist. Testen Sie den kostenlosen Tarif an einem kurzen Clip, bevor Sie kaufen.',
+          'Die Einschränkungen betreffen Umfang und Überprüfbarkeit: keine Version für Linux oder Mobilgeräte, keine Sprecherzuordnung, geschlossener Code, ein Hersteller (FuumiSoft, Türkei), den nur die Nachricht des Entwicklers nennt, nicht die Website, Datenschutzaussagen, die PromptQuorum nicht prüfen konnte, und ein Produkt, das erst wenige Monate alt ist. Testen Sie den kostenlosen Tarif an einem kurzen Clip, bevor Sie kaufen.',
         ],
       },
       sources: {
@@ -733,6 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Änderungsprotokoll](https://sablate.com/changelog) — Versionsverlauf; Version 1.0.2 vom 19. Oktober 2026.',
           '[Datenschutzerklärung](https://sablate.com/legal/privacy) — Umgang mit Daten, datiert auf Oktober 2026.',
           '[Nutzungsbedingungen](https://sablate.com/legal/terms) — Lizenz, Rückgabe und Gerätebedingungen.',
+          "Nachricht des Entwicklers (Furkan Bağcı, 7. November 2026) — Herstellerangaben, Einheiten der Modellgrößen und Entwicklernotiz; seine eigenen Aussagen, nicht unabhängig geprüft.",
         ],
       },
       relatedReading: {
@@ -752,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-fr.webp',
@@ -804,6 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fonctionnalités', anchor: 'features' },
       { label: 'Modèles et matériel', anchor: 'models-hardware' },
       { label: 'Confidentialité, licence et coût', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'Compromis : avantages et limites', anchor: 'tradeoffs' },
       { label: 'Sablate face aux alternatives', anchor: 'vs-alternatives' },
       { label: 'Pour qui Sablate est adapté', anchor: 'who-should-use' },
@@ -830,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           "Affirmation locale : la transcription, la traduction hors ligne et le rendu s'exécutent sur l'appareil ; les moteurs cloud sont facultatifs et utilisent votre propre clé.",
-          "Licence et éditeur : propriétaire, publiée sous la marque Sablate ; aucun nom de société, pays ni adresse n'apparaît sur les pages que nous avons lues.",
+          "Licence et éditeur : propriétaire, édité par FuumiSoft, un petit studio indépendant en Turquie, selon le développeur (le site ne le dit pas encore ; non vérifié de façon indépendante).",
           "Prix : gratuit pour les vidéos jusqu'à 10 minutes, Pro à $29 une fois ou $5.99 par mois, avec un remboursement sous 30 jours sur la licence unique.",
           "Maintenance : la version 1.0.2 est sortie le 19 octobre 2026, le projet est donc mis à jour activement, mais il n'a été lancé que le 1er septembre 2026.",
           "Lacunes : pas d'étiquettes de locuteurs, pas de version Linux ni mobile, et aucune option pour désactiver les statistiques d'usage n'a été trouvée.",
@@ -897,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Ce qu'est Sablate",
         content: [
           "**Sablate est un flux de travail de sous-titrage pour des fichiers déjà présents sur votre disque, pas un outil de sous-titrage en direct ni de dictée.** Vous ajoutez un fichier vidéo ou audio ; l'application le transcrit avec Whisper, vous laisse ajouter des couches de traduction par-dessus, propose un éditeur pour le minutage et le texte, applique un style de sous-titres et exporte le résultat.",
-          "Le seul nom d'éditeur sur le site est la marque Sablate, sans société, pays ni adresse sur les pages que nous avons lues. Les pages indiquent qu'il ne télécharge pas depuis YouTube, ne fait ni doublage, ni clonage de voix, ni découpage automatique, et n'étiquette pas les locuteurs.",
+          "Selon le développeur, Furkan Bağcı, Sablate est édité par FuumiSoft, un petit studio de logiciels indépendant en Turquie qui produit aussi File Arbor et Vidray ; le site ne l'indique pas encore, et PromptQuorum ne l'a pas vérifié de façon indépendante. Les pages indiquent qu'il ne télécharge pas depuis YouTube, ne fait ni doublage, ni clonage de voix, ni découpage automatique, et n'étiquette pas les locuteurs.",
           "Ce test s'appuie sur le site, le journal des modifications, la documentation, la politique de confidentialité et les conditions d'utilisation. Il n'a donné lieu à aucun essai pratique : la précision, la vitesse et la stabilité ne sont donc pas évaluées ici.",
         ],
       },
@@ -945,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'Modèles et matériel',
         content: [
-          "**L'application exécute Whisper via faster-whisper, avec quatre niveaux.** La documentation cite Fast (tiny, 78 Mo), Balanced (small, 486 Mo), Accurate (large-v3-turbo, 1,62 Go) et Best (large-v3, 3,09 Go) ; la page de téléchargement donne une plage de 75 Mo à 2,9 Go. L'offre gratuite inclut Fast et Balanced, et Pro ajoute Accurate et Best.",
+          "**L'application exécute Whisper via faster-whisper, avec quatre niveaux.** La documentation cite Fast (tiny, 78 Mo), Balanced (small, 486 Mo), Accurate (large-v3-turbo, 1,62 Go) et Best (large-v3, 3,09 Go) ; la page de téléchargement donne une plage de 75 Mo à 2,9 Go. Selon le développeur, les deux décrivent les mêmes fichiers : la documentation compte en unités décimales et la page de téléchargement en unités binaires. L'offre gratuite inclut Fast et Balanced, et Pro ajoute Accurate et Best.",
           "Un GPU NVIDIA est utilisé automatiquement et son runtime CUDA se télécharge à la première utilisation ; sans GPU, l'application s'exécute sur le processeur, et sous macOS elle s'exécute sur le processeur. Le site ne donne aucun minimum de RAM ni de GPU. L'installation sous Windows occupe environ 1,3 Go de disque. Le site affirme qu'un GPU rend la transcription environ 5 à 10 fois plus rapide ; PromptQuorum n'a mesuré ni la vitesse ni la précision.",
         ],
       },
@@ -957,6 +988,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Le réseau reste pourtant utilisé ailleurs. La documentation mentionne une vérification de mise à jour toutes les quelques heures, une vérification de licence environ une fois par jour sur Pro, des statistiques d'usage anonymes et un formulaire facultatif de suggestion de fonctions. Les statistiques sont envoyées à PostHog dans l'UE et, selon la politique, comprennent la version de l'application, le système, le type de processeur, la formule et la présence d'un GPU, mais jamais l'audio, la vidéo, les transcriptions, les noms de fichiers ni les clés. Nous n'avons vu, dans les pages lues, aucun réglage pour désactiver les statistiques. Le code est fermé et PromptQuorum n'a pas examiné le trafic réseau : ces déclarations sont celles de l'éditeur.",
           "C'est un produit freemium et propriétaire. L'offre gratuite couvre les vidéos jusqu'à 10 minutes et 3 tâches par mois, avec une mention de crédit ou une marque dans un coin des exports ; Pro coûte $29 une fois ou $5.99 par mois et n'est actif que sur un appareil à la fois. Le site indique les prix en dollars américains et ne mentionne pas la TVA. La licence unique bénéficie d'un remboursement sous 30 jours ; les paiements mensuels ne sont pas remboursés.",
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "Le mot du développeur",
+        content: [
+          "Furkan Bağcı, développeur de Sablate chez FuumiSoft, a lu ce test et écrit l'avoir comparé aux pages de Sablate sans y trouver d'erreur technique. Il a précisé qui édite l'application (désormais indiqué plus haut) et expliqué que les tailles de modèles de la page de documentation et de la page de téléchargement décrivent les mêmes fichiers, en unités décimales et binaires. La note ci-dessous reprend les mots du développeur, pas une évaluation indépendante de PromptQuorum ; PromptQuorum n'a pas exécuté l'application.",
+          "« Sablate existe pour faire tout le travail de sous-titrage sur l'ordinateur où se trouvent déjà les images : transcription Whisper, traduction, édition et incrustation dans une seule fenêtre, sans envoi de fichiers et sans frais à la minute. L'application est à code fermé ; plutôt que de demander aux gens de croire « privé » sur parole, la documentation liste chaque appel sortant qu'elle effectue (la vérification des mises à jour, la vérification de la licence Pro, les statistiques d'usage anonymes et le formulaire de retour facultatif), et la politique de confidentialité indique exactement ce que contiennent les statistiques. Les moteurs cloud ne sont là que pour ceux qui apportent leur propre clé, et l'application le signale à chaque fois qu'on en choisit un. »",
+        ],
+        note: "— Furkan Bağcı, FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1083,6 +1123,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: "Puis-je l'essayer avant de payer ?",
             a: "Oui : l'offre gratuite n'exige ni compte ni carte bancaire, mais elle limite la durée des vidéos à 10 minutes et les tâches à 3 par mois. Aucun essai distinct n'est mentionné.",
           },
+          {
+            q: "Qui édite Sablate ?",
+            a: "Selon son développeur, Furkan Bağcı, Sablate est édité par FuumiSoft, un petit studio de logiciels indépendant en Turquie qui produit aussi File Arbor et Vidray. Le site de Sablate ne l'indique pas encore clairement, et PromptQuorum ne l'a pas vérifié de façon indépendante.",
+          },
         ],
       },
       verdict: {
@@ -1090,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           "Sablate convient si vous voulez transformer une vidéo sur un PC Windows ou un Mac en sous-titres traduits, stylisés et incrustés où, selon l'éditeur, le travail reste sur votre propre ordinateur, et si vous acceptez un logiciel à code fermé. Il propose une offre gratuite utilisable, un prix Pro unique et une version récente.",
-          "Les réserves tiennent à la portée et à la vérifiabilité : pas de version Linux ni mobile, pas d'étiquettes de locuteurs, code fermé, aucune identité d’éditeur sur les pages lues, affirmations de confidentialité que PromptQuorum n'a pas pu vérifier et produit vieux de quelques mois seulement. Essayez l'offre gratuite sur un court extrait avant d'acheter.",
+          "Les réserves tiennent à la portée et à la vérifiabilité : pas de version Linux ni mobile, pas d'étiquettes de locuteurs, code fermé, un éditeur (FuumiSoft, Turquie) que seul le message du développeur nomme, pas le site, affirmations de confidentialité que PromptQuorum n'a pas pu vérifier et produit vieux de quelques mois seulement. Essayez l'offre gratuite sur un court extrait avant d'acheter.",
         ],
       },
       sources: {
@@ -1103,6 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Journal des modifications](https://sablate.com/changelog) — historique des versions ; version 1.0.2 datée du 19 octobre 2026.',
           '[Politique de confidentialité](https://sablate.com/legal/privacy) — traitement des données, datée d\'octobre 2026.',
           "[Conditions d'utilisation](https://sablate.com/legal/terms) — licence, remboursement et conditions relatives aux appareils.",
+          "Message du développeur (Furkan Bağcı, 7 novembre 2026) — informations sur l'éditeur, unités des tailles de modèles et note du développeur ; ses propres déclarations, non vérifiées de façon indépendante.",
         ],
       },
       relatedReading: {
@@ -1122,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-es.webp',
@@ -1174,6 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funciones', anchor: 'features' },
       { label: 'Modelos y hardware', anchor: 'models-hardware' },
       { label: 'Privacidad, licencia y coste', anchor: 'privacy' },
+      { label: 'La palabra del desarrollador', anchor: 'from-the-maker' },
       { label: 'Equilibrio: ventajas y limitaciones', anchor: 'tradeoffs' },
       { label: 'Sablate frente a alternativas', anchor: 'vs-alternatives' },
       { label: 'Quién debería usar Sablate', anchor: 'who-should-use' },
@@ -1200,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Afirmación de uso local: la transcripción, la traducción sin conexión y el renderizado se ejecutan en el dispositivo; los motores en la nube son opcionales y usan tu propia clave.',
-          'Licencia y fabricante: propietaria, publicada bajo la marca Sablate; en las páginas que leímos no aparece nombre de empresa, país ni dirección.',
+          'Licencia y fabricante: propietaria, creada por FuumiSoft, un pequeño estudio independiente en Turquía, según el desarrollador (la web aún no lo dice; no verificado de forma independiente).',
           'Precio: gratis para vídeos de hasta 10 minutos, Pro por $29 una sola vez o $5.99 al mes, con devolución de 30 días en la licencia de pago único.',
           'Mantenimiento: la versión 1.0.2 salió el 19 de octubre de 2026, así que el proyecto se actualiza de forma activa, pero se lanzó apenas el 1 de septiembre de 2026.',
           'Carencias: sin etiquetas de hablante, sin versión para Linux ni móvil, y no se encontró ninguna opción para desactivar las estadísticas de uso.',
@@ -1267,7 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Sablate',
         content: [
           '**Sablate es un flujo de trabajo de subtítulos para archivos que ya tienes en tu disco, no una herramienta de subtitulado en directo ni de dictado.** Añades un archivo de vídeo o audio; la app lo transcribe con Whisper, te deja añadir capas de traducción encima, ofrece un editor para los tiempos y el texto, aplica un estilo de subtítulos y exporta el resultado.',
-          'El único nombre de fabricante que aparece en la web es la marca Sablate, sin empresa, país ni dirección en las páginas que leímos. Las páginas dicen que no descarga de YouTube, ni dobla, ni clona voces, ni recorta clips automáticamente, ni etiqueta hablantes.',
+          'Según el desarrollador, Furkan Bağcı, Sablate lo crea FuumiSoft, un pequeño estudio de software independiente en Turquía que también hace File Arbor y Vidray; la web aún no lo indica y PromptQuorum no lo ha verificado de forma independiente. Las páginas dicen que no descarga de YouTube, ni dobla, ni clona voces, ni recorta clips automáticamente, ni etiqueta hablantes.',
           'Esta reseña se basa en la web, el registro de cambios, la documentación, la política de privacidad y las condiciones. No hubo prueba práctica, así que aquí no se valoran la precisión, la velocidad ni la estabilidad.',
         ],
       },
@@ -1315,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'Modelos y hardware',
         content: [
-          '**La app ejecuta Whisper mediante faster-whisper, con cuatro niveles.** La documentación cita Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1.62 GB) y Best (large-v3, 3.09 GB); la página de descarga da un intervalo de 75 MB a 2.9 GB. El plan gratuito incluye Fast y Balanced, y Pro añade Accurate y Best.',
+          '**La app ejecuta Whisper mediante faster-whisper, con cuatro niveles.** La documentación cita Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1.62 GB) y Best (large-v3, 3.09 GB); la página de descarga da un intervalo de 75 MB a 2.9 GB. Según el desarrollador, ambas describen los mismos archivos: la documentación cuenta en unidades decimales y la página de descarga en unidades binarias. El plan gratuito incluye Fast y Balanced, y Pro añade Accurate y Best.',
           'Una GPU NVIDIA se usa automáticamente y su entorno de ejecución CUDA se descarga la primera vez; sin ella la app funciona con la CPU, y en macOS funciona con la CPU. La web no indica un mínimo de RAM ni de GPU. La instalación en Windows ocupa unos 1.3 GB de disco. La web afirma que una GPU hace la transcripción de 5 a 10 veces más rápida; PromptQuorum no midió la velocidad ni la precisión.',
         ],
       },
@@ -1327,6 +1373,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Internet se sigue usando en otros puntos. La documentación enumera una comprobación de actualizaciones cada pocas horas, una comprobación de licencia aproximadamente una vez al día en Pro, estadísticas de uso anónimas y un formulario opcional para sugerir funciones. Las estadísticas van a PostHog, en la UE, y según la política incluyen la versión de la app, el sistema, el tipo de procesador, el plan y si hay GPU, pero nunca audio, vídeo, transcripciones, nombres de archivo ni claves. Las páginas que leímos no describen ninguna opción para desactivar las estadísticas. El código es cerrado y PromptQuorum no examinó el tráfico de red, así que estas afirmaciones son del propio fabricante.',
           'Es un producto freemium y propietario. El plan gratuito cubre vídeos de hasta 10 minutos y 3 trabajos al mes, con una línea de créditos o una marca en la esquina de las exportaciones; Pro cuesta $29 una sola vez o $5.99 al mes y está activo en un dispositivo a la vez. La web indica los precios en dólares estadounidenses y no menciona el IVA. La licencia de pago único tiene devolución de 30 días; los pagos mensuales no se reembolsan.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "La palabra del desarrollador",
+        content: [
+          "Furkan Bağcı, desarrollador de Sablate en FuumiSoft, leyó esta reseña y escribió que la contrastó con las páginas de Sablate y no encontró nada técnicamente incorrecto. Añadió quién crea la app (ahora indicado arriba) y explicó que los tamaños de modelo de la página de documentación y de la de descarga describen los mismos archivos, en unidades decimales y binarias. La nota siguiente son palabras del propio desarrollador, no una valoración independiente de PromptQuorum; PromptQuorum no ha ejecutado la app.",
+          "«Sablate existe para hacer todo el trabajo de subtitulado en el ordenador donde ya está el material: transcripción con Whisper, traducción, edición e incrustación en una sola ventana, sin subir nada y sin cuota por minuto. La app es de código cerrado, así que, en lugar de pedir que se crea en «privado» por fe, la documentación enumera todas las llamadas salientes que hace (la comprobación de actualizaciones, la comprobación de la licencia Pro, las estadísticas de uso anónimas y el formulario opcional de comentarios), y la política de privacidad detalla exactamente qué contienen las estadísticas. Los motores en la nube solo están para quien aporta su propia clave, y la app lo avisa cada vez que se elige uno.»",
+        ],
+        note: "— Furkan Bağcı, FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1453,6 +1508,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Puedo probarla antes de pagar?',
             a: 'Sí: el plan gratuito no requiere cuenta ni tarjeta de crédito, pero limita la duración del vídeo a 10 minutos y los trabajos a 3 al mes. No se menciona ninguna prueba aparte.',
           },
+          {
+            q: "¿Quién crea Sablate?",
+            a: "Según su desarrollador, Furkan Bağcı, Sablate lo crea FuumiSoft, un pequeño estudio de software independiente en Turquía que también hace File Arbor y Vidray. La web de Sablate aún no lo indica con claridad y PromptQuorum no lo ha verificado de forma independiente.",
+          },
         ],
       },
       verdict: {
@@ -1460,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           'Sablate encaja si quieres convertir vídeo en un PC con Windows o un Mac en subtítulos traducidos, con estilo e incrustados donde, según el fabricante, el trabajo se queda en tu propio ordenador, y aceptas software de código cerrado. Tiene un plan gratuito utilizable, un precio Pro de pago único y una versión reciente.',
-          'Las advertencias son el alcance y la verificabilidad: sin versión para Linux ni móvil, sin etiquetas de hablante, código cerrado, ninguna identidad del fabricante en las páginas leídas, afirmaciones de privacidad que PromptQuorum no pudo comprobar y un producto con solo un par de meses de vida. Prueba el plan gratuito con un clip corto antes de comprar.',
+          'Las advertencias son el alcance y la verificabilidad: sin versión para Linux ni móvil, sin etiquetas de hablante, código cerrado, un fabricante (FuumiSoft, Turquía) que solo nombra el mensaje del desarrollador, no la web, afirmaciones de privacidad que PromptQuorum no pudo comprobar y un producto con solo un par de meses de vida. Prueba el plan gratuito con un clip corto antes de comprar.',
         ],
       },
       sources: {
@@ -1473,6 +1532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Registro de cambios](https://sablate.com/changelog) — historial de versiones; versión 1.0.2 con fecha del 19 de octubre de 2026.',
           '[Política de privacidad](https://sablate.com/legal/privacy) — tratamiento de datos, con fecha de octubre de 2026.',
           '[Condiciones de uso](https://sablate.com/legal/terms) — licencia, devolución y condiciones por dispositivo.',
+          "Mensaje del desarrollador (Furkan Bağcı, 7 de noviembre de 2026) — datos del fabricante, unidades de los tamaños de modelo y nota del desarrollador; son declaraciones suyas, no verificadas de forma independiente.",
         ],
       },
       relatedReading: {
@@ -1492,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-ja.webp',
@@ -1544,6 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '機能', anchor: 'features' },
       { label: 'モデルとハードウェア', anchor: 'models-hardware' },
       { label: 'プライバシー・ライセンス・費用', anchor: 'privacy' },
+      { label: '開発者より', anchor: 'from-the-maker' },
       { label: 'メリットと制限', anchor: 'tradeoffs' },
       { label: 'Sablateと代替ツールの比較', anchor: 'vs-alternatives' },
       { label: 'Sablateが向いている人', anchor: 'who-should-use' },
@@ -1570,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'ローカルの主張：文字起こし、オフライン翻訳、レンダリングは端末内で実行されます。クラウドエンジンは任意で、ご自身のキーを使います。',
-          'ライセンスと開発元：プロプライエタリで、Sablateというブランド名で公開されています。確認したページには、会社名、国、住所の記載がありません。',
+          'ライセンスと開発元：プロプライエタリで、開発者によるとトルコの小規模な独立系スタジオFuumiSoftが開発しています（公式サイトにはまだ記載がなく、独自には確認していません）。',
           '価格：10分までの動画は無料、Proは$29の買い切りまたは月$5.99で、買い切りライセンスには30日間の返金対応があります。',
           'メンテナンス：バージョン1.0.2が2026年10月19日にリリースされており、継続的に更新されていますが、公開は2026年9月1日になったばかりです。',
           '不足点：話者ラベルがなく、Linux版とモバイル版もなく、利用統計のオプトアウトも見つかりませんでした。',
@@ -1643,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sablateとは',
         content: [
           '**Sablateは、すでにディスクにあるファイルのための字幕ワークフローであり、ライブ字幕や音声入力のツールではありません。** 動画または音声ファイルを追加すると、アプリがWhisperで文字起こしし、その上に翻訳レイヤーを追加でき、タイミングとテキストの編集機能、字幕スタイルの適用、書き出しまでを行います。',
-          'サイトに記載されている開発元の名前はブランド名のSablateだけで、確認したページには会社、国、住所の記載がありません。ページには、YouTubeからのダウンロード、吹き替え、音声クローン、自動クリップ、話者ラベルには対応しないと書かれています。',
+          '開発者のFurkan Bağcı氏によると、SablateはトルコのFuumiSoftという小規模な独立系ソフトウェアスタジオが開発しており、同社はFile ArborとVidrayも手がけています。公式サイトにはまだ記載がなく、PromptQuorumも独自には確認していません。ページには、YouTubeからのダウンロード、吹き替え、音声クローン、自動クリップ、話者ラベルには対応しないと書かれています。',
           'このレビューは、公式サイト、変更履歴、ドキュメント、プライバシーポリシー、利用規約に基づいています。実機での検証は行っていないため、精度、速度、安定性は評価していません。',
         ],
       },
@@ -1691,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'モデルとハードウェア',
         content: [
-          '**アプリはfaster-whisper経由でWhisperを実行し、ティアは4種類です。** ドキュメントには、Fast（tiny、78MB）、Balanced（small、486MB）、Accurate（large-v3-turbo、1.62GB）、Best（large-v3、3.09GB）が挙げられており、ダウンロードページでは75MBから2.9GBの範囲とされています。無料版にはFastとBalancedが含まれ、ProでAccurateとBestが加わります。',
+          '**アプリはfaster-whisper経由でWhisperを実行し、ティアは4種類です。** ドキュメントには、Fast（tiny、78MB）、Balanced（small、486MB）、Accurate（large-v3-turbo、1.62GB）、Best（large-v3、3.09GB）が挙げられており、ダウンロードページでは75MBから2.9GBの範囲とされています。開発者によると、どちらも同じファイルを指しており、ドキュメントは10進単位、ダウンロードページは2進単位で表記しています。無料版にはFastとBalancedが含まれ、ProでAccurateとBestが加わります。',
           'NVIDIA GPUは自動的に使われ、CUDAランタイムは初回利用時にダウンロードされます。GPUがない場合はCPUで動作し、macOSではCPUで動作します。サイトにRAMやGPUの最低要件の記載はありません。Windowsのインストールには約1.3GBのディスク容量が必要です。サイトでは、GPUがあると文字起こしが約5〜10倍速くなると主張していますが、PromptQuorumは速度も精度も測定していません。',
         ],
       },
@@ -1703,6 +1764,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'それ以外の場面でもネットワークは使われます。ドキュメントには、数時間ごとのアップデート確認、Proでの約1日1回のライセンス確認、匿名の利用統計、任意の機能提案フォームが挙げられています。統計はEUのPostHogに送られ、ポリシーによると、アプリのバージョン、システム、プロセッサの種類、プラン、GPUの有無が含まれますが、音声、動画、文字起こし結果、ファイル名、キーは含まれません。確認したページには、統計をオフにする設定の記載はありませんでした。コードは非公開で、PromptQuorumはネットワーク通信を調べていないため、これらの記述は開発元自身によるものです。',
           'フリーミアムのプロプライエタリ製品です。無料版は10分までの動画、月3ジョブまでで、書き出しにはクレジット表記または角のマークが付きます。Proは$29の買い切りまたは月$5.99で、同時に有効にできるのは1台です。サイトは価格を米ドルで表示しており、VAT（付加価値税）には触れていません。買い切りライセンスには30日間の返金対応がありますが、月額の支払いは返金されません。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "開発者より",
+        content: [
+          "SablateをFuumiSoftで開発しているFurkan Bağcı氏は、このレビューを読み、Sablateのページと照らし合わせて技術的な誤りは見つからなかったと書いています。氏はアプリの開発元（上記に反映済み）を補足し、ドキュメントとダウンロードページのモデルサイズは同じファイルを10進単位と2進単位で表したものだと説明しました。以下のメモは開発者本人の言葉であり、PromptQuorumの独立した評価ではありません。PromptQuorumはこのアプリを実行していません。",
+          "「Sablateは、素材がすでにあるコンピューター上で字幕作業のすべてを完結させるために作りました。Whisperによる文字起こし、翻訳、編集、焼き込みをひとつのウィンドウで行え、アップロードも分単位の料金も不要です。アプリはクローズドソースなので、「プライベート」を信じてほしいとお願いする代わりに、ドキュメントでアプリが行う外部通信をすべて一覧にしています（アップデート確認、Proライセンス確認、匿名の利用統計、任意のフィードバックフォーム）。プライバシーポリシーには統計の内容が正確に記載されています。クラウドエンジンは自分のキーを持ち込む人のためだけにあり、選ぶたびにアプリがその旨を表示します。」",
+        ],
+        note: "— Furkan Bağcı氏、FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1839,6 +1909,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '購入前に試せますか？',
             a: 'はい。無料プランはアカウントもクレジットカードも不要ですが、動画の長さは10分まで、ジョブは月3回までに制限されます。別枠の体験版についての記載はありません。',
           },
+          {
+            q: "Sablateは誰が作っていますか？",
+            a: "開発者のFurkan Bağcı氏によると、SablateはトルコのFuumiSoftという小規模な独立系ソフトウェアスタジオが開発しており、同社はFile ArborとVidrayも手がけています。Sablateの公式サイトにはまだ明確な記載がなく、PromptQuorumも独自には確認していません。",
+          },
         ],
       },
       verdict: {
@@ -1846,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '結論',
         content: [
           'WindowsまたはMacの動画を、開発元によると作業が自分のコンピューター上にとどまる形で、翻訳済みでスタイル付きの焼き込み字幕にしたく、クローズドソースのソフトを受け入れられる方にSablateは向いています。使いやすい無料版、買い切りのPro価格、最近のリリースがあります。',
-          '注意点は対応範囲と検証可能性です。Linux版とモバイル版がなく、話者ラベルがなく、コードは非公開で、確認したページに開発元の名前の記載はなく、プライバシーの主張はPromptQuorumでは確認できず、製品もまだ公開から数か月です。購入前に、短いクリップで無料プランをお試しください。',
+          '注意点は対応範囲と検証可能性です。Linux版とモバイル版がなく、話者ラベルがなく、コードは非公開で、開発元（トルコのFuumiSoft）は開発者のメッセージにしか書かれておらず公式サイトには載っておらず、プライバシーの主張はPromptQuorumでは確認できず、製品もまだ公開から数か月です。購入前に、短いクリップで無料プランをお試しください。',
         ],
       },
       sources: {
@@ -1859,6 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[変更履歴](https://sablate.com/changelog) — バージョン履歴。バージョン1.0.2は2026年10月19日付。',
           '[プライバシーポリシー](https://sablate.com/legal/privacy) — データの取り扱い。2026年10月付。',
           '[利用規約](https://sablate.com/legal/terms) — ライセンス、返金、デバイスに関する規約。',
+          "開発者からのメッセージ（Furkan Bağcı氏、2026年11月7日）— 開発元の情報、モデルサイズの単位、開発者のメモ。本人の発言であり、独自には確認していません。",
         ],
       },
       relatedReading: {
@@ -1878,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-zh.webp',
@@ -1930,6 +2005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '功能', anchor: 'features' },
       { label: '模型与硬件', anchor: 'models-hardware' },
       { label: '隐私、许可与费用', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '优势与局限', anchor: 'tradeoffs' },
       { label: 'Sablate与替代方案对比', anchor: 'vs-alternatives' },
       { label: '适合使用Sablate的人', anchor: 'who-should-use' },
@@ -1956,7 +2032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '本地说法：转写、离线翻译和渲染都在设备上运行；云端引擎是可选项，使用你自己的密钥。',
-          '许可与开发者：专有软件，以Sablate品牌发布；我们阅读的页面上没有出现公司名称、国家或地址。',
+          '许可与开发者：专有软件，据开发者称由土耳其的独立小型工作室FuumiSoft开发（官网尚未说明；未经独立核实）。',
           '价格：最长10分钟的视频免费，Pro版一次性$29或每月$5.99，一次性许可证提供30天退款。',
           '维护状态：版本1.0.2于2026年10月19日发布，说明项目仍在积极更新，但它直到2026年9月1日才上线。',
           '不足：没有说话人标注，没有Linux或移动版本，也没有找到关闭使用统计的选项。',
@@ -2023,7 +2099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sablate是什么',
         content: [
           '**Sablate是针对硬盘上现有文件的字幕工作流，而不是实时字幕或听写工具。** 你添加视频或音频文件；应用用Whisper转写，让你在其上叠加翻译层，提供时间和文字的编辑器，套用字幕样式并导出结果。',
-          '官网上唯一的开发者名称是Sablate品牌，我们阅读的页面上没有公司、国家或地址。这些页面称它不支持从YouTube下载、配音、克隆声音、自动剪辑或标注说话人。',
+          '据开发者Furkan Bağcı称，Sablate由土耳其的独立小型软件工作室FuumiSoft开发，该工作室还开发File Arbor和Vidray；官网尚未说明这一点，PromptQuorum也未独立核实。这些页面称它不支持从YouTube下载、配音、克隆声音、自动剪辑或标注说话人。',
           '本评测依据官网、更新日志、文档、隐私政策和条款，没有进行实际上手测试，因此这里不对准确度、速度和稳定性做评级。',
         ],
       },
@@ -2071,7 +2147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: '模型与硬件',
         content: [
-          '**应用通过faster-whisper运行Whisper，分四档。** 文档列出Fast（tiny，78 MB）、Balanced（small，486 MB）、Accurate（large-v3-turbo，1.62 GB）和Best（large-v3，3.09 GB）；下载页面给出的范围是75 MB到2.9 GB。免费版包含Fast和Balanced，Pro版增加Accurate和Best。',
+          '**应用通过faster-whisper运行Whisper，分四档。** 文档列出Fast（tiny，78 MB）、Balanced（small，486 MB）、Accurate（large-v3-turbo，1.62 GB）和Best（large-v3，3.09 GB）；下载页面给出的范围是75 MB到2.9 GB。据开发者称，两者指的是同一批文件：文档按十进制单位计算，下载页面按二进制单位计算。免费版包含Fast和Balanced，Pro版增加Accurate和Best。',
           '有NVIDIA GPU时会自动使用，其CUDA运行库在首次使用时下载；没有GPU时应用在CPU上运行，在macOS上也使用CPU运行。官网没有给出内存或GPU的最低要求。Windows安装约占用1.3 GB磁盘空间。官网称GPU可使转写速度提高约5到10倍；PromptQuorum没有测量速度或准确度。',
         ],
       },
@@ -2083,6 +2159,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '网络在其他方面仍会用到。文档列出了每隔几小时一次的更新检查、Pro版大约每天一次的许可证检查、匿名使用统计，以及一个可选的功能建议表单。统计数据发送到欧盟的PostHog，据政策称包含应用版本、系统、处理器类型、方案以及是否有GPU，但绝不包含音频、视频、转写文本、文件名或密钥。我们阅读的页面没有说明如何关闭统计。代码为闭源，PromptQuorum也没有检查网络流量，因此这些说法出自开发者自己。',
           '这是免费增值的专有产品。免费版支持最长10分钟的视频，每月3个任务，导出内容带有署名行或角标；Pro版一次性$29或每月$5.99，同一时间只能在一台设备上启用。官网以美元标价，没有提及增值税。一次性许可证提供30天退款；月付不予退款。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "来自开发者",
+        content: [
+          "FuumiSoft的Sablate开发者Furkan Bağcı阅读了这篇评测，并写道他对照Sablate的页面核对后，没有发现技术上的错误。他补充了应用的开发方（已在上文注明），并说明文档页和下载页上的模型大小指的是同一批文件，只是分别使用十进制和二进制单位。以下备注是开发者本人的话，并非PromptQuorum的独立评估；PromptQuorum没有运行过这款应用。",
+          "“Sablate的初衷，是在素材所在的电脑上完成全部字幕工作：Whisper转写、翻译、编辑和烧录都在一个窗口里完成，无需上传，也没有按分钟计费。这款应用是闭源的，所以我们没有让大家单凭信任去相信“隐私”，而是在文档中列出它发出的每一次对外请求（更新检查、Pro许可检查、匿名使用统计和可选的反馈表单），并在隐私政策中准确列出统计数据包含的内容。云端引擎只提供给自带密钥的用户，每次选用时应用都会明确提示。”",
+        ],
+        note: "— Furkan Bağcı，FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2209,6 +2294,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '付费前可以先试用吗？',
             a: '可以：免费方案无需账户或信用卡，但视频长度限制为10分钟，每月最多3个任务。没有提到单独的试用期。',
           },
+          {
+            q: "Sablate是谁开发的？",
+            a: "据开发者Furkan Bağcı称，Sablate由土耳其的独立小型软件工作室FuumiSoft开发，该工作室还开发File Arbor和Vidray。Sablate官网尚未明确说明这一点，PromptQuorum也未独立核实。",
+          },
         ],
       },
       verdict: {
@@ -2216,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '如果你想把Windows电脑或Mac上的视频变成经过翻译、带样式的压制字幕，并且据开发者称整个过程都留在你自己的电脑上，同时你接受闭源软件，Sablate是个合适的选择。它有可用的免费版、一次性Pro价格和较新的版本。',
-          '需要注意的是适用范围和可验证性：没有Linux或移动版本、没有说话人标注、代码闭源、我们阅读的页面上没有开发者身份信息、PromptQuorum无法核实隐私说法，而且产品只上线了两个月左右。购买前请先用免费方案处理一小段视频。',
+          '需要注意的是适用范围和可验证性：没有Linux或移动版本、没有说话人标注、代码闭源、开发者（土耳其的FuumiSoft）只出现在开发者的来信中而非官网、PromptQuorum无法核实隐私说法，而且产品只上线了两个月左右。购买前请先用免费方案处理一小段视频。',
         ],
       },
       sources: {
@@ -2229,6 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[更新日志](https://sablate.com/changelog) — 版本历史；版本1.0.2的日期为2026年10月19日。',
           '[隐私政策](https://sablate.com/legal/privacy) — 数据处理，日期为2026年10月。',
           '[使用条款](https://sablate.com/legal/terms) — 许可、退款和设备条款。',
+          "开发者来信（Furkan Bağcı，2026年11月7日）——开发方信息、模型大小单位及开发者备注；均为其本人陈述，未经独立核实。",
         ],
       },
       relatedReading: {
@@ -2248,7 +2338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-pt.webp',
@@ -2300,6 +2390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Recursos', anchor: 'features' },
       { label: 'Modelos e hardware', anchor: 'models-hardware' },
       { label: 'Privacidade, licença e custo', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Prós e contras', anchor: 'tradeoffs' },
       { label: 'Sablate e as alternativas', anchor: 'vs-alternatives' },
       { label: 'Para quem o Sablate serve', anchor: 'who-should-use' },
@@ -2326,7 +2417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Afirmação de uso local: transcrição, tradução offline e renderização rodam no aparelho; os mecanismos na nuvem são opcionais e usam a sua própria chave.',
-          'Licença e fabricante: proprietário, publicado sob a marca Sablate; nenhum nome de empresa, país ou endereço aparece nas páginas que lemos.',
+          'Licença e fabricante: proprietário, feito pela FuumiSoft, um pequeno estúdio independente na Turquia, segundo o desenvolvedor (o site ainda não diz isso; não verificado de forma independente).',
           'Preço: grátis para vídeos de até 10 minutos, Pro por $29 únicos ou $5.99 por mês, com reembolso de 30 dias na licença única.',
           'Manutenção: a versão 1.0.2 saiu em 19 de outubro de 2026, então o projeto recebe atualizações ativamente, mas foi lançado apenas em 1º de setembro de 2026.',
           'Lacunas: sem identificação de falantes, sem versão para Linux ou celular, e não encontramos opção para desativar as estatísticas de uso.',
@@ -2393,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Sablate',
         content: [
           '**O Sablate é um fluxo de trabalho de legendas para arquivos que já estão no seu disco, não uma ferramenta de legendas ao vivo nem de ditado.** Você adiciona um arquivo de vídeo ou áudio; o app o transcreve com o Whisper, permite adicionar camadas de tradução por cima, oferece um editor para sincronia e texto, aplica um estilo de legenda e exporta o resultado.',
-          'O único nome de fabricante no site é a marca Sablate, sem empresa, país ou endereço nas páginas que lemos. As páginas dizem que o app não baixa do YouTube, não faz dublagem, não clona vozes, não corta clipes automaticamente nem identifica falantes.',
+          'Segundo o desenvolvedor, Furkan Bağcı, o Sablate é feito pela FuumiSoft, um pequeno estúdio de software independente na Turquia que também faz o File Arbor e o Vidray; o site ainda não informa isso, e o PromptQuorum não verificou de forma independente. As páginas dizem que o app não baixa do YouTube, não faz dublagem, não clona vozes, não corta clipes automaticamente nem identifica falantes.',
           'Esta análise se baseia no site, no changelog, na documentação, na política de privacidade e nos termos. Não houve teste prático, então precisão, velocidade e estabilidade não são avaliadas aqui.',
         ],
       },
@@ -2441,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'Modelos e hardware',
         content: [
-          '**O app executa o Whisper pelo faster-whisper, com quatro níveis.** A documentação cita Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1.62 GB) e Best (large-v3, 3.09 GB); a página de download indica uma faixa de 75 MB a 2.9 GB. O plano grátis inclui Fast e Balanced, e o Pro adiciona Accurate e Best.',
+          '**O app executa o Whisper pelo faster-whisper, com quatro níveis.** A documentação cita Fast (tiny, 78 MB), Balanced (small, 486 MB), Accurate (large-v3-turbo, 1.62 GB) e Best (large-v3, 3.09 GB); a página de download indica uma faixa de 75 MB a 2.9 GB. Segundo o desenvolvedor, ambas descrevem os mesmos arquivos: a documentação conta em unidades decimais e a página de download em unidades binárias. O plano grátis inclui Fast e Balanced, e o Pro adiciona Accurate e Best.',
           'Uma GPU NVIDIA é usada automaticamente e o runtime CUDA dela é baixado no primeiro uso; sem uma, o app roda na CPU, e no macOS ele roda na CPU. O site não informa mínimo de RAM nem de GPU. A instalação no Windows ocupa cerca de 1.3 GB de disco. O site afirma que uma GPU deixa a transcrição de 5 a 10 vezes mais rápida; o PromptQuorum não mediu velocidade nem precisão.',
         ],
       },
@@ -2453,6 +2544,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A rede ainda é usada em outros pontos. A documentação lista uma verificação de atualização a cada poucas horas, uma verificação de licença cerca de uma vez por dia no Pro, estatísticas de uso anônimas e um formulário opcional de sugestão de recursos. As estatísticas vão para o PostHog na UE e, segundo a política, incluem a versão do app, o sistema, o tipo de processador, o plano e se existe uma GPU, mas nunca áudio, vídeo, transcrições, nomes de arquivo nem chaves. As páginas que lemos não descrevem nenhuma opção para desativar as estatísticas. O código é fechado e o PromptQuorum não examinou o tráfego de rede, então essas afirmações são do próprio fabricante.',
           'É um produto freemium e proprietário. O plano grátis cobre vídeos de até 10 minutos e 3 trabalhos por mês, com uma linha de crédito ou marca no canto das exportações; o Pro custa $29 únicos ou $5.99 por mês e fica ativo em um dispositivo por vez. O site lista os preços em dólares americanos e não menciona impostos. A licença única tem reembolso de 30 dias; pagamentos mensais não são reembolsados.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "A palavra do desenvolvedor",
+        content: [
+          "Furkan Bağcı, desenvolvedor do Sablate na FuumiSoft, leu esta análise e escreveu que a comparou com as páginas do Sablate e não encontrou nada tecnicamente errado. Ele acrescentou quem faz o app (agora indicado acima) e explicou que os tamanhos de modelo na página de documentação e na de download descrevem os mesmos arquivos, em unidades decimais e binárias. A nota abaixo são palavras do próprio desenvolvedor, não uma avaliação independente do PromptQuorum; o PromptQuorum não executou o app.",
+          "“O Sablate existe para fazer todo o trabalho de legendas no computador onde o material já está: transcrição com Whisper, tradução, edição e gravação no vídeo em uma única janela, sem upload e sem cobrança por minuto. O app é de código fechado; por isso, em vez de pedir que as pessoas acreditem em “privado” por confiança, a documentação lista todas as chamadas de saída que ele faz (a verificação de atualização, a verificação da licença Pro, as estatísticas de uso anônimas e o formulário opcional de feedback), e a política de privacidade lista exatamente o que as estatísticas contêm. Os mecanismos na nuvem existem só para quem traz a própria chave, e o app avisa isso toda vez que um é escolhido.”",
+        ],
+        note: "— Furkan Bağcı, FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2579,6 +2679,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Posso experimentar antes de pagar?',
             a: 'Sim: o plano grátis não exige conta nem cartão de crédito, mas limita o vídeo a 10 minutos e os trabalhos a 3 por mês. Nenhum teste separado é mencionado.',
           },
+          {
+            q: "Quem faz o Sablate?",
+            a: "Segundo seu desenvolvedor, Furkan Bağcı, o Sablate é feito pela FuumiSoft, um pequeno estúdio de software independente na Turquia que também faz o File Arbor e o Vidray. O site do Sablate ainda não informa isso com clareza, e o PromptQuorum não verificou de forma independente.",
+          },
         ],
       },
       verdict: {
@@ -2586,7 +2690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           'O Sablate serve bem se você quer transformar vídeos de um PC com Windows ou Mac em legendas traduzidas, estilizadas e gravadas no vídeo em que, segundo o fabricante, o trabalho fica no seu próprio computador, e aceita software de código fechado. Ele tem um plano grátis utilizável, um preço Pro único e uma versão recente.',
-          'As ressalvas são o alcance e a verificabilidade: sem versão para Linux ou celular, sem identificação de falantes, código fechado, nenhuma identidade do fabricante nas páginas lidas, afirmações de privacidade que o PromptQuorum não pôde verificar e um produto com apenas alguns meses de vida. Experimente o plano grátis em um clipe curto antes de comprar.',
+          'As ressalvas são o alcance e a verificabilidade: sem versão para Linux ou celular, sem identificação de falantes, código fechado, um fabricante (FuumiSoft, Turquia) que só a mensagem do desenvolvedor cita, não o site, afirmações de privacidade que o PromptQuorum não pôde verificar e um produto com apenas alguns meses de vida. Experimente o plano grátis em um clipe curto antes de comprar.',
         ],
       },
       sources: {
@@ -2599,6 +2703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Changelog](https://sablate.com/changelog) — histórico de versões; versão 1.0.2 de 19 de outubro de 2026.',
           '[Política de privacidade](https://sablate.com/legal/privacy) — tratamento de dados, datada de outubro de 2026.',
           '[Termos de uso](https://sablate.com/legal/terms) — licença, reembolso e termos de dispositivos.',
+          "Mensagem do desenvolvedor (Furkan Bağcı, 7 de novembro de 2026) — dados do fabricante, unidades dos tamanhos de modelo e nota do desenvolvedor; são declarações dele, não verificadas de forma independente.",
         ],
       },
       relatedReading: {
@@ -2618,7 +2723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-ar.webp',
@@ -2670,6 +2775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الميزات', anchor: 'features' },
       { label: 'النماذج والعتاد', anchor: 'models-hardware' },
       { label: 'الخصوصية والترخيص والتكلفة', anchor: 'privacy' },
+      { label: 'من مطوّر التطبيق', anchor: 'from-the-maker' },
       { label: 'المزايا والقيود', anchor: 'tradeoffs' },
       { label: 'Sablate مقابل البدائل', anchor: 'vs-alternatives' },
       { label: 'لمن يناسب Sablate', anchor: 'who-should-use' },
@@ -2696,7 +2802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'الادعاء المحلي: يعمل التفريغ والترجمة دون اتصال والعرض على الجهاز؛ والمحركات السحابية اختيارية وتستخدم مفتاحك الخاص.',
-          'الترخيص والمطوّر: مملوك، ويُنشر تحت العلامة Sablate؛ ولا يظهر اسم شركة ولا بلد ولا عنوان في الصفحات التي قرأناها.',
+          'الترخيص والمطوّر: مملوك، وتصنعه FuumiSoft، وهي استوديو مستقل صغير في تركيا، بحسب المطوّر (لا يذكر الموقع ذلك بعد؛ ولم نتحقق منه بشكل مستقل).',
           'السعر: مجاني للمقاطع حتى 10 دقائق، وPro بسعر $29 لمرة واحدة أو $5.99 شهريًا، مع استرداد خلال 30 يومًا على الترخيص لمرة واحدة.',
           'الصيانة: صدر الإصدار 1.0.2 في 19 أكتوبر 2026، فالمشروع يُحدَّث بنشاط، لكنه أُطلق في 1 سبتمبر 2026 فقط.',
           'الثغرات: لا تمييز للمتحدثين، ولا نسخة لنظام Linux أو للجوال، ولم نجد خيارًا لإيقاف إحصاءات الاستخدام.',
@@ -2763,7 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Sablate',
         content: [
           '**Sablate مسار عمل للترجمات النصية لملفات موجودة أصلًا على قرصك، وليس أداة تعليق مباشر ولا إملاء.** تضيف ملف فيديو أو صوت؛ فيفرّغه التطبيق بنموذج Whisper، ويتيح لك إضافة طبقات ترجمة فوقه، ويوفّر محررًا للتوقيت والنص، ويطبّق نمط الترجمات ويصدّر النتيجة.',
-          'اسم المطوّر الوحيد في الموقع هو العلامة Sablate، دون شركة أو بلد أو عنوان في الصفحات التي قرأناها. وتذكر الصفحات أنه لا ينزّل من YouTube ولا يدبلج ولا يستنسخ الأصوات ولا يقتطع المقاطع تلقائيًا ولا يميّز المتحدثين.',
+          'بحسب المطوّر Furkan Bağcı، يُطوَّر Sablate لدى FuumiSoft، وهي استوديو برمجيات مستقل صغير في تركيا يصنع أيضًا File Arbor وVidray؛ ولا يذكر الموقع ذلك بعد، ولم تتحقق PromptQuorum منه بشكل مستقل. وتذكر الصفحات أنه لا ينزّل من YouTube ولا يدبلج ولا يستنسخ الأصوات ولا يقتطع المقاطع تلقائيًا ولا يميّز المتحدثين.',
           'تعتمد هذه المراجعة على الموقع وسجل التغييرات والوثائق وسياسة الخصوصية والشروط. ولم يُجرَ اختبار عملي، لذا لا تُقيَّم هنا الدقة والسرعة والاستقرار.',
         ],
       },
@@ -2811,7 +2917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: 'النماذج والعتاد',
         content: [
-          '**يشغّل التطبيق Whisper عبر faster-whisper، في أربع فئات.** تذكر الوثائق Fast (tiny، 78 MB) وBalanced (small، 486 MB) وAccurate (large-v3-turbo، 1.62 GB) وBest (large-v3، 3.09 GB)؛ وتعطي صفحة التنزيل نطاقًا من 75 MB إلى 2.9 GB. تشمل الخطة المجانية Fast وBalanced، وتضيف Pro الفئتين Accurate وBest.',
+          '**يشغّل التطبيق Whisper عبر faster-whisper، في أربع فئات.** تذكر الوثائق Fast (tiny، 78 MB) وBalanced (small، 486 MB) وAccurate (large-v3-turbo، 1.62 GB) وBest (large-v3، 3.09 GB)؛ وتعطي صفحة التنزيل نطاقًا من 75 MB إلى 2.9 GB. وبحسب المطوّر، تصفان الملفات نفسها: فالوثائق تحسب بالوحدات العشرية وصفحة التنزيل بالوحدات الثنائية. تشمل الخطة المجانية Fast وBalanced، وتضيف Pro الفئتين Accurate وBest.',
           'تُستخدم بطاقة NVIDIA تلقائيًا وتُنزَّل بيئة CUDA الخاصة بها عند أول استخدام؛ ودونها يعمل التطبيق بالمعالج المركزي، وعلى macOS يعمل بالمعالج المركزي. ولا يذكر الموقع حدًا أدنى للذاكرة أو لبطاقة الرسوميات. ويشغل التثبيت على Windows نحو 1.3 GB من القرص. ويزعم الموقع أن البطاقة تجعل التفريغ أسرع بنحو 5 إلى 10 مرات؛ ولم تقِس PromptQuorum السرعة ولا الدقة.',
         ],
       },
@@ -2823,6 +2929,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ويظل الاتصال بالشبكة مستخدمًا في جوانب أخرى. تذكر الوثائق فحص تحديث كل بضع ساعات، وفحص ترخيص مرة يوميًا تقريبًا في Pro، وإحصاءات استخدام مجهولة ونموذجًا اختياريًا لاقتراح الميزات. وتُرسل الإحصاءات إلى PostHog في الاتحاد الأوروبي وتتضمن، بحسب السياسة، إصدار التطبيق والنظام ونوع المعالج والخطة ووجود بطاقة رسوميات، ولا تتضمن أبدًا الصوت ولا الفيديو ولا النصوص المفرَّغة ولا أسماء الملفات ولا المفاتيح. لا تصف الصفحات التي قرأناها أي إعداد لإيقاف الإحصاءات. الشيفرة مغلقة ولم تفحص PromptQuorum حركة الشبكة، لذا فهذه الأقوال من المطوّر نفسه.',
           'هو منتج مجاني جزئيًا ومملوك. تغطي الخطة المجانية مقاطع حتى 10 دقائق و3 مهام شهريًا مع سطر شكر أو علامة في الزاوية على المخرجات؛ وتكلّف Pro مبلغ $29 لمرة واحدة أو $5.99 شهريًا وتعمل على جهاز واحد في كل مرة. يعرض الموقع الأسعار بالدولار الأمريكي ولا يذكر ضريبة القيمة المضافة. وللترخيص لمرة واحدة استرداد خلال 30 يومًا؛ أما المدفوعات الشهرية فلا تُسترد.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "من مطوّر التطبيق",
+        content: [
+          "قرأ Furkan Bağcı، مطوّر Sablate لدى FuumiSoft، هذه المراجعة وكتب أنه قارنها بصفحات Sablate ولم يجد فيها خطأً تقنيًا. وأضاف من يصنع التطبيق (وقد ورد أعلاه)، وأوضح أن أحجام النماذج في صفحة الوثائق وصفحة التنزيل تصف الملفات نفسها بوحدات عشرية وثنائية. والملاحظة التالية بكلمات المطوّر نفسه، وليست تقييمًا مستقلًا من PromptQuorum؛ ولم تشغّل PromptQuorum التطبيق.",
+          "«وُجد Sablate لإنجاز عمل الترجمة النصية كله على الحاسوب الذي توجد عليه اللقطات أصلًا: نسخ صوتي عبر Whisper وترجمة وتحرير ودمج في نافذة واحدة، دون رفع ودون رسوم عن كل دقيقة. التطبيق مغلق المصدر، ولذلك بدلًا من أن نطلب من الناس تصديق كلمة «خاص» بدافع الثقة، تسرد الوثائق كل اتصال صادر يجريه (فحص التحديثات، وفحص ترخيص Pro، وإحصاءات الاستخدام المجهولة، ونموذج الملاحظات الاختياري)، وتبيّن سياسة الخصوصية بدقة ما تتضمنه الإحصاءات. ولا توجد محركات السحابة إلا لمن يحضر مفتاحه الخاص، ويذكر التطبيق ذلك في كل مرة يُختار فيها أحدها.»",
+        ],
+        note: "— Furkan Bağcı، FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2949,6 +3064,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يمكنني تجربته قبل الدفع؟',
             a: 'نعم: لا تحتاج الخطة المجانية إلى حساب ولا إلى بطاقة ائتمان، لكنها تحدّ طول الفيديو بـ 10 دقائق والمهام بـ 3 شهريًا. ولا تُذكر تجربة منفصلة.',
           },
+          {
+            q: "من يصنع Sablate؟",
+            a: "بحسب مطوّره Furkan Bağcı، يُطوَّر Sablate لدى FuumiSoft، وهي استوديو برمجيات مستقل صغير في تركيا يصنع أيضًا File Arbor وVidray. ولا يذكر موقع Sablate ذلك بوضوح بعد، ولم تتحقق PromptQuorum منه بشكل مستقل.",
+          },
         ],
       },
       verdict: {
@@ -2956,7 +3075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           'يناسب Sablate من يريد تحويل فيديو على حاسوب Windows أو Mac إلى ترجمات مترجمة ومنسّقة ومدمجة يبقى العمل فيها، بحسب المطوّر، على حاسوبه، ويقبل برنامجًا مغلق المصدر. وله خطة مجانية صالحة للاستخدام وسعر Pro لمرة واحدة وإصدار حديث.',
-          'التحفظات تخص النطاق وإمكانية التحقق: لا نسخة لنظام Linux أو للجوال، ولا تمييز للمتحدثين، وشيفرة مغلقة، ولا هوية للمطوّر في الصفحات التي قرأناها، وادعاءات خصوصية لم تتمكن PromptQuorum من فحصها، ومنتج لا يتجاوز عمره بضعة أشهر. جرّب الخطة المجانية على مقطع قصير قبل الشراء.',
+          'التحفظات تخص النطاق وإمكانية التحقق: لا نسخة لنظام Linux أو للجوال، ولا تمييز للمتحدثين، وشيفرة مغلقة، ومطوّر (FuumiSoft في تركيا) لا تذكره إلا رسالة المطوّر لا الموقع، وادعاءات خصوصية لم تتمكن PromptQuorum من فحصها، ومنتج لا يتجاوز عمره بضعة أشهر. جرّب الخطة المجانية على مقطع قصير قبل الشراء.',
         ],
       },
       sources: {
@@ -2969,6 +3088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[سجل التغييرات](https://sablate.com/changelog) — تاريخ الإصدارات؛ الإصدار 1.0.2 بتاريخ 19 أكتوبر 2026.',
           '[سياسة الخصوصية](https://sablate.com/legal/privacy) — التعامل مع البيانات، بتاريخ أكتوبر 2026.',
           '[شروط الاستخدام](https://sablate.com/legal/terms) — شروط الترخيص والاسترداد والأجهزة.',
+          "رسالة من المطوّر (Furkan Bağcı، 7 نوفمبر 2026) — بيانات الجهة المطوّرة ووحدات أحجام النماذج وملاحظة المطوّر؛ وهي أقواله هو، ولم يُتحقق منها بشكل مستقل.",
         ],
       },
       relatedReading: {
@@ -2988,7 +3108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-07',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-ko.webp',
@@ -3040,6 +3160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '기능', anchor: 'features' },
       { label: '모델과 하드웨어', anchor: 'models-hardware' },
       { label: '개인정보 보호, 라이선스, 비용', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '장점과 한계', anchor: 'tradeoffs' },
       { label: 'Sablate와 대안 비교', anchor: 'vs-alternatives' },
       { label: 'Sablate를 쓰면 좋은 사용자', anchor: 'who-should-use' },
@@ -3066,7 +3187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '로컬 주장: 받아쓰기, 오프라인 번역, 렌더링은 기기에서 실행되며, 클라우드 엔진은 선택 사항이고 본인의 키를 사용합니다.',
-          '라이선스와 개발사: 독점 소프트웨어이며 Sablate라는 브랜드로 배포됩니다. 확인한 페이지에는 회사명, 국가, 주소가 나와 있지 않습니다.',
+          '라이선스와 개발사: 독점 소프트웨어이며, 개발자에 따르면 튀르키예의 소규모 독립 스튜디오 FuumiSoft가 만들었습니다(웹사이트에는 아직 명시되지 않았으며 독립적으로 확인하지 않았습니다).',
           '가격: 10분 이하 영상은 무료이고, Pro는 일회성 $29 또는 월 $5.99이며 일회성 라이선스에는 30일 환불이 있습니다.',
           '유지보수: 버전 1.0.2가 2026년 10월 19일에 출시되어 프로젝트가 활발히 업데이트되고 있지만, 2026년 9월 1일에 처음 공개된 제품입니다.',
           '공백: 화자 구분이 없고, Linux나 모바일 버전이 없으며, 사용 통계를 끄는 옵션도 찾지 못했습니다.',
@@ -3133,7 +3254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sablate란',
         content: [
           '**Sablate는 이미 디스크에 있는 파일을 위한 자막 작업 도구이며, 실시간 자막이나 받아쓰기 도구가 아닙니다.** 동영상이나 오디오 파일을 추가하면 앱이 Whisper로 전사하고, 그 위에 번역 레이어를 추가할 수 있으며, 타이밍과 텍스트를 편집하는 편집기를 제공하고, 자막 스타일을 적용해 결과를 내보냅니다.',
-          '사이트에 나오는 개발사 이름은 Sablate라는 브랜드뿐이며, 확인한 페이지에는 회사, 국가, 주소가 없습니다. 페이지에는 YouTube 다운로드, 더빙, 음성 복제, 자동 클립 생성, 화자 구분은 하지 않는다고 적혀 있습니다.',
+          '개발자 Furkan Bağcı에 따르면 Sablate는 튀르키예의 소규모 독립 소프트웨어 스튜디오 FuumiSoft가 만들며, 이 스튜디오는 File Arbor와 Vidray도 만듭니다. 웹사이트에는 아직 이 내용이 없고, PromptQuorum도 독립적으로 확인하지 않았습니다. 페이지에는 YouTube 다운로드, 더빙, 음성 복제, 자동 클립 생성, 화자 구분은 하지 않는다고 적혀 있습니다.',
           '이 리뷰는 웹사이트, 변경 내역, 문서, 개인정보 처리방침, 이용 약관에 근거합니다. 직접 사용해 본 테스트는 하지 않았으므로 정확도, 속도, 안정성은 평가하지 않습니다.',
         ],
       },
@@ -3181,7 +3302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-hardware',
         title: '모델과 하드웨어',
         content: [
-          '**앱은 faster-whisper를 통해 Whisper를 실행하며 등급은 4종입니다.** 문서에는 Fast(tiny, 78 MB), Balanced(small, 486 MB), Accurate(large-v3-turbo, 1.62 GB), Best(large-v3, 3.09 GB)가 나오며, 다운로드 페이지는 75 MB에서 2.9 GB까지의 범위로 안내합니다. 무료에는 Fast와 Balanced가 포함되고, Pro에서 Accurate와 Best가 추가됩니다.',
+          '**앱은 faster-whisper를 통해 Whisper를 실행하며 등급은 4종입니다.** 문서에는 Fast(tiny, 78 MB), Balanced(small, 486 MB), Accurate(large-v3-turbo, 1.62 GB), Best(large-v3, 3.09 GB)가 나오며, 다운로드 페이지는 75 MB에서 2.9 GB까지의 범위로 안내합니다. 개발자에 따르면 둘 다 같은 파일을 가리키며, 문서는 10진 단위로, 다운로드 페이지는 2진 단위로 표기한 것입니다. 무료에는 Fast와 Balanced가 포함되고, Pro에서 Accurate와 Best가 추가됩니다.',
           'NVIDIA GPU가 있으면 자동으로 사용하며 CUDA 런타임은 처음 사용할 때 내려받습니다. GPU가 없으면 앱은 CPU에서 실행되고, macOS에서도 CPU에서 실행됩니다. 사이트에는 RAM이나 GPU 최소 사양이 나와 있지 않습니다. Windows 설치에는 디스크 약 1.3 GB가 필요합니다. 사이트는 GPU를 쓰면 받아쓰기가 대략 5배에서 10배 빨라진다고 주장하지만, PromptQuorum은 속도나 정확도를 측정하지 않았습니다.',
         ],
       },
@@ -3193,6 +3314,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '다른 부분에서는 여전히 네트워크가 사용됩니다. 문서에는 몇 시간마다 하는 업데이트 확인, Pro에서 하루 한 번 정도 하는 라이선스 확인, 익명 사용 통계, 선택형 기능 제안 양식이 나와 있습니다. 통계는 EU에 있는 PostHog로 전송되며, 방침에 따르면 앱 버전, 시스템, 프로세서 종류, 플랜, GPU 유무를 포함하지만 오디오, 영상, 전사본, 파일 이름, 키는 포함하지 않습니다. 확인한 페이지에는 통계를 끄는 설정에 대한 설명이 없습니다. 코드는 비공개이고 PromptQuorum은 네트워크 트래픽을 조사하지 않았으므로, 이런 진술은 개발사 자체의 설명입니다.',
           '부분 유료(프리미엄 모델)의 독점 제품입니다. 무료 플랜은 10분 이하 영상과 월 3건의 작업까지이며 내보낸 결과물에 크레딧 문구나 모서리 표시가 들어갑니다. Pro는 일회성 $29 또는 월 $5.99이며 한 번에 한 기기에서만 활성화됩니다. 사이트는 가격을 미국 달러로 표시하며 VAT는 언급하지 않습니다. 일회성 라이선스에는 30일 환불이 있고, 월 결제는 환불되지 않습니다.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "개발자의 말",
+        content: [
+          "FuumiSoft에서 Sablate를 개발하는 Furkan Bağcı는 이 리뷰를 읽고 Sablate 페이지와 대조해 보았으며 기술적으로 틀린 점을 찾지 못했다고 썼습니다. 그는 앱을 만드는 곳(위에 반영됨)을 알려 주었고, 문서 페이지와 다운로드 페이지의 모델 크기는 같은 파일을 각각 10진 단위와 2진 단위로 표기한 것이라고 설명했습니다. 아래 글은 개발자 본인의 말이며 PromptQuorum의 독립적인 평가가 아닙니다. PromptQuorum은 이 앱을 실행해 보지 않았습니다.",
+          "“Sablate는 영상 소스가 이미 있는 컴퓨터에서 자막 작업 전체를 끝내기 위해 만들었습니다. Whisper 전사, 번역, 편집, 번인을 한 창에서 처리하며 업로드도, 분당 요금도 없습니다. 앱은 비공개 소스이므로 '비공개'를 믿어 달라고 부탁하는 대신, 문서에 앱이 보내는 모든 외부 호출(업데이트 확인, Pro 라이선스 확인, 익명 사용 통계, 선택 사항인 피드백 양식)을 나열했고, 개인정보 처리방침에는 통계에 무엇이 들어 있는지 정확히 적었습니다. 클라우드 엔진은 자신의 키를 가져오는 사용자를 위한 것일 뿐이며, 하나를 고를 때마다 앱이 그 사실을 알려 줍니다.”",
+        ],
+        note: "— Furkan Bağcı, FuumiSoft",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3319,6 +3449,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '결제 전에 사용해 볼 수 있습니까?',
             a: '네, 무료 플랜은 계정이나 신용카드가 필요 없지만 영상 길이는 10분, 작업은 월 3건으로 제한됩니다. 별도의 체험판은 언급되어 있지 않습니다.',
           },
+          {
+            q: "Sablate는 누가 만드나요?",
+            a: "개발자 Furkan Bağcı에 따르면 Sablate는 튀르키예의 소규모 독립 소프트웨어 스튜디오 FuumiSoft가 만들며, 이 스튜디오는 File Arbor와 Vidray도 만듭니다. Sablate 웹사이트에는 아직 이 내용이 분명히 나와 있지 않으며, PromptQuorum도 독립적으로 확인하지 않았습니다.",
+          },
         ],
       },
       verdict: {
@@ -3326,7 +3460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           'Windows PC나 Mac의 영상을 번역되고 스타일이 적용된 번인 자막으로 만들고 싶고, 개발사에 따르면 작업이 사용자의 컴퓨터 안에서 이루어지며, 비공개 소스 소프트웨어를 받아들일 수 있다면 Sablate가 잘 맞습니다. 쓸 만한 무료 플랜, 일회성 Pro 가격, 최근 릴리스가 있습니다.',
-          '주의할 점은 범위와 검증 가능성입니다. Linux나 모바일 버전이 없고, 화자 구분이 없으며, 코드가 비공개이고, 확인한 페이지에 개발사 정보가 없으며, PromptQuorum이 확인하지 못한 개인정보 보호 주장이 있고, 출시된 지 두어 달밖에 안 된 제품입니다. 구매 전에 짧은 영상 하나로 무료 플랜을 써 보십시오.',
+          '주의할 점은 범위와 검증 가능성입니다. Linux나 모바일 버전이 없고, 화자 구분이 없으며, 코드가 비공개이고, 개발사(튀르키예의 FuumiSoft)는 개발자의 메시지에만 나오고 웹사이트에는 없으며, PromptQuorum이 확인하지 못한 개인정보 보호 주장이 있고, 출시된 지 두어 달밖에 안 된 제품입니다. 구매 전에 짧은 영상 하나로 무료 플랜을 써 보십시오.',
         ],
       },
       sources: {
@@ -3339,6 +3473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[변경 내역](https://sablate.com/changelog) — 버전 기록, 버전 1.0.2의 날짜는 2026년 10월 19일.',
           '[개인정보 처리방침](https://sablate.com/legal/privacy) — 데이터 처리, 날짜는 2026년 10월.',
           '[이용 약관](https://sablate.com/legal/terms) — 라이선스, 환불, 기기 관련 약관.',
+          "개발자의 메시지(Furkan Bağcı, 2026년 11월 7일) — 개발사 정보, 모델 크기 단위, 개발자 메모. 본인의 진술이며 독립적으로 확인하지 않았습니다.",
         ],
       },
       relatedReading: {
