@@ -1,5 +1,7 @@
 // Ask Hans Power Mode — shared types (browser + server, so keep this file free of server-only imports).
 
+import type { Currency } from './currency'
+
 export const PROCESS_IDS = ['max', 'audit', 'hardware', 'solution', 'mobile', 'implement'] as const
 export type ProcessId = (typeof PROCESS_IDS)[number]
 
@@ -42,6 +44,8 @@ export interface SolutionAnswers {
   hardware?: HardwareAnswers
   mobile?: MobileAnswers
   choices: Record<string, string[]>
+  /** The visitor's own currency for the money steps (budget, monthly spend); chosen in a select box, never guessed. */
+  currency?: Currency
   note?: string
   /** Free-text fields by step id (audit: setup and problems descriptions; implement: the chosen recommendation). */
   texts?: Record<string, string>
@@ -65,6 +69,8 @@ export interface StepDef {
   optional?: boolean
   /** Single/multi step: also show an optional free-text box; the text is stored in SolutionAnswers.texts[id]. */
   textField?: boolean
+  /** Single step with money ranges (budget, monthly spend): show the currency select box above the options. */
+  money?: boolean
   /** Hardware step: also ask for the processor / Apple chip (optional free text). */
   askCpu?: boolean
 }

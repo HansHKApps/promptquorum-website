@@ -2,6 +2,7 @@
 // its labels to the copy dictionaries and its report brief to prompt.ts. The questions are deterministic
 // forms (no AI involved); the AI only writes the final report.
 
+import { isCurrency } from './currency'
 import { isProcessId, type ProcessDef, type ProcessId, type SolutionAnswers, type StepDef } from './types'
 
 export const MAX_NOTE_CHARS = 300
@@ -14,7 +15,7 @@ export const MAX_TEXT_CHARS = 300
 const AUDIT_STEPS: readonly StepDef[] = [
   { id: 'auditSetup', kind: 'multi', exclusive: ['s-none'], textField: true, options: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud', 's-local', 's-embedded', 's-none'] },
   // Only asked when a paid-looking cloud service is in the setup; needed for an honest savings estimate.
-  { id: 'auditSpend', kind: 'multi', exclusive: ['m-unknown'], options: ['m-none', 'm-1', 'm-2', 'm-3', 'm-4', 'm-unknown'], showIf: { step: 'auditSetup', includes: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud'] } },
+  { id: 'auditSpend', kind: 'multi', money: true, exclusive: ['m-unknown'], options: ['m-none', 'm-1', 'm-2', 'm-3', 'm-4', 'm-unknown'], showIf: { step: 'auditSetup', includes: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud'] } },
   { id: 'hardware', kind: 'hardware', askCpu: true },
   { id: 'auditUses', kind: 'multi', options: ['u-write', 'u-code', 'u-image', 'u-video', 'u-audio', 'u-office', 'u-data', 'u-pkm', 'u-auto', 'u-other'] },
   { id: 'auditProblems', kind: 'multi', exclusive: ['p-satisfied'], textField: true, options: ['p-cost', 'p-toomany', 'p-which', 'p-privacy', 'p-slow', 'p-offline', 'p-automate', 'p-control', 'p-satisfied'] },
@@ -30,7 +31,7 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     icon: 'Compass',
     steps: [
       { id: 'hardware', kind: 'hardware', allowNone: true },
-      { id: 'goals', kind: 'multi', options: GOALS },
+      { id: 'goals', kind: 'multi', textField: true, options: GOALS },
       { id: 'connectivity', kind: 'single', options: ['offline', 'online-ok'] },
       { id: 'price', kind: 'single', options: ['free-only', 'paid-ok'] },
       { id: 'experience', kind: 'multi', options: ['beginner', 'intermediate', 'advanced'] },
@@ -43,8 +44,8 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     icon: 'Cpu',
     steps: [
       { id: 'hardware', kind: 'hardware', allowNone: true },
-      { id: 'goals', kind: 'multi', options: GOALS },
-      { id: 'budget', kind: 'multi', options: ['b1', 'b2', 'b3', 'b4'] },
+      { id: 'goals', kind: 'multi', textField: true, options: GOALS },
+      { id: 'budget', kind: 'multi', money: true, options: ['b1', 'b2', 'b3', 'b4'] },
       { id: 'usage', kind: 'multi', options: ['dedicated', 'shared'] },
       { id: 'parallel', kind: 'multi', options: ['one', 'few', 'many'] },
       { id: 'note', kind: 'note' },
@@ -54,7 +55,7 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     id: 'solution',
     icon: 'Workflow',
     steps: [
-      { id: 'goal', kind: 'multi', options: ['video', 'image', 'voice', 'music', 'coding', 'docs', 'chat', 'translate'] },
+      { id: 'goal', kind: 'multi', textField: true, options: ['video', 'image', 'voice', 'music', 'coding', 'docs', 'chat', 'translate'] },
       { id: 'videoType', kind: 'multi', options: ['text-to-video', 'image-to-video', 'video-edit', 'video-upscale'], showIf: { step: 'goal', includes: ['video'] } },
       { id: 'videoLength', kind: 'multi', options: ['clips', 'minute', 'long'], showIf: { step: 'goal', includes: ['video'] } },
       { id: 'imageType', kind: 'multi', options: ['text-to-image', 'edit', 'upscale', 'characters'], showIf: { step: 'goal', includes: ['image'] } },
@@ -75,7 +76,7 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     icon: 'Monitor',
     steps: [
       { id: 'mobile', kind: 'mobile' },
-      { id: 'mobileGoals', kind: 'multi', options: ['chat', 'voice', 'camera', 'translate', 'notes', 'image', 'transcribe'] },
+      { id: 'mobileGoals', kind: 'multi', textField: true, options: ['chat', 'voice', 'camera', 'translate', 'notes', 'image', 'transcribe'] },
       { id: 'connectivity', kind: 'single', options: ['offline', 'online-ok'] },
       { id: 'price', kind: 'single', options: ['free-only', 'paid-ok'] },
       { id: 'note', kind: 'note' },
@@ -98,7 +99,7 @@ const num = (v: unknown, max: number): v is number | null => v === null || (type
  */
 export function parseAnswers(process: unknown, raw: unknown): SolutionAnswers | null {
   if (!isProcessId(process) || !raw || typeof raw !== 'object') return null
-  const r = raw as { hardware?: unknown; mobile?: unknown; choices?: unknown; note?: unknown; texts?: unknown }
+  const r = raw as { hardware?: unknown; mobile?: unknown; choices?: unknown; note?: unknown; texts?: unknown; currency?: unknown }
   const def = PROCESSES[process]
   const out: SolutionAnswers = { choices: {} }
 
@@ -114,17 +115,19 @@ export function parseAnswers(process: unknown, raw: unknown): SolutionAnswers | 
     if (ids.length) out.choices[step.id] = ids
   }
 
+  // Free text per step (audit descriptions, own goals, the chosen recommendation): short, one line, never trusted as instructions.
+  const texts = r.texts && typeof r.texts === 'object' ? (r.texts as Record<string, unknown>) : {}
+  const cleanText = (id: string) => (typeof texts[id] === 'string' ? (texts[id] as string).replace(/[\r\n]+/g, ' ').trim().slice(0, MAX_TEXT_CHARS) : '')
+
   for (const step of visibleSteps(process, out)) {
     if (step.kind === 'single' && !out.choices[step.id]) return null
-    if (step.kind === 'multi' && !step.optional && !out.choices[step.id]) return null
+    // A multi step with its own text box is also satisfied by the visitor's own words alone.
+    if (step.kind === 'multi' && !step.optional && !out.choices[step.id] && !(step.textField && cleanText(step.id))) return null
   }
 
-  // Free text per step (audit descriptions, the chosen recommendation): short, one line, never trusted as instructions.
-  const texts = r.texts && typeof r.texts === 'object' ? (r.texts as Record<string, unknown>) : {}
   for (const step of visibleSteps(process, out)) {
     if (step.kind !== 'text' && !step.textField) continue
-    const raw = texts[step.id]
-    const clean = typeof raw === 'string' ? raw.replace(/[\r\n]+/g, ' ').trim().slice(0, MAX_TEXT_CHARS) : ''
+    const clean = cleanText(step.id)
     if (step.kind === 'text' && !step.optional && !clean) return null
     if (clean) (out.texts ??= {})[step.id] = clean
   }
@@ -156,6 +159,8 @@ export function parseAnswers(process: unknown, raw: unknown): SolutionAnswers | 
     out.mobile = { platform: m.platform, model, ramGb: m.ramGb, storageGb: m.storageGb }
   }
 
+  // The currency only matters when a money step is part of the run; an unknown code is dropped, not trusted.
+  if (isCurrency(r.currency) && visibleSteps(process, out).some((s) => s.money)) out.currency = r.currency
   if (typeof r.note === 'string' && r.note.trim()) out.note = r.note.replace(/[\r\n]+/g, ' ').trim().slice(0, MAX_NOTE_CHARS)
   return out
 }

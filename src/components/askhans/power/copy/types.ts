@@ -26,7 +26,19 @@ export interface PowerCopy {
     /** Shown under every multi-select question. */
     multiHint: string
     notePlaceholder: string
+    /** placeholder of the optional own-words box under the goal questions */
+    ownText: string
+    /** currency select box on the money steps */
+    currencyLabel: string
+    currencyHint: string
     privacy: string
+  }
+  /** how a money range reads; amounts are formatted by Intl in the visitor's currency */
+  range: {
+    upTo: (a: string) => string
+    between: (a: string, b: string) => string
+    over: (a: string) => string
+    perMonth: (r: string) => string
   }
   steps: Record<string, PowerStepCopy>
   /** option id → label (ids are shared across steps; the same id always has the same label) */
@@ -101,8 +113,16 @@ export interface PowerCopy {
     howHeading: string
     howText: string
     referencesHeading: string
+    /** short banner: made automatically, no human review */
+    autoNoticeHeading: string
+    autoNotice: string
     disclaimerHeading: string
+    /** lead paragraph of the legal notice */
     disclaimerText: string
+    /** the points of the legal notice */
+    disclaimerPoints: string[]
+    /** link text pointing to the Ask Hans page */
+    createOwn: string
     refDirectory: string
     refHardwareTool: string
     refAskHans: string

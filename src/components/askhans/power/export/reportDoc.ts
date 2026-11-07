@@ -23,9 +23,20 @@ export interface ReportLabels {
   howText: string
   /** "More on PromptQuorum" */
   referencesHeading: string
-  /** "Notice" */
+  /** "Automatically generated" */
+  autoNoticeHeading: string
+  /** "made by an AI system, no human has reviewed it" */
+  autoNotice: string
+  /** "Legal notice and disclaimer" */
   disclaimerHeading: string
+  /** lead paragraph of the legal notice */
   disclaimerText: string
+  /** the numbered points of the legal notice */
+  disclaimerPoints: string[]
+  /** link text to the Ask Hans page, e.g. "Create your own report with Ask Hans" */
+  createOwn: string
+  /** the product name as a link label ("Ask Hans") */
+  askHansName: string
 }
 
 export interface ReportReference {
@@ -48,6 +59,10 @@ export interface ReportDoc {
   references: ReportReference[]
   /** closing overview block; absent when the server could not provide it */
   overview?: ReportOverview
+  /** absolute URL of the Ask Hans page (in the report language) */
+  askHansUrl: string
+  /** absolute URL of the site root */
+  siteUrl: string
   /** file name without extension (date, number, topic); see fileName.ts */
   fileBase?: string
   labels: ReportLabels
@@ -65,6 +80,10 @@ export function buildMarkdown(doc: ReportDoc): string {
     `# ${doc.title}`,
     '',
     `*${doc.processLabel} · ${l.dateLabel}: ${doc.dateText} · ${l.generatedBy}*`,
+    '',
+    `[${l.createOwn}](${doc.askHansUrl}) · [promptquorum.com](${doc.siteUrl})`,
+    '',
+    `**${l.autoNoticeHeading}.** ${l.autoNotice}`,
     '',
     `## ${l.inputsHeading}`,
     '',
@@ -84,7 +103,12 @@ export function buildMarkdown(doc: ReportDoc): string {
     '',
     l.disclaimerText,
     '',
+    ...l.disclaimerPoints.map((x, i) => `${i + 1}. ${x}`),
+    '',
     ...overviewMarkdown(doc.overview),
+    '',
+    `[${l.createOwn}](${doc.askHansUrl}) · [promptquorum.com](${doc.siteUrl})`,
+    '',
   ].join('\n')
 }
 
@@ -93,4 +117,21 @@ export function fileStem(doc: ReportDoc): string {
   if (doc.fileBase) return doc.fileBase
   const base = `promptquorum-${doc.processLabel}`.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '')
   return base || 'promptquorum-report'
+}
+
+/** PromptQuorum colours (tailwind.config.js: primary, secondary, tertiary, surface, text). */
+export const BRAND = {
+  primary: '#6750A4',
+  light: '#E8DEF8',
+  surface: '#F7F2FA',
+  rose: '#7D5260',
+  roseLight: '#F6E9EE',
+  text: '#1C1B1F',
+  muted: '#49454F',
+} as const
+
+/** The PromptQuorum mark (four bars) as SVG text; `fill` lets the header use white on violet. */
+export function logoSvg(size: number, fill: string): string {
+  const bar = (x: number, o: number) => `<rect x="${x}" y="14" width="8" height="36" rx="1" fill="${fill}" opacity="${o}"/>`
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="${size}" height="${size}" role="img" aria-label="PromptQuorum">${bar(10, 1)}${bar(22, 0.75)}${bar(34, 0.5)}${bar(46, 0.3)}</svg>`
 }
