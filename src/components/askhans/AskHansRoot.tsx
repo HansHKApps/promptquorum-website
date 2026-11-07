@@ -143,7 +143,11 @@ export function AskHansRoot() {
     // The first run after loading only records the restored state; later closed→open changes are real opens
     // (anonymous counter, no visitor ID).
     if (!ready) return
-    if (wasOpen.current === false && ui.open && consentRef.current?.value === 'yes') logEvent({ type: 'open' })
+    if (wasOpen.current === false && ui.open) {
+      // Totals are consent-only (privacy decision 2026-11-07). A promo slot adds only its fixed source name.
+      if (consentRef.current?.value === 'yes') logEvent(openSource.current ? { type: 'open', source: openSource.current } : { type: 'open' })
+      openSource.current = null
+    }
     if (wasOpen.current === true && !ui.open) flushSession()
     wasOpen.current = ui.open
   }, [ui.open, ready, flushSession])
