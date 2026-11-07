@@ -188,8 +188,9 @@ export async function POST(req: NextRequest): Promise<Response> {
         send({ t: 'error', code: 'failed' satisfies ErrorCode })
         return
       }
-      await bumpPower(processId)
-      send({ t: 'done', tools: [...new Set(toolsUsed)] })
+      const uniqueTools = [...new Set(toolsUsed)]
+      await bumpPower(processId, uniqueTools)
+      send({ t: 'done', tools: uniqueTools })
     } catch (err) {
       console.error('[askhans-solution] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
       send({ t: 'error', code: classify(err) })

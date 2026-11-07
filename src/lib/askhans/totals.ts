@@ -13,7 +13,7 @@ const DAY_TTL_S = 400 * 86_400
 export type TotalField = 'requests' | 'answers' | 'opens'
 
 /** Power Mode: one finished report. All visitors, no ID: lifetime + per-day total and a per-process day counter. */
-export async function bumpPower(processId: string): Promise<void> {
+export async function bumpPower(processId: string, tools: string[] = []): Promise<void> {
   try {
     const day = new Date().toISOString().slice(0, 10)
     const dayKey = `askhans:day:${day}`
@@ -22,6 +22,8 @@ export async function bumpPower(processId: string): Promise<void> {
     pipe.hsetnx(TOTAL_KEY, 'since', day)
     pipe.hincrby(dayKey, 'total_power', 1)
     pipe.hincrby(dayKey, `power:${processId}`, 1)
+    // MCP tools the report used (allowlisted names only) feed the same "Tools" table as chat answers.
+    for (const t of tools.slice(0, 10)) if (/^[a-z_]{3,40}$/.test(t)) pipe.hincrby(dayKey, `tool:${t}`, 1)
     pipe.expire(dayKey, DAY_TTL_S)
     await pipe.exec()
   } catch (err) {
