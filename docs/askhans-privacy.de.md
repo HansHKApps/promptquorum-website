@@ -63,15 +63,15 @@ Der Einwilligungsnachweis wird **ein Jahr** aufbewahrt (Entscheidung Betreiber 2
 
 ### 4. Empfänger und Auftragsverarbeitung
 - **Anthropic** (Claude API) als Auftragsverarbeiter: erhält Ihre Eingabe und den Gesprächsverlauf, um die Antwort zu erzeugen.
-  Auftragsverarbeitungsvertrag (DPA) abgeschlossen (Betreiber-Bestätigung 2026-11-07); nach den Geschäftsbedingungen von Anthropic werden API-Eingaben nicht zum Modelltraining verwendet. [Hinweis: schriftliche Bestätigung und genaue Aufbewahrungsfrist von Anthropic zur Akte nehmen.]
+  Auftragsverarbeitungsvertrag (DPA) abgeschlossen (Betreiber-Bestätigung 2026-11-07); Quellen (am 2026-11-07 geprüft): Anthropic Commercial Terms, Abschnitt B („Anthropic may not train models on Customer Content from Services“) und Abschnitt C (DPA per Verweis einbezogen); Anthropic Privacy Center, „How long do you store my organization’s data“ (API-Eingaben/-Ausgaben werden innerhalb von 30 Tagen gelöscht; bei automatischer Markierung als Verstoß gegen die Nutzungsrichtlinie bis zu 2 Jahre; gesetzliche Aufbewahrung vorbehalten).
 - **Upstash** (Redis) als Auftragsverarbeiter, **EU-Region**, Auftragsverarbeitungsvertrag abgeschlossen: Rate-Limit-Schlüssel, Zähler, Einwilligungsnachweise.
 - **Vercel** als Hosting-Anbieter (Serverprotokolle, können Anfrageinhalte enthalten). Bereits in der allgemeinen Datenschutzerklärung abgedeckt (Hosting-Hinweis, Auftragsverarbeiter-Tabelle, Abschnitt 5); in der Ask-Hans-Notiz zusätzlich ausdrücklich genannt.
 
 ### 5. Übermittlung in Drittländer (USA)
-Anthropic sitzt in den USA. Die Übermittlung (Anthropic, Vercel) stützt sich auf das EU-US Data Privacy Framework, soweit der Anbieter zertifiziert ist, und hilfsweise auf Standardvertragsklauseln im jeweiligen DPA. Transfer Impact Assessment (kurz): geringes Risiko — keine besonderen Datenkategorien, kurze Speicherung, Hinweis „keine personenbezogenen Daten eingeben“. [Zertifizierung vor Deploy auf dataprivacyframework.gov prüfen.]
+Anthropic sitzt in den USA. Die Übermittlung (Anthropic, Vercel) stützt sich bei Anthropic auf die Standardvertragsklauseln (Module 2/3), die über Abschnitt I des Anthropic-DPA einbezogen sind (eine DPF-Zertifizierung von Anthropic ist in den veröffentlichten Unterlagen nicht belegt und wird deshalb nicht behauptet); bei Vercel auf das DPF, soweit zertifiziert, und hilfsweise auf Standardvertragsklauseln im DPA. Transfer Impact Assessment (kurz): geringes Risiko — keine besonderen Datenkategorien, kurze Speicherung, Hinweis „keine personenbezogenen Daten eingeben“. [Vercel-DPF-Zertifizierung auf dataprivacyframework.gov prüfen.]
 
 ### 6. Speicherdauer
-- Fragen/Antworten: keine Speicherung auf unserem Server. Bei Anthropic gilt die Frist laut Vertrag.
+- Fragen/Antworten: keine Speicherung auf unserem Server. Bei Anthropic: Löschung innerhalb von 30 Tagen, bei Markierung als Richtlinienverstoß bis zu 2 Jahre.
 - Rate-Limit-Schlüssel: Sekunden bis Minuten. Besuchs-Nachrichtenzähler: 24 Stunden.
 - Nutzungsstatistik: Tageszähler **90 Tage** (geändert am 2026-11-07, vorher 400), danach automatisch gelöscht. Einwilligungsnachweis: 1 Jahr.
 - Gesprächsverlauf im Browser: nichts gespeichert, außer Sie wählen „7 Tage speichern“ — dann 7 Tage (localStorage) bzw. bis Löschen/Widerruf. Einwilligungsentscheidung im Browser: bis Sie sie widerrufen oder Browserdaten löschen. Erster Besuchstag und Besuchszahl (2d1) im Browser: bis Widerruf der Einwilligung oder Löschen der Browserdaten.
