@@ -57,7 +57,8 @@ async function fillMax(page: Page, { save = false } = {}) {
   await dialog.getByRole('checkbox', { name: 'Chat with my documents' }).click()
   await next.click()
   for (const answer of ['Yes, fully offline', 'Free software only', 'Beginner', 'Balanced']) {
-    await dialog.getByRole('radio', { name: answer }).click()
+    // experience is multi-select (checkbox); connectivity, price and priority stay single (radio)
+    await dialog.getByRole(answer === 'Beginner' ? 'checkbox' : 'radio', { name: answer }).click()
     await next.click()
   }
   await dialog.getByRole('button', { name: 'Create my report' }).click()
@@ -251,10 +252,10 @@ test.describe('Power Mode', () => {
     await prepare(page)
     const dialog = await openPower(page)
     await dialog.getByRole('button', { name: /Solution Setup/ }).click()
-    await dialog.getByRole('radio', { name: 'Create video' }).click()
+    await dialog.getByRole('checkbox', { name: 'Create video' }).click()
     await dialog.getByRole('button', { name: 'Next' }).click()
     await expect(dialog.getByRole('heading', { name: 'What kind of video?' })).toBeVisible()
-    await dialog.getByRole('radio', { name: 'Image to video' }).click()
+    await dialog.getByRole('checkbox', { name: 'Image to video' }).click()
     await dialog.getByRole('button', { name: 'Next' }).click()
     await expect(dialog.getByRole('heading', { name: 'How long should the videos be?' })).toBeVisible()
   })
@@ -301,7 +302,7 @@ test.describe('Power Mode', () => {
     await dialog.getByRole('checkbox', { name: 'Create images' }).click()
     await next.click()
     for (const answer of ['No, internet is fine', 'Paid is okay', 'Advanced', 'Speed']) {
-      await dialog.getByRole('radio', { name: answer }).click()
+      await dialog.getByRole(answer === 'Advanced' ? 'checkbox' : 'radio', { name: answer }).click()
       await next.click()
     }
     await dialog.getByRole('button', { name: 'Create my report' }).click()
