@@ -60,7 +60,7 @@ export const ASK_HANS_DEFAULT_MODEL = 'claude-haiku-5-5'
 export const ASK_HANS_SOLUTION_DEFAULT_MODEL = 'claude-sonnet-5-5'
 
 /** Bump when the consent text changes; stored with every consent value as proof. */
-export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-07-v5'
+export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-07-v6'
 
 /** Days a given consent stays valid; after that the notice is shown again. Stated in the privacy policy. */
 export const ASK_HANS_CONSENT_DAYS = 30

@@ -139,7 +139,7 @@ export function AskHansRoot() {
     // The first run after loading only records the restored state; later closed→open changes are real opens
     // (anonymous counter, no visitor ID).
     if (!ready) return
-    if (wasOpen.current === false && ui.open) logEvent({ type: 'open' })
+    if (wasOpen.current === false && ui.open && consentRef.current?.value === 'yes') logEvent({ type: 'open' })
     if (wasOpen.current === true && !ui.open) flushSession()
     wasOpen.current = ui.open
   }, [ui.open, ready, flushSession])
@@ -236,7 +236,7 @@ export function AskHansRoot() {
 
       let acc = ''
       let category = conv.category
-      await streamAnswer({ visitId: visitId.current, lang, messages: [...history, { role: 'user', content: text }] }, (ev) => {
+      await streamAnswer({ visitId: visitId.current, lang, stats: consentValue?.value === 'yes', messages: [...history, { role: 'user', content: text }] }, (ev) => {
         if (ev.t === 'text') {
           acc += ev.v
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, content: acc, status: undefined }))
@@ -339,7 +339,6 @@ export function AskHansRoot() {
     consentRef.current = rec
     if (value === 'yes') usageInfo.current = touchUsage()
     if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
-    else logEvent({ type: 'consent_no' })
     return rec
   }
 
@@ -650,6 +649,9 @@ export function AskHansRoot() {
                   submit(draft)
                 }}
               >
+                <p className="mb-1.5 rounded-md border border-border bg-muted px-2.5 py-1.5 text-xs font-medium leading-snug text-foreground" role="note">
+                  {tx.aiNotice}
+                </p>
                 <div className="flex items-end gap-2">
                   <label htmlFor="askhans-input" className="sr-only">{tx.inputLabel}</label>
                   <textarea
@@ -681,8 +683,7 @@ export function AskHansRoot() {
                 {draft.length > ASK_HANS_LIMITS.maxMessageChars && (
                   <p className="mt-1 text-xs font-medium text-destructive" role="alert">{tx.errors.tooLong(ASK_HANS_LIMITS.maxMessageChars)} ({tx.charCount(draft.length, ASK_HANS_LIMITS.maxMessageChars)})</p>
                 )}
-                <p className="mt-1.5 flex flex-wrap items-center justify-between gap-x-3 text-[11px] leading-snug text-muted-foreground">
-                  <span>{tx.aiNotice}</span>
+                <p className="mt-1.5 flex flex-wrap items-center justify-end gap-x-3 text-[11px] leading-snug text-muted-foreground">
                   {consent && !consentOpen && (
                     <button type="button" onClick={withdrawConsent} className="underline underline-offset-2 hover:text-foreground">
                       {tx.withdraw}

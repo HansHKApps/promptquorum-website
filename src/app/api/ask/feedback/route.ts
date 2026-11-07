@@ -16,7 +16,7 @@ export const runtime = 'nodejs'
 
 const OWNER_EMAIL = 'hello@promptquorum.com'
 const LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'])
-const DAY_TTL_S = 400 * 86_400
+const DAY_TTL_S = 90 * 86_400
 
 const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(6, '1 h'), prefix: 'rl:askhans:feedback' })
 

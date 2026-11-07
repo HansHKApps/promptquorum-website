@@ -1,7 +1,7 @@
 // POST /api/ask/event — anonymous Ask Hans usage counters. Storage: Upstash Redis (already used by the site).
 //
 // Only fixed, whitelisted fields are accepted; free text can never be stored, and the client only
-// calls this after the visitor said "Ja, einverstanden" (except the aggregated "Nein" counter).
+// calls this only after the visitor said "Ja, einverstanden" (since 2026-11-07 also the open/total counters).
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
@@ -24,8 +24,25 @@ export const runtime = 'nodejs'
 
 const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(60, '1 m'), prefix: 'rl:askhans:event' })
 
-const DAY_TTL_S = 400 * 86_400
+const DAY_TTL_S = 90 * 86_400 // owner decision 2026-11-07: daily counters 90 days
 const CONSENT_LIST_MAX = 50_000
+/** Consent proofs are kept for one year (owner decision 2026-11-07), then deleted from the tail of the list. */
+const CONSENT_KEEP_MS = 365 * 86_400_000
+
+async function pruneConsentProofs(): Promise<void> {
+  try {
+    for (let i = 0; i < 100; i++) {
+      const last = await redis.lindex('askhans:consent', -1)
+      if (!last) return
+      const rec = typeof last === 'string' ? JSON.parse(last) : last
+      const ts = Date.parse((rec as { ts?: string }).ts ?? '')
+      if (!Number.isFinite(ts) || Date.now() - ts <= CONSENT_KEEP_MS) return
+      await redis.rpop('askhans:consent')
+    }
+  } catch (err) {
+    console.error('[askhans] consent prune failed', err instanceof Error ? err.message : err)
+  }
+}
 const TOOL_NAME = /^[a-z_]{3,40}$/
 const LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => c.links.map((l) => l.id)))
 const CLICK_SOURCES = new Set(['text', 'panel'])
@@ -59,14 +76,10 @@ export async function POST(req: NextRequest) {
     const pipe = redis.pipeline()
     switch (type) {
       case 'open':
-        // Window opened: aggregated counter only (no visitor ID), same footing as consent_no.
+        // Window opened: aggregated counter only (no visitor ID); the client sends it only after "Yes".
         pipe.hincrby(dayKey, 'total_opens', 1)
         pipe.hincrby('askhans:total', 'opens', 1)
         pipe.hsetnx('askhans:total', 'since', day)
-        break
-      case 'consent_no':
-        // "Nein" is an aggregated counter only — no ID, no proof entry.
-        pipe.hincrby(dayKey, 'consent_no', 1)
         break
       case 'consent_yes':
       case 'consent_withdrawn': {
@@ -75,7 +88,10 @@ export async function POST(req: NextRequest) {
         pipe.hincrby(dayKey, type, 1)
         pipe.lpush('askhans:consent', JSON.stringify({ ts: new Date().toISOString(), textVersion, visitId, type }))
         pipe.ltrim('askhans:consent', 0, CONSENT_LIST_MAX - 1)
-        break
+        pipe.expire(dayKey, DAY_TTL_S)
+        await pipe.exec()
+        await pruneConsentProofs()
+        return new NextResponse(null, { status: 204 })
       }
       case 'question': {
         if (!visitId || !isCategoryKey(b.category)) return new NextResponse(null, { status: 400 })

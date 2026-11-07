@@ -49,7 +49,7 @@ function emptyEngagement(): EngagementStats {
   return { sessions: zeroCounts(), returning: zeroCounts(), duration: Object.fromEntries(DURATION_BUCKETS.map((b) => [b, zeroCounts()])), promoShown: zeroCounts() }
 }
 
-const RATING_KEEP_DAYS = 400 // matches the day-key TTL in /api/ask/feedback
+const RATING_KEEP_DAYS = 90 // matches the day-key TTL in /api/ask/feedback
 
 const num = (v: unknown) => Number(v ?? 0) || 0
 const lowOf = (h: Record<string, string | number>) => num(h['rating:1']) + num(h['rating:2']) + num(h['rating:3'])

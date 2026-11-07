@@ -76,8 +76,8 @@ interface ChatMessage {
   content: string
 }
 
-function parseBody(raw: unknown): { visitId: string; lang: string; messages: ChatMessage[] } | null {
-  const b = raw as { visitId?: unknown; lang?: unknown; messages?: unknown } | null
+function parseBody(raw: unknown): { visitId: string; lang: string; messages: ChatMessage[]; stats: boolean } | null {
+  const b = raw as { visitId?: unknown; lang?: unknown; messages?: unknown; stats?: unknown } | null
   if (!b || typeof b.visitId !== 'string' || !/^[a-zA-Z0-9-]{8,64}$/.test(b.visitId)) return null
   if (!Array.isArray(b.messages) || b.messages.length === 0 || b.messages.length > MAX_HISTORY_MESSAGES) return null
   const messages: ChatMessage[] = []
@@ -91,7 +91,8 @@ function parseBody(raw: unknown): { visitId: string; lang: string; messages: Cha
   if (messages[0].role !== 'user' || messages[messages.length - 1].role !== 'user') return null
   for (let i = 1; i < messages.length; i++) if (messages[i].role === messages[i - 1].role) return null
   const lang = typeof b.lang === 'string' && /^[a-z]{2}$/.test(b.lang) ? b.lang : 'de'
-  return { visitId: b.visitId, lang, messages }
+  // Totals are counted only for visitors who said "Yes" to the statistics (owner decision 2026-11-07).
+  return { visitId: b.visitId, lang, messages, stats: b.stats === true }
 }
 
 function classify(err: unknown): ErrorCode {
@@ -128,7 +129,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     if (process.env.NODE_ENV === 'production') return errorResponse('unavailable', 503)
   }
 
-  await bumpTotals('requests')
+  if (parsed.stats) await bumpTotals('requests')
 
   // Per-visit cap: count visitor messages per anonymous visit ID (24 h). Redis failure must not block the visitor.
   try {
@@ -271,7 +272,7 @@ export async function POST(req: NextRequest): Promise<Response> {
           console.error('[askhans] followups failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
         }
       }
-      if (spoken.trim()) await bumpTotals('answers')
+      if (spoken.trim() && parsed.stats) await bumpTotals('answers')
       const overview = spoken.trim() ? await getSiteOverview(pageLang).catch(() => undefined) : undefined
       send({ t: 'done', category, tools: [...new Set(toolsUsed)], topics, overview })
     } catch (err) {
