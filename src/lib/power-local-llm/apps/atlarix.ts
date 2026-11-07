@@ -12,6 +12,15 @@
 // standalone), the sandboxed-but-real terminal test execution, and that
 // paid-Auto training exclusion covers pay-as-you-go credit, not just Pro.
 // founderReviewedDate below reflects this fact-check pass.
+//
+// 2026-11-07 founder update (v15.13.3): Amariah sent further corrections — product is now
+// desktop app + editor extension (VS Code/Cursor/Kiro/Windsurf/VSCodium; Zed + JetBrains via
+// the Agent Client Protocol) + terminal CLI, not "desktop-only/not an IDE plugin"; "100% local /
+// nothing leaves the machine" is replaced by "with a local model prompts and code go only to
+// that model, Atlarix itself is still contacted for sign-in, updates and catalogs"; free Auto
+// no longer described via one provider's programme (prompts shared with the AI providers that
+// serve it, after a one-time OK in the app). She offered to check the new text before it goes
+// live — founderReviewedDate is intentionally NOT bumped until she approves.
 
 import type { ToolRecord } from './types'
 
@@ -19,7 +28,7 @@ export const app: ToolRecord = {
   slug: 'atlarix',
   name: 'Atlarix',
   categories: ['code-assistants-ide-plugins'],
-  interfaces: ['desktop', 'plugin'],
+  interfaces: ['desktop', 'plugin', 'cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio'],
@@ -44,30 +53,31 @@ export const app: ToolRecord = {
     github: 'https://github.com/AmariahAK/atlarix-releases/releases',
   },
   tagline: {
-    en: 'Free AI coding agent — 100% local via Ollama or LM Studio, hybrid for its Chrome extension',
-    de: 'Kostenloser KI-Coding-Agent — 100% lokal über Ollama oder LM Studio, hybrid für die Chrome-Erweiterung',
-    fr: "Agent de codage IA gratuit — 100 % local via Ollama ou LM Studio, hybride pour l'extension Chrome",
-    ja: '無料のAIコーディングエージェント — OllamaまたはLM Studioで完全ローカル、Chrome拡張機能はハイブリッド',
-    zh: '免费AI编程代理——通过Ollama或LM Studio实现100%本地运行，Chrome扩展为混合模式',
-    es: 'Agente de codificación IA gratuito: 100% local con Ollama o LM Studio, híbrido para su extensión de Chrome',
-    pt: 'Agente de codificação IA gratuito — 100% local com Ollama ou LM Studio, híbrido para a extensão do Chrome',
-    ar: 'وكيل برمجة بالذكاء الاصطناعي مجاني — محلي بنسبة 100% عبر Ollama أو LM Studio، وهجين لإضافة Chrome',
-    ko: '무료 AI 코딩 에이전트 — Ollama 또는 LM Studio로 100% 로컬, Chrome 확장 프로그램은 하이브리드',
+    en: 'Free AI coding agent — desktop app, editor extension and CLI; works with local models via Ollama or LM Studio',
+    de: 'Kostenloser KI-Coding-Agent — Desktop-App, Editor-Erweiterung und CLI; arbeitet mit lokalen Modellen über Ollama oder LM Studio',
+    fr: "Agent de codage IA gratuit — application de bureau, extension d'éditeur et CLI ; fonctionne avec des modèles locaux via Ollama ou LM Studio",
+    ja: '無料のAIコーディングエージェント — デスクトップアプリ、エディタ拡張機能、CLI。OllamaやLM Studio経由でローカルモデルを利用可能',
+    zh: '免费AI编程代理——桌面应用、编辑器扩展和CLI；可通过Ollama或LM Studio使用本地模型',
+    es: 'Agente de codificación IA gratuito: app de escritorio, extensión de editor y CLI; funciona con modelos locales vía Ollama o LM Studio',
+    pt: 'Agente de codificação IA gratuito — app de desktop, extensão de editor e CLI; funciona com modelos locais via Ollama ou LM Studio',
+    ar: 'وكيل برمجة بالذكاء الاصطناعي مجاني — تطبيق سطح مكتب وإضافة محرر وواجهة CLI؛ يعمل مع النماذج المحلية عبر Ollama أو LM Studio',
+    ko: '무료 AI 코딩 에이전트 — 데스크톱 앱, 에디터 확장 프로그램, CLI. Ollama 또는 LM Studio로 로컬 모델 사용 가능',
   },
   reviewSlug: 'atlarix-review',
   pqReview: {
-    date: '2026-09-25',
-    version: '14.52.1',
+    date: '2026-11-07',
+    version: '15.13.3',
     versionSourceUrl: 'https://github.com/AmariahAK/atlarix-releases/releases',
   },
   // Amariah (founder) replied by email 2026-09-25 with corrections to PromptQuorum's
   // initial review — see the header comment above for the fact list. Badge is
   // self-expiring (FOUNDER_STAR_VALID_DAYS) — no separate cleanup needed later.
   founderReviewedDate: '2026-09-25',
-  // Verified against the founder's own words ("100% local with a local model,
-  // hybrid when using managed models") and the product's stated feature set,
-  // 2026-09-25. autocomplete/mcp left unset — not stated anywhere checked.
-  compare: { localLlm: true, ollama: true, vscode: false, jetbrains: false, agentMode: true },
+  // Verified against the founder's own words (local model: prompts/code go only to that model;
+  // managed models: hybrid) and the product's stated feature set, 2026-09-25, re-checked
+  // 2026-11-07: editor extension for VS Code/Cursor/Kiro/Windsurf/VSCodium, Zed + JetBrains
+  // through the Agent Client Protocol (maker-stated). autocomplete/mcp left unset — not stated.
+  compare: { localLlm: true, ollama: true, vscode: true, jetbrains: true, agentMode: true },
   founder: {
     who: {
       en: 'Amariah Abishai, Founder, Norah Labs',
@@ -80,11 +90,11 @@ export const app: ToolRecord = {
       ar: 'أماريا أبيشاي، مؤسس Norah Labs',
       ko: '아마리아 아비샤이, Norah Labs 창립자',
     },
-    why: 'Built Atlarix to be an AI coding agent trustworthy with a real codebase: one that plans, edits, runs the project\'s own tests, and never changes a file until the diff is approved — fully local when paired with Ollama or LM Studio.',
+    why: 'Built Atlarix to be an AI coding agent trustworthy with a real codebase: one that plans, edits, runs the project\'s own tests, and never changes a file until the diff is approved — with Ollama or LM Studio your prompts and code go only to that local model.',
     providedDate: '2026-09-25',
     fullQuote: [
       '"I built Atlarix because I wanted an AI agent I could trust with a real codebase: one that plans, edits, runs the project\'s own tests, and never changes a file until I approve the diff."',
-      '"With Ollama or LM Studio, everything stays on your machine; there\'s no index, no embeddings, and nothing leaves the laptop. The Chrome extension and Atlarix Reviewer extend the same agent to the browser and to pull requests, and those two run on our managed models."',
+      '"With Ollama or LM Studio, your prompts and code go only to that local model. Atlarix itself is still contacted for sign-in, updates and catalogs, and there\'s no index and no embeddings."',
       '"I\'d rather state that clearly than have anyone assume more privacy than they\'re getting."',
     ],
     // Verified 2026-09 via the founder's own GitHub bio (github.com/AmariahAK),
@@ -96,7 +106,7 @@ export const app: ToolRecord = {
       website: 'https://atlarix.dev',
     },
   },
-  lastVerifiedDate: '2026-09-25',
-  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-11-07',
+  lastUpstreamUpdate: '2026-11-07', // GitHub API: pushed_at 2026-11-07, latest release v15.13.3 2026-11-06; read 2026-11-07
   lastUpstreamUpdateSource: 'https://github.com/AmariahAK/atlarix-releases',
 }
