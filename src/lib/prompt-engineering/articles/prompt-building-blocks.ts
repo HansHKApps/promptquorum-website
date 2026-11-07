@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       last_full_refresh: '2026-08-29',
       next_refresh_due: '2027-02-28',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'The 5 Building Blocks Every Prompt Needs',
       seoTitle: '5 Prompt Building Blocks You Need (2026 Template)',
       intro: '**Every effective AI prompt needs five building blocks: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format — miss any one and outputs become inconsistent, off-format, or hallucinated.**',
@@ -469,6 +470,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Die 5 Bausteine eines jeden Prompts',
       seoTitle: '5 Bausteine für jeden KI-Prompt mit Vorlage',
       intro: '**Jeder effektive KI-Prompt benötigt fünf Bausteine: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat — fehlt einer, werden Ergebnisse inkonsistent, falsch formatiert oder halluziniert.**',
@@ -944,6 +946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Los 5 bloques de construcción que todo prompt necesita',
       seoTitle: '5 bloques de construcción para cada prompt de IA',
       intro: '**Todo prompt de IA efectivo necesita cinco bloques de construcción: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output — si falta uno, los resultados serán inconsistentes, mal formateados o alucinados.**',
@@ -1293,6 +1296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       primaryTerm: 'بنية البرومبت',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'المكونات الخمسة التي يحتاجها كل برومبت',
       seoTitle: '⁨5⁩ مكونات البرومبت الأساسية لكل نموذج ⁨LLM⁩',
       intro: '**كل برومبت ذكاء اصطناعي فعّال يحتاج إلى خمسة مكونات: الدور والسياق، والمهمة/التعليمات، والمدخلات والأمثلة، والقيود، وتنسيق المخرجات — إذا غاب أحدها، ستكون النتائج غير متسقة أو منسّقة بشكل سيئ أو مُهلوسة.**',
@@ -1640,6 +1644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       primaryTerm: 'Estrutura de prompt',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Os 5 blocos de construção que todo prompt precisa',
       seoTitle: '5 blocos de construção para cada prompt de IA',
       intro: '**Todo prompt de IA eficaz precisa de cinco blocos de construção: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída — se um faltar, os resultados serão inconsistentes, mal formatados ou alucinados.**',
@@ -1966,6 +1971,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Fondamentaux',
+      designSkin: 'hub',
       title: 'Les 5 éléments fondamentaux de tout prompt',
       seoTitle: '5 éléments essentiels de tout prompt IA',
       intro: '**Tout prompt IA efficace nécessite cinq éléments : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie — en oublier un seul, et les résultats deviennent incohérents, mal formatés ou hallucinations.**',
@@ -2413,6 +2419,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: '基礎',
+      designSkin: 'hub',
       title: 'すべてのプロンプトに必要な5つの構成要素',
       seoTitle: 'AIプロンプトに必要な5つの基本要素と実装テンプレート',
       intro: '**効果的なAIプロンプトには5つの構成要素が必須です：役割とコンテキスト、タスク/指示、入力と例、制約、出力形式。これらのいずれかを欠くと、AIの出力は一貫性を失い、形式が崩れ、幻覚が発生します。**',
@@ -2862,6 +2869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: '基础知识',
+      designSkin: 'hub',
       title: '每个提示词必需的5个构建模块',
       seoTitle: '每个AI提示词需要的5个构建模块（附模板）',
       intro: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。',
@@ -3125,6 +3133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '기초',
+      designSkin: 'hub',
       title: '모든 프롬프트에 필요한 5가지 구성 요소',
       seoTitle: 'AI 프롬프트의 5가지 핵심 구성 요소 (템플릿 포함)',
       intro: '**효과적인 AI 프롬프트에는 다섯 가지 구성 요소가 필요합니다: 역할 및 맥락, 작업/지시, 입력 및 예시, 제약 조건, 출력 형식 — 하나라도 빠지면 결과가 일관성을 잃거나 형식에서 벗어나거나 환각이 발생합니다.**',

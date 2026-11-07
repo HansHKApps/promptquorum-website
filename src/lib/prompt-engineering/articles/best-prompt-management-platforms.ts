@@ -9,6 +9,7 @@ import type { PEArticle } from '@/lib/prompt-engineering/types';
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-en.webp',
     title: 'Best Prompt Management Platforms 2026: Version, Store, Share',
     seoTitle: 'Best Prompt Management Platforms 2026: Store & Version',
@@ -394,6 +395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-de.webp',
     title:
       'Die besten Prompt-Management-Plattformen 2026: Versioning, Speicherung, Freigabe',
@@ -817,6 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-es.webp',
     title:
       'Mejores plataformas de gestión de prompts 2026: versiona, almacena, comparte',
@@ -1277,6 +1280,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ar: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-ar.webp',
     title: 'أفضل منصات إدارة البرومبت 2026: الإصدار والتخزين والمشاركة',
     seoTitle: 'منصات إدارة البرومبت 2026: مقارنة PromptHub وVellum',
@@ -1730,6 +1734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   pt: {
     /* VERIFY: machine-translated pt-BR, needs human review */ theme:
       'Tools & Platforms',
+                                                               designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-pt.webp',
     title:
       'Melhores plataformas de gestão de prompts 2026: versione, armazene, compartilhe',
@@ -2189,6 +2194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   fr: {
     theme: 'Outils & Plateformes',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-fr.webp',
     title:
       'Meilleures plateformes de gestion des prompts 2026: Versioning, stockage, partage',
@@ -2580,6 +2586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'ツール & プラットフォーム',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-ja.webp',
     title: 'プロンプト管理プラットフォーム 2026: バージョニング、保存、共有',
     seoTitle: 'プロンプト管理プラットフォーム 2026: バージョニング & デプロイ',
@@ -2993,6 +3000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: '工具 & 平台',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-zh.webp',
     title: '提示词管理平台 2026: 版本控制、存储、协作',
     seoTitle: '提示词管理平台 2026: 版本控制与部署对比',
@@ -3380,6 +3388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/best-prompt-management-platforms-overview-hero-ko.webp',
     title: '2026년 최고의 프롬프트 관리 플랫폼: 버전 관리, 저장, 공유',
     seoTitle: '2026년 최고의 프롬프트 관리 플랫폼: 저장 및 버전 관리',

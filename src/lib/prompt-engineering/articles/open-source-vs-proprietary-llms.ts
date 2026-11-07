@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-en.webp',
       title: 'Open Source vs Proprietary LLMs',
       intro: 'Open-weights models like LLaMA 3.1 and Mistral offer control and cost savings; proprietary models like GPT-5.6 and Claude Opus 5 deliver frontier performance. Both categories converge in capability but diverge in access, customization, and compliance requirements.',
@@ -619,6 +620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'monthly',
       theme: 'Techniken',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-de.webp',
       title: 'Open-Source vs proprietäre LLMs',
       intro: 'Open-Weights-Modelle wie LLaMA 4 Scout und Mistral bieten vollständige Kontrolle und Kosteneinsparungen; proprietäre Modelle wie GPT-5.6 und Claude Opus 5 liefern Spitzenleistung. Beide Kategorien konvergieren bei der Leistungsfähigkeit, divergieren aber bei Zugriff, Anpassung und Compliance-Anforderungen.',
@@ -1229,6 +1231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-es.webp',
       title: 'LLMs de código abierto vs propietarios',
       intro: 'Los modelos open-weights como LLaMA 4 y Mistral ofrecen control y ahorro de costos; los modelos propietarios como GPT-5.6 y Claude Opus 5 ofrecen rendimiento de frontera. Ambas categorías convergen en capacidad pero divergen en acceso, personalización y requisitos de cumplimiento.',
@@ -1585,6 +1588,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-ar.webp',
       title: 'النماذج مفتوحة المصدر مقابل النماذج المملوكة',
       intro: 'تقدم النماذج مفتوحة الأوزان مثل LLaMA 4 وMistral تحكمًا وتوفيرًا في التكاليف؛ بينما تقدم النماذج المملوكة مثل GPT-5.6 وClaude Opus 5 أداءً متقدمًا. كلا الفئتين تتقاربان في القدرة لكنهما تتباينان في الوصول والتخصيص ومتطلبات الامتثال.',
@@ -1939,6 +1943,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-pt.webp',
       title: 'LLMs de código aberto vs proprietários',
       intro: 'Os modelos open-weights como LLaMA 4 e Mistral oferecem controle e economia de custos; os modelos proprietários como GPT-5.6 e Claude Opus 5 oferecem desempenho de fronteira. Ambas as categorias convergem em capacidade, mas divergem em acesso, personalização e requisitos de conformidade.',
@@ -2293,6 +2298,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-fr.webp',
       title: 'Open-Weights vs LLMs propriétaires',
       intro: 'Les modèles open-weights comme LLaMA 4 et Mistral offrent contrôle total et économies d\'échelle ; les modèles propriétaires comme GPT-5.6 et Claude Opus 5 livrent des performances de pointe. Les deux catégories convergent en performance mais divergent sur l\'accès, la personnalisation et la conformité.',
@@ -2832,6 +2838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-ja.webp',
       title: 'オープンウェイト vs 独占的LLM',
       intro: 'LLaMA 4やMistralなどのオープンウェイトモデルは完全な制御とスケールでのコスト削減を提供し、GPT-5.6やClaude Opus 5などの独占的モデルはフロンティアパフォーマンスを実現します。両カテゴリは性能面で収束しつつありますが、アクセス方法、カスタマイズ性、コンプライアンス要件では大きく異なります。',
@@ -3372,6 +3379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-zh.webp',
       title: '开源与专有LLM：竞争格局',
       intro: '开放权重模型（如LLaMA 4和Mistral）提供完全控制和规模化成本节省；专有模型（如GPT-5.6和Claude Opus 5）则提供前沿性能。两类模型的能力正在趋同，但在访问方式、定制化程度和合规要求上存在明显分歧。',
@@ -3935,6 +3943,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-ko.webp',
       title: '오픈소스 vs 독점 LLM: 2026년 올바른 선택',
       intro: 'LLaMA 4, Mistral 같은 오픈-웨이트 모델은 제어권과 비용 절감을 제공하고, GPT-5.6, Claude Opus 5 같은 독점 모델은 최전선 성능을 제공합니다. 두 범주는 기능 면에서 수렴하고 있지만 접근성, 커스터마이징, 컴플라이언스 요구사항 면에서는 여전히 차이가 있습니다.',

@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-en.webp',
       title: 'Prompt Evaluation Metrics: What to Measure and How',
       seoTitle: 'Prompt Evaluation Metrics: Pass Rate, BLEU & LLM-as-Judge (2026)',
@@ -263,6 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-de.webp',
       title: 'Prompt-Evaluierungsmetriken: Welche Metriken gelten für welche Ausgaben?',
       seoTitle: 'Prompt-Metriken: Pass Rate, BLEU & LLM-as-Judge (2026)',
@@ -523,6 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-es.webp',
       title: 'Métricas de evaluación de prompts: qué medir y cómo',
       seoTitle: 'Métricas de evaluación de prompts: Pass Rate, BLEU y más',
@@ -783,6 +786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-ar.webp',
       title: 'مقاييس تقييم البرومبتات: ماذا تقيس وكيف',
       seoTitle: 'مقاييس تقييم البرومبت: ⁨Pass Rate⁩ و⁨BLEU⁩ و⁨LLM-as-Judge⁩',
@@ -1042,6 +1046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-pt.webp',
       title: 'Métricas de avaliação de prompts: o que medir e como',
       seoTitle: 'Métricas de avaliação de prompts: Pass Rate, BLEU e mais',
@@ -1300,6 +1305,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-fr.webp',
       title: 'Métriques d\'évaluation de prompts : Mesurer ce qui compte réellement',
       seoTitle: 'Métriques d\'Évaluation de Prompts : Pass Rate, BLEU et LLM-as-Judge (2026)',
@@ -1647,6 +1653,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-ja.webp',
       title: 'プロンプト評価指標：合格率・BLEUスコア・LLM-as-Judgeの選び方',
       seoTitle: 'プロンプト評価メトリクス：Pass Rate・BLEU・LLM-as-Judge（2026年）',
@@ -1977,6 +1984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-zh.webp',
       title: '提示词评估指标：通过率、BLEU与LLM-as-Judge的选择指南',
       seoTitle: 'Prompt评估指标：Pass Rate、BLEU与LLM-as-Judge（2026）',
@@ -2237,6 +2245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/prompt-evaluation-metrics-overview-hero-ko.webp',
       title: 'Prompt 평가 지표: 무엇을 측정하고 어떻게 합니까',
       seoTitle: 'Prompt 평가 지표: Pass Rate, BLEU, LLM-as-Judge (2026)',

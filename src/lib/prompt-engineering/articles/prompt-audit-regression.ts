@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-en.webp',
     title: 'Prompt Audit & Regression Testing: Catch Silent Failures Before Production (2026)',
     dateModified: '2026-08-31',
@@ -275,6 +276,7 @@ tests:
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Team-Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-de.webp',
     title: 'Prompt-Audit & Regressionstests: Stille Fehler vor Produktion erkennen (2026)',
     seoTitle: 'Prompt-Audit & Regressionstests: Stille Fehler (2026)',
@@ -530,6 +532,7 @@ tests:
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-es.webp',
     title: 'Auditoría de prompts y pruebas de regresión: detecta fallos silenciosos antes de producción (2026)',
     seoTitle: 'Auditoría y regresión de prompts: evita fallos silenciosos',
@@ -787,6 +790,7 @@ tests:
 
   pt: {
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-pt.webp',
     title: 'Auditoria de prompts e testes de regressão: detecte falhas silenciosas antes da produção (2026)',
     seoTitle: 'Auditoria e regressão de prompts: evite falhas silenciosas',
@@ -1045,6 +1049,7 @@ tests:
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-fr.webp',
     title: 'Audit de prompts & tests de régression : défaillances silencieuses (2026)',
     seoTitle: 'Audit & Tests de Régression : Défaillances Silencieuses',
@@ -1300,6 +1305,7 @@ tests:
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-ja.webp',
     title: 'プロンプト監査と回帰テスト：本番前に静かな障害を検出（2026年）',
     seoTitle: 'プロンプト監査と回帰テスト：静かな障害検出（2026）',
@@ -1555,6 +1561,7 @@ tests:
   zh: {
     freshness_tier: 'semi_annual',
     theme: '团队治理',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-zh.webp',
     title: '提示词审计与回归测试：生产前捕获静默故障（2026）',
     seoTitle: '提示词审计与回归测试：静默故障（2026）',
@@ -1810,6 +1817,7 @@ tests:
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-ar.webp',
     title: 'تدقيق الـ ⁨Prompt⁩ واختبار الانحدار: اكتشف الأعطال الصامتة قبل الإنتاج',
     seoTitle: 'تدقيق الـ ⁨Prompt⁩ واختبار الانحدار: أعطال صامتة',
@@ -2067,6 +2075,7 @@ tests:
   ko: {
     freshness_tier: 'semi_annual',
     theme: '팀 거버넌스',
+    designSkin: 'hub',
     heroImage: '/images/prompt-audit-regression-overview-hero-ko.webp',
     title: '프롬프트 감사 및 회귀 테스트: 프로덕션 배포 전 무음 장애 포착 (2026)',
     seoTitle: '프롬프트 감사 및 회귀 테스트: 무음 장애 포착',

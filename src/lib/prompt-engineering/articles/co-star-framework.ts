@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'CO-STAR Prompt Framework: Context, Objective, Style, Tone, Audience, Response — Complete Guide',
       seoTitle: 'CO-STAR: Context, Objective, Style, Tone, Audience, Response',
       metaDescription: 'The CO-STAR prompt framework: Context, Objective, Style, Tone, Audience, and Response. What each field means, templates, and examples for 2026.',
@@ -369,6 +370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'CO-STAR-Prompt-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response — Vollständiger Leitfaden',
       seoTitle: 'CO-STAR: Kontext, Ziel, Stil, Ton, Zielgruppe, Response',
       metaDescription: 'Das CO-STAR-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Was jedes Feld bedeutet, Vorlagen und Beispiele für 2026.',
@@ -830,6 +832,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta — Guía Completa',
       seoTitle: 'CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta',
       metaDescription: 'El framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Qué significa cada campo, plantillas y ejemplos para 2026.',
@@ -1298,6 +1301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'إطار ⁨CO-STAR⁩: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة — دليل شامل',
       seoTitle: 'CO-STAR: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة',
       metaDescription: 'إطار CO-STAR: السياق، الهدف، الأسلوب، النبرة، الجمهور، والاستجابة. ماذا يعني كل حقل، مع قوالب وأمثلة لعام 2026.',
@@ -1766,6 +1770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta — Guia Completo',
       seoTitle: 'CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta',
       metaDescription: 'O framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. O que cada campo significa, modelos e exemplos para 2026.',
@@ -2242,6 +2247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse — Guide complet',
       seoTitle: 'CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse',
       metaDescription: 'Le framework CO-STAR : Contexte, Objectif, Style, Ton, Audience et Réponse. Ce que signifie chaque champ, modèles et exemples pour 2026.',
@@ -2715,6 +2721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス — 完全ガイド',
       seoTitle: 'CO-STAR：コンテキスト・目的・スタイル・トーン・対象者・レスポンス',
       metaDescription: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス。各項目の意味とテンプレート、2026年の実例を解説。',
@@ -3180,6 +3187,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'CO-STAR框架：背景、目标、风格、语调、受众、回应 — 完整指南',
       seoTitle: 'CO-STAR：背景、目标、风格、语调、受众、回应',
       metaDescription: 'CO-STAR框架：背景、目标、风格、语调、受众、回应。每个字段的含义、模板和2026年示例，编写清晰有效的AI提示。',
@@ -3591,6 +3599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     title: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답 — 완전 가이드',
     seoTitle: 'CO-STAR: 컨텍스트, 목표, 스타일, 어조, 대상, 응답',
     metaDescription: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답. 각 항목의 의미와 템플릿, 2026년 예시.',

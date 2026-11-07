@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-02-28',
       last_full_refresh: '2026-08-29',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'AI Limitations: What LLMs Can\'t Do in 2026',
       intro: 'Large language models have eight hard limits that no amount of fine-tuning, scaling, or prompt engineering can eliminate: no real-time data, confident hallucinations, weak multi-step reasoning, context window caps, no memory, no real-world actions, training bias, and no self-verification. Every model — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and open-source alternatives — shares these structural constraints. This guide covers each limit with the engineering workaround that works in production.',
       publishDate: '2026-03-24',
@@ -404,6 +405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'KI-Einschränkungen: Was LLMs 2026 nicht können',
       intro: 'Große Sprachmodelle haben acht harte Grenzen, die kein Fine-Tuning, kein Skalieren und kein Prompt Engineering beseitigen kann: kein Echtzeitzugriff, Halluzinationen, schwaches mehrstufiges Reasoning, Kontextfenster-Limits, kein Gedächtnis, keine Aktionen, Trainingsbias und keine Selbstverifikation. Jedes Modell — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Open-Source-Alternativen — teilt diese strukturellen Einschränkungen. Dieser Leitfaden behandelt jede Grenze mit dem Engineering-Workaround, der in der Praxis funktioniert.',
       metaDescription: 'Alle lokalen LLMs teilen 8 Strukturgrenzen: kein Echtzeitzugriff, Halluzinationen, Kontextlimits, kein Gedächtnis. Lösungsansätze und wann Cloud besser ist.',
@@ -807,6 +809,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Limitaciones de la IA: Lo que los LLMs no pueden hacer en 2026',
       intro: 'Los grandes modelos de lenguaje tienen ocho límites estrictos que ninguna cantidad de fine-tuning, escala o prompt engineering puede eliminar: sin datos en tiempo real, alucinaciones confiadas, razonamiento débil de varios pasos, límites del context window, sin memoria, sin acciones en el mundo real, sesgo de entrenamiento y sin autoverificación. Cada modelo — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y las alternativas de código abierto — comparte estas restricciones estructurales. Esta guía cubre cada límite con el workaround de ingeniería que funciona en producción.',
       publishDate: '2026-03-24',
@@ -1018,6 +1021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-28',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'قيود الذكاء الاصطناعي: ما لا تستطيع النماذج اللغوية الكبيرة فعله في ⁨2026⁩',
       intro: 'للنماذج اللغوية الكبيرة ثمانية قيود صارمة لا يمكن لأي قدر من الضبط الدقيق أو التوسع أو هندسة التعليمات إزالتها: لا بيانات في الوقت الحقيقي، وهلوسات واثقة، واستدلال ضعيف متعدد الخطوات، وقيود نافذة السياق، ولا ذاكرة، ولا إجراءات في العالم الحقيقي، وتحيز التدريب، ولا تحقق ذاتي. كل نموذج — GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro والبدائل مفتوحة المصدر — يشترك في هذه القيود الهيكلية. يغطي هذا الدليل كل قيد مع الحل الهندسي الذي يعمل في الإنتاج.',
       publishDate: '2026-03-24',
@@ -1236,6 +1240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Limitações da IA: O que os LLMs não podem fazer em 2026',
       intro: 'Os grandes modelos de linguagem têm oito limites rígidos que nenhuma quantidade de fine-tuning, escala ou prompt engineering pode eliminar: sem dados em tempo real, alucinações confiantes, raciocínio fraco de múltiplas etapas, limites da janela de contexto, sem memória, sem ações no mundo real, viés de treinamento e sem autoverificação. Cada modelo — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e as alternativas de código aberto — compartilha essas restrições estruturais. Este guia cobre cada limite com o workaround de engenharia que funciona em produção.',
       publishDate: '2026-03-24',
@@ -1453,6 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Limitations de l\'IA : Ce que les LLMs ne peuvent pas faire en 2026',
       intro: 'Les grands modèles de langage ont huit limites structurelles qu\'aucun fine-tuning, mise à l\'échelle ou ingénierie des prompts ne peut éliminer : pas d\'accès en temps réel, hallucinations, raisonnement multi-étapes peu fiable, limites de contexte, pas de mémoire, pas d\'actions, biais d\'entraînement et impossibilité de vérifier les sorties. Chaque modèle — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les alternatives open-source — partage ces contraintes. Ce guide couvre chaque limite avec le contournement technique qui fonctionne en production.',
       metaDescription: 'Tous les LLMs locaux partagent 8 limites : pas accès réel, hallucinations, limites contexte, pas mémoire. Solutions pour chaque contrainte et quand choisir cloud.',
@@ -1845,6 +1851,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
   title: 'AI制限：2026年にLLMができないこと',
   intro: '大規模言語モデルには、ファインチューニング、スケーリング、プロンプトエンジニアリングのいずれによっても排除できない8つの硬い制限があります：リアルタイムデータへのアクセス不可、幻覚、不安定な複数ステップ推論、コンテキストウィンドウの上限、記憶なし、現実世界のアクション不可、学習バイアス、自己検証の不可能性。すべてのモデル — GPT-5.6、Claude Opus 5、Gemini 3.1 Proとオープンソースの代替品 — がこれらの構造的制約を共有しています。このガイドでは、各制限について本番環境で機能するエンジニアリング上の回避策と合わせて説明します。',
   metaDescription: 'すべてのLLMが共有する8つの構造的限界：知識カットオフ、幻覚、コンテキスト上限、メモリ不可、リアルタイムデータなし。各制約の実装ワークアラウンドと使い分けのコツ。',
@@ -2236,6 +2243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
 zh: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'AI 局限性：2026年大语言模型无法做什么',
       intro: '大语言模型有八个硬性限制，无论是微调、扩展规模还是提示工程都无法消除：无法访问实时数据、产生幻觉、多步骤推理不可靠、上下文窗口上限、无持久记忆、无现实世界行动能力、训练偏差以及无法自我验证输出。每个模型——GPT-5.6、Claude Opus 5、Gemini 3.1 Pro以及开源替代方案——都共享这些结构性限制。本指南涵盖每个限制及其在生产环境中可行的工程解决方案。',
       metaDescription: '所有本地LLM共同面临的8项结构限制：知识截断、幻觉生成、上下文限制、无内存、无实时数据。各项约束的解决方案及何时选用云端模型。',
@@ -2626,6 +2634,7 @@ zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
     theme: 'Fundamentals',
+    designSkin: 'hub',
     title: 'AI 한계: 2026년 LLM이 할 수 없는 것들',
     intro: '대형 언어 모델에는 파인튜닝, 스케일링, 프롬프트 엔지니어링으로도 제거할 수 없는 여덟 가지 근본적인 한계가 있습니다. 실시간 데이터 없음, 자신만만한 환각, 약한 다단계 추론, 컨텍스트 윈도우 제한, 메모리 없음, 실제 행동 불가, 학습 데이터 편향, 자기 검증 불가. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 오픈소스 대안 모두 이러한 구조적 제약을 공유합니다. 이 가이드는 각 한계와 프로덕션에서 효과적인 엔지니어링 우회법을 다룹니다.',
     publishDate: '2026-03-24',

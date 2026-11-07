@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-en.webp',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
@@ -346,6 +347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-de.webp',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: Wann was?',
@@ -685,6 +687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-es.webp',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: cuál usar',
@@ -1016,6 +1019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-fr.webp',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       seoTitle: 'Zero-Shot vs Few-Shot Prompting 2026 : que choisir',
@@ -1366,6 +1370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ja.webp',
       title: 'ゼロショット vs. フューショットプロンプティング',
       seoTitle: 'ゼロショット vs フューショット 2026：使い分け',
@@ -1698,6 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-zh.webp',
       title: '零样本与少样本提示对比',
       seoTitle: '零样本 vs 少样本提示 2026：该选哪个',
@@ -2029,6 +2035,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-pt.webp',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: qual usar',
@@ -2360,6 +2367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ar.webp',
       title: 'التوجيه الصفري مقابل التوجيه بأمثلة قليلة',
       seoTitle: 'التوجيه الصفري مقابل القليل 2026: أيهما تختار',
@@ -2691,6 +2699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ko: {
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ko.webp',
       title: '제로샷 vs. 퓨샷 프롬프팅',
       seoTitle: '제로샷 vs 퓨샷 프롬프팅 2026: 무엇을 쓸까',

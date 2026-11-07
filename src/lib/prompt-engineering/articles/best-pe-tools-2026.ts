@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      theme: 'Tools & Platforms', heroImage: '/images/best-pe-tools-2026-overview-hero-en.webp',
+      theme: 'Tools & Platforms', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-en.webp',
       title: 'Best Prompt Engineering Tools 2026: Ranked by Use Case',
       seoTitle: 'Best Prompt Engineering Tools 2026: Ranked by Problem Type',
       metaDescription: 'Promptfoo is free. Braintrust starts at $249/mo. Vellum from $50. Side-by-side comparison of 7 PE tools ranked by the problem they solve in 2026.',
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       }
     },
     de: {
-  theme: 'Tools & Plattformen', heroImage: '/images/best-pe-tools-2026-overview-hero-de.webp',
+  theme: 'Tools & Plattformen', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-de.webp',
   title: 'Beste Prompt-Engineering-Tools 2026: Vergleich nach Einsatzzweck',
   seoTitle: 'Beste Prompt-Engineering-Tools 2026: 7 im Vergleich',
   metaDescription: 'Promptfoo ist kostenlos. Braintrust ab 249 $/Monat. Vellum ab 50 $/Monat. Direktvergleich: 7 Prompt-Engineering-Tools nach Anwendungsfall sortiert. 2026.',
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   }
 },
     es: {
-  theme: 'Tools & Platforms', heroImage: '/images/best-pe-tools-2026-overview-hero-es.webp',
+  theme: 'Tools & Platforms', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-es.webp',
   title: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
   seoTitle: 'Mejores herramientas de prompt engineering 2026: 7 opciones',
   metaDescription: 'Promptfoo es gratis. Braintrust desde $249/mes. Vellum desde $50. Comparativa de 7 herramientas de PE clasificadas según el problema que resuelven en 2026.',
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
 
     ar: {
-  theme: 'Tools & Platforms', heroImage: '/images/best-pe-tools-2026-overview-hero-ar.webp',
+  theme: 'Tools & Platforms', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-ar.webp',
   title: 'أفضل أدوات هندسة التعليمات ⁨2026⁩: مُصنَّفة حسب حالة الاستخدام',
   seoTitle: 'أدوات هندسة التعليمات ⁨2026⁩: ⁨7⁩ خيارات مُصنَّفة',
   metaDescription: '⁨Promptfoo⁩ مجاني. ⁨Braintrust⁩ من ⁨249⁩ دولار/شهر. ⁨Vellum⁩ من ⁨50⁩ دولار. مقارنة ⁨7⁩ أدوات هندسة تعليمات مُصنَّفة حسب المشكلة التي تحلها.',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
 
     pt: {
-  theme: 'Tools & Platforms', heroImage: '/images/best-pe-tools-2026-overview-hero-pt.webp',
+  theme: 'Tools & Platforms', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-pt.webp',
   title: 'Melhores ferramentas de prompt engineering 2026: classificadas por caso de uso',
   seoTitle: 'Melhores ferramentas de prompt engineering 2026: 7 opções',
   metaDescription: 'Promptfoo é gratuito. Braintrust a partir de $249/mês. Vellum a partir de $50. Comparativo de 7 ferramentas de PE classificadas conforme o problema que resolvem em 2026.',
@@ -1833,7 +1833,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
 
     fr: {
-  theme: 'Outils & Plateformes', heroImage: '/images/best-pe-tools-2026-overview-hero-fr.webp',
+  theme: 'Outils & Plateformes', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-fr.webp',
   title: 'Meilleurs outils de prompt engineering 2026 : classés par usage',
   seoTitle: 'Meilleurs outils prompt engineering 2026 : 7 comparés',
   metaDescription: 'Promptfoo est gratuit, Braintrust à partir de 249 $/mois, Vellum à partir de 50 $/mois. Comparatif de 7 outils de prompt engineering classés par problème résolu. 2026.',
@@ -1909,7 +1909,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Meilleurs outils de prompt engineering 2026', description: 'Les six meilleurs outils de prompt engineering, classés par spécialité.', inLanguage: 'fr', numberOfItems: 6, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Évaluation avec juges LLM et feedback humain — gratuit / 249 $/mois' }, { '@type': 'ListItem', position: 2, name: 'Confident AI', description: 'Évaluation automatisée avec 50+ métriques intégrées et red teaming — gratuit / 200 $/mois' }, { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'Déploiement en production avec monitoring et tests A/B — gratuit / à partir de 50 $/mois' }, { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'Tests open-source pour CI/CD — gratuit' }, { '@type': 'ListItem', position: 5, name: 'PromptHub', description: 'Versioning style Git avec collaboration — gratuit / 20 $/utilisateur/mois' }, { '@type': 'ListItem', position: 6, name: 'LangSmith', description: 'Tracing et observabilité natifs pour les applications LangChain — gratuit / 39 $/siège/mois' }] }
 },
     ja: {
-  theme: 'ツール＆プラットフォーム', heroImage: '/images/best-pe-tools-2026-overview-hero-ja.webp',
+  theme: 'ツール＆プラットフォーム', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-ja.webp',
   title: 'プロンプトエンジニアリングツール2026：用途別ランキング',
   seoTitle: 'プロンプトエンジニアリングツール2026：用途別7選ランキング',
   metaDescription: '2026年版。7つのプロンプトエンジニアリングツールを用途別に比較：Braintrust（評価）、Confident AI（自動評価）、Vellum（本番環境）、Promptfoo（テスト自動化）、PromptHub（バージョン管理）、LangSmith（トレーシング）。無料〜月額249ドル。',
@@ -2254,7 +2254,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   }
 },
     zh: {
-  theme: '工具与平台', heroImage: '/images/best-pe-tools-2026-overview-hero-zh.webp',
+  theme: '工具与平台', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-zh.webp',
   title: '2026最佳提示词工程工具：按用途排名',
   seoTitle: '2026年最佳提示词工程工具：7款按用途排名',
   metaDescription: '7款提示词工程工具2026年对比。Promptfoo专注自动化测试（免费），Braintrust专注评估（每月249美元），Confident AI专注自动化评估（每月200美元），Vellum专注生产环境部署（每月50美元起），PromptHub专注版本管理，LangSmith专注追踪。',
@@ -2595,7 +2595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   }
 },
     ko: {
-  theme: 'Tools & Platforms', heroImage: '/images/best-pe-tools-2026-overview-hero-ko.webp',
+  theme: 'Tools & Platforms', designSkin: 'hub', heroImage: '/images/best-pe-tools-2026-overview-hero-ko.webp',
   title: '2026년 최고의 프롬프트 엔지니어링 도구: 사용 사례별 순위',
   seoTitle: '2026년 프롬프트 엔지니어링 도구 TOP 7: 문제 유형별 순위',
   metaDescription: 'Promptfoo는 무료입니다. Braintrust는 월 $249부터, Vellum은 월 $50부터 시작합니다. 2026년 각 도구가 해결하는 문제별로 분류된 7가지 PE 도구 비교.',

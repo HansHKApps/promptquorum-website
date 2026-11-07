@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       last_full_refresh: '2026-08-29',
       next_refresh_due: '2027-02-28',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'The CRAFT Framework',
       intro: 'The CRAFT Framework is a prompt structure designed to produce targeted, audience-aware content by focusing on Context, Role, Audience, Format, and Tone in a single, well-formed instruction. In PromptQuorum, the CRAFT Framework is available as a built-in option that any user can select and apply across all supported models.',
       publishDate: '2026-03-24',
@@ -168,6 +169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Das CRAFT-Framework',
       intro: 'Das CRAFT-Framework ist eine Prompt-Struktur, die zielgerichtete, zielgruppengerechte Inhalte erzeugt, indem Kontext, Rolle, Zielgruppe, Format und Ton in einer einzigen, wohlgeformten Anweisung kombiniert werden. In PromptQuorum ist das CRAFT-Framework eine integrierte Option, die Benutzer auswählen und auf alle unterstützten Modelle anwenden können.',
       publishDate: '2026-03-24',
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'El Framework CRAFT',
       intro: 'El Framework CRAFT es una estructura de prompt diseñada para producir contenido específico y consciente de la audiencia al centrarse en el Contexto, Rol, Audiencia, Formato y Tono en una única instrucción bien formada. En PromptQuorum, el Framework CRAFT está disponible como opción integrada que cualquier usuario puede seleccionar y aplicar en todos los modelos compatibles.',
       publishDate: '2026-03-24',
@@ -469,6 +472,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'إطار ⁨CRAFT⁩',
       intro: 'إطار CRAFT هو بنية موجّه مصمّمة لإنتاج محتوى محدد ومدرك للجمهور من خلال التركيز على السياق والدور والجمهور والتنسيق والنبرة في تعليمة واحدة متكاملة. في PromptQuorum، يتوفر إطار CRAFT كخيار مدمج يمكن لأي مستخدم اختياره وتطبيقه عبر جميع النماذج المدعومة.',
       publishDate: '2026-03-24',
@@ -626,6 +630,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'O Framework CRAFT',
       intro: 'O Framework CRAFT é uma estrutura de prompt projetada para produzir conteúdo específico e consciente da audiência ao focar em Contexto, Papel, Audiência, Formato e Tom em uma única instrução bem formada. No PromptQuorum, o Framework CRAFT está disponível como opção integrada que qualquer usuário pode selecionar e aplicar em todos os modelos compatíveis.',
       publishDate: '2026-03-24',
@@ -782,6 +787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Le Framework CRAFT',
       intro: 'Le CRAFT Framework est une structure de prompt conçue pour générer du contenu ciblé et adapté à l\'audience en mettant l\'accent sur le Contexte, le Rôle, l\'Audience, le Format et le Ton dans une seule instruction bien formée. Dans PromptQuorum, le CRAFT Framework est une option intégrée que tout utilisateur peut sélectionner et appliquer sur tous les modèles supportés.',
       publishDate: '2026-03-24',
@@ -924,6 +930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'CRAFTフレームワーク',
       intro: 'CRAFTフレームワークは、コンテキスト、役割、オーディエンス、フォーマット、トーンに焦点を当てることで、ターゲットを絞った、オーディエンス対応のコンテンツを生成するためのプロンプト構造です。PromptQuorumでは、CRAFTフレームワークがビルトイン機能として提供されており、任意のユーザーが選択して、サポートされているすべてのモデルに適用できます。',
       publishDate: '2026-03-24',
@@ -1068,6 +1075,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'CRAFT框架',
       intro: 'CRAFT框架是一种提示结构，通过聚焦背景、角色、受众、格式和语气五个要素，帮助生成有针对性、因人而异的内容。在PromptQuorum中，CRAFT框架作为内置功能提供，任何用户都可以选择并应用于所有支持的模型。',
       publishDate: '2026-03-24',
@@ -1214,6 +1222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
     title: 'CRAFT 프레임워크',
     intro: 'CRAFT 프레임워크는 맥락(Context), 역할(Role), 대상(Audience), 형식(Format), 어조(Tone)에 집중하여 하나의 잘 구성된 지시문으로 특정하고 대상 인식이 높은 콘텐츠를 생산하도록 설계된 프롬프트 구조입니다. PromptQuorum에서 CRAFT 프레임워크는 모든 지원 모델에 선택하여 적용할 수 있는 기본 제공 옵션으로 제공됩니다.',
     publishDate: '2026-03-24',

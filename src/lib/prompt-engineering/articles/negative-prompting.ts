@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-en.webp',
       title: 'Negative Prompting: Tell the AI What NOT to Do',
       intro: 'Negative prompting is a technique where you tell the model what it must avoid—content, style, structure, or behaviors—so outputs stay inside clear boundaries. It acts as a "guardrail layer" on top of your normal instructions.',
@@ -287,6 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+  designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-de.webp',
   title: 'Negatives Prompting: Der KI Sagen, Was Sie NICHT Tun Soll',
   intro: 'Negatives Prompting ist eine Technik, um explizit zu definieren, was das Modell vermeiden sollte—Inhalte, Ton, Struktur oder Verhalten—um die Ergebnisse in klaren Grenzen zu halten. Es funktioniert als „Schutzschicht" oberhalb Ihrer Standard-Anweisungen.',
@@ -649,6 +651,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+  designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-es.webp',
   title: 'Negative prompting: dile a la IA lo que NO debe hacer',
   intro: 'El negative prompting es una técnica en la que le dices al modelo lo que debe evitar — contenido, estilo, estructura o comportamientos — para que las salidas se mantengan dentro de límites claros. Actúa como una "capa de protección" sobre tus instrucciones habituales.',
@@ -991,6 +994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+  designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-ar.webp',
   title: 'البرومبت السلبي: قل للذكاء الاصطناعي ما لا يجب فعله',
   intro: 'البرومبت السلبي هو أسلوب تخبر فيه النموذج بما يجب تجنبه — من محتوى وأسلوب وبنية وسلوكيات — حتى تظل المخرجات ضمن حدود واضحة. يعمل كـ"طبقة حماية" فوق تعليماتك المعتادة.',
@@ -1332,6 +1336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     pt: {
   theme: 'Techniques',
+  designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-pt.webp',
   title: 'Negative Prompting: diga à IA o que ela NÃO deve fazer',
   intro: 'O negative prompting é uma técnica em que você diz ao modelo o que ele deve evitar — conteúdo, estilo, estrutura ou comportamentos — para que as saídas se mantenham dentro de limites claros. Ele atua como uma "camada de proteção" sobre suas instruções habituais.',
@@ -1670,6 +1675,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+  designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-fr.webp',
   title: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
   intro: 'Le guidage négatif est une technique permettant de définir explicitement ce que le modèle doit éviter—contenu, tonalité, structure ou comportements—pour maintenir les résultats dans des limites claires. Il fonctionne comme une « couche de protection » s\'ajoutant à vos instructions standard.',
@@ -2102,6 +2108,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
   freshness_tier: 'semi_annual',
   theme: 'テクニック',
+  designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-ja.webp',
   title: 'ネガティブプロンプティング：AIに「してはいけないこと」を伝える',
   intro: 'ネガティブプロンプティングは、モデルが避けるべきこと（コンテンツ、トーン、構造、振る舞い）を明示的に定義し、出力を明確な範囲内に保つテクニックです。通常の指示の上に「保護層」として機能します。',
@@ -2534,6 +2541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      designSkin: 'hub',
       heroImage: '/images/negative-prompting-overview-hero-zh.webp',
       title: '消极提示法：告诉AI不要做什么',
       intro: '消极提示法是一种提示工程技术，通过明确指定模型应该避免的内容、风格、结构或行为，确保AI输出保持在明确的边界范围内。它充当您正常指令之上的"安全保护层"。',
@@ -2680,6 +2688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
   freshness_tier: 'semi_annual',
   theme: '기법',
+  designSkin: 'hub',
     heroImage: '/images/negative-prompting-overview-hero-ko.webp',
   title: '네거티브 프롬프팅: AI에게 하지 말아야 할 것을 알려주십시오',
   intro: '네거티브 프롬프팅은 모델이 반드시 피해야 할 것—내용, 스타일, 구조 또는 동작—을 명시하여 출력이 명확한 경계 안에 머물도록 하는 기법입니다. 일반 지시문 위에 "가드레일 레이어"로 작동합니다.',

@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       last_full_refresh: '2026-08-31',
       next_refresh_due: '2027-02-28',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-en.webp',
       title: 'Prompt Engineering Glossary: 100+ Key Terms',
       intro: 'Concise definitions of the 100+ most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
@@ -233,6 +234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-de.webp',
   title: 'Prompt Engineering Glossar: 100+ Essenzielle Begriffe für Entwickler & KI-Teams',
   intro: 'Ihr umfassendes Nachschlagewerk mit über 100 Definitionen – von Tokens und Kontextfenstern bis zur intelligenten Agent-Orchestrierung, RAG-Systemen und modernen Evaluierungsmetriken.',
@@ -522,6 +524,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     es: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-es.webp',
   title: 'Glosario de Prompt Engineering: 100+ términos clave',
   intro: 'Definiciones concisas de los 100+ términos más importantes del prompt engineering — desde tokens y context windows hasta orquestación de agentes, RAG y métricas de evaluación.',
@@ -735,6 +738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     ar: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-ar.webp',
   title: 'مسرد هندسة البرومبت: ⁨100+⁩ مصطلح أساسي',
   intro: 'تعريفات موجزة لأهم 100+ مصطلح في هندسة البرومبت — من الرموز والنوافذ السياقية إلى تنسيق الوكلاء وRAG ومقاييس التقييم.',
@@ -948,6 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     pt: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-pt.webp',
   title: 'Glossário de Prompt Engineering: 100+ Termos Essenciais',
   intro: 'Definições concisas dos 100+ termos mais importantes do prompt engineering — de tokens e context windows até orquestração de agentes, RAG e métricas de avaliação.',
@@ -1161,6 +1166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     fr: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-fr.webp',
   title: 'Glossaire de l\'ingénierie de prompt : 100+ termes essentiels',
   intro: 'Référence complète des 100+ termes les plus importants en ingénierie de prompt — de la théorie des tokens aux architectures d\'agents et métriques d\'évaluation — rédigée pour développeurs et praticiens IA francophones.',
@@ -1394,6 +1400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
         ja: {
   theme: 'Fundamentals',
+  designSkin: 'hub',
   heroImage: '/images/prompt-engineering-glossary-overview-hero-ja.webp',
   title: 'プロンプトエンジニアリング用語集：100以上の必須用語',
   intro: '日本の開発チームと企業向けに、プロンプトエンジニアリングの基礎から実践まで、100以上の重要用語を精選し解説。トークンとコンテキストウィンドウの理論から、マルチエージェント・オーケストレーション、RAG、評価指標まで網羅。',
@@ -1680,6 +1687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     zh: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-zh.webp',
       title: '提示工程词汇表：100+个必备术语',
       intro: '为中国开发者精心编选的完整提示工程词汇表。涵盖从令牌（Token）和上下文窗口（Context Window）的基础概念，到多代理编排（Multi-Agent Orchestration）、检索增强生成（RAG）和评估指标等实战应用——100多个术语，一本全书。',
@@ -1994,6 +2002,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '기초',
+      designSkin: 'hub',
     heroImage: '/images/prompt-engineering-glossary-overview-hero-ko.webp',
       title: '프롬프트 엔지니어링 용어집: 100+개 핵심 용어',
       intro: '토큰과 컨텍스트 윈도우부터 에이전트 오케스트레이션, RAG, 평가 지표까지 — 프롬프트 엔지니어링에서 가장 중요한 100개 이상의 용어를 간결하게 정의합니다.',

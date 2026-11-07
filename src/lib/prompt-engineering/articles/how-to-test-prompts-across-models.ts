@@ -9,6 +9,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
@@ -262,6 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Techniken',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-de.webp',
     title: 'Prompts über mehrere Modelle testen: Multi-Modell-Evaluation',
     seoTitle: 'Prompts modellübergreifend testen: GPT vs Claude vs Gemini',
@@ -498,6 +500,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
@@ -752,6 +755,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-pt.webp',
     title: 'Como testar prompts entre modelos: avaliação multi-modelo',
     seoTitle: 'Teste prompts entre modelos: GPT vs Claude vs Gemini (2026)',
@@ -1001,6 +1005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-fr.webp',
     title: 'Tester des prompts sur plusieurs modèles : évaluation multi-modèles',
     seoTitle: 'Tester les Prompts sur Plusieurs Modèles : GPT vs Claude',
@@ -1235,6 +1240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'テクニック',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ja.webp',
     title: 'プロンプトの複数モデルテスト：マルチモデル評価',
     seoTitle: 'プロンプトをモデル横断テスト：GPT vs Claude vs Gemini',
@@ -1469,6 +1475,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: '技术',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-zh.webp',
     title: '跨模型测试提示词：多模型评估',
     seoTitle: '跨模型测试提示词：GPT vs Claude vs Gemini（2026）',
@@ -1703,6 +1710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ar: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
@@ -1957,6 +1965,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ko: {
     theme: 'Techniques',
+    designSkin: 'hub',
     heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',

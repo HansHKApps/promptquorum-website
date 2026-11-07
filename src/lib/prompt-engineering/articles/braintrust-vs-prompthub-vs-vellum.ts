@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-en.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum: 2-Tool Stack 2026',
@@ -491,6 +492,7 @@ tests:
   },
   de: {
     theme: 'Tools & Plattformen',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-de.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs. PromptHub vs. Vellum: 2-Tool-Stack 2026',
@@ -889,6 +891,7 @@ tests:
   },
   es: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-es.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum: el stack de 2 en 2026',
@@ -1345,6 +1348,7 @@ tests:
 
   pt: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-pt.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum: o stack de 2 em 2026',
@@ -1799,6 +1803,7 @@ tests:
 
   fr: {
     theme: 'Outils & Plateformes',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-fr.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum : Stack 2-outils 2026',
@@ -2190,6 +2195,7 @@ tests:
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'ツール比較',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ja.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026年',
     seoTitle: 'Braintrust vs PromptHub: 2ツール構成 2026年',
@@ -2235,6 +2241,7 @@ tests:
   zh: {
     freshness_tier: 'semi_annual',
     theme: '工具比较',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-zh.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026年',
     seoTitle: 'Braintrust vs PromptHub 2工具方案 2026',
@@ -2279,6 +2286,7 @@ tests:
   },
   ar: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ar.webp',
     title: '⁨Braintrust⁩ مقابل ⁨PromptHub⁩ مقابل ⁨Vellum⁩ مقابل ⁨Promptfoo⁩ (⁨2026⁩)',
     seoTitle: '⁨Braintrust⁩ مقابل ⁨PromptHub⁩ مقابل ⁨Vellum 2026⁩',
@@ -2734,6 +2742,7 @@ tests:
   },
   ko: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ko.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 비교 (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum 비교: 2026년 최적의 2가지 도구',

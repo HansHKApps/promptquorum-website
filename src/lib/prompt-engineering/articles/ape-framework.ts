@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-en.webp',
       title: 'The APE Framework: Analyze, Plan, Execute — Structured Prompts That Show Their Reasoning',
       intro: '**The APE Framework is a simple three-step prompt structure built around Analyze, Plan, and Execute so that large language models produce clear, traceable outputs from a single instruction.** In PromptQuorum, the APE Framework is available as a ready-made option that any user can select and apply across all supported models.',
@@ -234,6 +235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-de.webp',
       title: 'Das APE-Framework: Analyse, Plan, Ausführung — Strukturierte Prompts, die ihr Denken offenlegen',
       intro: '**Das APE-Framework ist eine einfache dreistufige Prompt-Struktur aus Analyse, Plan und Ausführung, mit der große Sprachmodelle aus einer einzigen Anweisung klare, nachvollziehbare Ergebnisse liefern.** In PromptQuorum steht das APE-Framework als fertige Option bereit, die jeder Nutzer auswählen und auf alle unterstützten Modelle anwenden kann.',
@@ -459,6 +461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-es.webp',
       title: 'El Framework APE: Analizar, Planificar, Ejecutar — Prompts Estructurados que Muestran su Razonamiento',
       intro: '**El Framework APE es una estructura de prompt de tres pasos basada en Analizar, Planificar y Ejecutar, de modo que los modelos de lenguaje produzcan resultados claros y trazables a partir de una sola instrucción.** En PromptQuorum, el Framework APE está disponible como opción predefinida que cualquier usuario puede seleccionar y aplicar en todos los modelos compatibles.',
@@ -685,6 +688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-ar.webp',
       title: 'إطار ⁨APE⁩: التحليل، التخطيط، التنفيذ — تعليمات منظَّمة تُظهر استدلالها',
       intro: '**إطار APE هو هيكل تعليمات من ثلاث خطوات يقوم على التحليل والتخطيط والتنفيذ، بحيث تُنتج نماذج اللغة نتائج واضحة وقابلة للتتبع من تعليمة واحدة.** في PromptQuorum، يتوفر إطار APE كخيار مُعدَّ مسبقًا يمكن لأي مستخدم اختياره وتطبيقه عبر جميع النماذج المدعومة.',
@@ -910,6 +914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-pt.webp',
       title: 'O Framework APE: Analisar, Planejar, Executar — Prompts Estruturados que Mostram seu Raciocínio',
       intro: '**O Framework APE é uma estrutura de prompt de três etapas baseada em Analisar, Planejar e Executar, para que os modelos de linguagem produzam resultados claros e rastreáveis a partir de uma única instrução.** No PromptQuorum, o Framework APE está disponível como opção predefinida que qualquer usuário pode selecionar e aplicar em todos os modelos compatíveis.',
@@ -1136,6 +1141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-fr.webp',
       title: 'Le framework APE : Analyser, Planifier, Exécuter — des prompts structurés qui montrent leur raisonnement',
       intro: '**Le framework APE est une structure de prompt en trois étapes — Analyser, Planifier, Exécuter — qui permet aux grands modèles de langage de produire des résultats clairs et traçables à partir d\'une seule instruction.** Dans PromptQuorum, le framework APE est disponible en option prête à l\'emploi, applicable à tous les modèles pris en charge.',
@@ -1361,6 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-ja.webp',
       title: 'APEフレームワーク：分析・計画・実行 — 推論プロセスを見せる構造化プロンプト',
       intro: '**APEフレームワークは、Analyze（分析）・Plan（計画）・Execute（実行）の3ステップで構成されたシンプルなプロンプト構造です。1つの指示から、大規模言語モデルが明確で追跡可能な出力を生成できます。** PromptQuorumでは、APEフレームワークをすぐに使えるオプションとして提供しており、対応するすべてのモデルに適用できます。',
@@ -1586,6 +1593,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-zh.webp',
       title: 'APE框架：分析、规划、执行 —— 让推理过程可见的结构化提示词',
       intro: '**APE框架是一种简单的三步提示词结构，由分析（Analyze）、规划（Plan）、执行（Execute）组成，让大语言模型仅凭一条指令就能产出清晰、可追溯的结果。** 在PromptQuorum中，APE框架是一个开箱即用的选项，任何用户都可以选择并应用到所有受支持的模型上。',
@@ -1811,6 +1819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    designSkin: 'hub',
       heroImage: '/images/ape-framework-overview-hero-ko.webp',
     title: 'APE 프레임워크: 분석, 계획, 실행 — 추론 과정을 보여주는 구조화된 프롬프트',
     intro: '**APE 프레임워크는 분석(Analyze), 계획(Plan), 실행(Execute)을 기반으로 한 세 단계 프롬프트 구조로, 언어 모델이 단일 지시에서 명확하고 추적 가능한 결과를 생성할 수 있게 합니다.** PromptQuorum에서 APE 프레임워크는 모든 지원 모델에 적용할 수 있는 사전 설정 옵션으로 제공됩니다.',

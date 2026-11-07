@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Context Windows Explained: Why AI Forgets (and What to Do)',
       intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.',
       publishDate: '2026-03-22',
@@ -187,6 +188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)',
       intro: 'LLMs haben kein Langzeitgedächtnis — sie "sehen" nur ein Schiebefenster mit aktuellen Tokens. Erfahren Sie, warum KI den Kontext vergisst, wie Sie Prompts strukturieren, um innerhalb von Grenzen zu bleiben, und wie Sie Kontextfenster über Cloud- und lokale Modelle hinweg verwalten.',
       publishDate: '2026-03-22',
@@ -260,6 +262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',
       intro: 'Los LLM no tienen memoria a largo plazo — solo "ven" una ventana deslizante de tokens recientes. Aprende por qué la IA olvida el contexto, cómo estructurar los prompts para mantenerte dentro de los límites y cómo gestionar las context windows en modelos en la nube y locales.',
       publishDate: '2026-03-22',
@@ -335,6 +338,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'نوافذ السياق مشروحة: لماذا تنسى الذكاء الاصطناعي (وماذا تفعل؟)',
       intro: 'نماذج اللغة الكبيرة لا تمتلك ذاكرة طويلة الأمد — فهي لا "ترى" سوى نافذة متحركة من الرموز الحديثة. تعلّم لماذا تنسى الذكاء الاصطناعي السياق، وكيفية بنية الموجّهات للبقاء ضمن الحدود، وكيفية إدارة نوافذ السياق عبر النماذج السحابية والمحلية.',
       publishDate: '2026-03-22',
@@ -430,6 +434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)',
       intro: 'Os LLMs não têm memória de longo prazo — eles apenas "veem" uma janela deslizante de tokens recentes. Aprenda por que a IA esquece o contexto, como estruturar prompts para ficar dentro dos limites e como gerenciar janelas de contexto em modelos na nuvem e locais.',
       publishDate: '2026-03-22',
@@ -504,6 +509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)',
       intro: 'Les LLM n\'ont pas de mémoire à long terme — ils ne "voient" que une fenêtre glissante de tokens récents. Découvrez pourquoi l\'IA oublie le contexte, comment structurer les prompts pour rester dans les limites, et comment gérer les fenêtres de contexte entre les modèles cloud et locaux.',
       publishDate: '2026-03-22',
@@ -577,6 +583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: 'コンテキストウィンドウの説明：AIが忘れる理由（と対処法）',
       intro: 'LLMは長期記憶を持たず、最近のトークンのスライディングウィンドウのみを「見て」います。AIがコンテキストを忘れる理由、制限内にとどまるようにプロンプトを構成する方法、クラウドおよびローカルモデル間でコンテキストウィンドウを管理する方法を学びます。',
       publishDate: '2026-03-22',
@@ -650,6 +657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: '上下文窗口解释：为什么AI会忘记（以及如何处理）',
       intro: 'LLM没有长期记忆——它们只能"看到"最近令牌的滑动窗口。了解AI为什么会忘记上下文，如何结构化提示以保持在限制内，以及如何在云和本地模型之间管理上下文窗口。',
       publishDate: '2026-03-22',
@@ -724,6 +732,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      designSkin: 'hub',
       title: '컨텍스트 윈도우 설명: AI가 잊어버리는 이유(와 대처 방법)',
       intro: 'LLM은 장기 기억을 보유하지 않습니다 — 최근 토큰의 슬라이딩 윈도우만 "볼" 수 있습니다. AI가 컨텍스트를 잊어버리는 이유, 제한 범위 내에서 프롬프트를 구성하는 방법, 클라우드 및 로컬 모델 전반에 걸쳐 컨텍스트 윈도우를 관리하는 방법을 알아보십시오.',
       publishDate: '2026-03-22',

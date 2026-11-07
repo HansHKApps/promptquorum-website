@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'The RTF Framework: Role, Task, Format (2026)',
       intro: 'The RTF Framework is a lightweight three-component prompt structure: Role (who the model is), Task (what to do), and Format (how to output). It works across GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and local models. Use it as your default for routine tasks—summaries, code reviews, emails, reports—and upgrade to CO-STAR or SPECS only when you need more structure.',
       publishDate: '2026-03-24',
@@ -551,6 +552,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Das RTF-Framework: Role, Task, Format (2026)',
       intro: 'Das RTF-Framework ist eine schlanke dreiteilige Prompt-Struktur: Role (wer das Modell ist), Task (was zu tun ist) und Format (wie die Ausgabe aussieht). Es funktioniert über GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und lokale Modelle. Verwenden Sie es als Standard für Routineaufgaben — Zusammenfassungen, Code-Reviews, E-Mails, Berichte — und aktualisieren Sie zu CO-STAR oder SPECS nur, wenn Sie mehr Struktur benötigen.',
       publishDate: '2026-03-24',
@@ -1054,6 +1056,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'El Framework RTF: Rol, Tarea, Formato (2026)',
       intro: 'El Framework RTF es una estructura de prompt liviana de tres componentes: Rol (quién es el modelo), Tarea (qué hacer) y Formato (cómo producir el output). Funciona en GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y modelos locales. Úsalo como tu predeterminado para tareas rutinarias — resúmenes, revisiones de código, emails, informes — y pasa a CO-STAR o SPECS solo cuando necesites más estructura.',
       publishDate: '2026-03-24',
@@ -1413,6 +1416,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'إطار ⁨RTF⁩: الدور، المهمة، التنسيق (⁨2026⁩)',
       intro: 'إطار RTF هو بنية برومبت خفيفة من ثلاثة مكونات: الدور (Role - من يكون النموذج)، والمهمة (Task - ما يجب فعله)، والتنسيق (Format - كيفية إنتاج المخرج). يعمل مع GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro والنماذج المحلية. استخدمه كخيارك الافتراضي للمهام الروتينية — الملخصات ومراجعات الكود والبريد الإلكتروني والتقارير — وانتقل إلى CO-STAR أو SPECS فقط عند الحاجة إلى مزيد من البنية.',
       publishDate: '2026-03-24',
@@ -1772,6 +1776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'O Framework RTF: Papel, Tarefa, Formato (2026)',
       intro: 'O Framework RTF é uma estrutura de prompt leve de três componentes: Papel (quem é o modelo), Tarefa (o que fazer) e Formato (como produzir a saída). Funciona com GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e modelos locais. Use-o como padrão para tarefas rotineiras — resumos, revisões de código, e-mails, relatórios — e migre para CO-STAR ou SPECS somente quando precisar de mais estrutura.',
       publishDate: '2026-03-24',
@@ -2180,6 +2185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'Framework RTF : Role, Task, Format (2026)',
       intro: 'Le Framework RTF est une structure de prompt légère à trois composants : Role (qui est le modèle), Task (quoi faire) et Format (comment formater la sortie). Il fonctionne sur GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les modèles locaux. Utilisez-le par défaut pour les tâches courantes — résumés, revues de code, e-mails, rapports — et passez à CO-STAR ou SPECS uniquement si vous avez besoin de plus de structure.',
       publishDate: '2026-03-24',
@@ -2656,6 +2662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RTFフレームワーク：Role・Task・Formatのプロンプト構造（2026年）',
       intro: 'RTFフレームワークは軽量な3要素プロンプト構造です。Role（モデルの役割）、Task（実行するタスク）、Format（出力形式）。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、ローカルモデルで動作します。日常的なタスク（要約、コードレビュー、メール、レポート）に標準として使用し、より多くの構造が必要な場合のみCO-STARやSPECSにアップグレードしてください。',
       publishDate: '2026-03-24',
@@ -3140,6 +3147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RTF框架：Role、Task、Format的提示词结构（2026）',
       intro: 'RTF框架是一种轻量级的三要素提示词结构：Role（模型的角色）、Task（要执行的任务）、Format（输出格式）。适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和本地模型。将其作为日常任务的默认选择——摘要、代码审查、电子邮件、报告——仅在需要更多结构时才升级到CO-STAR或SPECS。',
       publishDate: '2026-03-24',
@@ -3709,6 +3717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      designSkin: 'hub',
       title: 'RTF 프레임워크: Role, Task, Format (2026)',
       intro: 'RTF 프레임워크는 세 가지 구성 요소로 이루어진 경량 프롬프트 구조입니다. Role(모델의 역할), Task(수행할 작업), Format(출력 방식)으로 구성됩니다. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 로컬 모델 전반에 걸쳐 작동합니다. 요약, 코드 리뷰, 이메일, 보고서 등 일상적인 작업에는 이를 기본 구조로 사용하고, 더 많은 구조가 필요한 경우에만 CO-STAR나 SPECS로 업그레이드하십시오.',
       publishDate: '2026-03-24',

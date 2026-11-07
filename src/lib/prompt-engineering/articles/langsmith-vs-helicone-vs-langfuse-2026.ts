@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-en.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse: 2026 Comparison',
@@ -535,6 +536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-de.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse: Vergleich 2026',
@@ -1062,6 +1064,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   fr: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-fr.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse : comparatif 2026',
@@ -1589,6 +1592,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ja.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer(2026年版)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse:2026年比較',
@@ -2116,6 +2120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-zh.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer(2026版)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse:2026对比',
@@ -2643,6 +2648,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-es.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse: comparativa 2026',
@@ -3170,6 +3176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   pt: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-pt.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse: comparativo 2026',
@@ -3697,6 +3704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ar: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ar.webp',
     title: 'LangSmith مقابل Helicone مقابل Langfuse مقابل PromptLayer (2026)',
     seoTitle: 'LangSmith مقابل Helicone مقابل Langfuse: مقارنة 2026',
@@ -4224,6 +4232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Tools & Platforms',
+    designSkin: 'hub',
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ko.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026년)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse: 2026년 비교',
