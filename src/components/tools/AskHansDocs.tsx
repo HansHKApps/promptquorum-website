@@ -4,7 +4,9 @@
 
 import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
-import { ASK_HANS_LIMITS } from '@/lib/askhans/config'
+import { ASK_HANS_LIMITS, ASK_HANS_SOLUTION_LIMITS } from '@/lib/askhans/config'
+import { POWER_COPY } from '@/components/askhans/power/copy/all'
+import { PROCESS_ORDER } from '@/lib/askhans/solutions/processes'
 import { HUB_TONES, type HubTone } from '@/components/hub-template/palette'
 import { SectionHeading, toolCopy } from './McpStatsContent'
 import { t as tMcp } from './mcp-stats-i18n'
@@ -22,10 +24,14 @@ function localizedPath(lang: Language, path: string): string {
 
 export function AskHansDocs({ lang }: { lang: Language }) {
   const limits = { messages: ASK_HANS_LIMITS.maxMessagesPerVisit, chars: ASK_HANS_LIMITS.maxMessageChars }
+  const power = POWER_COPY[lang] ?? POWER_COPY.en
+  const powerLimits = { reports: ASK_HANS_SOLUTION_LIMITS.maxPerVisit }
   const steps = ['step1', 'step2', 'step3', 'step4'] as const
   const jump: { id: string; label: string; tone: HubTone }[] = [
     { id: 'how', label: tDocsAsk('startHeading', lang), tone: 'azure' },
     { id: 'lookup', label: tDocsAsk('toolsHeading', lang), tone: 'violet' },
+    { id: 'power', label: power.menu.title, tone: 'orchid' },
+    { id: 'share', label: tDocsAsk('shareHeading', lang), tone: 'azure' },
     { id: 'example', label: tMcp('exampleHeading', lang), tone: 'indigo' },
     { id: 'trust', label: tDocsAsk('trustHeading', lang), tone: 'rose' },
   ]
@@ -100,10 +106,57 @@ export function AskHansDocs({ lang }: { lang: Language }) {
         </div>
       </section>
 
-      {/* 03 Worked example (same question, tool and links as the MCP page) */}
+      {/* 03 Power Mode: the four guided reports */}
+      <section id="power" className="scroll-mt-20 bg-white">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={3} tone="orchid">{tDocsAsk('powerHeading', lang)}</SectionHeading>
+          <p className="mb-2 max-w-[760px] text-base leading-relaxed text-text-secondary">{tDocsAsk('powerIntro', lang)}</p>
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2">
+            {PROCESS_ORDER.map((id, i) => {
+              const c = HUB_TONES[CYCLE[i % CYCLE.length]]
+              const proc = power.processes[id]
+              return (
+                <li key={id} className={`rounded-[14px] border bg-white p-5 ${c.edge}`}>
+                  <span dir="ltr" className={`block font-mono text-xs font-bold ${c.ink}`}>{id}</span>
+                  <div className="mb-1.5 mt-1 text-[17px] font-bold leading-snug">{proc.name}</div>
+                  <p className="text-sm leading-relaxed text-text-secondary">{proc.tagline}</p>
+                  <p className={`mt-3 inline-block rounded-lg px-3 py-1.5 text-sm ${c.tint}`}>
+                    <span className={`font-semibold ${c.ink}`}>{tDocsAsk('powerTimeLabel', lang)}:</span> {proc.time}
+                  </p>
+                </li>
+              )
+            })}
+          </ul>
+          <div className={`mt-5 max-w-[760px] rounded-r-xl border-s-4 border-hub-orchid px-5 py-4 ${HUB_TONES.orchid.tint}`}>
+            <p className="text-sm leading-relaxed text-text-primary">{tDocsAsk('powerReportBody', lang)}</p>
+            <p className="mt-2 text-sm leading-relaxed text-text-secondary">{tDocsAsk('powerLimit', lang, powerLimits)}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 04 Copy, share and export */}
+      <section id="share" className="scroll-mt-20 border-y border-border bg-hub-azure-tint">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={4} tone="azure">{tDocsAsk('shareHeading', lang)}</SectionHeading>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            {(['shareChat', 'shareReport'] as const).map((k, i) => {
+              const c = HUB_TONES[i === 0 ? 'azure' : 'orchid']
+              return (
+                <div key={k} className={`rounded-[14px] border bg-white p-6 ${c.edge}`}>
+                  <h3 className={`mb-2 text-lg font-bold ${c.ink}`}>{tDocsAsk(`${k}Heading`, lang)}</h3>
+                  <p className="text-sm leading-relaxed text-text-primary">{tDocsAsk(`${k}Body`, lang)}</p>
+                </div>
+              )
+            })}
+          </div>
+          <p className="mt-4 max-w-[760px] text-xs leading-relaxed text-text-secondary">{tDocsAsk('shareCount', lang)}</p>
+        </div>
+      </section>
+
+      {/* 05 Worked example (same question, tool and links as the MCP page) */}
       <section id="example" className="scroll-mt-20 bg-hub-indigo-tint">
         <div className={`${MAX_WIDTH} py-14`}>
-          <SectionHeading index={3} tone="indigo">{tMcp('exampleHeading', lang)}</SectionHeading>
+          <SectionHeading index={5} tone="indigo">{tMcp('exampleHeading', lang)}</SectionHeading>
           <div className="mt-5 grid gap-4 lg:grid-cols-2">
             <div className="space-y-4">
               <div className="rounded-[14px] border border-hub-indigo-edge bg-white p-5">
@@ -131,12 +184,12 @@ export function AskHansDocs({ lang }: { lang: Language }) {
         </div>
       </section>
 
-      {/* 04 Trust and limits */}
+      {/* 06 Trust and limits */}
       <section id="trust" className="scroll-mt-20 border-t border-border bg-hub-rose-tint">
         <div className={`${MAX_WIDTH} py-14`}>
-          <SectionHeading index={4} tone="rose">{tDocsAsk('trustHeading', lang)}</SectionHeading>
+          <SectionHeading index={6} tone="rose">{tDocsAsk('trustHeading', lang)}</SectionHeading>
           <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {(['trust1', 'trust2', 'trust3', 'trust4', 'trust5'] as const).map((k, i) => (
+            {(['trust1', 'trust2', 'trust3', 'trust4', 'trust5', 'trust6'] as const).map((k, i) => (
               <li key={k} className="flex gap-3 rounded-[14px] border border-hub-rose-edge bg-white p-5">
                 <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${HUB_TONES[CYCLE[i % CYCLE.length]].solid}`}>{i + 1}</span>
                 <span className="text-sm leading-relaxed text-text-secondary">{tDocsAsk(k, lang, limits)}</span>

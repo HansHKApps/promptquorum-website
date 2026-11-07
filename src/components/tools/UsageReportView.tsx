@@ -15,6 +15,7 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { HUB_TONES } from '@/components/hub-template/palette'
 import { t as tMcp } from './mcp-stats-i18n'
 import { tAsk, type AskUiKey } from './ask-hans-block-i18n'
+import { POWER_COPY } from '@/components/askhans/power/copy/all'
 
 const APP_NAME = new Map(localAiApps.map((a) => [a.slug, a.name]))
 const TOPIC_LABEL = new Map(ASK_HANS_CATEGORIES.map((c) => [c.key, c]))
@@ -192,7 +193,9 @@ function EngagementCard({ engagement, lang }: { engagement: EngagementStats; lan
 
 export type UsageReportKind = 'askhans' | 'mcp'
 
-const HEADLINE_LABEL = { answers: 'statAnswers', opens: 'statOpens', calls: 'statCalls', starts: 'statStarts' } as const
+const HEADLINE_LABEL = { answers: 'statAnswers', opens: 'statOpens', calls: 'statCalls', starts: 'statStarts', power: 'statPower' } as const
+
+const EXPORT_LABEL: Record<string, AskUiKey> = { copy: 'exportCopy', md: 'exportMd', docx: 'exportDocx', pdf: 'exportPdf' }
 
 export function UsageReportView({ lang, report, kind }: { lang: Language; report: UsageReportBase; kind: UsageReportKind }) {
   const fmt = (n: number) => n.toLocaleString(toOutputLocale(lang))
@@ -255,6 +258,26 @@ export function UsageReportView({ lang, report, kind }: { lang: Language; report
 
       {!mcp && report.feedback && <RatingsCard feedback={report.feedback} lang={lang} />}
       {!mcp && report.engagement && <EngagementCard engagement={report.engagement} lang={lang} />}
+
+      {!mcp && report.powerProcesses && report.powerExports && (
+        <div className="mt-4 grid gap-4 lg:grid-cols-2">
+          <BreakdownTable
+            heading={tAsk('powerProcessHeading', lang)}
+            firstCol={tAsk('powerProcessHeading', lang)}
+            rows={report.powerProcesses}
+            label={(k) => POWER_COPY[lang]?.processes[k as keyof typeof POWER_COPY.en.processes]?.name ?? k}
+            lang={lang}
+          />
+          <BreakdownTable
+            heading={tAsk('powerExportHeading', lang)}
+            firstCol={tAsk('powerExportHeading', lang)}
+            rows={report.powerExports}
+            label={(k) => (EXPORT_LABEL[k] ? tAsk(EXPORT_LABEL[k], lang) : k)}
+            lang={lang}
+          />
+          <p className="max-w-[720px] text-xs leading-relaxed text-text-secondary lg:col-span-2">{tAsk('powerNote', lang)}</p>
+        </div>
+      )}
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         {!mcp && <BreakdownTable heading={tAsk('topicsHeading', lang)} firstCol={tAsk('topicsHeading', lang)} rows={report.categories} label={topicLabel} lang={lang} />}

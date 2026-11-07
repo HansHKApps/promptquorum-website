@@ -14,7 +14,7 @@ import { ConsentNotice } from '../ConsentNotice'
 import { useAskCopy, useAskLang, localizeAskPath } from '../copy'
 import { AskIcon } from '../icons'
 import type { AskErrorCode, ConsentRecord } from '../types'
-import { streamSolution } from '../useAskStream'
+import { logEvent, streamSolution } from '../useAskStream'
 import { ChoiceGroup } from './choices'
 import { usePowerCopy } from './copy'
 import type { ReportDoc } from './export/reportDoc'
@@ -380,7 +380,14 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     const msg = error === 'limit' || error === 'rate' ? tx.run.limit : error ? ac.errors[error as Exclude<AskErrorCode, 'limit'>] : ''
     body = (
       <>
-        <ReportView tx={tx} doc={doc} streaming={view.k === 'run' && !failed} status={status} />
+        <ReportView
+          tx={tx}
+          doc={doc}
+          onExport={(channel) => {
+            // Anonymous export counter: format name only, never the report; only with consent "Yes".
+            if (consent?.value === 'yes') logEvent({ type: 'power_export', visitId: getVisitId(), process: view.process, channel })
+          }}
+          streaming={view.k === 'run' && !failed} status={status} />
         {failed && (
           <div role="alert" className="mt-3 rounded-lg border border-border bg-white p-3 text-[13px]">
             <p>{typeof msg === 'string' ? msg : ''}</p>

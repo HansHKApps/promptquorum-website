@@ -17,12 +17,14 @@ interface Props {
   doc: ReportDoc
   streaming: boolean
   status?: string
+  /** called after a successful copy or download, with the format (for the anonymous counter) */
+  onExport?: (channel: 'copy' | 'md' | 'docx' | 'pdf') => void
 }
 
 const BTN =
   'inline-flex items-center gap-1.5 rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50'
 
-export function ReportView({ tx, doc, streaming, status }: Props) {
+export function ReportView({ tx, doc, streaming, status, onExport }: Props) {
   const ac = useAskCopy()
   const [copied, setCopied] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -35,18 +37,23 @@ export function ReportView({ tx, doc, streaming, status }: Props) {
 
   const copy = async () => {
     if (!(await writePlain(mdToPlain(md)))) return
+    onExport?.('copy')
     setCopied(true)
     if (timer.current) clearTimeout(timer.current)
     timer.current = setTimeout(() => setCopied(false), 2000)
   }
 
-  const saveMd = () => downloadBlob(new Blob([md], { type: 'text/markdown;charset=utf-8' }), `${fileStem(doc)}.md`)
+  const saveMd = () => {
+    downloadBlob(new Blob([md], { type: 'text/markdown;charset=utf-8' }), `${fileStem(doc)}.md`)
+    onExport?.('md')
+  }
 
   const saveDocx = async () => {
     setBusy(true)
     try {
       const { buildDocxBlob } = await import('./export/toDocx')
       downloadBlob(await buildDocxBlob(doc), `${fileStem(doc)}.docx`)
+      onExport?.('docx')
     } finally {
       setBusy(false)
     }
@@ -55,6 +62,7 @@ export function ReportView({ tx, doc, streaming, status }: Props) {
   const savePdf = async () => {
     const { printReport } = await import('./export/toHtml')
     printReport(doc)
+    onExport?.('pdf')
   }
 
   return (

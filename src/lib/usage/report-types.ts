@@ -43,7 +43,7 @@ export interface UsageReportBase {
   /** ISO date (UTC) the breakdown tables started, or null */
   breakdownSince: string | null
   /** headline counters per window plus lifetime */
-  headline: { key: 'answers' | 'opens' | 'calls' | 'starts'; win: WindowCounts; all: number }[]
+  headline: { key: 'answers' | 'opens' | 'calls' | 'starts' | 'power'; win: WindowCounts; all: number }[]
   /** the first headline counter per UTC day, oldest first, ending today */
   days: { date: string; count: number }[]
   /** consent sample (Ask Hans only): questions of visitors who agreed to statistics, and the all-visitor answers over the same days */
@@ -54,6 +54,10 @@ export interface UsageReportBase {
   dirCats: ReportRow[]
   tools: ReportRow[]
   langs: ReportRow[]
+  /** Ask Hans only: Power Mode reports per process (all visitors) */
+  powerProcesses?: ReportRow[]
+  /** Ask Hans only: Power Mode report exports per format (consent "Yes" only) */
+  powerExports?: ReportRow[]
   /** Ask Hans only */
   feedback?: FeedbackStats
   /** Ask Hans only */
