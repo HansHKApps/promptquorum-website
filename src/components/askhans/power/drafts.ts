@@ -18,13 +18,15 @@ export interface HardwareDraft {
   vramUnknown: boolean
   storage: string
   storageUnknown: boolean
+  /** processor / Apple chip, free text (audit only) */
+  cpu: string
 }
 
-export const emptyHardwareDraft: HardwareDraft = { ram: '', ramUnknown: false, vram: '', vramUnknown: false, storage: '', storageUnknown: false }
+export const emptyHardwareDraft: HardwareDraft = { ram: '', ramUnknown: false, vram: '', vramUnknown: false, storage: '', storageUnknown: false, cpu: '' }
 
 
 /** Draft → validated answers, or null while the form is incomplete. */
-export function hardwareFromDraft(d: HardwareDraft, allowNone: boolean): HardwareAnswers | null {
+export function hardwareFromDraft(d: HardwareDraft, allowNone: boolean, askCpu = false): HardwareAnswers | null {
   if (!d.device) return null
   if (d.device === 'none') return allowNone ? { device: 'none', os: 'unknown', gpu: 'unknown', ramGb: null, vramGb: null, storageGb: null } : null
   const mac = d.device === 'mac'
@@ -51,7 +53,26 @@ export function hardwareFromDraft(d: HardwareDraft, allowNone: boolean): Hardwar
     if (!inRange(n, 100_000)) return null
     storageGb = n
   }
-  return { device: d.device, os, gpu, ramGb, vramGb, storageGb }
+  const cpu = askCpu ? d.cpu.replace(/[\r\n]+/g, ' ').trim().slice(0, 60) : ''
+  return { device: d.device, os, gpu, ramGb, vramGb, storageGb, ...(cpu ? { cpu } : {}) }
+}
+
+const numText = (n: number | null) => (n === null ? '' : String(n))
+
+/** Validated answers → form draft (loading a saved audit so the visitor can update it). */
+export function draftFromHardware(h: HardwareAnswers): HardwareDraft {
+  return {
+    device: h.device,
+    os: h.device === 'mac' ? undefined : h.os,
+    gpu: h.device === 'mac' ? undefined : h.gpu,
+    ram: numText(h.ramGb),
+    ramUnknown: h.ramGb === null,
+    vram: numText(h.vramGb),
+    vramUnknown: (h.gpu === 'nvidia' || h.gpu === 'amd') && h.vramGb === null,
+    storage: numText(h.storageGb),
+    storageUnknown: false,
+    cpu: h.cpu ?? '',
+  }
 }
 
 export interface MobileDraft {
