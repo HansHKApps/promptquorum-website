@@ -22,12 +22,13 @@ export const copy: PowerCopy = {
     step: (n, total) => `Paso ${n} de ${total}`,
     optional: 'opcional',
     required: 'Elige al menos una opción para continuar.',
+    multiHint: 'Elige todo lo que corresponda.',
     notePlaceholder: '¿Algo más que debamos saber? (opcional, máx. 300 caracteres)',
     privacy: 'Para redactar el informe, tus respuestas se envían al servicio de IA indicado en el aviso. No se guardan en nuestros servidores.',
   },
   steps: {
     hardware: { q: '¿Qué equipo tienes?', label: 'Equipo' },
-    goals: { q: '¿Qué quieres hacer con él? (elige todo lo que corresponda)', label: 'Objetivos' },
+    goals: { q: '¿Qué quieres hacer con él?', label: 'Objetivos' },
     connectivity: { q: '¿Tiene que funcionar completamente sin conexión?', label: 'Conexión' },
     price: { q: '¿Te vale el software de pago?', label: 'Coste del software' },
     experience: { q: '¿Cuánta experiencia tienes instalando este tipo de software?', label: 'Experiencia' },
@@ -55,7 +56,7 @@ export const copy: PowerCopy = {
     auditGoals: { q: '¿Qué quieres conseguir? (elige todas las que apliquen)', label: 'Objetivos' },
     recommendation: { q: '¿Qué mejora?', label: 'Mejora elegida' },
     mobile: { q: 'Cuéntanos sobre tu móvil.', label: 'Móvil' },
-    mobileGoals: { q: '¿Qué debe hacer la IA en tu móvil? (elige todo lo que corresponda)', label: 'Objetivos' },
+    mobileGoals: { q: '¿Qué debe hacer la IA en tu móvil?', label: 'Objetivos' },
   },
   opt: {
     chat: 'Chatear y escribir',
@@ -226,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: 'PDF (cuadro de impresión)',
     preparing: 'Preparando el archivo…',
     changeAnswers: 'Cambiar mis datos',
+    shareTitle: 'Compartir mi configuración',
+    shareText: 'He revisado mi configuración de IA local con Ask Hans (PromptQuorum). Pruébalo tú mismo:',
+    shareLink: 'Compartir enlace',
     allProcesses: 'Todos los procesos',
   },
   doc: {

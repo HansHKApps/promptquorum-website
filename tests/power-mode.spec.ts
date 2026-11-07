@@ -12,7 +12,7 @@ const REPORT = [
   { t: 'text', v: '## Summary\n- **Runs well**: chat with an 8B model\n\n' },
   { t: 'text', v: '## What your computer can do\n\n| Task | Verdict |\n| --- | --- |\n| Chat | Runs well |\n| Video | Not realistic |\n\n' },
   { t: 'text', v: '## Installation order\n1. Install [Ollama](https://www.promptquorum.com/power-local-llm/ollama-review)\n2. Run a test prompt\n' },
-  { t: 'done', tools: ['find_best_apps'] },
+  { t: 'done', tools: ['find_best_apps'], overview: { title: 'What is PromptQuorum?', blurb: 'Test blurb.', tiles: [{ label: 'Apps tracked', value: '350' }, { label: 'Ask Hans answers', value: '208' }], links: [{ label: 'Open directory →', href: 'https://www.promptquorum.com/directory' }] } },
 ]
 const ndjson = (events: unknown[]) => events.map((e) => JSON.stringify(e)).join('\n') + '\n'
 
@@ -57,7 +57,8 @@ async function fillMax(page: Page, { save = false } = {}) {
   await dialog.getByRole('checkbox', { name: 'Chat with my documents' }).click()
   await next.click()
   for (const answer of ['Yes, fully offline', 'Free software only', 'Beginner', 'Balanced']) {
-    await dialog.getByRole('radio', { name: answer }).click()
+    // experience is multi-select (checkbox); connectivity, price and priority stay single (radio)
+    await dialog.getByRole(answer === 'Beginner' ? 'checkbox' : 'radio', { name: answer }).click()
     await next.click()
   }
   await dialog.getByRole('button', { name: 'Create my report' }).click()
@@ -147,6 +148,10 @@ test.describe('Power Mode', () => {
     expect(clip).toContain('Unified memory, in GB: 24')
     expect(clip).toContain('Install Ollama')
 
+    // Share row: fixed message + Ask Hans link carrying the share card (never the report)
+    const wa = dialog.getByRole('link', { name: /WhatsApp/ })
+    expect(decodeURIComponent((await wa.getAttribute('href')) ?? '')).toContain('/askhans?card=max')
+
     // Markdown download
     const [md] = await Promise.all([page.waitForEvent('download'), dialog.getByRole('button', { name: 'Markdown (.md)' }).click()])
     expect(md.suggestedFilename()).toMatch(/\.md$/)
@@ -154,6 +159,8 @@ test.describe('Power Mode', () => {
     expect(mdText).toContain('## Your inputs')
     expect(mdText).toContain('https://www.promptquorum.com/directory')
     expect(mdText).toContain('## Notice')
+    expect(mdText).toContain('## What is PromptQuorum?')
+    expect(mdText).toContain('- Apps tracked: 350')
 
     // Word download is a real .docx (zip)
     const [docx] = await Promise.all([page.waitForEvent('download'), dialog.getByRole('button', { name: 'Word (.docx)' }).click()])
@@ -166,8 +173,10 @@ test.describe('Power Mode', () => {
     await dialog.getByRole('button', { name: 'PDF (print dialog)' }).click()
     await expect(page.locator('iframe[aria-hidden="true"]')).toHaveCount(1)
     const html = await page.locator('iframe[aria-hidden="true"]').getAttribute('srcdoc')
-    expect(html).toContain('<title>Your report: MAX – Full Setup</title>')
+    // the print dialog proposes the title as the file name, so it is the file stem (date, number, topic)
+    expect(html).toMatch(/<title>[^<]*MAX[^<]*<\/title>/i)
     expect(html).toContain('<table>')
+    expect(html).toContain('What is PromptQuorum?')
   })
 
   test('share menu: brand logos, fully inside the window even for a report at the top', async ({ page }) => {
@@ -251,10 +260,10 @@ test.describe('Power Mode', () => {
     await prepare(page)
     const dialog = await openPower(page)
     await dialog.getByRole('button', { name: /Solution Setup/ }).click()
-    await dialog.getByRole('radio', { name: 'Create video' }).click()
+    await dialog.getByRole('checkbox', { name: 'Create video' }).click()
     await dialog.getByRole('button', { name: 'Next' }).click()
     await expect(dialog.getByRole('heading', { name: 'What kind of video?' })).toBeVisible()
-    await dialog.getByRole('radio', { name: 'Image to video' }).click()
+    await dialog.getByRole('checkbox', { name: 'Image to video' }).click()
     await dialog.getByRole('button', { name: 'Next' }).click()
     await expect(dialog.getByRole('heading', { name: 'How long should the videos be?' })).toBeVisible()
   })
@@ -301,7 +310,7 @@ test.describe('Power Mode', () => {
     await dialog.getByRole('checkbox', { name: 'Create images' }).click()
     await next.click()
     for (const answer of ['No, internet is fine', 'Paid is okay', 'Advanced', 'Speed']) {
-      await dialog.getByRole('radio', { name: answer }).click()
+      await dialog.getByRole(answer === 'Advanced' ? 'checkbox' : 'radio', { name: answer }).click()
       await next.click()
     }
     await dialog.getByRole('button', { name: 'Create my report' }).click()

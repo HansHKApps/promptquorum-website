@@ -69,7 +69,7 @@ export const MENU: readonly MenuItem[] = [
 ]
 
 /** Registered tools that are intentionally not a menu item. */
-export const MENU_HIDDEN_TOOLS: readonly string[] = ['start']
+export const MENU_HIDDEN_TOOLS: readonly string[] = ['start', 'get_site_stats']
 
 /** Names of the tools introduced by the start flow. */
 export const START_TOOL_NAMES = ['start', 'set_consent', 'forget_me', 'my_profile', 'set_language'] as const

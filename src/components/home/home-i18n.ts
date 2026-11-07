@@ -291,6 +291,21 @@ const HOME_UI = {
     en: 'By the Numbers', de: 'In Zahlen', fr: 'En chiffres', ja: '数字で見る', zh: '数据一览',
     es: 'En cifras', pt: 'Em números', ar: 'بالأرقام', ko: '숫자로 보기',
   },
+  overviewTitle: {
+    en: 'What is PromptQuorum?', de: 'Was ist PromptQuorum?', fr: 'Qu’est-ce que PromptQuorum ?', ja: 'PromptQuorum とは', zh: 'PromptQuorum 是什么',
+    es: '¿Qué es PromptQuorum?', pt: 'O que é o PromptQuorum?', ar: 'ما هو PromptQuorum؟', ko: 'PromptQuorum 소개',
+  },
+  overviewBlurb: {
+    en: 'PromptQuorum helps you choose and run AI on your own computer: a directory of local AI apps, hands-on tests and practical guides.',
+    de: 'PromptQuorum hilft Ihnen, KI auf dem eigenen Computer auszuwählen und zu betreiben: ein Verzeichnis lokaler KI-Apps, praktische Tests und Anleitungen.',
+    fr: 'PromptQuorum vous aide à choisir et à faire tourner une IA sur votre propre ordinateur : un annuaire d’applications d’IA locales, des tests pratiques et des guides.',
+    ja: 'PromptQuorum は、自分のパソコンで AI を選び、動かすためのサイトです。ローカル AI アプリのディレクトリ、実機テスト、ガイドを提供しています。',
+    zh: 'PromptQuorum 帮助您在自己的电脑上选择并运行 AI：提供本地 AI 应用目录、实测评测和实用指南。',
+    es: 'PromptQuorum te ayuda a elegir y ejecutar IA en tu propio ordenador: un directorio de aplicaciones de IA local, pruebas prácticas y guías.',
+    pt: 'O PromptQuorum ajuda você a escolher e executar IA no seu próprio computador: um diretório de apps de IA local, testes práticos e guias.',
+    ar: 'يساعدك PromptQuorum على اختيار الذكاء الاصطناعي وتشغيله على جهازك الخاص: دليل لتطبيقات الذكاء الاصطناعي المحلية، واختبارات عملية، وأدلة إرشادية.',
+    ko: 'PromptQuorum은 내 컴퓨터에서 AI를 고르고 실행하도록 돕습니다. 로컬 AI 앱 디렉터리, 직접 해 본 테스트, 가이드를 제공합니다.',
+  },
   statAppsTracked: {
     en: 'Apps tracked', de: 'Erfasste Apps', fr: 'Applications suivies', ja: '登録アプリ数', zh: '收录应用数',
     es: 'Apps registradas', pt: 'Apps monitorados', ar: 'التطبيقات المتتبَّعة', ko: '추적 중인 앱',

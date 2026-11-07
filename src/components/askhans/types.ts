@@ -1,5 +1,7 @@
 export type AskErrorCode = 'disabled' | 'unavailable' | 'rate' | 'limit' | 'refused' | 'failed' | 'rephrase'
 
+import type { SiteOverview } from '@/lib/home/overview'
+
 export interface ChatMsg {
   id: string
   role: 'user' | 'assistant'
@@ -12,6 +14,8 @@ export interface ChatMsg {
   linkTitles?: Record<string, string>
   /** suggested next questions after this answer (clickable chips under the latest answer) */
   followups?: string[]
+  /** site overview block, shown once per conversation under the first answer that carries it */
+  overview?: SiteOverview
   /** transient: what the AI is doing right now, e.g. "Durchsuche PromptQuorum…" */
   status?: string
 }

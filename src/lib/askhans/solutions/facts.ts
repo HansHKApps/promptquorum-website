@@ -26,6 +26,12 @@ const MOBILE_USABLE_SHARE = 0.5
 /** Short context on a phone (long contexts cost memory the phone does not have). */
 const MOBILE_CONTEXT = '2K'
 
+/** Several spend classes may be ticked: the highest known one drives the savings estimate. */
+function highestSpend(picked: readonly string[]): string {
+  const order = ['m-4', 'm-3', 'm-2', 'm-1', 'm-none']
+  return order.find((m) => picked.includes(m)) ?? picked[0] ?? ''
+}
+
 export function memoryBudget(hw: HardwareAnswers): MemoryBudget {
   const assumptions: string[] = []
   if (hw.device === 'none') return { kind: 'unknown', budgetGb: null, offloadGb: 0, assumptions: ['No machine yet: sizes below describe what each hardware class could run.'] }
@@ -220,7 +226,7 @@ export function auditFacts(a: SolutionAnswers) {
     cloudServiceCount: cloud.length,
     alreadyUsesLocalApps: setup.includes('s-local'),
     usesNoAiYet: setup.includes('s-none'),
-    monthlySpendClass: cloud.length ? (SPEND_CLASSES[a.choices.auditSpend?.[0] ?? ''] ?? 'not asked') : 'not applicable (no cloud service chosen)',
+    monthlySpendClass: cloud.length ? (SPEND_CLASSES[highestSpend(a.choices.auditSpend ?? [])] ?? 'not asked') : 'not applicable (no cloud service chosen)',
     hardwareProcessor: a.hardware?.cpu ?? null,
     largestModelThatRunsComfortably: biggest('comfortable') ? `${biggest('comfortable')!.size} ${biggest('comfortable')!.quant}` : null,
     largestModelAtTheLimit: biggest('at-the-limit') ? `${biggest('at-the-limit')!.size} ${biggest('at-the-limit')!.quant}` : null,

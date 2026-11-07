@@ -95,6 +95,14 @@ export async function buildDocxBlob(doc: ReportDoc): Promise<Blob> {
     ...toChildren([{ k: 'h', level: 2, text: l.howHeading }, { k: 'p', text: l.howText }]),
     ...toChildren([{ k: 'h', level: 2, text: l.referencesHeading }, { k: 'ul', items: doc.references.map((r) => `[${r.label}](${r.url})`) }]),
     ...toChildren([{ k: 'h', level: 2, text: l.disclaimerHeading }, { k: 'p', text: l.disclaimerText }]),
+    ...(doc.overview
+      ? toChildren([
+          { k: 'h', level: 2, text: doc.overview.title },
+          { k: 'p', text: doc.overview.blurb },
+          { k: 'ul', items: doc.overview.tiles.map((t) => `${t.label}: ${t.value}`) },
+          { k: 'ul', items: doc.overview.links.map((k) => `[${k.label}](${k.href})`) },
+        ])
+      : []),
   ]
 
   const file = new d.Document({

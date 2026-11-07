@@ -23,6 +23,8 @@ export interface PowerCopy {
     step: (n: number, total: number) => string
     optional: string
     required: string
+    /** Shown under every multi-select question. */
+    multiHint: string
     notePlaceholder: string
     privacy: string
   }
@@ -87,6 +89,10 @@ export interface PowerCopy {
     preparing: string
     changeAnswers: string
     allProcesses: string
+    /** share row under the report: label, fixed message text, copy-link label */
+    shareTitle: string
+    shareText: string
+    shareLink: string
   }
   doc: {
     generatedBy: string

@@ -14,6 +14,7 @@ import { AskHansWindow } from './AskHansWindow'
 import { ConsentNotice } from './ConsentNotice'
 import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
+import { OverviewStrip } from './OverviewStrip'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
 import { ASK_HANS_SHARE_EVENT, CopyButton, type ShareKind, type ShareSource } from './CopyButton'
@@ -250,7 +251,7 @@ export function AskHansRoot() {
           patchConv(conv.id, (c) => ({ ...c, category: ev.v }))
         } else if (ev.t === 'done') {
           const empty = !acc.trim()
-          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : {}) }))
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : { overview: ev.overview }) }))
           if (!empty && consentValue?.value === 'yes') {
             logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, topics: ev.topics, lang })
           }
@@ -465,6 +466,9 @@ export function AskHansRoot() {
                     </button>
                   ))}
                 </div>
+              )}
+              {!readOnly && !m.pending && !m.error && m.overview && active?.messages.find((x) => x.overview)?.id === m.id && (
+                <OverviewStrip overview={m.overview} className="mt-2" />
               )}
               {m.content && !m.pending && (
                 <div className="mt-1 flex justify-end">

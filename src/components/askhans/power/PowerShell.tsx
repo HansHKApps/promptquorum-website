@@ -48,7 +48,9 @@ const SITE = 'https://www.promptquorum.com'
 const WANT_FOR_GOAL: Record<string, string> = { image: 'image', voice: 'audio', music: 'audio', coding: 'code', docs: 'docs', chat: 'chat', translate: 'chat' }
 function directoryQuery(process: ProcessId, choices: Record<string, string[]>): string {
   if (process !== 'solution') return ''
-  const want = WANT_FOR_GOAL[choices.goal?.[0] ?? '']
+  // Several goals: the directory filter takes one key, so only a single-goal run gets a pre-filtered link.
+  const goals = choices.goal ?? []
+  const want = goals.length === 1 ? WANT_FOR_GOAL[goals[0]] : undefined
   return want ? `?want=${want}` : ''
 }
 
@@ -89,6 +91,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const [status, setStatus] = useState<string | undefined>()
   const [error, setError] = useState<AskErrorCode | null>(null)
   const [runStamp, setRunStamp] = useState('')
+  const [overview, setOverview] = useState<ReportDoc['overview']>(undefined)
   // Date and running number of this report's file name; one per report, shared by every download format
   const [fileId, setFileId] = useState<{ date: string; seq: number | null } | null>(null)
   const abortRef = useRef<AbortController | null>(null)
@@ -205,6 +208,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       const ctl = new AbortController()
       abortRef.current = ctl
       setText('')
+      setOverview(undefined)
       setError(null)
       // Stage 1: memory estimate (the server computes FACTS first); after a few seconds, if no directory lookup
       // has started yet, the model is composing: stage 3. Tool events switch to stage 2 in between.
@@ -226,6 +230,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             setStatus(undefined)
           } else if (ev.t === 'tool') setStatus(tx.run.tool)
           else if (ev.t === 'done') {
+            setOverview(ev.overview)
             if (!acc.trim()) setError('failed')
             else {
               if (process === 'audit') setAuditReport(acc)
@@ -343,6 +348,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       ]),
       inputs: inputLines(reportProcess),
       body: text,
+      overview,
       references: [
         { label: tx.doc.refDirectory, url: `${SITE}${localizeAskPath('/directory', lang)}${directoryQuery(reportProcess, choices)}` },
         { label: tx.doc.refHardwareTool, url: `${SITE}${localizeAskPath('/tools/what-can-i-run', lang)}` },
@@ -359,7 +365,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         disclaimerText: tx.doc.disclaimerText,
       },
     }
-  }, [reportProcess, choices, texts, fileId, tx, runStamp, lang, ac.dir, inputLines, text])
+  }, [reportProcess, choices, texts, fileId, tx, runStamp, lang, ac.dir, inputLines, text, overview])
 
   // ---- rendering --------------------------------------------------------------------------------
   const backLabel = view.k === 'menu' ? tx.menu.back : tx.wizard.back
@@ -443,6 +449,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         <h2 id="pm-step-title" ref={headingRef} tabIndex={-1} className="mt-0.5 text-[16px] font-bold leading-snug text-foreground outline-none">
           {copy?.q ?? step.id}
         </h2>
+        {step.kind === 'multi' && <p className="mt-1 text-[12px] font-medium text-muted-foreground">{tx.wizard.multiHint}</p>}
         {copy?.hint && <p className="mt-1 text-[12px] text-muted-foreground">{copy.hint}</p>}
         <div className="mt-3">
           {(step.kind === 'single' || step.kind === 'multi') && step.options && (
@@ -451,6 +458,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
               labels={tx.opt}
               selected={choices[step.id] ?? []}
               multi={step.kind === 'multi'}
+              exclusive={step.exclusive}
               ariaLabel={copy?.q ?? step.id}
               onChange={(v) => setChoices((c) => ({ ...c, [step.id]: v }))}
             />
@@ -519,6 +527,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         <ReportView
           tx={tx}
           doc={doc}
+          process={view.process}
           onExport={(channel) => {
             // Anonymous export counter: format name only, never the report; only with consent "Yes".
             if (consent?.value === 'yes') logEvent({ type: 'power_export', visitId: getVisitId(), process: view.process, channel })

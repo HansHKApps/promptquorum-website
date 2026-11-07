@@ -22,12 +22,13 @@ export const copy: PowerCopy = {
     step: (n, total) => `ステップ ${n} / ${total}`,
     optional: '任意',
     required: '続けるには、少なくとも 1 つ選んでください。',
+    multiHint: '複数選択できます。',
     notePlaceholder: 'ほかにお伝えしたいことはありますか？（任意、300 文字まで）',
     privacy: 'レポートを作成するため、回答は注意書きに記載の AI サービスに送信されます。当社のサーバーには保存されません。',
   },
   steps: {
     hardware: { q: 'お使いのパソコンを教えてください。', label: 'パソコン' },
-    goals: { q: 'パソコンで何をしたいですか？（複数選択可）', label: '目的' },
+    goals: { q: 'パソコンで何をしたいですか？', label: '目的' },
     connectivity: { q: '完全にオフラインで動作する必要がありますか？', label: '接続' },
     price: { q: '有料ソフトでも問題ありませんか？', label: 'ソフトの費用' },
     experience: { q: 'この種のソフトをインストールした経験はどのくらいですか？', label: '経験' },
@@ -55,7 +56,7 @@ export const copy: PowerCopy = {
     auditGoals: { q: '何を実現したいですか？（当てはまるものをすべて選択）', label: '目標' },
     recommendation: { q: 'どの改善ですか？', label: '選んだ改善' },
     mobile: { q: 'スマートフォンについて教えてください。', label: 'スマートフォン' },
-    mobileGoals: { q: 'スマートフォンで AI に何をさせたいですか？（複数選択可）', label: '目的' },
+    mobileGoals: { q: 'スマートフォンで AI に何をさせたいですか？', label: '目的' },
   },
   opt: {
     chat: 'チャットと文章作成',
@@ -226,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: 'PDF（印刷ダイアログ）',
     preparing: 'ファイルを準備しています…',
     changeAnswers: '入力内容を変更',
+    shareTitle: 'セットアップを共有',
+    shareText: 'Ask Hans（PromptQuorum）でローカル AI のセットアップを確認しました。ぜひお試しください。',
+    shareLink: 'リンクを共有',
     allProcesses: 'すべての手順',
   },
   doc: {

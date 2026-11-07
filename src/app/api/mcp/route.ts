@@ -13,6 +13,7 @@ import { createMcpHandler } from 'mcp-handler'
 import { ResourceTemplate } from '@modelcontextprotocol/server'
 import { createHash } from 'crypto'
 import { Ratelimit } from '@upstash/ratelimit'
+import { getSiteOverview } from '@/lib/home/overview'
 import { z } from 'zod'
 import { redis } from '@/lib/redis'
 import {
@@ -88,7 +89,7 @@ function run(toolName: McpToolName, fn: () => unknown) {
 }
 
 const OS_ENUM = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
-const SERVER_VERSION = '2.1.0'
+const SERVER_VERSION = '2.2.0'
 const SITE = 'https://www.promptquorum.com'
 const mdResource = (uri: URL, text: string) => ({ contents: [{ uri: uri.href, mimeType: 'text/markdown', text }] })
 const jsonResource = (uri: URL, data: unknown) => ({ contents: [{ uri: uri.href, mimeType: 'application/json', text: JSON.stringify(data, null, 2) }] })
@@ -462,6 +463,22 @@ const handler = createMcpHandler(
         }),
       },
       async (args) => withUsageTracking('get_latest', () => jsonResult(getLatest(args), 'get_latest'))
+    )
+
+    server.registerTool(
+      'get_site_stats',
+      {
+        title: 'PromptQuorum site size and usage',
+        description:
+          'What PromptQuorum is and how big it is: apps tracked, languages, makers who verified their app, articles, hands-on tests, AI assistant calls (MCP) and Ask Hans answers, with the public pages that show the live numbers. Read-only, anonymous totals. Use for "what is PromptQuorum" or "how big / how much used" questions. Example: {"lang":"de"}.',
+        inputSchema: z.object({
+          lang: z.enum(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']).optional().describe('Label language, default en'),
+        }),
+      },
+      async (args) => {
+        const overview = await getSiteOverview(args.lang ?? 'en')
+        return withUsageTracking('get_site_stats', () => jsonResult(overview, 'get_site_stats'))
+      }
     )
 
     server.registerTool(

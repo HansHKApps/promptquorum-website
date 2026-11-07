@@ -8,14 +8,18 @@ interface Props {
   labels: Record<string, string>
   selected: readonly string[]
   multi: boolean
+  /** Multi only: ids that cannot be combined with any other pick (e.g. "I don't know"). */
+  exclusive?: readonly string[]
   onChange: (next: string[]) => void
   ariaLabel: string
 }
 
-export function ChoiceGroup({ options, labels, selected, multi, onChange, ariaLabel }: Props) {
+export function ChoiceGroup({ options, labels, selected, multi, exclusive = [], onChange, ariaLabel }: Props) {
   const toggle = (id: string) => {
     if (!multi) return onChange([id])
-    onChange(selected.includes(id) ? selected.filter((x) => x !== id) : [...selected, id])
+    if (selected.includes(id)) return onChange(selected.filter((x) => x !== id))
+    if (exclusive.includes(id)) return onChange([id])
+    onChange([...selected.filter((x) => !exclusive.includes(x)), id])
   }
   return (
     <div role={multi ? 'group' : 'radiogroup'} aria-label={ariaLabel} className="grid gap-2 sm:grid-cols-2">

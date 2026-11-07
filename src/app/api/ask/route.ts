@@ -23,6 +23,7 @@ import { detectLang } from '@/lib/askhans/detect-lang'
 import { generateFollowups } from '@/lib/askhans/followups'
 import { missingSourcesMarkdown } from '@/lib/askhans/sources'
 import { bumpTotals } from '@/lib/askhans/totals'
+import { getSiteOverview } from '@/lib/home/overview'
 import { mergeTopics, type AnswerTopics } from '@/lib/askhans/topics'
 import { buildToolDefinitions, runTool, SET_CATEGORY_TOOL } from '@/lib/askhans/tools'
 
@@ -271,7 +272,8 @@ export async function POST(req: NextRequest): Promise<Response> {
         }
       }
       if (spoken.trim()) await bumpTotals('answers')
-      send({ t: 'done', category, tools: [...new Set(toolsUsed)], topics })
+      const overview = spoken.trim() ? await getSiteOverview(pageLang).catch(() => undefined) : undefined
+      send({ t: 'done', category, tools: [...new Set(toolsUsed)], topics, overview })
     } catch (err) {
       console.error('[askhans] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
       send({ t: 'error', code: classify(err) })

@@ -22,12 +22,13 @@ export const copy: PowerCopy = {
     step: (n, total) => `${total}단계 중 ${n}단계`,
     optional: '선택 사항',
     required: '계속하려면 하나 이상 선택하십시오.',
+    multiHint: '복수 선택 가능합니다.',
     notePlaceholder: '더 알려 주실 내용이 있습니까? (선택 사항, 최대 300자)',
     privacy: '보고서를 작성하기 위해 답변이 안내문에 명시된 AI 서비스로 전송됩니다. 답변은 저희 서버에 저장되지 않습니다.',
   },
   steps: {
     hardware: { q: '어떤 컴퓨터를 사용하십니까?', label: '컴퓨터' },
-    goals: { q: '컴퓨터로 무엇을 하고 싶으십니까? (복수 선택 가능)', label: '목표' },
+    goals: { q: '컴퓨터로 무엇을 하고 싶으십니까?', label: '목표' },
     connectivity: { q: '완전히 오프라인으로 작동해야 합니까?', label: '연결' },
     price: { q: '유료 소프트웨어도 괜찮습니까?', label: '소프트웨어 비용' },
     experience: { q: '이런 소프트웨어를 설치해 본 경험이 얼마나 되십니까?', label: '경험' },
@@ -55,7 +56,7 @@ export const copy: PowerCopy = {
     auditGoals: { q: '무엇을 이루고 싶으십니까? (해당하는 항목을 모두 선택)', label: '목표' },
     recommendation: { q: '어떤 개선안입니까?', label: '선택한 개선안' },
     mobile: { q: '스마트폰에 대해 알려 주십시오.', label: '스마트폰' },
-    mobileGoals: { q: '스마트폰에서 AI가 무엇을 하기를 원하십니까? (복수 선택 가능)', label: '목표' },
+    mobileGoals: { q: '스마트폰에서 AI가 무엇을 하기를 원하십니까?', label: '목표' },
   },
   opt: {
     chat: '대화와 글쓰기',
@@ -226,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: 'PDF(인쇄 대화상자)',
     preparing: '파일을 준비하고 있습니다…',
     changeAnswers: '입력 내용 수정',
+    shareTitle: '내 설정 공유하기',
+    shareText: 'Ask Hans(PromptQuorum)로 내 로컬 AI 설정을 점검했습니다. 직접 해 보세요:',
+    shareLink: '링크 공유',
     allProcesses: '모든 절차',
   },
   doc: {
