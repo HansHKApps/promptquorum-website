@@ -11,6 +11,7 @@ import { PROCESSES, PROCESS_ORDER, MAX_NOTE_CHARS, MAX_TEXT_CHARS, visibleSteps 
 import type { HardwareAnswers, MobileAnswers, ProcessId, SolutionAnswers, StepDef } from '@/lib/askhans/solutions/types'
 import type { Language } from '@/lib/blog/blogContent'
 import { ConsentNotice } from '../ConsentNotice'
+import { FeedbackBar } from '../FeedbackBar'
 import { useAskCopy, useAskLang, localizeAskPath } from '../copy'
 import { AskIcon } from '../icons'
 import type { AskErrorCode, ConsentRecord } from '../types'
@@ -586,10 +587,16 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     )
   }
 
+  // Same star rating as the chat: shown once a report is finished (not while streaming or after an error).
+  const showRating = view.k === 'report' && !error && !!doc
+
   return (
-    <div ref={rootRef} tabIndex={-1} className="min-h-0 flex-1 overflow-y-auto bg-muted/20 p-3 outline-none">
-      {topBar}
-      {body}
-    </div>
+    <>
+      <div ref={rootRef} tabIndex={-1} className="min-h-0 flex-1 overflow-y-auto bg-muted/20 p-3 outline-none">
+        {topBar}
+        {body}
+      </div>
+      {showRating && view.k === 'report' && <FeedbackBar key={`${view.process}-${runStamp}`} lastQuestion={`Power Mode: ${view.process}`} lastAnswer={text} />}
+    </>
   )
 }
