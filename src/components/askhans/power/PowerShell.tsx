@@ -149,8 +149,6 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     setView({ k: 'wizard', process, index: 0 })
   }
 
-  const lastStepIndex = (process: ProcessId) => visibleSteps(process, { choices }).length - 1
-
   const goBack = useCallback((): boolean => {
     if (view.k === 'menu') {
       onExit()
@@ -574,7 +572,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
           {(view.k === 'report' || failed) && (
             <>
               {view.process !== 'implement' && (
-                <button type="button" onClick={() => setView({ k: 'wizard', process: view.process, index: lastStepIndex(view.process) })} className="rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary">
+                <button type="button" onClick={() => setView({ k: 'wizard', process: view.process, index: 0 })} className="rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary">
                   {tx.report.changeAnswers}
                 </button>
               )}

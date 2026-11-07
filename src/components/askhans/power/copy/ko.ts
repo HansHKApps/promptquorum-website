@@ -225,7 +225,7 @@ export const copy: PowerCopy = {
     asDocx: 'Word (.docx)',
     asPdf: 'PDF(인쇄 대화상자)',
     preparing: '파일을 준비하고 있습니다…',
-    changeAnswers: '답변 수정',
+    changeAnswers: '입력 내용 수정',
     allProcesses: '모든 절차',
   },
   doc: {
