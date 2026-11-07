@@ -23566,5 +23566,365 @@
     ],
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "46911cba-3aad-478a-a59d-810faad0c302",
+    "slug": "/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.133Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "NextChat review: free MIT-licensed chat UI with one-click Vercel deploy and Docker setup, plus an October 2026 MCP security fix not yet in a release.",
+        "new": "NextChat review: free MIT-licensed chat UI with Vercel and Docker setup, plus MCP fixes on main, per project pull requests, not yet in a release."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "aa7e1690-5f24-490c-9df6-95fabd1818fd",
+    "slug": "/de/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.165Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Ein-Klick-Vercel-Deploy und Docker, dazu eine MCP-Sicherheitskorrektur vom Oktober 2026 ohne Release.",
+        "new": "NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Vercel- und Docker-Setup, dazu laut Pull Requests MCP-Korrekturen in main, noch ohne Release."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f055c5a2-1396-4446-bd26-78eaed6c0e66",
+    "slug": "/fr/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.195Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Avis NextChat : chat gratuit sous licence MIT, déploiement Vercel en un clic et Docker, avec un correctif de sécurité MCP d'octobre 2026 hors release.",
+        "new": "Avis NextChat : chat gratuit sous licence MIT, déploiement Vercel et Docker, avec des correctifs MCP sur main selon les pull requests, hors release."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "137d0283-caaa-451b-a850-cd0ef2924232",
+    "slug": "/ja/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.226Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "NextChatレビュー：MITライセンスの無料チャットUI。Vercelワンクリック導入とDocker設定、リリース未反映の2026年10月MCPセキュリティ修正も解説。",
+        "new": "NextChatレビュー：MITライセンスの無料チャットUI。VercelとDockerの導入と、プルリクエストによるとmainで修正済みでリリース未反映のMCP問題も解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a167d759-6a3b-43f1-8d3f-2a7196532295",
+    "slug": "/zh/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.256Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "NextChat评测：MIT许可证的免费聊天界面，支持Vercel一键部署与Docker，并说明尚未进入正式版本的2026年10月MCP安全修复。",
+        "new": "NextChat评测：MIT许可证的免费聊天界面，支持Vercel与Docker部署，并说明据拉取请求已在main修复、尚未进入正式版本的MCP问题。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ce7623cd-6e2c-4cfb-acec-5509173ddbf2",
+    "slug": "/es/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.286Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de NextChat: chat gratuito con licencia MIT, despliegue en Vercel con un clic y Docker, y un parche de seguridad MCP de octubre de 2026 sin release.",
+        "new": "Reseña de NextChat: chat gratuito con licencia MIT, despliegue en Vercel y Docker, y correcciones MCP en main según los pull requests, sin release."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2077d01c-51af-4caa-83de-ff705f7639b8",
+    "slug": "/pt/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.318Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do NextChat: chat gratuito com licença MIT, deploy na Vercel com um clique e Docker, e correção de segurança do MCP de outubro de 2026 sem release.",
+        "new": "Análise do NextChat: chat gratuito com licença MIT, deploy na Vercel e Docker, e correções do MCP na main segundo os pull requests, sem release."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3e087fde-bc58-44a2-9b61-9d05d95ebb92",
+    "slug": "/ar/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.350Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة NextChat: واجهة دردشة مجانية برخصة MIT مع نشر بنقرة على Vercel وDocker، مع إصلاح أمني لـ MCP في أكتوبر 2026 غير مضمَّن بعد في إصدار.",
+        "new": "مراجعة NextChat: واجهة دردشة مجانية برخصة MIT مع نشر على Vercel وDocker، مع إصلاحات MCP على main بحسب طلبات السحب لم تصدر في إصدار بعد."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c946d914-db48-4f7a-a355-5783a3f93d88",
+    "slug": "/ko/local-llms/nextchat-review",
+    "date": "2026-11-07T07:53:02.381Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "NextChat 리뷰: MIT 라이선스 무료 채팅 UI, Vercel 원클릭 배포와 Docker 설정, 릴리스에 아직 없는 2026년 10월 MCP 보안 수정까지 정리.",
+        "new": "NextChat 리뷰: MIT 라이선스 무료 채팅 UI, Vercel·Docker 배포, 풀 리퀘스트 기준으로 main에서 수정됐으나 릴리스에 없는 MCP 문제까지 정리."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0ccf7b60-b480-4f72-9237-b406947edee8",
+    "slug": "/ja/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-07T07:53:02.511Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月2日に確認。",
+        "new": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月7日に確認。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "digitalocean vs. aws vs. coreweave vs. runpod: cloud for ai"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "74094233-f5b7-4ec1-a5a6-e490dbaedbff",
+    "slug": "/zh/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-07T07:53:02.542Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-02。",
+        "new": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-07。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "digitalocean vs. aws vs. coreweave vs. runpod: cloud for ai"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "25b54ec5-a02d-4962-b703-e683b8fbabe4",
+    "slug": "/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.647Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM is NVIDIA's open-source, Apache 2.0-licensed engine for compiling LLMs into GPU-optimized inference engines. What it is, how it compares to vLLM and llama.cpp, and how to build and run one.",
+        "new": "NVIDIA's open-source TensorRT-LLM library for NVIDIA GPUs: what it is, how it compares to vLLM and llama.cpp, and what changed in release 1.2."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "08841163-d6ca-48f8-a6ec-2d418676a044",
+    "slug": "/de/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.681Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM ist NVIDIAs Open-Source-, Apache-2.0-lizenzierte Engine zum Kompilieren von LLMs in GPU-optimierte Inference-Engines. Was es ist, wie es sich zu vLLM und llama.cpp verhält, und wie man eine Engine baut und betreibt.",
+        "new": "NVIDIAs Open-Source-Bibliothek TensorRT-LLM für NVIDIA-GPUs: Was sie ist, wie sie sich zu vLLM und llama.cpp verhält und was sich in Version 1.2 änderte."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5401c4f5-088f-482f-9b89-3138c0d1f6b3",
+    "slug": "/fr/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.712Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM est le moteur open source de NVIDIA, sous licence Apache 2.0, qui compile les LLM en moteurs d'inférence optimisés pour GPU. Ce que c'est, comment il se compare à vLLM et llama.cpp, et comment construire et exécuter un moteur.",
+        "new": "La bibliothèque open source TensorRT-LLM de NVIDIA pour GPU NVIDIA : définition, comparaison avec vLLM et llama.cpp, et nouveautés de la version 1.2."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "55a46348-763d-4c55-96b9-9dfd3879a3a7",
+    "slug": "/ja/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.743Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLMはNVIDIAのオープンソース・Apache 2.0ライセンスのエンジンで、LLMをGPU最適化された推論エンジンにコンパイルします。vLLMやllama.cppとの違い、エンジンの構築・実行方法を解説します。",
+        "new": "NVIDIA GPU向けオープンソースライブラリTensorRT-LLMを解説。vLLM・llama.cppとの比較と、バージョン1.2でのワークフロー変更点を紹介します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3721630b-3e98-4bf1-b58e-bd18715bd008",
+    "slug": "/zh/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.774Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM是NVIDIA的开源、Apache 2.0许可引擎,用于将LLM编译成GPU优化的推理引擎。介绍它是什么、与vLLM和llama.cpp的对比,以及如何构建并运行一个引擎。",
+        "new": "介绍NVIDIA开源的GPU推理库TensorRT-LLM:它是什么、与vLLM和llama.cpp的对比,以及1.2版本中引擎构建流程的变化。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6c651679-a741-4934-8d2a-e55f1b4aa895",
+    "slug": "/es/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.805Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM es el motor de código abierto de NVIDIA, licenciado bajo Apache 2.0, para compilar LLM en motores de inferencia optimizados para GPU. Qué es, cómo se compara con vLLM y llama.cpp, y cómo construir y ejecutar un motor.",
+        "new": "La biblioteca de código abierto TensorRT-LLM de NVIDIA para GPU NVIDIA: qué es, cómo se compara con vLLM y llama.cpp y qué cambió en la versión 1.2."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "307fa478-3444-4298-afef-c86820086be1",
+    "slug": "/pt/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.836Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM é o motor de código aberto da NVIDIA, sob licença Apache 2.0, que compila LLMs em motores de inferência otimizados para GPU. O que é, como se compara ao vLLM e ao llama.cpp, e como construir e executar um motor.",
+        "new": "A biblioteca de código aberto TensorRT-LLM da NVIDIA para GPUs NVIDIA: o que é, como se compara ao vLLM e ao llama.cpp e o que mudou na versão 1.2."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5f449029-b354-44fb-a69f-a308932e0f85",
+    "slug": "/ar/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.867Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM هو محرك NVIDIA مفتوح المصدر بترخيص Apache 2.0 لتجميع نماذج اللغة الكبيرة في محركات استدلال مُحسَّنة لوحدات GPU. ما هو، وكيف يقارَن بـ vLLM وllama.cpp، وكيفية بناء محرك وتشغيله.",
+        "new": "مكتبة TensorRT-LLM مفتوحة المصدر من NVIDIA لوحدات GPU من NVIDIA: ما هي، وكيف تقارن بـ vLLM وllama.cpp، وما الذي تغيّر في الإصدار 1.2."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0b906908-d2db-47b5-adb8-65fd5ce9b3d7",
+    "slug": "/ko/power-local-llm/tensorrt-llm-explained",
+    "date": "2026-11-07T07:53:02.898Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "TensorRT-LLM은 NVIDIA의 오픈소스, Apache 2.0 라이선스 엔진으로 LLM을 GPU에 최적화된 추론 엔진으로 컴파일합니다. vLLM 및 llama.cpp와의 비교, 엔진 구축 및 실행 방법을 설명합니다.",
+        "new": "NVIDIA GPU용 오픈소스 라이브러리 TensorRT-LLM을 설명합니다. vLLM·llama.cpp와의 비교와 1.2 버전에서 달라진 워크플로를 다룹니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
