@@ -23,6 +23,7 @@ import { MarketingPanel } from './MarketingPanel'
 import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, touchUsage, uid } from './storage'
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
 import { logEvent, streamAnswer } from './useAskStream'
+import { trackPromoOpen } from '@/lib/tracking/promo'
 import { useIsDesktop } from './useIsDesktop'
 import { WelcomeBox } from './WelcomeBox'
 
@@ -146,6 +147,9 @@ export function AskHansRoot() {
     if (wasOpen.current === false && ui.open) {
       // Totals are consent-only (privacy decision 2026-11-07). A promo slot adds only its fixed source name.
       if (consentRef.current?.value === 'yes') logEvent(openSource.current ? { type: 'open', source: openSource.current } : { type: 'open' })
+      // Promo opens are also counted in Umami (cookieless, anonymous, listed under "Necessary", same as promo_click),
+      // so first-time visitors who open the tool before answering the consent step are not lost from the pilot numbers.
+      if (openSource.current) trackPromoOpen(openSource.current)
       openSource.current = null
     }
     if (wasOpen.current === true && !ui.open) flushSession()
