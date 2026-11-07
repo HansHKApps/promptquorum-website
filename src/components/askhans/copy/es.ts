@@ -70,6 +70,7 @@ export const copy: AskCopy = {
 
   dir: 'ltr',
   devNotice: 'Herramienta en desarrollo: agradecemos sus comentarios.',
+  copyright: "Las respuestas de Ask Hans son contenido de PromptQuorum y están protegidas por derechos de autor. El uso personal y las citas breves con un enlace a promptquorum.com están permitidos. La copia masiva, la extracción automatizada, la republicación y el uso para entrenar IA requieren permiso por escrito.",
   contactLabel: 'Enviar comentarios por correo electrónico',
   welcomeAria: 'Bienvenida',
   feedback: {

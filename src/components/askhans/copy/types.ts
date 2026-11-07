@@ -23,6 +23,8 @@ export interface AskCopy {
   tagline: string
   /** top line of the window: tool is in development, feedback welcome */
   devNotice: string
+  /** Copyright notice under the chat; rendered after "© {year} PromptQuorum." */
+  copyright: string
   /** aria-label of the e-mail link in the top line */
   contactLabel: string
   close: string

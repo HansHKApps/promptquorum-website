@@ -3,7 +3,8 @@
 // still work once pasted into a mail or document.
 
 export const SITE_URL = 'https://www.promptquorum.com'
-const FOOTER_TEXT = 'Ask Hans · PromptQuorum'
+// Every copied/shared answer carries the source and a copyright line (the © year is the year of sharing).
+const FOOTER_TEXT = `Ask Hans · © ${new Date().getFullYear()} PromptQuorum`
 /** Share URLs have length limits (mailto, wa.me): longer answers are cut before the footer. */
 const SHARE_MAX_CHARS = 1500
 

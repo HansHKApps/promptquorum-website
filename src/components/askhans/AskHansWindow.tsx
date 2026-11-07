@@ -271,6 +271,10 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
 
         <div className="flex min-h-0 flex-1 flex-col">{children}</div>
 
+        <p className="flex-shrink-0 border-t border-border bg-white px-3 py-1 text-center text-[10px] leading-snug text-muted-foreground">
+          © {new Date().getFullYear()} PromptQuorum. {tx.copyright}
+        </p>
+
         {floating &&
           (Object.keys(EDGE_STYLE) as Edge[]).map((edge) => (
             <div key={edge} aria-hidden="true" onPointerDown={startResize(edge)} className={`absolute z-10 touch-none ${EDGE_STYLE[edge]}`} style={{ cursor: EDGE_CURSOR[edge] }} />

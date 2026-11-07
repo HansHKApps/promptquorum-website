@@ -70,6 +70,7 @@ export const copy: AskCopy = {
 
   dir: 'ltr',
   devNotice: '工具开发中——期待您的反馈。',
+  copyright: "Ask Hans 的回答属于 PromptQuorum 的内容，受版权保护。个人使用以及附带 promptquorum.com 链接的简短引用均可。批量复制、自动抓取、转载以及用于 AI 训练，须事先获得书面许可。",
   contactLabel: '通过电子邮件发送反馈',
   welcomeAria: '欢迎',
   feedback: {
