@@ -20,7 +20,7 @@ Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Ru
 | Target | Where to read it |
 |---|---|
 | Ask Hans / Power Mode (in place) | Redis daily counters of the Ask Hans event route: `askhans:day:<date>` field `open_src:promo_<target>_<placement>` (e.g. `open_src:promo_ask_hans_p2`, `open_src:promo_power_mode_p1`) next to `total_opens`. Then questions (`q:*`) and Power Mode reports (`power:*`, `total_power`). The counters are per day, not per session: "open-to-use" is read as promo opens vs. questions/reports on the same days (an estimate, not a per-session join; no visitor ID is stored for opens). |
-| Directory / MCP (links) | Link carries `?via=promo_<target>_<placement>` (e.g. `via=promo_directory_p3`). In Umami filter pageviews by URL query `via`. Umami records the query string of the landing URL. |
+| Directory / MCP (links) | Link carries `?via=promo_<target>_<placement>` (e.g. `via=promo_directory_p3`). In Umami filter pageviews by URL query `via`. Umami normally records the landing URL with its query string (not yet verified on this proxy setup). |
 | MCP server hits | Server-side hits on `/api/mcp` and `/mcp.json`: NOT verified as accessible. Check Vercel runtime logs before relying on it. |
 
 ## Metrics
