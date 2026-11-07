@@ -28,6 +28,7 @@ export const MCP_TOOL_NAMES = [
   'find_related_content',
   'list_pages',
   'get_page',
+  'get_site_stats',
   'start',
   'set_consent',
   'forget_me',
