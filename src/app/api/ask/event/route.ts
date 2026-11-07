@@ -5,7 +5,7 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo|report>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (open_src:<promo_source>, q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo|report>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
 //                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn,
 //                                 sessions, ret:<new|back>, days:<bucket>, dur:<bucket>, msgs:<bucket>)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
@@ -18,6 +18,7 @@ import { redis } from '@/lib/redis'
 import { isCategoryKey, ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
 import { cleanTopics } from '@/lib/askhans/topics'
 import { isProcessId } from '@/lib/askhans/solutions/types'
+import { PROMO_OPEN_SOURCES } from '@/lib/promo/open'
 import { isDaysBucket, isDurationBucket, isQuestionBucket, isReturnKind } from '@/lib/askhans/engagement'
 
 export const runtime = 'nodejs'
@@ -78,6 +79,8 @@ export async function POST(req: NextRequest) {
       case 'open':
         // Window opened: aggregated counter only (no visitor ID); the client sends it only after "Yes".
         pipe.hincrby(dayKey, 'total_opens', 1)
+        // Which promo slot opened it: fixed whitelist (promo_<target>_<placement>), counter only.
+        if (typeof b.source === 'string' && PROMO_OPEN_SOURCES.has(b.source)) pipe.hincrby(dayKey, `open_src:${b.source}`, 1)
         pipe.hincrby('askhans:total', 'opens', 1)
         pipe.hsetnx('askhans:total', 'since', day)
         break

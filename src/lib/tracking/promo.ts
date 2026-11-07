@@ -28,7 +28,7 @@ function deviceKind(): 'mobile' | 'desktop' {
   }
 }
 
-/** Source string used in attribution: `promo_<target>_<placement>` (placement lower-cased). */
+/** Source string used in attribution (`via=` on links): `promo_<target>_<placement>`, placement lower-cased. */
 export function promoSource(target: PromoTarget, placement: PromoPlacement): string {
   return `promo_${target.replace('-', '_')}_${placement.toLowerCase()}`
 }

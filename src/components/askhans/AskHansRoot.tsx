@@ -88,6 +88,10 @@ export function AskHansRoot() {
   /** answers that already produced a counted click (each answer counts once in the click-through rate) */
   const clickedAnswers = useRef(new Set<string>())
   const wasOpen = useRef<boolean | null>(null)
+  /** promo slot that asked for this open (`promo_<target>_<placement>`), sent once with the 'open' counter, then cleared */
+  const openSource = useRef<string | null>(null)
+  /** element that opened the window (promo button): gets focus back when the window closes */
+  const returnFocusTo = useRef<HTMLElement | null>(null)
   const logoRef = useRef<HTMLButtonElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -192,7 +196,10 @@ export function AskHansRoot() {
   const closeWindow = useCallback((focusLogo = true) => {
     setMode('chat')
     setUi((u) => ({ ...u, open: false, everClosed: true }))
-    if (focusLogo) setTimeout(() => logoRef.current?.focus(), 30)
+    const back = returnFocusTo.current
+    returnFocusTo.current = null
+    if (focusLogo && back?.isConnected) setTimeout(() => back.focus(), 30)
+    else if (focusLogo) setTimeout(() => logoRef.current?.focus(), 30)
   }, [])
 
   const openWindow = useCallback(() => {
@@ -305,8 +312,14 @@ export function AskHansRoot() {
   useEffect(() => {
     if (!ready) return
     const on = (e: Event) => {
-      const detail = (e as CustomEvent<{ question?: string; power?: boolean }>).detail
+      const detail = (e as CustomEvent<{ question?: string; power?: boolean; source?: string; returnFocusTo?: HTMLElement }>).detail
       const q = detail?.question
+      // Promo opens only: remember the source and the trigger, but only if this call really opens the window
+      // (an already open window logs no 'open' and keeps its own focus).
+      if (wasOpen.current === false) {
+        if (typeof detail?.source === 'string') openSource.current = detail.source
+        if (detail?.returnFocusTo instanceof HTMLElement) returnFocusTo.current = detail.returnFocusTo
+      }
       if (detail?.power) {
         setMode('power')
         openWindow()

@@ -3,8 +3,8 @@
 // PromoSlot: one inline slot for Directory, Ask Hans, Ask Hans Power Mode and the MCP server.
 //
 // Step 1 scope (placeholder content): box, reserved height, provider switch and tracking. It is not placed on any
-// page yet. The in-place openers for Ask Hans / Power Mode come in the next PR through `onActivate`; the final
-// 9-locale copy and the SVG graphics come after that. Until then the text below is English placeholder text.
+// page yet. Ask Hans / Power Mode open in place through lib/promo/open.ts (existing event, no navigation).
+// The final 9-locale copy and the SVG graphics come in a later PR; until then the text is English placeholder text.
 //
 // - Inline only: no overlay, popup or interstitial. Not dismissible (clean pilot data).
 // - Reserved height per variant and breakpoint, so the slot causes no layout shift.
@@ -14,6 +14,7 @@
 
 import { useEffect, useRef } from 'react'
 import { useLang } from '@/hooks/useLang'
+import { openAskHansFromPromo } from '@/lib/promo/open'
 import { PROMO_PROVIDER, PROMO_RESERVED_HEIGHT, PROMO_VIEW_MIN_MS, PROMO_VIEW_THRESHOLD } from '@/lib/promo/config'
 import type { PromoPlacement, PromoTarget, PromoVariant } from '@/lib/promo/types'
 import { promoSource, trackPromo } from '@/lib/tracking/promo'
@@ -32,12 +33,10 @@ export interface PromoSlotProps {
   target: PromoTarget
   placement: PromoPlacement
   variant?: PromoVariant
-  /** Opens the tool in place (ask-hans / power-mode). Wired in the next PR; without it those CTAs only track. */
-  onActivate?: () => void
   className?: string
 }
 
-export function PromoSlot({ target, placement, variant = 'card', onActivate, className = '' }: PromoSlotProps) {
+export function PromoSlot({ target, placement, variant = 'card', className = '' }: PromoSlotProps) {
   const lang = useLang()
   const ref = useRef<HTMLElement>(null)
   const ctx = { target, placement, variant, locale: lang }
@@ -79,9 +78,10 @@ export function PromoSlot({ target, placement, variant = 'card', onActivate, cla
   const linkPath = LINK_PATH[target]
   const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${promoSource(target, placement)}` : undefined
   const ctaClass = 'inline-flex shrink-0 items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
-  const click = () => {
+  const click = (e: React.MouseEvent<HTMLElement>) => {
     trackPromo('promo_click', ctx)
-    if (!href) onActivate?.()
+    // Ask Hans / Power Mode open in place (real <button>, focus returns to it on close); the others are links.
+    if (!href && (target === 'ask-hans' || target === 'power-mode')) openAskHansFromPromo(target, placement, e.currentTarget)
   }
 
   return (
