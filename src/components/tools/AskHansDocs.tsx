@@ -106,7 +106,7 @@ export function AskHansDocs({ lang }: { lang: Language }) {
         </div>
       </section>
 
-      {/* 03 Power Mode: the four guided reports */}
+      {/* 03 Power Mode: the five guided reports */}
       <section id="power" className="scroll-mt-20 bg-white">
         <div className={`${MAX_WIDTH} py-14`}>
           <SectionHeading index={3} tone="orchid">{tDocsAsk('powerHeading', lang)}</SectionHeading>

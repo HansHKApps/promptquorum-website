@@ -38,6 +38,9 @@ export interface PowerCopy {
     ramApple: string
     vram: string
     storage: string
+    /** processor / chip field (audit only) */
+    cpu: string
+    cpuPlaceholder: string
     unknown: string
     /** shown under the memory field when the device is a Mac (unified memory) */
     macNote: string
@@ -48,6 +51,20 @@ export interface PowerCopy {
     devices: Record<DeviceKind, string>
     oses: Record<OsKind, string>
     gpus: Record<GpuKind, string>
+  }
+  /** Audit My AI Setup: free-text placeholders, saving in this browser, and starting an improvement */
+  audit: {
+    setupText: string
+    problemsText: string
+    save: string
+    saved: string
+    saveFailed: string
+    clear: string
+    cleared: string
+    loadTitle: (date: string) => string
+    loadOpen: string
+    implementHeading: string
+    implementIntro: string
   }
   mobile: {
     help: string

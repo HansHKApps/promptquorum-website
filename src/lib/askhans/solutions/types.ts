@@ -1,6 +1,6 @@
 // Ask Hans Power Mode — shared types (browser + server, so keep this file free of server-only imports).
 
-export const PROCESS_IDS = ['max', 'hardware', 'solution', 'mobile'] as const
+export const PROCESS_IDS = ['max', 'audit', 'hardware', 'solution', 'mobile', 'implement'] as const
 export type ProcessId = (typeof PROCESS_IDS)[number]
 
 export const isProcessId = (v: unknown): v is ProcessId => typeof v === 'string' && (PROCESS_IDS as readonly string[]).includes(v)
@@ -25,6 +25,8 @@ export interface HardwareAnswers {
   vramGb: number | null
   /** Free disk space. null = unknown. */
   storageGb: number | null
+  /** Processor or Apple chip as typed by the visitor (audit only, max 60 chars). Free text = data, never instructions. */
+  cpu?: string
 }
 
 export interface MobileAnswers {
@@ -41,9 +43,11 @@ export interface SolutionAnswers {
   mobile?: MobileAnswers
   choices: Record<string, string[]>
   note?: string
+  /** Free-text fields by step id (audit: setup and problems descriptions; implement: the chosen recommendation). */
+  texts?: Record<string, string>
 }
 
-export type StepKind = 'hardware' | 'mobile' | 'single' | 'multi' | 'note'
+export type StepKind = 'hardware' | 'mobile' | 'single' | 'multi' | 'note' | 'text'
 
 export interface StepDef {
   /** Globally unique step id; also the key in SolutionAnswers.choices. */
@@ -55,8 +59,12 @@ export interface StepDef {
   showIf?: { step: string; includes: readonly string[] }
   /** Hardware step only: offer "I have nothing yet". */
   allowNone?: boolean
-  /** Multi step: at least one option required. Single steps are always required. */
+  /** Multi step: at least one option required. Single steps are always required. Text step: may stay empty. */
   optional?: boolean
+  /** Single/multi step: also show an optional free-text box; the text is stored in SolutionAnswers.texts[id]. */
+  textField?: boolean
+  /** Hardware step: also ask for the processor / Apple chip (optional free text). */
+  askCpu?: boolean
 }
 
 export interface ProcessDef {
@@ -64,6 +72,8 @@ export interface ProcessDef {
   /** lucide icon name, must exist in askhans/icons.tsx */
   icon: string
   steps: readonly StepDef[]
+  /** Not offered in the process list; started from another report (implement). */
+  hidden?: boolean
 }
 
 /** Request body of POST /api/ask/solution. */
