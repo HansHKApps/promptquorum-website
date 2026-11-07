@@ -7,6 +7,16 @@ import { savedMobileRam } from './profile'
 import type { PowerCopy } from './copy'
 import type { MobileDraft } from './drafts'
 
+// RAM from the makers' own spec pages (Google: support.google.com/pixelphone/answer/7158570, Pixel 8 store page;
+// Samsung: samsung.com/us/support/answer/ANS10000756). Apple does not publish iPhone RAM, so there are no iPhone presets.
+const ANDROID_PRESETS = [
+  { model: 'Pixel 8', ram: 8 },
+  { model: 'Pixel 8 Pro', ram: 12 },
+  { model: 'Galaxy S24', ram: 8 },
+  { model: 'Galaxy S24+', ram: 12 },
+  { model: 'Galaxy S24 Ultra', ram: 12 },
+] as const
+
 interface Props {
   tx: PowerCopy
   draft: MobileDraft
@@ -41,6 +51,20 @@ export function MobileStep({ tx, draft, onChange, save, onSaveChange }: Props) {
               className="mt-1 w-full max-w-xs rounded-lg border border-input bg-white px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary"
             />
           </div>
+          {draft.platform === 'android' && (
+            <div role="group" aria-label={tx.mobile.model} className="flex flex-wrap gap-1.5">
+              {ANDROID_PRESETS.map((p) => (
+                <button
+                  key={p.model}
+                  type="button"
+                  onClick={() => set({ model: p.model, ram: String(p.ram), ramUnknown: false })}
+                  className="rounded-full border border-border bg-white px-3 py-1.5 text-[13px] font-medium text-foreground hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                >
+                  {p.model} · {p.ram} GB
+                </button>
+              ))}
+            </div>
+          )}
           <NumberField id="pm-mram" label={tx.mobile.ram} value={draft.ram} unknown={draft.ramUnknown} unknownLabel={tx.hw.unknown} unit={tx.hw.gb} onChange={(ram, ramUnknown) => set({ ram, ramUnknown })} />
           <NumberField id="pm-mstorage" label={tx.mobile.storage} value={draft.storage} unknown={draft.storageUnknown} unknownLabel={tx.hw.unknown} unit={tx.hw.gb} onChange={(storage, storageUnknown) => set({ storage, storageUnknown })} />
           <p className="text-[12px] leading-snug text-muted-foreground">{tx.mobile.help}</p>

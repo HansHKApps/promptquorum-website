@@ -78,6 +78,7 @@ export function HardwareStep({ tx, draft, onChange, allowNone, save, onSaveChang
             unit={tx.hw.gb}
             onChange={(ram, ramUnknown) => set({ ram, ramUnknown })}
           />
+          {mac && <p className="-mt-2 text-[12px] leading-snug text-muted-foreground">{tx.hw.macNote}</p>}
           {(draft.gpu === 'nvidia' || draft.gpu === 'amd') && (
             <NumberField
               id="pm-vram"
