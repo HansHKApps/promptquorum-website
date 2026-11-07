@@ -40,6 +40,15 @@ interface Props {
 
 const SITE = 'https://www.promptquorum.com'
 
+// Solution Setup: the directory link opens pre-filtered for the chosen goal (the directory's ?want= keys).
+// Video has no matching directory chip, so it links to the unfiltered directory.
+const WANT_FOR_GOAL: Record<string, string> = { image: 'image', voice: 'audio', music: 'audio', coding: 'code', docs: 'docs', chat: 'chat', translate: 'chat' }
+function directoryQuery(process: ProcessId, choices: Record<string, string[]>): string {
+  if (process !== 'solution') return ''
+  const want = WANT_FOR_GOAL[choices.goal?.[0] ?? '']
+  return want ? `?want=${want}` : ''
+}
+
 const GROUP = 'rounded-xl border border-border bg-white p-4 shadow-sm'
 
 export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: Props) {
@@ -239,7 +248,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       inputs: inputLines(reportProcess),
       body: text,
       references: [
-        { label: tx.doc.refDirectory, url: `${SITE}${localizeAskPath('/directory', lang)}` },
+        { label: tx.doc.refDirectory, url: `${SITE}${localizeAskPath('/directory', lang)}${directoryQuery(reportProcess, choices)}` },
         { label: tx.doc.refHardwareTool, url: `${SITE}${localizeAskPath('/tools/what-can-i-run', lang)}` },
         { label: tx.doc.refAskHans, url: `${SITE}${localizeAskPath('/askhans', lang)}` },
       ],
@@ -254,7 +263,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         disclaimerText: tx.doc.disclaimerText,
       },
     }
-  }, [reportProcess, tx, runStamp, lang, ac.dir, inputLines, text])
+  }, [reportProcess, choices, tx, runStamp, lang, ac.dir, inputLines, text])
 
   // ---- rendering --------------------------------------------------------------------------------
   const backLabel = view.k === 'menu' ? tx.menu.back : tx.wizard.back

@@ -3,6 +3,7 @@
 // Power Mode — the phone step of the Mobile process: platform, optional model name, RAM, free storage.
 
 import { NumberField, Pills } from './choices'
+import { savedMobileRam } from './profile'
 import type { PowerCopy } from './copy'
 import type { MobileDraft } from './drafts'
 
@@ -20,7 +21,11 @@ export function MobileStep({ tx, draft, onChange, save, onSaveChange }: Props) {
     <div className="space-y-4">
       <div>
         <p className="mb-1 text-[13px] font-semibold text-foreground">{tx.mobile.platform}</p>
-        <Pills value={draft.platform} options={['ios', 'android'] as const} labels={{ ios: tx.mobile.ios, android: tx.mobile.android }} ariaLabel={tx.mobile.platform} onChange={(platform) => set({ platform })} />
+        <Pills value={draft.platform} options={['ios', 'android'] as const} labels={{ ios: tx.mobile.ios, android: tx.mobile.android }} ariaLabel={tx.mobile.platform} onChange={(platform) => {
+          // Pre-fill the RAM the visitor saved earlier in this browser (only if the field is still untouched).
+          const ram = savedMobileRam(platform)
+          set({ platform, ...(ram !== null && !draft.ram && !draft.ramUnknown ? { ram: String(ram) } : {}) })
+        }} />
       </div>
       {draft.platform && (
         <>

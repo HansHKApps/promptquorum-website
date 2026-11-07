@@ -38,6 +38,7 @@ GROUNDING (hard rules)
 
 STYLE
 - Write in the REPORT LANGUAGE given below, for every word including headings. Answer first, short paragraphs, concrete steps. No marketing words, no filler.
+- After the last section of the outline add one more section, "## Sources" (translated): a bullet list of every PromptQuorum page you actually used, each as a markdown link from a tool result with link text naming the page. Only URLs from tool results; if no tool returned a page, write one line saying the report rests on PromptQuorum's built-in estimates. This is the only section beyond the outline.
 - Output markdown only: "## " headings exactly in the outline below (translated), tables with | when comparing, numbered lists for steps. No title line (the document adds its own title), no preface, no closing remarks.
 - Do not write a sources list or disclaimer: the document adds them.`
 
