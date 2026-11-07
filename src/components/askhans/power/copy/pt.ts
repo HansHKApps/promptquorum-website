@@ -225,7 +225,7 @@ export const copy: PowerCopy = {
     asDocx: 'Word (.docx)',
     asPdf: 'PDF (janela de impressão)',
     preparing: 'Preparando o arquivo…',
-    changeAnswers: 'Alterar minhas respostas',
+    changeAnswers: 'Alterar minhas informações',
     allProcesses: 'Todos os processos',
   },
   doc: {
