@@ -7,6 +7,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type MutableRefObject } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { defaultCurrency, moneyLabels, currencyOptionLabel, CURRENCIES, isCurrency, type Currency } from '@/lib/askhans/solutions/currency'
 import { PROCESSES, PROCESS_ORDER, MAX_NOTE_CHARS, MAX_TEXT_CHARS, visibleSteps } from '@/lib/askhans/solutions/processes'
 import type { HardwareAnswers, MobileAnswers, ProcessId, SolutionAnswers, StepDef } from '@/lib/askhans/solutions/types'
 import type { Language } from '@/lib/blog/blogContent'
@@ -78,6 +79,8 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const [view, setView] = useState<View>({ k: 'menu' })
   const [choices, setChoices] = useState<Record<string, string[]>>({})
   const [note, setNote] = useState('')
+  // The visitor's own currency for the money steps; suggested from the page language, never from the location (VPN).
+  const [currency, setCurrency] = useState<Currency>(() => defaultCurrency(lang))
   const [hw, setHw] = useState<HardwareDraft>(emptyHardwareDraft)
   const [mob, setMob] = useState<MobileDraft>(emptyMobileDraft)
   const [saveProfileOn, setSaveProfileOn] = useState(false)
@@ -98,6 +101,8 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const stageTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const rootRef = useRef<HTMLDivElement>(null)
+
+  const ownTextFor = (id: string) => (id === 'auditSetup' ? tx.audit.setupText : id === 'auditProblems' ? tx.audit.problemsText : tx.wizard.ownText)
 
   const processOf = view.k === 'menu' ? null : view.process
 
@@ -129,14 +134,16 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       const kept = keptTexts(visibleSteps(process, { choices }), tv)
       if (kept) out.texts = kept
       if (note.trim()) out.note = note.trim().slice(0, MAX_NOTE_CHARS)
+      if (visibleSteps(process, { choices }).some((s) => s.money)) out.currency = currency
       return out
     },
-    [choices, hw, mob, note],
+    [choices, hw, mob, note, currency],
   )
 
   const stepValid = (s: StepDef, process: ProcessId): boolean => {
     if (s.kind === 'single') return (choices[s.id]?.length ?? 0) === 1
-    if (s.kind === 'multi') return s.optional || (choices[s.id]?.length ?? 0) > 0
+    // a goal question with its own-words box is also answered by the visitor's own words alone
+    if (s.kind === 'multi') return s.optional || (choices[s.id]?.length ?? 0) > 0 || (!!s.textField && !!texts[s.id]?.trim())
     if (s.kind === 'hardware') return hardwareAnswers(process) !== null
     if (s.kind === 'mobile') return mobileAnswers() !== null
     return true
@@ -252,6 +259,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     setChoices(a.answers.choices)
     setTexts(a.answers.texts ?? {})
     setNote(a.answers.note ?? '')
+    setCurrency(isCurrency(a.answers.currency) ? a.answers.currency : defaultCurrency(lang))
     if (a.answers.hardware) setHw(draftFromHardware(a.answers.hardware))
     setText(a.report)
     setAuditReport(a.report)
@@ -290,7 +298,9 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   }
 
   // ---- the document -----------------------------------------------------------------------------
-  const labelFor = useCallback((id: string) => tx.opt[id] ?? id, [tx])
+  // Option labels; the money ranges (budget, monthly spend) are shown in the visitor's currency.
+  const optLabels = useMemo(() => ({ ...tx.opt, ...moneyLabels(currency, lang, tx.range) }), [tx, currency, lang])
+  const labelFor = useCallback((id: string) => optLabels[id] ?? id, [optLabels])
 
   const inputLines = useCallback(
     (process: ProcessId): string[] => {
@@ -301,6 +311,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         if (s.kind === 'single' || s.kind === 'multi') {
           const v = a.choices[s.id]
           if (v?.length) lines.push(`${label}: ${v.map(labelFor).join(', ')}`)
+          if (s.money && a.currency && v?.length) lines.push(`${tx.wizard.currencyLabel}: ${a.currency}`)
           if (s.textField && a.texts?.[s.id]) lines.push(`${label}: ${a.texts[s.id]}`)
         } else if (s.kind === 'hardware' && a.hardware) {
           const h = a.hardware
@@ -363,7 +374,14 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         referencesHeading: tx.doc.referencesHeading,
         disclaimerHeading: tx.doc.disclaimerHeading,
         disclaimerText: tx.doc.disclaimerText,
+        autoNoticeHeading: tx.doc.autoNoticeHeading,
+        autoNotice: tx.doc.autoNotice,
+        disclaimerPoints: tx.doc.disclaimerPoints,
+        createOwn: tx.doc.createOwn,
+        askHansName: tx.doc.refAskHans,
       },
+      askHansUrl: `${SITE}${localizeAskPath('/askhans', lang)}`,
+      siteUrl: SITE,
     }
   }, [reportProcess, choices, texts, fileId, tx, runStamp, lang, ac.dir, inputLines, text, overview])
 
@@ -452,10 +470,26 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         {step.kind === 'multi' && <p className="mt-1 text-[12px] font-medium text-muted-foreground">{tx.wizard.multiHint}</p>}
         {copy?.hint && <p className="mt-1 text-[12px] text-muted-foreground">{copy.hint}</p>}
         <div className="mt-3">
+          {step.money && (
+            <div className="mb-3">
+              <label htmlFor="pm-currency" className="block text-[13px] font-semibold text-foreground">{tx.wizard.currencyLabel}</label>
+              <select
+                id="pm-currency"
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value as Currency)}
+                className="mt-1 w-full max-w-xs rounded-lg border border-input bg-white px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              >
+                {CURRENCIES.map((c) => (
+                  <option key={c} value={c}>{currencyOptionLabel(c, lang)}</option>
+                ))}
+              </select>
+              <p className="mt-1 text-[12px] leading-snug text-muted-foreground">{tx.wizard.currencyHint}</p>
+            </div>
+          )}
           {(step.kind === 'single' || step.kind === 'multi') && step.options && (
             <ChoiceGroup
               options={step.options}
-              labels={tx.opt}
+              labels={optLabels}
               selected={choices[step.id] ?? []}
               multi={step.kind === 'multi'}
               exclusive={step.exclusive}
@@ -465,13 +499,13 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
           )}
           {step.textField && (
             <>
-              <label htmlFor={`pm-text-${step.id}`} className="sr-only">{tx.audit[step.id === 'auditSetup' ? 'setupText' : 'problemsText']}</label>
+              <label htmlFor={`pm-text-${step.id}`} className="sr-only">{ownTextFor(step.id)}</label>
               <textarea
                 id={`pm-text-${step.id}`}
                 value={texts[step.id] ?? ''}
                 rows={2}
                 maxLength={MAX_TEXT_CHARS}
-                placeholder={tx.audit[step.id === 'auditSetup' ? 'setupText' : 'problemsText']}
+                placeholder={ownTextFor(step.id)}
                 onChange={(e) => setTexts((t) => ({ ...t, [step.id]: e.target.value }))}
                 className="mt-2 w-full resize-none rounded-lg border border-input bg-white px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary"
               />

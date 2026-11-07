@@ -5,6 +5,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { mdToPlain, writePlain } from '../share'
+import { Logo } from '@/components/Logo'
 import { useAskCopy } from '../copy'
 import { AskIcon } from '../icons'
 import { Markdown } from '../markdown'
@@ -72,17 +73,34 @@ export function ReportView({ tx, doc, streaming, status, onExport, process }: Pr
   }
 
   return (
-    <article aria-busy={streaming} className="rounded-xl border border-border bg-white p-4 shadow-sm">
-      <header className="border-b border-border pb-3">
-        <h2 className="text-[17px] font-bold leading-snug text-foreground">{doc.title}</h2>
-        <p className="mt-1 text-[12px] text-muted-foreground">
+    <article aria-busy={streaming} className="overflow-hidden rounded-xl border border-secondary bg-white shadow-sm">
+      <header className="bg-gradient-to-br from-primary to-[#4F378B] px-4 py-3.5 text-white">
+        <div className="flex items-center gap-2 text-[12px] font-bold tracking-wide">
+          <span className="rounded-full bg-white p-1" aria-hidden="true">
+            <Logo size={18} aria-hidden="true" role="presentation" />
+          </span>
+          <span>
+            PromptQuorum ·{' '}
+            <a href={doc.askHansUrl} className="underline underline-offset-2">{doc.labels.askHansName}</a>
+          </span>
+        </div>
+        <h2 className="mt-2 text-[18px] font-bold leading-snug">{doc.title}</h2>
+        <p className="mt-1 text-[12px] text-secondary">
           {doc.processLabel} · {doc.labels.dateLabel}: {doc.dateText}
+        </p>
+        <p className="mt-1 text-[12px]">
+          <a href={doc.askHansUrl} className="font-semibold underline underline-offset-2">{doc.labels.createOwn}</a>
         </p>
       </header>
 
-      <details className="mt-3 text-[13px]" open={!doc.body.trim()}>
-        <summary className="cursor-pointer font-semibold text-foreground">{doc.labels.inputsHeading}</summary>
-        <ul className="mt-1.5 list-disc space-y-0.5 ps-5 text-foreground">
+      <div className="p-4">
+      <p role="note" className="rounded-lg border-s-4 border-tertiary bg-[#F6E9EE] px-3 py-2 text-[12px] leading-snug text-foreground">
+        <strong className="text-tertiary">{doc.labels.autoNoticeHeading}.</strong> {doc.labels.autoNotice}
+      </p>
+
+      <details className="mt-3 rounded-lg border border-secondary border-s-4 border-s-primary bg-surface px-3 py-2 text-[13px]" open={!doc.body.trim()}>
+        <summary className="cursor-pointer font-semibold text-primary">{doc.labels.inputsHeading}</summary>
+        <ul className="mt-1.5 list-disc space-y-0.5 ps-5 text-foreground marker:text-primary">
           {doc.inputs.map((i) => (
             <li key={i}>{i}</li>
           ))}
@@ -100,10 +118,10 @@ export function ReportView({ tx, doc, streaming, status, onExport, process }: Pr
 
       {!streaming && doc.body.trim() && (
         <>
-          <section className="mt-4 border-t border-border pt-3 text-[12px] leading-snug text-muted-foreground">
-            <h3 className="font-semibold text-foreground">{doc.labels.howHeading}</h3>
+          <section className="mt-4 border-t border-secondary pt-3 text-[12px] leading-snug text-muted-foreground">
+            <h3 className="font-semibold text-primary">{doc.labels.howHeading}</h3>
             <p className="mt-1">{doc.labels.howText}</p>
-            <h3 className="mt-2 font-semibold text-foreground">{doc.labels.referencesHeading}</h3>
+            <h3 className="mt-2 font-semibold text-primary">{doc.labels.referencesHeading}</h3>
             <ul className="mt-1 list-disc space-y-0.5 ps-5">
               {doc.references.map((r) => (
                 <li key={r.url}>
@@ -113,8 +131,23 @@ export function ReportView({ tx, doc, streaming, status, onExport, process }: Pr
                 </li>
               ))}
             </ul>
-            <p className="mt-2">
-              <strong className="text-foreground">{doc.labels.disclaimerHeading}.</strong> {doc.labels.disclaimerText}
+          </section>
+
+          <section aria-labelledby="pq-legal" className="mt-4 rounded-xl border-2 border-primary bg-surface p-3.5 text-[12.5px] leading-snug text-foreground">
+            <h3 id="pq-legal" className="text-[14px] font-bold text-primary">{doc.labels.disclaimerHeading}</h3>
+            <p className="mt-2 rounded-lg border-s-4 border-tertiary bg-[#F6E9EE] px-3 py-2">
+              <strong className="text-tertiary">{doc.labels.autoNoticeHeading}.</strong> {doc.labels.autoNotice}
+            </p>
+            <p className="mt-2">{doc.labels.disclaimerText}</p>
+            <ol className="mt-2 list-decimal space-y-1.5 ps-5 marker:font-semibold marker:text-primary">
+              {doc.labels.disclaimerPoints.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
+            </ol>
+            <p className="mt-3 font-semibold">
+              <a href={doc.askHansUrl} className="text-primary underline underline-offset-2">{doc.labels.createOwn}</a>
+              {' · '}
+              <a href={doc.siteUrl} className="text-primary underline underline-offset-2">promptquorum.com</a>
             </p>
           </section>
           {doc.overview && <OverviewStrip overview={doc.overview} className="mt-3" />}
@@ -141,6 +174,7 @@ export function ReportView({ tx, doc, streaming, status, onExport, process }: Pr
           {process && <ShareRow tx={tx} lang={doc.lang} process={process} />}
         </>
       )}
+      </div>
     </article>
   )
 }

@@ -8,6 +8,7 @@ import { parseImprovements } from '../src/components/askhans/power/auditStore'
 import { PROCESSES, PROCESS_ORDER, MAX_NOTE_CHARS, parseAnswers, visibleSteps } from '../src/lib/askhans/solutions/processes'
 import { memoryBudget, modelFitTable, mobileFacts, buildFacts, upgradeFacts } from '../src/lib/askhans/solutions/facts'
 import { buildSolutionSystemPrompt, buildSolutionUserMessage } from '../src/lib/askhans/solutions/prompt'
+import { CURRENCIES, classText, defaultCurrency, moneyLabels } from '../src/lib/askhans/solutions/currency'
 import type { HardwareAnswers, SolutionAnswers } from '../src/lib/askhans/solutions/types'
 import { copy as ar } from '../src/components/askhans/power/copy/ar'
 import { copy as de } from '../src/components/askhans/power/copy/de'
@@ -105,6 +106,30 @@ check(hardwareFromDraft({ ...emptyHardwareDraft, device: 'desktop', os: 'win', g
 check(hardwareFromDraft({ ...emptyHardwareDraft, device: 'laptop', os: 'win', gpu: 'none', ramUnknown: true }, false)?.ramGb === null, 'unknown RAM must be null')
 check(mobileFromDraft({ model: '', ram: '8', ramUnknown: false, storage: '', storageUnknown: true, platform: 'android' })?.storageGb === null, 'unknown phone storage must be null')
 
+// ---- 2b. own-words goals and the visitor's currency ----------------------------------------------------
+const hwMoney = { hardware: hwOk, choices: { goals: ['chat'], budget: ['b2'], usage: ['shared'], parallel: ['one'] } }
+check(parseAnswers('hardware', { ...hwMoney, currency: 'EUR' })?.currency === 'EUR', 'currency not kept for the Hardware Selector')
+check(parseAnswers('hardware', { ...hwMoney, currency: 'XXX' })?.currency === undefined, 'unknown currency accepted')
+check(parseAnswers('hardware', { ...hwMoney, currency: '<b>x</b>' })?.currency === undefined, 'currency injection accepted')
+check(parseAnswers('max', { ...maxOk, currency: 'EUR' })?.currency === undefined, 'currency kept for a process without a money step')
+check(parseAnswers('max', { ...maxOk, choices: { ...maxOk.choices, goals: [] }, texts: { goals: 'transcribe my lectures' } }) !== null, 'own-words goal alone must satisfy the goals step')
+check(parseAnswers('max', { ...maxOk, choices: { ...maxOk.choices, goals: [] } }) === null, 'empty goals without own words accepted')
+check(parseAnswers('max', { ...maxOk, texts: { goals: 'x'.repeat(900) } })?.texts?.goals?.length === 300, 'own-words text not capped')
+const eurAnswers = parseAnswers('hardware', { ...hwMoney, currency: 'EUR' })!
+const msgEur = buildSolutionUserMessage('hardware', eurAnswers)
+check(msgEur.includes('EUR 1,000 to 2,000'), 'budget range in the visitor currency missing from the prompt')
+check(!/budget: b2/.test(msgEur), 'internal class id b2 leaks into the prompt')
+check(classText('b1', 'JPY') === 'up to JPY 150,000' && classText('m-4', 'EUR') === 'more than EUR 100 per month', 'classText wrong')
+check(CURRENCIES.every((c) => typeof classText('b3', c) === 'string' && typeof classText('m-2', c) === 'string'), 'a currency has no bands')
+check(defaultCurrency('de') === 'EUR' && defaultCurrency('ja') === 'JPY' && defaultCurrency('xx') === 'USD', 'default currency by language')
+for (const [lang, c] of [['en', en], ['de', de], ['fr', fr], ['es', es], ['pt', pt], ['ja', ja], ['zh', zh], ['ko', ko], ['ar', ar]] as const) {
+  const lab = moneyLabels(lang === 'ja' ? 'JPY' : 'EUR', lang, c.range)
+  check(['b1', 'b2', 'b3', 'b4', 'm-1', 'm-2', 'm-3', 'm-4'].every((k) => !!lab[k]) && lab.b1 !== lab.b2, `${lang}: money labels incomplete`)
+  check(c.doc.disclaimerPoints.length === en.doc.disclaimerPoints.length && c.doc.disclaimerPoints.every((x) => x.length > 20), `${lang}: legal points missing`)
+  check(c.doc.autoNotice.length > 20 && c.wizard.ownText.length > 10 && c.wizard.currencyHint.length > 20, `${lang}: new texts missing`)
+}
+check(PROCESSES.hardware.steps.find((x) => x.id === 'budget')?.money && PROCESSES.audit.steps.find((x) => x.id === 'auditSpend')?.money, 'money flag missing')
+
 // ---- 3. grounding facts -----------------------------------------------------------------------------
 const mac: HardwareAnswers = { device: 'mac', os: 'mac', gpu: 'apple', ramGb: 24, vramGb: null, storageGb: null }
 const macMem = memoryBudget(mac)
@@ -187,16 +212,19 @@ const doc: ReportDoc = {
   inputs: ['Goals: Chat and write', 'Computer: Laptop · Windows'],
   body: '## Summary\n- **Runs well**: chat\n- At the limit: video\n\n## What your computer can do\n\n| Task | Verdict |\n| --- | --- |\n| Chat | Runs well |\n| Video | Not realistic |\n\n1. Install [Ollama](https://www.promptquorum.com/power-local-llm/ollama-review)\n2. Run <script>alert(1)</script> a test\n\n[bad](javascript:alert(1)) text',
   references: [{ label: 'Directory', url: 'https://www.promptquorum.com/directory' }],
-  labels: { generatedBy: en.doc.generatedBy, dateLabel: en.doc.dateLabel, inputsHeading: en.doc.inputsHeading, howHeading: en.doc.howHeading, howText: en.doc.howText, referencesHeading: en.doc.referencesHeading, disclaimerHeading: en.doc.disclaimerHeading, disclaimerText: en.doc.disclaimerText },
+  labels: { generatedBy: en.doc.generatedBy, dateLabel: en.doc.dateLabel, inputsHeading: en.doc.inputsHeading, howHeading: en.doc.howHeading, howText: en.doc.howText, referencesHeading: en.doc.referencesHeading, disclaimerHeading: en.doc.disclaimerHeading, disclaimerText: en.doc.disclaimerText, autoNoticeHeading: en.doc.autoNoticeHeading, autoNotice: en.doc.autoNotice, disclaimerPoints: en.doc.disclaimerPoints, createOwn: en.doc.createOwn, askHansName: en.doc.refAskHans },
+  askHansUrl: 'https://www.promptquorum.com/askhans',
+  siteUrl: 'https://www.promptquorum.com',
 }
 const blocks = parseBlocks(doc.body)
 check(blocks.some((b) => b.k === 'table' && b.rows.length === 2), 'table not parsed')
 check(blocks.some((b) => b.k === 'ol' && b.items.length === 2), 'numbered list not parsed')
 const md = buildMarkdown(doc)
-check(md.startsWith('# Your report') && md.includes('## Your inputs') && md.includes('## Notice') && md.includes('/directory'), 'markdown export incomplete')
+check(md.startsWith('# Your report') && md.includes('## Your inputs') && md.includes(`## ${en.doc.disclaimerHeading}`) && md.includes('(https://www.promptquorum.com/askhans)') && md.includes(en.doc.autoNotice) && md.includes('/directory'), 'markdown export incomplete')
 const html = buildHtml(doc)
 check(!html.includes('<script>') && !html.includes('<b>MAX</b>'), 'HTML export does not escape markup')
 check(!html.includes('javascript:'), 'HTML export keeps a javascript: link')
+check(html.includes('href="https://www.promptquorum.com/askhans"') && html.includes('<svg') && html.includes(en.doc.autoNotice) && en.doc.disclaimerPoints.every((x) => html.includes(x.replace(/&/g, '&amp;'))), 'HTML export: Ask Hans link, logo, auto notice or legal points missing')
 check(html.includes('dir="ltr"') && html.includes('<table>') && html.includes('<ol>'), 'HTML export structure incomplete')
 check(buildHtml({ ...doc, lang: 'ar', dir: 'rtl' }).includes('dir="rtl"'), 'RTL not set for Arabic')
 const blob = await buildDocxBlob(doc)

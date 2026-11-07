@@ -3,6 +3,7 @@
 // may explain and arrange them but must not contradict or extend them with invented numbers.
 // Rule-of-thumb estimates, not measurements: the prompt tells the AI to say so.
 
+import { classText } from './currency'
 import { CONTEXT_OVERHEAD, MODEL_SIZES, QUANT_BITS, estimateVram, macUsableGb } from '@/lib/vram'
 import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import type { HardwareAnswers, MobileAnswers, SolutionAnswers } from './types'
@@ -199,13 +200,13 @@ export function generationFacts(a: SolutionAnswers) {
 }
 
 const CLOUD_SERVICES: Record<string, string> = { 's-chatgpt': 'ChatGPT', 's-claude': 'Claude', 's-gemini': 'Gemini', 's-othercloud': 'other cloud AI services' }
-const SPEND_CLASSES: Record<string, string> = {
-  'm-none': 'nothing (free plans only)',
-  'm-1': 'up to 20 per month (visitor\'s own currency)',
-  'm-2': '20 to 50 per month (visitor\'s own currency)',
-  'm-3': '50 to 100 per month (visitor\'s own currency)',
-  'm-4': 'more than 100 per month (visitor\'s own currency)',
-  'm-unknown': 'unknown',
+function spendText(a: SolutionAnswers): string {
+  const id = highestSpend(a.choices.auditSpend ?? [])
+  if (id === 'm-none') return 'nothing (free plans only)'
+  if (id === 'm-unknown') return 'unknown'
+  const currency = a.currency ?? 'USD'
+  const t = classText(id, currency)
+  return t ? `${t} (visitor's own currency ${currency}; approximate range)` : 'not asked'
 }
 /** Activities for which the PromptQuorum data holds no hardware floor, so the report must say so instead of guessing. */
 const NO_FLOOR_DATA = new Set(['u-video', 'u-data', 'u-other'])
@@ -226,7 +227,7 @@ export function auditFacts(a: SolutionAnswers) {
     cloudServiceCount: cloud.length,
     alreadyUsesLocalApps: setup.includes('s-local'),
     usesNoAiYet: setup.includes('s-none'),
-    monthlySpendClass: cloud.length ? (SPEND_CLASSES[highestSpend(a.choices.auditSpend ?? [])] ?? 'not asked') : 'not applicable (no cloud service chosen)',
+    monthlySpendClass: cloud.length ? spendText(a) : 'not applicable (no cloud service chosen)',
     hardwareProcessor: a.hardware?.cpu ?? null,
     largestModelThatRunsComfortably: biggest('comfortable') ? `${biggest('comfortable')!.size} ${biggest('comfortable')!.quant}` : null,
     largestModelAtTheLimit: biggest('at-the-limit') ? `${biggest('at-the-limit')!.size} ${biggest('at-the-limit')!.quant}` : null,
