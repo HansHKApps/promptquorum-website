@@ -20,7 +20,9 @@
 // that model, Atlarix itself is still contacted for sign-in, updates and catalogs"; free Auto
 // no longer described via one provider's programme (prompts shared with the AI providers that
 // serve it, after a one-time OK in the app). She offered to check the new text before it goes
-// live — founderReviewedDate is intentionally NOT bumped until she approves.
+// live. 2026-11-07 (owner rule "Founder re-review"): the second round of comments is integrated
+// one-to-one, so founderReviewedDate is bumped to 2026-11-07 and the round is logged in
+// founderReviewDates (shown as "reviewed 2 times" on the tile, drawer and review banner).
 
 import type { ToolRecord } from './types'
 
@@ -72,7 +74,8 @@ export const app: ToolRecord = {
   // Amariah (founder) replied by email 2026-09-25 with corrections to PromptQuorum's
   // initial review — see the header comment above for the fact list. Badge is
   // self-expiring (FOUNDER_STAR_VALID_DAYS) — no separate cleanup needed later.
-  founderReviewedDate: '2026-09-25',
+  founderReviewedDate: '2026-11-07',
+  founderReviewDates: ['2026-09-25', '2026-11-07'],
   // Verified against the founder's own words (local model: prompts/code go only to that model;
   // managed models: hybrid) and the product's stated feature set, 2026-09-25, re-checked
   // 2026-11-07: editor extension for VS Code/Cursor/Kiro/Windsurf/VSCodium, Zed + JetBrains

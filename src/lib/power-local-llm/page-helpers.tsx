@@ -31,7 +31,7 @@ import { resolveAll } from '@/components/local-ai-directory/directory-i18n'
 import { localAiApps } from './apps-barrel'
 import { TOTAL_CATEGORY_GROUP_COUNT } from './apps/categories'
 import { buildLocalAiAppsItemListSchema } from './apps-schema'
-import { isFounderStarActive } from '@/components/local-ai-directory/founderStar'
+import { isFounderStarActive, getFounderReviewDates } from '@/components/local-ai-directory/founderStar'
 
 const SCHEMA_OS: Record<string, string> = { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web' }
 const SPDX_LICENSES = new Set(['MIT', 'Apache-2.0', 'GPL-3.0', 'AGPL-3.0', 'BSD-3-Clause', 'MPL-2.0'])
@@ -449,7 +449,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const reviewedApp = localAiApps.find((a) => a.reviewSlug === slug)
   const founderReviewed =
     reviewedApp && isFounderStarActive(reviewedApp.founderReviewedDate)
-      ? { appName: reviewedApp.name, date: reviewedApp.founderReviewedDate! }
+      ? { appName: reviewedApp.name, date: reviewedApp.founderReviewedDate!, dates: getFounderReviewDates(reviewedApp) }
       : undefined
 
   // Entity rule (docs/PAGE_UPDATER.md Step 4.8-B): a review's subject is a SoftwareApplication built from its

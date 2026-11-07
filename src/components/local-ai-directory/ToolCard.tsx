@@ -15,7 +15,7 @@ import { CompatibilityBadge } from './CompatibilityBadge'
 import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardware'
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
-import { isFounderStarActive } from './founderStar'
+import { isFounderStarActive, getFounderReviewDates } from './founderStar'
 import { getListingFreshness, getAppActivity } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import type { HardwareProfile, MachineType } from './types'
@@ -149,6 +149,8 @@ export function ToolCard({
   const downloadLinks = getDownloadLinks(app, lang)
   const [licenseModalOpen, setLicenseModalOpen] = useState(false)
   const isFounderReviewed = isFounderStarActive(app.founderReviewedDate)
+  const founderReviewDates = getFounderReviewDates(app)
+  const founderReviewRounds = founderReviewDates.length
 
   return (
     <div
@@ -184,10 +186,14 @@ export function ToolCard({
         {isFounderReviewed && (
           <span
             className="inline-flex items-center gap-1 self-start mb-2.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide rounded-full border-2 border-hub-amber bg-hub-amber-tint text-hub-amber-ink shadow-sm"
-            title={t('founderReviewedTooltip', lang)}
+            title={
+              founderReviewRounds > 1
+                ? `${t('founderReviewedTooltip', lang)}. ${t('founderReviewedAgainTemplate', lang, { count: founderReviewRounds, dates: founderReviewDates.map((d) => formatDisplayDate(d, lang)).join(', ') })}`
+                : t('founderReviewedTooltip', lang)
+            }
           >
             <StarIcon className="h-3 w-3 fill-hub-amber text-hub-amber" />
-            {t('founderReviewedBadge', lang)}
+            {t('founderReviewedBadge', lang)}{founderReviewRounds > 1 ? ` ×${founderReviewRounds}` : ''}
           </span>
         )}
         <div className="flex items-start gap-3 mb-2.5">

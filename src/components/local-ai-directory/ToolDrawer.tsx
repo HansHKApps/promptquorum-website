@@ -17,7 +17,7 @@ import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
-import { isFounderStarActive } from './founderStar'
+import { isFounderStarActive, getFounderReviewDates } from './founderStar'
 import { getListingFreshness, getAppActivity } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
@@ -331,6 +331,15 @@ export function ToolDrawer({
                   <p className="text-xs text-hub-amber-ink">
                     <span className="font-bold uppercase tracking-wide">{t('founderReviewedBannerLabel', ui)}</span>{' '}
                     {t('founderReviewedBannerBodyTemplate', ui, { name: app.name })}
+                    {getFounderReviewDates(app).length > 1 && (
+                      <>
+                        {' '}
+                        {t('founderReviewedAgainTemplate', ui, {
+                          count: getFounderReviewDates(app).length,
+                          dates: getFounderReviewDates(app).map((d) => formatDisplayDate(d, lang)).join(', '),
+                        })}
+                      </>
+                    )}
                   </p>
                 </div>
               )}

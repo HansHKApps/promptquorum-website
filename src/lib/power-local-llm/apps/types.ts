@@ -181,6 +181,11 @@ export interface ToolRecord {
   // stops on its own — no separate cleanup step needed. The review/article itself
   // stays independent PromptQuorum editorial content either way.
   founderReviewedDate?: string
+  // Logged history of founder review rounds (ISO dates, oldest first). Set it as soon as the
+  // founder has reviewed a SECOND time (owner rule 2026-11-07, CLAUDE.md "Founder re-review"):
+  // `founderReviewedDate` is then the latest entry. Single-review tiles leave this unset.
+  // Rendered as "reviewed N times" on the tile, the drawer and the review article banner.
+  founderReviewDates?: string[]
   // Slug (in the local-llms or power-local-llm cluster) of the article that is
   // ABOUT this tool specifically — a dedicated review, not a comparison or a
   // passing mention. When set, generate-tool-article-index.mjs pins that article
