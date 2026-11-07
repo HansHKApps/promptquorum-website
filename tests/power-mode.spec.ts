@@ -12,7 +12,7 @@ const REPORT = [
   { t: 'text', v: '## Summary\n- **Runs well**: chat with an 8B model\n\n' },
   { t: 'text', v: '## What your computer can do\n\n| Task | Verdict |\n| --- | --- |\n| Chat | Runs well |\n| Video | Not realistic |\n\n' },
   { t: 'text', v: '## Installation order\n1. Install [Ollama](https://www.promptquorum.com/power-local-llm/ollama-review)\n2. Run a test prompt\n' },
-  { t: 'done', tools: ['find_best_apps'] },
+  { t: 'done', tools: ['find_best_apps'], overview: { title: 'What is PromptQuorum?', blurb: 'Test blurb.', tiles: [{ label: 'Apps tracked', value: '350' }, { label: 'Ask Hans answers', value: '208' }], links: [{ label: 'Open directory →', href: 'https://www.promptquorum.com/directory' }] } },
 ]
 const ndjson = (events: unknown[]) => events.map((e) => JSON.stringify(e)).join('\n') + '\n'
 
@@ -155,6 +155,8 @@ test.describe('Power Mode', () => {
     expect(mdText).toContain('## Your inputs')
     expect(mdText).toContain('https://www.promptquorum.com/directory')
     expect(mdText).toContain('## Notice')
+    expect(mdText).toContain('## What is PromptQuorum?')
+    expect(mdText).toContain('- Apps tracked: 350')
 
     // Word download is a real .docx (zip)
     const [docx] = await Promise.all([page.waitForEvent('download'), dialog.getByRole('button', { name: 'Word (.docx)' }).click()])
@@ -167,8 +169,10 @@ test.describe('Power Mode', () => {
     await dialog.getByRole('button', { name: 'PDF (print dialog)' }).click()
     await expect(page.locator('iframe[aria-hidden="true"]')).toHaveCount(1)
     const html = await page.locator('iframe[aria-hidden="true"]').getAttribute('srcdoc')
-    expect(html).toContain('<title>Your report: MAX – Full Setup</title>')
+    // the print dialog proposes the title as the file name, so it is the file stem (date, number, topic)
+    expect(html).toMatch(/<title>[^<]*MAX[^<]*<\/title>/i)
     expect(html).toContain('<table>')
+    expect(html).toContain('What is PromptQuorum?')
   })
 
   test('share menu: brand logos, fully inside the window even for a report at the top', async ({ page }) => {
