@@ -114,7 +114,7 @@ export const copy: PowerCopy = {
     ramApple: 'Unified memory, in GB',
     vram: 'Graphics card memory (VRAM), in GB',
     storage: 'Free disk space, in GB',
-    macNote: 'On a Mac, the processor and the AI model share the unified memory, so this figure sets what you can run. Apple menu > About This Mac shows it.',
+    macNote: 'On a Mac, the processor and the AI model share the unified memory, so this figure largely determines what you can run. Apple menu > About This Mac shows it.',
     unknown: "I don't know",
     gb: 'GB',
     useSaved: 'Use my saved hardware',

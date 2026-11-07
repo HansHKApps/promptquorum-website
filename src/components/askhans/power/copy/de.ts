@@ -114,7 +114,7 @@ export const copy: PowerCopy = {
     ramApple: 'Einheitlicher Speicher (Unified Memory), in GB',
     vram: 'Grafikkartenspeicher (VRAM), in GB',
     storage: 'Freier Speicherplatz, in GB',
-    macNote: 'Beim Mac teilen sich Prozessor und KI-Modell den einheitlichen Arbeitsspeicher; diese Zahl bestimmt, was Sie ausführen können. Sie steht unter Apple-Menü > Über diesen Mac.',
+    macNote: 'Beim Mac teilen sich Prozessor und KI-Modell den einheitlichen Arbeitsspeicher; diese Zahl bestimmt weitgehend, was Sie ausführen können. Sie steht unter Apple-Menü > Über diesen Mac.',
     unknown: 'Weiß ich nicht',
     gb: 'GB',
     useSaved: 'Meine gespeicherte Hardware verwenden',

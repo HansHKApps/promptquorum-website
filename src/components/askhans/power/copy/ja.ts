@@ -114,7 +114,7 @@ export const copy: PowerCopy = {
     ramApple: 'ユニファイドメモリ、GB',
     vram: 'グラフィックカードのメモリ（VRAM）、GB',
     storage: 'ディスクの空き容量、GB',
-    macNote: 'Macではプロセッサーと AI モデルがユニファイドメモリーを共有するため、この数値が実行できるものを左右します。Apple メニュー > このMacについて で確認できます。',
+    macNote: 'Macではプロセッサーと AI モデルがユニファイドメモリーを共有するため、この数値が実行できるものを大きく左右します。Apple メニュー > このMacについて で確認できます。',
     unknown: 'わからない',
     gb: 'GB',
     useSaved: '保存済みのハードウェアを使う',

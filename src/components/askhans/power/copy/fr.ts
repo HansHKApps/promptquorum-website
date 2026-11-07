@@ -114,7 +114,7 @@ export const copy: PowerCopy = {
     ramApple: 'Mémoire unifiée, en Go',
     vram: 'Mémoire de la carte graphique (VRAM), en Go',
     storage: 'Espace disque libre, en Go',
-    macNote: "Sur un Mac, le processeur et le modèle d'IA se partagent la mémoire unifiée ; ce chiffre détermine ce que vous pouvez exécuter. Il figure dans le menu Pomme > À propos de ce Mac.",
+    macNote: "Sur un Mac, le processeur et le modèle d'IA se partagent la mémoire unifiée ; ce chiffre détermine en grande partie ce que vous pouvez exécuter. Il figure dans le menu Pomme > À propos de ce Mac.",
     unknown: 'Je ne sais pas',
     gb: 'Go',
     useSaved: 'Utiliser mon matériel enregistré',

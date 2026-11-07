@@ -114,7 +114,7 @@ export const copy: PowerCopy = {
     ramApple: '统一内存，单位 GB',
     vram: '显存（VRAM），单位 GB',
     storage: '可用磁盘空间，单位 GB',
-    macNote: '在 Mac 上，处理器和 AI 模型共用统一内存，因此这个数字决定了您能运行什么。可在“苹果菜单 > 关于本机”中查看。',
+    macNote: '在 Mac 上，处理器和 AI 模型共用统一内存，因此这个数字在很大程度上决定了您能运行什么。可在“苹果菜单 > 关于本机”中查看。',
     unknown: '不清楚',
     gb: 'GB',
     useSaved: '使用我已保存的硬件',

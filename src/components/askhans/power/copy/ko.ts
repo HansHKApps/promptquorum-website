@@ -114,7 +114,7 @@ export const copy: PowerCopy = {
     ramApple: '통합 메모리, GB',
     vram: '그래픽 카드 메모리(VRAM), GB',
     storage: '디스크 여유 공간, GB',
-    macNote: 'Mac에서는 프로세서와 AI 모델이 통합 메모리를 함께 사용하므로 이 수치가 실행할 수 있는 범위를 좌우합니다. Apple 메뉴 > 이 Mac에 관하여에서 확인하실 수 있습니다.',
+    macNote: 'Mac에서는 프로세서와 AI 모델이 통합 메모리를 함께 사용하므로 이 수치가 실행할 수 있는 범위를 크게 좌우합니다. Apple 메뉴 > 이 Mac에 관하여에서 확인하실 수 있습니다.',
     unknown: '모릅니다',
     gb: 'GB',
     useSaved: '저장된 하드웨어 사용',
