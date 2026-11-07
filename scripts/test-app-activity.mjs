@@ -33,4 +33,19 @@ for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.ts'))) {
   if (!ok) { fail++; console.error(`FAIL ${f}: bad lastUpstreamUpdate ${d[1]}`) }
   if (!/^\s*lastUpstreamUpdateSource:\s*'https?:\/\//m.test(s)) { fail++; console.error(`FAIL ${f}: lastUpstreamUpdate without lastUpstreamUpdateSource`) }
 }
+
+// Founder review history (owner rule 2026-11-07): founderReviewDates must be ascending ISO dates, not in the
+// future, and its last entry must equal founderReviewedDate (so the badge date and the history never diverge).
+for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.ts'))) {
+  const s = fs.readFileSync(path.join(dir, f), 'utf8')
+  const h = s.match(/^\s*founderReviewDates:\s*\[([^\]]*)\]/m)
+  if (!h) continue
+  const dates = [...h[1].matchAll(/'(\d{4}-\d{2}-\d{2})'/g)].map((x) => x[1])
+  const last = s.match(/^\s*founderReviewedDate:\s*'([^']*)'/m)?.[1]
+  const asc = dates.every((d, i) => i === 0 || d > dates[i - 1])
+  if (dates.length < 2 || !asc || dates.some((d) => Date.parse(d) > Date.now()) || last !== dates[dates.length - 1]) {
+    fail++
+    console.error(`FAIL ${f}: founderReviewDates must be >=2 ascending past ISO dates ending with founderReviewedDate (got [${dates}] vs ${last})`)
+  }
+}
 process.exit(fail ? 1 : 0)

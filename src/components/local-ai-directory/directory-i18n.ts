@@ -550,6 +550,17 @@ const DIR_UI = {
     ar: 'راجع مؤسس {name} دقة المواصفات التقنية ووصف هذا العنصر. تبقى المراجعة نفسها محتوى تحريريًا مستقلاً من PromptQuorum.',
     ko: '{name}의 창립자가 이 항목의 기술 사양과 설명의 정확성을 검토했습니다. 리뷰 자체는 PromptQuorum의 독립적인 편집 콘텐츠로 유지됩니다.',
   },
+  founderReviewedAgainTemplate: {
+    en: 'Reviewed {count} times by the founder: {dates}.',
+    de: 'Vom Gründer {count}-mal geprüft: {dates}.',
+    fr: 'Vérifié {count} fois par le fondateur : {dates}.',
+    ja: '創業者が{count}回確認しました:{dates}。',
+    zh: '创始人已审核{count}次:{dates}。',
+    es: 'Revisado {count} veces por el fundador: {dates}.',
+    pt: 'Revisado {count} vezes pelo fundador: {dates}.',
+    ar: 'راجعه المؤسس {count} مرات: {dates}.',
+    ko: '창립자가 {count}회 검토했습니다: {dates}.',
+  },
   staleAppsBannerLabel: { en: 'Maintenance warning.', de: 'Wartungswarnung.', fr: 'Avertissement de maintenance.', ja: 'メンテナンス警告。', zh: '维护警告。', es: 'Advertencia de mantenimiento.', pt: 'Aviso de manutenção.', ar: 'تحذير الصيانة.', ko: '유지보수 경고.' },
   staleAppsBannerBodyTemplate: {
     en: 'This article covers apps that have had no update in more than 3 months (date of the last upstream update in brackets): {apps}. They may be unmaintained, so check that they still work for you before relying on them.',

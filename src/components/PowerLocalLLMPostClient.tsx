@@ -85,7 +85,7 @@ interface Props {
    * Renders the same fact-check credit shown on the tool's directory tile/
    * drawer (ToolCard.tsx/ToolDrawer.tsx), self-expiring on the same schedule.
    */
-  founderReviewed?: { appName: string; date: string }
+  founderReviewed?: { appName: string; date: string; dates?: string[] }
   /** Maintenance warning for stale apps this article covers (owner rule 2026-10-16); built server-side by getStaleBanner(). */
   staleBanner?: { label: string; body: string }
   /**
@@ -1558,6 +1558,15 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             <p className="text-xs text-amber-900">
               <span className="font-extrabold uppercase tracking-wide">{directoryT('founderReviewedBannerLabel', ui)}</span>{' '}
               {directoryT('founderReviewedBannerBodyTemplate', ui, { name: founderReviewed.appName })}
+              {founderReviewed.dates && founderReviewed.dates.length > 1 && (
+                <>
+                  {' '}
+                  {directoryT('founderReviewedAgainTemplate', ui, {
+                    count: founderReviewed.dates.length,
+                    dates: founderReviewed.dates.map((d) => formatDisplayDate(d, lang)).join(', '),
+                  })}
+                </>
+              )}
             </p>
           </div>
         )}
