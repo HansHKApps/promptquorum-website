@@ -1,5 +1,7 @@
 'use client'
 
+import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { promoMidArticleIndex } from '@/lib/promo/config'
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
@@ -1533,7 +1535,8 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
 
   return (
     <div className={`min-h-screen ${skinCls.page} pt-24 sm:pt-20 pb-20 px-4 sm:px-6`} key={`${slug}-${lang}`}>
-      <div className="max-w-3xl mx-auto">
+      <div className="relative max-w-3xl mx-auto">
+        <PilotPromoSlot at="P4" />
 
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-4 sm:mb-6">
@@ -1950,6 +1953,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
         })()}
 
         {/* Sections */}
+        <PilotPromoSlot at="P1" />
         <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             const query = searchQuery.trim().toLowerCase()
@@ -2004,7 +2008,9 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
               })
               .filter(([, section]) => !section.rows || section.rows.length > 0)
 
-            return sectionsToRender.map(([key, section]) => {
+            const midPe = promoMidArticleIndex(sectionsToRender.length)
+            const hasRelatedPe = sectionsToRender.some(([k]) => k === 'relatedReading')
+            const renderedPe = sectionsToRender.map(([key, section]) => {
               // Glossary section keys map to fixed IDs; everything else resolves through the
               // shared helper, which honours the authored `section.id` that `toc[].anchor`
               // is written against. This client used to skip `section.id` entirely and
@@ -2022,6 +2028,16 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
                 <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} slug={slug} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
               )
             })
+            return (
+              <>
+                {renderedPe.flatMap((el, i) => [
+                  sectionsToRender[i][0] === 'relatedReading' ? <PilotPromoSlot key={`${sectionsToRender[i][0]}-p3`} at="P3" /> : null,
+                  el,
+                  i === midPe ? <PilotPromoSlot key={`${sectionsToRender[i][0]}-p2`} at="P2" /> : null,
+                ])}
+                {!hasRelatedPe && <PilotPromoSlot at="P3" />}
+              </>
+            )
           })()}
         </article>
 

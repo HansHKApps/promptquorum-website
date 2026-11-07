@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect, Fragment } from 'react'
+import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { promoMidArticleIndex } from '@/lib/promo/config'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import { AppLink as Link } from '@/components/AppLink'
 import { DirectoryBlock } from '@/components/local-ai-directory/DirectoryBlock'
@@ -930,7 +932,8 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
 
   return (
     <div className={`min-h-screen ${skinCls.page} pt-24 sm:pt-20 pb-20 px-4 sm:px-6`} key={`${slug}-${lang}`}>
-      <div className="max-w-3xl mx-auto">
+      <div className="relative max-w-3xl mx-auto">
+        <PilotPromoSlot at="P4" />
 
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-4 sm:mb-6">
@@ -1154,23 +1157,32 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
         })()}
 
         {/* Sections */}
+        <PilotPromoSlot at="P1" />
         <article className={`key-takeaways-container ${skinCls.sections}`}>
-          {Object.entries(article.sections).map(([key, section]) => {
-            if (key === tldrKey) return null
-            const sectionId = slugifySectionId(section, key)
-            const sectionEl = (
-              <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} renderLinks={renderLinks} />
+          {(() => {
+            const entries = Object.entries(article.sections).filter(([k]) => k !== tldrKey)
+            const mid = promoMidArticleIndex(entries.length)
+            const hasRelated = entries.some(([k]) => k === 'relatedReading')
+            return (
+              <>
+                {entries.map(([key, section], i) => {
+                  const sectionId = slugifySectionId(section, key)
+                  const sectionEl = (
+                    <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} renderLinks={renderLinks} />
+                  )
+                  return (
+                    <Fragment key={key}>
+                      {key === 'relatedReading' && <PilotPromoSlot at="P3" />}
+                      {directoryFunnel && key === 'relatedReading' && <DirectoryBlock data={directoryFunnel} position="end" />}
+                      {sectionEl}
+                      {i === mid && <PilotPromoSlot at="P2" />}
+                    </Fragment>
+                  )
+                })}
+                {!hasRelated && <PilotPromoSlot at="P3" />}
+              </>
             )
-            if (directoryFunnel && key === 'relatedReading') {
-              return (
-                <Fragment key={key}>
-                  <DirectoryBlock data={directoryFunnel} position="end" />
-                  {sectionEl}
-                </Fragment>
-              )
-            }
-            return sectionEl
-          })}
+          })()}
         </article>
 
         {(article as any)?.nextStep?.text && (
