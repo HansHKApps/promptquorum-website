@@ -126,6 +126,13 @@ const facts = JSON.parse(buildFacts({ hardware: mac, choices: { goals: ['code'] 
 check(Array.isArray(facts.stackCandidates) && facts.stackCandidates.some((s: { id: string }) => s.id === 'coding'), 'coding goal must surface the coding stack')
 check(!facts.stackCandidates.some((s: { id: string }) => s.id === 'mobile'), 'mobile stack must not be offered for a desktop machine')
 
+const imgBase = { hardware: { device: 'mac', os: 'mac', gpu: 'apple', ramGb: 24, vramGb: null, storageGb: 50 }, note: '' }
+const imgChoices = { goal: ['image'], imageType: ['text-to-image'], imageStyle: ['realistic'], imageSize: ['res-web'], quality: ['best'], 'usage-rights': ['personal'] }
+check(parseAnswers('solution', { ...imgBase, choices: imgChoices }) === null, 'quality=best must require the tradeoff answer')
+check(parseAnswers('solution', { ...imgBase, choices: { ...imgChoices, tradeoff: ['tradeoff-cloud'] } }) !== null, 'image + best + tradeoff must validate')
+check(parseAnswers('solution', { ...imgBase, choices: { ...imgChoices, quality: ['fast'] } }) !== null, 'tradeoff must not be required below best quality')
+check(parseAnswers('solution', { ...imgBase, choices: { ...imgChoices, imageStyle: undefined, tradeoff: ['tradeoff-cloud'] } }) === null, 'image goal must require imageStyle')
+
 // ---- 4. prompts -------------------------------------------------------------------------------------
 const answers = parseAnswers('max', maxOk) as SolutionAnswers
 const user = buildSolutionUserMessage('max', answers)
