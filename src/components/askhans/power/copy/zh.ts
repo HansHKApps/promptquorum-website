@@ -135,6 +135,7 @@ export const copy: PowerCopy = {
     storage: '可用存储空间，单位 GB',
   },
   run: {
+    estimating: '正在估算您的硬件能运行什么…',
     writing: '正在撰写您的报告…',
     tool: '正在查阅 PromptQuorum 的目录和指南…',
     cancel: '取消',

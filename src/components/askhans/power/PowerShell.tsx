@@ -66,6 +66,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const [error, setError] = useState<AskErrorCode | null>(null)
   const [runStamp, setRunStamp] = useState('')
   const abortRef = useRef<AbortController | null>(null)
+  const stageTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const rootRef = useRef<HTMLDivElement>(null)
 
@@ -138,7 +139,10 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     }
   }, [goBack, backRef])
 
-  useEffect(() => () => abortRef.current?.abort(), [])
+  useEffect(() => () => {
+    abortRef.current?.abort()
+    if (stageTimer.current) clearTimeout(stageTimer.current)
+  }, [])
 
   // Screen readers and keyboard users land on the new heading when the view changes.
   const stepKey = view.k === 'wizard' ? view.index : -1
@@ -161,7 +165,11 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       abortRef.current = ctl
       setText('')
       setError(null)
-      setStatus(tx.run.writing)
+      // Stage 1: memory estimate (the server computes FACTS first); after a few seconds, if no directory lookup
+      // has started yet, the model is composing: stage 3. Tool events switch to stage 2 in between.
+      setStatus(tx.run.estimating)
+      if (stageTimer.current) clearTimeout(stageTimer.current)
+      stageTimer.current = setTimeout(() => setStatus((s) => (s === tx.run.estimating ? tx.run.writing : s)), 5000)
       setRunStamp(new Date().toISOString().slice(0, 10))
       setView({ k: 'run', process })
       let acc = ''
@@ -187,7 +195,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         ctl.signal,
       )
     },
-    [answersFor, saveProfileOn, tx.run.tool, tx.run.writing, getVisitId, lang],
+    [answersFor, saveProfileOn, tx.run.tool, tx.run.writing, tx.run.estimating, getVisitId, lang],
   )
 
   const next = (process: ProcessId, index: number) => {

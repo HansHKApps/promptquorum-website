@@ -13,7 +13,7 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
     id: 'max',
     icon: 'Compass',
     steps: [
-      { id: 'hardware', kind: 'hardware' },
+      { id: 'hardware', kind: 'hardware', allowNone: true },
       { id: 'goals', kind: 'multi', options: GOALS },
       { id: 'connectivity', kind: 'single', options: ['offline', 'online-ok'] },
       { id: 'price', kind: 'single', options: ['free-only', 'paid-ok'] },

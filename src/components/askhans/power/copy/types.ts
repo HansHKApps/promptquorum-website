@@ -59,7 +59,7 @@ export interface PowerCopy {
     ram: string
     storage: string
   }
-  run: { writing: string; tool: string; cancel: string; limit: string; retry: string }
+  run: { estimating: string; writing: string; tool: string; cancel: string; limit: string; retry: string }
   report: {
     title: (processName: string) => string
     copy: string
