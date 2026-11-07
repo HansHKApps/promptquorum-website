@@ -7,7 +7,7 @@ import {
 import type { Language } from '@/lib/blog/blogContent'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 interface PageProps {
   params: Promise<{ slug: string }>

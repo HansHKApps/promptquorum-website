@@ -10,7 +10,7 @@ import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
 
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs',

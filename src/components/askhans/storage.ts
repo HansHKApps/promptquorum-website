@@ -3,7 +3,7 @@
 // never sent to the server except as the current chat request.
 // Consent lives in localStorage so the notice is not repeated on every visit.
 
-import { ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_HISTORY_DAYS, ASK_HANS_STORAGE } from '@/lib/askhans/config'
+import { ASK_HANS_CONSENT_DAYS, ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_HISTORY_DAYS, ASK_HANS_STORAGE } from '@/lib/askhans/config'
 import type { ConsentRecord, Conversation, UiState } from './types'
 
 function read<T>(storage: Storage | undefined, key: string): T | null {
@@ -84,7 +84,14 @@ export function getVisitId(): string {
 /** Returns the stored consent only if it was given for the current consent-text version. */
 export function loadConsent(): ConsentRecord | null {
   const c = read<ConsentRecord>(localStorage, ASK_HANS_STORAGE.consent)
-  return c && c.textVersion === ASK_HANS_CONSENT_TEXT_VERSION && (c.value === 'yes' || c.value === 'no') ? c : null
+  if (!c || c.textVersion !== ASK_HANS_CONSENT_TEXT_VERSION || (c.value !== 'yes' && c.value !== 'no')) return null
+  // Consent lasts ASK_HANS_CONSENT_DAYS; an expired or unreadable timestamp counts as not given.
+  const age = Date.now() - Date.parse(c.ts)
+  if (!Number.isFinite(age) || age < 0 || age > ASK_HANS_CONSENT_DAYS * 86_400_000) {
+    clearConsent()
+    return null
+  }
+  return c
 }
 
 export function saveConsent(value: 'yes' | 'no', saveHistory: boolean): ConsentRecord {

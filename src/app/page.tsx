@@ -7,7 +7,7 @@ import { ConfirmedToast } from '@/components/ConfirmedToast'
 import { Home as HomeHub } from '@/components/home/Home'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export async function generateMetadata(): Promise<Metadata> {
   const selectedLang = 'en'

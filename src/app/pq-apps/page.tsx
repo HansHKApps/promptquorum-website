@@ -9,7 +9,7 @@ import { OptimizationShowcase } from '@/components/OptimizationShowcase'
 import { QuorumShowcase } from '@/components/QuorumShowcase'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

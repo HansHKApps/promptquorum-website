@@ -5,7 +5,7 @@ import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { AboutPageContent } from '@/components/AboutPageContent'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const LANG = 'zh' as const
 

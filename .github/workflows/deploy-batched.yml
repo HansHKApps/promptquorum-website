@@ -1,0 +1,103 @@
+name: Batched Production Deploy
+
+# One production build per day instead of one per article (owner decision 2026-11-06).
+#
+# Why: a production build compiles the whole content corpus (~240 MB of article TypeScript) and
+# takes 20-30+ minutes on Vercel, no matter whether one article or fifty changed. Sessions merge to
+# main freely; nothing deploys until a commit carries [force-deploy] (scripts/vercel-ignore-build-step.sh).
+# This workflow is the "everything lands on main, then ships together" step.
+#
+# Rule: ship if main has changes that affect the site since the last [force-deploy] commit, OR if the
+# last deploy is older than HEARTBEAT_DAYS (pages are now fully static between deploys, so date-based
+# badges such as the 90-day stale-app warning only refresh on a deploy). Docs, markdown, the SEO
+# changelog, the weekly homepage-feed snapshot and CI files alone never trigger a deploy.
+#
+# Manual use still works: scripts/deploy.sh (urgent fix) or the "Run workflow" button here.
+# Right after a deploy it runs the SEO "mark deployed" step (repo CLAUDE.md, "Deployments are on demand").
+
+on:
+  schedule:
+    - cron: '23 3 * * *' # daily ~03:23 UTC (04:23/05:23 in Germany); avoid :00/:30
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Deploy even if nothing changed (true/false)'
+        required: false
+        default: 'false'
+
+concurrency:
+  group: batched-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  HEARTBEAT_DAYS: '7'
+
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main with history
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Decide whether to deploy
+        id: decide
+        run: |
+          set -euo pipefail
+          # Compare against what is actually LIVE (build-info.json is written by every successful
+          # production build), not against the last deploy commit: a failed build must not count as shipped.
+          info=$(curl -fsS --max-time 20 https://www.promptquorum.com/build-info.json || true)
+          last=$(printf '%s' "$info" | jq -r '.commit // empty' 2>/dev/null || true)
+          started_ms=$(printf '%s' "$info" | jq -r '.buildStartedAt // empty' 2>/dev/null || true)
+          if [ -z "$last" ] || ! git cat-file -e "${last}^{commit}" 2>/dev/null; then
+            echo "Live commit unknown or not in history ('$last'); deploying."
+            echo "deploy=true" >> "$GITHUB_OUTPUT"; echo "reason=live commit unknown" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ -n "$started_ms" ]; then last_ts=$(( started_ms / 1000 )); else last_ts=$(git log -1 --format=%ct "$last"); fi
+          age_days=$(( ( $(date +%s) - last_ts ) / 86400 ))
+          changed=$(git diff --name-only "$last" HEAD \
+            | grep -vE '^(docs/|\.github/)|\.md$|^src/data/seo-changelog\.json$|^src/generated/home-content-feed\.json$' || true)
+          n=$(printf '%s\n' "$changed" | sed '/^$/d' | wc -l | tr -d ' ')
+          echo "Last deploy: $last ($age_days days ago); $n deployable file(s) changed since."
+          if [ "${{ github.event.inputs.force || 'false' }}" = "true" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"; echo "reason=manual force" >> "$GITHUB_OUTPUT"
+          elif [ "$n" -gt 0 ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"; echo "reason=$n changed file(s) since last deploy" >> "$GITHUB_OUTPUT"
+          elif [ "$age_days" -ge "$HEARTBEAT_DAYS" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"; echo "reason=heartbeat: last deploy $age_days days ago" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"; echo "reason=nothing to ship" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger production deploy
+        if: steps.decide.outputs.deploy == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty --no-verify -m "chore: [force-deploy] batched ship (${{ steps.decide.outputs.reason }})"
+          git push origin HEAD:main
+          echo "Deploy triggered for $(git rev-parse --short HEAD)."
+
+      - name: Mark SEO changes live
+        if: steps.decide.outputs.deploy == 'true'
+        run: |
+          set -euo pipefail
+          node scripts/seo-log-change.mjs --mark-deployed --all-pending --date "$(date -u +%F)"
+          git add src/data/seo-changelog.json
+          if git diff --cached --quiet; then
+            echo "No pending SEO entries."
+            exit 0
+          fi
+          git commit --no-verify -m "chore(seo): mark pending entries live $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Summary
+        run: |
+          echo "deploy=${{ steps.decide.outputs.deploy }} reason=${{ steps.decide.outputs.reason }}" | tee -a "$GITHUB_STEP_SUMMARY"

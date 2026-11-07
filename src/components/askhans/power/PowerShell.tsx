@@ -14,7 +14,7 @@ import { ConsentNotice } from '../ConsentNotice'
 import { useAskCopy, useAskLang, localizeAskPath } from '../copy'
 import { AskIcon } from '../icons'
 import type { AskErrorCode, ConsentRecord } from '../types'
-import { streamSolution } from '../useAskStream'
+import { logEvent, streamSolution } from '../useAskStream'
 import { ChoiceGroup } from './choices'
 import { usePowerCopy } from './copy'
 import type { ReportDoc } from './export/reportDoc'
@@ -39,6 +39,15 @@ interface Props {
 }
 
 const SITE = 'https://www.promptquorum.com'
+
+// Solution Setup: the directory link opens pre-filtered for the chosen goal (the directory's ?want= keys).
+// Video has no matching directory chip, so it links to the unfiltered directory.
+const WANT_FOR_GOAL: Record<string, string> = { image: 'image', voice: 'audio', music: 'audio', coding: 'code', docs: 'docs', chat: 'chat', translate: 'chat' }
+function directoryQuery(process: ProcessId, choices: Record<string, string[]>): string {
+  if (process !== 'solution') return ''
+  const want = WANT_FOR_GOAL[choices.goal?.[0] ?? '']
+  return want ? `?want=${want}` : ''
+}
 
 const GROUP = 'rounded-xl border border-border bg-white p-4 shadow-sm'
 
@@ -239,7 +248,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       inputs: inputLines(reportProcess),
       body: text,
       references: [
-        { label: tx.doc.refDirectory, url: `${SITE}${localizeAskPath('/directory', lang)}` },
+        { label: tx.doc.refDirectory, url: `${SITE}${localizeAskPath('/directory', lang)}${directoryQuery(reportProcess, choices)}` },
         { label: tx.doc.refHardwareTool, url: `${SITE}${localizeAskPath('/tools/what-can-i-run', lang)}` },
         { label: tx.doc.refAskHans, url: `${SITE}${localizeAskPath('/askhans', lang)}` },
       ],
@@ -254,7 +263,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         disclaimerText: tx.doc.disclaimerText,
       },
     }
-  }, [reportProcess, tx, runStamp, lang, ac.dir, inputLines, text])
+  }, [reportProcess, choices, tx, runStamp, lang, ac.dir, inputLines, text])
 
   // ---- rendering --------------------------------------------------------------------------------
   const backLabel = view.k === 'menu' ? tx.menu.back : tx.wizard.back
@@ -316,7 +325,17 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     const last = view.index >= steps.length - 1
     const valid = stepValid(step, view.process)
     body = (
-      <section className={GROUP} aria-labelledby="pm-step-title">
+      <section
+        className={GROUP}
+        aria-labelledby="pm-step-title"
+        onKeyDown={(e) => {
+          // Enter advances a valid step, except inside the note box or on a focused button/checkbox (they handle Enter themselves).
+          const el = e.target as HTMLElement
+          if (e.key !== 'Enter' || e.shiftKey || !valid || el.tagName === 'TEXTAREA' || el.tagName === 'BUTTON' || (el.tagName === 'INPUT' && (el as HTMLInputElement).type === 'checkbox')) return
+          e.preventDefault()
+          next(view.process, view.index)
+        }}
+      >
         <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.wizard.step(view.index + 1, steps.length)}</p>
         <h2 id="pm-step-title" ref={headingRef} tabIndex={-1} className="mt-0.5 text-[16px] font-bold leading-snug text-foreground outline-none">
           {copy?.q ?? step.id}
@@ -351,7 +370,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             </>
           )}
         </div>
-        {!valid && step.kind === 'multi' && <p className="mt-2 text-[12px] text-muted-foreground">{tx.wizard.required}</p>}
+        {!valid && (step.kind === 'multi' || step.kind === 'single') && <p className="mt-2 text-[12px] text-muted-foreground">{tx.wizard.required}</p>}
         <div className="mt-4 flex justify-end">
           <button
             type="button"
@@ -380,7 +399,14 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     const msg = error === 'limit' || error === 'rate' ? tx.run.limit : error ? ac.errors[error as Exclude<AskErrorCode, 'limit'>] : ''
     body = (
       <>
-        <ReportView tx={tx} doc={doc} streaming={view.k === 'run' && !failed} status={status} />
+        <ReportView
+          tx={tx}
+          doc={doc}
+          onExport={(channel) => {
+            // Anonymous export counter: format name only, never the report; only with consent "Yes".
+            if (consent?.value === 'yes') logEvent({ type: 'power_export', visitId: getVisitId(), process: view.process, channel })
+          }}
+          streaming={view.k === 'run' && !failed} status={status} />
         {failed && (
           <div role="alert" className="mt-3 rounded-lg border border-border bg-white p-3 text-[13px]">
             <p>{typeof msg === 'string' ? msg : ''}</p>

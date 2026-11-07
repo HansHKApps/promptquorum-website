@@ -9,7 +9,7 @@ import { getFrameworkUiLabels } from '@/lib/frameworksUiLabels'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const LANG = 'es' as const
 

@@ -10,7 +10,7 @@ const PATH = '/tools/can-i-run-this'
 const LOCALIZED_PATH = (LANG as string) === 'en' ? PATH : `/${LANG}${PATH}`
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = t('canIRunThisPageTitle', LANG)

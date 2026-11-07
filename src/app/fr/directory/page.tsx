@@ -3,7 +3,7 @@ import { buildArticleMetadata, buildArticlePageElement } from '@/lib/power-local
 import { DIRECTORY_ARTICLE_SLUG } from '@/lib/power-local-llm/metadata-helpers'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildArticleMetadata(DIRECTORY_ARTICLE_SLUG, 'fr')

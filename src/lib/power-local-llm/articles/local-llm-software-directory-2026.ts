@@ -342,6 +342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Description': 'Local speech recognition optimized for CPU and GPU', 'License': 'MIT', 'Stars': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Description': 'Fast Whisper transcription via CTranslate2 quantization', 'License': 'MIT', 'Stars': '25.2k'},
           { 'Tool': '[**MacWhisper**](/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', 'Description': 'One-time-purchase Mac app for local Whisper transcription', 'License': 'Closed source' },
+          { 'Tool': '[**Sablate**](/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', 'Description': 'Windows and Mac subtitle app with local Whisper transcription and burn-in', 'License': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -938,6 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Beschreibung': 'Lokale Spracherkennung, optimiert für CPU und GPU', 'Lizenz': 'MIT', 'Sterne': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Beschreibung': 'Schnelle Whisper-Transkription via CTranslate2-Quantisierung', 'Lizenz': 'MIT', 'Sterne': '25.2k'},
           { 'Tool': '[**MacWhisper**](/de/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', 'Beschreibung': 'Mac-App mit Einmalkauf für lokale Whisper-Transkription', 'Lizenz': 'Closed source' },
+          { 'Tool': '[**Sablate**](/de/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', 'Beschreibung': 'Untertitel-App für Windows und Mac mit lokaler Whisper-Transkription und Einbrennen', 'Lizenz': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -1537,6 +1539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Description': 'Reconnaissance vocale locale, fonctionne sur CPU ou GPU', 'Licence': 'MIT', 'Étoiles': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Description': 'Transcription Whisper rapide via quantification CTranslate2', 'Licence': 'MIT', 'Étoiles': '25.2k'},
           { 'Tool': '[**MacWhisper**](/fr/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', 'Description': 'App Mac à achat unique pour transcription Whisper locale', 'Licence': 'Closed source' },
+          { 'Tool': '[**Sablate**](/fr/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', 'Description': 'App de sous-titrage pour Windows et Mac avec transcription Whisper locale et incrustation', 'Licence': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -2127,6 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '概要': 'CPUまたはGPUで動作するローカル音声認識', 'ライセンス': 'MIT', 'スター': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '概要': 'CTranslate2を使った高速Whisper文字起こし', 'ライセンス': 'MIT', 'スター': '25.2k'},
           { 'Tool': '[**MacWhisper**](/ja/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', '概要': 'ローカルWhisper文字起こし向け買い切りMacアプリ', 'ライセンス': 'Closed source' },
+          { 'Tool': '[**Sablate**](/ja/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', '概要': 'ローカルWhisper文字起こしと字幕焼き込みに対応したWindows・Mac向け字幕アプリ', 'ライセンス': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -2719,6 +2723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '描述': '本地语音识别，支持CPU或GPU运行', '许可证': 'MIT', '星标': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '描述': '通过CTranslate2实现的快速Whisper转录', '许可证': 'MIT', '星标': '25.2k'},
           { 'Tool': '[**MacWhisper**](/zh/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', '描述': '一次性购买的本地Whisper转录Mac应用', '许可证': 'Closed source' },
+          { 'Tool': '[**Sablate**](/zh/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', '描述': '支持本地Whisper转录与字幕烧录的Windows和Mac字幕应用', '许可证': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -3311,6 +3316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descripción': 'Reconocimiento de voz local optimizado para CPU y GPU', 'Licencia': 'MIT', 'Estrellas': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descripción': 'Transcripción rápida de Whisper mediante cuantización con CTranslate2', 'Licencia': 'MIT', 'Estrellas': '25.2k'},
           { 'Tool': '[**MacWhisper**](/es/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', 'Descripción': 'App de Mac de pago único para transcripción Whisper local', 'Licencia': 'Closed source' },
+          { 'Tool': '[**Sablate**](/es/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', 'Descripción': 'App de subtítulos para Windows y Mac con transcripción Whisper local e incrustación', 'Licencia': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -3917,6 +3923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descrição': 'Reconhecimento de voz local, funciona em CPU ou GPU', 'Licença': 'MIT', 'Estrelas': '53.4k'},
           { 'Ferramenta': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descrição': 'Transcrição rápida do Whisper via quantização CTranslate2', 'Licença': 'MIT', 'Estrelas': '25.2k'},
           { 'Ferramenta': '[**MacWhisper**](/pt/power-local-llm/macwhisper-review)', 'Link': '[macwhisper.com](https://macwhisper.com)', 'Descrição': 'App de Mac de compra única para transcrição Whisper local', 'Licença': 'Closed source' },
+          { 'Ferramenta': '[**Sablate**](/pt/power-local-llm/sablate-review)', 'Link': '[sablate.com](https://sablate.com)', 'Descrição': 'App de legendas para Windows e Mac com transcrição Whisper local e gravação no vídeo', 'Licença': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -4522,6 +4529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**Whisper.cpp**', 'الرابط': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'الوصف': 'التعرف على الكلام محلياً، يعمل على CPU أو GPU', 'الترخيص': 'MIT', 'النجوم': '53.4k'},
           { 'الأداة': '**faster-whisper**', 'الرابط': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'الوصف': 'نسخ Whisper سريع عبر تكميم CTranslate2', 'الترخيص': 'MIT', 'النجوم': '25.2k'},
           { 'الأداة': '[**MacWhisper**](/ar/power-local-llm/macwhisper-review)', 'الرابط': '[macwhisper.com](https://macwhisper.com)', 'الوصف': 'تطبيق Mac بشراء لمرة واحدة للنسخ الصوتي المحلي عبر Whisper', 'الترخيص': 'Closed source' },
+          { 'الأداة': '[**Sablate**](/ar/power-local-llm/sablate-review)', 'الرابط': '[sablate.com](https://sablate.com)', 'الوصف': 'تطبيق ترجمة نصية لأجهزة Windows وMac مع نسخ صوتي محلي عبر Whisper ودمج الترجمات في الفيديو', 'الترخيص': 'Closed source' },
         ],
       },
       textToSpeech: {
@@ -5131,6 +5139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**Whisper.cpp**', '링크': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '설명': 'CPU 및 GPU에 최적화된 로컬 음성 인식', '라이선스': 'MIT', '스타': '53.4k'},
           { '도구': '**faster-whisper**', '링크': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '설명': 'CTranslate2 양자화를 통한 빠른 Whisper 전사', '라이선스': 'MIT', '스타': '25.2k'},
           { '도구': '[**MacWhisper**](/ko/power-local-llm/macwhisper-review)', '링크': '[macwhisper.com](https://macwhisper.com)', '설명': '로컬 Whisper 전사를 위한 일회성 구매 Mac 앱', '라이선스': 'Closed source' },
+          { '도구': '[**Sablate**](/ko/power-local-llm/sablate-review)', '링크': '[sablate.com](https://sablate.com)', '설명': 'Whisper 로컬 전사와 자막 삽입을 지원하는 Windows·Mac용 자막 앱', '라이선스': 'Closed source' },
         ],
       },
       textToSpeech: {

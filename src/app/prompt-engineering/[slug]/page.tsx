@@ -13,7 +13,7 @@ import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {

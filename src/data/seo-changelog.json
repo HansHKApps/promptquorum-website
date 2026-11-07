@@ -23344,7 +23344,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "87e83c0f-845b-435e-9a71-7ae6294fc55b",
@@ -23362,7 +23366,11 @@
       "pydantic ai review: features, structured outputs, alternativ"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "34c80c92-8e7d-4401-94ec-d916ce56a244",
@@ -23380,7 +23388,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "2ccedaee-8d9f-466a-9ee5-7c4064d1c9e8",
@@ -23398,7 +23410,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "c4ecefbe-c84b-491d-b82b-c4ae0833cd33",
@@ -23416,7 +23432,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "5f88deaa-0901-4f84-8199-70a9a235c536",
@@ -23434,7 +23454,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "c9db266f-8f73-42c7-8886-041f5aed6ca0",
@@ -23452,7 +23476,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "64a1f0ed-45e4-4a5c-86a9-4ead89238252",
@@ -23470,7 +23498,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "0352cfe6-7c38-41f0-92f5-11a84153ce52",
@@ -23488,7 +23520,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "75e12dde-e4db-41e2-915c-a2e1c8773bcd",
@@ -23506,7 +23542,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "bd612462-cb82-4800-9af0-74a4cf5f777a",
@@ -23524,7 +23564,11 @@
       "gguf vs gptq vs awq: differences, speed and which to use"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "62196379-7391-48dc-ba49-e55fad983a98",
@@ -23547,7 +23591,11 @@
       "what is q4_k_m quantization?"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "eb55f11a-3a1f-43ef-9948-18faaa9f7d2d",
@@ -23565,7 +23613,11 @@
       "what is q4_k_m quantization?"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "46911cba-3aad-478a-a59d-810faad0c302",

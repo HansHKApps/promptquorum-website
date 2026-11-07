@@ -8,7 +8,7 @@ import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 interface PageProps {
   params: Promise<{ slug: string }>

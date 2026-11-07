@@ -1704,6 +1704,11 @@
     "urlSlug": "weesper-neon-flow-review",
     "url": "/power-local-llm/weesper-neon-flow-review"
   },
+  "sablate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "sablate-review",
+    "url": "/power-local-llm/sablate-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",

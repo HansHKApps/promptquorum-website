@@ -6,7 +6,7 @@ import { QuorumShowcase } from '@/components/QuorumShowcase'
 import { AppLink as Link } from '@/components/AppLink'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>

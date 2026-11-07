@@ -3,7 +3,7 @@ import { TestingStandardsPageContent } from '@/components/testing-standards/Test
 import { TESTING_STANDARDS_COPY } from '@/lib/testing-standards/copy'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const LANG = 'de' as const
 

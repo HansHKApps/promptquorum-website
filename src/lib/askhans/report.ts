@@ -16,7 +16,7 @@ export type { ReportWindow, WindowCounts, ReportRow }
 
 export interface AskHansReport extends UsageReportBase {
   /** all visitors, no consent needed */
-  totals: { opens: number; requests: number; answers: number }
+  totals: { opens: number; requests: number; answers: number; power: number }
 }
 
 function emptyReport(dates: string[]): AskHansReport {
@@ -24,10 +24,11 @@ function emptyReport(dates: string[]): AskHansReport {
     generatedAt: new Date().toISOString(),
     since: null,
     breakdownSince: null,
-    totals: { opens: 0, requests: 0, answers: 0 },
+    totals: { opens: 0, requests: 0, answers: 0, power: 0 },
     headline: [
       { key: 'answers', win: zeroCounts(), all: 0 },
       { key: 'opens', win: zeroCounts(), all: 0 },
+      { key: 'power', win: zeroCounts(), all: 0 },
     ],
     days: dates.map((date) => ({ date, count: 0 })),
     sampled: zeroCounts(),
@@ -37,6 +38,8 @@ function emptyReport(dates: string[]): AskHansReport {
     dirCats: [],
     tools: [],
     langs: [],
+    powerProcesses: [],
+    powerExports: [],
     feedback: { count: zeroCounts(), sum: zeroCounts(), low: zeroCounts(), mail: zeroCounts(), all: { count: 0, sum: 0, low: 0, mail: 0 } },
     engagement: emptyEngagement(),
   }
@@ -79,11 +82,14 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     const pipe = redis.pipeline()
     for (const d of dates) pipe.hgetall(`askhans:day:${d}`)
     const [perDay, totals] = await Promise.all([pipe.exec<(Record<string, string | number> | null)[]>(), getAskHansTotals()])
-    report.totals = { opens: totals.opens, requests: totals.requests, answers: totals.answers }
+    report.totals = { opens: totals.opens, requests: totals.requests, answers: totals.answers, power: totals.power }
     report.since = totals.since
     report.breakdownSince = totals.since
     const answersWin = zeroCounts()
     const opensWin = zeroCounts()
+    const powerWin = zeroCounts()
+    const powerRows = new Map<string, WindowCounts>()
+    const exportRows = new Map<string, WindowCounts>()
     const sampled = zeroCounts()
     const sampledOf = zeroCounts()
     const eng = emptyEngagement()
@@ -101,6 +107,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
       const inBreakdown = !totals.since || dates[i] > totals.since
       const opens = Number(day.total_opens ?? 0) || 0
       const answers = Number(day.total_answers ?? 0) || 0
+      const power = num(day.total_power)
       report.days[i].count = answers
       const rc = num(day.rating_count)
       const rs = num(day.rating_sum)
@@ -113,10 +120,22 @@ export async function getAskHansReport(): Promise<AskHansReport> {
         fb.mail[w] += rm
         opensWin[w] += opens
         answersWin[w] += answers
+        powerWin[w] += power
         eng.sessions[w] += num(day.sessions)
         eng.returning[w] += num(day['ret:back'])
         eng.promoShown[w] += num(day.promo_shown)
         for (const b of DURATION_BUCKETS) eng.duration[b][w] += num(day[`dur:${b}`])
+      }
+      // Power Mode counters: reports per process (all visitors) and exports per format (consent only, no per-process split here).
+      for (const [field, raw] of Object.entries(day)) {
+        const n = Number(raw) || 0
+        if (!n) continue
+        const target = field.startsWith('power:') ? powerRows : field.startsWith('pexport:') && field.split(':').length === 2 ? exportRows : null
+        if (!target) continue
+        const key = field.slice(field.indexOf(':') + 1)
+        const counts = target.get(key) ?? zeroCounts()
+        for (const w of wins) counts[w] += n
+        target.set(key, counts)
       }
       if (!inBreakdown) return
       for (const w of wins) sampledOf[w] += answers
@@ -138,7 +157,10 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     report.headline = [
       { key: 'answers', win: answersWin, all: totals.answers },
       { key: 'opens', win: opensWin, all: totals.opens },
+      { key: 'power', win: powerWin, all: totals.power },
     ]
+    report.powerProcesses = rankRows(powerRows)
+    report.powerExports = rankRows(exportRows)
     const older = await olderRatings(totals.since, dates[0])
     fb.all = { count: fb.count.last30 + older.count, sum: fb.sum.last30 + older.sum, low: fb.low.last30 + older.low, mail: fb.mail.last30 + older.mail }
     report.feedback = fb
