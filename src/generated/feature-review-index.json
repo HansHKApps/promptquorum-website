@@ -1109,6 +1109,11 @@
     "urlSlug": "perfect-memory-review",
     "url": "/power-local-llm/perfect-memory-review"
   },
+  "meetini": {
+    "cluster": "power-local-llm",
+    "urlSlug": "meetini-review",
+    "url": "/power-local-llm/meetini-review"
+  },
   "searxng": {
     "cluster": "power-local-llm",
     "urlSlug": "searxng-review",

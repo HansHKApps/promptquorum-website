@@ -562,6 +562,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'hiwaifu-review':                           'hiwaifu-review',
   'memoryai-review':                          'memoryai-review',
   'perfect-memory-review':                    'perfect-memory-review',
+  'meetini-review':                           'meetini-review',
   'on-device-ai-translator-review':           'on-device-ai-translator-review',
   'llamatik-review':                          'llamatik-review',
   'castmates-review':                         'castmates-review',

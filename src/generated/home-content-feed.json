@@ -3163,7 +3163,7 @@
     "title": "Chain-of-Thought Prompting: Make AI Show Its Reasoning",
     "excerpt": "Chain-of-thought prompting makes a model reason step by step. See worked examples, the research behind it and when built-in reasoning makes it unnecessary.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3172,7 +3172,7 @@
     "title": "Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen",
     "excerpt": "Chain-of-Thought Prompting lässt ein Modell Schritt für Schritt denken. Mit Beispielen, Studienlage und Hinweisen, wann integriertes Reasoning es ersetzt.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3181,7 +3181,7 @@
     "title": "Chain-of-Thought Prompting : Faites penser l'IA à haute voix",
     "excerpt": "Le chain-of-thought prompting fait raisonner un modèle étape par étape. Exemples concrets, recherches à l'appui et quand le raisonnement intégré suffit.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3190,7 +3190,7 @@
     "title": "Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる",
     "excerpt": "Chain-of-Thoughtプロンプティングは、モデルに段階的に推論させる手法です。具体例、元になった研究、組み込み推論モードとの使い分けを解説します。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3199,7 +3199,7 @@
     "title": "链式思维提示词: 让AI展示其推理过程",
     "excerpt": "链式思维提示词让模型逐步推理后再作答，可提高数学、逻辑和多步骤任务的准确率。本文介绍原理、示例、相关研究，以及何时可改用模型内置的推理模式。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3208,7 +3208,7 @@
     "title": "Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento",
     "excerpt": "Qué es el chain-of-thought prompting (cadena de pensamiento): ejemplos de razonamiento paso a paso, la investigación detrás y cuándo usarlo.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3217,7 +3217,7 @@
     "title": "Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio",
     "excerpt": "O que é chain-of-thought prompting, como funciona e exemplos passo a passo. Veja a pesquisa por trás e quando o raciocínio integrado dispensa a técnica.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3226,7 +3226,7 @@
     "title": "توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله",
     "excerpt": "تعرّف على توجيه سلسلة الأفكار (CoT) الذي يجعل النموذج يستدل خطوة بخطوة، مع أمثلة عملية والأبحاث الداعمة ومتى تغني أوضاع الاستدلال المدمجة عنه.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -3235,7 +3235,7 @@
     "title": "Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법",
     "excerpt": "Chain-of-Thought 프롬프팅은 모델이 단계별로 추론하게 하는 기법입니다. 예시, 관련 연구, 내장 추론 모드와의 선택 기준을 설명합니다.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/prompt-engineering/chain-of-thought-prompting",
     "cluster": "prompt-engineering"
   },
@@ -9479,81 +9479,81 @@
   {
     "lang": "en",
     "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-    "excerpt": "NextChat review: free MIT-licensed chat UI with one-click Vercel deploy and Docker setup, plus an October 2026 MCP security fix not yet in a release.",
+    "excerpt": "NextChat review: free MIT-licensed chat UI with Vercel and Docker setup, plus MCP fixes on main, per project pull requests, not yet in a release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "NextChat-Rezension 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy",
-    "excerpt": "NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Ein-Klick-Vercel-Deploy und Docker, dazu eine MCP-Sicherheitskorrektur vom Oktober 2026 ohne Release.",
+    "excerpt": "NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Vercel- und Docker-Setup, dazu laut Pull Requests MCP-Korrekturen in main, noch ohne Release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "NextChat : avis 2026 sur l'interface de chat légère à déploiement en un clic",
-    "excerpt": "Avis NextChat : chat gratuit sous licence MIT, déploiement Vercel en un clic et Docker, avec un correctif de sécurité MCP d'octobre 2026 hors release.",
+    "excerpt": "Avis NextChat : chat gratuit sous licence MIT, déploiement Vercel et Docker, avec des correctifs MCP sur main selon les pull requests, hors release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "NextChatレビュー2026：軽量でワンクリックデプロイのチャットUI",
-    "excerpt": "NextChatレビュー：MITライセンスの無料チャットUI。Vercelワンクリック導入とDocker設定、リリース未反映の2026年10月MCPセキュリティ修正も解説。",
+    "excerpt": "NextChatレビュー：MITライセンスの無料チャットUI。VercelとDockerの導入と、プルリクエストによるとmainで修正済みでリリース未反映のMCP問題も解説。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "NextChat 2026评测：轻量级、一键部署的聊天界面",
-    "excerpt": "NextChat评测：MIT许可证的免费聊天界面，支持Vercel一键部署与Docker，并说明尚未进入正式版本的2026年10月MCP安全修复。",
+    "excerpt": "NextChat评测：MIT许可证的免费聊天界面，支持Vercel与Docker部署，并说明据拉取请求已在main修复、尚未进入正式版本的MCP问题。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "NextChat: análisis 2026 de la interfaz de chat ligera con despliegue en un clic",
-    "excerpt": "Reseña de NextChat: chat gratuito con licencia MIT, despliegue en Vercel con un clic y Docker, y un parche de seguridad MCP de octubre de 2026 sin release.",
+    "excerpt": "Reseña de NextChat: chat gratuito con licencia MIT, despliegue en Vercel y Docker, y correcciones MCP en main según los pull requests, sin release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "NextChat: análise 2026 da interface de chat leve com deploy em um clique",
-    "excerpt": "Análise do NextChat: chat gratuito com licença MIT, deploy na Vercel com um clique e Docker, e correção de segurança do MCP de outubro de 2026 sem release.",
+    "excerpt": "Análise do NextChat: chat gratuito com licença MIT, deploy na Vercel e Docker, e correções do MCP na main segundo os pull requests, sem release.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "مراجعة NextChat 2026: واجهة دردشة خفيفة بنشر بنقرة واحدة",
-    "excerpt": "مراجعة NextChat: واجهة دردشة مجانية برخصة MIT مع نشر بنقرة على Vercel وDocker، مع إصلاح أمني لـ MCP في أكتوبر 2026 غير مضمَّن بعد في إصدار.",
+    "excerpt": "مراجعة NextChat: واجهة دردشة مجانية برخصة MIT مع نشر على Vercel وDocker، مع إصلاحات MCP على main بحسب طلبات السحب لم تصدر في إصدار بعد.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "NextChat 리뷰 2026: 가벼운 원클릭 배포 채팅 UI",
-    "excerpt": "NextChat 리뷰: MIT 라이선스 무료 채팅 UI, Vercel 원클릭 배포와 Docker 설정, 릴리스에 아직 없는 2026년 10월 MCP 보안 수정까지 정리.",
+    "excerpt": "NextChat 리뷰: MIT 라이선스 무료 채팅 UI, Vercel·Docker 배포, 풀 리퀘스트 기준으로 main에서 수정됐으나 릴리스에 없는 MCP 문제까지 정리.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/local-llms/nextchat-review",
     "cluster": "local-llms"
   },
@@ -9886,7 +9886,7 @@
     "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
     "excerpt": "LobeChat, Big-AGI, NextChat, Page Assist, and Chatbox compared: GitHub stars, license, platform support, and pricing for each AI chat-interface app in 2026.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9895,7 +9895,7 @@
     "title": "LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox: Vergleich 2026",
     "excerpt": "LobeChat, Big-AGI, NextChat, Page Assist und Chatbox im Vergleich: GitHub-Sterne, Lizenz, Plattform-Unterstützung und Preise jeder KI-Chat-Oberfläche 2026.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9904,7 +9904,7 @@
     "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox : comparatif 2026",
     "excerpt": "LobeChat, Big-AGI, NextChat, Page Assist et Chatbox comparés : étoiles GitHub, licence, plateformes et tarifs de chaque interface de chat IA en 2026.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9913,7 +9913,7 @@
     "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox：2026年比較",
     "excerpt": "LobeChat、Big-AGI、NextChat、Page Assist、Chatboxを比較：2026年の各AIチャットインターフェースアプリのGitHubスター数、ライセンス、対応プラットフォーム、価格。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9922,7 +9922,7 @@
     "title": "LobeChat 对比 Big-AGI 对比 NextChat 对比 Page Assist 对比 Chatbox：2026年对比",
     "excerpt": "对比 LobeChat、Big-AGI、NextChat、Page Assist 和 Chatbox：2026 年各 AI 聊天界面应用的 GitHub 星标数、许可证、平台支持和价格。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9931,7 +9931,7 @@
     "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: comparativa 2026",
     "excerpt": "LobeChat, Big-AGI, NextChat, Page Assist y Chatbox comparados: estrellas en GitHub, licencia, plataformas soportadas y precios de cada interfaz de chat IA en 2026.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9940,7 +9940,7 @@
     "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: comparativo 2026",
     "excerpt": "LobeChat, Big-AGI, NextChat, Page Assist e Chatbox comparados: estrelas no GitHub, licença, plataformas suportadas e preços de cada interface de chat de IA em 2026.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9949,7 +9949,7 @@
     "title": "LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox: مقارنة 2026",
     "excerpt": "مقارنة LobeChat وBig-AGI وNextChat وPage Assist وChatbox: نجوم GitHub والترخيص ودعم المنصات وأسعار كل واجهة دردشة ذكاء اصطناعي في 2026.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -9958,7 +9958,7 @@
     "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026년 비교",
     "excerpt": "LobeChat, Big-AGI, NextChat, Page Assist, Chatbox 비교: 2026년 각 AI 채팅 인터페이스 앱의 GitHub 스타 수, 라이선스, 플랫폼 지원, 가격.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
     "cluster": "local-llms"
   },
@@ -18796,7 +18796,7 @@
     "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
     "excerpt": "SOC 2 Type II and ISO 27001 readiness for self-hosted LLM stacks: Trust Services Criteria, Annex A controls, access logging, encryption, and vendor risk for open-weight models.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18805,7 +18805,7 @@
     "title": "SOC 2 & ISO 27001: Audit-Bereitschaft für selbst gehostete LLMs (2026)",
     "excerpt": "SOC 2 Type II und ISO 27001 für selbst gehostete LLM-Stacks: Trust Services Criteria, Annex-A-Kontrollen, Zugriffs-Logging, Verschlüsselung und Lieferantenrisiko bei Open-Weight-Modellen.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18814,7 +18814,7 @@
     "title": "SOC 2 et ISO 27001 : préparer un déploiement de LLM auto-hébergé (2026)",
     "excerpt": "Préparation SOC 2 Type II et ISO 27001 pour un LLM auto-hébergé : Trust Services Criteria, contrôles Annex A, journalisation d'accès, chiffrement et risque fournisseur pour les modèles open-weight.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18823,7 +18823,7 @@
     "title": "セルフホストLLMのSOC 2・ISO 27001監査対応ガイド(2026)",
     "excerpt": "セルフホストLLMスタックのSOC 2 Type II・ISO 27001監査対応:Trust Services Criteria、Annex A統制、アクセスログ、暗号化、オープンウェイトモデルのベンダーリスク評価。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18832,7 +18832,7 @@
     "title": "自托管LLM部署的SOC 2与ISO 27001审计准备指南(2026)",
     "excerpt": "自托管LLM技术栈的SOC 2 Type II与ISO 27001审计准备:Trust Services Criteria、Annex A控制项、访问日志、加密以及开放权重模型的供应商风险评估。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18841,7 +18841,7 @@
     "title": "Preparación SOC 2 e ISO 27001 para LLMs autoalojados (2026)",
     "excerpt": "Preparación SOC 2 Type II e ISO 27001 para stacks de LLM autoalojados: Trust Services Criteria, controles Annex A, registro de accesos, cifrado y riesgo de proveedor en modelos open-weight.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18850,7 +18850,7 @@
     "title": "SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados (2026)",
     "excerpt": "Preparação SOC 2 Type II e ISO 27001 para stacks de LLM auto-hospedados: Trust Services Criteria, controles Annex A, log de acessos, criptografia e risco de fornecedor em modelos open-weight.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18859,7 +18859,7 @@
     "title": "الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا (2026)",
     "excerpt": "الاستعداد لتدقيق SOC 2 Type II وISO 27001 لبنية LLM مستضافة ذاتيًا: معايير Trust Services، ضوابط Annex A، تسجيل الوصول، التشفير، وتقييم مخاطر الموردين للنماذج مفتوحة الأوزان.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -18868,7 +18868,7 @@
     "title": "셀프호스팅 LLM을 위한 SOC 2·ISO 27001 감사 준비 가이드(2026)",
     "excerpt": "셀프호스팅 LLM 스택의 SOC 2 Type II·ISO 27001 감사 준비: Trust Services Criteria, Annex A 통제, 접근 로그, 암호화, 오픈웨이트 모델의 공급업체 위험 평가.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/local-llms/soc2-iso27001-self-hosted-llm-compliance",
     "cluster": "local-llms"
   },
@@ -22519,8 +22519,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 350 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 350 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 351 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 351 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/directory",
@@ -22528,8 +22528,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 350 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 350 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 351 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 351 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/de/directory",
@@ -22537,8 +22537,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 350 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 350 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 351 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 351 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/fr/directory",
@@ -22546,8 +22546,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす350のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを350件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす351のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを351件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/ja/directory",
@@ -22555,8 +22555,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：350款软件，在本地运行AI（2026）",
-    "excerpt": "对比350款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：351款软件，在本地运行AI（2026）",
+    "excerpt": "对比351款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/zh/directory",
@@ -22564,8 +22564,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 350 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 350 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 351 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 351 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/es/directory",
@@ -22573,8 +22573,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 350 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 350 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 351 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 351 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/pt/directory",
@@ -22582,8 +22582,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 350 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 350 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 351 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 351 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/ar/directory",
@@ -22591,8 +22591,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 350개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 350개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 351개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 351개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/ko/directory",
@@ -26572,7 +26572,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud for AI Companies Compared in 2026",
     "excerpt": "Compare 8 AI clouds, from DigitalOcean and AWS to CoreWeave, RunPod and Lambda, on H100 price, GPU availability and workload fit for AI teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26581,7 +26581,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud für KI-Unternehmen im Vergleich 2026",
     "excerpt": "8 KI-Clouds im Vergleich, von DigitalOcean und AWS bis CoreWeave, RunPod und Lambda: H100-Preis, GPU-Verfügbarkeit und Workload-Eignung für KI-Teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26590,25 +26590,25 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod : comparatif des clouds pour entreprises IA en 2026",
     "excerpt": "Comparatif de 8 clouds IA, de DigitalOcean et AWS à CoreWeave, RunPod et Lambda : prix du H100, disponibilité des GPU et adéquation aux charges de travail.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業向けクラウド比較",
-    "excerpt": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月2日に確認。",
+    "excerpt": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月7日に確認。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司云服务对比",
-    "excerpt": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-02。",
+    "excerpt": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-07。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26617,7 +26617,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativa de nubes para empresas de IA en 2026",
     "excerpt": "Compara 8 nubes de IA, de DigitalOcean y AWS a CoreWeave, RunPod y Lambda, por precio del H100, disponibilidad de GPU y ajuste a tu carga de trabajo.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26626,7 +26626,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativo de nuvens para empresas de IA em 2026",
     "excerpt": "Compare 8 nuvens de IA, do DigitalOcean e da AWS à CoreWeave, RunPod e Lambda, por preço do H100, disponibilidade de GPU e adequação à carga de trabalho.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26635,7 +26635,7 @@
     "title": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: مقارنة السحابات لشركات الذكاء الاصطناعي في 2026",
     "excerpt": "قارن 8 سحابات ذكاء اصطناعي، من DigitalOcean وAWS إلى CoreWeave وRunPod وLambda، من حيث سعر H100 وتوفر GPU وملاءمة حمل العمل.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26644,7 +26644,7 @@
     "title": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업용 클라우드 비교",
     "excerpt": "DigitalOcean, AWS, CoreWeave, RunPod 등 AI 클라우드 8곳을 H100 가격, GPU 가용성, 워크로드 적합성으로 비교합니다.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26815,7 +26815,7 @@
     "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
     "excerpt": "vLLM vs TGI vs NVIDIA NIM vs Ollama for enterprise LLM inference: multi-GPU, Kubernetes, licensing cost, and why TGI is now in maintenance mode.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26824,7 +26824,7 @@
     "title": "Enterprise-LLM-Inferenzserver 2026: vLLM, TGI und NVIDIA NIM im Vergleich",
     "excerpt": "vLLM vs TGI vs NVIDIA NIM vs Ollama für Enterprise-Inferenz: Multi-GPU-Betrieb, Kubernetes, Lizenzkosten und warum TGI jetzt im Wartungsmodus ist.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26833,7 +26833,7 @@
     "title": "Serveurs d'inférence LLM en entreprise 2026 : comparatif vLLM, TGI, NVIDIA NIM et Ollama",
     "excerpt": "vLLM, TGI, NVIDIA NIM et Ollama pour l'inférence en entreprise : multi-GPU, Kubernetes, coût des licences et pourquoi TGI est en mode maintenance.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26842,7 +26842,7 @@
     "title": "vLLM・TGI・NVIDIA NIM比較:エンタープライズLLM推論サーバー2026",
     "excerpt": "vLLM、TGI、NVIDIA NIM、Ollamaをエンタープライズ推論で比較。マルチGPU、Kubernetes、ライセンス費用、TGIがメンテナンスモードである理由。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26851,7 +26851,7 @@
     "title": "企业级LLM推理服务器2026:vLLM对比TGI对比NVIDIA NIM",
     "excerpt": "vLLM、TGI、NVIDIA NIM 与 Ollama 企业推理对比：多 GPU、Kubernetes、许可成本，以及 TGI 为何进入维护模式。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26860,7 +26860,7 @@
     "title": "Servidores de inferencia LLM empresarial 2026: vLLM vs TGI vs NVIDIA NIM",
     "excerpt": "vLLM, TGI, NVIDIA NIM y Ollama para inferencia empresarial: multi-GPU, Kubernetes, coste de licencias y por qué TGI está en modo de mantenimiento.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26869,7 +26869,7 @@
     "title": "Servidores de inferência LLM para empresas 2026: vLLM vs TGI vs NVIDIA NIM",
     "excerpt": "vLLM, TGI, NVIDIA NIM e Ollama para inferência corporativa: multi-GPU, Kubernetes, custo de licenças e por que o TGI está em modo de manutenção.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26878,7 +26878,7 @@
     "title": "خوادم استدلال نماذج اللغة الكبيرة للمؤسسات 2026: مقارنة vLLM وTGI وNVIDIA NIM",
     "excerpt": "مقارنة vLLM وTGI وNVIDIA NIM وOllama للاستدلال المؤسسي: عدة GPU وKubernetes وتكلفة التراخيص ولماذا دخل TGI وضع الصيانة.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -26887,7 +26887,7 @@
     "title": "엔터프라이즈 LLM 추론 서버 2026: vLLM vs TGI vs NVIDIA NIM 비교",
     "excerpt": "엔터프라이즈 추론용 vLLM, TGI, NVIDIA NIM, Ollama 비교: 멀티 GPU, Kubernetes, 라이선스 비용, TGI가 유지보수 모드인 이유.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
     "cluster": "power-local-llm"
   },
@@ -33455,81 +33455,81 @@
   {
     "lang": "en",
     "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-    "excerpt": "Atlarix is a free desktop AI coding agent that runs 100% locally via Ollama or LM Studio. See its pricing, OpenAI data-sharing disclosure, and who it fits.",
+    "excerpt": "Atlarix is a free AI coding agent for desktop, editor and CLI that works with local models via Ollama or LM Studio. Pricing, data flow, and who it fits.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Atlarix Review: Ein kostenloser, lokal-first KI-Coding-Agent",
-    "excerpt": "Atlarix ist ein kostenloser Desktop-KI-Coding-Agent, der zu 100% lokal über Ollama oder LM Studio läuft. Preise, OpenAI-Datenweitergabe und Eignung im Überblick.",
+    "excerpt": "Atlarix ist ein kostenloser KI-Coding-Agent für Desktop, Editor und CLI mit lokalen Modellen über Ollama oder LM Studio. Preise, Datenfluss, Eignung.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Atlarix : un agent de codage IA gratuit et local-first",
-    "excerpt": "Atlarix est un agent de codage IA gratuit qui fonctionne à 100 % en local via Ollama ou LM Studio. Tarifs, partage de données avec OpenAI, et pour qui il convient.",
+    "excerpt": "Atlarix : agent de codage IA gratuit (bureau, éditeur, CLI) utilisable avec des modèles locaux via Ollama ou LM Studio. Tarifs et flux de données.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Atlarixレビュー:無料でローカルファーストなAIコーディングエージェント",
-    "excerpt": "AtlarixはOllamaやLM Studio経由で100%ローカル動作する無料のAIコーディングエージェントです。価格やOpenAIへのデータ共有、向いている人を解説します。",
+    "excerpt": "Atlarixはデスクトップ・エディタ・CLIで使える無料のAIコーディングエージェントで、OllamaやLM Studio経由のローカルモデルに対応。価格、データフロー、向いている人を解説します。",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Atlarix评测:免费的本地优先AI编程代理",
-    "excerpt": "Atlarix是一款可通过Ollama或LM Studio实现100%本地运行的免费AI编程代理。了解其定价、OpenAI数据共享披露及适用人群。",
+    "excerpt": "Atlarix是一款免费AI编程代理,提供桌面、编辑器和CLI版本,可通过Ollama或LM Studio使用本地模型。了解其定价、数据流及适用人群。",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Atlarix: un agente de codificación IA gratuito y local-first",
-    "excerpt": "Atlarix es un agente de codificación IA gratuito que funciona 100% en local vía Ollama o LM Studio. Precio, aviso de intercambio de datos con OpenAI y a quién le conviene.",
+    "excerpt": "Atlarix es un agente de codificación IA gratuito para escritorio, editor y CLI con modelos locales vía Ollama o LM Studio. Precio, datos y para quién es.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Atlarix: um agente de codificação de IA gratuito e local-first",
-    "excerpt": "Atlarix é um agente de codificação de IA gratuito que roda 100% localmente via Ollama ou LM Studio. Veja preço, aviso de compartilhamento de dados com a OpenAI e para quem serve.",
+    "excerpt": "Agente de IA gratuito para desktop, editor e CLI que usa modelos locais via Ollama ou LM Studio. Veja preço, fluxo de dados e para quem serve.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة Atlarix: وكيل برمجة بالذكاء الاصطناعي مجاني ومحلي أولًا",
-    "excerpt": "Atlarix وكيل برمجة مجاني بالذكاء الاصطناعي يعمل محليًا بنسبة 100% عبر Ollama أو LM Studio. التسعير، والإفصاح عن مشاركة البيانات مع OpenAI، ومن يناسبه.",
+    "excerpt": "Atlarix وكيل برمجة مجاني بالذكاء الاصطناعي لسطح المكتب والمحرر وCLI، يعمل مع النماذج المحلية عبر Ollama أو LM Studio. التسعير وتدفق البيانات ومن يناسبه.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Atlarix 리뷰: 무료 로컬 우선 AI 코딩 에이전트",
-    "excerpt": "Atlarix는 Ollama나 LM Studio를 통해 100% 로컬로 동작하는 무료 AI 코딩 에이전트입니다. 가격, OpenAI 데이터 공유 고지, 적합한 사용자를 확인하세요.",
+    "excerpt": "Atlarix는 Ollama나 LM Studio의 로컬 모델과 함께 쓸 수 있는 데스크톱·에디터·CLI용 무료 AI 코딩 에이전트입니다. 가격, 데이터 흐름, 적합한 사용자를 확인하세요.",
     "publishDate": "2026-09-25",
-    "dateModified": "2026-09-25",
+    "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/atlarix-review",
     "cluster": "power-local-llm"
   },
@@ -34022,81 +34022,81 @@
   {
     "lang": "en",
     "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-    "excerpt": "Compare 39 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
+    "excerpt": "Compare 40 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten",
-    "excerpt": "Vergleich von 39 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
+    "excerpt": "Vergleich von 40 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux",
-    "excerpt": "Comparez 39 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
+    "excerpt": "Comparez 40 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント",
-    "excerpt": "ローカル音声ツール39種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル音声ツール40種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "本地语音工具对比(2026):语音合成、语音转文字与语音助手",
-    "excerpt": "并排对比39款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
+    "excerpt": "并排对比40款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz",
-    "excerpt": "Compara 39 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
+    "excerpt": "Compara 40 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz",
-    "excerpt": "Compare 39 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
+    "excerpt": "Compare 40 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون",
-    "excerpt": "قارن 39 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
+    "excerpt": "قارن 40 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트",
-    "excerpt": "로컬 음성 도구 39개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 음성 도구 40개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
@@ -37343,81 +37343,81 @@
   {
     "lang": "en",
     "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
-    "excerpt": "TensorRT-LLM is NVIDIA's open-source, Apache 2.0-licensed engine for compiling LLMs into GPU-optimized inference engines. What it is, how it compares to vLLM and llama.cpp, and how to build and run one.",
+    "excerpt": "NVIDIA's open-source TensorRT-LLM library for NVIDIA GPUs: what it is, how it compares to vLLM and llama.cpp, and what changed in release 1.2.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "TensorRT-LLM erklärt: NVIDIAs GPU-optimierte Inference-Engine (2026)",
-    "excerpt": "TensorRT-LLM ist NVIDIAs Open-Source-, Apache-2.0-lizenzierte Engine zum Kompilieren von LLMs in GPU-optimierte Inference-Engines. Was es ist, wie es sich zu vLLM und llama.cpp verhält, und wie man eine Engine baut und betreibt.",
+    "excerpt": "NVIDIAs Open-Source-Bibliothek TensorRT-LLM für NVIDIA-GPUs: Was sie ist, wie sie sich zu vLLM und llama.cpp verhält und was sich in Version 1.2 änderte.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "TensorRT-LLM expliqué : le moteur d'inférence optimisé GPU de NVIDIA (2026)",
-    "excerpt": "TensorRT-LLM est le moteur open source de NVIDIA, sous licence Apache 2.0, qui compile les LLM en moteurs d'inférence optimisés pour GPU. Ce que c'est, comment il se compare à vLLM et llama.cpp, et comment construire et exécuter un moteur.",
+    "excerpt": "La bibliothèque open source TensorRT-LLM de NVIDIA pour GPU NVIDIA : définition, comparaison avec vLLM et llama.cpp, et nouveautés de la version 1.2.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "TensorRT-LLMとは:NVIDIAのGPU最適化推論エンジンを解説(2026年版)",
-    "excerpt": "TensorRT-LLMはNVIDIAのオープンソース・Apache 2.0ライセンスのエンジンで、LLMをGPU最適化された推論エンジンにコンパイルします。vLLMやllama.cppとの違い、エンジンの構築・実行方法を解説します。",
+    "excerpt": "NVIDIA GPU向けオープンソースライブラリTensorRT-LLMを解説。vLLM・llama.cppとの比較と、バージョン1.2でのワークフロー変更点を紹介します。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "TensorRT-LLM详解:NVIDIA的GPU优化推理引擎(2026版)",
-    "excerpt": "TensorRT-LLM是NVIDIA的开源、Apache 2.0许可引擎,用于将LLM编译成GPU优化的推理引擎。介绍它是什么、与vLLM和llama.cpp的对比,以及如何构建并运行一个引擎。",
+    "excerpt": "介绍NVIDIA开源的GPU推理库TensorRT-LLM:它是什么、与vLLM和llama.cpp的对比,以及1.2版本中引擎构建流程的变化。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "TensorRT-LLM explicado: el motor de inferencia optimizado para GPU de NVIDIA (2026)",
-    "excerpt": "TensorRT-LLM es el motor de código abierto de NVIDIA, licenciado bajo Apache 2.0, para compilar LLM en motores de inferencia optimizados para GPU. Qué es, cómo se compara con vLLM y llama.cpp, y cómo construir y ejecutar un motor.",
+    "excerpt": "La biblioteca de código abierto TensorRT-LLM de NVIDIA para GPU NVIDIA: qué es, cómo se compara con vLLM y llama.cpp y qué cambió en la versión 1.2.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "TensorRT-LLM explicado: o motor de inferência otimizado para GPU da NVIDIA (2026)",
-    "excerpt": "TensorRT-LLM é o motor de código aberto da NVIDIA, sob licença Apache 2.0, que compila LLMs em motores de inferência otimizados para GPU. O que é, como se compara ao vLLM e ao llama.cpp, e como construir e executar um motor.",
+    "excerpt": "A biblioteca de código aberto TensorRT-LLM da NVIDIA para GPUs NVIDIA: o que é, como se compara ao vLLM e ao llama.cpp e o que mudou na versão 1.2.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "شرح TensorRT-LLM: محرك الاستدلال من NVIDIA المُحسَّن لوحدات GPU (2026)",
-    "excerpt": "TensorRT-LLM هو محرك NVIDIA مفتوح المصدر بترخيص Apache 2.0 لتجميع نماذج اللغة الكبيرة في محركات استدلال مُحسَّنة لوحدات GPU. ما هو، وكيف يقارَن بـ vLLM وllama.cpp، وكيفية بناء محرك وتشغيله.",
+    "excerpt": "مكتبة TensorRT-LLM مفتوحة المصدر من NVIDIA لوحدات GPU من NVIDIA: ما هي، وكيف تقارن بـ vLLM وllama.cpp، وما الذي تغيّر في الإصدار 1.2.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "TensorRT-LLM 완벽 정리: NVIDIA의 GPU 최적화 추론 엔진(2026년)",
-    "excerpt": "TensorRT-LLM은 NVIDIA의 오픈소스, Apache 2.0 라이선스 엔진으로 LLM을 GPU에 최적화된 추론 엔진으로 컴파일합니다. vLLM 및 llama.cpp와의 비교, 엔진 구축 및 실행 방법을 설명합니다.",
+    "excerpt": "NVIDIA GPU용 오픈소스 라이브러리 TensorRT-LLM을 설명합니다. vLLM·llama.cpp와의 비교와 1.2 버전에서 달라진 워크플로를 다룹니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/tensorrt-llm-explained",
     "cluster": "power-local-llm"
   },
@@ -41233,7 +41233,7 @@
     "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
     "excerpt": "Sablate review: subtitles, translation and burn-in for Windows and Mac that, per its maker, run on your own computer. Free tier, Pro $29 once. Not tested.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41242,7 +41242,7 @@
     "title": "Sablate Rezension: Untertitel und Einbrennen für Windows und Mac",
     "excerpt": "Sablate Rezension: Untertitel, Übersetzung und Einbrennen für Windows und Mac, laut Hersteller lokal. Gratis-Tarif, Pro $29 einmalig. Nicht getestet.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41251,7 +41251,7 @@
     "title": "Test de Sablate : sous-titres et incrustation pour Windows et Mac",
     "excerpt": "Test de Sablate : sous-titres, traduction et incrustation pour Windows et Mac, en local selon l'éditeur. Offre gratuite, Pro $29 une fois. Non testé.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41260,7 +41260,7 @@
     "title": "Sablate レビュー：Windows・Mac向け字幕生成と焼き込みアプリ",
     "excerpt": "Sablateのレビュー：Windows・Mac向け、開発元によるとお使いのPC上で動作する字幕生成・翻訳・焼き込みアプリ。無料版あり、Proは$29の買い切り。実機検証なし。",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41269,7 +41269,7 @@
     "title": "Sablate评测：适用于Windows和Mac的字幕与压制工具",
     "excerpt": "Sablate评测：适用于Windows和Mac的字幕、翻译与压制工具，据开发者称在你的电脑上运行。提供免费版，Pro一次性$29，未经实测。",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41278,7 +41278,7 @@
     "title": "Reseña de Sablate: subtítulos e incrustación para Windows y Mac",
     "excerpt": "Reseña de Sablate: subtítulos, traducción e incrustación para Windows y Mac, locales según su fabricante. Plan gratis, Pro $29 único. No probada.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41287,7 +41287,7 @@
     "title": "Análise do Sablate: legendas e gravação no vídeo para Windows e Mac",
     "excerpt": "Análise do Sablate: legendas, tradução e gravação no vídeo para Windows e Mac, locais segundo o fabricante. Plano grátis, Pro $29 únicos. Não testado.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41296,7 +41296,7 @@
     "title": "مراجعة Sablate: ترجمات نصية ودمجها في الفيديو لأجهزة Windows وMac",
     "excerpt": "مراجعة Sablate: ترجمات نصية وترجمة ودمج في الفيديو لأجهزة Windows وMac تعمل على حاسوبك بحسب مطوّرها. خطة مجانية وPro بسعر $29 لمرة واحدة. لم يُختبر.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41305,7 +41305,7 @@
     "title": "Sablate 리뷰: Windows·Mac용 자막 생성과 번인",
     "excerpt": "Sablate 리뷰: 개발사에 따르면 내 컴퓨터에서 실행되는 Windows·Mac용 자막, 번역, 번인 앱. 무료 플랜, Pro 일회성 $29. 직접 테스트하지 않았습니다.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/sablate-review",
     "cluster": "power-local-llm"
   },
@@ -41712,6 +41712,87 @@
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/ko/power-local-llm/perfect-memory-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Meetini Review: Meeting and Interview Assistant for Mac",
+    "excerpt": "Meetini review: paid Mac app for live captions, meeting notes and interview prep. The maker says captions run locally; its privacy notice says audio goes to OpenAI.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Meetini im Test: Meeting- und Interview-Assistent für den Mac",
+    "excerpt": "Meetini im Test: kostenpflichtige Mac-App für Live-Untertitel, Notizen und Interview-Training. Laut Hersteller lokal, laut Datenschutzerklärung OpenAI.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/de/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Meetini : assistant de réunions et d'entretiens pour Mac",
+    "excerpt": "Test de Meetini : app Mac payante de sous-titres en direct, notes de réunion et entretiens. Local selon l'éditeur, OpenAI selon sa politique.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/fr/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Meetini レビュー：Mac向け会議・面接アシスタント",
+    "excerpt": "Meetiniのレビュー。ライブ字幕・会議メモ・面接対策のMac向け有料アプリです。提供元は字幕がローカルと説明しますが、プライバシー通知では音声がOpenAIに送られます。",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/ja/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Meetini 评测：Mac 会议与面试助手",
+    "excerpt": "Meetini 评测：用于实时字幕、会议笔记和面试准备的 Mac 付费应用。厂商称字幕在本地运行，但其隐私声明称音频会发送给 OpenAI。未经实测。",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/zh/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Meetini: asistente de reuniones y entrevistas para Mac",
+    "excerpt": "Reseña de Meetini: app de pago para Mac con subtítulos en directo y notas. El fabricante dice que es local; su aviso, que el audio va a OpenAI.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/es/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Meetini: assistente de reuniões e entrevistas para Mac",
+    "excerpt": "Análise do Meetini: app pago para Mac com legendas ao vivo e notas. O fabricante diz que é local; o aviso de privacidade diz que o áudio vai à OpenAI.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/pt/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Meetini: مساعد اجتماعات ومقابلات لأجهزة Mac",
+    "excerpt": "مراجعة Meetini: تطبيق Mac مدفوع للترجمة الفورية وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/ar/power-local-llm/meetini-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Meetini 리뷰: Mac용 회의·면접 어시스턴트",
+    "excerpt": "Meetini 리뷰: 실시간 자막, 회의 노트, 면접 준비를 제공하는 유료 Mac 앱입니다. 제작사는 자막이 로컬이라 하나 안내문에는 오디오가 OpenAI로 전송된다고 되어 있습니다.",
+    "publishDate": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "url": "/ko/power-local-llm/meetini-review",
     "cluster": "power-local-llm"
   },
   {

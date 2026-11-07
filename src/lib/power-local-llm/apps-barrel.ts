@@ -291,6 +291,7 @@ import { app as app_buzz_captions } from './apps/buzz-captions'
 import { app as app_logseq } from './apps/logseq'
 import { app as app_anarlog } from './apps/anarlog'
 import { app as app_perfect_memory } from './apps/perfect-memory'
+import { app as app_meetini } from './apps/meetini'
 import { app as app_searxng } from './apps/searxng'
 import { app as app_linkwarden } from './apps/linkwarden'
 import { app as app_tolaria } from './apps/tolaria'
@@ -586,6 +587,7 @@ export const localAiApps: ToolRecord[] = [
   app_logseq,
   app_anarlog,
   app_perfect_memory,
+  app_meetini,
   app_searxng,
   app_linkwarden,
   app_tolaria,

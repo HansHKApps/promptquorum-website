@@ -1273,6 +1273,7 @@ const HUB_THEMES: Array<{
       'aiko-review',
       'weesper-neon-flow-review',
       'sablate-review',
+      'meetini-review',
       'lyonesse-review',
       'willow-inference-server-review',
     ],

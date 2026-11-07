@@ -1952,7 +1952,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
@@ -2030,7 +2030,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       },
       {
@@ -5110,7 +5110,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
@@ -5193,18 +5193,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "sablate-review",
-        "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
-        "url": "/power-local-llm/sablate-review",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
         "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "slug": "sablate-review",
+        "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
+        "url": "/power-local-llm/sablate-review",
+        "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
@@ -5330,7 +5330,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       },
       {
@@ -5382,7 +5382,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
@@ -5554,7 +5554,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
@@ -5640,7 +5640,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       },
       {
@@ -8334,7 +8334,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       }
     ],
@@ -9183,17 +9183,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "aquavoice-review",
-        "title": "AquaVoice Review: Pricing, Privacy and AI Prompt Dictation",
-        "url": "/power-local-llm/aquavoice-review",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "slug": "aquavoice-review",
+        "title": "AquaVoice Review: Pricing, Privacy and AI Prompt Dictation",
+        "url": "/power-local-llm/aquavoice-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
       },
@@ -10509,6 +10509,28 @@
     "totalCount": 1,
     "capped": false
   },
+  "Meetini": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "meetini-review",
+        "title": "Meetini Review: Meeting and Interview Assistant for Mac",
+        "url": "/power-local-llm/meetini-review",
+        "dateModified": "2026-11-07",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-07",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "SearXNG": {
     "articles": [
       {
@@ -11116,7 +11138,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       },
       {
@@ -11168,7 +11190,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       }
     ],
@@ -11570,7 +11592,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       },
       {
@@ -11906,7 +11928,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       }
     ],
@@ -11958,7 +11980,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       }
     ],
@@ -12001,6 +12023,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-07",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "meetini-review",
+        "title": "Meetini Review: Meeting and Interview Assistant for Mac",
+        "url": "/power-local-llm/meetini-review",
+        "dateModified": "2026-11-07",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "sablate-review",
         "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
         "url": "/power-local-llm/sablate-review",
@@ -12030,25 +12068,9 @@
         "url": "/power-local-llm/aquavoice-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-ai-app-low-end-pc",
-        "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
-        "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 250,
+    "totalCount": 251,
     "capped": true
   },
   "Qdrant": {
@@ -12614,7 +12636,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "about"
       }
     ],
@@ -13526,7 +13548,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       }
     ],

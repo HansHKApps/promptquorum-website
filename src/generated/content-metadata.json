@@ -6769,7 +6769,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 350 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 351 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -9674,7 +9674,7 @@
       "images": []
     },
     "local-llm-voice-audio-compared": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-07",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -11369,6 +11369,24 @@
       "dateModified": "2026-10-30",
       "lastFactChecked": null,
       "publishDate": "2026-10-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "meetini-review": {
+      "dateModified": "2026-11-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-07",
       "hasSections": true,
       "langs": [
         "en",
