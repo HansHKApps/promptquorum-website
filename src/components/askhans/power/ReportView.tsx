@@ -9,6 +9,9 @@ import { useAskCopy } from '../copy'
 import { AskIcon } from '../icons'
 import { Markdown } from '../markdown'
 import { OverviewStrip } from '../OverviewStrip'
+import { reportShare } from '../CopyButton'
+import { shareHref, type ShareChannel } from '../share'
+import { cardPageUrl } from '@/lib/askhans/card'
 import type { PowerCopy } from './copy'
 import { downloadBlob } from './export/download'
 import { buildMarkdown, fileStem, type ReportDoc } from './export/reportDoc'
@@ -20,12 +23,14 @@ interface Props {
   status?: string
   /** called after a successful copy or download, with the format (for the anonymous counter) */
   onExport?: (channel: 'copy' | 'md' | 'docx' | 'pdf') => void
+  /** process id: the shared link is the Ask Hans page with a share card for this process */
+  process?: string
 }
 
 const BTN =
   'inline-flex items-center gap-1.5 rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50'
 
-export function ReportView({ tx, doc, streaming, status, onExport }: Props) {
+export function ReportView({ tx, doc, streaming, status, onExport, process }: Props) {
   const ac = useAskCopy()
   const [copied, setCopied] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -133,8 +138,55 @@ export function ReportView({ tx, doc, streaming, status, onExport }: Props) {
               {tx.report.asPdf}
             </button>
           </div>
+          {process && <ShareRow tx={tx} lang={doc.lang} process={process} />}
         </>
       )}
     </article>
+  )
+}
+
+const CHANNELS: { channel: ShareChannel; label: 'shareWhatsApp' | 'shareTelegram' | 'shareEmail'; icon: string }[] = [
+  { channel: 'whatsapp', label: 'shareWhatsApp', icon: 'MessageCircle' },
+  { channel: 'telegram', label: 'shareTelegram', icon: 'Send' },
+  { channel: 'email', label: 'shareEmail', icon: 'Mail' },
+]
+
+/** Shares a fixed message plus the Ask Hans link whose preview image is the share card. Never contains the report. */
+function ShareRow({ tx, lang, process }: { tx: PowerCopy; lang: string; process: string }) {
+  const ac = useAskCopy()
+  const [copied, setCopied] = useState(false)
+  const url = cardPageUrl(lang, process)
+  const text = `${tx.report.shareText}\n${url}`
+  return (
+    <div className="mt-3 flex flex-wrap items-center gap-1.5" role="group" aria-label={tx.report.shareTitle}>
+      <span className="me-1 text-[13px] font-semibold text-foreground">{tx.report.shareTitle}</span>
+      {CHANNELS.map((c) => (
+        <a
+          key={c.channel}
+          href={shareHref(c.channel, text, ac.copyUi.emailSubject)}
+          target={c.channel === 'email' ? undefined : '_blank'}
+          rel="noopener noreferrer"
+          aria-label={ac.copyUi[c.label]}
+          title={ac.copyUi[c.label]}
+          onClick={() => reportShare('report', c.channel)}
+          className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-white text-primary hover:border-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+        >
+          <AskIcon name={c.icon} className="h-4 w-4" />
+        </a>
+      ))}
+      <button
+        type="button"
+        onClick={async () => {
+          if (!(await writePlain(url))) return
+          reportShare('report', 'link')
+          setCopied(true)
+          setTimeout(() => setCopied(false), 2000)
+        }}
+        className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-border bg-white px-2.5 text-[13px] font-medium text-primary hover:border-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+      >
+        <AskIcon name={copied ? 'Check' : 'Link2'} className="h-3.5 w-3.5" />
+        {copied ? ac.copyUi.copied : tx.report.shareLink}
+      </button>
+    </div>
   )
 }

@@ -227,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: 'PDF（印刷ダイアログ）',
     preparing: 'ファイルを準備しています…',
     changeAnswers: '入力内容を変更',
+    shareTitle: 'セットアップを共有',
+    shareText: 'Ask Hans（PromptQuorum）でローカル AI のセットアップを確認しました。ぜひお試しください。',
+    shareLink: 'リンクを共有',
     allProcesses: 'すべての手順',
   },
   doc: {

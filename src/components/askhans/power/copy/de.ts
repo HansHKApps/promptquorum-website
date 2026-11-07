@@ -227,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: 'PDF (Druckdialog)',
     preparing: 'Datei wird vorbereitet …',
     changeAnswers: 'Angaben ändern',
+    shareTitle: 'Mein Setup teilen',
+    shareText: 'Ich habe mein lokales KI-Setup mit Ask Hans (PromptQuorum) geprüft. Probier es selbst aus:',
+    shareLink: 'Link teilen',
     allProcesses: 'Alle Abläufe',
   },
   doc: {

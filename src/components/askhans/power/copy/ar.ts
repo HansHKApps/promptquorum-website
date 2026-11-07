@@ -227,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: 'PDF (نافذة الطباعة)',
     preparing: 'جارٍ تجهيز الملف…',
     changeAnswers: 'تعديل مدخلاتي',
+    shareTitle: 'شارك إعدادي',
+    shareText: 'فحصتُ إعداد الذكاء الاصطناعي المحلي لدي باستخدام Ask Hans (PromptQuorum). جرّبه بنفسك:',
+    shareLink: 'شارك الرابط',
     allProcesses: 'كل المسارات',
   },
   doc: {

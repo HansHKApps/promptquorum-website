@@ -227,6 +227,9 @@ export const copy: PowerCopy = {
     asPdf: "PDF (fenêtre d'impression)",
     preparing: 'Préparation du fichier…',
     changeAnswers: 'Modifier mes informations',
+    shareTitle: 'Partager ma configuration',
+    shareText: 'J’ai vérifié ma configuration d’IA locale avec Ask Hans (PromptQuorum). Essayez vous-même :',
+    shareLink: 'Partager le lien',
     allProcesses: 'Tous les parcours',
   },
   doc: {

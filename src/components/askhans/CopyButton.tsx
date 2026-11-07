@@ -13,7 +13,7 @@ import { richPayload, sharePlain, shareHref, writePlain, writeRich, SITE_URL, ty
 
 /** window CustomEvent the root listens to for the anonymous share counter; detail: { source, channel } */
 export const ASK_HANS_SHARE_EVENT = 'askhans:share'
-export type ShareSource = 'answer' | 'promo'
+export type ShareSource = 'answer' | 'promo' | 'report'
 export type ShareKind = ShareChannel | 'copy' | 'copy_plain' | 'native' | 'link'
 
 export function reportShare(source: ShareSource, channel: ShareKind): void {

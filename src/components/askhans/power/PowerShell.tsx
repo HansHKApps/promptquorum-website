@@ -527,6 +527,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         <ReportView
           tx={tx}
           doc={doc}
+          process={view.process}
           onExport={(channel) => {
             // Anonymous export counter: format name only, never the report; only with consent "Yes".
             if (consent?.value === 'yes') logEvent({ type: 'power_export', visitId: getVisitId(), process: view.process, channel })

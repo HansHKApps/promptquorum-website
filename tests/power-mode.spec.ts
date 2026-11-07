@@ -148,6 +148,10 @@ test.describe('Power Mode', () => {
     expect(clip).toContain('Unified memory, in GB: 24')
     expect(clip).toContain('Install Ollama')
 
+    // Share row: fixed message + Ask Hans link carrying the share card (never the report)
+    const wa = dialog.getByRole('link', { name: /WhatsApp/ })
+    expect(decodeURIComponent((await wa.getAttribute('href')) ?? '')).toContain('/askhans?card=max')
+
     // Markdown download
     const [md] = await Promise.all([page.waitForEvent('download'), dialog.getByRole('button', { name: 'Markdown (.md)' }).click()])
     expect(md.suggestedFilename()).toMatch(/\.md$/)

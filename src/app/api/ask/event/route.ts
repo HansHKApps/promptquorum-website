@@ -5,7 +5,7 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo|report>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
 //                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn,
 //                                 sessions, ret:<new|back>, days:<bucket>, dur:<bucket>, msgs:<bucket>)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
@@ -29,7 +29,7 @@ const CONSENT_LIST_MAX = 50_000
 const TOOL_NAME = /^[a-z_]{3,40}$/
 const LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => c.links.map((l) => l.id)))
 const CLICK_SOURCES = new Set(['text', 'panel'])
-const SHARE_SOURCES = new Set(['answer', 'promo'])
+const SHARE_SOURCES = new Set(['answer', 'promo', 'report'])
 const SHARE_CHANNELS = new Set(['copy', 'copy_plain', 'email', 'whatsapp', 'telegram', 'native', 'link'])
 const POWER_EXPORT_CHANNELS = new Set(['copy', 'md', 'docx', 'pdf'])
 const CLICK_SECTION = /^[a-z0-9-]{1,40}$/

@@ -37,7 +37,8 @@ export async function getSiteOverview(rawLang: string): Promise<SiteOverview> {
   // The usage counters live in Redis: a failure must never break an answer, the tiles are just left out.
   try {
     const mcp = await getMcpUsageSnapshotCached()
-    tiles.push({ label: t('statMcpCalls', lang), value: mcp.total.toLocaleString('en-US') })
+    // A zero means the counter is unreachable or brand new: leave the tile out rather than show "0".
+    if (mcp.total > 0) tiles.push({ label: t('statMcpCalls', lang), value: mcp.total.toLocaleString('en-US') })
     links.push({ label: t('statMcpCallsHint', lang), href: `${SITE}${prefix(lang)}/mcp-stats` })
   } catch {
     /* omit */
@@ -45,7 +46,7 @@ export async function getSiteOverview(rawLang: string): Promise<SiteOverview> {
   if (process.env.ASK_HANS_ENABLED === 'true') {
     try {
       const ask = await getAskHansTotals()
-      tiles.push({ label: t('statAskHansCalls', lang), value: ask.answers.toLocaleString('en-US') })
+      if (ask.answers > 0) tiles.push({ label: t('statAskHansCalls', lang), value: ask.answers.toLocaleString('en-US') })
       links.push({ label: t('statAskHansCallsHint', lang), href: `${SITE}${prefix(lang)}/askhans` })
     } catch {
       /* omit */

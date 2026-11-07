@@ -89,6 +89,10 @@ export interface PowerCopy {
     preparing: string
     changeAnswers: string
     allProcesses: string
+    /** share row under the report: label, fixed message text, copy-link label */
+    shareTitle: string
+    shareText: string
+    shareLink: string
   }
   doc: {
     generatedBy: string
