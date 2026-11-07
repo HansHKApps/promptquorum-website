@@ -17,12 +17,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'Local LLM Apps & Software Directory: ' + TOTAL_TOOL_COUNT + ' Tools for Running AI Locally (2026)',
-    seoTitle: 'Local LLM Apps & Software: ' + TOTAL_TOOL_COUNT + ' Tools to Compare (2026)',
+    seoTitle: 'Local LLM Apps & Software: 350+ Tools to Run AI (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' local AI and LLM apps and tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, with licensing, pricing, platforms, hardware requirements, and use cases. Search, filter, compare, and find the right software for running AI locally on your Mac, Windows PC, Linux machine, or phone.',
     metaDescription:
-      'Compare ' + TOTAL_TOOL_COUNT + ' local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.',
+      'Compare 350+ local LLM apps for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding assistants. Filter by license, price and hardware.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' local-LLM tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate, at the edge. Licences, links & primary URLs. The "what exists" map before you commit to your stack.',
     advertiserHighlight: {
@@ -609,12 +609,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'Verzeichnis für LLM-Tools & lokale KI-Software: ' + TOTAL_TOOL_COUNT + ' Apps zum lokalen Ausführen (2026)',
-    seoTitle: 'LLM-Tools für lokale KI: ' + TOTAL_TOOL_COUNT + ' Apps im Vergleich (2026)',
+    seoTitle: 'LLM-Tools für lokale KI: 350+ Apps im Vergleich (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' lokale KI- und LLM-Apps und -Tools in ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien, mit Lizenz, Preis, Plattformen, Hardware-Anforderungen und Anwendungsfällen. Suchen, filtern, vergleichen und die passende Software finden, um KI lokal auf Mac, Windows-PC, Linux-Rechner oder Smartphone auszuführen.',
     metaDescription:
-      'Vergleichen Sie ' + TOTAL_TOOL_COUNT + ' LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.',
+      'Über 350 LLM-Tools und lokale KI-Apps für Mac, Windows, Linux, iOS und Android vergleichen. Filtern nach Lizenz, Preis und Hardware-Anforderungen.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     advertiserHighlight: {
@@ -1208,12 +1208,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'Répertoire des logiciels et outils LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps pour exécuter l\'IA en local (2026)',
-    seoTitle: 'Logiciels & outils LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps comparées (2026)',
+    seoTitle: 'Logiciels LLM locaux : 350+ apps à comparer (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' apps et outils d’IA et de LLM locaux répartis en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories, avec licence, prix, plateformes, configuration matérielle requise et cas d’usage. Recherchez, filtrez, comparez et trouvez le bon logiciel pour exécuter l’IA en local sur votre Mac, PC Windows, machine Linux ou téléphone.',
     metaDescription:
-      'Comparez ' + TOTAL_TOOL_COUNT + ' logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.',
+      'Comparez 350+ outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour trouver le bon logiciel.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
     advertiserHighlight: {
@@ -1798,12 +1798,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす' + TOTAL_TOOL_COUNT + 'のアプリ＆ツール（2026年版）',
-    seoTitle: 'ローカルLLMアプリ・ツール' + TOTAL_TOOL_COUNT + '選一覧（2026年）',
+    seoTitle: 'ローカルLLMアプリ・ツール350選一覧（2026年）',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + 'のローカルAI・LLMアプリとツールを' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリに整理。ライセンス、価格、対応プラットフォーム、ハードウェア要件、用途を掲載しています。検索・絞り込み・比較して、Mac、Windows PC、Linux、スマートフォンでAIをローカル実行するのに最適なソフトウェアを見つけましょう。',
     metaDescription:
-      'Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを' + TOTAL_TOOL_COUNT + '件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。',
+      'Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを350件以上掲載。用途、ライセンス、価格、ハードウェアで絞り込み、最適なソフトを探せます。',
     twitterDescription:
       'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Agents & Automation、Code & Development、Documents & Research …。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
     advertiserHighlight: {
@@ -2390,12 +2390,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: '本地AI工具与LLM应用目录：' + TOTAL_TOOL_COUNT + '款软件，在本地运行AI（2026）',
-    seoTitle: '本地AI工具与LLM应用：' + TOTAL_TOOL_COUNT + '款对比（2026）',
+    seoTitle: '本地AI工具与LLM应用：350+款对比（2026）',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + '款本地AI与LLM应用和工具，分为' + TOTAL_CATEGORY_GROUP_COUNT + '大类，附许可证、价格、支持平台、硬件要求与使用场景。可搜索、筛选、对比，找到适合在你的Mac、Windows电脑、Linux设备或手机上本地运行AI的软件。',
     metaDescription:
-      '对比' + TOTAL_TOOL_COUNT + '款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。',
+      '对比350+款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。',
     twitterDescription:
       '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Agents & Automation、Code & Development、Documents & Research …。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
     advertiserHighlight: {
@@ -2982,12 +2982,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'Directorio de herramientas y software de LLM local: ' + TOTAL_TOOL_COUNT + ' apps para ejecutar IA en local (2026)',
-    seoTitle: 'Herramientas LLM locales: ' + TOTAL_TOOL_COUNT + ' apps y software (2026)',
+    seoTitle: 'Herramientas LLM locales: 350+ apps y software (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' apps y herramientas de IA y LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías, con licencia, precio, plataformas, requisitos de hardware y casos de uso. Busca, filtra, compara y encuentra el software adecuado para ejecutar IA en local en tu Mac, PC con Windows, equipo Linux o teléfono.',
     metaDescription:
-      'Compara ' + TOTAL_TOOL_COUNT + ' herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.',
+      'Compara 350+ herramientas LLM locales para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware para elegir el software adecuado.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
     advertiserHighlight: {
@@ -3588,12 +3588,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas para executar IA localmente (2026)',
-    seoTitle: 'Software de LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas (2026)',
+    seoTitle: 'Software de LLM local: 350+ apps e ferramentas (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' apps e ferramentas de IA e LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, com licença, preço, plataformas, requisitos de hardware e casos de uso. Pesquise, filtre, compare e encontre o software certo para executar IA localmente no seu Mac, PC com Windows, máquina Linux ou celular.',
     metaDescription:
-      'Explore ' + TOTAL_TOOL_COUNT + ' apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.',
+      'Compare 350+ ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por licença, preço e hardware e encontre o software certo.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
     advertiserHighlight: {
@@ -4193,12 +4193,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)',
-    seoTitle: 'دليل برامج LLM المحلية: ⁨' + TOTAL_TOOL_COUNT + '⁩ أداة وتطبيق (2026)',
+    seoTitle: 'دليل برامج LLM المحلية: 350+ أداة وتطبيق (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات، مع الترخيص والسعر والمنصات ومتطلبات العتاد وحالات الاستخدام. ابحث وصفِّ وقارِن واعثر على البرنامج المناسب لتشغيل الذكاء الاصطناعي محلياً على جهاز Mac أو حاسوب Windows أو Linux أو هاتفك.',
     metaDescription:
-      'تصفّح ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.',
+      'تصفّح أكثر من 350 أداة وتطبيقاً للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الترخيص والسعر والعتاد.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وAgents & Automation وCode & Development وDocuments & Research …. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
     advertiserHighlight: {
@@ -4798,12 +4798,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-07',
     theme: 'Overview & Reference',
     title: '로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 ' + TOTAL_TOOL_COUNT + '개 앱과 도구 (2026)',
-    seoTitle: '로컬 LLM 앱·도구 추천: ' + TOTAL_TOOL_COUNT + '개 비교 (2026)',
+    seoTitle: '로컬 LLM 앱·도구 추천: 350개 이상 비교 (2026)',
     affiliateDisclosure: true,
     intro:
       '로컬 AI·LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리했습니다. 라이선스, 가격, 지원 플랫폼, 하드웨어 요구 사항, 사용 사례를 함께 제공합니다. 검색·필터링·비교로 Mac, Windows PC, Linux 컴퓨터, 스마트폰에서 AI를 로컬로 실행할 알맞은 소프트웨어를 찾아보세요.',
     metaDescription:
-      'Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.',
+      'Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 350개 이상. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.',
     twitterDescription:
       '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
     advertiserHighlight: {
