@@ -39,6 +39,8 @@ export interface PowerCopy {
     vram: string
     storage: string
     unknown: string
+    /** shown under the memory field when the device is a Mac (unified memory) */
+    macNote: string
     gb: string
     useSaved: string
     saveLabel: string
