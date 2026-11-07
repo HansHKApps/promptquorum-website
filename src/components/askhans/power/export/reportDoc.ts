@@ -38,6 +38,8 @@ export interface ReportDoc {
   /** markdown written by the AI */
   body: string
   references: ReportReference[]
+  /** file name without extension (date, number, topic); see fileName.ts */
+  fileBase?: string
   labels: ReportLabels
 }
 
@@ -72,6 +74,7 @@ export function buildMarkdown(doc: ReportDoc): string {
 
 /** Safe file name stem: letters/digits of any script, dashes; never empty. */
 export function fileStem(doc: ReportDoc): string {
+  if (doc.fileBase) return doc.fileBase
   const base = `promptquorum-${doc.processLabel}`.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '')
   return base || 'promptquorum-report'
 }

@@ -23,6 +23,7 @@ import { HardwareStep } from './HardwareStep'
 import { MobileStep } from './MobileStep'
 import { profileFromHardware, profileFromMobile, saveProfile } from './profile'
 import { ReportView } from './ReportView'
+import { buildFileBase, localIsoDate, nextReportNumber } from './export/fileName'
 import { clearSavedAudit, parseImprovements, readSavedAudit, writeSavedAudit, type SavedAudit } from './auditStore'
 
 type View = { k: 'menu' } | { k: 'wizard'; process: ProcessId; index: number } | { k: 'consent'; process: ProcessId } | { k: 'run'; process: ProcessId } | { k: 'report'; process: ProcessId }
@@ -60,6 +61,11 @@ function keptTexts(steps: StepDef[], tv: Record<string, string>): Record<string,
   return Object.keys(kept).length ? kept : undefined
 }
 
+function newFileId(): { date: string; seq: number | null } {
+  const date = localIsoDate()
+  return { date, seq: nextReportNumber(date) }
+}
+
 const GROUP = 'rounded-xl border border-border bg-white p-4 shadow-sm'
 
 export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: Props) {
@@ -82,6 +88,8 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const [status, setStatus] = useState<string | undefined>()
   const [error, setError] = useState<AskErrorCode | null>(null)
   const [runStamp, setRunStamp] = useState('')
+  // Date and running number of this report's file name; one per report, shared by every download format
+  const [fileId, setFileId] = useState<{ date: string; seq: number | null } | null>(null)
   const abortRef = useRef<AbortController | null>(null)
   const stageTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
@@ -205,6 +213,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       if (stageTimer.current) clearTimeout(stageTimer.current)
       stageTimer.current = setTimeout(() => setStatus((s) => (s === tx.run.estimating ? tx.run.writing : s)), 5000)
       setRunStamp(new Date().toISOString().slice(0, 10))
+      setFileId(newFileId())
       setView({ k: 'run', process })
       let acc = ''
       await streamSolution(
@@ -243,6 +252,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     setText(a.report)
     setAuditReport(a.report)
     setRunStamp(a.savedAt)
+    setFileId(newFileId())
     setError(null)
     setSaveMsg('')
     setView({ k: 'report', process: 'audit' })
@@ -327,6 +337,11 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       dateText: formatDisplayDate(runStamp || undefined, lang as Language),
       lang,
       dir: ac.dir,
+      fileBase: buildFileBase(fileId?.date ?? localIsoDate(), fileId?.seq ?? null, [
+        name,
+        // the specific topic: the goal of a Solution Setup, or the improvement chosen for "implement"
+        reportProcess === 'solution' ? (tx.opt[choices.goal?.[0] ?? ''] ?? '') : reportProcess === 'implement' ? (texts.recommendation ?? '') : '',
+      ]),
       inputs: inputLines(reportProcess),
       body: text,
       references: [
@@ -345,7 +360,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         disclaimerText: tx.doc.disclaimerText,
       },
     }
-  }, [reportProcess, choices, tx, runStamp, lang, ac.dir, inputLines, text])
+  }, [reportProcess, choices, texts, fileId, tx, runStamp, lang, ac.dir, inputLines, text])
 
   // ---- rendering --------------------------------------------------------------------------------
   const backLabel = view.k === 'menu' ? tx.menu.back : tx.wizard.back

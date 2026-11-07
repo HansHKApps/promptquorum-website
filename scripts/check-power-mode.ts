@@ -3,6 +3,7 @@
 // the grounding facts follow the documented rules, and the export builders produce safe, complete documents.
 // Pure functions, no network. Exits 1 on any failure.
 
+import { buildFileBase } from '../src/components/askhans/power/export/fileName'
 import { parseImprovements } from '../src/components/askhans/power/auditStore'
 import { PROCESSES, PROCESS_ORDER, MAX_NOTE_CHARS, parseAnswers, visibleSteps } from '../src/lib/askhans/solutions/processes'
 import { memoryBudget, modelFitTable, mobileFacts, buildFacts, upgradeFacts } from '../src/lib/askhans/solutions/facts'
@@ -166,6 +167,14 @@ const vidFacts = JSON.parse(buildFacts({ hardware: { ...mac, storageGb: null }, 
 check(vidFacts.generation?.modelFitApplies === false && vidFacts.generation.storageGuidance.ifUnknown && vidFacts.generation.stitchingNote, 'video goal must carry generation facts (no LLM fit, storage default, stitching note)')
 check(!JSON.parse(buildFacts({ hardware: mac, choices: { goals: ['chat'] } }) as string).generation, 'chat goal must not carry generation facts')
 check(buildSolutionSystemPrompt('solution', 'en').includes('Quick test plan') && buildSolutionSystemPrompt('solution', 'en').includes('Next actions'), 'solution outline missing new sections')
+
+// ---- 4b. file names -----------------------------------------------------------------------------------
+const fixed = new Date(2026, 10, 7, 9, 5)
+check(buildFileBase('2026-11-07', 2, ['Solution Setup', 'Create video'], fixed) === 'promptquorum-2026-11-07-02-solution-setup-create-video', 'file name: date, number, topic')
+check(buildFileBase('2026-11-07', null, ['MAX – Full Setup'], fixed) === 'promptquorum-2026-11-07-0905-max-full-setup', 'file name: time fallback without a counter')
+check(buildFileBase('x', 1, [''], fixed) === 'promptquorum-2026-11-07-01-report', 'file name: bad date / empty topic')
+check(buildFileBase('2026-11-07', 12, ['Lösungs-Setup', 'Bild/Video: Größe?! '.repeat(10)], fixed).length < 100 && buildFileBase('2026-11-07', 1, ['ヨーロッパ'], fixed).endsWith('-ヨーロッパ'), 'file name: unicode kept, length capped')
+check(buildFileBase('2026-11-07', 1, ['A'], fixed) < buildFileBase('2026-11-07', 2, ['A'], fixed) && buildFileBase('2026-11-07', 9, ['A'], fixed) < buildFileBase('2026-11-07', 10, ['A'], fixed), 'file names must sort in creation order')
 
 // ---- 5. exports -------------------------------------------------------------------------------------
 const doc: ReportDoc = {
