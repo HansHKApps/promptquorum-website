@@ -70,6 +70,7 @@ export const copy: AskCopy = {
 
   dir: 'ltr',
   devNotice: 'Tool in development – we look forward to your feedback.',
+  copyright: "Ask Hans answers are PromptQuorum content, protected by copyright. Personal use and short quotes with a link to promptquorum.com are fine. Bulk copying, automated scraping, republishing and use for AI training require written permission.",
   contactLabel: 'Send feedback by email',
   welcomeAria: 'Welcome',
   feedback: {

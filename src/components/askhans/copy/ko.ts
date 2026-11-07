@@ -70,6 +70,7 @@ export const copy: AskCopy = {
 
   dir: 'ltr',
   devNotice: '개발 중인 도구입니다 – 여러분의 피드백을 기다립니다.',
+  copyright: "Ask Hans의 답변은 PromptQuorum의 콘텐츠이며 저작권법의 보호를 받습니다. 개인적인 이용과 promptquorum.com 링크를 표기한 짧은 인용은 허용됩니다. 대량 복사, 자동 수집, 재게시 및 AI 학습 목적의 사용에는 서면 허가가 필요합니다.",
   contactLabel: '이메일로 피드백 보내기',
   welcomeAria: '환영합니다',
   feedback: {
