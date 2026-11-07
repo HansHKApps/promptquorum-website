@@ -110,10 +110,20 @@ const GOAL_TAGS: Record<string, string[]> = {
   agents: ['agent'],
   translate: ['chat'],
   coding: ['code'],
+  // Audit My AI Setup activities
+  'u-write': ['chat'],
+  'u-code': ['code'],
+  'u-image': ['image'],
+  'u-video': ['image'],
+  'u-audio': ['voice'],
+  'u-office': ['docs'],
+  'u-data': ['docs'],
+  'u-pkm': ['docs'],
+  'u-auto': ['agent'],
 }
 
 function wantedGoals(a: SolutionAnswers): string[] {
-  return [...(a.choices.goals ?? []), ...(a.choices.goal ?? [])]
+  return [...(a.choices.goals ?? []), ...(a.choices.goal ?? []), ...(a.choices.auditUses ?? [])]
 }
 
 /** Directory stack recipes whose published hardware floor the machine meets, for the visitor's goals. */
@@ -182,6 +192,50 @@ export function generationFacts(a: SolutionAnswers) {
   }
 }
 
+const CLOUD_SERVICES: Record<string, string> = { 's-chatgpt': 'ChatGPT', 's-claude': 'Claude', 's-gemini': 'Gemini', 's-othercloud': 'other cloud AI services' }
+const SPEND_CLASSES: Record<string, string> = {
+  'm-none': 'nothing (free plans only)',
+  'm-1': 'up to 20 per month (visitor\'s own currency)',
+  'm-2': '20 to 50 per month (visitor\'s own currency)',
+  'm-3': '50 to 100 per month (visitor\'s own currency)',
+  'm-4': 'more than 100 per month (visitor\'s own currency)',
+  'm-unknown': 'unknown',
+}
+/** Activities for which the PromptQuorum data holds no hardware floor, so the report must say so instead of guessing. */
+const NO_FLOOR_DATA = new Set(['u-video', 'u-data', 'u-other'])
+
+/** Audit My AI Setup: what the visitor's own answers imply, computed before the AI writes. Heuristics, labelled as such. */
+export function auditFacts(a: SolutionAnswers) {
+  const setup = a.choices.auditSetup ?? []
+  const uses = a.choices.auditUses ?? []
+  const cloud = setup.filter((s) => CLOUD_SERVICES[s]).map((s) => CLOUD_SERVICES[s])
+  const mem = a.hardware ? memoryBudget(a.hardware) : null
+  const fit = mem ? modelFitTable(mem) : []
+  const biggest = (want: Fit) => [...fit].reverse().find((r) => r.fit === want && r.quant === 'Q4')
+  const stacks = a.hardware && mem ? stackCandidates(a, mem) : []
+  const stackTags = (use: string) => new Set(GOAL_TAGS[use] ?? [])
+  return {
+    note: 'Heuristics from the visitor\'s own answers. Estimates, not measurements.',
+    cloudServices: cloud,
+    cloudServiceCount: cloud.length,
+    alreadyUsesLocalApps: setup.includes('s-local'),
+    usesNoAiYet: setup.includes('s-none'),
+    monthlySpendClass: cloud.length ? (SPEND_CLASSES[a.choices.auditSpend?.[0] ?? ''] ?? 'not asked') : 'not applicable (no cloud service chosen)',
+    hardwareProcessor: a.hardware?.cpu ?? null,
+    largestModelThatRunsComfortably: biggest('comfortable') ? `${biggest('comfortable')!.size} ${biggest('comfortable')!.quant}` : null,
+    largestModelAtTheLimit: biggest('at-the-limit') ? `${biggest('at-the-limit')!.size} ${biggest('at-the-limit')!.quant}` : null,
+    hardwareLikelyUnderused: !!mem && mem.budgetGb !== null && mem.budgetGb >= 10 && !setup.includes('s-local'),
+    activities: uses.map((u) => {
+      const tags = stackTags(u)
+      return {
+        activity: u,
+        directoryStacks: stacks.filter((s) => s.id !== 'mobile' && STACK_RECIPES.find((r) => r.id === s.id)?.tags.some((t) => tags.has(t))).map((s) => ({ id: s.id, stack: s.stack, hardwareFloor: s.hardwareFloor, status: s.status })),
+        dataGap: NO_FLOOR_DATA.has(u) ? 'PromptQuorum holds no hardware floor for this activity: use the hardware data each app lists and say where it is missing.' : null,
+      }
+    }),
+  }
+}
+
 /** The facts block handed to the AI. Plain JSON text. */
 export function buildFacts(a: SolutionAnswers): string {
   const facts: Record<string, unknown> = {
@@ -198,5 +252,6 @@ export function buildFacts(a: SolutionAnswers): string {
     if (gen) facts.generation = gen
   }
   if (a.mobile) facts.mobile = mobileFacts(a.mobile)
+  if (a.choices.auditSetup) facts.audit = auditFacts(a)
   return JSON.stringify(facts)
 }

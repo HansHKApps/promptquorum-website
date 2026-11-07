@@ -1,4 +1,4 @@
-// Ask Hans Power Mode — the four guided processes as plain data. Adding a process = adding an entry here,
+// Ask Hans Power Mode — the guided processes as plain data. Adding a process = adding an entry here,
 // its labels to the copy dictionaries and its report brief to prompt.ts. The questions are deterministic
 // forms (no AI involved); the AI only writes the final report.
 
@@ -8,7 +8,23 @@ export const MAX_NOTE_CHARS = 300
 
 const GOALS = ['chat', 'code', 'docs', 'image', 'video', 'audio', 'agents', 'translate'] as const
 
+export const MAX_TEXT_CHARS = 300
+
+/** Audit My AI Setup: what the visitor uses, has, does, struggles with and wants. Option ids are shared with the copy files. */
+const AUDIT_STEPS: readonly StepDef[] = [
+  { id: 'auditSetup', kind: 'multi', textField: true, options: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud', 's-local', 's-embedded', 's-none'] },
+  // Only asked when a paid-looking cloud service is in the setup; needed for an honest savings estimate.
+  { id: 'auditSpend', kind: 'single', options: ['m-none', 'm-1', 'm-2', 'm-3', 'm-4', 'm-unknown'], showIf: { step: 'auditSetup', includes: ['s-chatgpt', 's-claude', 's-gemini', 's-othercloud'] } },
+  { id: 'hardware', kind: 'hardware', askCpu: true },
+  { id: 'auditUses', kind: 'multi', options: ['u-write', 'u-code', 'u-image', 'u-video', 'u-audio', 'u-office', 'u-data', 'u-pkm', 'u-auto', 'u-other'] },
+  { id: 'auditProblems', kind: 'multi', textField: true, options: ['p-cost', 'p-toomany', 'p-which', 'p-privacy', 'p-slow', 'p-offline', 'p-automate', 'p-control', 'p-satisfied'] },
+  { id: 'auditGoals', kind: 'multi', options: ['g-save', 'g-productive', 'g-privacy', 'g-lesscloud', 'g-power', 'g-simplify', 'g-automate', 'g-complete'] },
+]
+
 export const PROCESSES: Record<ProcessId, ProcessDef> = {
+  audit: { id: 'audit', icon: 'ClipboardCheck', steps: AUDIT_STEPS },
+  // Started from an audit report, never from the list: the same answers plus the recommendation the visitor picked.
+  implement: { id: 'implement', icon: 'Workflow', hidden: true, steps: [...AUDIT_STEPS, { id: 'recommendation', kind: 'text' }] },
   max: {
     id: 'max',
     icon: 'Compass',
@@ -67,7 +83,7 @@ export const PROCESSES: Record<ProcessId, ProcessDef> = {
   },
 }
 
-export const PROCESS_ORDER: readonly ProcessId[] = ['max', 'hardware', 'solution', 'mobile']
+export const PROCESS_ORDER: readonly ProcessId[] = ['max', 'audit', 'hardware', 'solution', 'mobile']
 
 /** The steps that apply for the answers so far (conditional steps are dropped). */
 export function visibleSteps(process: ProcessId, answers: SolutionAnswers): StepDef[] {
@@ -82,7 +98,7 @@ const num = (v: unknown, max: number): v is number | null => v === null || (type
  */
 export function parseAnswers(process: unknown, raw: unknown): SolutionAnswers | null {
   if (!isProcessId(process) || !raw || typeof raw !== 'object') return null
-  const r = raw as { hardware?: unknown; mobile?: unknown; choices?: unknown; note?: unknown }
+  const r = raw as { hardware?: unknown; mobile?: unknown; choices?: unknown; note?: unknown; texts?: unknown }
   const def = PROCESSES[process]
   const out: SolutionAnswers = { choices: {} }
 
@@ -103,6 +119,16 @@ export function parseAnswers(process: unknown, raw: unknown): SolutionAnswers | 
     if (step.kind === 'multi' && !step.optional && !out.choices[step.id]) return null
   }
 
+  // Free text per step (audit descriptions, the chosen recommendation): short, one line, never trusted as instructions.
+  const texts = r.texts && typeof r.texts === 'object' ? (r.texts as Record<string, unknown>) : {}
+  for (const step of visibleSteps(process, out)) {
+    if (step.kind !== 'text' && !step.textField) continue
+    const raw = texts[step.id]
+    const clean = typeof raw === 'string' ? raw.replace(/[\r\n]+/g, ' ').trim().slice(0, MAX_TEXT_CHARS) : ''
+    if (step.kind === 'text' && !step.optional && !clean) return null
+    if (clean) (out.texts ??= {})[step.id] = clean
+  }
+
   if (def.steps.some((s) => s.kind === 'hardware')) {
     const h = r.hardware as Record<string, unknown> | undefined
     if (!h || typeof h !== 'object') return null
@@ -115,6 +141,10 @@ export function parseAnswers(process: unknown, raw: unknown): SolutionAnswers | 
     if (typeof gpu !== 'string' || !['nvidia', 'amd', 'apple', 'integrated', 'none', 'unknown'].includes(gpu)) return null
     if (!num(h.ramGb, 4096) || !num(h.vramGb, 1024) || !num(h.storageGb, 100_000)) return null
     out.hardware = { device, os, gpu, ramGb: h.ramGb, vramGb: h.vramGb, storageGb: h.storageGb } as SolutionAnswers['hardware']
+    if (def.steps.some((s) => s.kind === 'hardware' && s.askCpu) && typeof h.cpu === 'string') {
+      const cpu = h.cpu.replace(/[\r\n]+/g, ' ').trim().slice(0, 60)
+      if (cpu) out.hardware!.cpu = cpu
+    }
   }
 
   if (def.steps.some((s) => s.kind === 'mobile')) {

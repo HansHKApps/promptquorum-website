@@ -7,7 +7,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type MutableRefObject } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { PROCESSES, PROCESS_ORDER, MAX_NOTE_CHARS, visibleSteps } from '@/lib/askhans/solutions/processes'
+import { PROCESSES, PROCESS_ORDER, MAX_NOTE_CHARS, MAX_TEXT_CHARS, visibleSteps } from '@/lib/askhans/solutions/processes'
 import type { HardwareAnswers, MobileAnswers, ProcessId, SolutionAnswers, StepDef } from '@/lib/askhans/solutions/types'
 import type { Language } from '@/lib/blog/blogContent'
 import { ConsentNotice } from '../ConsentNotice'
@@ -18,11 +18,12 @@ import { logEvent, streamSolution } from '../useAskStream'
 import { ChoiceGroup } from './choices'
 import { usePowerCopy } from './copy'
 import type { ReportDoc } from './export/reportDoc'
-import { emptyHardwareDraft, emptyMobileDraft, hardwareFromDraft, mobileFromDraft, type HardwareDraft, type MobileDraft } from './drafts'
+import { draftFromHardware, emptyHardwareDraft, emptyMobileDraft, hardwareFromDraft, mobileFromDraft, type HardwareDraft, type MobileDraft } from './drafts'
 import { HardwareStep } from './HardwareStep'
 import { MobileStep } from './MobileStep'
 import { profileFromHardware, profileFromMobile, saveProfile } from './profile'
 import { ReportView } from './ReportView'
+import { clearSavedAudit, parseImprovements, readSavedAudit, writeSavedAudit, type SavedAudit } from './auditStore'
 
 type View = { k: 'menu' } | { k: 'wizard'; process: ProcessId; index: number } | { k: 'consent'; process: ProcessId } | { k: 'run'; process: ProcessId } | { k: 'report'; process: ProcessId }
 
@@ -49,6 +50,16 @@ function directoryQuery(process: ProcessId, choices: Record<string, string[]>): 
   return want ? `?want=${want}` : ''
 }
 
+/** Free-text answers of the visible steps: trimmed, capped, empty ones dropped. */
+function keptTexts(steps: StepDef[], tv: Record<string, string>): Record<string, string> | undefined {
+  const kept: Record<string, string> = {}
+  for (const st of steps) {
+    const t = (st.kind === 'text' || st.textField) && tv[st.id]?.trim()
+    if (t) kept[st.id] = t.slice(0, MAX_TEXT_CHARS)
+  }
+  return Object.keys(kept).length ? kept : undefined
+}
+
 const GROUP = 'rounded-xl border border-border bg-white p-4 shadow-sm'
 
 export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: Props) {
@@ -62,6 +73,12 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const [mob, setMob] = useState<MobileDraft>(emptyMobileDraft)
   const [saveProfileOn, setSaveProfileOn] = useState(false)
   const [text, setText] = useState('')
+  // Free-text answers by step id (audit descriptions, the improvement chosen for "implement")
+  const [texts, setTexts] = useState<Record<string, string>>({})
+  // The audit report stays here while an "implement" report is shown, so Back returns to it
+  const [auditReport, setAuditReport] = useState('')
+  const [savedTick, setSavedTick] = useState(0)
+  const [saveMsg, setSaveMsg] = useState('')
   const [status, setStatus] = useState<string | undefined>()
   const [error, setError] = useState<AskErrorCode | null>(null)
   const [runStamp, setRunStamp] = useState('')
@@ -72,23 +89,33 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
 
   const processOf = view.k === 'menu' ? null : view.process
 
+  // A saved audit lives only in this browser; read it when the process list is shown.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- savedTick re-reads the store after a delete
+  const saved = useMemo(() => (view.k === 'menu' ? readSavedAudit() : null), [view.k, savedTick])
+
   // ---- answers ----------------------------------------------------------------------------------
-  const hardwareAnswers = (process: ProcessId): HardwareAnswers | null => hardwareFromDraft(hw, !!PROCESSES[process].steps.find((s) => s.kind === 'hardware')?.allowNone)
+  const hardwareAnswers = (process: ProcessId): HardwareAnswers | null => {
+    const hs = PROCESSES[process].steps.find((s) => s.kind === 'hardware')
+    return hardwareFromDraft(hw, !!hs?.allowNone, !!hs?.askCpu)
+  }
   const mobileAnswers = (): MobileAnswers | null => mobileFromDraft(mob)
 
   const answersFor = useCallback(
-    (process: ProcessId): SolutionAnswers => {
+    (process: ProcessId, tv: Record<string, string>): SolutionAnswers => {
       const def = PROCESSES[process]
       const out: SolutionAnswers = { choices: {} }
       for (const s of visibleSteps(process, { choices })) if ((s.kind === 'single' || s.kind === 'multi') && choices[s.id]?.length) out.choices[s.id] = choices[s.id]
       if (def.steps.some((s) => s.kind === 'hardware')) {
-        const h = hardwareFromDraft(hw, !!def.steps.find((s) => s.kind === 'hardware')?.allowNone)
+        const hs = def.steps.find((s) => s.kind === 'hardware')
+        const h = hardwareFromDraft(hw, !!hs?.allowNone, !!hs?.askCpu)
         if (h) out.hardware = h
       }
       if (def.steps.some((s) => s.kind === 'mobile')) {
         const m = mobileFromDraft(mob)
         if (m) out.mobile = m
       }
+      const kept = keptTexts(visibleSteps(process, { choices }), tv)
+      if (kept) out.texts = kept
       if (note.trim()) out.note = note.trim().slice(0, MAX_NOTE_CHARS)
       return out
     },
@@ -108,6 +135,8 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
     setChoices({})
     setNote('')
     setText('')
+    setTexts({})
+    setSaveMsg('')
     setError(null)
     setView({ k: 'wizard', process, index: 0 })
   }
@@ -128,9 +157,14 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       abortRef.current = null
     }
     setError(null)
+    if (view.process === 'implement') {
+      setText(auditReport)
+      setView(auditReport ? { k: 'report', process: 'audit' } : { k: 'menu' })
+      return true
+    }
     setView({ k: 'wizard', process: view.process, index: Math.max(visibleSteps(view.process, { choices }).length - 1, 0) })
     return true
-  }, [view, choices, onExit])
+  }, [view, choices, onExit, auditReport])
 
   useEffect(() => {
     backRef.current = goBack
@@ -154,8 +188,8 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
 
   // ---- running ----------------------------------------------------------------------------------
   const run = useCallback(
-    async (process: ProcessId) => {
-      const answers = answersFor(process)
+    async (process: ProcessId, textsOverride?: Record<string, string>) => {
+      const answers = answersFor(process, textsOverride ?? texts)
       // Only on the visitor's explicit opt-in, and only into this browser (the website's hardware tool).
       if (saveProfileOn) {
         const p = answers.mobile ? profileFromMobile(answers.mobile) : answers.hardware ? profileFromHardware(answers.hardware) : null
@@ -185,7 +219,10 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
           } else if (ev.t === 'tool') setStatus(tx.run.tool)
           else if (ev.t === 'done') {
             if (!acc.trim()) setError('failed')
-            else setView({ k: 'report', process })
+            else {
+              if (process === 'audit') setAuditReport(acc)
+              setView({ k: 'report', process })
+            }
             setStatus(undefined)
           } else if (ev.t === 'error') {
             setError(ev.code)
@@ -195,8 +232,41 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         ctl.signal,
       )
     },
-    [answersFor, saveProfileOn, tx.run.tool, tx.run.writing, tx.run.estimating, getVisitId, lang],
+    [answersFor, texts, saveProfileOn, tx.run.tool, tx.run.writing, tx.run.estimating, getVisitId, lang],
   )
+
+  const openSaved = (a: SavedAudit) => {
+    setChoices(a.answers.choices)
+    setTexts(a.answers.texts ?? {})
+    setNote(a.answers.note ?? '')
+    if (a.answers.hardware) setHw(draftFromHardware(a.answers.hardware))
+    setText(a.report)
+    setAuditReport(a.report)
+    setRunStamp(a.savedAt)
+    setError(null)
+    setSaveMsg('')
+    setView({ k: 'report', process: 'audit' })
+  }
+
+  const saveAudit = () => {
+    const ok = writeSavedAudit({ savedAt: new Date().toISOString().slice(0, 10), lang, answers: answersFor('audit', texts), report: text })
+    setSaveMsg(ok ? tx.audit.saved : tx.audit.saveFailed)
+  }
+
+  const deleteAudit = () => {
+    clearSavedAudit()
+    setSavedTick((n) => n + 1)
+    setSaveMsg(tx.audit.cleared)
+  }
+
+  // "Carry out an improvement": the same answers plus the chosen improvement go to the implement report.
+  const implement = (title: string) => {
+    const t = { ...texts, recommendation: title }
+    setTexts(t)
+    setError(null)
+    if (!consent) return setView({ k: 'consent', process: 'implement' })
+    void run('implement', t)
+  }
 
   const next = (process: ProcessId, index: number) => {
     const steps = visibleSteps(process, { choices })
@@ -210,13 +280,14 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
 
   const inputLines = useCallback(
     (process: ProcessId): string[] => {
-      const a = answersFor(process)
+      const a = answersFor(process, texts)
       const lines: string[] = []
       for (const s of visibleSteps(process, { choices })) {
         const label = tx.steps[s.id]?.label ?? s.id
         if (s.kind === 'single' || s.kind === 'multi') {
           const v = a.choices[s.id]
           if (v?.length) lines.push(`${label}: ${v.map(labelFor).join(', ')}`)
+          if (s.textField && a.texts?.[s.id]) lines.push(`${label}: ${a.texts[s.id]}`)
         } else if (s.kind === 'hardware' && a.hardware) {
           const h = a.hardware
           const val = (n: number | null) => (n === null ? tx.hw.unknown : String(n))
@@ -226,8 +297,11 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             parts.push(`${h.device === 'mac' ? tx.hw.ramApple : tx.hw.ram}: ${val(h.ramGb)}`)
             if (h.gpu === 'nvidia' || h.gpu === 'amd') parts.push(`${tx.hw.vram}: ${val(h.vramGb)}`)
             if (h.storageGb !== null) parts.push(`${tx.hw.storage}: ${h.storageGb}`)
+            if (h.cpu) parts.push(h.cpu)
           }
           lines.push(`${label}: ${parts.join(' · ')}`)
+        } else if (s.kind === 'text' && a.texts?.[s.id]) {
+          lines.push(`${label}: ${a.texts[s.id]}`)
         } else if (s.kind === 'mobile' && a.mobile) {
           const m = a.mobile
           const val = (n: number | null) => (n === null ? tx.hw.unknown : String(n))
@@ -240,7 +314,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       if (a.note) lines.push(`${tx.steps.note.label}: ${a.note}`)
       return lines
     },
-    [answersFor, choices, labelFor, tx],
+    [answersFor, choices, texts, labelFor, tx],
   )
 
   const reportProcess = view.k === 'run' || view.k === 'report' ? view.process : null
@@ -303,6 +377,13 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       <>
         {heading(tx.menu.title)}
         <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{tx.menu.intro}</p>
+        {saved && (
+          <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-primary bg-secondary px-3 py-2 text-[13px] text-foreground">
+            <span className="font-semibold">{tx.audit.loadTitle(formatDisplayDate(saved.savedAt, lang as Language))}</span>
+            <button type="button" onClick={() => openSaved(saved)} className="rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-white">{tx.audit.loadOpen}</button>
+            <button type="button" onClick={deleteAudit} className="rounded-md border border-border px-2.5 py-1 text-xs font-semibold text-foreground hover:bg-white">{tx.audit.clear}</button>
+          </div>
+        )}
         <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
           {PROCESS_ORDER.map((id) => (
             <li key={id}>
@@ -360,7 +441,21 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
               onChange={(v) => setChoices((c) => ({ ...c, [step.id]: v }))}
             />
           )}
-          {step.kind === 'hardware' && <HardwareStep tx={tx} draft={hw} onChange={setHw} allowNone={!!step.allowNone} save={saveProfileOn} onSaveChange={setSaveProfileOn} />}
+          {step.textField && (
+            <>
+              <label htmlFor={`pm-text-${step.id}`} className="sr-only">{tx.audit[step.id === 'auditSetup' ? 'setupText' : 'problemsText']}</label>
+              <textarea
+                id={`pm-text-${step.id}`}
+                value={texts[step.id] ?? ''}
+                rows={2}
+                maxLength={MAX_TEXT_CHARS}
+                placeholder={tx.audit[step.id === 'auditSetup' ? 'setupText' : 'problemsText']}
+                onChange={(e) => setTexts((t) => ({ ...t, [step.id]: e.target.value }))}
+                className="mt-2 w-full resize-none rounded-lg border border-input bg-white px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary"
+              />
+            </>
+          )}
+          {step.kind === 'hardware' && <HardwareStep tx={tx} draft={hw} onChange={setHw} allowNone={!!step.allowNone} askCpu={!!step.askCpu} save={saveProfileOn} onSaveChange={setSaveProfileOn} />}
           {step.kind === 'mobile' && <MobileStep tx={tx} draft={mob} onChange={setMob} save={saveProfileOn} onSaveChange={setSaveProfileOn} />}
           {step.kind === 'note' && (
             <>
@@ -398,7 +493,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         pendingQuestion={null}
         onChoose={(value, save) => {
           onConsent(value, save)
-          void run(p)
+          void run(p, p === 'implement' ? texts : undefined)
         }}
       />
     )
@@ -431,6 +526,30 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             </div>
           </div>
         )}
+        {view.k === 'report' && view.process === 'audit' && (
+          <>
+            {parseImprovements(text).length > 0 && (
+              <section className={`${GROUP} mt-3`} aria-labelledby="pm-implement">
+                <h3 id="pm-implement" className="text-[14px] font-bold text-foreground">{tx.audit.implementHeading}</h3>
+                <p className="mt-1 text-[12px] text-muted-foreground">{tx.audit.implementIntro}</p>
+                <ul className="mt-2 grid gap-2">
+                  {parseImprovements(text).map((im) => (
+                    <li key={im.n}>
+                      <button type="button" onClick={() => implement(im.title)} className="w-full rounded-lg border border-border bg-white px-3 py-2 text-start text-[13px] font-medium text-foreground hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+                        {im.n}. {im.title}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <button type="button" onClick={saveAudit} className="rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary">{tx.audit.save}</button>
+              {readSavedAudit() && <button type="button" onClick={deleteAudit} className="rounded-lg border border-border px-3 py-1.5 text-[13px] font-semibold text-foreground hover:bg-muted">{tx.audit.clear}</button>}
+              {saveMsg && <span role="status" className="text-[12px] text-muted-foreground">{saveMsg}</span>}
+            </div>
+          </>
+        )}
         <div className="mt-3 flex flex-wrap gap-2">
           {view.k === 'run' && !failed && (
             <button type="button" onClick={goBack} className="rounded-lg border border-border px-3 py-1.5 text-[13px] font-semibold text-foreground hover:bg-muted">
@@ -439,9 +558,11 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
           )}
           {(view.k === 'report' || failed) && (
             <>
-              <button type="button" onClick={() => setView({ k: 'wizard', process: view.process, index: lastStepIndex(view.process) })} className="rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary">
-                {tx.report.changeAnswers}
-              </button>
+              {view.process !== 'implement' && (
+                <button type="button" onClick={() => setView({ k: 'wizard', process: view.process, index: lastStepIndex(view.process) })} className="rounded-lg border border-primary px-3 py-1.5 text-[13px] font-semibold text-primary hover:bg-secondary">
+                  {tx.report.changeAnswers}
+                </button>
+              )}
               <button type="button" onClick={() => setView({ k: 'menu' })} className="rounded-lg border border-border px-3 py-1.5 text-[13px] font-semibold text-foreground hover:bg-muted">
                 {tx.report.allProcesses}
               </button>

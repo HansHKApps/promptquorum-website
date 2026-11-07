@@ -16,6 +16,8 @@ interface Props {
   draft: HardwareDraft
   onChange: (d: HardwareDraft) => void
   allowNone: boolean
+  /** audit only: also ask for the processor / chip */
+  askCpu?: boolean
   save: boolean
   onSaveChange: (v: boolean) => void
 }
@@ -35,7 +37,7 @@ const GPU_PRESETS = {
   amd: [{ name: 'RX 7900 XTX', vram: 24 }],
 } as const
 
-export function HardwareStep({ tx, draft, onChange, allowNone, save, onSaveChange }: Props) {
+export function HardwareStep({ tx, draft, onChange, allowNone, askCpu, save, onSaveChange }: Props) {
   const [saved] = useState(() => (typeof window === 'undefined' ? null : savedHardware()))
   const set = (patch: Partial<HardwareDraft>) => onChange({ ...draft, ...patch })
   const devices = DEVICE_KINDS.filter((d) => allowNone || d !== 'none')
@@ -128,6 +130,20 @@ export function HardwareStep({ tx, draft, onChange, allowNone, save, onSaveChang
             unit={tx.hw.gb}
             onChange={(storage, storageUnknown) => set({ storage, storageUnknown })}
           />
+          {askCpu && (
+            <div>
+              <label htmlFor="pm-cpu" className="mb-1 block text-[13px] font-semibold text-foreground">{tx.hw.cpu}</label>
+              <input
+                id="pm-cpu"
+                type="text"
+                value={draft.cpu}
+                maxLength={60}
+                placeholder={tx.hw.cpuPlaceholder}
+                onChange={(e) => set({ cpu: e.target.value })}
+                className="w-full rounded-lg border border-input bg-white px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary"
+              />
+            </div>
+          )}
           <p className="text-[12px] leading-snug text-muted-foreground">{tx.hw.help}</p>
           <label className="flex cursor-pointer items-start gap-2 rounded-md border border-border bg-muted px-3 py-2 text-[13px] text-foreground">
             <input type="checkbox" checked={save} onChange={(e) => onSaveChange(e.target.checked)} className="mt-0.5 h-4 w-4 flex-shrink-0 accent-primary" />
