@@ -49,3 +49,26 @@ export function trackPromo(event: PromoEvent, ctx: PromoContext): void {
     // analytics must never block the visitor
   }
 }
+
+/**
+ * Ask Hans was opened by a promo slot (source = `promo_<target>_<placement>`). Sent to Umami regardless of the Ask Hans
+ * consent choice, because Umami here is cookieless and anonymous. Fires only when the window actually opened (an
+ * already open window is not a new open).
+ */
+export function trackPromoOpen(source: string): void {
+  try {
+    const m = /^promo_(ask_hans|power_mode)_(p[1-5])$/.exec(source)
+    if (!m) return
+    const page = window.location.pathname
+    window.umami?.track('promo_open', {
+      target: m[1].replace('_', '-'),
+      placement: m[2].toUpperCase(),
+      source,
+      cluster: clusterFromPath(page),
+      page,
+      device: deviceKind(),
+    })
+  } catch {
+    // analytics must never block the visitor
+  }
+}
