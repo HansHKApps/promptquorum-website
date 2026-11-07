@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { AppLink as Link } from '@/components/AppLink'
+import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
 import { renderEmphasis } from './emphasis'
 import { HubExplore } from './HubExplore'
 import { HubIcon } from './HubIcon'
@@ -179,6 +180,11 @@ export function HubTemplate(props: HubTemplateProps) {
           </div>
         </div>
       </section>
+
+      {/* Promo slot pilot (P5): renders nothing unless this hub is in the pilot */}
+      <div className={MAX_WIDTH}>
+        <PilotPromoSlot at="P5" />
+      </div>
 
       {/* Jump bar */}
       <div className="border-b border-border bg-white">

@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "next dev",
+    "test:promo-pilot": "node scripts/validate-promo-pilot.mjs",
     "validate-translations": "node scripts/validate-translation-integrity.mjs",
     "validate-affiliate-disclosure": "node scripts/validate-affiliate-disclosure.mjs",
     "validate-meta-budgets": "node scripts/validate-meta-budgets.mjs",

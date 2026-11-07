@@ -1,5 +1,6 @@
 'use client'
 
+import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -334,6 +335,8 @@ export function PromptBitesHubClient({ lang, articles, latestDateModified }: Pro
             className="mb-0"
           />
         </header>
+
+        <PilotPromoSlot at="P5" />
 
         {/* Cross-language links */}
         <div className="flex justify-center mb-12">

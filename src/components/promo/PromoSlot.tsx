@@ -27,10 +27,12 @@ export interface PromoSlotProps {
   target: PromoTarget
   placement: PromoPlacement
   variant?: PromoVariant
+  /** narrow column (side rail): graphic, text and button stack vertically */
+  stack?: boolean
   className?: string
 }
 
-export function PromoSlot({ target, placement, variant = 'card', className = '' }: PromoSlotProps) {
+export function PromoSlot({ target, placement, variant = 'card', stack = false, className = '' }: PromoSlotProps) {
   const lang = useLang()
   const ref = useRef<HTMLElement>(null)
   const ctx = { target, placement, variant, locale: lang }
@@ -106,7 +108,7 @@ export function PromoSlot({ target, placement, variant = 'card', className = '' 
         <div data-ad-slot={`${target}-${placement}`} className="min-h-[inherit]" />
       ) : (
         <>
-          <div className="flex items-center gap-4">
+          <div className={`flex gap-4 ${stack ? 'flex-col items-start' : 'items-center'}`}>
             {variant !== 'strip' && <PromoGraphic target={target} />}
             <div className="min-w-0 flex-1">
               <p className="text-base font-semibold leading-snug text-foreground">{hook}</p>

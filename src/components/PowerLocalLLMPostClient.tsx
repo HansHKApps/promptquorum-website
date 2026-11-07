@@ -9,6 +9,8 @@
 //     this component never imports the powerLLMContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
+import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { promoMidArticleIndex } from '@/lib/promo/config'
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import { AppLink as Link } from '@/components/AppLink'
@@ -1477,7 +1479,8 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           }
         />
       )}
-      <div className={isDirectoryPage ? 'max-w-3xl mx-auto px-4 sm:px-6 pt-10' : 'max-w-3xl mx-auto'}>
+      <div className={isDirectoryPage ? 'relative max-w-3xl mx-auto px-4 sm:px-6 pt-10' : 'relative max-w-3xl mx-auto'}>
+        <PilotPromoSlot at="P4" />
 
         {/* Breadcrumb + language */}
         {!isDirectoryPage && (
@@ -1797,6 +1800,8 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         })()}
 
         {/* Sections */}
+        <PilotPromoSlot at="P1" />
+        <PilotPromoSlot at="P5" />
         <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             // Directory page reorder (page-redesign-v2.md §2): Quick answer
@@ -1819,7 +1824,11 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                 })
               : entries
 
-            return orderedEntries.map(([key, section]) => {
+            const visibleKeys = orderedEntries.map(([k]) => k).filter((k) => k !== tldrKey && !directorySlot?.sectionKeys.includes(k))
+            const mid = promoMidArticleIndex(visibleKeys.length)
+            const hasRelated = visibleKeys.includes('relatedReading')
+
+            const rendered = orderedEntries.map(([key, section]) => {
               if (key === tldrKey) return null
               const sectionId = slugifySectionId(section, key)
               if (directorySlot?.sectionKeys.includes(key)) {
@@ -1842,6 +1851,21 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
               }
               return sectionEl
             })
+            // Pilot slots: P2 after ~40% of the visible sections, P3 before the related-reading section.
+            return (
+              <>
+                {rendered.flatMap((el, i) => {
+                  const key = orderedEntries[i][0]
+                  const vi = visibleKeys.indexOf(key)
+                  return [
+                    key === 'relatedReading' ? <PilotPromoSlot key={`${key}-p3`} at="P3" /> : null,
+                    el,
+                    vi !== -1 && vi === mid ? <PilotPromoSlot key={`${key}-p2`} at="P2" /> : null,
+                  ]
+                })}
+                {!hasRelated && <PilotPromoSlot at="P3" />}
+              </>
+            )
           })()}
         </article>
 
