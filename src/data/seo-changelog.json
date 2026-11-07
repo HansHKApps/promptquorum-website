@@ -23635,7 +23635,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "aa7e1690-5f24-490c-9df6-95fabd1818fd",
@@ -23653,7 +23657,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "f055c5a2-1396-4446-bd26-78eaed6c0e66",
@@ -23671,7 +23679,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "137d0283-caaa-451b-a850-cd0ef2924232",
@@ -23689,7 +23701,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "a167d759-6a3b-43f1-8d3f-2a7196532295",
@@ -23707,7 +23723,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "ce7623cd-6e2c-4cfb-acec-5509173ddbf2",
@@ -23725,7 +23745,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "2077d01c-51af-4caa-83de-ff705f7639b8",
@@ -23743,7 +23767,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "3e087fde-bc58-44a2-9b61-9d05d95ebb92",
@@ -23761,7 +23789,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "c946d914-db48-4f7a-a355-5783a3f93d88",
@@ -23779,7 +23811,11 @@
       "nextchat review 2026: lightweight, one-click-deploy chat ui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "0ccf7b60-b480-4f72-9237-b406947edee8",
@@ -23797,7 +23833,11 @@
       "digitalocean vs. aws vs. coreweave vs. runpod: cloud for ai"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "74094233-f5b7-4ec1-a5a6-e490dbaedbff",
@@ -23815,7 +23855,11 @@
       "digitalocean vs. aws vs. coreweave vs. runpod: cloud for ai"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "25b54ec5-a02d-4962-b703-e683b8fbabe4",
@@ -23833,7 +23877,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "08841163-d6ca-48f8-a6ec-2d418676a044",
@@ -23851,7 +23899,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "5401c4f5-088f-482f-9b89-3138c0d1f6b3",
@@ -23869,7 +23921,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "55a46348-763d-4c55-96b9-9dfd3879a3a7",
@@ -23887,7 +23943,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "3721630b-3e98-4bf1-b58e-bd18715bd008",
@@ -23905,7 +23965,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "6c651679-a741-4934-8d2a-e55f1b4aa895",
@@ -23923,7 +23987,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "307fa478-3444-4298-afef-c86820086be1",
@@ -23941,7 +24009,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "5f449029-b354-44fb-a69f-a308932e0f85",
@@ -23959,7 +24031,11 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   },
   {
     "id": "0b906908-d2db-47b5-adb8-65fd5ce9b3d7",
@@ -23977,6 +24053,10 @@
       "tensorrt-llm explained: nvidia's gpu-optimized inference eng"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-07",
+    "measure": {
+      "t14": "2026-11-21",
+      "t28": "2026-12-05"
+    }
   }
 ]
