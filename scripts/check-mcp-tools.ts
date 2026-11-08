@@ -107,6 +107,12 @@ check('tested' in tested && tested.tested === true && 'findings' in tested && (t
 const latest = getLatest({ type: 'all', limit: 5 })
 check(latest.items.length > 0 && latest.items.every((i) => i.url.startsWith('https://')), 'latest items need urls')
 check(latest.items.every((i, n, arr) => n === 0 || arr[n - 1].date >= i.date), 'latest must be sorted newest first')
+// get_latest is localized: German asks get /de/ links (articles, apps, hands-on tests) and never an English-only list.
+for (const type of ['articles', 'apps', 'hands-on'] as const) {
+  const de = getLatest({ type, limit: 5, lang: 'de' })
+  check(de.items.length > 0 && de.items.every((i) => i.url.startsWith('https://www.promptquorum.com/de/') || i.type === 'hands-on-test'), `latest ${type} de must link /de/`)
+}
+check(getLatest({ type: 'articles', limit: 3, lang: 'de' }).items[0]?.title !== getLatest({ type: 'articles', limit: 3, lang: 'en' }).items[0]?.title, 'latest de title must be localized')
 const rel = findRelatedContent({ app: 'open-webui' })
 check('app' in rel && rel.app?.slug === 'open-webui', 'related content app')
 

@@ -11,7 +11,6 @@
 import Fuse from 'fuse.js'
 import type { SearchEntry } from '@/components/search/search-utils'
 import { SUPPORTED_LANGS, HUB_LABELS } from '@/components/search/search-utils'
-import { buildAllSearchEntries } from '@/lib/search/build-search-entries'
 import { matchLicenseFamilies } from '@/lib/power-local-llm/license-taxonomy'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
@@ -38,6 +37,7 @@ import {
 } from '@/lib/power-local-llm/app-search'
 import type { AppSummary } from '@/lib/power-local-llm/app-search'
 import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
+import { getHandsOnTest } from '@/lib/hands-on-tests'
 import { listHandsOnTests } from '@/lib/mcp/directory-tools'
 import { searchPages } from '@/lib/mcp/pages'
 
@@ -56,24 +56,10 @@ export {
 }
 export type { AppSummary }
 
-import { peContent } from '@/lib/prompt-engineering/articles-barrel'
-import { llmContent } from '@/lib/local-llms/articles-barrel'
-import { powerLLMContent } from '@/lib/power-local-llm/articles-barrel'
-import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
-import { balconySolarContent } from '@/lib/balcony-solar/articles-barrel'
-import { smartHomeContent } from '@/lib/smart-home/articles-barrel'
-import { blogContent } from '@/lib/blog/blogContent'
-
-import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
-import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
-import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
-import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
-import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
-import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
-import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
-import { POWER_LLM_PUBLISHED_SLUGS } from '@/lib/power-local-llm/published'
-import { BALCONY_SOLAR_PUBLISHED_SLUGS } from '@/lib/balcony-solar/published'
-import { SMART_HOME_PUBLISHED_SLUGS } from '@/lib/smart-home/published'
+import { CLUSTER_META } from '@/lib/mcp/clusters'
+import { readArticleVariant, loadSearchEntries, loadLatestArticles } from '@/lib/mcp/corpus'
+export type { LatestItem } from '@/lib/mcp/corpus'
+import type { LatestItem } from '@/lib/mcp/corpus'
 
 // Same weighting as src/components/search/useSearch.ts's FUSE_OPTIONS —
 // kept as a literal duplicate (no shared-options module exists yet) rather
@@ -99,14 +85,20 @@ function normalizeLang(lang: string | undefined): SupportedLang {
   return (SUPPORTED_LANGS as readonly string[]).includes(lang ?? '') ? (lang as SupportedLang) : 'en'
 }
 
-// Cached across warm serverless invocations — rebuilding the ~thousands-of-
-// entries index (and a fresh Fuse instance) on every call would waste the
-// cold-start budget for no reason, since the underlying content is static
-// per deployment.
-let cachedEntries: SearchEntry[] | null = null
-function getSearchEntries(): SearchEntry[] {
-  if (!cachedEntries) cachedEntries = buildAllSearchEntries()
-  return cachedEntries
+// The search entries come from the build-time corpus (src/lib/mcp/corpus.ts), one small file per locale, so this
+// function never loads article source. The Fuse index per (locale, cluster) is cached across warm invocations:
+// rebuilding it on every call would waste time for content that is static per deployment.
+const fuseCache = new Map<string, { entries: SearchEntry[]; fuse: Fuse<SearchEntry> }>()
+function fuseFor(lang: SupportedLang | undefined, cluster: string | undefined) {
+  const key = `${lang ?? '*'}|${cluster ?? '*'}`
+  let hit = fuseCache.get(key)
+  if (!hit) {
+    let entries = loadSearchEntries(lang)
+    if (cluster) entries = entries.filter((e) => e.hub === cluster)
+    hit = { entries, fuse: new Fuse(entries, FUSE_OPTIONS) }
+    fuseCache.set(key, hit)
+  }
+  return hit
 }
 
 export interface SearchToolResult {
@@ -136,11 +128,7 @@ export function searchPromptquorum(args: { query: string; lang?: string; cluster
 
 function searchEntries(args: { query: string; lang?: string; cluster?: string; limit?: number }): SearchToolResult[] {
   const lang = args.lang ? normalizeLang(args.lang) : undefined
-  let entries = getSearchEntries()
-  if (lang) entries = entries.filter((e) => e.lang === lang)
-  if (args.cluster) entries = entries.filter((e) => e.hub === args.cluster)
-
-  const fuse = new Fuse(entries, FUSE_OPTIONS)
+  const { fuse } = fuseFor(lang, args.cluster)
   const limit = Math.min(Math.max(args.limit ?? 10, 1), 25)
   const toResult = (item: SearchEntry): SearchToolResult => ({ title: item.title, description: item.description, url: item.url, hub: item.hub, lang: item.lang })
 
@@ -221,34 +209,6 @@ export function listClusters(): ClusterInfo[] {
     .map(([hub, label]) => ({ hub, label, description: CLUSTER_DESCRIPTIONS[hub] ?? '' }))
 }
 
-interface ClusterSource {
-  content: Record<string, Record<string, unknown>>
-  slugToKey: Record<string, string>
-  isPublished?: (slug: string) => boolean
-}
-
-const CLUSTER_SOURCES: Record<string, ClusterSource> = {
-  'local-llms': { content: llmContent as unknown as Record<string, Record<string, unknown>>, slugToKey: LLM_SLUG_TO_KEY as Record<string, string> },
-  'prompt-engineering': { content: peContent as unknown as Record<string, Record<string, unknown>>, slugToKey: PE_SLUG_TO_KEY as Record<string, string> },
-  'power-local-llm': {
-    content: powerLLMContent as unknown as Record<string, Record<string, unknown>>,
-    slugToKey: POWER_LLM_SLUG_TO_KEY as Record<string, string>,
-    isPublished: (slug) => POWER_LLM_PUBLISHED_SLUGS.has(slug),
-  },
-  'prompt-bites': { content: promptBitesContent as unknown as Record<string, Record<string, unknown>>, slugToKey: PROMPT_BITES_SLUG_TO_KEY as Record<string, string> },
-  'smart-home': {
-    content: smartHomeContent as unknown as Record<string, Record<string, unknown>>,
-    slugToKey: SMART_HOME_SLUG_TO_KEY as Record<string, string>,
-    isPublished: (slug) => SMART_HOME_PUBLISHED_SLUGS.has(slug),
-  },
-  'balcony-solar': {
-    content: balconySolarContent as unknown as Record<string, Record<string, unknown>>,
-    slugToKey: BALCONY_SOLAR_SLUG_TO_KEY as Record<string, string>,
-    isPublished: (slug) => BALCONY_SOLAR_PUBLISHED_SLUGS.has(slug),
-  },
-  blog: { content: blogContent as unknown as Record<string, Record<string, unknown>>, slugToKey: SLUG_TO_POST_ID as Record<string, string> },
-}
-
 export interface ArticleToolResult {
   cluster: string
   slug: string
@@ -259,19 +219,19 @@ export interface ArticleToolResult {
 export class ArticleNotFoundError extends Error {}
 
 export function getArticle(args: { cluster: string; slug: string; lang?: string }): ArticleToolResult {
-  const source = CLUSTER_SOURCES[args.cluster]
+  const source = CLUSTER_META[args.cluster]
   if (!source) throw new ArticleNotFoundError(`Unknown cluster "${args.cluster}". Call list_clusters for valid values.`)
   if (source.isPublished && !source.isPublished(args.slug)) {
     throw new ArticleNotFoundError(`No published article "${args.slug}" in cluster "${args.cluster}".`)
   }
   const key = source.slugToKey[args.slug]
   if (!key) throw new ArticleNotFoundError(`No article "${args.slug}" in cluster "${args.cluster}".`)
-  const langMap = source.content[key]
-  if (!langMap) throw new ArticleNotFoundError(`No content for "${args.slug}" in cluster "${args.cluster}".`)
   const lang = normalizeLang(args.lang)
-  const article = (langMap[lang] ?? langMap.en) as Record<string, unknown> | undefined
+  // Read only this article (one gzip record of the corpus pack); fall back to English like before.
+  const own = readArticleVariant(args.cluster, key, lang)
+  const article = own ?? (lang !== 'en' ? readArticleVariant(args.cluster, key, 'en') : undefined)
   if (!article) throw new ArticleNotFoundError(`No content in any language for "${args.slug}" in cluster "${args.cluster}".`)
-  return { cluster: args.cluster, slug: args.slug, lang: langMap[lang] ? lang : 'en', article }
+  return { cluster: args.cluster, slug: args.slug, lang: own ? lang : 'en', article }
 }
 
 export type LicenseUseCase = 'commercial-use' | 'modify' | 'redistribute-modified' | 'host-as-service' | 'embed-in-product'
@@ -501,35 +461,9 @@ export function compareApps(args: { slugs: string[]; criteria?: CompareCriterion
 
 const SITE_URL = 'https://www.promptquorum.com'
 
-export interface LatestItem {
-  type: 'app' | 'article' | 'hands-on-test'
-  title: string
-  date: string
-  url: string
-  cluster?: string
-}
-
-let cachedArticleDates: LatestItem[] | null = null
-function articleDates(): LatestItem[] {
-  if (cachedArticleDates) return cachedArticleDates
-  const items: LatestItem[] = []
-  for (const [cluster, source] of Object.entries(CLUSTER_SOURCES)) {
-    for (const [slug, key] of Object.entries(source.slugToKey)) {
-      if (source.isPublished && !source.isPublished(slug)) continue
-      const en = (source.content[key] as Record<string, Record<string, unknown>> | undefined)?.en
-      if (!en) continue
-      const raw = (en.dateModified ?? en.last_full_refresh ?? en.publishDate) as string | undefined
-      const iso = typeof raw === 'string' ? raw.match(/\d{4}-\d{2}-\d{2}/)?.[0] : undefined
-      if (!iso) continue
-      const title = typeof en.title === 'string' ? en.title : slug
-      items.push({ type: 'article', title, date: iso, url: `${SITE_URL}/${cluster}/${slug}`, cluster })
-    }
-  }
-  cachedArticleDates = items
-  return items
-}
-
-export function getLatest(args: { type?: 'all' | 'apps' | 'articles' | 'hands-on'; limit?: number; since?: string; cluster?: string }) {
+export function getLatest(args: { type?: 'all' | 'apps' | 'articles' | 'hands-on'; limit?: number; since?: string; cluster?: string; lang?: string }) {
+  const lang = normalizeLang(args.lang)
+  const prefix = lang === 'en' ? '' : `/${lang}`
   const type = args.type ?? 'all'
   const limit = Math.min(Math.max(args.limit ?? 10, 1), 30)
   const since = args.since && /^\d{4}-\d{2}-\d{2}$/.test(args.since) ? args.since : undefined
@@ -539,15 +473,19 @@ export function getLatest(args: { type?: 'all' | 'apps' | 'articles' | 'hands-on
     items.push(
       ...listedApps
         .filter((a) => a.addedDate)
-        .map((a): LatestItem => ({ type: 'app', title: a.name, date: a.addedDate!, url: `${SITE_URL}/directory?tool=${a.slug}` })),
+        .map((a): LatestItem => ({ type: 'app', title: a.name, date: a.addedDate!, url: `${SITE_URL}${prefix}/directory?tool=${a.slug}` })),
     )
   }
   if (type === 'all' || type === 'articles') {
-    items.push(...articleDates().filter((i) => !args.cluster || i.cluster === args.cluster))
+    items.push(...loadLatestArticles(lang).filter((i) => !args.cluster || i.cluster === args.cluster))
   }
   if (type === 'all' || type === 'hands-on') {
     for (const t of listHandsOnTests()) {
-      if (t.published) items.push({ type: 'hands-on-test', title: t.title ?? t.name, date: t.published, url: t.url })
+      if (!t.published) continue
+      // Localized title and URL when the test exists in the visitor's language, otherwise the English test.
+      const local = lang !== 'en' ? handsOnTestUrl(t.slug, lang) : null
+      const localTitle = local ? getHandsOnTest(t.slug, lang)?.title : undefined
+      items.push({ type: 'hands-on-test', title: localTitle ?? t.title ?? t.name, date: t.published, url: local ? `${SITE_URL}${local}` : t.url })
     }
   }
   if (since) items = items.filter((i) => i.date >= since)

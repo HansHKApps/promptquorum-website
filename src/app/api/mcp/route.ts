@@ -460,6 +460,7 @@ const handler = createMcpHandler(
           limit: z.number().int().min(1).max(30).optional().describe('Default 10'),
           since: z.string().optional().describe('ISO date YYYY-MM-DD; only items on or after it'),
           cluster: z.string().optional().describe('Restrict articles to one cluster, e.g. "power-local-llm"'),
+          lang: z.enum(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']).optional().describe('Language of titles and links, default en'),
         }),
       },
       async (args) => withUsageTracking('get_latest', () => jsonResult(getLatest(args), 'get_latest'))

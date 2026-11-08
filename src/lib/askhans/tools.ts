@@ -215,8 +215,9 @@ const TOOLS: Record<string, ToolDef> = {
       limit: z.number().int().min(1).max(15).optional(),
       since: z.string().optional().describe('ISO date YYYY-MM-DD'),
       cluster: z.string().optional(),
+      lang: LANG,
     }),
-    run: (a: Parameters<typeof getLatest>[0]) => getLatest(a),
+    run: (a: Parameters<typeof getLatest>[0], c) => getLatest({ ...a, lang: c.lang }),
   },
   get_hands_on_test: {
     description: 'PromptQuorum\'s own hands-on test findings for an app. Without slug, lists tested apps. Never describe untested apps as tested.',

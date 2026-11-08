@@ -33,6 +33,14 @@ const nextConfig: NextConfig = {
   outputFileTracingExcludes: {
     '/api/hero-image': ['./public/images/**/*'],
   },
+  // The chat and MCP functions read the article corpus as data files (scripts/generate-askhans-corpus.mjs, written
+  // in prebuild) instead of importing every article barrel, which crashed them with out-of-memory on cold start.
+  // The files are read via a runtime path, so tracing cannot see them: include them explicitly (~40 MB gzip).
+  outputFileTracingIncludes: {
+    '/api/ask': ['./generated-corpus/**/*'],
+    '/api/ask/solution': ['./generated-corpus/**/*'],
+    '/api/mcp': ['./generated-corpus/**/*'],
+  },
   experimental: {
     cpus: 1,
     workerThreads: false,
