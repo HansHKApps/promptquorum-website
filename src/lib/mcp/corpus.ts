@@ -7,7 +7,7 @@
 //
 // Now the corpus is data on disk, read on demand:
 //   search-<lang>.json            slim search entries of one locale (a few MB, read once per warm instance)
-//   latest.json                   dated list for get_latest (read once)
+//   latest-<lang>.json            dated list for get_latest in that locale (read once per locale)
 //   articles-<cluster>-<lang>.pack  one gzip record per article, concatenated
 //   articles-<cluster>-<lang>.idx.json  contentKey -> [offset, length] into the pack
 // A get_article call reads one index (small, cached) and ONE slice (a few KB..100 KB) of a pack, then gunzips it.
@@ -84,9 +84,13 @@ export function loadSearchEntries(lang?: string): SearchEntry[] {
   return entries
 }
 
-let latestCache: LatestItem[] | null = null
-/** Published articles with their own last-modified date (English variant), for get_latest. */
-export function loadLatestArticles(): LatestItem[] {
-  if (!latestCache) latestCache = readJson<LatestItem[]>('latest.json')
-  return latestCache
+const latestCache = new Map<string, LatestItem[]>()
+/** Published articles with their last-modified date, titles and URLs in the given locale (English fallback per article). */
+export function loadLatestArticles(lang = 'en'): LatestItem[] {
+  let hit = latestCache.get(lang)
+  if (!hit) {
+    hit = readJson<LatestItem[]>(`latest-${lang}.json`)
+    latestCache.set(lang, hit)
+  }
+  return hit
 }

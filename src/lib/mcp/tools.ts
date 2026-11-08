@@ -37,6 +37,7 @@ import {
 } from '@/lib/power-local-llm/app-search'
 import type { AppSummary } from '@/lib/power-local-llm/app-search'
 import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
+import { getHandsOnTest } from '@/lib/hands-on-tests'
 import { listHandsOnTests } from '@/lib/mcp/directory-tools'
 import { searchPages } from '@/lib/mcp/pages'
 
@@ -460,9 +461,9 @@ export function compareApps(args: { slugs: string[]; criteria?: CompareCriterion
 
 const SITE_URL = 'https://www.promptquorum.com'
 
-const articleDates = (): LatestItem[] => loadLatestArticles()
-
-export function getLatest(args: { type?: 'all' | 'apps' | 'articles' | 'hands-on'; limit?: number; since?: string; cluster?: string }) {
+export function getLatest(args: { type?: 'all' | 'apps' | 'articles' | 'hands-on'; limit?: number; since?: string; cluster?: string; lang?: string }) {
+  const lang = normalizeLang(args.lang)
+  const prefix = lang === 'en' ? '' : `/${lang}`
   const type = args.type ?? 'all'
   const limit = Math.min(Math.max(args.limit ?? 10, 1), 30)
   const since = args.since && /^\d{4}-\d{2}-\d{2}$/.test(args.since) ? args.since : undefined
@@ -472,15 +473,19 @@ export function getLatest(args: { type?: 'all' | 'apps' | 'articles' | 'hands-on
     items.push(
       ...listedApps
         .filter((a) => a.addedDate)
-        .map((a): LatestItem => ({ type: 'app', title: a.name, date: a.addedDate!, url: `${SITE_URL}/directory?tool=${a.slug}` })),
+        .map((a): LatestItem => ({ type: 'app', title: a.name, date: a.addedDate!, url: `${SITE_URL}${prefix}/directory?tool=${a.slug}` })),
     )
   }
   if (type === 'all' || type === 'articles') {
-    items.push(...articleDates().filter((i) => !args.cluster || i.cluster === args.cluster))
+    items.push(...loadLatestArticles(lang).filter((i) => !args.cluster || i.cluster === args.cluster))
   }
   if (type === 'all' || type === 'hands-on') {
     for (const t of listHandsOnTests()) {
-      if (t.published) items.push({ type: 'hands-on-test', title: t.title ?? t.name, date: t.published, url: t.url })
+      if (!t.published) continue
+      // Localized title and URL when the test exists in the visitor's language, otherwise the English test.
+      const local = lang !== 'en' ? handsOnTestUrl(t.slug, lang) : null
+      const localTitle = local ? getHandsOnTest(t.slug, lang)?.title : undefined
+      items.push({ type: 'hands-on-test', title: localTitle ?? t.title ?? t.name, date: t.published, url: local ? `${SITE_URL}${local}` : t.url })
     }
   }
   if (since) items = items.filter((i) => i.date >= since)
