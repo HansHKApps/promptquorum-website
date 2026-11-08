@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import { AuthorByline } from '@/components/AuthorByline'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
@@ -16,6 +16,8 @@ import type { LLMSection } from '@/lib/local-llms/types'
 import type { PromptBiteArticle } from '@/lib/prompt-bites/types'
 import { renderHubTitle } from '@/components/article-skin/HubTitle'
 import { resolveSkin, getSkinClasses, type ArticleSkin } from '@/components/article-skin/skin'
+import { promoMidArticleIndex } from '@/lib/promo/config'
+import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 
 interface Props {
   slug: string
@@ -678,8 +680,12 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
         </div>
 
         {/* Body sections */}
-        {bodySections.map(([sectionKey, section]) => (
-          <BodySection key={sectionKey} section={section} lang={lang} />
+        <AffiliateBannerSlot at="AP1" />
+        {bodySections.map(([sectionKey, section], i) => (
+          <Fragment key={sectionKey}>
+            <BodySection section={section} lang={lang} />
+            {i === promoMidArticleIndex(bodySections.length) && <AffiliateBannerSlot at="AP2" />}
+          </Fragment>
         ))}
 
         {/* FAQ */}
@@ -687,6 +693,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
           <FaqSection title={faqSection.title} faqs={faqSection.faqs} lang={lang} />
         )}
 
+        <AffiliateBannerSlot at="AP3" />
         {/* Go deeper */}
         <GoDeeper parentArticle={parentArticle} siblingBites={siblingBites} siblingTitles={siblingTitles} lang={lang} />
 

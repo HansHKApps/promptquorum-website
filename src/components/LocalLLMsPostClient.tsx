@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 import { promoMidArticleIndex } from '@/lib/promo/config'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import { AppLink as Link } from '@/components/AppLink'
@@ -1158,6 +1159,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
 
         {/* Sections */}
         <PilotPromoSlot at="P1" />
+        <AffiliateBannerSlot at="AP1" />
         <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             const entries = Object.entries(article.sections).filter(([k]) => k !== tldrKey)
@@ -1173,13 +1175,16 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
                   return (
                     <Fragment key={key}>
                       {key === 'relatedReading' && <PilotPromoSlot at="P3" />}
+                      {key === 'relatedReading' && <AffiliateBannerSlot at="AP3" />}
                       {directoryFunnel && key === 'relatedReading' && <DirectoryBlock data={directoryFunnel} position="end" />}
                       {sectionEl}
                       {i === mid && <PilotPromoSlot at="P2" />}
+                      {i === mid && <AffiliateBannerSlot at="AP2" />}
                     </Fragment>
                   )
                 })}
                 {!hasRelated && <PilotPromoSlot at="P3" />}
+                {!hasRelated && <AffiliateBannerSlot at="AP3" />}
               </>
             )
           })()}

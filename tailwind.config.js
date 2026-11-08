@@ -136,12 +136,32 @@ module.exports = {
 					'60%': { transform: 'scale(1.045)' },
 					'100%': { transform: 'scale(1)' },
 				},
+				// Affiliate banner entrance: one shine sweep, one icon pop, two soft glow pulses. transform/opacity only, never looping.
+				'aff-shine': {
+					'0%': { transform: 'translateX(-130%) skewX(-18deg)', opacity: '0' },
+					'20%': { opacity: '0.55' },
+					'100%': { transform: 'translateX(260%) skewX(-18deg)', opacity: '0' },
+				},
+				'aff-icon-pop': {
+					'0%': { transform: 'scale(0.9)' },
+					'55%': { transform: 'scale(1.05)' },
+					'100%': { transform: 'scale(1)' },
+				},
+				'aff-glow': {
+					'0%, 100%': { opacity: '0' },
+					'25%': { opacity: '0.85' },
+					'50%': { opacity: '0.1' },
+					'75%': { opacity: '0.85' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
 				'hub-cta-pop': 'hub-cta-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1',
+				'aff-shine': 'aff-shine 1.2s ease-out 0.15s 1 both',
+				'aff-icon-pop': 'aff-icon-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1 both',
+				'aff-glow': 'aff-glow 2.4s ease-in-out 0.3s 1 both',
 			},
 		},
 	},

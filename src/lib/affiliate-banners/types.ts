@@ -17,7 +17,7 @@ export type BannerCell = 'A1' | 'A3' | 'B1' | 'B3'
 export type BannerPlacement = 'AP1' | 'AP2' | 'AP3'
 
 export type BannerCategory =
-  | 'gpu' | 'mini-pc' | 'laptop' | 'mac' | 'cloud-gpu' | 'nas' | 'router-hub' | 'solar' | 'software' | 'other'
+  | 'gpu' | 'mini-pc' | 'laptop' | 'mac' | 'cloud-gpu' | 'nas' | 'router-hub' | 'solar' | 'software' | 'vpn' | 'monitor' | 'sbc' | 'other'
 
 export interface MerchantLink {
   /** Display name of the store, typeset as a chip (no logo, see brief 6.1c). */

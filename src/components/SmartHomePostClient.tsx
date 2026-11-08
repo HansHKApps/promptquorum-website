@@ -29,6 +29,8 @@ import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
+import { promoMidArticleIndex } from '@/lib/promo/config'
+import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 
 interface Props {
@@ -1120,14 +1122,28 @@ function SmartHomePostContent({ slug, lang, articleData, availableLangs }: Props
         })()}
 
         {/* Sections */}
+        <AffiliateBannerSlot at="AP1" />
         <article className={`key-takeaways-container ${skinCls.sections}`}>
-          {Object.entries(article.sections).map(([key, section]) => {
-            if (key === tldrKey) return null
-            const sectionId = slugifySectionId(section, key)
+          {(() => {
+            const entries = Object.entries(article.sections).filter(([k]) => k !== tldrKey)
+            const mid = promoMidArticleIndex(entries.length)
+            const hasRelated = entries.some(([k]) => k === 'relatedReading')
             return (
-              <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} renderLinks={renderLinks} />
+              <>
+                {entries.map(([key, section], i) => {
+                  const sectionId = slugifySectionId(section, key)
+                  return (
+                    <Fragment key={key}>
+                      {key === 'relatedReading' && <AffiliateBannerSlot at="AP3" />}
+                      <SectionBlock section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} renderLinks={renderLinks} />
+                      {i === mid && <AffiliateBannerSlot at="AP2" />}
+                    </Fragment>
+                  )
+                })}
+                {!hasRelated && <AffiliateBannerSlot at="AP3" />}
+              </>
             )
-          })}
+          })()}
         </article>
 
         {/* Marketing CTA suppressed cluster-wide until /smart-home launches publicly. */}
