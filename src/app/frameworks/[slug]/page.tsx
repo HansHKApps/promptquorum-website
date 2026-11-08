@@ -147,8 +147,8 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             </h1>
             <p className="text-lg text-primary font-mono mb-4">{fw.expansion}</p>
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
-            <p className="mt-4 text-sm text-text-muted">
-              {'By'} <Link href="/about" className="text-primary underline">Hans Kuepper</Link> · {'Last updated'}{' '}
+            <p data-testid="author-byline" className="mt-4 text-sm text-text-muted">
+              {'By'} <Link href="/author/hans-kuepper" rel="author" className="text-primary underline">Hans Kuepper</Link> · {'Last updated'}{' '}
               <time dateTime={fw.dateModified ?? fw.publishDate ?? '2026-03-16'}>{formatDisplayDate(fw.dateModified ?? fw.publishDate ?? '2026-03-16', 'en')}</time>
             </p>
           </div>

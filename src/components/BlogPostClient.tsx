@@ -344,7 +344,7 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
               <span>•</span>
               <span>{metadata?.readTime || post.readTime}</span>
               <span className="hidden sm:inline">•</span>
-              <span className="basis-full sm:basis-auto">By <Link href="/author/hans-kuepper" className="text-primary hover:text-primary/80 font-medium">Hans Kuepper</Link> · PromptQuorum</span>
+              <span data-testid="author-byline" className="basis-full sm:basis-auto">By <Link href="/author/hans-kuepper" rel="author" className="text-primary hover:text-primary/80 font-medium">Hans Kuepper</Link> · PromptQuorum</span>
             </div>
           </div>
 

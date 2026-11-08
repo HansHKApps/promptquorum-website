@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { authorPerson, authorRef } from '@/lib/author'
+import { authorPerson, authorRef, AUTHOR_PATH } from '@/lib/author'
 import type { ReactNode } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import { translations } from '@/translations'
@@ -634,7 +634,9 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 className="w-36 sm:w-44 h-auto rounded-xl object-cover self-start shrink-0"
               />
               <div>
-                <h3 className="text-xl font-bold text-text-primary">{'Hans Küpper'}</h3>
+                <h3 className="text-xl font-bold text-text-primary">
+                  <a href={AUTHOR_PATH} rel="author" className="hover:underline">{'Hans Küpper'}</a>
+                </h3>
                 <p className="text-sm text-hub-azure-ink font-semibold mb-4">{copy.founderTitle}</p>
                 <div className={`${BODY} space-y-4`}>
                   <p>{copy.founderBioP1}</p>

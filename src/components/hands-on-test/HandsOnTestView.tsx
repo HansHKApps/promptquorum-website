@@ -1,4 +1,5 @@
 import type { EvidenceKey, HandsOnImage, HandsOnTest } from '@/lib/hands-on-tests'
+import { AuthorByline } from '@/components/AuthorByline'
 import type { Language } from '@/lib/blog/blogContent'
 import { EvidenceChip } from './EvidenceChip'
 import { TestFigure } from './TestFigure'
@@ -64,6 +65,7 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
           {fill(ui.kicker, { app: test.app.name, date: ui.date_line })}
         </p>
         <h1 className="max-w-3xl text-3xl font-bold leading-tight text-text-primary sm:text-4xl">{test.title}</h1>
+        <AuthorByline lang={lang} className="mt-3 text-sm text-text-muted" />
         <p className="mt-4 max-w-2xl text-lg text-text-secondary">{test.dek}</p>
         <nav aria-label={ui.nav_aria} className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           {(Object.keys(ui.nav) as (keyof typeof ui.nav)[])
