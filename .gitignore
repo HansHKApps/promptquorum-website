@@ -55,3 +55,6 @@ public/build-info.json
 
 # Stale Vite build output — the Next.js build writes to .next/
 dist/
+
+# Article corpus for the chat/MCP functions (regenerated in prebuild: npm run generate:askhans-corpus)
+/generated-corpus/
