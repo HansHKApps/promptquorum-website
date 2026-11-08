@@ -133,12 +133,12 @@ export const de: SolaStrings = {
       citeChicago:
         'Kuepper, Hans. „Wenige Hühner, noch weniger Eier.“ Der Stand der lokalen KI, Bericht 01 (Q4 2026). PromptQuorum, 23. Oktober 2026. https://www.promptquorum.com/de/about/state-of-local-ai/2026-q4.',
       subtitle:
-        'Lokale KI wächst schnell, doch die nutzbare installierte Hardware-Basis ist winzig. Wirklich gute Anwendungen sind noch dünner gesät.',
+        'Lokale KI wächst schnell, doch die nutzbare installierte Hardware-Basis ist winzig. In den Tests des Autors waren wirklich gute Anwendungen noch seltener.',
       summary:
         'Nur sehr wenige Computer können ein gutes lokales KI-Modell ausführen, und noch weniger Apps machen den Aufwand lohnenswert. Neun Praxistests, belegte Zahlen und ein Behauptungsregister zeigen, wo lokale KI heute steht.',
       seoTitle: 'Wenige Hühner, noch weniger Eier | Lokale KI, Bericht 01',
       metaDescription:
-        'Bericht 01 (Q4 2026): Wenige Computer führen gute lokale KI aus, noch weniger Apps lohnen sich. Belegte Zahlen, neun Praxistests, Behauptungsregister.',
+        'Bericht 01 (Q4 2026): Wenige Computer führen gute lokale KI aus. In neun Praxistests erhielten vier von acht bewerteten Apps 2 Punkte oder weniger.',
       keyFindings: [
         'In der Steam-Hardwareumfrage vom September 2026 hatten 27,2 % der erfassten Systeme 16 GB Grafikspeicher und 5,5 % 24 GB.',
         'Auf einem Mac mit 24 GB belegte das System in den Tests des Autors direkt nach dem Start 9,67 GB Speicher, noch bevor ein Modell geladen war.',
@@ -164,10 +164,10 @@ export const de: SolaStrings = {
       ],
       pressQuotes: [
         'Lokale KI hat heute wenige Hühner und noch weniger Eier. In der Steam-Umfrage vom September 2026 hatten nur 5,5 % der Systeme 24 GB Grafikspeicher, und vier der acht Apps für lokale KI, die ich bewerten konnte, erhielten bei ihrer Kernfunktion 2 Punkte oder weniger. (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
-        'Der Listenpreis des NVIDIA DGX Spark mit 128 GB stieg von $3,999 zum Marktstart auf $6,950 im Oktober 2026. Die Hardware, mit der lokale KI komfortabel läuft, wird teurer, nicht günstiger. (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
+        'Der Listenpreis des NVIDIA DGX Spark mit 128 GB stieg von $3,999 zum Marktstart auf $6,950 im Oktober 2026. Hardware, die große Modelle ausführen kann, wird teurer, nicht günstiger (S6, S7). (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
       ],
       pressAuthor:
-        'Hans Kuepper ist Gründer von PromptQuorum mit Sitz in Baden-Württemberg und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung. Die neun Apps in diesem Bericht hat er selbst getestet.',
+        'Hans Kuepper ist Gründer von PromptQuorum mit Sitz in Baden-Württemberg und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung. Die neun Apps in diesem Bericht hat er selbst getestet: acht auf einem Mac mit 24 GB und eine auf einem Android-Smartphone.',
       pressMethod:
         'Die Zahlen stammen aus nummerierten Quellen; jede Behauptung trägt eine Belegkennzeichnung, und Annahmen nennen, wer sie trifft und worauf sie beruhen. Sekundärquellen sind als solche gekennzeichnet. Das Behauptungsregister und alle Quellen stehen zum Download bereit.',
     },

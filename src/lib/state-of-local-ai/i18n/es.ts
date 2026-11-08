@@ -131,12 +131,12 @@ export const es: SolaStrings = {
       citeChicago:
         'Kuepper, Hans. «Pocas gallinas y aún menos huevos.» El estado de la IA local, Informe 01 (Q4 2026). PromptQuorum, 23 de octubre de 2026. https://www.promptquorum.com/es/about/state-of-local-ai/2026-q4.',
       subtitle:
-        'La IA local crece rápido, pero la base instalada de hardware realmente utilizable es minúscula. Las grandes aplicaciones son todavía más escasas.',
+        'La IA local crece rápido, pero la base instalada de hardware realmente utilizable es minúscula. En las pruebas del autor, las grandes aplicaciones fueron todavía más escasas.',
       summary:
         'Muy pocos equipos pueden ejecutar un buen modelo de IA local, y aún menos aplicaciones hacen que valga la pena el esfuerzo. Nueve pruebas prácticas, cifras con fuentes y un registro de afirmaciones muestran dónde está hoy la IA local.',
       seoTitle: 'Pocas gallinas y aún menos huevos | Informe 01 IA local',
       metaDescription:
-        'Informe 01 (Q4 2026): pocos equipos ejecutan buenos modelos de IA local y aún menos aplicaciones valen la pena. Cifras con fuentes y nueve pruebas.',
+        'Informe 01 (Q4 2026): pocos equipos ejecutan buenos modelos de IA local. En nueve pruebas, cuatro de las ocho aplicaciones puntuadas sacaron 2 o menos.',
       keyFindings: [
         'En la encuesta de hardware de Steam de septiembre de 2026, el 27.2% de los sistemas encuestados tenía 16 GB de memoria gráfica y el 5.5% tenía 24 GB.',
         'En un Mac de 24 GB, en las pruebas del autor, el sistema usó 9.67 GB de memoria justo después del arranque, antes de cargar ningún modelo.',
@@ -162,9 +162,9 @@ export const es: SolaStrings = {
       ],
       pressQuotes: [
         'La IA local tiene hoy pocas gallinas y aún menos huevos. En la encuesta de Steam de septiembre de 2026, solo el 5.5% de los sistemas tenía 24 GB de memoria gráfica, y cuatro de las ocho aplicaciones de IA local que pude puntuar obtuvieron 2 o menos en su función principal. (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
-        'El precio de lista del DGX Spark de 128 GB de NVIDIA pasó de $3,999 en el lanzamiento a $6,950 en octubre de 2026. El hardware que hace cómoda la IA local se está encareciendo, no abaratando. (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
+        'El precio de lista del DGX Spark de 128 GB de NVIDIA pasó de $3,999 en el lanzamiento a $6,950 en octubre de 2026. El hardware capaz de ejecutar modelos grandes se está encareciendo, no abaratando (S6, S7). (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
       ],
-      pressAuthor: 'Hans Kuepper es el fundador de PromptQuorum, con sede en Baden-Württemberg, y cuenta con más de 30 años de experiencia en consultoría y dirección general. Probó él mismo las nueve aplicaciones de este informe.',
+      pressAuthor: 'Hans Kuepper es el fundador de PromptQuorum, con sede en Baden-Württemberg, y cuenta con más de 30 años de experiencia en consultoría y dirección general. Probó él mismo las nueve aplicaciones de este informe: ocho en un Mac de 24 GB y una en un teléfono Android.',
       pressMethod: 'Las cifras proceden de fuentes numeradas; cada afirmación lleva una etiqueta de evidencia y los supuestos indican quién los hace y en qué se basan. Las fuentes secundarias se señalan como tales. El registro de afirmaciones y todas las fuentes pueden descargarse.',
     },
   },

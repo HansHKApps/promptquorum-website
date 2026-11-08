@@ -130,12 +130,12 @@ export const zh: SolaStrings = {
         'Kuepper, H. (2026年10月23日). 鸡很少，蛋更少 (本地 AI 现状, 报告 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/zh/about/state-of-local-ai/2026-q4',
       citeChicago:
         'Kuepper, Hans. “鸡很少，蛋更少.” 本地 AI 现状, 报告 01 (Q4 2026). PromptQuorum, 2026年10月23日. https://www.promptquorum.com/zh/about/state-of-local-ai/2026-q4.',
-      subtitle: '本地 AI 增长很快，但可用的硬件存量极小，出色的应用更少。',
+      subtitle: '本地 AI 增长很快，但可用的硬件存量极小。在作者的测试中，出色的应用更少。',
       summary:
         '能运行好的本地 AI 模型的电脑很少，值得为此折腾的应用更少。九项实测、有来源的数据和论断登记表，展示本地 AI 如今的处境。',
       seoTitle: '鸡很少，蛋更少｜本地 AI 现状报告 01',
       metaDescription:
-        '报告 01：能运行好本地 AI 模型的电脑很少，值得使用的应用更少。含有来源的数据、九项实测和论断登记表。',
+        '报告 01：能运行好本地 AI 模型的电脑很少。九项实测中，可评分的八款应用有四款核心功能评分为 2 分或更低。含有来源的数据和论断登记表。',
       keyFindings: [
         '在2026年9月的 Steam 硬件调查中，27.2% 的被调查系统拥有 16 GB 显存，5.5% 拥有 24 GB。',
         '在作者测试的 24 GB Mac 上，系统在启动后、加载任何模型之前就已占用 9.67 GB 内存。',
@@ -161,10 +161,10 @@ export const zh: SolaStrings = {
       ],
       pressQuotes: [
         '如今的本地 AI，鸡很少，蛋更少。在2026年9月的 Steam 调查中，只有 5.5% 的系统拥有 24 GB 显存；而在我能评分的八款本地 AI 应用中，有四款的核心功能评分为 2 分或更低。（Hans Kuepper，《本地 AI 现状》，报告 01，Q4 2026）',
-        'NVIDIA 128 GB 版 DGX Spark 的标价从发布时的 $3,999 涨到2026年10月的 $6,950。让本地 AI 用起来舒适的硬件越来越贵，而不是越来越便宜。（Hans Kuepper，《本地 AI 现状》，报告 01，Q4 2026）',
+        'NVIDIA 128 GB 版 DGX Spark 的标价从发布时的 $3,999 涨到2026年10月的 $6,950。能运行大模型的硬件越来越贵，而不是越来越便宜（S6、S7）。（Hans Kuepper，《本地 AI 现状》，报告 01，Q4 2026）',
       ],
       pressAuthor:
-        'Hans Kuepper 是 PromptQuorum 的创始人，常驻巴登-符腾堡州，拥有 30 多年的咨询与综合管理经验。本报告中的九款应用均由他亲自测试。',
+        'Hans Kuepper 是 PromptQuorum 的创始人，常驻巴登-符腾堡州，拥有 30 多年的咨询与综合管理经验。本报告中的九款应用均由他亲自测试：八款在 24 GB Mac 上，一款在 Android 手机上。',
       pressMethod:
         '数据来自编号来源；每项论断都带有证据标签，假设会写明由谁提出、依据是什么。二手来源均已标明。论断登记表和全部来源均可下载。',
     },

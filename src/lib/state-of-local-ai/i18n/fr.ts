@@ -131,12 +131,12 @@ export const fr: SolaStrings = {
       citeChicago:
         'Kuepper, Hans. « Peu de poules, encore moins d’œufs. » L’état de l’IA locale, Rapport 01 (Q4 2026). PromptQuorum, 23 octobre 2026. https://www.promptquorum.com/fr/about/state-of-local-ai/2026-q4.',
       subtitle:
-        'L’IA locale progresse vite, mais le parc de matériel réellement utilisable est minuscule. Les excellentes applications sont plus rares encore.',
+        'L’IA locale progresse vite, mais le parc de matériel réellement utilisable est minuscule. Dans les tests de l’auteur, les excellentes applications étaient plus rares encore.',
       summary:
         'Très peu d’ordinateurs savent faire tourner un bon modèle d’IA locale, et encore moins d’applications justifient l’effort. Neuf tests pratiques, des chiffres sourcés et un registre des affirmations montrent où en est l’IA locale aujourd’hui.',
       seoTitle: 'Peu de poules, encore moins d’œufs | L’état de l’IA locale',
       metaDescription:
-        'Rapport 01 (Q4 2026) : peu d’ordinateurs font tourner une bonne IA locale, encore moins d’applications le méritent. Chiffres sourcés, neuf tests.',
+        'Rapport 01 (Q4 2026) : peu d’ordinateurs font tourner une bonne IA locale. Sur neuf tests, quatre des huit applications notées ont obtenu 2 ou moins.',
       keyFindings: [
         'Dans l’enquête matérielle Steam de septembre 2026, 27.2% des systèmes interrogés disposaient de 16 GB de mémoire graphique et 5.5% de 24 GB.',
         'Sur un Mac de 24 GB lors des tests de l’auteur, le système utilisait 9.67 GB de mémoire juste après le démarrage, avant le chargement de tout modèle.',
@@ -162,10 +162,10 @@ export const fr: SolaStrings = {
       ],
       pressQuotes: [
         'L’IA locale compte aujourd’hui peu de poules et encore moins d’œufs. Dans l’enquête Steam de septembre 2026, seuls 5.5% des systèmes disposaient de 24 GB de mémoire graphique, et quatre des huit applications d’IA locale que j’ai pu noter ont obtenu 2 ou moins pour leur fonction principale. (Hans Kuepper, L’état de l’IA locale, Rapport 01, Q4 2026)',
-        'Le prix catalogue du DGX Spark de 128 GB de NVIDIA est passé de $3,999 au lancement à $6,950 en octobre 2026. Le matériel qui rend l’IA locale confortable devient plus cher, pas moins cher. (Hans Kuepper, L’état de l’IA locale, Rapport 01, Q4 2026)',
+        'Le prix catalogue du DGX Spark de 128 GB de NVIDIA est passé de $3,999 au lancement à $6,950 en octobre 2026. Le matériel capable de faire tourner de grands modèles devient plus cher, pas moins cher (S6, S7). (Hans Kuepper, L’état de l’IA locale, Rapport 01, Q4 2026)',
       ],
       pressAuthor:
-        'Hans Kuepper est le fondateur de PromptQuorum, basé en Bade-Wurtemberg, avec plus de 30 ans d’expérience dans le conseil et la direction générale. Il a testé lui-même les neuf applications de ce rapport.',
+        'Hans Kuepper est le fondateur de PromptQuorum, basé en Bade-Wurtemberg, avec plus de 30 ans d’expérience dans le conseil et la direction générale. Il a testé lui-même les neuf applications de ce rapport : huit sur un Mac de 24 GB et une sur un téléphone Android.',
       pressMethod:
         'Les chiffres proviennent de sources numérotées ; chaque affirmation porte une étiquette de preuve, et les hypothèses indiquent qui les formule et sur quoi elles reposent. Les sources secondaires sont signalées comme telles. Le registre des affirmations et toutes les sources peuvent être téléchargés.',
     },

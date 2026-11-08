@@ -208,7 +208,7 @@ Display self-evaluated checklist:
 - ✅ HowToSchema: inLanguage: '[xx]' (+ name translated, steps translated)
 - ✅ FAQSchema: inLanguage: '[xx]' (+ Q&As translated)
 - ✅ ItemListSchema: inLanguage: '[xx]' (+ item names/descriptions translated)
-- ✅ author: { '@type': 'Person', 'name': 'Hans Kuepper' } (normalized)
+- ✅ author: not hand-written; rendered from `src/lib/author.ts` (GEO Rule 50)
 - ✅ about[]/mentions[]: structured typed objects (normalized)
 
 ### Localization Quality
@@ -331,7 +331,7 @@ feat: Add DE (German) translation for local-llm-hardware-guide-2026 article
 - `schema.url` → prepend language path prefix (e.g., `https://www.promptquorum.com/de/local-llms/slug`). EN: no prefix (default).
 - `schema.inLanguage` → `'de'` / `'es'` / `'fr'` / `'ja'` / `'zh'` / `'pt-BR'` (Portuguese — Brazilian; NOT `'pt'`) / `'ar'` / `'ko'` — all 9 languages including `ko` are live (2026-08-21 correction: `ko` is no longer gated, do emit it in hreflang/sitemap/`schema.inLanguage`)
 - `howToSchema.inLanguage`, `faqSchema.inLanguage`, `itemListSchema.inLanguage` → same as `schema.inLanguage` (add to all schema types)
-- `schema.author` → ALWAYS normalize to `{ '@type': 'Person', 'name': 'Hans Kuepper' }`
+- `schema.author` → never write an inline author; `src/lib/author.ts` renders the canonical Person (with url and sameAs) for every locale (GEO Rule 50)
 - `schema.publisher` → ALWAYS normalize to `{ '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }`
 - `schema.about[]` → ALWAYS use structured objects: `{ '@type': 'Thing', 'name': '...' }` (normalize from any flat string inconsistencies)
 - `schema.mentions[]` → ALWAYS use structured objects: `{ '@type': 'SoftwareApplication', 'name': '...' }`
@@ -442,7 +442,7 @@ de: {
 | | 2. **Mittelstand Q**: "Ist [Product] für den deutschen Mittelstand geeignet?" |
 | | Answer: German SME use cases, IT security standards (BSI), recommendations for Mittelstand enterprises |
 | **regionalContext** | Expand EN regionalContext. Add explicit mention of BSI-Grundschutz-Kataloge and DACH (Germany/Austria/Switzerland) enterprise IT standards. |
-| **schema.author** | `{ '@type': 'Person', 'name': 'Hans Kuepper' }` (normalize if present as Organization) |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **readTime** | `'[N] Min. Lesezeit'` (e.g., `'7 Min. Lesezeit'`) |
 | **Total FAQs** | 12 (10 base EN + 2 DE-specific) |
 
@@ -459,7 +459,7 @@ de: {
 | **Currency** | PE articles: no hardware prices — N/A. For hardware articles: Spain/EU → EUR (Amazon.es, PcComponentes); LatAm → keep USD with note `"Los precios en tu país pueden variar según impuestos locales."` Format: `€299` (Spain) or `~€350 (España) / ~$400 USD (Latinoamérica)`. |
 | **Extra FAQs** | None. ES matches EN count exactly: 10 FAQs. |
 | **regionalContext** | Skip for pure technical/PE articles (same rule as hardware guides). Only add if article is fundamentally ABOUT compliance or data governance — then reference both EU (RGPD/GDPR + AEPD) AND LatAm (LFPDPPP Mexico, Ley 25.326 Argentina, Ley 1581 Colombia). |
-| **schema.author** | `{ '@type': 'Person', 'name': 'Hans Kuepper' }` |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **readTime** | `'[N] min de lectura'` (e.g., `'7 min de lectura'`) |
 | **Total FAQs** | 10 (same as EN) |
 | **Vocabulary** | Prefer neutral vocabulary: "equipo" or "PC" over "computadora/ordenador". Brand names (PromptQuorum, Ollama, LM Studio) unchanged. "Prompt engineering" stays as-is — universally understood in Spanish tech community. |
@@ -476,7 +476,7 @@ de: {
 | **Currency** | Convert USD ($) → EUR (€) using **researched Apple.com/fr, LDLC.com, Amazon.fr retail prices** — NOT mechanical rate conversion. Format: `€` AFTER number with thin space, thin space as thousands separator (e.g., `2 499 €`, `900 €`, `1 000–1 400 €`). For US-only products, prefix `env.` (environ): `env. 1 999 €`. NEVER fabricate — if unverifiable, keep USD with note. See the **Currency Localization (MANDATORY)** section below. |
 | **Extra FAQs** | None. FR matches EN count exactly: 10 FAQs. |
 | **regionalContext** | Expand EN section. Add one CNIL sentence about CNIL's recommendation for local AI when handling sensitive professional data (financial, medical, legal). Do not add a separate CNIL FAQ question. |
-| **schema.author** | `{ '@type': 'Person', 'name': 'Hans Kuepper' }` |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **readTime** | `'[N] min de lecture'` (e.g., `'7 min de lecture'`) |
 | **Total FAQs** | 10 (same as EN) |
 
@@ -492,7 +492,7 @@ de: {
 | **Currency** | Convert USD ($) → JPY (¥) using **researched Apple.com/jp, Kakaku.com, Yodobashi.com, Bic Camera prices** — NOT mechanical rate conversion. Format: `¥` BEFORE number, comma thousands separator (e.g., `¥358,800`, `¥94,800`). For products not sold in JP, prefix `約` (approximately): `約¥330,000`. NEVER fabricate — if unverifiable, keep USD with note. See the **Currency Localization (MANDATORY)** section below. |
 | **Extra FAQs** | None. JA matches EN count: 10 FAQs. |
 | **regionalContext** | RESTRUCTURE (do not translate EN). Reorder as: METI-first (Japan), then East Asia combined (Asia-Pacific), then global. Remove EU/China paragraphs. Add explicit METI AI Governance 2024 reference for enterprise deployments. |
-| **schema.author** | `{ '@type': 'Organization', 'name': 'PromptQuorum' }` (JA convention; override if present as Person) |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **schema.about[]** | Include (fix known JA omission) — e.g., `[{ '@type': 'Thing', 'name': 'LM Studio' }, ...]` translated to Japanese |
 | **schema.speakable** | Include (fix known JA omission) — `{ '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }` |
 | **itemListSchema** | Translate `itemListElement[].name` and `.description` to Japanese (fix known EN-left-in inconsistency) |
@@ -514,7 +514,7 @@ de: {
 | | 1. **中国（数据安全法）**: References China's 2021 Data Security Law, local inference compliance, Qwen2.5 suitability for Chinese enterprises |
 | | 2. **亚太地区（数据跨境）**: Data residency frameworks, MLAI (Multi-ASEAN/APAC) compliance patterns |
 | | 3. **企业部署**: Finance/medical/legal regulatory compliance for large enterprises (Banks, hospitals, law firms) |
-| **schema.author** | `{ '@type': 'Organization', 'name': 'PromptQuorum' }` (ZH convention; override if present as Person) |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **schema.about[]** | Include (fix known ZH omission) — translate to Chinese |
 | **schema.speakable** | Include (fix known ZH omission) |
 | **itemListSchema** | Translate `itemListElement[].name` and `.description` to Chinese (fix known EN-left-in inconsistency) |
@@ -537,7 +537,7 @@ de: {
 | **Currency** | Hardware articles: Brazil → BRL (`R$`) with locally researched retail prices (the BR market has heavy import tax, so prices are NOT USD conversions — research real BR retail, e.g. Kabum, Pichau, Mercado Livre). Format: `R$ 2.499` (Brazilian thousands = dot, decimal = comma). If BR retail price unavailable, keep USD with note `"Os preços no Brasil podem variar bastante devido a impostos de importação."` |
 | **Extra FAQs** | None by default. PT matches EN count: 10 FAQs. |
 | **regionalContext** | Skip for pure technical/PE articles (same rule as hardware guides). Only add if the article is fundamentally ABOUT compliance or data governance — then reference Brazil's **LGPD** (Lei Geral de Proteção de Dados) and the **ANPD** (Autoridade Nacional de Proteção de Dados), explaining how local inference satisfies data-residency/processing obligations. Do NOT reference GDPR/EU as primary (that's the DE/FR frame). |
-| **schema.author** | `{ '@type': 'Person', 'name': 'Hans Kuepper' }` |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **schema.inLanguage** | `'pt-BR'` (NOT `'pt'`) — across all schema types. |
 | **readTime** | `'[N] min de leitura'` (e.g., `'7 min de leitura'`) |
 | **Total FAQs** | 10 (same as EN) |
@@ -559,7 +559,7 @@ de: {
 | **Currency** | Hardware articles: Gulf markets → USD by default (widely used in Gulf tech retail), OR local currency where an article targets a specific market (SAR `ر.س`, AED `د.إ`). Format with Western numerals. If unsure, keep USD with a note that local prices vary by market and import duties. |
 | **Extra FAQs** | None by default. AR matches EN count: 10 FAQs. |
 | **regionalContext** | Skip for pure technical/PE articles. Only add if the article is fundamentally ABOUT compliance or data governance — then reference **Gulf data-sovereignty** drivers and regional data-protection laws (e.g. Saudi **PDPL**, UAE data-protection law), and the regional push toward sovereign/Arabic-first AI (Jais, ALLaM, Falcon) where relevant. Frame local inference as keeping data within national/regional borders. |
-| **schema.author** | `{ '@type': 'Organization', 'name': 'PromptQuorum' }` (AR convention; override if present as Person) |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **schema.inLanguage** | `'ar'` — across all schema types. |
 | **readTime** | `'[N] دقائق للقراءة'` (e.g., `'7 دقائق للقراءة'`) |
 | **Total FAQs** | 10 (same as EN) |
@@ -583,7 +583,7 @@ de: {
 | **Currency** | Korea-specific pricing → KRW (₩) with locally researched values where an article targets the Korean market; otherwise USD default (widely understood in Korean tech). Format with Western numerals. If unsure, keep USD with a note that local prices vary. |
 | **Extra FAQs** | None by default. KO matches the EN/ES FAQ count. |
 | **regionalContext** | Skip for pure technical/hardware/PE articles. Only add if the article is fundamentally ABOUT compliance or data governance — then reference Korea's **PIPA** (Personal Information Protection Act / 개인정보 보호법) and the **PIPC** regulator, and the domestic push toward sovereign/Korean LLMs (e.g. Naver HyperCLOVA X, LG EXAONE, Kakao) where relevant. Frame local inference as keeping data within Korea. Do NOT fabricate sections the source lacks. |
-| **schema.author** | `{ '@type': 'Organization', 'name': 'PromptQuorum' }` |
+| **schema.author** | Do not hand-write an author object. `src/lib/author.ts` renders the one canonical Person (name, url, sameAs) for every locale, ja/zh/ar/ko included (GEO Rule 50, owner rule 2026-11-08). The old per-locale Organization convention is retired. |
 | **schema.inLanguage** | `'ko'` — across all schema types (TechArticle, HowToSchema, FAQSchema, ItemListSchema). |
 | **readTime** | `'[N]분 읽기'` (e.g., `'7분 읽기'`) |
 | **Total FAQs** | 10 (same as EN) |
