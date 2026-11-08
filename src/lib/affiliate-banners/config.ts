@@ -1,5 +1,9 @@
 // Kill switch: banners render only when NEXT_PUBLIC_AFF_BANNERS === 'true' (off by default, like NEXT_PUBLIC_PROMO_PILOT).
-export const AFF_BANNERS_ON = process.env.NEXT_PUBLIC_AFF_BANNERS === 'true'
+// Review convenience: on Vercel PREVIEW deployments they are on unless NEXT_PUBLIC_AFF_BANNERS === 'false' (needs Vercel's
+// system variable NEXT_PUBLIC_VERCEL_ENV; if it is not exposed, set NEXT_PUBLIC_AFF_BANNERS=true for the Preview environment).
+// Production never turns them on by itself.
+export const AFF_BANNERS_ON =
+  process.env.NEXT_PUBLIC_AFF_BANNERS === 'true' || (process.env.NEXT_PUBLIC_AFF_BANNERS !== 'false' && process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview')
 
 /** Current pilot phase (brief 5.3): 1 = all treated groups at AP2, 2 = placement rotation, 3+ = merchant tests. Bump to start the next phase. */
 export const AFF_BANNER_PHASE = 1

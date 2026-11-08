@@ -8,7 +8,7 @@ Until real affiliate contracts exist, 60 affiliate-regime page groups carry one 
 ## Switches
 | Switch | Effect |
 |---|---|
-| `NEXT_PUBLIC_AFF_BANNERS=true` | Banners render on the 60 treated groups (all 9 locales). Unset/false: nothing renders anywhere. Build-time: changing it needs a deploy. |
+| `NEXT_PUBLIC_AFF_BANNERS=true` | Banners render on the 60 treated groups (all 9 locales). Unset/false: nothing renders on production. Vercel previews show them by default (`false` turns that off). Build-time: changing it needs a deploy. |
 | `AFF_BANNER_PHASE` in `config.ts` | 1 = all treated groups at AP2. 2 = placement rotates AP1/AP2/AP3 within each cell. Bump to start the next phase, then deploy. |
 | `AFF_BANNER_OPT_OUT` in `config.ts` | English paths to switch off (stop rule or manual pause). |
 
