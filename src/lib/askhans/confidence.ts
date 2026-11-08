@@ -1,7 +1,8 @@
 // Ask Hans — confidence tag per directory app, attached to every tool result that names an app (by slug).
 //   high   = PromptQuorum hands-on tested it
-//   medium = the founder/maintainer checked the entry's specs (badge still valid, 365 days)
-//   low    = only the maker's statements and directory data; not independently tested
+//   medium = the maker checked the entry's specs (badge still valid, 365 days), OR PromptQuorum researched
+//            it against the maker's site/docs and published a review or verified entry (not hands-on tested)
+//   low    = directory data only: no review and no verification date yet
 // The model turns the tag into a short label in the visitor's language and adds a disclaimer for medium/low only.
 
 import { findApp } from '@/lib/power-local-llm/app-search'
@@ -28,7 +29,10 @@ export function confidenceFor(slug: string): ConfidenceInfo | null {
   if (isFounderStarActive(app.founderReviewedDate)) {
     return { confidence: 'medium', confidenceBasis: `the maker checked this entry (${app.founderReviewedDate}); PromptQuorum has not hands-on tested the app` }
   }
-  return { confidence: 'low', confidenceBasis: "based on the maker's own statements and directory data; not tested or checked by PromptQuorum" }
+  if (app.reviewSlug || app.lastVerifiedDate) {
+    return { confidence: 'medium', confidenceBasis: 'PromptQuorum researched this entry against the maker\'s site and documentation and published a review or verification date; PromptQuorum has not hands-on tested the app' }
+  }
+  return { confidence: 'low', confidenceBasis: 'directory data only; PromptQuorum has not yet reviewed or verified this entry' }
 }
 
 /** Adds confidence + confidenceBasis to every object in a tool result that has a directory-app `slug` and a `name`. */
