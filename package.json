@@ -29,6 +29,7 @@
     "validate-seo": "node scripts/validate-seo.mjs",
     "validate-no-note-leakage": "node scripts/validate-no-internal-note-leakage.mjs",
     "brand-images": "node scripts/brand-images.mjs",
+    "check:author": "node scripts/check-author-markup.mjs",
     "check:askhans-memory": "node scripts/check-askhans-memory.mjs --load",
     "generate:askhans-corpus": "node scripts/generate-askhans-corpus.mjs",
     "generate:seo-registry": "node scripts/generate-seo-registry.mjs",

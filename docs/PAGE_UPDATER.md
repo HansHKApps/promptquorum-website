@@ -387,6 +387,7 @@ After completing the update, output a section-by-section report:
 - Frontmatter: UPDATED — dateModified, current_models_mentioned, next_refresh_due
 - Structural parity: FIXED — [DE, FR, JA, ZH] were missing [benchmarkTable, methodology, vramGuide]; sections authored and FAQs brought to 7/7
 - SEO/AIO/GEO gate (Step 4.8): PASS [n/n checks] per locale / FIXED — [list] / known gap: html lang (layout.tsx) until [locale] refactor
+- Author gate (Step 4.8 D): PASS [n/n] — `npm run check:author` output pasted [or: FIXED — list]
 - Entity schema: SoftwareApplication #app present from apps/<slug>.ts [or: N/A — page is not about one product]
 - Figure consistency: [list every number checked and the single value kept]
 - Provenance labels: [n] third-party figures labeled; [0] unlabeled
@@ -400,6 +401,10 @@ This report serves as the audit trail for the update and prevents the "I think I
 ---
 
 ## Anti-Patterns: What NOT to Do
+
+### 0. Inline author object
+**Wrong:** writing `author: { '@type': 'Person', name: 'Hans Kuepper', ... }` (or an Organization author) into an article, builder or page.
+**Why it fails:** it forks the author entity (different @id, no url, different sameAs); search and answer engines see several authors instead of one person with a page. Use `authorPerson()` from `src/lib/author.ts`.
 
 ### 1. Shallow Update (THE critical failure)
 **Wrong:** Update lead paragraph and Key Takeaways, leave comparison tables and FAQ stale.
@@ -518,6 +523,15 @@ Run this against the **live or locally built HTML** of every locale URL of the p
 - [ ] `npm run test:above-fold` passes for the page in every changed locale (`PQ_ATF_PATHS=/<cluster>/<slug> PQ_ATF_LOCALES=all`, against a running production build): H1, lead answer and Key Takeaways inside 1024×768 and 375×812 (GEO Rule 36)
 - [ ] The first 150 words state the page's non-replicable finding (test result, verified discrepancy, decision) — not template text
 - [ ] Visible byline and localized `Last updated` (and `Published`) rendered via `formatDisplayDate`
+
+**D. Author / E-E-A-T (raw server HTML + JSON-LD — owner rule 2026-11-08)**
+- [ ] Visible byline under the H1 in the raw HTML, wrapper has `data-testid="author-byline"`, name links to `/author/hans-kuepper` with `rel="author"` (never `/about`, never `/<lang>/author/...`)
+- [ ] JSON-LD `author` is the canonical Person from `src/lib/author.ts` (has `name`, `url`, `sameAs`); no inline author object, no Organization author
+- [ ] No link to `/en/...` anywhere on the page; no new external link or `sameAs` entry was added
+- [ ] "We tested / I measured" claims name who tested, on what, when (see rule 8 below)
+- [ ] `node scripts/check-author-markup.mjs <page path>` (npm run check:author) reports no finding for the page
+
+Rules 1–8 (full text, one block for every guide): see `docs/GEO_WRITING_GUIDELINES.md` Rule 50.
 
 **Tooling:** `npm run validate-meta-budgets:changed` (static, strict, only article files that differ from `origin/main`; also runs in `pr-checks.yml`) and `npm run seo:gate:changed` (strict, all 9 locales of changed articles; needs a running production build, so start `next start` on port 3000 first or pass `--base=`). Both leave the existing backlog alone but fail on any file you touched. Line C1 (empty alt) is now backed by C1b, which flags generic, filename-style or reused alt text; the renderers' fallbacks ("… article diagram", "Article hero image") pass C1 but say nothing.
 
