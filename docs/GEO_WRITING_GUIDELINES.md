@@ -3022,6 +3022,23 @@ const st = { en: starsFor('en'), de: starsFor('de') /* … all nine locales */ }
 
 ---
 
+### Rule 50: Author & E-E-A-T (Mandatory on every article, review, framework page, hands-on test)
+
+Owner rule 2026-11-08. The site has ONE author entity, Hans Kuepper, with ONE page (`/author/hans-kuepper`) and ONE source file (`src/lib/author.ts`).
+
+1. **Visible byline under the H1, in the raw server HTML:** `By <author> · <role> …`. The five article clients use their translated `POST_UI.byLine`; Prompt Bites and hands-on tests use `<AuthorByline lang={lang} />` (`src/components/AuthorByline.tsx`); frameworks and blog have their own. The wrapper carries `data-testid="author-byline"` (the check script looks for it). Never remove or hide it, never render it client-only.
+2. **The author link is the canonical author page, `/author/hans-kuepper`, with `rel="author"`.** It is NOT locale-prefixed (`/<lang>/author/...` is a 404) and never points to `/about`. Inside markdown byline strings the locale-prefix helper skips `/author/` — keep that guard.
+3. **JSON-LD author comes only from `src/lib/author.ts`:** `authorPerson()` (full node: name, url, jobTitle, image, worksFor, sameAs) or `authorRef()`. Never write an inline author object, never an `Organization` author, never a Person without `url`. Old inline objects in article data files are rewritten at render time by `normalizeAuthor()`; do not add new ones.
+4. **Every page graph carries the Person node:** the root layout adds `authorPerson()` to the site-wide `@graph`, so hubs, the homepage and all articles have it. Hub/collection pages need no extra author markup.
+5. **Reviews and hands-on tests:** `Review.author` / `TechArticle.author` use the same Person; the page names the tester, the device and the date of the test.
+6. **No new external links, `sameAs` entries, Wikidata/Wikipedia entries or profiles without the owner's explicit approval.** The `sameAs` list lives only in `src/lib/author.ts` and contains only URLs the site already published for the author.
+7. **English URLs have no `/en` prefix.** Never link to `/en/...`; `/en` and `/en/*` 301 to the root.
+8. **First-hand claims name the person who did the work.** Wherever a page says "we tested", "I measured" or "we checked", the first 150 words (or the methodology block) must say who did it and on what; a claim of testing the site did not do is a risk-gate BLOCK. Verify with `npm run check:author` against the built or live page.
+
+Where the rules are enforced: `docs/PAGE_UPDATER.md` Step 4.8 D, `scripts/check-author-markup.mjs`.
+
+---
+
 ## Freshness Tier Classification (Mandatory for All Articles)
 
 Every article on PromptQuorum must be classified into **exactly one** of three freshness tiers. This classification determines how often content is updated, whether it appears in search results for year-specific queries, and how long it remains authoritative.

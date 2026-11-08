@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { AuthorByline } from '@/components/AuthorByline'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
@@ -561,6 +562,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-3 leading-tight">
           {renderHubTitle(article.title ?? '', skin, lang)}
         </h1>
+        <AuthorByline lang={lang} className="mb-6 text-sm text-text-muted" />
 
         {/* Lead Answer Block — canonical definition for AI crawlers */}
         {article.leadAnswerBlock && (

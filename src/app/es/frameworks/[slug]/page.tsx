@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
@@ -75,11 +76,7 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
               'description': fw.tagline,
               'url': `https://www.promptquorum.com/es/frameworks/${fw.slug}`,
               'inLanguage': LANG,
-              'author': {
-                '@type': 'Person',
-                'name': 'Hans Kuepper',
-                'url': 'https://www.promptquorum.com/about',
-              },
+              'author': authorPerson(),
               'publisher': {
                 '@type': 'Organization',
                 'name': 'PromptQuorum',
@@ -151,8 +148,8 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
             </h1>
             <p className="text-lg text-primary font-mono mb-4">{fw.expansion}</p>
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
-            <p className="mt-4 text-sm text-text-muted">
-              {labels.by} <Link href="/es/about" className="text-primary underline">Hans Kuepper</Link> · {labels.lastUpdated}{' '}
+            <p data-testid="author-byline" className="mt-4 text-sm text-text-muted">
+              {labels.by} <Link href="/author/hans-kuepper" rel="author" className="text-primary underline">Hans Kuepper</Link> · {labels.lastUpdated}{' '}
               <time dateTime={fw.dateModified ?? fw.publishDate ?? '2026-03-16'}>{formatDisplayDate(fw.dateModified ?? fw.publishDate ?? '2026-03-16', LANG)}</time>
             </p>
           </div>

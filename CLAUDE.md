@@ -20,6 +20,8 @@ Before writing or editing any user-facing text on this website, read and apply t
 
 **Design gate (owner rule, 2026-11-01, HARD):** every new or updated article in `local-llms` / `power-local-llm` / `prompt-engineering` carries `designSkin: 'hub',` on all 9 locale objects, set in the same run (first commit for new pages). Never ship a page on the old design. Verify with `npm run check:page-updater` and `npm run test:article-skin`. See `docs/GEO_WRITING_GUIDELINES.md` Rule 35c and `docs/PAGE_UPDATER.md` Step 4.9.
 
+**Author gate (owner rule, 2026-11-08, HARD):** one author entity. JSON-LD author only via `src/lib/author.ts` (`authorPerson()`/`authorRef()`), never an inline author object or an Organization author; the byline under the H1 links to `/author/hans-kuepper` with `rel="author"` (not locale-prefixed, never `/about`); no new external links or `sameAs` entries without the owner; never link `/en/...` (it redirects to the root). Verify with `npm run check:author`. Full rules: `docs/GEO_WRITING_GUIDELINES.md` Rule 50.
+
 Summary of non-negotiable rules:
 - **Answer-first:** Lead every section with the direct answer or key fact. Explanation follows.
 - **Structure:** Use H2/H3 headings, bullet lists, short paragraphs (≤3 sentences each).

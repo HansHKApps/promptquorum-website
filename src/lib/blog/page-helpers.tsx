@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import { notFound } from 'next/navigation'
 import { BlogPostClient } from '@/components/BlogPostClient'
 import { BlogIndexClient } from '@/components/BlogIndexClient'
@@ -128,11 +129,7 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
     inLanguage: toOutputLocale(lang),
     datePublished: isoDate,
     dateModified: modifiedIsoDate,
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/author/hans-kuepper',
-    },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization',
       name: 'PromptQuorum',

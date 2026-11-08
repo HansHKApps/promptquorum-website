@@ -3,6 +3,7 @@
 // All pages are noindex/nofollow in Phase 1 (PROMPT_BITES_PUBLISHED_SLUGS is empty).
 
 import type { Metadata } from 'next'
+import { authorPerson, normalizeAuthor } from '@/lib/author'
 import { notFound } from 'next/navigation'
 import { truncateTitle } from '@/lib/utils'
 import { PromptBitesPostClient } from '@/components/PromptBitesPostClient'
@@ -115,7 +116,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   }
   const proficiencyLevel = edLevel ? (levelMap[edLevel] ?? edLevel) : undefined
 
-  const articleSchema = {
+  const articleSchemaBase = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: article.title,
@@ -126,16 +127,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     url: canonicalUrl,
     image: buildArticleImageObject(article as { heroImage?: string }, slug, lang),
     ...(proficiencyLevel && { proficiencyLevel }),
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/about',
-      sameAs: [
-        'https://www.linkedin.com/in/hanskuepper/',
-        'https://x.com/HansKuepperAPPs',
-        'https://github.com/HansHKApps',
-      ],
-    },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization',
       name: 'PromptQuorum',
@@ -148,6 +140,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       url: `${BASE}${promptBitesHubPath(lang)}`,
     },
   }
+  const articleSchema = normalizeAuthor(articleSchemaBase)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',

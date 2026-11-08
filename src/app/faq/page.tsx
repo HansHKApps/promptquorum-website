@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import { translations } from '@/translations'
 import { FAQPageClient } from '@/components/FAQPageClient'
 import { generateAlternates } from '@/lib/hreflang'
@@ -100,19 +101,9 @@ export default async function FAQPage({ searchParams }: PageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Person',
-            '@id': 'https://www.promptquorum.com/about#founder',
-            'name': 'Hans Kuepper',
-            'url': 'https://www.promptquorum.com/about',
-            'jobTitle': 'Founder & Developer',
+            ...authorPerson(),
             'knowsLanguage': ['German', 'English', 'French', 'Russian'],
             'homeLocation': { '@type': 'Place', 'name': 'Baden-Württemberg, Germany' },
-            'worksFor': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-            'sameAs': [
-              'https://www.linkedin.com/in/hanskuepper/',
-              'https://x.com/HansKuepperAPPs',
-              'https://github.com/HansHKApps',
-            ],
           }),
         }}
       />

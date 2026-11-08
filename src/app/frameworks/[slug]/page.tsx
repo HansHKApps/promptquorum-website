@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
@@ -73,11 +74,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
               'headline': fw.seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
               'url': `https://www.promptquorum.com/frameworks/${fw.slug}`,
-              'author': {
-                '@type': 'Person',
-                'name': 'Hans Kuepper',
-                'url': 'https://www.promptquorum.com/about',
-              },
+              'author': authorPerson(),
               'publisher': {
                 '@type': 'Organization',
                 'name': 'PromptQuorum',
@@ -150,8 +147,8 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             </h1>
             <p className="text-lg text-primary font-mono mb-4">{fw.expansion}</p>
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
-            <p className="mt-4 text-sm text-text-muted">
-              {'By'} <Link href="/about" className="text-primary underline">Hans Kuepper</Link> · {'Last updated'}{' '}
+            <p data-testid="author-byline" className="mt-4 text-sm text-text-muted">
+              {'By'} <Link href="/author/hans-kuepper" rel="author" className="text-primary underline">Hans Kuepper</Link> · {'Last updated'}{' '}
               <time dateTime={fw.dateModified ?? fw.publishDate ?? '2026-03-16'}>{formatDisplayDate(fw.dateModified ?? fw.publishDate ?? '2026-03-16', 'en')}</time>
             </p>
           </div>

@@ -102,15 +102,15 @@ const POST_UI: Record<string, Record<string, string>> = {
     ko: '빠른 결정:',
   },
   byLine: {
-    en: 'By [Hans Kuepper](/about) · Founder of PromptQuorum · Discovery engine for open-weight & open-source AI',
-    de: 'Von [Hans Kuepper](/about) · Gründer von PromptQuorum · Entdeckungsplattform für Open-Weight- und Open-Source-KI',
-    fr: 'Par [Hans Kuepper](/about) · Fondateur de PromptQuorum · Moteur de découverte de l\'IA open-weight et open source',
-    ja: '[Hans Kuepper](/about) 著 · PromptQuorum創設者 · オープンウェイト／オープンソースAIの発見エンジン',
-    zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人 · 开放权重与开源AI发现引擎',
-    es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum · Motor de descubrimiento de IA de pesos abiertos y código abierto',
-    pt: 'Por [Hans Kuepper](/about) · Fundador do PromptQuorum · Mecanismo de descoberta de IA de pesos abertos e código aberto',
-    ar: 'بقلم [Hans Kuepper](/about) · مؤسس PromptQuorum · محرك اكتشاف للذكاء الاصطناعي مفتوح الأوزان ومفتوح المصدر',
-    ko: '[Hans Kuepper](/about) 저 · PromptQuorum 창립자 · 오픈 웨이트·오픈소스 AI 디스커버리 엔진',
+    en: 'By [Hans Kuepper](/author/hans-kuepper) · Founder of PromptQuorum · Discovery engine for open-weight & open-source AI',
+    de: 'Von [Hans Kuepper](/author/hans-kuepper) · Gründer von PromptQuorum · Entdeckungsplattform für Open-Weight- und Open-Source-KI',
+    fr: 'Par [Hans Kuepper](/author/hans-kuepper) · Fondateur de PromptQuorum · Moteur de découverte de l\'IA open-weight et open source',
+    ja: '[Hans Kuepper](/author/hans-kuepper) 著 · PromptQuorum創設者 · オープンウェイト／オープンソースAIの発見エンジン',
+    zh: '[Hans Kuepper](/author/hans-kuepper) 作者 · PromptQuorum创始人 · 开放权重与开源AI发现引擎',
+    es: 'Por [Hans Kuepper](/author/hans-kuepper) · Fundador de PromptQuorum · Motor de descubrimiento de IA de pesos abiertos y código abierto',
+    pt: 'Por [Hans Kuepper](/author/hans-kuepper) · Fundador do PromptQuorum · Mecanismo de descoberta de IA de pesos abertos e código aberto',
+    ar: 'بقلم [Hans Kuepper](/author/hans-kuepper) · مؤسس PromptQuorum · محرك اكتشاف للذكاء الاصطناعي مفتوح الأوزان ومفتوح المصدر',
+    ko: '[Hans Kuepper](/author/hans-kuepper) 저 · PromptQuorum 창립자 · 오픈 웨이트·오픈소스 AI 디스커버리 엔진',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -293,7 +293,7 @@ function renderInlineLinksNoBold(
       }
       // Internal links: use Next.js Link with language path prefix
       let finalUrl = url
-      if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=') && !url.startsWith(`/${lang}/`)) {
+      if (lang !== 'en' && url.startsWith('/') && !url.startsWith('/author/') && !url.includes('?lang=') && !url.startsWith(`/${lang}/`)) {
         if (url.includes('#')) {
           const [basePath, anchor] = url.split('#')
           finalUrl = `/${lang}${basePath}#${anchor}`
@@ -302,7 +302,7 @@ function renderInlineLinksNoBold(
         }
       }
       return (
-        <Link key={i} href={finalUrl} className="text-primary font-medium hover:underline">
+        <Link key={i} href={finalUrl} rel={finalUrl.startsWith('/author/') ? 'author' : undefined} className="text-primary font-medium hover:underline">
           {label}
         </Link>
       )
@@ -966,7 +966,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
             <span>·</span>
             <span>{article.readTime}</span>
             <span className="hidden sm:inline">·</span>
-            <span className="basis-full sm:basis-auto">{renderLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'])}</span>
+            <span data-testid="author-byline" className="basis-full sm:basis-auto">{renderLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'])}</span>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import { llmContent } from '@/lib/local-llms/content'
+import { authorPerson, normalizeAuthor } from '@/lib/author'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
 import { buildImageObject } from '@/lib/imageObjectSchema'
@@ -64,7 +65,7 @@ export function buildLocalLLMArticleSchemas(slug: string, key: string, lang: LLM
   const llmHowToName = (article as any).howToName as string | undefined
 
   // Use article.schema if defined; otherwise fallback to generic TechArticle schema
-  const articleSchema: any = (article as any).schema || {
+  const articleSchemaBase: any = (article as any).schema || {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: article.title,
@@ -75,16 +76,7 @@ export function buildLocalLLMArticleSchemas(slug: string, key: string, lang: LLM
     url: canonicalUrl,
     ...(llmProficiencyLevel && { proficiencyLevel: llmProficiencyLevel }),
     ...(llmAboutTopics?.length && { about: llmAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      sameAs: [
-        'https://www.linkedin.com/in/hanskuepper/',
-        'https://x.com/HansKuepperAPPs',
-        'https://github.com/HansHKApps',
-      ],
-      url: 'https://www.promptquorum.com/about',
-    },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization',
       name: 'PromptQuorum',
@@ -101,6 +93,7 @@ export function buildLocalLLMArticleSchemas(slug: string, key: string, lang: LLM
       url: 'https://www.promptquorum.com/local-llms',
     },
   }
+  const articleSchema: any = normalizeAuthor(articleSchemaBase)
 
   // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
   if (!articleSchema.inLanguage) {
