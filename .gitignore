@@ -58,3 +58,6 @@ dist/
 
 # Article corpus for the chat/MCP functions (regenerated in prebuild: npm run generate:askhans-corpus)
 /generated-corpus/
+
+# Workflow monitoring log (may contain private text, never publish)
+workflow-monitoring/
