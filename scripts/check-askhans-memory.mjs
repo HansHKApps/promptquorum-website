@@ -15,6 +15,9 @@ const ROUTES = ['api/ask', 'api/ask/solution', 'api/mcp']
 const BUDGET_MB = 40
 const CHUNK_MB = 15
 const LOAD_RSS_MB = 500
+// Vercel rejects a function above 250 MB uncompressed. A fs path the tracer cannot resolve pulls in the whole project
+// (that happened 2026-11-08: 1 GB), so the TRACED size is checked too, with headroom.
+const TRACE_MB = 160
 const mb = (n) => n / 1048576
 let failed = false
 
@@ -28,6 +31,26 @@ for (const r of ROUTES) {
   const bad = total > BUDGET_MB * 1048576 || (biggest && biggest.size > CHUNK_MB * 1048576)
   console.log(`${bad ? 'FAIL' : 'ok  '} ${r}: ${chunks.length} chunks, ${mb(total).toFixed(1)} MB total (budget ${BUDGET_MB}), largest ${biggest ? `${mb(biggest.size).toFixed(1)} MB ${biggest.c}` : '-'}`)
   if (bad) failed = true
+
+  // traced files = what Vercel packs into the function
+  const nft = path.join(SERVER, 'app', r, 'route.js.nft.json')
+  if (fs.existsSync(nft)) {
+    const base = path.dirname(nft)
+    let traced = 0
+    let count = 0
+    const seen = new Set() // the trace lists some files twice under different relative paths
+    for (const f of JSON.parse(fs.readFileSync(nft, 'utf8')).files) {
+      try {
+        const real = fs.realpathSync(path.resolve(base, f))
+        if (seen.has(real)) continue
+        const st = fs.statSync(real)
+        if (st.isFile()) { seen.add(real); traced += st.size; count++ }
+      } catch { /* missing */ }
+    }
+    const tbad = traced > TRACE_MB * 1048576
+    console.log(`${tbad ? 'FAIL' : 'ok  '} ${r}: ${count} traced files, ${mb(traced).toFixed(0)} MB (Vercel limit 250, budget ${TRACE_MB})`)
+    if (tbad) failed = true
+  }
 }
 
 if (process.argv.includes('--load')) {

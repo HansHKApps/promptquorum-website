@@ -31,18 +31,18 @@ export interface LatestItem {
 
 type PackIndex = Record<string, [number, number]>
 
-function corpusDir(): string {
-  return process.env.ASK_HANS_CORPUS_DIR || join(process.cwd(), 'generated-corpus')
-}
+// NOTE on file paths: every access below spells out join(process.cwd(), 'generated-corpus', <name>) literally.
+// Hiding the directory behind a helper function or an env override makes the file tracer treat the path as fully
+// dynamic and pull the WHOLE project (src/lib, public/images, ...) into the function: 1 GB against Vercel's 250 MB
+// limit (deploy failed 2026-11-08). With the literal form it traces generated-corpus/ only.
 
 function missing(file: string): Error {
   return new Error(`Article corpus file missing: ${file}. Run "npm run generate:askhans-corpus" (it also runs in prebuild).`)
 }
 
 function readJson<T>(file: string): T {
-  const path = join(corpusDir(), file)
-  if (!existsSync(path)) throw missing(file)
-  return JSON.parse(readFileSync(path, 'utf8')) as T
+  if (!existsSync(join(process.cwd(), 'generated-corpus', file))) throw missing(file)
+  return JSON.parse(readFileSync(join(process.cwd(), 'generated-corpus', file), 'utf8')) as T
 }
 
 const indexCache = new Map<string, PackIndex | null>()
@@ -50,9 +50,10 @@ function loadIndex(cluster: string, lang: string): PackIndex | null {
   const name = `articles-${cluster}-${lang}`
   if (indexCache.has(name)) return indexCache.get(name) ?? null
   // A (cluster, lang) pair with no article has no pack at all; that is normal (e.g. a cluster without a translation).
-  const path = join(corpusDir(), `${name}.idx.json`)
-  const idx = existsSync(path) ? (JSON.parse(readFileSync(path, 'utf8')) as PackIndex) : null
-  if (!idx && !existsSync(join(corpusDir(), 'manifest.json'))) throw missing(`${name}.idx.json`)
+  const idx = existsSync(join(process.cwd(), 'generated-corpus', `${name}.idx.json`))
+    ? (JSON.parse(readFileSync(join(process.cwd(), 'generated-corpus', `${name}.idx.json`), 'utf8')) as PackIndex)
+    : null
+  if (!idx && !existsSync(join(process.cwd(), 'generated-corpus', 'manifest.json'))) throw missing(`${name}.idx.json`)
   indexCache.set(name, idx)
   return idx
 }
@@ -64,7 +65,7 @@ export function readArticleVariant(cluster: string, key: string, lang: string): 
   if (!hit) return undefined
   const [offset, length] = hit
   const buf = Buffer.allocUnsafe(length)
-  const fd = openSync(join(corpusDir(), `articles-${cluster}-${lang}.pack`), 'r')
+  const fd = openSync(join(process.cwd(), 'generated-corpus', `articles-${cluster}-${lang}.pack`), 'r')
   try {
     readSync(fd, buf, 0, length, offset)
   } finally {
