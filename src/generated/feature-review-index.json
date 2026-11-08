@@ -1714,6 +1714,11 @@
     "urlSlug": "sablate-review",
     "url": "/power-local-llm/sablate-review"
   },
+  "cocoindex": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cocoindex-review",
+    "url": "/power-local-llm/cocoindex-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",

@@ -426,6 +426,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'aiko-review':                            'aiko-review',
   'weesper-neon-flow-review':               'weesper-neon-flow-review',
   'sablate-review':                         'sablate-review',
+  'cocoindex-review':                       'cocoindex-review',
   'transcriptionsuite-review':              'transcriptionsuite-review',
   'parrot-review':                          'parrot-review',
   'anyllm-review':                           'anyllm-review',

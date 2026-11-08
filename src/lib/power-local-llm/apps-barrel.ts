@@ -166,6 +166,7 @@ import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_aiko } from './apps/aiko'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
 import { app as app_sablate } from './apps/sablate'
+import { app as app_cocoindex } from './apps/cocoindex'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
@@ -708,6 +709,7 @@ export const localAiApps: ToolRecord[] = [
   app_aiko,
   app_weesper_neon_flow,
   app_sablate,
+  app_cocoindex,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,
