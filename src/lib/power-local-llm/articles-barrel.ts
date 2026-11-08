@@ -64,6 +64,7 @@ import { article as a_whisper_notes_review } from './articles/whisper-notes-revi
 import { article as a_aiko_review } from './articles/aiko-review'
 import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-flow-review'
 import { article as a_sablate_review } from './articles/sablate-review'
+import { article as a_cocoindex_review } from './articles/cocoindex-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -766,6 +767,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'aiko-review':                                   a_aiko_review,
   'weesper-neon-flow-review':                      a_weesper_neon_flow_review,
   'sablate-review':                                a_sablate_review,
+  'cocoindex-review':                              a_cocoindex_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,

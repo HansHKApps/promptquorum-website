@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "cocoindex-review",
+        "title": "CocoIndex Review: Incremental Data Framework for RAG and AI Agents",
+        "url": "/power-local-llm/cocoindex-review",
+        "dateModified": "2026-11-08",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -72,17 +80,9 @@
         "url": "/local-llms/best-local-llms-2026",
         "dateModified": "2026-11-06",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-coding",
-        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
-        "url": "/local-llms/best-local-llms-for-coding",
-        "dateModified": "2026-11-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 343,
+    "totalCount": 344,
     "capped": true
   },
   "llama.cpp": {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "Msty": {
@@ -12156,7 +12156,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "Rapid-MLX": {
@@ -13553,6 +13553,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "CocoIndex": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "cocoindex-review",
+        "title": "CocoIndex Review: Incremental Data Framework for RAG and AI Agents",
+        "url": "/power-local-llm/cocoindex-review",
+        "dateModified": "2026-11-08",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "AnyLLM": {

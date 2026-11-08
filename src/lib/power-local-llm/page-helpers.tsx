@@ -929,6 +929,7 @@ const HUB_THEMES: Array<{
       'quivr-self-hosted-knowledge-assistant-review',
       'ragflow-document-understanding-rag-review',
       'txtai-embedded-vector-database-review',
+      'cocoindex-review',
       'anythingllm-review',
       'onyx-review',
       'vane-review',
