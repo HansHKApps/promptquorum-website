@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent integrations.** The setup prompt targets Claude Code and Codex; a hosted MCP endpoint serves any MCP client (cloud phones only for now), and plugins exist for Hermes Agent and OpenClaw.',
           '**Self-extending helpers.** The agent saves helpers it writes to a workspace folder in your home directory that upgrades do not wipe.',
           '**Cloud phones.** Temporary Android phones, saved Android phones that keep apps and logins, and dedicated real iPhones, with a live view in the browser while the agent works.',
-          '**Cloud extras the site advertises.** Real phone numbers for SMS and two-factor codes, persistent logins and "stealth" so apps see a person; PromptQuorum has not checked these.',
+          '**Cloud extras the site advertises.** Real phone numbers for SMS and two-factor codes, persistent logins and "stealth" so apps see a person; PromptQuorum has not checked these, and automating other apps can conflict with their terms of service.',
         ],
       },
       privacy: {
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy and Data Handling',
         content: [
           '**The privacy policy (last updated 3 November 2026) covers phone-harness.com and Phone Harness Cloud, and says that when you or your agent use a cloud phone it automatically logs the activity: commands and their inputs, text entered, taps, apps and pages used, and session details.** The stated purposes are running, securing and improving the service and preventing abuse. It also collects your name and email from sign-in, billing records and session logs; card details go to Stripe.',
-          'The policy names Clerk (sign-in), Stripe (payments), Amazon Web Services (hosting in the United States), Vercel, PostHog (analytics, only with consent) and Loops (email) as processors. Temporary Android phones are wiped when the session ends; saved Android phones and cloud iPhones keep apps, logins and files until you reset them, and a cloud iPhone is erased within 7 days after the subscription ends. The README adds that the CLI prints a one-line notice when a new version exists, which an environment variable switches off.',
+          'The policy names Clerk (sign-in), Stripe (payments), Amazon Web Services (hosting in the United States), Vercel, PostHog (analytics, only with consent) and Loops (email) as the services it uses. Temporary Android phones are wiped when the session ends; saved Android phones and cloud iPhones keep apps, logins and files until you reset them, and a cloud iPhone is erased within 7 days after the subscription ends. The README adds that the CLI prints a one-line notice when a new version exists, which an environment variable switches off.',
         ],
         callouts: [
           {
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Who Should Use It',
         items: [
           '**Developers who already run a coding agent** and want it to operate a real phone.',
-          '**Mac owners who want iPhone control** without a jailbreak or an app on the phone.',
+          '**Mac owners who want iPhone control** that, per the README, needs no jailbreak or app on the phone.',
           '**Teams who need many phones** and are fine with a hosted, paid cloud.',
         ],
       },
@@ -460,15 +460,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent-Integrationen.** Der Einrichtungs-Prompt zielt auf Claude Code und Codex; ein gehosteter MCP-Endpunkt bedient jeden MCP-Client (vorerst nur Cloud-Telefone), und für Hermes Agent und OpenClaw gibt es Plugins.',
           '**Selbst erweiterbare Helfer.** Der Agent speichert selbst geschriebene Helfer in einem Arbeitsordner in Ihrem Home-Verzeichnis, den Upgrades nicht löschen.',
           '**Cloud-Telefone.** Temporäre Android-Telefone, gespeicherte Android-Telefone mit erhaltenen Apps und Anmeldungen sowie dedizierte echte iPhones, mit Live-Ansicht im Browser, während der Agent arbeitet.',
-          '**Cloud-Extras laut Website.** Echte Telefonnummern für SMS und Zwei-Faktor-Codes, dauerhafte Anmeldungen und „Stealth“, damit Apps eine Person sehen; PromptQuorum hat dies nicht geprüft.',
+          '**Cloud-Extras laut Website.** Echte Telefonnummern für SMS und Zwei-Faktor-Codes, dauerhafte Anmeldungen und „Stealth“, damit Apps eine Person sehen; PromptQuorum hat dies nicht geprüft; das Automatisieren fremder Apps kann gegen deren Nutzungsbedingungen verstoßen.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'Datenschutz und Datenverarbeitung',
         content: [
-          '**Die Datenschutzerklärung (zuletzt aktualisiert am 3. November 2026) gilt für phone-harness.com und Phone Harness Cloud und besagt, dass bei Nutzung eines Cloud-Telefons durch Sie oder Ihren Agent die Aktivität automatisch protokolliert wird: Befehle und ihre Eingaben, eingegebener Text, Tipps, genutzte Apps und Seiten sowie Sitzungsdetails.** Als Zwecke werden Betrieb, Absicherung und Verbesserung des Dienstes sowie Missbrauchsabwehr genannt. Außerdem erhebt der Dienst Name und E-Mail-Adresse aus der Anmeldung, Abrechnungsdaten und Sitzungsprotokolle; Kartendaten gehen an Stripe.',
-          'Die Erklärung nennt Clerk (Anmeldung), Stripe (Zahlungen), Amazon Web Services (Hosting in den USA), Vercel, PostHog (Analyse, nur mit Einwilligung) und Loops (E-Mail) als Auftragsverarbeiter. Temporäre Android-Telefone werden am Ende der Sitzung gelöscht; gespeicherte Android-Telefone und Cloud-iPhones behalten Apps, Anmeldungen und Dateien, bis Sie sie zurücksetzen, und ein Cloud-iPhone wird innerhalb von 7 Tagen nach Ende des Abonnements gelöscht. Die README ergänzt, dass die CLI einen einzeiligen Hinweis ausgibt, wenn eine neue Version vorliegt, den eine Umgebungsvariable abschaltet.',
+          '**Die Datenschutzerklärung (zuletzt aktualisiert am 3. November 2026) gilt für phone-harness.com und Phone Harness Cloud und besagt, dass bei Nutzung eines Cloud-Telefons durch Sie oder Ihren Agent die Aktivität automatisch protokolliert wird: Befehle und ihre Eingaben, eingegebener Text, Antippen, genutzte Apps und Seiten sowie Sitzungsdetails.** Als Zwecke werden Betrieb, Absicherung und Verbesserung des Dienstes sowie Missbrauchsabwehr genannt. Außerdem erhebt der Dienst Name und E-Mail-Adresse aus der Anmeldung, Abrechnungsdaten und Sitzungsprotokolle; Kartendaten gehen an Stripe.',
+          'Die Erklärung nennt Clerk (Anmeldung), Stripe (Zahlungen), Amazon Web Services (Hosting in den USA), Vercel, PostHog (Analyse, nur mit Einwilligung) und Loops (E-Mail) als eingesetzte Dienstleister. Temporäre Android-Telefone werden am Ende der Sitzung gelöscht; gespeicherte Android-Telefone und Cloud-iPhones behalten Apps, Anmeldungen und Dateien, bis Sie sie zurücksetzen, und ein Cloud-iPhone wird innerhalb von 7 Tagen nach Ende des Abonnements gelöscht. Die README ergänzt, dass die CLI einen einzeiligen Hinweis ausgibt, wenn eine neue Version vorliegt, den eine Umgebungsvariable abschaltet.',
         ],
         callouts: [
           {
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Für wen geeignet',
         items: [
           '**Entwickler, die bereits einen Coding-Agent nutzen** und ihn ein echtes Telefon bedienen lassen möchten.',
-          '**Mac-Besitzer, die das iPhone steuern möchten,** ohne Jailbreak und ohne App auf dem Telefon.',
+          '**Mac-Besitzer, die das iPhone steuern möchten,** wofür laut README weder Jailbreak noch eine App auf dem Telefon nötig ist.',
           '**Teams, die viele Telefone brauchen** und mit einer gehosteten, kostenpflichtigen Cloud einverstanden sind.',
         ],
       },
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Phone Harness ist ein kostenloses, MIT-lizenziertes Werkzeug, das laut Hersteller einem Coding-Agent echte Tipps, Texteingabe und Bildschirmlesen auf einem iPhone oder Android-Telefon gibt, ohne Jailbreak und ohne etwas auf dem Telefon zu installieren, dazu kostenpflichtige gehostete Telefone. Es wurde wenige Tage vor dieser Prüfung aktualisiert und hat eine veröffentlichte Datenschutzerklärung. Dagegen ist das Projekt mit Version 0.3.3 jünger als drei Monate, die iPhone-Steuerung braucht einen Mac, OCR übersieht Symbole ohne Beschriftung, der Cloud-Dienst protokolliert Telefonaktivität nach eigener Angabe, und jede Verhaltensangabe stammt vom Hersteller. Es eignet sich für Entwickler, die bereits einen Coding-Agent einsetzen und Telefonzugriff wollen; wer einen anderen Ansatz sucht, kann [PhoneClaw](/de/power-local-llm/phoneclaw-review) oder [Open Interpreter](/de/power-local-llm/open-interpreter-review) vergleichen.',
+          'Phone Harness ist ein kostenloses, MIT-lizenziertes Werkzeug, das laut Hersteller einem Coding-Agent echtes Antippen, Texteingabe und Bildschirmlesen auf einem iPhone oder Android-Telefon gibt, ohne Jailbreak und ohne etwas auf dem Telefon zu installieren, dazu kostenpflichtige gehostete Telefone. Es wurde wenige Tage vor dieser Prüfung aktualisiert und hat eine veröffentlichte Datenschutzerklärung. Dagegen ist das Projekt mit Version 0.3.3 jünger als drei Monate, die iPhone-Steuerung braucht einen Mac, OCR übersieht Symbole ohne Beschriftung, der Cloud-Dienst protokolliert Telefonaktivität nach eigener Angabe, und jede Verhaltensangabe stammt vom Hersteller. Es eignet sich für Entwickler, die bereits einen Coding-Agent einsetzen und Telefonzugriff wollen; wer einen anderen Ansatz sucht, kann [PhoneClaw](/de/power-local-llm/phoneclaw-review) oder [Open Interpreter](/de/power-local-llm/open-interpreter-review) vergleichen.',
       },
       sources: {
         id: 'sources',
@@ -721,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Intégrations d\'agents.** Le prompt d\'installation cible Claude Code et Codex ; un point d\'accès MCP hébergé sert tout client MCP (téléphones cloud uniquement pour l\'instant), et des plugins existent pour Hermes Agent et OpenClaw.',
           '**Fonctions d\'aide extensibles.** L\'agent enregistre les fonctions qu\'il écrit dans un dossier de travail de votre répertoire personnel, que les mises à jour n\'effacent pas.',
           '**Téléphones cloud.** Téléphones Android temporaires, téléphones Android enregistrés qui conservent applis et connexions, et vrais iPhone dédiés, avec une vue en direct dans le navigateur pendant que l\'agent travaille.',
-          '**Options cloud annoncées par le site.** Vrais numéros de téléphone pour les SMS et les codes à deux facteurs, connexions persistantes et « stealth » pour que les applis voient une personne ; PromptQuorum ne l\'a pas vérifié.',
+          '**Options cloud annoncées par le site.** Vrais numéros de téléphone pour les SMS et les codes à deux facteurs, connexions persistantes et « stealth » pour que les applis voient une personne ; PromptQuorum ne l\'a pas vérifié, et automatiser d\'autres applis peut entrer en conflit avec leurs conditions d\'utilisation.',
         ],
       },
       privacy: {
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confidentialité et traitement des données',
         content: [
           '**La politique de confidentialité (dernière mise à jour le 3 novembre 2026) couvre phone-harness.com et Phone Harness Cloud, et indique que lorsque vous ou votre agent utilisez un téléphone cloud, l\'activité est journalisée automatiquement : commandes et leurs entrées, texte saisi, appuis, applis et pages utilisées, et détails de session.** Les finalités annoncées sont l\'exploitation, la sécurisation et l\'amélioration du service ainsi que la prévention des abus. Elle collecte aussi votre nom et votre e-mail à la connexion, les données de facturation et les journaux de session ; les données de carte vont à Stripe.',
-          'La politique cite Clerk (connexion), Stripe (paiements), Amazon Web Services (hébergement aux États-Unis), Vercel, PostHog (analyse d\'audience, uniquement avec consentement) et Loops (e-mail) comme sous-traitants. Les téléphones Android temporaires sont effacés à la fin de la session ; les téléphones Android enregistrés et les iPhone cloud conservent applis, connexions et fichiers jusqu\'à leur réinitialisation, et un iPhone cloud est effacé dans les 7 jours suivant la fin de l\'abonnement. Le README ajoute que le CLI affiche une ligne d\'avis lorsqu\'une nouvelle version existe, ce qu\'une variable d\'environnement désactive.',
+          'La politique cite Clerk (connexion), Stripe (paiements), Amazon Web Services (hébergement aux États-Unis), Vercel, PostHog (analyse d\'audience, uniquement avec consentement) et Loops (e-mail) comme prestataires utilisés. Les téléphones Android temporaires sont effacés à la fin de la session ; les téléphones Android enregistrés et les iPhone cloud conservent applis, connexions et fichiers jusqu\'à leur réinitialisation, et un iPhone cloud est effacé dans les 7 jours suivant la fin de l\'abonnement. Le README ajoute que le CLI affiche une ligne d\'avis lorsqu\'une nouvelle version existe, ce qu\'une variable d\'environnement désactive.',
         ],
         callouts: [
           {
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pour qui',
         items: [
           '**Développeurs qui utilisent déjà un agent de code** et veulent qu\'il pilote un vrai téléphone.',
-          '**Propriétaires de Mac qui veulent piloter un iPhone** sans jailbreak ni appli sur le téléphone.',
+          '**Propriétaires de Mac qui veulent piloter un iPhone,** ce qui, selon le README, ne demande ni jailbreak ni appli sur le téléphone.',
           '**Équipes ayant besoin de nombreux téléphones** et à l\'aise avec un cloud hébergé et payant.',
         ],
       },
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**エージェントとの連携。** セットアップ用プロンプトはClaude CodeとCodexが対象です。ホスト型のMCPエンドポイントが任意のMCPクライアントに対応し(現時点ではクラウドフォンのみ)、Hermes AgentとOpenClaw向けのプラグインもあります。',
           '**自己拡張するヘルパー。** エージェントが書いたヘルパーは、ホームディレクトリ内のワークスペースフォルダに保存され、アップグレードしても消えません。',
           '**クラウドフォン。** 一時的なAndroid、アプリやログインを保持する保存型Android、専有の実機iPhoneがあり、エージェントの作業中はブラウザでライブ表示できます。',
-          '**サイトが掲げるクラウドの追加機能。** SMSや二要素認証コード用の実電話番号、ログインの保持、アプリから人に見える「ステルス」機能。PromptQuorumはこれらを確認していません。',
+          '**サイトが掲げるクラウドの追加機能。** SMSや二要素認証コード用の実電話番号、ログインの保持、アプリから人に見える「ステルス」機能。PromptQuorumはこれらを確認していません。なお、他のアプリを自動操作すると、そのアプリの利用規約に抵触する場合があります。',
         ],
       },
       privacy: {
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシーとデータの扱い',
         content: [
           '**プライバシーポリシー(最終更新2026年11月3日)の対象はphone-harness.comとPhone Harness Cloudです。ユーザーまたはエージェントがクラウドフォンを使うと、コマンドとその入力、入力されたテキスト、タップ、使用したアプリやページ、セッションの詳細といった操作内容が自動的に記録されると説明されています。** 記録の目的は、サービスの運営、保護、改善と不正利用の防止とされています。このほか、サインイン時の氏名とメールアドレス、課金記録、セッションログも収集されます。カード情報はStripeに送られます。',
-          'ポリシーでは、Clerk(サインイン)、Stripe(決済)、Amazon Web Services(米国でのホスティング)、Vercel、PostHog(分析。同意がある場合のみ)、Loops(メール)が処理委託先として挙げられています。一時的なAndroidはセッション終了時に消去されます。保存型AndroidとクラウドiPhoneは、リセットするまでアプリ、ログイン、ファイルが残り、クラウドiPhoneはサブスクリプション終了後7日以内に消去されます。READMEによると、CLIは新しいバージョンがあると1行の通知を表示し、環境変数でオフにできます。',
+          'ポリシーでは、Clerk(サインイン)、Stripe(決済)、Amazon Web Services(米国でのホスティング)、Vercel、PostHog(分析。同意がある場合のみ)、Loops(メール)が利用サービスとして挙げられています。一時的なAndroidはセッション終了時に消去されます。保存型AndroidとクラウドiPhoneは、リセットするまでアプリ、ログイン、ファイルが残り、クラウドiPhoneはサブスクリプション終了後7日以内に消去されます。READMEによると、CLIは新しいバージョンがあると1行の通知を表示し、環境変数でオフにできます。',
         ],
         callouts: [
           {
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**智能体集成。** 设置提示面向 Claude Code 和 Codex；托管的 MCP 端点可服务任何 MCP 客户端（目前仅限云手机），并提供 Hermes Agent 和 OpenClaw 插件。',
           '**可自我扩展的辅助函数。** 智能体把自己编写的辅助函数保存到主目录下的工作区文件夹，升级不会清除。',
           '**云手机。** 包括临时 Android 手机、保留应用和登录状态的已保存 Android 手机，以及专用的真实 iPhone；智能体工作时可在浏览器中实时查看。',
-          '**网站宣传的云端附加功能。** 用于短信和双重验证码的真实手机号、持久登录，以及让应用“把你当作真人”的“stealth”（隐身）功能；PromptQuorum 未核实这些内容。',
+          '**网站宣传的云端附加功能。** 用于短信和双重验证码的真实手机号、持久登录，以及让应用“把你当作真人”的“stealth”（隐身）功能；PromptQuorum 未核实这些内容；自动化操作其他应用可能违反其服务条款。',
         ],
       },
       privacy: {
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Integraciones con agentes.** El prompt de configuración apunta a Claude Code y Codex; un endpoint MCP alojado sirve a cualquier cliente MCP (por ahora solo teléfonos en la nube) y existen plugins para Hermes Agent y OpenClaw.',
           '**Funciones auxiliares que se amplían solas.** El agente guarda las funciones que escribe en una carpeta de trabajo dentro de tu directorio personal que las actualizaciones no borran.',
           '**Teléfonos en la nube.** Teléfonos Android temporales, teléfonos Android guardados que conservan apps y sesiones, e iPhone reales dedicados, con una vista en directo en el navegador mientras trabaja el agente.',
-          '**Extras de la nube que anuncia el sitio.** Números de teléfono reales para SMS y códigos de doble factor, sesiones persistentes y "stealth" para que las apps vean a una persona; PromptQuorum no ha comprobado estos puntos.',
+          '**Extras de la nube que anuncia el sitio.** Números de teléfono reales para SMS y códigos de doble factor, sesiones persistentes y "stealth" para que las apps vean a una persona; PromptQuorum no ha comprobado estos puntos, y automatizar otras apps puede entrar en conflicto con sus condiciones de uso.',
         ],
       },
       privacy: {
@@ -1512,7 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad y tratamiento de datos',
         content: [
           '**La política de privacidad (última actualización: 3 de noviembre de 2026) abarca phone-harness.com y Phone Harness Cloud, y dice que cuando tú o tu agente usan un teléfono en la nube se registra automáticamente la actividad: comandos y sus entradas, texto introducido, toques, apps y páginas usadas, y datos de la sesión.** Los fines declarados son operar, proteger y mejorar el servicio y prevenir abusos. También recopila tu nombre y correo del inicio de sesión, registros de facturación y registros de sesión; los datos de la tarjeta van a Stripe.',
-          'La política nombra como encargados del tratamiento a Clerk (inicio de sesión), Stripe (pagos), Amazon Web Services (alojamiento en Estados Unidos), Vercel, PostHog (analítica, solo con consentimiento) y Loops (correo). Los teléfonos Android temporales se borran al terminar la sesión; los teléfonos Android guardados y los iPhone en la nube conservan apps, sesiones y archivos hasta que los restableces, y un iPhone en la nube se borra en los 7 días posteriores al fin de la suscripción. El README añade que la CLI muestra un aviso de una línea cuando hay una versión nueva, que una variable de entorno desactiva.',
+          'La política nombra como proveedores de servicios a Clerk (inicio de sesión), Stripe (pagos), Amazon Web Services (alojamiento en Estados Unidos), Vercel, PostHog (analítica, solo con consentimiento) y Loops (correo). Los teléfonos Android temporales se borran al terminar la sesión; los teléfonos Android guardados y los iPhone en la nube conservan apps, sesiones y archivos hasta que los restableces, y un iPhone en la nube se borra en los 7 días posteriores al fin de la suscripción. El README añade que la CLI muestra un aviso de una línea cuando hay una versión nueva, que una variable de entorno desactiva.',
         ],
         callouts: [
           {
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Para quién es',
         items: [
           '**Desarrolladores que ya usan un agente de programación** y quieren que maneje un teléfono real.',
-          '**Dueños de un Mac que quieren controlar un iPhone** sin jailbreak ni una app en el teléfono.',
+          '**Dueños de un Mac que quieren controlar un iPhone,** algo que, según el README, no requiere jailbreak ni una app en el teléfono.',
           '**Equipos que necesitan muchos teléfonos** y aceptan una nube alojada y de pago.',
         ],
       },
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Integrações com agentes.** O prompt de configuração tem como alvo o Claude Code e o Codex; um endpoint MCP hospedado atende qualquer cliente MCP (por enquanto, apenas celulares na nuvem), e existem plugins para o Hermes Agent e o OpenClaw.',
           '**Auxiliares que se ampliam sozinhos.** O agente salva os auxiliares que escreve em uma pasta de trabalho no seu diretório pessoal, que as atualizações não apagam.',
           '**Celulares na nuvem.** Celulares Android temporários, celulares Android salvos que mantêm apps e logins e iPhones reais dedicados, com uma visualização ao vivo no navegador enquanto o agente trabalha.',
-          '**Extras da nuvem anunciados pelo site.** Números de telefone reais para SMS e códigos de dois fatores, logins persistentes e "stealth" para que os apps vejam uma pessoa; a PromptQuorum não verificou esses itens.',
+          '**Extras da nuvem anunciados pelo site.** Números de telefone reais para SMS e códigos de dois fatores, logins persistentes e "stealth" para que os apps vejam uma pessoa; a PromptQuorum não verificou esses itens, e automatizar outros apps pode conflitar com os termos de uso deles.',
         ],
       },
       privacy: {
@@ -1773,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade e tratamento de dados',
         content: [
           '**A política de privacidade (atualizada pela última vez em 3 de novembro de 2026) abrange o phone-harness.com e o Phone Harness Cloud e afirma que, quando você ou seu agente usam um celular na nuvem, a atividade é registrada automaticamente: comandos e suas entradas, texto digitado, toques, apps e páginas usados e detalhes da sessão.** As finalidades declaradas são operar, proteger e melhorar o serviço e prevenir abusos. A política também coleta seu nome e e-mail a partir do login, registros de cobrança e registros de sessão; os dados do cartão vão para a Stripe.',
-          'A política cita Clerk (login), Stripe (pagamentos), Amazon Web Services (hospedagem nos Estados Unidos), Vercel, PostHog (análise de uso, somente com consentimento) e Loops (e-mail) como operadores. Os celulares Android temporários são apagados quando a sessão termina; os celulares Android salvos e os iPhones na nuvem mantêm apps, logins e arquivos até você redefini-los, e um iPhone na nuvem é apagado em até 7 dias após o fim da assinatura. O README acrescenta que a CLI exibe um aviso de uma linha quando existe uma nova versão, que pode ser desativado por uma variável de ambiente.',
+          'A política cita Clerk (login), Stripe (pagamentos), Amazon Web Services (hospedagem nos Estados Unidos), Vercel, PostHog (análise de uso, somente com consentimento) e Loops (e-mail) como prestadores de serviço. Os celulares Android temporários são apagados quando a sessão termina; os celulares Android salvos e os iPhones na nuvem mantêm apps, logins e arquivos até você redefini-los, e um iPhone na nuvem é apagado em até 7 dias após o fim da assinatura. O README acrescenta que a CLI exibe um aviso de uma linha quando existe uma nova versão, que pode ser desativado por uma variável de ambiente.',
         ],
         callouts: [
           {
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Para quem é indicado',
         items: [
           '**Desenvolvedores que já usam um agente de programação** e querem que ele opere um celular de verdade.',
-          '**Donos de Mac que querem controlar o iPhone** sem jailbreak nem app instalado no celular.',
+          '**Donos de Mac que querem controlar o iPhone,** o que, segundo o README, dispensa jailbreak e app instalado no celular.',
           '**Equipes que precisam de muitos celulares** e aceitam uma nuvem hospedada e paga.',
         ],
       },
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تكاملات الوكلاء.** يستهدف موجّه الإعداد Claude Code وCodex؛ وتخدم نقطة MCP مستضافة أي عميل MCP (للهواتف السحابية فقط حاليًا)، وتوجد إضافات لـ Hermes Agent وOpenClaw.',
           '**دوال مساعدة تتوسع ذاتيًا.** يحفظ الوكيل الدوال التي يكتبها في مجلد عمل داخل مجلد المستخدم لا تمحوه الترقيات.',
           '**الهواتف السحابية.** هواتف Android مؤقتة، وهواتف Android محفوظة تحتفظ بالتطبيقات وتسجيلات الدخول، وهواتف iPhone حقيقية مخصصة، مع عرض مباشر في المتصفح أثناء عمل الوكيل.',
-          '**إضافات سحابية يعلن عنها الموقع.** أرقام هواتف حقيقية للرسائل النصية ورموز التحقق بخطوتين، وتسجيلات دخول دائمة، وميزة "stealth" كي ترى التطبيقات شخصًا؛ ولم تتحقق PromptQuorum من هذه الادعاءات.',
+          '**إضافات سحابية يعلن عنها الموقع.** أرقام هواتف حقيقية للرسائل النصية ورموز التحقق بخطوتين، وتسجيلات دخول دائمة، وميزة "stealth" كي ترى التطبيقات شخصًا؛ ولم تتحقق PromptQuorum من هذه الادعاءات، وقد تتعارض أتمتة تطبيقات أخرى مع شروط استخدامها.',
         ],
       },
       privacy: {
@@ -2034,7 +2034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية ومعالجة البيانات',
         content: [
           '**تغطي سياسة الخصوصية (آخر تحديث في 3 نوفمبر 2026) الموقع phone-harness.com وخدمة Phone Harness Cloud، وتنص على أنه عندما تستخدم أنت أو وكيلك هاتفًا سحابيًا فإنها تسجّل النشاط تلقائيًا: الأوامر ومدخلاتها والنصوص المكتوبة والنقرات والتطبيقات والصفحات المستخدمة وتفاصيل الجلسة.** والأغراض المعلنة هي تشغيل الخدمة وتأمينها وتحسينها ومنع إساءة الاستخدام. كما تجمع اسمك وبريدك الإلكتروني من تسجيل الدخول وسجلات الفوترة وسجلات الجلسات؛ وتذهب بيانات البطاقة إلى Stripe.',
-          'تذكر السياسة الجهات التالية بوصفها جهات معالجة: Clerk (تسجيل الدخول) وStripe (المدفوعات) وAmazon Web Services (الاستضافة في الولايات المتحدة) وVercel وPostHog (التحليلات، بموافقتك فقط) وLoops (البريد الإلكتروني). تُمسح هواتف Android المؤقتة عند انتهاء الجلسة؛ أما هواتف Android المحفوظة وهواتف iPhone السحابية فتحتفظ بالتطبيقات وتسجيلات الدخول والملفات إلى أن تعيد ضبطها، ويُمسح iPhone السحابي خلال 7 أيام من انتهاء الاشتراك. ويضيف ملف README أن أداة سطر الأوامر تطبع إشعارًا من سطر واحد عند وجود إصدار جديد، ويمكن إيقافه بمتغير بيئة.',
+          'تذكر السياسة الجهات التالية بوصفها خدمات تستعين بها: Clerk (تسجيل الدخول) وStripe (المدفوعات) وAmazon Web Services (الاستضافة في الولايات المتحدة) وVercel وPostHog (التحليلات، بموافقتك فقط) وLoops (البريد الإلكتروني). تُمسح هواتف Android المؤقتة عند انتهاء الجلسة؛ أما هواتف Android المحفوظة وهواتف iPhone السحابية فتحتفظ بالتطبيقات وتسجيلات الدخول والملفات إلى أن تعيد ضبطها، ويُمسح iPhone السحابي خلال 7 أيام من انتهاء الاشتراك. ويضيف ملف README أن أداة سطر الأوامر تطبع إشعارًا من سطر واحد عند وجود إصدار جديد، ويمكن إيقافه بمتغير بيئة.',
         ],
         callouts: [
           {
@@ -2048,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لمن يناسب',
         items: [
           '**المطورون الذين يشغّلون وكيل برمجة بالفعل** ويريدون أن يتحكم في هاتف حقيقي.',
-          '**مالكو أجهزة Mac الراغبون في التحكم في iPhone** دون jailbreak ودون تطبيق على الهاتف.',
+          '**مالكو أجهزة Mac الراغبون في التحكم في iPhone،** وهو ما لا يتطلب، بحسب README، jailbreak ولا تطبيقًا على الهاتف.',
           '**الفرق التي تحتاج إلى هواتف كثيرة** ولا تمانع سحابة مستضافة مدفوعة.',
         ],
       },
@@ -2287,7 +2287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**에이전트 연동.** 설정 프롬프트는 Claude Code와 Codex를 대상으로 하며, 호스팅형 MCP 엔드포인트가 모든 MCP 클라이언트를 지원하고(현재는 클라우드 폰만), Hermes Agent와 OpenClaw용 플러그인이 있습니다.',
           '**스스로 확장하는 헬퍼.** 에이전트가 작성한 헬퍼는 홈 디렉터리의 작업 공간 폴더에 저장되며 업그레이드해도 지워지지 않습니다.',
           '**클라우드 폰.** 임시 Android 폰, 앱과 로그인을 유지하는 저장형 Android 폰, 전용 실제 iPhone이 있으며, 에이전트가 작업하는 동안 브라우저에서 실시간 화면을 볼 수 있습니다.',
-          '**사이트가 내세우는 클라우드 부가 기능.** SMS와 2단계 인증 코드를 위한 실제 전화번호, 지속되는 로그인, 앱이 사람으로 인식하게 하는 “stealth”가 있으며, PromptQuorum은 이를 확인하지 않았습니다.',
+          '**사이트가 내세우는 클라우드 부가 기능.** SMS와 2단계 인증 코드를 위한 실제 전화번호, 지속되는 로그인, 앱이 사람으로 인식하게 하는 “stealth”가 있으며, PromptQuorum은 이를 확인하지 않았습니다. 또한 다른 앱을 자동으로 조작하면 해당 앱의 이용약관과 충돌할 수 있습니다.',
         ],
       },
       privacy: {
@@ -2295,7 +2295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 및 데이터 처리',
         content: [
           '**개인정보 처리방침(최종 업데이트 2026년 11월 3일)은 phone-harness.com과 Phone Harness Cloud를 대상으로 하며, 사용자나 에이전트가 클라우드 폰을 사용하면 명령과 입력값, 입력한 텍스트, 탭, 사용한 앱과 페이지, 세션 정보 등의 활동이 자동으로 기록된다고 밝힙니다.** 명시된 목적은 서비스 운영, 보안 유지, 개선과 악용 방지입니다. 또한 로그인 시 이름과 이메일, 결제 기록, 세션 로그를 수집하며, 카드 정보는 Stripe로 전달됩니다.',
-          '방침은 처리자로 Clerk(로그인), Stripe(결제), Amazon Web Services(미국 내 호스팅), Vercel, PostHog(분석, 동의한 경우에만), Loops(이메일)를 명시합니다. 임시 Android 폰은 세션이 끝나면 초기화되고, 저장형 Android 폰과 클라우드 iPhone은 사용자가 초기화할 때까지 앱, 로그인, 파일이 유지되며, 클라우드 iPhone은 구독 종료 후 7일 이내에 삭제됩니다. README에는 새 버전이 있으면 CLI가 한 줄 안내를 출력하며 환경 변수로 끌 수 있다고 추가로 적혀 있습니다.',
+          '방침은 이용 서비스로 Clerk(로그인), Stripe(결제), Amazon Web Services(미국 내 호스팅), Vercel, PostHog(분석, 동의한 경우에만), Loops(이메일)를 명시합니다. 임시 Android 폰은 세션이 끝나면 초기화되고, 저장형 Android 폰과 클라우드 iPhone은 사용자가 초기화할 때까지 앱, 로그인, 파일이 유지되며, 클라우드 iPhone은 구독 종료 후 7일 이내에 삭제됩니다. README에는 새 버전이 있으면 CLI가 한 줄 안내를 출력하며 환경 변수로 끌 수 있다고 추가로 적혀 있습니다.',
         ],
         callouts: [
           {
