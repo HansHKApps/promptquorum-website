@@ -25,7 +25,7 @@ export function localeFromPath(pathname: string): string {
 }
 
 /** Same breakpoint as the Ask Hans window (ASK_HANS_WINDOW.mobileBreakpointPx). */
-function deviceKind(): 'mobile' | 'desktop' {
+export function deviceKind(): 'mobile' | 'desktop' {
   try {
     return window.matchMedia('(max-width: 767px)').matches ? 'mobile' : 'desktop'
   } catch {
