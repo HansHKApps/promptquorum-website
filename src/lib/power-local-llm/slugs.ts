@@ -573,6 +573,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'surfsense-review':                         'surfsense-review',
   'strata-review':                            'strata-review',
   'coil-review':                              'coil-review',
+  'phone-harness-review':                     'phone-harness-review',
   'kruvo-review':                             'kruvo-review',
   'localghost-review':                        'localghost-review',
   'llm-studio-go-review':                     'llm-studio-go-review',
