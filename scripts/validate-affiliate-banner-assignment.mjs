@@ -15,6 +15,9 @@ const maps = {
   'local-llms': (await jiti.import(path.join(ROOT, 'src/lib/local-llms/slugs.ts'))).LLM_SLUG_TO_KEY,
   'power-local-llm': (await jiti.import(path.join(ROOT, 'src/lib/power-local-llm/slugs.ts'))).POWER_LLM_SLUG_TO_KEY,
 }
+const { AFF_BANNER_PAGE_OFFERS } = await jiti.import(path.join(ROOT, 'src/lib/affiliate-banners/page-offers.ts'))
+const { BANNER_OFFERS } = await jiti.import(path.join(ROOT, 'src/lib/affiliate-banners/offers.ts'))
+const { BANNER_UI } = await jiti.import(path.join(ROOT, 'src/lib/affiliate-banners/copy.ts'))
 const errors = []
 const fail = (m) => errors.push(m)
 
@@ -44,6 +47,37 @@ for (const k of all) {
 }
 const u = '/power-local-llm/uncensored-local-llm-creative-writing-ethics'
 if (AFF_BANNER_GROUPS[u]?.tier !== 'solo') fail('the uncensored page must be its own stratum (tier solo)')
+
+// Offers: A cells need 1 offer, B cells 2 (distinct); every offer has 9-locale copy and enough merchants; plain URLs only.
+const LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
+for (const [k, e] of treated) {
+  const ids = AFF_BANNER_PAGE_OFFERS[k] ?? []
+  const need = e.cell.startsWith('B') ? 2 : 1
+  if (ids.length !== need) fail(`${k}: cell ${e.cell} needs ${need} offer(s), has ${ids.length}`)
+  if (new Set(ids).size !== ids.length) fail(`${k}: duplicate offers`)
+  for (const id of ids) if (!BANNER_OFFERS[id]) fail(`${k}: unknown offer ${id}`)
+}
+for (const k of Object.keys(AFF_BANNER_PAGE_OFFERS)) if (!AFF_BANNER_GROUPS[k]) fail(`${k}: offers set for a page that is not a treated group`)
+for (const [id, o] of Object.entries(BANNER_OFFERS)) {
+  for (const l of LOCALES) {
+    const c = o.copy[l]
+    if (!c?.headline || !c?.reason || !c?.bestFor) fail(`offer ${id}/${l}: missing copy`)
+    const m = o.merchantsByLocale[l] ?? []
+    if (m.length < 3) fail(`offer ${id}/${l}: ${m.length} merchants, need 3 for the 3-merchant arms`)
+    for (const x of m) {
+      if (!/^https:\/\//.test(x.url)) fail(`offer ${id}/${l}: ${x.vendor} url is not https`)
+      if (/[?&](tag|aff|affid|affiliate|ref|utm_)[a-z_]*=/i.test(x.url)) fail(`offer ${id}/${l}: ${x.vendor} url carries a tracking/affiliate parameter`)
+      if (x.affiliateStatus !== 'none') fail(`offer ${id}/${l}: ${x.vendor} affiliateStatus must be 'none' during the pilot`)
+      if (x.verifiedAt || x.priceRange) fail(`offer ${id}/${l}: ${x.vendor} carries a price; the pilot shows none`)
+    }
+  }
+}
+// Disclosure: 9 locales, must never claim the link is an ad/sponsored/affiliate-paid.
+for (const l of LOCALES) {
+  const u = BANNER_UI[l]
+  if (!u?.disclosure || !u?.cta?.includes('{vendor}') || !u?.tag || !u?.label) fail(`BANNER_UI.${l}: incomplete`)
+  if (/\b(sponsored|anzeige|werbung|publicit[eé]|sponsoris[eé]|広告|广告|publicidad|patrocinado|إعلان|광고)\b/i.test(u.disclosure)) fail(`BANNER_UI.${l}: disclosure must not call the banner an ad`)
+}
 
 if (errors.length) { console.error('affiliate-banner assignment: FAIL\n' + errors.map((e) => ' - ' + e).join('\n')); process.exit(1) }
 console.log(`affiliate-banner assignment: OK (${treated.length} treated, ${AFF_BANNER_CONTROLS.length} controls, ${JSON.stringify(per)})`)

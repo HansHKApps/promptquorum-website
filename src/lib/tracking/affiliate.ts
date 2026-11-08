@@ -44,6 +44,10 @@ const RETAILER_DOMAINS: ReadonlySet<string> = new Set([
   // Developer tools (SaaS)
   'cursor.com', 'continue.dev', 'sourcegraph.com', 'tabnine.com',
   // Course platforms
+  // Banner pilot shops and vendors (regional retailers, brand sites, official software sites)
+  'amazon.com.br', 'kabum.com.br', 'mercadolivre.com.br', 'pccomponentes.com', 'mediamarkt.es',
+  'coupang.com', 'danawa.com', '11st.co.kr', 'rakuten.co.jp', 'kakaku.com',
+  'ecoflow.com', 'anker.com', 'raspberrypi.com', 'ollama.com', 'lmstudio.ai', 'jan.ai',
   'coursera.org', 'deeplearning.ai', 'udemy.com', 'datacamp.com', 'fast.ai',
 ])
 

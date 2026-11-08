@@ -1,0 +1,91 @@
+name: Affiliate banner pilot report (weekly)
+
+# Runs every Friday from the banner launch until launch + 14 weeks (+1 week closing). Builds the report and the merchant-readiness sheet
+# from Umami (scripts/aff-banner-report.mjs) and posts it as a comment on ONE tracking issue ("Affiliate banner pilot weekly report").
+#
+# One-time setup (a person must do this; Claude cannot create repo secrets or variables):
+#   1. Secret UMAMI_API_KEY (Umami Cloud -> Settings -> API keys). Optional: UMAMI_WEBSITE_ID, UMAMI_API_URL.
+#   2. Repository VARIABLE AFF_BANNER_LAUNCH = the day banners went live to all 60 groups (YYYY-MM-DD).
+# Until AFF_BANNER_LAUNCH is set the job does nothing (banners are not launched). Without the key it FAILS on purpose.
+# The Umami endpoint calls are UNVERIFIED (same adapter as the promo report); a failing endpoint is named in the log.
+# Read-only: it never deploys and never changes the site.
+
+on:
+  schedule:
+    - cron: '23 6 * * 5'
+  workflow_dispatch: {}
+
+concurrency:
+  group: aff-banner-weekly-report
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decide whether to run (needs launch date; stops 15 weeks after launch)
+        id: window
+        env:
+          LAUNCH: ${{ vars.AFF_BANNER_LAUNCH }}
+        run: |
+          if [ -z "$LAUNCH" ]; then
+            echo "AFF_BANNER_LAUNCH is not set: banners are not launched yet, nothing to report."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          elif [ "$(date -u +%F)" \> "$(date -u -d "$LAUNCH + 105 days" +%F)" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Pilot window is over; no more weekly reports."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v7
+        if: steps.window.outputs.skip != 'true'
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v7
+        if: steps.window.outputs.skip != 'true'
+        with:
+          node-version: '22'
+
+      - name: Install dependencies (jiti only is needed, scripts are skipped)
+        if: steps.window.outputs.skip != 'true'
+        run: npm ci --ignore-scripts
+
+      - name: Check the report logic still passes its tests
+        if: steps.window.outputs.skip != 'true'
+        run: node scripts/test-aff-banner-report.mjs
+
+      - name: Build the report from Umami
+        if: steps.window.outputs.skip != 'true'
+        env:
+          UMAMI_API_KEY: ${{ secrets.UMAMI_API_KEY }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          UMAMI_API_URL: ${{ secrets.UMAMI_API_URL }}
+          LAUNCH: ${{ vars.AFF_BANNER_LAUNCH }}
+        run: |
+          node scripts/aff-banner-report.mjs --umami --launch "$LAUNCH" --out aff-banner-report.md --merchants aff-banner-merchants.md --json aff-banner-report.json
+          cat aff-banner-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: steps.window.outputs.skip != 'true'
+        with:
+          name: aff-banner-report
+          path: |
+            aff-banner-report.md
+            aff-banner-merchants.md
+            aff-banner-report.json
+
+      - name: Post to the tracking issue
+        if: steps.window.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Affiliate banner pilot weekly report"
+          N=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$N" ]; then
+            N=$(gh issue create --title "$TITLE" --body "Automatic weekly reports for the affiliate banner pilot. One comment per run." | sed 's#.*/##')
+          fi
+          gh issue comment "$N" --body-file aff-banner-report.md
