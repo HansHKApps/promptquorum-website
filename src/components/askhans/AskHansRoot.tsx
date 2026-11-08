@@ -464,7 +464,16 @@ export function AskHansRoot() {
                 <div
                   onClick={(e) => {
                     const a = (e.target as HTMLElement).closest('a')
-                    if (a) trackAnswerClick(m.id, a.getAttribute('href') ?? '', 'text')
+                    if (!a) return
+                    const href = a.getAttribute('href') ?? ''
+                    trackAnswerClick(m.id, href, 'text')
+                    // Same-tab link to our own site: it is a full page load, so close the window and save that state
+                    // synchronously first; otherwise the stored "open" state reopens Ask Hans on top of the new page.
+                    const sameTab = a.getAttribute('target') !== '_blank' && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey
+                    if (sameTab && (href.startsWith('/') || /^https?:\/\/(www\.)?promptquorum\.com(\/|$)/.test(href))) {
+                      saveUi({ ...ui, open: false, everClosed: true })
+                      closeWindow(false)
+                    }
                   }}
                 >
                   <Markdown text={m.content} />
