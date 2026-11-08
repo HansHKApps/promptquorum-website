@@ -1043,6 +1043,7 @@ const HUB_THEMES: Array<{
       'nvidia-g-assist-review',
       'odysseus-review',
       'phoneclaw-review',
+      'phone-harness-review',
       'nanobot-review',
       'picoclaw-review',
       'home-generative-agent-review',
