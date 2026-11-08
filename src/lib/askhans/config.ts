@@ -38,7 +38,7 @@ export const ASK_HANS_WINDOW = {
 } as const
 
 /** Marketing panel split inside the window: chat gets 2/3, panel 1/3. */
-export const ASK_HANS_SPLIT = { chatFr: 2, panelFr: 1 } as const
+export const ASK_HANS_SPLIT = { chatFr: 3, panelFr: 1 } as const
 
 /** Power Mode reports: long, structured, written by a stronger model, so the limits are much tighter than chat. */
 export const ASK_HANS_SOLUTION_LIMITS = {
