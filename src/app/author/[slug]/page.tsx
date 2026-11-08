@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
+import { authorPerson, AUTHOR_PATH } from '@/lib/author'
+import { notFound } from 'next/navigation'
 import { AppLink as Link } from '@/components/AppLink'
+
+const AUTHOR_SLUG = AUTHOR_PATH.split('/').pop()
 
 interface AuthorPageProps {
   params: Promise<{ slug: string }>
@@ -14,11 +18,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: AuthorPageProps): Promise<Metadata> {
   const { slug } = await params
 
-  if (slug !== 'hans-kuepper') {
-    return {
-      title: 'Author Not Found',
-    }
-  }
+  if (slug !== AUTHOR_SLUG) notFound()
 
   return {
     title: 'Hans Kuepper — Founder of PromptQuorum',
@@ -47,17 +47,8 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
 export default async function AuthorPage({ params }: AuthorPageProps) {
   const { slug } = await params
 
-  if (slug !== 'hans-kuepper') {
-    return (
-      <div className="min-h-screen bg-surface pt-24 pb-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <h1 className="text-4xl font-bold text-text-primary mb-4">Author Not Found</h1>
-          <p className="text-text-secondary mb-8">We could not find the author you are looking for.</p>
-          <Link href="/about" className="text-primary hover:text-primary/80 font-medium">← Back to About</Link>
-        </div>
-      </div>
-    )
-  }
+  // Unknown slug: a real 404 (the page used to answer 200 with an "Author Not Found" body, a soft 404).
+  if (slug !== AUTHOR_SLUG) notFound()
 
   return (
     <>
@@ -67,24 +58,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
           __html: JSON.stringify([
             {
               '@context': 'https://schema.org',
-              '@type': 'Person',
-              '@id': 'https://www.promptquorum.com/author/hans-kuepper',
-              'name': 'Hans Kuepper',
-              'url': 'https://www.promptquorum.com/author/hans-kuepper',
-              'jobTitle': 'Founder & Developer',
-              'description': 'Independent developer building privacy-first tools for the AI era. Founder of PromptQuorum.',
-              'worksFor': {
-                '@type': 'Organization',
-                'name': 'PromptQuorum',
-                'url': 'https://www.promptquorum.com',
-              },
-              'sameAs': [
-                'https://www.linkedin.com/in/hanskuepper/',
-                'https://x.com/HansKuepperAPPs',
-                'https://github.com/HansHKApps',
-                'https://substack.com/@promptquorum',
-              ],
-              'image': 'https://www.promptquorum.com/og-image.png',
+              ...authorPerson(),
             },
             {
               '@context': 'https://schema.org',

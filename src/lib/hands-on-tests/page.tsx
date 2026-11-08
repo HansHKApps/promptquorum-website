@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import type { Language } from '@/lib/blog/blogContent'
 import { generateAlternates } from '@/lib/hreflang'
 import { getLangDir, toOutputLocale, ogLocale } from '@/lib/i18n/constants'
@@ -82,7 +83,7 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
           '@id': `${url}#review`,
           inLanguage: toOutputLocale(lang),
           itemReviewed: { '@id': `${url}#app` },
-          author: { '@type': 'Person', name: 'Hans Kuepper' },
+          author: authorPerson(),
           datePublished: test.published,
           reviewRating: {
             '@type': 'Rating',
@@ -104,7 +105,7 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
         inLanguage: toOutputLocale(lang),
         datePublished: test.published,
         dateModified: test.modified ?? test.published,
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: authorPerson(),
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: BASE },
         about: { '@id': `${url}#app` },
         ...(hero && { image: buildImageObject(`/images/${hero.file}`, { caption: plain(hero.caption) }) }),

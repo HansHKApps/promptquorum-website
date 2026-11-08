@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import { AppLink as Link } from '@/components/AppLink'
 
 export const metadata: Metadata = {
@@ -30,11 +31,7 @@ export default function ImageLicensePage() {
               'description':
                 'Licensing terms for PromptQuorum diagrams, comparison charts, and infographics.',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
-              'author': {
-                '@type': 'Person',
-                'name': 'Hans Kuepper',
-                'url': 'https://www.promptquorum.com/about',
-              },
+              'author': authorPerson(),
             },
             {
               '@context': 'https://schema.org',

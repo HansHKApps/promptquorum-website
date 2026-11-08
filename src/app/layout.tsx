@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson, authorRef } from '@/lib/author'
 import { Suspense } from 'react'
 import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
 import './globals.css'
@@ -167,14 +168,7 @@ export default function RootLayout({
                   },
                   "image": { "@id": "https://www.promptquorum.com/#logo" },
                   "description": "PromptQuorum is a multi-model AI dispatch and consensus tool. Write structured prompts with 9 frameworks, optimize with any LLM, dispatch simultaneously to 25+ AI providers, and run consensus analysis. 100% private — no data leaves your device.",
-                  "founder": {
-                    "@type": "Person",
-                    "name": "Hans Kuepper",
-                    "sameAs": [
-                      "https://x.com/HansKuepperAPPs",
-                      "https://www.linkedin.com/in/hanskuepper/"
-                    ]
-                  },
+                  "founder": authorRef(),
                   "sameAs": [
                     "https://github.com/HansHKApps",
                     "https://x.com/HansKuepperAPPs",
@@ -183,6 +177,7 @@ export default function RootLayout({
                     "https://substack.com/@promptquorum"
                   ]
                 },
+                authorPerson(),
                 {
                   "@type": "WebSite",
                   "@id": "https://www.promptquorum.com/#website",

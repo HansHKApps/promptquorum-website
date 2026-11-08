@@ -3,6 +3,7 @@
 // the metadata + JSON-LD + page JSX logic lives in exactly one place.
 
 import { CATEGORY_COMPARE_ARTICLE } from '@/lib/power-local-llm/apps/compare-schema'
+import { authorPerson, normalizeAuthor } from '@/lib/author'
 import type { CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { buildCategoryCompareData, getCategoryLinksForReview } from '@/lib/power-local-llm/compare-data'
 import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
@@ -278,7 +279,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   }
   const proficiencyLevel = llmEdLevel ? llmLevelMap[llmEdLevel] ?? llmEdLevel : undefined
 
-  const articleSchema = (article as any).schema || {
+  const articleSchemaBase = (article as any).schema || {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: article.title,
@@ -288,16 +289,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     inLanguage: toOutputLocale(lang),
     url: canonicalUrl,
     ...(proficiencyLevel && { proficiencyLevel }),
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/about',
-      sameAs: [
-        'https://www.linkedin.com/in/hanskuepper/',
-        'https://x.com/HansKuepperAPPs',
-        'https://github.com/HansHKApps',
-      ],
-    },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization',
       name: 'PromptQuorum',
@@ -312,6 +304,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
           url: `${BASE}${powerLLMHubPath(lang)}`,
         },
   }
+  const articleSchema = normalizeAuthor(articleSchemaBase)
 
   // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
   if (!(articleSchema as any).inLanguage) {

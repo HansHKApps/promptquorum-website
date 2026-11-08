@@ -1,4 +1,5 @@
 import { peContent, type PEArticle } from '@/lib/prompt-engineering/content'
+import { authorPerson, normalizeAuthor } from '@/lib/author'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
@@ -64,7 +65,7 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
   // full fallback chain never surfaces English on a non-English page.
   const peHowToName = (article as any).howToName as string | undefined
 
-  const articleSchema: any = article.schema || {
+  const articleSchemaBase: any = article.schema || {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: article.title,
@@ -75,16 +76,7 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
     url: canonicalUrl,
     ...(peProficiencyLevel && { proficiencyLevel: peProficiencyLevel }),
     ...(peAboutTopics?.length && { about: peAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/about',
-      sameAs: [
-        'https://www.linkedin.com/in/hanskuepper/',
-        'https://x.com/HansKuepperAPPs',
-        'https://github.com/HansHKApps',
-      ],
-    },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization',
       name: 'PromptQuorum',
@@ -112,6 +104,7 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
       ],
     }),
   }
+  const articleSchema: any = normalizeAuthor(articleSchemaBase)
 
   if (!articleSchema.inLanguage) {
     articleSchema.inLanguage = toOutputLocale(lang)
@@ -311,7 +304,7 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
     ...(Array.isArray((article.schema as any)?.teaches) && { teaches: (article.schema as any).teaches }),
     ...(Array.isArray((article.schema as any)?.assesses) && { assesses: (article.schema as any).assesses }),
     datePublished: article.publishDate,
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
       logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },

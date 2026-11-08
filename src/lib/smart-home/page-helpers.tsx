@@ -13,6 +13,7 @@
 // slug added to the registry before its content lands.
 
 import { ogLocale } from '@/lib/i18n/constants'
+import { authorPerson, normalizeAuthor } from '@/lib/author'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { AppLink as Link } from '@/components/AppLink'
@@ -217,7 +218,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const canonicalUrl = `${BASE}${smartHomeArticlePath(lang, slug)}`
 
   // ─── Schemas (TechArticle + Breadcrumb + FAQ + HowTo + ItemList) ──
-  const articleSchema = (article as any).schema || {
+  const articleSchemaBase = (article as any).schema || {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: article.title,
@@ -225,16 +226,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     datePublished: article.publishDate,
     dateModified: (article as any).dateModified ?? article.publishDate,
     url: canonicalUrl,
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/about',
-      sameAs: [
-        'https://www.linkedin.com/in/hanskuepper/',
-        'https://x.com/HansKuepperAPPs',
-        'https://github.com/HansHKApps',
-      ],
-    },
+    author: authorPerson(),
     publisher: {
       '@type': 'Organization',
       name: 'PromptQuorum',
@@ -247,6 +239,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       url: `${BASE}${smartHomeHubPath(lang)}`,
     },
   }
+  const articleSchema = normalizeAuthor(articleSchemaBase)
 
   if ((article as any).heroImage) {
     ;(articleSchema as any).image = {

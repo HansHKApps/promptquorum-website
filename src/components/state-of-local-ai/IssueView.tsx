@@ -1,4 +1,5 @@
 import type { Language } from '@/lib/blog/blogContent'
+import { authorPerson } from '@/lib/author'
 import { getLangDir, toOutputLocale } from '@/lib/i18n/constants'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import {
@@ -28,7 +29,7 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
     dateModified: issue.dateModified,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}${selfPath}` },
     image: `${SITE}${issuePath(issue)}/opengraph-image`,
-    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: `${SITE}${localePath('/about', lang)}` },
+    author: authorPerson(),
     publisher: { '@id': `${SITE}/#organization` },
     license: LICENSE_URL,
     creditText: `Kuepper, H. ${SERIES}, Report ${String(issue.number).padStart(2, '0')}. PromptQuorum`,

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { authorPerson } from '@/lib/author'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
@@ -75,11 +76,7 @@ export default async function DeFrameworkPage({ params }: { params: Promise<{ sl
               'description': fw.tagline,
               'url': `https://www.promptquorum.com/de/frameworks/${fw.slug}`,
               'inLanguage': LANG,
-              'author': {
-                '@type': 'Person',
-                'name': 'Hans Kuepper',
-                'url': 'https://www.promptquorum.com/about',
-              },
+              'author': authorPerson(),
               'publisher': {
                 '@type': 'Organization',
                 'name': 'PromptQuorum',
