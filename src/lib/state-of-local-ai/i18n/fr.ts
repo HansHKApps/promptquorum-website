@@ -31,7 +31,7 @@ export const fr: SolaStrings = {
   citeThisReport: 'Citer ce rapport',
   citePlainLabel: 'Texte brut',
   aboutThisReport: 'À propos de ce rapport',
-  founderLine: 'est le fondateur de PromptQuorum, basé à Francfort, avec plus de 30 ans d’expérience dans le conseil et la direction générale.',
+  founderLine: 'est le fondateur de PromptQuorum, basé en Bade-Wurtemberg, avec plus de 30 ans d’expérience dans le conseil et la direction générale.',
   methodPre: 'La méthode, les libellés, les hypothèses et les sources figurent dans la ',
   methodLink1: 'section complète des preuves',
   methodMid: ' ci-dessus, qui existe aussi sous forme de ',
@@ -165,7 +165,7 @@ export const fr: SolaStrings = {
         'Le prix catalogue du DGX Spark de 128 GB de NVIDIA est passé de $3,999 au lancement à $6,950 en octobre 2026. Le matériel qui rend l’IA locale confortable devient plus cher, pas moins cher. (Hans Kuepper, L’état de l’IA locale, Rapport 01, Q4 2026)',
       ],
       pressAuthor:
-        'Hans Kuepper est le fondateur de PromptQuorum, basé à Francfort, avec plus de 30 ans d’expérience dans le conseil et la direction générale. Il a testé lui-même les neuf applications de ce rapport.',
+        'Hans Kuepper est le fondateur de PromptQuorum, basé en Bade-Wurtemberg, avec plus de 30 ans d’expérience dans le conseil et la direction générale. Il a testé lui-même les neuf applications de ce rapport.',
       pressMethod:
         'Les chiffres proviennent de sources numérotées ; chaque affirmation porte une étiquette de preuve, et les hypothèses indiquent qui les formule et sur quoi elles reposent. Les sources secondaires sont signalées comme telles. Le registre des affirmations et toutes les sources peuvent être téléchargés.',
     },
