@@ -257,6 +257,7 @@ import { app as app_blinko } from './apps/blinko'
 import { app as app_surfsense } from './apps/surfsense'
 import { app as app_strata } from './apps/strata'
 import { app as app_coil } from './apps/coil'
+import { app as app_phone_harness } from './apps/phone-harness'
 import { app as app_kruvo } from './apps/kruvo'
 import { app as app_localghost } from './apps/localghost'
 import { app as app_llm_studio_go } from './apps/llm-studio-go'
@@ -553,6 +554,7 @@ export const localAiApps: ToolRecord[] = [
   app_surfsense,
   app_strata,
   app_coil,
+  app_phone_harness,
   app_kruvo,
   app_localghost,
   app_llm_studio_go,
