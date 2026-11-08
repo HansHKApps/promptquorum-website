@@ -49,7 +49,7 @@ export const ISSUES: Issue[] = [
     quarter: 'Q4 2026',
     title: 'Few Chickens and Even Fewer Eggs',
     subtitle:
-      'Local AI is growing fast, but the usable installed hardware base is minuscule. Great applications are even thinner.',
+      'Local AI is growing fast, but the usable installed hardware base is minuscule. In the author’s tests, great applications were even rarer.',
     displayDate: '23 October 2026',
     isoDate: '2026-10-23',
     dataCutOff: '23 October 2026',
@@ -58,7 +58,7 @@ export const ISSUES: Issue[] = [
       'Very few computers can run a good local AI model, and even fewer apps make it worth the effort. Nine hands-on tests, sourced figures and a claim register show where local AI stands today.',
     seoTitle: 'Few Chickens and Even Fewer Eggs | State of Local AI Report 01',
     metaDescription:
-      'Report 01 (Q4 2026): few computers can run good local AI models and even fewer apps are worth using. Sourced figures, nine hands-on tests, claim register.',
+      'Report 01 (Q4 2026): few computers can run good local AI models. In nine hands-on tests, four of eight scored apps rated 2 or below. Sourced figures.',
     citeAs:
       'Kuepper, H. (2026). Few Chickens and Even Fewer Eggs. The State of Local AI, Report 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/about/state-of-local-ai/2026-q4',
     citeApa:
@@ -77,9 +77,9 @@ export const ISSUES: Issue[] = [
       ],
       quotes: [
         'Local AI today has few chickens and even fewer eggs. In the September 2026 Steam survey, only 5.5% of systems had 24 GB of graphics memory, and four of the eight local AI apps I could score rated 2 or below on their core function. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
-        'The list price of NVIDIA\u2019s 128 GB DGX Spark went from $3,999 at launch to $6,950 in October 2026. The hardware that makes local AI comfortable is getting more expensive, not cheaper. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
+        'The list price of NVIDIA\u2019s 128 GB DGX Spark went from $3,999 at launch to $6,950 in October 2026. Hardware that can run big models is getting more expensive, not cheaper (S6, S7). (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
       ],
-      author: 'Hans Kuepper is the founder of PromptQuorum, based in Baden-Württemberg, Germany, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself.',
+      author: 'Hans Kuepper is the founder of PromptQuorum, based in Baden-Württemberg, Germany, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself: eight on a 24 GB Mac and one on an Android phone.',
       method: 'Figures come from numbered sources; each claim carries an evidence label, and assumptions name who makes them and what they rest on. Secondary sources are marked as such. The claim register and all sources can be downloaded.',
     },
     disclosure:
