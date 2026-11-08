@@ -237,6 +237,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'genva':                                   'genva',
   'strata':                                  'strata',
   'coil':                                    'coil',
+  'phone-harness':                           'phone-harness',
   'kruvo':                                   'kruvo',
   'localghost':                              'localghost',
   'llm-studio-go':                           'llm-studio-go',

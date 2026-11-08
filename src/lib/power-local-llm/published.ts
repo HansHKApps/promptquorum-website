@@ -592,6 +592,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'strata-review',
   // Coil review (Autonomous agents, Mac agent harness) — 2026-10-24
   'coil-review',
+  'phone-harness-review',
   // Kruvo review (Autonomous agents, desktop AI coworker for Windows and macOS) — 2026-10-24
   'kruvo-review',
   // LocalGhost review (personal assistants, self-hosted) — 2026-10-24
