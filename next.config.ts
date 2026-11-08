@@ -61,6 +61,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // English lives at the root, never under /en (PATH_PREFIX_LANGS has no 'en'). /en and /en/... used to 404;
+      // anyone who guesses or links the prefixed form lands on the real page instead (2026-11-08).
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
       // Year dropped from the slug (2026-11-02): local-ai-agents-with-mcp-2026 -> local-ai-agents-with-mcp (all 9 locales).
       {
         source: '/power-local-llm/local-ai-agents-with-mcp-2026',
