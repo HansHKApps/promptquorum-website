@@ -11,7 +11,7 @@ export type AskStreamEvent =
   | { t: 'category'; v: string }
   | { t: 'titles'; v: Record<string, string> }
   | { t: 'followups'; v: string[] }
-  | { t: 'done'; category: string; tools: string[]; topics?: { apps: string[]; dirCats: string[] }; overview?: SiteOverview }
+  | { t: 'done'; category: string; qlang?: string; tools: string[]; topics?: { apps: string[]; dirCats: string[] }; overview?: SiteOverview }
   | { t: 'error'; code: AskErrorCode }
 
 const CLIENT_TIMEOUT_MS = 70_000

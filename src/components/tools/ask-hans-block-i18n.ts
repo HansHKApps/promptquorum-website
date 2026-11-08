@@ -272,6 +272,17 @@ const ASK_UI = {
     ar: 'لغات الأسئلة',
     ko: '질문 언어',
   },
+  langNotOnSite: {
+    en: 'not a site language',
+    de: 'keine Seitensprache',
+    fr: 'pas une langue du site',
+    ja: 'サイト非対応言語',
+    zh: '网站未提供此语言',
+    es: 'no es un idioma del sitio',
+    pt: 'não é um idioma do site',
+    ar: 'ليست من لغات الموقع',
+    ko: '사이트 미지원 언어',
+  },
   breakdownNote: {
     en: 'The topic is one label per question. Tools, apps and categories show what Ask Hans looked up, so one question can appear in several rows and the tables do not add up to the number of questions. The tables start on the day counting began.',
     de: 'Das Thema ist ein Label pro Frage. Werkzeuge, Apps und Kategorien zeigen, was Ask Hans nachgeschlagen hat; eine Frage kann daher in mehreren Zeilen erscheinen, und die Tabellen ergeben nicht die Zahl der Fragen. Die Tabellen beginnen an dem Tag, an dem die Zählung startete.',

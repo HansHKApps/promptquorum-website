@@ -269,7 +269,7 @@ export function AskHansRoot() {
           const empty = !acc.trim()
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : { overview: ev.overview }) }))
           if (!empty && consentValue?.value === 'yes') {
-            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, topics: ev.topics, lang })
+            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, topics: ev.topics, lang: ev.qlang ?? lang })
           }
         } else if (ev.t === 'error') {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, error: ev.code }))
@@ -661,6 +661,16 @@ export function AskHansRoot() {
                     )}
                   </>
                 )}
+                {!isDesktop && (
+                  <div className="space-y-1.5 pt-2 text-center text-[10px] leading-snug text-muted-foreground">
+                    {consent && !consentOpen && (
+                      <button type="button" onClick={withdrawConsent} className="text-[11px] underline underline-offset-2 hover:text-foreground">
+                        {tx.withdraw}
+                      </button>
+                    )}
+                    <p>© {new Date().getFullYear()} PromptQuorum. {tx.copyright}</p>
+                  </div>
+                )}
               </div>
 
               {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && (
@@ -674,13 +684,13 @@ export function AskHansRoot() {
               {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
 
               <form
-                className="flex-shrink-0 border-t border-border bg-white p-2.5"
+                className="flex-shrink-0 border-t border-border bg-white px-2.5 pb-2 pt-1.5 md:p-2.5"
                 onSubmit={(e) => {
                   e.preventDefault()
                   submit(draft)
                 }}
               >
-                <p className="mb-1.5 rounded-md border border-border bg-muted px-2.5 py-1.5 text-xs font-medium leading-snug text-foreground" role="note">
+                <p className={isDesktop ? 'mb-1.5 rounded-md border border-border bg-muted px-2.5 py-1.5 text-xs font-medium leading-snug text-foreground' : 'mb-1 text-[11px] leading-tight text-muted-foreground'} role="note">
                   {tx.aiNotice}
                 </p>
                 <div className="flex items-end gap-2">
@@ -714,13 +724,15 @@ export function AskHansRoot() {
                 {draft.length > ASK_HANS_LIMITS.maxMessageChars && (
                   <p className="mt-1 text-xs font-medium text-destructive" role="alert">{tx.errors.tooLong(ASK_HANS_LIMITS.maxMessageChars)} ({tx.charCount(draft.length, ASK_HANS_LIMITS.maxMessageChars)})</p>
                 )}
-                <p className="mt-1.5 flex flex-wrap items-center justify-end gap-x-3 text-[11px] leading-snug text-muted-foreground">
-                  {consent && !consentOpen && (
-                    <button type="button" onClick={withdrawConsent} className="underline underline-offset-2 hover:text-foreground">
-                      {tx.withdraw}
-                    </button>
-                  )}
-                </p>
+                {isDesktop && (
+                  <p className="mt-1.5 flex flex-wrap items-center justify-end gap-x-3 text-[11px] leading-snug text-muted-foreground">
+                    {consent && !consentOpen && (
+                      <button type="button" onClick={withdrawConsent} className="underline underline-offset-2 hover:text-foreground">
+                        {tx.withdraw}
+                      </button>
+                    )}
+                  </p>
+                )}
               </form>
             </div>
 

@@ -156,6 +156,8 @@ export async function POST(req: NextRequest): Promise<Response> {
     const toolsUsed: string[] = []
     const topics: AnswerTopics = { apps: [], dirCats: [] }
     let category = 'default'
+    // Language the visitor actually wrote in (reported by the model, so it also covers languages the site lacks).
+    let questionLang: string = lang
     let toolCalls = 0
     let emittedText = false
     let spoken = ''
@@ -247,6 +249,7 @@ export async function POST(req: NextRequest): Promise<Response> {
           const outcome = await runTool(use.name, use.input, { lang })
           if (outcome.pages) Object.assign(pageTitles, outcome.pages)
           if (outcome.topics) mergeTopics(topics, outcome.topics)
+          if (outcome.language) questionLang = outcome.language
           if (outcome.category) {
             category = outcome.category
             send({ t: 'category', v: category })
@@ -274,7 +277,7 @@ export async function POST(req: NextRequest): Promise<Response> {
       }
       if (spoken.trim() && parsed.stats) await bumpTotals('answers')
       const overview = spoken.trim() ? await getSiteOverview(pageLang).catch(() => undefined) : undefined
-      send({ t: 'done', category, tools: [...new Set(toolsUsed)], topics, overview })
+      send({ t: 'done', category, qlang: questionLang, tools: [...new Set(toolsUsed)], topics, overview })
     } catch (err) {
       console.error('[askhans] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
       send({ t: 'error', code: classify(err) })

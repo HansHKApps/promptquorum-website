@@ -248,10 +248,13 @@ export function buildToolDefinitions(): Anthropic.Tool[] {
   defs.push({
     name: SET_CATEGORY_TOOL,
     description:
-      'Call exactly once per answer with the one category key that best matches the topic of the visitor\'s question, or "default" if unsure or off-topic. Drives the picture and link cards next to the chat.',
+      'Call exactly once per answer with the one category key that best matches the topic of the visitor\'s question, or "default" if unsure or off-topic. Drives the picture and link cards next to the chat. Also pass `language`: the ISO 639-1 code (two lowercase letters, e.g. "ru", "it", "tr") of the language the visitor\'s latest message is written in, even when it is not one of the site languages.',
     input_schema: {
       type: 'object',
-      properties: { key: { type: 'string', enum: ASK_HANS_CATEGORIES.map((c) => c.key) } },
+      properties: {
+        key: { type: 'string', enum: ASK_HANS_CATEGORIES.map((c) => c.key) },
+        language: { type: 'string', description: 'ISO 639-1 code of the language the visitor wrote in, e.g. ru, it, tr, de' },
+      },
       required: ['key'],
     },
   })
@@ -263,6 +266,8 @@ export interface ToolOutcome {
   isError: boolean
   /** set when the call was set_category with a valid key */
   category?: string
+  /** set when set_category carried a valid two-letter language code (the language the visitor wrote in) */
+  language?: string
   /** page path → page title, taken from the tool result (used for descriptive link cards) */
   pages?: Record<string, string>
   /** whitelisted directory apps / categories this call looked up (see topics.ts) */
@@ -290,9 +295,10 @@ function truncate(text: string): string {
 
 export async function runTool(name: string, input: unknown, ctx: ToolContext): Promise<ToolOutcome> {
   if (name === SET_CATEGORY_TOOL) {
-    const key = (input as { key?: unknown } | null)?.key
-    const valid = isCategoryKey(key) ? key : 'default'
-    return { content: `category set to ${valid}`, isError: false, category: valid }
+    const args = input as { key?: unknown; language?: unknown } | null
+    const valid = isCategoryKey(args?.key) ? args.key : 'default'
+    const language = typeof args?.language === 'string' && /^[a-z]{2}$/i.test(args.language.trim()) ? args.language.trim().toLowerCase() : undefined
+    return { content: `category set to ${valid}`, isError: false, category: valid, ...(language ? { language } : {}) }
   }
   const def = TOOLS[name]
   if (!def) return { content: `Unknown tool ${name}`, isError: true }
