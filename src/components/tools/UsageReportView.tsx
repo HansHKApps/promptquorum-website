@@ -9,6 +9,7 @@ import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import { ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
+import { ASK_LANGS as SITE_LANGS } from '@/lib/askhans/detect-lang'
 import type { EngagementStats, FeedbackStats, ReportRow, ReportWindow, UsageReportBase } from '@/lib/usage/report-types'
 import { DURATION_BUCKETS, DURATION_MIDPOINT_S, type DurationBucket } from '@/lib/askhans/engagement'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
@@ -290,7 +291,7 @@ export function UsageReportView({ lang, report, kind }: { lang: Language; report
           label={(k) => CATEGORY_SUB_LABEL[k as CategorySubKey]?.[lang] ?? k}
           lang={lang}
         />
-        <BreakdownTable heading={tAsk('langsHeading', lang)} firstCol={tAsk('langsHeading', lang)} rows={report.langs} label={(k) => k.toUpperCase()} mono lang={lang} />
+        <BreakdownTable heading={tAsk('langsHeading', lang)} firstCol={tAsk('langsHeading', lang)} rows={report.langs} label={(k) => ((SITE_LANGS as readonly string[]).includes(k) ? k.toUpperCase() : `${k.toUpperCase()} · ${tAsk('langNotOnSite', lang)}`)} mono lang={lang} />
       </div>
       <p className="mt-4 max-w-[720px] text-xs leading-relaxed text-text-secondary">
         {mcp && report.breakdownSince ? `${tAsk('since', lang)} ${formatDisplayDate(report.breakdownSince, lang)}. ` : ''}
