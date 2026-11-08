@@ -30,7 +30,7 @@ import { slugifySectionId } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 import { getCalloutLabel } from '@/lib/calloutLabels'
-import { promoMidArticleIndex } from '@/lib/promo/config'
+import { bannerMidIndex } from '@/lib/affiliate-banners/lookup'
 import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 
 interface Props {
@@ -1041,7 +1041,7 @@ function BalconySolarPostContent({ slug, lang, articleData, availableLangs }: Pr
         <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             const entries = Object.entries(article.sections).filter(([k]) => k !== tldrKey)
-            const mid = promoMidArticleIndex(entries.length)
+            const mid = bannerMidIndex(entries.length)
             const hasRelated = entries.some(([k]) => k === 'relatedReading')
             return (
               <>

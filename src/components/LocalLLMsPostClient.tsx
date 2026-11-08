@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { bannerMidIndex } from '@/lib/affiliate-banners/lookup'
 import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 import { promoMidArticleIndex } from '@/lib/promo/config'
 import { ClusterBanner } from '@/components/ClusterBanner'
@@ -1164,6 +1165,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
           {(() => {
             const entries = Object.entries(article.sections).filter(([k]) => k !== tldrKey)
             const mid = promoMidArticleIndex(entries.length)
+            const bmid = bannerMidIndex(entries.length)
             const hasRelated = entries.some(([k]) => k === 'relatedReading')
             return (
               <>
@@ -1179,7 +1181,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
                       {directoryFunnel && key === 'relatedReading' && <DirectoryBlock data={directoryFunnel} position="end" />}
                       {sectionEl}
                       {i === mid && <PilotPromoSlot at="P2" />}
-                      {i === mid && <AffiliateBannerSlot at="AP2" />}
+                      {i === bmid && <AffiliateBannerSlot at="AP2" />}
                     </Fragment>
                   )
                 })}

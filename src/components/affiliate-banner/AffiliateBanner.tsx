@@ -47,19 +47,19 @@ function OfferBlock({ offer, locale, count, compare, played, onClick }: OfferBlo
   return (
     <div className={compare ? 'flex flex-col gap-3 rounded-xl bg-black/25 p-4 ring-1 ring-white/20' : 'flex flex-col gap-4'}>
       <div className="flex items-start gap-4">
-        <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-hub-orange shadow-lg sm:h-[72px] sm:w-[72px] ${played ? 'motion-safe:animate-aff-icon-pop' : ''}`}>
+        <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-hub-orange shadow-lg sm:h-[72px] sm:w-[72px] ${played ? 'motion-safe:animate-aff-icon-pop' : ''}`}>
           <CategoryIcon category={offer.category} />
         </div>
         <div className="min-w-0 flex-1">
           {compare && copy.bestFor && (
             <span className="mb-1 inline-block rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">{copy.bestFor}</span>
           )}
-          <p className="text-xl font-extrabold leading-tight sm:text-2xl">{copy.headline}</p>
-          <p className="mt-1.5 text-sm leading-relaxed text-white sm:text-base">{copy.reason}</p>
+          <p className="text-lg font-extrabold leading-tight sm:text-2xl">{copy.headline}</p>
+          <p className={`mt-1.5 text-sm leading-relaxed text-white sm:text-base ${compare ? 'hidden sm:block' : ''}`}>{copy.reason}</p>
           {anyPrice?.priceRange && <span className="mt-2 inline-block rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-semibold">{anyPrice.priceRange}</span>}
         </div>
       </div>
-      <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+      <div className="flex flex-wrap gap-2">
         {links.map((link, i) => {
           const primary = i === 0
           const label = ui.cta.replace('{vendor}', link.vendor)
@@ -70,8 +70,10 @@ function OfferBlock({ offer, locale, count, compare, played, onClick }: OfferBlo
               target="_blank"
               rel={merchantRel(link)}
               onClick={() => onClick(offer, link, i + 1)}
-              className={`group/cta inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-extrabold transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:hover:scale-[1.03] ${
-                primary ? 'bg-white text-hub-indigo-ink shadow-lg hover:bg-white/95' : 'border-2 border-white/80 bg-white/10 text-white hover:bg-white/20'
+              className={`group/cta inline-flex items-center justify-center gap-2 rounded-xl px-4 font-extrabold transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:hover:scale-[1.03] sm:px-5 ${
+                primary
+                  ? 'w-full bg-white py-3 text-base text-hub-indigo-ink shadow-lg hover:bg-white/95 sm:w-auto'
+                  : 'basis-[calc(50%-0.25rem)] border-2 border-white/80 bg-white/10 py-2 text-sm text-white hover:bg-white/20 sm:basis-auto sm:py-3 sm:text-base'
               }`}
             >
               <StoreIcon />
@@ -158,7 +160,7 @@ export function AffiliateBanner({ plan, locale }: { plan: BannerPlan; locale: Ba
       data-aff-placement={plan.placement}
       aria-label={ui.label}
       style={{ ['--aff-h' as string]: `${hMobile}px`, ['--aff-h-sm' as string]: `${hDesktop}px` }}
-      className="relative my-8 flex min-h-[var(--aff-h)] flex-col justify-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br from-hub-indigo to-hub-indigo-ink p-5 text-white shadow-xl ring-1 ring-hub-indigo-edge motion-reduce:ring-2 motion-reduce:ring-white/80 sm:min-h-[var(--aff-h-sm)] sm:p-7"
+      className="relative my-8 flex min-h-[var(--aff-h)] flex-col justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-hub-indigo to-hub-indigo-ink p-4 text-white shadow-xl ring-1 ring-hub-indigo-edge motion-reduce:ring-2 motion-reduce:ring-white/80 sm:min-h-[var(--aff-h-sm)] sm:p-7"
     >
       {/* One-shot effects (transform/opacity only). Hidden from assistive tech, never block clicks. */}
       <span aria-hidden="true" className={`pointer-events-none absolute inset-0 rounded-2xl opacity-0 ring-2 ring-white/80 ${played ? 'motion-safe:animate-aff-glow' : ''}`} />

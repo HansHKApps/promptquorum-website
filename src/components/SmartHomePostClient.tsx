@@ -29,7 +29,7 @@ import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
-import { promoMidArticleIndex } from '@/lib/promo/config'
+import { bannerMidIndex } from '@/lib/affiliate-banners/lookup'
 import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 
@@ -1126,7 +1126,7 @@ function SmartHomePostContent({ slug, lang, articleData, availableLangs }: Props
         <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             const entries = Object.entries(article.sections).filter(([k]) => k !== tldrKey)
-            const mid = promoMidArticleIndex(entries.length)
+            const mid = bannerMidIndex(entries.length)
             const hasRelated = entries.some(([k]) => k === 'relatedReading')
             return (
               <>

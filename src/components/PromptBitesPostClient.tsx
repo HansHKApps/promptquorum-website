@@ -16,7 +16,7 @@ import type { LLMSection } from '@/lib/local-llms/types'
 import type { PromptBiteArticle } from '@/lib/prompt-bites/types'
 import { renderHubTitle } from '@/components/article-skin/HubTitle'
 import { resolveSkin, getSkinClasses, type ArticleSkin } from '@/components/article-skin/skin'
-import { promoMidArticleIndex } from '@/lib/promo/config'
+import { bannerMidIndex } from '@/lib/affiliate-banners/lookup'
 import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 
 interface Props {
@@ -684,7 +684,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
         {bodySections.map(([sectionKey, section], i) => (
           <Fragment key={sectionKey}>
             <BodySection section={section} lang={lang} />
-            {i === promoMidArticleIndex(bodySections.length) && <AffiliateBannerSlot at="AP2" />}
+            {i === bannerMidIndex(bodySections.length) && <AffiliateBannerSlot at="AP2" />}
           </Fragment>
         ))}
 

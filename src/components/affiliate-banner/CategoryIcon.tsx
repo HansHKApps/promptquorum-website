@@ -17,7 +17,7 @@ const PATHS: Record<BannerCategory, React.ReactNode> = {
   other: (<path d="M21 8l-9-5-9 5v8l9 5 9-5V8zM3 8l9 5 9-5M12 13v8" />),
 }
 
-export function CategoryIcon({ category, className = 'h-8 w-8 sm:h-10 sm:w-10' }: { category: BannerCategory; className?: string }) {
+export function CategoryIcon({ category, className = 'h-7 w-7 sm:h-10 sm:w-10' }: { category: BannerCategory; className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
       {PATHS[category]}

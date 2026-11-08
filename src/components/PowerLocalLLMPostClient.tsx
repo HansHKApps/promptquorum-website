@@ -10,6 +10,7 @@
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { bannerMidIndex } from '@/lib/affiliate-banners/lookup'
 import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 import { promoMidArticleIndex } from '@/lib/promo/config'
 import { useState, useRef, useEffect, Fragment } from 'react'
@@ -1828,6 +1829,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
 
             const visibleKeys = orderedEntries.map(([k]) => k).filter((k) => k !== tldrKey && !directorySlot?.sectionKeys.includes(k))
             const mid = promoMidArticleIndex(visibleKeys.length)
+            const bmid = bannerMidIndex(visibleKeys.length)
             const hasRelated = visibleKeys.includes('relatedReading')
 
             const rendered = orderedEntries.map(([key, section]) => {
@@ -1864,7 +1866,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                     key === 'relatedReading' ? <AffiliateBannerSlot key={`${key}-ap3`} at="AP3" /> : null,
                     el,
                     vi !== -1 && vi === mid ? <PilotPromoSlot key={`${key}-p2`} at="P2" /> : null,
-                    vi !== -1 && vi === mid ? <AffiliateBannerSlot key={`${key}-ap2`} at="AP2" /> : null,
+                    vi !== -1 && vi === bmid ? <AffiliateBannerSlot key={`${key}-ap2`} at="AP2" /> : null,
                   ]
                 })}
                 {!hasRelated && <PilotPromoSlot at="P3" />}
