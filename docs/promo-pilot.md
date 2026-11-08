@@ -12,10 +12,19 @@ Owner: Hans. Brief: `handoffs/promo-slots-pilot-brief-2026-11-07.md` (v3). Confi
 Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Run length: 21 days (brief). Deploy stays on demand.
 
 ## What is measured
-**Umami events** (props on every event: `target`, `placement`, `variant`, `cluster`, `locale`, `page`, `device`):
-- `promo_view`: once per page view when >= 50% of the slot is visible for >= 1 s.
-- `promo_click`: CTA click, all four targets.
-- `promo_open`: Ask Hans / Power Mode window actually opened by a slot (props `target`, `placement`, `source`, `cluster`, `page`, `device`). Counted for every visitor, whatever their Ask Hans consent choice.
+**Umami events** (all anonymous and cookieless like the rest of the site's Umami setup; no personal data, no free text, no new cookies, no new browser storage):
+
+| Event | When | Props |
+|---|---|---|
+| `promo_view` | once per page view when >= 50% of the slot is visible for >= 1 s | `target`, `placement`, `variant`, `cluster`, `locale`, `page`, `device` |
+| `promo_click` | CTA click, all four targets | same |
+| `promo_open` | Ask Hans / Power Mode window actually opened by a slot (not when already open); counted for every visitor, whatever their Ask Hans consent choice | `target`, `placement`, `source`, `cluster`, `locale`, `page`, `device` |
+| `ask_hans_question` (existing) | a question was submitted in Ask Hans | `source_page` |
+| `power_report_started` | a Power Mode report was started | `process` (fixed id), `source_page`, `locale` |
+| `power_report_completed` | a report finished and was shown | same |
+| `directory_app_view` | an app drawer was opened in the Directory | `app` (public tool slug), `via` (only if the URL has `?via=promo_<target>_<placement>`), `referrer_path` (same-site path only, no query), `source_page`, `locale` |
+
+`source_page` is the full path including the locale prefix (`/de/local-llms/...`). Retention and first-touch tracking are NOT enabled (owner decision).
 
 **Downstream**
 | Target | Where to read it |
@@ -24,17 +33,24 @@ Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Ru
 | Directory / MCP (links) | Link carries `?via=promo_<target>_<placement>` (e.g. `via=promo_directory_p3`). In Umami filter pageviews by URL query `via`. Umami normally records the landing URL with its query string (not yet verified on this proxy setup). |
 | MCP server hits | Server-side hits on `/api/mcp` and `/mcp.json`: NOT verified as accessible. Check Vercel runtime logs before relying on it. |
 
-## Metrics
+## Metrics (computed by `scripts/promo-pilot-report.mjs`, per page group = an English path plus its 8 locale versions)
 | Metric | Definition |
 |---|---|
-| Slot CTR | `promo_click / promo_view` by target x placement x locale x device |
-| Open-to-use | promo opens (`open_src:*`) that lead to a question or report / promo opens (daily-level estimate, see above) |
-| Ask Hans lift | opens per day in the pilot vs. the baseline (~17/day over the 7 days to 2026-11-07, 122 opens since 2026-11-01). State the baseline window used. |
-| Downstream rate | Directory/MCP sessions with `via=promo_*` / `promo_view` |
-| Page health | engagement and Core Web Vitals, pilot vs. control |
-| SEO health | GSC clicks/impressions, pilot vs. control, 28 days before vs. after |
+| Reach | `promo_view` / page views of the treatment pages |
+| CTR | `promo_click` / `promo_view` |
+| Open rate | `promo_open` / `promo_click` (Ask Hans, Power Mode) |
+| Usage per click, usage per view | usage events on the treatment pages / clicks, / slot views. Usage = `ask_hans_question` (Ask Hans), `power_report_started` (Power Mode), `directory_app_view` (Directory). MCP has no usage event on the site (it happens in the visitor's own AI): MCP is judged on reach and CTR only. |
+| **Headline: incremental adoption** | usage events per 1,000 page views on treatment pages minus the matched control pages, in the pilot window, and the same difference over the 28 days before launch, and their difference (before/after). 95% intervals by bootstrap over matched page-group pairs (the cluster is the pair). Intervals are refused with fewer than 3 pairs. |
+| Ask Hans lift | `promo_open` per day vs. the ~17/day baseline (state the window; the Redis counters behind that baseline are consent-only) |
+| Page health, SEO health | not in the script: engagement / Core Web Vitals, and Search Console clicks and impressions pilot vs. control (28 days before vs. after). Check before scaling a winner. |
 
-Report by locale only where a cell has >= 100 views; pool and flag the rest.
+Report by locale only where a cell has >= 100 slot views; the rest is pooled and flagged.
+
+**Winner rule** (configurable: `--min-views 1000 --min-clicks 20`): a cell needs at least that many slot views and clicks. MCP and Power Mode are judged pooled over placements; Ask Hans and Directory by placement. A cell is a WINNER if its CTR is above the median of the eligible cells AND its incremental-adoption interval is above 0. Otherwise it is "eligible, not a winner", "CTR above median but adoption not proven", or "insufficient data". (ASSUMPTION: derived from the brief's decision rule plus the v4 task text; the v4 doc itself could not be read.)
+
+## Getting the report
+- **Weekly, automatic:** `.github/workflows/promo-pilot-weekly-report.yml` runs every Friday 06:17 UTC until 2026-12-05 and posts the report as a comment on the issue "Promo pilot weekly report" (plus job summary and artifact). It FAILS on purpose without the secret `UMAMI_API_KEY` (Umami Cloud > Settings > API keys, then GitHub > Settings > Secrets > Actions). The Umami API calls are unverified (no key was available): if a request fails, the log names the endpoint.
+- **By hand:** `UMAMI_API_KEY=... npm run promo:report -- --umami --out report.md`, or from an export: `npm run promo:report -- --input counts.json` (shape in the script header). Tests on synthetic data with a planted effect: `npm run test:promo-report`.
 
 ## Controls
 60 matched article groups without a slot: `PILOT_CONTROLS` in `src/lib/promo/pilot.ts` (paired by cluster and impressions). The pilot has 65 groups: 60 articles (15 per placement P1-P4) + the 5 hubs. It started at 25 groups and was tripled on request (hubs cannot be tripled, there are only 5).

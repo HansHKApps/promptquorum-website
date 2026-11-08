@@ -1,0 +1,94 @@
+name: Promo pilot report (weekly)
+
+# Runs every Friday while the promo slots pilot is running (launch 2026-11-07, 21 days) plus one closing week.
+# Builds the pilot report from Umami (reach, CTR, open rate, usage per click/view, incremental adoption vs matched
+# controls, and the same difference over the 28 days before launch) and posts it as a comment on ONE tracking issue
+# ("Promo pilot weekly report"), so GitHub notifies the repo watchers. The full report is also in the job summary and
+# attached as an artifact.
+#
+# One-time setup (a person must do this; Claude cannot create repo secrets):
+#   1. Umami Cloud -> Settings -> API keys -> create a key.
+#   2. GitHub repo -> Settings -> Secrets and variables -> Actions -> New secret: UMAMI_API_KEY.
+#   Optional: UMAMI_WEBSITE_ID (defaults to the site's id) and UMAMI_API_URL (defaults to https://api.umami.is/v1).
+# Without the key the job FAILS on purpose (a silent skip would hide that no report is being produced).
+#
+# The Umami API calls in scripts/promo-pilot-report.mjs are UNVERIFIED (written without an API key). If a request
+# fails, the job log names the endpoint; fix the adapter there. File mode (--input) is covered by npm run test:promo-report.
+#
+# Not run from here: deploys stay on demand; this workflow only reads Umami and writes an issue comment.
+
+on:
+  schedule:
+    - cron: '17 6 * * 5'
+  workflow_dispatch: {}
+
+concurrency:
+  group: promo-pilot-weekly-report
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop after the pilot (end of window plus one week)
+        id: window
+        run: |
+          if [ "$(date -u +%F)" \> "2026-12-05" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Pilot window is over (ended 2026-11-28); no more weekly reports."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout code
+        if: steps.window.outputs.skip != 'true'
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        if: steps.window.outputs.skip != 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Install dependencies (jiti only is needed, scripts are skipped)
+        if: steps.window.outputs.skip != 'true'
+        run: npm ci --ignore-scripts
+
+      - name: Check the report logic still passes its tests
+        if: steps.window.outputs.skip != 'true'
+        run: node scripts/test-promo-report.mjs
+
+      - name: Build the report from Umami
+        if: steps.window.outputs.skip != 'true'
+        env:
+          UMAMI_API_KEY: ${{ secrets.UMAMI_API_KEY }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          UMAMI_API_URL: ${{ secrets.UMAMI_API_URL }}
+        run: |
+          node scripts/promo-pilot-report.mjs --umami --out promo-report.md --json promo-report.json
+          cat promo-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report
+        if: steps.window.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: promo-pilot-report
+          path: |
+            promo-report.md
+            promo-report.json
+
+      - name: Post to the tracking issue
+        if: steps.window.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Promo pilot weekly report"
+          N=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$N" ]; then
+            N=$(gh issue create --title "$TITLE" --body "Automatic weekly reports for the promo slots pilot. One comment per run." | sed 's#.*/##')
+          fi
+          gh issue comment "$N" --body-file promo-report.md
