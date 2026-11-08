@@ -28,7 +28,7 @@ interface Props {
   onPromoClose?: () => void
 }
 
-const CARD = 'group flex items-center gap-2.5 rounded-lg border border-border bg-white shadow-sm transition-colors hover:border-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'
+const CARD = 'group flex items-center gap-2 rounded-md border border-border bg-white shadow-sm transition-colors hover:border-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'
 
 function Arrow() {
   return <AskIcon name="ArrowRight" className="h-4 w-4 flex-shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary rtl:-scale-x-100" />
@@ -38,13 +38,13 @@ function LinkCard({ link, categoryKey, onLinkClick, compact }: { link: AskHansLi
   const lang = useAskLang()
   const text = useAskCopy().categories[categoryKey]?.links[link.id]
   return (
-    <Link href={localizeAskPath(link.url, lang)} onClick={() => onLinkClick(categoryKey, link)} className={`${CARD} ${compact ? 'w-56 flex-shrink-0 p-2' : 'p-2.5'}`}>
-      <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-secondary text-primary" aria-hidden="true">
-        <AskIcon name={link.icon} className="h-4 w-4" />
+    <Link href={localizeAskPath(link.url, lang)} onClick={() => onLinkClick(categoryKey, link)} className={`${CARD} ${compact ? 'w-52 flex-shrink-0 p-1.5' : 'p-1.5'}`}>
+      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded bg-secondary text-primary" aria-hidden="true">
+        <AskIcon name={link.icon} className="h-3.5 w-3.5" />
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block truncate text-[13px] font-semibold text-foreground">{text?.title ?? link.title}</span>
-        <span className="block truncate text-[12px] text-muted-foreground">{text?.description ?? link.description}</span>
+        <span className="block truncate text-[12px] font-semibold text-foreground">{text?.title ?? link.title}</span>
+        <span className="block truncate text-[11px] text-muted-foreground">{text?.description ?? link.description}</span>
       </span>
       <Arrow />
     </Link>
@@ -54,11 +54,11 @@ function LinkCard({ link, categoryKey, onLinkClick, compact }: { link: AskHansLi
 function RelatedCard({ link, onClick, compact }: { link: RelatedLink; onClick: (href: string) => void; compact?: boolean }) {
   const old = !link.current
   return (
-    <Link href={link.href} onClick={() => onClick(link.href)} className={`${CARD} ${compact ? 'w-56 flex-shrink-0 p-2' : 'p-2.5'} ${old ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : ''}`}>
-      <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-secondary text-primary" aria-hidden="true">
-        <AskIcon name="Link2" className="h-4 w-4" />
+    <Link href={link.href} onClick={() => onClick(link.href)} className={`${CARD} ${compact ? 'w-52 flex-shrink-0 p-1.5' : 'p-1.5'} ${old ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : ''}`}>
+      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded bg-secondary text-primary" aria-hidden="true">
+        <AskIcon name="Link2" className="h-3.5 w-3.5" />
       </span>
-      <span className="min-w-0 flex-1 text-[13px] font-semibold leading-snug text-foreground line-clamp-2">{link.title}</span>
+      <span className="min-w-0 flex-1 text-[12px] font-semibold leading-snug text-foreground line-clamp-2">{link.title}</span>
       <Arrow />
     </Link>
   )
@@ -72,9 +72,9 @@ function HideButton({ onHide }: { onHide: () => void }) {
       onClick={onHide}
       aria-label={tx.panel.panelHide}
       title={tx.panel.panelHide}
-      className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+      className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md border border-border bg-white text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
     >
-      <AskIcon name="PanelRightClose" className="h-4 w-4 rtl:-scale-x-100" />
+      <AskIcon name="X" className="h-4 w-4" />
     </button>
   )
 }
@@ -115,13 +115,13 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
   }
 
   return (
-    <aside aria-label={`${tx.panelLabelPrefix}: ${label}`} className="flex min-h-0 flex-col gap-2 border-s border-border bg-muted/40 p-3">
+    <aside aria-label={`${tx.panelLabelPrefix}: ${label}`} className="flex min-h-0 flex-col gap-1.5 border-s border-border bg-muted/40 p-2">
       <div className="flex items-center gap-2">
         <p className="min-w-0 flex-1 truncate text-[11px] font-semibold uppercase tracking-wide text-primary">{label}</p>
         <HideButton onHide={onHide} />
       </div>
       {/* Top third: topic picture, full width. Inactive in v1 — deliberately no handler, cursor or hover state. */}
-      <div className="h-[33%] max-h-48 min-h-[88px] flex-shrink-0 overflow-hidden rounded-lg" style={{ backgroundColor: 'hsl(var(--hero-from))' }}>
+      <div className="h-[22%] max-h-28 min-h-[64px] flex-shrink-0 overflow-hidden rounded-lg" style={{ backgroundColor: 'hsl(var(--hero-from))' }}>
         <img src={promo ? promoImage(lang) : cat.image} alt={promo ? tx.promo.imageAlt : cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
       </div>
       {promo && onPromoClose && <PromoCard onClose={onPromoClose} />}

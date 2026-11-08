@@ -72,7 +72,8 @@ export function AskHansRoot() {
   const [streaming, setStreaming] = useState(false)
   const [draft, setDraft] = useState('')
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
-  const [showPanel, setShowPanel] = useState(true)
+  // Phones start with the topic panel closed (a heart button opens it); desktop shows the slim side panel.
+  const [showPanel, setShowPanel] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches)
   const [showHistory, setShowHistory] = useState(true)
   /** the 2-minute promo card replaces the topic picture (once per visit) */
   const [promo, setPromo] = useState(false)
@@ -589,8 +590,8 @@ export function AskHansRoot() {
                       onClick={() => setShowPanel(true)}
                       className="flex items-center gap-1.5 rounded-md px-1.5 py-1 text-[12px] font-medium text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
                     >
-                      <AskIcon name="PanelRightOpen" className="h-3.5 w-3.5 rtl:-scale-x-100" />
-                      {tx.panel.panelShow}
+                      <AskIcon name={isDesktop ? 'PanelRightOpen' : 'Heart'} className={`h-3.5 w-3.5 ${isDesktop ? 'rtl:-scale-x-100' : 'text-primary'}`} />
+                      <span className={isDesktop ? '' : 'sr-only'}>{tx.panel.panelShow}</span>
                     </button>
                   )}
                 </div>
