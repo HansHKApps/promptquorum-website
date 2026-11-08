@@ -19,6 +19,11 @@ export function clusterFromPath(pathname: string): string {
   return rest.split('/').filter(Boolean)[0] ?? 'home'
 }
 
+/** Locale of a path: its /xx prefix, or 'en' (English has no prefix). */
+export function localeFromPath(pathname: string): string {
+  return LOCALE_PREFIX.exec(pathname)?.[0].slice(1) ?? 'en'
+}
+
 /** Same breakpoint as the Ask Hans window (ASK_HANS_WINDOW.mobileBreakpointPx). */
 function deviceKind(): 'mobile' | 'desktop' {
   try {
@@ -65,6 +70,7 @@ export function trackPromoOpen(source: string): void {
       placement: m[2].toUpperCase(),
       source,
       cluster: clusterFromPath(page),
+      locale: localeFromPath(page),
       page,
       device: deviceKind(),
     })

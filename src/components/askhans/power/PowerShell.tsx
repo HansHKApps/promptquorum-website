@@ -17,6 +17,7 @@ import { useAskCopy, useAskLang, localizeAskPath } from '../copy'
 import { AskIcon } from '../icons'
 import type { AskErrorCode, ConsentRecord } from '../types'
 import { logEvent, streamSolution } from '../useAskStream'
+import { trackUsage } from '@/lib/tracking/usage'
 import { ChoiceGroup } from './choices'
 import { usePowerCopy } from './copy'
 import type { ReportDoc } from './export/reportDoc'
@@ -226,6 +227,8 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
       setFileId(newFileId())
       setView({ k: 'run', process })
       let acc = ''
+      // Anonymous usage event (Umami): a report was started on this page. Process id only, never the answers.
+      trackUsage('power_report_started', { process })
       await streamSolution(
         { visitId: getVisitId(), lang, process, answers, stats: consent?.value === 'yes' },
         (ev) => {
@@ -240,6 +243,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             setOverview(ev.overview)
             if (!acc.trim()) setError('failed')
             else {
+              trackUsage('power_report_completed', { process })
               if (process === 'audit') setAuditReport(acc)
               setView({ k: 'report', process })
             }

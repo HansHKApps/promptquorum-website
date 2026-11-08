@@ -13,7 +13,7 @@
 // section renderer for this one slug) is a deliberately separate follow-up
 // step — this file only builds the UI in isolation.
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { McpConnectPanel } from './McpConnectPanel'
@@ -27,6 +27,7 @@ import { ActiveFilterChips } from './ActiveFilterChips'
 import { ToolCard } from './ToolCard'
 import { ToolTable } from './ToolTable'
 import { ToolDrawer } from './ToolDrawer'
+import { trackDirectoryAppView } from '@/lib/tracking/usage'
 import { HardwareProfileWidget } from './HardwareProfileWidget'
 import { SearchIcon, GridIcon, TableIcon, CloseIcon, ChevronRightIcon } from './icons'
 import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools } from './filters'
@@ -289,6 +290,14 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
   }
 
   const openTool = sorted.find((a) => a.slug === openSlug) ?? apps.find((a) => a.slug === openSlug) ?? null
+
+  // Anonymous usage event (Umami): an app drawer was opened (also when the page was opened with the app in the URL).
+  const lastViewedSlug = useRef<string | null>(null)
+  const openToolSlug = openTool?.slug ?? null
+  useEffect(() => {
+    if (openToolSlug && openToolSlug !== lastViewedSlug.current) trackDirectoryAppView(openToolSlug)
+    lastViewedSlug.current = openToolSlug
+  }, [openToolSlug])
   const visibleRows = view === 'cards' ? sorted.slice(0, shown) : sorted
   const remaining = sorted.length - shown
 
