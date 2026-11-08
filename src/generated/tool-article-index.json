@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 343,
+    "totalCount": 344,
     "capped": true
   },
   "llama.cpp": {
@@ -1601,6 +1601,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "phone-harness-review",
+        "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
+        "url": "/power-local-llm/phone-harness-review",
+        "dateModified": "2026-11-08",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "goose-review",
         "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
         "url": "/power-local-llm/goose-review",
@@ -1640,7 +1648,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Locally Uncensored": {
@@ -4945,6 +4953,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "phone-harness-review",
+        "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
+        "url": "/power-local-llm/phone-harness-review",
+        "dateModified": "2026-11-08",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "picoclaw-review",
         "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
         "url": "/power-local-llm/picoclaw-review",
@@ -4966,17 +4982,9 @@
         "url": "/power-local-llm/strata-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "Hermes Agent": {
@@ -5015,6 +5023,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "phone-harness-review",
+        "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
+        "url": "/power-local-llm/phone-harness-review",
+        "dateModified": "2026-11-08",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "tecadrisebot-review",
         "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
         "url": "/power-local-llm/tecadrisebot-review",
@@ -5046,7 +5062,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Msty Go": {
@@ -8846,9 +8862,17 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "phone-harness-review",
+        "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
+        "url": "/power-local-llm/phone-harness-review",
+        "dateModified": "2026-11-08",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Ypipe": {
@@ -9819,6 +9843,20 @@
         "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
         "url": "/power-local-llm/coil-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Phone Harness": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "phone-harness-review",
+        "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
+        "url": "/power-local-llm/phone-harness-review",
+        "dateModified": "2026-11-08",
         "tier": "about"
       }
     ],

@@ -939,6 +939,11 @@
     "urlSlug": "coil-review",
     "url": "/power-local-llm/coil-review"
   },
+  "phone-harness": {
+    "cluster": "power-local-llm",
+    "urlSlug": "phone-harness-review",
+    "url": "/power-local-llm/phone-harness-review"
+  },
   "kruvo": {
     "cluster": "power-local-llm",
     "urlSlug": "kruvo-review",

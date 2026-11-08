@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/phone-harness-review-hero-ja.webp',
     title: 'Phone Harness レビュー:コーディングエージェントでiPhoneやAndroidを操作する',
-    seoTitle: 'Phone Harness レビュー:iPhone・Android操作',,
+    seoTitle: 'Phone Harness レビュー:iPhone・Android操作',
     intro:
       'Phone Harnessは、Phone Harness Inc.が公開しているMITライセンスのコマンドラインツールです。公式ページによると、Claude CodeやCodexなどのコーディングエージェントが実機のiPhoneやAndroidをタップ・入力・スクロールでき、ホスト型のクラウドフォンも任意で利用できます。このレビューは、2026年11月8日に確認した提供元のサイト、プライバシーポリシー、リポジトリ、PyPIの掲載内容に基づいています。',
     metaDescription:
