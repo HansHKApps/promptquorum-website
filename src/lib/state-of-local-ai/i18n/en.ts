@@ -32,7 +32,7 @@ export const en: SolaStrings = {
   citeThisReport: 'Cite this report',
   citePlainLabel: 'Plain text',
   aboutThisReport: 'About this report',
-  founderLine: 'is the founder of PromptQuorum, based in Frankfurt, with more than 30 years of consulting and general management experience.',
+  founderLine: 'is the founder of PromptQuorum, based in Baden-Württemberg, Germany, with more than 30 years of consulting and general management experience.',
   methodPre: 'The method, labels, assumptions and sources are in the ',
   methodLink1: 'full evidence section',
   methodMid: ' above, which also exists as a ',

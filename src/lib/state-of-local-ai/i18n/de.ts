@@ -33,7 +33,7 @@ export const de: SolaStrings = {
   citePlainLabel: 'Nur Text',
   aboutThisReport: 'Über diesen Bericht',
   founderLine:
-    'ist Gründer von PromptQuorum mit Sitz in Frankfurt und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung.',
+    'ist Gründer von PromptQuorum mit Sitz in Baden-Württemberg und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung.',
   methodPre: 'Methode, Kennzeichnungen, Annahmen und Quellen stehen im ',
   methodLink1: 'vollständigen Belegabschnitt',
   methodMid: ' oben, der auch als ',
@@ -167,7 +167,7 @@ export const de: SolaStrings = {
         'Der Listenpreis des NVIDIA DGX Spark mit 128 GB stieg von $3,999 zum Marktstart auf $6,950 im Oktober 2026. Die Hardware, mit der lokale KI komfortabel läuft, wird teurer, nicht günstiger. (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
       ],
       pressAuthor:
-        'Hans Kuepper ist Gründer von PromptQuorum mit Sitz in Frankfurt und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung. Die neun Apps in diesem Bericht hat er selbst getestet.',
+        'Hans Kuepper ist Gründer von PromptQuorum mit Sitz in Baden-Württemberg und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung. Die neun Apps in diesem Bericht hat er selbst getestet.',
       pressMethod:
         'Die Zahlen stammen aus nummerierten Quellen; jede Behauptung trägt eine Belegkennzeichnung, und Annahmen nennen, wer sie trifft und worauf sie beruhen. Sekundärquellen sind als solche gekennzeichnet. Das Behauptungsregister und alle Quellen stehen zum Download bereit.',
     },

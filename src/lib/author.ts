@@ -38,6 +38,7 @@ export function authorPerson() {
     description: 'Independent developer building privacy-first tools for the AI era. Founder of PromptQuorum.',
     image: `${SITE_URL}/images/hans-kuepper.jpg`,
     worksFor: { '@id': ORGANIZATION_ID },
+    homeLocation: { '@type': 'Place' as const, name: 'Baden-Württemberg, Germany' },
     sameAs: [...AUTHOR_SAME_AS],
   }
 }

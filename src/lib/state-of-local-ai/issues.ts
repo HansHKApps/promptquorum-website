@@ -79,7 +79,7 @@ export const ISSUES: Issue[] = [
         'Local AI today has few chickens and even fewer eggs. In the September 2026 Steam survey, only 5.5% of systems had 24 GB of graphics memory, and four of the eight local AI apps I could score rated 2 or below on their core function. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
         'The list price of NVIDIA\u2019s 128 GB DGX Spark went from $3,999 at launch to $6,950 in October 2026. The hardware that makes local AI comfortable is getting more expensive, not cheaper. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
       ],
-      author: 'Hans Kuepper is the founder of PromptQuorum, based in Frankfurt, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself.',
+      author: 'Hans Kuepper is the founder of PromptQuorum, based in Baden-Württemberg, Germany, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself.',
       method: 'Figures come from numbered sources; each claim carries an evidence label, and assumptions name who makes them and what they rest on. Secondary sources are marked as such. The claim register and all sources can be downloaded.',
     },
     disclosure:

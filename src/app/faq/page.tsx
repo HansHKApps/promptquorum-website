@@ -103,7 +103,6 @@ export default async function FAQPage({ searchParams }: PageProps) {
             '@context': 'https://schema.org',
             ...authorPerson(),
             'knowsLanguage': ['German', 'English', 'French', 'Russian'],
-            'homeLocation': { '@type': 'Place', 'name': 'Baden-Württemberg, Germany' },
           }),
         }}
       />

@@ -31,7 +31,7 @@ export const zh: SolaStrings = {
   citeThisReport: '引用本报告',
   citePlainLabel: '纯文本',
   aboutThisReport: '关于本报告',
-  founderLine: '是 PromptQuorum 的创始人，常驻法兰克福，拥有 30 多年的咨询与综合管理经验。',
+  founderLine: '是 PromptQuorum 的创始人，常驻巴登-符腾堡州，拥有 30 多年的咨询与综合管理经验。',
   methodPre: '方法、标注、假设和来源见上方的',
   methodLink1: '完整证据部分',
   methodMid: '，它也以',
@@ -164,7 +164,7 @@ export const zh: SolaStrings = {
         'NVIDIA 128 GB 版 DGX Spark 的标价从发布时的 $3,999 涨到2026年10月的 $6,950。让本地 AI 用起来舒适的硬件越来越贵，而不是越来越便宜。（Hans Kuepper，《本地 AI 现状》，报告 01，Q4 2026）',
       ],
       pressAuthor:
-        'Hans Kuepper 是 PromptQuorum 的创始人，常驻法兰克福，拥有 30 多年的咨询与综合管理经验。本报告中的九款应用均由他亲自测试。',
+        'Hans Kuepper 是 PromptQuorum 的创始人，常驻巴登-符腾堡州，拥有 30 多年的咨询与综合管理经验。本报告中的九款应用均由他亲自测试。',
       pressMethod:
         '数据来自编号来源；每项论断都带有证据标签，假设会写明由谁提出、依据是什么。二手来源均已标明。论断登记表和全部来源均可下载。',
     },

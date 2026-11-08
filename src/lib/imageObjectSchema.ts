@@ -1,4 +1,5 @@
 import imageDimensions from '@/data/image-dimensions.json'
+import { AUTHOR_ID, AUTHOR_NAME } from '@/lib/author'
 import type { Lang } from '@/lib/i18n/constants'
 
 const BASE_URL = 'https://www.promptquorum.com'
@@ -37,7 +38,7 @@ export function buildImageObject(
     ...(dims?.width && dims?.height && { width: dims.width, height: dims.height }),
     ...(dims?.encodingFormat && { encodingFormat: dims.encodingFormat }),
     ...(opts.caption && { name: opts.caption.substring(0, 125), description: opts.caption }),
-    creator: { '@type': 'Person', name: 'Hans Kuepper' },
+    creator: { '@type': 'Person', '@id': AUTHOR_ID, name: AUTHOR_NAME },
     copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: BASE_URL },
     license: 'https://www.promptquorum.com/image-license',
     acquireLicensePage: 'https://www.promptquorum.com/image-license',
@@ -73,7 +74,7 @@ export function buildOgImageObject(slug: string, lang: Lang): Record<string, unk
     width: 1200,
     height: 675,
     encodingFormat: 'image/png',
-    creator: { '@type': 'Person', name: 'Hans Kuepper' },
+    creator: { '@type': 'Person', '@id': AUTHOR_ID, name: AUTHOR_NAME },
     copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: BASE_URL },
     license: 'https://www.promptquorum.com/image-license',
     acquireLicensePage: 'https://www.promptquorum.com/image-license',
