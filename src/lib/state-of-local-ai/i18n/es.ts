@@ -149,11 +149,11 @@ export const es: SolaStrings = {
         'Las búsquedas de "local ai" en Google tuvieron su máximo a finales de mayo de 2026 y a mediados de octubre estaban en la mitad de su nivel de un año antes; el informe señala que esta divergencia respecto a otros indicadores no puede explicarse con los datos.',
       ],
       disclosure:
-        'El autor fundó PromptQuorum, un sitio de contenidos y directorio sobre aplicaciones de IA local, y probó aplicaciones que figuran allí. Cada registro de prueba práctica, con sus etiquetas de evidencia y los propios errores del probador, está enlazado desde el archivo de evidencias. En las notas de prueba no consta ningún pago ni patrocinio.',
+        'El autor fundó PromptQuorum, un sitio de contenidos y directorio sobre aplicaciones de IA local, y probó aplicaciones que figuran allí. Cada registro de prueba práctica, con sus etiquetas de evidencia y los propios errores del probador, está enlazado desde el archivo de evidencias. En una aplicación (LU), el desarrollador intercambió mensajes con el probador antes y después de la prueba. En las notas de prueba no consta ningún pago ni patrocinio.',
       correction: 'Versión 1.0: primera publicación.',
       pressStats: [
         { figure: '5.5%', text: 'de los sistemas de la encuesta de hardware de Steam de septiembre de 2026 tenía 24 GB de memoria gráfica; el 27.2% tenía 16 GB.', source: 'Encuesta de hardware y software de Steam, septiembre de 2026 (Valve, página primaria)' },
-        { figure: '4 de 8', text: 'aplicaciones de IA local que el autor pudo puntuar obtuvieron 2 o menos en su función principal (se probaron nueve, ocho se puntuaron).', source: 'Pruebas prácticas del autor, 9-24 de octubre de 2026' },
+        { figure: '4 de 8', text: 'aplicaciones de IA local que el autor pudo puntuar obtuvieron 2 o menos en su función principal (se probaron nueve, ocho se puntuaron).', source: 'Pruebas prácticas del autor, 6-21 de octubre de 2026' },
         { figure: '9.67 GB', text: 'de memoria en uso en un Mac de 24 GB justo después del arranque, antes de cargar ningún modelo.', source: 'Pruebas prácticas del autor, Mac de 24 GB' },
         { figure: '$3,999 a $6,950', text: 'precio de lista del NVIDIA DGX Spark de 128 GB, del lanzamiento a octubre de 2026 ($4,699 en febrero de 2026).', source: 'Foro de desarrolladores de NVIDIA (primaria); Implicator.ai (secundaria)' },
         { figure: '2.2% a 4.5%', text: 'de los hogares o consumidores de EE. UU. paga por un chatbot de IA; el 1% de mayores pagadores concentra el 19.5% del gasto de consumo en IA.', source: 'Bank of America Institute, PNC (vía TechDogs), a16z/YipitData (vía AI Weekly)' },
@@ -164,7 +164,7 @@ export const es: SolaStrings = {
         'La IA local tiene hoy pocas gallinas y aún menos huevos. En la encuesta de Steam de septiembre de 2026, solo el 5.5% de los sistemas tenía 24 GB de memoria gráfica, y cuatro de las ocho aplicaciones de IA local que pude puntuar obtuvieron 2 o menos en su función principal. (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
         'El precio de lista del DGX Spark de 128 GB de NVIDIA pasó de $3,999 en el lanzamiento a $6,950 en octubre de 2026. El hardware capaz de ejecutar modelos grandes se está encareciendo, no abaratando (S6, S7). (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
       ],
-      pressAuthor: 'Hans Kuepper es el fundador de PromptQuorum, con sede en Baden-Württemberg, y cuenta con más de 30 años de experiencia en consultoría y dirección general. Probó él mismo las nueve aplicaciones de este informe: ocho en un Mac de 24 GB y una en un teléfono Android.',
+      pressAuthor: 'Hans Kuepper es el fundador de PromptQuorum, con sede en Baden-Württemberg, y cuenta con más de 30 años de experiencia en consultoría y dirección general. Probó él mismo las nueve aplicaciones de este informe: ocho en un Mac de 24 GB (Draw Things, BoBe, Page Assist, Unsloth, Msty Studio, DiffusionBee, LTX Desktop, Locally Uncensored) y una en un teléfono Android (Caelum).',
       pressMethod: 'Las cifras proceden de fuentes numeradas; cada afirmación lleva una etiqueta de evidencia y los supuestos indican quién los hace y en qué se basan. Las fuentes secundarias se señalan como tales. El registro de afirmaciones y todas las fuentes pueden descargarse.',
     },
   },

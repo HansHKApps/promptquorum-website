@@ -149,11 +149,11 @@ export const pt: SolaStrings = {
         'As buscas no Google por "local ai" atingiram o pico no fim de maio de 2026 e, em meados de outubro, estavam na metade do nível de um ano antes; o relatório afirma que essa divergência em relação a outros indicadores não pode ser explicada a partir dos dados.',
       ],
       disclosure:
-        'O autor fundou o PromptQuorum, um site de conteúdo e diretório sobre apps de IA local, e testou apps que estão listados lá. Cada registro de teste prático, com rótulos de evidência e os próprios erros do testador, está vinculado a partir do arquivo de evidências. Nenhum pagamento ou patrocínio consta nas notas de teste.',
+        'O autor fundou o PromptQuorum, um site de conteúdo e diretório sobre apps de IA local, e testou apps que estão listados lá. Cada registro de teste prático, com rótulos de evidência e os próprios erros do testador, está vinculado a partir do arquivo de evidências. Em um app (LU), o desenvolvedor trocou mensagens com o testador antes e depois do teste. Nenhum pagamento ou patrocínio consta nas notas de teste.',
       correction: 'Versão 1.0: primeira publicação.',
       pressStats: [
         { figure: '5.5%', text: 'dos sistemas na pesquisa de hardware da Steam de setembro de 2026 tinham 24 GB de memória de vídeo; 27.2% tinham 16 GB.', source: 'Steam Hardware & Software Survey, setembro de 2026 (página primária da Valve)' },
-        { figure: '4 de 8', text: 'apps de IA local que o autor pôde avaliar tiraram 2 ou menos na função principal (nove foram testados, oito receberam nota).', source: 'Testes práticos do autor, 9 a 24 de outubro de 2026' },
+        { figure: '4 de 8', text: 'apps de IA local que o autor pôde avaliar tiraram 2 ou menos na função principal (nove foram testados, oito receberam nota).', source: 'Testes práticos do autor, 6 a 21 de outubro de 2026' },
         { figure: '9.67 GB', text: 'de memória em uso num Mac de 24 GB logo após a inicialização, antes de qualquer modelo ser carregado.', source: 'Testes práticos do autor, Mac de 24 GB' },
         { figure: '$3,999 a $6,950', text: 'preço de tabela do NVIDIA DGX Spark de 128 GB, do lançamento a outubro de 2026 ($4,699 em fevereiro de 2026).', source: 'Fórum de desenvolvedores da NVIDIA (primária); Implicator.ai (secundária)' },
         { figure: '2.2% a 4.5%', text: 'dos domicílios ou consumidores dos EUA pagam por um chatbot de IA; o 1% que mais paga responde por 19.5% do gasto do consumidor com IA.', source: 'Bank of America Institute, PNC (via TechDogs), a16z/YipitData (via AI Weekly)' },
@@ -164,7 +164,7 @@ export const pt: SolaStrings = {
         'Hoje a IA local tem poucas galinhas e menos ovos ainda. Na pesquisa da Steam de setembro de 2026, apenas 5.5% dos sistemas tinham 24 GB de memória de vídeo, e quatro dos oito apps de IA local que pude avaliar tiraram 2 ou menos na função principal. (Hans Kuepper, O Estado da IA Local, Relatório 01, Q4 2026)',
         'O preço de tabela do DGX Spark de 128 GB da NVIDIA passou de $3,999 no lançamento para $6,950 em outubro de 2026. O hardware capaz de rodar modelos grandes está ficando mais caro, não mais barato (S6, S7). (Hans Kuepper, O Estado da IA Local, Relatório 01, Q4 2026)',
       ],
-      pressAuthor: 'Hans Kuepper é o fundador do PromptQuorum, com sede em Baden-Württemberg, e tem mais de 30 anos de experiência em consultoria e gestão geral. Ele mesmo testou os nove apps deste relatório: oito num Mac de 24 GB e um num celular Android.',
+      pressAuthor: 'Hans Kuepper é o fundador do PromptQuorum, com sede em Baden-Württemberg, e tem mais de 30 anos de experiência em consultoria e gestão geral. Ele mesmo testou os nove apps deste relatório: oito num Mac de 24 GB (Draw Things, BoBe, Page Assist, Unsloth, Msty Studio, DiffusionBee, LTX Desktop, Locally Uncensored) e um num celular Android (Caelum).',
       pressMethod: 'Os números vêm de fontes numeradas; cada afirmação traz um rótulo de evidência, e as premissas dizem quem as faz e em que se apoiam. As fontes secundárias são identificadas como tal. O registro de afirmações e todas as fontes podem ser baixados.',
     },
   },

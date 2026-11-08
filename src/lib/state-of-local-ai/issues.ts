@@ -68,7 +68,7 @@ export const ISSUES: Issue[] = [
     press: {
       stats: [
         { figure: '5.5%', text: 'of systems in the September 2026 Steam hardware survey had 24 GB of graphics memory; 27.2% had 16 GB.', source: 'Steam Hardware & Software Survey, September 2026 (Valve primary page)', ids: ['S1'] },
-        { figure: '4 of 8', text: 'local AI apps the author could score rated 2 or below on core function (nine were tested, eight scored).', source: "Author's hands-on tests, 9-24 October 2026", ids: ['S22'] },
+        { figure: '4 of 8', text: 'local AI apps the author could score rated 2 or below on core function (nine were tested, eight scored).', source: "Author's hands-on tests, 6-21 October 2026", ids: ['S22'] },
         { figure: '9.67 GB', text: 'of memory in use on a 24 GB Mac right after startup, before any model was loaded.', source: "Author's hands-on tests, 24 GB Mac", ids: ['S22'] },
         { figure: '$3,999 to $6,950', text: 'list price of the 128 GB NVIDIA DGX Spark, launch to October 2026 ($4,699 in February 2026).', source: 'NVIDIA developer forum (primary); Implicator.ai (secondary)', ids: ['S3', 'S4'] },
         { figure: '2.2% to 4.5%', text: 'of US households or consumers pay for an AI chatbot; the top 1% of payers account for 19.5% of consumer AI spend.', source: 'Bank of America Institute, PNC (via TechDogs), a16z/YipitData (via AI Weekly)', ids: ['S11', 'S12', 'S13'] },
@@ -79,11 +79,11 @@ export const ISSUES: Issue[] = [
         'Local AI today has few chickens and even fewer eggs. In the September 2026 Steam survey, only 5.5% of systems had 24 GB of graphics memory, and four of the eight local AI apps I could score rated 2 or below on their core function. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
         'The list price of NVIDIA\u2019s 128 GB DGX Spark went from $3,999 at launch to $6,950 in October 2026. Hardware that can run big models is getting more expensive, not cheaper (S6, S7). (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
       ],
-      author: 'Hans Kuepper is the founder of PromptQuorum, based in Baden-Württemberg, Germany, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself: eight on a 24 GB Mac and one on an Android phone.',
+      author: 'Hans Kuepper is the founder of PromptQuorum, based in Baden-Württemberg, Germany, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself: eight on a 24 GB Mac (Draw Things, BoBe, Page Assist, Unsloth, Msty Studio, DiffusionBee, LTX Desktop, Locally Uncensored) and one on an Android phone (Caelum).',
       method: 'Figures come from numbered sources; each claim carries an evidence label, and assumptions name who makes them and what they rest on. Secondary sources are marked as such. The claim register and all sources can be downloaded.',
     },
     disclosure:
-      "The author founded PromptQuorum, a content site and directory about local AI apps, and tested apps that are listed there. Each hands-on test record, with evidence labels and the tester's own errors, is linked from the evidence file. No payment or sponsorship is recorded in the test notes.",
+      "The author founded PromptQuorum, a content site and directory about local AI apps, and tested apps that are listed there. Each hands-on test record, with evidence labels and the tester's own errors, is linked from the evidence file. For one app (LU), the developer exchanged messages with the tester before and after the test. No payment or sponsorship is recorded in the test notes.",
     // Pages went indexable 2026-10-25 (noindex flip); these are the go-live dates.
     datePublished: '2026-10-25',
     dateModified: '2026-10-25',
