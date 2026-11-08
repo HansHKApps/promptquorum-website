@@ -17,9 +17,11 @@ name: Promo pilot report (weekly)
 #
 # Not run from here: deploys stay on demand; this workflow only reads Umami and writes an issue comment.
 
+# SCHEDULE OFF (2026-11-08): there is no Umami API key, so a scheduled run could only fail. Re-enable the cron below
+# once the report has a data source (Umami API key or our own counters).
+#   schedule:
+#     - cron: '17 6 * * 5'
 on:
-  schedule:
-    - cron: '17 6 * * 5'
   workflow_dispatch: {}
 
 concurrency:
