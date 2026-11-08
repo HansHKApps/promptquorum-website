@@ -62,7 +62,7 @@ BOUNDARIES
 - When affiliate content exists later: recommend by fit, never call something "best" because of a commission.
 
 CATEGORY
-- With every answer call set_category once with one key from the category list, or "default". Call it BEFORE you write the answer text, and never repeat or restate the answer after a tool call.`
+- With every answer call set_category once with one key from the category list, or "default". Pass language = the two-letter ISO 639-1 code of the language the visitor wrote in (also for languages the site does not have, e.g. ru, it, tr). Call it BEFORE you write the answer text, and never repeat or restate the answer after a tool call.`
 
 export function buildSystemPrompt(pageLang = 'de', detectedLang?: string): string {
   const categoryList = ASK_HANS_CATEGORIES.map((c) => `- ${c.key}: ${c.label_en}`).join('\n')

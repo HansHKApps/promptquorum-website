@@ -269,7 +269,7 @@ export function AskHansRoot() {
           const empty = !acc.trim()
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : { overview: ev.overview }) }))
           if (!empty && consentValue?.value === 'yes') {
-            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, topics: ev.topics, lang })
+            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, topics: ev.topics, lang: ev.qlang ?? lang })
           }
         } else if (ev.t === 'error') {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, error: ev.code }))
