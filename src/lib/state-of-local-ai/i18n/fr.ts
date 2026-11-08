@@ -149,11 +149,11 @@ export const fr: SolaStrings = {
         'Les recherches Google pour « local ai » ont atteint un pic fin mai 2026 et, à la mi-octobre, étaient à la moitié de leur niveau un an plus tôt ; le rapport précise que cet écart avec d’autres indicateurs ne peut pas être expliqué à partir des données.',
       ],
       disclosure:
-        'L’auteur a fondé PromptQuorum, un site de contenus et un annuaire consacrés aux applications d’IA locale, et a testé des applications qui y sont référencées. Chaque fiche de test pratique, avec ses étiquettes de preuve et les propres erreurs du testeur, est liée depuis le dossier de preuves. Aucun paiement ni parrainage n’est consigné dans les notes de test.',
+        'L’auteur a fondé PromptQuorum, un site de contenus et un annuaire consacrés aux applications d’IA locale, et a testé des applications qui y sont référencées. Chaque fiche de test pratique, avec ses étiquettes de preuve et les propres erreurs du testeur, est liée depuis le dossier de preuves. Pour une application (LU), le développeur a échangé des messages avec le testeur avant et après le test. Aucun paiement ni parrainage n’est consigné dans les notes de test.',
       correction: 'Version 1.0 : première publication.',
       pressStats: [
         { figure: '5.5%', text: 'des systèmes de l’enquête matérielle Steam de septembre 2026 disposaient de 24 GB de mémoire graphique ; 27.2% en avaient 16 GB.', source: 'Steam Hardware & Software Survey, septembre 2026 (page primaire de Valve)' },
-        { figure: '4 sur 8', text: 'des applications d’IA locale que l’auteur a pu noter ont obtenu 2 ou moins pour leur fonction principale (neuf ont été testées, huit ont été notées).', source: 'Tests pratiques de l’auteur, 9-24 octobre 2026' },
+        { figure: '4 sur 8', text: 'des applications d’IA locale que l’auteur a pu noter ont obtenu 2 ou moins pour leur fonction principale (neuf ont été testées, huit ont été notées).', source: 'Tests pratiques de l’auteur, 6-21 octobre 2026' },
         { figure: '9.67 GB', text: 'de mémoire utilisés sur un Mac de 24 GB juste après le démarrage, avant le chargement de tout modèle.', source: 'Tests pratiques de l’auteur, Mac de 24 GB' },
         { figure: '$3,999 à $6,950', text: 'prix catalogue du NVIDIA DGX Spark de 128 GB, du lancement à octobre 2026 ($4,699 en février 2026).', source: 'Forum développeurs NVIDIA (primaire) ; Implicator.ai (secondaire)' },
         { figure: '2.2% à 4.5%', text: 'des ménages ou consommateurs américains paient pour un chatbot d’IA ; le 1% des plus gros payeurs représente 19.5% des dépenses de consommation en IA.', source: 'Bank of America Institute, PNC (via TechDogs), a16z/YipitData (via AI Weekly)' },
@@ -165,7 +165,7 @@ export const fr: SolaStrings = {
         'Le prix catalogue du DGX Spark de 128 GB de NVIDIA est passé de $3,999 au lancement à $6,950 en octobre 2026. Le matériel capable de faire tourner de grands modèles devient plus cher, pas moins cher (S6, S7). (Hans Kuepper, L’état de l’IA locale, Rapport 01, Q4 2026)',
       ],
       pressAuthor:
-        'Hans Kuepper est le fondateur de PromptQuorum, basé en Bade-Wurtemberg, avec plus de 30 ans d’expérience dans le conseil et la direction générale. Il a testé lui-même les neuf applications de ce rapport : huit sur un Mac de 24 GB et une sur un téléphone Android.',
+        'Hans Kuepper est le fondateur de PromptQuorum, basé en Bade-Wurtemberg, avec plus de 30 ans d’expérience dans le conseil et la direction générale. Il a testé lui-même les neuf applications de ce rapport : huit sur un Mac de 24 GB (Draw Things, BoBe, Page Assist, Unsloth, Msty Studio, DiffusionBee, LTX Desktop, Locally Uncensored) et une sur un téléphone Android (Caelum).',
       pressMethod:
         'Les chiffres proviennent de sources numérotées ; chaque affirmation porte une étiquette de preuve, et les hypothèses indiquent qui les formule et sur quoi elles reposent. Les sources secondaires sont signalées comme telles. Le registre des affirmations et toutes les sources peuvent être téléchargés.',
     },

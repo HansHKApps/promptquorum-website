@@ -151,11 +151,11 @@ export const de: SolaStrings = {
         'Google-Suchen nach „local ai“ erreichten Ende Mai 2026 ihren Höhepunkt und lagen Mitte Oktober bei der Hälfte des Vorjahreswerts; der Bericht hält fest, dass sich diese Abweichung von anderen Indikatoren aus den Daten nicht erklären lässt.',
       ],
       disclosure:
-        'Der Autor hat PromptQuorum gegründet, eine Content-Seite und ein Verzeichnis für Apps zu lokaler KI, und hat Apps getestet, die dort gelistet sind. Jedes Testprotokoll mit Belegkennzeichnungen und den eigenen Fehlern des Testers ist aus der Belegdatei verlinkt. In den Testnotizen ist weder eine Zahlung noch ein Sponsoring vermerkt.',
+        'Der Autor hat PromptQuorum gegründet, eine Content-Seite und ein Verzeichnis für Apps zu lokaler KI, und hat Apps getestet, die dort gelistet sind. Jedes Testprotokoll mit Belegkennzeichnungen und den eigenen Fehlern des Testers ist aus der Belegdatei verlinkt. Bei einer App (LU) tauschte sich der Entwickler vor und nach dem Test mit dem Tester aus. In den Testnotizen ist weder eine Zahlung noch ein Sponsoring vermerkt.',
       correction: 'Version 1.0: Erstveröffentlichung.',
       pressStats: [
         { figure: '5,5 %', text: 'der Systeme in der Steam-Hardwareumfrage vom September 2026 hatten 24 GB Grafikspeicher; 27,2 % hatten 16 GB.', source: 'Steam Hardware & Software Survey, September 2026 (Primärseite von Valve)' },
-        { figure: '4 von 8', text: 'bewertbaren Apps für lokale KI erhielten bei der Kernfunktion 2 Punkte oder weniger (neun wurden getestet, acht ließen sich bewerten).', source: 'Praxistests des Autors, 9.–24. Oktober 2026' },
+        { figure: '4 von 8', text: 'bewertbaren Apps für lokale KI erhielten bei der Kernfunktion 2 Punkte oder weniger (neun wurden getestet, acht ließen sich bewerten).', source: 'Praxistests des Autors, 6.–21. Oktober 2026' },
         { figure: '9,67 GB', text: 'Speicher waren auf einem Mac mit 24 GB direkt nach dem Start belegt, noch bevor ein Modell geladen war.', source: 'Praxistests des Autors, Mac mit 24 GB' },
         { figure: '$3,999 bis $6,950', text: 'Listenpreis des NVIDIA DGX Spark mit 128 GB, vom Marktstart bis Oktober 2026 ($4,699 im Februar 2026).', source: 'NVIDIA-Entwicklerforum (primär); Implicator.ai (sekundär)' },
         { figure: '2,2 % bis 4,5 %', text: 'der US-Haushalte oder -Verbraucher zahlen für einen KI-Chatbot; das obere 1 % der Zahlenden macht 19,5 % der Verbraucherausgaben für KI aus.', source: 'Bank of America Institute, PNC (über TechDogs), a16z/YipitData (über AI Weekly)' },
@@ -167,7 +167,7 @@ export const de: SolaStrings = {
         'Der Listenpreis des NVIDIA DGX Spark mit 128 GB stieg von $3,999 zum Marktstart auf $6,950 im Oktober 2026. Hardware, die große Modelle ausführen kann, wird teurer, nicht günstiger (S6, S7). (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
       ],
       pressAuthor:
-        'Hans Kuepper ist Gründer von PromptQuorum mit Sitz in Baden-Württemberg und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung. Die neun Apps in diesem Bericht hat er selbst getestet: acht auf einem Mac mit 24 GB und eine auf einem Android-Smartphone.',
+        'Hans Kuepper ist Gründer von PromptQuorum mit Sitz in Baden-Württemberg und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung. Die neun Apps in diesem Bericht hat er selbst getestet: acht auf einem Mac mit 24 GB (Draw Things, BoBe, Page Assist, Unsloth, Msty Studio, DiffusionBee, LTX Desktop, Locally Uncensored) und eine auf einem Android-Smartphone (Caelum).',
       pressMethod:
         'Die Zahlen stammen aus nummerierten Quellen; jede Behauptung trägt eine Belegkennzeichnung, und Annahmen nennen, wer sie trifft und worauf sie beruhen. Sekundärquellen sind als solche gekennzeichnet. Das Behauptungsregister und alle Quellen stehen zum Download bereit.',
     },

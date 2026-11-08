@@ -135,7 +135,7 @@ export const zh: SolaStrings = {
         '能运行好的本地 AI 模型的电脑很少，值得为此折腾的应用更少。九项实测、有来源的数据和论断登记表，展示本地 AI 如今的处境。',
       seoTitle: '鸡很少，蛋更少｜本地 AI 现状报告 01',
       metaDescription:
-        '报告 01：能运行好本地 AI 模型的电脑很少。九项实测中，可评分的八款应用有四款核心功能评分为 2 分或更低。含有来源的数据和论断登记表。',
+        '报告 01（Q4 2026）：能运行好本地 AI 模型的电脑很少。九项实测中，在已评分的八款应用里，有四款评分为 2 分或更低。附有来源的数据。',
       keyFindings: [
         '在2026年9月的 Steam 硬件调查中，27.2% 的被调查系统拥有 16 GB 显存，5.5% 拥有 24 GB。',
         '在作者测试的 24 GB Mac 上，系统在启动后、加载任何模型之前就已占用 9.67 GB 内存。',
@@ -148,11 +148,11 @@ export const zh: SolaStrings = {
         'Google 上“local ai”的搜索量在2026年5月下旬达到峰值，到10月中旬已降至一年前的一半；报告指出，这一与其他指标的背离无法从数据中解释。',
       ],
       disclosure:
-        '作者创办了 PromptQuorum（一个关于本地 AI 应用的内容网站和目录），并测试了其中收录的应用。每份实测记录（含证据标签和测试者自己的错误）都链接在证据文件中。测试记录中没有收到付款或赞助的记录。',
+        '作者创办了 PromptQuorum（一个关于本地 AI 应用的内容网站和目录），并测试了其中收录的应用。每份实测记录（含证据标签和测试者自己的错误）都链接在证据文件中。对其中一款应用（LU），其开发者在测试前后与测试者交换过信息。测试记录中没有收到付款或赞助的记录。',
       correction: '版本 1.0：首次发布。',
       pressStats: [
         { figure: '5.5%', text: '在2026年9月的 Steam 硬件调查中，5.5% 的系统拥有 24 GB 显存，27.2% 拥有 16 GB。', source: 'Steam 硬件与软件调查，2026年9月（Valve 原始页面）' },
-        { figure: '8 款中的 4 款', text: '作者能够评分的本地 AI 应用中，有四款的核心功能评分为 2 分或更低（共测试九款，其中八款可评分）。', source: '作者的实测，2026年10月9日至24日' },
+        { figure: '8 款中的 4 款', text: '作者能够评分的本地 AI 应用中，有四款的核心功能评分为 2 分或更低（共测试九款，其中八款可评分）。', source: '作者的实测，2026年10月6日至21日' },
         { figure: '9.67 GB', text: '在一台 24 GB Mac 上，系统刚启动、尚未加载任何模型时，已占用的内存。', source: '作者的实测，24 GB Mac' },
         { figure: '$3,999 至 $6,950', text: '128 GB 版 NVIDIA DGX Spark 的标价，从发布时到2026年10月（2026年2月为 $4,699）。', source: 'NVIDIA 开发者论坛（原始来源）；Implicator.ai（二手来源）' },
         { figure: '2.2% 至 4.5%', text: '美国有这一比例的家庭或消费者为 AI 聊天机器人付费；付费最多的前 1% 用户贡献了消费级 AI 支出的 19.5%。', source: 'Bank of America Institute、PNC（引自 TechDogs）、a16z/YipitData（引自 AI Weekly）' },
@@ -164,7 +164,7 @@ export const zh: SolaStrings = {
         'NVIDIA 128 GB 版 DGX Spark 的标价从发布时的 $3,999 涨到2026年10月的 $6,950。能运行大模型的硬件越来越贵，而不是越来越便宜（S6、S7）。（Hans Kuepper，《本地 AI 现状》，报告 01，Q4 2026）',
       ],
       pressAuthor:
-        'Hans Kuepper 是 PromptQuorum 的创始人，常驻巴登-符腾堡州，拥有 30 多年的咨询与综合管理经验。本报告中的九款应用均由他亲自测试：八款在 24 GB Mac 上，一款在 Android 手机上。',
+        'Hans Kuepper 是 PromptQuorum 的创始人，常驻巴登-符腾堡州，拥有 30 多年的咨询与综合管理经验。本报告中的九款应用均由他亲自测试：八款在 24 GB Mac 上（Draw Things、BoBe、Page Assist、Unsloth、Msty Studio、DiffusionBee、LTX Desktop、Locally Uncensored），一款在 Android 手机上（Caelum）。',
       pressMethod:
         '数据来自编号来源；每项论断都带有证据标签，假设会写明由谁提出、依据是什么。二手来源均已标明。论断登记表和全部来源均可下载。',
     },
