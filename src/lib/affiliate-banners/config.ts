@@ -12,10 +12,10 @@ export const AFF_BANNER_OPT_OUT: ReadonlySet<string> = new Set<string>([])
 export const AFF_VIEW_THRESHOLD = 0.5
 export const AFF_VIEW_MIN_MS = 1000
 
-/** Reserved heights (px) [below 640px, 640px and up] so a banner never shifts the page. Longest text is DE/FR. Measured 2026-11-08 at 390px and 768px (all 60 groups in en/de/fr/es/ja/ar; 4 sample groups in all 9 locales) (scripts/measure-affiliate-banner.mjs); phones narrower than ~360px can grow past the mobile value, like the promo slots. */
+/** Reserved heights (px) [below 640px, 640px and up] so a banner never shifts the page. Longest text is DE/FR. Measured 2026-11-08 at 390, 768 and 1280px (all 60 groups in en/de/fr/es/ja/ar), plus about 2% (scripts/measure-affiliate-banner.mjs); phones narrower than ~360px can grow past the mobile value, like the promo slots. */
 export const AFF_RESERVED_HEIGHT: Record<'single1' | 'single3' | 'compare1' | 'compare3', readonly [number, number]> = {
-  single1: [590, 465],
-  single3: [660, 585],
-  compare1: [750, 630],
-  compare3: [955, 760],
+  single1: [655, 485],
+  single3: [770, 610],
+  compare1: [785, 640],
+  compare3: [1060, 770],
 }
