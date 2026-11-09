@@ -175,54 +175,6 @@
     ]
   },
   {
-    "siteModel": "DeepSeek-R1-Distill-Qwen-14B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 6,
-    "files": [
-      "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
-      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-Distill-Qwen-32B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 6,
-    "files": [
-      "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
-      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-Distill-Llama-70B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 6,
-    "files": [
-      "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts",
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
-      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts"
-    ]
-  },
-  {
     "siteModel": "Qwen3.8 27B",
     "registryModel": "Qwen3",
     "status": "superseded",
@@ -267,35 +219,6 @@
       "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
       "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
       "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-Distill-Qwen-7B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 5,
-    "files": [
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
-      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-0528-Qwen3-8B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 4,
-    "files": [
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
-      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts"
     ]
   },
   {
@@ -402,32 +325,6 @@
       "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
       "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
       "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-Distill-Llama-8B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 3,
-    "files": [
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-Distill-Qwen-1.5B",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 3,
-    "files": [
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts"
     ]
   },
   {
@@ -678,17 +575,6 @@
     ]
   },
   {
-    "siteModel": "DeepSeek-R1 distills",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
-    ]
-  },
-  {
     "siteModel": "Qwen3-VL 235B-A22B",
     "registryModel": "Qwen3",
     "status": "superseded",
@@ -829,17 +715,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/power-local-llm/articles/localai-apexcreator-review.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1 Distill",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/private-llm-review.ts"
     ]
   },
   {
@@ -1005,17 +880,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/power-local-llm/articles/stable-diffusion-review.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek-R1-Distill-Qwen",
-    "registryModel": "DeepSeek-R1",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4",
-    "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/fullmoon-review.ts"
     ]
   },
   {
