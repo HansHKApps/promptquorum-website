@@ -653,10 +653,10 @@
       "type": "open-weight",
       "release_date": "2025-04",
       "status": "superseded",
-      "superseded_by": "Qwen3.6",
+      "superseded_by": "Qwen3.5",
       "source_url": "https://qwenlm.github.io/blog/qwen3/",
-      "verified_date": "2026-07-13",
-      "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'"
+      "verified_date": "2026-11-09",
+      "notes": "GENERATION-LEVEL status, successor corrected 2026-11-09 from Qwen3.6 to Qwen3.5: Qwen3.6 lists only 27B and 35B-A3B, while Qwen3.5 covers the whole size range (0.8B to 397B-A17B). Qwen's pages do NOT say Qwen3 is deprecated: the Qwen3 repo labels it 'Previous Qwen3 Release' and the original series (2025-04-29, sizes 0.6B, 1.7B, 4B, 8B, 14B, 32B, 30B-A3B, 235B-A22B, Apache 2.0) remains available. A mention of a Qwen3 size as something an app or tutorial uses is a factual statement, not necessarily an out-of-date recommendation. Earlier note: The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'"
     },
     {
       "company": "Alibaba / Qwen",
@@ -1376,7 +1376,7 @@
       "superseded_by": null,
       "source_url": "https://huggingface.co/Qwen",
       "verified_date": "2026-09-14",
-      "notes": "2.4T total / 95B active params (Qwen3.8-2.4T-A95B on Qwen's own Hugging Face org, uploaded 2026-08-08), text-only MoE, post-trained. Most capable model in the Qwen family per contemporaneous coverage; supersedes Qwen3.7-Max as flagship. Verify closed-API 'Qwen3.8-Max' branding against qwen.ai directly next cycle — this entry is confirmed via the official HF weights upload, not yet cross-checked against a qwen.ai blog post (that fetch returned no content this cycle)."
+      "notes": "2.4T total / 95B active params (Qwen3.8-2.4T-A95B on Qwen's own Hugging Face org, uploaded 2026-08-08), text-only MoE, post-trained. Most capable model in the Qwen family per contemporaneous coverage; supersedes Qwen3.7-Max as flagship. Verify closed-API 'Qwen3.8-Max' branding against qwen.ai directly next cycle — this entry is confirmed via the official HF weights upload, not yet cross-checked against a qwen.ai blog post (that fetch returned no content this cycle). NOT VERIFIED 2026-11-09: Qwen's GitHub and Hugging Face pages carry only the blog title 'Qwen3.8-Max: A New Bar for Coding and Cowork' (August 2026) and no availability date; the qwen.ai blog itself was unreadable in this check. The release_date above is unconfirmed."
     },
     {
       "company": "Alibaba / Qwen",
@@ -1400,7 +1400,7 @@
       "superseded_by": null,
       "source_url": "https://huggingface.co/Qwen",
       "verified_date": "2026-09-14",
-      "notes": "180B total params (125B per some contemporaneous reporting — HF model card itself reports 180B; reconcile next cycle) MoE, ~6B active, per Qwen's own Hugging Face org (uploaded 2026-08-26, both standard and FP8). Described by Qwen as previewing the Qwen4 architecture. Very new (added same-day as this registry cycle) — re-verify status/naming next cycle before treating as fully settled."
+      "notes": "180B total params (125B per some contemporaneous reporting — HF model card itself reports 180B; reconcile next cycle) MoE, ~6B active, per Qwen's own Hugging Face org (uploaded 2026-08-26, both standard and FP8). Described by Qwen as previewing the Qwen4 architecture. Very new (added same-day as this registry cycle) — re-verify status/naming next cycle before treating as fully settled. NOT VERIFIED 2026-11-09: the name appears on none of the Qwen GitHub or Hugging Face pages read this cycle; release date and specs rest on earlier checks."
     },
     {
       "company": "Mistral AI",
@@ -3873,6 +3873,42 @@
       "release_date": "2026-08-25",
       "source_url": "https://huggingface.co/ibm-granite/granite-4.2-8b",
       "notes": "Release date from the Hugging Face model card 'Release Date' field (August 25, 2026). Dense decoder-only 3B, 8B and 30B, Apache 2.0, built-in thinking mode, native 128K context. CONFLICTS in IBM's own pages, unresolved: the 8B card states 8B parameters but its sidebar shows 9B; IBM's docs say the 512K long-context extension applies to the 30B model only while the card lists 512K for the family. Post-trained from the Granite 4.1 base models (e.g. granite-4.1-8b-base); no page says it supersedes Granite 4.1."
+    },
+    {
+      "company": "Alibaba",
+      "family": "Qwen",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Qwen3.5",
+      "release_date": "2026-02-16",
+      "source_url": "https://github.com/QwenLM/Qwen3.8",
+      "notes": "Family-level entry. Qwen's GitHub news list (served on the QwenLM/Qwen3.8 repo page; the /Qwen3.5 URL returned the same page): 2026-02-16 first release, Qwen3.5-397B-A17B; 2026-02-24 Qwen3.5-122B-A10B, -35B-A3B and -27B; 2026-03-02 the small models Qwen3.5-9B, -4B, -2B and -0.8B. Hugging Face cards read (0.8B, 35B-A3B): Apache 2.0, 262,144-token native context. The small sizes (0.8B-9B) exist ONLY in Qwen3.5: no small sizes are listed for Qwen3.6 or Qwen3.8, so Qwen3.5 small models are not out of date. The repo calls 3.5, 3.6 and 3.8 one 'open model series'; no page says a newer release replaces Qwen3.5."
+    },
+    {
+      "company": "Alibaba",
+      "family": "Qwen",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Qwen3.8",
+      "release_date": "2026-08-12",
+      "source_url": "https://github.com/QwenLM/Qwen3.8",
+      "notes": "Family-level entry. Qwen's GitHub news list: 2026-08-12 Qwen3.8-2.4T-A95B on Hugging Face and ModelScope; 2026-08-14 Qwen3.8-27B (dense, 27B parameters with vision encoder, Apache 2.0, 262,144-token native context extensible to 1,000,000; Hugging Face card). Built on the Qwen3.5 architecture per the card. The repo lists no small Qwen3.8 sizes. Qwen3.8-Max and Qwen3.8-Flash-Next are separate entries and could not be verified this cycle (see their notes)."
+    },
+    {
+      "company": "Alibaba",
+      "family": "Qwen",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Qwen3-Coder",
+      "release_date": null,
+      "source_url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "notes": "Family-level entry for the Qwen3-Coder line. The Qwen3-Coder-30B-A3B-Instruct card reads: 30.5B total / 3.3B active, 262,144-token native context, Apache 2.0; it states no release date (its 'Updated Dec 31, 2025' is the collection update date). No page read says a newer Qwen release replaces Qwen3-Coder."
     }
   ],
   "sources": [
