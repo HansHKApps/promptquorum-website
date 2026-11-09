@@ -3909,6 +3909,42 @@
       "release_date": null,
       "source_url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
       "notes": "Family-level entry for the Qwen3-Coder line. The Qwen3-Coder-30B-A3B-Instruct card reads: 30.5B total / 3.3B active, 262,144-token native context, Apache 2.0; it states no release date (its 'Updated Dec 31, 2025' is the collection update date). No page read says a newer Qwen release replaces Qwen3-Coder."
+    },
+    {
+      "company": "Meta",
+      "family": "Llama",
+      "model": "Llama 3.1",
+      "type": "open-weight",
+      "release_date": "2024-07-23",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "verified_date": "2026-11-09",
+      "notes": "Generation-level entry added 2026-11-09 so mentions of 'Llama 3.1' (with or without a size) match at a version boundary instead of falling through to the older 'Llama 3' entry. STATUS MIRRORS the existing size entries (Llama 3.1 8B, Llama 3.1 Instruct 8B), which the registry records as current; it was NOT re-verified against Meta's pages this cycle. Llama 4 (2025-04-05) is newer, but no page checked here says it replaces this generation. Sizes that Meta never released under this name (e.g. a '33B' or '34B' Llama 3.3) are not covered by this entry."
+    },
+    {
+      "company": "Meta",
+      "family": "Llama",
+      "model": "Llama 3.2",
+      "type": "open-weight",
+      "release_date": "2024-09-25",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+      "verified_date": "2026-11-09",
+      "notes": "Generation-level entry added 2026-11-09 so mentions of 'Llama 3.2' (with or without a size) match at a version boundary instead of falling through to the older 'Llama 3' entry. STATUS MIRRORS the existing size entries (Llama 3.2 1B, 3B, Vision), which the registry records as current; it was NOT re-verified against Meta's pages this cycle. Llama 4 (2025-04-05) is newer, but no page checked here says it replaces this generation. Sizes that Meta never released under this name (e.g. a '33B' or '34B' Llama 3.3) are not covered by this entry."
+    },
+    {
+      "company": "Meta",
+      "family": "Llama",
+      "model": "Llama 3.3",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-11-09",
+      "notes": "Generation-level entry added 2026-11-09 so mentions of 'Llama 3.3' (with or without a size) match at a version boundary instead of falling through to the older 'Llama 3' entry. STATUS MIRRORS the existing size entries (Llama 3.3 70B), which the registry records as current; it was NOT re-verified against Meta's pages this cycle. Llama 4 (2025-04-05) is newer, but no page checked here says it replaces this generation. Sizes that Meta never released under this name (e.g. a '33B' or '34B' Llama 3.3) are not covered by this entry."
     }
   ],
   "sources": [
