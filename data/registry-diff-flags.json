@@ -390,18 +390,6 @@
     ]
   },
   {
-    "siteModel": "Qwen3-VL 8B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 2,
-    "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts",
-      "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts"
-    ]
-  },
-  {
     "siteModel": "GPT-5.6 Luna",
     "registryModel": "GPT-5.6",
     "status": "superseded",
@@ -552,61 +540,6 @@
     ]
   },
   {
-    "siteModel": "Qwen3-VL 235B-A22B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-VL 2B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-VL 30B-A3B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-VL 32B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-VL 4B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
-    ]
-  },
-  {
     "siteModel": "ChatGLM4 9B",
     "registryModel": "ChatGLM4 9B",
     "status": "superseded",
@@ -685,10 +618,10 @@
   },
   {
     "siteModel": "Qwen3.5 VL",
-    "registryModel": "Qwen3",
+    "registryModel": "Qwen3.5 VL",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "Qwen3-VL",
+    "notes": "Earlier Qwen3.5-generation vision-language variant; Qwen3-VL (flagship Qwen3-VL-235B-A22B) is the current VL line per huggingface.co/Qwen (2026-11-09 fetch).",
     "fileCount": 1,
     "files": [
       "src/lib/power-local-llm/articles/secret-ai-review.ts"
@@ -725,28 +658,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/power-local-llm/articles/invokeai-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-Embedding-4B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-Embedding-8B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
     ]
   },
   {
@@ -893,28 +804,6 @@
     ]
   },
   {
-    "siteModel": "Qwen3-TTS",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/voicebox-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-VL (2B to 32B)",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
-    ]
-  },
-  {
     "siteModel": "Qwen3.5 (0.8B to 35B)",
     "registryModel": "Qwen3",
     "status": "superseded",
@@ -923,17 +812,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-Embedding",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/prompt-bites/articles/best-embedding-model-local-rag.ts"
     ]
   },
   {
@@ -1022,17 +900,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/prompt-bites/articles/vram-for-70b-model.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3-VL",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/prompt-bites/articles/which-ollama-models-support-vision.ts"
     ]
   },
   {
