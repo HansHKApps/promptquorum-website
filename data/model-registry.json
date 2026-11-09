@@ -3741,6 +3741,54 @@
       "source_url": "https://api-docs.deepseek.com/news/news260910/",
       "verified_date": "2026-11-09",
       "notes": "Family-level entry for DeepSeek-V4.1-Flash (API id deepseek-flash). 552B-parameter MoE with 8B active parameters for input and 16B for output, native visual understanding, open weights on Hugging Face (all per the 2026-09-10 news page). Retired DeepSeek V4-Flash and V4-Flash-Vision-Exp. Upgraded in place to DeepSeek-V4.1-Flash-1017 on 2026-10-17 under the same API name (see that entry). License is not stated on the pages read and is unverified: check the Hugging Face card before citing it."
+    },
+    {
+      "company": "NVIDIA",
+      "family": "Nemotron",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Nemotron 3 Nano",
+      "release_date": "2025-12-15",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "notes": "Released 2025-12-15 (Hugging Face card 'Release Date', NVIDIA research page and press release). Hybrid Mamba-Transformer MoE, up to 1M-token context (card: default HF config 256K). License per the card: NVIDIA Nemotron Open Model License. PARAMETER CONFLICT in NVIDIA's own pages, unresolved: the Nemotron 3 research page says 3.2B active (3.6B with embeddings) / 31.6B total; the Hugging Face card says 3.5B active / 30B total. No page read says Nemotron 3.5 replaces it: the 3.5 research page describes Lightning as distilled from Nemotron 3 Super Base, not as a replacement."
+    },
+    {
+      "company": "NVIDIA",
+      "family": "Nemotron",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Nemotron 3.5 Lightning",
+      "release_date": "2026-08-11",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "notes": "Hugging Face card 'Release Date 08/11/2026' (the NVIDIA blog of 2026-10-15 also says Lightning was 'released in August'). 30B total / 3B active text-only Mamba+Transformer MoE, up to 1M-token context (256K on a single H100), license OpenMDW 1.1 per the card. Per the 3.5 research page it is distilled from Nemotron 3 Super Base; no page says it replaces an earlier model."
+    },
+    {
+      "company": "NVIDIA",
+      "family": "Nemotron",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Nemotron 3.5 Super",
+      "release_date": "2026-10-14",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3.5-Super-and-Lightning/",
+      "notes": "release_date is the research-page publication date (2026-10-14); NVIDIA's blog of 2026-10-15 says Super VL is 'available now'. Official checkpoints are branded 'Nemotron 3.5 Super VL 120B-A12B' (multimodal: text, images, video); the research page prose says 'Nemotron 3.5 Super'. 120B total / 12B active, trained for contexts up to 1M tokens, per the research page. Distilled from Nemotron 3 Ultra Base. License NOT verified: it is not stated on the pages read and the Super VL Hugging Face card itself was not fetched."
+    },
+    {
+      "company": "NVIDIA",
+      "family": "Nemotron",
+      "type": "open-weight",
+      "status": "current",
+      "superseded_by": null,
+      "verified_date": "2026-11-09",
+      "model": "Nemotron 3.5 Bolt",
+      "release_date": "2026-10-15",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+      "notes": "Covers the 74B-A9B 24GB checkpoint: Hugging Face card 'Release Date 10/15/2026'. 74B total / 9B active, 2-bit (IQ2) quantization-aware, up to 256K-token context, image/video/text input, license OpenMDW 1.1. Per the card it was compressed from Nemotron 3.5 Super VL 120B-A12B. A smaller 'Bolt E4B 4GB' is announced for 2026-10-23 on NVIDIA's blog only; no other facts were found and it is not registered."
     }
   ],
   "sources": [
