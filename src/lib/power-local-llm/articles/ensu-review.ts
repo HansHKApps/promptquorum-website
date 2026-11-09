@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'open source local llm app',
       'ensu local llm ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu (version 0.1.22, released on 23 October 2026) is a free chat app from Ente Labs that runs downloaded language models on the device, with no account.** It is open source, and the maker itself says it is not yet as capable as ChatGPT or Claude Code. Every statement here comes from public sources, not from our own tests.',
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'open source lokale llm app',
       'ensu lokales llm ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu (Version 0.1.22, veröffentlicht am 23. Oktober 2026) ist eine kostenlose Chat-App von Ente Labs, die heruntergeladene Sprachmodelle ohne Konto direkt auf dem Gerät ausführt.** Sie ist quelloffen, und der Hersteller selbst sagt, sie sei noch nicht so leistungsfähig wie ChatGPT oder Claude Code. Jede Aussage hier stammt aus öffentlichen Quellen, nicht aus eigenen Tests.',
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm local de código abierto',
       'ensu llm local ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu (versión 0.1.22, publicada el 23 de octubre de 2026) es una app de chat gratuita de Ente Labs que ejecuta en el dispositivo modelos de lenguaje descargados, sin necesidad de cuenta.** Es de código abierto, y el propio desarrollador reconoce que todavía no es tan capaz como ChatGPT o Claude Code. Todo lo que se afirma aquí procede de fuentes públicas, no de pruebas propias.',
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application llm locale open source',
       'ensu llm local ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu (version 0.1.22, publiée le 23 octobre 2026) est une application de chat gratuite d\'Ente Labs qui exécute sur l\'appareil des modèles de langage téléchargés, sans compte.** Elle est open source, et son développeur indique lui-même qu\'elle n\'est pas encore aussi performante que ChatGPT ou Claude Code. Chaque affirmation ci-dessous provient de sources publiques, pas de nos propres tests.',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'オープンソース ローカル llm アプリ',
       'ensu ローカル llm ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu（バージョン0.1.22、2026年10月23日公開）は、Ente Labsの無料チャットアプリで、ダウンロードした言語モデルをアカウント不要で端末上で実行します。** オープンソースで、開発元自身もChatGPTやClaude Codeほどの性能にはまだ達していないと述べています。以下の記述はすべて公開情報に基づき、独自の検証結果ではありません。',
@@ -1344,7 +1344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm local de código aberto',
       'ensu llm local ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**O Ensu (versão 0.1.22, lançada em 23 de outubro de 2026) é um app de chat gratuito da Ente Labs que executa no dispositivo modelos de linguagem baixados, sem precisar de conta.** É de código aberto, e o próprio desenvolvedor diz que ainda não é tão capaz quanto o ChatGPT ou o Claude Code. Tudo o que está aqui vem de fontes públicas, não de testes próprios.',
@@ -1598,7 +1598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '开源本地 llm 应用',
       'ensu 本地 llm ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu（版本 0.1.22，2026 年 10 月 23 日发布）是 Ente Labs 的免费聊天应用，无需账号，在设备上运行下载的语言模型。** 它是开源的，开发方自己也表示其能力尚不及 ChatGPT 或 Claude Code。以下所有陈述均来自公开资料，而非我们自己的测试。',
@@ -1852,7 +1852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق llm محلي مفتوح المصدر',
       'ensu llm محلي ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu (الإصدار 0.1.22، صدر في 23 أكتوبر 2026) تطبيق دردشة مجاني من Ente Labs يشغّل على الجهاز نماذج لغوية منزّلة، دون حاجة إلى حساب.** وهو مفتوح المصدر، ويقول المطوّر نفسه إنه لم يبلغ بعد قدرة ChatGPT أو Claude Code. كل ما يرد هنا مصدره معلومات عامة، لا اختباراتنا الخاصة.',
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '오픈소스 로컬 llm 앱',
       'ensu 로컬 llm ios android',
     ],
-    current_models_mentioned: ['LFM 2.5', 'Qwen 3.5', 'Gemma 4'],
+    current_models_mentioned: ['LFM2.5', 'Qwen 3.5', 'Gemma 4'],
     current_hardware_mentioned: ['iPhone', 'Android phone', 'Mac', 'Windows PC'],
     leadAnswerBlock:
       '**Ensu(버전 0.1.22, 2026년 10월 23일 출시)는 Ente Labs의 무료 채팅 앱으로, 계정 없이 내려받은 언어 모델을 기기에서 실행합니다.** 오픈소스이며, 개발사 스스로도 아직 ChatGPT나 Claude Code만큼 강력하지는 않다고 밝혔습니다. 여기에 적힌 모든 내용은 공개 자료에서 나온 것이며, 자체 테스트 결과가 아닙니다.',
