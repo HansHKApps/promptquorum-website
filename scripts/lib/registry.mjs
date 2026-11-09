@@ -34,6 +34,28 @@ const FAMILY_ALIASES = {
   'openai gpt': 'GPT',
 }
 
+// Names that legitimately appear in `current_models_mentioned` but are NOT
+// models (software, file formats, vendors, speech engines). They can never be
+// "current" or "superseded", so the validator skips them instead of reporting
+// UNKNOWN_MODEL. Approved by the owner 2026-11-09. Keys are pre-normalized.
+// Add a name here only if it is not a model; a real model that is missing from
+// data/model-registry.json belongs in the registry, not in this set.
+export const NON_MODEL_NAMES = new Set([
+  // Apps and runtimes
+  'ollama', 'lm studio', 'jan', 'llama.cpp', 'vllm', 'unsloth studio',
+  'llama board', 'sherpa-onnx', 'fluidaudio', 'apple speech', 'apple intelligence',
+  // Formats and generic terms
+  'gguf models', 'mnn models', 'hugging face models', 'lora',
+  // Vendor
+  'openai',
+  // Speech engines (software, not models)
+  'vosk', 'deepspeech', 'mimic3', 'faster whisper', 'faster-whisper',
+])
+
+export function isNonModelName(siteModel) {
+  return NON_MODEL_NAMES.has(normalize(siteModel))
+}
+
 export function buildRegistryIndex(registry) {
   const byName = {}
   for (const m of registry.models) {

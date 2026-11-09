@@ -22,6 +22,7 @@ import {
   loadRegistry,
   buildRegistryIndex,
   findRegistryMatch,
+  isNonModelName,
   discoverArticleFiles,
   extractModelMentionsByLocale,
   loadBaseline,
@@ -55,6 +56,7 @@ for (const file of files) {
   const byLocale = extractModelMentionsByLocale(file)
   for (const [locale, models] of Object.entries(byLocale)) {
     for (const siteModel of models) {
+      if (isNonModelName(siteModel)) continue // software/format/vendor, not a model
       const match = findRegistryMatch(registry, registryByName, siteModel)
       if (!match) {
         violations.push({ file, locale, siteModel, code: 'UNKNOWN_MODEL' })
