@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -1031,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -1639,7 +1639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -2247,7 +2247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DeepSeek R1 0528',
       'gpt-oss',
       'Llama 4',
-      'Phi 4',
+      'Phi-4',
       'Mistral',
     ],
     current_hardware_mentioned: [

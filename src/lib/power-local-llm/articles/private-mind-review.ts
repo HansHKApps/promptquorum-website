@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'open source local llm app mobile',
       'private mind vs pocketpal ai',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind (version 1.3.0 as of 3 October 2026) is a free, MIT-licensed chat app by Software Mansion that runs open-weight language models on iPhone, iPad, and Android with no account, and can answer questions about your own PDF and text files using on-device retrieval with source citations.** Models are downloaded once from Hugging Face and then run offline through React Native ExecuTorch. Version 1.3.0 added an optional Web toggle that fetches web pages, so the app is offline by default but not offline when that feature is used.',
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'open source lokale llm app smartphone',
       'private mind vs pocketpal ai',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind (Version 1.3.0, Stand 3. Oktober 2026) ist eine kostenlose, MIT-lizenzierte Chat-App von Software Mansion, die Open-Weight-Sprachmodelle ohne Konto auf iPhone, iPad und Android ausführt und mit On-Device-Retrieval und Quellenangaben Fragen zu Ihren eigenen PDF- und Textdateien beantworten kann.** Modelle werden einmal von Hugging Face heruntergeladen und laufen danach offline über React Native ExecuTorch. Version 1.3.0 hat einen optionalen Web-Schalter ergänzt, der Webseiten abruft; die App ist daher standardmäßig offline, aber nicht offline, wenn diese Funktion genutzt wird.',
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de llm local de código abierto para móvil',
       'private mind vs pocketpal ai',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind (versión 1.3.0 a fecha del 3 de octubre de 2026) es una app de chat gratuita y con licencia MIT de Software Mansion que ejecuta modelos de lenguaje de pesos abiertos en iPhone, iPad y Android sin necesidad de cuenta, y puede responder preguntas sobre tus propios archivos PDF y de texto mediante recuperación en el dispositivo con citas de las fuentes.** Los modelos se descargan una sola vez desde Hugging Face y después se ejecutan sin conexión mediante React Native ExecuTorch. La versión 1.3.0 añadió un interruptor Web opcional que obtiene páginas web, por lo que la app funciona offline por defecto, pero no cuando se usa esa función.',
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application llm local open source mobile',
       'private mind vs pocketpal ai',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind (version 1.3.0 au 3 octobre 2026) est une application de chat gratuite, sous licence MIT, de Software Mansion, qui exécute des modèles de langage à poids ouverts sur iPhone, iPad et Android sans compte, et peut répondre à des questions sur vos propres fichiers PDF et texte grâce à une recherche documentaire sur l\'appareil avec citation des sources.** Les modèles sont téléchargés une seule fois depuis Hugging Face puis exécutés hors ligne via React Native ExecuTorch. La version 1.3.0 a ajouté une option Web facultative qui récupère des pages web : l\'application est donc hors ligne par défaut, mais pas lorsque cette fonction est utilisée.',
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'オープンソース ローカルllm モバイルアプリ',
       'private mind pocketpal ai 比較',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind(2026年10月3日時点のバージョンは1.3.0)は、Software Mansionが提供する無料のMITライセンスのチャットアプリで、アカウント不要でiPhone、iPad、Android上でオープンウェイトの言語モデルを動かし、端末内の検索により、ご自身のPDFやテキストファイルについての質問に出典付きで答えられます。** モデルはHugging Faceから一度ダウンロードすれば、その後はReact Native ExecuTorchを通じてオフラインで動作します。バージョン1.3.0ではウェブページを取得するオプションのWebトグルが追加されたため、このアプリは既定ではオフラインですが、この機能を使うときはオフラインではありません。',
@@ -2007,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de llm local open source para celular',
       'private mind vs pocketpal ai',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**O Private Mind (versão 1.3.0 em 3 de outubro de 2026) é um app de chat gratuito, com licença MIT, da Software Mansion que roda modelos de linguagem de peso aberto em iPhone, iPad e Android sem conta e que consegue responder perguntas sobre seus próprios arquivos PDF e de texto usando recuperação no dispositivo, com citação das fontes.** Os modelos são baixados uma vez do Hugging Face e depois rodam offline por meio do React Native ExecuTorch. A versão 1.3.0 acrescentou um botão Web opcional que busca páginas da web, então o app é offline por padrão, mas não é offline quando esse recurso é usado.',
@@ -2394,7 +2394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق نموذج لغوي محلي مفتوح المصدر للهاتف',
       'private mind مقابل pocketpal ai',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind (الإصدار 1.3.0 اعتباراً من 3 أكتوبر 2026) تطبيق دردشة مجاني بترخيص MIT من Software Mansion يشغّل نماذج لغوية مفتوحة الأوزان على iPhone و iPad وأندرويد دون حساب، ويمكنه الإجابة عن أسئلة حول ملفات PDF والملفات النصية الخاصة بك باستخدام استرجاع على الجهاز مع الاستشهاد بالمصادر.** تُنزَّل النماذج مرة واحدة من Hugging Face ثم تعمل دون اتصال عبر React Native ExecuTorch. وأضاف الإصدار 1.3.0 مفتاح Web اختيارياً يجلب صفحات الويب، لذا فالتطبيق يعمل دون اتصال افتراضياً لكنه لا يعمل دون اتصال عند استخدام هذه الميزة.',
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '开源本地大模型手机应用',
       'private mind 与 pocketpal ai 对比',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind(截至 2026 年 10 月 3 日为 1.3.0 版本)是 Software Mansion 推出的一款免费、MIT 许可的聊天应用,无需账号即可在 iPhone、iPad 和 Android 上运行开放权重语言模型,并能通过设备端检索回答关于你自己的 PDF 和文本文件的问题,同时附带来源引用。** 模型只需从 Hugging Face 下载一次,之后即通过 React Native ExecuTorch 离线运行。1.3.0 版本新增了可选的 Web 开关用于获取网页,因此该应用默认离线,但在使用该功能时并非离线。',
@@ -3168,7 +3168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '모바일 오픈소스 로컬 llm 앱',
       'private mind pocketpal ai 비교',
     ],
-    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen 2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
+    current_models_mentioned: ['Qwen 3', 'LLaMA 3.2', 'Qwen2.5', 'LFM 2.5', 'Gemma 4', 'Bielik'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Apple M1'],
     leadAnswerBlock:
       '**Private Mind(2026년 10월 3일 기준 버전 1.3.0)는 Software Mansion이 만든 무료 MIT 라이선스 채팅 앱으로, 계정 없이 iPhone, iPad, Android에서 오픈 웨이트 언어 모델을 실행하며, 온디바이스 검색을 통해 이용자의 PDF·텍스트 파일에 대한 질문에 출처 인용과 함께 답할 수 있습니다.** 모델은 Hugging Face에서 한 번 내려받은 뒤 React Native ExecuTorch를 통해 오프라인으로 실행됩니다. 버전 1.3.0에서 웹 페이지를 가져오는 선택형 Web 토글이 추가되었으므로, 이 앱은 기본적으로 오프라인이지만 해당 기능을 사용할 때는 오프라인이 아닙니다.',

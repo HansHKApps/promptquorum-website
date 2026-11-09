@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publishDate: '2026-04-04',
       dateModified: '2026-10-17',
       last_full_refresh: '2026-10-17',
-      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 2', 'Mistral Large 4', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
+      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 2 24B', 'Mistral Large 4', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
       next_refresh_due: '2026-11-16',
       leadAnswerBlock: '**In this comparison, Qwen3.8-27B is the strongest all-rounder on consumer hardware: 61.7 SWE-bench Pro (best dense model), fits 24 GB at Q4. Llama 4 Scout adds 10M context and multimodal input but needs ~55 GB VRAM; Mistral Small 3.1 24B fits 14 GB.**',
       nextStep: {
@@ -3556,7 +3556,7 @@ schema: {
       publishDate: '2026-04-04',
       dateModified: '2026-10-17',
       last_full_refresh: '2026-10-17',
-      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 2', 'Mistral Large 4', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
+      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 2 24B', 'Mistral Large 4', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
       next_refresh_due: '2026-11-16',
       leadAnswerBlock: '**이 비교에서 Qwen3.8-27B는 소비자용 하드웨어에서 가장 만능입니다(61.7 SWE-bench Pro, Q4 24 GB). Llama 4 Scout는 10M 컨텍스트와 멀티모달을 지원하나 ~55 GB VRAM이 필요하고, Mistral Small 3.1 24B는 14 GB입니다.**',
       nextStep: {

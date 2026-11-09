@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
-    current_models_mentioned: ['Gemma 4 12B', 'Qwen2.5-Coder 14B', 'Ornith 9B', 'Devstral Small 2', 'Qwen3.8 27B'],
+    current_models_mentioned: ['Gemma 4 12B', 'Qwen2.5-Coder 14B', 'Ornith 9B', 'Devstral Small 2 24B', 'Qwen3.8 27B'],
     current_hardware_mentioned: ['RTX 3060 12 GB', 'RTX 3080 Ti 12 GB'],
     educationalLevel: 'Intermediate',
     audience: 'Developers with 12 GB VRAM GPUs choosing a coding model',

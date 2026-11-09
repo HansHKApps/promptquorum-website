@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1605,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2004,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2403,7 +2403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2803,7 +2803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3203,7 +3203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 31B',
       'Llama 3.3 70B',
       'Hermes 4 70B',
-      'Kimi-K2.6',
+      'Kimi K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',

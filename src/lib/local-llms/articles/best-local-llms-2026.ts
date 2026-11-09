@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       next_refresh_due: '2026-12-02',
       next_seo_review_due: '2027-01-01',
       last_seo_review: '2026-11-02',
-      current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 E2B', 'Gemma 4 26B-A4B', 'Gemma 4 12B', 'Qwen2.5-Coder 7B', 'Phi-4-mini', 'Nemotron 3.5 Lightning', 'Granite 4.2', 'Devstral Small 2'],
+      current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 E2B', 'Gemma 4 26B-A4B', 'Gemma 4 12B', 'Qwen2.5-Coder 7B', 'Phi-4-mini', 'Nemotron 3.5 Lightning', 'Granite 4.2', 'Devstral Small 2 24B'],
       current_benchmarks_used: ['MMLU', 'HumanEval', 'GSM8K', 'SWE-bench Pro', 'LiveCodeBench v6', 'AIME 2026', 'GPQA Diamond', 'EvalPlus'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 3090', 'Mac unified memory (32 GB+)', 'Raspberry Pi 5'],
       theme: 'Best Models',
