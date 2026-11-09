@@ -105,10 +105,9 @@
                         h2: 'Model Storage Requirements (Q4_K_M)',
                         columns: ['Model', 'File Size', 'Min RAM/VRAM', 'Speed (CPU)'],
                         rows: [
-                            { 'Model': 'Qwen3 7B',             'File Size': '5.5 GB',   'Min RAM/VRAM': '8 GB',   'Speed (CPU)': '8–15 tok/s' },
+                            { 'Model': 'Qwen3 8B',             'File Size': '5.2 GB',   'Min RAM/VRAM': '8 GB',   'Speed (CPU)': '8–15 tok/s' },
                             { 'Model': 'Qwen3 14B',            'File Size': '9.5 GB',   'Min RAM/VRAM': '12 GB',  'Speed (CPU)': '4–8 tok/s' },
                             { 'Model': 'Qwen3 32B',            'File Size': '20.5 GB',  'Min RAM/VRAM': '24 GB',  'Speed (CPU)': '2–4 tok/s' },
-                            { 'Model': 'Qwen3 72B',            'File Size': '46 GB',    'Min RAM/VRAM': '48 GB',  'Speed (CPU)': '0.8–1.5 tok/s' },
                             { 'Model': 'Qwen3-Coder 7B',       'File Size': '5.5 GB',   'Min RAM/VRAM': '8 GB',   'Speed (CPU)': '8–15 tok/s' },
                             { 'Model': 'nomic-embed-text',        'File Size': '0.27 GB',  'Min RAM/VRAM': '1 GB',   'Speed (CPU)': 'Fast' }
                         ]
@@ -140,7 +139,7 @@
                         h2: 'Frequently Asked Questions',
                         faqs: [
                             { q: 'Does Ollama check the internet when serving?', a: 'No. Once models are pulled, ollama serve runs entirely offline. No telemetry or update checks occur during inference.' },
-                            { q: 'Can I run offline RAG on a laptop?', a: 'Yes. 16 GB RAM is sufficient for nomic-embed-text + Qwen3 7B Q4_K_M with AnythingLLM.' },
+                            { q: 'Can I run offline RAG on a laptop?', a: 'Yes. 16 GB RAM is sufficient for nomic-embed-text + Qwen3 8B Q4_K_M with AnythingLLM.' },
                             { q: 'How do I move models to another machine without internet?', a: 'Copy the entire ~/.ollama/models/ directory. Set OLLAMA_MODELS to the new path on the target machine.' },
                             { q: 'Does this satisfy China Data Security Law requirements?', a: 'Local inference keeps all data inside your network perimeter. No personal data or prompts are transmitted to foreign servers — meeting key DSL Article 31 and Cybersecurity Law Article 37 requirements for specific data categories.' }
                         ]
@@ -180,7 +179,7 @@
                         h2: 'Speicherbedarf der Modelle (Q4_K_M)',
                         columns: ['Modell', 'Dateigröße', 'Min. RAM/VRAM', 'Geschwindigkeit (CPU)'],
                         rows: [
-                            { 'Modell': 'Qwen3 7B',       'Dateigröße': '5,5 GB',  'Min. RAM/VRAM': '8 GB',  'Geschwindigkeit (CPU)': '8–15 Tok/s' },
+                            { 'Modell': 'Qwen3 8B',       'Dateigröße': '5,2 GB',  'Min. RAM/VRAM': '8 GB',  'Geschwindigkeit (CPU)': '8–15 Tok/s' },
                             { 'Modell': 'Qwen3 14B',      'Dateigröße': '9,5 GB',  'Min. RAM/VRAM': '12 GB', 'Geschwindigkeit (CPU)': '4–8 Tok/s' },
                             { 'Modell': 'Qwen3 32B',      'Dateigröße': '20,5 GB', 'Min. RAM/VRAM': '24 GB', 'Geschwindigkeit (CPU)': '2–4 Tok/s' },
                             { 'Modell': 'nomic-embed-text', 'Dateigröße': '0,27 GB', 'Min. RAM/VRAM': '1 GB',  'Geschwindigkeit (CPU)': 'Schnell' }
@@ -221,7 +220,7 @@
                         h2: 'Besoins de stockage des modèles (Q4_K_M)',
                         columns: ['Modèle', 'Taille fichier', 'RAM/VRAM min.', 'Vitesse (CPU)'],
                         rows: [
-                            { 'Modèle': 'Qwen3 7B',       'Taille fichier': '5,5 Go',  'RAM/VRAM min.': '8 Go',  'Vitesse (CPU)': '8–15 tok/s' },
+                            { 'Modèle': 'Qwen3 8B',       'Taille fichier': '5,2 Go',  'RAM/VRAM min.': '8 Go',  'Vitesse (CPU)': '8–15 tok/s' },
                             { 'Modèle': 'Qwen3 14B',      'Taille fichier': '9,5 Go',  'RAM/VRAM min.': '12 Go', 'Vitesse (CPU)': '4–8 tok/s' },
                             { 'Modèle': 'Qwen3 32B',      'Taille fichier': '20,5 Go', 'RAM/VRAM min.': '24 Go', 'Vitesse (CPU)': '2–4 tok/s' },
                             { 'Modèle': 'nomic-embed-text', 'Taille fichier': '0,27 Go', 'RAM/VRAM min.': '1 Go',  'Vitesse (CPU)': 'Rapide' }
@@ -262,7 +261,7 @@
                         h2: 'モデルストレージ要件（Q4_K_M）',
                         columns: ['モデル', 'ファイルサイズ', '最小RAM/VRAM', 'CPU速度'],
                         rows: [
-                            { 'モデル': 'Qwen3 7B',       'ファイルサイズ': '5.5 GB',  '最小RAM/VRAM': '8 GB',  'CPU速度': '8–15 トークン/秒' },
+                            { 'モデル': 'Qwen3 8B',       'ファイルサイズ': '5.2 GB',  '最小RAM/VRAM': '8 GB',  'CPU速度': '8–15 トークン/秒' },
                             { 'モデル': 'Qwen3 14B',      'ファイルサイズ': '9.5 GB',  '最小RAM/VRAM': '12 GB', 'CPU速度': '4–8 トークン/秒' },
                             { 'モデル': 'Qwen3 32B',      'ファイルサイズ': '20.5 GB', '最小RAM/VRAM': '24 GB', 'CPU速度': '2–4 トークン/秒' },
                             { 'モデル': 'nomic-embed-text', 'ファイルサイズ': '0.27 GB', '最小RAM/VRAM': '1 GB',  'CPU速度': '高速' }
@@ -315,10 +314,9 @@
                         h2: '模型存储需求（Q4_K_M量化）',
                         columns: ['模型', '文件大小', '最低显存/内存', 'CPU推理速度'],
                         rows: [
-                            { '模型': 'Qwen3 7B',       '文件大小': '5.5 GB',  '最低显存/内存': '8 GB',  'CPU推理速度': '8–15 tok/s' },
+                            { '模型': 'Qwen3 8B',       '文件大小': '5.2 GB',  '最低显存/内存': '8 GB',  'CPU推理速度': '8–15 tok/s' },
                             { '模型': 'Qwen3 14B',      '文件大小': '9.5 GB',  '最低显存/内存': '12 GB', 'CPU推理速度': '4–8 tok/s' },
                             { '模型': 'Qwen3 32B',      '文件大小': '20.5 GB', '最低显存/内存': '24 GB', 'CPU推理速度': '2–4 tok/s' },
-                            { '模型': 'Qwen3 72B',      '文件大小': '46 GB',   '最低显存/内存': '48 GB', 'CPU推理速度': '0.8–1.5 tok/s' },
                             { '模型': 'nomic-embed-text', '文件大小': '0.27 GB', '最低显存/内存': '1 GB',  'CPU推理速度': '极快' }
                         ]
                     },
