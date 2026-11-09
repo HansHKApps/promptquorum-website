@@ -1359,12 +1359,12 @@
       "family": "Kimi",
       "model": "Kimi K3",
       "type": "closed",
-      "release_date": null,
-      "status": "superseded",
-      "superseded_by": "Kimi K3.1 Pro",
+      "release_date": "2026-07-22",
+      "status": "current",
+      "superseded_by": null,
       "source_url": "https://platform.kimi.ai",
-      "verified_date": "2026-10-25",
-      "notes": "'Kimi's most capable flagship model to date' per Moonshot's own platform page, 1M-token context, positioned for software engineering / knowledge work / deep reasoning. Supersedes Kimi K2.6 as the general-purpose flagship. Kimi K2.7 Code (coding-specialist) remains a separate current entry, not superseded by K3. CORRECTION (2026-08-27, same-cycle re-check): confirmed via huggingface.co/moonshotai/Kimi-K3 that K3 ships under a proprietary \"Kimi K3 License\", not open-weight -- unlike K2.6/K2.7 Code. It is NOT a valid local/Ollama substitute for K2.6. Do not treat K2.6 as stale in any local-LLM/Ollama context; K3 supersedes it only as the closed hosted-API flagship."
+      "verified_date": "2026-11-09",
+      "notes": "STATUS CHANGED 2026-11-09 from superseded to current: no Moonshot page read (K3 and K3.1 Pro forum posts, GitHub README, Hugging Face org page) says K3 is replaced, deprecated or retired; both models are listed, K3.1 Pro (2026-10-23) is 'the first model in our new K3.1 series' and is newer and more capable. Release date = Moonshot forum announcement post of 2026-07-22 (page extraction, not verbatim). 2.8T total / 104B active, 1M context, API id kimi-k3, 'Kimi K3 License' per the README. TYPE CONFLICT, unresolved: this entry says closed, but Moonshot's GitHub README for Kimi K3 states the weights are released under the Kimi K3 License and a moonshotai/Kimi-K3 repo exists on Hugging Face. Treat as weights-available under a custom license until the owner decides the type label. Earlier note: 'Kimi's most capable flagship model to date' per Moonshot's own platform page, 1M-token context, positioned for software engineering / knowledge work / deep reasoning. Supersedes Kimi K2.6 as the general-purpose flagship. Kimi K2.7 Code (coding-specialist) remains a separate current entry, not superseded by K3. CORRECTION (2026-08-27, same-cycle re-check): confirmed via huggingface.co/moonshotai/Kimi-K3 that K3 ships under a proprietary \"Kimi K3 License\", not open-weight -- unlike K2.6/K2.7 Code. It is NOT a valid local/Ollama substitute for K2.6. Do not treat K2.6 as stale in any local-LLM/Ollama context; K3 supersedes it only as the closed hosted-API flagship."
     },
     {
       "company": "Alibaba / Qwen",
@@ -3639,12 +3639,12 @@
       "family": "Kimi",
       "model": "Kimi K3.1 Pro",
       "type": "closed",
-      "release_date": null,
+      "release_date": "2026-10-23",
       "status": "current",
       "superseded_by": null,
       "source_url": "https://platform.kimi.ai",
-      "verified_date": "2026-10-25",
-      "notes": "Moonshot AI's current flagship per platform.kimi.ai (2026-10-25 fetch via agent). 1M-token context, vision input, described as superior to Kimi K3 for software engineering and knowledge work. Kimi K3.1 Pro Highspeed (same model, ~2-3x speed) confirmed as a separate API endpoint. Release date not published. Closed/proprietary license — not open-weight, not a valid Ollama substitute for Kimi K2.6 (same caveat as Kimi K3). Supersedes Kimi K3 as the closed hosted-API flagship."
+      "verified_date": "2026-11-09",
+      "notes": "Release date = Moonshot forum announcement of 2026-10-23 ('the first model in our new K3.1 series', 'our most capable 3T-class open-weight model to date', 1M context; page extraction, not verbatim). A moonshotai/Kimi-K3.1-Pro repo (tag 2.8T) is listed on Hugging Face; its license, active parameters and API id are not on the pages read. K3.1 Pro Highspeed ('2-3x the speed') is announced in the same post. No page says K3 is replaced. TYPE CONFLICT, unresolved: this entry says closed, but Moonshot's GitHub README for Kimi K3 states the weights are released under the Kimi K3 License and a moonshotai/Kimi-K3 repo exists on Hugging Face. Treat as weights-available under a custom license until the owner decides the type label. Earlier note: Moonshot AI's current flagship per platform.kimi.ai (2026-10-25 fetch via agent). 1M-token context, vision input, described as superior to Kimi K3 for software engineering and knowledge work. Kimi K3.1 Pro Highspeed (same model, ~2-3x speed) confirmed as a separate API endpoint. Release date not published. Closed/proprietary license — not open-weight, not a valid Ollama substitute for Kimi K2.6 (same caveat as Kimi K3). Supersedes Kimi K3 as the closed hosted-API flagship."
     },
     {
       "company": "Mistral AI",
@@ -3837,6 +3837,42 @@
       "source_url": "https://www.liquid.ai/models",
       "verified_date": "2026-11-09",
       "notes": "Family-level entry. LFM2.5 launched with the blog post of 2026-01-05. Liquid's models page (2026-11-09 fetch) lists as current: LFM2.5-1.2B-Instruct, -1.2B-Thinking, -230M, -350M, -8B-A1B, -24B-A2B, and VL-450M, VL-1.6B, VL-3B (VL-3B blog 2026-08-12; 32,768-token context per its card). Listed as DEPRECATED on the same page: LFM2.5-2.6B, LFM2.5-1.2B-JP-202606 and LFM2.5-Audio-1.5B. A newer generation, LFM3, was announced 2026-10-27 and is listed alongside LFM2.5; the page does not call LFM2.5 legacy. LICENSE: the page says every LFM is free to download, run and fine-tune, including commercially, until a company passes $10M in annual revenue (link text 'LFM License'; Hugging Face tag lfm1.0). That is not an open-source licence."
+    },
+    {
+      "company": "IBM",
+      "family": "Granite",
+      "type": "open-weight",
+      "verified_date": "2026-11-09",
+      "superseded_by": null,
+      "status": "current",
+      "model": "Granite 4",
+      "release_date": null,
+      "source_url": "https://www.ibm.com/granite/docs/models/granite4-0",
+      "notes": "Generation-level entry for the Granite 4.x line (Granite 4.0, 4.1, 4.2). IBM's Granite 4.0 page lists Granite-4.0-H-Small (32B total / 9B active), H-Tiny (7B / 1B), H-Micro and Micro (3B), H-1B/1B (1.5B) and H-350M/350M, released under Apache 2.0. No page read gives a release date for Granite 4.0, so release_date is empty. No page says a later 4.x release replaces an earlier one. IBM's docs site carries the banner 'This documentation site is no longer being updated' and points to Hugging Face and GitHub; that is about the docs site, not about any model."
+    },
+    {
+      "company": "IBM",
+      "family": "Granite",
+      "type": "open-weight",
+      "verified_date": "2026-11-09",
+      "superseded_by": null,
+      "status": "current",
+      "model": "Granite 4.1",
+      "release_date": null,
+      "source_url": "https://www.ibm.com/granite/docs/models/granite4-1",
+      "notes": "IBM docs: three sizes, 3B, 8B and 30B, each as base and instruction-tuned, optional FP8; Apache 2.0; the GitHub page describes a final training phase scaling context to 512K tokens. No page read gives a release date (a GitHub citation block carries only an 'Accessed' date, which is not a release date). Naming conflict: IBM's page says granite-4.1-3b-instruct, the GitHub repo paths use no suffix (granite-4.1-3b). Granite 4.2 is post-trained on top of the 4.1 base models; no page says 4.2 replaces 4.1 or that 4.1 is deprecated."
+    },
+    {
+      "company": "IBM",
+      "family": "Granite",
+      "type": "open-weight",
+      "verified_date": "2026-11-09",
+      "superseded_by": null,
+      "status": "current",
+      "model": "Granite 4.2",
+      "release_date": "2026-08-25",
+      "source_url": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+      "notes": "Release date from the Hugging Face model card 'Release Date' field (August 25, 2026). Dense decoder-only 3B, 8B and 30B, Apache 2.0, built-in thinking mode, native 128K context. CONFLICTS in IBM's own pages, unresolved: the 8B card states 8B parameters but its sidebar shows 9B; IBM's docs say the 512K long-context extension applies to the 30B model only while the card lists 512K for the family. Post-trained from the Granite 4.1 base models (e.g. granite-4.1-8b-base); no page says it supersedes Granite 4.1."
     }
   ],
   "sources": [
