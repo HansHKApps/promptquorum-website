@@ -652,7 +652,7 @@
     "title": "Context Windows Explained: Why AI Forgets (and What to Do)",
     "excerpt": "Context windows cap LLM input — exceed the limit and older messages drop silently. GPT-5.6 (Sol/Terra/Luna) and Claude Opus 5 both now support 1M tokens.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/prompt-engineering/context-windows-explained-why-ai-forgets",
     "cluster": "prompt-engineering"
   },
@@ -715,7 +715,7 @@
     "title": "نوافذ السياق مشروحة: لماذا تنسى الذكاء الاصطناعي (وماذا تفعل؟)",
     "excerpt": "نوافذ السياق تحدّ مدخلات ⁨LLMs⁩ — ⁨GPT-5.6⁩ (Sol/Terra/Luna) و⁨Claude Opus 5⁩ كلاهما يدعم الآن ⁨1M⁩ رمز. تجاوز الحد يُسقط الرسائل القديمة صامتاً. تحكّم في ⁨Ollama⁩ والنماذج السحابية.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ar/prompt-engineering/context-windows-explained-why-ai-forgets",
     "cluster": "prompt-engineering"
   },
@@ -724,7 +724,7 @@
     "title": "컨텍스트 윈도우 설명: AI가 잊어버리는 이유(와 대처 방법)",
     "excerpt": "컨텍스트 윈도우는 LLM 입력을 제한합니다 — 한도를 초과하면 오래된 메시지가 자동으로 삭제됩니다. GPT-5.6(Sol/Terra/Luna)과 Claude Opus 5 모두 이제 1M 토큰을 지원합니다.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ko/prompt-engineering/context-windows-explained-why-ai-forgets",
     "cluster": "prompt-engineering"
   },
@@ -4943,18 +4943,18 @@
   {
     "lang": "en",
     "title": "Best Tools for Structured Output and JSON Mode (2026)",
-    "excerpt": "7 structured output tools compared: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum. Pricing, schema format, local model support.",
+    "excerpt": "7 structured output tools compared: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum (our own product). Schema format, local models.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "Beste Tools für Structured Output und JSON Mode (2026)",
-    "excerpt": "7 Structured-Output-Tools 2026 verglichen: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum. Lizenz, Schema-Format, lokale Modelle.",
+    "excerpt": "7 Structured-Output-Tools 2026 verglichen: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum (unser eigenes Produkt). Schema-Format, lokale Modelle.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/de/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
@@ -4963,61 +4963,61 @@
     "title": "Meilleurs outils pour Structured Output et JSON Mode (2026)",
     "excerpt": "Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin : quel outil choisir ? Tableau comparatif 2026 : licence, schéma, modèles locaux.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/fr/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ja",
     "title": "Structured Output対応ツール2026：用途別ランキング",
-    "excerpt": "構造化出力ツール7選を比較：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin、PromptQuorum。ライセンス・スキーマ形式・ローカルモデル対応。",
+    "excerpt": "構造化出力ツール7選を比較：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin、PromptQuorum（当社の製品）。ライセンス・スキーマ形式・ローカルモデル対応。",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/ja/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
-    "title": "2026年Structured Output最佳工具：用途排名",
-    "excerpt": "7款结构化输出工具对比：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin和PromptQuorum。含许可证、模式格式与本地模型支持。",
+    "title": "2026年Structured Output最佳工具：对比",
+    "excerpt": "7款结构化输出工具对比：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin和PromptQuorum（我们自己的产品）。含许可证、模式格式与本地模型支持。",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/zh/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "es",
     "title": "Mejores herramientas para Structured Output y JSON Mode (2026)",
-    "excerpt": "7 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin y PromptQuorum. Licencia y modelos locales.",
+    "excerpt": "7 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin y PromptQuorum (nuestro propio producto). Modelos locales.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/es/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "pt",
     "title": "Melhores ferramentas para Structured Output e JSON Mode (2026)",
-    "excerpt": "7 ferramentas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin e PromptQuorum. Licença e modelos locais.",
+    "excerpt": "7 ferramentas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin e PromptQuorum (nosso próprio produto). Modelos locais.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/pt/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ar",
     "title": "أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode⁩ (⁨2026⁩)",
-    "excerpt": "مقارنة ⁨7⁩ أدوات ⁨structured output⁩: ⁨Instructor⁩ و⁨Outlines⁩ و⁨Pydantic AI⁩ و⁨BAML⁩ و⁨LangChain⁩ و⁨Marvin⁩ و⁨PromptQuorum⁩. الترخيص ودعم النماذج المحلية.",
+    "excerpt": "مقارنة ⁨7⁩ أدوات ⁨structured output⁩: ⁨Instructor⁩ و⁨Outlines⁩ و⁨Pydantic AI⁩ و⁨BAML⁩ و⁨LangChain⁩ و⁨Marvin⁩ و⁨PromptQuorum⁩ (منتجنا الخاص). دعم النماذج المحلية.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/ar/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ko",
     "title": "Structured Output 및 JSON Mode 최고의 도구 (2026)",
-    "excerpt": "Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum — 7가지 structured output 도구 비교. 라이선스 및 로컬 모델 지원 포함.",
+    "excerpt": "Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum(자사 제품) — 7가지 structured output 도구 비교. 라이선스 및 로컬 모델 지원 포함.",
     "publishDate": "2026-04-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/ko/prompt-engineering/best-tools-structured-output-json",
     "cluster": "prompt-engineering"
   },
@@ -6970,7 +6970,7 @@
     "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
     "excerpt": "Local AI runs models on your own hardware, no internet needed. Local LLMs are its language models. Learn how they work and when to use them. Guide for 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -6979,7 +6979,7 @@
     "title": "Was ist lokale KI? Wie lokale LLMs KI-Modelle auf Ihrer eigenen Hardware ausführen",
     "excerpt": "Lokale KI läuft offline auf Ihrer Hardware, lokale LLMs sind die Sprachmodelle dahinter. Vorteile, Funktionsweise und Einstieg ohne Cloud.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -6988,7 +6988,7 @@
     "title": "Qu'est-ce que l'IA locale ? Comment les LLMs locaux exécutent des modèles IA sur votre propre matériel",
     "excerpt": "IA locale : vos données restent sur votre machine, pas de coût par token, usage hors ligne. Les LLMs locaux en sont les modèles de langage. Démarrez avec Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -6997,7 +6997,7 @@
     "title": "ローカルAIとローカルLLMとは？自分のハードウェアでAIモデルを実行する方法",
     "excerpt": "ローカルAIはネット不要で自分のPC上で動くAI、ローカルLLMはその言語モデル。プライバシー・コスト・始め方をOllamaとLM Studioで解説。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -7006,7 +7006,7 @@
     "title": "什么是本地AI？本地LLM如何在自己的硬件上运行AI模型",
     "excerpt": "本地AI：数据留在本机、无按token费用、可离线使用，本地LLM是其语言模型。比较优劣，用Ollama和LM Studio立即开始。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -7015,7 +7015,7 @@
     "title": "¿Qué es la IA local? Cómo los LLM locales ejecutan modelos de IA en tu propio hardware",
     "excerpt": "La IA local ejecuta modelos en tu propio hardware, sin internet. Los LLM locales son sus modelos de lenguaje. Aprende cómo funcionan y cuándo usarlos. Guía 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -7024,7 +7024,7 @@
     "title": "O que é IA local? Como LLMs locais rodam modelos de IA no seu próprio hardware",
     "excerpt": "A IA local roda modelos no seu próprio hardware, sem internet. Os LLMs locais são seus modelos de linguagem. Veja como funcionam e quando usá-los. Guia 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -7033,7 +7033,7 @@
     "title": "ما هو الذكاء الاصطناعي المحلي؟ كيف تشغّل نماذج ⁨LLM⁩ المحلية نماذج الذكاء الاصطناعي على عتادك الخاص",
     "excerpt": "يعمل الذكاء الاصطناعي المحلي بالكامل على عتادك بلا إنترنت، ونماذج ⁨LLM⁩ المحلية هي نماذجه اللغوية. نموذج ⁨7B⁩ بـ ⁨Q4⁩ يحتاج ⁨8 GB RAM⁩ فقط. دليل ⁨Ollama⁩ و⁨LM Studio⁩ لعام ⁨2026⁩.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -7042,7 +7042,7 @@
     "title": "로컬 AI와 로컬 LLM이란? 내 하드웨어에서 AI 모델을 실행하는 방법",
     "excerpt": "로컬 AI는 인터넷 없이 내 하드웨어에서 실행되는 AI이고, 로컬 LLM은 그중 텍스트를 다루는 언어 모델입니다. 개념, 필요한 하드웨어, 4단계 구축 순서까지 정리한 2026년 가이드.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/what-are-local-llms",
     "cluster": "local-llms"
   },
@@ -7292,9 +7292,9 @@
   {
     "lang": "en",
     "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
-    "excerpt": "5 beginner local LLMs ranked: Llama 3.2 3B (2.5 GB, 45 tok/s), Phi-4 Mini (best reasoning), Gemma 4 E2B (1.7 GB, fastest), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, one Ollama command.",
+    "excerpt": "5 beginner local LLMs ranked: Llama 3.2 3B (2.5 GB, 45 tok/s), Phi-4 Mini (best reasoning), Gemma 4 E2B (1.7 GB, among the faster options), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, one Ollama command.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7303,7 +7303,7 @@
     "title": "Beste Einsteiger-LLMs 2026: 4GB & 8GB RAM Modelle (Llama, Phi, Gemma, Qwen)",
     "excerpt": "5 Einsteiger-LLMs: Llama 3.2 3B (2,5 GB), Phi-4 Mini (beste Logik), Gemma 4 E2B (1,7 GB, am schnellsten), Llama 3.1 8B, Qwen3 8B. Alle mit 4–8 GB RAM, ein Ollama-Befehl.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7312,7 +7312,7 @@
     "title": "Meilleurs LLMs débutants 2026 : Modèles 4GB & 8GB RAM classés (Llama, Phi, Gemma, Qwen)",
     "excerpt": "5 LLMs locaux pour débutants : Llama 3.2 3B (2,5 Go, 45 tok/s), Phi-4 Mini (meilleur raisonnement), Gemma 4 E2B (1,7 Go, le plus rapide), Llama 3.1 8B, Qwen3 8B. 4–8 Go RAM via Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7321,7 +7321,7 @@
     "title": "2026年初心者向けローカルLLM：4GB & 8GB RAM完全比較ガイド（Llama、Phi、Gemma、Qwen）",
     "excerpt": "初心者向けローカルLLM5選：Llama 3.2 3B（2.5GB、45 tok/s）、Phi-4 Mini（2.5GB、推論力最高）、Gemma 4 E2B（1.7GB、最速）、Llama 3.1 8B、Qwen3 8B。すべて4–8GB RAMとOllamaコマンド1つで動作。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7330,7 +7330,7 @@
     "title": "2026年初学者最佳本地LLM：4GB & 8GB内存模型完整评测（Llama、Phi、Gemma、Qwen）",
     "excerpt": "5款入门本地LLM评测：Llama 3.2 3B（2.5GB，45 tok/s）、Phi-4 Mini（推理最强）、Gemma 4 E2B（1.7GB，最快）、Llama 3.1 8B、Qwen3 8B。4–8GB内存，一条Ollama命令即可运行。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7339,7 +7339,7 @@
     "title": "Mejores LLMs locales para principiantes 2026: Modelos de 4 GB y 8 GB de RAM (Llama, Phi, Gemma, Qwen)",
     "excerpt": "5 LLMs locales para principiantes: Llama 3.2 3B (2,5 GB, 45 tok/s), Phi-4 Mini (mejor razonamiento), Gemma 4 E2B (1,7 GB, el más rápido), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, un comando Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7348,7 +7348,7 @@
     "title": "Melhores LLMs locais para iniciantes 2026: modelos de 4 GB e 8 GB de RAM",
     "excerpt": "5 LLMs locais para iniciantes: Llama 3.2 3B (2,5 GB, 45 tok/s), Phi-4 Mini (melhor raciocínio), Gemma 4 E2B (o mais rápido). Todos com 4–8 GB RAM via Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7357,7 +7357,7 @@
     "title": "أفضل نماذج ⁨LLM⁩ المحلية للمبتدئين ⁨2026⁩: نماذج بذاكرة ⁨4 GB⁩ و⁨8 GB⁩ (⁨Llama⁩ وPhi وGemma وQwen)",
     "excerpt": "⁨5⁩ نماذج ⁨LLM⁩ للمبتدئين: ⁨Llama 3.2 3B⁩ (⁨2.5GB⁩، ⁨45⁩ رمز/ث)، ⁨Phi-4 Mini⁩ أفضل استدلال، ⁨Gemma 4 E2B⁩ الأسرع. كلها بـ ⁨4⁩–⁨8GB RAM⁩ وأمر ⁨Ollama⁩ واحد.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7366,7 +7366,7 @@
     "title": "2026년 초보자 입문 로컬 LLM: 4GB & 8GB RAM 모델 완전 비교 (Llama, Phi, Gemma, Qwen)",
     "excerpt": "로컬 AI·로컬 LLM 추천 순위: Llama 3.2 3B(2.5GB), Phi-4 Mini(2.5GB), Gemma 4 E2B(1.7GB), Qwen3 8B. 모델 종류별 RAM 사양과 성능 비교, Ollama 명령어까지.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/best-beginner-local-llm-models",
     "cluster": "local-llms"
   },
@@ -7699,7 +7699,7 @@
     "title": "Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)",
     "excerpt": "100% private, $0/token, but 10x slower than GPT-5.6 and no real-time data. Trade-off table: which tasks go local, which go cloud. Speed, cost, VRAM covered.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/local-llm-limitations",
     "cluster": "local-llms"
   },
@@ -7744,7 +7744,7 @@
     "title": "LLM Local vs API en la Nube: Cuándo Usar Cada Uno (Comparativa 2026)",
     "excerpt": "100% privado y $0/token, pero 10× más lento que GPT-5.6 y sin datos en tiempo real. Tabla: qué tareas van en local y cuáles en la nube. Velocidad, costo y VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/local-llm-limitations",
     "cluster": "local-llms"
   },
@@ -7762,7 +7762,7 @@
     "title": "⁨LLM⁩ المحلي مقابل واجهة ⁨API⁩ السحابية: متى تستخدم كلًا منهما (مقارنة ⁨2026⁩)",
     "excerpt": "⁨LLM⁩ المحلي خاص ⁨100%⁩ وبلا تكلفة لكل رمز، لكنه أبطأ بـ ⁨10⁩× من ⁨GPT-5.6⁩ وبلا بيانات فورية. جدول يحدد أي المهام للمحلي وأيها يحتاج السحابة.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/local-llm-limitations",
     "cluster": "local-llms"
   },
@@ -7771,7 +7771,7 @@
     "title": "로컬 LLM vs 클라우드 API: 각각의 적합한 사용 시기 (2026년 트레이드오프)",
     "excerpt": "100% 비공개, 토큰당 $0이지만 GPT-5.6보다 10배 느리고 실시간 데이터가 없습니다. 트레이드오프 표: 어떤 작업은 로컬에, 어떤 작업은 클라우드에. 속도, 비용, VRAM 포함.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/local-llm-limitations",
     "cluster": "local-llms"
   },
@@ -7861,7 +7861,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
     "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Best per task?",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7870,7 +7870,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich",
     "excerpt": "Qwen3.8-27B gewinnt beim Coding: 61,7 SWE-bench Pro, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7879,7 +7879,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026",
     "excerpt": "Qwen3.8-27B gagne au codage : 61,7 SWE-bench Pro, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7888,7 +7888,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較",
     "excerpt": "Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7897,7 +7897,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比",
     "excerpt": "Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7906,7 +7906,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026",
     "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7915,7 +7915,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026",
     "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7924,7 +7924,7 @@
     "title": "⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩",
     "excerpt": "⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7 SWE-bench Pro⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7933,7 +7933,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026",
     "excerpt": "Qwen3.8-27B 61.7 SWE-bench Pro(24GB), Llama 4 Scout 10M 컨텍스트, Mistral 79% MMLU. 작업별 비교.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -8671,7 +8671,7 @@
     "title": "Local LLM Model Updates 2026: Every Major Open-Weight Release This Year",
     "excerpt": "Local LLM model updates 2026: every major open-weight release tracked, including Qwen3.8-27B (Aug 2026), with specs, benchmarks, and Ollama availability.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/local-llm-model-updates-2026",
     "cluster": "local-llms"
   },
@@ -8914,7 +8914,7 @@
     "title": "Local LLMs vs Cloud APIs: Which Should You Use in 2026?",
     "excerpt": "Local LLMs cost $0/token after hardware; cloud APIs cost $0.15-$60/1M tokens. Full 2026 comparison: privacy, cost, speed, quality across 8 factors.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8923,7 +8923,7 @@
     "title": "Lokale LLMs vs. Cloud-APIs: Was sollten Sie 2026 verwenden?",
     "excerpt": "Lokale LLMs kosten $0/Token nach Hardware; Cloud-APIs $0,15-$60/1 Mio. Tokens. 2026-Vergleich über 8 Faktoren: Datenschutz, Kosten, Qualität.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8932,7 +8932,7 @@
     "title": "LLMs locaux vs APIs cloud : Que choisir en 2026 ?",
     "excerpt": "LLMs locaux : $0/token après le matériel ; APIs cloud : $0,15-$60/1M tokens. Comparaison 2026 : confidentialité, coûts, qualité sur 8 facteurs.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8941,7 +8941,7 @@
     "title": "ローカルLLM vs クラウドAPI：2026年はどちらを選ぶべきか？",
     "excerpt": "ローカルLLMはハードウェア投資後$0/トークン；クラウドAPIは$0.15〜$60/100万トークン。プライバシー・コスト・品質を8つの要素で2026年完全比較。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8950,7 +8950,7 @@
     "title": "本地LLM vs 云端API：2026年该如何选择？",
     "excerpt": "本地LLM硬件投资后每token费用为$0；云端API费用为$0.15-$60/百万token。2026年完整对比：隐私、成本、质量8大因素。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8959,7 +8959,7 @@
     "title": "LLMs locales vs APIs en la nube: ¿Cuál deberías usar en 2026?",
     "excerpt": "Los LLMs locales cuestan $0/token tras el hardware; las APIs cloud, $0.15–$60/1M tokens. Comparación 2026 de privacidad, costo, velocidad y calidad.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8968,7 +8968,7 @@
     "title": "LLMs Locais vs APIs na Nuvem: Qual Usar em 2026?",
     "excerpt": "LLMs locais custam $0/token após o hardware; APIs na nuvem custam $0,15–$60/1M tokens. Comparação 2026 de privacidade, custo, velocidade e qualidade.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8977,7 +8977,7 @@
     "title": "نماذج ⁨LLM⁩ المحلية مقابل واجهات ⁨API⁩ السحابية: أيهما يجب أن تستخدم في ⁨2026⁩؟",
     "excerpt": "⁨LLM⁩ المحلية تكلّف ⁨0⁩$/رمز بعد العتاد؛ ⁨API⁩ السحابية بين ⁨0.15⁩$ و⁨60⁩$/مليون رمز. مقارنة ⁨2026⁩ عبر ⁨8⁩ عوامل: الخصوصية والتكلفة والسرعة والجودة.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -8986,7 +8986,7 @@
     "title": "로컬 LLM vs 클라우드 API: 2026년에는 무엇을 선택해야 합니까?",
     "excerpt": "로컬 LLM은 하드웨어 투자 후 토큰당 $0입니다. 클라우드 API는 1M 토큰당 $0.15~$60입니다. 2026년 전체 비교: 프라이버시, 비용, 속도, 품질 8가지 요소.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/local-llms-vs-cloud-apis",
     "cluster": "local-llms"
   },
@@ -10786,7 +10786,7 @@
     "title": "VRAM-Rechner 2026: GPU-Anforderungen für 7B/13B/70B LLMs (Q4, Q5, Q8)",
     "excerpt": "Interaktiver VRAM-Rechner 2026: GPU-Bedarf für 7B (3,5 GB Q4), 13B (6,5 GB), 70B (35 GB) berechnen. RTX 4090/4080/4070 Ti, Q4/Q5/Q8-Quantisierung.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10795,7 +10795,7 @@
     "title": "Calculateur VRAM 2026 : Exigences GPU pour LLMs 7B/13B/70B (Q4, Q5, Q8)",
     "excerpt": "Calculateur VRAM interactif : calculez les exigences GPU exactes pour LLMs 7B (3.5 Go Q4), 13B (6.5 Go Q4), 70B (35 Go Q4). Vérifiez la compatibilité RTX 4090, 4080, 4070 Ti. Quantification Q4/Q5/Q8. Contexte, lot et surcharge système inclus.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10804,7 +10804,7 @@
     "title": "VRAMカリキュレーター2026：7B/13B/70B LLMのGPU要件（Q4、Q5、Q8）",
     "excerpt": "インタラクティブVRAMカリキュレーター：7B（Q4で3.5 GB）、13B（Q4で6.5 GB）、70B（Q4で35 GB）LLMの正確なGPU要件を計算。RTX 4090、4080、4070 Tiの適合確認。Q4/Q5/Q8量子化。コンテキスト、バッチ、システムオーバーヘッドを含む。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10813,7 +10813,7 @@
     "title": "VRAM计算器2026：7B/13B/70B LLM的GPU显存需求（Q4、Q5、Q8）",
     "excerpt": "交互式VRAM计算器：精确计算7B（Q4需3.5 GB）、13B（Q4需6.5 GB）、70B（Q4需35 GB）LLM的GPU需求。验证RTX 4090、4080、4070 Ti适配性。支持Q4/Q5/Q8量化，包含上下文、批次和系统开销。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10822,7 +10822,7 @@
     "title": "Calculadora de VRAM 2026: Requisitos de GPU para LLMs 7B/13B/70B (Q4, Q5, Q8)",
     "excerpt": "Calcula los requisitos exactos de GPU para LLMs de 7B (3,5 GB en Q4), 13B (6,5 GB en Q4) y 70B (35 GB en Q4). Compatibilidad con RTX 4090, 4080 y 4070 Ti.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10840,7 +10840,7 @@
     "title": "حاسبة ⁨VRAM 2026⁩: متطلبات ⁨GPU⁩ لنماذج ⁨LLM 7B/13B/70B⁩ (⁨Q4⁩، ⁨Q5⁩، ⁨Q8⁩)",
     "excerpt": "احسب متطلبات ⁨GPU⁩ الدقيقة لنماذج ⁨7B⁩ (⁨3.5 GB⁩ بـ ⁨Q4⁩) و⁨13B⁩ (⁨6.5 GB⁩ بـ ⁨Q4⁩) و⁨70B⁩ (⁨35 GB⁩ بـ ⁨Q4⁩). توافق مع ⁨RTX 4090⁩ و⁨4080⁩ و⁨4070 Ti⁩.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10849,7 +10849,7 @@
     "title": "VRAM 계산기 2026: 7B/13B/70B LLM GPU 요구 사항 (Q4, Q5, Q8)",
     "excerpt": "인터랙티브 VRAM 계산기: 7B(Q4 3.5GB), 13B(6.5GB), 70B(35GB) LLM GPU 요구 사항 계산. RTX 4090/4080/4070 Ti 적합 여부와 Q4/Q5/Q8 양자화 포함.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/vram-calculator-local-llm",
     "cluster": "local-llms"
   },
@@ -10937,9 +10937,9 @@
   {
     "lang": "en",
     "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-    "excerpt": "M5 Max vs RTX 4090 and RTX 5090: speed, cost, power, VRAM vs unified memory. Crossover at ~24GB. Below: NVIDIA faster. Above: Apple Silicon only.",
+    "excerpt": "M5 Max vs RTX 4090 and RTX 5090: speed, cost, power, VRAM vs unified memory. Crossover ~24GB: NVIDIA faster below; above, Apple is one of few options.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10948,7 +10948,7 @@
     "title": "Apple Silicon vs NVIDIA GPU für lokale LLMs 2026: Performance, Kosten, Workflow im Vergleich",
     "excerpt": "M5 Max vs RTX 4090: Geschwindigkeit, Kosten, Stromverbrauch, VRAM vs Unified Memory. Wendepunkt bei 24 GB. Vollständiger Vergleich für lokale LLMs.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10957,61 +10957,61 @@
     "title": "Apple Silicon vs NVIDIA GPU pour les LLMs locaux 2026 : Performance, coûts, workflow comparés",
     "excerpt": "M5 Max vs RTX 4090 : vitesse, coûts, consommation d'énergie, VRAM vs mémoire unifiée. Point de basculement à 24 GB. Comparaison complète.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "2026年 Apple SiliconとNVIDIA GPUのローカルLLM比較：性能、コスト、ワークフロー",
-    "excerpt": "M5 Max vs RTX 4090：性能、コスト、消費電力、VRAM vs Unified Memory比較。分岐点24GB。以下ではNVIDIA高速、以上ではApple Siliconのみ。ベンチマーク、TCO分析、完全比較。",
+    "excerpt": "M5 Max vs RTX 4090：性能、コスト、消費電力、VRAM vs Unified Memory比較。分岐点24GB。以下ではNVIDIA高速、以上ではApple Silicon。ベンチマーク、TCO分析、完全比較。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "2026年Apple Silicon vs NVIDIA GPU本地大模型对比：性能、成本、工作流",
-    "excerpt": "M5 Max vs RTX 4090：性能、成本、功耗、VRAM对统一内存对比。转折点24GB。24GB以下NVIDIA更快，以上Apple Silicon唯一。完整基准、TCO分析、工作流对比。",
+    "excerpt": "M5 Max vs RTX 4090：性能、成本、功耗、VRAM对统一内存对比。转折点24GB。24GB以下NVIDIA更快，以上则是Apple Silicon。完整基准、TCO分析、工作流对比。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Apple Silicon vs NVIDIA GPU para LLMs locales 2026: Rendimiento, Costo, Workflow Comparados",
-    "excerpt": "M5 Max vs RTX 4090: velocidad, costo, consumo y VRAM vs memoria unificada. Punto de cruce a ~24 GB: por debajo gana NVIDIA, por encima solo Apple Silicon.",
+    "excerpt": "M5 Max vs RTX 4090: velocidad, costo, consumo y VRAM vs memoria unificada. Cruce a ~24 GB: NVIDIA más rápida por debajo; por encima, Apple Silicon.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Apple Silicon vs GPU NVIDIA para LLMs locais 2026: desempenho, custo e workflow comparados",
-    "excerpt": "M5 Max vs RTX 4090: velocidade, custo, consumo e VRAM vs memória unificada. Ponto de cruzamento em ~24 GB: abaixo vence a NVIDIA, acima só o Apple Silicon.",
+    "excerpt": "M5 Max vs RTX 4090: velocidade, custo, consumo e VRAM vs memória unificada. Ponto de cruzamento em ~24 GB: abaixo a NVIDIA é mais rápida; acima, o Apple Silicon.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "⁨Apple Silicon⁩ مقابل ⁨GPU⁩ من ⁨NVIDIA⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: الأداء والتكلفة وتدفق العمل",
-    "excerpt": "⁨M5 Max⁩ مقابل ⁨RTX 4090⁩: التقاطع عند ⁨24 GB⁩. دونها تتفوق ⁨NVIDIA⁩؛ فوقها ⁨Apple Silicon⁩ الخيار الوحيد. مقارنة السرعة والتكلفة والطاقة.",
+    "excerpt": "⁨M5 Max⁩ مقابل ⁨RTX 4090⁩: التقاطع عند ⁨24 GB⁩. دونها تتفوق ⁨NVIDIA⁩؛ فوقها ⁨Apple Silicon⁩. مقارنة السرعة والتكلفة والطاقة.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "2026년 Apple Silicon vs NVIDIA GPU 로컬 LLM 비교: 성능, 비용, 워크플로우",
-    "excerpt": "M5 Max vs RTX 4090: 속도, 비용, 전력, VRAM 대 통합 메모리 비교. 분기점 약 24GB. 24GB 미만에서는 NVIDIA 우세, 초과 시 Apple Silicon만 가능. 전체 비교 분석.",
+    "excerpt": "M5 Max vs RTX 4090: 속도, 비용, 전력, VRAM 대 통합 메모리 비교. 분기점 약 24GB. 24GB 미만에서는 NVIDIA 우세, 초과 시 Apple Silicon. 전체 비교 분석.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -11911,7 +11911,7 @@
     "title": "Private Local AI For Business: On-Premises Deployment Without Cloud",
     "excerpt": "On-premises AI breaks even at 200M tokens/month: $133/mo hardware vs $1,000/mo GPT-5.6 API. GDPR/HIPAA-compatible architecture (no data egress at inference). Llama 3.3 70B on RTX 5090 or vLLM cluster.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11920,7 +11920,7 @@
     "title": "Private lokale KI für Unternehmen: On-Premises-Bereitstellung ohne Cloud",
     "excerpt": "Private lokale KI für Unternehmen 2026: DSGVO-konforme On-Premises-LLMs ohne Cloud. Datenschutz, Kosten und Setup für den Mittelstand.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11929,7 +11929,7 @@
     "title": "IA Locale Privée Pour Les Entreprises : Déploiement On-Premises Sans Cloud",
     "excerpt": "L'IA sur site rentable dès 200M tokens/mois : 120 €/mois matériel vs 900 €/mois API GPT-5.6. RGPD, HIPAA, SOC2 conformes. Llama 3.3 70B sur RTX 5090 ou cluster vLLM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-25",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11938,7 +11938,7 @@
     "title": "プライベート・ローカルAI for ビジネス：オンプレミス展開ガイド 2026",
     "excerpt": "オンプレミスAIは月2億トークンで損益分岐：ハードウェア¥15,000/月 vs GPT-5.6 API ¥150,000/月。GDPR・HIPAA・SOC2準拠。Llama 3.3 70BをRTX 5090またはvLLMクラスタで運用。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-25",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11947,7 +11947,7 @@
     "title": "企业本地私有AI：保持数据主权与成本控制的On-Premises部署指南 2026",
     "excerpt": "本地部署AI在月2亿token时盈亏平衡：硬件$150/月 vs GPT-5.6 API $1,000/月。GDPR、HIPAA、SOC2合规。Llama 3.3 70B运行于RTX 5090或vLLM集群。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-25",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11956,7 +11956,7 @@
     "title": "IA Local Privada para Empresas: Despliegue On-Premises sin la Nube",
     "excerpt": "La IA on-premises es rentable a partir de 200M tokens/mes: $133/mes en hardware frente a $1.000/mes de la API GPT-5.6. Cumple GDPR, HIPAA y SOC2. Llama 3.3 70B en RTX 5090 o clúster vLLM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11965,7 +11965,7 @@
     "title": "IA Local Privada para Empresas: Implantação On-Premises sem a Nuvem",
     "excerpt": "IA on-premises é economicamente viável a partir de 200M tokens/mês: $133/mês em hardware vs $1.000/mês da API GPT-5.6. Conformidade com LGPD, HIPAA e SOC2. Llama 3.3 70B em RTX 5090 ou cluster vLLM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11974,7 +11974,7 @@
     "title": "الذكاء الاصطناعي المحلي الخاص للشركات: نشر في الموقع دون السحابة",
     "excerpt": "تكلفة ⁨133⁩ دولارًا/شهر للعتاد مقابل ⁨1⁩,⁨000⁩ دولار/شهر لـ ⁨API GPT-5.6⁩ عند ⁨200⁩ مليون ⁨token. Llama 3.3 70B⁩ على ⁨RTX⁩ يمتثل للوائح ⁨ISO 27001⁩ وحماية البيانات.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -11983,7 +11983,7 @@
     "title": "비즈니스를 위한 프라이빗 로컬 AI: 클라우드 없이 온프레미스 배포",
     "excerpt": "온프레미스 AI는 월 2억 토큰에서 손익분기점 도달: 하드웨어 월 $133 vs GPT-5.6 API 월 $1,000. GDPR·HIPAA·SOC2 준수. RTX 5090 또는 vLLM 클러스터에서 Llama 3.3 70B 구동.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -12316,7 +12316,7 @@
     "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
     "excerpt": "Small-model quality keeps improving in 2026. Smartphones run local LLMs at 15–30 tok/sec. Enterprise on-prem adoption is growing, led by regulated industries.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12325,7 +12325,7 @@
     "title": "Lokale LLM Trends 2026–2027: 5 Schlüsselvorhersagen für Enterprise-Adoption und On-Device-KI",
     "excerpt": "Die Zukunft lokaler LLMs: Modellqualität pro Parameter bei kleinen Modellen steigt weiter, Smartphones laufen mit 15–30 Token/Sek. Adoption wächst.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12334,7 +12334,7 @@
     "title": "Tendances LLM local 2026–2027 : 5 prédictions clés pour l'adoption entreprise et l'IA sur appareil",
     "excerpt": "La qualité par paramètre des petits modèles s'améliore en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. L'adoption sur site croît.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12343,7 +12343,7 @@
     "title": "ローカルLLMトレンド2026–2027：エンタープライズ導入と端末AI予測",
     "excerpt": "小型モデルのパラメータ当たり品質は2026年も向上を続けています。スマートフォンは15–30トークン/秒でローカルLLMを実行。企業のオンプレミス推論導入は規制業界を中心に拡大しています。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12352,7 +12352,7 @@
     "title": "本地LLM趋势2026–2027：企业采用与端设备AI的5大预测",
     "excerpt": "小型模型的参数效率在2026年持续提升。智能手机以15–30令牌/秒运行本地LLM。企业本地推理的采用正在增长，由受监管行业带头。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12361,7 +12361,7 @@
     "title": "Tendencias de LLM local 2026–2027: 5 predicciones clave para la adopción empresarial y la IA en dispositivo",
     "excerpt": "La calidad de los modelos pequeños por parámetro sigue mejorando en 2026 y los smartphones ejecutan LLMs a 15–30 tok/s.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12370,7 +12370,7 @@
     "title": "Tendências de LLM local 2026–2027: 5 previsões principais para adoção empresarial e IA em dispositivo",
     "excerpt": "A qualidade dos modelos pequenos por parâmetro continua melhorando em 2026 e smartphones executam LLMs a 15–30 tok/s.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12379,7 +12379,7 @@
     "title": "اتجاهات ⁨LLM⁩ المحلية ⁨2026⁩–⁨2027⁩: ⁨5⁩ تنبؤات رئيسية لتبني المؤسسات والذكاء الاصطناعي على الجهاز",
     "excerpt": "جودة النماذج الصغيرة لكل معامل تستمر في التحسن في ⁨2026⁩؛ الهواتف تشغّل ⁨LLMs⁩ محلياً بسرعة ⁨15⁩–⁨30⁩ رمز/ثانية. تبني الاستدلال المحلي يتزايد.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12388,7 +12388,7 @@
     "title": "로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측",
     "excerpt": "소형 모델의 파라미터당 품질은 2026년에도 계속 향상되고 있습니다. 스마트폰이 15–30 tok/sec으로 로컬 LLM을 실행합니다. 기업의 온프레미스 추론 도입이 규제 산업을 중심으로 증가하고 있습니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/future-of-local-llms",
     "cluster": "local-llms"
   },
@@ -12802,7 +12802,7 @@
     "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
     "excerpt": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($290–330 used) runs Qwen3 14B at 9–12 tok/s. New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12811,7 +12811,7 @@
     "title": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen",
     "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (290–330 $ gebraucht) betreibt Qwen3 14B mit 9–12 Tok/s. Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12820,7 +12820,7 @@
     "title": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives",
     "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (290–330 $ d'occasion), Qwen3 14B à 9–12 tok/s. Neuf : RTX 5060 Ti 16GB. Tableau complet.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12829,7 +12829,7 @@
     "title": "ローカルLLM向けの最高のバジェットGPU",
     "excerpt": "RTX 3060 12GB（中古約$290–330）でローカルLLMを7種実行：Qwen3 14B（9-12トークン/秒）、Qwen3 8B（16-20トークン/秒）ほか。VRAMと速度の早見表付き。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12838,7 +12838,7 @@
     "title": "本地LLM的最佳预算GPU",
     "excerpt": "RTX 3060 12GB（二手约$290–330）可跑7款本地LLM：Qwen3 14B（9-12令牌/秒）、Qwen3 8B（16-20令牌/秒）等。附VRAM与速度对照表。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12847,7 +12847,7 @@
     "title": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB",
     "excerpt": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($290–330 usada) ejecuta Qwen3 14B a 9–12 tok/s. Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12856,7 +12856,7 @@
     "title": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB",
     "excerpt": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 290–330 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12865,7 +12865,7 @@
     "title": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩",
     "excerpt": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (290–330$ مستعملة) تشغّل Qwen3 14B بـ 9–12 tok/ث. الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -13045,7 +13045,7 @@
     "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
     "excerpt": "Real VRAM by model size at Q4, based on actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13054,7 +13054,7 @@
     "title": "VRAM-Richtlinie: 7B=4GB, 70B=42GB (2026 Guide)",
     "excerpt": "Echter VRAM-Bedarf bei Q4 laut echten GGUF-Dateigrößen: 7B ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner, Q5/Q8-Tabellen und Formel.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13063,25 +13063,25 @@
     "title": "Règle empirique VRAM : 7B=4GB, 70B=42GB (Guide 2026)",
     "excerpt": "VRAM réelle par taille en Q4, d'après des fichiers GGUF réels : 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculatrice gratuite, tableaux Q5/Q8.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "VRAM目安：7B=4GB、70B=42GB（2026ガイド）",
-    "excerpt": "実際のGGUFファイルサイズで検証したQ4のVRAM実測値：7Bは約4GB、13Bは約8GB、22Bは約13GB、70Bは約42GB。無料計算ツールとQ5/Q8の早見表付き。",
+    "excerpt": "実際のGGUFファイルサイズに基づくQ4のVRAM目安：7Bは約4GB、13Bは約8GB、22Bは約13GB、70Bは約42GB。無料計算ツールとQ5/Q8の早見表付き。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "显存经验法则：7B=4GB、70B=42GB（2026指南）",
-    "excerpt": "经真实GGUF文件大小验证的Q4显存实测值：7B约需4GB，13B约需8GB，22B约需13GB，70B约需42GB。附免费计算器和Q5/Q8对照表。",
+    "excerpt": "基于真实GGUF文件大小的Q4显存参考值：7B约需4GB，13B约需8GB，22B约需13GB，70B约需42GB。附免费计算器和Q5/Q8对照表。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13090,7 +13090,7 @@
     "title": "¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)",
     "excerpt": "VRAM real por tamaño en Q4, según archivos GGUF reales: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y fórmula.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13099,7 +13099,7 @@
     "title": "Quanta VRAM para um LLM local? Tabelas de 7B a 70B (2026)",
     "excerpt": "VRAM real por tamanho em Q4, com base em arquivos GGUF reais: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora grátis e tabelas Q5/Q8.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13108,7 +13108,7 @@
     "title": "كم تحتاج من ⁨VRAM⁩ لنموذج ⁨LLM⁩ محلي؟ جداول من ⁨7B⁩ إلى ⁨70B⁩ (⁨2026⁩)",
     "excerpt": "VRAM الحقيقية حسب حجم النموذج في Q4 بحسب أحجام ملفات GGUF: 7B ~4 GB و13B ~8 GB و22B ~13 GB و70B ~42 GB. حاسبة مجانية وجداول Q5/Q8.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13117,7 +13117,7 @@
     "title": "로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)",
     "excerpt": "로컬 LLM에 필요한 정확한 VRAM: 7B는 6~8GB, 13B는 10~14GB, 70B는 Q4에서 40~48GB. Q2~Q8 양자화, 배치 크기, 컨텍스트별 차트 포함.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13288,7 +13288,7 @@
     "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
     "excerpt": "The new Mac mini (Aug 2026): M6 from $899, 32GB max. M5 Pro from $1,699, 64GB max — needed for 70B. Framework Desktop 128GB: 70B at 20+ tok/s ($1,999). ASUS PN51 + RTX 5060 Ti: $900.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13297,7 +13297,7 @@
     "title": "Die besten Mini-PCs für lokale LLMs 2026: Mac Mini M6, M5 Pro und Framework Desktop im Vergleich",
     "excerpt": "Der neue Mac mini (Aug. 2026): M6 ab 899 $ (32 GB max.), M5 Pro ab 1.699 $ (64 GB max. — nötig für 70B). Framework Desktop 128 GB: 70B mit über 20 tok/s (1.999 $). ASUS PN51 + RTX 5060 Ti: 900 $.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13306,7 +13306,7 @@
     "title": "Meilleurs mini PC pour LLM locaux 2026 : Mac Mini M6, M5 Pro et Framework Desktop comparés",
     "excerpt": "Le nouveau Mac mini (août 2026) : M6 dès 899 $ (32 Go max), M5 Pro dès 1 699 $ (64 Go max, nécessaire pour 70B). Framework Desktop 128 Go : 70B à 20+ tok/s. ASUS PN51 + RTX 5060 Ti : 900 $.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13315,7 +13315,7 @@
     "title": "ローカルLLM向けミニPC 2026年版：Mac Mini M6・M5 Pro・Framework Desktop比較",
     "excerpt": "新しいMac mini（2026年8月）：M6は899ドルから（最大32GB）、M5 Proは1,699ドルから（最大64GB、70Bに必要）。Framework Desktop 128GB：70Bで20+ tok/s（約¥330,000）。ASUS PN51 + RTX 5060 Ti：約¥140,000。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13324,7 +13324,7 @@
     "title": "2026年本地LLM迷你PC推荐：Mac Mini M6、M5 Pro与Framework Desktop对比",
     "excerpt": "全新Mac mini（2026年8月）：M6起售价899美元（最高32GB），M5 Pro起售价1,699美元（最高64GB，运行70B所需）。Framework Desktop 128 GB：70B速度超20 tok/s。ASUS PN51 + RTX 5060 Ti（$900）。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13333,7 +13333,7 @@
     "title": "Mejores mini PCs para LLMs locales 2026: Mac Mini M6, M5 Pro y Framework Desktop comparados",
     "excerpt": "El nuevo Mac mini (ago. 2026): M6 desde $899 (32GB máx.), M5 Pro desde $1,699 (64GB máx., necesario para 70B). Framework Desktop 128GB: 70B a 20+ tok/s ($1,999). ASUS PN51 + RTX 5060 Ti: $900.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13342,7 +13342,7 @@
     "title": "Melhores mini PCs para LLMs locais 2026: Mac Mini M6, M5 Pro e Framework Desktop comparados",
     "excerpt": "O novo Mac mini (ago. 2026): M6 a partir de $899 (32GB máx.), M5 Pro a partir de $1.699 (64GB máx., necessário para 70B). Framework Desktop 128GB: 70B a 20+ tok/s ($1.999). ASUS PN51 + RTX 5060 Ti: $900.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13351,7 +13351,7 @@
     "title": "أفضل أجهزة الكمبيوتر المصغرة لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: مقارنة ⁨Mac Mini M6⁩ و⁨M5 Pro⁩ و⁨Framework Desktop⁩",
     "excerpt": "جهاز ⁨Mac mini⁩ الجديد (أغسطس 2026): ⁨M6⁩ من ⁨899$⁩ (بحد أقصى ⁨32GB⁩)، ⁨M5 Pro⁩ من ⁨1,699$⁩ (بحد أقصى ⁨64GB⁩، ضروري لتشغيل 70B). ⁨Framework Desktop 128GB⁩: سرعة ⁨20+ tok/s⁩ على 70B. ⁨ASUS PN51 + RTX 5060 Ti⁩: ⁨$900⁩",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13360,7 +13360,7 @@
     "title": "로컬 LLM을 위한 최고의 미니 PC 2026: Mac Mini M6, M5 Pro, Framework Desktop 비교",
     "excerpt": "새로운 Mac mini(2026년 8월): M6는 899달러부터(최대 32GB), M5 Pro는 1,699달러부터(최대 64GB, 70B 구동에 필요). Framework Desktop 128GB: 70B 초당 20토큰 이상($1,999). ASUS PN51+RTX 5060 Ti: $900.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13369,7 +13369,7 @@
     "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
     "excerpt": "Best AMD mini PC for AI and local LLMs in 2026: Minisforum MS-A2, Beelink GTR9 Pro, GMKtec EVO-X2 — 128GB unified memory, benchmarks and Ollama setup.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
     "cluster": "local-llms"
   },
@@ -13936,7 +13936,7 @@
     "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
     "excerpt": "Compare 5 AI coding assistants & IDEs with native local LLM support: Ollama, LM Studio, pricing, privacy. Cursor vs Continue.dev vs Cody.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-ai-coding-assistant-local-llm",
     "cluster": "local-llms"
   },
@@ -13972,7 +13972,7 @@
     "title": "5款最佳本地LLM编程助手对比 2026",
     "excerpt": "对比5款支持本地LLM的编程助手：Continue.dev免费开源、Cursor性价比最佳、Cody企业协作、Tabnine数据最安全。按隐私需求、预算、功能选择最适合的工具。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-ai-coding-assistant-local-llm",
     "cluster": "local-llms"
   },
@@ -13990,7 +13990,7 @@
     "title": "Melhor assistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados",
     "excerpt": "Compare 5 assistentes de código IA com suporte LLM local nativo: Ollama, LM Studio, privacidade, preços. Cursor vs Continue.dev vs Cody.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/best-ai-coding-assistant-local-llm",
     "cluster": "local-llms"
   },
@@ -14179,7 +14179,7 @@
     "title": "Best 7B Models for Consumer Hardware",
     "excerpt": "Discover the best 7B local LLMs for consumer hardware in 2026. Compare speed, RAM usage, and coding performance. Run powerful AI on laptops without GPU clusters.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14197,7 +14197,7 @@
     "title": "Meilleurs modèles 7B pour les GPU grand public",
     "excerpt": "Découvrez les meilleurs LLM 7B locaux pour matériel standard. Comparez vitesse, mémoire et performances en code sur laptop ou PC.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14206,7 +14206,7 @@
     "title": "コンシューマハードウェア向け最良の7Bモデル",
     "excerpt": "一般的なPCやノートで動作する7BローカルLLMを比較。速度・メモリ・コーディング性能を解説。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14215,7 +14215,7 @@
     "title": "消费级硬件最佳7B模型",
     "excerpt": "了解适用于消费级硬件的最佳7B本地LLM。对比速度、内存和编程性能，在普通电脑上运行强大AI。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14224,7 +14224,7 @@
     "title": "Mejores modelos 7B para hardware de consumo",
     "excerpt": "Descubre los mejores LLMs locales 7B para hardware de consumo en 2026. Compara velocidad, uso de RAM y código. IA potente en laptops sin clúster de GPU.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14242,7 +14242,7 @@
     "title": "أفضل نماذج ⁨7B⁩ لعتاد المستهلك",
     "excerpt": "⁨Llama 3.1 8B⁩ و⁨Qwen3 8B⁩ بـ ⁨15 tok/s⁩ على ⁨RTX 3060 12 GB. Llama⁩ الأفضل للاستدلال (⁨82% MATH⁩)، ⁨Qwen3⁩ لـ ⁨27⁩ لغة، ⁨Mistral⁩ للتعليمات. قارن وحدّد.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14251,7 +14251,7 @@
     "title": "소비자 하드웨어를 위한 최고의 7B 모델",
     "excerpt": "2026년 소비자 하드웨어를 위한 최고의 7B 로컬 LLM을 알아보십시오. 속도, RAM 사용량, 코딩 성능을 비교하고 GPU 클러스터 없이 노트북에서 강력한 AI를 실행하십시오.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/best-7b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -14422,7 +14422,7 @@
     "title": "Best Local LLM Setup for Sensitive Data",
     "excerpt": "Zero data egress: local LLMs for HIPAA (healthcare), PCI-DSS (finance), and legal privilege. Air-gapped setup, audit logs, GDPR Article 32 covered.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14431,7 +14431,7 @@
     "title": "Optimale lokale LLM-Einrichtung für sensible Daten",
     "excerpt": "Zero Data Egress mit lokalen LLMs: DSGVO § 32 (Medizin), PCI-DSS (Finanzen), Anwaltsprivileg. Air-Gapped-Setup, Audit-Logs, BDSG-Konformität abgedeckt.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14440,7 +14440,7 @@
     "title": "Configuration optimale des LLM locaux pour données sensibles",
     "excerpt": "LLM sécurisé pour données sensibles : RGPD, CNIL, PCI-DSS, conformité légale. Configuration isolée, journaux d'audit, gouvernance des données.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14449,7 +14449,7 @@
     "title": "機密データ向けローカルLLMの最適なセットアップ",
     "excerpt": "セキュアローカルLLM（機密データ向け）：HIPAA、PCI-DSS、弁護士秘匿特権対応。エアギャップ設定、監査ログ、データガバナンス、GDPR第32条への対応を解説。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14458,7 +14458,7 @@
     "title": "敏感数据安全的本地 LLM 配置",
     "excerpt": "本地LLM数据安全2026：医疗HIPAA、金融PCI-DSS、法律合规全指南。零数据泄露。隔离网络部署、审计日志（GDPR第32条）、数据治理方案。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14467,7 +14467,7 @@
     "title": "Mejor configuración de LLM local para datos sensibles",
     "excerpt": "Cero egreso de datos: LLM local para HIPAA (sanidad), PCI-DSS (finanzas) y privilegio legal. Configuración air-gapped, registros de auditoría y GDPR Art. 32.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14476,7 +14476,7 @@
     "title": "Melhor configuração de LLM local para dados sensíveis",
     "excerpt": "Zero saída de dados: LLM local para HIPAA (saúde), PCI-DSS (finanças) e sigilo jurídico. Configuração air-gapped, registros de auditoria e GDPR Art. 32.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14485,7 +14485,7 @@
     "title": "أفضل تهيئة ⁨LLM⁩ محلي للبيانات الحساسة",
     "excerpt": "صفر تسريب: ⁨LLM⁩ محلي يحتفظ بالبيانات الطبية والمالية والقانونية على جهازك. تهيئة معزولة وسجلات تدقيق للقطاعات الخاضعة لتنظيم صارم.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14494,7 +14494,7 @@
     "title": "민감한 데이터를 위한 최적의 로컬 LLM 설정",
     "excerpt": "데이터 외부 전송 제로: HIPAA(의료), PCI-DSS(금융), 법적 특권을 위한 로컬 LLM. 에어갭 설정, 감사 로그, GDPR 제32조 내용 수록.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/private-local-llm-sensitive-data",
     "cluster": "local-llms"
   },
@@ -14827,7 +14827,7 @@
     "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
     "excerpt": "ChatGPT Plus: $20/mo = $720 over 3 years. Local Llama 3.3 70B on RTX 5060 Ti: $400 GPU + $90 power = $490 total. Breakeven 11 months. 7 ChatGPT tiers compared.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14836,7 +14836,7 @@
     "title": "Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen",
     "excerpt": "Lokale LLMs vs. ChatGPT Plus 2026: Kostenvergleich über 3 Jahre, Datenschutz und Performance. Wann sich lokale Hardware gegen das $20-Abo lohnt. (Aktualisiert August 2026.)",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14845,7 +14845,7 @@
     "title": "LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux",
     "excerpt": "ChatGPT Plus : 20€/mois = 720€ sur 3 ans. LLM Llama 3.3 70B local sur RTX 5060 Ti : 400€ GPU + 90€ électricité = 490€ total. Rentabilité 11 mois. 7 niveaux ChatGPT comparés.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14854,7 +14854,7 @@
     "title": "ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較",
     "excerpt": "ChatGPT Plus：20€/月 = 3年間で約144,000円。RTX 5060 Ti 上のローカル Llama 3.3 70B：約75,800円 GPU + 22,500円電気代 = 約98,300円。損益分岐点11ヶ月。7つの ChatGPT レベルを比較。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14863,7 +14863,7 @@
     "title": "本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比",
     "excerpt": "ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地Llama 3.3 70B：约$400 GPU + $90电费 = $490总计。平衡点11个月。7个ChatGPT级别对比。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14872,7 +14872,7 @@
     "title": "LLMs locales vs ChatGPT Plus 2026: Comparación completa de costos en 7 niveles de precios",
     "excerpt": "ChatGPT Plus: $20/mes = $720 en 3 años. Llama 3.3 70B local en RTX 5060 Ti: $400 GPU + $90 luz = $490. Punto de equilibrio: 11 meses. 7 niveles comparados.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14881,7 +14881,7 @@
     "title": "LLMs Locais vs ChatGPT Plus 2026: Comparação Completa de Custos em 7 Níveis de Preço",
     "excerpt": "ChatGPT Plus: $20/mês = $720 em 3 anos. Llama 3.3 70B local em RTX 5060 Ti: $400 GPU + $90 energia = $490. Ponto de equilíbrio: 11 meses. 7 níveis comparados.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14890,7 +14890,7 @@
     "title": "نماذج ⁨LLM⁩ المحلية مقابل ⁨ChatGPT Plus 2026⁩: مقارنة تكاليف كاملة عبر ⁨7⁩ مستويات تسعير",
     "excerpt": "⁨ChatGPT Plus⁩ يكلّف ⁨720⁩$ في ⁨3⁩ سنوات. ⁨Llama 3.3 70B⁩ محلي على ⁨RTX 5060 Ti⁩: ⁨400⁩$ ⁨GPU + 90⁩$ كهرباء = ⁨490⁩$. التعادل بعد ⁨11⁩ شهرًا. مقارنة ⁨7⁩ مستويات.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -14899,7 +14899,7 @@
     "title": "로컬 LLM vs ChatGPT Plus 2026: 7가지 요금제 완전 비용 비교",
     "excerpt": "ChatGPT Plus: $20/월 = 3년간 $720. RTX 5060 Ti의 로컬 Llama 3.3 70B: GPU $400 + 전기료 $90 = 총 $490. 손익분기점 11개월. 7가지 ChatGPT 요금제 비교.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -15475,7 +15475,7 @@
     "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
     "excerpt": "Which Mac runs which local LLM? M6, M5 Pro, M5 Max and M5 Ultra compared by memory, bandwidth and price, with first independent M5 Ultra benchmarks.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15484,7 +15484,7 @@
     "title": "Apple Silicon für lokale LLMs 2026: M1 bis M6 — Vollständiger Leitfaden",
     "excerpt": "Welcher Mac für lokale LLMs? M6, M5 Pro, M5 Max und M5 Ultra im Vergleich: Speicher, Bandbreite, Preis und erste unabhängige M5-Ultra-Tests.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15493,7 +15493,7 @@
     "title": "Apple Silicon pour LLMs locaux 2026 : Guide complet M1 à M6",
     "excerpt": "Apple a renouvelé Mac mini (M6, M5 Pro) et Mac Studio (M5 Max, M5 Ultra jusqu'à 512Go) le 25/8/2026. Guide complet : mémoire, benchmarks, quel Mac acheter.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15502,16 +15502,16 @@
     "title": "Apple SiliconでのローカルLLM 2026：M1～M6の完全ガイド",
     "excerpt": "Appleは2026年8月25日にMac mini（M6、M5 Pro）とMac Studio（M5 Max、M5 Ultra最大512GB）を刷新。メモリ層、ベンチマーク、Mac選択の完全ガイド。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Apple Silicon本地LLM完整指南2026：M1至M6",
-    "excerpt": "本地大模型选 Mac：32GB 最高跑 13B，64GB 跑到 34B，128GB 跑 70B。M5 Pro 307 GB/s、M5 Max 614 GB/s 的带宽差距与各机型选购建议。",
+    "excerpt": "本地大模型选 Mac：32GB 最高跑 13B，64GB 跑到 32B，128GB 跑 70B。M5 Pro 307 GB/s、M5 Max 614 GB/s 的带宽差距与各机型选购建议。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15520,7 +15520,7 @@
     "title": "Apple Silicon para LLMs locales 2026: Guía completa de M1 a M6",
     "excerpt": "¿Qué Mac elegir para LLMs locales? M6, M5 Pro, M5 Max y M5 Ultra comparados por memoria, ancho de banda y precio, con las primeras pruebas independientes.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15529,7 +15529,7 @@
     "title": "Apple Silicon para LLMs locais 2026: guia completo do M1 ao M6",
     "excerpt": "A Apple renovou Mac mini (M6, M5 Pro) e Mac Studio (M5 Max, M5 Ultra até 512GB) em 25/8/2026. Guia completo: memória, benchmarks, qual Mac comprar.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15538,7 +15538,7 @@
     "title": "⁨Apple Silicon⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: دليل كامل من ⁨M1⁩ إلى ⁨M6⁩",
     "excerpt": "أي Mac يشغّل أي نموذج LLM محلي؟ مقارنة ⁨M6⁩ و⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩ بالذاكرة والنطاق والسعر مع أول اختبارات مستقلة.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
@@ -15547,16 +15547,16 @@
     "title": "Apple Silicon 로컬 LLM 2026: M1부터 M6까지 완전 가이드",
     "excerpt": "M6·M5 Pro·M5 Max·M5 Ultra 맥에서 돌릴 수 있는 로컬 LLM 크기를 메모리, 대역폭, 가격으로 비교하고 독립 벤치마크를 정리했습니다.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/apple-silicon-local-llm-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
     "title": "M5 Pro vs M5 Max LLM Benchmarks 2026: Tokens/Sec, Memory Bandwidth, Power",
-    "excerpt": "M5 Pro benchmark: 45–50 tok/s (8B), 12–16 tok/s (70B). M5 Max: 55–65 tok/s (8B), 18–22 tok/s (70B). Memory bandwidth, power draw guide.",
+    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). Memory bandwidth, power draw guide.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15565,7 +15565,7 @@
     "title": "M5 Pro vs M5 Max LLM-Benchmarks 2026: Token/Sekunde, Speicherbandbreite, Stromverbrauch",
     "excerpt": "M5 Pro: 50–60 tok/s auf 8B, 8–12 tok/s auf 70B. M5 Max: 100–120 tok/s auf 8B, 15–20 tok/s auf 70B. Detaillierte Benchmarks für Llama, Mistral, Whisper Metal.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15574,7 +15574,7 @@
     "title": "M5 Pro vs M5 Max Benchmarks LLM 2026 : tokens/sec, bande passante, consommation",
     "excerpt": "M5 Pro : 50-60 tok/s 8B, 8-12 tok/s 70B. M5 Max : 100-120 tok/s 8B, 15-20 tok/s 70B. Benchmarks détaillés Llama, Mistral, Whisper Metal compare.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15583,7 +15583,7 @@
     "title": "M5 Pro vs M5 Max LLMベンチマーク 2026 : トークン/秒、メモリ帯域幅、消費電力",
     "excerpt": "M5 Pro：8Bで50～60 tok/s、70Bで8～12 tok/s。M5 Max：8Bで100～120 tok/s、70Bで15～20 tok/s。Llama、Mistral、Whisper Metal詳細ベンチマーク。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15592,7 +15592,7 @@
     "title": "M5 Pro vs M5 Max LLM基准测试 2026 : 令牌/秒、内存带宽、功耗",
     "excerpt": "M5 Pro：8B时50-60 tok/s，70B时8-12 tok/s。M5 Max：8B时100-120 tok/s，70B时15-20 tok/s。Llama、Mistral、Whisper详细对标。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15601,7 +15601,7 @@
     "title": "M5 Pro vs M5 Max Benchmarks LLM 2026: Tokens/Seg, Ancho de Banda, Consumo",
     "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). Guía de ancho de banda de memoria y consumo energético.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15610,7 +15610,7 @@
     "title": "Benchmarks LLM M5 Pro vs M5 Max 2026: Tokens/s, Largura de Banda, Consumo",
     "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). Guia de largura de banda de memória e consumo energético.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
@@ -15619,160 +15619,160 @@
     "title": "معايير ⁨M5 Pro⁩ مقابل ⁨M5 Max⁩ لـ⁨LLM 2026⁩: الرموز/الثانية، عرض النطاق، الاستهلاك",
     "excerpt": "⁨M5 Pro⁩: ⁨50⁩–⁨60 tok/s⁩ (⁨8B⁩) و⁨8⁩–⁨12 tok/s⁩ (⁨70B⁩). ⁨M5 Max⁩: ⁨100⁩–⁨120 tok/s⁩ (⁨8B⁩) و⁨15⁩–⁨20 tok/s⁩ (⁨70B⁩). مقارنة عرض نطاق الذاكرة واستهلاك الطاقة لكل شريحة.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "M5 Pro vs M5 Max LLM 벤치마크 2026: 토큰/초, 메모리 대역폭, 전력 소비",
-    "excerpt": "M5 Pro 벤치마크: 45–50 tok/s (8B), 12–16 tok/s (70B). M5 Max: 55–65 tok/s (8B), 18–22 tok/s (70B). 메모리 대역폭, 전력 소비 가이드.",
+    "excerpt": "M5 Pro 벤치마크: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). 메모리 대역폭, 전력 소비 가이드.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/m5-pro-max-llm-benchmarks-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
     "title": "How Much Unified Memory for Local LLMs? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "Unified memory IS your Mac's VRAM — GPU accesses the whole pool. 16GB fits Phi, 36GB fits 8B, 64GB fits 34B, 128GB fits 70B. Full Q4/Q5/Q8 sizing chart.",
+    "excerpt": "Unified memory IS your Mac's VRAM — GPU accesses the whole pool. 16GB fits Phi, 36GB fits 8B, 64GB fits 32B, 128GB fits 70B. Full Q4/Q5/Q8 sizing chart.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Wie viel Unified Memory für lokale LLMs? 16 GB vs 36 GB vs 64 GB vs 128 GB (2026)",
-    "excerpt": "Unified Memory IST der VRAM Ihres Macs — die GPU nutzt den gesamten Pool. 16GB für Phi, 36GB für 8B, 64GB für 34B, 128GB für 70B. Vollständige Q4/Q5/Q8-Tabelle.",
+    "excerpt": "Unified Memory IST der VRAM Ihres Macs — die GPU nutzt den gesamten Pool. 16GB für Phi, 36GB für 8B, 64GB für 32B, 128GB für 70B. Vollständige Q4/Q5/Q8-Tabelle.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Quelle mémoire unifiée pour les LLM locaux ? 16 Go vs 36 Go vs 64 Go vs 128 Go (2026)",
-    "excerpt": "La mémoire unifiée EST la VRAM de votre Mac — le GPU accède à tout le pool. 16Go pour Phi, 36Go pour 8B, 64Go pour 34B, 128Go pour 70B. Tableau Q4/Q5/Q8 complet.",
+    "excerpt": "La mémoire unifiée EST la VRAM de votre Mac — le GPU accède à tout le pool. 16Go pour Phi, 36Go pour 8B, 64Go pour 32B, 128Go pour 70B. Tableau Q4/Q5/Q8 complet.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMに必要なユニファイドメモリは？16GB vs 36GB vs 64GB vs 128GB（2026年）",
-    "excerpt": "ユニファイドメモリはMacのVRAM——GPUはプール全体にアクセス。16GBでPhi、36GBで8B、64GBで34B、128GBで70Bが動作。Q4/Q5/Q8完全サイジング表。",
+    "excerpt": "ユニファイドメモリはMacのVRAM——GPUはプール全体にアクセス。16GBでPhi、36GBで8B、64GBで32B、128GBで70Bが動作。Q4/Q5/Q8完全サイジング表。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM需要多少统一内存？16GB vs 36GB vs 64GB vs 128GB（2026）",
-    "excerpt": "统一内存就是Mac的VRAM——GPU可访问整个内存池。16GB适配Phi，36GB适配8B，64GB适配34B，128GB适配70B。完整Q4/Q5/Q8选型表。",
+    "excerpt": "统一内存就是Mac的VRAM——GPU可访问整个内存池。16GB适配Phi，36GB适配8B，64GB适配32B，128GB适配70B。完整Q4/Q5/Q8选型表。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "¿Cuánta memoria unificada necesitas para LLMs locales? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "La memoria unificada ES la VRAM de tu Mac — la GPU accede a todo el conjunto. 16GB para Phi, 36GB para 8B, 64GB para 34B, 128GB para 70B. Tabla Q4/Q5/Q8 completa.",
+    "excerpt": "La memoria unificada ES la VRAM de tu Mac — la GPU accede a todo el conjunto. 16GB para Phi, 36GB para 8B, 64GB para 32B, 128GB para 70B. Tabla Q4/Q5/Q8 completa.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Quanta memória unificada você precisa para LLMs locais? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "Execute modelos de 3.8B a 405B no Apple Silicon: 16GB (Phi), 36GB (8B), 64GB (34B), 128GB (70B). Tabela Q4/Q5/Q8, overhead explicado, dicas de compra.",
+    "excerpt": "Execute modelos de 3.8B a 405B no Apple Silicon: 16GB (Phi), 36GB (8B), 64GB (32B), 128GB (70B). Tabela Q4/Q5/Q8, overhead explicado, dicas de compra.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "كم تحتاج من الذاكرة الموحدة لنماذج ⁨LLM⁩ المحلية؟ ⁨16GB⁩ مقابل ⁨36GB⁩ مقابل ⁨64GB⁩ مقابل ⁨128GB⁩ (⁨2026⁩)",
-    "excerpt": "الذاكرة الموحدة هي VRAM جهاز Mac — تصل وحدة الرسومات إلى المجمّع بالكامل. ⁨16GB⁩ تتسع لنماذج ⁨Phi⁩، و⁨36GB⁩ لـ ⁨8B⁩، و⁨64GB⁩ لـ ⁨34B⁩، و⁨128GB⁩ لـ ⁨70B⁩. جدول ⁨Q4/Q5/Q8⁩ الكامل.",
+    "excerpt": "الذاكرة الموحدة هي VRAM جهاز Mac — تصل وحدة الرسومات إلى المجمّع بالكامل. ⁨16GB⁩ تتسع لنماذج ⁨Phi⁩، و⁨36GB⁩ لـ ⁨8B⁩، و⁨64GB⁩ لـ ⁨32B⁩، و⁨128GB⁩ لـ ⁨70B⁩. جدول ⁨Q4/Q5/Q8⁩ الكامل.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM에 통합 메모리 얼마나 필요할까요? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "통합 메모리는 Mac의 VRAM입니다 — GPU가 전체 풀에 접근합니다. 16GB는 Phi, 36GB는 8B, 64GB는 34B, 128GB는 70B용. 완전한 Q4/Q5/Q8 크기 표.",
+    "excerpt": "통합 메모리는 Mac의 VRAM입니다 — GPU가 전체 풀에 접근합니다. 16GB는 Phi, 36GB는 8B, 64GB는 32B, 128GB는 70B용. 완전한 Q4/Q5/Q8 크기 표.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
     "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-    "excerpt": "MLX: 15–25% faster on Apple Silicon. Ollama: easiest. llama.cpp: most compatible. Speed benchmarks, setup time, and when to use each framework.",
+    "excerpt": "MLX: 20–40% faster on Apple Silicon. Ollama: easiest. llama.cpp: most compatible. Speed benchmarks, setup time, and when to use each framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "MLX vs. Ollama vs. llama.cpp auf dem Mac 2026: Welches Framework für Apple Silicon LLMs?",
-    "excerpt": "MLX ist 15–25% schneller auf Apple Silicon. Ollama am einfachsten. llama.cpp am kompatibel. Benchmarks, Setup-Zeit und Anwendungsszenarien.",
+    "excerpt": "MLX ist 20–40% schneller auf Apple Silicon. Ollama am einfachsten. llama.cpp am kompatibel. Benchmarks, Setup-Zeit und Anwendungsszenarien.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "MLX vs Ollama vs llama.cpp sur Mac 2026 : quel framework pour Apple Silicon ?",
-    "excerpt": "MLX : 15–25 % plus rapide sur Apple Silicon. Ollama : le plus simple. llama.cpp : le plus compatible. Benchmarks, temps de configuration, quand utiliser chaque framework.",
+    "excerpt": "MLX : 20–40 % plus rapide sur Apple Silicon. Ollama : le plus simple. llama.cpp : le plus compatible. Benchmarks, temps de configuration, quand utiliser chaque framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "MLX vs Ollama vs llama.cpp（Mac 2026年）：Apple Silicon LLMに最適なフレームワークは？",
-    "excerpt": "MLXはApple Siliconで15～25%高速。Ollamaは初心者向けで最も簡単。llama.cppは最も互換性が高い。各フレームワークの速度ベンチマーク、セットアップ時間比較、モデル対応表、フレームワーク選択ガイド。",
+    "excerpt": "MLXはApple Siliconで20～40%高速。Ollamaは初心者向けで最も簡単。llama.cppは最も互換性が高い。各フレームワークの速度ベンチマーク、セットアップ時間比較、モデル対応表、フレームワーク選択ガイド。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Mac 2026年：MLX vs Ollama vs llama.cpp — 哪个Apple Silicon LLM框架最适合你？",
-    "excerpt": "MLX在Apple Silicon上快15–25%。Ollama最易用、最适合初学者。llama.cpp兼容性最强。包含速度基准测试、安装时间对比、模型兼容表、使用场景指南。本地LLM框架完全对比。",
+    "excerpt": "MLX在Apple Silicon上快20–40%。Ollama最易用、最适合初学者。llama.cpp兼容性最强。包含速度基准测试、安装时间对比、模型兼容表、使用场景指南。本地LLM框架完全对比。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "MLX vs Ollama vs llama.cpp en Mac 2026: ¿Qué motor de inferencia usar en Mac?",
-    "excerpt": "MLX: 15–25% más rápido en Apple Silicon. Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, setup y cuándo usar cada framework.",
+    "excerpt": "MLX: 20–40% más rápido en Apple Silicon. Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, setup y cuándo usar cada framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "MLX vs Ollama vs llama.cpp no Mac 2026: Qual Motor de Inferência Usar no Mac?",
-    "excerpt": "MLX: 15–25% mais rápido no Apple Silicon. Ollama: o mais fácil. llama.cpp: o mais compatível. Benchmarks de velocidade, setup e quando usar cada framework.",
+    "excerpt": "MLX: 20–40% mais rápido no Apple Silicon. Ollama: o mais fácil. llama.cpp: o mais compatível. Benchmarks de velocidade, setup e quando usar cada framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15781,16 +15781,16 @@
     "title": "⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp⁩ على ⁨Mac 2026⁩: أي محرك استدلال تستخدم على ⁨Mac⁩؟",
     "excerpt": "⁨MLX⁩ أسرع بنسبة ⁨15⁩–⁨25%⁩ على ⁨Apple Silicon. Ollama⁩ الأسهل. ⁨llama.cpp⁩ الأكثر توافقًا. اختبارات السرعة وأوقات الإعداد ومتى تستخدم كل إطار عمل على ⁨Mac⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Mac에서 MLX vs Ollama vs llama.cpp 2026: Apple Silicon LLM을 위한 최적의 프레임워크는?",
-    "excerpt": "MLX: Apple Silicon에서 15~25% 빠름. Ollama: 가장 간편. llama.cpp: 가장 넓은 호환성. 속도 벤치마크, 설치 시간, 프레임워크별 사용 시점 안내.",
+    "excerpt": "MLX: Apple Silicon에서 20~40% 빠름. Ollama: 가장 간편. llama.cpp: 가장 넓은 호환성. 속도 벤치마크, 설치 시간, 프레임워크별 사용 시점 안내.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15799,7 +15799,7 @@
     "title": "Ollama on Mac 2026: Complete Apple Silicon Setup Guide (M1–M5, Metal GPU)",
     "excerpt": "Install Ollama on Mac with one command. Metal GPU automatic, download any Llama or Mistral model, run locally in 2 minutes. REST API for developers.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15808,7 +15808,7 @@
     "title": "Ollama auf Mac 2026: Vollständige Apple Silicon Setup-Anleitung (M1–M5, Metal GPU)",
     "excerpt": "Ollama mit einem Befehl installieren. Metal GPU automatisch, jedes Modell herunterladen, lokal in 2 Minuten nutzen. REST-API für Entwickler.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15817,7 +15817,7 @@
     "title": "Ollama sur Mac 2026 : Guide d'installation complet Apple Silicon (M1–M5, GPU Metal)",
     "excerpt": "Installez Ollama en une commande. GPU Metal automatique, téléchargez n'importe quel modèle, exécutez en local en 2 minutes. API REST pour développeurs.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15826,7 +15826,7 @@
     "title": "Mac上のOllama 2026：Apple Silicon完全セットアップガイド（M1–M5、Metal GPU）",
     "excerpt": "Ollamaを1コマンドでインストール。Metal GPU自動、任意のモデルをダウンロード、2分でローカル実行開始。開発者向けREST API完備。セットアップ方法、モデル管理、メモリ最適化、複数モデル同時実行。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15835,7 +15835,7 @@
     "title": "Mac上的Ollama 2026：完整Apple Silicon安装指南（M1–M5，Metal GPU）",
     "excerpt": "一命令安装Ollama。Metal GPU自动启用，下载任意模型，2分钟内本地运行。开发者REST API。完整安装指南、模型管理、内存优化、多模型同时运行、故障排查。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15844,7 +15844,7 @@
     "title": "Ollama en Mac 2026: Guía completa de configuración Apple Silicon (M1–M5, GPU Metal)",
     "excerpt": "Instala Ollama en Mac con un solo comando. GPU Metal automática, descarga cualquier modelo Llama o Mistral y ejecútalo en local en 2 minutos. Con API REST.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15853,16 +15853,16 @@
     "title": "Ollama no Mac 2026: Guia completo de configuração Apple Silicon (M1–M5, GPU Metal)",
     "excerpt": "Instale o Ollama no Mac com um único comando. GPU Metal automática, baixe qualquer modelo Llama ou Mistral e rode localmente em 2 minutos. Com API REST.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "⁨Ollama⁩ على ⁨Mac 2026⁩: دليل إعداد ⁨Apple Silicon⁩ الكامل (⁨M1⁩–⁨M5⁩، ⁨GPU Metal⁩)",
-    "excerpt": "⁨Metal GPU⁩ يعمل تلقائيًا مع ⁨Ollama⁩ على ⁨Mac⁩. تثبيت بأمر واحد، ⁨M5 Pro⁩ يصل إلى ⁨50⁩ رمزًا/ثانية على ⁨Llama 3.1 8B. REST API⁩ على ⁨localhost⁩:⁨11434⁩.",
+    "excerpt": "⁨Metal GPU⁩ يعمل تلقائيًا مع ⁨Ollama⁩ على ⁨Mac⁩. تثبيت بأمر واحد، السرعة تختلف بحسب الجهاز. ⁨REST API⁩ على ⁨localhost⁩:⁨11434⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
@@ -15871,115 +15871,115 @@
     "title": "Mac용 Ollama 2026: Apple Silicon 완전 설치 가이드 (M1–M5, Metal GPU)",
     "excerpt": "Ollama를 Mac에 단 하나의 명령어로 설치하십시오. Metal GPU 자동 설정, Llama 또는 Mistral 모델 다운로드, 2분 내 로컬 실행. 개발자를 위한 REST API 포함.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
     "title": "Best Ollama Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB",
-    "excerpt": "Best Ollama models for Apple Silicon: Phi-4 (16GB), Llama 8B (36GB), Qwen 34B (64GB), Llama 70B (128GB). Tok/s speeds, quantization, when to upgrade.",
+    "excerpt": "Best Ollama models for Apple Silicon: Phi-4 (16GB), Llama 8B (36GB), Qwen3 32B (64GB), Llama 70B (128GB). Tok/s speeds, quantization, when to upgrade.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Beste Ollama-Modelle für Apple Silicon 2026: Empfehlungen für 16 GB, 36 GB, 64 GB, 128 GB",
-    "excerpt": "Beste Ollama-Modelle für Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen 34B (64 GB), Llama 70B (128 GB). Token/s-Geschwindigkeit, Quantisierung, Upgrade-Tipps.",
+    "excerpt": "Beste Ollama-Modelle für Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen3 32B (64 GB), Llama 70B (128 GB). Token/s-Geschwindigkeit, Quantisierung, Upgrade-Tipps.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Meilleurs modèles Ollama pour Apple Silicon 2026 : Recommandations 16 Go, 36 Go, 64 Go, 128 Go",
-    "excerpt": "Meilleurs modèles Ollama pour Apple Silicon : Phi-4 (16 Go), Llama 8B (36 Go), Qwen 34B (64 Go), Llama 70B (128 Go). Vitesses tok/s, quantification, conseils de mise à niveau.",
+    "excerpt": "Meilleurs modèles Ollama pour Apple Silicon : Phi-4 (16 Go), Llama 8B (36 Go), Qwen3 32B (64 Go), Llama 70B (128 Go). Vitesses tok/s, quantification, conseils de mise à niveau.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Apple Silicon向けベストOllamaモデル2026：16GB、36GB、64GB、128GBの推奨モデル",
-    "excerpt": "Apple Silicon向けベストOllamaモデル：Phi-4（16GB）、Llama 8B（36GB）、Qwen 34B（64GB）、Llama 70B（128GB）。tok/s速度比較、量子化方式、アップグレード時期。",
+    "excerpt": "Apple Silicon向けベストOllamaモデル：Phi-4（16GB）、Llama 8B（36GB）、Qwen3 32B（64GB）、Llama 70B（128GB）。tok/s速度比較、量子化方式、アップグレード時期。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Apple Silicon最佳Ollama模型2026：16GB、36GB、64GB、128GB推荐",
-    "excerpt": "Apple Silicon最佳Ollama模型：Phi-4（16GB）、Llama 8B（36GB）、Qwen 34B（64GB）、Llama 70B（128GB）推荐选择。Token/秒速度对比、量化方式、升级时机指南。",
+    "excerpt": "Apple Silicon最佳Ollama模型：Phi-4（16GB）、Llama 8B（36GB）、Qwen3 32B（64GB）、Llama 70B（128GB）推荐选择。Token/秒速度对比、量化方式、升级时机指南。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Mejores modelos Ollama para Apple Silicon 2026: Recomendaciones para 16 GB, 36 GB, 64 GB, 128 GB",
-    "excerpt": "Mejores modelos Ollama para Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen 34B (64 GB) y Llama 70B (128 GB). Velocidad tok/s y cuantización.",
+    "excerpt": "Mejores modelos Ollama para Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen3 32B (64 GB) y Llama 70B (128 GB). Velocidad tok/s y cuantización.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Melhores modelos Ollama para Apple Silicon 2026: Recomendações para 16 GB, 36 GB, 64 GB, 128 GB",
-    "excerpt": "Melhores modelos Ollama para Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen 34B (64 GB) e Llama 70B (128 GB). Velocidade tok/s e quantização.",
+    "excerpt": "Melhores modelos Ollama para Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen3 32B (64 GB) e Llama 70B (128 GB). Velocidade tok/s e quantização.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "أفضل نماذج ⁨Ollama⁩ لـ ⁨Apple Silicon 2026⁩: توصيات لـ ⁨16 GB⁩ و⁨36 GB⁩ و⁨64 GB⁩ و⁨128 GB⁩",
-    "excerpt": "أفضل نماذج ⁨Ollama⁩ لـ ⁨Apple Silicon⁩: ⁨Phi-4⁩ للـ ⁨16 GB⁩، ⁨Llama 3.1 8B Q8⁩ للـ ⁨36 GB⁩ بـ ⁨38 tok/s⁩، ⁨Qwen3 34B Q5⁩ للـ ⁨64 GB⁩ بـ ⁨18 tok/s⁩، ⁨Llama 3.3 70B Q5⁩ للـ ⁨128 GB⁩. عبر ⁨Ollama⁩ على ⁨Metal⁩.",
+    "excerpt": "أفضل نماذج ⁨Ollama⁩ لـ ⁨Apple Silicon⁩: ⁨Phi-4⁩ للـ ⁨16 GB⁩، ⁨Llama 3.1 8B Q8⁩ للـ ⁨36 GB⁩ بـ ⁨38 tok/s⁩، ⁨Qwen3 32B Q5⁩ للـ ⁨64 GB⁩ بـ ⁨18 tok/s⁩، ⁨Llama 3.3 70B Q5⁩ للـ ⁨128 GB⁩. عبر ⁨Ollama⁩ على ⁨Metal⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Apple Silicon 최적 Ollama 모델 2026: 16GB, 36GB, 64GB, 128GB별 추천",
-    "excerpt": "Apple Silicon 최적 Ollama 모델: Phi-4(16GB), Llama 8B(36GB), Qwen 34B(64GB), Llama 70B(128GB). Tok/s 속도, 양자화, 업그레이드 시점 안내.",
+    "excerpt": "Apple Silicon 최적 Ollama 모델: Phi-4(16GB), Llama 8B(36GB), Qwen3 32B(64GB), Llama 70B(128GB). Tok/s 속도, 양자화, 업그레이드 시점 안내.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/best-models-apple-silicon-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
     "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
-    "excerpt": "Run always-on local AI server on the new Mac mini M6 or M5 Pro. 25–55W power, $26–39/year electricity. Ollama LLM, Whisper STT, RAG, voice assistant. Silent, never reboots.",
+    "excerpt": "Run always-on local AI server on the new Mac mini M6 or M5 Pro. 25–55W power, $26–39/year electricity. Ollama LLM, Whisper STT, RAG, voice assistant. Designed for continuous operation.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Mac Mini M6 als lokaler KI-Server: Always-On LLM, Whisper, RAG, Sprachassistent",
-    "excerpt": "Lokaler KI-Server auf dem neuen Mac Mini M6 oder M5 Pro. 25–55 W Stromverbrauch, ca. 53 €/Jahr. Ollama LLM, Whisper STT, RAG, Sprachassistent. Stumm, immer online.",
+    "excerpt": "Lokaler KI-Server auf dem neuen Mac Mini M6 oder M5 Pro. 25–55 W Stromverbrauch, ca. 53 €/Jahr. Ollama LLM, Whisper STT, RAG, Sprachassistent. Für den Dauerbetrieb ausgelegt.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Mac Mini M6 comme serveur IA local 2026 : LLM, Whisper, RAG, assistant vocal 24/7",
-    "excerpt": "Serveur IA local sur le nouveau Mac Mini M6 ou M5 Pro. 25–55 W, env. 44 €/an. LLM Ollama, Whisper STT, RAG, assistant vocal. Silencieux, toujours en ligne.",
+    "excerpt": "Serveur IA local sur le nouveau Mac Mini M6 ou M5 Pro. 25–55 W, env. 44 €/an. LLM Ollama, Whisper STT, RAG, assistant vocal. Conçu pour un fonctionnement continu.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
@@ -15988,7 +15988,7 @@
     "title": "Mac Mini M6をローカルAIサーバーとして活用 2026：LLM・Whisper・RAG・音声アシスタント常時稼働",
     "excerpt": "新型Mac Mini M6またはM5 ProでローカルAIサーバーを構築。25～55W、年間電気代5,400円程度。Ollama LLM、Whisper STT、RAGパイプライン、音声アシスタント常時稼働。完全セットアップ方法、実用的ユースケース、5年間TCO分析。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
@@ -15997,43 +15997,43 @@
     "title": "Mac Mini M6作为本地AI服务器 2026：全天候LLM、Whisper、RAG与语音助手",
     "excerpt": "在新款Mac Mini M6或M5 Pro上配置本地AI服务器。25～55W功耗，年电费约350元。Ollama LLM、Whisper STT、RAG管道、语音助手全天候运行。完整配置指南、实用场景、5年总成本分析。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Mac Mini M6 como servidor de IA local: LLM, Whisper, RAG y asistente de voz 24/7",
-    "excerpt": "Un servidor de IA siempre activo en el nuevo Mac Mini M6 o M5 Pro: 25–55 W, $26–39/año de luz. Ollama, Whisper STT, RAG y asistente de voz. Silencioso y sin reinicios.",
+    "excerpt": "Un servidor de IA siempre activo en el nuevo Mac Mini M6 o M5 Pro: 25–55 W, $26–39/año de luz. Ollama, Whisper STT, RAG y asistente de voz. Diseñado para operación continua.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Mac Mini M6 como Servidor de IA Local: LLM, Whisper, RAG e Assistente de Voz 24/7",
-    "excerpt": "Um servidor de IA sempre ativo no novo Mac Mini M6 ou M5 Pro: 25–55 W, $26–39/ano de energia. Ollama, Whisper STT, RAG e assistente de voz. Silencioso e sem reinicializações.",
+    "excerpt": "Um servidor de IA sempre ativo no novo Mac Mini M6 ou M5 Pro: 25–55 W, $26–39/ano de energia. Ollama, Whisper STT, RAG e assistente de voz. Projetado para operação contínua.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "⁨Mac Mini M6⁩ كخادم ذكاء اصطناعي محلي ⁨2026⁩: ⁨LLM⁩ و⁨Whisper⁩ و⁨RAG⁩ ومساعد صوتي ⁨24/7⁩",
-    "excerpt": "⁨خادم ذكاء اصطناعي محلي دائم التشغيل على جهاز Mac Mini M6⁩ أو ⁨M5 Pro⁩ الجديد. ⁨25⁩–⁨55⁩ واط، ⁨26⁩–⁨39⁩ دولارًا سنويًا. ⁨Ollama⁩ و⁨Whisper STT⁩ و⁨RAG⁩ ومساعد صوتي. صامت وبلا إعادة تشغيل.",
+    "excerpt": "⁨خادم ذكاء اصطناعي محلي دائم التشغيل على جهاز Mac Mini M6⁩ أو ⁨M5 Pro⁩ الجديد. ⁨25⁩–⁨55⁩ واط، ⁨26⁩–⁨39⁩ دولارًا سنويًا. ⁨Ollama⁩ و⁨Whisper STT⁩ و⁨RAG⁩ ومساعد صوتي. مصمم للتشغيل المتواصل.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Mac Mini M6를 로컬 AI 서버로 활용하기: 상시 구동 LLM, Whisper, RAG, 음성 어시스턴트",
-    "excerpt": "새로운 Mac Mini M6 또는 M5 Pro에서 상시 구동 로컬 AI 서버를 실행하세요. 소비 전력 25–55W, 연간 전기 요금 $26–39. Ollama LLM, Whisper STT, RAG, 음성 어시스턴트. 조용하고 재부팅 불필요.",
+    "excerpt": "새로운 Mac Mini M6 또는 M5 Pro에서 상시 구동 로컬 AI 서버를 실행하세요. 소비 전력 25–55W, 연간 전기 요금 $26–39. Ollama LLM, Whisper STT, RAG, 음성 어시스턴트. 상시 구동을 염두에 두고 설계되었습니다.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/mac-mini-m5-local-ai-server",
     "cluster": "local-llms"
   },
@@ -16607,9 +16607,9 @@
   {
     "lang": "en",
     "title": "GDPR Risk Comparison: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "GDPR-compliant LLM comparison: DeepSeek API (highest risk), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.",
+    "excerpt": "GDPR risk comparison of LLMs: DeepSeek API (highest risk), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16618,52 +16618,52 @@
     "title": "DSGVO-Risikovergleich: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "DSGVO-LLM-Vergleich: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Comparaison des risques RGPD : Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "Comparaison LLM conforme au RGPD : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.",
+    "excerpt": "Comparaison des risques RGPD des LLM : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "GDPR リスク比較: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "GDPR準拠のLLM比較: DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。",
+    "excerpt": "LLMのGDPRリスク比較: DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "GDPR 风险比较: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "GDPR合规LLM比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。",
+    "excerpt": "LLM的GDPR风险比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "Comparación de LLM conforme al RGPD: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.",
+    "excerpt": "Comparación de riesgos RGPD de LLM: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Comparação de riscos GDPR: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "Comparação de LLMs em conformidade com GDPR/LGPD: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.",
+    "excerpt": "Comparação de riscos de LLMs sob GDPR/LGPD: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16672,16 +16672,16 @@
     "title": "مقارنة مخاطر ⁨GDPR⁩: ⁨Qwen⁩ مقابل ⁨DeepSeek⁩ مقابل ⁨Llama⁩ مقابل ⁨Claude 2026⁩",
     "excerpt": "⁨DeepSeek API⁩ أعلى مخاطر ⁨GDPR⁩؛ ⁨Qwen⁩ المحلي الأدنى خطراً؛ ⁨Claude/GPT API⁩ مخاطر متوسطة. مصفوفة مقارنة بالولاية القضائية وإقامة البيانات و⁨SCC⁩.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "GDPR 준수 LLM 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.",
+    "excerpt": "LLM GDPR 리스크 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16852,7 +16852,7 @@
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
     "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M speeds and hardware tiers for every budget.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,7 +16861,7 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16870,7 +16870,7 @@
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
     "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16879,7 +16879,7 @@
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
     "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16888,7 +16888,7 @@
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
     "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16897,7 +16897,7 @@
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
     "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16906,7 +16906,7 @@
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
     "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16915,7 +16915,7 @@
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
     "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16924,7 +16924,7 @@
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
     "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16942,7 +16942,7 @@
     "title": "AutoDL-Preise 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
     "excerpt": "AutoDL A100 80 GB kostet ¥5,98/Std. (~0,82 $) — günstigste China-GPU-Cloud, vs. ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI. RTX 4090 ab ¥2,68/Std.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -20092,7 +20092,7 @@
     "title": "Best Graphics Card for Local LLMs: GPU Buying Guide 2026",
     "excerpt": "Which graphics card for local LLMs? Ten GPUs compared on VRAM, speed, power and 2026 prices, from the cheapest pick to the RTX 5090.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20101,7 +20101,7 @@
     "title": "Beste Grafikkarte für lokale LLMs: GPU-Kaufberatung 2026",
     "excerpt": "Welche Grafikkarte für lokale LLMs? Zehn GPUs im Vergleich: VRAM, Tempo, Leistung, Preise 2026 – günstig bis RTX 5090 – plus GPU-Anforderungen je Modell.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20110,7 +20110,7 @@
     "title": "Meilleure carte graphique pour LLM locaux : guide GPU 2026",
     "excerpt": "Quelle carte graphique pour LLM locaux ? Dix GPU comparés : VRAM, vitesse, conso et prix 2026, du moins cher au RTX 5090, avec les besoins GPU par modèle.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20119,7 +20119,7 @@
     "title": "ローカルLLM向けグラフィックカードの選び方：GPU購入ガイド2026",
     "excerpt": "ローカルLLMに最適なグラフィックカードは？10枚のGPUをVRAM・速度・消費電力・2026年の価格で比較。最安の1枚からRTX 5090まで、モデルサイズ別のGPU要件も解説。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20128,7 +20128,7 @@
     "title": "本地大模型显卡推荐：显卡选购指南 2026",
     "excerpt": "本地大模型用什么显卡？十款显卡按显存、速度、功耗和 2026 年价格对比：从入门款到 RTX 5090，并列出各模型规模的显卡要求。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20137,7 +20137,7 @@
     "title": "Mejor tarjeta gráfica para LLMs locales: guía de GPUs 2026",
     "excerpt": "¿Qué tarjeta gráfica elegir para LLMs locales? Diez GPUs comparadas: VRAM, velocidad, consumo y precios 2026, más requisitos de GPU por modelo.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20146,7 +20146,7 @@
     "title": "Melhor placa de vídeo para LLMs locais: guia de GPUs 2026",
     "excerpt": "Qual placa de vídeo para LLMs locais? Dez GPUs comparadas por VRAM, velocidade, consumo e preços de 2026, da barata à RTX 5090 e requisitos por modelo.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20155,7 +20155,7 @@
     "title": "أفضل بطاقة رسومات لتشغيل النماذج اللغوية المحلية: دليل شراء GPU 2026",
     "excerpt": "أي بطاقة رسومات لنماذج LLM المحلية؟ مقارنة عشر بطاقات GPU من حيث VRAM والسرعة والطاقة وأسعار 2026، من الأرخص إلى RTX 5090، مع متطلبات GPU لكل حجم نموذج.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20164,7 +20164,7 @@
     "title": "로컬 LLM용 최고의 그래픽카드: 2026년 GPU 구매 가이드",
     "excerpt": "로컬 LLM용 그래픽카드 추천: GPU 10종을 VRAM, 속도, 전력, 2026년 가격으로 비교. 최저가 모델부터 RTX 5090까지, 모델 크기별 GPU 요구 사양 포함.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20173,7 +20173,7 @@
     "title": "Best Mac for Local AI 2026: Mac Mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac Mini M6 32GB ~$1,300, M5 Pro 64GB ~$2,700. Mac Studio M5 Max 128GB ~$5,100, M5 Ultra from $5,499. Unified memory, bandwidth and real prices compared.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20182,7 +20182,7 @@
     "title": "Bester Mac für lokale KI 2026: Mac Mini vs. Mac Studio vs. MacBook Pro",
     "excerpt": "Mac Mini M6 32GB ca. 1.300 $, M5 Pro 64GB ca. 2.700 $. Mac Studio M5 Max 128GB ca. 5.100 $, M5 Ultra ab 5.499 $. Speicher, Bandbreite, echte Preise.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20191,7 +20191,7 @@
     "title": "Meilleur Mac pour l'IA locale 2026 : Mac mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac mini M6 32 Go ~1 300 $, M5 Pro 64 Go ~2 700 $. Mac Studio M5 Max 128 Go ~5 100 $, M5 Ultra dès 5 499 $. Mémoire unifiée, bande passante et prix réels comparés.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20200,7 +20200,7 @@
     "title": "ローカルAIに最適なMac 2026：Mac mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac mini M6 32GBは約$1,300、M5 Pro 64GBは約$2,700。Mac Studio M5 Max 128GBは約$5,100、M5 Ultraは$5,499から。unified memory・帯域幅・実際の価格を比較。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20209,7 +20209,7 @@
     "title": "2026 年最适合本地 AI 的 Mac：Mac mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac mini M6 32GB约$1,300，M5 Pro 64GB约$2,700。Mac Studio M5 Max 128GB约$5,100，M5 Ultra起$5,499。统一内存、带宽与真实价格对比。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20218,7 +20218,7 @@
     "title": "El mejor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac Mini M6 32GB ~$1,300, M5 Pro 64GB ~$2,700. Mac Studio M5 Max 128GB ~$5,100, M5 Ultra desde $5,499. Memoria unificada, ancho de banda y precios reales comparados.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20227,7 +20227,7 @@
     "title": "O melhor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac Mini M6 32GB ~US$ 1.300, M5 Pro 64GB ~US$ 2.700. Mac Studio M5 Max 128GB ~US$ 5.100, M5 Ultra a partir de US$ 5.499. Memória, largura de banda e preços reais.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20236,7 +20236,7 @@
     "title": "أفضل ⁨Mac⁩ للذكاء الاصطناعي المحلي ⁨2026⁩: ⁨Mac Mini⁩ مقابل ⁨Mac Studio⁩ مقابل ⁨MacBook Pro⁩",
     "excerpt": "Mac Mini M6 بذاكرة 32GB بحوالي 1,300 دولار، وM5 Pro بذاكرة 64GB بحوالي 2,700 دولار. Mac Studio M5 Max بذاكرة 128GB بحوالي 5,100 دولار، وM5 Ultra من 5,499 دولاراً. مقارنة الذاكرة الموحّدة وعرض النطاق والأسعار الفعلية.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20245,7 +20245,7 @@
     "title": "로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro",
     "excerpt": "Mac Mini M6 32GB 약 $1,300, M5 Pro 64GB 약 $2,700, Mac Studio M5 Max 128GB 약 $5,100. 통합 메모리, 대역폭, 실제 가격 비교.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20497,7 +20497,7 @@
     "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
     "excerpt": "Three complete local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B, and enthusiast 70B tiers. Exact parts lists, expected tokens/sec, and total costs repriced for the 2026 GPU, RAM, and SSD shortage.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20506,7 +20506,7 @@
     "title": "Lokale-KI-Workstation 2026 selbst bauen: 3 Budget-Stufen",
     "excerpt": "Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090 — Gesamtkosten neu berechnet für die GPU-, RAM- und SSD-Knappheit 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20515,7 +20515,7 @@
     "title": "Monter une station IA locale en 2026 : 3 niveaux de budget",
     "excerpt": "Trois configurations PC IA locale complètes pour 2026 : niveaux budget 7B-13B, intermédiaire 14B-33B et enthousiaste 70B. Listes de pièces exactes, tokens/s attendus et coûts totaux repensés pour la pénurie de GPU, de RAM et de SSD de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20524,7 +20524,7 @@
     "title": "ローカルAIワークステーション自作ガイド2026：予算別3構成",
     "excerpt": "2026年のローカルAI PC構成3種：7B〜13B向けエントリー、14B〜33B向けミドル、70B向けハイエンド。正確なパーツリスト、想定tokens/sec、2026年のGPU・RAM・SSD不足を反映した合計コストを掲載。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20533,7 +20533,7 @@
     "title": "2026 本地 AI 工作站装机指南：三档预算配置",
     "excerpt": "2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，全面解析硬件选择。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20542,7 +20542,7 @@
     "title": "Guía para armar una PC con IA local 2026: 3 niveles de presupuesto",
     "excerpt": "Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes exactas, tokens/s esperados y costos totales actualizados por la escasez de GPU, RAM y SSD de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20551,7 +20551,7 @@
     "title": "Guia para montar um PC com IA local 2026: 3 níveis de orçamento",
     "excerpt": "Três PCs para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes exatas, tokens/s esperados e custos totais reajustados para a escassez de GPU, RAM e SSD de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20560,7 +20560,7 @@
     "title": "دليل بناء محطة عمل الذكاء الاصطناعي المحلي ⁨2026⁩: ⁨3⁩ مستويات ميزانية",
     "excerpt": "3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أداء توكن/ثانية وتكاليف معاد تسعيرها بعد شحّ GPU وRAM وSSD في 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20569,7 +20569,7 @@
     "title": "로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계",
     "excerpt": "2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 GPU·RAM·SSD 공급 부족을 반영해 다시 산정한 총 비용을 확인하십시오.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -20578,7 +20578,7 @@
     "title": "Best VPN for AI Privacy: Protect Your Local LLM Setup 2026",
     "excerpt": "ProtonVPN, NordVPN, Mullvad and Surfshark compared for protecting a local LLM setup: no-logs policy, jurisdiction, WireGuard, and August 2026 pricing.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20587,7 +20587,7 @@
     "title": "Bestes VPN für KI-Datenschutz: Schützen Sie Ihr lokales LLM-Setup 2026",
     "excerpt": "ProtonVPN, NordVPN, Mullvad und Surfshark im Vergleich für lokale LLM-Setups: No-Logs, Rechtsprechung, WireGuard und Preise.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20596,7 +20596,7 @@
     "title": "Meilleur VPN pour la confidentialité de l'IA : protégez votre LLM local 2026",
     "excerpt": "ProtonVPN, NordVPN, Mullvad et Surfshark comparés pour protéger un LLM local : politique sans journaux, juridiction, WireGuard et tarifs de août 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20605,7 +20605,7 @@
     "title": "AIプライバシーに最適なVPN：ローカルLLM環境を守る 2026",
     "excerpt": "ProtonVPN、NordVPN、Mullvad、SurfsharkをローカルLLM環境の保護という観点で比較：ノーログポリシー、管轄地、WireGuard、価格。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20614,7 +20614,7 @@
     "title": "AI 隐私最佳 VPN：保护你的本地 LLM 环境 2026",
     "excerpt": "对比 ProtonVPN、NordVPN、Mullvad 和 Surfshark 对本地 LLM 环境的保护：无日志政策、司法管辖区、WireGuard 以及价格。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20623,7 +20623,7 @@
     "title": "Mejor VPN para la privacidad con IA: protege tu entorno de LLM local 2026",
     "excerpt": "ProtonVPN, NordVPN, Mullvad y Surfshark comparados para proteger un entorno LLM local: política sin registros, jurisdicción, WireGuard y precios de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20632,7 +20632,7 @@
     "title": "Melhor VPN para privacidade com IA: proteja sua configuração de LLM local 2026",
     "excerpt": "ProtonVPN, NordVPN, Mullvad e Surfshark comparados para proteger uma configuração de LLM local: política sem registros, jurisdição, WireGuard e preços de agosto de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20641,7 +20641,7 @@
     "title": "أفضل شبكة ⁨VPN⁩ لخصوصية الذكاء الاصطناعي: احمِ بيئة نموذج اللغة المحلي ⁨2026⁩",
     "excerpt": "ProtonVPN وNordVPN وMullvad وSurfshark مقارنةً لحماية نماذج LLM المحلية — تقييم سياسة عدم السجلات والاختصاص القضائي ودعم WireGuard وأسعار 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20650,7 +20650,7 @@
     "title": "2026년 AI 프라이버시를 위한 최고의 VPN: 로컬 LLM 환경 보호",
     "excerpt": "ProtonVPN, NordVPN, Mullvad, Surfshark를 로컬 LLM 환경 보호 기준으로 비교: 무로그 정책, 관할권, WireGuard, 2026년 가격.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20659,7 +20659,7 @@
     "title": "Best NAS and Storage for Local AI Models 2026: Buying Guide",
     "excerpt": "Best NAS for AI 2026: Synology and QNAP NAS units plus Samsung and WD NVMe SSDs compared for local AI models — RAID 6 redundancy, fast model loading, and current prices.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20668,7 +20668,7 @@
     "title": "Bester NAS und Speicher für lokale KI-Modelle 2026: Kaufberatung",
     "excerpt": "Bestes NAS für lokale KI-Modelle 2026: Speicher für Modell-Bibliotheken, Netzwerkgeschwindigkeit und GPU-fähige NAS. Synology, QNAP und DIY im Vergleich.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20677,7 +20677,7 @@
     "title": "Meilleur NAS et stockage pour modèles IA locaux 2026 : guide d'achat",
     "excerpt": "Meilleur NAS pour modèles IA locaux 2026 : stockage pour bibliothèques de modèles, vitesse réseau et NAS compatibles GPU. Synology, QNAP et DIY comparés.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20686,7 +20686,7 @@
     "title": "ローカルAIモデル向けの最適なNASとストレージ 2026：購入ガイド",
     "excerpt": "2026年のローカルAIモデルに最適なNAS：モデルライブラリのストレージ、ネットワーク速度、GPU対応NASシステム。Synology、QNAP、DIYオプションを徹底比較。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20695,7 +20695,7 @@
     "title": "本地 AI 模型的最佳 NAS 与存储 2026：选购指南",
     "excerpt": "面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和当前价格。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20704,7 +20704,7 @@
     "title": "El mejor NAS y almacenamiento para modelos de IA local 2026: guía de compra",
     "excerpt": "Compara NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida, capacidad y precios de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20713,7 +20713,7 @@
     "title": "O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra",
     "excerpt": "Compare NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido, capacidade e preços de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20722,7 +20722,7 @@
     "title": "أفضل ⁨NAS⁩ وتخزين لنماذج الذكاء الاصطناعي المحلي ⁨2026⁩: دليل الشراء",
     "excerpt": "NAS من Synology وQNAP للمكتبة المشتركة، وSSD NVMe من Samsung وWD للتحميل السريع — مقارنة بالسعة والتكرار والسرعة وأسعار 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20731,7 +20731,7 @@
     "title": "2026년 로컬 AI 모델을 위한 최고의 NAS 및 스토리지: 구매 가이드",
     "excerpt": "로컬 AI 모델을 위한 Synology 및 QNAP NAS와 Samsung 및 WD SSD 비교: RAID 6 중복성, 빠른 로드, 용량 및 2026년 가격.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/best-nas-storage-local-ai-models-2026",
     "cluster": "power-local-llm"
   },
@@ -20902,7 +20902,7 @@
     "title": "Best Laptops for Running Local LLMs: Buying Guide 2026",
     "excerpt": "Best laptop for local LLMs in 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM, VRAM and unified memory needs, compared by buying style.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20911,7 +20911,7 @@
     "title": "Die besten Laptops für lokale LLMs: Kaufberatung 2026",
     "excerpt": "Bester Laptop für lokale LLMs 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM, VRAM und Unified Memory nach Kaufstil im Vergleich.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20920,7 +20920,7 @@
     "title": "Les meilleurs ordinateurs portables pour LLM locaux : guide d'achat 2026",
     "excerpt": "Meilleurs portables pour LLM locaux 2026 : MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM, VRAM et mémoire unifiée par style d'achat.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20929,7 +20929,7 @@
     "title": "ローカルLLM向けノートパソコンのおすすめ：購入ガイド2026",
     "excerpt": "ローカルLLM向けノートPC：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。必要なRAM・VRAM・unified memoryを購入スタイル別に比較します。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20938,7 +20938,7 @@
     "title": "运行本地大语言模型的最佳笔记本电脑：2026 购买指南",
     "excerpt": "2026 年运行本地大语言模型的最佳笔记本：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。需要多少 RAM、VRAM 和统一内存，按购买取向对比。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20947,7 +20947,7 @@
     "title": "Los mejores portátiles para ejecutar LLMs locales: guía de compra 2026",
     "excerpt": "Mejor portátil para LLMs locales en 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG y Framework 16. RAM, VRAM y memoria unificada, por estilo de compra.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20956,7 +20956,7 @@
     "title": "Os melhores notebooks para rodar LLMs locais: guia de compra 2026",
     "excerpt": "Melhor notebook para LLMs locais em 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM, VRAM e memória unificada por estilo de compra.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20965,7 +20965,7 @@
     "title": "أفضل أجهزة الكمبيوتر المحمولة لتشغيل النماذج اللغوية المحلية: دليل الشراء ⁨2026⁩",
     "excerpt": "أفضل لابتوب لتشغيل LLMs محلياً 2026: MacBook Pro M5 Pro/Max وThinkPad وASUS ROG وFramework 16. كم RAM وVRAM وذاكرة موحدة تحتاج، حسب أسلوب الشراء.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -20974,7 +20974,7 @@
     "title": "로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드",
     "excerpt": "2026년 로컬 LLM용 최고의 노트북: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -23332,7 +23332,7 @@
     "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
     "excerpt": "Best LLM for phones in 2026: Phi-4 Mini on 8 GB+ RAM, SmolLM 2 for speed, Qwen3 for languages. Six mobile models compared by speed, size and RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23341,7 +23341,7 @@
     "title": "Beste mobile KI-Modelle für Smartphones 2026: Phi-4 Mini vs. Gemma 3 vs. SmolLM",
     "excerpt": "Bestes LLM fürs Smartphone 2026: Phi-4 Mini ab 8 GB RAM, SmolLM 2 für Tempo, Qwen3 für Sprachen. Sechs Mobile LLMs nach Tempo, Größe und RAM verglichen.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23350,7 +23350,7 @@
     "title": "Meilleurs modèles LLM pour smartphone en 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM",
     "excerpt": "Meilleur LLM pour smartphone en 2026 : Phi-4 Mini dès 8 Go de RAM, SmolLM 2 pour la vitesse, Qwen3 pour les langues. Six modèles comparés en taille et RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23359,7 +23359,7 @@
     "title": "2026年スマートフォン向けLLMモデル比較：Phi-4 Mini vs Gemma 3 vs SmolLM",
     "excerpt": "2026年のスマホ向けLLMはRAM 8GB以上ならPhi-4 Mini、速度ならSmolLM 2、多言語ならQwen3。6つのモバイルモデルを速度・サイズ・RAMで比較。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23368,7 +23368,7 @@
     "title": "2026年手机端最佳LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM对比",
     "excerpt": "2026年手机最佳LLM：RAM 8GB以上选Phi-4 Mini，求快选SmolLM 2，多语言选Qwen3。六款手机端模型的速度、体积与RAM全面对比。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23377,7 +23377,7 @@
     "title": "Mejores modelos LLM para teléfonos móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
     "excerpt": "Mejor LLM para móvil en 2026: Phi-4 Mini con 8 GB+ de RAM, SmolLM 2 por velocidad, Qwen3 por idiomas. Seis modelos comparados en velocidad, tamaño y RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23386,7 +23386,7 @@
     "title": "Melhores modelos de LLM para celulares em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
     "excerpt": "Melhor LLM para celular em 2026: Phi-4 Mini com 8 GB+ de RAM, SmolLM 2 pela velocidade, Qwen3 para idiomas. Seis modelos comparados em velocidade e RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23395,7 +23395,7 @@
     "title": "أفضل نماذج ⁨LLM⁩ للهاتف المحمول في ⁨2026⁩: ⁨Phi-4 Mini⁩ مقابل ⁨Gemma 3⁩ مقابل ⁨SmolLM⁩",
     "excerpt": "أفضل LLM للهاتف في 2026: Phi-4 Mini لهواتف 8 جيجابايت أو أكثر، وSmolLM 2 للسرعة، وQwen3 للغات. ستة نماذج مقارنة بالسرعة والحجم والذاكرة RAM والجودة.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -23404,7 +23404,7 @@
     "title": "2026년 스마트폰용 최고 모바일 LLM 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교",
     "excerpt": "2026년 폰 LLM 추천: RAM 8GB 이상은 Phi-4 Mini, 속도는 SmolLM 2, 다국어는 Qwen3. 모바일 모델 6종을 속도·용량·RAM으로 비교합니다.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -24709,7 +24709,7 @@
     "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
     "excerpt": "whisper.cpp for STT, Ollama + Llama 3.1 8B for reasoning, Piper TTS for speech. 1–2 sec GPU latency. Python orchestrator + wake word setup. 2026.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24718,7 +24718,7 @@
     "title": "Vollständig offline Sprachassistenten bauen 2026: Whisper + LLM + Piper (Schritt für Schritt)",
     "excerpt": "Offline-Sprachassistent bauen 2026: whisper.cpp (STT), Ollama + Llama 3.1 8B und Piper TTS. Anleitung mit Hardware, Python-Code und Wake-Word-Setup.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24727,7 +24727,7 @@
     "title": "Construire un assistant vocal entièrement hors ligne en 2026 : Whisper + LLM + Piper (guide étape par étape)",
     "excerpt": "Construire un assistant vocal hors ligne en 2026 avec whisper.cpp pour la STT, Ollama + Llama 3.1 8B pour le raisonnement et Piper TTS pour la synthèse vocale. Guide étape par étape avec exigences matérielles, code Python, mot de déclenchement et optimisation de la latence.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24736,7 +24736,7 @@
     "title": "完全オフライン音声アシスタントを2026年に構築：Whisper + LLM + Piper（ステップバイステップ）",
     "excerpt": "2026年版ローカル音声アシスタントの構築：Whisper、LLM、Piper TTSを組み合わせて完全オフラインの音声AIを作成。プライバシー保護と低遅延を実現する方法を解説。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24745,7 +24745,7 @@
     "title": "2026年构建完全离线语音助手：Whisper + LLM + Piper（逐步指南）",
     "excerpt": "2026年构建完全离线语音助手：使用whisper.cpp实现STT，Ollama + Llama 3.1 8B实现推理，Piper TTS实现语音合成。包含硬件要求、Python代码、唤醒词配置和延迟优化的逐步指南。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24754,7 +24754,7 @@
     "title": "Crea un asistente de voz completamente offline en 2026: Whisper + LLM + Piper (paso a paso)",
     "excerpt": "whisper.cpp (STT), Ollama + Llama 3.1 8B (razonamiento) y Piper TTS (audio). Latencia 1–2 s en GPU. Orquestador Python y palabra de activación. 2026.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24763,7 +24763,7 @@
     "title": "Crie um assistente de voz totalmente offline em 2026: Whisper + LLM + Piper (passo a passo)",
     "excerpt": "whisper.cpp (STT), Ollama + Llama 3.1 8B (raciocínio) e Piper TTS (áudio). Latência 1–2 s em GPU. Orquestrador Python e palavra de ativação. 2026.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24772,7 +24772,7 @@
     "title": "بناء مساعد صوتي يعمل بالكامل دون اتصال ⁨2026⁩: ⁨Whisper⁩ + نموذج لغة + ⁨Piper⁩ (خطوة بخطوة)",
     "excerpt": "whisper.cpp + Ollama + Piper TTS بدون سحابة. زمن استجابة 1–2 ثانية على RTX 3060، وأقل من 1.5 ثانية على Mac Mini M5. كود Python وكلمة التنبيه.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -24781,7 +24781,7 @@
     "title": "2026년 완전 오프라인 음성 어시스턴트 만들기: Whisper + LLM + Piper (단계별 가이드)",
     "excerpt": "whisper.cpp (STT), Ollama + Llama 3.1 8B (추론), Piper TTS (오디오). GPU에서 지연시간 1–2초. Python 오케스트레이터와 웨이크 워드. 2026.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/build-local-voice-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25762,7 +25762,7 @@
     "title": "WeChat Bot with Local LLM: Build a Private AI Personal Assistant (2026)",
     "excerpt": "Build a WeChat personal assistant with a local LLM in 2026: WeChatFerry + Ollama on Windows, real current hardware prices, and which Qwen3 model to run. No cloud API.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25771,7 +25771,7 @@
     "title": "WeChat-Bot mit lokalem LLM: Ein privater KI-Assistent (2026)",
     "excerpt": "WeChat-Assistent mit lokalem LLM 2026 bauen: WeChatFerry + Ollama unter Windows, aktuelle Hardwarepreise und das richtige Qwen3-Modell. Keine Cloud-API.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25780,7 +25780,7 @@
     "title": "Bot WeChat avec LLM local : un assistant IA privé (2026)",
     "excerpt": "Créez un assistant WeChat avec un LLM local en 2026 : WeChatFerry + Ollama sous Windows, prix matériel actuels, quel modèle Qwen3 choisir. Aucune API cloud.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25789,7 +25789,7 @@
     "title": "ローカルLLMでWeChatボットを構築：プライベートAIパーソナルアシスタント（2026）",
     "excerpt": "2026年、ローカルLLMでWeChatパーソナルアシスタントを構築する方法。WeChatFerry＋Ollama（Windows）、現在のハードウェア価格、最適なQwen3モデルを解説。クラウドAPI不使用。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25798,7 +25798,7 @@
     "title": "用本地LLM打造微信机器人：2026年私人AI助手构建指南",
     "excerpt": "2026年用本地LLM打造微信个人助手：Windows下的WeChatFerry + Ollama，附真实硬件价格与Qwen3模型选择建议，全程无需云端API。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25807,7 +25807,7 @@
     "title": "Bot de WeChat con LLM local: crea un asistente de IA privado (2026)",
     "excerpt": "Crea un asistente personal de WeChat con un LLM local en 2026: WeChatFerry + Ollama en Windows, precios de hardware actuales y qué modelo Qwen3 elegir. Sin API en la nube.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25816,7 +25816,7 @@
     "title": "Bot do WeChat com LLM local: crie um assistente de IA privado (2026)",
     "excerpt": "Crie um assistente pessoal do WeChat com um LLM local em 2026: WeChatFerry + Ollama no Windows, preços de hardware atuais e qual modelo Qwen3 escolher. Sem API na nuvem.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25825,7 +25825,7 @@
     "title": "بوت WeChat بنموذج LLM محلي: بناء مساعد ذكاء اصطناعي شخصي خاص (2026)",
     "excerpt": "بناء مساعد شخصي على WeChat باستخدام نموذج LLM محلي في 2026: WeChatFerry مع Ollama على Windows، أسعار الأجهزة الحالية، وأفضل نموذج Qwen3. بلا أي API سحابي.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25834,7 +25834,7 @@
     "title": "로컬 LLM으로 위챗 봇 만들기: 프라이빗 AI 개인 비서 구축 (2026)",
     "excerpt": "2026년 로컬 LLM으로 위챗 개인 비서를 구축하는 방법: Windows에서 WeChatFerry + Ollama, 실제 하드웨어 가격, 최적의 Qwen3 모델까지. 클라우드 API 없음.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
     "cluster": "power-local-llm"
   },
@@ -25843,7 +25843,7 @@
     "title": "DeepSeek vs Qwen: Local LLM Comparison 2026",
     "excerpt": "DeepSeek-R1 distilled vs Qwen3 local LLMs: side-by-side VRAM, MMLU, MATH-500, HumanEval benchmarks. Which model to run at each hardware tier in 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25852,7 +25852,7 @@
     "title": "DeepSeek vs Qwen: Lokaler LLM-Vergleich 2026",
     "excerpt": "DeepSeek-R1 destilliert vs Qwen3 lokal: direkter VRAM-, MMLU-, MATH-500- und HumanEval-Vergleich. Welches Modell bei welcher Hardware-Stufe in 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25861,7 +25861,7 @@
     "title": "DeepSeek vs Qwen : Comparaison LLM local 2026",
     "excerpt": "DeepSeek-R1 distillé vs Qwen3 local : tableau comparatif VRAM, MMLU, MATH-500, HumanEval. Quel modèle faire tourner à chaque niveau matériel en 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25870,7 +25870,7 @@
     "title": "DeepSeek vs Qwen：ローカルLLM比較 2026",
     "excerpt": "DeepSeek-R1蒸留 vs Qwen3ローカル：VRAM・MMLU・MATH-500・HumanEvalの直接比較。2026年における各ハードウェア層での最適モデル選択ガイド。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25879,7 +25879,7 @@
     "title": "DeepSeek vs Qwen：本地LLM对比 2026",
     "excerpt": "通义千问与幻方深度求索本地大模型对比：二者在相同显存占用下性能各异——深度求索蒸馏版在数学推理上领先，通义千问在代码生成和中文任务上领先。含完整基准测试表格与硬件选型建议，2026年更新。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25888,7 +25888,7 @@
     "title": "DeepSeek vs Qwen: Comparativa de LLM local 2026",
     "excerpt": "DeepSeek-R1 destilado vs Qwen3 LLM local: comparativa directa de VRAM, MMLU, MATH-500 y HumanEval. Qué modelo ejecutar en cada nivel de hardware en 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25897,7 +25897,7 @@
     "title": "DeepSeek vs Qwen: Comparativo de LLM local 2026",
     "excerpt": "DeepSeek-R1 destilado vs Qwen3 LLM local: comparativo direto de VRAM, MMLU, MATH-500 e HumanEval. Qual modelo rodar em cada nível de hardware em 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25906,7 +25906,7 @@
     "title": "⁨DeepSeek⁩ مقابل ⁨Qwen⁩: مقارنة النماذج اللغوية المحلية ⁨2026⁩",
     "excerpt": "DeepSeek-R1 المقطّر يحقق 94% في MATH-500؛ Qwen3 يحقق 91.5% في HumanEval. جدول مقارنة VRAM وMMlu واختيار النموذج لكل مستوى أجهزة في 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25915,7 +25915,7 @@
     "title": "DeepSeek vs Qwen: 로컬 LLM 비교 2026",
     "excerpt": "DeepSeek-R1 증류 vs Qwen3 로컬 LLM: VRAM, MMLU, MATH-500, HumanEval 직접 비교. 2026년 각 하드웨어 등급에서 실행할 모델 추천.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
     "cluster": "power-local-llm"
   },
@@ -25924,7 +25924,7 @@
     "title": "Run Local AI Behind a Firewall: Offline Deployment Guide 2026",
     "excerpt": "Deploy local LLMs offline behind a firewall: complete checklist, Ollama and llama.cpp air-gap workflow, NAS storage sizing, and China DSL compliance notes.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25933,7 +25933,7 @@
     "title": "Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026",
     "excerpt": "Lokale LLMs offline hinter Firewall betreiben: vollständige Checkliste, Ollama Air-Gap-Workflow, NAS-Speicherbedarf und DSGVO-Hinweise für Deutschland.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25942,7 +25942,7 @@
     "title": "IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026",
     "excerpt": "Déployer des LLM locaux hors ligne derrière un pare-feu : liste de contrôle, workflow Ollama air-gap, dimensionnement NAS et conformité RGPD.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25951,7 +25951,7 @@
     "title": "ファイアウォール背後でのローカルAI：オフライン展開ガイド 2026",
     "excerpt": "ファイアウォール背後でのローカルLLMオフライン展開：事前チェックリスト、Ollama air-gapワークフロー、NASストレージサイジング、METIガイドライン対応。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25960,7 +25960,7 @@
     "title": "防火墙后的本地AI：离线部署指南 2026",
     "excerpt": "在防火墙内完整离线（air-gap）部署本地LLM实操指南：Ollama网络隔离初始化步骤、预装模型与依赖包清单、NAS共享存储容量规划，以及中国《数据安全法》与CAC网络安全等级保护合规要点，适合金融、医疗、政府等数据敏感行业内网场景。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25969,7 +25969,7 @@
     "title": "IA local detrás de un cortafuegos: Guía de despliegue sin conexión 2026",
     "excerpt": "Despliega LLMs locales sin conexión tras un cortafuegos: lista completa, flujo air-gap con Ollama y llama.cpp, dimensionamiento de NAS y notas de cumplimiento.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25978,7 +25978,7 @@
     "title": "IA local atrás de um firewall: guia de implantação offline 2026",
     "excerpt": "Implante LLMs locais offline atrás de um firewall: lista completa, fluxo air-gap com Ollama e llama.cpp, dimensionamento de NAS e notas de conformidade.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25987,7 +25987,7 @@
     "title": "الذكاء الاصطناعي المحلي خلف جدار الحماية: دليل النشر دون اتصال ⁨2026⁩",
     "excerpt": "نشر نماذج LLM بلا إنترنت خلف جدار الحماية: سير عمل air-gap مع Ollama وllama.cpp، قائمة تحقق التبعيات، تحديد حجم NAS، وملاحظات الامتثال التنظيمي.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -25996,7 +25996,7 @@
     "title": "방화벽 뒤 로컬 AI: 2026 오프라인 배포 가이드",
     "excerpt": "방화벽 뒤 로컬 LLM 오프라인 배포: 전체 체크리스트, Ollama·llama.cpp 에어갭 워크플로, NAS 용량 계획, 컴플라이언스 참고 사항.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/local-ai-behind-firewall-offline-2026",
     "cluster": "power-local-llm"
   },
@@ -31999,7 +31999,7 @@
     "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
     "excerpt": "Liquid Apollo review 2026: a free hybrid app running Liquid AI's on-device LFM2 models via LEAP, plus optional OpenRouter cloud access and self-hosted backend support. What is local, what is not.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32008,7 +32008,7 @@
     "title": "Liquid Apollo Review: On-Device-LFM2-Chat, plus optionale Cloud",
     "excerpt": "Liquid Apollo Review 2026: kostenlose Hybrid-App mit Liquid AIs On-Device-LFM2-Modellen über LEAP, plus optionalem OpenRouter-Cloud-Zugriff und Custom-Backend-Support. Was ist wirklich lokal.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32017,7 +32017,7 @@
     "title": "Liquid Apollo Review: Chat LFM2 local, plus cloud en option",
     "excerpt": "Liquid Apollo review 2026 : app hybride gratuite exécutant les modèles LFM2 de Liquid AI sur l'appareil via LEAP, plus accès cloud OpenRouter optionnel et support de backend auto-hébergé. Ce qui est local, ce qui ne l'est pas.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32026,7 +32026,7 @@
     "title": "Liquid Apollo レビュー：オンデバイスLFM2チャット、プラスオプションのクラウド",
     "excerpt": "Liquid Apollo レビュー2026：LEAP経由でLiquid AIのLFM2モデルをオンデバイス実行する無料ハイブリッドアプリ。OpenRouterクラウドアクセスとセルフホストバックエンド対応もオプションで提供。何がローカルで何がそうでないか。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32035,7 +32035,7 @@
     "title": "Liquid Apollo 评测：本地LFM2聊天，附带可选云端",
     "excerpt": "Liquid Apollo 评测2026：一款免费混合应用，通过LEAP在设备端运行Liquid AI的LFM2模型，同时提供可选的OpenRouter云端访问和自托管后端支持。哪些是本地的，哪些不是。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32044,7 +32044,7 @@
     "title": "Liquid Apollo Review: Chat LFM2 local, más nube opcional",
     "excerpt": "Liquid Apollo review 2026: app híbrida gratuita que ejecuta los modelos LFM2 de Liquid AI en el dispositivo vía LEAP, más acceso opcional a la nube con OpenRouter y soporte de backend autoalojado. Qué es local y qué no.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/es/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32053,7 +32053,7 @@
     "title": "Liquid Apollo Review: Chat LFM2 local, mais nuvem opcional",
     "excerpt": "Liquid Apollo review 2026: app híbrido gratuito que roda os modelos LFM2 da Liquid AI no dispositivo via LEAP, além de acesso opcional à nuvem via OpenRouter e suporte a backend auto-hospedado. O que é local e o que não é.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/pt/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32062,7 +32062,7 @@
     "title": "مراجعة Liquid Apollo: محادثة LFM2 محلية، بالإضافة إلى سحابة اختيارية",
     "excerpt": "مراجعة Liquid Apollo 2026: تطبيق هجين مجاني يشغّل نماذج LFM2 من Liquid AI على الجهاز عبر LEAP، بالإضافة إلى وصول سحابي اختياري عبر OpenRouter ودعم للخوادم المستضافة ذاتياً. ما هو محلي وما ليس كذلك.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -32071,7 +32071,7 @@
     "title": "Liquid Apollo 리뷰: 온디바이스 LFM2 채팅, 선택적 클라우드도 지원",
     "excerpt": "Liquid Apollo 리뷰 2026: LEAP을 통해 Liquid AI의 LFM2 모델을 온디바이스에서 실행하는 무료 하이브리드 앱. OpenRouter 클라우드 접속과 자체 호스팅 백엔드 지원도 제공. 무엇이 로컬이고 무엇이 아닌지.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/liquid-apollo-review",
     "cluster": "power-local-llm"
   },
@@ -60511,7 +60511,7 @@
     "title": "Chinese vs English Prompting: Which is Better?",
     "excerpt": "\"Prompt\" in Chinese is 提示词 (tíshìcí). Chinese prompts use 30–50% fewer tokens on Qwen3; English gives stronger reasoning. Per-model prompting guide.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60520,7 +60520,7 @@
     "title": "Chinesisch vs. Englisch beim Prompting: Was ist besser?",
     "excerpt": "„Prompt“ heißt auf Chinesisch 提示词 (tíshìcí). Chinesische Prompts brauchen auf Qwen3 30–50 % weniger Tokens; Englisch denkt stärker. Modellguide.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/de/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60529,7 +60529,7 @@
     "title": "Prompting en chinois vs anglais : lequel est meilleur ?",
     "excerpt": "« Prompt » se dit 提示词 (tíshìcí) en chinois. Les prompts chinois économisent 30–50 % de tokens sur Qwen3 ; l'anglais raisonne mieux. Guide par modèle.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/fr/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60538,7 +60538,7 @@
     "title": "中国語 vs 英語プロンプト：どちらが優れている？",
     "excerpt": "プロンプトは中国語で「提示词(tíshìcí)」。Qwen3では中国語プロンプトがトークンを30–50%節約、英語は推論が強い。モデル別ガイド付き。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/ja/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60547,7 +60547,7 @@
     "title": "中文 vs 英文提示词：哪种更好？",
     "excerpt": "「prompt」中文叫提示词（tíshìcí）。在Qwen3上中文提示词省30–50% token，英文提示词推理更强。附各模型最佳实践与混合写法。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/zh/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60556,7 +60556,7 @@
     "title": "Prompts en chino vs inglés: ¿cuál es mejor para LLMs locales?",
     "excerpt": "\"Prompt\" en chino es 提示词 (tíshìcí). Los prompts en chino usan 30–50% menos tokens en Qwen3; el inglés razona mejor. Guía de prompting por modelo.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/es/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60565,7 +60565,7 @@
     "title": "Prompts em chinês vs inglês: qual é melhor para LLMs locais?",
     "excerpt": "\"Prompt\" em chinês é 提示词 (tíshìcí). Prompts em chinês usam 30–50% menos tokens no Qwen3; o inglês raciocina melhor. Guia de prompting por modelo.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/pt/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60574,7 +60574,7 @@
     "title": "الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟",
     "excerpt": "كلمة «prompt» بالصينية هي 提示词 (tíshìcí). الأوامر الصينية توفّر 30–50% من الرموز على Qwen3، والإنجليزية أقوى استدلالًا. دليل عملي لكل نموذج LLM.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/ar/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
@@ -60583,88 +60583,88 @@
     "title": "중국어 vs 영어 프롬프팅: 로컬 LLM에는 어느 쪽이 더 낫습니까?",
     "excerpt": "프롬프트는 중국어로 提示词(tíshìcí)입니다. Qwen3에서 중국어 프롬프트는 토큰을 30–50% 절약하고, 영어는 추론이 더 강합니다. 모델별 가이드.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-09",
     "url": "/ko/prompt-bites/chinese-prompting-vs-english-prompting",
     "cluster": "prompt-bites"
   },
   {
     "lang": "en",
     "title": "SillyTavern Chinese Roleplay Setup",
-    "excerpt": "Best local models for Chinese roleplay in SillyTavern 2026: Qwen3-72B, Yi-34B, ChatGLM. UTF-8 character cards and Ollama API bridge setup.",
+    "excerpt": "Best local models for Chinese roleplay in SillyTavern 2026: Qwen3-32B, Yi-34B, ChatGLM. UTF-8 character cards and Ollama API bridge setup.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "SillyTavern Chinesisches Rollenspiel Einrichten",
-    "excerpt": "Beste Modelle für chinesisches Rollenspiel in SillyTavern 2026: Qwen3-72B, Yi-34B, ChatGLM. Charakterkarten-UTF-8 und Ollama-API-Verbindung.",
+    "excerpt": "Beste Modelle für chinesisches Rollenspiel in SillyTavern 2026: Qwen3-32B, Yi-34B, ChatGLM. Charakterkarten-UTF-8 und Ollama-API-Verbindung.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-06-20",
+    "dateModified": "2026-11-09",
     "url": "/de/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Configuration SillyTavern pour le jeu de rôle en chinois",
-    "excerpt": "Meilleurs modèles pour le roleplay en chinois sur SillyTavern : Qwen3-72B, Yi-34B, ChatGLM. Encodage UTF-8 des cartes et connexion API Ollama.",
+    "excerpt": "Meilleurs modèles pour le roleplay en chinois sur SillyTavern : Qwen3-32B, Yi-34B, ChatGLM. Encodage UTF-8 des cartes et connexion API Ollama.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-06-20",
+    "dateModified": "2026-11-09",
     "url": "/fr/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "SillyTavern 中国語ロールプレイ設定ガイド",
-    "excerpt": "SillyTavernで中国語ロールプレイに最適なローカルモデルを解説します。Qwen3-72Bが文章品質トップ、Yi-34Bはキャラクター感情表現に優れ、ChatGLM3-6Bは最速推論。キャラクターカードのUTF-8設定とOllama APIブリッジの接続方法も説明します。",
+    "excerpt": "SillyTavernで中国語ロールプレイに最適なローカルモデルを解説します。Qwen3-32Bは大容量メモリ向け、Yi-34Bはキャラクター感情表現に優れ、ChatGLM3-6Bは最速推論。キャラクターカードのUTF-8設定とOllama APIブリッジの接続方法も説明します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-06-20",
+    "dateModified": "2026-11-09",
     "url": "/ja/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "SillyTavern 中文角色扮演配置指南",
-    "excerpt": "SillyTavern本地中文角色扮演完整配置指南：Qwen3-72B中文散文质量最佳，Yi-34B角色情感层次最丰富，ChatGLM3-6B速度最快（8 GB显存可运行）。角色卡UTF-8中文编码设置与Ollama API桥接步骤详解，助您搭建流畅的中文本地角色扮演环境。",
+    "excerpt": "SillyTavern本地中文角色扮演完整配置指南：Qwen3-32B适合大内存设备，Yi-34B角色情感层次最丰富，ChatGLM3-6B速度最快（8 GB显存可运行）。角色卡UTF-8中文编码设置与Ollama API桥接步骤详解，助您搭建流畅的中文本地角色扮演环境。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/zh/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "Configuración de SillyTavern para roleplay en chino",
-    "excerpt": "Mejores modelos locales para roleplay en chino en SillyTavern 2026: Qwen3-72B, Yi-34B, ChatGLM. Configuración de tarjetas UTF-8 y puente API con Ollama.",
+    "excerpt": "Mejores modelos locales para roleplay en chino en SillyTavern 2026: Qwen3-32B, Yi-34B, ChatGLM. Configuración de tarjetas UTF-8 y puente API con Ollama.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/es/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Configuração do SillyTavern para roleplay em chinês",
-    "excerpt": "Melhores modelos locais para roleplay em chinês no SillyTavern 2026: Qwen3-72B, Yi-34B, ChatGLM. Configuração de cartões UTF-8 e ponte API com Ollama.",
+    "excerpt": "Melhores modelos locais para roleplay em chinês no SillyTavern 2026: Qwen3-32B, Yi-34B, ChatGLM. Configuração de cartões UTF-8 e ponte API com Ollama.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/pt/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "إعداد ⁨SillyTavern⁩ للعب الأدوار باللغة الصينية",
-    "excerpt": "⁨Qwen3-72B Q4⁩_⁨K⁩_⁨M⁩ يحتاج ⁨46 GB RAM⁩ وهو أفضل نموذج للعب الأدوار الصيني في ⁨SillyTavern. Yi-34B⁩ لـ ⁨21 GB RAM⁩، ⁨Qwen3 8B⁩ لـ ⁨8 GB VRAM⁩ عبر ⁨Ollama⁩.",
+    "excerpt": "⁨Qwen3-32B Q4⁩_⁨K⁩_⁨M⁩ يحتاج حوالي 20 GB وهو خيار قوي للعب الأدوار الصيني في ⁨SillyTavern. Yi-34B⁩ لـ ⁨21 GB RAM⁩، ⁨Qwen3 8B⁩ لـ ⁨8 GB VRAM⁩ عبر ⁨Ollama⁩.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ar/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "SillyTavern 중국어 롤플레이 설정 가이드",
-    "excerpt": "SillyTavern에서 중국어 롤플레이를 위한 최고의 로컬 모델 2026: Qwen3-72B, Yi-34B, ChatGLM. UTF-8 캐릭터 카드 설정 및 Ollama API 브릿지 구성법.",
+    "excerpt": "SillyTavern에서 중국어 롤플레이를 위한 최고의 로컬 모델 2026: Qwen3-32B, Yi-34B, ChatGLM. UTF-8 캐릭터 카드 설정 및 Ollama API 브릿지 구성법.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-09",
     "url": "/ko/prompt-bites/sillytavern-chinese-roleplay-setup",
     "cluster": "prompt-bites"
   },
@@ -61402,7 +61402,7 @@
     "title": "Can You Run a Local LLM on an Xperia Phone?",
     "excerpt": "Xperia 1 VIII (16 GB) and Xperia 1 VI (12 GB) handle Phi-4 Q4 and Rinna 3.6B. Xperia 5 V (8 GB) runs 3B models. Xperia 10 VI (6 GB) is limited to TinyLlama.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61411,7 +61411,7 @@
     "title": "Kann man auf einem Xperia ein lokales LLM ausführen?",
     "excerpt": "Xperia 1 VIII (16 GB) und Xperia 1 VI (12 GB): Phi-4 Q4 + Rinna 3.6B via MLC Chat. Xperia 5 V (8 GB): 3B-Modelle. Xperia 10 VI (6 GB): nur TinyLlama.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/de/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61420,7 +61420,7 @@
     "title": "Peut-on exécuter un LLM local sur un Xperia ?",
     "excerpt": "Xperia 1 VIII (16 Go) et Xperia 1 VI (12 Go) : Phi-4 Q4, Rinna 3.6B. Xperia 5 V (8 Go) : modèles 3B. Xperia 10 VI (6 Go) : TinyLlama. Via MLC Chat.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/fr/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61429,7 +61429,7 @@
     "title": "XperiaでローカルLLMを動かせる？",
     "excerpt": "Xperia 1 VIII（16 GB RAM）とXperia 1 VI（12 GB）はMLC Chat経由でPhi-4 Q4とRinna 3.6Bを実行できます。Xperia 5 Vは軽量モデルに対応。Xperia 10 VIはTinyLlamaのみ。",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/ja/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61438,7 +61438,7 @@
     "title": "Xperia手机能运行本地LLM吗？",
     "excerpt": "可以——Xperia 1 VIII（16 GB内存）和Xperia 1 VI（12 GB）可通过MLC Chat运行Phi-4 Q4和Rinna 3.6B。Xperia 5 V支持轻量模型。Xperia 10 VI仅限TinyLlama。",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/zh/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61447,7 +61447,7 @@
     "title": "¿Puedes ejecutar un LLM local en un teléfono Xperia?",
     "excerpt": "El Xperia 1 VIII (16 GB) y el Xperia 1 VI (12 GB) ejecutan Phi-4 Q4 y Rinna 3.6B; el Xperia 5 V (8 GB) corre modelos 3B; el 10 VI (6 GB), solo TinyLlama.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/es/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61456,7 +61456,7 @@
     "title": "Você pode executar um LLM local em um telefone Xperia?",
     "excerpt": "Xperia 1 VIII (16 GB) e Xperia 1 VI (12 GB) executam Phi-4 Q4 e Rinna 3.6B; Xperia 5 V (8 GB) roda modelos 3B; Xperia 10 VI (6 GB), apenas TinyLlama.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/pt/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61465,7 +61465,7 @@
     "title": "هل يمكنك تشغيل نموذج لغة محلي على هاتف ⁨Xperia⁩؟",
     "excerpt": "⁨Xperia 1 VIII⁩ (⁨16 GB⁩) و⁨Xperia 1 VI⁩ (⁨12 GB⁩) يشغّلان ⁨Phi-4 Q4⁩ و⁨Rinna 3.6B⁩ عبر ⁨MLC Chat. Xperia 5 V⁩ (⁨8 GB⁩): نماذج ⁨3B. Xperia 10 VI⁩ (⁨6 GB⁩): ⁨TinyLlama⁩ فقط.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/ar/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },
@@ -61474,7 +61474,7 @@
     "title": "Xperia 스마트폰에서 로컬 LLM을 실행할 수 있습니까?",
     "excerpt": "Xperia 1 VIII (16 GB)와 Xperia 1 VI (12 GB)에서 MLC Chat으로 Phi-4 Q4와 Rinna 3.6B 실행 가능합니다. Xperia 5 V (8 GB)는 3B 모델, Xperia 10 VI (6 GB)는 TinyLlama만 지원합니다.",
     "publishDate": "2026-05-27",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-09",
     "url": "/ko/prompt-bites/run-local-llm-on-xperia-japan",
     "cluster": "prompt-bites"
   },

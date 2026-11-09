@@ -99,7 +99,7 @@
       ]
     },
     "what-are-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -207,7 +207,7 @@
       ]
     },
     "best-beginner-local-llm-models": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": "2026-08-28",
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -229,7 +229,7 @@
         },
         {
           "url": "/images/best-beginner-local-llm-models-comparison-table-hero-en.webp",
-          "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- all benchmarked at Q4_K_M quantization via Ollama. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is fastest at 1.7 GB RAM."
+          "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- specs from model cards and Ollama's library; speeds are rough estimates, not PromptQuorum measurements. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is fastest at 1.7 GB RAM."
         },
         {
           "url": "/images/best-beginner-local-llm-models-ram-decision-en.svg",
@@ -362,7 +362,7 @@
       ]
     },
     "local-llm-limitations": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -424,7 +424,7 @@
       ]
     },
     "qwen-vs-llama-vs-mistral": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -450,7 +450,7 @@
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-overview-hero-en.webp",
-          "title": "Mistral Small 3.1 efficiency: 79% MMLU at 14 GB RAM versus Llama 3.3 70B (82% / 40 GB) and Qwen3 72B (85% / 43 GB) -- near-70B quality at 33% of the RAM cost. Plus: Devstral (agentic) and Codestral (IDE autocomplete)."
+          "title": "Mistral Small 3.1 efficiency: 14 GB RAM at Q4_K_M versus about 40 GB for Llama 3.3 70B -- strong quality per GB of RAM. Plus: Devstral (agentic) and Codestral (IDE autocomplete)."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-task-winners-en.svg",
@@ -458,7 +458,7 @@
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-size-classes-en.svg",
-          "title": "Five local LLM classes: 3-4B (Llama 4 3B, ~2 GB), 7-8B (Qwen3 8B, ~5 GB), MoE long-context (Llama 4 Scout, ~55 GB at Q4), 14-24B (Mistral Small 3.1, ~14 GB), 70-72B (Qwen3 72B, ~43 GB) -- all runnable via Ollama."
+          "title": "Five local LLM classes: 3-4B (Llama 3.2 3B, ~2 GB), 7-8B (Qwen3 8B, ~5 GB), MoE long-context (Llama 4 Scout, ~55 GB at Q4), 14-24B (Mistral Small 3.1, ~14 GB), 70B (Llama 3.3 70B, ~40-42 GB at Q4) -- all runnable via Ollama."
         }
       ]
     },
@@ -709,7 +709,7 @@
       ]
     },
     "local-llm-model-updates-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -735,7 +735,7 @@
         },
         {
           "url": "/images/llm-quality-improvement-2024-2026-en.svg",
-          "title": "Local LLM quality improvement 2024-2026: 7B-class models improved from 64% MMLU (Mistral Small, early 2024) to 74% (Qwen3 8B, April 2026). 70B-class improved from 75% (Llama 3.3 70B) to 82-84% (Llama 3.3 70B and Qwen3 72B). Every 18-24 months, local model quality advances by one model generation."
+          "title": "Local LLM quality improvement 2024-2026: 7B-class models improved from 64% MMLU (Mistral Small, early 2024) to 74% (Qwen3 8B, April 2026). 70B-class improved from 75% (Llama 3.3 70B) to 82% (Llama 3.3 70B). Every 18-24 months, local model quality advances by one model generation."
         }
       ]
     },
@@ -785,7 +785,7 @@
       "images": []
     },
     "local-llms-vs-cloud-apis": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1425,7 +1425,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1783,7 +1783,7 @@
       "images": []
     },
     "private-local-ai-for-business": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1953,7 +1953,7 @@
       ]
     },
     "future-of-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2079,7 +2079,7 @@
       "images": []
     },
     "best-budget-gpus-local-llm": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2101,7 +2101,7 @@
         },
         {
           "url": "/images/best-budget-gpus-local-llm-gpu-comparison-hero-en.webp",
-          "title": "RTX 3060 12GB ($290–330 used) beats RTX 4060 Ti, RTX A4000, RTX 4070 Super, and RX 6700 XT on VRAM-per-dollar."
+          "title": "RTX 3060 12GB ($290–330 used) beats RTX 4060 Ti, RTX A4000, and RTX 4070 Super on VRAM-per-dollar."
         }
       ]
     },
@@ -2151,7 +2151,7 @@
       "images": []
     },
     "how-much-vram-local-llm": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2240,7 +2240,7 @@
       ]
     },
     "best-mini-pcs-local-llm": {
-      "dateModified": "2026-10-18",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2279,7 +2279,7 @@
       ]
     },
     "best-amd-mini-pc-local-llm-2026": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2471,7 +2471,7 @@
       "images": []
     },
     "best-ai-coding-assistant-local-llm": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2564,7 +2564,7 @@
       ]
     },
     "best-7b-models-consumer-hardware": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2657,7 +2657,7 @@
       ]
     },
     "private-local-llm-sensitive-data": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2786,7 +2786,7 @@
       "images": []
     },
     "local-llms-vs-chatgpt-plus": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2987,7 +2987,7 @@
       ]
     },
     "apple-silicon-local-llm-guide-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3014,7 +3014,7 @@
       ]
     },
     "m5-pro-max-llm-benchmarks-2026": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3032,16 +3032,16 @@
       "images": [
         {
           "url": "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-hero-en.webp",
-          "title": "Tokens/sec by model size: M5 Pro reaches 50–60 tok/s on Llama 3.1 8B Q4 and 8–12 tok/s on 70B Q4; M5 Max nearly doubles both to 100–120 tok/s and 16–22 tok/s; RTX 4090 leads 8B at 80–100 tok/s but cannot fit 34B or 70B in its 24GB VRAM."
+          "title": "Tokens/sec by model size: M5 Pro reaches 50–60 tok/s on Llama 3.1 8B Q4 and 8–12 tok/s on 70B Q4; M5 Max nearly doubles both to 100–120 tok/s and 16–22 tok/s; RTX 4090 leads 8B at 80–100 tok/s but cannot fit 70B in its 24GB VRAM."
         },
         {
           "url": "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-hero-en.webp",
-          "title": "M5 Pro vs M5 Max buying guide: M5 Pro (64GB, 307 GB/s, 25–45W) suits 8B–34B models at $1,200–1,500 in a Mac Mini; M5 Max (128GB, 614 GB/s, 60–100W) is the only consumer option for regular 70B inference in a Mac Studio."
+          "title": "M5 Pro vs M5 Max buying guide: M5 Pro (64GB, 307 GB/s, 25–45W) suits 8B–32B models at $1,200–1,500 in a Mac Mini; M5 Max (128GB, 614 GB/s, 60–100W) is one of few consumer options for regular 70B inference on a single machine in a Mac Studio."
         }
       ]
     },
     "how-much-unified-memory-for-local-llm": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3059,16 +3059,16 @@
       "images": [
         {
           "url": "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-hero-en.webp",
-          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.1 8B is tight at 16GB, Gemma 3 12B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB."
+          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 Mini 3.8B fits every tier, Llama 3.1 8B is tight at 16GB, Gemma 3 12B needs 36GB minimum, Qwen3 32B needs 64GB, and Llama 3.3 70B needs 128GB."
         },
         {
           "url": "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.webp",
-          "title": "Buying decision tree for unified memory: 36GB for a single 13B model, 64GB if you also run vision/STT/TTS alongside it or want 34B Q5, and 128GB only if you specifically need 70B Q5 models."
+          "title": "Buying decision tree for unified memory: 36GB for a single 13B model, 64GB if you also run vision/STT/TTS alongside it or want 32B Q5, and 128GB only if you specifically need 70B Q5 models."
         }
       ]
     },
     "mlx-vs-ollama-vs-llama-cpp-mac": {
-      "dateModified": "2026-10-20",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3086,7 +3086,7 @@
       "images": [
         {
           "url": "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-en.webp",
-          "title": "MLX is 15–25% faster across models due to native Metal optimization."
+          "title": "MLX is 20–40% faster across models due to native Metal optimization."
         },
         {
           "url": "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-en.webp",
@@ -3095,7 +3095,7 @@
       ]
     },
     "ollama-on-mac-apple-silicon-setup-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3122,7 +3122,7 @@
       ]
     },
     "best-models-apple-silicon-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3149,7 +3149,7 @@
       ]
     },
     "mac-mini-m5-local-ai-server": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3167,11 +3167,11 @@
       "images": [
         {
           "url": "/images/mac-mini-m5-local-ai-server-memory-tier-capacity-en.svg",
-          "title": "Mac Mini M6 (32GB max) vs M5 Pro (64GB max) memory ceiling vs max model capacity: the 32GB M6 fits a single LLM plus one light service, while the 64GB M5 Pro comfortably runs a 34B model alongside Whisper, RAG, and a voice assistant simultaneously."
+          "title": "Mac Mini M6 (32GB max) vs M5 Pro (64GB max) memory ceiling vs max model capacity: the 32GB M6 fits a single LLM plus one light service, while the 64GB M5 Pro comfortably runs a 32B model alongside Whisper, RAG, and a voice assistant simultaneously."
         },
         {
           "url": "/images/mac-mini-m5-local-ai-server-power-draw-by-workload-en.svg",
-          "title": "Mac Mini M5 Pro estimated power draw by workload: 8W idle, 25-35W on Llama 8B inference, 40-55W on Llama 34B inference — versus 200-300W for a desktop RTX 4070. Estimates, not independently measured — hardware ships September 22, 2026."
+          "title": "Mac Mini M5 Pro estimated power draw by workload: 8W idle, 25-35W on Llama 8B inference, 40-55W on Qwen3 32B inference — versus 200-300W for a desktop RTX 4070. Estimates, not independently measured — hardware on sale since September 22, 2026."
         }
       ]
     },
@@ -3356,7 +3356,7 @@
       "images": []
     },
     "gdpr-llm-risk-comparison-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -3419,7 +3419,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -4326,7 +4326,7 @@
       "images": []
     },
     "context-windows-explained": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-09",
       "lastFactChecked": "2026-08-29",
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -5384,7 +5384,7 @@
       "images": []
     },
     "best-tools-structured-output": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-11-09",
       "lastFactChecked": "2026-08-31 — library versions, licences, APIs, and documentation URLs re-verified against official repositories, PyPI, and vendor documentation",
       "publishDate": "2026-04-30",
       "hasSections": true,
@@ -5918,7 +5918,7 @@
       ]
     },
     "best-gpu-buying-guide-local-llm-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5949,7 +5949,7 @@
       ]
     },
     "best-mac-for-local-ai-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6039,7 +6039,7 @@
       "images": []
     },
     "local-ai-workstation-build-guide": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6066,7 +6066,7 @@
       ]
     },
     "best-vpn-ai-privacy-local-llm-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6084,7 +6084,7 @@
       "images": [
         {
           "url": "/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-en.svg",
-          "title": "VPN comparison for AI privacy: ProtonVPN (Switzerland, free–$3/month), NordVPN (Panama, $3.50-4.50/month), Mullvad (Sweden, €5/month flat, Cure53-audited), and Surfshark (Netherlands, $2-2.50/month) — all four pass independent no-logs audits, August 2026 pricing."
+          "title": "VPN comparison for AI privacy: ProtonVPN (Switzerland, free–$3/month), NordVPN (Panama, $3.50-4.50/month), Mullvad (Sweden, €5/month flat, Cure53-audited), and Surfshark (Netherlands, $2-2.50/month) — all four publish independent no-logs audit reports (scope and dates differ), August 2026 pricing."
         },
         {
           "url": "/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-en.svg",
@@ -6093,7 +6093,7 @@
       ]
     },
     "best-nas-storage-local-ai-models-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6178,7 +6178,7 @@
       ]
     },
     "best-laptop-for-local-llm": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -7007,7 +7007,7 @@
       "images": []
     },
     "mobile-llm-models-phi4-gemma-smollm": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -7487,7 +7487,7 @@
       ]
     },
     "build-local-voice-assistant-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -7509,7 +7509,7 @@
         },
         {
           "url": "/images/build-local-voice-assistant-2026-latency-by-hardware-en.svg",
-          "title": "Voice assistant end-to-end latency by hardware tier: Raspberry Pi 5 (8 GB) at 5–8 sec, Mini PC (16 GB RAM) at 3–5 sec, desktop RTX 3060 12 GB at 1–2 sec, and Mac Mini M5 (24 GB) at 1–1.5 sec, the fastest."
+          "title": "Voice assistant end-to-end latency by hardware tier: Raspberry Pi 5 (8 GB) at 5–8 sec, Mini PC (16 GB RAM) at 3–5 sec, desktop RTX 3060 12 GB at 1–2 sec, and Mac Mini M5 (24 GB) at 1–1.5 sec, the lowest of these tiers."
         }
       ]
     },
@@ -7788,7 +7788,7 @@
       "images": []
     },
     "wechat-bot-local-llm-personal-assistant-2026": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7810,12 +7810,12 @@
         },
         {
           "url": "/images/wechat-bot-model-speed-chinese-en.svg",
-          "title": "Estimated CPU speed by model for Chinese WeChat replies: Qwen3:3b runs fastest at roughly 8–12 tok/s, Qwen3:8b balances quality and speed at roughly 3–5 tok/s, Llama3.1:8b runs at a similar speed with weaker Chinese support, and Qwen3:14b is highest quality at roughly 1–2 tok/s on CPU."
+          "title": "Estimated CPU speed by model for Chinese WeChat replies: Qwen3:4b is the lightest option, Qwen3:8b balances quality and speed at roughly 3–5 tok/s, Llama3.1:8b runs at a similar speed with weaker Chinese support, and Qwen3:14b is highest quality at roughly 1–2 tok/s on CPU."
         }
       ]
     },
     "deepseek-vs-qwen-local-comparison-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7842,7 +7842,7 @@
       ]
     },
     "local-ai-behind-firewall-offline-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -9224,7 +9224,7 @@
       "images": []
     },
     "liquid-apollo-review": {
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -15617,7 +15617,7 @@
       "images": []
     },
     "chinesePromptingVsEnglishPrompting": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -15635,7 +15635,7 @@
       "images": []
     },
     "sillyTavernChineseRoleplaySetup": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -15833,7 +15833,7 @@
       ]
     },
     "runLocalLlmOnXperiaJapan": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-05-27",
       "hasSections": true,
