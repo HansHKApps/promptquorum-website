@@ -108,9 +108,9 @@
   {
     "file": "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
     "models": [
-      "Claude Sonnet 5",
-      "GPT-5.6",
-      "Gemini 3.1 Pro"
+      "Claude Sonnet 5.5",
+      "GPT-6 Astra",
+      "Gemini 4 Argon"
     ]
   },
   {
@@ -135,9 +135,9 @@
   {
     "file": "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "models": [
-      "Claude Opus 5",
-      "GPT-5.6",
-      "Gemini 3.1 Pro"
+      "Claude Opus 5.5",
+      "GPT-6 Astra",
+      "Gemini 4 Argon"
     ]
   },
   {
@@ -522,7 +522,7 @@
       "Claude Opus 5.5",
       "Claude Sonnet 5.5",
       "DeepSeek",
-      "GPT-5.6 Luna",
+      "GPT-6 Luna",
       "Llama 4 Scout",
       "Qwen3 14B",
       "Qwen3.8-27B"
@@ -727,12 +727,12 @@
   {
     "file": "src/lib/power-local-llm/articles/liquid-apollo-review.ts",
     "models": [
+      "GPT-6 Astra",
       "LFM2-1.2B",
       "LFM2-2.6B",
       "LFM2-350M",
       "LFM2-700M",
-      "Meta Llama 3",
-      "OpenAI GPT-4"
+      "Llama 4 Scout"
     ]
   },
   {

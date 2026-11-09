@@ -9,6 +9,7 @@
     "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
     "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
@@ -19,6 +20,7 @@
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
     "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
     "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
   ],
   "GPT-6.1 Sol": [
@@ -44,7 +46,9 @@
     "src/lib/prompt-engineering/articles/how-llms-actually-work.ts",
     "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
+    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
     "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts",
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
@@ -90,7 +94,6 @@
     "src/lib/prompt-engineering/articles/single-prompt-method.ts",
     "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
     "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-    "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "src/lib/blog/blogContent.ts"
   ],
   "GPT-5.5": [
@@ -101,8 +104,6 @@
     "src/lib/prompt-engineering/articles/single-prompt-method.ts",
     "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
     "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-    "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "src/lib/blog/blogContent.ts"
   ],
   "Llama 3.3 70B": [
@@ -145,8 +146,6 @@
     "src/lib/prompt-engineering/articles/single-prompt-method.ts",
     "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
     "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-    "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "src/lib/blog/blogContent.ts"
   ],
   "DeepSeek-V4": [
@@ -161,8 +160,11 @@
     "src/lib/prompt-engineering/articles/how-llms-actually-work.ts",
     "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
+    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
+    "src/lib/power-local-llm/articles/liquid-apollo-review.ts",
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
     "src/lib/prompt-bites/articles/best-llm-right-now.ts"
   ],
@@ -189,6 +191,7 @@
   "Claude Sonnet 5.5": [
     "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
+    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
     "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
   ],
   "Gemma 4": [
@@ -220,6 +223,7 @@
     "src/lib/local-llms/articles/70b-models-consumer-hardware.ts",
     "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
     "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts",
+    "src/lib/power-local-llm/articles/liquid-apollo-review.ts",
     "src/lib/power-local-llm/articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026.ts",
     "src/lib/power-local-llm/articles/best-ai-hr-software-enterprise-2026.ts",
     "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
@@ -309,10 +313,6 @@
   ],
   "Z.ai GLM-4": [
     "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
-  ],
-  "Claude Sonnet 5": [
-    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-    "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
   ],
   "ChatGPT": [
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
@@ -1092,10 +1092,6 @@
     "src/lib/prompt-bites/articles/best-open-source-alternatives-to-chatgpt-plus.ts",
     "src/lib/prompt-bites/articles/qwen-coder-vs-deepseek-coder.ts"
   ],
-  "GPT-5.6 Luna": [
-    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
-    "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
-  ],
   "DeepSeek-V3": [
     "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts",
     "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
@@ -1289,12 +1285,6 @@
     "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
   ],
   "LFM2-700M": [
-    "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
-  ],
-  "Meta Llama 3": [
-    "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
-  ],
-  "OpenAI GPT-4": [
     "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
   ],
   "Ollama": [
@@ -2202,6 +2192,12 @@
   ],
   "Qwen3.6 35B-A3B": [
     "src/lib/prompt-bites/articles/best-qwen-model-for-coding.ts"
+  ],
+  "Claude Sonnet 5": [
+    "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
+  ],
+  "GPT-5.6 Luna": [
+    "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
   ],
   "GPT-5.6 Sol": [
     "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"

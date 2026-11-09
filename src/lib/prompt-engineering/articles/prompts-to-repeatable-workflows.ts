@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-5.6', 'Claude Sonnet 5', 'Gemini 3.1 Pro'],
+    current_models_mentioned: ['GPT-6 Astra', 'Claude Sonnet 5.5', 'Gemini 4 Argon'],
     theme: 'Workflows & Automation',
     designSkin: 'hub',
     heroImage: '/images/prompts-to-repeatable-workflows-overview-hero-en.webp',
@@ -56,9 +56,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['prompt workflows', 'automation templates', 'repeatable prompts', 'LangChain workflow', 'n8n prompts', 'Make automation', 'production AI workflow'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -112,10 +112,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Four templates cover the most common production use cases: document processing, research pipeline, code review, and customer triage.** Each template defines the trigger, the prompt chain, the output routing, and the recommended tools.',
         ],
         numberedItems: [
-          'Document Processing — trigger: new PDF upload → extract key data (dates, parties, amounts) → classify document type → route to assigned reviewer queue. Tools: n8n for orchestration + GPT-5.6 for extraction and classification. Output: structured JSON record written to a shared database.',
+          'Document Processing — trigger: new PDF upload → extract key data (dates, parties, amounts) → classify document type → route to assigned reviewer queue. Tools: n8n for orchestration + GPT-6 Astra for extraction and classification. Output: structured JSON record written to a shared database.',
           'Research Pipeline — trigger: topic list submitted → search web sources → summarize each source → synthesize into a structured report. Tools: LangChain for multi-step orchestration + Perplexity API for web search. Output: markdown report with citations, stored in a shared folder.',
-          'Code Review Loop — trigger: pull request opened → analyze diff → generate inline review comments categorized by severity → post comments to the PR. Tools: GitHub Actions for trigger + Claude Sonnet 5 for diff analysis. Output: PR comments posted via GitHub API.',
-          'Customer Triage — trigger: new support ticket received → classify severity (P1/P2/P3) → route to the correct queue → generate a draft first-response. Tools: Make for orchestration + PromptQuorum for multi-model dispatch (dispatch to GPT-5.6 for classification, Claude Sonnet 5 for draft generation). Output: ticket updated with severity label and draft response.',
+          'Code Review Loop — trigger: pull request opened → analyze diff → generate inline review comments categorized by severity → post comments to the PR. Tools: GitHub Actions for trigger + Claude Sonnet 5.5 for diff analysis. Output: PR comments posted via GitHub API.',
+          'Customer Triage — trigger: new support ticket received → classify severity (P1/P2/P3) → route to the correct queue → generate a draft first-response. Tools: Make for orchestration + PromptQuorum for multi-model dispatch (dispatch to GPT-6 Astra for classification, Claude Sonnet 5.5 for draft generation). Output: ticket updated with severity label and draft response.',
         ],
       },
       tools: {
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**The right tool depends on whether your team prefers visual automation, code-first pipelines, or multi-model dispatch.** Use one primary tool and add PromptQuorum for model-layer decisions.',
           'Make (formerly Integromat) is a visual, no-code workflow builder. Cost: $0 for up to 1,000 credits/month, then $9/month on the Core plan for 10,000 credits (Pro is $16 for the same allowance). Make now bills in credits rather than operations, but most module actions still consume exactly one credit, so per-run cost estimates carry over unchanged — only AI-provider actions cost more. Best for: non-technical teams, CRM and email integrations, straightforward trigger-action pipelines. Limitation: complex branching logic is harder to maintain visually at scale.',
-          'n8n is open-source and free to self-host under its fair-code Sustainable Use License; managed n8n Cloud starts at €20/month (billed annually) for 2,500 workflow executions. It supports code nodes for custom logic alongside visual flow building. Best for: engineering teams that want full control and data privacy. LangChain (Python and JavaScript) is a code-first framework for building multi-step prompt pipelines with memory, agents, and tool use. Best for: developers building custom applications. PromptQuorum adds multi-model dispatch and side-by-side output comparison across GPT-5.6, Claude Sonnet 5, and Gemini 3.1 Pro — use it at any step where model selection affects output quality.',
+          'n8n is open-source and free to self-host under its fair-code Sustainable Use License; managed n8n Cloud starts at €20/month (billed annually) for 2,500 workflow executions. It supports code nodes for custom logic alongside visual flow building. Best for: engineering teams that want full control and data privacy. LangChain (Python and JavaScript) is a code-first framework for building multi-step prompt pipelines with memory, agents, and tool use. Best for: developers building custom applications. PromptQuorum adds multi-model dispatch and side-by-side output comparison across GPT-6 Astra, Claude Sonnet 5.5, and Gemini 4 Argon — use it at any step where model selection affects output quality.',
         ],
         callouts: [
           { type: 'tip', label: 'Tool selection rule', text: 'Start with Make or n8n for orchestration and add PromptQuorum at any step where you need to compare model outputs or dispatch to the best model for that step type.' },
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automate when frequency >5/week, inputs are structured, and output always routes to the same next step',
           'Three trigger types: event-based (webhook/upload), schedule-based (cron), threshold-based (metric crossing)',
           'Define a JSON output schema at every step boundary — never pass raw unstructured text between steps',
-          '4 production templates: document processing (n8n + GPT-5.6), research (LangChain + Perplexity), code review (GitHub Actions + Claude Sonnet 5), customer triage (Make + PromptQuorum)',
+          '4 production templates: document processing (n8n + GPT-6 Astra), research (LangChain + Perplexity), code review (GitHub Actions + Claude Sonnet 5.5), customer triage (Make + PromptQuorum)',
           'Most teams reach 70–80% automation with 20–30% human review on edge cases',
         ],
       },
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is a repeatable prompt workflow?', a: 'A repeatable prompt workflow is a prompt-based process that runs automatically when a defined triggering condition is met, routes output to the next step, and handles errors without manual intervention. Unlike a one-off prompt, a workflow does not require a human to decide when to run it or what to do with the result.' },
-          { q: 'What tools are best for building prompt workflows?', a: 'n8n is best for self-hosted, open-source workflows at $0 cost. Make (formerly Integromat) is best for visual, no-code workflows at $0–$16/month. LangChain is best for Python or JavaScript code-based pipelines with full control. PromptQuorum adds multi-model dispatch and comparison across GPT-5.6, Claude Sonnet 5, and Gemini 3.1 Pro.' },
+          { q: 'What tools are best for building prompt workflows?', a: 'n8n is best for self-hosted, open-source workflows at $0 cost. Make (formerly Integromat) is best for visual, no-code workflows at $0–$16/month. LangChain is best for Python or JavaScript code-based pipelines with full control. PromptQuorum adds multi-model dispatch and comparison across GPT-6 Astra, Claude Sonnet 5.5, and Gemini 4 Argon.' },
           { q: 'What is the minimum viable workflow structure?', a: 'A minimum viable workflow has 4 components: a trigger (scheduled, event-driven, or API call), a prompt execution step (calls the LLM API with the formatted prompt), an output validation step (checks format and quality requirements), and a routing step (sends output to the next system or flags for human review). Add state management and error handling as complexity grows.' },
           { q: 'How do I choose between Make, n8n, and LangChain for prompt workflows?', a: 'Use Make (formerly Integromat) for teams that need a visual no-code interface with 1,000+ app integrations — best for business automation without coding. Use n8n for teams that want no-code with self-hosted control and source access — better privacy, more flexibility. Use LangChain for developers building complex multi-step chains with memory, retrieval, and tool use in Python or JavaScript.' },
           { q: 'When should I automate a prompt workflow vs keep it manual?', a: 'Automate when: the prompt runs more than 5 times per week, the inputs follow a predictable format, the output feeds directly into another system, and the pass rate on a test set exceeds 90%. Keep manual when: the inputs are highly varied, the task requires judgment that cannot be scored automatically, or the output affects irreversible decisions (legal, financial, medical).' },
@@ -243,9 +243,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['Prompt-Workflows', 'Automatisierungsvorlagen', 'wiederholbare Prompts', 'LangChain Workflow', 'n8n Prompts', 'Produktions-KI-Workflow'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -297,9 +297,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Vier Vorlagen decken die häufigsten Produktionsanwendungsfälle ab: Dokumentenverarbeitung, Recherche-Pipeline, Code-Review und Kundentriage.**',
         ],
         numberedItems: [
-          'Dokumentenverarbeitung — Auslöser: neues PDF hochgeladen → Kerndaten extrahieren (Daten, Parteien, Beträge) → Dokumenttyp klassifizieren → an Reviewer-Warteschlange weiterleiten. Tools: n8n + GPT-5.6. Ausgabe: strukturierter JSON-Datensatz in einer gemeinsamen Datenbank.',
+          'Dokumentenverarbeitung — Auslöser: neues PDF hochgeladen → Kerndaten extrahieren (Daten, Parteien, Beträge) → Dokumenttyp klassifizieren → an Reviewer-Warteschlange weiterleiten. Tools: n8n + GPT-6 Astra. Ausgabe: strukturierter JSON-Datensatz in einer gemeinsamen Datenbank.',
           'Recherche-Pipeline — Auslöser: Themenliste eingereicht → Webquellen suchen → jede Quelle zusammenfassen → strukturierten Bericht erstellen. Tools: LangChain + Perplexity API. Ausgabe: Markdown-Bericht mit Quellenangaben.',
-          'Code-Review-Schleife — Auslöser: Pull Request geöffnet → Diff analysieren → Review-Kommentare nach Schweregrad erstellen → Kommentare im PR veröffentlichen. Tools: GitHub Actions + Claude Sonnet 5. Ausgabe: PR-Kommentare über GitHub API.',
+          'Code-Review-Schleife — Auslöser: Pull Request geöffnet → Diff analysieren → Review-Kommentare nach Schweregrad erstellen → Kommentare im PR veröffentlichen. Tools: GitHub Actions + Claude Sonnet 5.5. Ausgabe: PR-Kommentare über GitHub API.',
           'Kundentriage — Auslöser: neues Support-Ticket eingegangen → Schweregrad klassifizieren (P1/P2/P3) → an richtigen Kanal weiterleiten → Erstentwurf einer Antwort generieren. Tools: Make + PromptQuorum. Ausgabe: Ticket mit Schweregradlabel und Antwortentwurf aktualisiert.',
         ],
       },
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Das richtige Tool hängt davon ab, ob Ihr Team visuelle Automatisierung, codebasierte Pipelines oder Multi-Modell-Dispatch bevorzugt.**',
           'Make ist ein visueller No-Code-Workflow-Builder. Kosten: 0 $ für bis zu 1.000 Credits/Monat, 9 $/Monat im Core-Tarif für 10.000 Credits (Pro kostet 16 $ bei gleichem Kontingent). Make rechnet inzwischen in Credits statt in Operationen ab, die meisten Modulaktionen verbrauchen aber weiterhin genau einen Credit — nur KI-Aktionen kosten mehr. Am besten für: nicht-technische Teams, CRM- und E-Mail-Integrationen. n8n ist Open Source und unter der fair-code Sustainable Use License kostenlos selbst hostbar; die verwaltete n8n Cloud beginnt bei 20 €/Monat (jährliche Abrechnung) für 2.500 Workflow-Ausführungen. LangChain (Python und JavaScript) ist ein codebasiertes Framework für mehrstufige Prompt-Pipelines.',
-          'PromptQuorum ergänzt jedes dieser Tools um Multi-Modell-Dispatch und den direkten Vergleich von Ausgaben zwischen GPT-5.6, Claude Sonnet 5 und Gemini 3.1 Pro. Verwenden Sie es an Schritten, bei denen die Modellwahl die Ausgabequalität beeinflusst.',
+          'PromptQuorum ergänzt jedes dieser Tools um Multi-Modell-Dispatch und den direkten Vergleich von Ausgaben zwischen GPT-6 Astra, Claude Sonnet 5.5 und Gemini 4 Argon. Verwenden Sie es an Schritten, bei denen die Modellwahl die Ausgabequalität beeinflusst.',
         ],
         callouts: [
           { type: 'tip', label: 'Tool-Auswahlregel', text: 'Beginnen Sie mit Make oder n8n für die Orchestrierung und fügen Sie PromptQuorum an Schritten hinzu, an denen Sie Modellausgaben vergleichen oder das beste Modell dispatchen möchten.' },
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatisieren Sie bei Häufigkeit >5/Woche, strukturierten Eingaben und konstantem Output-Routing',
           'Drei Auslöser-Typen: ereignisbasiert (Webhook/Upload), zeitplanbasiert (Cron), schwellenwertbasiert (Metrik)',
           'JSON-Ausgabeschema an jeder Schrittgrenze definieren — niemals unstrukturierte Rohdaten weitergeben',
-          '4 Produktionsvorlagen: Dokumentenverarbeitung (n8n + GPT-5.6), Recherche (LangChain + Perplexity), Code-Review (GitHub Actions + Claude Sonnet 5), Kundentriage (Make + PromptQuorum)',
+          '4 Produktionsvorlagen: Dokumentenverarbeitung (n8n + GPT-6 Astra), Recherche (LangChain + Perplexity), Code-Review (GitHub Actions + Claude Sonnet 5.5), Kundentriage (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist ein wiederholbarer Prompt-Workflow?', a: 'Ein wiederholbarer Prompt-Workflow ist ein promptbasierter Prozess, der automatisch ausgelöst wird, wenn eine definierte Bedingung erfüllt ist, die Ausgabe an den nächsten Schritt weiterleitet und Fehler ohne manuellen Eingriff behandelt.' },
-          { q: 'Welche Tools eignen sich am besten für Prompt-Workflows?', a: 'n8n ist am besten für selbst gehostete Open-Source-Workflows — unter der fair-code-Lizenz kostenlos, die verwaltete n8n Cloud ab 20 €/Monat. Make (früher Integromat) ist am besten für visuelle No-Code-Workflows: 0 $ für 1.000 Credits/Monat, 9 $/Monat für 10.000 Credits. LangChain ist am besten für code-basierte Pipelines in Python oder JavaScript mit voller Kontrolle. PromptQuorum ergänzt Multi-Modell-Dispatch und den Vergleich über GPT-5.6, Claude Sonnet 5 und Gemini 3.1 Pro.' },
+          { q: 'Welche Tools eignen sich am besten für Prompt-Workflows?', a: 'n8n ist am besten für selbst gehostete Open-Source-Workflows — unter der fair-code-Lizenz kostenlos, die verwaltete n8n Cloud ab 20 €/Monat. Make (früher Integromat) ist am besten für visuelle No-Code-Workflows: 0 $ für 1.000 Credits/Monat, 9 $/Monat für 10.000 Credits. LangChain ist am besten für code-basierte Pipelines in Python oder JavaScript mit voller Kontrolle. PromptQuorum ergänzt Multi-Modell-Dispatch und den Vergleich über GPT-6 Astra, Claude Sonnet 5.5 und Gemini 4 Argon.' },
           { q: 'Was ist die minimale Workflow-Struktur?', a: 'Ein minimaler Workflow hat 4 Komponenten: einen Auslöser, einen Prompt-Ausführungsschritt, einen Ausgabevalidierungsschritt und einen Routing-Schritt. State Management und Fehlerbehandlung ergänzen Sie je nach Komplexität.' },
           { q: 'Wie wähle ich zwischen Make, n8n und LangChain?', a: 'Verwenden Sie Make für Teams, die eine visuelle No-Code-Oberfläche mit 1.000+ App-Integrationen benötigen. Verwenden Sie n8n für Teams, die No-Code mit selbst gehostetem Zugriff wünschen. Verwenden Sie LangChain für Entwickler, die komplexe mehrstufige Ketten in Python oder JavaScript aufbauen.' },
           { q: 'Wann automatisieren vs. manuell halten?', a: 'Automatisieren Sie, wenn der Prompt mehr als 5-mal pro Woche ausgeführt wird, die Eingaben einem vorhersehbaren Format folgen und die Bestehensrate auf einem Testset 90 % übersteigt. Halten Sie manuell, wenn die Eingaben sehr variabel sind oder die Ausgabe unwiderrufliche Entscheidungen betrifft.' },
@@ -428,9 +428,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['flujos de trabajo de prompts', 'plantillas de automatización', 'prompts repetibles', 'LangChain workflow', 'n8n prompts', 'Make automatización'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -482,10 +482,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Cuatro plantillas cubren los casos de uso de producción más comunes: procesamiento de documentos, pipeline de investigación, revisión de código y triage de clientes.**',
         ],
         numberedItems: [
-          'Procesamiento de documentos — activador: nuevo PDF cargado → extraer datos clave (fechas, partes, importes) → clasificar tipo de documento → enrutar a la cola del revisor asignado. Herramientas: n8n para orquestación + GPT-5.6 para extracción y clasificación. Salida: registro JSON estructurado escrito en una base de datos compartida.',
+          'Procesamiento de documentos — activador: nuevo PDF cargado → extraer datos clave (fechas, partes, importes) → clasificar tipo de documento → enrutar a la cola del revisor asignado. Herramientas: n8n para orquestación + GPT-6 Astra para extracción y clasificación. Salida: registro JSON estructurado escrito en una base de datos compartida.',
           'Pipeline de investigación — activador: lista de temas enviada → buscar fuentes web → resumir cada fuente → sintetizar en un informe estructurado. Herramientas: LangChain para orquestación multi-paso + API de Perplexity para búsqueda web. Salida: informe markdown con citas, almacenado en una carpeta compartida.',
-          'Bucle de revisión de código — activador: pull request abierto → analizar diff → generar comentarios de revisión inline categorizados por severidad → publicar comentarios en el PR. Herramientas: GitHub Actions para el activador + Claude Sonnet 5 para el análisis del diff. Salida: comentarios de PR publicados a través de la API de GitHub.',
-          'Triage de clientes — activador: nuevo ticket de soporte recibido → clasificar severidad (P1/P2/P3) → enrutar a la cola correcta → generar un borrador de primera respuesta. Herramientas: Make para orquestación + PromptQuorum para despacho multi-modelo (despacha a GPT-5.6 para clasificación, Claude Sonnet 5 para generación de borrador). Salida: ticket actualizado con etiqueta de severidad y respuesta borrador.',
+          'Bucle de revisión de código — activador: pull request abierto → analizar diff → generar comentarios de revisión inline categorizados por severidad → publicar comentarios en el PR. Herramientas: GitHub Actions para el activador + Claude Sonnet 5.5 para el análisis del diff. Salida: comentarios de PR publicados a través de la API de GitHub.',
+          'Triage de clientes — activador: nuevo ticket de soporte recibido → clasificar severidad (P1/P2/P3) → enrutar a la cola correcta → generar un borrador de primera respuesta. Herramientas: Make para orquestación + PromptQuorum para despacho multi-modelo (despacha a GPT-6 Astra para clasificación, Claude Sonnet 5.5 para generación de borrador). Salida: ticket actualizado con etiqueta de severidad y respuesta borrador.',
         ],
       },
       tools: {
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**La herramienta correcta depende de si tu equipo prefiere automatización visual, pipelines de código primero o despacho multi-modelo.**',
           'Make (anteriormente Integromat) es un constructor de flujos de trabajo visual sin código. Coste: $0 para hasta 1.000 créditos/mes y $9/mes en el plan Core para 10.000 créditos (Pro cuesta $16 con la misma cuota). Make ahora factura en créditos en lugar de operaciones, pero la mayoría de las acciones de módulo siguen consumiendo exactamente un crédito, así que tus estimaciones de coste por ejecución se mantienen. Mejor para: equipos no técnicos, integraciones de CRM y email, pipelines de acción-activador sencillos. n8n es de código abierto y gratuito de autoalojar bajo su licencia fair-code Sustainable Use; n8n Cloud gestionado empieza en 20 €/mes (facturación anual) por 2.500 ejecuciones de flujo. LangChain (Python y JavaScript) es un framework de código primero para construir pipelines de prompts de múltiples pasos con memoria, agentes y uso de herramientas.',
-          'PromptQuorum añade despacho multi-modelo y comparación de salidas en paralelo entre GPT-5.6, Claude Sonnet 5 y Gemini 3.1 Pro — úsalo en cualquier paso donde la selección del modelo afecte la calidad de la salida.',
+          'PromptQuorum añade despacho multi-modelo y comparación de salidas en paralelo entre GPT-6 Astra, Claude Sonnet 5.5 y Gemini 4 Argon — úsalo en cualquier paso donde la selección del modelo afecte la calidad de la salida.',
         ],
         callouts: [
           { type: 'tip', label: 'Regla de selección de herramienta', text: 'Comienza con Make o n8n para la orquestación y añade PromptQuorum en cualquier paso donde necesites comparar salidas de modelos o despachar al mejor modelo para ese tipo de paso.' },
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatiza cuando la frecuencia >5/semana, las entradas son estructuradas y la salida siempre se enruta al mismo siguiente paso',
           'Tres tipos de activadores: basado en eventos (webhook/carga), basado en programación (cron), basado en umbrales (métrica)',
           'Define un esquema de salida JSON en cada límite de paso — nunca pases texto sin estructura entre pasos',
-          '4 plantillas de producción: procesamiento de documentos (n8n + GPT-5.6), investigación (LangChain + Perplexity), revisión de código (GitHub Actions + Claude Sonnet 5), triage de clientes (Make + PromptQuorum)',
+          '4 plantillas de producción: procesamiento de documentos (n8n + GPT-6 Astra), investigación (LangChain + Perplexity), revisión de código (GitHub Actions + Claude Sonnet 5.5), triage de clientes (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es un flujo de trabajo de prompts repetible?', a: 'Un flujo de trabajo de prompts repetible es un proceso basado en prompts que se ejecuta automáticamente cuando se cumple una condición de activación definida, enruta la salida al siguiente paso y maneja los errores sin intervención manual. A diferencia de un prompt de una sola vez, un flujo de trabajo no requiere que un humano decida cuándo ejecutarlo o qué hacer con el resultado.' },
-          { q: '¿Qué herramientas son mejores para construir flujos de trabajo de prompts?', a: 'n8n es la mejor opción para flujos de trabajo open-source autoalojados: gratuito bajo su licencia fair-code, con n8n Cloud gestionado desde 20 €/mes. Make (anteriormente Integromat) es la mejor opción para flujos visuales sin código: $0 por 1.000 créditos/mes y $9/mes por 10.000 créditos. LangChain es la mejor opción para pipelines de código en Python o JavaScript con control total. PromptQuorum añade despacho multi-modelo y comparación entre GPT-5.6, Claude Sonnet 5 y Gemini 3.1 Pro.' },
+          { q: '¿Qué herramientas son mejores para construir flujos de trabajo de prompts?', a: 'n8n es la mejor opción para flujos de trabajo open-source autoalojados: gratuito bajo su licencia fair-code, con n8n Cloud gestionado desde 20 €/mes. Make (anteriormente Integromat) es la mejor opción para flujos visuales sin código: $0 por 1.000 créditos/mes y $9/mes por 10.000 créditos. LangChain es la mejor opción para pipelines de código en Python o JavaScript con control total. PromptQuorum añade despacho multi-modelo y comparación entre GPT-6 Astra, Claude Sonnet 5.5 y Gemini 4 Argon.' },
           { q: '¿Cuál es la estructura mínima viable de un flujo de trabajo?', a: 'Un flujo de trabajo mínimo tiene 4 componentes: un activador (programado, dirigido por eventos o llamada a API), un paso de ejecución del prompt (llama a la API LLM con el prompt formateado), un paso de validación de salida (verifica los requisitos de formato y calidad) y un paso de enrutamiento (envía la salida al siguiente sistema o marca para revisión humana).' },
           { q: '¿Cómo elijo entre Make, n8n y LangChain para flujos de trabajo de prompts?', a: 'Usa Make para equipos que necesitan una interfaz visual sin código con 1.000+ integraciones de apps. Usa n8n para equipos que quieren control auto-alojado y acceso al código fuente. Usa LangChain para desarrolladores que construyen cadenas complejas de múltiples pasos con memoria, recuperación y uso de herramientas en Python o JavaScript.' },
           { q: '¿Cuándo debo automatizar un flujo de trabajo de prompts vs mantenerlo manual?', a: 'Automatiza cuando: el prompt se ejecuta más de 5 veces por semana, las entradas siguen un formato predecible, la salida se alimenta directamente a otro sistema y la tasa de aprobación en un conjunto de pruebas supera el 90%. Mantén manual cuando: las entradas son muy variadas, la tarea requiere juicio que no puede puntuarse automáticamente, o la salida afecta decisiones irreversibles (legales, financieras, médicas).' },
@@ -613,9 +613,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['سير عمل الأوامر', 'قوالب أتمتة', 'أوامر قابلة للتكرار', 'LangChain workflow', 'n8n prompts', 'Make automation'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -667,9 +667,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**أربعة قوالب تغطي أكثر حالات الاستخدام الإنتاجية شيوعاً: معالجة المستندات وخط أنابيب البحث ومراجعة الكود وفرز العملاء.**',
         ],
         numberedItems: [
-          'معالجة المستندات — المشغّل: ملف PDF جديد مرفوع ← استخراج البيانات الرئيسية (التواريخ، الأطراف، المبالغ) ← تصنيف نوع المستند ← التوجيه إلى قائمة انتظار المراجع. الأدوات: n8n + GPT-5.6. المخرجات: سجل JSON منظم مكتوب في قاعدة بيانات مشتركة.',
+          'معالجة المستندات — المشغّل: ملف PDF جديد مرفوع ← استخراج البيانات الرئيسية (التواريخ، الأطراف، المبالغ) ← تصنيف نوع المستند ← التوجيه إلى قائمة انتظار المراجع. الأدوات: n8n + GPT-6 Astra. المخرجات: سجل JSON منظم مكتوب في قاعدة بيانات مشتركة.',
           'خط أنابيب البحث — المشغّل: قائمة مواضيع مُرسَلة ← البحث في مصادر الويب ← تلخيص كل مصدر ← إنشاء تقرير منظم. الأدوات: LangChain + Perplexity API. المخرجات: تقرير Markdown مع الاستشهادات.',
-          'حلقة مراجعة الكود — المشغّل: فتح طلب سحب ← تحليل الفروق ← إنشاء تعليقات مراجعة مصنّفة حسب الخطورة ← نشر التعليقات على طلب السحب. الأدوات: GitHub Actions + Claude Sonnet 5. المخرجات: تعليقات طلب السحب منشورة عبر GitHub API.',
+          'حلقة مراجعة الكود — المشغّل: فتح طلب سحب ← تحليل الفروق ← إنشاء تعليقات مراجعة مصنّفة حسب الخطورة ← نشر التعليقات على طلب السحب. الأدوات: GitHub Actions + Claude Sonnet 5.5. المخرجات: تعليقات طلب السحب منشورة عبر GitHub API.',
           'فرز العملاء — المشغّل: تذكرة دعم جديدة مستلمة ← تصنيف الخطورة (P1/P2/P3) ← التوجيه إلى القائمة الصحيحة ← إنشاء مسودة الرد الأول. الأدوات: Make + PromptQuorum. المخرجات: تذكرة مُحدَّثة بتسمية الخطورة ومسودة الرد.',
         ],
       },
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**الأداة المناسبة تعتمد على ما إذا كان فريقك يفضّل الأتمتة المرئية أو خطوط الأنابيب البرمجية أو التوزيع متعدد النماذج.**',
           'Make هو منشئ سير عمل مرئي بدون كود. التكلفة: 0 دولار لـ1,000 رصيد (credit) شهرياً، و9 دولارات شهرياً في خطة Core لـ10,000 رصيد (وخطة Pro بـ16 دولاراً للحصة نفسها). أصبح Make يحاسب بالأرصدة بدلاً من العمليات، لكن معظم إجراءات الوحدات ما زالت تستهلك رصيداً واحداً بالضبط، لذا تبقى تقديرات التكلفة لكل تشغيل كما هي. n8n مفتوح المصدر ومجاني للاستضافة الذاتية بموجب رخصة fair-code Sustainable Use؛ وتبدأ خدمة n8n Cloud المُدارة من 20 يورو شهرياً (فوترة سنوية) مقابل 2,500 تنفيذ لسير العمل. LangChain (Python وJavaScript) هو إطار عمل برمجي لبناء خطوط أنابيب أوامر متعددة الخطوات.',
-          'يضيف PromptQuorum التوزيع متعدد النماذج والمقارنة المتوازية للمخرجات بين GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro. استخدمه في أي خطوة يؤثر فيها اختيار النموذج على جودة المخرجات.',
+          'يضيف PromptQuorum التوزيع متعدد النماذج والمقارنة المتوازية للمخرجات بين GPT-6 Astra وClaude Sonnet 5.5 وGemini 4 Argon. استخدمه في أي خطوة يؤثر فيها اختيار النموذج على جودة المخرجات.',
         ],
         callouts: [
           { type: 'tip', label: 'قاعدة اختيار الأداة', text: 'ابدأ بـMake أو n8n للتنسيق وأضف PromptQuorum في أي خطوة تحتاج فيها إلى مقارنة مخرجات النماذج أو التوزيع على أفضل نموذج.' },
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'أتمت عندما يكون التكرار >5/أسبوع والمدخلات منظمة والمخرجات توجَّه دائماً للخطوة التالية ذاتها',
           'ثلاثة أنواع للمشغّلات: قائم على الأحداث (webhook/رفع)، قائم على الجدول (cron)، قائم على العتبة (مقياس)',
           'حدّد مخطط إخراج JSON عند كل حد خطوة — لا تمرر نصاً غير منظم بين الخطوات',
-          '4 قوالب إنتاجية: معالجة المستندات (n8n + GPT-5.6)، البحث (LangChain + Perplexity)، مراجعة الكود (GitHub Actions + Claude Sonnet 5)، فرز العملاء (Make + PromptQuorum)',
+          '4 قوالب إنتاجية: معالجة المستندات (n8n + GPT-6 Astra)، البحث (LangChain + Perplexity)، مراجعة الكود (GitHub Actions + Claude Sonnet 5.5)، فرز العملاء (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو سير العمل القابل للتكرار؟', a: 'سير العمل القابل للتكرار هو عملية قائمة على الأوامر تعمل تلقائياً عند تحقق شرط تشغيل محدد، وتوجّه المخرجات إلى الخطوة التالية، وتعالج الأخطاء دون تدخل بشري. خلافاً للأمر الفردي، لا يحتاج سير العمل إلى إنسان يقرر متى يشغّله أو ماذا يفعل بالنتيجة.' },
-          { q: 'ما هي أفضل الأدوات لبناء سير عمل الأوامر؟', a: 'n8n هو الأفضل لسير العمل مفتوح المصدر المستضاف ذاتياً — مجاني بموجب رخصة fair-code، وتبدأ خدمة n8n Cloud المُدارة من 20 يورو شهرياً. وMake (سابقاً Integromat) هو الأفضل لسير العمل المرئي بدون كود: 0 دولار لـ1,000 رصيد شهرياً، و9 دولارات شهرياً لـ10,000 رصيد. وLangChain هو الأفضل لخطوط الأنابيب البرمجية بلغة Python أو JavaScript مع تحكم كامل. ويضيف PromptQuorum التوزيع متعدد النماذج والمقارنة بين GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro.' },
+          { q: 'ما هي أفضل الأدوات لبناء سير عمل الأوامر؟', a: 'n8n هو الأفضل لسير العمل مفتوح المصدر المستضاف ذاتياً — مجاني بموجب رخصة fair-code، وتبدأ خدمة n8n Cloud المُدارة من 20 يورو شهرياً. وMake (سابقاً Integromat) هو الأفضل لسير العمل المرئي بدون كود: 0 دولار لـ1,000 رصيد شهرياً، و9 دولارات شهرياً لـ10,000 رصيد. وLangChain هو الأفضل لخطوط الأنابيب البرمجية بلغة Python أو JavaScript مع تحكم كامل. ويضيف PromptQuorum التوزيع متعدد النماذج والمقارنة بين GPT-6 Astra وClaude Sonnet 5.5 وGemini 4 Argon.' },
           { q: 'ما هو هيكل سير العمل الأدنى القابل للتطبيق؟', a: 'لسير العمل الأدنى 4 مكونات: مشغّل، خطوة تنفيذ الأمر، خطوة التحقق من المخرجات، وخطوة التوجيه. أضف إدارة الحالة ومعالجة الأخطاء مع نمو التعقيد.' },
           { q: 'كيف أختار بين Make وn8n وLangChain؟', a: 'استخدم Make للفرق التي تحتاج إلى واجهة مرئية بدون كود. استخدم n8n للفرق التي تريد التحكم في الاستضافة الذاتية. استخدم LangChain للمطورين الذين يبنون سلاسل متعددة الخطوات المعقدة بPython أو JavaScript.' },
           { q: 'متى يجب أتمتة سير عمل الأوامر مقابل الإبقاء عليه يدوياً؟', a: 'أتمت عندما يُشغَّل الأمر أكثر من 5 مرات أسبوعياً والمدخلات متوقعة والمخرجات تُغذّي نظاماً آخر مباشرة. أبقِ يدوياً عندما تكون المدخلات متباينة جداً أو تؤثر المخرجات على قرارات لا يمكن التراجع عنها.' },
@@ -798,9 +798,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['fluxos de trabalho de prompts', 'modelos de automação', 'prompts repetíveis', 'LangChain workflow', 'n8n prompts', 'Make automação'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -852,10 +852,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Quatro modelos cobrem os casos de uso de produção mais comuns: processamento de documentos, pipeline de pesquisa, revisão de código e triagem de clientes.**',
         ],
         numberedItems: [
-          'Processamento de documentos — acionador: novo PDF carregado → extrair dados principais (datas, partes, valores) → classificar tipo de documento → rotear para a fila do revisor designado. Ferramentas: n8n para orquestração + GPT-5.6 para extração e classificação. Saída: registro JSON estruturado gravado em um banco de dados compartilhado.',
+          'Processamento de documentos — acionador: novo PDF carregado → extrair dados principais (datas, partes, valores) → classificar tipo de documento → rotear para a fila do revisor designado. Ferramentas: n8n para orquestração + GPT-6 Astra para extração e classificação. Saída: registro JSON estruturado gravado em um banco de dados compartilhado.',
           'Pipeline de pesquisa — acionador: lista de tópicos enviada → pesquisar fontes na web → resumir cada fonte → sintetizar em um relatório estruturado. Ferramentas: LangChain para orquestração de múltiplas etapas + API do Perplexity para pesquisa na web. Saída: relatório markdown com citações, armazenado em uma pasta compartilhada.',
-          'Loop de revisão de código — acionador: pull request aberto → analisar diff → gerar comentários de revisão inline categorizados por severidade → publicar comentários no PR. Ferramentas: GitHub Actions para o acionador + Claude Sonnet 5 para análise do diff. Saída: comentários de PR publicados via API do GitHub.',
-          'Triagem de clientes — acionador: novo ticket de suporte recebido → classificar severidade (P1/P2/P3) → rotear para a fila correta → gerar um rascunho de primeira resposta. Ferramentas: Make para orquestração + PromptQuorum para despacho multi-modelo (despacha para GPT-5.6 para classificação, Claude Sonnet 5 para geração de rascunho). Saída: ticket atualizado com rótulo de severidade e resposta em rascunho.',
+          'Loop de revisão de código — acionador: pull request aberto → analisar diff → gerar comentários de revisão inline categorizados por severidade → publicar comentários no PR. Ferramentas: GitHub Actions para o acionador + Claude Sonnet 5.5 para análise do diff. Saída: comentários de PR publicados via API do GitHub.',
+          'Triagem de clientes — acionador: novo ticket de suporte recebido → classificar severidade (P1/P2/P3) → rotear para a fila correta → gerar um rascunho de primeira resposta. Ferramentas: Make para orquestração + PromptQuorum para despacho multi-modelo (despacha para GPT-6 Astra para classificação, Claude Sonnet 5.5 para geração de rascunho). Saída: ticket atualizado com rótulo de severidade e resposta em rascunho.',
         ],
       },
       tools: {
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**A ferramenta certa depende de se sua equipe prefere automação visual, pipelines code-first ou despacho multi-modelo.**',
           'Make (anteriormente Integromat) é um construtor de fluxos de trabalho visual sem código. Custo: $0 para até 1.000 créditos/mês e $9/mês no plano Core para 10.000 créditos (o Pro custa $16 pela mesma cota) — a Make cobra em dólar, então some IOF e variação cambial na conta. A Make agora fatura em créditos em vez de operações, mas a maioria das ações de módulo ainda consome exatamente um crédito, então suas estimativas de custo por execução continuam válidas. Melhor para: equipes não técnicas, integrações de CRM e e-mail, pipelines de ação-acionador simples. n8n é open-source e gratuito para auto-hospedar sob a licença fair-code Sustainable Use; o n8n Cloud gerenciado começa em 20 €/mês (cobrança anual) para 2.500 execuções de fluxo. LangChain (Python e JavaScript) é um framework code-first para construir pipelines de prompts de múltiplas etapas com memória, agentes e uso de ferramentas.',
-          'PromptQuorum adiciona despacho multi-modelo e comparação de saídas em paralelo entre GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro — use-o em qualquer etapa onde a seleção do modelo afeta a qualidade da saída.',
+          'PromptQuorum adiciona despacho multi-modelo e comparação de saídas em paralelo entre GPT-6 Astra, Claude Sonnet 5.5 e Gemini 4 Argon — use-o em qualquer etapa onde a seleção do modelo afeta a qualidade da saída.',
         ],
         callouts: [
           { type: 'tip', label: 'Regra de seleção de ferramenta', text: 'Comece com Make ou n8n para orquestração e adicione PromptQuorum em qualquer etapa onde você precisa comparar saídas de modelos ou despachar para o melhor modelo.' },
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatize quando a frequência >5/semana, as entradas são estruturadas e a saída sempre é roteada para a mesma próxima etapa',
           'Três tipos de acionadores: baseado em eventos (webhook/upload), baseado em agendamento (cron), baseado em limiar (métrica)',
           'Defina um schema de saída JSON em cada limite de etapa — nunca passe texto sem estrutura entre etapas',
-          '4 modelos de produção: processamento de documentos (n8n + GPT-5.6), pesquisa (LangChain + Perplexity), revisão de código (GitHub Actions + Claude Sonnet 5), triagem de clientes (Make + PromptQuorum)',
+          '4 modelos de produção: processamento de documentos (n8n + GPT-6 Astra), pesquisa (LangChain + Perplexity), revisão de código (GitHub Actions + Claude Sonnet 5.5), triagem de clientes (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -904,7 +904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é um fluxo de trabalho de prompts repetível?', a: 'Um fluxo de trabalho de prompts repetível é um processo baseado em prompts que é executado automaticamente quando uma condição de acionamento definida é satisfeita, roteia a saída para a próxima etapa e trata erros sem intervenção manual. Diferente de um prompt único, um fluxo de trabalho não exige que um humano decida quando executá-lo ou o que fazer com o resultado.' },
-          { q: 'Quais ferramentas são melhores para construir fluxos de trabalho de prompts?', a: 'O n8n é a melhor opção para fluxos open-source auto-hospedados — gratuito sob a licença fair-code, com o n8n Cloud gerenciado a partir de 20 €/mês. A Make (anteriormente Integromat) é a melhor opção para fluxos visuais sem código: $0 por 1.000 créditos/mês e $9/mês por 10.000 créditos, cobrados em dólar. O LangChain é a melhor opção para pipelines em código Python ou JavaScript com controle total. O PromptQuorum adiciona despacho multi-modelo e comparação entre GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro.' },
+          { q: 'Quais ferramentas são melhores para construir fluxos de trabalho de prompts?', a: 'O n8n é a melhor opção para fluxos open-source auto-hospedados — gratuito sob a licença fair-code, com o n8n Cloud gerenciado a partir de 20 €/mês. A Make (anteriormente Integromat) é a melhor opção para fluxos visuais sem código: $0 por 1.000 créditos/mês e $9/mês por 10.000 créditos, cobrados em dólar. O LangChain é a melhor opção para pipelines em código Python ou JavaScript com controle total. O PromptQuorum adiciona despacho multi-modelo e comparação entre GPT-6 Astra, Claude Sonnet 5.5 e Gemini 4 Argon.' },
           { q: 'Qual é a estrutura mínima viável de um fluxo de trabalho?', a: 'Um fluxo de trabalho mínimo tem 4 componentes: um acionador (agendado, orientado por eventos ou chamada de API), uma etapa de execução do prompt (chama a API LLM com o prompt formatado), uma etapa de validação de saída (verifica requisitos de formato e qualidade) e uma etapa de roteamento (envia a saída para o próximo sistema ou marca para revisão humana).' },
           { q: 'Como escolher entre Make, n8n e LangChain para fluxos de trabalho de prompts?', a: 'Use Make para equipes que precisam de uma interface visual sem código com 1.000+ integrações de aplicativos. Use n8n para equipes que querem controle auto-hospedado e acesso ao código-fonte. Use LangChain para desenvolvedores que constroem cadeias complexas de múltiplas etapas com memória, recuperação e uso de ferramentas em Python ou JavaScript.' },
           { q: 'Quando devo automatizar um fluxo de trabalho de prompts vs manter manual?', a: 'Automatize quando: o prompt é executado mais de 5 vezes por semana, as entradas seguem um formato previsível, a saída se alimenta diretamente de outro sistema e a taxa de aprovação em um conjunto de testes supera 90%. Mantenha manual quando: as entradas são muito variadas, a tarefa requer julgamento que não pode ser pontuado automaticamente, ou a saída afeta decisões irreversíveis (legais, financeiras, médicas).' },
@@ -983,9 +983,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['workflows de prompts', 'automatisation', 'prompts répétables', 'LangChain workflow', 'n8n prompts', 'Make automatisation'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -1037,9 +1037,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Quatre modèles couvrent les cas d\'usage les plus courants : traitement de documents, pipeline de recherche, revue de code et triage client.**',
         ],
         numberedItems: [
-          'Traitement de documents — déclencheur : nouveau PDF téléchargé → extraire les données clés → classifier le type de document → acheminer vers la file de révision. Outils : n8n + GPT-5.6. Sortie : enregistrement JSON structuré écrit dans une base de données partagée.',
+          'Traitement de documents — déclencheur : nouveau PDF téléchargé → extraire les données clés → classifier le type de document → acheminer vers la file de révision. Outils : n8n + GPT-6 Astra. Sortie : enregistrement JSON structuré écrit dans une base de données partagée.',
           'Pipeline de recherche — déclencheur : liste de sujets soumise → rechercher des sources web → résumer chaque source → générer un rapport structuré. Outils : LangChain + API Perplexity. Sortie : rapport Markdown avec citations.',
-          'Boucle de revue de code — déclencheur : pull request ouverte → analyser le diff → générer des commentaires catégorisés par sévérité → publier les commentaires sur la PR. Outils : GitHub Actions + Claude Sonnet 5. Sortie : commentaires PR publiés via l\'API GitHub.',
+          'Boucle de revue de code — déclencheur : pull request ouverte → analyser le diff → générer des commentaires catégorisés par sévérité → publier les commentaires sur la PR. Outils : GitHub Actions + Claude Sonnet 5.5. Sortie : commentaires PR publiés via l\'API GitHub.',
           'Triage client — déclencheur : nouveau ticket de support reçu → classifier la sévérité (P1/P2/P3) → acheminer vers la bonne file → générer un brouillon de première réponse. Outils : Make + PromptQuorum. Sortie : ticket mis à jour avec label de sévérité et brouillon de réponse.',
         ],
       },
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Le bon outil dépend de si votre équipe préfère l\'automatisation visuelle, les pipelines basés sur le code, ou le dispatch multi-modèle.**',
           'Make est un générateur de workflows visuel sans code. Coût : 0 $ pour 1 000 crédits/mois, puis 9 $/mois avec le plan Core pour 10 000 crédits (le plan Pro coûte 16 $ pour le même quota). Make facture désormais en crédits et non plus en opérations, mais la plupart des actions de module consomment toujours exactement un crédit : vos estimations de coût par exécution restent valables. n8n est open-source et gratuit à auto-héberger sous sa licence fair-code Sustainable Use ; n8n Cloud managé démarre à 20 €/mois (facturation annuelle) pour 2 500 exécutions de workflow. LangChain (Python et JavaScript) est un framework basé sur le code pour des pipelines de prompts multi-étapes.',
-          'PromptQuorum ajoute le dispatch multi-modèle et la comparaison côte à côte des sorties entre GPT-5.6, Claude Sonnet 5 et Gemini 3.1 Pro. Utilisez-le à toute étape où le choix du modèle affecte la qualité de la sortie.',
+          'PromptQuorum ajoute le dispatch multi-modèle et la comparaison côte à côte des sorties entre GPT-6 Astra, Claude Sonnet 5.5 et Gemini 4 Argon. Utilisez-le à toute étape où le choix du modèle affecte la qualité de la sortie.',
         ],
         callouts: [
           { type: 'tip', label: 'Règle de sélection d\'outil', text: 'Commencez avec Make ou n8n pour l\'orchestration et ajoutez PromptQuorum aux étapes où vous avez besoin de comparer les sorties des modèles ou de dispatcher vers le meilleur modèle.' },
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatisez quand la fréquence >5/semaine, les entrées sont structurées et la sortie est toujours acheminée vers la même étape suivante',
           'Trois types de déclencheurs : événementiel (webhook/envoi), planifié (cron), par seuil (métrique)',
           'Définir un schéma de sortie JSON à chaque frontière d\'étape — ne jamais transmettre du texte brut non structuré',
-          '4 modèles de production : traitement de documents (n8n + GPT-5.6), recherche (LangChain + Perplexity), revue de code (GitHub Actions + Claude Sonnet 5), triage client (Make + PromptQuorum)',
+          '4 modèles de production : traitement de documents (n8n + GPT-6 Astra), recherche (LangChain + Perplexity), revue de code (GitHub Actions + Claude Sonnet 5.5), triage client (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce qu\'un workflow de prompts répétable ?', a: 'Un workflow de prompts répétable est un processus basé sur des prompts qui s\'exécute automatiquement lorsqu\'une condition de déclenchement définie est remplie, achemine la sortie et gère les erreurs sans intervention manuelle.' },
-          { q: 'Quels outils choisir pour construire des workflows de prompts ?', a: 'n8n est le meilleur choix pour des workflows open-source auto-hébergés : gratuit sous licence fair-code, avec n8n Cloud managé à partir de 20 €/mois. Make (anciennement Integromat) est le meilleur choix pour des workflows visuels sans code : 0 $ pour 1 000 crédits/mois et 9 $/mois pour 10 000 crédits. LangChain est le meilleur choix pour des pipelines en code Python ou JavaScript avec un contrôle total. PromptQuorum ajoute le dispatch multi-modèle et la comparaison entre GPT-5.6, Claude Sonnet 5 et Gemini 3.1 Pro.' },
+          { q: 'Quels outils choisir pour construire des workflows de prompts ?', a: 'n8n est le meilleur choix pour des workflows open-source auto-hébergés : gratuit sous licence fair-code, avec n8n Cloud managé à partir de 20 €/mois. Make (anciennement Integromat) est le meilleur choix pour des workflows visuels sans code : 0 $ pour 1 000 crédits/mois et 9 $/mois pour 10 000 crédits. LangChain est le meilleur choix pour des pipelines en code Python ou JavaScript avec un contrôle total. PromptQuorum ajoute le dispatch multi-modèle et la comparaison entre GPT-6 Astra, Claude Sonnet 5.5 et Gemini 4 Argon.' },
           { q: 'Quelle est la structure minimale d\'un workflow ?', a: 'Un workflow minimal comprend 4 composants : un déclencheur, une étape d\'exécution du prompt, une étape de validation de la sortie, et une étape de routage.' },
           { q: 'Comment choisir entre Make, n8n et LangChain ?', a: 'Utilisez Make pour les équipes qui ont besoin d\'une interface visuelle sans code. Utilisez n8n pour le contrôle auto-hébergé. Utilisez LangChain pour les développeurs construisant des chaînes complexes en Python ou JavaScript.' },
           { q: 'Quand automatiser vs garder manuel ?', a: 'Automatisez quand le prompt s\'exécute plus de 5 fois par semaine avec des entrées prévisibles et une sortie qui alimente un autre système. Gardez manuel quand les entrées sont très variées ou que la sortie affecte des décisions irréversibles.' },
@@ -1167,9 +1167,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['プロンプトワークフロー', '自動化テンプレート', '繰り返し可能なプロンプト', 'LangChainワークフロー', 'n8nプロンプト'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -1221,9 +1221,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**4つのテンプレートが最も一般的な本番ユースケースをカバーします：文書処理、リサーチパイプライン、コードレビュー、顧客トリアージ。**',
         ],
         numberedItems: [
-          '文書処理 — トリガー：新しいPDFアップロード → 主要データを抽出（日付、当事者、金額）→ 文書タイプを分類 → レビュアーキューにルーティング。ツール：n8n + GPT-5.6。出力：共有データベースに書き込まれた構造化JSONレコード。',
+          '文書処理 — トリガー：新しいPDFアップロード → 主要データを抽出（日付、当事者、金額）→ 文書タイプを分類 → レビュアーキューにルーティング。ツール：n8n + GPT-6 Astra。出力：共有データベースに書き込まれた構造化JSONレコード。',
           'リサーチパイプライン — トリガー：トピックリスト送信 → ウェブソースを検索 → 各ソースを要約 → 構造化レポートを生成。ツール：LangChain + Perplexity API。出力：引用付きMarkdownレポート。',
-          'コードレビューループ — トリガー：プルリクエストが開かれる → diff分析 → 重大度別にレビューコメントを生成 → PRにコメントを投稿。ツール：GitHub Actions + Claude Sonnet 5。出力：GitHub APIを介して投稿されたPRコメント。',
+          'コードレビューループ — トリガー：プルリクエストが開かれる → diff分析 → 重大度別にレビューコメントを生成 → PRにコメントを投稿。ツール：GitHub Actions + Claude Sonnet 5.5。出力：GitHub APIを介して投稿されたPRコメント。',
           '顧客トリアージ — トリガー：新しいサポートチケット受信 → 重大度を分類（P1/P2/P3）→ 適切なキューにルーティング → 最初の応答の下書きを生成。ツール：Make + PromptQuorum。出力：重大度ラベルと応答下書きで更新されたチケット。',
         ],
       },
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**適切なツールは、チームがビジュアル自動化、コードファーストパイプライン、またはマルチモデルディスパッチを好むかどうかによって異なります。**',
           'Makeはビジュアルなノーコードワークフロービルダーです。コスト：月1,000クレジットまで0ドル、Coreプランなら10,000クレジットで月9ドル（Proプランは同じ枠で16ドル）。Makeの課金単位はオペレーションからクレジットに変わりましたが、ほとんどのモジュールアクションは従来どおり1クレジットしか消費しないため、実行あたりのコスト試算はそのまま使えます。n8nはオープンソースで、fair-codeのSustainable Use Licenseの下で無料で自己ホストできます。マネージドのn8n Cloudは月2,500回のワークフロー実行で月20ユーロ（年額請求）からです。LangChain（PythonとJavaScript）はメモリ、エージェント、ツール使用を備えたマルチステッププロンプトパイプライン向けのコードファーストフレームワークです。',
-          'PromptQuorumはGPT-5.6、Claude Sonnet 5、Gemini 3.1 Proへのマルチモデルディスパッチと出力の並列比較を追加します。モデルの選択が出力品質に影響するステップで使用してください。',
+          'PromptQuorumはGPT-6 Astra、Claude Sonnet 5.5、Gemini 4 Argonへのマルチモデルディスパッチと出力の並列比較を追加します。モデルの選択が出力品質に影響するステップで使用してください。',
         ],
         callouts: [
           { type: 'tip', label: 'ツール選択ルール', text: 'オーケストレーションにはMakeまたはn8nから始め、モデル出力を比較したり最適なモデルにディスパッチしたいステップでPromptQuorumを追加してください。' },
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '週5回以上の頻度、構造化された入力、一定の出力ルーティングがある場合は自動化する',
           '3つのトリガータイプ：イベントベース（Webhook/アップロード）、スケジュールベース（cron）、しきい値ベース（メトリクス）',
           '各ステップの境界でJSON出力スキーマを定義——非構造化テキストを渡さない',
-          '4つの本番テンプレート：文書処理（n8n + GPT-5.6）、リサーチ（LangChain + Perplexity）、コードレビュー（GitHub Actions + Claude Sonnet 5）、顧客トリアージ（Make + PromptQuorum）',
+          '4つの本番テンプレート：文書処理（n8n + GPT-6 Astra）、リサーチ（LangChain + Perplexity）、コードレビュー（GitHub Actions + Claude Sonnet 5.5）、顧客トリアージ（Make + PromptQuorum）',
         ],
       },
       faq: {
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: '繰り返し可能なプロンプトワークフローとは何ですか？', a: '繰り返し可能なプロンプトワークフローとは、定義されたトリガー条件が満たされると自動的に実行され、出力を次のステップにルーティングし、手動介入なしにエラーを処理するプロンプトベースのプロセスです。' },
-          { q: 'プロンプトワークフローの構築に最適なツールは何ですか？', a: 'セルフホストのオープンソースワークフローにはn8nが最適です。fair-codeライセンスの下で無料、マネージドのn8n Cloudは月20ユーロからです。ビジュアルなノーコードワークフローにはMake（旧Integromat）が最適で、月1,000クレジットまで0ドル、10,000クレジットで月9ドルです。PythonまたはJavaScriptのコードベースのパイプラインを完全に制御したい場合はLangChainが最適です。PromptQuorumはGPT-5.6、Claude Sonnet 5、Gemini 3.1 Proへのマルチモデルディスパッチと比較を追加します。' },
+          { q: 'プロンプトワークフローの構築に最適なツールは何ですか？', a: 'セルフホストのオープンソースワークフローにはn8nが最適です。fair-codeライセンスの下で無料、マネージドのn8n Cloudは月20ユーロからです。ビジュアルなノーコードワークフローにはMake（旧Integromat）が最適で、月1,000クレジットまで0ドル、10,000クレジットで月9ドルです。PythonまたはJavaScriptのコードベースのパイプラインを完全に制御したい場合はLangChainが最適です。PromptQuorumはGPT-6 Astra、Claude Sonnet 5.5、Gemini 4 Argonへのマルチモデルディスパッチと比較を追加します。' },
           { q: '最小限のワークフロー構造とは何ですか？', a: '最小限のワークフローには4つのコンポーネントがあります：トリガー、プロンプト実行ステップ、出力検証ステップ、ルーティングステップ。複雑さに応じて状態管理とエラー処理を追加します。' },
           { q: 'Make、n8n、LangChainの選択方法は？', a: '1,000以上のアプリ統合を持つビジュアルなノーコードインターフェースが必要なチームにはMakeを使用します。自己ホストコントロールを求めるチームにはn8nを使用します。PythonまたはJavaScriptで複雑なマルチステップチェーンを構築する開発者にはLangChainを使用します。' },
           { q: 'いつ自動化してどのような場合に手動で行うべきですか？', a: 'プロンプトが週5回以上実行され、入力が予測可能で、出力が別のシステムに直接フィードされる場合に自動化します。入力が非常に多様な場合や出力が取り消せない決定に影響する場合は手動のままにします。' },
@@ -1352,9 +1352,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['Prompt工作流', '自动化模板', '可重复Prompt', 'LangChain工作流', 'n8n Prompt', '生产AI工作流'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -1406,9 +1406,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**4个模板涵盖最常见的生产用例：文档处理、研究管道、代码审查和客户分诊。**',
         ],
         numberedItems: [
-          '文档处理——触发：新PDF上传 → 提取关键数据（日期、当事方、金额）→ 分类文档类型 → 路由到审阅者队列。工具：n8n + GPT-5.6。输出：写入共享数据库的结构化JSON记录。',
+          '文档处理——触发：新PDF上传 → 提取关键数据（日期、当事方、金额）→ 分类文档类型 → 路由到审阅者队列。工具：n8n + GPT-6 Astra。输出：写入共享数据库的结构化JSON记录。',
           '研究管道——触发：提交主题列表 → 搜索网络来源 → 汇总每个来源 → 生成结构化报告。工具：LangChain + Perplexity API。输出：带引用的Markdown报告。',
-          '代码审查循环——触发：拉取请求打开 → 分析差异 → 按严重程度生成内联审查评论 → 将评论发布到PR。工具：GitHub Actions + Claude Sonnet 5。输出：通过GitHub API发布的PR评论。',
+          '代码审查循环——触发：拉取请求打开 → 分析差异 → 按严重程度生成内联审查评论 → 将评论发布到PR。工具：GitHub Actions + Claude Sonnet 5.5。输出：通过GitHub API发布的PR评论。',
           '客户分诊——触发：收到新支持工单 → 分类严重程度（P1/P2/P3）→ 路由到正确队列 → 生成初始回复草稿。工具：Make + PromptQuorum。输出：更新了严重程度标签和回复草稿的工单。',
         ],
       },
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**正确的工具取决于你的团队偏好可视化自动化、代码优先管道还是多模型调度。**',
           'Make是一个可视化无代码工作流构建器。成本：每月1,000积分以内免费，Core套餐每月9美元含10,000积分（Pro套餐同样额度为16美元）。Make的计费单位已从操作次数改为积分，但大多数模块动作仍只消耗1个积分，因此单次运行的成本估算依然适用。n8n是开源的，遵循fair-code Sustainable Use许可，可免费自托管；托管版n8n Cloud起价为每月20欧元（按年计费），包含2,500次工作流执行。LangChain（Python和JavaScript）是一个用于构建多步骤Prompt管道的代码优先框架。',
-          'PromptQuorum为GPT-5.6、Claude Sonnet 5和Gemini 3.1 Pro添加多模型调度和并排输出比较。在模型选择影响输出质量的任何步骤中使用它。',
+          'PromptQuorum为GPT-6 Astra、Claude Sonnet 5.5和Gemini 4 Argon添加多模型调度和并排输出比较。在模型选择影响输出质量的任何步骤中使用它。',
         ],
         callouts: [
           { type: 'tip', label: '工具选择规则', text: '从Make或n8n开始进行编排，并在需要比较模型输出或调度到最佳模型的步骤添加PromptQuorum。' },
@@ -1450,7 +1450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '当频率>每周5次、输入结构化、输出始终路由到相同下一步时自动化',
           '三种触发类型：基于事件（Webhook/上传）、基于计划（cron）、基于阈值（指标）',
           '在每个步骤边界定义JSON输出架构——永远不要传递非结构化文本',
-          '4个生产模板：文档处理（n8n + GPT-5.6）、研究（LangChain + Perplexity）、代码审查（GitHub Actions + Claude Sonnet 5）、客户分诊（Make + PromptQuorum）',
+          '4个生产模板：文档处理（n8n + GPT-6 Astra）、研究（LangChain + Perplexity）、代码审查（GitHub Actions + Claude Sonnet 5.5）、客户分诊（Make + PromptQuorum）',
         ],
       },
       faq: {
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '什么是可重复的Prompt工作流？', a: '可重复的Prompt工作流是一个基于Prompt的流程，当定义的触发条件满足时自动运行，将输出路由到下一步，并在无需人工干预的情况下处理错误。' },
-          { q: '构建Prompt工作流最好用哪些工具？', a: '自托管的开源工作流首选n8n：遵循fair-code许可可免费使用，托管版n8n Cloud起价为每月20欧元。可视化无代码工作流首选Make（原Integromat）：每月1,000积分以内免费，10,000积分每月9美元。需要在Python或JavaScript中完全掌控代码管道时首选LangChain。PromptQuorum则补充了跨GPT-5.6、Claude Sonnet 5和Gemini 3.1 Pro的多模型调度与对比。' },
+          { q: '构建Prompt工作流最好用哪些工具？', a: '自托管的开源工作流首选n8n：遵循fair-code许可可免费使用，托管版n8n Cloud起价为每月20欧元。可视化无代码工作流首选Make（原Integromat）：每月1,000积分以内免费，10,000积分每月9美元。需要在Python或JavaScript中完全掌控代码管道时首选LangChain。PromptQuorum则补充了跨GPT-6 Astra、Claude Sonnet 5.5和Gemini 4 Argon的多模型调度与对比。' },
           { q: '最小可行工作流结构是什么？', a: '最小可行工作流有4个组件：触发器、Prompt执行步骤、输出验证步骤和路由步骤。随着复杂性增长添加状态管理和错误处理。' },
           { q: '如何在Make、n8n和LangChain之间选择？', a: '对需要可视化无代码界面的团队使用Make。对想要自托管控制的团队使用n8n。对在Python或JavaScript中构建复杂多步骤链的开发者使用LangChain。' },
           { q: '何时应该自动化Prompt工作流vs保持手动？', a: '当Prompt每周运行超过5次且输入可预测时自动化。当输入高度变化或输出影响不可撤销的决定（法律、财务、医疗）时保持手动。' },
@@ -1536,9 +1536,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-08-31',
       keywords: ['프롬프트 워크플로우', '자동화 템플릿', '반복 가능한 프롬프트', 'LangChain 워크플로우', 'n8n 프롬프트', 'Make 자동화', '프로덕션 AI 워크플로우'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-5.6' },
-        { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Thing', name: 'GPT-6 Astra' },
+        { '@type': 'Thing', name: 'Claude Sonnet 5.5' },
+        { '@type': 'Thing', name: 'Gemini 4 Argon' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
         { '@type': 'Thing', name: 'Make' },
@@ -1592,10 +1592,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**네 가지 템플릿이 가장 일반적인 프로덕션 사용 사례를 커버합니다: 문서 처리, 리서치 파이프라인, 코드 리뷰, 고객 분류.** 각 템플릿은 트리거, 프롬프트 체인, 출력 라우팅, 권장 도구를 정의합니다.',
         ],
         numberedItems: [
-          '문서 처리 — 트리거: 새 PDF 업로드 → 핵심 데이터 추출(날짜, 당사자, 금액) → 문서 유형 분류 → 담당 검토자 큐로 라우팅. 도구: 오케스트레이션에 n8n + 추출 및 분류에 GPT-5.6. 출력: 공유 데이터베이스에 기록된 구조화 JSON 레코드.',
+          '문서 처리 — 트리거: 새 PDF 업로드 → 핵심 데이터 추출(날짜, 당사자, 금액) → 문서 유형 분류 → 담당 검토자 큐로 라우팅. 도구: 오케스트레이션에 n8n + 추출 및 분류에 GPT-6 Astra. 출력: 공유 데이터베이스에 기록된 구조화 JSON 레코드.',
           '리서치 파이프라인 — 트리거: 주제 목록 제출 → 웹 소스 검색 → 각 소스 요약 → 구조화된 보고서로 합성. 도구: 다단계 오케스트레이션에 LangChain + 웹 검색에 Perplexity API. 출력: 인용이 포함된 마크다운 보고서, 공유 폴더에 저장.',
-          '코드 리뷰 루프 — 트리거: 풀 리퀘스트 열림 → diff 분석 → 심각도별로 분류된 인라인 리뷰 댓글 생성 → PR에 댓글 게시. 도구: 트리거에 GitHub Actions + diff 분석에 Claude Sonnet 5. 출력: GitHub API를 통해 게시된 PR 댓글.',
-          '고객 분류 — 트리거: 새 지원 티켓 수신 → 심각도 분류(P1/P2/P3) → 올바른 큐로 라우팅 → 초안 첫 번째 응답 생성. 도구: 오케스트레이션에 Make + 멀티 모델 디스패치에 PromptQuorum(분류에 GPT-5.6, 초안 생성에 Claude Sonnet 5으로 디스패치). 출력: 심각도 레이블과 초안 응답으로 업데이트된 티켓.',
+          '코드 리뷰 루프 — 트리거: 풀 리퀘스트 열림 → diff 분석 → 심각도별로 분류된 인라인 리뷰 댓글 생성 → PR에 댓글 게시. 도구: 트리거에 GitHub Actions + diff 분석에 Claude Sonnet 5.5. 출력: GitHub API를 통해 게시된 PR 댓글.',
+          '고객 분류 — 트리거: 새 지원 티켓 수신 → 심각도 분류(P1/P2/P3) → 올바른 큐로 라우팅 → 초안 첫 번째 응답 생성. 도구: 오케스트레이션에 Make + 멀티 모델 디스패치에 PromptQuorum(분류에 GPT-6 Astra, 초안 생성에 Claude Sonnet 5.5으로 디스패치). 출력: 심각도 레이블과 초안 응답으로 업데이트된 티켓.',
         ],
       },
       tools: {
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**올바른 도구는 팀이 시각적 자동화, 코드 우선 파이프라인, 멀티 모델 디스패치 중 무엇을 선호하는지에 달려 있습니다.** 하나의 기본 도구를 사용하고 모델 레이어 결정에는 PromptQuorum을 추가하십시오.',
           'Make(이전 Integromat)는 시각적, 노코드 워크플로우 빌더입니다. 비용: 월 최대 1,000크레딧까지 $0, Core 요금제는 10,000크레딧에 월 $9입니다(같은 한도의 Pro 요금제는 $16). Make는 이제 작업 횟수가 아니라 크레딧으로 과금하지만 대부분의 모듈 액션은 여전히 정확히 1크레딧만 소비하므로 실행당 비용 추정치는 그대로 유효합니다. 최적 용도: 비기술 팀, CRM 및 이메일 통합, 간단한 트리거-액션 파이프라인. 제한: 복잡한 분기 로직은 대규모로 시각적으로 유지하기가 더 어렵습니다.',
-          'n8n은 오픈 소스이며 fair-code Sustainable Use 라이선스에 따라 무료로 자가 호스팅할 수 있습니다. 관리형 n8n Cloud는 월 2,500회 워크플로우 실행 기준 월 20유로(연간 청구)부터 시작합니다. 시각적 플로우 구축과 함께 커스텀 로직을 위한 코드 노드를 지원합니다. 최적 용도: 완전한 제어와 데이터 프라이버시를 원하는 엔지니어링 팀. LangChain(Python 및 JavaScript)은 메모리, 에이전트, 도구 사용으로 다단계 프롬프트 파이프라인을 구축하기 위한 코드 우선 프레임워크입니다. 최적 용도: 커스텀 애플리케이션을 구축하는 개발자. PromptQuorum은 GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에 걸쳐 멀티 모델 디스패치와 나란히 출력 비교를 추가합니다 — 모델 선택이 출력 품질에 영향을 미치는 모든 단계에서 사용하십시오.',
+          'n8n은 오픈 소스이며 fair-code Sustainable Use 라이선스에 따라 무료로 자가 호스팅할 수 있습니다. 관리형 n8n Cloud는 월 2,500회 워크플로우 실행 기준 월 20유로(연간 청구)부터 시작합니다. 시각적 플로우 구축과 함께 커스텀 로직을 위한 코드 노드를 지원합니다. 최적 용도: 완전한 제어와 데이터 프라이버시를 원하는 엔지니어링 팀. LangChain(Python 및 JavaScript)은 메모리, 에이전트, 도구 사용으로 다단계 프롬프트 파이프라인을 구축하기 위한 코드 우선 프레임워크입니다. 최적 용도: 커스텀 애플리케이션을 구축하는 개발자. PromptQuorum은 GPT-6 Astra, Claude Sonnet 5.5, Gemini 4 Argon에 걸쳐 멀티 모델 디스패치와 나란히 출력 비교를 추가합니다 — 모델 선택이 출력 품질에 영향을 미치는 모든 단계에서 사용하십시오.',
         ],
         callouts: [
           { type: 'tip', label: '도구 선택 규칙', text: '오케스트레이션에는 Make 또는 n8n으로 시작하고, 모델 출력을 비교하거나 해당 단계 유형에 가장 적합한 모델로 디스패치해야 하는 모든 단계에 PromptQuorum을 추가하십시오.' },
@@ -1636,7 +1636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '빈도가 주 5회 이상이고, 입력이 구조화되어 있으며, 출력이 항상 동일한 다음 단계로 라우팅될 때 자동화하십시오',
           '세 가지 트리거 유형: 이벤트 기반(webhook/업로드), 일정 기반(cron), 임계값 기반(지표 교차)',
           '모든 단계 경계에서 JSON 출력 스키마를 정의하십시오 — 단계 간에 원시 비구조화 텍스트를 절대 전달하지 마십시오',
-          '4가지 프로덕션 템플릿: 문서 처리(n8n + GPT-5.6), 리서치(LangChain + Perplexity), 코드 리뷰(GitHub Actions + Claude Sonnet 5), 고객 분류(Make + PromptQuorum)',
+          '4가지 프로덕션 템플릿: 문서 처리(n8n + GPT-6 Astra), 리서치(LangChain + Perplexity), 코드 리뷰(GitHub Actions + Claude Sonnet 5.5), 고객 분류(Make + PromptQuorum)',
           '대부분의 팀은 에지 케이스에서 20–30% 인간 검토로 70–80% 자동화에 도달합니다',
         ],
       },
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: '반복 가능한 프롬프트 워크플로우란 무엇입니까?', a: '반복 가능한 프롬프트 워크플로우는 정의된 트리거 조건이 충족될 때 자동으로 실행되고, 출력을 다음 단계로 라우팅하며, 수동 개입 없이 오류를 처리하는 프롬프트 기반 프로세스입니다. 일회성 프롬프트와 달리, 워크플로우는 언제 실행할지 또는 결과를 어떻게 처리할지 결정하기 위해 인간을 필요로 하지 않습니다.' },
-          { q: '프롬프트 워크플로우 구축에 가장 적합한 도구는 무엇입니까?', a: 'n8n은 $0 비용의 자가 호스팅 오픈 소스 워크플로우에 최적입니다. Make(이전 Integromat)는 월 $0–$16의 시각적, 노코드 워크플로우에 최적입니다. LangChain은 완전한 제어로 Python 또는 JavaScript 코드 기반 파이프라인에 최적입니다. PromptQuorum은 GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에 걸쳐 멀티 모델 디스패치와 비교를 추가합니다.' },
+          { q: '프롬프트 워크플로우 구축에 가장 적합한 도구는 무엇입니까?', a: 'n8n은 $0 비용의 자가 호스팅 오픈 소스 워크플로우에 최적입니다. Make(이전 Integromat)는 월 $0–$16의 시각적, 노코드 워크플로우에 최적입니다. LangChain은 완전한 제어로 Python 또는 JavaScript 코드 기반 파이프라인에 최적입니다. PromptQuorum은 GPT-6 Astra, Claude Sonnet 5.5, Gemini 4 Argon에 걸쳐 멀티 모델 디스패치와 비교를 추가합니다.' },
           { q: '최소 실행 가능한 워크플로우 구조는 무엇입니까?', a: '최소 실행 가능한 워크플로우는 4가지 구성 요소를 갖습니다: 트리거(예약, 이벤트 기반, 또는 API 호출), 프롬프트 실행 단계(형식화된 프롬프트로 LLM API 호출), 출력 검증 단계(형식 및 품질 요구 사항 확인), 그리고 라우팅 단계(출력을 다음 시스템으로 전송하거나 인간 검토 플래그 지정). 복잡도가 증가함에 따라 상태 관리와 오류 처리를 추가하십시오.' },
           { q: '프롬프트 워크플로우에 Make, n8n, LangChain 중 어떻게 선택합니까?', a: '1,000개 이상의 앱 통합이 있는 시각적 노코드 인터페이스가 필요한 팀에는 Make(이전 Integromat)를 사용하십시오 — 코딩 없이 비즈니스 자동화에 최적입니다. 자가 호스팅 제어와 소스 접근이 있는 노코드를 원하는 팀에는 n8n을 사용하십시오 — 더 나은 프라이버시, 더 많은 유연성. Python 또는 JavaScript에서 메모리, 검색, 도구 사용이 있는 복잡한 다단계 체인을 구축하는 개발자에게는 LangChain을 사용하십시오.' },
           { q: '프롬프트 워크플로우를 자동화해야 할 때와 수동으로 유지해야 할 때는 언제입니까?', a: '자동화 조건: 프롬프트가 주당 5회 이상 실행되고, 입력이 예측 가능한 형식을 따르고, 출력이 다른 시스템으로 직접 연결되며, 테스트 세트의 통과율이 90%를 초과할 때. 수동 유지 조건: 입력이 매우 다양하고, 작업에 자동으로 점수를 매길 수 없는 판단이 필요하거나, 출력이 되돌릴 수 없는 결정(법적, 재정적, 의료적)에 영향을 미칠 때.' },

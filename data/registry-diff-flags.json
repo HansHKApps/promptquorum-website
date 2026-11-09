@@ -103,55 +103,6 @@
     ]
   },
   {
-    "siteModel": "Gemini 3.1 Pro",
-    "registryModel": "Gemini 3.1 Pro",
-    "status": "superseded",
-    "superseded_by": "Gemini 4 Argon",
-    "notes": "Superseded by Gemini 4 Argon as the general-purpose flagship per Google's own model page (2026-10-18 fetch). Was the site's most-mentioned Gemini model (4x).",
-    "fileCount": 7,
-    "files": [
-      "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
-      "src/lib/prompt-engineering/articles/single-prompt-method.ts",
-      "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
-      "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-      "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-      "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
-      "src/lib/blog/blogContent.ts"
-    ]
-  },
-  {
-    "siteModel": "Claude Opus 5",
-    "registryModel": "Claude Opus 5",
-    "status": "superseded",
-    "superseded_by": "Claude Opus 5.5",
-    "notes": "Superseded by Claude Opus 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table. Previously recommended for complex agentic coding/enterprise work.",
-    "fileCount": 6,
-    "files": [
-      "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
-      "src/lib/prompt-engineering/articles/single-prompt-method.ts",
-      "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
-      "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-      "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
-      "src/lib/blog/blogContent.ts"
-    ]
-  },
-  {
-    "siteModel": "GPT-5.6",
-    "registryModel": "GPT-5.6",
-    "status": "superseded",
-    "superseded_by": "GPT-6 Astra",
-    "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded.",
-    "fileCount": 6,
-    "files": [
-      "src/lib/prompt-engineering/articles/single-prompt-method.ts",
-      "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
-      "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-      "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-      "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
-      "src/lib/blog/blogContent.ts"
-    ]
-  },
-  {
     "siteModel": "Qwen3.8 27B",
     "registryModel": "Qwen3",
     "status": "superseded",
@@ -184,6 +135,36 @@
     ]
   },
   {
+    "siteModel": "Claude Opus 5",
+    "registryModel": "Claude Opus 5",
+    "status": "superseded",
+    "superseded_by": "Claude Opus 5.5",
+    "notes": "Superseded by Claude Opus 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table. Previously recommended for complex agentic coding/enterprise work.",
+    "fileCount": 5,
+    "files": [
+      "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
+      "src/lib/prompt-engineering/articles/single-prompt-method.ts",
+      "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
+      "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+      "src/lib/blog/blogContent.ts"
+    ]
+  },
+  {
+    "siteModel": "Gemini 3.1 Pro",
+    "registryModel": "Gemini 3.1 Pro",
+    "status": "superseded",
+    "superseded_by": "Gemini 4 Argon",
+    "notes": "Superseded by Gemini 4 Argon as the general-purpose flagship per Google's own model page (2026-10-18 fetch). Was the site's most-mentioned Gemini model (4x).",
+    "fileCount": 5,
+    "files": [
+      "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
+      "src/lib/prompt-engineering/articles/single-prompt-method.ts",
+      "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
+      "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+      "src/lib/blog/blogContent.ts"
+    ]
+  },
+  {
     "siteModel": "Qwen3 0.6B",
     "registryModel": "Qwen3",
     "status": "superseded",
@@ -196,6 +177,20 @@
       "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
       "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
       "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts"
+    ]
+  },
+  {
+    "siteModel": "GPT-5.6",
+    "registryModel": "GPT-5.6",
+    "status": "superseded",
+    "superseded_by": "GPT-6 Astra",
+    "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded.",
+    "fileCount": 4,
+    "files": [
+      "src/lib/prompt-engineering/articles/single-prompt-method.ts",
+      "src/lib/prompt-engineering/articles/write-better-code-with-ai.ts",
+      "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+      "src/lib/blog/blogContent.ts"
     ]
   },
   {
@@ -318,18 +313,6 @@
     ]
   },
   {
-    "siteModel": "Claude Sonnet 5",
-    "registryModel": "Claude Sonnet 5",
-    "status": "superseded",
-    "superseded_by": "Claude Sonnet 5.5",
-    "notes": "Superseded by Claude Sonnet 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-      "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
-    ]
-  },
-  {
     "siteModel": "GPT-4o",
     "registryModel": "GPT-4o",
     "status": "superseded",
@@ -387,18 +370,6 @@
     "files": [
       "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts",
       "src/lib/power-local-llm/articles/lyonesse-review.ts"
-    ]
-  },
-  {
-    "siteModel": "GPT-5.6 Luna",
-    "registryModel": "GPT-5.6",
-    "status": "superseded",
-    "superseded_by": "GPT-6 Astra",
-    "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
-      "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
     ]
   },
   {
@@ -628,28 +599,6 @@
     ]
   },
   {
-    "siteModel": "Meta Llama 3",
-    "registryModel": "Meta Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Company-prefixed alias ('Meta Llama 3') for the same original-Llama-3 model registered bare as 'Llama 3'.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
-    ]
-  },
-  {
-    "siteModel": "OpenAI GPT-4",
-    "registryModel": "OpenAI GPT-4",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "Company-prefixed alias matching this site's phrasing.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
-    ]
-  },
-  {
     "siteModel": "Stable Diffusion 2.0",
     "registryModel": "Stable Diffusion 2.0",
     "status": "superseded",
@@ -826,11 +775,33 @@
     ]
   },
   {
-    "siteModel": "GPT-5.6 Sol",
-    "registryModel": "GPT-5.6",
+    "siteModel": "Claude Sonnet 5",
+    "registryModel": "Claude Sonnet 5",
     "status": "superseded",
-    "superseded_by": "GPT-6 Astra",
-    "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded.",
+    "superseded_by": "Claude Sonnet 5.5",
+    "notes": "Superseded by Claude Sonnet 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
+    ]
+  },
+  {
+    "siteModel": "GPT-5.6 Luna",
+    "registryModel": "GPT-5.6 Luna",
+    "status": "superseded",
+    "superseded_by": "GPT-6 Luna",
+    "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant); GPT-6 Luna is the name-matched successor, both already tracked as separate registry entries.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
+    ]
+  },
+  {
+    "siteModel": "GPT-5.6 Sol",
+    "registryModel": "GPT-5.6 Sol",
+    "status": "superseded",
+    "superseded_by": "GPT-6.1 Sol",
+    "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant); GPT-6.1 Sol is the name-matched successor.",
     "fileCount": 1,
     "files": [
       "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
@@ -838,10 +809,10 @@
   },
   {
     "siteModel": "GPT-5.6 Terra",
-    "registryModel": "GPT-5.6",
+    "registryModel": "GPT-5.6 Terra",
     "status": "superseded",
-    "superseded_by": "GPT-6 Astra",
-    "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded.",
+    "superseded_by": null,
+    "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). No confirmed same-named 'Terra' successor found this cycle (OpenAI's site is bot-blocked from this session; unverified third-party mentions of a 'GPT-6.1 Terra' exist but are not confirmed from an official source) -- left unresolved rather than guessed. Needs a real OpenAI-source check.",
     "fileCount": 1,
     "files": [
       "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"

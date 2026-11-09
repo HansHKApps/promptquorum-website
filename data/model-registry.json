@@ -157,6 +157,42 @@
     {
       "company": "OpenAI",
       "family": "GPT",
+      "model": "GPT-5.6 Luna",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6 Luna",
+      "source_url": "https://openai.com",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant); GPT-6 Luna is the name-matched successor, both already tracked as separate registry entries."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-5.6 Sol",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6.1 Sol",
+      "source_url": "https://openai.com",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant); GPT-6.1 Sol is the name-matched successor."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-5.6 Terra",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": null,
+      "source_url": "https://openai.com",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). No confirmed same-named 'Terra' successor found this cycle (OpenAI's site is bot-blocked from this session; unverified third-party mentions of a 'GPT-6.1 Terra' exist but are not confirmed from an official source) -- left unresolved rather than guessed. Needs a real OpenAI-source check."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
       "model": "GPT-6 Astra",
       "type": "closed",
       "release_date": null,

@@ -17,13 +17,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'CISOs, procurement teams, and compliance officers choosing between proprietary and open-weight LLMs',
     primaryTerm: 'GDPR risk comparison LLM models',
-    leadAnswerBlock: '**DeepSeek\'s hosted API presents the highest GDPR risk of the options compared here: its data is stored in mainland China, where PIPL gives authorities broad access, and the EU has no adequacy decision for China. Qwen3.8-27B and Llama 4 Scout run locally carry the lowest risk because no personal data leaves your infrastructure. Claude and OpenAI GPT-5.6 Luna APIs sit in the middle: they need a valid transfer mechanism (EU-US Data Privacy Framework or Standard Contractual Clauses) and, for strict EU residency, an EU-region route such as OpenAI\'s EU data-residency Projects or Claude through Amazon Bedrock or Google Vertex AI EU regions.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**DeepSeek\'s hosted API presents the highest GDPR risk of the options compared here: its data is stored in mainland China, where PIPL gives authorities broad access, and the EU has no adequacy decision for China. Qwen3.8-27B and Llama 4 Scout run locally carry the lowest risk because no personal data leaves your infrastructure. Claude and OpenAI GPT-6 Luna APIs sit in the middle: they need a valid transfer mechanism (EU-US Data Privacy Framework or Standard Contractual Clauses) and, for strict EU residency, an EU-region route such as OpenAI\'s EU data-residency Projects or Claude through Amazon Bedrock or Google Vertex AI EU regions.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       en: {
         question: 'Which LLM is safest under GDPR?',
-        answer: 'Qwen3.8-27B or Llama 4 Scout run locally on your own hardware: no data leaves your jurisdiction, so there is no Article 44 transfer and no SCC or TIA to manage. DeepSeek\'s hosted API is highest-risk because data is stored in China under PIPL. Claude and GPT-5.6 Luna APIs are medium-risk: they need a transfer mechanism (EU-US Data Privacy Framework or SCCs), and EU-only processing is available via OpenAI\'s EU data-residency Projects or Claude on Amazon Bedrock / Google Vertex AI EU regions, not through Anthropic\'s own API.',
+        answer: 'Qwen3.8-27B or Llama 4 Scout run locally on your own hardware: no data leaves your jurisdiction, so there is no Article 44 transfer and no SCC or TIA to manage. DeepSeek\'s hosted API is highest-risk because data is stored in China under PIPL. Claude and GPT-6 Luna APIs are medium-risk: they need a transfer mechanism (EU-US Data Privacy Framework or SCCs), and EU-only processing is available via OpenAI\'s EU data-residency Projects or Claude on Amazon Bedrock / Google Vertex AI EU regions, not through Anthropic\'s own API.',
         bullets: [
           'Qwen local: Lowest risk. No transfer, Apache 2.0 weights for Qwen3.8-27B, roughly 16–24 GB VRAM when quantized.',
           'DeepSeek API: Highest risk. China-stored data, PIPL jurisdiction, no EU adequacy decision.',
@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Welches LLM ist unter DSGVO am sichersten?',
-        answer: 'Qwen3.8-27B oder Llama 4 Scout, lokal auf eigener Hardware betrieben: Es verlassen keine Daten Ihre Rechtsordnung, daher gibt es keinen Transfer nach Artikel 44 und keine SCC oder TIA zu verwalten. Die gehostete DeepSeek API ist am riskantesten, da die Daten unter dem PIPL in China gespeichert werden. Die APIs von Claude und GPT-5.6 Luna haben ein mittleres Risiko: Sie benötigen einen Transfermechanismus (EU-US Data Privacy Framework oder SCC); eine reine EU-Verarbeitung ist über OpenAIs Projects mit EU-Datenresidenz oder über Claude auf Amazon Bedrock bzw. Google Vertex AI in EU-Regionen möglich, nicht jedoch über Anthropics eigene API.',
+        answer: 'Qwen3.8-27B oder Llama 4 Scout, lokal auf eigener Hardware betrieben: Es verlassen keine Daten Ihre Rechtsordnung, daher gibt es keinen Transfer nach Artikel 44 und keine SCC oder TIA zu verwalten. Die gehostete DeepSeek API ist am riskantesten, da die Daten unter dem PIPL in China gespeichert werden. Die APIs von Claude und GPT-6 Luna haben ein mittleres Risiko: Sie benötigen einen Transfermechanismus (EU-US Data Privacy Framework oder SCC); eine reine EU-Verarbeitung ist über OpenAIs Projects mit EU-Datenresidenz oder über Claude auf Amazon Bedrock bzw. Google Vertex AI in EU-Regionen möglich, nicht jedoch über Anthropics eigene API.',
         bullets: [
           'Qwen lokal: Niedrigstes Risiko. Kein Transfer, Apache 2.0-Gewichte für Qwen3.8-27B, quantisiert etwa 16–24 GB VRAM.',
           'DeepSeek API: Höchstes Risiko. Daten in China gespeichert, PIPL-Rechtsordnung, kein EU-Angemessenheitsbeschluss.',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel LLM est le plus sûr selon le RGPD ?',
-        answer: 'Qwen3.8-27B ou Llama 4 Scout exécutés en local sur votre propre matériel : aucune donnée ne quitte votre juridiction, donc pas de transfert au sens de l\'article 44 et ni CCT ni TIA à gérer. L\'API hébergée de DeepSeek est la plus risquée, car les données sont stockées en Chine sous la PIPL. Les API Claude et GPT-5.6 Luna présentent un risque moyen : elles exigent un mécanisme de transfert (DPF ou CCT), et un traitement exclusivement dans l\'UE est possible via les Projets OpenAI à résidence des données européenne ou via Claude sur les régions UE d\'Amazon Bedrock / Google Vertex AI, mais pas via l\'API propre d\'Anthropic.',
+        answer: 'Qwen3.8-27B ou Llama 4 Scout exécutés en local sur votre propre matériel : aucune donnée ne quitte votre juridiction, donc pas de transfert au sens de l\'article 44 et ni CCT ni TIA à gérer. L\'API hébergée de DeepSeek est la plus risquée, car les données sont stockées en Chine sous la PIPL. Les API Claude et GPT-6 Luna présentent un risque moyen : elles exigent un mécanisme de transfert (DPF ou CCT), et un traitement exclusivement dans l\'UE est possible via les Projets OpenAI à résidence des données européenne ou via Claude sur les régions UE d\'Amazon Bedrock / Google Vertex AI, mais pas via l\'API propre d\'Anthropic.',
         bullets: [
           'Qwen local : risque le plus faible. Aucun transfert, poids Apache 2.0 pour Qwen3.8-27B, environ 16–24 Go de VRAM une fois quantifié.',
           'API DeepSeek : risque le plus élevé. Données stockées en Chine, juridiction PIPL, pas de décision d\'adéquation UE.',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: 'GDPRの下で最も安全なLLMは何ですか？',
-        answer: '自社ハードウェアでローカル実行するQwen3.8-27BまたはLlama 4 Scoutです。データが管轄の外に出ないため、第44条の移転は発生せず、SCCやTIAの管理も不要です。DeepSeekのホスト型APIは、データが中国でPIPLの下に保存されるため最もリスクが高くなります。ClaudeとGPT-5.6 LunaのAPIは中程度のリスクで、移転手段（EU-米国データプライバシーフレームワークまたはSCC）が必要です。EU内のみでの処理は、OpenAIのEUデータレジデンシー対応ProjectやAmazon Bedrock / Google Vertex AIのEUリージョン経由のClaudeで可能ですが、Anthropic自身のAPIでは利用できません。',
+        answer: '自社ハードウェアでローカル実行するQwen3.8-27BまたはLlama 4 Scoutです。データが管轄の外に出ないため、第44条の移転は発生せず、SCCやTIAの管理も不要です。DeepSeekのホスト型APIは、データが中国でPIPLの下に保存されるため最もリスクが高くなります。ClaudeとGPT-6 LunaのAPIは中程度のリスクで、移転手段（EU-米国データプライバシーフレームワークまたはSCC）が必要です。EU内のみでの処理は、OpenAIのEUデータレジデンシー対応ProjectやAmazon Bedrock / Google Vertex AIのEUリージョン経由のClaudeで可能ですが、Anthropic自身のAPIでは利用できません。',
         bullets: [
           'Qwenローカル：最低リスク。移転なし。Qwen3.8-27BのウェイトはApache 2.0で、量子化時のVRAMは約16〜24 GBです。',
           'DeepSeek API：最高リスク。データは中国に保存され、PIPLの管轄下にあり、EUの十分性認定もありません。',
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '在GDPR下哪个LLM最安全？',
-        answer: '在自有硬件上本地运行Qwen3.8-27B或Llama 4 Scout：数据不会离开您所在的司法辖区，因此不存在第44条意义上的转移，也无需管理SCC或TIA。DeepSeek托管API风险最高，因为数据存储在中国并受PIPL约束。Claude和GPT-5.6 Luna API属于中等风险：需要转移机制（欧美数据隐私框架（DPF）或SCC）；仅在欧盟境内处理可通过OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock / Google Vertex AI欧盟区域使用Claude实现，Anthropic自家API不提供此选项。',
+        answer: '在自有硬件上本地运行Qwen3.8-27B或Llama 4 Scout：数据不会离开您所在的司法辖区，因此不存在第44条意义上的转移，也无需管理SCC或TIA。DeepSeek托管API风险最高，因为数据存储在中国并受PIPL约束。Claude和GPT-6 Luna API属于中等风险：需要转移机制（欧美数据隐私框架（DPF）或SCC）；仅在欧盟境内处理可通过OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock / Google Vertex AI欧盟区域使用Claude实现，Anthropic自家API不提供此选项。',
         bullets: [
           '本地Qwen：风险最低。无转移，Qwen3.8-27B权重采用Apache 2.0许可，量化后约需16–24 GB VRAM。',
           'DeepSeek API：风险最高。数据存储在中国，受PIPL管辖，无欧盟充分性认定。',
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'DeepSeek\'s hosted API is highest-risk: data is stored in mainland China under PIPL, the EU has no adequacy decision for China, and the privacy policy allows disclosure to authorities where legally required; Italy\'s Garante restricted it and Berlin\'s regulator asked Apple and Google to review the app',
           'Qwen3.8-27B (Apache 2.0) and Llama 4 Scout run locally are lowest-risk: no Article 44 transfer, no SCC required, data stays on your hardware; Llama 4 Scout needs roughly 55–60 GB at 4-bit, Qwen3.8-27B fits a 24 GB GPU when quantized',
-          'Claude API and GPT-5.6 Luna are medium-risk: US vendors need the EU-US Data Privacy Framework or SCCs plus a Transfer Impact Assessment; Anthropic\'s own API offers only global or US inference, while OpenAI offers EU data residency for new Projects',
+          'Claude API and GPT-6 Luna are medium-risk: US vendors need the EU-US Data Privacy Framework or SCCs plus a Transfer Impact Assessment; Anthropic\'s own API offers only global or US inference, while OpenAI offers EU data residency for new Projects',
           'Recommended stacks: startups (Claude or OpenAI API under a DPA), data-sensitive organizations (Qwen3.8-27B on one 24 GB GPU), enterprises (multi-GPU local models, air-gapped)',
           'The risk matrix covers five vectors: data residency, training-data jurisdiction, ToS data retention, transfer-mechanism requirement, and overall risk level',
         ],
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Deployment: 'DeepSeek API', 'Data Residency': 'China (PRC servers)', 'Training-Data Jurisdiction': 'China (PIPL)', 'ToS Retention Risk': 'Policy allows sharing with authorities', 'SCC / TIA Required?': 'No adequacy; SCC + TIA unlikely to hold', 'Overall Risk Level': '🔴 Highest' },
           { Deployment: 'Claude API (first-party)', 'Data Residency': 'US or global; no EU-only option', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'Per Anthropic DPA; verify retention', 'SCC / TIA Required?': 'DPF or SCC (in DPA) + TIA', 'Overall Risk Level': '🟠 Medium-High' },
           { Deployment: 'Claude on Bedrock / Vertex AI EU', 'Data Residency': 'EU region (set by endpoint)', 'Training-Data Jurisdiction': 'US vendor, EU processing', 'ToS Retention Risk': 'Cloud provider terms apply', 'SCC / TIA Required?': 'Depends on contract; assess TIA', 'Overall Risk Level': '🟡 Medium' },
-          { Deployment: 'GPT-5.6 Luna API (default)', 'Data Residency': 'US (default project)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'DPA available; per API terms', 'SCC / TIA Required?': 'DPF or SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
+          { Deployment: 'GPT-6 Luna API (default)', 'Data Residency': 'US (default project)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'DPA available; per API terms', 'SCC / TIA Required?': 'DPF or SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
           { Deployment: 'OpenAI API (EU Project)', 'Data Residency': 'EU, handled in-region', 'Training-Data Jurisdiction': 'US vendor, EU processing', 'ToS Retention Risk': 'Zero data retention in-region', 'SCC / TIA Required?': 'Reduced; confirm in your DPA', 'Overall Risk Level': '🟡 Medium' },
           { Deployment: 'Llama 4 Scout (local)', 'Data Residency': 'Your hardware (LAN)', 'Training-Data Jurisdiction': 'Open weights, no vendor retention', 'ToS Retention Risk': 'You control retention via local logs', 'SCC / TIA Required?': 'No', 'Overall Risk Level': '🟢 Lowest' },
           { Deployment: 'Qwen3.8-27B (local)', 'Data Residency': 'Your hardware (LAN)', 'Training-Data Jurisdiction': 'Open weights (Apache 2.0)', 'ToS Retention Risk': 'You control retention via local logs', 'SCC / TIA Required?': 'No', 'Overall Risk Level': '🟢 Lowest' },
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Anthropic\'s DPA incorporates SCCs and names Anthropic as processor, so the Claude API can be used under GDPR with a documented transfer mechanism and Transfer Impact Assessment. Anthropic\'s first-party API offers only two inference geographies, global (default) and US; there is no EU-only option, and workspace data at rest is currently US-only ([Anthropic data residency documentation](https://platform.claude.com/docs/en/manage-claude/data-residency)). Organizations that need EU-only processing can use Claude through Amazon Bedrock or Google Vertex AI with an EU region, where the cloud provider\'s contract and endpoint choice determine residency. For high-sensitivity data (health, financial, biometric), local deployment remains the safer option.',
           },
           {
-            title: 'GPT-5.6 Luna API — Medium risk, lower with an EU Project',
+            title: 'GPT-6 Luna API — Medium risk, lower with an EU Project',
             text: 'OpenAI offers a Data Processing Addendum and, for eligible API customers, European data residency: a new Project created with Europe as the region is handled in-region with zero data retention ([OpenAI announcement](https://openai.com/index/introducing-data-residency-in-europe/)). Existing Projects cannot be converted, so migrate by creating a new Project. Without an EU Project, requests default to US processing and need the EU-US Data Privacy Framework or SCCs plus a Transfer Impact Assessment. Either way, avoid sending health, financial, biometric or genetic data unless your DPA, legal basis and risk assessment cover it.',
           },
           {
@@ -256,8 +256,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
     primaryTerm: 'comparación de riesgo RGPD modelos LLM',
-    leadAnswerBlock: '**La API alojada de DeepSeek presenta el mayor riesgo RGPD de las opciones comparadas: sus datos se almacenan en China continental, donde la PIPL otorga a las autoridades un acceso amplio, y la UE no tiene decisión de adecuación para China. Qwen3.8-27B y Llama 4 Scout ejecutados localmente tienen el menor riesgo porque ningún dato personal sale de tu infraestructura. Las API de Claude y OpenAI GPT-5.6 Luna se sitúan en el punto medio: requieren un mecanismo de transferencia válido (Marco de Privacidad de Datos UE-EE. UU. o Cláusulas Contractuales Estándar) y, para una residencia estrictamente en la UE, una ruta con región de la UE, como los Proyectos con residencia de datos en la UE de OpenAI o Claude a través de Amazon Bedrock o de las regiones de la UE de Google Vertex AI.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**La API alojada de DeepSeek presenta el mayor riesgo RGPD de las opciones comparadas: sus datos se almacenan en China continental, donde la PIPL otorga a las autoridades un acceso amplio, y la UE no tiene decisión de adecuación para China. Qwen3.8-27B y Llama 4 Scout ejecutados localmente tienen el menor riesgo porque ningún dato personal sale de tu infraestructura. Las API de Claude y OpenAI GPT-6 Luna se sitúan en el punto medio: requieren un mecanismo de transferencia válido (Marco de Privacidad de Datos UE-EE. UU. o Cláusulas Contractuales Estándar) y, para una residencia estrictamente en la UE, una ruta con región de la UE, como los Proyectos con residencia de datos en la UE de OpenAI o Claude a través de Amazon Bedrock o de las regiones de la UE de Google Vertex AI.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'Cuatro vectores de riesgo RGPD para LLMs', anchor: 'risk-vectors' },
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'La API alojada de DeepSeek es la de mayor riesgo: los datos se almacenan en China continental bajo la PIPL, la UE no tiene decisión de adecuación para China y la política de privacidad permite la divulgación a las autoridades cuando la ley lo exija; la autoridad italiana (Garante) la restringió y el regulador de Berlín pidió a Apple y Google que revisaran la app',
           'Qwen3.8-27B (Apache 2.0) y Llama 4 Scout ejecutados localmente son los de menor riesgo: sin transferencia según el Artículo 44, sin SCC requerida, los datos permanecen en tu hardware; Llama 4 Scout necesita unos 55–60 GB a 4 bits, Qwen3.8-27B cabe en una GPU de 24 GB cuantizado',
-          'La API de Claude y GPT-5.6 Luna tienen riesgo medio: los proveedores estadounidenses requieren el Marco de Privacidad de Datos UE-EE. UU. o SCCs más una Evaluación de Impacto de Transferencia; la API propia de Anthropic ofrece solo inferencia global o en EE. UU., mientras que OpenAI ofrece residencia de datos en la UE para Proyectos nuevos',
+          'La API de Claude y GPT-6 Luna tienen riesgo medio: los proveedores estadounidenses requieren el Marco de Privacidad de Datos UE-EE. UU. o SCCs más una Evaluación de Impacto de Transferencia; la API propia de Anthropic ofrece solo inferencia global o en EE. UU., mientras que OpenAI ofrece residencia de datos en la UE para Proyectos nuevos',
           'Stacks recomendados: startups (API de Claude u OpenAI con un DPA), organizaciones con datos sensibles (Qwen3.8-27B en una GPU de 24 GB), empresas (modelos locales multi-GPU, air-gap)',
           'La matriz de riesgo cubre cinco vectores: residencia de datos, jurisdicción de datos de entrenamiento, retención de datos en ToS, requisito de mecanismo de transferencia y nivel de riesgo global',
         ],
@@ -314,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Despliegue: 'DeepSeek API', 'Residencia de datos': 'China (servidores en la RPC)', 'Jurisdicción de datos de entrenamiento': 'China (PIPL)', 'Riesgo de retención en ToS': 'La política permite compartir con las autoridades', '¿SCC / TIA requerida?': 'Sin adecuación; SCC + TIA improbable', 'Nivel de riesgo global': '🔴 Mayor' },
           { Despliegue: 'Claude API (directa)', 'Residencia de datos': 'EE. UU. o global; sin opción solo UE', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'Según DPA de Anthropic; verifica la retención', '¿SCC / TIA requerida?': 'DPF o SCC (en DPA) + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
           { Despliegue: 'Claude en Bedrock / Vertex AI UE', 'Residencia de datos': 'Región UE (según el endpoint)', 'Jurisdicción de datos de entrenamiento': 'Proveedor de EE. UU., procesamiento en la UE', 'Riesgo de retención en ToS': 'Rigen los términos del proveedor cloud', '¿SCC / TIA requerida?': 'Según contrato; evalúa la TIA', 'Nivel de riesgo global': '🟡 Medio' },
-          { Despliegue: 'GPT-5.6 Luna API (por defecto)', 'Residencia de datos': 'EE. UU. (proyecto por defecto)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'DPA disponible; según términos de la API', '¿SCC / TIA requerida?': 'DPF o SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
+          { Despliegue: 'GPT-6 Luna API (por defecto)', 'Residencia de datos': 'EE. UU. (proyecto por defecto)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'DPA disponible; según términos de la API', '¿SCC / TIA requerida?': 'DPF o SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
           { Despliegue: 'OpenAI API (Proyecto UE)', 'Residencia de datos': 'UE, procesado en la región', 'Jurisdicción de datos de entrenamiento': 'Proveedor de EE. UU., procesamiento en la UE', 'Riesgo de retención en ToS': 'Cero retención de datos en la región', '¿SCC / TIA requerida?': 'Reducida; confírmalo en tu DPA', 'Nivel de riesgo global': '🟡 Medio' },
           { Despliegue: 'Llama 4 Scout (local)', 'Residencia de datos': 'Tu hardware (LAN)', 'Jurisdicción de datos de entrenamiento': 'Pesos abiertos, sin retención del proveedor', 'Riesgo de retención en ToS': 'Tú controlas la retención con logs locales', '¿SCC / TIA requerida?': 'No', 'Nivel de riesgo global': '🟢 Menor' },
           { Despliegue: 'Qwen3.8-27B (local)', 'Residencia de datos': 'Tu hardware (LAN)', 'Jurisdicción de datos de entrenamiento': 'Pesos abiertos (Apache 2.0)', 'Riesgo de retención en ToS': 'Tú controlas la retención con logs locales', '¿SCC / TIA requerida?': 'No', 'Nivel de riesgo global': '🟢 Menor' },
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El DPA de Anthropic incorpora SCCs y designa a Anthropic como encargado del tratamiento, por lo que la API de Claude puede usarse conforme al RGPD con un mecanismo de transferencia documentado y una Evaluación de Impacto de Transferencia. La API propia de Anthropic ofrece solo dos geografías de inferencia, global (por defecto) y EE. UU.; no hay opción solo UE, y los datos del workspace en reposo son actualmente solo de EE. UU. ([documentación de residencia de datos de Anthropic](https://platform.claude.com/docs/en/manage-claude/data-residency)). Las organizaciones que necesiten procesamiento solo en la UE pueden usar Claude a través de Amazon Bedrock o Google Vertex AI con una región de la UE, donde el contrato del proveedor cloud y la elección del endpoint determinan la residencia. Para datos de alta sensibilidad (salud, financieros, biométricos), el despliegue local sigue siendo la opción más segura.',
           },
           {
-            title: 'GPT-5.6 Luna API — Riesgo medio, menor con un Proyecto UE',
+            title: 'GPT-6 Luna API — Riesgo medio, menor con un Proyecto UE',
             text: 'OpenAI ofrece un Anexo de Procesamiento de Datos (DPA) y, para los clientes de API elegibles, residencia de datos europea: un Proyecto nuevo creado con Europa como región se procesa en la región con cero retención de datos ([anuncio de OpenAI](https://openai.com/index/introducing-data-residency-in-europe/)). Los Proyectos existentes no se pueden convertir, así que migra creando un Proyecto nuevo. Sin un Proyecto UE, las solicitudes se procesan por defecto en EE. UU. y requieren el Marco de Privacidad de Datos UE-EE. UU. o SCCs más una Evaluación de Impacto de Transferencia. En cualquier caso, evita enviar datos de salud, financieros, biométricos o genéticos salvo que tu DPA, tu base legal y tu evaluación de riesgos los cubran.',
           },
           {
@@ -456,8 +456,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'مديرو أمن المعلومات وفرق المشتريات ومسؤولو الامتثال الذين يختارون بين نماذج LLM الاحتكارية ومفتوحة الأوزان',
     primaryTerm: 'مقارنة مخاطر GDPR لنماذج LLM',
-    leadAnswerBlock: '**تمثل واجهة DeepSeek API المستضافة أعلى مخاطر GDPR بين الخيارات المقارنة هنا: فبياناتها مخزّنة في الصين القارية حيث يمنح PIPL السلطات صلاحيات وصول واسعة، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين. أما نموذجا Qwen3.8-27B وLlama 4 Scout المشغّلان محليًا فمخاطرهما الأدنى لأن أي بيانات شخصية لا تغادر بنيتك التحتية. وتقع واجهتا Claude وGPT-5.6 Luna في الوسط: فهما تتطلبان آلية نقل صالحة (إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو البنود التعاقدية القياسية)، وللإقامة الصارمة في الاتحاد الأوروبي تلزم جهة معالجة في منطقة أوروبية، مثل مشاريع OpenAI لإقامة البيانات في الاتحاد الأوروبي أو Claude عبر Amazon Bedrock أو مناطق Google Vertex AI في الاتحاد الأوروبي.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**تمثل واجهة DeepSeek API المستضافة أعلى مخاطر GDPR بين الخيارات المقارنة هنا: فبياناتها مخزّنة في الصين القارية حيث يمنح PIPL السلطات صلاحيات وصول واسعة، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين. أما نموذجا Qwen3.8-27B وLlama 4 Scout المشغّلان محليًا فمخاطرهما الأدنى لأن أي بيانات شخصية لا تغادر بنيتك التحتية. وتقع واجهتا Claude وGPT-6 Luna في الوسط: فهما تتطلبان آلية نقل صالحة (إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو البنود التعاقدية القياسية)، وللإقامة الصارمة في الاتحاد الأوروبي تلزم جهة معالجة في منطقة أوروبية، مثل مشاريع OpenAI لإقامة البيانات في الاتحاد الأوروبي أو Claude عبر Amazon Bedrock أو مناطق Google Vertex AI في الاتحاد الأوروبي.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'أربعة متجهات مخاطر GDPR لنماذج LLM', anchor: 'risk-vectors' },
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'واجهة DeepSeek API المستضافة هي الأعلى مخاطرة: البيانات مخزّنة في الصين القارية وفق PIPL، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين، وتتيح سياسة الخصوصية الإفصاح للسلطات عند اشتراط القانون ذلك؛ وقد قيّدتها هيئة Garante الإيطالية، وطلبت الجهة الرقابية في برلين من Apple وGoogle مراجعة التطبيق',
           'نموذجا Qwen3.8-27B (بترخيص Apache 2.0) وLlama 4 Scout المشغّلان محليًا هما الأقل مخاطرة: لا نقل بموجب المادة 44، ولا حاجة لـ SCC، وتبقى البيانات على أجهزتك؛ ويحتاج Llama 4 Scout نحو 55–60 GB عند 4-bit، بينما يناسب Qwen3.8-27B بطاقة GPU بسعة 24 GB عند التكميم',
-          'واجهتا Claude وGPT-5.6 Luna متوسطتا المخاطر: يحتاج المزوّدون الأمريكيون إلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو SCC إضافةً إلى تقييم أثر النقل (TIA)؛ وتوفر واجهة Anthropic نفسها استدلالًا عالميًا أو أمريكيًا فقط، بينما تقدم OpenAI إقامة بيانات في الاتحاد الأوروبي للمشاريع الجديدة',
+          'واجهتا Claude وGPT-6 Luna متوسطتا المخاطر: يحتاج المزوّدون الأمريكيون إلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو SCC إضافةً إلى تقييم أثر النقل (TIA)؛ وتوفر واجهة Anthropic نفسها استدلالًا عالميًا أو أمريكيًا فقط، بينما تقدم OpenAI إقامة بيانات في الاتحاد الأوروبي للمشاريع الجديدة',
           'الحزم الموصى بها: الشركات الناشئة (واجهة Claude أو OpenAI بموجب DPA)، والمؤسسات ذات البيانات الحساسة (نموذج Qwen3.8-27B على GPU واحدة بسعة 24 GB)، والشركات الكبرى (نماذج محلية متعددة الـ GPU ومعزولة شبكيًا)',
           'تغطي مصفوفة المخاطر خمسة متجهات: إقامة البيانات، والولاية القضائية لبيانات التدريب، والاحتفاظ بالبيانات في شروط الخدمة، واشتراط آلية النقل، ومستوى المخاطر الإجمالي',
         ],
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النشر': 'DeepSeek API', 'إقامة البيانات': 'الصين (خوادم في البر الرئيسي)', 'الولاية القضائية لبيانات التدريب': 'الصين (PIPL)', 'مخاطر الاحتفاظ في شروط الخدمة': 'السياسة تتيح المشاركة مع السلطات', 'هل SCC / TIA مطلوبة؟': 'لا كفاية؛ نجاح SCC + TIA مستبعد', 'مستوى المخاطر الإجمالي': '🔴 الأعلى' },
           { 'النشر': 'واجهة Claude API (من المزوّد مباشرة)', 'إقامة البيانات': 'الولايات المتحدة أو عالمي؛ لا خيار أوروبي فقط', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'وفق DPA لدى Anthropic؛ تحقق من الاحتفاظ', 'هل SCC / TIA مطلوبة؟': 'DPF أو SCC (ضمن DPA) + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
           { 'النشر': 'Claude عبر Bedrock / Vertex AI في الاتحاد الأوروبي', 'إقامة البيانات': 'منطقة الاتحاد الأوروبي (تحددها نقطة الاتصال)', 'الولاية القضائية لبيانات التدريب': 'مزوّد أمريكي، معالجة في الاتحاد', 'مخاطر الاحتفاظ في شروط الخدمة': 'تسري شروط مزوّد السحابة', 'هل SCC / TIA مطلوبة؟': 'يتوقف على العقد؛ قيّم TIA', 'مستوى المخاطر الإجمالي': '🟡 متوسط' },
-          { 'النشر': 'واجهة GPT-5.6 Luna API (الافتراضي)', 'إقامة البيانات': 'الولايات المتحدة (المشروع الافتراضي)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'DPA متاحة؛ وفق شروط API', 'هل SCC / TIA مطلوبة؟': 'DPF أو SCC + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
+          { 'النشر': 'واجهة GPT-6 Luna API (الافتراضي)', 'إقامة البيانات': 'الولايات المتحدة (المشروع الافتراضي)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'DPA متاحة؛ وفق شروط API', 'هل SCC / TIA مطلوبة؟': 'DPF أو SCC + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
           { 'النشر': 'واجهة OpenAI API (مشروع الاتحاد الأوروبي)', 'إقامة البيانات': 'الاتحاد الأوروبي، معالجة داخل المنطقة', 'الولاية القضائية لبيانات التدريب': 'مزوّد أمريكي، معالجة في الاتحاد', 'مخاطر الاحتفاظ في شروط الخدمة': 'عدم احتفاظ بالبيانات داخل المنطقة', 'هل SCC / TIA مطلوبة؟': 'مخفّفة؛ تأكد في DPA الخاصة بك', 'مستوى المخاطر الإجمالي': '🟡 متوسط' },
           { 'النشر': 'Llama 4 Scout (محلي)', 'إقامة البيانات': 'أجهزتك (LAN)', 'الولاية القضائية لبيانات التدريب': 'أوزان مفتوحة، لا احتفاظ لدى مزوّد', 'مخاطر الاحتفاظ في شروط الخدمة': 'تتحكم بالاحتفاظ عبر السجلات المحلية', 'هل SCC / TIA مطلوبة؟': 'لا', 'مستوى المخاطر الإجمالي': '🟢 الأدنى' },
           { 'النشر': 'Qwen3.8-27B (محلي)', 'إقامة البيانات': 'أجهزتك (LAN)', 'الولاية القضائية لبيانات التدريب': 'أوزان مفتوحة (Apache 2.0)', 'مخاطر الاحتفاظ في شروط الخدمة': 'تتحكم بالاحتفاظ عبر السجلات المحلية', 'هل SCC / TIA مطلوبة؟': 'لا', 'مستوى المخاطر الإجمالي': '🟢 الأدنى' },
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'تتضمن DPA لدى Anthropic بنود SCC وتسمّي Anthropic جهة معالجة، لذا يمكن استخدام واجهة Claude API وفق GDPR بآلية نقل موثقة وتقييم أثر نقل. وتوفر واجهة Anthropic المباشرة منطقتي استدلال فقط: عالمية (الافتراضية) وأمريكية؛ ولا يوجد خيار للاتحاد الأوروبي فقط، كما أن بيانات مساحة العمل في حالة السكون أمريكية حاليًا فقط ([وثائق Anthropic حول إقامة البيانات](https://platform.claude.com/docs/en/manage-claude/data-residency)). ويمكن للمؤسسات التي تحتاج إلى معالجة داخل الاتحاد الأوروبي فقط استخدام Claude عبر Amazon Bedrock أو Google Vertex AI بمنطقة أوروبية، حيث يحدد عقد مزوّد السحابة واختيار نقطة الاتصال مكان الإقامة. وللبيانات عالية الحساسية (الصحية والمالية والحيوية) يبقى النشر المحلي الخيار الأكثر أمانًا.',
           },
           {
-            title: 'واجهة GPT-5.6 Luna API — مخاطرة متوسطة، وأقل مع مشروع أوروبي',
+            title: 'واجهة GPT-6 Luna API — مخاطرة متوسطة، وأقل مع مشروع أوروبي',
             text: 'تقدم OpenAI ملحق معالجة البيانات (DPA) وإقامة بيانات أوروبية لعملاء API المؤهلين: فالمشروع الجديد الذي يُنشأ بأوروبا منطقةً له يُعالج داخل المنطقة دون أي احتفاظ بالبيانات ([إعلان OpenAI](https://openai.com/index/introducing-data-residency-in-europe/)). ولا يمكن تحويل المشاريع القائمة، لذا يتم الانتقال بإنشاء مشروع جديد. وبدون مشروع أوروبي تُعالج الطلبات افتراضيًا في الولايات المتحدة وتتطلب إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو SCC إضافةً إلى تقييم أثر نقل. وفي الحالتين تجنّب إرسال البيانات الصحية أو المالية أو الحيوية أو الجينية ما لم تغطها DPA الخاصة بك وأساسك القانوني وتقييم المخاطر.',
           },
           {
@@ -656,8 +656,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'CISOs, Beschaffungsteams und Compliance-Beauftragte, die zwischen proprietären und offenen LLMs wählen',
     primaryTerm: 'DSGVO-Risikovergleich LLM-Modelle',
-    leadAnswerBlock: '**Die gehostete DeepSeek API birgt unter den hier verglichenen Optionen das höchste DSGVO-Risiko: Die Daten werden auf dem chinesischen Festland gespeichert, wo das PIPL den Behörden weitreichenden Zugriff einräumt, und für China gibt es keinen EU-Angemessenheitsbeschluss. Lokal betriebene Modelle wie Qwen3.8-27B und Llama 4 Scout tragen das niedrigste Risiko, weil keine personenbezogenen Daten Ihre Infrastruktur verlassen. Die APIs von Claude und OpenAI GPT-5.6 Luna liegen im Mittelfeld: Sie benötigen einen gültigen Transfermechanismus (EU-US Data Privacy Framework oder Standardvertragsklauseln) und, für strikte EU-Datenhaltung, eine EU-Region-Route wie OpenAIs Projects mit EU-Datenresidenz oder Claude über Amazon Bedrock bzw. Google Vertex AI in EU-Regionen.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**Die gehostete DeepSeek API birgt unter den hier verglichenen Optionen das höchste DSGVO-Risiko: Die Daten werden auf dem chinesischen Festland gespeichert, wo das PIPL den Behörden weitreichenden Zugriff einräumt, und für China gibt es keinen EU-Angemessenheitsbeschluss. Lokal betriebene Modelle wie Qwen3.8-27B und Llama 4 Scout tragen das niedrigste Risiko, weil keine personenbezogenen Daten Ihre Infrastruktur verlassen. Die APIs von Claude und OpenAI GPT-6 Luna liegen im Mittelfeld: Sie benötigen einen gültigen Transfermechanismus (EU-US Data Privacy Framework oder Standardvertragsklauseln) und, für strikte EU-Datenhaltung, eine EU-Region-Route wie OpenAIs Projects mit EU-Datenresidenz oder Claude über Amazon Bedrock bzw. Google Vertex AI in EU-Regionen.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'Multi-GPU'],
     toc: [
       { label: 'Vier DSGVO-Risikovektoren für LLMs', anchor: 'risk-vectors' },
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Die gehostete DeepSeek API hat das höchste Risiko: Die Daten werden auf dem chinesischen Festland unter dem PIPL gespeichert, für China gibt es keinen EU-Angemessenheitsbeschluss, und die Datenschutzrichtlinie erlaubt die Weitergabe an Behörden, wo gesetzlich vorgeschrieben; Italiens Garante hat sie eingeschränkt, und die Berliner Aufsichtsbehörde hat Apple und Google um Prüfung der App gebeten',
           'Lokal betriebene Modelle wie Qwen3.8-27B (Apache 2.0) und Llama 4 Scout haben das niedrigste Risiko: kein Transfer nach Artikel 44, keine SCC erforderlich, die Daten bleiben auf Ihrer Hardware; Llama 4 Scout benötigt bei 4-Bit etwa 55–60 GB, Qwen3.8-27B passt quantisiert auf eine 24-GB-GPU',
-          'Claude API und GPT-5.6 Luna haben ein mittleres Risiko: US-Anbieter benötigen das EU-US Data Privacy Framework oder SCC plus eine Transfer Impact Assessment; Anthropics eigene API bietet nur globale oder US-Inferenz, während OpenAI für neue Projects EU-Datenresidenz anbietet',
+          'Claude API und GPT-6 Luna haben ein mittleres Risiko: US-Anbieter benötigen das EU-US Data Privacy Framework oder SCC plus eine Transfer Impact Assessment; Anthropics eigene API bietet nur globale oder US-Inferenz, während OpenAI für neue Projects EU-Datenresidenz anbietet',
           'Empfohlene Stacks: Startups (Claude- oder OpenAI-API mit DPA), datensensible Organisationen (Qwen3.8-27B auf einer 24-GB-GPU), Unternehmen (lokale Modelle auf mehreren GPUs, Air-Gap)',
           'Die Risikomatrix deckt fünf Vektoren ab: Datenspeicherung, Gerichtsbarkeit der Trainingsdaten, ToS-Datenspeicherung, Transfermechanismus-Anforderung und Gesamtrisiko',
         ],
@@ -714,7 +714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Bereitstellung: 'DeepSeek API', Datenspeicherung: 'China (PRC-Server)', 'Ausbildungsdaten-Gerichtsbarkeit': 'China (PIPL)', 'ToS-Speicherrisiko': 'Richtlinie erlaubt Weitergabe an Behörden', 'SVK/TIA erforderlich?': 'Keine Angemessenheit; SCC + TIA kaum tragfähig', Gesamtrisiko: '🔴 Höchstes' },
           { Bereitstellung: 'Claude API (Erstanbieter)', Datenspeicherung: 'USA oder global; keine reine EU-Option', 'Ausbildungsdaten-Gerichtsbarkeit': 'USA', 'ToS-Speicherrisiko': 'Laut Anthropic-DPA; Speicherdauer prüfen', 'SVK/TIA erforderlich?': 'DPF oder SCC (im DPA) + TIA', Gesamtrisiko: '🟠 Mittel-Hoch' },
           { Bereitstellung: 'Claude über Bedrock / Vertex AI EU', Datenspeicherung: 'EU-Region (per Endpunkt festgelegt)', 'Ausbildungsdaten-Gerichtsbarkeit': 'US-Anbieter, EU-Verarbeitung', 'ToS-Speicherrisiko': 'Bedingungen des Cloud-Anbieters gelten', 'SVK/TIA erforderlich?': 'Vertragsabhängig; TIA prüfen', Gesamtrisiko: '🟡 Mittel' },
-          { Bereitstellung: 'GPT-5.6 Luna API (Standard)', Datenspeicherung: 'USA (Standard-Projekt)', 'Ausbildungsdaten-Gerichtsbarkeit': 'USA', 'ToS-Speicherrisiko': 'DPA verfügbar; laut API-Bedingungen', 'SVK/TIA erforderlich?': 'DPF oder SCC + TIA', Gesamtrisiko: '🟠 Mittel-Hoch' },
+          { Bereitstellung: 'GPT-6 Luna API (Standard)', Datenspeicherung: 'USA (Standard-Projekt)', 'Ausbildungsdaten-Gerichtsbarkeit': 'USA', 'ToS-Speicherrisiko': 'DPA verfügbar; laut API-Bedingungen', 'SVK/TIA erforderlich?': 'DPF oder SCC + TIA', Gesamtrisiko: '🟠 Mittel-Hoch' },
           { Bereitstellung: 'OpenAI API (EU-Projekt)', Datenspeicherung: 'EU, Verarbeitung in der Region', 'Ausbildungsdaten-Gerichtsbarkeit': 'US-Anbieter, EU-Verarbeitung', 'ToS-Speicherrisiko': 'Zero Data Retention in der Region', 'SVK/TIA erforderlich?': 'Reduziert; im DPA bestätigen lassen', Gesamtrisiko: '🟡 Mittel' },
           { Bereitstellung: 'Llama 4 Scout (lokal)', Datenspeicherung: 'Ihre Hardware (LAN)', 'Ausbildungsdaten-Gerichtsbarkeit': 'Offene Gewichte, keine Anbieter-Speicherung', 'ToS-Speicherrisiko': 'Speicherung per lokalen Logs unter Ihrer Kontrolle', 'SVK/TIA erforderlich?': 'Nein', Gesamtrisiko: '🟢 Niedrigstes' },
           { Bereitstellung: 'Qwen3.8-27B (lokal)', Datenspeicherung: 'Ihre Hardware (LAN)', 'Ausbildungsdaten-Gerichtsbarkeit': 'Offene Gewichte (Apache 2.0)', 'ToS-Speicherrisiko': 'Speicherung per lokalen Logs unter Ihrer Kontrolle', 'SVK/TIA erforderlich?': 'Nein', Gesamtrisiko: '🟢 Niedrigstes' },
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Anthropics DPA bezieht SCC ein und benennt Anthropic als Auftragsverarbeiter, sodass die Claude API unter der DSGVO mit einem dokumentierten Transfermechanismus und einer Transfer Impact Assessment genutzt werden kann. Anthropics eigene API bietet nur zwei Inferenz-Regionen, global (Standard) und USA; eine reine EU-Option gibt es nicht, und ruhende Daten im Workspace liegen derzeit ausschließlich in den USA ([Anthropic-Dokumentation zur Datenresidenz](https://platform.claude.com/docs/en/manage-claude/data-residency)). Organisationen, die eine reine EU-Verarbeitung benötigen, können Claude über Amazon Bedrock oder Google Vertex AI mit einer EU-Region nutzen; dort bestimmen der Vertrag des Cloud-Anbieters und die Endpunktwahl die Datenresidenz. Für hochsensible Daten (Gesundheit, Finanzen, Biometrie) bleibt die lokale Bereitstellung die sicherere Option.',
           },
           {
-            title: 'GPT-5.6 Luna API — Mittleres Risiko, niedriger mit EU-Projekt',
+            title: 'GPT-6 Luna API — Mittleres Risiko, niedriger mit EU-Projekt',
             text: 'OpenAI bietet einen Data Processing Addendum und für berechtigte API-Kunden europäische Datenresidenz: Ein neues Projekt, das mit Europa als Region angelegt wird, wird in der Region mit Zero Data Retention verarbeitet ([OpenAI-Ankündigung](https://openai.com/index/introducing-data-residency-in-europe/)). Bestehende Projekte lassen sich nicht umstellen, migrieren Sie daher durch Anlegen eines neuen Projekts. Ohne EU-Projekt werden Anfragen standardmäßig in den USA verarbeitet und erfordern das EU-US Data Privacy Framework oder SCC plus eine Transfer Impact Assessment. In beiden Fällen sollten Sie keine Gesundheits-, Finanz-, biometrischen oder genetischen Daten senden, sofern Ihr DPA, Ihre Rechtsgrundlage und Ihre Risikobewertung dies nicht abdecken.',
           },
           {
@@ -843,8 +843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'RSSI, équipes d\'achat et responsables de conformité choisissant entre LLM propriétaires et à poids ouverts',
     primaryTerm: 'comparaison des risques RGPD modèles LLM',
-    leadAnswerBlock: '**L\'API hébergée de DeepSeek présente le risque RGPD le plus élevé des options comparées ici : ses données sont stockées en Chine continentale, où la PIPL donne aux autorités un large accès, et l\'UE n\'a pas de décision d\'adéquation pour la Chine. Qwen3.8-27B et Llama 4 Scout exécutés en local portent le risque le plus faible, car aucune donnée personnelle ne quitte votre infrastructure. Les API Claude et OpenAI GPT-5.6 Luna se situent entre les deux : elles exigent un mécanisme de transfert valide (cadre de protection des données UE-États-Unis, DPF, ou clauses contractuelles types, CCT) et, pour une résidence stricte dans l\'UE, une voie en région UE comme les Projets OpenAI à résidence des données européenne, ou Claude via les régions UE d\'Amazon Bedrock ou de Google Vertex AI.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**L\'API hébergée de DeepSeek présente le risque RGPD le plus élevé des options comparées ici : ses données sont stockées en Chine continentale, où la PIPL donne aux autorités un large accès, et l\'UE n\'a pas de décision d\'adéquation pour la Chine. Qwen3.8-27B et Llama 4 Scout exécutés en local portent le risque le plus faible, car aucune donnée personnelle ne quitte votre infrastructure. Les API Claude et OpenAI GPT-6 Luna se situent entre les deux : elles exigent un mécanisme de transfert valide (cadre de protection des données UE-États-Unis, DPF, ou clauses contractuelles types, CCT) et, pour une résidence stricte dans l\'UE, une voie en région UE comme les Projets OpenAI à résidence des données européenne, ou Claude via les régions UE d\'Amazon Bedrock ou de Google Vertex AI.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 Go VRAM', '24 Go VRAM', 'multi-GPU'],
     toc: [
       { label: 'Quatre vecteurs de risque RGPD pour les LLM', anchor: 'risk-vectors' },
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'L\'API hébergée de DeepSeek est la plus risquée : les données sont stockées en Chine continentale sous la PIPL, l\'UE n\'a pas de décision d\'adéquation pour la Chine, et la politique de confidentialité autorise la divulgation aux autorités lorsque la loi l\'exige ; l\'autorité italienne (Garante) l\'a restreinte et l\'autorité de Berlin a demandé à Apple et Google d\'examiner l\'application',
           'Qwen3.8-27B (Apache 2.0) et Llama 4 Scout exécutés en local sont les moins risqués : pas de transfert au sens de l\'article 44, pas de CCT requises, les données restent sur votre matériel ; Llama 4 Scout demande environ 55–60 Go en 4 bits, Qwen3.8-27B tient sur un GPU de 24 Go une fois quantifié',
-          'L\'API Claude et GPT-5.6 Luna présentent un risque moyen : les fournisseurs américains exigent le DPF ou des CCT, plus une évaluation de l\'impact du transfert (TIA) ; l\'API propre d\'Anthropic n\'offre qu\'une inférence globale ou aux États-Unis, tandis qu\'OpenAI propose la résidence des données dans l\'UE pour les nouveaux Projets',
+          'L\'API Claude et GPT-6 Luna présentent un risque moyen : les fournisseurs américains exigent le DPF ou des CCT, plus une évaluation de l\'impact du transfert (TIA) ; l\'API propre d\'Anthropic n\'offre qu\'une inférence globale ou aux États-Unis, tandis qu\'OpenAI propose la résidence des données dans l\'UE pour les nouveaux Projets',
           'Piles recommandées : startups (API Claude ou OpenAI sous DPA), organisations sensibles aux données (Qwen3.8-27B sur un GPU de 24 Go), entreprises (modèles locaux multi-GPU, air-gap)',
           'La matrice de risque couvre cinq vecteurs : résidence des données, juridiction des données d\'entraînement, conservation des données selon les ToS, exigence de mécanisme de transfert et niveau de risque global',
         ],
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Déploiement: 'API DeepSeek', 'Résidence des données': 'Chine (serveurs en RPC)', 'Juridiction des données d\'entraînement': 'Chine (PIPL)', 'Risque de conservation ToS': 'Politique autorisant le partage avec les autorités', 'CCT/TIA requis ?': 'Pas d\'adéquation ; CCT + TIA peu probants', 'Niveau de risque global': '🔴 Le plus élevé' },
           { Déploiement: 'API Claude (directe)', 'Résidence des données': 'US ou global ; pas d\'option UE seule', 'Juridiction des données d\'entraînement': 'US', 'Risque de conservation ToS': 'Selon le DPA d\'Anthropic ; vérifier la conservation', 'CCT/TIA requis ?': 'DPF ou CCT (dans le DPA) + TIA', 'Niveau de risque global': '🟠 Moyen-Élevé' },
           { Déploiement: 'Claude sur Bedrock / Vertex AI UE', 'Résidence des données': 'Région UE (définie par le endpoint)', 'Juridiction des données d\'entraînement': 'Fournisseur US, traitement UE', 'Risque de conservation ToS': 'Conditions du fournisseur cloud applicables', 'CCT/TIA requis ?': 'Selon le contrat ; évaluer la TIA', 'Niveau de risque global': '🟡 Moyen' },
-          { Déploiement: 'API GPT-5.6 Luna (défaut)', 'Résidence des données': 'US (projet par défaut)', 'Juridiction des données d\'entraînement': 'US', 'Risque de conservation ToS': 'DPA disponible ; selon les conditions de l\'API', 'CCT/TIA requis ?': 'DPF ou CCT + TIA', 'Niveau de risque global': '🟠 Moyen-Élevé' },
+          { Déploiement: 'API GPT-6 Luna (défaut)', 'Résidence des données': 'US (projet par défaut)', 'Juridiction des données d\'entraînement': 'US', 'Risque de conservation ToS': 'DPA disponible ; selon les conditions de l\'API', 'CCT/TIA requis ?': 'DPF ou CCT + TIA', 'Niveau de risque global': '🟠 Moyen-Élevé' },
           { Déploiement: 'API OpenAI (Projet UE)', 'Résidence des données': 'UE, traitement dans la région', 'Juridiction des données d\'entraînement': 'Fournisseur US, traitement UE', 'Risque de conservation ToS': 'Zéro conservation des données dans la région', 'CCT/TIA requis ?': 'Réduite ; à confirmer dans votre DPA', 'Niveau de risque global': '🟡 Moyen' },
           { Déploiement: 'Llama 4 Scout (local)', 'Résidence des données': 'Votre matériel (LAN)', 'Juridiction des données d\'entraînement': 'Poids ouverts, pas de conservation fournisseur', 'Risque de conservation ToS': 'Vous contrôlez la conservation via les logs locaux', 'CCT/TIA requis ?': 'Non', 'Niveau de risque global': '🟢 Le plus faible' },
           { Déploiement: 'Qwen3.8-27B (local)', 'Résidence des données': 'Votre matériel (LAN)', 'Juridiction des données d\'entraînement': 'Poids ouverts (Apache 2.0)', 'Risque de conservation ToS': 'Vous contrôlez la conservation via les logs locaux', 'CCT/TIA requis ?': 'Non', 'Niveau de risque global': '🟢 Le plus faible' },
@@ -923,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Le DPA d\'Anthropic intègre des CCT et désigne Anthropic comme sous-traitant, de sorte que l\'API Claude peut être utilisée sous le RGPD avec un mécanisme de transfert documenté et une évaluation de l\'impact du transfert (TIA). L\'API directe d\'Anthropic ne propose que deux zones d\'inférence, globale (par défaut) et US ; il n\'existe pas d\'option UE seule, et les données de l\'espace de travail au repos sont actuellement exclusivement aux États-Unis ([documentation d\'Anthropic sur la résidence des données](https://platform.claude.com/docs/en/manage-claude/data-residency)). Les organisations qui ont besoin d\'un traitement exclusivement dans l\'UE peuvent utiliser Claude via Amazon Bedrock ou Google Vertex AI avec une région UE, où le contrat du fournisseur cloud et le choix du endpoint déterminent la résidence. Pour les données très sensibles (santé, finance, biométrie), le déploiement local reste l\'option la plus sûre.',
           },
           {
-            title: 'API GPT-5.6 Luna — Risque moyen, réduit avec un Projet UE',
+            title: 'API GPT-6 Luna — Risque moyen, réduit avec un Projet UE',
             text: 'OpenAI propose un addendum de traitement des données (DPA) et, pour les clients API éligibles, la résidence des données européenne : un nouveau Projet créé avec l\'Europe comme région est traité dans la région, avec zéro conservation des données ([annonce d\'OpenAI](https://openai.com/index/introducing-data-residency-in-europe/)). Les Projets existants ne peuvent pas être convertis ; il faut donc migrer en créant un nouveau Projet. Sans Projet UE, les requêtes sont traitées par défaut aux États-Unis et exigent le DPF ou des CCT, plus une évaluation de l\'impact du transfert (TIA). Dans les deux cas, évitez d\'envoyer des données de santé, financières, biométriques ou génétiques, sauf si votre DPA, votre base légale et votre analyse de risque les couvrent.',
           },
           {
@@ -1030,8 +1030,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'プロプライエタリLLMとオープンウェイトLLMの選択を検討するCISO、調達チーム、コンプライアンス担当者',
     primaryTerm: 'GDPRリスク比較 LLMモデル',
-    leadAnswerBlock: '**DeepSeekのホスト型APIは、ここで比較した選択肢の中でGDPRリスクが最も高くなります。データは中国本土に保存され、PIPLにより当局が広範にアクセスでき、EUは中国に対する十分性認定を出していないためです。Qwen3.8-27BとLlama 4 Scoutをローカルで実行する場合は、個人データがインフラの外に出ないため、リスクは最も低くなります。ClaudeとOpenAI GPT-5.6 LunaのAPIは中間に位置し、有効な移転手段（EU-米国データプライバシーフレームワーク、または標準契約条項）が必要です。厳格にEU内で処理したい場合は、OpenAIのEUデータレジデンシー対応Projectや、Amazon BedrockまたはGoogle Vertex AIのEUリージョン経由のClaudeなど、EUリージョンのルートを使います。**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**DeepSeekのホスト型APIは、ここで比較した選択肢の中でGDPRリスクが最も高くなります。データは中国本土に保存され、PIPLにより当局が広範にアクセスでき、EUは中国に対する十分性認定を出していないためです。Qwen3.8-27BとLlama 4 Scoutをローカルで実行する場合は、個人データがインフラの外に出ないため、リスクは最も低くなります。ClaudeとOpenAI GPT-6 LunaのAPIは中間に位置し、有効な移転手段（EU-米国データプライバシーフレームワーク、または標準契約条項）が必要です。厳格にEU内で処理したい場合は、OpenAIのEUデータレジデンシー対応Projectや、Amazon BedrockまたはGoogle Vertex AIのEUリージョン経由のClaudeなど、EUリージョンのルートを使います。**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'マルチGPU'],
     toc: [
       { label: 'LLMのためのGDPRリスクの4つのベクトル', anchor: 'risk-vectors' },
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'DeepSeekのホスト型APIは最高リスクです。データは中国本土にPIPLの下で保存され、EUの中国に対する十分性認定はなく、プライバシーポリシーは法的に求められた場合の当局への開示を認めています。イタリアのGaranteは処理を制限し、ベルリンの監督当局はAppleとGoogleにアプリの審査を求めました。',
           'ローカル実行のQwen3.8-27B（Apache 2.0）とLlama 4 Scoutは最低リスクです。第44条の移転もSCCも不要で、データは自社ハードウェアにとどまります。Llama 4 Scoutは4ビットで約55〜60 GB必要で、Qwen3.8-27Bは量子化すれば24 GBのGPUに収まります。',
-          'Claude APIとGPT-5.6 Lunaは中程度リスクです。米国ベンダーにはEU-米国データプライバシーフレームワークまたはSCCに加え、転送影響評価（TIA）が必要です。Anthropic自身のAPIはグローバルまたは米国での推論のみで、OpenAIは新規ProjectでEUデータレジデンシーを提供しています。',
+          'Claude APIとGPT-6 Lunaは中程度リスクです。米国ベンダーにはEU-米国データプライバシーフレームワークまたはSCCに加え、転送影響評価（TIA）が必要です。Anthropic自身のAPIはグローバルまたは米国での推論のみで、OpenAIは新規ProjectでEUデータレジデンシーを提供しています。',
           '推奨スタック：スタートアップ（DPAを結んだClaudeまたはOpenAI API）、データに敏感な組織（24 GBのGPU 1枚でQwen3.8-27B）、エンタープライズ（マルチGPUのローカルモデル、エアギャップ）',
           'リスク行列は5つのベクトルをカバーしています：データ拠点、トレーニングデータ管轄権、ToSデータ保持、移転手段の要否、総合リスクレベル',
         ],
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'デプロイメント': 'DeepSeek API', 'データ拠点': '中国（PRCのサーバー）', 'トレーニングデータ管轄権': '中国（PIPL）', ToS保持リスク: '当局への共有をポリシーが容認', 'SCC/TIA必要？': '十分性なし。SCC+TIAは成立困難', '総合リスクレベル': '🔴 最高' },
           { 'デプロイメント': 'Claude API（自社提供）', 'データ拠点': '米国またはグローバル。EU限定なし', 'トレーニングデータ管轄権': '米国', ToS保持リスク: 'AnthropicのDPAに準拠。保持は要確認', 'SCC/TIA必要？': 'DPFまたはSCC（DPA内）+TIA', '総合リスクレベル': '🟠 中〜高' },
           { 'デプロイメント': 'Claude（Bedrock / Vertex AI EU）', 'データ拠点': 'EUリージョン（エンドポイントで指定）', 'トレーニングデータ管轄権': '米国ベンダー、EU内で処理', ToS保持リスク: 'クラウド事業者の規約が適用', 'SCC/TIA必要？': '契約次第。TIAで評価', '総合リスクレベル': '🟡 中程度' },
-          { 'デプロイメント': 'GPT-5.6 Luna API（既定）', 'データ拠点': '米国（既定のProject）', 'トレーニングデータ管轄権': '米国', ToS保持リスク: 'DPAあり。API規約に準拠', 'SCC/TIA必要？': 'DPFまたはSCC+TIA', '総合リスクレベル': '🟠 中〜高' },
+          { 'デプロイメント': 'GPT-6 Luna API（既定）', 'データ拠点': '米国（既定のProject）', 'トレーニングデータ管轄権': '米国', ToS保持リスク: 'DPAあり。API規約に準拠', 'SCC/TIA必要？': 'DPFまたはSCC+TIA', '総合リスクレベル': '🟠 中〜高' },
           { 'デプロイメント': 'OpenAI API（EU Project）', 'データ拠点': 'EU、リージョン内で処理', 'トレーニングデータ管轄権': '米国ベンダー、EU内で処理', ToS保持リスク: 'リージョン内でデータ保持ゼロ', 'SCC/TIA必要？': '低減。自社のDPAで要確認', '総合リスクレベル': '🟡 中程度' },
           { 'デプロイメント': 'Llama 4 Scout（ローカル）', 'データ拠点': '自社ハードウェア（LAN）', 'トレーニングデータ管轄権': 'オープンウェイト、ベンダー保持なし', ToS保持リスク: 'ローカルログで保持を自己管理', 'SCC/TIA必要？': 'いいえ', '総合リスクレベル': '🟢 最低' },
           { 'デプロイメント': 'Qwen3.8-27B（ローカル）', 'データ拠点': '自社ハードウェア（LAN）', 'トレーニングデータ管轄権': 'オープンウェイト（Apache 2.0）', ToS保持リスク: 'ローカルログで保持を自己管理', 'SCC/TIA必要？': 'いいえ', '総合リスクレベル': '🟢 最低' },
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnthropicのDPAはSCCを組み込み、Anthropicを処理者と位置づけているため、文書化した移転手段と転送影響評価があれば、Claude APIはGDPRの下で利用できます。Anthropic自身のAPIが提供する推論地域は、グローバル（既定）と米国の2つだけで、EU限定のオプションはありません。保存時のワークスペースデータも現時点では米国のみです（[Anthropicのデータレジデンシーに関するドキュメント](https://platform.claude.com/docs/en/manage-claude/data-residency)）。EU内のみでの処理が必要な組織は、Amazon BedrockまたはGoogle Vertex AIのEUリージョン経由でClaudeを利用できます。この場合、所在地はクラウド事業者の契約とエンドポイントの選択で決まります。機微性の高いデータ（健康、金融、生体情報）には、ローカルデプロイが引き続きより安全な選択肢です。',
           },
           {
-            title: 'GPT-5.6 Luna API — 中程度リスク、EU Projectなら低減',
+            title: 'GPT-6 Luna API — 中程度リスク、EU Projectなら低減',
             text: 'OpenAIはデータ処理付則（DPA）を提供しており、対象のAPI顧客にはヨーロッパのデータレジデンシーも提供しています。リージョンにヨーロッパを指定して作成した新規Projectは、データ保持ゼロでリージョン内で処理されます（[OpenAIの発表](https://openai.com/index/introducing-data-residency-in-europe/)）。既存のProjectは変換できないため、新規Projectを作成して移行します。EU Projectを使わない場合、リクエストは既定で米国で処理され、EU-米国データプライバシーフレームワークまたはSCCに加え、転送影響評価が必要です。いずれの場合も、DPA、法的根拠、リスク評価がカバーしていない限り、健康、金融、生体、遺伝に関するデータの送信は避けてください。',
           },
           {
@@ -1217,8 +1217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: '在专有LLM与开放权重LLM之间做选择的首席信息安全官、采购团队和合规官员',
     primaryTerm: 'GDPR风险比较 LLM模型',
-    leadAnswerBlock: '**在本文比较的方案中，DeepSeek托管API的GDPR风险最高：数据存储在中国大陆，PIPL赋予当局广泛的访问权，而欧盟没有针对中国的充分性认定。本地运行的Qwen3.8-27B和Llama 4 Scout风险最低，因为个人数据不会离开您的基础设施。Claude和OpenAI GPT-5.6 Luna API居中：它们需要有效的转移机制（欧美数据隐私框架（DPF）或标准合同条款（SCC）），若要严格实现欧盟境内驻留，还需选择欧盟区域路径，例如OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock、Google Vertex AI欧盟区域使用Claude。**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**在本文比较的方案中，DeepSeek托管API的GDPR风险最高：数据存储在中国大陆，PIPL赋予当局广泛的访问权，而欧盟没有针对中国的充分性认定。本地运行的Qwen3.8-27B和Llama 4 Scout风险最低，因为个人数据不会离开您的基础设施。Claude和OpenAI GPT-6 Luna API居中：它们需要有效的转移机制（欧美数据隐私框架（DPF）或标准合同条款（SCC）），若要严格实现欧盟境内驻留，还需选择欧盟区域路径，例如OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock、Google Vertex AI欧盟区域使用Claude。**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', '多GPU'],
     toc: [
       { label: '面向LLM的四个GDPR风险向量', anchor: 'risk-vectors' },
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'DeepSeek托管API风险最高：数据存储在中国大陆并受PIPL约束，欧盟没有针对中国的充分性认定，其隐私政策允许在法律要求时向当局披露；意大利Garante已对其采取限制措施，柏林监管机构也已要求Apple和Google审查该应用',
           '本地运行的Qwen3.8-27B（Apache 2.0）和Llama 4 Scout风险最低：无第44条转移，无需SCC，数据留在您的硬件上；Llama 4 Scout在4-bit下约需55–60 GB，Qwen3.8-27B量化后可放入24 GB GPU',
-          'Claude API和GPT-5.6 Luna属于中等风险：美国供应商需要欧美数据隐私框架（DPF）或SCC，外加转移影响评估（TIA）；Anthropic自家API仅提供全球或美国推理，而OpenAI为新建Project提供欧盟数据驻留',
+          'Claude API和GPT-6 Luna属于中等风险：美国供应商需要欧美数据隐私框架（DPF）或SCC，外加转移影响评估（TIA）；Anthropic自家API仅提供全球或美国推理，而OpenAI为新建Project提供欧盟数据驻留',
           '推荐堆栈：初创企业（在DPA下使用Claude或OpenAI API）、数据敏感组织（单张24 GB GPU运行Qwen3.8-27B）、企业（多GPU本地模型，气隙部署）',
           '风险矩阵涵盖五个向量：数据驻留、训练数据管辖权、ToS数据保留、转移机制要求和总体风险级别',
         ],
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '部署方式': 'DeepSeek API', '数据驻留': '中国（中国境内服务器）', '训练数据管辖权': '中国（PIPL）', ToS保留风险: '政策允许向当局共享', '是否需要SCC/TIA？': '无充分性认定；SCC+TIA难以成立', '总体风险级别': '🔴 最高' },
           { '部署方式': 'Claude API（官方直连）', '数据驻留': '美国或全球；无欧盟专属选项', '训练数据管辖权': '美国', ToS保留风险: '依Anthropic DPA；需核实保留期', '是否需要SCC/TIA？': 'DPF或SCC（含于DPA）+TIA', '总体风险级别': '🟠 中高' },
           { '部署方式': 'Claude（Bedrock / Vertex AI欧盟）', '数据驻留': '欧盟区域（由端点决定）', '训练数据管辖权': '美国供应商，欧盟境内处理', ToS保留风险: '适用云服务商条款', '是否需要SCC/TIA？': '视合同而定；需评估TIA', '总体风险级别': '🟡 中等' },
-          { '部署方式': 'GPT-5.6 Luna API（默认）', '数据驻留': '美国（默认Project）', '训练数据管辖权': '美国', ToS保留风险: '提供DPA；依API条款', '是否需要SCC/TIA？': 'DPF或SCC+TIA', '总体风险级别': '🟠 中高' },
+          { '部署方式': 'GPT-6 Luna API（默认）', '数据驻留': '美国（默认Project）', '训练数据管辖权': '美国', ToS保留风险: '提供DPA；依API条款', '是否需要SCC/TIA？': 'DPF或SCC+TIA', '总体风险级别': '🟠 中高' },
           { '部署方式': 'OpenAI API（欧盟Project）', '数据驻留': '欧盟，区域内处理', '训练数据管辖权': '美国供应商，欧盟境内处理', ToS保留风险: '区域内零数据保留', '是否需要SCC/TIA？': '有所降低；请在DPA中确认', '总体风险级别': '🟡 中等' },
           { '部署方式': 'Llama 4 Scout（本地）', '数据驻留': '您自己的硬件（局域网）', '训练数据管辖权': '开放权重，无供应商保留', ToS保留风险: '通过本地日志自行控制保留', '是否需要SCC/TIA？': '不需要', '总体风险级别': '🟢 最低' },
           { '部署方式': 'Qwen3.8-27B（本地）', '数据驻留': '您自己的硬件（局域网）', '训练数据管辖权': '开放权重（Apache 2.0）', ToS保留风险: '通过本地日志自行控制保留', '是否需要SCC/TIA？': '不需要', '总体风险级别': '🟢 最低' },
@@ -1297,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Anthropic的DPA纳入了SCC，并将Anthropic列为处理者，因此在有书面转移机制和转移影响评估（TIA）的前提下，可以在GDPR下使用Claude API。Anthropic官方API只提供两种推理地域：全球（默认）和美国，没有欧盟专属选项，工作区静态数据目前仅存放在美国（[Anthropic数据驻留文档](https://platform.claude.com/docs/en/manage-claude/data-residency)）。需要仅在欧盟境内处理的组织，可以通过Amazon Bedrock或Google Vertex AI选择欧盟区域使用Claude，驻留位置由云服务商的合同和端点选择决定。对于高敏感数据（健康、财务、生物识别），本地部署仍是更稳妥的选择。',
           },
           {
-            title: 'GPT-5.6 Luna API——中等风险，使用欧盟Project可降低',
+            title: 'GPT-6 Luna API——中等风险，使用欧盟Project可降低',
             text: 'OpenAI提供数据处理附录（DPA），并为符合条件的API客户提供欧洲数据驻留：以欧洲为区域新建的Project将在区域内处理，且零数据保留（[OpenAI公告](https://openai.com/index/introducing-data-residency-in-europe/)）。现有Project无法转换，需通过新建Project来迁移。没有欧盟Project时，请求默认在美国处理，需要欧美数据隐私框架（DPF）或SCC，外加转移影响评估（TIA）。无论哪种方式，都应避免发送健康、财务、生物识别或基因数据，除非您的DPA、法律依据和风险评估已涵盖这些数据。',
           },
           {
@@ -1404,13 +1404,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipes de compras e responsáveis por conformidade que escolhem entre LLMs proprietários e de pesos abertos',
     primaryTerm: 'comparação de risco GDPR modelos LLM',
-    leadAnswerBlock: '**A API hospedada da DeepSeek apresenta o maior risco de GDPR entre as opções comparadas aqui: os dados ficam armazenados na China continental, onde a PIPL dá amplo acesso às autoridades, e a UE não tem decisão de adequação para a China. Qwen3.8-27B e Llama 4 Scout executados localmente têm o menor risco, porque nenhum dado pessoal sai da sua infraestrutura. As APIs do Claude e do OpenAI GPT-5.6 Luna ficam no meio-termo: exigem um mecanismo válido de transferência (EU-US Data Privacy Framework ou Cláusulas Contratuais Padrão) e, para residência estrita na UE, uma rota em região europeia, como os Projects com residência de dados na UE da OpenAI ou o Claude via Amazon Bedrock ou regiões da UE do Google Vertex AI.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**A API hospedada da DeepSeek apresenta o maior risco de GDPR entre as opções comparadas aqui: os dados ficam armazenados na China continental, onde a PIPL dá amplo acesso às autoridades, e a UE não tem decisão de adequação para a China. Qwen3.8-27B e Llama 4 Scout executados localmente têm o menor risco, porque nenhum dado pessoal sai da sua infraestrutura. As APIs do Claude e do OpenAI GPT-6 Luna ficam no meio-termo: exigem um mecanismo válido de transferência (EU-US Data Privacy Framework ou Cláusulas Contratuais Padrão) e, para residência estrita na UE, uma rota em região europeia, como os Projects com residência de dados na UE da OpenAI ou o Claude via Amazon Bedrock ou regiões da UE do Google Vertex AI.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       pt: {
         question: 'Qual LLM é mais seguro sob o GDPR?', // VERIFY
-        answer: 'Qwen3.8-27B ou Llama 4 Scout executados localmente no seu próprio hardware: nenhum dado sai da sua jurisdição, então não há transferência do Artigo 44 e não é preciso gerenciar SCC nem TIA. A API hospedada da DeepSeek é a de maior risco, porque os dados ficam armazenados na China sob a PIPL. As APIs do Claude e do GPT-5.6 Luna têm risco médio: exigem um mecanismo de transferência (EU-US Data Privacy Framework ou SCCs), e o processamento exclusivo na UE está disponível pelos Projects com residência de dados na UE da OpenAI ou pelo Claude no Amazon Bedrock / nas regiões da UE do Google Vertex AI, não pela API própria da Anthropic.',
+        answer: 'Qwen3.8-27B ou Llama 4 Scout executados localmente no seu próprio hardware: nenhum dado sai da sua jurisdição, então não há transferência do Artigo 44 e não é preciso gerenciar SCC nem TIA. A API hospedada da DeepSeek é a de maior risco, porque os dados ficam armazenados na China sob a PIPL. As APIs do Claude e do GPT-6 Luna têm risco médio: exigem um mecanismo de transferência (EU-US Data Privacy Framework ou SCCs), e o processamento exclusivo na UE está disponível pelos Projects com residência de dados na UE da OpenAI ou pelo Claude no Amazon Bedrock / nas regiões da UE do Google Vertex AI, não pela API própria da Anthropic.',
         bullets: [
           'Qwen local: menor risco. Sem transferência, pesos Apache 2.0 no Qwen3.8-27B, cerca de 16–24 GB de VRAM quando quantizado.',
           'DeepSeek API: maior risco. Dados armazenados na China, jurisdição da PIPL, sem decisão de adequação da UE.',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A API hospedada da DeepSeek é a de maior risco: os dados ficam armazenados na China continental sob a PIPL, a UE não tem decisão de adequação para a China e a política de privacidade permite a divulgação às autoridades quando exigida por lei; a Garante da Itália a restringiu e a autoridade de Berlim pediu que Apple e Google revisassem o app',
           'Qwen3.8-27B (Apache 2.0) e Llama 4 Scout executados localmente têm o menor risco: sem transferência do Artigo 44, sem SCC exigida, os dados ficam no seu hardware; o Llama 4 Scout precisa de cerca de 55–60 GB em 4 bits, e o Qwen3.8-27B cabe em uma GPU de 24 GB quando quantizado',
-          'A API do Claude e o GPT-5.6 Luna têm risco médio: fornecedores dos EUA exigem o EU-US Data Privacy Framework ou SCCs, além de uma Avaliação de Impacto da Transferência; a API própria da Anthropic oferece apenas inferência global ou nos EUA, enquanto a OpenAI oferece residência de dados na UE para novos Projects',
+          'A API do Claude e o GPT-6 Luna têm risco médio: fornecedores dos EUA exigem o EU-US Data Privacy Framework ou SCCs, além de uma Avaliação de Impacto da Transferência; a API própria da Anthropic oferece apenas inferência global ou nos EUA, enquanto a OpenAI oferece residência de dados na UE para novos Projects',
           'Stacks recomendados: startups (API do Claude ou da OpenAI sob um DPA), organizações com dados sensíveis (Qwen3.8-27B em uma GPU de 24 GB), empresas (modelos locais multi-GPU, em air-gap)',
           'A matriz de risco cobre cinco vetores: residência de dados, jurisdição dos dados de treinamento, retenção de dados nos ToS, exigência de mecanismo de transferência e nível de risco geral',
         ],
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Implantação: 'DeepSeek API', 'Residência de dados': 'China (servidores na RPC)', 'Jurisdição dos dados de treinamento': 'China (PIPL)', 'Risco de retenção nos ToS': 'Política permite compartilhar com autoridades', 'SCC / TIA exigida?': 'Sem adequação; SCC + TIA dificilmente se sustenta', 'Nível de risco geral': '🔴 Maior' },
           { Implantação: 'Claude API (própria)', 'Residência de dados': 'EUA ou global; sem opção só UE', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'Conforme o DPA da Anthropic; verifique a retenção', 'SCC / TIA exigida?': 'DPF ou SCC (no DPA) + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
           { Implantação: 'Claude no Bedrock / Vertex AI UE', 'Residência de dados': 'Região da UE (definida pelo endpoint)', 'Jurisdição dos dados de treinamento': 'Fornecedor dos EUA, processamento na UE', 'Risco de retenção nos ToS': 'Valem os termos do provedor de nuvem', 'SCC / TIA exigida?': 'Depende do contrato; avalie a TIA', 'Nível de risco geral': '🟡 Médio' },
-          { Implantação: 'GPT-5.6 Luna API (padrão)', 'Residência de dados': 'EUA (Project padrão)', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'DPA disponível; conforme os termos da API', 'SCC / TIA exigida?': 'DPF ou SCC + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
+          { Implantação: 'GPT-6 Luna API (padrão)', 'Residência de dados': 'EUA (Project padrão)', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'DPA disponível; conforme os termos da API', 'SCC / TIA exigida?': 'DPF ou SCC + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
           { Implantação: 'OpenAI API (Project UE)', 'Residência de dados': 'UE, processado na própria região', 'Jurisdição dos dados de treinamento': 'Fornecedor dos EUA, processamento na UE', 'Risco de retenção nos ToS': 'Retenção zero de dados na região', 'SCC / TIA exigida?': 'Reduzida; confirme no seu DPA', 'Nível de risco geral': '🟡 Médio' },
           { Implantação: 'Llama 4 Scout (local)', 'Residência de dados': 'Seu hardware (LAN)', 'Jurisdição dos dados de treinamento': 'Pesos abertos, sem retenção pelo fornecedor', 'Risco de retenção nos ToS': 'Você controla a retenção via logs locais', 'SCC / TIA exigida?': 'Não', 'Nível de risco geral': '🟢 Menor' },
           { Implantação: 'Qwen3.8-27B (local)', 'Residência de dados': 'Seu hardware (LAN)', 'Jurisdição dos dados de treinamento': 'Pesos abertos (Apache 2.0)', 'Risco de retenção nos ToS': 'Você controla a retenção via logs locais', 'SCC / TIA exigida?': 'Não', 'Nível de risco geral': '🟢 Menor' },
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O DPA da Anthropic incorpora SCCs e a designa como operadora (processor), então a API do Claude pode ser usada sob o GDPR com um mecanismo de transferência documentado e uma Avaliação de Impacto da Transferência. A API própria da Anthropic oferece apenas duas geografias de inferência, global (padrão) e EUA; não há opção exclusiva para a UE, e os dados em repouso do workspace ficam atualmente apenas nos EUA ([documentação de residência de dados da Anthropic](https://platform.claude.com/docs/en/manage-claude/data-residency)). Organizações que precisam de processamento exclusivo na UE podem usar o Claude pelo Amazon Bedrock ou pelo Google Vertex AI com uma região da UE, onde o contrato do provedor de nuvem e a escolha do endpoint determinam a residência. Para dados de alta sensibilidade (saúde, financeiros, biométricos), a implantação local continua sendo a opção mais segura.',
           },
           {
-            title: 'GPT-5.6 Luna API — Risco médio, menor com um Project na UE',
+            title: 'GPT-6 Luna API — Risco médio, menor com um Project na UE',
             text: 'A OpenAI oferece um Adendo de Processamento de Dados (DPA) e, para clientes elegíveis da API, residência de dados europeia: um novo Project criado com a Europa como região é processado na própria região, com retenção zero de dados ([anúncio da OpenAI](https://openai.com/index/introducing-data-residency-in-europe/)). Projects existentes não podem ser convertidos, então migre criando um novo Project. Sem um Project na UE, as requisições são processadas por padrão nos EUA e exigem o EU-US Data Privacy Framework ou SCCs, além de uma Avaliação de Impacto da Transferência. Em qualquer caso, evite enviar dados de saúde, financeiros, biométricos ou genéticos, a menos que seu DPA, sua base legal e sua avaliação de riscos os cubram.',
           },
           {
@@ -1617,13 +1617,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: '독점적 LLM과 오픈 웨이트 LLM 중에서 선택하는 CISO, 조달팀, 컴플라이언스 담당자',
     primaryTerm: 'GDPR 리스크 비교 LLM 모델',
-    leadAnswerBlock: '**DeepSeek 호스팅 API는 여기서 비교한 옵션 중 GDPR 리스크가 가장 높습니다. 데이터가 중국 본토에 저장되고, PIPL에 따라 당국이 광범위하게 접근할 수 있으며, EU는 중국에 대한 적정성 결정을 내리지 않았기 때문입니다. Qwen3.8-27B와 Llama 4 Scout을 로컬로 실행하면 개인정보가 사용자의 인프라 밖으로 나가지 않으므로 리스크가 가장 낮습니다. Claude와 OpenAI GPT-5.6 Luna API는 중간에 해당합니다. 유효한 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 표준 계약 조항)이 필요하며, 엄격한 EU 거주지가 필요하면 OpenAI의 EU 데이터 거주지 프로젝트, 또는 Amazon Bedrock이나 Google Vertex AI의 EU 리전을 통한 Claude 같은 EU 리전 경로를 사용해야 합니다.**',
-    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-5.6 Luna'],
+    leadAnswerBlock: '**DeepSeek 호스팅 API는 여기서 비교한 옵션 중 GDPR 리스크가 가장 높습니다. 데이터가 중국 본토에 저장되고, PIPL에 따라 당국이 광범위하게 접근할 수 있으며, EU는 중국에 대한 적정성 결정을 내리지 않았기 때문입니다. Qwen3.8-27B와 Llama 4 Scout을 로컬로 실행하면 개인정보가 사용자의 인프라 밖으로 나가지 않으므로 리스크가 가장 낮습니다. Claude와 OpenAI GPT-6 Luna API는 중간에 해당합니다. 유효한 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 표준 계약 조항)이 필요하며, 엄격한 EU 거주지가 필요하면 OpenAI의 EU 데이터 거주지 프로젝트, 또는 Amazon Bedrock이나 Google Vertex AI의 EU 리전을 통한 Claude 같은 EU 리전 경로를 사용해야 합니다.**',
+    current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       ko: {
         question: 'GDPR 하에서 가장 안전한 LLM은 무엇입니까?',
-        answer: 'Qwen3.8-27B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 가장 안전합니다. 데이터가 관할권을 벗어나지 않으므로 제44조 이전이 없고, 관리해야 할 SCC나 TIA도 없습니다. DeepSeek 호스팅 API는 데이터가 PIPL이 적용되는 중국에 저장되므로 리스크가 가장 높습니다. Claude 및 GPT-5.6 Luna API는 중간 위험입니다. 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 SCC)이 필요하며, EU 내 처리는 OpenAI의 EU 데이터 거주지 프로젝트 또는 Amazon Bedrock / Google Vertex AI EU 리전의 Claude를 통해서만 가능하고 Anthropic 자체 API로는 제공되지 않습니다.',
+        answer: 'Qwen3.8-27B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 가장 안전합니다. 데이터가 관할권을 벗어나지 않으므로 제44조 이전이 없고, 관리해야 할 SCC나 TIA도 없습니다. DeepSeek 호스팅 API는 데이터가 PIPL이 적용되는 중국에 저장되므로 리스크가 가장 높습니다. Claude 및 GPT-6 Luna API는 중간 위험입니다. 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 SCC)이 필요하며, EU 내 처리는 OpenAI의 EU 데이터 거주지 프로젝트 또는 Amazon Bedrock / Google Vertex AI EU 리전의 Claude를 통해서만 가능하고 Anthropic 자체 API로는 제공되지 않습니다.',
         bullets: [
           'Qwen 로컬: 최저 위험. 이전 없음, Qwen3.8-27B는 Apache 2.0 가중치, 양자화 시 약 16–24 GB VRAM.',
           'DeepSeek API: 최고 위험. 중국 내 데이터 저장, PIPL 관할권, EU 적정성 결정 없음.',
@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'DeepSeek 호스팅 API는 최고 위험: 데이터가 PIPL이 적용되는 중국 본토에 저장되고, 중국에 대한 EU 적정성 결정이 없으며, 개인정보 처리방침이 법적으로 요구되는 경우 당국에 대한 공개를 허용합니다. 이탈리아 Garante가 처리를 제한했고 베를린 감독관은 Apple과 Google에 앱 검토를 요청했습니다',
           'Qwen3.8-27B(Apache 2.0)와 Llama 4 Scout을 로컬로 실행하면 최저 위험: 제44조 이전 없음, SCC 불필요, 데이터가 자체 하드웨어에 보관됩니다. Llama 4 Scout은 4비트에서 약 55–60 GB가 필요하고, Qwen3.8-27B는 양자화 시 24 GB GPU에 들어갑니다',
-          'Claude API와 GPT-5.6 Luna는 중간 위험: 미국 벤더는 EU-US 데이터 프라이버시 프레임워크 또는 SCC와 이전 영향 평가가 필요합니다. Anthropic 자체 API는 글로벌 또는 미국 추론만 제공하는 반면, OpenAI는 새 프로젝트에 EU 데이터 거주지를 제공합니다',
+          'Claude API와 GPT-6 Luna는 중간 위험: 미국 벤더는 EU-US 데이터 프라이버시 프레임워크 또는 SCC와 이전 영향 평가가 필요합니다. Anthropic 자체 API는 글로벌 또는 미국 추론만 제공하는 반면, OpenAI는 새 프로젝트에 EU 데이터 거주지를 제공합니다',
           '권장 스택: 스타트업(DPA 하의 Claude 또는 OpenAI API), 데이터 민감 조직(24 GB GPU 한 장의 Qwen3.8-27B), 기업(멀티 GPU 로컬 모델, 에어갭)',
           '리스크 매트릭스는 데이터 거주지, 학습 데이터 관할권, ToS 데이터 보존, 이전 메커니즘 요건, 전체 위험 수준의 5가지 벡터를 다룹니다',
         ],
@@ -1687,7 +1687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '배포 환경': 'DeepSeek API', '데이터 거주지': '중국(중국 본토 서버)', '학습 데이터 관할권': '중국(PIPL)', 'ToS 보존 위험': '정책상 당국 공유 허용', 'SCC / TIA 필요 여부': '적정성 결정 없음; SCC+TIA 어려움', '전체 위험 수준': '🔴 최고' },
           { '배포 환경': 'Claude API(자사 직접)', '데이터 거주지': '미국 또는 글로벌; EU 전용 없음', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'Anthropic DPA 기준; 보존 확인', 'SCC / TIA 필요 여부': 'DPF 또는 SCC(DPA 포함) + TIA', '전체 위험 수준': '🟠 중상' },
           { '배포 환경': 'Claude(Bedrock / Vertex AI EU)', '데이터 거주지': 'EU 리전(엔드포인트로 지정)', '학습 데이터 관할권': '미국 벤더, EU 처리', 'ToS 보존 위험': '클라우드 제공업체 약관 적용', 'SCC / TIA 필요 여부': '계약에 따라 다름; TIA 검토', '전체 위험 수준': '🟡 중간' },
-          { '배포 환경': 'GPT-5.6 Luna API(기본)', '데이터 거주지': '미국(기본 프로젝트)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'DPA 제공; API 약관에 따름', 'SCC / TIA 필요 여부': 'DPF 또는 SCC + TIA', '전체 위험 수준': '🟠 중상' },
+          { '배포 환경': 'GPT-6 Luna API(기본)', '데이터 거주지': '미국(기본 프로젝트)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'DPA 제공; API 약관에 따름', 'SCC / TIA 필요 여부': 'DPF 또는 SCC + TIA', '전체 위험 수준': '🟠 중상' },
           { '배포 환경': 'OpenAI API(EU 프로젝트)', '데이터 거주지': 'EU, 리전 내 처리', '학습 데이터 관할권': '미국 벤더, EU 처리', 'ToS 보존 위험': '리전 내 데이터 제로 보존', 'SCC / TIA 필요 여부': '감소; DPA에서 확인', '전체 위험 수준': '🟡 중간' },
           { '배포 환경': 'Llama 4 Scout(로컬)', '데이터 거주지': '자체 하드웨어(LAN)', '학습 데이터 관할권': '오픈 웨이트, 벤더 보존 없음', 'ToS 보존 위험': '로컬 로그로 보존을 직접 통제', 'SCC / TIA 필요 여부': '없음', '전체 위험 수준': '🟢 최저' },
           { '배포 환경': 'Qwen3.8-27B(로컬)', '데이터 거주지': '자체 하드웨어(LAN)', '학습 데이터 관할권': '오픈 웨이트(Apache 2.0)', 'ToS 보존 위험': '로컬 로그로 보존을 직접 통제', 'SCC / TIA 필요 여부': '없음', '전체 위험 수준': '🟢 최저' },
@@ -1709,7 +1709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Anthropic의 DPA는 SCC를 포함하고 Anthropic을 처리자로 명시하므로, 문서화된 이전 메커니즘과 이전 영향 평가를 갖추면 Claude API를 GDPR 하에서 사용할 수 있습니다. Anthropic 자체 API는 글로벌(기본)과 미국의 두 가지 추론 지역만 제공하며 EU 전용 옵션은 없고, 워크스페이스의 저장 데이터는 현재 미국에만 보관됩니다([Anthropic 데이터 거주지 문서](https://platform.claude.com/docs/en/manage-claude/data-residency)). EU 내 처리가 필요한 조직은 EU 리전을 지정한 Amazon Bedrock 또는 Google Vertex AI를 통해 Claude를 사용할 수 있으며, 이 경우 클라우드 제공업체의 계약과 엔드포인트 선택이 거주지를 결정합니다. 고감도 데이터(건강, 금융, 생체정보)는 로컬 배포가 여전히 더 안전한 선택입니다.',
           },
           {
-            title: 'GPT-5.6 Luna API — 중간 위험, EU 프로젝트로 낮출 수 있음',
+            title: 'GPT-6 Luna API — 중간 위험, EU 프로젝트로 낮출 수 있음',
             text: 'OpenAI는 데이터 처리 부속서(DPA)를 제공하며, 해당되는 API 고객에게는 유럽 데이터 거주지도 제공합니다. 유럽을 지역으로 지정해 만든 새 프로젝트는 데이터 제로 보존으로 리전 내에서 처리됩니다([OpenAI 발표](https://openai.com/index/introducing-data-residency-in-europe/)). 기존 프로젝트는 전환할 수 없으므로 새 프로젝트를 만들어 마이그레이션해야 합니다. EU 프로젝트가 없으면 요청은 기본적으로 미국에서 처리되며, EU-US 데이터 프라이버시 프레임워크 또는 SCC와 이전 영향 평가가 필요합니다. 어느 경우든 DPA, 법적 근거, 리스크 평가가 이를 다루지 않는 한 건강, 금융, 생체, 유전자 정보는 전송하지 마십시오.',
           },
           {
