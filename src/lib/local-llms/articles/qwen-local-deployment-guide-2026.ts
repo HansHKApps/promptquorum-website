@@ -290,7 +290,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Model (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Speed (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Want that 92.7% HumanEval score at 27 tok/s? See the [24 GB GPU that runs Qwen2.5-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'Want to run Qwen2.5-Coder 32B locally? See the [24 GB GPU tier](#affiliate-picks) (speeds are indicative; the 92.7% HumanEval figure is Qwen\'s published full-precision score).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp',
         imageCaption: 'Qwen3 benchmark scores (Q4_K_M) — approximate values',
@@ -372,10 +372,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (or used RTX 3090 24 GB)',
             tagline: 'High-end pick — Qwen2.5-Coder 32B, Qwen 3.6 27B (~20.5 / ~17 GB VRAM)',
-            verdict: 'The 4090 delivers ~27 tok/s on Qwen2.5-Coder 32B — real-time coding speed at 92.7% HumanEval. A used RTX 3090 has the same 24 GB VRAM and lands within ~15% of the 4090\'s inference speed for meaningfully less money if you can find a trusted used listing.',
+            verdict: 'The 4090 delivers ~27 tok/s on Qwen2.5-Coder 32B — real-time coding speed. A used RTX 3090 has the same 24 GB VRAM and lands within ~15% of the 4090\'s inference speed for meaningfully less money if you can find a trusted used listing.',
             pros: [
               '24 GB VRAM covers every Qwen3 32B variant and Qwen 3.6 27B with room to spare',
-              '~27 tok/s on Qwen2.5-Coder 32B (92.7% HumanEval) — fast enough for real-time pair programming',
+              '~27 tok/s on Qwen2.5-Coder 32B — fast enough for real-time pair programming',
               'Used RTX 3090 is the value alternative: same VRAM ceiling, ~15% slower, meaningfully cheaper second-hand',
             ],
             cons: [
@@ -752,7 +752,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidad (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '¿Quieres esa puntuación del 92,7 % en HumanEval a 27 tok/s? Consulta la [GPU de 24 GB que ejecuta Qwen2.5-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: '¿Quieres ejecutar Qwen2.5-Coder 32B en local? Consulta el [nivel de GPU de 24 GB](#affiliate-picks) (las velocidades son orientativas; el 92,7 % en HumanEval es la puntuación publicada por Qwen con precisión completa).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-es.webp',
         imageCaption: 'Puntuaciones de benchmark de Qwen3 (Q4_K_M) — valores aproximados',
@@ -834,10 +834,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (o RTX 3090 24 GB de segunda mano)',
             tagline: 'Opción de gama alta — Qwen2.5-Coder 32B, Qwen 3.6 27B (~20,5 / ~17 GB de VRAM)',
-            verdict: 'La 4090 entrega ~27 tok/s en Qwen2.5-Coder 32B — velocidad de código en tiempo real con un 92,7 % en HumanEval. Una RTX 3090 de segunda mano tiene la misma VRAM de 24 GB y se queda a un ~15 % de la velocidad de inferencia de la 4090, por bastante menos dinero si encuentras un anuncio de confianza.',
+            verdict: 'La 4090 entrega ~27 tok/s en Qwen2.5-Coder 32B — velocidad de código en tiempo real. Una RTX 3090 de segunda mano tiene la misma VRAM de 24 GB y se queda a un ~15 % de la velocidad de inferencia de la 4090, por bastante menos dinero si encuentras un anuncio de confianza.',
             pros: [
               '24 GB de VRAM cubren todas las variantes de Qwen3 32B y Qwen 3.6 27B con margen',
-              '~27 tok/s en Qwen2.5-Coder 32B (92,7 % en HumanEval) — suficientemente rápido para programación en pareja en tiempo real',
+              '~27 tok/s en Qwen2.5-Coder 32B — suficientemente rápido para programación en pareja en tiempo real',
               'La RTX 3090 de segunda mano es la alternativa económica: mismo límite de VRAM, ~15 % más lenta, bastante más barata de segunda mano',
             ],
             cons: [
@@ -1158,7 +1158,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['النموذج (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'السرعة (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'هل تريد تحقيق درجة 92.7% في HumanEval بسرعة 27 token/ثانية؟ اطّلع على [بطاقة الرسوم بسعة 24 GB التي تشغّل Qwen2.5-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'هل تريد تشغيل Qwen2.5-Coder 32B محليًا؟ اطّلع على [فئة بطاقات الرسوم بسعة 24 GB](#affiliate-picks) (السرعات تقريبية؛ ونسبة 92.7% في HumanEval هي الدرجة التي نشرتها Qwen للدقة الكاملة).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ar.webp',
         imageCaption: 'درجات معيار Qwen3 (Q4_K_M) — قيم تقريبية',
@@ -1240,10 +1240,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (أو RTX 3090 24 GB مستعملة)',
             tagline: 'اختيار فئة عليا — Qwen2.5-Coder 32B وQwen 3.6 27B (~20.5 / ~17 GB VRAM)',
-            verdict: 'تقدّم 4090 سرعة ~27 token/ثانية على Qwen2.5-Coder 32B — سرعة برمجة في الوقت الفعلي بدرجة 92.7% في HumanEval. تملك RTX 3090 المستعملة نفس سعة 24 GB من VRAM، وتقترب من سرعة استدلال 4090 بفارق نحو 15% فقط، بسعر أقل بكثير إذا وجدت عرضًا مستعملًا موثوقًا.',
+            verdict: 'تقدّم 4090 سرعة ~27 token/ثانية على Qwen2.5-Coder 32B — سرعة برمجة في الوقت الفعلي. تملك RTX 3090 المستعملة نفس سعة 24 GB من VRAM، وتقترب من سرعة استدلال 4090 بفارق نحو 15% فقط، بسعر أقل بكثير إذا وجدت عرضًا مستعملًا موثوقًا.',
             pros: [
               'تغطي سعة 24 GB من VRAM جميع إصدارات Qwen3 32B وQwen 3.6 27B مع هامش إضافي',
-              '~27 token/ثانية على Qwen2.5-Coder 32B (92.7% في HumanEval) — سريعة بما يكفي للبرمجة الزوجية في الوقت الفعلي',
+              '~27 token/ثانية على Qwen2.5-Coder 32B — سريعة بما يكفي للبرمجة الزوجية في الوقت الفعلي',
               'RTX 3090 المستعملة هي البديل الاقتصادي: سقف VRAM نفسه، أبطأ بنحو 15%، وأرخص بشكل ملحوظ مستعملة',
             ],
             cons: [
@@ -1564,7 +1564,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidade (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Quer essa pontuação de 92,7% no HumanEval a 27 tok/s? Veja a [GPU de 24 GB que executa o Qwen2.5-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'Quer executar o Qwen2.5-Coder 32B localmente? Veja a [faixa de GPU de 24 GB](#affiliate-picks) (as velocidades são indicativas; os 92,7% no HumanEval são a pontuação publicada pela Qwen em precisão total).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-pt.webp',
         imageCaption: 'Pontuações de benchmark do Qwen3 (Q4_K_M) — valores aproximados',
@@ -1645,10 +1645,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (ou RTX 3090 24 GB usada)',
             tagline: 'Opção de alto desempenho — Qwen2.5-Coder 32B, Qwen 3.6 27B (~20,5 / ~17 GB de VRAM)',
-            verdict: 'A 4090 entrega ~27 tok/s no Qwen2.5-Coder 32B — velocidade de codificação em tempo real com 92,7% no HumanEval. Uma RTX 3090 usada tem a mesma VRAM de 24 GB e fica cerca de 15% atrás da velocidade de inferência da 4090, por um preço bem menor se você encontrar um anúncio de segunda mão confiável.',
+            verdict: 'A 4090 entrega ~27 tok/s no Qwen2.5-Coder 32B — velocidade de codificação em tempo real. Uma RTX 3090 usada tem a mesma VRAM de 24 GB e fica cerca de 15% atrás da velocidade de inferência da 4090, por um preço bem menor se você encontrar um anúncio de segunda mão confiável.',
             pros: [
               '24 GB de VRAM cobrem todas as variantes do Qwen3 32B e o Qwen 3.6 27B com folga',
-              '~27 tok/s no Qwen2.5-Coder 32B (92,7% no HumanEval) — rápido o suficiente para pair programming em tempo real',
+              '~27 tok/s no Qwen2.5-Coder 32B — rápido o suficiente para pair programming em tempo real',
               'A RTX 3090 usada é a alternativa econômica: mesmo limite de VRAM, cerca de 15% mais lenta, bem mais barata de segunda mão',
             ],
             cons: [
@@ -2038,7 +2038,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modèle (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Vitesse (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Vous voulez ce score HumanEval de 92,7 % à 27 tokens/s ? Consultez le [GPU 24 Go qui exécute Qwen2.5-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'Vous voulez exécuter Qwen2.5-Coder 32B en local ? Consultez le [palier GPU 24 Go](#affiliate-picks) (les vitesses sont indicatives ; les 92,7 % HumanEval sont le score publié par Qwen en pleine précision).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-fr.webp',
         imageCaption: 'Scores benchmark Qwen3 (Q4_K_M) — valeurs approximatives',
@@ -2120,10 +2120,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 Go (ou RTX 3090 24 Go d\'occasion)',
             tagline: 'Choix haut de gamme — Qwen2.5-Coder 32B, Qwen 3.6 27B (~20,5 / ~17 Go de VRAM)',
-            verdict: 'La 4090 délivre ~27 tokens/s sur Qwen2.5-Coder 32B — une vitesse de code en temps réel à 92,7 % de HumanEval. Une RTX 3090 d\'occasion offre la même VRAM de 24 Go et se situe à environ 15 % de la vitesse d\'inférence de la 4090, pour un prix nettement plus bas si vous trouvez une annonce d\'occasion fiable.',
+            verdict: 'La 4090 délivre ~27 tokens/s sur Qwen2.5-Coder 32B — une vitesse de code en temps réel. Une RTX 3090 d\'occasion offre la même VRAM de 24 Go et se situe à environ 15 % de la vitesse d\'inférence de la 4090, pour un prix nettement plus bas si vous trouvez une annonce d\'occasion fiable.',
             pros: [
               '24 Go de VRAM couvrent toutes les variantes de Qwen3 32B et Qwen 3.6 27B avec de la marge',
-              '~27 tokens/s sur Qwen2.5-Coder 32B (92,7 % HumanEval) — assez rapide pour du pair programming en temps réel',
+              '~27 tokens/s sur Qwen2.5-Coder 32B — assez rapide pour du pair programming en temps réel',
               'La RTX 3090 d\'occasion est l\'alternative économique : même plafond de VRAM, environ 15 % plus lente, nettement moins chère d\'occasion',
             ],
             cons: [
@@ -2294,7 +2294,7 @@ curl http://localhost:11434/v1/chat/completions \\
         { '@type': 'Question', name: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch, Arabisch und viele weitere Sprachen (siehe Modellkarte). Es ist ein starker Kandidat für lokale KI auf Chinesisch; testen Sie es mit Ihren eigenen Dokumenten.' } },
         { '@type': 'Question', name: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M ist die empfohlene Standardauswahl — es reduziert den VRAM um ~55 % gegenüber FP16 bei geringem Qualitätsverlust. Q8_0 für nahezu FP16-Qualität bei ausreichend VRAM. Q2_K bei chinesischsprachigen Anwendungsfällen vermeiden.' } },
         { '@type': 'Question', name: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und kann chinesischen, japanischen und koreanischen Text in gescannten Dokumenten lesen; testen Sie mit eigenen Scans, da die Genauigkeit von der Scanqualität abhängt. Das neuere Qwen3-VL gibt es als `qwen3-vl:8b` (6,2 GB).' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Beim lokalen Betrieb von Qwen3 müssen Anfragedaten Ihren Server nicht verlassen — das Modell verarbeitet Anfragen auf Ihrer Hardware, solange Sie keine vernetzten Dienste aktivieren. Damit ist für die Inferenz in der Regel kein Auftragsverarbeitungsvertrag (AVV) nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Zugriff auf die Daten erhält; die DSGVO gilt für Ihre Verarbeitung aber weiterhin. Für Unternehmen, die das BSI-Grundschutz-Kompendium anwenden, kann die lokale Inferenz den IT-Grundschutz-Baustein OPS.2.2 unterstützen. Dies ist keine Rechtsberatung.' } },
+        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Beim lokalen Betrieb von Qwen3 müssen Anfragedaten Ihren Server nicht verlassen — das Modell verarbeitet Anfragen auf Ihrer Hardware, solange Sie keine vernetzten Dienste aktivieren. Ob ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO erforderlich ist, hängt von Ihrer gesamten Umsetzung ab; die DSGVO gilt weiterhin. Dies ist keine Rechtsberatung.' } },
         { '@type': 'Question', name: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, in vielen Fällen. Qwen3 14B oder 32B lässt sich auf einem lokalen Server betreiben, sodass Inferenzdaten Ihr Netz nicht verlassen müssen, solange Sie keine vernetzten Dienste aktivieren. Ob ein Einsatz die Anforderungen des BSI-Grundschutzes oder der DSGVO erfüllt, hängt von Ihrer gesamten Umsetzung ab. Dies ist keine Rechtsberatung.' } },
       ],
     },
@@ -2447,7 +2447,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modell (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Geschwindigkeit (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Sie möchten diesen HumanEval-Score von 92,7 % bei 27 Tokens/Sek.? Sehen Sie sich die [24-GB-GPU an, die Qwen2.5-Coder 32B ausführt](#affiliate-picks).' },
+          { type: 'tip', text: 'Sie möchten Qwen2.5-Coder 32B lokal betreiben? Sehen Sie sich die [24-GB-GPU-Stufe](#affiliate-picks) an (Geschwindigkeiten sind Richtwerte; die 92,7 % HumanEval sind der von Qwen veröffentlichte Wert bei voller Präzision).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-de.webp',
         imageCaption: 'Qwen3 Benchmark-Ergebnisse (Q4_K_M) — Näherungswerte',
@@ -2474,7 +2474,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Der lokale Betrieb von Qwen3 bedeutet, dass die Prompts auf der eigenen Hardware bleiben — es gehen keine Inferenzdaten an eine Cloud-API, es entsteht kein Drittlandtransfer über eine Cloud-API; die DSGVO und das IT-Sicherheitsrecht gelten für Ihre Verarbeitung aber weiterhin.** Cloud-basierte LLM-APIs erfordern die Übermittlung von Prompts an externe Server im Ausland, was DSGVO Art. 28 (Auftragsverarbeitung) und ggf. Art. 44 ff. (Drittlandübermittlung) auslösen kann.',
           'Qwen3 wurde vom Qwen-Team bei Alibaba auf einem überwiegend chinesisch- und mehrsprachigen Korpus trainiert. Es ist ein starker Kandidat für Vereinfachtes Chinesisch, Traditionelles Chinesisch und gemischtsprachige Dokumente (Chinesisch/Englisch/Deutsch); testen Sie es mit Ihrem eigenen Material.',
-          '**Für Unternehmensdeployments im DACH-Raum**: Ein Qwen3-Setup ohne Internetverbindung während der Inferenz vermeidet in der Regel die Übermittlung von Inferenzdaten an externe Anbieter, was die DSGVO-Umsetzung erleichtert (keine Rechtsberatung). Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten, solange Sie keine vernetzten Dienste aktivieren. Für Setups nach BSI-Grundschutz kann Baustein OPS.2.2 (Fremdsoftware) herangezogen werden; die Konformität ist stets im Einzelfall zu prüfen. Vollständige Anleitung für Setups ohne Internetverbindung: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
+          '**Für Unternehmensdeployments im DACH-Raum**: Ein Qwen3-Setup ohne Internetverbindung während der Inferenz vermeidet in der Regel die Übermittlung von Inferenzdaten an externe Anbieter, was die DSGVO-Umsetzung erleichtert (keine Rechtsberatung). Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten, solange Sie keine vernetzten Dienste aktivieren. Vollständige Anleitung für Setups ohne Internetverbindung: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen3 kann nach dem Download ohne Internetverbindung laufen — Inferenzdaten müssen Ihr Gerät nicht verlassen, wodurch das Risiko einer Drittlandübermittlung von Inferenzdaten sinkt (die Einhaltung der DSGVO hängt weiterhin von Ihrem Anwendungsfall ab).' },
@@ -2529,10 +2529,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (oder gebrauchte RTX 3090 24 GB)',
             tagline: 'High-End-Empfehlung — Qwen2.5-Coder 32B, Qwen 3.6 27B (~20,5 / ~17 GB VRAM)',
-            verdict: 'Die 4090 liefert ~27 Tokens/Sek. bei Qwen2.5-Coder 32B — Echtzeit-Coding-Geschwindigkeit bei 92,7 % HumanEval. Eine gebrauchte RTX 3090 hat dasselbe 24-GB-VRAM und liegt bei der Inferenzgeschwindigkeit rund 15 % hinter der 4090 — bei deutlich geringeren Kosten, sofern Sie ein vertrauenswürdiges Gebrauchtangebot finden.',
+            verdict: 'Die 4090 liefert ~27 Tokens/Sek. bei Qwen2.5-Coder 32B — Echtzeit-Coding-Geschwindigkeit. Eine gebrauchte RTX 3090 hat dasselbe 24-GB-VRAM und liegt bei der Inferenzgeschwindigkeit rund 15 % hinter der 4090 — bei deutlich geringeren Kosten, sofern Sie ein vertrauenswürdiges Gebrauchtangebot finden.',
             pros: [
               '24 GB VRAM deckt jede Qwen3-32B-Variante und Qwen 3.6 27B mit Spielraum ab',
-              '~27 Tokens/Sek. bei Qwen2.5-Coder 32B (92,7 % HumanEval) — schnell genug für Echtzeit-Pair-Programming',
+              '~27 Tokens/Sek. bei Qwen2.5-Coder 32B — schnell genug für Echtzeit-Pair-Programming',
               'Gebrauchte RTX 3090 ist die preiswerte Alternative: gleiche VRAM-Grenze, ~15 % langsamer, gebraucht deutlich günstiger',
             ],
             cons: [
@@ -2614,7 +2614,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', a: 'Ja. Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch und viele weitere Sprachen (siehe Modellkarte). Es ist ein starker Kandidat für lokale KI auf Chinesisch; testen Sie es mit Ihren eigenen Dokumenten.' },
           { q: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', a: 'Q4_K_M ist die empfohlene Standardwahl — ~55 % VRAM-Reduktion bei geringem Qualitätsverlust. Q8_0 für nahezu FP16-Qualität. Q2_K bei chinesischsprachigen Anwendungen vermeiden.' },
           { q: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', a: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und liest CJK-Text in gescannten Dokumenten; testen Sie mit eigenen Scans. Das neuere Qwen3-VL ist `qwen3-vl:8b`.' },
-          { q: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', a: 'Beim lokalen Betrieb müssen Daten den eigenen Server nicht verlassen — in der Regel kein AVV nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Datenzugriff hat; die DSGVO gilt weiterhin. Kann den BSI-Baustein OPS.2.2 unterstützen.' },
+          { q: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', a: 'Beim lokalen Betrieb von Qwen3 müssen Anfragedaten Ihren Server nicht verlassen, solange Sie keine vernetzten Dienste aktivieren. Ob ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO erforderlich ist, hängt von Ihrer gesamten Umsetzung ab; die DSGVO gilt weiterhin. Dies ist keine Rechtsberatung.' },
           { q: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', a: 'Ja, in vielen Fällen. Qwen3 14B oder 32B lässt sich lokal betreiben, sodass Inferenzdaten Ihr Netz nicht verlassen müssen, solange Sie keine vernetzten Dienste aktivieren. Für Recht, Medizin und Finanzen ersetzt das keine rechtliche Prüfung; Entscheidungen bleiben bei qualifizierten Personen. Dies ist keine Rechtsberatung.' },
         ],
       },
@@ -2939,7 +2939,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['モデル（Q4_K_M）', 'MMLU', 'Math', 'HumanEval', '速度（GPU）'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '27トークン/秒でHumanEval 92.7%を狙いたいですか？[Qwen2.5-Coder 32Bを動かせる24GB GPU](#affiliate-picks)をご覧ください。' },
+          { type: 'tip', text: 'Qwen2.5-Coder 32Bをローカルで動かしたいですか？[24GB GPUの階層](#affiliate-picks)をご覧ください（速度は目安であり、HumanEval 92.7%はQwenが公表したフル精度のスコアです）。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ja.webp',
         imageCaption: 'Qwen3ベンチマークスコア（Q4_K_M）— 目安の値',
@@ -3420,7 +3420,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['模型（Q4_K_M）', 'MMLU', 'Math', 'HumanEval', '速度（GPU）'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '想要以27 token/秒的速度获得92.7%的HumanEval评分？查看[运行Qwen2.5-Coder 32B所需的24GB显存GPU](#affiliate-picks)。' },
+          { type: 'tip', text: '想在本地运行Qwen2.5-Coder 32B？查看[24GB显存GPU档位](#affiliate-picks)（速度仅供参考；HumanEval 92.7%是Qwen公布的全精度成绩）。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-zh.webp',
         imageCaption: 'Qwen3基准测试评分（Q4_K_M）— 近似值',
@@ -3502,10 +3502,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24GB（或二手RTX 3090 24GB）',
             tagline: '高端选择——Qwen2.5-Coder 32B、Qwen 3.6 27B（约~20.5 / ~17GB显存）',
-            verdict: '4090在Qwen2.5-Coder 32B上可达~27 token/秒——以92.7%的HumanEval评分实现实时编码速度。二手RTX 3090同样拥有24GB显存，推理速度约为4090的85%左右，如果能找到可信赖的二手卖家，价格会明显更低。',
+            verdict: '4090在Qwen2.5-Coder 32B上可达~27 token/秒——实时编码速度。二手RTX 3090同样拥有24GB显存，推理速度约为4090的85%左右，如果能找到可信赖的二手卖家，价格会明显更低。',
             pros: [
               '24GB显存可覆盖所有Qwen3 32B变体和Qwen 3.6 27B，还留有余量',
-              '在Qwen2.5-Coder 32B（HumanEval 92.7%）上达到~27 token/秒——足以支持实时结对编程',
+              '在Qwen2.5-Coder 32B上达到~27 token/秒——足以支持实时结对编程',
               '二手RTX 3090是高性价比替代方案：显存上限相同，速度约慢15%，但二手价格明显更低',
             ],
             cons: [
@@ -3893,7 +3893,7 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['모델 (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', '속도 (GPU)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '초당 27 토큰으로 HumanEval 92.7% 점수를 원하십니까? [Qwen2.5-Coder 32B를 실행하는 24 GB GPU](#affiliate-picks)를 확인하십시오.' },
+          { type: 'tip', text: 'Qwen2.5-Coder 32B를 로컬에서 실행하고 싶으십니까? [24 GB GPU 티어](#affiliate-picks)를 확인하십시오(속도는 참고용이며, HumanEval 92.7%는 Qwen이 공개한 전체 정밀도 점수입니다).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ko.webp',
         imageCaption: 'Qwen3 벤치마크 점수 (Q4_K_M) — 근삿값',
@@ -3975,10 +3975,10 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (또는 중고 RTX 3090 24 GB)',
             tagline: '고급 선택 — Qwen2.5-Coder 32B, Qwen 3.6 27B (~20.5 / ~17 GB VRAM)',
-            verdict: '4090은 Qwen2.5-Coder 32B에서 초당 ~27 토큰을 제공합니다 — HumanEval 92.7%의 실시간 코딩 속도입니다. 중고 RTX 3090은 동일한 24 GB VRAM을 갖추고 있으며, 신뢰할 수 있는 중고 매물을 찾을 수 있다면 4090 추론 속도의 약 85% 수준으로 훨씬 저렴하게 구매할 수 있습니다.',
+            verdict: '4090은 Qwen2.5-Coder 32B에서 초당 ~27 토큰을 제공합니다 — 실시간 코딩 속도입니다. 중고 RTX 3090은 동일한 24 GB VRAM을 갖추고 있으며, 신뢰할 수 있는 중고 매물을 찾을 수 있다면 4090 추론 속도의 약 85% 수준으로 훨씬 저렴하게 구매할 수 있습니다.',
             pros: [
               '24 GB VRAM으로 모든 Qwen3 32B 변형과 Qwen 3.6 27B를 여유 있게 커버',
-              'Qwen2.5-Coder 32B(HumanEval 92.7%)에서 초당 ~27 토큰 — 실시간 페어 프로그래밍에 충분한 속도',
+              'Qwen2.5-Coder 32B에서 초당 ~27 토큰 — 실시간 페어 프로그래밍에 충분한 속도',
               '중고 RTX 3090은 가성비 대안: VRAM 한계는 동일, 속도는 약 15% 느리지만 중고가는 훨씬 저렴',
             ],
             cons: [

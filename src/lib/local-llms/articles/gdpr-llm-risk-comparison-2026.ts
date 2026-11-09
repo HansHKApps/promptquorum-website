@@ -10,63 +10,63 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'GDPR Risk Comparison: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'GDPR Risk Matrix: LLM Comparison Qwen DeepSeek Llama Claude | PromptQuorum',
-    metaDescription: 'GDPR risk comparison of LLMs: DeepSeek API (highest risk), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.',
+    metaDescription: 'GDPR risk comparison of LLMs: Our risk assessment: DeepSeek API (highest), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8 min read',
     educationalLevel: 'Advanced',
     audience: 'CISOs, procurement teams, and compliance officers choosing between proprietary and open-weight LLMs',
     primaryTerm: 'GDPR risk comparison LLM models',
-    leadAnswerBlock: '**In our assessment, DeepSeek\'s hosted API presents the highest GDPR risk of the options compared here: its data is stored in mainland China, where PIPL gives authorities broad access, and the EU has no adequacy decision for China. Qwen3.8-27B and Llama 4 Scout run locally carry the lowest risk because, if the runtime is configured not to call out, no personal data leaves your infrastructure. Claude and OpenAI GPT-6 Luna APIs sit in the middle: they need a valid transfer mechanism (EU-US Data Privacy Framework or Standard Contractual Clauses) and, for strict EU residency, an EU-region route such as OpenAI\'s EU data-residency Projects or Claude through Amazon Bedrock or Google Vertex AI EU regions.**',
+    leadAnswerBlock: '**In our assessment, DeepSeek\'s hosted API presents the highest GDPR risk of the options compared here: hosted APIs operated outside the EU raise transfer questions (check the provider\'s current privacy policy and data processing terms), and the EU has no adequacy decision for China. Qwen3.8-27B and Llama 4 Scout run locally carry the lowest risk because, if the runtime is configured not to call out, no personal data leaves your infrastructure. Claude and OpenAI GPT-6 Luna APIs sit in the middle: they need a valid transfer mechanism (EU-US Data Privacy Framework or Standard Contractual Clauses) and, for strict EU residency, an EU-region route such as OpenAI\'s EU data-residency Projects or Claude through Amazon Bedrock or Google Vertex AI EU regions.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       en: {
         question: 'Which LLM carries the lowest GDPR risk?',
-        answer: 'Qwen3.8-27B or Llama 4 Scout run locally on your own hardware: if the runtime is configured not to call out, no data leaves your jurisdiction, so there is typically no Article 44 transfer and no SCC or TIA to manage. In our assessment, DeepSeek\'s hosted API is highest-risk because data is stored in China under PIPL. Claude and GPT-6 Luna APIs are medium-risk: they need a transfer mechanism (EU-US Data Privacy Framework or SCCs), and EU-only processing is available via OpenAI\'s EU data-residency Projects or Claude on Amazon Bedrock / Google Vertex AI EU regions, not through Anthropic\'s own API.',
+        answer: 'Qwen3.8-27B or Llama 4 Scout run locally on your own hardware: if the runtime is configured not to call out, no data leaves your jurisdiction, so there is typically no Article 44 transfer and no SCC or TIA to manage. In our assessment, DeepSeek\'s hosted API is highest-risk because hosted APIs operated outside the EU raise transfer questions; check the provider\'s current privacy policy and data processing terms. Claude and GPT-6 Luna APIs are medium-risk: they need a transfer mechanism (EU-US Data Privacy Framework or SCCs), and EU-only processing is available via OpenAI\'s EU data-residency Projects or Claude on Amazon Bedrock / Google Vertex AI EU regions, not through Anthropic\'s own API.',
         bullets: [
           'Qwen local: Lowest risk. No transfer, Apache 2.0 weights for Qwen3.8-27B, roughly 16–24 GB VRAM when quantized.',
-          'DeepSeek API: Highest risk. China-stored data, PIPL jurisdiction, no EU adequacy decision.',
+          'DeepSeek API: Highest risk. Operated outside the EU; no EU adequacy decision for China; check the provider\'s current privacy policy and data processing terms.',
           'Claude/GPT APIs: Medium risk. Transfer mechanism required; EU-region routes reduce but do not remove vendor-jurisdiction questions.',
         ],
         updatedDate: '2026-10',
       },
       de: {
         question: 'Welches LLM ist unter DSGVO am sichersten?',
-        answer: 'Qwen3.8-27B oder Llama 4 Scout, lokal auf eigener Hardware betrieben: Es verlassen keine Daten Ihre Rechtsordnung, daher gibt es keinen Transfer nach Artikel 44 und keine SCC oder TIA zu verwalten. Die gehostete DeepSeek API ist am riskantesten, da die Daten unter dem PIPL in China gespeichert werden. Die APIs von Claude und GPT-6 Luna haben ein mittleres Risiko: Sie benötigen einen Transfermechanismus (EU-US Data Privacy Framework oder SCC); eine reine EU-Verarbeitung ist über OpenAIs Projects mit EU-Datenresidenz oder über Claude auf Amazon Bedrock bzw. Google Vertex AI in EU-Regionen möglich, nicht jedoch über Anthropics eigene API.',
+        answer: 'Qwen3.8-27B oder Llama 4 Scout, lokal auf eigener Hardware betrieben: Ist die Laufzeitumgebung so konfiguriert, dass sie keine externen Aufrufe macht, verlassen keine Daten Ihre Rechtsordnung; dann liegt typischerweise kein Transfer nach Artikel 44 vor und keine SCC oder TIA ist zu verwalten. Nach unserer Einschätzung ist die gehostete DeepSeek API am riskantesten. Gehostete APIs, die außerhalb der EU betrieben werden, werfen Transferfragen auf; prüfen Sie die aktuelle Datenschutzrichtlinie und die Auftragsverarbeitungsbedingungen des Anbieters. Die APIs von Claude und GPT-6 Luna haben ein mittleres Risiko: Sie benötigen einen Transfermechanismus (EU-US Data Privacy Framework oder SCC); eine reine EU-Verarbeitung ist über OpenAIs Projects mit EU-Datenresidenz oder über Claude auf Amazon Bedrock bzw. Google Vertex AI in EU-Regionen möglich, nicht jedoch über Anthropics eigene API.',
         bullets: [
           'Qwen lokal: Niedrigstes Risiko. Kein Transfer, Apache 2.0-Gewichte für Qwen3.8-27B, quantisiert etwa 16–24 GB VRAM.',
-          'DeepSeek API: Höchstes Risiko. Daten in China gespeichert, PIPL-Rechtsordnung, kein EU-Angemessenheitsbeschluss.',
+          'DeepSeek API: Höchstes Risiko. Außerhalb der EU betrieben, kein EU-Angemessenheitsbeschluss für China; aktuelle Datenschutzrichtlinie und Auftragsverarbeitungsbedingungen prüfen.',
           'Claude-/GPT-APIs: Mittleres Risiko. Transfermechanismus erforderlich; EU-Region-Routen mindern die Fragen zur Anbieter-Rechtsordnung, beseitigen sie aber nicht.',
         ],
         updatedDate: '2026-10',
       },
       fr: {
         question: 'Quel LLM est le plus sûr selon le RGPD ?',
-        answer: 'Qwen3.8-27B ou Llama 4 Scout exécutés en local sur votre propre matériel : aucune donnée ne quitte votre juridiction, donc pas de transfert au sens de l\'article 44 et ni CCT ni TIA à gérer. L\'API hébergée de DeepSeek est la plus risquée, car les données sont stockées en Chine sous la PIPL. Les API Claude et GPT-6 Luna présentent un risque moyen : elles exigent un mécanisme de transfert (DPF ou CCT), et un traitement exclusivement dans l\'UE est possible via les Projets OpenAI à résidence des données européenne ou via Claude sur les régions UE d\'Amazon Bedrock / Google Vertex AI, mais pas via l\'API propre d\'Anthropic.',
+        answer: 'Qwen3.8-27B ou Llama 4 Scout exécutés en local sur votre propre matériel : si l\'environnement d\'exécution est configuré pour n\'effectuer aucun appel externe, aucune donnée ne quitte votre juridiction ; il n\'y a alors, en principe, pas de transfert au sens de l\'article 44 et ni CCT ni TIA à gérer. À notre avis, l\'API hébergée de DeepSeek est la plus risquée. Les API hébergées exploitées hors de l\'UE soulèvent des questions de transfert ; vérifiez la politique de confidentialité et les conditions de traitement des données en vigueur du fournisseur. Les API Claude et GPT-6 Luna présentent un risque moyen : elles exigent un mécanisme de transfert (DPF ou CCT), et un traitement exclusivement dans l\'UE est possible via les Projets OpenAI à résidence des données européenne ou via Claude sur les régions UE d\'Amazon Bedrock / Google Vertex AI, mais pas via l\'API propre d\'Anthropic.',
         bullets: [
           'Qwen local : risque le plus faible. Aucun transfert, poids Apache 2.0 pour Qwen3.8-27B, environ 16–24 Go de VRAM une fois quantifié.',
-          'API DeepSeek : risque le plus élevé. Données stockées en Chine, juridiction PIPL, pas de décision d\'adéquation UE.',
+          'API DeepSeek : risque le plus élevé. Exploitée hors de l\'UE, pas de décision d\'adéquation de l\'UE pour la Chine ; vérifiez sa politique de confidentialité et ses conditions de traitement des données en vigueur.',
           'API Claude/GPT : risque moyen. Mécanisme de transfert requis ; les routes en région UE réduisent sans supprimer les questions de juridiction du fournisseur.',
         ],
         updatedDate: '2026-10',
       },
       ja: {
         question: 'GDPRの下で最も安全なLLMは何ですか？',
-        answer: '自社ハードウェアでローカル実行するQwen3.8-27BまたはLlama 4 Scoutです。データが管轄の外に出ないため、第44条の移転は発生せず、SCCやTIAの管理も不要です。DeepSeekのホスト型APIは、データが中国でPIPLの下に保存されるため最もリスクが高くなります。ClaudeとGPT-6 LunaのAPIは中程度のリスクで、移転手段（EU-米国データプライバシーフレームワークまたはSCC）が必要です。EU内のみでの処理は、OpenAIのEUデータレジデンシー対応ProjectやAmazon Bedrock / Google Vertex AIのEUリージョン経由のClaudeで可能ですが、Anthropic自身のAPIでは利用できません。',
+        answer: '自社ハードウェアでローカル実行するQwen3.8-27BまたはLlama 4 Scoutです。実行環境が外部への通信を行わないよう設定されていれば、データは管轄の外に出ないため、通常は第44条の移転は発生せず、SCCやTIAの管理も不要です。当サイトの評価では、DeepSeekのホスト型APIが最もリスクが高くなります。EU外で運用されるホスト型APIは移転に関する論点を生じさせるため、提供者の最新のプライバシーポリシーとデータ処理条件を確認してください。ClaudeとGPT-6 LunaのAPIは中程度のリスクで、移転手段（EU-米国データプライバシーフレームワークまたはSCC）が必要です。EU内のみでの処理は、OpenAIのEUデータレジデンシー対応ProjectやAmazon Bedrock / Google Vertex AIのEUリージョン経由のClaudeで可能ですが、Anthropic自身のAPIでは利用できません。',
         bullets: [
           'Qwenローカル：最低リスク。移転なし。Qwen3.8-27BのウェイトはApache 2.0で、量子化時のVRAMは約16〜24 GBです。',
-          'DeepSeek API：最高リスク。データは中国に保存され、PIPLの管轄下にあり、EUの十分性認定もありません。',
+          'DeepSeek API：最高リスク。EU外で運用され、中国に対するEUの十分性認定はありません。提供者の最新のプライバシーポリシーとデータ処理条件を確認してください。',
           'Claude/GPT API：中程度リスク。移転手段が必要です。EUリージョン経由ならリスクは下がりますが、ベンダーの管轄に関する論点は残ります。',
         ],
         updatedDate: '2026-10',
       },
       zh: {
         question: '在GDPR下哪个LLM最安全？',
-        answer: '在自有硬件上本地运行Qwen3.8-27B或Llama 4 Scout：数据不会离开您所在的司法辖区，因此不存在第44条意义上的转移，也无需管理SCC或TIA。DeepSeek托管API风险最高，因为数据存储在中国并受PIPL约束。Claude和GPT-6 Luna API属于中等风险：需要转移机制（欧美数据隐私框架（DPF）或SCC）；仅在欧盟境内处理可通过OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock / Google Vertex AI欧盟区域使用Claude实现，Anthropic自家API不提供此选项。',
+        answer: '在自有硬件上本地运行Qwen3.8-27B或Llama 4 Scout：只要运行环境被配置为不向外发起调用，数据就不会离开您所在的司法辖区，通常不存在第44条意义上的转移，也无需管理SCC或TIA。在我们的评估中，DeepSeek托管API风险最高。在欧盟境外运营的托管API会引发转移方面的问题；请核对提供商当前的隐私政策和数据处理条款。Claude和GPT-6 Luna API属于中等风险：需要转移机制（欧美数据隐私框架（DPF）或SCC）；仅在欧盟境内处理可通过OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock / Google Vertex AI欧盟区域使用Claude实现，Anthropic自家API不提供此选项。',
         bullets: [
           '本地Qwen：风险最低。无转移，Qwen3.8-27B权重采用Apache 2.0许可，量化后约需16–24 GB VRAM。',
-          'DeepSeek API：风险最高。数据存储在中国，受PIPL管辖，无欧盟充分性认定。',
+          'DeepSeek API：风险最高。在欧盟境外运营，欧盟没有针对中国的充分性认定；请核对提供商当前的隐私政策和数据处理条款。',
           'Claude/GPT API：中等风险。需要转移机制；欧盟区域路径可降低但不能消除供应商管辖权问题。',
         ],
         updatedDate: '2026-10',
@@ -84,8 +84,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'In our assessment, DeepSeek\'s hosted API is highest-risk: data is stored in mainland China under PIPL, the EU has no adequacy decision for China, and the privacy policy allows disclosure to authorities where legally required',
-          'Qwen3.8-27B (Apache 2.0) and Llama 4 Scout run locally are lowest-risk: no Article 44 transfer, no SCC required, data stays on your hardware; Llama 4 Scout needs roughly 55–60 GB at 4-bit, Qwen3.8-27B fits a 24 GB GPU when quantized',
+          'In our assessment, DeepSeek\'s hosted API is highest-risk: hosted APIs operated outside the EU raise transfer questions (check the provider\'s current privacy policy and data processing terms), and the EU has no adequacy decision for China',
+          'Qwen3.8-27B (Apache 2.0) and Llama 4 Scout run locally are lowest-risk: if the runtime is configured not to call out, typically no Article 44 transfer and no SCC required, and data stays on your hardware; Llama 4 Scout needs roughly 55–60 GB at 4-bit, Qwen3.8-27B fits a 24 GB GPU when quantized',
           'Claude API and GPT-6 Luna are medium-risk: US vendors need the EU-US Data Privacy Framework or SCCs plus a Transfer Impact Assessment; Anthropic\'s own API offers only global or US inference, while OpenAI offers EU data residency for new Projects',
           'Recommended stacks: startups (Claude or OpenAI API under a DPA), data-sensitive organizations (Qwen3.8-27B on one 24 GB GPU), enterprises (multi-GPU local models, air-gapped)',
           'The risk matrix covers five vectors: data residency, training-data jurisdiction, ToS data retention, transfer-mechanism requirement, and overall risk level',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Deployment', 'Data Residency', 'Training-Data Jurisdiction', 'ToS Retention Risk', 'SCC / TIA Required?', 'Overall Risk Level'],
         rows: [
-          { Deployment: 'DeepSeek API', 'Data Residency': 'China (PRC servers)', 'Training-Data Jurisdiction': 'China (PIPL)', 'ToS Retention Risk': 'Policy allows sharing with authorities', 'SCC / TIA Required?': 'No adequacy decision; SCC + TIA hard to demonstrate (our assessment)', 'Overall Risk Level': '🔴 Highest' },
+          { Deployment: 'DeepSeek API', 'Data Residency': 'China (PRC servers)', 'Training-Data Jurisdiction': 'China', 'ToS Retention Risk': 'Check provider policy and DPA', 'SCC / TIA Required?': 'No adequacy decision; SCC + TIA hard to demonstrate (our assessment)', 'Overall Risk Level': '🔴 Highest' },
           { Deployment: 'Claude API (first-party)', 'Data Residency': 'US or global; no EU-only option', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'Per Anthropic DPA; verify retention', 'SCC / TIA Required?': 'DPF or SCC (in DPA) + TIA', 'Overall Risk Level': '🟠 Medium-High' },
           { Deployment: 'Claude on Bedrock / Vertex AI EU', 'Data Residency': 'EU region (set by endpoint)', 'Training-Data Jurisdiction': 'US vendor, EU processing', 'ToS Retention Risk': 'Cloud provider terms apply', 'SCC / TIA Required?': 'Depends on contract; assess TIA', 'Overall Risk Level': '🟡 Medium' },
           { Deployment: 'GPT-6 Luna API (default)', 'Data Residency': 'US (default project)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'DPA available; per API terms', 'SCC / TIA Required?': 'DPF or SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — Hard to justify for GDPR workflows (our assessment)',
-            text: 'In our assessment, DeepSeek\'s hosted API presents the highest risk of the options compared here because: (1) its privacy policy places data on servers in the People\'s Republic of China, where PIPL and related laws give authorities broad access; (2) the EU has no adequacy decision for China, and SCCs only help if a Transfer Impact Assessment can show the destination law does not undermine them, which is very hard to demonstrate here; (3) the policy allows disclosure to authorities where legally required. If prompts contain personal data of EU residents, using the hosted API likely lacks a valid Article 44 transfer basis. DeepSeek\'s open weights run locally carry the same low transfer risk as other local models; check the model\'s license and your own security setup.',
+            text: 'In our assessment, DeepSeek\'s hosted API presents the highest risk of the options compared here because: (1) hosted APIs operated outside the EU raise transfer questions, so check the provider\'s current privacy policy and data processing terms; and (2) the EU has no adequacy decision for China, and SCCs only help if a Transfer Impact Assessment can show the destination law does not undermine them, which is very hard to demonstrate here. If prompts contain personal data of EU residents, using the hosted API likely lacks a valid Article 44 transfer basis. DeepSeek\'s open weights run locally carry the same low transfer risk as other local models; check the model\'s license and your own security setup.',
           },
           {
             title: 'Claude API — Medium risk, manageable with a transfer mechanism',
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is DeepSeek GDPR compliant if I use it with an SCC?',
-            a: 'Very unlikely. SCCs only work if a Transfer Impact Assessment shows the destination country\'s law does not undermine them. For mainland China there is no EU adequacy decision, PIPL gives authorities broad access to data, and DeepSeek\'s privacy policy allows disclosure to authorities where legally required. In our assessment, for personal data of EU residents the hosted DeepSeek API is hard to justify. DeepSeek\'s open weights can be run on your own hardware, which removes the transfer, but check the model license and your security setup.',
+            a: 'Very unlikely. SCCs only work if a Transfer Impact Assessment shows the destination country\'s law does not undermine them. For mainland China there is no EU adequacy decision, and hosted APIs operated outside the EU raise transfer questions, so check the provider\'s current privacy policy and data processing terms. In our assessment, for personal data of EU residents the hosted DeepSeek API is hard to justify. DeepSeek\'s open weights can be run on your own hardware, which removes the transfer, but check the model license and your security setup. This is not legal advice.',
           },
           {
             q: 'Can I keep Claude prompts inside the EU?',
@@ -203,11 +203,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which LLM API is GDPR compliant?',
-            a: 'No API is compliant by itself: GDPR compliance depends on how you use it. Check four things: a signed DPA that makes the vendor your processor, a valid transfer mechanism (EU-US Data Privacy Framework or SCCs plus a TIA) if data leaves the EU, a clear retention and no-training setting, and a lawful basis for the personal data you send. OpenAI offers EU data-residency Projects for eligible customers and a DPA; Anthropic offers a DPA with SCCs, with EU processing available through cloud-provider regions. In our assessment, DeepSeek\'s hosted API is the hardest to justify. For sensitive data, local models avoid the transfer question entirely.',
+            a: 'No API is compliant by itself: GDPR compliance depends on how you use it. Check four things: a signed DPA that makes the vendor your processor, a valid transfer mechanism (EU-US Data Privacy Framework or SCCs plus a TIA) if data leaves the EU, a clear retention and no-training setting, and a lawful basis for the personal data you send. OpenAI offers EU data-residency Projects for eligible customers and a DPA; Anthropic offers a DPA with SCCs, with EU processing available through cloud-provider regions. In our assessment, DeepSeek\'s hosted API is the hardest to justify. For sensitive data, local models avoid the transfer question entirely. This is not legal advice.',
           },
           {
             q: 'Is Qwen safe to use under GDPR?',
-            a: 'It depends on how you run it. Qwen open weights (for example Qwen3.8-27B under Apache 2.0) run on your own hardware send no data to Alibaba, so there is no Article 44 transfer and the risk profile matches Llama. The Alibaba Cloud hosted API is different: you would be sending prompts to a provider outside the EU, which needs its own transfer assessment, DPA and region check. Verify the license on the model card, because terms differ across the Qwen family.',
+            a: 'It depends on how you run it. Qwen open weights (for example Qwen3.8-27B under Apache 2.0) run on your own hardware need not send data to Alibaba if the runtime is configured not to call out, so there is typically no Article 44 transfer and the risk profile is similar to Llama. The Alibaba Cloud hosted API is different: you would be sending prompts to a provider outside the EU, which needs its own transfer assessment, DPA and region check. Verify the license on the model card, because terms differ across the Qwen family.',
           },
           {
             q: 'Can I use Llama 4 Scout as a drop-in replacement for Claude?',
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is running an LLM on-prem more expensive than cloud APIs?',
-            a: 'Upfront: yes. Hardware (RTX 4070 Ti) costs ~$500–1000. Monthly: no. On-prem electricity is ~$5–10/month. Cloud APIs cost $0.001–0.01 per 1K tokens, which for heavy usage (>1M tokens/month) exceeds $100. Break-even is typically 6–12 months for medium-to-heavy usage. If you run <100K tokens/month, cloud APIs are cheaper. If you run >1M tokens/month, on-prem is cheaper. GDPR compliance is an additional business case: on-prem can reduce or remove the SCC/TIA step for the inference layer, but your other GDPR obligations remain (not legal advice).',
+            a: 'Upfront: yes, local hardware is a one-time cost, and electricity is an ongoing cost. Whether on-prem or cloud APIs are cheaper depends on your usage and the model you need; compare your own volume with the providers\' current pricing pages. GDPR compliance is an additional business case: on-prem can reduce or remove the SCC/TIA step for the inference layer, but your other GDPR obligations remain (not legal advice).',
           },
         ],
       },
@@ -252,14 +252,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'Matriz de riesgo RGPD: Qwen, DeepSeek, Llama y Claude',
-    metaDescription: 'Comparación de riesgos RGPD de LLM: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.',
+    metaDescription: 'Comparación de riesgos RGPD de LLM: Nuestra valoración: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8 min de lectura',
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
     primaryTerm: 'comparación de riesgo RGPD modelos LLM',
-    leadAnswerBlock: '**En nuestra valoración, la API alojada de DeepSeek presenta el mayor riesgo RGPD de las opciones comparadas: sus datos se almacenan en China continental, donde la PIPL otorga a las autoridades un acceso amplio, y la UE no tiene decisión de adecuación para China. Qwen3.8-27B y Llama 4 Scout ejecutados localmente tienen el menor riesgo porque, si el entorno de ejecución está configurado para no realizar llamadas externas, ningún dato personal sale de tu infraestructura. Las API de Claude y OpenAI GPT-6 Luna se sitúan en el punto medio: requieren un mecanismo de transferencia válido (Marco de Privacidad de Datos UE-EE. UU. o Cláusulas Contractuales Estándar) y, para una residencia estrictamente en la UE, una ruta con región de la UE, como los Proyectos con residencia de datos en la UE de OpenAI o Claude a través de Amazon Bedrock o de las regiones de la UE de Google Vertex AI.**',
+    leadAnswerBlock: '**En nuestra valoración, la API alojada de DeepSeek presenta el mayor riesgo RGPD de las opciones comparadas: las API alojadas operadas fuera de la UE plantean cuestiones de transferencia (revisa la política de privacidad y los términos de tratamiento de datos vigentes del proveedor) y la UE no tiene decisión de adecuación para China. Qwen3.8-27B y Llama 4 Scout ejecutados localmente tienen el menor riesgo porque, si el entorno de ejecución está configurado para no realizar llamadas externas, ningún dato personal sale de tu infraestructura. Las API de Claude y OpenAI GPT-6 Luna se sitúan en el punto medio: requieren un mecanismo de transferencia válido (Marco de Privacidad de Datos UE-EE. UU. o Cláusulas Contractuales Estándar) y, para una residencia estrictamente en la UE, una ruta con región de la UE, como los Proyectos con residencia de datos en la UE de OpenAI o Claude a través de Amazon Bedrock o de las regiones de la UE de Google Vertex AI.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
@@ -274,8 +274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'En nuestra valoración, la API alojada de DeepSeek es la de mayor riesgo: los datos se almacenan en China continental bajo la PIPL, la UE no tiene decisión de adecuación para China y la política de privacidad permite la divulgación a las autoridades cuando la ley lo exija',
-          'Qwen3.8-27B (Apache 2.0) y Llama 4 Scout ejecutados localmente son los de menor riesgo: sin transferencia según el Artículo 44, sin SCC requerida, los datos permanecen en tu hardware; Llama 4 Scout necesita unos 55–60 GB a 4 bits, Qwen3.8-27B cabe en una GPU de 24 GB cuantizado',
+          'En nuestra valoración, la API alojada de DeepSeek es la de mayor riesgo: las API alojadas operadas fuera de la UE plantean cuestiones de transferencia (revisa la política de privacidad y los términos de tratamiento de datos vigentes del proveedor) y la UE no tiene decisión de adecuación para China',
+          'Qwen3.8-27B (Apache 2.0) y Llama 4 Scout ejecutados localmente son los de menor riesgo: si el entorno de ejecución está configurado para no realizar llamadas externas, normalmente sin transferencia según el Artículo 44 ni SCC requerida, y los datos permanecen en tu hardware; Llama 4 Scout necesita unos 55–60 GB a 4 bits, Qwen3.8-27B cabe en una GPU de 24 GB cuantizado',
           'La API de Claude y GPT-6 Luna tienen riesgo medio: los proveedores estadounidenses requieren el Marco de Privacidad de Datos UE-EE. UU. o SCCs más una Evaluación de Impacto de Transferencia; la API propia de Anthropic ofrece solo inferencia global o en EE. UU., mientras que OpenAI ofrece residencia de datos en la UE para Proyectos nuevos',
           'Stacks recomendados: startups (API de Claude u OpenAI con un DPA), organizaciones con datos sensibles (Qwen3.8-27B en una GPU de 24 GB), empresas (modelos locales multi-GPU, air-gap)',
           'La matriz de riesgo cubre cinco vectores: residencia de datos, jurisdicción de datos de entrenamiento, retención de datos en ToS, requisito de mecanismo de transferencia y nivel de riesgo global',
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Despliegue', 'Residencia de datos', 'Jurisdicción de datos de entrenamiento', 'Riesgo de retención en ToS', '¿SCC / TIA requerida?', 'Nivel de riesgo global'],
         rows: [
-          { Despliegue: 'DeepSeek API', 'Residencia de datos': 'China (servidores en la RPC)', 'Jurisdicción de datos de entrenamiento': 'China (PIPL)', 'Riesgo de retención en ToS': 'La política permite compartir con las autoridades', '¿SCC / TIA requerida?': 'Sin decisión de adecuación; SCC + TIA difícil de acreditar (nuestra valoración)', 'Nivel de riesgo global': '🔴 Mayor' },
+          { Despliegue: 'DeepSeek API', 'Residencia de datos': 'China (servidores en la RPC)', 'Jurisdicción de datos de entrenamiento': 'China', 'Riesgo de retención en ToS': 'Revisa la política y el DPA del proveedor', '¿SCC / TIA requerida?': 'Sin decisión de adecuación; SCC + TIA difícil de acreditar (nuestra valoración)', 'Nivel de riesgo global': '🔴 Mayor' },
           { Despliegue: 'Claude API (directa)', 'Residencia de datos': 'EE. UU. o global; sin opción solo UE', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'Según DPA de Anthropic; verifica la retención', '¿SCC / TIA requerida?': 'DPF o SCC (en DPA) + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
           { Despliegue: 'Claude en Bedrock / Vertex AI UE', 'Residencia de datos': 'Región UE (según el endpoint)', 'Jurisdicción de datos de entrenamiento': 'Proveedor de EE. UU., procesamiento en la UE', 'Riesgo de retención en ToS': 'Rigen los términos del proveedor cloud', '¿SCC / TIA requerida?': 'Según contrato; evalúa la TIA', 'Nivel de riesgo global': '🟡 Medio' },
           { Despliegue: 'GPT-6 Luna API (por defecto)', 'Residencia de datos': 'EE. UU. (proyecto por defecto)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'DPA disponible; según términos de la API', '¿SCC / TIA requerida?': 'DPF o SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — Difícil de justificar para flujos de trabajo RGPD (nuestra valoración)',
-            text: 'En nuestra valoración, la API alojada de DeepSeek presenta el mayor riesgo de las opciones comparadas porque: (1) su política de privacidad sitúa los datos en servidores de la República Popular China, donde la PIPL y leyes afines dan a las autoridades un acceso amplio; (2) la UE no tiene decisión de adecuación para China, y las SCCs solo ayudan si una Evaluación de Impacto de Transferencia puede demostrar que la ley del país de destino no las menoscaba, algo muy difícil de acreditar aquí; (3) la política permite la divulgación a las autoridades cuando la ley lo exija. Si los prompts contienen datos personales de residentes en la UE, el uso de la API alojada probablemente carece de una base de transferencia válida según el Artículo 44. Los pesos abiertos de DeepSeek ejecutados localmente conllevan el mismo bajo riesgo de transferencia que otros modelos locales; revisa la licencia del modelo y tu propia configuración de seguridad.',
+            text: 'En nuestra valoración, la API alojada de DeepSeek presenta el mayor riesgo de las opciones comparadas porque: (1) las API alojadas operadas fuera de la UE plantean cuestiones de transferencia, así que revisa la política de privacidad y los términos de tratamiento de datos vigentes del proveedor; y (2) la UE no tiene decisión de adecuación para China, y las SCCs solo ayudan si una Evaluación de Impacto de Transferencia puede demostrar que la ley del país de destino no las menoscaba, algo muy difícil de acreditar aquí. Si los prompts contienen datos personales de residentes en la UE, el uso de la API alojada probablemente carece de una base de transferencia válida según el Artículo 44. Los pesos abiertos de DeepSeek ejecutados localmente conllevan el mismo bajo riesgo de transferencia que otros modelos locales; revisa la licencia del modelo y tu propia configuración de seguridad.',
           },
           {
             title: 'Claude API — Riesgo medio, gestionable con un mecanismo de transferencia',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Cumple DeepSeek el RGPD si lo uso con una SCC?',
-            a: 'Muy improbable. Las SCCs solo funcionan si una Evaluación de Impacto de Transferencia demuestra que la ley del país de destino no las menoscaba. Para China continental no hay decisión de adecuación de la UE, la PIPL da a las autoridades un acceso amplio a los datos y la política de privacidad de DeepSeek permite la divulgación a las autoridades cuando la ley lo exija. En nuestra valoración, para datos personales de residentes en la UE la API alojada de DeepSeek es difícil de justificar. Los pesos abiertos de DeepSeek pueden ejecutarse en tu propio hardware, lo que elimina la transferencia, pero revisa la licencia del modelo y tu configuración de seguridad.',
+            a: 'Muy improbable. Las SCCs solo funcionan si una Evaluación de Impacto de Transferencia demuestra que la ley del país de destino no las menoscaba. Para China continental no hay decisión de adecuación de la UE, y las API alojadas operadas fuera de la UE plantean cuestiones de transferencia, así que revisa la política de privacidad y los términos de tratamiento de datos vigentes del proveedor. En nuestra valoración, para datos personales de residentes en la UE la API alojada de DeepSeek es difícil de justificar. Los pesos abiertos de DeepSeek pueden ejecutarse en tu propio hardware, lo que elimina la transferencia, pero revisa la licencia del modelo y tu configuración de seguridad. Esto no es asesoramiento legal.',
           },
           {
             q: '¿Puedo mantener los prompts de Claude dentro de la UE?',
@@ -393,11 +393,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué API de LLM cumple el RGPD?',
-            a: 'Ninguna API cumple por sí sola: el cumplimiento del RGPD depende de cómo la uses. Comprueba cuatro cosas: un DPA firmado que convierta al proveedor en tu encargado del tratamiento, un mecanismo de transferencia válido (Marco de Privacidad de Datos UE-EE. UU. o SCCs más una TIA) si los datos salen de la UE, un ajuste claro de retención y de no entrenamiento, y una base legal para los datos personales que envías. OpenAI ofrece Proyectos con residencia de datos en la UE para clientes elegibles y un DPA; Anthropic ofrece un DPA con SCCs, con procesamiento en la UE disponible mediante regiones de proveedores cloud. En nuestra valoración, la API alojada de DeepSeek es la más difícil de justificar. Para datos sensibles, los modelos locales evitan por completo la cuestión de la transferencia.',
+            a: 'Ninguna API cumple por sí sola: el cumplimiento del RGPD depende de cómo la uses. Comprueba cuatro cosas: un DPA firmado que convierta al proveedor en tu encargado del tratamiento, un mecanismo de transferencia válido (Marco de Privacidad de Datos UE-EE. UU. o SCCs más una TIA) si los datos salen de la UE, un ajuste claro de retención y de no entrenamiento, y una base legal para los datos personales que envías. OpenAI ofrece Proyectos con residencia de datos en la UE para clientes elegibles y un DPA; Anthropic ofrece un DPA con SCCs, con procesamiento en la UE disponible mediante regiones de proveedores cloud. En nuestra valoración, la API alojada de DeepSeek es la más difícil de justificar. Para datos sensibles, los modelos locales evitan por completo la cuestión de la transferencia. Esto no es asesoramiento legal.',
           },
           {
             q: '¿Es seguro usar Qwen según el RGPD?',
-            a: 'Depende de cómo lo ejecutes. Los pesos abiertos de Qwen (por ejemplo Qwen3.8-27B bajo Apache 2.0) ejecutados en tu propio hardware no envían ningún dato a Alibaba, así que no hay transferencia según el Artículo 44 y el perfil de riesgo es igual al de Llama. La API alojada de Alibaba Cloud es distinta: enviarías prompts a un proveedor fuera de la UE, lo que requiere su propia evaluación de transferencia, DPA y comprobación de región. Verifica la licencia en la ficha del modelo, porque los términos varían dentro de la familia Qwen.',
+            a: 'Depende de cómo lo ejecutes. Los pesos abiertos de Qwen (por ejemplo Qwen3.8-27B bajo Apache 2.0) ejecutados en tu propio hardware no tienen por qué enviar datos a Alibaba si el entorno de ejecución está configurado para no realizar llamadas externas, así que normalmente no hay transferencia según el Artículo 44 y el perfil de riesgo es similar al de Llama. La API alojada de Alibaba Cloud es distinta: enviarías prompts a un proveedor fuera de la UE, lo que requiere su propia evaluación de transferencia, DPA y comprobación de región. Verifica la licencia en la ficha del modelo, porque los términos varían dentro de la familia Qwen.',
           },
           {
             q: '¿Puedo usar Llama 4 Scout como reemplazo directo de Claude?',
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es más caro ejecutar un LLM on-prem que usar APIs en la nube?',
-            a: 'Por adelantado: sí. El hardware (RTX 4070 Ti) cuesta ~$500–1000. Mensualmente: no. La electricidad on-prem es de ~$5–10/mes. Las API en la nube cuestan $0,001–0,01 por 1K tokens, lo que para un uso intensivo (>1M tokens/mes) supera los $100. El punto de equilibrio suele ser de 6–12 meses para uso medio-alto. Si ejecutas <100K tokens/mes, las API en la nube son más baratas. Si ejecutas >1M tokens/mes, el on-prem es más barato. El cumplimiento RGPD es un argumento empresarial adicional: el on-prem puede reducir o eliminar el paso de SCC/TIA para la capa de inferencia, pero el resto de las obligaciones del RGPD se mantienen (no es asesoramiento legal).',
+            a: 'Por adelantado: sí, el hardware local es un coste único y la electricidad es un coste continuo. Si resulta más barato el on-prem o las API en la nube depende del uso y del modelo que necesites; compara tu propio volumen con las páginas de precios actuales de los proveedores. El cumplimiento RGPD es un argumento empresarial adicional: el on-prem puede reducir o eliminar el paso de SCC/TIA para la capa de inferencia, pero el resto de las obligaciones del RGPD se mantienen (no es asesoramiento legal).',
           },
         ],
       },
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'مديرو أمن المعلومات وفرق المشتريات ومسؤولو الامتثال الذين يختارون بين نماذج LLM الاحتكارية ومفتوحة الأوزان',
     primaryTerm: 'مقارنة مخاطر GDPR لنماذج LLM',
-    leadAnswerBlock: '**في تقييمنا، تمثل واجهة DeepSeek API المستضافة أعلى مخاطر GDPR بين الخيارات المقارنة هنا: فبياناتها مخزّنة في الصين القارية حيث يمنح PIPL السلطات صلاحيات وصول واسعة، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين. أما نموذجا Qwen3.8-27B وLlama 4 Scout المشغّلان محليًا فمخاطرهما الأدنى لأنه، إذا كانت بيئة التشغيل مضبوطة على عدم إجراء اتصالات خارجية، لا تغادر أي بيانات شخصية بنيتك التحتية. وتقع واجهتا Claude وGPT-6 Luna في الوسط: فهما تتطلبان آلية نقل صالحة (إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو البنود التعاقدية القياسية)، وللإقامة الصارمة في الاتحاد الأوروبي تلزم جهة معالجة في منطقة أوروبية، مثل مشاريع OpenAI لإقامة البيانات في الاتحاد الأوروبي أو Claude عبر Amazon Bedrock أو مناطق Google Vertex AI في الاتحاد الأوروبي.**',
+    leadAnswerBlock: '**في تقييمنا، تمثل واجهة DeepSeek API المستضافة أعلى مخاطر GDPR بين الخيارات المقارنة هنا: فواجهات API المستضافة التي تُشغَّل خارج الاتحاد الأوروبي تثير أسئلة بشأن النقل (راجع سياسة الخصوصية الحالية للمزوّد وشروط معالجة البيانات لديه)، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين. أما نموذجا Qwen3.8-27B وLlama 4 Scout المشغّلان محليًا فمخاطرهما الأدنى لأنه، إذا كانت بيئة التشغيل مضبوطة على عدم إجراء اتصالات خارجية، لا تغادر أي بيانات شخصية بنيتك التحتية. وتقع واجهتا Claude وGPT-6 Luna في الوسط: فهما تتطلبان آلية نقل صالحة (إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو البنود التعاقدية القياسية)، وللإقامة الصارمة في الاتحاد الأوروبي تلزم جهة معالجة في منطقة أوروبية، مثل مشاريع OpenAI لإقامة البيانات في الاتحاد الأوروبي أو Claude عبر Amazon Bedrock أو مناطق Google Vertex AI في الاتحاد الأوروبي.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
@@ -477,8 +477,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'في تقييمنا، واجهة DeepSeek API المستضافة هي الأعلى مخاطرة: البيانات مخزّنة في الصين القارية وفق PIPL، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين، وتتيح سياسة الخصوصية الإفصاح للسلطات عند اشتراط القانون ذلك',
-          'نموذجا Qwen3.8-27B (بترخيص Apache 2.0) وLlama 4 Scout المشغّلان محليًا هما الأقل مخاطرة: لا نقل بموجب المادة 44، ولا حاجة لـ SCC، وتبقى البيانات على أجهزتك؛ ويحتاج Llama 4 Scout نحو 55–60 GB عند 4-bit، بينما يناسب Qwen3.8-27B بطاقة GPU بسعة 24 GB عند التكميم',
+          'في تقييمنا، واجهة DeepSeek API المستضافة هي الأعلى مخاطرة: واجهات API المستضافة التي تُشغَّل خارج الاتحاد الأوروبي تثير أسئلة بشأن النقل (راجع سياسة الخصوصية الحالية للمزوّد وشروط معالجة البيانات لديه)، ولا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين',
+          'نموذجا Qwen3.8-27B (بترخيص Apache 2.0) وLlama 4 Scout المشغّلان محليًا هما الأقل مخاطرة: إذا كانت بيئة التشغيل مضبوطة على عدم إجراء اتصالات خارجية، فعادةً لا نقل بموجب المادة 44 ولا حاجة لـ SCC، وتبقى البيانات على أجهزتك؛ ويحتاج Llama 4 Scout نحو 55–60 GB عند 4-bit، بينما يناسب Qwen3.8-27B بطاقة GPU بسعة 24 GB عند التكميم',
           'واجهتا Claude وGPT-6 Luna متوسطتا المخاطر: يحتاج المزوّدون الأمريكيون إلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو SCC إضافةً إلى تقييم أثر النقل (TIA)؛ وتوفر واجهة Anthropic نفسها استدلالًا عالميًا أو أمريكيًا فقط، بينما تقدم OpenAI إقامة بيانات في الاتحاد الأوروبي للمشاريع الجديدة',
           'الحزم الموصى بها: الشركات الناشئة (واجهة Claude أو OpenAI بموجب DPA)، والمؤسسات ذات البيانات الحساسة (نموذج Qwen3.8-27B على GPU واحدة بسعة 24 GB)، والشركات الكبرى (نماذج محلية متعددة الـ GPU ومعزولة شبكيًا)',
           'تغطي مصفوفة المخاطر خمسة متجهات: إقامة البيانات، والولاية القضائية لبيانات التدريب، والاحتفاظ بالبيانات في شروط الخدمة، واشتراط آلية النقل، ومستوى المخاطر الإجمالي',
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['النشر', 'إقامة البيانات', 'الولاية القضائية لبيانات التدريب', 'مخاطر الاحتفاظ في شروط الخدمة', 'هل SCC / TIA مطلوبة؟', 'مستوى المخاطر الإجمالي'],
         rows: [
-          { 'النشر': 'DeepSeek API', 'إقامة البيانات': 'الصين (خوادم في البر الرئيسي)', 'الولاية القضائية لبيانات التدريب': 'الصين (PIPL)', 'مخاطر الاحتفاظ في شروط الخدمة': 'السياسة تتيح المشاركة مع السلطات', 'هل SCC / TIA مطلوبة؟': 'لا قرار كفاية؛ يصعب إثبات SCC + TIA (تقييمنا)', 'مستوى المخاطر الإجمالي': '🔴 الأعلى' },
+          { 'النشر': 'DeepSeek API', 'إقامة البيانات': 'الصين (خوادم في البر الرئيسي)', 'الولاية القضائية لبيانات التدريب': 'الصين', 'مخاطر الاحتفاظ في شروط الخدمة': 'راجع سياسة المزوّد واتفاقية DPA', 'هل SCC / TIA مطلوبة؟': 'لا قرار كفاية؛ يصعب إثبات SCC + TIA (تقييمنا)', 'مستوى المخاطر الإجمالي': '🔴 الأعلى' },
           { 'النشر': 'واجهة Claude API (من المزوّد مباشرة)', 'إقامة البيانات': 'الولايات المتحدة أو عالمي؛ لا خيار أوروبي فقط', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'وفق DPA لدى Anthropic؛ تحقق من الاحتفاظ', 'هل SCC / TIA مطلوبة؟': 'DPF أو SCC (ضمن DPA) + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
           { 'النشر': 'Claude عبر Bedrock / Vertex AI في الاتحاد الأوروبي', 'إقامة البيانات': 'منطقة الاتحاد الأوروبي (تحددها نقطة الاتصال)', 'الولاية القضائية لبيانات التدريب': 'مزوّد أمريكي، معالجة في الاتحاد', 'مخاطر الاحتفاظ في شروط الخدمة': 'تسري شروط مزوّد السحابة', 'هل SCC / TIA مطلوبة؟': 'يتوقف على العقد؛ قيّم TIA', 'مستوى المخاطر الإجمالي': '🟡 متوسط' },
           { 'النشر': 'واجهة GPT-6 Luna API (الافتراضي)', 'إقامة البيانات': 'الولايات المتحدة (المشروع الافتراضي)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'DPA متاحة؛ وفق شروط API', 'هل SCC / TIA مطلوبة؟': 'DPF أو SCC + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — يصعب تبريره في مسارات عمل GDPR (تقييمنا)',
-            text: 'في تقييمنا، تمثل واجهة DeepSeek API المستضافة أعلى مخاطرة بين الخيارات المقارنة هنا لأن: (1) سياسة الخصوصية تضع البيانات على خوادم في جمهورية الصين الشعبية، حيث يمنح PIPL والقوانين المرتبطة به السلطات صلاحيات وصول واسعة؛ (2) لا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين، ولا تفيد SCC إلا إذا أثبت تقييم أثر النقل أن قانون الوجهة لا يقوّضها، وهو أمر يصعب إثباته هنا جدًا؛ (3) تتيح السياسة الإفصاح للسلطات عند اشتراط القانون ذلك. وإذا احتوت prompts على بيانات شخصية لمقيمين في الاتحاد الأوروبي، فالأرجح أن استخدام الواجهة المستضافة يفتقر إلى أساس نقل صالح بموجب المادة 44. أما أوزان DeepSeek المفتوحة المشغّلة محليًا فمخاطر النقل فيها منخفضة كما في سائر النماذج المحلية؛ تحقق من ترخيص النموذج ومن إعدادات الأمان لديك.',
+            text: 'في تقييمنا، تمثل واجهة DeepSeek API المستضافة أعلى مخاطرة بين الخيارات المقارنة هنا لأن: (1) واجهات API المستضافة التي تُشغَّل خارج الاتحاد الأوروبي تثير أسئلة بشأن النقل، لذا راجع سياسة الخصوصية الحالية للمزوّد وشروط معالجة البيانات لديه؛ و(2) لا يوجد قرار كفاية من الاتحاد الأوروبي بشأن الصين، ولا تفيد SCC إلا إذا أثبت تقييم أثر النقل أن قانون الوجهة لا يقوّضها، وهو أمر يصعب إثباته هنا جدًا. وإذا احتوت prompts على بيانات شخصية لمقيمين في الاتحاد الأوروبي، فالأرجح أن استخدام الواجهة المستضافة يفتقر إلى أساس نقل صالح بموجب المادة 44. أما أوزان DeepSeek المفتوحة المشغّلة محليًا فمخاطر النقل فيها منخفضة كما في سائر النماذج المحلية؛ تحقق من ترخيص النموذج ومن إعدادات الأمان لديك.',
           },
           {
             title: 'واجهة Claude API — مخاطرة متوسطة، يمكن إدارتها بآلية نقل',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل DeepSeek متوافق مع GDPR إذا استخدمته مع SCC؟',
-            a: 'هذا مستبعد جدًا. لا تنفع SCC إلا إذا أثبت تقييم أثر النقل أن قانون بلد الوجهة لا يقوّضها. وفي الصين القارية لا يوجد قرار كفاية من الاتحاد الأوروبي، ويمنح PIPL السلطات صلاحيات وصول واسعة إلى البيانات، وتتيح سياسة خصوصية DeepSeek الإفصاح للسلطات عند اشتراط القانون ذلك. وفي تقييمنا، يصعب تبرير استخدام واجهة DeepSeek API المستضافة مع البيانات الشخصية لمقيمين في الاتحاد الأوروبي. يمكن تشغيل أوزان DeepSeek المفتوحة على أجهزتك، مما يزيل النقل، لكن تحقق من ترخيص النموذج ومن إعدادات الأمان لديك.',
+            a: 'هذا مستبعد جدًا. لا تنفع SCC إلا إذا أثبت تقييم أثر النقل أن قانون بلد الوجهة لا يقوّضها. وفي الصين القارية لا يوجد قرار كفاية من الاتحاد الأوروبي، وتثير واجهات API المستضافة التي تُشغَّل خارج الاتحاد الأوروبي أسئلة بشأن النقل، لذا راجع سياسة الخصوصية الحالية للمزوّد وشروط معالجة البيانات لديه. وفي تقييمنا، يصعب تبرير استخدام واجهة DeepSeek API المستضافة مع البيانات الشخصية لمقيمين في الاتحاد الأوروبي. يمكن تشغيل أوزان DeepSeek المفتوحة على أجهزتك، مما يزيل النقل، لكن تحقق من ترخيص النموذج ومن إعدادات الأمان لديك. هذه ليست استشارة قانونية.',
           },
           {
             q: 'هل يمكنني إبقاء prompts الخاصة بـ Claude داخل الاتحاد الأوروبي؟',
@@ -596,11 +596,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي واجهة LLM API متوافقة مع GDPR؟',
-            a: 'لا توجد واجهة متوافقة بذاتها: فالامتثال لـ GDPR يتوقف على كيفية استخدامك لها. تحقق من أربعة أمور: DPA موقّعة تجعل المزوّد جهة معالجة لديك، وآلية نقل صالحة (إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو SCC مع TIA) إذا غادرت البيانات الاتحاد الأوروبي، وإعداد واضح للاحتفاظ وعدم التدريب، وأساس قانوني للبيانات الشخصية التي ترسلها. تقدم OpenAI مشاريع لإقامة البيانات في الاتحاد الأوروبي للعملاء المؤهلين مع DPA؛ وتقدم Anthropic اتفاقية DPA مع بنود SCC، مع توفر المعالجة داخل الاتحاد الأوروبي عبر مناطق مزودي السحابة. وفي تقييمنا، تُعد واجهة DeepSeek API المستضافة الأصعب تبريرًا. وللبيانات الحساسة تتجنب النماذج المحلية سؤال النقل كليًا.',
+            a: 'لا توجد واجهة متوافقة بذاتها: فالامتثال لـ GDPR يتوقف على كيفية استخدامك لها. تحقق من أربعة أمور: DPA موقّعة تجعل المزوّد جهة معالجة لديك، وآلية نقل صالحة (إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو SCC مع TIA) إذا غادرت البيانات الاتحاد الأوروبي، وإعداد واضح للاحتفاظ وعدم التدريب، وأساس قانوني للبيانات الشخصية التي ترسلها. تقدم OpenAI مشاريع لإقامة البيانات في الاتحاد الأوروبي للعملاء المؤهلين مع DPA؛ وتقدم Anthropic اتفاقية DPA مع بنود SCC، مع توفر المعالجة داخل الاتحاد الأوروبي عبر مناطق مزودي السحابة. وفي تقييمنا، تُعد واجهة DeepSeek API المستضافة الأصعب تبريرًا. وللبيانات الحساسة تتجنب النماذج المحلية سؤال النقل كليًا. هذه ليست استشارة قانونية.',
           },
           {
             q: 'هل Qwen آمن للاستخدام وفق GDPR؟',
-            a: 'يتوقف ذلك على طريقة تشغيله. فأوزان Qwen المفتوحة (مثل Qwen3.8-27B بترخيص Apache 2.0) المشغّلة على أجهزتك لا ترسل أي بيانات إلى Alibaba، فلا يوجد نقل بموجب المادة 44 ويطابق ملف المخاطر ملف Llama. أما واجهة Alibaba Cloud المستضافة فمختلفة: إذ سترسل prompts إلى مزوّد خارج الاتحاد الأوروبي، مما يستلزم تقييم نقل مستقلًا وDPA وفحصًا للمنطقة. وتحقق من الترخيص في بطاقة النموذج، لأن الشروط تختلف داخل عائلة Qwen.',
+            a: 'يتوقف ذلك على طريقة تشغيله. فأوزان Qwen المفتوحة (مثل Qwen3.8-27B بترخيص Apache 2.0) المشغّلة على أجهزتك لا يلزم أن ترسل أي بيانات إلى Alibaba إذا كانت بيئة التشغيل مضبوطة على عدم إجراء اتصالات خارجية، فعادةً لا يوجد نقل بموجب المادة 44 ويشبه ملف المخاطر ملف Llama. أما واجهة Alibaba Cloud المستضافة فمختلفة: إذ سترسل prompts إلى مزوّد خارج الاتحاد الأوروبي، مما يستلزم تقييم نقل مستقلًا وDPA وفحصًا للمنطقة. وتحقق من الترخيص في بطاقة النموذج، لأن الشروط تختلف داخل عائلة Qwen.',
           },
           {
             q: 'هل يمكنني استخدام Llama 4 Scout بديلًا مباشرًا لـ Claude؟',
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تشغيل LLM داخل المقر أغلى من استخدام واجهات API السحابية؟',
-            a: 'مقدمًا: نعم. تكلف الأجهزة (RTX 4070 Ti) نحو 500–1000 دولار. شهريًا: لا. كهرباء المقر نحو 5–10 دولارات شهريًا. وتكلف واجهات API السحابية 0.001–0.01 دولار لكل 1K tokens، وهو ما يتجاوز 100 دولار للاستخدام الكثيف (>1M tokens/شهر). نقطة التعادل عادةً 6–12 شهرًا للاستخدام المتوسط-المرتفع. إذا شغّلت <100K tokens/شهر، تكون واجهات API السحابية أرخص. وإذا شغّلت >1M tokens/شهر، يكون المقر أرخص. والامتثال لـ GDPR حجة أعمال إضافية: قد يقلّص المقر خطوة SCC/TIA لطبقة الاستدلال أو يلغيها، لكن بقية التزامات GDPR تبقى قائمة (ليست استشارة قانونية).',
+            a: 'مقدمًا: نعم، فالأجهزة المحلية تكلفة لمرة واحدة، والكهرباء تكلفة مستمرة. ويتوقف كون المقر أرخص أم واجهات API السحابية على حجم استخدامك والنموذج الذي تحتاجه؛ قارن حجمك الفعلي بصفحات أسعار المزوّدين الحالية. والامتثال لـ GDPR حجة أعمال إضافية: قد يقلّص المقر خطوة SCC/TIA لطبقة الاستدلال أو يلغيها، لكن بقية التزامات GDPR تبقى قائمة (ليست استشارة قانونية).',
           },
         ],
       },
@@ -658,14 +658,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'DSGVO-Risikovergleich: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'DSGVO-Risikomatrix 2026: Qwen, DeepSeek, Llama, Claude',
-    metaDescription: 'DSGVO-LLM-Vergleich: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.',
+    metaDescription: 'DSGVO-LLM-Vergleich: Unsere Risikoeinschätzung: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8 min Lesedauer',
     educationalLevel: 'Advanced',
     audience: 'CISOs, Beschaffungsteams und Compliance-Beauftragte, die zwischen proprietären und offenen LLMs wählen',
     primaryTerm: 'DSGVO-Risikovergleich LLM-Modelle',
-    leadAnswerBlock: '**Nach unserer Einschätzung birgt die gehostete DeepSeek API unter den hier verglichenen Optionen das höchste DSGVO-Risiko: Die Daten werden auf dem chinesischen Festland gespeichert, wo das PIPL den Behörden weitreichenden Zugriff einräumt, und für China gibt es keinen EU-Angemessenheitsbeschluss. Lokal betriebene Modelle wie Qwen3.8-27B und Llama 4 Scout tragen das niedrigste Risiko, weil keine personenbezogenen Daten Ihre Infrastruktur verlassen, sofern die Laufzeitumgebung so konfiguriert ist, dass sie keine externen Aufrufe macht. Die APIs von Claude und OpenAI GPT-6 Luna liegen im Mittelfeld: Sie benötigen einen gültigen Transfermechanismus (EU-US Data Privacy Framework oder Standardvertragsklauseln) und, für strikte EU-Datenhaltung, eine EU-Region-Route wie OpenAIs Projects mit EU-Datenresidenz oder Claude über Amazon Bedrock bzw. Google Vertex AI in EU-Regionen.**',
+    leadAnswerBlock: '**Nach unserer Einschätzung birgt die gehostete DeepSeek API unter den hier verglichenen Optionen das höchste DSGVO-Risiko: Gehostete APIs, die außerhalb der EU betrieben werden, werfen Transferfragen auf (prüfen Sie die aktuelle Datenschutzrichtlinie und die Auftragsverarbeitungsbedingungen des Anbieters), und für China gibt es keinen EU-Angemessenheitsbeschluss. Lokal betriebene Modelle wie Qwen3.8-27B und Llama 4 Scout tragen das niedrigste Risiko, weil keine personenbezogenen Daten Ihre Infrastruktur verlassen, sofern die Laufzeitumgebung so konfiguriert ist, dass sie keine externen Aufrufe macht. Die APIs von Claude und OpenAI GPT-6 Luna liegen im Mittelfeld: Sie benötigen einen gültigen Transfermechanismus (EU-US Data Privacy Framework oder Standardvertragsklauseln) und, für strikte EU-Datenhaltung, eine EU-Region-Route wie OpenAIs Projects mit EU-Datenresidenz oder Claude über Amazon Bedrock bzw. Google Vertex AI in EU-Regionen.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'Multi-GPU'],
     toc: [
@@ -680,8 +680,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Nach unserer Einschätzung hat die gehostete DeepSeek API das höchste Risiko: Die Daten werden auf dem chinesischen Festland unter dem PIPL gespeichert, für China gibt es keinen EU-Angemessenheitsbeschluss, und die Datenschutzrichtlinie erlaubt die Weitergabe an Behörden, wo gesetzlich vorgeschrieben',
-          'Lokal betriebene Modelle wie Qwen3.8-27B (Apache 2.0) und Llama 4 Scout haben das niedrigste Risiko: kein Transfer nach Artikel 44, keine SCC erforderlich, die Daten bleiben auf Ihrer Hardware; Llama 4 Scout benötigt bei 4-Bit etwa 55–60 GB, Qwen3.8-27B passt quantisiert auf eine 24-GB-GPU',
+          'Nach unserer Einschätzung hat die gehostete DeepSeek API das höchste Risiko: Gehostete APIs, die außerhalb der EU betrieben werden, werfen Transferfragen auf (prüfen Sie die aktuelle Datenschutzrichtlinie und die Auftragsverarbeitungsbedingungen des Anbieters), und für China gibt es keinen EU-Angemessenheitsbeschluss',
+          'Lokal betriebene Modelle wie Qwen3.8-27B (Apache 2.0) und Llama 4 Scout haben das niedrigste Risiko: Ist die Laufzeitumgebung so konfiguriert, dass sie keine externen Aufrufe macht, liegt typischerweise kein Transfer nach Artikel 44 vor und es sind keine SCC erforderlich; die Daten bleiben auf Ihrer Hardware; Llama 4 Scout benötigt bei 4-Bit etwa 55–60 GB, Qwen3.8-27B passt quantisiert auf eine 24-GB-GPU',
           'Claude API und GPT-6 Luna haben ein mittleres Risiko: US-Anbieter benötigen das EU-US Data Privacy Framework oder SCC plus eine Transfer Impact Assessment; Anthropics eigene API bietet nur globale oder US-Inferenz, während OpenAI für neue Projects EU-Datenresidenz anbietet',
           'Empfohlene Stacks: Startups (Claude- oder OpenAI-API mit DPA), datensensible Organisationen (Qwen3.8-27B auf einer 24-GB-GPU), Unternehmen (lokale Modelle auf mehreren GPUs, Air-Gap)',
           'Die Risikomatrix deckt fünf Vektoren ab: Datenspeicherung, Gerichtsbarkeit der Trainingsdaten, ToS-Datenspeicherung, Transfermechanismus-Anforderung und Gesamtrisiko',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Bereitstellung', 'Datenspeicherung', 'Ausbildungsdaten-Gerichtsbarkeit', 'ToS-Speicherrisiko', 'SVK/TIA erforderlich?', 'Gesamtrisiko'],
         rows: [
-          { Bereitstellung: 'DeepSeek API', Datenspeicherung: 'China (PRC-Server)', 'Ausbildungsdaten-Gerichtsbarkeit': 'China (PIPL)', 'ToS-Speicherrisiko': 'Richtlinie erlaubt Weitergabe an Behörden', 'SVK/TIA erforderlich?': 'Kein Angemessenheitsbeschluss; SCC + TIA schwer nachweisbar (unsere Einschätzung)', Gesamtrisiko: '🔴 Höchstes' },
+          { Bereitstellung: 'DeepSeek API', Datenspeicherung: 'China (PRC-Server)', 'Ausbildungsdaten-Gerichtsbarkeit': 'China', 'ToS-Speicherrisiko': 'Richtlinie und DPA des Anbieters prüfen', 'SVK/TIA erforderlich?': 'Kein Angemessenheitsbeschluss; SCC + TIA schwer nachweisbar (unsere Einschätzung)', Gesamtrisiko: '🔴 Höchstes' },
           { Bereitstellung: 'Claude API (Erstanbieter)', Datenspeicherung: 'USA oder global; keine reine EU-Option', 'Ausbildungsdaten-Gerichtsbarkeit': 'USA', 'ToS-Speicherrisiko': 'Laut Anthropic-DPA; Speicherdauer prüfen', 'SVK/TIA erforderlich?': 'DPF oder SCC (im DPA) + TIA', Gesamtrisiko: '🟠 Mittel-Hoch' },
           { Bereitstellung: 'Claude über Bedrock / Vertex AI EU', Datenspeicherung: 'EU-Region (per Endpunkt festgelegt)', 'Ausbildungsdaten-Gerichtsbarkeit': 'US-Anbieter, EU-Verarbeitung', 'ToS-Speicherrisiko': 'Bedingungen des Cloud-Anbieters gelten', 'SVK/TIA erforderlich?': 'Vertragsabhängig; TIA prüfen', Gesamtrisiko: '🟡 Mittel' },
           { Bereitstellung: 'GPT-6 Luna API (Standard)', Datenspeicherung: 'USA (Standard-Projekt)', 'Ausbildungsdaten-Gerichtsbarkeit': 'USA', 'ToS-Speicherrisiko': 'DPA verfügbar; laut API-Bedingungen', 'SVK/TIA erforderlich?': 'DPF oder SCC + TIA', Gesamtrisiko: '🟠 Mittel-Hoch' },
@@ -741,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — Für DSGVO-Workflows schwer zu rechtfertigen (unsere Einschätzung)',
-            text: 'Nach unserer Einschätzung birgt die gehostete DeepSeek API unter den hier verglichenen Optionen das höchste Risiko, weil: (1) die Datenschutzrichtlinie die Daten auf Servern in der Volksrepublik China verortet, wo das PIPL und verwandte Gesetze den Behörden weitreichenden Zugriff geben; (2) es keinen EU-Angemessenheitsbeschluss für China gibt und SCC nur helfen, wenn eine Transfer Impact Assessment belegen kann, dass das Recht des Ziellands sie nicht untergräbt, was hier sehr schwer nachzuweisen ist; (3) die Richtlinie die Weitergabe an Behörden erlaubt, wo gesetzlich vorgeschrieben. Enthalten Ihre Prompts personenbezogene Daten von EU-Bewohnern, fehlt für die Nutzung der gehosteten API wahrscheinlich eine gültige Rechtsgrundlage für den Transfer nach Artikel 44. Die offenen Gewichte von DeepSeek tragen lokal betrieben dasselbe niedrige Transferrisiko wie andere lokale Modelle; prüfen Sie die Lizenz des Modells und Ihre eigene Sicherheitsumgebung.',
+            text: 'Nach unserer Einschätzung birgt die gehostete DeepSeek API unter den hier verglichenen Optionen das höchste Risiko, weil: (1) gehostete APIs, die außerhalb der EU betrieben werden, Transferfragen aufwerfen, weshalb Sie die aktuelle Datenschutzrichtlinie und die Auftragsverarbeitungsbedingungen des Anbieters prüfen sollten; und (2) es keinen EU-Angemessenheitsbeschluss für China gibt und SCC nur helfen, wenn eine Transfer Impact Assessment belegen kann, dass das Recht des Ziellands sie nicht untergräbt, was hier sehr schwer nachzuweisen ist. Enthalten Ihre Prompts personenbezogene Daten von EU-Bewohnern, fehlt für die Nutzung der gehosteten API wahrscheinlich eine gültige Rechtsgrundlage für den Transfer nach Artikel 44. Die offenen Gewichte von DeepSeek tragen lokal betrieben dasselbe niedrige Transferrisiko wie andere lokale Modelle; prüfen Sie die Lizenz des Modells und Ihre eigene Sicherheitsumgebung.',
           },
           {
             title: 'Claude API — Mittleres Risiko, mit Transfermechanismus beherrschbar',
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist DeepSeek DSGVO-konform, wenn ich es mit SCC verwende?',
-            a: 'Sehr unwahrscheinlich. SCC funktionieren nur, wenn eine Transfer Impact Assessment zeigt, dass das Recht des Ziellands sie nicht untergräbt. Für das chinesische Festland gibt es keinen EU-Angemessenheitsbeschluss, das PIPL gibt den Behörden weitreichenden Datenzugriff, und die Datenschutzrichtlinie von DeepSeek erlaubt die Weitergabe an Behörden, wo gesetzlich vorgeschrieben. Nach unserer Einschätzung ist die gehostete DeepSeek API für personenbezogene Daten von EU-Bewohnern schwer zu rechtfertigen. Die offenen Gewichte von DeepSeek lassen sich auf eigener Hardware betreiben, was den Transfer entfallen lässt, prüfen Sie jedoch die Modelllizenz und Ihre Sicherheitsumgebung.',
+            a: 'Sehr unwahrscheinlich. SCC funktionieren nur, wenn eine Transfer Impact Assessment zeigt, dass das Recht des Ziellands sie nicht untergräbt. Für das chinesische Festland gibt es keinen EU-Angemessenheitsbeschluss, und gehostete APIs, die außerhalb der EU betrieben werden, werfen Transferfragen auf; prüfen Sie die aktuelle Datenschutzrichtlinie und die Auftragsverarbeitungsbedingungen des Anbieters. Nach unserer Einschätzung ist die gehostete DeepSeek API für personenbezogene Daten von EU-Bewohnern schwer zu rechtfertigen. Die offenen Gewichte von DeepSeek lassen sich auf eigener Hardware betreiben, was den Transfer entfallen lässt, prüfen Sie jedoch die Modelllizenz und Ihre Sicherheitsumgebung. Dies ist keine Rechtsberatung.',
           },
           {
             q: 'Kann ich Claude-Prompts innerhalb der EU halten?',
@@ -799,11 +799,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche LLM-API ist DSGVO-konform?',
-            a: 'Keine API ist für sich genommen konform: Die DSGVO-Konformität hängt davon ab, wie Sie sie einsetzen. Prüfen Sie vier Dinge: einen unterzeichneten DPA, der den Anbieter zu Ihrem Auftragsverarbeiter macht; einen gültigen Transfermechanismus (EU-US Data Privacy Framework oder SCC plus TIA), falls Daten die EU verlassen; eine klare Einstellung zu Speicherung und Nicht-Training; und eine Rechtsgrundlage für die personenbezogenen Daten, die Sie senden. OpenAI bietet berechtigten Kunden Projects mit EU-Datenresidenz und einen DPA; Anthropic bietet einen DPA mit SCC, wobei EU-Verarbeitung über die Regionen von Cloud-Anbietern möglich ist. Nach unserer Einschätzung ist die gehostete DeepSeek API am schwersten zu rechtfertigen. Für sensible Daten umgehen lokale Modelle die Transferfrage vollständig.',
+            a: 'Keine API ist für sich genommen konform: Die DSGVO-Konformität hängt davon ab, wie Sie sie einsetzen. Prüfen Sie vier Dinge: einen unterzeichneten DPA, der den Anbieter zu Ihrem Auftragsverarbeiter macht; einen gültigen Transfermechanismus (EU-US Data Privacy Framework oder SCC plus TIA), falls Daten die EU verlassen; eine klare Einstellung zu Speicherung und Nicht-Training; und eine Rechtsgrundlage für die personenbezogenen Daten, die Sie senden. OpenAI bietet berechtigten Kunden Projects mit EU-Datenresidenz und einen DPA; Anthropic bietet einen DPA mit SCC, wobei EU-Verarbeitung über die Regionen von Cloud-Anbietern möglich ist. Nach unserer Einschätzung ist die gehostete DeepSeek API am schwersten zu rechtfertigen. Für sensible Daten umgehen lokale Modelle die Transferfrage vollständig. Dies ist keine Rechtsberatung.',
           },
           {
             q: 'Ist Qwen unter der DSGVO sicher nutzbar?',
-            a: 'Das hängt davon ab, wie Sie es betreiben. Qwen-Gewichte (zum Beispiel Qwen3.8-27B unter Apache 2.0), die auf eigener Hardware laufen, senden keine Daten an Alibaba; es gibt also keinen Transfer nach Artikel 44, und das Risikoprofil entspricht dem von Llama. Die gehostete Alibaba Cloud API ist etwas anderes: Sie würden Prompts an einen Anbieter außerhalb der EU senden, was eine eigene Transferbewertung, einen DPA und eine Regionsprüfung erfordert. Prüfen Sie die Lizenz auf der Model Card, da die Bedingungen innerhalb der Qwen-Familie variieren.',
+            a: 'Das hängt davon ab, wie Sie es betreiben. Qwen-Gewichte (zum Beispiel Qwen3.8-27B unter Apache 2.0), die auf eigener Hardware laufen, müssen keine Daten an Alibaba senden, sofern die Laufzeitumgebung so konfiguriert ist, dass sie keine externen Aufrufe macht; es gibt dann typischerweise keinen Transfer nach Artikel 44, und das Risikoprofil ähnelt dem von Llama. Die gehostete Alibaba Cloud API ist etwas anderes: Sie würden Prompts an einen Anbieter außerhalb der EU senden, was eine eigene Transferbewertung, einen DPA und eine Regionsprüfung erfordert. Prüfen Sie die Lizenz auf der Model Card, da die Bedingungen innerhalb der Qwen-Familie variieren.',
           },
           {
             q: 'Kann ich Llama 4 Scout als direkten Ersatz für Claude verwenden?',
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist der Betrieb eines LLM On-Prem teurer als Cloud-APIs?',
-            a: 'Anfangs: ja. Hardware (RTX 4070 Ti) kostet ~500–1.000 $. Monatlich: nein. On-Prem-Strom liegt bei ~5–10 $/Monat. Cloud-APIs kosten 0,001–0,01 $ pro 1.000 Token, was bei intensiver Nutzung (>1 Mio. Token/Monat) 100 $ übersteigt. Der Break-even liegt typischerweise bei 6–12 Monaten für mittlere bis starke Nutzung. Bei <100.000 Token/Monat sind Cloud-APIs günstiger. Bei >1 Mio. Token/Monat ist On-Prem günstiger. DSGVO-Konformität ist ein zusätzlicher Business Case: On-Prem kann den SVK-/TIA-Schritt für die Inferenzebene verringern oder entfallen lassen, die übrigen DSGVO-Pflichten bleiben aber bestehen (keine Rechtsberatung).',
+            a: 'Anfangs: ja, lokale Hardware ist eine einmalige Ausgabe, der Strom ein laufender Kostenfaktor. Ob On-Prem oder Cloud-APIs günstiger sind, hängt von Ihrer Nutzung und dem benötigten Modell ab; vergleichen Sie Ihr eigenes Volumen mit den aktuellen Preisseiten der Anbieter. DSGVO-Konformität ist ein zusätzlicher Business Case: On-Prem kann den SVK-/TIA-Schritt für die Inferenzebene verringern oder entfallen lassen, die übrigen DSGVO-Pflichten bleiben aber bestehen (keine Rechtsberatung).',
           },
         ],
       },
@@ -848,14 +848,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'Comparaison des risques RGPD : Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'Matrice de risque RGPD : comparaison LLM Qwen DeepSeek Llama Claude | PromptQuorum',
-    metaDescription: 'Comparaison des risques RGPD des LLM : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.',
+    metaDescription: 'Comparaison des risques RGPD des LLM : Notre évaluation : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8 min de lecture',
     educationalLevel: 'Advanced',
     audience: 'RSSI, équipes d\'achat et responsables de conformité choisissant entre LLM propriétaires et à poids ouverts',
     primaryTerm: 'comparaison des risques RGPD modèles LLM',
-    leadAnswerBlock: '**À notre avis, l\'API hébergée de DeepSeek présente le risque RGPD le plus élevé des options comparées ici : ses données sont stockées en Chine continentale, où la PIPL donne aux autorités un large accès, et l\'UE n\'a pas de décision d\'adéquation pour la Chine. Qwen3.8-27B et Llama 4 Scout exécutés en local portent le risque le plus faible, car, si l\'environnement d\'exécution est configuré pour n\'effectuer aucun appel externe, aucune donnée personnelle ne quitte votre infrastructure. Les API Claude et OpenAI GPT-6 Luna se situent entre les deux : elles exigent un mécanisme de transfert valide (cadre de protection des données UE-États-Unis, DPF, ou clauses contractuelles types, CCT) et, pour une résidence stricte dans l\'UE, une voie en région UE comme les Projets OpenAI à résidence des données européenne, ou Claude via les régions UE d\'Amazon Bedrock ou de Google Vertex AI.**',
+    leadAnswerBlock: '**À notre avis, l\'API hébergée de DeepSeek présente le risque RGPD le plus élevé des options comparées ici : les API hébergées exploitées hors de l\'UE soulèvent des questions de transfert (vérifiez la politique de confidentialité et les conditions de traitement des données en vigueur du fournisseur), et l\'UE n\'a pas de décision d\'adéquation pour la Chine. Qwen3.8-27B et Llama 4 Scout exécutés en local portent le risque le plus faible, car, si l\'environnement d\'exécution est configuré pour n\'effectuer aucun appel externe, aucune donnée personnelle ne quitte votre infrastructure. Les API Claude et OpenAI GPT-6 Luna se situent entre les deux : elles exigent un mécanisme de transfert valide (cadre de protection des données UE-États-Unis, DPF, ou clauses contractuelles types, CCT) et, pour une résidence stricte dans l\'UE, une voie en région UE comme les Projets OpenAI à résidence des données européenne, ou Claude via les régions UE d\'Amazon Bedrock ou de Google Vertex AI.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 Go VRAM', '24 Go VRAM', 'multi-GPU'],
     toc: [
@@ -870,8 +870,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'À notre avis, l\'API hébergée de DeepSeek est la plus risquée : les données sont stockées en Chine continentale sous la PIPL, l\'UE n\'a pas de décision d\'adéquation pour la Chine, et la politique de confidentialité autorise la divulgation aux autorités lorsque la loi l\'exige',
-          'Qwen3.8-27B (Apache 2.0) et Llama 4 Scout exécutés en local sont les moins risqués : pas de transfert au sens de l\'article 44, pas de CCT requises, les données restent sur votre matériel ; Llama 4 Scout demande environ 55–60 Go en 4 bits, Qwen3.8-27B tient sur un GPU de 24 Go une fois quantifié',
+          'À notre avis, l\'API hébergée de DeepSeek est la plus risquée : les API hébergées exploitées hors de l\'UE soulèvent des questions de transfert (vérifiez la politique de confidentialité et les conditions de traitement des données en vigueur du fournisseur), et l\'UE n\'a pas de décision d\'adéquation pour la Chine',
+          'Qwen3.8-27B (Apache 2.0) et Llama 4 Scout exécutés en local sont les moins risqués : si l\'environnement d\'exécution est configuré pour n\'effectuer aucun appel externe, en principe pas de transfert au sens de l\'article 44 et pas de CCT requises ; les données restent sur votre matériel ; Llama 4 Scout demande environ 55–60 Go en 4 bits, Qwen3.8-27B tient sur un GPU de 24 Go une fois quantifié',
           'L\'API Claude et GPT-6 Luna présentent un risque moyen : les fournisseurs américains exigent le DPF ou des CCT, plus une évaluation de l\'impact du transfert (TIA) ; l\'API propre d\'Anthropic n\'offre qu\'une inférence globale ou aux États-Unis, tandis qu\'OpenAI propose la résidence des données dans l\'UE pour les nouveaux Projets',
           'Piles recommandées : startups (API Claude ou OpenAI sous DPA), organisations sensibles aux données (Qwen3.8-27B sur un GPU de 24 Go), entreprises (modèles locaux multi-GPU, air-gap)',
           'La matrice de risque couvre cinq vecteurs : résidence des données, juridiction des données d\'entraînement, conservation des données selon les ToS, exigence de mécanisme de transfert et niveau de risque global',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Déploiement', 'Résidence des données', 'Juridiction des données d\'entraînement', 'Risque de conservation ToS', 'CCT/TIA requis ?', 'Niveau de risque global'],
         rows: [
-          { Déploiement: 'API DeepSeek', 'Résidence des données': 'Chine (serveurs en RPC)', 'Juridiction des données d\'entraînement': 'Chine (PIPL)', 'Risque de conservation ToS': 'Politique autorisant le partage avec les autorités', 'CCT/TIA requis ?': 'Pas de décision d\'adéquation ; CCT + TIA difficiles à démontrer (notre évaluation)', 'Niveau de risque global': '🔴 Le plus élevé' },
+          { Déploiement: 'API DeepSeek', 'Résidence des données': 'Chine (serveurs en RPC)', 'Juridiction des données d\'entraînement': 'Chine', 'Risque de conservation ToS': 'Vérifier la politique et le DPA du fournisseur', 'CCT/TIA requis ?': 'Pas de décision d\'adéquation ; CCT + TIA difficiles à démontrer (notre évaluation)', 'Niveau de risque global': '🔴 Le plus élevé' },
           { Déploiement: 'API Claude (directe)', 'Résidence des données': 'US ou global ; pas d\'option UE seule', 'Juridiction des données d\'entraînement': 'US', 'Risque de conservation ToS': 'Selon le DPA d\'Anthropic ; vérifier la conservation', 'CCT/TIA requis ?': 'DPF ou CCT (dans le DPA) + TIA', 'Niveau de risque global': '🟠 Moyen-Élevé' },
           { Déploiement: 'Claude sur Bedrock / Vertex AI UE', 'Résidence des données': 'Région UE (définie par le endpoint)', 'Juridiction des données d\'entraînement': 'Fournisseur US, traitement UE', 'Risque de conservation ToS': 'Conditions du fournisseur cloud applicables', 'CCT/TIA requis ?': 'Selon le contrat ; évaluer la TIA', 'Niveau de risque global': '🟡 Moyen' },
           { Déploiement: 'API GPT-6 Luna (défaut)', 'Résidence des données': 'US (projet par défaut)', 'Juridiction des données d\'entraînement': 'US', 'Risque de conservation ToS': 'DPA disponible ; selon les conditions de l\'API', 'CCT/TIA requis ?': 'DPF ou CCT + TIA', 'Niveau de risque global': '🟠 Moyen-Élevé' },
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'API DeepSeek — Difficile à justifier pour les workflows RGPD (notre évaluation)',
-            text: 'À notre avis, l\'API hébergée de DeepSeek présente le risque le plus élevé des options comparées ici car : (1) sa politique de confidentialité place les données sur des serveurs en République populaire de Chine, où la PIPL et les lois connexes donnent aux autorités un large accès ; (2) l\'UE n\'a pas de décision d\'adéquation pour la Chine, et les CCT ne sont utiles que si une évaluation de l\'impact du transfert (TIA) peut démontrer que le droit du pays de destination ne les compromet pas, ce qui est très difficile à établir ici ; (3) la politique autorise la divulgation aux autorités lorsque la loi l\'exige. Si vos prompts contiennent des données personnelles de résidents de l\'UE, l\'utilisation de l\'API hébergée ne dispose probablement pas d\'une base de transfert valide au sens de l\'article 44. Les poids ouverts de DeepSeek exécutés en local portent le même faible risque de transfert que les autres modèles locaux ; vérifiez la licence du modèle et votre propre configuration de sécurité.',
+            text: 'À notre avis, l\'API hébergée de DeepSeek présente le risque le plus élevé des options comparées ici car : (1) les API hébergées exploitées hors de l\'UE soulèvent des questions de transfert, il convient donc de vérifier la politique de confidentialité et les conditions de traitement des données en vigueur du fournisseur ; et (2) l\'UE n\'a pas de décision d\'adéquation pour la Chine, et les CCT ne sont utiles que si une évaluation de l\'impact du transfert (TIA) peut démontrer que le droit du pays de destination ne les compromet pas, ce qui est très difficile à établir ici. Si vos prompts contiennent des données personnelles de résidents de l\'UE, l\'utilisation de l\'API hébergée ne dispose probablement pas d\'une base de transfert valide au sens de l\'article 44. Les poids ouverts de DeepSeek exécutés en local portent le même faible risque de transfert que les autres modèles locaux ; vérifiez la licence du modèle et votre propre configuration de sécurité.',
           },
           {
             title: 'API Claude — Risque moyen, gérable avec un mécanisme de transfert',
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'DeepSeek est-il conforme au RGPD si je l\'utilise avec des CCT ?',
-            a: 'Très peu probable. Les CCT ne fonctionnent que si une évaluation de l\'impact du transfert (TIA) montre que le droit du pays de destination ne les compromet pas. Pour la Chine continentale, il n\'existe pas de décision d\'adéquation de l\'UE, la PIPL donne aux autorités un large accès aux données, et la politique de confidentialité de DeepSeek autorise la divulgation aux autorités lorsque la loi l\'exige. À notre avis, pour les données personnelles de résidents de l\'UE, l\'API hébergée de DeepSeek est difficile à justifier. Les poids ouverts de DeepSeek peuvent être exécutés sur votre propre matériel, ce qui supprime le transfert, mais vérifiez la licence du modèle et votre configuration de sécurité.',
+            a: 'Très peu probable. Les CCT ne fonctionnent que si une évaluation de l\'impact du transfert (TIA) montre que le droit du pays de destination ne les compromet pas. Pour la Chine continentale, il n\'existe pas de décision d\'adéquation de l\'UE, et les API hébergées exploitées hors de l\'UE soulèvent des questions de transfert ; vérifiez la politique de confidentialité et les conditions de traitement des données en vigueur du fournisseur. À notre avis, pour les données personnelles de résidents de l\'UE, l\'API hébergée de DeepSeek est difficile à justifier. Les poids ouverts de DeepSeek peuvent être exécutés sur votre propre matériel, ce qui supprime le transfert, mais vérifiez la licence du modèle et votre configuration de sécurité. Ceci ne constitue pas un conseil juridique.',
           },
           {
             q: 'Puis-je garder mes prompts Claude dans l\'UE ?',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qwen est-il sûr à utiliser sous le RGPD ?',
-            a: 'Cela dépend de la façon dont vous l\'exécutez. Les poids ouverts de Qwen (par exemple Qwen3.8-27B sous Apache 2.0) exécutés sur votre propre matériel n\'envoient aucune donnée à Alibaba : il n\'y a donc pas de transfert au sens de l\'article 44 et le profil de risque est le même que pour Llama. L\'API hébergée d\'Alibaba Cloud est différente : vous enverriez des prompts à un fournisseur situé hors de l\'UE, ce qui exige sa propre évaluation de transfert, un DPA et une vérification de la région. Vérifiez la licence sur la fiche du modèle, car les conditions diffèrent au sein de la famille Qwen.',
+            a: 'Cela dépend de la façon dont vous l\'exécutez. Les poids ouverts de Qwen (par exemple Qwen3.8-27B sous Apache 2.0) exécutés sur votre propre matériel n\'ont pas besoin d\'envoyer de données à Alibaba si l\'environnement d\'exécution est configuré pour n\'effectuer aucun appel externe : il n\'y a alors, en principe, pas de transfert au sens de l\'article 44 et le profil de risque est comparable à celui de Llama. L\'API hébergée d\'Alibaba Cloud est différente : vous enverriez des prompts à un fournisseur situé hors de l\'UE, ce qui exige sa propre évaluation de transfert, un DPA et une vérification de la région. Vérifiez la licence sur la fiche du modèle, car les conditions diffèrent au sein de la famille Qwen.',
           },
           {
             q: 'Puis-je utiliser Llama 4 Scout comme remplaçant direct de Claude ?',
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Faire tourner un LLM on-prem coûte-t-il plus cher que les API cloud ?',
-            a: 'Au départ : oui. Le matériel (RTX 4070 Ti) coûte ~500–1 000 $. Mensuellement : non. L\'électricité on-prem coûte ~5–10 $/mois. Les API cloud coûtent 0,001–0,01 $ par 1 000 tokens, ce qui pour un usage intensif (>1 M tokens/mois) dépasse 100 $. Le seuil de rentabilité est typiquement de 6 à 12 mois pour un usage moyen à élevé. Si vous utilisez <100 000 tokens/mois, les API cloud sont moins chères. Si vous utilisez >1 M tokens/mois, l\'on-prem est moins cher. La conformité RGPD constitue un argument commercial supplémentaire : l\'on-prem peut réduire ou supprimer l\'étape CCT/TIA pour la couche d\'inférence, mais les autres obligations RGPD demeurent (ne constitue pas un conseil juridique).',
+            a: 'Au départ : oui, le matériel local est un coût ponctuel et l\'électricité un coût récurrent. Savoir si l\'on-prem ou les API cloud sont moins chers dépend de votre usage et du modèle dont vous avez besoin ; comparez votre propre volume avec les pages tarifaires actuelles des fournisseurs. La conformité RGPD constitue un argument commercial supplémentaire : l\'on-prem peut réduire ou supprimer l\'étape CCT/TIA pour la couche d\'inférence, mais les autres obligations RGPD demeurent (ne constitue pas un conseil juridique).',
           },
         ],
       },
@@ -1038,14 +1038,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'GDPR リスク比較: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'GDPR リスク行列: LLM 比較 Qwen DeepSeek Llama Claude | PromptQuorum',
-    metaDescription: 'LLMのGDPRリスク比較: DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。',
+    metaDescription: 'LLMのGDPRリスク比較: 当サイトの評価：DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8分間の読取',
     educationalLevel: 'Advanced',
     audience: 'プロプライエタリLLMとオープンウェイトLLMの選択を検討するCISO、調達チーム、コンプライアンス担当者',
     primaryTerm: 'GDPRリスク比較 LLMモデル',
-    leadAnswerBlock: '**当サイトの評価では、DeepSeekのホスト型APIは、ここで比較した選択肢の中でGDPRリスクが最も高くなります。データは中国本土に保存され、PIPLにより当局が広範にアクセスでき、EUは中国に対する十分性認定を出していないためです。Qwen3.8-27BとLlama 4 Scoutをローカルで実行する場合は、実行環境が外部への通信を行わないよう設定されていれば個人データがインフラの外に出ないため、リスクは最も低くなります。ClaudeとOpenAI GPT-6 LunaのAPIは中間に位置し、有効な移転手段（EU-米国データプライバシーフレームワーク、または標準契約条項）が必要です。厳格にEU内で処理したい場合は、OpenAIのEUデータレジデンシー対応Projectや、Amazon BedrockまたはGoogle Vertex AIのEUリージョン経由のClaudeなど、EUリージョンのルートを使います。**',
+    leadAnswerBlock: '**当サイトの評価では、DeepSeekのホスト型APIは、ここで比較した選択肢の中でGDPRリスクが最も高くなります。EU外で運用されるホスト型APIは移転に関する論点を生じさせ（提供者の最新のプライバシーポリシーとデータ処理条件を確認してください）、EUは中国に対する十分性認定を出していないためです。Qwen3.8-27BとLlama 4 Scoutをローカルで実行する場合は、実行環境が外部への通信を行わないよう設定されていれば個人データがインフラの外に出ないため、リスクは最も低くなります。ClaudeとOpenAI GPT-6 LunaのAPIは中間に位置し、有効な移転手段（EU-米国データプライバシーフレームワーク、または標準契約条項）が必要です。厳格にEU内で処理したい場合は、OpenAIのEUデータレジデンシー対応Projectや、Amazon BedrockまたはGoogle Vertex AIのEUリージョン経由のClaudeなど、EUリージョンのルートを使います。**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'マルチGPU'],
     toc: [
@@ -1060,8 +1060,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '当サイトの評価では、DeepSeekのホスト型APIは最高リスクです。データは中国本土にPIPLの下で保存され、EUの中国に対する十分性認定はなく、プライバシーポリシーは法的に求められた場合の当局への開示を認めています。',
-          'ローカル実行のQwen3.8-27B（Apache 2.0）とLlama 4 Scoutは最低リスクです。第44条の移転もSCCも不要で、データは自社ハードウェアにとどまります。Llama 4 Scoutは4ビットで約55〜60 GB必要で、Qwen3.8-27Bは量子化すれば24 GBのGPUに収まります。',
+          '当サイトの評価では、DeepSeekのホスト型APIは最高リスクです。EU外で運用されるホスト型APIは移転に関する論点を生じさせるため、提供者の最新のプライバシーポリシーとデータ処理条件を確認してください。また、EUの中国に対する十分性認定はありません。',
+          'ローカル実行のQwen3.8-27B（Apache 2.0）とLlama 4 Scoutは最低リスクです。実行環境が外部への通信を行わないよう設定されていれば、通常は第44条の移転もSCCも不要で、データは自社ハードウェアにとどまります。Llama 4 Scoutは4ビットで約55〜60 GB必要で、Qwen3.8-27Bは量子化すれば24 GBのGPUに収まります。',
           'Claude APIとGPT-6 Lunaは中程度リスクです。米国ベンダーにはEU-米国データプライバシーフレームワークまたはSCCに加え、転送影響評価（TIA）が必要です。Anthropic自身のAPIはグローバルまたは米国での推論のみで、OpenAIは新規ProjectでEUデータレジデンシーを提供しています。',
           '推奨スタック：スタートアップ（DPAを結んだClaudeまたはOpenAI API）、データに敏感な組織（24 GBのGPU 1枚でQwen3.8-27B）、エンタープライズ（マルチGPUのローカルモデル、エアギャップ）',
           'リスク行列は5つのベクトルをカバーしています：データ拠点、トレーニングデータ管轄権、ToSデータ保持、移転手段の要否、総合リスクレベル',
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['デプロイメント', 'データ拠点', 'トレーニングデータ管轄権', 'ToS保持リスク', 'SCC/TIA必要？', '総合リスクレベル'],
         rows: [
-          { 'デプロイメント': 'DeepSeek API', 'データ拠点': '中国（PRCのサーバー）', 'トレーニングデータ管轄権': '中国（PIPL）', ToS保持リスク: '当局への共有をポリシーが容認', 'SCC/TIA必要？': '十分性認定なし。SCC+TIAの立証は困難（当サイトの評価）', '総合リスクレベル': '🔴 最高' },
+          { 'デプロイメント': 'DeepSeek API', 'データ拠点': '中国（PRCのサーバー）', 'トレーニングデータ管轄権': '中国', ToS保持リスク: '提供者のポリシーとDPAを確認', 'SCC/TIA必要？': '十分性認定なし。SCC+TIAの立証は困難（当サイトの評価）', '総合リスクレベル': '🔴 最高' },
           { 'デプロイメント': 'Claude API（自社提供）', 'データ拠点': '米国またはグローバル。EU限定なし', 'トレーニングデータ管轄権': '米国', ToS保持リスク: 'AnthropicのDPAに準拠。保持は要確認', 'SCC/TIA必要？': 'DPFまたはSCC（DPA内）+TIA', '総合リスクレベル': '🟠 中〜高' },
           { 'デプロイメント': 'Claude（Bedrock / Vertex AI EU）', 'データ拠点': 'EUリージョン（エンドポイントで指定）', 'トレーニングデータ管轄権': '米国ベンダー、EU内で処理', ToS保持リスク: 'クラウド事業者の規約が適用', 'SCC/TIA必要？': '契約次第。TIAで評価', '総合リスクレベル': '🟡 中程度' },
           { 'デプロイメント': 'GPT-6 Luna API（既定）', 'データ拠点': '米国（既定のProject）', 'トレーニングデータ管轄権': '米国', ToS保持リスク: 'DPAあり。API規約に準拠', 'SCC/TIA必要？': 'DPFまたはSCC+TIA', '総合リスクレベル': '🟠 中〜高' },
@@ -1121,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — GDPRワークフローでは正当化が難しい（当サイトの評価）',
-            text: '当サイトの評価では、DeepSeekのホスト型APIは、ここで比較した選択肢の中で最もリスクが高くなります。理由は次のとおりです。（1）プライバシーポリシー上、データは中華人民共和国内のサーバーに置かれ、PIPLなどの法律により当局が広範にアクセスできる。（2）EUは中国に対する十分性認定を出しておらず、SCCが有効となるのは、移転先の法律がSCCを損なわないことをTIAで示せる場合のみだが、ここではその立証が極めて難しい。（3）ポリシーは法的に求められた場合の当局への開示を認めている。プロンプトにEU居住者の個人データが含まれる場合、ホスト型APIの利用は第44条に基づく有効な移転根拠を欠く可能性が高くなります。DeepSeekのオープンウェイトをローカルで実行する場合の移転リスクは、他のローカルモデルと同様に低くなりますが、モデルのライセンスと自社のセキュリティ体制は確認してください。',
+            text: '当サイトの評価では、DeepSeekのホスト型APIは、ここで比較した選択肢の中で最もリスクが高くなります。理由は次のとおりです。（1）EU外で運用されるホスト型APIは移転に関する論点を生じさせるため、提供者の最新のプライバシーポリシーとデータ処理条件を確認する必要がある。（2）EUは中国に対する十分性認定を出しておらず、SCCが有効となるのは、移転先の法律がSCCを損なわないことをTIAで示せる場合のみだが、ここではその立証が極めて難しい。プロンプトにEU居住者の個人データが含まれる場合、ホスト型APIの利用は第44条に基づく有効な移転根拠を欠く可能性が高くなります。DeepSeekのオープンウェイトをローカルで実行する場合の移転リスクは、他のローカルモデルと同様に低くなりますが、モデルのライセンスと自社のセキュリティ体制は確認してください。',
           },
           {
             title: 'Claude API — 中程度リスク、移転手段で管理可能',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'SCCを使えば、DeepSeekはGDPR準拠ですか？',
-            a: 'その可能性は極めて低いです。SCCが機能するのは、移転先の国の法律がSCCを損なわないことをTIAで示せる場合に限られます。中国本土にはEUの十分性認定がなく、PIPLは当局に広範なデータアクセスを認めており、DeepSeekのプライバシーポリシーも法的に求められた場合の当局への開示を認めています。当サイトの評価では、EU居住者の個人データについてホスト型のDeepSeek APIを使うことは正当化が難しいと考えます。DeepSeekのオープンウェイトは自社ハードウェアで実行でき、その場合は移転がなくなりますが、モデルのライセンスと自社のセキュリティ体制は確認してください。',
+            a: 'その可能性は極めて低いです。SCCが機能するのは、移転先の国の法律がSCCを損なわないことをTIAで示せる場合に限られます。中国本土にはEUの十分性認定がなく、EU外で運用されるホスト型APIは移転に関する論点を生じさせるため、提供者の最新のプライバシーポリシーとデータ処理条件を確認してください。当サイトの評価では、EU居住者の個人データについてホスト型のDeepSeek APIを使うことは正当化が難しいと考えます。DeepSeekのオープンウェイトは自社ハードウェアで実行でき、その場合は移転がなくなりますが、モデルのライセンスと自社のセキュリティ体制は確認してください。これは法的助言ではありません。',
           },
           {
             q: 'ClaudeのプロンプトをEU内にとどめられますか？',
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'QwenはGDPR上、安全に使えますか？',
-            a: '実行方法によります。Qwenのオープンウェイト（たとえばApache 2.0のQwen3.8-27B）を自社ハードウェアで実行する場合、Alibabaにデータは送られないため、第44条の移転はなく、リスクの性質はLlamaと同じです。Alibaba Cloudのホスト型APIは別で、EU外の提供者にプロンプトを送ることになり、独自の移転評価、DPA、リージョンの確認が必要です。ライセンスはQwenファミリー内で条件が異なるため、モデルカードで確認してください。',
+            a: '実行方法によります。Qwenのオープンウェイト（たとえばApache 2.0のQwen3.8-27B）を自社ハードウェアで実行する場合、実行環境が外部への通信を行わないよう設定されていれば、Alibabaにデータを送る必要はないため、通常は第44条の移転はなく、リスクの性質はLlamaと同様です。Alibaba Cloudのホスト型APIは別で、EU外の提供者にプロンプトを送ることになり、独自の移転評価、DPA、リージョンの確認が必要です。ライセンスはQwenファミリー内で条件が異なるため、モデルカードで確認してください。',
           },
           {
             q: 'Llama 4 ScoutはClaudeの代わりにそのまま使えますか？',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LLMをオンプレミスで運用するのはクラウドAPIより高額ですか？',
-            a: '初期費用：はい。ハードウェア（RTX 4070 Ti）は約500〜1,000ドルです。月額：いいえ。オンプレミスの電気代は月額約5〜10ドルです。クラウドAPIは1,000トークンあたり0.001〜0.01ドルで、大量利用（月間100万トークン超）では100ドルを超えます。損益分岐点は中〜大量利用で通常6〜12ヶ月です。月間10万トークン未満であればクラウドAPIの方が安く、月間100万トークン超であればオンプレミスの方が安くなります。GDPR準拠は追加のビジネスケースです：オンプレミスでは推論レイヤーのSCC/TIAの手順を減らせる、または不要にできる場合がありますが、その他のGDPR上の義務は残ります（法的助言ではありません）。',
+            a: '初期費用：はい。ローカルのハードウェアは一度きりの費用で、電気代は継続的にかかります。オンプレミスとクラウドAPIのどちらが安いかは、利用状況と必要なモデルによります。ご自身の利用量を各提供者の最新の料金ページと比較してください。GDPR準拠は追加のビジネスケースです：オンプレミスでは推論レイヤーのSCC/TIAの手順を減らせる、または不要にできる場合がありますが、その他のGDPR上の義務は残ります（法的助言ではありません）。',
           },
         ],
       },
@@ -1228,14 +1228,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'GDPR 风险比较: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'GDPR 风险矩阵: LLM 比较 Qwen DeepSeek Llama Claude | PromptQuorum',
-    metaDescription: 'LLM的GDPR风险比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。',
+    metaDescription: 'LLM的GDPR风险比较: 我们的评估：DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8分钟阅读',
     educationalLevel: 'Advanced',
     audience: '在专有LLM与开放权重LLM之间做选择的首席信息安全官、采购团队和合规官员',
     primaryTerm: 'GDPR风险比较 LLM模型',
-    leadAnswerBlock: '**在我们的评估中，在本文比较的方案中，DeepSeek托管API的GDPR风险最高：数据存储在中国大陆，PIPL赋予当局广泛的访问权，而欧盟没有针对中国的充分性认定。本地运行的Qwen3.8-27B和Llama 4 Scout风险最低，因为只要运行环境被配置为不向外发起调用，个人数据就不会离开您的基础设施。Claude和OpenAI GPT-6 Luna API居中：它们需要有效的转移机制（欧美数据隐私框架（DPF）或标准合同条款（SCC）），若要严格实现欧盟境内驻留，还需选择欧盟区域路径，例如OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock、Google Vertex AI欧盟区域使用Claude。**',
+    leadAnswerBlock: '**在我们的评估中，在本文比较的方案中，DeepSeek托管API的GDPR风险最高：在欧盟境外运营的托管API会引发转移方面的问题（请核对提供商当前的隐私政策和数据处理条款），而且欧盟没有针对中国的充分性认定。本地运行的Qwen3.8-27B和Llama 4 Scout风险最低，因为只要运行环境被配置为不向外发起调用，个人数据就不会离开您的基础设施。Claude和OpenAI GPT-6 Luna API居中：它们需要有效的转移机制（欧美数据隐私框架（DPF）或标准合同条款（SCC）），若要严格实现欧盟境内驻留，还需选择欧盟区域路径，例如OpenAI的欧盟数据驻留Project，或通过Amazon Bedrock、Google Vertex AI欧盟区域使用Claude。**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', '多GPU'],
     toc: [
@@ -1250,8 +1250,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '在我们的评估中，DeepSeek托管API风险最高：数据存储在中国大陆并受PIPL约束，欧盟没有针对中国的充分性认定，其隐私政策允许在法律要求时向当局披露',
-          '本地运行的Qwen3.8-27B（Apache 2.0）和Llama 4 Scout风险最低：无第44条转移，无需SCC，数据留在您的硬件上；Llama 4 Scout在4-bit下约需55–60 GB，Qwen3.8-27B量化后可放入24 GB GPU',
+          '在我们的评估中，DeepSeek托管API风险最高：在欧盟境外运营的托管API会引发转移方面的问题（请核对提供商当前的隐私政策和数据处理条款），而且欧盟没有针对中国的充分性认定',
+          '本地运行的Qwen3.8-27B（Apache 2.0）和Llama 4 Scout风险最低：只要运行环境被配置为不向外发起调用，通常无第44条转移，也无需SCC，数据留在您的硬件上；Llama 4 Scout在4-bit下约需55–60 GB，Qwen3.8-27B量化后可放入24 GB GPU',
           'Claude API和GPT-6 Luna属于中等风险：美国供应商需要欧美数据隐私框架（DPF）或SCC，外加转移影响评估（TIA）；Anthropic自家API仅提供全球或美国推理，而OpenAI为新建Project提供欧盟数据驻留',
           '推荐堆栈：初创企业（在DPA下使用Claude或OpenAI API）、数据敏感组织（单张24 GB GPU运行Qwen3.8-27B）、企业（多GPU本地模型，气隙部署）',
           '风险矩阵涵盖五个向量：数据驻留、训练数据管辖权、ToS数据保留、转移机制要求和总体风险级别',
@@ -1293,7 +1293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['部署方式', '数据驻留', '训练数据管辖权', 'ToS保留风险', '是否需要SCC/TIA？', '总体风险级别'],
         rows: [
-          { '部署方式': 'DeepSeek API', '数据驻留': '中国（中国境内服务器）', '训练数据管辖权': '中国（PIPL）', ToS保留风险: '政策允许向当局共享', '是否需要SCC/TIA？': '无充分性认定；SCC+TIA难以证明（我们的评估）', '总体风险级别': '🔴 最高' },
+          { '部署方式': 'DeepSeek API', '数据驻留': '中国（中国境内服务器）', '训练数据管辖权': '中国', ToS保留风险: '请核对提供商政策和DPA', '是否需要SCC/TIA？': '无充分性认定；SCC+TIA难以证明（我们的评估）', '总体风险级别': '🔴 最高' },
           { '部署方式': 'Claude API（官方直连）', '数据驻留': '美国或全球；无欧盟专属选项', '训练数据管辖权': '美国', ToS保留风险: '依Anthropic DPA；需核实保留期', '是否需要SCC/TIA？': 'DPF或SCC（含于DPA）+TIA', '总体风险级别': '🟠 中高' },
           { '部署方式': 'Claude（Bedrock / Vertex AI欧盟）', '数据驻留': '欧盟区域（由端点决定）', '训练数据管辖权': '美国供应商，欧盟境内处理', ToS保留风险: '适用云服务商条款', '是否需要SCC/TIA？': '视合同而定；需评估TIA', '总体风险级别': '🟡 中等' },
           { '部署方式': 'GPT-6 Luna API（默认）', '数据驻留': '美国（默认Project）', '训练数据管辖权': '美国', ToS保留风险: '提供DPA；依API条款', '是否需要SCC/TIA？': 'DPF或SCC+TIA', '总体风险级别': '🟠 中高' },
@@ -1311,7 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API——GDPR工作流中难以自圆其说（我们的评估）',
-            text: '在我们的评估中，在本文比较的方案中，DeepSeek托管API风险最高，原因是：（1）其隐私政策将数据置于中华人民共和国境内的服务器上，PIPL及相关法律赋予当局广泛的访问权；（2）欧盟没有针对中国的充分性认定，只有当转移影响评估（TIA）能证明目的地法律不会削弱SCC的保护时，SCC才有帮助，而此处极难证明；（3）该政策允许在法律要求时向当局披露。如果提示词包含欧盟居民的个人数据，使用托管API很可能缺乏有效的第44条转移依据。本地运行DeepSeek开放权重与其他本地模型一样，转移风险较低；请核对模型许可证和您自己的安全配置。',
+            text: '在我们的评估中，在本文比较的方案中，DeepSeek托管API风险最高，原因是：（1）在欧盟境外运营的托管API会引发转移方面的问题，需要核对提供商当前的隐私政策和数据处理条款；（2）欧盟没有针对中国的充分性认定，只有当转移影响评估（TIA）能证明目的地法律不会削弱SCC的保护时，SCC才有帮助，而此处极难证明。如果提示词包含欧盟居民的个人数据，使用托管API很可能缺乏有效的第44条转移依据。本地运行DeepSeek开放权重与其他本地模型一样，转移风险较低；请核对模型许可证和您自己的安全配置。',
           },
           {
             title: 'Claude API——中等风险，配合转移机制可管理',
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '如果我使用SCC，DeepSeek是否符合GDPR？',
-            a: '可能性很小。只有当转移影响评估（TIA）证明目的地国家的法律不会削弱SCC时，SCC才起作用。对于中国大陆，欧盟没有充分性认定，PIPL赋予当局广泛的数据访问权，而DeepSeek的隐私政策允许在法律要求时向当局披露。在我们的评估中，对于欧盟居民的个人数据，DeepSeek托管API难以自圆其说。DeepSeek的开放权重可以在您自己的硬件上运行，从而消除转移，但请核对模型许可证和您的安全配置。',
+            a: '可能性很小。只有当转移影响评估（TIA）证明目的地国家的法律不会削弱SCC时，SCC才起作用。对于中国大陆，欧盟没有充分性认定，而在欧盟境外运营的托管API会引发转移方面的问题，请核对提供商当前的隐私政策和数据处理条款。在我们的评估中，对于欧盟居民的个人数据，DeepSeek托管API难以自圆其说。DeepSeek的开放权重可以在您自己的硬件上运行，从而消除转移，但请核对模型许可证和您的安全配置。这不构成法律意见。',
           },
           {
             q: '我能把Claude的提示词保留在欧盟境内吗？',
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '在GDPR下使用Qwen安全吗？',
-            a: '取决于您如何运行它。Qwen开放权重（例如Apache 2.0下的Qwen3.8-27B）在您自己的硬件上运行，不会向阿里巴巴发送任何数据，因此没有第44条转移，风险特征与Llama相同。阿里云托管API则不同：您会把提示词发送给欧盟以外的供应商，这需要单独的转移评估、DPA和区域核查。请在模型卡上核对许可证，因为Qwen系列内部的条款各不相同。',
+            a: '取决于您如何运行它。Qwen开放权重（例如Apache 2.0下的Qwen3.8-27B）在您自己的硬件上运行，只要运行环境被配置为不向外发起调用，就无需向阿里巴巴发送数据，因此通常没有第44条转移，风险特征与Llama相近。阿里云托管API则不同：您会把提示词发送给欧盟以外的供应商，这需要单独的转移评估、DPA和区域核查。请在模型卡上核对许可证，因为Qwen系列内部的条款各不相同。',
           },
           {
             q: '我能把Llama 4 Scout直接用作Claude的替代品吗？',
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地运行LLM是否比云API更贵？',
-            a: '前期成本：是的。硬件（RTX 4070 Ti）成本约500–1,000美元。每月成本：不是。本地电费约每月5–10美元。云API每1,000个令牌成本0.001–0.01美元，对于重度使用（每月超过100万令牌）而言，超过100美元。对于中到重度使用，收支平衡通常需要6–12个月。如果每月使用不到10万令牌，云API更便宜。如果每月使用超过100万令牌，本地部署更便宜。GDPR合规是额外的商业理由：本地部署可能减少或免除推理层的 SCC/TIA 步骤，但其他 GDPR 义务依然存在（不构成法律意见）。',
+            a: '前期成本：是的，本地硬件是一次性成本，电费是持续成本。本地部署与云API哪个更便宜，取决于您的使用量和所需模型；请将自己的用量与各供应商当前的定价页面对比。GDPR合规是额外的商业理由：本地部署可能减少或免除推理层的 SCC/TIA 步骤，但其他 GDPR 义务依然存在（不构成法律意见）。',
           },
         ],
       },
@@ -1418,23 +1418,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'Comparação de riscos GDPR: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'Matriz de risco GDPR: Qwen, DeepSeek, Llama e Claude',
-    metaDescription: 'Comparação de riscos de LLMs sob GDPR/LGPD: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.',
+    metaDescription: 'Comparação de riscos de LLMs sob GDPR/LGPD: Nossa avaliação: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8 min de leitura',
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipes de compras e responsáveis por conformidade que escolhem entre LLMs proprietários e de pesos abertos',
     primaryTerm: 'comparação de risco GDPR modelos LLM',
-    leadAnswerBlock: '**Na nossa avaliação, a API hospedada da DeepSeek apresenta o maior risco de GDPR entre as opções comparadas aqui: os dados ficam armazenados na China continental, onde a PIPL dá amplo acesso às autoridades, e a UE não tem decisão de adequação para a China. Qwen3.8-27B e Llama 4 Scout executados localmente têm o menor risco, porque, se o ambiente de execução estiver configurado para não fazer chamadas externas, nenhum dado pessoal sai da sua infraestrutura. As APIs do Claude e do OpenAI GPT-6 Luna ficam no meio-termo: exigem um mecanismo válido de transferência (EU-US Data Privacy Framework ou Cláusulas Contratuais Padrão) e, para residência estrita na UE, uma rota em região europeia, como os Projects com residência de dados na UE da OpenAI ou o Claude via Amazon Bedrock ou regiões da UE do Google Vertex AI.**',
+    leadAnswerBlock: '**Na nossa avaliação, a API hospedada da DeepSeek apresenta o maior risco de GDPR entre as opções comparadas aqui: APIs hospedadas operadas fora da UE levantam questões de transferência (verifique a política de privacidade e os termos de tratamento de dados vigentes do provedor), e a UE não tem decisão de adequação para a China. Qwen3.8-27B e Llama 4 Scout executados localmente têm o menor risco, porque, se o ambiente de execução estiver configurado para não fazer chamadas externas, nenhum dado pessoal sai da sua infraestrutura. As APIs do Claude e do OpenAI GPT-6 Luna ficam no meio-termo: exigem um mecanismo válido de transferência (EU-US Data Privacy Framework ou Cláusulas Contratuais Padrão) e, para residência estrita na UE, uma rota em região europeia, como os Projects com residência de dados na UE da OpenAI ou o Claude via Amazon Bedrock ou regiões da UE do Google Vertex AI.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       pt: {
         question: 'Qual LLM tem o menor risco sob o GDPR?',
-        answer: 'Qwen3.8-27B ou Llama 4 Scout executados localmente no seu próprio hardware: se o ambiente de execução estiver configurado para não fazer chamadas externas, nenhum dado sai da sua jurisdição, então normalmente não há transferência do Artigo 44 nem é preciso gerenciar SCC ou TIA. Na nossa avaliação, a API hospedada da DeepSeek é a de maior risco, porque os dados ficam armazenados na China sob a PIPL. As APIs do Claude e do GPT-6 Luna têm risco médio: exigem um mecanismo de transferência (EU-US Data Privacy Framework ou SCCs), e o processamento exclusivo na UE está disponível pelos Projects com residência de dados na UE da OpenAI ou pelo Claude no Amazon Bedrock / nas regiões da UE do Google Vertex AI, não pela API própria da Anthropic.',
+        answer: 'Qwen3.8-27B ou Llama 4 Scout executados localmente no seu próprio hardware: se o ambiente de execução estiver configurado para não fazer chamadas externas, nenhum dado sai da sua jurisdição, então normalmente não há transferência do Artigo 44 nem é preciso gerenciar SCC ou TIA. Na nossa avaliação, a API hospedada da DeepSeek é a de maior risco. APIs hospedadas operadas fora da UE levantam questões de transferência; verifique a política de privacidade e os termos de tratamento de dados vigentes do provedor. As APIs do Claude e do GPT-6 Luna têm risco médio: exigem um mecanismo de transferência (EU-US Data Privacy Framework ou SCCs), e o processamento exclusivo na UE está disponível pelos Projects com residência de dados na UE da OpenAI ou pelo Claude no Amazon Bedrock / nas regiões da UE do Google Vertex AI, não pela API própria da Anthropic.',
         bullets: [
           'Qwen local: menor risco. Sem transferência, pesos Apache 2.0 no Qwen3.8-27B, cerca de 16–24 GB de VRAM quando quantizado.',
-          'DeepSeek API: maior risco. Dados armazenados na China, jurisdição da PIPL, sem decisão de adequação da UE.',
+          'DeepSeek API: maior risco. Operada fora da UE, sem decisão de adequação da UE para a China; verifique a política de privacidade e os termos de tratamento de dados vigentes do provedor.',
           'APIs Claude/GPT: risco médio. Exigem mecanismo de transferência; rotas em região da UE reduzem, mas não eliminam, as questões de jurisdição do fornecedor.',
         ],
         updatedDate: '2026-10',
@@ -1452,8 +1452,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Na nossa avaliação, a API hospedada da DeepSeek é a de maior risco: os dados ficam armazenados na China continental sob a PIPL, a UE não tem decisão de adequação para a China e a política de privacidade permite a divulgação às autoridades quando exigida por lei',
-          'Qwen3.8-27B (Apache 2.0) e Llama 4 Scout executados localmente têm o menor risco: sem transferência do Artigo 44, sem SCC exigida, os dados ficam no seu hardware; o Llama 4 Scout precisa de cerca de 55–60 GB em 4 bits, e o Qwen3.8-27B cabe em uma GPU de 24 GB quando quantizado',
+          'Na nossa avaliação, a API hospedada da DeepSeek é a de maior risco: APIs hospedadas operadas fora da UE levantam questões de transferência (verifique a política de privacidade e os termos de tratamento de dados vigentes do provedor) e a UE não tem decisão de adequação para a China',
+          'Qwen3.8-27B (Apache 2.0) e Llama 4 Scout executados localmente têm o menor risco: se o ambiente de execução estiver configurado para não fazer chamadas externas, normalmente sem transferência do Artigo 44 e sem SCC exigida; os dados ficam no seu hardware; o Llama 4 Scout precisa de cerca de 55–60 GB em 4 bits, e o Qwen3.8-27B cabe em uma GPU de 24 GB quando quantizado',
           'A API do Claude e o GPT-6 Luna têm risco médio: fornecedores dos EUA exigem o EU-US Data Privacy Framework ou SCCs, além de uma Avaliação de Impacto da Transferência; a API própria da Anthropic oferece apenas inferência global ou nos EUA, enquanto a OpenAI oferece residência de dados na UE para novos Projects',
           'Stacks recomendados: startups (API do Claude ou da OpenAI sob um DPA), organizações com dados sensíveis (Qwen3.8-27B em uma GPU de 24 GB), empresas (modelos locais multi-GPU, em air-gap)',
           'A matriz de risco cobre cinco vetores: residência de dados, jurisdição dos dados de treinamento, retenção de dados nos ToS, exigência de mecanismo de transferência e nível de risco geral',
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Implantação', 'Residência de dados', 'Jurisdição dos dados de treinamento', 'Risco de retenção nos ToS', 'SCC / TIA exigida?', 'Nível de risco geral'],
         rows: [
-          { Implantação: 'DeepSeek API', 'Residência de dados': 'China (servidores na RPC)', 'Jurisdição dos dados de treinamento': 'China (PIPL)', 'Risco de retenção nos ToS': 'Política permite compartilhar com autoridades', 'SCC / TIA exigida?': 'Sem decisão de adequação; SCC + TIA difícil de demonstrar (nossa avaliação)', 'Nível de risco geral': '🔴 Maior' },
+          { Implantação: 'DeepSeek API', 'Residência de dados': 'China (servidores na RPC)', 'Jurisdição dos dados de treinamento': 'China', 'Risco de retenção nos ToS': 'Verifique a política e o DPA do provedor', 'SCC / TIA exigida?': 'Sem decisão de adequação; SCC + TIA difícil de demonstrar (nossa avaliação)', 'Nível de risco geral': '🔴 Maior' },
           { Implantação: 'Claude API (própria)', 'Residência de dados': 'EUA ou global; sem opção só UE', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'Conforme o DPA da Anthropic; verifique a retenção', 'SCC / TIA exigida?': 'DPF ou SCC (no DPA) + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
           { Implantação: 'Claude no Bedrock / Vertex AI UE', 'Residência de dados': 'Região da UE (definida pelo endpoint)', 'Jurisdição dos dados de treinamento': 'Fornecedor dos EUA, processamento na UE', 'Risco de retenção nos ToS': 'Valem os termos do provedor de nuvem', 'SCC / TIA exigida?': 'Depende do contrato; avalie a TIA', 'Nível de risco geral': '🟡 Médio' },
           { Implantação: 'GPT-6 Luna API (padrão)', 'Residência de dados': 'EUA (Project padrão)', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'DPA disponível; conforme os termos da API', 'SCC / TIA exigida?': 'DPF ou SCC + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — Difícil de justificar para fluxos de trabalho sob GDPR (nossa avaliação)',
-            text: 'Na nossa avaliação, a API hospedada da DeepSeek apresenta o maior risco entre as opções comparadas aqui porque: (1) sua política de privacidade coloca os dados em servidores na República Popular da China, onde a PIPL e leis correlatas dão amplo acesso às autoridades; (2) a UE não tem decisão de adequação para a China, e as SCCs só ajudam se uma Avaliação de Impacto da Transferência conseguir mostrar que a lei do país de destino não as enfraquece, o que aqui é muito difícil de demonstrar; (3) a política permite a divulgação às autoridades quando exigida por lei. Se os prompts contêm dados pessoais de residentes na UE, o uso da API hospedada provavelmente não tem uma base válida de transferência segundo o Artigo 44. Os pesos abertos da DeepSeek executados localmente têm o mesmo baixo risco de transferência que os demais modelos locais; verifique a licença do modelo e a sua própria configuração de segurança.',
+            text: 'Na nossa avaliação, a API hospedada da DeepSeek apresenta o maior risco entre as opções comparadas aqui porque: (1) APIs hospedadas operadas fora da UE levantam questões de transferência, então verifique a política de privacidade e os termos de tratamento de dados vigentes do provedor; e (2) a UE não tem decisão de adequação para a China, e as SCCs só ajudam se uma Avaliação de Impacto da Transferência conseguir mostrar que a lei do país de destino não as enfraquece, o que aqui é muito difícil de demonstrar. Se os prompts contêm dados pessoais de residentes na UE, o uso da API hospedada provavelmente não tem uma base válida de transferência segundo o Artigo 44. Os pesos abertos da DeepSeek executados localmente têm o mesmo baixo risco de transferência que os demais modelos locais; verifique a licença do modelo e a sua própria configuração de segurança.',
           },
           {
             title: 'Claude API — Risco médio, gerenciável com um mecanismo de transferência',
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'A DeepSeek está em conformidade com o GDPR se eu a usar com uma SCC?',
-            a: 'Muito improvável. As SCCs só funcionam se uma Avaliação de Impacto da Transferência mostrar que a lei do país de destino não as enfraquece. Para a China continental não existe decisão de adequação da UE, a PIPL dá amplo acesso aos dados às autoridades e a política de privacidade da DeepSeek permite a divulgação às autoridades quando exigida por lei. Na nossa avaliação, para dados pessoais de residentes na UE a API hospedada da DeepSeek é difícil de justificar. Os pesos abertos da DeepSeek podem rodar no seu próprio hardware, o que elimina a transferência, mas verifique a licença do modelo e a sua configuração de segurança.',
+            a: 'Muito improvável. As SCCs só funcionam se uma Avaliação de Impacto da Transferência mostrar que a lei do país de destino não as enfraquece. Para a China continental não existe decisão de adequação da UE, e APIs hospedadas operadas fora da UE levantam questões de transferência, então verifique a política de privacidade e os termos de tratamento de dados vigentes do provedor. Na nossa avaliação, para dados pessoais de residentes na UE a API hospedada da DeepSeek é difícil de justificar. Os pesos abertos da DeepSeek podem rodar no seu próprio hardware, o que elimina a transferência, mas verifique a licença do modelo e a sua configuração de segurança. Isto não é aconselhamento jurídico.',
           },
           {
             q: 'Posso manter os prompts do Claude dentro da UE?',
@@ -1571,11 +1571,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual API de LLM está em conformidade com o GDPR?',
-            a: 'Nenhuma API é conforme por si só: a conformidade com o GDPR depende de como você a usa. Verifique quatro pontos: um DPA assinado que torne o fornecedor seu operador, um mecanismo de transferência válido (EU-US Data Privacy Framework ou SCCs mais uma TIA) se os dados saírem da UE, uma configuração clara de retenção e de não uso para treinamento, e uma base legal para os dados pessoais que você envia. A OpenAI oferece Projects com residência de dados na UE para clientes elegíveis e um DPA; a Anthropic oferece um DPA com SCCs, com processamento na UE disponível pelas regiões de provedores de nuvem. Na nossa avaliação, a API hospedada da DeepSeek é a mais difícil de justificar. Para dados sensíveis, os modelos locais evitam por completo a questão da transferência.',
+            a: 'Nenhuma API é conforme por si só: a conformidade com o GDPR depende de como você a usa. Verifique quatro pontos: um DPA assinado que torne o fornecedor seu operador, um mecanismo de transferência válido (EU-US Data Privacy Framework ou SCCs mais uma TIA) se os dados saírem da UE, uma configuração clara de retenção e de não uso para treinamento, e uma base legal para os dados pessoais que você envia. A OpenAI oferece Projects com residência de dados na UE para clientes elegíveis e um DPA; a Anthropic oferece um DPA com SCCs, com processamento na UE disponível pelas regiões de provedores de nuvem. Na nossa avaliação, a API hospedada da DeepSeek é a mais difícil de justificar. Para dados sensíveis, os modelos locais evitam por completo a questão da transferência. Isto não é aconselhamento jurídico.',
           },
           {
             q: 'O Qwen é seguro de usar sob o GDPR?',
-            a: 'Depende de como você o executa. Os pesos abertos do Qwen (por exemplo, o Qwen3.8-27B sob Apache 2.0) executados no seu próprio hardware não enviam dados à Alibaba, então não há transferência do Artigo 44 e o perfil de risco é igual ao do Llama. A API hospedada da Alibaba Cloud é diferente: você estaria enviando prompts a um provedor fora da UE, o que exige uma avaliação de transferência própria, um DPA e a checagem da região. Verifique a licença no model card, porque os termos variam dentro da família Qwen.',
+            a: 'Depende de como você o executa. Os pesos abertos do Qwen (por exemplo, o Qwen3.8-27B sob Apache 2.0) executados no seu próprio hardware não precisam enviar dados à Alibaba se o ambiente de execução estiver configurado para não fazer chamadas externas, então normalmente não há transferência do Artigo 44 e o perfil de risco é semelhante ao do Llama. A API hospedada da Alibaba Cloud é diferente: você estaria enviando prompts a um provedor fora da UE, o que exige uma avaliação de transferência própria, um DPA e a checagem da região. Verifique a licença no model card, porque os termos variam dentro da família Qwen.',
           },
           {
             q: 'Posso usar o Llama 4 Scout como substituto direto do Claude?',
@@ -1587,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Rodar um LLM on-premise é mais caro que usar APIs em nuvem?',
-            a: 'No investimento inicial: sim. O hardware (RTX 4070 Ti) custa ~R$ 4.500–6.500 no varejo brasileiro. Mensalmente: não. A eletricidade on-premise é de ~R$ 50–90/mês. As APIs em nuvem custam US$ 0,001–0,01 por 1K tokens (cobradas em dólar), o que para uso intenso (>1M tokens/mês) ultrapassa US$ 100. O ponto de equilíbrio costuma ser de 6–12 meses para uso médio a alto. Se você roda <100K tokens/mês, as APIs em nuvem são mais baratas. Se roda >1M tokens/mês, o on-premise é mais barato. A conformidade com GDPR/LGPD é um argumento de negócio adicional: o on-premise pode reduzir ou eliminar a etapa de SCC/TIA na camada de inferência, mas as demais obrigações da GDPR/LGPD continuam (não é aconselhamento jurídico).',
+            a: 'No investimento inicial: sim, o hardware local é um custo único e a eletricidade é um custo contínuo. Se o on-premise ou as APIs em nuvem saem mais baratos depende do seu uso e do modelo de que você precisa; compare o seu próprio volume com as páginas de preços atuais dos provedores. A conformidade com GDPR/LGPD é um argumento de negócio adicional: o on-premise pode reduzir ou eliminar a etapa de SCC/TIA na camada de inferência, mas as demais obrigações da GDPR/LGPD continuam (não é aconselhamento jurídico).',
           },
         ],
       },
@@ -1634,23 +1634,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-19',
     title: 'GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'GDPR 리스크 매트릭스: Qwen·DeepSeek·Llama·Claude 비교',
-    metaDescription: 'LLM GDPR 리스크 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.',
+    metaDescription: 'LLM GDPR 리스크 비교: 자체 평가: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-09',
     readTime: '8분 읽기',
     educationalLevel: 'Advanced',
     audience: '독점적 LLM과 오픈 웨이트 LLM 중에서 선택하는 CISO, 조달팀, 컴플라이언스 담당자',
     primaryTerm: 'GDPR 리스크 비교 LLM 모델',
-    leadAnswerBlock: '**자체 평가로는 DeepSeek 호스팅 API는 여기서 비교한 옵션 중 GDPR 리스크가 가장 높습니다. 데이터가 중국 본토에 저장되고, PIPL에 따라 당국이 광범위하게 접근할 수 있으며, EU는 중국에 대한 적정성 결정을 내리지 않았기 때문입니다. Qwen3.8-27B와 Llama 4 Scout을 로컬로 실행하면, 런타임이 외부 호출을 하지 않도록 구성된 경우 개인정보가 사용자의 인프라 밖으로 나가지 않으므로 리스크가 가장 낮습니다. Claude와 OpenAI GPT-6 Luna API는 중간에 해당합니다. 유효한 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 표준 계약 조항)이 필요하며, 엄격한 EU 거주지가 필요하면 OpenAI의 EU 데이터 거주지 프로젝트, 또는 Amazon Bedrock이나 Google Vertex AI의 EU 리전을 통한 Claude 같은 EU 리전 경로를 사용해야 합니다.**',
+    leadAnswerBlock: '**자체 평가로는 DeepSeek 호스팅 API는 여기서 비교한 옵션 중 GDPR 리스크가 가장 높습니다. EU 밖에서 운영되는 호스팅 API는 이전 관련 문제를 제기하므로 제공업체의 현재 개인정보 처리방침과 데이터 처리 조건을 확인해야 하고, EU는 중국에 대한 적정성 결정을 내리지 않았기 때문입니다. Qwen3.8-27B와 Llama 4 Scout을 로컬로 실행하면, 런타임이 외부 호출을 하지 않도록 구성된 경우 개인정보가 사용자의 인프라 밖으로 나가지 않으므로 리스크가 가장 낮습니다. Claude와 OpenAI GPT-6 Luna API는 중간에 해당합니다. 유효한 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 표준 계약 조항)이 필요하며, 엄격한 EU 거주지가 필요하면 OpenAI의 EU 데이터 거주지 프로젝트, 또는 Amazon Bedrock이나 Google Vertex AI의 EU 리전을 통한 Claude 같은 EU 리전 경로를 사용해야 합니다.**',
     current_models_mentioned: ['DeepSeek', 'Qwen3.8-27B', 'Qwen3 14B', 'Llama 4 Scout', 'Claude Sonnet 5.5', 'Claude Opus 5.5', 'GPT-6 Luna'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       ko: {
         question: 'GDPR 하에서 리스크가 가장 낮은 LLM은 무엇입니까?',
-        answer: 'Qwen3.8-27B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 리스크가 가장 낮습니다. 런타임이 외부 호출을 하지 않도록 구성된 경우 데이터가 관할권을 벗어나지 않으므로 보통 제44조 이전이 없고, 관리해야 할 SCC나 TIA도 없습니다. 자체 평가로는 DeepSeek 호스팅 API는 데이터가 PIPL이 적용되는 중국에 저장되므로 리스크가 가장 높습니다. Claude 및 GPT-6 Luna API는 중간 위험입니다. 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 SCC)이 필요하며, EU 내 처리는 OpenAI의 EU 데이터 거주지 프로젝트 또는 Amazon Bedrock / Google Vertex AI EU 리전의 Claude를 통해 가능하며 Anthropic 자체 API로는 제공되지 않습니다.',
+        answer: 'Qwen3.8-27B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 리스크가 가장 낮습니다. 런타임이 외부 호출을 하지 않도록 구성된 경우 데이터가 관할권을 벗어나지 않으므로 보통 제44조 이전이 없고, 관리해야 할 SCC나 TIA도 없습니다. 자체 평가로는 DeepSeek 호스팅 API의 리스크가 가장 높습니다. EU 밖에서 운영되는 호스팅 API는 이전 관련 문제를 제기하므로, 제공업체의 현재 개인정보 처리방침과 데이터 처리 조건을 확인하십시오. Claude 및 GPT-6 Luna API는 중간 위험입니다. 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 SCC)이 필요하며, EU 내 처리는 OpenAI의 EU 데이터 거주지 프로젝트 또는 Amazon Bedrock / Google Vertex AI EU 리전의 Claude를 통해 가능하며 Anthropic 자체 API로는 제공되지 않습니다.',
         bullets: [
           'Qwen 로컬: 최저 위험. 이전 없음, Qwen3.8-27B는 Apache 2.0 가중치, 양자화 시 약 16–24 GB VRAM.',
-          'DeepSeek API: 최고 위험. 중국 내 데이터 저장, PIPL 관할권, EU 적정성 결정 없음.',
+          'DeepSeek API: 최고 위험. EU 밖에서 운영, 중국에 대한 EU 적정성 결정 없음, 제공업체의 현재 개인정보 처리방침과 데이터 처리 조건 확인 필요.',
           'Claude/GPT API: 중간 위험. 이전 메커니즘 필요. EU 리전 경로는 벤더 관할권 문제를 줄여주지만 완전히 없애지는 못합니다.',
         ],
         updatedDate: '2026-10',
@@ -1668,8 +1668,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '자체 평가로는 DeepSeek 호스팅 API는 최고 위험: 데이터가 PIPL이 적용되는 중국 본토에 저장되고, 중국에 대한 EU 적정성 결정이 없으며, 개인정보 처리방침이 법적으로 요구되는 경우 당국에 대한 공개를 허용합니다.',
-          'Qwen3.8-27B(Apache 2.0)와 Llama 4 Scout을 로컬로 실행하면 최저 위험: 제44조 이전 없음, SCC 불필요, 데이터가 자체 하드웨어에 보관됩니다. Llama 4 Scout은 4비트에서 약 55–60 GB가 필요하고, Qwen3.8-27B는 양자화 시 24 GB GPU에 들어갑니다',
+          '자체 평가로는 DeepSeek 호스팅 API는 최고 위험: EU 밖에서 운영되는 호스팅 API는 이전 관련 문제를 제기하므로 제공업체의 현재 개인정보 처리방침과 데이터 처리 조건을 확인해야 하며, 중국에 대한 EU 적정성 결정도 없습니다.',
+          'Qwen3.8-27B(Apache 2.0)와 Llama 4 Scout을 로컬로 실행하면 최저 위험: 런타임이 외부 호출을 하지 않도록 구성된 경우 보통 제44조 이전 없음, SCC 불필요, 데이터가 자체 하드웨어에 보관됩니다. Llama 4 Scout은 4비트에서 약 55–60 GB가 필요하고, Qwen3.8-27B는 양자화 시 24 GB GPU에 들어갑니다',
           'Claude API와 GPT-6 Luna는 중간 위험: 미국 벤더는 EU-US 데이터 프라이버시 프레임워크 또는 SCC와 이전 영향 평가가 필요합니다. Anthropic 자체 API는 글로벌 또는 미국 추론만 제공하는 반면, OpenAI는 새 프로젝트에 EU 데이터 거주지를 제공합니다',
           '권장 스택: 스타트업(DPA 하의 Claude 또는 OpenAI API), 데이터 민감 조직(24 GB GPU 한 장의 Qwen3.8-27B), 기업(멀티 GPU 로컬 모델, 에어갭)',
           '리스크 매트릭스는 데이터 거주지, 학습 데이터 관할권, ToS 데이터 보존, 이전 메커니즘 요건, 전체 위험 수준의 5가지 벡터를 다룹니다',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['배포 환경', '데이터 거주지', '학습 데이터 관할권', 'ToS 보존 위험', 'SCC / TIA 필요 여부', '전체 위험 수준'],
         rows: [
-          { '배포 환경': 'DeepSeek API', '데이터 거주지': '중국(중국 본토 서버)', '학습 데이터 관할권': '중국(PIPL)', 'ToS 보존 위험': '정책상 당국 공유 허용', 'SCC / TIA 필요 여부': '적정성 결정 없음; SCC+TIA 입증 어려움(자체 평가)', '전체 위험 수준': '🔴 최고' },
+          { '배포 환경': 'DeepSeek API', '데이터 거주지': '중국(중국 본토 서버)', '학습 데이터 관할권': '중국', 'ToS 보존 위험': '제공업체 정책과 DPA 확인 필요', 'SCC / TIA 필요 여부': '적정성 결정 없음; SCC+TIA 입증 어려움(자체 평가)', '전체 위험 수준': '🔴 최고' },
           { '배포 환경': 'Claude API(자사 직접)', '데이터 거주지': '미국 또는 글로벌; EU 전용 없음', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'Anthropic DPA 기준; 보존 확인', 'SCC / TIA 필요 여부': 'DPF 또는 SCC(DPA 포함) + TIA', '전체 위험 수준': '🟠 중상' },
           { '배포 환경': 'Claude(Bedrock / Vertex AI EU)', '데이터 거주지': 'EU 리전(엔드포인트로 지정)', '학습 데이터 관할권': '미국 벤더, EU 처리', 'ToS 보존 위험': '클라우드 제공업체 약관 적용', 'SCC / TIA 필요 여부': '계약에 따라 다름; TIA 검토', '전체 위험 수준': '🟡 중간' },
           { '배포 환경': 'GPT-6 Luna API(기본)', '데이터 거주지': '미국(기본 프로젝트)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'DPA 제공; API 약관에 따름', 'SCC / TIA 필요 여부': 'DPF 또는 SCC + TIA', '전체 위험 수준': '🟠 중상' },
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'DeepSeek API — GDPR 워크플로에서 정당화하기 어려움(자체 평가)',
-            text: '자체 평가로는 DeepSeek 호스팅 API는 여기서 비교한 옵션 중 리스크가 가장 높습니다. (1) 개인정보 처리방침상 데이터가 중화인민공화국 서버에 저장되며, PIPL 등 관련 법률이 당국에 광범위한 접근 권한을 부여하고, (2) EU는 중국에 대한 적정성 결정을 내리지 않았고, SCC는 이전 영향 평가로 대상국 법률이 SCC를 훼손하지 않음을 입증할 수 있을 때만 도움이 되는데 이 경우에는 입증이 매우 어려우며, (3) 처리방침이 법적으로 요구되는 경우 당국에 대한 공개를 허용합니다. 프롬프트에 EU 거주자의 개인정보가 포함된다면 호스팅 API 사용은 유효한 제44조 이전 근거를 갖추지 못했을 가능성이 높습니다. DeepSeek 오픈 웨이트를 로컬로 실행하면 다른 로컬 모델과 마찬가지로 이전 리스크가 낮지만, 모델 라이선스와 자체 보안 환경을 확인하십시오.',
+            text: '자체 평가로는 DeepSeek 호스팅 API는 여기서 비교한 옵션 중 리스크가 가장 높습니다. (1) EU 밖에서 운영되는 호스팅 API는 이전 관련 문제를 제기하므로 제공업체의 현재 개인정보 처리방침과 데이터 처리 조건을 확인해야 하고, (2) EU는 중국에 대한 적정성 결정을 내리지 않았고, SCC는 이전 영향 평가로 대상국 법률이 SCC를 훼손하지 않음을 입증할 수 있을 때만 도움이 되는데 이 경우에는 입증이 매우 어렵습니다. 프롬프트에 EU 거주자의 개인정보가 포함된다면 호스팅 API 사용은 유효한 제44조 이전 근거를 갖추지 못했을 가능성이 높습니다. DeepSeek 오픈 웨이트를 로컬로 실행하면 다른 로컬 모델과 마찬가지로 이전 리스크가 낮지만, 모델 라이선스와 자체 보안 환경을 확인하십시오.',
           },
           {
             title: 'Claude API — 중간 위험, 이전 메커니즘으로 관리 가능',
@@ -1779,7 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'SCC를 사용하면 DeepSeek가 GDPR을 준수합니까?',
-            a: '가능성이 매우 낮습니다. SCC는 이전 영향 평가로 대상국 법률이 SCC를 훼손하지 않음을 입증할 수 있을 때만 유효합니다. 중국 본토에는 EU 적정성 결정이 없고, PIPL은 당국에 데이터에 대한 광범위한 접근 권한을 주며, DeepSeek의 개인정보 처리방침은 법적으로 요구되는 경우 당국에 대한 공개를 허용합니다. 자체 평가로는 EU 거주자의 개인정보에 DeepSeek 호스팅 API를 사용하는 것은 정당화하기 어렵습니다. DeepSeek 오픈 웨이트는 자체 하드웨어에서 실행할 수 있어 이전이 사라지지만, 모델 라이선스와 보안 환경을 확인하십시오.',
+            a: '가능성이 매우 낮습니다. SCC는 이전 영향 평가로 대상국 법률이 SCC를 훼손하지 않음을 입증할 수 있을 때만 유효합니다. 중국 본토에는 EU 적정성 결정이 없고, EU 밖에서 운영되는 호스팅 API는 이전 관련 문제를 제기하므로 제공업체의 현재 개인정보 처리방침과 데이터 처리 조건을 확인해야 합니다. 자체 평가로는 EU 거주자의 개인정보에 DeepSeek 호스팅 API를 사용하는 것은 정당화하기 어렵습니다. DeepSeek 오픈 웨이트는 자체 하드웨어에서 실행할 수 있어 이전이 사라지지만, 모델 라이선스와 보안 환경을 확인하십시오. 이는 법률 자문이 아닙니다.',
           },
           {
             q: 'Claude 프롬프트를 EU 안에 둘 수 있습니까?',
@@ -1787,11 +1787,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'GDPR을 준수하는 LLM API는 무엇입니까?',
-            a: 'API 자체만으로 준수가 되는 것은 아닙니다. GDPR 준수 여부는 사용 방식에 달려 있습니다. 네 가지를 확인하십시오. 벤더를 처리자로 만드는 서명된 DPA, 데이터가 EU 밖으로 나가는 경우의 유효한 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 SCC와 TIA), 명확한 보존 및 학습 미사용 설정, 전송하는 개인정보에 대한 적법한 근거입니다. OpenAI는 해당 고객에게 EU 데이터 거주지 프로젝트와 DPA를 제공하고, Anthropic은 SCC를 포함한 DPA를 제공하며 EU 내 처리는 클라우드 제공업체 리전을 통해 가능합니다. 자체 평가로는 DeepSeek 호스팅 API는 정당화하기가 가장 어렵습니다. 민감한 데이터에는 로컬 모델이 이전 문제를 아예 피할 수 있습니다.',
+            a: 'API 자체만으로 준수가 되는 것은 아닙니다. GDPR 준수 여부는 사용 방식에 달려 있습니다. 네 가지를 확인하십시오. 벤더를 처리자로 만드는 서명된 DPA, 데이터가 EU 밖으로 나가는 경우의 유효한 이전 메커니즘(EU-US 데이터 프라이버시 프레임워크 또는 SCC와 TIA), 명확한 보존 및 학습 미사용 설정, 전송하는 개인정보에 대한 적법한 근거입니다. OpenAI는 해당 고객에게 EU 데이터 거주지 프로젝트와 DPA를 제공하고, Anthropic은 SCC를 포함한 DPA를 제공하며 EU 내 처리는 클라우드 제공업체 리전을 통해 가능합니다. 자체 평가로는 DeepSeek 호스팅 API는 정당화하기가 가장 어렵습니다. 민감한 데이터에는 로컬 모델이 이전 문제를 아예 피할 수 있습니다. 이는 법률 자문이 아닙니다.',
           },
           {
             q: 'GDPR 하에서 Qwen을 사용해도 안전합니까?',
-            a: '실행 방식에 따라 다릅니다. Qwen 오픈 웨이트(예: Apache 2.0의 Qwen3.8-27B)를 자체 하드웨어에서 실행하면 Alibaba로 데이터가 전송되지 않으므로 제44조 이전이 없고 리스크 프로필은 Llama와 같습니다. Alibaba Cloud 호스팅 API는 다릅니다. 프롬프트를 EU 밖의 제공업체로 보내게 되므로 별도의 이전 평가, DPA, 리전 확인이 필요합니다. 라이선스는 Qwen 제품군 안에서도 다르므로 모델 카드에서 확인하십시오.',
+            a: '실행 방식에 따라 다릅니다. Qwen 오픈 웨이트(예: Apache 2.0의 Qwen3.8-27B)를 자체 하드웨어에서 실행하면 런타임이 외부 호출을 하지 않도록 구성된 경우 Alibaba로 데이터를 전송할 필요가 없으므로 보통 제44조 이전이 없고 리스크 프로필은 Llama와 비슷합니다. Alibaba Cloud 호스팅 API는 다릅니다. 프롬프트를 EU 밖의 제공업체로 보내게 되므로 별도의 이전 평가, DPA, 리전 확인이 필요합니다. 라이선스는 Qwen 제품군 안에서도 다르므로 모델 카드에서 확인하십시오.',
           },
           {
             q: 'Llama 4 Scout을 Claude의 대체재로 사용할 수 있습니까?',
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '온프레미스 LLM 실행이 클라우드 API보다 비용이 많이 듭니까?',
-            a: '초기 비용: 그렇습니다. 하드웨어(RTX 4070 Ti) 비용은 약 $500–1000입니다. 월별 비용: 아닙니다. 온프레미스 전기 비용은 월 약 $5–10입니다. 클라우드 API는 1K 토큰당 $0.001–0.01이며, 대량 사용(월 >1M 토큰)의 경우 $100를 초과합니다. 손익분기점은 일반적으로 중간-대량 사용의 경우 6–12개월입니다. 월 <100K 토큰을 실행하는 경우 클라우드 API가 더 저렴합니다. 월 >1M 토큰을 실행하는 경우 온프레미스가 더 저렴합니다. GDPR 컴플라이언스는 추가적인 비즈니스 케이스입니다: 온프레미스는 추론 계층의 SCC/TIA 단계를 줄이거나 없앨 수 있지만, 그 외 GDPR 의무는 그대로 남습니다(법률 자문이 아닙니다).',
+            a: '초기 비용: 그렇습니다. 로컬 하드웨어는 일회성 비용이고 전기 비용은 지속적으로 발생합니다. 온프레미스와 클라우드 API 중 어느 쪽이 더 저렴한지는 사용량과 필요한 모델에 따라 다릅니다. 본인의 사용량을 각 제공업체의 최신 요금 페이지와 비교하십시오. GDPR 컴플라이언스는 추가적인 비즈니스 케이스입니다: 온프레미스는 추론 계층의 SCC/TIA 단계를 줄이거나 없앨 수 있지만, 그 외 GDPR 의무는 그대로 남습니다(법률 자문이 아닙니다).',
           },
         ],
       },

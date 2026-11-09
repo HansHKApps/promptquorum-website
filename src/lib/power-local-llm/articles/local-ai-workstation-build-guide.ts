@@ -1035,14 +1035,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Brauche ich eine Threadripper-CPU für einen Lokal-KI-PC?',
             a: 'Nein. Eine Consumer-Ryzen-CPU reicht für alle drei Builds dieser Anleitung — eine Ryzen 7 für die Budget-Stufe, eine Ryzen 9 für die Mittelklasse- und die Enthusiasten-Stufe. Eine Threadripper lohnt ihre Kosten nur für eine Dual-GPU-Maschine, die Fine-Tuning und Inferenz gleichzeitig ausführt, was über einen Single-GPU-Build hinausgeht.',
           },
-          {
-            q: 'Bleiben meine Daten bei einer Lokal-KI-Workstation DSGVO-konform?',
-            a: 'Ja, und das ist einer der stärksten Gründe, lokal zu bauen. Eine Lokal-KI-Workstation führt die Modellinferenz vollständig auf dem Gerät aus — Prompts, Dokumente und Antworten verlassen die Maschine nie und werden nicht an einen Cloud-Anbieter übertragen. Damit entfallen die Auftragsverarbeitung nach Art. 28 DSGVO und die Risiken einer Drittlandübermittlung, die bei Cloud-KI-Diensten anfallen. Sie behalten die volle Kontrolle über personenbezogene Daten, was die Verarbeitung sensibler oder vertraulicher Inhalte deutlich vereinfacht. Für die DSGVO-Konformität bleiben dennoch organisatorische Maßnahmen wie Zugriffskontrolle und Datenträgerverschlüsselung der Workstation erforderlich.',
-          },
-          {
-            q: 'Eignet sich eine Lokal-KI-Workstation für den deutschen Mittelstand?',
-            a: 'Ja. Für viele Mittelständler ist eine Lokal-KI-Workstation eine kalkulierbare Einmalinvestition statt laufender, nutzungsabhängiger Cloud-Kosten, und sie hält sensible Geschäftsdaten im eigenen Haus. Der Mittelklasse-Build (ca. 3.450 €) deckt die meisten betrieblichen Aufgaben ab — Dokumentenzusammenfassung, Coding-Hilfe und interne RAG-Pipelines mit 14B- bis 33B-Modellen — ohne Vertrag mit einem Cloud-Anbieter. Da die Inferenz vor Ort läuft, entfällt die Sorge um Datenabfluss an Dritte, was die Einführung in regulierten Branchen wie Fertigung, Recht oder Gesundheitswesen erleichtert. Für den Einstieg oder einzelne Arbeitsplätze genügt der Budget-Build (ca. 2.200 €); den Enthusiasten-Build wählt man nur, wenn 70B-Modelle gebraucht werden.',
-          },
         ],
       },
       relatedReading: {
@@ -2656,7 +2648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'como armar una pc para ia local',
     ],
     leadAnswerBlock:
-      '**La mejor PC para IA local es el nivel cuya VRAM de GPU encaja con tu modelo objetivo. Una configuración económica de ~€2.050 ejecuta modelos 7B-13B, una configuración media de ~€3.250 ejecuta modelos 14B-33B y una configuración entusiasta de ~€9.600 ejecuta modelos 70B — con los precios de GPU, RAM y SSD de 2026 elevando cada total muy por encima del año anterior. Los precios son de venta minorista en España (Amazon.es, PcComponentes); en Latinoamérica pueden variar según impuestos locales.**',
+      '**La mejor PC para IA local es el nivel cuya VRAM de GPU encaja con tu modelo objetivo. Una configuración económica de ~€2.050 ejecuta modelos 7B-13B, una configuración media de ~€3.250 ejecuta modelos 14B-33B y una configuración entusiasta de ~€9.600 ejecuta modelos 70B — con los precios de GPU, RAM y SSD de 2026 elevando cada total muy por encima del año anterior. Los precios son estimaciones convertidas desde precios de mercado en EE. UU.; en España y Latinoamérica pueden variar según impuestos y disponibilidad.**',
     quickAnswerTop: {
       es: {
         question: '¿Cómo armo una PC para ejecutar LLM locales en 2026?',
@@ -2749,7 +2741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan los tres niveles de configuración en 2026',
         content:
-          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son cifras aproximadas y típicas de la clase de GPU de cada nivel (no medidos por PromptQuorum); la velocidad real depende de la cuantización, el entorno de ejecución y la longitud de contexto. Los totales de configuración son estimaciones de venta minorista en España (Amazon.es, PcComponentes) que suman el punto medio de cada rango de precio de las secciones de cada configuración, construidas a partir de los precios mínimos de oferta actuales — la escasez de memoria de 2026 empujó GPU, RAM DDR5 y SSD muy por encima de lo normal, por lo que las líneas de GPU y RAM dominan cada total y varían semana a semana. Compara listados de GPU nuevas y usadas: lo usado ya no siempre cuesta menos. En Latinoamérica, los precios pueden variar según impuestos locales.',
+          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son cifras aproximadas y típicas de la clase de GPU de cada nivel (no medidos por PromptQuorum); la velocidad real depende de la cuantización, el entorno de ejecución y la longitud de contexto. Los totales de configuración son estimaciones convertidas desde precios de mercado en EE. UU. (en España y Latinoamérica pueden variar según impuestos y disponibilidad) que suman el punto medio de cada rango de precio de las secciones de cada configuración, construidas a partir de los precios mínimos de oferta actuales — la escasez de memoria de 2026 empujó GPU, RAM DDR5 y SSD muy por encima de lo normal, por lo que las líneas de GPU y RAM dominan cada total y varían semana a semana. Compara listados de GPU nuevas y usadas: lo usado ya no siempre cuesta menos. En Latinoamérica, los precios pueden variar según impuestos locales.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Comparativa de niveles de PC para IA local 2026: configuración económica RTX 4060 Ti 16 GB (~2.000 $) para modelos 7B-13B, configuración media RTX 4070 Ti Super 16 GB (~3.100 $) para modelos 14B-33B, configuración entusiasta RTX 5090 32 GB (~9.600 $) para modelos 33B-70B.',
         snippetBlocks: [
@@ -3085,7 +3077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta armar una PC para IA local en 2026?',
-            a: 'Con precios minoristas de España (Amazon.es, PcComponentes), una PC para IA local económica cuesta aproximadamente €2.050, una configuración media aproximadamente €3.250 y una configuración entusiasta 70B aproximadamente €9.600. Estos totales se construyen a partir de los precios mínimos de oferta actuales — la escasez de chips de memoria de 2026 empujó las GPU, la RAM DDR5 y los SSD muy por encima de los precios del año pasado, y dado que la GPU y la RAM son las líneas más grandes en cada configuración, elevaron cada total muy por encima de lo que costaban los mismos componentes hace un año. En Latinoamérica, los precios pueden variar según impuestos locales.',
+            a: 'Con estimaciones convertidas desde precios de mercado en EE. UU. (pueden variar según impuestos y disponibilidad), una PC para IA local económica cuesta aproximadamente €2.050, una configuración media aproximadamente €3.250 y una configuración entusiasta 70B aproximadamente €9.600. Estos totales se construyen a partir de los precios mínimos de oferta actuales — la escasez de chips de memoria de 2026 empujó las GPU, la RAM DDR5 y los SSD muy por encima de los precios del año pasado, y dado que la GPU y la RAM son las líneas más grandes en cada configuración, elevaron cada total muy por encima de lo que costaban los mismos componentes hace un año. En Latinoamérica, los precios pueden variar según impuestos locales.',
           },
           {
             q: '¿Qué GPU debo poner en una PC para IA local?',
@@ -3187,7 +3179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'como montar um pc para ia local',
     ],
     leadAnswerBlock:
-      '**O melhor PC para IA local é o nível cuja VRAM de GPU se encaixa no seu modelo alvo. Com preços de varejo no Brasil (KaBuM!, Pichau, Mercado Livre), uma configuração econômica de ~R$ 12.900 executa modelos 7B–13B, uma configuração intermediária de ~R$ 20.600 executa modelos 14B–33B e uma configuração entusiasta de ~R$ 62.000 executa modelos 70B — com os preços de GPU, RAM e SSD de 2026 elevando cada total muito acima do ano anterior. Os preços no Brasil podem variar bastante devido a impostos de importação.**',
+      '**O melhor PC para IA local é o nível cuja VRAM de GPU se encaixa no seu modelo alvo. Com preços estimados, convertidos de preços de mercado dos EUA, uma configuração econômica de ~R$ 12.900 executa modelos 7B–13B, uma configuração intermediária de ~R$ 20.600 executa modelos 14B–33B e uma configuração entusiasta de ~R$ 62.000 executa modelos 70B — com os preços de GPU, RAM e SSD de 2026 elevando cada total muito acima do ano anterior. Os preços no Brasil podem variar bastante devido a impostos de importação.**',
     quickAnswerTop: {
       pt: {
         question: 'Como monto um PC para executar LLMs locais em 2026?',
@@ -3280,7 +3272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como os três níveis de configuração se comparam em 2026',
         content:
-          'As cifras de VRAM e potência da GPU são especificações do fabricante. As velocidades de inferência são valores aproximados e típicos para a classe de GPU de cada nível (não medidas pelo PromptQuorum); a velocidade real depende da quantização, do runtime e do tamanho do contexto. Os totais de configuração são estimativas de varejo no Brasil (KaBuM!, Pichau, Mercado Livre) que somam o ponto médio de cada faixa de preço mostrada nas seções de cada configuração, montadas a partir dos menores preços anunciados atualmente — a escassez de memória de 2026 empurrou GPUs, RAM DDR5 e SSDs muito acima do normal, então as linhas de GPU e RAM dominam cada total e variam semana a semana. Compare anúncios novos e usados de GPU: o usado já não custa sempre menos. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          'As cifras de VRAM e potência da GPU são especificações do fabricante. As velocidades de inferência são valores aproximados e típicos para a classe de GPU de cada nível (não medidas pelo PromptQuorum); a velocidade real depende da quantização, do runtime e do tamanho do contexto. Os totais de configuração são estimativas convertidas de preços de mercado dos EUA que somam o ponto médio de cada faixa de preço mostrada nas seções de cada configuração, montadas a partir dos menores preços anunciados atualmente — a escassez de memória de 2026 empurrou GPUs, RAM DDR5 e SSDs muito acima do normal, então as linhas de GPU e RAM dominam cada total e variam semana a semana. Compare anúncios novos e usados de GPU: o usado já não custa sempre menos. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Comparação dos níveis de PC para IA local em 2026: configuração econômica RTX 4060 Ti 16 GB (~US$ 2.000) para modelos 7B-13B, configuração intermediária RTX 4070 Ti Super 16 GB (~US$ 3.100) para modelos 14B-33B, configuração entusiasta RTX 5090 32 GB (~US$ 9.600) para modelos 33B-70B.',
         snippetBlocks: [
@@ -3616,7 +3608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa montar um PC para IA local em 2026?',
-            a: 'Com preços de varejo no Brasil (KaBuM!, Pichau, Mercado Livre), um PC para IA local econômico custa aproximadamente R$ 12.900, uma configuração intermediária aproximadamente R$ 20.600 e uma configuração entusiasta 70B aproximadamente R$ 62.000. Esses totais são montados a partir dos menores preços anunciados atualmente — a escassez de chips de memória de 2026 empurrou GPUs, RAM DDR5 e SSDs muito acima dos preços do ano passado, e como a GPU e a RAM são as maiores linhas em cada configuração, elevaram cada total muito acima do que os mesmos componentes custavam um ano atrás. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+            a: 'Com preços estimados, convertidos de preços de mercado dos EUA, um PC para IA local econômico custa aproximadamente R$ 12.900, uma configuração intermediária aproximadamente R$ 20.600 e uma configuração entusiasta 70B aproximadamente R$ 62.000. Esses totais são montados a partir dos menores preços anunciados atualmente — a escassez de chips de memória de 2026 empurrou GPUs, RAM DDR5 e SSDs muito acima dos preços do ano passado, e como a GPU e a RAM são as maiores linhas em cada configuração, elevaram cada total muito acima do que os mesmos componentes custavam um ano atrás. Os preços no Brasil podem variar bastante devido a impostos de importação.',
           },
           {
             q: 'Qual GPU devo colocar em um PC para IA local?',

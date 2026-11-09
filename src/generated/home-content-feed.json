@@ -7292,7 +7292,7 @@
   {
     "lang": "en",
     "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
-    "excerpt": "5 beginner local LLMs ranked: Llama 3.2 3B (2.5 GB, 45 tok/s), Phi-4 Mini (best reasoning), Gemma 4 E2B (1.7 GB, among the faster options), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, one Ollama command.",
+    "excerpt": "5 beginner local LLMs ranked: Llama 3.2 3B (2.5 GB), Phi-4 Mini (strong reasoning), Gemma 4 E2B (1.7 GB, among the faster options), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, one Ollama command.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/local-llms/best-beginner-local-llm-models",
@@ -7301,7 +7301,7 @@
   {
     "lang": "de",
     "title": "Beste Einsteiger-LLMs 2026: 4GB & 8GB RAM Modelle (Llama, Phi, Gemma, Qwen)",
-    "excerpt": "5 Einsteiger-LLMs: Llama 3.2 3B (2,5 GB), Phi-4 Mini (beste Logik), Gemma 4 E2B (1,7 GB, am schnellsten), Llama 3.1 8B, Qwen3 8B. Alle mit 4–8 GB RAM, ein Ollama-Befehl.",
+    "excerpt": "5 Einsteiger-LLMs: Llama 3.2 3B (2,5 GB), Phi-4 Mini (starke Logik), Gemma 4 E2B (1,7 GB, unter den schnelleren Optionen), Llama 3.1 8B, Qwen3 8B. Alle mit 4–8 GB RAM, ein Ollama-Befehl.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/de/local-llms/best-beginner-local-llm-models",
@@ -7310,7 +7310,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs LLMs débutants 2026 : Modèles 4GB & 8GB RAM classés (Llama, Phi, Gemma, Qwen)",
-    "excerpt": "5 LLMs locaux pour débutants : Llama 3.2 3B (2,5 Go, 45 tok/s), Phi-4 Mini (meilleur raisonnement), Gemma 4 E2B (1,7 Go, le plus rapide), Llama 3.1 8B, Qwen3 8B. 4–8 Go RAM via Ollama.",
+    "excerpt": "5 LLMs locaux pour débutants : Llama 3.2 3B (2,5 Go), Phi-4 Mini (bon raisonnement), Gemma 4 E2B (1,7 Go, parmi les options les plus rapides), Llama 3.1 8B, Qwen3 8B. 4–8 Go RAM via Ollama.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/fr/local-llms/best-beginner-local-llm-models",
@@ -7319,7 +7319,7 @@
   {
     "lang": "ja",
     "title": "2026年初心者向けローカルLLM：4GB & 8GB RAM完全比較ガイド（Llama、Phi、Gemma、Qwen）",
-    "excerpt": "初心者向けローカルLLM5選：Llama 3.2 3B（2.5GB、45 tok/s）、Phi-4 Mini（2.5GB、推論力最高）、Gemma 4 E2B（1.7GB、最速）、Llama 3.1 8B、Qwen3 8B。すべて4–8GB RAMとOllamaコマンド1つで動作。",
+    "excerpt": "初心者向けローカルLLM5選：Llama 3.2 3B（2.5GB）、Phi-4 Mini（2.5GB、推論力に優れる）、Gemma 4 E2B（1.7GB、比較的高速な選択肢）、Llama 3.1 8B、Qwen3 8B。すべて4–8GB RAMとOllamaコマンド1つで動作。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/ja/local-llms/best-beginner-local-llm-models",
@@ -7328,7 +7328,7 @@
   {
     "lang": "zh",
     "title": "2026年初学者最佳本地LLM：4GB & 8GB内存模型完整评测（Llama、Phi、Gemma、Qwen）",
-    "excerpt": "5款入门本地LLM评测：Llama 3.2 3B（2.5GB，45 tok/s）、Phi-4 Mini（推理最强）、Gemma 4 E2B（1.7GB，最快）、Llama 3.1 8B、Qwen3 8B。4–8GB内存，一条Ollama命令即可运行。",
+    "excerpt": "5款入门本地LLM评测：Llama 3.2 3B（2.5GB）、Phi-4 Mini（推理能力较强）、Gemma 4 E2B（1.7GB，速度较快的选择之一）、Llama 3.1 8B、Qwen3 8B。4–8GB内存，一条Ollama命令即可运行。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/zh/local-llms/best-beginner-local-llm-models",
@@ -7337,7 +7337,7 @@
   {
     "lang": "es",
     "title": "Mejores LLMs locales para principiantes 2026: Modelos de 4 GB y 8 GB de RAM (Llama, Phi, Gemma, Qwen)",
-    "excerpt": "5 LLMs locales para principiantes: Llama 3.2 3B (2,5 GB, 45 tok/s), Phi-4 Mini (mejor razonamiento), Gemma 4 E2B (1,7 GB, el más rápido), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, un comando Ollama.",
+    "excerpt": "5 LLMs locales para principiantes: Llama 3.2 3B (2,5 GB), Phi-4 Mini (buen razonamiento), Gemma 4 E2B (1,7 GB, entre las opciones más rápidas), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, un comando Ollama.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/best-beginner-local-llm-models",
@@ -7346,7 +7346,7 @@
   {
     "lang": "pt",
     "title": "Melhores LLMs locais para iniciantes 2026: modelos de 4 GB e 8 GB de RAM",
-    "excerpt": "5 LLMs locais para iniciantes: Llama 3.2 3B (2,5 GB, 45 tok/s), Phi-4 Mini (melhor raciocínio), Gemma 4 E2B (o mais rápido). Todos com 4–8 GB RAM via Ollama.",
+    "excerpt": "5 LLMs locais para iniciantes: Llama 3.2 3B (2,5 GB), Phi-4 Mini (bom raciocínio), Gemma 4 E2B (entre as opções mais rápidas). Todos com 4–8 GB RAM via Ollama.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/pt/local-llms/best-beginner-local-llm-models",
@@ -7355,7 +7355,7 @@
   {
     "lang": "ar",
     "title": "أفضل نماذج ⁨LLM⁩ المحلية للمبتدئين ⁨2026⁩: نماذج بذاكرة ⁨4 GB⁩ و⁨8 GB⁩ (⁨Llama⁩ وPhi وGemma وQwen)",
-    "excerpt": "⁨5⁩ نماذج ⁨LLM⁩ للمبتدئين: ⁨Llama 3.2 3B⁩ (⁨2.5GB⁩، ⁨45⁩ رمز/ث)، ⁨Phi-4 Mini⁩ أفضل استدلال، ⁨Gemma 4 E2B⁩ الأسرع. كلها بـ ⁨4⁩–⁨8GB RAM⁩ وأمر ⁨Ollama⁩ واحد.",
+    "excerpt": "⁨5⁩ نماذج ⁨LLM⁩ للمبتدئين: ⁨Llama 3.2 3B⁩ (⁨2.5GB⁩)، ⁨Phi-4 Mini⁩ استدلال قوي، ⁨Gemma 4 E2B⁩ من الخيارات الأسرع. كلها بـ ⁨4⁩–⁨8GB RAM⁩ وأمر ⁨Ollama⁩ واحد.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-09",
     "url": "/ar/local-llms/best-beginner-local-llm-models",
@@ -14825,7 +14825,7 @@
   {
     "lang": "en",
     "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
-    "excerpt": "ChatGPT Plus: $20/mo = $720 over 3 years. Local Llama 3.3 70B on RTX 5060 Ti: $400 GPU + $90 power = $490 total. Breakeven 11 months. 7 ChatGPT tiers compared.",
+    "excerpt": "ChatGPT Plus: $20/mo = $720 over 3 years. Local 13B–24B model on RTX 5060 Ti: $400 GPU + $90 power = $490 total. 7 ChatGPT tiers compared.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/local-llms/local-llms-vs-chatgpt-plus",
@@ -14843,7 +14843,7 @@
   {
     "lang": "fr",
     "title": "LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux",
-    "excerpt": "ChatGPT Plus : 20€/mois = 720€ sur 3 ans. LLM Llama 3.3 70B local sur RTX 5060 Ti : 400€ GPU + 90€ électricité = 490€ total. Rentabilité 11 mois. 7 niveaux ChatGPT comparés.",
+    "excerpt": "ChatGPT Plus : 20€/mois = 720€ sur 3 ans. Modèle local 13B–24B sur RTX 5060 Ti : 400€ GPU + 90€ électricité = 490€ total. 7 niveaux ChatGPT comparés.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/fr/local-llms/local-llms-vs-chatgpt-plus",
@@ -14852,7 +14852,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較",
-    "excerpt": "ChatGPT Plus：20€/月 = 3年間で約144,000円。RTX 5060 Ti 上のローカル Llama 3.3 70B：約75,800円 GPU + 22,500円電気代 = 約98,300円。損益分岐点11ヶ月。7つの ChatGPT レベルを比較。",
+    "excerpt": "ChatGPT Plus：20€/月 = 3年間で約144,000円。RTX 5060 Ti 上のローカル13B～24Bモデル：約75,800円 GPU + 22,500円電気代 = 約98,300円。7つの ChatGPT レベルを比較。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/ja/local-llms/local-llms-vs-chatgpt-plus",
@@ -14861,7 +14861,7 @@
   {
     "lang": "zh",
     "title": "本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比",
-    "excerpt": "ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地Llama 3.3 70B：约$400 GPU + $90电费 = $490总计。平衡点11个月。7个ChatGPT级别对比。",
+    "excerpt": "ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地13B-24B模型：约$400 GPU + $90电费 = $490总计。7个ChatGPT级别对比。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/zh/local-llms/local-llms-vs-chatgpt-plus",
@@ -14870,7 +14870,7 @@
   {
     "lang": "es",
     "title": "LLMs locales vs ChatGPT Plus 2026: Comparación completa de costos en 7 niveles de precios",
-    "excerpt": "ChatGPT Plus: $20/mes = $720 en 3 años. Llama 3.3 70B local en RTX 5060 Ti: $400 GPU + $90 luz = $490. Punto de equilibrio: 11 meses. 7 niveles comparados.",
+    "excerpt": "ChatGPT Plus: $20/mes = $720 en 3 años. Modelo local de 13B–24B en RTX 5060 Ti: $400 GPU + $90 luz = $490. 7 niveles comparados.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/local-llms-vs-chatgpt-plus",
@@ -14879,7 +14879,7 @@
   {
     "lang": "pt",
     "title": "LLMs Locais vs ChatGPT Plus 2026: Comparação Completa de Custos em 7 Níveis de Preço",
-    "excerpt": "ChatGPT Plus: $20/mês = $720 em 3 anos. Llama 3.3 70B local em RTX 5060 Ti: $400 GPU + $90 energia = $490. Ponto de equilíbrio: 11 meses. 7 níveis comparados.",
+    "excerpt": "ChatGPT Plus: $20/mês = $720 em 3 anos. Modelo local de 13B–24B em RTX 5060 Ti: $400 GPU + $90 energia = $490. 7 níveis comparados.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/pt/local-llms/local-llms-vs-chatgpt-plus",
@@ -14888,7 +14888,7 @@
   {
     "lang": "ar",
     "title": "نماذج ⁨LLM⁩ المحلية مقابل ⁨ChatGPT Plus 2026⁩: مقارنة تكاليف كاملة عبر ⁨7⁩ مستويات تسعير",
-    "excerpt": "⁨ChatGPT Plus⁩ يكلّف ⁨720⁩$ في ⁨3⁩ سنوات. ⁨Llama 3.3 70B⁩ محلي على ⁨RTX 5060 Ti⁩: ⁨400⁩$ ⁨GPU + 90⁩$ كهرباء = ⁨490⁩$. التعادل بعد ⁨11⁩ شهرًا. مقارنة ⁨7⁩ مستويات.",
+    "excerpt": "⁨ChatGPT Plus⁩ يكلّف ⁨720⁩$ في ⁨3⁩ سنوات. نموذج ⁨13B–24B⁩ محلي على ⁨RTX 5060 Ti⁩: ⁨400⁩$ ⁨GPU + 90⁩$ كهرباء = ⁨490⁩$. مقارنة ⁨7⁩ مستويات.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/ar/local-llms/local-llms-vs-chatgpt-plus",
@@ -14897,7 +14897,7 @@
   {
     "lang": "ko",
     "title": "로컬 LLM vs ChatGPT Plus 2026: 7가지 요금제 완전 비용 비교",
-    "excerpt": "ChatGPT Plus: $20/월 = 3년간 $720. RTX 5060 Ti의 로컬 Llama 3.3 70B: GPU $400 + 전기료 $90 = 총 $490. 손익분기점 11개월. 7가지 ChatGPT 요금제 비교.",
+    "excerpt": "ChatGPT Plus: $20/월 = 3년간 $720. RTX 5060 Ti의 로컬 13B~24B 모델: GPU $400 + 전기료 $90 = 총 $490. 7가지 ChatGPT 요금제 비교.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-09",
     "url": "/ko/local-llms/local-llms-vs-chatgpt-plus",
@@ -15473,7 +15473,7 @@
   {
     "lang": "en",
     "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-    "excerpt": "Which Mac runs which local LLM? M6, M5 Pro, M5 Max and M5 Ultra compared by memory, bandwidth and price, with first independent M5 Ultra benchmarks.",
+    "excerpt": "Which Mac runs which local LLM? M6, M5 Pro, M5 Max and M5 Ultra compared by memory, bandwidth and price, with independent M5 Ultra benchmark results.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/local-llms/apple-silicon-local-llm-guide-2026",
@@ -15482,7 +15482,7 @@
   {
     "lang": "de",
     "title": "Apple Silicon für lokale LLMs 2026: M1 bis M6 — Vollständiger Leitfaden",
-    "excerpt": "Welcher Mac für lokale LLMs? M6, M5 Pro, M5 Max und M5 Ultra im Vergleich: Speicher, Bandbreite, Preis und erste unabhängige M5-Ultra-Tests.",
+    "excerpt": "Welcher Mac für lokale LLMs? M6, M5 Pro, M5 Max und M5 Ultra im Vergleich: Speicher, Bandbreite, Preis und unabhängige M5-Ultra-Testergebnisse.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/de/local-llms/apple-silicon-local-llm-guide-2026",
@@ -15518,7 +15518,7 @@
   {
     "lang": "es",
     "title": "Apple Silicon para LLMs locales 2026: Guía completa de M1 a M6",
-    "excerpt": "¿Qué Mac elegir para LLMs locales? M6, M5 Pro, M5 Max y M5 Ultra comparados por memoria, ancho de banda y precio, con las primeras pruebas independientes.",
+    "excerpt": "¿Qué Mac elegir para LLMs locales? M6, M5 Pro, M5 Max y M5 Ultra comparados por memoria, ancho de banda y precio, con resultados de pruebas independientes del M5 Ultra.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/apple-silicon-local-llm-guide-2026",
@@ -15536,7 +15536,7 @@
   {
     "lang": "ar",
     "title": "⁨Apple Silicon⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: دليل كامل من ⁨M1⁩ إلى ⁨M6⁩",
-    "excerpt": "أي Mac يشغّل أي نموذج LLM محلي؟ مقارنة ⁨M6⁩ و⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩ بالذاكرة والنطاق والسعر مع أول اختبارات مستقلة.",
+    "excerpt": "أي Mac يشغّل أي نموذج LLM محلي؟ مقارنة ⁨M6⁩ و⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩ بالذاكرة والنطاق والسعر مع نتائج اختبارات مستقلة لـ M5 Ultra.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ar/local-llms/apple-silicon-local-llm-guide-2026",
@@ -15554,7 +15554,7 @@
   {
     "lang": "en",
     "title": "M5 Pro vs M5 Max LLM Benchmarks 2026: Tokens/Sec, Memory Bandwidth, Power",
-    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). Memory bandwidth, power draw guide.",
+    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 16–22 tok/s (70B). Memory bandwidth, power draw guide.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15563,7 +15563,7 @@
   {
     "lang": "de",
     "title": "M5 Pro vs M5 Max LLM-Benchmarks 2026: Token/Sekunde, Speicherbandbreite, Stromverbrauch",
-    "excerpt": "M5 Pro: 50–60 tok/s auf 8B, 8–12 tok/s auf 70B. M5 Max: 100–120 tok/s auf 8B, 15–20 tok/s auf 70B. Detaillierte Benchmarks für Llama, Mistral, Whisper Metal.",
+    "excerpt": "M5 Pro: 50–60 tok/s auf 8B, 8–12 tok/s auf 70B. M5 Max: 100–120 tok/s auf 8B, 16–22 tok/s auf 70B. Detaillierte Benchmarks für Llama, Mistral, Whisper Metal.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/de/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15572,7 +15572,7 @@
   {
     "lang": "fr",
     "title": "M5 Pro vs M5 Max Benchmarks LLM 2026 : tokens/sec, bande passante, consommation",
-    "excerpt": "M5 Pro : 50-60 tok/s 8B, 8-12 tok/s 70B. M5 Max : 100-120 tok/s 8B, 15-20 tok/s 70B. Benchmarks détaillés Llama, Mistral, Whisper Metal compare.",
+    "excerpt": "M5 Pro : 50-60 tok/s 8B, 8-12 tok/s 70B. M5 Max : 100-120 tok/s 8B, 16-22 tok/s 70B. Benchmarks détaillés Llama, Mistral, Whisper Metal compare.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/fr/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15581,7 +15581,7 @@
   {
     "lang": "ja",
     "title": "M5 Pro vs M5 Max LLMベンチマーク 2026 : トークン/秒、メモリ帯域幅、消費電力",
-    "excerpt": "M5 Pro：8Bで50～60 tok/s、70Bで8～12 tok/s。M5 Max：8Bで100～120 tok/s、70Bで15～20 tok/s。Llama、Mistral、Whisper Metal詳細ベンチマーク。",
+    "excerpt": "M5 Pro：8Bで50～60 tok/s、70Bで8～12 tok/s。M5 Max：8Bで100～120 tok/s、70Bで16～22 tok/s。Llama、Mistral、Whisper Metal詳細ベンチマーク。",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ja/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15590,7 +15590,7 @@
   {
     "lang": "zh",
     "title": "M5 Pro vs M5 Max LLM基准测试 2026 : 令牌/秒、内存带宽、功耗",
-    "excerpt": "M5 Pro：8B时50-60 tok/s，70B时8-12 tok/s。M5 Max：8B时100-120 tok/s，70B时15-20 tok/s。Llama、Mistral、Whisper详细对标。",
+    "excerpt": "M5 Pro：8B时50-60 tok/s，70B时8-12 tok/s。M5 Max：8B时100-120 tok/s，70B时16-22 tok/s。Llama、Mistral、Whisper详细对标。",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/zh/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15599,7 +15599,7 @@
   {
     "lang": "es",
     "title": "M5 Pro vs M5 Max Benchmarks LLM 2026: Tokens/Seg, Ancho de Banda, Consumo",
-    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). Guía de ancho de banda de memoria y consumo energético.",
+    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 16–22 tok/s (70B). Guía de ancho de banda de memoria y consumo energético.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15608,7 +15608,7 @@
   {
     "lang": "pt",
     "title": "Benchmarks LLM M5 Pro vs M5 Max 2026: Tokens/s, Largura de Banda, Consumo",
-    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). Guia de largura de banda de memória e consumo energético.",
+    "excerpt": "M5 Pro benchmark: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 16–22 tok/s (70B). Guia de largura de banda de memória e consumo energético.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/pt/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15626,7 +15626,7 @@
   {
     "lang": "ko",
     "title": "M5 Pro vs M5 Max LLM 벤치마크 2026: 토큰/초, 메모리 대역폭, 전력 소비",
-    "excerpt": "M5 Pro 벤치마크: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 15–20 tok/s (70B). 메모리 대역폭, 전력 소비 가이드.",
+    "excerpt": "M5 Pro 벤치마크: 50–60 tok/s (8B), 8–12 tok/s (70B). M5 Max: 100–120 tok/s (8B), 16–22 tok/s (70B). 메모리 대역폭, 전력 소비 가이드.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ko/local-llms/m5-pro-max-llm-benchmarks-2026",
@@ -15716,7 +15716,7 @@
   {
     "lang": "en",
     "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-    "excerpt": "MLX: 20–40% faster on Apple Silicon. Ollama: easiest. llama.cpp: most compatible. Speed benchmarks, setup time, and when to use each framework.",
+    "excerpt": "MLX: roughly 20–40% faster on Apple Silicon (indicative). Ollama: easiest. llama.cpp: most compatible. Speed benchmarks, setup time, and when to use each framework.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15725,7 +15725,7 @@
   {
     "lang": "de",
     "title": "MLX vs. Ollama vs. llama.cpp auf dem Mac 2026: Welches Framework für Apple Silicon LLMs?",
-    "excerpt": "MLX ist 20–40% schneller auf Apple Silicon. Ollama am einfachsten. llama.cpp am kompatibel. Benchmarks, Setup-Zeit und Anwendungsszenarien.",
+    "excerpt": "MLX ist laut Richtwerten etwa 20–40% schneller auf Apple Silicon. Ollama am einfachsten. llama.cpp am kompatibel. Benchmarks, Setup-Zeit und Anwendungsszenarien.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15734,7 +15734,7 @@
   {
     "lang": "fr",
     "title": "MLX vs Ollama vs llama.cpp sur Mac 2026 : quel framework pour Apple Silicon ?",
-    "excerpt": "MLX : 20–40 % plus rapide sur Apple Silicon. Ollama : le plus simple. llama.cpp : le plus compatible. Benchmarks, temps de configuration, quand utiliser chaque framework.",
+    "excerpt": "MLX : environ 20–40 % plus rapide sur Apple Silicon (indicatif). Ollama : le plus simple. llama.cpp : le plus compatible. Benchmarks, temps de configuration, quand utiliser chaque framework.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/fr/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15743,7 +15743,7 @@
   {
     "lang": "ja",
     "title": "MLX vs Ollama vs llama.cpp（Mac 2026年）：Apple Silicon LLMに最適なフレームワークは？",
-    "excerpt": "MLXはApple Siliconで20～40%高速。Ollamaは初心者向けで最も簡単。llama.cppは最も互換性が高い。各フレームワークの速度ベンチマーク、セットアップ時間比較、モデル対応表、フレームワーク選択ガイド。",
+    "excerpt": "MLXはApple Siliconで約20～40%高速（参考値）。Ollamaは初心者向けで最も簡単。llama.cppは最も互換性が高い。各フレームワークの速度ベンチマーク、セットアップ時間比較、モデル対応表、フレームワーク選択ガイド。",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ja/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15752,7 +15752,7 @@
   {
     "lang": "zh",
     "title": "Mac 2026年：MLX vs Ollama vs llama.cpp — 哪个Apple Silicon LLM框架最适合你？",
-    "excerpt": "MLX在Apple Silicon上快20–40%。Ollama最易用、最适合初学者。llama.cpp兼容性最强。包含速度基准测试、安装时间对比、模型兼容表、使用场景指南。本地LLM框架完全对比。",
+    "excerpt": "MLX在Apple Silicon上约快20–40%（参考值）。Ollama最易用、最适合初学者。llama.cpp兼容性最强。包含速度基准测试、安装时间对比、模型兼容表、使用场景指南。本地LLM框架完全对比。",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/zh/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15761,7 +15761,7 @@
   {
     "lang": "es",
     "title": "MLX vs Ollama vs llama.cpp en Mac 2026: ¿Qué motor de inferencia usar en Mac?",
-    "excerpt": "MLX: 20–40% más rápido en Apple Silicon. Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, setup y cuándo usar cada framework.",
+    "excerpt": "MLX: aproximadamente 20–40% más rápido en Apple Silicon (orientativo). Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, setup y cuándo usar cada framework.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15770,7 +15770,7 @@
   {
     "lang": "pt",
     "title": "MLX vs Ollama vs llama.cpp no Mac 2026: Qual Motor de Inferência Usar no Mac?",
-    "excerpt": "MLX: 20–40% mais rápido no Apple Silicon. Ollama: o mais fácil. llama.cpp: o mais compatível. Benchmarks de velocidade, setup e quando usar cada framework.",
+    "excerpt": "MLX: cerca de 20–40% mais rápido no Apple Silicon (valores indicativos). Ollama: o mais fácil. llama.cpp: o mais compatível. Benchmarks de velocidade, setup e quando usar cada framework.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/pt/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15779,7 +15779,7 @@
   {
     "lang": "ar",
     "title": "⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp⁩ على ⁨Mac 2026⁩: أي محرك استدلال تستخدم على ⁨Mac⁩؟",
-    "excerpt": "⁨MLX⁩ أسرع بنسبة ⁨15⁩–⁨25%⁩ على ⁨Apple Silicon. Ollama⁩ الأسهل. ⁨llama.cpp⁩ الأكثر توافقًا. اختبارات السرعة وأوقات الإعداد ومتى تستخدم كل إطار عمل على ⁨Mac⁩.",
+    "excerpt": "⁨MLX⁩ أسرع بنحو ⁨20⁩–⁨40%⁩ (قيم استرشادية) على ⁨Apple Silicon. Ollama⁩ الأسهل. ⁨llama.cpp⁩ الأكثر توافقًا. اختبارات السرعة وأوقات الإعداد ومتى تستخدم كل إطار عمل على ⁨Mac⁩.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ar/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15788,7 +15788,7 @@
   {
     "lang": "ko",
     "title": "Mac에서 MLX vs Ollama vs llama.cpp 2026: Apple Silicon LLM을 위한 최적의 프레임워크는?",
-    "excerpt": "MLX: Apple Silicon에서 20~40% 빠름. Ollama: 가장 간편. llama.cpp: 가장 넓은 호환성. 속도 벤치마크, 설치 시간, 프레임워크별 사용 시점 안내.",
+    "excerpt": "MLX: Apple Silicon에서 약 20~40% 빠름(참고 수치). Ollama: 가장 간편. llama.cpp: 가장 넓은 호환성. 속도 벤치마크, 설치 시간, 프레임워크별 사용 시점 안내.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ko/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -15959,7 +15959,7 @@
   {
     "lang": "en",
     "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
-    "excerpt": "Run always-on local AI server on the new Mac mini M6 or M5 Pro. 25–55W power, $26–39/year electricity. Ollama LLM, Whisper STT, RAG, voice assistant. Designed for continuous operation.",
+    "excerpt": "Run always-on local AI server on the new Mac mini M6 or M5 Pro. Estimated 25–55W, about $26–39/year electricity (estimates, not measured). Ollama LLM, Whisper STT, RAG, voice assistant. Designed for continuous operation.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/local-llms/mac-mini-m5-local-ai-server",
@@ -15968,7 +15968,7 @@
   {
     "lang": "de",
     "title": "Mac Mini M6 als lokaler KI-Server: Always-On LLM, Whisper, RAG, Sprachassistent",
-    "excerpt": "Lokaler KI-Server auf dem neuen Mac Mini M6 oder M5 Pro. 25–55 W Stromverbrauch, ca. 53 €/Jahr. Ollama LLM, Whisper STT, RAG, Sprachassistent. Für den Dauerbetrieb ausgelegt.",
+    "excerpt": "Lokaler KI-Server auf dem neuen Mac Mini M6 oder M5 Pro. Geschätzt 25–55 W, ca. 26–53 €/Jahr Strom (Schätzwerte, nicht gemessen). Ollama LLM, Whisper STT, RAG, Sprachassistent. Für den Dauerbetrieb ausgelegt.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/de/local-llms/mac-mini-m5-local-ai-server",
@@ -15977,7 +15977,7 @@
   {
     "lang": "fr",
     "title": "Mac Mini M6 comme serveur IA local 2026 : LLM, Whisper, RAG, assistant vocal 24/7",
-    "excerpt": "Serveur IA local sur le nouveau Mac Mini M6 ou M5 Pro. 25–55 W, env. 44 €/an. LLM Ollama, Whisper STT, RAG, assistant vocal. Conçu pour un fonctionnement continu.",
+    "excerpt": "Serveur IA local sur le nouveau Mac Mini M6 ou M5 Pro. Estimation : 25–55 W, env. 26–44 €/an d'électricité (estimations, non mesurées). LLM Ollama, Whisper STT, RAG, assistant vocal. Conçu pour un fonctionnement continu.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/fr/local-llms/mac-mini-m5-local-ai-server",
@@ -15986,7 +15986,7 @@
   {
     "lang": "ja",
     "title": "Mac Mini M6をローカルAIサーバーとして活用 2026：LLM・Whisper・RAG・音声アシスタント常時稼働",
-    "excerpt": "新型Mac Mini M6またはM5 ProでローカルAIサーバーを構築。25～55W、年間電気代5,400円程度。Ollama LLM、Whisper STT、RAGパイプライン、音声アシスタント常時稼働。完全セットアップ方法、実用的ユースケース、5年間TCO分析。",
+    "excerpt": "新型Mac Mini M6またはM5 ProでローカルAIサーバーを構築。推定25～55W、年間電気代は約5,400円（推定値、実測ではありません）。Ollama LLM、Whisper STT、RAGパイプライン、音声アシスタント常時稼働。完全セットアップ方法、実用的ユースケース、5年間TCO分析。",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ja/local-llms/mac-mini-m5-local-ai-server",
@@ -15995,7 +15995,7 @@
   {
     "lang": "zh",
     "title": "Mac Mini M6作为本地AI服务器 2026：全天候LLM、Whisper、RAG与语音助手",
-    "excerpt": "在新款Mac Mini M6或M5 Pro上配置本地AI服务器。25～55W功耗，年电费约350元。Ollama LLM、Whisper STT、RAG管道、语音助手全天候运行。完整配置指南、实用场景、5年总成本分析。",
+    "excerpt": "在新款Mac Mini M6或M5 Pro上配置本地AI服务器。预估25～55W功耗，年电费约350元（估算值，非实测）。Ollama LLM、Whisper STT、RAG管道、语音助手全天候运行。完整配置指南、实用场景、5年总成本分析。",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/zh/local-llms/mac-mini-m5-local-ai-server",
@@ -16004,7 +16004,7 @@
   {
     "lang": "es",
     "title": "Mac Mini M6 como servidor de IA local: LLM, Whisper, RAG y asistente de voz 24/7",
-    "excerpt": "Un servidor de IA siempre activo en el nuevo Mac Mini M6 o M5 Pro: 25–55 W, $26–39/año de luz. Ollama, Whisper STT, RAG y asistente de voz. Diseñado para operación continua.",
+    "excerpt": "Un servidor de IA siempre activo en el nuevo Mac Mini M6 o M5 Pro: Estimado: 25–55 W, unos $26–39/año de luz (estimaciones, no medidas). Ollama, Whisper STT, RAG y asistente de voz. Diseñado para operación continua.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/mac-mini-m5-local-ai-server",
@@ -16022,7 +16022,7 @@
   {
     "lang": "ar",
     "title": "⁨Mac Mini M6⁩ كخادم ذكاء اصطناعي محلي ⁨2026⁩: ⁨LLM⁩ و⁨Whisper⁩ و⁨RAG⁩ ومساعد صوتي ⁨24/7⁩",
-    "excerpt": "⁨خادم ذكاء اصطناعي محلي دائم التشغيل على جهاز Mac Mini M6⁩ أو ⁨M5 Pro⁩ الجديد. ⁨25⁩–⁨55⁩ واط، ⁨26⁩–⁨39⁩ دولارًا سنويًا. ⁨Ollama⁩ و⁨Whisper STT⁩ و⁨RAG⁩ ومساعد صوتي. مصمم للتشغيل المتواصل.",
+    "excerpt": "⁨خادم ذكاء اصطناعي محلي دائم التشغيل على جهاز Mac Mini M6⁩ أو ⁨M5 Pro⁩ الجديد. ⁨25⁩–⁨55⁩ واط (تقديريًا)، نحو ⁨26⁩–⁨39⁩ دولارًا سنويًا (تقديرات وليست قياسات). ⁨Ollama⁩ و⁨Whisper STT⁩ و⁨RAG⁩ ومساعد صوتي. مصمم للتشغيل المتواصل.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ar/local-llms/mac-mini-m5-local-ai-server",
@@ -16031,7 +16031,7 @@
   {
     "lang": "ko",
     "title": "Mac Mini M6를 로컬 AI 서버로 활용하기: 상시 구동 LLM, Whisper, RAG, 음성 어시스턴트",
-    "excerpt": "새로운 Mac Mini M6 또는 M5 Pro에서 상시 구동 로컬 AI 서버를 실행하세요. 소비 전력 25–55W, 연간 전기 요금 $26–39. Ollama LLM, Whisper STT, RAG, 음성 어시스턴트. 상시 구동을 염두에 두고 설계되었습니다.",
+    "excerpt": "새로운 Mac Mini M6 또는 M5 Pro에서 상시 구동 로컬 AI 서버를 실행하세요. 추정 소비 전력 25–55W, 연간 전기 요금 약 $26–39(추정치, 실측 아님). Ollama LLM, Whisper STT, RAG, 음성 어시스턴트. 상시 구동을 염두에 두고 설계되었습니다.",
     "publishDate": "2026-05-15",
     "dateModified": "2026-11-09",
     "url": "/ko/local-llms/mac-mini-m5-local-ai-server",
@@ -16607,7 +16607,7 @@
   {
     "lang": "en",
     "title": "GDPR Risk Comparison: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "GDPR risk comparison of LLMs: DeepSeek API (highest risk), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.",
+    "excerpt": "GDPR risk comparison of LLMs: Our risk assessment: DeepSeek API (highest), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16616,7 +16616,7 @@
   {
     "lang": "de",
     "title": "DSGVO-Risikovergleich: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "DSGVO-LLM-Vergleich: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.",
+    "excerpt": "DSGVO-LLM-Vergleich: Unsere Risikoeinschätzung: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/de/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16625,7 +16625,7 @@
   {
     "lang": "fr",
     "title": "Comparaison des risques RGPD : Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "Comparaison des risques RGPD des LLM : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.",
+    "excerpt": "Comparaison des risques RGPD des LLM : Notre évaluation : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/fr/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16634,7 +16634,7 @@
   {
     "lang": "ja",
     "title": "GDPR リスク比較: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "LLMのGDPRリスク比較: DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。",
+    "excerpt": "LLMのGDPRリスク比較: 当サイトの評価：DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/ja/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16643,7 +16643,7 @@
   {
     "lang": "zh",
     "title": "GDPR 风险比较: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "LLM的GDPR风险比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。",
+    "excerpt": "LLM的GDPR风险比较: 我们的评估：DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/zh/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16652,7 +16652,7 @@
   {
     "lang": "es",
     "title": "Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "Comparación de riesgos RGPD de LLM: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.",
+    "excerpt": "Comparación de riesgos RGPD de LLM: Nuestra valoración: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/es/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16661,7 +16661,7 @@
   {
     "lang": "pt",
     "title": "Comparação de riscos GDPR: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "Comparação de riscos de LLMs sob GDPR/LGPD: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.",
+    "excerpt": "Comparação de riscos de LLMs sob GDPR/LGPD: Nossa avaliação: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/pt/local-llms/gdpr-llm-risk-comparison-2026",
@@ -16679,7 +16679,7 @@
   {
     "lang": "ko",
     "title": "GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026",
-    "excerpt": "LLM GDPR 리스크 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.",
+    "excerpt": "LLM GDPR 리스크 비교: 자체 평가: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/ko/local-llms/gdpr-llm-risk-comparison-2026",
@@ -20656,8 +20656,8 @@
   },
   {
     "lang": "en",
-    "title": "Best NAS and Storage for Local AI Models 2026: Buying Guide",
-    "excerpt": "Best NAS for AI 2026: Synology and QNAP NAS units plus Samsung and WD NVMe SSDs compared for local AI models — RAID 6 redundancy, fast model loading, and current prices.",
+    "title": "NAS and Storage for Local AI Models 2026: Buying Guide",
+    "excerpt": "NAS for AI 2026: Synology and QNAP NAS units plus Samsung and WD NVMe SSDs compared for local AI models — RAID 6 redundancy, fast model loading, and estimated prices (confirm before buying).",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/power-local-llm/best-nas-storage-local-ai-models-2026",
@@ -20665,8 +20665,8 @@
   },
   {
     "lang": "de",
-    "title": "Bester NAS und Speicher für lokale KI-Modelle 2026: Kaufberatung",
-    "excerpt": "Bestes NAS für lokale KI-Modelle 2026: Speicher für Modell-Bibliotheken, Netzwerkgeschwindigkeit und GPU-fähige NAS. Synology, QNAP und DIY im Vergleich.",
+    "title": "NAS und Speicher für lokale KI-Modelle 2026: Kaufberatung",
+    "excerpt": "NAS für lokale KI-Modelle 2026: Speicher für Modell-Bibliotheken, Netzwerkgeschwindigkeit und GPU-fähige NAS. Synology, QNAP und DIY im Vergleich.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/de/power-local-llm/best-nas-storage-local-ai-models-2026",
@@ -20674,8 +20674,8 @@
   },
   {
     "lang": "fr",
-    "title": "Meilleur NAS et stockage pour modèles IA locaux 2026 : guide d'achat",
-    "excerpt": "Meilleur NAS pour modèles IA locaux 2026 : stockage pour bibliothèques de modèles, vitesse réseau et NAS compatibles GPU. Synology, QNAP et DIY comparés.",
+    "title": "NAS et stockage pour modèles IA locaux 2026 : guide d'achat",
+    "excerpt": "NAS pour modèles IA locaux 2026 : stockage pour bibliothèques de modèles, vitesse réseau et NAS compatibles GPU. Synology, QNAP et DIY comparés.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/best-nas-storage-local-ai-models-2026",
@@ -20683,8 +20683,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAIモデル向けの最適なNASとストレージ 2026：購入ガイド",
-    "excerpt": "2026年のローカルAIモデルに最適なNAS：モデルライブラリのストレージ、ネットワーク速度、GPU対応NASシステム。Synology、QNAP、DIYオプションを徹底比較。",
+    "title": "ローカルAIモデル向けのNASとストレージ 2026：購入ガイド",
+    "excerpt": "2026年のローカルAIモデル向けNAS：モデルライブラリのストレージ、ネットワーク速度、GPU対応NASシステム。Synology、QNAP、DIYオプションを徹底比較。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/ja/power-local-llm/best-nas-storage-local-ai-models-2026",
@@ -20692,8 +20692,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地 AI 模型的最佳 NAS 与存储 2026：选购指南",
-    "excerpt": "面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和当前价格。",
+    "title": "本地 AI 模型的 NAS 与存储 2026：选购指南",
+    "excerpt": "面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和预估价格（购买前请确认）。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
     "url": "/zh/power-local-llm/best-nas-storage-local-ai-models-2026",
@@ -20701,7 +20701,7 @@
   },
   {
     "lang": "es",
-    "title": "El mejor NAS y almacenamiento para modelos de IA local 2026: guía de compra",
+    "title": "Guía de compra de NAS y almacenamiento para modelos de IA local 2026",
     "excerpt": "Compara NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida, capacidad y precios de 2026.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
@@ -20710,7 +20710,7 @@
   },
   {
     "lang": "pt",
-    "title": "O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra",
+    "title": "Guia de compra de NAS e armazenamento para modelos de IA local 2026",
     "excerpt": "Compare NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido, capacidade e preços de 2026.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
@@ -20719,7 +20719,7 @@
   },
   {
     "lang": "ar",
-    "title": "أفضل ⁨NAS⁩ وتخزين لنماذج الذكاء الاصطناعي المحلي ⁨2026⁩: دليل الشراء",
+    "title": "⁨NAS⁩ وتخزين لنماذج الذكاء الاصطناعي المحلي ⁨2026⁩: دليل الشراء",
     "excerpt": "NAS من Synology وQNAP للمكتبة المشتركة، وSSD NVMe من Samsung وWD للتحميل السريع — مقارنة بالسعة والتكرار والسرعة وأسعار 2026.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",
@@ -20728,7 +20728,7 @@
   },
   {
     "lang": "ko",
-    "title": "2026년 로컬 AI 모델을 위한 최고의 NAS 및 스토리지: 구매 가이드",
+    "title": "2026년 로컬 AI 모델을 위한 NAS 및 스토리지: 구매 가이드",
     "excerpt": "로컬 AI 모델을 위한 Synology 및 QNAP NAS와 Samsung 및 WD SSD 비교: RAID 6 중복성, 빠른 로드, 용량 및 2026년 가격.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-09",

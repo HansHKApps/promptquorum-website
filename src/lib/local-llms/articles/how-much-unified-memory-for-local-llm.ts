@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64GB Mac has ~56GB for LLMs after the 8GB macOS reserve.',
           'Swap exists: macOS uses SSD if model exceeds free memory. Works but many times slower.',
           'Model size in GB varies by quantization: Llama 3.1 8B is 16GB FP16, 5GB Q4, 8.5GB Q8.',
-          'Rule: Buy maximum memory — cannot upgrade after purchase. Memory cost at sale is 5–10%; full Mac replacement later is 100%.',
+          'Rule: Buy maximum memory — cannot upgrade after purchase. Memory upgrades are priced in fixed tiers; compare the upgrade price with a replacement Mac in Apple\'s configurator.',
         ],
       },
       howUnified: {
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Fits in Each Memory Tier (Practical)',
         numberedItems: [
           { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.1 8B Q4 fits (5GB model + 8GB OS = 13GB) ✓ but tight. Llama 8B Q8 won\'t fit without swapping. Whisper small fits alongside.' },
-          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 fits comfortably. Llama 13B Q4 fits. Qwen3 32B Q4 barely fits (20GB + 8GB OS = 28GB). Multi-model: Whisper + LLaVA + TTS fit ✓' },
+          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 fits comfortably. 13B-class models fit. Qwen3 32B Q4 barely fits (20GB + 8GB OS = 28GB). Multi-model: Whisper + LLaVA + TTS fit ✓' },
           { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 fits comfortably (23GB). Llama 70B Q3 barely fits. Multi-model stacks have plenty of room.' },
           { title: '128 GB (M5 Max)', whyItMatters: 'Best model for 128GB: Llama 3.3 70B Q5 (49GB) — the largest mainstream model that fits with room to spare. 70B Q8 fits (74GB) for near-lossless quality. Multi-modal: Whisper + 90B vision model + 8B LLM fit simultaneously ✓' },
         ],
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Un Mac de 64GB tiene ~56GB para LLMs tras reservar 8GB para macOS.',
           'Existe swap: macOS usa el SSD si el modelo supera la memoria libre. Funciona pero muchas veces más lento.',
           'El tamaño del modelo en GB varía según la cuantización: Llama 3.1 8B es 16GB FP16, 5GB Q4, 8.5GB Q8.',
-          'Regla: compra la máxima memoria — no puedes actualizarla después de la compra. El costo de la memoria en la venta es el 5–10%; reemplazar todo el Mac después cuesta el 100%.',
+          'Regla: compra la máxima memoria — no puedes actualizarla después de la compra. Las mejoras de memoria tienen precios por niveles fijos; compara el precio de la mejora con el de reemplazar el Mac en el configurador de Apple.',
         ],
       },
       howUnified: {
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué cabe en cada nivel de memoria (práctica)',
         numberedItems: [
           { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.1 8B Q4 cabe (5GB modelo + 8GB OS = 13GB) ✓ pero justo. Llama 8B Q8 no cabe sin swap. Whisper small cabe junto.' },
-          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 cabe con comodidad. Llama 13B Q4 cabe. Qwen3 32B Q4 cabe justo (20GB + 8GB OS = 28GB). Multimodelo: Whisper + LLaVA + TTS caben ✓' },
+          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 cabe con comodidad. Los modelos de clase 13B caben. Qwen3 32B Q4 cabe justo (20GB + 8GB OS = 28GB). Multimodelo: Whisper + LLaVA + TTS caben ✓' },
           { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 cabe con comodidad (23GB). Llama 70B Q3 cabe justo. Los stacks multimodelo tienen mucho espacio.' },
           { title: '128 GB (M5 Max)', whyItMatters: 'Mejor modelo para 128GB: Llama 3.3 70B Q5 (49GB) — el modelo más grande que cabe con margen de sobra. 70B Q8 cabe (74GB) para calidad casi sin pérdida. Multimodal: Whisper + modelo de visión 90B + LLM 8B caben simultáneamente ✓' },
         ],
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمتلك Mac بسعة 64GB نحو 56GB لنماذج LLM بعد حجز 8GB لنظام macOS.',
           'يوجد swap: يستخدم macOS الـ SSD إذا تجاوز النموذج الذاكرة المتاحة. يعمل لكن أبطأ بعدة أضعاف.',
           'يختلف حجم النموذج بالـ GB حسب التكميم: Llama 3.1 8B هو 16GB بـ FP16، و5GB بـ Q4، و8.5GB بـ Q8.',
-          'القاعدة: اشترِ أقصى ذاكرة — لا يمكنك ترقيتها بعد الشراء. تكلفة الذاكرة عند البيع 5–10%؛ واستبدال Mac بالكامل لاحقًا يكلف 100%.',
+          'القاعدة: اشترِ أقصى ذاكرة — لا يمكنك ترقيتها بعد الشراء. ترقيات الذاكرة مسعّرة بمستويات ثابتة؛ قارن سعر الترقية بسعر استبدال جهاز Mac في مُهيّئ Apple.',
         ],
       },
       howUnified: {
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما الذي يتسع في كل مستوى ذاكرة (عمليًا)',
         numberedItems: [
           { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.1 8B Q4 يتسع (5GB نموذج + 8GB نظام = 13GB) ✓ لكن بالكاد. Llama 8B Q8 لا يتسع دون swap. Whisper small يتسع معه.' },
-          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 يتسع بأريحية. Llama 13B Q4 يتسع. Qwen3 32B Q4 يتسع بالكاد (20GB + 8GB نظام = 28GB). متعدد النماذج: Whisper + LLaVA + TTS يتسع ✓' },
+          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 يتسع بأريحية. نماذج فئة 13B تتسع. Qwen3 32B Q4 يتسع بالكاد (20GB + 8GB نظام = 28GB). متعدد النماذج: Whisper + LLaVA + TTS يتسع ✓' },
           { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 يتسع بأريحية (23GB). Llama 70B Q3 يتسع بالكاد. حزم النماذج المتعددة لديها مساحة وافرة.' },
           { title: '128 GB (M5 Max)', whyItMatters: 'أفضل نموذج لـ 128GB: Llama 3.3 70B Q5 (49GB) — أكبر نموذج شائع يتسع مع هامش وافر. 70B Q8 يتسع (74GB) بجودة شبه خالية من الفقدان. متعدد الوسائط: Whisper + نموذج رؤية 90B + LLM 8B يتسع في آن واحد ✓' },
         ],
@@ -776,9 +776,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'A memória unificada em um Mac é compartilhada entre CPU, GPU e motor de IA. Regra geral: um modelo 7B em Q4 precisa de cerca de 5 GB; um 14B cerca de 9 GB; um 70B em Q4 cerca de 42 GB. Adicione 8 GB para o SO. Se o modelo não couber, vai para o disco — muitas vezes mais lento.' },
         ],
         items: [
-          '**16GB:** apenas modelos até 7B (Llama 3.2 8B Q4 = ~5GB). Muito restrito para uso regular.',
+          '**16GB:** apenas modelos até 7B (Llama 3.1 8B Q4 = ~5GB). Muito restrito para uso regular.',
           '**36GB:** 13B com conforto (7–8GB livres). 32B Q4 no limite (~33GB). Mínimo recomendado.',
-          '**64GB:** 32B Q5 com conforto. 70B Q3 barely. Melhor equilíbrio para 2026–2027.',
+          '**64GB:** 32B Q5 com conforto. 70B Q3 no limite. Deve cobrir os tamanhos de modelo deste guia pelos próximos um ou dois anos, se os modelos continuarem crescendo no ritmo atual.',
           '**128GB:** 70B Q5 com conforto. Preparado para modelos futuros. Ideal para uso profissional.',
           'Você não pode atualizar a memória depois da compra — compre o máximo que puder pagar.',
         ],
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.1 8B Q4 cabe (modelo de 5GB + 8GB de SO = 13GB) ✓ mas no limite. Llama 8B Q8 não cabe sem swap. Whisper small cabe junto.' },
-          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 cabe com conforto. Llama 13B Q4 cabe. Qwen3 32B Q4 cabe no limite (20GB + 8GB de SO = 28GB). Multi-modelo: Whisper + LLaVA + TTS cabem ✓' },
+          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 cabe com conforto. Modelos da classe 13B cabem. Qwen3 32B Q4 cabe no limite (20GB + 8GB de SO = 28GB). Multi-modelo: Whisper + LLaVA + TTS cabem ✓' },
           { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 cabe com conforto (23GB). Llama 70B Q3 cabe no limite. Pilhas multi-modelo têm bastante espaço sobrando.' },
           { title: '128 GB (M5 Max)', whyItMatters: 'Melhor modelo para 128GB: Llama 3.3 70B Q5 (49GB) — o maior modelo mainstream que cabe com folga. 70B Q8 cabe (74GB) para qualidade quase sem perdas. Multi-modal: Whisper + modelo de visão de 90B + LLM de 8B cabem simultaneamente ✓' },
         ],
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Regra prática: tamanho do modelo em GB = (parâmetros em B × bits) / 8. Mais 2–4 GB de overhead de contexto e runtime; no Mac, some ainda pelo menos 8 GB para o macOS.**',
         items: [
           'Llama 3.1 8B Q4 = (8B × 4 bits) / 8 = 4 GB + ~1 GB overhead = ~5 GB total.',
-          'Llama 3.3 70B Q4 = (70B × 4 bits) / 8 = 35 GB + ~2 GB overhead = ~37 GB total.',
+          'Llama 3.3 70B Q4_K_M ≈ 42 GB (tabela acima; o cálculo simples dá ~35 GB, mas os arquivos Q4_K_M são maiores) + 2–4 GB de overhead de contexto e runtime.',
           'O macOS precisa de pelo menos 8 GB — sempre subtraia isso da memória unificada total antes de comparar com o tamanho do modelo.',
           'Reserve pelo menos 4 GB livres após carregar o modelo para o contexto de inferência.',
         ],
@@ -817,7 +817,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Não é atualizável:** A memória do Apple Silicon está soldada na placa. Decida com cuidado.',
           '**Recomendação para 2026:** M5 Pro com 64GB oferece o melhor equilíbrio para a maioria dos usuários.',
-          '**Para uso profissional:** Mac Studio M4 Max com 128GB ou M4 Ultra com 192GB.',
           '**Orçamento limitado:** Mac mini M4 com 16GB é funcional apenas para modelos 7B — considere 24GB se disponível.',
           '**Atualização de agosto de 2026:** a Apple renovou a linha Mac mini e Mac Studio em 25/08/2026, adicionando níveis acima do teto de 128GB deste guia: Mac mini M6 (32GB máx., US$ 899), Mac mini M5 Pro (64GB máx., US$ 1.699), Mac Studio M5 Max (128GB máx., US$ 2.499) e Mac Studio M5 Ultra (256GB ou 512GB, a partir de US$ 5.499 — a configuração de 512GB chega no final de outubro de 2026 por bem mais de US$ 10.000). Os preços no Brasil podem variar bastante devido a impostos de importação. Para os tamanhos de modelo deste guia (até 70B), 64–128GB continua sendo a faixa prática; 256GB+ só importa para modelos acima de 70B ou para rodar vários modelos grandes ao mesmo tempo.',
         ],
@@ -826,9 +825,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes sobre memória unificada para LLMs',
         faqs: [
-          { q: '16GB de memória unificada é suficiente para LLMs locais?', a: '16GB é suficiente para modelos até 7B Q4 (ex.: Llama 3.2 8B Q4 = ~5GB). Você não consegue rodar modelos 13B+ confortavelmente. Para uso regular, 36GB é o mínimo recomendado.' },
+          { q: '16GB de memória unificada é suficiente para LLMs locais?', a: '16GB é suficiente para modelos até 7B Q4 (ex.: Llama 3.1 8B Q4 = ~5GB). Você não consegue rodar modelos 13B+ confortavelmente. Para uso regular, 36GB é o mínimo recomendado.' },
           { q: 'Devo comprar 64GB ou 128GB para LLMs?', a: '64GB roda 32B Q5 confortavelmente e 70B Q3 no limite. 128GB roda 70B Q5 com conforto. Se você planeja usar modelos 70B regularmente, vá para 128GB. Lembre-se: você não pode atualizar a memória depois da compra.' },
-          { q: 'Qual Mac tem a melhor memória para LLMs em 2026?', a: 'Mac Studio M4 Max (128GB, ~$3.999) ou M4 Ultra (192GB, ~$6.999) são os melhores. Para uso pessoal, Mac mini M4 Pro (64GB, ~$2.299) oferece excelente custo-benefício.' },
           { q: 'É possível ter mais de 128GB de memória unificada em um Mac?', a: 'Sim. A atualização de 25 de agosto de 2026 trouxe o Mac Studio M5 Ultra com configurações de 256GB e 512GB de memória unificada, a partir de US$ 5.499. A versão de 512GB chega no final de outubro de 2026 e custa bem mais de US$ 10.000. Isso está muito além do que os modelos de 70B exigem — as faixas de 16GB a 128GB deste guia cobrem o uso prático para quase todos os casos de LLM local. 256GB+ só importa para modelos maiores que 70B ou para rodar vários modelos grandes simultaneamente. Ainda não existem benchmarks independentes do M5 Ultra.' },
         ],
       },
@@ -852,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: '16GB de memória unificada é suficiente para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: '16GB é suficiente para modelos até 7B Q4 (ex.: Llama 3.2 8B Q4 = ~5GB). Você não consegue rodar modelos 13B+ confortavelmente. Para uso regular, 36GB é o mínimo recomendado.' } },
+        { '@type': 'Question', name: '16GB de memória unificada é suficiente para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: '16GB é suficiente para modelos até 7B Q4 (ex.: Llama 3.1 8B Q4 = ~5GB). Você não consegue rodar modelos 13B+ confortavelmente. Para uso regular, 36GB é o mínimo recomendado.' } },
         { '@type': 'Question', name: 'Devo comprar 64GB ou 128GB para LLMs?', acceptedAnswer: { '@type': 'Answer', text: '64GB roda 32B Q5 confortavelmente e 70B Q3 no limite. 128GB roda 70B Q5 com conforto. Se você planeja usar modelos 70B regularmente, vá para 128GB. Lembre-se: você não pode atualizar a memória depois da compra.' } },
         { '@type': 'Question', name: 'É possível ter mais de 128GB de memória unificada em um Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A atualização de 25 de agosto de 2026 trouxe o Mac Studio M5 Ultra com configurações de 256GB e 512GB de memória unificada, a partir de US$ 5.499. A versão de 512GB chega no final de outubro de 2026 e custa bem mais de US$ 10.000. Isso está muito além do que os modelos de 70B exigem — as faixas de 16GB a 128GB deste guia cobrem o uso prático para quase todos os casos de LLM local.' } },
       ],
@@ -951,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64-GB-Mac hat nach 8 GB Reserve für macOS ~56 GB für LLMs.',
           'Swap existiert: macOS nutzt SSD, wenn Modell freien Speicher übersteigt. Funktioniert, aber um ein Vielfaches langsamer.',
           'Modellgröße in GB variiert nach Quantisierung: Llama 3.1 8B ist 16 GB FP16, 5 GB Q4, 8,5 GB Q8.',
-          'Regel: Maximalen Speicher kaufen — Aufrüstung nach dem Kauf nicht möglich. Speicherkosten beim Kauf betragen 5–10%; Ersatz des gesamten Macs kostet später 100 %.',
+          'Regel: Maximalen Speicher kaufen — Aufrüstung nach dem Kauf nicht möglich. Speicher-Upgrades sind in festen Stufen bepreist; vergleichen Sie den Aufpreis im Apple-Konfigurator mit dem Preis eines Ersatz-Macs.',
         ],
       },
       howUnified: {
@@ -1012,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was in jede Speicherstufe passt (Praxis)',
         numberedItems: [
           { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.1 8B Q4 passt (5 GB Modell + 8 GB OS = 13 GB) ✓, aber knapp. Llama 8B Q8 passt nicht ohne Swap. Whisper small passt daneben.' },
-          { title: '36 GB (M5 Pro Basis)', whyItMatters: 'Llama 3.1 8B Q8 passt komfortabel. Llama 13B Q4 passt. Qwen3 32B Q4 passt knapp (20 GB + 8 GB OS = 28 GB). Multi-Modell: Whisper + LLaVA + TTS passen ✓' },
+          { title: '36 GB (M5 Pro Basis)', whyItMatters: 'Llama 3.1 8B Q8 passt komfortabel. Modelle der 13B-Klasse passen. Qwen3 32B Q4 passt knapp (20 GB + 8 GB OS = 28 GB). Multi-Modell: Whisper + LLaVA + TTS passen ✓' },
           { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 passt komfortabel (23 GB). Llama 70B Q3 passt kaum. Multi-Modell-Stacks haben reichlich Platz.' },
           { title: '128 GB (M5 Max)', whyItMatters: 'Bestes Modell für 128 GB: Llama 3.3 70B Q5 (49 GB) — das größte Mainstream-Modell mit Reserve. 70B Q8 passt (74 GB) für nahezu verlustfreie Qualität. Multimodal: Whisper + 90B-Vision-Modell + 8B LLM passen gleichzeitig ✓' },
         ],
@@ -1209,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Un Mac 64 Go dispose de ~56 Go pour les LLM après la réserve de 8 Go pour macOS.',
           'Le swap existe : macOS utilise le SSD si le modèle dépasse la mémoire libre. Fonctionne mais plusieurs fois plus lent.',
           'La taille du modèle en Go varie selon la quantification : Llama 3.1 8B fait 16 Go FP16, 5 Go Q4, 8,5 Go Q8.',
-          "Règle : Acheter le maximum de mémoire — impossible à mettre à niveau après l'achat. Le coût mémoire à la vente est de 5–10 % ; remplacer l'intégralité du Mac plus tard coûte 100 %.",
+          "Règle : Acheter le maximum de mémoire — impossible à mettre à niveau après l'achat. Les mises à niveau de mémoire sont tarifées par paliers fixes ; comparez le prix de la mise à niveau avec celui d'un Mac de remplacement dans le configurateur d'Apple.",
         ],
       },
       howUnified: {
@@ -1270,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Ce qui tient dans chaque niveau mémoire (pratique)",
         numberedItems: [
           { title: '16 Go (M5 base, MacBook Air)', whyItMatters: "Llama 3.1 8B Q4 tient (5 Go modèle + 8 Go OS = 13 Go) ✓ mais serré. Llama 8B Q8 ne tient pas sans swap. Whisper small tient à côté." },
-          { title: '36 Go (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 tient confortablement. Llama 13B Q4 tient. Qwen3 32B Q4 tient tout juste (20 Go + 8 Go OS = 28 Go). Multi-modèle : Whisper + LLaVA + TTS tiennent ✓' },
+          { title: '36 Go (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 tient confortablement. Les modèles de classe 13B tiennent. Qwen3 32B Q4 tient tout juste (20 Go + 8 Go OS = 28 Go). Multi-modèle : Whisper + LLaVA + TTS tiennent ✓' },
           { title: '64 Go (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 tient confortablement (23 Go). Llama 70B Q3 tient à peine. Les stacks multi-modèles ont beaucoup de place.' },
           { title: '128 Go (M5 Max)', whyItMatters: 'Meilleur modèle pour 128 Go : Llama 3.3 70B Q5 (49 Go) — le plus grand modèle courant qui tient avec de la marge. 70B Q8 tient (74 Go) pour une qualité quasi sans perte. Multi-modal : Whisper + modèle vision 90B + LLM 8B tiennent simultanément ✓' },
         ],
@@ -1478,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64GB MacはmacOS用の8GBを確保した後、LLMに~56GB使用可能。',
           'スワップあり：モデルが空きメモリを超えた場合、macOSはSSDを使用。動作するが何倍も遅い。',
           'モデルサイズはGBで量子化によって異なる：Llama 3.1 8Bは16GB FP16、5GB Q4、8.5GB Q8。',
-          'ルール：最大メモリを購入——購入後のアップグレード不可。販売時のメモリコストは5〜10%；後でMac全体を交換すると100%のコスト。',
+          'ルール：最大メモリを購入——購入後のアップグレード不可。メモリ増設は固定のティアで価格設定されています。増設価格と買い替えのMacの価格をAppleのコンフィギュレーターで比較してください。',
         ],
       },
       howUnified: {
@@ -1539,7 +1537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '各メモリ層に収まるもの（実際）',
         numberedItems: [
           { title: '16 GB（M5 base、MacBook Air）', whyItMatters: 'Llama 3.1 8B Q4は収まる（5GBモデル + 8GB OS = 13GB）✓ だがギリギリ。Llama 8B Q8はスワップなしでは収まらない。Whisper smallは並行して収まる。' },
-          { title: '36 GB（M5 Pro ベース）', whyItMatters: 'Llama 3.1 8B Q8は余裕で収まる。Llama 13B Q4は収まる。Qwen3 32B Q4はギリギリ（20GB + 8GB OS = 28GB）。マルチモデル：Whisper + LLaVA + TTSが収まる ✓' },
+          { title: '36 GB（M5 Pro ベース）', whyItMatters: 'Llama 3.1 8B Q8は余裕で収まる。13Bクラスのモデルは収まる。Qwen3 32B Q4はギリギリ（20GB + 8GB OS = 28GB）。マルチモデル：Whisper + LLaVA + TTSが収まる ✓' },
           { title: '64 GB（M5 Pro max）', whyItMatters: 'Qwen3 32B Q5は余裕で収まる（23GB）。Llama 70B Q3はかろうじて収まる。マルチモデルスタックには十分な余裕がある。' },
           { title: '128 GB（M5 Max）', whyItMatters: '128GBに最適なモデル：Llama 3.3 70B Q5（49GB）——余裕をもって収まる最大級のモデル。70B Q8も収まり（74GB）ほぼ無損失の品質。マルチモーダル：Whisper + 90Bビジョンモデル + 8B LLMが同時に収まる ✓' },
         ],
@@ -1759,7 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64GB Mac预留8GB给macOS后，有约56GB可用于LLM。',
           '存在交换：macOS在模型超出空闲内存时使用SSD。可以运行但速度会慢很多倍。',
           '模型大小（GB）随量化方式不同：Llama 3.1 8B为16GB FP16、5GB Q4、8.5GB Q8。',
-          '原则：购买最大内存——购买后无法升级。销售时内存费用占5–10%；之后更换整台Mac要花100%的钱。',
+          '原则：购买最大内存——购买后无法升级。内存升级按固定档位定价；请在Apple配置器中比较升级价格与更换整台Mac的价格。',
         ],
       },
       howUnified: {
@@ -1820,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '各内存层级实际可运行的模型',
         numberedItems: [
           { title: '16 GB（M5基础款、MacBook Air）', whyItMatters: 'Llama 3.1 8B Q4可以装入（5GB模型 + 8GB系统 = 13GB）✓ 但很勉强。Llama 8B Q8不用交换分区装不下。Whisper small可以同时运行。' },
-          { title: '36 GB（M5 Pro入门款）', whyItMatters: 'Llama 3.1 8B Q8轻松装入。Llama 13B Q4装入。Qwen3 32B Q4勉强装入（20GB + 8GB系统 = 28GB）。多模型：Whisper + LLaVA + TTS可同时运行 ✓' },
+          { title: '36 GB（M5 Pro入门款）', whyItMatters: 'Llama 3.1 8B Q8轻松装入。13B级模型可装入。Qwen3 32B Q4勉强装入（20GB + 8GB系统 = 28GB）。多模型：Whisper + LLaVA + TTS可同时运行 ✓' },
           { title: '64 GB（M5 Pro高配）', whyItMatters: 'Qwen3 32B Q5轻松装入（23GB）。Llama 70B Q3勉强装入。多模型堆栈有充足空间。' },
           { title: '128 GB（M5 Max）', whyItMatters: '128GB最佳模型：Llama 3.3 70B Q5（49GB）——能轻松装入的最大主流模型。70B Q8也能装入（74GB），质量几乎无损。多模态：Whisper + 90B视觉模型 + 8B LLM可同时运行 ✓' },
         ],
@@ -1989,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64GB Mac에서 macOS용 8GB를 확보하면 LLM에 약 56GB를 사용할 수 있습니다.',
           '스왑 존재: 모델이 여유 메모리를 초과하면 macOS가 SSD를 사용합니다. 작동하지만 몇 배나 느립니다.',
           '양자화에 따른 모델 크기(GB) 차이: Llama 3.1 8B는 FP16 16GB, Q4 5GB, Q8 8.5GB입니다.',
-          '원칙: 최대 메모리를 구매하십시오 — 구매 후 업그레이드 불가. 판매 시 메모리 비용은 5–10%이지만, 나중에 Mac 전체 교체는 100% 비용이 발생합니다.',
+          '원칙: 최대 메모리를 구매하십시오 — 구매 후 업그레이드 불가. 메모리 업그레이드는 고정된 등급별로 가격이 책정됩니다. Apple 구성 페이지에서 업그레이드 가격과 Mac 교체 비용을 비교하십시오.',
         ],
       },
       howUnified: {
@@ -2050,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '각 메모리 티어에서 실행 가능한 모델(실용적)',
         numberedItems: [
           { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.1 8B Q4 가능(5GB 모델 + 8GB OS = 13GB) ✓ 하지만 빠듯함. Llama 8B Q8은 스왑 없이 불가. Whisper small은 함께 실행 가능.' },
-          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 여유롭게 가능. Llama 13B Q4 가능. Qwen3 32B Q4 겨우 가능(20GB + 8GB OS = 28GB). 멀티 모델: Whisper + LLaVA + TTS 동시 실행 가능 ✓' },
+          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.1 8B Q8 여유롭게 가능. 13B급 모델 가능. Qwen3 32B Q4 겨우 가능(20GB + 8GB OS = 28GB). 멀티 모델: Whisper + LLaVA + TTS 동시 실행 가능 ✓' },
           { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 32B Q5 여유롭게 가능(23GB). Llama 70B Q3 겨우 가능. 멀티 모델 스택을 위한 충분한 여유 공간.' },
           { title: '128 GB (M5 Max)', whyItMatters: '128GB에 가장 적합한 모델: Llama 3.3 70B Q5(49GB) — 여유롭게 실행 가능한 가장 큰 주류 모델. 70B Q8도 가능(74GB)하며 손실이 거의 없는 품질. 멀티모달: Whisper + 90B 비전 모델 + 8B LLM 동시 실행 가능 ✓' },
         ],

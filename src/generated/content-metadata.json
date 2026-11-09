@@ -229,7 +229,7 @@
         },
         {
           "url": "/images/best-beginner-local-llm-models-comparison-table-hero-en.webp",
-          "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- specs from model cards and Ollama's library; speeds are rough estimates, not PromptQuorum measurements. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is fastest at 1.7 GB RAM."
+          "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- specs from model cards and Ollama's library; speeds are rough estimates, not PromptQuorum measurements. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is among the faster options at 1.7 GB RAM."
         },
         {
           "url": "/images/best-beginner-local-llm-models-ram-decision-en.svg",
@@ -3036,7 +3036,7 @@
         },
         {
           "url": "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-hero-en.webp",
-          "title": "M5 Pro vs M5 Max buying guide: M5 Pro (64GB, 307 GB/s, 25–45W) suits 8B–32B models at $1,200–1,500 in a Mac Mini; M5 Max (128GB, 614 GB/s, 60–100W) is one of few consumer options for regular 70B inference on a single machine in a Mac Studio."
+          "title": "M5 Pro vs M5 Max buying guide: M5 Pro (64GB, 307 GB/s, 25–45W) suits 8B–32B models in a Mac Mini (from $1,699, Apple US starting price); M5 Max (128GB, 614 GB/s, 60–100W) is one of few consumer options for regular 70B inference on a single machine in a Mac Studio."
         }
       ]
     },

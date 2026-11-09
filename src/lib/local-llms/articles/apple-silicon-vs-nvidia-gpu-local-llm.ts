@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Mac vs NVIDIA for local AI 2026: M5 Max vs RTX 4090 benchmarks, 3-year TCO, power costs, and workflow comparison. Crossover threshold at 24GB model size.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'Users deciding between Mac and PC/GPU for local AI, developers evaluating hardware for LLM workloads.',
     readTime: '13 min read',
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'In the table below, RTX 4090 is faster on models that fit in 24GB VRAM, while M5 Max can run models that do not fit. Crossover threshold: ~24GB model size.',
-          'Benchmarks: RTX 4090 delivers 120–140 tok/s on Llama 3.1 8B Q4. M5 Max delivers 100–120 tok/s. On Llama 3.3 70B Q4: M5 Max runs at 15–20 tok/s. RTX 4090 cannot run it at all (OOM).',
+          'Benchmarks: RTX 4090 delivers 120–140 tok/s on Llama 3.1 8B Q4. M5 Max delivers 100–120 tok/s. On Llama 3.3 70B Q4: M5 Max runs at 15–20 tok/s. On RTX 4090 it does not fit fully in 24GB VRAM; partial CPU offload is possible but much slower.',
           'Estimated 3-year total cost (see the TCO table): Mac Mini M5 Pro 64GB = $1,804. RTX 4090 desktop = $3,482. In that table the Mac comes out cheaper, mainly because of the lower hardware price and electricity estimate.',
           'Estimated power at 24/7 operation: Mac Mini M5 Pro = $35/year electricity. RTX 4090 desktop = $394/year. At EU rates ($0.35/kWh), that is €82/year vs €921/year.',
           'Fine-tuning: in our assessment, the NVIDIA CUDA ecosystem is more mature than Apple MLX for training. Use NVIDIA for fine-tuning, Mac for inference on large models.',
@@ -111,7 +111,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Llama 3.1 8B Q8', 'M5 Pro 64GB': '40–50', 'M5 Max 128GB': '80–95', 'RTX 4070 12GB': '55–70', 'RTX 4090 24GB': '90–110' },
           { 'Model': 'Qwen3 14B Q4', 'M5 Pro 64GB': '35–45', 'M5 Max 128GB': '70–85', 'RTX 4070 12GB': '45–60', 'RTX 4090 24GB': '90–110' },
           { 'Model': 'Qwen3 32B Q4', 'M5 Pro 64GB': '18–22', 'M5 Max 128GB': '35–42', 'RTX 4070 12GB': 'OOM (12GB)', 'RTX 4090 24GB': 'Fits (tight)' },
-          { 'Model': 'Mixtral 8x22B Q4', 'M5 Pro 64GB': '25–32', 'M5 Max 128GB': '50–62', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': '65–80' },
           { 'Model': 'Llama 3.3 70B Q4', 'M5 Pro 64GB': '8–12', 'M5 Max 128GB': '15–20', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
           { 'Model': 'Llama 3.3 70B Q5', 'M5 Pro 64GB': '6–10', 'M5 Max 128GB': '12–16', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
         ],
@@ -158,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. Running 70B+ Parameter Models**',
           'The decisive scenario. Llama 3.3 70B requires 42GB at Q4 quantization. RTX 4090 has 24GB VRAM — cannot fit. M5 Max 128GB runs it comfortably with room for context window and other applications.',
-          'The only NVIDIA workaround is dual RTX 3090 ($1,700+) or A6000 ($4,500) — both costing more than Mac Mini M5 Pro while drawing 2–5× the power.',
+          'One NVIDIA workaround is dual RTX 3090 ($1,700+) or A6000 ($4,500) — both costing more than Mac Mini M5 Pro while drawing 2–5× the power.',
           '**2. Always-On Silent AI Server**',
           'Mac Mini at 18–35W under load is fanless or near-silent. A desktop with RTX 4090 at 250–450W has 3+ fans averaging 50–70 dB. A noisy GPU rig in a home office is unworkable; Mac Mini runs silently in a closet.',
           'Power cost differential: $35/year (Mac Mini) vs $394/year (RTX 4090) at 24/7 operation. Over 5 years: $1,795 saved on electricity alone.',
@@ -202,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'Debugging tools', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight, comprehensive' },
           { 'Aspect': 'Power management', 'Apple Silicon': 'Automatic, transparent', 'NVIDIA': 'Manual fan curves, undervolting' },
           { 'Aspect': 'OS compatibility', 'Apple Silicon': 'macOS only', 'NVIDIA': 'Linux, Windows' },
-          { 'Aspect': 'Multi-machine scaling', 'Apple Silicon': 'Not supported', 'NVIDIA': 'NCCL, distributed training' },
+          { 'Aspect': 'Multi-machine scaling', 'Apple Silicon': 'Not natively; third-party and MLX distributed clustering exists but is less mature than NVLink/NCCL setups.', 'NVIDIA': 'NCCL, distributed training' },
           { 'Aspect': 'Cloud parity', 'Apple Silicon': 'No identical cloud Macs', 'NVIDIA': 'Available on AWS, Azure, GCP, Lambda' },
         ],
       },
@@ -255,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I do multi-GPU on Mac?',
-            a: 'No. There is no way to pool memory across Macs. NVIDIA GPU systems allow dual RTX 3090 for 48GB pooled VRAM ($1,700–2,100) — useful for models between 24GB and 48GB, but louder and more power-hungry than Mac Studio M5 Max.',
+            a: 'Not natively; third-party and MLX distributed clustering exists but is less mature than NVLink/NCCL setups. NVIDIA GPU systems allow dual RTX 3090 for 48GB pooled VRAM ($1,700–2,100) — useful for models between 24GB and 48GB, but louder and more power-hungry than Mac Studio M5 Max.',
           },
           {
             q: 'Is NVIDIA faster for training?',
@@ -263,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is M5 Max faster than RTX 4090 overall?',
-            a: 'No. RTX 4090 is faster on models that fit in 24GB VRAM. RTX 4090 has 1,008 GB/s bandwidth vs M5 Max 614 GB/s. The advantage flips for models above 24GB — RTX 4090 cannot run them at all. M5 Max wins on 70B models, RTX 4090 wins on 8B–24B models.',
+            a: 'No. RTX 4090 is faster on models that fit in 24GB VRAM. RTX 4090 has 1,008 GB/s bandwidth vs M5 Max 614 GB/s. The advantage flips for models above 24GB — RTX 4090 does not fit them fully in 24GB VRAM (partial CPU offload is possible but much slower). M5 Max wins on 70B models, RTX 4090 wins on 8B–24B models.',
           },
           {
             q: 'Can I run an NVIDIA GPU on a Mac via Thunderbolt eGPU?',
@@ -279,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I share VRAM across multiple Macs?',
-            a: 'No. Apple Silicon does not support memory pooling across machines. For models between 24GB and 48GB, dual RTX 3090 (48GB pooled) can be cheaper than Mac Studio M5 Max — but louder, hotter, and drawing 2–3× the power.',
+            a: 'Not natively; third-party and MLX distributed clustering exists but is less mature than NVLink/NCCL setups. For models between 24GB and 48GB, dual RTX 3090 (48GB pooled) can be cheaper than Mac Studio M5 Max — but louder, hotter, and drawing 2–3× the power.',
           },
           {
             q: 'What about AMD GPUs (RX 7900 XTX) for local LLMs?',
@@ -317,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Mac vs NVIDIA para IA local 2026: M5 Max vs RTX 4090 benchmarks, TCO a 3 años, costos de electricidad y comparación de workflow. Punto de cruce a ~24 GB de tamaño de modelo.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'Usuarios que deciden entre Mac y PC/GPU para IA local, desarrolladores evaluando hardware para cargas de trabajo con LLMs.',
     readTime: '13 min de lectura',
@@ -379,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'En la tabla siguiente, RTX 4090 es más rápida en modelos que caben en 24 GB de VRAM, mientras que M5 Max puede ejecutar modelos que no caben. Punto de cruce: ~24 GB de tamaño de modelo.',
-          'Benchmarks: RTX 4090 entrega 120–140 tok/s en Llama 3.1 8B Q4. M5 Max entrega 100–120 tok/s. En Llama 3.3 70B Q4: M5 Max corre a 15–20 tok/s. RTX 4090 no puede ejecutarlo (OOM).',
+          'Benchmarks: RTX 4090 entrega 120–140 tok/s en Llama 3.1 8B Q4. M5 Max entrega 100–120 tok/s. En Llama 3.3 70B Q4: M5 Max corre a 15–20 tok/s. En RTX 4090 no cabe por completo en 24 GB de VRAM; es posible un offload parcial a la CPU, pero mucho más lento.',
           'Costo total estimado a 3 años (ver tabla de TCO): Mac Mini M5 Pro 64 GB = $1.804. RTX 4090 desktop = $3.482. En esa tabla el Mac resulta más barato, principalmente por el menor precio de hardware y la estimación de electricidad.',
           'Consumo en operación 24/7: Mac Mini M5 Pro = $35/año en electricidad. RTX 4090 desktop = $394/año. A tarifas EU ($0,35/kWh): $82/año vs $921/año.',
           'Fine-tuning: en nuestra valoración, el ecosistema NVIDIA CUDA es más maduro que Apple MLX para entrenamiento. Usa NVIDIA para fine-tuning, Mac para inferencia en modelos grandes.',
@@ -423,7 +422,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.1 8B Q8', 'M5 Pro 64 GB': '40–50', 'M5 Max 128 GB': '80–95', 'RTX 4070 12 GB': '55–70', 'RTX 4090 24 GB': '90–110' },
           { 'Modelo': 'Qwen3 14B Q4', 'M5 Pro 64 GB': '35–45', 'M5 Max 128 GB': '70–85', 'RTX 4070 12 GB': '45–60', 'RTX 4090 24 GB': '90–110' },
           { 'Modelo': 'Qwen3 32B Q4', 'M5 Pro 64 GB': '18–22', 'M5 Max 128 GB': '35–42', 'RTX 4070 12 GB': 'OOM (12 GB)', 'RTX 4090 24 GB': 'Cabe (justo)' },
-          { 'Modelo': 'Mixtral 8x22B Q4', 'M5 Pro 64 GB': '25–32', 'M5 Max 128 GB': '50–62', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': '65–80' },
           { 'Modelo': 'Llama 3.3 70B Q4', 'M5 Pro 64 GB': '8–12', 'M5 Max 128 GB': '15–20', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
           { 'Modelo': 'Llama 3.3 70B Q5', 'M5 Pro 64 GB': '6–10', 'M5 Max 128 GB': '12–16', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
         ],
@@ -470,7 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. Ejecutar modelos de 70B+ parámetros**',
           'El escenario decisivo. Llama 3.3 70B requiere 42 GB en cuantización Q4. RTX 4090 tiene 24 GB de VRAM — no cabe. M5 Max 128 GB lo ejecuta cómodamente con espacio para la ventana de contexto y otras aplicaciones.',
-          'La única alternativa con NVIDIA es dual RTX 3090 ($1.800+) o A6000 ($4.500+) — ambas cuestan más que el Mac Mini M5 Pro y consumen 2–5 veces más energía.',
+          'Una alternativa con NVIDIA es dual RTX 3090 ($1.800+) o A6000 ($4.500+) — ambas cuestan más que el Mac Mini M5 Pro y consumen 2–5 veces más energía.',
           '**2. Servidor de IA siempre activo y silencioso**',
           'Mac Mini a 18–35 W bajo carga es sin ventilador o casi silencioso. Un desktop con RTX 4090 a 250–450 W tiene 3 o más ventiladores con un promedio de 50–70 dB. Un rig GPU ruidoso en una oficina en casa es inviable; Mac Mini funciona silenciosamente en un armario.',
           'Diferencia en costo de electricidad: $35/año (Mac Mini) vs $394/año (RTX 4090) en operación 24/7. En 5 años: $1.795 ahorrados solo en electricidad.',
@@ -514,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'Herramientas de depuración', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight, completo' },
           { 'Aspecto': 'Gestión de energía', 'Apple Silicon': 'Automática, transparente', 'NVIDIA': 'Curvas de ventilador manuales, undervolting' },
           { 'Aspecto': 'Compatibilidad de SO', 'Apple Silicon': 'Solo macOS', 'NVIDIA': 'Linux, Windows' },
-          { 'Aspecto': 'Escalado multi-máquina', 'Apple Silicon': 'No compatible', 'NVIDIA': 'NCCL, entrenamiento distribuido' },
+          { 'Aspecto': 'Escalado multi-máquina', 'Apple Silicon': 'No de forma nativa; existe clustering distribuido de terceros y con MLX, pero es menos maduro que NVLink/NCCL.', 'NVIDIA': 'NCCL, entrenamiento distribuido' },
           { 'Aspecto': 'Paridad con la nube', 'Apple Silicon': 'No hay Macs idénticos en la nube', 'NVIDIA': 'Disponible en AWS, Azure, GCP, Lambda' },
         ],
       },
@@ -567,7 +565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar multi-GPU en un Mac?',
-            a: 'No. No hay forma de unir memoria entre varios Macs. Los sistemas GPU de NVIDIA permiten dual RTX 3090 para 48 GB de VRAM combinada ($1.800) — útil para modelos de entre 24 GB y 48 GB, pero más ruidosos y con mayor consumo que Mac Studio M5 Max.',
+            a: 'No de forma nativa; existe clustering distribuido de terceros y con MLX, pero es menos maduro que NVLink/NCCL. Los sistemas GPU de NVIDIA permiten dual RTX 3090 para 48 GB de VRAM combinada ($1.800) — útil para modelos de entre 24 GB y 48 GB, pero más ruidosos y con mayor consumo que Mac Studio M5 Max.',
           },
           {
             q: '¿Es NVIDIA más rápido para entrenamiento?',
@@ -575,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es M5 Max más rápido que RTX 4090 en general?',
-            a: 'No. RTX 4090 es más rápido en modelos que caben en 24 GB de VRAM. RTX 4090 tiene 1.008 GB/s de ancho de banda vs M5 Max 614 GB/s. La ventaja se invierte en modelos de más de 24 GB — RTX 4090 directamente no puede ejecutarlos. M5 Max gana en modelos 70B, RTX 4090 gana en modelos 8B–24B.',
+            a: 'No. RTX 4090 es más rápido en modelos que caben en 24 GB de VRAM. RTX 4090 tiene 1.008 GB/s de ancho de banda vs M5 Max 614 GB/s. La ventaja se invierte en modelos de más de 24 GB — RTX 4090 no los aloja por completo en 24 GB de VRAM (es posible un offload parcial a la CPU, pero mucho más lento). M5 Max gana en modelos 70B, RTX 4090 gana en modelos 8B–24B.',
           },
           {
             q: '¿Puedo usar una GPU NVIDIA en un Mac mediante eGPU Thunderbolt?',
@@ -591,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo compartir VRAM entre varios Macs?',
-            a: 'No. Apple Silicon no admite memoria compartida entre máquinas. Para modelos de entre 24 GB y 48 GB, dual RTX 3090 (48 GB combinados) puede ser más barato que Mac Studio M5 Max — pero más ruidoso, más caliente y con 2–3 veces el consumo energético.',
+            a: 'No de forma nativa; existe clustering distribuido de terceros y con MLX, pero es menos maduro que NVLink/NCCL. Para modelos de entre 24 GB y 48 GB, dual RTX 3090 (48 GB combinados) puede ser más barato que Mac Studio M5 Max — pero más ruidoso, más caliente y con 2–3 veces el consumo energético.',
           },
           {
             q: '¿Qué hay de las GPU AMD (RX 7900 XTX) para LLMs locales?',
@@ -642,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: '⁨Mac⁩ مقابل ⁨NVIDIA⁩ للذكاء الاصطناعي المحلي ⁨2026⁩: ⁨M5 Max⁩ مقابل ⁨RTX 4090⁩ اختبارات مرجعية، إجمالي تكلفة الملكية لـ ⁨3⁩ سنوات، تكاليف الكهرباء ومقارنة تدفق العمل. نقطة التقاطع عند نحو ⁨24 GB⁩ من حجم النموذج.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'المستخدمون الذين يقرّرون بين Mac وPC/GPU للذكاء الاصطناعي المحلي، والمطورون الذين يقيّمون العتاد لأحمال نماذج LLM.',
     readTime: '13 دقيقة للقراءة',
@@ -688,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'في الجدول أدناه، تكون RTX 4090 أسرع في النماذج التي تتسع في 24 GB من VRAM، بينما يستطيع M5 Max تشغيل نماذج لا تتسع. نقطة التقاطع: نحو 24 GB من حجم النموذج.',
-          'اختبارات مرجعية: تقدّم RTX 4090 سرعة 120–140 tok/s على Llama 3.1 8B Q4. ويقدّم M5 Max سرعة 100–120 tok/s. على Llama 3.3 70B Q4: يعمل M5 Max بسرعة 15–20 tok/s. وRTX 4090 لا يستطيع تشغيله (OOM).',
+          'اختبارات مرجعية: تقدّم RTX 4090 سرعة 120–140 tok/s على Llama 3.1 8B Q4. ويقدّم M5 Max سرعة 100–120 tok/s. على Llama 3.3 70B Q4: يعمل M5 Max بسرعة 15–20 tok/s. وعلى RTX 4090 لا يتسع بالكامل في 24 GB من VRAM؛ ممكن نقل جزئي إلى المعالج لكنه أبطأ بكثير.',
           'إجمالي التكلفة التقديري لـ 3 سنوات (انظر جدول TCO): Mac Mini M5 Pro 64 GB = 1,804 دولار. RTX 4090 مكتبي = 3,482 دولار. في ذلك الجدول يخرج Mac أرخص، بسبب انخفاض سعر العتاد وتقدير الكهرباء بشكل رئيسي.',
           'الاستهلاك في التشغيل على مدار الساعة: Mac Mini M5 Pro = 35 دولارًا سنويًا كهرباء. RTX 4090 مكتبي = 394 دولارًا سنويًا. بأسعار الاتحاد الأوروبي (0.35 دولار/kWh): 82 دولارًا سنويًا مقابل 921 دولارًا سنويًا.',
           'الضبط الدقيق: في تقديرنا، منظومة NVIDIA CUDA أكثر نضجًا من Apple MLX للتدريب. استخدم NVIDIA للضبط الدقيق وMac للاستدلال على النماذج الكبيرة.',
@@ -732,7 +730,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Llama 3.1 8B Q8', 'M5 Pro 64 GB': '40–50', 'M5 Max 128 GB': '80–95', 'RTX 4070 12 GB': '55–70', 'RTX 4090 24 GB': '90–110' },
           { 'النموذج': 'Qwen3 14B Q4', 'M5 Pro 64 GB': '35–45', 'M5 Max 128 GB': '70–85', 'RTX 4070 12 GB': '45–60', 'RTX 4090 24 GB': '90–110' },
           { 'النموذج': 'Qwen3 32B Q4', 'M5 Pro 64 GB': '18–22', 'M5 Max 128 GB': '35–42', 'RTX 4070 12 GB': 'OOM (12 GB)', 'RTX 4090 24 GB': 'يتسع (بهامش ضيق)' },
-          { 'النموذج': 'Mixtral 8x22B Q4', 'M5 Pro 64 GB': '25–32', 'M5 Max 128 GB': '50–62', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': '65–80' },
           { 'النموذج': 'Llama 3.3 70B Q4', 'M5 Pro 64 GB': '8–12', 'M5 Max 128 GB': '15–20', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
           { 'النموذج': 'Llama 3.3 70B Q5', 'M5 Pro 64 GB': '6–10', 'M5 Max 128 GB': '12–16', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
         ],
@@ -779,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. تشغيل نماذج بـ 70B معامل فأكثر**',
           'السيناريو الحاسم. يتطلب Llama 3.3 70B سعة 42 GB بتكميم Q4. تملك RTX 4090 سعة 24 GB من VRAM — لا يتسع. ويشغّله M5 Max 128 GB بأريحية مع مساحة لنافذة السياق وتطبيقات أخرى.',
-          'البديل الوحيد مع NVIDIA هو كرتا RTX 3090 (1,800 دولار فأكثر) أو A6000 (4,500 دولار فأكثر) — كلاهما يكلف أكثر من Mac Mini M5 Pro ويستهلك 2–5 أضعاف الطاقة.',
+          'أحد البدائل مع NVIDIA هو كرتا RTX 3090 (1,800 دولار فأكثر) أو A6000 (4,500 دولار فأكثر) — كلاهما يكلف أكثر من Mac Mini M5 Pro ويستهلك 2–5 أضعاف الطاقة.',
           '**2. خادم ذكاء اصطناعي دائم التشغيل وصامت**',
           'Mac Mini عند 18–35 واط تحت الحمل بلا مروحة أو شبه صامت. أما مكتبي بـ RTX 4090 عند 250–450 واط فله 3 مراوح أو أكثر بمتوسط 50–70 ديسيبل. تهيئة GPU صاخبة في مكتب منزلي غير عملية؛ بينما يعمل Mac Mini بصمت في خزانة.',
           'الفرق في تكلفة الكهرباء: 35 دولارًا سنويًا (Mac Mini) مقابل 394 دولارًا سنويًا (RTX 4090) في التشغيل على مدار الساعة. خلال 5 سنوات: 1,795 دولارًا مُوفَّرة على الكهرباء وحدها.',
@@ -823,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الجانب': 'أدوات التصحيح', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight، كاملة' },
           { 'الجانب': 'إدارة الطاقة', 'Apple Silicon': 'تلقائية، شفافة', 'NVIDIA': 'منحنيات مراوح يدوية، undervolting' },
           { 'الجانب': 'توافق نظام التشغيل', 'Apple Silicon': 'macOS فقط', 'NVIDIA': 'Linux، Windows' },
-          { 'الجانب': 'التوسع متعدد الأجهزة', 'Apple Silicon': 'غير مدعوم', 'NVIDIA': 'NCCL، تدريب موزَّع' },
+          { 'الجانب': 'التوسع متعدد الأجهزة', 'Apple Silicon': 'ليس بشكل أصلي؛ يوجد تجميع موزَّع عبر أدوات خارجية وMLX لكنه أقل نضجًا من إعدادات NVLink/NCCL.', 'NVIDIA': 'NCCL، تدريب موزَّع' },
           { 'الجانب': 'التكافؤ مع السحابة', 'Apple Silicon': 'لا توجد أجهزة Mac مطابقة في السحابة', 'NVIDIA': 'متاح على AWS، Azure، GCP، Lambda' },
         ],
       },
@@ -876,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام كرتي رسوميات في جهاز Mac؟',
-            a: 'لا. لا توجد طريقة لدمج الذاكرة بين عدة أجهزة Mac. تتيح أنظمة GPU من NVIDIA كرتي RTX 3090 لسعة 48 GB من VRAM مجتمعة (1,800 دولار) — مفيدة للنماذج بين 24 GB و48 GB، لكنها أكثر ضوضاءً وأعلى استهلاكًا من Mac Studio M5 Max.',
+            a: 'ليس بشكل أصلي؛ يوجد تجميع موزَّع عبر أدوات خارجية وMLX لكنه أقل نضجًا من إعدادات NVLink/NCCL. تتيح أنظمة GPU من NVIDIA كرتي RTX 3090 لسعة 48 GB من VRAM مجتمعة (1,800 دولار) — مفيدة للنماذج بين 24 GB و48 GB، لكنها أكثر ضوضاءً وأعلى استهلاكًا من Mac Studio M5 Max.',
           },
           {
             q: 'هل NVIDIA أسرع للتدريب؟',
@@ -884,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل M5 Max أسرع من RTX 4090 بشكل عام؟',
-            a: 'لا. RTX 4090 أسرع في النماذج التي تتسع في 24 GB من VRAM. تملك RTX 4090 عرض نطاق 1,008 GB/s مقابل M5 Max 614 GB/s. تنقلب الميزة في النماذج التي تتجاوز 24 GB — إذ لا تستطيع RTX 4090 تشغيلها إطلاقًا. يفوز M5 Max في نماذج 70B، وتفوز RTX 4090 في نماذج 8B–24B.',
+            a: 'لا. RTX 4090 أسرع في النماذج التي تتسع في 24 GB من VRAM. تملك RTX 4090 عرض نطاق 1,008 GB/s مقابل M5 Max 614 GB/s. تنقلب الميزة في النماذج التي تتجاوز 24 GB — إذ لا تتسع بالكامل في VRAM بسعة 24 GB على RTX 4090 (نقل جزئي إلى المعالج ممكن لكنه أبطأ بكثير). يفوز M5 Max في نماذج 70B، وتفوز RTX 4090 في نماذج 8B–24B.',
           },
           {
             q: 'هل يمكنني استخدام GPU من NVIDIA في جهاز Mac عبر eGPU بـ Thunderbolt؟',
@@ -900,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني مشاركة VRAM بين عدة أجهزة Mac؟',
-            a: 'لا. لا يدعم Apple Silicon الذاكرة المشتركة بين الأجهزة. للنماذج بين 24 GB و48 GB، قد يكون كرتا RTX 3090 (48 GB مجتمعة) أرخص من Mac Studio M5 Max — لكن أكثر ضوضاءً وأسخن وبضعفي أو ثلاثة أضعاف الاستهلاك.',
+            a: 'ليس بشكل أصلي؛ يوجد تجميع موزَّع عبر أدوات خارجية وMLX لكنه أقل نضجًا من إعدادات NVLink/NCCL. للنماذج بين 24 GB و48 GB، قد يكون كرتا RTX 3090 (48 GB مجتمعة) أرخص من Mac Studio M5 Max — لكن أكثر ضوضاءً وأسخن وبضعفي أو ثلاثة أضعاف الاستهلاك.',
           },
           {
             q: 'ماذا عن كروت رسوميات AMD (RX 7900 XTX) لنماذج LLM المحلية؟',
@@ -951,7 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Mac vs NVIDIA para IA local 2026: M5 Max vs RTX 4090 benchmarks, TCO de 3 anos, custos de eletricidade e comparação de workflow. Ponto de cruzamento em ~24 GB.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'Usuários que decidem entre Mac e PC/GPU para IA local, desenvolvedores avaliando hardware para cargas de trabalho com LLMs.',
     readTime: '13 min de leitura',
@@ -1007,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Na tabela abaixo, a RTX 4090 é mais rápida em modelos que cabem em 24 GB de VRAM, enquanto o M5 Max consegue rodar modelos que não cabem. Ponto de cruzamento: ~24 GB de tamanho de modelo.',
-          'Benchmarks: RTX 4090 entrega 120-140 tok/s em Llama 3.1 8B Q4. M5 Max entrega 100-120 tok/s. Em Llama 3.3 70B Q4: M5 Max roda a 15-20 tok/s. RTX 4090 não consegue executá-lo (OOM).',
+          'Benchmarks: RTX 4090 entrega 120-140 tok/s em Llama 3.1 8B Q4. M5 Max entrega 100-120 tok/s. Em Llama 3.3 70B Q4: M5 Max roda a 15-20 tok/s. Na RTX 4090 ele não cabe por completo nos 24 GB de VRAM; é possível offload parcial para a CPU, mas bem mais lento.',
           'Custo total estimado de 3 anos (veja a tabela de TCO): Mac Mini M5 Pro 64 GB = US$ 1.804. RTX 4090 desktop = US$ 3.482. Nessa tabela o Mac sai mais barato, principalmente pelo menor preço de hardware e pela estimativa de eletricidade.',
           'Consumo em operação 24/7: Mac Mini M5 Pro = US$ 35/ano em eletricidade. RTX 4090 desktop = US$ 394/ano.',
           'Fine-tuning: em nossa avaliação, o ecossistema NVIDIA CUDA é mais maduro que o Apple MLX para treinamento. Use NVIDIA para fine-tuning, Mac para inferência em modelos grandes.',
@@ -1044,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.1 8B Q4', 'RTX 4090': '120-140 tok/s', 'M5 Max 128 GB': '100-120 tok/s', 'Vencedor': 'NVIDIA (+20%)' },
           { 'Modelo': 'Qwen3 14B Q4', 'RTX 4090': '85-100 tok/s', 'M5 Max 128 GB': '65-80 tok/s', 'Vencedor': 'NVIDIA (+25%)' },
           { 'Modelo': 'Qwen3 32B Q4', 'RTX 4090': 'Cabe por pouco (apertado)', 'M5 Max 128 GB': '25-35 tok/s', 'Vencedor': 'Apple (cabe confortavelmente)' },
-          { 'Modelo': 'Llama 3.3 70B Q4', 'RTX 4090': 'Não roda (OOM)', 'M5 Max 128 GB': '15-20 tok/s', 'Vencedor': 'Apple (único que roda)' },
+          { 'Modelo': 'Llama 3.3 70B Q4', 'RTX 4090': 'Não cabe por completo', 'M5 Max 128 GB': '15-20 tok/s', 'Vencedor': 'Apple (uma das poucas opções)' },
         ],
       },
       tco: {
@@ -1069,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Silêncio:** Mac Mini é silencioso mesmo sob carga. Desktop com RTX 4090 pode atingir 70+ dB.',
           '**Portabilidade:** MacBook Pro M5 Max roda modelos 70B em bateria. Poucas GPUs discretas de laptop conseguem isso.',
           '**Uso simultâneo de memória:** 128 GB disponíveis para LLM + SO + outras apps simultâneo. VRAM de 24 GB é apenas para o LLM.',
-          '**LGPD:** Empresas brasileiras que processam dados sensíveis podem garantir conformidade com a LGPD rodando modelos 70B inteiramente locais. Durante a inferência, os dados permanecem na infraestrutura da organização (o aplicativo ainda pode acessar a rede, salvo configuração em contrário).',
+          '**LGPD:** Rodar a inferência localmente pode reduzir a exposição de dados a terceiros; a conformidade com a LGPD depende de base legal, medidas técnicas e organizacionais e avaliação jurídica. Informação geral, não aconselhamento jurídico.',
         ],
       },
       'nvidia-wins': {
@@ -1080,7 +1077,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fine-tuning e treinamento:** ecossistema PyTorch + CUDA é mais maduro que o MLX, em nossa avaliação. Use NVIDIA para qualquer treinamento sério.',
           '**Stable Diffusion e multimodal:** modelos de difusão, ControlNet e workflows ComfyUI tendem a ser mais rápidos na NVIDIA.',
           '**Pesquisa e código experimental:** a maioria dos papers de pesquisa disponibiliza código CUDA, não Metal/MLX.',
-          '**Orçamento:** RTX 4070 Ti (US$ 800-1.200) supera Mac Studio M5 Pro em velocidade de inferência 7B-13B.',
           '**Capacidade de upgrade:** troque a GPU por uma mais nova, adicione mais VRAM, expanda a configuração ao longo do tempo.',
         ],
       },
@@ -1090,7 +1086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ecossistema Mac (Metal/MLX):** Ollama (todas as versões), LM Studio, Jan.ai, Msty. MLX da Apple está melhorando rapidamente -- maiores ganhos de velocidade entre outubro 2024 e maio 2026 foram no Mac.',
           '**Ecossistema NVIDIA (CUDA):** vLLM, text-generation-webui, Oobabooga, TGI, torch. Domina em fine-tuning, treinamento, Stable Diffusion.',
-          '**Compatibilidade entre plataformas:** Ollama é o único framework verdadeiramente multiplataforma (mesmo código funciona em Mac e NVIDIA). llama.cpp também, mas com configuração diferente.',
+          '**Compatibilidade entre plataformas:** Ollama é um dos frameworks multiplataforma (mesmo código funciona em Mac e NVIDIA). llama.cpp também, mas com configuração diferente.',
           '**Modelos:** todos os modelos GGUF principais funcionam em ambas as plataformas. Modelos exclusivos de GPU (ex: vLLM FP16) só funcionam na NVIDIA.',
         ],
       },
@@ -1109,8 +1105,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tipo de usuário': 'Servidor de inferência 24/7', 'Recomendação': 'Mac Mini M5 Pro', 'Razão': 'US$ 35/ano vs US$ 394/ano em eletricidade' },
           { 'Tipo de usuário': 'LLM portátil', 'Recomendação': 'MacBook Pro M5 Max', 'Razão': 'Um dos poucos laptops capazes de 70B' },
           { 'Tipo de usuário': 'Stable Diffusion + LLM combinados', 'Recomendação': 'NVIDIA + Mac híbrido', 'Razão': 'NVIDIA para difusão, Mac para LLM grande' },
-          { 'Tipo de usuário': 'Orçamento abaixo de US$ 1.500', 'Recomendação': 'RTX 4070 Ti', 'Razão': 'Supera Mac Studio M5 Pro em velocidade 7B-13B' },
-          { 'Tipo de usuário': 'Conformidade com LGPD (Brasil)', 'Recomendação': 'Mac M5 Max 128 GB', 'Razão': 'Inferência local 70B -- a inferência roda na própria máquina' },
         ],
         columns: ['Tipo de usuário', 'Recomendação', 'Razão'],
       },
@@ -1118,11 +1112,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O M5 Max é mais lento que o RTX 4090?', a: 'Em modelos que cabem na VRAM de 24 GB: sim, RTX 4090 é 20-30% mais rápida. Em modelos 70B+: M5 Max vence -- RTX 4090 não consegue carregá-los sem dual-GPU.' },
+          { q: 'O M5 Max é mais lento que o RTX 4090?', a: 'Em modelos que cabem na VRAM de 24 GB: sim, RTX 4090 é 20-30% mais rápida. Em modelos 70B+: M5 Max vence -- RTX 4090 não os comporta por completo em 24 GB de VRAM (offload parcial para a CPU é possível, mas bem mais lento).' },
           { q: 'Vale a pena o custo extra de um Mac para LLMs locais?', a: 'Para usuários de modelos 70B: sim -- é uma das poucas opções de consumo em uma única máquina. Para usuários de modelos 8B-24B: RTX 4090 oferece mais velocidade pelo dinheiro.' },
           { q: 'Posso usar MLX no mesmo Mac que uso para trabalho diário?', a: 'Sim. O Mac Mini M5 Pro roda inferência LLM em segundo plano enquanto você trabalha. A inferência usa ~30-60 W e raramente impacta outros aplicativos.' },
           { q: 'A NVIDIA vai lançar uma GPU de consumo com mais de 24 GB de VRAM?', a: 'RTX 5090 (2025) tem 32 GB de VRAM -- suficiente para alguns modelos 70B Q3. Mas para 70B Q4 (42 GB) ou Q8 (70 GB), você ainda precisaria de dual-GPU ou Apple Silicon.' },
-          { q: 'Qual o melhor setup para conformidade com a LGPD no Brasil?', a: 'Mac M5 Max 128 GB rodando LLMs locais. Os dados de prompt, contexto e saída permanecem na máquina durante a inferência (o aplicativo ainda pode acessar a rede, salvo configuração em contrário). Ideal para escritórios de advocacia, consultórios médicos, empresas financeiras e qualquer organização que processa dados pessoais sob a LGPD (Lei nº 13.709/2018). Informação geral, não aconselhamento jurídico; um profissional qualificado deve decidir.' },
+          { q: 'Rodar LLMs localmente ajuda com a LGPD no Brasil?', a: 'Rodar a inferência localmente pode reduzir a exposição de dados a terceiros; a conformidade com a LGPD depende de base legal, medidas técnicas e organizacionais e avaliação jurídica. Os dados de prompt, contexto e saída permanecem na máquina durante a inferência (o aplicativo ainda pode acessar a rede, salvo configuração em contrário). Informação geral, não aconselhamento jurídico.' },
         ],
       },
     },
@@ -1152,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Mac vs NVIDIA für lokale KI 2026: M5 Max vs RTX 4090 Benchmarks, 3-Jahres-TCO, Stromkosten und Workflow-Vergleich. Wendepunkt bei 24-GB-Modellgröße.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'Benutzer, die zwischen Mac und PC/GPU für lokale KI wählen, Entwickler, die Hardware für LLM-Workloads evaluieren.',
     readTime: '13 Min. Lesezeit',
@@ -1213,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'In der Tabelle unten ist die RTX 4090 bei Modellen, die in 24 GB VRAM passen, schneller, während M5 Max Modelle ausführen kann, die nicht passen. Wendepunkt: ~24 GB Modellgröße.',
-          'Benchmarks: RTX 4090 liefert 120–140 tok/s auf Llama 3.1 8B Q4. M5 Max liefert 100–120 tok/s. Auf Llama 3.3 70B Q4: M5 Max läuft bei 15–20 tok/s. RTX 4090 kann es überhaupt nicht ausführen (OOM).',
+          'Benchmarks: RTX 4090 liefert 120–140 tok/s auf Llama 3.1 8B Q4. M5 Max liefert 100–120 tok/s. Auf Llama 3.3 70B Q4: M5 Max läuft bei 15–20 tok/s. Auf der RTX 4090 passt es nicht vollständig in 24 GB VRAM; teilweises CPU-Offloading ist möglich, aber deutlich langsamer.',
           'Geschätzte 3-Jahres-Gesamtkosten (siehe TCO-Tabelle): Mac Mini M5 Pro 64 GB = ca. €2.655. RTX 4090-Desktop = ca. €4.257. In dieser Tabelle ist der Mac günstiger, vor allem wegen des niedrigeren Hardwarepreises und der Stromkostenschätzung.',
           'Stromverbrauch bei 24/7-Betrieb: Mac Mini M5 Pro = ca. €35/Jahr Stromkosten. RTX 4090-Desktop = ca. €349/Jahr. Bei EU-Sätzen (€0,35/kWh): ca. €82/Jahr vs ca. €815/Jahr.',
           'Fine-Tuning: das NVIDIA CUDA-Ökosystem ist nach unserer Einschätzung ausgereifter als Apple MLX beim Training. Nutzen Sie NVIDIA zum Fine-Tuning, Mac zur Inferenz bei großen Modellen.',
@@ -1256,7 +1250,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Llama 3.1 8B Q8', 'M5 Pro 64 GB': '40–50', 'M5 Max 128 GB': '80–95', 'RTX 4070 12 GB': '55–70', 'RTX 4090 24 GB': '90–110' },
           { 'Modell': 'Qwen3 14B Q4', 'M5 Pro 64 GB': '35–45', 'M5 Max 128 GB': '70–85', 'RTX 4070 12 GB': '45–60', 'RTX 4090 24 GB': '90–110' },
           { 'Modell': 'Qwen3 32B Q4', 'M5 Pro 64 GB': '18–22', 'M5 Max 128 GB': '35–42', 'RTX 4070 12 GB': 'OOM (12 GB)', 'RTX 4090 24 GB': 'Passt (eng)' },
-          { 'Modell': 'Mixtral 8x22B Q4', 'M5 Pro 64 GB': '25–32', 'M5 Max 128 GB': '50–62', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': '65–80' },
           { 'Modell': 'Llama 3.3 70B Q4', 'M5 Pro 64 GB': '8–12', 'M5 Max 128 GB': '15–20', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
           { 'Modell': 'Llama 3.3 70B Q5', 'M5 Pro 64 GB': '6–10', 'M5 Max 128 GB': '12–16', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
         ],
@@ -1303,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. Ausführung von 70B+ Parameter-Modellen**',
           'Das entscheidende Szenario. Llama 3.3 70B benötigt 42 GB bei Q4-Quantisierung. RTX 4090 hat 24 GB VRAM — kann nicht passen. M5 Max 128 GB führt es komfortabel mit Platz für Kontext-Fenster und andere Anwendungen aus.',
-          'Der einzige NVIDIA-Workaround sind Dual RTX 3090 (ca. €2.200+) oder A6000 (ca. €5.500+) — beide kosten mehr als Mac Mini M5 Pro bei 2–5× höherem Stromverbrauch.',
+          'Ein NVIDIA-Workaround sind Dual RTX 3090 (ca. €2.200+) oder A6000 (ca. €5.500+) — beide kosten mehr als Mac Mini M5 Pro bei 2–5× höherem Stromverbrauch.',
           '**2. Always-On Silent AI Server**',
           'Mac Mini bei 18–35 W unter Last ist lüfterlos oder nahezu lautlos. Ein Desktop mit RTX 4090 bei 250–450 W hat 3+ Lüfter mit durchschnittlich 50–70 dB. Ein lauter GPU-Rig in einem Homeoffice ist unbrauchbar; Mac Mini läuft lautlos im Schrank.',
           'Stromkostendifferenz: ca. €35/Jahr (Mac Mini) vs ca. €349/Jahr (RTX 4090) bei 24/7-Betrieb. Über 5 Jahre: ca. €1.570 nur bei Stromkosten gespart.',
@@ -1347,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'Debugging-Tools', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight, umfassend' },
           { 'Aspekt': 'Stromverwaltung', 'Apple Silicon': 'Automatisch, transparent', 'NVIDIA': 'Manuelle Lüfterkurven, Undervolting' },
           { 'Aspekt': 'Betriebssystem-Kompatibilität', 'Apple Silicon': 'Nur macOS', 'NVIDIA': 'Linux, Windows' },
-          { 'Aspekt': 'Multi-Machine-Skalierung', 'Apple Silicon': 'Nicht unterstützt', 'NVIDIA': 'NCCL, verteiltes Training' },
+          { 'Aspekt': 'Multi-Machine-Skalierung', 'Apple Silicon': 'Nicht nativ; Clustering via Drittanbieter/MLX existiert, ist aber weniger ausgereift als NVLink/NCCL.', 'NVIDIA': 'NCCL, verteiltes Training' },
           { 'Aspekt': 'Cloud-Parität', 'Apple Silicon': 'Keine identischen Cloud-Macs', 'NVIDIA': 'Verfügbar auf AWS, Azure, GCP, Lambda' },
         ],
       },
@@ -1400,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich Multi-GPU auf Mac machen?',
-            a: 'Nein. Es gibt keine Möglichkeit, Speicher über Macs zu poolen. NVIDIA-GPU-Systeme ermöglichen Dual RTX 3090 für 48 GB gepooltes VRAM (ca. €2.200) — nützlich für Modelle zwischen 24 GB und 48 GB, aber lauter und stromverbrauchsintensiver als Mac Studio M5 Max.',
+            a: 'Nicht nativ; Clustering via Drittanbieter/MLX existiert, ist aber weniger ausgereift als NVLink/NCCL. NVIDIA-GPU-Systeme ermöglichen Dual RTX 3090 für 48 GB gepooltes VRAM (ca. €2.200) — nützlich für Modelle zwischen 24 GB und 48 GB, aber lauter und stromverbrauchsintensiver als Mac Studio M5 Max.',
           },
           {
             q: 'Ist NVIDIA schneller zum Training?',
@@ -1408,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist M5 Max insgesamt schneller als RTX 4090?',
-            a: 'Nein. RTX 4090 ist schneller bei Modellen, die in 24 GB VRAM passen. RTX 4090 hat 1.008 GB/s Bandbreite vs M5 Max 614 GB/s. Der Vorteil kippt bei Modellen über 24 GB — RTX 4090 kann sie überhaupt nicht ausführen. M5 Max gewinnt bei 70B-Modellen, RTX 4090 gewinnt bei 8B–24B-Modellen.',
+            a: 'Nein. RTX 4090 ist schneller bei Modellen, die in 24 GB VRAM passen. RTX 4090 hat 1.008 GB/s Bandbreite vs M5 Max 614 GB/s. Der Vorteil kippt bei Modellen über 24 GB — RTX 4090 kann sie nicht vollständig in 24 GB VRAM halten (teilweises CPU-Offloading ist möglich, aber deutlich langsamer). M5 Max gewinnt bei 70B-Modellen, RTX 4090 gewinnt bei 8B–24B-Modellen.',
           },
           {
             q: 'Kann ich eine NVIDIA GPU auf einem Mac über Thunderbolt eGPU ausführen?',
@@ -1424,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich VRAM über mehrere Macs teilen?',
-            a: 'Nein. Apple Silicon unterstützt keine Speicher-Pooling über Maschinen. Für Modelle zwischen 24 GB und 48 GB können Dual RTX 3090 (48 GB gepooltes VRAM) billiger sein als Mac Studio M5 Max — aber lauter, heißer und mit 2–3× höherem Stromverbrauch.',
+            a: 'Nicht nativ; Clustering via Drittanbieter/MLX existiert, ist aber weniger ausgereift als NVLink/NCCL. Für Modelle zwischen 24 GB und 48 GB können Dual RTX 3090 (48 GB gepooltes VRAM) billiger sein als Mac Studio M5 Max — aber lauter, heißer und mit 2–3× höherem Stromverbrauch.',
           },
           {
             q: 'Was ist mit AMD GPUs (RX 7900 XTX) für lokale LLMs?',
@@ -1462,7 +1455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Mac vs NVIDIA pour l\'IA locale 2026 : M5 Max vs RTX 4090 benchmarks, TCO 3 ans, coûts énergétiques et comparaison des workflows. Point de basculement à ~24 GB de taille de modèle.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'Utilisateurs choisissant entre Mac et PC/GPU pour l\'IA locale, développeurs évaluant le matériel pour les charges de travail LLM.',
     readTime: '13 min de lecture',
@@ -1534,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Dans le tableau ci-dessous, RTX 4090 est plus rapide sur les modèles qui tiennent en 24 GB VRAM, tandis que M5 Max peut exécuter des modèles qui ne tiennent pas. Point de basculement : ~24 GB de taille de modèle.',
-          'Benchmarks : RTX 4090 fournit 120–140 tok/s sur Llama 3.1 8B Q4. M5 Max fournit 100–120 tok/s. Sur Llama 3.3 70B Q4 : M5 Max s\'exécute à 15–20 tok/s. RTX 4090 ne peut pas l\'exécuter (OOM).',
+          'Benchmarks : RTX 4090 fournit 120–140 tok/s sur Llama 3.1 8B Q4. M5 Max fournit 100–120 tok/s. Sur Llama 3.3 70B Q4 : M5 Max s\'exécute à 15–20 tok/s. Sur RTX 4090, il ne tient pas entièrement dans 24 GB de VRAM ; un offload partiel vers le CPU est possible, mais bien plus lent.',
           'Coût total estimé sur 3 ans (voir tableau TCO) : Mac Mini M5 Pro 64 GB = ca. €2 655. RTX 4090 desktop = ca. €4 257. Dans ce tableau, le Mac revient moins cher, principalement grâce au prix matériel plus bas et à l\'estimation d\'électricité.',
           'Consommation énergétique en fonctionnement 24/7 : Mac Mini M5 Pro = ca. €35/an. RTX 4090 desktop = ca. €349/an. Aux tarifs EU (€0,35/kWh) : ca. €82/an vs ca. €815/an.',
           'Fine-tuning : selon notre évaluation, l\'écosystème CUDA NVIDIA est plus mûr que Apple MLX pour l\'entraînement. Utilisez NVIDIA pour le fine-tuning, Mac pour l\'inférence sur les grands modèles.',
@@ -1577,7 +1570,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Llama 3.1 8B Q8', 'M5 Pro 64 GB': '40–50', 'M5 Max 128 GB': '80–95', 'RTX 4070 12 GB': '55–70', 'RTX 4090 24 GB': '90–110' },
           { 'Modèle': 'Qwen3 14B Q4', 'M5 Pro 64 GB': '35–45', 'M5 Max 128 GB': '70–85', 'RTX 4070 12 GB': '45–60', 'RTX 4090 24 GB': '90–110' },
           { 'Modèle': 'Qwen3 32B Q4', 'M5 Pro 64 GB': '18–22', 'M5 Max 128 GB': '35–42', 'RTX 4070 12 GB': 'OOM (12 GB)', 'RTX 4090 24 GB': 'Tient (serré)' },
-          { 'Modèle': 'Mixtral 8x22B Q4', 'M5 Pro 64 GB': '25–32', 'M5 Max 128 GB': '50–62', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': '65–80' },
           { 'Modèle': 'Llama 3.3 70B Q4', 'M5 Pro 64 GB': '8–12', 'M5 Max 128 GB': '15–20', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
           { 'Modèle': 'Llama 3.3 70B Q5', 'M5 Pro 64 GB': '6–10', 'M5 Max 128 GB': '12–16', 'RTX 4070 12 GB': 'OOM', 'RTX 4090 24 GB': 'OOM' },
         ],
@@ -1624,7 +1616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. Exécution de modèles 70B+ paramètres**',
           'Le scénario décisif. Llama 3.3 70B nécessite 42 GB à quantification Q4. RTX 4090 a 24 GB VRAM — ne tient pas. M5 Max 128 GB l\'exécute confortablement avec place pour fenêtre de contexte et autres applications.',
-          'La seule solution NVIDIA est dual RTX 3090 (ca. €2 200+) ou A6000 (ca. €5 500+) — tous deux coûtent plus que Mac Mini M5 Pro tout en tirant 2–5× la puissance.',
+          'Une solution NVIDIA est dual RTX 3090 (ca. €2 200+) ou A6000 (ca. €5 500+) — tous deux coûtent plus que Mac Mini M5 Pro tout en tirant 2–5× la puissance.',
           '**2. Serveur IA toujours actif et silencieux**',
           'Mac Mini à 18–35 W sous charge est sans ventilateur ou quasi-silencieux. Un desktop avec RTX 4090 à 250–450 W a 3+ ventilateurs moyennant 50–70 dB. Un rig GPU bruyant dans un home office ne fonctionne pas ; Mac Mini tourne silencieusement dans un placard.',
           'Différentiel coûts énergétiques : ca. €35/an (Mac Mini) vs ca. €349/an (RTX 4090) en fonctionnement 24/7. Sur 5 ans : ca. €1 570 économisés rien qu\'en électricité.',
@@ -1668,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'Outils debug', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight, complet' },
           { 'Aspect': 'Gestion puissance', 'Apple Silicon': 'Automatique, transparent', 'NVIDIA': 'Courbes ventilo manuelles, undervolting' },
           { 'Aspect': 'Compatibilité OS', 'Apple Silicon': 'macOS seulement', 'NVIDIA': 'Linux, Windows' },
-          { 'Aspect': 'Scaling multi-machine', 'Apple Silicon': 'Non supporté', 'NVIDIA': 'NCCL, training distribué' },
+          { 'Aspect': 'Scaling multi-machine', 'Apple Silicon': 'Pas nativement ; le clustering distribué tiers et MLX existe, mais il est moins mature que NVLink/NCCL.', 'NVIDIA': 'NCCL, training distribué' },
           { 'Aspect': 'Parité cloud', 'Apple Silicon': 'Aucun Mac cloud identique', 'NVIDIA': 'Disponible AWS, Azure, GCP, Lambda' },
         ],
       },
@@ -1721,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Peux-je faire multi-GPU sur Mac ?',
-            a: 'Non. Il n\'y a pas de moyen de pooler mémoire sur Macs. Systèmes GPU NVIDIA permettent dual RTX 3090 pour 48 GB VRAM poolé (ca. €2 200) — utile modèles 24–48 GB, mais plus bruyant et intensif énergie que Mac Studio M5 Max.',
+            a: 'Pas nativement ; le clustering distribué tiers et MLX existe, mais il est moins mature que NVLink/NCCL. Systèmes GPU NVIDIA permettent dual RTX 3090 pour 48 GB VRAM poolé (ca. €2 200) — utile modèles 24–48 GB, mais plus bruyant et intensif énergie que Mac Studio M5 Max.',
           },
           {
             q: 'NVIDIA est-il plus rapide pour training ?',
@@ -1729,7 +1721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'M5 Max est-il plus rapide que RTX 4090 globalement ?',
-            a: 'Non. RTX 4090 plus rapide sur modèles tenant en 24 GB VRAM. RTX 4090 a 1 008 GB/s bandpassante vs M5 Max 614 GB/s. Avantage bascule modèles au-delà 24 GB — RTX 4090 ne peut pas les exécuter. M5 Max gagne 70B, RTX 4090 gagne 8B–24B.',
+            a: 'Non. RTX 4090 plus rapide sur modèles tenant en 24 GB VRAM. RTX 4090 a 1 008 GB/s bandpassante vs M5 Max 614 GB/s. Avantage bascule modèles au-delà 24 GB — RTX 4090 ne les tient pas entièrement dans 24 GB VRAM (offload partiel vers le CPU possible, mais bien plus lent). M5 Max gagne 70B, RTX 4090 gagne 8B–24B.',
           },
           {
             q: 'Peux-je exécuter GPU NVIDIA sur Mac via Thunderbolt eGPU ?',
@@ -1745,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Peux-je partager VRAM sur Macs multiples ?',
-            a: 'Non. Apple Silicon ne supporte pas pooling mémoire sur machines. Modèles 24–48 GB, dual RTX 3090 (48 GB poolé) peut être moins cher que Mac Studio M5 Max — mais plus bruyant, chaud, tirant 2–3× puissance.',
+            a: 'Pas nativement ; le clustering distribué tiers et MLX existe, mais il est moins mature que NVLink/NCCL. Modèles 24–48 GB, dual RTX 3090 (48 GB poolé) peut être moins cher que Mac Studio M5 Max — mais plus bruyant, chaud, tirant 2–3× puissance.',
           },
           {
             q: 'Et les GPUs AMD (RX 7900 XTX) pour LLMs locaux ?',
@@ -1783,7 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'ローカルAI向けMac vs NVIDIA 2026：M5 Max vs RTX 4090ベンチマーク、3年TCO、消費電力、ワークフロー比較。約24GBモデルサイズで分岐。',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: 'ローカルAI向けにMacとPC/GPU間で選択するユーザー、LLMワークロード向けハードウェア評価開発者。',
     readTime: '13分で読める',
@@ -1866,7 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '下の表では、RTX 4090は24GB VRAMに適合するモデルで高速で、M5 Maxは適合しないモデルを実行できます。分岐点：約24GB モデルサイズ。',
-          'ベンチマーク：RTX 4090はLlama 3.1 8B Q4で120–140 tok/sを提供。M5 Maxは100–120 tok/sを提供。Llama 3.3 70B Q4：M5 Maxは15–20 tok/sで実行。RTX 4090はそれを実行できません（OOM）。',
+          'ベンチマーク：RTX 4090はLlama 3.1 8B Q4で120–140 tok/sを提供。M5 Maxは100–120 tok/sを提供。Llama 3.3 70B Q4：M5 Maxは15–20 tok/sで実行。RTX 4090では24GB VRAMに完全には収まらず、一部CPUオフロードは可能ですがはるかに低速です。',
           '推定3年合計コスト（TCO表参照）：Mac Mini M5 Pro 64GB = 約¥343,800。RTX 4090デスクトップ = 約¥579,000。この表ではMacの方が安くなり、主な理由はハードウェア価格の低さと電力コストの推定です。',
           '24/7運用での消費電力：Mac Mini M5 Pro = 約¥5,600/年。RTX 4090デスクトップ = 約¥56,000/年。EU料金（¥26/kWh換算）：約¥13,200/年 vs 約¥131,000/年。',
           'Fine-tuning：当社の評価では、NVIDIA CUDAエコシステムはトレーニングでApple MLXより成熟しています。Fine-tuningはNVIDIA、大モデル推論はMacを使用。',
@@ -1909,7 +1901,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Llama 3.1 8B Q8', 'M5 Pro 64GB': '40–50', 'M5 Max 128GB': '80–95', 'RTX 4070 12GB': '55–70', 'RTX 4090 24GB': '90–110' },
           { 'モデル': 'Qwen3 14B Q4', 'M5 Pro 64GB': '35–45', 'M5 Max 128GB': '70–85', 'RTX 4070 12GB': '45–60', 'RTX 4090 24GB': '90–110' },
           { 'モデル': 'Qwen3 32B Q4', 'M5 Pro 64GB': '18–22', 'M5 Max 128GB': '35–42', 'RTX 4070 12GB': 'OOM（12GB）', 'RTX 4090 24GB': '収まる（タイト）' },
-          { 'モデル': 'Mixtral 8x22B Q4', 'M5 Pro 64GB': '25–32', 'M5 Max 128GB': '50–62', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': '65–80' },
           { 'モデル': 'Llama 3.3 70B Q4', 'M5 Pro 64GB': '8–12', 'M5 Max 128GB': '15–20', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
           { 'モデル': 'Llama 3.3 70B Q5', 'M5 Pro 64GB': '6–10', 'M5 Max 128GB': '12–16', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
         ],
@@ -1956,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. 70B+ パラメータモデル実行**',
           '決定的なシナリオ。Llama 3.3 70BはQ4量子化で42GBが必要。RTX 4090は24GB VRAM — 適合しません。M5 Max 128GBはコンテキストウィンドウと他のアプリケーションスペース付きで快適に実行。',
-          '唯一の NVIDIA回避策はDual RTX 3090（約¥282,000+）またはA6000（約¥723,000+）— 両方ともMac Mini M5 Proより多くコストしつつ2–5×パワーを引く。',
+          'NVIDIAの回避策の一つはDual RTX 3090（約¥282,000+）またはA6000（約¥723,000+）— 両方ともMac Mini M5 Proより多くコストしつつ2–5×パワーを引く。',
           '**2. 常時オン無音AIサーバー**',
           'Mac Mini 18–35W 負荷下は無ファンまたはほぼ無音。RTX 4090付きデスクトップ 250–450Wは3+ファン平均50–70 dB。ホームオフィスのうるさいGPU rigは機能しません；Mac Miniはクローゼット内で無音実行。',
           '電力コスト差分：約¥5,600/年（Mac Mini）vs 約¥56,000/年（RTX 4090） 24/7運用時。5年以上：電力のみで約¥250,000節約。',
@@ -2000,7 +1991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '側面': 'デバッグツール', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight、包括的' },
           { '側面': '電力管理', 'Apple Silicon': '自動、透過的', 'NVIDIA': '手動ファンカーブ、アンダーボルティング' },
           { '側面': 'OS互換性', 'Apple Silicon': 'macOSのみ', 'NVIDIA': 'Linux、Windows' },
-          { '側面': 'マルチマシンスケーリング', 'Apple Silicon': 'サポートなし', 'NVIDIA': 'NCCL、分散トレーニング' },
+          { '側面': 'マルチマシンスケーリング', 'Apple Silicon': 'ネイティブ非対応。サードパーティやMLXの分散クラスタリングはあるが、NVLink/NCCLより成熟度は低い。', 'NVIDIA': 'NCCL、分散トレーニング' },
           { '側面': 'クラウド パリティ', 'Apple Silicon': 'クラウドMac同一なし', 'NVIDIA': 'AWS、Azure、GCP、Lambda利用可能' },
         ],
       },
@@ -2053,7 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Macで マルチGPUできる？',
-            a: 'いいえ。Macs間で メモリプール方法ありません。NVIDIAシステムはDual RTX 3090で48GB プール VRAM許可（約¥282,000）— 24–48GBモデル有用ですが、Mac Studio M5 Maxより大きくより電力集約。',
+            a: 'ネイティブ非対応。サードパーティやMLXの分散クラスタリングはあるが、NVLink/NCCLより成熟度は低い。NVIDIAシステムはDual RTX 3090で48GB プール VRAM許可（約¥282,000）— 24–48GBモデル有用ですが、Mac Studio M5 Maxより大きくより電力集約。',
           },
           {
             q: 'NVIDIA トレーニングで高速？',
@@ -2061,7 +2052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'M5 Max 全体RTX 4090より高速？',
-            a: 'いいえ。RTX 4090は24GB VRAM 適合モデルで高速。RTX 4090は1,008 GB/s帯幅 vs M5 Max 614 GB/s。利点は24GB以上モデルで反転 — RTX 4090実行できません。M5 Max 70B勝ち、RTX 4090 8B–24B勝ち。',
+            a: 'いいえ。RTX 4090は24GB VRAM 適合モデルで高速。RTX 4090は1,008 GB/s帯幅 vs M5 Max 614 GB/s。利点は24GB以上モデルで反転 — RTX 4090では24GB VRAMに完全には収まりません（一部CPUオフロードは可能ですがはるかに低速）。M5 Max 70B勝ち、RTX 4090 8B–24B勝ち。',
           },
           {
             q: 'Mac経由Thunderbolt eGPUでNVIDIA GPU実行できる？',
@@ -2077,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Macs複数でVRAM共有できる？',
-            a: 'いいえ。Apple Siliconはマシン間でメモリプール サポートしません。24–48GBモデル、Dual RTX 3090（48GBプール）はMac Studio M5 Max より安いことあります — しかし大きく、暑く、2–3×電力引く。',
+            a: 'ネイティブ非対応。サードパーティやMLXの分散クラスタリングはあるが、NVLink/NCCLより成熟度は低い。24–48GBモデル、Dual RTX 3090（48GBプール）はMac Studio M5 Max より安いことあります — しかし大きく、暑く、2–3×電力引く。',
           },
           {
             q: 'AMD GPU(RX 7900 XTX) ローカルLLM向けと？',
@@ -2115,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: '本地AI用Mac对比NVIDIA 2026：M5 Max对RTX 4090基准、3年TCO、功耗和工作流对比。约24GB模型大小转折点。',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: '在本地AI的Mac和PC/GPU之间选择的用户、评估LLM工作负载硬件的开发人员。',
     readTime: '阅读约13分钟',
@@ -2209,7 +2200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '在下表中，RTX 4090在模型适合24GB VRAM时更快，而M5 Max可以运行不适合的模型。转折点：约24GB模型大小。',
-          '基准：RTX 4090在Llama 3.1 8B Q4上提供120–140 tok/s。M5 Max提供100–120 tok/s。Llama 3.3 70B Q4：M5 Max运行15–20 tok/s。RTX 4090根本无法运行（OOM）。',
+          '基准：RTX 4090在Llama 3.1 8B Q4上提供120–140 tok/s。M5 Max提供100–120 tok/s。Llama 3.3 70B Q4：M5 Max运行15–20 tok/s。RTX 4090上无法完全装入24GB显存；可部分卸载到CPU，但速度慢得多。',
           '预估3年总成本（见TCO表）：Mac Mini M5 Pro 64GB = 约$1,804。RTX 4090桌面 = 约$3,482。在该表中Mac更便宜，主要因为硬件价格较低以及电力成本估算。',
           '24/7运行下功耗：Mac Mini M5 Pro = 约$35/年。RTX 4090桌面 = 约$394/年。EU费率（$0.35/kWh）：约$82/年对$921/年。',
           'Fine-tuning：据我们评估，NVIDIA CUDA生态在训练方面比Apple MLX更成熟。fine-tuning用NVIDIA，大模型推理用Mac。',
@@ -2252,7 +2243,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Llama 3.1 8B Q8', 'M5 Pro 64GB': '40–50', 'M5 Max 128GB': '80–95', 'RTX 4070 12GB': '55–70', 'RTX 4090 24GB': '90–110' },
           { '模型': 'Qwen3 14B Q4', 'M5 Pro 64GB': '35–45', 'M5 Max 128GB': '70–85', 'RTX 4070 12GB': '45–60', 'RTX 4090 24GB': '90–110' },
           { '模型': 'Qwen3 32B Q4', 'M5 Pro 64GB': '18–22', 'M5 Max 128GB': '35–42', 'RTX 4070 12GB': 'OOM（12GB）', 'RTX 4090 24GB': '适合（紧）' },
-          { '模型': 'Mixtral 8x22B Q4', 'M5 Pro 64GB': '25–32', 'M5 Max 128GB': '50–62', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': '65–80' },
           { '模型': 'Llama 3.3 70B Q4', 'M5 Pro 64GB': '8–12', 'M5 Max 128GB': '15–20', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
           { '模型': 'Llama 3.3 70B Q5', 'M5 Pro 64GB': '6–10', 'M5 Max 128GB': '12–16', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
         ],
@@ -2299,7 +2289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. 运行70B+参数模型**',
           '决定性场景。Llama 3.3 70B Q4量子化需42GB。RTX 4090有24GB VRAM — 不适合。M5 Max 128GB舒适运行，为上下文窗口和其他应用留有空间。',
-          '唯一的NVIDIA变通是双RTX 3090（$1,800+）或A6000（$4,500+）— 两者成本超过Mac Mini M5 Pro同时耗电2–5倍。',
+          'NVIDIA的变通方案之一是双RTX 3090（$1,800+）或A6000（$4,500+）— 两者成本超过Mac Mini M5 Pro同时耗电2–5倍。',
           '**2. 常时开启安静AI服务器**',
           'Mac Mini负载18–35W是无风扇或接近无声。RTX 4090桌面250–450W有3+风扇平均50–70 dB。嘈杂GPU rig在家办公不可行；Mac Mini在壁橱内无音运行。',
           '电力成本差分：约$35/年（Mac Mini）对$394/年（RTX 4090）24/7运行。超5年：仅电力就节省$1,795。',
@@ -2343,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方面': '调试工具', 'Apple Silicon': 'Xcode仪器', 'NVIDIA': 'NVIDIA Nsight、全面' },
           { '方面': '电力管理', 'Apple Silicon': '自动、透明', 'NVIDIA': '手动风扇曲线、降压' },
           { '方面': '操作系统兼容', 'Apple Silicon': '仅macOS', 'NVIDIA': 'Linux、Windows' },
-          { '方面': '多机扩展', 'Apple Silicon': '无支持', 'NVIDIA': 'NCCL、分布式训练' },
+          { '方面': '多机扩展', 'Apple Silicon': '无原生支持；存在第三方和MLX分布式集群方案，但成熟度低于NVLink/NCCL。', 'NVIDIA': 'NCCL、分布式训练' },
           { '方面': '云平台', 'Apple Silicon': '无相同云Mac', 'NVIDIA': 'AWS、Azure、GCP、Lambda可用' },
         ],
       },
@@ -2396,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '能在Mac上做多GPU吗？',
-            a: '否。无方式在Macs间池内存。NVIDIA GPU系统允许双RTX 3090为48GB池VRAM（$1,800）— 有用24–48GB模型但比Mac Studio M5 Max更嘈杂和密集功耗。',
+            a: '无原生支持；存在第三方和MLX分布式集群方案，但成熟度低于NVLink/NCCL。NVIDIA GPU系统允许双RTX 3090为48GB池VRAM（$1,800）— 有用24–48GB模型但比Mac Studio M5 Max更嘈杂和密集功耗。',
           },
           {
             q: 'NVIDIA对训练更快吗？',
@@ -2404,7 +2394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'M5 Max整体比RTX 4090更快？',
-            a: '否。RTX 4090在模型适合24GB VRAM时更快。RTX 4090有1,008 GB/s带宽对M5 Max 614 GB/s。优势对超24GB模型反转 — RTX 4090无法运行。M5 Max赢70B、RTX 4090赢8B–24B。',
+            a: '否。RTX 4090在模型适合24GB VRAM时更快。RTX 4090有1,008 GB/s带宽对M5 Max 614 GB/s。优势对超24GB模型反转 — RTX 4090无法将其完全装入24GB显存（可部分卸载到CPU，但慢得多）。M5 Max赢70B、RTX 4090赢8B–24B。',
           },
           {
             q: '能在Mac经Thunderbolt eGPU运行NVIDIA GPU吗？',
@@ -2420,7 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '能在多Macs间共享VRAM吗？',
-            a: '否。Apple Silicon不支持跨机器的内存池。24–48GB模型，双RTX 3090（48GB池）能更便宜于Mac Studio M5 Max — 但更大、更热、耗电2–3倍。',
+            a: '无原生支持；存在第三方和MLX分布式集群方案，但成熟度低于NVLink/NCCL。24–48GB模型，双RTX 3090（48GB池）能更便宜于Mac Studio M5 Max — 但更大、更热、耗电2–3倍。',
           },
           {
             q: '本地大模型AMD GPU（RX 7900 XTX）呢？',
@@ -2458,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Mac vs NVIDIA 로컬 AI 2026: M5 Max vs RTX 4090 벤치마크, 3년 TCO, 전력 비용, 워크플로우 비교. 분기점은 모델 크기 약 24GB입니다.',
     publishDate: '2026-05-15',
     dateModified: '2026-11-09',
-    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'Mixtral 8x22B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'Llama 3.3 70B', 'Qwen3 32B', 'DeepSeek Coder V2 16B', 'Whisper', 'LLaVA'],
     current_hardware_mentioned: ['M6', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'RTX 4070', 'RTX 4090', 'RTX 3060', 'RTX 3090', 'A6000'],
     audience: '로컬 AI용 Mac과 PC/GPU 중에서 선택하는 사용자, LLM 워크로드용 하드웨어를 평가하는 개발자.',
     readTime: '13분 읽기',
@@ -2520,7 +2510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '아래 표에서 RTX 4090은 24GB VRAM에 맞는 모델에서 더 빠르고, M5 Max는 맞지 않는 모델도 실행할 수 있습니다. 분기점: 모델 크기 약 24GB.',
-          '벤치마크: RTX 4090은 Llama 3.1 8B Q4에서 120–140 tok/s를 제공합니다. M5 Max는 100–120 tok/s를 제공합니다. Llama 3.3 70B Q4에서: M5 Max는 15–20 tok/s로 실행됩니다. RTX 4090은 이를 전혀 실행할 수 없습니다(OOM).',
+          '벤치마크: RTX 4090은 Llama 3.1 8B Q4에서 120–140 tok/s를 제공합니다. M5 Max는 100–120 tok/s를 제공합니다. Llama 3.3 70B Q4에서: M5 Max는 15–20 tok/s로 실행됩니다. RTX 4090에서는 24GB VRAM에 완전히 들어가지 않으며, 일부 CPU 오프로드는 가능하지만 훨씬 느립니다.',
           '추정 3년 총 비용(TCO 표 참조): Mac Mini M5 Pro 64GB = $1,804. RTX 4090 데스크탑 = $3,482. 이 표에서는 Mac이 더 저렴하며, 주된 이유는 낮은 하드웨어 가격과 전기 비용 추정입니다.',
           '24/7 가동 시 전력 소비: Mac Mini M5 Pro = $35/년. RTX 4090 데스크탑 = $394/년. EU 요금($0.35/kWh) 기준: $82/년 대 $921/년.',
           '파인튜닝: 당사 평가로는 NVIDIA CUDA 에코시스템이 훈련 분야에서 Apple MLX보다 더 성숙합니다. 파인튜닝에는 NVIDIA를, 대형 모델 추론에는 Mac을 사용하십시오.',
@@ -2564,7 +2554,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Llama 3.1 8B Q8', 'M5 Pro 64GB': '40–50', 'M5 Max 128GB': '80–95', 'RTX 4070 12GB': '55–70', 'RTX 4090 24GB': '90–110' },
           { '모델': 'Qwen3 14B Q4', 'M5 Pro 64GB': '35–45', 'M5 Max 128GB': '70–85', 'RTX 4070 12GB': '45–60', 'RTX 4090 24GB': '90–110' },
           { '모델': 'Qwen3 32B Q4', 'M5 Pro 64GB': '18–22', 'M5 Max 128GB': '35–42', 'RTX 4070 12GB': 'OOM (12GB)', 'RTX 4090 24GB': '적재 가능 (여유 없음)' },
-          { '모델': 'Mixtral 8x22B Q4', 'M5 Pro 64GB': '25–32', 'M5 Max 128GB': '50–62', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': '65–80' },
           { '모델': 'Llama 3.3 70B Q4', 'M5 Pro 64GB': '8–12', 'M5 Max 128GB': '15–20', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
           { '모델': 'Llama 3.3 70B Q5', 'M5 Pro 64GB': '6–10', 'M5 Max 128GB': '12–16', 'RTX 4070 12GB': 'OOM', 'RTX 4090 24GB': 'OOM' },
         ],
@@ -2611,7 +2600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1. 70B+ 파라미터 모델 실행**',
           '결정적인 시나리오입니다. Llama 3.3 70B는 Q4 양자화 기준으로 42GB가 필요합니다. RTX 4090은 24GB VRAM을 가지고 있어 적재할 수 없습니다. M5 Max 128GB는 컨텍스트 창과 다른 애플리케이션을 위한 여유 공간을 남기면서 여유 있게 실행합니다.',
-          '유일한 NVIDIA 우회 방법은 Dual RTX 3090($1,800+) 또는 A6000($4,500+)이지만, 두 옵션 모두 Mac Mini M5 Pro보다 더 많은 비용이 들면서 2–5배의 전력을 소비합니다.',
+          'NVIDIA 우회 방법 중 하나는 Dual RTX 3090($1,800+) 또는 A6000($4,500+)이지만, 두 옵션 모두 Mac Mini M5 Pro보다 더 많은 비용이 들면서 2–5배의 전력을 소비합니다.',
           '**2. 상시 가동 무소음 AI 서버**',
           '부하 시 18–35W로 동작하는 Mac Mini는 팬리스이거나 거의 무소음입니다. RTX 4090이 장착된 데스크탑은 250–450W에서 3개 이상의 팬이 평균 50–70 dB의 소음을 냅니다. 홈 오피스에서 시끄러운 GPU 리그는 실용적이지 않으며, Mac Mini는 수납장 안에서도 조용하게 동작합니다.',
           '전기 비용 차이: $35/년(Mac Mini) 대 $394/년(RTX 4090) 24/7 가동 기준. 5년간: 전기료만으로 $1,795 절약.',
@@ -2655,7 +2644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '디버깅 도구', 'Apple Silicon': 'Xcode Instruments', 'NVIDIA': 'NVIDIA Nsight, 포괄적' },
           { '항목': '전력 관리', 'Apple Silicon': '자동, 투명', 'NVIDIA': '수동 팬 커브, 언더볼팅' },
           { '항목': 'OS 호환성', 'Apple Silicon': 'macOS 전용', 'NVIDIA': 'Linux, Windows' },
-          { '항목': '멀티머신 확장', 'Apple Silicon': '지원 불가', 'NVIDIA': 'NCCL, 분산 훈련' },
+          { '항목': '멀티머신 확장', 'Apple Silicon': '기본 지원은 아니며, 서드파티 및 MLX 분산 클러스터링이 있으나 NVLink/NCCL 구성보다 덜 성숙합니다.', 'NVIDIA': 'NCCL, 분산 훈련' },
           { '항목': '클라우드 동등성', 'Apple Silicon': '동일한 클라우드 Mac 없음', 'NVIDIA': 'AWS, Azure, GCP, Lambda에서 사용 가능' },
         ],
       },
@@ -2708,7 +2697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac에서 멀티 GPU를 사용할 수 있습니까?',
-            a: '아닙니다. Mac 간에 메모리를 풀링하는 방법은 없습니다. NVIDIA GPU 시스템은 Dual RTX 3090으로 48GB 풀링 VRAM($1,800)을 허용합니다 — 24GB에서 48GB 사이의 모델에 유용하지만, Mac Studio M5 Max보다 소음이 크고 전력 소비가 많습니다.',
+            a: '기본 지원은 아니며, 서드파티 및 MLX 분산 클러스터링이 있으나 NVLink/NCCL 구성보다 덜 성숙합니다. NVIDIA GPU 시스템은 Dual RTX 3090으로 48GB 풀링 VRAM($1,800)을 허용합니다 — 24GB에서 48GB 사이의 모델에 유용하지만, Mac Studio M5 Max보다 소음이 크고 전력 소비가 많습니다.',
           },
           {
             q: 'NVIDIA가 훈련에서 더 빠릅니까?',
@@ -2716,7 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'M5 Max가 전반적으로 RTX 4090보다 빠릅니까?',
-            a: '아닙니다. RTX 4090은 24GB VRAM에 맞는 모델에서 더 빠릅니다. RTX 4090의 대역폭은 1,008 GB/s이며 M5 Max는 614 GB/s입니다. 24GB를 초과하는 모델에서는 우위가 역전됩니다 — RTX 4090은 이를 전혀 실행할 수 없습니다. M5 Max는 70B 모델에서 승리하고, RTX 4090은 8B–24B 모델에서 승리합니다.',
+            a: '아닙니다. RTX 4090은 24GB VRAM에 맞는 모델에서 더 빠릅니다. RTX 4090의 대역폭은 1,008 GB/s이며 M5 Max는 614 GB/s입니다. 24GB를 초과하는 모델에서는 우위가 역전됩니다 — RTX 4090은 24GB VRAM에 이를 완전히 담을 수 없습니다(일부 CPU 오프로드는 가능하지만 훨씬 느립니다). M5 Max는 70B 모델에서 승리하고, RTX 4090은 8B–24B 모델에서 승리합니다.',
           },
           {
             q: 'Thunderbolt eGPU를 통해 Mac에서 NVIDIA GPU를 사용할 수 있습니까?',
@@ -2732,7 +2721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '여러 Mac 간에 VRAM을 공유할 수 있습니까?',
-            a: '아닙니다. Apple Silicon은 머신 간 메모리 풀링을 지원하지 않습니다. 24GB에서 48GB 사이의 모델에서는 Dual RTX 3090(48GB 풀링)이 Mac Studio M5 Max보다 저렴할 수 있습니다 — 그러나 소음이 크고, 열이 많이 발생하며, 2–3배의 전력을 소비합니다.',
+            a: '기본 지원은 아니며, 서드파티 및 MLX 분산 클러스터링이 있으나 NVLink/NCCL 구성보다 덜 성숙합니다. 24GB에서 48GB 사이의 모델에서는 Dual RTX 3090(48GB 풀링)이 Mac Studio M5 Max보다 저렴할 수 있습니다 — 그러나 소음이 크고, 열이 많이 발생하며, 2–3배의 전력을 소비합니다.',
           },
           {
             q: '로컬 LLM용 AMD GPU(RX 7900 XTX)는 어떻습니까?',

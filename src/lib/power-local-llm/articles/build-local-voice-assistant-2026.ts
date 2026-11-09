@@ -16,14 +16,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)',
     seoTitle: 'Local Voice Assistant 2026: Whisper + LLM + Piper TTS',
     intro:
-      'A fully offline voice assistant in 2026 combines three components: whisper.cpp for speech-to-text, a local LLM (Llama 3.1 8B, Phi-4, or Ministral 3 8B via Ollama) for reasoning, and Piper TTS for speech output. The end-to-end latency on a desktop GPU setup is 1–2 seconds. On a Mac Mini M5, it is under 1.5 seconds. On a Raspberry Pi 5, it is 5–8 seconds — usable for hands-free queries, not conversational. This guide walks through each layer step by step, with hardware tables, code for the Python orchestrator, wake word setup, and latency optimization techniques.',
+      'A fully offline voice assistant in 2026 combines three components: whisper.cpp for speech-to-text, a local LLM (Llama 3.1 8B, Phi-4, or Ministral 3 8B via Ollama) for reasoning, and Piper TTS for speech output. The end-to-end latency on a desktop GPU setup is typically 1–2 seconds. On a Mac Mini M5, it is typically under 1.5 seconds. On a Raspberry Pi 5, it is around 5–8 seconds — usable for hands-free queries, not conversational. This guide walks through each layer step by step, with hardware tables, code for the Python orchestrator, wake word setup, and latency optimization techniques.',
     metaDescription:
       'whisper.cpp for STT, Ollama + Llama 3.1 8B for reasoning, Piper TTS for speech. 1–2 sec GPU latency. Python orchestrator + wake word setup. 2026.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-en.webp',
     twitterDescription:
       'DIY offline voice assistant in 2026: Whisper STT + local LLM + Piper TTS. No cloud, no subscription. Full build guide with hardware specs, Python code, and wake word setup.',
     audience:
-      'Developers and tinkerers who want a private, fully offline voice assistant — a Siri or Alexa replacement that runs entirely on hardware they own with no cloud dependencies.',
+      'Developers and tinkerers who want a private, fully offline voice assistant — a Siri or Alexa replacement that runs locally on hardware they own after setup.',
     readTime: '14 min read',
     educationalLevel: 'Advanced',
     primaryTerm: 'offline voice assistant',
@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M5 (24 GB)',
     ],
     leadAnswerBlock:
-      '**A fully offline voice assistant in 2026 requires three components: whisper.cpp for speech-to-text, a local LLM via Ollama for reasoning, and Piper TTS for speech output.** The three connect via a Python orchestrator that listens for audio, transcribes it, sends the text to the LLM, and converts the response back to speech. On a desktop with an RTX 3060 12 GB GPU, end-to-end latency is 1–2 seconds with Llama 3.1 8B and Whisper small. On a Mac Mini M5 (24 GB), latency is 1–1.5 seconds with the same models running on Apple Silicon. On a Raspberry Pi 5 (8 GB), latency is 5–8 seconds with Phi-4-mini 3.8B — usable for hands-free queries with patience. Add a wake word detector (OpenWakeWord or Porcupine) to make the assistant always-listening without running Whisper continuously.',
+      '**A fully offline voice assistant in 2026 requires three components: whisper.cpp for speech-to-text, a local LLM via Ollama for reasoning, and Piper TTS for speech output.** The three connect via a Python orchestrator that listens for audio, transcribes it, sends the text to the LLM, and converts the response back to speech. On a desktop with an RTX 3060 12 GB GPU, end-to-end latency is typically 1–2 seconds with Llama 3.1 8B and Whisper small. On a Mac Mini M5 (24 GB), latency is typically 1–1.5 seconds with the same models running on Apple Silicon. On a Raspberry Pi 5 (8 GB), latency is typically around 5–8 seconds with Phi-4-mini 3.8B — usable for hands-free queries with patience. Add a wake word detector (OpenWakeWord or Porcupine) to make the assistant always-listening without running Whisper continuously.',
     quickAnswerTop: {
       en: {
         question: 'How do you build a fully offline voice assistant in 2026?',
@@ -96,9 +96,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**The offline voice assistant stack is: whisper.cpp → Ollama LLM → Piper TTS, orchestrated by a Python script.** whisper.cpp, Ollama and Piper are open-source software and run offline once installed; the LLM weights follow their own licence (for example the Llama 3.1 community licence, or MIT for Phi-4).',
-          '**End-to-end latency on a desktop GPU (RTX 3060 12 GB): 1–2 seconds.** Latency in this range generally feels natural in voice interaction; PromptQuorum has not benchmarked it against Alexa or Google Assistant. Use Whisper small and Llama 3.1 8B for this result.',
-          '**Raspberry Pi 5 (8 GB) is a viable but slow platform.** With Phi-4-mini 3.8B and Whisper base, latency is 5–8 seconds. Usable for hands-free queries where the user accepts a longer pause, not for conversational interaction.',
-          '**Mac Mini M5 (24 GB unified memory) is the sweet spot for quality and silence.** Silent, fanless at idle, and powerful enough to run Llama 3.1 8B at ~50 tokens/sec with Whisper large-v3 at 10× real-time via Metal. Latency of 1–1.5 seconds.',
+          '**End-to-end latency on a desktop GPU (RTX 3060 12 GB): typically 1–2 seconds.** Latency in this range generally feels natural in voice interaction; PromptQuorum has not benchmarked it against Alexa or Google Assistant. Use Whisper small and Llama 3.1 8B for this result.',
+          '**Raspberry Pi 5 (8 GB) is a viable but slow platform.** With Phi-4-mini 3.8B and Whisper base, latency is typically around 5–8 seconds. Usable for hands-free queries where the user accepts a longer pause, not for conversational interaction.',
+          '**Mac Mini M5 (24 GB unified memory) is the sweet spot for quality and silence.** Silent, fanless at idle, and powerful enough to run Llama 3.1 8B at ~50 tokens/sec with Whisper large-v3 at 10× real-time via Metal. Typical latency is around 1–1.5 seconds.',
           '**Add a wake word to avoid running Whisper continuously.** OpenWakeWord (code Apache 2.0, pre-trained models CC BY-NC-SA 4.0 non-commercial, custom wake words) is a widely used open-source option; check the licence before commercial use. Porcupine (Picovoice) has a free tier for personal use with pre-built wake words like "Hey Jarvis".',
           '**Whisper hallucination on silence is the most common pipeline bug.** Whisper will transcribe silence as filler words or quotes from its training data. Set a minimum audio energy threshold before passing audio to Whisper — and configure `--no-speech-threshold 0.6` in whisper.cpp.',
           '**Inference runs locally; this stack sends no audio or text to a cloud service by default.** Ollama may still check for updates, Porcupine (if used) validates its key online, and models are downloaded on setup unless you block outbound traffic. Verify with Wireshark after assembly. Local processing removes the third-party transfer and processor question for the inference layer; whether your operation is GDPR-compliant still depends on lawful basis, technical and organisational measures and purpose. Not legal advice.',
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Customization:** Choose your wake word, personality, system prompt, and capabilities. Add custom commands, connect to local home automation systems, integrate with local APIs.',
           '**Offline operation:** Works without internet. Power outage (with a UPS) + internet outage: your local assistant still works. Useful for cabins, remote locations, and emergency preparedness.',
           '**What you give up:** Web search, smart-home integration with proprietary clouds, calendar sync with cloud services, the years of RLHF tuning that makes Alexa/Siri smooth at edge cases.',
-          '**Smart home integration:** Wire your local voice assistant directly into Home Assistant to control lights, thermostats, and sensors by voice — completely offline. See [local voice assistant for smart home →](/smart-home/local-voice-assistant-smart-home) for the full Piper + Whisper + Home Assistant setup guide.',
+          '**Smart home integration:** Wire your local voice assistant directly into Home Assistant to control lights, thermostats, and sensors by voice — inference runs offline. See [local voice assistant for smart home →](/smart-home/local-voice-assistant-smart-home) for the full Piper + Whisper + Home Assistant setup guide.',
         ],
       },
       architecture: {
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Hardware Requirements',
         content:
-          'Four hardware tiers, ordered by latency and cost. All support the full Whisper + LLM + Piper stack.',
+          'Four hardware tiers, ordered by latency and cost. All support the full Whisper + LLM + Piper stack. Figures are typical or indicative values for each hardware class, not measured by PromptQuorum.',
         columns: ['Setup', 'STT Model', 'LLM Model', 'TTS', 'Total Cost', 'End-to-End Latency'],
         rows: [
           {
@@ -307,8 +307,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -452,7 +452,7 @@ if __name__ == "__main__":
     title: 'Vollständig offline Sprachassistenten bauen 2026: Whisper + LLM + Piper (Schritt für Schritt)',
     seoTitle: 'Lokaler Sprachassistent 2026: Whisper + LLM + Piper TTS',
     intro:
-      'Ein vollständig offline arbeitender Sprachassistent kombiniert 2026 drei Komponenten: whisper.cpp für die Spracherkennung, ein lokales LLM (Llama 3.1 8B, Phi-4 oder Ministral 3 8B via Ollama) für die Verarbeitung und Piper TTS für die Sprachausgabe. Die End-to-End-Latenz auf einem Desktop-GPU-Setup beträgt 1–2 Sekunden. Auf dem Mac Mini M5 liegt sie unter 1,5 Sekunden. Auf dem Raspberry Pi 5 beträgt sie 5–8 Sekunden – nutzbar für Anfragen ohne Bildschirm, nicht für natürliche Konversation. Dieser Leitfaden führt durch jeden Schritt mit Hardware-Tabellen, Python-Orchestrator-Code, Wake-Word-Setup und Latenzoptimierungsmaßnahmen.',
+      'Ein vollständig offline arbeitender Sprachassistent kombiniert 2026 drei Komponenten: whisper.cpp für die Spracherkennung, ein lokales LLM (Llama 3.1 8B, Phi-4 oder Ministral 3 8B via Ollama) für die Verarbeitung und Piper TTS für die Sprachausgabe. Die End-to-End-Latenz auf einem Desktop-GPU-Setup beträgt typischerweise 1–2 Sekunden. Auf dem Mac Mini M5 liegt sie typischerweise unter 1,5 Sekunden. Auf dem Raspberry Pi 5 beträgt sie etwa 5–8 Sekunden – nutzbar für Anfragen ohne Bildschirm, nicht für natürliche Konversation. Dieser Leitfaden führt durch jeden Schritt mit Hardware-Tabellen, Python-Orchestrator-Code, Wake-Word-Setup und Latenzoptimierungsmaßnahmen.',
     metaDescription:
       'Offline-Sprachassistent bauen 2026: whisper.cpp (STT), Ollama + Llama 3.1 8B und Piper TTS. Anleitung mit Hardware, Python-Code und Wake-Word-Setup.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-de.webp',
@@ -460,7 +460,7 @@ if __name__ == "__main__":
       'DIY offline Sprachassistent 2026: Whisper STT + lokales LLM + Piper TTS. Keine Cloud, kein Abonnement. Vollständige Bauanleitung mit Hardware-Spezifikationen, Python-Code und Wake-Word-Setup.',
     readTime: '14 Min. Lesezeit',
     leadAnswerBlock:
-      '**Ein vollständig offline arbeitender Sprachassistent benötigt 2026 drei Komponenten: whisper.cpp für die Spracherkennung, ein lokales LLM via Ollama für die Verarbeitung und Piper TTS für die Sprachausgabe.** Die drei Komponenten werden durch einen Python-Orchestrator verbunden, der Audioeingaben abhört, transkribiert, an das LLM weitergibt und die Antwort in Sprache umwandelt. Auf einem Desktop mit RTX 3060 12 GB GPU beträgt die End-to-End-Latenz 1–2 Sekunden mit Llama 3.1 8B und Whisper small. Auf einem Mac Mini M5 (24 GB) liegt sie bei 1–1,5 Sekunden. Auf einem Raspberry Pi 5 (8 GB) beträgt sie 5–8 Sekunden mit Phi-3 mini 3,8B – nutzbar für Anfragen, nicht für Konversation. Ein Wake-Word-Detektor (OpenWakeWord oder Porcupine) macht den Assistenten dauerhaft empfangsbereit, ohne Whisper ununterbrochen auszuführen.',
+      '**Ein vollständig offline arbeitender Sprachassistent benötigt 2026 drei Komponenten: whisper.cpp für die Spracherkennung, ein lokales LLM via Ollama für die Verarbeitung und Piper TTS für die Sprachausgabe.** Die drei Komponenten werden durch einen Python-Orchestrator verbunden, der Audioeingaben abhört, transkribiert, an das LLM weitergibt und die Antwort in Sprache umwandelt. Auf einem Desktop mit RTX 3060 12 GB GPU beträgt die End-to-End-Latenz typischerweise 1–2 Sekunden mit Llama 3.1 8B und Whisper small. Auf einem Mac Mini M5 (24 GB) liegt sie typischerweise bei 1–1,5 Sekunden. Auf einem Raspberry Pi 5 (8 GB) beträgt sie etwa 5–8 Sekunden mit Phi-4-mini 3,8B – nutzbar für Anfragen, nicht für Konversation. Ein Wake-Word-Detektor (OpenWakeWord oder Porcupine) macht den Assistenten dauerhaft empfangsbereit, ohne Whisper ununterbrochen auszuführen.',
     quickAnswerTop: {
       de: {
         question: 'Wie baut man 2026 einen vollständig offline arbeitenden Sprachassistenten?',
@@ -502,9 +502,9 @@ if __name__ == "__main__":
         title: 'Zusammenfassung',
         items: [
           '**Der Stack für den offline Sprachassistenten lautet: whisper.cpp → Ollama LLM → Piper TTS, orchestriert durch ein Python-Skript.** whisper.cpp, Ollama und Piper sind Open-Source-Software und arbeiten nach der Installation offline; die LLM-Gewichte unterliegen ihrer eigenen Lizenz (z. B. Llama-3.1-Community-Lizenz, MIT bei Phi-4).',
-          '**End-to-End-Latenz auf Desktop-GPU (RTX 3060 12 GB): 1–2 Sekunden.** Eine Latenz in diesem Bereich wirkt bei der Sprachinteraktion in der Regel natürlich; einen Vergleich mit Alexa oder Google Assistant hat PromptQuorum nicht gemessen. Whisper small und Llama 3.1 8B liefern dieses Ergebnis.',
-          '**Raspberry Pi 5 (8 GB) ist eine nutzbare, aber langsame Plattform.** Mit Phi-3 mini 3,8B und Whisper base beträgt die Latenz 5–8 Sekunden. Geeignet für Anfragen ohne Bildschirm, nicht für konversationelle Interaktion.',
-          '**Mac Mini M5 (24 GB Unified Memory) ist das beste Preis-Leistungs-Verhältnis für Qualität und Stille.** Lautlos im Leerlauf, leistungsstark genug für Llama 3.1 8B mit ~50 Token/Sek. und Whisper large-v3 mit 10-fachem Echtzeittempo via Metal. Latenz 1–1,5 Sekunden.',
+          '**End-to-End-Latenz auf Desktop-GPU (RTX 3060 12 GB): typischerweise 1–2 Sekunden.** Eine Latenz in diesem Bereich wirkt bei der Sprachinteraktion in der Regel natürlich; einen Vergleich mit Alexa oder Google Assistant hat PromptQuorum nicht gemessen. Whisper small und Llama 3.1 8B liefern dieses Ergebnis.',
+          '**Raspberry Pi 5 (8 GB) ist eine nutzbare, aber langsame Plattform.** Mit Phi-4-mini 3,8B und Whisper base beträgt die Latenz typischerweise etwa 5–8 Sekunden. Geeignet für Anfragen ohne Bildschirm, nicht für konversationelle Interaktion.',
+          '**Mac Mini M5 (24 GB Unified Memory) ist ein guter Kompromiss aus Qualität und Lautlosigkeit.** Lautlos im Leerlauf, leistungsstark genug für Llama 3.1 8B mit ~50 Token/Sek. und Whisper large-v3 mit 10-fachem Echtzeittempo via Metal. Latenz 1–1,5 Sekunden.',
           '**Wake-Word hinzufügen, um Whisper nicht dauerhaft auszuführen.** OpenWakeWord (Code Apache 2.0, vorab trainierte Modelle CC BY-NC-SA 4.0 nicht-kommerziell, benutzerdefinierte Wake-Words) ist eine verbreitete Open-Source-Option; vor kommerzieller Nutzung die Lizenz prüfen. Porcupine (Picovoice) bietet eine kostenlose Stufe für den privaten Gebrauch mit vorgefertigten Wake-Words wie „Hey Jarvis".',
           '**Whisper-Halluzination bei Stille ist der häufigste Pipeline-Fehler.** Whisper transkribiert Stille als Füllwörter oder Zitate aus Trainingsdaten. Einen Mindestenergieschwellenwert für Audio festlegen, bevor es an Whisper weitergegeben wird – und `--no-speech-threshold 0.6` in whisper.cpp konfigurieren.',
           '**Die Inferenz läuft lokal; dieser Stack sendet standardmäßig weder Audio noch Text an einen Cloud-Dienst.** Ollama kann dennoch nach Updates suchen, Porcupine (falls genutzt) prüft seinen Schlüssel online, und Modelle werden bei der Einrichtung heruntergeladen, sofern Sie ausgehenden Datenverkehr nicht blockieren. Nach dem Aufbau mit Wireshark überprüfen. Durch die lokale Verarbeitung entfallen auf der Inferenzebene die Weitergabe an Dritte und die Frage nach einem Auftragsverarbeiter; ob Ihr Betrieb DSGVO-konform ist, hängt weiterhin von Rechtsgrundlage, technischen und organisatorischen Maßnahmen und Zweck ab. Keine Rechtsberatung.',
@@ -534,7 +534,7 @@ if __name__ == "__main__":
           '**Anpassbarkeit:** Wake-Word, Persönlichkeit, System-Prompt und Funktionen selbst wählen. Eigene Befehle hinzufügen, lokale Hausautomationssysteme verbinden, lokale APIs integrieren.',
           '**Offline-Betrieb:** Funktioniert ohne Internet. Stromausfall (mit USV) + Internetausfall: Der lokale Assistent funktioniert weiterhin. Nützlich für Hütten, abgelegene Standorte und Notfallvorbereitung.',
           '**Was Sie aufgeben:** Websuche, Smart-Home-Integration mit proprietären Clouds, Kalendersynchronisierung mit Cloud-Diensten und die jahrelange RLHF-Optimierung, die Alexa/Siri bei Randfällen geschmeidig macht.',
-          '**Smart-Home-Integration:** Verbinden Sie Ihren lokalen Sprachassistenten direkt mit Home Assistant, um Lichter, Thermostate und Sensoren per Sprache zu steuern — komplett offline. Siehe [lokaler Sprachassistent für Smart Home →](/de/smart-home/local-voice-assistant-smart-home) für die vollständige Piper + Whisper + Home-Assistant-Installationsanleitung.',
+          '**Smart-Home-Integration:** Verbinden Sie Ihren lokalen Sprachassistenten direkt mit Home Assistant, um Lichter, Thermostate und Sensoren per Sprache zu steuern — die Inferenz läuft offline. Siehe [lokaler Sprachassistent für Smart Home →](/de/smart-home/local-voice-assistant-smart-home) für die vollständige Piper + Whisper + Home-Assistant-Installationsanleitung.',
         ],
       },
       architecture: {
@@ -567,13 +567,13 @@ if __name__ == "__main__":
         id: 'hardware',
         title: 'Hardwareanforderungen',
         content:
-          'Vier Hardware-Konfigurationen, geordnet nach Latenz und Kosten. Alle unterstützen den vollständigen Whisper + LLM + Piper Stack.',
+          'Vier Hardware-Konfigurationen, geordnet nach Latenz und Kosten. Alle unterstützen den vollständigen Whisper + LLM + Piper Stack. Die Werte sind typische bzw. Richtwerte je Hardware-Klasse und wurden nicht von PromptQuorum gemessen.',
         columns: ['Konfiguration', 'STT-Modell', 'LLM-Modell', 'TTS', 'Gesamtkosten', 'End-to-End-Latenz'],
         rows: [
           {
             'Konfiguration': 'Raspberry Pi 5 (8 GB)',
             'STT-Modell': 'Whisper base (CPU)',
-            'LLM-Modell': 'Phi-3 mini 3,8B Q4',
+            'LLM-Modell': 'Phi-4-mini 3,8B Q4',
             'TTS': 'Piper (CPU)',
             'Gesamtkosten': 'ca. 90 €',
             'End-to-End-Latenz': '5–8 Sek.',
@@ -713,8 +713,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -823,10 +823,6 @@ if __name__ == "__main__":
             q: 'Muss ich bei der Verwendung eines lokalen Sprachassistenten die DSGVO beachten?',
             a: 'Bei rein internem Gebrauch auf eigener Hardware ohne Weitergabe an Dritte entfällt auf der Inferenzebene die Weitergabe personenbezogener Daten an Dritte; je nach Setup kann ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO dafür entbehrlich sein. Ob Ihr Betrieb DSGVO-konform ist, hängt dennoch von Rechtsgrundlage, technischen und organisatorischen Maßnahmen und Zweck ab. Wird der Assistent für Dritte betrieben (z. B. im Unternehmen für Mitarbeitende), gelten die Informationspflichten nach Art. 13/14. Dies ist keine Rechtsberatung; bei Zweifeln den Datenschutzbeauftragten fragen.',
           },
-          {
-            q: 'Ist ein lokaler Sprachassistent für den deutschen Mittelstand geeignet?',
-            a: 'Ja – besonders für Anwendungsfälle mit Vertraulichkeitsanforderungen: Kanzleien, Steuerberater, medizinische Praxen, Fertigungsunternehmen mit Know-how-Schutz und alle unter NDA-Verpflichtungen. Die einmalige Hardware-Investition (ca. 270–750 €) amortisiert sich gegenüber Cloud-Abonnements bei regelmäßigem Einsatz in 6–18 Monaten. Einstiegspunkt: Mini-PC ca. 270 € mit Ollama und Piper – Einrichtungszeit unter 2 Stunden, kein IT-Spezialist erforderlich. Für höchste Qualität: Mac Mini M5 (ca. 600 €) mit Llama 3.1 8B.',
-          },
         ],
       },
       sources: {
@@ -866,7 +862,7 @@ if __name__ == "__main__":
     title: 'Construire un assistant vocal entièrement hors ligne en 2026 : Whisper + LLM + Piper (guide étape par étape)',
     seoTitle: 'Assistant vocal local 2026 : Whisper + LLM + Piper',
     intro:
-      'Un assistant vocal entièrement hors ligne en 2026 combine trois composants : whisper.cpp pour la reconnaissance vocale, un LLM local (Llama 3.1 8B, Phi-4 ou Ministral 3 8B via Ollama) pour le raisonnement, et Piper TTS pour la synthèse vocale. La latence de bout en bout sur un PC de bureau avec GPU est de 1 à 2 secondes. Sur Mac Mini M5, elle est inférieure à 1,5 seconde. Sur Raspberry Pi 5, elle est de 5 à 8 secondes. Ce guide détaille chaque étape avec des tableaux de matériel, le code de l\'orchestrateur Python, la configuration du mot de déclenchement et des techniques d\'optimisation de la latence.',
+      'Un assistant vocal entièrement hors ligne en 2026 combine trois composants : whisper.cpp pour la reconnaissance vocale, un LLM local (Llama 3.1 8B, Phi-4 ou Ministral 3 8B via Ollama) pour le raisonnement, et Piper TTS pour la synthèse vocale. La latence de bout en bout sur un PC de bureau avec GPU est généralement de 1 à 2 secondes. Sur Mac Mini M5, elle est généralement inférieure à 1,5 seconde. Sur Raspberry Pi 5, elle est d\'environ 5 à 8 secondes. Ce guide détaille chaque étape avec des tableaux de matériel, le code de l\'orchestrateur Python, la configuration du mot de déclenchement et des techniques d\'optimisation de la latence.',
     metaDescription:
       'Construire un assistant vocal hors ligne en 2026 avec whisper.cpp pour la STT, Ollama + Llama 3.1 8B pour le raisonnement et Piper TTS pour la synthèse vocale. Guide étape par étape avec exigences matérielles, code Python, mot de déclenchement et optimisation de la latence.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-fr.webp',
@@ -874,7 +870,7 @@ if __name__ == "__main__":
       'Assistant vocal DIY hors ligne 2026 : Whisper STT + LLM local + Piper TTS. Pas de cloud, pas d\'abonnement. Guide complet avec spécifications matérielles, code Python et mot de déclenchement.',
     readTime: '14 min de lecture',
     leadAnswerBlock:
-      '**Un assistant vocal hors ligne complet nécessite trois composants : whisper.cpp pour la reconnaissance vocale, un LLM local via Ollama pour le raisonnement, et Piper TTS pour la synthèse vocale.** Un orchestrateur Python relie les trois : audio microphone → Whisper → texte → Ollama LLM → réponse → Piper → haut-parleur. Sur un PC avec RTX 3060 12 Go de VRAM, la latence est de 1 à 2 secondes avec Llama 3.1 8B et Whisper small. Sur Mac Mini M5 (24 Go), elle descend à 1–1,5 seconde. Sur Raspberry Pi 5 (8 Go), elle est de 5 à 8 secondes avec Phi-4-mini 3.8B. Ajoutez un détecteur de mot de déclenchement (OpenWakeWord ou Porcupine) pour que l\'assistant soit toujours en écoute sans faire tourner Whisper en continu.',
+      '**Un assistant vocal hors ligne complet nécessite trois composants : whisper.cpp pour la reconnaissance vocale, un LLM local via Ollama pour le raisonnement, et Piper TTS pour la synthèse vocale.** Un orchestrateur Python relie les trois : audio microphone → Whisper → texte → Ollama LLM → réponse → Piper → haut-parleur. Sur un PC avec RTX 3060 12 Go de VRAM, la latence est généralement de 1 à 2 secondes avec Llama 3.1 8B et Whisper small. Sur Mac Mini M5 (24 Go), elle descend généralement à 1–1,5 seconde. Sur Raspberry Pi 5 (8 Go), elle est d\'environ 5 à 8 secondes avec Phi-4-mini 3.8B. Ajoutez un détecteur de mot de déclenchement (OpenWakeWord ou Porcupine) pour que l\'assistant soit toujours en écoute sans faire tourner Whisper en continu.',
     quickAnswerTop: {
       fr: {
         question: 'Comment construire un assistant vocal entièrement hors ligne en 2026 ?',
@@ -916,9 +912,9 @@ if __name__ == "__main__":
         title: 'Points clés',
         items: [
           '**Le pipeline est : whisper.cpp → Ollama LLM → Piper TTS, orchestré par un script Python.** whisper.cpp, Ollama et Piper sont des logiciels open-source qui fonctionnent hors ligne une fois installés ; les poids du LLM suivent leur propre licence (par exemple la licence communautaire Llama 3.1, MIT pour Phi-4).',
-          '**Latence de bout en bout sur GPU de bureau (RTX 3060 12 Go) : 1 à 2 secondes.** Une latence de cet ordre paraît généralement naturelle en interaction vocale ; PromptQuorum ne l\'a pas comparée à Alexa ni à Google Assistant. Utilisez Whisper small et Llama 3.1 8B pour ce résultat.',
-          '**Raspberry Pi 5 (8 Go) est viable mais lent.** Avec Phi-4-mini 3.8B et Whisper base, la latence est de 5 à 8 secondes. Utilisable pour des requêtes mains libres, pas pour une conversation fluide.',
-          '**Mac Mini M5 (24 Go de mémoire unifiée) offre le meilleur rapport qualité-silence-performance.** Silencieux au repos, Llama 3.1 8B à ~50 tokens/s, Whisper large-v3 en 10× temps réel via Metal. Latence de 1 à 1,5 seconde.',
+          '**Latence de bout en bout sur GPU de bureau (RTX 3060 12 Go) : généralement 1 à 2 secondes.** Une latence de cet ordre paraît généralement naturelle en interaction vocale ; PromptQuorum ne l\'a pas comparée à Alexa ni à Google Assistant. Utilisez Whisper small et Llama 3.1 8B pour ce résultat.',
+          '**Raspberry Pi 5 (8 Go) est viable mais lent.** Avec Phi-4-mini 3.8B et Whisper base, la latence est d\'environ 5 à 8 secondes. Utilisable pour des requêtes mains libres, pas pour une conversation fluide.',
+          '**Mac Mini M5 (24 Go de mémoire unifiée) offre un bon compromis entre qualité, silence et performance.** Silencieux au repos, Llama 3.1 8B à ~50 tokens/s, Whisper large-v3 en 10× temps réel via Metal. Latence de 1 à 1,5 seconde.',
           '**Ajoutez un mot de déclenchement pour ne pas faire tourner Whisper en permanence.** OpenWakeWord (code sous Apache 2.0, modèles pré-entraînés sous CC BY-NC-SA 4.0 non commercial, mots personnalisables) est une option open-source répandue ; vérifiez la licence avant tout usage commercial. Porcupine (Picovoice) propose un tier gratuit avec des mots préconfigurés comme « Hey Jarvis ».',
           '**La hallucination de Whisper sur le silence est le bug le plus fréquent.** Définissez un seuil d\'énergie audio minimum et configurez `--no-speech-threshold 0.6`.',
           '**L\'inférence s\'exécute en local ; ce setup n\'envoie par défaut ni audio ni texte à un service cloud.** Ollama peut tout de même vérifier les mises à jour, Porcupine (si utilisé) valide sa clé en ligne, et les modèles sont téléchargés à l\'installation, sauf si vous bloquez le trafic sortant. Vérifiez avec Wireshark après l\'assemblage. Le traitement local écarte la question du transfert à un tiers et du sous-traitant pour la couche d\'inférence ; la conformité RGPD de votre exploitation dépend toujours de la base légale, des mesures techniques et organisationnelles et de la finalité. Ceci ne constitue pas un conseil juridique.',
@@ -948,7 +944,7 @@ if __name__ == "__main__":
           '**Personnalisation :** Choisissez votre mot de déclenchement, la personnalité, le prompt système et les fonctionnalités. Connectez des systèmes domotiques locaux, intégrez des API locales.',
           '**Fonctionnement hors ligne :** Fonctionne sans internet. Panne de courant (avec onduleur) + panne internet : votre assistant local continue de fonctionner.',
           '**Ce que vous perdez :** Recherche web, intégration domotique avec les clouds propriétaires, synchronisation d\'agenda cloud, et les années d\'optimisation RLHF qui rendent Alexa/Siri fluides pour les cas limites.',
-          '**Intégration domotique :** Connectez votre assistant vocal local directement à Home Assistant pour contrôler les lumières, thermostats et capteurs par la voix — entièrement hors ligne. Voir [assistant vocal local pour smart home →](/fr/smart-home/local-voice-assistant-smart-home) pour le guide complet Piper + Whisper + Home Assistant.',
+          '**Intégration domotique :** Connectez votre assistant vocal local directement à Home Assistant pour contrôler les lumières, thermostats et capteurs par la voix — l\'inférence s\'exécute hors ligne. Voir [assistant vocal local pour smart home →](/fr/smart-home/local-voice-assistant-smart-home) pour le guide complet Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {
@@ -981,7 +977,7 @@ if __name__ == "__main__":
         id: 'hardware',
         title: 'Configuration matérielle',
         content:
-          'Quatre configurations matérielles, classées par latence et coût. Toutes supportent le pipeline complet Whisper + LLM + Piper.',
+          'Quatre configurations matérielles, classées par latence et coût. Toutes supportent le pipeline complet Whisper + LLM + Piper. Les chiffres sont des valeurs typiques ou indicatives pour chaque classe de matériel, non mesurées par PromptQuorum.',
         columns: ['Configuration', 'Modèle STT', 'Modèle LLM', 'TTS', 'Coût total', 'Latence totale'],
         rows: [
           {
@@ -1127,8 +1123,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -1272,7 +1268,7 @@ if __name__ == "__main__":
     title: '完全オフライン音声アシスタントを2026年に構築：Whisper + LLM + Piper（ステップバイステップ）',
     seoTitle: 'オフライン音声アシスタント構築2026：Whisper + ローカルLLM + Piper TTS',
     intro:
-      '2026年の完全オフライン音声アシスタントは、音声認識用のwhisper.cpp、推論用のローカルLLM（OllamaによるLlama 3.1 8B、Phi-4、またはMinistral 3 8B）、音声出力用のPiper TTSの3つのコンポーネントを組み合わせます。デスクトップGPUセットアップでのエンドツーエンドのレイテンシは1〜2秒です。Mac Mini M5では1.5秒未満、Raspberry Pi 5では5〜8秒です。このガイドでは、ハードウェア一覧表、Pythonオーケストレーターコード、ウェイクワードの設定、レイテンシ最適化技術を含む各ステップを詳しく解説します。',
+      '2026年の完全オフライン音声アシスタントは、音声認識用のwhisper.cpp、推論用のローカルLLM（OllamaによるLlama 3.1 8B、Phi-4、またはMinistral 3 8B）、音声出力用のPiper TTSの3つのコンポーネントを組み合わせます。デスクトップGPUセットアップでのエンドツーエンドのレイテンシは通常1〜2秒です。Mac Mini M5では通常1.5秒未満、Raspberry Pi 5では約5〜8秒です。このガイドでは、ハードウェア一覧表、Pythonオーケストレーターコード、ウェイクワードの設定、レイテンシ最適化技術を含む各ステップを詳しく解説します。',
     metaDescription:
       '2026年版ローカル音声アシスタントの構築：Whisper、LLM、Piper TTSを組み合わせて完全オフラインの音声AIを作成。プライバシー保護と低遅延を実現する方法を解説。',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-ja.webp',
@@ -1280,7 +1276,7 @@ if __name__ == "__main__":
       'DIYオフライン音声アシスタント2026：Whisper STT + ローカルLLM + Piper TTS。クラウド不要、サブスクリプション不要。ハードウェア仕様、Pythonコード、ウェイクワード設定を含む完全構築ガイド。',
     readTime: '14分で読める',
     leadAnswerBlock:
-      '**2026年の完全オフライン音声アシスタントには3つのコンポーネントが必要です：音声認識用のwhisper.cpp、推論用のOllama経由ローカルLLM、音声出力用のPiper TTS。** Pythonオーケストレーターが3つを接続し、音声を聞き取り、テキストに変換し、LLMに送信し、応答を音声に変換します。RTX 3060 12 GB GPUを搭載したデスクトップでは、Llama 3.1 8BとWhisper smallを使用した場合のエンドツーエンドレイテンシは1〜2秒です。Mac Mini M5（24 GB）では同じモデルをApple Silicon上で実行した場合1〜1.5秒。Raspberry Pi 5（8 GB）ではPhi-4-mini 3.8Bで5〜8秒です。ウェイクワード検出器（OpenWakeWordまたはPorcupine）を追加することで、Whisperを継続的に実行することなく常時待機状態を実現できます。',
+      '**2026年の完全オフライン音声アシスタントには3つのコンポーネントが必要です：音声認識用のwhisper.cpp、推論用のOllama経由ローカルLLM、音声出力用のPiper TTS。** Pythonオーケストレーターが3つを接続し、音声を聞き取り、テキストに変換し、LLMに送信し、応答を音声に変換します。RTX 3060 12 GB GPUを搭載したデスクトップでは、Llama 3.1 8BとWhisper smallを使用した場合のエンドツーエンドレイテンシは通常1〜2秒です。Mac Mini M5（24 GB）では同じモデルをApple Silicon上で実行した場合、通常1〜1.5秒。Raspberry Pi 5（8 GB）ではPhi-4-mini 3.8Bで約5〜8秒です。ウェイクワード検出器（OpenWakeWordまたはPorcupine）を追加することで、Whisperを継続的に実行することなく常時待機状態を実現できます。',
     quickAnswerTop: {
       ja: {
         question: '2026年に完全オフライン音声アシスタントを構築するには？',
@@ -1321,9 +1317,9 @@ if __name__ == "__main__":
         isTldr: true,
         items: [
           '**オフライン音声アシスタントのスタックは：whisper.cpp → Ollama LLM → Piper TTS、Pythonスクリプトでオーケストレーションされます。** whisper.cpp、Ollama、Piperはオープンソースソフトウェアで、インストール後はオフラインで動作します。LLMの重みはそれぞれ独自のライセンスに従います（例：Llama 3.1コミュニティライセンス、Phi-4はMIT）。',
-          '**デスクトップGPU（RTX 3060 12 GB）でのエンドツーエンドレイテンシ：1〜2秒。** この程度のレイテンシは音声対話では一般に自然に感じられます。AlexaやGoogleアシスタントとの比較測定はPromptQuorumでは行っていません。この結果にはWhisper smallとLlama 3.1 8Bを使用します。',
-          '**Raspberry Pi 5（8 GB）は実用的ですが低速なプラットフォームです。** Phi-4-mini 3.8BとWhisper baseを使用した場合のレイテンシは5〜8秒。ハンズフリー操作には使用可能ですが、会話型インタラクションには向きません。',
-          '**Mac Mini M5（24 GB統合メモリ）は品質と静粛性のベストバランスです。** アイドル時はファンレスで静寂、Llama 3.1 8Bを約50トークン/秒で実行でき、Whisper large-v3はMetalで10倍のリアルタイム処理が可能。レイテンシは1〜1.5秒。',
+          '**デスクトップGPU（RTX 3060 12 GB）でのエンドツーエンドレイテンシ：通常1〜2秒。** この程度のレイテンシは音声対話では一般に自然に感じられます。AlexaやGoogleアシスタントとの比較測定はPromptQuorumでは行っていません。この結果にはWhisper smallとLlama 3.1 8Bを使用します。',
+          '**Raspberry Pi 5（8 GB）は実用的ですが低速なプラットフォームです。** Phi-4-mini 3.8BとWhisper baseを使用した場合のレイテンシは約5〜8秒。ハンズフリー操作には使用可能ですが、会話型インタラクションには向きません。',
+          '**Mac Mini M5（24 GB統合メモリ）は品質と静粛性のバランスの良い選択肢です。** アイドル時はファンレスで静寂、Llama 3.1 8Bを約50トークン/秒で実行でき、Whisper large-v3はMetalで10倍のリアルタイム処理が可能。レイテンシは1〜1.5秒。',
           '**Whisperを継続的に実行しないようウェイクワードを追加してください。** OpenWakeWord（コードはApache 2.0、事前学習済みモデルはCC BY-NC-SA 4.0・非商用、カスタムウェイクワード対応）は広く使われているオープンソースの選択肢です。商用利用の前にライセンスを確認してください。Porcupine（Picovoice）は個人使用の無料枠があり、「Hey Jarvis」などの定義済みウェイクワードが使えます。',
           '**静寂時のWhisperハルシネーションは最も一般的なパイプラインのバグです。** Whisperは静寂をフィラーワードやトレーニングデータからの引用として転写することがあります。音声をWhisperに渡す前に最小音声エネルギー閾値を設定し、whisper.cppで`--no-speech-threshold 0.6`を設定してください。',
           '**推論はローカルで実行され、このスタックは既定ではクラウドサービスに音声もテキストも送信しません。** ただしOllamaが更新を確認する場合があり、Porcupine（使用する場合）はキーをオンラインで検証し、モデルはセットアップ時にダウンロードされます（外向き通信をブロックしない場合）。組み立て後にWiresharkで確認してください。ローカル処理により推論レイヤーでは第三者への移転と処理者の問題がなくなりますが、運用がGDPRに適合するかは、適法性の根拠、技術的・組織的措置、目的によって異なります。法的助言ではありません。',
@@ -1353,7 +1349,7 @@ if __name__ == "__main__":
           '**カスタマイズ：** ウェイクワード、個性、システムプロンプト、機能を選択できます。カスタムコマンドを追加し、ローカルホームオートメーションシステムに接続し、ローカルAPIと統合できます。',
           '**オフライン動作：** インターネットなしで動作します。停電（UPSあり）＋インターネット障害でもローカルアシスタントは動き続けます。山小屋、遠隔地、緊急時対策に有用です。',
           '**失うもの：** ウェブ検索、独自クラウドを使うスマートホーム統合、クラウドサービスとのカレンダー同期、AlexaやSiriのエッジケースを滑らかにしているRLHFチューニングの積み重ね。',
-          '**スマートホーム連携：** ローカル音声アシスタントをHome Assistantに直接つなぎ、照明・サーモスタット・センサーを音声で操作できます — 完全オフライン。Piper + Whisper + Home Assistantのフルセットアップガイドは[スマートホーム向けローカル音声アシスタント →](/ja/smart-home/local-voice-assistant-smart-home)をご覧ください。',
+          '**スマートホーム連携：** ローカル音声アシスタントをHome Assistantに直接つなぎ、照明・サーモスタット・センサーを音声で操作できます — 推論はオフラインで実行されます。Piper + Whisper + Home Assistantのフルセットアップガイドは[スマートホーム向けローカル音声アシスタント →](/ja/smart-home/local-voice-assistant-smart-home)をご覧ください。',
         ],
       },
       architecture: {
@@ -1386,7 +1382,7 @@ if __name__ == "__main__":
         id: 'hardware',
         title: 'ハードウェア要件',
         content:
-          'レイテンシとコスト順に並べた4つのハードウェア構成。すべてWhisper + LLM + Piperのフルスタックをサポートします。',
+          'レイテンシとコスト順に並べた4つのハードウェア構成。すべてWhisper + LLM + Piperのフルスタックをサポートします。数値は各ハードウェアクラスの一般的な目安値であり、PromptQuorumが測定したものではありません。',
         columns: ['構成', 'STTモデル', 'LLMモデル', 'TTS', '合計費用', 'エンドツーエンドレイテンシ'],
         rows: [
           {
@@ -1532,8 +1528,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -1677,7 +1673,7 @@ if __name__ == "__main__":
     title: '2026年构建完全离线语音助手：Whisper + LLM + Piper（逐步指南）',
     seoTitle: '构建离线语音助手2026：Whisper + 本地LLM + Piper TTS',
     intro:
-      '2026年的完全离线语音助手由三个组件组成：用于语音识别的whisper.cpp、用于推理的本地LLM（通过Ollama运行Llama 3.1 8B、Phi-4或Ministral 3 8B），以及用于语音输出的Piper TTS。桌面GPU配置的端到端延迟为1-2秒。Mac Mini M5上低于1.5秒，Raspberry Pi 5上为5-8秒。本指南逐步讲解每个环节，包含硬件配置表、Python编排代码、唤醒词设置和延迟优化技术。',
+      '2026年的完全离线语音助手由三个组件组成：用于语音识别的whisper.cpp、用于推理的本地LLM（通过Ollama运行Llama 3.1 8B、Phi-4或Ministral 3 8B），以及用于语音输出的Piper TTS。桌面GPU配置的端到端延迟通常为1-2秒。Mac Mini M5上通常低于1.5秒，Raspberry Pi 5上约为5-8秒。本指南逐步讲解每个环节，包含硬件配置表、Python编排代码、唤醒词设置和延迟优化技术。',
     metaDescription:
       '2026年构建完全离线语音助手：使用whisper.cpp实现STT，Ollama + Llama 3.1 8B实现推理，Piper TTS实现语音合成。包含硬件要求、Python代码、唤醒词配置和延迟优化的逐步指南。',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-zh.webp',
@@ -1685,7 +1681,7 @@ if __name__ == "__main__":
       'DIY离线语音助手2026：Whisper STT + 本地LLM + Piper TTS。无需云服务，无需订阅。含硬件规格、Python代码和唤醒词配置的完整构建指南。',
     readTime: '阅读约14分钟',
     leadAnswerBlock:
-      '**2026年完全离线语音助手需要三个组件：用于语音识别的whisper.cpp、通过Ollama运行的本地LLM、用于语音输出的Piper TTS。** Python编排器将三者连接：录制音频 → Whisper转写 → 发送给LLM → 转换为语音播放。在配备RTX 3060 12 GB GPU的台式机上，使用Llama 3.1 8B和Whisper small的端到端延迟为1–2秒。Mac Mini M5（24 GB）在Apple Silicon上运行相同模型时为1–1.5秒。Raspberry Pi 5（8 GB）使用Phi-4-mini 3.8B时为5–8秒。添加唤醒词检测器（OpenWakeWord或Porcupine）可实现常时待机，无需持续运行Whisper。',
+      '**2026年完全离线语音助手需要三个组件：用于语音识别的whisper.cpp、通过Ollama运行的本地LLM、用于语音输出的Piper TTS。** Python编排器将三者连接：录制音频 → Whisper转写 → 发送给LLM → 转换为语音播放。在配备RTX 3060 12 GB GPU的台式机上，使用Llama 3.1 8B和Whisper small的端到端延迟通常为1–2秒。Mac Mini M5（24 GB）在Apple Silicon上运行相同模型时通常为1–1.5秒。Raspberry Pi 5（8 GB）使用Phi-4-mini 3.8B时约为5–8秒。添加唤醒词检测器（OpenWakeWord或Porcupine）可实现常时待机，无需持续运行Whisper。',
     quickAnswerTop: {
       zh: {
         question: '2026年如何构建完全离线的语音助手？',
@@ -1726,9 +1722,9 @@ if __name__ == "__main__":
         isTldr: true,
         items: [
           '**离线语音助手栈：whisper.cpp → Ollama LLM → Piper TTS，由Python脚本编排。** whisper.cpp、Ollama和Piper是开源软件，安装后可离线运行；LLM权重遵循各自的许可证（例如Llama 3.1社区许可证，Phi-4为MIT）。',
-          '**台式机GPU（RTX 3060 12 GB）端到端延迟：1–2秒。** 这一范围的延迟在语音交互中通常感觉自然；PromptQuorum未与Alexa或Google Assistant做过对比测量。使用Whisper small和Llama 3.1 8B可达到此结果。',
-          '**Raspberry Pi 5（8 GB）可用但速度较慢。** 使用Phi-4-mini 3.8B和Whisper base时延迟为5–8秒。适合免手操作查询，不适合对话式交互。',
-          '**Mac Mini M5（24 GB统一内存）是质量与静音的最佳平衡。** 空闲时无风扇静音运行，Llama 3.1 8B约50 token/秒，Whisper large-v3通过Metal实现10倍实时处理速度。延迟1–1.5秒。',
+          '**台式机GPU（RTX 3060 12 GB）端到端延迟：通常1–2秒。** 这一范围的延迟在语音交互中通常感觉自然；PromptQuorum未与Alexa或Google Assistant做过对比测量。使用Whisper small和Llama 3.1 8B可达到此结果。',
+          '**Raspberry Pi 5（8 GB）可用但速度较慢。** 使用Phi-4-mini 3.8B和Whisper base时延迟约为5–8秒。适合免手操作查询，不适合对话式交互。',
+          '**Mac Mini M5（24 GB统一内存）是质量与静音平衡较好的选择。** 空闲时无风扇静音运行，Llama 3.1 8B约50 token/秒，Whisper large-v3通过Metal实现10倍实时处理速度。延迟1–1.5秒。',
           '**添加唤醒词避免持续运行Whisper。** OpenWakeWord（代码Apache 2.0，预训练模型CC BY-NC-SA 4.0非商业，支持自定义唤醒词）是常用的开源选项；商业使用前请核对许可证。Porcupine（Picovoice）个人使用免费套餐支持"Hey Jarvis"等预置唤醒词。',
           '**静音时Whisper幻觉是最常见的流水线bug。** Whisper会将静音转写为填充词或训练数据中的引用。在将音频传给Whisper前设置最小音频能量阈值，并在whisper.cpp中配置`--no-speech-threshold 0.6`。',
           '**推理在本地运行；此方案默认不会向云服务发送音频或文本。** 但Ollama可能仍会检查更新，Porcupine（如使用）会在线验证密钥，模型在安装时需要下载，除非您阻止出站流量。组装完成后用Wireshark验证。本地处理消除了推理层的第三方传输和处理者问题；您的运营是否符合GDPR，仍取决于法律依据、技术和组织措施以及处理目的。不构成法律建议。',
@@ -1758,7 +1754,7 @@ if __name__ == "__main__":
           '**自定义：** 选择唤醒词、个性、系统提示词和功能。添加自定义命令，连接本地家庭自动化系统，与本地API集成。',
           '**离线运行：** 无需网络即可工作。停电（配UPS）+ 断网：本地助手仍然运行。适用于山间小屋、偏远地区和应急准备。',
           '**放弃的功能：** 网络搜索、与专有云的智能家居集成、与云服务的日历同步，以及让Alexa/Siri在边缘情况下表现流畅的多年RLHF调优积累。',
-          '**智能家居集成：** 将本地语音助手直接接入Home Assistant，通过语音控制灯光、温控器和传感器 — 完全离线。完整的Piper + Whisper + Home Assistant安装指南，请参阅[智能家居本地语音助手 →](/zh/smart-home/local-voice-assistant-smart-home)。',
+          '**智能家居集成：** 将本地语音助手直接接入Home Assistant，通过语音控制灯光、温控器和传感器 — 推理离线运行。完整的Piper + Whisper + Home Assistant安装指南，请参阅[智能家居本地语音助手 →](/zh/smart-home/local-voice-assistant-smart-home)。',
         ],
       },
       architecture: {
@@ -1791,7 +1787,7 @@ if __name__ == "__main__":
         id: 'hardware',
         title: '硬件要求',
         content:
-          '按延迟和成本排列的四个硬件配置，均支持完整的Whisper + LLM + Piper栈。',
+          '按延迟和成本排列的四个硬件配置，均支持完整的Whisper + LLM + Piper栈。数据为各硬件级别的典型或参考值，并非PromptQuorum实测。',
         columns: ['配置', 'STT模型', 'LLM模型', 'TTS', '总费用', '端到端延迟'],
         rows: [
           {
@@ -1937,8 +1933,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -2082,14 +2078,14 @@ if __name__ == "__main__":
     title: 'Crea un asistente de voz completamente offline en 2026: Whisper + LLM + Piper (paso a paso)',
     seoTitle: 'Asistente de voz local 2026: Whisper + LLM + Piper TTS',
     intro:
-      'Un asistente de voz completamente offline en 2026 combina tres componentes: whisper.cpp para el reconocimiento de voz, un LLM local (Llama 3.1 8B, Phi-4 o Ministral 3 8B mediante Ollama) para el razonamiento, y Piper TTS para la salida de audio. La latencia de extremo a extremo en un equipo de escritorio con GPU es de 1 a 2 segundos. En un Mac Mini M5, es inferior a 1,5 segundos. En una Raspberry Pi 5, es de 5 a 8 segundos — suficiente para consultas manos libres, no para conversaciones fluidas. Esta guía recorre cada capa paso a paso, con tablas de hardware, código del orquestador Python, configuración de la palabra de activación y técnicas de optimización de latencia.',
+      'Un asistente de voz completamente offline en 2026 combina tres componentes: whisper.cpp para el reconocimiento de voz, un LLM local (Llama 3.1 8B, Phi-4 o Ministral 3 8B mediante Ollama) para el razonamiento, y Piper TTS para la salida de audio. La latencia de extremo a extremo en un equipo de escritorio con GPU suele ser de 1 a 2 segundos. En un Mac Mini M5, suele ser inferior a 1,5 segundos. En una Raspberry Pi 5, es de unos 5 a 8 segundos — suficiente para consultas manos libres, no para conversaciones fluidas. Esta guía recorre cada capa paso a paso, con tablas de hardware, código del orquestador Python, configuración de la palabra de activación y técnicas de optimización de latencia.',
     metaDescription:
       'whisper.cpp (STT), Ollama + Llama 3.1 8B (razonamiento) y Piper TTS (audio). Latencia 1–2 s en GPU. Orquestador Python y palabra de activación. 2026.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-es.webp',
     twitterDescription:
       'Asistente de voz offline DIY en 2026: Whisper STT + LLM local + Piper TTS. Sin nube, sin suscripción. Guía completa con especificaciones de hardware, código Python y configuración de palabra de activación.',
     audience:
-      'Desarrolladores y aficionados que quieren un asistente de voz privado y completamente offline — un reemplazo de Siri o Alexa que funciona íntegramente en hardware propio sin dependencias en la nube.',
+      'Desarrolladores y aficionados que quieren un asistente de voz privado y completamente offline — un reemplazo de Siri o Alexa que funciona localmente en hardware propio después de la configuración.',
     readTime: '14 min de lectura',
     educationalLevel: 'Advanced',
     primaryTerm: 'asistente de voz offline',
@@ -2121,7 +2117,7 @@ if __name__ == "__main__":
       'Mac Mini M5 (24 GB)',
     ],
     leadAnswerBlock:
-      '**Un asistente de voz completamente offline en 2026 requiere tres componentes: whisper.cpp para el reconocimiento de voz, un LLM local mediante Ollama para el razonamiento y Piper TTS para la salida de audio.** Los tres se conectan mediante un orquestador Python que escucha el audio, lo transcribe, lo envía al LLM y convierte la respuesta en voz. En un equipo con una RTX 3060 12 GB de VRAM, la latencia de extremo a extremo es de 1 a 2 segundos con Llama 3.1 8B y Whisper small. En un Mac Mini M5 (24 GB), la latencia es de 1 a 1,5 segundos con los mismos modelos sobre Apple Silicon. En una Raspberry Pi 5 (8 GB), la latencia es de 5 a 8 segundos con Phi-4-mini 3.8B — suficiente para consultas manos libres con algo de paciencia. Añade un detector de palabra de activación (OpenWakeWord o Porcupine) para que el asistente esté siempre en escucha sin ejecutar Whisper continuamente.',
+      '**Un asistente de voz completamente offline en 2026 requiere tres componentes: whisper.cpp para el reconocimiento de voz, un LLM local mediante Ollama para el razonamiento y Piper TTS para la salida de audio.** Los tres se conectan mediante un orquestador Python que escucha el audio, lo transcribe, lo envía al LLM y convierte la respuesta en voz. En un equipo con una RTX 3060 12 GB de VRAM, la latencia de extremo a extremo suele ser de 1 a 2 segundos con Llama 3.1 8B y Whisper small. En un Mac Mini M5 (24 GB), la latencia suele ser de 1 a 1,5 segundos con los mismos modelos sobre Apple Silicon. En una Raspberry Pi 5 (8 GB), la latencia es de unos 5 a 8 segundos con Phi-4-mini 3.8B — suficiente para consultas manos libres con algo de paciencia. Añade un detector de palabra de activación (OpenWakeWord o Porcupine) para que el asistente esté siempre en escucha sin ejecutar Whisper continuamente.',
     quickAnswerTop: {
       es: {
         question: '¿Cómo se construye un asistente de voz completamente offline en 2026?',
@@ -2163,8 +2159,8 @@ if __name__ == "__main__":
         title: 'Puntos clave',
         items: [
           '**El stack del asistente de voz offline es: whisper.cpp → Ollama LLM → Piper TTS, orquestado por un script Python.** whisper.cpp, Ollama y Piper son software open-source y funcionan offline una vez instalados; los pesos del LLM siguen su propia licencia (por ejemplo, la licencia comunitaria de Llama 3.1; MIT en Phi-4).',
-          '**Latencia de extremo a extremo en GPU de escritorio (RTX 3060 12 GB): 1–2 segundos.** Una latencia en este rango suele sentirse natural en la interacción de voz; PromptQuorum no la ha comparado con Alexa ni con Google Assistant. Usa Whisper small y Llama 3.1 8B para este resultado.',
-          '**La Raspberry Pi 5 (8 GB) es una plataforma viable pero lenta.** Con Phi-4-mini 3.8B y Whisper base, la latencia es de 5–8 segundos. Útil para consultas manos libres en las que el usuario acepta una pausa más larga, no para conversaciones.',
+          '**Latencia de extremo a extremo en GPU de escritorio (RTX 3060 12 GB): normalmente 1–2 segundos.** Una latencia en este rango suele sentirse natural en la interacción de voz; PromptQuorum no la ha comparado con Alexa ni con Google Assistant. Usa Whisper small y Llama 3.1 8B para este resultado.',
+          '**La Raspberry Pi 5 (8 GB) es una plataforma viable pero lenta.** Con Phi-4-mini 3.8B y Whisper base, la latencia suele ser de unos 5–8 segundos. Útil para consultas manos libres en las que el usuario acepta una pausa más larga, no para conversaciones.',
           '**El Mac Mini M5 (24 GB de memoria unificada) es el punto óptimo entre calidad y silencio.** Silencioso en reposo, suficientemente potente para ejecutar Llama 3.1 8B a ~50 tokens/s con Whisper large-v3 a 10× tiempo real mediante Metal. Latencia de 1–1,5 segundos.',
           '**Añade una palabra de activación para no ejecutar Whisper continuamente.** OpenWakeWord (código Apache 2.0, modelos preentrenados CC BY-NC-SA 4.0 no comerciales, palabras de activación personalizadas) es una opción open-source muy utilizada; revisa la licencia antes de un uso comercial. Porcupine (Picovoice) tiene un nivel gratuito para uso personal con palabras de activación predefinidas como "Hey Jarvis".',
           '**La alucinación de Whisper en silencio es el bug más común del pipeline.** Whisper transcribirá el silencio como palabras de relleno o citas de sus datos de entrenamiento. Establece un umbral mínimo de energía de audio antes de pasar el audio a Whisper y configura `--no-speech-threshold 0.6` en whisper.cpp.',
@@ -2195,7 +2191,7 @@ if __name__ == "__main__":
           '**Personalización:** Elige tu palabra de activación, personalidad, system prompt y funcionalidades. Añade comandos personalizados, conecta sistemas de domótica local e integra APIs locales.',
           '**Funcionamiento offline:** Funciona sin internet. Un corte de luz (con SAI) + un corte de internet: tu asistente local sigue funcionando. Útil en cabañas, ubicaciones remotas y para preparación ante emergencias.',
           '**Lo que pierdes:** Búsqueda web, integración de domótica con nubes propietarias, sincronización de calendarios con servicios en la nube y los años de ajuste con RLHF que hacen que Alexa/Siri sean fluidos en casos límite.',
-          '**Integración con smart home:** Conecta tu asistente de voz local directamente a Home Assistant para controlar luces, termostatos y sensores por voz — completamente offline. Ver [asistente de voz local para smart home →](/es/smart-home/local-voice-assistant-smart-home) para la guía completa de configuración Piper + Whisper + Home Assistant.',
+          '**Integración con smart home:** Conecta tu asistente de voz local directamente a Home Assistant para controlar luces, termostatos y sensores por voz — la inferencia se ejecuta offline. Ver [asistente de voz local para smart home →](/es/smart-home/local-voice-assistant-smart-home) para la guía completa de configuración Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {
@@ -2228,7 +2224,7 @@ if __name__ == "__main__":
         id: 'hardware',
         title: 'Requisitos de hardware',
         content:
-          'Cuatro niveles de hardware, ordenados por latencia y costo. Todos admiten el stack completo de Whisper + LLM + Piper.',
+          'Cuatro niveles de hardware, ordenados por latencia y costo. Todos admiten el stack completo de Whisper + LLM + Piper. Las cifras son valores típicos o indicativos de cada clase de hardware, no medidos por PromptQuorum.',
         columns: ['Configuración', 'Modelo STT', 'Modelo LLM', 'TTS', 'Costo total', 'Latencia extremo a extremo'],
         rows: [
           {
@@ -2374,8 +2370,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -2530,11 +2526,11 @@ if __name__ == "__main__":
     theme: 'Voice, Speech & Multimodal',
     title: '2026년 완전 오프라인 음성 어시스턴트 만들기: Whisper + LLM + Piper (단계별 가이드)',
     seoTitle: '2026년 로컬 음성 어시스턴트: Whisper + LLM + Piper TTS',
-    intro: '2026년 완전 오프라인 음성 어시스턴트는 세 가지 구성요소를 결합합니다: 음성 인식을 위한 whisper.cpp, 추론을 위한 로컬 LLM(Ollama를 통한 Llama 3.1 8B, Phi-4 또는 Ministral 3 8B), 오디오 출력을 위한 Piper TTS. GPU가 있는 데스크톱 PC에서의 엔드투엔드 지연시간은 1~2초입니다. Mac Mini M5에서는 1.5초 미만입니다. Raspberry Pi 5에서는 5~8초입니다 — 핸즈프리 쿼리에는 충분하지만 유연한 대화에는 부족합니다. 이 가이드는 하드웨어 표, Python 오케스트레이터 코드, 웨이크 워드 설정, 지연시간 최적화 기법과 함께 각 레이어를 단계별로 설명합니다.',
+    intro: '2026년 완전 오프라인 음성 어시스턴트는 세 가지 구성요소를 결합합니다: 음성 인식을 위한 whisper.cpp, 추론을 위한 로컬 LLM(Ollama를 통한 Llama 3.1 8B, Phi-4 또는 Ministral 3 8B), 오디오 출력을 위한 Piper TTS. GPU가 있는 데스크톱 PC에서의 엔드투엔드 지연시간은 보통 1~2초입니다. Mac Mini M5에서는 보통 1.5초 미만입니다. Raspberry Pi 5에서는 약 5~8초입니다 — 핸즈프리 쿼리에는 충분하지만 유연한 대화에는 부족합니다. 이 가이드는 하드웨어 표, Python 오케스트레이터 코드, 웨이크 워드 설정, 지연시간 최적화 기법과 함께 각 레이어를 단계별로 설명합니다.',
     metaDescription: 'whisper.cpp (STT), Ollama + Llama 3.1 8B (추론), Piper TTS (오디오). GPU에서 지연시간 1–2초. Python 오케스트레이터와 웨이크 워드. 2026.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-ko.webp',
     twitterDescription: '2026년 DIY 오프라인 음성 어시스턴트: Whisper STT + 로컬 LLM + Piper TTS. 클라우드 없음, 구독 없음. 하드웨어 사양, Python 코드, 웨이크 워드 설정이 포함된 완전 가이드.',
-    audience: '프라이빗하고 완전 오프라인인 음성 어시스턴트를 원하는 개발자와 열정가 — 클라우드 의존성 없이 자체 하드웨어에서 완전히 작동하는 Siri 또는 Alexa 대체품.',
+    audience: '프라이빗하고 완전 오프라인인 음성 어시스턴트를 원하는 개발자와 열정가 — 설정 후 자체 하드웨어에서 로컬로 작동하는 Siri 또는 Alexa 대체품.',
     readTime: '14분 분량',
     educationalLevel: 'Advanced',
     primaryTerm: '오프라인 음성 어시스턴트',
@@ -2565,7 +2561,7 @@ if __name__ == "__main__":
       'NVIDIA RTX 3060 12 GB',
       'Mac Mini M5 (24 GB)',
     ],
-    leadAnswerBlock: '**2026년 완전 오프라인 음성 어시스턴트에는 세 가지 구성요소가 필요합니다: 음성 인식을 위한 whisper.cpp, 추론을 위한 Ollama를 통한 로컬 LLM, 오디오 출력을 위한 Piper TTS.** 세 가지는 오디오를 듣고, 전사하고, LLM에 보내고, 응답을 음성으로 변환하는 Python 오케스트레이터로 연결됩니다. RTX 3060 12 GB VRAM이 있는 PC에서 엔드투엔드 지연시간은 Llama 3.1 8B와 Whisper small로 1~2초입니다. Mac Mini M5(24 GB)에서는 동일한 모델로 Apple Silicon을 통해 1~1.5초입니다. Raspberry Pi 5(8 GB)에서는 Phi-4-mini 3.8B로 5~8초입니다 — 어느 정도의 인내심이 있다면 핸즈프리 쿼리에 충분합니다. 지속적으로 Whisper를 실행하지 않고도 어시스턴트가 항상 듣도록 하려면 웨이크 워드 감지기(OpenWakeWord 또는 Porcupine)를 추가하십시오.',
+    leadAnswerBlock: '**2026년 완전 오프라인 음성 어시스턴트에는 세 가지 구성요소가 필요합니다: 음성 인식을 위한 whisper.cpp, 추론을 위한 Ollama를 통한 로컬 LLM, 오디오 출력을 위한 Piper TTS.** 세 가지는 오디오를 듣고, 전사하고, LLM에 보내고, 응답을 음성으로 변환하는 Python 오케스트레이터로 연결됩니다. RTX 3060 12 GB VRAM이 있는 PC에서 엔드투엔드 지연시간은 Llama 3.1 8B와 Whisper small로 보통 1~2초입니다. Mac Mini M5(24 GB)에서는 동일한 모델로 Apple Silicon을 통해 보통 1~1.5초입니다. Raspberry Pi 5(8 GB)에서는 Phi-4-mini 3.8B로 약 5~8초입니다 — 어느 정도의 인내심이 있다면 핸즈프리 쿼리에 충분합니다. 지속적으로 Whisper를 실행하지 않고도 어시스턴트가 항상 듣도록 하려면 웨이크 워드 감지기(OpenWakeWord 또는 Porcupine)를 추가하십시오.',
     quickAnswerTop: {
       ko: {
         question: '2026년 완전 오프라인 음성 어시스턴트를 어떻게 만듭니까?',
@@ -2606,8 +2602,8 @@ if __name__ == "__main__":
         title: '핵심 요점',
         items: [
           '**오프라인 음성 어시스턴트 스택은: whisper.cpp → Ollama LLM → Piper TTS이며, Python 스크립트로 오케스트레이션됩니다.** whisper.cpp, Ollama, Piper는 오픈소스 소프트웨어이며 설치 후 오프라인으로 작동합니다. LLM 가중치는 각자의 라이선스를 따릅니다(예: Llama 3.1 커뮤니티 라이선스, Phi-4는 MIT).',
-          '**데스크톱 GPU(RTX 3060 12 GB)에서 엔드투엔드 지연시간: 1–2초.** 이 정도 지연시간은 음성 상호작용에서 일반적으로 자연스럽게 느껴집니다. PromptQuorum은 Alexa나 Google Assistant와 비교 측정하지 않았습니다. 이 결과를 위해 Whisper small과 Llama 3.1 8B를 사용하십시오.',
-          '**Raspberry Pi 5(8 GB)는 실행 가능하지만 느린 플랫폼입니다.** Phi-4-mini 3.8B와 Whisper base로 지연시간이 5–8초입니다. 더 긴 중지를 수용하는 사용자에게는 핸즈프리 쿼리에 유용하지만 대화에는 적합하지 않습니다.',
+          '**데스크톱 GPU(RTX 3060 12 GB)에서 엔드투엔드 지연시간: 보통 1–2초.** 이 정도 지연시간은 음성 상호작용에서 일반적으로 자연스럽게 느껴집니다. PromptQuorum은 Alexa나 Google Assistant와 비교 측정하지 않았습니다. 이 결과를 위해 Whisper small과 Llama 3.1 8B를 사용하십시오.',
+          '**Raspberry Pi 5(8 GB)는 실행 가능하지만 느린 플랫폼입니다.** Phi-4-mini 3.8B와 Whisper base로 지연시간이 보통 약 5–8초입니다. 더 긴 중지를 수용하는 사용자에게는 핸즈프리 쿼리에 유용하지만 대화에는 적합하지 않습니다.',
           '**Mac Mini M5(24 GB 통합 메모리)는 품질과 조용함 사이의 최적 지점입니다.** 유휴 시 조용하고, Whisper large-v3를 Metal로 10× 실시간으로, Llama 3.1 8B를 ~50 tokens/s로 동시에 실행할 수 있습니다. 지연시간 1–1.5초.',
           '**Whisper를 지속적으로 실행하지 않으려면 웨이크 워드를 추가하십시오.** OpenWakeWord(코드 Apache 2.0, 사전 학습 모델 CC BY-NC-SA 4.0 비상업용, 사용자 정의 웨이크 워드)는 널리 쓰이는 오픈소스 선택지입니다. 상업적 사용 전에 라이선스를 확인하십시오. Porcupine(Picovoice)은 "Hey Jarvis" 같은 미리 정의된 웨이크 워드가 있는 개인 사용 무료 티어를 제공합니다.',
           '**침묵에서의 Whisper 환각이 파이프라인에서 가장 흔한 버그입니다.** Whisper는 침묵을 채우는 단어나 훈련 데이터 인용으로 전사합니다. Whisper에 오디오를 전달하기 전에 최소 오디오 에너지 임계값을 설정하고 whisper.cpp에서 `--no-speech-threshold 0.6`을 구성하십시오.',
@@ -2637,7 +2633,7 @@ if __name__ == "__main__":
           '**사용자 정의:** 웨이크 워드, 개성, 시스템 프롬프트, 기능을 선택하십시오. 사용자 정의 명령 추가, 로컬 스마트 홈 시스템 연결, 로컬 API 통합이 가능합니다.',
           '**오프라인 작동:** 인터넷 없이 작동합니다. 정전(UPS 포함) + 인터넷 중단: 로컬 어시스턴트는 계속 작동합니다. 오두막, 원격 지역, 비상 대비에 유용합니다.',
           '**잃는 것:** 웹 검색, 독점 클라우드 스마트 홈 통합, 클라우드 서비스와의 캘린더 동기화, 그리고 Alexa/Siri가 엣지 케이스에서 유연하게 만드는 수년간의 RLHF 조정.',
-          '**스마트 홈 통합:** 로컬 음성 어시스턴트를 Home Assistant에 직접 연결하여 완전히 오프라인으로 음성으로 조명, 온도 조절기, 센서를 제어하십시오. 전체 Piper + Whisper + Home Assistant 설정 가이드는 [스마트 홈용 로컬 음성 어시스턴트 →](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.',
+          '**스마트 홈 통합:** 로컬 음성 어시스턴트를 Home Assistant에 직접 연결하여 음성으로 조명, 온도 조절기, 센서를 제어하십시오. 추론은 오프라인으로 실행됩니다. 전체 Piper + Whisper + Home Assistant 설정 가이드는 [스마트 홈용 로컬 음성 어시스턴트 →](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.',
         ],
       },
       architecture: {
@@ -2668,7 +2664,7 @@ if __name__ == "__main__":
       hardware: {
         id: 'hardware',
         title: '하드웨어 요구사항',
-        content: '지연시간과 비용순으로 정렬된 네 가지 하드웨어 수준. 모두 Whisper + LLM + Piper의 전체 스택을 지원합니다.',
+        content: '지연시간과 비용순으로 정렬된 네 가지 하드웨어 수준. 모두 Whisper + LLM + Piper의 전체 스택을 지원합니다. 수치는 각 하드웨어 등급의 일반적이거나 참고용 값이며 PromptQuorum이 측정한 것이 아닙니다.',
         columns: ['구성', 'STT 모델', 'LLM 모델', 'TTS', '총 비용', '엔드투엔드 지연시간'],
         rows: [
           {
@@ -2810,8 +2806,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -2964,14 +2960,14 @@ if __name__ == "__main__":
     title: 'Crie um assistente de voz totalmente offline em 2026: Whisper + LLM + Piper (passo a passo)',
     seoTitle: 'Assistente de voz local 2026: Whisper + LLM + Piper TTS',
     intro:
-      'Um assistente de voz totalmente offline em 2026 combina três componentes: whisper.cpp para o reconhecimento de voz, um LLM local (Llama 3.1 8B, Phi-4 ou Ministral 3 8B via Ollama) para o raciocínio, e Piper TTS para a saída de áudio. A latência de ponta a ponta em um equipamento de desktop com GPU é de 1 a 2 segundos. Em um Mac Mini M5, é inferior a 1,5 segundo. Em um Raspberry Pi 5, é de 5 a 8 segundos — suficiente para consultas mãos livres, não para conversas fluidas. Este guia percorre cada camada passo a passo, com tabelas de hardware, código do orquestrador Python, configuração da palavra de ativação e técnicas de otimização de latência.',
+      'Um assistente de voz totalmente offline em 2026 combina três componentes: whisper.cpp para o reconhecimento de voz, um LLM local (Llama 3.1 8B, Phi-4 ou Ministral 3 8B via Ollama) para o raciocínio, e Piper TTS para a saída de áudio. A latência de ponta a ponta em um equipamento de desktop com GPU costuma ser de 1 a 2 segundos. Em um Mac Mini M5, costuma ser inferior a 1,5 segundo. Em um Raspberry Pi 5, é de cerca de 5 a 8 segundos — suficiente para consultas mãos livres, não para conversas fluidas. Este guia percorre cada camada passo a passo, com tabelas de hardware, código do orquestrador Python, configuração da palavra de ativação e técnicas de otimização de latência.',
     metaDescription:
       'whisper.cpp (STT), Ollama + Llama 3.1 8B (raciocínio) e Piper TTS (áudio). Latência 1–2 s em GPU. Orquestrador Python e palavra de ativação. 2026.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-pt.webp',
     twitterDescription:
       'Assistente de voz offline DIY em 2026: Whisper STT + LLM local + Piper TTS. Sem nuvem, sem assinatura. Guia completo com especificações de hardware, código Python e configuração de palavra de ativação.',
     audience:
-      'Desenvolvedores e entusiastas que querem um assistente de voz privado e totalmente offline — um substituto para Siri ou Alexa que roda inteiramente em hardware próprio sem dependências de nuvem.',
+      'Desenvolvedores e entusiastas que querem um assistente de voz privado e totalmente offline — um substituto para Siri ou Alexa que roda localmente em hardware próprio após a configuração.',
     readTime: '14 min de leitura',
     educationalLevel: 'Advanced',
     primaryTerm: 'assistente de voz offline',
@@ -3003,7 +2999,7 @@ if __name__ == "__main__":
       'Mac Mini M5 (24 GB)',
     ],
     leadAnswerBlock:
-      '**Um assistente de voz totalmente offline em 2026 requer três componentes: whisper.cpp para o reconhecimento de voz, um LLM local via Ollama para o raciocínio e Piper TTS para a saída de áudio.** Os três se conectam por meio de um orquestrador Python que escuta o áudio, transcreve, envia ao LLM e converte a resposta em voz. Em um equipamento com uma RTX 3060 12 GB de VRAM, a latência de ponta a ponta é de 1 a 2 segundos com Llama 3.1 8B e Whisper small. Em um Mac Mini M5 (24 GB), a latência é de 1 a 1,5 segundo com os mesmos modelos sobre Apple Silicon. Em um Raspberry Pi 5 (8 GB), a latência é de 5 a 8 segundos com Phi-4-mini 3.8B — suficiente para consultas mãos livres com alguma paciência. Adicione um detector de palavra de ativação (OpenWakeWord ou Porcupine) para que o assistente fique sempre escutando sem executar o Whisper continuamente.',
+      '**Um assistente de voz totalmente offline em 2026 requer três componentes: whisper.cpp para o reconhecimento de voz, um LLM local via Ollama para o raciocínio e Piper TTS para a saída de áudio.** Os três se conectam por meio de um orquestrador Python que escuta o áudio, transcreve, envia ao LLM e converte a resposta em voz. Em um equipamento com uma RTX 3060 12 GB de VRAM, a latência de ponta a ponta costuma ser de 1 a 2 segundos com Llama 3.1 8B e Whisper small. Em um Mac Mini M5 (24 GB), a latência costuma ser de 1 a 1,5 segundo com os mesmos modelos sobre Apple Silicon. Em um Raspberry Pi 5 (8 GB), a latência é de cerca de 5 a 8 segundos com Phi-4-mini 3.8B — suficiente para consultas mãos livres com alguma paciência. Adicione um detector de palavra de ativação (OpenWakeWord ou Porcupine) para que o assistente fique sempre escutando sem executar o Whisper continuamente.',
     quickAnswerTop: {
       pt: {
         question: 'Como se constrói um assistente de voz totalmente offline em 2026?',
@@ -3045,8 +3041,8 @@ if __name__ == "__main__":
         title: 'Pontos principais',
         items: [
           '**O stack do assistente de voz offline é: whisper.cpp → Ollama LLM → Piper TTS, orquestrado por um script Python.** whisper.cpp, Ollama e Piper são software open-source e funcionam offline depois de instalados; os pesos do LLM seguem a sua própria licença (por exemplo, a licença comunitária do Llama 3.1; MIT no Phi-4).',
-          '**Latência de ponta a ponta em GPU de desktop (RTX 3060 12 GB): 1–2 segundos.** Uma latência nessa faixa costuma parecer natural na interação de voz; a PromptQuorum não a comparou com a Alexa nem com o Google Assistant. Use Whisper small e Llama 3.1 8B para esse resultado.',
-          '**O Raspberry Pi 5 (8 GB) é uma plataforma viável, mas lenta.** Com Phi-4-mini 3.8B e Whisper base, a latência é de 5–8 segundos. Útil para consultas mãos livres em que o usuário aceita uma pausa mais longa, não para conversas.',
+          '**Latência de ponta a ponta em GPU de desktop (RTX 3060 12 GB): normalmente 1–2 segundos.** Uma latência nessa faixa costuma parecer natural na interação de voz; a PromptQuorum não a comparou com a Alexa nem com o Google Assistant. Use Whisper small e Llama 3.1 8B para esse resultado.',
+          '**O Raspberry Pi 5 (8 GB) é uma plataforma viável, mas lenta.** Com Phi-4-mini 3.8B e Whisper base, a latência costuma ser de cerca de 5–8 segundos. Útil para consultas mãos livres em que o usuário aceita uma pausa mais longa, não para conversas.',
           '**O Mac Mini M5 (24 GB de memória unificada) é o ponto ideal entre qualidade e silêncio.** Silencioso em repouso, potente o suficiente para executar Llama 3.1 8B a ~50 tokens/s com Whisper large-v3 a 10× tempo real via Metal. Latência de 1–1,5 segundo.',
           '**Adicione uma palavra de ativação para não executar o Whisper continuamente.** OpenWakeWord (código Apache 2.0, modelos pré-treinados CC BY-NC-SA 4.0 não comerciais, palavras de ativação personalizadas) é uma opção open-source muito usada; verifique a licença antes de um uso comercial. O Porcupine (Picovoice) tem um nível gratuito para uso pessoal com palavras de ativação predefinidas como "Hey Jarvis".',
           '**A alucinação do Whisper no silêncio é o bug mais comum do pipeline.** O Whisper transcreverá o silêncio como palavras de preenchimento ou citações dos seus dados de treinamento. Defina um limiar mínimo de energia de áudio antes de passar o áudio ao Whisper e configure `--no-speech-threshold 0.6` no whisper.cpp.',
@@ -3077,7 +3073,7 @@ if __name__ == "__main__":
           '**Personalização:** Escolha a sua palavra de ativação, personalidade, system prompt e funcionalidades. Adicione comandos personalizados, conecte sistemas de automação residencial local e integre APIs locais.',
           '**Funcionamento offline:** Funciona sem internet. Um corte de energia (com nobreak) + um corte de internet: o seu assistente local continua funcionando. Útil em chalés, locais remotos e para preparação para emergências.',
           '**O que você abre mão:** Busca web, integração de automação residencial com nuvens proprietárias, sincronização de calendários com serviços na nuvem e os anos de ajuste com RLHF que tornam a Alexa/Siri fluidas em casos extremos.',
-          '**Integração com smart home:** Conecte o seu assistente de voz local diretamente ao Home Assistant para controlar luzes, termostatos e sensores por voz — completamente offline. Veja [assistente de voz local para smart home →](/pt/smart-home/local-voice-assistant-smart-home) para o guia completo de configuração Piper + Whisper + Home Assistant.',
+          '**Integração com smart home:** Conecte o seu assistente de voz local diretamente ao Home Assistant para controlar luzes, termostatos e sensores por voz — a inferência roda offline. Veja [assistente de voz local para smart home →](/pt/smart-home/local-voice-assistant-smart-home) para o guia completo de configuração Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {
@@ -3110,7 +3106,7 @@ if __name__ == "__main__":
         id: 'hardware',
         title: 'Requisitos de hardware',
         content:
-          'Quatro níveis de hardware, ordenados por latência e custo. Todos suportam o stack completo de Whisper + LLM + Piper.',
+          'Quatro níveis de hardware, ordenados por latência e custo. Todos suportam o stack completo de Whisper + LLM + Piper. Os números são valores típicos ou indicativos de cada classe de hardware, não medidos pela PromptQuorum.',
         columns: ['Configuração', 'Modelo STT', 'Modelo LLM', 'TTS', 'Custo total', 'Latência ponta a ponta'],
         rows: [
           {
@@ -3256,8 +3252,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
@@ -3414,14 +3410,14 @@ if __name__ == "__main__":
     title: 'بناء مساعد صوتي يعمل بالكامل دون اتصال ⁨2026⁩: ⁨Whisper⁩ + نموذج لغة + ⁨Piper⁩ (خطوة بخطوة)',
     seoTitle: 'مساعد صوتي لا اتصال ⁨2026⁩: ⁨Whisper + LLM + Piper TTS⁩',
     intro:
-      'يجمع المساعد الصوتي الذي يعمل دون اتصال بالكامل في 2026 بين ثلاثة مكونات: whisper.cpp للتعرف على الكلام، ونموذج لغة محلي (Llama 3.1 8B أو Phi-4 أو Ministral 3 8B عبر Ollama) للاستدلال، وPiper TTS للإخراج الصوتي. يبلغ زمن الاستجابة الكامل على حاسوب مكتبي مزود ببطاقة رسومات 1 إلى 2 ثانية. أما على جهاز Mac Mini M5 فيقل عن 1.5 ثانية. وعلى Raspberry Pi 5 يتراوح بين 5 و8 ثوانٍ — كافٍ للاستفسارات الحرّة اليدين، غير مناسب للمحادثات السلسة. يستعرض هذا الدليل كل طبقة خطوة بخطوة، مع جداول الأجهزة وكود منسّق Python للتنسيق وإعداد كلمة التنبيه وتقنيات تحسين زمن الاستجابة.',
+      'يجمع المساعد الصوتي الذي يعمل دون اتصال بالكامل في 2026 بين ثلاثة مكونات: whisper.cpp للتعرف على الكلام، ونموذج لغة محلي (Llama 3.1 8B أو Phi-4 أو Ministral 3 8B عبر Ollama) للاستدلال، وPiper TTS للإخراج الصوتي. يبلغ زمن الاستجابة الكامل على حاسوب مكتبي مزود ببطاقة رسومات عادةً 1 إلى 2 ثانية. أما على جهاز Mac Mini M5 فيقل عادةً عن 1.5 ثانية. وعلى Raspberry Pi 5 يتراوح تقريباً بين 5 و8 ثوانٍ — كافٍ للاستفسارات الحرّة اليدين، غير مناسب للمحادثات السلسة. يستعرض هذا الدليل كل طبقة خطوة بخطوة، مع جداول الأجهزة وكود منسّق Python للتنسيق وإعداد كلمة التنبيه وتقنيات تحسين زمن الاستجابة.',
     metaDescription:
       'whisper.cpp + Ollama + Piper TTS بدون سحابة. زمن استجابة 1–2 ثانية على RTX 3060، وأقل من 1.5 ثانية على Mac Mini M5. كود Python وكلمة التنبيه.',
     heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-ar.webp',
     twitterDescription:
       'مساعد صوتي DIY دون اتصال 2026: Whisper STT + نموذج لغة محلي + Piper TTS. بدون سحابة، بدون اشتراك. دليل شامل مع مواصفات الأجهزة وكود Python وإعداد كلمة التنبيه.',
     audience:
-      'مطوّرون وهواة يريدون مساعداً صوتياً خاصاً يعمل بالكامل دون اتصال — بديل لـ Siri أو Alexa يعمل كلياً على أجهزتهم الخاصة بدون تبعيات سحابية.',
+      'مطوّرون وهواة يريدون مساعداً صوتياً خاصاً يعمل بالكامل دون اتصال — بديل لـ Siri أو Alexa يعمل محلياً على أجهزتهم الخاصة بعد الإعداد.',
     readTime: '14 دقيقة قراءة',
     educationalLevel: 'Advanced',
     primaryTerm: 'مساعد صوتي بدون اتصال',
@@ -3453,7 +3449,7 @@ if __name__ == "__main__":
       'Mac Mini M5 (24 GB)',
     ],
     leadAnswerBlock:
-      '**يتطلب المساعد الصوتي العامل دون اتصال في 2026 ثلاثة مكونات: whisper.cpp للتعرف على الكلام، ونموذج لغة محلي عبر Ollama للاستدلال، وPiper TTS للإخراج الصوتي.** تتصل المكونات الثلاثة عبر منسّق Python يستمع للصوت ويُحوّله إلى نص يرسله للنموذج ثم يحوّل الرد إلى كلام. على حاسوب مزود ببطاقة RTX 3060 بسعة 12 GB من VRAM، يبلغ زمن الاستجابة الكامل 1–2 ثانية مع Llama 3.1 8B وWhisper small. على Mac Mini M5 بذاكرة 24 GB يتراوح بين 1 و1.5 ثانية مع نفس النماذج على Apple Silicon. وعلى Raspberry Pi 5 بذاكرة 8 GB يتراوح بين 5 و8 ثوانٍ مع Phi-4-mini 3.8B — كافٍ للاستفسارات الحرّة مع بعض التسامح. أضف كاشف كلمة التنبيه (OpenWakeWord أو Porcupine) لكي يظل المساعد في وضع الاستماع دون تشغيل Whisper باستمرار.',
+      '**يتطلب المساعد الصوتي العامل دون اتصال في 2026 ثلاثة مكونات: whisper.cpp للتعرف على الكلام، ونموذج لغة محلي عبر Ollama للاستدلال، وPiper TTS للإخراج الصوتي.** تتصل المكونات الثلاثة عبر منسّق Python يستمع للصوت ويُحوّله إلى نص يرسله للنموذج ثم يحوّل الرد إلى كلام. على حاسوب مزود ببطاقة RTX 3060 بسعة 12 GB من VRAM، يبلغ زمن الاستجابة الكامل عادةً 1–2 ثانية مع Llama 3.1 8B وWhisper small. على Mac Mini M5 بذاكرة 24 GB يتراوح عادةً بين 1 و1.5 ثانية مع نفس النماذج على Apple Silicon. وعلى Raspberry Pi 5 بذاكرة 8 GB يتراوح تقريباً بين 5 و8 ثوانٍ مع Phi-4-mini 3.8B — كافٍ للاستفسارات الحرّة مع بعض التسامح. أضف كاشف كلمة التنبيه (OpenWakeWord أو Porcupine) لكي يظل المساعد في وضع الاستماع دون تشغيل Whisper باستمرار.',
     quickAnswerTop: {
       ar: {
         question: 'كيف تبني مساعداً صوتياً يعمل بالكامل دون اتصال في 2026؟',
@@ -3495,8 +3491,8 @@ if __name__ == "__main__":
         title: 'النقاط الرئيسية',
         items: [
           '**مكدّس المساعد الصوتي دون اتصال هو: whisper.cpp ← نموذج LLM عبر Ollama ← Piper TTS، منسَّق بسكريبت Python.** whisper.cpp وOllama وPiper برمجيات مفتوحة المصدر وتعمل دون اتصال بعد التثبيت؛ أما أوزان نموذج LLM فتخضع لرخصتها الخاصة (مثلاً رخصة مجتمع Llama 3.1، وMIT لنموذج Phi-4).',
-          '**زمن الاستجابة الكامل على GPU مكتبي (RTX 3060 بـ 12 GB): 1–2 ثانية.** زمن استجابة بهذا المدى يبدو عادةً طبيعياً في التفاعل الصوتي؛ ولم تُجرِ PromptQuorum مقارنة قياسية مع Alexa أو Google Assistant. استخدم Whisper small وLlama 3.1 8B لهذه النتيجة.',
-          '**جهاز Raspberry Pi 5 (8 GB) منصة مجدية لكن بطيئة.** مع Phi-4-mini 3.8B وWhisper base، يتراوح زمن الاستجابة بين 5 و8 ثوانٍ. مفيد للاستفسارات الحرّة التي يتقبل فيها المستخدم توقفاً أطول، لا للمحادثات.',
+          '**زمن الاستجابة الكامل على GPU مكتبي (RTX 3060 بـ 12 GB): عادةً 1–2 ثانية.** زمن استجابة بهذا المدى يبدو عادةً طبيعياً في التفاعل الصوتي؛ ولم تُجرِ PromptQuorum مقارنة قياسية مع Alexa أو Google Assistant. استخدم Whisper small وLlama 3.1 8B لهذه النتيجة.',
+          '**جهاز Raspberry Pi 5 (8 GB) منصة مجدية لكن بطيئة.** مع Phi-4-mini 3.8B وWhisper base، يتراوح زمن الاستجابة تقريباً بين 5 و8 ثوانٍ. مفيد للاستفسارات الحرّة التي يتقبل فيها المستخدم توقفاً أطول، لا للمحادثات.',
           '**جهاز Mac Mini M5 (ذاكرة موحدة 24 GB) هو النقطة المثلى بين الجودة والهدوء.** هادئ في وضع الاستعداد، قوي بما يكفي لتشغيل Llama 3.1 8B بـ ~50 رمزاً/ثانية مع Whisper large-v3 بسرعة 10× أسرع من الوقت الفعلي عبر Metal. زمن استجابة 1–1.5 ثانية.',
           '**أضف كلمة تنبيه لتجنب تشغيل Whisper باستمرار.** OpenWakeWord (الكود Apache 2.0، النماذج المدرَّبة مسبقاً CC BY-NC-SA 4.0 غير تجارية، كلمات تنبيه مخصصة) خيار مفتوح المصدر شائع الاستخدام؛ تحقق من الرخصة قبل الاستخدام التجاري. Porcupine (Picovoice) لديه مستوى مجاني للاستخدام الشخصي مع كلمات تنبيه محددة مسبقاً مثل "Hey Jarvis".',
           '**هلوسة Whisper في الصمت هي أكثر أخطاء المسار شيوعاً.** سيُحوّل Whisper الصمت إلى كلمات حشو أو اقتباسات من بيانات التدريب. حدد حداً أدنى لطاقة الصوت قبل تمرير الصوت لـ Whisper واضبط `--no-speech-threshold 0.6` في whisper.cpp.',
@@ -3527,7 +3523,7 @@ if __name__ == "__main__":
           '**التخصيص:** اختر كلمة التنبيه والشخصية وكلمة النظام والوظائف. أضف أوامر مخصصة وصل أنظمة المنزل الذكي المحلية وادمج واجهات API محلية.',
           '**التشغيل دون اتصال:** يعمل بدون إنترنت. انقطاع الكهرباء (مع UPS) + انقطاع الإنترنت: مساعدك المحلي لا يزال يعمل. مفيد في الأكواخ والمواقع البعيدة وللتأهب للطوارئ.',
           '**ما تخسره:** البحث على الويب والتكامل مع المنازل الذكية ذات السحب الاحتكارية ومزامنة التقويم مع خدمات السحابة وسنوات الضبط الدقيق التي تجعل Alexa/Siri سلسة في الحالات الحدية.',
-          '**التكامل مع المنزل الذكي:** صل مساعدك الصوتي المحلي مباشرةً بـ Home Assistant للتحكم في الأضواء والترموستات والمستشعرات بالصوت — بالكامل دون اتصال. راجع [المساعد الصوتي المحلي للمنزل الذكي ←](/ar/smart-home/local-voice-assistant-smart-home) للدليل الكامل لإعداد Piper + Whisper + Home Assistant.',
+          '**التكامل مع المنزل الذكي:** صل مساعدك الصوتي المحلي مباشرةً بـ Home Assistant للتحكم في الأضواء والترموستات والمستشعرات بالصوت — يعمل الاستدلال دون اتصال. راجع [المساعد الصوتي المحلي للمنزل الذكي ←](/ar/smart-home/local-voice-assistant-smart-home) للدليل الكامل لإعداد Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {
@@ -3560,7 +3556,7 @@ if __name__ == "__main__":
         id: 'hardware',
         title: 'متطلبات الأجهزة',
         content:
-          'أربعة مستويات من الأجهزة مرتبة حسب زمن الاستجابة والتكلفة. كلها تدعم مكدّس Whisper + نموذج اللغة + Piper الكامل.',
+          'أربعة مستويات من الأجهزة مرتبة حسب زمن الاستجابة والتكلفة. كلها تدعم مكدّس Whisper + نموذج اللغة + Piper الكامل. الأرقام قيم نموذجية أو إرشادية لكل فئة من الأجهزة، ولم تقيسها PromptQuorum.',
         columns: ['الإعداد', 'نموذج STT', 'نموذج اللغة', 'TTS', 'التكلفة الإجمالية', 'زمن الاستجابة الكامل'],
         rows: [
           {
@@ -3706,8 +3702,8 @@ def ask_llm(text: str) -> str:
 def speak(text: str) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         subprocess.run(
-            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
-            shell=True, check=True
+            [PIPER_BIN, "--model", PIPER_VOICE, "--output_file", f.name],
+            input=text.encode("utf-8"), check=True
         )
         data, sr = sf.read(f.name)
         sd.play(data, sr)
