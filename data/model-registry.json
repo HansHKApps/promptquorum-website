@@ -3717,6 +3717,30 @@
       "source_url": "https://ai.google.dev/gemma/docs",
       "verified_date": "2026-10-25",
       "notes": "Google's multimodal embedding model per ai.google.dev/gemma/docs (2026-10-25 fetch via agent). Accepts text, image, audio, and video input; designed for RAG and semantic search. Part of the Gemma family alongside Gemma 4 and ShieldGemma 2. Note: the ai.google.dev docs portal itself now carries a deprecation banner redirecting to gemma.ai — the model is not deprecated, only the docs URL is changing."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek V4 Pro",
+      "type": "open-weight",
+      "release_date": "2026-08-13",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://api-docs.deepseek.com/updates/",
+      "verified_date": "2026-11-09",
+      "notes": "Release date = GA of DeepSeek-V4-Pro per DeepSeek's changelog entry of 2026-08-13 (API id deepseek-v4-pro); the preview was released 2026-04-24 (1.6T total / 49B active, 1M context, per the V4 Preview news page). The GA weights repo deepseek-ai/DeepSeek-V4-Pro-0813 lists 1.7T params and the MIT license on its Hugging Face card; no active-parameter count or context window is stated there. CONFLICT in DeepSeek's own pages, unresolved: the 2026-09-10 news page says V4 Pro is being phased out and deepseek-v4-pro requests route to V4.1-Flash from 2026-09-14, while the changelog entry of the same day says API service for V4 Pro continues after 2026-09-14. No V4.1 Pro was found on the pages read. Do not state a successor until DeepSeek publishes one."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek V4.1 Flash",
+      "type": "open-weight",
+      "release_date": "2026-09-10",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://api-docs.deepseek.com/news/news260910/",
+      "verified_date": "2026-11-09",
+      "notes": "Family-level entry for DeepSeek-V4.1-Flash (API id deepseek-flash). 552B-parameter MoE with 8B active parameters for input and 16B for output, native visual understanding, open weights on Hugging Face (all per the 2026-09-10 news page). Retired DeepSeek V4-Flash and V4-Flash-Vision-Exp. Upgraded in place to DeepSeek-V4.1-Flash-1017 on 2026-10-17 under the same API name (see that entry). License is not stated on the pages read and is unverified: check the Hugging Face card before citing it."
     }
   ],
   "sources": [
