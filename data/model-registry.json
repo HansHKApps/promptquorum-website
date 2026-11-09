@@ -2932,11 +2932,11 @@
       "model": "LFM2-350M",
       "type": "open-weight",
       "release_date": "2025-07",
-      "status": "current",
+      "status": "deprecated",
       "superseded_by": null,
-      "source_url": "https://huggingface.co/LiquidAI/LFM2-350M",
-      "verified_date": "2026-09-25",
-      "notes": "Smallest dense LFM2 size. Family also ships 700M, 1.2B, 2.6B dense sizes plus an 8.3B-A1.5B MoE variant, all 32K context."
+      "source_url": "https://www.liquid.ai/models",
+      "verified_date": "2026-11-09",
+      "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Smallest dense LFM2 size. Family also ships 700M, 1.2B, 2.6B dense sizes plus an 8.3B-A1.5B MoE variant, all 32K context."
     },
     {
       "company": "Liquid AI",
@@ -2944,11 +2944,11 @@
       "model": "LFM2-700M",
       "type": "open-weight",
       "release_date": "2025-07",
-      "status": "current",
+      "status": "deprecated",
       "superseded_by": null,
-      "source_url": "https://huggingface.co/LiquidAI/LFM2-700M",
-      "verified_date": "2026-09-25",
-      "notes": "Dense LFM2 size."
+      "source_url": "https://www.liquid.ai/models",
+      "verified_date": "2026-11-09",
+      "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Dense LFM2 size."
     },
     {
       "company": "Liquid AI",
@@ -2956,11 +2956,11 @@
       "model": "LFM2-1.2B",
       "type": "open-weight",
       "release_date": "2025-07",
-      "status": "current",
+      "status": "deprecated",
       "superseded_by": null,
-      "source_url": "https://huggingface.co/LiquidAI/LFM2-1.2B",
-      "verified_date": "2026-09-25",
-      "notes": "Dense LFM2 size."
+      "source_url": "https://www.liquid.ai/models",
+      "verified_date": "2026-11-09",
+      "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Dense LFM2 size."
     },
     {
       "company": "Liquid AI",
@@ -2968,11 +2968,11 @@
       "model": "LFM2-2.6B",
       "type": "open-weight",
       "release_date": "2025-07",
-      "status": "current",
+      "status": "deprecated",
       "superseded_by": null,
-      "source_url": "https://huggingface.co/LiquidAI/LFM2-2.6B",
-      "verified_date": "2026-09-25",
-      "notes": "Largest dense LFM2 size."
+      "source_url": "https://www.liquid.ai/models",
+      "verified_date": "2026-11-09",
+      "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Largest dense LFM2 size."
     },
     {
       "company": "Nous Research",
@@ -3711,12 +3711,12 @@
       "family": "Gemma",
       "model": "EmbeddingGemma 2",
       "type": "open-weight",
-      "release_date": null,
+      "release_date": "2026-10-06",
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://ai.google.dev/gemma/docs",
-      "verified_date": "2026-10-25",
-      "notes": "Google's multimodal embedding model per ai.google.dev/gemma/docs (2026-10-25 fetch via agent). Accepts text, image, audio, and video input; designed for RAG and semantic search. Part of the Gemma family alongside Gemma 4 and ShieldGemma 2. Note: the ai.google.dev docs portal itself now carries a deprecation banner redirecting to gemma.ai — the model is not deprecated, only the docs URL is changing."
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2",
+      "verified_date": "2026-11-09",
+      "notes": "Released 2026-10-06 per the Gemma releases page and Google's blog of the same date. 740M total parameters (270M text model plus 170M vision and 300M audio encoders), 8,192-token context, Apache 2.0 per the model card, built on the Gemma 4 architecture; text, images, video and audio map into one 768-dimension space. The original EmbeddingGemma (300M, 2025-09-04) is its 'predecessor' but is not stated to be retired. (Earlier note: Google's multimodal embedding model per ai.google.dev/gemma/docs (2026-10-25 fetch via agent). Accepts text, image, audio, and video input; designed for RAG and semantic search. Part of the Gemma family alongside Gemma 4 and ShieldGemma 2. Note: the ai.google.dev docs portal itself now carries a dep)"
     },
     {
       "company": "DeepSeek",
@@ -3789,6 +3789,54 @@
       "release_date": "2026-10-15",
       "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
       "notes": "Covers the 74B-A9B 24GB checkpoint: Hugging Face card 'Release Date 10/15/2026'. 74B total / 9B active, 2-bit (IQ2) quantization-aware, up to 256K-token context, image/video/text input, license OpenMDW 1.1. Per the card it was compressed from Nemotron 3.5 Super VL 120B-A12B. A smaller 'Bolt E4B 4GB' is announced for 2026-10-23 on NVIDIA's blog only; no other facts were found and it is not registered."
+    },
+    {
+      "company": "Google",
+      "type": "open-weight",
+      "verified_date": "2026-11-09",
+      "superseded_by": null,
+      "family": "Gemma",
+      "model": "TranslateGemma",
+      "release_date": "2026-01-15",
+      "status": "current",
+      "source_url": "https://ai.google.dev/gemma/docs/releases",
+      "notes": "Releases page entry of January 15, 2026: TranslateGemma in 4B, 12B and 27B sizes; Google's blog of 2026-01-15 says it is built on Gemma 3 (Hugging Face card: fine-tuned from the original Gemma 3 checkpoints). License tag on the Hugging Face card: gemma (Gemma terms). Card states a total input context of 2K tokens. No page read names a newer TranslateGemma or a Gemma 4 based translation model."
+    },
+    {
+      "company": "Google",
+      "type": "open-weight",
+      "verified_date": "2026-11-09",
+      "superseded_by": null,
+      "family": "Gemma",
+      "model": "EmbeddingGemma",
+      "release_date": "2025-09-04",
+      "status": "current",
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+      "notes": "Original 300M-parameter EmbeddingGemma, released 2025-09-04 per the Gemma releases page; built from Gemma 3 (with T5Gemma initialization), maximum input context 2K, 768-dimension output (512/256/128 via MRL). EmbeddingGemma 2 (2026-10-06) calls it its 'predecessor' and EmbeddingGemma 1 in benchmark tables, but no page read says the original is superseded, retired or deprecated; the two differ in size and modality (v2: 740M, multimodal), so this entry stays current. Do not state a license from the model card: it names none, only the Gemma terms link."
+    },
+    {
+      "company": "Google",
+      "type": "open-weight",
+      "verified_date": "2026-11-09",
+      "superseded_by": "Gemma 4",
+      "family": "Gemma",
+      "model": "Gemma 1.1 7B",
+      "release_date": "2024-04-05",
+      "status": "superseded",
+      "source_url": "https://huggingface.co/google/gemma-1.1-7b-it",
+      "notes": "Gemma 1.1 release dated April 5, 2024 on the Gemma releases page; the original 2B/7B Gemma release was February 21, 2024. 7B instruction-tuned card tag: license gemma. GENERATION-LEVEL status, following the registry's existing treatment of Gemma 2 and Gemma 3 (both superseded by Gemma 4): Google's pages do NOT say Gemma 1.1 is deprecated, and its card says the previous model stays available in the same repo. A mention of Gemma 1.1 7B as a model an app can load is a factual statement, not an out-of-date recommendation."
+    },
+    {
+      "company": "Liquid AI",
+      "family": "LFM",
+      "type": "open-weight",
+      "model": "LFM2.5",
+      "release_date": "2026-01-05",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://www.liquid.ai/models",
+      "verified_date": "2026-11-09",
+      "notes": "Family-level entry. LFM2.5 launched with the blog post of 2026-01-05. Liquid's models page (2026-11-09 fetch) lists as current: LFM2.5-1.2B-Instruct, -1.2B-Thinking, -230M, -350M, -8B-A1B, -24B-A2B, and VL-450M, VL-1.6B, VL-3B (VL-3B blog 2026-08-12; 32,768-token context per its card). Listed as DEPRECATED on the same page: LFM2.5-2.6B, LFM2.5-1.2B-JP-202606 and LFM2.5-Audio-1.5B. A newer generation, LFM3, was announced 2026-10-27 and is listed alongside LFM2.5; the page does not call LFM2.5 legacy. LICENSE: the page says every LFM is free to download, run and fine-tune, including commercially, until a company passes $10M in annual revenue (link text 'LFM License'; Hugging Face tag lfm1.0). That is not an open-source licence."
     }
   ],
   "sources": [
