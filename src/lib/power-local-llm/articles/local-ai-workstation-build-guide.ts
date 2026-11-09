@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-en.webp',
@@ -34,7 +34,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -67,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Budget build ~$2,000: RTX 4060 Ti 16 GB, runs 7B-13B models',
           'Mid build ~$3,100: RTX 4070 Ti Super 16 GB, runs 14B-33B models',
-          'Enthusiast build ~$9,600: RTX 5090 32 GB, runs 70B models at Q4',
+          'Enthusiast build ~$9,600: RTX 5090 32 GB, runs 70B models only with aggressive quantization or partial offload',
           'GPU, RAM, and SSD prices all surged in 2026 — compare new and used, because used no longer reliably costs less',
         ],
         updatedDate: '2026-10',
@@ -97,9 +96,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**The GPU sets the tier; the rest of the build supports it.** A local-AI PC is chosen GPU-first because VRAM decides which models run. Pick the tier whose GPU VRAM fits your target model, then size the CPU, RAM, and power supply around it.',
           '**2026 prices raised every build cost.** A memory-chip shortage pushed GPUs, DDR5 RAM, and SSDs far above last year\'s prices. The totals here are built from current asking-price floors and run well above what the same parts cost a year ago — and RAM is now a major cost line, not an afterthought.',
-          '**Budget build (~$2,000):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W PSU — runs 7B-13B models at usable speed. The cheapest complete machine for local AI.',
+          '**Budget build (~$2,000):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W PSU — runs 7B-13B models at usable speed. The lowest-cost of the three builds in this guide.',
           '**Mid build (~$3,100):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850 W PSU — runs 14B-33B models and makes 7B-14B feel instant.',
-          '**Enthusiast build (~$9,600):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W PSU — the only single-GPU build that fits a 70B model at Q4. The RTX 5090 alone now costs more than the whole mid build.',
+          '**Enthusiast build (~$9,600):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W PSU — the only one of the three builds here that can run a 70B model on a single GPU, and only with aggressive quantization or partial offload to system RAM. The RTX 5090 alone now costs more than the whole mid build.',
           '**RAM is not a substitute for VRAM.** System RAM lets a model spill out of VRAM, but a model running from RAM is too slow for interactive use. Buy enough VRAM for the model; buy RAM for the operating system and tooling.',
           '**The power supply scales with the GPU.** A budget build needs 650 W, the mid build 850 W, and the enthusiast build 1000 W because the RTX 5090 alone draws 575 W. Budget the PSU alongside the card.',
           '**Used is no longer a guaranteed discount.** In late 2026 several used cards list at or above the cheapest new listing, so compare both before buying. A verified-working used card is still worth taking when it is clearly cheaper — but never assume it is.',
@@ -111,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Budget build (~$2,000):** RTX 4060 Ti 16 GB GPU — runs 7B and most 13B models.',
           '**Mid build (~$3,100):** RTX 4070 Ti Super 16 GB GPU — runs 14B comfortably, light 22B-33B work.',
-          '**Enthusiast build (~$9,600):** RTX 5090 32 GB GPU — runs 33B comfortably and 70B at Q4.',
+          '**Enthusiast build (~$9,600):** RTX 5090 32 GB GPU — runs 33B comfortably; 70B only with aggressive quantization or partial offload.',
           '**VRAM rule of thumb at Q4_K_M:** roughly 0.6 GB per billion parameters, plus 2-4 GB for context and tooling.',
           '**System RAM guidance:** 32 GB for the budget build, 64 GB for the mid build, 128 GB for the enthusiast build.',
           '**Power supply by tier:** 650 W budget, 850 W mid, 1000 W enthusiast — the RTX 5090 draws 575 W on its own.',
@@ -123,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Editor\'s Choice: The Mid Build (~$3,100)',
         highlight: true,
         content:
-          '**For most buyers building a PC for local AI, the mid build is the tier that balances capability, cost, and headroom.** Built around an RTX 4070 Ti Super 16 GB, it runs every 14B model with context room, handles light 22B-33B work, and makes 7B-14B models feel instant — for roughly $3,100 all in. It is the build that will not frustrate you within months and will not need replacing within a year. Drop to the budget build only if your ceiling is firmly 7B-13B models; step up to the enthusiast build only if you specifically need 70B work. The mid build is the safe default for a machine you want to keep.',
+          '**For most buyers building a PC for local AI, the mid build is the tier that balances capability, cost, and headroom.** Built around an RTX 4070 Ti Super 16 GB, it runs every 14B model with context room, handles light 22B-33B work, and makes 7B-14B models feel instant — for roughly $3,100 all in. It should stay usable for most 14B-class workloads for a good while, but model sizes and prices change. Drop to the budget build only if your ceiling is firmly 7B-13B models; step up to the enthusiast build only if you specifically need 70B work. The mid build is a sensible default for a machine you want to keep.',
         callouts: [
           {
             type: 'note',
@@ -151,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Three Build Tiers Compare in 2026',
         content:
-          'GPU VRAM and power figures are manufacturer specifications. Inference speeds are family-level estimates from PromptQuorum GPU testing for the tier\'s GPU. Build totals are US estimates that sum the midpoint of each price range shown in the build sections, built from current asking-price floors — the 2026 memory shortage pushed GPUs, DDR5 RAM, and SSDs far above normal, so the GPU and RAM lines dominate each total and move week to week. Compare new and used GPU listings: used no longer always costs less.',
+          'GPU VRAM and power figures are manufacturer specifications. Inference speeds are rough, typical figures for each tier\'s GPU class (not measured by PromptQuorum); real speed varies with quantization, runtime and context length. Build totals are US estimates that sum the midpoint of each price range shown in the build sections, built from current asking-price floors — the 2026 memory shortage pushed GPUs, DDR5 RAM, and SSDs far above normal, so the GPU and RAM lines dominate each total and move week to week. Compare new and used GPU listings: used no longer always costs less.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Local AI PC build tiers compared: RTX 4060 Ti 16GB budget build (~$2,000) runs 7B-13B models, RTX 4070 Ti Super 16GB mid build (~$3,100) runs 14B-33B models, RTX 5090 32GB enthusiast build (~$9,600) runs 33B-70B models.',
         snippetBlocks: [
@@ -186,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Build tier': 'Enthusiast',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            'Runs': '33B comfortably, 70B at Q4',
+            'Runs': '33B comfortably, 70B only with aggressive quantization or partial offload',
             'PSU': '1000 W',
             'Total (2026)': '~$9,600',
           },
@@ -199,12 +198,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Your largest target model decides the tier; your budget confirms it.** Find the row that matches your situation.',
         columns: ['Your situation', 'Build this'],
         rows: [
-          { 'Your situation': 'I run 7B-13B models and want the cheapest complete machine', 'Build this': 'Budget build (~$2,000)' },
+          { 'Your situation': 'I run 7B-13B models and want the lowest-cost of the three builds in this guide', 'Build this': 'Budget build (~$2,000)' },
           { 'Your situation': 'I want a first local-AI PC and am not sure how far I will go', 'Build this': 'Budget build, or mid build for headroom' },
           { 'Your situation': 'I run 14B models constantly and want them instant', 'Build this': 'Mid build (~$3,100)' },
           { 'Your situation': 'I do light 22B-33B work and want a machine that lasts', 'Build this': 'Mid build (~$3,100)' },
           { 'Your situation': 'I run 33B models heavily or want strong future headroom', 'Build this': 'Enthusiast build (~$9,600)' },
-          { 'Your situation': 'I need a single-GPU machine that runs 70B models at Q4', 'Build this': 'Enthusiast build (~$9,600)' },
+          { 'Your situation': 'I need a single-GPU machine that can run 70B models only with aggressive quantization or partial offload', 'Build this': 'Enthusiast build (~$9,600)' },
           { 'Your situation': 'I want to keep the total down despite the 2026 surge', 'Build this': 'Any tier — compare new and used GPU listings' },
           { 'Your situation': 'I am unsure and want the safest build to keep for years', 'Build this': 'Mid build — the Editor\'s Choice' },
         ],
@@ -213,9 +212,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'Budget Build (~$2,000): RTX 4060 Ti 16 GB',
         content:
-          '**The budget build is the cheapest complete local-AI PC and runs every 7B model plus most 13B models — enough capability for most first-time users.** It is built around the RTX 4060 Ti 16 GB, the lowest-priced 16 GB card in this guide, which keeps the total as low as the 2026 shortage allows.',
+          '**The budget build is the lowest-cost of the three builds in this guide and runs every 7B model plus most 13B models — enough capability for most first-time users.** It is built around the RTX 4060 Ti 16 GB, the lowest-priced 16 GB card in this guide, which keeps the total as low as the 2026 shortage allows.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (~$650-800):** 16 GB VRAM, 165 W. Runs 7B models at roughly 20-25 tok/s and fits 14B models with context headroom. The 16 GB capacity is the reason to pick it over the 8 GB version. The range runs from the cheapest used listing to the cheapest new one.',
+          '**GPU — RTX 4060 Ti 16 GB (~$650-800):** 16 GB VRAM, 165 W. Typical speed for this GPU class is roughly 20-25 tok/s on 7B models (not measured by PromptQuorum; varies with quantization and context), and 14B models fit with context headroom. The 16 GB capacity is the reason to pick it over the 8 GB version. The range runs from the cheapest used listing to the cheapest new one.',
           '**CPU — AMD Ryzen 7 7700 (~$250-280):** 8 cores, modest power draw. The CPU does little work during GPU inference, so a mid-range chip is correct here — do not overspend on the CPU in this tier.',
           '**Motherboard — B650 chipset (~$130-160):** supports the Ryzen 7 and a single full-size GPU on PCIe. No need for high-end power delivery at this tier.',
           '**RAM — 32 GB DDR5 (~$430-575):** enough for the operating system, tooling, and a 7B-13B model running in VRAM. RAM is not a VRAM substitute — 32 GB is sufficient here, but DDR5 is now the second-largest line in this build.',
@@ -307,9 +306,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'Enthusiast Build (~$9,600): RTX 5090 32 GB',
         content:
-          '**The enthusiast build is the only single-GPU machine that fits a 70B model at Q4 — its RTX 5090 32 GB is the headline part.** Build this tier for VRAM capacity, not raw speed; the speed is a side effect. The 2026 surge hit this tier hardest — the RTX 5090 listed far above its $1,999 launch price — so the GPU and RAM lines dominate and move week to week.',
+          '**Of the three builds here, only the enthusiast build can run a 70B model on a single GPU, and only with aggressive quantization or partial offload to system RAM — its RTX 5090 32 GB is the headline part.** Build this tier for VRAM capacity, not raw speed; the speed is a side effect. The 2026 surge hit this tier hardest — the RTX 5090 listed far above its $1,999 launch price — so the GPU and RAM lines dominate and move week to week.',
         items: [
-          '**GPU — RTX 5090 32 GB (~$4,900-5,900):** 32 GB GDDR7 VRAM, 575 W. The only single consumer card that runs a 70B model at Q4 without a dual-GPU build. It runs 33B models comfortably with room to spare. The range runs from the cheapest new listing to the cheapest used one; some retailers list it higher still.',
+          '**GPU — RTX 5090 32 GB (~$4,900-5,900):** 32 GB GDDR7 VRAM, 575 W. The largest-VRAM single GPU in this guide; without a dual-GPU build it runs a 70B model only with aggressive quantization or partial offload to system RAM. It runs 33B models comfortably with room to spare. The range runs from the cheapest new listing to the cheapest used one; some retailers list it higher still.',
           '**CPU — AMD Ryzen 9 7950X (~$450-520):** 16 cores. Enough to run data preparation, fine-tuning experiments, and tooling alongside heavy inference.',
           '**Motherboard — X670E chipset (~$280-380):** strong power delivery and PCIe 5.0, sized for a 575 W GPU and the 16-core CPU.',
           '**RAM — 128 GB DDR5 (~$1,650-2,400, estimated):** room for large context windows, multiple models loaded at once, and tooling — and the headroom to spill a model partially to RAM if needed. Few 128 GB kits list reliably, so this range doubles the 64 GB range; a 64 GB kit (~$815-1,200) is the budget-saving alternative.',
@@ -507,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can a single-GPU build run a 70B model?',
-            a: 'Yes, the enthusiast build can. An RTX 5090 32 GB is the only single consumer card that fits a 70B model at Q4, which needs roughly 39-42 GB of VRAM — so it runs 70B with aggressive quantization or partial offload to system RAM. The 128 GB of RAM in the enthusiast build gives that offload the room it needs.',
+            a: 'Yes, the enthusiast build can. An RTX 5090 32 GB has the most VRAM of any single GPU in this guide, but a 70B model at Q4 needs roughly 39-42 GB — so it runs 70B only with aggressive quantization or partial offload to system RAM. The 128 GB of RAM in the enthusiast build gives that offload the room it needs.',
           },
           {
             q: 'Is the mid build worth the extra cost over the budget build?',
@@ -537,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-de.webp',
@@ -554,7 +553,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -587,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Budget-Build ca. 2.200 €: RTX 4060 Ti 16 GB, führt 7B- bis 13B-Modelle aus',
           'Mittelklasse-Build ca. 3.450 €: RTX 4070 Ti Super 16 GB, führt 14B- bis 33B-Modelle aus',
-          'Enthusiasten-Build ca. 10.700 €: RTX 5090 32 GB, führt 70B-Modelle bei Q4 aus',
+          'Enthusiasten-Build ca. 10.700 €: RTX 5090 32 GB, führt 70B-Modelle nur mit aggressiver Quantisierung oder teilweiser Auslagerung aus',
           'GPU-, RAM- und SSD-Preise sind 2026 alle stark gestiegen — vergleichen Sie neu und gebraucht, denn gebraucht ist nicht mehr verlässlich günstiger',
         ],
         updatedDate: '2026-10',
@@ -617,9 +615,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Die GPU legt die Stufe fest; der Rest des Builds unterstützt sie.** Ein Lokal-KI-PC wird GPU-zuerst geplant, weil das VRAM entscheidet, welche Modelle laufen. Wählen Sie die Stufe, deren GPU-VRAM zu Ihrem Zielmodell passt, und dimensionieren Sie CPU, RAM und Netzteil darum herum.',
           '**Die Preise 2026 haben jeden Build verteuert.** Eine Speicherchip-Knappheit hat GPUs, DDR5-RAM und SSDs weit über die Preise des Vorjahres getrieben. Die Summen hier sind aus den aktuellen Angebots-Untergrenzen gebildet und liegen deutlich höher als dieselben Teile vor einem Jahr — und RAM ist jetzt eine große Kostenposition, kein Nebenposten.',
-          '**Budget-Build (ca. 2.200 €):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650-W-Netzteil — führt 7B- bis 13B-Modelle in brauchbarer Geschwindigkeit aus. Die günstigste vollständige Maschine für lokale KI.',
+          '**Budget-Build (ca. 2.200 €):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650-W-Netzteil — führt 7B- bis 13B-Modelle in brauchbarer Geschwindigkeit aus. Der kostengünstigste der drei Builds in dieser Anleitung.',
           '**Mittelklasse-Build (ca. 3.450 €):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850-W-Netzteil — führt 14B- bis 33B-Modelle aus und lässt 7B- bis 14B-Modelle sofort reagieren.',
-          '**Enthusiasten-Build (ca. 10.700 €):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000-W-Netzteil — der einzige Single-GPU-Build, in den ein 70B-Modell bei Q4 passt. Die RTX 5090 allein kostet jetzt mehr als der gesamte Mittelklasse-Build.',
+          '**Enthusiasten-Build (ca. 10.700 €):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000-W-Netzteil — von den drei Builds hier der einzige, der ein 70B-Modell auf einer einzelnen GPU ausführen kann, und nur mit aggressiver Quantisierung oder teilweiser Auslagerung ins System-RAM. Die RTX 5090 allein kostet jetzt mehr als der gesamte Mittelklasse-Build.',
           '**RAM ist kein Ersatz für VRAM.** Arbeitsspeicher lässt ein Modell aus dem VRAM auslagern, doch ein aus dem RAM laufendes Modell ist für die interaktive Nutzung zu langsam. Kaufen Sie genug VRAM für das Modell; kaufen Sie RAM für Betriebssystem und Werkzeuge.',
           '**Das Netzteil skaliert mit der GPU.** Ein Budget-Build benötigt 650 W, der Mittelklasse-Build 850 W und der Enthusiasten-Build 1000 W, weil allein die RTX 5090 575 W zieht. Planen Sie das Netzteil zusammen mit der Karte ein.',
           '**Gebraucht ist kein garantierter Rabatt mehr.** Ende 2026 werden mehrere gebrauchte Karten zum Preis des günstigsten Neuangebots oder darüber angeboten, vergleichen Sie also vor dem Kauf beides. Eine geprüft funktionierende Gebrauchtkarte lohnt sich weiterhin, wenn sie deutlich günstiger ist — gehen Sie aber nie davon aus.',
@@ -631,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Budget-Build (ca. 2.200 €):** GPU RTX 4060 Ti 16 GB — führt 7B- und die meisten 13B-Modelle aus.',
           '**Mittelklasse-Build (ca. 3.450 €):** GPU RTX 4070 Ti Super 16 GB — führt 14B bequem aus, leichte 22B- bis 33B-Arbeit möglich.',
-          '**Enthusiasten-Build (ca. 10.700 €):** GPU RTX 5090 32 GB — führt 33B bequem und 70B bei Q4 aus.',
+          '**Enthusiasten-Build (ca. 10.700 €):** GPU RTX 5090 32 GB — führt 33B bequem aus, 70B nur mit aggressiver Quantisierung oder teilweiser Auslagerung.',
           '**VRAM-Faustregel bei Q4_K_M:** etwa 0,6 GB pro Milliarde Parameter, plus 2 bis 4 GB für Kontext und Werkzeuge.',
           '**RAM-Empfehlung:** 32 GB für den Budget-Build, 64 GB für den Mittelklasse-Build, 128 GB für den Enthusiasten-Build.',
           '**Netzteil je Stufe:** 650 W Budget, 850 W Mittelklasse, 1000 W Enthusiast — die RTX 5090 zieht allein 575 W.',
@@ -643,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Empfehlung der Redaktion: der Mittelklasse-Build (ca. 3.450 €)',
         highlight: true,
         content:
-          '**Für die meisten Käufer, die einen PC für lokale KI bauen, ist der Mittelklasse-Build die Stufe, die Leistungsfähigkeit, Kosten und Reserven ausbalanciert.** Aufgebaut um eine RTX 4070 Ti Super 16 GB, führt er jedes 14B-Modell mit Kontextspielraum aus, bewältigt leichte 22B- bis 33B-Arbeit und lässt 7B- bis 14B-Modelle sofort reagieren — für rund 3.450 € komplett. Es ist der Build, der Sie nicht binnen Monaten frustriert und nicht binnen eines Jahres ersetzt werden muss. Greifen Sie nur dann zum Budget-Build, wenn Ihre Obergrenze fest bei 7B- bis 13B-Modellen liegt; steigen Sie nur dann zum Enthusiasten-Build auf, wenn Sie gezielt 70B-Arbeit benötigen. Der Mittelklasse-Build ist die sichere Standardwahl für eine Maschine, die Sie behalten möchten.',
+          '**Für die meisten Käufer, die einen PC für lokale KI bauen, ist der Mittelklasse-Build die Stufe, die Leistungsfähigkeit, Kosten und Reserven ausbalanciert.** Aufgebaut um eine RTX 4070 Ti Super 16 GB, führt er jedes 14B-Modell mit Kontextspielraum aus, bewältigt leichte 22B- bis 33B-Arbeit und lässt 7B- bis 14B-Modelle sofort reagieren — für rund 3.450 € komplett. Er sollte für die meisten Arbeiten mit 14B-Modellen noch lange nutzbar bleiben, doch Modellgrößen und Preise ändern sich. Greifen Sie nur dann zum Budget-Build, wenn Ihre Obergrenze fest bei 7B- bis 13B-Modellen liegt; steigen Sie nur dann zum Enthusiasten-Build auf, wenn Sie gezielt 70B-Arbeit benötigen. Der Mittelklasse-Build ist eine vernünftige Standardwahl für eine Maschine, die Sie behalten möchten.',
         callouts: [
           {
             type: 'note',
@@ -671,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie die drei Build-Stufen 2026 abschneiden',
         content:
-          'GPU-VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenzgeschwindigkeiten sind Schätzungen auf Modellfamilien-Ebene aus PromptQuorum-GPU-Tests für die GPU der jeweiligen Stufe. Die Build-Summen sind Schätzungen, die den Mittelwert jeder in den Build-Abschnitten genannten Preisspanne addieren und aus den aktuellen Angebots-Untergrenzen gebildet sind — die Speicherknappheit 2026 hat GPUs, DDR5-RAM und SSDs weit über das Normale getrieben, sodass GPU- und RAM-Zeile jede Summe dominieren und sich von Woche zu Woche bewegen. Vergleichen Sie neue und gebrauchte GPU-Angebote: gebraucht ist nicht mehr immer günstiger.',
+          'GPU-VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenzgeschwindigkeiten sind grobe, typische Richtwerte für die GPU-Klasse der jeweiligen Stufe (nicht von PromptQuorum gemessen); die tatsächliche Geschwindigkeit hängt von Quantisierung, Laufzeitumgebung und Kontextlänge ab. Die Build-Summen sind Schätzungen, die den Mittelwert jeder in den Build-Abschnitten genannten Preisspanne addieren und aus den aktuellen Angebots-Untergrenzen gebildet sind — die Speicherknappheit 2026 hat GPUs, DDR5-RAM und SSDs weit über das Normale getrieben, sodass GPU- und RAM-Zeile jede Summe dominieren und sich von Woche zu Woche bewegen. Vergleichen Sie neue und gebrauchte GPU-Angebote: gebraucht ist nicht mehr immer günstiger.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Vergleich der Local-AI-PC-Build-Stufen 2026: RTX 4060 Ti 16 GB Budget-Build (~2.000 $) für 7B-13B-Modelle, RTX 4070 Ti Super 16 GB Mittelklasse-Build (~3.100 $) für 14B-33B-Modelle, RTX 5090 32 GB Enthusiasten-Build (~9.600 $) für 33B-70B-Modelle.',
         snippetBlocks: [
@@ -706,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Build-Stufe': 'Enthusiast',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            'Führt aus': '33B bequem, 70B bei Q4',
+            'Führt aus': '33B bequem, 70B nur mit aggressiver Quantisierung oder teilweiser Auslagerung',
             'Netzteil': '1000 W',
             'Gesamt (2026)': 'ca. 10.700 €',
           },
@@ -719,12 +717,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ihr größtes Zielmodell legt die Stufe fest; Ihr Budget bestätigt sie.** Suchen Sie die Zeile, die zu Ihrer Situation passt.',
         columns: ['Ihre Situation', 'Dieser Build'],
         rows: [
-          { 'Ihre Situation': 'Ich führe 7B- bis 13B-Modelle aus und will die günstigste vollständige Maschine', 'Dieser Build': 'Budget-Build (ca. 2.200 €)' },
+          { 'Ihre Situation': 'Ich führe 7B- bis 13B-Modelle aus und will den günstigsten der drei Builds in dieser Anleitung', 'Dieser Build': 'Budget-Build (ca. 2.200 €)' },
           { 'Ihre Situation': 'Ich will einen ersten Lokal-KI-PC und bin unsicher, wie weit ich gehen werde', 'Dieser Build': 'Budget-Build, oder Mittelklasse-Build für Reserven' },
           { 'Ihre Situation': 'Ich führe ständig 14B-Modelle aus und will sie sofort verfügbar haben', 'Dieser Build': 'Mittelklasse-Build (ca. 3.450 €)' },
           { 'Ihre Situation': 'Ich mache leichte 22B- bis 33B-Arbeit und will eine Maschine, die hält', 'Dieser Build': 'Mittelklasse-Build (ca. 3.450 €)' },
           { 'Ihre Situation': 'Ich führe 33B-Modelle intensiv aus oder will starke Zukunftsreserven', 'Dieser Build': 'Enthusiasten-Build (ca. 10.700 €)' },
-          { 'Ihre Situation': 'Ich brauche eine Single-GPU-Maschine, die 70B-Modelle bei Q4 ausführt', 'Dieser Build': 'Enthusiasten-Build (ca. 10.700 €)' },
+          { 'Ihre Situation': 'Single-GPU-Maschine für 70B-Modelle (nur mit aggressiver Quantisierung oder Auslagerung)', 'Dieser Build': 'Enthusiasten-Build (ca. 10.700 €)' },
           { 'Ihre Situation': 'Ich will die Summe trotz des Preisanstiegs 2026 niedrig halten', 'Dieser Build': 'Jede Stufe — vergleichen Sie neue und gebrauchte GPU-Angebote' },
           { 'Ihre Situation': 'Ich bin unschlüssig und will den sichersten Build für viele Jahre', 'Dieser Build': 'Mittelklasse-Build — die Redaktionsempfehlung' },
         ],
@@ -733,9 +731,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'Budget-Build (ca. 2.200 €): RTX 4060 Ti 16 GB',
         content:
-          '**Der Budget-Build ist der günstigste vollständige Lokal-KI-PC und führt jedes 7B-Modell sowie die meisten 13B-Modelle aus — genug Leistungsfähigkeit für die meisten Erstnutzer.** Er ist um die RTX 4060 Ti 16 GB aufgebaut, die preisgünstigste 16-GB-Karte in dieser Anleitung, was die Summe so niedrig hält, wie die Knappheit 2026 es zulässt.',
+          '**Der Budget-Build ist der günstigste der drei Builds in dieser Anleitung und führt jedes 7B-Modell sowie die meisten 13B-Modelle aus — genug Leistungsfähigkeit für die meisten Erstnutzer.** Er ist um die RTX 4060 Ti 16 GB aufgebaut, die preisgünstigste 16-GB-Karte in dieser Anleitung, was die Summe so niedrig hält, wie die Knappheit 2026 es zulässt.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (ca. 740-910 €):** 16 GB VRAM, 165 W. Führt 7B-Modelle mit rund 20-25 Tok/s aus und nimmt 14B-Modelle mit Kontextreserve auf. Die 16-GB-Kapazität ist der Grund, sie der 8-GB-Version vorzuziehen. Die Spanne reicht vom günstigsten Gebrauchtangebot bis zum günstigsten Neuangebot.',
+          '**GPU — RTX 4060 Ti 16 GB (ca. 740-910 €):** 16 GB VRAM, 165 W. Typisch sind bei 7B-Modellen rund 20-25 Tok/s (nicht von PromptQuorum gemessen, abhängig von Quantisierung und Kontext); 14B-Modelle passen mit Kontextreserve hinein. Die 16-GB-Kapazität ist der Grund, sie der 8-GB-Version vorzuziehen. Die Spanne reicht vom günstigsten Gebrauchtangebot bis zum günstigsten Neuangebot.',
           '**CPU — AMD Ryzen 7 7700 (ca. 210-240 €):** 8 Kerne, geringe Leistungsaufnahme. Die CPU leistet während der GPU-Inferenz wenig, daher ist ein Mittelklasse-Chip hier richtig — geben Sie in dieser Stufe nicht zu viel für die CPU aus.',
           '**Mainboard — B650-Chipsatz (ca. 130-170 €):** unterstützt die Ryzen 7 und eine einzelne Vollformat-GPU auf PCIe. Eine hochwertige Spannungsversorgung ist auf dieser Stufe nicht nötig.',
           '**RAM — 32 GB DDR5 (ca. 490-655 €):** genug für Betriebssystem, Werkzeuge und ein im VRAM laufendes 7B- bis 13B-Modell. RAM ist kein VRAM-Ersatz — 32 GB reichen hier, doch DDR5 ist jetzt die zweitgrößte Position in diesem Build.',
@@ -827,9 +825,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'Enthusiasten-Build (ca. 10.700 €): RTX 5090 32 GB',
         content:
-          '**Der Enthusiasten-Build ist die einzige Single-GPU-Maschine, in die ein 70B-Modell bei Q4 passt — die RTX 5090 32 GB ist das Schlüsselbauteil.** Bauen Sie diese Stufe für VRAM-Kapazität, nicht für rohe Geschwindigkeit; die Geschwindigkeit ist ein Nebeneffekt. Der Preisanstieg 2026 traf diese Stufe am härtesten — die RTX 5090 wurde weit über ihrem Launch-Preis von 1.999 $ angeboten —, daher dominieren GPU- und RAM-Zeile und bewegen sich von Woche zu Woche.',
+          '**Von den drei Builds hier kann nur der Enthusiasten-Build ein 70B-Modell auf einer einzelnen GPU ausführen, und nur mit aggressiver Quantisierung oder teilweiser Auslagerung ins System-RAM — die RTX 5090 32 GB ist das Schlüsselbauteil.** Bauen Sie diese Stufe für VRAM-Kapazität, nicht für rohe Geschwindigkeit; die Geschwindigkeit ist ein Nebeneffekt. Der Preisanstieg 2026 traf diese Stufe am härtesten — die RTX 5090 wurde weit über ihrem Launch-Preis von 1.999 $ angeboten —, daher dominieren GPU- und RAM-Zeile und bewegen sich von Woche zu Woche.',
         items: [
-          '**GPU — RTX 5090 32 GB (ca. 5.590-6.730 €):** 32 GB GDDR7-VRAM, 575 W. Die einzige einzelne Consumer-Karte, die ein 70B-Modell bei Q4 ohne Dual-GPU-Build ausführt. Sie führt 33B-Modelle bequem und mit Reserve aus. Die Spanne reicht vom günstigsten Neuangebot bis zum günstigsten Gebrauchtangebot; manche Händler listen sie noch höher.',
+          '**GPU — RTX 5090 32 GB (ca. 5.590-6.730 €):** 32 GB GDDR7-VRAM, 575 W. Die Einzel-GPU mit dem meisten VRAM in dieser Anleitung; ohne Dual-GPU-Build führt sie ein 70B-Modell nur mit aggressiver Quantisierung oder teilweiser Auslagerung ins System-RAM aus. Sie führt 33B-Modelle bequem und mit Reserve aus. Die Spanne reicht vom günstigsten Neuangebot bis zum günstigsten Gebrauchtangebot; manche Händler listen sie noch höher.',
           '**CPU — AMD Ryzen 9 7950X (ca. 340-400 €):** 16 Kerne. Genug, um Datenaufbereitung, Fine-Tuning-Experimente und Werkzeuge neben intensiver Inferenz auszuführen.',
           '**Mainboard — X670E-Chipsatz (ca. 280-380 €):** starke Spannungsversorgung und PCIe 5.0, ausgelegt für eine 575-W-GPU und die 16-Kern-CPU.',
           '**RAM — 128 GB DDR5 (ca. 1.880-2.740 €, geschätzt):** Platz für große Kontextfenster, mehrere gleichzeitig geladene Modelle und Werkzeuge — sowie die Reserve, ein Modell bei Bedarf teilweise ins RAM auszulagern. Nur wenige 128-GB-Kits sind verlässlich lieferbar, daher ist diese Spanne das Doppelte der 64-GB-Spanne; ein 64-GB-Kit (ca. 930-1.370 €) ist die sparsamere Alternative.',
@@ -1027,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ein Single-GPU-Build ein 70B-Modell ausführen?',
-            a: 'Ja, der Enthusiasten-Build kann es. Eine RTX 5090 32 GB ist die einzige einzelne Consumer-Karte, in die ein 70B-Modell bei Q4 passt, das rund 39-42 GB VRAM benötigt — sie führt 70B also mit aggressiver Quantisierung oder teilweiser Auslagerung ins System-RAM aus. Die 128 GB RAM im Enthusiasten-Build geben dieser Auslagerung den nötigen Spielraum.',
+            a: 'Ja, der Enthusiasten-Build kann es. Eine RTX 5090 32 GB hat den meisten VRAM aller Einzel-GPUs in dieser Anleitung, doch ein 70B-Modell bei Q4 benötigt rund 39-42 GB — sie führt 70B daher nur mit aggressiver Quantisierung oder teilweiser Auslagerung ins System-RAM aus. Die 128 GB RAM im Enthusiasten-Build geben dieser Auslagerung den nötigen Spielraum.',
           },
           {
             q: 'Lohnt sich der Mittelklasse-Build gegenüber dem Budget-Build?',
@@ -1064,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-fr.webp',
@@ -1081,7 +1079,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1114,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Configuration budget env. 1 900 € : RTX 4060 Ti 16 GB, exécute les modèles 7B-13B',
           'Configuration intermédiaire env. 2 900 € : RTX 4070 Ti Super 16 GB, exécute les modèles 14B-33B',
-          'Configuration enthousiaste env. 8 800 € : RTX 5090 32 GB, exécute les modèles 70B en Q4',
+          'Configuration enthousiaste env. 8 800 € : RTX 5090 32 GB, exécute les modèles 70B uniquement avec une quantification agressive ou un déchargement partiel',
           'Les prix des GPU, de la RAM et des SSD ont tous flambé en 2026 — comparez le neuf et l\'occasion, car l\'occasion ne coûte plus systématiquement moins cher',
         ],
         updatedDate: '2026-10',
@@ -1144,9 +1141,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Le GPU fixe le niveau ; le reste de la configuration le soutient.** Un PC pour IA locale se choisit GPU en premier, car la VRAM décide des modèles exécutables. Choisissez le niveau dont la VRAM du GPU correspond à votre modèle visé, puis dimensionnez le processeur, la RAM et l\'alimentation autour de lui.',
           '**Les prix de 2026 ont renchéri chaque configuration.** Une pénurie de puces mémoire a poussé les GPU, la RAM DDR5 et les SSD très au-dessus des prix de l\'an dernier. Les totaux ici reposent sur les prix plancher actuellement affichés et dépassent largement ce que coûtaient les mêmes pièces il y a un an — et la RAM est désormais une ligne de coût majeure, pas un détail.',
-          '**Configuration budget (env. 1 900 €) :** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD 1 To, alimentation 650 W — exécute les modèles 7B-13B à vitesse utilisable. La machine complète la moins chère pour l\'IA locale.',
+          '**Configuration budget (env. 1 900 €) :** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD 1 To, alimentation 650 W — exécute les modèles 7B-13B à vitesse utilisable. La moins coûteuse des trois configurations de ce guide.',
           '**Configuration intermédiaire (env. 2 900 €) :** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB de RAM, SSD 2 To, alimentation 850 W — exécute les modèles 14B-33B et rend les modèles 7B-14B instantanés.',
-          '**Configuration enthousiaste (env. 8 800 €) :** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD 4 To, alimentation 1000 W — la seule configuration mono-GPU dans laquelle un modèle 70B tient en Q4. La RTX 5090 seule coûte désormais plus que toute la configuration intermédiaire.',
+          '**Configuration enthousiaste (env. 8 800 €) :** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD 4 To, alimentation 1000 W — des trois configurations ici, la seule capable d\'exécuter un modèle 70B sur un seul GPU, et seulement avec une quantification agressive ou un déchargement partiel vers la RAM système. La RTX 5090 seule coûte désormais plus que toute la configuration intermédiaire.',
           '**La RAM ne remplace pas la VRAM.** La mémoire système permet à un modèle de déborder de la VRAM, mais un modèle exécuté depuis la RAM est trop lent pour un usage interactif. Achetez assez de VRAM pour le modèle ; achetez de la RAM pour le système d\'exploitation et l\'outillage.',
           '**L\'alimentation évolue avec le GPU.** Une configuration budget exige 650 W, l\'intermédiaire 850 W et l\'enthousiaste 1000 W, car la seule RTX 5090 consomme 575 W. Budgétez l\'alimentation en même temps que la carte.',
           '**L\'occasion n\'est plus une remise garantie.** Fin 2026, plusieurs cartes d\'occasion sont affichées au niveau de la moins chère des annonces neuves, ou au-dessus ; comparez donc les deux avant d\'acheter. Une carte d\'occasion vérifiée fonctionnelle reste intéressante quand elle est nettement moins chère — mais ne le présumez jamais.',
@@ -1158,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Configuration budget (env. 1 900 €) :** GPU RTX 4060 Ti 16 GB — exécute les modèles 7B et la plupart des 13B.',
           '**Configuration intermédiaire (env. 2 900 €) :** GPU RTX 4070 Ti Super 16 GB — exécute aisément le 14B, travail léger en 22B-33B.',
-          '**Configuration enthousiaste (env. 8 800 €) :** GPU RTX 5090 32 GB — exécute aisément le 33B et le 70B en Q4.',
+          '**Configuration enthousiaste (env. 8 800 €) :** GPU RTX 5090 32 GB — exécute aisément le 33B, et le 70B uniquement avec une quantification agressive ou un déchargement partiel.',
           '**Règle empirique de VRAM en Q4_K_M :** environ 0,6 GB par milliard de paramètres, plus 2-4 GB pour le contexte et l\'outillage.',
           '**Recommandation de RAM système :** 32 GB pour la configuration budget, 64 GB pour l\'intermédiaire, 128 GB pour l\'enthousiaste.',
           '**Alimentation par niveau :** 650 W budget, 850 W intermédiaire, 1000 W enthousiaste — la RTX 5090 consomme 575 W à elle seule.',
@@ -1170,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Choix de la rédaction : la configuration intermédiaire (env. 2 900 €)',
         highlight: true,
         content:
-          '**Pour la plupart des acheteurs montant un PC pour l\'IA locale, la configuration intermédiaire est le niveau qui équilibre capacité, coût et marge.** Bâtie autour d\'une RTX 4070 Ti Super 16 GB, elle exécute chaque modèle 14B avec de la marge de contexte, gère le travail léger en 22B-33B et rend les modèles 7B-14B instantanés — pour environ 2 900 € au total. C\'est la configuration qui ne vous frustrera pas en quelques mois et ne nécessitera pas d\'être remplacée en un an. Ne descendez à la configuration budget que si votre plafond est fermement les modèles 7B-13B ; ne montez à la configuration enthousiaste que si vous avez spécifiquement besoin du travail 70B. La configuration intermédiaire est le choix par défaut sûr pour une machine que vous voulez garder.',
+          '**Pour la plupart des acheteurs montant un PC pour l\'IA locale, la configuration intermédiaire est le niveau qui équilibre capacité, coût et marge.** Bâtie autour d\'une RTX 4070 Ti Super 16 GB, elle exécute chaque modèle 14B avec de la marge de contexte, gère le travail léger en 22B-33B et rend les modèles 7B-14B instantanés — pour environ 2 900 € au total. Cette configuration devrait rester utilisable pour la plupart des charges de classe 14B pendant un bon moment, mais les tailles de modèles et les prix évoluent. Ne descendez à la configuration budget que si votre plafond est fermement les modèles 7B-13B ; ne montez à la configuration enthousiaste que si vous avez spécifiquement besoin du travail 70B. La configuration intermédiaire est un choix par défaut raisonnable pour une machine que vous voulez garder.',
         callouts: [
           {
             type: 'note',
@@ -1198,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment se comparent les trois niveaux en 2026',
         content:
-          'Les chiffres de VRAM et de puissance du GPU sont des spécifications constructeur. Les vitesses d\'inférence sont des estimations au niveau de la famille de modèles, issues des tests GPU de PromptQuorum pour le GPU du niveau concerné. Les totaux sont des estimations qui additionnent le milieu de chaque fourchette de prix indiquée dans les sections de configuration, établies à partir des prix plancher actuellement affichés — la pénurie mémoire de 2026 a poussé les GPU, la RAM DDR5 et les SSD très au-dessus de la normale, si bien que les lignes GPU et RAM dominent chaque total et bougent d\'une semaine à l\'autre. Comparez les annonces de GPU neufs et d\'occasion : l\'occasion ne coûte plus toujours moins cher.',
+          'Les chiffres de VRAM et de puissance du GPU sont des spécifications constructeur. Les vitesses d\'inférence sont des ordres de grandeur typiques pour la classe de GPU de chaque niveau (non mesurées par PromptQuorum) ; la vitesse réelle dépend de la quantification, du moteur d\'exécution et de la longueur de contexte. Les totaux sont des estimations qui additionnent le milieu de chaque fourchette de prix indiquée dans les sections de configuration, établies à partir des prix plancher actuellement affichés — la pénurie mémoire de 2026 a poussé les GPU, la RAM DDR5 et les SSD très au-dessus de la normale, si bien que les lignes GPU et RAM dominent chaque total et bougent d\'une semaine à l\'autre. Comparez les annonces de GPU neufs et d\'occasion : l\'occasion ne coûte plus toujours moins cher.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Comparatif des configurations PC IA locale 2026 : configuration économique RTX 4060 Ti 16 Go (~2 000 $) pour modèles 7B-13B, configuration intermédiaire RTX 4070 Ti Super 16 Go (~3 100 $) pour modèles 14B-33B, configuration enthousiaste RTX 5090 32 Go (~9 600 $) pour modèles 33B-70B.',
         snippetBlocks: [
@@ -1233,7 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Niveau': 'Enthousiaste',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            'Exécute': '33B aisément, 70B en Q4',
+            'Exécute': '33B aisément, 70B uniquement avec une quantification agressive ou un déchargement partiel',
             'Alimentation': '1000 W',
             'Total (2026)': 'env. 8 800 €',
           },
@@ -1246,12 +1243,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Votre plus grand modèle visé fixe le niveau ; votre budget le confirme.** Trouvez la ligne qui correspond à votre situation.',
         columns: ['Votre situation', 'Montez ceci'],
         rows: [
-          { 'Votre situation': 'J\'exécute des modèles 7B-13B et je veux la machine complète la moins chère', 'Montez ceci': 'Configuration budget (env. 1 900 €)' },
+          { 'Votre situation': 'J\'exécute des modèles 7B-13B et je veux la moins chère des trois configurations de ce guide', 'Montez ceci': 'Configuration budget (env. 1 900 €)' },
           { 'Votre situation': 'Je veux un premier PC pour l\'IA locale sans savoir jusqu\'où j\'irai', 'Montez ceci': 'Configuration budget, ou intermédiaire pour la marge' },
           { 'Votre situation': 'J\'exécute des modèles 14B en permanence et je les veux instantanés', 'Montez ceci': 'Configuration intermédiaire (env. 2 900 €)' },
           { 'Votre situation': 'Je fais du travail léger en 22B-33B et je veux une machine durable', 'Montez ceci': 'Configuration intermédiaire (env. 2 900 €)' },
           { 'Votre situation': 'J\'exécute intensivement des modèles 33B ou je veux une forte marge d\'avenir', 'Montez ceci': 'Configuration enthousiaste (env. 8 800 €)' },
-          { 'Votre situation': 'J\'ai besoin d\'une machine mono-GPU qui exécute des modèles 70B en Q4', 'Montez ceci': 'Configuration enthousiaste (env. 8 800 €)' },
+          { 'Votre situation': 'Machine mono-GPU pour modèles 70B (quantification agressive ou déchargement partiel requis)', 'Montez ceci': 'Configuration enthousiaste (env. 8 800 €)' },
           { 'Votre situation': 'Je veux contenir le total malgré la flambée de 2026', 'Montez ceci': 'N\'importe quel niveau — comparez les annonces de GPU neufs et d\'occasion' },
           { 'Votre situation': 'Je suis indécis et je veux la configuration la plus sûre à garder des années', 'Montez ceci': 'Configuration intermédiaire — le choix de la rédaction' },
         ],
@@ -1260,9 +1257,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'Configuration budget (env. 1 900 €) : RTX 4060 Ti 16 GB',
         content:
-          '**La configuration budget est le PC complet pour IA locale le moins cher et exécute chaque modèle 7B ainsi que la plupart des 13B — assez de capacité pour la plupart des nouveaux venus.** Elle est bâtie autour de la RTX 4060 Ti 16 GB, la carte 16 GB la moins chère de ce guide, ce qui maintient le total aussi bas que la pénurie de 2026 le permet.',
+          '**La configuration budget est la moins chère des trois configurations de ce guide et exécute chaque modèle 7B ainsi que la plupart des 13B — assez de capacité pour la plupart des nouveaux venus.** Elle est bâtie autour de la RTX 4060 Ti 16 GB, la carte 16 GB la moins chère de ce guide, ce qui maintient le total aussi bas que la pénurie de 2026 le permet.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (env. 600-740 €) :** 16 GB de VRAM, 165 W. Exécute les modèles 7B à environ 20-25 tok/s et accueille les modèles 14B avec de la marge de contexte. La capacité de 16 GB est la raison de la préférer à la version 8 GB. La fourchette va de la moins chère des annonces d\'occasion à la moins chère des annonces neuves.',
+          '**GPU — RTX 4060 Ti 16 GB (env. 600-740 €) :** 16 GB de VRAM, 165 W. Vitesse typique pour cette classe de GPU : environ 20-25 tok/s sur les modèles 7B (non mesurée par PromptQuorum ; variable selon la quantification et le contexte) ; les modèles 14B tiennent avec de la marge de contexte. La capacité de 16 GB est la raison de la préférer à la version 8 GB. La fourchette va de la moins chère des annonces d\'occasion à la moins chère des annonces neuves.',
           '**Processeur — AMD Ryzen 7 7700 (env. 230-270 €) :** 8 cœurs, consommation modeste. Le processeur travaille peu pendant l\'inférence GPU, donc une puce de milieu de gamme est correcte ici — ne dépensez pas trop pour le processeur à ce niveau.',
           '**Carte mère — chipset B650 (env. 130-170 €) :** prend en charge le Ryzen 7 et un seul GPU pleine taille en PCIe. Pas besoin d\'une alimentation électrique haut de gamme à ce niveau.',
           '**RAM — 32 GB DDR5 (env. 400-530 €) :** assez pour le système d\'exploitation, l\'outillage et un modèle 7B-13B exécuté en VRAM. La RAM ne remplace pas la VRAM — 32 GB suffisent ici, mais la DDR5 est désormais la deuxième plus grosse ligne de cette configuration.',
@@ -1354,9 +1351,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'Configuration enthousiaste (env. 8 800 €) : RTX 5090 32 GB',
         content:
-          '**La configuration enthousiaste est la seule machine mono-GPU dans laquelle un modèle 70B tient en Q4 — sa RTX 5090 32 GB est la pièce maîtresse.** Montez ce niveau pour la capacité de VRAM, pas pour la vitesse brute ; la vitesse est un effet secondaire. La flambée de 2026 a frappé ce niveau le plus durement — la RTX 5090 est affichée bien au-dessus de son prix de lancement de 1 999 $ — donc les lignes GPU et RAM dominent et bougent d\'une semaine à l\'autre.',
+          '**Des trois configurations ici, seule la configuration enthousiaste peut exécuter un modèle 70B sur un seul GPU, et seulement avec une quantification agressive ou un déchargement partiel vers la RAM système — sa RTX 5090 32 GB est la pièce maîtresse.** Montez ce niveau pour la capacité de VRAM, pas pour la vitesse brute ; la vitesse est un effet secondaire. La flambée de 2026 a frappé ce niveau le plus durement — la RTX 5090 est affichée bien au-dessus de son prix de lancement de 1 999 $ — donc les lignes GPU et RAM dominent et bougent d\'une semaine à l\'autre.',
         items: [
-          '**GPU — RTX 5090 32 GB (env. 4 500-5 400 €) :** 32 GB de VRAM GDDR7, 575 W. La seule carte grand public unique qui exécute un modèle 70B en Q4 sans configuration bi-GPU. Elle exécute les modèles 33B aisément, avec de la marge. La fourchette va de la moins chère des annonces neuves à la moins chère des annonces d\'occasion ; certains revendeurs l\'affichent encore plus haut.',
+          '**GPU — RTX 5090 32 GB (env. 4 500-5 400 €) :** 32 GB de VRAM GDDR7, 575 W. Le GPU unique doté de la plus grande VRAM de ce guide ; sans configuration bi-GPU, il n\'exécute un modèle 70B qu\'avec une quantification agressive ou un déchargement partiel vers la RAM système. Elle exécute les modèles 33B aisément, avec de la marge. La fourchette va de la moins chère des annonces neuves à la moins chère des annonces d\'occasion ; certains revendeurs l\'affichent encore plus haut.',
           '**Processeur — AMD Ryzen 9 7950X (env. 340-420 €) :** 16 cœurs. Assez pour exécuter la préparation des données, les expériences de fine-tuning et l\'outillage en parallèle d\'une inférence intensive.',
           '**Carte mère — chipset X670E (env. 280-380 €) :** alimentation électrique robuste et PCIe 5.0, dimensionnées pour un GPU de 575 W et le processeur 16 cœurs.',
           '**RAM — 128 GB DDR5 (env. 1 500-2 200 €, estimation) :** de la place pour de grandes fenêtres de contexte, plusieurs modèles chargés à la fois et l\'outillage — et la marge pour décharger partiellement un modèle vers la RAM si besoin. Peu de kits de 128 GB sont affichés de façon fiable, cette fourchette double donc celle des 64 GB ; un kit de 64 GB (env. 750-1 100 €) est l\'alternative pour économiser.',
@@ -1554,7 +1551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Une configuration mono-GPU peut-elle exécuter un modèle 70B ?',
-            a: 'Oui, la configuration enthousiaste le peut. Une RTX 5090 32 GB est la seule carte grand public unique dans laquelle un modèle 70B tient en Q4, ce qui nécessite environ 39-42 GB de VRAM — elle exécute donc le 70B avec une quantification agressive ou un déchargement partiel vers la RAM système. Les 128 GB de RAM de la configuration enthousiaste donnent à ce déchargement la place nécessaire.',
+            a: 'Oui, la configuration enthousiaste le peut. Une RTX 5090 32 GB offre la plus grande VRAM de tous les GPU uniques de ce guide, mais un modèle 70B en Q4 nécessite environ 39-42 GB — elle n\'exécute donc le 70B qu\'avec une quantification agressive ou un déchargement partiel vers la RAM système. Les 128 GB de RAM de la configuration enthousiaste donnent à ce déchargement la place nécessaire.',
           },
           {
             q: 'La configuration intermédiaire vaut-elle le surcoût par rapport à la budget ?',
@@ -1583,7 +1580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ja.webp',
@@ -1600,7 +1597,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1633,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'エントリー構成 約¥330,000：RTX 4060 Ti 16 GB、7B〜13Bモデルを実行',
           'ミドル構成 約¥520,000：RTX 4070 Ti Super 16 GB、14B〜33Bモデルを実行',
-          'ハイエンド構成 約¥1,600,000：RTX 5090 32 GB、70BモデルをQ4で実行',
+          'ハイエンド構成 約¥1,600,000：RTX 5090 32 GB、70Bモデルは積極的な量子化または部分的なオフロードでのみ実行',
           '2026年はGPU・RAM・SSDの価格がすべて急騰——新品と中古を比較してください。中古が確実に安いとは限りません',
         ],
         updatedDate: '2026-10',
@@ -1663,9 +1659,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**GPUがティアを決め、残りの構成がそれを支えます。** ローカルAI PCは、VRAMが実行可能なモデルを決めるため、GPUを起点に選びます。GPUのVRAMが対象モデルに合うティアを選び、CPU・RAM・電源をその周りに合わせて選定してください。',
           '**2026年の価格はすべての構成コストを押し上げました。** メモリチップ不足によりGPU、DDR5 RAM、SSDが昨年の価格を大きく上回りました。本ガイドの合計は現在の最安の提示価格をもとに算出しており、1年前の同じパーツよりかなり高く、RAMはもはや後回しにできない主要なコスト項目です。',
-          '**エントリー構成（約¥330,000）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB RAM、1 TB SSD、650 W電源——7B〜13Bモデルを実用的な速度で実行します。ローカルAI向けで最も安価な完成機です。',
+          '**エントリー構成（約¥330,000）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB RAM、1 TB SSD、650 W電源——7B〜13Bモデルを実用的な速度で実行します。このガイドの3構成の中で最も費用を抑えた構成です。',
           '**ミドル構成（約¥520,000）：** RTX 4070 Ti Super 16 GB、Ryzen 9 7900X、64 GB RAM、2 TB SSD、850 W電源——14B〜33Bモデルを実行し、7B〜14Bモデルを即座に応答させます。',
-          '**ハイエンド構成（約¥1,600,000）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB RAM、4 TB SSD、1000 W電源——70BモデルをQ4で収められる唯一のシングルGPU構成です。RTX 5090だけでミドル構成全体より高くなっています。',
+          '**ハイエンド構成（約¥1,600,000）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB RAM、4 TB SSD、1000 W電源——この3構成のうち、70Bモデルを1枚のGPUで実行できるのはハイエンド構成だけで、積極的な量子化またはシステムRAMへの部分的なオフロードが前提です。RTX 5090だけでミドル構成全体より高くなっています。',
           '**RAMはVRAMの代わりにはなりません。** システムRAMはモデルをVRAMから溢れさせることができますが、RAMから動くモデルはインタラクティブな用途には遅すぎます。モデルにはVRAMを十分に、RAMはOSとツール用に購入してください。',
           '**電源はGPUに合わせてスケールします。** エントリー構成は650 W、ミドル構成は850 W、ハイエンド構成は1000 Wが必要です。RTX 5090は単体で575 Wを消費するためです。電源はカードと同時に予算化してください。',
           '**中古はもはや確実な割引ではありません。** 2026年後半には、中古カードの一部が最安の新品と同等かそれ以上の価格で出ています。購入前に両方を比較してください。動作確認済みの中古カードは、明らかに安いときには依然として検討する価値がありますが、安いと決めつけないでください。',
@@ -1677,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**エントリー構成（約¥330,000）：** GPU RTX 4060 Ti 16 GB——7Bおよびほとんどの13Bモデルを実行します。',
           '**ミドル構成（約¥520,000）：** GPU RTX 4070 Ti Super 16 GB——14Bを快適に実行し、軽めの22B〜33B作業も可能です。',
-          '**ハイエンド構成（約¥1,600,000）：** GPU RTX 5090 32 GB——33Bを快適に、70BをQ4で実行します。',
+          '**ハイエンド構成（約¥1,600,000）：** GPU RTX 5090 32 GB——33Bを快適に実行でき、70Bは積極的な量子化または部分的なオフロードでのみ実行できます。',
           '**Q4_K_MでのVRAMの目安：** 10億パラメータあたりおよそ0.6 GB、加えてコンテキストとツール用に2〜4 GB。',
           '**システムRAMの指針：** エントリー構成は32 GB、ミドル構成は64 GB、ハイエンド構成は128 GB。',
           '**ティア別の電源：** エントリー650 W、ミドル850 W、ハイエンド1000 W——RTX 5090は単体で575 Wを消費します。',
@@ -1689,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '編集部のおすすめ：ミドル構成（約¥520,000）',
         highlight: true,
         content:
-          '**ローカルAI向けにPCを組むほとんどの購入者にとって、ミドル構成は能力・コスト・余裕のバランスが取れたティアです。** RTX 4070 Ti Super 16 GBを中心に構築され、すべての14Bモデルをコンテキストの余裕をもって実行し、軽めの22B〜33B作業をこなし、7B〜14Bモデルを即座に応答させます——総額でおよそ¥520,000です。数か月で不満が出ることもなく、1年以内に買い替えが必要になることもない構成です。上限が明確に7B〜13Bモデルである場合のみエントリー構成に下げ、70B作業が特に必要な場合のみハイエンド構成に上げてください。ミドル構成は、長く使いたいマシンにとって無難な標準の選択肢です。',
+          '**ローカルAI向けにPCを組むほとんどの購入者にとって、ミドル構成は能力・コスト・余裕のバランスが取れたティアです。** RTX 4070 Ti Super 16 GBを中心に構築され、すべての14Bモデルをコンテキストの余裕をもって実行し、軽めの22B〜33B作業をこなし、7B〜14Bモデルを即座に応答させます——総額でおよそ¥520,000です。14B級のほとんどの作業にはかなり長く使い続けられる見込みですが、モデルサイズや価格は変わります。上限が明確に7B〜13Bモデルである場合のみエントリー構成に下げ、70B作業が特に必要な場合のみハイエンド構成に上げてください。ミドル構成は、長く使いたいマシンにとって妥当な標準の選択肢です。',
         callouts: [
           {
             type: 'note',
@@ -1717,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年の3構成ティアの比較',
         content:
-          'GPUのVRAMと電力の数値はメーカー仕様です。推論速度は、各ティアのGPUに対するPromptQuorumのGPUテストに基づくモデルファミリーレベルの推定値です。構成合計は、各構成の項目に示した価格帯の中央値を合計した米国ベースの目安で、現在の最安の提示価格をもとにしています——2026年のメモリ不足でGPU、DDR5 RAM、SSDが通常を大きく上回っているため、GPUとRAMの行が各合計を支配し、週ごとに変動します。新品と中古のGPUを比較してください。中古が常に安いとは限りません。',
+          'GPUのVRAMと電力の数値はメーカー仕様です。推論速度は、各ティアのGPUクラスにおける一般的な目安（PromptQuorumによる測定ではありません）で、実際の速度は量子化、ランタイム、コンテキスト長によって変わります。構成合計は、各構成の項目に示した価格帯の中央値を合計した米国ベースの目安で、現在の最安の提示価格をもとにしています——2026年のメモリ不足でGPU、DDR5 RAM、SSDが通常を大きく上回っているため、GPUとRAMの行が各合計を支配し、週ごとに変動します。新品と中古のGPUを比較してください。中古が常に安いとは限りません。',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: '2026年ローカルAI PC構成比較:RTX 4060 Ti 16GB予算構成(約2,000ドル)は7B-13Bモデル、RTX 4070 Ti Super 16GBミドル構成(約3,100ドル)は14B-33Bモデル、RTX 5090 32GBエンスージアスト構成(約9,600ドル)は33B-70Bモデルに対応。',
         snippetBlocks: [
@@ -1752,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '構成ティア': 'ハイエンド',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            '実行可能': '33Bを快適に、70BをQ4で',
+            '実行可能': '33Bを快適に、70Bは積極的な量子化または部分的なオフロードでのみ',
             '電源': '1000 W',
             '合計（2026年）': '約¥1,600,000',
           },
@@ -1765,12 +1761,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**対象とする最大のモデルがティアを決め、予算がそれを裏付けます。** ご自身の状況に合う行を探してください。',
         columns: ['あなたの状況', 'おすすめの構成'],
         rows: [
-          { 'あなたの状況': '7B〜13Bモデルを動かし、最も安価な完成機が欲しい', 'おすすめの構成': 'エントリー構成（約¥330,000）' },
+          { 'あなたの状況': '7B〜13Bモデルを動かし、本ガイドの3構成で最も費用の低い完成機が欲しい', 'おすすめの構成': 'エントリー構成（約¥330,000）' },
           { 'あなたの状況': '初めてのローカルAI PCが欲しく、どこまで進むか分からない', 'おすすめの構成': 'エントリー構成、または余裕を見てミドル構成' },
           { 'あなたの状況': '14Bモデルを常時動かし、即座に応答させたい', 'おすすめの構成': 'ミドル構成（約¥520,000）' },
           { 'あなたの状況': '軽めの22B〜33B作業を行い、長く使えるマシンが欲しい', 'おすすめの構成': 'ミドル構成（約¥520,000）' },
           { 'あなたの状況': '33Bモデルを多用する、または将来の余裕を強く求める', 'おすすめの構成': 'ハイエンド構成（約¥1,600,000）' },
-          { 'あなたの状況': '70BモデルをQ4で動かすシングルGPUマシンが必要', 'おすすめの構成': 'ハイエンド構成（約¥1,600,000）' },
+          { 'あなたの状況': '積極的な量子化または部分的なオフロードで70Bモデルを動かせるシングルGPUマシンが必要', 'おすすめの構成': 'ハイエンド構成（約¥1,600,000）' },
           { 'あなたの状況': '2026年の高騰にもかかわらず合計を抑えたい', 'おすすめの構成': 'いずれのティアも——新品と中古のGPU掲載を比較' },
           { 'あなたの状況': '迷っており、何年も使える最も無難な構成が欲しい', 'おすすめの構成': 'ミドル構成——編集部のおすすめ' },
         ],
@@ -1779,9 +1775,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'エントリー構成（約¥330,000）：RTX 4060 Ti 16 GB',
         content:
-          '**エントリー構成は最も安価な完成ローカルAI PCで、すべての7Bモデルとほとんどの13Bモデルを実行できます——多くの初めての利用者には十分な能力です。** 本ガイドで最も安価な16 GBカードであるRTX 4060 Ti 16 GBを中心に構築されており、2026年の不足が許す範囲で合計を低く抑えます。',
+          '**エントリー構成は本ガイドの3構成で最も費用の低いローカルAI PCで、すべての7Bモデルとほとんどの13Bモデルを実行できます——多くの初めての利用者には十分な能力です。** 本ガイドで最も安価な16 GBカードであるRTX 4060 Ti 16 GBを中心に構築されており、2026年の不足が許す範囲で合計を低く抑えます。',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB（約¥109,000〜134,000）：** 16 GB VRAM、165 W。7Bモデルをおよそ20〜25 tok/sで実行し、14Bモデルもコンテキストの余裕をもって収めます。16 GBの容量こそ、8 GB版より本機を選ぶ理由です。価格帯は最安の中古掲載から最安の新品までを示しています。',
+          '**GPU — RTX 4060 Ti 16 GB（約¥109,000〜134,000）：** 16 GB VRAM、165 W。このGPUクラスでの7Bモデルの一般的な速度はおよそ20〜25 tok/s（PromptQuorumによる測定ではなく、量子化やコンテキストにより変動）で、14Bモデルもコンテキストの余裕をもって収まります。16 GBの容量こそ、8 GB版より本機を選ぶ理由です。価格帯は最安の中古掲載から最安の新品までを示しています。',
           '**CPU — AMD Ryzen 7 7700（約¥38,000〜44,000）：** 8コア、消費電力は控えめ。CPUはGPU推論中ほとんど働かないため、ここではミドルレンジのチップが正解です——このティアではCPUに過剰に支出しないでください。',
           '**マザーボード — B650チップセット（約¥20,000〜28,000）：** Ryzen 7とPCIe上のフルサイズGPU 1枚に対応します。このティアではハイエンドの電源回路は不要です。',
           '**RAM — 32 GB DDR5（約¥72,000〜97,000）：** OS、ツール、VRAMで動く7B〜13Bモデルに十分です。RAMはVRAMの代わりにはなりません——ここでは32 GBで足りますが、DDR5は現在このビルドで2番目に大きな項目です。',
@@ -1873,9 +1869,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'ハイエンド構成（約¥1,600,000）：RTX 5090 32 GB',
         content:
-          '**ハイエンド構成は、70BモデルをQ4で収められる唯一のシングルGPUマシンです——RTX 5090 32 GBが目玉のパーツです。** このティアは生の速度ではなくVRAM容量のために組みます。速度は副産物です。2026年の高騰はこのティアを最も強く直撃しました——RTX 5090は発売時の$1,999を大きく上回る価格で出ているため、GPUとRAMの行が支配的で、週ごとに変動します。',
+          '**この3構成のうち、70Bモデルを1枚のGPUで実行できるのはハイエンド構成だけで、積極的な量子化またはシステムRAMへの部分的なオフロードが前提です——RTX 5090 32 GBが目玉のパーツです。** このティアは生の速度ではなくVRAM容量のために組みます。速度は副産物です。2026年の高騰はこのティアを最も強く直撃しました——RTX 5090は発売時の$1,999を大きく上回る価格で出ているため、GPUとRAMの行が支配的で、週ごとに変動します。',
         items: [
-          '**GPU — RTX 5090 32 GB（約¥820,000〜990,000）：** 32 GB GDDR7 VRAM、575 W。デュアルGPU構成なしで70BモデルをQ4で実行できる唯一のシングルコンシューマーカードです。33Bモデルは余裕をもって快適に実行します。価格帯は最安の新品掲載から最安の中古までを示しており、さらに高く出している販売店もあります。',
+          '**GPU — RTX 5090 32 GB（約¥820,000〜990,000）：** 32 GB GDDR7 VRAM、575 W。このガイドで最もVRAMの大きいシングルGPUで、デュアルGPU構成なしで70Bモデルを動かせますが、積極的な量子化またはシステムRAMへの部分的なオフロードが前提です。33Bモデルは余裕をもって快適に実行します。価格帯は最安の新品掲載から最安の中古までを示しており、さらに高く出している販売店もあります。',
           '**CPU — AMD Ryzen 9 7950X（約¥78,000〜88,000）：** 16コア。重い推論と並行して、データ準備、ファインチューニング実験、ツール実行を行うのに十分です。',
           '**マザーボード — X670Eチップセット（約¥42,000〜58,000）：** 575 W GPUと16コアCPUに見合う強力な電源回路とPCIe 5.0。',
           '**RAM — 128 GB DDR5（約¥277,000〜403,000、推定）：** 大きなコンテキストウィンドウ、複数モデルの同時ロード、ツールのための容量に加え、必要に応じてモデルを部分的にRAMへ退避させる余裕があります。安定して出回っている128 GBキットは少ないため、この価格帯は64 GBの約2倍としており、64 GBキット（約¥137,000〜202,000）は費用を抑える代替案です。',
@@ -2073,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'シングルGPU構成で70Bモデルを実行できますか？',
-            a: 'はい、ハイエンド構成なら可能です。RTX 5090 32 GBは、およそ39〜42 GBのVRAMを必要とする70BモデルをQ4で収められる唯一のシングルコンシューマーカードです——したがって積極的な量子化またはシステムRAMへの部分的なオフロードを伴って70Bを実行します。ハイエンド構成の128 GB RAMが、そのオフロードに必要な余裕を与えます。',
+            a: 'はい、ハイエンド構成なら可能です。RTX 5090 32 GBはこのガイドのシングルGPUで最大のVRAMを持ちますが、70BモデルのQ4はおよそ39〜42 GBを必要とするため、積極的な量子化またはシステムRAMへの部分的なオフロードを伴ってのみ70Bを実行できます。ハイエンド構成の128 GB RAMが、そのオフロードに必要な余裕を与えます。',
           },
           {
             q: 'ミドル構成はエントリー構成より追加費用に見合いますか？',
@@ -2102,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-zh.webp',
@@ -2119,7 +2115,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2152,7 +2147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '入门配置约 2,000 美元：RTX 4060 Ti 16 GB，可跑 7B-13B 模型',
           '中端配置约 3,100 美元：RTX 4070 Ti Super 16 GB，可跑 14B-33B 模型',
-          '发烧配置约 9,600 美元：RTX 5090 32 GB，以 Q4 跑 70B 模型',
+          '发烧配置约 9,600 美元：RTX 5090 32 GB，仅在采用激进量化或部分溢出到系统内存时才能跑 70B 模型',
           '2026 年 GPU、内存和 SSD 价格都大幅上涨——请对比全新与二手，因为二手不再必然更便宜',
         ],
         updatedDate: '2026-10',
@@ -2182,9 +2177,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**GPU 决定档位，配置的其余部分支撑它。** 本地 AI PC 之所以以 GPU 为先来选，是因为显存决定能跑哪些模型。选择 GPU 显存与目标模型相匹配的档位，再围绕它来确定 CPU、内存和电源的规格。',
           '**2026 年的价格抬高了每套配置成本。** 存储芯片短缺把 GPU、DDR5 内存和 SSD 的价格推到远高于去年的水平。这里的总价按当前的挂牌最低价计算，远高于一年前同样部件的价格——内存如今已是一条主要的成本项，而不再是事后才考虑的部分。',
-          '**入门配置（约 2,000 美元）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB 内存、1 TB SSD、650 W 电源——以可用速度运行 7B-13B 模型。这是本地 AI 最便宜的完整整机。',
+          '**入门配置（约 2,000 美元）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB 内存、1 TB SSD、650 W 电源——以可用速度运行 7B-13B 模型。这是本指南三套配置中成本最低的一套。',
           '**中端配置（约 3,100 美元）：** RTX 4070 Ti Super 16 GB、Ryzen 9 7900X、64 GB 内存、2 TB SSD、850 W 电源——可跑 14B-33B 模型，并让 7B-14B 模型即时响应。',
-          '**发烧配置（约 9,600 美元）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB 内存、4 TB SSD、1000 W 电源——唯一能以 Q4 容纳 70B 模型的单 GPU 配置。仅 RTX 5090 一项的价格如今就超过整套中端配置。',
+          '**发烧配置（约 9,600 美元）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB 内存、4 TB SSD、1000 W 电源——本指南三套配置中,只有发烧配置能在单块 GPU 上运行 70B 模型,且需要激进量化或部分溢出到系统内存。仅 RTX 5090 一项的价格如今就超过整套中端配置。',
           '**内存不能替代显存。** 系统内存能让模型溢出显存，但从内存运行的模型对交互式使用来说太慢。为模型买足显存,为操作系统和工具链买内存。',
           '**电源随 GPU 等比例提升。** 入门配置需要 650 W,中端配置 850 W,发烧配置 1000 W,因为单是 RTX 5090 就需 575 W。请把电源与显卡一并纳入预算。',
           '**二手不再是必然的折扣。** 2026 年末，有几款二手显卡的挂牌价不低于最便宜的全新品，因此购买前请两者对比。当二手卡明显更便宜时，一块经过验证可用的二手卡仍然值得入手——但千万不要想当然。',
@@ -2196,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**入门配置（约 2,000 美元）：** GPU RTX 4060 Ti 16 GB——可跑 7B 及大多数 13B 模型。',
           '**中端配置（约 3,100 美元）：** GPU RTX 4070 Ti Super 16 GB——从容运行 14B,可做轻量 22B-33B 工作。',
-          '**发烧配置（约 9,600 美元）：** GPU RTX 5090 32 GB——从容运行 33B,以 Q4 运行 70B。',
+          '**发烧配置（约 9,600 美元）：** GPU RTX 5090 32 GB——从容运行 33B;70B 仅在采用激进量化或部分溢出到系统内存时才能运行。',
           '**Q4_K_M 下的显存经验法则：** 每十亿参数约 0.6 GB,另加 2-4 GB 用于上下文和工具链。',
           '**系统内存建议：** 入门配置 32 GB,中端配置 64 GB,发烧配置 128 GB。',
           '**各档电源：** 入门 650 W、中端 850 W、发烧 1000 W——RTX 5090 单卡就需 575 W。',
@@ -2208,7 +2203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '编辑推荐：中端配置（约 3,100 美元）',
         highlight: true,
         content:
-          '**对大多数为本地 AI 装机的购买者来说,中端配置是在能力、成本和余量之间取得平衡的那一档。** 它围绕 RTX 4070 Ti Super 16 GB 构建,能在保有上下文空间的情况下运行每个 14B 模型,可应付轻量 22B-33B 工作,并让 7B-14B 模型即时响应——整机约 3,100 美元。这套配置不会在几个月内让你失望,也不需要在一年内更换。只有当你的上限明确停留在 7B-13B 模型时,才降到入门配置;只有当你确实需要 70B 工作负载时,才升到发烧配置。中端配置是一台你想长期保留的机器的稳妥默认选择。',
+          '**对大多数为本地 AI 装机的购买者来说,中端配置是在能力、成本和余量之间取得平衡的那一档。** 它围绕 RTX 4070 Ti Super 16 GB 构建,能在保有上下文空间的情况下运行每个 14B 模型,可应付轻量 22B-33B 工作,并让 7B-14B 模型即时响应——整机约 3,100 美元。这套配置在大多数 14B 级工作负载下应能继续好用相当长一段时间,但模型规模和价格都会变化。只有当你的上限明确停留在 7B-13B 模型时,才降到入门配置;只有当你确实需要 70B 工作负载时,才升到发烧配置。中端配置是一台你想长期保留的机器的合理默认选择。',
         callouts: [
           {
             type: 'note',
@@ -2236,7 +2231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026 年三档配置如何对比',
         content:
-          'GPU 显存和功耗数字为厂商规格。推理速度是基于 PromptQuorum 对各档 GPU 的测试所得的模型族级别估计值。配置总价为美国市场的估算值，由各配置章节所列每个价格区间的中点相加得出，并按当前的挂牌最低价计算——2026 年的存储短缺把 GPU、DDR5 内存和 SSD 推到远高于平时的价位,因此 GPU 和内存这两项主导每套总价,且逐周变动。请对比全新与二手 GPU 的挂牌价:二手不再必然更便宜。',
+          'GPU 显存和功耗数字为厂商规格。推理速度是各档 GPU 所属级别的大致典型值(并非 PromptQuorum 实测),实际速度取决于量化方式、运行时和上下文长度。配置总价为美国市场的估算值，由各配置章节所列每个价格区间的中点相加得出，并按当前的挂牌最低价计算——2026 年的存储短缺把 GPU、DDR5 内存和 SSD 推到远高于平时的价位,因此 GPU 和内存这两项主导每套总价,且逐周变动。请对比全新与二手 GPU 的挂牌价:二手不再必然更便宜。',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: '2026年本地AI主机配置对比:RTX 4060 Ti 16GB入门配置(约2,000美元)运行7B-13B模型,RTX 4070 Ti Super 16GB中端配置(约3,100美元)运行14B-33B模型,RTX 5090 32GB发烧级配置(约9,600美元)运行33B-70B模型。',
         snippetBlocks: [
@@ -2271,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '配置档位': '发烧',
             'GPU': 'RTX 5090 32 GB',
             '显存': '32 GB',
-            '可运行': '从容跑 33B,以 Q4 跑 70B',
+            '可运行': '从容跑 33B,70B 仅在采用激进量化或部分溢出时可跑',
             '电源': '1000 W',
             '总价（2026 年）': '约 9,600 美元',
           },
@@ -2284,12 +2279,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**你目标中最大的模型决定档位,你的预算予以确认。** 找到与你情况相符的那一行。',
         columns: ['你的情况', '装这套'],
         rows: [
-          { '你的情况': '我跑 7B-13B 模型,想要最便宜的完整整机', '装这套': '入门配置（约 2,000 美元）' },
+          { '你的情况': '我跑 7B-13B 模型,想要本指南三套配置中成本最低的整机', '装这套': '入门配置（约 2,000 美元）' },
           { '你的情况': '我想要第一台本地 AI PC,不确定会走多远', '装这套': '入门配置,或为留余量选中端配置' },
           { '你的情况': '我持续运行 14B 模型,希望它们即时响应', '装这套': '中端配置（约 3,100 美元）' },
           { '你的情况': '我做轻量 22B-33B 工作,想要一台耐用的机器', '装这套': '中端配置（约 3,100 美元）' },
           { '你的情况': '我大量运行 33B 模型,或想要充裕的未来余量', '装这套': '发烧配置（约 9,600 美元）' },
-          { '你的情况': '我需要一台能以 Q4 跑 70B 模型的单 GPU 机器', '装这套': '发烧配置（约 9,600 美元）' },
+          { '你的情况': '我需要一台能跑 70B 模型的单 GPU 机器（仅限激进量化或部分溢出到系统内存）', '装这套': '发烧配置（约 9,600 美元）' },
           { '你的情况': '尽管有 2026 年涨价,我仍想压低总价', '装这套': '任意档位——对比全新与二手 GPU 的挂牌价' },
           { '你的情况': '我拿不定主意,想要最稳妥、能用多年的配置', '装这套': '中端配置——编辑推荐' },
         ],
@@ -2298,9 +2293,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: '入门配置（约 2,000 美元）：RTX 4060 Ti 16 GB',
         content:
-          '**入门配置是最便宜的完整本地 AI PC,可运行每个 7B 模型以及大多数 13B 模型——对大多数首次使用者来说能力足够。** 它围绕 RTX 4060 Ti 16 GB 构建,这是本指南中价格最低的 16 GB 显卡,从而把总价压到 2026 年短缺所允许的最低水平。',
+          '**入门配置是本指南三套配置中成本最低的本地 AI PC,可运行每个 7B 模型以及大多数 13B 模型——对大多数首次使用者来说能力足够。** 它围绕 RTX 4060 Ti 16 GB 构建,这是本指南中价格最低的 16 GB 显卡,从而把总价压到 2026 年短缺所允许的最低水平。',
         items: [
-          '**GPU——RTX 4060 Ti 16 GB（约 650-800 美元）：** 16 GB 显存,165 W。以约 20-25 tok/s 运行 7B 模型,并能在保有上下文余量的情况下容纳 14B 模型。16 GB 容量正是选它而不选 8 GB 版的理由。该区间从最便宜的二手挂牌价到最便宜的全新挂牌价。',
+          '**GPU——RTX 4060 Ti 16 GB（约 650-800 美元）：** 16 GB 显存,165 W。这一级 GPU 运行 7B 模型的典型速度约为 20-25 tok/s(非 PromptQuorum 实测,随量化和上下文而变),并能在保有上下文余量的情况下容纳 14B 模型。16 GB 容量正是选它而不选 8 GB 版的理由。该区间从最便宜的二手挂牌价到最便宜的全新挂牌价。',
           '**CPU——AMD Ryzen 7 7700（约 250-280 美元）：** 8 核心,功耗适中。GPU 推理期间 CPU 工作量很小,因此这一档用中端芯片是正确的——不要在这一档的 CPU 上超额花钱。',
           '**主板——B650 芯片组（约 130-160 美元）：** 支持 Ryzen 7 和一块 PCIe 全尺寸 GPU。这一档不需要高端供电。',
           '**内存——32 GB DDR5（约 430-575 美元）：** 足以应付操作系统、工具链和一个在显存中运行的 7B-13B 模型。内存不能替代显存——这一档 32 GB 足够,但 DDR5 如今是这套配置中的第二大成本项。',
@@ -2392,9 +2387,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: '发烧配置（约 9,600 美元）：RTX 5090 32 GB',
         content:
-          '**发烧配置是唯一能以 Q4 容纳 70B 模型的单 GPU 机器——它的 RTX 5090 32 GB 是核心部件。** 装这一档是为了显存容量,而非纯粹的速度;速度只是副产物。2026 年涨价对这一档冲击最重——RTX 5090 的挂牌价远高于其 1,999 美元的发布价——因此 GPU 和内存这两项占主导且逐周变动。',
+          '**本指南三套配置中,只有发烧配置能在单块 GPU 上运行 70B 模型,且需要激进量化或部分溢出到系统内存——它的 RTX 5090 32 GB 是核心部件。** 装这一档是为了显存容量,而非纯粹的速度;速度只是副产物。2026 年涨价对这一档冲击最重——RTX 5090 的挂牌价远高于其 1,999 美元的发布价——因此 GPU 和内存这两项占主导且逐周变动。',
         items: [
-          '**GPU——RTX 5090 32 GB（约 4,900-5,900 美元）：** 32 GB GDDR7 显存,575 W。这是唯一一块无需双 GPU 配置即可以 Q4 跑 70B 模型的消费级单卡。它从容运行 33B 模型,还有富余。该区间从最便宜的全新挂牌价到最便宜的二手挂牌价;部分零售商的标价更高。',
+          '**GPU——RTX 5090 32 GB（约 4,900-5,900 美元）：** 32 GB GDDR7 显存,575 W。这是本指南中显存最大的单块 GPU;无需双 GPU 配置即可运行 70B 模型,但需要激进量化或部分溢出到系统内存。它从容运行 33B 模型,还有富余。该区间从最便宜的全新挂牌价到最便宜的二手挂牌价;部分零售商的标价更高。',
           '**CPU——AMD Ryzen 9 7950X（约 450-520 美元）：** 16 核心。足以在繁重推理之外运行数据准备、微调实验和工具链。',
           '**主板——X670E 芯片组（约 280-380 美元）：** 强劲供电和 PCIe 5.0,按一块 575 W GPU 和 16 核 CPU 来定规格。',
           '**内存——128 GB DDR5（约 1,650-2,400 美元,估算）：** 为大上下文窗口、同时加载多个模型和工具链留出空间——并在需要时留有把模型部分溢出到内存的余量。很少有 128 GB 套装能稳定供货,因此这一区间是 64 GB 区间的两倍;64 GB 套装（约 815-1,200 美元）是省钱的替代方案。',
@@ -2592,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '单 GPU 配置能跑 70B 模型吗？',
-            a: '能,发烧配置可以。RTX 5090 32 GB 是唯一一块能以 Q4 容纳 70B 模型的消费级单卡,该模型约需 39-42 GB 显存——因此它在采用激进量化或部分溢出到系统内存的情况下运行 70B。发烧配置中的 128 GB 内存为这种溢出提供了所需空间。',
+            a: '能,发烧配置可以。RTX 5090 32 GB 是本指南中显存最大的单块 GPU,但 70B 模型在 Q4 下约需 39-42 GB 显存——因此它只有在采用激进量化或部分溢出到系统内存的情况下才能运行 70B。发烧配置中的 128 GB 内存为这种溢出提供了所需空间。',
           },
           {
             q: '中端配置相比入门配置,多花的钱值得吗？',
@@ -2621,7 +2616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-es.webp',
@@ -2638,7 +2633,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2671,7 +2665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Configuración económica ~€2.050: RTX 4060 Ti 16 GB, ejecuta modelos 7B-13B',
           'Configuración media ~€3.250: RTX 4070 Ti Super 16 GB, ejecuta modelos 14B-33B',
-          'Configuración entusiasta ~€9.600: RTX 5090 32 GB, ejecuta modelos 70B en Q4',
+          'Configuración entusiasta ~€9.600: RTX 5090 32 GB, ejecuta modelos 70B solo con cuantización agresiva o descarga parcial',
           'Los precios de GPU, RAM y SSD se dispararon en 2026 — compara nuevo y usado, porque lo usado ya no siempre cuesta menos',
         ],
         updatedDate: '2026-10',
@@ -2701,9 +2695,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**La GPU define el nivel; el resto de la configuración la soporta.** Una PC para IA local se elige primero por la GPU porque la VRAM decide qué modelos corren. Elige el nivel cuya VRAM de GPU encaje con tu modelo objetivo y luego dimensiona la CPU, la RAM y la fuente de alimentación alrededor de eso.',
           '**Los precios de 2026 encarecieron cada configuración.** Una escasez de chips de memoria empujó las GPU, la RAM DDR5 y los SSD muy por encima de los precios del año pasado. Los totales aquí se construyen a partir de los precios mínimos de oferta actuales y están muy por encima de lo que costaban los mismos componentes hace un año — y la RAM ahora es una línea de costo importante, no un detalle menor.',
-          '**Configuración económica (~€2.050):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD de 1 TB, fuente de 650 W — ejecuta modelos 7B-13B a velocidad usable. La máquina completa más económica para IA local.',
+          '**Configuración económica (~€2.050):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD de 1 TB, fuente de 650 W — ejecuta modelos 7B-13B a velocidad usable. La de menor costo de las tres configuraciones de esta guía.',
           '**Configuración media (~€3.250):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB de RAM, SSD de 2 TB, fuente de 850 W — ejecuta modelos 14B-33B y hace que los modelos 7B-14B respondan al instante.',
-          '**Configuración entusiasta (~€9.600):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD de 4 TB, fuente de 1000 W — la única configuración de GPU única que cabe un modelo 70B en Q4. La RTX 5090 sola ahora cuesta más que toda la configuración media.',
+          '**Configuración entusiasta (~€9.600):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD de 4 TB, fuente de 1000 W — de las tres configuraciones aquí, la única que puede ejecutar un modelo 70B en una sola GPU, y solo con cuantización agresiva o descarga parcial a la RAM del sistema. La RTX 5090 sola ahora cuesta más que toda la configuración media.',
           '**La RAM no es un sustituto de la VRAM.** La RAM del sistema permite que un modelo desborde la VRAM, pero un modelo ejecutándose desde la RAM es demasiado lento para uso interactivo. Compra suficiente VRAM para el modelo; compra RAM para el sistema operativo y las herramientas.',
           '**La fuente de alimentación escala con la GPU.** Una configuración económica necesita 650 W, la media 850 W y la entusiasta 1000 W porque la RTX 5090 sola consume 575 W. Presupuesta la fuente junto con la tarjeta.',
           '**Lo usado ya no es un descuento garantizado.** A finales de 2026 varias tarjetas usadas se listan al mismo precio o más caro que la oferta nueva más barata, así que compara ambas antes de comprar. Una tarjeta usada con funcionamiento verificado sigue valiendo la pena cuando es claramente más barata — pero nunca lo des por hecho.',
@@ -2715,7 +2709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Configuración económica (~€2.050):** GPU RTX 4060 Ti 16 GB — ejecuta modelos 7B y la mayoría de los 13B.',
           '**Configuración media (~€3.250):** GPU RTX 4070 Ti Super 16 GB — ejecuta 14B con comodidad, trabajo ligero con 22B-33B.',
-          '**Configuración entusiasta (~€9.600):** GPU RTX 5090 32 GB — ejecuta 33B con comodidad y 70B en Q4.',
+          '**Configuración entusiasta (~€9.600):** GPU RTX 5090 32 GB — ejecuta 33B con comodidad y 70B solo con cuantización agresiva o descarga parcial.',
           '**Regla general de VRAM en Q4_K_M:** aproximadamente 0,6 GB por cada mil millones de parámetros, más 2-4 GB para contexto y herramientas.',
           '**Guía de RAM del sistema:** 32 GB para la configuración económica, 64 GB para la media, 128 GB para la entusiasta.',
           '**Fuente de alimentación por nivel:** 650 W económica, 850 W media, 1000 W entusiasta — la RTX 5090 sola consume 575 W.',
@@ -2727,7 +2721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Elección del editor: la configuración media (~€3.250)',
         highlight: true,
         content:
-          '**Para la mayoría de quienes arman una PC para IA local, la configuración media es el nivel que equilibra capacidad, costo y margen.** Construida alrededor de una RTX 4070 Ti Super 16 GB, ejecuta cada modelo 14B con espacio de contexto, maneja trabajo ligero con 22B-33B y hace que los modelos 7B-14B respondan al instante — por alrededor de €3.250 en total. Es la configuración que no te frustrará en meses y no necesitará reemplazarse en un año. Baja a la configuración económica solo si tu techo es firmemente modelos 7B-13B; sube a la configuración entusiasta solo si necesitas específicamente trabajar con 70B. La configuración media es la opción predeterminada segura para una máquina que quieres conservar.',
+          '**Para la mayoría de quienes arman una PC para IA local, la configuración media es el nivel que equilibra capacidad, costo y margen.** Construida alrededor de una RTX 4070 Ti Super 16 GB, ejecuta cada modelo 14B con espacio de contexto, maneja trabajo ligero con 22B-33B y hace que los modelos 7B-14B respondan al instante — por alrededor de €3.250 en total. Debería seguir siendo utilizable para la mayoría de las cargas de trabajo de clase 14B durante bastante tiempo, pero los tamaños de los modelos y los precios cambian. Baja a la configuración económica solo si tu techo es firmemente modelos 7B-13B; sube a la configuración entusiasta solo si necesitas específicamente trabajar con 70B. La configuración media es una opción predeterminada razonable para una máquina que quieres conservar.',
         callouts: [
           {
             type: 'note',
@@ -2755,7 +2749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan los tres niveles de configuración en 2026',
         content:
-          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son estimaciones a nivel de familia de modelos de las pruebas de GPU de PromptQuorum para la GPU del nivel correspondiente. Los totales de configuración son estimaciones de venta minorista en España (Amazon.es, PcComponentes) que suman el punto medio de cada rango de precio de las secciones de cada configuración, construidas a partir de los precios mínimos de oferta actuales — la escasez de memoria de 2026 empujó GPU, RAM DDR5 y SSD muy por encima de lo normal, por lo que las líneas de GPU y RAM dominan cada total y varían semana a semana. Compara listados de GPU nuevas y usadas: lo usado ya no siempre cuesta menos. En Latinoamérica, los precios pueden variar según impuestos locales.',
+          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son cifras aproximadas y típicas de la clase de GPU de cada nivel (no medidos por PromptQuorum); la velocidad real depende de la cuantización, el entorno de ejecución y la longitud de contexto. Los totales de configuración son estimaciones de venta minorista en España (Amazon.es, PcComponentes) que suman el punto medio de cada rango de precio de las secciones de cada configuración, construidas a partir de los precios mínimos de oferta actuales — la escasez de memoria de 2026 empujó GPU, RAM DDR5 y SSD muy por encima de lo normal, por lo que las líneas de GPU y RAM dominan cada total y varían semana a semana. Compara listados de GPU nuevas y usadas: lo usado ya no siempre cuesta menos. En Latinoamérica, los precios pueden variar según impuestos locales.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Comparativa de niveles de PC para IA local 2026: configuración económica RTX 4060 Ti 16 GB (~2.000 $) para modelos 7B-13B, configuración media RTX 4070 Ti Super 16 GB (~3.100 $) para modelos 14B-33B, configuración entusiasta RTX 5090 32 GB (~9.600 $) para modelos 33B-70B.',
         snippetBlocks: [
@@ -2790,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Nivel': 'Entusiasta',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            'Ejecuta': '33B con comodidad, 70B en Q4',
+            'Ejecuta': '33B con comodidad, 70B solo con cuantización agresiva o descarga parcial',
             'Fuente': '1000 W',
             'Total (2026)': '~€9.600',
           },
@@ -2803,12 +2797,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El modelo más grande que quieres ejecutar decide el nivel; tu presupuesto lo confirma.** Encuentra la fila que coincide con tu situación.',
         columns: ['Tu situación', 'Arma esta'],
         rows: [
-          { 'Tu situación': 'Ejecuto modelos 7B-13B y quiero la máquina completa más económica', 'Arma esta': 'Configuración económica (~€2.050)' },
+          { 'Tu situación': 'Ejecuto modelos 7B-13B y quiero la más económica de las tres configuraciones de esta guía', 'Arma esta': 'Configuración económica (~€2.050)' },
           { 'Tu situación': 'Quiero una primera PC para IA local y no sé hasta dónde llegaré', 'Arma esta': 'Configuración económica, o la media para tener margen' },
           { 'Tu situación': 'Ejecuto modelos 14B constantemente y los quiero al instante', 'Arma esta': 'Configuración media (~€3.250)' },
           { 'Tu situación': 'Hago trabajo ligero con 22B-33B y quiero una máquina duradera', 'Arma esta': 'Configuración media (~€3.250)' },
           { 'Tu situación': 'Ejecuto modelos 33B intensivamente o quiero mucho margen futuro', 'Arma esta': 'Configuración entusiasta (~€9.600)' },
-          { 'Tu situación': 'Necesito una máquina de GPU única que ejecute modelos 70B en Q4', 'Arma esta': 'Configuración entusiasta (~€9.600)' },
+          { 'Tu situación': 'GPU única para modelos 70B (solo con cuantización agresiva o descarga parcial)', 'Arma esta': 'Configuración entusiasta (~€9.600)' },
           { 'Tu situación': 'Quiero mantener el total bajo a pesar del aumento de 2026', 'Arma esta': 'Cualquier nivel — compara listados de GPU nuevas y usadas' },
           { 'Tu situación': 'No estoy seguro y quiero la configuración más segura para conservar por años', 'Arma esta': 'Configuración media — la elección del editor' },
         ],
@@ -2817,9 +2811,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'Configuración económica (~€2.050): RTX 4060 Ti 16 GB',
         content:
-          '**La configuración económica es la PC completa para IA local más barata y ejecuta cada modelo 7B y la mayoría de los modelos 13B — suficiente capacidad para la mayoría de los usuarios por primera vez.** Está construida alrededor de la RTX 4060 Ti 16 GB, la GPU de 16 GB de menor precio de esta guía, lo que mantiene el total tan bajo como lo permite la escasez de 2026.',
+          '**La configuración económica es la de menor costo de las tres configuraciones de esta guía y ejecuta cada modelo 7B y la mayoría de los modelos 13B — suficiente capacidad para la mayoría de los usuarios por primera vez.** Está construida alrededor de la RTX 4060 Ti 16 GB, la GPU de 16 GB de menor precio de esta guía, lo que mantiene el total tan bajo como lo permite la escasez de 2026.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (~€690-840):** 16 GB de VRAM, 165 W. Ejecuta modelos 7B a aproximadamente 20-25 tok/s y cabe modelos 14B con margen de contexto. La capacidad de 16 GB es la razón para elegirla sobre la versión de 8 GB. El rango va del listado usado más barato al nuevo más barato.',
+          '**GPU — RTX 4060 Ti 16 GB (~€690-840):** 16 GB de VRAM, 165 W. La velocidad típica de esta clase de GPU es de aproximadamente 20-25 tok/s con modelos 7B (no medida por PromptQuorum; varía con la cuantización y el contexto), y los modelos 14B caben con margen de contexto. La capacidad de 16 GB es la razón para elegirla sobre la versión de 8 GB. El rango va del listado usado más barato al nuevo más barato.',
           '**CPU — AMD Ryzen 7 7700 (~€230-260):** 8 núcleos, consumo de energía moderado. La CPU hace poco trabajo durante la inferencia de GPU, por lo que un chip de gama media es correcto aquí — no gastes de más en la CPU en este nivel.',
           '**Placa base — chipset B650 (~€130-170):** soporta el Ryzen 7 y una GPU de tamaño completo en PCIe. No necesitas suministro de energía de gama alta en este nivel.',
           '**RAM — 32 GB DDR5 (~€410-550):** suficiente para el sistema operativo, las herramientas y un modelo 7B-13B ejecutándose en VRAM. La RAM no es un sustituto de la VRAM — 32 GB es suficiente aquí, pero la DDR5 ahora es la segunda línea más grande de esta configuración.',
@@ -2911,9 +2905,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'Configuración entusiasta (~€9.600): RTX 5090 32 GB',
         content:
-          '**La configuración entusiasta es la única máquina de GPU única que cabe un modelo 70B en Q4 — su RTX 5090 32 GB es la pieza principal.** Arma este nivel por capacidad de VRAM, no por velocidad bruta; la velocidad es un efecto secundario. El aumento de 2026 golpeó este nivel con más fuerza — la RTX 5090 se listó muy por encima de su precio de lanzamiento de €1.999 — por lo que las líneas de GPU y RAM dominan y varían semana a semana.',
+          '**De las tres configuraciones aquí, solo la entusiasta puede ejecutar un modelo 70B en una sola GPU, y solo con cuantización agresiva o descarga parcial a la RAM del sistema — su RTX 5090 32 GB es la pieza principal.** Arma este nivel por capacidad de VRAM, no por velocidad bruta; la velocidad es un efecto secundario. El aumento de 2026 golpeó este nivel con más fuerza — la RTX 5090 se listó muy por encima de su precio de lanzamiento de €1.999 — por lo que las líneas de GPU y RAM dominan y varían semana a semana.',
         items: [
-          '**GPU — RTX 5090 32 GB (~€4.700-5.650):** 32 GB de VRAM GDDR7, 575 W. La única tarjeta de consumo que ejecuta un modelo 70B en Q4 sin una configuración de GPU dual. Ejecuta modelos 33B con comodidad y margen. El rango va del listado nuevo más barato al usado más barato; algunos minoristas la listan todavía más cara.',
+          '**GPU — RTX 5090 32 GB (~€4.700-5.650):** 32 GB de VRAM GDDR7, 575 W. La GPU individual con más VRAM de esta guía; sin una configuración de GPU dual, ejecuta un modelo 70B solo con cuantización agresiva o descarga parcial a la RAM del sistema. Ejecuta modelos 33B con comodidad y margen. El rango va del listado nuevo más barato al usado más barato; algunos minoristas la listan todavía más cara.',
           '**CPU — AMD Ryzen 9 7950X (~€450-600):** 16 núcleos. Suficiente para ejecutar preparación de datos, experimentos de fine-tuning y herramientas junto a inferencia pesada.',
           '**Placa base — chipset X670E (~€280-380):** suministro de energía robusto y PCIe 5.0, dimensionado para una GPU de 575 W y la CPU de 16 núcleos.',
           '**RAM — 128 GB DDR5 (~€1.800-2.600, estimado):** espacio para ventanas de contexto grandes, múltiples modelos cargados a la vez y herramientas — y el margen para descargar un modelo parcialmente a la RAM si es necesario. Pocos kits de 128 GB se listan de forma fiable, así que este rango duplica el de 64 GB; un kit de 64 GB (~€890-1.310) es la alternativa para ahorrar.',
@@ -3111,7 +3105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede una configuración de GPU única ejecutar un modelo 70B?',
-            a: 'Sí, la configuración entusiasta puede. Una RTX 5090 32 GB es la única tarjeta de consumo individual que cabe un modelo 70B en Q4, que necesita aproximadamente 39-42 GB de VRAM — por lo que ejecuta 70B con cuantización agresiva o descarga parcial a la RAM del sistema. Los 128 GB de RAM de la configuración entusiasta le dan a esa descarga el espacio que necesita.',
+            a: 'Sí, la configuración entusiasta puede. Una RTX 5090 32 GB tiene más VRAM que cualquier otra GPU individual de esta guía, pero un modelo 70B en Q4 necesita aproximadamente 39-42 GB — por lo que ejecuta 70B solo con cuantización agresiva o descarga parcial a la RAM del sistema. Los 128 GB de RAM de la configuración entusiasta le dan a esa descarga el espacio que necesita.',
           },
           {
             q: '¿Vale la pena la configuración media respecto al costo extra sobre la económica?',
@@ -3143,7 +3137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3153,7 +3147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-pt.webp',
@@ -3170,7 +3164,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -3203,7 +3196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Configuração econômica ~R$ 12.900: RTX 4060 Ti 16 GB, executa modelos 7B–13B',
           'Configuração intermediária ~R$ 20.600: RTX 4070 Ti Super 16 GB, executa modelos 14B–33B',
-          'Configuração entusiasta ~R$ 62.000: RTX 5090 32 GB, executa modelos 70B em Q4',
+          'Configuração entusiasta ~R$ 62.000: RTX 5090 32 GB, executa modelos 70B apenas com quantização agressiva ou descarga parcial',
           'Os preços de GPU, RAM e SSD dispararam em 2026 — compare novo e usado, porque o usado já não custa menos de forma confiável',
         ],
         updatedDate: '2026-10',
@@ -3233,9 +3226,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**A GPU define o nível; o restante da configuração a suporta.** Um PC para IA local é escolhido primeiro pela GPU porque a VRAM decide quais modelos rodam. Escolha o nível cuja VRAM de GPU se encaixe no seu modelo alvo e depois dimensione a CPU, a RAM e a fonte de alimentação ao redor disso.',
           '**Os preços de 2026 encareceram cada configuração.** Uma escassez de chips de memória empurrou GPUs, RAM DDR5 e SSDs muito acima dos preços do ano passado. Os totais aqui são montados a partir dos menores preços anunciados atualmente e ficam bem acima do que os mesmos componentes custavam um ano atrás — e a RAM agora é uma linha de custo importante, não um detalhe.',
-          '**Configuração econômica (~R$ 12.900):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD de 1 TB, fonte de 650 W — executa modelos 7B–13B em velocidade utilizável. A máquina completa mais econômica para IA local.',
+          '**Configuração econômica (~R$ 12.900):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD de 1 TB, fonte de 650 W — executa modelos 7B–13B em velocidade utilizável. A de menor custo entre as três configurações deste guia.',
           '**Configuração intermediária (~R$ 20.600):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB de RAM, SSD de 2 TB, fonte de 850 W — executa modelos 14B–33B e faz os modelos 7B–14B responderem instantaneamente.',
-          '**Configuração entusiasta (~R$ 62.000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD de 4 TB, fonte de 1000 W — a única configuração de GPU única que cabe um modelo 70B em Q4. Só a RTX 5090 já custa mais do que a configuração intermediária inteira.',
+          '**Configuração entusiasta (~R$ 62.000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD de 4 TB, fonte de 1000 W — das três configurações aqui, a única que consegue executar um modelo 70B em uma só GPU, e apenas com quantização agressiva ou descarga parcial para a RAM do sistema. Só a RTX 5090 já custa mais do que a configuração intermediária inteira.',
           '**A RAM não é um substituto para a VRAM.** A RAM do sistema permite que um modelo ultrapasse a VRAM, mas um modelo rodando a partir da RAM é lento demais para uso interativo. Compre VRAM suficiente para o modelo; compre RAM para o sistema operacional e as ferramentas.',
           '**A fonte de alimentação escala com a GPU.** Uma configuração econômica precisa de 650 W, a intermediária 850 W e a entusiasta 1000 W porque a RTX 5090 sozinha consome 575 W. Inclua a fonte no orçamento junto com a placa.',
           '**O usado não é mais um desconto garantido.** No fim de 2026, vários modelos usados são anunciados pelo mesmo preço ou acima do menor anúncio novo, então compare os dois antes de comprar. Uma placa usada com funcionamento verificado ainda vale a pena quando é claramente mais barata — mas nunca presuma que seja.',
@@ -3247,7 +3240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Configuração econômica (~R$ 12.900):** GPU RTX 4060 Ti 16 GB — executa modelos 7B e a maioria dos 13B.',
           '**Configuração intermediária (~R$ 20.600):** GPU RTX 4070 Ti Super 16 GB — executa 14B confortavelmente, trabalho leve com 22B–33B.',
-          '**Configuração entusiasta (~R$ 62.000):** GPU RTX 5090 32 GB — executa 33B confortavelmente e 70B em Q4.',
+          '**Configuração entusiasta (~R$ 62.000):** GPU RTX 5090 32 GB — executa 33B confortavelmente e 70B apenas com quantização agressiva ou descarga parcial.',
           '**Regra geral de VRAM em Q4_K_M:** aproximadamente 0,6 GB por bilhão de parâmetros, mais 2–4 GB para contexto e ferramentas.',
           '**Guia de RAM do sistema:** 32 GB para a configuração econômica, 64 GB para a intermediária, 128 GB para a entusiasta.',
           '**Fonte de alimentação por nível:** 650 W econômica, 850 W intermediária, 1000 W entusiasta — a RTX 5090 sozinha consome 575 W.',
@@ -3259,7 +3252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Escolha do editor: a configuração intermediária (~R$ 20.600)',
         highlight: true,
         content:
-          '**Para a maioria de quem monta um PC para IA local, a configuração intermediária é o nível que equilibra capacidade, custo e margem.** Construída ao redor de uma RTX 4070 Ti Super 16 GB, executa cada modelo 14B com espaço de contexto, lida com trabalho leve com 22B–33B e faz os modelos 7B–14B responderem instantaneamente — por cerca de R$ 20.600 no total. É a configuração que não vai te frustrar em meses e não precisará ser substituída em um ano. Desça para a configuração econômica apenas se o seu teto for firmemente modelos 7B–13B; suba para a entusiasta apenas se precisar especificamente de trabalho com 70B.',
+          '**Para a maioria de quem monta um PC para IA local, a configuração intermediária é o nível que equilibra capacidade, custo e margem.** Construída ao redor de uma RTX 4070 Ti Super 16 GB, executa cada modelo 14B com espaço de contexto, lida com trabalho leve com 22B–33B e faz os modelos 7B–14B responderem instantaneamente — por cerca de R$ 20.600 no total. Ela deve continuar utilizável para a maioria das cargas de trabalho da classe 14B por bastante tempo, mas os tamanhos dos modelos e os preços mudam. Desça para a configuração econômica apenas se o seu teto for firmemente modelos 7B–13B; suba para a entusiasta apenas se precisar especificamente de trabalho com 70B.',
         callouts: [
           {
             type: 'note',
@@ -3287,7 +3280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como os três níveis de configuração se comparam em 2026',
         content:
-          'As cifras de VRAM e potência da GPU são especificações do fabricante. As velocidades de inferência são estimativas a nível de família de modelos dos testes de GPU do PromptQuorum para a GPU do nível correspondente. Os totais de configuração são estimativas de varejo no Brasil (KaBuM!, Pichau, Mercado Livre) que somam o ponto médio de cada faixa de preço mostrada nas seções de cada configuração, montadas a partir dos menores preços anunciados atualmente — a escassez de memória de 2026 empurrou GPUs, RAM DDR5 e SSDs muito acima do normal, então as linhas de GPU e RAM dominam cada total e variam semana a semana. Compare anúncios novos e usados de GPU: o usado já não custa sempre menos. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          'As cifras de VRAM e potência da GPU são especificações do fabricante. As velocidades de inferência são valores aproximados e típicos para a classe de GPU de cada nível (não medidas pelo PromptQuorum); a velocidade real depende da quantização, do runtime e do tamanho do contexto. Os totais de configuração são estimativas de varejo no Brasil (KaBuM!, Pichau, Mercado Livre) que somam o ponto médio de cada faixa de preço mostrada nas seções de cada configuração, montadas a partir dos menores preços anunciados atualmente — a escassez de memória de 2026 empurrou GPUs, RAM DDR5 e SSDs muito acima do normal, então as linhas de GPU e RAM dominam cada total e variam semana a semana. Compare anúncios novos e usados de GPU: o usado já não custa sempre menos. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'Comparação dos níveis de PC para IA local em 2026: configuração econômica RTX 4060 Ti 16 GB (~US$ 2.000) para modelos 7B-13B, configuração intermediária RTX 4070 Ti Super 16 GB (~US$ 3.100) para modelos 14B-33B, configuração entusiasta RTX 5090 32 GB (~US$ 9.600) para modelos 33B-70B.',
         snippetBlocks: [
@@ -3322,7 +3315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Nível': 'Entusiasta',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            'Executa': '33B confortavelmente, 70B em Q4',
+            'Executa': '33B confortavelmente, 70B apenas com quantização agressiva ou descarga parcial',
             'Fonte': '1000 W',
             'Total (2026)': '~R$ 62.000',
           },
@@ -3335,12 +3328,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O maior modelo que você quer executar decide o nível; seu orçamento o confirma.** Encontre a linha que corresponde à sua situação.',
         columns: ['Sua situação', 'Monte esta'],
         rows: [
-          { 'Sua situação': 'Executo modelos 7B–13B e quero a máquina completa mais econômica', 'Monte esta': 'Configuração econômica (~R$ 12.900)' },
+          { 'Sua situação': 'Executo modelos 7B–13B e quero a de menor custo das três configurações deste guia', 'Monte esta': 'Configuração econômica (~R$ 12.900)' },
           { 'Sua situação': 'Quero um primeiro PC para IA local e não sei até onde vou', 'Monte esta': 'Configuração econômica, ou a intermediária para ter margem' },
           { 'Sua situação': 'Executo modelos 14B constantemente e os quero instantâneos', 'Monte esta': 'Configuração intermediária (~R$ 20.600)' },
           { 'Sua situação': 'Faço trabalho leve com 22B–33B e quero uma máquina duradoura', 'Monte esta': 'Configuração intermediária (~R$ 20.600)' },
           { 'Sua situação': 'Executo modelos 33B intensivamente ou quero muita margem futura', 'Monte esta': 'Configuração entusiasta (~R$ 62.000)' },
-          { 'Sua situação': 'Preciso de uma máquina de GPU única que execute modelos 70B em Q4', 'Monte esta': 'Configuração entusiasta (~R$ 62.000)' },
+          { 'Sua situação': 'GPU única para modelos 70B (só com quantização agressiva ou descarga parcial)', 'Monte esta': 'Configuração entusiasta (~R$ 62.000)' },
           { 'Sua situação': 'Quero manter o total baixo apesar do aumento de 2026', 'Monte esta': 'Qualquer nível — compare anúncios de GPU novos e usados' },
           { 'Sua situação': 'Não tenho certeza e quero a configuração mais segura para conservar por anos', 'Monte esta': 'Configuração intermediária — a escolha do editor' },
         ],
@@ -3349,9 +3342,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'Configuração econômica (~R$ 12.900): RTX 4060 Ti 16 GB',
         content:
-          '**A configuração econômica é o PC completo para IA local mais barato e executa cada modelo 7B e a maioria dos modelos 13B — capacidade suficiente para a maioria dos usuários pela primeira vez.** É construída ao redor da RTX 4060 Ti 16 GB, a GPU de 16 GB de menor preço deste guia, o que mantém o total tão baixo quanto a escassez de 2026 permite.',
+          '**A configuração econômica é a de menor custo das três configurações deste guia e executa cada modelo 7B e a maioria dos modelos 13B — capacidade suficiente para a maioria dos usuários pela primeira vez.** É construída ao redor da RTX 4060 Ti 16 GB, a GPU de 16 GB de menor preço deste guia, o que mantém o total tão baixo quanto a escassez de 2026 permite.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (~R$ 4.100–5.000):** 16 GB de VRAM, 165 W. Executa modelos 7B a aproximadamente 20–25 tok/s e cabe modelos 14B com margem de contexto. A capacidade de 16 GB é a razão para escolhê-la sobre a versão de 8 GB. A faixa vai do menor anúncio usado ao menor anúncio novo.',
+          '**GPU — RTX 4060 Ti 16 GB (~R$ 4.100–5.000):** 16 GB de VRAM, 165 W. A velocidade típica desta classe de GPU é de aproximadamente 20–25 tok/s em modelos 7B (não medida pelo PromptQuorum; varia com a quantização e o contexto), e modelos 14B cabem com margem de contexto. A capacidade de 16 GB é a razão para escolhê-la sobre a versão de 8 GB. A faixa vai do menor anúncio usado ao menor anúncio novo.',
           '**CPU — AMD Ryzen 7 7700 (~R$ 1.500–1.900):** 8 núcleos, consumo de energia moderado. A CPU faz pouco trabalho durante a inferência de GPU, então um chip de gama intermediária é correto aqui.',
           '**Placa-mãe — chipset B650 (~R$ 900–1.400):** suporta o Ryzen 7 e uma GPU de tamanho completo em PCIe.',
           '**RAM — 32 GB DDR5 (~R$ 2.700–3.600):** suficiente para o sistema operacional, as ferramentas e um modelo 7B–13B rodando na VRAM. A RAM não substitui a VRAM — 32 GB bastam aqui, mas a DDR5 agora é a segunda maior linha desta configuração.',
@@ -3443,9 +3436,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'Configuração entusiasta (~R$ 62.000): RTX 5090 32 GB',
         content:
-          '**A configuração entusiasta é a única máquina de GPU única que cabe um modelo 70B em Q4 — sua RTX 5090 32 GB é a peça central.** Monte este nível pela capacidade de VRAM, não pela velocidade bruta; a velocidade é um efeito colateral. O aumento de 2026 atingiu este nível com mais força — a RTX 5090 foi anunciada muito acima do preço de lançamento de US$ 1.999 — então as linhas de GPU e RAM dominam e variam semana a semana.',
+          '**Das três configurações aqui, apenas a entusiasta consegue executar um modelo 70B em uma só GPU, e apenas com quantização agressiva ou descarga parcial para a RAM do sistema — sua RTX 5090 32 GB é a peça central.** Monte este nível pela capacidade de VRAM, não pela velocidade bruta; a velocidade é um efeito colateral. O aumento de 2026 atingiu este nível com mais força — a RTX 5090 foi anunciada muito acima do preço de lançamento de US$ 1.999 — então as linhas de GPU e RAM dominam e variam semana a semana.',
         items: [
-          '**GPU — RTX 5090 32 GB (~R$ 31.000–37.000):** 32 GB de VRAM GDDR7, 575 W. A única placa de consumo que executa um modelo 70B em Q4 sem uma configuração de GPU dupla. A faixa vai do menor anúncio novo ao menor anúncio usado; alguns varejistas anunciam por valores ainda mais altos.',
+          '**GPU — RTX 5090 32 GB (~R$ 31.000–37.000):** 32 GB de VRAM GDDR7, 575 W. A GPU individual com mais VRAM deste guia; sem uma configuração de GPU dupla, executa um modelo 70B apenas com quantização agressiva ou descarga parcial para a RAM do sistema. A faixa vai do menor anúncio novo ao menor anúncio usado; alguns varejistas anunciam por valores ainda mais altos.',
           '**CPU — AMD Ryzen 9 7950X (~R$ 3.200–4.200):** 16 núcleos. Suficiente para executar preparação de dados, experimentos de fine-tuning e ferramentas junto à inferência pesada.',
           '**Placa-mãe — chipset X670E (~R$ 2.200–3.500):** fornecimento de energia robusto e PCIe 5.0, dimensionado para uma GPU de 575 W e a CPU de 16 núcleos.',
           '**RAM — 128 GB DDR5 (~R$ 10.400–15.100, estimado):** espaço para janelas de contexto grandes, múltiplos modelos carregados ao mesmo tempo e ferramentas — e a margem para descarregar um modelo parcialmente para a RAM se necessário. Poucos kits de 128 GB são anunciados de forma confiável, então esta faixa é o dobro da de 64 GB; um kit de 64 GB (~R$ 5.100–7.600) é a alternativa para economizar.',
@@ -3643,7 +3636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Uma configuração de GPU única pode executar um modelo 70B?',
-            a: 'Sim, a configuração entusiasta pode. Uma RTX 5090 32 GB é a única placa de consumo individual que cabe um modelo 70B em Q4, que precisa de aproximadamente 39–42 GB de VRAM — então executa 70B com quantização agressiva ou descarga parcial para a RAM do sistema. Os 128 GB de RAM da configuração entusiasta dão a essa descarga o espaço que ela precisa.',
+            a: 'Sim, a configuração entusiasta pode. Uma RTX 5090 32 GB tem mais VRAM do que qualquer outra GPU individual deste guia, mas um modelo 70B em Q4 precisa de aproximadamente 39–42 GB — então executa 70B apenas com quantização agressiva ou descarga parcial para a RAM do sistema. Os 128 GB de RAM da configuração entusiasta dão a essa descarga o espaço que ela precisa.',
           },
           {
             q: 'Vale a pena a configuração intermediária em relação ao custo extra sobre a econômica?',
@@ -3675,7 +3668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3685,7 +3678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ar.webp',
@@ -3702,7 +3695,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -3735,7 +3727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'الإعداد الاقتصادي ~2000 دولار: RTX 4060 Ti 16 GB، يُشغّل نماذج 7B–13B.',
           'الإعداد المتوسط ~3100 دولار: RTX 4070 Ti Super 16 GB، يُشغّل نماذج 14B–33B.',
-          'الإعداد المتحمس ~9600 دولار: RTX 5090 32 GB، يُشغّل نماذج 70B في Q4.',
+          'الإعداد المتحمس ~9600 دولار: RTX 5090 32 GB، يُشغّل نماذج 70B فقط مع تكميم عدواني أو تفريغ جزئي.',
           'ارتفعت أسعار GPU وRAM وSSD كلها في 2026 — قارن الجديد بالمستعمل، فالمستعمل لم يعد أرخص دائماً.',
         ],
         updatedDate: '2026-10',
@@ -3765,9 +3757,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الـGPU تحدد المستوى؛ بقية المكوّنات تدعمها.** حاسوب الذكاء الاصطناعي المحلي يُختار أولاً بناءً على الـGPU لأن VRAM تحدد النماذج التي تعمل. اختر المستوى الذي تناسب VRAM الـGPU فيه نموذجك المستهدف، ثم حجّم المعالج والـRAM والمزوّد حول ذلك.',
           '**أسعار 2026 رفعت تكلفة كل إعداد.** شحّ رقائق الذاكرة دفع أسعار GPU وRAM DDR5 وSSD إلى مستويات أعلى بكثير من العام الماضي. الإجماليات هنا مبنية على أدنى الأسعار المطلوبة حالياً وأعلى بكثير من تكلفة نفس المكوّنات قبل عام — وأصبحت RAM بنداً رئيسياً في التكلفة لا تفصيلاً هامشياً.',
-          '**الإعداد الاقتصادي (~2000 دولار):** RTX 4060 Ti 16 GB وRyzen 7 7700 و32 جيجابايت RAM وSSD 1 تيرابايت ومزوّد 650 واط — يُشغّل نماذج 7B–13B بسرعة مقبولة. أرخص جهاز كامل للذكاء الاصطناعي المحلي.',
+          '**الإعداد الاقتصادي (~2000 دولار):** RTX 4060 Ti 16 GB وRyzen 7 7700 و32 جيجابايت RAM وSSD 1 تيرابايت ومزوّد 650 واط — يُشغّل نماذج 7B–13B بسرعة مقبولة. الأقل تكلفة بين الإعدادات الثلاثة في هذا الدليل.',
           '**الإعداد المتوسط (~3100 دولار):** RTX 4070 Ti Super 16 GB وRyzen 9 7900X و64 جيجابايت RAM وSSD 2 تيرابايت ومزوّد 850 واط — يُشغّل نماذج 14B–33B ويجعل نماذج 7B–14B تستجيب فوراً.',
-          '**الإعداد المتحمس (~9600 دولار):** RTX 5090 32 GB وRyzen 9 7950X و128 جيجابايت RAM وSSD 4 تيرابايت ومزوّد 1000 واط — الإعداد الوحيد بـGPU واحدة الذي يستوعب نموذج 70B في Q4. تكلفة RTX 5090 وحدها الآن أعلى من الإعداد المتوسط كاملاً.',
+          '**الإعداد المتحمس (~9600 دولار):** RTX 5090 32 GB وRyzen 9 7950X و128 جيجابايت RAM وSSD 4 تيرابايت ومزوّد 1000 واط — ومن بين الإعدادات الثلاثة هنا، هو الوحيد القادر على تشغيل نموذج 70B على GPU واحدة، ولا يتم ذلك إلا بتكميم عدواني أو تفريغ جزئي إلى RAM النظام. تكلفة RTX 5090 وحدها الآن أعلى من الإعداد المتوسط كاملاً.',
           '**RAM النظام ليست بديلاً عن VRAM.** تتيح RAM النظام للنموذج تجاوز VRAM، لكن نموذجاً يعمل من RAM بطيء جداً للاستخدام التفاعلي. اشترِ VRAM كافية في الـGPU للنموذج؛ اشترِ RAM للنظام التشغيلي والأدوات.',
           '**المزوّد يتدرج مع الـGPU.** الإعداد الاقتصادي يحتاج 650 واطاً، والمتوسط 850 واطاً، والمتحمس 1000 واط لأن RTX 5090 وحدها تستهلك 575 واطاً. اشمل المزوّد في الميزانية مع الـGPU.',
           '**المستعمل لم يعد خصماً مضموناً.** في أواخر 2026 تُعرض عدة بطاقات مستعملة بسعر يساوي أو يفوق أرخص إعلان جديد، فقارن الاثنين قبل الشراء. تظل البطاقة المستعملة المتحقق من عملها خياراً جيداً حين تكون أرخص بوضوح — لكن لا تفترض ذلك أبداً.',
@@ -3779,7 +3771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الإعداد الاقتصادي (~2000 دولار):** GPU RTX 4060 Ti 16 GB — يُشغّل نماذج 7B ومعظم نماذج 13B.',
           '**الإعداد المتوسط (~3100 دولار):** GPU RTX 4070 Ti Super 16 GB — يُشغّل 14B بارتياح وعمل خفيف مع 22B–33B.',
-          '**الإعداد المتحمس (~9600 دولار):** GPU RTX 5090 32 GB — يُشغّل 33B بارتياح و70B في Q4.',
+          '**الإعداد المتحمس (~9600 دولار):** GPU RTX 5090 32 GB — يُشغّل 33B بارتياح، و70B فقط مع تكميم عدواني أو تفريغ جزئي.',
           '**قاعدة VRAM في Q4_K_M:** حوالي 0.6 جيجابايت لكل مليار معامل، بالإضافة إلى 2–4 جيجابايت للسياق والأدوات.',
           '**دليل RAM النظام:** 32 جيجابايت للاقتصادي، 64 جيجابايت للمتوسط، 128 جيجابايت للمتحمس.',
           '**المزوّد لكل مستوى:** 650 واط للاقتصادي، 850 واط للمتوسط، 1000 واط للمتحمس — RTX 5090 وحدها تستهلك 575 واطاً.',
@@ -3791,7 +3783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'اختيار المحرر: الإعداد المتوسط (~3100 دولار)',
         highlight: true,
         content:
-          '**لمعظم من يبنون حاسوباً للذكاء الاصطناعي المحلي، الإعداد المتوسط هو المستوى الذي يوازن القدرة والتكلفة والهامش.** مبني حول RTX 4070 Ti Super 16 GB، يُشغّل كل نموذج 14B بمساحة سياق، ويتعامل مع العمل الخفيف مع 22B–33B، ويجعل نماذج 7B–14B تستجيب فوراً — بحوالي 3100 دولار إجمالاً. إنه الإعداد الذي لن يُحبطك خلال أشهر ولن يحتاج استبدالاً خلال عام. انزل للاقتصادي فقط إن كانت نماذج 7B–13B حدّك الصارم؛ ارتفع للمتحمس فقط إن كنت تحتاج تحديداً العمل مع نماذج 70B.',
+          '**لمعظم من يبنون حاسوباً للذكاء الاصطناعي المحلي، الإعداد المتوسط هو المستوى الذي يوازن القدرة والتكلفة والهامش.** مبني حول RTX 4070 Ti Super 16 GB، يُشغّل كل نموذج 14B بمساحة سياق، ويتعامل مع العمل الخفيف مع 22B–33B، ويجعل نماذج 7B–14B تستجيب فوراً — بحوالي 3100 دولار إجمالاً. ينبغي أن يظل صالحاً لمعظم أحمال العمل من فئة 14B لفترة جيدة، لكن أحجام النماذج والأسعار تتغير. انزل للاقتصادي فقط إن كانت نماذج 7B–13B حدّك الصارم؛ ارتفع للمتحمس فقط إن كنت تحتاج تحديداً العمل مع نماذج 70B.',
         callouts: [
           {
             type: 'note',
@@ -3819,7 +3811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقاطع المستويات الثلاثة في 2026',
         content:
-          'أرقام VRAM وطاقة الـGPU هي مواصفات الشركة المصنّعة. سرعات الاستدلال تقديرات على مستوى عائلة النماذج من اختبارات PromptQuorum للـGPU. إجماليات البناء تقديرات بالدولار الأمريكي تجمع منتصف كل نطاق سعري في أقسام البناء، ومبنية على أدنى الأسعار المطلوبة حالياً — شحّ الذاكرة في 2026 رفع أسعار GPU وRAM DDR5 وSSD إلى ما فوق المعتاد بكثير، لذا يهيمن بندا الـGPU والـRAM على كل إجمالي ويتحركان أسبوعاً بعد أسبوع. قارن إعلانات GPU الجديدة والمستعملة: المستعمل لم يعد أرخص دائماً.',
+          'أرقام VRAM وطاقة الـGPU هي مواصفات الشركة المصنّعة. سرعات الاستدلال أرقام تقريبية نموذجية لفئة GPU في كل مستوى (لم تقسها PromptQuorum)؛ والسرعة الفعلية تتوقف على التكميم وبيئة التشغيل وطول السياق. إجماليات البناء تقديرات بالدولار الأمريكي تجمع منتصف كل نطاق سعري في أقسام البناء، ومبنية على أدنى الأسعار المطلوبة حالياً — شحّ الذاكرة في 2026 رفع أسعار GPU وRAM DDR5 وSSD إلى ما فوق المعتاد بكثير، لذا يهيمن بندا الـGPU والـRAM على كل إجمالي ويتحركان أسبوعاً بعد أسبوع. قارن إعلانات GPU الجديدة والمستعملة: المستعمل لم يعد أرخص دائماً.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: 'مقارنة مستويات أجهزة الذكاء الاصطناعي المحلي لعام 2026: الإعداد الاقتصادي RTX 4060 Ti بذاكرة 16 جيجابايت (~2,000 دولار) لنماذج 7B-13B، الإعداد المتوسط RTX 4070 Ti Super بذاكرة 16 جيجابايت (~3,100 دولار) لنماذج 14B-33B، إعداد الهواة RTX 5090 بذاكرة 32 جيجابايت (~9,600 دولار) لنماذج 33B-70B.',
         snippetBlocks: [
@@ -3854,7 +3846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'المستوى': 'متحمس',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 جيجابايت',
-            'يُشغّل': '33B بارتياح، 70B في Q4',
+            'يُشغّل': '33B بارتياح، 70B فقط مع تكميم عدواني أو تفريغ جزئي',
             'المزوّد': '1000 واط',
             'الإجمالي (2026)': '~9600 دولار',
           },
@@ -3867,12 +3859,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أكبر نموذج تريد تشغيله يحدد المستوى؛ ميزانيتك تؤكده.** ابحث عن الصف الذي يتوافق مع وضعك.',
         columns: ['وضعك', 'ابنِ هذا'],
         rows: [
-          { 'وضعك': 'أُشغّل نماذج 7B–13B وأريد أرخص حاسوب كامل', 'ابنِ هذا': 'الإعداد الاقتصادي (~2000 دولار)' },
+          { 'وضعك': 'أُشغّل نماذج 7B–13B وأريد أقل الإعدادات الثلاثة تكلفة في هذا الدليل', 'ابنِ هذا': 'الإعداد الاقتصادي (~2000 دولار)' },
           { 'وضعك': 'أريد أول حاسوب للذكاء الاصطناعي ولا أعرف إلى أين سأصل', 'ابنِ هذا': 'الاقتصادي، أو المتوسط لهامش أكبر' },
           { 'وضعك': 'أُشغّل نماذج 14B باستمرار وأريدها فورية', 'ابنِ هذا': 'الإعداد المتوسط (~3100 دولار)' },
           { 'وضعك': 'أعمل خفيفاً مع 22B–33B وأريد جهازاً يدوم', 'ابنِ هذا': 'الإعداد المتوسط (~3100 دولار)' },
           { 'وضعك': 'أُشغّل نماذج 33B بكثافة أو أريد هامشاً مستقبلياً كبيراً', 'ابنِ هذا': 'الإعداد المتحمس (~9600 دولار)' },
-          { 'وضعك': 'أحتاج جهاز GPU واحد يُشغّل نماذج 70B في Q4', 'ابنِ هذا': 'الإعداد المتحمس (~9600 دولار)' },
+          { 'وضعك': 'أحتاج جهاز GPU واحد يُشغّل نماذج 70B فقط مع تكميم عدواني أو تفريغ جزئي', 'ابنِ هذا': 'الإعداد المتحمس (~9600 دولار)' },
           { 'وضعك': 'أريد إبقاء الإجمالي منخفضاً رغم ارتفاع 2026', 'ابنِ هذا': 'أي مستوى — قارن إعلانات GPU الجديدة والمستعملة' },
           { 'وضعك': 'لست متأكداً وأريد الإعداد الأكثر أماناً للحفاظ عليه لسنوات', 'ابنِ هذا': 'الإعداد المتوسط — اختيار المحرر' },
         ],
@@ -3881,9 +3873,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: 'الإعداد الاقتصادي (~2000 دولار): RTX 4060 Ti 16 GB',
         content:
-          '**الإعداد الاقتصادي هو أرخص حاسوب كامل للذكاء الاصطناعي المحلي ويُشغّل كل نموذج 7B ومعظم نماذج 13B — قدرة كافية لمعظم المستخدمين لأول مرة.** مبني حول RTX 4060 Ti 16 GB، أرخص بطاقة 16 جيجابايت في هذا الدليل، مما يُبقي الإجمالي منخفضاً قدر ما يسمح به شحّ 2026.',
+          '**الإعداد الاقتصادي هو أقل الإعدادات الثلاثة تكلفة في هذا الدليل للذكاء الاصطناعي المحلي ويُشغّل كل نموذج 7B ومعظم نماذج 13B — قدرة كافية لمعظم المستخدمين لأول مرة.** مبني حول RTX 4060 Ti 16 GB، أرخص بطاقة 16 جيجابايت في هذا الدليل، مما يُبقي الإجمالي منخفضاً قدر ما يسمح به شحّ 2026.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (~650–800 دولار):** 16 جيجابايت VRAM، 165 واط. يُشغّل نماذج 7B بـ~20–25 رمز/ثانية ويستوعب نماذج 14B بهامش سياق. سعة 16 جيجابايت هي سبب اختيارها على إصدار 8 جيجابايت. يمتد النطاق من أرخص إعلان مستعمل إلى أرخص إعلان جديد.',
+          '**GPU — RTX 4060 Ti 16 GB (~650–800 دولار):** 16 جيجابايت VRAM، 165 واط. السرعة النموذجية لهذه الفئة من GPU على نماذج 7B حوالي 20–25 رمز/ثانية (لم تقسها PromptQuorum؛ وتختلف حسب التكميم والسياق)، وتتسع نماذج 14B بهامش سياق. سعة 16 جيجابايت هي سبب اختيارها على إصدار 8 جيجابايت. يمتد النطاق من أرخص إعلان مستعمل إلى أرخص إعلان جديد.',
           '**المعالج — AMD Ryzen 7 7700 (~250–280 دولار):** 8 أنوية، استهلاك طاقة معتدل. المعالج يؤدي عملاً قليلاً أثناء الاستدلال بالـGPU، لذا شريحة متوسطة المستوى مناسبة هنا.',
           '**اللوحة الأم — شرائح B650 (~130–160 دولار):** تدعم Ryzen 7 وGPU كاملة الحجم عبر PCIe.',
           '**RAM — 32 جيجابايت DDR5 (~430–575 دولار):** كافية للنظام التشغيلي والأدوات ونموذج 7B–13B يعمل في VRAM. RAM ليست بديلاً عن VRAM — 32 جيجابايت تكفي هنا، لكن DDR5 أصبحت ثاني أكبر بند في هذا الإعداد.',
@@ -3975,9 +3967,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: 'الإعداد المتحمس (~9600 دولار): RTX 5090 32 GB',
         content:
-          '**الإعداد المتحمس هو الجهاز الوحيد بـGPU واحدة الذي يستوعب نموذج 70B في Q4 — RTX 5090 32 GB هي القطعة المحورية.** ابنِ هذا المستوى لقدرة VRAM لا للسرعة الخام؛ السرعة هي أثر جانبي. ضربت موجة 2026 هذا المستوى بأشد قوة — إذ عُرضت RTX 5090 بسعر يفوق كثيراً سعر إطلاقها البالغ 1999 دولار — لذا يهيمن بندا الـGPU والـRAM ويتحركان أسبوعاً بعد أسبوع.',
+          '**من بين الإعدادات الثلاثة هنا، الإعداد المتحمس وحده يستطيع تشغيل نموذج 70B على GPU واحدة، ولا يتم ذلك إلا بتكميم عدواني أو تفريغ جزئي إلى RAM النظام — RTX 5090 32 GB هي القطعة المحورية.** ابنِ هذا المستوى لقدرة VRAM لا للسرعة الخام؛ السرعة هي أثر جانبي. ضربت موجة 2026 هذا المستوى بأشد قوة — إذ عُرضت RTX 5090 بسعر يفوق كثيراً سعر إطلاقها البالغ 1999 دولار — لذا يهيمن بندا الـGPU والـRAM ويتحركان أسبوعاً بعد أسبوع.',
         items: [
-          '**GPU — RTX 5090 32 GB (~4900–5900 دولار):** 32 جيجابايت VRAM GDDR7، 575 واط. الوحيدة من شرائح المستهلكين التي تُشغّل نموذج 70B في Q4 بدون إعداد GPU مزدوج. تُشغّل نماذج 33B بارتياح مع مساحة إضافية. يمتد النطاق من أرخص إعلان جديد إلى أرخص إعلان مستعمل؛ وبعض التجار يعرضونها بأعلى من ذلك.',
+          '**GPU — RTX 5090 32 GB (~4900–5900 دولار):** 32 جيجابايت VRAM GDDR7، 575 واط. هي GPU الواحدة الأكبر VRAM في هذا الدليل؛ وبدون إعداد GPU مزدوج لا تُشغّل نموذج 70B إلا بتكميم عدواني أو تفريغ جزئي إلى RAM النظام. تُشغّل نماذج 33B بارتياح مع مساحة إضافية. يمتد النطاق من أرخص إعلان جديد إلى أرخص إعلان مستعمل؛ وبعض التجار يعرضونها بأعلى من ذلك.',
           '**المعالج — AMD Ryzen 9 7950X (~450–520 دولار):** 16 نواة. كافٍ لتشغيل تحضير البيانات وتجارب الضبط الدقيق والأدوات جانباً للاستدلال المكثّف.',
           '**اللوحة الأم — شرائح X670E (~280–380 دولار):** إمداد طاقة قوي وPCIe 5.0، مُحجَّم لـGPU 575 واط ومعالج 16 نواة.',
           '**RAM — 128 جيجابايت DDR5 (~1650–2400 دولار، تقديري):** مساحة لنوافذ سياق كبيرة ونماذج متعددة محمّلة في وقت واحد والأدوات — والهامش لتفريغ نموذج جزئياً إلى RAM عند الحاجة. قلّما تُعرض أطقم 128 جيجابايت بشكل موثوق، لذا يعادل هذا النطاق ضعف نطاق 64 جيجابايت؛ وطقم 64 جيجابايت (~815–1200 دولار) هو البديل الموفّر.',
@@ -4175,7 +4167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستطيع إعداد GPU واحد تشغيل نموذج 70B؟',
-            a: 'نعم، الإعداد المتحمس يستطيع. RTX 5090 32 GB هي الشريحة المستهلكة الوحيدة التي تستوعب نموذج 70B في Q4، الذي يحتاج حوالي 39–42 جيجابايت VRAM — لذا يُشغّل 70B مع تكميم عدواني أو تفريغ جزئي لـRAM النظام. الـ128 جيجابايت RAM في الإعداد المتحمس تُعطي هذا التفريغ المساحة التي يحتاجها.',
+            a: 'نعم، الإعداد المتحمس يستطيع. RTX 5090 32 GB لديها أكبر VRAM بين وحدات GPU الواحدة في هذا الدليل، لكن نموذج 70B في Q4 يحتاج حوالي 39–42 جيجابايت — لذا يُشغّل 70B فقط مع تكميم عدواني أو تفريغ جزئي لـRAM النظام. الـ128 جيجابايت RAM في الإعداد المتحمس تُعطي هذا التفريغ المساحة التي يحتاجها.',
           },
           {
             q: 'هل يستحق الإعداد المتوسط التكلفة الإضافية على الاقتصادي؟',
@@ -4207,7 +4199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4217,7 +4209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ko.webp',
@@ -4234,7 +4226,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.1 8B',
       'Qwen3 8B',
       'Ministral 3 8B',
-      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -4267,7 +4258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '보급형 약 $2,000: RTX 4060 Ti 16 GB, 7B–13B 모델 실행 가능',
           '중급형 약 $3,100: RTX 4070 Ti Super 16 GB, 14B–33B 모델 실행 가능',
-          '고급형 약 $9,600: RTX 5090 32 GB, Q4 양자화로 70B 모델 실행 가능',
+          '고급형 약 $9,600: RTX 5090 32 GB, 적극적인 양자화나 부분 오프로드로만 70B 모델 실행 가능',
           '2026년에는 GPU, RAM, SSD 가격이 모두 급등했습니다. 신품과 중고를 비교하십시오. 중고가 더 이상 항상 저렴하지는 않기 때문입니다.',
         ],
         updatedDate: '2026-10',
@@ -4297,9 +4288,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**GPU가 단계를 결정하고, 나머지 구성이 GPU를 지원합니다.** 로컬 AI PC는 VRAM이 어떤 모델을 실행할 수 있는지를 결정하기 때문에 GPU부터 선택합니다. 목표 모델에 맞는 GPU VRAM을 갖춘 단계를 선택한 후, CPU, RAM, 파워 서플라이를 그 주변에 맞게 구성하십시오.',
           '**2026년 가격 상승이 모든 구성의 비용을 높였습니다.** 메모리 칩 공급 부족으로 GPU, DDR5 RAM, SSD가 작년 가격을 훨씬 웃돌게 되었습니다. 여기에 제시된 총액은 현재 판매 호가의 최저가를 기준으로 하며, 1년 전 동일한 부품보다 크게 높습니다. RAM은 이제 부가 항목이 아니라 주요 비용 항목입니다.',
-          '**보급형 구성 (~$2,000):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W 파워 서플라이 — 7B–13B 모델을 사용 가능한 속도로 실행합니다. 로컬 AI를 위한 가장 저렴한 완전 구성입니다.',
+          '**보급형 구성 (~$2,000):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W 파워 서플라이 — 7B–13B 모델을 사용 가능한 속도로 실행합니다. 이 가이드의 세 구성 중 비용이 가장 낮은 구성입니다.',
           '**중급형 구성 (~$3,100):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850 W 파워 서플라이 — 14B–33B 모델을 실행하고, 7B–14B 모델을 즉각적인 응답 속도로 처리합니다.',
-          '**고급형 구성 (~$9,600):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W 파워 서플라이 — Q4 양자화로 70B 모델을 실행할 수 있는 유일한 단일 GPU 구성입니다. RTX 5090 한 장만으로도 이제 중급형 구성 전체보다 비쌉니다.',
+          '**고급형 구성 (~$9,600):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W 파워 서플라이 — 이 가이드의 세 구성 중 70B 모델을 GPU 한 장으로 실행할 수 있는 것은 고급형뿐이며, 그것도 적극적인 양자화나 시스템 RAM으로의 부분 오프로드가 필요합니다. RTX 5090 한 장만으로도 이제 중급형 구성 전체보다 비쌉니다.',
           '**RAM은 VRAM의 대체재가 아닙니다.** 시스템 RAM은 모델이 VRAM을 초과할 때 오프로드를 허용하지만, RAM에서 실행 중인 모델은 대화형 사용에 너무 느립니다. 모델에 맞는 충분한 VRAM을 구매하고, RAM은 운영 체제와 도구를 위해 구매하십시오.',
           '**파워 서플라이는 GPU에 맞게 확장됩니다.** 보급형은 650 W, 중급형은 850 W, 고급형은 1000 W가 필요합니다. RTX 5090 단독으로 575 W를 소비하기 때문입니다. GPU와 함께 파워 서플라이 예산을 책정하십시오.',
           '**중고가 더 이상 확실한 할인은 아닙니다.** 2026년 말 현재 일부 중고 카드는 가장 저렴한 신품 목록과 같거나 더 높은 가격에 올라와 있으므로 구매 전에 둘을 비교하십시오. 검증된 작동 상태의 중고 카드는 분명히 더 저렴할 때는 여전히 살 만하지만, 항상 그렇다고 가정해서는 안 됩니다.',
@@ -4311,7 +4302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**보급형 구성 (~$2,000):** GPU RTX 4060 Ti 16 GB — 7B 모델 및 대부분의 13B 모델 실행 가능.',
           '**중급형 구성 (~$3,100):** GPU RTX 4070 Ti Super 16 GB — 14B 모델을 편안하게, 22B–33B 모델도 경량 작업 가능.',
-          '**고급형 구성 (~$9,600):** GPU RTX 5090 32 GB — 33B 모델을 편안하게, Q4 양자화로 70B 모델도 실행 가능.',
+          '**고급형 구성 (~$9,600):** GPU RTX 5090 32 GB — 33B 모델을 편안하게 실행하며, 70B 모델은 적극적인 양자화나 부분 오프로드로만 실행 가능.',
           '**Q4_K_M 양자화 VRAM 기본 규칙:** 매개변수 10억 개당 약 0.6 GB, 컨텍스트 및 도구용 2–4 GB 추가.',
           '**시스템 RAM 가이드:** 보급형 32 GB, 중급형 64 GB, 고급형 128 GB.',
           '**단계별 파워 서플라이:** 보급형 650 W, 중급형 850 W, 고급형 1000 W — RTX 5090 단독으로 575 W 소비.',
@@ -4323,7 +4314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '에디터 추천: 중급형 구성 (~$3,100)',
         highlight: true,
         content:
-          '**대부분의 로컬 AI PC 구성자에게 중급형 구성은 성능, 비용, 여유 공간을 균형 있게 제공하는 단계입니다.** RTX 4070 Ti Super 16 GB를 중심으로 구성된 이 설정은 충분한 컨텍스트 공간으로 모든 14B 모델을 실행하고, 22B–33B 모델의 경량 작업도 처리하며, 7B–14B 모델을 즉각적인 속도로 응답합니다. 총 약 $3,100으로 몇 달이 지나도 답답하지 않고, 1년 내에 교체할 필요가 없는 구성입니다. 7B–13B 모델만 사용할 계획이라면 보급형으로 내려가고, 70B 작업이 꼭 필요하다면 고급형으로 올라가십시오. 중급형 구성은 오래 유지하고 싶은 기기를 위한 안전한 기본 선택입니다.',
+          '**대부분의 로컬 AI PC 구성자에게 중급형 구성은 성능, 비용, 여유 공간을 균형 있게 제공하는 단계입니다.** RTX 4070 Ti Super 16 GB를 중심으로 구성된 이 설정은 충분한 컨텍스트 공간으로 모든 14B 모델을 실행하고, 22B–33B 모델의 경량 작업도 처리하며, 7B–14B 모델을 즉각적인 속도로 응답합니다. 총 약 $3,100이며, 대부분의 14B급 작업에는 상당 기간 계속 쓸 수 있을 것으로 보이지만 모델 크기와 가격은 변합니다. 7B–13B 모델만 사용할 계획이라면 보급형으로 내려가고, 70B 작업이 꼭 필요하다면 고급형으로 올라가십시오. 중급형 구성은 오래 유지하고 싶은 기기를 위한 합리적인 기본 선택입니다.',
         callouts: [
           {
             type: 'note',
@@ -4351,7 +4342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 세 가지 구성 단계 비교',
         content:
-          'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 해당 단계 GPU에 대한 PromptQuorum GPU 테스트의 모델 패밀리 수준 추정치입니다. 구성 총액은 각 구성 섹션에 표시된 가격 범위의 중간값을 합산한 미국 기준 추정치이며, 현재 판매 호가의 최저가를 기준으로 합니다. 2026년 메모리 공급 부족으로 GPU, DDR5 RAM, SSD가 평소 가격을 크게 웃돌기 때문에 GPU와 RAM 항목이 각 총액을 주도하며 주간 단위로 변동합니다. 신품과 중고 GPU 목록을 비교하십시오. 중고가 더 이상 항상 저렴하지는 않습니다.',
+          'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 각 단계 GPU 등급의 대략적인 일반 수치(PromptQuorum이 측정한 값이 아님)이고, 실제 속도는 양자화, 런타임, 컨텍스트 길이에 따라 달라집니다. 구성 총액은 각 구성 섹션에 표시된 가격 범위의 중간값을 합산한 미국 기준 추정치이며, 현재 판매 호가의 최저가를 기준으로 합니다. 2026년 메모리 공급 부족으로 GPU, DDR5 RAM, SSD가 평소 가격을 크게 웃돌기 때문에 GPU와 RAM 항목이 각 총액을 주도하며 주간 단위로 변동합니다. 신품과 중고 GPU 목록을 비교하십시오. 중고가 더 이상 항상 저렴하지는 않습니다.',
         image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
         imageCaption: '2026년 로컬 AI PC 구성 단계 비교: RTX 4060 Ti 16GB 보급형 구성(~$2,000)은 7B-13B 모델, RTX 4070 Ti Super 16GB 중급형 구성(~$3,100)은 14B-33B 모델, RTX 5090 32GB 고급형 구성(~$9,600)은 33B-70B 모델을 실행합니다.',
         snippetBlocks: [
@@ -4386,7 +4377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '단계': '고급형',
             'GPU': 'RTX 5090 32 GB',
             'VRAM': '32 GB',
-            '실행 가능': '33B 편안하게, Q4 양자화 70B',
+            '실행 가능': '33B 편안하게, 70B는 적극적인 양자화나 부분 오프로드로만',
             '파워 서플라이': '1000 W',
             '총액 (2026년)': '약 $9,600',
           },
@@ -4399,12 +4390,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**실행하려는 가장 큰 모델이 단계를 결정하며, 예산이 이를 확인합니다.** 상황에 맞는 행을 찾으십시오.',
         columns: ['상황', '선택할 구성'],
         rows: [
-          { '상황': '7B–13B 모델을 실행하며 가장 저렴한 완전한 기기를 원하는 경우', '선택할 구성': '보급형 구성 (~$2,000)' },
+          { '상황': '7B–13B 모델을 실행하며 이 가이드의 세 구성 중 가장 비용이 낮은 기기를 원하는 경우', '선택할 구성': '보급형 구성 (~$2,000)' },
           { '상황': '첫 로컬 AI PC이며 얼마나 멀리 갈지 모르는 경우', '선택할 구성': '보급형, 또는 여유를 위해 중급형' },
           { '상황': '14B 모델을 지속적으로 실행하며 즉각적인 응답을 원하는 경우', '선택할 구성': '중급형 구성 (~$3,100)' },
           { '상황': '22B–33B 경량 작업을 하며 오래 사용할 기기를 원하는 경우', '선택할 구성': '중급형 구성 (~$3,100)' },
           { '상황': '33B 모델을 집중적으로 사용하거나 충분한 미래 여유 공간이 필요한 경우', '선택할 구성': '고급형 구성 (~$9,600)' },
-          { '상황': 'Q4 양자화로 70B 모델을 실행할 수 있는 단일 GPU 기기가 필요한 경우', '선택할 구성': '고급형 구성 (~$9,600)' },
+          { '상황': '적극적인 양자화나 부분 오프로드로 70B 모델을 실행할 수 있는 단일 GPU 기기가 필요한 경우', '선택할 구성': '고급형 구성 (~$9,600)' },
           { '상황': '2026년 가격 급등에도 불구하고 총액을 낮게 유지하고 싶은 경우', '선택할 구성': '어떤 단계든 가능 — 신품과 중고 GPU 목록 비교' },
           { '상황': '확실하지 않으며 수년간 유지할 가장 안전한 구성을 원하는 경우', '선택할 구성': '중급형 구성 — 에디터 추천' },
         ],
@@ -4413,9 +4404,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'budget-build',
         title: '보급형 구성 (~$2,000): RTX 4060 Ti 16 GB',
         content:
-          '**보급형 구성은 가장 저렴한 완전 로컬 AI PC이며, 모든 7B 모델과 대부분의 13B 모델을 실행합니다. 처음 사용하는 대부분의 사용자에게 충분한 성능입니다.** RTX 4060 Ti 16 GB를 중심으로 구성되며, 이 가이드에서 가장 저렴한 16 GB 카드로 2026년 공급 부족이 허용하는 한 총액을 낮게 유지합니다.',
+          '**보급형 구성은 이 가이드의 세 구성 중 가장 비용이 낮은 로컬 AI PC이며, 모든 7B 모델과 대부분의 13B 모델을 실행합니다. 처음 사용하는 대부분의 사용자에게 충분한 성능입니다.** RTX 4060 Ti 16 GB를 중심으로 구성되며, 이 가이드에서 가장 저렴한 16 GB 카드로 2026년 공급 부족이 허용하는 한 총액을 낮게 유지합니다.',
         items: [
-          '**GPU — RTX 4060 Ti 16 GB (~$650–800):** 16 GB VRAM, 165 W. 7B 모델을 약 20–25 tok/s로 실행하며, 컨텍스트 여유 공간과 함께 14B 모델도 수용합니다. 16 GB 용량이 8 GB 버전을 선택하지 않는 이유입니다. 이 범위는 가장 저렴한 중고 목록부터 가장 저렴한 신품까지입니다.',
+          '**GPU — RTX 4060 Ti 16 GB (~$650–800):** 16 GB VRAM, 165 W. 이 GPU 등급에서 7B 모델의 일반적인 속도는 약 20–25 tok/s이며(PromptQuorum이 측정한 값이 아니며 양자화와 컨텍스트에 따라 달라짐), 컨텍스트 여유 공간과 함께 14B 모델도 수용합니다. 16 GB 용량이 8 GB 버전을 선택하지 않는 이유입니다. 이 범위는 가장 저렴한 중고 목록부터 가장 저렴한 신품까지입니다.',
           '**CPU — AMD Ryzen 7 7700 (~$250–280):** 8코어, 적당한 전력 소비. CPU는 GPU 추론 중 작업이 거의 없으므로 이 단계에서는 중간급 칩이 적합합니다. 이 단계에서 CPU에 과도하게 지출하지 마십시오.',
           '**메인보드 — B650 칩셋 (~$130–160):** Ryzen 7과 전체 크기 GPU를 PCIe에서 지원합니다. 이 단계에서는 고급 전원 공급이 필요하지 않습니다.',
           '**RAM — 32 GB DDR5 (~$430–575):** 운영 체제, 도구, VRAM에서 실행되는 7B–13B 모델을 위해 충분합니다. RAM은 VRAM의 대체재가 아닙니다. 이 단계에서 32 GB로 충분하지만, DDR5는 이제 이 구성에서 두 번째로 큰 항목입니다.',
@@ -4507,9 +4498,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-build',
         title: '고급형 구성 (~$9,600): RTX 5090 32 GB',
         content:
-          '**고급형 구성은 Q4 양자화로 70B 모델을 실행할 수 있는 유일한 단일 GPU 기기입니다. RTX 5090 32 GB가 핵심 부품입니다.** 이 단계를 선택하는 이유는 원시 속도가 아닌 VRAM 용량입니다. 속도는 부수적인 효과입니다. 2026년 가격 급등이 이 단계에 가장 강하게 영향을 미쳐 RTX 5090은 $1,999 출시 가격보다 훨씬 높게 올라와 있으며, 그래서 GPU와 RAM 항목이 총액을 주도하고 주간 단위로 변동합니다.',
+          '**이 가이드의 세 구성 중 70B 모델을 GPU 한 장으로 실행할 수 있는 것은 고급형 구성뿐이며, 적극적인 양자화나 시스템 RAM으로의 부분 오프로드가 필요합니다. RTX 5090 32 GB가 핵심 부품입니다.** 이 단계를 선택하는 이유는 원시 속도가 아닌 VRAM 용량입니다. 속도는 부수적인 효과입니다. 2026년 가격 급등이 이 단계에 가장 강하게 영향을 미쳐 RTX 5090은 $1,999 출시 가격보다 훨씬 높게 올라와 있으며, 그래서 GPU와 RAM 항목이 총액을 주도하고 주간 단위로 변동합니다.',
         items: [
-          '**GPU — RTX 5090 32 GB (~$4,900–5,900):** 32 GB GDDR7 VRAM, 575 W. 이중 GPU 구성 없이 Q4 양자화로 70B 모델을 실행할 수 있는 유일한 소비자용 카드입니다. 33B 모델을 여유 공간과 함께 편안하게 실행합니다. 이 범위는 가장 저렴한 신품 목록부터 가장 저렴한 중고까지이며, 일부 소매점은 그보다 더 높게 책정합니다.',
+          '**GPU — RTX 5090 32 GB (~$4,900–5,900):** 32 GB GDDR7 VRAM, 575 W. 이 가이드에서 VRAM이 가장 큰 단일 GPU로, 이중 GPU 구성 없이도 70B 모델을 실행할 수 있지만 적극적인 양자화나 시스템 RAM으로의 부분 오프로드가 필요합니다. 33B 모델을 여유 공간과 함께 편안하게 실행합니다. 이 범위는 가장 저렴한 신품 목록부터 가장 저렴한 중고까지이며, 일부 소매점은 그보다 더 높게 책정합니다.',
           '**CPU — AMD Ryzen 9 7950X (~$450–520):** 16코어. 집중적인 추론과 함께 데이터 준비, 파인튜닝 실험, 도구 실행을 처리하기에 충분합니다.',
           '**메인보드 — X670E 칩셋 (~$280–380):** 575 W GPU와 16코어 CPU를 위해 크기가 맞춰진 강력한 전원 공급 및 PCIe 5.0.',
           '**RAM — 128 GB DDR5 (~$1,650–2,400, 추정):** 큰 컨텍스트 창, 동시에 로드된 여러 모델, 도구를 위한 공간 — 그리고 필요시 모델을 RAM으로 부분 오프로드할 수 있는 여유 공간. 128 GB 키트는 안정적으로 판매되는 경우가 드물어 이 범위는 64 GB 범위의 두 배로 잡았습니다. 64 GB 키트(~$815–1,200)가 비용을 줄이는 대안입니다.',
@@ -4707,7 +4698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '단일 GPU 구성으로 70B 모델을 실행할 수 있습니까?',
-            a: '네, 고급형 구성으로 가능합니다. RTX 5090 32 GB는 Q4 양자화로 70B 모델을 수용할 수 있는 유일한 단일 소비자용 카드입니다. 70B 모델은 약 39–42 GB의 VRAM이 필요하므로, 적극적인 양자화나 시스템 RAM으로의 부분 오프로드를 통해 70B를 실행합니다. 고급형 구성의 128 GB RAM이 해당 오프로드에 필요한 공간을 제공합니다.',
+            a: '네, 고급형 구성으로 가능합니다. RTX 5090 32 GB는 이 가이드의 단일 GPU 중 VRAM이 가장 크지만, Q4 양자화 70B 모델은 약 39–42 GB의 VRAM이 필요하므로 적극적인 양자화나 시스템 RAM으로의 부분 오프로드를 통해서만 70B를 실행할 수 있습니다. 고급형 구성의 128 GB RAM이 해당 오프로드에 필요한 공간을 제공합니다.',
           },
           {
             q: '보급형 대비 추가 비용을 고려할 때 중급형 구성이 가치가 있습니까?',
@@ -4739,7 +4730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

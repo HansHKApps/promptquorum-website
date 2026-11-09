@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-12-01',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'storage for local llm model library',
     ],
     leadAnswerBlock:
-      '**The best storage for local AI models is a fast NVMe SSD for loading models at inference time plus a NAS for the shared, backed-up model library — they do different jobs. For the best NAS for AI, choose Synology or QNAP with RAID 6 for the library. For the best internal NVMe SSD for AI inference, choose a Samsung 990 Pro 4TB, WD Black SN850X 4TB, or Crucial T705 4TB — all clear 5 GB/s sequential read and fit 70B models comfortably.**',
+      '**A sensible setup for local AI models is a fast NVMe SSD for loading models at inference time plus a NAS for the shared, backed-up model library — they do different jobs. For the best NAS for AI, choose Synology or QNAP with RAID 6 for the library. For the best internal NVMe SSD for AI inference, choose a Samsung 990 Pro 4TB, WD Black SN850X 4TB, or Crucial T705 4TB — all clear 5 GB/s sequential read and fit 70B models comfortably.**',
     quickAnswerTop: {
       en: {
         question: 'What NAS and storage should I buy for local AI models in 2026?',
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Capacity': '1-4 TB per drive',
             'Redundancy': 'None — pair with a backup',
             'Price': '~$780–$950 for 4 TB',
-            'Best for': 'Premium pick, highest TBW endurance',
+            'Best for': 'Premium pick',
           },
           {
             'Storage': 'External USB drive',
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Your situation', 'Buy this'],
         rows: [
           { 'Your situation': 'I am a solo developer with one machine', 'Buy this': 'Fast NVMe SSD + one external backup drive — skip the NAS' },
-          { 'Your situation': 'I want the fastest possible model loading', 'Buy this': 'Samsung 990 Pro NVMe SSD on the GPU machine' },
+          { 'Your situation': 'I want fast PCIe 4.0 loading with a proven drive', 'Buy this': 'Samsung 990 Pro NVMe SSD on the GPU machine' },
           { 'Your situation': 'I want fast loading at a slightly lower price', 'Buy this': 'WD Black SN850X NVMe SSD' },
           { 'Your situation': 'My team of 3-10 shares a model library', 'Buy this': 'Synology 4-bay NAS in RAID 6' },
           { 'Your situation': 'I want more CPU and ports per dollar and accept a steeper setup', 'Buy this': 'QNAP 4-bay NAS in RAID 6' },
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A high-end PCIe 4.0 NVMe SSD on the inference machine is what shortens the wait when a model loads from disk into VRAM — the Samsung 990 Pro and WD Black SN850X are the two picks.** This is the other storage job: not the library, but the drive the GPU machine reads weights from on every model switch.',
         items: [
-          '**Samsung 990 Pro:** a high-end PCIe 4.0 NVMe SSD; the recommended pick for fastest model loading. A 70B Q4 model is roughly 35-42 GB, so read speed is felt every time you switch models.',
+          '**Samsung 990 Pro:** a high-end PCIe 4.0 NVMe SSD; the recommended pick for fast PCIe 4.0 model loading with a proven drive. A 70B Q4 model is roughly 35-42 GB, so read speed is felt every time you switch models.',
           '**WD Black SN850X:** a comparable high-end PCIe 4.0 NVMe SSD; the value alternative when the Samsung is priced higher in the moment.',
           '**Capacity:** 2 TB is the practical sweet spot for an on-machine working set; 4 TB if you keep many large models loaded locally rather than on the NAS.',
           '**Price:** roughly $304–$350 for the Crucial T705 4TB (best value), $615–$740 for the WD Black SN850X 4TB, or $780–$950 for the Samsung 990 Pro 4TB as an estimate — supply constraints pushed PCIe 4.0 SSDs significantly higher than the Gen5 Crucial, so compare all three before buying.',
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Do multiple machines or people share the model library?** No: a fast SSD plus an external backup drive is enough. Yes: you need a NAS — continue.',
           '**2. Synology or QNAP?** Easiest software for a non-specialist team: Synology. More CPU and ports per dollar: QNAP.',
-          '**3. Which SSD for the inference machine?** Fastest loading: Samsung 990 Pro. Same class at a lower price when discounted: WD Black SN850X.',
+          '**3. Which SSD for the inference machine?** Fast PCIe 4.0 loading with a proven drive: Samsung 990 Pro. Same class at a lower price when discounted: WD Black SN850X.',
           '**4. Is the NAS backed up offsite?** If not, add the third copy — RAID 6 is not a backup; apply the 3-2-1 rule before going live.',
         ],
         snippetBlocks: [
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What SSD is fastest for loading local LLMs?',
-            a: 'A high-end PCIe 4.0 NVMe SSD — the Samsung 990 Pro or the WD Black SN850X. Both deliver high sequential read speeds, which is what shortens the wait when a large model loads from disk into VRAM. A 70B model at Q4 is roughly 35-42 GB, so read speed is felt on every model switch. The Samsung is the default pick; the WD is the value alternative.',
+            a: 'A high-end PCIe 4.0 NVMe SSD — the Samsung 990 Pro or the WD Black SN850X. Both deliver high sequential read speeds, which is what shortens the wait when a large model loads from disk into VRAM. A 70B model at Q4 is roughly 35-42 GB, so read speed is felt on every model switch. Any PCIe 4.0 or PCIe 5.0 NVMe SSD works; the Crucial T705 has the highest rated sequential read of the three, while the 990 Pro and the SN850X are strong PCIe 4.0 options (the WD is the value alternative).',
           },
           {
             q: 'Why RAID 6 instead of RAID 5 for a NAS?',
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'speicher für lokale llm-modellbibliothek',
     ],
     leadAnswerBlock:
-      '**Der beste Speicher für lokale KI-Modelle ist eine schnelle NVMe-SSD zum Laden der Modelle zur Inferenzzeit plus ein NAS für die geteilte, gesicherte Modellbibliothek — sie erfüllen unterschiedliche Aufgaben. Kaufen Sie eine Samsung 990 Pro oder WD Black SN850X für die Ladegeschwindigkeit und ein Synology- oder QNAP-NAS mit RAID 6 für die Bibliothek.**',
+      '**Ein sinnvolles Setup für lokale KI-Modelle ist eine schnelle NVMe-SSD zum Laden der Modelle zur Inferenzzeit plus ein NAS für die geteilte, gesicherte Modellbibliothek — sie erfüllen unterschiedliche Aufgaben. Kaufen Sie eine Samsung 990 Pro oder WD Black SN850X für die Ladegeschwindigkeit und ein Synology- oder QNAP-NAS mit RAID 6 für die Bibliothek.**',
     quickAnswerTop: {
       de: {
         question: 'Welchen NAS und Speicher sollte ich 2026 für lokale KI-Modelle kaufen?',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Kapazität': '1-4 TB pro Laufwerk',
             'Redundanz': 'Keine — mit Backup kombinieren',
             'Preis': 'ca. 290-340 € für 2 TB',
-            'Am besten für': 'Schnellstes Laden, einzelner Rechner',
+            'Am besten für': 'Schnelles PCIe-4.0-Laden mit bewährtem Laufwerk, einzelner Rechner',
           },
           {
             'Speicher': 'WD Black SN850X NVMe-SSD',
@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ihre Situation', 'Kaufen Sie dies'],
         rows: [
           { 'Ihre Situation': 'Ich bin ein einzelner Entwickler mit einem Rechner', 'Kaufen Sie dies': 'Schnelle NVMe-SSD + eine externe Sicherungsfestplatte — verzichten Sie auf das NAS' },
-          { 'Ihre Situation': 'Ich will das schnellstmögliche Modellladen', 'Kaufen Sie dies': 'Samsung 990 Pro NVMe-SSD im GPU-Rechner' },
+          { 'Ihre Situation': 'Ich will schnelles PCIe-4.0-Laden mit einem bewährten Laufwerk', 'Kaufen Sie dies': 'Samsung 990 Pro NVMe-SSD im GPU-Rechner' },
           { 'Ihre Situation': 'Ich will schnelles Laden zu etwas niedrigerem Preis', 'Kaufen Sie dies': 'WD Black SN850X NVMe-SSD' },
           { 'Ihre Situation': 'Mein Team von 3-10 Personen teilt sich eine Modellbibliothek', 'Kaufen Sie dies': 'Synology-NAS mit 4 Einschüben im RAID 6' },
           { 'Ihre Situation': 'Ich will mehr CPU und Anschlüsse pro Euro und nehme eine steilere Einrichtung in Kauf', 'Kaufen Sie dies': 'QNAP-NAS mit 4 Einschüben im RAID 6' },
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Eine High-End-PCIe-4.0-NVMe-SSD im Inferenzrechner ist es, die die Wartezeit verkürzt, wenn ein Modell von der Festplatte in den VRAM geladen wird — die Samsung 990 Pro und die WD Black SN850X sind die beiden Empfehlungen.** Dies ist die andere Speicheraufgabe: nicht die Bibliothek, sondern das Laufwerk, von dem der GPU-Rechner die Gewichte bei jedem Modellwechsel liest.',
         items: [
-          '**Samsung 990 Pro:** eine High-End-PCIe-4.0-NVMe-SSD; die empfohlene Wahl für das schnellste Modellladen. Ein 70B-Q4-Modell ist etwa 35-42 GB groß, daher ist die Lesegeschwindigkeit bei jedem Modellwechsel spürbar.',
+          '**Samsung 990 Pro:** eine High-End-PCIe-4.0-NVMe-SSD; die empfohlene Wahl für schnelles PCIe-4.0-Modellladen mit einem bewährten Laufwerk. Ein 70B-Q4-Modell ist etwa 35-42 GB groß, daher ist die Lesegeschwindigkeit bei jedem Modellwechsel spürbar.',
           '**WD Black SN850X:** eine vergleichbare High-End-PCIe-4.0-NVMe-SSD; die preiswerte Alternative, wenn die Samsung gerade teurer angeboten wird.',
           '**Kapazität:** 2 TB ist der praktische Idealwert für einen Arbeitssatz auf dem Rechner; 4 TB, wenn Sie viele große Modelle lokal statt auf dem NAS bereithalten.',
           '**Preis:** rund 290-340 € für ein 2-TB-Laufwerk als ungefährer Wert — die Speicherchip-Knappheit hat die NAND-Preise erhöht, prüfen Sie also vor dem Kauf.',
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Teilen mehrere Rechner oder Personen die Modellbibliothek?** Nein: eine schnelle SSD plus eine externe Sicherungsfestplatte genügt. Ja: Sie brauchen ein NAS — weiter.',
           '**2. Synology oder QNAP?** Einfachste Software für ein Team ohne Spezialisten: Synology. Mehr CPU und Anschlüsse pro Euro: QNAP.',
-          '**3. Welche SSD für den Inferenzrechner?** Schnellstes Laden: Samsung 990 Pro. Dieselbe Klasse zu niedrigerem Preis bei Rabatt: WD Black SN850X.',
+          '**3. Welche SSD für den Inferenzrechner?** Schnelles PCIe-4.0-Laden mit bewährtem Laufwerk: Samsung 990 Pro. Dieselbe Klasse zu niedrigerem Preis bei Rabatt: WD Black SN850X.',
           '**4. Ist das NAS außer Haus gesichert?** Falls nicht, ergänzen Sie die dritte Kopie — RAID 6 ist kein Backup; wenden Sie die 3-2-1-Regel an, bevor Sie produktiv gehen.',
         ],
         snippetBlocks: [
@@ -1075,7 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche SSD ist am schnellsten zum Laden lokaler LLMs?',
-            a: 'Eine High-End-PCIe-4.0-NVMe-SSD — die Samsung 990 Pro oder die WD Black SN850X. Beide liefern hohe sequenzielle Lesegeschwindigkeiten, und genau das verkürzt die Wartezeit, wenn ein großes Modell von der Festplatte in den VRAM geladen wird. Ein 70B-Modell mit Q4 ist etwa 35-42 GB groß, daher ist die Lesegeschwindigkeit bei jedem Modellwechsel spürbar. Die Samsung ist die Standardwahl; die WD ist die preiswerte Alternative.',
+            a: 'Eine High-End-PCIe-4.0-NVMe-SSD — die Samsung 990 Pro oder die WD Black SN850X. Beide liefern hohe sequenzielle Lesegeschwindigkeiten, und genau das verkürzt die Wartezeit, wenn ein großes Modell von der Festplatte in den VRAM geladen wird. Ein 70B-Modell mit Q4 ist etwa 35-42 GB groß, daher ist die Lesegeschwindigkeit bei jedem Modellwechsel spürbar. Jede PCIe-4.0- oder PCIe-5.0-NVMe-SSD funktioniert; die Crucial T705 hat die höchste angegebene sequenzielle Leserate der drei, während die 990 Pro und die SN850X starke PCIe-4.0-Optionen sind (die WD ist die preiswerte Alternative).',
           },
           {
             q: 'Warum RAID 6 statt RAID 5 für ein NAS?',
@@ -1094,8 +1094,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja. Die Speicherchip-Knappheit von 2026 hat die NAND- und SSD-Preise über das frühere Niveau getrieben. Jeder Preis in dieser Kaufberatung ist ein ungefährer Wert. Bestätigen Sie die aktuelle Preislage in der Händleranzeige vor dem Kauf und vergleichen Sie die Samsung 990 Pro mit der WD Black SN850X am jeweiligen Tag — die günstigere der beiden wechselt mit dem Markt.',
           },
           {
-            q: 'Erfüllt die Speicherung von KI-Modellen auf einem NAS die DSGVO-Anforderungen?',
-            a: 'Ein lokales NAS unterstützt die DSGVO-Konformität, weil die Modellbibliothek und die zugehörigen Daten in Ihren eigenen Räumen verbleiben — es findet keine Übertragung an einen Cloud-Anbieter außerhalb der EU statt. Das ist die Stärke der On-Premise-Speicherung: Sie behalten die volle Kontrolle über den Speicherort der Daten und können den Datenstandort dokumentieren, was die Rechenschaftspflicht nach Artikel 5 DSGVO erleichtert. Beachten Sie jedoch, dass das NAS selbst keine personenbezogenen Daten konform macht — wenn Trainings- oder Eingabedaten personenbezogene Informationen enthalten, brauchen Sie weiterhin eine Rechtsgrundlage, Zugriffskontrollen über DSM oder QTS, eine Verschlüsselung der Laufwerke und ein 3-2-1-Backup, dessen Kopien ebenfalls innerhalb der EU verbleiben.',
+            q: 'Hilft ein lokales NAS bei den Datenschutzpflichten für KI-Modelle?',
+            a: 'Ein lokales NAS kann dabei helfen, weil die Modellbibliothek und die zugehörigen Daten in Ihren eigenen Räumen verbleiben und Sie den Speicherort selbst kontrollieren und dokumentieren können; das kann die Rechenschaftspflicht nach Artikel 5 DSGVO erleichtern. Das NAS selbst macht eine Verarbeitung jedoch nicht rechtskonform: Enthalten Trainings- oder Eingabedaten personenbezogene Informationen, brauchen Sie weiterhin eine Rechtsgrundlage, Zugriffskontrollen über DSM oder QTS, eine Verschlüsselung der Laufwerke und ein Backup-Konzept; Kopien in einem Cloud-Dienst im Rahmen von 3-2-1 sind eine eigene Verarbeitung mit eigenen Anforderungen. Dies ist keine Rechtsberatung — klären Sie die Anforderungen mit Ihrer oder Ihrem Datenschutzbeauftragten.',
           },
           {
             q: 'Ist diese NAS-und-SSD-Lösung für den deutschen Mittelstand geeignet?',
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'stockage pour bibliothèque de modèles llm locaux',
     ],
     leadAnswerBlock:
-      '**Le meilleur stockage pour les modèles IA locaux est un SSD NVMe rapide pour charger les modèles au moment de l\'inférence, plus un NAS pour la bibliothèque de modèles partagée et sauvegardée — ils remplissent des rôles différents. Achetez un Samsung 990 Pro ou un WD Black SN850X pour la vitesse de chargement, et un NAS Synology ou QNAP avec RAID 6 pour la bibliothèque.**',
+      '**Une configuration sensée pour les modèles IA locaux est un SSD NVMe rapide pour charger les modèles au moment de l\'inférence, plus un NAS pour la bibliothèque de modèles partagée et sauvegardée — ils remplissent des rôles différents. Achetez un Samsung 990 Pro ou un WD Black SN850X pour la vitesse de chargement, et un NAS Synology ou QNAP avec RAID 6 pour la bibliothèque.**',
     quickAnswerTop: {
       fr: {
         question: 'Quel NAS et quel stockage acheter pour des modèles IA locaux en 2026 ?',
@@ -1311,7 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Capacité': '1-4 To par disque',
             'Redondance': 'Aucune — à associer à une sauvegarde',
             'Prix': 'env. 300-330 € pour 2 To',
-            'Idéal pour': 'Le chargement le plus rapide, machine unique',
+            'Idéal pour': 'Chargement rapide en PCIe 4.0 avec un disque éprouvé, machine unique',
           },
           {
             'Stockage': 'SSD NVMe WD Black SN850X',
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Votre situation', 'Achetez ceci'],
         rows: [
           { 'Votre situation': 'Je suis un développeur seul avec une seule machine', 'Achetez ceci': 'SSD NVMe rapide + un disque de sauvegarde externe — pas de NAS' },
-          { 'Votre situation': 'Je veux le chargement de modèles le plus rapide possible', 'Achetez ceci': 'SSD NVMe Samsung 990 Pro sur la machine GPU' },
+          { 'Votre situation': 'Je veux un chargement PCIe 4.0 rapide avec un disque éprouvé', 'Achetez ceci': 'SSD NVMe Samsung 990 Pro sur la machine GPU' },
           { 'Votre situation': 'Je veux un chargement rapide à un prix un peu plus bas', 'Achetez ceci': 'SSD NVMe WD Black SN850X' },
           { 'Votre situation': 'Mon équipe de 3 à 10 personnes partage une bibliothèque de modèles', 'Achetez ceci': 'NAS Synology 4 baies en RAID 6' },
           { 'Votre situation': 'Je veux plus de processeur et de ports par euro et j\'accepte une mise en place plus exigeante', 'Achetez ceci': 'NAS QNAP 4 baies en RAID 6' },
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un SSD NVMe PCIe 4.0 haut de gamme sur la machine d\'inférence est ce qui raccourcit l\'attente lorsqu\'un modèle se charge du disque vers la VRAM — le Samsung 990 Pro et le WD Black SN850X sont les deux choix.** C\'est l\'autre tâche de stockage : non pas la bibliothèque, mais le disque dont la machine GPU lit les poids à chaque changement de modèle.',
         items: [
-          '**Samsung 990 Pro :** un SSD NVMe PCIe 4.0 haut de gamme ; le choix recommandé pour le chargement de modèles le plus rapide. Un modèle 70B Q4 fait environ 35-42 Go, donc la vitesse de lecture se ressent à chaque changement de modèle.',
+          '**Samsung 990 Pro :** un SSD NVMe PCIe 4.0 haut de gamme ; le choix recommandé pour un chargement de modèles rapide en PCIe 4.0 avec un disque éprouvé. Un modèle 70B Q4 fait environ 35-42 Go, donc la vitesse de lecture se ressent à chaque changement de modèle.',
           '**WD Black SN850X :** un SSD NVMe PCIe 4.0 haut de gamme comparable ; l\'alternative économique lorsque le Samsung est plus cher à l\'instant T.',
           '**Capacité :** 2 To est le point d\'équilibre pratique pour un jeu de travail sur la machine ; 4 To si vous gardez de nombreux gros modèles en local plutôt que sur le NAS.',
           '**Prix :** environ 300-330 € pour un disque de 2 To, en estimation — la pénurie de puces mémoire a fait monter les prix de la NAND, vérifiez donc avant d\'acheter.',
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Plusieurs machines ou personnes partagent-elles la bibliothèque de modèles ?** Non : un SSD rapide plus un disque de sauvegarde externe suffit. Oui : il vous faut un NAS — continuez.',
           '**2. Synology ou QNAP ?** Logiciel le plus simple pour une équipe non spécialiste : Synology. Plus de processeur et de ports par euro : QNAP.',
-          '**3. Quel SSD pour la machine d\'inférence ?** Chargement le plus rapide : Samsung 990 Pro. Même catégorie à un prix plus bas en promotion : WD Black SN850X.',
+          '**3. Quel SSD pour la machine d\'inférence ?** Chargement rapide en PCIe 4.0 avec un disque éprouvé : Samsung 990 Pro. Même catégorie à un prix plus bas en promotion : WD Black SN850X.',
           '**4. Le NAS est-il sauvegardé hors site ?** Si non, ajoutez la troisième copie — le RAID 6 n\'est pas une sauvegarde ; appliquez la règle 3-2-1 avant la mise en production.',
         ],
         snippetBlocks: [
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel SSD est le plus rapide pour charger des LLM locaux ?',
-            a: 'Un SSD NVMe PCIe 4.0 haut de gamme — le Samsung 990 Pro ou le WD Black SN850X. Tous deux offrent des vitesses de lecture séquentielle élevées, et c\'est ce qui raccourcit l\'attente lorsqu\'un gros modèle se charge du disque vers la VRAM. Un modèle 70B en Q4 fait environ 35-42 Go, donc la vitesse de lecture se ressent à chaque changement de modèle. Le Samsung est le choix par défaut ; le WD est l\'alternative économique.',
+            a: 'Un SSD NVMe PCIe 4.0 haut de gamme — le Samsung 990 Pro ou le WD Black SN850X. Tous deux offrent des vitesses de lecture séquentielle élevées, et c\'est ce qui raccourcit l\'attente lorsqu\'un gros modèle se charge du disque vers la VRAM. Un modèle 70B en Q4 fait environ 35-42 Go, donc la vitesse de lecture se ressent à chaque changement de modèle. Tout SSD NVMe PCIe 4.0 ou PCIe 5.0 convient ; le Crucial T705 affiche la lecture séquentielle nominale la plus élevée des trois, tandis que le 990 Pro et le SN850X sont de solides options PCIe 4.0 (le WD est l\'alternative économique).',
           },
           {
             q: 'Pourquoi le RAID 6 plutôt que le RAID 5 pour un NAS ?',
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1732,7 +1732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルllm モデルライブラリ ストレージ',
     ],
     leadAnswerBlock:
-      '**ローカルAIモデルに最適なストレージは、推論時にモデルを読み込むための高速なNVMe SSDと、共有・バックアップされるモデルライブラリのためのNASです。両者は異なる役割を担います。読み込み速度のためにSamsung 990 ProまたはWD Black SN850Xを、ライブラリのためにRAID 6対応のSynologyまたはQNAPのNASを購入してください。**',
+      '**ローカルAIモデルの妥当な構成は、推論時にモデルを読み込むための高速なNVMe SSDと、共有・バックアップされるモデルライブラリのためのNASです。両者は異なる役割を担います。読み込み速度のためにSamsung 990 ProまたはWD Black SN850Xを、ライブラリのためにRAID 6対応のSynologyまたはQNAPのNASを購入してください。**',
     quickAnswerTop: {
       ja: {
         question: '2026年にローカルAIモデル向けにどのNASとストレージを買うべきですか？',
@@ -1861,7 +1861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '容量': 'ドライブあたり1-4 TB',
             '冗長性': 'なし — バックアップと組み合わせる',
             '価格': '2 TBで約¥38,000-50,000',
-            '最適な用途': '最速の読み込み、単一マシン',
+            '最適な用途': '実績のあるドライブでの高速なPCIe 4.0読み込み、単一マシン',
           },
           {
             'ストレージ': 'WD Black SN850X NVMe SSD',
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['あなたの状況', 'これを購入'],
         rows: [
           { 'あなたの状況': '1台のマシンで作業する1人の開発者である', 'これを購入': '高速なNVMe SSD + 1台の外付けバックアップドライブ — NASは不要' },
-          { 'あなたの状況': '可能な限り最速のモデル読み込みが欲しい', 'これを購入': 'GPUマシンにSamsung 990 Pro NVMe SSD' },
+          { 'あなたの状況': '実績のあるドライブでPCIe 4.0の高速な読み込みが欲しい', 'これを購入': 'GPUマシンにSamsung 990 Pro NVMe SSD' },
           { 'あなたの状況': 'やや低価格で高速な読み込みが欲しい', 'これを購入': 'WD Black SN850X NVMe SSD' },
           { 'あなたの状況': '3-10人のチームでモデルライブラリを共有している', 'これを購入': 'RAID 6のSynologyの4ベイNAS' },
           { 'あなたの状況': '価格あたりのCPUとポートを多く求め、設定の難しさを受け入れる', 'これを購入': 'RAID 6のQNAPの4ベイNAS' },
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**推論マシン上のハイエンドなPCIe 4.0 NVMe SSDこそが、モデルがディスクからVRAMに読み込まれる際の待ち時間を短縮するものです — Samsung 990 ProとWD Black SN850Xが2つの選択肢です。** これはもう一方のストレージの役割です。ライブラリではなく、GPUマシンがモデルを切り替えるたびに重みを読み込むドライブです。',
         items: [
-          '**Samsung 990 Pro：** ハイエンドなPCIe 4.0 NVMe SSDで、最速のモデル読み込みのために推奨される選択肢です。70B Q4モデルは約35-42 GBあるため、読み込み速度はモデルを切り替えるたびに体感できます。',
+          '**Samsung 990 Pro：** ハイエンドなPCIe 4.0 NVMe SSDで、実績のあるドライブで高速なPCIe 4.0モデル読み込みを行うための推奨の選択肢です。70B Q4モデルは約35-42 GBあるため、読み込み速度はモデルを切り替えるたびに体感できます。',
           '**WD Black SN850X：** 同等のハイエンドなPCIe 4.0 NVMe SSDで、その時点でSamsungの価格が高い場合のコスト重視の代替です。',
           '**容量：** マシン上の作業セットには2 TBが実用的なちょうどよい容量です。多くの大きなモデルをNASではなくローカルに保持する場合は4 TBです。',
           '**価格：** おおよその目安で、2 TBドライブが約¥38,000-50,000です — メモリチップ不足によりNANDの価格が上昇したため、購入前に確認してください。',
@@ -2078,7 +2078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. 複数のマシンや人がモデルライブラリを共有しますか？** いいえ：高速なSSDと外付けバックアップドライブで十分です。はい：NASが必要です — 次へ進んでください。',
           '**2. SynologyかQNAPか？** 専門家のいないチームに最も簡単なソフトウェア：Synology。価格あたりのCPUとポートの多さ：QNAP。',
-          '**3. 推論マシンにはどのSSDか？** 最速の読み込み：Samsung 990 Pro。割引時に同クラスをより低価格で：WD Black SN850X。',
+          '**3. 推論マシンにはどのSSDか？** 実績のあるドライブでの高速なPCIe 4.0読み込み：Samsung 990 Pro。割引時に同クラスをより低価格で：WD Black SN850X。',
           '**4. NASは別の場所にバックアップされていますか？** されていない場合は3つ目のコピーを追加してください — RAID 6はバックアップではありません。本番稼働前に3-2-1ルールを適用してください。',
         ],
         snippetBlocks: [
@@ -2183,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルLLMの読み込みに最速のSSDはどれですか？',
-            a: 'ハイエンドなPCIe 4.0 NVMe SSD — Samsung 990 ProまたはWD Black SN850Xです。どちらも高いシーケンシャル読み込み速度を提供し、それが大きなモデルがディスクからVRAMに読み込まれる際の待ち時間を短縮します。70BモデルのQ4は約35-42 GBあるため、読み込み速度はモデルを切り替えるたびに体感できます。Samsungが標準的な選択肢で、WDがコスト重視の代替です。',
+            a: 'ハイエンドなPCIe 4.0 NVMe SSD — Samsung 990 ProまたはWD Black SN850Xです。どちらも高いシーケンシャル読み込み速度を提供し、それが大きなモデルがディスクからVRAMに読み込まれる際の待ち時間を短縮します。70BモデルのQ4は約35-42 GBあるため、読み込み速度はモデルを切り替えるたびに体感できます。PCIe 4.0またはPCIe 5.0のNVMe SSDであればどれでも使えます。3製品の中ではCrucial T705の定格シーケンシャル読み取りが最も高く、990 ProとSN850Xは優れたPCIe 4.0の選択肢です(WDはコスト重視の代替)。',
           },
           {
             q: 'NASにはなぜRAID 5ではなくRAID 6なのですか？',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地 llm 模型库存储',
     ],
     leadAnswerBlock:
-      '**本地 AI 模型的最佳存储是一块快速的 NVMe SSD（用于推理时加载模型）加上一台 NAS（用于共享、已备份的模型库）——它们承担不同的任务。购买 Samsung 990 Pro 或 WD Black SN850X 以获得加载速度，购买带 RAID 6 的 Synology 或 QNAP NAS 用于模型库。**',
+      '**本地 AI 模型的合理存储方案是一块快速的 NVMe SSD（用于推理时加载模型）加上一台 NAS（用于共享、已备份的模型库）——它们承担不同的任务。购买 Samsung 990 Pro 或 WD Black SN850X 以获得加载速度，购买带 RAID 6 的 Synology 或 QNAP NAS 用于模型库。**',
     quickAnswerTop: {
       zh: {
         question: '2026 年应为本地 AI 模型购买什么 NAS 和存储？',
@@ -2411,7 +2411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '容量': '每块 1-4 TB',
             '冗余': '无——需搭配备份',
             '价格': '2 TB 约 $150-250',
-            '最适合': '最快加载，单台机器',
+            '最适合': '久经验证的驱动器上的快速 PCIe 4.0 加载，单台机器',
           },
           {
             '存储': 'WD Black SN850X NVMe SSD',
@@ -2441,7 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['你的情况', '购买这个'],
         rows: [
           { '你的情况': '我是单人开发者，只有一台机器', '购买这个': '快速 NVMe SSD + 一块外置备份硬盘——跳过 NAS' },
-          { '你的情况': '我想要尽可能最快的模型加载', '购买这个': 'GPU 机器上的 Samsung 990 Pro NVMe SSD' },
+          { '你的情况': '我想要使用成熟盘款的快速 PCIe 4.0 加载', '购买这个': 'GPU 机器上的 Samsung 990 Pro NVMe SSD' },
           { '你的情况': '我想要快速加载且价格略低', '购买这个': 'WD Black SN850X NVMe SSD' },
           { '你的情况': '我们 3-10 人的团队共享一个模型库', '购买这个': 'RAID 6 下的 Synology 4 盘位 NAS' },
           { '你的情况': '我想要每美元更多的 CPU 和端口，并接受更陡的设置', '购买这个': 'RAID 6 下的 QNAP 4 盘位 NAS' },
@@ -2513,7 +2513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**推理机上的高端 PCIe 4.0 NVMe SSD 才是缩短模型从硬盘加载到显存时等待的关键——Samsung 990 Pro 和 WD Black SN850X 是这两个之选。** 这是另一项存储任务：不是模型库，而是 GPU 机器在每次切换模型时读取权重的那块硬盘。',
         items: [
-          '**Samsung 990 Pro：** 一块高端 PCIe 4.0 NVMe SSD；最快模型加载的推荐之选。70B Q4 模型约为 35-42 GB，因此每次切换模型都能感受到读取速度。',
+          '**Samsung 990 Pro：** 一块高端 PCIe 4.0 NVMe SSD；在久经验证的驱动器上实现快速 PCIe 4.0 模型加载的推荐之选。70B Q4 模型约为 35-42 GB，因此每次切换模型都能感受到读取速度。',
           '**WD Black SN850X：** 一块同级的高端 PCIe 4.0 NVMe SSD；当 Samsung 当下定价更高时的性价比替代方案。',
           '**容量：** 对于机器上的工作集，2 TB 是实用的甜点容量；如果你在本地而非 NAS 上保留许多大型模型，则选 4 TB。',
           '**价格：** 大致估算下,2 TB 硬盘约为 $150-250——内存芯片短缺推高了 NAND 定价,因此购买前请确认。',
@@ -2628,7 +2628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. 是否有多台机器或多人共享模型库？** 否：一块快速 SSD 加一块外置备份硬盘就够了。是：你需要 NAS——继续。',
           '**2. Synology 还是 QNAP？** 非专业团队的最简单软件：Synology。每美元更多 CPU 和端口：QNAP。',
-          '**3. 推理机用哪块 SSD？** 最快加载：Samsung 990 Pro。降价时同档次而价格更低：WD Black SN850X。',
+          '**3. 推理机用哪块 SSD？** 久经验证的驱动器上的快速 PCIe 4.0 加载：Samsung 990 Pro。降价时同档次而价格更低：WD Black SN850X。',
           '**4. NAS 是否有异地备份？** 若没有，添加第三份副本——RAID 6 不是备份；上线前先落实 3-2-1 原则。',
         ],
         snippetBlocks: [
@@ -2733,7 +2733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '加载本地 LLM 最快的 SSD 是哪款？',
-            a: '一块高端 PCIe 4.0 NVMe SSD——Samsung 990 Pro 或 WD Black SN850X。两者都提供高顺序读取速度，而这正是缩短大型模型从硬盘加载到显存时等待的关键。70B 模型在 Q4 下约为 35-42 GB，因此每次切换模型都能感受到读取速度。Samsung 是默认之选；WD 是性价比替代方案。',
+            a: '一块高端 PCIe 4.0 NVMe SSD——Samsung 990 Pro 或 WD Black SN850X。两者都提供高顺序读取速度，而这正是缩短大型模型从硬盘加载到显存时等待的关键。70B 模型在 Q4 下约为 35-42 GB，因此每次切换模型都能感受到读取速度。任何 PCIe 4.0 或 PCIe 5.0 NVMe SSD 都可以；三者中 Crucial T705 的标称顺序读取速度最高，而 990 Pro 和 SN850X 是出色的 PCIe 4.0 选择（WD 是性价比替代方案）。',
           },
           {
             q: 'NAS 为何要用 RAID 6 而非 RAID 5？',
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'almacenamiento para biblioteca de modelos llm local',
     ],
     leadAnswerBlock:
-      '**El mejor almacenamiento para modelos de IA local es un SSD NVMe rápido para cargar modelos en el momento de la inferencia más un NAS para la biblioteca de modelos compartida y respaldada — hacen trabajos distintos. Compra un Samsung 990 Pro o WD Black SN850X para velocidad de carga, y un NAS Synology o QNAP con RAID 6 para la biblioteca.**',
+      '**Una configuración sensata para modelos de IA local es un SSD NVMe rápido para cargar modelos en el momento de la inferencia más un NAS para la biblioteca de modelos compartida y respaldada — hacen trabajos distintos. Compra un Samsung 990 Pro o WD Black SN850X para velocidad de carga, y un NAS Synology o QNAP con RAID 6 para la biblioteca.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué NAS y almacenamiento debo comprar para modelos de IA local en 2026?',
@@ -2961,7 +2961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Capacidad': '1-4 TB por disco',
             'Redundancia': 'Ninguna — combina con un respaldo',
             'Precio': '~290-340 € para 2 TB',
-            'Mejor para': 'Carga más rápida, máquina única',
+            'Mejor para': 'Carga rápida PCIe 4.0 con una unidad probada, máquina única',
           },
           {
             'Almacenamiento': 'WD Black SN850X NVMe SSD',
@@ -2991,7 +2991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tu situación', 'Compra esto'],
         rows: [
           { 'Tu situación': 'Soy un desarrollador en solitario con una máquina', 'Compra esto': 'SSD NVMe rápido + una unidad de respaldo externa — prescinde del NAS' },
-          { 'Tu situación': 'Quiero la carga de modelos más rápida posible', 'Compra esto': 'SSD NVMe Samsung 990 Pro en la máquina GPU' },
+          { 'Tu situación': 'Quiero una carga rápida PCIe 4.0 con una unidad probada', 'Compra esto': 'SSD NVMe Samsung 990 Pro en la máquina GPU' },
           { 'Tu situación': 'Quiero carga rápida a un precio ligeramente menor', 'Compra esto': 'SSD NVMe WD Black SN850X' },
           { 'Tu situación': 'Mi equipo de 3-10 personas comparte una biblioteca de modelos', 'Compra esto': 'NAS Synology de 4 bahías en RAID 6' },
           { 'Tu situación': 'Quiero más CPU y puertos por euro y acepto una configuración más compleja', 'Compra esto': 'NAS QNAP de 4 bahías en RAID 6' },
@@ -3063,7 +3063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un SSD NVMe PCIe 4.0 de gama alta en la máquina de inferencia es lo que acorta la espera cuando un modelo se carga desde el disco a la VRAM — el Samsung 990 Pro y el WD Black SN850X son las dos opciones.** Esta es la otra tarea de almacenamiento: no la biblioteca, sino el disco desde el que la máquina GPU lee los pesos en cada cambio de modelo.',
         items: [
-          '**Samsung 990 Pro:** un SSD NVMe PCIe 4.0 de gama alta; la opción recomendada para la carga de modelos más rápida. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de lectura se nota en cada cambio de modelo.',
+          '**Samsung 990 Pro:** un SSD NVMe PCIe 4.0 de gama alta; la opción recomendada para una carga de modelos rápida en PCIe 4.0 con una unidad probada. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de lectura se nota en cada cambio de modelo.',
           '**WD Black SN850X:** un SSD NVMe PCIe 4.0 de gama alta comparable; la alternativa de valor cuando el Samsung tiene un precio más alto en ese momento.',
           '**Capacidad:** 2 TB es el punto óptimo práctico para un conjunto de trabajo en la máquina; 4 TB si mantienes muchos modelos grandes cargados localmente en lugar de en el NAS.',
           '**Precio:** aproximadamente 235-340 € para un disco de 2 TB como estimación (retail en España; en Latinoamérica varían por impuestos de importación) — la escasez de chips de memoria elevó los precios de NAND, así que confirma antes de comprar.',
@@ -3178,7 +3178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. ¿Varias máquinas o personas comparten la biblioteca de modelos?** No: un SSD rápido más una unidad de respaldo externa es suficiente. Sí: necesitas un NAS — continúa.',
           '**2. ¿Synology o QNAP?** Software más sencillo para un equipo sin especialistas: Synology. Más CPU y puertos por euro: QNAP.',
-          '**3. ¿Qué SSD para la máquina de inferencia?** Carga más rápida: Samsung 990 Pro. La misma categoría a menor precio cuando hay descuento: WD Black SN850X.',
+          '**3. ¿Qué SSD para la máquina de inferencia?** Carga rápida PCIe 4.0 con una unidad probada: Samsung 990 Pro. La misma categoría a menor precio cuando hay descuento: WD Black SN850X.',
           '**4. ¿Tiene el NAS respaldo fuera del sitio?** Si no, añade la tercera copia — RAID 6 no es un respaldo; aplica la regla 3-2-1 antes de entrar en producción.',
         ],
         snippetBlocks: [
@@ -3283,7 +3283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué SSD es más rápido para cargar LLMs locales?',
-            a: 'Un SSD NVMe PCIe 4.0 de gama alta — el Samsung 990 Pro o el WD Black SN850X. Ambos ofrecen altas velocidades de lectura secuencial, que es lo que acorta la espera cuando un modelo grande se carga desde el disco a la VRAM. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de lectura se nota en cada cambio de modelo. El Samsung es la opción predeterminada; el WD es la alternativa de valor.',
+            a: 'Un SSD NVMe PCIe 4.0 de gama alta — el Samsung 990 Pro o el WD Black SN850X. Ambos ofrecen altas velocidades de lectura secuencial, que es lo que acorta la espera cuando un modelo grande se carga desde el disco a la VRAM. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de lectura se nota en cada cambio de modelo. Cualquier SSD NVMe PCIe 4.0 o PCIe 5.0 sirve; el Crucial T705 tiene la lectura secuencial nominal más alta de los tres, mientras que el 990 Pro y el SN850X son sólidas opciones PCIe 4.0 (el WD es la alternativa de valor).',
           },
           {
             q: '¿Por qué RAID 6 en lugar de RAID 5 para un NAS?',
@@ -3347,7 +3347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3356,7 +3356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -3395,7 +3395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'armazenamento para biblioteca de modelos llm local',
     ],
     leadAnswerBlock:
-      '**O melhor armazenamento para modelos de IA local é um SSD NVMe rápido para carregar modelos no momento da inferência mais um NAS para a biblioteca de modelos compartilhada e com backup — eles fazem trabalhos distintos. Compre um Samsung 990 Pro ou WD Black SN850X para velocidade de carregamento, e um NAS Synology ou QNAP com RAID 6 para a biblioteca.**',
+      '**Uma configuração sensata para modelos de IA local é um SSD NVMe rápido para carregar modelos no momento da inferência mais um NAS para a biblioteca de modelos compartilhada e com backup — eles fazem trabalhos distintos. Compre um Samsung 990 Pro ou WD Black SN850X para velocidade de carregamento, e um NAS Synology ou QNAP com RAID 6 para a biblioteca.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual NAS e armazenamento eu devo comprar para modelos de IA local em 2026?',
@@ -3524,7 +3524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Capacidade': '1-4 TB por disco',
             'Redundância': 'Nenhuma — combine com um backup',
             'Preço': '~R$ 3.400-4.000 para 2 TB',
-            'Melhor para': 'Carregamento mais rápido, máquina única',
+            'Melhor para': 'Carregamento rápido PCIe 4.0 com um drive comprovado, máquina única',
           },
           {
             'Armazenamento': 'WD Black SN850X NVMe SSD',
@@ -3554,7 +3554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Sua situação', 'Compre isto'],
         rows: [
           { 'Sua situação': 'Sou um desenvolvedor solo com uma máquina', 'Compre isto': 'SSD NVMe rápido + uma unidade de backup externa — dispense o NAS' },
-          { 'Sua situação': 'Quero o carregamento de modelos mais rápido possível', 'Compre isto': 'SSD NVMe Samsung 990 Pro na máquina GPU' },
+          { 'Sua situação': 'Quero carregamento rápido PCIe 4.0 com um drive consagrado', 'Compre isto': 'SSD NVMe Samsung 990 Pro na máquina GPU' },
           { 'Sua situação': 'Quero carregamento rápido a um preço ligeiramente menor', 'Compre isto': 'SSD NVMe WD Black SN850X' },
           { 'Sua situação': 'Meu time de 3-10 pessoas compartilha uma biblioteca de modelos', 'Compre isto': 'NAS Synology de 4 baias em RAID 6' },
           { 'Sua situação': 'Quero mais CPU e portas por real e aceito uma configuração mais complexa', 'Compre isto': 'NAS QNAP de 4 baias em RAID 6' },
@@ -3626,7 +3626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Um SSD NVMe PCIe 4.0 de ponta na máquina de inferência é o que encurta a espera quando um modelo é carregado do disco para a VRAM — o Samsung 990 Pro e o WD Black SN850X são as duas opções.** Esta é a outra tarefa de armazenamento: não a biblioteca, mas o disco do qual a máquina GPU lê os pesos em cada troca de modelo.',
         items: [
-          '**Samsung 990 Pro:** um SSD NVMe PCIe 4.0 de ponta; a opção recomendada para o carregamento de modelos mais rápido. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo.',
+          '**Samsung 990 Pro:** um SSD NVMe PCIe 4.0 de ponta; a opção recomendada para um carregamento de modelos rápido em PCIe 4.0 com um drive comprovado. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo.',
           '**WD Black SN850X:** um SSD NVMe PCIe 4.0 de ponta comparável; a alternativa de valor quando o Samsung tem um preço mais alto no momento.',
           '**Capacidade:** 2 TB é o ponto ideal prático para um conjunto de trabalho na máquina; 4 TB se você mantém muitos modelos grandes carregados localmente em vez de no NAS.',
           '**Preço:** aproximadamente R$ 2.900-4.000 para um disco de 2 TB como estimativa (varejo brasileiro com impostos de importação) — a escassez de chips de memória elevou os preços de NAND, então confirme antes de comprar.',
@@ -3741,7 +3741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Várias máquinas ou pessoas compartilham a biblioteca de modelos?** Não: um SSD rápido mais uma unidade de backup externa é suficiente. Sim: você precisa de um NAS — continue.',
           '**2. Synology ou QNAP?** Software mais simples para um time sem especialistas: Synology. Mais CPU e portas por real: QNAP.',
-          '**3. Qual SSD para a máquina de inferência?** Carregamento mais rápido: Samsung 990 Pro. A mesma categoria a um preço menor quando há desconto: WD Black SN850X.',
+          '**3. Qual SSD para a máquina de inferência?** Carregamento rápido PCIe 4.0 com um drive comprovado: Samsung 990 Pro. A mesma categoria a um preço menor quando há desconto: WD Black SN850X.',
           '**4. O NAS tem backup fora do local?** Se não, adicione a terceira cópia — o RAID 6 não é um backup; aplique a regra 3-2-1 antes de entrar em produção.',
         ],
         snippetBlocks: [
@@ -3846,7 +3846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual SSD é mais rápido para carregar LLMs locais?',
-            a: 'Um SSD NVMe PCIe 4.0 de ponta — o Samsung 990 Pro ou o WD Black SN850X. Ambos oferecem altas velocidades de leitura sequencial, que é o que encurta a espera quando um modelo grande é carregado do disco para a VRAM. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo. O Samsung é a opção padrão; o WD é a alternativa de valor.',
+            a: 'Um SSD NVMe PCIe 4.0 de ponta — o Samsung 990 Pro ou o WD Black SN850X. Ambos oferecem altas velocidades de leitura sequencial, que é o que encurta a espera quando um modelo grande é carregado do disco para a VRAM. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo. Qualquer SSD NVMe PCIe 4.0 ou PCIe 5.0 serve; o Crucial T705 tem a maior leitura sequencial nominal dos três, enquanto o 990 Pro e o SN850X são opções PCIe 4.0 sólidas (o WD é a alternativa de valor).',
           },
           {
             q: 'Por que RAID 6 em vez de RAID 5 para um NAS?',
@@ -3910,7 +3910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3920,7 +3920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -3959,7 +3959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تخزين لمكتبة نماذج llm المحلية',
     ],
     leadAnswerBlock:
-      '**أفضل تخزين لنماذج الذكاء الاصطناعي المحلي هو SSD NVMe سريع لتحميل النماذج في وقت الاستدلال بالإضافة إلى NAS لمكتبة النماذج المشتركة المحفوظة — إنهما يؤديان وظائف مختلفة. اشترِ Samsung 990 Pro أو WD Black SN850X لسرعة التحميل، وNAS من Synology أو QNAP مع RAID 6 للمكتبة.**',
+      '**إعداد معقول لنماذج الذكاء الاصطناعي المحلي هو SSD NVMe سريع لتحميل النماذج في وقت الاستدلال بالإضافة إلى NAS لمكتبة النماذج المشتركة المحفوظة — إنهما يؤديان وظائف مختلفة. اشترِ Samsung 990 Pro أو WD Black SN850X لسرعة التحميل، وNAS من Synology أو QNAP مع RAID 6 للمكتبة.**',
     quickAnswerTop: {
       ar: {
         question: 'ما NAS وتخزين يجب أن أشتريه لنماذج الذكاء الاصطناعي المحلي في 2026؟',
@@ -4088,7 +4088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'السعة': '1-4 TB لكل قرص',
             'التكرار': 'لا — ادمجه مع نسخة احتياطية',
             'السعر': '~150-250 دولار لـ2 TB',
-            'الأفضل لـ': 'التحميل الأسرع، جهاز واحد',
+            'الأفضل لـ': 'تحميل سريع عبر PCIe 4.0 بقرص مجرَّب، جهاز واحد',
           },
           {
             'التخزين': 'SSD NVMe WD Black SN850X',
@@ -4118,7 +4118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['حالتك', 'اشترِ هذا'],
         rows: [
           { 'حالتك': 'أنا مطور منفرد مع جهاز واحد', 'اشترِ هذا': 'SSD NVMe سريعة + محرك نسخ احتياطي خارجي — استغنِ عن NAS' },
-          { 'حالتك': 'أريد التحميل الأسرع للنماذج', 'اشترِ هذا': 'SSD NVMe Samsung 990 Pro في جهاز GPU' },
+          { 'حالتك': 'أريد تحميلًا سريعًا عبر PCIe 4.0 بقرص مُجرَّب', 'اشترِ هذا': 'SSD NVMe Samsung 990 Pro في جهاز GPU' },
           { 'حالتك': 'أريد تحميلاً سريعاً بسعر أقل قليلاً', 'اشترِ هذا': 'SSD NVMe WD Black SN850X' },
           { 'حالتك': 'فريقي من 3-10 أشخاص يشارك مكتبة نماذج', 'اشترِ هذا': 'NAS Synology بـ4 حجرات على RAID 6' },
           { 'حالتك': 'أريد معالجاً أقوى وموانئ أكثر مقابل الدولار وأقبل إعداداً أكثر تعقيداً', 'اشترِ هذا': 'NAS QNAP بـ4 حجرات على RAID 6' },
@@ -4190,7 +4190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**SSD NVMe PCIe 4.0 عالي الأداء في جهاز الاستدلال هو ما يُقصّر وقت الانتظار عند تحميل نموذج من القرص إلى VRAM — Samsung 990 Pro وWD Black SN850X هما الخياران.** هذه هي المهمة التخزينية الأخرى: ليس المكتبة، بل القرص الذي يقرأ منه جهاز GPU الأوزان في كل تبديل نموذج.',
         items: [
-          '**Samsung 990 Pro:** SSD NVMe PCIe 4.0 عالي الأداء؛ الخيار الموصى به للتحميل الأسرع للنماذج. نموذج 70B بتكميم Q4 يزن حوالي 35-42 GB، لذا تُلاحَظ سرعة القراءة في كل تبديل نموذج.',
+          '**Samsung 990 Pro:** SSD NVMe PCIe 4.0 عالي الأداء؛ الخيار الموصى به لتحميل سريع للنماذج عبر PCIe 4.0 بقرص مجرَّب. نموذج 70B بتكميم Q4 يزن حوالي 35-42 GB، لذا تُلاحَظ سرعة القراءة في كل تبديل نموذج.',
           '**WD Black SN850X:** SSD NVMe PCIe 4.0 عالي الأداء مماثل؛ البديل ذو القيمة عندما يكون سعر Samsung أعلى في ذلك الوقت.',
           '**السعة:** 2 TB هي النقطة المثلى العملية للحجم التشغيلي في الجهاز؛ 4 TB إذا احتفظت بنماذج كبيرة كثيرة محلياً بدلاً من NAS.',
           '**السعر:** حوالي 150-250 دولار لقرص 2 TB كتقدير — أدى نقص رقائق الذاكرة إلى رفع أسعار NAND، لذا تحقق قبل الشراء.',
@@ -4305,7 +4305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. هل تشترك أجهزة أو أشخاص متعددون في مكتبة النماذج؟** لا: SSD سريعة بالإضافة إلى محرك نسخ احتياطي خارجي كافٍ. نعم: تحتاج NAS — تابع.',
           '**2. Synology أم QNAP؟** برنامج أبسط لفريق بدون متخصصين: Synology. معالج أقوى وموانئ أكثر مقابل الدولار: QNAP.',
-          '**3. أي SSD لجهاز الاستدلال؟** التحميل الأسرع: Samsung 990 Pro. نفس الفئة بسعر أقل عند الخصم: WD Black SN850X.',
+          '**3. أي SSD لجهاز الاستدلال؟** تحميل سريع عبر PCIe 4.0 بقرص مجرَّب: Samsung 990 Pro. نفس الفئة بسعر أقل عند الخصم: WD Black SN850X.',
           '**4. هل لدى NAS نسخة احتياطية خارج الموقع؟** إذا لا، أضف النسخة الثالثة — RAID 6 ليس نسخة احتياطية؛ طبّق قاعدة 3-2-1 قبل الدخول في الإنتاج.',
         ],
         snippetBlocks: [
@@ -4410,7 +4410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي SSD أسرع لتحميل نماذج LLM المحلية؟',
-            a: 'SSD NVMe PCIe 4.0 عالي الأداء — Samsung 990 Pro أو WD Black SN850X. كلاهما يوفر سرعات قراءة تسلسلية عالية، وهو ما يُقصّر الانتظار عند تحميل نموذج كبير من القرص إلى VRAM. نموذج 70B بتكميم Q4 يزن حوالي 35-42 GB، لذا تُلاحَظ سرعة القراءة في كل تبديل نموذج. Samsung هو الخيار الافتراضي؛ WD هو البديل ذو القيمة.',
+            a: 'SSD NVMe PCIe 4.0 عالي الأداء — Samsung 990 Pro أو WD Black SN850X. كلاهما يوفر سرعات قراءة تسلسلية عالية، وهو ما يُقصّر الانتظار عند تحميل نموذج كبير من القرص إلى VRAM. نموذج 70B بتكميم Q4 يزن حوالي 35-42 GB، لذا تُلاحَظ سرعة القراءة في كل تبديل نموذج. يصلح أي SSD NVMe بواجهة PCIe 4.0 أو PCIe 5.0؛ يتمتع Crucial T705 بأعلى سرعة قراءة تسلسلية مُعلنة بين الثلاثة، بينما يُعدّ 990 Pro وSN850X خيارين قويين على PCIe 4.0 (وWD هو البديل ذو القيمة).',
           },
           {
             q: 'لماذا RAID 6 بدلاً من RAID 5 لـNAS؟',
@@ -4474,7 +4474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4483,7 +4483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-22',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -4522,7 +4522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 llm 모델 라이브러리 스토리지',
     ],
     leadAnswerBlock:
-      '**로컬 AI 모델을 위한 최고의 스토리지는 추론 시점에 모델을 로드하기 위한 빠른 NVMe SSD와 공유 및 백업된 모델 라이브러리를 위한 NAS의 조합입니다. 이 둘은 서로 다른 작업을 수행합니다. 로드 속도를 위해 Samsung 990 Pro 또는 WD Black SN850X를, 라이브러리를 위해 RAID 6를 갖춘 Synology 또는 QNAP NAS를 구매하십시오.**',
+      '**로컬 AI 모델을 위한 합리적인 스토리지 구성은 추론 시점에 모델을 로드하기 위한 빠른 NVMe SSD와 공유 및 백업된 모델 라이브러리를 위한 NAS의 조합입니다. 이 둘은 서로 다른 작업을 수행합니다. 로드 속도를 위해 Samsung 990 Pro 또는 WD Black SN850X를, 라이브러리를 위해 RAID 6를 갖춘 Synology 또는 QNAP NAS를 구매하십시오.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 로컬 AI 모델을 위해 어떤 NAS와 스토리지를 구매해야 합니까?',
@@ -4651,7 +4651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '용량': '디스크당 1-4 TB',
             '중복성': '없음 — 백업과 함께 사용',
             '가격': '2 TB 기준 ~$150-250',
-            '적합 대상': '가장 빠른 로드, 단일 머신',
+            '적합 대상': '검증된 드라이브의 빠른 PCIe 4.0 로드, 단일 머신',
           },
           {
             '스토리지': 'WD Black SN850X NVMe SSD',
@@ -4681,7 +4681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['상황', '구매 대상'],
         rows: [
           { '상황': '단일 머신을 사용하는 단독 개발자입니다', '구매 대상': '빠른 NVMe SSD + 외장 백업 드라이브 — NAS 불필요' },
-          { '상황': '가능한 가장 빠른 모델 로드를 원합니다', '구매 대상': 'GPU 머신의 Samsung 990 Pro NVMe SSD' },
+          { '상황': 'PCIe 4.0의 빠른 로드를 검증된 드라이브로 원합니다', '구매 대상': 'GPU 머신의 Samsung 990 Pro NVMe SSD' },
           { '상황': '약간 저렴한 가격으로 빠른 로드를 원합니다', '구매 대상': 'WD Black SN850X NVMe SSD' },
           { '상황': '3-10명의 팀이 모델 라이브러리를 공유합니다', '구매 대상': 'RAID 6의 4베이 Synology NAS' },
           { '상황': '달러당 더 많은 CPU와 포트를 원하고 더 복잡한 설정을 수용합니다', '구매 대상': 'RAID 6의 4베이 QNAP NAS' },
@@ -4753,7 +4753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**추론 머신의 고급 PCIe 4.0 NVMe SSD는 모델이 디스크에서 VRAM으로 로드될 때의 대기 시간을 줄여주며, Samsung 990 Pro와 WD Black SN850X가 두 가지 선택지입니다.** 이것이 다른 스토리지 작업입니다: 라이브러리가 아니라 GPU 머신이 모델 전환 시마다 가중치를 읽는 디스크입니다.',
         items: [
-          '**Samsung 990 Pro:** 고급 PCIe 4.0 NVMe SSD; 가장 빠른 모델 로드를 위한 권장 선택. Q4 양자화 70B 모델은 약 35-42 GB이므로 모델을 전환할 때마다 읽기 속도가 체감됩니다.',
+          '**Samsung 990 Pro:** 고급 PCIe 4.0 NVMe SSD; 검증된 드라이브로 빠른 PCIe 4.0 모델 로드를 위한 권장 선택. Q4 양자화 70B 모델은 약 35-42 GB이므로 모델을 전환할 때마다 읽기 속도가 체감됩니다.',
           '**WD Black SN850X:** 비슷한 고급 PCIe 4.0 NVMe SSD; 해당 시점에 Samsung 가격이 더 높을 때의 가성비 대안.',
           '**용량:** 2 TB가 머신의 작업 세트에 실용적인 최적점입니다. NAS 대신 로컬에서 많은 대형 모델을 유지한다면 4 TB.',
           '**가격:** 대략적인 수치로 2 TB 디스크는 약 $150-250입니다. 메모리 칩 공급 부족으로 NAND 가격이 상승했으므로 구매 전 확인하십시오.',
@@ -4868,7 +4868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. 여러 머신 또는 사람이 모델 라이브러리를 공유합니까?** 아니오: 빠른 SSD와 외장 백업 드라이브로 충분합니다. 예: NAS가 필요합니다. 계속 진행하십시오.',
           '**2. Synology 또는 QNAP?** 전문가 없는 팀을 위한 더 간단한 소프트웨어: Synology. 달러당 더 많은 CPU와 포트: QNAP.',
-          '**3. 추론 머신을 위한 어떤 SSD?** 가장 빠른 로드: Samsung 990 Pro. 할인 시 같은 등급에서 더 저렴한 가격: WD Black SN850X.',
+          '**3. 추론 머신을 위한 어떤 SSD?** 검증된 드라이브의 빠른 PCIe 4.0 로드: Samsung 990 Pro. 할인 시 같은 등급에서 더 저렴한 가격: WD Black SN850X.',
           '**4. NAS에 외부 백업이 있습니까?** 없다면 세 번째 복사본을 추가하십시오. RAID 6는 백업이 아닙니다. 프로덕션에 들어가기 전에 3-2-1 규칙을 적용하십시오.',
         ],
         snippetBlocks: [
@@ -4973,7 +4973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 LLM 로드를 위해 어떤 SSD가 가장 빠릅니까?',
-            a: '고급 PCIe 4.0 NVMe SSD인 Samsung 990 Pro 또는 WD Black SN850X. 둘 다 높은 순차 읽기 속도를 제공하며, 이것이 대형 모델이 디스크에서 VRAM으로 로드될 때의 대기 시간을 줄입니다. Q4 양자화 70B 모델은 약 35-42 GB이므로 모델을 전환할 때마다 읽기 속도가 체감됩니다. Samsung이 기본 선택이고 WD가 가성비 대안입니다.',
+            a: '고급 PCIe 4.0 NVMe SSD인 Samsung 990 Pro 또는 WD Black SN850X. 둘 다 높은 순차 읽기 속도를 제공하며, 이것이 대형 모델이 디스크에서 VRAM으로 로드될 때의 대기 시간을 줄입니다. Q4 양자화 70B 모델은 약 35-42 GB이므로 모델을 전환할 때마다 읽기 속도가 체감됩니다. PCIe 4.0 또는 PCIe 5.0 NVMe SSD라면 모두 사용할 수 있습니다. 세 제품 중 Crucial T705의 정격 순차 읽기 속도가 가장 높고, 990 Pro와 SN850X는 우수한 PCIe 4.0 옵션입니다(WD는 가성비 대안).',
           },
           {
             q: 'NAS에 RAID 5 대신 RAID 6를 사용해야 하는 이유는 무엇입니까?',
@@ -5037,7 +5037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
