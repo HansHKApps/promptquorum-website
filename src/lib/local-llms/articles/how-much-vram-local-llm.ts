@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           answer: 'Rule of thumb: 1B model parameters ≈ 0.6 GB VRAM in 4-bit (Q4) quantization. A 7B model needs 4–5 GB; a 13B model needs 8–9 GB; a 70B model needs 40–48 GB. For CPU-only RAM, roughly double those figures.',
           bullets: [
             '3B model (Phi, StableLM): ~2 GB VRAM at Q4',
-            '7B model (Llama 3.3, Qwen3): ~4–5 GB VRAM at Q4',
+            '7B model (Llama 3.1 8B, Qwen3): ~4–5 GB VRAM at Q4',
             '13B model: ~8–9 GB VRAM at Q4',
             '70B model (Llama 3.3, Qwen): ~40–48 GB VRAM at Q4',
             'CPU-only (no GPU): roughly double the VRAM figures for system RAM',
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**3B models** (Phi, StableLM): ~2 GB weights at Q4, 4 GB VRAM buy-target with headroom',
             '**7B models** (Llama, Mistral, Qwen): ~4 GB weights at Q4, 6-8 GB VRAM buy-target',
-            '**13B models** (Llama 3.3, Mistral): ~8 GB weights at Q4, 10-12 GB VRAM buy-target',
+            '**13B models** (Qwen3 14B, Mistral): ~8 GB weights at Q4, 10-12 GB VRAM buy-target',
             '**22B models** (Qwen3, Gemma): ~13 GB weights at Q4, 16 GB VRAM buy-target',
             '**70B models** (Llama 3.3, Qwen 3.6): ~42 GB weights at Q4, 48 GB VRAM buy-target, 50+ GB at Q5',
             '**MoE models**: VRAM scales with weights you must hold in memory, not active parameters. Example: Qwen 3.6 35B-A3B (3B active / 35B total) still needs roughly 21 GB at Q4, and Llama 4 Scout (17B active / 109B total) about 55 GB, because all experts stay resident; active parameters only make them faster',
@@ -109,8 +109,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model Size', 'FP32 (No Quantization)', 'Q8 (8-bit)', 'Q5 (5-bit)', 'Q4 (4-bit)', 'Recommended GPU'],
           rows: [
             { 'Model Size': '3B (Phi, StableLM)', 'FP32 (No Quantization)': '12 GB', 'Q8 (8-bit)': '3 GB', 'Q5 (5-bit)': '2 GB', 'Q4 (4-bit)': '2 GB', 'Recommended GPU': 'RTX 3050 4 GB or RTX 2060 6 GB' },
-            { 'Model Size': '7B (Llama 3.3, Mistral)', 'FP32 (No Quantization)': '28 GB', 'Q8 (8-bit)': '7 GB', 'Q5 (5-bit)': '5 GB', 'Q4 (4-bit)': '4 GB', 'Recommended GPU': 'RTX 4060 8 GB or RTX 3060 12 GB' },
-            { 'Model Size': '13B (Llama 3.3, Mistral)', 'FP32 (No Quantization)': '52 GB', 'Q8 (8-bit)': '14 GB', 'Q5 (5-bit)': '9 GB', 'Q4 (4-bit)': '8 GB', 'Recommended GPU': 'RTX 3060 12 GB or RTX 4070 12 GB' },
+            { 'Model Size': '7B (Llama 3.1 8B, Mistral)', 'FP32 (No Quantization)': '28 GB', 'Q8 (8-bit)': '7 GB', 'Q5 (5-bit)': '5 GB', 'Q4 (4-bit)': '4 GB', 'Recommended GPU': 'RTX 4060 8 GB or RTX 3060 12 GB' },
+            { 'Model Size': '13B (Qwen3 14B, Mistral)', 'FP32 (No Quantization)': '52 GB', 'Q8 (8-bit)': '14 GB', 'Q5 (5-bit)': '9 GB', 'Q4 (4-bit)': '8 GB', 'Recommended GPU': 'RTX 3060 12 GB or RTX 4070 12 GB' },
             { 'Model Size': '22B (Qwen, Gemma)', 'FP32 (No Quantization)': '88 GB', 'Q8 (8-bit)': '23 GB', 'Q5 (5-bit)': '15 GB', 'Q4 (4-bit)': '13 GB', 'Recommended GPU': 'RTX 4080 16 GB or RTX 4090 24 GB' },
             { 'Model Size': '70B (Llama 3, Qwen)', 'FP32 (No Quantization)': '280 GB', 'Q8 (8-bit)': '74 GB', 'Q5 (5-bit)': '50 GB', 'Q4 (4-bit)': '42 GB', 'Recommended GPU': '2× RTX 4090 (24 GB each), or 1× H100 80 GB' },
             { 'Model Size': 'Qwen 3.6 35B-A3B (3B active / 35B total, MoE)*', 'FP32 (No Quantization)': '~140 GB', 'Q8 (8-bit)': '~37 GB', 'Q5 (5-bit)': '~25 GB', 'Q4 (4-bit)': '~21 GB', 'Recommended GPU': 'RTX 5090 32 GB, or RTX 4090/3090 24 GB (tight; Q4)' },
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'VRAM Tier': '24 GB', 'Best-Fit Model (Q4)': '22-32B comfortably at full Q8; 70B only at sub-4-bit with quality loss', 'Example GPUs': 'RTX 4090, RTX 3090', 'What Fits': '70B genuinely needs ~42 GB — this tier is not enough' },
             { 'VRAM Tier': '32 GB', 'Best-Fit Model (Q4)': '22-32B at full precision, or as one card in a dual-GPU 70B setup', 'Example GPUs': 'RTX 5090', 'What Fits': 'Still short of a full 70B Q4 alone (~42 GB needed)' },
             { 'VRAM Tier': '48 GB', 'Best-Fit Model (Q4)': '70B models comfortably at Q4 (~42 GB), tightly at Q5 (~50 GB)', 'Example GPUs': '2× RTX 4090, RTX 6000 Ada', 'What Fits': 'First tier that fits 70B without quality-losing quantization tricks' },
-            { 'VRAM Tier': '64 GB+ (unified memory)', 'Best-Fit Model (Q4)': '70B comfortably at Q4/Q5, no multi-GPU rig needed', 'Example GPUs': 'Mac Studio M5 Max/Ultra (128–256 GB)', 'What Fits': 'Only consumer option that fits 70B without a discrete-GPU rig' },
+            { 'VRAM Tier': '64 GB+ (unified memory)', 'Best-Fit Model (Q4)': '70B comfortably at Q4/Q5, no multi-GPU rig needed', 'Example GPUs': 'Mac Studio M5 Max/Ultra (128–256 GB)', 'What Fits': 'A common consumer option for fitting 70B without a discrete-GPU rig' },
           ],
           note: 'These are Q4 buy-target figures with realistic overhead included — see the by-model-size table above for bare compute-minimum numbers per quantization level. Apple Silicon unified memory (Mac Studio M5 Max/Ultra) is a discrete-GPU alternative for the 48 GB+ tiers — see [Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max) for exact tok/s at each quantization level.',
         },
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             { q: 'Can I run Mistral Small on a 6GB GPU?', a: 'No. Mistral Small is a 22-24B model — even at Q4 it needs about 13-14GB of VRAM for weights alone. A 6GB or 8GB GPU will OOM. Budget 16GB for a comfortable buy-target, or drop to a 7B-8B model for a 6-8GB card.' },
             { q: 'How much VRAM do I need for fine-tuning a 7B model?', a: 'For LoRA: 12-16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2-4× model VRAM), not just inference.' },
-            { q: 'Is 12GB enough for Llama 3 13B?', a: 'Yes, comfortably. A 13B model needs about 8GB at Q4, so 12GB leaves real headroom for context and other overhead. At Q5 (~9GB) it is still fine; at Q8 (~14GB) it is tight.' },
+            { q: 'Is 12GB enough for a 13B model?', a: 'Yes, comfortably. A 13B model needs about 8GB at Q4, so 12GB leaves real headroom for context and other overhead. At Q5 (~9GB) it is still fine; at Q8 (~14GB) it is tight.' },
             { q: 'Do I need 24GB for a 70B model?', a: 'No, but you need close to it. A 70B model needs about 42GB at Q4 for its weights, so 24GB is not enough at any quantization level — you need at least 42-48GB (e.g. 2× 24GB GPUs, or one 48GB card).' },
             { q: 'Does increasing batch size reduce VRAM for single inference?', a: 'No. Single inference always uses batch=1 VRAM. Batch size only helps throughput (multi-user scenarios).' },
             { q: 'What\'s the best quantization for accuracy?', a: 'Q8 is typically near-lossless; Q5 and Q4 usually lose a little more quality, varying by model and task. For most, Q4 is the sweet spot.' },
@@ -293,7 +293,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Is 12GB enough for Llama 3 13B?',
+            'name': 'Is 12GB enough for a 13B model?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes, comfortably. A 13B model needs about 8GB at Q4, so 12GB leaves real headroom for context and other overhead. At Q5 (~9GB) it is still fine; at Q8 (~14GB) it is tight.',
@@ -418,7 +418,7 @@ schema: {
           items: [
             '**Modelos 3B** (Phi, StableLM): ~2 GB de pesos en Q4, 4 GB de VRAM recomendada con margen',
             '**Modelos 7B** (Llama, Mistral, Qwen): ~4 GB de pesos en Q4, 6-8 GB de VRAM recomendada',
-            '**Modelos 13B** (Llama 3.3, Mistral): ~8 GB de pesos en Q4, 10-12 GB de VRAM recomendada',
+            '**Modelos 13B** (Qwen3 14B, Mistral): ~8 GB de pesos en Q4, 10-12 GB de VRAM recomendada',
             '**Modelos 22B** (Qwen3, Gemma): ~13 GB de pesos en Q4, 16 GB de VRAM recomendada',
             '**Modelos 70B** (Llama 3.3, Qwen 3.6): ~42 GB de pesos en Q4, 48 GB de VRAM recomendada, 50+ GB en Q5',
             '**Modelos MoE**: la VRAM escala con los pesos que debes mantener en memoria. Ejemplo: Qwen 3.6 35B-A3B (3B activos / 35B totales) sigue necesitando unos 21 GB en Q4, y Llama 4 Scout (17B activos / 109B totales) unos 55 GB, porque todos los expertos permanecen residentes; los parámetros activos solo los hacen más rápidos',
@@ -446,8 +446,8 @@ schema: {
           columns: ['Tamaño del modelo', 'FP32 (sin cuantización)', 'Q8 (8 bits)', 'Q5 (5 bits)', 'Q4 (4 bits)', 'GPU recomendada'],
           rows: [
             { 'Tamaño del modelo': '3B (Phi, StableLM)', 'FP32 (sin cuantización)': '12 GB', 'Q8 (8 bits)': '3 GB', 'Q5 (5 bits)': '2 GB', 'Q4 (4 bits)': '2 GB', 'GPU recomendada': 'RTX 3050 4 GB o RTX 2060 6 GB' },
-            { 'Tamaño del modelo': '7B (Llama 3.3, Mistral)', 'FP32 (sin cuantización)': '28 GB', 'Q8 (8 bits)': '7 GB', 'Q5 (5 bits)': '5 GB', 'Q4 (4 bits)': '4 GB', 'GPU recomendada': 'RTX 4060 8 GB o RTX 3060 12 GB' },
-            { 'Tamaño del modelo': '13B (Llama 3.3, Mistral)', 'FP32 (sin cuantización)': '52 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '8 GB', 'GPU recomendada': 'RTX 3060 12 GB o RTX 4070 12 GB' },
+            { 'Tamaño del modelo': '7B (Llama 3.1 8B, Mistral)', 'FP32 (sin cuantización)': '28 GB', 'Q8 (8 bits)': '7 GB', 'Q5 (5 bits)': '5 GB', 'Q4 (4 bits)': '4 GB', 'GPU recomendada': 'RTX 4060 8 GB o RTX 3060 12 GB' },
+            { 'Tamaño del modelo': '13B (Qwen3 14B, Mistral)', 'FP32 (sin cuantización)': '52 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '8 GB', 'GPU recomendada': 'RTX 3060 12 GB o RTX 4070 12 GB' },
             { 'Tamaño del modelo': '22B (Qwen, Gemma)', 'FP32 (sin cuantización)': '88 GB', 'Q8 (8 bits)': '23 GB', 'Q5 (5 bits)': '15 GB', 'Q4 (4 bits)': '13 GB', 'GPU recomendada': 'RTX 4080 16 GB o RTX 4090 24 GB' },
             { 'Tamaño del modelo': '70B (Llama 3, Qwen)', 'FP32 (sin cuantización)': '280 GB', 'Q8 (8 bits)': '74 GB', 'Q5 (5 bits)': '50 GB', 'Q4 (4 bits)': '42 GB', 'GPU recomendada': '2× RTX 4090 (24 GB c/u), o 1× H100 80 GB' },
             { 'Tamaño del modelo': 'Qwen 3.6 35B-A3B (3B activos / 35B total, MoE)*', 'FP32 (sin cuantización)': '~140 GB', 'Q8 (8 bits)': '~37 GB', 'Q5 (5 bits)': '~25 GB', 'Q4 (4 bits)': '~21 GB', 'GPU recomendada': 'RTX 5090 32 GB, o RTX 4090/3090 24 GB (justo; Q4)' },
@@ -480,7 +480,7 @@ schema: {
             { 'Nivel de VRAM': '24 GB', 'Mejor modelo (Q4)': '22-32B con holgura en Q8 completo; 70B solo por debajo de 4 bits con pérdida', 'GPUs de ejemplo': 'RTX 4090, RTX 3090', 'Qué cabe': '70B necesita ~42 GB reales — este nivel no llega' },
             { 'Nivel de VRAM': '32 GB', 'Mejor modelo (Q4)': '22-32B a precisión completa, o como una tarjeta en un dual-GPU para 70B', 'GPUs de ejemplo': 'RTX 5090', 'Qué cabe': 'Aún corto para un 70B Q4 solo (~42 GB necesarios)' },
             { 'Nivel de VRAM': '48 GB', 'Mejor modelo (Q4)': '70B con holgura en Q4 (~42 GB), justo en Q5 (~50 GB)', 'GPUs de ejemplo': '2× RTX 4090, RTX 6000 Ada', 'Qué cabe': 'Primer nivel que cabe 70B sin trucos de cuantización con pérdida' },
-            { 'Nivel de VRAM': '64 GB+ (memoria unificada)', 'Mejor modelo (Q4)': '70B con holgura en Q4/Q5, sin necesitar dual-GPU', 'GPUs de ejemplo': 'Mac Studio M5 Max/Ultra (128-256 GB)', 'Qué cabe': 'Única opción de consumo que cabe 70B sin GPU discreta' },
+            { 'Nivel de VRAM': '64 GB+ (memoria unificada)', 'Mejor modelo (Q4)': '70B con holgura en Q4/Q5, sin necesitar dual-GPU', 'GPUs de ejemplo': 'Mac Studio M5 Max/Ultra (128-256 GB)', 'Qué cabe': 'Una opción de consumo habitual para 70B sin GPU discreta' },
           ],
           note: 'Estas son cifras objetivo en Q4 con overhead realista incluido — consulta la tabla de arriba para los mínimos de cómputo puros por nivel de cuantización. La memoria unificada de Apple Silicon (Mac Studio M5 Max/Ultra) es una alternativa a la GPU discreta para los niveles de 48 GB+ — consulta [Ejecutar modelos 70B en Apple Silicon M5 Max](/es/local-llms/running-70b-models-apple-silicon-m5-max) para tok/s exactos en cada nivel de cuantización.',
         },
@@ -551,7 +551,7 @@ schema: {
           faqs: [
             { q: '¿Puedo ejecutar Mistral Small en una GPU de 6 GB?', a: 'No. Mistral Small es un modelo de 22-24B -- incluso en Q4 necesita unos 13-14 GB de VRAM solo para los pesos. Una GPU de 6 GB u 8 GB dará error de OOM. Reserva 16 GB para un margen cómodo, o baja a un modelo de 7B-8B para una tarjeta de 6-8 GB.' },
             { q: '¿Cuánta VRAM necesito para hacer fine-tuning de un modelo 7B?', a: 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo la inferencia.' },
-            { q: '¿Son suficientes 12 GB para Llama 3 13B?', a: 'Sí, con margen de sobra. Un modelo 13B necesita unos 8 GB en Q4, así que 12 GB deja margen real. En Q5 (~9 GB) sigue siendo cómodo; en Q8 (~14 GB) va ajustado.' },
+            { q: '¿Son suficientes 12 GB para un modelo 13B?', a: 'Sí, con margen de sobra. Un modelo 13B necesita unos 8 GB en Q4, así que 12 GB deja margen real. En Q5 (~9 GB) sigue siendo cómodo; en Q8 (~14 GB) va ajustado.' },
             { q: '¿Necesito 24 GB para un modelo 70B?', a: 'No. Un modelo 70B necesita 40-48 GB en Q4. En Q5+, necesitas 50 GB+. 24 GB no es suficiente para ningún modelo 70B en ningún nivel de cuantización.' },
             { q: '¿Aumentar el batch size reduce la VRAM para inferencia individual?', a: 'No. La inferencia individual siempre usa la VRAM de batch=1. El batch size solo ayuda al rendimiento (escenarios multiusuario).' },
             { q: '¿Cuál es la mejor cuantización para la precisión?', a: 'Q8 suele ser casi sin pérdida; Q5 y Q4 suelen perder algo más de calidad, según el modelo y la tarea. Para la mayoría, Q4 es el punto óptimo.' },
@@ -630,7 +630,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': '¿Son suficientes 12 GB para Llama 3 13B?',
+            'name': '¿Son suficientes 12 GB para un modelo 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Sí, con margen de sobra. Un modelo 13B necesita unos 8 GB en Q4, así que 12 GB deja margen real. En Q5 (~9 GB) sigue siendo cómodo; en Q8 (~14 GB) va ajustado.',
@@ -755,7 +755,7 @@ schema: {
           items: [
             '**نماذج 3B** (Phi, StableLM): نحو 2 GB أوزان بتكميم Q4، 4 GB VRAM موصى بها مع هامش',
             '**نماذج 7B** (Llama, Mistral, Qwen): نحو 4 GB أوزان بتكميم Q4، 6-8 GB VRAM موصى بها',
-            '**نماذج 13B** (Llama 3.3, Mistral): نحو 8 GB أوزان بتكميم Q4، 10-12 GB VRAM موصى بها',
+            '**نماذج 13B** (Qwen3 14B, Mistral): نحو 8 GB أوزان بتكميم Q4، 10-12 GB VRAM موصى بها',
             '**نماذج 22B** (Qwen3, Gemma): نحو 13 GB أوزان بتكميم Q4، 16 GB VRAM موصى بها',
             '**نماذج 70B** (Llama 3.3, Qwen 3.6): نحو 42 GB أوزان بتكميم Q4، 48 GB VRAM موصى بها، 50+ GB بـQ5',
             '**نماذج MoE**: تتوسّع VRAM مع الأوزان التي يجب إبقاؤها في الذاكرة. مثال: Qwen 3.6 35B-A3B (3B نشطة / 35B إجمالي) لا يزال يحتاج نحو 21 GB بـ Q4، وLlama 4 Scout (17B نشطة / 109B إجمالي) نحو 55 GB، لأن كل الخبراء يبقون مقيمين؛ فالمعاملات النشطة تجعلها أسرع فقط',
@@ -783,8 +783,8 @@ schema: {
           columns: ['حجم النموذج', 'FP32 (دون تكميم)', 'Q8 (8 بت)', 'Q5 (5 بت)', 'Q4 (4 بت)', 'GPU الموصى بها'],
           rows: [
             { 'حجم النموذج': '3B (Phi, StableLM)', 'FP32 (دون تكميم)': '12 GB', 'Q8 (8 بت)': '3 GB', 'Q5 (5 بت)': '2 GB', 'Q4 (4 بت)': '2 GB', 'GPU الموصى بها': 'RTX 3050 4 GB أو RTX 2060 6 GB' },
-            { 'حجم النموذج': '7B (Llama 3.3, Mistral)', 'FP32 (دون تكميم)': '28 GB', 'Q8 (8 بت)': '7 GB', 'Q5 (5 بت)': '5 GB', 'Q4 (4 بت)': '4 GB', 'GPU الموصى بها': 'RTX 4060 8 GB أو RTX 3060 12 GB' },
-            { 'حجم النموذج': '13B (Llama 3.3, Mistral)', 'FP32 (دون تكميم)': '52 GB', 'Q8 (8 بت)': '14 GB', 'Q5 (5 بت)': '9 GB', 'Q4 (4 بت)': '8 GB', 'GPU الموصى بها': 'RTX 3060 12 GB أو RTX 4070 12 GB' },
+            { 'حجم النموذج': '7B (Llama 3.1 8B, Mistral)', 'FP32 (دون تكميم)': '28 GB', 'Q8 (8 بت)': '7 GB', 'Q5 (5 بت)': '5 GB', 'Q4 (4 بت)': '4 GB', 'GPU الموصى بها': 'RTX 4060 8 GB أو RTX 3060 12 GB' },
+            { 'حجم النموذج': '13B (Qwen3 14B, Mistral)', 'FP32 (دون تكميم)': '52 GB', 'Q8 (8 بت)': '14 GB', 'Q5 (5 بت)': '9 GB', 'Q4 (4 بت)': '8 GB', 'GPU الموصى بها': 'RTX 3060 12 GB أو RTX 4070 12 GB' },
             { 'حجم النموذج': '22B (Qwen, Gemma)', 'FP32 (دون تكميم)': '88 GB', 'Q8 (8 بت)': '23 GB', 'Q5 (5 بت)': '15 GB', 'Q4 (4 بت)': '13 GB', 'GPU الموصى بها': 'RTX 4080 16 GB أو RTX 4090 24 GB' },
             { 'حجم النموذج': '70B (Llama 3, Qwen)', 'FP32 (دون تكميم)': '280 GB', 'Q8 (8 بت)': '74 GB', 'Q5 (5 بت)': '50 GB', 'Q4 (4 بت)': '42 GB', 'GPU الموصى بها': '2× RTX 4090 (24 GB لكل منها)، أو 1× H100 80 GB' },
             { 'حجم النموذج': 'Qwen 3.6 35B-A3B (3B نشطة / 35B إجمالي، MoE)*', 'FP32 (دون تكميم)': '~140 GB', 'Q8 (8 بت)': '~37 GB', 'Q5 (5 بت)': '~25 GB', 'Q4 (4 بت)': '~21 GB', 'GPU الموصى بها': 'RTX 5090 32 GB، أو RTX 4090/3090 24 GB (بالكاد؛ Q4)' },
@@ -817,7 +817,7 @@ schema: {
             { 'فئة VRAM': '24 GB', 'أفضل نموذج (Q4)': '22-32B براحة بـ Q8 كامل؛ 70B فقط دون 4 بت مع فقدان جودة', 'أمثلة GPU': 'RTX 4090, RTX 3090', 'ما يناسبها': '70B يحتاج فعليًا ~42 GB — هذه الفئة غير كافية' },
             { 'فئة VRAM': '32 GB', 'أفضل نموذج (Q4)': '22-32B بدقة كاملة، أو كبطاقة واحدة في إعداد ثنائي GPU لـ 70B', 'أمثلة GPU': 'RTX 5090', 'ما يناسبها': 'لا يزال أقل من 70B Q4 وحده (~42 GB مطلوبة)' },
             { 'فئة VRAM': '48 GB', 'أفضل نموذج (Q4)': '70B براحة بـ Q4 (~42 GB)، وبضيق بـ Q5 (~50 GB)', 'أمثلة GPU': '2× RTX 4090, RTX 6000 Ada', 'ما يناسبها': 'أول فئة تلائم 70B دون حيل تكميم تفقد الجودة' },
-            { 'فئة VRAM': '64 GB+ (ذاكرة موحدة)', 'أفضل نموذج (Q4)': '70B براحة بـ Q4/Q5، دون الحاجة لإعداد ثنائي GPU', 'أمثلة GPU': 'Mac Studio M5 Max/Ultra (128-256 GB)', 'ما يناسبها': 'الخيار الاستهلاكي الوحيد الذي يلائم 70B دون GPU منفصلة' },
+            { 'فئة VRAM': '64 GB+ (ذاكرة موحدة)', 'أفضل نموذج (Q4)': '70B براحة بـ Q4/Q5، دون الحاجة لإعداد ثنائي GPU', 'أمثلة GPU': 'Mac Studio M5 Max/Ultra (128-256 GB)', 'ما يناسبها': 'خيار استهلاكي شائع يتسع لـ 70B دون GPU منفصلة' },
           ],
           note: 'هذه أرقام هدف شراء بتكميم Q4 مع عبء واقعي مضمّن — راجع جدول الحجم أعلاه للحد الأدنى الحسابي المجرد لكل مستوى تكميم. الذاكرة الموحدة في Apple Silicon (Mac Studio M5 Max/Ultra) بديل عن GPU منفصلة لفئات 48 GB فأعلى — راجع [تشغيل نماذج 70B على Apple Silicon M5 Max](/ar/local-llms/running-70b-models-apple-silicon-m5-max) لمعرفة سرعات tok/s الدقيقة عند كل مستوى تكميم.',
         },
@@ -888,7 +888,7 @@ schema: {
           faqs: [
             { q: 'هل يمكنني تشغيل Mistral Small على GPU بسعة 6 GB؟', a: 'لا. Mistral Small نموذج بحجم 22-24B — حتى بتكميم Q4 يحتاج نحو 13-14 GB من VRAM لأوزانه فقط. بطاقة 6 GB أو 8 GB ستواجه خطأ OOM. خصص 16 GB لهامش مريح، أو انزل إلى نموذج 7B-8B لبطاقة 6-8 GB.' },
             { q: 'كم أحتاج من VRAM لعمل fine-tuning لنموذج 7B؟', a: 'لـ LoRA: 12-16 GB. fine-tuning كامل: 28 GB+. يتطلب الـ fine-tuning حالة المُحسّن (2-4× VRAM النموذج)، لا مجرد الاستدلال.' },
-            { q: 'هل 12 GB كافية لـ Llama 3 13B؟', a: 'نعم، بارتياح. نموذج 13B يحتاج نحو 8 GB بتكميم Q4، لذا 12 GB تترك هامشًا حقيقيًا. بـ Q5 (~9 GB) لا تزال مريحة؛ بـ Q8 (~14 GB) تصبح ضيّقة.' },
+            { q: 'هل 12 GB كافية لنموذج 13B؟', a: 'نعم، بارتياح. نموذج 13B يحتاج نحو 8 GB بتكميم Q4، لذا 12 GB تترك هامشًا حقيقيًا. بـ Q5 (~9 GB) لا تزال مريحة؛ بـ Q8 (~14 GB) تصبح ضيّقة.' },
             { q: 'هل أحتاج 24 GB لنموذج 70B؟', a: 'لا. يحتاج نموذج 70B إلى 40-48 GB بتكميم Q4. بـ Q5+، تحتاج 50 GB+. 24 GB غير كافية لأي نموذج 70B عند أي مستوى تكميم.' },
             { q: 'هل تقليل batch size يقلّل VRAM للاستدلال الفردي؟', a: 'لا. يستخدم الاستدلال الفردي دائمًا VRAM لـ batch=1. يساعد batch size في الإنتاجية فقط (سيناريوهات متعددة المستخدمين).' },
             { q: 'ما أفضل تكميم للدقة؟', a: 'غالبًا ما يكون Q8 شبه بلا فقدان؛ أما Q5 وQ4 فيفقدان عادةً قدرًا أكبر قليلًا من الجودة، ويختلف ذلك حسب النموذج والمهمة. للأغلب، Q4 هي النقطة المثالية.' },
@@ -967,7 +967,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'هل 12 GB كافية لـ Llama 3 13B؟',
+            'name': 'هل 12 GB كافية لنموذج 13B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'نعم، بارتياح. نموذج 13B يحتاج نحو 8 GB بتكميم Q4، لذا 12 GB تترك هامشًا حقيقيًا. بـ Q5 (~9 GB) لا تزال مريحة؛ بـ Q8 (~14 GB) تصبح ضيّقة.',
@@ -1092,7 +1092,7 @@ schema: {
           items: [
             '**Modelos 3B** (Phi, StableLM): ~2 GB de pesos em Q4, 4 GB de VRAM recomendada com margem',
             '**Modelos 7B** (Llama, Mistral, Qwen): ~4 GB de pesos em Q4, 6-8 GB de VRAM recomendada',
-            '**Modelos 13B** (Llama 3.3, Mistral): ~8 GB de pesos em Q4, 10-12 GB de VRAM recomendada',
+            '**Modelos 13B** (Qwen3 14B, Mistral): ~8 GB de pesos em Q4, 10-12 GB de VRAM recomendada',
             '**Modelos 22B** (Qwen3, Gemma): ~13 GB de pesos em Q4, 16 GB de VRAM recomendada',
             '**Modelos 70B** (Llama 3.3, Qwen 3.6): ~42 GB de pesos em Q4, 48 GB de VRAM recomendada, 50+ GB em Q5',
             '**Modelos MoE**: a VRAM escala com os pesos que você precisa manter na memória. Exemplo: Qwen 3.6 35B-A3B (3B ativos / 35B totais) ainda precisa de cerca de 21 GB em Q4, e o Llama 4 Scout (17B ativos / 109B totais) de cerca de 55 GB, porque todos os especialistas permanecem residentes; os parâmetros ativos só os deixam mais rápidos',
@@ -1120,8 +1120,8 @@ schema: {
           columns: ['Tamanho do modelo', 'FP32 (sem quantização)', 'Q8 (8 bits)', 'Q5 (5 bits)', 'Q4 (4 bits)', 'GPU recomendada'],
           rows: [
             { 'Tamanho do modelo': '3B (Phi, StableLM)', 'FP32 (sem quantização)': '12 GB', 'Q8 (8 bits)': '3 GB', 'Q5 (5 bits)': '2 GB', 'Q4 (4 bits)': '2 GB', 'GPU recomendada': 'RTX 3050 4 GB ou RTX 2060 6 GB' },
-            { 'Tamanho do modelo': '7B (Llama 3.3, Mistral)', 'FP32 (sem quantização)': '28 GB', 'Q8 (8 bits)': '7 GB', 'Q5 (5 bits)': '5 GB', 'Q4 (4 bits)': '4 GB', 'GPU recomendada': 'RTX 4060 8 GB ou RTX 3060 12 GB' },
-            { 'Tamanho do modelo': '13B (Llama 3.3, Mistral)', 'FP32 (sem quantização)': '52 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '8 GB', 'GPU recomendada': 'RTX 3060 12 GB ou RTX 4070 12 GB' },
+            { 'Tamanho do modelo': '7B (Llama 3.1 8B, Mistral)', 'FP32 (sem quantização)': '28 GB', 'Q8 (8 bits)': '7 GB', 'Q5 (5 bits)': '5 GB', 'Q4 (4 bits)': '4 GB', 'GPU recomendada': 'RTX 4060 8 GB ou RTX 3060 12 GB' },
+            { 'Tamanho do modelo': '13B (Qwen3 14B, Mistral)', 'FP32 (sem quantização)': '52 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '8 GB', 'GPU recomendada': 'RTX 3060 12 GB ou RTX 4070 12 GB' },
             { 'Tamanho do modelo': '22B (Qwen, Gemma)', 'FP32 (sem quantização)': '88 GB', 'Q8 (8 bits)': '23 GB', 'Q5 (5 bits)': '15 GB', 'Q4 (4 bits)': '13 GB', 'GPU recomendada': 'RTX 4080 16 GB ou RTX 4090 24 GB' },
             { 'Tamanho do modelo': '70B (Llama 3, Qwen)', 'FP32 (sem quantização)': '280 GB', 'Q8 (8 bits)': '74 GB', 'Q5 (5 bits)': '50 GB', 'Q4 (4 bits)': '42 GB', 'GPU recomendada': '2× RTX 4090 (24 GB cada), ou 1× H100 80 GB' },
             { 'Tamanho do modelo': 'Qwen 3.6 35B-A3B (3B ativos / 35B total, MoE)*', 'FP32 (sem quantização)': '~140 GB', 'Q8 (8 bits)': '~37 GB', 'Q5 (5 bits)': '~25 GB', 'Q4 (4 bits)': '~21 GB', 'GPU recomendada': 'RTX 5090 32 GB, ou RTX 4090/3090 24 GB (apertado; Q4)' },
@@ -1154,7 +1154,7 @@ schema: {
             { 'Nível de VRAM': '24 GB', 'Melhor modelo (Q4)': '22-32B com folga em Q8 completo; 70B só abaixo de 4 bits com perda', 'GPUs de exemplo': 'RTX 4090, RTX 3090', 'O que cabe': '70B precisa de ~42 GB reais — este nível não é suficiente' },
             { 'Nível de VRAM': '32 GB', 'Melhor modelo (Q4)': '22-32B em precisão total, ou como uma placa em um setup dual-GPU para 70B', 'GPUs de exemplo': 'RTX 5090', 'O que cabe': 'Ainda insuficiente para um 70B Q4 sozinho (~42 GB necessários)' },
             { 'Nível de VRAM': '48 GB', 'Melhor modelo (Q4)': '70B com folga em Q4 (~42 GB), apertado em Q5 (~50 GB)', 'GPUs de exemplo': '2× RTX 4090, RTX 6000 Ada', 'O que cabe': 'Primeiro nível que cabe 70B sem truques de quantização com perda' },
-            { 'Nível de VRAM': '64 GB+ (memória unificada)', 'Melhor modelo (Q4)': '70B com folga em Q4/Q5, sem precisar de dual-GPU', 'GPUs de exemplo': 'Mac Studio M5 Max/Ultra (128-256 GB)', 'O que cabe': 'Única opção de consumo que cabe 70B sem GPU discreta' },
+            { 'Nível de VRAM': '64 GB+ (memória unificada)', 'Melhor modelo (Q4)': '70B com folga em Q4/Q5, sem precisar de dual-GPU', 'GPUs de exemplo': 'Mac Studio M5 Max/Ultra (128-256 GB)', 'O que cabe': 'Uma opção de consumo comum que comporta 70B sem GPU dedicada' },
           ],
           note: 'Estes são números-alvo de compra em Q4 com overhead realista incluído — veja a tabela acima para os mínimos de computação puros por nível de quantização. A memória unificada do Apple Silicon (Mac Studio M5 Max/Ultra) é uma alternativa à GPU discreta para os níveis de 48 GB+ — veja [Rodar modelos 70B em Apple Silicon M5 Max](/pt/local-llms/running-70b-models-apple-silicon-m5-max) para os tok/s exatos em cada nível de quantização.',
         },
@@ -1225,7 +1225,7 @@ schema: {
           faqs: [
             { q: 'Posso rodar o Mistral Small em uma GPU de 6 GB?', a: 'Não. O Mistral Small é um modelo de 22-24B -- mesmo em Q4 precisa de cerca de 13-14 GB de VRAM só para os pesos. Uma GPU de 6 GB ou 8 GB vai dar erro de OOM. Reserve 16 GB para uma margem confortável, ou use um modelo de 7B-8B para uma placa de 6-8 GB.' },
             { q: 'Quanta VRAM preciso para fazer fine-tuning de um modelo 7B?', a: 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. O fine-tuning exige estado do otimizador (2-4× a VRAM do modelo), não só a inferência.' },
-            { q: '12 GB são suficientes para o Llama 3 13B?', a: 'Sim, com folga. Um modelo 13B precisa de cerca de 8 GB em Q4, então 12 GB deixa margem real. Em Q5 (~9 GB) ainda está confortável; em Q8 (~14 GB) fica apertado.' },
+            { q: '12 GB são suficientes para um modelo 13B?', a: 'Sim, com folga. Um modelo 13B precisa de cerca de 8 GB em Q4, então 12 GB deixa margem real. Em Q5 (~9 GB) ainda está confortável; em Q8 (~14 GB) fica apertado.' },
             { q: 'Preciso de 24 GB para um modelo 70B?', a: 'Não. Um modelo 70B precisa de 40-48 GB em Q4. Em Q5+, você precisa de 50 GB+. 24 GB não é suficiente para nenhum modelo 70B em nenhum nível de quantização.' },
             { q: 'Aumentar o batch size reduz a VRAM para inferência individual?', a: 'Não. A inferência individual sempre usa a VRAM de batch=1. O batch size só ajuda a vazão (cenários multiusuário).' },
             { q: 'Qual é a melhor quantização para a precisão?', a: 'O Q8 costuma ser quase sem perda; Q5 e Q4 costumam perder um pouco mais de qualidade, conforme o modelo e a tarefa. Para a maioria, o Q4 é o ponto ideal.' },
@@ -1303,7 +1303,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': '12 GB são suficientes para o Llama 3 13B?',
+            'name': '12 GB são suficientes para um modelo 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Sim, com folga. Um modelo 13B precisa de cerca de 8 GB em Q4, então 12 GB deixa margem real. Em Q5 (~9 GB) ainda está confortável; em Q8 (~14 GB) fica apertado.',
@@ -1427,7 +1427,7 @@ schema: {
             '',
             'VRAM (GB) = Paramètres en milliards × Octets par paramètre',
             '',
-            'Octets par paramètre par niveau de quantification (mesurés, pas seulement théoriques -- les formats réels comme Q4_K_M ont une légère surcharge au-dessus du minimum théorique) :',
+            'Octets par paramètre par niveau de quantification (d\'après des tailles de fichiers GGUF réelles -- les formats réels comme Q4_K_M ont une légère surcharge au-dessus du minimum théorique) :',
             '- FP32 : 4,0 octets (précision complète)',
             '- Q8 : ~1,05 octet (8 bits)',
             '- Q5 : ~0,7 octet (5 bits)',
@@ -1443,7 +1443,7 @@ schema: {
             '+ ~2 GB de surcharge (cache KV + runtime) = ~44 GB au total.',
             'Entre dans deux RTX 4090 (48 GB combinés).',
             '',
-            'Llama 3.3 7B en Q4 :',
+            'Un modèle 7B en Q4 :',
             '7 × 0,6 octet = 4,2 GB de poids (Llama-2-7B Q4_K_M réel = 4,08 GB)',
             '+ ~1-2 GB de surcharge = ~5-6 GB au total.',
             'Entre dans n\'importe quelle GPU 8 GB avec marge.',
@@ -1483,7 +1483,7 @@ schema: {
             '',
             '**En termes simples**: La quantification ressemble à prendre une photo haute résolution et la réduire en résolution inférieure -- vous perdez quelques détails, mais la taille du fichier diminue considérablement. La quantification Q4 rétrécit VRAM de 87% tout en conservant, dans la plupart des cas, l\'essentiel de la qualité.',
             '',
-            '💡 **Conseil Pro**: Q4 est le juste équilibre pour l\'inférence locale des LLM. Tout ce qui est inférieur à Q4 (comme Q2 ou Q3) commence à dégrader notablement la qualité du modèle. Tout ce qui est supérieur (Q5+) gaspille VRAM et ralentit l\'inférence pour des gains de qualité marginaux.',
+            '💡 **Conseil Pro**: Q4 est le juste équilibre pour l\'inférence locale des LLM. Tout ce qui est inférieur à Q4 (comme Q2 ou Q3) commence à dégrader notablement la qualité du modèle. Au-delà (Q5+), le gain de qualité est généralement faible pour une VRAM nettement supérieure.',
             'La VRAM détermine la taille du modèle, mais la conception du prompt détermine la qualité des sorties. Les techniques comme la chain-of-thought et le few-shot prompting peuvent combler l\'écart de qualité entre les modèles plus petits et plus grands. Explorez la [boîte à outils complète de prompt engineering](https://www.promptquorum.com/fr/prompt-engineering) pour tirer le meilleur parti des modèles que votre matériel prend en charge. Si vous disposez de 12–16 Go de VRAM et cherchez un cas concret pour tester cette boîte à outils, [Remplacer GitHub Copilot par un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm) projette la stack Continue.dev + Ollama + Qwen3-Coder sur ces paliers de VRAM exacts.',
           ],
           image: '/images/how-much-vram-local-llm-quantization-tradeoff-hero-fr.webp',
@@ -1552,7 +1552,7 @@ schema: {
           faqs: [
             { q: 'Puis-je exécuter Mistral Small sur une GPU 6 GB?', a: 'Non. Mistral Small est un modèle de 22-24B -- même en Q4 il nécessite environ 13-14 GB de VRAM pour les poids seuls. Une GPU de 6 GB ou 8 GB fera une erreur OOM. Prévoyez 16 GB pour une marge confortable, ou descendez à un modèle 7B-8B pour une carte 6-8 GB.' },
             { q: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', a: 'Pour LoRA: 12-16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2-4× VRAM du modèle), pas seulement l\'inférence.' },
-            { q: 'Est-ce que 12 GB est suffisant pour Llama 3 13B?', a: 'Oui, largement. Un modèle 13B nécessite environ 8 GB en Q4, donc 12 GB laisse une vraie marge. En Q5 (~9 GB) c\'est encore confortable ; en Q8 (~14 GB) c\'est juste.' },
+            { q: 'Est-ce que 12 GB est suffisant pour un modèle 13B?', a: 'Oui, largement. Un modèle 13B nécessite environ 8 GB en Q4, donc 12 GB laisse une vraie marge. En Q5 (~9 GB) c\'est encore confortable ; en Q8 (~14 GB) c\'est juste.' },
             { q: 'Ai-je besoin de 24 GB pour un modèle 70B?', a: 'Non, mais presque -- un modèle 70B nécessite environ 42 GB à Q4 pour les poids seuls. À Q5+, il faut 50 GB+. 24 GB ne suffit pour aucun modèle 70B, quel que soit le niveau de quantification.' },
             { q: 'L\'augmentation de la taille du lot réduit-elle VRAM pour l\'inférence unique?', a: 'Non. L\'inférence unique utilise toujours VRAM batch=1. La taille du lot n\'aide que le débit (scénarios multi-utilisateurs).' },
             { q: 'Quelle est la meilleure quantification pour la précision?', a: 'Q8 est généralement quasi sans perte ; Q5 et Q4 perdent un peu plus de qualité, selon le modèle et la tâche. Pour la plupart, Q4 est le juste équilibre.' },
@@ -1631,7 +1631,7 @@ schema: {
         mainEntity: [
           { '@type': 'Question', name: 'Puis-je exécuter Mistral Small sur une GPU 6 GB?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Mistral Small est un modèle de 22-24B -- même en Q4 il nécessite environ 13-14 GB de VRAM pour les poids seuls. Une GPU de 6 GB ou 8 GB fera une erreur OOM. Prévoyez 16 GB pour une marge confortable, ou descendez à un modèle 7B-8B pour une carte 6-8 GB.' } },
           { '@type': 'Question', name: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Pour LoRA: 12-16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2-4× VRAM du modèle), pas seulement l\'inférence.' } },
-          { '@type': 'Question', name: 'Est-ce que 12 GB est suffisant pour Llama 3 13B?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, largement. Un modèle 13B nécessite environ 8 GB en Q4, donc 12 GB laisse une vraie marge. En Q5 (~9 GB) c\'est encore confortable ; en Q8 (~14 GB) c\'est juste.' } },
+          { '@type': 'Question', name: 'Est-ce que 12 GB est suffisant pour un modèle 13B?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, largement. Un modèle 13B nécessite environ 8 GB en Q4, donc 12 GB laisse une vraie marge. En Q5 (~9 GB) c\'est encore confortable ; en Q8 (~14 GB) c\'est juste.' } },
           { '@type': 'Question', name: 'Ai-je besoin de 24 GB pour un modèle 70B?', acceptedAnswer: { '@type': 'Answer', text: 'Non, mais presque -- un modèle 70B nécessite environ 42 GB à Q4 pour les poids seuls. À Q5+, il faut 50 GB+. 24 GB ne suffit pour aucun modèle 70B, quel que soit le niveau de quantification.' } },
           { '@type': 'Question', name: 'L\'augmentation de la taille du lot réduit-elle VRAM pour l\'inférence unique?', acceptedAnswer: { '@type': 'Answer', text: 'Non. L\'inférence unique utilise toujours VRAM batch=1. La taille du lot n\'aide que le débit (scénarios multi-utilisateurs).' } },
           { '@type': 'Question', name: 'Quelle est la meilleure quantification pour la précision?', acceptedAnswer: { '@type': 'Answer', text: 'Q8 est généralement quasi sans perte ; Q5 et Q4 perdent un peu plus de qualité, selon le modèle et la tâche. Pour la plupart, Q4 est le juste équilibre.' } },
@@ -1712,7 +1712,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
       title: 'VRAM目安：7B=4GB、70B=42GB（2026ガイド）',
       seoTitle: 'ローカルLLMのVRAM目安：7B=4GB、70B=42GB',
       intro: '7BモデルはQ4（4ビット）量子化で重みに約4 GBのVRAMが必要です。13Bは約8 GB、22Bは約13 GB、70Bは約42 GB必要です。これらは重みのみのサイズで、コンテキスト（KVキャッシュ）とシステム用に1-2 GBの余裕を追加してください。Q5（5ビット）では15-20%増、Q8（8ビット）では約75%増になります。数値はHugging Face上の実際のGGUFファイルサイズで検証済みです。',
-      metaDescription: '実際のGGUFファイルサイズで検証したQ4のVRAM実測値：7Bは約4GB、13Bは約8GB、22Bは約13GB、70Bは約42GB。無料計算ツールとQ5/Q8の早見表付き。',
+      metaDescription: '実際のGGUFファイルサイズに基づくQ4のVRAM目安：7Bは約4GB、13Bは約8GB、22Bは約13GB、70Bは約42GB。無料計算ツールとQ5/Q8の早見表付き。',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-ja.webp',
       nextStep: {
         text: 'VRAMの予算がわかりました。次はそれに合ったGPUを選びましょう。',
@@ -1740,7 +1740,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
           id: 'key-takeaways',
  isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: '4ビット量子化では、パラメータ10億あたり約0.6 GBのVRAMを見込みます。7Bモデルは5 GB、70Bモデルは42 GBが目安です。' }, { type: 'plain-terms', text: '計算はシンプルです。パラメータ数（10億単位）に0.6を掛けた値が4ビット時の必要GB数で、そこにコンテキストとOS用の1〜2 GBを足します。13Bなら約8 GB、22Bなら約13 GBが目安になります。' }], title: 'ポイント', items: ['7Bモデル: Q4で約4 GBの重み、Q5で約5 GB、Q8で約7 GB。現実的な購入目安は6-8 GB。', '13Bモデル: Q4で約8 GBの重み。12 GBのVRAMは「ぎりぎり」ではなく余裕があります。', '70Bモデル: Q4で約42 GBの重み。Q8では約74 GB必要。', 'Q4量子化: 完全精度比で約85%削減、実際のGGUFファイルサイズで検証済み。'] },
         formula: {
-          id: 'formula', title: 'VRAM計算式', content: ['VRAM = 十億パラメータ × パラメータあたりバイト数 + KVキャッシュ + オーバーヘッド', 'パラメータあたりバイト数（実際のGGUFファイルで検証）：Q4は約0.6バイト、Q5は約0.7バイト、Q8は約1.05バイト。', '例：Llama-3.3 70B Q4 = 70 × 0.6 = 42 GB（実際のLlama-3.3-70B Q4_K_M GGUFは42.52 GB）', 'Q4: 理論値の0.5バイトではなく実測で約0.6バイト/パラメータ（Q4_K_Mなど実際の形式には若干のオーバーヘッドがある）。', 'Q8: 実測で約1.05バイト/パラメータ、ほぼ完全精度。'] },
+          id: 'formula', title: 'VRAM計算式', content: ['VRAM = 十億パラメータ × パラメータあたりバイト数 + KVキャッシュ + オーバーヘッド', 'パラメータあたりバイト数（実際のGGUFファイルで検証）：Q4は約0.6バイト、Q5は約0.7バイト、Q8は約1.05バイト。', '例：Llama-3.3 70B Q4 = 70 × 0.6 = 42 GB（実際のLlama-3.3-70B Q4_K_M GGUFは42.52 GB）', 'Q4: 理論値の0.5バイトではなく、実際のGGUFファイルサイズから算出すると約0.6バイト/パラメータ（Q4_K_Mなど実際の形式には若干のオーバーヘッドがある）。', 'Q8: 実際のGGUFファイルサイズから算出すると約1.05バイト/パラメータ、ほぼ完全精度。'] },
         'by-model-size': { title: 'モデルサイズ別VRAM', columns: ['モデルサイズ', 'FP32', 'Q8', 'Q5', 'Q4', '推奨GPU'], rows: [{ 'モデルサイズ': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '5 GB', 'Q4': '4 GB', '推奨GPU': 'RTX 4060 (8GB)、RTX 3060 (12GB)' }, { 'モデルサイズ': '13B', 'FP32': '52 GB', 'Q8': '14 GB', 'Q5': '9 GB', 'Q4': '8 GB', '推奨GPU': 'RTX 3060 (12GB)、RTX 4070 (12GB)' }, { 'モデルサイズ': '70B', 'FP32': '280 GB', 'Q8': '74 GB', 'Q5': '50 GB', 'Q4': '42 GB', '推奨GPU': 'デュアルRTX 4090' }, { 'モデルサイズ': 'Qwen 3.6 35B-A3B (3B有効 / 35B総パラメータ, MoE)*', 'FP32': '~140 GB', 'Q8': '~37 GB', 'Q5': '~25 GB', 'Q4': '~21 GB', '推奨GPU': 'RTX 5090 32 GB、またはRTX 4090/3090 24 GB（ぎりぎり、Q4）' }, { 'モデルサイズ': 'DeepSeek-V4.1-Flash-1017 (8B/16B有効 / 552B総パラメータ, MoE)*', 'FP32': '~2.2 TB', 'Q8': '~550 GB', 'Q5': '~390 GB', 'Q4': '~330 GB', '推奨GPU': 'マルチGPUサーバー、または512 GBユニファイドメモリ（Q4のみ）' }, { 'モデルサイズ': 'Llama 4 Scout (17B有効 / 109B総パラメータ, MoE)†', 'FP32': '436 GB', 'Q8': '114 GB', 'Q5': '76 GB', 'Q4': '55 GB', '推奨GPU': '2× RTX 4090 (48 GB) — 24 GBには1.78ビット時のみ収まる(~20 tok/s)' }, { 'モデルサイズ': 'gpt-oss:20b (3.6B有効 / 21B総パラメータ, MoE)*', 'FP32': '84 GB', 'Q8': '22 GB', 'Q5': '15 GB', 'Q4': '12 GB', '推奨GPU': 'RTX 5070 12 GB または16 GBのGPU' }, { 'モデルサイズ': 'Kimi K2.6 (32B有効 / 1T総パラメータ, MoE)*', 'FP32': '~4 TB', 'Q8': '~1 TB', 'Q5': '~700 GB', 'Q4': '~600 GB', '推奨GPU': 'マルチGPUサーバー（Q4で~600 GB）' }], note: '数値はHugging Face上の実際のGGUFファイルサイズで検証済みの重みのみのサイズです（例：Llama-2-7B Q4_K_M = 4.08 GB、Mistral-Small-24B Q4_K_M = 14.33 GB、Llama-3.3-70B Q4_K_M = 42.52 GB）。コンテキスト/KVキャッシュ用に1-2 GBの余裕を追加してください。* MoE行: 総パラメータから算出（Q4で10億あたり約0.6 GB）。すべてのエキスパートがメモリに常駐し、アクティブパラメータは速度にのみ影響します。数値は概算です。† Llama 4 Scoutは109Bパラメータすべてを常駐させるため、トークンあたり17Bしか有効でなくてもQ4で~55 GB必要です。 出典: [Llama-2-7B GGUF](https://huggingface.co/TheBloke/Llama-2-7B-GGUF), [Mistral-Small-24B GGUF](https://huggingface.co/bartowski/Mistral-Small-24B-Instruct-2501-GGUF), [Llama-3.3-70B GGUF](https://huggingface.co/bartowski/Llama-3.3-70B-Instruct-GGUF).',
           image: '/images/how-much-vram-local-llm-vram-by-size-hero-ja.webp',
           imageCaption: '目安: モデルサイズ（十億単位）に0.6を掛けるとQ4のVRAM（GB）になる。そこに1-2 GBの余裕を追加。',
@@ -1762,13 +1762,13 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
             { q: '70B用に24 GBは?', a: '不十分です。Q4でも約42 GB必要です。' },
             { q: '6GB GPUでMistral Smallを実行できますか?', a: 'いいえ。Mistral Smallは22-24Bモデルで、Q4でも重みだけで約13-14GBのVRAMが必要です。6GBや8GBのGPUではOOMになります。余裕を持って16GBを、または6-8GBのカードなら7B-8Bモデルを使ってください。' },
             { q: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', a: 'LoRA用: 12-16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' },
-            { q: 'Llama 3 13Bに12GBで十分ですか?', a: '十分すぎるほどです。13BモデルはQ4で約8GBしか必要とせず、12GBなら実際に余裕があります。Q5（約9GB）でも快適で、Q8（約14GB）でぎりぎりになります。' },
+            { q: '13Bモデルに12GBで十分ですか?', a: '十分すぎるほどです。13BモデルはQ4で約8GBしか必要とせず、12GBなら実際に余裕があります。Q5（約9GB）でも快適で、Q8（約14GB）でぎりぎりになります。' },
             { q: '70Bモデルに24GBが必要ですか?', a: 'いいえ、ただしそれに近い量が必要です。70Bモデルは重みだけでQ4で約42GB必要です。Q5以上では50GB以上必要になります。どの量子化レベルでも24GBでは不十分です。' },
             { q: 'バッチサイズを増やすと単一推論のVRAMが減りますか?', a: 'いいえ。単一推論は常にbatch=1 VRAMを使用します。バッチサイズはスループット(マルチユーザーシナリオ)にのみ役立ちます。' },
             { q: '精度に最適な量子化は何ですか?', a: 'Q8は通常ほぼ無損失で、Q5・Q4はやや品質が下がることがあります（モデルやタスクによります）。ほとんどの場合、Q4がスイートスポットです。' },
             { q: 'VRAMの一部をCPU RAMにオフロードできますか?', a: 'はい、一部のレイヤーをシステムRAMにオフロードできます。Llama.cppとOllamaがサポートしています。パフォーマンスは大きく低下することがあります（オフロードするレイヤー数によりますが、30-50%以上の低下も）。' },
             { q: 'ローカルLLM実行の最小VRAMは?', a: '3B Q4なら4GB VRAM。実用的な最小値は8GB VRAM + 7B Q4。6GB以下では、ほとんどの7Bモデルでは不十分です。' },
-            { q: 'Apple Silicon VRAMはGPU VRAMと同じですか?', a: 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBはLlama 3 13B Q4(~7GB) + オーバーヘッドを実行できます。' },
+            { q: 'Apple Silicon VRAMはGPU VRAMと同じですか?', a: 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBは13Bモデル Q4(~7GB) + オーバーヘッドを実行できます。' },
             { q: '異なる量子化レベルで7Bには何GBのVRAMが必要ですか?', a: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GBの重み + 1-2GBオーバーヘッド)。6GBはきついです、8GBが快適です。' },
           ] },
         relatedReading: {
@@ -1840,7 +1840,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           },
           {
             '@type': 'Question',
-            'name': 'Llama 3 13Bに12GBで十分ですか?',
+            'name': '13Bモデルに12GBで十分ですか?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '十分すぎるほどです。13BモデルはQ4で約8GBしか必要とせず、12GBなら実際に余裕があります。Q5（約9GB）でも快適で、Q8（約14GB）でぎりぎりになります。',
@@ -1891,7 +1891,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             'name': 'Apple Silicon VRAMはGPU VRAMと同じですか?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBはLlama 3 13B Q4(~7GB) + オーバーヘッドを実行できます。',
+              'text': 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBは13Bモデル Q4(~7GB) + オーバーヘッドを実行できます。',
             },
           },
           {
@@ -1911,7 +1911,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       title: '显存经验法则：7B=4GB、70B=42GB（2026指南）',
       seoTitle: '本地LLM显存需求：7B=4GB、70B=42GB',
       intro: '7B模型在Q4（4位）量化下权重约需4 GB显存，13B约需8 GB，22B约需13 GB，70B约需42 GB。这些是纯权重大小——请为上下文（KV缓存）和系统预留1-2 GB余量。Q5（5位）下数值高15-20%，Q8（8位）下高约75%。这些数字已通过Hugging Face上真实GGUF文件大小验证。',
-      metaDescription: '经真实GGUF文件大小验证的Q4显存实测值：7B约需4GB，13B约需8GB，22B约需13GB，70B约需42GB。附免费计算器和Q5/Q8对照表。',
+      metaDescription: '基于真实GGUF文件大小的Q4显存参考值：7B约需4GB，13B约需8GB，22B约需13GB，70B约需42GB。附免费计算器和Q5/Q8对照表。',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-zh.webp',
       nextStep: {
         text: '您已了解显存预算。现在为其选择合适的GPU。',
@@ -1939,7 +1939,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           id: 'key-takeaways',
  isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: '在 4 位量化下，每十亿参数约需 0.6 GB 显存：7B 模型约 5 GB，70B 模型则需要 42 GB。' }, { type: 'plain-terms', text: '换算很简单：参数量（以十亿为单位）乘以 0.6，就是 4 位量化下所需的显存 GB 数，再为上下文和系统预留 1 至 2 GB。13B 模型约需 8 GB，22B 模型约需 13 GB。' }], title: '关键要点', items: ['7B模型: Q4约4 GB权重，Q5约5 GB，Q8约7 GB。加1-2 GB余量得到6-8 GB的现实购买目标。', '13B模型: Q4约8 GB权重。12 GB显存是宽裕的，不是「勉强够用」。', '70B模型: Q4约42 GB权重，Q8约74 GB。', 'Q4量子化: 相比全精度减少约85%，已通过真实GGUF文件大小验证。'] },
         formula: {
-          id: 'formula', title: '显存计算公式', content: ['显存 = 十亿参数 × 每参数字节数 + KV缓存 + 开销', '每参数字节数（经真实GGUF文件验证）：Q4约0.6字节，Q5约0.7字节，Q8约1.05字节。', '示例：Llama-3.3 70B Q4 = 70 × 0.6 = 42 GB（真实的Llama-3.3-70B Q4_K_M GGUF为42.52 GB）', 'Q4: 实测约0.6字节/参数，而非理论上的0.5字节——Q4_K_M等真实格式带有少量开销。', 'Q8: 实测约1.05字节/参数，几乎完全精度。'] },
+          id: 'formula', title: '显存计算公式', content: ['显存 = 十亿参数 × 每参数字节数 + KV缓存 + 开销', '每参数字节数（经真实GGUF文件验证）：Q4约0.6字节，Q5约0.7字节，Q8约1.05字节。', '示例：Llama-3.3 70B Q4 = 70 × 0.6 = 42 GB（真实的Llama-3.3-70B Q4_K_M GGUF为42.52 GB）', 'Q4: 根据真实GGUF文件大小推算约0.6字节/参数，而非理论上的0.5字节——Q4_K_M等真实格式带有少量开销。', 'Q8: 根据真实GGUF文件大小推算约1.05字节/参数，几乎完全精度。'] },
         'by-model-size': { title: '按模型大小的显存', columns: ['模型大小', 'FP32', 'Q8', 'Q5', 'Q4', '推荐GPU'], rows: [{ '模型大小': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '5 GB', 'Q4': '4 GB', '推荐GPU': 'RTX 4060 (8GB)、RTX 3060 (12GB)' }, { '模型大小': '13B', 'FP32': '52 GB', 'Q8': '14 GB', 'Q5': '9 GB', 'Q4': '8 GB', '推荐GPU': 'RTX 3060 (12GB)、RTX 4070 (12GB)' }, { '模型大小': '70B', 'FP32': '280 GB', 'Q8': '74 GB', 'Q5': '50 GB', 'Q4': '42 GB', '推荐GPU': '双RTX 4090' }, { '模型大小': 'Qwen 3.6 35B-A3B (3B活跃 / 35B总参数, MoE)*', 'FP32': '~140 GB', 'Q8': '~37 GB', 'Q5': '~25 GB', 'Q4': '~21 GB', '推荐GPU': 'RTX 5090 32 GB,或 RTX 4090/3090 24 GB(较紧张,Q4)' }, { '模型大小': 'DeepSeek-V4.1-Flash-1017 (8B/16B活跃 / 552B总参数, MoE)*', 'FP32': '~2.2 TB', 'Q8': '~550 GB', 'Q5': '~390 GB', 'Q4': '~330 GB', '推荐GPU': '多GPU服务器,或 512 GB 统一内存(仅Q4)' }, { '模型大小': 'Llama 4 Scout (17B活跃 / 109B总参数, MoE)†', 'FP32': '436 GB', 'Q8': '114 GB', 'Q5': '76 GB', 'Q4': '55 GB', '推荐GPU': '2× RTX 4090 (48 GB) — 仅在1.78位时才能装入24 GB(~20 tok/s)' }, { '模型大小': 'gpt-oss:20b (3.6B活跃 / 21B总参数, MoE)*', 'FP32': '84 GB', 'Q8': '22 GB', 'Q5': '15 GB', 'Q4': '12 GB', '推荐GPU': 'RTX 5070 12 GB 或任意 16 GB GPU' }, { '模型大小': 'Kimi K2.6 (32B活跃 / 1T总参数, MoE)*', 'FP32': '~4 TB', 'Q8': '~1 TB', 'Q5': '~700 GB', 'Q4': '~600 GB', '推荐GPU': '多GPU服务器(Q4约600 GB)' }], note: '数字为纯权重大小，已通过Hugging Face上真实GGUF文件大小验证（如Llama-2-7B Q4_K_M = 4.08 GB、Mistral-Small-24B Q4_K_M = 14.33 GB、Llama-3.3-70B Q4_K_M = 42.52 GB）——请为上下文/KV缓存额外预留1-2 GB。* MoE行: 按总参数计算(Q4约每十亿0.6 GB):全部专家常驻内存,活跃参数只影响速度。数值为近似值。† Llama 4 Scout 需将全部109B参数常驻显存,因此尽管每个token仅17B活跃,Q4仍需~55 GB。 来源: [Llama-2-7B GGUF](https://huggingface.co/TheBloke/Llama-2-7B-GGUF), [Mistral-Small-24B GGUF](https://huggingface.co/bartowski/Mistral-Small-24B-Instruct-2501-GGUF), [Llama-3.3-70B GGUF](https://huggingface.co/bartowski/Llama-3.3-70B-Instruct-GGUF).',
           image: '/images/how-much-vram-local-llm-vram-by-size-hero-zh.webp',
           imageCaption: '经验法则：模型参数量（十亿）乘以0.6即为Q4显存（GB），再加1-2 GB余量。',
@@ -1952,7 +1952,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         'batch-size': { title: '批大小', content: ['单用户推理总是batch=1。批处理仅有助吞吐量。'] },
         overhead: {
           id: 'overhead', title: '显存开销', content: ['KV缓存、激活、运行时开销占额外5 GB。'] },
-        'regional-context': { title: '地区背景', content: ['中国 (CAC): 本地LLM推理用于数据主权。Qwen3 72B在双RTX 4090上是首选。'] },
+        'regional-context': { title: '地区背景', content: ['中国 (CAC): 本地LLM推理用于数据主权。Qwen3 32B Q4（约20 GB）可在单张RTX 4090上运行，是常见选择。以上不构成法律建议。'] },
         mistakes: { title: '常见错误', content: ['显存 ≠ 模型大小。总需要5 GB以上余地。'] },
         vramCalculator: { id: 'vram-calculator', title: '显存计算器', component: 'VramCalculator', content: '选择你的模型大小和量子化方式以估计显存需求。' },
         faqSection: {
@@ -1961,12 +1961,12 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             { q: '70B模型需要24 GB吗?', a: '不够。仅权重在Q4下就约需42 GB。' },
             { q: '我可以在6GB GPU上运行Mistral Small吗?', a: '不行。Mistral Small是22-24B模型，即使在Q4下仅权重就约需13-14GB显存。6GB或8GB的GPU会出现OOM错误。建议预留16GB以获得舒适余量，或在6-8GB显卡上改用7B-8B模型。' },
             { q: '微调7B模型需要多少显存?', a: 'LoRA: 12-16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' },
-            { q: '12GB足以运行Llama 3 13B吗?', a: '完全足够。13B模型在Q4下仅需约8GB，因此12GB留有真正的余量。在Q5（约9GB）下依然舒适，在Q8（约14GB）下会比较紧张。' },
+            { q: '12GB足以运行13B模型吗?', a: '完全足够。13B模型在Q4下仅需约8GB，因此12GB留有真正的余量。在Q5（约9GB）下依然舒适，在Q8（约14GB）下会比较紧张。' },
             { q: '增加批大小会减少单次推理的显存吗?', a: '不会。单次推理始终使用batch=1显存。批大小只有助于吞吐量(多用户场景)。' },
             { q: '精度最好的量化方式是什么?', a: 'Q8通常几乎无损；Q5和Q4的质量损失略大，具体取决于模型和任务。对大多数人来说,Q4是最好的折中。' },
             { q: '我可以将部分显存卸载到CPU RAM吗?', a: '可以,把部分层卸载到系统内存。Llama.cpp和Ollama都支持。性能可能明显下降(视卸载的层数而定,常见为30-50%甚至更多)。' },
             { q: '运行本地LLM的最小显存是多少?', a: '3B Q4需要4GB显存。实用最小值是8GB显存+ 7B Q4。低于6GB的话,大多数7B模型会导致内存溢出。' },
-            { q: 'Apple Silicon显存与GPU显存的工作方式相同吗?', a: 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行Llama 3 13B Q4(~7GB) + 开销。' },
+            { q: 'Apple Silicon显存与GPU显存的工作方式相同吗?', a: 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行13B模型 Q4(~7GB) + 开销。' },
             { q: '7B模型在不同量化级别需要多少显存?', a: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GB权重+ 1-2GB开销)。6GB太紧张,8GB比较舒适。' },
           ] },
         relatedReading: {
@@ -2038,7 +2038,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           },
           {
             '@type': 'Question',
-            'name': '12GB足以运行Llama 3 13B吗?',
+            'name': '12GB足以运行13B模型吗?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '完全足够。13B模型在Q4下仅需约8GB，因此12GB留有真正的余量。在Q5（约9GB）下依然舒适，在Q8（约14GB）下会比较紧张。',
@@ -2081,7 +2081,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             'name': 'Apple Silicon显存与GPU显存的工作方式相同吗?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行Llama 3 13B Q4(~7GB) + 开销。',
+              'text': 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行13B模型 Q4(~7GB) + 开销。',
             },
           },
           {
@@ -2148,7 +2148,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           items: [
             '**3B 모델** (Phi, StableLM): Q4에서 약 2GB 가중치, 권장 VRAM 4GB',
             '**7B 모델** (Llama, Mistral, Qwen): Q4에서 약 4GB 가중치, 권장 VRAM 6~8GB',
-            '**13B 모델** (Llama 3.3, Mistral): Q4에서 약 8GB 가중치, 권장 VRAM 10~12GB',
+            '**13B 모델** (Qwen3 14B, Mistral): Q4에서 약 8GB 가중치, 권장 VRAM 10~12GB',
             '**22B 모델** (Qwen3, Gemma): Q4에서 약 13GB 가중치, 권장 VRAM 16GB',
             '**70B 모델** (Llama 3.3, Qwen 3.6): Q4에서 약 42GB 가중치, 권장 VRAM 48GB, Q5에서는 50GB 이상',
             '**MoE 모델**: VRAM은 메모리에 보관해야 하는 가중치에 따라 확장됩니다. 예시: Qwen 3.6 35B-A3B(3B 활성 / 35B 총량)도 Q4에서 약 21GB가 필요하고, Llama 4 Scout(17B 활성 / 109B 총량)는 약 55GB가 필요합니다. 모든 전문가가 상주하기 때문이며, 활성 파라미터는 속도만 높여 줍니다.',
@@ -2176,8 +2176,8 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           columns: ['모델 크기', 'FP32 (양자화 없음)', 'Q8 (8비트)', 'Q5 (5비트)', 'Q4 (4비트)', '권장 GPU'],
           rows: [
             { '모델 크기': '3B (Phi, StableLM)', 'FP32 (양자화 없음)': '12 GB', 'Q8 (8비트)': '3 GB', 'Q5 (5비트)': '2 GB', 'Q4 (4비트)': '2 GB', '권장 GPU': 'RTX 3050 4 GB 또는 RTX 2060 6 GB' },
-            { '모델 크기': '7B (Llama 3.3, Mistral)', 'FP32 (양자화 없음)': '28 GB', 'Q8 (8비트)': '7 GB', 'Q5 (5비트)': '5 GB', 'Q4 (4비트)': '4 GB', '권장 GPU': 'RTX 4060 8 GB 또는 RTX 3060 12 GB' },
-            { '모델 크기': '13B (Llama 3.3, Mistral)', 'FP32 (양자화 없음)': '52 GB', 'Q8 (8비트)': '14 GB', 'Q5 (5비트)': '9 GB', 'Q4 (4비트)': '8 GB', '권장 GPU': 'RTX 3060 12 GB 또는 RTX 4070 12 GB' },
+            { '모델 크기': '7B (Llama 3.1 8B, Mistral)', 'FP32 (양자화 없음)': '28 GB', 'Q8 (8비트)': '7 GB', 'Q5 (5비트)': '5 GB', 'Q4 (4비트)': '4 GB', '권장 GPU': 'RTX 4060 8 GB 또는 RTX 3060 12 GB' },
+            { '모델 크기': '13B (Qwen3 14B, Mistral)', 'FP32 (양자화 없음)': '52 GB', 'Q8 (8비트)': '14 GB', 'Q5 (5비트)': '9 GB', 'Q4 (4비트)': '8 GB', '권장 GPU': 'RTX 3060 12 GB 또는 RTX 4070 12 GB' },
             { '모델 크기': '22B (Qwen, Gemma)', 'FP32 (양자화 없음)': '88 GB', 'Q8 (8비트)': '23 GB', 'Q5 (5비트)': '15 GB', 'Q4 (4비트)': '13 GB', '권장 GPU': 'RTX 4080 16 GB 또는 RTX 4090 24 GB' },
             { '모델 크기': '70B (Llama 3, Qwen)', 'FP32 (양자화 없음)': '280 GB', 'Q8 (8비트)': '74 GB', 'Q5 (5비트)': '50 GB', 'Q4 (4비트)': '42 GB', '권장 GPU': '2× RTX 4090(각 24 GB), 또는 1× H100 80 GB' },
             { '모델 크기': 'Qwen 3.6 35B-A3B (3B 활성 / 35B 총량, MoE)*', 'FP32 (양자화 없음)': '~140 GB', 'Q8 (8비트)': '~37 GB', 'Q5 (5비트)': '~25 GB', 'Q4 (4비트)': '~21 GB', '권장 GPU': 'RTX 5090 32 GB 또는 RTX 4090/3090 24 GB(빠듯함, Q4)' },
@@ -2210,7 +2210,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             { 'VRAM 등급': '24GB', '최적 모델 (Q4)': '22~32B는 완전한 Q8로 여유롭게; 70B는 품질 저하를 감수한 4비트 미만에서만', 'GPU 예시': 'RTX 4090, RTX 3090', '실행 가능 범위': '70B는 실제로 ~42GB가 필요 — 이 등급으로는 부족' },
             { 'VRAM 등급': '32GB', '최적 모델 (Q4)': '22~32B를 완전 정밀도로, 또는 70B용 듀얼 GPU 구성의 한 카드로', 'GPU 예시': 'RTX 5090', '실행 가능 범위': '단독 70B Q4에는 여전히 부족(~42GB 필요)' },
             { 'VRAM 등급': '48GB', '최적 모델 (Q4)': 'Q4에서 70B가 여유로움(~42GB), Q5에서는 빠듯함(~50GB)', 'GPU 예시': '2× RTX 4090, RTX 6000 Ada', '실행 가능 범위': '품질 저하 없이 70B가 들어맞는 첫 등급' },
-            { 'VRAM 등급': '64GB+(통합 메모리)', '최적 모델 (Q4)': 'Q4/Q5에서 70B가 여유로우며, 듀얼 GPU 구성이 필요 없음', 'GPU 예시': 'Mac Studio M5 Max/Ultra(128~256GB)', '실행 가능 범위': '별도 GPU 없이 70B가 들어맞는 유일한 소비자용 옵션' },
+            { 'VRAM 등급': '64GB+(통합 메모리)', '최적 모델 (Q4)': 'Q4/Q5에서 70B가 여유로우며, 듀얼 GPU 구성이 필요 없음', 'GPU 예시': 'Mac Studio M5 Max/Ultra(128~256GB)', '실행 가능 범위': '별도 GPU 없이 70B를 실행할 수 있는 대표적인 소비자용 옵션 중 하나' },
           ],
           note: '이 수치는 현실적인 오버헤드를 포함한 Q4 구매 목표치입니다 — 양자화 수준별 순수 연산 최소치는 위의 크기별 표를 참조하십시오. Apple Silicon 통합 메모리(Mac Studio M5 Max/Ultra)는 48GB 이상 등급에서 개별 GPU의 대안입니다 — 양자화 수준별 정확한 tok/s는 [Apple Silicon M5 Max에서 70B 모델 실행](/ko/local-llms/running-70b-models-apple-silicon-m5-max)을 참조하십시오.',
         },
@@ -2281,7 +2281,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           faqs: [
             { q: 'Mistral Small을 6GB GPU에서 실행할 수 있습니까?', a: '불가능합니다. Mistral Small은 22~24B 모델로, Q4에서도 가중치만 약 13~14GB의 VRAM이 필요합니다. 6GB나 8GB GPU는 OOM 오류가 발생합니다. 여유 있게 16GB를 확보하거나, 6~8GB 카드라면 7B~8B 모델로 낮추십시오.' },
             { q: '7B 모델을 파인튜닝하려면 VRAM이 얼마나 필요합니까?', a: 'LoRA: 12~16GB. 전체 파인튜닝: 28GB 이상. 파인튜닝은 옵티마이저 상태(모델 VRAM의 2~4배)가 필요하며, 추론만이 아닙니다.' },
-            { q: 'Llama 3 13B에 12GB로 충분합니까?', a: '네, 여유롭습니다. 13B 모델은 Q4에서 약 8GB만 필요하므로 12GB는 실질적인 여유를 남깁니다. Q5(약 9GB)에서도 여전히 편안하고, Q8(약 14GB)에서는 빠듯해집니다.' },
+            { q: '13B 모델에 12GB로 충분합니까?', a: '네, 여유롭습니다. 13B 모델은 Q4에서 약 8GB만 필요하므로 12GB는 실질적인 여유를 남깁니다. Q5(약 9GB)에서도 여전히 편안하고, Q8(약 14GB)에서는 빠듯해집니다.' },
             { q: '70B 모델에 24GB가 필요합니까?', a: '아닙니다, 다만 그에 가까운 양이 필요합니다. 70B 모델은 가중치만으로 Q4에서 약 42GB가 필요합니다. Q5 이상에서는 50GB 이상이 필요합니다. 어떤 양자화 수준에서도 24GB는 충분하지 않습니다.' },
             { q: '배치 크기를 늘리면 단일 추론의 VRAM이 줄어듭니까?', a: '아닙니다. 단일 추론은 항상 batch=1 VRAM을 사용합니다. 배치 크기는 처리량(다중 사용자 시나리오)에만 도움이 됩니다.' },
             { q: '정확도를 위한 최고의 양자화는 무엇입니까?', a: 'Q8은 일반적으로 거의 무손실입니다. Q5와 Q4는 모델과 작업에 따라 품질이 조금 더 떨어질 수 있습니다. 대부분의 경우 Q4가 최적점입니다.' },
@@ -2360,7 +2360,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           },
           {
             '@type': 'Question',
-            'name': 'Llama 3 13B에 12GB로 충분합니까?',
+            'name': '13B 모델에 12GB로 충분합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '네, 여유롭습니다. 13B 모델은 Q4에서 약 8GB만 필요하므로 12GB는 실질적인 여유를 남깁니다. Q5(약 9GB)에서도 여전히 편안하고, Q8(약 14GB)에서는 빠듯해집니다.',

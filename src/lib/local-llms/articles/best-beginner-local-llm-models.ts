@@ -22,11 +22,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Best Beginner Local LLMs 2026: Llama, Phi, Gemma, Qwen',
       intro: 'The five best local LLM models for beginners in 2026 are Meta Llama 3.2 3B, Microsoft Phi-4 Mini, Google Gemma 4 E2B, Meta Llama 3.1 8B, and Qwen3 8B. Each runs on consumer hardware with 4-8 GB of RAM and produces output quality suitable for everyday tasks.',
       leadAnswerBlock: '**The five best local LLM models for beginners in 2026 are Llama 3.2 3B, Phi-4 Mini 3.8B, Gemma 4 E2B, Llama 3.1 8B, and Qwen3 8B. All run on 4-8 GB RAM with a single Ollama command.**',
-      metaDescription: '5 beginner local LLMs ranked: Llama 3.2 3B (2.5 GB, 45 tok/s), Phi-4 Mini (best reasoning), Gemma 4 E2B (1.7 GB, fastest), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, one Ollama command.',
+      metaDescription: '5 beginner local LLMs ranked: Llama 3.2 3B (2.5 GB, 45 tok/s), Phi-4 Mini (best reasoning), Gemma 4 E2B (1.7 GB, among the faster options), Llama 3.1 8B, Qwen3 8B. 4–8 GB RAM, one Ollama command.',
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-en.webp',
-      twitterDescription: 'Ranked: Llama 3.2 3B (2.5 GB, 25-45 tok/s), Phi-4 Mini (2.5 GB, best reasoning), Gemma 4 E2B (1.7 GB, fastest), Llama 3.1 8B, Qwen3 8B. Tiny powerful LLMs for 2026.',
+      twitterDescription: 'Ranked: Llama 3.2 3B (2.5 GB, 25-45 tok/s), Phi-4 Mini (2.5 GB, best reasoning), Gemma 4 E2B (1.7 GB, among the faster options), Llama 3.1 8B, Qwen3 8B. Tiny powerful LLMs for 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '#1 Meta Llama 3.2 3B -- Best Overall Beginner Model',
           content: [
             '**Meta Llama 3.2 3B is the best starting point for most users.** It downloads in under 5 minutes, runs on any machine with 4 GB RAM, and produces noticeably better instruction-following than previous 3B models. It uses a 128K context window -- far larger than comparable-size models.',
-            'In our testing on an 8-core laptop CPU, Llama 3.2 3B generates 25-45 tokens/sec. On Apple M3 Pro, it reaches 70-90 tokens/sec. Quality is adequate for summarization, Q&A, and simple coding tasks, but falls short of 7B models on multi-step reasoning.',
+            'Expect roughly 25-45 tokens/sec on an 8-core laptop CPU, and noticeably more on Apple Silicon such as the M3 Pro (rough estimates; PromptQuorum did not benchmark this here, and speeds vary by hardware and settings). Quality is adequate for summarization, Q&A, and simple coding tasks, but falls short of 7B models on multi-step reasoning.',
           ],
           rows: [
             { 'Spec': 'Parameters', 'Value': '3B' },
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B -- Fastest 2B Model',
           content: [
-            '**Gemma 4 E2B is Google\'s updated 2B model and the fastest option for CPU-only inference.** It generates 40-60 tokens/sec on a mid-range laptop CPU -- roughly double the speed of Llama 3.2 3B at the same hardware. Gemma 3 significantly improves on its predecessor: the context window expands from 8K (Gemma 2) to 128K tokens, removing a major limitation for document tasks.',
+            '**Gemma 4 E2B is Google\'s updated 2B model and among the faster options for CPU-only inference.** It generates roughly 40-60 tokens/sec on a mid-range laptop CPU (a rough estimate, not a PromptQuorum measurement; speeds vary by hardware). Gemma 4 E2B significantly improves on earlier Gemma generations: the context window expands from 8K (Gemma 2) to 128K tokens, removing a major limitation for document tasks.',
             'Gemma 4 E2B is a good choice when response speed matters most, on machines with ≤4 GB RAM, or as a testing model to verify your local LLM setup before downloading larger models.',
           ],
           rows: [
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'llama-3-3-8b',
           title: '#4 Meta Llama 3.1 8B -- Best 7B/8B All-Rounder',
           content: [
-            '**Meta Llama 3.1 8B is the current general-purpose all-rounder at this size, scoring 72% on HumanEval and offering solid English reasoning.** It replaces Mistral 7B as this list\'s 7B/8B pick -- Mistral 7B was the community standard in 2023-2024, but is now outperformed at the same RAM tier and is better treated as a legacy option (see Common Mistakes below for why we no longer recommend it as a default).',
+            '**Meta Llama 3.1 8B is the current general-purpose all-rounder at this size, scoring 72% on HumanEval and offering solid English reasoning.** It replaces Mistral 7B as this list\'s 7B/8B pick -- Mistral 7B was the community standard in 2023-2024, but newer models score higher on published benchmarks at the same RAM tier and is better treated as a legacy option (see Common Mistakes below for why we no longer recommend it as a default).',
             'For machines with 8 GB RAM, Llama 3.1 8B is a natural step up from 3B models. It handles longer text, more complex instructions, and multi-turn conversations more reliably than any 3B model, with a 128K context window.',
           ],
           rows: [
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Context', 'Best For'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-en.webp',
-          imageCaption: 'Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- all benchmarked at Q4_K_M quantization via Ollama. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is fastest at 1.7 GB RAM.',
+          imageCaption: 'Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- specs from model cards and Ollama\'s library; speeds are rough estimates, not PromptQuorum measurements. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is fastest at 1.7 GB RAM.',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**8 GB RAM, first model**: `ollama run llama3.2:3b` -- best balance of quality and RAM for a first experience.',
             '**4-6 GB RAM, reasoning/coding**: `ollama run phi4-mini` -- 68% MMLU, 70% HumanEval at just 2.5 GB RAM. Better than Llama 3.2 3B on structured tasks.',
             '**8 GB RAM, serious use**: `ollama run llama3.1:8b-instruct` or `ollama run qwen3:8b` -- step up for longer documents, complex instructions.',
-            '**Primarily coding tasks**: `ollama run qwen3:8b` -- best HumanEval score in this list; strong at Python, JavaScript, and SQL.',
+            '**Primarily coding tasks**: `ollama run llama3.1:8b-instruct` -- highest HumanEval figure in this list (72%); for a dedicated coding model, try `ollama run qwen2.5-coder:7b`.',
             '**Non-English language**: `ollama run qwen3:8b` -- 29+-language native support, no translation overhead.',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-en.svg',
@@ -347,10 +347,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Which Model Should You Choose Based on Your Region?',
           content: [
-            '**EU / GDPR**: For EU organizations processing personal data locally, model provenance matters for compliance documentation. German BSI guidelines require documenting model origin and licence type for AI systems used in professional contexts. Llama (Meta/USA), Gemma (Google/USA), and Qwen (Alibaba/China) are all technically usable under GDPR for local inference -- for the cleanest EU-provenance narrative, Mistral AI (France) offers Apache 2.0-licensed models, though current Mistral Small releases (24B+) exceed this page\'s 4-8 GB beginner RAM range; see the [hardware guide](/local-llms/local-llm-hardware-guide) for the GPU tier needed to run them.',
-            '**Japan (METI)**: For Japanese-language workflows, Qwen3 8B is the correct first model -- native Japanese tokenization produces better token efficiency on Japanese text than Llama. Run: `ollama run qwen3:8b`. METI AI Governance Guidelines require documenting the model name and version -- all five models here have versioned Ollama tags satisfying this.',
-            '**China**: Qwen3 8B (Alibaba) is the natural first model for Chinese-language workflows. Native Chinese tokenization and 29+-language support make it the standard for Mandarin-first workflows. For Chinese enterprise deployment under China\'s Data Security Law (数据安全法), Qwen3 running locally via Ollama satisfies data localization requirements.',
+            '**EU / GDPR**: For EU organizations processing personal data locally, model provenance matters for compliance documentation. Documenting model origin and licence type is good practice for AI systems used in professional contexts. Llama (Meta/USA), Gemma (Google/USA), and Qwen (Alibaba/China): local inference by itself does not rule out any of these models under GDPR, and whether your deployment is lawful depends on legal basis, technical and organisational measures (TOMs) and purpose -- for the cleanest EU-provenance narrative, Mistral AI (France) offers Apache 2.0-licensed models, though current Mistral Small releases (24B+) exceed this page\'s 4-8 GB beginner RAM range; see the [hardware guide](/local-llms/local-llm-hardware-guide) for the GPU tier needed to run them.',
+            '**Japan (METI)**: For Japanese-language workflows, Qwen3 8B is a good first model -- in community reports, Qwen3\'s tokenizer tends to use fewer tokens on Japanese text than Llama\'s; results vary by text. Run: `ollama run qwen3:8b`. Documenting the model name and version is good practice for AI governance in Japan (see METI\'s AI guidelines) -- all five models here have versioned Ollama tags that make this easy.',
+            '**China**: Qwen3 8B (Alibaba) is the natural first model for Chinese-language workflows. Native Chinese tokenization and 29+-language support make it the standard for Mandarin-first workflows. For Chinese enterprise deployment under China\'s Data Security Law (数据安全法), running inference locally keeps prompts and outputs on your hardware, which can simplify data-localisation questions for that layer; whether your deployment complies depends on your overall processing.',
             '**Korea**: Among these five beginner-tier picks, Qwen3 8B has the strongest native Korean tokenization. For dedicated Korean-language local models beyond this beginner tier, see [Best Korean Language Models for Local Use](/prompt-bites/best-korean-language-models-local).',
+            '**General information, not legal advice**: the regional notes above are general information and not legal advice; confirm requirements for your situation with a qualified adviser.',
           ],
         },
         nextSteps: {
@@ -368,7 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Choosing a model size based only on parameter count -- 7B at 4-bit quantization can outperform a poorly-quantized 13B.',
             'Not accounting for GPU VRAM quantization overhead -- a model may need 10-15% more VRAM than the file size.',
             'Using older quantizations (Q3_K_S) when newer ones (Q4_K_M) offer better quality at the same size.',
-            '**Choosing Mistral 7B as the default 7B model:** it was the community standard in 2023-2024 (7B, ~4.1 GB download, `ollama run mistral`) but is now outperformed by Qwen3 8B on coding and Llama 3.1 8B on English reasoning at the same RAM requirement. If a tutorial or tool defaults to `ollama run mistral`, switch to `ollama run qwen3:8b` or `ollama run llama3.1:8b-instruct` for better results without increasing RAM. Note: this is a different, unrelated model from the current 24B+ "Mistral Small 3.x" line, which needs far more RAM than any model on this page.',
+            '**Choosing Mistral 7B as the default 7B model:** it was the community standard in 2023-2024 (7B, ~4.1 GB download, `ollama run mistral`) but newer models such as Qwen3 8B (coding) and Llama 3.1 8B (English reasoning) generally score higher on published benchmarks at the same RAM requirement. If a tutorial or tool defaults to `ollama run mistral`, switch to `ollama run qwen3:8b` or `ollama run llama3.1:8b-instruct` for better results without increasing RAM. Note: this is a different, unrelated model from the current 24B+ "Mistral Small 3.x" line, which needs far more RAM than any model on this page.',
             '**Pulling a model without checking available RAM first:** If you pull a model that exceeds available RAM, Ollama falls back to slow CPU inference with partial disk swapping -- sometimes under 1 tok/sec. Always run `free -h` (Linux/macOS) or check Task Manager (Windows) before pulling models above 7B.',
           ],
         },
@@ -422,15 +423,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which model is best for coding tasks?',
-              a: 'Qwen3 8B leads on HumanEval among the five models. For even better coding, use the dedicated code variant: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B is the best coding model if limited to 4-6 GB RAM (70% HumanEval at 2.5 GB RAM).',
+              a: 'Llama 3.1 8B has the highest HumanEval figure of the five models in this table (72%, vs 70% for Phi-4 Mini 3.8B and 57.3% for Qwen3 8B); Qwen3 8B is the pick for multilingual use. For a dedicated coding model, try `ollama run qwen2.5-coder:7b`. If limited to 4-6 GB RAM, Phi-4 Mini 3.8B has the highest HumanEval figure of the models here (70% at 2.5 GB RAM).',
             },
             {
               q: 'Which model should I use for non-English languages?',
-              a: 'Qwen3 8B supports 29+ languages natively including Chinese, Japanese, Korean, Arabic, and all major European languages. It processes non-English text more efficiently than Llama.',
+              a: 'Qwen3 8B supports 29+ languages natively including Chinese, Japanese, Korean, Arabic, and all major European languages. In community reports, its tokenizer tends to use fewer tokens on non-English text than Llama\'s; results vary by text.',
             },
             {
               q: 'Are these models safe to use with private data?',
-              a: 'Yes -- all five models run entirely on your hardware. No prompt text, context, or output is transmitted to external servers. Local inference is inherently more private than cloud APIs for sensitive data.',
+              a: 'Inference runs on your own hardware, so prompts are not sent to a cloud API; Ollama may still contact the network for model downloads and update checks unless you disable them. For sensitive data this avoids sharing prompts with a cloud provider, but it is not a compliance guarantee.',
             },
             {
               q: 'How long does it take to download these models?',
@@ -464,7 +465,7 @@ schema: {
         headline: 'Llama, Phi, Gemma, Qwen: Best Beginner LLMs 2026',
         description: 'Llama 3.2 3B = 2.5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2.5 GB. Gemma 4 E2B = 1.7 GB, 40-60 tok/s. Llama 3.1 8B and Qwen3 8B added. Full comparison table and Ollama commands.',
         'datePublished': '2026-04-04',
-        dateModified: '2026-08-28',
+        dateModified: '2026-11-09',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'audience': { '@type': 'Audience', 'audienceType': 'Beginners running their first local LLM on consumer hardware' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -507,9 +508,9 @@ schema: {
           { '@type': 'Question', name: 'How do I run these models with Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Install Ollama from ollama.com, then run: `ollama run llama3.2:3b` for the recommended beginner model. Ollama downloads the model on first run. All five models listed here are in the Ollama library.' } },
           { '@type': 'Question', name: 'Is Llama 3.2 3B good enough for everyday tasks?', acceptedAnswer: { '@type': 'Answer', text: 'Yes for: summarization, simple Q&A, basic code explanation, and conversational chat. No for: multi-step reasoning, complex coding, and long-form structured writing. For those tasks, upgrade to Llama 3.1 8B or Qwen3 8B with 8 GB RAM.' } },
           { '@type': 'Question', name: 'What is the difference between 3B and 7B models?', acceptedAnswer: { '@type': 'Answer', text: 'A 7B model produces noticeably better output on complex instructions and reasoning. A 3B model uses roughly half the RAM and runs 2-3× faster. The choice is almost always determined by available RAM -- use 3B on 4-6 GB machines, 7B on 8 GB machines.' } },
-          { '@type': 'Question', name: 'Which model is best for coding tasks?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B leads on HumanEval among the five models. For even better coding, use the dedicated code variant: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B is the best coding model if limited to 4-6 GB RAM (70% HumanEval at 2.5 GB RAM).' } },
-          { '@type': 'Question', name: 'Which model should I use for non-English languages?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B supports 29+ languages natively including Chinese, Japanese, Korean, Arabic, and all major European languages. It processes non-English text more efficiently than Llama.' } },
-          { '@type': 'Question', name: 'Are these models safe to use with private data?', acceptedAnswer: { '@type': 'Answer', text: 'Yes -- all five models run entirely on your hardware. No prompt text, context, or output is transmitted to external servers. Local inference is inherently more private than cloud APIs for sensitive data.' } },
+          { '@type': 'Question', name: 'Which model is best for coding tasks?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.1 8B has the highest HumanEval figure of the five models in this table (72%, vs 70% for Phi-4 Mini 3.8B and 57.3% for Qwen3 8B); Qwen3 8B is the pick for multilingual use. For a dedicated coding model, try `ollama run qwen2.5-coder:7b`. If limited to 4-6 GB RAM, Phi-4 Mini 3.8B has the highest HumanEval figure of the models here (70% at 2.5 GB RAM).' } },
+          { '@type': 'Question', name: 'Which model should I use for non-English languages?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B supports 29+ languages natively including Chinese, Japanese, Korean, Arabic, and all major European languages. In community reports, its tokenizer tends to use fewer tokens on non-English text than Llama\'s; results vary by text.' } },
+          { '@type': 'Question', name: 'Are these models safe to use with private data?', acceptedAnswer: { '@type': 'Answer', text: 'Inference runs on your own hardware, so prompts are not sent to a cloud API; Ollama may still contact the network for model downloads and update checks unless you disable them. For sensitive data this avoids sharing prompts with a cloud provider, but it is not a compliance guarantee.' } },
           { '@type': 'Question', name: 'How long does it take to download these models?', acceptedAnswer: { '@type': 'Answer', text: 'On a 100 Mbps connection: Llama 3.2 1B (1.3 GB) ~2 minutes. Gemma 4 E2B (1.6 GB) ~2 minutes. Llama 3.2 3B (2 GB) ~3 minutes. Phi-4 Mini (2.3 GB) ~3 minutes. Llama 3.1 8B and Qwen3 8B (~5 GB each) ~6-7 minutes. Models are cached after first download -- subsequent runs start in seconds.' } },
           { '@type': 'Question', name: 'Can I run multiple models on the same machine?', acceptedAnswer: { '@type': 'Answer', text: 'Yes -- all five can coexist on disk simultaneously. Plan for 15-20 GB if you install all five. Ollama loads one model at a time and unloads it after 5 minutes of inactivity.' } },
         ],
@@ -537,7 +538,7 @@ schema: {
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-es.webp',
       twitterDescription: 'Comparados: Llama 3.2 3B (2,5 GB, 25-45 tok/s), Phi-4 Mini (2,5 GB, mejor razonamiento), Gemma 4 E2B (1,7 GB, el más rápido), Llama 3.1 8B, Qwen3 8B. 5 LLMs locales para principiantes por RAM + velocidad 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9 min de lectura',
       educationalLevel: 'Beginner',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -638,7 +639,7 @@ schema: {
           title: '#1 Meta Llama 3.2 3B -- Mejor modelo para principiantes en general',
           content: [
             '**Meta Llama 3.2 3B es el mejor punto de partida para la mayoría de usuarios.** Se descarga en menos de 5 minutos, funciona en cualquier máquina con 4 GB de RAM y produce un seguimiento de instrucciones notablemente mejor que los modelos 3B anteriores. Utiliza una ventana de contexto de 128K -- mucho mayor que los modelos de tamaño comparable.',
-            'En nuestras pruebas con un CPU de portátil de 8 núcleos, Llama 3.2 3B genera 25-45 tokens/s. En Apple M3 Pro alcanza 70-90 tokens/s. La calidad es adecuada para resúmenes, preguntas y respuestas y tareas de codificación simples, pero queda por detrás de los modelos de 7B en razonamiento de varios pasos.',
+            'Espera unos 25-45 tokens/s en un CPU de portátil de 8 núcleos y bastante más en Apple Silicon como el M3 Pro (estimaciones aproximadas; PromptQuorum no ha medido esto aquí y la velocidad varía según el hardware y la configuración). La calidad es adecuada para resúmenes, preguntas y respuestas y tareas de codificación simples, pero queda por detrás de los modelos de 7B en razonamiento de varios pasos.',
           ],
           rows: [
             { 'Especificación': 'Parámetros', 'Valor': '3B' },
@@ -672,7 +673,7 @@ schema: {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B -- El modelo 2B más rápido',
           content: [
-            '**Gemma 4 E2B es el modelo 2B actualizado de Google y la opción más rápida para inferencia solo en CPU.** Genera 40-60 tokens/s en un CPU de portátil de gama media -- aproximadamente el doble de velocidad que Llama 3.2 3B en el mismo hardware. Gemma 3 mejora significativamente a su predecesor: la ventana de contexto se amplía de 8K (Gemma 2) a 128K tokens, eliminando una limitación importante para tareas con documentos.',
+            '**Gemma 4 E2B es el modelo 2B actualizado de Google y una de las opciones más rápidas para inferencia solo en CPU.** Genera aproximadamente 40-60 tokens/s en un CPU de portátil de gama media (estimación aproximada, no una medición de PromptQuorum; varía según el hardware). Gemma 4 E2B mejora significativamente a las generaciones anteriores de Gemma: la ventana de contexto se amplía de 8K (Gemma 2) a 128K tokens, eliminando una limitación importante para tareas con documentos.',
             'Gemma 4 E2B es una buena opción cuando la velocidad de respuesta es lo más importante, en máquinas con ≤4 GB de RAM, o como modelo de prueba para verificar tu configuración de LLM local antes de descargar modelos más grandes.',
           ],
           rows: [
@@ -689,7 +690,7 @@ schema: {
           id: 'llama-3-3-8b',
           title: '#4 Meta Llama 3.1 8B -- Mejor todoterreno 7B/8B',
           content: [
-            '**Meta Llama 3.1 8B es el modelo generalista de referencia actual en este tamaño, con un 72% en HumanEval y un razonamiento en inglés sólido.** Sustituye a Mistral 7B como la elección 7B/8B de esta lista -- Mistral 7B fue el estándar de la comunidad en 2023-2024, pero ahora queda por detrás en el mismo nivel de RAM y es mejor tratarlo como una opción heredada (consulta Errores comunes más abajo para saber por qué ya no lo recomendamos por defecto).',
+            '**Meta Llama 3.1 8B es el modelo generalista de referencia actual en este tamaño, con un 72% en HumanEval y un razonamiento en inglés sólido.** Sustituye a Mistral 7B como la elección 7B/8B de esta lista -- Mistral 7B fue el estándar de la comunidad en 2023-2024, pero los modelos más recientes obtienen mejores resultados en benchmarks publicados con el mismo nivel de RAM y es mejor tratarlo como una opción heredada (consulta Errores comunes más abajo para saber por qué ya no lo recomendamos por defecto).',
             'Para máquinas con 8 GB de RAM, Llama 3.1 8B es un salto natural desde los modelos de 3B. Maneja textos más largos, instrucciones más complejas y conversaciones de varios turnos de forma más fiable que cualquier modelo de 3B, con una ventana de contexto de 128K.',
           ],
           rows: [
@@ -733,7 +734,7 @@ schema: {
           ],
           columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Contexto', 'Mejor para'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-es.webp',
-          imageCaption: 'Cinco modelos LLM locales para principiantes comparados por RAM, velocidad de inferencia CPU, ventana de contexto y caso de uso -- todos evaluados con cuantización Q4_K_M mediante Ollama. Llama 3.2 3B es el primer modelo recomendado; Gemma 4 E2B es el más rápido con 1,7 GB de RAM.',
+          imageCaption: 'Cinco modelos LLM locales para principiantes comparados por RAM, velocidad de inferencia CPU, ventana de contexto y caso de uso -- datos según las fichas de los modelos y la biblioteca de Ollama; las velocidades son estimaciones aproximadas, no mediciones de PromptQuorum. Llama 3.2 3B es el primer modelo recomendado; Gemma 4 E2B es el más rápido con 1,7 GB de RAM.',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -744,7 +745,7 @@ schema: {
             '**8 GB de RAM, primer modelo**: `ollama run llama3.2:3b` -- mejor equilibrio de calidad y RAM para una primera experiencia.',
             '**4-6 GB de RAM, razonamiento/codificación**: `ollama run phi4-mini` -- 68% MMLU, 70% HumanEval con solo 2,5 GB de RAM. Mejor que Llama 3.2 3B en tareas estructuradas.',
             '**8 GB de RAM, uso serio**: `ollama run llama3.1:8b-instruct` o `ollama run qwen3:8b` -- un paso adelante para documentos largos e instrucciones complejas.',
-            '**Principalmente tareas de codificación**: `ollama run qwen3:8b` -- mejor puntuación HumanEval de esta lista; excelente en Python, JavaScript y SQL.',
+            '**Principalmente tareas de codificación**: `ollama run llama3.1:8b-instruct` -- la cifra HumanEval más alta de esta lista (72%); para un modelo de código dedicado, prueba `ollama run qwen2.5-coder:7b`.',
             '**Idioma distinto al inglés**: `ollama run qwen3:8b` -- soporte nativo de más de 29 idiomas, sin sobrecarga de traducción.',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-es.svg',
@@ -754,10 +755,11 @@ schema: {
           id: 'regional-context',
           title: '¿Qué modelo elegir según tu región?',
           content: [
-            '**UE / RGPD**: Para organizaciones europeas que procesan datos personales localmente, la procedencia del modelo importa para la documentación de cumplimiento. Las directrices alemanas del BSI requieren documentar el origen y el tipo de licencia del modelo para sistemas de IA usados en contextos profesionales. Llama (Meta/EE.UU.), Gemma (Google/EE.UU.) y Qwen (Alibaba/China) son técnicamente utilizables bajo el RGPD para inferencia local -- para la narrativa de procedencia europea más sencilla, Mistral AI (Francia) ofrece modelos con licencia Apache 2.0, aunque las versiones actuales de Mistral Small (24B+) superan el rango de RAM para principiantes de esta página (4-8 GB); consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide) para el nivel de GPU necesario para ejecutarlos.',
-            '**Japón (METI)**: Para flujos de trabajo en japonés, Qwen3 8B es el primer modelo correcto -- la tokenización japonesa nativa produce una mejor eficiencia de tokens en textos japoneses que Llama. Ejecuta: `ollama run qwen3:8b`. Las directrices de gobernanza de IA del METI requieren documentar el nombre y la versión del modelo -- los cinco modelos aquí tienen etiquetas de Ollama versionadas que satisfacen este requisito.',
-            '**China**: Qwen3 8B (Alibaba) es el primer modelo natural para flujos de trabajo en chino. La tokenización nativa en chino y el soporte de más de 29 idiomas lo convierten en el estándar para flujos de trabajo en mandarín. Para el despliegue empresarial en China bajo la Ley de Seguridad de Datos de China (数据安全法), Qwen3 ejecutado localmente mediante Ollama cumple los requisitos de localización de datos.',
+            '**UE / RGPD**: Para organizaciones europeas que procesan datos personales localmente, la procedencia del modelo importa para la documentación de cumplimiento. Documentar el origen y el tipo de licencia del modelo es una buena práctica para sistemas de IA usados en contextos profesionales. Llama (Meta/EE.UU.), Gemma (Google/EE.UU.) y Qwen (Alibaba/China): la inferencia local por sí sola no descarta ninguno de estos modelos bajo el RGPD, y que tu despliegue sea lícito depende de la base jurídica, las medidas técnicas y organizativas y la finalidad -- para la narrativa de procedencia europea más sencilla, Mistral AI (Francia) ofrece modelos con licencia Apache 2.0, aunque las versiones actuales de Mistral Small (24B+) superan el rango de RAM para principiantes de esta página (4-8 GB); consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide) para el nivel de GPU necesario para ejecutarlos.',
+            '**Japón (METI)**: Para flujos de trabajo en japonés, Qwen3 8B es una buena primera opción -- según reportes de la comunidad, su tokenizador tiende a usar menos tokens en textos japoneses que el de Llama; los resultados varían según el texto. Ejecuta: `ollama run qwen3:8b`. Documentar el nombre y la versión del modelo es una buena práctica de gobernanza de IA en Japón (consulta las directrices de IA del METI) -- los cinco modelos aquí tienen etiquetas de Ollama versionadas que lo facilitan.',
+            '**China**: Qwen3 8B (Alibaba) es el primer modelo natural para flujos de trabajo en chino. La tokenización nativa en chino y el soporte de más de 29 idiomas lo convierten en el estándar para flujos de trabajo en mandarín. Para el despliegue empresarial en China bajo la Ley de Seguridad de Datos de China (数据安全法), ejecutar la inferencia localmente con Ollama mantiene los prompts y las salidas en tu hardware, lo que puede simplificar las cuestiones de localización de datos en esa capa; que tu despliegue cumpla la normativa depende de todo tu tratamiento de datos.',
             '**Corea**: Entre estas cinco opciones para principiantes, Qwen3 8B tiene la tokenización nativa coreana más sólida. Para modelos locales dedicados al idioma coreano más allá de este nivel de principiante, consulta [Mejores modelos de idioma coreano para uso local](/es/prompt-bites/best-korean-language-models-local).',
+            '**Información general, no asesoramiento jurídico**: las notas regionales anteriores son información general y no constituyen asesoramiento jurídico; confirma los requisitos de tu caso con un profesional cualificado.',
           ],
         },
         nextSteps: {
@@ -775,7 +777,7 @@ schema: {
             'Elegir el tamaño del modelo basándose solo en el número de parámetros -- un 7B con cuantización de 4 bits puede superar a un 13B mal cuantizado.',
             'No tener en cuenta la sobrecarga de cuantización de VRAM -- un modelo puede necesitar un 10-15% más de VRAM que el tamaño del archivo.',
             'Usar cuantizaciones antiguas (Q3_K_S) cuando las nuevas (Q4_K_M) ofrecen mejor calidad con el mismo tamaño.',
-            '**Elegir Mistral 7B como modelo 7B predeterminado:** fue el estándar de la comunidad en 2023-2024 (7B, ~4,1 GB de descarga, `ollama run mistral`) pero ahora Qwen3 8B lo supera en codificación y Llama 3.1 8B lo supera en razonamiento en inglés con el mismo requisito de RAM. Si un tutorial o herramienta usa `ollama run mistral` por defecto, cambia a `ollama run qwen3:8b` o `ollama run llama3.1:8b-instruct` para mejores resultados sin aumentar la RAM. Nota: se trata de un modelo distinto, sin relación, con la línea actual de "Mistral Small 3.x" de 24B+, que necesita muchísima más RAM que cualquier modelo de esta página.',
+            '**Elegir Mistral 7B como modelo 7B predeterminado:** fue el estándar de la comunidad en 2023-2024 (7B, ~4,1 GB de descarga, `ollama run mistral`) pero modelos más recientes como Qwen3 8B (codificación) y Llama 3.1 8B (razonamiento en inglés) suelen obtener mejores resultados en benchmarks publicados con el mismo requisito de RAM. Si un tutorial o herramienta usa `ollama run mistral` por defecto, cambia a `ollama run qwen3:8b` o `ollama run llama3.1:8b-instruct` para mejores resultados sin aumentar la RAM. Nota: se trata de un modelo distinto, sin relación, con la línea actual de "Mistral Small 3.x" de 24B+, que necesita muchísima más RAM que cualquier modelo de esta página.',
             '**Descargar un modelo sin comprobar la RAM disponible primero:** Si descargas un modelo que supera la RAM disponible, Ollama recurre a inferencia lenta en CPU con intercambio de disco parcial -- a veces por debajo de 1 tok/s. Siempre ejecuta `free -h` (Linux/macOS) o comprueba el Administrador de tareas (Windows) antes de descargar modelos superiores a 7B.',
           ],
         },
@@ -828,15 +830,15 @@ schema: {
             },
             {
               q: '¿Qué modelo es mejor para tareas de codificación?',
-              a: 'Qwen3 8B lidera en HumanEval entre los cinco modelos. Para una codificación aún mejor, usa la variante de código dedicada: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B es el mejor modelo de codificación si estás limitado a 4-6 GB de RAM (70% HumanEval con 2,5 GB de RAM).',
+              a: 'Llama 3.1 8B tiene la cifra HumanEval más alta de los cinco modelos de esta tabla (72%, frente al 70% de Phi-4 Mini 3.8B y el 57,3% de Qwen3 8B); Qwen3 8B es la opción para uso multilingüe. Para un modelo de código dedicado, prueba `ollama run qwen2.5-coder:7b`. Con 4-6 GB de RAM, Phi-4 Mini 3.8B tiene la cifra HumanEval más alta de los modelos aquí (70% con 2,5 GB de RAM).',
             },
             {
               q: '¿Qué modelo debo usar para idiomas distintos al inglés?',
-              a: 'Qwen3 8B soporta más de 29 idiomas de forma nativa, incluyendo chino, japonés, coreano, árabe y todos los principales idiomas europeos. Procesa texto en idiomas distintos al inglés de forma más eficiente que Llama.',
+              a: 'Qwen3 8B soporta más de 29 idiomas de forma nativa, incluyendo chino, japonés, coreano, árabe y todos los principales idiomas europeos. Según reportes de la comunidad, su tokenizador tiende a usar menos tokens que el de Llama en textos en otros idiomas; los resultados varían según el texto.',
             },
             {
               q: '¿Son seguros estos modelos para usar con datos privados?',
-              a: 'Sí -- los cinco modelos se ejecutan completamente en tu hardware. Ningún texto de prompt, contexto o salida se transmite a servidores externos. La inferencia local es inherentemente más privada que las APIs en la nube para datos sensibles.',
+              a: 'La inferencia se ejecuta en tu propio hardware, por lo que los prompts no se envían a una API en la nube; Ollama aún puede conectarse a la red para descargar modelos y buscar actualizaciones, salvo que lo desactives. Para datos sensibles esto evita compartir prompts con un proveedor en la nube, pero no es una garantía de cumplimiento.',
             },
             {
               q: '¿Cuánto tiempo lleva descargar estos modelos?',
@@ -870,7 +872,7 @@ schema: {
         headline: 'Llama, Phi, Gemma, Qwen: Mejores LLMs para principiantes 2026',
         description: 'Llama 3.2 3B = 2,5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2,5 GB. Gemma 4 E2B = 1,7 GB, 40-60 tok/s. Se añaden Llama 3.1 8B y Qwen3 8B. Tabla de comparación completa y comandos de Ollama.',
         'datePublished': '2026-04-04',
-        dateModified: '2026-08-28',
+        dateModified: '2026-11-09',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'audience': { '@type': 'Audience', 'audienceType': 'Principiantes que ejecutan su primer LLM local en hardware de consumo' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -913,9 +915,9 @@ schema: {
           { '@type': 'Question', name: '¿Cómo ejecuto estos modelos con Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Instala Ollama desde ollama.com, luego ejecuta: `ollama run llama3.2:3b` para el modelo recomendado para principiantes. Ollama descarga el modelo en la primera ejecución. Los cinco modelos listados aquí están en la biblioteca de Ollama.' } },
           { '@type': 'Question', name: '¿Es Llama 3.2 3B suficientemente bueno para tareas cotidianas?', acceptedAnswer: { '@type': 'Answer', text: 'Sí para: resúmenes, preguntas y respuestas simples, explicación básica de código y chat conversacional. No para: razonamiento de varios pasos, codificación compleja y escritura estructurada larga. Para esas tareas, actualiza a Llama 3.1 8B o Qwen3 8B con 8 GB de RAM.' } },
           { '@type': 'Question', name: '¿Cuál es la diferencia entre los modelos de 3B y 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Un modelo de 7B produce una salida notablemente mejor en instrucciones complejas y razonamiento. Un modelo de 3B usa aproximadamente la mitad de RAM y funciona 2-3 veces más rápido. La elección casi siempre la determina la RAM disponible -- usa 3B en máquinas de 4-6 GB, 7B en máquinas de 8 GB.' } },
-          { '@type': 'Question', name: '¿Qué modelo es mejor para tareas de codificación?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B lidera en HumanEval entre los cinco modelos. Para una codificación aún mejor, usa la variante de código dedicada: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B es el mejor modelo de codificación si estás limitado a 4-6 GB de RAM (70% HumanEval con 2,5 GB de RAM).' } },
-          { '@type': 'Question', name: '¿Qué modelo debo usar para idiomas distintos al inglés?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B soporta más de 29 idiomas de forma nativa, incluyendo chino, japonés, coreano, árabe y todos los principales idiomas europeos. Procesa texto en idiomas distintos al inglés de forma más eficiente que Llama.' } },
-          { '@type': 'Question', name: '¿Son seguros estos modelos para usar con datos privados?', acceptedAnswer: { '@type': 'Answer', text: 'Sí -- los cinco modelos se ejecutan completamente en tu hardware. Ningún texto de prompt, contexto o salida se transmite a servidores externos. La inferencia local es inherentemente más privada que las APIs en la nube para datos sensibles.' } },
+          { '@type': 'Question', name: '¿Qué modelo es mejor para tareas de codificación?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.1 8B tiene la cifra HumanEval más alta de los cinco modelos de esta tabla (72%, frente al 70% de Phi-4 Mini 3.8B y el 57,3% de Qwen3 8B); Qwen3 8B es la opción para uso multilingüe. Para un modelo de código dedicado, prueba `ollama run qwen2.5-coder:7b`. Con 4-6 GB de RAM, Phi-4 Mini 3.8B tiene la cifra HumanEval más alta de los modelos aquí (70% con 2,5 GB de RAM).' } },
+          { '@type': 'Question', name: '¿Qué modelo debo usar para idiomas distintos al inglés?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B soporta más de 29 idiomas de forma nativa, incluyendo chino, japonés, coreano, árabe y todos los principales idiomas europeos. Según reportes de la comunidad, su tokenizador tiende a usar menos tokens que el de Llama en textos en otros idiomas; los resultados varían según el texto.' } },
+          { '@type': 'Question', name: '¿Son seguros estos modelos para usar con datos privados?', acceptedAnswer: { '@type': 'Answer', text: 'La inferencia se ejecuta en tu propio hardware, por lo que los prompts no se envían a una API en la nube; Ollama aún puede conectarse a la red para descargar modelos y buscar actualizaciones, salvo que lo desactives. Para datos sensibles esto evita compartir prompts con un proveedor en la nube, pero no es una garantía de cumplimiento.' } },
           { '@type': 'Question', name: '¿Cuánto tiempo lleva descargar estos modelos?', acceptedAnswer: { '@type': 'Answer', text: 'Con una conexión de 100 Mbps: Llama 3.2 1B (1,3 GB) ~2 minutos. Gemma 4 E2B (1,6 GB) ~2 minutos. Llama 3.2 3B (2 GB) ~3 minutos. Phi-4 Mini (2,3 GB) ~3 minutos. Llama 3.1 8B (~5 GB) y Qwen3 8B (~5,2 GB) ~6-7 minutos cada uno. Los modelos se almacenan en caché tras la primera descarga -- las ejecuciones posteriores empiezan en segundos.' } },
           { '@type': 'Question', name: '¿Puedo ejecutar varios modelos en la misma máquina?', acceptedAnswer: { '@type': 'Answer', text: 'Sí -- los cinco pueden coexistir en disco simultáneamente. Planifica 15-20 GB si instalas los cinco. Ollama carga un modelo a la vez y lo descarga tras 5 minutos de inactividad.' } },
         ],
@@ -950,7 +952,7 @@ schema: {
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-ar.webp',
       twitterDescription: 'مقارنة: ⁨Llama 3.2 3B⁩ (⁨2.5 GB⁩، ⁨25-45 tok/s⁩)، ⁨Phi-4 Mini⁩ (⁨2.5 GB⁩، أفضل استدلال)، ⁨Gemma 4 E2B⁩ (⁨1.7 GB⁩، الأسرع). ⁨5⁩ نماذج ⁨LLM⁩ محلية للمبتدئين حسب ⁨RAM⁩ + السرعة ⁨2026⁩.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9 دقائق للقراءة',
       educationalLevel: 'Beginner',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',
@@ -1051,7 +1053,7 @@ schema: {
           title: '#1 Meta Llama 3.2 3B -- أفضل نموذج للمبتدئين عموماً',
           content: [
             '**Meta Llama 3.2 3B هو أفضل نقطة انطلاق لمعظم المستخدمين.** يُنزَّل في أقل من 5 دقائق، ويعمل على أي جهاز بذاكرة 4 GB من RAM، وينتج اتباعاً للتعليمات أفضل بشكل ملحوظ من نماذج 3B السابقة. يستخدم نافذة سياق 128K -- أكبر بكثير من النماذج بأحجام مماثلة.',
-            'في اختباراتنا على CPU لابتوب بـ 8 أنوية، يولّد Llama 3.2 3B سرعة 25-45 رمزاً/ثانية. على Apple M3 Pro يصل إلى 70-90 رمزاً/ثانية. الجودة مناسبة للتلخيص والأسئلة والأجوبة ومهام البرمجة البسيطة، لكنها تتأخر عن نماذج 7B في الاستدلال متعدد الخطوات.',
+            'توقّع نحو 25-45 رمزاً/ثانية على CPU لابتوب بـ 8 أنوية، وأكثر من ذلك على Apple Silicon مثل M3 Pro (تقديرات تقريبية؛ لم تُجرِ PromptQuorum قياساً هنا، وتختلف السرعة باختلاف العتاد والإعدادات). الجودة مناسبة للتلخيص والأسئلة والأجوبة ومهام البرمجة البسيطة، لكنها تتأخر عن نماذج 7B في الاستدلال متعدد الخطوات.',
           ],
           rows: [
             { 'المواصفة': 'المعاملات', 'القيمة': '3B' },
@@ -1085,7 +1087,7 @@ schema: {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B -- أسرع نموذج 2B',
           content: [
-            '**Gemma 4 E2B هو نموذج 2B المحدّث من Google والخيار الأسرع للاستدلال على CPU فقط.** يولّد سرعة 40-60 رمزاً/ثانية على CPU لابتوب متوسط الفئة -- أي ضعف سرعة Llama 3.2 3B تقريباً على نفس العتاد. يحسّن Gemma 3 سلفه بشكل كبير: تتوسع نافذة السياق من 8K (Gemma 2) إلى 128K رمز، مما يزيل قيداً مهماً لمهام المستندات.',
+            '**Gemma 4 E2B هو نموذج 2B المحدّث من Google ومن الخيارات الأسرع للاستدلال على CPU فقط.** يولّد نحو 40-60 رمزاً/ثانية تقريباً على CPU لابتوب متوسط الفئة (تقدير تقريبي وليس قياساً من PromptQuorum؛ وتختلف السرعة حسب العتاد). يحسّن Gemma 4 E2B الأجيال السابقة من Gemma بشكل كبير: تتوسع نافذة السياق من 8K (Gemma 2) إلى 128K رمز، مما يزيل قيداً مهماً لمهام المستندات.',
             'Gemma 4 E2B خيار جيد عندما تكون سرعة الاستجابة هي الأهم، على الأجهزة ذات ≤4 GB من RAM، أو كنموذج اختبار للتحقق من إعداد LLM المحلي لديك قبل تنزيل نماذج أكبر.',
           ],
           rows: [
@@ -1146,7 +1148,7 @@ schema: {
           ],
           columns: ['النموذج', 'RAM', 'السرعة (CPU)', 'السياق', 'الأفضل لـ'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-ar.webp',
-          imageCaption: 'خمسة نماذج LLM محلية للمبتدئين مقارنة حسب RAM وسرعة الاستدلال على CPU ونافذة السياق وحالة الاستخدام -- جميعها مُقيَّمة بتكميم Q4_K_M عبر Ollama. Llama 3.2 3B هو النموذج الأول الموصى به؛ Gemma 4 E2B هو الأسرع بذاكرة 1.7 GB من RAM.',
+          imageCaption: 'خمسة نماذج LLM محلية للمبتدئين مقارنة حسب RAM وسرعة الاستدلال على CPU ونافذة السياق وحالة الاستخدام -- المواصفات وفق بطاقات النماذج ومكتبة Ollama؛ السرعات تقديرات تقريبية وليست قياسات من PromptQuorum. Llama 3.2 3B هو النموذج الأول الموصى به؛ Gemma 4 E2B هو الأسرع بذاكرة 1.7 GB من RAM.',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -1157,7 +1159,7 @@ schema: {
             '**8 GB من RAM، النموذج الأول**: `ollama run llama3.2:3b` -- أفضل توازن بين الجودة وRAM لتجربة أولى.',
             '**4-6 GB من RAM، استدلال/برمجة**: `ollama run phi4-mini` -- 68% MMLU، 70% HumanEval بذاكرة 2.5 GB فقط من RAM. أفضل من Llama 3.2 3B في المهام المنظمة.',
             '**8 GB من RAM، استخدام جدي**: `ollama run llama3.1:8b-instruct` أو `ollama run qwen3:8b` -- خطوة إلى الأمام للمستندات الطويلة والتعليمات المعقدة.',
-            '**مهام البرمجة أساساً**: `ollama run qwen3:8b` -- أفضل نتيجة HumanEval في هذه القائمة؛ ممتاز في Python وJavaScript وSQL.',
+            '**مهام البرمجة أساساً**: `ollama run llama3.1:8b-instruct` -- أعلى رقم HumanEval في هذه القائمة (72%)؛ ولنموذج برمجة مخصص جرّب `ollama run qwen2.5-coder:7b`.',
             '**لغة غير الإنجليزية**: `ollama run qwen3:8b` -- دعم أصلي لأكثر من 29 لغة، دون عبء ترجمة.',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-es.svg',
@@ -1167,10 +1169,11 @@ schema: {
           id: 'regional-context',
           title: 'أي نموذج تختار حسب منطقتك؟',
           content: [
-            '**الاتحاد الأوروبي / GDPR**: للمؤسسات الأوروبية التي تعالج بيانات شخصية محلياً، يهم مصدر النموذج لتوثيق الامتثال. تتطلب إرشادات BSI الألمانية توثيق مصدر النموذج ونوع الرخصة لأنظمة الذكاء الاصطناعي المستخدمة في سياقات مهنية. Llama (Meta/الولايات المتحدة) وGemma (Google/الولايات المتحدة) وQwen (Alibaba/الصين) قابلة للاستخدام تقنياً بموجب GDPR للاستدلال المحلي -- وللحصول على أوضح سردية منشأ أوروبي، توفّر Mistral AI (فرنسا) نماذج برخصة Apache 2.0، رغم أن إصدارات Mistral Small الحالية (24B فما فوق) تتجاوز نطاق RAM الخاص بالمبتدئين في هذه الصفحة (4-8 GB)؛ راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide) لمعرفة فئة GPU اللازمة لتشغيلها.',
-            '**اليابان (METI)**: لسير العمل باللغة اليابانية، Qwen3 8B هو النموذج الأول الصحيح -- ينتج الترميز الياباني الأصلي كفاءة رموز أفضل بنسبة 30-40% في النصوص اليابانية من Llama أو Mistral. شغّل: `ollama run qwen3:8b`. تتطلب إرشادات حوكمة الذكاء الاصطناعي من METI توثيق اسم النموذج وإصداره -- تملك النماذج الخمسة هنا وسوم Ollama مُصدَّرة تلبّي هذا المتطلب.',
-            '**الصين**: Qwen3 8B (Alibaba) هو النموذج الأول الطبيعي لسير العمل باللغة الصينية. يجعله الترميز الأصلي بالصينية ودعم أكثر من 29 لغة المعيار لسير العمل باللغة الماندرين. للنشر المؤسسي في الصين بموجب قانون أمن البيانات الصيني (数据安全法)، يلبّي تشغيل Qwen3 محلياً عبر Ollama متطلبات توطين البيانات.',
+            '**الاتحاد الأوروبي / GDPR**: للمؤسسات الأوروبية التي تعالج بيانات شخصية محلياً، يهم مصدر النموذج لتوثيق الامتثال. يُعدّ توثيق مصدر النموذج ونوع الرخصة ممارسة جيدة لأنظمة الذكاء الاصطناعي المستخدمة في سياقات مهنية. Llama (Meta/الولايات المتحدة) وGemma (Google/الولايات المتحدة) وQwen (Alibaba/الصين): الاستدلال المحلي بحد ذاته لا يستبعد أياً من هذه النماذج بموجب GDPR، وتعتمد مشروعية نشرك على الأساس القانوني والتدابير التقنية والتنظيمية والغرض -- وللحصول على أوضح سردية منشأ أوروبي، توفّر Mistral AI (فرنسا) نماذج برخصة Apache 2.0، رغم أن إصدارات Mistral Small الحالية (24B فما فوق) تتجاوز نطاق RAM الخاص بالمبتدئين في هذه الصفحة (4-8 GB)؛ راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide) لمعرفة فئة GPU اللازمة لتشغيلها.',
+            '**اليابان (METI)**: لسير العمل باللغة اليابانية، Qwen3 8B هو خيار أول جيد -- تشير تقارير المجتمع إلى أن المُرمِّز في Qwen3 يميل إلى استخدام رموز أقل في النصوص اليابانية مقارنةً بـ Llama؛ وتختلف النتائج حسب النص. شغّل: `ollama run qwen3:8b`. يُعدّ توثيق اسم النموذج وإصداره ممارسة جيدة لحوكمة الذكاء الاصطناعي في اليابان (راجع إرشادات METI للذكاء الاصطناعي) -- تملك النماذج الخمسة هنا وسوم Ollama مُصدَّرة تسهّل ذلك.',
+            '**الصين**: Qwen3 8B (Alibaba) هو النموذج الأول الطبيعي لسير العمل باللغة الصينية. يجعله الترميز الأصلي بالصينية ودعم أكثر من 29 لغة المعيار لسير العمل باللغة الماندرين. للنشر المؤسسي في الصين بموجب قانون أمن البيانات الصيني (数据安全法)، فإن تشغيل الاستدلال محلياً عبر Ollama يُبقي الموجّهات والمخرجات على عتادك، ما قد يبسّط مسائل توطين البيانات في تلك الطبقة؛ أما امتثال نشرك فيعتمد على معالجتك الكاملة للبيانات.',
             '**كوريا**: من بين الخيارات الخمسة للمبتدئين هنا، يتميّز Qwen3 8B بأقوى ترميز أصلي للغة الكورية. للنماذج المحلية المخصصة للغة الكورية بما يتجاوز مستوى المبتدئين هذا، راجع [أفضل نماذج اللغة الكورية للاستخدام المحلي](/ar/prompt-bites/best-korean-language-models-local).',
+            '**معلومات عامة وليست استشارة قانونية**: الملاحظات الإقليمية أعلاه معلومات عامة وليست استشارة قانونية؛ تحقّق من المتطلبات المناسبة لحالتك لدى مستشار مؤهل.',
           ],
         },
         nextSteps: {
@@ -1188,7 +1191,7 @@ schema: {
             'اختيار حجم النموذج بناءً على عدد المعاملات وحده -- نموذج 7B بتكميم 4 بت قد يتفوق على نموذج 13B مُكمَّم بشكل سيئ.',
             'إغفال عبء تكميم VRAM -- قد يحتاج نموذج إلى 10-15% من VRAM أكثر من حجم الملف.',
             'استخدام تكميمات قديمة (Q3_K_S) بينما توفر الجديدة (Q4_K_M) جودة أفضل بنفس الحجم.',
-            '**اختيار Mistral 7B كنموذج 7B افتراضي:** كان معيار المجتمع في 2023-2024 (7B، تنزيل ~4.1 GB، `ollama run mistral`) لكن يتفوق عليه الآن Qwen3 8B في البرمجة ويتفوق عليه Llama 3.1 8B في الاستدلال بالإنجليزية بنفس متطلب RAM. إذا كان دليل أو أداة يستخدم `ollama run mistral` افتراضياً، فبدّل إلى `ollama run qwen3:8b` أو `ollama run llama3.1:8b-instruct` لنتائج أفضل دون زيادة RAM. ملاحظة: هذا نموذج مختلف وغير مرتبط بسلسلة "Mistral Small 3.x" الحالية بحجم 24B فما فوق، والتي تحتاج إلى RAM أكبر بكثير من أي نموذج في هذه الصفحة.',
+            '**اختيار Mistral 7B كنموذج 7B افتراضي:** كان معيار المجتمع في 2023-2024 (7B، تنزيل ~4.1 GB، `ollama run mistral`) لكن النماذج الأحدث مثل Qwen3 8B (البرمجة) وLlama 3.1 8B (الاستدلال بالإنجليزية) تسجّل عموماً نتائج أعلى في المعايير المنشورة بنفس متطلب RAM. إذا كان دليل أو أداة يستخدم `ollama run mistral` افتراضياً، فبدّل إلى `ollama run qwen3:8b` أو `ollama run llama3.1:8b-instruct` لنتائج أفضل دون زيادة RAM. ملاحظة: هذا نموذج مختلف وغير مرتبط بسلسلة "Mistral Small 3.x" الحالية بحجم 24B فما فوق، والتي تحتاج إلى RAM أكبر بكثير من أي نموذج في هذه الصفحة.',
             '**تنزيل نموذج دون التحقق من RAM المتاحة أولاً:** إذا نزّلت نموذجاً يتجاوز RAM المتاحة، يلجأ Ollama إلى استدلال بطيء على CPU مع تبديل جزئي للقرص -- أحياناً أقل من 1 tok/s. شغّل دائماً `free -h` (Linux/macOS) أو تحقق من مدير المهام (Windows) قبل تنزيل نماذج أكبر من 7B.',
           ],
         },
@@ -1241,15 +1244,15 @@ schema: {
             },
             {
               q: 'أي نموذج أفضل لمهام البرمجة؟',
-              a: 'يتصدّر Qwen3 8B في HumanEval بين النماذج الخمسة. لبرمجة أفضل، استخدم النسخة المخصصة للبرمجة: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B هو أفضل نموذج برمجة إذا كنت محدوداً بـ 4-6 GB من RAM (70% HumanEval بذاكرة 2.5 GB من RAM).',
+              a: 'يملك Llama 3.1 8B أعلى رقم HumanEval بين النماذج الخمسة في هذا الجدول (72%، مقابل 70% لـ Phi-4 Mini 3.8B و57.3% لـ Qwen3 8B)؛ أما Qwen3 8B فهو الخيار للاستخدام متعدد اللغات. لنموذج برمجة مخصص جرّب `ollama run qwen2.5-coder:7b`. مع 4-6 GB من RAM يملك Phi-4 Mini 3.8B أعلى رقم HumanEval بين النماذج هنا (70% بذاكرة 2.5 GB من RAM).',
             },
             {
               q: 'أي نموذج يجب أن أستخدم للغات غير الإنجليزية؟',
-              a: 'يدعم Qwen3 8B أكثر من 29 لغة بشكل أصلي، تشمل الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. يعالج النصوص بلغات غير الإنجليزية بكفاءة أكبر من Llama.',
+              a: 'يدعم Qwen3 8B أكثر من 29 لغة بشكل أصلي، تشمل الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. تشير تقارير المجتمع إلى أن المُرمِّز فيه يميل إلى استخدام رموز أقل من Llama في النصوص بلغات غير الإنجليزية؛ وتختلف النتائج حسب النص.',
             },
             {
               q: 'هل هذه النماذج آمنة للاستخدام مع بيانات خاصة؟',
-              a: 'نعم -- تعمل النماذج الخمسة بالكامل على عتادك. لا يُرسَل أي نص موجّه أو سياق أو مخرجات إلى خوادم خارجية. الاستدلال المحلي أكثر خصوصية بطبيعته من واجهات السحابة للبيانات الحساسة.',
+              a: 'يعمل الاستدلال على عتادك الخاص، لذا لا تُرسَل الموجّهات إلى واجهة سحابية؛ وقد يتصل Ollama بالشبكة لتنزيل النماذج وفحص التحديثات ما لم تعطّل ذلك. للبيانات الحساسة يجنّبك هذا مشاركة الموجّهات مع مزوّد سحابي، لكنه ليس ضماناً للامتثال.',
             },
             {
               q: 'كم يستغرق تنزيل هذه النماذج؟',
@@ -1283,7 +1286,7 @@ schema: {
         headline: 'Llama وPhi وGemma وQwen وLlama 3.3: أفضل نماذج LLM للمبتدئين 2026',
         description: 'Llama 3.2 3B = 2.5 GB RAM، 25-45 tok/s. Phi-4 Mini = 2.5 GB. Gemma 4 E2B = 1.7 GB، 40-60 tok/s. Llama 3.1 8B = 5.5 GB، 72% HumanEval. Qwen3 8B = 5.2 GB. جدول مقارنة كامل وأوامر Ollama.',
         'datePublished': '2026-04-04',
-        dateModified: '2026-08-28',
+        dateModified: '2026-11-09',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'audience': { '@type': 'Audience', 'audienceType': 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1326,9 +1329,9 @@ schema: {
           { '@type': 'Question', name: 'كيف أشغّل هذه النماذج عبر Ollama؟', acceptedAnswer: { '@type': 'Answer', text: 'ثبّت Ollama من ollama.com، ثم شغّل: `ollama run llama3.2:3b` للنموذج الموصى به للمبتدئين. ينزّل Ollama النموذج في التشغيل الأول. النماذج الخمسة المدرجة هنا موجودة في مكتبة Ollama.' } },
           { '@type': 'Question', name: 'هل Llama 3.2 3B جيد بما يكفي للمهام اليومية؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم لـ: التلخيص والأسئلة والأجوبة البسيطة وشرح الكود الأساسي والمحادثة. لا لـ: الاستدلال متعدد الخطوات والبرمجة المعقدة والكتابة المنظمة الطويلة. لتلك المهام، رقِّ إلى Llama 3.1 8B أو Qwen3 8B بذاكرة 8 GB من RAM.' } },
           { '@type': 'Question', name: 'ما الفرق بين نماذج 3B و7B؟', acceptedAnswer: { '@type': 'Answer', text: 'ينتج نموذج 7B مخرجات أفضل بشكل ملحوظ في التعليمات المعقدة والاستدلال. يستخدم نموذج 3B نحو نصف RAM ويعمل أسرع بـ 2-3 مرات. يحدّد الخيار دائماً تقريباً RAM المتاحة -- استخدم 3B على الأجهزة ذات 4-6 GB، و7B على الأجهزة ذات 8 GB.' } },
-          { '@type': 'Question', name: 'أي نموذج أفضل لمهام البرمجة؟', acceptedAnswer: { '@type': 'Answer', text: 'يتصدّر Qwen3 8B في HumanEval بين النماذج الخمسة. لبرمجة أفضل، استخدم النسخة المخصصة للبرمجة: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B هو أفضل نموذج برمجة إذا كنت محدوداً بـ 4-6 GB من RAM (70% HumanEval بذاكرة 2.5 GB من RAM).' } },
-          { '@type': 'Question', name: 'أي نموذج يجب أن أستخدم للغات غير الإنجليزية؟', acceptedAnswer: { '@type': 'Answer', text: 'يدعم Qwen3 8B أكثر من 29 لغة بشكل أصلي، تشمل الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. يعالج النصوص بلغات غير الإنجليزية بكفاءة أكبر من Llama.' } },
-          { '@type': 'Question', name: 'هل هذه النماذج آمنة للاستخدام مع بيانات خاصة؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم -- تعمل النماذج الخمسة بالكامل على عتادك. لا يُرسَل أي نص موجّه أو سياق أو مخرجات إلى خوادم خارجية. الاستدلال المحلي أكثر خصوصية بطبيعته من واجهات السحابة للبيانات الحساسة.' } },
+          { '@type': 'Question', name: 'أي نموذج أفضل لمهام البرمجة؟', acceptedAnswer: { '@type': 'Answer', text: 'يملك Llama 3.1 8B أعلى رقم HumanEval بين النماذج الخمسة في هذا الجدول (72%، مقابل 70% لـ Phi-4 Mini 3.8B و57.3% لـ Qwen3 8B)؛ أما Qwen3 8B فهو الخيار للاستخدام متعدد اللغات. لنموذج برمجة مخصص جرّب `ollama run qwen2.5-coder:7b`. مع 4-6 GB من RAM يملك Phi-4 Mini 3.8B أعلى رقم HumanEval بين النماذج هنا (70% بذاكرة 2.5 GB من RAM).' } },
+          { '@type': 'Question', name: 'أي نموذج يجب أن أستخدم للغات غير الإنجليزية؟', acceptedAnswer: { '@type': 'Answer', text: 'يدعم Qwen3 8B أكثر من 29 لغة بشكل أصلي، تشمل الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. تشير تقارير المجتمع إلى أن المُرمِّز فيه يميل إلى استخدام رموز أقل من Llama في النصوص بلغات غير الإنجليزية؛ وتختلف النتائج حسب النص.' } },
+          { '@type': 'Question', name: 'هل هذه النماذج آمنة للاستخدام مع بيانات خاصة؟', acceptedAnswer: { '@type': 'Answer', text: 'يعمل الاستدلال على عتادك الخاص، لذا لا تُرسَل الموجّهات إلى واجهة سحابية؛ وقد يتصل Ollama بالشبكة لتنزيل النماذج وفحص التحديثات ما لم تعطّل ذلك. للبيانات الحساسة يجنّبك هذا مشاركة الموجّهات مع مزوّد سحابي، لكنه ليس ضماناً للامتثال.' } },
           { '@type': 'Question', name: 'كم يستغرق تنزيل هذه النماذج؟', acceptedAnswer: { '@type': 'Answer', text: 'باتصال 100 Mbps: Llama 3.2 1B (1.3 GB) ~دقيقتان. Gemma 4 E2B (1.6 GB) ~دقيقتان. Llama 3.2 3B (2 GB) ~3 دقائق. Phi-4 Mini (2.3 GB) ~3 دقائق. Llama 3.1 8B (~5 GB) وQwen3 8B (~5.2 GB) ~6-7 دقائق لكل منهما. تُخزَّن النماذج مؤقتاً بعد التنزيل الأول -- تبدأ عمليات التشغيل اللاحقة خلال ثوانٍ.' } },
           { '@type': 'Question', name: 'هل يمكنني تشغيل عدة نماذج على نفس الجهاز؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم -- يمكن للنماذج الخمسة التعايش على القرص في آن واحد. خطّط لـ 15-20 GB إذا ثبّت الخمسة جميعاً. يحمّل Ollama نموذجاً واحداً في كل مرة ويفرّغه بعد 5 دقائق من الخمول.' } },
         ],
@@ -1355,7 +1358,7 @@ schema: {
       metaDescription: '5 LLMs locais para iniciantes: Llama 3.2 3B (2,5 GB, 45 tok/s), Phi-4 Mini (melhor raciocínio), Gemma 4 E2B (o mais rápido). Todos com 4–8 GB RAM via Ollama.',
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9 min de leitura',
       educationalLevel: 'Beginner',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
@@ -1434,15 +1437,16 @@ schema: {
           content: [
             '**Llama 3.2 3B é o ponto de partida recomendado para a maioria dos iniciantes.** Roda em qualquer Mac ou PC com 4+ GB de RAM, baixa em 2 minutos e produz respostas de qualidade surpreendente para o seu tamanho.',
             'Para começar: `ollama run llama3.2:3b`',
-            'Velocidade: 25-45 tok/s em CPU, 50-80 tok/s com GPU.',
+            'Velocidade aproximada (estimativas, não medidas pela PromptQuorum): ~25-45 tok/s em CPU; varia conforme o hardware.',
           ],
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Seleção de modelo por região',
           content: [
-            '**Usuários brasileiros:** Qwen3 8B é a melhor escolha para português -- suporta português brasileiro nativamente como parte do seu treinamento em mais de 29 idiomas. Para uso offline ou conformidade com a LGPD: qualquer um dos cinco modelos roda completamente local, sem dados enviados a terceiros.',
-            '**Usuários europeus (RGPD):** Todos os modelos desta lista rodam localmente, satisfazendo os requisitos de minimização de dados do RGPD.',
+            '**Usuários brasileiros:** Qwen3 8B é uma boa opção para português -- suporta português brasileiro nativamente como parte do seu treinamento em mais de 29 idiomas. Para uso offline: qualquer um dos cinco modelos roda localmente, sem enviar prompts a uma API em nuvem; a conformidade com a LGPD depende de todo o seu tratamento de dados, e isto não é aconselhamento jurídico.',
+            '**Usuários europeus (RGPD):** Todos os modelos desta lista rodam localmente, o que pode apoiar a minimização de dados, mas a conformidade com o RGPD depende de todo o seu tratamento de dados, e isto não é aconselhamento jurídico.',
+            '**Informação geral, não aconselhamento jurídico:** as notas regionais acima são informações gerais e não constituem aconselhamento jurídico; confirme os requisitos do seu caso com um profissional qualificado.',
           ],
         },
         commonMistakes: {
@@ -1460,8 +1464,8 @@ schema: {
           faqs: [
             { q: 'Qual é o melhor LLM local para iniciantes em 2026?', a: 'Llama 3.2 3B é o melhor ponto de partida para a maioria: roda com 4 GB de RAM, baixa em 2 minutos e produz boa qualidade para seu tamanho. Se você precisa de melhor suporte em português, use Qwen3 8B (requer 8 GB de RAM).' },
             { q: 'Preciso de uma GPU para rodar LLMs locais?', a: 'Não. Todos os modelos desta lista rodam apenas com CPU. Uma GPU acelera a inferência em 3-5×, mas não é obrigatória para começar.' },
-            { q: 'O Qwen3 8B funciona bem em português?', a: 'Sim. Qwen3 8B tem suporte nativo para português como parte do seu treinamento em mais de 29 idiomas. É a melhor escolha da lista para usuários brasileiros que precisam de suporte em português.' },
-            { q: 'Como rodar LLMs locais com privacidade de dados para conformidade com a LGPD?', a: 'Qualquer modelo desta lista roda completamente local -- nenhum dado é enviado a servidores externos. Para conformidade com a LGPD (Lei nº 13.709/2018), use Ollama com qualquer um dos cinco modelos recomendados.' },
+            { q: 'O Qwen3 8B funciona bem em português?', a: 'Sim. Qwen3 8B tem suporte nativo para português como parte do seu treinamento em mais de 29 idiomas. É uma boa opção da lista para usuários brasileiros que precisam de suporte em português.' },
+            { q: 'Como rodar LLMs locais com privacidade de dados para conformidade com a LGPD?', a: 'Qualquer modelo desta lista roda na sua própria máquina, então os prompts não são enviados a uma API em nuvem; o Ollama ainda pode acessar a rede para baixar modelos e verificar atualizações, a menos que você desative isso. Isso pode apoiar o tratamento de dados sob a LGPD (Lei nº 13.709/2018), mas a conformidade depende de todo o seu tratamento (base legal, medidas de segurança, finalidade); isto não é aconselhamento jurídico.' },
             { q: 'O Mistral Small 3.2 é um bom LLM local para iniciantes?', a: 'Não -- o Mistral Small 3.2 é um modelo de 24 bilhões de parâmetros que exige aproximadamente 14 GB ou mais de RAM/VRAM, muito acima da faixa de 4-8 GB para iniciantes desta página. É um modelo diferente e maior do que o antigo "Mistral 7B" de 7B, que já foi recomendado aqui. Se você tem 8 GB de RAM, comece com Llama 3.1 8B ou Qwen3 8B.' },
             { q: 'Qual é o melhor LLM local de 1B de parâmetros?', a: 'Llama 3.2 1B é o modelo de 1B recomendado -- download de ~1,3 GB, roda com 2 GB de RAM ou menos via `ollama run llama3.2:1b`. É utilizável para resumos básicos e perguntas curtas, mas perceptivelmente mais fraco que modelos 3B+ em raciocínio de múltiplas etapas. Use-o apenas quando o hardware realmente não suportar um modelo 3B.' },
           ],
@@ -1523,7 +1527,7 @@ schema: {
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-de.webp',
       twitterDescription: 'Bewertet: Llama 3.2 3B (2,5 GB, 25-45 Tok/s), Phi-4 Mini (2,5 GB, beste Reasoning), Gemma 4 E2B (1,7 GB, schnellste), Llama 3.1 8B, Qwen3 8B. 5 Einsteiger-LLMs 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9 Min. Lesezeit',
       educationalLevel: 'Beginner',
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
@@ -1623,7 +1627,7 @@ schema: {
           title: '#1 Meta Llama 3.2 3B – Bestes Einstiegsmodell insgesamt',
           content: [
             '**Meta Llama 3.2 3B ist der beste Ausgangspunkt für die meisten Benutzer.** Es lädt in unter 5 Minuten herunter, läuft auf jeder Maschine mit 4 GB RAM und bietet spürbar bessere Anweisungsverarbeitung als frühere 3B-Modelle. Es verwendet ein 128K-Kontextfenster – deutlich größer als bei vergleichbaren Modellen.',
-            'Bei unseren Tests auf einem 8-Kern-Laptop-CPU erzeugt Llama 3.2 3B 25–45 Tokens/s. Auf dem Apple M3 Pro erreicht es 70–90 Tokens/s. Die Qualität ist für Zusammenfassungen, Q&A und einfache Coding-Aufgaben ausreichend, bleibt aber bei mehrstufigem Reasoning hinter 7B-Modellen zurück.',
+            'Rechnen Sie mit etwa 25–45 Tokens/s auf einer 8-Kern-Laptop-CPU und deutlich mehr auf Apple Silicon wie dem M3 Pro (grobe Schätzwerte; PromptQuorum hat dies hier nicht gemessen, und die Geschwindigkeit hängt von Hardware und Einstellungen ab). Die Qualität ist für Zusammenfassungen, Q&A und einfache Coding-Aufgaben ausreichend, bleibt aber bei mehrstufigem Reasoning hinter 7B-Modellen zurück.',
           ],
           rows: [
             { 'Spezifikation': 'Parameter', 'Wert': '3B' },
@@ -1657,7 +1661,7 @@ schema: {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B – Schnellstes 2B-Modell',
           content: [
-            '**Gemma 4 E2B ist Googles aktualisiertes 2B-Modell und die schnellste Option für reine CPU-Inferenz.** Es erzeugt 40–60 Tokens/s auf einem Mid-Range-Laptop-CPU – ungefähr doppelt so schnell wie Llama 3.2 3B auf derselben Hardware. Gemma 3 verbessert seinen Vorgänger erheblich: Das Kontextfenster wird von 8K (Gemma 2) auf 128K Tokens erweitert, wodurch eine wesentliche Einschränkung für Dokumentenaufgaben entfällt.',
+            '**Gemma 4 E2B ist Googles aktualisiertes 2B-Modell und eine der schnelleren Optionen für reine CPU-Inferenz.** Es erzeugt etwa 40–60 Tokens/s auf einem Mid-Range-Laptop-CPU (grobe Schätzung, keine Messung von PromptQuorum; abhängig von der Hardware). Gemma 4 E2B verbessert frühere Gemma-Generationen erheblich: Das Kontextfenster wird von 8K (Gemma 2) auf 128K Tokens erweitert, wodurch eine wesentliche Einschränkung für Dokumentenaufgaben entfällt.',
             'Gemma 4 E2B ist eine gute Wahl, wenn Antwortgeschwindigkeit am wichtigsten ist, auf Maschinen mit ≤4 GB RAM, oder als Test-Modell, um die lokale LLM-Einrichtung zu überprüfen, bevor größere Modelle heruntergeladen werden.',
           ],
           rows: [
@@ -1674,7 +1678,7 @@ schema: {
           id: 'llama-3-3-8b',
           title: '#4 Meta Llama 3.1 8B – Bestes 7B/8B-Allround-Modell',
           content: [
-            '**Meta Llama 3.1 8B ist das aktuelle universell einsetzbare Modell dieser Größenklasse, erreicht 72 % HumanEval und bietet solides englisches Reasoning.** Es ersetzt Mistral 7B als 7B/8B-Empfehlung dieser Liste – Mistral 7B war 2023–2024 der Community-Standard, wird aber inzwischen bei gleichem RAM-Bedarf übertroffen und ist eher als Legacy-Option zu betrachten (siehe Häufige Fehler unten, warum es nicht mehr als Standardwahl empfohlen wird).',
+            '**Meta Llama 3.1 8B ist das aktuelle universell einsetzbare Modell dieser Größenklasse, erreicht 72 % HumanEval und bietet solides englisches Reasoning.** Es ersetzt Mistral 7B als 7B/8B-Empfehlung dieser Liste – Mistral 7B war 2023–2024 der Community-Standard, erzielt aber inzwischen bei gleichem RAM-Bedarf in veröffentlichten Benchmarks schlechtere Werte als neuere Modelle und ist eher als Legacy-Option zu betrachten (siehe Häufige Fehler unten, warum es nicht mehr als Standardwahl empfohlen wird).',
             'Für Maschinen mit 8 GB RAM ist Llama 3.1 8B ein natürlicher Aufstieg gegenüber 3B-Modellen. Es verarbeitet längere Texte, komplexere Anweisungen und mehrstufige Gespräche zuverlässiger als jedes 3B-Modell, mit einem 128K-Kontextfenster.',
           ],
           rows: [
@@ -1718,7 +1722,7 @@ schema: {
           ],
           columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Kontext', 'Einsatzgebiet'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-de.webp',
-          imageCaption: 'Fünf Einsteiger-LLM-Modelle im Vergleich nach RAM, CPU-Inferenzgeschwindigkeit, Kontextfenster und Anwendungsfall – alle bei Q4_K_M-Quantisierung via Ollama getestet. Llama 3.2 3B ist das empfohlene erste Modell; Gemma 4 E2B ist das schnellste bei 1,7 GB RAM.',
+          imageCaption: 'Fünf Einsteiger-LLM-Modelle im Vergleich nach RAM, CPU-Inferenzgeschwindigkeit, Kontextfenster und Anwendungsfall – Angaben laut Modellkarten und Ollama-Bibliothek; Geschwindigkeiten sind grobe Schätzwerte, nicht von PromptQuorum gemessen. Llama 3.2 3B ist das empfohlene erste Modell; Gemma 4 E2B ist das schnellste bei 1,7 GB RAM.',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -1729,7 +1733,7 @@ schema: {
             '**8 GB RAM, erstes Modell**: `ollama run llama3.2:3b` – beste Balance aus Qualität und RAM für eine erste Erfahrung.',
             '**4–6 GB RAM, Reasoning/Coding**: `ollama run phi4-mini` – 68 % MMLU, 70 % HumanEval bei nur 2,5 GB RAM. Besser als Llama 3.2 3B bei strukturierten Aufgaben.',
             '**8 GB RAM, ernsthafter Einsatz**: `ollama run llama3.1:8b-instruct` oder `ollama run qwen3:8b` – Aufstieg für längere Dokumente und komplexe Anweisungen.',
-            '**Hauptsächlich Coding-Aufgaben**: `ollama run qwen3:8b` – bester HumanEval-Score in dieser Liste; stark bei Python, JavaScript und SQL.',
+            '**Hauptsächlich Coding-Aufgaben**: `ollama run llama3.1:8b-instruct` – höchster HumanEval-Wert in dieser Liste (72 %); für ein dediziertes Coding-Modell probieren Sie `ollama run qwen2.5-coder:7b`.',
             '**Nicht-englische Sprache**: `ollama run qwen3:8b` – native Unterstützung für 29+ Sprachen, kein Übersetzungsaufwand.',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-de.svg',
@@ -1739,10 +1743,11 @@ schema: {
           id: 'regional-context',
           title: 'Welches Modell sollten Sie je nach Region wählen?',
           content: [
-            '**EU / DSGVO**: Für EU-Organisationen, die personenbezogene Daten lokal verarbeiten, spielt die Herkunft des Modells für die Compliance-Dokumentation eine Rolle. Die BSI-Grundschutz-Kataloge (BSI IT-Grundschutz-Kompendium) erfordern die Dokumentation von Modellherkunft und Lizenztyp für KI-Systeme in professionellen Kontexten. Llama (Meta/USA), Gemma (Google/USA) und Qwen (Alibaba/China) sind unter der DSGVO für lokale Inferenz technisch alle nutzbar – für die sauberste EU-Herkunftsnarrative bietet Mistral AI (Frankreich) Apache-2.0-lizenzierte Modelle, wobei die aktuellen Mistral-Small-Versionen (24B+) den in diesem Artikel behandelten 4–8-GB-Einsteigerbereich übersteigen; siehe den [Hardware-Guide](/de/local-llms/local-llm-hardware-guide) für die benötigte GPU-Klasse.',
-            '**Japan (METI)**: Für japanischsprachige Workflows ist Qwen3 8B das richtige erste Modell – native japanische Tokenisierung erzeugt eine bessere Token-Effizienz bei japanischem Text als Llama. Befehl: `ollama run qwen3:8b`. Die METI-KI-Governance-Richtlinien erfordern die Dokumentation von Modellname und Version – alle fünf hier aufgeführten Modelle haben versionierte Ollama-Tags, die dies erfüllen.',
-            '**China**: Qwen3 8B (Alibaba) ist das natürliche erste Modell für chinesischsprachige Workflows. Native chinesische Tokenisierung und 29+-Sprachen-Unterstützung machen es zum Standard für Mandarin-orientierte Workflows. Für den chinesischen Unternehmenseinsatz unter dem Datensicherheitsgesetz Chinas (数据安全法) erfüllt Qwen3, das lokal via Ollama läuft, die Anforderungen an die Datenlokalisierung.',
+            '**EU / DSGVO**: Für EU-Organisationen, die personenbezogene Daten lokal verarbeiten, spielt die Herkunft des Modells für die Compliance-Dokumentation eine Rolle. Die Dokumentation von Modellherkunft und Lizenztyp ist für KI-Systeme in professionellen Kontexten eine gute Praxis. Llama (Meta/USA), Gemma (Google/USA) und Qwen (Alibaba/China): Lokale Inferenz allein schließt keines dieser Modelle nach der DSGVO aus; ob Ihr Einsatz rechtmäßig ist, hängt von Rechtsgrundlage, technischen und organisatorischen Maßnahmen und Zweck ab – für die sauberste EU-Herkunftsnarrative bietet Mistral AI (Frankreich) Apache-2.0-lizenzierte Modelle, wobei die aktuellen Mistral-Small-Versionen (24B+) den in diesem Artikel behandelten 4–8-GB-Einsteigerbereich übersteigen; siehe den [Hardware-Guide](/de/local-llms/local-llm-hardware-guide) für die benötigte GPU-Klasse.',
+            '**Japan (METI)**: Für japanischsprachige Workflows ist Qwen3 8B ein guter erster Kandidat – laut Community-Berichten benötigt der Tokenizer von Qwen3 bei japanischem Text tendenziell weniger Tokens als der von Llama; die Ergebnisse variieren je nach Text. Befehl: `ollama run qwen3:8b`. Die Dokumentation von Modellname und Version ist eine gute Praxis für KI-Governance in Japan (siehe die KI-Leitlinien des METI) – alle fünf hier aufgeführten Modelle haben versionierte Ollama-Tags, die dies erleichtern.',
+            '**China**: Qwen3 8B (Alibaba) ist das natürliche erste Modell für chinesischsprachige Workflows. Native chinesische Tokenisierung und 29+-Sprachen-Unterstützung machen es zum Standard für Mandarin-orientierte Workflows. Für den chinesischen Unternehmenseinsatz unter dem Datensicherheitsgesetz Chinas (数据安全法) hält lokale Inferenz via Ollama Prompts und Ausgaben auf Ihrer Hardware, was Fragen der Datenlokalisierung für diese Ebene vereinfachen kann; ob Ihr Einsatz konform ist, hängt von Ihrer gesamten Datenverarbeitung ab.',
             '**Korea**: Unter diesen fünf Einsteiger-Modellen hat Qwen3 8B die stärkste native koreanische Tokenisierung. Für dedizierte koreanischsprachige lokale Modelle jenseits dieser Einsteigerstufe siehe [Beste koreanischsprachige Modelle für lokalen Einsatz](/de/prompt-bites/best-korean-language-models-local).',
+            '**Allgemeine Information, keine Rechtsberatung**: Die obigen regionalen Hinweise sind allgemeine Informationen und keine Rechtsberatung; klären Sie die Anforderungen für Ihren Fall mit einer qualifizierten Fachperson.',
           ],
         },
         nextSteps: {
@@ -1760,7 +1765,7 @@ schema: {
             'Modellgröße nur nach Parameteranzahl wählen – 7B bei 4-Bit-Quantisierung kann ein schlecht quantisiertes 13B-Modell übertreffen.',
             'VRAM-Quantisierungs-Overhead nicht berücksichtigen – ein Modell kann 10–15 % mehr VRAM benötigen als die Dateigröße.',
             'Ältere Quantisierungen (Q3_K_S) verwenden, wenn neuere (Q4_K_M) bessere Qualität bei gleicher Größe bieten.',
-            '**Mistral 7B als Standard-7B-Modell wählen:** Es war 2023–2024 der Community-Standard (7B, ~4,1 GB Download, `ollama run mistral`), wird aber inzwischen von Qwen3 8B bei Coding und von Llama 3.1 8B beim englischen Reasoning bei gleichem RAM-Bedarf übertroffen. Wenn ein Tutorial oder Tool standardmäßig `ollama run mistral` verwendet, wechseln Sie zu `ollama run qwen3:8b` oder `ollama run llama3.1:8b-instruct` für bessere Ergebnisse ohne mehr RAM. Hinweis: Dies ist ein anderes, nicht verwandtes Modell als die aktuelle 24B+-Reihe „Mistral Small 3.x", die deutlich mehr RAM benötigt als jedes Modell auf dieser Seite.',
+            '**Mistral 7B als Standard-7B-Modell wählen:** Es war 2023–2024 der Community-Standard (7B, ~4,1 GB Download, `ollama run mistral`), erzielt aber inzwischen in veröffentlichten Benchmarks bei gleichem RAM-Bedarf schlechtere Werte als neuere Modelle wie Qwen3 8B (Coding) und Llama 3.1 8B (englisches Reasoning). Wenn ein Tutorial oder Tool standardmäßig `ollama run mistral` verwendet, wechseln Sie zu `ollama run qwen3:8b` oder `ollama run llama3.1:8b-instruct` für bessere Ergebnisse ohne mehr RAM. Hinweis: Dies ist ein anderes, nicht verwandtes Modell als die aktuelle 24B+-Reihe „Mistral Small 3.x", die deutlich mehr RAM benötigt als jedes Modell auf dieser Seite.',
             '**Ein Modell herunterladen, ohne zuerst den verfügbaren RAM zu prüfen:** Wenn Sie ein Modell herunterladen, das den verfügbaren RAM überschreitet, fällt Ollama auf langsame CPU-Inferenz mit partiellem Disk-Swapping zurück – manchmal unter 1 Tok/s. Führen Sie immer zuerst `free -h` (Linux/macOS) aus oder überprüfen Sie den Task-Manager (Windows), bevor Sie Modelle über 7B herunterladen.',
           ],
         },
@@ -1813,23 +1818,23 @@ schema: {
             },
             {
               q: 'Welches Modell ist am besten für Coding-Aufgaben?',
-              a: 'Qwen3 8B führt bei HumanEval unter den fünf Modellen. Für noch besseres Coding verwenden Sie die dedizierte Code-Variante: `ollama run qwen2.5-coder:7b`. Phi-4 Mini 3.8B ist das beste Coding-Modell, wenn Sie auf 4–6 GB RAM beschränkt sind (70 % HumanEval bei 2,5 GB RAM).',
+              a: 'Llama 3.1 8B hat in dieser Tabelle den höchsten HumanEval-Wert der fünf Modelle (72 %, gegenüber 70 % bei Phi-4 Mini 3.8B und 57,3 % bei Qwen3 8B); Qwen3 8B ist die Wahl für mehrsprachige Nutzung. Für ein dediziertes Coding-Modell probieren Sie `ollama run qwen2.5-coder:7b`. Bei 4–6 GB RAM hat Phi-4 Mini 3.8B den höchsten HumanEval-Wert der hier genannten Modelle (70 % bei 2,5 GB RAM).',
             },
             {
               q: 'Welches Modell sollte ich für nicht-englische Sprachen verwenden?',
-              a: 'Qwen3 8B unterstützt nativ 29+ Sprachen, darunter Chinesisch, Japanisch, Koreanisch, Arabisch und alle wichtigen europäischen Sprachen. Es verarbeitet nicht-englische Texte effizienter als Llama.',
+              a: 'Qwen3 8B unterstützt nativ 29+ Sprachen, darunter Chinesisch, Japanisch, Koreanisch, Arabisch und alle wichtigen europäischen Sprachen. Laut Community-Berichten benötigt sein Tokenizer bei nicht-englischen Texten tendenziell weniger Tokens als der von Llama; die Ergebnisse variieren je nach Text.',
             },
             {
               q: 'Sind diese Modelle sicher für die Verwendung mit privaten Daten?',
-              a: 'Ja – alle fünf Modelle laufen vollständig auf Ihrer Hardware. Kein Prompt-Text, Kontext oder Ausgabe wird an externe Server übertragen. Lokale Inferenz ist für sensible Daten von Natur aus privater als Cloud-APIs.',
+              a: 'Die Inferenz läuft auf Ihrer eigenen Hardware, daher werden Prompts nicht an eine Cloud-API gesendet; Ollama kann für Modell-Downloads und Update-Prüfungen weiterhin das Netzwerk nutzen, sofern Sie dies nicht deaktivieren. Bei sensiblen Daten vermeidet das die Weitergabe von Prompts an einen Cloud-Anbieter, ist aber keine Compliance-Garantie.',
             },
             {
               q: 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?',
-              a: 'Lokale Inferenz via Ollama überträgt keine Daten an externe Server, was eine wesentliche DSGVO-Anforderung (Artikel 28, Auftragsverarbeitung) erfüllt. Gemäß BSI-Grundschutz-Katalogen sollten Sie Modellname, Version und Lizenz dokumentieren. Für die sauberste EU-Herkunftsnarrative bietet Mistral AI (Frankreich) Apache-2.0-lizenzierte Modelle, wobei die aktuellen Mistral-Small-Versionen (24B+) weit über dem RAM-Bereich dieser Seite liegen. Für regulierte EU-Sektoren wie Gesundheitswesen und Finanzdienstleistungen sind Llama 3.1 8B und Qwen3 8B in diesem 4–8-GB-Bereich die praktikableren Empfehlungen.',
+              a: 'Lokale Inferenz via Ollama sendet Prompts nicht an einen externen Cloud-Anbieter, wodurch sich die Frage nach einer Auftragsverarbeitung (Art. 28 DSGVO) für die Inferenzebene verringern kann; ob Ihre Verarbeitung insgesamt DSGVO-konform ist, hängt von Rechtsgrundlage, technischen und organisatorischen Maßnahmen und Zweck ab. Es empfiehlt sich, Modellname, Version und Lizenz zu dokumentieren. Dies ist keine Rechtsberatung; fragen Sie im Zweifel Ihren Datenschutzbeauftragten. Für die sauberste EU-Herkunftsnarrative bietet Mistral AI (Frankreich) Apache-2.0-lizenzierte Modelle, wobei die aktuellen Mistral-Small-Versionen (24B+) weit über dem RAM-Bereich dieser Seite liegen. Für regulierte EU-Sektoren wie Gesundheitswesen und Finanzdienstleistungen sind Llama 3.1 8B und Qwen3 8B in diesem 4–8-GB-Bereich die praktikableren Empfehlungen.',
             },
             {
               q: 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?',
-              a: 'Ja – lokale LLMs via Ollama eignen sich besonders gut für KMU, die sensible Geschäftsdaten schützen müssen. Kein Datentransfer an Cloud-APIs bedeutet weniger Compliance-Risiko und niedrigere laufende Kosten. Für den Mittelstand empfiehlt sich Llama 3.1 8B für allgemeines englisches Reasoning oder Qwen3 8B für mehrsprachige und Coding-Workflows. Die BSI-IT-Grundschutz-Kompendium-Anforderungen für den Einsatz von KI-Systemen werden durch lokal ausgeführte, versionierte Modelle erfüllt.',
+              a: 'Ja – lokale LLMs via Ollama können für KMU mit sensiblen Geschäftsdaten eine Option sein. Kein Datentransfer an Cloud-APIs kann einzelne Compliance-Fragen vereinfachen (z. B. Auftragsverarbeitung für die Inferenzebene); die Gesamtbewertung hängt von Ihrer Verarbeitung ab. Niedrigere laufende Kosten sind möglich, hängen aber von Hardware und Nutzung ab. Für den Mittelstand empfiehlt sich Llama 3.1 8B für allgemeines englisches Reasoning oder Qwen3 8B für mehrsprachige und Coding-Workflows. Lokal ausgeführte, versionierte Modelle können die Dokumentation im Rahmen von IT-Sicherheitskonzepten (z. B. nach BSI IT-Grundschutz) erleichtern; sie ersetzen keine eigene Prüfung. Dies ist keine Rechtsberatung.',
             },
             {
               q: 'Wie lange dauert das Herunterladen dieser Modelle?',
@@ -1863,7 +1868,7 @@ schema: {
         'headline': 'Llama, Phi, Gemma, Qwen: Beste Einsteiger-LLMs 2026',
         'description': 'Llama 3.2 3B = 2,5 GB RAM, 25–45 Tok/s. Phi-4 Mini = 2,5 GB. Gemma 4 E2B = 1,7 GB, 40–60 Tok/s. Llama 3.1 8B und Qwen3 8B hinzugefügt. Vergleichstabelle + Ollama-Befehle. Juli 2026.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-09',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1905,11 +1910,11 @@ schema: {
           { '@type': 'Question', 'name': 'Wie führe ich diese Modelle mit Ollama aus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Installieren Sie Ollama von ollama.com, dann führen Sie aus: `ollama run llama3.2:3b` für das empfohlene Einstiegsmodell. Ollama lädt das Modell beim ersten Ausführen herunter.' } },
           { '@type': 'Question', 'name': 'Ist Llama 3.2 3B gut genug für alltägliche Aufgaben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja für: Zusammenfassungen, einfaches Q&A, grundlegende Code-Erklärungen und konversationellen Chat. Nein für: mehrstufiges Reasoning, komplexes Coding und langes strukturiertes Schreiben.' } },
           { '@type': 'Question', 'name': 'Was ist der Unterschied zwischen 3B- und 7B-Modellen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein 7B-Modell liefert deutlich bessere Ausgaben bei komplexen Anweisungen. Ein 3B-Modell verwendet halb so viel RAM und läuft 2–3× schneller. Die Wahl wird durch den verfügbaren RAM bestimmt.' } },
-          { '@type': 'Question', 'name': 'Welches Modell ist am besten für Coding-Aufgaben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B führt bei HumanEval. Für noch besseres Coding: `ollama run qwen2.5-coder:7b`. Phi-4 Mini ist das beste Coding-Modell bei 4–6 GB RAM (70 % HumanEval bei 2,5 GB RAM).' } },
+          { '@type': 'Question', 'name': 'Welches Modell ist am besten für Coding-Aufgaben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.1 8B hat den höchsten HumanEval-Wert der fünf Modelle (72 %, Phi-4 Mini 70 %, Qwen3 8B 57,3 %); Qwen3 8B ist die Wahl für Mehrsprachigkeit. Für ein dediziertes Coding-Modell: `ollama run qwen2.5-coder:7b`. Bei 4–6 GB RAM hat Phi-4 Mini den höchsten HumanEval-Wert (70 % bei 2,5 GB RAM).' } },
           { '@type': 'Question', 'name': 'Welches Modell sollte ich für nicht-englische Sprachen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B unterstützt nativ 29+ Sprachen, darunter Chinesisch, Japanisch, Koreanisch, Arabisch und alle wichtigen europäischen Sprachen.' } },
-          { '@type': 'Question', 'name': 'Sind diese Modelle sicher für die Verwendung mit privaten Daten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja – alle fünf Modelle laufen vollständig auf Ihrer Hardware. Kein Prompt-Text oder Ausgabe wird an externe Server übertragen. Lokale Inferenz ist für sensible Daten privater als Cloud-APIs.' } },
-          { '@type': 'Question', 'name': 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Lokale Inferenz via Ollama überträgt keine Daten an externe Server, was DSGVO Artikel 28 erfüllt. Gemäß BSI-Grundschutz-Katalogen Modellname, Version und Lizenz dokumentieren. Für regulierte EU-Sektoren sind Llama 3.1 8B und Qwen3 8B in diesem RAM-Bereich die praktikableren Empfehlungen; Mistral AI (Frankreich, Apache 2.0) bietet die sauberste EU-Herkunftsnarrative, allerdings erst ab 24B+.' } },
-          { '@type': 'Question', 'name': 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja – lokale LLMs via Ollama eignen sich besonders für KMU mit sensiblen Geschäftsdaten. Kein Datentransfer bedeutet weniger Compliance-Risiko. Llama 3.1 8B für allgemeines Reasoning, Qwen3 8B für mehrsprachige und Coding-Workflows.' } },
+          { '@type': 'Question', 'name': 'Sind diese Modelle sicher für die Verwendung mit privaten Daten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die Inferenz läuft auf Ihrer eigenen Hardware, daher werden Prompts nicht an eine Cloud-API gesendet; Ollama kann für Modell-Downloads und Update-Prüfungen weiterhin das Netzwerk nutzen, sofern Sie dies nicht deaktivieren. Bei sensiblen Daten vermeidet das die Weitergabe von Prompts an einen Cloud-Anbieter, ist aber keine Compliance-Garantie.' } },
+          { '@type': 'Question', 'name': 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Lokale Inferenz via Ollama sendet Prompts nicht an einen externen Cloud-Anbieter, wodurch sich die Frage nach einer Auftragsverarbeitung (Art. 28 DSGVO) für die Inferenzebene verringern kann; die DSGVO-Konformität insgesamt hängt von Rechtsgrundlage, Maßnahmen und Zweck ab. Modellname, Version und Lizenz sollten dokumentiert werden. Keine Rechtsberatung. Für regulierte EU-Sektoren sind Llama 3.1 8B und Qwen3 8B in diesem RAM-Bereich die praktikableren Empfehlungen; Mistral AI (Frankreich, Apache 2.0) bietet die sauberste EU-Herkunftsnarrative, allerdings erst ab 24B+.' } },
+          { '@type': 'Question', 'name': 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja – lokale LLMs via Ollama können für KMU mit sensiblen Geschäftsdaten eine Option sein. Kein Datentransfer an Cloud-APIs kann einzelne Compliance-Fragen vereinfachen; die Gesamtbewertung hängt von Ihrer Verarbeitung ab. Llama 3.1 8B für allgemeines Reasoning, Qwen3 8B für mehrsprachige und Coding-Workflows.' } },
           { '@type': 'Question', 'name': 'Wie lange dauert das Herunterladen dieser Modelle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei 100 Mbit/s: Llama 3.2 1B (1,3 GB) ~2 Minuten. Gemma 4 E2B (1,6 GB) ~2 Minuten. Llama 3.2 3B (2 GB) ~3 Minuten. Phi-4 Mini (2,3 GB) ~3 Minuten. Llama 3.1 8B und Qwen3 8B (~5 GB je) ~6–7 Minuten. Modelle werden nach dem ersten Download zwischengespeichert.' } },
           { '@type': 'Question', 'name': 'Kann ich mehrere Modelle auf derselben Maschine betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja – alle fünf können gleichzeitig auf der Festplatte koexistieren. Planen Sie 15–20 GB ein, wenn Sie alle fünf installieren. Ollama lädt jeweils ein Modell und entlädt es nach 5 Minuten Inaktivität.' } },
         ],
@@ -1936,7 +1941,7 @@ schema: {
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-fr.webp',
       twitterDescription: 'Classés : Llama 3.2 3B (2,5 Go, 25-45 tok/s), Phi-4 Mini (2,5 Go, meilleur reasoning), Gemma 4 E2B (1,7 Go, plus rapide), Llama 3.1 8B, Qwen3 8B. LLMs débutants 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9 min de lecture',
       educationalLevel: 'Beginner',
       audience: 'Débutants souhaitant exécuter leur premier LLM local sur du matériel grand public',
@@ -2036,7 +2041,7 @@ schema: {
           title: '#1 Meta Llama 3.2 3B — Meilleur modèle débutant',
           content: [
             '**Meta Llama 3.2 3B est le meilleur point de départ pour la plupart des utilisateurs.** Il se télécharge en moins de 5 minutes, fonctionne sur toute machine avec 4 Go de RAM et offre une meilleure compréhension des instructions que les modèles 3B précédents. Il utilise une fenêtre de contexte de 128K — bien supérieure aux modèles de taille comparable.',
-            'Lors de nos tests sur un CPU laptop 8 cœurs, Llama 3.2 3B génère 25–45 tokens/s. Sur Apple M3 Pro, il atteint 70–90 tokens/s. La qualité convient pour la synthèse, le Q&A et le code simple, mais reste en retrait des modèles 7B pour le raisonnement multi-étapes.',
+            'Comptez environ 25–45 tokens/s sur un CPU de laptop 8 cœurs et nettement plus sur Apple Silicon comme le M3 Pro (estimations approximatives ; PromptQuorum n\'a pas mesuré cela ici, et la vitesse varie selon le matériel et les réglages). La qualité convient pour la synthèse, le Q&A et le code simple, mais reste en retrait des modèles 7B pour le raisonnement multi-étapes.',
           ],
           rows: [
             { 'Spécification': 'Paramètres', 'Valeur': '3B' },
@@ -2070,7 +2075,7 @@ schema: {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B — Modèle 2B le plus rapide',
           content: [
-            '**Gemma 4 E2B est le modèle 2B mis à jour de Google et l\'option la plus rapide pour l\'inférence CPU uniquement.** Il génère 40–60 tokens/s sur un CPU laptop milieu de gamme — environ deux fois plus vite que Llama 3.2 3B. La fenêtre de contexte passe de 8K (Gemma 2) à 128K tokens.',
+            '**Gemma 4 E2B est le modèle 2B mis à jour de Google et l\'une des options les plus rapides pour l\'inférence CPU uniquement.** Il génère environ 40–60 tokens/s sur un CPU laptop milieu de gamme (estimation approximative, pas une mesure de PromptQuorum ; variable selon le matériel). La fenêtre de contexte passe de 8K (Gemma 2) à 128K tokens.',
             'Gemma 4 E2B est un bon choix quand la rapidité de réponse prime, sur les machines avec ≤4 Go de RAM, ou comme modèle de test pour vérifier votre configuration avant de télécharger des modèles plus lourds.',
           ],
           rows: [
@@ -2087,7 +2092,7 @@ schema: {
           id: 'llama-3-3-8b',
           title: '#4 Meta Llama 3.1 8B — Meilleur polyvalent 7B/8B',
           content: [
-            '**Meta Llama 3.1 8B est le généraliste de référence à cette taille, avec un score de 72 % sur HumanEval et un raisonnement solide en anglais.** Il remplace Mistral 7B comme choix polyvalent 7B/8B de cette liste — Mistral 7B était le standard communautaire en 2023-2024, mais il est désormais dépassé au même niveau de RAM et doit être considéré comme une option historique (voir Erreurs courantes ci-dessous pour comprendre pourquoi nous ne le recommandons plus par défaut).',
+            '**Meta Llama 3.1 8B est le généraliste de référence à cette taille, avec un score de 72 % sur HumanEval et un raisonnement solide en anglais.** Il remplace Mistral 7B comme choix polyvalent 7B/8B de cette liste — Mistral 7B était le standard communautaire en 2023-2024, mais des modèles plus récents obtiennent de meilleurs scores aux benchmarks publiés au même niveau de RAM et doit être considéré comme une option historique (voir Erreurs courantes ci-dessous pour comprendre pourquoi nous ne le recommandons plus par défaut).',
             'Pour les machines avec 8 Go de RAM, Llama 3.1 8B est une progression naturelle par rapport aux modèles 3B. Il gère de manière plus fiable les textes longs, les instructions complexes et les conversations multi-tours que tout modèle 3B, avec une fenêtre de contexte de 128K.',
           ],
           rows: [
@@ -2131,7 +2136,7 @@ schema: {
           ],
           columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Contexte', 'Idéal pour'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-fr.webp',
-          imageCaption: 'Cinq modèles LLM débutants comparés par RAM, vitesse d\'inférence CPU, fenêtre de contexte et cas d\'usage — tous testés en Q4_K_M via Ollama. Llama 3.2 3B est le premier modèle recommandé ; Gemma 4 E2B est le plus rapide avec 1.7 Go de RAM.',
+          imageCaption: 'Cinq modèles LLM débutants comparés par RAM, vitesse d\'inférence CPU, fenêtre de contexte et cas d\'usage — données issues des fiches de modèles et de la bibliothèque Ollama ; les vitesses sont des estimations approximatives, non des mesures de PromptQuorum. Llama 3.2 3B est le premier modèle recommandé ; Gemma 4 E2B est le plus rapide avec 1.7 Go de RAM.',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -2142,7 +2147,7 @@ schema: {
             '**8 Go de RAM, premier modèle** : `ollama run llama3.2:3b` — meilleur équilibre qualité/RAM pour une première expérience.',
             '**4–6 Go de RAM, raisonnement/code** : `ollama run phi4-mini` — 68 % MMLU, 70 % HumanEval avec seulement 2.5 Go de RAM.',
             '**8 Go de RAM, usage sérieux** : `ollama run llama3.1:8b-instruct` ou `ollama run qwen3:8b` — pour les documents longs et les instructions complexes.',
-            '**Principalement du code** : `ollama run qwen3:8b` — meilleur score HumanEval de cette liste ; solide en Python, JavaScript et SQL.',
+            '**Principalement du code** : `ollama run llama3.1:8b-instruct` — valeur HumanEval la plus élevée de cette liste (72 %) ; pour un modèle dédié au code, essayez `ollama run qwen2.5-coder:7b`.',
             '**Langue non anglaise** : `ollama run qwen3:8b` — support natif de 29+ langues, sans surcharge de traduction.',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-fr.svg',
@@ -2152,10 +2157,11 @@ schema: {
           id: 'regional-context',
           title: 'Quel modèle choisir selon votre région ?',
           content: [
-            '**UE / RGPD** : Pour les organisations européennes traitant des données personnelles localement, la provenance du modèle compte pour la documentation de conformité. Les directives allemandes du BSI exigent de documenter l\'origine et le type de licence des modèles pour les systèmes IA utilisés en contexte professionnel. Llama (Meta/USA), Gemma (Google/USA) et Qwen (Alibaba/Chine) sont tous techniquement utilisables sous RGPD pour l\'inférence locale — pour la justification de provenance UE la plus simple, Mistral AI (France) propose des modèles sous licence Apache 2.0 ; la CNIL recommande d\'ailleurs l\'inférence locale pour les professionnels manipulant des données sensibles (documents juridiques, dossiers médicaux, analyses financières). Notez toutefois que les versions actuelles de Mistral Small (24B+) dépassent la plage de RAM débutant de 4–8 Go de cette page ; consultez le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour connaître le palier GPU nécessaire pour les exécuter.',
-            '**Japon (METI)** : Pour les workflows en japonais, Qwen3 8B est le premier modèle approprié — la tokenisation japonaise native produit une meilleure efficacité sur les textes japonais que Llama. Commande : `ollama run qwen3:8b`. Les directives de gouvernance IA du METI exigent la documentation du nom et de la version du modèle — les cinq modèles de cette page utilisent des tags Ollama versionnés satisfaisant cette exigence.',
-            '**Chine** : Qwen3 8B (Alibaba) est le premier modèle naturel pour les workflows en chinois. La tokenisation chinoise native et le support de 29+ langues en font le standard pour les workflows Mandarin. Pour les déploiements d\'entreprise chinois sous la loi sur la sécurité des données (数据安全法), Qwen3 exécuté localement via Ollama satisfait les exigences de localisation des données.',
+            '**UE / RGPD** : Pour les organisations européennes traitant des données personnelles localement, la provenance du modèle compte pour la documentation de conformité. Documenter l\'origine et le type de licence des modèles est une bonne pratique pour les systèmes IA utilisés en contexte professionnel. Llama (Meta/USA), Gemma (Google/USA) et Qwen (Alibaba/Chine) : l\'inférence locale ne suffit pas à écarter l\'un de ces modèles au regard du RGPD, et la licéité de votre déploiement dépend de la base juridique, des mesures techniques et organisationnelles et de la finalité — pour la justification de provenance UE la plus simple, Mistral AI (France) propose des modèles sous licence Apache 2.0 ; l\'inférence locale peut aussi limiter l\'exposition des données sensibles (documents juridiques, dossiers médicaux, analyses financières). Notez toutefois que les versions actuelles de Mistral Small (24B+) dépassent la plage de RAM débutant de 4–8 Go de cette page ; consultez le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour connaître le palier GPU nécessaire pour les exécuter.',
+            '**Japon (METI)** : Pour les workflows en japonais, Qwen3 8B est un bon premier choix — selon des retours de la communauté, le tokenizer de Qwen3 tend à utiliser moins de tokens sur les textes japonais que celui de Llama ; les résultats varient selon le texte. Commande : `ollama run qwen3:8b`. Documenter le nom et la version du modèle est une bonne pratique de gouvernance IA au Japon (voir les lignes directrices IA du METI) — les cinq modèles de cette page utilisent des tags Ollama versionnés qui facilitent cela.',
+            '**Chine** : Qwen3 8B (Alibaba) est le premier modèle naturel pour les workflows en chinois. La tokenisation chinoise native et le support de 29+ langues en font le standard pour les workflows Mandarin. Pour les déploiements d\'entreprise chinois sous la loi sur la sécurité des données (数据安全法), l\'inférence exécutée localement via Ollama garde les prompts et les sorties sur votre matériel, ce qui peut simplifier les questions de localisation des données pour cette couche ; la conformité de votre déploiement dépend de l\'ensemble de votre traitement.',
             '**Corée** : Parmi ces cinq choix pour débutants, Qwen3 8B offre la meilleure tokenisation coréenne native. Pour des modèles locaux dédiés au coréen au-delà de ce niveau débutant, consultez [Meilleurs modèles de langue coréenne pour usage local](/fr/prompt-bites/best-korean-language-models-local).',
+            '**Information générale, pas un conseil juridique** : les notes régionales ci-dessus sont des informations générales et ne constituent pas un conseil juridique ; vérifiez les exigences applicables à votre situation auprès d\'un professionnel qualifié.',
           ],
         },
         nextSteps: {
@@ -2226,15 +2232,15 @@ schema: {
             },
             {
               q: 'Quel modèle est le meilleur pour le code ?',
-              a: 'Qwen3 8B mène sur HumanEval. Pour encore mieux : `ollama run qwen2.5-coder:7b`. Phi-4 Mini est le meilleur modèle de code avec 4–6 Go de RAM (70 % HumanEval à 2.5 Go).',
+              a: 'Llama 3.1 8B affiche la valeur HumanEval la plus élevée des cinq modèles de ce tableau (72 %, contre 70 % pour Phi-4 Mini 3.8B et 57,3 % pour Qwen3 8B) ; Qwen3 8B est le choix pour l\'usage multilingue. Pour un modèle dédié au code, essayez `ollama run qwen2.5-coder:7b`. Avec 4–6 Go de RAM, Phi-4 Mini affiche la valeur HumanEval la plus élevée des modèles présentés ici (70 % à 2.5 Go).',
             },
             {
               q: 'Quel modèle utiliser pour les langues non anglaises ?',
-              a: 'Qwen3 8B supporte nativement 29+ langues dont le chinois, le japonais, le coréen, l\'arabe et toutes les principales langues européennes. Il traite les textes non anglophones plus efficacement que Llama.',
+              a: 'Qwen3 8B supporte nativement 29+ langues dont le chinois, le japonais, le coréen, l\'arabe et toutes les principales langues européennes. Selon des retours de la communauté, son tokenizer tend à utiliser moins de tokens que celui de Llama sur les textes non anglophones ; les résultats varient selon le texte.',
             },
             {
               q: 'Ces modèles sont-ils sûrs avec des données privées ?',
-              a: 'Oui — les cinq modèles tournent entièrement sur votre matériel. Aucune donnée n\'est transmise à des serveurs externes. L\'inférence locale est intrinsèquement plus privée que les API cloud pour les données sensibles.',
+              a: 'L\'inférence s\'exécute sur votre propre matériel, donc les prompts ne sont pas envoyés à une API cloud ; Ollama peut toutefois accéder au réseau pour télécharger des modèles et vérifier les mises à jour, sauf si vous le désactivez. Pour les données sensibles, cela évite de partager les prompts avec un fournisseur cloud, mais ce n\'est pas une garantie de conformité.',
             },
             {
               q: 'Combien de temps prend le téléchargement de ces modèles ?',
@@ -2268,7 +2274,7 @@ schema: {
         'headline': 'Llama, Phi, Gemma, Qwen : Meilleurs LLMs Débutants 2026',
         'description': 'Llama 3.2 3B = 2.5 Go RAM, 25–45 tok/s. Phi-4 Mini = 2.5 Go. Gemma 4 E2B = 1.7 Go, 40–60 tok/s. Llama 3.1 8B et Qwen3 8B ajoutés. Tableau comparatif + commandes Ollama. Juillet 2026.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-09',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -2310,9 +2316,9 @@ schema: {
           { '@type': 'Question', 'name': 'Comment exécuter ces modèles avec Ollama ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Installez Ollama depuis ollama.com, puis lancez : `ollama run llama3.2:3b`. Ollama télécharge le modèle au premier lancement.' } },
           { '@type': 'Question', 'name': 'Llama 3.2 3B est-il suffisant pour les tâches quotidiennes ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui pour : synthèse, Q&A simple, explication de code de base, chat. Non pour : raisonnement multi-étapes, code complexe, rédaction structurée longue.' } },
           { '@type': 'Question', 'name': 'Quelle est la différence entre les modèles 3B et 7B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Un 7B produit des résultats nettement meilleurs sur les instructions complexes. Un 3B utilise moitié moins de RAM et tourne 2–3× plus vite.' } },
-          { '@type': 'Question', 'name': 'Quel modèle est le meilleur pour le code ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B mène sur HumanEval. Pour encore mieux : `ollama run qwen2.5-coder:7b`. Phi-4 Mini est le meilleur avec 4–6 Go de RAM (70 % HumanEval).' } },
+          { '@type': 'Question', 'name': 'Quel modèle est le meilleur pour le code ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.1 8B affiche la valeur HumanEval la plus élevée des cinq modèles (72 %, contre 70 % pour Phi-4 Mini et 57,3 % pour Qwen3 8B) ; Qwen3 8B est le choix multilingue. Pour un modèle dédié au code : `ollama run qwen2.5-coder:7b`.' } },
           { '@type': 'Question', 'name': 'Quel modèle utiliser pour les langues non anglaises ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B supporte nativement 29+ langues dont le chinois, le japonais, le coréen, l\'arabe et toutes les principales langues européennes.' } },
-          { '@type': 'Question', 'name': 'Ces modèles sont-ils sûrs avec des données privées ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — les cinq modèles tournent entièrement sur votre matériel. Aucune donnée n\'est transmise à des serveurs externes.' } },
+          { '@type': 'Question', 'name': 'Ces modèles sont-ils sûrs avec des données privées ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'inférence s\'exécute sur votre propre matériel, donc les prompts ne sont pas envoyés à une API cloud ; Ollama peut toutefois accéder au réseau pour télécharger des modèles et vérifier les mises à jour, sauf si vous le désactivez. Pour les données sensibles, cela évite de partager les prompts avec un fournisseur cloud, mais ce n\'est pas une garantie de conformité.' } },
           { '@type': 'Question', 'name': 'Combien de temps prend le téléchargement de ces modèles ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sur 100 Mb/s : Llama 3.2 1B (1,3 Go) ~2 min. Gemma 4 E2B (1,6 Go) ~2 min. Llama 3.2 3B (2 Go) ~3 min. Phi-4 Mini (2,3 Go) ~3 min. Llama 3.1 8B et Qwen3 8B (~5 Go chacun) ~6-7 min. Mis en cache après le premier téléchargement.' } },
           { '@type': 'Question', 'name': 'Puis-je exécuter plusieurs modèles sur la même machine ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — les cinq peuvent coexister sur le disque. Prévoyez 15–20 Go pour les cinq. Ollama charge un modèle à la fois et le décharge après 5 minutes d\'inactivité.' } },
         ],
@@ -2339,7 +2345,7 @@ schema: {
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-ja.webp',
       twitterDescription: '比較評価：Llama 3.2 3B（2.5GB・25-45トークン/秒）、Phi-4 Mini（2.5GB・最高の推論）、Gemma 4 E2B（1.7GB・最速）、Llama 3.1 8B、Qwen3 8B。初心者向けLLM5つ 2026。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '9分で読める',
       educationalLevel: 'Beginner',
       audience: '消費者向けハードウェアでローカルLLMを初めて使用する初心者',
@@ -2439,7 +2445,7 @@ schema: {
           title: '#1 Meta Llama 3.2 3B — 総合的に最適な入門モデル',
           content: [
             '**Meta Llama 3.2 3Bはほとんどのユーザーにとって最良の出発点です。** 5分以内にダウンロードでき、4 GB RAMのどのマシンでも動作し、以前の3Bモデルより明らかに優れた指示追従性能を発揮します。128Kコンテキストウィンドウを使用——同サイズモデルより大幅に広い。',
-            '8コアのノートPC CPUでのテストでは、Llama 3.2 3Bは25〜45トークン/秒を生成します。Apple M3 Proでは70〜90トークン/秒に達します。要約・Q&A・簡単なコーディングタスクには十分な品質ですが、多段階推論では7Bモデルに及びません。',
+            'Llama 3.2 3Bは8コアのノートPC CPUで25〜45トークン/秒程度、M3 ProなどのApple Siliconではそれ以上が目安です（大まかな推定値で、PromptQuorumはここで計測していません。速度はハードウェアや設定により異なります）。要約・Q&A・簡単なコーディングタスクには十分な品質ですが、多段階推論では7Bモデルに及びません。',
           ],
           rows: [
             { 'スペック': 'パラメータ数', '値': '3B' },
@@ -2473,7 +2479,7 @@ schema: {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B — 最速の2Bモデル',
           content: [
-            '**Gemma 4 E2BはGoogleの更新された2Bモデルで、CPUのみの推論に最も高速な選択肢です。** ミッドレンジのノートPC CPUで40〜60トークン/秒を生成——同ハードウェアでLlama 3.2 3Bの約2倍の速度。Gemma 3は前バージョンを大幅に改善：コンテキストウィンドウが8K（Gemma 2）から128Kトークンに拡大し、文書タスクの主要な制限が解消されました。',
+            '**Gemma 4 E2BはGoogleの更新された2Bモデルで、CPUのみの推論で比較的高速な選択肢の一つです。** ミッドレンジのノートPC CPUで約40〜60トークン/秒を生成します（大まかな推定値でPromptQuorumの測定値ではなく、ハードウェアにより異なります）。Gemma 4 E2Bは以前のGemma世代を大幅に改善：コンテキストウィンドウが8K（Gemma 2）から128Kトークンに拡大し、文書タスクの主要な制限が解消されました。',
             'Gemma 4 E2Bは応答速度が最優先の場合、≤4 GB RAMのマシン、またはより大きなモデルをダウンロードする前にローカルLLMセットアップを確認するテストモデルとして適しています。',
           ],
           rows: [
@@ -2490,7 +2496,7 @@ schema: {
           id: 'llama-3-3-8b',
           title: '#4 Meta Llama 3.1 8B — 最良の7B/8Bオールラウンダー',
           content: [
-            '**Meta Llama 3.1 8Bは現在このサイズでの汎用オールラウンダーで、HumanEval 72%を達成し、堅実な英語推論力を持ちます。** このリストの7B/8B枠としてMistral 7Bを置き換えました——Mistral 7Bは2023〜2024年のコミュニティ標準でしたが、現在は同じRAM階層で性能面で劣り、レガシーな選択肢として扱う方が適切です（デフォルトとして推奨しなくなった理由は下記の「よくある失敗」を参照）。',
+            '**Meta Llama 3.1 8Bは現在このサイズでの汎用オールラウンダーで、HumanEval 72%を達成し、堅実な英語推論力を持ちます。** このリストの7B/8B枠としてMistral 7Bを置き換えました——Mistral 7Bは2023〜2024年のコミュニティ標準でしたが、現在は同じRAM階層でより新しいモデルが公開ベンチマークで上回る傾向があり、レガシーな選択肢として扱う方が適切です（デフォルトとして推奨しなくなった理由は下記の「よくある失敗」を参照）。',
             '8 GB RAMのマシンでは、Llama 3.1 8Bは3Bモデルからの自然なステップアップです。長いテキスト、複雑な指示、多段階会話をどの3Bモデルよりも確実に処理し、128Kコンテキストウィンドウを備えています。',
           ],
           rows: [
@@ -2534,7 +2540,7 @@ schema: {
           ],
           columns: ['モデル', 'RAM', '速度（CPU）', 'コンテキスト', '最適用途'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-ja.webp',
-          imageCaption: '5つの初心者向けローカルLLMをRAM・CPU推論速度・コンテキストウィンドウ・ユースケースで比較——すべてOllama経由Q4_K_M量子化でベンチマーク。Llama 3.2 3Bが推奨の最初のモデル；Gemma 4 E2Bは1.7 GBで最速。',
+          imageCaption: '5つの初心者向けローカルLLMをRAM・CPU推論速度・コンテキストウィンドウ・ユースケースで比較——仕様はモデルカードとOllamaライブラリに基づきます。速度は大まかな推定値で、PromptQuorumの測定値ではありません。Llama 3.2 3Bが推奨の最初のモデル；Gemma 4 E2Bは1.7 GBで最速。',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -2544,8 +2550,8 @@ schema: {
             '**8 GB RAM、最初のモデル**：`ollama run llama3.2:3b` — 最初の体験に品質とRAMの最良バランス。',
             '**4〜6 GB RAM、推論/コーディング**：`ollama run phi4-mini` — 68% MMLU、70% HumanEval（わずか2.5 GB RAM）。構造化タスクでLlama 3.2 3Bより優秀。',
             '**8 GB RAM、本格的な使用**：`ollama run llama3.1:8b-instruct` または `ollama run qwen3:8b` — 長文書・複雑な指示向けのステップアップ。',
-            '**主にコーディングタスク**：`ollama run qwen3:8b` — このリストで最高のHumanEvalスコア；Python・JavaScript・SQLに強い。',
-            '**日本語・多言語**：`ollama run qwen3:8b` — 29言語以上のネイティブサポート、翻訳オーバーヘッドなし。日本語テキストでのトークン効率が30〜40%向上。',
+            '**主にコーディングタスク**：`ollama run llama3.1:8b-instruct` — このリストで最も高いHumanEval値（72%）；コーディング専用なら `ollama run qwen2.5-coder:7b` を試してください。',
+            '**日本語・多言語**：`ollama run qwen3:8b` — 29言語以上のネイティブサポート、翻訳オーバーヘッドなし。',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-ja.svg',
           imageCaption: 'RAMに基づくモデル選択ガイド — ≤4 GB RAMでGemma 4 E2B、8 GBでLlama 3.2 3B（最初のモデルとして最適）、8 GB+で多言語・コーディング用途にQwen3 8B。すべて手動設定なしで`ollama run`で起動。',
@@ -2554,10 +2560,11 @@ schema: {
           id: 'regional-context',
           title: '地域に応じたモデル選択は？',
           content: [
-            '**日本（METI）**：日本語ワークフローには、Qwen3 8Bが正しい最初のモデルです——ネイティブ日本語トークン化によりLlamaより30〜40%優れたトークン効率を実現。コマンド：`ollama run qwen3:8b`。2024年のMETI AIガバナンスガイドラインでは、モデル名とバージョンの文書化が求められています——ここに記載された5つのモデルすべてに、これを満たすバージョン付きOllamaタグがあります。',
-            '**東アジア（データ主権）**：中国語・韓国語ワークフローにもQwen3 8Bが推奨されます。29言語以上のネイティブサポートにより、アジア太平洋地域全体で最も効率的な多言語モデルです。Ollama経由のローカル推論はデータをローカルに保持するため、APAC地域のデータ越境規制要件を満たします。',
-            '**グローバル（EU・その他）**：EU組織がローカルで個人データを処理する場合、モデルの出所はコンプライアンス文書上重要です。ドイツBSIガイドラインでは、業務でAIシステムを使用する際にモデルの出所とライセンス種別の文書化が求められています。Llama（Meta／米国）、Gemma（Google／米国）、Qwen（Alibaba／中国）はいずれもGDPR下でローカル推論に技術的に使用可能です——最もクリーンなEU出自を求めるなら、Mistral AI（フランス）がApache 2.0ライセンスのモデルを提供していますが、現行のMistral Small系（24B以上）はこのページの初心者向け4〜8 GB RAM範囲を超えます。必要なGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
+            '**日本（METI）**：日本語ワークフローには、Qwen3 8Bは最初のモデルとして有力な選択肢です——コミュニティの報告では、Qwen3のトークナイザーは日本語テキストでLlamaより少ないトークンで済む傾向がありますが、結果はテキストによって異なります。コマンド：`ollama run qwen3:8b`。モデル名とバージョンの文書化は、日本におけるAIガバナンスの良い実践です（METIのAIガイドライン参照）——ここに記載された5つのモデルすべてに、これを容易にするバージョン付きOllamaタグがあります。',
+            '**東アジア（データ主権）**：中国語・韓国語ワークフローにもQwen3 8Bが推奨されます。29言語以上のネイティブサポートにより、アジア太平洋地域で効率的な選択肢の一つです。Ollama経由のローカル推論はプロンプトと出力を手元のハードウェアに保持するため、APAC地域のデータ越境規制への対応を簡素化できる場合がありますが、実際に適合するかは処理全体によります。',
+            '**グローバル（EU・その他）**：EU組織がローカルで個人データを処理する場合、モデルの出所はコンプライアンス文書上重要です。業務でAIシステムを使用する際は、モデルの出所とライセンス種別を文書化することが良い実践です。Llama（Meta／米国）、Gemma（Google／米国）、Qwen（Alibaba／中国）について、ローカル推論であること自体がGDPR上これらのモデルを除外する理由にはならず、導入が適法かどうかは法的根拠、技術的・組織的措置、目的によって決まります——最もクリーンなEU出自を求めるなら、Mistral AI（フランス）がApache 2.0ライセンスのモデルを提供していますが、現行のMistral Small系（24B以上）はこのページの初心者向け4〜8 GB RAM範囲を超えます。必要なGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
             '**韓国**：この5つの初心者向けモデルの中では、Qwen3 8Bが最も強いネイティブ韓国語トークン化を持ちます。この入門レベルを超えた韓国語専用のローカルモデルについては、[韓国語対応のベストローカルモデル](/ja/prompt-bites/best-korean-language-models-local)を参照してください。',
+            '**一般情報であり法的助言ではありません**：上記の地域別の記述は一般的な情報であり、法的助言ではありません。ご自身の状況に必要な要件は、資格のある専門家にご確認ください。',
           ],
         },
         nextSteps: {
@@ -2575,7 +2582,7 @@ schema: {
             'パラメータ数だけでモデルサイズを選ぶ——4ビット量子化の7Bは、量子化が不適切な13Bより高性能なことがある。',
             'GPU VRAMの量子化オーバーヘッドを考慮しない——モデルはファイルサイズより10〜15%多いVRAMを必要とする場合がある。',
             '新しい量子化（Q4_K_M）が同サイズで優れた品質を提供するのに、古い量子化（Q3_K_S）を使用する。',
-            '**Mistral 7Bをデフォルトの7Bモデルに選ぶ：** 2023〜2024年のコミュニティ標準（7B、ダウンロード約4.1 GB、`ollama run mistral`）でしたが、現在は同じRAM要件でコーディングはQwen3 8Bに、英語推論はLlama 3.1 8Bに上回られています。ツールやチュートリアルがデフォルトで`ollama run mistral`を使う場合は、RAMを増やさずに良い結果を得るために`ollama run qwen3:8b`または`ollama run llama3.1:8b-instruct`に切り替えてください。なお、これは現行の24B以上の「Mistral Small 3.x」系とは無関係の別モデルで、このページのどのモデルよりもはるかに多くのRAMを必要とします。',
+            '**Mistral 7Bをデフォルトの7Bモデルに選ぶ：** 2023〜2024年のコミュニティ標準（7B、ダウンロード約4.1 GB、`ollama run mistral`）でしたが、現在は同じRAM要件で、コーディングのQwen3 8Bや英語推論のLlama 3.1 8Bなど、より新しいモデルが公開ベンチマークで上回る傾向があります。ツールやチュートリアルがデフォルトで`ollama run mistral`を使う場合は、RAMを増やさずに良い結果を得るために`ollama run qwen3:8b`または`ollama run llama3.1:8b-instruct`に切り替えてください。なお、これは現行の24B以上の「Mistral Small 3.x」系とは無関係の別モデルで、このページのどのモデルよりもはるかに多くのRAMを必要とします。',
             '**利用可能なRAMを確認せずにモデルをダウンロードする：** 利用可能なRAMを超えるモデルをプルすると、Ollamaはディスクスワップを伴う低速なCPU推論にフォールバックし——時に1トークン/秒未満。7Bを超えるモデルをプルする前に、必ず`free -h`（Linux/macOS）を実行するかタスクマネージャー（Windows）を確認してください。',
           ],
         },
@@ -2605,9 +2612,9 @@ schema: {
             { q: 'Ollamaでこれらのモデルをどうやって実行しますか？', a: 'ollama.comからOllamaをインストールし、推奨入門モデルのために`ollama run llama3.2:3b`を実行します。Ollamaは最初の実行時にモデルをダウンロードします。ここに記載された5つのモデルはすべてOllamaライブラリにあります。' },
             { q: 'Llama 3.2 3Bは日常的なタスクに十分ですか？', a: '可：要約、シンプルなQ&A、基本的なコード説明、会話チャット。不可：多段階推論、複雑なコーディング、長形式の構造化文章作成。それらのタスクには8 GB RAMでLlama 3.1 8BまたはQwen3 8Bにアップグレード。' },
             { q: '3Bモデルと7Bモデルの違いは何ですか？', a: '7Bモデルは複雑な指示と推論で明らかに優れた出力を生成します。3Bモデルは約半分のRAMを使用し、2〜3倍速く動作します。選択はほぼ常に利用可能なRAMで決まります——4〜6 GBマシンには3B、8 GBマシンには7B。' },
-            { q: 'コーディングタスクに最適なモデルはどれですか？', a: 'Qwen3 8Bが5モデルの中でHumanEvalをリード。さらに良いコーディングには専用コードバリアントを使用：`ollama run qwen2.5-coder:7b`。4〜6 GB RAMに限定される場合はPhi-4 Mini 3.8Bが最良のコーディングモデル（2.5 GB RAMで70% HumanEval）。' },
-            { q: '日本語や非英語言語にはどのモデルを使うべきですか？', a: 'Qwen3 8Bは中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語以上をネイティブサポートします。日本語テキストをLlamaより効率的に処理し、トークン効率が30〜40%向上します。' },
-            { q: 'これらのモデルは個人データに使っても安全ですか？', a: 'はい——5つのモデルすべてが完全にあなたのハードウェア上で動作します。プロンプトテキスト・コンテキスト・出力は外部サーバーに送信されません。ローカル推論は機密データに対してクラウドAPIより本質的にプライバシーが高いです。' },
+            { q: 'コーディングタスクに最適なモデルはどれですか？', a: 'この表の5モデルの中でHumanEval値が最も高いのはLlama 3.1 8Bです（72%。Phi-4 Mini 3.8Bは70%、Qwen3 8Bは57.3%）。多言語用途にはQwen3 8Bが向いています。コーディング専用モデルなら `ollama run qwen2.5-coder:7b` を試してください。4〜6 GB RAMに限定される場合は、ここで紹介するモデルの中でPhi-4 Mini 3.8BのHumanEval値が最も高くなります（2.5 GB RAMで70%）。' },
+            { q: '日本語や非英語言語にはどのモデルを使うべきですか？', a: 'Qwen3 8Bは中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語以上をネイティブサポートします。コミュニティの報告では、日本語テキストでLlamaより少ないトークンで済む傾向がありますが、結果はテキストによって異なります。' },
+            { q: 'これらのモデルは個人データに使っても安全ですか？', a: '推論は手元のハードウェア上で実行されるため、プロンプトはクラウドAPIに送信されません。ただしOllamaは、無効化しない限りモデルのダウンロードや更新確認のためにネットワークへ接続することがあります。機密データについてはクラウド事業者とプロンプトを共有せずに済みますが、コンプライアンスを保証するものではありません。' },
             { q: 'これらのモデルのダウンロードにどれくらいかかりますか？', a: '100 Mbps接続で：Llama 3.2 1B（1.3 GB）約2分。Gemma 4 E2B（1.6 GB）約2分。Llama 3.2 3B（2 GB）約3分。Phi-4 Mini（2.3 GB）約3分。Llama 3.1 8B（約5 GB）とQwen3 8B（約5.2 GB）はそれぞれ約6〜7分。モデルは初回ダウンロード後にキャッシュされ——次回の起動は数秒で開始。' },
             { q: '同じマシンで複数のモデルを実行できますか？', a: 'はい——5つすべてがディスク上に同時に共存できます。5つすべてをインストールする場合は15〜20 GBを計画してください。Ollamaは一度に1つのモデルをロードし、5分の非アクティブ後にアンロードします。' },
           ],
@@ -2634,7 +2641,7 @@ schema: {
         'headline': 'Llama 3.2・Phi-4 Mini・Gemma 3：2026年初心者向けLLM比較',
         'description': 'Llama 3.2 3B=2.5GB RAM、Phi-4 Mini=2.5GB、Gemma 4 E2B=1.7GB。Llama 3.1 8BとQwen3 8Bを追加。RAM・速度・品質で5モデルを比較。Ollamaコマンド付き。2026年7月。',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-09',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -2730,7 +2737,7 @@ schema: {
             'name': 'コーディングタスクに最適なモデルはどれですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8Bが5モデルの中でHumanEvalをリード。さらに良いコーディングには専用コードバリアントを使用：`ollama run qwen2.5-coder:7b`。4〜6 GB RAMに限定される場合はPhi-4 Mini 3.8Bが最良のコーディングモデル（2.5 GB RAMで70% HumanEval）。',
+              'text': 'この表の5モデルの中でHumanEval値が最も高いのはLlama 3.1 8Bです（72%。Phi-4 Mini 3.8Bは70%、Qwen3 8Bは57.3%）。多言語用途にはQwen3 8Bが向いています。コーディング専用モデルなら `ollama run qwen2.5-coder:7b` を試してください。4〜6 GB RAMに限定される場合は、ここで紹介するモデルの中でPhi-4 Mini 3.8BのHumanEval値が最も高くなります（2.5 GB RAMで70%）。',
             },
           },
           {
@@ -2738,7 +2745,7 @@ schema: {
             'name': '日本語や非英語言語にはどのモデルを使うべきですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8Bは中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語以上をネイティブサポートします。日本語テキストをLlamaより効率的に処理し、トークン効率が30〜40%向上します。',
+              'text': 'Qwen3 8Bは中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語以上をネイティブサポートします。コミュニティの報告では、日本語テキストでLlamaより少ないトークンで済む傾向がありますが、結果はテキストによって異なります。',
             },
           },
           {
@@ -2746,7 +2753,7 @@ schema: {
             'name': 'これらのモデルは個人データに使っても安全ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい——5つのモデルすべてが完全にあなたのハードウェア上で動作します。プロンプトテキスト・コンテキスト・出力は外部サーバーに送信されません。ローカル推論は機密データに対してクラウドAPIより本質的にプライバシーが高いです。',
+              'text': '推論は手元のハードウェア上で実行されるため、プロンプトはクラウドAPIに送信されません。ただしOllamaは、無効化しない限りモデルのダウンロードや更新確認のためにネットワークへ接続することがあります。機密データについてはクラウド事業者とプロンプトを共有せずに済みますが、コンプライアンスを保証するものではありません。',
             },
           },
           {
@@ -2795,7 +2802,7 @@ schema: {
       heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-zh.webp',
       twitterDescription: '评测：Llama 3.2 3B（2.5GB、25-45词/秒）、Phi-4 Mini（2.5GB、最佳推理）、Gemma 4 E2B（1.7GB、最快）、Llama 3.1 8B、Qwen3 8B。2026年小巧强大的LLM。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       readTime: '阅读约9分钟',
       educationalLevel: 'Beginner',
       audience: '在消费级硬件上首次运行本地LLM的初学者',
@@ -2896,7 +2903,7 @@ schema: {
           title: '#1 Meta Llama 3.2 3B — 综合最佳入门模型',
           content: [
             '**Meta Llama 3.2 3B是大多数用户的最佳起点。** 下载时间不到5分钟，可在任何配备4 GB内存的机器上运行，且指令遵循能力明显优于以前的3B模型。它使用128K上下文窗口——远大于同等规模的模型。',
-            '在8核笔记本电脑CPU上测试，Llama 3.2 3B生成25–45词/秒。在Apple M3 Pro上可达70–90词/秒。质量适合摘要、问答和简单编程任务，但在多步推理方面不及7B模型。',
+            'Llama 3.2 3B在8核笔记本电脑CPU上大约为25–45词/秒，在M3 Pro等Apple Silicon上更高（粗略估计；PromptQuorum未在此实测，速度因硬件和设置而异）。质量适合摘要、问答和简单编程任务，但在多步推理方面不及7B模型。',
           ],
           rows: [
             { '规格': '参数量', '值': '3B' },
@@ -2930,7 +2937,7 @@ schema: {
           id: 'gemma-3-2b',
           title: '#3 Google Gemma 4 E2B — 最快的2B模型',
           content: [
-            '**Gemma 4 E2B是谷歌更新的2B模型，是仅CPU推理的最快选择。** 它在中端笔记本电脑CPU上生成40–60词/秒——约是相同硬件上Llama 3.2 3B速度的两倍。Gemma 3相比前代有重大改进：上下文窗口从Gemma 2的8K扩展到128K词元，消除了文档任务的主要限制。',
+            '**Gemma 4 E2B是谷歌更新的2B模型，是仅CPU推理中较快的选择之一。** 它在中端笔记本电脑CPU上约生成40–60词/秒（粗略估计，并非PromptQuorum实测，因硬件而异）。Gemma 4 E2B相比早期Gemma系列有重大改进：上下文窗口从Gemma 2的8K扩展到128K词元，消除了文档任务的主要限制。',
             '当响应速度最重要时、在内存≤4 GB的机器上，或作为验证本地LLM设置再下载更大模型前的测试模型时，Gemma 4 E2B是理想选择。',
           ],
           rows: [
@@ -2947,7 +2954,7 @@ schema: {
           id: 'llama-3-3-8b',
           title: '#4 Meta Llama 3.1 8B — 最佳7B/8B全能模型',
           content: [
-            '**Meta Llama 3.1 8B是当前该规格下的通用全能模型，HumanEval得分72%，英语推理能力扎实。** 它取代Mistral 7B成为本列表7B/8B推荐——Mistral 7B曾是2023–2024年的社区标准，但如今在同等内存需求下已被超越，更适合作为旧版可选项（详见下方"常见错误"部分说明我们为何不再默认推荐它）。',
+            '**Meta Llama 3.1 8B是当前该规格下的通用全能模型，HumanEval得分72%，英语推理能力扎实。** 它取代Mistral 7B成为本列表7B/8B推荐——Mistral 7B曾是2023–2024年的社区标准，但如今在同等内存需求下，较新的模型在公开基准上通常得分更高，更适合作为旧版可选项（详见下方"常见错误"部分说明我们为何不再默认推荐它）。',
             '对于8 GB内存的机器，Llama 3.1 8B是从3B模型升级的自然选择。它在处理更长文本、更复杂指令和多轮对话方面比任何3B模型都更可靠，并拥有128K上下文窗口。',
           ],
           rows: [
@@ -2991,7 +2998,7 @@ schema: {
           ],
           columns: ['模型', 'RAM', '速度（CPU）', '上下文', '最适用途'],
           image: '/images/best-beginner-local-llm-models-comparison-table-hero-zh.webp',
-          imageCaption: '五款初学者本地LLM模型按内存、CPU推理速度、上下文窗口和用途对比——均在Q4_K_M量化下通过Ollama进行基准测试。Llama 3.2 3B是推荐的首选模型；Gemma 4 E2B以1.7 GB内存最快。',
+          imageCaption: '五款初学者本地LLM模型按内存、CPU推理速度、上下文窗口和用途对比——规格依据模型卡和Ollama库；速度为粗略估计，并非PromptQuorum的实测值。Llama 3.2 3B是推荐的首选模型；Gemma 4 E2B以1.7 GB内存最快。',
         },
         whichToStart: {
           id: 'which-model-to-start-with',
@@ -3002,7 +3009,7 @@ schema: {
             '**8 GB内存，首选模型**：`ollama run llama3.2:3b` — 初次体验时质量与内存的最佳平衡。',
             '**4–6 GB内存，推理/编程**：`ollama run phi4-mini` — 68% MMLU、70% HumanEval，仅需2.5 GB内存。在结构化任务上优于Llama 3.2 3B。',
             '**8 GB内存，严肃使用**：`ollama run llama3.1:8b-instruct`或`ollama run qwen3:8b` — 适合更长文档、更复杂指令的升级选择。',
-            '**主要编程任务**：`ollama run qwen3:8b` — 本列表中HumanEval分数最高；Python、JavaScript和SQL表现优异。',
+            '**主要编程任务**：`ollama run llama3.1:8b-instruct` — 本列表中HumanEval数值最高（72%）；如需专用编程模型，可试试 `ollama run qwen2.5-coder:7b`。',
             '**中文或非英语语言**：`ollama run qwen3:8b` — 原生支持29种以上语言，无需翻译开销，中文分词效率更高。',
           ],
           image: '/images/best-beginner-local-llm-models-ram-decision-zh.svg',
@@ -3012,9 +3019,10 @@ schema: {
           id: 'regional-context',
           title: '如何根据所在地区选择模型？',
           content: [
-            '**中国（数据安全法与个人信息保护法）**：中国《数据安全法》（2021年）和《个人信息保护法》（PIPL，2021年）要求将中国用户的个人数据保存在境内。通过Ollama在本地运行推理可满足数据本地化要求——提示词、上下文和输出均保留在本地硬件上，不会传输到外部服务器。对于金融、医疗和法律等受监管行业，本地LLM推理是API调用的合规替代方案。Qwen3 8B（阿里巴巴达摩院）是中文工作流的自然首选，具备原生中文分词支持和29种以上语言能力。',
-            '**亚太地区（数据跨境合规）**：日本METI AI治理指南（2024年）、韩国《个人信息保护法》修正案和新加坡PDPA均要求记录AI系统使用的模型名称和版本。本列表所有五款模型均有版本化的Ollama标签，满足此要求。对于中文优先的工作流，Qwen3 8B的原生亚洲语言支持使其成为整个亚太地区的标准选择；在这五款入门级模型中，Qwen3 8B的原生韩语分词能力也最强。',
-            '**企业部署（银行、医疗、法律）**：对于在本地运行LLM的中国大型企业，Qwen3 8B（阿里巴巴，MIT许可）提供了最简洁的合规叙述。Apache 2.0许可的Mistral AI模型可作为需要EU-China双合规文档场景的备选，但目前Mistral Small系列（24B以上）已超出本页4–8 GB入门内存范围。建议在所有企业部署中：在设置前禁用Ollama遥测（`OLLAMA_NO_ANALYTICS=1`），对模型权重启用完整磁盘加密，并审计所有安装的推理引擎扩展。',
+            '**中国（数据安全法与个人信息保护法）**：中国《数据安全法》（2021年）和《个人信息保护法》（PIPL，2021年）在特定情形下（如关键信息基础设施运营者或达到一定数量的处理者）可能要求境内存储，请结合自身情况确认。通过Ollama在本地运行推理，提示词、上下文和输出保留在本地硬件上，可简化该环节的数据本地化问题；但Ollama仍可能为下载模型和检查更新而联网（除非您将其禁用），且是否合规取决于您整体的数据处理。对于金融、医疗和法律等受监管行业，本地LLM推理可以减少向云API披露数据的情形，但并非合规保证。Qwen3 8B（阿里巴巴达摩院）是中文工作流的自然首选，具备原生中文分词支持和29种以上语言能力。',
+            '**亚太地区（数据跨境合规）**：日本METI AI治理指南（2024年）、韩国《个人信息保护法》修正案和新加坡PDPA等相关指引通常涉及AI系统的记录与问责，记录所用模型的名称和版本是良好实践。本列表所有五款模型均有版本化的Ollama标签，便于做到这一点。对于中文优先的工作流，Qwen3 8B具备原生亚洲语言支持，是常见选择之一；在这五款入门级模型中，Qwen3 8B的原生韩语分词能力也最强。',
+            '**企业部署（银行、医疗、法律）**：对于在本地运行LLM的中国大型企业，Qwen3 8B（阿里巴巴，Apache 2.0许可）提供了最简洁的合规叙述。Apache 2.0许可的Mistral AI模型可作为需要EU-China双合规文档场景的备选，但目前Mistral Small系列（24B以上）已超出本页4–8 GB入门内存范围。建议在所有企业部署中：在设置前禁用Ollama遥测（`OLLAMA_NO_ANALYTICS=1`），对模型权重启用完整磁盘加密，并审计所有安装的推理引擎扩展。',
+            '**一般信息，不构成法律建议**：以上地区说明仅为一般性信息，不构成法律建议；请就您的具体情况向合格的专业人士确认相关要求。',
           ],
         },
         nextSteps: {
@@ -3032,7 +3040,7 @@ schema: {
             '仅根据参数量选择模型——4位量化的7B可能优于量化不佳的13B。',
             '未考虑GPU显存量化开销——模型所需显存可能比文件大小多10–15%。',
             '使用较旧的量化方式（Q3_K_S）而非提供更好质量的新方式（Q4_K_M）。',
-            '**将Mistral 7B作为默认7B模型**：它曾是2023–2024年的社区标准（7B，约4.1 GB下载，`ollama run mistral`），但现在在编程方面已被Qwen3 8B超越，在英语推理任务上被Llama 3.1 8B超越，且RAM需求相同。如果您的工具或教程默认使用`ollama run mistral`，请切换到`ollama run qwen3:8b`或`ollama run llama3.1:8b-instruct`以获得更好结果，而无需增加内存。注意：这与当前的24B以上"Mistral Small 3.x"系列是不同、不相关的模型，后者所需内存远超本页任何一款模型。',
+            '**将Mistral 7B作为默认7B模型**：它曾是2023–2024年的社区标准（7B，约4.1 GB下载，`ollama run mistral`），但在相同RAM需求下，Qwen3 8B（编程）和Llama 3.1 8B（英语推理）等较新模型在公开基准上通常得分更高。如果您的工具或教程默认使用`ollama run mistral`，请切换到`ollama run qwen3:8b`或`ollama run llama3.1:8b-instruct`以获得更好结果，而无需增加内存。注意：这与当前的24B以上"Mistral Small 3.x"系列是不同、不相关的模型，后者所需内存远超本页任何一款模型。',
             '**未先检查可用内存就拉取模型**：如果拉取的模型超出可用内存，Ollama会回退到带部分磁盘交换的慢速CPU推理——有时低于1词/秒。拉取7B以上模型前，请始终运行`free -h`（Linux/macOS）或检查任务管理器（Windows）。',
           ],
         },
@@ -3085,15 +3093,15 @@ schema: {
             },
             {
               q: '哪款模型最适合编程任务？',
-              a: 'Qwen3 8B在五款模型中HumanEval得分最高。要获得更好的编程效果，请使用专用代码变体：`ollama run qwen2.5-coder:7b`。Phi-4 Mini 3.8B是4–6 GB内存限制下最好的编程模型（2.5 GB内存达70% HumanEval）。',
+              a: '在本表的五款模型中，Llama 3.1 8B的HumanEval数值最高（72%，Phi-4 Mini 3.8B为70%，Qwen3 8B为57.3%）；Qwen3 8B更适合多语言场景。如需专用编程模型，可试试 `ollama run qwen2.5-coder:7b`。在4–6 GB内存限制下，Phi-4 Mini 3.8B是此处所列模型中HumanEval数值最高的（2.5 GB内存达70%）。',
             },
             {
               q: '哪款模型适合中文或非英语语言？',
-              a: 'Qwen3 8B原生支持29种以上语言，包括中文、日语、韩语、阿拉伯语和所有主要欧洲语言。与Llama相比，它处理中文文本的效率更高，分词开销更低。',
+              a: 'Qwen3 8B原生支持29种以上语言，包括中文、日语、韩语、阿拉伯语和所有主要欧洲语言。社区反馈显示，Qwen3 处理中文文本时通常分词开销较低，具体因文本而异。',
             },
             {
               q: '这些模型用于私人数据安全吗？',
-              a: '是的——所有五款模型完全在您的硬件上运行，满足中国《数据安全法》对数据本地化的要求。提示文本、上下文和输出均不传输到外部服务器。对于金融、医疗等敏感数据，本地推理在隐私性上优于云API。',
+              a: '推理在您自己的硬件上运行，因此提示词不会发送到云API。这有助于简化数据本地化方面的考量，但是否符合中国《数据安全法》取决于您整体的数据处理，且不构成法律建议；Ollama仍可能为下载模型和检查更新而联网，除非您将其禁用。对于金融、医疗等敏感数据，这可以避免与云服务商共享提示词，但并非合规保证。',
             },
             {
               q: '下载这些模型需要多长时间？',
@@ -3127,7 +3135,7 @@ schema: {
         'headline': 'Llama、Phi、Gemma、Qwen：2026年初学者本地LLM推荐',
         'description': 'Llama 3.2 3B=2.5 GB内存，Phi-4 Mini=2.5 GB，Gemma 4 E2B=1.7 GB，40–60词/秒。新增Llama 3.1 8B和Qwen3 8B。5款模型完整对比表+Ollama命令。2026年7月。',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-09',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -3169,9 +3177,9 @@ schema: {
           { '@type': 'Question', 'name': '如何用Ollama运行这些模型？', 'acceptedAnswer': { '@type': 'Answer', 'text': '从ollama.com安装Ollama，然后运行：ollama run llama3.2:3b启动推荐的入门模型。Ollama在首次运行时自动下载模型。这里列出的所有五款模型均在Ollama库中可用。' } },
           { '@type': 'Question', 'name': 'Llama 3.2 3B足够满足日常任务吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '适合：摘要、简单问答、基础代码说明和对话聊天。不适合：多步推理、复杂编程和长格式结构化写作。对于这些任务，请在8 GB内存下升级到Llama 3.1 8B或Qwen3 8B。' } },
           { '@type': 'Question', 'name': '3B和7B模型有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': '7B模型在复杂指令和推理方面的输出质量明显更好。3B模型使用约一半的内存，运行速度快2–3倍。选择几乎总是由可用内存决定——4–6 GB机器用3B，8 GB机器用7B。' } },
-          { '@type': 'Question', 'name': '哪款模型最适合编程任务？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B在五款模型中HumanEval得分最高。要获得更好的编程效果，请使用专用代码变体：ollama run qwen2.5-coder:7b。Phi-4 Mini 3.8B是4–6 GB内存限制下最好的编程模型。' } },
-          { '@type': 'Question', 'name': '哪款模型适合中文或非英语语言？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B原生支持29种以上语言，包括中文、日语、韩语、阿拉伯语和所有主要欧洲语言。与Llama相比，它处理中文文本的效率更高，分词开销更低。' } },
-          { '@type': 'Question', 'name': '这些模型用于私人数据安全吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的——所有五款模型完全在您的硬件上运行，满足中国《数据安全法》对数据本地化的要求。提示文本和输出均不传输到外部服务器。' } },
+          { '@type': 'Question', 'name': '哪款模型最适合编程任务？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在本表的五款模型中，Llama 3.1 8B的HumanEval数值最高（72%，Phi-4 Mini 3.8B为70%，Qwen3 8B为57.3%）；Qwen3 8B更适合多语言场景。如需专用编程模型，可试试 ollama run qwen2.5-coder:7b。' } },
+          { '@type': 'Question', 'name': '哪款模型适合中文或非英语语言？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B原生支持29种以上语言，包括中文、日语、韩语、阿拉伯语和所有主要欧洲语言。社区反馈显示，Qwen3 处理中文文本时通常分词开销较低，具体因文本而异。' } },
+          { '@type': 'Question', 'name': '这些模型用于私人数据安全吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '推理在您自己的硬件上运行，因此提示词不会发送到云API。这有助于简化数据本地化方面的考量，但是否符合中国《数据安全法》取决于您整体的数据处理，且不构成法律建议；Ollama仍可能为下载模型和检查更新而联网，除非您将其禁用。对于金融、医疗等敏感数据，这可以避免与云服务商共享提示词，但并非合规保证。' } },
           { '@type': 'Question', 'name': '下载这些模型需要多长时间？', 'acceptedAnswer': { '@type': 'Answer', 'text': '以100 Mbps连接：Llama 3.2 1B（1.3 GB）约2分钟，Gemma 4 E2B（1.6 GB）约2分钟，Llama 3.2 3B（2 GB）约3分钟，Phi-4 Mini（2.3 GB）约3分钟，Llama 3.1 8B和Qwen3 8B（各约5 GB）约6–7分钟。模型首次下载后缓存，后续运行几秒内启动。' } },
           { '@type': 'Question', 'name': '可以在同一台机器上运行多个模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以——所有五款可同时共存于磁盘上。如果全部安装，预留15–20 GB空间。Ollama每次只加载一个模型，5分钟不活动后卸载。' } },
         ],
@@ -3204,7 +3212,7 @@ schema: {
     heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-ko.webp',
     twitterDescription: '순위 비교: Llama 3.2 3B (2.5 GB, 25-45 tok/s), Phi-4 Mini (2.5 GB, 최고 추론), Gemma 4 E2B (1.7 GB, 최고 속도), Llama 3.1 8B, Qwen3 8B. 2026년 초보자용 로컬 LLM 5선.',
     publishDate: '2026-04-04',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-09',
     readTime: '9분 읽기',
     educationalLevel: 'Beginner',
     audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
@@ -3305,7 +3313,7 @@ schema: {
         title: '#1 Meta Llama 3.2 3B -- 전체 최고 입문 모델',
         content: [
           '**Meta Llama 3.2 3B는 대부분의 사용자에게 최고의 출발점입니다.** 5분 이내에 다운로드되고, 4 GB RAM의 모든 기기에서 실행되며, 이전 3B 모델보다 명령 수행 능력이 눈에 띄게 향상되었습니다. 동일 크기 모델보다 훨씬 넓은 128K 컨텍스트 윈도우를 사용합니다.',
-          '8코어 노트북 CPU 테스트에서 Llama 3.2 3B는 초당 25-45 토큰을 생성합니다. Apple M3 Pro에서는 70-90 토큰/초에 달합니다. 요약, Q&A, 간단한 코딩 작업에는 충분한 품질이지만, 다단계 추론에서는 7B 모델에 미치지 못합니다.',
+          'Llama 3.2 3B는 8코어 노트북 CPU에서 초당 25-45 토큰 정도, M3 Pro 같은 Apple Silicon에서는 그보다 더 빠를 것으로 예상됩니다(대략적인 추정치이며 PromptQuorum이 여기서 직접 측정하지 않았고 하드웨어와 설정에 따라 다릅니다). 요약, Q&A, 간단한 코딩 작업에는 충분한 품질이지만, 다단계 추론에서는 7B 모델에 미치지 못합니다.',
         ],
         rows: [
           { '사양': '파라미터', '값': '3B' },
@@ -3339,7 +3347,7 @@ schema: {
         id: 'gemma-3-2b',
         title: '#3 Google Gemma 4 E2B -- 가장 빠른 2B 모델',
         content: [
-          '**Gemma 4 E2B는 Google의 업데이트된 2B 모델로, CPU 전용 추론에서 가장 빠른 선택지입니다.** 중급 노트북 CPU에서 초당 40-60 토큰을 생성하며 -- 동일 하드웨어에서 Llama 3.2 3B보다 약 2배 빠릅니다. Gemma 3는 전작 대비 크게 개선되었습니다: 컨텍스트 윈도우가 8K(Gemma 2)에서 128K 토큰으로 확장되어 문서 작업의 주요 제한이 해소되었습니다.',
+          '**Gemma 4 E2B는 Google의 업데이트된 2B 모델로, CPU 전용 추론에서 비교적 빠른 선택지 중 하나입니다.** 중급 노트북 CPU에서 초당 약 40-60 토큰을 생성합니다(대략적인 추정치이며 PromptQuorum이 측정한 값이 아니고 하드웨어에 따라 다릅니다). Gemma 4 E2B는 이전 Gemma 세대 대비 크게 개선되었습니다: 컨텍스트 윈도우가 8K(Gemma 2)에서 128K 토큰으로 확장되어 문서 작업의 주요 제한이 해소되었습니다.',
           'Gemma 4 E2B는 응답 속도가 가장 중요할 때, RAM이 4 GB 이하인 기기에서, 또는 더 큰 모델을 다운로드하기 전에 로컬 LLM 설정을 확인하는 테스트 모델로 활용하기에 좋습니다.',
         ],
         rows: [
@@ -3356,7 +3364,7 @@ schema: {
         id: 'llama-3-3-8b',
         title: '#4 Meta Llama 3.1 8B -- 최고 7B/8B 올라운더',
         content: [
-          '**Meta Llama 3.1 8B는 이 크기대에서 현재 범용 올라운더로, HumanEval 72%를 기록하며 견고한 영어 추론 능력을 제공합니다.** 이 목록의 7B/8B 추천 자리에서 Mistral 7B를 대체합니다 -- Mistral 7B는 2023-2024년 커뮤니티 표준이었지만 현재는 동일 RAM 등급에서 성능이 뒤처져 레거시 옵션으로 취급하는 것이 더 적절합니다 (더 이상 기본값으로 추천하지 않는 이유는 아래 흔한 실수를 참조하세요).',
+          '**Meta Llama 3.1 8B는 이 크기대에서 현재 범용 올라운더로, HumanEval 72%를 기록하며 견고한 영어 추론 능력을 제공합니다.** 이 목록의 7B/8B 추천 자리에서 Mistral 7B를 대체합니다 -- Mistral 7B는 2023-2024년 커뮤니티 표준이었지만 현재는 동일 RAM 등급에서 더 새로운 모델이 공개 벤치마크에서 더 높은 점수를 내는 경향이 있어 레거시 옵션으로 취급하는 것이 더 적절합니다 (더 이상 기본값으로 추천하지 않는 이유는 아래 흔한 실수를 참조하세요).',
           '8 GB RAM 기기에서 Llama 3.1 8B는 3B 모델에서 자연스러운 업그레이드입니다. 128K 컨텍스트 윈도우를 갖추고 있으며, 어떤 3B 모델보다 긴 텍스트, 복잡한 명령, 다중 턴 대화를 더 안정적으로 처리합니다.',
         ],
         rows: [
@@ -3400,7 +3408,7 @@ schema: {
         ],
         columns: ['모델', 'RAM', '속도 (CPU)', '컨텍스트', '최적 용도'],
         image: '/images/best-beginner-local-llm-models-comparison-table-hero-ko.webp',
-        imageCaption: '초보자용 로컬 LLM 5개 모델을 RAM, CPU 추론 속도, 컨텍스트 윈도우, 사용 사례별로 비교 -- 모두 Ollama를 통해 Q4_K_M 양자화로 벤치마크 측정. Llama 3.2 3B가 추천 첫 번째 모델; Gemma 4 E2B는 1.7 GB RAM으로 가장 빠름.',
+        imageCaption: '초보자용 로컬 LLM 5개 모델을 RAM, CPU 추론 속도, 컨텍스트 윈도우, 사용 사례별로 비교 -- 사양은 모델 카드와 Ollama 라이브러리 기준이며, 속도는 대략적인 추정치로 PromptQuorum이 측정한 값이 아닙니다. Llama 3.2 3B가 추천 첫 번째 모델; Gemma 4 E2B는 1.7 GB RAM으로 가장 빠름.',
       },
       whichToStart: {
         id: 'which-model-to-start-with',
@@ -3411,7 +3419,7 @@ schema: {
           '**RAM 8 GB, 첫 번째 모델**: `ollama run llama3.2:3b` -- 첫 경험에서 품질과 RAM의 최적 균형.',
           '**RAM 4-6 GB, 추론/코딩**: `ollama run phi4-mini` -- 68% MMLU, 70% HumanEval, 단 2.5 GB RAM. 구조화 작업에서 Llama 3.2 3B보다 우수.',
           '**RAM 8 GB, 본격 사용**: `ollama run llama3.1:8b-instruct` 또는 `ollama run qwen3:8b` -- 긴 문서, 복잡한 명령을 위한 업그레이드.',
-          '**주로 코딩 작업**: `ollama run qwen3:8b` -- 이 목록에서 HumanEval 점수 최고; Python, JavaScript, SQL에 강함.',
+          '**주로 코딩 작업**: `ollama run llama3.1:8b-instruct` -- 이 목록에서 HumanEval 수치가 가장 높음(72%); 코딩 전용이라면 `ollama run qwen2.5-coder:7b`를 시도해 보세요.',
           '**비영어 언어 (한국어 포함)**: `ollama run qwen3:8b` -- 29개 이상 언어 기본 지원, 번역 오버헤드 없음.',
         ],
         image: '/images/best-beginner-local-llm-models-ram-decision-en.svg',
@@ -3421,9 +3429,10 @@ schema: {
         id: 'regional-context',
         title: '지역에 따라 어떤 모델을 선택해야 할까요?',
         content: [
-          '**한국 (개인정보보호법)**: 한국 개인정보보호법(PIPA)에 따라 개인 데이터를 로컬에서 처리하는 조직은 데이터 처리 내역을 문서화해야 합니다. Ollama를 통한 로컬 추론은 데이터가 외부 서버로 전송되지 않으므로 데이터 현지화 요건을 충족합니다. 금융, 의료, 법률 등 규제 산업의 경우 로컬 LLM 추론은 API 호출의 규정 준수 대안입니다. 이 다섯 가지 초보자 추천 모델 중에서는 Qwen3 8B가 가장 강력한 네이티브 한국어 토크나이제이션을 갖추고 있습니다. 이 입문 등급을 넘어서는 전용 한국어 로컬 모델은 [로컬용 최고의 한국어 언어 모델](/ko/prompt-bites/best-korean-language-models-local)을 참조하세요.',
-          '**EU / GDPR**: EU 조직이 개인 데이터를 로컬에서 처리할 때 컴플라이언스 문서화를 위해 모델 출처가 중요합니다. 독일 BSI 지침은 전문적 맥락에서 사용되는 AI 시스템에 대해 모델 출처와 라이선스 유형의 문서화를 요구합니다. Llama(Meta/미국), Gemma(Google/미국), Qwen(Alibaba/중국)은 모두 로컬 추론에서 GDPR 상 기술적으로 사용 가능합니다 -- 가장 깔끔한 EU 출처 서술을 원한다면 Mistral AI(프랑스)가 Apache 2.0 라이선스 모델을 제공하지만, 현재 Mistral Small 릴리스(24B 이상)는 이 페이지의 4-8 GB 초보자 RAM 범위를 초과합니다. 실행에 필요한 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하세요.',
-          '**중국**: Qwen3 8B (Alibaba)가 중국어 워크플로우의 첫 번째 모델로 자연스러운 선택입니다. 네이티브 중국어 토크나이제이션과 29개 이상 언어 지원으로 중국어 우선 워크플로우의 표준이 됩니다. 중국 데이터 보안법(数据安全法)에 따른 중국 기업 배포의 경우, Ollama를 통한 로컬 실행의 Qwen3가 데이터 현지화 요건을 충족합니다.',
+          '**한국 (개인정보보호법)**: 한국 개인정보보호법(PIPA)상 처리 내역 기록·관리 의무가 적용될 수 있으니 귀사의 상황에 맞게 확인하십시오. Ollama를 통한 로컬 추론은 프롬프트와 출력을 사용자의 하드웨어에 유지하므로 해당 계층의 데이터 현지화 문제를 단순화할 수 있지만, 실제 준수 여부는 전체 데이터 처리에 따라 달라집니다. 금융, 의료, 법률 등 규제 산업에서는 로컬 LLM 추론이 클라우드 API로의 데이터 전달을 줄여 줄 수 있으나 규정 준수를 보장하지는 않습니다. 이 다섯 가지 초보자 추천 모델 중에서는 Qwen3 8B가 가장 강력한 네이티브 한국어 토크나이제이션을 갖추고 있습니다. 이 입문 등급을 넘어서는 전용 한국어 로컬 모델은 [로컬용 최고의 한국어 언어 모델](/ko/prompt-bites/best-korean-language-models-local)을 참조하세요.',
+          '**EU / GDPR**: EU 조직이 개인 데이터를 로컬에서 처리할 때 컴플라이언스 문서화를 위해 모델 출처가 중요합니다. 전문적 맥락에서 사용되는 AI 시스템의 경우 모델 출처와 라이선스 유형을 문서화하는 것이 좋은 관행입니다. Llama(Meta/미국), Gemma(Google/미국), Qwen(Alibaba/중국): 로컬 추론이라는 점만으로 GDPR상 이 모델들이 배제되는 것은 아니며, 배포의 적법성은 법적 근거, 기술적·조직적 조치 및 목적에 따라 달라집니다 -- 가장 깔끔한 EU 출처 서술을 원한다면 Mistral AI(프랑스)가 Apache 2.0 라이선스 모델을 제공하지만, 현재 Mistral Small 릴리스(24B 이상)는 이 페이지의 4-8 GB 초보자 RAM 범위를 초과합니다. 실행에 필요한 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하세요.',
+          '**중국**: Qwen3 8B (Alibaba)가 중국어 워크플로우의 첫 번째 모델로 자연스러운 선택입니다. 네이티브 중국어 토크나이제이션과 29개 이상 언어 지원으로 중국어 우선 워크플로우의 표준이 됩니다. 중국 데이터 보안법(数据安全法)에 따른 중국 기업 배포의 경우, Ollama를 통해 로컬에서 추론을 실행하면 프롬프트와 출력이 사용자의 하드웨어에 유지되어 해당 계층의 데이터 현지화 문제를 단순화할 수 있으며, 배포의 준수 여부는 전체 처리 방식에 따라 달라집니다.',
+          '**일반 정보이며 법률 자문이 아닙니다**: 위의 지역별 안내는 일반 정보이며 법률 자문이 아닙니다. 귀하의 상황에 필요한 요건은 자격을 갖춘 전문가에게 확인하십시오.',
         ],
       },
       nextSteps: {
@@ -3441,7 +3450,7 @@ schema: {
           '파라미터 수만 보고 모델 크기를 선택하는 것 -- 4비트 양자화 7B 모델이 제대로 양자화되지 않은 13B보다 우수할 수 있습니다.',
           'GPU VRAM 양자화 오버헤드를 고려하지 않는 것 -- 모델이 파일 크기보다 10-15% 더 많은 VRAM을 필요로 할 수 있습니다.',
           '새 양자화(Q4_K_M)가 동일 크기에서 더 나은 품질을 제공하는데 이전 양자화(Q3_K_S)를 사용하는 것.',
-          '**Mistral 7B를 기본 7B 모델로 선택하는 것:** Mistral 7B는 2023-2024년 커뮤니티 표준이었지만(7B, 다운로드 약 4.1 GB, `ollama run mistral`) 현재는 동일 RAM 요구사항으로 코딩에서 Qwen3 8B에, 영어 추론에서 Llama 3.1 8B에 뒤처집니다. 도구나 튜토리얼이 기본적으로 `ollama run mistral`을 사용한다면 RAM을 늘리지 않고 더 나은 결과를 위해 `ollama run qwen3:8b` 또는 `ollama run llama3.1:8b-instruct`로 전환하세요. 참고: 이는 현재의 24B 이상 "Mistral Small 3.x" 라인과는 별개의, 관련 없는 모델이며, 그 라인은 이 페이지의 어떤 모델보다 훨씬 많은 RAM을 필요로 합니다.',
+          '**Mistral 7B를 기본 7B 모델로 선택하는 것:** Mistral 7B는 2023-2024년 커뮤니티 표준이었지만(7B, 다운로드 약 4.1 GB, `ollama run mistral`) 현재는 동일 RAM 요구사항에서 코딩의 Qwen3 8B, 영어 추론의 Llama 3.1 8B 같은 더 새로운 모델이 공개 벤치마크에서 더 높은 점수를 내는 경향이 있습니다. 도구나 튜토리얼이 기본적으로 `ollama run mistral`을 사용한다면 RAM을 늘리지 않고 더 나은 결과를 위해 `ollama run qwen3:8b` 또는 `ollama run llama3.1:8b-instruct`로 전환하세요. 참고: 이는 현재의 24B 이상 "Mistral Small 3.x" 라인과는 별개의, 관련 없는 모델이며, 그 라인은 이 페이지의 어떤 모델보다 훨씬 많은 RAM을 필요로 합니다.',
           '**사용 가능한 RAM을 먼저 확인하지 않고 모델을 다운로드하는 것:** 사용 가능한 RAM을 초과하는 모델을 다운받으면 Ollama가 부분 디스크 스와핑을 동반한 느린 CPU 추론으로 전환합니다 -- 때로는 1 tok/s 미만. 7B 이상의 모델을 다운받기 전에 항상 `free -h` (Linux/macOS)를 실행하거나 작업 관리자(Windows)를 확인하세요.',
         ],
       },
@@ -3502,15 +3511,15 @@ schema: {
           },
           {
             q: '코딩 작업에 가장 좋은 모델은 무엇인가요?',
-            a: 'Qwen3 8B가 5개 모델 중 HumanEval 선두입니다. 더 나은 코딩을 위해 전용 코드 변형을 사용하세요: `ollama run qwen2.5-coder:7b`. 4-6 GB RAM으로 제한된 경우 Phi-4 Mini 3.8B가 최고 코딩 모델입니다 (2.5 GB RAM에서 70% HumanEval).',
+            a: '이 표의 5개 모델 중 HumanEval 수치가 가장 높은 것은 Llama 3.1 8B입니다(72%, Phi-4 Mini 3.8B는 70%, Qwen3 8B는 57.3%). 다국어 용도에는 Qwen3 8B가 적합합니다. 코딩 전용 모델이 필요하면 `ollama run qwen2.5-coder:7b`를 시도해 보세요. 4-6 GB RAM으로 제한된 경우 여기에 소개된 모델 중 Phi-4 Mini 3.8B의 HumanEval 수치가 가장 높습니다 (2.5 GB RAM에서 70%).',
           },
           {
             q: '한국어나 비영어 언어에는 어떤 모델을 사용해야 하나요?',
-            a: 'Qwen3 8B는 한국어, 중국어, 일본어, 아랍어, 주요 유럽 언어를 포함한 29개 이상 언어를 기본 지원합니다. 비영어 텍스트를 Llama보다 효율적으로 처리합니다.',
+            a: 'Qwen3 8B는 한국어, 중국어, 일본어, 아랍어, 주요 유럽 언어를 포함한 29개 이상 언어를 기본 지원합니다. 커뮤니티 보고에 따르면 토크나이저가 Llama보다 비영어 텍스트에서 더 적은 토큰을 쓰는 경향이 있으며, 결과는 텍스트에 따라 다릅니다.',
           },
           {
             q: '이 모델들은 개인 데이터에 사용해도 안전한가요?',
-            a: '네 -- 5개 모델 모두 완전히 사용자의 하드웨어에서 실행됩니다. 프롬프트 텍스트, 컨텍스트, 출력은 외부 서버로 전송되지 않습니다. 로컬 추론은 민감한 데이터에 대해 클라우드 API보다 본질적으로 더 프라이빗합니다.',
+            a: '추론은 사용자의 하드웨어에서 실행되므로 프롬프트가 클라우드 API로 전송되지 않습니다. 다만 Ollama는 비활성화하지 않는 한 모델 다운로드와 업데이트 확인을 위해 네트워크에 접속할 수 있습니다. 민감한 데이터의 경우 클라우드 제공자와 프롬프트를 공유하지 않아도 되지만 규정 준수를 보장하지는 않습니다.',
           },
           {
             q: '이 모델들을 다운로드하는 데 얼마나 걸리나요?',
@@ -3544,7 +3553,7 @@ schema: {
       headline: 'Llama, Phi, Gemma, Qwen: 2026년 초보자 최고 LLM',
       description: 'Llama 3.2 3B = 2.5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2.5 GB. Gemma 4 E2B = 1.7 GB, 40-60 tok/s. Llama 3.1 8B와 Qwen3 8B 추가. 전체 비교표 및 Ollama 명령어.',
       'datePublished': '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-09',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'audience': { '@type': 'Audience', 'audienceType': '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -3588,9 +3597,9 @@ schema: {
         { '@type': 'Question', name: 'Ollama로 이 모델들을 어떻게 실행하나요?', acceptedAnswer: { '@type': 'Answer', text: 'ollama.com에서 Ollama를 설치한 후 `ollama run llama3.2:3b`를 실행합니다. Ollama는 첫 실행 시 모델을 다운로드합니다. 5개 모델 모두 Ollama 라이브러리에 있습니다.' } },
         { '@type': 'Question', name: 'Llama 3.2 3B는 일상적인 작업에 충분한가요?', acceptedAnswer: { '@type': 'Answer', text: '가능: 요약, 간단한 Q&A, 기본 코드 설명, 대화형 채팅. 불가능: 다단계 추론, 복잡한 코딩, 긴 형식의 구조화 작성. 그런 작업에는 8 GB RAM에서 Llama 3.1 8B 또는 Qwen3 8B로 업그레이드하세요.' } },
         { '@type': 'Question', name: '3B 모델과 7B 모델의 차이점은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '7B 모델은 복잡한 명령과 추론에서 눈에 띄게 더 나은 출력을 생성합니다. 3B 모델은 RAM의 약 절반을 사용하고 2-3배 빠릅니다. 선택은 거의 항상 사용 가능한 RAM에 의해 결정됩니다 -- 4-6 GB에서는 3B, 8 GB에서는 7B.' } },
-        { '@type': 'Question', name: '코딩 작업에 가장 좋은 모델은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B가 HumanEval 선두입니다. 더 나은 코딩을 위해 전용 변형: `ollama run qwen2.5-coder:7b`. 4-6 GB RAM 제한 시 Phi-4 Mini 3.8B가 최고 (2.5 GB RAM에서 70% HumanEval).' } },
-        { '@type': 'Question', name: '한국어나 비영어 언어에는 어떤 모델을 사용해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B는 한국어, 중국어, 일본어, 아랍어를 포함한 29개 이상 언어를 기본 지원합니다. 비영어 텍스트를 Llama보다 더 효율적으로 처리합니다.' } },
-        { '@type': 'Question', name: '이 모델들은 개인 데이터에 사용해도 안전한가요?', acceptedAnswer: { '@type': 'Answer', text: '네 -- 5개 모델 모두 완전히 사용자의 하드웨어에서 실행됩니다. 프롬프트 텍스트, 컨텍스트, 출력은 외부 서버로 전송되지 않습니다. 로컬 추론은 민감한 데이터에 대해 클라우드 API보다 본질적으로 더 프라이빗합니다.' } },
+        { '@type': 'Question', name: '코딩 작업에 가장 좋은 모델은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.1 8B가 5개 모델 중 HumanEval 수치가 가장 높습니다(72%, Phi-4 Mini 70%, Qwen3 8B 57.3%). 다국어에는 Qwen3 8B가 적합합니다. 코딩 전용 모델: `ollama run qwen2.5-coder:7b`.' } },
+        { '@type': 'Question', name: '한국어나 비영어 언어에는 어떤 모델을 사용해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B는 한국어, 중국어, 일본어, 아랍어를 포함한 29개 이상 언어를 기본 지원합니다. 커뮤니티 보고에 따르면 토크나이저가 Llama보다 비영어 텍스트에서 더 적은 토큰을 쓰는 경향이 있으며, 결과는 텍스트에 따라 다릅니다.' } },
+        { '@type': 'Question', name: '이 모델들은 개인 데이터에 사용해도 안전한가요?', acceptedAnswer: { '@type': 'Answer', text: '추론은 사용자의 하드웨어에서 실행되므로 프롬프트가 클라우드 API로 전송되지 않습니다. 다만 Ollama는 비활성화하지 않는 한 모델 다운로드와 업데이트 확인을 위해 네트워크에 접속할 수 있습니다. 민감한 데이터의 경우 클라우드 제공자와 프롬프트를 공유하지 않아도 되지만 규정 준수를 보장하지는 않습니다.' } },
         { '@type': 'Question', name: '이 모델들을 다운로드하는 데 얼마나 걸리나요?', acceptedAnswer: { '@type': 'Answer', text: '100 Mbps 기준: Llama 3.2 1B (1.3 GB) 약 2분. Gemma 4 E2B (1.6 GB) 약 2분. Llama 3.2 3B (2 GB) 약 3분. Phi-4 Mini (2.3 GB) 약 3분. Llama 3.1 8B와 Qwen3 8B (각 약 5 GB)는 약 6-7분. 모델은 첫 다운로드 후 캐시되어 이후 실행은 수초 안에 시작됩니다.' } },
         { '@type': 'Question', name: '같은 기기에서 여러 모델을 실행할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네 -- 5개 모두 디스크에 동시에 공존할 수 있습니다. 5개 모두 설치할 경우 15-20 GB를 계획하세요. Ollama는 한 번에 한 모델을 로드하고 5분 비활성 후 언로드합니다.' } },
       ],

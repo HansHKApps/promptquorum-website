@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen3 8B runs in 5.5 GB VRAM via Ollama; Qwen2.5-Coder 32B needs 24 GB and is reported at 92.7% on HumanEval.' },
-          { type: 'plain-terms', text: 'Qwen is a family of open-weight AI models from Alibaba that run on consumer GPUs — from a laptop GPU to a desktop RTX 4090 — without sending data to any cloud.' },
+          { type: 'plain-terms', text: 'Qwen is a family of open-weight AI models from Alibaba that run on consumer GPUs — from a laptop GPU to a desktop RTX 4090 — so inference needs no cloud API (unless you enable cloud or connected features).' },
         ],
       },
       modelFamily: {
@@ -390,7 +390,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'Apple Silicon pick — Qwen 3.6 27B or Qwen3 32B, quiet and low-power',
-            verdict: 'Best value for running Qwen3 32B on unified memory — quiet, low power draw, no separate GPU to install. For Qwen2.5-72B a 64 GB M2 Ultra is the tight minimum and 128 GB or more leaves room for context.',
+            verdict: 'A quiet, low-power option for running Qwen3 32B on unified memory — no separate GPU to install. For Qwen2.5-72B a 64 GB M2 Ultra is the tight minimum and 128 GB or more leaves room for context.',
             pros: [
               'M5 Pro configurations scale up to 64 GB unified memory — well above the 20.5 GB Qwen3 32B requirement, with room to spare for other apps',
               'Silent operation and desktop-friendly power draw — no dedicated GPU cooling to manage',
@@ -852,7 +852,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'Opción Apple Silicon — Qwen 3.6 27B o Qwen3 32B, silencioso y de bajo consumo',
-            verdict: 'La mejor relación calidad/precio para ejecutar Qwen3 32B con memoria unificada — silencioso, bajo consumo eléctrico, sin GPU separada que instalar. Para Qwen2.5-72B un M2 Ultra de 64 GB es el mínimo justo y con 128 GB o más queda margen para el contexto.',
+            verdict: 'Una opción silenciosa y de bajo consumo para ejecutar Qwen3 32B con memoria unificada — sin GPU separada que instalar. Para Qwen2.5-72B un M2 Ultra de 64 GB es el mínimo justo y con 128 GB o más queda margen para el contexto.',
             pros: [
               'Las configuraciones M5 Pro escalan hasta 64 GB de memoria unificada — muy por encima del requisito de 20,5 GB de Qwen3 32B, con margen para otras aplicaciones',
               'Funcionamiento silencioso y consumo adecuado para escritorio — sin gestión de refrigeración dedicada de GPU',
@@ -1258,7 +1258,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'اختيار Apple Silicon — Qwen 3.6 27B أو Qwen3 32B، هادئ ومنخفض الاستهلاك',
-            verdict: 'أفضل قيمة لتشغيل Qwen3 32B عبر الذاكرة الموحّدة — هادئ، استهلاك طاقة منخفض، ولا حاجة لتركيب بطاقة رسوم منفصلة. أما Qwen2.5-72B فإن M2 Ultra بذاكرة 64 GB هو الحد الأدنى الضيق، وتمنح ذاكرة 128 GB أو أكثر هامشًا للسياق.',
+            verdict: 'خيار هادئ ومنخفض استهلاك الطاقة لتشغيل Qwen3 32B عبر الذاكرة الموحّدة — ولا حاجة لتركيب بطاقة رسوم منفصلة. أما Qwen2.5-72B فإن M2 Ultra بذاكرة 64 GB هو الحد الأدنى الضيق، وتمنح ذاكرة 128 GB أو أكثر هامشًا للسياق.',
             pros: [
               'تتوفر تكوينات M5 Pro بذاكرة موحّدة تصل حتى 64 GB — أعلى بكثير من متطلب 20.5 GB لـ Qwen3 32B، مع مساحة إضافية لتطبيقات أخرى',
               'تشغيل صامت واستهلاك طاقة مناسب لمكتب العمل — دون إدارة تبريد مخصص لبطاقة رسوم',
@@ -1663,7 +1663,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'Opção Apple Silicon — Qwen 3.6 27B ou Qwen3 32B, silencioso e de baixo consumo',
-            verdict: 'A melhor relação custo-benefício para executar o Qwen3 32B com memória unificada — silencioso, baixo consumo de energia, sem GPU separada para instalar. Para o Qwen2.5-72B, um M2 Ultra de 64 GB é o mínimo apertado e 128 GB ou mais deixa folga para o contexto.',
+            verdict: 'Uma opção silenciosa e de baixo consumo para executar o Qwen3 32B com memória unificada — sem GPU separada para instalar. Para o Qwen2.5-72B, um M2 Ultra de 64 GB é o mínimo apertado e 128 GB ou mais deixa folga para o contexto.',
             pros: [
               'As configurações do M5 Pro chegam a 64 GB de memória unificada — bem acima do requisito de 20,5 GB do Qwen3 32B, com espaço de sobra para outros aplicativos',
               'Operação silenciosa e consumo adequado para uso de mesa — sem necessidade de gerenciar refrigeração dedicada de GPU',
@@ -1874,10 +1874,10 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             '@type': 'Question',
-            'name': 'Qwen3 est-il compatible avec le RGPD ?',
+            'name': 'Que change un déploiement local de Qwen3 au regard du RGPD ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'En déploiement local, aucune donnée d\'inférence n\'est envoyée à des tiers — en principe pas de contrat de sous-traitance requis pour la couche IA selon l\'article 28 du RGPD tant qu\'aucun tiers n\'accède aux données (le RGPD continue de s\'appliquer à votre traitement ; ceci ne constitue pas un conseil juridique).',
+              'text': 'En déploiement local, les données d\'inférence n\'ont pas à être envoyées à des tiers tant que vous n\'activez pas de services connectés ; en principe, aucun contrat de sous-traitance n\'est requis pour la couche IA (art. 28 RGPD) tant qu\'aucun tiers n\'accède aux données. Le RGPD continue de s\'appliquer à votre traitement ; ceci ne constitue pas un conseil juridique.',
             },
           },
           {
@@ -2138,7 +2138,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 Go',
             tagline: 'Choix Apple Silicon — Qwen 3.6 27B ou Qwen3 32B, silencieux et basse consommation',
-            verdict: 'Le meilleur rapport qualité/prix pour exécuter Qwen3 32B avec de la mémoire unifiée — silencieux, faible consommation électrique, aucun GPU séparé à installer. Pour Qwen2.5-72B, un M2 Ultra de 64 Go est le minimum juste et 128 Go ou plus laisse de la marge pour le contexte.',
+            verdict: 'Une option silencieuse et sobre en énergie pour exécuter Qwen3 32B avec de la mémoire unifiée — aucun GPU séparé à installer. Pour Qwen2.5-72B, un M2 Ultra de 64 Go est le minimum juste et 128 Go ou plus laisse de la marge pour le contexte.',
             pros: [
               'Les configurations M5 Pro montent jusqu\'à 64 Go de mémoire unifiée — bien au-delà des 20,5 Go requis par Qwen3 32B, avec de la marge pour d\'autres applications',
               'Fonctionnement silencieux et consommation adaptée à un bureau — aucune gestion de refroidissement de GPU dédié',
@@ -2201,7 +2201,7 @@ curl http://localhost:11434/v1/chat/completions \\
             { q: 'Qwen est-il adapté aux tâches en langue chinoise ?', a: 'Oui. Qwen3 supporte nativement le chinois simplifié, traditionnel, le japonais, le coréen et de nombreuses autres langues (voir la fiche du modèle). C\'est un candidat solide pour l\'IA locale en chinois ; testez-le sur vos propres documents.' },
             { q: 'Quelle quantification utiliser pour Qwen3 ?', a: 'Q4_K_M par défaut — ~55 % de réduction VRAM, une faible perte de qualité vs FP16. Éviter Q2_K pour les usages en langue chinoise.' },
             { q: 'Qwen2.5-VL fonctionne-t-il pour l\'OCR de documents chinois ?', a: 'Oui — `ollama pull qwen2.5vl:7b` (téléchargement de 6,0 Go), accepte texte et image et lit le texte CJK de documents numérisés ; testez sur vos propres scans. Le plus récent Qwen3-VL est `qwen3-vl:8b`.' },
-            { q: 'Qwen3 est-il compatible avec le RGPD ?', a: 'En déploiement local, aucune donnée d\'inférence n\'est envoyée à des tiers — en principe pas de contrat de sous-traitance requis pour la couche IA selon l\'article 28 du RGPD tant qu\'aucun tiers n\'accède aux données (le RGPD continue de s\'appliquer à votre traitement ; ceci ne constitue pas un conseil juridique).' },
+            { q: 'Que change un déploiement local de Qwen3 au regard du RGPD ?', a: 'En déploiement local, les données d\'inférence n\'ont pas à être envoyées à des tiers tant que vous n\'activez pas de services connectés ; en principe, aucun contrat de sous-traitance n\'est requis pour la couche IA (art. 28 RGPD) tant qu\'aucun tiers n\'accède aux données. Le RGPD continue de s\'appliquer à votre traitement ; ceci ne constitue pas un conseil juridique.' },
             { q: 'Qwen3 peut-il traiter des documents mixtes français-chinois ?', a: 'Oui. Qwen3 gère nativement le français et le chinois dans le même contexte. Pour l\'OCR de documents mixtes, Qwen2.5-VL 7B est plus adapté.' },
           ],
       },
@@ -2295,7 +2295,7 @@ curl http://localhost:11434/v1/chat/completions \\
         { '@type': 'Question', name: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M ist die empfohlene Standardauswahl — es reduziert den VRAM um ~55 % gegenüber FP16 bei geringem Qualitätsverlust. Q8_0 für nahezu FP16-Qualität bei ausreichend VRAM. Q2_K bei chinesischsprachigen Anwendungsfällen vermeiden.' } },
         { '@type': 'Question', name: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und kann chinesischen, japanischen und koreanischen Text in gescannten Dokumenten lesen; testen Sie mit eigenen Scans, da die Genauigkeit von der Scanqualität abhängt. Das neuere Qwen3-VL gibt es als `qwen3-vl:8b` (6,2 GB).' } },
         { '@type': 'Question', name: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Beim lokalen Betrieb von Qwen3 müssen Anfragedaten Ihren Server nicht verlassen — das Modell verarbeitet Anfragen auf Ihrer Hardware, solange Sie keine vernetzten Dienste aktivieren. Damit ist für die Inferenz in der Regel kein Auftragsverarbeitungsvertrag (AVV) nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Zugriff auf die Daten erhält; die DSGVO gilt für Ihre Verarbeitung aber weiterhin. Für Unternehmen, die das BSI-Grundschutz-Kompendium anwenden, kann die lokale Inferenz den IT-Grundschutz-Baustein OPS.2.2 unterstützen. Dies ist keine Rechtsberatung.' } },
-        { '@type': 'Question', name: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, insbesondere für mittelständische Unternehmen in DACH, die Datenschutz und Compliance priorisieren. Qwen3 14B oder 32B lässt sich auf einem lokalen Server betreiben, ohne Daten an externe Anbieter zu übermitteln. Damit erfüllt es die Anforderungen des BSI-Grundschutzes und eignet sich für Branchen mit erhöhtem Datenschutzbedarf wie Recht, Medizin und Finanzen.' } },
+        { '@type': 'Question', name: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, in vielen Fällen. Qwen3 14B oder 32B lässt sich auf einem lokalen Server betreiben, sodass Inferenzdaten Ihr Netz nicht verlassen müssen, solange Sie keine vernetzten Dienste aktivieren. Ob ein Einsatz die Anforderungen des BSI-Grundschutzes oder der DSGVO erfüllt, hängt von Ihrer gesamten Umsetzung ab. Dies ist keine Rechtsberatung.' } },
       ],
     },
     sections: {
@@ -2547,7 +2547,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'Apple-Silicon-Empfehlung — Qwen 3.6 27B oder Qwen3 32B, leise und stromsparend',
-            verdict: 'Bester Wert für den Betrieb von Qwen3 32B mit Unified Memory — leise, geringer Stromverbrauch, keine separate GPU zu verbauen. Für Qwen2.5-72B ist ein M2 Ultra mit 64 GB das knappe Minimum, ab 128 GB bleibt Spielraum für den Kontext.',
+            verdict: 'Eine leise, stromsparende Option für den Betrieb von Qwen3 32B mit Unified Memory — keine separate GPU zu verbauen. Für Qwen2.5-72B ist ein M2 Ultra mit 64 GB das knappe Minimum, ab 128 GB bleibt Spielraum für den Kontext.',
             pros: [
               'M5-Pro-Konfigurationen reichen bis zu 64 GB Unified Memory — deutlich über der 20,5-GB-Anforderung von Qwen3 32B, mit Spielraum für weitere Anwendungen',
               'Lautloser Betrieb und schreibtischfreundlicher Stromverbrauch — kein separates GPU-Kühlmanagement nötig',
@@ -2615,7 +2615,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', a: 'Q4_K_M ist die empfohlene Standardwahl — ~55 % VRAM-Reduktion bei geringem Qualitätsverlust. Q8_0 für nahezu FP16-Qualität. Q2_K bei chinesischsprachigen Anwendungen vermeiden.' },
           { q: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', a: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und liest CJK-Text in gescannten Dokumenten; testen Sie mit eigenen Scans. Das neuere Qwen3-VL ist `qwen3-vl:8b`.' },
           { q: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', a: 'Beim lokalen Betrieb müssen Daten den eigenen Server nicht verlassen — in der Regel kein AVV nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Datenzugriff hat; die DSGVO gilt weiterhin. Kann den BSI-Baustein OPS.2.2 unterstützen.' },
-          { q: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', a: 'Ja. Qwen3 14B oder 32B lässt sich auf einem lokalen Server betreiben ohne externe Datenübermittlung — geeignet für datenschutzkritische Branchen wie Recht, Medizin und Finanzen im DACH-Raum.' },
+          { q: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', a: 'Ja, in vielen Fällen. Qwen3 14B oder 32B lässt sich lokal betreiben, sodass Inferenzdaten Ihr Netz nicht verlassen müssen, solange Sie keine vernetzten Dienste aktivieren. Für Recht, Medizin und Finanzen ersetzt das keine rechtliche Prüfung; Entscheidungen bleiben bei qualifizierten Personen. Dies ist keine Rechtsberatung.' },
         ],
       },
       sources: {
@@ -3039,7 +3039,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'Apple Silicon向け — Qwen 3.6 27BまたはQwen3 32B、静音・低消費電力',
-            verdict: '統合メモリでQwen3 32Bを動かす上で最もコストパフォーマンスに優れた選択肢です — 静音で消費電力も低く、別途GPUを組み込む必要がありません。Qwen2.5-72Bを動かす場合はM2 Ultra 64GBがぎりぎりの最小構成で、128GB以上ならコンテキストに余裕があります。',
+            verdict: '統合メモリでQwen3 32Bを動かすための、静音で消費電力の低い選択肢です — 別途GPUを組み込む必要がありません。Qwen2.5-72Bを動かす場合はM2 Ultra 64GBがぎりぎりの最小構成で、128GB以上ならコンテキストに余裕があります。',
             pros: [
               'M5 Pro構成は最大64GBの統合メモリまで選択可能 — Qwen3 32Bの20.5GB要件を大きく上回り、他アプリ用の余裕も確保',
               '静音動作とデスクトップに適した消費電力 — 専用のGPU冷却管理が不要',
@@ -3406,7 +3406,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: '消费级硬件基准测试性能',
         content: [
-          '**RTX 4090上的Qwen3 32B Q4_K_M达到28 token/秒**——完全满足实时代码辅助需求。Qwen3 32B是Qwen的上一代；更新的Qwen 3.6 27B适配同一24GB档位（见上方硬件表）。以下数值仅为参考值，并非PromptQuorum的实测结果：速度因GPU、驱动、上下文长度和Ollama版本而异，精度评分并非我们重新运行所得，Coder的HumanEval得分为Instruct模型全精度下的公布结果（Qwen2.5-Coder技术报告，arXiv:2409.12186，表16），Qwen3和Qwen2.5-72B的得分仅供参考，未与模型卡逐一核对；Q4_K_M构建的得分通常略低于全精度。请查看各模型卡，并在自己的硬件上测试。',
+          '**RTX 4090上的Qwen3 32B Q4_K_M达到28 token/秒**——足以满足实时代码辅助需求。Qwen3 32B是Qwen的上一代；更新的Qwen 3.6 27B适配同一24GB档位（见上方硬件表）。以下数值仅为参考值，并非PromptQuorum的实测结果：速度因GPU、驱动、上下文长度和Ollama版本而异，精度评分并非我们重新运行所得，Coder的HumanEval得分为Instruct模型全精度下的公布结果（Qwen2.5-Coder技术报告，arXiv:2409.12186，表16），Qwen3和Qwen2.5-72B的得分仅供参考，未与模型卡逐一核对；Q4_K_M构建的得分通常略低于全精度。请查看各模型卡，并在自己的硬件上测试。',
         ],
         rows: [
           { '模型（Q4_K_M）': 'Qwen3 8B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', '速度（GPU）': '57 token/秒（RTX 3060 12GB）' },
@@ -3447,7 +3447,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**本地运行Qwen3可将推理提示词保留在自己的硬件上，不向云端API发送推理数据，从而在推理环节避免跨境传输。** 基于云端的LLM API需要将提示词发送至境外服务器，可能引发《数据安全法》（DSL）等规定下的数据出境问题。整体方案是否合规取决于您的数据、处理目的和自身的法律评估；本文不构成法律建议。',
           'Qwen3由阿里巴巴Qwen团队在大规模中文及多语言语料库上训练，是简体中文、繁体中文及中英混合文档本地部署的有力候选；请用您自己的资料测试。',
-          '**受监管行业（金融、医疗、法律）的企业部署方案**：推理时无互联网连接的Qwen3部署可为合规评估提供支持，但是否符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定取决于具体用途，建议咨询法律专业人士。模型完全在本地算力上运行——在我们看来，监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可降低跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen3有助于满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
+          '**受监管行业（金融、医疗、法律）的企业部署方案**：推理时无互联网连接的Qwen3部署可为合规评估提供支持，但是否符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定取决于具体用途，建议咨询法律专业人士。模型完全在本地算力上运行——在我们看来，监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：各国和地区对数据跨境传输的规定各不相同，本地LLM推理可减少向境外服务传输数据的环节，具体合规要求请咨询法律专业人士。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen3有助于满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen3下载后可在无互联网连接的情况下运行，推理数据无需离开本机，从而降低《数据安全法》下的跨境数据传输风险（是否合规仍取决于具体用途）。' },
@@ -3520,7 +3520,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64GB',
             tagline: 'Apple Silicon选择——Qwen 3.6 27B或Qwen3 32B，安静低功耗',
-            verdict: '在统一内存架构上运行Qwen3 32B性价比最高的选择——安静、低功耗、无需另装显卡。若要运行Qwen2.5-72B，M2 Ultra 64GB是勉强够用的最低配置，128GB或更高则为上下文留出余量。',
+            verdict: '在统一内存架构上运行Qwen3 32B的一个安静、低功耗的选择——无需另装显卡。若要运行Qwen2.5-72B，M2 Ultra 64GB是勉强够用的最低配置，128GB或更高则为上下文留出余量。',
             pros: [
               'M5 Pro配置最高可达64GB统一内存——远超Qwen3 32B所需的20.5GB显存，还能为其他应用留出空间',
               '静音运行，功耗适合日常桌面使用——无需额外的显卡散热管理',
@@ -3993,7 +3993,7 @@ curl http://localhost:11434/v1/chat/completions \\
             rank: 4,
             name: 'Apple Mac mini M5 Pro 64 GB',
             tagline: 'Apple Silicon 선택 — Qwen 3.6 27B 또는 Qwen3 32B, 저소음·저전력',
-            verdict: '통합 메모리에서 Qwen3 32B를 실행하는 데 가성비가 가장 좋은 선택입니다 — 조용하고 전력 소비가 낮으며 별도 GPU를 설치할 필요가 없습니다. Qwen2.5-72B의 경우 M2 Ultra 64 GB가 빠듯한 최소 사양이며 128 GB 이상이면 컨텍스트 여유가 생깁니다.',
+            verdict: '통합 메모리에서 Qwen3 32B를 실행하기 위한 조용하고 저전력인 선택지입니다 — 별도 GPU를 설치할 필요가 없습니다. Qwen2.5-72B의 경우 M2 Ultra 64 GB가 빠듯한 최소 사양이며 128 GB 이상이면 컨텍스트 여유가 생깁니다.',
             pros: [
               'M5 Pro 구성은 최대 64 GB 통합 메모리까지 제공 — Qwen3 32B의 20.5 GB 요구사항을 크게 상회하며 다른 앱을 위한 여유 공간도 확보',
               '무소음 작동과 데스크톱에 적합한 전력 소비 — 별도의 GPU 쿨링 관리 불필요',
