@@ -1266,6 +1266,7 @@ const HUB_THEMES: Array<{
       'transcriptionsuite-review',
       'whisper-notes-review',
       'aiko-review',
+      'amical-review',
       'weesper-neon-flow-review',
       'sablate-review',
       'meetini-review',

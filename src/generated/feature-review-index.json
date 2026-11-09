@@ -1709,6 +1709,11 @@
     "urlSlug": "aiko-review",
     "url": "/power-local-llm/aiko-review"
   },
+  "amical": {
+    "cluster": "power-local-llm",
+    "urlSlug": "amical-review",
+    "url": "/power-local-llm/amical-review"
+  },
   "weesper-neon-flow": {
     "cluster": "power-local-llm",
     "urlSlug": "weesper-neon-flow-review",
