@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-11-06",
+  "last_updated": "2026-11-09",
   "generated_by": "scripts/catalog-build.mjs from data/catalog-candidates.json",
   "size_note": "size_bytes is the exact byte size of the weights Ollama downloads (plus vision projector where present). Compare to memory in GiB (bytes / 2^30), not to Ollama's decimal \"GB\" label.",
   "kv_note": "kv.groups comes from the GGUF header of the served file (per-layer KV heads, sliding-window pattern, full-attention interval). kv.exactness is \"modeled\" when the header fully describes the layers and \"upper-bound\" when it does not (full attention is then assumed, so the KV estimate is conservative).",
@@ -36,7 +36,7 @@
           "size_bytes": 13793422816,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/gpt-oss:20b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -66,10 +66,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 17,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/gpt-oss:20b"
     },
     {
@@ -103,7 +103,7 @@
           "size_bytes": 65369800832,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/gpt-oss:120b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -133,10 +133,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 17,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/gpt-oss:120b"
     },
     {
@@ -170,7 +170,7 @@
           "size_bytes": 17769065248,
           "projector_bytes": 931145568,
           "source_url": "https://ollama.com/library/qwen3.6:27b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -201,10 +201,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 26,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3.6:27b"
     },
     {
@@ -238,7 +238,7 @@
           "size_bytes": 22621302688,
           "projector_bytes": 902821728,
           "source_url": "https://ollama.com/library/qwen3.6:35b-a3b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -269,10 +269,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 26,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3.6:35b-a3b"
     },
     {
@@ -306,7 +306,7 @@
           "size_bytes": 17741860480,
           "projector_bytes": 931146016,
           "source_url": "https://ollama.com/library/qwen3.8:27b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -337,10 +337,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 30,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3.8:27b"
     },
     {
@@ -374,7 +374,7 @@
           "size_bytes": 6550813952,
           "projector_bytes": 921704832,
           "source_url": "https://ollama.com/library/qwen3.5:9b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -403,10 +403,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 12,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3.5:9b"
     },
     {
@@ -440,7 +440,7 @@
           "size_bytes": 3324162336,
           "projector_bytes": 675569120,
           "source_url": "https://ollama.com/library/qwen3.5:4b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -469,10 +469,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 12,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3.5:4b"
     },
     {
@@ -506,7 +506,7 @@
           "size_bytes": 9276184896,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/qwen3:14b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -535,10 +535,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 6,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3:14b"
     },
     {
@@ -572,7 +572,7 @@
           "size_bytes": 5225374496,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/qwen3:8b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -601,10 +601,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 6,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3:8b"
     },
     {
@@ -638,7 +638,7 @@
           "size_bytes": 18556685856,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/qwen3:30b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -668,10 +668,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 6,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3:30b"
     },
     {
@@ -705,7 +705,7 @@
           "size_bytes": 18556688736,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/qwen3-coder:30b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -734,10 +734,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 18,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen3-coder:30b"
     },
     {
@@ -771,7 +771,7 @@
           "size_bytes": 4683074048,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/qwen2.5-coder:7b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -799,10 +799,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 13,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen2.5-coder:7b"
     },
     {
@@ -836,7 +836,7 @@
           "size_bytes": 5969233408,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/qwen2.5vl:7b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -865,10 +865,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 31,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/qwen2.5vl:7b"
     },
     {
@@ -902,7 +902,7 @@
           "size_bytes": 6484991552,
           "projector_bytes": 991552256,
           "source_url": "https://ollama.com/library/gemma4:e4b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -939,10 +939,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 10,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/gemma4:e4b"
     },
     {
@@ -976,7 +976,7 @@
           "size_bytes": 7556499296,
           "projector_bytes": 175115616,
           "source_url": "https://ollama.com/library/gemma4:12b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1013,10 +1013,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 10,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/gemma4:12b"
     },
     {
@@ -1050,7 +1050,7 @@
           "size_bytes": 18269247200,
           "projector_bytes": 1194828128,
           "source_url": "https://ollama.com/library/gemma4:26b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1087,10 +1087,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 10,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/gemma4:26b"
     },
     {
@@ -1124,7 +1124,7 @@
           "size_bytes": 19870759488,
           "projector_bytes": 1200726368,
           "source_url": "https://ollama.com/library/gemma4:31b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1161,10 +1161,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 10,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/gemma4:31b"
     },
     {
@@ -1198,7 +1198,7 @@
           "size_bytes": 42520398528,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/llama3.3:70b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1227,10 +1227,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 37,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/llama3.3:70b"
     },
     {
@@ -1264,7 +1264,7 @@
           "size_bytes": 4920738944,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/llama3.1:8b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1292,10 +1292,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 1,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/llama3.1:8b"
     },
     {
@@ -1329,7 +1329,7 @@
           "size_bytes": 2019377376,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/llama3.2:3b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1358,10 +1358,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 4,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/llama3.2:3b"
     },
     {
@@ -1395,7 +1395,7 @@
           "size_bytes": 9053114464,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/phi4:14b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1424,10 +1424,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 24,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/phi4:14b"
     },
     {
@@ -1461,7 +1461,7 @@
           "size_bytes": 14333908384,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/mistral-small:24b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1490,10 +1490,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 46,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/mistral-small:24b"
     },
     {
@@ -1527,7 +1527,7 @@
           "size_bytes": 15177370240,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/devstral-small-2:24b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1556,10 +1556,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 56,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/devstral-small-2:24b"
     },
     {
@@ -1593,7 +1593,7 @@
           "size_bytes": 4683073184,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/deepseek-r1:7b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1621,10 +1621,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 3,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/deepseek-r1:7b"
     },
     {
@@ -1658,7 +1658,7 @@
           "size_bytes": 5473831680,
           "projector_bytes": 1044425152,
           "source_url": "https://ollama.com/library/minicpm-v:8b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1687,10 +1687,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 33,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/minicpm-v:8b"
     },
     {
@@ -1724,7 +1724,7 @@
           "size_bytes": 1820414656,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/smollm2:1.7b",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": {
@@ -1753,10 +1753,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 39,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/smollm2:1.7b"
     },
     {
@@ -1790,7 +1790,7 @@
           "size_bytes": 274290656,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/nomic-embed-text:latest",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": null,
@@ -1800,10 +1800,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 2,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/nomic-embed-text:latest"
     },
     {
@@ -1837,7 +1837,7 @@
           "size_bytes": 1157671200,
           "projector_bytes": 0,
           "source_url": "https://ollama.com/library/bge-m3:latest",
-          "verified_date": "2026-11-06"
+          "verified_date": "2026-11-09"
         }
       ],
       "kv": null,
@@ -1847,10 +1847,10 @@
       ],
       "rank": {
         "ollama_popularity_rank": 21,
-        "ranked_on": "2026-11-06",
+        "ranked_on": "2026-11-09",
         "basis": "position in ollama.com/library?sort=popular"
       },
-      "verified_date": "2026-11-06",
+      "verified_date": "2026-11-09",
       "source_url": "https://ollama.com/library/bge-m3:latest"
     }
   ]
