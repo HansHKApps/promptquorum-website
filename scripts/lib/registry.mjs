@@ -78,7 +78,11 @@ export function findRegistryMatch(registry, registryByName, siteModel) {
   let best = null
   for (const m of registry.models) {
     const rn = normalize(m.model)
-    if (norm.startsWith(rn)) {
+    // Version boundary: "qwen3.5 0.8b" must not match the older "qwen3" entry just
+    // because it starts with it. Reject when the remainder continues the version
+    // number ("5 ..." or ".5 ..."); a size suffix after a space/hyphen is fine.
+    const rest = norm.slice(rn.length)
+    if (norm.startsWith(rn) && !/^\.?\d/.test(rest)) {
       if (!best || rn.length > normalize(best.model).length) best = m
     }
   }
