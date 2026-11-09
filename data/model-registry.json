@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-11-09",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -1045,6 +1045,54 @@
     {
       "company": "Google DeepMind",
       "family": "Gemini",
+      "model": "Gemini 3.8 Live",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "Default Live API model for low-latency voice agents without reasoning delays, per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.8 Live Extended Thinking",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "High-reasoning Live API variant for voice interactions needing more background reasoning, per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.8 Flash TTS",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "Flagship creative text-to-speech model (studio-grade voice fidelity, expressive acting, voice design/replication), per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.8 Flash-Lite TTS",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "Fast, cost-efficient text-to-speech model for high-volume production and real-time voice-agent cascades, per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
       "model": "Gemini 3.5 Flash-Lite",
       "type": "closed",
       "release_date": null,
@@ -2008,11 +2056,23 @@
       "model": "DeepSeek V4-Flash",
       "type": "open-weight",
       "release_date": "2026-04-24",
+      "status": "superseded",
+      "superseded_by": "DeepSeek-V4.1-Flash-1017",
+      "source_url": "https://www.deepseek.com/",
+      "verified_date": "2026-11-09",
+      "notes": "Part of the DeepSeek-V4 Preview open-weight release. 284B total / 13B active MoE parameters, positioned for near-frontier quality on 2-GPU setups. Superseded: DeepSeek's own API docs (2026-11-09 fetch) say the deepseek-v4-flash and deepseek-v4-flash-vision-exp model names are retired and now served by DeepSeek-V4.1-Flash-1017 at the same price; legacy names still accepted for compatibility."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-V4.1-Flash-1017",
+      "type": "open-weight",
+      "release_date": "2026-10-17",
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://www.deepseek.com/",
-      "verified_date": "2026-09-25",
-      "notes": "Part of the DeepSeek-V4 Preview open-weight release. 284B total / 13B active MoE parameters, positioned for near-frontier quality on 2-GPU setups."
+      "source_url": "https://api-docs.deepseek.com/quick_start/your_first_api_call",
+      "verified_date": "2026-11-09",
+      "notes": "Now serves the deepseek-flash API alias, replacing DeepSeek V4-Flash. Per DeepSeek's own API docs (2026-11-09 fetch); naming follows DeepSeek's snapshot convention (date suffix = Oct 17, 2026). Weights distribution (license/HF/ModelScope) not independently confirmed this cycle -- verify before citing license terms."
     },
     {
       "company": "Mistral AI",
@@ -3243,12 +3303,12 @@
       "family": "Grok",
       "model": "Grok 4.7",
       "type": "closed",
-      "release_date": null,
+      "release_date": "2026-09",
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://docs.x.ai/developers/models",
-      "verified_date": "2026-10-18",
-      "notes": "xAI's own docs describe it as 'most capable model we've built', knowledge cutoff May 2026 (2026-10-18 fetch). Supersedes Grok 4.6. grok-voice-2.0 (speech-to-speech) was explicitly deprecated this cycle; grok-voice-3.0 is the current voice model."
+      "source_url": "https://docs.x.ai/release-notes.md",
+      "verified_date": "2026-11-09",
+      "notes": "xAI's official release notes (2026-11-09 fetch) place Grok 4.7's release in the September 2026 section; 500k context window, text+image input/text-only output, pricing $2/$0.50/$6 per 1M tokens below 200k-token prompts. Still the current flagship as of the November 2026 release notes, which list only a grok-imagine-image pricing change, no new frontier model. Supersedes Grok 4.6. Grok Voice 3.0 (Oct 2026) is the current voice model, superseding the now-deprecated Grok Voice 2.0."
     },
     {
       "company": "Google DeepMind",
@@ -3258,8 +3318,8 @@
       "release_date": null,
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://deepmind.google/models/gemini/",
-      "verified_date": "2026-10-18",
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
       "notes": "Confirmed as new flagship per Google's own Gemini model page (2026-10-18 fetch): described as 'next era of frontier intelligence, built to solve your hardest problems', rolling out to Google AI Pro and Ultra subscribers. No release date given on the page. Supersedes Gemini 3.1 Pro as the general-purpose flagship. Flash/Flash-Lite/Deep Think tiers were not explicitly listed as superseded by this page — keep them as current until a dedicated API docs page confirms otherwise."
     },
     {
