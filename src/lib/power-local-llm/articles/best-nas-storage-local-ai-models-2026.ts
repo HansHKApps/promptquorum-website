@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -602,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -2260,7 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -2810,7 +2810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -3373,7 +3373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -3937,7 +3937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',
@@ -4500,7 +4500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 8B',
-      'Mistral Small',
+      'Ministral 3 8B',
     ],
     current_hardware_mentioned: [
       'Synology DS423+',

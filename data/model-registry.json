@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-11-09",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -153,6 +153,42 @@
       "source_url": "https://developers.openai.com/api/docs/models",
       "verified_date": "2026-10-18",
       "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-5.6 Luna",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6 Luna",
+      "source_url": "https://openai.com",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant); GPT-6 Luna is the name-matched successor, both already tracked as separate registry entries."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-5.6 Sol",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6.1 Sol",
+      "source_url": "https://openai.com",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant); GPT-6.1 Sol is the name-matched successor."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-5.6 Terra",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": null,
+      "source_url": "https://openai.com",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). No confirmed same-named 'Terra' successor found this cycle (OpenAI's site is bot-blocked from this session; unverified third-party mentions of a 'GPT-6.1 Terra' exist but are not confirmed from an official source) -- left unresolved rather than guessed. Needs a real OpenAI-source check."
     },
     {
       "company": "OpenAI",
@@ -419,6 +455,114 @@
       "notes": "Site mentions: DeepSeek-R1 (6x) plus 6 distilled variants (Qwen-32B/14B/7B, Llama-70B, 0528-Qwen3-8B — ~30 combined mentions). DeepSeek's deepseek-reasoner alias (R1-generation thinking mode) deprecates 2026-07-24 per their own docs. Distilled variants are separate open-weight releases, not directly addressed by that deprecation notice — needs its own check next cycle, do not assume they're retired."
     },
     {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Qwen-7B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Qwen-14B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Qwen-32B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Llama-8B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Llama-70B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1 Distill",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "Generic reference to the DeepSeek R1 distill family (covers the Qwen/Llama-base size variants: 1.5B/7B/8B/14B/32B/70B). DeepSeek has not published a DeepSeek-V4-based distill as of this verification; earlier tooling incorrectly flagged generic mentions as superseded by DeepSeek-V4, a different weight class entirely. Treating as current until DeepSeek ships a real distill successor. See the specific-size entries for individually named variants."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-Distill-Qwen",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "Generic reference to the DeepSeek R1 distill family (covers the Qwen/Llama-base size variants: 1.5B/7B/8B/14B/32B/70B). DeepSeek has not published a DeepSeek-V4-based distill as of this verification; earlier tooling incorrectly flagged generic mentions as superseded by DeepSeek-V4, a different weight class entirely. Treating as current until DeepSeek ships a real distill successor. See the specific-size entries for individually named variants."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1-0528-Qwen3-8B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/deepseek-ai",
+      "verified_date": "2026-11-09",
+      "notes": "A later-dated (0528) re-release of the R1-Distill-Qwen-8B-class checkpoint with improved reasoning. DeepSeek has not published a DeepSeek-V4-based distill as of this verification (DeepSeek's own Hugging Face org page still lists the R1 distills; no V4 distill repo found). Earlier tooling incorrectly flagged this as superseded by DeepSeek-V4 -- V4 is a different weight class entirely (284B-552B+ MoE) and is not a like-for-like replacement for a small local-deployable distill. Treating as current until DeepSeek ships a real distill successor."
+    },
+    {
       "company": "Alibaba / Qwen",
       "family": "Qwen",
       "model": "Qwen3.6",
@@ -429,6 +573,66 @@
       "source_url": "https://github.com/QwenLM/Qwen3.6",
       "verified_date": "2026-07-13",
       "notes": "Qwen3.6-27B (2026-04-22) and Qwen3.6-35B-A3B (2026-04-16) per Qwen's own GitHub org. Newest open generation as of this check."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-VL",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-11-09",
+      "notes": "Qwen's current vision-language line (flagship: Qwen3-VL-235B-A22B, Instruct and Thinking variants). Confirmed via Qwen's official Hugging Face org page (huggingface.co/Qwen, 2026-11-09 fetch) -- a separate modality line from the Qwen3.6 plain-chat flagship; earlier tooling incorrectly flagged every Qwen3-VL size mention (2B/4B/8B/32B/30B-A3B/235B-A22B) as superseded by Qwen3.6, a text-only model. Generic entry so size variants match via prefix; add a size-specific entry if a particular size needs independent tracking."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3.5 VL",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Qwen3-VL",
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-11-09",
+      "notes": "Earlier Qwen3.5-generation vision-language variant; Qwen3-VL (flagship Qwen3-VL-235B-A22B) is the current VL line per huggingface.co/Qwen (2026-11-09 fetch)."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-Embedding",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-11-09",
+      "notes": "Qwen's current text-embedding line (0.6B/4B/8B sizes seen on Hugging Face). Confirmed via huggingface.co/Qwen (2026-11-09 fetch) -- a separate modality line from the Qwen3.6 chat flagship; earlier tooling incorrectly flagged Qwen3-Embedding mentions as superseded by Qwen3.6."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-TTS",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-11-09",
+      "notes": "Qwen's current text-to-speech line (the '12Hz' codec variants: Base/CustomVoice/VoiceDesign at 0.6B/1.7B, per huggingface.co/Qwen, 2026-11-09 fetch) -- a separate modality from the Qwen3.6 chat flagship; earlier tooling incorrectly flagged Qwen3-TTS mentions as superseded by Qwen3.6."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-ASR",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-11-09",
+      "notes": "Qwen's current speech-recognition line (0.6B/1.7B, per huggingface.co/Qwen, 2026-11-09 fetch) -- a separate modality from the Qwen3.6 chat flagship."
     },
     {
       "company": "Alibaba / Qwen",
@@ -1045,6 +1249,54 @@
     {
       "company": "Google DeepMind",
       "family": "Gemini",
+      "model": "Gemini 3.8 Live",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "Default Live API model for low-latency voice agents without reasoning delays, per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.8 Live Extended Thinking",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "High-reasoning Live API variant for voice interactions needing more background reasoning, per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.8 Flash TTS",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "Flagship creative text-to-speech model (studio-grade voice fidelity, expressive acting, voice design/replication), per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.8 Flash-Lite TTS",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
+      "notes": "Fast, cost-efficient text-to-speech model for high-volume production and real-time voice-agent cascades, per Google AI Studio's models page (2026-11-09 fetch, marked 'New')."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
       "model": "Gemini 3.5 Flash-Lite",
       "type": "closed",
       "release_date": null,
@@ -1161,6 +1413,18 @@
       "source_url": "https://docs.mistral.ai/models/overview",
       "verified_date": "2026-09-14",
       "notes": "New small-model family per Mistral's own model catalog: Ministral 3 14B, Ministral 3 8B, Ministral 3 3B. Corroborated via AWS Bedrock (Ministral 14B 3.0, Ministral 3 8B, Ministral 3B). Relevant for this site's low-VRAM local-LLM hardware-tier content — not yet checked against any current site mentions this cycle."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Ministral 3 8B",
+      "type": "open-weight",
+      "release_date": "2026",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/ministral-3",
+      "verified_date": "2026-11-09",
+      "notes": "Exact-size entry (2026-11-09). Ollama's ministral-3 page lists 3B/8B/14B/94B sizes; the 8B tag pulls ~6.0 GB by default. Mistral/Ollama describe the Ministral 3 line as 'designed for edge deployment, capable of running on a wide range of hardware' -- this is the real match for ~16 site articles that described a ~4 GB, 7-8B-class model called 'Mistral Small' running comfortably on any M1+ Mac / a 12 GB budget GPU. The actual 'Mistral Small' product line is 22-24B dense (now a 119B MoE as 'Mistral Small 4') and does not fit those specs; the site had conflated the two distinct Mistral AI model lines."
     },
     {
       "company": "Meta",
@@ -2008,11 +2272,23 @@
       "model": "DeepSeek V4-Flash",
       "type": "open-weight",
       "release_date": "2026-04-24",
+      "status": "superseded",
+      "superseded_by": "DeepSeek-V4.1-Flash-1017",
+      "source_url": "https://www.deepseek.com/",
+      "verified_date": "2026-11-09",
+      "notes": "Part of the DeepSeek-V4 Preview open-weight release. 284B total / 13B active MoE parameters, positioned for near-frontier quality on 2-GPU setups. Superseded: DeepSeek's own API docs (2026-11-09 fetch) say the deepseek-v4-flash and deepseek-v4-flash-vision-exp model names are retired and now served by DeepSeek-V4.1-Flash-1017 at the same price; legacy names still accepted for compatibility."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-V4.1-Flash-1017",
+      "type": "open-weight",
+      "release_date": "2026-10-17",
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://www.deepseek.com/",
-      "verified_date": "2026-09-25",
-      "notes": "Part of the DeepSeek-V4 Preview open-weight release. 284B total / 13B active MoE parameters, positioned for near-frontier quality on 2-GPU setups."
+      "source_url": "https://api-docs.deepseek.com/quick_start/your_first_api_call",
+      "verified_date": "2026-11-09",
+      "notes": "Now serves the deepseek-flash API alias, replacing DeepSeek V4-Flash. Per DeepSeek's own API docs (2026-11-09 fetch); naming follows DeepSeek's snapshot convention (date suffix = Oct 17, 2026). Weights distribution (license/HF/ModelScope) not independently confirmed this cycle -- verify before citing license terms."
     },
     {
       "company": "Mistral AI",
@@ -3243,12 +3519,12 @@
       "family": "Grok",
       "model": "Grok 4.7",
       "type": "closed",
-      "release_date": null,
+      "release_date": "2026-09",
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://docs.x.ai/developers/models",
-      "verified_date": "2026-10-18",
-      "notes": "xAI's own docs describe it as 'most capable model we've built', knowledge cutoff May 2026 (2026-10-18 fetch). Supersedes Grok 4.6. grok-voice-2.0 (speech-to-speech) was explicitly deprecated this cycle; grok-voice-3.0 is the current voice model."
+      "source_url": "https://docs.x.ai/release-notes.md",
+      "verified_date": "2026-11-09",
+      "notes": "xAI's official release notes (2026-11-09 fetch) place Grok 4.7's release in the September 2026 section; 500k context window, text+image input/text-only output, pricing $2/$0.50/$6 per 1M tokens below 200k-token prompts. Still the current flagship as of the November 2026 release notes, which list only a grok-imagine-image pricing change, no new frontier model. Supersedes Grok 4.6. Grok Voice 3.0 (Oct 2026) is the current voice model, superseding the now-deprecated Grok Voice 2.0."
     },
     {
       "company": "Google DeepMind",
@@ -3258,8 +3534,8 @@
       "release_date": null,
       "status": "current",
       "superseded_by": null,
-      "source_url": "https://deepmind.google/models/gemini/",
-      "verified_date": "2026-10-18",
+      "source_url": "https://aistudio.google.com/docs/models",
+      "verified_date": "2026-11-09",
       "notes": "Confirmed as new flagship per Google's own Gemini model page (2026-10-18 fetch): described as 'next era of frontier intelligence, built to solve your hardest problems', rolling out to Google AI Pro and Ultra subscribers. No release date given on the page. Supersedes Gemini 3.1 Pro as the general-purpose flagship. Flash/Flash-Lite/Deep Think tiers were not explicitly listed as superseded by this page — keep them as current until a dedicated API docs page confirms otherwise."
     },
     {

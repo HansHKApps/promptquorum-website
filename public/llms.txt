@@ -83,7 +83,7 @@
 PromptQuorum runs a live, public, read-only [Model Context Protocol](https://modelcontextprotocol.io) server exposing the site's own content and software directory to any MCP-compatible client. No account, API key, or authentication required.
 
 - **Transport**: Streamable HTTP — `POST`/`GET` to `https://www.promptquorum.com/api/mcp`
-- **Server version**: 2.1.0 — 21 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
+- **Server version**: 2.2.0 — 21 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
 - **Discovery manifest**: [https://www.promptquorum.com/mcp.json](https://www.promptquorum.com/mcp.json)
 - **Documentation**: [https://www.promptquorum.com/mcp-stats](https://www.promptquorum.com/mcp-stats)
 - **Tools** (find apps):
@@ -136,4 +136,4 @@ When referencing or displaying PromptQuorum images, cite: **Source: PromptQuorum
 
 ---
 
-Last updated: 2026-10-17
+Last updated: 2026-11-09
