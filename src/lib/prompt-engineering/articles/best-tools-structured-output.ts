@@ -8,14 +8,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-en.webp',
     title: 'Best Tools for Structured Output and JSON Mode (2026)',
     seoTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
-    metaDescription: '7 structured output tools compared: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum. Pricing, schema format, local model support.',
+    metaDescription: '7 structured output tools compared: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum (our own product). Schema format, local models.',
     ogTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
-    ogDescription: '7 tools for LLM structured output compared: Instructor for retries, Outlines for constrained decoding, BAML for polyglot teams. Test consistency with PromptQuorum.',
+    ogDescription: '7 tools for LLM structured output compared: Instructor for retries, Outlines for constrained decoding, BAML for polyglot teams. Test consistency with PromptQuorum (our own product).',
     twitterTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — which structured output tool fits your stack? Side-by-side comparison (2026).',
-    intro: '**Seven tools dominate structured output in 2026: Instructor for Pydantic extraction, Outlines for constrained decoding, Pydantic AI for type-safe agents, BAML for schema-first prompt files, LangChain for unified APIs, Marvin for task-based extraction, and PromptQuorum for cross-model testing. Each solves a different workflow bottleneck.**',
+    intro: '**Seven tools are widely used or worth knowing for structured output in 2026: Instructor for Pydantic extraction, Outlines for constrained decoding, Pydantic AI for type-safe agents, BAML for schema-first prompt files, LangChain for unified APIs, Marvin for task-based extraction, and PromptQuorum (our own product) for cross-model testing. Each solves a different workflow bottleneck.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — library versions, licences, APIs, and documentation URLs re-verified against official repositories, PyPI, and vendor documentation',
     readTime: '11 min read',
     educationalLevel: 'Advanced',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Common Structured Output Mistakes', anchor: '#common-mistakes' },
       { label: 'Frequently Asked Questions', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**Choose based on where your models run and which languages your team ships: Instructor and Pydantic AI for Python API workflows with retries and type safety; Outlines for guaranteed schema compliance on local models; BAML when the same schema must serve Python, TypeScript, and Go services; LangChain for teams already using chains or agents; Marvin for fast extract/cast/classify calls; PromptQuorum for consistency testing across GPT, Claude, and Gemini before production.**',
+    leadAnswerBlock: '**Choose based on where your models run and which languages your team ships: Instructor and Pydantic AI for Python API workflows with retries and type safety; Outlines for schema-constrained decoding on local models; BAML when the same schema must serve Python, TypeScript, and Go services; LangChain for teams already using chains or agents; Marvin for fast extract/cast/classify calls; PromptQuorum (our own product) for consistency testing across GPT, Claude, and Gemini before production.**',
     quickFacts: [
       'Instructor is MIT-licensed and ships six official implementations: Python, TypeScript, Ruby, Go, Elixir, and Rust',
       'Outlines 1.x constrains tokens at generation time and now also drives hosted APIs, not just local backends',
@@ -49,17 +49,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML compiles one .baml schema file into typed clients and repairs malformed model output instead of retrying',
       'LangChain 1.x reads each provider native structured-output support from its model profile',
       'Marvin 3.x is built on Pydantic AI and exposes extract, cast, classify, and generate',
-      'PromptQuorum tests the same prompt across 25+ models for consistency'
+      'PromptQuorum (our own product) can run the same prompt across many models to compare consistency'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Tools for Structured Output and JSON Mode (2026)',
-      description: 'Compare seven libraries for LLM structured output: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, and PromptQuorum. Ranked by schema enforcement, language support, local model compatibility, and pricing.',
+      description: 'Compare seven libraries for LLM structured output: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, and PromptQuorum (our own product). Compared by schema enforcement, language support, local model compatibility, and pricing.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
@@ -86,11 +86,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Best Tools for LLM Structured Output (2026)',
-      description: 'Seven leading libraries for enforcing structured output from language models.',
+      description: 'Seven libraries and tools for enforcing or testing structured output from language models, including PromptQuorum (our own product).',
       numberOfItems: 7,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Pydantic-based extraction from any LLM, with automatic retries. MIT-licensed open source, six language implementations.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Constrained decoding library for guaranteed schema compliance on local models. Apache 2.0 open source.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Constrained decoding library that enforces your schema at generation time on local models. Apache 2.0 open source.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Type-safe agent framework with three structured output modes and durable execution integrations.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: 'Schema-first prompt language that compiles typed clients and repairs malformed model output via schema-aligned parsing.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'Unified API layer for structured output across OpenAI, Anthropic, Google, and local models.' },
@@ -105,17 +105,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'Use Instructor for Python API extraction with retries. Use Outlines for guaranteed schema compliance on local models. Use Pydantic AI for type-safe multi-turn agents. Use BAML when Python, TypeScript, and Go services must share one schema. Use LangChain if you are already in that ecosystem. Use Marvin for one-line extract and classify calls. Use PromptQuorum to test structured output consistency across all models before production.'
+            text: 'Use Instructor for Python API extraction with retries. Use Outlines for schema-constrained decoding on local models. Use Pydantic AI for type-safe multi-turn agents. Use BAML when Python, TypeScript, and Go services must share one schema. Use LangChain if you are already in that ecosystem. Use Marvin for one-line extract and classify calls. Use PromptQuorum (our own product) to test structured output consistency across all models before production.'
           }
         ],
         items: [
-          '**Instructor** is the most popular Python choice — Pydantic schemas, automatic retries, and official ports for TypeScript, Ruby, Go, Elixir, and Rust',
-          '**Outlines** guarantees schema compliance via constrained decoding on local models — zero hallucination risk on the structure itself',
+          '**Instructor** is a widely used Python option — Pydantic schemas, automatic retries, and official ports for TypeScript, Ruby, Go, Elixir, and Rust',
+          '**Outlines** constrains token generation to your schema on local models, which removes most structural parse failures; values still need validation, and truncation or grammar limits can still break output',
           '**Pydantic AI** adds type safety to multi-turn agent conversations and falls back from native structured output to tool calls to prompted JSON',
           '**BAML** puts the schema and prompt in a versioned .baml file and generates typed clients, so polyglot teams share one contract',
           '**LangChain with_structured_output()** unifies structured output across OpenAI, Anthropic, and Google APIs',
           '**Marvin 3.x** sits on top of Pydantic AI and reduces extraction to a single extract or classify call',
-          '**PromptQuorum** tests structured output consistency across all models before production deployment'
+          '**PromptQuorum** (our own product) tests structured output consistency across all models before production deployment'
         ]
       },
       whichProblem: {
@@ -125,22 +125,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: 'Structured-output tools solve three distinct problems — enforcing a schema at generation time, validating the result afterwards, and repairing malformed output — and most stacks need only the first two.' },
           { type: 'in-plain-terms', text: 'Do not shop by feature list. Ask which failure you actually hit: the model ignores your format, or it obeys the format but the values are wrong, or it returns JSON that will not even parse. Each has a different answer.' },
         ],
-        content: '**Structured output requires solving three interdependent problems: schema definition, API enforcement, and validation.** Different tools attack these problems differently. Instructor handles all three in Python with retries. Outlines eliminates the validation step via constrained decoding. Pydantic AI adds type safety for agents. BAML moves the schema into a compiled file and repairs imperfect output. LangChain wraps provider APIs. Marvin prioritises developer speed. PromptQuorum validates consistency across all models.',
+        content: '**Structured output requires solving three interdependent problems: schema definition, API enforcement, and validation.** Different tools attack these problems differently. Instructor handles all three in Python with retries. Outlines reduces the need for a separate validation step via constrained decoding. Pydantic AI adds type safety for agents. BAML moves the schema into a compiled file and repairs imperfect output. LangChain wraps provider APIs. Marvin prioritises developer speed. PromptQuorum validates consistency across all models.',
         columns: ['Problem', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { 'Problem': 'Define schema', 'Instructor': 'Pydantic models', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Pydantic models', 'BAML': '.baml class files', 'LangChain': 'Tool definitions', 'Marvin': 'Python type hints' },
           { 'Problem': 'Enforce on API call', 'Instructor': 'Retry + validation', 'Outlines': 'Token-level constraint', 'Pydantic AI': 'Native / tool / prompted', 'BAML': 'Generated prompt + parser', 'LangChain': 'Provider JSON mode', 'Marvin': 'Pydantic AI output types' },
-          { 'Problem': 'Validate response', 'Instructor': 'Automatic', 'Outlines': 'Guaranteed at generation', 'Pydantic AI': 'Type-checked', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manual', 'Marvin': 'Automatic' }
+          { 'Problem': 'Validate response', 'Instructor': 'Automatic', 'Outlines': 'Enforced at generation', 'Pydantic AI': 'Type-checked', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manual', 'Marvin': 'Automatic' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic Extraction',
-        content: '**Instructor is the most widely adopted structured output library. It wraps any LLM API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — and returns validated Pydantic models instead of raw text.** Instructor handles retries automatically when validation fails, making it production-grade without extra error handling.',
+        content: '**Instructor is a widely used structured output library. It wraps any LLM API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — and returns validated Pydantic models instead of raw text.** Instructor retries automatically when validation fails; you still need to handle the case where retries are exhausted.',
         items: [
           'Works with every major provider (OpenAI, Anthropic, Google, Groq, Mistral) and local models via Ollama or vLLM',
           'Pydantic v2 schemas: type hints, validation rules, docstring descriptions embedded in schema',
-          'Automatic retry with backoff on validation failure — no manual error handling needed',
+          'Automatic retries on validation failure — you still need to handle exhausted retries',
           'Six official implementations: Python, TypeScript, Ruby, Go, Elixir, and Rust',
           'MIT-licensed open source, actively maintained, currently on the 1.x line',
           'Pricing: Free (no additional cost beyond LLM API calls)'
@@ -151,13 +151,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines: Constrained Decoding',
-        content: '**Outlines enforces schema compliance at token generation time via constrained decoding. Instead of generating tokens then validating, Outlines limits valid tokens at each step to match your schema.** This guarantees the output parses against your schema with zero structural hallucination risk, which is what makes it the default choice for local models.',
+        content: '**Outlines enforces schema compliance at token generation time via constrained decoding. Instead of generating tokens then validating, Outlines limits valid tokens at each step to match your schema.** This removes most structural parse failures, though values still need validation and truncation or grammar limits can still break output. That is why it is a common choice for local models.',
         items: [
           'Local backends: transformers, llama.cpp, MLX, and any Hugging Face model',
           'Server backends: vLLM, Ollama, and NVIDIA NIM',
           'Hosted APIs are supported too (OpenAI, Gemini), so the same code moves between local and cloud',
           'Schemas as Pydantic models, JSON Schema, regex patterns, literal choices, or context-free grammars',
-          'Guaranteed structural compliance — no post-generation validation or retries needed',
+          'Strong structural compliance at generation time — still validate values, and watch for truncation or grammar limits',
           'Apache 2.0 open source, currently on the 1.x line, with a Rust core (outlines-core) for speed'
         ]
       },
@@ -217,9 +217,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: Cross-Model Testing',
-        content: '**PromptQuorum is not a structured output library itself, but a testing platform for validating structured output consistency across models.** Run the same prompt against GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, and 20+ other models simultaneously. Measure schema compliance, latency, and cost per model.',
+        content: '**PromptQuorum is our own product, and it is not a structured output library itself, but a testing platform for validating structured output consistency across models.** Run the same prompt against GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, and many other models simultaneously. Measure schema compliance, latency, and cost per model.',
         items: [
-          'Multi-model dispatch in a single API call — test one prompt against 25+ models',
+          'Multi-model dispatch in a single API call — test one prompt against many models',
           'Structured output compliance metrics — pass rate, latency, cost per model',
           'Identify models that hallucinate on your schema — avoid deploying to unreliable models',
           'Consensus mode — find agreements between independent model runs',
@@ -230,15 +230,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Side-by-Side Comparison',
-        columns: ['Tool', 'Best For', 'Schema Format', 'Language', 'Local Models', 'Licence', 'Learning Curve'],
+        columns: ['Tool', 'Best For', 'Schema Format', 'Language', 'Local Models', 'Licence', 'Learning Curve (editorial assessment)'],
         rows: [
-          { 'Tool': '[Instructor](https://python.useinstructor.com)', 'Best For': 'Python APIs + retries', 'Schema Format': 'Pydantic models', 'Language': 'Python, TS, Ruby, Go, Elixir, Rust', 'Local Models': 'Yes (Ollama, vLLM)', 'Licence': 'MIT, free', 'Learning Curve': 'Low' },
-          { 'Tool': '[Outlines](https://dottxt.ai)', 'Best For': 'Local model deployment', 'Schema Format': 'Pydantic, JSON Schema, regex, CFG', 'Language': 'Python', 'Local Models': 'Yes (native)', 'Licence': 'Apache 2.0, free', 'Learning Curve': 'Medium' },
-          { 'Tool': '[Pydantic AI](https://ai.pydantic.dev)', 'Best For': 'Type-safe agents', 'Schema Format': 'Pydantic models', 'Language': 'Python', 'Local Models': 'Yes (Ollama)', 'Licence': 'MIT, free', 'Learning Curve': 'Low' },
-          { 'Tool': '[BAML](https://boundaryml.com)', 'Best For': 'Polyglot teams, flaky models', 'Schema Format': '.baml class files', 'Language': 'Python, TS + 6 via OpenAPI', 'Local Models': 'Yes (OpenAI-compatible)', 'Licence': 'Apache 2.0, paid observability', 'Learning Curve': 'Medium' },
-          { 'Tool': '[LangChain](https://langchain.com)', 'Best For': 'Chains + agents', 'Schema Format': 'Tool definitions', 'Language': 'Python, JS', 'Local Models': 'Yes', 'Licence': 'MIT, free', 'Learning Curve': 'Medium' },
-          { 'Tool': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Best For': 'Fast extract + classify', 'Schema Format': 'Type hints', 'Language': 'Python', 'Local Models': 'Yes', 'Licence': 'Apache 2.0, free', 'Learning Curve': 'Very low' },
-          { 'Tool': '[PromptQuorum](https://www.promptquorum.com)', 'Best For': 'Multi-model testing', 'Schema Format': 'API-agnostic', 'Language': 'API-first', 'Local Models': 'Via OpenAI proxy', 'Licence': 'Free tier + enterprise', 'Learning Curve': 'Low' }
+          { 'Tool': '[Instructor](https://python.useinstructor.com)', 'Best For': 'Python APIs + retries', 'Schema Format': 'Pydantic models', 'Language': 'Python, TS, Ruby, Go, Elixir, Rust', 'Local Models': 'Yes (Ollama, vLLM)', 'Licence': 'MIT, free', 'Learning Curve (editorial assessment)': 'Low' },
+          { 'Tool': '[Outlines](https://dottxt.ai)', 'Best For': 'Local model deployment', 'Schema Format': 'Pydantic, JSON Schema, regex, CFG', 'Language': 'Python', 'Local Models': 'Yes (native)', 'Licence': 'Apache 2.0, free', 'Learning Curve (editorial assessment)': 'Medium' },
+          { 'Tool': '[Pydantic AI](https://ai.pydantic.dev)', 'Best For': 'Type-safe agents', 'Schema Format': 'Pydantic models', 'Language': 'Python', 'Local Models': 'Yes (Ollama)', 'Licence': 'MIT, free', 'Learning Curve (editorial assessment)': 'Low' },
+          { 'Tool': '[BAML](https://boundaryml.com)', 'Best For': 'Polyglot teams, flaky models', 'Schema Format': '.baml class files', 'Language': 'Python, TS + 6 via OpenAPI', 'Local Models': 'Yes (OpenAI-compatible)', 'Licence': 'Apache 2.0, paid observability', 'Learning Curve (editorial assessment)': 'Medium' },
+          { 'Tool': '[LangChain](https://langchain.com)', 'Best For': 'Chains + agents', 'Schema Format': 'Tool definitions', 'Language': 'Python, JS', 'Local Models': 'Yes', 'Licence': 'MIT, free', 'Learning Curve (editorial assessment)': 'Medium' },
+          { 'Tool': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Best For': 'Fast extract + classify', 'Schema Format': 'Type hints', 'Language': 'Python', 'Local Models': 'Yes', 'Licence': 'Apache 2.0, free', 'Learning Curve (editorial assessment)': 'Very low' },
+          { 'Tool': '[PromptQuorum](https://www.promptquorum.com) (our own product)', 'Best For': 'Multi-model testing', 'Schema Format': 'API-agnostic', 'Language': 'API-first', 'Local Models': 'Via OpenAI proxy', 'Licence': 'Free tier + enterprise', 'Learning Curve (editorial assessment)': 'Low' }
         ]
       },
       decision: {
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Start by answering three questions: (1) Which languages do the services that call the model actually ship in? (2) Do you need local model support? (3) How much validation complexity do you have?',
         items: [
           '**Use Instructor if:** You are building Python APIs and need automatic retries on validation failure. Best general-purpose choice.',
-          '**Use Outlines if:** You deploy local models (llama.cpp, vLLM, MLX) and want guaranteed schema compliance at generation time.',
+          '**Use Outlines if:** You deploy local models (llama.cpp, vLLM, MLX) and want schema enforcement at generation time.',
           '**Use Pydantic AI if:** You are building multi-turn agent workflows with type safety across all steps, or need durable execution.',
           '**Use BAML if:** Python, TypeScript, and Go services must share one schema, or your model has no reliable native JSON mode.',
           '**Use LangChain if:** You already use LangChain or LangGraph — with_structured_output() is the simplest addition.',
@@ -273,27 +273,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Treating every JSON mode as a schema guarantee',
             problem: 'Plain JSON mode (response_format json_object, Anthropic JSON control) only guarantees the reply is valid JSON — not that it matches your fields or types. Strict schema modes go further and guarantee the shape, but neither guarantees the values are correct: a well-formed object can still contain an invented price or a hallucinated date.',
-            fix: 'Layer validation on top regardless: Instructor, Outlines, Pydantic AI, or BAML. Enforce business rules in Pydantic validators, not in the schema alone. Test with PromptQuorum to catch compliance failures per model.'
+            fix: 'Layer validation on top regardless: Instructor, Outlines, Pydantic AI, or BAML. Enforce business rules in Pydantic validators, not in the schema alone. Test with PromptQuorum (our own product) to catch compliance failures per model.'
           },
           {
             mistake: 'Designing schemas that are too strict',
             problem: 'Overly constrained schemas (tiny enum lists, very specific regex patterns) cause LLMs to fail validation frequently. High retry counts waste tokens and money.',
-            fix: 'Use PromptQuorum to test schema strictness across models. Loosen constraints to achieve 95%+ compliance. Use optional fields instead of required ones when possible.'
+            fix: 'Use PromptQuorum (our own product) to test schema strictness across models. Loosen constraints until your target compliance rate is met. Use optional fields instead of required ones when possible.'
           },
           {
             mistake: 'Not testing local vs. API model differences',
             problem: 'Outlines on llama.cpp behaves differently than Instructor on GPT-6 Astra. Schema compliance rates differ per model. Building only for a frontier API model, then deploying to a small local one, causes production failures.',
-            fix: 'Test all intended model backends early. Use PromptQuorum to run the same prompt across local (vLLM, Ollama) and hosted (OpenAI, Anthropic, Google) models.'
+            fix: 'Test all intended model backends early. Use PromptQuorum (our own product) to run the same prompt across local (vLLM, Ollama) and hosted (OpenAI, Anthropic, Google) models.'
           },
           {
             mistake: 'Ignoring latency and token cost impact',
             problem: 'Structured output with retries costs more tokens. Instructor retries on failure. Outlines constrained decoding adds per-token overhead compared with free generation. Not measuring per-model cost.',
-            fix: 'Use PromptQuorum cost tracking. Compare latency across models. For budget-conscious workflows, prefer Outlines or BAML (no retry loop). For accuracy on flexible schemas, accept Instructor retry cost.'
+            fix: 'Use PromptQuorum (our own product) cost tracking. Compare latency across models. For budget-conscious workflows, prefer Outlines or BAML (no retry loop). For accuracy on flexible schemas, accept Instructor retry cost.'
           },
           {
             mistake: 'Mixing validation methods (no consistency)',
             problem: 'Some requests use Instructor, others use raw JSON parsing. Some models validated, others not. This leads to inconsistent errors in production.',
-            fix: 'Standardize on one validation approach per codebase. All requests use Instructor, or all use Outlines. Consistency reduces debugging time by 10x.'
+            fix: 'Standardize on one validation approach per codebase. All requests use Instructor, or all use Outlines. Consistency makes debugging easier.'
           },
           {
             mistake: 'Copying tutorials written against a superseded API',
@@ -324,11 +324,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Which tool is best for Python developers?',
-            a: 'Instructor is the most popular Python choice. It uses Pydantic models to define schemas, automatically handles retries and validation, and supports every major LLM API plus local models via Ollama or vLLM. Pydantic AI is the better fit if you also want type-safe multi-turn agent conversations, and Marvin is the fastest option if you just need a one-line extract or classify call.'
+            a: 'Instructor is a widely used Python option. It uses Pydantic models to define schemas, automatically handles retries and validation, and supports every major LLM API plus local models via Ollama or vLLM. Pydantic AI is the better fit if you also want type-safe multi-turn agent conversations, and Marvin is the fastest option if you just need a one-line extract or classify call.'
           },
           {
             q: 'Can I use structured output with local models like Llama?',
-            a: 'Yes. Outlines specialises in local model constrained decoding — it works with transformers, llama.cpp, MLX, vLLM, and Ollama, and guarantees the output parses against your schema at generation time. Instructor and Pydantic AI also support Ollama and vLLM if you run them as an API, and BAML works against any OpenAI-compatible endpoint.'
+            a: 'Yes. Outlines specialises in local model constrained decoding — it works with transformers, llama.cpp, MLX, vLLM, and Ollama, and constrains the output to your schema at generation time, which removes most parse failures. Instructor and Pydantic AI also support Ollama and vLLM if you run them as an API, and BAML works against any OpenAI-compatible endpoint.'
           },
           {
             q: 'What is the difference between Instructor and Marvin?',
@@ -340,11 +340,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'How do I test if structured output is reliable?',
-            a: 'Use PromptQuorum to run the same prompt across multiple models and measure schema compliance. Different models — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — have different structured output reliability, and small local models differ more again. Test before deploying to production, and unit test with Instructor or Pydantic validation locally.'
+            a: 'Use PromptQuorum (our own product) to run the same prompt across multiple models and measure schema compliance. Different models — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — have different structured output reliability, and small local models differ more again. Test before deploying to production, and unit test with Instructor or Pydantic validation locally.'
           },
           {
             q: 'What does "constrained decoding" mean?',
-            a: 'Constrained decoding limits token generation to only valid values according to your schema. Outlines does this by computing the set of valid next tokens at each step. This guarantees the output parses against your schema without post-generation validation or retries, making it more reliable than plain API-level JSON mode. It constrains structure, not truth — the fields will be right, the values still need checking.'
+            a: 'Constrained decoding limits token generation to only valid values according to your schema. Outlines does this by computing the set of valid next tokens at each step. This removes most structural parse failures without post-generation retries, making it more reliable than plain API-level JSON mode, though truncation or grammar limits can still break output. It constrains structure, not truth — the values still need checking.'
           },
           {
             q: 'What is BAML and when should I use it instead of Instructor?',
@@ -356,11 +356,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Which tool has the best documentation?',
-            a: 'LangChain and Pydantic AI have the most comprehensive docs due to their corporate backing. BAML documentation is unusually good for a young project because the language needs teaching. Instructor has excellent tutorials and examples despite being community-maintained. Outlines docs are technical but thorough. Marvin docs are concise — check the 3.x pages specifically, as older Marvin 2 material still circulates.'
+            a: 'Documentation quality is subjective, so check each project\'s current docs. In our reading, LangChain and Pydantic AI have extensive documentation, which likely reflects the resources behind them. BAML documentation is strong for a young project because the language needs teaching. Instructor has good tutorials and examples. Outlines docs are technical but thorough. Marvin docs are concise — check the 3.x pages specifically, as older Marvin 2 material still circulates.'
           },
           {
             q: 'Do I need all seven tools or just one?',
-            a: 'Start with one. Python developers should try Instructor or Pydantic AI. Local model teams should try Outlines. Polyglot teams should try BAML. LangChain users should try with_structured_output(). Use PromptQuorum to validate consistency across all models. Most teams use one tool plus PromptQuorum for testing.'
+            a: 'Start with one. Python developers should try Instructor or Pydantic AI. Local model teams should try Outlines. Polyglot teams should try BAML. LangChain users should try with_structured_output(). Use PromptQuorum (our own product) to validate consistency across all models.'
           }
         ]
       },
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Instructor GitHub Repository](https://github.com/567-labs/instructor) — Official repository and docs for the Instructor library',
-          '[Outlines GitHub Repository](https://github.com/dottxt-ai/outlines) — Constrained decoding for guaranteed schema compliance',
+          '[Outlines GitHub Repository](https://github.com/dottxt-ai/outlines) — Constrained decoding for schema-constrained generation',
           '[Pydantic AI Documentation](https://pydantic.dev/docs/ai/overview/) — Type-safe agent framework with structured output',
           '[LangChain Structured Output Guide](https://docs.langchain.com/oss/python/langchain/structured-output) — LangChain unified structured output API',
           '[BAML Documentation](https://docs.boundaryml.com/home) — Schema-first prompt language and schema-aligned parsing',
@@ -384,14 +384,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-de.webp',
     title: 'Beste Tools für Structured Output und JSON Mode (2026)',
     seoTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
-    metaDescription: '7 Structured-Output-Tools 2026 verglichen: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum. Lizenz, Schema-Format, lokale Modelle.',
+    metaDescription: '7 Structured-Output-Tools 2026 verglichen: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum (unser eigenes Produkt). Schema-Format, lokale Modelle.',
     ogTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
-    ogDescription: '7 Tools für LLM Structured Output: Instructor für Retries, Outlines für Constrained Decoding, BAML für polyglotte Teams. Konsistenz testen mit PromptQuorum.',
+    ogDescription: '7 Tools für LLM Structured Output: Instructor für Retries, Outlines für Constrained Decoding, BAML für polyglotte Teams. Konsistenz testen mit PromptQuorum (unser eigenes Produkt).',
     twitterTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — welches Structured-Output-Tool passt? Vergleich 2026.',
-    intro: '**Sieben Tools dominieren Structured Output 2026: Instructor für Pydantic-Extraktion, Outlines für Constrained Decoding, Pydantic AI für typsichere Agents, BAML für schema-first Prompt-Dateien, LangChain für einheitliche APIs, Marvin für Task-basierte Extraktion und PromptQuorum für modellübergreifendes Testen. Jedes löst einen anderen Workflow-Engpass.**',
+    intro: '**Sieben Tools sind 2026 für Structured Output weit verbreitet oder einen Blick wert: Instructor für Pydantic-Extraktion, Outlines für Constrained Decoding, Pydantic AI für typsichere Agents, BAML für schema-first Prompt-Dateien, LangChain für einheitliche APIs, Marvin für Task-basierte Extraktion und PromptQuorum (unser eigenes Produkt) für modellübergreifendes Testen. Jedes löst einen anderen Workflow-Engpass.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — Bibliotheksversionen, Lizenzen, APIs und Dokumentations-URLs gegen offizielle Repositories, PyPI und Hersteller-Dokumentation erneut verifiziert',
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Advanced',
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'DSGVO und Datenschutz im DACH-Raum', anchor: '#dach-kontext' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**Entscheiden Sie danach, wo Ihre Modelle laufen und in welchen Sprachen Ihr Team ausliefert: Instructor und Pydantic AI für Python-API-Workflows mit Retries und Typsicherheit, Outlines für garantierte Schema-Konformität auf lokalen Modellen, BAML wenn dasselbe Schema Python-, TypeScript- und Go-Services bedienen muss, LangChain für Teams mit bestehenden Chains oder Agents, Marvin für schnelle extract- und classify-Aufrufe und PromptQuorum für Konsistenztests über GPT, Claude und Gemini vor der Produktion.**',
+    leadAnswerBlock: '**Entscheiden Sie danach, wo Ihre Modelle laufen und in welchen Sprachen Ihr Team ausliefert: Instructor und Pydantic AI für Python-API-Workflows mit Retries und Typsicherheit, Outlines für schemabeschränktes Decoding auf lokalen Modellen, BAML wenn dasselbe Schema Python-, TypeScript- und Go-Services bedienen muss, LangChain für Teams mit bestehenden Chains oder Agents, Marvin für schnelle extract- und classify-Aufrufe und PromptQuorum (unser eigenes Produkt) für Konsistenztests über GPT, Claude und Gemini vor der Produktion.**',
     quickFacts: [
       'Instructor steht unter MIT-Lizenz und bietet sechs offizielle Implementierungen: Python, TypeScript, Ruby, Go, Elixir und Rust',
       'Outlines 1.x beschränkt Tokens zur Generierungszeit und steuert inzwischen auch gehostete APIs, nicht nur lokale Backends',
@@ -426,17 +426,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML kompiliert eine .baml-Schemadatei zu typisierten Clients und repariert fehlerhafte Modellausgaben statt zu wiederholen',
       'LangChain 1.x liest die native Structured-Output-Unterstützung jedes Providers aus dessen Modellprofil',
       'Marvin 3.x baut auf Pydantic AI auf und stellt extract, cast, classify und generate bereit',
-      'PromptQuorum testet denselben Prompt über 25+ Modelle auf Konsistenz'
+      'PromptQuorum (unser eigenes Produkt) kann denselben Prompt über viele Modelle ausführen, um die Konsistenz zu vergleichen'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Tools für Structured Output und JSON Mode (2026)',
-      description: 'Vergleich von sieben Bibliotheken für LLM Structured Output: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin und PromptQuorum. Gerankt nach Schema-Durchsetzung, Sprachunterstützung, lokaler Modellkompatibilität und Lizenz.',
+      description: 'Vergleich von sieben Bibliotheken für LLM Structured Output: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin und PromptQuorum (unser eigenes Produkt). Verglichen nach Schema-Durchsetzung, Sprachunterstützung, lokaler Modellkompatibilität und Lizenz.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/de/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -459,12 +459,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Beste Tools für LLM Structured Output (2026)',
-      description: 'Sieben führende Bibliotheken zur Durchsetzung strukturierter Ausgaben von Sprachmodellen.',
+      description: 'Sieben Bibliotheken und Tools zur Durchsetzung und Prüfung strukturierter Ausgaben von Sprachmodellen, darunter PromptQuorum (unser eigenes Produkt).',
       numberOfItems: 7,
       inLanguage: 'de',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Pydantic-basierte Extraktion aus jedem LLM mit automatischen Retries. MIT-Lizenz, sechs Sprach-Implementierungen.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Constrained-Decoding-Bibliothek für garantierte Schema-Konformität auf lokalen Modellen. Apache 2.0 Open Source.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Constrained-Decoding-Bibliothek, die Ihr Schema bei der Generierung auf lokalen Modellen durchsetzt. Apache 2.0 Open Source.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Typsicheres Agent-Framework mit drei Structured-Output-Modi und Durable-Execution-Integrationen.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: 'Schema-first Prompt-Sprache, die typisierte Clients kompiliert und fehlerhafte Modellausgaben per Schema-Aligned Parsing repariert.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'Einheitliche API-Schicht für Structured Output über OpenAI, Anthropic, Google und lokale Modelle.' },
@@ -479,17 +479,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'Verwenden Sie Instructor für Python-API-Extraktion mit Retries. Outlines für garantierte Schema-Konformität auf lokalen Modellen. Pydantic AI für typsichere Multi-Turn-Agents. BAML, wenn Python-, TypeScript- und Go-Services ein Schema teilen müssen. LangChain, wenn Sie bereits im Ökosystem sind. Marvin für einzeilige extract- und classify-Aufrufe. PromptQuorum, um Structured Output-Konsistenz über alle Modelle vor der Produktion zu testen.'
+            text: 'Verwenden Sie Instructor für Python-API-Extraktion mit Retries. Outlines für schemabeschränktes Decoding auf lokalen Modellen. Pydantic AI für typsichere Multi-Turn-Agents. BAML, wenn Python-, TypeScript- und Go-Services ein Schema teilen müssen. LangChain, wenn Sie bereits im Ökosystem sind. Marvin für einzeilige extract- und classify-Aufrufe. PromptQuorum (unser eigenes Produkt), um Structured Output-Konsistenz über alle Modelle vor der Produktion zu testen.'
           }
         ],
         items: [
-          '**Instructor** ist die beliebteste Python-Wahl — Pydantic-Schemas, automatische Retries und offizielle Ports für TypeScript, Ruby, Go, Elixir und Rust',
-          '**Outlines** garantiert Schema-Konformität auf lokalen Modellen via Constrained Decoding — kein strukturelles Halluzinationsrisiko',
+          '**Instructor** ist eine weit verbreitete Python-Option — Pydantic-Schemas, automatische Retries und offizielle Ports für TypeScript, Ruby, Go, Elixir und Rust',
+          '**Outlines** beschränkt die Token-Generierung auf lokalen Modellen auf Ihr Schema und beseitigt damit die meisten strukturellen Parse-Fehler; Werte müssen weiterhin validiert werden, und Abbrüche oder Grammatik-Grenzen können die Ausgabe dennoch brechen',
           '**Pydantic AI** fügt Typsicherheit zu Multi-Turn-Agent-Gesprächen hinzu und fällt von nativem Structured Output über Tool-Aufrufe auf Prompted JSON zurück',
           '**BAML** legt Schema und Prompt in eine versionierte .baml-Datei und generiert typisierte Clients — ein Vertrag für polyglotte Teams',
           '**LangChains with_structured_output()** vereinheitlicht Structured Output über OpenAI, Anthropic und Google-APIs',
           '**Marvin 3.x** setzt auf Pydantic AI auf und reduziert Extraktion auf einen einzigen extract- oder classify-Aufruf',
-          '**PromptQuorum** testet Structured Output-Konsistenz über alle Modelle vor der Produktionsbereitstellung'
+          '**PromptQuorum** (unser eigenes Produkt) testet Structured Output-Konsistenz über alle Modelle vor der Produktionsbereitstellung'
         ]
       },
       whichProblem: {
@@ -499,22 +499,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: 'Werkzeuge für strukturierte Ausgabe lösen drei verschiedene Probleme — ein Schema bereits bei der Generierung erzwingen, das Ergebnis anschließend validieren und fehlerhafte Ausgaben reparieren — und die meisten Setups brauchen nur die ersten beiden.' },
           { type: 'in-plain-terms', text: 'Wählen Sie nicht nach Funktionsliste. Fragen Sie, welcher Fehler bei Ihnen tatsächlich auftritt: Das Modell ignoriert Ihr Format, oder es hält das Format ein, aber die Werte stimmen nicht, oder es liefert JSON, das sich nicht einmal parsen lässt. Jeder Fall verlangt eine andere Antwort.' },
         ],
-        content: '**Structured Output erfordert die Lösung von drei voneinander abhängigen Problemen: Schema-Definition, API-Durchsetzung und Validierung.** Verschiedene Tools gehen diese Probleme unterschiedlich an. Instructor löst alle drei in Python mit Retries. Outlines eliminiert den Validierungsschritt via Constrained Decoding. Pydantic AI fügt Typsicherheit für Agents hinzu. BAML verlagert das Schema in eine kompilierte Datei und repariert unvollkommene Ausgaben. LangChain umhüllt Provider-APIs. Marvin priorisiert Entwicklergeschwindigkeit. PromptQuorum validiert die Konsistenz über alle Modelle.',
+        content: '**Structured Output erfordert die Lösung von drei voneinander abhängigen Problemen: Schema-Definition, API-Durchsetzung und Validierung.** Verschiedene Tools gehen diese Probleme unterschiedlich an. Instructor löst alle drei in Python mit Retries. Outlines verringert den Bedarf an einem separaten Validierungsschritt via Constrained Decoding. Pydantic AI fügt Typsicherheit für Agents hinzu. BAML verlagert das Schema in eine kompilierte Datei und repariert unvollkommene Ausgaben. LangChain umhüllt Provider-APIs. Marvin priorisiert Entwicklergeschwindigkeit. PromptQuorum validiert die Konsistenz über alle Modelle.',
         columns: ['Problem', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { 'Problem': 'Schema definieren', 'Instructor': 'Pydantic-Modelle', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Pydantic-Modelle', 'BAML': '.baml-Klassendateien', 'LangChain': 'Tool-Definitionen', 'Marvin': 'Python Type Hints' },
           { 'Problem': 'Auf API-Aufruf erzwingen', 'Instructor': 'Retry + Validierung', 'Outlines': 'Token-Level-Einschränkung', 'Pydantic AI': 'Nativ / Tool / Prompted', 'BAML': 'Generierter Prompt + Parser', 'LangChain': 'Provider-JSON-Modus', 'Marvin': 'Pydantic-AI-Ausgabetypen' },
-          { 'Problem': 'Antwort validieren', 'Instructor': 'Automatisch', 'Outlines': 'Garantiert bei Generierung', 'Pydantic AI': 'Typgeprüft', 'BAML': 'Schema-Aligned Parsing', 'LangChain': 'Manuell', 'Marvin': 'Automatisch' }
+          { 'Problem': 'Antwort validieren', 'Instructor': 'Automatisch', 'Outlines': 'Bei Generierung durchgesetzt', 'Pydantic AI': 'Typgeprüft', 'BAML': 'Schema-Aligned Parsing', 'LangChain': 'Manuell', 'Marvin': 'Automatisch' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic-Extraktion',
-        content: '**Instructor ist die am weitesten verbreitete Structured Output-Bibliothek. Sie umhüllt jede LLM-API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — und gibt validierte Pydantic-Modelle statt Rohtext zurück.** Instructor behandelt Retries automatisch bei Validierungsfehlern, was es produktionsreif ohne zusätzliche Fehlerbehandlung macht.',
+        content: '**Instructor ist eine weit verbreitete Structured Output-Bibliothek. Sie umhüllt jede LLM-API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — und gibt validierte Pydantic-Modelle statt Rohtext zurück.** Instructor wiederholt den Aufruf bei Validierungsfehlern automatisch; den Fall ausgeschöpfter Wiederholungen müssen Sie weiterhin selbst behandeln.',
         items: [
           'Funktioniert mit allen großen Providern (OpenAI, Anthropic, Google, Groq, Mistral) und lokalen Modellen via Ollama oder vLLM',
           'Pydantic v2 Schemas: Typ-Hinweise, Validierungsregeln, Docstring-Beschreibungen im Schema',
-          'Automatischer Retry mit Backoff bei Validierungsfehlern — keine manuelle Fehlerbehandlung nötig',
+          'Automatische Retries bei Validierungsfehlern — ausgeschöpfte Retries müssen Sie weiterhin selbst behandeln',
           'Sechs offizielle Implementierungen: Python, TypeScript, Ruby, Go, Elixir und Rust',
           'MIT-Lizenz, Open Source, aktiv gepflegt, aktuell auf der 1.x-Linie',
           'Preis: Kostenlos (keine zusätzlichen Kosten über LLM-API-Aufrufe hinaus)'
@@ -525,13 +525,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines: Constrained Decoding',
-        content: '**Outlines erzwingt Schema-Konformität zum Zeitpunkt der Token-Generierung via Constrained Decoding. Anstatt Tokens zu generieren und dann zu validieren, begrenzt Outlines gültige Tokens in jedem Schritt auf Ihr Schema.** Damit ist garantiert, dass die Ausgabe gegen Ihr Schema parst — kein strukturelles Halluzinationsrisiko. Genau das macht Outlines zur Standardwahl für lokale Modelle.',
+        content: '**Outlines erzwingt Schema-Konformität zum Zeitpunkt der Token-Generierung via Constrained Decoding. Anstatt Tokens zu generieren und dann zu validieren, begrenzt Outlines gültige Tokens in jedem Schritt auf Ihr Schema.** Damit entfallen die meisten strukturellen Parse-Fehler; Werte müssen weiterhin validiert werden, und Abbrüche oder Grammatik-Grenzen können die Ausgabe dennoch brechen. Deshalb ist Outlines eine häufige Wahl für lokale Modelle.',
         items: [
           'Lokale Backends: transformers, llama.cpp, MLX und jedes Hugging-Face-Modell',
           'Server-Backends: vLLM, Ollama und NVIDIA NIM',
           'Auch gehostete APIs werden unterstützt (OpenAI, Gemini) — derselbe Code läuft lokal und in der Cloud',
           'Schemas als Pydantic-Modelle, JSON Schema, Regex-Muster, Literal-Auswahlen oder kontextfreie Grammatiken',
-          'Garantierte strukturelle Konformität — keine Nachgenerierungs-Validierung oder Retries nötig',
+          'Starke strukturelle Konformität bei der Generierung — Werte weiterhin validieren, auf Abbrüche und Grammatik-Grenzen achten',
           'Apache 2.0 Open Source, aktuell auf der 1.x-Linie, mit einem Rust-Kern (outlines-core) für Geschwindigkeit'
         ]
       },
@@ -591,9 +591,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: Modellübergreifende Tests',
-        content: '**PromptQuorum ist keine Structured Output-Bibliothek selbst, sondern eine Testplattform zur Validierung der Structured Output-Konsistenz über Modelle hinweg.** Führen Sie denselben Prompt gleichzeitig gegen GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon und 20+ weitere Modelle aus. Messen Sie Schema-Konformität, Latenz und Kosten pro Modell.',
+        content: '**PromptQuorum ist unser eigenes Produkt und keine Structured Output-Bibliothek selbst, sondern eine Testplattform zur Validierung der Structured Output-Konsistenz über Modelle hinweg.** Führen Sie denselben Prompt gleichzeitig gegen GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon und viele weitere Modelle aus. Messen Sie Schema-Konformität, Latenz und Kosten pro Modell.',
         items: [
-          'Multi-Modell-Dispatch in einem einzigen API-Aufruf — einen Prompt gegen 25+ Modelle testen',
+          'Multi-Modell-Dispatch in einem einzigen API-Aufruf — einen Prompt gegen viele Modelle testen',
           'Structured Output-Konformitätsmetriken — Erfolgsrate, Latenz, Kosten pro Modell',
           'Modelle identifizieren, die bei Ihrem Schema halluzinieren — Bereitstellung auf unzuverlässigen Modellen vermeiden',
           'Konsens-Modus — Übereinstimmungen zwischen unabhängigen Modell-Ausführungen finden',
@@ -604,15 +604,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Direkter Vergleich',
-        columns: ['Tool', 'Beste Verwendung', 'Schema-Format', 'Sprache', 'Lokale Modelle', 'Lizenz', 'Lernkurve'],
+        columns: ['Tool', 'Beste Verwendung', 'Schema-Format', 'Sprache', 'Lokale Modelle', 'Lizenz', 'Lernkurve (redaktionelle Einschätzung)'],
         rows: [
-          { 'Tool': '[Instructor](https://python.useinstructor.com)', 'Beste Verwendung': 'Python-APIs + Retries', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python, TS, Ruby, Go, Elixir, Rust', 'Lokale Modelle': 'Ja (Ollama, vLLM)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Niedrig' },
-          { 'Tool': '[Outlines](https://dottxt.ai)', 'Beste Verwendung': 'Lokale Modell-Bereitstellung', 'Schema-Format': 'Pydantic, JSON Schema, Regex, CFG', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (nativ)', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve': 'Mittel' },
-          { 'Tool': '[Pydantic AI](https://ai.pydantic.dev)', 'Beste Verwendung': 'Typsichere Agents', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (Ollama)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Niedrig' },
-          { 'Tool': '[BAML](https://boundaryml.com)', 'Beste Verwendung': 'Polyglotte Teams, fehleranfällige Modelle', 'Schema-Format': '.baml-Klassendateien', 'Sprache': 'Python, TS + 6 via OpenAPI', 'Lokale Modelle': 'Ja (OpenAI-kompatibel)', 'Lizenz': 'Apache 2.0, Observability kostenpflichtig', 'Lernkurve': 'Mittel' },
-          { 'Tool': '[LangChain](https://langchain.com)', 'Beste Verwendung': 'Chains + Agents', 'Schema-Format': 'Tool-Definitionen', 'Sprache': 'Python, JS', 'Lokale Modelle': 'Ja', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Mittel' },
-          { 'Tool': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Beste Verwendung': 'Schnelles extract + classify', 'Schema-Format': 'Type Hints', 'Sprache': 'Python', 'Lokale Modelle': 'Ja', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve': 'Sehr niedrig' },
-          { 'Tool': '[PromptQuorum](https://www.promptquorum.com)', 'Beste Verwendung': 'Multi-Modell-Tests', 'Schema-Format': 'API-agnostisch', 'Sprache': 'API-first', 'Lokale Modelle': 'Via OpenAI-Proxy', 'Lizenz': 'Kostenloses Tier + Enterprise', 'Lernkurve': 'Niedrig' }
+          { 'Tool': '[Instructor](https://python.useinstructor.com)', 'Beste Verwendung': 'Python-APIs + Retries', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python, TS, Ruby, Go, Elixir, Rust', 'Lokale Modelle': 'Ja (Ollama, vLLM)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve (redaktionelle Einschätzung)': 'Niedrig' },
+          { 'Tool': '[Outlines](https://dottxt.ai)', 'Beste Verwendung': 'Lokale Modell-Bereitstellung', 'Schema-Format': 'Pydantic, JSON Schema, Regex, CFG', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (nativ)', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve (redaktionelle Einschätzung)': 'Mittel' },
+          { 'Tool': '[Pydantic AI](https://ai.pydantic.dev)', 'Beste Verwendung': 'Typsichere Agents', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (Ollama)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve (redaktionelle Einschätzung)': 'Niedrig' },
+          { 'Tool': '[BAML](https://boundaryml.com)', 'Beste Verwendung': 'Polyglotte Teams, fehleranfällige Modelle', 'Schema-Format': '.baml-Klassendateien', 'Sprache': 'Python, TS + 6 via OpenAPI', 'Lokale Modelle': 'Ja (OpenAI-kompatibel)', 'Lizenz': 'Apache 2.0, Observability kostenpflichtig', 'Lernkurve (redaktionelle Einschätzung)': 'Mittel' },
+          { 'Tool': '[LangChain](https://langchain.com)', 'Beste Verwendung': 'Chains + Agents', 'Schema-Format': 'Tool-Definitionen', 'Sprache': 'Python, JS', 'Lokale Modelle': 'Ja', 'Lizenz': 'MIT, kostenlos', 'Lernkurve (redaktionelle Einschätzung)': 'Mittel' },
+          { 'Tool': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Beste Verwendung': 'Schnelles extract + classify', 'Schema-Format': 'Type Hints', 'Sprache': 'Python', 'Lokale Modelle': 'Ja', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve (redaktionelle Einschätzung)': 'Sehr niedrig' },
+          { 'Tool': '[PromptQuorum](https://www.promptquorum.com) (unser eigenes Produkt)', 'Beste Verwendung': 'Multi-Modell-Tests', 'Schema-Format': 'API-agnostisch', 'Sprache': 'API-first', 'Lokale Modelle': 'Via OpenAI-Proxy', 'Lizenz': 'Kostenloses Tier + Enterprise', 'Lernkurve (redaktionelle Einschätzung)': 'Niedrig' }
         ]
       },
       decision: {
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Beginnen Sie mit drei Fragen: (1) In welchen Sprachen laufen die Services, die das Modell tatsächlich aufrufen? (2) Benötigen Sie lokale Modell-Unterstützung? (3) Wie hoch ist Ihre Validierungskomplexität?',
         items: [
           '**Verwenden Sie Instructor, wenn:** Sie Python-APIs bauen und automatische Retries bei Validierungsfehlern benötigen. Beste Allzweck-Wahl.',
-          '**Verwenden Sie Outlines, wenn:** Sie lokale Modelle (llama.cpp, vLLM, MLX) bereitstellen und garantierte Schema-Konformität zur Generierungszeit möchten.',
+          '**Verwenden Sie Outlines, wenn:** Sie lokale Modelle (llama.cpp, vLLM, MLX) bereitstellen und Schema-Durchsetzung zur Generierungszeit möchten.',
           '**Verwenden Sie Pydantic AI, wenn:** Sie Multi-Turn-Agent-Workflows mit Typsicherheit über alle Schritte aufbauen oder Durable Execution brauchen.',
           '**Verwenden Sie BAML, wenn:** Python-, TypeScript- und Go-Services ein Schema teilen müssen oder Ihr Modell keinen verlässlichen nativen JSON-Modus hat.',
           '**Verwenden Sie LangChain, wenn:** Sie bereits LangChain oder LangGraph nutzen — with_structured_output() ist die einfachste Ergänzung.',
@@ -647,27 +647,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Jeden JSON-Modus als Schema-Garantie behandeln',
             problem: 'Der einfache JSON-Modus (response_format json_object, Anthropic JSON-Steuerung) garantiert nur, dass die Antwort gültiges JSON ist — nicht, dass sie Ihren Feldern und Typen entspricht. Strikte Schema-Modi gehen weiter und garantieren die Form, aber keiner garantiert korrekte Werte: Ein wohlgeformtes Objekt kann trotzdem einen erfundenen Preis oder ein halluziniertes Datum enthalten.',
-            fix: 'Legen Sie in jedem Fall Validierung darüber: Instructor, Outlines, Pydantic AI oder BAML. Fachliche Regeln gehören in Pydantic-Validatoren, nicht allein ins Schema. Mit PromptQuorum testen, um Konformitätsfehler pro Modell zu erkennen.'
+            fix: 'Legen Sie in jedem Fall Validierung darüber: Instructor, Outlines, Pydantic AI oder BAML. Fachliche Regeln gehören in Pydantic-Validatoren, nicht allein ins Schema. Mit PromptQuorum (unser eigenes Produkt) testen, um Konformitätsfehler pro Modell zu erkennen.'
           },
           {
             mistake: 'Zu strenge Schemas entwerfen',
             problem: 'Übermäßig eingeschränkte Schemas (kleine Enum-Listen, sehr spezifische Regex-Muster) führen dazu, dass LLMs häufig die Validierung nicht bestehen. Hohe Retry-Zahlen verschwenden Tokens und Geld.',
-            fix: 'PromptQuorum verwenden, um Schema-Strenge über Modelle hinweg zu testen. Einschränkungen lockern, um 95%+ Konformität zu erreichen. Optionale Felder statt Pflichtfelder verwenden, wo möglich.'
+            fix: 'PromptQuorum (unser eigenes Produkt) verwenden, um Schema-Strenge über Modelle hinweg zu testen. Einschränkungen lockern, bis Ihre Ziel-Konformitätsrate erreicht ist. Optionale Felder statt Pflichtfelder verwenden, wo möglich.'
           },
           {
             mistake: 'Unterschiede zwischen lokalen und API-Modellen nicht testen',
             problem: 'Outlines auf llama.cpp verhält sich anders als Instructor auf GPT-6 Astra. Schema-Konformitätsraten variieren je nach Modell. Nur für ein Frontier-API-Modell bauen und dann auf ein kleines lokales Modell ausrollen, führt zu Produktionsfehlern.',
-            fix: 'Alle beabsichtigten Modell-Backends früh testen. PromptQuorum verwenden, um denselben Prompt über lokale (vLLM, Ollama) und gehostete Modelle (OpenAI, Anthropic, Google) auszuführen.'
+            fix: 'Alle beabsichtigten Modell-Backends früh testen. PromptQuorum (unser eigenes Produkt) verwenden, um denselben Prompt über lokale (vLLM, Ollama) und gehostete Modelle (OpenAI, Anthropic, Google) auszuführen.'
           },
           {
             mistake: 'Auswirkungen auf Latenz und Token-Kosten ignorieren',
             problem: 'Structured Output mit Retries kostet mehr Tokens. Instructor wiederholt bei Fehlern. Outlines Constrained Decoding erzeugt pro Token Zusatzaufwand gegenüber freier Generierung. Kosten pro Modell werden nicht gemessen.',
-            fix: 'PromptQuorum Kostenverfolgung verwenden. Latenz über Modelle vergleichen. Für budgetbewusste Workflows Outlines oder BAML bevorzugen (keine Retry-Schleife). Für Genauigkeit bei flexiblen Schemas Instructors Retry-Kosten akzeptieren.'
+            fix: 'PromptQuorum (unser eigenes Produkt) Kostenverfolgung verwenden. Latenz über Modelle vergleichen. Für budgetbewusste Workflows Outlines oder BAML bevorzugen (keine Retry-Schleife). Für Genauigkeit bei flexiblen Schemas Instructors Retry-Kosten akzeptieren.'
           },
           {
             mistake: 'Validierungsmethoden mischen (keine Konsistenz)',
             problem: 'Einige Anfragen verwenden Instructor, andere rohe JSON-Analyse. Einige Modelle validiert, andere nicht. Dies führt zu inkonsistenten Fehlern in der Produktion.',
-            fix: 'Einen Validierungsansatz pro Codebasis standardisieren. Alle Anfragen verwenden Instructor, oder alle verwenden Outlines. Konsistenz reduziert Debugging-Zeit um das 10-fache.'
+            fix: 'Einen Validierungsansatz pro Codebasis standardisieren. Alle Anfragen verwenden Instructor, oder alle verwenden Outlines. Konsistenz erleichtert das Debugging.'
           },
           {
             mistake: 'Tutorials kopieren, die gegen eine abgelöste API geschrieben wurden',
@@ -710,11 +710,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Welches Tool ist am besten für Python-Entwickler?',
-            a: 'Instructor ist die beliebteste Python-Wahl. Es verwendet Pydantic-Modelle zur Schema-Definition, behandelt Wiederholungen und Validierung automatisch und unterstützt alle großen LLM-APIs sowie lokale Modelle via Ollama oder vLLM. Pydantic AI passt besser, wenn Sie zusätzlich typsichere Multi-Turn-Agent-Gespräche brauchen, und Marvin ist am schnellsten, wenn ein einzeiliger extract- oder classify-Aufruf reicht.'
+            a: 'Instructor ist eine weit verbreitete Python-Option. Es verwendet Pydantic-Modelle zur Schema-Definition, behandelt Wiederholungen und Validierung automatisch und unterstützt alle großen LLM-APIs sowie lokale Modelle via Ollama oder vLLM. Pydantic AI passt besser, wenn Sie zusätzlich typsichere Multi-Turn-Agent-Gespräche brauchen, und Marvin ist am schnellsten, wenn ein einzeiliger extract- oder classify-Aufruf reicht.'
           },
           {
             q: 'Kann ich Structured Output mit lokalen Modellen wie Llama verwenden?',
-            a: 'Ja. Outlines spezialisiert sich auf lokales Constrained Decoding — es funktioniert mit transformers, llama.cpp, MLX, vLLM und Ollama und garantiert zur Generierungszeit, dass die Ausgabe gegen Ihr Schema parst. Instructor und Pydantic AI unterstützen Ollama und vLLM ebenfalls, wenn Sie sie als API betreiben, und BAML arbeitet gegen jeden OpenAI-kompatiblen Endpunkt.'
+            a: 'Ja. Outlines spezialisiert sich auf lokales Constrained Decoding — es funktioniert mit transformers, llama.cpp, MLX, vLLM und Ollama und beschränkt die Ausgabe zur Generierungszeit auf Ihr Schema, was die meisten Parse-Fehler beseitigt. Instructor und Pydantic AI unterstützen Ollama und vLLM ebenfalls, wenn Sie sie als API betreiben, und BAML arbeitet gegen jeden OpenAI-kompatiblen Endpunkt.'
           },
           {
             q: 'Was ist der Unterschied zwischen Instructor und Marvin?',
@@ -726,11 +726,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Wie teste ich, ob Structured Output zuverlässig ist?',
-            a: 'Verwenden Sie PromptQuorum, um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — haben unterschiedliche Zuverlässigkeit, und kleine lokale Modelle unterscheiden sich noch stärker. Testen Sie vor der Bereitstellung in der Produktion und validieren Sie lokal mit Instructor oder Pydantic.'
+            a: 'Verwenden Sie PromptQuorum (unser eigenes Produkt), um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — haben unterschiedliche Zuverlässigkeit, und kleine lokale Modelle unterscheiden sich noch stärker. Testen Sie vor der Bereitstellung in der Produktion und validieren Sie lokal mit Instructor oder Pydantic.'
           },
           {
             q: 'Was bedeutet "Constrained Decoding"?',
-            a: 'Constrained Decoding begrenzt die Token-Generierung auf nur gültige Werte gemäß Ihrem Schema. Outlines tut dies, indem es in jedem Schritt die Menge gültiger nächster Tokens berechnet. Damit ist garantiert, dass die Ausgabe gegen Ihr Schema parst, ohne Nachgenerierungsvalidierung oder Wiederholungen — zuverlässiger als der einfache API-JSON-Modus. Es beschränkt die Struktur, nicht die Wahrheit: Die Felder stimmen, die Werte müssen weiterhin geprüft werden.'
+            a: 'Constrained Decoding begrenzt die Token-Generierung auf nur gültige Werte gemäß Ihrem Schema. Outlines tut dies, indem es in jedem Schritt die Menge gültiger nächster Tokens berechnet. Damit entfallen die meisten strukturellen Parse-Fehler ohne Wiederholungen nach der Generierung — zuverlässiger als der einfache API-JSON-Modus, auch wenn Abbrüche oder Grammatik-Grenzen die Ausgabe dennoch brechen können. Es beschränkt die Struktur, nicht die Wahrheit: Die Werte müssen weiterhin geprüft werden.'
           },
           {
             q: 'Was ist BAML und wann sollte ich es statt Instructor verwenden?',
@@ -742,11 +742,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Welches Tool hat die beste Dokumentation?',
-            a: 'LangChain und Pydantic AI haben die umfangreichste Dokumentation wegen ihrer Unternehmensmittel. Die BAML-Dokumentation ist für ein junges Projekt ungewöhnlich gut, weil die Sprache erklärt werden muss. Instructor hat hervorragende Tutorials und Beispiele trotz Community-Wartung. Outlines-Dokumentation ist technisch, aber gründlich. Marvin-Dokumentation ist knapp — achten Sie gezielt auf die 3.x-Seiten, da älteres Marvin-2-Material weiterhin kursiert.'
+            a: 'Die Dokumentationsqualität ist subjektiv; prüfen Sie die aktuelle Dokumentation jedes Projekts. Nach unserer Einschätzung haben LangChain und Pydantic AI eine umfangreiche Dokumentation, was vermutlich die dahinterstehenden Ressourcen widerspiegelt. Die BAML-Dokumentation ist für ein junges Projekt stark, weil die Sprache erklärt werden muss. Instructor hat gute Tutorials und Beispiele. Outlines-Dokumentation ist technisch, aber gründlich. Marvin-Dokumentation ist knapp — achten Sie gezielt auf die 3.x-Seiten, da älteres Marvin-2-Material weiterhin kursiert.'
           },
           {
             q: 'Brauche ich alle sieben Tools oder nur einen?',
-            a: 'Beginnen Sie mit einem. Python-Entwickler sollten Instructor oder Pydantic AI ausprobieren. Teams mit lokalen Modellen sollten Outlines versuchen. Polyglotte Teams sollten BAML testen. LangChain-Benutzer sollten with_structured_output() versuchen. Verwenden Sie PromptQuorum, um Konsistenz über alle Modelle zu validieren.'
+            a: 'Beginnen Sie mit einem. Python-Entwickler sollten Instructor oder Pydantic AI ausprobieren. Teams mit lokalen Modellen sollten Outlines versuchen. Polyglotte Teams sollten BAML testen. LangChain-Benutzer sollten with_structured_output() versuchen. Verwenden Sie PromptQuorum (unser eigenes Produkt), um Konsistenz über alle Modelle zu validieren.'
           },
           {
             q: 'Müssen wir Structured Output für DSGVO-Compliance verwenden?',
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Quellen',
         items: [
           '[Instructor GitHub Repository](https://github.com/567-labs/instructor) — Offizielles Repository und Dokumentation für die Instructor-Bibliothek',
-          '[Outlines GitHub Repository](https://github.com/dottxt-ai/outlines) — Constrained Decoding für garantierte Schema-Konformität',
+          '[Outlines GitHub Repository](https://github.com/dottxt-ai/outlines) — Constrained Decoding für schemabeschränkte Generierung',
           '[Pydantic AI Dokumentation](https://pydantic.dev/docs/ai/overview/) — Typsicheres Agent-Framework mit Structured Output',
           '[LangChain Structured Output Guide](https://docs.langchain.com/oss/python/langchain/structured-output) — LangChain einheitliche Structured Output-API',
           '[BAML Dokumentation](https://docs.boundaryml.com/home) — Schema-first Prompt-Sprache und Schema-Aligned Parsing',
@@ -778,14 +778,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-es.webp',
     title: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
     seoTitle: 'Mejores herramientas de Structured Output y JSON Mode 2026',
-    metaDescription: '7 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin y PromptQuorum. Licencia y modelos locales.',
+    metaDescription: '7 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin y PromptQuorum (nuestro propio producto). Modelos locales.',
     ogTitle: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
-    ogDescription: '7 herramientas de structured output LLM comparadas: Instructor para reintentos, Outlines para constrained decoding, BAML para equipos políglotas. Testea consistencia con PromptQuorum.',
+    ogDescription: '7 herramientas de structured output LLM comparadas: Instructor para reintentos, Outlines para constrained decoding, BAML para equipos políglotas. Testea consistencia con PromptQuorum (nuestro propio producto).',
     twitterTitle: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — ¿qué herramienta de structured output encaja con tu stack? Comparativa lado a lado (2026).',
-    intro: '**Siete herramientas dominan el structured output en 2026: Instructor para extracción Pydantic, Outlines para constrained decoding, Pydantic AI para agentes type-safe, BAML para archivos de prompt schema-first, LangChain para APIs unificadas, Marvin para extracción basada en tareas y PromptQuorum para testing multi-modelo. Cada una resuelve un cuello de botella diferente del flujo de trabajo.**',
+    intro: '**Siete herramientas son muy usadas o merecen conocerse para structured output en 2026: Instructor para extracción Pydantic, Outlines para constrained decoding, Pydantic AI para agentes type-safe, BAML para archivos de prompt schema-first, LangChain para APIs unificadas, Marvin para extracción basada en tareas y PromptQuorum (nuestro propio producto) para testing multi-modelo. Cada una resuelve un cuello de botella diferente del flujo de trabajo.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — versiones de bibliotecas, licencias, APIs y URLs de documentación reverificadas contra repositorios oficiales, PyPI y documentación de los proveedores',
     readTime: '12 min de lectura',
     educationalLevel: 'Advanced',
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Errores comunes de structured output', anchor: '#common-mistakes' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**Elige según dónde se ejecutan tus modelos y en qué lenguajes despliega tu equipo: Instructor y Pydantic AI para flujos Python con reintentos y type safety; Outlines para cumplimiento garantizado del esquema en modelos locales; BAML cuando el mismo esquema debe servir a servicios en Python, TypeScript y Go; LangChain para equipos que ya usan chains o agentes; Marvin para llamadas rápidas de extract y classify; PromptQuorum para testing de consistencia en GPT, Claude y Gemini antes de producción.**',
+    leadAnswerBlock: '**Elige según dónde se ejecutan tus modelos y en qué lenguajes despliega tu equipo: Instructor y Pydantic AI para flujos Python con reintentos y type safety; Outlines para decodificación restringida por esquema en modelos locales; BAML cuando el mismo esquema debe servir a servicios en Python, TypeScript y Go; LangChain para equipos que ya usan chains o agentes; Marvin para llamadas rápidas de extract y classify; PromptQuorum (nuestro propio producto) para testing de consistencia en GPT, Claude y Gemini antes de producción.**',
     quickFacts: [
       'Instructor tiene licencia MIT y ofrece seis implementaciones oficiales: Python, TypeScript, Ruby, Go, Elixir y Rust',
       'Outlines 1.x restringe tokens en el momento de la generación y ahora también controla APIs alojadas, no solo backends locales',
@@ -819,17 +819,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML compila un archivo de esquema .baml en clientes tipados y repara salidas mal formadas en lugar de reintentar',
       'LangChain 1.x lee el soporte nativo de structured output de cada proveedor desde su perfil de modelo',
       'Marvin 3.x está construido sobre Pydantic AI y expone extract, cast, classify y generate',
-      'PromptQuorum testea el mismo prompt en 25+ modelos para consistencia'
+      'PromptQuorum (nuestro propio producto) puede ejecutar el mismo prompt en muchos modelos para comparar la consistencia'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
-      description: 'Compara siete bibliotecas para structured output LLM: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin y PromptQuorum. Clasificadas por cumplimiento de esquema, soporte de lenguaje, compatibilidad con modelos locales y licencia.',
+      description: 'Compara siete bibliotecas para structured output LLM: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin y PromptQuorum (nuestro propio producto). Comparadas por cumplimiento de esquema, soporte de lenguaje, compatibilidad con modelos locales y licencia.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/es/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -852,12 +852,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Mejores herramientas de structured output LLM (2026)',
-      description: 'Siete bibliotecas líderes para forzar structured output de modelos de lenguaje.',
+      description: 'Siete bibliotecas y herramientas para forzar o testear structured output de modelos de lenguaje, incluida PromptQuorum (nuestro propio producto).',
       numberOfItems: 7,
       inLanguage: 'es',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Extracción basada en Pydantic desde cualquier LLM, con reintentos automáticos. Licencia MIT, seis implementaciones de lenguaje.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Biblioteca de constrained decoding para cumplimiento garantizado del esquema en modelos locales. Open source Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Biblioteca de constrained decoding que aplica tu esquema durante la generación en modelos locales. Open source Apache 2.0.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Framework de agentes type-safe con tres modos de structured output e integraciones de ejecución duradera.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: 'Lenguaje de prompts schema-first que compila clientes tipados y repara salidas mal formadas mediante schema-aligned parsing.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'Capa de API unificada para structured output en OpenAI, Anthropic, Google y modelos locales.' },
@@ -872,17 +872,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'Usa Instructor para extracción Python con reintentos. Usa Outlines para cumplimiento garantizado del esquema en modelos locales. Usa Pydantic AI para agentes multi-turn type-safe. Usa BAML cuando servicios en Python, TypeScript y Go deban compartir un esquema. Usa LangChain si ya estás en ese ecosistema. Usa Marvin para llamadas de una línea de extract y classify. Usa PromptQuorum para testear la consistencia del structured output en todos los modelos antes de producción.'
+            text: 'Usa Instructor para extracción Python con reintentos. Usa Outlines para decodificación restringida por esquema en modelos locales. Usa Pydantic AI para agentes multi-turn type-safe. Usa BAML cuando servicios en Python, TypeScript y Go deban compartir un esquema. Usa LangChain si ya estás en ese ecosistema. Usa Marvin para llamadas de una línea de extract y classify. Usa PromptQuorum (nuestro propio producto) para testear la consistencia del structured output en todos los modelos antes de producción.'
           }
         ],
         items: [
-          '**Instructor** es la opción Python más popular — esquemas Pydantic, reintentos automáticos y ports oficiales para TypeScript, Ruby, Go, Elixir y Rust',
-          '**Outlines** garantiza cumplimiento del esquema en modelos locales vía constrained decoding — sin riesgo de alucinación estructural',
+          '**Instructor** es una opción Python muy utilizada — esquemas Pydantic, reintentos automáticos y ports oficiales para TypeScript, Ruby, Go, Elixir y Rust',
+          '**Outlines** restringe la generación de tokens a tu esquema en modelos locales, lo que elimina la mayoría de los fallos de parseo estructural; los valores aún necesitan validación, y el truncamiento o los límites de la gramática pueden romper la salida',
           '**Pydantic AI** añade type safety a conversaciones de agentes multi-turn y degrada de structured output nativo a llamadas a herramientas y a JSON por prompt',
           '**BAML** pone el esquema y el prompt en un archivo .baml versionado y genera clientes tipados, un contrato único para equipos políglotas',
           '**with_structured_output() de LangChain** unifica el structured output en las APIs de OpenAI, Anthropic y Google',
           '**Marvin 3.x** se apoya en Pydantic AI y reduce la extracción a una sola llamada extract o classify',
-          '**PromptQuorum** testea la consistencia del structured output en todos los modelos antes del despliegue en producción'
+          '**PromptQuorum** (nuestro propio producto) testea la consistencia del structured output en todos los modelos antes del despliegue en producción'
         ]
       },
       whichProblem: {
@@ -892,22 +892,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: 'Las herramientas de salida estructurada resuelven tres problemas distintos — imponer un esquema en el momento de la generación, validar el resultado después y reparar salidas malformadas — y la mayoría de los sistemas solo necesita los dos primeros.' },
           { type: 'in-plain-terms', text: 'No elijas por lista de funciones. Pregúntate qué fallo tienes de verdad: el modelo ignora tu formato, o lo respeta pero los valores están mal, o devuelve un JSON que ni siquiera se puede parsear. Cada caso pide una solución distinta.' },
         ],
-        content: '**El structured output requiere resolver tres problemas interdependientes: definición de esquema, cumplimiento en la API y validación.** Las distintas herramientas atacan estos problemas de formas diferentes. Instructor gestiona los tres en Python con reintentos. Outlines elimina el paso de validación vía constrained decoding. Pydantic AI añade type safety para agentes. BAML traslada el esquema a un archivo compilado y repara salidas imperfectas. LangChain envuelve las APIs de proveedor. Marvin prioriza la velocidad del desarrollador. PromptQuorum valida la consistencia entre todos los modelos.',
+        content: '**El structured output requiere resolver tres problemas interdependientes: definición de esquema, cumplimiento en la API y validación.** Las distintas herramientas atacan estos problemas de formas diferentes. Instructor gestiona los tres en Python con reintentos. Outlines reduce la necesidad de un paso de validación separado vía constrained decoding. Pydantic AI añade type safety para agentes. BAML traslada el esquema a un archivo compilado y repara salidas imperfectas. LangChain envuelve las APIs de proveedor. Marvin prioriza la velocidad del desarrollador. PromptQuorum valida la consistencia entre todos los modelos.',
         columns: ['Problema', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { 'Problema': 'Definir esquema', 'Instructor': 'Modelos Pydantic', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Modelos Pydantic', 'BAML': 'Archivos de clase .baml', 'LangChain': 'Definiciones de herramienta', 'Marvin': 'Hints de tipo Python' },
           { 'Problema': 'Forzar en llamada API', 'Instructor': 'Reintento + validación', 'Outlines': 'Restricción a nivel token', 'Pydantic AI': 'Nativo / herramienta / prompt', 'BAML': 'Prompt generado + parser', 'LangChain': 'Modo JSON del proveedor', 'Marvin': 'Tipos de salida de Pydantic AI' },
-          { 'Problema': 'Validar respuesta', 'Instructor': 'Automático', 'Outlines': 'Garantizado en la generación', 'Pydantic AI': 'Verificado por tipo', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manual', 'Marvin': 'Automático' }
+          { 'Problema': 'Validar respuesta', 'Instructor': 'Automático', 'Outlines': 'Aplicado en la generación', 'Pydantic AI': 'Verificado por tipo', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manual', 'Marvin': 'Automático' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor: extracción Pydantic',
-        content: '**Instructor es la biblioteca de structured output más adoptada. Envuelve cualquier API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — y devuelve modelos Pydantic validados en lugar de texto sin formato.** Instructor gestiona reintentos automáticamente cuando falla la validación, haciéndolo apto para producción sin manejo de errores adicional.',
+        content: '**Instructor es una biblioteca de structured output muy utilizada. Envuelve cualquier API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — y devuelve modelos Pydantic validados en lugar de texto sin formato.** Instructor reintenta automáticamente cuando falla la validación; aun así debes gestionar el caso en que se agoten los reintentos.',
         items: [
           'Funciona con todos los proveedores principales (OpenAI, Anthropic, Google, Groq, Mistral) y modelos locales vía Ollama o vLLM',
           'Esquemas Pydantic v2: hints de tipo, reglas de validación, descripciones de docstring integradas en el esquema',
-          'Reintento automático con backoff en fallo de validación — no se necesita manejo de errores manual',
+          'Reintentos automáticos en fallos de validación — aun así debes gestionar los reintentos agotados',
           'Seis implementaciones oficiales: Python, TypeScript, Ruby, Go, Elixir y Rust',
           'Open source con licencia MIT, mantenido activamente, actualmente en la línea 1.x',
           'Precios: Gratis (sin coste adicional más allá de las llamadas a la API LLM)'
@@ -918,13 +918,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines: constrained decoding',
-        content: '**Outlines fuerza el cumplimiento del esquema al momento de la generación de tokens vía constrained decoding. En lugar de generar tokens y luego validar, Outlines limita los tokens válidos en cada paso para coincidir con tu esquema.** Esto garantiza que la salida se parsea contra tu esquema sin riesgo de alucinación estructural, y es lo que lo convierte en la opción por defecto para modelos locales.',
+        content: '**Outlines fuerza el cumplimiento del esquema al momento de la generación de tokens vía constrained decoding. En lugar de generar tokens y luego validar, Outlines limita los tokens válidos en cada paso para coincidir con tu esquema.** Esto elimina la mayoría de los fallos de parseo estructural, aunque los valores aún necesitan validación y el truncamiento o los límites de la gramática pueden romper la salida. Por eso es una opción habitual para modelos locales.',
         items: [
           'Backends locales: transformers, llama.cpp, MLX y cualquier modelo de Hugging Face',
           'Backends de servidor: vLLM, Ollama y NVIDIA NIM',
           'También soporta APIs alojadas (OpenAI, Gemini), así que el mismo código se mueve entre local y nube',
           'Esquemas como modelos Pydantic, JSON Schema, patrones regex, opciones literales o gramáticas libres de contexto',
-          'Cumplimiento estructural garantizado — no se necesita validación post-generación ni reintentos',
+          'Cumplimiento estructural sólido en la generación — valida igualmente los valores y vigila el truncamiento y los límites de la gramática',
           'Open source Apache 2.0, actualmente en la línea 1.x, con un núcleo en Rust (outlines-core) para velocidad'
         ]
       },
@@ -984,9 +984,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: testing multi-modelo',
-        content: '**PromptQuorum no es una biblioteca de structured output en sí misma, sino una plataforma de testing para validar la consistencia del structured output entre modelos.** Ejecuta el mismo prompt simultáneamente contra GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon y 20+ modelos más. Mide el cumplimiento del esquema, la latencia y el coste por modelo.',
+        content: '**PromptQuorum es un producto propio y no es una biblioteca de structured output en sí misma, sino una plataforma de testing para validar la consistencia del structured output entre modelos.** Ejecuta el mismo prompt simultáneamente contra GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon y muchos modelos más. Mide el cumplimiento del esquema, la latencia y el coste por modelo.',
         items: [
-          'Despacho multi-modelo en una sola llamada API — testea un prompt contra 25+ modelos',
+          'Despacho multi-modelo en una sola llamada API — testea un prompt contra muchos modelos',
           'Métricas de cumplimiento de structured output — tasa de paso, latencia, coste por modelo',
           'Identifica modelos que alucinan con tu esquema — evita desplegar en modelos poco fiables',
           'Modo consenso — encuentra acuerdos entre ejecuciones de modelos independientes',
@@ -997,15 +997,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Comparativa lado a lado',
-        columns: ['Herramienta', 'Ideal para', 'Formato de esquema', 'Lenguaje', 'Modelos locales', 'Licencia', 'Curva de aprendizaje'],
+        columns: ['Herramienta', 'Ideal para', 'Formato de esquema', 'Lenguaje', 'Modelos locales', 'Licencia', 'Curva de aprendizaje (editorial)'],
         rows: [
-          { 'Herramienta': '[Instructor](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + reintentos', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locales': 'Sí (Ollama, vLLM)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Baja' },
-          { 'Herramienta': '[Outlines](https://dottxt.ai)', 'Ideal para': 'Despliegue de modelos locales', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (nativo)', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje': 'Media' },
-          { 'Herramienta': '[Pydantic AI](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (Ollama)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Baja' },
-          { 'Herramienta': '[BAML](https://boundaryml.com)', 'Ideal para': 'Equipos políglotas, modelos poco fiables', 'Formato de esquema': 'Archivos de clase .baml', 'Lenguaje': 'Python, TS + 6 vía OpenAPI', 'Modelos locales': 'Sí (compatible con OpenAI)', 'Licencia': 'Apache 2.0, observabilidad de pago', 'Curva de aprendizaje': 'Media' },
-          { 'Herramienta': '[LangChain](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definiciones de herramienta', 'Lenguaje': 'Python, JS', 'Modelos locales': 'Sí', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Media' },
-          { 'Herramienta': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract y classify rápidos', 'Formato de esquema': 'Hints de tipo', 'Lenguaje': 'Python', 'Modelos locales': 'Sí', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje': 'Muy baja' },
-          { 'Herramienta': '[PromptQuorum](https://www.promptquorum.com)', 'Ideal para': 'Testing multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Lenguaje': 'API-first', 'Modelos locales': 'Vía proxy OpenAI', 'Licencia': 'Tier gratuito + enterprise', 'Curva de aprendizaje': 'Baja' }
+          { 'Herramienta': '[Instructor](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + reintentos', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locales': 'Sí (Ollama, vLLM)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje (editorial)': 'Baja' },
+          { 'Herramienta': '[Outlines](https://dottxt.ai)', 'Ideal para': 'Despliegue de modelos locales', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (nativo)', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje (editorial)': 'Media' },
+          { 'Herramienta': '[Pydantic AI](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (Ollama)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje (editorial)': 'Baja' },
+          { 'Herramienta': '[BAML](https://boundaryml.com)', 'Ideal para': 'Equipos políglotas, modelos poco fiables', 'Formato de esquema': 'Archivos de clase .baml', 'Lenguaje': 'Python, TS + 6 vía OpenAPI', 'Modelos locales': 'Sí (compatible con OpenAI)', 'Licencia': 'Apache 2.0, observabilidad de pago', 'Curva de aprendizaje (editorial)': 'Media' },
+          { 'Herramienta': '[LangChain](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definiciones de herramienta', 'Lenguaje': 'Python, JS', 'Modelos locales': 'Sí', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje (editorial)': 'Media' },
+          { 'Herramienta': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract y classify rápidos', 'Formato de esquema': 'Hints de tipo', 'Lenguaje': 'Python', 'Modelos locales': 'Sí', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje (editorial)': 'Muy baja' },
+          { 'Herramienta': '[PromptQuorum](https://www.promptquorum.com) (nuestro propio producto)', 'Ideal para': 'Testing multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Lenguaje': 'API-first', 'Modelos locales': 'Vía proxy OpenAI', 'Licencia': 'Tier gratuito + enterprise', 'Curva de aprendizaje (editorial)': 'Baja' }
         ]
       },
       decision: {
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Empieza respondiendo tres preguntas: (1) ¿En qué lenguajes están escritos los servicios que llaman al modelo? (2) ¿Necesitas soporte de modelos locales? (3) ¿Cuánta complejidad de validación tienes?',
         items: [
           '**Usa Instructor si:** construyes APIs Python y necesitas reintentos automáticos en fallo de validación. Mejor opción de uso general.',
-          '**Usa Outlines si:** despliegas modelos locales (llama.cpp, vLLM, MLX) y quieres cumplimiento garantizado del esquema al momento de la generación.',
+          '**Usa Outlines si:** despliegas modelos locales (llama.cpp, vLLM, MLX) y quieres aplicar el esquema al momento de la generación.',
           '**Usa Pydantic AI si:** construyes flujos de agentes multi-turn con type safety en todos los pasos o necesitas ejecución duradera.',
           '**Usa BAML si:** servicios en Python, TypeScript y Go deben compartir un esquema, o tu modelo no tiene un modo JSON nativo fiable.',
           '**Usa LangChain si:** ya usas LangChain o LangGraph — with_structured_output() es la adición más sencilla.',
@@ -1040,27 +1040,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Tratar cualquier modo JSON como una garantía de esquema',
             problem: 'El modo JSON simple (response_format json_object, control JSON de Anthropic) solo garantiza que la respuesta es JSON válido, no que coincida con tus campos y tipos. Los modos de esquema estricto van más allá y garantizan la forma, pero ninguno garantiza que los valores sean correctos: un objeto bien formado puede contener igualmente un precio inventado o una fecha alucinada.',
-            fix: 'Añade validación encima en cualquier caso: Instructor, Outlines, Pydantic AI o BAML. Las reglas de negocio van en validadores Pydantic, no solo en el esquema. Testea con PromptQuorum para detectar fallos de cumplimiento por modelo.'
+            fix: 'Añade validación encima en cualquier caso: Instructor, Outlines, Pydantic AI o BAML. Las reglas de negocio van en validadores Pydantic, no solo en el esquema. Testea con PromptQuorum (nuestro propio producto) para detectar fallos de cumplimiento por modelo.'
           },
           {
             mistake: 'Diseñar esquemas demasiado estrictos',
             problem: 'Los esquemas demasiado restringidos (listas de enum pequeñas, patrones regex muy específicos) hacen que los LLMs fallen la validación frecuentemente. Los altos conteos de reintentos desperdician tokens y dinero.',
-            fix: 'Usa PromptQuorum para testear la rigurosidad del esquema entre modelos. Relaja las restricciones para lograr un 95%+ de cumplimiento. Usa campos opcionales en lugar de requeridos cuando sea posible.'
+            fix: 'Usa PromptQuorum (nuestro propio producto) para testear la rigurosidad del esquema entre modelos. Relaja las restricciones hasta alcanzar tu tasa de cumplimiento objetivo. Usa campos opcionales en lugar de requeridos cuando sea posible.'
           },
           {
             mistake: 'No testear diferencias entre modelos locales y de API',
             problem: 'Outlines en llama.cpp se comporta de forma diferente que Instructor en GPT-6 Astra. Las tasas de cumplimiento del esquema difieren por modelo. Construir solo para un modelo frontera de API y luego desplegar en uno local pequeño causa fallos en producción.',
-            fix: 'Testea todos los backends de modelos previstos pronto. Usa PromptQuorum para ejecutar el mismo prompt en modelos locales (vLLM, Ollama) y alojados (OpenAI, Anthropic, Google).'
+            fix: 'Testea todos los backends de modelos previstos pronto. Usa PromptQuorum (nuestro propio producto) para ejecutar el mismo prompt en modelos locales (vLLM, Ollama) y alojados (OpenAI, Anthropic, Google).'
           },
           {
             mistake: 'Ignorar el impacto en latencia y coste de tokens',
             problem: 'El structured output con reintentos cuesta más tokens. Instructor reintenta en caso de fallo. El constrained decoding de Outlines añade sobrecarga por token frente a la generación libre. No medir el coste por modelo.',
-            fix: 'Usa el tracking de costes de PromptQuorum. Compara latencia entre modelos. Para flujos sensibles al presupuesto, prefiere Outlines o BAML (sin bucle de reintentos). Para precisión en esquemas flexibles, acepta el coste de reintentos de Instructor.'
+            fix: 'Usa el tracking de costes de PromptQuorum (nuestro propio producto). Compara latencia entre modelos. Para flujos sensibles al presupuesto, prefiere Outlines o BAML (sin bucle de reintentos). Para precisión en esquemas flexibles, acepta el coste de reintentos de Instructor.'
           },
           {
             mistake: 'Mezclar métodos de validación (sin consistencia)',
             problem: 'Algunas peticiones usan Instructor, otras parsing JSON en bruto. Algunos modelos validados, otros no. Esto lleva a errores inconsistentes en producción.',
-            fix: 'Estandariza en un enfoque de validación por base de código. Todas las peticiones usan Instructor, o todas usan Outlines. La consistencia reduce el tiempo de depuración por 10x.'
+            fix: 'Estandariza en un enfoque de validación por base de código. Todas las peticiones usan Instructor, o todas usan Outlines. La consistencia facilita la depuración.'
           },
           {
             mistake: 'Copiar tutoriales escritos contra una API ya reemplazada',
@@ -1091,11 +1091,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Qué herramienta es mejor para desarrolladores Python?',
-            a: 'Instructor es la opción Python más popular. Usa modelos Pydantic para definir esquemas, gestiona automáticamente reintentos y validación, y soporta todas las APIs LLM principales además de modelos locales vía Ollama o vLLM. Pydantic AI encaja mejor si además quieres conversaciones multi-turn type-safe con agentes, y Marvin es la opción más rápida si solo necesitas una llamada extract o classify de una línea.'
+            a: 'Instructor es una opción Python muy utilizada. Usa modelos Pydantic para definir esquemas, gestiona automáticamente reintentos y validación, y soporta todas las APIs LLM principales además de modelos locales vía Ollama o vLLM. Pydantic AI encaja mejor si además quieres conversaciones multi-turn type-safe con agentes, y Marvin es la opción más rápida si solo necesitas una llamada extract o classify de una línea.'
           },
           {
             q: '¿Puedo usar structured output con modelos locales como Llama?',
-            a: 'Sí. Outlines se especializa en constrained decoding para modelos locales — funciona con transformers, llama.cpp, MLX, vLLM y Ollama, y garantiza en el momento de la generación que la salida se parsea contra tu esquema. Instructor y Pydantic AI también soportan Ollama y vLLM si los ejecutas como API, y BAML funciona contra cualquier endpoint compatible con OpenAI.'
+            a: 'Sí. Outlines se especializa en constrained decoding para modelos locales — funciona con transformers, llama.cpp, MLX, vLLM y Ollama, y restringe la salida a tu esquema en el momento de la generación, lo que elimina la mayoría de los fallos de parseo. Instructor y Pydantic AI también soportan Ollama y vLLM si los ejecutas como API, y BAML funciona contra cualquier endpoint compatible con OpenAI.'
           },
           {
             q: '¿Cuál es la diferencia entre Instructor y Marvin?',
@@ -1107,11 +1107,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Cómo testo si el structured output es fiable?',
-            a: 'Usa PromptQuorum para ejecutar el mismo prompt en múltiples modelos y medir el cumplimiento del esquema. Diferentes modelos — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — tienen distintos niveles de fiabilidad, y los modelos locales pequeños difieren aún más. Testea antes de desplegar en producción y valida localmente con Instructor o Pydantic.'
+            a: 'Usa PromptQuorum (nuestro propio producto) para ejecutar el mismo prompt en múltiples modelos y medir el cumplimiento del esquema. Diferentes modelos — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — tienen distintos niveles de fiabilidad, y los modelos locales pequeños difieren aún más. Testea antes de desplegar en producción y valida localmente con Instructor o Pydantic.'
           },
           {
             q: '¿Qué significa "constrained decoding"?',
-            a: 'El constrained decoding limita la generación de tokens a solo valores válidos según tu esquema. Outlines lo hace calculando el conjunto de tokens válidos siguientes en cada paso. Esto garantiza que la salida se parsea contra tu esquema sin validación post-generación ni reintentos, lo que lo hace más fiable que el modo JSON simple a nivel de API. Restringe la estructura, no la verdad: los campos serán correctos, los valores siguen necesitando comprobación.'
+            a: 'El constrained decoding limita la generación de tokens a solo valores válidos según tu esquema. Outlines lo hace calculando el conjunto de tokens válidos siguientes en cada paso. Esto elimina la mayoría de los fallos de parseo estructural sin reintentos posteriores, lo que lo hace más fiable que el modo JSON simple a nivel de API, aunque el truncamiento o los límites de la gramática pueden romper la salida. Restringe la estructura, no la verdad: los valores siguen necesitando comprobación.'
           },
           {
             q: '¿Qué es BAML y cuándo debería usarlo en lugar de Instructor?',
@@ -1123,11 +1123,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Qué herramienta tiene la mejor documentación?',
-            a: 'LangChain y Pydantic AI tienen la documentación más completa debido a su respaldo corporativo. La documentación de BAML es inusualmente buena para un proyecto joven porque el lenguaje necesita enseñarse. Instructor tiene excelentes tutoriales y ejemplos a pesar de ser mantenido por la comunidad. La documentación de Outlines es técnica pero exhaustiva. La de Marvin es concisa — consulta específicamente las páginas 3.x, ya que material antiguo de Marvin 2 sigue circulando.'
+            a: 'La calidad de la documentación es subjetiva, así que consulta la documentación actual de cada proyecto. En nuestra lectura, LangChain y Pydantic AI tienen una documentación extensa, que probablemente refleja los recursos que los respaldan. La documentación de BAML es sólida para un proyecto joven porque el lenguaje necesita enseñarse. Instructor tiene buenos tutoriales y ejemplos. La documentación de Outlines es técnica pero exhaustiva. La de Marvin es concisa — consulta específicamente las páginas 3.x, ya que material antiguo de Marvin 2 sigue circulando.'
           },
           {
             q: '¿Necesito las siete herramientas o solo una?',
-            a: 'Empieza con una. Los desarrolladores Python deberían probar Instructor o Pydantic AI. Los equipos con modelos locales deberían probar Outlines. Los equipos políglotas deberían probar BAML. Los usuarios de LangChain deberían probar with_structured_output(). Usa PromptQuorum para validar la consistencia entre todos los modelos. La mayoría de equipos usa una herramienta más PromptQuorum para testing.'
+            a: 'Empieza con una. Los desarrolladores Python deberían probar Instructor o Pydantic AI. Los equipos con modelos locales deberían probar Outlines. Los equipos políglotas deberían probar BAML. Los usuarios de LangChain deberían probar with_structured_output(). Usa PromptQuorum (nuestro propio producto) para validar la consistencia entre todos los modelos.'
           }
         ]
       },
@@ -1136,7 +1136,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fuentes',
         items: [
           '[Repositorio GitHub de Instructor](https://github.com/567-labs/instructor) — Repositorio oficial y docs para la biblioteca Instructor',
-          '[Repositorio GitHub de Outlines](https://github.com/dottxt-ai/outlines) — Constrained decoding para cumplimiento garantizado del esquema',
+          '[Repositorio GitHub de Outlines](https://github.com/dottxt-ai/outlines) — Constrained decoding para generación restringida por esquema',
           '[Documentación de Pydantic AI](https://pydantic.dev/docs/ai/overview/) — Framework de agentes type-safe con structured output',
           '[Guía de structured output de LangChain](https://docs.langchain.com/oss/python/langchain/structured-output) — API unificada de structured output de LangChain',
           '[Documentación de BAML](https://docs.boundaryml.com/home) — Lenguaje de prompts schema-first y schema-aligned parsing',
@@ -1152,14 +1152,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-pt.webp',
     title: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
     seoTitle: 'Melhores ferramentas de Structured Output e JSON Mode 2026',
-    metaDescription: '7 ferramentas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin e PromptQuorum. Licença e modelos locais.',
+    metaDescription: '7 ferramentas de structured output comparadas: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin e PromptQuorum (nosso próprio produto). Modelos locais.',
     ogTitle: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
-    ogDescription: '7 ferramentas de structured output LLM comparadas: Instructor para tentativas, Outlines para constrained decoding, BAML para times poliglotas. Teste consistência com PromptQuorum.',
+    ogDescription: '7 ferramentas de structured output LLM comparadas: Instructor para tentativas, Outlines para constrained decoding, BAML para times poliglotas. Teste consistência com PromptQuorum (nosso próprio produto).',
     twitterTitle: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — qual ferramenta de structured output se encaixa com seu stack? Comparativo lado a lado (2026).',
-    intro: '**Sete ferramentas dominam o structured output em 2026: Instructor para extração Pydantic, Outlines para constrained decoding, Pydantic AI para agentes type-safe, BAML para arquivos de prompt schema-first, LangChain para APIs unificadas, Marvin para extração baseada em tarefas e PromptQuorum para testes multi-modelo. Cada uma resolve um gargalo diferente do fluxo de trabalho.**',
+    intro: '**Sete ferramentas são amplamente usadas ou vale a pena conhecer para structured output em 2026: Instructor para extração Pydantic, Outlines para constrained decoding, Pydantic AI para agentes type-safe, BAML para arquivos de prompt schema-first, LangChain para APIs unificadas, Marvin para extração baseada em tarefas e PromptQuorum (nosso próprio produto) para testes multi-modelo. Cada uma resolve um gargalo diferente do fluxo de trabalho.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — versões das bibliotecas, licenças, APIs e URLs de documentação reverificadas contra repositórios oficiais, PyPI e documentação dos fornecedores',
     readTime: '12 min de leitura',
     educationalLevel: 'Advanced',
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Erros comuns de structured output', anchor: '#common-mistakes' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**Escolha conforme onde seus modelos executam e em quais linguagens seu time entrega: Instructor e Pydantic AI para fluxos Python com tentativas e type safety; Outlines para conformidade garantida do esquema em modelos locais; BAML quando o mesmo esquema precisa atender serviços em Python, TypeScript e Go; LangChain para times que já usam chains ou agentes; Marvin para chamadas rápidas de extract e classify; PromptQuorum para testes de consistência no GPT, Claude e Gemini antes da produção.**',
+    leadAnswerBlock: '**Escolha conforme onde seus modelos executam e em quais linguagens seu time entrega: Instructor e Pydantic AI para fluxos Python com tentativas e type safety; Outlines para decodificação restrita por esquema em modelos locais; BAML quando o mesmo esquema precisa atender serviços em Python, TypeScript e Go; LangChain para times que já usam chains ou agentes; Marvin para chamadas rápidas de extract e classify; PromptQuorum (nosso próprio produto) para testes de consistência no GPT, Claude e Gemini antes da produção.**',
     quickFacts: [
       'Instructor tem licença MIT e oferece seis implementações oficiais: Python, TypeScript, Ruby, Go, Elixir e Rust',
       'Outlines 1.x restringe tokens no momento da geração e agora também comanda APIs hospedadas, não apenas backends locais',
@@ -1193,17 +1193,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML compila um arquivo de esquema .baml em clientes tipados e repara saídas malformadas em vez de tentar de novo',
       'LangChain 1.x lê o suporte nativo a structured output de cada provedor a partir do perfil do modelo',
       'Marvin 3.x é construído sobre o Pydantic AI e expõe extract, cast, classify e generate',
-      'PromptQuorum testa o mesmo prompt em 25+ modelos para consistência'
+      'PromptQuorum (nosso próprio produto) pode executar o mesmo prompt em muitos modelos para comparar a consistência'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
-      description: 'Compara sete bibliotecas para structured output LLM: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin e PromptQuorum. Classificadas por conformidade de esquema, suporte de linguagem, compatibilidade com modelos locais e licença.',
+      description: 'Compara sete bibliotecas para structured output LLM: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin e PromptQuorum (nosso próprio produto). Comparadas por conformidade de esquema, suporte de linguagem, compatibilidade com modelos locais e licença.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/pt/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
@@ -1226,12 +1226,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Melhores ferramentas de structured output LLM (2026)',
-      description: 'Sete bibliotecas líderes para forçar structured output de modelos de linguagem.',
+      description: 'Sete bibliotecas e ferramentas para forçar ou testar structured output de modelos de linguagem, incluindo o PromptQuorum (nosso próprio produto).',
       numberOfItems: 7,
       inLanguage: 'pt-BR',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Extração baseada em Pydantic de qualquer LLM, com tentativas automáticas. Licença MIT, seis implementações de linguagem.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Biblioteca de constrained decoding para conformidade garantida do esquema em modelos locais. Open source Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Biblioteca de constrained decoding que aplica seu esquema durante a geração em modelos locais. Open source Apache 2.0.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Framework de agentes type-safe com três modos de structured output e integrações de execução durável.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: 'Linguagem de prompts schema-first que compila clientes tipados e repara saídas malformadas via schema-aligned parsing.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'Camada de API unificada para structured output no OpenAI, Anthropic, Google e modelos locais.' },
@@ -1246,17 +1246,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'Use Instructor para extração Python com tentativas. Use Outlines para conformidade garantida do esquema em modelos locais. Use Pydantic AI para agentes multi-turn type-safe. Use BAML quando serviços em Python, TypeScript e Go precisarem compartilhar um esquema. Use LangChain se já estiver nesse ecossistema. Use Marvin para chamadas de uma linha de extract e classify. Use PromptQuorum para testar a consistência do structured output em todos os modelos antes da produção.'
+            text: 'Use Instructor para extração Python com tentativas. Use Outlines para decodificação restrita por esquema em modelos locais. Use Pydantic AI para agentes multi-turn type-safe. Use BAML quando serviços em Python, TypeScript e Go precisarem compartilhar um esquema. Use LangChain se já estiver nesse ecossistema. Use Marvin para chamadas de uma linha de extract e classify. Use PromptQuorum (nosso próprio produto) para testar a consistência do structured output em todos os modelos antes da produção.'
           }
         ],
         items: [
-          '**Instructor** é a opção Python mais popular — esquemas Pydantic, tentativas automáticas e ports oficiais para TypeScript, Ruby, Go, Elixir e Rust',
-          '**Outlines** garante conformidade do esquema em modelos locais via constrained decoding — sem risco de alucinação estrutural',
+          '**Instructor** é uma opção Python muito usada — esquemas Pydantic, tentativas automáticas e ports oficiais para TypeScript, Ruby, Go, Elixir e Rust',
+          '**Outlines** restringe a geração de tokens ao seu esquema em modelos locais, o que elimina a maioria das falhas de parsing estrutural; os valores ainda precisam de validação, e truncamento ou limites da gramática ainda podem quebrar a saída',
           '**Pydantic AI** adiciona type safety a conversas de agentes multi-turn e recua de structured output nativo para chamadas de ferramentas e para JSON por prompt',
           '**BAML** coloca o esquema e o prompt em um arquivo .baml versionado e gera clientes tipados, um contrato único para times poliglotas',
           '**with_structured_output() do LangChain** unifica o structured output nas APIs da OpenAI, Anthropic e Google',
           '**Marvin 3.x** se apoia no Pydantic AI e reduz a extração a uma única chamada extract ou classify',
-          '**PromptQuorum** testa a consistência do structured output em todos os modelos antes da implantação em produção'
+          '**PromptQuorum** (nosso próprio produto) testa a consistência do structured output em todos os modelos antes da implantação em produção'
         ]
       },
       whichProblem: {
@@ -1266,22 +1266,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: 'Ferramentas de saída estruturada resolvem três problemas distintos — impor um schema no momento da geração, validar o resultado depois e reparar saídas malformadas — e a maioria dos sistemas só precisa dos dois primeiros.' },
           { type: 'in-plain-terms', text: 'Não escolha por lista de recursos. Pergunte qual falha você realmente tem: o modelo ignora o seu formato, ou respeita o formato mas os valores estão errados, ou devolve um JSON que nem dá para parsear. Cada caso pede uma resposta diferente.' },
         ],
-        content: '**O structured output requer resolver três problemas interdependentes: definição de esquema, conformidade na API e validação.** Diferentes ferramentas atacam esses problemas de formas diferentes. Instructor gerencia os três em Python com tentativas. Outlines elimina a etapa de validação via constrained decoding. Pydantic AI adiciona type safety para agentes. BAML move o esquema para um arquivo compilado e repara saídas imperfeitas. LangChain envolve as APIs do fornecedor. Marvin prioriza a velocidade do desenvolvedor. PromptQuorum valida a consistência entre todos os modelos.',
+        content: '**O structured output requer resolver três problemas interdependentes: definição de esquema, conformidade na API e validação.** Diferentes ferramentas atacam esses problemas de formas diferentes. Instructor gerencia os três em Python com tentativas. Outlines reduz a necessidade de uma etapa de validação separada via constrained decoding. Pydantic AI adiciona type safety para agentes. BAML move o esquema para um arquivo compilado e repara saídas imperfeitas. LangChain envolve as APIs do fornecedor. Marvin prioriza a velocidade do desenvolvedor. PromptQuorum valida a consistência entre todos os modelos.',
         columns: ['Problema', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { 'Problema': 'Definir esquema', 'Instructor': 'Modelos Pydantic', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Modelos Pydantic', 'BAML': 'Arquivos de classe .baml', 'LangChain': 'Definições de ferramenta', 'Marvin': 'Type hints Python' },
           { 'Problema': 'Forçar na chamada API', 'Instructor': 'Tentativa + validação', 'Outlines': 'Restrição em nível de token', 'Pydantic AI': 'Nativo / ferramenta / prompt', 'BAML': 'Prompt gerado + parser', 'LangChain': 'Modo JSON do fornecedor', 'Marvin': 'Tipos de saída do Pydantic AI' },
-          { 'Problema': 'Validar resposta', 'Instructor': 'Automático', 'Outlines': 'Garantido na geração', 'Pydantic AI': 'Verificado por tipo', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manual', 'Marvin': 'Automático' }
+          { 'Problema': 'Validar resposta', 'Instructor': 'Automático', 'Outlines': 'Aplicado na geração', 'Pydantic AI': 'Verificado por tipo', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manual', 'Marvin': 'Automático' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor: extração Pydantic',
-        content: '**Instructor é a biblioteca de structured output mais adotada. Envolve qualquer API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — e retorna modelos Pydantic validados em vez de texto simples.** Instructor gerencia tentativas automaticamente quando a validação falha, tornando-o adequado para produção sem tratamento adicional de erros.',
+        content: '**Instructor é uma biblioteca de structured output muito usada. Envolve qualquer API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — e retorna modelos Pydantic validados em vez de texto simples.** Instructor refaz a tentativa automaticamente quando a validação falha; você ainda precisa tratar o caso em que as tentativas se esgotam.',
         items: [
           'Funciona com todos os principais provedores (OpenAI, Anthropic, Google, Groq, Mistral) e modelos locais via Ollama ou vLLM',
           'Esquemas Pydantic v2: type hints, regras de validação, descrições de docstring integradas no esquema',
-          'Tentativa automática com backoff em falha de validação — sem necessidade de tratamento manual de erros',
+          'Tentativas automáticas em falha de validação — você ainda precisa tratar as tentativas esgotadas',
           'Seis implementações oficiais: Python, TypeScript, Ruby, Go, Elixir e Rust',
           'Open source com licença MIT, mantido ativamente, atualmente na linha 1.x',
           'Preços: Gratuito (sem custo adicional além das chamadas à API LLM)'
@@ -1292,13 +1292,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines: constrained decoding',
-        content: '**Outlines força a conformidade do esquema no momento da geração de tokens via constrained decoding. Em vez de gerar tokens e depois validar, Outlines limita os tokens válidos em cada etapa para corresponder ao seu esquema.** Isso garante que a saída seja analisada contra o seu esquema sem risco de alucinação estrutural, e é justamente o que faz dele a escolha padrão para modelos locais.',
+        content: '**Outlines força a conformidade do esquema no momento da geração de tokens via constrained decoding. Em vez de gerar tokens e depois validar, Outlines limita os tokens válidos em cada etapa para corresponder ao seu esquema.** Isso elimina a maioria das falhas de parsing estrutural, embora os valores ainda precisem de validação e truncamento ou limites da gramática ainda possam quebrar a saída. Por isso é uma escolha comum para modelos locais.',
         items: [
           'Backends locais: transformers, llama.cpp, MLX e qualquer modelo do Hugging Face',
           'Backends de servidor: vLLM, Ollama e NVIDIA NIM',
           'APIs hospedadas também são suportadas (OpenAI, Gemini), então o mesmo código roda local e na nuvem',
           'Esquemas como modelos Pydantic, JSON Schema, padrões regex, opções literais ou gramáticas livres de contexto',
-          'Conformidade estrutural garantida — sem necessidade de validação pós-geração ou tentativas',
+          'Conformidade estrutural forte na geração — valide os valores mesmo assim e fique atento a truncamento e limites da gramática',
           'Open source Apache 2.0, atualmente na linha 1.x, com um núcleo em Rust (outlines-core) para desempenho'
         ]
       },
@@ -1358,9 +1358,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: testes multi-modelo',
-        content: '**PromptQuorum não é uma biblioteca de structured output em si, mas uma plataforma de testes para validar a consistência do structured output entre modelos.** Execute o mesmo prompt simultaneamente contra GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon e mais 20+ modelos. Meça a conformidade do esquema, a latência e o custo por modelo.',
+        content: '**PromptQuorum é um produto nosso e não é uma biblioteca de structured output em si, mas uma plataforma de testes para validar a consistência do structured output entre modelos.** Execute o mesmo prompt simultaneamente contra GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon e muitos outros modelos. Meça a conformidade do esquema, a latência e o custo por modelo.',
         items: [
-          'Despacho multi-modelo em uma única chamada de API — teste um prompt contra 25+ modelos',
+          'Despacho multi-modelo em uma única chamada de API — teste um prompt contra muitos modelos',
           'Métricas de conformidade de structured output — taxa de aprovação, latência, custo por modelo',
           'Identifica modelos que alucinam com seu esquema — evite implantar em modelos pouco confiáveis',
           'Modo de consenso — encontre acordos entre execuções de modelos independentes',
@@ -1371,15 +1371,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Comparativo lado a lado',
-        columns: ['Ferramenta', 'Ideal para', 'Formato de esquema', 'Linguagem', 'Modelos locais', 'Licença', 'Curva de aprendizado'],
+        columns: ['Ferramenta', 'Ideal para', 'Formato de esquema', 'Linguagem', 'Modelos locais', 'Licença', 'Curva de aprendizado (editorial)'],
         rows: [
-          { 'Ferramenta': '[Instructor](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + tentativas', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locais': 'Sim (Ollama, vLLM)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Baixa' },
-          { 'Ferramenta': '[Outlines](https://dottxt.ai)', 'Ideal para': 'Implantação de modelos locais', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Linguagem': 'Python', 'Modelos locais': 'Sim (nativo)', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado': 'Média' },
-          { 'Ferramenta': '[Pydantic AI](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python', 'Modelos locais': 'Sim (Ollama)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Baixa' },
-          { 'Ferramenta': '[BAML](https://boundaryml.com)', 'Ideal para': 'Times poliglotas, modelos instáveis', 'Formato de esquema': 'Arquivos de classe .baml', 'Linguagem': 'Python, TS + 6 via OpenAPI', 'Modelos locais': 'Sim (compatível com OpenAI)', 'Licença': 'Apache 2.0, observabilidade paga', 'Curva de aprendizado': 'Média' },
-          { 'Ferramenta': '[LangChain](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definições de ferramenta', 'Linguagem': 'Python, JS', 'Modelos locais': 'Sim', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Média' },
-          { 'Ferramenta': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract e classify rápidos', 'Formato de esquema': 'Type hints', 'Linguagem': 'Python', 'Modelos locais': 'Sim', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado': 'Muito baixa' },
-          { 'Ferramenta': '[PromptQuorum](https://www.promptquorum.com)', 'Ideal para': 'Testes multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Linguagem': 'API-first', 'Modelos locais': 'Via proxy OpenAI', 'Licença': 'Tier gratuito + enterprise', 'Curva de aprendizado': 'Baixa' }
+          { 'Ferramenta': '[Instructor](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + tentativas', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locais': 'Sim (Ollama, vLLM)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado (editorial)': 'Baixa' },
+          { 'Ferramenta': '[Outlines](https://dottxt.ai)', 'Ideal para': 'Implantação de modelos locais', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Linguagem': 'Python', 'Modelos locais': 'Sim (nativo)', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado (editorial)': 'Média' },
+          { 'Ferramenta': '[Pydantic AI](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python', 'Modelos locais': 'Sim (Ollama)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado (editorial)': 'Baixa' },
+          { 'Ferramenta': '[BAML](https://boundaryml.com)', 'Ideal para': 'Times poliglotas, modelos instáveis', 'Formato de esquema': 'Arquivos de classe .baml', 'Linguagem': 'Python, TS + 6 via OpenAPI', 'Modelos locais': 'Sim (compatível com OpenAI)', 'Licença': 'Apache 2.0, observabilidade paga', 'Curva de aprendizado (editorial)': 'Média' },
+          { 'Ferramenta': '[LangChain](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definições de ferramenta', 'Linguagem': 'Python, JS', 'Modelos locais': 'Sim', 'Licença': 'MIT, gratuito', 'Curva de aprendizado (editorial)': 'Média' },
+          { 'Ferramenta': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract e classify rápidos', 'Formato de esquema': 'Type hints', 'Linguagem': 'Python', 'Modelos locais': 'Sim', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado (editorial)': 'Muito baixa' },
+          { 'Ferramenta': '[PromptQuorum](https://www.promptquorum.com) (nosso próprio produto)', 'Ideal para': 'Testes multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Linguagem': 'API-first', 'Modelos locais': 'Via proxy OpenAI', 'Licença': 'Tier gratuito + enterprise', 'Curva de aprendizado (editorial)': 'Baixa' }
         ]
       },
       decision: {
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Comece respondendo três perguntas: (1) Em quais linguagens estão escritos os serviços que realmente chamam o modelo? (2) Você precisa de suporte a modelos locais? (3) Qual é a complexidade de validação que você tem?',
         items: [
           '**Use Instructor se:** você constrói APIs Python e precisa de tentativas automáticas em falha de validação. Melhor opção de uso geral.',
-          '**Use Outlines se:** você implanta modelos locais (llama.cpp, vLLM, MLX) e quer conformidade garantida do esquema no momento da geração.',
+          '**Use Outlines se:** você implanta modelos locais (llama.cpp, vLLM, MLX) e quer aplicar o esquema no momento da geração.',
           '**Use Pydantic AI se:** você constrói fluxos de agentes multi-turn com type safety em todas as etapas ou precisa de execução durável.',
           '**Use BAML se:** serviços em Python, TypeScript e Go precisam compartilhar um esquema, ou seu modelo não tem um modo JSON nativo confiável.',
           '**Use LangChain se:** você já usa LangChain ou LangGraph — with_structured_output() é a adição mais simples.',
@@ -1414,27 +1414,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Tratar qualquer modo JSON como garantia de esquema',
             problem: 'O modo JSON simples (response_format json_object, controle JSON da Anthropic) garante apenas que a resposta é JSON válido, não que ela corresponde aos seus campos e tipos. Modos de esquema estrito vão além e garantem o formato, mas nenhum garante que os valores estejam corretos: um objeto bem formado ainda pode conter um preço inventado ou uma data alucinada.',
-            fix: 'Adicione validação por cima de qualquer forma: Instructor, Outlines, Pydantic AI ou BAML. Regras de negócio pertencem a validadores Pydantic, não apenas ao esquema. Teste com PromptQuorum para detectar falhas de conformidade por modelo.'
+            fix: 'Adicione validação por cima de qualquer forma: Instructor, Outlines, Pydantic AI ou BAML. Regras de negócio pertencem a validadores Pydantic, não apenas ao esquema. Teste com PromptQuorum (nosso próprio produto) para detectar falhas de conformidade por modelo.'
           },
           {
             mistake: 'Projetar esquemas muito rígidos',
             problem: 'Esquemas muito restritos (listas de enum pequenas, padrões regex muito específicos) fazem os LLMs falharem na validação com frequência. Altas contagens de tentativas desperdiçam tokens e dinheiro.',
-            fix: 'Use PromptQuorum para testar a rigidez do esquema entre modelos. Relaxe as restrições para alcançar 95%+ de conformidade. Use campos opcionais em vez de obrigatórios quando possível.'
+            fix: 'Use PromptQuorum (nosso próprio produto) para testar a rigidez do esquema entre modelos. Relaxe as restrições até atingir sua taxa de conformidade desejada. Use campos opcionais em vez de obrigatórios quando possível.'
           },
           {
             mistake: 'Não testar diferenças entre modelos locais e de API',
             problem: 'Outlines no llama.cpp se comporta de forma diferente do Instructor no GPT-6 Astra. As taxas de conformidade do esquema diferem por modelo. Construir apenas para um modelo de fronteira via API e depois implantar em um modelo local pequeno causa falhas em produção.',
-            fix: 'Teste todos os backends de modelos previstos cedo. Use PromptQuorum para executar o mesmo prompt em modelos locais (vLLM, Ollama) e hospedados (OpenAI, Anthropic, Google).'
+            fix: 'Teste todos os backends de modelos previstos cedo. Use PromptQuorum (nosso próprio produto) para executar o mesmo prompt em modelos locais (vLLM, Ollama) e hospedados (OpenAI, Anthropic, Google).'
           },
           {
             mistake: 'Ignorar o impacto na latência e custo de tokens',
             problem: 'O structured output com tentativas custa mais tokens. Instructor tenta novamente em caso de falha. O constrained decoding do Outlines adiciona sobrecarga por token em relação à geração livre. Não medir o custo por modelo.',
-            fix: 'Use o rastreamento de custos do PromptQuorum. Compare latência entre modelos. Para fluxos sensíveis ao orçamento, prefira Outlines ou BAML (sem laço de tentativas). Para precisão em esquemas flexíveis, aceite o custo de tentativas do Instructor.'
+            fix: 'Use o rastreamento de custos do PromptQuorum (nosso próprio produto). Compare latência entre modelos. Para fluxos sensíveis ao orçamento, prefira Outlines ou BAML (sem laço de tentativas). Para precisão em esquemas flexíveis, aceite o custo de tentativas do Instructor.'
           },
           {
             mistake: 'Misturar métodos de validação (sem consistência)',
             problem: 'Algumas requisições usam Instructor, outras parsing JSON bruto. Alguns modelos validados, outros não. Isso leva a erros inconsistentes em produção.',
-            fix: 'Padronize em uma abordagem de validação por base de código. Todas as requisições usam Instructor, ou todas usam Outlines. A consistência reduz o tempo de depuração em 10x.'
+            fix: 'Padronize em uma abordagem de validação por base de código. Todas as requisições usam Instructor, ou todas usam Outlines. A consistência facilita a depuração.'
           },
           {
             mistake: 'Copiar tutoriais escritos contra uma API já substituída',
@@ -1465,11 +1465,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Qual ferramenta é melhor para desenvolvedores Python?',
-            a: 'Instructor é a opção Python mais popular. Usa modelos Pydantic para definir esquemas, gerencia automaticamente tentativas e validação, e suporta todas as principais APIs LLM além de modelos locais via Ollama ou vLLM. Pydantic AI encaixa melhor se você também quiser conversas multi-turn type-safe com agentes, e Marvin é a opção mais rápida se você só precisa de uma chamada extract ou classify de uma linha.'
+            a: 'Instructor é uma opção Python muito usada. Usa modelos Pydantic para definir esquemas, gerencia automaticamente tentativas e validação, e suporta todas as principais APIs LLM além de modelos locais via Ollama ou vLLM. Pydantic AI encaixa melhor se você também quiser conversas multi-turn type-safe com agentes, e Marvin é a opção mais rápida se você só precisa de uma chamada extract ou classify de uma linha.'
           },
           {
             q: 'Posso usar structured output com modelos locais como Llama?',
-            a: 'Sim. Outlines se especializa em constrained decoding para modelos locais — funciona com transformers, llama.cpp, MLX, vLLM e Ollama, e garante no momento da geração que a saída seja analisada contra o seu esquema. Instructor e Pydantic AI também suportam Ollama e vLLM se você os executar como API, e o BAML funciona contra qualquer endpoint compatível com OpenAI.'
+            a: 'Sim. Outlines se especializa em constrained decoding para modelos locais — funciona com transformers, llama.cpp, MLX, vLLM e Ollama, e restringe a saída ao seu esquema no momento da geração, o que elimina a maioria das falhas de parsing. Instructor e Pydantic AI também suportam Ollama e vLLM se você os executar como API, e o BAML funciona contra qualquer endpoint compatível com OpenAI.'
           },
           {
             q: 'Qual é a diferença entre Instructor e Marvin?',
@@ -1481,11 +1481,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Como testo se o structured output é confiável?',
-            a: 'Use PromptQuorum para executar o mesmo prompt em múltiplos modelos e medir a conformidade do esquema. Diferentes modelos — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — têm níveis diferentes de confiabilidade, e modelos locais pequenos variam ainda mais. Teste antes de implantar em produção e valide localmente com Instructor ou Pydantic.'
+            a: 'Use PromptQuorum (nosso próprio produto) para executar o mesmo prompt em múltiplos modelos e medir a conformidade do esquema. Diferentes modelos — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — têm níveis diferentes de confiabilidade, e modelos locais pequenos variam ainda mais. Teste antes de implantar em produção e valide localmente com Instructor ou Pydantic.'
           },
           {
             q: 'O que significa "constrained decoding"?',
-            a: 'O constrained decoding limita a geração de tokens a apenas valores válidos segundo seu esquema. Outlines faz isso calculando o conjunto de próximos tokens válidos em cada etapa. Isso garante que a saída seja analisada contra o seu esquema sem validação pós-geração ou tentativas, o que o torna mais confiável que o modo JSON simples em nível de API. Ele restringe a estrutura, não a verdade: os campos estarão certos, os valores ainda precisam ser conferidos.'
+            a: 'O constrained decoding limita a geração de tokens a apenas valores válidos segundo seu esquema. Outlines faz isso calculando o conjunto de próximos tokens válidos em cada etapa. Isso elimina a maioria das falhas de parsing estrutural sem novas tentativas após a geração, o que o torna mais confiável que o modo JSON simples em nível de API, embora truncamento ou limites da gramática ainda possam quebrar a saída. Ele restringe a estrutura, não a verdade: os valores ainda precisam ser conferidos.'
           },
           {
             q: 'O que é BAML e quando devo usá-lo em vez do Instructor?',
@@ -1497,11 +1497,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Qual ferramenta tem a melhor documentação?',
-            a: 'LangChain e Pydantic AI têm a documentação mais completa devido ao seu suporte corporativo. A documentação do BAML é incomumente boa para um projeto jovem porque a linguagem precisa ser ensinada. Instructor tem excelentes tutoriais e exemplos apesar de ser mantido pela comunidade. A documentação do Outlines é técnica mas abrangente. A do Marvin é concisa — consulte especificamente as páginas 3.x, já que material antigo do Marvin 2 ainda circula.'
+            a: 'A qualidade da documentação é subjetiva, então consulte a documentação atual de cada projeto. Na nossa leitura, LangChain e Pydantic AI têm documentação extensa, o que provavelmente reflete os recursos por trás deles. A documentação do BAML é sólida para um projeto jovem porque a linguagem precisa ser ensinada. Instructor tem bons tutoriais e exemplos. A documentação do Outlines é técnica mas abrangente. A do Marvin é concisa — consulte especificamente as páginas 3.x, já que material antigo do Marvin 2 ainda circula.'
           },
           {
             q: 'Preciso das sete ferramentas ou apenas de uma?',
-            a: 'Comece com uma. Desenvolvedores Python devem experimentar Instructor ou Pydantic AI. Times com modelos locais devem experimentar Outlines. Times poliglotas devem experimentar BAML. Usuários do LangChain devem experimentar with_structured_output(). Use PromptQuorum para validar a consistência entre todos os modelos. A maioria das equipes usa uma ferramenta mais PromptQuorum para testes.'
+            a: 'Comece com uma. Desenvolvedores Python devem experimentar Instructor ou Pydantic AI. Times com modelos locais devem experimentar Outlines. Times poliglotas devem experimentar BAML. Usuários do LangChain devem experimentar with_structured_output(). Use PromptQuorum (nosso próprio produto) para validar a consistência entre todos os modelos.'
           }
         ]
       },
@@ -1510,7 +1510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fontes',
         items: [
           '[Repositório GitHub do Instructor](https://github.com/567-labs/instructor) — Repositório oficial e docs para a biblioteca Instructor',
-          '[Repositório GitHub do Outlines](https://github.com/dottxt-ai/outlines) — Constrained decoding para conformidade garantida do esquema',
+          '[Repositório GitHub do Outlines](https://github.com/dottxt-ai/outlines) — Constrained decoding para geração restrita por esquema',
           '[Documentação do Pydantic AI](https://pydantic.dev/docs/ai/overview/) — Framework de agentes type-safe com structured output',
           '[Guia de structured output do LangChain](https://docs.langchain.com/oss/python/langchain/structured-output) — API unificada de structured output do LangChain',
           '[Documentação do BAML](https://docs.boundaryml.com/home) — Linguagem de prompts schema-first e schema-aligned parsing',
@@ -1528,12 +1528,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'Meilleurs outils Structured Output et JSON Mode 2026',
     metaDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin : quel outil choisir ? Tableau comparatif 2026 : licence, schéma, modèles locaux.',
     ogTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
-    ogDescription: '7 outils de structured output LLM comparés : Instructor pour retries, Outlines pour décodage contraint, BAML pour équipes polyglottes. Testez avec PromptQuorum.',
+    ogDescription: '7 outils de structured output LLM comparés : Instructor pour retries, Outlines pour décodage contraint, BAML pour équipes polyglottes. Testez avec PromptQuorum (notre propre produit).',
     twitterTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — quel outil de structured output choisir ? Comparaison 2026.',
-    intro: '**Sept outils dominent le Structured Output en 2026 : Instructor pour l\'extraction Pydantic, Outlines pour le décodage contraint, Pydantic AI pour les agents type-safe, BAML pour les fichiers de prompt schema-first, LangChain pour les APIs unifiées, Marvin pour l\'extraction par tâches et PromptQuorum pour les tests multi-modèles. Chacun résout un goulot d\'étranglement différent.**',
+    intro: '**Sept outils sont très utilisés ou méritent d\'être connus pour le Structured Output en 2026 : Instructor pour l\'extraction Pydantic, Outlines pour le décodage contraint, Pydantic AI pour les agents type-safe, BAML pour les fichiers de prompt schema-first, LangChain pour les APIs unifiées, Marvin pour l\'extraction par tâches et PromptQuorum (notre propre produit) pour les tests multi-modèles. Chacun résout un goulot d\'étranglement différent.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — versions des bibliothèques, licences, APIs et URLs de documentation revérifiées auprès des dépôts officiels, de PyPI et de la documentation des éditeurs',
     readTime: '12 min de lecture',
     educationalLevel: 'Advanced',
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Structured Output et conformité RGPD en France', anchor: '#contexte-francophone' },
       { label: 'Questions fréquentes', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**Choisissez selon l\'endroit où tournent vos modèles et les langages que livre votre équipe : Instructor et Pydantic AI pour les workflows Python avec retries et sécurité de type ; Outlines pour une conformité de schéma garantie sur les modèles locaux ; BAML quand un même schéma doit servir des services Python, TypeScript et Go ; LangChain pour les équipes déjà sur des chaînes ou des agents ; Marvin pour des appels extract et classify rapides ; PromptQuorum pour tester la cohérence sur GPT, Claude et Gemini avant la production.**',
+    leadAnswerBlock: '**Choisissez selon l\'endroit où tournent vos modèles et les langages que livre votre équipe : Instructor et Pydantic AI pour les workflows Python avec retries et sécurité de type ; Outlines pour le décodage contraint par schéma sur les modèles locaux ; BAML quand un même schéma doit servir des services Python, TypeScript et Go ; LangChain pour les équipes déjà sur des chaînes ou des agents ; Marvin pour des appels extract et classify rapides ; PromptQuorum (notre propre produit) pour tester la cohérence sur GPT, Claude et Gemini avant la production.**',
     quickFacts: [
       'Instructor est sous licence MIT et propose six implémentations officielles : Python, TypeScript, Ruby, Go, Elixir et Rust',
       'Outlines 1.x contraint les tokens au moment de la génération et pilote désormais aussi des APIs hébergées, pas seulement des backends locaux',
@@ -1568,17 +1568,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML compile un fichier de schéma .baml en clients typés et répare les sorties malformées au lieu de relancer',
       'LangChain 1.x lit le support natif du Structured Output de chaque fournisseur depuis son profil de modèle',
       'Marvin 3.x repose sur Pydantic AI et expose extract, cast, classify et generate',
-      'PromptQuorum teste le même prompt sur 25+ modèles pour la cohérence'
+      'PromptQuorum (notre propre produit) peut exécuter le même prompt sur de nombreux modèles pour comparer la cohérence'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs outils pour Structured Output et JSON Mode (2026)',
-      description: 'Comparaison de sept bibliothèques pour Structured Output LLM : Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin et PromptQuorum. Classées par application de schéma, support de langages, compatibilité des modèles locaux et licence.',
+      description: 'Comparaison de sept bibliothèques pour Structured Output LLM : Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin et PromptQuorum (notre propre produit). Comparées par application de schéma, support de langages, compatibilité des modèles locaux et licence.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/fr/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -1601,12 +1601,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Meilleurs Outils pour Structured Output LLM (2026)',
-      description: 'Sept bibliothèques principales pour appliquer la sortie structurée des modèles de langage.',
+      description: 'Sept bibliothèques et outils pour appliquer ou tester la sortie structurée des modèles de langage, dont PromptQuorum (notre propre produit).',
       numberOfItems: 7,
       inLanguage: 'fr',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Extraction basée sur Pydantic depuis n\'importe quel LLM, avec retries automatiques. Licence MIT, six implémentations de langage.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Bibliothèque de décodage contraint pour la conformité garantie du schéma sur les modèles locaux. Open source Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Bibliothèque de décodage contraint qui applique votre schéma pendant la génération sur les modèles locaux. Open source Apache 2.0.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Framework d\'agents type-safe avec trois modes de Structured Output et intégrations d\'exécution durable.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: 'Langage de prompts schema-first qui compile des clients typés et répare les sorties malformées par schema-aligned parsing.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'Couche API unifiée pour Structured Output sur OpenAI, Anthropic, Google et modèles locaux.' },
@@ -1621,17 +1621,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'Utilisez Instructor pour l\'extraction Python avec retries. Outlines pour la conformité de schéma garantie sur les modèles locaux. Pydantic AI pour les agents multi-tours type-safe. BAML quand des services Python, TypeScript et Go doivent partager un schéma. LangChain si vous êtes déjà dans cet écosystème. Marvin pour des appels extract et classify en une ligne. PromptQuorum pour tester la cohérence du Structured Output sur tous les modèles avant la production.'
+            text: 'Utilisez Instructor pour l\'extraction Python avec retries. Outlines pour le décodage contraint par schéma sur les modèles locaux. Pydantic AI pour les agents multi-tours type-safe. BAML quand des services Python, TypeScript et Go doivent partager un schéma. LangChain si vous êtes déjà dans cet écosystème. Marvin pour des appels extract et classify en une ligne. PromptQuorum (notre propre produit) pour tester la cohérence du Structured Output sur tous les modèles avant la production.'
           }
         ],
         items: [
-          '**Instructor** est le choix Python le plus populaire — schémas Pydantic, retries automatiques et portages officiels en TypeScript, Ruby, Go, Elixir et Rust',
-          '**Outlines** garantit la conformité de schéma sur les modèles locaux via le décodage contraint — aucun risque d\'hallucination structurelle',
+          '**Instructor** est une option Python très utilisée — schémas Pydantic, retries automatiques et portages officiels en TypeScript, Ruby, Go, Elixir et Rust',
+          '**Outlines** contraint la génération de tokens à votre schéma sur les modèles locaux, ce qui supprime la plupart des échecs d\'analyse structurelle ; les valeurs doivent toujours être validées, et la troncature ou les limites de la grammaire peuvent encore casser la sortie',
           '**Pydantic AI** ajoute la sécurité de type aux conversations d\'agents multi-tours et bascule du Structured Output natif vers les appels d\'outils puis le JSON par prompt',
           '**BAML** place le schéma et le prompt dans un fichier .baml versionné et génère des clients typés — un seul contrat pour les équipes polyglottes',
           '**with_structured_output() de LangChain** unifie le Structured Output sur OpenAI, Anthropic et Google',
           '**Marvin 3.x** s\'appuie sur Pydantic AI et réduit l\'extraction à un seul appel extract ou classify',
-          '**PromptQuorum** teste la cohérence du Structured Output sur tous les modèles avant le déploiement en production'
+          '**PromptQuorum** (notre propre produit) teste la cohérence du Structured Output sur tous les modèles avant le déploiement en production'
         ]
       },
       whichProblem: {
@@ -1641,22 +1641,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: 'Les outils de sortie structurée résolvent trois problèmes distincts — imposer un schéma dès la génération, valider ensuite le résultat, et réparer une sortie malformée — et la plupart des stacks n\'ont besoin que des deux premiers.' },
           { type: 'in-plain-terms', text: 'Ne choisissez pas sur une liste de fonctionnalités. Demandez quelle panne vous rencontrez vraiment : le modèle ignore votre format, ou il le respecte mais les valeurs sont fausses, ou il renvoie un JSON qui ne se parse même pas. Chaque cas appelle une réponse différente.' },
         ],
-        content: '**Le Structured Output nécessite de résoudre trois problèmes interdépendants : définition de schéma, application via l\'API et validation.** Différents outils abordent ces problèmes différemment. Instructor gère les trois en Python avec des retries. Outlines élimine l\'étape de validation via le décodage contraint. Pydantic AI ajoute la sécurité de type pour les agents. BAML déplace le schéma dans un fichier compilé et répare les sorties imparfaites. LangChain enveloppe les APIs des fournisseurs. Marvin priorise la rapidité du développeur. PromptQuorum valide la cohérence sur tous les modèles.',
+        content: '**Le Structured Output nécessite de résoudre trois problèmes interdépendants : définition de schéma, application via l\'API et validation.** Différents outils abordent ces problèmes différemment. Instructor gère les trois en Python avec des retries. Outlines réduit le besoin d\'une étape de validation séparée via le décodage contraint. Pydantic AI ajoute la sécurité de type pour les agents. BAML déplace le schéma dans un fichier compilé et répare les sorties imparfaites. LangChain enveloppe les APIs des fournisseurs. Marvin priorise la rapidité du développeur. PromptQuorum valide la cohérence sur tous les modèles.',
         columns: ['Problème', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { 'Problème': 'Définir le schéma', 'Instructor': 'Modèles Pydantic', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Modèles Pydantic', 'BAML': 'Fichiers de classe .baml', 'LangChain': 'Définitions d\'outils', 'Marvin': 'Indices de type Python' },
           { 'Problème': 'Appliquer sur l\'appel API', 'Instructor': 'Retry + validation', 'Outlines': 'Contrainte au niveau token', 'Pydantic AI': 'Natif / outil / prompt', 'BAML': 'Prompt généré + parseur', 'LangChain': 'Mode JSON du fournisseur', 'Marvin': 'Types de sortie Pydantic AI' },
-          { 'Problème': 'Valider la réponse', 'Instructor': 'Automatique', 'Outlines': 'Garanti à la génération', 'Pydantic AI': 'Vérifié par type', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manuel', 'Marvin': 'Automatique' }
+          { 'Problème': 'Valider la réponse', 'Instructor': 'Automatique', 'Outlines': 'Appliqué à la génération', 'Pydantic AI': 'Vérifié par type', 'BAML': 'Schema-aligned parsing', 'LangChain': 'Manuel', 'Marvin': 'Automatique' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor : extraction Pydantic',
-        content: '**Instructor est la bibliothèque de Structured Output la plus répandue. Elle enveloppe toute API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — et retourne des modèles Pydantic validés plutôt que du texte brut.** Instructor gère les retries automatiquement en cas d\'échec de validation, ce qui le rend prêt pour la production sans gestion d\'erreurs supplémentaire.',
+        content: '**Instructor est une bibliothèque de Structured Output très utilisée. Elle enveloppe toute API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — et retourne des modèles Pydantic validés plutôt que du texte brut.** Instructor réessaie automatiquement en cas d\'échec de validation ; vous devez tout de même gérer le cas où les tentatives sont épuisées.',
         items: [
           'Fonctionne avec tous les grands fournisseurs (OpenAI, Anthropic, Google, Groq, Mistral) et les modèles locaux via Ollama ou vLLM',
           'Schémas Pydantic v2 : indices de type, règles de validation, descriptions docstring intégrées au schéma',
-          'Retry automatique avec backoff en cas d\'échec de validation — aucune gestion d\'erreur manuelle requise',
+          'Retries automatiques en cas d\'échec de validation — vous devez tout de même gérer les tentatives épuisées',
           'Six implémentations officielles : Python, TypeScript, Ruby, Go, Elixir et Rust',
           'Open source sous licence MIT, activement maintenu, actuellement en 1.x',
           'Tarification : gratuit (aucun coût supplémentaire au-delà des appels API LLM)'
@@ -1667,13 +1667,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines : décodage contraint',
-        content: '**Outlines applique la conformité du schéma au moment de la génération de tokens via le décodage contraint. Au lieu de générer des tokens puis de valider, Outlines limite les tokens valides à chaque étape pour correspondre à votre schéma.** Cela garantit que la sortie se parse contre votre schéma, sans risque d\'hallucination structurelle — c\'est précisément ce qui en fait le choix par défaut pour les modèles locaux.',
+        content: '**Outlines applique la conformité du schéma au moment de la génération de tokens via le décodage contraint. Au lieu de générer des tokens puis de valider, Outlines limite les tokens valides à chaque étape pour correspondre à votre schéma.** Cela supprime la plupart des échecs d\'analyse structurelle, même si les valeurs doivent toujours être validées et si la troncature ou les limites de la grammaire peuvent encore casser la sortie. C\'est pourquoi c\'est un choix courant pour les modèles locaux.',
         items: [
           'Backends locaux : transformers, llama.cpp, MLX et tout modèle Hugging Face',
           'Backends serveur : vLLM, Ollama et NVIDIA NIM',
           'Les APIs hébergées sont aussi supportées (OpenAI, Gemini) : le même code passe du local au cloud',
           'Schémas sous forme de modèles Pydantic, JSON Schema, motifs regex, choix littéraux ou grammaires hors contexte',
-          'Conformité structurelle garantie — aucune validation post-génération ni retry nécessaire',
+          'Conformité structurelle solide à la génération — validez quand même les valeurs et surveillez la troncature et les limites de la grammaire',
           'Open source Apache 2.0, actuellement en 1.x, avec un cœur en Rust (outlines-core) pour la performance'
         ]
       },
@@ -1733,9 +1733,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum : tests multi-modèles',
-        content: '**PromptQuorum n\'est pas une bibliothèque de Structured Output en soi, mais une plateforme de test pour valider la cohérence du Structured Output entre les modèles.** Exécutez le même prompt simultanément contre GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon et 20+ autres modèles. Mesurez la conformité du schéma, la latence et le coût par modèle.',
+        content: '**PromptQuorum est notre propre produit et n\'est pas une bibliothèque de Structured Output en soi, mais une plateforme de test pour valider la cohérence du Structured Output entre les modèles.** Exécutez le même prompt simultanément contre GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon et de nombreux autres modèles. Mesurez la conformité du schéma, la latence et le coût par modèle.',
         items: [
-          'Dispatch multi-modèles en un seul appel API — tester un prompt contre 25+ modèles',
+          'Dispatch multi-modèles en un seul appel API — tester un prompt contre de nombreux modèles',
           'Métriques de conformité Structured Output — taux de réussite, latence, coût par modèle',
           'Identifier les modèles qui hallucinent sur votre schéma — éviter le déploiement sur des modèles peu fiables',
           'Mode consensus — trouver les accords entre des exécutions de modèles indépendantes',
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Outil': '[BAML](https://boundaryml.com)', 'Meilleur usage': 'Équipes polyglottes, modèles instables', 'Format de schéma': 'Fichiers de classe .baml', 'Langage': 'Python, TS + 6 via OpenAPI', 'Modèles locaux': 'Oui (compatible OpenAI)', 'Licence': 'Apache 2.0, observabilité payante', "Courbe d'apprentissage": 'Moyenne' },
           { 'Outil': '[LangChain](https://langchain.com)', 'Meilleur usage': 'Chaînes + agents', 'Format de schéma': "Définitions d'outils", 'Langage': 'Python, JS', 'Modèles locaux': 'Oui', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Moyenne' },
           { 'Outil': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Meilleur usage': 'Extract et classify rapides', 'Format de schéma': 'Indices de type', 'Langage': 'Python', 'Modèles locaux': 'Oui', 'Licence': 'Apache 2.0, gratuit', "Courbe d'apprentissage": 'Très faible' },
-          { 'Outil': '[PromptQuorum](https://www.promptquorum.com)', 'Meilleur usage': 'Tests multi-modèles', 'Format de schéma': 'Agnostique API', 'Langage': 'API-first', 'Modèles locaux': 'Via proxy OpenAI', 'Licence': 'Niveau gratuit + entreprise', "Courbe d'apprentissage": 'Faible' }
+          { 'Outil': '[PromptQuorum](https://www.promptquorum.com) (notre propre produit)', 'Meilleur usage': 'Tests multi-modèles', 'Format de schéma': 'Agnostique API', 'Langage': 'API-first', 'Modèles locaux': 'Via proxy OpenAI', 'Licence': 'Niveau gratuit + entreprise', "Courbe d'apprentissage": 'Faible' }
         ]
       },
       decision: {
@@ -1763,7 +1763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Commencez par répondre à trois questions : (1) Dans quels langages sont écrits les services qui appellent réellement le modèle ? (2) Avez-vous besoin d\'un support de modèles locaux ? (3) Quelle est votre complexité de validation ?',
         items: [
           '**Utilisez Instructor si :** vous construisez des APIs Python et avez besoin de retries automatiques en cas d\'échec de validation. Meilleur choix polyvalent.',
-          '**Utilisez Outlines si :** vous déployez des modèles locaux (llama.cpp, vLLM, MLX) et voulez une conformité de schéma garantie au moment de la génération.',
+          '**Utilisez Outlines si :** vous déployez des modèles locaux (llama.cpp, vLLM, MLX) et voulez appliquer le schéma au moment de la génération.',
           '**Utilisez Pydantic AI si :** vous construisez des workflows d\'agents multi-tours avec sécurité de type sur toutes les étapes, ou avez besoin d\'exécution durable.',
           '**Utilisez BAML si :** des services Python, TypeScript et Go doivent partager un schéma, ou si votre modèle n\'a pas de mode JSON natif fiable.',
           '**Utilisez LangChain si :** vous utilisez déjà LangChain ou LangGraph — with_structured_output() est l\'ajout le plus simple.',
@@ -1789,27 +1789,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Traiter tout mode JSON comme une garantie de schéma',
             problem: 'Le mode JSON simple (response_format json_object, contrôle JSON Anthropic) garantit seulement que la réponse est du JSON valide, pas qu\'elle respecte vos champs et vos types. Les modes de schéma strict vont plus loin et garantissent la forme, mais aucun ne garantit que les valeurs sont justes : un objet bien formé peut toujours contenir un prix inventé ou une date hallucinée.',
-            fix: 'Superposez une validation dans tous les cas : Instructor, Outlines, Pydantic AI ou BAML. Les règles métier appartiennent aux validateurs Pydantic, pas au seul schéma. Tester avec PromptQuorum pour détecter les échecs de conformité par modèle.'
+            fix: 'Superposez une validation dans tous les cas : Instructor, Outlines, Pydantic AI ou BAML. Les règles métier appartiennent aux validateurs Pydantic, pas au seul schéma. Tester avec PromptQuorum (notre propre produit) pour détecter les échecs de conformité par modèle.'
           },
           {
             mistake: 'Concevoir des schémas trop stricts',
             problem: 'Les schémas trop contraints (petites listes d\'énumération, motifs regex très spécifiques) font échouer fréquemment la validation des LLM. Un nombre élevé de retries gaspille des tokens et de l\'argent.',
-            fix: 'Utiliser PromptQuorum pour tester la rigueur du schéma sur les modèles. Assouplir les contraintes pour atteindre 95%+ de conformité. Utiliser des champs optionnels plutôt qu\'obligatoires quand c\'est possible.'
+            fix: 'Utiliser PromptQuorum (notre propre produit) pour tester la rigueur du schéma sur les modèles. Assouplir les contraintes jusqu\'à atteindre votre taux de conformité cible. Utiliser des champs optionnels plutôt qu\'obligatoires quand c\'est possible.'
           },
           {
             mistake: 'Ne pas tester les différences entre modèles locaux et API',
             problem: 'Outlines sur llama.cpp se comporte différemment qu\'Instructor sur GPT-6 Astra. Les taux de conformité varient selon le modèle. Construire seulement pour un modèle d\'API de pointe puis déployer sur un petit modèle local cause des échecs en production.',
-            fix: 'Tester tous les backends de modèles prévus tôt. Utiliser PromptQuorum pour exécuter le même prompt sur des modèles locaux (vLLM, Ollama) et hébergés (OpenAI, Anthropic, Google).'
+            fix: 'Tester tous les backends de modèles prévus tôt. Utiliser PromptQuorum (notre propre produit) pour exécuter le même prompt sur des modèles locaux (vLLM, Ollama) et hébergés (OpenAI, Anthropic, Google).'
           },
           {
             mistake: 'Ignorer l\'impact sur la latence et le coût en tokens',
             problem: 'Le Structured Output avec retries coûte plus de tokens. Instructor relance en cas d\'échec. Le décodage contraint d\'Outlines ajoute un surcoût par token par rapport à la génération libre. Ne pas mesurer le coût par modèle.',
-            fix: 'Utiliser le suivi des coûts PromptQuorum. Comparer la latence entre les modèles. Pour les workflows sensibles au budget, préférer Outlines ou BAML (pas de boucle de retry). Pour la précision sur des schémas souples, accepter le coût de retry d\'Instructor.'
+            fix: 'Utiliser le suivi des coûts PromptQuorum (notre propre produit). Comparer la latence entre les modèles. Pour les workflows sensibles au budget, préférer Outlines ou BAML (pas de boucle de retry). Pour la précision sur des schémas souples, accepter le coût de retry d\'Instructor.'
           },
           {
             mistake: 'Mélanger les méthodes de validation (aucune cohérence)',
             problem: 'Certaines requêtes utilisent Instructor, d\'autres l\'analyse JSON brute. Certains modèles validés, d\'autres non. Cela conduit à des erreurs incohérentes en production.',
-            fix: 'Standardiser sur une approche de validation par base de code. Toutes les requêtes utilisent Instructor, ou toutes utilisent Outlines. La cohérence réduit le temps de débogage par 10.'
+            fix: 'Standardiser sur une approche de validation par base de code. Toutes les requêtes utilisent Instructor, ou toutes utilisent Outlines. La cohérence facilite le débogage.'
           },
           {
             mistake: 'Copier des tutoriels écrits pour une API remplacée depuis',
@@ -1852,11 +1852,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Quel outil est le meilleur pour les développeurs Python ?',
-            a: 'Instructor est le choix Python le plus populaire. Il utilise des modèles Pydantic pour définir les schémas, gère automatiquement les retries et la validation, et supporte toutes les grandes APIs LLM ainsi que les modèles locaux via Ollama ou vLLM. Pydantic AI convient mieux si vous voulez aussi des conversations d\'agents multi-tours type-safe, et Marvin est le plus rapide si un simple appel extract ou classify suffit.'
+            a: 'Instructor est une option Python très utilisée. Il utilise des modèles Pydantic pour définir les schémas, gère automatiquement les retries et la validation, et supporte toutes les grandes APIs LLM ainsi que les modèles locaux via Ollama ou vLLM. Pydantic AI convient mieux si vous voulez aussi des conversations d\'agents multi-tours type-safe, et Marvin est le plus rapide si un simple appel extract ou classify suffit.'
           },
           {
             q: 'Puis-je utiliser Structured Output avec des modèles locaux comme Llama ?',
-            a: 'Oui. Outlines se spécialise dans le décodage contraint des modèles locaux — il fonctionne avec transformers, llama.cpp, MLX, vLLM et Ollama, et garantit au moment de la génération que la sortie se parse contre votre schéma. Instructor et Pydantic AI supportent aussi Ollama et vLLM si vous les exécutez comme API, et BAML fonctionne contre tout endpoint compatible OpenAI.'
+            a: 'Oui. Outlines se spécialise dans le décodage contraint des modèles locaux — il fonctionne avec transformers, llama.cpp, MLX, vLLM et Ollama, et contraint la sortie à votre schéma au moment de la génération, ce qui supprime la plupart des échecs d\'analyse. Instructor et Pydantic AI supportent aussi Ollama et vLLM si vous les exécutez comme API, et BAML fonctionne contre tout endpoint compatible OpenAI.'
           },
           {
             q: 'Quelle est la différence entre Instructor et Marvin ?',
@@ -1868,11 +1868,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Comment tester si Structured Output est fiable ?',
-            a: 'Utilisez PromptQuorum pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles diffèrent — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — et les petits modèles locaux davantage encore. Testez avant de déployer en production et validez localement avec Instructor ou Pydantic.'
+            a: 'Utilisez PromptQuorum (notre propre produit) pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles diffèrent — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — et les petits modèles locaux davantage encore. Testez avant de déployer en production et validez localement avec Instructor ou Pydantic.'
           },
           {
             q: 'Qu\'entend-on par "décodage contraint" ?',
-            a: 'Le décodage contraint limite la génération de tokens aux seules valeurs valides selon votre schéma. Outlines le fait en calculant l\'ensemble des tokens suivants valides à chaque étape. Cela garantit que la sortie se parse contre votre schéma sans validation post-génération ni retries, ce qui est plus fiable que le mode JSON simple de l\'API. Il contraint la structure, pas la vérité : les champs seront corrects, les valeurs restent à vérifier.'
+            a: 'Le décodage contraint limite la génération de tokens aux seules valeurs valides selon votre schéma. Outlines le fait en calculant l\'ensemble des tokens suivants valides à chaque étape. Cela supprime la plupart des échecs d\'analyse structurelle sans retries après la génération, ce qui est plus fiable que le mode JSON simple de l\'API, même si la troncature ou les limites de la grammaire peuvent encore casser la sortie. Il contraint la structure, pas la vérité : les valeurs restent à vérifier.'
           },
           {
             q: 'Qu\'est-ce que BAML et quand l\'utiliser plutôt qu\'Instructor ?',
@@ -1884,11 +1884,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Quel outil a la meilleure documentation ?',
-            a: 'LangChain et Pydantic AI ont la documentation la plus complète grâce à leurs ressources d\'entreprise. Celle de BAML est étonnamment bonne pour un projet jeune, parce que le langage doit être enseigné. Instructor a d\'excellents tutoriels malgré la maintenance communautaire. La documentation Outlines est technique mais approfondie. Celle de Marvin est concise — consultez spécifiquement les pages 3.x, car d\'anciens contenus Marvin 2 circulent encore.'
+            a: 'La qualité d\'une documentation est subjective : consultez la documentation actuelle de chaque projet. Selon notre lecture, LangChain et Pydantic AI ont une documentation étendue, qui reflète probablement les ressources derrière eux. Celle de BAML est solide pour un projet jeune, parce que le langage doit être enseigné. Instructor a de bons tutoriels et exemples. La documentation Outlines est technique mais approfondie. Celle de Marvin est concise — consultez spécifiquement les pages 3.x, car d\'anciens contenus Marvin 2 circulent encore.'
           },
           {
             q: 'Ai-je besoin des sept outils ou juste d\'un ?',
-            a: 'Commencez par un. Les développeurs Python devraient essayer Instructor ou Pydantic AI. Les équipes avec modèles locaux devraient essayer Outlines. Les équipes polyglottes devraient essayer BAML. Les utilisateurs de LangChain devraient essayer with_structured_output(). Utilisez PromptQuorum pour valider la cohérence sur tous les modèles.'
+            a: 'Commencez par un. Les développeurs Python devraient essayer Instructor ou Pydantic AI. Les équipes avec modèles locaux devraient essayer Outlines. Les équipes polyglottes devraient essayer BAML. Les utilisateurs de LangChain devraient essayer with_structured_output(). Utilisez PromptQuorum (notre propre produit) pour valider la cohérence sur tous les modèles.'
           }
         ]
       },
@@ -1897,7 +1897,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Dépôt GitHub Instructor](https://github.com/567-labs/instructor) — Dépôt officiel et documentation de la bibliothèque Instructor',
-          '[Dépôt GitHub Outlines](https://github.com/dottxt-ai/outlines) — Décodage contraint pour la conformité de schéma garantie',
+          '[Dépôt GitHub Outlines](https://github.com/dottxt-ai/outlines) — Décodage contraint pour une génération contrainte par schéma',
           '[Documentation Pydantic AI](https://pydantic.dev/docs/ai/overview/) — Framework d\'agents type-safe avec Structured Output',
           '[Guide Structured Output LangChain](https://docs.langchain.com/oss/python/langchain/structured-output) — API Structured Output unifiée LangChain',
           '[Documentation BAML](https://docs.boundaryml.com/home) — Langage de prompts schema-first et schema-aligned parsing',
@@ -1912,14 +1912,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-ja.webp',
     title: 'Structured Output対応ツール2026：用途別ランキング',
     seoTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
-    metaDescription: '構造化出力ツール7選を比較：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin、PromptQuorum。ライセンス・スキーマ形式・ローカルモデル対応。',
+    metaDescription: '構造化出力ツール7選を比較：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin、PromptQuorum（当社の製品）。ライセンス・スキーマ形式・ローカルモデル対応。',
     ogTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
-    ogDescription: 'LLM構造化出力ツール7選：Instructorのリトライ、Outlinesの制約デコード、BAMLの多言語対応。PromptQuorumで一貫性テスト。',
+    ogDescription: 'LLM構造化出力ツール7選：Instructorのリトライ、Outlinesの制約デコード、BAMLの多言語対応。PromptQuorum（当社の製品）で一貫性テスト。',
     twitterTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — 構造化出力ツールの選び方。2026年比較ガイド。',
-    intro: '**Structured Output 2026年の主流7つのツール：Instructor（Pydantic抽出）、Outlines（制約付きデコーディング）、Pydantic AI（型安全エージェント）、BAML（スキーマファーストのプロンプトファイル）、LangChain（統一API）、Marvin（タスクベース抽出）、PromptQuorum（クロスモデルテスト）。各ツールは異なるボトルネックを解きます。**',
+    intro: '**Structured Output 2026年に広く使われている、または知っておきたい7つのツール：Instructor（Pydantic抽出）、Outlines（制約付きデコーディング）、Pydantic AI（型安全エージェント）、BAML（スキーマファーストのプロンプトファイル）、LangChain（統一API）、Marvin（タスクベース抽出）、PromptQuorum（当社の製品）（クロスモデルテスト）。各ツールは異なるボトルネックを解きます。**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — ライブラリのバージョン、ライセンス、API、ドキュメントURLを公式リポジトリ・PyPI・ベンダードキュメントに対して再検証済み',
     readTime: '12分で読める',
     educationalLevel: 'Advanced',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '日本企業向けのStructured Output導入ガイド', anchor: '#nihon-kigyo' },
       { label: 'よくある質問', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**モデルをどこで動かすか、そしてチームがどの言語で実装するかで選びます：リトライと型安全性が必要なPython APIワークフローにはInstructorとPydantic AI、ローカルモデルでスキーマ準拠を保証したいならOutlines、Python・TypeScript・Goのサービスが同じスキーマを共有するならBAML、すでにチェーンやエージェントを使っているチームにはLangChain、extractやclassifyを一行で済ませたいならMarvin、本番投入前にGPT・Claude・Geminiの一貫性を検証するならPromptQuorumです。**',
+    leadAnswerBlock: '**モデルをどこで動かすか、そしてチームがどの言語で実装するかで選びます：リトライと型安全性が必要なPython APIワークフローにはInstructorとPydantic AI、ローカルモデルでスキーマに制約したデコードを行いたいならOutlines、Python・TypeScript・Goのサービスが同じスキーマを共有するならBAML、すでにチェーンやエージェントを使っているチームにはLangChain、extractやclassifyを一行で済ませたいならMarvin、本番投入前にGPT・Claude・Geminiの一貫性を検証するならPromptQuorum（当社の製品）です。**',
     quickFacts: [
       'InstructorはMITライセンスで、Python・TypeScript・Ruby・Go・Elixir・Rustの6つの公式実装を提供',
       'Outlines 1.xは生成時にトークンを制約し、現在はローカルバックエンドだけでなくホスト型APIも扱える',
@@ -1954,17 +1954,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAMLは1つの.bamlスキーマファイルから型付きクライアントを生成し、壊れた出力をリトライせずに修復する',
       'LangChain 1.xは各Providerのネイティブ構造化出力対応をモデルプロファイルから読み取る',
       'Marvin 3.xはPydantic AIの上に構築され、extract・cast・classify・generateを提供',
-      'PromptQuorumは同じプロンプトを25以上のモデルでテストし一貫性を測定'
+      'PromptQuorum（当社の製品）は同じプロンプトを多数のモデルで実行し一貫性を比較できます'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Structured Output対応ツール2026：用途別ランキング',
-      description: '7つのLLM Structured Outputライブラリの比較：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin、PromptQuorum。スキーマ強制、言語サポート、ローカルモデル互換性、ライセンスでランク付け。',
+      description: '7つのLLM Structured Outputライブラリの比較：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin、PromptQuorum（当社の製品）。スキーマ強制、言語サポート、ローカルモデル互換性、ライセンスで比較。',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/ja/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -1991,12 +1991,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'LLM Structured Outputのベストツール（2026年）',
-      description: '言語モデルからの構造化出力を強制する7つの主要ライブラリ。',
+      description: '言語モデルからの構造化出力を強制・検証する7つのライブラリとツール。PromptQuorum（当社の製品）を含みます。',
       numberOfItems: 7,
       inLanguage: 'ja',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'あらゆるLLMからのPydanticベース抽出を自動リトライ付きで実現。MITライセンス、6言語の公式実装。' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'ローカルモデルのスキーマ準拠を保証する制約付きデコードライブラリ。Apache 2.0オープンソース。' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'ローカルモデルで生成時にスキーマを強制する制約付きデコードライブラリ。Apache 2.0オープンソース。' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: '3つの構造化出力モードと永続実行連携を備えた型安全なエージェントフレームワーク。' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: '型付きクライアントをコンパイルし、schema-aligned parsingで壊れたモデル出力を修復するスキーマファーストのプロンプト言語。' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'OpenAI、Anthropic、Google、ローカルモデルの統一API層。' },
@@ -2011,17 +2011,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'PythonのAPIにはInstructorをリトライ付きで使用してください。ローカルモデルのスキーマ準拠保証にはOutlinesを。型安全なマルチターンエージェントにはPydantic AIを。Python・TypeScript・Goのサービスが1つのスキーマを共有する場合はBAMLを。LangChainはすでにそのエコシステムにいる場合に。Marvinはextractやclassifyを一行で済ませたい場合に。PromptQuorumは本番前に全モデルでStructured Outputの一貫性をテストするために使用してください。'
+            text: 'PythonのAPIにはInstructorをリトライ付きで使用してください。ローカルモデルでのスキーマ制約付きデコードにはOutlinesを。型安全なマルチターンエージェントにはPydantic AIを。Python・TypeScript・Goのサービスが1つのスキーマを共有する場合はBAMLを。LangChainはすでにそのエコシステムにいる場合に。Marvinはextractやclassifyを一行で済ませたい場合に。PromptQuorum（当社の製品）は本番前に全モデルでStructured Outputの一貫性をテストするために使用してください。'
           }
         ],
         items: [
-          '**Instructor** が最も人気のあるPython選択肢 — Pydanticスキーマ、自動リトライ、TypeScript・Ruby・Go・Elixir・Rustの公式移植版',
-          '**Outlines** はConstrained Decodingによりローカルモデルのスキーマ準拠を保証 — 構造面の幻覚リスクはゼロ',
+          '**Instructor** は広く使われているPython選択肢 — Pydanticスキーマ、自動リトライ、TypeScript・Ruby・Go・Elixir・Rustの公式移植版',
+          '**Outlines** はローカルモデルでトークン生成をスキーマに制約し、構造面のパース失敗の大半を取り除きます。ただし値の検証は依然必要で、出力の途中切れや文法の制限で出力が壊れる可能性は残ります',
           '**Pydantic AI** はマルチターンエージェント会話に型安全性を追加し、ネイティブ構造化出力→ツール呼び出し→プロンプトJSONの順にフォールバック',
           '**BAML** はスキーマとプロンプトをバージョン管理された.bamlファイルに置き、型付きクライアントを生成 — 多言語チームが1つの契約を共有できる',
           '**LangChainのwith_structured_output()** はOpenAI、Anthropic、Google APIにわたるStructured Outputを統一',
           '**Marvin 3.x** はPydantic AIの上に構築され、抽出をextractまたはclassifyの1回の呼び出しに短縮',
-          '**PromptQuorum** は本番デプロイ前に全モデルのStructured Output一貫性をテスト'
+          '**PromptQuorum**（当社の製品） は本番デプロイ前に全モデルのStructured Output一貫性をテスト'
         ]
       },
       whichProblem: {
@@ -2031,22 +2031,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: '構造化出力のツールは、生成時にスキーマを強制する、生成後に結果を検証する、壊れた出力を修復するという三つの異なる問題を解決しますが、多くの構成で必要になるのは最初の二つだけです。' },
           { type: 'in-plain-terms', text: '機能一覧で選ばないでください。実際に起きている不具合はどれかを問うべきです。形式を無視されるのか、形式は守られるが値が誤っているのか、そもそもパースできない JSON が返るのか。それぞれ対処法は異なります。' },
         ],
-        content: '**Structured Outputには3つの相互依存する問題の解決が必要です：スキーマ定義、API強制、バリデーション。** 各ツールは異なるアプローチで解決します。InstructorはPythonでリトライを用いて3つすべてを処理。OutlinesはConstrained Decodingでバリデーションステップを排除。Pydantic AIはエージェントに型安全性を追加。BAMLはスキーマをコンパイル可能なファイルに移し、不完全な出力を修復。LangChainはProvider APIをラップ。Marvinは開発速度を優先。PromptQuorumは全モデルの一貫性を検証します。',
+        content: '**Structured Outputには3つの相互依存する問題の解決が必要です：スキーマ定義、API強制、バリデーション。** 各ツールは異なるアプローチで解決します。InstructorはPythonでリトライを用いて3つすべてを処理。OutlinesはConstrained Decodingで別途のバリデーションステップの必要性を減らす。Pydantic AIはエージェントに型安全性を追加。BAMLはスキーマをコンパイル可能なファイルに移し、不完全な出力を修復。LangChainはProvider APIをラップ。Marvinは開発速度を優先。PromptQuorumは全モデルの一貫性を検証します。',
         columns: ['問題', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { '問題': 'スキーマ定義', 'Instructor': 'Pydanticモデル', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Pydanticモデル', 'BAML': '.bamlクラスファイル', 'LangChain': 'ツール定義', 'Marvin': 'Pythonの型ヒント' },
           { '問題': 'API呼び出し時の強制', 'Instructor': 'リトライ + バリデーション', 'Outlines': 'トークンレベル制約', 'Pydantic AI': 'ネイティブ / ツール / プロンプト', 'BAML': '生成プロンプト + パーサー', 'LangChain': 'Provider JSONモード', 'Marvin': 'Pydantic AIの出力型' },
-          { '問題': 'レスポンス検証', 'Instructor': '自動', 'Outlines': '生成時に保証', 'Pydantic AI': '型検証済み', 'BAML': 'Schema-aligned parsing', 'LangChain': '手動', 'Marvin': '自動' }
+          { '問題': 'レスポンス検証', 'Instructor': '自動', 'Outlines': '生成時に強制', 'Pydantic AI': '型検証済み', 'BAML': 'Schema-aligned parsing', 'LangChain': '手動', 'Marvin': '自動' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor：Pydantic抽出',
-        content: '**InstructorはStructured Outputライブラリとして最も広く採用されています。あらゆるLLM API — OpenAI GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — をラップし、生テキストではなく検証済みPydanticモデルを返します。** バリデーション失敗時のリトライを自動処理し、追加のエラー処理なしで本番対応です。',
+        content: '**InstructorはStructured Outputライブラリとして広く使われています。あらゆるLLM API — OpenAI GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — をラップし、生テキストではなく検証済みPydanticモデルを返します。** Instructorはバリデーション失敗時に自動でリトライしますが、リトライを使い切った場合の処理は別途必要です。',
         items: [
           '主要Providerすべてに対応（OpenAI、Anthropic、Google、Groq、Mistral）、OllamaやvLLM経由のローカルモデルにも対応',
           'Pydantic v2スキーマ：型ヒント、バリデーションルール、スキーマに埋め込まれたdocstring説明',
-          'バリデーション失敗時のバックオフ付き自動リトライ — 手動エラー処理不要',
+          'バリデーション失敗時の自動リトライ — リトライを使い切った場合の処理は別途必要',
           '6つの公式実装：Python、TypeScript、Ruby、Go、Elixir、Rust',
           'MITライセンスのオープンソース、活発にメンテナンス中、現在は1.x系',
           '料金：無料（LLM APIコスト以外の追加コストなし）'
@@ -2057,13 +2057,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines：Constrained Decoding',
-        content: '**OutlinesはConstrained Decodingによりトークン生成時にスキーマ準拠を強制します。トークンを生成してから検証するのではなく、各ステップでスキーマに一致する有効なトークンのみに制限します。** 出力がスキーマに対して必ずパースできることが保証され、構造面の幻覚リスクはゼロです。これがローカルモデルでの定番選択となっている理由です。',
+        content: '**OutlinesはConstrained Decodingによりトークン生成時にスキーマ準拠を強制します。トークンを生成してから検証するのではなく、各ステップでスキーマに一致する有効なトークンのみに制限します。** 構造面のパース失敗の大半を取り除けますが、値の検証は依然必要で、出力の途中切れや文法の制限で出力が壊れる可能性は残ります。これがローカルモデルでよく選ばれる理由です。',
         items: [
           'ローカルバックエンド：transformers、llama.cpp、MLX、あらゆるHugging Faceモデル',
           'サーバーバックエンド：vLLM、Ollama、NVIDIA NIM',
           'ホスト型API（OpenAI、Gemini）にも対応 — 同じコードでローカルとクラウドを行き来できる',
           'スキーマはPydanticモデル、JSON Schema、正規表現パターン、リテラル選択、文脈自由文法で指定',
-          '構造面の準拠を保証 — 後処理バリデーションやリトライ不要',
+          '生成時に構造面の準拠を強く担保 — 値の検証は引き続き必要で、途中切れや文法の制限に注意',
           'Apache 2.0オープンソース、現在は1.x系、高速化のためのRustコア（outlines-core）を採用'
         ]
       },
@@ -2123,9 +2123,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum：クロスモデルテスト',
-        content: '**PromptQuorum自体はStructured Outputライブラリではなく、モデル間のStructured Output一貫性を検証するためのテストプラットフォームです。** GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、20以上の他のモデルに対して同じプロンプトを同時に実行します。モデルごとのスキーマ準拠率、レイテンシ、コストを測定します。',
+        content: '**PromptQuorumは当社の製品であり、それ自体はStructured Outputライブラリではなく、モデル間のStructured Output一貫性を検証するためのテストプラットフォームです。** GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、多数の他のモデルに対して同じプロンプトを同時に実行します。モデルごとのスキーマ準拠率、レイテンシ、コストを測定します。',
         items: [
-          '単一API呼び出しでマルチモデルディスパッチ — 25以上のモデルに対してプロンプトをテスト',
+          '単一API呼び出しでマルチモデルディスパッチ — 多数のモデルに対してプロンプトをテスト',
           'Structured Output準拠メトリクス — 合格率、レイテンシ、モデルごとのコスト',
           'スキーマで幻覚するモデルを特定 — 信頼性の低いモデルへのデプロイを回避',
           'コンセンサスモード — 独立したモデル実行間の一致を発見',
@@ -2136,15 +2136,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: '並列比較',
-        columns: ['ツール', '最適用途', 'スキーマ形式', '言語', 'ローカルモデル', 'ライセンス', '学習コスト'],
+        columns: ['ツール', '最適用途', 'スキーマ形式', '言語', 'ローカルモデル', 'ライセンス', '学習コスト（編集部の評価）'],
         rows: [
-          { 'ツール': '[Instructor](https://python.useinstructor.com)', '最適用途': 'Python API + リトライ', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python, TS, Ruby, Go, Elixir, Rust', 'ローカルモデル': 'あり（Ollama、vLLM）', 'ライセンス': 'MIT、無料', '学習コスト': '低' },
-          { 'ツール': '[Outlines](https://dottxt.ai)', '最適用途': 'ローカルモデルデプロイ', 'スキーマ形式': 'Pydantic, JSON Schema, 正規表現, CFG', '言語': 'Python', 'ローカルモデル': 'あり（ネイティブ）', 'ライセンス': 'Apache 2.0、無料', '学習コスト': '中' },
-          { 'ツール': '[Pydantic AI](https://ai.pydantic.dev)', '最適用途': '型安全エージェント', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python', 'ローカルモデル': 'あり（Ollama）', 'ライセンス': 'MIT、無料', '学習コスト': '低' },
-          { 'ツール': '[BAML](https://boundaryml.com)', '最適用途': '多言語チーム、出力が不安定なモデル', 'スキーマ形式': '.bamlクラスファイル', '言語': 'Python, TS + OpenAPI経由で6言語', 'ローカルモデル': 'あり（OpenAI互換）', 'ライセンス': 'Apache 2.0、可観測性は有料', '学習コスト': '中' },
-          { 'ツール': '[LangChain](https://langchain.com)', '最適用途': 'チェーン + エージェント', 'スキーマ形式': 'ツール定義', '言語': 'Python, JS', 'ローカルモデル': 'あり', 'ライセンス': 'MIT、無料', '学習コスト': '中' },
-          { 'ツール': '[Marvin](https://github.com/PrefectHQ/marvin)', '最適用途': '高速なextractとclassify', 'スキーマ形式': '型ヒント', '言語': 'Python', 'ローカルモデル': 'あり', 'ライセンス': 'Apache 2.0、無料', '学習コスト': '非常に低' },
-          { 'ツール': '[PromptQuorum](https://www.promptquorum.com)', '最適用途': 'マルチモデルテスト', 'スキーマ形式': 'API非依存', '言語': 'APIファースト', 'ローカルモデル': 'OpenAIプロキシ経由', 'ライセンス': '無料ティア + エンタープライズ', '学習コスト': '低' }
+          { 'ツール': '[Instructor](https://python.useinstructor.com)', '最適用途': 'Python API + リトライ', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python, TS, Ruby, Go, Elixir, Rust', 'ローカルモデル': 'あり（Ollama、vLLM）', 'ライセンス': 'MIT、無料', '学習コスト（編集部の評価）': '低' },
+          { 'ツール': '[Outlines](https://dottxt.ai)', '最適用途': 'ローカルモデルデプロイ', 'スキーマ形式': 'Pydantic, JSON Schema, 正規表現, CFG', '言語': 'Python', 'ローカルモデル': 'あり（ネイティブ）', 'ライセンス': 'Apache 2.0、無料', '学習コスト（編集部の評価）': '中' },
+          { 'ツール': '[Pydantic AI](https://ai.pydantic.dev)', '最適用途': '型安全エージェント', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python', 'ローカルモデル': 'あり（Ollama）', 'ライセンス': 'MIT、無料', '学習コスト（編集部の評価）': '低' },
+          { 'ツール': '[BAML](https://boundaryml.com)', '最適用途': '多言語チーム、出力が不安定なモデル', 'スキーマ形式': '.bamlクラスファイル', '言語': 'Python, TS + OpenAPI経由で6言語', 'ローカルモデル': 'あり（OpenAI互換）', 'ライセンス': 'Apache 2.0、可観測性は有料', '学習コスト（編集部の評価）': '中' },
+          { 'ツール': '[LangChain](https://langchain.com)', '最適用途': 'チェーン + エージェント', 'スキーマ形式': 'ツール定義', '言語': 'Python, JS', 'ローカルモデル': 'あり', 'ライセンス': 'MIT、無料', '学習コスト（編集部の評価）': '中' },
+          { 'ツール': '[Marvin](https://github.com/PrefectHQ/marvin)', '最適用途': '高速なextractとclassify', 'スキーマ形式': '型ヒント', '言語': 'Python', 'ローカルモデル': 'あり', 'ライセンス': 'Apache 2.0、無料', '学習コスト（編集部の評価）': '非常に低' },
+          { 'ツール': '[PromptQuorum](https://www.promptquorum.com)（当社の製品）', '最適用途': 'マルチモデルテスト', 'スキーマ形式': 'API非依存', '言語': 'APIファースト', 'ローカルモデル': 'OpenAIプロキシ経由', 'ライセンス': '無料ティア + エンタープライズ', '学習コスト（編集部の評価）': '低' }
         ]
       },
       decision: {
@@ -2153,7 +2153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '3つの質問から始めてください：(1) 実際にモデルを呼び出すサービスはどの言語で書かれていますか？ (2) ローカルモデルサポートが必要ですか？ (3) バリデーションの複雑さはどのくらいですか？',
         items: [
           '**Instructorを使用する場合：** PythonのAPIを構築し、バリデーション失敗時の自動リトライが必要な場合。最良の汎用選択肢。',
-          '**Outlinesを使用する場合：** ローカルモデル（llama.cpp、vLLM、MLX）をデプロイし、生成時にスキーマ準拠を保証したい場合。',
+          '**Outlinesを使用する場合：** ローカルモデル（llama.cpp、vLLM、MLX）をデプロイし、生成時にスキーマを強制したい場合。',
           '**Pydantic AIを使用する場合：** すべてのステップにわたる型安全性でマルチターンエージェントワークフローを構築する場合、または永続実行が必要な場合。',
           '**BAMLを使用する場合：** Python・TypeScript・Goのサービスが1つのスキーマを共有する必要がある場合、またはモデルに信頼できるネイティブJSONモードがない場合。',
           '**LangChainを使用する場合：** すでにLangChainやLangGraphを使用している場合 — with_structured_output()が最も簡単な追加。',
@@ -2179,27 +2179,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'どのJSONモードもスキーマの保証だと思い込む',
             problem: '単純なJSONモード（response_format json_object、Anthropic JSON制御）は応答が有効なJSONであることしか保証せず、あなたのフィールドや型に一致することは保証しません。厳格なスキーマモードはさらに踏み込んで形を保証しますが、いずれも値の正しさは保証しません。整った形のオブジェクトでも、でっち上げの価格や幻覚した日付を含みうるのです。',
-            fix: 'いずれの場合もバリデーションを重ねてください：Instructor、Outlines、Pydantic AI、またはBAML。業務ルールはスキーマだけでなくPydanticのバリデータに書きます。PromptQuorumでモデルごとの準拠失敗を検出してください。'
+            fix: 'いずれの場合もバリデーションを重ねてください：Instructor、Outlines、Pydantic AI、またはBAML。業務ルールはスキーマだけでなくPydanticのバリデータに書きます。PromptQuorum（当社の製品）でモデルごとの準拠失敗を検出してください。'
           },
           {
             mistake: '厳格すぎるスキーマを設計する',
             problem: '過度に制約されたスキーマ（小さなenum リスト、非常に具体的な正規表現パターン）はLLMがバリデーションに頻繁に失敗する原因となります。高いリトライ回数はトークンとお金を無駄にします。',
-            fix: 'PromptQuorumを使用してモデル間のスキーマ厳格さをテストします。95%以上の準拠率を達成するために制約を緩和します。可能な場合は必須フィールドの代わりにオプションフィールドを使用します。'
+            fix: 'PromptQuorum（当社の製品）を使用してモデル間のスキーマ厳格さをテストします。目標とする準拠率に達するまで制約を緩和します。可能な場合は必須フィールドの代わりにオプションフィールドを使用します。'
           },
           {
             mistake: 'ローカルとAPIモデルの違いをテストしない',
             problem: 'llama.cpp上のOutlinesはGPT-6 Astra上のInstructorとは異なる動作をします。スキーマ準拠率はモデルによって異なります。フロンティアのAPIモデルだけで構築してから小さなローカルモデルにデプロイすると、本番障害が発生します。',
-            fix: 'すべての予定モデルバックエンドを早期にテストします。PromptQuorumを使用して、ローカル（vLLM、Ollama）とホスト型（OpenAI、Anthropic、Google）のモデルで同じプロンプトを実行します。'
+            fix: 'すべての予定モデルバックエンドを早期にテストします。PromptQuorum（当社の製品）を使用して、ローカル（vLLM、Ollama）とホスト型（OpenAI、Anthropic、Google）のモデルで同じプロンプトを実行します。'
           },
           {
             mistake: 'レイテンシとトークンコストの影響を無視する',
             problem: 'リトライ付きのStructured Outputはより多くのトークンを消費します。Instructorは失敗時にリトライします。OutlinesのConstrained Decodingは自由生成に比べトークンあたりのオーバーヘッドが増えます。モデルごとのコストが測定されていません。',
-            fix: 'PromptQuorumのコスト追跡を使用します。モデル間のレイテンシを比較します。予算重視のワークフローにはOutlinesまたはBAML（リトライループなし）を優先します。柔軟なスキーマで精度を優先するならInstructorのリトライコストを受け入れます。'
+            fix: 'PromptQuorum（当社の製品）のコスト追跡を使用します。モデル間のレイテンシを比較します。予算重視のワークフローにはOutlinesまたはBAML（リトライループなし）を優先します。柔軟なスキーマで精度を優先するならInstructorのリトライコストを受け入れます。'
           },
           {
             mistake: 'バリデーション方法を混在させる（一貫性なし）',
             problem: '一部のリクエストはInstructorを使用し、他は生のJSON解析を使用します。一部のモデルはバリデーション済み、他はそうでありません。これにより本番で一貫性のないエラーが発生します。',
-            fix: 'コードベースごとに1つのバリデーションアプローチを標準化します。すべてのリクエストがInstructorを使用するか、すべてOutlinesを使用します。一貫性によりデバッグ時間が10倍削減されます。'
+            fix: 'コードベースごとに1つのバリデーションアプローチを標準化します。すべてのリクエストがInstructorを使用するか、すべてOutlinesを使用します。一貫性によりデバッグが容易になります。'
           },
           {
             mistake: '置き換えられた古いAPI向けのチュートリアルをコピーする',
@@ -2242,11 +2242,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Python開発者に最適なツールは何ですか？',
-            a: 'Instructorが最も人気のあるPython選択肢です。Pydanticモデルでスキーマを定義し、リトライとバリデーションを自動的に処理し、主要なLLM APIすべてとOllamaやvLLM経由のローカルモデルをサポートします。型安全なマルチターンエージェント会話も必要ならPydantic AIが適し、extractやclassifyを1行で済ませたいだけならMarvinが最速です。'
+            a: 'Instructorは広く使われているPython選択肢です。Pydanticモデルでスキーマを定義し、リトライとバリデーションを自動的に処理し、主要なLLM APIすべてとOllamaやvLLM経由のローカルモデルをサポートします。型安全なマルチターンエージェント会話も必要ならPydantic AIが適し、extractやclassifyを1行で済ませたいだけならMarvinが最速です。'
           },
           {
             q: 'LlamaなどのローカルモデルでStructured Outputを使用できますか？',
-            a: 'はい。OutlinesはローカルモデルのConstrained Decodingに特化しています — transformers、llama.cpp、MLX、vLLM、Ollamaで動作し、生成時に出力がスキーマに対してパースできることを保証します。InstructorとPydantic AIもOllamaやvLLMをAPIとして実行する場合にサポートし、BAMLはOpenAI互換エンドポイントであれば動作します。'
+            a: 'はい。OutlinesはローカルモデルのConstrained Decodingに特化しています — transformers、llama.cpp、MLX、vLLM、Ollamaで動作し、生成時に出力をスキーマに制約し、パース失敗の大半を取り除きます。InstructorとPydantic AIもOllamaやvLLMをAPIとして実行する場合にサポートし、BAMLはOpenAI互換エンドポイントであれば動作します。'
           },
           {
             q: 'InstructorとMarvinの違いは何ですか？',
@@ -2258,11 +2258,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Structured Outputが信頼性を高いかテストするにはどうすればよいですか？',
-            a: 'PromptQuorumを使用して、複数のモデルで同じプロンプトを実行し、スキーマ準拠を測定します。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonといったモデルごとに信頼性は異なり、小さなローカルモデルではさらに差が開きます。本番デプロイ前にテストし、ローカルではInstructorやPydanticで検証してください。'
+            a: 'PromptQuorum（当社の製品）を使用して、複数のモデルで同じプロンプトを実行し、スキーマ準拠を測定します。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonといったモデルごとに信頼性は異なり、小さなローカルモデルではさらに差が開きます。本番デプロイ前にテストし、ローカルではInstructorやPydanticで検証してください。'
           },
           {
             q: '「Constrained Decoding」とはどういう意味ですか？',
-            a: 'Constrained Decodingはトークン生成をスキーマに従う有効な値のみに制限します。Outlinesは各ステップで有効な次のトークンセットを計算します。これにより、後処理バリデーションやリトライなしに出力がスキーマに対してパースできることが保証され、単純なAPIレベルのJSONモードより信頼性が高くなります。制約されるのは構造であって真実ではありません。フィールドは正しくなりますが、値は依然として確認が必要です。'
+            a: 'Constrained Decodingはトークン生成をスキーマに従う有効な値のみに制限します。Outlinesは各ステップで有効な次のトークンセットを計算します。これにより、生成後のリトライなしで構造面のパース失敗の大半を取り除け、単純なAPIレベルのJSONモードより信頼性が高くなりますが、途中切れや文法の制限で出力が壊れる可能性は残ります。制約されるのは構造であって真実ではありません。値は依然として確認が必要です。'
           },
           {
             q: 'BAMLとは何ですか。Instructorの代わりにいつ使うべきですか？',
@@ -2274,19 +2274,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'どのツールが最も優れたドキュメントを持っていますか？',
-            a: 'LangChainとPydantic AIは企業支援のため最も充実したドキュメントを持っています。BAMLのドキュメントは、言語そのものを教える必要があるため若いプロジェクトとしては異例に良質です。Instructorはコミュニティ保守ながら優れたチュートリアルと例があります。Outlinesのドキュメントは技術的ですが徹底しています。Marvinのドキュメントは簡潔です — Marvin 2の古い情報がまだ出回っているため、3.x系のページを狙って参照してください。'
+            a: 'ドキュメントの質は主観的なので、各プロジェクトの最新ドキュメントを確認してください。当編集部の見方では、LangChainとPydantic AIは充実したドキュメントを持っており、それは背後にあるリソースを反映している可能性があります。BAMLのドキュメントは、言語そのものを教える必要があるため若いプロジェクトとしては良質です。Instructorには優れたチュートリアルと例があります。Outlinesのドキュメントは技術的ですが徹底しています。Marvinのドキュメントは簡潔です — Marvin 2の古い情報がまだ出回っているため、3.x系のページを狙って参照してください。'
           },
           {
             q: '7つのツールすべてが必要ですか、それとも1つだけでよいですか？',
-            a: '1つから始めてください。Python開発者はInstructorかPydantic AIを試してください。ローカルモデルチームはOutlinesを試してください。多言語チームはBAMLを試してください。LangChainユーザーはwith_structured_output()を試してください。PromptQuorumで全モデルの一貫性を検証してください。'
+            a: '1つから始めてください。Python開発者はInstructorかPydantic AIを試してください。ローカルモデルチームはOutlinesを試してください。多言語チームはBAMLを試してください。LangChainユーザーはwith_structured_output()を試してください。PromptQuorum（当社の製品）で全モデルの一貫性を検証してください。'
           },
           {
             q: 'METIのAIガバナンスガイドラインとStructured Outputの関係は？',
-            a: 'METIの2024年AIガバナンスガイドラインは、AIシステムの出力管理と監査可能性を求めています。Structured Outputはこれらの要件を満たす具体的な技術手段です。スキーマ定義により出力を予測可能な形式に制限し、PromptQuorumで準拠率を記録・監査できます。'
+            a: 'METIの2024年AIガバナンスガイドラインは、AIシステムの出力管理と監査可能性を求めています。Structured Outputはこれらの要件を満たす具体的な技術手段です。スキーマ定義により出力を予測可能な形式に制限し、PromptQuorum（当社の製品）で準拠率を記録・監査できます。'
           },
           {
             q: '日本のエンタープライズ環境でのStructured Output導入の推奨手順は？',
-            a: 'まずOutlinesとローカルモデルで概念実証を構築し、機密データがオンプレミスに留まることを確認します。次にPromptQuorumで複数モデルの準拠率をテストし、最も適したモデルを選択します。本番環境ではInstructorまたはPydantic AIで型安全な実装を行い、継続的なモニタリングにPromptQuorumを活用してください。'
+            a: 'まずOutlinesとローカルモデルで概念実証を構築し、機密データがオンプレミスに留まることを確認します。次にPromptQuorum（当社の製品）で複数モデルの準拠率をテストし、最も適したモデルを選択します。本番環境ではInstructorまたはPydantic AIで型安全な実装を行い、継続的なモニタリングにPromptQuorumを活用してください。'
           }
         ]
       },
@@ -2295,7 +2295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '出典',
         items: [
           '[Instructor GitHubリポジトリ](https://github.com/567-labs/instructor) — Instructorライブラリの公式リポジトリとドキュメント',
-          '[Outlines GitHubリポジトリ](https://github.com/dottxt-ai/outlines) — スキーマ準拠保証のためのConstrained Decoding',
+          '[Outlines GitHubリポジトリ](https://github.com/dottxt-ai/outlines) — スキーマに制約した生成のためのConstrained Decoding',
           '[Pydantic AIドキュメント](https://pydantic.dev/docs/ai/overview/) — Structured Output付き型安全エージェントフレームワーク',
           '[LangChain Structured Outputガイド](https://docs.langchain.com/oss/python/langchain/structured-output) — LangChain統一Structured Output API',
           '[BAMLドキュメント](https://docs.boundaryml.com/home) — スキーマファーストのプロンプト言語とschema-aligned parsing',
@@ -2308,16 +2308,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: '工具与平台',
     designSkin: 'hub',
     heroImage: '/images/best-tools-structured-output-overview-hero-zh.webp',
-    title: '2026年Structured Output最佳工具：用途排名',
+    title: '2026年Structured Output最佳工具：对比',
     seoTitle: '结构化输出与JSON模式最佳工具对比（2026）',
-    metaDescription: '7款结构化输出工具对比：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin和PromptQuorum。含许可证、模式格式与本地模型支持。',
+    metaDescription: '7款结构化输出工具对比：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin和PromptQuorum（我们自己的产品）。含许可证、模式格式与本地模型支持。',
     ogTitle: '结构化输出与JSON模式最佳工具对比（2026）',
-    ogDescription: '7款LLM结构化输出工具：Instructor重试机制、Outlines约束解码、BAML多语言客户端。用PromptQuorum测试一致性。',
+    ogDescription: '7款LLM结构化输出工具：Instructor重试机制、Outlines约束解码、BAML多语言客户端。用PromptQuorum（我们自己的产品）测试一致性。',
     twitterTitle: '结构化输出与JSON模式最佳工具对比（2026）',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin——哪款结构化输出工具适合你？2026年对比指南。',
-    intro: '**2026年Structured Output的7大工具：Instructor（Pydantic提取）、Outlines（约束解码）、Pydantic AI（类型安全代理）、BAML（模式优先的提示词文件）、LangChain（统一API）、Marvin（任务式提取）和PromptQuorum（跨模型测试）。每个工具解决不同的系统瓶颈。**',
+    intro: '**2026年Structured Output常用或值得了解的7个工具：Instructor（Pydantic提取）、Outlines（约束解码）、Pydantic AI（类型安全代理）、BAML（模式优先的提示词文件）、LangChain（统一API）、Marvin（任务式提取）和PromptQuorum（我们自己的产品）（跨模型测试）。每个工具解决不同的系统瓶颈。**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — 库版本、许可证、API和文档链接已对照官方仓库、PyPI与厂商文档重新核实',
     readTime: '阅读约12分钟',
     educationalLevel: 'Advanced',
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '中国数据安全法与结构化输出合规', anchor: '#zhongguo' },
       { label: '常见问题', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**根据模型运行在哪里、团队用什么语言交付来选择：Python API工作流需要重试与类型安全时用Instructor和Pydantic AI；本地模型上要保证模式合规用Outlines；Python、TypeScript和Go服务必须共用同一套模式时用BAML；已经在用链或Agent的团队用LangChain；只想一行完成extract或classify用Marvin；上生产前要在GPT、Claude和Gemini之间做一致性测试则用PromptQuorum。**',
+    leadAnswerBlock: '**根据模型运行在哪里、团队用什么语言交付来选择：Python API工作流需要重试与类型安全时用Instructor和Pydantic AI；本地模型上要对生成施加模式约束用Outlines；Python、TypeScript和Go服务必须共用同一套模式时用BAML；已经在用链或Agent的团队用LangChain；只想一行完成extract或classify用Marvin；上生产前要在GPT、Claude和Gemini之间做一致性测试则用PromptQuorum（我们自己的产品）。**',
     quickFacts: [
       'Instructor采用MIT许可，提供Python、TypeScript、Ruby、Go、Elixir和Rust六个官方实现',
       'Outlines 1.x在生成时约束Token，如今也能驱动托管API，不再局限于本地后端',
@@ -2352,17 +2352,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML把一个.baml模式文件编译成类型化客户端，并修复格式错误的输出而不是重试',
       'LangChain 1.x从模型档案中读取各Provider的原生结构化输出支持情况',
       'Marvin 3.x构建在Pydantic AI之上，提供extract、cast、classify和generate',
-      'PromptQuorum在25+个模型上测试同一个Prompt的一致性'
+      'PromptQuorum（我们自己的产品）可在多个模型上运行同一个Prompt以对比一致性'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '2026年Structured Output最佳工具：用途排名',
-      description: '7个LLM Structured Output库的比较：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin和PromptQuorum。按模式强制、语言支持、本地模型兼容性和许可证排名。',
+      headline: '2026年Structured Output最佳工具：对比',
+      description: '7个LLM Structured Output库的比较：Instructor、Outlines、Pydantic AI、BAML、LangChain、Marvin和PromptQuorum（我们自己的产品）。按模式强制、语言支持、本地模型兼容性和许可证对比。',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/zh/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
@@ -2389,12 +2389,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'LLM结构化输出最佳工具（2026）',
-      description: '七个用于强制语言模型结构化输出的主要库。',
+      description: '七个用于强制或测试语言模型结构化输出的库和工具，包括PromptQuorum（我们自己的产品）。',
       numberOfItems: 7,
       inLanguage: 'zh',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: '从任何LLM进行基于Pydantic的提取并自动重试。MIT许可开源，六种语言实现。' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: '用于本地模型保证模式合规性的约束解码库。Apache 2.0开源。' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: '在本地模型上于生成时强制执行模式的约束解码库。Apache 2.0开源。' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: '具有三种结构化输出模式和持久化执行集成的类型安全Agent框架。' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: '模式优先的提示词语言，编译类型化客户端并通过schema-aligned parsing修复格式错误的模型输出。' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'OpenAI、Anthropic、Google和本地模型的统一API层。' },
@@ -2409,17 +2409,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: '使用Instructor进行带重试的Python API提取。使用Outlines在本地模型上保证模式合规性。使用Pydantic AI构建类型安全的多轮对话Agent。当Python、TypeScript和Go服务必须共用一套模式时使用BAML。已在LangChain生态系统中则使用LangChain。想一行完成extract或classify用Marvin。在生产前使用PromptQuorum测试所有模型的结构化输出一致性。'
+            text: '使用Instructor进行带重试的Python API提取。使用Outlines在本地模型上进行模式约束解码。使用Pydantic AI构建类型安全的多轮对话Agent。当Python、TypeScript和Go服务必须共用一套模式时使用BAML。已在LangChain生态系统中则使用LangChain。想一行完成extract或classify用Marvin。在生产前使用PromptQuorum（我们自己的产品）测试所有模型的结构化输出一致性。'
           }
         ],
         items: [
-          '**Instructor** 是最受欢迎的Python选择 — Pydantic模式、自动重试，并有TypeScript、Ruby、Go、Elixir和Rust官方移植版',
-          '**Outlines** 通过约束解码保证本地模型的模式合规性 — 结构层面零幻觉风险',
+          '**Instructor** 是一个被广泛使用的Python选项 — Pydantic模式、自动重试，并有TypeScript、Ruby、Go、Elixir和Rust官方移植版',
+          '**Outlines** 在本地模型上将Token生成约束到您的模式，可消除大部分结构性解析失败；取值仍需验证，截断或文法限制仍可能破坏输出',
           '**Pydantic AI** 为多轮Agent对话添加类型安全性，并按原生结构化输出→工具调用→提示词JSON的顺序降级',
           '**BAML** 把模式和提示词放进受版本管理的.baml文件并生成类型化客户端，让多语言团队共用一份契约',
           '**LangChain的with_structured_output()** 统一了OpenAI、Anthropic和Google API的结构化输出',
           '**Marvin 3.x** 构建在Pydantic AI之上，把提取压缩成一次extract或classify调用',
-          '**PromptQuorum** 在生产部署前测试所有模型的结构化输出一致性'
+          '**PromptQuorum**（我们自己的产品） 在生产部署前测试所有模型的结构化输出一致性'
         ]
       },
       whichProblem: {
@@ -2429,22 +2429,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: '结构化输出工具解决的是三个不同的问题——在生成时强制架构、生成后校验结果、修复格式损坏的输出——而多数技术栈只需要前两项。' },
           { type: 'in-plain-terms', text: '别照着功能清单选。先问你真正遇到的是哪种故障：模型无视你的格式，还是格式对了但值是错的，又或者返回的 JSON 根本无法解析。这三种情况的解法并不相同。' },
         ],
-        content: '**结构化输出需要解决三个相互依存的问题：模式定义、API强制和验证。** 不同工具以不同方式解决这些问题。Instructor在Python中用重试处理全部三个。Outlines通过约束解码消除了验证步骤。Pydantic AI为Agent添加类型安全性。BAML把模式移入可编译文件并修复不完美的输出。LangChain封装Provider API。Marvin优先考虑开发速度。PromptQuorum验证所有模型的一致性。',
+        content: '**结构化输出需要解决三个相互依存的问题：模式定义、API强制和验证。** 不同工具以不同方式解决这些问题。Instructor在Python中用重试处理全部三个。Outlines通过约束解码减少了对单独验证步骤的需求。Pydantic AI为Agent添加类型安全性。BAML把模式移入可编译文件并修复不完美的输出。LangChain封装Provider API。Marvin优先考虑开发速度。PromptQuorum验证所有模型的一致性。',
         columns: ['问题', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { '问题': '定义模式', 'Instructor': 'Pydantic模型', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Pydantic模型', 'BAML': '.baml类文件', 'LangChain': '工具定义', 'Marvin': 'Python类型提示' },
           { '问题': 'API调用时强制执行', 'Instructor': '重试 + 验证', 'Outlines': 'Token级约束', 'Pydantic AI': '原生 / 工具 / 提示词', 'BAML': '生成的提示词 + 解析器', 'LangChain': 'Provider JSON模式', 'Marvin': 'Pydantic AI输出类型' },
-          { '问题': '验证响应', 'Instructor': '自动', 'Outlines': '生成时保证', 'Pydantic AI': '类型检查', 'BAML': 'Schema-aligned parsing', 'LangChain': '手动', 'Marvin': '自动' }
+          { '问题': '验证响应', 'Instructor': '自动', 'Outlines': '生成时强制', 'Pydantic AI': '类型检查', 'BAML': 'Schema-aligned parsing', 'LangChain': '手动', 'Marvin': '自动' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor：Pydantic提取',
-        content: '**Instructor是采用最广泛的结构化输出库。它封装任何LLM API — OpenAI GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — 并返回经验证的Pydantic模型而非原始文本。** Instructor在验证失败时自动处理重试，无需额外错误处理即可达到生产级别。',
+        content: '**Instructor是一个被广泛使用的结构化输出库。它封装任何LLM API — OpenAI GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — 并返回经验证的Pydantic模型而非原始文本。** Instructor在验证失败时会自动重试；重试次数用尽的情况仍需自行处理。',
         items: [
           '支持所有主流Provider（OpenAI、Anthropic、Google、Groq、Mistral）以及通过Ollama或vLLM运行的本地模型',
           'Pydantic v2模式：类型提示、验证规则、嵌入模式的docstring描述',
-          '验证失败时自动退避重试 — 无需手动错误处理',
+          '验证失败时自动重试 — 重试次数用尽的情况仍需自行处理',
           '六个官方实现：Python、TypeScript、Ruby、Go、Elixir和Rust',
           'MIT许可开源，积极维护，目前为1.x系列',
           '定价：免费（除LLM API调用外无额外费用）'
@@ -2455,13 +2455,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines：约束解码',
-        content: '**Outlines通过约束解码在Token生成时强制执行模式合规性。不是生成Token后再验证，而是在每一步将有效Token限制为符合您模式的Token。** 这保证输出一定能按您的模式解析，结构层面零幻觉风险——这正是它成为本地模型默认选择的原因。',
+        content: '**Outlines通过约束解码在Token生成时强制执行模式合规性。不是生成Token后再验证，而是在每一步将有效Token限制为符合您模式的Token。** 这可消除大部分结构性解析失败，但取值仍需验证，截断或文法限制仍可能破坏输出——这也是它成为本地模型常见选择的原因。',
         items: [
           '本地后端：transformers、llama.cpp、MLX和任何Hugging Face模型',
           '服务端后端：vLLM、Ollama和NVIDIA NIM',
           '同样支持托管API（OpenAI、Gemini），同一份代码可在本地与云端之间迁移',
           '模式可用Pydantic模型、JSON Schema、正则表达式、字面量选项或上下文无关文法表达',
-          '保证结构合规 — 无需后处理验证或重试',
+          '生成时结构合规性很强 — 取值仍需验证，并注意截断和文法限制',
           'Apache 2.0开源，目前为1.x系列，采用Rust内核（outlines-core）提升速度'
         ]
       },
@@ -2521,9 +2521,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum：跨模型测试',
-        content: '**PromptQuorum本身不是结构化输出库，而是用于验证跨模型结构化输出一致性的测试平台。** 同时对GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon和20+其他模型运行相同的Prompt。测量每个模型的模式合规性、延迟和成本。',
+        content: '**PromptQuorum是我们自己的产品，本身不是结构化输出库，而是用于验证跨模型结构化输出一致性的测试平台。** 同时对GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon和许多其他模型运行相同的Prompt。测量每个模型的模式合规性、延迟和成本。',
         items: [
-          '单次API调用中的多模型分发 — 对25+模型测试一个Prompt',
+          '单次API调用中的多模型分发 — 对多个模型测试一个Prompt',
           '结构化输出合规性指标 — 通过率、延迟、每个模型的成本',
           '识别在您的模式上产生幻觉的模型 — 避免部署到不可靠的模型',
           '共识模式 — 在独立模型运行之间找到一致性',
@@ -2534,15 +2534,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: '并排对比',
-        columns: ['工具', '最佳用途', '模式格式', '语言', '本地模型', '许可证', '学习曲线'],
+        columns: ['工具', '最佳用途', '模式格式', '语言', '本地模型', '许可证', '学习曲线（编辑评估）'],
         rows: [
-          { '工具': '[Instructor](https://python.useinstructor.com)', '最佳用途': 'Python API + 重试', '模式格式': 'Pydantic模型', '语言': 'Python, TS, Ruby, Go, Elixir, Rust', '本地模型': '支持（Ollama、vLLM）', '许可证': 'MIT，免费', '学习曲线': '低' },
-          { '工具': '[Outlines](https://dottxt.ai)', '最佳用途': '本地模型部署', '模式格式': 'Pydantic、JSON Schema、正则、CFG', '语言': 'Python', '本地模型': '支持（原生）', '许可证': 'Apache 2.0，免费', '学习曲线': '中' },
-          { '工具': '[Pydantic AI](https://ai.pydantic.dev)', '最佳用途': '类型安全Agent', '模式格式': 'Pydantic模型', '语言': 'Python', '本地模型': '支持（Ollama）', '许可证': 'MIT，免费', '学习曲线': '低' },
-          { '工具': '[BAML](https://boundaryml.com)', '最佳用途': '多语言团队、输出不稳定的模型', '模式格式': '.baml类文件', '语言': 'Python、TS，另有6种经OpenAPI', '本地模型': '支持（OpenAI兼容）', '许可证': 'Apache 2.0，可观测性付费', '学习曲线': '中' },
-          { '工具': '[LangChain](https://langchain.com)', '最佳用途': '链 + Agent', '模式格式': '工具定义', '语言': 'Python、JS', '本地模型': '支持', '许可证': 'MIT，免费', '学习曲线': '中' },
-          { '工具': '[Marvin](https://github.com/PrefectHQ/marvin)', '最佳用途': '快速extract与classify', '模式格式': '类型提示', '语言': 'Python', '本地模型': '支持', '许可证': 'Apache 2.0，免费', '学习曲线': '非常低' },
-          { '工具': '[PromptQuorum](https://www.promptquorum.com)', '最佳用途': '多模型测试', '模式格式': 'API无关', '语言': 'API优先', '本地模型': '通过OpenAI代理', '许可证': '免费层 + 企业版', '学习曲线': '低' }
+          { '工具': '[Instructor](https://python.useinstructor.com)', '最佳用途': 'Python API + 重试', '模式格式': 'Pydantic模型', '语言': 'Python, TS, Ruby, Go, Elixir, Rust', '本地模型': '支持（Ollama、vLLM）', '许可证': 'MIT，免费', '学习曲线（编辑评估）': '低' },
+          { '工具': '[Outlines](https://dottxt.ai)', '最佳用途': '本地模型部署', '模式格式': 'Pydantic、JSON Schema、正则、CFG', '语言': 'Python', '本地模型': '支持（原生）', '许可证': 'Apache 2.0，免费', '学习曲线（编辑评估）': '中' },
+          { '工具': '[Pydantic AI](https://ai.pydantic.dev)', '最佳用途': '类型安全Agent', '模式格式': 'Pydantic模型', '语言': 'Python', '本地模型': '支持（Ollama）', '许可证': 'MIT，免费', '学习曲线（编辑评估）': '低' },
+          { '工具': '[BAML](https://boundaryml.com)', '最佳用途': '多语言团队、输出不稳定的模型', '模式格式': '.baml类文件', '语言': 'Python、TS，另有6种经OpenAPI', '本地模型': '支持（OpenAI兼容）', '许可证': 'Apache 2.0，可观测性付费', '学习曲线（编辑评估）': '中' },
+          { '工具': '[LangChain](https://langchain.com)', '最佳用途': '链 + Agent', '模式格式': '工具定义', '语言': 'Python、JS', '本地模型': '支持', '许可证': 'MIT，免费', '学习曲线（编辑评估）': '中' },
+          { '工具': '[Marvin](https://github.com/PrefectHQ/marvin)', '最佳用途': '快速extract与classify', '模式格式': '类型提示', '语言': 'Python', '本地模型': '支持', '许可证': 'Apache 2.0，免费', '学习曲线（编辑评估）': '非常低' },
+          { '工具': '[PromptQuorum](https://www.promptquorum.com)（我们自己的产品）', '最佳用途': '多模型测试', '模式格式': 'API无关', '语言': 'API优先', '本地模型': '通过OpenAI代理', '许可证': '免费层 + 企业版', '学习曲线（编辑评估）': '低' }
         ]
       },
       decision: {
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '从回答三个问题开始：(1) 真正调用模型的服务是用什么语言写的？(2) 您需要本地模型支持吗？(3) 您的验证复杂度如何？',
         items: [
           '**使用Instructor的情况：** 构建Python API且需要验证失败时自动重试。最佳通用选择。',
-          '**使用Outlines的情况：** 部署本地模型（llama.cpp、vLLM、MLX）且希望在生成时保证模式合规性。',
+          '**使用Outlines的情况：** 部署本地模型（llama.cpp、vLLM、MLX）且希望在生成时强制执行模式。',
           '**使用Pydantic AI的情况：** 构建所有步骤都有类型安全性的多轮Agent工作流，或需要持久化执行。',
           '**使用BAML的情况：** Python、TypeScript和Go服务必须共用一套模式，或者模型没有可靠的原生JSON模式。',
           '**使用LangChain的情况：** 已经使用LangChain或LangGraph — with_structured_output()是最简单的添加。',
@@ -2577,27 +2577,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '把任何JSON模式都当成模式保证',
             problem: '普通JSON模式（response_format json_object、Anthropic JSON控制）只保证回复是合法JSON，不保证它符合你的字段和类型。严格模式模式更进一步，能保证形状，但两者都不保证取值正确：一个格式完好的对象里，价格可能是编造的，日期可能是幻觉。',
-            fix: '无论如何都要在上面叠加验证：Instructor、Outlines、Pydantic AI或BAML。业务规则应写在Pydantic验证器里，而不是只靠模式。使用PromptQuorum逐模型测试合规失败情况。'
+            fix: '无论如何都要在上面叠加验证：Instructor、Outlines、Pydantic AI或BAML。业务规则应写在Pydantic验证器里，而不是只靠模式。使用PromptQuorum（我们自己的产品）逐模型测试合规失败情况。'
           },
           {
             mistake: '设计过于严格的模式',
             problem: '过度约束的模式（小枚举列表、非常具体的正则表达式模式）导致LLM频繁验证失败。高重试次数浪费Token和金钱。',
-            fix: '使用PromptQuorum测试跨模型的模式严格性。放宽约束以实现95%以上的合规性。尽可能使用可选字段而不是必填字段。'
+            fix: '使用PromptQuorum（我们自己的产品）测试跨模型的模式严格性。放宽约束，直到达到您的目标合规率。尽可能使用可选字段而不是必填字段。'
           },
           {
             mistake: '不测试本地和API模型之间的差异',
             problem: 'llama.cpp上的Outlines与GPT-6 Astra上的Instructor行为不同。模式合规率因模型而异。只为前沿API模型构建，然后部署到小型本地模型，会导致生产失败。',
-            fix: '尽早测试所有预期的模型后端。使用PromptQuorum在本地（vLLM、Ollama）和托管（OpenAI、Anthropic、Google）模型上运行相同的Prompt。'
+            fix: '尽早测试所有预期的模型后端。使用PromptQuorum（我们自己的产品）在本地（vLLM、Ollama）和托管（OpenAI、Anthropic、Google）模型上运行相同的Prompt。'
           },
           {
             mistake: '忽略对延迟和Token成本的影响',
             problem: '带重试的结构化输出消耗更多Token。Instructor在失败时重试。Outlines的约束解码相比自由生成会增加每Token开销。没有测量每个模型的成本。',
-            fix: '使用PromptQuorum成本追踪。比较模型间的延迟。对于预算敏感的工作流，优先使用Outlines或BAML（没有重试循环）。在灵活模式下追求精度时，接受Instructor的重试成本。'
+            fix: '使用PromptQuorum（我们自己的产品）成本追踪。比较模型间的延迟。对于预算敏感的工作流，优先使用Outlines或BAML（没有重试循环）。在灵活模式下追求精度时，接受Instructor的重试成本。'
           },
           {
             mistake: '混用验证方法（缺乏一致性）',
             problem: '部分请求使用Instructor，其他使用原始JSON解析。部分模型经过验证，其他没有。这导致生产中出现不一致的错误。',
-            fix: '在每个代码库中标准化一种验证方法。所有请求使用Instructor，或全部使用Outlines。一致性将调试时间减少10倍。'
+            fix: '在每个代码库中标准化一种验证方法。所有请求使用Instructor，或全部使用Outlines。一致性让调试更容易。'
           },
           {
             mistake: '照抄针对已被取代的API写的教程',
@@ -2641,11 +2641,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Python开发者最好的工具是什么？',
-            a: 'Instructor是最受欢迎的Python选择。它使用Pydantic模型定义模式，自动处理重试和验证，支持所有主流LLM API以及通过Ollama或vLLM运行的本地模型。如果还需要类型安全的多轮Agent对话，Pydantic AI更合适；如果只需要一行的extract或classify调用，Marvin最快。'
+            a: 'Instructor是一个被广泛使用的Python选项。它使用Pydantic模型定义模式，自动处理重试和验证，支持所有主流LLM API以及通过Ollama或vLLM运行的本地模型。如果还需要类型安全的多轮Agent对话，Pydantic AI更合适；如果只需要一行的extract或classify调用，Marvin最快。'
           },
           {
             q: '可以与Llama等本地模型一起使用吗？',
-            a: '可以。Outlines专门用于本地模型约束解码——支持transformers、llama.cpp、MLX、vLLM和Ollama，并在生成时保证输出能按你的模式解析。Instructor和Pydantic AI在把Ollama或vLLM作为API运行时同样支持，BAML则可对接任何OpenAI兼容端点。'
+            a: '可以。Outlines专门用于本地模型约束解码——支持transformers、llama.cpp、MLX、vLLM和Ollama，并在生成时将输出约束到你的模式，可消除大部分解析失败。Instructor和Pydantic AI在把Ollama或vLLM作为API运行时同样支持，BAML则可对接任何OpenAI兼容端点。'
           },
           {
             q: 'Instructor和Marvin有什么区别？',
@@ -2657,11 +2657,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '如何测试结构化输出的可靠性？',
-            a: '使用PromptQuorum在多个模型上运行相同的Prompt并测量模式合规性。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon等模型的可靠性各不相同，小型本地模型差异更大。在部署到生产前进行测试，并在本地用Instructor或Pydantic做验证。'
+            a: '使用PromptQuorum（我们自己的产品）在多个模型上运行相同的Prompt并测量模式合规性。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon等模型的可靠性各不相同，小型本地模型差异更大。在部署到生产前进行测试，并在本地用Instructor或Pydantic做验证。'
           },
           {
             q: '"约束解码"是什么意思？',
-            a: '约束解码将Token生成限制为仅符合您模式的有效值。Outlines通过计算每一步的有效下一个Token集来实现。这保证输出无需后处理验证或重试即可按模式解析，比普通的API级JSON模式更可靠。它约束的是结构而非真实性：字段会正确，取值仍需核对。'
+            a: '约束解码将Token生成限制为仅符合您模式的有效值。Outlines通过计算每一步的有效下一个Token集来实现。这可在无需生成后重试的情况下消除大部分结构性解析失败，比普通的API级JSON模式更可靠，但截断或文法限制仍可能破坏输出。它约束的是结构而非真实性：取值仍需核对。'
           },
           {
             q: 'BAML是什么？什么时候该用它而不是Instructor？',
@@ -2673,11 +2673,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '哪个工具的文档最好？',
-            a: 'LangChain和Pydantic AI因企业支持拥有最全面的文档。BAML的文档对一个年轻项目而言好得反常，因为这门语言本身需要被讲清楚。Instructor虽然是社区维护但有很好的教程和示例。Outlines的文档很技术性但很全面。Marvin的文档较简洁——请专门查看3.x的页面，因为Marvin 2的旧资料仍在流传。'
+            a: '文档质量具有主观性，请查看各项目当前的文档。依我们的阅读，LangChain和Pydantic AI的文档内容丰富，这很可能反映了它们背后的资源投入。BAML的文档对一个年轻项目而言相当扎实，因为这门语言本身需要被讲清楚。Instructor有很好的教程和示例。Outlines的文档很技术性但很全面。Marvin的文档较简洁——请专门查看3.x的页面，因为Marvin 2的旧资料仍在流传。'
           },
           {
             q: '需要全部7个工具还是只需要一个？',
-            a: '从一个开始。Python开发者试试Instructor或Pydantic AI。本地模型团队试试Outlines。多语言团队试试BAML。LangChain用户试试with_structured_output()。用PromptQuorum验证跨模型一致性。大多数团队使用一个工具加PromptQuorum进行测试。'
+            a: '从一个开始。Python开发者试试Instructor或Pydantic AI。本地模型团队试试Outlines。多语言团队试试BAML。LangChain用户试试with_structured_output()。用PromptQuorum（我们自己的产品）验证跨模型一致性。'
           },
           {
             q: '在中国部署LLM结构化输出需要符合哪些数据安全要求？',
@@ -2685,7 +2685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '企业级结构化输出合规架构的最佳实践是什么？',
-            a: '推荐使用阿里云、腾讯云或华为云提供的私有化部署环境，在等保2.0合规的基础设施上运行Outlines和本地模型。配合PromptQuorum进行多模型一致性测试，选出最适合业务场景的模型后再推向生产。建立模式验证日志以满足审计要求。'
+            a: '推荐使用阿里云、腾讯云或华为云提供的私有化部署环境，在等保2.0合规的基础设施上运行Outlines和本地模型。配合PromptQuorum（我们自己的产品）进行多模型一致性测试，选出最适合业务场景的模型后再推向生产。建立模式验证日志以满足审计要求。'
           }
         ]
       },
@@ -2694,7 +2694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '参考来源',
         items: [
           '[Instructor GitHub仓库](https://github.com/567-labs/instructor) — Instructor库的官方仓库和文档',
-          '[Outlines GitHub仓库](https://github.com/dottxt-ai/outlines) — 保证模式合规性的约束解码',
+          '[Outlines GitHub仓库](https://github.com/dottxt-ai/outlines) — 用于模式约束生成的约束解码',
           '[Pydantic AI文档](https://pydantic.dev/docs/ai/overview/) — 带结构化输出的类型安全Agent框架',
           '[LangChain结构化输出指南](https://docs.langchain.com/oss/python/langchain/structured-output) — LangChain统一结构化输出API',
           '[BAML文档](https://docs.boundaryml.com/home) — 模式优先的提示词语言与schema-aligned parsing',
@@ -2710,14 +2710,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-ar.webp',
     title: 'أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode⁩ (⁨2026⁩)',
     seoTitle: 'أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode 2026⁩',
-    metaDescription: 'مقارنة ⁨7⁩ أدوات ⁨structured output⁩: ⁨Instructor⁩ و⁨Outlines⁩ و⁨Pydantic AI⁩ و⁨BAML⁩ و⁨LangChain⁩ و⁨Marvin⁩ و⁨PromptQuorum⁩. الترخيص ودعم النماذج المحلية.',
+    metaDescription: 'مقارنة ⁨7⁩ أدوات ⁨structured output⁩: ⁨Instructor⁩ و⁨Outlines⁩ و⁨Pydantic AI⁩ و⁨BAML⁩ و⁨LangChain⁩ و⁨Marvin⁩ و⁨PromptQuorum⁩ (منتجنا الخاص). دعم النماذج المحلية.',
     ogTitle: 'أفضل أدوات Structured Output و JSON Mode (2026)',
-    ogDescription: 'مقارنة 7 أدوات LLM للـ structured output: Instructor لإعادة المحاولات، Outlines للـ constrained decoding، BAML للفرق متعددة اللغات. اختبر الاتساق مع PromptQuorum.',
+    ogDescription: 'مقارنة 7 أدوات LLM للـ structured output: Instructor لإعادة المحاولات، Outlines للـ constrained decoding، BAML للفرق متعددة اللغات. اختبر الاتساق مع PromptQuorum (منتجنا الخاص).',
     twitterTitle: 'أفضل أدوات Structured Output و JSON Mode (2026)',
     twitterDescription: '⁨Instructor⁩ مقابل ⁨Outlines⁩ مقابل ⁨Pydantic AI⁩ مقابل ⁨BAML⁩ مقابل ⁨LangChain⁩ مقابل ⁨Marvin⁩ — أي أداة ⁨structured output⁩ تناسب بنيتك؟ مقارنة جانبية (⁨2026⁩).',
-    intro: '**سبع أدوات تهيمن على structured output في 2026: Instructor لاستخراج Pydantic، و Outlines للـ constrained decoding، و Pydantic AI للوكلاء الآمنة من حيث الأنواع، و BAML لملفات prompt تبدأ من المخطط، و LangChain لـ APIs الموحدة، و Marvin للاستخراج المبني على المهام، و PromptQuorum لاختبار التوافق عبر النماذج. كل أداة تحل عائقاً مختلفاً في سير العمل.**',
+    intro: '**سبع أدوات شائعة الاستخدام أو جديرة بالمعرفة في مجال structured output في 2026: Instructor لاستخراج Pydantic، و Outlines للـ constrained decoding، و Pydantic AI للوكلاء الآمنة من حيث الأنواع، و BAML لملفات prompt تبدأ من المخطط، و LangChain لـ APIs الموحدة، و Marvin للاستخراج المبني على المهام، و PromptQuorum (منتجنا الخاص) لاختبار التوافق عبر النماذج. كل أداة تحل عائقاً مختلفاً في سير العمل.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — تمت إعادة التحقق من إصدارات المكتبات والتراخيص وواجهات API وروابط الوثائق مقابل المستودعات الرسمية و PyPI ووثائق المزودين',
     readTime: '12 دقيقة للقراءة',
     educationalLevel: 'Advanced',
@@ -2743,7 +2743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'الأخطاء الشائعة في structured output', anchor: '#common-mistakes' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**اختر حسب مكان تشغيل نماذجك واللغات التي يسلّم بها فريقك: Instructor و Pydantic AI لسير عمل Python مع إعادة المحاولات وسلامة الأنواع؛ Outlines لضمان الامتثال للمخطط في النماذج المحلية؛ BAML عندما يجب أن يخدم المخطط نفسه خدمات Python و TypeScript و Go؛ LangChain للفرق التي تستخدم chains أو وكلاء بالفعل؛ Marvin لنداءات extract و classify السريعة؛ PromptQuorum لاختبار الاتساق عبر GPT و Claude و Gemini قبل الإنتاج.**',
+    leadAnswerBlock: '**اختر حسب مكان تشغيل نماذجك واللغات التي يسلّم بها فريقك: Instructor و Pydantic AI لسير عمل Python مع إعادة المحاولات وسلامة الأنواع؛ Outlines للتوليد المقيّد بالمخطط في النماذج المحلية؛ BAML عندما يجب أن يخدم المخطط نفسه خدمات Python و TypeScript و Go؛ LangChain للفرق التي تستخدم chains أو وكلاء بالفعل؛ Marvin لنداءات extract و classify السريعة؛ PromptQuorum (منتجنا الخاص) لاختبار الاتساق عبر GPT و Claude و Gemini قبل الإنتاج.**',
     quickFacts: [
       'Instructor مرخص بـ MIT ويوفر ستة تنفيذات رسمية: Python و TypeScript و Ruby و Go و Elixir و Rust',
       'يقيّد Outlines 1.x الرموز عند التوليد، وصار يقود الآن APIs المستضافة أيضاً لا الواجهات المحلية فقط',
@@ -2751,17 +2751,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'يترجم BAML ملف مخطط .baml واحداً إلى عملاء بأنواع محددة، ويُصلح المخرجات المشوهة بدل إعادة المحاولة',
       'يقرأ LangChain 1.x دعم structured output الأصلي لكل مزود من ملف تعريف النموذج',
       'Marvin 3.x مبني على Pydantic AI ويوفر extract و cast و classify و generate',
-      'يختبر PromptQuorum نفس الـ prompt على أكثر من 25 نموذجاً لضمان الاتساق'
+      'يمكن لـ PromptQuorum (منتجنا الخاص) تشغيل نفس الـ prompt على نماذج عديدة لمقارنة الاتساق'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل أدوات Structured Output و JSON Mode (2026)',
-      description: 'مقارنة سبع مكتبات لـ structured output في LLM: Instructor و Outlines و Pydantic AI و BAML و LangChain و Marvin و PromptQuorum. مصنفة حسب الامتثال للمخطط ودعم اللغة والتوافق مع النماذج المحلية والترخيص.',
+      description: 'مقارنة سبع مكتبات لـ structured output في LLM: Instructor و Outlines و Pydantic AI و BAML و LangChain و Marvin و PromptQuorum (منتجنا الخاص). مقارنة حسب الامتثال للمخطط ودعم اللغة والتوافق مع النماذج المحلية والترخيص.',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/ar/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
@@ -2784,12 +2784,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'أفضل أدوات structured output لنماذج اللغة الكبيرة (2026)',
-      description: 'سبع مكتبات رائدة لإلزام النماذج اللغوية بـ structured output.',
+      description: 'سبع مكتبات وأدوات لإلزام النماذج اللغوية بـ structured output أو اختباره، بما فيها PromptQuorum (منتجنا الخاص).',
       numberOfItems: 7,
       inLanguage: 'ar',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'استخراج مبني على Pydantic من أي LLM مع إعادة محاولات تلقائية. مرخص بـ MIT، ستة تنفيذات لغوية.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'مكتبة constrained decoding لضمان الامتثال للمخطط في النماذج المحلية. مفتوحة المصدر Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'مكتبة constrained decoding تفرض مخططك أثناء التوليد في النماذج المحلية. مفتوحة المصدر Apache 2.0.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'إطار عمل وكلاء آمن من حيث الأنواع مع ثلاثة أوضاع structured output وتكاملات تنفيذ معمّر.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: 'لغة prompt تبدأ من المخطط، تترجم عملاء بأنواع محددة وتُصلح المخرجات المشوهة عبر schema-aligned parsing.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'طبقة API موحدة لـ structured output عبر OpenAI و Anthropic و Google والنماذج المحلية.' },
@@ -2804,17 +2804,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: 'استخدم Instructor للاستخراج بـ Python مع إعادة المحاولات. استخدم Outlines لضمان الامتثال للمخطط في النماذج المحلية. استخدم Pydantic AI للوكلاء متعددة الأدوار الآمنة من حيث الأنواع. استخدم BAML عندما تحتاج خدمات Python و TypeScript و Go إلى مشاركة مخطط واحد. استخدم LangChain إن كنت تعمل بالفعل في هذا النظام البيئي. استخدم Marvin لنداءات extract و classify من سطر واحد. استخدم PromptQuorum لاختبار اتساق structured output عبر جميع النماذج قبل الإنتاج.'
+            text: 'استخدم Instructor للاستخراج بـ Python مع إعادة المحاولات. استخدم Outlines للتوليد المقيّد بالمخطط في النماذج المحلية. استخدم Pydantic AI للوكلاء متعددة الأدوار الآمنة من حيث الأنواع. استخدم BAML عندما تحتاج خدمات Python و TypeScript و Go إلى مشاركة مخطط واحد. استخدم LangChain إن كنت تعمل بالفعل في هذا النظام البيئي. استخدم Marvin لنداءات extract و classify من سطر واحد. استخدم PromptQuorum (منتجنا الخاص) لاختبار اتساق structured output عبر جميع النماذج قبل الإنتاج.'
           }
         ],
         items: [
-          '**Instructor** هو الخيار الأكثر شيوعاً في Python — مخططات Pydantic، إعادة محاولات تلقائية، ونسخ رسمية لـ TypeScript و Ruby و Go و Elixir و Rust',
-          '**Outlines** يضمن الامتثال للمخطط في النماذج المحلية عبر constrained decoding — لا خطر هلوسة على مستوى البنية',
+          '**Instructor** خيار واسع الاستخدام في Python — مخططات Pydantic، إعادة محاولات تلقائية، ونسخ رسمية لـ TypeScript و Ruby و Go و Elixir و Rust',
+          '**Outlines** يقيّد توليد الرموز بمخططك في النماذج المحلية، مما يزيل معظم إخفاقات التحليل البنيوي؛ ما زالت القيم بحاجة إلى تحقق، وقد يُفسد الاقتطاع أو حدود القواعد النحوية المخرجات',
           '**Pydantic AI** يضيف سلامة الأنواع إلى محادثات الوكلاء متعددة الأدوار، ويتراجع من structured output الأصلي إلى نداءات الأدوات ثم JSON عبر prompt',
           '**BAML** يضع المخطط والـ prompt في ملف .baml خاضع لإدارة الإصدارات ويولّد عملاء بأنواع محددة — عقد واحد للفرق متعددة اللغات',
           '**with_structured_output() في LangChain** يوحد structured output عبر APIs لـ OpenAI و Anthropic و Google',
           '**Marvin 3.x** يستند إلى Pydantic AI ويختصر الاستخراج إلى نداء extract أو classify واحد',
-          '**PromptQuorum** يختبر اتساق structured output عبر جميع النماذج قبل النشر في الإنتاج'
+          '**PromptQuorum** (منتجنا الخاص) يختبر اتساق structured output عبر جميع النماذج قبل النشر في الإنتاج'
         ]
       },
       whichProblem: {
@@ -2824,22 +2824,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: 'تحل أدوات المخرجات المهيكلة ثلاث مشكلات مختلفة — فرض المخطط أثناء التوليد، والتحقق من النتيجة بعده، وإصلاح المخرجات المشوّهة — ولا تحتاج معظم الأنظمة سوى الاثنتين الأوليين.' },
           { type: 'in-plain-terms', text: 'لا تختر بناءً على قائمة الميزات، بل اسأل عن العطل الذي تواجهه فعلاً: هل يتجاهل النموذج صيغتك، أم يلتزم بها لكن القيم خاطئة، أم يعيد JSON لا يمكن تحليله أصلاً؟ لكل حالة علاج مختلف.' },
         ],
-        content: '**يتطلب structured output حل ثلاث مشكلات مترابطة: تعريف المخطط، والامتثال عبر API، والتحقق.** تعالج الأدوات المختلفة هذه المشكلات بطرق مختلفة. يتعامل Instructor مع الثلاثة في Python مع إعادة المحاولات. يزيل Outlines خطوة التحقق عبر constrained decoding. يضيف Pydantic AI سلامة الأنواع للوكلاء. ينقل BAML المخطط إلى ملف مُترجَم ويُصلح المخرجات غير المكتملة. يغلف LangChain APIs المزودين. يُعطي Marvin الأولوية لسرعة المطور. يتحقق PromptQuorum من الاتساق عبر جميع النماذج.',
+        content: '**يتطلب structured output حل ثلاث مشكلات مترابطة: تعريف المخطط، والامتثال عبر API، والتحقق.** تعالج الأدوات المختلفة هذه المشكلات بطرق مختلفة. يتعامل Instructor مع الثلاثة في Python مع إعادة المحاولات. يقلل Outlines الحاجة إلى خطوة تحقق منفصلة عبر constrained decoding. يضيف Pydantic AI سلامة الأنواع للوكلاء. ينقل BAML المخطط إلى ملف مُترجَم ويُصلح المخرجات غير المكتملة. يغلف LangChain APIs المزودين. يُعطي Marvin الأولوية لسرعة المطور. يتحقق PromptQuorum من الاتساق عبر جميع النماذج.',
         columns: ['المشكلة', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { 'المشكلة': 'تعريف المخطط', 'Instructor': 'نماذج Pydantic', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'نماذج Pydantic', 'BAML': 'ملفات صنف .baml', 'LangChain': 'تعريفات الأدوات', 'Marvin': 'تلميحات أنواع Python' },
           { 'المشكلة': 'الإلزام في نداء API', 'Instructor': 'إعادة محاولة + تحقق', 'Outlines': 'تقييد على مستوى الرمز', 'Pydantic AI': 'أصلي / أدوات / prompt', 'BAML': 'prompt مولَّد + محلل', 'LangChain': 'وضع JSON للمزود', 'Marvin': 'أنواع مخرجات Pydantic AI' },
-          { 'المشكلة': 'التحقق من الاستجابة', 'Instructor': 'تلقائي', 'Outlines': 'مضمون عند التوليد', 'Pydantic AI': 'محقق من الأنواع', 'BAML': 'Schema-aligned parsing', 'LangChain': 'يدوي', 'Marvin': 'تلقائي' }
+          { 'المشكلة': 'التحقق من الاستجابة', 'Instructor': 'تلقائي', 'Outlines': 'مفروض عند التوليد', 'Pydantic AI': 'محقق من الأنواع', 'BAML': 'Schema-aligned parsing', 'LangChain': 'يدوي', 'Marvin': 'تلقائي' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor: استخراج Pydantic',
-        content: '**Instructor هي المكتبة الأكثر انتشاراً لـ structured output. تغلف أي API للـ LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — وتُعيد نماذج Pydantic محققة بدلاً من نص خام.** يتعامل Instructor مع إعادة المحاولات تلقائياً عند فشل التحقق، مما يجعله جاهزاً للإنتاج دون معالجة إضافية للأخطاء.',
+        content: '**Instructor مكتبة واسعة الاستخدام لـ structured output. تغلف أي API للـ LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — وتُعيد نماذج Pydantic محققة بدلاً من نص خام.** يعيد Instructor المحاولة تلقائياً عند فشل التحقق؛ ولا تزال بحاجة إلى معالجة حالة استنفاد المحاولات.',
         items: [
           'يعمل مع كل المزودين الكبار (OpenAI, Anthropic, Google, Groq, Mistral) والنماذج المحلية عبر Ollama أو vLLM',
           'مخططات Pydantic v2: تلميحات الأنواع وقواعد التحقق وأوصاف docstring مدمجة في المخطط',
-          'إعادة محاولة تلقائية مع backoff عند فشل التحقق — لا حاجة لمعالجة أخطاء يدوية',
+          'إعادة محاولة تلقائية عند فشل التحقق — ولا تزال بحاجة إلى معالجة حالة استنفاد المحاولات',
           'ستة تنفيذات رسمية: Python و TypeScript و Ruby و Go و Elixir و Rust',
           'مفتوح المصدر بترخيص MIT، يُصان بنشاط، وهو حالياً على خط 1.x',
           'السعر: مجاني (لا تكلفة إضافية بخلاف نداءات API لـ LLM)'
@@ -2850,13 +2850,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines: Constrained Decoding',
-        content: '**يفرض Outlines الامتثال للمخطط عند توليد الرمز المميز عبر constrained decoding. بدلاً من توليد الرموز ثم التحقق منها، يقيّد Outlines الرموز الصالحة في كل خطوة لتطابق مخططك.** هذا يضمن أن المخرجات ستُحلَّل وفق مخططك دون أي خطر هلوسة على مستوى البنية، وهو ما يجعله الخيار الافتراضي للنماذج المحلية.',
+        content: '**يفرض Outlines الامتثال للمخطط عند توليد الرمز المميز عبر constrained decoding. بدلاً من توليد الرموز ثم التحقق منها، يقيّد Outlines الرموز الصالحة في كل خطوة لتطابق مخططك.** هذا يزيل معظم إخفاقات التحليل البنيوي، مع بقاء حاجة القيم إلى التحقق، وقد يُفسد الاقتطاع أو حدود القواعد النحوية المخرجات. ولهذا هو خيار شائع للنماذج المحلية.',
         items: [
           'واجهات محلية: transformers و llama.cpp و MLX وأي نموذج من Hugging Face',
           'واجهات خادم: vLLM و Ollama و NVIDIA NIM',
           'APIs المستضافة مدعومة أيضاً (OpenAI, Gemini)، فينتقل الكود نفسه بين المحلي والسحابة',
           'المخططات كنماذج Pydantic أو JSON Schema أو أنماط regex أو خيارات حرفية أو قواعد نحوية غير مقيدة بالسياق',
-          'امتثال بنيوي مضمون — لا حاجة للتحقق بعد التوليد ولا لإعادة المحاولات',
+          'امتثال بنيوي قوي عند التوليد — يبقى التحقق من القيم لازماً، وانتبه إلى الاقتطاع وحدود القواعد النحوية',
           'مفتوح المصدر Apache 2.0، حالياً على خط 1.x، مع نواة Rust (outlines-core) للسرعة'
         ]
       },
@@ -2916,9 +2916,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: اختبار متعدد النماذج',
-        content: '**PromptQuorum ليست مكتبة structured output بذاتها، بل منصة اختبار للتحقق من اتساق structured output عبر النماذج.** تشغّل نفس الـ prompt في وقت واحد مقابل GPT-6 Astra و Claude Opus 5.5 و Gemini 4 Argon وأكثر من 20 نموذجاً آخر. تقيس الامتثال للمخطط والكمون والتكلفة لكل نموذج.',
+        content: '**PromptQuorum منتج خاص بنا وليست مكتبة structured output بذاتها، بل منصة اختبار للتحقق من اتساق structured output عبر النماذج.** تشغّل نفس الـ prompt في وقت واحد مقابل GPT-6 Astra و Claude Opus 5.5 و Gemini 4 Argon ونماذج أخرى عديدة. تقيس الامتثال للمخطط والكمون والتكلفة لكل نموذج.',
         items: [
-          'إرسال متعدد النماذج في نداء API واحد — اختبر prompt مقابل أكثر من 25 نموذجاً',
+          'إرسال متعدد النماذج في نداء API واحد — اختبر prompt مقابل نماذج عديدة',
           'مقاييس امتثال structured output — معدل النجاح والكمون والتكلفة لكل نموذج',
           'تحديد النماذج التي تُهلوس بمخططك — تجنب النشر على نماذج غير موثوقة',
           'وضع الإجماع — إيجاد الاتفاق عبر تشغيلات نماذج مستقلة',
@@ -2929,15 +2929,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'مقارنة جانبية',
-        columns: ['الأداة', 'الأنسب لـ', 'صيغة المخطط', 'اللغة', 'النماذج المحلية', 'الترخيص', 'منحنى التعلم'],
+        columns: ['الأداة', 'الأنسب لـ', 'صيغة المخطط', 'اللغة', 'النماذج المحلية', 'الترخيص', 'منحنى التعلم (تقييم تحريري)'],
         rows: [
-          { 'الأداة': '[Instructor](https://python.useinstructor.com)', 'الأنسب لـ': 'APIs Python + إعادة المحاولات', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python, TS, Ruby, Go, Elixir, Rust', 'النماذج المحلية': 'نعم (Ollama, vLLM)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'منخفض' },
-          { 'الأداة': '[Outlines](https://dottxt.ai)', 'الأنسب لـ': 'نشر النماذج المحلية', 'صيغة المخطط': 'Pydantic, JSON Schema, regex, CFG', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (أصلي)', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم': 'متوسط' },
-          { 'الأداة': '[Pydantic AI](https://ai.pydantic.dev)', 'الأنسب لـ': 'وكلاء آمنة من حيث الأنواع', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (Ollama)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'منخفض' },
-          { 'الأداة': '[BAML](https://boundaryml.com)', 'الأنسب لـ': 'الفرق متعددة اللغات والنماذج غير المستقرة', 'صيغة المخطط': 'ملفات صنف .baml', 'اللغة': 'Python, TS + 6 عبر OpenAPI', 'النماذج المحلية': 'نعم (متوافق مع OpenAI)', 'الترخيص': 'Apache 2.0، المراقبة مدفوعة', 'منحنى التعلم': 'متوسط' },
-          { 'الأداة': '[LangChain](https://langchain.com)', 'الأنسب لـ': 'Chains + وكلاء', 'صيغة المخطط': 'تعريفات الأدوات', 'اللغة': 'Python, JS', 'النماذج المحلية': 'نعم', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'متوسط' },
-          { 'الأداة': '[Marvin](https://github.com/PrefectHQ/marvin)', 'الأنسب لـ': 'extract و classify سريعان', 'صيغة المخطط': 'تلميحات الأنواع', 'اللغة': 'Python', 'النماذج المحلية': 'نعم', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم': 'منخفض جداً' },
-          { 'الأداة': '[PromptQuorum](https://www.promptquorum.com)', 'الأنسب لـ': 'اختبار متعدد النماذج', 'صيغة المخطط': 'API-agnostic', 'اللغة': 'API-first', 'النماذج المحلية': 'عبر وكيل OpenAI', 'الترخيص': 'طبقة مجانية + enterprise', 'منحنى التعلم': 'منخفض' }
+          { 'الأداة': '[Instructor](https://python.useinstructor.com)', 'الأنسب لـ': 'APIs Python + إعادة المحاولات', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python, TS, Ruby, Go, Elixir, Rust', 'النماذج المحلية': 'نعم (Ollama, vLLM)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم (تقييم تحريري)': 'منخفض' },
+          { 'الأداة': '[Outlines](https://dottxt.ai)', 'الأنسب لـ': 'نشر النماذج المحلية', 'صيغة المخطط': 'Pydantic, JSON Schema, regex, CFG', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (أصلي)', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم (تقييم تحريري)': 'متوسط' },
+          { 'الأداة': '[Pydantic AI](https://ai.pydantic.dev)', 'الأنسب لـ': 'وكلاء آمنة من حيث الأنواع', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (Ollama)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم (تقييم تحريري)': 'منخفض' },
+          { 'الأداة': '[BAML](https://boundaryml.com)', 'الأنسب لـ': 'الفرق متعددة اللغات والنماذج غير المستقرة', 'صيغة المخطط': 'ملفات صنف .baml', 'اللغة': 'Python, TS + 6 عبر OpenAPI', 'النماذج المحلية': 'نعم (متوافق مع OpenAI)', 'الترخيص': 'Apache 2.0، المراقبة مدفوعة', 'منحنى التعلم (تقييم تحريري)': 'متوسط' },
+          { 'الأداة': '[LangChain](https://langchain.com)', 'الأنسب لـ': 'Chains + وكلاء', 'صيغة المخطط': 'تعريفات الأدوات', 'اللغة': 'Python, JS', 'النماذج المحلية': 'نعم', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم (تقييم تحريري)': 'متوسط' },
+          { 'الأداة': '[Marvin](https://github.com/PrefectHQ/marvin)', 'الأنسب لـ': 'extract و classify سريعان', 'صيغة المخطط': 'تلميحات الأنواع', 'اللغة': 'Python', 'النماذج المحلية': 'نعم', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم (تقييم تحريري)': 'منخفض جداً' },
+          { 'الأداة': '[PromptQuorum](https://www.promptquorum.com) (منتجنا الخاص)', 'الأنسب لـ': 'اختبار متعدد النماذج', 'صيغة المخطط': 'API-agnostic', 'اللغة': 'API-first', 'النماذج المحلية': 'عبر وكيل OpenAI', 'الترخيص': 'طبقة مجانية + enterprise', 'منحنى التعلم (تقييم تحريري)': 'منخفض' }
         ]
       },
       decision: {
@@ -2946,7 +2946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'ابدأ بالإجابة على ثلاثة أسئلة: (1) بأي لغات كُتبت الخدمات التي تنادي النموذج فعلاً؟ (2) هل تحتاج دعم النماذج المحلية؟ (3) ما مدى تعقيد التحقق لديك؟',
         items: [
           '**استخدم Instructor إذا:** كنت تبني APIs Python وتحتاج إعادة محاولات تلقائية عند فشل التحقق. أفضل خيار للاستخدام العام.',
-          '**استخدم Outlines إذا:** كنت تنشر نماذج محلية (llama.cpp, vLLM, MLX) وتريد امتثالاً مضموناً للمخطط عند التوليد.',
+          '**استخدم Outlines إذا:** كنت تنشر نماذج محلية (llama.cpp, vLLM, MLX) وتريد فرض المخطط عند التوليد.',
           '**استخدم Pydantic AI إذا:** كنت تبني سير عمل وكلاء متعددة الأدوار مع سلامة الأنواع في كل خطوة، أو كنت تحتاج تنفيذاً معمّراً.',
           '**استخدم BAML إذا:** كانت خدمات Python و TypeScript و Go بحاجة إلى مشاركة مخطط واحد، أو كان نموذجك بلا وضع JSON أصلي موثوق.',
           '**استخدم LangChain إذا:** كنت تستخدم chains أو وكلاء LangChain بالفعل — with_structured_output() هي أبسط إضافة.',
@@ -2972,27 +2972,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'اعتبار أي وضع JSON ضماناً للمخطط',
             problem: 'وضع JSON البسيط (response_format json_object، التحكم في JSON لـ Anthropic) يضمن فقط أن الرد JSON صالح، لا أنه يطابق حقولك وأنواعك. وأوضاع المخطط الصارمة تذهب أبعد فتضمن الشكل، لكن لا هذا ولا ذاك يضمن صحة القيم: فالكائن سليم البنية قد يحوي سعراً مختلقاً أو تاريخاً مهلوساً.',
-            fix: 'أضف تحققاً فوقه في كل الأحوال: Instructor أو Outlines أو Pydantic AI أو BAML. وضع قواعد العمل في مدققات Pydantic لا في المخطط وحده. اختبر مع PromptQuorum لرصد إخفاقات الامتثال لكل نموذج.'
+            fix: 'أضف تحققاً فوقه في كل الأحوال: Instructor أو Outlines أو Pydantic AI أو BAML. وضع قواعد العمل في مدققات Pydantic لا في المخطط وحده. اختبر مع PromptQuorum (منتجنا الخاص) لرصد إخفاقات الامتثال لكل نموذج.'
           },
           {
             mistake: 'تصميم مخططات مقيدة جداً',
             problem: 'المخططات المقيدة جداً (قوائم enum صغيرة، أنماط regex محددة جداً) تجعل نماذج LLM تفشل في التحقق بكثرة. أعداد إعادة المحاولات العالية تهدر tokens والمال.',
-            fix: 'استخدم PromptQuorum لاختبار صرامة المخطط عبر النماذج. خفّف القيود لتحقيق امتثال 95%+. استخدم الحقول الاختيارية بدلاً من المطلوبة حيثما أمكن.'
+            fix: 'استخدم PromptQuorum (منتجنا الخاص) لاختبار صرامة المخطط عبر النماذج. خفّف القيود حتى تبلغ معدل الامتثال المستهدف. استخدم الحقول الاختيارية بدلاً من المطلوبة حيثما أمكن.'
           },
           {
             mistake: 'عدم اختبار الفروق بين النماذج المحلية ونماذج API',
             problem: 'Outlines على llama.cpp يتصرف بشكل مختلف عن Instructor على GPT-6 Astra. تختلف معدلات الامتثال للمخطط بحسب النموذج. البناء لنموذج API متقدم فقط ثم النشر على نموذج محلي صغير يسبب إخفاقات في الإنتاج.',
-            fix: 'اختبر جميع backends النماذج المخطط لها مبكراً. استخدم PromptQuorum لتشغيل نفس الـ prompt على نماذج محلية (vLLM, Ollama) ومستضافة (OpenAI, Anthropic, Google).'
+            fix: 'اختبر جميع backends النماذج المخطط لها مبكراً. استخدم PromptQuorum (منتجنا الخاص) لتشغيل نفس الـ prompt على نماذج محلية (vLLM, Ollama) ومستضافة (OpenAI, Anthropic, Google).'
           },
           {
             mistake: 'إهمال تأثير الكمون وتكلفة tokens',
             problem: 'structured output مع إعادة المحاولات يكلف tokens أكثر. Instructor يعيد المحاولة عند الإخفاق. و constrained decoding لـ Outlines يضيف عبئاً لكل رمز مقارنة بالتوليد الحر. عدم قياس التكلفة لكل نموذج.',
-            fix: 'استخدم تتبع التكاليف في PromptQuorum. قارن الكمون عبر النماذج. لسير العمل الحساسة للميزانية، فضّل Outlines أو BAML (بلا حلقة إعادة محاولات). وللدقة على مخططات مرنة، اقبل تكلفة إعادة المحاولات في Instructor.'
+            fix: 'استخدم تتبع التكاليف في PromptQuorum (منتجنا الخاص). قارن الكمون عبر النماذج. لسير العمل الحساسة للميزانية، فضّل Outlines أو BAML (بلا حلقة إعادة محاولات). وللدقة على مخططات مرنة، اقبل تكلفة إعادة المحاولات في Instructor.'
           },
           {
             mistake: 'خلط طرق التحقق (دون اتساق)',
             problem: 'بعض الطلبات تستخدم Instructor، وأخرى تُحلل JSON خاماً. بعض النماذج محققة وأخرى لا. هذا يؤدي إلى أخطاء غير متسقة في الإنتاج.',
-            fix: 'قياسياً على نهج تحقق واحد لكل قاعدة كود. جميع الطلبات تستخدم Instructor، أو جميعها تستخدم Outlines. الاتساق يقلل وقت التصحيح 10 أضعاف.'
+            fix: 'قياسياً على نهج تحقق واحد لكل قاعدة كود. جميع الطلبات تستخدم Instructor، أو جميعها تستخدم Outlines. الاتساق يجعل التصحيح أسهل.'
           },
           {
             mistake: 'نسخ دروس مكتوبة لواجهة API تم استبدالها',
@@ -3023,11 +3023,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'ما الأداة الأفضل لمطوري Python؟',
-            a: 'Instructor هو الخيار الأكثر شيوعاً في Python. يستخدم نماذج Pydantic لتعريف المخططات، ويتعامل تلقائياً مع إعادة المحاولات والتحقق، ويدعم كل APIs الـ LLM الكبرى إضافة إلى النماذج المحلية عبر Ollama أو vLLM. و Pydantic AI أنسب إن أردت أيضاً محادثات وكلاء متعددة الأدوار آمنة من حيث الأنواع، بينما Marvin هو الأسرع إن كان يكفيك نداء extract أو classify من سطر واحد.'
+            a: 'Instructor خيار واسع الاستخدام في Python. يستخدم نماذج Pydantic لتعريف المخططات، ويتعامل تلقائياً مع إعادة المحاولات والتحقق، ويدعم كل APIs الـ LLM الكبرى إضافة إلى النماذج المحلية عبر Ollama أو vLLM. و Pydantic AI أنسب إن أردت أيضاً محادثات وكلاء متعددة الأدوار آمنة من حيث الأنواع، بينما Marvin هو الأسرع إن كان يكفيك نداء extract أو classify من سطر واحد.'
           },
           {
             q: 'هل يمكنني استخدام structured output مع نماذج محلية مثل Llama؟',
-            a: 'نعم. Outlines متخصص في constrained decoding للنماذج المحلية — يعمل مع transformers و llama.cpp و MLX و vLLM و Ollama، ويضمن عند التوليد أن المخرجات ستُحلَّل وفق مخططك. ويدعم Instructor و Pydantic AI كذلك Ollama و vLLM إن شغّلتهما كـ API، بينما يعمل BAML مع أي نقطة نهاية متوافقة مع OpenAI.'
+            a: 'نعم. Outlines متخصص في constrained decoding للنماذج المحلية — يعمل مع transformers و llama.cpp و MLX و vLLM و Ollama، ويقيّد المخرجات بمخططك عند التوليد، مما يزيل معظم إخفاقات التحليل. ويدعم Instructor و Pydantic AI كذلك Ollama و vLLM إن شغّلتهما كـ API، بينما يعمل BAML مع أي نقطة نهاية متوافقة مع OpenAI.'
           },
           {
             q: 'ما الفرق بين Instructor و Marvin؟',
@@ -3039,11 +3039,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'كيف أختبر موثوقية structured output؟',
-            a: 'استخدم PromptQuorum لتشغيل نفس الـ prompt عبر نماذج متعددة وقياس الامتثال للمخطط. تتفاوت الموثوقية بين GPT-6 Astra و Claude Opus 5.5 و Gemini 4 Argon، وتتفاوت أكثر مع النماذج المحلية الصغيرة. اختبر قبل النشر في الإنتاج، وتحقق محلياً باستخدام Instructor أو Pydantic.'
+            a: 'استخدم PromptQuorum (منتجنا الخاص) لتشغيل نفس الـ prompt عبر نماذج متعددة وقياس الامتثال للمخطط. تتفاوت الموثوقية بين GPT-6 Astra و Claude Opus 5.5 و Gemini 4 Argon، وتتفاوت أكثر مع النماذج المحلية الصغيرة. اختبر قبل النشر في الإنتاج، وتحقق محلياً باستخدام Instructor أو Pydantic.'
           },
           {
             q: 'ماذا يعني "constrained decoding"؟',
-            a: 'constrained decoding يقيّد توليد الرموز على القيم الصالحة فقط وفق مخططك. يفعل Outlines ذلك بحساب مجموعة الرموز الصالحة التالية في كل خطوة. هذا يضمن أن المخرجات ستُحلَّل وفق مخططك دون تحقق ما بعد التوليد أو إعادة محاولات، فهو أكثر موثوقية من وضع JSON البسيط على مستوى API. لكنه يقيّد البنية لا الحقيقة: الحقول ستكون صحيحة، أما القيم فتبقى بحاجة إلى مراجعة.'
+            a: 'constrained decoding يقيّد توليد الرموز على القيم الصالحة فقط وفق مخططك. يفعل Outlines ذلك بحساب مجموعة الرموز الصالحة التالية في كل خطوة. هذا يزيل معظم إخفاقات التحليل البنيوي دون إعادة محاولات بعد التوليد، فهو أكثر موثوقية من وضع JSON البسيط على مستوى API، وإن كان الاقتطاع أو حدود القواعد النحوية قد يُفسدان المخرجات. لكنه يقيّد البنية لا الحقيقة: القيم تبقى بحاجة إلى مراجعة.'
           },
           {
             q: 'ما هو BAML ومتى أستخدمه بدل Instructor؟',
@@ -3055,11 +3055,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'أي أداة لديها أفضل توثيق؟',
-            a: 'LangChain و Pydantic AI لديهما التوثيق الأشمل بفضل دعمهما المؤسسي. وتوثيق BAML جيد على نحو لافت لمشروع حديث، لأن اللغة نفسها بحاجة إلى شرح. Instructor لديه دروس تعليمية وأمثلة ممتازة رغم صيانته من المجتمع. توثيق Outlines تقني لكنه شامل. وتوثيق Marvin موجز — راجع صفحات 3.x تحديداً، فمواد Marvin 2 القديمة ما زالت متداولة.'
+            a: 'جودة التوثيق مسألة ذاتية، لذا راجع التوثيق الحالي لكل مشروع. في قراءتنا، لدى LangChain و Pydantic AI توثيق واسع، ويعكس ذلك على الأرجح الموارد التي تقف خلفهما. وتوثيق BAML قوي لمشروع حديث، لأن اللغة نفسها بحاجة إلى شرح. لدى Instructor دروس تعليمية وأمثلة جيدة. توثيق Outlines تقني لكنه شامل. وتوثيق Marvin موجز — راجع صفحات 3.x تحديداً، فمواد Marvin 2 القديمة ما زالت متداولة.'
           },
           {
             q: 'هل أحتاج الأدوات السبع جميعها أم أداة واحدة فقط؟',
-            a: 'ابدأ بأداة واحدة. يجب على مطوري Python تجربة Instructor أو Pydantic AI. الفرق التي تعمل بنماذج محلية يجب أن تجرب Outlines. والفرق متعددة اللغات يجب أن تجرب BAML. مستخدمو LangChain يجب أن يجربوا with_structured_output(). استخدم PromptQuorum للتحقق من الاتساق عبر جميع النماذج. معظم الفرق تستخدم أداة واحدة + PromptQuorum للاختبار.'
+            a: 'ابدأ بأداة واحدة. يجب على مطوري Python تجربة Instructor أو Pydantic AI. الفرق التي تعمل بنماذج محلية يجب أن تجرب Outlines. والفرق متعددة اللغات يجب أن تجرب BAML. مستخدمو LangChain يجب أن يجربوا with_structured_output(). استخدم PromptQuorum (منتجنا الخاص) للتحقق من الاتساق عبر جميع النماذج.'
           }
         ]
       },
@@ -3068,7 +3068,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'المصادر',
         items: [
           '[مستودع Instructor على GitHub](https://github.com/567-labs/instructor) — المستودع الرسمي والوثائق لمكتبة Instructor',
-          '[مستودع Outlines على GitHub](https://github.com/dottxt-ai/outlines) — constrained decoding لضمان الامتثال للمخطط',
+          '[مستودع Outlines على GitHub](https://github.com/dottxt-ai/outlines) — constrained decoding للتوليد المقيّد بالمخطط',
           '[وثائق Pydantic AI](https://pydantic.dev/docs/ai/overview/) — إطار وكلاء آمن من حيث الأنواع مع structured output',
           '[دليل Structured Output في LangChain](https://docs.langchain.com/oss/python/langchain/structured-output) — API موحدة لـ structured output في LangChain',
           '[وثائق BAML](https://docs.boundaryml.com/home) — لغة prompt تبدأ من المخطط و schema-aligned parsing',
@@ -3083,14 +3083,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-tools-structured-output-overview-hero-ko.webp',
     title: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
     seoTitle: '2026년 Structured Output JSON Mode 최고의 한국어 도구',
-    metaDescription: 'Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum — 7가지 structured output 도구 비교. 라이선스 및 로컬 모델 지원 포함.',
+    metaDescription: 'Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum(자사 제품) — 7가지 structured output 도구 비교. 라이선스 및 로컬 모델 지원 포함.',
     ogTitle: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
-    ogDescription: '7가지 LLM structured output 도구 비교: Instructor(재시도), Outlines(constrained decoding), BAML(다국어 팀). PromptQuorum으로 일관성을 테스트하십시오.',
+    ogDescription: '7가지 LLM structured output 도구 비교: Instructor(재시도), Outlines(constrained decoding), BAML(다국어 팀). PromptQuorum(자사 제품)으로 일관성을 테스트하십시오.',
     twitterTitle: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
     twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs BAML vs LangChain vs Marvin — 어떤 structured output 도구가 귀하의 스택에 적합합니까? 2026년 나란히 비교.',
-    intro: '**2026년 7가지 도구가 structured output을 지배합니다: Pydantic 추출을 위한 Instructor, constrained decoding을 위한 Outlines, type-safe 에이전트를 위한 Pydantic AI, 스키마 우선 프롬프트 파일을 위한 BAML, 통합 API를 위한 LangChain, 태스크 기반 추출을 위한 Marvin, 멀티 모델 테스트를 위한 PromptQuorum. 각 도구는 워크플로우의 서로 다른 병목 현상을 해결합니다.**',
+    intro: '**2026년 structured output에서 널리 쓰이거나 알아둘 만한 7가지 도구는 다음과 같습니다: Pydantic 추출을 위한 Instructor, constrained decoding을 위한 Outlines, type-safe 에이전트를 위한 Pydantic AI, 스키마 우선 프롬프트 파일을 위한 BAML, 통합 API를 위한 LangChain, 태스크 기반 추출을 위한 Marvin, 멀티 모델 테스트를 위한 PromptQuorum(자사 제품). 각 도구는 워크플로우의 서로 다른 병목 현상을 해결합니다.**',
     publishDate: '2026-04-30',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-09',
     lastFactChecked: '2026-08-31 — 라이브러리 버전, 라이선스, API, 문서 URL을 공식 저장소·PyPI·공급업체 문서와 대조하여 재검증했습니다',
     readTime: '12분 분량',
     educationalLevel: 'Advanced',
@@ -3116,7 +3116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Structured output 일반적인 실수', anchor: '#common-mistakes' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**모델이 실행되는 위치와 팀이 어떤 언어로 배포하는지에 따라 선택하십시오: 재시도와 type safety가 필요한 Python API 워크플로우에는 Instructor와 Pydantic AI; 로컬 모델에서 보장된 스키마 준수에는 Outlines; Python·TypeScript·Go 서비스가 하나의 스키마를 공유해야 한다면 BAML; 이미 chains 또는 에이전트를 사용하는 팀에는 LangChain; extract와 classify를 한 줄로 끝내려면 Marvin; 프로덕션 전 GPT, Claude, Gemini에서 일관성 테스트에는 PromptQuorum.**',
+    leadAnswerBlock: '**모델이 실행되는 위치와 팀이 어떤 언어로 배포하는지에 따라 선택하십시오: 재시도와 type safety가 필요한 Python API 워크플로우에는 Instructor와 Pydantic AI; 로컬 모델에서 스키마 제약 디코딩에는 Outlines; Python·TypeScript·Go 서비스가 하나의 스키마를 공유해야 한다면 BAML; 이미 chains 또는 에이전트를 사용하는 팀에는 LangChain; extract와 classify를 한 줄로 끝내려면 Marvin; 프로덕션 전 GPT, Claude, Gemini에서 일관성 테스트에는 PromptQuorum(자사 제품).**',
     quickFacts: [
       'Instructor는 MIT 라이선스이며 Python, TypeScript, Ruby, Go, Elixir, Rust 6개 공식 구현을 제공합니다',
       'Outlines 1.x는 생성 시점에 토큰을 제약하며 이제 로컬 백엔드뿐 아니라 호스팅 API도 구동합니다',
@@ -3124,17 +3124,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'BAML은 하나의 .baml 스키마 파일을 타입이 있는 클라이언트로 컴파일하고, 잘못된 출력을 재시도 대신 복구합니다',
       'LangChain 1.x는 각 공급자의 네이티브 structured output 지원 여부를 모델 프로필에서 읽습니다',
       'Marvin 3.x는 Pydantic AI 위에 구축되었으며 extract, cast, classify, generate를 제공합니다',
-      'PromptQuorum은 일관성을 위해 25개 이상의 모델에서 동일한 프롬프트를 테스트합니다'
+      'PromptQuorum(자사 제품)은 일관성을 비교하기 위해 많은 모델에서 동일한 프롬프트를 실행할 수 있습니다'
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
-      description: '7가지 LLM structured output 라이브러리 비교: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum. 스키마 준수, 언어 지원, 로컬 모델 호환성, 라이선스 기준으로 분류됩니다.',
+      description: '7가지 LLM structured output 라이브러리 비교: Instructor, Outlines, Pydantic AI, BAML, LangChain, Marvin, PromptQuorum(자사 제품). 스키마 준수, 언어 지원, 로컬 모델 호환성, 라이선스 기준으로 비교합니다.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-09',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
@@ -3157,12 +3157,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: '2026년 최고의 LLM structured output 도구',
-      description: '언어 모델에서 structured output을 강제하는 7가지 선도적인 라이브러리.',
+      description: '언어 모델에서 structured output을 강제하거나 테스트하는 7가지 라이브러리와 도구로, PromptQuorum(자사 제품)을 포함합니다.',
       numberOfItems: 7,
       inLanguage: 'ko',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Instructor', description: '모든 LLM에서 Pydantic 기반 추출과 자동 재시도를 제공합니다. MIT 라이선스, 6개 언어 구현.' },
-        { '@type': 'ListItem', position: 2, name: 'Outlines', description: '로컬 모델에서 보장된 스키마 준수를 위한 constrained decoding 라이브러리. Apache 2.0 오픈소스.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: '로컬 모델에서 생성 시점에 스키마를 강제하는 constrained decoding 라이브러리. Apache 2.0 오픈소스.' },
         { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: '세 가지 structured output 모드와 지속 실행 연동을 갖춘 type-safe 에이전트 프레임워크.' },
         { '@type': 'ListItem', position: 4, name: 'BAML', description: '타입이 있는 클라이언트를 컴파일하고 schema-aligned parsing으로 잘못된 모델 출력을 복구하는 스키마 우선 프롬프트 언어.' },
         { '@type': 'ListItem', position: 5, name: 'LangChain', description: 'OpenAI, Anthropic, Google 및 로컬 모델에서 structured output을 위한 통합 API 레이어.' },
@@ -3177,17 +3177,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'TL;DR',
-            text: '재시도와 함께 Python 추출에는 Instructor를 사용하십시오. 로컬 모델에서 보장된 스키마 준수에는 Outlines를 사용하십시오. type-safe 멀티 턴 에이전트에는 Pydantic AI를 사용하십시오. Python·TypeScript·Go 서비스가 하나의 스키마를 공유해야 한다면 BAML을 사용하십시오. 이미 해당 생태계에 있다면 LangChain을 사용하십시오. extract와 classify를 한 줄로 끝내려면 Marvin을 사용하십시오. 프로덕션 전 모든 모델에서 structured output 일관성을 테스트하려면 PromptQuorum을 사용하십시오.'
+            text: '재시도와 함께 Python 추출에는 Instructor를 사용하십시오. 로컬 모델에서 스키마 제약 디코딩에는 Outlines를 사용하십시오. type-safe 멀티 턴 에이전트에는 Pydantic AI를 사용하십시오. Python·TypeScript·Go 서비스가 하나의 스키마를 공유해야 한다면 BAML을 사용하십시오. 이미 해당 생태계에 있다면 LangChain을 사용하십시오. extract와 classify를 한 줄로 끝내려면 Marvin을 사용하십시오. 프로덕션 전 모든 모델에서 structured output 일관성을 테스트하려면 PromptQuorum(자사 제품)을 사용하십시오.'
           }
         ],
         items: [
-          '**Instructor** 가장 인기 있는 Python 옵션 — Pydantic 스키마, 자동 재시도, TypeScript·Ruby·Go·Elixir·Rust 공식 포팅',
-          '**Outlines** constrained decoding을 통해 로컬 모델에서 스키마 준수를 보장합니다 — 구조 측면의 환각 위험 없음',
+          '**Instructor** 널리 쓰이는 Python 옵션 — Pydantic 스키마, 자동 재시도, TypeScript·Ruby·Go·Elixir·Rust 공식 포팅',
+          '**Outlines** 로컬 모델에서 토큰 생성을 스키마로 제약하여 구조 측면의 파싱 실패 대부분을 제거합니다. 값은 여전히 검증이 필요하며, 잘림이나 문법 한계로 출력이 깨질 수 있습니다',
           '**Pydantic AI** 멀티 턴 에이전트 대화에 type safety를 추가하고, 네이티브 structured output에서 도구 호출, 프롬프트 기반 JSON 순으로 폴백합니다',
           '**BAML** 스키마와 프롬프트를 버전 관리되는 .baml 파일에 두고 타입이 있는 클라이언트를 생성합니다 — 다국어 팀이 하나의 계약을 공유합니다',
           '**LangChain의 with_structured_output()** OpenAI, Anthropic, Google API에서 structured output을 통합합니다',
           '**Marvin 3.x** Pydantic AI 위에 올라가 추출을 extract 또는 classify 한 번의 호출로 줄입니다',
-          '**PromptQuorum** 프로덕션 배포 전 모든 모델에서 structured output 일관성을 테스트합니다'
+          '**PromptQuorum**(자사 제품) 프로덕션 배포 전 모든 모델에서 structured output 일관성을 테스트합니다'
         ]
       },
       whichProblem: {
@@ -3197,22 +3197,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'in-one-sentence', text: '구조화 출력 도구는 생성 시점에 스키마를 강제하는 문제, 생성 후 결과를 검증하는 문제, 손상된 출력을 복구하는 문제라는 세 가지 서로 다른 문제를 해결하며, 대부분의 구성에는 앞의 두 가지만 필요합니다.' },
           { type: 'in-plain-terms', text: '기능 목록을 보고 고르지 마십시오. 실제로 겪는 실패가 무엇인지 먼저 물어야 합니다. 모델이 형식을 무시하는지, 형식은 지키지만 값이 틀리는지, 아예 파싱조차 되지 않는 JSON을 돌려주는지입니다. 각각 해법이 다릅니다.' },
         ],
-        content: '**Structured output은 세 가지 상호 연관된 문제를 해결해야 합니다: 스키마 정의, API 준수, 유효성 검사.** 서로 다른 도구는 이러한 문제를 다른 방식으로 공격합니다. Instructor는 재시도와 함께 Python에서 세 가지를 모두 관리합니다. Outlines는 constrained decoding을 통해 유효성 검사 단계를 제거합니다. Pydantic AI는 에이전트에 type safety를 추가합니다. BAML은 스키마를 컴파일 가능한 파일로 옮기고 불완전한 출력을 복구합니다. LangChain은 공급자 API를 래핑합니다. Marvin은 개발자 속도를 우선시합니다. PromptQuorum은 모든 모델에서 일관성을 검증합니다.',
+        content: '**Structured output은 세 가지 상호 연관된 문제를 해결해야 합니다: 스키마 정의, API 준수, 유효성 검사.** 서로 다른 도구는 이러한 문제를 다른 방식으로 공격합니다. Instructor는 재시도와 함께 Python에서 세 가지를 모두 관리합니다. Outlines는 constrained decoding을 통해 별도의 유효성 검사 단계의 필요를 줄입니다. Pydantic AI는 에이전트에 type safety를 추가합니다. BAML은 스키마를 컴파일 가능한 파일로 옮기고 불완전한 출력을 복구합니다. LangChain은 공급자 API를 래핑합니다. Marvin은 개발자 속도를 우선시합니다. PromptQuorum은 모든 모델에서 일관성을 검증합니다.',
         columns: ['문제', 'Instructor', 'Outlines', 'Pydantic AI', 'BAML', 'LangChain', 'Marvin'],
         rows: [
           { '문제': '스키마 정의', 'Instructor': 'Pydantic 모델', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Pydantic 모델', 'BAML': '.baml 클래스 파일', 'LangChain': '도구 정의', 'Marvin': 'Python 타입 힌트' },
           { '문제': 'API 호출에서 강제', 'Instructor': '재시도 + 유효성 검사', 'Outlines': '토큰 수준 제약', 'Pydantic AI': '네이티브 / 도구 / 프롬프트', 'BAML': '생성된 프롬프트 + 파서', 'LangChain': '공급자 JSON 모드', 'Marvin': 'Pydantic AI 출력 타입' },
-          { '문제': '응답 유효성 검사', 'Instructor': '자동', 'Outlines': '생성 시 보장', 'Pydantic AI': '유형 검증됨', 'BAML': 'Schema-aligned parsing', 'LangChain': '수동', 'Marvin': '자동' }
+          { '문제': '응답 유효성 검사', 'Instructor': '자동', 'Outlines': '생성 시 강제', 'Pydantic AI': '유형 검증됨', 'BAML': 'Schema-aligned parsing', 'LangChain': '수동', 'Marvin': '자동' }
         ]
       },
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic 추출',
-        content: '**Instructor는 가장 많이 채택된 structured output 라이브러리입니다. 모든 LLM API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — 을 래핑하고 일반 텍스트 대신 검증된 Pydantic 모델을 반환합니다.** Instructor는 유효성 검사가 실패할 때 자동으로 재시도를 관리하여 추가적인 오류 처리 없이 프로덕션에 적합하게 만듭니다.',
+        content: '**Instructor는 널리 쓰이는 structured output 라이브러리입니다. 모든 LLM API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — 을 래핑하고 일반 텍스트 대신 검증된 Pydantic 모델을 반환합니다.** Instructor는 유효성 검사가 실패하면 자동으로 재시도하지만, 재시도를 모두 소진한 경우의 처리는 직접 해야 합니다.',
         items: [
           '모든 주요 공급자(OpenAI, Anthropic, Google, Groq, Mistral)와 Ollama·vLLM을 통한 로컬 모델에서 작동합니다',
           'Pydantic v2 스키마: 스키마에 통합된 타입 힌트, 유효성 검사 규칙, docstring 설명',
-          '유효성 검사 실패 시 backoff와 함께 자동 재시도 — 수동 오류 처리 불필요',
+          '유효성 검사 실패 시 자동 재시도 — 재시도를 모두 소진한 경우의 처리는 직접 해야 합니다',
           '6개 공식 구현: Python, TypeScript, Ruby, Go, Elixir, Rust',
           'MIT 라이선스 오픈소스, 활발히 유지 관리되며 현재 1.x 라인',
           '가격: 무료 (LLM API 호출 이외의 추가 비용 없음)'
@@ -3223,13 +3223,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       outlines: {
         id: 'outlines',
         title: 'Outlines: constrained decoding',
-        content: '**Outlines는 constrained decoding을 통해 토큰 생성 시 스키마 준수를 강제합니다. 토큰을 생성한 다음 유효성 검사하는 대신, Outlines는 각 단계에서 유효한 토큰을 스키마와 일치하도록 제한합니다.** 이는 출력이 스키마에 맞춰 반드시 파싱되도록 보장하며 구조 측면의 환각 위험이 없습니다. 바로 이 점이 로컬 모델에서 기본 선택지가 된 이유입니다.',
+        content: '**Outlines는 constrained decoding을 통해 토큰 생성 시 스키마 준수를 강제합니다. 토큰을 생성한 다음 유효성 검사하는 대신, Outlines는 각 단계에서 유효한 토큰을 스키마와 일치하도록 제한합니다.** 이는 구조 측면의 파싱 실패 대부분을 제거하지만, 값은 여전히 검증이 필요하며 잘림이나 문법 한계로 출력이 깨질 수 있습니다. 바로 이 점이 로컬 모델에서 흔한 선택지가 된 이유입니다.',
         items: [
           '로컬 백엔드: transformers, llama.cpp, MLX 및 모든 Hugging Face 모델',
           '서버 백엔드: vLLM, Ollama, NVIDIA NIM',
           '호스팅 API(OpenAI, Gemini)도 지원하므로 동일한 코드가 로컬과 클라우드를 오갑니다',
           '스키마는 Pydantic 모델, JSON Schema, regex 패턴, 리터럴 선택지 또는 문맥 자유 문법으로 지정합니다',
-          '보장된 구조 준수 — 생성 후 유효성 검사 또는 재시도 불필요',
+          '생성 시점의 강한 구조 준수 — 값 검증은 여전히 필요하며 잘림과 문법 한계에 유의',
           'Apache 2.0 오픈소스, 현재 1.x 라인, 속도를 위한 Rust 코어(outlines-core) 탑재'
         ]
       },
@@ -3289,9 +3289,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: 멀티 모델 테스트',
-        content: '**PromptQuorum 자체는 structured output 라이브러리가 아니라 모델 간 structured output 일관성을 검증하는 테스트 플랫폼입니다.** 동일한 프롬프트를 GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon 및 20개 이상의 모델에 동시에 실행하십시오. 모델별 스키마 준수율, 지연 시간 및 비용을 측정합니다.',
+        content: '**PromptQuorum은 자사 제품이며 그 자체로는 structured output 라이브러리가 아니라 모델 간 structured output 일관성을 검증하는 테스트 플랫폼입니다.** 동일한 프롬프트를 GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon 및 다수의 모델에 동시에 실행하십시오. 모델별 스키마 준수율, 지연 시간 및 비용을 측정합니다.',
         items: [
-          '단일 API 호출로 멀티 모델 디스패치 — 25개 이상의 모델에서 프롬프트를 테스트합니다',
+          '단일 API 호출로 멀티 모델 디스패치 — 많은 모델에서 프롬프트를 테스트합니다',
           'Structured output 준수 메트릭 — 통과율, 지연 시간, 모델별 비용',
           '귀하의 스키마로 환각을 유발하는 모델 식별 — 신뢰할 수 없는 모델에 배포하는 것을 방지합니다',
           '합의 모드 — 독립적인 모델 실행 간의 합의를 찾습니다',
@@ -3302,15 +3302,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: '나란히 비교',
-        columns: ['도구', '이상적인 사용 사례', '스키마 형식', '언어', '로컬 모델', '라이선스', '학습 곡선'],
+        columns: ['도구', '이상적인 사용 사례', '스키마 형식', '언어', '로컬 모델', '라이선스', '학습 곡선 (편집부 평가)'],
         rows: [
-          { '도구': '[Instructor](https://python.useinstructor.com)', '이상적인 사용 사례': 'Python API + 재시도', '스키마 형식': 'Pydantic 모델', '언어': 'Python, TS, Ruby, Go, Elixir, Rust', '로컬 모델': '예 (Ollama, vLLM)', '라이선스': 'MIT, 무료', '학습 곡선': '낮음' },
-          { '도구': '[Outlines](https://dottxt.ai)', '이상적인 사용 사례': '로컬 모델 배포', '스키마 형식': 'Pydantic, JSON Schema, regex, CFG', '언어': 'Python', '로컬 모델': '예 (네이티브)', '라이선스': 'Apache 2.0, 무료', '학습 곡선': '중간' },
-          { '도구': '[Pydantic AI](https://ai.pydantic.dev)', '이상적인 사용 사례': 'type-safe 에이전트', '스키마 형식': 'Pydantic 모델', '언어': 'Python', '로컬 모델': '예 (Ollama)', '라이선스': 'MIT, 무료', '학습 곡선': '낮음' },
-          { '도구': '[BAML](https://boundaryml.com)', '이상적인 사용 사례': '다국어 팀, 출력이 불안정한 모델', '스키마 형식': '.baml 클래스 파일', '언어': 'Python, TS + OpenAPI로 6개', '로컬 모델': '예 (OpenAI 호환)', '라이선스': 'Apache 2.0, 관측 기능 유료', '학습 곡선': '중간' },
-          { '도구': '[LangChain](https://langchain.com)', '이상적인 사용 사례': 'chains + 에이전트', '스키마 형식': '도구 정의', '언어': 'Python, JS', '로컬 모델': '예', '라이선스': 'MIT, 무료', '학습 곡선': '중간' },
-          { '도구': '[Marvin](https://github.com/PrefectHQ/marvin)', '이상적인 사용 사례': '빠른 extract와 classify', '스키마 형식': '타입 힌트', '언어': 'Python', '로컬 모델': '예', '라이선스': 'Apache 2.0, 무료', '학습 곡선': '매우 낮음' },
-          { '도구': '[PromptQuorum](https://www.promptquorum.com)', '이상적인 사용 사례': '멀티 모델 테스트', '스키마 형식': 'API 불가지론적', '언어': 'API-first', '로컬 모델': 'OpenAI 프록시를 통해', '라이선스': '무료 티어 + 엔터프라이즈', '학습 곡선': '낮음' }
+          { '도구': '[Instructor](https://python.useinstructor.com)', '이상적인 사용 사례': 'Python API + 재시도', '스키마 형식': 'Pydantic 모델', '언어': 'Python, TS, Ruby, Go, Elixir, Rust', '로컬 모델': '예 (Ollama, vLLM)', '라이선스': 'MIT, 무료', '학습 곡선 (편집부 평가)': '낮음' },
+          { '도구': '[Outlines](https://dottxt.ai)', '이상적인 사용 사례': '로컬 모델 배포', '스키마 형식': 'Pydantic, JSON Schema, regex, CFG', '언어': 'Python', '로컬 모델': '예 (네이티브)', '라이선스': 'Apache 2.0, 무료', '학습 곡선 (편집부 평가)': '중간' },
+          { '도구': '[Pydantic AI](https://ai.pydantic.dev)', '이상적인 사용 사례': 'type-safe 에이전트', '스키마 형식': 'Pydantic 모델', '언어': 'Python', '로컬 모델': '예 (Ollama)', '라이선스': 'MIT, 무료', '학습 곡선 (편집부 평가)': '낮음' },
+          { '도구': '[BAML](https://boundaryml.com)', '이상적인 사용 사례': '다국어 팀, 출력이 불안정한 모델', '스키마 형식': '.baml 클래스 파일', '언어': 'Python, TS + OpenAPI로 6개', '로컬 모델': '예 (OpenAI 호환)', '라이선스': 'Apache 2.0, 관측 기능 유료', '학습 곡선 (편집부 평가)': '중간' },
+          { '도구': '[LangChain](https://langchain.com)', '이상적인 사용 사례': 'chains + 에이전트', '스키마 형식': '도구 정의', '언어': 'Python, JS', '로컬 모델': '예', '라이선스': 'MIT, 무료', '학습 곡선 (편집부 평가)': '중간' },
+          { '도구': '[Marvin](https://github.com/PrefectHQ/marvin)', '이상적인 사용 사례': '빠른 extract와 classify', '스키마 형식': '타입 힌트', '언어': 'Python', '로컬 모델': '예', '라이선스': 'Apache 2.0, 무료', '학습 곡선 (편집부 평가)': '매우 낮음' },
+          { '도구': '[PromptQuorum](https://www.promptquorum.com) (자사 제품)', '이상적인 사용 사례': '멀티 모델 테스트', '스키마 형식': 'API 불가지론적', '언어': 'API-first', '로컬 모델': 'OpenAI 프록시를 통해', '라이선스': '무료 티어 + 엔터프라이즈', '학습 곡선 (편집부 평가)': '낮음' }
         ]
       },
       decision: {
@@ -3319,7 +3319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '세 가지 질문에 답하는 것으로 시작하십시오: (1) 실제로 모델을 호출하는 서비스는 어떤 언어로 작성되어 있습니까? (2) 로컬 모델 지원이 필요합니까? (3) 유효성 검사 복잡도는 얼마나 됩니까?',
         items: [
           '**Instructor를 사용하십시오:** Python API를 구축하고 유효성 검사 실패 시 자동 재시도가 필요한 경우. 가장 좋은 범용 옵션입니다.',
-          '**Outlines를 사용하십시오:** 로컬 모델(llama.cpp, vLLM, MLX)을 배포하고 생성 시 보장된 스키마 준수를 원하는 경우.',
+          '**Outlines를 사용하십시오:** 로컬 모델(llama.cpp, vLLM, MLX)을 배포하고 생성 시 스키마 강제를 원하는 경우.',
           '**Pydantic AI를 사용하십시오:** 모든 단계에서 type safety와 함께 멀티 턴 에이전트 워크플로우를 구축하거나 지속 실행이 필요한 경우.',
           '**BAML을 사용하십시오:** Python·TypeScript·Go 서비스가 하나의 스키마를 공유해야 하거나, 모델에 신뢰할 만한 네이티브 JSON 모드가 없는 경우.',
           '**LangChain을 사용하십시오:** 이미 LangChain 또는 LangGraph를 사용하고 있다면 — with_structured_output()이 가장 간단한 추가입니다.',
@@ -3345,27 +3345,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '모든 JSON 모드를 스키마 보장으로 착각',
             problem: '단순 JSON 모드(response_format json_object, Anthropic JSON 제어)는 응답이 유효한 JSON이라는 것만 보장할 뿐, 귀하의 필드와 유형에 맞는다는 보장은 하지 않습니다. 엄격한 스키마 모드는 한 걸음 더 나아가 형태를 보장하지만, 어느 쪽도 값의 정확성은 보장하지 않습니다. 형식이 온전한 객체 안에도 지어낸 가격이나 환각한 날짜가 들어 있을 수 있습니다.',
-            fix: '어느 경우든 위에 유효성 검사를 얹으십시오: Instructor, Outlines, Pydantic AI 또는 BAML. 비즈니스 규칙은 스키마만이 아니라 Pydantic 유효성 검사기에 넣으십시오. PromptQuorum으로 모델별 준수 실패를 감지하십시오.'
+            fix: '어느 경우든 위에 유효성 검사를 얹으십시오: Instructor, Outlines, Pydantic AI 또는 BAML. 비즈니스 규칙은 스키마만이 아니라 Pydantic 유효성 검사기에 넣으십시오. PromptQuorum(자사 제품)으로 모델별 준수 실패를 감지하십시오.'
           },
           {
             mistake: '너무 엄격한 스키마 설계',
             problem: '너무 제한적인 스키마(작은 열거형 목록, 매우 구체적인 regex 패턴)는 LLM이 유효성 검사에 자주 실패하게 합니다. 높은 재시도 횟수는 토큰과 비용을 낭비합니다.',
-            fix: 'PromptQuorum을 사용하여 모델 간 스키마 엄격도를 테스트하십시오. 95% 이상의 준수율을 달성하기 위해 제약 조건을 완화하십시오. 가능한 경우 필수 필드 대신 선택적 필드를 사용하십시오.'
+            fix: 'PromptQuorum(자사 제품)을 사용하여 모델 간 스키마 엄격도를 테스트하십시오. 목표 준수율에 도달할 때까지 제약 조건을 완화하십시오. 가능한 경우 필수 필드 대신 선택적 필드를 사용하십시오.'
           },
           {
             mistake: '로컬 모델과 API 모델 간의 차이를 테스트하지 않음',
             problem: 'llama.cpp의 Outlines는 GPT-6 Astra의 Instructor와 다르게 작동합니다. 스키마 준수율은 모델마다 다릅니다. 프런티어 API 모델만을 위해 구축한 다음 작은 로컬 모델로 배포하면 프로덕션 실패가 발생합니다.',
-            fix: '예상하는 모든 모델 백엔드를 일찍 테스트하십시오. PromptQuorum을 사용하여 로컬 모델(vLLM, Ollama)과 호스팅 모델(OpenAI, Anthropic, Google)에서 동일한 프롬프트를 실행하십시오.'
+            fix: '예상하는 모든 모델 백엔드를 일찍 테스트하십시오. PromptQuorum(자사 제품)을 사용하여 로컬 모델(vLLM, Ollama)과 호스팅 모델(OpenAI, Anthropic, Google)에서 동일한 프롬프트를 실행하십시오.'
           },
           {
             mistake: '지연 시간 및 토큰 비용 영향 무시',
             problem: '재시도가 있는 structured output은 더 많은 토큰이 필요합니다. Instructor는 실패 시 재시도합니다. Outlines의 constrained decoding은 자유 생성 대비 토큰당 오버헤드가 늘어납니다. 모델별 비용을 측정하지 않습니다.',
-            fix: 'PromptQuorum의 비용 추적을 사용하십시오. 모델 간 지연 시간을 비교하십시오. 예산에 민감한 워크플로우에는 Outlines 또는 BAML(재시도 루프 없음)을 선호하십시오. 유연한 스키마에서 정확도를 우선한다면 Instructor의 재시도 비용을 받아들이십시오.'
+            fix: 'PromptQuorum(자사 제품)의 비용 추적을 사용하십시오. 모델 간 지연 시간을 비교하십시오. 예산에 민감한 워크플로우에는 Outlines 또는 BAML(재시도 루프 없음)을 선호하십시오. 유연한 스키마에서 정확도를 우선한다면 Instructor의 재시도 비용을 받아들이십시오.'
           },
           {
             mistake: '유효성 검사 방법 혼합 (일관성 없음)',
             problem: '일부 요청은 Instructor를 사용하고, 다른 요청은 원시 JSON 파싱을 사용합니다. 일부 모델은 유효성 검사되고, 다른 모델은 그렇지 않습니다. 이는 프로덕션에서 일관성 없는 오류를 초래합니다.',
-            fix: '코드베이스당 하나의 유효성 검사 접근 방식으로 표준화하십시오. 모든 요청이 Instructor를 사용하거나, 모두 Outlines를 사용합니다. 일관성은 디버깅 시간을 10배 줄입니다.'
+            fix: '코드베이스당 하나의 유효성 검사 접근 방식으로 표준화하십시오. 모든 요청이 Instructor를 사용하거나, 모두 Outlines를 사용합니다. 일관성은 디버깅을 더 쉽게 만듭니다.'
           },
           {
             mistake: '이미 대체된 API를 기준으로 쓰인 튜토리얼 베끼기',
@@ -3396,11 +3396,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Python 개발자에게 어떤 도구가 가장 좋습니까?',
-            a: 'Instructor는 가장 인기 있는 Python 옵션입니다. Pydantic 모델을 사용하여 스키마를 정의하고, 자동으로 재시도와 유효성 검사를 처리하며, 주요 LLM API 전부와 Ollama·vLLM을 통한 로컬 모델을 지원합니다. type-safe 멀티 턴 에이전트 대화까지 원한다면 Pydantic AI가 더 잘 맞고, 한 줄짜리 extract나 classify 호출이면 충분하다면 Marvin이 가장 빠릅니다.'
+            a: 'Instructor는 널리 쓰이는 Python 옵션입니다. Pydantic 모델을 사용하여 스키마를 정의하고, 자동으로 재시도와 유효성 검사를 처리하며, 주요 LLM API 전부와 Ollama·vLLM을 통한 로컬 모델을 지원합니다. type-safe 멀티 턴 에이전트 대화까지 원한다면 Pydantic AI가 더 잘 맞고, 한 줄짜리 extract나 classify 호출이면 충분하다면 Marvin이 가장 빠릅니다.'
           },
           {
             q: 'Llama와 같은 로컬 모델에서 structured output을 사용할 수 있습니까?',
-            a: '예. Outlines는 로컬 모델을 위한 constrained decoding에 특화되어 있습니다 — transformers, llama.cpp, MLX, vLLM, Ollama와 함께 작동하며 생성 시점에 출력이 스키마에 맞춰 파싱되도록 보장합니다. Instructor와 Pydantic AI도 Ollama·vLLM을 API로 실행하면 지원하고, BAML은 OpenAI 호환 엔드포인트라면 어디서든 작동합니다.'
+            a: '예. Outlines는 로컬 모델을 위한 constrained decoding에 특화되어 있습니다 — transformers, llama.cpp, MLX, vLLM, Ollama와 함께 작동하며 생성 시점에 출력을 스키마로 제약하여 파싱 실패 대부분을 제거합니다. Instructor와 Pydantic AI도 Ollama·vLLM을 API로 실행하면 지원하고, BAML은 OpenAI 호환 엔드포인트라면 어디서든 작동합니다.'
           },
           {
             q: 'Instructor와 Marvin의 차이점은 무엇입니까?',
@@ -3412,11 +3412,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Structured output의 신뢰성을 어떻게 테스트합니까?',
-            a: 'PromptQuorum을 사용하여 여러 모델에서 동일한 프롬프트를 실행하고 스키마 준수율을 측정하십시오. GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon는 신뢰성 수준이 서로 다르고, 작은 로컬 모델은 차이가 더 큽니다. 프로덕션에 배포하기 전에 테스트하고, 로컬에서는 Instructor나 Pydantic으로 검증하십시오.'
+            a: 'PromptQuorum(자사 제품)을 사용하여 여러 모델에서 동일한 프롬프트를 실행하고 스키마 준수율을 측정하십시오. GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon는 신뢰성 수준이 서로 다르고, 작은 로컬 모델은 차이가 더 큽니다. 프로덕션에 배포하기 전에 테스트하고, 로컬에서는 Instructor나 Pydantic으로 검증하십시오.'
           },
           {
             q: '"constrained decoding"이란 무엇을 의미합니까?',
-            a: 'Constrained decoding은 토큰 생성을 스키마에 따라 유효한 값만으로 제한합니다. Outlines는 각 단계에서 다음에 유효한 토큰 집합을 계산하여 이를 수행합니다. 이는 생성 후 유효성 검사나 재시도 없이 출력이 스키마에 맞춰 파싱되도록 보장하므로 단순 API 수준 JSON 모드보다 신뢰할 수 있습니다. 다만 제약하는 것은 구조이지 진실이 아닙니다. 필드는 맞겠지만 값은 여전히 확인이 필요합니다.'
+            a: 'Constrained decoding은 토큰 생성을 스키마에 따라 유효한 값만으로 제한합니다. Outlines는 각 단계에서 다음에 유효한 토큰 집합을 계산하여 이를 수행합니다. 이는 생성 후 재시도 없이 구조 측면의 파싱 실패 대부분을 제거하므로 단순 API 수준 JSON 모드보다 신뢰할 수 있지만, 잘림이나 문법 한계로 출력이 깨질 수 있습니다. 제약하는 것은 구조이지 진실이 아닙니다. 값은 여전히 확인이 필요합니다.'
           },
           {
             q: 'BAML은 무엇이며 언제 Instructor 대신 사용해야 합니까?',
@@ -3428,11 +3428,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '어떤 도구가 최고의 문서를 가지고 있습니까?',
-            a: 'LangChain과 Pydantic AI는 기업 지원으로 인해 가장 포괄적인 문서를 가지고 있습니다. BAML 문서는 언어 자체를 가르쳐야 하는 만큼 신생 프로젝트치고는 유난히 좋습니다. Instructor는 커뮤니티가 유지 관리함에도 불구하고 훌륭한 튜토리얼과 예시를 가지고 있습니다. Outlines 문서는 기술적이지만 포괄적입니다. Marvin 문서는 간결합니다 — Marvin 2 시절 자료가 아직 돌아다니므로 3.x 페이지를 콕 집어 확인하십시오.'
+            a: '문서 품질은 주관적이므로 각 프로젝트의 최신 문서를 확인하십시오. 저희가 보기에 LangChain과 Pydantic AI는 방대한 문서를 가지고 있으며, 이는 뒤에 있는 자원을 반영하는 것으로 보입니다. BAML 문서는 언어 자체를 가르쳐야 하는 만큼 신생 프로젝트치고는 탄탄합니다. Instructor는 좋은 튜토리얼과 예시를 가지고 있습니다. Outlines 문서는 기술적이지만 포괄적입니다. Marvin 문서는 간결합니다 — Marvin 2 시절 자료가 아직 돌아다니므로 3.x 페이지를 콕 집어 확인하십시오.'
           },
           {
             q: '7가지 도구가 모두 필요합니까, 아니면 하나만 필요합니까?',
-            a: '하나로 시작하십시오. Python 개발자는 Instructor 또는 Pydantic AI를 시도해야 합니다. 로컬 모델을 사용하는 팀은 Outlines를 시도해야 합니다. 다국어 팀은 BAML을 시도해야 합니다. LangChain 사용자는 with_structured_output()을 시도해야 합니다. PromptQuorum을 사용하여 모든 모델에서 일관성을 검증하십시오. 대부분의 팀은 하나의 도구 + 테스트를 위한 PromptQuorum을 사용합니다.'
+            a: '하나로 시작하십시오. Python 개발자는 Instructor 또는 Pydantic AI를 시도해야 합니다. 로컬 모델을 사용하는 팀은 Outlines를 시도해야 합니다. 다국어 팀은 BAML을 시도해야 합니다. LangChain 사용자는 with_structured_output()을 시도해야 합니다. PromptQuorum(자사 제품)을 사용하여 모든 모델에서 일관성을 검증하십시오.'
           }
         ]
       },
@@ -3441,7 +3441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '참고 자료',
         items: [
           '[Instructor GitHub 저장소](https://github.com/567-labs/instructor) — Instructor 라이브러리의 공식 저장소 및 문서',
-          '[Outlines GitHub 저장소](https://github.com/dottxt-ai/outlines) — 보장된 스키마 준수를 위한 constrained decoding',
+          '[Outlines GitHub 저장소](https://github.com/dottxt-ai/outlines) — 스키마 제약 생성을 위한 constrained decoding',
           '[Pydantic AI 문서](https://pydantic.dev/docs/ai/overview/) — structured output이 있는 type-safe 에이전트 프레임워크',
           '[LangChain Structured Output 가이드](https://docs.langchain.com/oss/python/langchain/structured-output) — LangChain의 통합 structured output API',
           '[BAML 문서](https://docs.boundaryml.com/home) — 스키마 우선 프롬프트 언어와 schema-aligned parsing',
