@@ -179,7 +179,7 @@
   {
     "file": "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
     "models": [
-      "DeepSeek V4-Flash",
+      "DeepSeek-V4.1-Flash-1017",
       "Llama 3.3 70B",
       "Qwen 3.6 27B",
       "Qwen2.5-72B",
@@ -331,7 +331,7 @@
   {
     "file": "src/lib/local-llms/articles/how-much-vram-local-llm.ts",
     "models": [
-      "DeepSeek V4-Flash",
+      "DeepSeek-V4.1-Flash-1017",
       "Kimi K2.6",
       "Llama 4 Scout",
       "Qwen 3.6 35B-A3B",

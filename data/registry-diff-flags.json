@@ -468,18 +468,6 @@
     ]
   },
   {
-    "siteModel": "DeepSeek V4-Flash",
-    "registryModel": "DeepSeek V4-Flash",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V4.1-Flash-1017",
-    "notes": "Part of the DeepSeek-V4 Preview open-weight release. 284B total / 13B active MoE parameters, positioned for near-frontier quality on 2-GPU setups. Superseded: DeepSeek's own API docs (2026-11-09 fetch) say the deepseek-v4-flash and deepseek-v4-flash-vision-exp model names are retired and now served by DeepSeek-V4.1-Flash-1017 at the same price; legacy names still accepted for compatibility.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
-      "src/lib/local-llms/articles/how-much-vram-local-llm.ts"
-    ]
-  },
-  {
     "siteModel": "qwen3:30b",
     "registryModel": "Qwen3",
     "status": "superseded",

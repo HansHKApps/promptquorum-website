@@ -410,7 +410,7 @@
     "src/lib/power-local-llm/articles/macwhisper-review.ts",
     "src/lib/power-local-llm/articles/whisper-cpp-review.ts"
   ],
-  "DeepSeek V4-Flash": [
+  "DeepSeek-V4.1-Flash-1017": [
     "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
     "src/lib/local-llms/articles/how-much-vram-local-llm.ts"
   ],
