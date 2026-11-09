@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 344,
+    "totalCount": 346,
     "capped": true
   },
   "llama.cpp": {
@@ -9996,6 +9996,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "amical-review",
+        "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
+        "url": "/power-local-llm/amical-review",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -10050,17 +10058,9 @@
         "url": "/power-local-llm/home-generative-agent-review",
         "dateModified": "2026-11-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kai-9000-review",
-        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
-        "url": "/power-local-llm/kai-9000-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "FluidVoice": {
@@ -12036,6 +12036,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "amical-review",
+        "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
+        "url": "/power-local-llm/amical-review",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -12098,17 +12106,9 @@
         "url": "/local-llms/mram-in-memory-computing-local-ai",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "aquavoice-review",
-        "title": "AquaVoice Review: Pricing, Privacy and AI Prompt Dictation",
-        "url": "/power-local-llm/aquavoice-review",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 251,
+    "totalCount": 252,
     "capped": true
   },
   "Qdrant": {
@@ -13555,6 +13555,28 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "Amical": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "amical-review",
+        "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
+        "url": "/power-local-llm/amical-review",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
     "capped": false
   },
   "Weesper Neon Flow": {

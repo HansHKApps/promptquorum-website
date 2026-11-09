@@ -164,6 +164,7 @@ import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_aiko } from './apps/aiko'
+import { app as app_amical } from './apps/amical'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
 import { app as app_sablate } from './apps/sablate'
 import { app as app_cocoindex } from './apps/cocoindex'
@@ -709,6 +710,7 @@ export const localAiApps: ToolRecord[] = [
   app_genva,
   app_whisper_notes,
   app_aiko,
+  app_amical,
   app_weesper_neon_flow,
   app_sablate,
   app_cocoindex,
