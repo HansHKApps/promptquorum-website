@@ -217,6 +217,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'whisper-notes':                           'whisper-notes',
   'aiko':                                    'aiko',
   'amical':                                  'amical',
+  'sprich':                                  'sprich',
   'weesper-neon-flow':                       'weesper-neon-flow',
   'sablate':                                 'sablate',
   'cocoindex':                               'cocoindex',

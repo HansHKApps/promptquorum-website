@@ -10,6 +10,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "how-much-vram-local-llm",
+        "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
+        "url": "/local-llms/how-much-vram-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "cocoindex-review",
         "title": "CocoIndex Review: Incremental Data Framework for RAG and AI Agents",
@@ -62,22 +78,6 @@
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-2026",
-        "title": "Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked",
-        "url": "/local-llms/best-local-llms-2026",
         "dateModified": "2026-11-06",
         "tier": "about"
       }
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -896,14 +904,6 @@
         "slug": "llm-quantization-explained",
         "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
         "url": "/local-llms/llm-quantization-explained",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
         "dateModified": "2026-11-06",
         "tier": "about"
       },
@@ -12044,6 +12044,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "sprich-review",
+        "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
+        "url": "/power-local-llm/sprich-review",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -12098,17 +12106,9 @@
         "url": "/local-llms/apple-silicon-m5-local-llm",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mram-in-memory-computing-local-ai-2026",
-        "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
-        "url": "/local-llms/mram-in-memory-computing-local-ai",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 252,
+    "totalCount": 253,
     "capped": true
   },
   "Qdrant": {
@@ -13579,6 +13579,28 @@
     "totalCount": 2,
     "capped": false
   },
+  "Sprich": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "sprich-review",
+        "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
+        "url": "/power-local-llm/sprich-review",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "Weesper Neon Flow": {
     "articles": [
       {
@@ -13711,6 +13733,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "how-much-vram-local-llm",
+        "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
+        "url": "/local-llms/how-much-vram-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
         "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
         "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
@@ -13723,14 +13753,6 @@
         "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
         "url": "/power-local-llm/best-workstation-build-local-ai-2026",
         "dateModified": "2026-09-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-much-vram-local-llm",
-        "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
-        "url": "/local-llms/how-much-vram-local-llm",
-        "dateModified": "2026-08-28",
         "tier": "mentioned"
       },
       {

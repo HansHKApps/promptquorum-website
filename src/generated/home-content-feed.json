@@ -13045,7 +13045,7 @@
     "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
     "excerpt": "Real VRAM by model size at Q4, based on actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13054,7 +13054,7 @@
     "title": "VRAM-Richtlinie: 7B=4GB, 70B=42GB (2026 Guide)",
     "excerpt": "Echter VRAM-Bedarf bei Q4 laut echten GGUF-Dateigrößen: 7B ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner, Q5/Q8-Tabellen und Formel.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13063,7 +13063,7 @@
     "title": "Règle empirique VRAM : 7B=4GB, 70B=42GB (Guide 2026)",
     "excerpt": "VRAM réelle par taille en Q4, d'après des fichiers GGUF réels : 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculatrice gratuite, tableaux Q5/Q8.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13072,7 +13072,7 @@
     "title": "VRAM目安：7B=4GB、70B=42GB（2026ガイド）",
     "excerpt": "実際のGGUFファイルサイズで検証したQ4のVRAM実測値：7Bは約4GB、13Bは約8GB、22Bは約13GB、70Bは約42GB。無料計算ツールとQ5/Q8の早見表付き。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13081,7 +13081,7 @@
     "title": "显存经验法则：7B=4GB、70B=42GB（2026指南）",
     "excerpt": "经真实GGUF文件大小验证的Q4显存实测值：7B约需4GB，13B约需8GB，22B约需13GB，70B约需42GB。附免费计算器和Q5/Q8对照表。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13090,7 +13090,7 @@
     "title": "¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)",
     "excerpt": "VRAM real por tamaño en Q4, según archivos GGUF reales: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y fórmula.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13099,7 +13099,7 @@
     "title": "Quanta VRAM para um LLM local? Tabelas de 7B a 70B (2026)",
     "excerpt": "VRAM real por tamanho em Q4, com base em arquivos GGUF reais: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora grátis e tabelas Q5/Q8.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13108,7 +13108,7 @@
     "title": "كم تحتاج من ⁨VRAM⁩ لنموذج ⁨LLM⁩ محلي؟ جداول من ⁨7B⁩ إلى ⁨70B⁩ (⁨2026⁩)",
     "excerpt": "VRAM الحقيقية حسب حجم النموذج في Q4 بحسب أحجام ملفات GGUF: 7B ~4 GB و13B ~8 GB و22B ~13 GB و70B ~42 GB. حاسبة مجانية وجداول Q5/Q8.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -13117,7 +13117,7 @@
     "title": "로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)",
     "excerpt": "로컬 LLM에 필요한 정확한 VRAM: 7B는 6~8GB, 13B는 10~14GB, 70B는 Q4에서 40~48GB. Q2~Q8 양자화, 배치 크기, 컨텍스트별 차트 포함.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/how-much-vram-local-llm",
     "cluster": "local-llms"
   },
@@ -16852,7 +16852,7 @@
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
     "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M speeds and hardware tiers for every budget.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,7 +16861,7 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16870,7 +16870,7 @@
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
     "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16879,7 +16879,7 @@
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
     "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16888,7 +16888,7 @@
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
     "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16897,7 +16897,7 @@
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
     "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16906,7 +16906,7 @@
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
     "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16915,7 +16915,7 @@
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
     "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16924,7 +16924,7 @@
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
     "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -22519,82 +22519,82 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 354 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 354 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 355 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 355 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 354 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 354 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 355 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 355 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/de/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 354 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 354 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 355 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 355 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/fr/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす354のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを354件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす355のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを355件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ja/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：354款软件，在本地运行AI（2026）",
-    "excerpt": "对比354款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：355款软件，在本地运行AI（2026）",
+    "excerpt": "对比355款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/zh/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 354 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 354 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 355 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 355 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/es/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 354 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 354 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 355 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 355 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/pt/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 354 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 354 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 355 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 355 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ar/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 354개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 354개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 355개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 355개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-09",
     "url": "/ko/directory",
     "cluster": "power-local-llm"
   },
@@ -34022,7 +34022,7 @@
   {
     "lang": "en",
     "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-    "excerpt": "Compare 41 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
+    "excerpt": "Compare 42 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -34031,7 +34031,7 @@
   {
     "lang": "de",
     "title": "Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten",
-    "excerpt": "Vergleich von 41 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
+    "excerpt": "Vergleich von 42 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/de/power-local-llm/local-llm-voice-audio-compared",
@@ -34040,7 +34040,7 @@
   {
     "lang": "fr",
     "title": "Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux",
-    "excerpt": "Comparez 41 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
+    "excerpt": "Comparez 42 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/fr/power-local-llm/local-llm-voice-audio-compared",
@@ -34049,7 +34049,7 @@
   {
     "lang": "ja",
     "title": "ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント",
-    "excerpt": "ローカル音声ツール41種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル音声ツール42種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/ja/power-local-llm/local-llm-voice-audio-compared",
@@ -34058,7 +34058,7 @@
   {
     "lang": "zh",
     "title": "本地语音工具对比(2026):语音合成、语音转文字与语音助手",
-    "excerpt": "并排对比41款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
+    "excerpt": "并排对比42款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/zh/power-local-llm/local-llm-voice-audio-compared",
@@ -34067,7 +34067,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz",
-    "excerpt": "Compara 41 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
+    "excerpt": "Compara 42 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/es/power-local-llm/local-llm-voice-audio-compared",
@@ -34076,7 +34076,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz",
-    "excerpt": "Compare 41 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
+    "excerpt": "Compare 42 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/pt/power-local-llm/local-llm-voice-audio-compared",
@@ -34085,7 +34085,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون",
-    "excerpt": "قارن 41 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
+    "excerpt": "قارن 42 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/local-llm-voice-audio-compared",
@@ -34094,7 +34094,7 @@
   {
     "lang": "ko",
     "title": "로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트",
-    "excerpt": "로컬 음성 도구 41개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 음성 도구 42개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-07",
     "url": "/ko/power-local-llm/local-llm-voice-audio-compared",
@@ -41226,6 +41226,87 @@
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/amical-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
+    "excerpt": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. The site is German only; the maker lists 57 languages. Not tested by us.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Sprich Rezension: Diktier-App aus Deutschland für den Apple-Silicon-Mac",
+    "excerpt": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Website nur Deutsch; 57 Sprachen laut Hersteller. Nicht getestet.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/de/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Sprich : application de dictée allemande pour Mac Apple Silicon",
+    "excerpt": "Test de Sprich : dictée allemande pour Mac Apple Silicon avec offre gratuite. Site en allemand ; 57 langues selon l’éditeur. Non testée par PromptQuorum.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/fr/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Sprichレビュー：Apple Silicon搭載Mac向けドイツ製音声入力アプリ",
+    "excerpt": "Sprichのレビュー：Apple Silicon搭載Mac向けのドイツ製音声入力アプリで、無料プランあり。サイトはドイツ語のみで、開発元は57言語と記載。実機検証なし。",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/ja/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Sprich评测：适用于 Apple Silicon Mac 的德国听写应用",
+    "excerpt": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。网站仅有德语，开发者称支持57种语言。PromptQuorum未实测。",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/zh/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon",
+    "excerpt": "Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon y plan gratuito. Web solo en alemán; el desarrollador indica 57 idiomas. No probada.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/es/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Sprich: app de ditado alemão para Mac com Apple Silicon",
+    "excerpt": "Análise do Sprich: app de ditado alemão para Mac com Apple Silicon e plano grátis. Site só em alemão; o desenvolvedor cita 57 idiomas. Não testado.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/pt/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon",
+    "excerpt": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. الموقع بالألمانية فقط ويذكر المطوّر 57 لغة. لم تختبره PromptQuorum.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/ar/power-local-llm/sprich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Sprich 리뷰: Apple Silicon Mac용 독일산 받아쓰기 앱",
+    "excerpt": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. 웹사이트는 독일어만 제공하며 개발사는 57개 언어를 명시합니다. 직접 테스트하지 않았습니다.",
+    "publishDate": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "url": "/ko/power-local-llm/sprich-review",
     "cluster": "power-local-llm"
   },
   {

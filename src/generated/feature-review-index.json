@@ -1714,6 +1714,11 @@
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
   },
+  "sprich": {
+    "cluster": "power-local-llm",
+    "urlSlug": "sprich-review",
+    "url": "/power-local-llm/sprich-review"
+  },
   "weesper-neon-flow": {
     "cluster": "power-local-llm",
     "urlSlug": "weesper-neon-flow-review",
