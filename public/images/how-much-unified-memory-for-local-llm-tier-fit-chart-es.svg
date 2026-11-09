@@ -9,28 +9,28 @@
 <text x="761" y="65" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">128 GB</text>
 <line x1="18" y1="74" x2="782" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
 
-<text x="40" y="100" font-size="12" fill="#1C1B1F">Phi-4 3.8B (Q4, 2.5 GB)</text>
+<text x="40" y="100" font-size="12" fill="#1C1B1F">Phi-4 Mini 3.8B (Q4, 2.5 GB)</text>
 <circle cx="440" cy="94" r="13" fill="#34A853"/><text x="440" y="98" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="547" cy="94" r="13" fill="#34A853"/><text x="547" y="98" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="654" cy="94" r="13" fill="#34A853"/><text x="654" y="98" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="761" cy="94" r="13" fill="#34A853"/><text x="761" y="98" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
 
-<text x="40" y="142" font-size="12" fill="#1C1B1F">Llama 3.3 8B (Q4, 5 GB)</text>
+<text x="40" y="142" font-size="12" fill="#1C1B1F">Llama 3.1 8B (Q4, 5 GB)</text>
 <circle cx="440" cy="136" r="13" fill="#F4B400"/><text x="440" y="140" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">~</text>
 <circle cx="547" cy="136" r="13" fill="#34A853"/><text x="547" y="140" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="654" cy="136" r="13" fill="#34A853"/><text x="654" y="140" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="761" cy="136" r="13" fill="#34A853"/><text x="761" y="140" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <line x1="18" y1="152" x2="782" y2="152" stroke="#F7F2FA" stroke-width="1"/>
 
-<text x="40" y="184" font-size="12" fill="#1C1B1F">Llama 3.3 13B (Q4, 8.5 GB)</text>
+<text x="40" y="184" font-size="12" fill="#1C1B1F">13–14B (Q4, 8.5 GB)</text>
 <circle cx="440" cy="178" r="13" fill="#EA4335"/><text x="440" y="182" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
 <circle cx="547" cy="178" r="13" fill="#34A853"/><text x="547" y="182" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="654" cy="178" r="13" fill="#34A853"/><text x="654" y="182" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <circle cx="761" cy="178" r="13" fill="#34A853"/><text x="761" y="182" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
 <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
 
-<text x="40" y="226" font-size="12" fill="#1C1B1F">Qwen3 34B (Q5, 24 GB)</text>
+<text x="40" y="226" font-size="12" fill="#1C1B1F">Qwen3 32B (Q5, 23 GB)</text>
 <circle cx="440" cy="220" r="13" fill="#EA4335"/><text x="440" y="224" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
 <circle cx="547" cy="220" r="13" fill="#EA4335"/><text x="547" y="224" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
 <circle cx="654" cy="220" r="13" fill="#34A853"/><text x="654" y="224" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
