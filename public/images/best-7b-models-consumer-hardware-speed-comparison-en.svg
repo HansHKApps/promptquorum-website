@@ -11,11 +11,11 @@
   <rect x="260" y="117" width="384" height="24" fill="#7D5260" rx="4"/>
   <text x="652" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">16 tok/s</text>
 
-  <text x="250" y="178" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Llama 3.3 7B</text>
+  <text x="250" y="178" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Llama 3.1 8B</text>
   <rect x="260" y="159" width="360" height="24" fill="#6750A4" rx="4"/>
   <text x="628" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">15 tok/s — best reasoning</text>
 
-  <text x="250" y="220" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3 7B</text>
+  <text x="250" y="220" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3 8B</text>
   <rect x="260" y="201" width="360" height="24" fill="#34A853" rx="4"/>
   <text x="628" y="218" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">15 tok/s — best multilingual</text>
 
