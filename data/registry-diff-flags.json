@@ -1,28 +1,5 @@
 [
   {
-    "siteModel": "Mistral Small",
-    "registryModel": "Mistral Small",
-    "status": "superseded",
-    "superseded_by": "Mistral Small 4",
-    "notes": "Site's most-mentioned Mistral model (23 mentions, generic 'Mistral Small' without version). Mistral's own docs list a legacy deprecation table with specific retirement dates per point version — exact version(s) the site means is unverified; needs page-by-page check, not a blanket fact.",
-    "fileCount": 13,
-    "files": [
-      "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
-      "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts",
-      "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
-      "src/lib/local-llms/articles/mlx-vs-ollama-vs-llama-cpp-mac.ts",
-      "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
-      "src/lib/local-llms/articles/ollama-on-mac-apple-silicon-setup-2026.ts",
-      "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
-      "src/lib/power-local-llm/articles/local-ai-workstation-build-guide.ts",
-      "src/lib/power-local-llm/articles/best-nas-storage-local-ai-models-2026.ts",
-      "src/lib/power-local-llm/articles/best-vpn-ai-privacy-local-llm-2026.ts",
-      "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
-      "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts",
-      "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts"
-    ]
-  },
-  {
     "siteModel": "Qwen3 32B",
     "registryModel": "Qwen3",
     "status": "superseded",
@@ -630,33 +607,11 @@
     ]
   },
   {
-    "siteModel": "Mistral Small v0.3 (deprecated pick)",
-    "registryModel": "Mistral Small",
-    "status": "superseded",
-    "superseded_by": "Mistral Small 4",
-    "notes": "Site's most-mentioned Mistral model (23 mentions, generic 'Mistral Small' without version). Mistral's own docs list a legacy deprecation table with specific retirement dates per point version — exact version(s) the site means is unverified; needs page-by-page check, not a blanket fact.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/best-beginner-local-llm-models.ts"
-    ]
-  },
-  {
     "siteModel": "ChatGLM4 9B",
     "registryModel": "ChatGLM4 9B",
     "status": "superseded",
     "superseded_by": "GLM-4.7",
     "notes": "Officially named GLM-4-9B by Zhipu AI (registered here as 'ChatGLM4 9B' to match this site's exact usage, mirroring the xinference model-registry naming this site content describes). 128K context, 26-language support.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
-    ]
-  },
-  {
-    "siteModel": "Mistral Small Instruct v0.3",
-    "registryModel": "Mistral Small",
-    "status": "superseded",
-    "superseded_by": "Mistral Small 4",
-    "notes": "Site's most-mentioned Mistral model (23 mentions, generic 'Mistral Small' without version). Mistral's own docs list a legacy deprecation table with specific retirement dates per point version — exact version(s) the site means is unverified; needs page-by-page check, not a blanket fact.",
     "fileCount": 1,
     "files": [
       "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
@@ -935,17 +890,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts"
-    ]
-  },
-  {
-    "siteModel": "Mistral Small v0.3",
-    "registryModel": "Mistral Small",
-    "status": "superseded",
-    "superseded_by": "Mistral Small 4",
-    "notes": "Site's most-mentioned Mistral model (23 mentions, generic 'Mistral Small' without version). Mistral's own docs list a legacy deprecation table with specific retirement dates per point version — exact version(s) the site means is unverified; needs page-by-page check, not a blanket fact.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/best-laptop-for-local-llm.ts"
     ]
   },
   {

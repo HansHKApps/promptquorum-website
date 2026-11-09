@@ -386,7 +386,7 @@
   "LLaVA 7B": [
     "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts"
   ],
-  "Mistral Small": [
+  "Ministral 3 8B": [
     "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
     "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts",
     "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
@@ -890,8 +890,15 @@
     "src/lib/prompt-bites/articles/local-llm-raspberry-pi-5.ts",
     "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts"
   ],
-  "Mistral Small v0.3 (deprecated pick)": [
-    "src/lib/local-llms/articles/best-beginner-local-llm-models.ts"
+  "Mistral 7B": [
+    "src/lib/local-llms/articles/best-beginner-local-llm-models.ts",
+    "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts",
+    "src/lib/power-local-llm/articles/ai-file-sorter-review.ts",
+    "src/lib/power-local-llm/articles/best-ai-hr-software-enterprise-2026.ts",
+    "src/lib/power-local-llm/articles/enterprise-chatbot-deployment-helpdesk-hr-bots.ts",
+    "src/lib/power-local-llm/articles/best-laptop-for-local-llm.ts",
+    "src/lib/power-local-llm/articles/best-ai-marketing-software-enterprise-2026.ts",
+    "src/lib/prompt-bites/articles/how-much-ram-for-7b-model.ts"
   ],
   "Qwen2.5 72B": [
     "src/lib/local-llms/articles/70b-models-consumer-hardware.ts"
@@ -947,7 +954,7 @@
   "Llama 3.3 70B Instruct": [
     "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
   ],
-  "Mistral Small Instruct v0.3": [
+  "Mistral 7B Instruct v0.3": [
     "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
   ],
   "Mixtral 8x22B Instruct": [
@@ -1123,14 +1130,6 @@
   "Google Gemini": [
     "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts",
     "src/lib/power-local-llm/articles/local-ai-mail-review.ts"
-  ],
-  "Mistral 7B": [
-    "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts",
-    "src/lib/power-local-llm/articles/ai-file-sorter-review.ts",
-    "src/lib/power-local-llm/articles/best-ai-hr-software-enterprise-2026.ts",
-    "src/lib/power-local-llm/articles/enterprise-chatbot-deployment-helpdesk-hr-bots.ts",
-    "src/lib/power-local-llm/articles/best-ai-marketing-software-enterprise-2026.ts",
-    "src/lib/prompt-bites/articles/how-much-ram-for-7b-model.ts"
   ],
   "Phi-3 3.8B": [
     "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts"
@@ -2033,9 +2032,6 @@
   ],
   "Nvidia Parakeet": [
     "src/lib/power-local-llm/articles/macwhisper-review.ts"
-  ],
-  "Mistral Small v0.3": [
-    "src/lib/power-local-llm/articles/best-laptop-for-local-llm.ts"
   ],
   "Moondream 2": [
     "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts"

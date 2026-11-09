@@ -1319,6 +1319,18 @@
       "notes": "New small-model family per Mistral's own model catalog: Ministral 3 14B, Ministral 3 8B, Ministral 3 3B. Corroborated via AWS Bedrock (Ministral 14B 3.0, Ministral 3 8B, Ministral 3B). Relevant for this site's low-VRAM local-LLM hardware-tier content — not yet checked against any current site mentions this cycle."
     },
     {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Ministral 3 8B",
+      "type": "open-weight",
+      "release_date": "2026",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/ministral-3",
+      "verified_date": "2026-11-09",
+      "notes": "Exact-size entry (2026-11-09). Ollama's ministral-3 page lists 3B/8B/14B/94B sizes; the 8B tag pulls ~6.0 GB by default. Mistral/Ollama describe the Ministral 3 line as 'designed for edge deployment, capable of running on a wide range of hardware' -- this is the real match for ~16 site articles that described a ~4 GB, 7-8B-class model called 'Mistral Small' running comfortably on any M1+ Mac / a 12 GB budget GPU. The actual 'Mistral Small' product line is 22-24B dense (now a 119B MoE as 'Mistral Small 4') and does not fit those specs; the site had conflated the two distinct Mistral AI model lines."
+    },
+    {
       "company": "Meta",
       "family": "Llama",
       "model": "Llama 3.2 1B",
