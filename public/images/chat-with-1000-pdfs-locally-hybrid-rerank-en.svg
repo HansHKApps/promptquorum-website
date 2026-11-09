@@ -72,7 +72,7 @@
 
   <!-- LLM box -->
   <rect x="620" y="170" width="120" height="50" fill="#FFFFFF" stroke="#34A853" stroke-width="2" rx="3"/>
-  <text x="680" y="190" font-size="10" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Llama 3.3 8B</text>
+  <text x="680" y="190" font-size="10" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Llama 3.1 8B</text>
   <text x="680" y="208" font-size="9" fill="#49454F" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">top-8 context</text>
 
   <!-- Impact metrics -->

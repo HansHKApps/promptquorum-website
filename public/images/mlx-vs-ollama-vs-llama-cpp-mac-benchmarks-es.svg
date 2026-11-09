@@ -8,7 +8,7 @@
   <text x="127" y="113.16666666666666" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">62</text>
   <rect x="150" y="148.33333333333334" width="34" height="151.66666666666666" fill="#34A853" rx="3"/>
   <text x="167" y="142.33333333333334" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">52</text>
-  <text x="127" y="320" font-size="11.5" font-weight="700" fill="#79747E" text-anchor="middle">Llama 3.3 8B Q4</text>
+  <text x="127" y="320" font-size="11.5" font-weight="700" fill="#79747E" text-anchor="middle">Llama 3.1 8B Q4</text>
   <rect x="245" y="148.33333333333334" width="34" height="151.66666666666666" fill="#7D5260" rx="3"/>
   <text x="262" y="142.33333333333334" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">52</text>
   <rect x="285" y="107.5" width="34" height="192.5" fill="#6750A4" rx="3"/>
