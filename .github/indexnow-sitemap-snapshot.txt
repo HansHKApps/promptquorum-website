@@ -2,6 +2,7 @@ https://www.promptquorum.com
 https://www.promptquorum.com/about
 https://www.promptquorum.com/about/state-of-local-ai
 https://www.promptquorum.com/about/state-of-local-ai/2026-q4
+https://www.promptquorum.com/askhans
 https://www.promptquorum.com/balcony-solar
 https://www.promptquorum.com/balcony-solar/allpowers-balcony-solar
 https://www.promptquorum.com/balcony-solar/anker-solix-balcony-solar
@@ -232,6 +233,7 @@ https://www.promptquorum.com/local-llms/vram-calculator-local-llm
 https://www.promptquorum.com/local-llms/what-are-local-llms
 https://www.promptquorum.com/local-llms/why-enterprises-use-local-llms
 https://www.promptquorum.com/local-llms/xinference-llama-qwen-chatglm-mistral
+https://www.promptquorum.com/mcp-stats
 https://www.promptquorum.com/power-local-llm
 https://www.promptquorum.com/power-local-llm/acdsee-photo-studio-ultimate-review
 https://www.promptquorum.com/power-local-llm/agent-zero-review
@@ -248,6 +250,7 @@ https://www.promptquorum.com/power-local-llm/aiclient2api-review
 https://www.promptquorum.com/power-local-llm/aider-review
 https://www.promptquorum.com/power-local-llm/aiko-review
 https://www.promptquorum.com/power-local-llm/amd-gaia-review
+https://www.promptquorum.com/power-local-llm/amical-review
 https://www.promptquorum.com/power-local-llm/anarlog-review
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide
 https://www.promptquorum.com/power-local-llm/anyllm-review
