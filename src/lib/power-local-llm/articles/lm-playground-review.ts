@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'gguf models android app',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground (version 1.10.1 as of 16 October 2026, last updated on Google Play on 8 October 2026) needs no account and is built on llama.cpp, the open-source engine that executes the models on the phone.** Models are downloaded once from Hugging Face and then chat, document questions, photo input, and dictation work offline. Only two things go online by design: model downloads and the optional web search and page-fetch tools, which are off by default.',
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'gguf modelle android app',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground (Version 1.10.1, Stand 16. Oktober 2026, bei Google Play zuletzt aktualisiert am 8. Oktober 2026) braucht kein Konto und baut auf llama.cpp auf, der Open-Source-Engine, die die Modelle auf dem Smartphone ausführt.** Modelle werden einmal von Hugging Face heruntergeladen; danach funktionieren Chat, Dokumentenfragen, Fotoeingabe und Diktat offline. Nur zwei Dinge gehen konzeptionsbedingt online: Modell-Downloads sowie die optionalen Werkzeuge für Websuche und Seitenabruf, die standardmäßig ausgeschaltet sind.',
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'app de modelos gguf para android',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground (versión 1.10.1 a fecha del 16 de octubre de 2026, última actualización en Google Play el 8 de octubre de 2026) no requiere cuenta y está construida sobre llama.cpp, el motor de código abierto que ejecuta los modelos en el teléfono.** Los modelos se descargan una sola vez desde Hugging Face y después el chat, las preguntas sobre documentos, la entrada de fotos y el dictado funcionan offline. Solo dos cosas se conectan a internet por diseño: las descargas de modelos y las herramientas opcionales de búsqueda web y de lectura de páginas, que vienen desactivadas por defecto.',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'application android modèles gguf',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground (version 1.10.1 au 16 octobre 2026, dernière mise à jour sur Google Play le 8 octobre 2026) ne demande aucun compte et repose sur llama.cpp, le moteur open source qui exécute les modèles sur le téléphone.** Les modèles sont téléchargés une seule fois depuis Hugging Face, puis le chat, les questions sur documents, l\'envoi de photos et la dictée fonctionnent hors ligne. Seules deux choses passent par internet par conception : les téléchargements de modèles et les outils facultatifs de recherche web et de récupération de pages, désactivés par défaut.',
@@ -1552,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'gguf モデル android アプリ',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground(2026年10月16日時点のバージョンは1.10.1、Google Playでの最終更新は2026年10月8日)はアカウント不要で、モデルをスマートフォン上で実行するオープンソースのエンジンであるllama.cppを土台にしています。** モデルはHugging Faceから一度ダウンロードすれば、その後はチャット、ドキュメントへの質問、写真入力、音声入力がオフラインで動作します。設計上オンラインになるのは、モデルのダウンロードと、既定ではオフのオプションのWeb検索・ページ取得ツールの2つだけです。',
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'app android modelos gguf',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**O LM Playground (versão 1.10.1 em 16 de outubro de 2026, última atualização no Google Play em 8 de outubro de 2026) não exige conta e é construído sobre o llama.cpp, o motor de código aberto que executa os modelos no celular.** Os modelos são baixados uma vez do Hugging Face e, depois disso, o chat, as perguntas sobre documentos, o envio de fotos e o ditado funcionam offline. Apenas duas coisas ficam online por projeto: o download dos modelos e as ferramentas opcionais de busca na web e de leitura de páginas, que vêm desligadas por padrão.',
@@ -2292,7 +2292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'تطبيق نماذج gguf لأندرويد',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground (الإصدار 1.10.1 اعتباراً من 16 أكتوبر 2026، وآخر تحديث على Google Play في 8 أكتوبر 2026) لا يتطلب حساباً ويعتمد على llama.cpp، وهو المحرك مفتوح المصدر الذي ينفّذ النماذج على الهاتف.** تُنزَّل النماذج مرة واحدة من Hugging Face، وبعدها تعمل الدردشة وأسئلة المستندات وإدخال الصور والإملاء دون اتصال. ولا يتصل بالإنترنت بحسب تصميمه سوى أمرين: تنزيل النماذج، وأداتا البحث على الويب وجلب الصفحات الاختياريتان المعطّلتان افتراضياً.',
@@ -2662,7 +2662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'gguf 模型 android 应用',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground（截至 2026 年 10 月 16 日为 1.10.1 版本，Google Play 上最近更新于 2026 年 10 月 8 日）无需账号，基于 llama.cpp 构建，后者是在手机上执行模型的开源引擎。** 模型只需从 Hugging Face 下载一次，之后聊天、文档提问、照片输入和语音听写均可离线使用。按设计只有两件事会联网：模型下载，以及默认关闭的可选网页搜索和网页获取工具。',
@@ -3032,7 +3032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'andriy druk lm playground',
       'gguf 모델 안드로이드 앱',
     ],
-    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
+    current_models_mentioned: ['Qwen 3.5', 'Gemma 4', 'GPT-OSS', 'Nemotron 3 Nano', 'Granite 4', 'DeepSeek-R1 Distill', 'Phi-4 mini', 'LFM2.5', 'Ministral 3', 'Llama 3.2'],
     current_hardware_mentioned: ['Android', 'ARM'],
     leadAnswerBlock:
       '**LM Playground(2026년 10월 16일 기준 버전 1.10.1, Google Play 최종 업데이트 2026년 10월 8일)는 계정이 필요 없으며, 휴대폰에서 모델을 실행하는 오픈 소스 엔진인 llama.cpp를 기반으로 합니다.** 모델은 Hugging Face에서 한 번 내려받은 뒤에는 채팅, 문서 질문, 사진 입력, 받아쓰기가 오프라인으로 작동합니다. 설계상 온라인으로 연결되는 것은 모델 다운로드와, 기본값이 꺼짐인 선택형 웹 검색·페이지 가져오기 도구 두 가지뿐입니다.',
