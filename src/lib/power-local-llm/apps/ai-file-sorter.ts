@@ -19,7 +19,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ai-file-sorter',
   name: 'AI File Sorter',
-  categories: ['local-search', 'vision-ocr'],
+  categories: ['file-organization', 'local-search', 'vision-ocr'],
   interfaces: ['desktop'], // Qt 6 desktop app; a paid Windows Explorer right-click extension is a separate add-on
   locality: 'hybrid', // local GGUF models (Gemma 3 4B IT, Gemma 1.1 7B, Mistral 7B, own GGUF) keep files on the machine; opt-in remote: own OpenAI/Gemini key or custom OpenAI-compatible endpoint
   platforms: ['win', 'mac', 'linux'], // download page: Windows installer + portable, macOS disk images (M2-M5, M1, Intel), Linux packages (Debian, Ubuntu, Fedora, Rocky, Arch)

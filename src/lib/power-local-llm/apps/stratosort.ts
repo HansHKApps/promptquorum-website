@@ -17,7 +17,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'stratosort',
   name: 'StratoSort',
-  categories: ['local-search', 'document-pdf-chat'],
+  categories: ['file-organization', 'local-search', 'document-pdf-chat'],
   interfaces: ['desktop'], // Electron desktop app; opt-in local MCP server for Claude Desktop, Cursor, Zed
   locality: 'local', // site + docs: in-process llama.cpp, models run on the computer and work offline once installed; cloud AI only with the user's own API key (off by default); model downloads and update checks use the network
   platforms: ['mac', 'win', 'linux'], // Windows 10 22H2/11 x64+arm64, macOS 13+ Apple Silicon + Intel, Ubuntu 22.04+ x64+arm64 (AppImage, .deb)
