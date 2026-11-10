@@ -3094,7 +3094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/stratosort-review-hero-ko.webp',
     title: 'StratoSort 리뷰: Mac·Windows·Linux용 로컬 AI 파일 정리 앱',
     seoTitle: 'StratoSort 리뷰: 로컬 AI 파일 정리 앱',
-    intro: 'StratoSort는 파일 안의 내용을 읽고 이름과 폴더를 제안하며, 문서에 따르면 사용자가 승인한 뒤에만 파일을 옮기는 데스크톱 앱입니다. 언어 모델은 llama.cpp를 통해 사용자의 컴퓨터에서 실행됩니다. 의미 기반 검색, 문서 대화, 지식 그래프도 제공합니다. 이 리뷰는 개발사의 웹사이트, 문서, GitHub 저장소가 밝히는 내용, 로컬 방식이 끝나는 지점, 라이선스가 상업적 사용을 제한하는 방식, 그리고 디렉터리의 비슷한 도구와의 비교를 정리합니다.',
+    intro: 'StratoSort는 파일 안의 내용을 기준으로 파일을 정리하고, 문서에 대한 비공개 검색, 대화, 지식 그래프 도구로도 쓰이는 데스크톱 앱이며, 언어 모델은 llama.cpp를 통해 사용자의 컴퓨터에서 실행됩니다. 문서에 따르면 사용자가 승인한 뒤에만 파일을 옮깁니다. 이 리뷰는 개발사의 웹사이트, 문서, GitHub 저장소가 밝히는 내용, 로컬 방식이 끝나는 지점, 라이선스가 상업적 사용을 제한하는 방식, 그리고 디렉터리의 비슷한 도구와의 비교를 정리합니다.',
     metaDescription: 'StratoSort 리뷰: llama.cpp 로컬 모델로 파일을 정리하는 Mac·Windows·Linux용 AI 앱. 설치 후 오프라인 작동. 라이선스, 한계. 테스트 안 함.',
     twitterDescription: 'StratoSort 리뷰: Mac·Windows·Linux에서 파일 이름 변경, 분류, 검색을 하는 로컬 AI. 개인용 무료. 개인정보 보호, 라이선스, 한계, 대안을 정리했습니다.',
     audience: '문서, 스캔, 이미지, 오디오 폴더가 어수선하여 파일을 클라우드 서비스에 올리지 않고 AI가 제안하는 이름과 폴더를 쓰려는 사용자를 위한 글입니다. 설치, 모델, 개인정보 보호, 라이선스, 한계, 대안을 다룹니다.',
@@ -3140,6 +3140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '기능', anchor: 'features' },
       { label: '모델과 하드웨어', anchor: 'models-hardware' },
       { label: '개인정보 보호, 라이선스, 비용', anchor: 'privacy' },
+      { label: '개발사의 말', anchor: 'from-the-maker' },
       { label: '장점과 한계', anchor: 'tradeoffs' },
       { label: 'StratoSort와 대안 비교', anchor: 'vs-alternatives' },
       { label: 'StratoSort를 쓰면 좋은 사용자', anchor: 'who-should-use' },
@@ -3157,7 +3158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'StratoSort는 문서에 따르면 로컬 llama.cpp 모델로 파일의 이름과 폴더를 제안하며, 모델을 내려받은 뒤에는 오프라인으로 작동하는 데스크톱 앱입니다.',
+            text: 'StratoSort는 파일 안의 내용을 읽고 사용자가 일상적인 말로 설명한 폴더로 파일을 옮기며, 일관된 형식으로 이름을 바꾸거나 원래 이름을 그대로 유지하는 데스크톱 앱이고, 개발사에 따르면 모델은 사용자의 컴퓨터에서 실행됩니다.',
           },
           {
             type: 'plain-terms',
@@ -3168,6 +3169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬 주장: 모델은 기기에서 실행되며, 모델 다운로드, 업데이트 확인, 사용자가 추가한 클라우드 제공자에는 인터넷이 사용됩니다.',
           '개발사: Kennedy Applied Sciences, Inc.이며, 코드는 iLevyTate 계정 아래 GitHub에 공개되어 있습니다.',
           '유지보수: 버전 5.1.2가 2026년 11월 1일에 출시되었고 저장소는 2026년 11월 10일에 업데이트되어 프로젝트가 활발히 개발되고 있습니다.',
+          'Knowledge OS: 개발사에 따르면 검색, 대화, 그래프 쪽이 앱이 하는 일의 약 절반이며, 검색은 의미뿐 아니라 청구서 번호 같은 정확한 용어도 찾아냅니다.',
           '공백: 여기서는 직접 테스트하지 않았고, 공개된 지 얼마 되지 않은 프로젝트이며, 모델은 처음에 용량이 큰 다운로드가 필요합니다.',
         ],
       },
@@ -3200,6 +3202,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[stratosort.com](https://stratosort.com/)',
           },
           {
+            '플랫폼': '데모 영상',
+            '받는 곳': '[StratoSort 데모 영상](https://stratosort.com/assets/strato-ad.mp4) — 개발사가 제공한 짧은 mp4',
+          },
+          {
+            '플랫폼': '에어갭 설치',
+            '받는 곳': '[설치 가이드: 오프라인 및 에어갭 설치](https://stratosort.com/docs/INSTALL_GUIDE.html#offline-and-air-gapped-install) — 인터넷에 연결되지 않는 컴퓨터용',
+          },
+          {
             '플랫폼': '개인정보 처리방침',
             '받는 곳': '[StratoSort 개인정보 처리방침](https://stratosort.com/privacy.html)',
           },
@@ -3208,7 +3218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[github.com/iLevyTate/StratoSortStack](https://github.com/iLevyTate/StratoSortStack) — PolyForm Noncommercial 1.0.0',
           },
         ],
-        note: '설치 파일의 용량이 크며(Linux .deb는 약 534 MB), 각 릴리스에는 SHA-256 체크섬 파일이 나열되어 있습니다.',
+        note: '설치 파일의 용량이 크며(Linux .deb는 약 534 MB), 각 릴리스에는 SHA-256 체크섬 파일이 나열되어 있습니다. 개발사에 따르면 Windows 설치 파일은 Kennedy Applied Sciences, Inc.가 서명하며, Mac 빌드는 버전 4.0.0부터 공증(notarization)을 받았습니다.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -3231,7 +3241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'StratoSort란',
         content: [
           '**StratoSort는 파일 이름만이 아니라 내용을 읽는 파일 정리 앱입니다.** 문서, 스프레드시트, 이미지, 스캔, 오디오, 동영상 안을 살펴 이름과 폴더를 제안하고, 사용자가 일상적인 말로 설명한 "Smart Folders"로 파일을 옮깁니다.',
-          '저장소 이름은 StratoSortStack이며 원래 StratoSort의 후속 버전이라고 스스로 소개합니다. 웹사이트와 이 리뷰는 StratoSort라는 이름을 씁니다. 정리 외에도 의미 기반 검색, 출처를 보여 주는 문서 대화, 지식 그래프, 그리고 Claude Desktop, Cursor, Zed 같은 도구를 위한 선택형 로컬 MCP 서버를 제공합니다.',
+          '저장소 이름은 StratoSortStack이며 원래 StratoSort의 후속 버전이라고 스스로 소개합니다. 웹사이트와 이 리뷰는 StratoSort라는 이름을 씁니다. 정리 외에도 개발사가 Knowledge OS라고 부르며 앱이 하는 일의 약 절반이라고 설명하는 검색, 대화, 그래프 쪽이 있고, 선택형 로컬 MCP 서버도 제공합니다.',
           '이 리뷰는 웹사이트, 문서, 개인정보 처리방침, GitHub 저장소에 근거합니다. 직접 사용해 본 테스트는 하지 않았으므로 앱이 파일 이름을 짓고 분류하는 정확도와 실행 속도는 여기서 평가하지 않습니다.',
         ],
       },
@@ -3244,7 +3254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '앱 설치',
-            whyItMatters: '[GitHub 릴리스 페이지](https://github.com/iLevyTate/StratoSortStack/releases/latest)에서 사용 중인 시스템용 설치 파일을 내려받아 실행합니다.',
+            whyItMatters: '위의 StratoSort 받기 표에서 사용 중인 시스템용 설치 파일을 내려받아 실행합니다.',
           },
           {
             title: '모델 내려받기',
@@ -3264,15 +3274,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: '기능',
         content: [
-          '**기능은 파일을 정리하고 찾는 데 집중되어 있습니다.** 아래 내용은 모두 웹사이트, 문서, 릴리스 노트에서 가져왔습니다.',
+          '**기능은 파일을 정리하고 찾는 데 집중되어 있습니다.** 아래 내용은 모두 웹사이트, 문서, 릴리스 노트, 그리고 2026년 11월 10일 개발사의 설명에서 가져왔습니다.',
         ],
         items: [
-          '**내용 기반 정리.** 비전 모델과 OCR을 통한 스캔과 이미지를 포함해, 파일에 담긴 내용을 바탕으로 파일 이름과 폴더를 제안합니다.',
+          '**내용 기반 정리.** 비전 모델과 OCR을 통한 스캔과 이미지를 포함해, 파일에 담긴 내용을 바탕으로 폴더를 고릅니다. 이름 변경은 선택 사항이며, 일관된 형식으로 이름을 바꾸거나 원래 이름 유지 옵션으로 이름을 그대로 둔 채 옮길 수 있습니다.',
+          '**폴더 감시.** 개발사에 따르면 앱은 Downloads와 Smart Folders를 감시하다가 새 파일이 어디에 속하는지 제안할 수 있습니다.',
           '**검토와 되돌리기.** 제안된 이동은 사용자의 승인을 기다리며 되돌릴 수 있습니다.',
-          '**의미 기반 검색과 대화.** 의미로 검색하고, 출처가 표시되는 상태로 문서에 대해 질문할 수 있습니다.',
+          '**검색과 대화.** 검색은 의미뿐 아니라 청구서 번호 같은 정확한 용어도 찾아내며, 대화 답변에는 출처 파일이 표시됩니다.',
           '**오디오와 동영상.** 음성은 Whisper로 전사되고, 전사본은 문서와 함께 색인됩니다.',
-          '**지식 그래프.** Relate와 Atlas 보기에서 문서들이 어떻게 연결되는지 보여 줍니다.',
-          '**MCP 서버.** 선택형 로컬 서버를 통해 Claude Desktop, Cursor, Zed 같은 도구가 파일을 조회할 수 있습니다.',
+          '**지식 그래프.** 세 가지 보기가 있습니다. Relate(클러스터와 유사도 링크), Atlas(벡터 임베딩 지도로, 파일을 올가미로 선택해 이동하거나 태그를 달거나 Smart Folder로 만들 수 있음), Timeline입니다.',
+          '**MCP 서버.** 선택형 로컬 서버는 읽기 전용이며 127.0.0.1에만 바인딩되어, Claude Desktop, Cursor, Zed 같은 도구가 파일을 조회할 수 있습니다. 개발사에 따르면 연결된 클라이언트는 요약과 인용만 받고 원본 파일은 받지 않습니다.',
         ],
       },
       modelsHardware: {
@@ -3288,9 +3299,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 보호, 라이선스, 비용',
         content: [
           '**개인정보 처리방침에 따르면 앱은 사용자의 컴퓨터에서 실행되며, 표준 구성에서는 문서 내용, 파일 경로, 임베딩, 검색어가 컴퓨터 밖으로 나가지 않습니다.** 또한 외부로 신호를 보내는 분석, 원격 측정, 충돌 보고기, 기능 플래그 서비스가 앱에 포함되어 있지 않으며, 웹사이트에는 계정이나 동기화 서비스가 없다고 밝힙니다.',
-          '네트워크 문서에는 앱이 맺을 수 있는 연결이 나열되어 있습니다. huggingface.co에서의 모델 다운로드, GitHub에서의 새 릴리스 확인, 그리고 음성 모델, 비전 보조 모델, OCR 언어 데이터의 일회성 다운로드입니다. 릴리스 확인은 설치된 빌드에서 기본적으로 켜져 있으며 설정에서 끌 수 있습니다. 클라우드 AI는 자신의 Anthropic 또는 OpenAI 호환 키를 추가하지 않는 한 꺼져 있으며, 키를 추가하면 보내는 텍스트가 해당 제공자의 약관에 따라 그 제공자에게 전달됩니다. 코드는 공개되어 있지만 PromptQuorum은 네트워크 트래픽을 조사하지 않았으므로, 이런 진술은 개발사 자체의 설명입니다.',
+          '네트워크 문서에는 앱이 맺을 수 있는 연결이 나열되어 있습니다. huggingface.co에서의 모델 다운로드, GitHub에서의 새 릴리스 확인, 그리고 음성 모델의 일회성 다운로드입니다. 개발사에 따르면 비전 런타임과 OCR 언어 데이터는 설치 파일에 포함되어 있고 번들 파일이 없을 때의 대체 수단으로만 내려받으므로, 일반적인 사용에서 이런 추가 요소 중 일회성 다운로드는 음성 모델뿐이며 사용자가 설치를 선택할 때만 받습니다. 릴리스 확인은 설치된 빌드에서 기본적으로 켜져 있으며 설정에서 끌 수 있습니다. 클라우드 AI는 자신의 Anthropic 또는 OpenAI 호환 키를 추가하지 않는 한 꺼져 있으며, 키를 추가하면 보내는 텍스트가 해당 제공자의 약관에 따라 그 제공자에게 전달됩니다. 코드는 공개되어 있지만 PromptQuorum은 네트워크 트래픽을 조사하지 않았으므로, 이런 진술은 개발사 자체의 설명입니다.',
           '라이선스는 PolyForm Noncommercial 1.0.0이며, 오픈 소스가 아니라 소스 공개(source-available) 방식입니다. 개인용 및 기타 비상업적 용도로는 모든 기능이 무료이고, 상업적 사용에는 Kennedy Applied Sciences, Inc.의 유료 사용자당 라이선스가 필요하며 공개된 가격 없이 이메일로 견적을 받습니다.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발사의 말',
+        content: [
+          'StratoSort 개발사는 2026년 11월 10일에 정정 사항과 아래 메모를 보내 왔습니다. 이는 개발사 본인의 말로 소개하는 것이며 PromptQuorum의 독립적인 편집 평가가 아니고, PromptQuorum은 코드나 테스트로 이를 검증하지 못했습니다.',
+          '“저는 파일이 너무 사적이라 클라우드 AI 서비스에 올릴 수 없는 사람들을 위해 StratoSort를 만들었습니다. 모델을 내려받고 나면 정리, 검색, 대화, 전사가 모두 사용자의 컴퓨터에서 실행됩니다. 계정도 원격 측정도 없으며, 업데이트 확인을 끄고 클라우드 키를 추가하지 않으면 외부로 나가는 요청이 전혀 없습니다. 저는 약 17개월 동안 파트타임으로 혼자 만들었습니다. 동작이 문서와 다르다면 GitHub에 이슈를 열어 주시면 확인하겠습니다.”',
+        ],
+        note: '— StratoSort 개발사',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3387,7 +3407,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**라이선스가 없는 기업.** 상업적 사용에는 PolyForm Noncommercial에 따른 유료 라이선스가 필요합니다.',
           '**오픈 소스 코드가 필요한 사용자.** 라이선스는 OSI 오픈 소스가 아니라 소스 공개 방식입니다.',
           '**RAM이 8 GB 미만인 컴퓨터.** 이것이 명시된 최소 사양입니다.',
-          '**자동 네트워크 트래픽을 원하지 않는 사용자.** 릴리스 확인이 기본적으로 켜져 있어 직접 꺼야 합니다.',
         ],
       },
       faq: {
@@ -3396,7 +3415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'StratoSort는 오프라인에서 작동합니까?',
-            a: '문서에는 모델을 설치하고 나면 그렇다고 적혀 있으며, 비행기 모드 테스트를 권합니다. 첫 실행에서는 모델을 내려받기 위해 인터넷이 필요하며, 제한된 AI로 계속하면 건너뛸 수 있습니다. PromptQuorum은 오프라인에서 테스트하지 않았습니다.',
+            a: '문서에는 모델을 설치하고 나면 그렇다고 적혀 있으며, 비행기 모드 테스트를 권합니다. 첫 실행에서는 모델을 내려받기 위해 인터넷이 필요하며, 제한된 AI로 계속하면 건너뛸 수 있고, 설치 가이드에는 인터넷에 연결되지 않는 컴퓨터를 위한 에어갭 설치 방법이 설명되어 있습니다(StratoSort 받기 참조). PromptQuorum은 오프라인에서 테스트하지 않았습니다.',
           },
           {
             q: '직장에서 써도 됩니까?',
@@ -3433,6 +3452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[개인정보 처리방침](https://stratosort.com/privacy.html) — 데이터 처리, 최종 업데이트 2026년 10월 29일.',
           '[GitHub 저장소](https://github.com/iLevyTate/StratoSortStack) — README, 라이선스, 소스 코드.',
           '[GitHub Releases](https://github.com/iLevyTate/StratoSortStack/releases) — 설치 파일과 버전 5.1.2의 출시일.',
+          '[설치 가이드](https://stratosort.com/docs/INSTALL_GUIDE.html#offline-and-air-gapped-install) — 설치 파일과 오프라인 및 에어갭 설치.',
         ],
       },
       relatedReading: {
