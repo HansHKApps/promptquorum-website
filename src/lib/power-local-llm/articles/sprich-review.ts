@@ -3,10 +3,10 @@
 // Companion to: macwhisper-review, weesper-neon-flow-review, fluidvoice-review, amical-review, local-llm-voice-audio-compared
 // Facts verified 2026-11-09 against sprich.ai (home incl. schema.org markup, /download, /changelog, /about, /imprint, /privacy-policy of 22 Oct 2026, /vs/superwhisper, /spricheinfach).
 // Not hands-on tested. Stale-project warning is OFF (19 days since the last update on 2026-11-10; v2.2.4 of 2026-10-22 re-checked on /changelog).
-// 2026-11-10 maker update (Jakob Spetkamp, co-founder, by email to Hans): local Mac app = Parakeet + a fine-tuned post-processing model, both on the Mac; Whisper is NOT used (the privacy-policy entry is outdated).
+// 2026-11-10 maker update (Jakob, co-founder, by email to Hans): local Mac app = Parakeet + a fine-tuned post-processing model, both on the Mac; Whisper is NOT used (the privacy-policy entry is outdated).
 // Windows: separate cloud version for Mac + Windows in beta (hence the waitlist), own server in Helsinki, RAM only, nothing stored or used for training; the local app sends no audio anywhere.
-// Languages: the maker could NOT confirm the 57 (schema.org markup); Parakeet = about 25 European languages (selectable for file transcription); dictation optimized for German; UI German only (deliberate).
-// founderReviewedDate is NOT set: the maker answered questions and sent a note but did not review the finished article (feedback rule: first badge only on explicit maker approval). From the Maker section + founder record are set.
+// Languages: Parakeet = about 25 European languages (selectable for file transcription); dictation optimized for German; UI German only (deliberate). The old 57-language site-markup figure is removed everywhere (owner, 2026-11-10).
+// founderReviewedDate set 2026-11-10 (owner decision: Jakob, co-founder, approved the review indirectly). From the Maker section + founder record set; the maker is named just "Jakob".
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -40,11 +40,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac dictation lifetime license',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich is a German-made dictation app for the Mac that, per its maker, transcribes on your own Apple Silicon computer with Parakeet and types the result into any app.** Dictation is optimized for German and the interface is German only; the maker could not confirm the 57 languages in its site markup and puts the transcription model at about 25 European languages. The newest release is version 2.2.4 from 22 October 2026. This review rests on the maker\'s website, changelog, privacy policy and a message from the maker, not on hands-on testing.',
+    leadAnswerBlock: '**Sprich is a German-made dictation app for the Mac that, per its maker, transcribes on your own Apple Silicon computer with Parakeet and types the result into any app.** Dictation is optimized for German and the interface is German only; the maker puts the transcription model at about 25 European languages. The newest release is version 2.2.4 from 22 October 2026. This review rests on the maker\'s website, changelog, privacy policy and a message from the maker, not on hands-on testing.',
     quickAnswerTop: {
       en: {
         question: 'Is Sprich only for German?',
-        answer: 'No, but German is its focus. The maker says dictation is optimized for German, English terms inside a sentence work well, and the Parakeet model understands about 25 European languages, which you can pick when transcribing files. The maker could not confirm the 57 languages in the home page markup. The website, the policy and, so far, the app interface are German only, a deliberate choice because the local version is optimized for German.',
+        answer: 'No, but German is its focus. The maker says dictation is optimized for German, English terms inside a sentence work well, and the Parakeet model understands about 25 European languages, which you can pick when transcribing files. The website, the policy and, so far, the app interface are German only, a deliberate choice because the local version is optimized for German.',
         bullets: [
           'Hold a shortcut, speak, release: the text is pasted into any Mac app, with an optional clean-up pass for punctuation and filler words.',
           'Free to start with a weekly word limit; the paid options are billed in euros.',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Think of a microphone key that types for you: hold the shortcut, talk, let go, and the words appear where your cursor is — German first, with a free plan to try it.' },
         ],
         items: [
-          'Languages: built for German; the maker puts the speech model at about 25 European languages and could not confirm the 57 in its markup.',
+          'Languages: built for German; the maker puts the speech model at about 25 European languages.',
           'Local claim: per the maker, the Mac app runs Parakeet and a fine-tuned clean-up model on the device and sends no audio anywhere; Whisper is not used. PromptQuorum has not verified this.',
           'Price: free to start, with paid plans billed in euros.',
           'Maintenance: version 2.2.4 was released on 22 October 2026, so the app is actively updated.',
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Languages: German First, About 25 European Languages',
         content: [
           '**Sprich is built for German, and the maker says its speech model understands about 25 European languages.** Dictation is optimized for German, with dialects, technical language and German-English mixes, and English terms inside a German sentence work well, per the maker. A changelog entry says German words are recognized more reliably since version 2.2.2.',
-          'The maker says the roughly 25 languages of the Parakeet model can be chosen when transcribing files. It could not confirm the 57 languages listed in the home page\'s schema.org markup, so that figure should not be relied on. The maker\'s comparison page with Superwhisper says Sprich is mainly optimized for German and English.',
+          'The maker says the roughly 25 languages of the Parakeet model can be chosen when transcribing files. The maker\'s comparison page with Superwhisper says Sprich is mainly optimized for German and English.',
           'The website, changelog, privacy policy and app interface are German only; the maker says this is a deliberate choice because the local version is optimized for German, so English screenshots do not exist yet. PromptQuorum did not test any language.',
         ],
       },
@@ -153,10 +153,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'From the Maker',
         content: [
-          'Jakob Spetkamp, co-founder of Sprich, answered our questions about the speech model, Windows and languages on 10 November 2026 and sent the note below. It is presented as the maker\'s own words, not as PromptQuorum\'s independent editorial assessment, and PromptQuorum could not verify it in code or by testing:',
+          'Jakob, co-founder of Sprich, answered our questions about the speech model, Windows and languages on 10 November 2026 and sent the note below. It is presented as the maker\'s own words, not as PromptQuorum\'s independent editorial assessment, and PromptQuorum could not verify it in code or by testing:',
           '"We built Sprich because dictating in German on the Mac was either poor or sent everything to a US cloud. Doctors, lawyers and authors in particular are not allowed to, or do not want to, do that. That is why Sprich runs entirely locally and is trained for German, including technical terms and Denglisch. Next come Windows and the cloud version for everyone who does not have an Apple Silicon Mac."',
         ],
-        note: '— Jakob Spetkamp, co-founder',
+        note: '— Jakob, co-founder',
       },
       pricing: {
         id: 'pricing',
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Benefit', 'What it means in real use', 'Limitation / caveat'],
         rows: [
           { 'Benefit': 'On-device transcription', 'What it means in real use': 'Dictation can work without sending speech to a cloud, per the maker.', 'Limitation / caveat': 'A separate cloud version for Mac and Windows is in beta; no source code to check.' },
-          { 'Benefit': 'German-first tuning', 'What it means in real use': 'Dialects, technical terms and German-English mixes are a stated focus.', 'Limitation / caveat': 'Site, policy and app interface German only; about 25 languages, not 57.' },
+          { 'Benefit': 'German-first tuning', 'What it means in real use': 'Dialects, technical terms and German-English mixes are a stated focus.', 'Limitation / caveat': 'Site, policy and app interface German only; about 25 languages.' },
           { 'Benefit': 'Free plan and Lifetime', 'What it means in real use': 'Try it free, or pay once instead of subscribing.', 'Limitation / caveat': 'The free plan stops at 2,000 words a week.' },
           { 'Benefit': 'Meetings and files', 'What it means in real use': 'Records meetings with speaker labels and summaries; transcribes audio files.', 'Limitation / caveat': 'The free plan includes three meetings and one file.' },
           { 'Benefit': 'Active development', 'What it means in real use': 'Version 2.2.4 shipped on 22 October 2026.', 'Limitation / caveat': 'Apple Silicon and macOS 15 only; no source code found.' },
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Windows, Linux or Intel Mac users.** Only Apple Silicon Macs on macOS 15 or newer are supported.',
           '**Anyone who needs open-source code.** No public source or licence was found.',
           '**Readers who need an English interface.** The website, changelog and privacy policy are German only, and the maker says the app interface is German only so far.',
-          '**Anyone who needs a wide language list.** The maker could not confirm the 57 languages in its markup; the speech model covers about 25 European languages, per the maker.',
+          '**Anyone who needs a wide language list.** The speech model covers about 25 European languages, per the maker.',
         ],
       },
       faq: {
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which languages does Sprich support?',
-            a: 'The maker says Parakeet understands about 25 European languages, selectable for file transcription, and that dictation is optimized for German. It could not confirm the 57 languages in its site markup. The app interface is German only so far.',
+            a: 'The maker says Parakeet understands about 25 European languages, selectable for file transcription, and that dictation is optimized for German. The app interface is German only so far.',
           },
         ],
       },
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Sprich is a good fit if you dictate on an Apple Silicon Mac, mostly in German, and want a free plan, meeting notes and a one-off Lifetime price. The maker says transcription stays on the device, and version 2.2.4 is recent.',
-          'The caveats are verifiability and scope: a German-only website and app interface, about 25 European languages rather than the 57 in the site markup, a Windows version that is a cloud beta, no public source code and no Intel support. The maker\'s statements on models, privacy and languages are its own and untested here. Try the free plan before paying.',
+          'The caveats are verifiability and scope: a German-only website and app interface, about 25 European languages, a Windows version that is a cloud beta, no public source code and no Intel support. The maker\'s statements on models, privacy and languages are its own and untested here. Try the free plan before paying.',
         ],
       },
       sources: {
@@ -306,11 +306,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac diktat lifetime lizenz',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich ist eine Diktier-App aus Deutschland für den Mac, die laut Hersteller auf Ihrem eigenen Apple-Silicon-Rechner mit Parakeet transkribiert und das Ergebnis in jede App schreibt.** Das Diktat ist auf Deutsch optimiert und die Oberfläche nur auf Deutsch; die 57 Sprachen aus dem Markup der Website konnte der Hersteller nicht bestätigen, das Transkriptionsmodell versteht laut Hersteller rund 25 europäische Sprachen. Die neueste Version ist 2.2.4 vom 22. Oktober 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll, Datenschutzerklärung und eine Nachricht des Herstellers, nicht auf eigene Tests.',
+    leadAnswerBlock: '**Sprich ist eine Diktier-App aus Deutschland für den Mac, die laut Hersteller auf Ihrem eigenen Apple-Silicon-Rechner mit Parakeet transkribiert und das Ergebnis in jede App schreibt.** Das Diktat ist auf Deutsch optimiert und die Oberfläche nur auf Deutsch; das Transkriptionsmodell versteht laut Hersteller rund 25 europäische Sprachen. Die neueste Version ist 2.2.4 vom 22. Oktober 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll, Datenschutzerklärung und eine Nachricht des Herstellers, nicht auf eigene Tests.',
     quickAnswerTop: {
       de: {
         question: 'Ist Sprich nur für Deutsch gedacht?',
-        answer: 'Nein, aber Deutsch ist der Schwerpunkt. Laut Hersteller ist das Diktat auf Deutsch optimiert, englische Begriffe im Satz funktionieren gut, und das Modell Parakeet versteht rund 25 europäische Sprachen, die sich bei der Dateitranskription auswählen lassen. Die 57 Sprachen aus dem Markup der Startseite konnte der Hersteller nicht bestätigen. Website, Datenschutzerklärung und bisher auch die App-Oberfläche gibt es nur auf Deutsch, eine bewusste Entscheidung, weil die lokale Version auf Deutsch optimiert ist.',
+        answer: 'Nein, aber Deutsch ist der Schwerpunkt. Laut Hersteller ist das Diktat auf Deutsch optimiert, englische Begriffe im Satz funktionieren gut, und das Modell Parakeet versteht rund 25 europäische Sprachen, die sich bei der Dateitranskription auswählen lassen. Website, Datenschutzerklärung und bisher auch die App-Oberfläche gibt es nur auf Deutsch, eine bewusste Entscheidung, weil die lokale Version auf Deutsch optimiert ist.',
         bullets: [
           'Kürzel halten, sprechen, loslassen: Der Text wird in jede Mac-App eingefügt, optional mit einer Nachbearbeitung für Satzzeichen und Füllwörter.',
           'Ein Gratis-Tarif mit Wochenlimit, ein Pro-Abo und eine einmalige Lifetime-Option, alle in Euro.',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Stellen Sie sich eine Mikrofontaste vor, die für Sie tippt: Kürzel halten, sprechen, loslassen, und die Wörter erscheinen am Cursor — zuerst auf Deutsch, mit einem Gratis-Tarif zum Ausprobieren.' },
         ],
         items: [
-          'Sprachen: für Deutsch gebaut; laut Hersteller versteht das Sprachmodell rund 25 europäische Sprachen, die 57 aus dem Markup konnte er nicht bestätigen.',
+          'Sprachen: für Deutsch gebaut; laut Hersteller versteht das Sprachmodell rund 25 europäische Sprachen.',
           'Lokale Aussage: Laut Hersteller laufen Parakeet und ein fein abgestimmtes Nachbearbeitungsmodell auf dem Mac, es wird kein Audio versendet; Whisper wird nicht genutzt. PromptQuorum hat dies nicht überprüft.',
           'Preis: ein Gratis-Tarif, ein Pro-Abo und eine einmalige Lifetime-Option, alles in Euro.',
           'Pflege: Version 2.2.4 erschien am 22. Oktober 2026, die App wird also aktiv aktualisiert.',
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sprachen: erst Deutsch, rund 25 europäische',
         content: [
           '**Sprich ist für Deutsch gebaut, und laut Hersteller versteht das Sprachmodell rund 25 europäische Sprachen.** Das Diktat ist auf Deutsch optimiert, mit Dialekten, Fachsprache und Denglisch, und englische Begriffe im deutschen Satz funktionieren laut Hersteller gut. Ein Eintrag im Änderungsprotokoll sagt, dass deutsche Wörter seit Version 2.2.2 zuverlässiger erkannt werden.',
-          'Laut Hersteller lassen sich die rund 25 Sprachen des Modells Parakeet bei der Dateitranskription auswählen. Die 57 Sprachen aus dem schema.org-Markup der Startseite konnte er nicht bestätigen, auf diese Zahl sollte man sich daher nicht verlassen. Die Vergleichsseite des Herstellers mit Superwhisper sagt, Sprich sei vor allem für Deutsch und Englisch optimiert.',
+          'Laut Hersteller lassen sich die rund 25 Sprachen des Modells Parakeet bei der Dateitranskription auswählen. Die Vergleichsseite des Herstellers mit Superwhisper sagt, Sprich sei vor allem für Deutsch und Englisch optimiert.',
           'Website, Änderungsprotokoll, Datenschutzerklärung und App-Oberfläche gibt es nur auf Deutsch; laut Hersteller ist das eine bewusste Entscheidung, weil die lokale Version auf Deutsch optimiert ist, englische Screenshots gibt es daher noch nicht. PromptQuorum hat keine Sprache getestet.',
         ],
       },
@@ -419,10 +419,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'Vom Hersteller',
         content: [
-          'Jakob Spetkamp, Mitgründer von Sprich, hat am 10. November 2026 unsere Fragen zu Sprachmodell, Windows und Sprachen beantwortet und die folgende Notiz geschickt. Sie ist als Aussage des Herstellers wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum, und PromptQuorum konnte sie weder im Code noch durch Tests prüfen:',
+          'Jakob, Mitgründer von Sprich, hat am 10. November 2026 unsere Fragen zu Sprachmodell, Windows und Sprachen beantwortet und die folgende Notiz geschickt. Sie ist als Aussage des Herstellers wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum, und PromptQuorum konnte sie weder im Code noch durch Tests prüfen:',
           '„Wir haben Sprich gebaut, weil Diktieren auf Deutsch am Mac entweder schlecht war oder alles in eine US-Cloud geschickt hat. Gerade Ärzte, Anwälte und Autoren dürfen oder wollen das nicht. Deshalb läuft Sprich komplett lokal und ist auf Deutsch trainiert, inklusive Fachbegriffen und Denglisch. Als Nächstes kommen Windows und die Cloud-Version für alle, die keinen Apple-Silicon-Mac haben.“',
         ],
-        note: '— Jakob Spetkamp, Mitgründer',
+        note: '— Jakob, Mitgründer',
       },
       pricing: {
         id: 'pricing',
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Vorteil', 'Bedeutung in der Praxis', 'Einschränkung / Vorbehalt'],
         rows: [
           { 'Vorteil': 'Transkription auf dem Gerät', 'Bedeutung in der Praxis': 'Diktat kann laut Hersteller ohne Cloud-Übertragung der Sprache laufen.', 'Einschränkung / Vorbehalt': 'Eine separate Cloud-Version für Mac und Windows ist in der Beta; kein Quellcode zur Prüfung.' },
-          { 'Vorteil': 'Auf Deutsch ausgerichtet', 'Bedeutung in der Praxis': 'Dialekte, Fachbegriffe und Denglisch sind erklärter Schwerpunkt.', 'Einschränkung / Vorbehalt': 'Website, Erklärung und App-Oberfläche nur auf Deutsch; rund 25 Sprachen, nicht 57.' },
+          { 'Vorteil': 'Auf Deutsch ausgerichtet', 'Bedeutung in der Praxis': 'Dialekte, Fachbegriffe und Denglisch sind erklärter Schwerpunkt.', 'Einschränkung / Vorbehalt': 'Website, Erklärung und App-Oberfläche nur auf Deutsch; rund 25 Sprachen.' },
           { 'Vorteil': 'Gratis-Tarif und Lifetime', 'Bedeutung in der Praxis': 'Gratis ausprobieren oder einmal zahlen statt abonnieren.', 'Einschränkung / Vorbehalt': 'Der Gratis-Tarif endet bei 2.000 Wörtern pro Woche.' },
           { 'Vorteil': 'Meetings und Dateien', 'Bedeutung in der Praxis': 'Nimmt Meetings mit Sprecherzuordnung und Zusammenfassung auf; transkribiert Audiodateien.', 'Einschränkung / Vorbehalt': 'Der Gratis-Tarif enthält drei Meetings und eine Datei.' },
           { 'Vorteil': 'Aktive Entwicklung', 'Bedeutung in der Praxis': 'Version 2.2.4 erschien am 22. Oktober 2026.', 'Einschränkung / Vorbehalt': 'Nur Apple Silicon und macOS 15; kein Quellcode gefunden.' },
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nutzer von Windows, Linux oder Intel-Macs.** Unterstützt werden nur Apple-Silicon-Macs mit macOS 15 oder neuer.',
           '**Alle, die Open-Source-Code brauchen.** Es wurde kein öffentlicher Quellcode und keine Lizenz gefunden.',
           '**Leser, die eine englischsprachige Oberfläche brauchen.** Website, Änderungsprotokoll und Datenschutzerklärung gibt es nur auf Deutsch, und laut Hersteller ist auch die App-Oberfläche bisher nur auf Deutsch.',
-          '**Alle, die eine breite Sprachliste brauchen.** Die 57 Sprachen aus dem Markup konnte der Hersteller nicht bestätigen; das Modell versteht laut Hersteller rund 25 europäische Sprachen.',
+          '**Alle, die eine breite Sprachliste brauchen.** Das Modell versteht laut Hersteller rund 25 europäische Sprachen.',
         ],
       },
       faq: {
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Sprachen unterstützt Sprich?',
-            a: 'Laut Hersteller versteht Parakeet rund 25 europäische Sprachen, die sich bei der Dateitranskription auswählen lassen, und das Diktat ist auf Deutsch optimiert. Die 57 Sprachen aus dem Markup der Website konnte er nicht bestätigen. Die App-Oberfläche gibt es bisher nur auf Deutsch.',
+            a: 'Laut Hersteller versteht Parakeet rund 25 europäische Sprachen, die sich bei der Dateitranskription auswählen lassen, und das Diktat ist auf Deutsch optimiert. Die App-Oberfläche gibt es bisher nur auf Deutsch.',
           },
         ],
       },
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           'Sprich passt, wenn Sie auf einem Apple-Silicon-Mac überwiegend auf Deutsch diktieren und einen Gratis-Tarif, Meeting-Notizen und einen einmaligen Lifetime-Preis wollen. Laut Hersteller bleibt die Transkription auf dem Gerät, und Version 2.2.4 ist aktuell.',
-          'Die Vorbehalte betreffen Überprüfbarkeit und Umfang: Website und App-Oberfläche nur auf Deutsch, rund 25 europäische Sprachen statt der 57 aus dem Markup, eine Windows-Version, die eine Cloud-Beta ist, kein öffentlicher Quellcode und keine Intel-Unterstützung. Die Angaben des Herstellers zu Modellen, Datenschutz und Sprachen sind seine eigenen und hier ungetestet. Probieren Sie den Gratis-Tarif aus, bevor Sie zahlen.',
+          'Die Vorbehalte betreffen Überprüfbarkeit und Umfang: Website und App-Oberfläche nur auf Deutsch, rund 25 europäische Sprachen, eine Windows-Version, die eine Cloud-Beta ist, kein öffentlicher Quellcode und keine Intel-Unterstützung. Die Angaben des Herstellers zu Modellen, Datenschutz und Sprachen sind seine eigenen und hier ungetestet. Probieren Sie den Gratis-Tarif aus, bevor Sie zahlen.',
         ],
       },
       sources: {
@@ -572,11 +572,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dictée mac licence à vie',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich est une application de dictée allemande pour Mac qui, selon son éditeur, transcrit sur votre propre ordinateur Apple Silicon avec Parakeet et écrit le résultat dans n\'importe quelle application.** La dictée est optimisée pour l\'allemand et l\'interface n\'existe qu\'en allemand ; l\'éditeur n\'a pas pu confirmer les 57 langues du balisage de son site et situe son modèle de transcription à environ 25 langues européennes. La version la plus récente est la 2.2.4 du 22 octobre 2026. Ce test repose sur le site, le journal des modifications, la politique de confidentialité et un message de l\'éditeur, pas sur des essais pratiques.',
+    leadAnswerBlock: '**Sprich est une application de dictée allemande pour Mac qui, selon son éditeur, transcrit sur votre propre ordinateur Apple Silicon avec Parakeet et écrit le résultat dans n\'importe quelle application.** La dictée est optimisée pour l\'allemand et l\'interface n\'existe qu\'en allemand ; l\'éditeur situe son modèle de transcription à environ 25 langues européennes. La version la plus récente est la 2.2.4 du 22 octobre 2026. Ce test repose sur le site, le journal des modifications, la politique de confidentialité et un message de l\'éditeur, pas sur des essais pratiques.',
     quickAnswerTop: {
       fr: {
         question: 'Sprich est-il réservé à l\'allemand ?',
-        answer: 'Non, mais l\'allemand est sa priorité. Selon l\'éditeur, la dictée est optimisée pour l\'allemand, les termes anglais au milieu d\'une phrase fonctionnent bien, et le modèle Parakeet comprend environ 25 langues européennes, que l\'on peut choisir lors de la transcription de fichiers. L\'éditeur n\'a pas pu confirmer les 57 langues du balisage de la page d\'accueil. Le site, la politique et, pour l\'instant, l\'interface de l\'application n\'existent qu\'en allemand, un choix délibéré parce que la version locale est optimisée pour l\'allemand.',
+        answer: 'Non, mais l\'allemand est sa priorité. Selon l\'éditeur, la dictée est optimisée pour l\'allemand, les termes anglais au milieu d\'une phrase fonctionnent bien, et le modèle Parakeet comprend environ 25 langues européennes, que l\'on peut choisir lors de la transcription de fichiers. Le site, la politique et, pour l\'instant, l\'interface de l\'application n\'existent qu\'en allemand, un choix délibéré parce que la version locale est optimisée pour l\'allemand.',
         bullets: [
           'Maintenir un raccourci, parler, relâcher : le texte est collé dans n\'importe quelle application Mac, avec une passe de nettoyage facultative pour la ponctuation et les mots de remplissage.',
           'Une offre gratuite avec limite hebdomadaire, un abonnement Pro et une option Lifetime à paiement unique, tous en euros.',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Imaginez une touche de microphone qui tape à votre place : maintenez le raccourci, parlez, relâchez, et les mots apparaissent au curseur — d\'abord en allemand, avec une offre gratuite pour l\'essayer.' },
         ],
         items: [
-          'Langues : conçue pour l\'allemand ; l\'éditeur situe le modèle vocal à environ 25 langues européennes et n\'a pas pu confirmer les 57 de son balisage.',
+          'Langues : conçue pour l\'allemand ; l\'éditeur situe le modèle vocal à environ 25 langues européennes.',
           'Affirmation locale : selon l\'éditeur, l\'application Mac exécute Parakeet et un modèle de nettoyage affiné sur l\'appareil et n\'envoie aucun audio ; Whisper n\'est pas utilisé. PromptQuorum ne l\'a pas vérifié.',
           'Prix : une offre gratuite, un abonnement Pro et une option Lifetime à paiement unique, le tout en euros.',
           'Maintenance : la version 2.2.4 est sortie le 22 octobre 2026, l\'appli est donc mise à jour activement.',
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Langues : l\'allemand d\'abord, environ 25 langues européennes',
         content: [
           '**Sprich est conçu pour l\'allemand, et l\'éditeur indique que son modèle vocal comprend environ 25 langues européennes.** La dictée est optimisée pour l\'allemand, avec dialectes, langage technique et mélanges allemand-anglais, et les termes anglais au milieu d\'une phrase allemande fonctionnent bien, selon l\'éditeur. Une entrée du journal des modifications indique que les mots allemands sont mieux reconnus depuis la version 2.2.2.',
-          'Selon l\'éditeur, les quelque 25 langues du modèle Parakeet peuvent être choisies lors de la transcription de fichiers. Il n\'a pas pu confirmer les 57 langues listées dans le balisage schema.org de la page d\'accueil ; ce chiffre ne doit donc pas servir de référence. La page de comparaison de l\'éditeur avec Superwhisper dit que Sprich est surtout optimisé pour l\'allemand et l\'anglais.',
+          'Selon l\'éditeur, les quelque 25 langues du modèle Parakeet peuvent être choisies lors de la transcription de fichiers. La page de comparaison de l\'éditeur avec Superwhisper dit que Sprich est surtout optimisé pour l\'allemand et l\'anglais.',
           'Le site, le journal des modifications, la politique de confidentialité et l\'interface de l\'application n\'existent qu\'en allemand ; l\'éditeur dit que c\'est un choix délibéré parce que la version locale est optimisée pour l\'allemand, de sorte qu\'il n\'existe pas encore de captures d\'écran en anglais. PromptQuorum n\'a testé aucune langue.',
         ],
       },
@@ -685,10 +685,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'Le mot de l\'éditeur',
         content: [
-          'Jakob Spetkamp, cofondateur de Sprich, a répondu à nos questions sur le modèle vocal, Windows et les langues le 10 novembre 2026 et a envoyé la note ci-dessous. Elle est présentée comme les propres mots de l\'éditeur, et non comme une évaluation éditoriale indépendante de PromptQuorum ; PromptQuorum n\'a pu la vérifier ni dans le code ni par des tests :',
+          'Jakob, cofondateur de Sprich, a répondu à nos questions sur le modèle vocal, Windows et les langues le 10 novembre 2026 et a envoyé la note ci-dessous. Elle est présentée comme les propres mots de l\'éditeur, et non comme une évaluation éditoriale indépendante de PromptQuorum ; PromptQuorum n\'a pu la vérifier ni dans le code ni par des tests :',
           '« Nous avons créé Sprich parce que la dictée en allemand sur Mac était soit mauvaise, soit envoyait tout vers un cloud américain. Les médecins, les avocats et les auteurs, en particulier, n\'ont pas le droit de le faire ou ne le veulent pas. C\'est pourquoi Sprich fonctionne entièrement en local et est entraîné pour l\'allemand, y compris les termes techniques et le « Denglisch » (mélange d\'allemand et d\'anglais). Viennent ensuite Windows et la version cloud pour tous ceux qui n\'ont pas de Mac Apple Silicon. »',
         ],
-        note: '— Jakob Spetkamp, cofondateur',
+        note: '— Jakob, cofondateur',
       },
       pricing: {
         id: 'pricing',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Avantage', 'Ce que cela donne en pratique', 'Limite / réserve'],
         rows: [
           { 'Avantage': 'Transcription sur l\'appareil', 'Ce que cela donne en pratique': 'La dictée peut fonctionner sans envoyer la voix vers un cloud, selon l\'éditeur.', 'Limite / réserve': 'Une version cloud distincte pour Mac et Windows est en bêta ; pas de code source à vérifier.' },
-          { 'Avantage': 'Réglage pour l\'allemand', 'Ce que cela donne en pratique': 'Dialectes, termes techniques et mélanges allemand-anglais sont un objectif affiché.', 'Limite / réserve': 'Site, politique et interface uniquement en allemand ; environ 25 langues, pas 57.' },
+          { 'Avantage': 'Réglage pour l\'allemand', 'Ce que cela donne en pratique': 'Dialectes, termes techniques et mélanges allemand-anglais sont un objectif affiché.', 'Limite / réserve': 'Site, politique et interface uniquement en allemand ; environ 25 langues.' },
           { 'Avantage': 'Offre gratuite et Lifetime', 'Ce que cela donne en pratique': 'Essayez gratuitement ou payez une fois plutôt que de vous abonner.', 'Limite / réserve': 'L\'offre gratuite s\'arrête à 2 000 mots par semaine.' },
           { 'Avantage': 'Réunions et fichiers', 'Ce que cela donne en pratique': 'Enregistre des réunions avec interlocuteurs et résumés ; transcrit des fichiers audio.', 'Limite / réserve': 'L\'offre gratuite comprend trois réunions et un fichier.' },
           { 'Avantage': 'Développement actif', 'Ce que cela donne en pratique': 'La version 2.2.4 est sortie le 22 octobre 2026.', 'Limite / réserve': 'Apple Silicon et macOS 15 seulement ; aucun code source trouvé.' },
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Utilisateurs de Windows, Linux ou de Mac Intel.** Seuls les Mac Apple Silicon sous macOS 15 ou plus récent sont pris en charge.',
           '**Ceux qui exigent du code source ouvert.** Aucun code source public ni licence n\'a été trouvé.',
           '**Les lecteurs qui ont besoin d\'une interface en anglais.** Le site, le journal des modifications et la politique de confidentialité n\'existent qu\'en allemand, et l\'éditeur indique que l\'interface de l\'application l\'est aussi pour l\'instant.',
-          '**Ceux qui ont besoin d\'une longue liste de langues.** L\'éditeur n\'a pas pu confirmer les 57 langues de son balisage ; le modèle vocal couvre environ 25 langues européennes, selon l\'éditeur.',
+          '**Ceux qui ont besoin d\'une longue liste de langues.** Le modèle vocal couvre environ 25 langues européennes, selon l\'éditeur.',
         ],
       },
       faq: {
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelles langues Sprich prend-il en charge ?',
-            a: 'Selon l\'éditeur, Parakeet comprend environ 25 langues européennes, sélectionnables pour la transcription de fichiers, et la dictée est optimisée pour l\'allemand. Il n\'a pas pu confirmer les 57 langues du balisage de son site. L\'interface de l\'application n\'existe pour l\'instant qu\'en allemand.',
+            a: 'Selon l\'éditeur, Parakeet comprend environ 25 langues européennes, sélectionnables pour la transcription de fichiers, et la dictée est optimisée pour l\'allemand. L\'interface de l\'application n\'existe pour l\'instant qu\'en allemand.',
           },
         ],
       },
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Sprich convient si vous dictez sur un Mac Apple Silicon, surtout en allemand, et voulez une offre gratuite, des notes de réunion et un prix Lifetime unique. L\'éditeur affirme que la transcription reste sur l\'appareil, et la version 2.2.4 est récente.',
-          'Les réserves portent sur la vérifiabilité et le périmètre : un site et une interface uniquement en allemand, environ 25 langues européennes au lieu des 57 du balisage, une version Windows qui est une bêta cloud, pas de code source public et pas de prise en charge d\'Intel. Les déclarations de l\'éditeur sur les modèles, la confidentialité et les langues sont les siennes et n\'ont pas été testées ici. Essayez l\'offre gratuite avant de payer.',
+          'Les réserves portent sur la vérifiabilité et le périmètre : un site et une interface uniquement en allemand, environ 25 langues européennes, une version Windows qui est une bêta cloud, pas de code source public et pas de prise en charge d\'Intel. Les déclarations de l\'éditeur sur les modèles, la confidentialité et les langues sont les siennes et n\'ont pas été testées ici. Essayez l\'offre gratuite avant de payer.',
         ],
       },
       sources: {
@@ -838,11 +838,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac 音声入力 買い切り',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprichは、開発元によればお使いのApple Silicon搭載MacでParakeetを使って文字起こしし、結果を任意のアプリに入力するドイツ製のMac用音声入力アプリです。** 音声入力はドイツ語に最適化されており、画面表示はドイツ語のみです。開発元はサイトのマークアップにある57言語を確認できないとし、文字起こしモデルは欧州の約25言語に対応すると説明しています。最新版は2026年10月22日のバージョン2.2.4です。このレビューは開発元のサイト、更新履歴、プライバシーポリシー、開発元からのメッセージに基づくもので、実機での検証は行っていません。',
+    leadAnswerBlock: '**Sprichは、開発元によればお使いのApple Silicon搭載MacでParakeetを使って文字起こしし、結果を任意のアプリに入力するドイツ製のMac用音声入力アプリです。** 音声入力はドイツ語に最適化されており、画面表示はドイツ語のみです。開発元は、文字起こしモデルは欧州の約25言語に対応すると説明しています。最新版は2026年10月22日のバージョン2.2.4です。このレビューは開発元のサイト、更新履歴、プライバシーポリシー、開発元からのメッセージに基づくもので、実機での検証は行っていません。',
     quickAnswerTop: {
       ja: {
         question: 'Sprichはドイツ語専用ですか？',
-        answer: 'いいえ、ただしドイツ語が中心です。開発元によれば、音声入力はドイツ語に最適化されており、文中の英語の用語も問題なく認識され、Parakeetモデルは欧州の約25言語を理解し、ファイルの文字起こしでは言語を選べます。ホームページのマークアップにある57言語は、開発元が確認できないとしています。サイト、ポリシー、そして現時点ではアプリの画面表示もドイツ語のみで、これはローカル版がドイツ語に最適化されているための意図的な判断です。',
+        answer: 'いいえ、ただしドイツ語が中心です。開発元によれば、音声入力はドイツ語に最適化されており、文中の英語の用語も問題なく認識され、Parakeetモデルは欧州の約25言語を理解し、ファイルの文字起こしでは言語を選べます。サイト、ポリシー、そして現時点ではアプリの画面表示もドイツ語のみで、これはローカル版がドイツ語に最適化されているための意図的な判断です。',
         bullets: [
           'ショートカットを押して話し、離すと、テキストがMacのどのアプリにも貼り付けられます。句読点やフィラーを整える任意の整形処理もあります。',
           '週ごとの単語数に上限がある無料プラン、Proサブスクリプション、買い切りのLifetime。価格はすべてユーロ建てです。',
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '話すと代わりに入力してくれるマイクキーのようなものです。ショートカットを押して話し、離すと、カーソルの位置に文字が出ます。ドイツ語が中心で、無料プランで試せます。' },
         ],
         items: [
-          '対応言語：ドイツ語向けに作られています。開発元は音声モデルを欧州の約25言語としており、マークアップの57言語は確認できないとしています。',
+          '対応言語：ドイツ語向けに作られています。開発元は音声モデルを欧州の約25言語としています。',
           'ローカル処理の主張：開発元によれば、MacアプリはParakeetと調整済みの後処理モデルを端末上で実行し、音声はどこにも送信しません。Whisperは使っていません。PromptQuorumはこれを検証していません。',
           '価格：無料プラン、Proサブスクリプション、買い切りのLifetimeがあり、すべてユーロ建てです。',
           '更新状況：バージョン2.2.4が2026年10月22日に公開されており、活発に更新されています。',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '対応言語：ドイツ語が中心、欧州の約25言語',
         content: [
           '**Sprichはドイツ語向けに作られており、開発元によれば音声モデルは欧州の約25言語を理解します。** 音声入力はドイツ語に最適化され、方言、専門用語、ドイツ語と英語の混在に対応し、ドイツ語の文中の英語の用語も問題なく扱えると開発元は説明しています。更新履歴には、バージョン2.2.2以降ドイツ語の単語がより確実に認識されるとの記載があります。',
-          '開発元によれば、Parakeetモデルの約25言語は、ファイルの文字起こしの際に選択できます。ホームページのschema.orgマークアップにある57言語は確認できないとしているため、この数字は当てにしないでください。開発元のSuperwhisperとの比較ページには、Sprichは主にドイツ語と英語に最適化されていると書かれています。',
+          '開発元によれば、Parakeetモデルの約25言語は、ファイルの文字起こしの際に選択できます。開発元のSuperwhisperとの比較ページには、Sprichは主にドイツ語と英語に最適化されていると書かれています。',
           'サイト、更新履歴、プライバシーポリシー、アプリの画面表示はドイツ語のみです。開発元は、ローカル版がドイツ語に最適化されているための意図的な判断だと説明しており、英語のスクリーンショットはまだありません。PromptQuorumはどの言語も検証していません。',
         ],
       },
@@ -951,10 +951,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: '開発元より',
         content: [
-          'Sprichの共同創業者Jakob Spetkamp氏は、2026年11月10日に音声モデル、Windows、対応言語に関する質問に回答し、以下のメッセージを送ってくれました。これは開発元自身の言葉であり、PromptQuorumの独立した編集上の評価ではありません。PromptQuorumはコードの確認や検証ではこの内容を確かめられていません。',
+          'Sprichの共同創業者Jakob氏は、2026年11月10日に音声モデル、Windows、対応言語に関する質問に回答し、以下のメッセージを送ってくれました。これは開発元自身の言葉であり、PromptQuorumの独立した編集上の評価ではありません。PromptQuorumはコードの確認や検証ではこの内容を確かめられていません。',
           '「私たちがSprichを作ったのは、Macでのドイツ語の音声入力が、精度が低いか、すべてを米国のクラウドに送るかのどちらかだったからです。特に医師、弁護士、作家は、それが許されないか、望まないのです。だからSprichは完全にローカルで動作し、専門用語やドイツ語と英語の混在（Denglisch）も含めてドイツ語向けに学習されています。次はWindows版と、Apple SiliconのMacを持たない方のためのクラウド版です。」',
         ],
-        note: '— Jakob Spetkamp氏、共同創業者',
+        note: '— Jakob氏、共同創業者',
       },
       pricing: {
         id: 'pricing',
@@ -971,7 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['メリット', '実際の利用での意味', '制約・注意点'],
         rows: [
           { 'メリット': '端末上での文字起こし', '実際の利用での意味': '開発元によれば、音声をクラウドへ送らずに入力できます。', '制約・注意点': 'MacとWindows向けのクラウド版は別にベータ中。確認できるソースコードなし。' },
-          { 'メリット': 'ドイツ語向けの調整', '実際の利用での意味': '方言、専門用語、ドイツ語と英語の混在が重点とされています。', '制約・注意点': 'サイト・ポリシー・画面はドイツ語のみ。対応は約25言語で57言語ではない。' },
+          { 'メリット': 'ドイツ語向けの調整', '実際の利用での意味': '方言、専門用語、ドイツ語と英語の混在が重点とされています。', '制約・注意点': 'サイト・ポリシー・画面はドイツ語のみ。対応は約25言語。' },
           { 'メリット': '無料プランとLifetime', '実際の利用での意味': '無料で試せ、サブスクの代わりに一度だけ支払えます。', '制約・注意点': '無料プランは週2,000語までです。' },
           { 'メリット': '会議とファイル', '実際の利用での意味': '話者ラベルと要約付きで会議を録音し、音声ファイルも文字起こしします。', '制約・注意点': '無料プランは会議3回とファイル1件までです。' },
           { 'メリット': '活発な開発', '実際の利用での意味': 'バージョン2.2.4が2026年10月22日に公開されました。', '制約・注意点': 'Apple SiliconとmacOS 15のみ。ソースコードは見つかりません。' },
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Windows、Linux、Intel Macのユーザー。** 対応はmacOS 15以降のApple Silicon Macのみです。',
           '**オープンソースのコードが必要な人。** 公開ソースやライセンスは見つかりませんでした。',
           '**英語の画面表示が必要な方。** サイト、更新履歴、プライバシーポリシーはドイツ語のみで、開発元によればアプリの画面表示も現時点ではドイツ語のみです。',
-          '**幅広い言語対応が必要な方。** 開発元はマークアップの57言語を確認できないとしており、音声モデルは欧州の約25言語に対応すると説明しています。',
+          '**幅広い言語対応が必要な方。** 音声モデルは欧州の約25言語に対応すると開発元は説明しています。',
         ],
       },
       faq: {
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sprichはどの言語に対応していますか？',
-            a: '開発元によれば、Parakeetは欧州の約25言語を理解し、ファイルの文字起こしでは選択でき、音声入力はドイツ語に最適化されています。サイトのマークアップにある57言語は確認できないとしています。アプリの画面表示は現時点ではドイツ語のみです。',
+            a: '開発元によれば、Parakeetは欧州の約25言語を理解し、ファイルの文字起こしでは選択でき、音声入力はドイツ語に最適化されています。アプリの画面表示は現時点ではドイツ語のみです。',
           },
         ],
       },
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '結論',
         content: [
           'Apple Silicon搭載Macで、主にドイツ語で音声入力し、無料プラン、会議メモ、買い切りのLifetime価格を求める人にSprichは合います。開発元は文字起こしが端末上にとどまると述べており、バージョン2.2.4も最近のものです。',
-          '注意点は検証可能性と対応範囲です。サイトとアプリの画面がドイツ語のみであること、マークアップの57言語ではなく欧州の約25言語であること、Windows版がクラウドのベータであること、ソースコードが公開されていないこと、Intel Macに非対応であることです。モデル、プライバシー、言語に関する開発元の説明は開発元自身のもので、ここでは検証していません。支払う前に無料プランをお試しください。',
+          '注意点は検証可能性と対応範囲です。サイトとアプリの画面がドイツ語のみであること、対応言語が欧州の約25言語であること、Windows版がクラウドのベータであること、ソースコードが公開されていないこと、Intel Macに非対応であることです。モデル、プライバシー、言語に関する開発元の説明は開発元自身のもので、ここでは検証していません。支払う前に無料プランをお試しください。',
         ],
       },
       sources: {
@@ -1104,11 +1104,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac听写买断',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich 是一款德国制造的 Mac 听写应用，据开发者称，它在你自己的 Apple Silicon 电脑上用 Parakeet 转写，并把结果输入到任意应用。** 听写针对德语优化，界面仅有德语；开发者无法确认网站标记中的 57 种语言，并称转写模型支持约 25 种欧洲语言。最新版本是 2026 年 10 月 22 日发布的 2.2.4。本评测依据开发者的网站、更新日志、隐私政策以及开发者发来的消息，并非亲自实测。',
+    leadAnswerBlock: '**Sprich 是一款德国制造的 Mac 听写应用，据开发者称，它在你自己的 Apple Silicon 电脑上用 Parakeet 转写，并把结果输入到任意应用。** 听写针对德语优化，界面仅有德语；开发者称转写模型支持约 25 种欧洲语言。最新版本是 2026 年 10 月 22 日发布的 2.2.4。本评测依据开发者的网站、更新日志、隐私政策以及开发者发来的消息，并非亲自实测。',
     quickAnswerTop: {
       zh: {
         question: 'Sprich 只支持德语吗？',
-        answer: '不是，但以德语为主。开发者称，听写针对德语优化，句子中夹杂的英语术语识别良好，Parakeet 模型理解约 25 种欧洲语言，转写文件时可以选择语言。开发者无法确认首页标记中的 57 种语言。网站、政策以及目前的应用界面都只有德语，这是有意的选择，因为本地版针对德语优化。',
+        answer: '不是，但以德语为主。开发者称，听写针对德语优化，句子中夹杂的英语术语识别良好，Parakeet 模型理解约 25 种欧洲语言，转写文件时可以选择语言。网站、政策以及目前的应用界面都只有德语，这是有意的选择，因为本地版针对德语优化。',
         bullets: [
           '按住快捷键说话、松开：文字会粘贴到 Mac 上的任意应用，还有可选的整理步骤，处理标点和语气词。',
           '免费套餐有每周字数上限，另有 Pro 订阅和一次性买断的 Lifetime，价格均以欧元计。',
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '就像一个替你打字的麦克风键：按住快捷键、说话、松开，文字就出现在光标处——以德语为先，并有免费套餐可以试用。' },
         ],
         items: [
-          '语言：为德语打造；开发者称语音模型支持约 25 种欧洲语言，并且无法确认标记中的 57 种。',
+          '语言：为德语打造；开发者称语音模型支持约 25 种欧洲语言。',
           '本地说法：据开发者称，Mac 应用在设备上运行 Parakeet 和经过微调的后处理模型，不会发送任何音频；不使用 Whisper。PromptQuorum 未验证这一点。',
           '价格：免费套餐、Pro 订阅和一次性买断的 Lifetime，均以欧元计。',
           '维护：2.2.4 版于 2026 年 10 月 22 日发布，应用在积极更新。',
@@ -1200,7 +1200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '语言：以德语为主，约 25 种欧洲语言',
         content: [
           '**Sprich 为德语而打造，开发者称其语音模型理解约 25 种欧洲语言。** 听写针对德语优化，涵盖方言、专业术语和德英混用；开发者称，德语句子中夹杂的英语术语识别良好。更新日志中有一条记录称，自 2.2.2 版起德语词汇的识别更可靠。',
-          '开发者称，Parakeet 模型的约 25 种语言可在转写文件时选择。对于首页 schema.org 标记中列出的 57 种语言，开发者无法确认，因此不应依赖这个数字。开发者与 Superwhisper 的对比页称，Sprich 主要针对德语和英语优化。',
+          '开发者称，Parakeet 模型的约 25 种语言可在转写文件时选择。开发者与 Superwhisper 的对比页称，Sprich 主要针对德语和英语优化。',
           '网站、更新日志、隐私政策和应用界面都只有德语；开发者称这是有意的选择，因为本地版针对德语优化，所以目前还没有英文截图。PromptQuorum 没有测试任何语言。',
         ],
       },
@@ -1217,10 +1217,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: '开发者的话',
         content: [
-          'Sprich 联合创始人 Jakob Spetkamp 于 2026 年 11 月 10 日回答了我们关于语音模型、Windows 和语言的问题，并发来下面这段话。它作为开发者本人的话呈现，不代表 PromptQuorum 的独立编辑评价，PromptQuorum 无法通过代码或测试验证：',
+          'Sprich 联合创始人 Jakob 于 2026 年 11 月 10 日回答了我们关于语音模型、Windows 和语言的问题，并发来下面这段话。它作为开发者本人的话呈现，不代表 PromptQuorum 的独立编辑评价，PromptQuorum 无法通过代码或测试验证：',
           '“我们开发 Sprich，是因为在 Mac 上用德语听写，要么效果差，要么把一切都发到美国的云端。尤其是医生、律师和作家，往往不被允许或不愿这样做。所以 Sprich 完全在本地运行，并针对德语训练，包括专业术语和德英混用（Denglisch）。接下来是 Windows 版，以及面向没有 Apple Silicon Mac 的用户的云端版本。”',
         ],
-        note: '— Jakob Spetkamp，联合创始人',
+        note: '— Jakob，联合创始人',
       },
       pricing: {
         id: 'pricing',
@@ -1237,7 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['优点', '实际使用中的含义', '局限 / 注意事项'],
         rows: [
           { '优点': '设备端转写', '实际使用中的含义': '据开发者称，听写无需把语音发到云端。', '局限 / 注意事项': '面向 Mac 和 Windows 的云端版本另在测试；无源代码可查。' },
-          { '优点': '针对德语调校', '实际使用中的含义': '方言、专业术语和德英混用是明确的重点。', '局限 / 注意事项': '网站、政策和界面仅有德语；约 25 种语言，而非 57 种。' },
+          { '优点': '针对德语调校', '实际使用中的含义': '方言、专业术语和德英混用是明确的重点。', '局限 / 注意事项': '网站、政策和界面仅有德语；约 25 种语言。' },
           { '优点': '免费套餐与 Lifetime', '实际使用中的含义': '可免费试用，或一次付费代替订阅。', '局限 / 注意事项': '免费套餐每周上限 2,000 字。' },
           { '优点': '会议与文件', '实际使用中的含义': '录制会议并带说话人标签和摘要；转写音频文件。', '局限 / 注意事项': '免费套餐含 3 次会议和 1 个文件。' },
           { '优点': '积极开发', '实际使用中的含义': '2.2.4 版于 2026 年 10 月 22 日发布。', '局限 / 注意事项': '仅 Apple Silicon 和 macOS 15；未找到源代码。' },
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Windows、Linux 或 Intel Mac 用户。** 仅支持 macOS 15 或更新版本的 Apple Silicon Mac。',
           '**需要开源代码的人。** 未找到公开源代码或许可证。',
           '**需要英文界面的读者。** 网站、更新日志和隐私政策只有德语，开发者称应用界面目前也只有德语。',
-          '**需要覆盖大量语言的用户。** 开发者无法确认标记中的 57 种语言；据开发者称，语音模型支持约 25 种欧洲语言。',
+          '**需要覆盖大量语言的用户。** 据开发者称，语音模型支持约 25 种欧洲语言。',
         ],
       },
       faq: {
@@ -1304,7 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sprich 支持哪些语言？',
-            a: '开发者称，Parakeet 理解约 25 种欧洲语言，转写文件时可选择，听写则针对德语优化。对于网站标记中的 57 种语言，开发者无法确认。应用界面目前只有德语。',
+            a: '开发者称，Parakeet 理解约 25 种欧洲语言，转写文件时可选择，听写则针对德语优化。应用界面目前只有德语。',
           },
         ],
       },
@@ -1313,7 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '如果你在 Apple Silicon Mac 上主要用德语听写，并想要免费套餐、会议记录和一次性买断价格，Sprich 值得考虑。开发者称转写留在设备上，2.2.4 版也很新。',
-          '需要注意的是可验证性和范围：网站和应用界面仅有德语，支持约 25 种欧洲语言而非标记中的 57 种，Windows 版本是云端测试版，没有公开的源代码，也不支持 Intel。开发者关于模型、隐私和语言的说法是其自述，此处未经测试。付费前请先试用免费套餐。',
+          '需要注意的是可验证性和范围：网站和应用界面仅有德语，支持约 25 种欧洲语言，Windows 版本是云端测试版，没有公开的源代码，也不支持 Intel。开发者关于模型、隐私和语言的说法是其自述，此处未经测试。付费前请先试用免费套餐。',
         ],
       },
       sources: {
@@ -1370,11 +1370,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dictado mac licencia de por vida',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich es una app de dictado alemana para Mac que, según su desarrollador, transcribe en tu propio equipo con Apple Silicon usando Parakeet y escribe el resultado en cualquier aplicación.** El dictado está optimizado para el alemán y la interfaz solo existe en alemán; el desarrollador no pudo confirmar los 57 idiomas del marcado de su sitio y sitúa el modelo de transcripción en unos 25 idiomas europeos. La versión más reciente es la 2.2.4 del 22 de octubre de 2026. Esta reseña se basa en el sitio web, el registro de cambios, la política de privacidad y un mensaje del desarrollador, no en pruebas propias.',
+    leadAnswerBlock: '**Sprich es una app de dictado alemana para Mac que, según su desarrollador, transcribe en tu propio equipo con Apple Silicon usando Parakeet y escribe el resultado en cualquier aplicación.** El dictado está optimizado para el alemán y la interfaz solo existe en alemán; el desarrollador sitúa el modelo de transcripción en unos 25 idiomas europeos. La versión más reciente es la 2.2.4 del 22 de octubre de 2026. Esta reseña se basa en el sitio web, el registro de cambios, la política de privacidad y un mensaje del desarrollador, no en pruebas propias.',
     quickAnswerTop: {
       es: {
         question: '¿Sprich es solo para alemán?',
-        answer: 'No, pero el alemán es su foco. El desarrollador dice que el dictado está optimizado para el alemán, que los términos en inglés dentro de una frase funcionan bien y que el modelo Parakeet entiende unos 25 idiomas europeos, que puedes elegir al transcribir archivos. No pudo confirmar los 57 idiomas del marcado de la página de inicio. El sitio web, la política y, por ahora, la interfaz de la app solo están en alemán, una decisión deliberada porque la versión local está optimizada para el alemán.',
+        answer: 'No, pero el alemán es su foco. El desarrollador dice que el dictado está optimizado para el alemán, que los términos en inglés dentro de una frase funcionan bien y que el modelo Parakeet entiende unos 25 idiomas europeos, que puedes elegir al transcribir archivos. El sitio web, la política y, por ahora, la interfaz de la app solo están en alemán, una decisión deliberada porque la versión local está optimizada para el alemán.',
         bullets: [
           'Mantén un atajo, habla, suelta: el texto se pega en cualquier app de Mac, con una pasada de limpieza opcional para puntuación y muletillas.',
           'Un plan gratuito con límite semanal, una suscripción Pro y una opción Lifetime de pago único, todo en euros.',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Piensa en una tecla de micrófono que escribe por ti: mantén el atajo, habla, suelta y las palabras aparecen donde está el cursor — primero en alemán, con un plan gratuito para probar.' },
         ],
         items: [
-          'Idiomas: creada para el alemán; el desarrollador sitúa el modelo de voz en unos 25 idiomas europeos y no pudo confirmar los 57 de su marcado.',
+          'Idiomas: creada para el alemán; el desarrollador sitúa el modelo de voz en unos 25 idiomas europeos.',
           'Afirmación local: según el desarrollador, la app para Mac ejecuta Parakeet y un modelo de limpieza ajustado en el dispositivo y no envía audio a ningún sitio; no usa Whisper. PromptQuorum no lo ha verificado.',
           'Precio: un plan gratuito, una suscripción Pro y una opción Lifetime de pago único, todo en euros.',
           'Mantenimiento: la versión 2.2.4 salió el 22 de octubre de 2026, así que la app se actualiza activamente.',
@@ -1466,7 +1466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Idiomas: primero alemán, unos 25 europeos',
         content: [
           '**Sprich está creada para el alemán y, según el desarrollador, su modelo de voz entiende unos 25 idiomas europeos.** El dictado está optimizado para el alemán, con dialectos, lenguaje técnico y mezclas alemán-inglés, y los términos en inglés dentro de una frase alemana funcionan bien, según el desarrollador. Una entrada del registro de cambios dice que las palabras alemanas se reconocen con más fiabilidad desde la versión 2.2.2.',
-          'Según el desarrollador, los unos 25 idiomas del modelo Parakeet se pueden elegir al transcribir archivos. No pudo confirmar los 57 idiomas del marcado schema.org de la página de inicio, así que no conviene fiarse de esa cifra. La página comparativa del desarrollador con Superwhisper dice que Sprich está optimizada sobre todo para alemán e inglés.',
+          'Según el desarrollador, los unos 25 idiomas del modelo Parakeet se pueden elegir al transcribir archivos. La página comparativa del desarrollador con Superwhisper dice que Sprich está optimizada sobre todo para alemán e inglés.',
           'El sitio web, el registro de cambios, la política de privacidad y la interfaz de la app solo están en alemán; el desarrollador dice que es una decisión deliberada porque la versión local está optimizada para el alemán, por lo que aún no hay capturas en inglés. PromptQuorum no probó ningún idioma.',
         ],
       },
@@ -1483,10 +1483,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'Del desarrollador',
         content: [
-          'Jakob Spetkamp, cofundador de Sprich, respondió el 10 de noviembre de 2026 a nuestras preguntas sobre el modelo de voz, Windows y los idiomas y envió la nota que sigue. Se presenta como palabras propias del desarrollador, no como una valoración editorial independiente de PromptQuorum, y PromptQuorum no pudo verificarla ni en el código ni con pruebas:',
+          'Jakob, cofundador de Sprich, respondió el 10 de noviembre de 2026 a nuestras preguntas sobre el modelo de voz, Windows y los idiomas y envió la nota que sigue. Se presenta como palabras propias del desarrollador, no como una valoración editorial independiente de PromptQuorum, y PromptQuorum no pudo verificarla ni en el código ni con pruebas:',
           '“Creamos Sprich porque dictar en alemán en el Mac era o malo o enviaba todo a una nube de EE. UU. Sobre todo médicos, abogados y autores no pueden o no quieren hacerlo. Por eso Sprich funciona completamente en local y está entrenado para el alemán, incluidos los términos técnicos y el Denglisch. Lo siguiente son Windows y la versión en la nube para quienes no tienen un Mac con Apple Silicon.”',
         ],
-        note: '— Jakob Spetkamp, cofundador',
+        note: '— Jakob, cofundador',
       },
       pricing: {
         id: 'pricing',
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ventaja', 'Qué significa en el uso real', 'Limitación / salvedad'],
         rows: [
           { 'Ventaja': 'Transcripción en el dispositivo', 'Qué significa en el uso real': 'El dictado puede funcionar sin enviar la voz a una nube, según el desarrollador.', 'Limitación / salvedad': 'Una versión en la nube aparte para Mac y Windows está en beta; sin código fuente que revisar.' },
-          { 'Ventaja': 'Ajustada al alemán', 'Qué significa en el uso real': 'Dialectos, términos técnicos y mezclas alemán-inglés son un foco declarado.', 'Limitación / salvedad': 'Sitio, política e interfaz solo en alemán; unos 25 idiomas, no 57.' },
+          { 'Ventaja': 'Ajustada al alemán', 'Qué significa en el uso real': 'Dialectos, términos técnicos y mezclas alemán-inglés son un foco declarado.', 'Limitación / salvedad': 'Sitio, política e interfaz solo en alemán; unos 25 idiomas.' },
           { 'Ventaja': 'Plan gratuito y Lifetime', 'Qué significa en el uso real': 'Pruébalo gratis o paga una vez en lugar de suscribirte.', 'Limitación / salvedad': 'El plan gratuito se detiene en 2.000 palabras por semana.' },
           { 'Ventaja': 'Reuniones y archivos', 'Qué significa en el uso real': 'Graba reuniones con etiquetas de hablante y resúmenes; transcribe archivos de audio.', 'Limitación / salvedad': 'El plan gratuito incluye tres reuniones y un archivo.' },
           { 'Ventaja': 'Desarrollo activo', 'Qué significa en el uso real': 'La versión 2.2.4 salió el 22 de octubre de 2026.', 'Limitación / salvedad': 'Solo Apple Silicon y macOS 15; sin código fuente localizado.' },
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Usuarios de Windows, Linux o Mac con Intel.** Solo se admiten Mac con Apple Silicon y macOS 15 o posterior.',
           '**Quien necesita código abierto.** No se encontró código fuente público ni licencia.',
           '**Lectores que necesitan una interfaz en inglés.** El sitio web, el registro de cambios y la política de privacidad solo están en alemán, y el desarrollador dice que la interfaz de la app también lo está por ahora.',
-          '**Quien necesite una lista amplia de idiomas.** El desarrollador no pudo confirmar los 57 idiomas de su marcado; el modelo de voz cubre unos 25 idiomas europeos, según el desarrollador.',
+          '**Quien necesite una lista amplia de idiomas.** El modelo de voz cubre unos 25 idiomas europeos, según el desarrollador.',
         ],
       },
       faq: {
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué idiomas admite Sprich?',
-            a: 'Según el desarrollador, Parakeet entiende unos 25 idiomas europeos, seleccionables para transcribir archivos, y el dictado está optimizado para el alemán. No pudo confirmar los 57 idiomas del marcado de su sitio. La interfaz de la app solo existe en alemán por ahora.',
+            a: 'Según el desarrollador, Parakeet entiende unos 25 idiomas europeos, seleccionables para transcribir archivos, y el dictado está optimizado para el alemán. La interfaz de la app solo existe en alemán por ahora.',
           },
         ],
       },
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           'Sprich encaja si dictas en un Mac con Apple Silicon, sobre todo en alemán, y quieres un plan gratuito, notas de reuniones y un precio Lifetime único. El desarrollador dice que la transcripción se queda en el dispositivo, y la versión 2.2.4 es reciente.',
-          'Las salvedades son la verificabilidad y el alcance: un sitio web y una interfaz solo en alemán, unos 25 idiomas europeos en lugar de los 57 del marcado, una versión para Windows que es una beta en la nube, sin código fuente público y sin soporte para Intel. Las afirmaciones del desarrollador sobre modelos, privacidad e idiomas son suyas y aquí no se probaron. Prueba el plan gratuito antes de pagar.',
+          'Las salvedades son la verificabilidad y el alcance: un sitio web y una interfaz solo en alemán, unos 25 idiomas europeos, una versión para Windows que es una beta en la nube, sin código fuente público y sin soporte para Intel. Las afirmaciones del desarrollador sobre modelos, privacidad e idiomas son suyas y aquí no se probaron. Prueba el plan gratuito antes de pagar.',
         ],
       },
       sources: {
@@ -1636,11 +1636,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ditado mac licença vitalícia',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**O Sprich é um app de ditado alemão para Mac que, segundo o desenvolvedor, transcreve no seu próprio computador com Apple Silicon usando o Parakeet e digita o resultado em qualquer aplicativo.** O ditado é otimizado para o alemão e a interface existe só em alemão; o desenvolvedor não conseguiu confirmar os 57 idiomas da marcação do site e situa o modelo de transcrição em cerca de 25 idiomas europeus. A versão mais recente é a 2.2.4, de 22 de outubro de 2026. Esta análise se baseia no site, no registro de alterações, na política de privacidade e em uma mensagem do desenvolvedor, não em testes próprios.',
+    leadAnswerBlock: '**O Sprich é um app de ditado alemão para Mac que, segundo o desenvolvedor, transcreve no seu próprio computador com Apple Silicon usando o Parakeet e digita o resultado em qualquer aplicativo.** O ditado é otimizado para o alemão e a interface existe só em alemão; o desenvolvedor situa o modelo de transcrição em cerca de 25 idiomas europeus. A versão mais recente é a 2.2.4, de 22 de outubro de 2026. Esta análise se baseia no site, no registro de alterações, na política de privacidade e em uma mensagem do desenvolvedor, não em testes próprios.',
     quickAnswerTop: {
       pt: {
         question: 'O Sprich é só para alemão?',
-        answer: 'Não, mas o alemão é o foco. O desenvolvedor diz que o ditado é otimizado para o alemão, que termos em inglês no meio da frase funcionam bem e que o modelo Parakeet entende cerca de 25 idiomas europeus, que você pode escolher ao transcrever arquivos. Ele não conseguiu confirmar os 57 idiomas da marcação da página inicial. O site, a política e, por enquanto, a interface do app existem só em alemão, uma escolha deliberada porque a versão local é otimizada para o alemão.',
+        answer: 'Não, mas o alemão é o foco. O desenvolvedor diz que o ditado é otimizado para o alemão, que termos em inglês no meio da frase funcionam bem e que o modelo Parakeet entende cerca de 25 idiomas europeus, que você pode escolher ao transcrever arquivos. O site, a política e, por enquanto, a interface do app existem só em alemão, uma escolha deliberada porque a versão local é otimizada para o alemão.',
         bullets: [
           'Segure um atalho, fale, solte: o texto é colado em qualquer app do Mac, com uma etapa opcional de limpeza de pontuação e vícios de fala.',
           'Um plano grátis com limite semanal, uma assinatura Pro e uma opção Lifetime de pagamento único, tudo em euros.',
@@ -1679,7 +1679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Pense numa tecla de microfone que digita por você: segure o atalho, fale, solte, e as palavras aparecem onde está o cursor — primeiro em alemão, com um plano grátis para testar.' },
         ],
         items: [
-          'Idiomas: feito para o alemão; o desenvolvedor situa o modelo de voz em cerca de 25 idiomas europeus e não conseguiu confirmar os 57 da marcação.',
+          'Idiomas: feito para o alemão; o desenvolvedor situa o modelo de voz em cerca de 25 idiomas europeus.',
           'Afirmação local: segundo o desenvolvedor, o app para Mac executa o Parakeet e um modelo de limpeza ajustado no aparelho e não envia áudio a lugar nenhum; o Whisper não é usado. A PromptQuorum não verificou isso.',
           'Preço: um plano grátis, uma assinatura Pro e uma opção Lifetime de pagamento único, tudo em euros.',
           'Manutenção: a versão 2.2.4 saiu em 22 de outubro de 2026, então o app é atualizado ativamente.',
@@ -1732,7 +1732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Idiomas: primeiro alemão, cerca de 25 europeus',
         content: [
           '**O Sprich é feito para o alemão e, segundo o desenvolvedor, seu modelo de voz entende cerca de 25 idiomas europeus.** O ditado é otimizado para o alemão, com dialetos, linguagem técnica e misturas alemão-inglês, e termos em inglês dentro de uma frase em alemão funcionam bem, segundo o desenvolvedor. Uma entrada do registro de alterações diz que palavras em alemão são reconhecidas com mais confiabilidade desde a versão 2.2.2.',
-          'Segundo o desenvolvedor, os cerca de 25 idiomas do modelo Parakeet podem ser escolhidos ao transcrever arquivos. Ele não conseguiu confirmar os 57 idiomas da marcação schema.org da página inicial, então esse número não deve ser levado em conta. A página de comparação do desenvolvedor com o Superwhisper diz que o Sprich é otimizado principalmente para alemão e inglês.',
+          'Segundo o desenvolvedor, os cerca de 25 idiomas do modelo Parakeet podem ser escolhidos ao transcrever arquivos. A página de comparação do desenvolvedor com o Superwhisper diz que o Sprich é otimizado principalmente para alemão e inglês.',
           'O site, o registro de alterações, a política de privacidade e a interface do app existem só em alemão; o desenvolvedor diz que é uma escolha deliberada porque a versão local é otimizada para o alemão, então ainda não há capturas de tela em inglês. A PromptQuorum não testou nenhum idioma.',
         ],
       },
@@ -1749,10 +1749,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'Do desenvolvedor',
         content: [
-          'Jakob Spetkamp, cofundador do Sprich, respondeu em 10 de novembro de 2026 às nossas perguntas sobre o modelo de voz, o Windows e os idiomas e enviou a nota abaixo. Ela é apresentada como palavras do próprio desenvolvedor, não como avaliação editorial independente da PromptQuorum, e a PromptQuorum não pôde verificá-la nem no código nem em testes:',
+          'Jakob, cofundador do Sprich, respondeu em 10 de novembro de 2026 às nossas perguntas sobre o modelo de voz, o Windows e os idiomas e enviou a nota abaixo. Ela é apresentada como palavras do próprio desenvolvedor, não como avaliação editorial independente da PromptQuorum, e a PromptQuorum não pôde verificá-la nem no código nem em testes:',
           '“Criamos o Sprich porque ditar em alemão no Mac era ruim ou mandava tudo para uma nuvem dos EUA. Médicos, advogados e autores, em especial, não podem ou não querem fazer isso. Por isso o Sprich roda totalmente local e é treinado para o alemão, incluindo termos técnicos e Denglisch. Os próximos passos são o Windows e a versão em nuvem para quem não tem um Mac com Apple Silicon.”',
         ],
-        note: '— Jakob Spetkamp, cofundador',
+        note: '— Jakob, cofundador',
       },
       pricing: {
         id: 'pricing',
@@ -1769,7 +1769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Vantagem', 'O que significa no uso real', 'Limitação / ressalva'],
         rows: [
           { 'Vantagem': 'Transcrição no dispositivo', 'O que significa no uso real': 'O ditado pode funcionar sem enviar a voz para uma nuvem, segundo o desenvolvedor.', 'Limitação / ressalva': 'Uma versão em nuvem separada para Mac e Windows está em beta; sem código-fonte para checar.' },
-          { 'Vantagem': 'Ajustado ao alemão', 'O que significa no uso real': 'Dialetos, termos técnicos e misturas alemão-inglês são um foco declarado.', 'Limitação / ressalva': 'Site, política e interface só em alemão; cerca de 25 idiomas, não 57.' },
+          { 'Vantagem': 'Ajustado ao alemão', 'O que significa no uso real': 'Dialetos, termos técnicos e misturas alemão-inglês são um foco declarado.', 'Limitação / ressalva': 'Site, política e interface só em alemão; cerca de 25 idiomas.' },
           { 'Vantagem': 'Plano grátis e Lifetime', 'O que significa no uso real': 'Teste de graça ou pague uma vez em vez de assinar.', 'Limitação / ressalva': 'O plano grátis para em 2.000 palavras por semana.' },
           { 'Vantagem': 'Reuniões e arquivos', 'O que significa no uso real': 'Grava reuniões com rótulos de falante e resumos; transcreve arquivos de áudio.', 'Limitação / ressalva': 'O plano grátis inclui três reuniões e um arquivo.' },
           { 'Vantagem': 'Desenvolvimento ativo', 'O que significa no uso real': 'A versão 2.2.4 saiu em 22 de outubro de 2026.', 'Limitação / ressalva': 'Só Apple Silicon e macOS 15; sem código-fonte encontrado.' },
@@ -1807,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Usuários de Windows, Linux ou Mac Intel.** Só há suporte a Macs com Apple Silicon e macOS 15 ou mais recente.',
           '**Quem precisa de código aberto.** Não foi encontrado código-fonte público nem licença.',
           '**Leitores que precisam de uma interface em inglês.** O site, o registro de alterações e a política de privacidade existem só em alemão, e o desenvolvedor diz que a interface do app também é só em alemão por enquanto.',
-          '**Quem precisa de uma lista ampla de idiomas.** O desenvolvedor não conseguiu confirmar os 57 idiomas da marcação; o modelo de voz cobre cerca de 25 idiomas europeus, segundo o desenvolvedor.',
+          '**Quem precisa de uma lista ampla de idiomas.** O modelo de voz cobre cerca de 25 idiomas europeus, segundo o desenvolvedor.',
         ],
       },
       faq: {
@@ -1836,7 +1836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais idiomas o Sprich oferece?',
-            a: 'Segundo o desenvolvedor, o Parakeet entende cerca de 25 idiomas europeus, selecionáveis na transcrição de arquivos, e o ditado é otimizado para o alemão. Ele não conseguiu confirmar os 57 idiomas da marcação do site. A interface do app existe só em alemão por enquanto.',
+            a: 'Segundo o desenvolvedor, o Parakeet entende cerca de 25 idiomas europeus, selecionáveis na transcrição de arquivos, e o ditado é otimizado para o alemão. A interface do app existe só em alemão por enquanto.',
           },
         ],
       },
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           'O Sprich serve se você dita num Mac com Apple Silicon, sobretudo em alemão, e quer um plano grátis, notas de reunião e um preço Lifetime único. O desenvolvedor diz que a transcrição fica no dispositivo, e a versão 2.2.4 é recente.',
-          'As ressalvas são a verificabilidade e o alcance: site e interface só em alemão, cerca de 25 idiomas europeus em vez dos 57 da marcação, uma versão para Windows que é uma beta em nuvem, sem código-fonte público e sem suporte a Intel. As afirmações do desenvolvedor sobre modelos, privacidade e idiomas são dele e não foram testadas aqui. Experimente o plano grátis antes de pagar.',
+          'As ressalvas são a verificabilidade e o alcance: site e interface só em alemão, cerca de 25 idiomas europeus, uma versão para Windows que é uma beta em nuvem, sem código-fonte público e sem suporte a Intel. As afirmações do desenvolvedor sobre modelos, privacidade e idiomas são dele e não foram testadas aqui. Experimente o plano grátis antes de pagar.',
         ],
       },
       sources: {
@@ -1902,11 +1902,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'إملاء mac ترخيص دائم',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich تطبيق إملاء ألماني الصنع لأجهزة Mac يُجري التحويل بحسب مطوّره على جهاز Apple Silicon الخاص بك باستخدام Parakeet ويكتب النتيجة في أي تطبيق.** الإملاء محسَّن للألمانية والواجهة بالألمانية فقط؛ ولم يستطع المطوّر تأكيد اللغات الـ57 الواردة في ترميز موقعه، ويقول إن نموذج التحويل يدعم نحو 25 لغة أوروبية. أحدث إصدار هو 2.2.4 بتاريخ 22 أكتوبر 2026. تعتمد هذه المراجعة على موقع المطوّر وسجل التغييرات وسياسة الخصوصية ورسالة من المطوّر، لا على تجربة عملية.',
+    leadAnswerBlock: '**Sprich تطبيق إملاء ألماني الصنع لأجهزة Mac يُجري التحويل بحسب مطوّره على جهاز Apple Silicon الخاص بك باستخدام Parakeet ويكتب النتيجة في أي تطبيق.** الإملاء محسَّن للألمانية والواجهة بالألمانية فقط؛ ويقول المطوّر إن نموذج التحويل يدعم نحو 25 لغة أوروبية. أحدث إصدار هو 2.2.4 بتاريخ 22 أكتوبر 2026. تعتمد هذه المراجعة على موقع المطوّر وسجل التغييرات وسياسة الخصوصية ورسالة من المطوّر، لا على تجربة عملية.',
     quickAnswerTop: {
       ar: {
         question: 'هل Sprich للألمانية فقط؟',
-        answer: 'لا، لكن الألمانية هي محور التطبيق. يقول المطوّر إن الإملاء محسَّن للألمانية، وإن المصطلحات الإنجليزية داخل الجملة تعمل جيدًا، وإن نموذج Parakeet يفهم نحو 25 لغة أوروبية يمكنك اختيارها عند تفريغ الملفات. ولم يستطع المطوّر تأكيد اللغات الـ57 الواردة في ترميز الصفحة الرئيسية. الموقع والسياسة، وحتى الآن واجهة التطبيق أيضًا، بالألمانية فقط، وهو قرار متعمَّد لأن النسخة المحلية محسَّنة للألمانية.',
+        answer: 'لا، لكن الألمانية هي محور التطبيق. يقول المطوّر إن الإملاء محسَّن للألمانية، وإن المصطلحات الإنجليزية داخل الجملة تعمل جيدًا، وإن نموذج Parakeet يفهم نحو 25 لغة أوروبية يمكنك اختيارها عند تفريغ الملفات. الموقع والسياسة، وحتى الآن واجهة التطبيق أيضًا، بالألمانية فقط، وهو قرار متعمَّد لأن النسخة المحلية محسَّنة للألمانية.',
         bullets: [
           'اضغط اختصارًا وتكلم ثم اترك: يُلصق النص في أي تطبيق على Mac، مع خطوة تنقية اختيارية لعلامات الترقيم وكلمات الحشو.',
           'خطة مجانية بحد أسبوعي للكلمات، واشتراك Pro، وخيار Lifetime بدفعة واحدة، وكلها مسعّرة باليورو.',
@@ -1945,7 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'تخيّل زر ميكروفون يكتب عنك: اضغط الاختصار وتكلم ثم اترك، فتظهر الكلمات عند المؤشر — الألمانية أولًا، مع خطة مجانية للتجربة.' },
         ],
         items: [
-          'اللغات: مبني للألمانية؛ يقول المطوّر إن نموذج الكلام يدعم نحو 25 لغة أوروبية، ولم يستطع تأكيد الـ57 الواردة في الترميز.',
+          'اللغات: مبني للألمانية؛ يقول المطوّر إن نموذج الكلام يدعم نحو 25 لغة أوروبية.',
           'الادعاء المحلي: بحسب المطوّر يشغّل تطبيق Mac نموذج Parakeet ونموذج تنقيح مضبوطًا بدقة على الجهاز ولا يرسل أي صوت إلى أي مكان؛ ولا يُستخدم Whisper. لم تتحقق PromptQuorum من ذلك.',
           'السعر: خطة مجانية واشتراك Pro وخيار Lifetime بدفعة واحدة، كلها باليورو.',
           'الصيانة: صدر الإصدار 2.2.4 في 22 أكتوبر 2026، فالتطبيق يُحدَّث بنشاط.',
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'اللغات: الألمانية أولًا ونحو 25 لغة أوروبية',
         content: [
           '**Sprich مبني للألمانية، ويقول المطوّر إن نموذج الكلام فيه يفهم نحو 25 لغة أوروبية.** الإملاء محسَّن للألمانية، مع اللهجات واللغة التقنية والمزج بين الألمانية والإنجليزية، وتعمل المصطلحات الإنجليزية داخل الجملة الألمانية جيدًا بحسب المطوّر. ويذكر سجل التغييرات أن الكلمات الألمانية تُعرَف بموثوقية أكبر منذ الإصدار 2.2.2.',
-          'يقول المطوّر إن اللغات الخمس والعشرين تقريبًا في نموذج Parakeet يمكن اختيارها عند تفريغ الملفات. ولم يستطع تأكيد اللغات الـ57 المدرجة في ترميز schema.org بالصفحة الرئيسية، لذا لا ينبغي الاعتماد على هذا الرقم. وتقول صفحة المقارنة التي ينشرها المطوّر مع Superwhisper إن Sprich محسَّن أساسًا للألمانية والإنجليزية.',
+          'يقول المطوّر إن اللغات الخمس والعشرين تقريبًا في نموذج Parakeet يمكن اختيارها عند تفريغ الملفات. وتقول صفحة المقارنة التي ينشرها المطوّر مع Superwhisper إن Sprich محسَّن أساسًا للألمانية والإنجليزية.',
           'الموقع وسجل التغييرات وسياسة الخصوصية وواجهة التطبيق بالألمانية فقط؛ ويقول المطوّر إن هذا قرار متعمَّد لأن النسخة المحلية محسَّنة للألمانية، ولذلك لا توجد بعد لقطات شاشة بالإنجليزية. لم تختبر PromptQuorum أي لغة.',
         ],
       },
@@ -2015,10 +2015,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'من المطوّر',
         content: [
-          'أجاب Jakob Spetkamp، أحد مؤسسي Sprich، في 10 نوفمبر 2026 عن أسئلتنا حول نموذج الكلام وWindows واللغات، وأرسل الملاحظة التالية. تُعرض بوصفها كلام المطوّر نفسه لا تقييمًا تحريريًا مستقلًا من PromptQuorum، ولم تتمكن PromptQuorum من التحقق منها في الشيفرة أو بالاختبار:',
+          'أجاب Jakob، أحد مؤسسي Sprich، في 10 نوفمبر 2026 عن أسئلتنا حول نموذج الكلام وWindows واللغات، وأرسل الملاحظة التالية. تُعرض بوصفها كلام المطوّر نفسه لا تقييمًا تحريريًا مستقلًا من PromptQuorum، ولم تتمكن PromptQuorum من التحقق منها في الشيفرة أو بالاختبار:',
           '«بنينا Sprich لأن الإملاء بالألمانية على Mac كان إما رديئًا أو يرسل كل شيء إلى سحابة أمريكية. والأطباء والمحامون والمؤلفون خصوصًا لا يُسمح لهم بذلك أو لا يريدونه. لذلك يعمل Sprich محليًا بالكامل ومدرَّب على الألمانية، بما في ذلك المصطلحات المتخصصة والمزج بين الألمانية والإنجليزية (Denglisch). والخطوة التالية هي Windows والنسخة السحابية لكل من لا يملك جهاز Mac بمعالج Apple Silicon.»',
         ],
-        note: '— Jakob Spetkamp، أحد المؤسسين',
+        note: '— Jakob، أحد المؤسسين',
       },
       pricing: {
         id: 'pricing',
@@ -2035,7 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الميزة', 'معناها في الاستخدام الفعلي', 'القيد / تحفظ'],
         rows: [
           { 'الميزة': 'التحويل على الجهاز', 'معناها في الاستخدام الفعلي': 'قد يعمل الإملاء دون إرسال الصوت إلى سحابة بحسب المطوّر.', 'القيد / تحفظ': 'نسخة سحابية منفصلة لنظامي Mac وWindows في مرحلة تجريبية؛ لا شيفرة مصدرية للتحقق.' },
-          { 'الميزة': 'ضبط للألمانية', 'معناها في الاستخدام الفعلي': 'اللهجات والمصطلحات التقنية والخلط الألماني الإنجليزي محور معلن.', 'القيد / تحفظ': 'الموقع والسياسة والواجهة بالألمانية فقط؛ نحو 25 لغة لا 57.' },
+          { 'الميزة': 'ضبط للألمانية', 'معناها في الاستخدام الفعلي': 'اللهجات والمصطلحات التقنية والخلط الألماني الإنجليزي محور معلن.', 'القيد / تحفظ': 'الموقع والسياسة والواجهة بالألمانية فقط؛ نحو 25 لغة.' },
           { 'الميزة': 'خطة مجانية وLifetime', 'معناها في الاستخدام الفعلي': 'جرّب مجانًا أو ادفع مرة واحدة بدل الاشتراك.', 'القيد / تحفظ': 'تتوقف الخطة المجانية عند 2,000 كلمة أسبوعيًا.' },
           { 'الميزة': 'الاجتماعات والملفات', 'معناها في الاستخدام الفعلي': 'يسجّل الاجتماعات بتسمية المتحدثين والملخصات؛ ويحوّل الملفات الصوتية.', 'القيد / تحفظ': 'تشمل الخطة المجانية ثلاثة اجتماعات وملفًا واحدًا.' },
           { 'الميزة': 'تطوير نشط', 'معناها في الاستخدام الفعلي': 'صدر الإصدار 2.2.4 في 22 أكتوبر 2026.', 'القيد / تحفظ': 'Apple Silicon وmacOS 15 فقط؛ لم تُوجد شيفرة مصدرية.' },
@@ -2073,7 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**مستخدمو Windows أو Linux أو Mac بمعالج Intel.** المدعوم فقط أجهزة Mac بمعالج Apple Silicon وmacOS 15 أو أحدث.',
           '**من يحتاج إلى شيفرة مفتوحة المصدر.** لم يُعثر على شيفرة مصدرية عامة ولا ترخيص.',
           '**القرّاء الذين يحتاجون إلى واجهة بالإنجليزية.** الموقع وسجل التغييرات وسياسة الخصوصية بالألمانية فقط، ويقول المطوّر إن واجهة التطبيق بالألمانية فقط حتى الآن.',
-          '**من يحتاج إلى قائمة لغات واسعة.** لم يستطع المطوّر تأكيد اللغات الـ57 الواردة في ترميزه؛ ويقول إن نموذج الكلام يغطي نحو 25 لغة أوروبية.',
+          '**من يحتاج إلى قائمة لغات واسعة.** يقول المطوّر إن نموذج الكلام يغطي نحو 25 لغة أوروبية.',
         ],
       },
       faq: {
@@ -2102,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما اللغات التي يدعمها Sprich؟',
-            a: 'يقول المطوّر إن Parakeet يفهم نحو 25 لغة أوروبية يمكن اختيارها عند تفريغ الملفات، وإن الإملاء محسَّن للألمانية. ولم يستطع تأكيد اللغات الـ57 الواردة في ترميز موقعه. وواجهة التطبيق بالألمانية فقط حتى الآن.',
+            a: 'يقول المطوّر إن Parakeet يفهم نحو 25 لغة أوروبية يمكن اختيارها عند تفريغ الملفات، وإن الإملاء محسَّن للألمانية. وواجهة التطبيق بالألمانية فقط حتى الآن.',
           },
         ],
       },
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           'يناسب Sprich من يمليّ على جهاز Mac بمعالج Apple Silicon، غالبًا بالألمانية، ويريد خطة مجانية وملاحظات اجتماعات وسعر Lifetime لمرة واحدة. يقول المطوّر إن التحويل يبقى على الجهاز، والإصدار 2.2.4 حديث.',
-          'التحفظات تتعلق بإمكانية التحقق والنطاق: موقع وواجهة بالألمانية فقط، ونحو 25 لغة أوروبية بدل الـ57 الواردة في الترميز، ونسخة Windows سحابية تجريبية، وغياب شيفرة مصدرية عامة، وعدم دعم Intel. وما يذكره المطوّر عن النماذج والخصوصية واللغات هو قوله هو ولم يُختبر هنا. جرّب الخطة المجانية قبل الدفع.',
+          'التحفظات تتعلق بإمكانية التحقق والنطاق: موقع وواجهة بالألمانية فقط، ونحو 25 لغة أوروبية، ونسخة Windows سحابية تجريبية، وغياب شيفرة مصدرية عامة، وعدم دعم Intel. وما يذكره المطوّر عن النماذج والخصوصية واللغات هو قوله هو ولم يُختبر هنا. جرّب الخطة المجانية قبل الدفع.',
         ],
       },
       sources: {
@@ -2168,11 +2168,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac 받아쓰기 평생 라이선스',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich는 개발사에 따르면 사용자의 Apple Silicon Mac에서 Parakeet으로 변환하여 결과를 어떤 앱에든 입력하는 독일산 Mac용 받아쓰기 앱입니다.** 받아쓰기는 독일어에 최적화되어 있고 인터페이스는 독일어만 제공합니다. 개발사는 사이트 마크업의 57개 언어를 확인할 수 없다고 밝혔으며, 변환 모델은 유럽 약 25개 언어를 지원한다고 설명합니다. 최신 버전은 2026년 10월 22일의 2.2.4입니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침, 개발사의 메시지에 근거하며 직접 테스트한 것이 아닙니다.',
+    leadAnswerBlock: '**Sprich는 개발사에 따르면 사용자의 Apple Silicon Mac에서 Parakeet으로 변환하여 결과를 어떤 앱에든 입력하는 독일산 Mac용 받아쓰기 앱입니다.** 받아쓰기는 독일어에 최적화되어 있고 인터페이스는 독일어만 제공합니다. 개발사는 변환 모델이 유럽 약 25개 언어를 지원한다고 설명합니다. 최신 버전은 2026년 10월 22일의 2.2.4입니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침, 개발사의 메시지에 근거하며 직접 테스트한 것이 아닙니다.',
     quickAnswerTop: {
       ko: {
         question: 'Sprich는 독일어 전용인가요?',
-        answer: '아니요, 다만 독일어가 중심입니다. 개발사에 따르면 받아쓰기는 독일어에 최적화되어 있고, 문장 속 영어 용어도 잘 인식되며, Parakeet 모델은 유럽 약 25개 언어를 이해하고 파일을 변환할 때 언어를 선택할 수 있습니다. 홈페이지 마크업의 57개 언어는 개발사가 확인할 수 없다고 밝혔습니다. 웹사이트, 방침, 그리고 현재까지는 앱 인터페이스도 독일어만 제공하며, 이는 로컬 버전이 독일어에 최적화되어 있기 때문에 의도한 선택입니다.',
+        answer: '아니요, 다만 독일어가 중심입니다. 개발사에 따르면 받아쓰기는 독일어에 최적화되어 있고, 문장 속 영어 용어도 잘 인식되며, Parakeet 모델은 유럽 약 25개 언어를 이해하고 파일을 변환할 때 언어를 선택할 수 있습니다. 웹사이트, 방침, 그리고 현재까지는 앱 인터페이스도 독일어만 제공하며, 이는 로컬 버전이 독일어에 최적화되어 있기 때문에 의도한 선택입니다.',
         bullets: [
           '단축키를 누르고 말한 뒤 떼면 Mac의 어떤 앱에도 텍스트가 붙여넣어지며, 문장부호와 군말을 다듬는 선택적 정리 단계가 있습니다.',
           '주간 단어 수 제한이 있는 무료 요금제, Pro 구독, 일회성 Lifetime이 있으며 가격은 모두 유로입니다.',
@@ -2211,7 +2211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '대신 타이핑해 주는 마이크 키라고 생각하면 됩니다. 단축키를 누르고 말한 뒤 떼면 커서 위치에 글자가 나타납니다. 독일어가 우선이며 무료 요금제로 먼저 써볼 수 있습니다.' },
         ],
         items: [
-          '언어: 독일어를 위해 만들어졌습니다. 개발사는 음성 모델이 유럽 약 25개 언어를 지원한다고 하며, 마크업의 57개 언어는 확인할 수 없다고 밝혔습니다.',
+          '언어: 독일어를 위해 만들어졌습니다. 개발사는 음성 모델이 유럽 약 25개 언어를 지원한다고 합니다.',
           '로컬 처리 주장: 개발사에 따르면 Mac 앱은 Parakeet과 미세 조정된 후처리 모델을 기기에서 실행하며 오디오를 어디에도 보내지 않습니다. Whisper는 사용하지 않습니다. PromptQuorum은 이를 검증하지 않았습니다.',
           '가격: 무료 요금제, Pro 구독, 일회성 Lifetime이 있으며 모두 유로입니다.',
           '유지보수: 2.2.4 버전이 2026년 10월 22일에 나와 앱이 활발히 업데이트되고 있습니다.',
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '언어: 독일어 우선, 유럽 약 25개 언어',
         content: [
           '**Sprich는 독일어를 위해 만들어졌으며, 개발사에 따르면 음성 모델은 유럽 약 25개 언어를 이해합니다.** 받아쓰기는 방언, 전문 용어, 독일어와 영어의 혼용까지 포함해 독일어에 최적화되어 있으며, 독일어 문장 속 영어 용어도 잘 인식된다고 개발사는 설명합니다. 변경 내역에는 버전 2.2.2부터 독일어 단어를 더 안정적으로 인식한다는 항목이 있습니다.',
-          '개발사에 따르면 Parakeet 모델의 약 25개 언어는 파일을 변환할 때 선택할 수 있습니다. 홈페이지의 schema.org 마크업에 나열된 57개 언어는 확인할 수 없다고 밝혔으므로 이 수치는 신뢰하지 않는 것이 좋습니다. 개발사의 Superwhisper 비교 페이지는 Sprich가 주로 독일어와 영어에 최적화되어 있다고 말합니다.',
+          '개발사에 따르면 Parakeet 모델의 약 25개 언어는 파일을 변환할 때 선택할 수 있습니다. 개발사의 Superwhisper 비교 페이지는 Sprich가 주로 독일어와 영어에 최적화되어 있다고 말합니다.',
           '웹사이트, 변경 내역, 개인정보 처리방침, 앱 인터페이스는 독일어만 제공합니다. 개발사는 로컬 버전이 독일어에 최적화되어 있기 때문에 의도한 선택이라고 설명하며, 영어 스크린샷은 아직 없습니다. PromptQuorum은 어떤 언어도 테스트하지 않았습니다.',
         ],
       },
@@ -2281,10 +2281,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: '개발사의 말',
         content: [
-          'Sprich의 공동 창업자 Jakob Spetkamp는 2026년 11월 10일에 음성 모델, Windows, 언어에 관한 질문에 답하고 아래 메모를 보내 왔습니다. 이는 개발사 본인의 말로 소개하는 것이며 PromptQuorum의 독립적인 편집 평가가 아니고, PromptQuorum은 코드나 테스트로 이를 검증하지 못했습니다.',
+          'Sprich의 공동 창업자 Jakob은 2026년 11월 10일에 음성 모델, Windows, 언어에 관한 질문에 답하고 아래 메모를 보내 왔습니다. 이는 개발사 본인의 말로 소개하는 것이며 PromptQuorum의 독립적인 편집 평가가 아니고, PromptQuorum은 코드나 테스트로 이를 검증하지 못했습니다.',
           '“저희는 Mac에서 독일어로 받아쓰기를 하면 품질이 나쁘거나 모든 것이 미국 클라우드로 전송되었기 때문에 Sprich를 만들었습니다. 특히 의사, 변호사, 작가는 그렇게 하는 것이 허용되지 않거나 원하지 않습니다. 그래서 Sprich는 완전히 로컬에서 동작하며 전문 용어와 독일어-영어 혼용(Denglisch)까지 포함해 독일어로 학습되어 있습니다. 다음으로는 Windows와, Apple Silicon Mac이 없는 분들을 위한 클라우드 버전이 나옵니다.”',
         ],
-        note: '— Jakob Spetkamp, 공동 창업자',
+        note: '— Jakob, 공동 창업자',
       },
       pricing: {
         id: 'pricing',
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['장점', '실제 사용에서의 의미', '한계 / 유의점'],
         rows: [
           { '장점': '기기 내 변환', '실제 사용에서의 의미': '개발사에 따르면 음성을 클라우드로 보내지 않고 받아쓸 수 있습니다.', '한계 / 유의점': 'Mac과 Windows용 클라우드 버전은 별도로 베타 중이며, 확인할 소스 코드가 없습니다.' },
-          { '장점': '독일어 중심 조정', '실제 사용에서의 의미': '방언, 전문 용어, 독일어·영어 혼용이 명시된 중점입니다.', '한계 / 유의점': '사이트, 방침, 인터페이스는 독일어만 제공하며 약 25개 언어이고 57개가 아닙니다.' },
+          { '장점': '독일어 중심 조정', '실제 사용에서의 의미': '방언, 전문 용어, 독일어·영어 혼용이 명시된 중점입니다.', '한계 / 유의점': '사이트, 방침, 인터페이스는 독일어만 제공하며 약 25개 언어입니다.' },
           { '장점': '무료 요금제와 Lifetime', '실제 사용에서의 의미': '무료로 써보거나 구독 대신 한 번만 결제할 수 있습니다.', '한계 / 유의점': '무료 요금제는 주 2,000단어까지입니다.' },
           { '장점': '회의와 파일', '실제 사용에서의 의미': '화자 구분과 요약이 있는 회의 녹음, 오디오 파일 변환.', '한계 / 유의점': '무료 요금제는 회의 3회와 파일 1건입니다.' },
           { '장점': '활발한 개발', '실제 사용에서의 의미': '2.2.4 버전이 2026년 10월 22일에 나왔습니다.', '한계 / 유의점': 'Apple Silicon과 macOS 15만 지원하며 소스 코드는 찾지 못했습니다.' },
@@ -2339,7 +2339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Windows, Linux, Intel Mac 사용자.** macOS 15 이상의 Apple Silicon Mac만 지원합니다.',
           '**오픈 소스 코드가 필요한 사람.** 공개 소스 코드나 라이선스를 찾지 못했습니다.',
           '**영어 인터페이스가 필요한 독자.** 웹사이트, 변경 내역, 개인정보 처리방침은 독일어만 제공하며, 개발사에 따르면 앱 인터페이스도 현재까지는 독일어만 제공합니다.',
-          '**폭넓은 언어 목록이 필요한 사용자.** 개발사는 마크업의 57개 언어를 확인할 수 없다고 밝혔으며, 음성 모델은 유럽 약 25개 언어를 지원한다고 설명합니다.',
+          '**폭넓은 언어 목록이 필요한 사용자.** 음성 모델은 유럽 약 25개 언어를 지원한다고 설명합니다.',
         ],
       },
       faq: {
@@ -2368,7 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sprich는 어떤 언어를 지원하나요?',
-            a: '개발사에 따르면 Parakeet은 유럽 약 25개 언어를 이해하며 파일 변환 시 선택할 수 있고, 받아쓰기는 독일어에 최적화되어 있습니다. 사이트 마크업의 57개 언어는 확인할 수 없다고 밝혔습니다. 앱 인터페이스는 현재까지 독일어만 제공합니다.',
+            a: '개발사에 따르면 Parakeet은 유럽 약 25개 언어를 이해하며 파일 변환 시 선택할 수 있고, 받아쓰기는 독일어에 최적화되어 있습니다. 앱 인터페이스는 현재까지 독일어만 제공합니다.',
           },
         ],
       },
@@ -2377,7 +2377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           'Apple Silicon Mac에서 주로 독일어로 받아쓰고, 무료 요금제와 회의 메모, 일회성 Lifetime 가격을 원한다면 Sprich가 맞습니다. 개발사는 변환이 기기에 남는다고 밝히며 버전 2.2.4도 최근 것입니다.',
-          '유의할 점은 검증 가능성과 범위입니다. 웹사이트와 앱 인터페이스가 독일어만 제공되고, 마크업의 57개 언어가 아니라 유럽 약 25개 언어이며, Windows 버전은 클라우드 베타이고, 공개 소스 코드가 없으며 Intel은 지원하지 않습니다. 모델, 개인정보, 언어에 대한 개발사의 설명은 개발사 본인의 것이며 여기서는 테스트하지 않았습니다. 결제 전에 무료 요금제를 먼저 사용해 보십시오.',
+          '유의할 점은 검증 가능성과 범위입니다. 웹사이트와 앱 인터페이스가 독일어만 제공되고, 유럽 약 25개 언어이며, Windows 버전은 클라우드 베타이고, 공개 소스 코드가 없으며 Intel은 지원하지 않습니다. 모델, 개인정보, 언어에 대한 개발사의 설명은 개발사 본인의 것이며 여기서는 테스트하지 않았습니다. 결제 전에 무료 요금제를 먼저 사용해 보십시오.',
         ],
       },
       sources: {

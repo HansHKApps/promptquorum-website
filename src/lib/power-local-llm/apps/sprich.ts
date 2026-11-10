@@ -8,13 +8,13 @@
 // Not local: the privacy policy also describes a Windows application ("Sprich Cloud") that streams dictation audio to the maker's server (Canary 1B v2, hosted in Finland, EU) —
 // while the home page offers only a Windows waitlist; free-tier users' weekly/total word counts are sent to the server and tied to the account; models are downloaded via Cloudflare R2.
 // Languages: product is "Optimiert für Deutsch" (dialects, Fachsprache, Denglisch); its own /vs/superwhisper page says "primär für Deutsch und Englisch optimiert";
-// the home page's SoftwareApplication schema.org markup lists "57 Sprachen" and the free plan lists "Alle Apps · alle Sprachen" — the FAQ answer to "Welche Sprachen unterstützt Sprich?"
-// is only revealed client-side and was not readable. The whole site and the app copy are German; no other UI language was found. Maker's languages number is not independently verified.
+// the free plan lists "Alle Apps · alle Sprachen". The home page's schema.org markup carried a language count that the maker could not confirm on 2026-11-10; it is deliberately not reproduced anywhere on the site (owner request).
+// Maker (2026-11-10): Parakeet understands about 25 European languages; dictation is optimized for German; the app UI is German only by choice.
 // Prices (EUR, home #preise): Free 0 € (2,000 words/week, 1 file, 3 meetings, 5 dictionary entries); Pro 8 €/month or 6 €/month billed yearly; Lifetime 150 € once ("Alle Updates der lokalen App").
 // Maker: Victor Vollmann, Agricolastraße 55b, 80686 München (Impressum); about page: founded 2025 by three friends (Vollmann, Jakob Spetkamp, Leo Wiedemann). Not checked: network traffic, accuracy, speed.
 // No hands-on testing by PromptQuorum.
-// 2026-11-10 maker update (Jakob Spetkamp, co-founder): Parakeet + fine-tuned post-processing model on the Mac, Whisper not used (policy entry outdated); Windows = cloud beta for Mac+Windows (Helsinki, RAM only, no storage/training), local app sends no audio;
-// 57 languages NOT confirmed, Parakeet ~25 European languages; dictation optimized for German; UI German only. `founder` set (maker note); `founderReviewedDate` deliberately NOT set (maker did not review the finished text).
+// 2026-11-10 maker update (Jakob, co-founder): Parakeet + fine-tuned post-processing model on the Mac, Whisper not used (policy entry outdated); Windows = cloud beta for Mac+Windows (Helsinki, RAM only, no storage/training), local app sends no audio;
+// Parakeet ~25 European languages (the 57-language site-markup figure is removed everywhere); dictation optimized for German; UI German only. `founder` set (maker note); `founderReviewedDate` set 2026-11-10 (owner decision: Jakob approved the text indirectly).
 
 import type { ToolRecord } from './types'
 
@@ -51,7 +51,7 @@ export const app: ToolRecord = {
     ar: 'تطبيق إملاء ألماني الصنع لأجهزة Mac يُجري التحويل بحسب مطوّره على جهاز Mac بمعالج Apple Silicon ويكتب في أي تطبيق؛ خطة مجانية، يركّز أولًا على الألمانية، والموقع بالألمانية فقط',
     ko: '독일에서 만든 Mac용 받아쓰기 앱으로, 개발사에 따르면 Apple Silicon Mac에서 변환하여 어떤 앱에든 입력합니다. 무료 요금제, 독일어 우선, 웹사이트는 독일어만 제공',
   },
-  // Comparison attributes. languages = 25: the maker (Jakob Spetkamp, 2026-11-10) could NOT confirm the "57 Sprachen" in the home page's schema.org markup and says Parakeet understands about 25 European languages (selectable for file transcription);
+  // Comparison attributes. languages = 25: the maker (Jakob, 2026-11-10) states Parakeet understands about 25 European languages (selectable for file transcription); the earlier "57 languages" site-markup figure was removed on 2026-11-10 at the owner's request;
   // speakerLabels = meeting mode "erkennt nach dem Ende die einzelnen Sprecher" (changelog v2.2.0); a missing key = not stated, never false.
   compare: { languages: 25, speakerLabels: true },
   reviewSlug: 'sprich-review',
@@ -60,21 +60,22 @@ export const app: ToolRecord = {
     version: '2.2.4',
     versionSourceUrl: 'https://www.sprich.ai/changelog',
   },
-  verdict: 'Best for German-speaking Mac users on Apple Silicon who want push-to-talk dictation into any app, a free tier and a one-off Lifetime option, and who accept a German-only interface and a closed-source app; limited by macOS 15 on Apple Silicon only (Windows is a cloud beta), about 25 European languages (the 57 in the site markup are unconfirmed by the maker) and privacy claims PromptQuorum did not test.',
+  verdict: 'Best for German-speaking Mac users on Apple Silicon who want push-to-talk dictation into any app, a free tier and a one-off Lifetime option, and who accept a German-only interface and a closed-source app; limited by macOS 15 on Apple Silicon only (Windows is a cloud beta), about 25 European languages and privacy claims PromptQuorum did not test.',
   lastVerifiedDate: '2026-11-10',
   lastUpstreamUpdate: '2026-10-22', // sprich.ai/changelog: v2.2.4 dated 2026-10-22 is still the newest entry; re-read 2026-11-10 (19 days, stale warning OFF)
   lastUpstreamUpdateSource: 'https://www.sprich.ai/changelog',
+  founderReviewedDate: '2026-11-10', // Owner decision 2026-11-10: Jakob (co-founder) approved the review indirectly; drives the Founder-reviewed banner + star. Single review, so no founderReviewDates.
   founder: {
     who: {
-      en: 'Jakob Spetkamp, co-founder',
-      de: 'Jakob Spetkamp, Mitgründer',
-      es: 'Jakob Spetkamp, cofundador',
-      fr: 'Jakob Spetkamp, cofondateur',
-      ja: 'Jakob Spetkamp氏、共同創業者',
-      pt: 'Jakob Spetkamp, cofundador',
-      ar: 'Jakob Spetkamp، أحد المؤسسين',
-      zh: 'Jakob Spetkamp,联合创始人',
-      ko: 'Jakob Spetkamp, 공동 창업자',
+      en: 'Jakob, co-founder',
+      de: 'Jakob, Mitgründer',
+      es: 'Jakob, cofundador',
+      fr: 'Jakob, cofondateur',
+      ja: 'Jakob氏、共同創業者',
+      pt: 'Jakob, cofundador',
+      ar: 'Jakob، أحد المؤسسين',
+      zh: 'Jakob,联合创始人',
+      ko: 'Jakob, 공동 창업자',
     },
     providedDate: '2026-11-10',
     why: {

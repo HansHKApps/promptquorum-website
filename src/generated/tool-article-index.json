@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "how-much-vram-local-llm",
         "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
@@ -71,14 +79,6 @@
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],
@@ -860,6 +860,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
@@ -920,14 +928,6 @@
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
         "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-prompts-for-fiction-writers",
-        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-11-06",
         "tier": "about"
       }
@@ -993,6 +993,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-ai-app-low-end-pc",
         "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
@@ -1020,14 +1028,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
@@ -1165,6 +1165,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
@@ -1192,14 +1200,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
@@ -1251,18 +1251,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -1960,7 +1960,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -2038,7 +2038,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -2088,6 +2088,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
@@ -2124,14 +2132,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
@@ -2174,19 +2174,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
         "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -2432,6 +2432,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -2444,14 +2452,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
@@ -2646,6 +2646,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -2659,14 +2667,6 @@
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -5126,7 +5126,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -5212,7 +5212,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -5249,6 +5249,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "macwhisper-review",
+        "title": "MacWhisper Review: Local Speech-to-Text for Mac",
+        "url": "/power-local-llm/macwhisper-review",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "speechbrain-review",
         "title": "SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text",
         "url": "/power-local-llm/speechbrain-review",
@@ -5269,14 +5277,6 @@
         "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
         "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
         "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "macwhisper-review",
-        "title": "MacWhisper Review: Local Speech-to-Text for Mac",
-        "url": "/power-local-llm/macwhisper-review",
-        "dateModified": "2026-10-03",
         "tier": "mentioned"
       }
     ],
@@ -5346,7 +5346,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -5398,7 +5398,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -5570,7 +5570,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -5656,7 +5656,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -5872,7 +5872,7 @@
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -5950,7 +5950,7 @@
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -6066,7 +6066,7 @@
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -6152,7 +6152,7 @@
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -6674,7 +6674,7 @@
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -8358,7 +8358,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -9202,7 +9202,7 @@
         "slug": "macwhisper-review",
         "title": "MacWhisper Review: Local Speech-to-Text for Mac",
         "url": "/power-local-llm/macwhisper-review",
-        "dateModified": "2026-10-03",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -9218,7 +9218,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -9264,7 +9264,7 @@
         "slug": "macwhisper-review",
         "title": "MacWhisper Review: Local Speech-to-Text for Mac",
         "url": "/power-local-llm/macwhisper-review",
-        "dateModified": "2026-10-03",
+        "dateModified": "2026-11-09",
         "tier": "about"
       }
     ],
@@ -10012,6 +10012,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -10032,14 +10040,6 @@
         "slug": "swerve-ai-review",
         "title": "Swerve Review: AI Story and Character Chat for iPhone",
         "url": "/power-local-llm/swerve-ai-review",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "weesper-neon-flow-review",
-        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
-        "url": "/power-local-llm/weesper-neon-flow-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
       },
@@ -10570,7 +10570,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -11184,7 +11184,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -11236,7 +11236,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       }
     ],
@@ -11638,7 +11638,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -11884,6 +11884,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -11897,14 +11905,6 @@
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -11974,7 +11974,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -12026,7 +12026,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -12053,6 +12053,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "sprich-review",
+        "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
+        "url": "/power-local-llm/sprich-review",
+        "dateModified": "2026-11-10",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "amical-review",
         "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
         "url": "/power-local-llm/amical-review",
@@ -12061,9 +12069,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "sprich-review",
-        "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
-        "url": "/power-local-llm/sprich-review",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
@@ -12093,25 +12109,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "meetini-review",
         "title": "Meetini Review: Meeting and Interview Assistant for Mac",
         "url": "/power-local-llm/meetini-review",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sablate-review",
-        "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
-        "url": "/power-local-llm/sablate-review",
         "dateModified": "2026-11-07",
         "tier": "mentioned"
       }
@@ -12682,7 +12682,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "about"
       }
     ],
@@ -13577,6 +13577,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
@@ -13584,7 +13592,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "StratoSort": {
@@ -13608,8 +13616,16 @@
         "slug": "sprich-review",
         "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
         "url": "/power-local-llm/sprich-review",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-10",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -13620,7 +13636,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Weesper Neon Flow": {
@@ -13630,11 +13646,19 @@
         "slug": "weesper-neon-flow-review",
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-09",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Sablate": {
@@ -13652,7 +13676,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
