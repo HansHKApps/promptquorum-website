@@ -1,0 +1,1350 @@
+{
+  "id": "pq-test-sprich-2026-11-09",
+  "hero": "sprich-welcome-screen-press-once-speak-press-again",
+  "date_human": "9 November 2026",
+  "captured": "2026-11-09; 17:43 to 18:07 per the app history; install start and end not recorded",
+  "standard_version": "0.2",
+  "locale": "en",
+  "app": {
+    "name": "Sprich",
+    "slug": "sprich",
+    "vendor": "Not recorded (the maker is not named in the notes)",
+    "category": "Local dictation / speech-to-text, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://www.sprich.ai"
+  },
+  "title": "Sprich on an M4 Pro Mac with 24 GB: Local Dictation That Types Into Any App",
+  "page_title": "Sprich Test",
+  "dek": "A first session on 9 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a German-only interface, and most side features not tried.",
+  "seo": {
+    "title": "Sprich Hands-on Test: Local Dictation on an M4 Pro Mac",
+    "description": "Hands-on test of Sprich on a 24 GB M4 Pro Mac: dictation worked in Word, WhatsApp and Telegram in English and German, Russian failed."
+  },
+  "faq": [
+    [
+      "Does Sprich work in other apps?",
+      "Yes, in the apps the tester tried. Dictation produced text in Microsoft Word, WhatsApp and Telegram. Mail, Notes, Slack and a browser were not tried.",
+      "observed"
+    ],
+    [
+      "Which languages did Sprich handle in the test?",
+      "English and German worked. A French sentence was dictated and its text is in the notes, but accuracy was not judged. A Russian test failed: the output was garbled. The dictation language set at that time is not recorded.",
+      "observed"
+    ],
+    [
+      "Is Sprich’s interface available in English?",
+      "No. The tester found only a German interface and no language switch. The developer says it is German only so far, a deliberate choice because the local version is optimised for German; that is not verified.",
+      "observed"
+    ],
+    [
+      "How big is the Sprich download?",
+      "Setup downloads two models, Sprich Transcribe v3 (about 480 MB) and Sprich Turbo v3 (about 2.8 GB), about 3.3 GB together by the app’s own text. These are download sizes; runtime memory was not measured.",
+      "measured"
+    ],
+    [
+      "Does Sprich really run offline and locally?",
+      "The app says everything runs locally, that voice and text never leave the Mac and that it works fully offline. Network traffic was not inspected and no offline run was tried, so this is not verified.",
+      "vendor-claim"
+    ],
+    [
+      "Was Sprich fast?",
+      "The tester first judged it slow because he used the default toggle mode wrongly (press once, speak, press again). After correct use he found it instant and as fast as his cloud dictation tool. Nothing was timed.",
+      "tester-estimate"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-10",
+  "started": "2026-11-09",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Sprich (sprich.ai); the window header reads \"sprich.ai\"",
+      "observed"
+    ],
+    [
+      "Version",
+      "Not recorded. The directory checked version 2.2.4 on the vendor site on 2026-11-09; the tester's build may differ.",
+      null
+    ],
+    [
+      "Source",
+      "Not recorded. The directory lists the vendor download page at sprich.ai.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans (founder of PromptQuorum)",
+      "observed"
+    ],
+    [
+      "Start",
+      "2026-11-09. The first dictation in the history is at 17:43 and the last screenshot at 18:07; install start and end time are not recorded.",
+      "observed"
+    ],
+    [
+      "Ended",
+      "Not recorded",
+      null
+    ],
+    [
+      "Hardware",
+      "Apple M4 Pro, 24 GB unified memory, nothing else running. The notes' header says \"Mac 4 ... VRAM\"; the chip was named M4 Pro in the dictated notes.",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS version not recorded. The directory lists macOS 15 or later and Apple Silicon only (third-party).",
+      null
+    ],
+    [
+      "Why tested",
+      "The notes compare it with the cloud dictation tool the tester uses now and say he would not share confidential data with that tool.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "Not stated as a goal. The notes show a first look at setup, dictation in three apps, languages, history, settings and the meetings tab.",
+      null
+    ],
+    [
+      "Apps dictated into",
+      "Microsoft Word, WhatsApp, Telegram",
+      "observed"
+    ],
+    [
+      "AI help used",
+      "Claude drafted this report from the tester's Word notes and 15 screenshots. The dictated parts of the notes appear to come from Sprich itself (assumption: the history entries match the notes' text), so some slips in the notes may be app output.",
+      "assumption"
+    ],
+    [
+      "Disclosure",
+      "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The app header shows a LIFETIME badge, and in a message to a contact the tester wrote that he got free access to a voice tool; how and from whom the access came is not recorded. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+      "observed"
+    ]
+  ],
+  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The app header shows a LIFETIME badge, and in a message to a contact the tester wrote that he got free access to a voice tool; how and from whom the access came is not recorded. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+  "verdict": {
+    "general": "A carefully built, German-first dictation app for Apple Silicon Macs. In this session dictation worked in Word, WhatsApp and Telegram in English and German; Russian did not. Meeting recording, file transcription, text rewriting, offline operation, the privacy claims and uninstall were not tested.",
+    "fit": "The tester is impressed, gives it five out of five and recommended it to a contact. He rates it as fast as his cloud dictation tool, though nothing was timed. Whether he will keep using it is not stated in his notes."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Small DMG, drag to Applications; an account is required."
+    ],
+    [
+      "Onboarding and model choice",
+      4,
+      "Five clear steps, background download; no model choice is offered."
+    ],
+    [
+      "Core function",
+      4,
+      "Dictation worked in three apps in English and German; Russian failed."
+    ],
+    [
+      "Guidance and iteration",
+      3,
+      "The default key mode misled the tester once and the interface is German only; a feedback form is built in."
+    ],
+    [
+      "Performance",
+      null,
+      "Not timed. The tester estimates it as instant after correct use."
+    ],
+    [
+      "Documentation",
+      null,
+      "Only in-app text was seen; no manual or website guide was opened."
+    ],
+    [
+      "Trust and privacy",
+      null,
+      "Not audited. Local and offline claims were not tested."
+    ],
+    [
+      "Uninstall",
+      null,
+      "Not tested."
+    ]
+  ],
+  "scores_note": "Scores are proposed by the report author from the tester's evidence; n/a means not tested, not zero.",
+  "tldr": [
+    [
+      "observed",
+      "Sprich is a Mac dictation app: press a key, speak, and the text appears where the cursor is. The tester ran it on an Apple M4 Pro with 24 GB. Setup has five steps and downloads two models of about 3.3 GB together."
+    ],
+    [
+      "observed",
+      "Dictation worked in Microsoft Word, WhatsApp and Telegram, in English and German. A Russian test failed. A product name came out as \"Sprich Ae\" in the history."
+    ],
+    [
+      "tester-error",
+      "The tester first judged the app slow because he used the default toggle mode wrongly (press once, speak, press again). After using it correctly he found it instant. Speed was never timed."
+    ],
+    [
+      "observed",
+      "The interface is German only; the tester found no language switch."
+    ],
+    [
+      "vendor-claim",
+      "The app says everything runs locally and offline and that voice and text never leave the Mac. This was not tested."
+    ],
+    [
+      "observed",
+      "Meeting recording, the text-rewrite menu, file transcription, the dictionary, the tone setting's effect, offline use and uninstall were not tested."
+    ]
+  ],
+  "quotes": [
+    "The interface, the setup, really nice, really professional, top-notch.",
+    "Five out of five, ten out of ten, I don't know what to say."
+  ],
+  "quote_note": "Tester notes, lightly edited from dictation. Both are his judgment, not measurements.",
+  "moments_title": "Six moments that shaped this test",
+  "moments_nav": "Six moments",
+  "moments": [
+    [
+      "Two models to download",
+      "Setup step 2: two models of about 3.3 GB together, downloaded once.",
+      "sprich-setup-two-models-download-3-3-gb",
+      "chapter-install"
+    ],
+    [
+      "Press once, press again",
+      "Key and mode step of the setup. The default toggle mode misled the tester at first.",
+      "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "chapter-install"
+    ],
+    [
+      "The first four Word dictations",
+      "History at 17:49. One entry reads “Sprich Ae”.",
+      "sprich-history-first-four-dictations-in-word",
+      "chapter-usage"
+    ],
+    [
+      "32 dictations, two saved-time figures",
+      "History at 18:07: the headline and the tile disagree.",
+      "sprich-history-32-dictations-time-saved-counters",
+      "chapter-usage"
+    ],
+    [
+      "A rewrite menu nobody used yet",
+      "Popup menu, not used in the test.",
+      "sprich-text-rewrite-popup-menu",
+      "chapter-explore"
+    ],
+    [
+      "Meetings, recorded locally",
+      "Meetings tab, not used in the test.",
+      "sprich-meetings-tab-record-meeting-tip",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Download, first launch and setup",
+      "items": [
+        [
+          "observed",
+          "The test ran on 9 November 2026. The tester downloaded a small DMG, which he read as 20 MB; no screenshot. The installer window shows the app icon beside an Applications shortcut. The directory lists 18.2 MB for version 2.2.4 (third-party).",
+          "sprich-app-icon-and-applications-folder"
+        ],
+        [
+          "tester-view",
+          "The tester likes the logo, a German play on the word Sprich split into “spr” and “ich”.",
+          null
+        ],
+        [
+          "observed",
+          "An account is needed: setup step 1, “Anmelden”, is ticked before the model step, and the tester says registration is required.",
+          null
+        ],
+        [
+          "measured",
+          "Step 2 downloads two models once: Sprich Transcribe v3 (speech recognition, about 480 MB) and Sprich Turbo v3 (text improvement, about 2.8 GB), about 3.3 GB together by the app’s own text. The download runs in the background while the next steps are done. These are download sizes, not runtime memory.",
+          "sprich-setup-two-models-download-3-3-gb"
+        ],
+        [
+          "observed",
+          "The screens do not name the models underneath. The tester noticed this and wanted to find out.",
+          null
+        ],
+        [
+          "observed",
+          "He changed the dictation key; which key he chose is not recorded. Step 4 shows Fn, while the welcome screen’s illustration shows right Command. Two modes exist: Einrasten (press to start, press to stop; marked Standard) and Gedrückt halten (record while held).",
+          "sprich-setup-dictation-key-fn-toggle-or-hold"
+        ],
+        [
+          "measured",
+          "He reached the last step, “Fast geschafft”, while the models were still downloading: speech recognition 72 %, text improvement 12 %. Total download time and setup time are not recorded.",
+          "sprich-setup-final-step-models-still-loading"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "Usage",
+      "items": [
+        [
+          "tester-error",
+          "The first Word tests felt slow and one text seemed to go missing. The tester wrote that a speech tool has to answer within a second or two and that his cloud tool was faster. Then he found his own mistake: in the default toggle mode the key has to be pressed once to start and once to stop. He corrected the notes.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "With the key used wrongly, the tester estimates several seconds, sometimes over 10 s, before text appeared. After correct use he found the app instant. Nothing was timed.",
+          null
+        ],
+        [
+          "observed",
+          "The first four English dictations into Word, 17:43 to 17:49, are 7 to 13 words each. One reads “Sprich Ae” in the history where the tester’s notes show “Sprich AI”; what he said and whether he edited the text are not recorded.",
+          "sprich-history-first-four-dictations-in-word"
+        ],
+        [
+          "observed",
+          "German dictation into WhatsApp arrived with greeting, paragraphs and punctuation, and the tester says it sorted the text correctly. One phrase, “die doppelt drücken knüpfen muss”, reads oddly; the intended wording is not recorded.",
+          "sprich-whatsapp-german-dictation-result"
+        ],
+        [
+          "observed",
+          "English dictation into Telegram arrived as three messages with filler words such as “Uh” kept. The setup screen promises correction of punctuation, capitalisation and recognition errors, not fillers.",
+          "sprich-telegram-english-dictation-result"
+        ],
+        [
+          "observed",
+          "A French sentence was dictated and its text is in the notes; the tester did not judge accuracy and the spoken sentence is not recorded. A Russian test did not work: the app did not understand the words and the output was garbled. The language setting at that time is not recorded; that it was set to German is an inference.",
+          null
+        ],
+        [
+          "measured",
+          "The History tab kept every dictation with time, target app, text, recording length, word count and saved time, plus a search box and an app filter. At 17:49 the headline said 41 s saved this week and the tile 56 s; at 18:07 (32 transcriptions, 676 words) the headline said 12 min 23 s and the tile 19 m. The app does not explain how “saved” is computed.",
+          "sprich-history-32-dictations-time-saved-counters"
+        ],
+        [
+          "tester-view",
+          "Later he switched to hold-to-talk, the mode he is used to, and was impressed again. Not timed.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "Settings, extras and the developer’s reply",
+      "items": [
+        [
+          "observed",
+          "A popup menu offers Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle and Verfassen. The tester wanted to understand how it works and did not use it. Which program provides the menu, Sprich or macOS, is not recorded.",
+          "sprich-text-rewrite-popup-menu"
+        ],
+        [
+          "observed",
+          "Settings has a Schreibton dropdown, Formal (ticked) or Informell. Only the dropdown was seen; the tester’s “Wow” is about the option, not a tested result.",
+          "sprich-settings-writing-tone-formal-informal"
+        ],
+        [
+          "observed",
+          "The recording indicator can be set to Taste, Mikro (selected) or Kein. The tester saw a microphone bubble change from grey to orange; the header shows “Mikro bereit”.",
+          "sprich-settings-recording-indicator-mic"
+        ],
+        [
+          "observed",
+          "The sprich.ai account page offers a password change and two-factor authentication. The tester was “really impressed” by the latter, but the card shows only an “Aktivieren” link, so it was not switched on.",
+          "sprich-account-security-page-two-factor-off"
+        ],
+        [
+          "vendor-claim",
+          "The Meetings tab offers “Meeting aufnehmen”; its tip says calls give a transcript, summary and tasks and everything stays on the Mac. The tester has not recorded a meeting and plans to try it with a few people in a room.",
+          "sprich-meetings-tab-record-meeting-tip"
+        ],
+        [
+          "observed",
+          "He looked for a language switch to make English screenshots and found none; the interface is German only.",
+          null
+        ],
+        [
+          "observed",
+          "The built-in “Bug melden” form has Bug, Feedback and Feature tabs and fields for title, description, expected and actual result, frequency and up to 3 attachments of 1 MB each. The “Mitgesendete Daten” section was not opened and whether anything was sent is not recorded. “Transcripts are never sent” is the form’s own line.",
+          "sprich-bug-report-form"
+        ],
+        [
+          "vendor-claim",
+          "The developer replied to the tester in German after the test; the date is not stated. Paraphrased: he is glad the tester now makes his recordings with Sprich; Parakeet understands about 25 European languages, selectable for file transcription; dictation is optimised for German, and English terms inside a German sentence work well; the interface is German only so far, a deliberate choice because the local version is optimised for German. None of this is verified.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Decision",
+      "items": [
+        [
+          "observed",
+          "The notes end with the feedback form and no decision on continued use.",
+          null
+        ],
+        [
+          "tester-view",
+          "The tester compares the app with his cloud tool, whose server locations he does not know, and says he would not share confidential data there.",
+          null
+        ],
+        [
+          "tester-view",
+          "From his 30 years in consulting he values writing meeting notes himself and hopes to try local meeting notes with a few people in a room.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“Sprich schreibt, was du sagst.” Dictate into any app: Mail, Notes, Slack, browser.",
+      "App welcome screen",
+      "Seen in Word, WhatsApp and Telegram. Mail, Notes, Slack and a browser were not tried.",
+      "observed"
+    ],
+    [
+      "Everything runs locally; voice and text never leave the Mac; the app works fully offline.",
+      "App welcome screen and setup",
+      "Not verified. No network traffic was inspected and no offline run was tried.",
+      "vendor-claim"
+    ],
+    [
+      "Setup “takes only a few minutes”.",
+      "App welcome screen",
+      "Duration not recorded; models were still downloading at the last step.",
+      "observed"
+    ],
+    [
+      "Two models, about 3.3 GB together.",
+      "Setup step 2",
+      "The sizes shown add up; disk or memory use was not measured.",
+      "measured"
+    ],
+    [
+      "The text step corrects punctuation, capitalisation and recognition errors.",
+      "Setup step 2",
+      "Punctuation and paragraphs seen in WhatsApp; fillers stay in Telegram.",
+      "observed"
+    ],
+    [
+      "The key and mode can be changed any time in Settings, Keyboard.",
+      "Setup step 4",
+      "The tester changed the key and later the mode.",
+      "observed"
+    ],
+    [
+      "Meetings: transcript, summary and tasks, all on the Mac.",
+      "Meetings tab tip",
+      "Not tested.",
+      "vendor-claim"
+    ],
+    [
+      "Dictation is optimised for German; Parakeet understands about 25 European languages.",
+      "Developer message",
+      "English and German worked, Russian failed; file transcription not tried.",
+      "vendor-claim"
+    ],
+    [
+      "57 languages.",
+      "PromptQuorum directory entry",
+      "Not verified; it does not agree with the developer’s figure.",
+      "third-party"
+    ],
+    [
+      "Feedback form: transcripts are never sent.",
+      "Bug report form",
+      "Not verified.",
+      "vendor-claim"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Dictate English test sentence into Word",
+      "Word",
+      "7 words, 10 s recorded, “+7s” saved",
+      "17:43",
+      "Pass",
+      []
+    ],
+    [
+      "Dictate English sentence into Word",
+      "Word",
+      "13 words, 20 s, “+14s”",
+      "17:45",
+      "Pass",
+      []
+    ],
+    [
+      "Dictate English sentence into Word",
+      "Word",
+      "8 words, 12 s, “+8s”; product name differs (“Sprich Ae”)",
+      "17:46",
+      "Partial",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "Dictate English sentence into Word",
+      "Word",
+      "10 words, 15 s, “+11s”",
+      "17:49",
+      "Pass",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "First attempts with the key used wrongly",
+      "Word",
+      "Tester estimate: several seconds, sometimes over 10 s before text appeared",
+      "Not recorded",
+      "Fail",
+      []
+    ],
+    [
+      "Dictate English sentence into Word",
+      "Word",
+      "6 words, 11 s, “+6s”; delay not timed",
+      "18:07",
+      "Pass",
+      [
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "German message into WhatsApp",
+      "WhatsApp",
+      "Greeting, paragraphs and punctuation as inserted",
+      "Not recorded",
+      "Pass",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "Three English messages into Telegram",
+      "Telegram",
+      "68 words 125 s “+1 min 14s”; 37 words 63 s “+40s”; 29 words 49 s “+31s”",
+      "18:06",
+      "Pass",
+      [
+        "sprich-telegram-english-dictation-result",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "French sentence",
+      "Not recorded",
+      "Output shown in the notes; accuracy not judged",
+      "Not recorded",
+      "Not completed",
+      []
+    ],
+    [
+      "Russian words",
+      "Not recorded",
+      "Garbled, not recognised",
+      "Not recorded",
+      "Fail",
+      []
+    ],
+    [
+      "Hold-to-talk mode",
+      "Not recorded",
+      "Worked per the tester; not timed",
+      "Not recorded",
+      "Pass",
+      []
+    ],
+    [
+      "Text-rewrite menu",
+      "-",
+      "Not used",
+      "-",
+      "Not completed",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "Meeting recording",
+      "-",
+      "Not used",
+      "-",
+      "Not completed",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "Feedback form",
+      "-",
+      "Opened; submission not recorded",
+      "Not recorded",
+      "Partial",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "Writing tone Formal / Informell",
+      "-",
+      "Dropdown opened; effect not tested",
+      "Not recorded",
+      "Partial",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Judged the app slow, in writing and against his cloud tool, before understanding the default toggle mode, and wrote \"every statement about length and so on was wrong\" after correcting it. The welcome screen and setup step 4 both explain press, speak, press again; he says he overlooked it or found it hard to follow."
+    ],
+    [
+      "tester-error",
+      "Wrote that the model is \"three gigabyte\" and told a contact the app \"eats 3.3 gigabytes on your memory\". 3.3 GB is the combined download size on the setup screen; runtime memory was not measured."
+    ],
+    [
+      "tester-error",
+      "Was \"really impressed\" by two-factor authentication, but the screenshot shows only an \"Aktivieren\" link; it was not switched on."
+    ],
+    [
+      "assumption",
+      "The Russian failure may come from the dictation language being set to German. The setting at that time was not recorded; this is an inference."
+    ],
+    [
+      "tester-error",
+      "Gaps in the record: app and macOS version, install and end time, setup duration, which dictation key was chosen, the spoken text and language setting for the French and Russian tests, any measured delay, whether the feedback form was sent, how the Lifetime access was obtained. The hardware header reads \"Mac 4 ... VRAM\"; Apple Silicon has unified memory, and the chip was later named M4 Pro."
+    ]
+  ],
+  "findings": [
+    [
+      "SP-01",
+      "The tester read the DMG download as 20 MB; no screenshot. The installer window shows the app icon beside an Applications shortcut. The directory's own check on the same day lists 18.2 MB for version 2.2.4 (third-party).",
+      "Install",
+      "observed",
+      "Positive",
+      [
+        "sprich-app-icon-and-applications-folder"
+      ]
+    ],
+    [
+      "SP-02",
+      "An account is needed: setup step 1, \"Anmelden\", is ticked before the model step, and the tester says registration is required.",
+      "Install",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "SP-03",
+      "Setup downloads two models once: Sprich Transcribe v3 (speech recognition, about 480 MB) and Sprich Turbo v3 (text improvement, about 2.8 GB), about 3.3 GB together by the app's own text. The download runs in the background while the next steps are done. These are download sizes, not runtime memory.",
+      "Onboarding",
+      "measured",
+      "Positive",
+      [
+        "sprich-setup-two-models-download-3-3-gb"
+      ]
+    ],
+    [
+      "SP-04",
+      "The screens name only \"Sprich Transcribe v3\" and \"Sprich Turbo v3\"; the models underneath are not named. The developer names Parakeet and about 25 European languages; the PromptQuorum directory lists 57 languages (third-party). Neither figure was verified and they do not agree.",
+      "Onboarding",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SP-05",
+      "Setup step 5, \"Fast geschafft\", appeared while the models were still downloading (speech recognition 72 %, text improvement 12 %) and says dictation starts when they finish. Total download time and setup time are not recorded.",
+      "Onboarding",
+      "measured",
+      "Info",
+      [
+        "sprich-setup-final-step-models-still-loading"
+      ]
+    ],
+    [
+      "SP-06",
+      "The dictation key can be changed and the tester changed it; which key he chose is not recorded. Setup step 4 shows Fn, while the welcome screen's illustration shows right Command (\"⌘ Rechts\"); which is the default and which he set is not recorded. Two modes exist: Einrasten (press to start, press to stop; marked Standard) and Gedrückt halten (record while held).",
+      "Onboarding",
+      "observed",
+      "Low",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold",
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-07",
+      "In the default toggle mode the tester used the key wrongly and read the result as a slow app: tester-estimate several seconds, sometimes over 10 s before text appeared. After correct use he found it fast. The instruction is on screen twice, in German. That a default toggle differs from the hold-to-talk habit of many users is an assumption.",
+      "Usage",
+      "observed",
+      "Medium",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold"
+      ]
+    ],
+    [
+      "SP-08",
+      "After the mistake the tester judged dictation \"instant\" and, in a message to a contact, as fast as his online dictation app, which is not named. No delay was timed; the history shows recording length and time saved, not latency.",
+      "Usage",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "SP-09",
+      "English dictation into Word produced four history entries of 7 to 13 words. One reads \"Sprich Ae\" in the history where the tester's notes show \"Sprich AI\"; what he said and whether he edited the text are not recorded.",
+      "Core function",
+      "observed",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-10",
+      "German dictation into WhatsApp arrived with greeting, paragraphs and punctuation; the tester says it sorted the text correctly (tester-view). One phrase, \"die doppelt drücken knüpfen muss\", reads oddly; the intended wording is not recorded.",
+      "Core function",
+      "observed",
+      "Positive",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "SP-11",
+      "English dictation into Telegram arrived as three messages with filler words such as \"Uh\" kept. The setup screen promises correction of punctuation, capitalisation and recognition errors, not fillers, so this is not a miss against it.",
+      "Core function",
+      "observed",
+      "Info",
+      [
+        "sprich-telegram-english-dictation-result"
+      ]
+    ],
+    [
+      "SP-12",
+      "A French sentence was dictated and its text is in the notes. The tester did not judge accuracy and the spoken sentence is not recorded.",
+      "Languages",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SP-13",
+      "A Russian test \"got lost\" by the tester's account: the app did not understand the words and the output was garbled. The spoken phrase and the dictation language at that time are not recorded.",
+      "Languages",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-14",
+      "A History tab lists every dictation with time, target app, text, recording length, word count and saved time, plus a search box and an app filter. The tester likes that the texts are kept and sees it as a way to retrieve everything he dictated (tester-view).",
+      "History",
+      "observed",
+      "Positive",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-15",
+      "The saved-time figures disagree on the same screen (see the numbers table). The app does not explain how \"saved\" is computed or what each figure covers.",
+      "History",
+      "measured",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "SP-16",
+      "A popup menu offers Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle and Verfassen. The tester wanted to understand how it works and did not use it. Which program provides the menu, Sprich or macOS, is not recorded.",
+      "Features",
+      "observed",
+      "Info",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "SP-17",
+      "Settings has a Schreibton dropdown, Formal (ticked) or Informell. Only the dropdown was seen; the tester's \"Wow\" is about the option, not a tested result.",
+      "Features",
+      "observed",
+      "Info",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ],
+    [
+      "SP-18",
+      "The recording indicator can be set to Taste, Mikro (selected) or Kein. The tester saw a microphone bubble change from grey to orange; the header shows \"Mikro bereit\".",
+      "Features",
+      "observed",
+      "Positive",
+      [
+        "sprich-settings-recording-indicator-mic"
+      ]
+    ],
+    [
+      "SP-19",
+      "The interface is German only and the tester found no language switch, so he could not make English screenshots. The developer says it is German only so far because the local version is optimised for German (vendor-claim).",
+      "Interface",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-20",
+      "A Meetings tab offers \"Meeting aufnehmen\"; its tip says calls give a transcript, summary and tasks and everything stays on the Mac. The tester has not recorded a meeting and plans to try it with a few people in a room.",
+      "Features",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "SP-21",
+      "The sprich.ai account page offers a password change and two-factor authentication. The 2FA card shows an \"Aktivieren\" link, so it is off.",
+      "Website",
+      "observed",
+      "Info",
+      [
+        "sprich-account-security-page-two-factor-off"
+      ]
+    ],
+    [
+      "SP-22",
+      "A \"Bug melden\" form has Bug, Feedback and Feature tabs and fields for title, description, expected and actual result, frequency and up to 3 attachments of 1 MB each. The \"Mitgesendete Daten\" section was not opened and whether anything was sent is not recorded. The tester calls it impressive (tester-view). \"Transcripts are never sent\" is a vendor-claim.",
+      "Feedback",
+      "observed",
+      "Positive",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "SP-23",
+      "The welcome screen and setup say everything runs locally, that voice and text never leave the Mac and that the app works fully offline. No network traffic was inspected and no offline run was tried.",
+      "Trust",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-24",
+      "Not tested or not recorded: file transcription and the dictionary tab (both visible in the navigation), the effect of the rewrite menu and the tone setting, dictation into Mail, Notes, Slack or a browser, plan and pricing, runtime memory, uninstall.",
+      "Scope",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "Severity is the impact on a first-time user. Proposed, not measured. Info marks a finding that is neither a problem nor a strength; Positive marks something that worked well.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "German-speaking Mac users on Apple Silicon who dictate German or English into everyday apps and want the processing local, as the app states (assumption from one session)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Anyone who needs Russian or a non-German interface today, or an Intel Mac (the directory lists Apple Silicon only)."
+      ]
+    ],
+    "retest": "Retest on a new major version, a published English interface or confirmed language list. Cover: record the app and macOS versions; time the delay; Russian with the language set; file transcription; Meetings; the rewrite menu; offline use with traffic inspected; runtime memory; uninstall."
+  },
+  "background_intro": "Not hands-on. The item below comes from the PromptQuorum directory entry for Sprich and is not verified here.",
+  "background": [
+    [
+      "third-party",
+      "Closed source, freemium with a one-off Lifetime option; macOS 15 or later, Apple Silicon only; website in German only. The directory notes that the maker's own pages do not reconcile speech-model and Windows statements. Source: PromptQuorum directory review, version 2.2.4, checked 2026-11-09; the changelog shows an update on 2026-10-22."
+    ]
+  ],
+  "sources": [
+    "Tester’s hands-on notes and screenshots, 9 November 2026 (original Word notes; PDF of the raw notes to be added).",
+    "PromptQuorum directory entry and review of Sprich (slug: sprich), verified 2026-11-09.",
+    "Vendor site sprich.ai (vendor claims)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observed",
+      "meaning": "Seen first-hand in the app, a screenshot or the tester's notes."
+    },
+    "measured": {
+      "label": "Measured",
+      "meaning": "A value read from a dialog, counter or tool, with the number given."
+    },
+    "tester-estimate": {
+      "label": "Tester estimate",
+      "meaning": "The tester's own estimate; not timed or counted."
+    },
+    "vendor-claim": {
+      "label": "Vendor claim",
+      "meaning": "Stated by the app, its store listing or its website; not verified."
+    },
+    "third-party": {
+      "label": "Third party",
+      "meaning": "From another source (an AI assistant, an article); not verified here."
+    },
+    "assumption": {
+      "label": "Assumption",
+      "meaning": "An inference. It may be wrong."
+    },
+    "tester-view": {
+      "label": "Tester view",
+      "meaning": "The tester's judgment or opinion."
+    },
+    "tester-error": {
+      "label": "Tester error",
+      "meaning": "Where the tester made a mistake or missed something."
+    }
+  },
+  "images": [
+    {
+      "id": "sprich-welcome-screen-press-once-speak-press-again",
+      "figure": 1,
+      "file": "sprich-welcome-screen-press-once-speak-press-again.webp",
+      "path": "images/sprich-welcome-screen-press-once-speak-press-again.webp",
+      "alt": "Sprich welcome screen: headline \"Sprich schreibt, was du sagst\", three steps press, speak, press again, and a note that voice and text never leave the Mac.",
+      "caption": "Welcome screen (German). It shows press once, speak, press again. The \"never leave your Mac\" line is a vendor-claim.",
+      "role": "hero",
+      "width": 1434,
+      "height": 1258,
+      "bytes": 62152,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-app-icon-and-applications-folder",
+      "figure": 2,
+      "file": "sprich-app-icon-and-applications-folder.webp",
+      "path": "images/sprich-app-icon-and-applications-folder.webp",
+      "alt": "Sprich app icon, a white tile with \"spr\" in black, a sound-wave mark and \"ich\" in orange, next to the Applications folder shortcut from the DMG window.",
+      "caption": "Installer window. Observed.",
+      "role": "moment",
+      "width": 1158,
+      "height": 542,
+      "bytes": 12762,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-setup-two-models-download-3-3-gb",
+      "figure": 3,
+      "file": "sprich-setup-two-models-download-3-3-gb.webp",
+      "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
+      "alt": "Setup step 2 of 5: two models are downloaded once, Sprich Transcribe v3 at about 480 MB and Sprich Turbo v3 at about 2.8 GB, together about 3.3 GB.",
+      "caption": "Model step of the setup. Sizes are the app's own figures (measured); \"works fully offline\" is a vendor-claim.",
+      "role": "moment",
+      "width": 1386,
+      "height": 1306,
+      "bytes": 61892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "figure": 4,
+      "file": "sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "path": "images/sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "alt": "Setup step 4 of 5: dictation key set to Fn, with a choice between Einrasten (press to start, press to stop, default) and Gedrückt halten (hold to record).",
+      "caption": "Key and mode step. The toggle mode is marked Standard. Observed.",
+      "role": "moment",
+      "width": 1388,
+      "height": 1364,
+      "bytes": 78912,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-setup-final-step-models-still-loading",
+      "figure": 5,
+      "file": "sprich-setup-final-step-models-still-loading.webp",
+      "path": "images/sprich-setup-final-step-models-still-loading.webp",
+      "alt": "Setup step 5 of 5, \"Fast geschafft\": speech recognition download at 72 percent and text improvement at 12 percent, with steps 1 to 4 ticked.",
+      "caption": "Models still downloading at the end of setup. Time not recorded. Measured.",
+      "role": "moment",
+      "width": 1376,
+      "height": 1174,
+      "bytes": 32056,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-history-first-four-dictations-in-word",
+      "figure": 6,
+      "file": "sprich-history-first-four-dictations-in-word.webp",
+      "path": "images/sprich-history-first-four-dictations-in-word.webp",
+      "alt": "Sprich history with four dictations into Microsoft Word, 7 to 13 words each, 38 words in total; one entry reads \"Sprich Ae\".",
+      "caption": "History after the first four tests in Word, 9 November, 17:43 to 17:49. Observed.",
+      "role": "moment",
+      "width": 1600,
+      "height": 967,
+      "bytes": 62072,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-whatsapp-german-dictation-result",
+      "figure": 7,
+      "file": "sprich-whatsapp-german-dictation-result.webp",
+      "path": "images/sprich-whatsapp-german-dictation-result.webp",
+      "alt": "WhatsApp message box filled by dictation: a German message with greeting, paragraphs and punctuation, saying the app is now as fast as his online app.",
+      "caption": "German dictation into WhatsApp. Text and punctuation as inserted; one phrase reads oddly. Observed.",
+      "role": "moment",
+      "width": 912,
+      "height": 420,
+      "bytes": 45228,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-telegram-english-dictation-result",
+      "figure": 8,
+      "file": "sprich-telegram-english-dictation-result.webp",
+      "path": "images/sprich-telegram-english-dictation-result.webp",
+      "alt": "Telegram chat with three English messages made by dictation, with filler words such as \"Uh\" kept, and a recommendation of the tool to a contact.",
+      "caption": "English dictation into Telegram. Filler words stay in the text. Observed.",
+      "role": "moment",
+      "width": 1058,
+      "height": 904,
+      "bytes": 107030,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-history-32-dictations-time-saved-counters",
+      "figure": 9,
+      "file": "sprich-history-32-dictations-time-saved-counters.webp",
+      "path": "images/sprich-history-32-dictations-time-saved-counters.webp",
+      "alt": "Sprich history header: 32 transcriptions, 676 words, 19 minutes saved, and a headline reading 12 minutes 23 seconds saved this week; three entries below.",
+      "caption": "History at 18:07 on 9 November. The two saved-time figures differ. Measured by the app.",
+      "role": "moment",
+      "width": 1600,
+      "height": 979,
+      "bytes": 66118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-text-rewrite-popup-menu",
+      "figure": 10,
+      "file": "sprich-text-rewrite-popup-menu.webp",
+      "path": "images/sprich-text-rewrite-popup-menu.webp",
+      "alt": "Popup menu: Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle, Verfassen.",
+      "caption": "Text-rewrite menu. Not used in the test; which program provides it is not recorded. Observed.",
+      "role": "moment",
+      "width": 570,
+      "height": 720,
+      "bytes": 29550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-settings-writing-tone-formal-informal",
+      "figure": 11,
+      "file": "sprich-settings-writing-tone-formal-informal.webp",
+      "path": "images/sprich-settings-writing-tone-formal-informal.webp",
+      "alt": "Settings: Schreibton dropdown open with Formal ticked and Informell below it.",
+      "caption": "Writing-tone setting. Only the dropdown was seen; the effect was not tested. Observed.",
+      "role": "moment",
+      "width": 1431,
+      "height": 178,
+      "bytes": 8862,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-settings-recording-indicator-mic",
+      "figure": 12,
+      "file": "sprich-settings-recording-indicator-mic.webp",
+      "path": "images/sprich-settings-recording-indicator-mic.webp",
+      "alt": "Settings, Anzeige: Indikator for what is shown while recording, with options Taste, Mikro (selected) and Kein.",
+      "caption": "Recording indicator setting. Observed.",
+      "role": "moment",
+      "width": 1600,
+      "height": 214,
+      "bytes": 7838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-account-security-page-two-factor-off",
+      "figure": 13,
+      "file": "sprich-account-security-page-two-factor-off.webp",
+      "path": "images/sprich-account-security-page-two-factor-off.webp",
+      "alt": "sprich.ai account page, Security: password options and a two-factor authentication card with an Aktivieren link, so it is not switched on.",
+      "caption": "Website account page. Observed.",
+      "role": "moment",
+      "width": 1429,
+      "height": 603,
+      "bytes": 32114,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-meetings-tab-record-meeting-tip",
+      "figure": 14,
+      "file": "sprich-meetings-tab-record-meeting-tip.webp",
+      "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
+      "alt": "Meetings tab with zero meetings, a tip about recording calls for transcript, summary and tasks, a Meeting aufnehmen button and a LIFETIME badge.",
+      "caption": "Meetings tab at first open. Not used in the test. The summary claim in the tip is a vendor-claim.",
+      "role": "moment",
+      "width": 1600,
+      "height": 1050,
+      "bytes": 54740,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-bug-report-form",
+      "figure": 15,
+      "file": "sprich-bug-report-form.webp",
+      "path": "images/sprich-bug-report-form.webp",
+      "alt": "Bug melden form with Bug, Feedback and Feature tabs, fields for title, description, expected and actual result, frequency and a privacy note.",
+      "caption": "Feedback form. Whether it was submitted is not recorded. The \"never sent\" line is a vendor-claim.",
+      "role": "moment",
+      "width": 1126,
+      "height": 1172,
+      "bytes": 43534,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-09; exact time not recorded"
+    }
+  ],
+  "figure_order": [
+    "sprich-welcome-screen-press-once-speak-press-again",
+    "sprich-app-icon-and-applications-folder",
+    "sprich-setup-two-models-download-3-3-gb",
+    "sprich-setup-dictation-key-fn-toggle-or-hold",
+    "sprich-setup-final-step-models-still-loading",
+    "sprich-history-first-four-dictations-in-word",
+    "sprich-whatsapp-german-dictation-result",
+    "sprich-telegram-english-dictation-result",
+    "sprich-history-32-dictations-time-saved-counters",
+    "sprich-text-rewrite-popup-menu",
+    "sprich-settings-writing-tone-formal-informal",
+    "sprich-settings-recording-indicator-mic",
+    "sprich-account-security-page-two-factor-off",
+    "sprich-meetings-tab-record-meeting-tip",
+    "sprich-bug-report-form"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum hands-on test · {app} · {date}",
+    "date_line": "9 November 2026",
+    "nav_aria": "Sections",
+    "nav": {
+      "verdict": "Verdict",
+      "moments": "Six moments",
+      "story": "How it went",
+      "claims": "Claims",
+      "fit": "Memory",
+      "log": "Usage log",
+      "errors": "Tester errors",
+      "findings": "Findings",
+      "background": "Background"
+    },
+    "related": "Related:",
+    "review_link": "PromptQuorum review of {app}",
+    "directory_link": "Local AI app directory",
+    "verdict_h": "Verdict",
+    "general_assessment": "General assessment",
+    "fit_for_tester": "Fit for the tester's use",
+    "scorecard": "Scorecard",
+    "status_prefix": "Status:",
+    "na": "n/a",
+    "score_aria": "{n} out of 5",
+    "details_h": "Test details",
+    "label_intro": "Every statement carries a label:",
+    "legend_link": "What the labels mean",
+    "disclosure_label": "Disclosure.",
+    "raw_notes": "Raw notes PDF:",
+    "to_be_added": "to be added",
+    "moments_h": "Six moments that shaped this test",
+    "see_context": "See it in context",
+    "story_h": "How the test went",
+    "claims_h": "Claims versus what the tester saw",
+    "claims_cols": [
+      "Claim",
+      "Source",
+      "Observed",
+      "Label"
+    ],
+    "fit_h": "Does it fit in 24 GB?",
+    "memory_line": "{gb} GB memory",
+    "above": "above {gb} GB",
+    "below": "below {gb} GB",
+    "log_h": "Usage log",
+    "log_cols": [
+      "#",
+      "Task",
+      "App",
+      "Result",
+      "Time",
+      "Status",
+      "Figures"
+    ],
+    "statuses": {
+      "Fail": "Fail",
+      "Partial": "Partial",
+      "Pass": "Pass",
+      "Not completed": "Not completed"
+    },
+    "errors_h": "Where the tester got it wrong",
+    "findings_h": "Findings register",
+    "filter_aria": "Filter findings by label",
+    "filter_all": "All",
+    "findings_cols": [
+      "ID",
+      "Finding",
+      "Category",
+      "Label",
+      "Severity",
+      "Figures"
+    ],
+    "severities": {
+      "High": "High",
+      "Medium": "Medium",
+      "Low": "Low",
+      "Positive": "Positive",
+      "Info": "Info"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figure",
+    "enlarge": "Enlarge:",
+    "audience_h": "Who it is for",
+    "likely_fit": "Likely fit",
+    "likely_poor_fit": "Likely poor fit",
+    "retest": "Retest.",
+    "background_h": "Background on the maker",
+    "gallery_h": "More from the test",
+    "legend_h": "How to read the labels",
+    "sources_h": "Sources",
+    "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
+    "crumb_home": "Home",
+    "crumb_directory": "Directory",
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
+  }
+}

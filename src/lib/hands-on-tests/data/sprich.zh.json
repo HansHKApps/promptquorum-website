@@ -1,0 +1,1350 @@
+{
+  "id": "pq-test-sprich-2026-11-09",
+  "hero": "sprich-welcome-screen-press-once-speak-press-again",
+  "date_human": "2026年11月9日",
+  "captured": "2026-11-09；应用历史记录显示 17:43 至 18:07；安装开始和结束时间未记录",
+  "standard_version": "0.2",
+  "locale": "zh",
+  "app": {
+    "name": "Sprich",
+    "slug": "sprich",
+    "vendor": "Not recorded (the maker is not named in the notes)",
+    "category": "本地听写 / 语音转文字，Mac",
+    "platform": "macOS（Apple 芯片）",
+    "pricing_url": "https://www.sprich.ai"
+  },
+  "title": "24 GB 内存 M4 Pro Mac 上的 Sprich：能在任意应用中输入文字的本地听写",
+  "page_title": "Sprich 测试",
+  "dek": "2026年11月9日的首次试用：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；界面只有德语；多数附加功能没有试用。",
+  "seo": {
+    "title": "Sprich 实测：M4 Pro Mac 上的本地听写",
+    "description": "Sprich 在 24 GB M4 Pro Mac 上的实测：Word、WhatsApp 和 Telegram 中的英语和德语听写可用，俄语失败。"
+  },
+  "faq": [
+    [
+      "Sprich 能在其他应用中使用吗？",
+      "能，在测试者试过的应用中可以。听写在 Microsoft Word、WhatsApp 和 Telegram 中都输出了文字。Mail、备忘录（Notes）、Slack 和浏览器没有试。",
+      "observed"
+    ],
+    [
+      "测试中 Sprich 处理了哪些语言？",
+      "英语和德语可用。测试者口述了一句法语，文字在笔记里，但没有判断准确度。俄语测试失败：输出是乱码。当时设置的听写语言未记录。",
+      "observed"
+    ],
+    [
+      "Sprich 的界面有英文版吗？",
+      "没有。测试者只找到德语界面，没有找到语言切换。开发者表示目前只有德语，这是有意为之，因为本地版本是针对德语优化的；这一点未经核实。",
+      "observed"
+    ],
+    [
+      "Sprich 的下载有多大？",
+      "设置时会下载两个模型：Sprich Transcribe v3（约 480 MB）和 Sprich Turbo v3（约 2.8 GB），按应用自己的文字合计约 3.3 GB。这些是下载大小；运行时内存没有测量。",
+      "measured"
+    ],
+    [
+      "Sprich 真的在本地离线运行吗？",
+      "应用称一切在本地运行，语音和文字不会离开这台 Mac，并且可以完全离线使用。没有检查网络流量，也没有试过离线运行，因此这一点未经核实。",
+      "vendor-claim"
+    ],
+    [
+      "Sprich 快吗？",
+      "测试者起初认为它很慢，因为他错误地使用了默认的切换模式（按一次、说话、再按一次）。正确使用之后，他觉得它是即时的，和他用的云端听写工具一样快。没有计时。",
+      "tester-estimate"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-10",
+  "started": "2026-11-09",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Sprich（sprich.ai）；窗口标题栏显示“sprich.ai”",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录。目录于 2026-11-09 在厂商网站上核查到的版本是 2.2.4；测试者使用的构建可能不同。",
+      null
+    ],
+    [
+      "来源",
+      "未记录。目录列出的是 sprich.ai 上的厂商下载页面。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans（PromptQuorum 创始人）",
+      "observed"
+    ],
+    [
+      "开始时间",
+      "2026-11-09。历史记录中的第一次听写在 17:43，最后一张截图在 18:07；安装开始和结束时间未记录。",
+      "observed"
+    ],
+    [
+      "结束时间",
+      "未记录",
+      null
+    ],
+    [
+      "硬件",
+      "Apple M4 Pro，24 GB 统一内存，没有运行其他程序。笔记的标题写的是“Mac 4 ... VRAM”；芯片型号是在口述笔记中说成 M4 Pro 的。",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS 版本未记录。目录列出的要求是 macOS 15 或更高版本，且仅支持 Apple 芯片（第三方信息）。",
+      null
+    ],
+    [
+      "测试原因",
+      "笔记把它与测试者目前使用的云端听写工具作了比较，并写道他不会把机密数据交给那个工具。",
+      "tester-view"
+    ],
+    [
+      "目标",
+      "笔记中没有写明目标。笔记显示的是对设置、三个应用中的听写、语言、历史记录、设置和“会议”标签页的初步查看。",
+      null
+    ],
+    [
+      "听写所在的应用",
+      "Microsoft Word、WhatsApp、Telegram",
+      "observed"
+    ],
+    [
+      "AI 辅助",
+      "本报告由 Claude 根据测试者的 Word 笔记和 15 张截图起草。笔记中口述的部分看起来出自 Sprich 本身（假设：历史记录中的条目与笔记文字一致），因此笔记中的一些笔误可能是应用的输出。",
+      "assumption"
+    ],
+    [
+      "利益披露",
+      "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Sprich 于 2026-11-09 加入目录，与本次测试是同一天，并附有一篇由 AI 撰写的评测。应用标题栏显示 LIFETIME 徽章；测试者在发给一位联系人的消息中写到他获得了一款语音工具的免费使用权；这份使用权是如何、从谁那里获得的，没有记录。测试之后开发者回复了测试者；日期未说明，开发者回复时是否已拿到这些笔记也未记录。Sprich 从本站获得点击。笔记中没有付款或赞助的记录。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Sprich 于 2026-11-09 加入目录，与本次测试是同一天，并附有一篇由 AI 撰写的评测。应用标题栏显示 LIFETIME 徽章；测试者在发给一位联系人的消息中写到他获得了一款语音工具的免费使用权；这份使用权是如何、从谁那里获得的，没有记录。测试之后开发者回复了测试者；日期未说明，开发者回复时是否已拿到这些笔记也未记录。Sprich 从本站获得点击。笔记中没有付款或赞助的记录。",
+  "verdict": {
+    "general": "一款做工用心、以德语优先的 Apple 芯片 Mac 听写应用。在这次测试中，Word、WhatsApp 和 Telegram 里的英语和德语听写可用；俄语不可用。会议录音、文件转写、文字改写、离线运行、隐私声明和卸载均未测试。",
+    "fit": "测试者印象深刻，给了五分（满分五分），并向一位联系人推荐了它。他认为它和自己用的云端听写工具一样快，但没有计时。他的笔记中没有说明是否会继续使用。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "安装包（DMG）很小，拖到“应用程序”即可；需要账号。"
+    ],
+    [
+      "引导与模型选择",
+      4,
+      "五个清晰的步骤，后台下载；不提供模型选择。"
+    ],
+    [
+      "核心功能",
+      4,
+      "三个应用中的英语和德语听写可用；俄语失败。"
+    ],
+    [
+      "引导与迭代",
+      3,
+      "默认的按键模式曾让测试者误用一次，界面只有德语；内置了反馈表单。"
+    ],
+    [
+      "性能",
+      null,
+      "没有计时。测试者估计正确使用后是即时的。"
+    ],
+    [
+      "文档",
+      null,
+      "只看了应用内的文字；没有打开手册或网站指南。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。本地和离线的说法没有测试。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是报告作者根据测试者的证据提出的建议；n/a 表示未测试，不是零分。",
+  "tldr": [
+    [
+      "observed",
+      "Sprich 是一款 Mac 听写应用：按一个键，说话，文字就出现在光标所在的位置。测试者在 24 GB 的 Apple M4 Pro 上运行它。设置有五步，会下载两个模型，合计约 3.3 GB。"
+    ],
+    [
+      "observed",
+      "听写在 Microsoft Word、WhatsApp 和 Telegram 中可用，英语和德语均可。俄语测试失败。历史记录中有一个产品名被识别成了“Sprich Ae”。"
+    ],
+    [
+      "tester-error",
+      "测试者起初认为应用很慢，因为他错误地使用了默认的切换模式（按一次、说话、再按一次）。正确使用后他觉得是即时的。速度从未计时。"
+    ],
+    [
+      "observed",
+      "界面只有德语；测试者没有找到语言切换。"
+    ],
+    [
+      "vendor-claim",
+      "应用称一切在本地离线运行，语音和文字不会离开这台 Mac。这一点没有测试。"
+    ],
+    [
+      "observed",
+      "会议录音、文字改写菜单、文件转写、词典、语气设置的实际效果、离线使用和卸载均未测试。"
+    ]
+  ],
+  "quotes": [
+    "界面、设置，真的很棒，真的很专业，一流。",
+    "五分满分，十分满分，我不知道该说什么了。"
+  ],
+  "quote_note": "测试者笔记，由语音口述略作整理。两句都是他的个人判断，不是测量结果。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "要下载两个模型",
+      "设置第 2 步：两个模型合计约 3.3 GB，只需下载一次。",
+      "sprich-setup-two-models-download-3-3-gb",
+      "chapter-install"
+    ],
+    [
+      "按一次，再按一次",
+      "设置中的按键和模式步骤。默认的切换模式起初误导了测试者。",
+      "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "chapter-install"
+    ],
+    [
+      "Word 中的前四次听写",
+      "17:49 的历史记录。其中一条写成了“Sprich Ae”。",
+      "sprich-history-first-four-dictations-in-word",
+      "chapter-usage"
+    ],
+    [
+      "32 次听写，两个节省时间的数字",
+      "18:07 的历史记录：顶部标题和卡片上的数字不一致。",
+      "sprich-history-32-dictations-time-saved-counters",
+      "chapter-usage"
+    ],
+    [
+      "还没人用过的改写菜单",
+      "弹出菜单，测试中未使用。",
+      "sprich-text-rewrite-popup-menu",
+      "chapter-explore"
+    ],
+    [
+      "会议，在本地录制",
+      "“会议”标签页，测试中未使用。",
+      "sprich-meetings-tab-record-meeting-tip",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "下载、首次启动与设置",
+      "items": [
+        [
+          "observed",
+          "测试于 2026年11月9日进行。测试者下载了一个很小的 DMG，他读出的大小是 20 MB；没有截图。安装窗口显示应用图标和“应用程序”文件夹的快捷方式。目录列出的 2.2.4 版大小为 18.2 MB（第三方信息）。",
+          "sprich-app-icon-and-applications-folder"
+        ],
+        [
+          "tester-view",
+          "测试者喜欢这个标志，它是德语词 Sprich 拆成“spr”和“ich”的文字游戏。",
+          null
+        ],
+        [
+          "observed",
+          "需要账号：设置第 1 步“Anmelden”在模型步骤之前已被勾上，测试者说必须注册。",
+          null
+        ],
+        [
+          "measured",
+          "第 2 步一次性下载两个模型：Sprich Transcribe v3（语音识别，约 480 MB）和 Sprich Turbo v3（文字优化，约 2.8 GB），按应用自己的文字合计约 3.3 GB。下载在后台进行，同时可以继续后面的步骤。这些是下载大小，不是运行时内存。",
+          "sprich-setup-two-models-download-3-3-gb"
+        ],
+        [
+          "observed",
+          "界面没有说明底层是哪些模型。测试者注意到了这一点，想去查清楚。",
+          null
+        ],
+        [
+          "observed",
+          "他更改了听写键；他选了哪个键没有记录。第 4 步显示的是 Fn，而欢迎界面的插图显示的是右 Command。有两种模式：Einrasten（按一次开始，再按一次停止；标为 Standard）和 Gedrückt halten（按住时录音）。",
+          "sprich-setup-dictation-key-fn-toggle-or-hold"
+        ],
+        [
+          "measured",
+          "模型还在下载时，他就到了最后一步“Fast geschafft”：语音识别 72 %，文字优化 12 %。总下载时间和设置时间未记录。",
+          "sprich-setup-final-step-models-still-loading"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "使用",
+      "items": [
+        [
+          "tester-error",
+          "最初在 Word 中的测试感觉很慢，有一段文字似乎丢了。测试者写道，语音工具必须在一两秒内响应，他的云端工具更快。后来他发现是自己的错误：在默认的切换模式下，按键必须按一次开始、再按一次停止。他更正了笔记。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "按键用错时，测试者估计文字出现前要几秒，有时超过 10 秒。正确使用后他觉得应用是即时的。没有计时。",
+          null
+        ],
+        [
+          "observed",
+          "前四次英语听写输入到 Word，17:43 至 17:49，每次 7 至 13 个词。其中一条在历史记录中写成“Sprich Ae”，而测试者笔记里是“Sprich AI”；他说了什么、是否编辑过文字，均未记录。",
+          "sprich-history-first-four-dictations-in-word"
+        ],
+        [
+          "observed",
+          "输入到 WhatsApp 的德语听写带有问候语、分段和标点，测试者说它把文字整理得正确。有一个短语“die doppelt drücken knüpfen muss”读起来很怪；原本想说的措辞未记录。",
+          "sprich-whatsapp-german-dictation-result"
+        ],
+        [
+          "observed",
+          "输入到 Telegram 的英语听写变成了三条消息，保留了“Uh”这类语气填充词。设置界面承诺的是纠正标点、大小写和识别错误，并没有承诺去掉填充词。",
+          "sprich-telegram-english-dictation-result"
+        ],
+        [
+          "observed",
+          "口述了一句法语，文字在笔记里；测试者没有判断准确度，所说的句子也未记录。俄语测试没有成功：应用没有听懂这些词，输出是乱码。当时的语言设置未记录；认为它设成了德语只是一种推断。",
+          null
+        ],
+        [
+          "measured",
+          "“历史记录”标签页保存了每一次听写，包含时间、目标应用、文字、录音时长、字数和节省的时间，另有搜索框和应用筛选。17:49 时顶部标题写本周节省 41 秒，卡片写 56 秒；18:07 时（32 次转写，676 个词）顶部标题写 12 分 23 秒，卡片写 19 m。应用没有说明“节省”是如何计算的。",
+          "sprich-history-32-dictations-time-saved-counters"
+        ],
+        [
+          "tester-view",
+          "后来他改用按住说话模式（他习惯的模式），又一次印象深刻。没有计时。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "设置、附加功能与开发者的回复",
+      "items": [
+        [
+          "observed",
+          "一个弹出菜单提供：Änderung beschreiben、Korrekturlesen、Umformulieren、Freundlich、Sachlich、Kompakt、Zusammenfassung、Hauptpunkte、Liste、Tabelle 和 Verfassen。测试者想弄明白它的工作方式，没有使用。这个菜单是由哪个程序提供的（Sprich 还是 macOS），未记录。",
+          "sprich-text-rewrite-popup-menu"
+        ],
+        [
+          "observed",
+          "设置里有一个 Schreibton 下拉菜单，选项为 Formal（已勾选）或 Informell。只看到了下拉菜单；测试者的“哇”针对的是这个选项，不是测试得出的结果。",
+          "sprich-settings-writing-tone-formal-informal"
+        ],
+        [
+          "observed",
+          "录音指示器可以设为 Taste、Mikro（已选）或 Kein。测试者看到麦克风气泡从灰色变成橙色；标题栏显示“Mikro bereit”。",
+          "sprich-settings-recording-indicator-mic"
+        ],
+        [
+          "observed",
+          "sprich.ai 的账号页面提供修改密码和双重验证。测试者对后者“印象很深”，但卡片上只有一个“Aktivieren”链接，所以并未开启。",
+          "sprich-account-security-page-two-factor-off"
+        ],
+        [
+          "vendor-claim",
+          "“会议”标签页提供“Meeting aufnehmen”；其提示说通话会生成文字记录、摘要和任务，并且一切都留在这台 Mac 上。测试者还没有录过会议，打算和房间里的几个人一起试试。",
+          "sprich-meetings-tab-record-meeting-tip"
+        ],
+        [
+          "observed",
+          "他想找语言切换来制作英文截图，没有找到；界面只有德语。",
+          null
+        ],
+        [
+          "observed",
+          "内置的“Bug melden”表单有 Bug、Feedback 和 Feature 三个标签页，字段包括标题、描述、预期结果和实际结果、出现频率，以及最多 3 个、每个 1 MB 的附件。“Mitgesendete Daten”部分没有打开，是否发送过任何内容未记录。“Transcripts are never sent”是表单自己的一句话。",
+          "sprich-bug-report-form"
+        ],
+        [
+          "vendor-claim",
+          "测试之后，开发者用德语回复了测试者；日期未说明。转述如下：他很高兴测试者现在用 Sprich 做录音；Parakeet 能理解约 25 种欧洲语言，文件转写时可以选择；听写针对德语做了优化，德语句子中夹杂英文术语效果很好；界面目前只有德语，这是有意为之，因为本地版本是针对德语优化的。以上均未核实。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "observed",
+          "笔记以反馈表单结尾，没有写明是否继续使用的决定。",
+          null
+        ],
+        [
+          "tester-view",
+          "测试者把这款应用与他的云端工具作了比较，他不知道那个工具的服务器在哪里，并说他不会把机密数据交给它。",
+          null
+        ],
+        [
+          "tester-view",
+          "凭借 30 年的咨询经验，他看重亲自撰写会议记录，并希望与房间里的几个人一起试试本地会议记录。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“Sprich schreibt, was du sagst.”在任意应用中听写：Mail、备忘录、Slack、浏览器。",
+      "应用欢迎界面",
+      "在 Word、WhatsApp 和 Telegram 中看到了。Mail、备忘录、Slack 和浏览器没有试。",
+      "observed"
+    ],
+    [
+      "一切在本地运行；语音和文字不会离开这台 Mac；应用可以完全离线使用。",
+      "应用欢迎界面和设置",
+      "未验证。没有检查网络流量，也没有试过离线运行。",
+      "vendor-claim"
+    ],
+    [
+      "设置“只需几分钟”。",
+      "应用欢迎界面",
+      "时长未记录；到最后一步时模型仍在下载。",
+      "observed"
+    ],
+    [
+      "两个模型，合计约 3.3 GB。",
+      "设置第 2 步",
+      "显示的大小加起来是对的；磁盘或内存占用没有测量。",
+      "measured"
+    ],
+    [
+      "文字步骤会纠正标点、大小写和识别错误。",
+      "设置第 2 步",
+      "在 WhatsApp 中看到了标点和分段；Telegram 中填充词仍然保留。",
+      "observed"
+    ],
+    [
+      "按键和模式可随时在“设置”“键盘”中更改。",
+      "设置第 4 步",
+      "测试者更改了按键，后来又更改了模式。",
+      "observed"
+    ],
+    [
+      "会议：文字记录、摘要和任务，全部在这台 Mac 上。",
+      "“会议”标签页提示",
+      "未测试。",
+      "vendor-claim"
+    ],
+    [
+      "听写针对德语优化；Parakeet 能理解约 25 种欧洲语言。",
+      "开发者的消息",
+      "英语和德语可用，俄语失败；文件转写没有试。",
+      "vendor-claim"
+    ],
+    [
+      "57 种语言。",
+      "PromptQuorum 目录条目",
+      "未验证；与开发者给出的数字不一致。",
+      "third-party"
+    ],
+    [
+      "反馈表单：转录文字绝不会发送。",
+      "Bug 报告表单",
+      "未验证。",
+      "vendor-claim"
+    ]
+  ],
+  "usage_log": [
+    [
+      "把英语测试句子听写到 Word",
+      "Word",
+      "7 个词，录音 10 秒，“+7s”",
+      "17:43",
+      "Pass",
+      []
+    ],
+    [
+      "把英语句子听写到 Word",
+      "Word",
+      "13 个词，20 秒，“+14s”",
+      "17:45",
+      "Pass",
+      []
+    ],
+    [
+      "把英语句子听写到 Word",
+      "Word",
+      "8 个词，12 秒，“+8s”；产品名不同（“Sprich Ae”）",
+      "17:46",
+      "Partial",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "把英语句子听写到 Word",
+      "Word",
+      "10 个词，15 秒，“+11s”",
+      "17:49",
+      "Pass",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "按键用错时的最初几次尝试",
+      "Word",
+      "测试者估计：文字出现前要几秒，有时超过 10 秒",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "把英语句子听写到 Word",
+      "Word",
+      "6 个词，11 秒，“+6s”；延迟未计时",
+      "18:07",
+      "Pass",
+      [
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "把德语消息听写到 WhatsApp",
+      "WhatsApp",
+      "问候语、分段和标点与插入时一致",
+      "未记录",
+      "Pass",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "把三条英语消息听写到 Telegram",
+      "Telegram",
+      "68 个词 125 秒“+1 min 14s”；37 个词 63 秒“+40s”；29 个词 49 秒“+31s”",
+      "18:06",
+      "Pass",
+      [
+        "sprich-telegram-english-dictation-result",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "法语句子",
+      "未记录",
+      "笔记中显示了输出；准确度未判断",
+      "未记录",
+      "Not completed",
+      []
+    ],
+    [
+      "俄语词语",
+      "未记录",
+      "乱码，未识别",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "按住说话模式",
+      "未记录",
+      "据测试者说可用；未计时",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "文字改写菜单",
+      "-",
+      "未使用",
+      "-",
+      "Not completed",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "会议录音",
+      "-",
+      "未使用",
+      "-",
+      "Not completed",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "反馈表单",
+      "-",
+      "已打开；是否提交未记录",
+      "未记录",
+      "Partial",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "写作语气 Formal / Informell",
+      "-",
+      "已打开下拉菜单；效果未测试",
+      "未记录",
+      "Partial",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "在理解默认的切换模式之前，他以书面形式并与自己的云端工具对比，判断应用很慢；更正之后他写道“每一条关于长度之类的说法都是错的”。欢迎界面和设置第 4 步都说明了按、说、再按；他说他要么没留意，要么觉得不好懂。"
+    ],
+    [
+      "tester-error",
+      "他写道模型是“三个 GB”，并告诉一位联系人这款应用“吃掉你内存里的 3.3 GB”。3.3 GB 是设置界面上两个模型合计的下载大小；运行时内存没有测量。"
+    ],
+    [
+      "tester-error",
+      "他对双重验证“印象很深”，但截图上只有一个“Aktivieren”链接；并未开启。"
+    ],
+    [
+      "assumption",
+      "俄语失败可能是因为听写语言设成了德语。当时的设置未记录；这是一种推断。"
+    ],
+    [
+      "tester-error",
+      "记录中的缺口：应用和 macOS 版本、安装和结束时间、设置时长、选了哪个听写键、法语和俄语测试所说的文字和语言设置、任何实测的延迟、反馈表单是否发送过、Lifetime 使用权是如何获得的。硬件标题写的是“Mac 4 ... VRAM”；Apple 芯片使用统一内存，芯片后来被说成 M4 Pro。"
+    ]
+  ],
+  "findings": [
+    [
+      "SP-01",
+      "测试者读出的 DMG 下载大小是 20 MB；没有截图。安装窗口显示应用图标和“应用程序”文件夹的快捷方式。目录在同一天自己核查的结果是 2.2.4 版 18.2 MB（第三方信息）。",
+      "安装",
+      "observed",
+      "Positive",
+      [
+        "sprich-app-icon-and-applications-folder"
+      ]
+    ],
+    [
+      "SP-02",
+      "需要账号：设置第 1 步“Anmelden”在模型步骤之前已被勾上，测试者说必须注册。",
+      "安装",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "SP-03",
+      "设置时一次性下载两个模型：Sprich Transcribe v3（语音识别，约 480 MB）和 Sprich Turbo v3（文字优化，约 2.8 GB），按应用自己的文字合计约 3.3 GB。下载在后台进行，同时可以继续后面的步骤。这些是下载大小，不是运行时内存。",
+      "引导",
+      "measured",
+      "Positive",
+      [
+        "sprich-setup-two-models-download-3-3-gb"
+      ]
+    ],
+    [
+      "SP-04",
+      "界面只写了“Sprich Transcribe v3”和“Sprich Turbo v3”；底层模型没有点名。开发者提到 Parakeet 和约 25 种欧洲语言；PromptQuorum 目录列出的是 57 种语言（第三方信息）。两个数字都没有核实，而且互不一致。",
+      "引导",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SP-05",
+      "设置第 5 步“Fast geschafft”在模型仍在下载时就出现了（语音识别 72 %，文字优化 12 %），并说明模型下载完成后听写才开始。总下载时间和设置时间未记录。",
+      "引导",
+      "measured",
+      "Info",
+      [
+        "sprich-setup-final-step-models-still-loading"
+      ]
+    ],
+    [
+      "SP-06",
+      "听写键可以更改，测试者也更改了；他选了哪个键没有记录。设置第 4 步显示的是 Fn，而欢迎界面的插图显示的是右 Command（“⌘ Rechts”）；哪个是默认键、哪个是他设置的，均未记录。有两种模式：Einrasten（按一次开始，再按一次停止；标为 Standard）和 Gedrückt halten（按住时录音）。",
+      "引导",
+      "observed",
+      "Low",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold",
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-07",
+      "在默认的切换模式下，测试者错误地使用了按键，并把结果理解为应用很慢：测试者估计文字出现前要几秒，有时超过 10 秒。正确使用后他觉得很快。这个说明在界面上出现了两次，都是德语。默认的切换模式与许多用户按住说话的习惯不同，这是一种假设。",
+      "使用",
+      "observed",
+      "Medium",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold"
+      ]
+    ],
+    [
+      "SP-08",
+      "出错之后，测试者认为听写“是即时的”，并在发给一位联系人的消息中说它和他的在线听写应用一样快，该应用没有点名。没有计时：历史记录显示的是录音时长和节省的时间，不是延迟。",
+      "使用",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "SP-09",
+      "输入到 Word 的英语听写产生了四条历史记录，每条 7 至 13 个词。其中一条在历史记录中写成“Sprich Ae”，而测试者笔记里是“Sprich AI”；他说了什么、是否编辑过文字，均未记录。",
+      "核心功能",
+      "observed",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-10",
+      "输入到 WhatsApp 的德语听写带有问候语、分段和标点；测试者说它把文字整理得正确（测试者观点）。有一个短语“die doppelt drücken knüpfen muss”读起来很怪；原本想说的措辞未记录。",
+      "核心功能",
+      "observed",
+      "Positive",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "SP-11",
+      "输入到 Telegram 的英语听写变成了三条消息，保留了“Uh”这类语气填充词。设置界面承诺的是纠正标点、大小写和识别错误，并没有承诺去掉填充词，所以这不算没有做到它所承诺的。",
+      "核心功能",
+      "observed",
+      "Info",
+      [
+        "sprich-telegram-english-dictation-result"
+      ]
+    ],
+    [
+      "SP-12",
+      "口述了一句法语，文字在笔记里。测试者没有判断准确度，所说的句子也未记录。",
+      "语言",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SP-13",
+      "据测试者所述，俄语测试“搞砸了”：应用没有听懂这些词，输出是乱码。所说的短语和当时的听写语言均未记录。",
+      "语言",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-14",
+      "“历史记录”标签页列出每一次听写，包含时间、目标应用、文字、录音时长、字数和节省的时间，另有搜索框和应用筛选。测试者喜欢文字被保留下来，并把它看作找回自己所有听写内容的一种方式（测试者观点）。",
+      "历史记录",
+      "observed",
+      "Positive",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-15",
+      "同一屏幕上节省时间的数字互相不一致（见数字表）。应用没有说明“节省”是如何计算的，也没有说明每个数字涵盖什么。",
+      "历史记录",
+      "measured",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "SP-16",
+      "一个弹出菜单提供：Änderung beschreiben、Korrekturlesen、Umformulieren、Freundlich、Sachlich、Kompakt、Zusammenfassung、Hauptpunkte、Liste、Tabelle 和 Verfassen。测试者想弄明白它的工作方式，没有使用。这个菜单是由哪个程序提供的（Sprich 还是 macOS），未记录。",
+      "功能",
+      "observed",
+      "Info",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "SP-17",
+      "设置里有一个 Schreibton 下拉菜单，选项为 Formal（已勾选）或 Informell。只看到了下拉菜单；测试者的“哇”针对的是这个选项，不是测试得出的结果。",
+      "功能",
+      "observed",
+      "Info",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ],
+    [
+      "SP-18",
+      "录音指示器可以设为 Taste、Mikro（已选）或 Kein。测试者看到麦克风气泡从灰色变成橙色；标题栏显示“Mikro bereit”。",
+      "功能",
+      "observed",
+      "Positive",
+      [
+        "sprich-settings-recording-indicator-mic"
+      ]
+    ],
+    [
+      "SP-19",
+      "界面只有德语，测试者没有找到语言切换，所以无法制作英文截图。开发者表示目前只有德语，因为本地版本是针对德语优化的（厂商声明）。",
+      "界面",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-20",
+      "“会议”标签页提供“Meeting aufnehmen”；其提示说通话会生成文字记录、摘要和任务，并且一切都留在这台 Mac 上。测试者还没有录过会议，打算和房间里的几个人一起试试。",
+      "功能",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "SP-21",
+      "sprich.ai 的账号页面提供修改密码和双重验证。双重验证卡片上是“Aktivieren”链接，所以处于关闭状态。",
+      "网站",
+      "observed",
+      "Info",
+      [
+        "sprich-account-security-page-two-factor-off"
+      ]
+    ],
+    [
+      "SP-22",
+      "“Bug melden”表单有 Bug、Feedback 和 Feature 三个标签页，字段包括标题、描述、预期结果和实际结果、出现频率，以及最多 3 个、每个 1 MB 的附件。“Mitgesendete Daten”部分没有打开，是否发送过任何内容未记录。测试者称它给人印象深刻（测试者观点）。“Transcripts are never sent”属于厂商声明。",
+      "反馈",
+      "observed",
+      "Positive",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "SP-23",
+      "欢迎界面和设置都说一切在本地运行，语音和文字不会离开这台 Mac，应用可以完全离线使用。没有检查网络流量，也没有试过离线运行。",
+      "信任",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-24",
+      "未测试或未记录：文件转写和词典标签页（导航中都能看到）、改写菜单和语气设置的效果、向 Mail、备忘录、Slack 或浏览器中听写、套餐和价格、运行时内存、卸载。",
+      "范围",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现；Positive 表示表现良好的地方。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "会说德语、使用 Apple 芯片 Mac、在日常应用中听写德语或英语、并希望在本地处理的用户，与应用所述一致（基于一次测试的假设）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "现在就需要俄语或非德语界面的人，或使用 Intel Mac 的人（目录只列出 Apple 芯片）。"
+      ]
+    ],
+    "retest": "在新的主版本、正式发布的英语界面或确认的语言列表出现时复测。覆盖：记录应用和 macOS 版本；为延迟计时；设置好语言后测试俄语；文件转写；会议；改写菜单；检查流量后的离线使用；运行时内存；卸载。"
+  },
+  "background_intro": "非实测内容。以下条目来自 PromptQuorum 目录中的 Sprich 条目，此处未核实。",
+  "background": [
+    [
+      "third-party",
+      "闭源，免费增值，另有一次性买断的 Lifetime 选项；需要 macOS 15 或更高版本，仅支持 Apple 芯片；网站只有德语。目录指出，厂商自己的页面对语音模型和 Windows 的说法前后不一致。来源：PromptQuorum 目录评测，2.2.4 版，核查于 2026-11-09；更新日志显示 2026-10-22 有一次更新。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和截图，2026年11月9日（原始 Word 笔记；原始笔记 PDF 待补充）。",
+    "PromptQuorum 目录中 Sprich 的条目和评测（slug：sprich），核实于 2026-11-09。",
+    "厂商网站 sprich.ai（厂商声明）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "sprich-welcome-screen-press-once-speak-press-again",
+      "figure": 1,
+      "file": "sprich-welcome-screen-press-once-speak-press-again.webp",
+      "path": "images/sprich-welcome-screen-press-once-speak-press-again.webp",
+      "alt": "Sprich 欢迎界面：标题“Sprich schreibt, was du sagst”，按、说、再按三个步骤，以及一条语音和文字不会离开这台 Mac 的说明。",
+      "caption": "欢迎界面（德语）。显示按一次、说话、再按一次。“不会离开你的 Mac”这句话属于厂商声明。",
+      "role": "hero",
+      "width": 1434,
+      "height": 1258,
+      "bytes": 62152,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-app-icon-and-applications-folder",
+      "figure": 2,
+      "file": "sprich-app-icon-and-applications-folder.webp",
+      "path": "images/sprich-app-icon-and-applications-folder.webp",
+      "alt": "Sprich 应用图标：白色方块，黑色“spr”、声波标记和橙色“ich”，旁边是 DMG 窗口中“应用程序”文件夹的快捷方式。",
+      "caption": "安装窗口。观察所得。",
+      "role": "moment",
+      "width": 1158,
+      "height": 542,
+      "bytes": 12762,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-setup-two-models-download-3-3-gb",
+      "figure": 3,
+      "file": "sprich-setup-two-models-download-3-3-gb.webp",
+      "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
+      "alt": "设置第 2 步（共 5 步）：两个模型只下载一次，Sprich Transcribe v3 约 480 MB，Sprich Turbo v3 约 2.8 GB，合计约 3.3 GB。",
+      "caption": "设置中的模型步骤。大小是应用自己给出的数字（测量）；“可完全离线使用”属于厂商声明。",
+      "role": "moment",
+      "width": 1386,
+      "height": 1306,
+      "bytes": 61892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "figure": 4,
+      "file": "sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "path": "images/sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "alt": "设置第 4 步（共 5 步）：听写键设为 Fn，可在 Einrasten（按一次开始，再按一次停止，默认）和 Gedrückt halten（按住录音）之间选择。",
+      "caption": "按键和模式步骤。切换模式标为 Standard。观察所得。",
+      "role": "moment",
+      "width": 1388,
+      "height": 1364,
+      "bytes": 78912,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-setup-final-step-models-still-loading",
+      "figure": 5,
+      "file": "sprich-setup-final-step-models-still-loading.webp",
+      "path": "images/sprich-setup-final-step-models-still-loading.webp",
+      "alt": "设置第 5 步（共 5 步）“Fast geschafft”：语音识别下载到 72 %，文字优化下载到 12 %，第 1 至 4 步已勾选。",
+      "caption": "设置结束时模型仍在下载。时间未记录。测量所得。",
+      "role": "moment",
+      "width": 1376,
+      "height": 1174,
+      "bytes": 32056,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-history-first-four-dictations-in-word",
+      "figure": 6,
+      "file": "sprich-history-first-four-dictations-in-word.webp",
+      "path": "images/sprich-history-first-four-dictations-in-word.webp",
+      "alt": "Sprich 历史记录中有四条输入到 Microsoft Word 的听写，每条 7 至 13 个词，共 38 个词；其中一条写成“Sprich Ae”。",
+      "caption": "在 Word 中前四次测试之后的历史记录，11 月 9 日，17:43 至 17:49。观察所得。",
+      "role": "moment",
+      "width": 1600,
+      "height": 967,
+      "bytes": 62072,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-whatsapp-german-dictation-result",
+      "figure": 7,
+      "file": "sprich-whatsapp-german-dictation-result.webp",
+      "path": "images/sprich-whatsapp-german-dictation-result.webp",
+      "alt": "由听写填入的 WhatsApp 消息框：一条德语消息，带有问候语、分段和标点，内容是说这款应用现在和他的在线应用一样快。",
+      "caption": "输入到 WhatsApp 的德语听写。文字和标点与插入时一致；有一个短语读起来很怪。观察所得。",
+      "role": "moment",
+      "width": 912,
+      "height": 420,
+      "bytes": 45228,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-telegram-english-dictation-result",
+      "figure": 8,
+      "file": "sprich-telegram-english-dictation-result.webp",
+      "path": "images/sprich-telegram-english-dictation-result.webp",
+      "alt": "Telegram 聊天，三条由听写生成的英语消息，保留了“Uh”这类语气填充词，并向一位联系人推荐了这个工具。",
+      "caption": "输入到 Telegram 的英语听写。填充词保留在文字中。观察所得。",
+      "role": "moment",
+      "width": 1058,
+      "height": 904,
+      "bytes": 107030,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-history-32-dictations-time-saved-counters",
+      "figure": 9,
+      "file": "sprich-history-32-dictations-time-saved-counters.webp",
+      "path": "images/sprich-history-32-dictations-time-saved-counters.webp",
+      "alt": "Sprich 历史记录顶部：32 次转写，676 个词，节省 19 分钟，标题写着本周节省 12 分 23 秒；下方有三条记录。",
+      "caption": "11 月 9 日 18:07 的历史记录。两个节省时间的数字不一致。由应用测得。",
+      "role": "moment",
+      "width": 1600,
+      "height": 979,
+      "bytes": 66118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-text-rewrite-popup-menu",
+      "figure": 10,
+      "file": "sprich-text-rewrite-popup-menu.webp",
+      "path": "images/sprich-text-rewrite-popup-menu.webp",
+      "alt": "弹出菜单：Änderung beschreiben、Korrekturlesen、Umformulieren、Freundlich、Sachlich、Kompakt、Zusammenfassung、Hauptpunkte、Liste、Tabelle、Verfassen。",
+      "caption": "文字改写菜单。测试中未使用；由哪个程序提供未记录。观察所得。",
+      "role": "moment",
+      "width": 570,
+      "height": 720,
+      "bytes": 29550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-settings-writing-tone-formal-informal",
+      "figure": 11,
+      "file": "sprich-settings-writing-tone-formal-informal.webp",
+      "path": "images/sprich-settings-writing-tone-formal-informal.webp",
+      "alt": "设置：Schreibton 下拉菜单已展开，Formal 已勾选，下方是 Informell。",
+      "caption": "写作语气设置。只看到了下拉菜单；效果未测试。观察所得。",
+      "role": "moment",
+      "width": 1431,
+      "height": 178,
+      "bytes": 8862,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-settings-recording-indicator-mic",
+      "figure": 12,
+      "file": "sprich-settings-recording-indicator-mic.webp",
+      "path": "images/sprich-settings-recording-indicator-mic.webp",
+      "alt": "设置，Anzeige：录音时显示内容的 Indikator，选项为 Taste、Mikro（已选）和 Kein。",
+      "caption": "录音指示器设置。观察所得。",
+      "role": "moment",
+      "width": 1600,
+      "height": 214,
+      "bytes": 7838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-account-security-page-two-factor-off",
+      "figure": 13,
+      "file": "sprich-account-security-page-two-factor-off.webp",
+      "path": "images/sprich-account-security-page-two-factor-off.webp",
+      "alt": "sprich.ai 账号页面，安全：密码选项和一张带有 Aktivieren 链接的双重验证卡片，说明尚未开启。",
+      "caption": "网站账号页面。观察所得。",
+      "role": "moment",
+      "width": 1429,
+      "height": 603,
+      "bytes": 32114,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-meetings-tab-record-meeting-tip",
+      "figure": 14,
+      "file": "sprich-meetings-tab-record-meeting-tip.webp",
+      "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
+      "alt": "“会议”标签页，会议数为零，有一条关于录制通话以获得文字记录、摘要和任务的提示，一个 Meeting aufnehmen 按钮和一个 LIFETIME 徽章。",
+      "caption": "首次打开时的“会议”标签页。测试中未使用。提示中关于摘要的说法属于厂商声明。",
+      "role": "moment",
+      "width": 1600,
+      "height": 1050,
+      "bytes": 54740,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-bug-report-form",
+      "figure": 15,
+      "file": "sprich-bug-report-form.webp",
+      "path": "images/sprich-bug-report-form.webp",
+      "alt": "Bug melden 表单，有 Bug、Feedback 和 Feature 标签页，字段包括标题、描述、预期结果和实际结果、出现频率，以及一条隐私说明。",
+      "caption": "反馈表单。是否提交未记录。“绝不发送”这句话属于厂商声明。",
+      "role": "moment",
+      "width": 1126,
+      "height": 1172,
+      "bytes": 43534,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-09；具体时间未记录"
+    }
+  ],
+  "figure_order": [
+    "sprich-welcome-screen-press-once-speak-press-again",
+    "sprich-app-icon-and-applications-folder",
+    "sprich-setup-two-models-download-3-3-gb",
+    "sprich-setup-dictation-key-fn-toggle-or-hold",
+    "sprich-setup-final-step-models-still-loading",
+    "sprich-history-first-four-dictations-in-word",
+    "sprich-whatsapp-german-dictation-result",
+    "sprich-telegram-english-dictation-result",
+    "sprich-history-32-dictations-time-saved-counters",
+    "sprich-text-rewrite-popup-menu",
+    "sprich-settings-writing-tone-formal-informal",
+    "sprich-settings-recording-indicator-mic",
+    "sprich-account-security-page-two-factor-off",
+    "sprich-meetings-tab-record-meeting-tip",
+    "sprich-bug-report-form"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年11月9日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "内存",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "应用",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面",
+      "Info": "提示"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}

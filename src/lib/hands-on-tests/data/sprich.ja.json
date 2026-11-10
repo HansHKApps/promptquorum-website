@@ -1,0 +1,1350 @@
+{
+  "id": "pq-test-sprich-2026-11-09",
+  "hero": "sprich-welcome-screen-press-once-speak-press-again",
+  "date_human": "2026年11月9日",
+  "captured": "2026-11-09；アプリの履歴では17:43から18:07。インストールの開始・終了時刻は記録なし",
+  "standard_version": "0.2",
+  "locale": "ja",
+  "app": {
+    "name": "Sprich",
+    "slug": "sprich",
+    "vendor": "Not recorded (the maker is not named in the notes)",
+    "category": "Local dictation / speech-to-text, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://www.sprich.ai"
+  },
+  "title": "24 GBのM4 Pro MacでのSprich：あらゆるアプリに入力できるローカル音声入力",
+  "page_title": "Sprichテスト",
+  "dek": "2026年11月9日の最初のセッション：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
+  "seo": {
+    "title": "Sprich実機テスト：M4 Proでのローカル音声入力",
+    "description": "24 GBのM4 ProのMacでのSprich実機テスト。Word、WhatsApp、Telegramで英語とドイツ語の音声入力は動作し、ロシア語は失敗しました。"
+  },
+  "faq": [
+    [
+      "SprichはほかのアプリでもMacで使えますか？",
+      "テスターが試したアプリでは使えました。音声入力は、Microsoft Word、WhatsApp、Telegramでテキストを生成しました。Mail、メモ、Slack、ブラウザは試していません。",
+      "observed"
+    ],
+    [
+      "テストでSprichはどの言語に対応しましたか？",
+      "英語とドイツ語は動作しました。フランス語の文を音声入力し、そのテキストはメモに残っていますが、精度は判断していません。ロシア語のテストは失敗し、出力は文字化けしたような内容でした。そのとき設定されていた音声入力の言語は記録なしです。",
+      "observed"
+    ],
+    [
+      "Sprichのインターフェースは英語で使えますか？",
+      "いいえ。テスターが確認できたのはドイツ語のインターフェースのみで、言語の切り替えは見つかりませんでした。開発者は、これまでのところドイツ語のみで、ローカル版がドイツ語向けに最適化されているための意図的な選択だと述べていますが、これは未検証です。",
+      "observed"
+    ],
+    [
+      "Sprichのダウンロードサイズはどのくらいですか？",
+      "セットアップでは2つのモデルをダウンロードします。Sprich Transcribe v3（約480 MB）とSprich Turbo v3（約2.8 GB）で、アプリ自身の表示によれば合計約3.3 GBです。これらはダウンロードサイズであり、実行時のメモリ使用量は測定していません。",
+      "measured"
+    ],
+    [
+      "Sprichは本当にオフラインでローカルに動作しますか？",
+      "アプリは、すべてがローカルで動作し、音声とテキストはMacの外に出ず、完全にオフラインで動くと述べています。ネットワーク通信は調べておらず、オフラインでの実行も試していないため、これは未検証です。",
+      "vendor-claim"
+    ],
+    [
+      "Sprichは速かったですか？",
+      "テスターは当初、デフォルトのトグルモード（1回押して、話して、もう一度押す）を誤って使ったため、遅いと判断しました。正しく使ってからは、即時で、使っているクラウド音声入力ツールと同じ速さだと感じました。計時はしていません。",
+      "tester-estimate"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-10",
+  "started": "2026-11-09",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "Sprich（sprich.ai）。ウィンドウのヘッダーには「sprich.ai」と表示されています。",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし。ディレクトリは2026-11-09にベンダーサイトでバージョン2.2.4を確認していますが、テスターのビルドとは異なる可能性があります。",
+      null
+    ],
+    [
+      "入手元",
+      "記録なし。ディレクトリには、sprich.aiのベンダーのダウンロードページが掲載されています。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans（PromptQuorum創設者）",
+      "observed"
+    ],
+    [
+      "開始",
+      "2026-11-09。履歴で最初の音声入力は17:43、最後のスクリーンショットは18:07です。インストールの開始・終了時刻は記録なし。",
+      "observed"
+    ],
+    [
+      "終了",
+      "記録なし",
+      null
+    ],
+    [
+      "ハードウェア",
+      "Apple M4 Pro、24 GBユニファイドメモリ、ほかに動作中のものなし。メモのヘッダーには「Mac 4 ... VRAM」とありますが、音声入力したメモの中でチップはM4 Proと名指しされていました。",
+      "observed"
+    ],
+    [
+      "システム",
+      "macOSのバージョンは記録なし。ディレクトリにはmacOS 15以降、Apple Siliconのみと記載されています（第三者情報）。",
+      null
+    ],
+    [
+      "テストの理由",
+      "メモでは、テスターが現在使っているクラウド音声入力ツールと比較しており、そのツールに機密データは渡したくないと述べています。",
+      "tester-view"
+    ],
+    [
+      "目的",
+      "目標としては明記されていません。メモに残っているのは、セットアップ、3つのアプリでの音声入力、言語、履歴、設定、ミーティングタブを最初に見た内容です。",
+      null
+    ],
+    [
+      "音声入力したアプリ",
+      "Microsoft Word、WhatsApp、Telegram",
+      "observed"
+    ],
+    [
+      "使用したAI支援",
+      "Claudeが、テスターのWordメモと15枚のスクリーンショットからこのレポートを下書きしました。メモの音声入力部分はSprich自身によるものと思われ（推測：履歴の項目がメモの文面と一致）、メモ内の誤りの一部はアプリの出力である可能性があります。",
+      "assumption"
+    ],
+    [
+      "開示事項",
+      "テスターはローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。Sprichは、このテストと同じ2026-11-09に、AIが作成したレビュー付きでディレクトリに追加されました。アプリのヘッダーにはLIFETIMEバッジが表示されており、テスターは知人へのメッセージで音声ツールの無料アクセスを得たと書いていますが、そのアクセスをどのように、誰から得たかは記録なしです。開発者はテスト後にテスターへ返信しましたが、日付は記載がなく、開発者がこのメモを受け取っていたかどうかは記録なしです。Sprichはサイトからのクリックを受けています。メモには、支払いやスポンサーシップの記録はありません。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターはローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。Sprichは、このテストと同じ2026-11-09に、AIが作成したレビュー付きでディレクトリに追加されました。アプリのヘッダーにはLIFETIMEバッジが表示されており、テスターは知人へのメッセージで音声ツールの無料アクセスを得たと書いていますが、そのアクセスをどのように、誰から得たかは記録なしです。開発者はテスト後にテスターへ返信しましたが、日付は記載がなく、開発者がこのメモを受け取っていたかどうかは記録なしです。Sprichはサイトからのクリックを受けています。メモには、支払いやスポンサーシップの記録はありません。",
+  "verdict": {
+    "general": "Apple Siliconを搭載したMac向けに丁寧に作られた、ドイツ語を第一とする音声入力アプリです。このセッションでは、Word、WhatsApp、Telegramで英語とドイツ語の音声入力が動作し、ロシア語は動作しませんでした。会議の録音、ファイルの文字起こし、テキストの書き換え、オフライン動作、プライバシーに関する主張、アンインストールはテストしていません。",
+    "fit": "テスターは感銘を受け、5点満点で5点を付け、知人にも勧めました。計時はしていないものの、クラウド音声入力ツールと同じ速さだと評価しています。今後も使い続けるかどうかは、メモには記載がありません。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "小さなDMGをApplicationsにドラッグするだけ。アカウントが必要です。"
+    ],
+    [
+      "オンボーディングとモデル選び",
+      4,
+      "分かりやすい5ステップ、バックグラウンドでダウンロード。モデルの選択肢はありません。"
+    ],
+    [
+      "中核機能",
+      4,
+      "3つのアプリで英語とドイツ語の音声入力が動作。ロシア語は失敗しました。"
+    ],
+    [
+      "ガイダンスと試行錯誤",
+      3,
+      "デフォルトのキーモードでテスターが一度つまずき、インターフェースはドイツ語のみ。フィードバックフォームは組み込まれています。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "計時していません。テスターは、正しく使ってからは即時だったと推定しています。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "アプリ内のテキストのみ確認。マニュアルやウェブサイトのガイドは開いていません。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していません。ローカル動作とオフライン動作の主張はテストしていません。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、テスターが示した根拠からレポート作成者が案として付けたものです。該当なしは「未テスト」を意味し、ゼロ点ではありません。",
+  "tldr": [
+    [
+      "observed",
+      "Sprichは、キーを押して話すと、カーソルのある場所にテキストが入力されるMac向けの音声入力アプリです。テスターは24 GBのApple M4 Proで実行しました。セットアップは5ステップで、約3.3 GB分（合計）の2つのモデルをダウンロードします。"
+    ],
+    [
+      "observed",
+      "音声入力は、Microsoft Word、WhatsApp、Telegramで、英語とドイツ語とも動作しました。ロシア語のテストは失敗しました。履歴では、製品名が「Sprich Ae」と出力されました。"
+    ],
+    [
+      "tester-error",
+      "テスターは当初、デフォルトのトグルモード（1回押して、話して、もう一度押す）を誤って使ったため、アプリが遅いと判断しました。正しく使ってからは即時だと感じました。速度は計時していません。"
+    ],
+    [
+      "observed",
+      "インターフェースはドイツ語のみで、テスターは言語の切り替えを見つけられませんでした。"
+    ],
+    [
+      "vendor-claim",
+      "アプリは、すべてがローカルかつオフラインで動作し、音声とテキストはMacの外に出ないと述べています。これはテストしていません。"
+    ],
+    [
+      "observed",
+      "会議の録音、テキスト書き換えメニュー、ファイルの文字起こし、辞書、トーン設定の効果、オフライン利用、アンインストールはテストしていません。"
+    ]
+  ],
+  "quotes": [
+    "インターフェースもセットアップも、本当に素晴らしく、とてもプロフェッショナルで、最高水準です。",
+    "5点満点で5点、10点満点で10点、何と言えばいいのか分かりません。"
+  ],
+  "quote_note": "テスターのメモ。音声入力から軽く編集。英語から翻訳。どちらも本人の判断であり、測定値ではありません。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "2つのモデルのダウンロード",
+      "セットアップのステップ2：合計約3.3 GBの2つのモデルを、1回だけダウンロード。",
+      "sprich-setup-two-models-download-3-3-gb",
+      "chapter-install"
+    ],
+    [
+      "1回押して、もう一度押す",
+      "セットアップのキーとモードのステップ。デフォルトのトグルモードに、テスターは最初つまずきました。",
+      "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "chapter-install"
+    ],
+    [
+      "Wordでの最初の4回の音声入力",
+      "17:49の履歴。1件は「Sprich Ae」と出力されています。",
+      "sprich-history-first-four-dictations-in-word",
+      "chapter-usage"
+    ],
+    [
+      "32回の音声入力、2つの節約時間の数値",
+      "18:07の履歴：見出しとタイルの数値が一致しません。",
+      "sprich-history-32-dictations-time-saved-counters",
+      "chapter-usage"
+    ],
+    [
+      "まだ誰も使っていない書き換えメニュー",
+      "ポップアップメニュー。テストでは使っていません。",
+      "sprich-text-rewrite-popup-menu",
+      "chapter-explore"
+    ],
+    [
+      "ローカルで録音するミーティング",
+      "ミーティングタブ。テストでは使っていません。",
+      "sprich-meetings-tab-record-meeting-tip",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "ダウンロード、初回起動、セットアップ",
+      "items": [
+        [
+          "observed",
+          "テストは2026年11月9日に実施されました。テスターは小さなDMGをダウンロードし、20 MBと読み取りました。スクリーンショットはありません。インストーラーのウィンドウには、アプリのアイコンとApplicationsフォルダへのショートカットが並んで表示されます。ディレクトリには、バージョン2.2.4で18.2 MBと記載されています（第三者情報）。",
+          "sprich-app-icon-and-applications-folder"
+        ],
+        [
+          "tester-view",
+          "テスターは、Sprichという単語を「spr」と「ich」に分けたドイツ語の言葉遊びになっているロゴを気に入っています。",
+          null
+        ],
+        [
+          "observed",
+          "アカウントが必要です：セットアップのステップ1「Anmelden」は、モデルのステップの前にチェックが付き、テスターは登録が必須だと述べています。",
+          null
+        ],
+        [
+          "measured",
+          "ステップ2では2つのモデルを1回だけダウンロードします：Sprich Transcribe v3（音声認識、約480 MB）とSprich Turbo v3（テキストの改善、約2.8 GB）で、アプリ自身の表示によれば合計約3.3 GBです。ダウンロードは、次のステップを進める間もバックグラウンドで続きます。これらはダウンロードサイズであり、実行時のメモリ使用量ではありません。",
+          "sprich-setup-two-models-download-3-3-gb"
+        ],
+        [
+          "observed",
+          "画面には、裏で使われているモデルの名前は表示されません。テスターはこれに気づき、調べたいと考えました。",
+          null
+        ],
+        [
+          "observed",
+          "彼は音声入力のキーを変更しましたが、どのキーを選んだかは記録なしです。ステップ4にはFnが表示されている一方、ウェルカム画面のイラストには右のCommandが表示されています。モードは2つあります：Einrasten（押して開始、押して停止。「Standard」の印付き）とGedrückt halten（押している間だけ録音）。",
+          "sprich-setup-dictation-key-fn-toggle-or-hold"
+        ],
+        [
+          "measured",
+          "モデルのダウンロードがまだ続いている間に、最後のステップ「Fast geschafft」に到達しました：音声認識は72 %、テキスト改善は12 %。ダウンロードの合計時間とセットアップ時間は記録なしです。",
+          "sprich-setup-final-step-models-still-loading"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "使ってみて",
+      "items": [
+        [
+          "tester-error",
+          "最初のWordでのテストは遅く感じられ、1つのテキストが消えたように見えました。テスターは、音声ツールは1〜2秒以内に応答する必要があり、使っているクラウドツールのほうが速かったと書きました。その後、自分の間違いに気づきました：デフォルトのトグルモードでは、キーを開始時に1回、停止時にもう1回押す必要がありました。彼はメモを訂正しました。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "キーを誤って使っていたときは、テキストが表示されるまで数秒、ときには10秒を超えたと、テスターは推定しています。正しく使ってからは、アプリは即時だと感じました。計時はしていません。",
+          null
+        ],
+        [
+          "observed",
+          "Wordへの最初の4回の英語の音声入力（17:43から17:49）は、それぞれ7〜13語です。1件は、テスターのメモでは「Sprich AI」となっている部分が、履歴では「Sprich Ae」と出力されています。何と話したか、またテキストを編集したかどうかは記録なしです。",
+          "sprich-history-first-four-dictations-in-word"
+        ],
+        [
+          "observed",
+          "WhatsAppへのドイツ語の音声入力は、挨拶、段落、句読点付きで入力され、テスターはテキストが正しく整理されたと述べています。「die doppelt drücken knüpfen muss」という1つの言い回しは不自然に読めます。意図した表現は記録なしです。",
+          "sprich-whatsapp-german-dictation-result"
+        ],
+        [
+          "observed",
+          "Telegramへの英語の音声入力は、「Uh」などのフィラーが残ったまま、3つのメッセージとして入力されました。セットアップ画面が約束しているのは句読点、大文字小文字、認識ミスの修正であり、フィラーの除去ではありません。",
+          "sprich-telegram-english-dictation-result"
+        ],
+        [
+          "observed",
+          "フランス語の文を音声入力し、そのテキストはメモに残っています。テスターは精度を判断しておらず、話した文は記録なしです。ロシア語のテストは動作しませんでした：アプリは言葉を理解せず、出力は文字化けしたような内容でした。そのときの言語設定は記録なしで、ドイツ語に設定されていたというのは推論です。",
+          null
+        ],
+        [
+          "measured",
+          "履歴タブには、すべての音声入力が、時刻、入力先のアプリ、テキスト、録音時間、語数、節約時間とともに保存され、検索ボックスとアプリのフィルターもあります。17:49には、見出しが今週41秒の節約、タイルが56秒でした。18:07（32回の文字起こし、676語）には、見出しが12分23秒、タイルが19分でした。「節約」がどう計算されるかは、アプリに説明がありません。",
+          "sprich-history-32-dictations-time-saved-counters"
+        ],
+        [
+          "tester-view",
+          "その後、彼は慣れているホールドして話すモードに切り替え、再び感銘を受けました。計時はしていません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "設定、追加機能、開発者の返信",
+      "items": [
+        [
+          "observed",
+          "ポップアップメニューには、Änderung beschreiben、Korrekturlesen、Umformulieren、Freundlich、Sachlich、Kompakt、Zusammenfassung、Hauptpunkte、Liste、Tabelle、Verfassenが並びます。テスターは仕組みを理解したいと考え、使いませんでした。このメニューをSprichとmacOSのどちらが提供しているかは記録なしです。",
+          "sprich-text-rewrite-popup-menu"
+        ],
+        [
+          "observed",
+          "設定には、Formal（チェック付き）またはInformellを選ぶSchreibtonのドロップダウンがあります。確認したのはドロップダウンだけで、テスターの「Wow」は選択肢に対するもので、テストした結果ではありません。",
+          "sprich-settings-writing-tone-formal-informal"
+        ],
+        [
+          "observed",
+          "録音インジケーターは、Taste、Mikro（選択中）、Keinから設定できます。テスターは、マイクの吹き出しがグレーからオレンジに変わるのを見ました。ヘッダーには「Mikro bereit」と表示されています。",
+          "sprich-settings-recording-indicator-mic"
+        ],
+        [
+          "observed",
+          "sprich.aiのアカウントページには、パスワードの変更と二要素認証があります。テスターは後者に「本当に感銘を受けた」と述べていますが、カードには「Aktivieren」のリンクしかなく、オンにはなっていませんでした。",
+          "sprich-account-security-page-two-factor-off"
+        ],
+        [
+          "vendor-claim",
+          "ミーティングタブには「Meeting aufnehmen」があり、そのヒントには、通話から文字起こし、要約、タスクが得られ、すべてがMac上に残ると書かれています。テスターはまだミーティングを録音しておらず、部屋にいる数人で試す予定です。",
+          "sprich-meetings-tab-record-meeting-tip"
+        ],
+        [
+          "observed",
+          "彼は英語のスクリーンショットを作るために言語の切り替えを探しましたが、見つかりませんでした。インターフェースはドイツ語のみです。",
+          null
+        ],
+        [
+          "observed",
+          "組み込みの「Bug melden」フォームには、Bug、Feedback、Featureのタブと、タイトル、説明、期待した結果と実際の結果、頻度、1 MBまでの添付ファイル最大3つの欄があります。「Mitgesendete Daten」の項目は開かれておらず、何かが送信されたかどうかは記録なしです。「Transcripts are never sent」はフォーム自身の文言です。",
+          "sprich-bug-report-form"
+        ],
+        [
+          "vendor-claim",
+          "開発者はテスト後にドイツ語でテスターに返信しました。日付は記載なし。言い換えると：テスターが録音をSprichで行うようになったことを喜んでいる。Parakeetは約25のヨーロッパ言語を理解し、ファイルの文字起こし用に選択できる。音声入力はドイツ語向けに最適化されており、ドイツ語の文の中の英語の用語もよく動作する。インターフェースはこれまでのところドイツ語のみで、ローカル版がドイツ語向けに最適化されているための意図的な選択である。これらはいずれも未検証です。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "結論",
+      "items": [
+        [
+          "observed",
+          "メモはフィードバックフォームで終わっており、使い続けるかどうかの判断は書かれていません。",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターはこのアプリを、サーバーの所在地を知らないクラウドツールと比較し、そこに機密データは渡したくないと述べています。",
+          null
+        ],
+        [
+          "tester-view",
+          "コンサルティングでの30年の経験から、彼は会議の議事録を自分で書くことを大切にしており、部屋にいる数人でローカルの議事録を試したいと考えています。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "「Sprich schreibt, was du sagst.」あらゆるアプリに音声入力：Mail、メモ、Slack、ブラウザ。",
+      "アプリのウェルカム画面",
+      "Word、WhatsApp、Telegramで確認。Mail、メモ、Slack、ブラウザは試していません。",
+      "observed"
+    ],
+    [
+      "すべてがローカルで動作し、音声とテキストはMacの外に出ず、アプリは完全にオフラインで動く。",
+      "アプリのウェルカム画面とセットアップ",
+      "未検証。ネットワーク通信は調べておらず、オフラインでの実行も試していません。",
+      "vendor-claim"
+    ],
+    [
+      "セットアップは「数分で完了」。",
+      "アプリのウェルカム画面",
+      "所要時間は記録なし。最後のステップでは、モデルはまだダウンロード中でした。",
+      "observed"
+    ],
+    [
+      "2つのモデル、合計約3.3 GB。",
+      "セットアップのステップ2",
+      "表示されているサイズは合計と一致します。ディスクやメモリの使用量は測定していません。",
+      "measured"
+    ],
+    [
+      "テキストのステップで、句読点、大文字小文字、認識ミスを修正する。",
+      "セットアップのステップ2",
+      "WhatsAppでは句読点と段落を確認。Telegramではフィラーが残りました。",
+      "observed"
+    ],
+    [
+      "キーとモードは、設定のキーボードでいつでも変更できる。",
+      "セットアップのステップ4",
+      "テスターはキーを変更し、後にモードも変更しました。",
+      "observed"
+    ],
+    [
+      "ミーティング：文字起こし、要約、タスク。すべてMac上で。",
+      "ミーティングタブのヒント",
+      "未テスト。",
+      "vendor-claim"
+    ],
+    [
+      "音声入力はドイツ語向けに最適化されており、Parakeetは約25のヨーロッパ言語を理解する。",
+      "開発者のメッセージ",
+      "英語とドイツ語は動作し、ロシア語は失敗。ファイルの文字起こしは試していません。",
+      "vendor-claim"
+    ],
+    [
+      "57言語。",
+      "PromptQuorumディレクトリの項目",
+      "未検証。開発者が挙げた数字とは一致しません。",
+      "third-party"
+    ],
+    [
+      "フィードバックフォーム：文字起こしは送信されない。",
+      "バグ報告フォーム",
+      "未検証。",
+      "vendor-claim"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Wordに英語のテスト文を音声入力",
+      "Word",
+      "7語、10秒録音、「+7s」節約",
+      "17:43",
+      "Pass",
+      []
+    ],
+    [
+      "Wordに英語の文を音声入力",
+      "Word",
+      "13語、20秒、「+14s」",
+      "17:45",
+      "Pass",
+      []
+    ],
+    [
+      "Wordに英語の文を音声入力",
+      "Word",
+      "8語、12秒、「+8s」。製品名が異なる（「Sprich Ae」）",
+      "17:46",
+      "Partial",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "Wordに英語の文を音声入力",
+      "Word",
+      "10語、15秒、「+11s」",
+      "17:49",
+      "Pass",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "キーを誤って使った最初の試行",
+      "Word",
+      "テスターの推定：テキストが表示されるまで数秒、ときには10秒超",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "Wordに英語の文を音声入力",
+      "Word",
+      "6語、11秒、「+6s」。遅延は計時せず",
+      "18:07",
+      "Pass",
+      [
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "WhatsAppにドイツ語のメッセージ",
+      "WhatsApp",
+      "挨拶、段落、句読点が挿入されたとおりに",
+      "記録なし",
+      "Pass",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "Telegramに英語のメッセージ3件",
+      "Telegram",
+      "68語 125秒「+1 min 14s」、37語 63秒「+40s」、29語 49秒「+31s」",
+      "18:06",
+      "Pass",
+      [
+        "sprich-telegram-english-dictation-result",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "フランス語の文",
+      "記録なし",
+      "出力はメモに掲載。精度は判断せず",
+      "記録なし",
+      "Not completed",
+      []
+    ],
+    [
+      "ロシア語の言葉",
+      "記録なし",
+      "文字化け、認識されず",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "ホールドして話すモード",
+      "記録なし",
+      "テスターによれば動作。計時せず",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "テキスト書き換えメニュー",
+      "-",
+      "未使用",
+      "-",
+      "Not completed",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "ミーティングの録音",
+      "-",
+      "未使用",
+      "-",
+      "Not completed",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "フィードバックフォーム",
+      "-",
+      "開いた。送信したかどうかは記録なし",
+      "記録なし",
+      "Partial",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "書き込みトーン Formal / Informell",
+      "-",
+      "ドロップダウンを開いた。効果は未テスト",
+      "記録なし",
+      "Partial",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "デフォルトのトグルモードを理解する前に、書面でも、使っているクラウドツールとの比較でも、アプリが遅いと判断し、訂正後には「長さなどについての記述はすべて間違っていた」と書きました。ウェルカム画面とセットアップのステップ4のどちらにも、押して、話して、もう一度押すと説明されています。彼は、見落としたか、分かりにくかったと述べています。"
+    ],
+    [
+      "tester-error",
+      "モデルは「3ギガバイト」だと書き、知人には、このアプリは「メモリを3.3ギガバイト食う」と伝えました。3.3 GBはセットアップ画面に表示された合計のダウンロードサイズであり、実行時のメモリ使用量は測定していません。"
+    ],
+    [
+      "tester-error",
+      "二要素認証に「本当に感銘を受けた」と述べましたが、スクリーンショットには「Aktivieren」のリンクしかなく、オンにはなっていませんでした。"
+    ],
+    [
+      "assumption",
+      "ロシア語での失敗は、音声入力の言語がドイツ語に設定されていたことが原因かもしれません。そのときの設定は記録されておらず、これは推論です。"
+    ],
+    [
+      "tester-error",
+      "記録の抜け：アプリとmacOSのバージョン、インストールと終了の時刻、セットアップの所要時間、選んだ音声入力のキー、フランス語とロシア語のテストで話した内容と言語設定、測定した遅延、フィードバックフォームを送ったかどうか、Lifetimeアクセスをどう得たか。ハードウェアのヘッダーには「Mac 4 ... VRAM」とありますが、Apple Siliconはユニファイドメモリで、チップは後にM4 Proと名指しされました。"
+    ]
+  ],
+  "findings": [
+    [
+      "SP-01",
+      "DMGのダウンロードを、テスターは20 MBと読み取りました。スクリーンショットはありません。インストーラーのウィンドウには、アプリのアイコンとApplicationsフォルダへのショートカットが並んで表示されます。同日のディレクトリ自身の確認では、バージョン2.2.4で18.2 MBと記載されています（第三者情報）。",
+      "インストール",
+      "observed",
+      "Positive",
+      [
+        "sprich-app-icon-and-applications-folder"
+      ]
+    ],
+    [
+      "SP-02",
+      "アカウントが必要です：セットアップのステップ1「Anmelden」は、モデルのステップの前にチェックが付き、テスターは登録が必須だと述べています。",
+      "インストール",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "SP-03",
+      "セットアップでは2つのモデルを1回だけダウンロードします：Sprich Transcribe v3（音声認識、約480 MB）とSprich Turbo v3（テキストの改善、約2.8 GB）で、アプリ自身の表示によれば合計約3.3 GBです。ダウンロードは、次のステップを進める間もバックグラウンドで続きます。これらはダウンロードサイズであり、実行時のメモリ使用量ではありません。",
+      "オンボーディング",
+      "measured",
+      "Positive",
+      [
+        "sprich-setup-two-models-download-3-3-gb"
+      ]
+    ],
+    [
+      "SP-04",
+      "画面に表示されるのは「Sprich Transcribe v3」と「Sprich Turbo v3」だけで、裏で使われているモデルの名前はありません。開発者はParakeetと約25のヨーロッパ言語を挙げており、PromptQuorumディレクトリには57言語と記載されています（第三者情報）。どちらの数字も未検証で、一致していません。",
+      "オンボーディング",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SP-05",
+      "セットアップのステップ5「Fast geschafft」は、モデルがまだダウンロード中（音声認識72 %、テキスト改善12 %）に表示され、完了すると音声入力が始まると伝えています。ダウンロードの合計時間とセットアップ時間は記録なしです。",
+      "オンボーディング",
+      "measured",
+      "Info",
+      [
+        "sprich-setup-final-step-models-still-loading"
+      ]
+    ],
+    [
+      "SP-06",
+      "音声入力のキーは変更でき、テスターも変更しましたが、どのキーを選んだかは記録なしです。セットアップのステップ4にはFnが表示されている一方、ウェルカム画面のイラストには右Command（「⌘ Rechts」）が表示されています。どちらがデフォルトで、どちらを彼が設定したかは記録なしです。モードは2つあります：Einrasten（押して開始、押して停止。「Standard」の印付き）とGedrückt halten（押している間だけ録音）。",
+      "オンボーディング",
+      "observed",
+      "Low",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold",
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-07",
+      "デフォルトのトグルモードで、テスターはキーを誤って使い、結果をアプリが遅いと受け取りました：テスターの推定では、テキストが表示されるまで数秒、ときには10秒超。正しく使ってからは速いと感じました。この指示は画面上にドイツ語で2回表示されています。デフォルトのトグルが、多くのユーザーのホールドして話す習慣と異なるというのは推測です。",
+      "利用",
+      "observed",
+      "Medium",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold"
+      ]
+    ],
+    [
+      "SP-08",
+      "間違いの後、テスターは音声入力を「即時」と判断し、知人へのメッセージでは、名前を挙げていないオンラインの音声入力アプリと同じ速さだと述べました。遅延は計時していません。履歴に表示されるのは録音時間と節約時間で、レイテンシではありません。",
+      "利用",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "SP-09",
+      "Wordへの英語の音声入力では、7〜13語の履歴項目が4件できました。1件は、テスターのメモでは「Sprich AI」となっている部分が、履歴では「Sprich Ae」と出力されています。何と話したか、またテキストを編集したかどうかは記録なしです。",
+      "中核機能",
+      "observed",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-10",
+      "WhatsAppへのドイツ語の音声入力は、挨拶、段落、句読点付きで入力されました。テスターはテキストが正しく整理されたと述べています（テスターの見解）。「die doppelt drücken knüpfen muss」という1つの言い回しは不自然に読めます。意図した表現は記録なしです。",
+      "中核機能",
+      "observed",
+      "Positive",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "SP-11",
+      "Telegramへの英語の音声入力は、「Uh」などのフィラーが残ったまま、3つのメッセージとして入力されました。セットアップ画面が約束しているのは句読点、大文字小文字、認識ミスの修正であり、フィラーの除去ではないため、これは約束に対する不備ではありません。",
+      "中核機能",
+      "observed",
+      "Info",
+      [
+        "sprich-telegram-english-dictation-result"
+      ]
+    ],
+    [
+      "SP-12",
+      "フランス語の文を音声入力し、そのテキストはメモに残っています。テスターは精度を判断しておらず、話した文は記録なしです。",
+      "言語",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SP-13",
+      "ロシア語のテストは、テスターの説明では「うまくいかなかった」：アプリは言葉を理解せず、出力は文字化けしたような内容でした。話したフレーズとそのときの音声入力の言語は記録なしです。",
+      "言語",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-14",
+      "履歴タブには、すべての音声入力が、時刻、入力先のアプリ、テキスト、録音時間、語数、節約時間とともに一覧表示され、検索ボックスとアプリのフィルターもあります。テスターは、テキストが保管されることを気に入っており、音声入力したものをすべて取り出せる手段だと考えています（テスターの見解）。",
+      "履歴",
+      "observed",
+      "Positive",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-15",
+      "同じ画面で、節約時間の数値が一致しません（数値の表を参照）。「節約」がどう計算されるか、各数値が何を対象にしているかは、アプリに説明がありません。",
+      "履歴",
+      "measured",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "SP-16",
+      "ポップアップメニューには、Änderung beschreiben、Korrekturlesen、Umformulieren、Freundlich、Sachlich、Kompakt、Zusammenfassung、Hauptpunkte、Liste、Tabelle、Verfassenが並びます。テスターは仕組みを理解したいと考え、使いませんでした。このメニューをSprichとmacOSのどちらが提供しているかは記録なしです。",
+      "機能",
+      "observed",
+      "Info",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "SP-17",
+      "設定には、Formal（チェック付き）またはInformellを選ぶSchreibtonのドロップダウンがあります。確認したのはドロップダウンだけで、テスターの「Wow」は選択肢に対するもので、テストした結果ではありません。",
+      "機能",
+      "observed",
+      "Info",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ],
+    [
+      "SP-18",
+      "録音インジケーターは、Taste、Mikro（選択中）、Keinから設定できます。テスターは、マイクの吹き出しがグレーからオレンジに変わるのを見ました。ヘッダーには「Mikro bereit」と表示されています。",
+      "機能",
+      "observed",
+      "Positive",
+      [
+        "sprich-settings-recording-indicator-mic"
+      ]
+    ],
+    [
+      "SP-19",
+      "インターフェースはドイツ語のみで、テスターは言語の切り替えを見つけられなかったため、英語のスクリーンショットを作れませんでした。開発者は、ローカル版がドイツ語向けに最適化されているため、これまでのところドイツ語のみだと述べています（ベンダーの主張）。",
+      "インターフェース",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-20",
+      "ミーティングタブには「Meeting aufnehmen」があり、そのヒントには、通話から文字起こし、要約、タスクが得られ、すべてがMac上に残ると書かれています。テスターはまだミーティングを録音しておらず、部屋にいる数人で試す予定です。",
+      "機能",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "SP-21",
+      "sprich.aiのアカウントページには、パスワードの変更と二要素認証があります。2FAのカードには「Aktivieren」のリンクが表示されているため、オフです。",
+      "ウェブサイト",
+      "observed",
+      "Info",
+      [
+        "sprich-account-security-page-two-factor-off"
+      ]
+    ],
+    [
+      "SP-22",
+      "「Bug melden」フォームには、Bug、Feedback、Featureのタブと、タイトル、説明、期待した結果と実際の結果、頻度、1 MBまでの添付ファイル最大3つの欄があります。「Mitgesendete Daten」の項目は開かれておらず、何かが送信されたかどうかは記録なしです。テスターは印象的だと述べています（テスターの見解）。「Transcripts are never sent」はベンダーの主張です。",
+      "フィードバック",
+      "observed",
+      "Positive",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "SP-23",
+      "ウェルカム画面とセットアップには、すべてがローカルで動作し、音声とテキストはMacの外に出ず、アプリは完全にオフラインで動くと書かれています。ネットワーク通信は調べておらず、オフラインでの実行も試していません。",
+      "信頼性",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-24",
+      "未テスト、または記録なし：ファイルの文字起こしと辞書タブ（どちらもナビゲーションに表示）、書き換えメニューとトーン設定の効果、Mail、メモ、Slack、ブラウザへの音声入力、プランと料金、実行時のメモリ、アンインストール。",
+      "範囲",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "重要度は、初めて使う人への影響度です。案であり、実測値ではありません。Infoは、問題でも長所でもない所見を示します。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Apple Silicon搭載のMacを使うドイツ語圏のユーザーで、日常のアプリにドイツ語や英語で音声入力し、アプリの説明どおり処理をローカルで行いたい人（1回のセッションからの推測）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "今すぐロシア語やドイツ語以外のインターフェースが必要な人、またはIntel搭載のMacを使う人（ディレクトリにはApple Siliconのみと記載）。"
+      ]
+    ],
+    "retest": "新しいメジャーバージョン、英語インターフェースの公開、または対応言語の確定が出たときに再テストしてください。対象：アプリとmacOSのバージョンの記録、遅延の計時、言語を設定したロシア語、ファイルの文字起こし、ミーティング、書き換えメニュー、通信を調べたオフライン利用、実行時のメモリ、アンインストール。"
+  },
+  "background_intro": "ハンズオンではありません。以下はSprichについてのPromptQuorumディレクトリの項目によるもので、ここでは検証していません。",
+  "background": [
+    [
+      "third-party",
+      "クローズドソース、フリーミアムで買い切りのLifetimeオプションあり。macOS 15以降、Apple Siliconのみ。ウェブサイトはドイツ語のみ。ディレクトリによれば、開発元自身のページでは、音声モデルとWindowsに関する記述が整合していません。出典：PromptQuorumディレクトリのレビュー、バージョン2.2.4、2026-11-09確認。変更履歴には2026-10-22の更新が記載されています。"
+    ]
+  ],
+  "sources": [
+    "テスターのハンズオンのメモとスクリーンショット、2026年11月9日（元のWordメモ。生のメモのPDFは追加予定）。",
+    "SprichのPromptQuorumディレクトリ項目とレビュー（slug: sprich）、2026-11-09確認。",
+    "ベンダーサイトsprich.ai（ベンダーの主張）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "sprich-welcome-screen-press-once-speak-press-again",
+      "figure": 1,
+      "file": "sprich-welcome-screen-press-once-speak-press-again.webp",
+      "path": "images/sprich-welcome-screen-press-once-speak-press-again.webp",
+      "alt": "Sprichのウェルカム画面：見出し「Sprich schreibt, was du sagst」、押す・話す・もう一度押すの3ステップ、音声とテキストはMacの外に出ないという注記。",
+      "caption": "ウェルカム画面（ドイツ語）。1回押して、話して、もう一度押すと表示されています。「Macの外に出ない」という文言はベンダーの主張です。",
+      "role": "hero",
+      "width": 1434,
+      "height": 1258,
+      "bytes": 62152,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-app-icon-and-applications-folder",
+      "figure": 2,
+      "file": "sprich-app-icon-and-applications-folder.webp",
+      "path": "images/sprich-app-icon-and-applications-folder.webp",
+      "alt": "Sprichのアプリアイコン（黒い「spr」、音波のマーク、オレンジの「ich」が入った白いタイル）と、DMGウィンドウ内のApplicationsフォルダへのショートカット。",
+      "caption": "インストーラーのウィンドウ。観察。",
+      "role": "moment",
+      "width": 1158,
+      "height": 542,
+      "bytes": 12762,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-setup-two-models-download-3-3-gb",
+      "figure": 3,
+      "file": "sprich-setup-two-models-download-3-3-gb.webp",
+      "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
+      "alt": "セットアップの5ステップ中ステップ2：2つのモデルを1回だけダウンロード。Sprich Transcribe v3は約480 MB、Sprich Turbo v3は約2.8 GBで、合計約3.3 GB。",
+      "caption": "セットアップのモデルのステップ。サイズはアプリ自身の数値（実測）。「完全にオフラインで動く」はベンダーの主張です。",
+      "role": "moment",
+      "width": 1386,
+      "height": 1306,
+      "bytes": 61892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "figure": 4,
+      "file": "sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "path": "images/sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "alt": "セットアップの5ステップ中ステップ4：音声入力のキーはFn。Einrasten（押して開始、押して停止、デフォルト）とGedrückt halten（押している間だけ録音）から選択。",
+      "caption": "キーとモードのステップ。トグルモードに「Standard」の印が付いています。観察。",
+      "role": "moment",
+      "width": 1388,
+      "height": 1364,
+      "bytes": 78912,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-setup-final-step-models-still-loading",
+      "figure": 5,
+      "file": "sprich-setup-final-step-models-still-loading.webp",
+      "path": "images/sprich-setup-final-step-models-still-loading.webp",
+      "alt": "セットアップの5ステップ中ステップ5「Fast geschafft」：音声認識のダウンロードは72パーセント、テキスト改善は12パーセント。ステップ1〜4にはチェック付き。",
+      "caption": "セットアップ終了時点でモデルはまだダウンロード中。時刻は記録なし。実測。",
+      "role": "moment",
+      "width": 1376,
+      "height": 1174,
+      "bytes": 32056,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-history-first-four-dictations-in-word",
+      "figure": 6,
+      "file": "sprich-history-first-four-dictations-in-word.webp",
+      "path": "images/sprich-history-first-four-dictations-in-word.webp",
+      "alt": "Microsoft Wordへの4回の音声入力を示すSprichの履歴。各7〜13語、合計38語。1件は「Sprich Ae」と出力されています。",
+      "caption": "Wordでの最初の4回のテスト後の履歴、11月9日17:43から17:49。観察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 967,
+      "bytes": 62072,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-whatsapp-german-dictation-result",
+      "figure": 7,
+      "file": "sprich-whatsapp-german-dictation-result.webp",
+      "path": "images/sprich-whatsapp-german-dictation-result.webp",
+      "alt": "音声入力で入力されたWhatsAppのメッセージ欄：挨拶、段落、句読点付きのドイツ語のメッセージで、アプリがオンラインのアプリと同じ速さになったという内容。",
+      "caption": "WhatsAppへのドイツ語の音声入力。テキストと句読点は挿入されたとおり。1つの言い回しは不自然。観察。",
+      "role": "moment",
+      "width": 912,
+      "height": 420,
+      "bytes": 45228,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-telegram-english-dictation-result",
+      "figure": 8,
+      "file": "sprich-telegram-english-dictation-result.webp",
+      "path": "images/sprich-telegram-english-dictation-result.webp",
+      "alt": "音声入力で作られた3つの英語メッセージのTelegramチャット。「Uh」などのフィラーが残っており、知人にツールを勧める内容。",
+      "caption": "Telegramへの英語の音声入力。フィラーはテキストに残っています。観察。",
+      "role": "moment",
+      "width": 1058,
+      "height": 904,
+      "bytes": 107030,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-history-32-dictations-time-saved-counters",
+      "figure": 9,
+      "file": "sprich-history-32-dictations-time-saved-counters.webp",
+      "path": "images/sprich-history-32-dictations-time-saved-counters.webp",
+      "alt": "Sprichの履歴のヘッダー：32件の文字起こし、676語、19分節約。見出しには今週12分23秒節約と表示。下に3件の項目。",
+      "caption": "11月9日18:07の履歴。2つの節約時間の数値が異なります。アプリによる実測。",
+      "role": "moment",
+      "width": 1600,
+      "height": 979,
+      "bytes": 66118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-text-rewrite-popup-menu",
+      "figure": 10,
+      "file": "sprich-text-rewrite-popup-menu.webp",
+      "path": "images/sprich-text-rewrite-popup-menu.webp",
+      "alt": "ポップアップメニュー：Änderung beschreiben、Korrekturlesen、Umformulieren、Freundlich、Sachlich、Kompakt、Zusammenfassung、Hauptpunkte、Liste、Tabelle、Verfassen。",
+      "caption": "テキスト書き換えメニュー。テストでは未使用。どのプログラムが提供しているかは記録なし。観察。",
+      "role": "moment",
+      "width": 570,
+      "height": 720,
+      "bytes": 29550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-settings-writing-tone-formal-informal",
+      "figure": 11,
+      "file": "sprich-settings-writing-tone-formal-informal.webp",
+      "path": "images/sprich-settings-writing-tone-formal-informal.webp",
+      "alt": "設定：Schreibtonのドロップダウンが開き、Formalにチェック、その下にInformell。",
+      "caption": "書き込みトーンの設定。確認したのはドロップダウンだけで、効果は未テスト。観察。",
+      "role": "moment",
+      "width": 1431,
+      "height": 178,
+      "bytes": 8862,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-settings-recording-indicator-mic",
+      "figure": 12,
+      "file": "sprich-settings-recording-indicator-mic.webp",
+      "path": "images/sprich-settings-recording-indicator-mic.webp",
+      "alt": "設定の「Anzeige」：録音中に表示するものを決めるIndikator。選択肢はTaste、Mikro（選択中）、Kein。",
+      "caption": "録音インジケーターの設定。観察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 214,
+      "bytes": 7838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-account-security-page-two-factor-off",
+      "figure": 13,
+      "file": "sprich-account-security-page-two-factor-off.webp",
+      "path": "images/sprich-account-security-page-two-factor-off.webp",
+      "alt": "sprich.aiのアカウントページ、セキュリティ：パスワードの選択肢と、Aktivierenのリンクがある二要素認証のカード。オンにはなっていません。",
+      "caption": "ウェブサイトのアカウントページ。観察。",
+      "role": "moment",
+      "width": 1429,
+      "height": 603,
+      "bytes": 32114,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-meetings-tab-record-meeting-tip",
+      "figure": 14,
+      "file": "sprich-meetings-tab-record-meeting-tip.webp",
+      "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
+      "alt": "ミーティングが0件のミーティングタブ。通話を録音して文字起こし、要約、タスクを得るというヒント、Meeting aufnehmenボタン、LIFETIMEバッジ。",
+      "caption": "初めて開いたときのミーティングタブ。テストでは未使用。ヒントの要約に関する記述はベンダーの主張です。",
+      "role": "moment",
+      "width": 1600,
+      "height": 1050,
+      "bytes": 54740,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    },
+    {
+      "id": "sprich-bug-report-form",
+      "figure": 15,
+      "file": "sprich-bug-report-form.webp",
+      "path": "images/sprich-bug-report-form.webp",
+      "alt": "Bug melden フォーム：Bug、Feedback、Featureのタブ、タイトル、説明、期待した結果と実際の結果、頻度の欄、プライバシーに関する注記。",
+      "caption": "フィードバックフォーム。送信したかどうかは記録なし。「送信されない」という文言はベンダーの主張です。",
+      "role": "moment",
+      "width": 1126,
+      "height": 1172,
+      "bytes": 43534,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprichアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月9日。正確な時刻は記録なし"
+    }
+  ],
+  "figure_order": [
+    "sprich-welcome-screen-press-once-speak-press-again",
+    "sprich-app-icon-and-applications-folder",
+    "sprich-setup-two-models-download-3-3-gb",
+    "sprich-setup-dictation-key-fn-toggle-or-hold",
+    "sprich-setup-final-step-models-still-loading",
+    "sprich-history-first-four-dictations-in-word",
+    "sprich-whatsapp-german-dictation-result",
+    "sprich-telegram-english-dictation-result",
+    "sprich-history-32-dictations-time-saved-counters",
+    "sprich-text-rewrite-popup-menu",
+    "sprich-settings-writing-tone-formal-informal",
+    "sprich-settings-recording-indicator-mic",
+    "sprich-account-security-page-two-factor-off",
+    "sprich-meetings-tab-record-meeting-tip",
+    "sprich-bug-report-form"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年11月9日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "メモリ",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "アプリ",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好",
+      "Info": "情報"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

@@ -50614,6 +50614,36 @@
     "width": 1200,
     "height": 675
   },
+  "/images/sprich-account-security-page-two-factor-off.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1429,
+    "height": 603
+  },
+  "/images/sprich-app-icon-and-applications-folder.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1158,
+    "height": 542
+  },
+  "/images/sprich-bug-report-form.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1126,
+    "height": 1172
+  },
+  "/images/sprich-history-32-dictations-time-saved-counters.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 979
+  },
+  "/images/sprich-history-first-four-dictations-in-word.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 967
+  },
+  "/images/sprich-meetings-tab-record-meeting-tip.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 1050
+  },
   "/images/sprich-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -50658,6 +50688,51 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/sprich-settings-recording-indicator-mic.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 214
+  },
+  "/images/sprich-settings-writing-tone-formal-informal.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 178
+  },
+  "/images/sprich-setup-dictation-key-fn-toggle-or-hold.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1388,
+    "height": 1364
+  },
+  "/images/sprich-setup-final-step-models-still-loading.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1376,
+    "height": 1174
+  },
+  "/images/sprich-setup-two-models-download-3-3-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1386,
+    "height": 1306
+  },
+  "/images/sprich-telegram-english-dictation-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1058,
+    "height": 904
+  },
+  "/images/sprich-text-rewrite-popup-menu.webp": {
+    "encodingFormat": "image/webp",
+    "width": 570,
+    "height": 720
+  },
+  "/images/sprich-welcome-screen-press-once-speak-press-again.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1434,
+    "height": 1258
+  },
+  "/images/sprich-whatsapp-german-dictation-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 912,
+    "height": 420
   },
   "/images/stable-diffusion-review-hero-ar.webp": {
     "encodingFormat": "image/webp",

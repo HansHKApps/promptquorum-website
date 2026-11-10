@@ -2,7 +2,7 @@
 // Slug: sprich-review
 // Companion to: macwhisper-review, weesper-neon-flow-review, fluidvoice-review, amical-review, local-llm-voice-audio-compared
 // Facts verified 2026-11-09 against sprich.ai (home incl. schema.org markup, /download, /changelog, /about, /imprint, /privacy-policy of 22 Oct 2026, /vs/superwhisper, /spricheinfach).
-// Not hands-on tested. Stale-project warning is OFF (19 days since the last update on 2026-11-10; v2.2.4 of 2026-10-22 re-checked on /changelog).
+// One first-hand session (hands-on test, 2026-11-10); not a full evaluation. Stale-project warning is OFF (19 days since the last update on 2026-11-10; v2.2.4 of 2026-10-22 re-checked on /changelog).
 // 2026-11-10 maker update (Jakob, co-founder, by email to Hans): local Mac app = Parakeet + a fine-tuned post-processing model, both on the Mac; Whisper is NOT used (the privacy-policy entry is outdated).
 // Windows: separate cloud version for Mac + Windows in beta (hence the waitlist), own server in Helsinki, RAM only, nothing stored or used for training; the local app sends no audio anywhere.
 // Languages: Parakeet = about 25 European languages (selectable for file transcription); dictation optimized for German; UI German only (deliberate). The old 57-language site-markup figure is removed everywhere (owner, 2026-11-10).
@@ -23,8 +23,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Sprich Review: German-Made Mac Dictation App for Apple Silicon',
     seoTitle: 'Sprich Review: German-Made Mac Dictation App, Free Plan',
     intro: 'Sprich is a dictation app for the Mac, made in Munich: you press a shortcut, speak, and it types the text into whichever app has the cursor. Its maker says the transcription runs on the Mac itself, without a cloud. This review covers what the maker\'s website, changelog and privacy policy say, and what the maker confirmed on 10 November 2026 about speech models, Windows and languages.',
-    metaDescription: 'Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet on the Mac, about 25 European languages, German interface only. Not tested.',
-    twitterDescription: 'Sprich review: German-made Mac dictation with a free tier and a one-off Lifetime option. Languages, privacy, price and alternatives. Not tested.',
+    metaDescription: 'Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet on the Mac, about 25 European languages, German interface only. Hands-on test linked.',
+    twitterDescription: 'Sprich review: German-made Mac dictation with a free tier and a one-off Lifetime option. Languages, privacy, price and alternatives. Hands-on test linked.',
     audience: 'Mac users on Apple Silicon who want push-to-talk dictation into any app, especially in German — covers languages, privacy, price, limits and alternatives.',
     readTime: '7 min read',
     educationalLevel: 'Beginner',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac dictation lifetime license',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich is a German-made dictation app for the Mac that, per its maker, transcribes on your own Apple Silicon computer with Parakeet and types the result into any app.** Dictation is optimized for German and the interface is German only; the maker puts the transcription model at about 25 European languages. The newest release is version 2.2.4 from 22 October 2026. This review rests on the maker\'s website, changelog, privacy policy and a message from the maker, not on hands-on testing.',
+    leadAnswerBlock: '**Sprich is a German-made dictation app for the Mac that, per its maker, transcribes on your own Apple Silicon computer with Parakeet and types the result into any app.** Dictation is optimized for German and the interface is German only; the maker puts the transcription model at about 25 European languages. The newest release is version 2.2.4 from 22 October 2026. This review rests on the maker\'s website, changelog, privacy policy and a message from the maker; the one first-hand session is in the linked hands-on test.',
     quickAnswerTop: {
       en: {
         question: 'Is Sprich only for German?',
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Sprich is a push-to-talk dictation app for macOS, not a transcription editor.** You hold a hotkey or toggle it, speak, and the text is pasted into the app that has focus. An optional clean-up pass, which the maker calls intelligent post-processing, fixes punctuation and filler words.',
           'Beyond dictation it transcribes audio files such as M4A, MP3 and WAV, keeps a custom dictionary, and records meetings with system sound and microphone (since version 2.2.0 of 14 September 2026, FaceTime calls since 2.2.2), then adds speaker detection and a summary.',
-          'The about page says three friends from Germany founded Sprich in 2025, and the imprint names Victor Vollmann in Munich as the responsible person. This review draws on the website, changelog and privacy policy; it involved no hands-on testing, so accuracy and speed are not rated.',
+          'The about page says three friends from Germany founded Sprich in 2025, and the imprint names Victor Vollmann in Munich as the responsible person. This review draws on the website, changelog and privacy policy; PromptQuorum also ran one first-hand session on a 24 GB M4 Pro Mac (see Related Reading), which was a first look and not a full evaluation, so accuracy and speed are still not rated.',
         ],
       },
       languages: {
@@ -269,6 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Sprich Hands-on Test](/power-local-llm/sprich-hands-on-test) — a first session on a 24 GB M4 Pro Mac: dictation worked in Word, WhatsApp and Telegram in English and German, Russian did not; every statement is labelled by how it is known.',
           '[Local Voice and Speech Tools Compared](/power-local-llm/local-llm-voice-audio-compared) — text-to-speech, speech-to-text and voice agents side by side.',
           '[MacWhisper Review](/power-local-llm/macwhisper-review) — a Mac app for local Whisper and Parakeet transcription.',
           '[Weesper Neon Flow Review](/power-local-llm/weesper-neon-flow-review) — a paid dictation app for Mac and Windows.',
@@ -289,8 +290,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Sprich Rezension: Diktier-App aus Deutschland für den Apple-Silicon-Mac',
     seoTitle: 'Sprich Rezension: Diktier-App aus Deutschland für den Mac',
     intro: 'Sprich ist eine in München entwickelte Diktier-App für den Mac: Sie drücken ein Tastenkürzel, sprechen, und die App tippt den Text in die App, in der gerade der Cursor steht. Laut Hersteller läuft die Transkription auf dem Mac selbst, ohne Cloud. Diese Rezension fasst zusammen, was Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers sagen und was der Hersteller am 10. November 2026 zu Sprachmodell, Windows und Sprachen bestätigt hat.',
-    metaDescription: 'Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 europäische Sprachen, Oberfläche nur Deutsch. Nicht getestet.',
-    twitterDescription: 'Sprich Rezension: Diktat für den Mac aus Deutschland mit Gratis-Tarif und einmaliger Lifetime-Option. Sprachen, Datenschutz, Preis und Alternativen. Nicht getestet.',
+    metaDescription: 'Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 europäische Sprachen, Oberfläche nur Deutsch. Praxistest verlinkt.',
+    twitterDescription: 'Sprich Rezension: Diktat für den Mac aus Deutschland mit Gratis-Tarif und einmaliger Lifetime-Option. Sprachen, Datenschutz, Preis und Alternativen. Praxistest verlinkt.',
     audience: 'Mac-Nutzer mit Apple Silicon, die per Tastenkürzel in jede App diktieren möchten, vor allem auf Deutsch — behandelt Sprachen, Datenschutz, Preis, Grenzen und Alternativen.',
     readTime: '7 Min. Lesezeit',
     educationalLevel: 'Beginner',
@@ -306,7 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac diktat lifetime lizenz',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich ist eine Diktier-App aus Deutschland für den Mac, die laut Hersteller auf Ihrem eigenen Apple-Silicon-Rechner mit Parakeet transkribiert und das Ergebnis in jede App schreibt.** Das Diktat ist auf Deutsch optimiert und die Oberfläche nur auf Deutsch; das Transkriptionsmodell versteht laut Hersteller rund 25 europäische Sprachen. Die neueste Version ist 2.2.4 vom 22. Oktober 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll, Datenschutzerklärung und eine Nachricht des Herstellers, nicht auf eigene Tests.',
+    leadAnswerBlock: '**Sprich ist eine Diktier-App aus Deutschland für den Mac, die laut Hersteller auf Ihrem eigenen Apple-Silicon-Rechner mit Parakeet transkribiert und das Ergebnis in jede App schreibt.** Das Diktat ist auf Deutsch optimiert und die Oberfläche nur auf Deutsch; das Transkriptionsmodell versteht laut Hersteller rund 25 europäische Sprachen. Die neueste Version ist 2.2.4 vom 22. Oktober 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll, Datenschutzerklärung und eine Nachricht des Herstellers; die eine Sitzung aus erster Hand steht im verlinkten Praxistest.',
     quickAnswerTop: {
       de: {
         question: 'Ist Sprich nur für Deutsch gedacht?',
@@ -394,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Sprich ist eine Push-to-Talk-Diktier-App für macOS, kein Transkriptions-Editor.** Sie halten ein Tastenkürzel oder schalten es um, sprechen, und der Text wird in die App eingefügt, die den Fokus hat. Ein optionaler Bereinigungsschritt, den der Hersteller intelligente Nachbearbeitung nennt, korrigiert Satzzeichen und Füllwörter.',
           'Über das Diktat hinaus transkribiert die App Audiodateien wie M4A, MP3 und WAV, führt ein eigenes Wörterbuch und nimmt Meetings mit Systemton und Mikrofon auf (seit Version 2.2.0 vom 14. September 2026, FaceTime-Anrufe seit 2.2.2), ergänzt um Sprechererkennung und Zusammenfassung.',
-          'Laut „Über uns“ haben drei Freunde aus Deutschland Sprich 2025 gegründet, das Impressum nennt Victor Vollmann in München als Verantwortlichen. Diese Rezension stützt sich auf Website, Änderungsprotokoll und Datenschutzerklärung; sie beruht nicht auf eigenen Tests, Genauigkeit und Geschwindigkeit werden daher nicht bewertet.',
+          'Laut „Über uns“ haben drei Freunde aus Deutschland Sprich 2025 gegründet, das Impressum nennt Victor Vollmann in München als Verantwortlichen. Diese Rezension stützt sich auf Website, Änderungsprotokoll und Datenschutzerklärung; PromptQuorum hat außerdem eine Sitzung aus erster Hand auf einem M4-Pro-Mac mit 24 GB durchgeführt (siehe Weiterführende Artikel). Sie war ein erster Blick und keine vollständige Bewertung, daher werden Genauigkeit und Geschwindigkeit weiterhin nicht bewertet.',
         ],
       },
       languages: {
@@ -535,6 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Sprich Praxistest](/de/power-local-llm/sprich-hands-on-test) — eine erste Sitzung auf einem M4-Pro-Mac mit 24 GB: Das Diktieren funktionierte in Word, WhatsApp und Telegram auf Englisch und Deutsch, Russisch nicht; jede Aussage ist danach gekennzeichnet, wie sie belegt ist.',
           '[Lokale Sprach- und Audio-Werkzeuge im Vergleich](/de/power-local-llm/local-llm-voice-audio-compared) — Text-to-Speech, Spracherkennung und Sprach-Agenten nebeneinander.',
           '[MacWhisper Rezension](/de/power-local-llm/macwhisper-review) — eine Mac-App für lokale Whisper- und Parakeet-Transkription.',
           '[Weesper Neon Flow Rezension](/de/power-local-llm/weesper-neon-flow-review) — eine kostenpflichtige Diktier-App für Mac und Windows.',
@@ -555,8 +557,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test de Sprich : application de dictée allemande pour Mac Apple Silicon',
     seoTitle: 'Test de Sprich : dictée allemande pour Mac Apple Silicon',
     intro: 'Sprich est une application de dictée pour Mac conçue à Munich : vous appuyez sur un raccourci, vous parlez, et elle saisit le texte dans l\'application où se trouve le curseur. Selon son éditeur, la transcription s\'exécute sur le Mac lui-même, sans cloud. Ce test résume ce que disent le site, le journal des modifications et la politique de confidentialité de l\'éditeur, ainsi que ce que l\'éditeur a confirmé le 10 novembre 2026 sur le modèle vocal, Windows et les langues.',
-    metaDescription: 'Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand. Non testée.',
-    twitterDescription: 'Test de Sprich : dictée allemande pour Mac, offre gratuite et option Lifetime à paiement unique. Langues, confidentialité, prix et alternatives. Non testée.',
+    metaDescription: 'Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand. Test pratique lié.',
+    twitterDescription: 'Test de Sprich : dictée allemande pour Mac, offre gratuite et option Lifetime à paiement unique. Langues, confidentialité, prix et alternatives. Test pratique lié.',
     audience: 'Utilisateurs de Mac Apple Silicon qui veulent dicter dans n\'importe quelle application par raccourci, surtout en allemand — couvre langues, confidentialité, prix, limites et alternatives.',
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
@@ -572,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dictée mac licence à vie',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich est une application de dictée allemande pour Mac qui, selon son éditeur, transcrit sur votre propre ordinateur Apple Silicon avec Parakeet et écrit le résultat dans n\'importe quelle application.** La dictée est optimisée pour l\'allemand et l\'interface n\'existe qu\'en allemand ; l\'éditeur situe son modèle de transcription à environ 25 langues européennes. La version la plus récente est la 2.2.4 du 22 octobre 2026. Ce test repose sur le site, le journal des modifications, la politique de confidentialité et un message de l\'éditeur, pas sur des essais pratiques.',
+    leadAnswerBlock: '**Sprich est une application de dictée allemande pour Mac qui, selon son éditeur, transcrit sur votre propre ordinateur Apple Silicon avec Parakeet et écrit le résultat dans n\'importe quelle application.** La dictée est optimisée pour l\'allemand et l\'interface n\'existe qu\'en allemand ; l\'éditeur situe son modèle de transcription à environ 25 langues européennes. La version la plus récente est la 2.2.4 du 22 octobre 2026. Ce test repose sur le site, le journal des modifications, la politique de confidentialité et un message de l\'éditeur ; la seule session de première main figure dans le test pratique lié.',
     quickAnswerTop: {
       fr: {
         question: 'Sprich est-il réservé à l\'allemand ?',
@@ -660,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Sprich est une application de dictée push-to-talk pour macOS, pas un éditeur de transcription.** Vous maintenez un raccourci ou le basculez, vous parlez, et le texte est collé dans l\'application qui a le focus. Une passe de nettoyage facultative, que l\'éditeur appelle post-traitement intelligent, corrige la ponctuation et les mots de remplissage.',
           'Outre la dictée, l\'appli transcrit des fichiers audio comme M4A, MP3 et WAV, tient un dictionnaire personnel et enregistre des réunions avec le son du système et le micro (depuis la version 2.2.0 du 14 septembre 2026, appels FaceTime depuis la 2.2.2), puis ajoute détection des interlocuteurs et résumé.',
-          'La page À propos indique que trois amis allemands ont fondé Sprich en 2025, et les mentions légales désignent Victor Vollmann à Munich comme responsable. Ce test s\'appuie sur le site, le journal des modifications et la politique de confidentialité ; il ne repose sur aucun essai pratique, la précision et la vitesse ne sont donc pas évaluées.',
+          'La page À propos indique que trois amis allemands ont fondé Sprich en 2025, et les mentions légales désignent Victor Vollmann à Munich comme responsable. Ce test s\'appuie sur le site, le journal des modifications et la politique de confidentialité ; PromptQuorum a aussi mené une session de première main sur un Mac M4 Pro de 24 Go (voir « À lire aussi »), qui était un premier aperçu et non une évaluation complète : la précision et la vitesse ne sont donc toujours pas notées.',
         ],
       },
       languages: {
@@ -801,6 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
+          '[Test pratique de Sprich](/fr/power-local-llm/sprich-hands-on-test) — une première session sur un Mac M4 Pro de 24 Go : la dictée a fonctionné dans Word, WhatsApp et Telegram en anglais et en allemand, le russe non ; chaque affirmation est étiquetée selon la façon dont elle est établie.',
           '[Outils vocaux et audio locaux comparés](/fr/power-local-llm/local-llm-voice-audio-compared) — synthèse vocale, reconnaissance vocale et agents vocaux côte à côte.',
           '[Test de MacWhisper](/fr/power-local-llm/macwhisper-review) — une appli Mac pour la transcription locale Whisper et Parakeet.',
           '[Test de Weesper Neon Flow](/fr/power-local-llm/weesper-neon-flow-review) — une appli de dictée payante pour Mac et Windows.',
@@ -821,8 +824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Sprichレビュー：Apple Silicon搭載Mac向けドイツ製音声入力アプリ',
     seoTitle: 'Sprichレビュー：ドイツ製のMac用音声入力アプリ',
     intro: 'Sprichはミュンヘンで開発されたMac用の音声入力アプリです。ショートカットを押して話すと、カーソルのあるアプリにテキストが入力されます。開発元によれば、文字起こしはクラウドを使わずMac上で実行されます。このレビューでは、開発元のサイト、更新履歴、プライバシーポリシーの記載に加え、2026年11月10日に開発元が音声認識モデル、Windows、対応言語について確認した内容を整理します。',
-    metaDescription: 'Sprichのレビュー：Apple Silicon搭載Mac向けのドイツ製音声入力アプリで、無料プランあり。Mac上でParakeetを実行、欧州の約25言語、画面はドイツ語のみ。実機検証なし。',
-    twitterDescription: 'Sprichのレビュー：無料プランと買い切りのLifetimeがあるドイツ製Mac音声入力。言語、プライバシー、価格、代替アプリ。実機検証なし。',
+    metaDescription: 'Sprichのレビュー：Apple Silicon搭載Mac向けのドイツ製音声入力アプリで、無料プランあり。Mac上でParakeetを実行、欧州の約25言語、画面はドイツ語のみ。ハンズオンテストへのリンクあり。',
+    twitterDescription: 'Sprichのレビュー：無料プランと買い切りのLifetimeがあるドイツ製Mac音声入力。言語、プライバシー、価格、代替アプリ。ハンズオンテストへのリンクあり。',
     audience: 'Apple Silicon搭載Macで、どのアプリにもショートカットで音声入力したい人（特にドイツ語）向け。言語、プライバシー、価格、制限、代替アプリを扱います。',
     readTime: '7分で読める',
     educationalLevel: 'Beginner',
@@ -838,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac 音声入力 買い切り',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprichは、開発元によればお使いのApple Silicon搭載MacでParakeetを使って文字起こしし、結果を任意のアプリに入力するドイツ製のMac用音声入力アプリです。** 音声入力はドイツ語に最適化されており、画面表示はドイツ語のみです。開発元は、文字起こしモデルは欧州の約25言語に対応すると説明しています。最新版は2026年10月22日のバージョン2.2.4です。このレビューは開発元のサイト、更新履歴、プライバシーポリシー、開発元からのメッセージに基づくもので、実機での検証は行っていません。',
+    leadAnswerBlock: '**Sprichは、開発元によればお使いのApple Silicon搭載MacでParakeetを使って文字起こしし、結果を任意のアプリに入力するドイツ製のMac用音声入力アプリです。** 音声入力はドイツ語に最適化されており、画面表示はドイツ語のみです。開発元は、文字起こしモデルは欧州の約25言語に対応すると説明しています。最新版は2026年10月22日のバージョン2.2.4です。このレビューは開発元のサイト、更新履歴、プライバシーポリシー、開発元からのメッセージに基づいています。1回だけ行った実機セッションは、リンク先のハンズオンテストにあります。',
     quickAnswerTop: {
       ja: {
         question: 'Sprichはドイツ語専用ですか？',
@@ -1067,6 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Sprich実機テスト](/ja/power-local-llm/sprich-hands-on-test) — 24 GBのM4 ProのMacでの最初のセッション：Word、WhatsApp、Telegramで英語とドイツ語の音声入力は動作し、ロシア語は動作しませんでした。各記述には根拠の種類を示すラベルが付いています。',
           '[ローカル音声・オーディオツール比較](/ja/power-local-llm/local-llm-voice-audio-compared) — 音声合成、音声認識、音声エージェントを並べて比較。',
           '[MacWhisperレビュー](/ja/power-local-llm/macwhisper-review) — WhisperとParakeetをローカルで使うMacアプリ。',
           '[Weesper Neon Flowレビュー](/ja/power-local-llm/weesper-neon-flow-review) — MacとWindows向けの有料音声入力アプリ。',
@@ -1087,8 +1091,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Sprich评测：适用于 Apple Silicon Mac 的德国听写应用',
     seoTitle: 'Sprich评测：德国制造的Mac听写应用（有免费版）',
     intro: 'Sprich 是在慕尼黑开发的 Mac 听写应用：按下快捷键说话，它就把文字输入到光标所在的应用。据开发者称，转写在 Mac 本机运行，不经过云端。本评测梳理开发者网站、更新日志和隐私政策的说法，以及开发者在 2026 年 11 月 10 日就语音模型、Windows 和语言所作的确认。',
-    metaDescription: 'Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。PromptQuorum未实测。',
-    twitterDescription: 'Sprich评测：德国制造的Mac听写应用，有免费套餐和一次性买断的Lifetime。语言、隐私、价格与替代方案。未实测。',
+    metaDescription: 'Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接实测文章。',
+    twitterDescription: 'Sprich评测：德国制造的Mac听写应用，有免费套餐和一次性买断的Lifetime。语言、隐私、价格与替代方案。已链接实测文章。',
     audience: '使用 Apple Silicon Mac、想用快捷键向任意应用听写（尤其是德语）的用户——涵盖语言、隐私、价格、限制与替代方案。',
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
@@ -1104,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac听写买断',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich 是一款德国制造的 Mac 听写应用，据开发者称，它在你自己的 Apple Silicon 电脑上用 Parakeet 转写，并把结果输入到任意应用。** 听写针对德语优化，界面仅有德语；开发者称转写模型支持约 25 种欧洲语言。最新版本是 2026 年 10 月 22 日发布的 2.2.4。本评测依据开发者的网站、更新日志、隐私政策以及开发者发来的消息，并非亲自实测。',
+    leadAnswerBlock: '**Sprich 是一款德国制造的 Mac 听写应用，据开发者称，它在你自己的 Apple Silicon 电脑上用 Parakeet 转写，并把结果输入到任意应用。** 听写针对德语优化，界面仅有德语；开发者称转写模型支持约 25 种欧洲语言。最新版本是 2026 年 10 月 22 日发布的 2.2.4。本评测依据开发者的网站、更新日志、隐私政策以及开发者发来的消息；唯一的第一手测试见所链接的实测文章。',
     quickAnswerTop: {
       zh: {
         question: 'Sprich 只支持德语吗？',
@@ -1192,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Sprich 是 macOS 上的按键说话式听写应用，不是转写编辑器。** 按住或切换快捷键、说话，文字就粘贴到当前焦点所在的应用。可选的整理步骤（开发者称为智能后处理）会修正标点和语气词。',
           '除听写外，它还转写 M4A、MP3、WAV 等音频文件，提供自定义词典，并用系统声音和麦克风录制会议（自 2026 年 9 月 14 日的 2.2.0 版起，FaceTime 通话自 2.2.2 起），之后加上说话人检测和摘要。',
-          '“关于”页称 2025 年由三位德国朋友创立 Sprich，法律声明（Impressum）将慕尼黑的 Victor Vollmann 列为责任人。本评测依据网站、更新日志和隐私政策，未做实机测试，因此不评价准确度和速度。',
+          '“关于”页称 2025 年由三位德国朋友创立 Sprich，法律声明（Impressum）将慕尼黑的 Victor Vollmann 列为责任人。本评测依据网站、更新日志和隐私政策，PromptQuorum 另在一台24 GB的M4 Pro Mac上进行了一次第一手测试（见相关阅读），那只是初步试用，而非完整评估，因此准确度和速度仍未评分。',
         ],
       },
       languages: {
@@ -1333,6 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[Sprich 实测](/zh/power-local-llm/sprich-hands-on-test) — 在24 GB的M4 Pro Mac上的首次测试：Word、WhatsApp和Telegram中的英语和德语听写可用，俄语不可用；每条陈述都标注了其依据类型。',
           '[本地语音与音频工具对比](/zh/power-local-llm/local-llm-voice-audio-compared) — 文字转语音、语音转文字与语音智能体并排对比。',
           '[MacWhisper评测](/zh/power-local-llm/macwhisper-review) — 在本地运行 Whisper 和 Parakeet 转写的 Mac 应用。',
           '[Weesper Neon Flow评测](/zh/power-local-llm/weesper-neon-flow-review) — 适用于 Mac 和 Windows 的付费听写应用。',
@@ -1353,8 +1358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon',
     seoTitle: 'Reseña de Sprich: dictado alemán para Mac, plan gratis',
     intro: 'Sprich es una app de dictado para Mac creada en Múnich: pulsas un atajo, hablas y escribe el texto en la aplicación donde está el cursor. Según su desarrollador, la transcripción se ejecuta en el propio Mac, sin nube. Esta reseña resume lo que dicen el sitio web, el registro de cambios y la política de privacidad del desarrollador, y lo que el desarrollador confirmó el 10 de noviembre de 2026 sobre el modelo de voz, Windows y los idiomas.',
-    metaDescription: 'Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán. No probada.',
-    twitterDescription: 'Reseña de Sprich: dictado alemán para Mac con plan gratuito y opción Lifetime de pago único. Idiomas, privacidad, precio y alternativas. No probada.',
+    metaDescription: 'Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán. Prueba práctica enlazada.',
+    twitterDescription: 'Reseña de Sprich: dictado alemán para Mac con plan gratuito y opción Lifetime de pago único. Idiomas, privacidad, precio y alternativas. Prueba práctica enlazada.',
     audience: 'Usuarios de Mac con Apple Silicon que quieren dictar en cualquier app con un atajo, sobre todo en alemán — cubre idiomas, privacidad, precio, límites y alternativas.',
     readTime: '7 min de lectura',
     educationalLevel: 'Beginner',
@@ -1370,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dictado mac licencia de por vida',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich es una app de dictado alemana para Mac que, según su desarrollador, transcribe en tu propio equipo con Apple Silicon usando Parakeet y escribe el resultado en cualquier aplicación.** El dictado está optimizado para el alemán y la interfaz solo existe en alemán; el desarrollador sitúa el modelo de transcripción en unos 25 idiomas europeos. La versión más reciente es la 2.2.4 del 22 de octubre de 2026. Esta reseña se basa en el sitio web, el registro de cambios, la política de privacidad y un mensaje del desarrollador, no en pruebas propias.',
+    leadAnswerBlock: '**Sprich es una app de dictado alemana para Mac que, según su desarrollador, transcribe en tu propio equipo con Apple Silicon usando Parakeet y escribe el resultado en cualquier aplicación.** El dictado está optimizado para el alemán y la interfaz solo existe en alemán; el desarrollador sitúa el modelo de transcripción en unos 25 idiomas europeos. La versión más reciente es la 2.2.4 del 22 de octubre de 2026. Esta reseña se basa en el sitio web, el registro de cambios, la política de privacidad y un mensaje del desarrollador; la única sesión de primera mano está en la prueba práctica enlazada.',
     quickAnswerTop: {
       es: {
         question: '¿Sprich es solo para alemán?',
@@ -1458,7 +1463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Sprich es una app de dictado push-to-talk para macOS, no un editor de transcripciones.** Mantienes un atajo o lo activas y desactivas, hablas, y el texto se pega en la aplicación que tiene el foco. Una pasada de limpieza opcional, que el desarrollador llama posprocesamiento inteligente, corrige puntuación y muletillas.',
           'Además del dictado, transcribe archivos de audio como M4A, MP3 y WAV, mantiene un diccionario personal y graba reuniones con el sonido del sistema y el micrófono (desde la versión 2.2.0 del 14 de septiembre de 2026, llamadas de FaceTime desde la 2.2.2), y añade detección de hablantes y un resumen.',
-          'La página Acerca de dice que tres amigos de Alemania fundaron Sprich en 2025, y el aviso legal nombra a Victor Vollmann, en Múnich, como responsable. Esta reseña se basa en el sitio web, el registro de cambios y la política de privacidad; no implicó pruebas prácticas, así que no se valoran precisión ni velocidad.',
+          'La página Acerca de dice que tres amigos de Alemania fundaron Sprich en 2025, y el aviso legal nombra a Victor Vollmann, en Múnich, como responsable. Esta reseña se basa en el sitio web, el registro de cambios y la política de privacidad; PromptQuorum también realizó una sesión de primera mano en un Mac M4 Pro con 24 GB (véase Lecturas relacionadas), que fue un primer vistazo y no una evaluación completa, por lo que la precisión y la velocidad siguen sin valorarse.',
         ],
       },
       languages: {
@@ -1599,6 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Prueba práctica de Sprich](/es/power-local-llm/sprich-hands-on-test) — una primera sesión en un Mac M4 Pro con 24 GB: el dictado funcionó en Word, WhatsApp y Telegram en inglés y alemán, el ruso no; cada afirmación está etiquetada según cómo se sabe.',
           '[Herramientas locales de voz y audio comparadas](/es/power-local-llm/local-llm-voice-audio-compared) — texto a voz, voz a texto y agentes de voz lado a lado.',
           '[Reseña de MacWhisper](/es/power-local-llm/macwhisper-review) — una app de Mac para transcripción local con Whisper y Parakeet.',
           '[Reseña de Weesper Neon Flow](/es/power-local-llm/weesper-neon-flow-review) — una app de dictado de pago para Mac y Windows.',
@@ -1619,8 +1625,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do Sprich: app de ditado alemão para Mac com Apple Silicon',
     seoTitle: 'Análise do Sprich: ditado alemão para Mac, plano grátis',
     intro: 'O Sprich é um app de ditado para Mac criado em Munique: você aperta um atalho, fala, e ele digita o texto no aplicativo em que o cursor está. Segundo o desenvolvedor, a transcrição roda no próprio Mac, sem nuvem. Esta análise resume o que dizem o site, o registro de alterações e a política de privacidade do desenvolvedor, e o que o desenvolvedor confirmou em 10 de novembro de 2026 sobre o modelo de voz, o Windows e os idiomas.',
-    metaDescription: 'Análise do Sprich: app de ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão. Não testado.',
-    twitterDescription: 'Análise do Sprich: ditado alemão para Mac com plano grátis e opção Lifetime de pagamento único. Idiomas, privacidade, preço e alternativas. Não testado.',
+    metaDescription: 'Análise do Sprich: app de ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão. Teste prático vinculado.',
+    twitterDescription: 'Análise do Sprich: ditado alemão para Mac com plano grátis e opção Lifetime de pagamento único. Idiomas, privacidade, preço e alternativas. Teste prático vinculado.',
     audience: 'Usuários de Mac com Apple Silicon que querem ditar em qualquer app com um atalho, sobretudo em alemão — cobre idiomas, privacidade, preço, limites e alternativas.',
     readTime: '7 min de leitura',
     educationalLevel: 'Beginner',
@@ -1636,7 +1642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ditado mac licença vitalícia',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**O Sprich é um app de ditado alemão para Mac que, segundo o desenvolvedor, transcreve no seu próprio computador com Apple Silicon usando o Parakeet e digita o resultado em qualquer aplicativo.** O ditado é otimizado para o alemão e a interface existe só em alemão; o desenvolvedor situa o modelo de transcrição em cerca de 25 idiomas europeus. A versão mais recente é a 2.2.4, de 22 de outubro de 2026. Esta análise se baseia no site, no registro de alterações, na política de privacidade e em uma mensagem do desenvolvedor, não em testes próprios.',
+    leadAnswerBlock: '**O Sprich é um app de ditado alemão para Mac que, segundo o desenvolvedor, transcreve no seu próprio computador com Apple Silicon usando o Parakeet e digita o resultado em qualquer aplicativo.** O ditado é otimizado para o alemão e a interface existe só em alemão; o desenvolvedor situa o modelo de transcrição em cerca de 25 idiomas europeus. A versão mais recente é a 2.2.4, de 22 de outubro de 2026. Esta análise se baseia no site, no registro de alterações, na política de privacidade e em uma mensagem do desenvolvedor; a única sessão prática está no teste prático vinculado.',
     quickAnswerTop: {
       pt: {
         question: 'O Sprich é só para alemão?',
@@ -1724,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O Sprich é um app de ditado push-to-talk para macOS, não um editor de transcrição.** Você segura um atalho ou o liga e desliga, fala, e o texto é colado no aplicativo que está em foco. Uma etapa opcional de limpeza, que o desenvolvedor chama de pós-processamento inteligente, corrige pontuação e vícios de fala.',
           'Além do ditado, ele transcreve arquivos de áudio como M4A, MP3 e WAV, mantém um dicionário personalizado e grava reuniões com o som do sistema e o microfone (desde a versão 2.2.0, de 14 de setembro de 2026; chamadas de FaceTime desde a 2.2.2), e acrescenta detecção de falantes e um resumo.',
-          'A página Sobre diz que três amigos da Alemanha fundaram o Sprich em 2025, e o aviso legal nomeia Victor Vollmann, em Munique, como responsável. Esta análise se baseia no site, no registro de alterações e na política de privacidade; não envolveu testes práticos, então precisão e velocidade não são avaliadas.',
+          'A página Sobre diz que três amigos da Alemanha fundaram o Sprich em 2025, e o aviso legal nomeia Victor Vollmann, em Munique, como responsável. Esta análise se baseia no site, no registro de alterações e na política de privacidade; a PromptQuorum também fez uma sessão prática em um Mac M4 Pro de 24 GB (veja Leituras relacionadas), que foi uma primeira olhada e não uma avaliação completa, por isso precisão e velocidade continuam sem nota.',
         ],
       },
       languages: {
@@ -1865,6 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Teste prático do Sprich](/pt/power-local-llm/sprich-hands-on-test) — uma primeira sessão em um Mac M4 Pro de 24 GB: o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão, o russo não; cada afirmação é rotulada conforme a forma como se sabe.',
           '[Ferramentas locais de voz e áudio comparadas](/pt/power-local-llm/local-llm-voice-audio-compared) — texto para voz, voz para texto e agentes de voz lado a lado.',
           '[Análise do MacWhisper](/pt/power-local-llm/macwhisper-review) — um app de Mac para transcrição local com Whisper e Parakeet.',
           '[Análise do Weesper Neon Flow](/pt/power-local-llm/weesper-neon-flow-review) — um app de ditado pago para Mac e Windows.',
@@ -1885,8 +1892,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon',
     seoTitle: 'مراجعة Sprich: إملاء ألماني لأجهزة Mac بخطة مجانية',
     intro: 'Sprich تطبيق إملاء لأجهزة Mac طُوّر في ميونخ: تضغط اختصارًا وتتكلم فيكتب النص في التطبيق الذي يوجد فيه المؤشر. ويقول مطوّره إن التحويل يعمل على جهاز Mac نفسه دون سحابة. تلخّص هذه المراجعة ما يقوله موقع المطوّر وسجل التغييرات وسياسة الخصوصية، وما أكّده المطوّر في 10 نوفمبر 2026 بشأن نموذج الكلام وWindows واللغات.',
-    metaDescription: 'مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط. لم نختبره.',
-    twitterDescription: 'مراجعة Sprich: إملاء ألماني لـ Mac بخطة مجانية وخيار Lifetime بدفعة واحدة. اللغات والخصوصية والسعر والبدائل. لم يُختبر.',
+    metaDescription: 'مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط. الاختبار العملي مرتبط.',
+    twitterDescription: 'مراجعة Sprich: إملاء ألماني لـ Mac بخطة مجانية وخيار Lifetime بدفعة واحدة. اللغات والخصوصية والسعر والبدائل. الاختبار العملي مرتبط.',
     audience: 'مستخدمو Mac بمعالج Apple Silicon الذين يريدون الإملاء في أي تطبيق باختصار، خاصة بالألمانية — تغطي اللغات والخصوصية والسعر والحدود والبدائل.',
     readTime: '7 دقائق للقراءة',
     educationalLevel: 'Beginner',
@@ -1902,7 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'إملاء mac ترخيص دائم',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich تطبيق إملاء ألماني الصنع لأجهزة Mac يُجري التحويل بحسب مطوّره على جهاز Apple Silicon الخاص بك باستخدام Parakeet ويكتب النتيجة في أي تطبيق.** الإملاء محسَّن للألمانية والواجهة بالألمانية فقط؛ ويقول المطوّر إن نموذج التحويل يدعم نحو 25 لغة أوروبية. أحدث إصدار هو 2.2.4 بتاريخ 22 أكتوبر 2026. تعتمد هذه المراجعة على موقع المطوّر وسجل التغييرات وسياسة الخصوصية ورسالة من المطوّر، لا على تجربة عملية.',
+    leadAnswerBlock: '**Sprich تطبيق إملاء ألماني الصنع لأجهزة Mac يُجري التحويل بحسب مطوّره على جهاز Apple Silicon الخاص بك باستخدام Parakeet ويكتب النتيجة في أي تطبيق.** الإملاء محسَّن للألمانية والواجهة بالألمانية فقط؛ ويقول المطوّر إن نموذج التحويل يدعم نحو 25 لغة أوروبية. أحدث إصدار هو 2.2.4 بتاريخ 22 أكتوبر 2026. تعتمد هذه المراجعة على موقع المطوّر وسجل التغييرات وسياسة الخصوصية ورسالة من المطوّر؛ أما الجلسة المباشرة الوحيدة فهي في الاختبار العملي المرتبط.',
     quickAnswerTop: {
       ar: {
         question: 'هل Sprich للألمانية فقط؟',
@@ -2131,6 +2138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[اختبار Sprich العملي](/ar/power-local-llm/sprich-hands-on-test) — جلسة أولى على جهاز Mac M4 Pro بذاكرة 24 GB: عمل الإملاء في Word وWhatsApp وTelegram بالإنجليزية والألمانية، ولم يعمل بالروسية؛ وكل عبارة موسومة بحسب طريقة معرفتها.',
           '[مقارنة أدوات الصوت والكلام المحلية](/ar/power-local-llm/local-llm-voice-audio-compared) — تحويل النص إلى كلام والكلام إلى نص ووكلاء الصوت جنبًا إلى جنب.',
           '[مراجعة MacWhisper](/ar/power-local-llm/macwhisper-review) — تطبيق Mac للتحويل المحلي عبر Whisper وParakeet.',
           '[مراجعة Weesper Neon Flow](/ar/power-local-llm/weesper-neon-flow-review) — تطبيق إملاء مدفوع لأجهزة Mac وWindows.',
@@ -2151,8 +2159,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Sprich 리뷰: Apple Silicon Mac용 독일산 받아쓰기 앱',
     seoTitle: 'Sprich 리뷰: 독일산 Mac 받아쓰기 앱, 무료 요금제',
     intro: 'Sprich는 뮌헨에서 만든 Mac용 받아쓰기 앱입니다. 단축키를 누르고 말하면 커서가 있는 앱에 텍스트를 입력합니다. 개발사에 따르면 변환은 클라우드 없이 Mac에서 직접 실행됩니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침의 내용과 함께 2026년 11월 10일에 개발사가 음성 모델, Windows, 언어에 대해 확인한 내용을 정리합니다.',
-    metaDescription: 'Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어만 제공. 직접 테스트하지 않았습니다.',
-    twitterDescription: 'Sprich 리뷰: 무료 요금제와 일회성 Lifetime이 있는 독일산 Mac 받아쓰기. 언어, 개인정보, 가격, 대안. 직접 테스트하지 않았습니다.',
+    metaDescription: 'Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어만 제공. 직접 테스트 링크 있음.',
+    twitterDescription: 'Sprich 리뷰: 무료 요금제와 일회성 Lifetime이 있는 독일산 Mac 받아쓰기. 언어, 개인정보, 가격, 대안. 직접 테스트 링크 있음.',
     audience: 'Apple Silicon Mac에서 단축키로 어떤 앱에든 받아쓰기를 하려는 사용자, 특히 독일어 사용자를 위한 글입니다. 언어, 개인정보, 가격, 제한, 대안을 다룹니다.',
     readTime: '7분 읽기',
     educationalLevel: 'Beginner',
@@ -2168,7 +2176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mac 받아쓰기 평생 라이선스',
     ],
     current_hardware_mentioned: ['Mac', 'Apple Silicon'],
-    leadAnswerBlock: '**Sprich는 개발사에 따르면 사용자의 Apple Silicon Mac에서 Parakeet으로 변환하여 결과를 어떤 앱에든 입력하는 독일산 Mac용 받아쓰기 앱입니다.** 받아쓰기는 독일어에 최적화되어 있고 인터페이스는 독일어만 제공합니다. 개발사는 변환 모델이 유럽 약 25개 언어를 지원한다고 설명합니다. 최신 버전은 2026년 10월 22일의 2.2.4입니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침, 개발사의 메시지에 근거하며 직접 테스트한 것이 아닙니다.',
+    leadAnswerBlock: '**Sprich는 개발사에 따르면 사용자의 Apple Silicon Mac에서 Parakeet으로 변환하여 결과를 어떤 앱에든 입력하는 독일산 Mac용 받아쓰기 앱입니다.** 받아쓰기는 독일어에 최적화되어 있고 인터페이스는 독일어만 제공합니다. 개발사는 변환 모델이 유럽 약 25개 언어를 지원한다고 설명합니다. 최신 버전은 2026년 10월 22일의 2.2.4입니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침, 개발사의 메시지에 근거하며, 직접 진행한 한 번의 세션은 링크된 직접 테스트에 있습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Sprich는 독일어 전용인가요?',
@@ -2256,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Sprich는 macOS용 푸시투토크 받아쓰기 앱이며 변환 편집기가 아닙니다.** 단축키를 누르고 있거나 켜고 끄며 말하면 포커스가 있는 앱에 텍스트가 붙여넣어집니다. 개발사가 지능형 후처리라고 부르는 선택적 정리 단계가 문장부호와 군말을 고칩니다.',
           '받아쓰기 외에도 M4A, MP3, WAV 같은 오디오 파일을 변환하고, 사용자 사전을 유지하며, 시스템 소리와 마이크로 회의를 녹음하고(2026년 9월 14일의 버전 2.2.0부터, FaceTime 통화는 2.2.2부터) 화자 감지와 요약을 더합니다.',
-          '소개 페이지에 따르면 독일 출신 친구 세 명이 2025년에 Sprich를 창업했고, 법적 고지(Impressum)에는 뮌헨의 Victor Vollmann이 책임자로 적혀 있습니다. 이 리뷰는 웹사이트, 변경 내역, 개인정보 처리방침에 근거하며 직접 테스트하지 않았으므로 정확도와 속도는 평가하지 않습니다.',
+          '소개 페이지에 따르면 독일 출신 친구 세 명이 2025년에 Sprich를 창업했고, 법적 고지(Impressum)에는 뮌헨의 Victor Vollmann이 책임자로 적혀 있습니다. 이 리뷰는 웹사이트, 변경 내역, 개인정보 처리방침에 근거하며 PromptQuorum은 24 GB M4 Pro Mac에서 첫 사용 세션을 한 차례 직접 진행하기도 했습니다(관련 글 참조). 이는 전체 평가가 아닌 첫 사용 경험이므로 정확도와 속도는 여전히 평가하지 않았습니다.',
         ],
       },
       languages: {
@@ -2397,6 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
+          '[Sprich 직접 테스트](/ko/power-local-llm/sprich-hands-on-test) — 24 GB M4 Pro Mac에서 진행한 첫 세션입니다. Word, WhatsApp, Telegram에서 영어와 독일어 받아쓰기는 작동했고 러시아어는 작동하지 않았습니다. 모든 서술에는 근거 유형 라벨이 붙어 있습니다.',
           '[로컬 음성·오디오 도구 비교](/ko/power-local-llm/local-llm-voice-audio-compared) — 음성 합성, 음성 인식, 음성 에이전트를 나란히 비교.',
           '[MacWhisper 리뷰](/ko/power-local-llm/macwhisper-review) — Whisper와 Parakeet을 로컬에서 실행하는 Mac 앱.',
           '[Weesper Neon Flow 리뷰](/ko/power-local-llm/weesper-neon-flow-review) — Mac과 Windows용 유료 받아쓰기 앱.',
