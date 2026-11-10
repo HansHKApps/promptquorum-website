@@ -13,6 +13,8 @@
 // Prices (EUR, home #preise): Free 0 € (2,000 words/week, 1 file, 3 meetings, 5 dictionary entries); Pro 8 €/month or 6 €/month billed yearly; Lifetime 150 € once ("Alle Updates der lokalen App").
 // Maker: Victor Vollmann, Agricolastraße 55b, 80686 München (Impressum); about page: founded 2025 by three friends (Vollmann, Jakob Spetkamp, Leo Wiedemann). Not checked: network traffic, accuracy, speed.
 // No hands-on testing by PromptQuorum.
+// 2026-11-10 maker update (Jakob Spetkamp, co-founder): Parakeet + fine-tuned post-processing model on the Mac, Whisper not used (policy entry outdated); Windows = cloud beta for Mac+Windows (Helsinki, RAM only, no storage/training), local app sends no audio;
+// 57 languages NOT confirmed, Parakeet ~25 European languages; dictation optimized for German; UI German only. `founder` set (maker note); `founderReviewedDate` deliberately NOT set (maker did not review the finished text).
 
 import type { ToolRecord } from './types'
 
@@ -24,7 +26,7 @@ export const app: ToolRecord = {
   locality: 'local', // maker's home page + privacy policy: the macOS app transcribes on the Mac; account sign-in, free-tier word counts, model downloads and optional statistics use the network (see header)
   platforms: ['mac'], // macOS 15+ on Apple Silicon only (/download: Intel Macs not supported); Windows/iOS/Android are waitlist-only on the home page
   worksWith: [],
-  engine: 'builtin', // ships its own on-device models (Parakeet per home page, Whisper per privacy policy); downloaded inside the app
+  engine: 'builtin', // ships its own on-device models: Parakeet + a fine-tuned post-processing model (maker, 2026-11-10; Whisper is not used, the policy entry is outdated); downloaded inside the app
   license: 'Proprietary (closed source)', // no source repo or licence statement found; the site does not say "closed source" in words
   price: 'freemium', // Free 0 € (2,000 words/week) · Pro 8 €/month (6 € billed yearly) · Lifetime 150 € once
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // /download: Apple Silicon (M1 or newer) + macOS 15 or newer; no RAM figure stated
@@ -49,17 +51,71 @@ export const app: ToolRecord = {
     ar: 'تطبيق إملاء ألماني الصنع لأجهزة Mac يُجري التحويل بحسب مطوّره على جهاز Mac بمعالج Apple Silicon ويكتب في أي تطبيق؛ خطة مجانية، يركّز أولًا على الألمانية، والموقع بالألمانية فقط',
     ko: '독일에서 만든 Mac용 받아쓰기 앱으로, 개발사에 따르면 Apple Silicon Mac에서 변환하여 어떤 앱에든 입력합니다. 무료 요금제, 독일어 우선, 웹사이트는 독일어만 제공',
   },
-  // Comparison attributes: each value taken from the maker's pages on 2026-11-09. languages = "57 Sprachen" from the home page's own schema.org markup (not independently verified);
+  // Comparison attributes. languages = 25: the maker (Jakob Spetkamp, 2026-11-10) could NOT confirm the "57 Sprachen" in the home page's schema.org markup and says Parakeet understands about 25 European languages (selectable for file transcription);
   // speakerLabels = meeting mode "erkennt nach dem Ende die einzelnen Sprecher" (changelog v2.2.0); a missing key = not stated, never false.
-  compare: { languages: 57, speakerLabels: true },
+  compare: { languages: 25, speakerLabels: true },
   reviewSlug: 'sprich-review',
   pqReview: {
-    date: '2026-11-09',
+    date: '2026-11-10',
     version: '2.2.4',
     versionSourceUrl: 'https://www.sprich.ai/changelog',
   },
-  verdict: 'Best for German-speaking Mac users on Apple Silicon who want push-to-talk dictation into any app, a free tier and a one-off Lifetime option, and who accept a German-only interface, a closed-source app and speech-model and Windows statements that the maker\'s own pages do not reconcile; limited by macOS 15 on Apple Silicon only, an unverified list of 57 languages and privacy claims PromptQuorum did not test.',
-  lastVerifiedDate: '2026-11-09',
-  lastUpstreamUpdate: '2026-10-22', // sprich.ai/changelog + /download: v2.2.4 dated 2026-10-22; read 2026-11-09
+  verdict: 'Best for German-speaking Mac users on Apple Silicon who want push-to-talk dictation into any app, a free tier and a one-off Lifetime option, and who accept a German-only interface and a closed-source app; limited by macOS 15 on Apple Silicon only (Windows is a cloud beta), about 25 European languages (the 57 in the site markup are unconfirmed by the maker) and privacy claims PromptQuorum did not test.',
+  lastVerifiedDate: '2026-11-10',
+  lastUpstreamUpdate: '2026-10-22', // sprich.ai/changelog: v2.2.4 dated 2026-10-22 is still the newest entry; re-read 2026-11-10 (19 days, stale warning OFF)
   lastUpstreamUpdateSource: 'https://www.sprich.ai/changelog',
+  founder: {
+    who: {
+      en: 'Jakob Spetkamp, co-founder',
+      de: 'Jakob Spetkamp, Mitgründer',
+      es: 'Jakob Spetkamp, cofundador',
+      fr: 'Jakob Spetkamp, cofondateur',
+      ja: 'Jakob Spetkamp氏、共同創業者',
+      pt: 'Jakob Spetkamp, cofundador',
+      ar: 'Jakob Spetkamp، أحد المؤسسين',
+      zh: 'Jakob Spetkamp,联合创始人',
+      ko: 'Jakob Spetkamp, 공동 창업자',
+    },
+    providedDate: '2026-11-10',
+    why: {
+      en: 'We built Sprich because dictating in German on the Mac was either poor or sent everything to a US cloud.',
+      de: 'Wir haben Sprich gebaut, weil Diktieren auf Deutsch am Mac entweder schlecht war oder alles in eine US-Cloud geschickt hat.',
+      es: 'Creamos Sprich porque dictar en alemán en el Mac era o malo o enviaba todo a una nube de EE. UU.',
+      fr: 'Nous avons créé Sprich parce que la dictée en allemand sur Mac était soit mauvaise, soit envoyait tout vers un cloud américain.',
+      ja: '私たちがSprichを作ったのは、Macでのドイツ語の音声入力が、精度が低いか、すべてを米国のクラウドに送るかのどちらかだったからです。',
+      pt: 'Criamos o Sprich porque ditar em alemão no Mac era ruim ou mandava tudo para uma nuvem dos EUA.',
+      ar: 'بنينا Sprich لأن الإملاء بالألمانية على Mac كان إما رديئًا أو يرسل كل شيء إلى سحابة أمريكية.',
+      zh: '我们开发 Sprich，是因为在 Mac 上用德语听写，要么效果差，要么把一切都发到美国的云端。',
+      ko: '저희는 Mac에서 독일어로 받아쓰기를 하면 품질이 나쁘거나 모든 것이 미국 클라우드로 전송되었기 때문에 Sprich를 만들었습니다.',
+    },
+    fullQuote: {
+      en: [
+        'We built Sprich because dictating in German on the Mac was either poor or sent everything to a US cloud. Doctors, lawyers and authors in particular are not allowed to, or do not want to, do that. That is why Sprich runs entirely locally and is trained for German, including technical terms and Denglisch. Next come Windows and the cloud version for everyone who does not have an Apple Silicon Mac.',
+      ],
+      de: [
+        'Wir haben Sprich gebaut, weil Diktieren auf Deutsch am Mac entweder schlecht war oder alles in eine US-Cloud geschickt hat. Gerade Ärzte, Anwälte und Autoren dürfen oder wollen das nicht. Deshalb läuft Sprich komplett lokal und ist auf Deutsch trainiert, inklusive Fachbegriffen und Denglisch. Als Nächstes kommen Windows und die Cloud-Version für alle, die keinen Apple-Silicon-Mac haben.',
+      ],
+      es: [
+        'Creamos Sprich porque dictar en alemán en el Mac era o malo o enviaba todo a una nube de EE. UU. Sobre todo médicos, abogados y autores no pueden o no quieren hacerlo. Por eso Sprich funciona completamente en local y está entrenado para el alemán, incluidos los términos técnicos y el Denglisch. Lo siguiente son Windows y la versión en la nube para quienes no tienen un Mac con Apple Silicon.',
+      ],
+      fr: [
+        'Nous avons créé Sprich parce que la dictée en allemand sur Mac était soit mauvaise, soit envoyait tout vers un cloud américain. Les médecins, les avocats et les auteurs, en particulier, n\'ont pas le droit de le faire ou ne le veulent pas. C\'est pourquoi Sprich fonctionne entièrement en local et est entraîné pour l\'allemand, y compris les termes techniques et le « Denglisch » (mélange d\'allemand et d\'anglais). Viennent ensuite Windows et la version cloud pour tous ceux qui n\'ont pas de Mac Apple Silicon.',
+      ],
+      ja: [
+        '私たちがSprichを作ったのは、Macでのドイツ語の音声入力が、精度が低いか、すべてを米国のクラウドに送るかのどちらかだったからです。特に医師、弁護士、作家は、それが許されないか、望まないのです。だからSprichは完全にローカルで動作し、専門用語やドイツ語と英語の混在（Denglisch）も含めてドイツ語向けに学習されています。次はWindows版と、Apple SiliconのMacを持たない方のためのクラウド版です。',
+      ],
+      pt: [
+        'Criamos o Sprich porque ditar em alemão no Mac era ruim ou mandava tudo para uma nuvem dos EUA. Médicos, advogados e autores, em especial, não podem ou não querem fazer isso. Por isso o Sprich roda totalmente local e é treinado para o alemão, incluindo termos técnicos e Denglisch. Os próximos passos são o Windows e a versão em nuvem para quem não tem um Mac com Apple Silicon.',
+      ],
+      ar: [
+        'بنينا Sprich لأن الإملاء بالألمانية على Mac كان إما رديئًا أو يرسل كل شيء إلى سحابة أمريكية. والأطباء والمحامون والمؤلفون خصوصًا لا يُسمح لهم بذلك أو لا يريدونه. لذلك يعمل Sprich محليًا بالكامل ومدرَّب على الألمانية، بما في ذلك المصطلحات المتخصصة والمزج بين الألمانية والإنجليزية (Denglisch). والخطوة التالية هي Windows والنسخة السحابية لكل من لا يملك جهاز Mac بمعالج Apple Silicon.',
+      ],
+      zh: [
+        '我们开发 Sprich，是因为在 Mac 上用德语听写，要么效果差，要么把一切都发到美国的云端。尤其是医生、律师和作家，往往不被允许或不愿这样做。所以 Sprich 完全在本地运行，并针对德语训练，包括专业术语和德英混用（Denglisch）。接下来是 Windows 版，以及面向没有 Apple Silicon Mac 的用户的云端版本。',
+      ],
+      ko: [
+        '저희는 Mac에서 독일어로 받아쓰기를 하면 품질이 나쁘거나 모든 것이 미국 클라우드로 전송되었기 때문에 Sprich를 만들었습니다. 특히 의사, 변호사, 작가는 그렇게 하는 것이 허용되지 않거나 원하지 않습니다. 그래서 Sprich는 완전히 로컬에서 동작하며 전문 용어와 독일어-영어 혼용(Denglisch)까지 포함해 독일어로 학습되어 있습니다. 다음으로는 Windows와, Apple Silicon Mac이 없는 분들을 위한 클라우드 버전이 나옵니다.',
+      ],
+    },
+  },
 }
