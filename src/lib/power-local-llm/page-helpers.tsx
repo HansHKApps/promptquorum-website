@@ -1197,6 +1197,7 @@ const HUB_THEMES: Array<{
       'karakeep-review',
       'evershelf-review',
       'ai-file-sorter-review',
+      'stratosort-review',
       'linkwarden-review',
       'blinko-review',
       'tolaria-review',

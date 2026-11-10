@@ -1714,6 +1714,11 @@
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
   },
+  "stratosort": {
+    "cluster": "power-local-llm",
+    "urlSlug": "stratosort-review",
+    "url": "/power-local-llm/stratosort-review"
+  },
   "sprich": {
     "cluster": "power-local-llm",
     "urlSlug": "sprich-review",

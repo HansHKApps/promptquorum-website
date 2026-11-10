@@ -85,6 +85,7 @@ export type CategorySubKey =
   | 'chat-with-data'
   | 'summarizers'
   | 'presentation-generation'
+  | 'file-organization'
   // Knowledge & Retrieval
   | 'rag-frameworks'
   | 'vector-databases'
@@ -228,6 +229,7 @@ export const CATEGORY_SUB_LABEL: Record<CategorySubKey, Record<Language, string>
   'chat-with-data': { en: 'Chat with spreadsheets & databases', de: 'Chat mit Tabellen & Datenbanken', fr: 'Chat avec tableurs et bases de données', ja: '表計算＆データベースとチャット', zh: '与表格和数据库对话', es: 'Chat con hojas de cálculo y bases de datos', pt: 'Chat com planilhas e bancos de dados', ar: 'الدردشة مع الجداول وقواعد البيانات', ko: '스프레드시트 및 데이터베이스와 채팅' },
   summarizers: { en: 'Summarizers', de: 'Zusammenfassungs-Tools', fr: 'Outils de résumé', ja: '要約ツール', zh: '摘要工具', es: 'Resumidores', pt: 'Resumidores', ar: 'أدوات التلخيص', ko: '요약 도구' },
   'presentation-generation': { en: 'Presentation generation', de: 'Präsentationserstellung', fr: 'Génération de présentations', ja: 'プレゼンテーション生成', zh: '演示文稿生成', es: 'Generación de presentaciones', pt: 'Geração de apresentações', ar: 'إنشاء العروض التقديمية', ko: '프레젠테이션 생성' },
+  'file-organization': { en: 'File organization', de: 'Dateiorganisation', fr: 'Organisation de fichiers', ja: 'ファイル整理', zh: '文件整理', es: 'Organización de archivos', pt: 'Organização de arquivos', ar: 'تنظيم الملفات', ko: '파일 정리' },
   'rag-frameworks': { en: 'RAG frameworks', de: 'RAG-Frameworks', fr: 'Frameworks RAG', ja: 'RAGフレームワーク', zh: 'RAG 框架', es: 'Frameworks RAG', pt: 'Frameworks RAG', ar: 'أطر عمل RAG', ko: 'RAG 프레임워크' },
   'vector-databases': { en: 'Vector databases', de: 'Vektordatenbanken', fr: 'Bases de données vectorielles', ja: 'ベクトルデータベース', zh: '向量数据库', es: 'Bases de datos vectoriales', pt: 'Bancos de dados vetoriais', ar: 'قواعد البيانات المتجهة', ko: '벡터 데이터베이스' },
   'embeddings-indexing': { en: 'Embeddings & indexing', de: 'Embeddings & Indexierung', fr: 'Embeddings et indexation', ja: '埋め込み＆インデックス作成', zh: '嵌入与索引', es: 'Embeddings e indexación', pt: 'Embeddings e indexação', ar: 'التضمينات والفهرسة', ko: '임베딩 및 인덱싱' },
@@ -325,6 +327,7 @@ export const CATEGORY_SUB_GROUP: Record<CategorySubKey, CategoryGroupKey> = {
   'chat-with-data': 'documents-research',
   summarizers: 'documents-research',
   'presentation-generation': 'documents-research',
+  'file-organization': 'documents-research',
   'rag-frameworks': 'knowledge-retrieval',
   'vector-databases': 'knowledge-retrieval',
   'embeddings-indexing': 'knowledge-retrieval',
@@ -385,7 +388,7 @@ export const CATEGORY_GROUPS: { key: CategoryGroupKey; subs: CategorySubKey[] }[
   { key: 'chat-assistants', subs: ['general-chat-clients', 'personal-assistants', 'roleplay-companions', 'chat-app-bots', 'hotkey-menubar-assistants', 'browser-sidebars', 'terminal-chat-clients', 'tutors-learning'] },
   { key: 'agents-automation', subs: ['agent-frameworks', 'autonomous-agents', 'workflow-node-builders', 'computer-browser-agents', 'agent-memory', 'mcp-servers-skills', 'multi-agent-orchestration', 'web-scraping-for-ai'] },
   { key: 'code-development', subs: ['code-assistants-ide-plugins', 'sdks-libraries', 'ai-code-editors', 'terminal-coding-agents', 'code-review', 'prompt-to-app-builders', 'dev-tools-testing-docs'] },
-  { key: 'documents-research', subs: ['document-pdf-chat', 'contract-review', 'notes-integrations', 'search-deep-research', 'translation', 'writing-email', 'ocr-document-parsing', 'chat-with-data', 'summarizers', 'presentation-generation'] },
+  { key: 'documents-research', subs: ['document-pdf-chat', 'contract-review', 'notes-integrations', 'search-deep-research', 'translation', 'writing-email', 'ocr-document-parsing', 'chat-with-data', 'summarizers', 'presentation-generation', 'file-organization'] },
   { key: 'knowledge-retrieval', subs: ['rag-frameworks', 'vector-databases', 'embeddings-indexing', 'local-search', 'knowledge-graphs'] },
   { key: 'voice-audio', subs: ['speech-to-text', 'text-to-speech', 'voice-cloning', 'realtime-voice-agents', 'music-audio', 'dictation', 'meeting-notes', 'voice-assistants', 'stem-separation-cleanup'] },
   { key: 'images-video', subs: ['image-generation', 'editing-upscaling', 'vision-ocr', 'video-generation', 'avatars-lipsync', '3d-generation', 'subtitles-dubbing', 'video-editing', 'creative-app-plugins'] },

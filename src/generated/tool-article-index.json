@@ -5778,7 +5778,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "Ollama vision models": {
@@ -8205,6 +8205,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "stratosort-review",
+        "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
+        "url": "/power-local-llm/stratosort-review",
+        "dateModified": "2026-11-10",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atlarix-review",
         "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
         "url": "/power-local-llm/atlarix-review",
@@ -8212,7 +8220,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Lemonade": {
@@ -13577,6 +13585,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "StratoSort": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "stratosort-review",
+        "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
+        "url": "/power-local-llm/stratosort-review",
+        "dateModified": "2026-11-10",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Sprich": {
