@@ -1546,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/stratosort-review-hero-zh.webp',
     title: 'StratoSort评测：适用于Mac、Windows和Linux的本地AI文件整理工具',
     seoTitle: 'StratoSort评测：Mac、Windows、Linux本地AI文件整理',
-    intro: 'StratoSort是一款桌面应用：它读取文件的内容，建议文件名和文件夹，并且据其文档称只有在你批准后才移动文件，所用的语言模型通过llama.cpp在你自己的电脑上运行。它还提供语义搜索、文档问答和知识图谱。本评测梳理其官网、文档和GitHub仓库记载的内容、本地运行的界线、许可证如何限制商业使用，以及它与目录中同类工具的对比。',
+    intro: 'StratoSort是一款桌面应用，按文件内容整理文件，同时可作为针对你文档的私密搜索、问答和知识图谱工具，所用的语言模型通过llama.cpp在你自己的电脑上运行。据其文档称，只有在你批准后才会移动文件。本评测梳理其官网、文档和GitHub仓库记载的内容、本地运行的界线、许可证如何限制商业使用，以及它与目录中同类工具的对比。',
     metaDescription: 'StratoSort评测：适用于Mac、Windows和Linux的AI文件整理应用，本地运行llama.cpp模型，安装后可离线使用。许可、隐私与限制，未经实测。',
     twitterDescription: 'StratoSort评测：在Mac、Windows和Linux上本地重命名、整理和搜索文件的AI工具。个人使用免费。隐私、许可、限制与替代方案。',
     audience: '文档、扫描件、图片和音频文件夹杂乱、希望由AI建议文件名和文件夹、又不想把文件上传到云服务的用户——涵盖安装、模型、隐私、许可、限制和替代方案。',
@@ -1592,6 +1592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '功能', anchor: 'features' },
       { label: '模型与硬件', anchor: 'models-hardware' },
       { label: '隐私、许可与费用', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '优势与局限', anchor: 'tradeoffs' },
       { label: 'StratoSort与替代方案对比', anchor: 'vs-alternatives' },
       { label: '适合使用StratoSort的人', anchor: 'who-should-use' },
@@ -1609,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'StratoSort是一款桌面应用，据其文档称，它使用本地llama.cpp模型为你的文件建议名称和文件夹，下载模型后可离线使用。',
+            text: 'StratoSort是一款桌面应用，据开发者称，它读取文件的内容，并把文件移入你用日常语言描述的文件夹，可按统一格式重命名，也可保留原文件名，所用模型在你自己的电脑上运行。',
           },
           {
             type: 'plain-terms',
@@ -1620,6 +1621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本地说法：模型在设备上运行；模型下载、更新检查以及你添加的任何云端服务商会使用互联网。',
           '开发者：Kennedy Applied Sciences, Inc.，代码公开在GitHub的iLevyTate账号下。',
           '维护状态：版本5.1.2于2026年11月1日发布，仓库于2026年11月10日更新，说明项目仍在积极开发。',
+          'Knowledge OS：开发者称，搜索、问答和图谱部分约占应用功能的一半，搜索既能匹配发票号等确切字词，也能按含义匹配。',
           '不足：这里没有上手测试，公开项目还很年轻，模型首次下载体积大。',
         ],
       },
@@ -1652,6 +1654,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取方式': '[stratosort.com](https://stratosort.com/)',
           },
           {
+            '平台': '演示视频',
+            '获取方式': '[StratoSort演示视频](https://stratosort.com/assets/strato-ad.mp4) — 开发者提供的简短mp4',
+          },
+          {
+            '平台': '离线（气隙）安装',
+            '获取方式': '[安装指南：离线与气隙安装](https://stratosort.com/docs/INSTALL_GUIDE.html#offline-and-air-gapped-install) — 适用于从不联网的电脑',
+          },
+          {
             '平台': '隐私政策',
             '获取方式': '[StratoSort隐私政策](https://stratosort.com/privacy.html)',
           },
@@ -1660,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取方式': '[github.com/iLevyTate/StratoSortStack](https://github.com/iLevyTate/StratoSortStack) — PolyForm Noncommercial 1.0.0',
           },
         ],
-        note: '安装包体积较大（Linux的.deb约534 MB），每个版本都附有SHA-256校验文件。',
+        note: '安装包体积较大（Linux的.deb约534 MB），每个版本都附有SHA-256校验文件。开发者称，Windows安装包由Kennedy Applied Sciences, Inc.签名，Mac版本自4.0.0版起已通过公证。',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -1683,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'StratoSort是什么',
         content: [
           '**StratoSort是一款读取内容、而不只是文件名的文件整理工具。** 它查看文档、电子表格、图片、扫描件、音频和视频的内部，建议名称和文件夹，并把文件移入你用日常语言描述的“Smart Folders”。',
-          '仓库名为StratoSortStack，并自称是原版StratoSort的继任者；官网和本评测使用StratoSort这个名称。除整理之外，应用还提供语义搜索、带来源的文档问答、知识图谱，以及供Claude Desktop、Cursor和Zed等工具使用的可选本地MCP服务器。',
+          '仓库名为StratoSortStack，并自称是原版StratoSort的继任者；官网和本评测使用StratoSort这个名称。除整理之外，应用还有一个搜索、问答和图谱部分，开发者称之为Knowledge OS，并称其约占应用功能的一半，另外还有一个可选的本地MCP服务器。',
           '本评测依据官网、文档、隐私政策和GitHub仓库，没有进行实际上手测试，因此这里不对应用命名和整理文件的效果以及运行速度做评级。',
         ],
       },
@@ -1696,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '安装应用',
-            whyItMatters: '从[GitHub发布页面](https://github.com/iLevyTate/StratoSortStack/releases/latest)下载适合你系统的安装包并打开。',
+            whyItMatters: '从上方“获取StratoSort”表格中下载适合你系统的安装包并打开。',
           },
           {
             title: '下载模型',
@@ -1716,15 +1726,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: '功能',
         content: [
-          '**功能集中在整理和查找文件。** 以下内容均来自官网、文档和发布说明。',
+          '**功能集中在整理和查找文件。** 以下内容均来自官网、文档、发布说明以及开发者2026年11月10日的说明。',
         ],
         items: [
-          '**基于内容的整理。** 根据文件包含的内容建议文件名和文件夹，扫描件和图片则通过视觉模型和OCR处理。',
+          '**基于内容的整理。** 根据文件包含的内容选择文件夹，扫描件和图片则通过视觉模型和OCR处理。重命名是可选的：文件可按统一格式重命名，也可通过“保留原名”选项以原文件名移动。',
+          '**文件夹监视。** 据开发者称，应用可以监视“下载”文件夹和你的Smart Folders，并建议新文件该放在哪里。',
           '**复核与撤销。** 建议的移动会等待你的批准，并且可以撤回。',
-          '**语义搜索与问答。** 按含义搜索，并就你的文档提问，同时显示来源。',
+          '**搜索与问答。** 搜索既能匹配发票号等确切字词，也能按含义匹配，问答的回答会注明来源文件。',
           '**音频和视频。** 语音由Whisper转写，转写文字与你的文档一起建立索引。',
-          '**知识图谱。** Relate和Atlas视图展示文档之间的关联。',
-          '**MCP服务器。** 可选的本地服务器让Claude Desktop、Cursor和Zed等工具查询你的文件。',
+          '**知识图谱。** 三种视图：Relate（聚类和相似度链接）、Atlas（向量嵌入的地图，可框选文件进行移动、打标签或转为Smart Folder）和Timeline。',
+          '**MCP服务器。** 可选的本地服务器，只读且绑定到127.0.0.1，让Claude Desktop、Cursor和Zed等工具查询你的文件；据开发者称，连接的客户端只会得到摘要和引用，不会得到原始文件。',
         ],
       },
       modelsHardware: {
@@ -1740,9 +1751,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私、许可与费用',
         content: [
           '**隐私政策称，应用在你的电脑上运行，在标准配置下文档内容、文件路径、嵌入向量和搜索查询不会离开电脑。** 它还称应用不包含会回传数据的分析、遥测、崩溃报告或功能开关服务，网站也没有账号或同步服务。',
-          '网络文档列出了应用可能发起的连接：从huggingface.co下载模型、在GitHub上检查新版本，以及一次性下载语音模型、视觉辅助组件和OCR语言数据。在已安装的版本中，版本检查默认开启，可在设置中关闭。除非你添加自己的Anthropic或兼容OpenAI的密钥，否则云端AI保持关闭；添加后，你发送的文本会按该服务商自己的条款交给它。代码是公开的，PromptQuorum没有检查网络流量，因此这些说法出自开发者自己。',
+          '网络文档列出了应用可能发起的连接：从huggingface.co下载模型、在GitHub上检查新版本，以及一次性下载语音模型。开发者称，视觉运行组件和OCR语言数据随安装包一起提供，只有在内置文件缺失时才会作为备用方案下载，因此在正常使用中，这些附加组件里只有语音模型需要一次性下载，而且只在你选择安装时才下载。在已安装的版本中，版本检查默认开启，可在设置中关闭。除非你添加自己的Anthropic或兼容OpenAI的密钥，否则云端AI保持关闭；添加后，你发送的文本会按该服务商自己的条款交给它。代码是公开的，PromptQuorum没有检查网络流量，因此这些说法出自开发者自己。',
           '许可证为PolyForm Noncommercial 1.0.0，属于源代码可见，而不是开源。个人及其他非商业使用免费，包含全部功能；商业使用需要向Kennedy Applied Sciences, Inc.购买按席位计费的付费许可，通过电子邮件报价，没有公布价格。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'StratoSort的开发者于2026年11月10日发来了更正和下面这段说明。它作为开发者自己的原话呈现，不代表PromptQuorum的独立编辑评估，PromptQuorum也无法通过代码或测试对其进行核实：',
+          '“我开发StratoSort，是为了那些文件太私密、不能上传到云端AI服务的人。模型下载完成后，整理、搜索、问答和转写都在你的电脑上运行。没有账号，没有遥测；关闭更新检查且没有云端密钥时，它不会发出任何对外请求。我独自开发了大约17个月，都是利用业余时间。如果有任何表现与文档所述不同，请在GitHub上提交issue，我会去查看。”',
+        ],
+        note: '— StratoSort的开发者',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1839,7 +1859,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**没有许可的企业。** 在PolyForm Noncommercial下，商业使用需要付费许可。',
           '**需要开源代码的人。** 该许可证是源代码可见，不属于OSI认可的开源。',
           '**内存不足8 GB的电脑。** 这是官方标明的最低要求。',
-          '**不希望有任何自动网络流量的人。** 版本检查默认开启，需要手动关闭。',
         ],
       },
       faq: {
@@ -1848,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'StratoSort可以离线使用吗？',
-            a: '文档称安装模型后可以，并建议用飞行模式测试。首次启动需要联网下载模型，除非你选择以有限AI功能继续。PromptQuorum没有在离线状态下测试。',
+            a: '文档称安装模型后可以，并建议用飞行模式测试。首次启动需要联网下载模型，除非你选择以有限AI功能继续；安装指南还记载了面向从不联网的电脑的气隙安装方式（见“获取StratoSort”）。PromptQuorum没有在离线状态下测试。',
           },
           {
             q: '我可以在工作中使用吗？',
@@ -1885,6 +1904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[隐私政策](https://stratosort.com/privacy.html) — 数据处理，最近更新于2026年10月29日。',
           '[GitHub仓库](https://github.com/iLevyTate/StratoSortStack) — README、许可证和源代码。',
           '[GitHub Releases](https://github.com/iLevyTate/StratoSortStack/releases) — 安装包文件和版本5.1.2的发布日期。',
+          '[安装指南](https://stratosort.com/docs/INSTALL_GUIDE.html#offline-and-air-gapped-install) — 安装包以及离线与气隙安装。',
         ],
       },
       relatedReading: {
