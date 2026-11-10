@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Features',
         content: [
-          '**The feature set centres on organizing and finding files.** Everything below comes from the website, documentation, release notes and the maker's comments of 10 November 2026.',
+          '**The feature set centres on organizing and finding files.** Everything below comes from the website, documentation, release notes and the maker\'s comments of 10 November 2026.',
         ],
         items: [
           '**Content-based sorting.** Folders are chosen from what the file contains, including scans and images through a vision model and OCR. Renaming is optional: files can be renamed in a consistent format or moved with their original names through a keep-original naming option.',
