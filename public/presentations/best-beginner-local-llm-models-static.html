@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Local LLM Models for Beginners 2026 | PromptQuorum</title>
-    <meta name="description" content="5 best beginner local LLMs: Llama 3.2 3B, Phi-4 Mini, Gemma 3 2B, Llama 3.3 8B, Qwen3 8B. Ranked by RAM and speed. Start with the right one." />
+    <meta name="description" content="5 best beginner local LLMs: Llama 3.2 3B, Phi-4 Mini, Gemma 3 2B, Llama 3.1 8B, Qwen3 8B. Ranked by RAM and speed. Start with the right one." />
     <meta property="og:title" content="Best Local LLM Models for Beginners 2026 — PromptQuorum" />
     <meta property="og:description" content="5 models, 4–8 GB RAM, all install with one Ollama command. Full comparison table with RAM, speed, and context window data." />
     <meta property="og:type" content="website" />
@@ -426,7 +426,7 @@
                             '<strong>#1 Llama 3.2 3B</strong> — 2.5 GB RAM, 25–45 tok/s, 128K context. Best overall for first-timers.',
                             '<strong>#2 Phi-4 Mini 3.8B</strong> — 2.5 GB RAM, 128K context. Best reasoning at 4–6 GB RAM.',
                             '<strong>#3 Gemma 3 2B</strong> — 1.7 GB RAM, 40–60 tok/s. Fastest CPU model; ideal to test your setup.',
-                            '<strong>#4 Llama 3.3 8B</strong> — 5.5 GB RAM, 72% HumanEval. Best 7B/8B all-rounder.',
+                            '<strong>#4 Llama 3.1 8B</strong> — 5.5 GB RAM, 72% HumanEval. Best 7B/8B all-rounder.',
                             '<strong>#5 Qwen3 8B</strong> — 5.2 GB RAM, 32K context (131K YaRN), 29+ languages. Best coding and multilingual.'
                         ]
                     },
@@ -437,7 +437,7 @@
                         items: [
                             '<strong>Rule of thumb:</strong> parameters × 0.5 ≈ GB of RAM needed at Q4_K_M (4-bit) quantization',
                             '<strong>4–6 GB RAM:</strong> use 3B models — Llama 3.2 3B or Phi-4 Mini 3.8B',
-                            '<strong>8 GB RAM:</strong> 7B models recommended — Qwen3 8B or Llama 3.3 8B',
+                            '<strong>8 GB RAM:</strong> 7B models recommended — Qwen3 8B or Llama 3.1 8B',
                             '<strong>Task matters too:</strong> Coding → Qwen3 8B · Speed → Gemma 3 2B · Reasoning at low RAM → Phi-4 Mini'
                         ]
                     },
@@ -449,7 +449,7 @@
                             { 'Model': 'Llama 3.2 3B', 'RAM': '2.5 GB', 'Speed (CPU)': '25–45 tok/s', 'Context': '128K', 'Best For': 'General use, first model' },
                             { 'Model': 'Phi-4 Mini 3.8B', 'RAM': '2.5 GB', 'Speed (CPU)': '30–50 tok/s', 'Context': '128K', 'Best For': 'Reasoning, coding, low RAM' },
                             { 'Model': 'Gemma 3 2B', 'RAM': '1.7 GB', 'Speed (CPU)': '40–60 tok/s', 'Context': '128K', 'Best For': 'Speed, very low RAM' },
-                            { 'Model': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '128K', 'Best For': 'General all-rounder, 72% HumanEval' },
+                            { 'Model': 'Llama 3.1 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '128K', 'Best For': 'General all-rounder, 72% HumanEval' },
                             { 'Model': 'Qwen3 8B', 'RAM': '5.2 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '32K (131K YaRN)', 'Best For': 'Multilingual, coding' }
                         ]
                     },
@@ -467,12 +467,12 @@
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.1 8B',
                         items: [
                             '<strong>Gemma 3 2B:</strong> Fastest CPU model — 40–60 tok/s, just 1.7 GB RAM. Google\'s smallest open model, now with 128K context (up from 8K on Gemma 2).',
                             'Use to test your setup, or when speed matters more than output depth.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
-                            '<strong>Llama 3.3 8B:</strong> The current general-purpose all-rounder at this size — 72% HumanEval, 128K context, solid English reasoning.',
+                            '<strong>Llama 3.1 8B:</strong> The current general-purpose all-rounder at this size — 72% HumanEval, 128K context, solid English reasoning.',
                             'Best choice on 8 GB RAM for longer text, complex instructions, and multi-turn conversations.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
@@ -523,7 +523,7 @@
                             'Choosing by parameter count alone — a well-quantized 7B can beat a poorly-quantized 13B',
                             'Ignoring VRAM overhead — models need 10–15% more than the file size',
                             'Using Q3_K_S when Q4_K_M gives better quality at nearly the same size',
-                            'Defaulting to Mistral Small v0.3 — Qwen3 8B beats it on coding, Llama 3.3 8B on English (same RAM)',
+                            'Defaulting to Mistral Small v0.3 — Qwen3 8B beats it on coding, Llama 3.1 8B on English (same RAM)',
                             'Pulling without checking RAM — risks disk swapping and output under 1 tok/s'
                         ]
                     },
@@ -573,7 +573,7 @@
                             '<strong>#1 Llama 3.2 3B</strong> — 2,5 GB RAM, 25–45 Tok/s, 128K Kontext. Bestes Gesamtmodell für Einsteiger.',
                             '<strong>#2 Phi-4 Mini 3.8B</strong> — 2,5 GB RAM, 128K Kontext. Bestes Reasoning bei 4–6 GB RAM.',
                             '<strong>#3 Gemma 3 2B</strong> — 1,7 GB RAM, 40–60 Tok/s. Schnellstes CPU-Modell; ideal zum Setup-Test.',
-                            '<strong>#4 Llama 3.3 8B</strong> — 5,5 GB RAM, 72% HumanEval. Bester 7B/8B-Allrounder.',
+                            '<strong>#4 Llama 3.1 8B</strong> — 5,5 GB RAM, 72% HumanEval. Bester 7B/8B-Allrounder.',
                             '<strong>#5 Qwen3 8B</strong> — 5,2 GB RAM, 32K Kontext (131K mit YaRN), 29+ Sprachen. Bestes Coding und Mehrsprachigkeit.'
                         ]
                     },
@@ -584,8 +584,8 @@
                         items: [
                             '<strong>Faustformel:</strong> Parameter × 0,5 ≈ GB RAM bei Q4_K_M (4-Bit) Quantisierung',
                             '<strong>4–6 GB RAM:</strong> 3B-Modelle verwenden — Llama 3.2 3B oder Phi-4 Mini 3.8B',
-                            '<strong>8 GB RAM:</strong> 7B-Modelle empfohlen — Qwen3 8B oder Llama 3.3 8B',
-                            '<strong>Aufgabe zählt auch:</strong> Coding → Qwen3 8B · Geschwindigkeit → Gemma 3 2B · EU-Compliance → Llama 3.3 8B'
+                            '<strong>8 GB RAM:</strong> 7B-Modelle empfohlen — Qwen3 8B oder Llama 3.1 8B',
+                            '<strong>Aufgabe zählt auch:</strong> Coding → Qwen3 8B · Geschwindigkeit → Gemma 3 2B · EU-Compliance → Llama 3.1 8B'
                         ]
                     },
                     {
@@ -596,7 +596,7 @@
                             { 'Modell': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Geschwindigkeit': '25–45 Tok/s', 'Kontext': '128K', 'Optimal für': 'Allgemein, erstes Modell' },
                             { 'Modell': 'Phi-4 Mini 3.8B', 'RAM': '2,5 GB', 'Geschwindigkeit': '30–50 Tok/s', 'Kontext': '128K', 'Optimal für': 'Reasoning, Coding, wenig RAM' },
                             { 'Modell': 'Gemma 3 2B', 'RAM': '1,7 GB', 'Geschwindigkeit': '40–60 Tok/s', 'Kontext': '128K', 'Optimal für': 'Geschwindigkeit, minimaler RAM' },
-                            { 'Modell': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Geschwindigkeit': '10–18 Tok/s', 'Kontext': '128K', 'Optimal für': 'Allrounder, 72% HumanEval' },
+                            { 'Modell': 'Llama 3.1 8B', 'RAM': '5,5 GB', 'Geschwindigkeit': '10–18 Tok/s', 'Kontext': '128K', 'Optimal für': 'Allrounder, 72% HumanEval' },
                             { 'Modell': 'Qwen3 8B', 'RAM': '5,2 GB', 'Geschwindigkeit': '10–18 Tok/s', 'Kontext': '32K (131K YaRN)', 'Optimal für': 'Mehrsprachig, Coding' }
                         ]
                     },
@@ -614,12 +614,12 @@
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.1 8B',
                         items: [
                             '<strong>Gemma 3 2B:</strong> Schnellstes CPU-Modell — 40–60 Tok/s, nur 1,7 GB RAM. Googles kleinstes Open-Source-Modell, jetzt mit 128K Kontext (statt 8K bei Gemma 2).',
                             'Gut zum Setup-Test oder wenn Geschwindigkeit wichtiger ist als Antworttiefe.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
-                            '<strong>Llama 3.3 8B:</strong> Der aktuelle Allrounder in dieser Größenklasse — 72% HumanEval, 128K Kontext, solides Englisch-Reasoning.',
+                            '<strong>Llama 3.1 8B:</strong> Der aktuelle Allrounder in dieser Größenklasse — 72% HumanEval, 128K Kontext, solides Englisch-Reasoning.',
                             'Beste Wahl bei 8 GB RAM für längere Texte, komplexe Anweisungen und Mehrfachdialoge.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
@@ -670,7 +670,7 @@
                             'Nur nach Parameterzahl wählen — ein gut quantisiertes 7B kann ein schlechtes 13B übertreffen',
                             'VRAM-Overhead ignorieren — Modelle benötigen 10–15% mehr als die Dateigröße',
                             'Q3_K_S verwenden, wenn Q4_K_M bessere Qualität bei ähnlicher Größe bietet',
-                            'Standardmäßig Mistral Small v0.3 wählen — Qwen3 8B ist besser beim Coding, Llama 3.3 8B bei Englisch',
+                            'Standardmäßig Mistral Small v0.3 wählen — Qwen3 8B ist besser beim Coding, Llama 3.1 8B bei Englisch',
                             'Modell laden ohne RAM-Check — riskiert Disk-Swapping und unter 1 Tok/s'
                         ]
                     },
@@ -720,7 +720,7 @@
                             '<strong>#1 Llama 3.2 3B</strong> — 2,5 Go RAM, 25–45 tok/s, 128K contexte. Meilleur modèle global pour les débutants.',
                             '<strong>#2 Phi-4 Mini 3.8B</strong> — 2,5 Go RAM, 128K contexte. Meilleur raisonnement avec 4–6 Go RAM.',
                             '<strong>#3 Gemma 3 2B</strong> — 1,7 Go RAM, 40–60 tok/s. Le plus rapide sur CPU ; idéal pour tester sa configuration.',
-                            '<strong>#4 Llama 3.3 8B</strong> — 5,5 Go RAM, 72% HumanEval. Meilleur polyvalent 7B/8B.',
+                            '<strong>#4 Llama 3.1 8B</strong> — 5,5 Go RAM, 72% HumanEval. Meilleur polyvalent 7B/8B.',
                             '<strong>#5 Qwen3 8B</strong> — 5,2 Go RAM, 32K contexte (131K avec YaRN), 29+ langues. Meilleur pour le code et le multilingue.'
                         ]
                     },
@@ -731,8 +731,8 @@
                         items: [
                             '<strong>Règle pratique :</strong> paramètres × 0,5 ≈ Go de RAM nécessaires en quantification Q4_K_M (4 bits)',
                             '<strong>4–6 Go RAM :</strong> utiliser des modèles 3B — Llama 3.2 3B ou Phi-4 Mini 3.8B',
-                            '<strong>8 Go RAM :</strong> modèles 7B recommandés — Qwen3 8B ou Llama 3.3 8B',
-                            '<strong>La tâche compte aussi :</strong> Code → Qwen3 8B · Vitesse → Gemma 3 2B · Conformité UE → Llama 3.3 8B'
+                            '<strong>8 Go RAM :</strong> modèles 7B recommandés — Qwen3 8B ou Llama 3.1 8B',
+                            '<strong>La tâche compte aussi :</strong> Code → Qwen3 8B · Vitesse → Gemma 3 2B · Conformité UE → Llama 3.1 8B'
                         ]
                     },
                     {
@@ -743,7 +743,7 @@
                             { 'Modèle': 'Llama 3.2 3B', 'RAM': '2,5 Go', 'Vitesse (CPU)': '25–45 tok/s', 'Contexte': '128K', 'Idéal pour': 'Usage général, premier modèle' },
                             { 'Modèle': 'Phi-4 Mini 3.8B', 'RAM': '2,5 Go', 'Vitesse (CPU)': '30–50 tok/s', 'Contexte': '128K', 'Idéal pour': 'Raisonnement, code, faible RAM' },
                             { 'Modèle': 'Gemma 3 2B', 'RAM': '1,7 Go', 'Vitesse (CPU)': '40–60 tok/s', 'Contexte': '128K', 'Idéal pour': 'Vitesse, très faible RAM' },
-                            { 'Modèle': 'Llama 3.3 8B', 'RAM': '5,5 Go', 'Vitesse (CPU)': '10–18 tok/s', 'Contexte': '128K', 'Idéal pour': 'Polyvalent, 72% HumanEval' },
+                            { 'Modèle': 'Llama 3.1 8B', 'RAM': '5,5 Go', 'Vitesse (CPU)': '10–18 tok/s', 'Contexte': '128K', 'Idéal pour': 'Polyvalent, 72% HumanEval' },
                             { 'Modèle': 'Qwen3 8B', 'RAM': '5,2 Go', 'Vitesse (CPU)': '10–18 tok/s', 'Contexte': '32K (131K YaRN)', 'Idéal pour': 'Multilingue, code' }
                         ]
                     },
@@ -761,12 +761,12 @@
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.1 8B',
                         items: [
                             '<strong>Gemma 3 2B :</strong> Modèle CPU le plus rapide — 40–60 tok/s, seulement 1,7 Go RAM. Plus petit modèle ouvert de Google, désormais avec 128K de contexte (contre 8K sur Gemma 2).',
                             'Utile pour tester sa configuration ou quand la vitesse prime sur la profondeur.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
-                            '<strong>Llama 3.3 8B :</strong> Le polyvalent actuel à cette taille — 72% HumanEval, 128K de contexte, raisonnement solide en anglais.',
+                            '<strong>Llama 3.1 8B :</strong> Le polyvalent actuel à cette taille — 72% HumanEval, 128K de contexte, raisonnement solide en anglais.',
                             'Meilleur choix avec 8 Go RAM pour les textes longs, instructions complexes et conversations multi-tours.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
@@ -817,7 +817,7 @@
                             'Choisir uniquement par nombre de paramètres — un 7B bien quantifié peut surpasser un 13B médiocre',
                             'Ignorer l\'overhead VRAM — les modèles nécessitent 10–15% de plus que la taille du fichier',
                             'Utiliser Q3_K_S quand Q4_K_M offre meilleure qualité à taille similaire',
-                            'Prendre Mistral Small v0.3 par défaut — Qwen3 8B est meilleur en code, Llama 3.3 8B en anglais',
+                            'Prendre Mistral Small v0.3 par défaut — Qwen3 8B est meilleur en code, Llama 3.1 8B en anglais',
                             'Charger sans vérifier la RAM — risque de swap disque et sortie sous 1 tok/s'
                         ]
                     },
@@ -867,7 +867,7 @@
                             '<strong>#1 Llama 3.2 3B</strong> — 2.5GB RAM、25〜45トークン/秒、128Kコンテキスト。初心者に最もお勧め。',
                             '<strong>#2 Phi-4 Mini 3.8B</strong> — 2.5GB RAM、128Kコンテキスト。4〜6GB RAMでの最良の推論モデル。',
                             '<strong>#3 Gemma 3 2B</strong> — 1.7GB RAM、40〜60トークン/秒。最速のCPUモデル。',
-                            '<strong>#4 Llama 3.3 8B</strong> — 5.5GB RAM、HumanEval 72%。最良の7B/8Bオールラウンダー。',
+                            '<strong>#4 Llama 3.1 8B</strong> — 5.5GB RAM、HumanEval 72%。最良の7B/8Bオールラウンダー。',
                             '<strong>#5 Qwen3 8B</strong> — 5.2GB RAM、32Kコンテキスト（YaRNで131K）、29言語以上対応。コーディングと多言語に最適。'
                         ]
                     },
@@ -878,8 +878,8 @@
                         items: [
                             '<strong>目安：</strong>パラメータ数 × 0.5 ≈ Q4_K_M（4ビット）量子化に必要なGB',
                             '<strong>4〜6GB RAM：</strong>3Bモデル推奨 — Llama 3.2 3BまたはPhi-4 Mini 3.8B',
-                            '<strong>8GB RAM：</strong>7Bモデル推奨 — Qwen3 8BまたはLlama 3.3 8B',
-                            '<strong>用途も重要：</strong>コーディング → Qwen3 8B · 速度 → Gemma 3 2B · EUコンプライアンス → Llama 3.3 8B'
+                            '<strong>8GB RAM：</strong>7Bモデル推奨 — Qwen3 8BまたはLlama 3.1 8B',
+                            '<strong>用途も重要：</strong>コーディング → Qwen3 8B · 速度 → Gemma 3 2B · EUコンプライアンス → Llama 3.1 8B'
                         ]
                     },
                     {
@@ -890,7 +890,7 @@
                             { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5GB', '速度(CPU)': '25〜45トークン/秒', 'コンテキスト': '128K', '最適用途': '一般用途、最初のモデル' },
                             { 'モデル': 'Phi-4 Mini 3.8B', 'RAM': '2.5GB', '速度(CPU)': '30〜50トークン/秒', 'コンテキスト': '128K', '最適用途': '推論、コーディング、低RAM' },
                             { 'モデル': 'Gemma 3 2B', 'RAM': '1.7GB', '速度(CPU)': '40〜60トークン/秒', 'コンテキスト': '128K', '最適用途': '速度重視、超低RAM' },
-                            { 'モデル': 'Llama 3.3 8B', 'RAM': '5.5GB', '速度(CPU)': '10〜18トークン/秒', 'コンテキスト': '128K', '最適用途': 'オールラウンダー、HumanEval 72%' },
+                            { 'モデル': 'Llama 3.1 8B', 'RAM': '5.5GB', '速度(CPU)': '10〜18トークン/秒', 'コンテキスト': '128K', '最適用途': 'オールラウンダー、HumanEval 72%' },
                             { 'モデル': 'Qwen3 8B', 'RAM': '5.2GB', '速度(CPU)': '10〜18トークン/秒', 'コンテキスト': '32K（YaRNで131K）', '最適用途': '多言語、コーディング' }
                         ]
                     },
@@ -908,12 +908,12 @@
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.1 8B',
                         items: [
                             '<strong>Gemma 3 2B：</strong>最速のCPUモデル — 40〜60トークン/秒、わずか1.7GB RAM。Googleの最小オープンモデルで、コンテキストも128K（Gemma 2の8Kから拡大）。',
                             'セットアップテストや、応答の深さより速度が重要な場合に最適。',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
-                            '<strong>Llama 3.3 8B：</strong>このサイズクラスの現行オールラウンダー — HumanEval 72%、128Kコンテキスト、堅実な英語推論力。',
+                            '<strong>Llama 3.1 8B：</strong>このサイズクラスの現行オールラウンダー — HumanEval 72%、128Kコンテキスト、堅実な英語推論力。',
                             '8GB RAMで長文・複雑な指示・複数ターンの会話に最適。',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
@@ -964,7 +964,7 @@
                             'パラメータ数だけで選ぶ — 良く量子化された7Bが悪い13Bを上回ることもある',
                             'VRAMオーバーヘッドを無視する — モデルはファイルサイズより10〜15%多く必要',
                             'Q4_K_Mが同サイズでより良い品質を提供するのにQ3_K_Sを使う',
-                            'デフォルトでMistral Small v0.3を選ぶ — コーディングではQwen3 8B、英語ではLlama 3.3 8Bが上回る（同じRAMで）',
+                            'デフォルトでMistral Small v0.3を選ぶ — コーディングではQwen3 8B、英語ではLlama 3.1 8Bが上回る（同じRAMで）',
                             'RAM確認なしにモデルを取得 — ディスクスワップと1トークン/秒以下のリスク'
                         ]
                     },
@@ -1014,7 +1014,7 @@
                             '<strong>#1 Llama 3.2 3B</strong> — 2.5GB内存，25–45词/秒，128K上下文。初学者最佳整体模型。',
                             '<strong>#2 Phi-4 Mini 3.8B</strong> — 2.5GB内存，128K上下文。4–6GB内存下最佳推理模型。',
                             '<strong>#3 Gemma 3 2B</strong> — 1.7GB内存，40–60词/秒。CPU上最快，适合测试配置。',
-                            '<strong>#4 Llama 3.3 8B</strong> — 5.5GB内存，72% HumanEval。最佳7B/8B全能模型。',
+                            '<strong>#4 Llama 3.1 8B</strong> — 5.5GB内存，72% HumanEval。最佳7B/8B全能模型。',
                             '<strong>#5 Qwen3 8B</strong> — 5.2GB内存，32K上下文（YaRN下131K），29种以上语言。最适合编程和多语言。'
                         ]
                     },
@@ -1025,8 +1025,8 @@
                         items: [
                             '<strong>经验法则：</strong>参数数 × 0.5 ≈ Q4_K_M（4位）量化所需GB内存',
                             '<strong>4–6GB内存：</strong>使用3B模型 — Llama 3.2 3B或Phi-4 Mini 3.8B',
-                            '<strong>8GB内存：</strong>推荐7B模型 — Qwen3 8B或Llama 3.3 8B',
-                            '<strong>任务类型同样重要：</strong>编程→Qwen3 8B · 速度→Gemma 3 2B · EU合规→Llama 3.3 8B'
+                            '<strong>8GB内存：</strong>推荐7B模型 — Qwen3 8B或Llama 3.1 8B',
+                            '<strong>任务类型同样重要：</strong>编程→Qwen3 8B · 速度→Gemma 3 2B · EU合规→Llama 3.1 8B'
                         ]
                     },
                     {
@@ -1037,7 +1037,7 @@
                             { '模型': 'Llama 3.2 3B', '内存': '2.5GB', 'CPU速度': '25–45词/秒', '上下文': '128K', '最适场景': '通用，首选入门' },
                             { '模型': 'Phi-4 Mini 3.8B', '内存': '2.5GB', 'CPU速度': '30–50词/秒', '上下文': '128K', '最适场景': '推理、编程、低内存' },
                             { '模型': 'Gemma 3 2B', '内存': '1.7GB', 'CPU速度': '40–60词/秒', '上下文': '128K', '最适场景': '速度优先，超低内存' },
-                            { '模型': 'Llama 3.3 8B', '内存': '5.5GB', 'CPU速度': '10–18词/秒', '上下文': '128K', '最适场景': '全能型，72% HumanEval' },
+                            { '模型': 'Llama 3.1 8B', '内存': '5.5GB', 'CPU速度': '10–18词/秒', '上下文': '128K', '最适场景': '全能型，72% HumanEval' },
                             { '模型': 'Qwen3 8B', '内存': '5.2GB', 'CPU速度': '10–18词/秒', '上下文': '32K（YaRN下131K）', '最适场景': '多语言、编程' }
                         ]
                     },
@@ -1055,12 +1055,12 @@
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.1 8B',
                         items: [
                             '<strong>Gemma 3 2B：</strong>CPU上最快模型 — 40–60词/秒，仅需1.7GB内存。Google最小的开源模型，上下文已扩展至128K（Gemma 2为8K）。',
                             '适合测试配置，或速度比输出深度更重要时。',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
-                            '<strong>Llama 3.3 8B：</strong>该尺寸级别当前的全能模型 — HumanEval 72%，128K上下文，英语推理能力扎实。',
+                            '<strong>Llama 3.1 8B：</strong>该尺寸级别当前的全能模型 — HumanEval 72%，128K上下文，英语推理能力扎实。',
                             '在8GB内存下最适合处理长文本、复杂指令和多轮对话。',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
@@ -1111,7 +1111,7 @@
                             '仅按参数数量选择 — 量化好的7B可能超越量化差的13B',
                             '忽略VRAM开销 — 模型需要比文件大小多10–15%的内存',
                             '有Q4_K_M时使用Q3_K_S — Q4_K_M在相近大小下质量更好',
-                            '默认选择Mistral Small v0.3 — 编程方面Qwen3 8B更强，英语方面Llama 3.3 8B更强（同等内存下）',
+                            '默认选择Mistral Small v0.3 — 编程方面Qwen3 8B更强，英语方面Llama 3.1 8B更强（同等内存下）',
                             '未检查内存直接拉取 — 可能导致磁盘交换和低于1词/秒的输出'
                         ]
                     },

@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo is a free, hybrid AI chat app — not a local-only app.** On-device, it uses Liquid AI\'s own [LEAP](https://leap.liquid.ai/) technology to run Liquid AI\'s small LFM2 models (350M, 700M, 1.2B, and 2.6B parameters) entirely offline, with no internet connection needed once a model is downloaded. Separately, and as a first-class feature, it also offers an OpenRouter mode that requires your own OpenRouter API key and an internet connection to reach hosted models such as Llama 4 Scout and OpenAI\'s GPT-6 Astra, and a custom-backend mode that connects over your network to a self-hosted LM Studio or Ollama server you run yourself. Only the first of these three modes keeps every message on your device. Readers who specifically want an app with no cloud option at all should compare it against [Private LLM](/power-local-llm/private-llm-review) or [Enclave AI](/power-local-llm/enclave-ai-review) instead, both of which are on-device only with no built-in cloud path.',
+      '**Liquid Apollo is a free, hybrid AI chat app — not a local-only app.** On-device, it uses Liquid AI\'s own [LEAP](https://leap.liquid.ai/) technology to run Liquid AI\'s small LFM2 models (350M, 700M, 1.2B, and 2.6B parameters) entirely offline, with no internet connection needed once a model is downloaded. Separately, and as a first-class feature, it also offers an OpenRouter mode that requires your own OpenRouter API key and an internet connection to reach hosted models such as Llama 4 Scout and OpenAI\'s GPT-6 Astra, and a custom-backend mode that connects over your network to a self-hosted LM Studio or Ollama server you run yourself. Only the first of these three modes keeps every message on your device. Readers who specifically want an app with no cloud option at all should compare it against [Private LLM](/power-local-llm/private-llm-review) or [Enclave AI](/power-local-llm/enclave-ai-review) instead; per their own listings, neither offers a built-in cloud mode (check each listing for current features).',
     quickAnswerTop: {
       en: {
         question: 'Is Liquid Apollo a fully local, offline AI app?',
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local Mode: LEAP and LFM2 Models',
         content: [
           '**Liquid Apollo\'s on-device mode is powered by [LEAP](https://leap.liquid.ai/) (Liquid Edge-AI Platform), a developer SDK Liquid AI also ships separately for other app builders, and it runs Liquid AI\'s own LFM2 model family rather than a third-party model.** This is the only one of Liquid Apollo\'s three modes where a conversation can, by design, stay entirely on the device with no network connection.',
-          '**LFM2 models come in four published sizes: LFM2-350M, LFM2-700M, LFM2-1.2B, and LFM2-2.6B parameters.** According to Liquid AI\'s own model documentation, they are built from "structured, adaptive operators" rather than a standard transformer architecture, trained on roughly 10 trillion tokens, and designed specifically for fast inference on phone-class CPUs, GPUs, and NPUs. Liquid AI states the smallest models in its library run in as little as 300 MB and that the library runs on devices with 4 GB of RAM or more.',
+          '**LFM2 models come in four published sizes: LFM2-350M, LFM2-700M, LFM2-1.2B, and LFM2-2.6B parameters.** According to Liquid AI\'s own model documentation, they are built from "structured, adaptive operators" rather than a standard transformer architecture, trained on roughly 10 trillion tokens, and designed specifically for fast inference on phone-class CPUs, GPUs, and NPUs. Liquid AI states the smallest models in its library run in as little as 300 MB and that the library runs on devices with 4 GB of RAM or more. Liquid AI\'s model page now lists these LFM2 sizes as deprecated; check the app\'s current model list.',
         ],
         items: [
           'Model family: LFM2-350M, LFM2-700M, LFM2-1.2B, LFM2-2.6B — all published by Liquid AI, not third-party fine-tunes',
@@ -161,12 +161,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cloud Mode: OpenRouter',
         content: [
           '**Liquid Apollo\'s OpenRouter mode is a first-class, clearly advertised feature, not a hidden option — the app\'s own description invites you to "bring an OpenRouter API key to chat with every model on the web."** This mode requires an internet connection and an account you create yourself at [OpenRouter](https://openrouter.ai/), a third-party service unaffiliated with Liquid AI that provides API access to many hosted AI models.',
-          'Once you paste an OpenRouter API key into Liquid Apollo, the app can reach "nearly every model" available through OpenRouter, per its own listing — named examples include open-source models such as Llama 4 Scout and closed-source models such as OpenAI\'s GPT-6 Astra. Messages sent in this mode leave your device and are processed by whichever model and provider you select through OpenRouter, exactly as they would be in any other OpenRouter-connected client.',
+          'Once you paste an OpenRouter API key into Liquid Apollo, the app can reach "nearly every model" available through OpenRouter, per its own listing — named examples include open-weights models such as Llama 4 Scout (Llama Community Licence). Messages sent in this mode leave your device and are processed by whichever model and provider you select through OpenRouter, exactly as they would be in any other OpenRouter-connected client.',
         ],
         items: [
           'Requires your own OpenRouter account and API key — Liquid AI does not provide or resell OpenRouter access inside the app',
           'Requires an active internet connection; this mode does not work offline',
-          'Reaches hosted models including open-source options (for example, Llama 4 Scout) and closed-source options (for example, GPT-6 Astra)',
+          'Reaches hosted models including open-weights options (for example, Llama 4 Scout) and closed-source options (for example, GPT-6 Astra)',
           'Billing for model usage in this mode goes through OpenRouter and the underlying model provider, not through Liquid AI',
           'Any conversation sent through this mode is, by design, transmitted off the device to OpenRouter\'s infrastructure and the selected model provider',
         ],
@@ -216,11 +216,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy: What Stays On-Device and What Does Not',
         content: [
           '**Liquid Apollo\'s App Store privacy label states the developer does not collect any data from the app itself**, and no account is required to use local mode. That claim covers the app\'s own data collection — it does not, and cannot, describe what happens to a message once you choose to send it to OpenRouter or a self-hosted backend, since those are separate services outside Liquid AI\'s control.',
-          'The honest way to think about privacy here is per-mode, not per-app: local LFM2 chat has no network path for your message content to leave the device, by architecture, not just by policy. OpenRouter mode sends message content to OpenRouter and the model provider you select, governed by their own privacy terms. Custom-backend mode sends message content to whatever server you configured, governed by how you set that server up.',
+          'The honest way to think about privacy here is per-mode, not per-app: by design, per Liquid AI, local LFM2 chat does not send your message content off the device; PromptQuorum has not verified this. OpenRouter mode sends message content to OpenRouter and the model provider you select, governed by their own privacy terms. Custom-backend mode sends message content to whatever server you configured, governed by how you set that server up.',
         ],
         items: [
           'No account required for local mode; Liquid AI states the app collects no data from itself',
-          'Local LFM2 chat has no server-side component to send data to — this is an architectural property of on-device inference, not solely a policy statement',
+          'By design, per Liquid AI, local chat does not send message content off the device; PromptQuorum has not verified this',
           'OpenRouter mode necessarily transmits message content off-device to OpenRouter\'s infrastructure and your selected model provider — review [OpenRouter\'s own privacy policy](https://openrouter.ai/privacy) if this matters to you',
           'Custom-backend mode transmits message content to your self-hosted server — privacy here depends on your own server configuration, not on Liquid Apollo',
           'This review has not independently audited Liquid Apollo\'s network traffic to verify the no-data-collection claim for local mode',
@@ -282,18 +282,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Local-only or hybrid': 'Hybrid: local LFM2 + OpenRouter cloud + custom backend',
             'Platforms': 'iPhone/iPad/Mac/Vision/Android',
             'Price': 'Free (OpenRouter usage billed separately)',
-            'Key difference': 'Only mobile app running Liquid AI\'s own LFM2 models on-device; cloud mode is a first-class feature, not an edge case',
+            'Key difference': 'Liquid AI\'s own demo app for running its LFM2 models on-device via LEAP; cloud mode is a first-class feature, not an edge case',
           },
           {
             'App': '[Private LLM](/power-local-llm/private-llm-review)',
-            'Local-only or hybrid': 'Local-only, no cloud path',
+            'Local-only or hybrid': 'No built-in cloud mode per its listing',
             'Platforms': 'iPhone/iPad/Mac (Apple only)',
             'Price': '$4.99 one-time purchase',
             'Key difference': 'Best pick if you want zero cloud option at all, with a large curated model library',
           },
           {
             'App': '[Enclave AI](/power-local-llm/enclave-ai-review)',
-            'Local-only or hybrid': 'Local-only, no cloud path',
+            'Local-only or hybrid': 'No built-in cloud mode per its listing',
             'Platforms': 'iPhone/iPad/Mac (Apple only)',
             'Price': 'Free, with in-app purchases',
             'Key difference': 'Free local-only alternative with no cloud mode at all, including for voice chat',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Who Should Not Use Liquid Apollo',
         items: [
-          '**Readers who want a strictly local-only app with zero cloud option.** Liquid Apollo\'s cloud mode is a built-in, first-class feature that cannot be removed from the app, even if you never enable it — [Private LLM](/power-local-llm/private-llm-review) or [Enclave AI](/power-local-llm/enclave-ai-review) are better fits if the app itself must have no cloud code path at all.',
+          '**Readers who want a strictly local-only app with zero cloud option.** Liquid Apollo\'s cloud mode is a built-in, first-class feature that cannot be removed from the app, even if you never enable it — [Private LLM](/power-local-llm/private-llm-review) or [Enclave AI](/power-local-llm/enclave-ai-review) may be better fits: per their own listings, they do not offer a built-in cloud mode (check each listing for current features).',
           '**Readers who assume "runs on-device" means every mode is offline.** Only the local LFM2 mode is offline; the OpenRouter and custom-backend modes both require a network connection by design.',
           '**Readers who want frontier-scale model capability without setting up OpenRouter or a self-hosted server.** LFM2\'s largest published size is 2.6B parameters, well below the frontier cloud models Liquid Apollo\'s OpenRouter mode can reach — local mode alone will not match GPT-6 Astra-class output quality.',
           '**Windows or Linux desktop users wanting a native client.** Liquid Apollo has no Windows or Linux app; only the LM Studio/Ollama server side of custom-backend mode can run there.',
@@ -366,12 +366,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is LEAP?', a: 'LEAP (Liquid Edge-AI Platform) is Liquid AI\'s own developer SDK for running small language models directly on a phone or other edge device. Liquid Apollo\'s local chat mode is built on LEAP, and Liquid AI also offers LEAP separately for other app developers.' },
           { q: 'What models does Liquid Apollo run on-device?', a: 'Liquid AI\'s own LFM2 model family: LFM2-350M, LFM2-700M, LFM2-1.2B, and LFM2-2.6B parameters, per Liquid AI\'s published model documentation.' },
           { q: 'Does Liquid Apollo cost money?', a: 'The app itself is free on both the App Store and Google Play, with no in-app purchases listed. Its OpenRouter cloud mode is billed separately by OpenRouter and the model provider you choose, using your own API key — not by Liquid AI.' },
-          { q: 'What is Liquid Apollo\'s OpenRouter mode?', a: 'It lets you paste your own OpenRouter API key into the app to reach hosted models over the internet, including open-source models like Llama 4 Scout and closed-source models like OpenAI\'s GPT-6 Astra. This mode requires an internet connection and is unrelated to Liquid AI\'s own on-device LFM2 models.' },
+          { q: 'What is Liquid Apollo\'s OpenRouter mode?', a: 'It lets you paste your own OpenRouter API key into the app to reach hosted models over the internet, including open-weights models like Llama 4 Scout (Llama Community Licence). This mode requires an internet connection and is unrelated to Liquid AI\'s own on-device LFM2 models.' },
           { q: 'Can I connect Liquid Apollo to my own LM Studio or Ollama server?', a: 'Yes. Its custom-backend mode connects to a self-hosted LM Studio or Ollama instance on your own network, letting you use Liquid Apollo as a mobile front-end for a model you run yourself.' },
           { q: 'What platforms does Liquid Apollo support?', a: 'iPhone (iOS 18+), iPad (iPadOS 18+), Mac (Apple Silicon, macOS 15+), Apple Vision (visionOS 2+), and Android via Google Play. There is no Windows or Linux desktop client.' },
           { q: 'Who makes Liquid Apollo?', a: 'Liquid AI, Inc., which also develops the LEAP SDK and LFM2 model family used in the app\'s on-device mode.' },
           { q: 'Does Liquid Apollo collect my data?', a: 'Liquid Apollo\'s App Store privacy label states the developer collects no data from the app itself, and local mode needs no account. That claim covers the app, not OpenRouter or a self-hosted backend — those services have their own separate privacy practices once you send data through them.' },
-          { q: 'Should I use Liquid Apollo if I want a fully offline app with no cloud option?', a: 'Not ideally. Liquid Apollo always ships with a cloud mode built in, even if you never turn it on. [Private LLM](/power-local-llm/private-llm-review) and [Enclave AI](/power-local-llm/enclave-ai-review) are on-device-only apps with no cloud code path at all, and are better matches for that specific requirement.' },
+          { q: 'Should I use Liquid Apollo if I want a fully offline app with no cloud option?', a: 'Not ideally. Liquid Apollo always ships with a cloud mode built in, even if you never turn it on. [Private LLM](/power-local-llm/private-llm-review) and [Enclave AI](/power-local-llm/enclave-ai-review) do not, per their own listings, offer a built-in cloud mode (check each listing for current features), so they may be better matches for that specific requirement.' },
           { q: 'Can I reach my LM Studio or Ollama server from my iPhone over the internet when I am away from home?', a: 'Liquid Apollo\'s listing describes connecting to an LM Studio or Ollama server you run yourself but does not describe remote access, so what works away from home depends on how you make that server reachable — for example over a VPN to your home network. PromptQuorum has not tested this setup; a server exposed to the internet without authentication is a security risk the app does not manage for you.' },
         ],
       },
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Liquid Apollo is an honestly-marketed hybrid app: Liquid AI advertises the OpenRouter and custom-backend modes as headline features, not fine print, which makes it easier than most apps in this category to know what you are actually getting. Its local mode is a genuine, free way to run Liquid AI\'s own LFM2 models fully offline via LEAP, and its cross-platform reach (iOS, Android, Mac, Apple Vision) is wider than most single-platform local-AI apps covered on this site. The trade-off is exactly what the name "hybrid" implies: readers who need an app that is structurally incapable of reaching the cloud, under any setting, should choose [Private LLM](/power-local-llm/private-llm-review) or [Enclave AI](/power-local-llm/enclave-ai-review) instead. Readers who want one flexible client spanning on-device LFM2 chat, OpenRouter-hosted frontier models, and their own self-hosted server get exactly that from Liquid Apollo, at no cost beyond whatever OpenRouter usage they choose to pay for.',
+          'Liquid Apollo is an honestly-marketed hybrid app: Liquid AI advertises the OpenRouter and custom-backend modes as headline features, not fine print, which makes it easier than most apps in this category to know what you are actually getting. Its local mode is a genuine, free way to run Liquid AI\'s own LFM2 models fully offline via LEAP, and its cross-platform reach (iOS, Android, Mac, Apple Vision) is wider than most single-platform local-AI apps covered on this site. The trade-off is exactly what the name "hybrid" implies: readers who need an app without a cloud mode should compare [Private LLM](/power-local-llm/private-llm-review) or [Enclave AI](/power-local-llm/enclave-ai-review), which per their own listings do not offer a built-in cloud mode (check each listing for current features). Readers who want one flexible client spanning on-device LFM2 chat, OpenRouter-hosted frontier models, and their own self-hosted server get exactly that from Liquid Apollo, at no cost beyond whatever OpenRouter usage they choose to pay for.',
       },
       sources: {
         id: 'sources',
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Private LLM Review](/power-local-llm/private-llm-review) — a local-only, no-cloud-path alternative for readers who want zero cloud option.',
-          '[Enclave AI Review](/power-local-llm/enclave-ai-review) — another free, local-only Apple app with no built-in cloud mode.',
+          '[Enclave AI Review](/power-local-llm/enclave-ai-review) — another free Apple app that, per its own listing, does not offer a built-in cloud mode.',
           '[Layla Review](/power-local-llm/layla-review) — a different hybrid app with an opt-in, off-by-default cloud tier.',
           '[Arbiter Local AI Chat Review](/power-local-llm/arbiter-local-ai-chat-review) — the closest match to Liquid Apollo\'s custom-backend mode.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — the broader iPhone app roundup.',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo ist eine kostenlose, hybride KI-Chat-App — keine rein lokale App.** Auf dem Gerät nutzt sie Liquid AIs eigene [LEAP](https://leap.liquid.ai/)-Technologie, um Liquid AIs kleine LFM2-Modelle (350M, 700M, 1,2B und 2,6B Parameter) vollständig offline auszuführen, ohne Internetverbindung, sobald ein Modell heruntergeladen ist. Zusätzlich, und als vollwertige Funktion, bietet sie einen OpenRouter-Modus, der einen eigenen OpenRouter-API-Schlüssel und eine Internetverbindung erfordert, um gehostete Modelle wie Llama 4 Scout und OpenAIs GPT-6 Astra zu erreichen, sowie einen Custom-Backend-Modus, der sich über das eigene Netzwerk mit einem selbst gehosteten LM-Studio- oder Ollama-Server verbindet. Nur der erste dieser drei Modi hält jede Nachricht auf dem Gerät. Leser, die ausdrücklich eine App ganz ohne Cloud-Option wollen, sollten stattdessen [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) vergleichen — beide laufen ausschließlich auf dem Gerät, ohne eingebauten Cloud-Pfad.',
+      '**Liquid Apollo ist eine kostenlose, hybride KI-Chat-App — keine rein lokale App.** Auf dem Gerät nutzt sie Liquid AIs eigene [LEAP](https://leap.liquid.ai/)-Technologie, um Liquid AIs kleine LFM2-Modelle (350M, 700M, 1,2B und 2,6B Parameter) vollständig offline auszuführen, ohne Internetverbindung, sobald ein Modell heruntergeladen ist. Zusätzlich, und als vollwertige Funktion, bietet sie einen OpenRouter-Modus, der einen eigenen OpenRouter-API-Schlüssel und eine Internetverbindung erfordert, um gehostete Modelle wie Llama 4 Scout und OpenAIs GPT-6 Astra zu erreichen, sowie einen Custom-Backend-Modus, der sich über das eigene Netzwerk mit einem selbst gehosteten LM-Studio- oder Ollama-Server verbindet. Nur der erste dieser drei Modi hält jede Nachricht auf dem Gerät. Leser, die ausdrücklich eine App ganz ohne Cloud-Option wollen, sollten stattdessen [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) vergleichen; laut ihren eigenen Einträgen bietet keine der beiden einen eingebauten Cloud-Modus (aktuelle Funktionen im jeweiligen Eintrag prüfen).',
     quickAnswerTop: {
       de: {
         question: 'Ist Liquid Apollo eine vollständig lokale, offline-fähige KI-App?',
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lokaler Modus: LEAP und LFM2-Modelle',
         content: [
           '**Liquid Apollos On-Device-Modus wird von [LEAP](https://leap.liquid.ai/) (Liquid Edge-AI Platform) angetrieben, einem Entwickler-SDK, das Liquid AI auch separat für andere App-Entwickler anbietet, und führt Liquid AIs eigene LFM2-Modellfamilie aus, nicht ein Modell eines Drittanbieters.** Dies ist der einzige der drei Modi von Liquid Apollo, bei dem eine Unterhaltung konstruktionsbedingt vollständig auf dem Gerät bleiben kann, ohne Netzwerkverbindung.',
-          '**LFM2-Modelle gibt es in vier veröffentlichten Größen: LFM2-350M, LFM2-700M, LFM2-1,2B und LFM2-2,6B Parameter.** Laut Liquid AIs eigener Modelldokumentation basieren sie auf "strukturierten, adaptiven Operatoren" statt einer klassischen Transformer-Architektur, wurden mit rund 10 Billionen Token trainiert und speziell für schnelle Inferenz auf CPUs, GPUs und NPUs von Smartphones entwickelt. Liquid AI gibt an, dass die kleinsten Modelle der Bibliothek mit nur 300 MB auskommen und die Bibliothek auf Geräten mit 4 GB RAM oder mehr läuft.',
+          '**LFM2-Modelle gibt es in vier veröffentlichten Größen: LFM2-350M, LFM2-700M, LFM2-1,2B und LFM2-2,6B Parameter.** Laut Liquid AIs eigener Modelldokumentation basieren sie auf "strukturierten, adaptiven Operatoren" statt einer klassischen Transformer-Architektur, wurden mit rund 10 Billionen Token trainiert und speziell für schnelle Inferenz auf CPUs, GPUs und NPUs von Smartphones entwickelt. Liquid AI gibt an, dass die kleinsten Modelle der Bibliothek mit nur 300 MB auskommen und die Bibliothek auf Geräten mit 4 GB RAM oder mehr läuft. Die Modellseite von Liquid AI führt diese LFM2-Größen inzwischen als veraltet (deprecated); prüfen Sie die aktuelle Modellliste in der App.',
         ],
         items: [
           'Modellfamilie: LFM2-350M, LFM2-700M, LFM2-1,2B, LFM2-2,6B — alle von Liquid AI selbst veröffentlicht, keine Fine-Tunes von Drittanbietern',
@@ -558,12 +558,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cloud-Modus: OpenRouter',
         content: [
           '**Liquid Apollos OpenRouter-Modus ist eine vollwertige, klar beworbene Funktion, keine versteckte Option — die eigene Beschreibung der App lädt dazu ein, "einen OpenRouter-API-Schlüssel mitzubringen, um mit jedem Modell im Web zu chatten".** Dieser Modus erfordert eine Internetverbindung und ein selbst erstelltes Konto bei [OpenRouter](https://openrouter.ai/), einem Drittanbieterdienst ohne Verbindung zu Liquid AI, der API-Zugriff auf viele gehostete KI-Modelle bietet.',
-          'Sobald Sie einen OpenRouter-API-Schlüssel in Liquid Apollo einfügen, kann die App laut eigenem Eintrag "nahezu jedes Modell" erreichen, das über OpenRouter verfügbar ist — genannte Beispiele sind Open-Source-Modelle wie Llama 4 Scout und Closed-Source-Modelle wie OpenAIs GPT-6 Astra. Nachrichten, die in diesem Modus gesendet werden, verlassen das Gerät und werden von dem über OpenRouter gewählten Modell und Anbieter verarbeitet — genau wie bei jedem anderen mit OpenRouter verbundenen Client.',
+          'Sobald Sie einen OpenRouter-API-Schlüssel in Liquid Apollo einfügen, kann die App laut eigenem Eintrag "nahezu jedes Modell" erreichen, das über OpenRouter verfügbar ist — genannte Beispiele sind Open-Weights-Modelle wie Llama 4 Scout (Llama Community License). Nachrichten, die in diesem Modus gesendet werden, verlassen das Gerät und werden von dem über OpenRouter gewählten Modell und Anbieter verarbeitet — genau wie bei jedem anderen mit OpenRouter verbundenen Client.',
         ],
         items: [
           'Erfordert ein eigenes OpenRouter-Konto und einen eigenen API-Schlüssel — Liquid AI bietet oder verkauft keinen OpenRouter-Zugang innerhalb der App',
           'Erfordert eine aktive Internetverbindung; dieser Modus funktioniert nicht offline',
-          'Erreicht gehostete Modelle, darunter Open-Source-Optionen (z. B. Llama 4 Scout) und Closed-Source-Optionen (z. B. GPT-6 Astra)',
+          'Erreicht gehostete Modelle, darunter Open-Weights-Optionen (z. B. Llama 4 Scout) und Closed-Source-Optionen (z. B. GPT-6 Astra)',
           'Die Abrechnung der Modellnutzung in diesem Modus läuft über OpenRouter und den zugrunde liegenden Modellanbieter, nicht über Liquid AI',
           'Jede über diesen Modus gesendete Unterhaltung wird konstruktionsbedingt an die Infrastruktur von OpenRouter und den gewählten Modellanbieter übertragen',
         ],
@@ -613,11 +613,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz: Was auf dem Gerät bleibt und was nicht',
         content: [
           '**Liquid Apollos App-Store-Datenschutzangabe besagt, dass der Entwickler keine Daten aus der App selbst sammelt**, und für den lokalen Modus ist kein Konto erforderlich. Diese Angabe deckt die eigene Datensammlung der App ab — sie beschreibt weder, kann noch beschreiben, was mit einer Nachricht passiert, sobald Sie sie an OpenRouter oder ein selbst gehostetes Backend senden, da dies separate Dienste außerhalb der Kontrolle von Liquid AI sind.',
-          'Der ehrliche Weg, Datenschutz hier zu betrachten, ist pro Modus, nicht pro App: Lokaler LFM2-Chat hat keinen Netzwerkpfad, über den Nachrichteninhalte das Gerät verlassen könnten — das ist eine architektonische Eigenschaft, nicht nur eine Richtlinienangabe. Der OpenRouter-Modus überträgt Nachrichteninhalte notwendigerweise an OpenRouter und den gewählten Modellanbieter, gemäß deren eigenen Datenschutzbedingungen. Der Custom-Backend-Modus sendet Nachrichteninhalte an den von Ihnen konfigurierten Server, gemäß Ihrer eigenen Einrichtung.',
+          'Der ehrliche Weg, Datenschutz hier zu betrachten, ist pro Modus, nicht pro App: Nach Angaben von Liquid AI sendet der lokale LFM2-Chat Nachrichteninhalte konstruktionsbedingt nicht vom Gerät; PromptQuorum hat dies nicht überprüft. Der OpenRouter-Modus überträgt Nachrichteninhalte notwendigerweise an OpenRouter und den gewählten Modellanbieter, gemäß deren eigenen Datenschutzbedingungen. Der Custom-Backend-Modus sendet Nachrichteninhalte an den von Ihnen konfigurierten Server, gemäß Ihrer eigenen Einrichtung.',
         ],
         items: [
           'Kein Konto für den lokalen Modus nötig; Liquid AI gibt an, dass die App selbst keine Daten sammelt',
-          'Lokaler LFM2-Chat hat keine Serverkomponente, an die Daten gesendet werden könnten — eine architektonische Eigenschaft der On-Device-Inferenz, nicht nur eine Richtlinienaussage',
+          'Nach Angaben von Liquid AI sendet der lokale Chat Nachrichteninhalte konstruktionsbedingt nicht vom Gerät; PromptQuorum hat dies nicht überprüft',
           'Der OpenRouter-Modus überträgt Nachrichteninhalte notwendigerweise vom Gerät an die Infrastruktur von OpenRouter und den gewählten Modellanbieter — prüfen Sie [OpenRouters eigene Datenschutzrichtlinie](https://openrouter.ai/privacy), falls relevant',
           'Der Custom-Backend-Modus überträgt Nachrichteninhalte an den selbst gehosteten Server — Datenschutz hängt hier von der eigenen Serverkonfiguration ab, nicht von Liquid Apollo',
           'Diese Review hat den Netzwerkverkehr von Liquid Apollo nicht unabhängig geprüft, um die Angabe zur fehlenden Datensammlung im lokalen Modus zu bestätigen',
@@ -679,18 +679,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Nur lokal oder hybrid': 'Hybrid: lokal (LFM2) + OpenRouter-Cloud + Custom Backend',
             'Plattformen': 'iPhone/iPad/Mac/Vision/Android',
             'Preis': 'Kostenlos (OpenRouter-Nutzung separat abgerechnet)',
-            'Wichtigster Unterschied': 'Einzige Mobile-App, die Liquid AIs eigene LFM2-Modelle auf dem Gerät ausführt; Cloud-Modus ist vollwertige Funktion, kein Randfall',
+            'Wichtigster Unterschied': 'Liquid AIs eigene Demo-App, um die LFM2-Modelle über LEAP auf dem Gerät auszuführen; Cloud-Modus ist vollwertige Funktion, kein Randfall',
           },
           {
             'App': '[Private LLM](/de/power-local-llm/private-llm-review)',
-            'Nur lokal oder hybrid': 'Nur lokal, kein Cloud-Pfad',
+            'Nur lokal oder hybrid': 'Laut Eintrag kein eingebauter Cloud-Modus',
             'Plattformen': 'iPhone/iPad/Mac (nur Apple)',
             'Preis': '4,99 $ Einmalkauf',
             'Wichtigster Unterschied': 'Beste Wahl ohne jede Cloud-Option, mit großer kuratierter Modellbibliothek',
           },
           {
             'App': '[Enclave AI](/de/power-local-llm/enclave-ai-review)',
-            'Nur lokal oder hybrid': 'Nur lokal, kein Cloud-Pfad',
+            'Nur lokal oder hybrid': 'Laut Eintrag kein eingebauter Cloud-Modus',
             'Plattformen': 'iPhone/iPad/Mac (nur Apple)',
             'Preis': 'Kostenlos, mit In-App-Käufen',
             'Wichtigster Unterschied': 'Kostenlose, rein lokale Alternative ohne jeden Cloud-Modus, auch beim Sprach-Chat',
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen eignet sich Liquid Apollo nicht',
         items: [
-          '**Leser, die eine rein lokale App ganz ohne Cloud-Option wollen.** Liquid Apollos Cloud-Modus ist eine fest eingebaute, vollwertige Funktion, die auch dann nicht aus der App entfernt werden kann, wenn Sie sie nie aktivieren — [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) passen besser, wenn die App selbst überhaupt keinen Cloud-Codepfad haben darf.',
+          '**Leser, die eine rein lokale App ganz ohne Cloud-Option wollen.** Liquid Apollos Cloud-Modus ist eine fest eingebaute, vollwertige Funktion, die auch dann nicht aus der App entfernt werden kann, wenn Sie sie nie aktivieren — [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) passen möglicherweise besser: Laut ihren eigenen Einträgen bieten sie keinen eingebauten Cloud-Modus (aktuelle Funktionen im jeweiligen Eintrag prüfen).',
           '**Leser, die annehmen, "läuft auf dem Gerät" bedeute, jeder Modus sei offline.** Nur der lokale LFM2-Modus ist offline; sowohl OpenRouter- als auch Custom-Backend-Modus erfordern konstruktionsbedingt eine Netzwerkverbindung.',
           '**Leser, die Spitzenmodell-Fähigkeiten ohne Einrichtung von OpenRouter oder einem eigenen Server wollen.** Die größte veröffentlichte LFM2-Größe ist 2,6B Parameter, deutlich unter den Spitzen-Cloud-Modellen, die Liquid Apollos OpenRouter-Modus erreichen kann — der lokale Modus allein erreicht keine GPT-6 Astra-Klasse an Ausgabequalität.',
           '**Windows- oder Linux-Desktop-Nutzer, die einen nativen Client wollen.** Liquid Apollo hat keine Windows- oder Linux-App; nur die Serverseite (LM Studio/Ollama) des Custom-Backend-Modus kann dort laufen.',
@@ -763,12 +763,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist LEAP?', a: 'LEAP (Liquid Edge-AI Platform) ist Liquid AIs eigenes Entwickler-SDK, um kleine Sprachmodelle direkt auf einem Telefon oder einem anderen Edge-Gerät auszuführen. Liquid Apollos lokaler Chat-Modus baut auf LEAP auf; Liquid AI bietet LEAP auch separat für andere App-Entwickler an.' },
           { q: 'Welche Modelle führt Liquid Apollo auf dem Gerät aus?', a: 'Liquid AIs eigene LFM2-Modellfamilie: LFM2-350M, LFM2-700M, LFM2-1,2B und LFM2-2,6B Parameter, laut Liquid AIs veröffentlichter Modelldokumentation.' },
           { q: 'Kostet Liquid Apollo etwas?', a: 'Die App selbst ist im App Store und bei Google Play kostenlos, ohne gelistete In-App-Käufe. Der OpenRouter-Cloud-Modus wird separat von OpenRouter und dem gewählten Modellanbieter abgerechnet, mit eigenem API-Schlüssel — nicht von Liquid AI.' },
-          { q: 'Was ist Liquid Apollos OpenRouter-Modus?', a: 'Damit können Sie einen eigenen OpenRouter-API-Schlüssel in die App einfügen, um gehostete Modelle über das Internet zu erreichen, einschließlich Open-Source-Modellen wie Llama 4 Scout und Closed-Source-Modellen wie OpenAIs GPT-6 Astra. Dieser Modus erfordert eine Internetverbindung und hat nichts mit Liquid AIs eigenen On-Device-LFM2-Modellen zu tun.' },
+          { q: 'Was ist Liquid Apollos OpenRouter-Modus?', a: 'Damit können Sie einen eigenen OpenRouter-API-Schlüssel in die App einfügen, um gehostete Modelle über das Internet zu erreichen, einschließlich Open-Weights-Modellen wie Llama 4 Scout (Llama Community License). Dieser Modus erfordert eine Internetverbindung und hat nichts mit Liquid AIs eigenen On-Device-LFM2-Modellen zu tun.' },
           { q: 'Kann ich Liquid Apollo mit meinem eigenen LM-Studio- oder Ollama-Server verbinden?', a: 'Ja. Der Custom-Backend-Modus verbindet sich mit einer selbst gehosteten LM-Studio- oder Ollama-Instanz im eigenen Netzwerk und macht Liquid Apollo so zu einem mobilen Frontend für ein selbst betriebenes Modell.' },
           { q: 'Welche Plattformen unterstützt Liquid Apollo?', a: 'iPhone (iOS 18+), iPad (iPadOS 18+), Mac (Apple Silicon, macOS 15+), Apple Vision (visionOS 2+) und Android über Google Play. Es gibt keinen Windows- oder Linux-Desktop-Client.' },
           { q: 'Wer entwickelt Liquid Apollo?', a: 'Liquid AI, Inc., das auch das LEAP-SDK und die im On-Device-Modus der App genutzte LFM2-Modellfamilie entwickelt.' },
           { q: 'Sammelt Liquid Apollo meine Daten?', a: 'Liquid Apollos App-Store-Datenschutzangabe besagt, dass der Entwickler keine Daten aus der App selbst sammelt, und der lokale Modus benötigt kein Konto. Diese Angabe deckt die App ab, nicht OpenRouter oder ein selbst gehostetes Backend — diese Dienste haben eigene, separate Datenschutzpraktiken, sobald Sie Daten über sie senden.' },
-          { q: 'Sollte ich Liquid Apollo nutzen, wenn ich eine vollständig offline-fähige App ganz ohne Cloud-Option möchte?', a: 'Eher nicht ideal. Liquid Apollo hat immer einen eingebauten Cloud-Modus, selbst wenn Sie ihn nie aktivieren. [Private LLM](/de/power-local-llm/private-llm-review) und [Enclave AI](/de/power-local-llm/enclave-ai-review) sind rein On-Device-Apps ganz ohne Cloud-Codepfad und passen besser zu dieser spezifischen Anforderung.' },
+          { q: 'Sollte ich Liquid Apollo nutzen, wenn ich eine vollständig offline-fähige App ganz ohne Cloud-Option möchte?', a: 'Eher nicht ideal. Liquid Apollo hat immer einen eingebauten Cloud-Modus, selbst wenn Sie ihn nie aktivieren. [Private LLM](/de/power-local-llm/private-llm-review) und [Enclave AI](/de/power-local-llm/enclave-ai-review) bieten laut ihren eigenen Einträgen keinen eingebauten Cloud-Modus (aktuelle Funktionen im jeweiligen Eintrag prüfen) und passen daher möglicherweise besser zu dieser spezifischen Anforderung.' },
           { q: 'Kann ich mit dem iPhone über das Internet auf meinen LM-Studio- oder Ollama-Server zugreifen, wenn ich nicht zu Hause bin?', a: 'Der Eintrag von Liquid Apollo beschreibt die Verbindung zu einem LM-Studio- oder Ollama-Server, den Sie selbst betreiben, erklärt aber keinen Fernzugriff. Was außerhalb Ihres Heimnetzes funktioniert, hängt daher davon ab, wie Sie den Server erreichbar machen – etwa über ein VPN ins Heimnetz. PromptQuorum hat diesen Aufbau nicht getestet; ein ohne Authentifizierung ins Internet gestellter Server ist ein Sicherheitsrisiko, das die App nicht für Sie abfängt.' },
         ],
       },
@@ -776,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Liquid Apollo ist eine ehrlich vermarktete Hybrid-App: Liquid AI bewirbt OpenRouter- und Custom-Backend-Modus als Hauptfunktionen, nicht als Kleingedrucktes, was es leichter macht als bei den meisten Apps dieser Kategorie zu erkennen, was man tatsächlich bekommt. Der lokale Modus ist ein echter, kostenloser Weg, Liquid AIs eigene LFM2-Modelle über LEAP vollständig offline auszuführen, und die plattformübergreifende Reichweite (iOS, Android, Mac, Apple Vision) ist größer als bei den meisten auf dieser Seite behandelten Einzelplattform-Local-AI-Apps. Der Kompromiss ist genau das, was der Name "hybrid" bedeutet: Leser, die eine App brauchen, die strukturell überhaupt keine Cloud-Verbindung herstellen kann, sollten stattdessen [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) wählen. Leser, die einen flexiblen Client für On-Device-LFM2-Chat, OpenRouter-gehostete Spitzenmodelle und einen eigenen selbst gehosteten Server wollen, bekommen genau das mit Liquid Apollo, ohne Kosten außer der selbst gewählten OpenRouter-Nutzung.',
+          'Liquid Apollo ist eine ehrlich vermarktete Hybrid-App: Liquid AI bewirbt OpenRouter- und Custom-Backend-Modus als Hauptfunktionen, nicht als Kleingedrucktes, was es leichter macht als bei den meisten Apps dieser Kategorie zu erkennen, was man tatsächlich bekommt. Der lokale Modus ist ein echter, kostenloser Weg, Liquid AIs eigene LFM2-Modelle über LEAP vollständig offline auszuführen, und die plattformübergreifende Reichweite (iOS, Android, Mac, Apple Vision) ist größer als bei den meisten auf dieser Seite behandelten Einzelplattform-Local-AI-Apps. Der Kompromiss ist genau das, was der Name "hybrid" bedeutet: Leser, die eine App ohne Cloud-Modus brauchen, sollten [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) vergleichen, die laut ihren eigenen Einträgen keinen eingebauten Cloud-Modus bieten (aktuelle Funktionen im jeweiligen Eintrag prüfen). Leser, die einen flexiblen Client für On-Device-LFM2-Chat, OpenRouter-gehostete Spitzenmodelle und einen eigenen selbst gehosteten Server wollen, bekommen genau das mit Liquid Apollo, ohne Kosten außer der selbst gewählten OpenRouter-Nutzung.',
       },
       sources: {
         id: 'sources',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Private LLM Review](/de/power-local-llm/private-llm-review) — eine rein lokale Alternative ohne Cloud-Pfad, für Leser ohne Cloud-Option.',
-          '[Enclave AI Review](/de/power-local-llm/enclave-ai-review) — eine weitere kostenlose, rein lokale Apple-App ohne eingebauten Cloud-Modus.',
+          '[Enclave AI Review](/de/power-local-llm/enclave-ai-review) — eine weitere kostenlose Apple-App, die laut ihrem eigenen Eintrag keinen eingebauten Cloud-Modus bietet.',
           '[Layla Review](/de/power-local-llm/layla-review) — eine andere Hybrid-App mit optionaler, standardmäßig deaktivierter Cloud-Stufe.',
           '[Arbiter Local AI Chat Review](/de/power-local-llm/arbiter-local-ai-chat-review) — die engste Entsprechung zu Liquid Apollos Custom-Backend-Modus.',
           '[Best Local LLM Apps for iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die umfassendere iPhone-App-Übersicht.',
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -839,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo est une application de chat IA gratuite et hybride — pas une application uniquement locale.** Sur l\'appareil, elle utilise la technologie [LEAP](https://leap.liquid.ai/) propre à Liquid AI pour exécuter les petits modèles LFM2 de Liquid AI (350M, 700M, 1,2B et 2,6B paramètres) entièrement hors ligne, sans connexion internet une fois un modèle téléchargé. Séparément, et en tant que fonctionnalité à part entière, elle propose aussi un mode OpenRouter qui nécessite votre propre clé API OpenRouter et une connexion internet pour atteindre des modèles hébergés comme Llama 4 Scout et GPT-6 Astra d\'OpenAI, ainsi qu\'un mode backend personnalisé qui se connecte via votre réseau à un serveur LM Studio ou Ollama auto-hébergé. Seul le premier de ces trois modes garde chaque message sur l\'appareil. Les lecteurs qui veulent spécifiquement une app sans aucune option cloud devraient plutôt comparer avec [Private LLM](/fr/power-local-llm/private-llm-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review), tous deux entièrement locaux sans aucun chemin cloud intégré.',
+      '**Liquid Apollo est une application de chat IA gratuite et hybride — pas une application uniquement locale.** Sur l\'appareil, elle utilise la technologie [LEAP](https://leap.liquid.ai/) propre à Liquid AI pour exécuter les petits modèles LFM2 de Liquid AI (350M, 700M, 1,2B et 2,6B paramètres) entièrement hors ligne, sans connexion internet une fois un modèle téléchargé. Séparément, et en tant que fonctionnalité à part entière, elle propose aussi un mode OpenRouter qui nécessite votre propre clé API OpenRouter et une connexion internet pour atteindre des modèles hébergés comme Llama 4 Scout et GPT-6 Astra d\'OpenAI, ainsi qu\'un mode backend personnalisé qui se connecte via votre réseau à un serveur LM Studio ou Ollama auto-hébergé. Seul le premier de ces trois modes garde chaque message sur l\'appareil. Les lecteurs qui veulent spécifiquement une app sans aucune option cloud devraient plutôt comparer avec [Private LLM](/fr/power-local-llm/private-llm-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review) ; selon leurs propres fiches, aucune des deux ne propose de mode cloud intégré (vérifiez les fonctionnalités actuelles sur chaque fiche).',
     quickAnswerTop: {
       fr: {
         question: 'Liquid Apollo est-elle une application IA entièrement locale et hors ligne ?',
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mode local : LEAP et modèles LFM2',
         content: [
           '**Le mode sur l\'appareil de Liquid Apollo est alimenté par [LEAP](https://leap.liquid.ai/) (Liquid Edge-AI Platform), un SDK que Liquid AI propose aussi séparément à d\'autres créateurs d\'applications, et il exécute la propre famille de modèles LFM2 de Liquid AI, pas un modèle tiers.** C\'est le seul des trois modes de Liquid Apollo où une conversation peut, par conception, rester entièrement sur l\'appareil sans connexion réseau.',
-          '**Les modèles LFM2 existent en quatre tailles publiées : LFM2-350M, LFM2-700M, LFM2-1,2B et LFM2-2,6B paramètres.** Selon la documentation officielle de Liquid AI, ils reposent sur des « opérateurs structurés et adaptatifs » plutôt qu\'une architecture transformer classique, ont été entraînés sur environ 10 000 milliards de tokens, et sont conçus spécifiquement pour une inférence rapide sur les CPU, GPU et NPU de smartphones. Liquid AI indique que les plus petits modèles de sa bibliothèque tiennent en seulement 300 Mo et que la bibliothèque fonctionne sur des appareils avec 4 Go de RAM ou plus.',
+          '**Les modèles LFM2 existent en quatre tailles publiées : LFM2-350M, LFM2-700M, LFM2-1,2B et LFM2-2,6B paramètres.** Selon la documentation officielle de Liquid AI, ils reposent sur des « opérateurs structurés et adaptatifs » plutôt qu\'une architecture transformer classique, ont été entraînés sur environ 10 000 milliards de tokens, et sont conçus spécifiquement pour une inférence rapide sur les CPU, GPU et NPU de smartphones. Liquid AI indique que les plus petits modèles de sa bibliothèque tiennent en seulement 300 Mo et que la bibliothèque fonctionne sur des appareils avec 4 Go de RAM ou plus. La page des modèles de Liquid AI indique désormais ces tailles LFM2 comme obsolètes (deprecated) ; vérifiez la liste de modèles actuelle dans l\'application.',
         ],
         items: [
           'Famille de modèles : LFM2-350M, LFM2-700M, LFM2-1,2B, LFM2-2,6B — tous publiés par Liquid AI, pas des fine-tunes tiers',
@@ -955,12 +955,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mode cloud : OpenRouter',
         content: [
           '**Le mode OpenRouter de Liquid Apollo est une fonctionnalité à part entière, clairement annoncée, pas une option cachée — la description de l\'app elle-même invite à « apporter une clé API OpenRouter pour discuter avec presque tous les modèles du web ».** Ce mode nécessite une connexion internet et un compte que vous créez vous-même sur [OpenRouter](https://openrouter.ai/), un service tiers sans lien avec Liquid AI qui fournit un accès API à de nombreux modèles IA hébergés.',
-          'Une fois une clé API OpenRouter collée dans Liquid Apollo, l\'application peut atteindre « presque tous les modèles » disponibles via OpenRouter, selon sa propre fiche — les exemples cités incluent des modèles open source comme Llama 4 Scout et des modèles propriétaires comme GPT-6 Astra d\'OpenAI. Les messages envoyés dans ce mode quittent l\'appareil et sont traités par le modèle et le fournisseur choisis via OpenRouter, exactement comme dans n\'importe quel autre client connecté à OpenRouter.',
+          'Une fois une clé API OpenRouter collée dans Liquid Apollo, l\'application peut atteindre « presque tous les modèles » disponibles via OpenRouter, selon sa propre fiche — les exemples cités incluent des modèles à poids ouverts comme Llama 4 Scout (Llama Community License). Les messages envoyés dans ce mode quittent l\'appareil et sont traités par le modèle et le fournisseur choisis via OpenRouter, exactement comme dans n\'importe quel autre client connecté à OpenRouter.',
         ],
         items: [
           'Nécessite votre propre compte et clé API OpenRouter — Liquid AI ne fournit ni ne revend d\'accès OpenRouter dans l\'application',
           'Nécessite une connexion internet active ; ce mode ne fonctionne pas hors ligne',
-          'Atteint des modèles hébergés incluant des options open source (par exemple Llama 4 Scout) et propriétaires (par exemple GPT-6 Astra d\'OpenAI)',
+          'Atteint des modèles hébergés incluant des options à poids ouverts (par exemple Llama 4 Scout) et propriétaires (par exemple GPT-6 Astra d\'OpenAI)',
           'La facturation de l\'usage des modèles dans ce mode passe par OpenRouter et le fournisseur de modèle sous-jacent, pas par Liquid AI',
           'Toute conversation envoyée via ce mode est, par conception, transmise à l\'infrastructure d\'OpenRouter et au fournisseur de modèle choisi',
         ],
@@ -1010,11 +1010,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confidentialité : ce qui reste sur l\'appareil et ce qui ne l\'est pas',
         content: [
           '**La fiche de confidentialité App Store de Liquid Apollo indique que le développeur ne collecte aucune donnée depuis l\'application elle-même**, et aucun compte n\'est requis pour utiliser le mode local. Cette affirmation couvre la collecte de données propre à l\'application — elle ne décrit pas, et ne peut pas décrire, ce qu\'il advient d\'un message une fois que vous choisissez de l\'envoyer à OpenRouter ou à un backend auto-hébergé, puisqu\'il s\'agit de services distincts hors du contrôle de Liquid AI.',
-          'La façon honnête d\'envisager la confidentialité ici est par mode, pas par application : le chat local LFM2 n\'a aucun chemin réseau permettant au contenu de vos messages de quitter l\'appareil, par architecture, pas seulement par politique. Le mode OpenRouter transmet nécessairement le contenu des messages à OpenRouter et au fournisseur de modèle que vous sélectionnez, selon leurs propres conditions de confidentialité. Le mode backend personnalisé envoie le contenu des messages au serveur que vous avez configuré, selon la façon dont vous l\'avez mis en place.',
+          'La façon honnête d\'envisager la confidentialité ici est par mode, pas par application : par conception, selon Liquid AI, le chat local LFM2 n\'envoie pas le contenu de vos messages hors de l\'appareil ; PromptQuorum ne l\'a pas vérifié. Le mode OpenRouter transmet nécessairement le contenu des messages à OpenRouter et au fournisseur de modèle que vous sélectionnez, selon leurs propres conditions de confidentialité. Le mode backend personnalisé envoie le contenu des messages au serveur que vous avez configuré, selon la façon dont vous l\'avez mis en place.',
         ],
         items: [
           'Aucun compte requis pour le mode local ; Liquid AI indique que l\'application ne collecte aucune donnée par elle-même',
-          'Le chat local LFM2 n\'a pas de composant serveur vers lequel envoyer des données — une propriété architecturale de l\'inférence sur l\'appareil, pas seulement une déclaration de politique',
+          'Par conception, selon Liquid AI, le chat local n\'envoie pas le contenu des messages hors de l\'appareil ; PromptQuorum ne l\'a pas vérifié',
           'Le mode OpenRouter transmet nécessairement le contenu des messages hors de l\'appareil vers l\'infrastructure d\'OpenRouter et le fournisseur de modèle sélectionné — consultez la [politique de confidentialité propre d\'OpenRouter](https://openrouter.ai/privacy) si cela vous concerne',
           'Le mode backend personnalisé transmet le contenu des messages à votre serveur auto-hébergé — la confidentialité ici dépend de votre propre configuration serveur, pas de Liquid Apollo',
           'Cette review n\'a pas audité indépendamment le trafic réseau de Liquid Apollo pour vérifier l\'affirmation d\'absence de collecte de données en mode local',
@@ -1076,18 +1076,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Local uniquement ou hybride': 'Hybride : local (LFM2) + cloud OpenRouter + backend personnalisé',
             'Plateformes': 'iPhone/iPad/Mac/Vision/Android',
             'Prix': 'Gratuit (usage OpenRouter facturé séparément)',
-            'Différence clé': 'Seule app mobile exécutant les propres modèles LFM2 de Liquid AI sur l\'appareil ; le mode cloud est une fonctionnalité à part entière, pas un cas marginal',
+            'Différence clé': 'L\'application de démonstration de Liquid AI pour exécuter ses modèles LFM2 sur l\'appareil via LEAP ; le mode cloud est une fonctionnalité à part entière, pas un cas marginal',
           },
           {
             'App': '[Private LLM](/fr/power-local-llm/private-llm-review)',
-            'Local uniquement ou hybride': 'Uniquement local, aucun chemin cloud',
+            'Local uniquement ou hybride': 'Pas de mode cloud intégré selon sa fiche',
             'Plateformes': 'iPhone/iPad/Mac (Apple uniquement)',
             'Prix': 'Achat unique de 4,99 $',
             'Différence clé': 'Meilleur choix sans aucune option cloud, avec une grande bibliothèque de modèles sélectionnée',
           },
           {
             'App': '[Enclave AI](/fr/power-local-llm/enclave-ai-review)',
-            'Local uniquement ou hybride': 'Uniquement local, aucun chemin cloud',
+            'Local uniquement ou hybride': 'Pas de mode cloud intégré selon sa fiche',
             'Plateformes': 'iPhone/iPad/Mac (Apple uniquement)',
             'Prix': 'Gratuit, avec achats intégrés',
             'Différence clé': 'Alternative gratuite entièrement locale sans aucun mode cloud, y compris pour le chat vocal',
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'À qui Liquid Apollo ne s\'adresse pas',
         items: [
-          '**Lecteurs voulant une application strictement locale sans aucune option cloud.** Le mode cloud de Liquid Apollo est une fonctionnalité intégrée et à part entière qui ne peut pas être retirée de l\'application, même si vous ne l\'activez jamais — [Private LLM](/fr/power-local-llm/private-llm-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review) conviennent mieux si l\'application elle-même ne doit avoir aucun chemin de code cloud.',
+          '**Lecteurs voulant une application strictement locale sans aucune option cloud.** Le mode cloud de Liquid Apollo est une fonctionnalité intégrée et à part entière qui ne peut pas être retirée de l\'application, même si vous ne l\'activez jamais — [Private LLM](/fr/power-local-llm/private-llm-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review) conviennent peut-être mieux : selon leurs propres fiches, elles ne proposent pas de mode cloud intégré (vérifiez les fonctionnalités actuelles sur chaque fiche).',
           '**Lecteurs qui supposent que « fonctionne sur l\'appareil » signifie que chaque mode est hors ligne.** Seul le mode local LFM2 est hors ligne ; les modes OpenRouter et backend personnalisé nécessitent tous deux une connexion réseau par conception.',
           '**Lecteurs voulant des capacités de modèle de pointe sans configurer OpenRouter ou un serveur auto-hébergé.** La plus grande taille publiée de LFM2 est 2,6B paramètres, bien en deçà des modèles cloud de pointe que le mode OpenRouter de Liquid Apollo peut atteindre — le mode local seul n\'égalera pas la qualité de sortie de la classe GPT-6 Astra.',
           '**Utilisateurs de bureau Windows ou Linux voulant un client natif.** Liquid Apollo n\'a pas d\'application Windows ou Linux ; seul le côté serveur (LM Studio/Ollama) du mode backend personnalisé peut y fonctionner.',
@@ -1160,12 +1160,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce que LEAP ?', a: 'LEAP (Liquid Edge-AI Platform) est le SDK propre à Liquid AI pour exécuter de petits modèles de langage directement sur un téléphone ou un autre appareil en périphérie. Le mode de chat local de Liquid Apollo est construit sur LEAP, et Liquid AI propose aussi LEAP séparément à d\'autres développeurs d\'applications.' },
           { q: 'Quels modèles Liquid Apollo exécute-t-elle sur l\'appareil ?', a: 'La propre famille de modèles LFM2 de Liquid AI : LFM2-350M, LFM2-700M, LFM2-1,2B et LFM2-2,6B paramètres, selon la documentation de modèle publiée par Liquid AI.' },
           { q: 'Liquid Apollo coûte-t-elle de l\'argent ?', a: 'L\'application elle-même est gratuite sur l\'App Store et Google Play, sans achats intégrés listés. Son mode cloud OpenRouter est facturé séparément par OpenRouter et le fournisseur de modèle que vous choisissez, avec votre propre clé API — pas par Liquid AI.' },
-          { q: 'Qu\'est-ce que le mode OpenRouter de Liquid Apollo ?', a: 'Il permet de coller votre propre clé API OpenRouter dans l\'application pour atteindre des modèles hébergés via internet, y compris des modèles open source comme Llama 4 Scout et propriétaires comme GPT-6 Astra d\'OpenAI. Ce mode nécessite une connexion internet et n\'a rien à voir avec les propres modèles LFM2 sur l\'appareil de Liquid AI.' },
+          { q: 'Qu\'est-ce que le mode OpenRouter de Liquid Apollo ?', a: 'Il permet de coller votre propre clé API OpenRouter dans l\'application pour atteindre des modèles hébergés via internet, y compris des modèles à poids ouverts comme Llama 4 Scout (Llama Community License). Ce mode nécessite une connexion internet et n\'a rien à voir avec les propres modèles LFM2 sur l\'appareil de Liquid AI.' },
           { q: 'Puis-je connecter Liquid Apollo à mon propre serveur LM Studio ou Ollama ?', a: 'Oui. Son mode backend personnalisé se connecte à une instance LM Studio ou Ollama auto-hébergée sur votre propre réseau, faisant de Liquid Apollo un frontend mobile pour un modèle que vous exploitez vous-même.' },
           { q: 'Quelles plateformes Liquid Apollo supporte-t-elle ?', a: 'iPhone (iOS 18+), iPad (iPadOS 18+), Mac (Apple Silicon, macOS 15+), Apple Vision (visionOS 2+) et Android via Google Play. Il n\'y a pas de client de bureau Windows ou Linux.' },
           { q: 'Qui fabrique Liquid Apollo ?', a: 'Liquid AI, Inc., qui développe aussi le SDK LEAP et la famille de modèles LFM2 utilisée dans le mode sur l\'appareil de l\'application.' },
           { q: 'Liquid Apollo collecte-t-elle mes données ?', a: 'La fiche de confidentialité App Store de Liquid Apollo indique que le développeur ne collecte aucune donnée depuis l\'application elle-même, et le mode local ne nécessite aucun compte. Cette affirmation couvre l\'application, pas OpenRouter ni un backend auto-hébergé — ces services ont leurs propres pratiques de confidentialité distinctes une fois que vous leur envoyez des données.' },
-          { q: 'Devrais-je utiliser Liquid Apollo si je veux une application entièrement hors ligne sans aucune option cloud ?', a: 'Pas idéalement. Liquid Apollo est toujours livrée avec un mode cloud intégré, même si vous ne l\'activez jamais. [Private LLM](/fr/power-local-llm/private-llm-review) et [Enclave AI](/fr/power-local-llm/enclave-ai-review) sont des applications uniquement sur l\'appareil, sans aucun chemin de code cloud, et conviennent mieux à cette exigence précise.' },
+          { q: 'Devrais-je utiliser Liquid Apollo si je veux une application entièrement hors ligne sans aucune option cloud ?', a: 'Pas idéalement. Liquid Apollo est toujours livrée avec un mode cloud intégré, même si vous ne l\'activez jamais. [Private LLM](/fr/power-local-llm/private-llm-review) et [Enclave AI](/fr/power-local-llm/enclave-ai-review) ne proposent pas, selon leurs propres fiches, de mode cloud intégré (vérifiez les fonctionnalités actuelles sur chaque fiche) et conviennent donc peut-être mieux à cette exigence précise.' },
           { q: 'Puis-je accéder à mon serveur LM Studio ou Ollama depuis mon iPhone via Internet, hors de chez moi ?', a: 'La fiche de Liquid Apollo décrit la connexion à un serveur LM Studio ou Ollama que vous exploitez vous-même, mais ne décrit pas l\'accès à distance. Ce qui fonctionne hors de votre réseau domestique dépend donc de la façon dont vous rendez le serveur joignable — par exemple via un VPN vers votre réseau domestique. PromptQuorum n\'a pas testé cette configuration ; un serveur exposé sur Internet sans authentification est un risque de sécurité que l\'application ne gère pas à votre place.' },
         ],
       },
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Liquid Apollo est une application hybride honnêtement présentée : Liquid AI met en avant les modes OpenRouter et backend personnalisé comme fonctionnalités principales, pas en petits caractères, ce qui rend plus facile que pour la plupart des apps de cette catégorie de savoir ce que l\'on obtient réellement. Son mode local est un moyen réel et gratuit d\'exécuter les propres modèles LFM2 de Liquid AI entièrement hors ligne via LEAP, et sa portée multiplateforme (iOS, Android, Mac, Apple Vision) est plus large que la plupart des apps IA locales mono-plateforme couvertes sur ce site. Le compromis est exactement ce que le nom « hybride » implique : les lecteurs ayant besoin d\'une application structurellement incapable d\'atteindre le cloud, quel que soit le réglage, devraient choisir [Private LLM](/fr/power-local-llm/private-llm-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review) à la place. Les lecteurs voulant un client flexible unique couvrant le chat local LFM2, des modèles de pointe hébergés via OpenRouter et leur propre serveur auto-hébergé obtiennent exactement cela avec Liquid Apollo, sans coût au-delà de l\'usage OpenRouter qu\'ils choisissent de payer.',
+          'Liquid Apollo est une application hybride honnêtement présentée : Liquid AI met en avant les modes OpenRouter et backend personnalisé comme fonctionnalités principales, pas en petits caractères, ce qui rend plus facile que pour la plupart des apps de cette catégorie de savoir ce que l\'on obtient réellement. Son mode local est un moyen réel et gratuit d\'exécuter les propres modèles LFM2 de Liquid AI entièrement hors ligne via LEAP, et sa portée multiplateforme (iOS, Android, Mac, Apple Vision) est plus large que la plupart des apps IA locales mono-plateforme couvertes sur ce site. Le compromis est exactement ce que le nom « hybride » implique : les lecteurs ayant besoin d\'une application sans mode cloud devraient comparer [Private LLM](/fr/power-local-llm/private-llm-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review), qui selon leurs propres fiches ne proposent pas de mode cloud intégré (vérifiez les fonctionnalités actuelles sur chaque fiche). Les lecteurs voulant un client flexible unique couvrant le chat local LFM2, des modèles de pointe hébergés via OpenRouter et leur propre serveur auto-hébergé obtiennent exactement cela avec Liquid Apollo, sans coût au-delà de l\'usage OpenRouter qu\'ils choisissent de payer.',
       },
       sources: {
         id: 'sources',
@@ -1193,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Private LLM Review](/fr/power-local-llm/private-llm-review) — une alternative uniquement locale, sans chemin cloud, pour les lecteurs sans option cloud.',
-          '[Enclave AI Review](/fr/power-local-llm/enclave-ai-review) — une autre application Apple gratuite et uniquement locale, sans mode cloud intégré.',
+          '[Enclave AI Review](/fr/power-local-llm/enclave-ai-review) — une autre application Apple gratuite qui, selon sa propre fiche, ne propose pas de mode cloud intégré.',
           '[Layla Review](/fr/power-local-llm/layla-review) — une autre application hybride avec un niveau cloud optionnel, désactivé par défaut.',
           '[Arbiter Local AI Chat Review](/fr/power-local-llm/arbiter-local-ai-chat-review) — la correspondance la plus proche du mode backend personnalisé de Liquid Apollo.',
           '[Best Local LLM Apps for iPhone in 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — le panorama plus large des applications iPhone.',
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo es una app de chat de IA gratuita e híbrida — no una app exclusivamente local.** En el dispositivo, usa la tecnología [LEAP](https://leap.liquid.ai/) propia de Liquid AI para ejecutar los pequeños modelos LFM2 de Liquid AI (350M, 700M, 1,2B y 2,6B parámetros) totalmente offline, sin conexión a internet una vez descargado un modelo. Por separado, y como función de primera clase, también ofrece un modo OpenRouter que requiere tu propia clave API de OpenRouter y conexión a internet para llegar a modelos alojados como Llama 4 Scout y GPT-6 Astra de OpenAI, además de un modo de backend personalizado que se conecta por tu red a un servidor LM Studio u Ollama autoalojado. Solo el primero de estos tres modos mantiene cada mensaje en el dispositivo. Los lectores que quieran específicamente una app sin ninguna opción en la nube deberían comparar en su lugar con [Private LLM](/es/power-local-llm/private-llm-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review), ambas exclusivamente locales sin ningún camino a la nube integrado.',
+      '**Liquid Apollo es una app de chat de IA gratuita e híbrida — no una app exclusivamente local.** En el dispositivo, usa la tecnología [LEAP](https://leap.liquid.ai/) propia de Liquid AI para ejecutar los pequeños modelos LFM2 de Liquid AI (350M, 700M, 1,2B y 2,6B parámetros) totalmente offline, sin conexión a internet una vez descargado un modelo. Por separado, y como función de primera clase, también ofrece un modo OpenRouter que requiere tu propia clave API de OpenRouter y conexión a internet para llegar a modelos alojados como Llama 4 Scout y GPT-6 Astra de OpenAI, además de un modo de backend personalizado que se conecta por tu red a un servidor LM Studio u Ollama autoalojado. Solo el primero de estos tres modos mantiene cada mensaje en el dispositivo. Los lectores que quieran específicamente una app sin ninguna opción en la nube deberían comparar en su lugar con [Private LLM](/es/power-local-llm/private-llm-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review); según sus propias fichas, ninguna de las dos ofrece un modo nube integrado (consulta cada ficha para ver las funciones actuales).',
     quickAnswerTop: {
       es: {
         question: '¿Es Liquid Apollo una app de IA totalmente local y offline?',
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modo local: LEAP y modelos LFM2',
         content: [
           '**El modo en el dispositivo de Liquid Apollo funciona con [LEAP](https://leap.liquid.ai/) (Liquid Edge-AI Platform), un SDK que Liquid AI también ofrece por separado a otros creadores de apps, y ejecuta la propia familia de modelos LFM2 de Liquid AI, no un modelo de terceros.** Este es el único de los tres modos de Liquid Apollo en el que una conversación puede, por diseño, permanecer totalmente en el dispositivo sin conexión de red.',
-          '**Los modelos LFM2 vienen en cuatro tamaños publicados: LFM2-350M, LFM2-700M, LFM2-1,2B y LFM2-2,6B parámetros.** Según la documentación propia de Liquid AI, se basan en "operadores estructurados y adaptativos" en lugar de una arquitectura transformer convencional, se entrenaron con aproximadamente 10 billones de tokens, y están diseñados específicamente para una inferencia rápida en CPU, GPU y NPU de gama de teléfonos. Liquid AI indica que los modelos más pequeños de su biblioteca ocupan solo 300 MB y que la biblioteca funciona en dispositivos con 4 GB de RAM o más.',
+          '**Los modelos LFM2 vienen en cuatro tamaños publicados: LFM2-350M, LFM2-700M, LFM2-1,2B y LFM2-2,6B parámetros.** Según la documentación propia de Liquid AI, se basan en "operadores estructurados y adaptativos" en lugar de una arquitectura transformer convencional, se entrenaron con aproximadamente 10 billones de tokens, y están diseñados específicamente para una inferencia rápida en CPU, GPU y NPU de gama de teléfonos. Liquid AI indica que los modelos más pequeños de su biblioteca ocupan solo 300 MB y que la biblioteca funciona en dispositivos con 4 GB de RAM o más. La página de modelos de Liquid AI ya indica estos tamaños de LFM2 como obsoletos (deprecated); consulta la lista de modelos actual en la app.',
         ],
         items: [
           'Familia de modelos: LFM2-350M, LFM2-700M, LFM2-1,2B, LFM2-2,6B — todos publicados por Liquid AI, no ajustes finos de terceros',
@@ -1352,12 +1352,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modo en la nube: OpenRouter',
         content: [
           '**El modo OpenRouter de Liquid Apollo es una función de primera clase, claramente anunciada, no una opción oculta — la propia descripción de la app invita a "aportar una clave API de OpenRouter para chatear con casi cualquier modelo de la web".** Este modo requiere conexión a internet y una cuenta que tú mismo creas en [OpenRouter](https://openrouter.ai/), un servicio de terceros sin relación con Liquid AI que ofrece acceso vía API a muchos modelos de IA alojados.',
-          'Una vez pegas una clave API de OpenRouter en Liquid Apollo, la app puede llegar a "casi cualquier modelo" disponible a través de OpenRouter, según su propia ficha — ejemplos citados incluyen modelos de código abierto como Llama 4 Scout y modelos de código cerrado como GPT-6 Astra de OpenAI. Los mensajes enviados en este modo salen del dispositivo y son procesados por el modelo y proveedor que elijas a través de OpenRouter, exactamente igual que en cualquier otro cliente conectado a OpenRouter.',
+          'Una vez pegas una clave API de OpenRouter en Liquid Apollo, la app puede llegar a "casi cualquier modelo" disponible a través de OpenRouter, según su propia ficha — ejemplos citados incluyen modelos de pesos abiertos como Llama 4 Scout (Llama Community License). Los mensajes enviados en este modo salen del dispositivo y son procesados por el modelo y proveedor que elijas a través de OpenRouter, exactamente igual que en cualquier otro cliente conectado a OpenRouter.',
         ],
         items: [
           'Requiere tu propia cuenta y clave API de OpenRouter — Liquid AI no proporciona ni revende acceso a OpenRouter dentro de la app',
           'Requiere una conexión a internet activa; este modo no funciona sin conexión',
-          'Llega a modelos alojados incluyendo opciones de código abierto (por ejemplo, Llama 4 Scout) y de código cerrado (por ejemplo, GPT-6 Astra)',
+          'Llega a modelos alojados incluyendo opciones de pesos abiertos (por ejemplo, Llama 4 Scout) y de código cerrado (por ejemplo, GPT-6 Astra)',
           'La facturación del uso de modelos en este modo pasa por OpenRouter y el proveedor de modelo subyacente, no por Liquid AI',
           'Toda conversación enviada mediante este modo se transmite, por diseño, fuera del dispositivo a la infraestructura de OpenRouter y al proveedor de modelo seleccionado',
         ],
@@ -1407,11 +1407,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad: qué queda en el dispositivo y qué no',
         content: [
           '**La ficha de privacidad de App Store de Liquid Apollo indica que el desarrollador no recopila ningún dato desde la app en sí**, y no se requiere cuenta para usar el modo local. Esa afirmación cubre la recopilación de datos propia de la app — no describe, ni puede describir, qué ocurre con un mensaje una vez que decides enviarlo a OpenRouter o a un backend autoalojado, ya que son servicios separados fuera del control de Liquid AI.',
-          'La forma honesta de pensar en la privacidad aquí es por modo, no por app: el chat local con LFM2 no tiene ningún camino de red por el que el contenido de tus mensajes pueda salir del dispositivo, por arquitectura, no solo por política. El modo OpenRouter transmite necesariamente el contenido de los mensajes a OpenRouter y al proveedor de modelo que selecciones, según sus propios términos de privacidad. El modo de backend personalizado envía el contenido de los mensajes al servidor que hayas configurado, según cómo lo hayas montado.',
+          'La forma honesta de pensar en la privacidad aquí es por modo, no por app: por diseño, según Liquid AI, el chat local con LFM2 no envía el contenido de tus mensajes fuera del dispositivo; PromptQuorum no lo ha verificado. El modo OpenRouter transmite necesariamente el contenido de los mensajes a OpenRouter y al proveedor de modelo que selecciones, según sus propios términos de privacidad. El modo de backend personalizado envía el contenido de los mensajes al servidor que hayas configurado, según cómo lo hayas montado.',
         ],
         items: [
           'No se requiere cuenta para el modo local; Liquid AI indica que la app no recopila datos por sí misma',
-          'El chat local con LFM2 no tiene ningún componente de servidor al que enviar datos — una propiedad arquitectónica de la inferencia en el dispositivo, no solo una declaración de política',
+          'Por diseño, según Liquid AI, el chat local no envía el contenido de los mensajes fuera del dispositivo; PromptQuorum no lo ha verificado',
           'El modo OpenRouter transmite necesariamente el contenido de los mensajes fuera del dispositivo a la infraestructura de OpenRouter y al proveedor de modelo seleccionado — revisa la [política de privacidad propia de OpenRouter](https://openrouter.ai/privacy) si te importa',
           'El modo de backend personalizado transmite el contenido de los mensajes a tu servidor autoalojado — la privacidad aquí depende de tu propia configuración del servidor, no de Liquid Apollo',
           'Esta review no ha auditado de forma independiente el tráfico de red de Liquid Apollo para verificar la afirmación de no recopilación de datos en modo local',
@@ -1473,18 +1473,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Solo local o híbrida': 'Híbrida: local (LFM2) + nube OpenRouter + backend personalizado',
             'Plataformas': 'iPhone/iPad/Mac/Vision/Android',
             'Precio': 'Gratis (uso de OpenRouter facturado por separado)',
-            'Diferencia clave': 'Única app móvil que ejecuta los propios modelos LFM2 de Liquid AI en el dispositivo; el modo nube es una función de primera clase, no un caso marginal',
+            'Diferencia clave': 'App de demostración propia de Liquid AI para ejecutar sus modelos LFM2 en el dispositivo mediante LEAP; el modo nube es una función de primera clase, no un caso marginal',
           },
           {
             'App': '[Private LLM](/es/power-local-llm/private-llm-review)',
-            'Solo local o híbrida': 'Solo local, sin camino a la nube',
+            'Solo local o híbrida': 'Sin modo nube integrado según su ficha',
             'Plataformas': 'iPhone/iPad/Mac (solo Apple)',
             'Precio': 'Compra única de 4,99 $',
             'Diferencia clave': 'Mejor opción sin ninguna opción de nube, con una amplia biblioteca de modelos seleccionada',
           },
           {
             'App': '[Enclave AI](/es/power-local-llm/enclave-ai-review)',
-            'Solo local o híbrida': 'Solo local, sin camino a la nube',
+            'Solo local o híbrida': 'Sin modo nube integrado según su ficha',
             'Plataformas': 'iPhone/iPad/Mac (solo Apple)',
             'Precio': 'Gratis, con compras dentro de la app',
             'Diferencia clave': 'Alternativa gratuita totalmente local sin ningún modo de nube, incluido el chat de voz',
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'A quién no le conviene Liquid Apollo',
         items: [
-          '**Lectores que quieren una app estrictamente local sin ninguna opción de nube.** El modo nube de Liquid Apollo es una función integrada y de primera clase que no se puede eliminar de la app, aunque nunca la actives — [Private LLM](/es/power-local-llm/private-llm-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review) encajan mejor si la app en sí no debe tener ningún camino de código hacia la nube.',
+          '**Lectores que quieren una app estrictamente local sin ninguna opción de nube.** El modo nube de Liquid Apollo es una función integrada y de primera clase que no se puede eliminar de la app, aunque nunca la actives — [Private LLM](/es/power-local-llm/private-llm-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review) pueden encajar mejor: según sus propias fichas, no ofrecen un modo nube integrado (consulta cada ficha para ver las funciones actuales).',
           '**Lectores que asumen que "funciona en el dispositivo" significa que todo modo es offline.** Solo el modo local LFM2 es offline; tanto el modo OpenRouter como el de backend personalizado requieren conexión de red por diseño.',
           '**Lectores que quieren capacidad de modelo de vanguardia sin configurar OpenRouter ni un servidor autoalojado.** El tamaño más grande publicado de LFM2 es 2,6B parámetros, muy por debajo de los modelos de nube de vanguardia a los que puede llegar el modo OpenRouter de Liquid Apollo — el modo local por sí solo no igualará la calidad de salida de la clase GPT-6 Astra.',
           '**Usuarios de escritorio Windows o Linux que quieren un cliente nativo.** Liquid Apollo no tiene app para Windows o Linux; solo el lado del servidor (LM Studio/Ollama) del modo de backend personalizado puede ejecutarse allí.',
@@ -1557,12 +1557,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué es LEAP?', a: 'LEAP (Liquid Edge-AI Platform) es el SDK propio de Liquid AI para ejecutar pequeños modelos de lenguaje directamente en un teléfono u otro dispositivo de borde. El modo de chat local de Liquid Apollo se construye sobre LEAP, y Liquid AI también ofrece LEAP por separado a otros desarrolladores de apps.' },
           { q: '¿Qué modelos ejecuta Liquid Apollo en el dispositivo?', a: 'La propia familia de modelos LFM2 de Liquid AI: LFM2-350M, LFM2-700M, LFM2-1,2B y LFM2-2,6B parámetros, según la documentación de modelo publicada por Liquid AI.' },
           { q: '¿Cuesta dinero Liquid Apollo?', a: 'La app en sí es gratuita tanto en App Store como en Google Play, sin compras dentro de la app listadas. Su modo nube OpenRouter lo factura por separado OpenRouter y el proveedor de modelo que elijas, con tu propia clave API — no Liquid AI.' },
-          { q: '¿Qué es el modo OpenRouter de Liquid Apollo?', a: 'Permite pegar tu propia clave API de OpenRouter en la app para llegar a modelos alojados por internet, incluyendo modelos de código abierto como Llama 4 Scout y de código cerrado como GPT-6 Astra de OpenAI. Este modo requiere conexión a internet y no está relacionado con los propios modelos LFM2 en el dispositivo de Liquid AI.' },
+          { q: '¿Qué es el modo OpenRouter de Liquid Apollo?', a: 'Permite pegar tu propia clave API de OpenRouter en la app para llegar a modelos alojados por internet, incluyendo modelos de pesos abiertos como Llama 4 Scout (Llama Community License). Este modo requiere conexión a internet y no está relacionado con los propios modelos LFM2 en el dispositivo de Liquid AI.' },
           { q: '¿Puedo conectar Liquid Apollo a mi propio servidor LM Studio u Ollama?', a: 'Sí. Su modo de backend personalizado se conecta a una instancia de LM Studio u Ollama autoalojada en tu propia red, convirtiendo a Liquid Apollo en un frontend móvil para un modelo que operas tú mismo.' },
           { q: '¿Qué plataformas admite Liquid Apollo?', a: 'iPhone (iOS 18+), iPad (iPadOS 18+), Mac (Apple Silicon, macOS 15+), Apple Vision (visionOS 2+) y Android vía Google Play. No hay cliente de escritorio para Windows o Linux.' },
           { q: '¿Quién fabrica Liquid Apollo?', a: 'Liquid AI, Inc., que también desarrolla el SDK LEAP y la familia de modelos LFM2 usada en el modo en el dispositivo de la app.' },
           { q: '¿Liquid Apollo recopila mis datos?', a: 'La ficha de privacidad de App Store de Liquid Apollo indica que el desarrollador no recopila ningún dato desde la app en sí, y el modo local no requiere cuenta. Esa afirmación cubre la app, no OpenRouter ni un backend autoalojado — esos servicios tienen sus propias prácticas de privacidad separadas una vez que les envías datos.' },
-          { q: '¿Debería usar Liquid Apollo si quiero una app totalmente offline sin ninguna opción de nube?', a: 'No sería lo ideal. Liquid Apollo siempre incluye un modo nube integrado, aunque nunca lo actives. [Private LLM](/es/power-local-llm/private-llm-review) y [Enclave AI](/es/power-local-llm/enclave-ai-review) son apps exclusivamente en el dispositivo, sin ningún camino de código hacia la nube, y encajan mejor con ese requisito específico.' },
+          { q: '¿Debería usar Liquid Apollo si quiero una app totalmente offline sin ninguna opción de nube?', a: 'No sería lo ideal. Liquid Apollo siempre incluye un modo nube integrado, aunque nunca lo actives. [Private LLM](/es/power-local-llm/private-llm-review) y [Enclave AI](/es/power-local-llm/enclave-ai-review) no ofrecen, según sus propias fichas, un modo nube integrado (consulta cada ficha para ver las funciones actuales), por lo que pueden encajar mejor con ese requisito específico.' },
           { q: '¿Puedo acceder a mi servidor LM Studio u Ollama desde el iPhone por internet cuando no estoy en casa?', a: 'La ficha de Liquid Apollo describe la conexión con un servidor LM Studio u Ollama que tú mismo ejecutas, pero no describe el acceso remoto. Lo que funcione fuera de tu red doméstica depende de cómo hagas accesible el servidor, por ejemplo mediante una VPN a tu red doméstica. PromptQuorum no ha probado esta configuración; un servidor expuesto a internet sin autenticación es un riesgo de seguridad que la app no gestiona por ti.' },
         ],
       },
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Liquid Apollo es una app híbrida presentada con honestidad: Liquid AI anuncia los modos OpenRouter y de backend personalizado como funciones principales, no en letra pequeña, lo que facilita más que en la mayoría de apps de esta categoría saber qué se obtiene realmente. Su modo local es una forma real y gratuita de ejecutar los propios modelos LFM2 de Liquid AI totalmente offline vía LEAP, y su alcance multiplataforma (iOS, Android, Mac, Apple Vision) es mayor que el de la mayoría de apps de IA local de una sola plataforma reseñadas en este sitio. La contrapartida es exactamente lo que implica el nombre "híbrida": los lectores que necesiten una app estructuralmente incapaz de alcanzar la nube, bajo cualquier configuración, deberían elegir [Private LLM](/es/power-local-llm/private-llm-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review) en su lugar. Los lectores que quieran un cliente flexible único que abarque el chat local con LFM2, modelos de vanguardia alojados vía OpenRouter y su propio servidor autoalojado obtienen exactamente eso con Liquid Apollo, sin más coste que el uso de OpenRouter que decidan pagar.',
+          'Liquid Apollo es una app híbrida presentada con honestidad: Liquid AI anuncia los modos OpenRouter y de backend personalizado como funciones principales, no en letra pequeña, lo que facilita más que en la mayoría de apps de esta categoría saber qué se obtiene realmente. Su modo local es una forma real y gratuita de ejecutar los propios modelos LFM2 de Liquid AI totalmente offline vía LEAP, y su alcance multiplataforma (iOS, Android, Mac, Apple Vision) es mayor que el de la mayoría de apps de IA local de una sola plataforma reseñadas en este sitio. La contrapartida es exactamente lo que implica el nombre "híbrida": los lectores que necesiten una app sin modo nube deberían comparar [Private LLM](/es/power-local-llm/private-llm-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review), que según sus propias fichas no ofrecen un modo nube integrado (consulta cada ficha para ver las funciones actuales). Los lectores que quieran un cliente flexible único que abarque el chat local con LFM2, modelos de vanguardia alojados vía OpenRouter y su propio servidor autoalojado obtienen exactamente eso con Liquid Apollo, sin más coste que el uso de OpenRouter que decidan pagar.',
       },
       sources: {
         id: 'sources',
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Private LLM Review](/es/power-local-llm/private-llm-review) — una alternativa solo local, sin camino a la nube, para lectores sin opción de nube.',
-          '[Enclave AI Review](/es/power-local-llm/enclave-ai-review) — otra app de Apple gratuita y solo local, sin modo de nube integrado.',
+          '[Enclave AI Review](/es/power-local-llm/enclave-ai-review) — otra app de Apple gratuita que, según su propia ficha, no ofrece un modo nube integrado.',
           '[Layla Review](/es/power-local-llm/layla-review) — otra app híbrida con un nivel de nube opcional, desactivado por defecto.',
           '[Arbiter Local AI Chat Review](/es/power-local-llm/arbiter-local-ai-chat-review) — la correspondencia más cercana al modo de backend personalizado de Liquid Apollo.',
           '[Best Local LLM Apps for iPhone in 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) — el panorama más amplio de apps para iPhone.',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**O Liquid Apollo é um app de chat de IA gratuito e híbrido — não um app exclusivamente local.** No dispositivo, ele usa a tecnologia [LEAP](https://leap.liquid.ai/) própria da Liquid AI para rodar os pequenos modelos LFM2 da Liquid AI (350M, 700M, 1,2B e 2,6B parâmetros) totalmente offline, sem conexão à internet depois que um modelo é baixado. Separadamente, e como recurso de primeira classe, ele também oferece um modo OpenRouter que exige sua própria chave de API OpenRouter e conexão à internet para acessar modelos hospedados como Llama 4 Scout e GPT-6 Astra (OpenAI), além de um modo de backend personalizado que se conecta pela sua rede a um servidor LM Studio ou Ollama auto-hospedado. Apenas o primeiro desses três modos mantém cada mensagem no dispositivo. Leitores que querem especificamente um app sem nenhuma opção de nuvem devem comparar com [Private LLM](/pt/power-local-llm/private-llm-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review), ambos exclusivamente no dispositivo, sem nenhum caminho de nuvem embutido.',
+      '**O Liquid Apollo é um app de chat de IA gratuito e híbrido — não um app exclusivamente local.** No dispositivo, ele usa a tecnologia [LEAP](https://leap.liquid.ai/) própria da Liquid AI para rodar os pequenos modelos LFM2 da Liquid AI (350M, 700M, 1,2B e 2,6B parâmetros) totalmente offline, sem conexão à internet depois que um modelo é baixado. Separadamente, e como recurso de primeira classe, ele também oferece um modo OpenRouter que exige sua própria chave de API OpenRouter e conexão à internet para acessar modelos hospedados como Llama 4 Scout e GPT-6 Astra (OpenAI), além de um modo de backend personalizado que se conecta pela sua rede a um servidor LM Studio ou Ollama auto-hospedado. Apenas o primeiro desses três modos mantém cada mensagem no dispositivo. Leitores que querem especificamente um app sem nenhuma opção de nuvem devem comparar com [Private LLM](/pt/power-local-llm/private-llm-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review); segundo suas próprias fichas, nenhum dos dois oferece modo nuvem embutido (confira cada ficha para os recursos atuais).',
     quickAnswerTop: {
       pt: {
         question: 'O Liquid Apollo é um app de IA totalmente local e offline?',
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modo local: LEAP e modelos LFM2',
         content: [
           '**O modo no dispositivo do Liquid Apollo é alimentado pelo [LEAP](https://leap.liquid.ai/) (Liquid Edge-AI Platform), um SDK que a Liquid AI também oferece separadamente a outros criadores de apps, e roda a própria família de modelos LFM2 da Liquid AI, não um modelo de terceiros.** Este é o único dos três modos do Liquid Apollo em que uma conversa pode, por design, permanecer totalmente no dispositivo sem conexão de rede.',
-          '**Os modelos LFM2 vêm em quatro tamanhos publicados: LFM2-350M, LFM2-700M, LFM2-1,2B e LFM2-2,6B parâmetros.** Segundo a documentação própria da Liquid AI, eles são construídos com "operadores estruturados e adaptativos" em vez de uma arquitetura transformer convencional, treinados com aproximadamente 10 trilhões de tokens, e projetados especificamente para inferência rápida em CPUs, GPUs e NPUs de celulares. A Liquid AI afirma que os menores modelos de sua biblioteca cabem em apenas 300 MB e que a biblioteca roda em dispositivos com 4 GB de RAM ou mais.',
+          '**Os modelos LFM2 vêm em quatro tamanhos publicados: LFM2-350M, LFM2-700M, LFM2-1,2B e LFM2-2,6B parâmetros.** Segundo a documentação própria da Liquid AI, eles são construídos com "operadores estruturados e adaptativos" em vez de uma arquitetura transformer convencional, treinados com aproximadamente 10 trilhões de tokens, e projetados especificamente para inferência rápida em CPUs, GPUs e NPUs de celulares. A Liquid AI afirma que os menores modelos de sua biblioteca cabem em apenas 300 MB e que a biblioteca roda em dispositivos com 4 GB de RAM ou mais. A página de modelos da Liquid AI agora lista esses tamanhos do LFM2 como obsoletos (deprecated); confira a lista de modelos atual no app.',
         ],
         items: [
           'Família de modelos: LFM2-350M, LFM2-700M, LFM2-1,2B, LFM2-2,6B — todos publicados pela própria Liquid AI, não fine-tunes de terceiros',
@@ -1749,12 +1749,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modo na nuvem: OpenRouter',
         content: [
           '**O modo OpenRouter do Liquid Apollo é um recurso de primeira classe, claramente divulgado, não uma opção escondida — a própria descrição do app convida a "trazer uma chave de API OpenRouter para conversar com quase qualquer modelo da web".** Esse modo exige conexão à internet e uma conta que você mesmo cria no [OpenRouter](https://openrouter.ai/), um serviço de terceiros sem relação com a Liquid AI que fornece acesso via API a muitos modelos de IA hospedados.',
-          'Depois de colar uma chave de API OpenRouter no Liquid Apollo, o app pode acessar "quase qualquer modelo" disponível via OpenRouter, segundo sua própria ficha — exemplos citados incluem modelos de código aberto como Llama 4 Scout e modelos de código fechado como GPT-6 Astra (OpenAI). Mensagens enviadas nesse modo saem do dispositivo e são processadas pelo modelo e provedor escolhidos via OpenRouter, exatamente como em qualquer outro cliente conectado ao OpenRouter.',
+          'Depois de colar uma chave de API OpenRouter no Liquid Apollo, o app pode acessar "quase qualquer modelo" disponível via OpenRouter, segundo sua própria ficha — exemplos citados incluem modelos de pesos abertos como Llama 4 Scout (Llama Community License). Mensagens enviadas nesse modo saem do dispositivo e são processadas pelo modelo e provedor escolhidos via OpenRouter, exatamente como em qualquer outro cliente conectado ao OpenRouter.',
         ],
         items: [
           'Exige sua própria conta e chave de API OpenRouter — a Liquid AI não fornece nem revende acesso ao OpenRouter dentro do app',
           'Exige conexão ativa à internet; este modo não funciona offline',
-          'Acessa modelos hospedados incluindo opções de código aberto (por exemplo, Llama 4 Scout) e de código fechado (por exemplo, GPT-6 Astra)',
+          'Acessa modelos hospedados incluindo opções de pesos abertos (por exemplo, Llama 4 Scout) e de código fechado (por exemplo, GPT-6 Astra)',
           'A cobrança pelo uso de modelos nesse modo passa pelo OpenRouter e pelo provedor de modelo subjacente, não pela Liquid AI',
           'Toda conversa enviada por esse modo é, por design, transmitida para fora do dispositivo, para a infraestrutura do OpenRouter e o provedor de modelo selecionado',
         ],
@@ -1804,11 +1804,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade: o que fica no dispositivo e o que não fica',
         content: [
           '**A ficha de privacidade da App Store do Liquid Apollo afirma que o desenvolvedor não coleta nenhum dado a partir do app em si**, e nenhuma conta é exigida para usar o modo local. Essa afirmação cobre a coleta de dados própria do app — ela não descreve, nem pode descrever, o que acontece com uma mensagem depois que você opta por enviá-la ao OpenRouter ou a um backend auto-hospedado, já que são serviços separados fora do controle da Liquid AI.',
-          'A forma honesta de pensar sobre privacidade aqui é por modo, não por app: o chat local com LFM2 não tem nenhum caminho de rede pelo qual o conteúdo das suas mensagens possa sair do dispositivo, por arquitetura, não apenas por política. O modo OpenRouter necessariamente transmite o conteúdo das mensagens ao OpenRouter e ao provedor de modelo que você selecionar, sob os termos de privacidade deles. O modo de backend personalizado envia o conteúdo das mensagens ao servidor que você configurou, conforme como você o montou.',
+          'A forma honesta de pensar sobre privacidade aqui é por modo, não por app: por design, segundo a Liquid AI, o chat local com LFM2 não envia o conteúdo das suas mensagens para fora do dispositivo; a PromptQuorum não verificou isso. O modo OpenRouter necessariamente transmite o conteúdo das mensagens ao OpenRouter e ao provedor de modelo que você selecionar, sob os termos de privacidade deles. O modo de backend personalizado envia o conteúdo das mensagens ao servidor que você configurou, conforme como você o montou.',
         ],
         items: [
           'Nenhuma conta exigida para o modo local; a Liquid AI afirma que o app não coleta dados por si só',
-          'O chat local com LFM2 não tem nenhum componente de servidor para o qual enviar dados — uma propriedade arquitetônica da inferência no dispositivo, não apenas uma declaração de política',
+          'Por design, segundo a Liquid AI, o chat local não envia o conteúdo das mensagens para fora do dispositivo; a PromptQuorum não verificou isso',
           'O modo OpenRouter necessariamente transmite o conteúdo das mensagens para fora do dispositivo, para a infraestrutura do OpenRouter e o provedor de modelo selecionado — revise a [política de privacidade própria do OpenRouter](https://openrouter.ai/privacy) se isso for relevante para você',
           'O modo de backend personalizado transmite o conteúdo das mensagens para o seu servidor auto-hospedado — a privacidade aqui depende da sua própria configuração de servidor, não do Liquid Apollo',
           'Esta review não auditou de forma independente o tráfego de rede do Liquid Apollo para verificar a afirmação de não coleta de dados no modo local',
@@ -1870,18 +1870,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Só local ou híbrido': 'Híbrido: local (LFM2) + nuvem OpenRouter + backend personalizado',
             'Plataformas': 'iPhone/iPad/Mac/Vision/Android',
             'Preço': 'Gratuito (uso do OpenRouter cobrado separadamente)',
-            'Diferença-chave': 'Único app móvel que roda os próprios modelos LFM2 da Liquid AI no dispositivo; o modo nuvem é um recurso de primeira classe, não um caso de borda',
+            'Diferença-chave': 'App de demonstração da própria Liquid AI para rodar seus modelos LFM2 no dispositivo via LEAP; o modo nuvem é um recurso de primeira classe, não um caso de borda',
           },
           {
             'App': '[Private LLM](/pt/power-local-llm/private-llm-review)',
-            'Só local ou híbrido': 'Só local, sem caminho de nuvem',
+            'Só local ou híbrido': 'Sem modo nuvem embutido segundo a ficha',
             'Plataformas': 'iPhone/iPad/Mac (só Apple)',
             'Preço': 'Compra única de US$ 4,99',
             'Diferença-chave': 'Melhor escolha sem nenhuma opção de nuvem, com uma grande biblioteca de modelos selecionada',
           },
           {
             'App': '[Enclave AI](/pt/power-local-llm/enclave-ai-review)',
-            'Só local ou híbrido': 'Só local, sem caminho de nuvem',
+            'Só local ou híbrido': 'Sem modo nuvem embutido segundo a ficha',
             'Plataformas': 'iPhone/iPad/Mac (só Apple)',
             'Preço': 'Gratuito, com compras dentro do app',
             'Diferença-chave': 'Alternativa gratuita totalmente local, sem nenhum modo de nuvem, incluindo para chat de voz',
@@ -1917,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Para quem o Liquid Apollo não é indicado',
         items: [
-          '**Leitores que querem um app estritamente local, sem nenhuma opção de nuvem.** O modo nuvem do Liquid Apollo é um recurso embutido e de primeira classe que não pode ser removido do app, mesmo que você nunca o ative — [Private LLM](/pt/power-local-llm/private-llm-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review) são melhores opções se o app em si não puder ter nenhum caminho de código para a nuvem.',
+          '**Leitores que querem um app estritamente local, sem nenhuma opção de nuvem.** O modo nuvem do Liquid Apollo é um recurso embutido e de primeira classe que não pode ser removido do app, mesmo que você nunca o ative — [Private LLM](/pt/power-local-llm/private-llm-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review) podem ser melhores opções: segundo suas próprias fichas, não oferecem modo nuvem embutido (confira cada ficha para os recursos atuais).',
           '**Leitores que presumem que "roda no dispositivo" significa que todo modo é offline.** Apenas o modo local LFM2 é offline; tanto o modo OpenRouter quanto o de backend personalizado exigem conexão de rede por design.',
           '**Leitores que querem capacidade de modelo de ponta sem configurar o OpenRouter ou um servidor auto-hospedado.** O maior tamanho publicado do LFM2 é 2,6B parâmetros, bem abaixo dos modelos de nuvem de ponta que o modo OpenRouter do Liquid Apollo pode acessar — o modo local sozinho não igualará a qualidade de saída da classe GPT-6 Astra.',
           '**Usuários de desktop Windows ou Linux que querem um cliente nativo.** O Liquid Apollo não tem app para Windows ou Linux; apenas o lado do servidor (LM Studio/Ollama) do modo de backend personalizado pode rodar lá.',
@@ -1954,12 +1954,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que é o LEAP?', a: 'LEAP (Liquid Edge-AI Platform) é o SDK próprio da Liquid AI para rodar pequenos modelos de linguagem diretamente em um celular ou outro dispositivo de borda. O modo de chat local do Liquid Apollo é construído sobre o LEAP, e a Liquid AI também oferece o LEAP separadamente a outros desenvolvedores de apps.' },
           { q: 'Quais modelos o Liquid Apollo roda no dispositivo?', a: 'A própria família de modelos LFM2 da Liquid AI: LFM2-350M, LFM2-700M, LFM2-1,2B e LFM2-2,6B parâmetros, segundo a documentação de modelo publicada pela Liquid AI.' },
           { q: 'O Liquid Apollo custa dinheiro?', a: 'O app em si é gratuito tanto na App Store quanto no Google Play, sem compras dentro do app listadas. Seu modo nuvem OpenRouter é cobrado separadamente pelo OpenRouter e pelo provedor de modelo que você escolher, com sua própria chave de API — não pela Liquid AI.' },
-          { q: 'O que é o modo OpenRouter do Liquid Apollo?', a: 'Ele permite colar sua própria chave de API OpenRouter no app para acessar modelos hospedados pela internet, incluindo modelos de código aberto como Llama 4 Scout e de código fechado como GPT-6 Astra (OpenAI). Esse modo exige conexão à internet e não tem relação com os próprios modelos LFM2 no dispositivo da Liquid AI.' },
+          { q: 'O que é o modo OpenRouter do Liquid Apollo?', a: 'Ele permite colar sua própria chave de API OpenRouter no app para acessar modelos hospedados pela internet, incluindo modelos de pesos abertos como Llama 4 Scout (Llama Community License). Esse modo exige conexão à internet e não tem relação com os próprios modelos LFM2 no dispositivo da Liquid AI.' },
           { q: 'Posso conectar o Liquid Apollo ao meu próprio servidor LM Studio ou Ollama?', a: 'Sim. Seu modo de backend personalizado se conecta a uma instância LM Studio ou Ollama auto-hospedada na sua própria rede, tornando o Liquid Apollo um frontend móvel para um modelo que você mesmo opera.' },
           { q: 'Quais plataformas o Liquid Apollo suporta?', a: 'iPhone (iOS 18+), iPad (iPadOS 18+), Mac (Apple Silicon, macOS 15+), Apple Vision (visionOS 2+) e Android via Google Play. Não há cliente de desktop Windows ou Linux.' },
           { q: 'Quem faz o Liquid Apollo?', a: 'Liquid AI, Inc., que também desenvolve o SDK LEAP e a família de modelos LFM2 usada no modo no dispositivo do app.' },
           { q: 'O Liquid Apollo coleta meus dados?', a: 'A ficha de privacidade da App Store do Liquid Apollo afirma que o desenvolvedor não coleta nenhum dado a partir do app em si, e o modo local não exige conta. Essa afirmação cobre o app, não o OpenRouter ou um backend auto-hospedado — esses serviços têm suas próprias práticas de privacidade separadas assim que você envia dados por eles.' },
-          { q: 'Devo usar o Liquid Apollo se quero um app totalmente offline, sem nenhuma opção de nuvem?', a: 'Não seria o ideal. O Liquid Apollo sempre vem com um modo nuvem embutido, mesmo que você nunca o ative. [Private LLM](/pt/power-local-llm/private-llm-review) e [Enclave AI](/pt/power-local-llm/enclave-ai-review) são apps exclusivamente no dispositivo, sem nenhum caminho de código para a nuvem, e são melhores opções para esse requisito específico.' },
+          { q: 'Devo usar o Liquid Apollo se quero um app totalmente offline, sem nenhuma opção de nuvem?', a: 'Não seria o ideal. O Liquid Apollo sempre vem com um modo nuvem embutido, mesmo que você nunca o ative. [Private LLM](/pt/power-local-llm/private-llm-review) e [Enclave AI](/pt/power-local-llm/enclave-ai-review) não oferecem, segundo suas próprias fichas, modo nuvem embutido (confira cada ficha para os recursos atuais), e por isso podem ser melhores opções para esse requisito específico.' },
           { q: 'Posso acessar meu servidor LM Studio ou Ollama pelo iPhone via internet quando estou fora de casa?', a: 'A página do Liquid Apollo descreve a conexão com um servidor LM Studio ou Ollama que você mesmo executa, mas não descreve acesso remoto. O que funciona fora da sua rede doméstica depende de como você torna o servidor acessível, por exemplo por meio de uma VPN até a sua rede doméstica. A PromptQuorum não testou essa configuração; um servidor exposto à internet sem autenticação é um risco de segurança que o app não gerencia por você.' },
         ],
       },
@@ -1967,7 +1967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Liquid Apollo é um app híbrido comercializado com honestidade: a Liquid AI anuncia os modos OpenRouter e de backend personalizado como recursos principais, não em letras miúdas, o que torna mais fácil do que na maioria dos apps dessa categoria saber exatamente o que você está obtendo. Seu modo local é uma forma real e gratuita de rodar os próprios modelos LFM2 da Liquid AI totalmente offline via LEAP, e seu alcance multiplataforma (iOS, Android, Mac, Apple Vision) é maior que o da maioria dos apps de IA local de plataforma única cobertos neste site. A contrapartida é exatamente o que o nome "híbrido" implica: leitores que precisam de um app estruturalmente incapaz de alcançar a nuvem, sob qualquer configuração, devem escolher [Private LLM](/pt/power-local-llm/private-llm-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review). Leitores que querem um cliente flexível único abrangendo chat local com LFM2, modelos de ponta hospedados via OpenRouter e seu próprio servidor auto-hospedado obtêm exatamente isso com o Liquid Apollo, sem custo além do uso do OpenRouter que escolherem pagar.',
+          'O Liquid Apollo é um app híbrido comercializado com honestidade: a Liquid AI anuncia os modos OpenRouter e de backend personalizado como recursos principais, não em letras miúdas, o que torna mais fácil do que na maioria dos apps dessa categoria saber exatamente o que você está obtendo. Seu modo local é uma forma real e gratuita de rodar os próprios modelos LFM2 da Liquid AI totalmente offline via LEAP, e seu alcance multiplataforma (iOS, Android, Mac, Apple Vision) é maior que o da maioria dos apps de IA local de plataforma única cobertos neste site. A contrapartida é exatamente o que o nome "híbrido" implica: leitores que precisam de um app sem modo nuvem devem comparar [Private LLM](/pt/power-local-llm/private-llm-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review), que segundo suas próprias fichas não oferecem modo nuvem embutido (confira cada ficha para os recursos atuais). Leitores que querem um cliente flexível único abrangendo chat local com LFM2, modelos de ponta hospedados via OpenRouter e seu próprio servidor auto-hospedado obtêm exatamente isso com o Liquid Apollo, sem custo além do uso do OpenRouter que escolherem pagar.',
       },
       sources: {
         id: 'sources',
@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Private LLM Review](/pt/power-local-llm/private-llm-review) — uma alternativa só local, sem caminho de nuvem, para leitores sem opção de nuvem.',
-          '[Enclave AI Review](/pt/power-local-llm/enclave-ai-review) — outro app Apple gratuito e só local, sem modo de nuvem embutido.',
+          '[Enclave AI Review](/pt/power-local-llm/enclave-ai-review) — outro app Apple gratuito que, segundo sua própria ficha, não oferece modo nuvem embutido.',
           '[Layla Review](/pt/power-local-llm/layla-review) — outro app híbrido com um nível de nuvem opcional, desativado por padrão.',
           '[Arbiter Local AI Chat Review](/pt/power-local-llm/arbiter-local-ai-chat-review) — a correspondência mais próxima do modo de backend personalizado do Liquid Apollo.',
           '[Best Local LLM Apps for iPhone in 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o panorama mais amplo de apps para iPhone.',
@@ -1999,7 +1999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apolloは無料のハイブリッドAIチャットアプリであり、ローカル専用アプリではありません。** オンデバイスでは、Liquid AI独自の[LEAP](https://leap.liquid.ai/)技術を使い、Liquid AIの小型LFM2モデル（350M、700M、1.2B、2.6Bパラメータ）をモデルダウンロード後は完全にオフラインで実行します。それとは別に、主要機能として、独自のOpenRouter APIキーとインターネット接続を必要とするOpenRouterモードも提供し、Llama 4 ScoutやOpenAIのGPT-6 Astraといったホスト型モデルに到達できます。さらに、自分でホストするLM StudioまたはOllamaサーバーにネットワーク経由で接続するカスタムバックエンドモードもあります。この3つのモードのうち、メッセージを常にデバイス上に保つのは最初のモードだけです。クラウドオプションが一切ないアプリを特に求める読者は、代わりに[Private LLM](/ja/power-local-llm/private-llm-review)や[Enclave AI](/ja/power-local-llm/enclave-ai-review)を比較検討してください。どちらも組み込みのクラウド経路のないオンデバイス専用アプリです。',
+      '**Liquid Apolloは無料のハイブリッドAIチャットアプリであり、ローカル専用アプリではありません。** オンデバイスでは、Liquid AI独自の[LEAP](https://leap.liquid.ai/)技術を使い、Liquid AIの小型LFM2モデル（350M、700M、1.2B、2.6Bパラメータ）をモデルダウンロード後は完全にオフラインで実行します。それとは別に、主要機能として、独自のOpenRouter APIキーとインターネット接続を必要とするOpenRouterモードも提供し、Llama 4 ScoutやOpenAIのGPT-6 Astraといったホスト型モデルに到達できます。さらに、自分でホストするLM StudioまたはOllamaサーバーにネットワーク経由で接続するカスタムバックエンドモードもあります。この3つのモードのうち、メッセージを常にデバイス上に保つのは最初のモードだけです。クラウドオプションが一切ないアプリを特に求める読者は、代わりに[Private LLM](/ja/power-local-llm/private-llm-review)や[Enclave AI](/ja/power-local-llm/enclave-ai-review)を比較検討してください。各アプリ自身の掲載ページによれば、どちらも組み込みのクラウドモードは提供していません（最新の機能は各掲載ページで確認してください）。',
     quickAnswerTop: {
       ja: {
         question: 'Liquid Apolloは完全にローカルでオフラインのAIアプリですか？',
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ローカルモード：LEAPとLFM2モデル',
         content: [
           '**Liquid Apolloのオンデバイスモードは[LEAP](https://leap.liquid.ai/)（Liquid Edge-AI Platform）によって動いており、これはLiquid AIが他のアプリ開発者にも別途提供している開発者向けSDKで、サードパーティのモデルではなくLiquid AI自身のLFM2モデルファミリーを実行します。** これはLiquid Apolloの3つのモードの中で唯一、設計上、会話がネットワーク接続なしで完全にデバイス上に留まりうるモードです。',
-          '**LFM2モデルには公開されている4つのサイズがあります：LFM2-350M、LFM2-700M、LFM2-1.2B、LFM2-2.6Bパラメータです。** Liquid AI自身のモデル文書によると、これらは標準的なトランスフォーマー構造ではなく「構造化された適応的オペレーター」に基づいて構築されており、約10兆トークンで学習され、スマホクラスのCPU、GPU、NPUでの高速推論のために特別に設計されています。Liquid AIは、ライブラリ内の最小モデルはわずか300MBで動作し、ライブラリ自体は4GB以上のRAMを持つデバイスで動作すると述べています。',
+          '**LFM2モデルには公開されている4つのサイズがあります：LFM2-350M、LFM2-700M、LFM2-1.2B、LFM2-2.6Bパラメータです。** Liquid AI自身のモデル文書によると、これらは標準的なトランスフォーマー構造ではなく「構造化された適応的オペレーター」に基づいて構築されており、約10兆トークンで学習され、スマホクラスのCPU、GPU、NPUでの高速推論のために特別に設計されています。Liquid AIは、ライブラリ内の最小モデルはわずか300MBで動作し、ライブラリ自体は4GB以上のRAMを持つデバイスで動作すると述べています。Liquid AIのモデルページでは、これらのLFM2サイズは現在「deprecated（非推奨）」と記載されています。アプリの現在のモデル一覧を確認してください。',
         ],
         items: [
           'モデルファミリー：LFM2-350M、LFM2-700M、LFM2-1.2B、LFM2-2.6B — すべてLiquid AI自身が公開したもので、サードパーティのファインチューンではない',
@@ -2146,12 +2146,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'クラウドモード：OpenRouter',
         content: [
           '**Liquid ApolloのOpenRouterモードは隠されたオプションではなく、明確に宣伝されている主要機能です — アプリ自身の説明文は「OpenRouter APIキーを持ち込んでウェブ上のほぼすべてのモデルとチャットしよう」と誘っています。** このモードにはインターネット接続と、自分自身で作成する[OpenRouter](https://openrouter.ai/)アカウント（Liquid AIとは無関係なサードパーティサービスで、多くのホスト型AIモデルへのAPIアクセスを提供）が必要です。',
-          'OpenRouter APIキーをLiquid Apolloに貼り付けると、アプリはOpenRouter経由で利用可能な「ほぼすべてのモデル」に到達できると、アプリ自身の掲載ページに記載されています — 例として、Llama 4 Scoutのようなオープンソースモデルや、OpenAIのGPT-6 Astraのようなクローズドソースモデルが挙げられています。このモードで送信されたメッセージはデバイスの外に出て、OpenRouter経由で選択したモデルとプロバイダーによって処理されます。これは他のOpenRouter接続クライアントとまったく同じです。',
+          'OpenRouter APIキーをLiquid Apolloに貼り付けると、アプリはOpenRouter経由で利用可能な「ほぼすべてのモデル」に到達できると、アプリ自身の掲載ページに記載されています — 例として、Llama 4 Scout（Llama Community License）のようなオープンウェイトモデルが挙げられています。このモードで送信されたメッセージはデバイスの外に出て、OpenRouter経由で選択したモデルとプロバイダーによって処理されます。これは他のOpenRouter接続クライアントとまったく同じです。',
         ],
         items: [
           '独自のOpenRouterアカウントとAPIキーが必要 — Liquid AIはアプリ内でOpenRouterアクセスを提供も再販もしていない',
           'アクティブなインターネット接続が必要。このモードはオフラインでは動作しない',
-          'Llama 4 Scoutのようなオープンソースオプションや、GPT-6 Astraのようなクローズドソースオプションを含むホスト型モデルに到達',
+          'Llama 4 Scoutのようなオープンウェイトのオプションや、GPT-6 Astraのようなクローズドソースオプションを含むホスト型モデルに到達',
           'このモードでのモデル利用の請求はOpenRouterと基盤となるモデルプロバイダーを通じて行われ、Liquid AIを通じてではない',
           'このモード経由で送信された会話は、設計上、OpenRouterのインフラと選択したモデルプロバイダーに送信される',
         ],
@@ -2201,11 +2201,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシー：デバイスに残るものと残らないもの',
         content: [
           '**Liquid ApolloのApp Storeプライバシー表示は、開発元がアプリ自体からデータを収集しないと述べており**、ローカルモードの利用にアカウントは不要です。この主張はアプリ自体のデータ収集をカバーするものであり、OpenRouterやセルフホストバックエンドにメッセージを送信することを選んだ後にそのメッセージがどうなるかを説明するものではなく、また説明できません。これらはLiquid AIの管理下にない別個のサービスだからです。',
-          'ここでプライバシーを正直に考える方法は、アプリ単位ではなくモード単位です：ローカルLFM2チャットには、メッセージ内容がデバイスから出ていくネットワーク経路が一切ありません。これは単なるポリシーではなくアーキテクチャ上の特性です。OpenRouterモードは必然的に、選択したOpenRouterとモデルプロバイダーのプライバシー規約に従って、メッセージ内容をそれらに送信します。カスタムバックエンドモードは、自分が設定したサーバーに、その設定方法に応じてメッセージ内容を送信します。',
+          'ここでプライバシーを正直に考える方法は、アプリ単位ではなくモード単位です：Liquid AIによれば、ローカルLFM2チャットは設計上、メッセージ内容をデバイス外に送信しません。PromptQuorumはこれを検証していません。OpenRouterモードは必然的に、選択したOpenRouterとモデルプロバイダーのプライバシー規約に従って、メッセージ内容をそれらに送信します。カスタムバックエンドモードは、自分が設定したサーバーに、その設定方法に応じてメッセージ内容を送信します。',
         ],
         items: [
           'ローカルモードにアカウントは不要。Liquid AIはアプリ自体がデータを収集しないと述べている',
-          'ローカルLFM2チャットにはデータを送信するサーバー側コンポーネントが存在しない — これはポリシーの表明だけでなく、オンデバイス推論のアーキテクチャ上の特性である',
+          'Liquid AIによれば、ローカルチャットは設計上メッセージ内容をデバイス外に送信しない。PromptQuorumはこれを検証していない',
           'OpenRouterモードは必然的にメッセージ内容をデバイスの外、OpenRouterのインフラと選択したモデルプロバイダーに送信する — 関係がある場合は[OpenRouter自身のプライバシーポリシー](https://openrouter.ai/privacy)を確認すること',
           'カスタムバックエンドモードはメッセージ内容を自分のセルフホストサーバーに送信する — ここでのプライバシーはLiquid Apolloではなく自分自身のサーバー設定に依存する',
           '本レビューはLiquid Apolloのネットワークトラフィックを独自に監査し、ローカルモードでのデータ非収集の主張を検証したものではない',
@@ -2267,18 +2267,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ローカル専用かハイブリッドか': 'ハイブリッド：ローカル（LFM2）+ OpenRouterクラウド + カスタムバックエンド',
             'プラットフォーム': 'iPhone/iPad/Mac/Vision/Android',
             '価格': '無料（OpenRouter利用は別途請求）',
-            '主な違い': 'Liquid AI自身のLFM2モデルをオンデバイス実行する唯一のモバイルアプリ。クラウドモードは付随的機能ではなく主要機能',
+            '主な違い': 'Liquid AI自身が提供する、LEAP経由でLFM2モデルをオンデバイス実行するデモアプリ。クラウドモードは付随的機能ではなく主要機能',
           },
           {
             'アプリ': '[Private LLM](/ja/power-local-llm/private-llm-review)',
-            'ローカル専用かハイブリッドか': 'ローカル専用、クラウド経路なし',
+            'ローカル専用かハイブリッドか': '掲載ページ上、組み込みのクラウドモードなし',
             'プラットフォーム': 'iPhone/iPad/Mac（Appleのみ）',
             '価格': '4.99ドルの買い切り',
             '主な違い': 'クラウドオプションが一切なく、大規模な厳選モデルライブラリを持つ最良の選択肢',
           },
           {
             'アプリ': '[Enclave AI](/ja/power-local-llm/enclave-ai-review)',
-            'ローカル専用かハイブリッドか': 'ローカル専用、クラウド経路なし',
+            'ローカル専用かハイブリッドか': '掲載ページ上、組み込みのクラウドモードなし',
             'プラットフォーム': 'iPhone/iPad/Mac（Appleのみ）',
             '価格': '無料、アプリ内課金あり',
             '主な違い': '音声チャットも含め、クラウドモードが一切ない無料の完全ローカル代替アプリ',
@@ -2314,7 +2314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Liquid Apolloが向いていない人',
         items: [
-          '**クラウドオプションが一切ない厳密にローカル専用のアプリを求める読者。** Liquid Apolloのクラウドモードは組み込みの主要機能であり、一度も有効にしなくてもアプリから削除することはできません — アプリ自体にクラウドコード経路が一切あってはならない場合は、[Private LLM](/ja/power-local-llm/private-llm-review)や[Enclave AI](/ja/power-local-llm/enclave-ai-review)の方が適しています。',
+          '**クラウドオプションが一切ない厳密にローカル専用のアプリを求める読者。** Liquid Apolloのクラウドモードは組み込みの主要機能であり、一度も有効にしなくてもアプリから削除することはできません — [Private LLM](/ja/power-local-llm/private-llm-review)や[Enclave AI](/ja/power-local-llm/enclave-ai-review)の方が適している可能性があります。各アプリ自身の掲載ページによれば、どちらも組み込みのクラウドモードは提供していません（最新の機能は各掲載ページで確認してください）。',
           '**「デバイス上で動く」がすべてのモードがオフラインであることを意味すると想定する読者。** オフラインなのはローカルLFM2モードだけです。OpenRouterモードとカスタムバックエンドモードはどちらも設計上ネットワーク接続を必要とします。',
           '**OpenRouterやセルフホストサーバーの設定なしに最先端モデルの能力を求める読者。** LFM2の最大公開サイズは2.6Bパラメータで、Liquid ApolloのOpenRouterモードが到達できる最先端のクラウドモデルを大きく下回ります — ローカルモードだけではGPT-6 Astraクラスの出力品質に匹敵しません。',
           '**ネイティブクライアントを求めるWindowsまたはLinuxデスクトップユーザー。** Liquid ApolloにはWindowsまたはLinuxアプリはありません。カスタムバックエンドモードのサーバー側（LM Studio/Ollama）だけがそこで動作できます。',
@@ -2351,12 +2351,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'LEAPとは何ですか？', a: 'LEAP（Liquid Edge-AI Platform）は、スマホや他のエッジデバイス上で小型言語モデルを直接実行するためのLiquid AI独自の開発者向けSDKです。Liquid Apolloのローカルチャットモードはこの上に構築されており、Liquid AIは他のアプリ開発者向けにLEAPを別途提供もしています。' },
           { q: 'Liquid Apolloはどのモデルをオンデバイスで実行しますか？', a: 'Liquid AIが公開しているモデル文書によると、Liquid AI自身のLFM2モデルファミリー（LFM2-350M、LFM2-700M、LFM2-1.2B、LFM2-2.6Bパラメータ）です。' },
           { q: 'Liquid Apolloはお金がかかりますか？', a: 'アプリ自体はApp StoreとGoogle Playの両方で無料で、掲載されているアプリ内課金はありません。OpenRouterクラウドモードは、選んだOpenRouterとモデルプロバイダーが独自のAPIキーを通じて別途請求します — Liquid AIではありません。' },
-          { q: 'Liquid ApolloのOpenRouterモードとは何ですか？', a: '自分自身のOpenRouter APIキーをアプリに貼り付けて、Llama 4 ScoutのようなオープンソースモデルやOpenAIのGPT-6 Astraのようなクローズドソースモデルを含む、インターネット経由でホストされたモデルに到達できるようにするものです。このモードにはインターネット接続が必要で、Liquid AI自身のオンデバイスLFM2モデルとは無関係です。' },
+          { q: 'Liquid ApolloのOpenRouterモードとは何ですか？', a: '自分自身のOpenRouter APIキーをアプリに貼り付けて、Llama 4 Scout（Llama Community License）のようなオープンウェイトモデルを含む、インターネット経由でホストされたモデルに到達できるようにするものです。このモードにはインターネット接続が必要で、Liquid AI自身のオンデバイスLFM2モデルとは無関係です。' },
           { q: '自分のLM StudioまたはOllamaサーバーにLiquid Apolloを接続できますか？', a: 'はい。カスタムバックエンドモードは、自分のネットワーク上のセルフホストLM StudioまたはOllamaインスタンスに接続し、Liquid Apolloを自分自身が運用するモデル向けのモバイルフロントエンドにします。' },
           { q: 'Liquid Apolloはどのプラットフォームに対応していますか？', a: 'iPhone（iOS 18+）、iPad（iPadOS 18+）、Mac（Apple Silicon、macOS 15+）、Apple Vision（visionOS 2+）、Google Play経由のAndroidです。WindowsまたはLinuxのデスクトップクライアントはありません。' },
           { q: 'Liquid Apolloの開発元は？', a: 'Liquid AI, Inc.です。同社はアプリのオンデバイスモードで使われるLEAP SDKとLFM2モデルファミリーも開発しています。' },
           { q: 'Liquid Apolloは私のデータを収集しますか？', a: 'Liquid ApolloのApp Storeプライバシー表示は、開発元がアプリ自体からデータを収集しないと述べており、ローカルモードにアカウントは不要です。この主張はアプリをカバーするものであり、OpenRouterやセルフホストバックエンドはカバーしません — これらのサービスは、データを送信した時点でそれぞれ独自の別個のプライバシー慣行を持ちます。' },
-          { q: 'クラウドオプションが一切ない完全オフラインのアプリが欲しい場合、Liquid Apolloを使うべきですか？', a: '理想的ではありません。Liquid Apolloは一度も有効にしなくても常に組み込みのクラウドモードを備えています。[Private LLM](/ja/power-local-llm/private-llm-review)と[Enclave AI](/ja/power-local-llm/enclave-ai-review)は、クラウドコード経路が一切ないオンデバイス専用アプリで、この特定の要件により適しています。' },
+          { q: 'クラウドオプションが一切ない完全オフラインのアプリが欲しい場合、Liquid Apolloを使うべきですか？', a: '理想的ではありません。Liquid Apolloは一度も有効にしなくても常に組み込みのクラウドモードを備えています。[Private LLM](/ja/power-local-llm/private-llm-review)と[Enclave AI](/ja/power-local-llm/enclave-ai-review)は、各アプリ自身の掲載ページによれば組み込みのクラウドモードを提供していないため（最新の機能は各掲載ページで確認してください）、この特定の要件により適している可能性があります。' },
           { q: '外出先からインターネット経由でiPhoneからLM StudioやOllamaのサーバーにアクセスできますか？', a: 'Liquid Apolloの掲載ページには、ご自身で運用するLM StudioまたはOllamaサーバーへの接続は記載されていますが、リモートアクセスの方法は説明されていません。自宅ネットワークの外で動作するかどうかは、サーバーをどのように到達可能にするか（たとえば自宅ネットワークへのVPN）によって変わります。PromptQuorumはこの構成を検証していません。認証なしでインターネットに公開したサーバーにはセキュリティ上のリスクがあり、アプリがそれを代わりに管理することはありません。' },
         ],
       },
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'Liquid Apolloは誠実に売り出されているハイブリッドアプリです：Liquid AIはOpenRouterモードとカスタムバックエンドモードを小さな注釈ではなく主要機能として宣伝しており、このカテゴリのほとんどのアプリより、実際に何を得られるのかを把握しやすくしています。ローカルモードは、Liquid AI自身のLFM2モデルをLEAP経由で完全にオフラインで実行する本物の無料の方法であり、そのクロスプラットフォーム対応（iOS、Android、Mac、Apple Vision）は、このサイトで扱っているほとんどの単一プラットフォームのローカルAIアプリより広い範囲をカバーしています。トレードオフは「ハイブリッド」という名前がまさに示す通りです：どの設定であってもクラウドに到達できない構造のアプリが必要な読者は、代わりに[Private LLM](/ja/power-local-llm/private-llm-review)か[Enclave AI](/ja/power-local-llm/enclave-ai-review)を選ぶべきです。オンデバイスのLFM2チャット、OpenRouterでホストされる最先端モデル、自分自身のセルフホストサーバーをカバーする柔軟な単一クライアントを求める読者は、選んで支払うOpenRouterの利用料以外の費用なしで、Liquid Apolloからまさにそれを得られます。',
+          'Liquid Apolloは誠実に売り出されているハイブリッドアプリです：Liquid AIはOpenRouterモードとカスタムバックエンドモードを小さな注釈ではなく主要機能として宣伝しており、このカテゴリのほとんどのアプリより、実際に何を得られるのかを把握しやすくしています。ローカルモードは、Liquid AI自身のLFM2モデルをLEAP経由で完全にオフラインで実行する本物の無料の方法であり、そのクロスプラットフォーム対応（iOS、Android、Mac、Apple Vision）は、このサイトで扱っているほとんどの単一プラットフォームのローカルAIアプリより広い範囲をカバーしています。トレードオフは「ハイブリッド」という名前がまさに示す通りです：クラウドモードのないアプリが必要な読者は、[Private LLM](/ja/power-local-llm/private-llm-review)か[Enclave AI](/ja/power-local-llm/enclave-ai-review)を比較してください。各アプリ自身の掲載ページによれば、どちらも組み込みのクラウドモードは提供していません（最新の機能は各掲載ページで確認してください）。オンデバイスのLFM2チャット、OpenRouterでホストされる最先端モデル、自分自身のセルフホストサーバーをカバーする柔軟な単一クライアントを求める読者は、選んで支払うOpenRouterの利用料以外の費用なしで、Liquid Apolloからまさにそれを得られます。',
       },
       sources: {
         id: 'sources',
@@ -2384,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Private LLM レビュー](/ja/power-local-llm/private-llm-review) — クラウドオプションを求めない読者向けの、クラウド経路のないローカル専用の代替アプリ。',
-          '[Enclave AI レビュー](/ja/power-local-llm/enclave-ai-review) — 組み込みのクラウドモードがない、もう1つの無料のローカル専用Appleアプリ。',
+          '[Enclave AI レビュー](/ja/power-local-llm/enclave-ai-review) — 掲載ページによれば組み込みのクラウドモードを提供していない、もう1つの無料Appleアプリ。',
           '[Layla レビュー](/ja/power-local-llm/layla-review) — オプトイン式でデフォルトオフのクラウド階層を持つ、別のハイブリッドアプリ。',
           '[Arbiter Local AI Chat レビュー](/ja/power-local-llm/arbiter-local-ai-chat-review) — Liquid Apolloのカスタムバックエンドモードに最も近いアプリ。',
           '[2026年版iPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — より広範なiPhoneアプリの総まとめ。',
@@ -2396,7 +2396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo是一款免费的混合AI聊天应用——不是纯本地应用。** 在设备端，它使用Liquid AI自有的[LEAP](https://leap.liquid.ai/)技术，完全离线运行Liquid AI的小型LFM2模型（350M、700M、1.2B和2.6B参数），模型下载后无需互联网连接。此外，作为一项核心功能，它还提供OpenRouter模式，需要你自己的OpenRouter API密钥和互联网连接来访问Llama 4 Scout和GPT-6 Astra等托管模型，以及一个通过你的网络连接自托管LM Studio或Ollama服务器的自定义后端模式。这三种模式中只有第一种能让每条消息都留在设备上。如果读者特别想要一款完全没有云端选项的应用，应改为比较[Private LLM](/zh/power-local-llm/private-llm-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)，两者都是纯设备端应用，没有任何内置云端路径。',
+      '**Liquid Apollo是一款免费的混合AI聊天应用——不是纯本地应用。** 在设备端，它使用Liquid AI自有的[LEAP](https://leap.liquid.ai/)技术，完全离线运行Liquid AI的小型LFM2模型（350M、700M、1.2B和2.6B参数），模型下载后无需互联网连接。此外，作为一项核心功能，它还提供OpenRouter模式，需要你自己的OpenRouter API密钥和互联网连接来访问Llama 4 Scout和GPT-6 Astra等托管模型，以及一个通过你的网络连接自托管LM Studio或Ollama服务器的自定义后端模式。这三种模式中只有第一种能让每条消息都留在设备上。如果读者特别想要一款完全没有云端选项的应用，应改为比较[Private LLM](/zh/power-local-llm/private-llm-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)；根据各自的页面介绍，两者都不提供内置云端模式（请在各自页面确认当前功能）。',
     quickAnswerTop: {
       zh: {
         question: 'Liquid Apollo 是完全本地、离线的AI应用吗？',
@@ -2527,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '本地模式：LEAP和LFM2模型',
         content: [
           '**Liquid Apollo的设备端模式由[LEAP](https://leap.liquid.ai/)（Liquid Edge-AI Platform）驱动，这是Liquid AI也单独提供给其他应用开发者的开发者SDK，运行的是Liquid AI自己的LFM2模型系列，而不是第三方模型。** 这是Liquid Apollo三种模式中唯一一种在设计上可以让对话完全留在设备上、无需网络连接的模式。',
-          '**LFM2模型有四种已发布的规格：LFM2-350M、LFM2-700M、LFM2-1.2B和LFM2-2.6B参数。** 根据Liquid AI自己的模型文档，它们基于"结构化的自适应算子"构建，而非标准的Transformer架构，训练数据约为10万亿token，专门为手机级CPU、GPU和NPU上的快速推理而设计。Liquid AI表示，其模型库中最小的模型仅需300MB即可运行，整个模型库可在4GB以上内存的设备上运行。',
+          '**LFM2模型有四种已发布的规格：LFM2-350M、LFM2-700M、LFM2-1.2B和LFM2-2.6B参数。** 根据Liquid AI自己的模型文档，它们基于"结构化的自适应算子"构建，而非标准的Transformer架构，训练数据约为10万亿token，专门为手机级CPU、GPU和NPU上的快速推理而设计。Liquid AI表示，其模型库中最小的模型仅需300MB即可运行，整个模型库可在4GB以上内存的设备上运行。Liquid AI的模型页面现已将这些LFM2规格列为已弃用（deprecated）；请查看应用中当前的模型列表。',
         ],
         items: [
           '模型系列：LFM2-350M、LFM2-700M、LFM2-1.2B、LFM2-2.6B——均由Liquid AI自己发布，非第三方微调版本',
@@ -2543,12 +2543,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '云端模式：OpenRouter',
         content: [
           '**Liquid Apollo的OpenRouter模式是一项核心功能，明确宣传，而非隐藏选项——应用自己的描述邀请用户"带上OpenRouter API密钥，与网络上几乎所有模型聊天"。** 此模式需要互联网连接，以及你自己在[OpenRouter](https://openrouter.ai/)创建的账户，OpenRouter是一家与Liquid AI无关的第三方服务，提供对许多托管AI模型的API访问。',
-          '将OpenRouter API密钥粘贴到Liquid Apollo后，根据其自己的页面描述，应用可以访问通过OpenRouter提供的"几乎所有模型"——列举的例子包括Llama 4 Scout等开源模型和OpenAI的GPT-6 Astra等闭源模型。此模式下发送的消息会离开设备，由你通过OpenRouter选择的模型和提供商处理，与其他任何连接OpenRouter的客户端完全相同。',
+          '将OpenRouter API密钥粘贴到Liquid Apollo后，根据其自己的页面描述，应用可以访问通过OpenRouter提供的"几乎所有模型"——列举的例子包括Llama 4 Scout（Llama Community License）等开放权重模型。此模式下发送的消息会离开设备，由你通过OpenRouter选择的模型和提供商处理，与其他任何连接OpenRouter的客户端完全相同。',
         ],
         items: [
           '需要你自己的OpenRouter账户和API密钥——Liquid AI不在应用内提供或转售OpenRouter访问权限',
           '需要有效的互联网连接；此模式无法离线使用',
-          '可访问托管模型，包括开源选项（例如Llama 4 Scout）和闭源选项（例如GPT-6 Astra）',
+          '可访问托管模型，包括开放权重选项（例如Llama 4 Scout）和闭源选项（例如GPT-6 Astra）',
           '此模式下模型使用的计费通过OpenRouter和底层模型提供商进行，而非Liquid AI',
           '通过此模式发送的任何对话，按设计都会被传输到OpenRouter的基础设施和所选的模型提供商',
         ],
@@ -2598,11 +2598,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私：哪些留在设备上，哪些不是',
         content: [
           '**Liquid Apollo的App Store隐私标签声明，开发商不会从应用本身收集任何数据**，使用本地模式也无需账户。这一声明涵盖的是应用自身的数据收集——它没有也无法描述当你选择将消息发送到OpenRouter或自托管后端后会发生什么，因为那些是Liquid AI控制之外的独立服务。',
-          '在这里，诚实看待隐私的方式是按模式而非按应用来看：本地LFM2聊天没有任何网络路径可以让消息内容离开设备，这是架构上的特性，而不仅仅是政策声明。OpenRouter模式必然会将消息内容传输给你所选择的OpenRouter和模型提供商，受其各自隐私条款约束。自定义后端模式会将消息内容发送到你所配置的服务器，取决于你是如何搭建它的。',
+          '在这里，诚实看待隐私的方式是按模式而非按应用来看：据Liquid AI称，本地LFM2聊天在设计上不会将消息内容发送到设备之外；PromptQuorum未对此进行验证。OpenRouter模式必然会将消息内容传输给你所选择的OpenRouter和模型提供商，受其各自隐私条款约束。自定义后端模式会将消息内容发送到你所配置的服务器，取决于你是如何搭建它的。',
         ],
         items: [
           '本地模式无需账户；Liquid AI表示应用本身不收集数据',
-          '本地LFM2聊天没有可发送数据的服务器端组件——这是设备端推理的架构特性，而不仅仅是政策声明',
+          '据Liquid AI称，本地聊天在设计上不会将消息内容发送到设备之外；PromptQuorum未对此进行验证',
           'OpenRouter模式必然会将消息内容传输到设备之外，传给OpenRouter的基础设施和所选的模型提供商——如果这对你很重要，请查阅[OpenRouter自己的隐私政策](https://openrouter.ai/privacy)',
           '自定义后端模式会将消息内容传输到你的自托管服务器——这里的隐私取决于你自己的服务器配置，而非Liquid Apollo',
           '本评测尚未独立审计Liquid Apollo的网络流量，以验证本地模式下不收集数据的说法',
@@ -2664,18 +2664,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '纯本地还是混合': '混合：本地（LFM2）+ OpenRouter云端 + 自定义后端',
             '平台': 'iPhone/iPad/Mac/Vision/Android',
             '价格': '免费（OpenRouter使用费单独收取）',
-            '关键差异': '唯一在设备端运行Liquid AI自己LFM2模型的移动应用；云端模式是核心功能，而非边缘情况',
+            '关键差异': 'Liquid AI自家的演示应用，通过LEAP在设备端运行其LFM2模型；云端模式是核心功能，而非边缘情况',
           },
           {
             '应用': '[Private LLM](/zh/power-local-llm/private-llm-review)',
-            '纯本地还是混合': '仅本地，无云端路径',
+            '纯本地还是混合': '页面介绍中无内置云端模式',
             '平台': 'iPhone/iPad/Mac（仅Apple）',
             '价格': '一次性购买4.99美元',
             '关键差异': '完全没有云端选项、拥有大型精选模型库的最佳选择',
           },
           {
             '应用': '[Enclave AI](/zh/power-local-llm/enclave-ai-review)',
-            '纯本地还是混合': '仅本地，无云端路径',
+            '纯本地还是混合': '页面介绍中无内置云端模式',
             '平台': 'iPhone/iPad/Mac（仅Apple）',
             '价格': '免费，有应用内购买',
             '关键差异': '完全没有云端模式（包括语音聊天）的免费纯本地替代方案',
@@ -2711,7 +2711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '谁不适合使用 Liquid Apollo',
         items: [
-          '**希望应用严格纯本地、完全没有云端选项的读者。** Liquid Apollo的云端模式是内置的核心功能，即使你从不启用它，也无法从应用中移除——如果应用本身必须完全没有任何云端代码路径，[Private LLM](/zh/power-local-llm/private-llm-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)更适合。',
+          '**希望应用严格纯本地、完全没有云端选项的读者。** Liquid Apollo的云端模式是内置的核心功能，即使你从不启用它，也无法从应用中移除——[Private LLM](/zh/power-local-llm/private-llm-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)可能更合适：根据各自的页面介绍，两者都不提供内置云端模式（请在各自页面确认当前功能）。',
           '**假定"在设备端运行"就意味着每种模式都离线的读者。** 只有本地LFM2模式离线；OpenRouter模式和自定义后端模式按设计都需要网络连接。',
           '**希望获得前沿模型能力、但不想配置OpenRouter或自托管服务器的读者。** LFM2目前发布的最大规格为2.6B参数，远低于Liquid Apollo的OpenRouter模式可以访问的前沿云端模型——仅靠本地模式无法达到GPT-6 Astra级别的输出质量。',
           '**希望使用原生客户端的Windows或Linux桌面用户。** Liquid Apollo没有Windows或Linux应用；只有自定义后端模式的服务器端（LM Studio/Ollama）可以在那里运行。',
@@ -2748,12 +2748,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'LEAP是什么？', a: 'LEAP（Liquid Edge-AI Platform）是Liquid AI自有的开发者SDK，用于直接在手机或其他边缘设备上运行小型语言模型。Liquid Apollo的本地聊天模式就建立在LEAP之上，Liquid AI也将LEAP单独提供给其他应用开发者。' },
           { q: 'Liquid Apollo在设备端运行哪些模型？', a: '根据Liquid AI发布的模型文档，是Liquid AI自己的LFM2模型系列：LFM2-350M、LFM2-700M、LFM2-1.2B和LFM2-2.6B参数。' },
           { q: 'Liquid Apollo收费吗？', a: '应用本身在App Store和Google Play上都是免费的，未列出任何应用内购买。其OpenRouter云端模式由你选择的OpenRouter和模型提供商使用你自己的API密钥单独收费——而非Liquid AI。' },
-          { q: 'Liquid Apollo的OpenRouter模式是什么？', a: '它让你可以将自己的OpenRouter API密钥粘贴到应用中，通过互联网访问托管模型，包括Llama 4 Scout等开源模型和GPT-6 Astra等闭源模型。此模式需要互联网连接，与Liquid AI自己的设备端LFM2模型无关。' },
+          { q: 'Liquid Apollo的OpenRouter模式是什么？', a: '它让你可以将自己的OpenRouter API密钥粘贴到应用中，通过互联网访问托管模型，包括Llama 4 Scout（Llama Community License）等开放权重模型。此模式需要互联网连接，与Liquid AI自己的设备端LFM2模型无关。' },
           { q: '我可以将Liquid Apollo连接到自己的LM Studio或Ollama服务器吗？', a: '可以。其自定义后端模式可连接到你自己网络上自托管的LM Studio或Ollama实例，使Liquid Apollo成为你自己运营的模型的移动前端。' },
           { q: 'Liquid Apollo支持哪些平台？', a: 'iPhone（iOS 18+）、iPad（iPadOS 18+）、Mac（Apple Silicon，macOS 15+）、Apple Vision（visionOS 2+）以及通过Google Play提供的Android。没有Windows或Linux桌面客户端。' },
           { q: 'Liquid Apollo由谁开发？', a: 'Liquid AI, Inc.，该公司也开发应用设备端模式所用的LEAP SDK和LFM2模型系列。' },
           { q: 'Liquid Apollo会收集我的数据吗？', a: 'Liquid Apollo的App Store隐私标签声明开发商不会从应用本身收集任何数据，本地模式也无需账户。这一声明涵盖应用本身，不涵盖OpenRouter或自托管后端——一旦你向这些服务发送数据，它们各自拥有独立的隐私实践。' },
-          { q: '如果我想要一款完全没有云端选项的完全离线应用，应该使用Liquid Apollo吗？', a: '不太理想。即使你从不启用，Liquid Apollo也始终自带内置的云端模式。[Private LLM](/zh/power-local-llm/private-llm-review)和[Enclave AI](/zh/power-local-llm/enclave-ai-review)是完全没有任何云端代码路径的纯设备端应用，更适合这一特定需求。' },
+          { q: '如果我想要一款完全没有云端选项的完全离线应用，应该使用Liquid Apollo吗？', a: '不太理想。即使你从不启用，Liquid Apollo也始终自带内置的云端模式。根据各自的页面介绍，[Private LLM](/zh/power-local-llm/private-llm-review)和[Enclave AI](/zh/power-local-llm/enclave-ai-review)都不提供内置云端模式（请在各自页面确认当前功能），因此可能更适合这一特定需求。' },
           { q: '不在家时，我能通过互联网用iPhone访问自己的LM Studio或Ollama服务器吗？', a: 'Liquid Apollo的商店页面只描述了连接你自己运行的LM Studio或Ollama服务器，并未说明远程访问。离开家庭网络后能否使用，取决于你如何让服务器可被访问，例如通过连回家庭网络的VPN。PromptQuorum没有测试过这种配置；未经身份验证就暴露在互联网上的服务器存在安全风险，应用不会替你管理这一点。' },
         ],
       },
@@ -2761,7 +2761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Liquid Apollo是一款营销诚实的混合应用：Liquid AI将OpenRouter模式和自定义后端模式作为主打功能而非小字免责声明来宣传，这使得比该类别中大多数应用更容易了解你实际获得的是什么。它的本地模式是通过LEAP完全离线运行Liquid AI自己LFM2模型的真实、免费方式，其跨平台覆盖范围（iOS、Android、Mac、Apple Vision）也比本站评测的大多数单平台本地AI应用更广。这里的权衡正是"混合"这个名字所暗示的：需要一款在任何设置下都在结构上无法触及云端的应用的读者，应改为选择[Private LLM](/zh/power-local-llm/private-llm-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)。希望有一个灵活的单一客户端，涵盖本地LFM2聊天、通过OpenRouter托管的前沿模型以及自己的自托管服务器的读者，通过Liquid Apollo恰好能获得这一切，除了自己选择支付的OpenRouter使用费之外没有其他成本。',
+          'Liquid Apollo是一款营销诚实的混合应用：Liquid AI将OpenRouter模式和自定义后端模式作为主打功能而非小字免责声明来宣传，这使得比该类别中大多数应用更容易了解你实际获得的是什么。它的本地模式是通过LEAP完全离线运行Liquid AI自己LFM2模型的真实、免费方式，其跨平台覆盖范围（iOS、Android、Mac、Apple Vision）也比本站评测的大多数单平台本地AI应用更广。这里的权衡正是"混合"这个名字所暗示的：需要一款没有云端模式的应用的读者，应改为比较[Private LLM](/zh/power-local-llm/private-llm-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)；根据各自的页面介绍，两者都不提供内置云端模式（请在各自页面确认当前功能）。希望有一个灵活的单一客户端，涵盖本地LFM2聊天、通过OpenRouter托管的前沿模型以及自己的自托管服务器的读者，通过Liquid Apollo恰好能获得这一切，除了自己选择支付的OpenRouter使用费之外没有其他成本。',
       },
       sources: {
         id: 'sources',
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Private LLM 评测](/zh/power-local-llm/private-llm-review)——为没有云端选项需求的读者提供的纯本地、无云端路径的替代方案。',
-          '[Enclave AI 评测](/zh/power-local-llm/enclave-ai-review)——另一款没有内置云端模式的免费纯本地Apple应用。',
+          '[Enclave AI 评测](/zh/power-local-llm/enclave-ai-review)——另一款免费Apple应用，据其自身页面介绍不提供内置云端模式。',
           '[Layla 评测](/zh/power-local-llm/layla-review)——另一款提供可选、默认关闭云端层级的混合应用。',
           '[Arbiter Local AI Chat 评测](/zh/power-local-llm/arbiter-local-ai-chat-review)——与Liquid Apollo自定义后端模式最接近的应用。',
           '[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026)——更广泛的iPhone应用综述。',
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -2824,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo تطبيق محادثة ذكاء اصطناعي مجاني وهجين — وليس تطبيقاً محلياً بحتاً.** على الجهاز، يستخدم تقنية [LEAP](https://leap.liquid.ai/) الخاصة بـLiquid AI لتشغيل نماذج LFM2 الصغيرة من Liquid AI (350 مليون، و700 مليون، و1.2 مليار، و2.6 مليار معامل) بلا اتصال بالكامل، دون الحاجة لاتصال بالإنترنت بعد تنزيل النموذج. وبشكل منفصل، وكميزة أساسية وليست هامشية، يوفر أيضاً وضع OpenRouter الذي يتطلب مفتاح API خاص بك من OpenRouter واتصالاً بالإنترنت للوصول إلى نماذج مستضافة مثل Llama 4 Scout وGPT-6 Astra من OpenAI، بالإضافة إلى وضع خادم مخصص يتصل عبر شبكتك بخادم LM Studio أو Ollama مستضاف ذاتياً. وضع واحد فقط من هذه الأوضاع الثلاثة يبقي كل رسالة على الجهاز. القراء الذين يريدون تحديداً تطبيقاً بلا أي خيار سحابي يجب أن يقارنوا بدلاً من ذلك مع [Private LLM](/ar/power-local-llm/private-llm-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review)، وكلاهما محلي بحت بلا أي مسار سحابي مدمج.',
+      '**Liquid Apollo تطبيق محادثة ذكاء اصطناعي مجاني وهجين — وليس تطبيقاً محلياً بحتاً.** على الجهاز، يستخدم تقنية [LEAP](https://leap.liquid.ai/) الخاصة بـLiquid AI لتشغيل نماذج LFM2 الصغيرة من Liquid AI (350 مليون، و700 مليون، و1.2 مليار، و2.6 مليار معامل) بلا اتصال بالكامل، دون الحاجة لاتصال بالإنترنت بعد تنزيل النموذج. وبشكل منفصل، وكميزة أساسية وليست هامشية، يوفر أيضاً وضع OpenRouter الذي يتطلب مفتاح API خاص بك من OpenRouter واتصالاً بالإنترنت للوصول إلى نماذج مستضافة مثل Llama 4 Scout وGPT-6 Astra من OpenAI، بالإضافة إلى وضع خادم مخصص يتصل عبر شبكتك بخادم LM Studio أو Ollama مستضاف ذاتياً. وضع واحد فقط من هذه الأوضاع الثلاثة يبقي كل رسالة على الجهاز. القراء الذين يريدون تحديداً تطبيقاً بلا أي خيار سحابي يجب أن يقارنوا بدلاً من ذلك مع [Private LLM](/ar/power-local-llm/private-llm-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review)؛ وفقاً لصفحتيهما الخاصتين، لا يوفر أي منهما وضعاً سحابياً مدمجاً (راجع صفحة كل تطبيق للاطلاع على الميزات الحالية).',
     quickAnswerTop: {
       ar: {
         question: 'هل Liquid Apollo تطبيق ذكاء اصطناعي محلي بالكامل ويعمل بلا اتصال؟',
@@ -2924,7 +2924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الوضع المحلي: LEAP ونماذج LFM2',
         content: [
           '**يعمل وضع الجهاز في Liquid Apollo بواسطة [LEAP](https://leap.liquid.ai/) (Liquid Edge-AI Platform)، وهي حزمة تطوير تقدمها Liquid AI أيضاً بشكل منفصل لمطوري تطبيقات آخرين، وتشغّل عائلة نماذج LFM2 الخاصة بـLiquid AI نفسها، وليس نموذجاً من طرف ثالث.** هذا هو الوضع الوحيد من بين أوضاع Liquid Apollo الثلاثة الذي يمكن فيه للمحادثة، بحسب التصميم، أن تبقى بالكامل على الجهاز دون اتصال بالشبكة.',
-          '**تأتي نماذج LFM2 بأربعة أحجام منشورة: LFM2-350M، وLFM2-700M، وLFM2-1.2B، وLFM2-2.6B معامل.** وفقاً لتوثيق Liquid AI الخاص بها، فهي مبنية على "معالجات هيكلية تكيّفية" بدلاً من بنية المحوّلات (transformer) التقليدية، وتم تدريبها على نحو 10 تريليونات رمز (token)، وصُممت خصيصاً للاستدلال السريع على وحدات المعالجة المركزية والرسومية ووحدات المعالجة العصبية الخاصة بالهواتف. تذكر Liquid AI أن أصغر النماذج في مكتبتها تعمل بحجم لا يتجاوز 300 ميغابايت، وأن المكتبة تعمل على أجهزة بذاكرة وصول عشوائي 4 غيغابايت أو أكثر.',
+          '**تأتي نماذج LFM2 بأربعة أحجام منشورة: LFM2-350M، وLFM2-700M، وLFM2-1.2B، وLFM2-2.6B معامل.** وفقاً لتوثيق Liquid AI الخاص بها، فهي مبنية على "معالجات هيكلية تكيّفية" بدلاً من بنية المحوّلات (transformer) التقليدية، وتم تدريبها على نحو 10 تريليونات رمز (token)، وصُممت خصيصاً للاستدلال السريع على وحدات المعالجة المركزية والرسومية ووحدات المعالجة العصبية الخاصة بالهواتف. تذكر Liquid AI أن أصغر النماذج في مكتبتها تعمل بحجم لا يتجاوز 300 ميغابايت، وأن المكتبة تعمل على أجهزة بذاكرة وصول عشوائي 4 غيغابايت أو أكثر. تُدرج صفحة النماذج لدى Liquid AI الآن أحجام LFM2 هذه على أنها متقادمة (deprecated)؛ راجع قائمة النماذج الحالية في التطبيق.',
         ],
         items: [
           'عائلة النماذج: LFM2-350M وLFM2-700M وLFM2-1.2B وLFM2-2.6B — جميعها منشورة من Liquid AI نفسها، وليست إصدارات معدّلة من طرف ثالث',
@@ -2940,12 +2940,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الوضع السحابي: OpenRouter',
         content: [
           '**وضع OpenRouter في Liquid Apollo ميزة أساسية معلنة بوضوح، وليست خياراً مخفياً — يدعو وصف التطبيق نفسه إلى "إحضار مفتاح API من OpenRouter للمحادثة مع كل نموذج تقريباً على الويب".** يتطلب هذا الوضع اتصالاً بالإنترنت وحساباً تنشئه بنفسك في [OpenRouter](https://openrouter.ai/)، وهي خدمة طرف ثالث لا علاقة لها بـLiquid AI توفر وصولاً عبر واجهة برمجة التطبيقات (API) إلى العديد من نماذج الذكاء الاصطناعي المستضافة.',
-          'بمجرد لصق مفتاح API من OpenRouter في Liquid Apollo، يمكن للتطبيق الوصول إلى "كل نموذج تقريباً" المتاح عبر OpenRouter، وفقاً لصفحته الخاصة — تشمل الأمثلة المذكورة نماذج مفتوحة المصدر مثل Llama 4 Scout ونماذج مغلقة المصدر مثل GPT-6 Astra من OpenAI. الرسائل المُرسلة في هذا الوضع تغادر الجهاز وتتم معالجتها بواسطة النموذج والمزود الذي تختاره عبر OpenRouter، تماماً كما هو الحال في أي عميل آخر متصل بـOpenRouter.',
+          'بمجرد لصق مفتاح API من OpenRouter في Liquid Apollo، يمكن للتطبيق الوصول إلى "كل نموذج تقريباً" المتاح عبر OpenRouter، وفقاً لصفحته الخاصة — تشمل الأمثلة المذكورة نماذج مفتوحة الأوزان مثل Llama 4 Scout (Llama Community License). الرسائل المُرسلة في هذا الوضع تغادر الجهاز وتتم معالجتها بواسطة النموذج والمزود الذي تختاره عبر OpenRouter، تماماً كما هو الحال في أي عميل آخر متصل بـOpenRouter.',
         ],
         items: [
           'يتطلب حساب ومفتاح API خاصين بك من OpenRouter — لا توفر Liquid AI ولا تعيد بيع الوصول إلى OpenRouter داخل التطبيق',
           'يتطلب اتصالاً نشطاً بالإنترنت؛ لا يعمل هذا الوضع بلا اتصال',
-          'يصل إلى نماذج مستضافة تشمل خيارات مفتوحة المصدر (مثل Llama 4 Scout) وخيارات مغلقة المصدر (مثل GPT-6 Astra)',
+          'يصل إلى نماذج مستضافة تشمل خيارات مفتوحة الأوزان (مثل Llama 4 Scout) وخيارات مغلقة المصدر (مثل GPT-6 Astra)',
           'يتم احتساب استخدام النماذج في هذا الوضع عبر OpenRouter ومزود النموذج الأساسي، وليس عبر Liquid AI',
           'أي محادثة تُرسل عبر هذا الوضع تُنقل، بحسب التصميم، إلى بنية OpenRouter التحتية ومزود النموذج المختار',
         ],
@@ -2995,11 +2995,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية: ما يبقى على الجهاز وما لا يبقى',
         content: [
           '**تنص بطاقة خصوصية App Store الخاصة بـLiquid Apollo على أن المطوّر لا يجمع أي بيانات من التطبيق نفسه**، ولا يُطلب حساب لاستخدام الوضع المحلي. يغطي هذا الادعاء جمع البيانات الخاص بالتطبيق نفسه — إنه لا يصف، ولا يمكنه أن يصف، ما يحدث لرسالة بمجرد اختيارك إرسالها إلى OpenRouter أو إلى خادم مستضاف ذاتياً، لأن هذه خدمات منفصلة خارج سيطرة Liquid AI.',
-          'الطريقة الصادقة للتفكير في الخصوصية هنا هي حسب الوضع، وليس حسب التطبيق: محادثة LFM2 المحلية لا تملك أي مسار شبكي يمكن من خلاله لمحتوى رسائلك مغادرة الجهاز، وذلك بحكم البنية، وليس فقط بحكم السياسة. يُرسل وضع OpenRouter بالضرورة محتوى الرسائل إلى OpenRouter ومزود النموذج الذي تختاره، وفقاً لشروط الخصوصية الخاصة بهما. يُرسل وضع الخادم المخصص محتوى الرسائل إلى الخادم الذي قمت بتهيئته، بحسب كيفية إعدادك له.',
+          'الطريقة الصادقة للتفكير في الخصوصية هنا هي حسب الوضع، وليس حسب التطبيق: وفقاً لـLiquid AI، لا ترسل محادثة LFM2 المحلية محتوى رسائلك خارج الجهاز بحكم التصميم؛ ولم تتحقق PromptQuorum من ذلك. يُرسل وضع OpenRouter بالضرورة محتوى الرسائل إلى OpenRouter ومزود النموذج الذي تختاره، وفقاً لشروط الخصوصية الخاصة بهما. يُرسل وضع الخادم المخصص محتوى الرسائل إلى الخادم الذي قمت بتهيئته، بحسب كيفية إعدادك له.',
         ],
         items: [
           'لا يُطلب حساب للوضع المحلي؛ تذكر Liquid AI أن التطبيق لا يجمع بيانات من تلقاء نفسه',
-          'محادثة LFM2 المحلية لا تحتوي على أي مكون خادم لإرسال البيانات إليه — هذه خاصية بنيوية للاستدلال على الجهاز، وليست مجرد تصريح سياسي',
+          'وفقاً لـLiquid AI، لا ترسل المحادثة المحلية محتوى الرسائل خارج الجهاز بحكم التصميم؛ ولم تتحقق PromptQuorum من ذلك',
           'يُرسل وضع OpenRouter بالضرورة محتوى الرسائل خارج الجهاز إلى بنية OpenRouter التحتية ومزود النموذج المختار — راجع [سياسة خصوصية OpenRouter الخاصة](https://openrouter.ai/privacy) إذا كان هذا مهماً بالنسبة لك',
           'يُرسل وضع الخادم المخصص محتوى الرسائل إلى خادمك المستضاف ذاتياً — تعتمد الخصوصية هنا على إعداد خادمك الخاص، وليس على Liquid Apollo',
           'لم تُدقق هذه المراجعة بشكل مستقل حركة شبكة Liquid Apollo للتحقق من ادعاء عدم جمع البيانات في الوضع المحلي',
@@ -3061,18 +3061,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'محلي فقط أم هجين': 'هجين: محلي (LFM2) + سحابة OpenRouter + خادم مخصص',
             'المنصات': 'iPhone/iPad/Mac/Vision/Android',
             'السعر': 'مجاني (استخدام OpenRouter يُحتسب بشكل منفصل)',
-            'الفرق الأساسي': 'التطبيق المحمول الوحيد الذي يشغّل نماذج LFM2 الخاصة بـLiquid AI على الجهاز؛ الوضع السحابي ميزة أساسية، وليس حالة هامشية',
+            'الفرق الأساسي': 'تطبيق العرض التجريبي من Liquid AI نفسها لتشغيل نماذج LFM2 الخاصة بها على الجهاز عبر LEAP؛ الوضع السحابي ميزة أساسية، وليس حالة هامشية',
           },
           {
             'التطبيق': '[Private LLM](/ar/power-local-llm/private-llm-review)',
-            'محلي فقط أم هجين': 'محلي فقط، بلا مسار سحابي',
+            'محلي فقط أم هجين': 'لا وضع سحابي مدمج وفق صفحته',
             'المنصات': 'iPhone/iPad/Mac (آبل فقط)',
             'السعر': 'شراء لمرة واحدة بقيمة 4.99 دولار',
             'الفرق الأساسي': 'أفضل خيار بلا أي خيار سحابي على الإطلاق، مع مكتبة نماذج منتقاة كبيرة',
           },
           {
             'التطبيق': '[Enclave AI](/ar/power-local-llm/enclave-ai-review)',
-            'محلي فقط أم هجين': 'محلي فقط، بلا مسار سحابي',
+            'محلي فقط أم هجين': 'لا وضع سحابي مدمج وفق صفحته',
             'المنصات': 'iPhone/iPad/Mac (آبل فقط)',
             'السعر': 'مجاني، مع مشتريات داخل التطبيق',
             'الفرق الأساسي': 'بديل محلي بحت مجاني بلا أي وضع سحابي على الإطلاق، بما في ذلك المحادثة الصوتية',
@@ -3108,7 +3108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'لمن لا يناسب Liquid Apollo',
         items: [
-          '**القراء الذين يريدون تطبيقاً محلياً بحتاً بلا أي خيار سحابي.** الوضع السحابي في Liquid Apollo ميزة مدمجة وأساسية لا يمكن إزالتها من التطبيق حتى لو لم تُفعّلها أبداً — [Private LLM](/ar/power-local-llm/private-llm-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review) أنسب إذا كان يجب ألا يحتوي التطبيق نفسه على أي مسار كود سحابي على الإطلاق.',
+          '**القراء الذين يريدون تطبيقاً محلياً بحتاً بلا أي خيار سحابي.** الوضع السحابي في Liquid Apollo ميزة مدمجة وأساسية لا يمكن إزالتها من التطبيق حتى لو لم تُفعّلها أبداً — [Private LLM](/ar/power-local-llm/private-llm-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review) قد يكونان أنسب: وفقاً لصفحتيهما الخاصتين، لا يوفر أي منهما وضعاً سحابياً مدمجاً (راجع صفحة كل تطبيق للاطلاع على الميزات الحالية).',
           '**القراء الذين يفترضون أن "يعمل على الجهاز" يعني أن كل وضع يعمل بلا اتصال.** الوضع المحلي LFM2 فقط هو الذي يعمل بلا اتصال؛ يتطلب كل من وضع OpenRouter ووضع الخادم المخصص اتصالاً بالشبكة بحسب التصميم.',
           '**القراء الذين يريدون قدرات نموذج متطورة دون إعداد OpenRouter أو خادم مستضاف ذاتياً.** أكبر حجم منشور لـLFM2 هو 2.6 مليار معامل، وهو أقل بكثير من النماذج السحابية المتطورة التي يمكن لوضع OpenRouter في Liquid Apollo الوصول إليها — لن يضاهي الوضع المحلي وحده جودة إخراج بمستوى GPT-6 Astra.',
           '**مستخدمو سطح مكتب Windows أو Linux الذين يريدون عميلاً أصلياً.** لا يوجد لدى Liquid Apollo تطبيق لـWindows أو Linux؛ فقط جانب الخادم (LM Studio/Ollama) من وضع الخادم المخصص يمكن أن يعمل هناك.',
@@ -3145,12 +3145,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هو LEAP؟', a: 'LEAP (Liquid Edge-AI Platform) هي حزمة تطوير خاصة بـLiquid AI لتشغيل نماذج لغوية صغيرة مباشرة على هاتف أو جهاز طرفي آخر. وضع المحادثة المحلي في Liquid Apollo مبني على LEAP، وتقدّم Liquid AI أيضاً LEAP بشكل منفصل لمطوري تطبيقات آخرين.' },
           { q: 'ما هي النماذج التي يشغّلها Liquid Apollo على الجهاز؟', a: 'عائلة نماذج LFM2 الخاصة بـLiquid AI نفسها: LFM2-350M وLFM2-700M وLFM2-1.2B وLFM2-2.6B معامل، وفقاً لتوثيق النماذج الذي نشرته Liquid AI.' },
           { q: 'هل يكلّف Liquid Apollo مالاً؟', a: 'التطبيق نفسه مجاني على App Store وGoogle Play على حد سواء، دون أي مشتريات داخل التطبيق مُدرجة. يُحتسب وضع السحابة OpenRouter بشكل منفصل من قِبل OpenRouter ومزود النموذج الذي تختاره، باستخدام مفتاح API الخاص بك — وليس من قِبل Liquid AI.' },
-          { q: 'ما هو وضع OpenRouter في Liquid Apollo؟', a: 'يتيح لك لصق مفتاح API خاص بك من OpenRouter في التطبيق للوصول إلى نماذج مستضافة عبر الإنترنت، بما في ذلك نماذج مفتوحة المصدر مثل Llama 4 Scout ونماذج مغلقة المصدر مثل GPT-6 Astra من OpenAI. يتطلب هذا الوضع اتصالاً بالإنترنت ولا علاقة له بنماذج LFM2 الخاصة بـLiquid AI على الجهاز.' },
+          { q: 'ما هو وضع OpenRouter في Liquid Apollo؟', a: 'يتيح لك لصق مفتاح API خاص بك من OpenRouter في التطبيق للوصول إلى نماذج مستضافة عبر الإنترنت، بما في ذلك نماذج مفتوحة الأوزان مثل Llama 4 Scout (Llama Community License). يتطلب هذا الوضع اتصالاً بالإنترنت ولا علاقة له بنماذج LFM2 الخاصة بـLiquid AI على الجهاز.' },
           { q: 'هل يمكنني ربط Liquid Apollo بخادم LM Studio أو Ollama الخاص بي؟', a: 'نعم. يتصل وضع الخادم المخصص بنسخة LM Studio أو Ollama مستضافة ذاتياً على شبكتك الخاصة، مما يجعل Liquid Apollo واجهة أمامية محمولة لنموذج تشغّله أنت بنفسك.' },
           { q: 'ما هي المنصات التي يدعمها Liquid Apollo؟', a: 'iPhone (iOS 18+)، وiPad (iPadOS 18+)، وMac (Apple Silicon، macOS 15+)، وApple Vision (visionOS 2+)، وAndroid عبر Google Play. لا يوجد عميل سطح مكتب لـWindows أو Linux.' },
           { q: 'من يصنع Liquid Apollo؟', a: 'Liquid AI, Inc.، التي تطوّر أيضاً حزمة LEAP وعائلة نماذج LFM2 المستخدمة في وضع الجهاز الخاص بالتطبيق.' },
           { q: 'هل يجمع Liquid Apollo بياناتي؟', a: 'تنص بطاقة خصوصية App Store الخاصة بـLiquid Apollo على أن المطوّر لا يجمع أي بيانات من التطبيق نفسه، ولا يتطلب الوضع المحلي حساباً. يغطي هذا الادعاء التطبيق نفسه، وليس OpenRouter أو خادماً مستضافاً ذاتياً — فلهذه الخدمات ممارسات خصوصية منفصلة خاصة بها بمجرد إرسالك للبيانات عبرها.' },
-          { q: 'هل يجب أن أستخدم Liquid Apollo إذا أردت تطبيقاً يعمل بلا اتصال بالكامل وبلا أي خيار سحابي؟', a: 'ليس مثالياً. يأتي Liquid Apollo دائماً بوضع سحابي مدمج، حتى لو لم تُفعّله أبداً. [Private LLM](/ar/power-local-llm/private-llm-review) وEnclave AI هما تطبيقان يعملان على الجهاز فقط بلا أي مسار كود سحابي على الإطلاق، وهما أنسب لهذا المتطلب المحدد.' },
+          { q: 'هل يجب أن أستخدم Liquid Apollo إذا أردت تطبيقاً يعمل بلا اتصال بالكامل وبلا أي خيار سحابي؟', a: 'ليس مثالياً. يأتي Liquid Apollo دائماً بوضع سحابي مدمج، حتى لو لم تُفعّله أبداً. [Private LLM](/ar/power-local-llm/private-llm-review) وEnclave AI لا يوفران، وفقاً لصفحتيهما الخاصتين، وضعاً سحابياً مدمجاً (راجع صفحة كل تطبيق للاطلاع على الميزات الحالية)، لذا قد يكونان أنسب لهذا المتطلب المحدد.' },
           { q: 'هل يمكنني الوصول إلى خادم LM Studio أو Ollama من iPhone عبر الإنترنت وأنا خارج المنزل؟', a: 'تصف صفحة Liquid Apollo الاتصال بخادم LM Studio أو Ollama تشغّله بنفسك، لكنها لا تشرح الوصول عن بُعد. لذلك يعتمد ما يعمل خارج شبكتك المنزلية على الطريقة التي تجعل بها الخادم متاحاً، مثل VPN إلى شبكتك المنزلية. لم تختبر PromptQuorum هذا الإعداد؛ وتعريض خادم للإنترنت دون مصادقة يشكّل خطراً أمنياً لا يديره التطبيق نيابةً عنك.' },
         ],
       },
@@ -3158,7 +3158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'Liquid Apollo تطبيق هجين مُسوَّق بصدق: تعلن Liquid AI عن وضعي OpenRouter والخادم المخصص كميزات رئيسية، وليست في الهامش، ما يجعل من الأسهل من معظم التطبيقات في هذه الفئة معرفة ما تحصل عليه فعلياً. وضعه المحلي طريقة حقيقية ومجانية لتشغيل نماذج LFM2 الخاصة بـLiquid AI بلا اتصال بالكامل عبر LEAP، ونطاقه متعدد المنصات (iOS وAndroid وMac وApple Vision) أوسع من معظم تطبيقات الذكاء الاصطناعي المحلية أحادية المنصة التي تمت تغطيتها على هذا الموقع. المفاضلة هي بالضبط ما يوحي به اسم "هجين": القراء الذين يحتاجون إلى تطبيق غير قادر هيكلياً على الوصول إلى السحابة، تحت أي إعداد، يجب أن يختاروا [Private LLM](/ar/power-local-llm/private-llm-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review) بدلاً من ذلك. القراء الذين يريدون عميلاً مرناً واحداً يشمل محادثة LFM2 المحلية، والنماذج المتطورة المستضافة عبر OpenRouter، وخادمهم المستضاف ذاتياً، يحصلون على ذلك بالضبط من Liquid Apollo، دون أي تكلفة تتجاوز استخدام OpenRouter الذي يختارون دفعه.',
+          'Liquid Apollo تطبيق هجين مُسوَّق بصدق: تعلن Liquid AI عن وضعي OpenRouter والخادم المخصص كميزات رئيسية، وليست في الهامش، ما يجعل من الأسهل من معظم التطبيقات في هذه الفئة معرفة ما تحصل عليه فعلياً. وضعه المحلي طريقة حقيقية ومجانية لتشغيل نماذج LFM2 الخاصة بـLiquid AI بلا اتصال بالكامل عبر LEAP، ونطاقه متعدد المنصات (iOS وAndroid وMac وApple Vision) أوسع من معظم تطبيقات الذكاء الاصطناعي المحلية أحادية المنصة التي تمت تغطيتها على هذا الموقع. المفاضلة هي بالضبط ما يوحي به اسم "هجين": القراء الذين يحتاجون إلى تطبيق بلا وضع سحابي يجب أن يقارنوا [Private LLM](/ar/power-local-llm/private-llm-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review)؛ وفقاً لصفحتيهما الخاصتين، لا يوفر أي منهما وضعاً سحابياً مدمجاً (راجع صفحة كل تطبيق للاطلاع على الميزات الحالية). القراء الذين يريدون عميلاً مرناً واحداً يشمل محادثة LFM2 المحلية، والنماذج المتطورة المستضافة عبر OpenRouter، وخادمهم المستضاف ذاتياً، يحصلون على ذلك بالضبط من Liquid Apollo، دون أي تكلفة تتجاوز استخدام OpenRouter الذي يختارون دفعه.',
       },
       sources: {
         id: 'sources',
@@ -3178,7 +3178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[مراجعة Private LLM](/ar/power-local-llm/private-llm-review) — بديل محلي بحت بلا مسار سحابي، للقراء الذين لا يريدون خياراً سحابياً.',
-          '[مراجعة Enclave AI](/ar/power-local-llm/enclave-ai-review) — تطبيق آبل مجاني ومحلي بحت آخر بلا وضع سحابي مدمج.',
+          '[مراجعة Enclave AI](/ar/power-local-llm/enclave-ai-review) — تطبيق آبل مجاني آخر لا يوفر، وفقاً لصفحته الخاصة، وضعاً سحابياً مدمجاً.',
           '[مراجعة Layla](/ar/power-local-llm/layla-review) — تطبيق هجين آخر بمستوى سحابي اختياري ومعطّل افتراضياً.',
           '[مراجعة Arbiter Local AI Chat](/ar/power-local-llm/arbiter-local-ai-chat-review) — الأقرب لوضع الخادم المخصص في Liquid Apollo.',
           '[أفضل تطبيقات LLM المحلية لـiPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — الاستعراض الأوسع لتطبيقات iPhone.',
@@ -3190,7 +3190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-26',
     designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
@@ -3221,7 +3221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['LFM2-350M', 'LFM2-700M', 'LFM2-1.2B', 'LFM2-2.6B', 'Llama 4 Scout', 'GPT-6 Astra'],
     current_hardware_mentioned: ['Apple M1', 'iOS 18', 'iPadOS 18', 'macOS 15', 'visionOS 2'],
     leadAnswerBlock:
-      '**Liquid Apollo는 무료 하이브리드 AI 채팅 앱이며 로컬 전용 앱이 아닙니다.** 기기에서는 Liquid AI 자체의 [LEAP](https://leap.liquid.ai/) 기술을 사용해 Liquid AI의 소형 LFM2 모델(350M, 700M, 1.2B, 2.6B 파라미터)을 완전히 오프라인으로 실행하며, 모델을 다운로드한 후에는 인터넷 연결이 필요하지 않습니다. 별도로, 그리고 부가 기능이 아닌 핵심 기능으로서, 자체 OpenRouter API 키와 인터넷 연결이 필요한 OpenRouter 모드도 제공하여 Llama 4 Scout나 GPT-6 Astra 같은 호스팅 모델에 접속할 수 있으며, 자신의 네트워크를 통해 자체 호스팅 LM Studio 또는 Ollama 서버에 연결하는 커스텀 백엔드 모드도 있습니다. 이 세 가지 모드 중 첫 번째만이 모든 메시지를 기기에 유지합니다. 클라우드 옵션이 전혀 없는 앱을 특별히 원하는 독자는 대신 [Private LLM](/ko/power-local-llm/private-llm-review)이나 [Enclave AI](/ko/power-local-llm/enclave-ai-review)를 비교해야 합니다. 둘 다 내장 클라우드 경로가 전혀 없는 순수 온디바이스 앱입니다.',
+      '**Liquid Apollo는 무료 하이브리드 AI 채팅 앱이며 로컬 전용 앱이 아닙니다.** 기기에서는 Liquid AI 자체의 [LEAP](https://leap.liquid.ai/) 기술을 사용해 Liquid AI의 소형 LFM2 모델(350M, 700M, 1.2B, 2.6B 파라미터)을 완전히 오프라인으로 실행하며, 모델을 다운로드한 후에는 인터넷 연결이 필요하지 않습니다. 별도로, 그리고 부가 기능이 아닌 핵심 기능으로서, 자체 OpenRouter API 키와 인터넷 연결이 필요한 OpenRouter 모드도 제공하여 Llama 4 Scout나 GPT-6 Astra 같은 호스팅 모델에 접속할 수 있으며, 자신의 네트워크를 통해 자체 호스팅 LM Studio 또는 Ollama 서버에 연결하는 커스텀 백엔드 모드도 있습니다. 이 세 가지 모드 중 첫 번째만이 모든 메시지를 기기에 유지합니다. 클라우드 옵션이 전혀 없는 앱을 특별히 원하는 독자는 대신 [Private LLM](/ko/power-local-llm/private-llm-review)이나 [Enclave AI](/ko/power-local-llm/enclave-ai-review)를 비교해야 합니다. 각 앱 자체 페이지에 따르면 둘 다 내장 클라우드 모드를 제공하지 않습니다(현재 기능은 각 페이지에서 확인하세요).',
     quickAnswerTop: {
       ko: {
         question: 'Liquid Apollo는 완전히 로컬에서 오프라인으로 작동하는 AI 앱인가요?',
@@ -3321,7 +3321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 모드: LEAP과 LFM2 모델',
         content: [
           '**Liquid Apollo의 온디바이스 모드는 Liquid AI가 다른 앱 개발자에게도 별도로 제공하는 개발자 SDK인 [LEAP](https://leap.liquid.ai/)(Liquid Edge-AI Platform)으로 구동되며, 타사 모델이 아닌 Liquid AI 자체의 LFM2 모델 계열을 실행합니다.** 이는 Liquid Apollo의 세 가지 모드 중 대화가 설계상 네트워크 연결 없이 완전히 기기에 머물 수 있는 유일한 모드입니다.',
-          '**LFM2 모델은 네 가지 공개된 크기로 제공됩니다: LFM2-350M, LFM2-700M, LFM2-1.2B, LFM2-2.6B 파라미터입니다.** Liquid AI 자체 모델 문서에 따르면, 이들은 표준 트랜스포머 아키텍처가 아닌 "구조화된 적응형 연산자"를 기반으로 구축되었으며, 약 10조 토큰으로 학습되었고, 휴대폰급 CPU, GPU, NPU에서의 빠른 추론을 위해 특별히 설계되었습니다. Liquid AI는 자사 라이브러리의 가장 작은 모델이 단 300MB로 실행되며, 라이브러리 전체는 4GB 이상의 RAM을 가진 기기에서 실행된다고 밝히고 있습니다.',
+          '**LFM2 모델은 네 가지 공개된 크기로 제공됩니다: LFM2-350M, LFM2-700M, LFM2-1.2B, LFM2-2.6B 파라미터입니다.** Liquid AI 자체 모델 문서에 따르면, 이들은 표준 트랜스포머 아키텍처가 아닌 "구조화된 적응형 연산자"를 기반으로 구축되었으며, 약 10조 토큰으로 학습되었고, 휴대폰급 CPU, GPU, NPU에서의 빠른 추론을 위해 특별히 설계되었습니다. Liquid AI는 자사 라이브러리의 가장 작은 모델이 단 300MB로 실행되며, 라이브러리 전체는 4GB 이상의 RAM을 가진 기기에서 실행된다고 밝히고 있습니다. Liquid AI의 모델 페이지는 이제 이러한 LFM2 크기를 지원 중단(deprecated)으로 표기하고 있으니, 앱의 현재 모델 목록을 확인하세요.',
         ],
         items: [
           '모델 계열: LFM2-350M, LFM2-700M, LFM2-1.2B, LFM2-2.6B — 모두 Liquid AI가 직접 공개했으며 타사 파인튜닝이 아님',
@@ -3337,12 +3337,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '클라우드 모드: OpenRouter',
         content: [
           '**Liquid Apollo의 OpenRouter 모드는 숨겨진 옵션이 아니라 명확하게 광고되는 핵심 기능입니다 — 앱 자체 설명은 "OpenRouter API 키를 가져와서 웹의 거의 모든 모델과 채팅하라"고 권합니다.** 이 모드는 인터넷 연결과 [OpenRouter](https://openrouter.ai/)에 직접 만드는 계정을 필요로 하며, OpenRouter는 Liquid AI와 무관한 타사 서비스로 많은 호스팅 AI 모델에 대한 API 접속을 제공합니다.',
-          'Liquid Apollo에 OpenRouter API 키를 붙여넣으면, 앱 자체 페이지에 따르면 앱은 OpenRouter를 통해 이용 가능한 "거의 모든 모델"에 접속할 수 있습니다 — 언급된 예시로는 Llama 4 Scout 같은 오픈소스 모델과 OpenAI의 GPT-6 Astra 같은 클로즈드소스 모델이 있습니다. 이 모드에서 전송된 메시지는 기기를 벗어나 OpenRouter를 통해 선택한 모델과 제공사에 의해 처리되며, 이는 다른 OpenRouter 연결 클라이언트와 정확히 동일합니다.',
+          'Liquid Apollo에 OpenRouter API 키를 붙여넣으면, 앱 자체 페이지에 따르면 앱은 OpenRouter를 통해 이용 가능한 "거의 모든 모델"에 접속할 수 있습니다 — 언급된 예시로는 Llama 4 Scout(Llama Community License) 같은 오픈 웨이트 모델이 있습니다. 이 모드에서 전송된 메시지는 기기를 벗어나 OpenRouter를 통해 선택한 모델과 제공사에 의해 처리되며, 이는 다른 OpenRouter 연결 클라이언트와 정확히 동일합니다.',
         ],
         items: [
           '자체 OpenRouter 계정과 API 키가 필요함 — Liquid AI는 앱 내에서 OpenRouter 접속을 제공하거나 재판매하지 않음',
           '활성 인터넷 연결이 필요함; 이 모드는 오프라인에서 작동하지 않음',
-          'Llama 4 Scout 같은 오픈소스 옵션과 GPT-6 Astra 같은 클로즈드소스 옵션을 포함한 호스팅 모델에 접속',
+          'Llama 4 Scout 같은 오픈 웨이트 옵션과 GPT-6 Astra 같은 클로즈드소스 옵션을 포함한 호스팅 모델에 접속',
           '이 모드에서 모델 사용에 대한 요금 청구는 Liquid AI가 아니라 OpenRouter와 기반 모델 제공사를 통해 이루어짐',
           '이 모드를 통해 전송된 모든 대화는 설계상 OpenRouter의 인프라와 선택한 모델 제공사로 전송됨',
         ],
@@ -3392,11 +3392,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 보호: 기기에 남는 것과 남지 않는 것',
         content: [
           '**Liquid Apollo의 App Store 개인정보 보호 표시는 개발사가 앱 자체에서 어떤 데이터도 수집하지 않는다고 명시하며**, 로컬 모드를 사용하는 데 계정이 필요하지 않습니다. 이 주장은 앱 자체의 데이터 수집을 다루는 것으로, OpenRouter나 자체 호스팅 백엔드로 메시지를 보내기로 선택한 후 그 메시지에 어떤 일이 일어나는지는 설명하지 않으며, 설명할 수도 없습니다. 이는 Liquid AI의 통제 밖에 있는 별개의 서비스이기 때문입니다.',
-          '여기서 개인정보 보호를 정직하게 생각하는 방법은 앱 단위가 아니라 모드 단위입니다: 로컬 LFM2 채팅은 메시지 내용이 기기를 벗어날 수 있는 네트워크 경로가 전혀 없으며, 이는 단순한 정책이 아니라 구조적 특성입니다. OpenRouter 모드는 필연적으로 선택한 OpenRouter와 모델 제공사의 자체 개인정보 보호 약관에 따라 메시지 내용을 전송합니다. 커스텀 백엔드 모드는 구성한 방식에 따라 설정한 서버로 메시지 내용을 전송합니다.',
+          '여기서 개인정보 보호를 정직하게 생각하는 방법은 앱 단위가 아니라 모드 단위입니다: Liquid AI에 따르면 로컬 LFM2 채팅은 설계상 메시지 내용을 기기 밖으로 전송하지 않습니다. PromptQuorum은 이를 검증하지 않았습니다. OpenRouter 모드는 필연적으로 선택한 OpenRouter와 모델 제공사의 자체 개인정보 보호 약관에 따라 메시지 내용을 전송합니다. 커스텀 백엔드 모드는 구성한 방식에 따라 설정한 서버로 메시지 내용을 전송합니다.',
         ],
         items: [
           '로컬 모드에는 계정이 필요 없음; Liquid AI는 앱 자체가 데이터를 수집하지 않는다고 밝힘',
-          '로컬 LFM2 채팅에는 데이터를 전송할 서버 측 구성 요소가 없음 — 이는 정책 선언일 뿐만 아니라 온디바이스 추론의 구조적 특성',
+          'Liquid AI에 따르면 로컬 채팅은 설계상 메시지 내용을 기기 밖으로 전송하지 않음. PromptQuorum은 이를 검증하지 않았음',
           'OpenRouter 모드는 필연적으로 메시지 내용을 기기 밖으로, OpenRouter의 인프라와 선택한 모델 제공사에 전송함 — 관련이 있다면 [OpenRouter 자체의 개인정보 보호 정책](https://openrouter.ai/privacy)을 검토하세요',
           '커스텀 백엔드 모드는 메시지 내용을 자체 호스팅 서버로 전송함 — 여기서의 개인정보 보호는 Liquid Apollo가 아닌 자신의 서버 구성에 달려 있음',
           '본 리뷰는 로컬 모드에서의 비수집 주장을 검증하기 위해 Liquid Apollo의 네트워크 트래픽을 독자적으로 감사하지 않았음',
@@ -3458,18 +3458,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '로컬 전용 또는 하이브리드': '하이브리드: 로컬(LFM2) + OpenRouter 클라우드 + 커스텀 백엔드',
             '플랫폼': 'iPhone/iPad/Mac/Vision/Android',
             '가격': '무료(OpenRouter 사용료는 별도 청구)',
-            '핵심 차이': 'Liquid AI 자체의 LFM2 모델을 기기에서 실행하는 유일한 모바일 앱; 클라우드 모드는 예외적인 경우가 아니라 핵심 기능',
+            '핵심 차이': 'Liquid AI가 직접 만든, LEAP를 통해 LFM2 모델을 기기에서 실행하는 데모 앱; 클라우드 모드는 예외적인 경우가 아니라 핵심 기능',
           },
           {
             '앱': '[Private LLM](/ko/power-local-llm/private-llm-review)',
-            '로컬 전용 또는 하이브리드': '로컬 전용, 클라우드 경로 없음',
+            '로컬 전용 또는 하이브리드': '자체 페이지상 내장 클라우드 모드 없음',
             '플랫폼': 'iPhone/iPad/Mac(Apple 전용)',
             '가격': '4.99달러 일회성 구매',
             '핵심 차이': '클라우드 옵션이 전혀 없으면서 대규모 엄선된 모델 라이브러리를 갖춘 최고의 선택',
           },
           {
             '앱': '[Enclave AI](/ko/power-local-llm/enclave-ai-review)',
-            '로컬 전용 또는 하이브리드': '로컬 전용, 클라우드 경로 없음',
+            '로컬 전용 또는 하이브리드': '자체 페이지상 내장 클라우드 모드 없음',
             '플랫폼': 'iPhone/iPad/Mac(Apple 전용)',
             '가격': '무료, 앱 내 구매 있음',
             '핵심 차이': '음성 채팅을 포함해 클라우드 모드가 전혀 없는 무료 완전 로컬 대안',
@@ -3505,7 +3505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Liquid Apollo가 적합하지 않은 사람',
         items: [
-          '**클라우드 옵션이 전혀 없는 엄격하게 로컬 전용인 앱을 원하는 독자.** Liquid Apollo의 클라우드 모드는 절대 활성화하지 않더라도 앱에서 제거할 수 없는 내장 핵심 기능입니다 — 앱 자체에 클라우드 코드 경로가 전혀 없어야 한다면 [Private LLM](/ko/power-local-llm/private-llm-review)이나 [Enclave AI](/ko/power-local-llm/enclave-ai-review)가 더 적합합니다.',
+          '**클라우드 옵션이 전혀 없는 엄격하게 로컬 전용인 앱을 원하는 독자.** Liquid Apollo의 클라우드 모드는 절대 활성화하지 않더라도 앱에서 제거할 수 없는 내장 핵심 기능입니다 — [Private LLM](/ko/power-local-llm/private-llm-review)이나 [Enclave AI](/ko/power-local-llm/enclave-ai-review)가 더 적합할 수 있습니다. 각 앱 자체 페이지에 따르면 둘 다 내장 클라우드 모드를 제공하지 않습니다(현재 기능은 각 페이지에서 확인하세요).',
           '**"기기에서 실행된다"는 것이 모든 모드가 오프라인이라는 뜻이라고 가정하는 독자.** 오프라인인 것은 로컬 LFM2 모드뿐입니다; OpenRouter 모드와 커스텀 백엔드 모드 모두 설계상 네트워크 연결이 필요합니다.',
           '**OpenRouter나 자체 호스팅 서버를 설정하지 않고 최첨단 모델 능력을 원하는 독자.** LFM2의 최대 공개 크기는 2.6B 파라미터로, Liquid Apollo의 OpenRouter 모드가 접속할 수 있는 최첨단 클라우드 모델보다 훨씬 뒤처집니다 — 로컬 모드만으로는 GPT-6 Astra급 출력 품질에 미치지 못합니다.',
           '**네이티브 클라이언트를 원하는 Windows 또는 Linux 데스크톱 사용자.** Liquid Apollo에는 Windows나 Linux 앱이 없습니다; 커스텀 백엔드 모드의 서버 측(LM Studio/Ollama)만 그곳에서 실행될 수 있습니다.',
@@ -3542,12 +3542,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'LEAP이란 무엇인가요?', a: 'LEAP(Liquid Edge-AI Platform)은 휴대폰이나 다른 엣지 기기에서 직접 소형 언어 모델을 실행하기 위한 Liquid AI 자체의 개발자 SDK입니다. Liquid Apollo의 로컬 채팅 모드는 LEAP을 기반으로 구축되었으며, Liquid AI는 다른 앱 개발자에게도 LEAP을 별도로 제공합니다.' },
           { q: 'Liquid Apollo는 기기에서 어떤 모델을 실행하나요?', a: 'Liquid AI가 공개한 모델 문서에 따르면, Liquid AI 자체의 LFM2 모델 계열입니다: LFM2-350M, LFM2-700M, LFM2-1.2B, LFM2-2.6B 파라미터.' },
           { q: 'Liquid Apollo는 돈이 드나요?', a: '앱 자체는 App Store와 Google Play 모두에서 무료이며, 등재된 앱 내 구매가 없습니다. OpenRouter 클라우드 모드는 선택한 OpenRouter와 모델 제공사가 자신의 API 키를 통해 별도로 청구합니다 — Liquid AI가 아닙니다.' },
-          { q: 'Liquid Apollo의 OpenRouter 모드는 무엇인가요?', a: '자신의 OpenRouter API 키를 앱에 붙여넣어 Llama 4 Scout 같은 오픈소스 모델과 OpenAI의 GPT-6 Astra 같은 클로즈드소스 모델을 포함해 인터넷을 통해 호스팅된 모델에 접속할 수 있게 해줍니다. 이 모드는 인터넷 연결이 필요하며 Liquid AI 자체의 온디바이스 LFM2 모델과는 무관합니다.' },
+          { q: 'Liquid Apollo의 OpenRouter 모드는 무엇인가요?', a: '자신의 OpenRouter API 키를 앱에 붙여넣어 Llama 4 Scout(Llama Community License) 같은 오픈 웨이트 모델을 포함해 인터넷을 통해 호스팅된 모델에 접속할 수 있게 해줍니다. 이 모드는 인터넷 연결이 필요하며 Liquid AI 자체의 온디바이스 LFM2 모델과는 무관합니다.' },
           { q: 'Liquid Apollo를 내 자체 LM Studio나 Ollama 서버에 연결할 수 있나요?', a: '네. 커스텀 백엔드 모드는 자신의 네트워크에 있는 자체 호스팅 LM Studio 또는 Ollama 인스턴스에 연결되어, Liquid Apollo를 자신이 직접 운영하는 모델을 위한 모바일 프론트엔드로 만들어줍니다.' },
           { q: 'Liquid Apollo는 어떤 플랫폼을 지원하나요?', a: 'iPhone(iOS 18+), iPad(iPadOS 18+), Mac(Apple Silicon, macOS 15+), Apple Vision(visionOS 2+), Google Play를 통한 Android입니다. Windows나 Linux 데스크톱 클라이언트는 없습니다.' },
           { q: 'Liquid Apollo는 누가 만드나요?', a: 'Liquid AI, Inc.로, 앱의 온디바이스 모드에 사용되는 LEAP SDK와 LFM2 모델 계열도 개발합니다.' },
           { q: 'Liquid Apollo는 제 데이터를 수집하나요?', a: 'Liquid Apollo의 App Store 개인정보 보호 표시는 개발사가 앱 자체에서 어떤 데이터도 수집하지 않는다고 명시하며, 로컬 모드에는 계정이 필요하지 않습니다. 이 주장은 앱을 다루는 것이지 OpenRouter나 자체 호스팅 백엔드를 다루는 것이 아닙니다 — 이러한 서비스는 데이터를 전송하는 순간부터 각자 별도의 개인정보 보호 관행을 갖습니다.' },
-          { q: '클라우드 옵션이 전혀 없는 완전히 오프라인 앱을 원한다면 Liquid Apollo를 사용해야 하나요?', a: '이상적이지는 않습니다. Liquid Apollo는 절대 활성화하지 않더라도 항상 내장 클라우드 모드와 함께 제공됩니다. [Private LLM](/ko/power-local-llm/private-llm-review)과 [Enclave AI](/ko/power-local-llm/enclave-ai-review)는 클라우드 코드 경로가 전혀 없는 순수 온디바이스 앱으로, 이 특정 요구 사항에 더 적합합니다.' },
+          { q: '클라우드 옵션이 전혀 없는 완전히 오프라인 앱을 원한다면 Liquid Apollo를 사용해야 하나요?', a: '이상적이지는 않습니다. Liquid Apollo는 절대 활성화하지 않더라도 항상 내장 클라우드 모드와 함께 제공됩니다. [Private LLM](/ko/power-local-llm/private-llm-review)과 [Enclave AI](/ko/power-local-llm/enclave-ai-review)는 각 앱 자체 페이지에 따르면 내장 클라우드 모드를 제공하지 않으므로(현재 기능은 각 페이지에서 확인하세요), 이 특정 요구 사항에 더 적합할 수 있습니다.' },
           { q: '집 밖에서 인터넷을 통해 iPhone으로 내 LM Studio 또는 Ollama 서버에 접속할 수 있습니까?', a: 'Liquid Apollo의 스토어 페이지는 직접 운영하는 LM Studio 또는 Ollama 서버에 연결하는 방법을 설명하지만, 원격 접속은 설명하지 않습니다. 집 네트워크 밖에서 동작하는지는 서버에 접근할 수 있게 만드는 방식(예: 집 네트워크로 연결되는 VPN)에 따라 달라집니다. PromptQuorum은 이 구성을 테스트하지 않았습니다. 인증 없이 인터넷에 노출된 서버는 보안 위험이 있으며, 앱이 이를 대신 관리하지 않습니다.' },
         ],
       },
@@ -3555,7 +3555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '총평',
         content:
-          'Liquid Apollo는 정직하게 마케팅되는 하이브리드 앱입니다: Liquid AI는 OpenRouter 모드와 커스텀 백엔드 모드를 작은 글씨가 아닌 주요 기능으로 광고하며, 이는 이 카테고리의 대부분의 앱보다 실제로 무엇을 얻게 되는지 파악하기 쉽게 만듭니다. 로컬 모드는 Liquid AI 자체의 LFM2 모델을 LEAP을 통해 완전히 오프라인으로 실행하는 실제적이고 무료인 방법이며, 크로스 플랫폼 범위(iOS, Android, Mac, Apple Vision)는 이 사이트에서 다루는 대부분의 단일 플랫폼 로컬 AI 앱보다 넓습니다. 그 트레이드오프는 정확히 "하이브리드"라는 이름이 의미하는 그대로입니다: 어떤 설정에서도 구조적으로 클라우드에 도달할 수 없는 앱이 필요한 독자는 대신 [Private LLM](/ko/power-local-llm/private-llm-review)이나 [Enclave AI](/ko/power-local-llm/enclave-ai-review)를 선택해야 합니다. 온디바이스 LFM2 채팅, OpenRouter로 호스팅되는 최첨단 모델, 자신의 자체 호스팅 서버를 아우르는 유연한 단일 클라이언트를 원하는 독자는 자신이 지불하기로 선택한 OpenRouter 사용료 외에는 추가 비용 없이 Liquid Apollo에서 정확히 그것을 얻습니다.',
+          'Liquid Apollo는 정직하게 마케팅되는 하이브리드 앱입니다: Liquid AI는 OpenRouter 모드와 커스텀 백엔드 모드를 작은 글씨가 아닌 주요 기능으로 광고하며, 이는 이 카테고리의 대부분의 앱보다 실제로 무엇을 얻게 되는지 파악하기 쉽게 만듭니다. 로컬 모드는 Liquid AI 자체의 LFM2 모델을 LEAP을 통해 완전히 오프라인으로 실행하는 실제적이고 무료인 방법이며, 크로스 플랫폼 범위(iOS, Android, Mac, Apple Vision)는 이 사이트에서 다루는 대부분의 단일 플랫폼 로컬 AI 앱보다 넓습니다. 그 트레이드오프는 정확히 "하이브리드"라는 이름이 의미하는 그대로입니다: 클라우드 모드가 없는 앱이 필요한 독자는 대신 [Private LLM](/ko/power-local-llm/private-llm-review)이나 [Enclave AI](/ko/power-local-llm/enclave-ai-review)를 비교해야 합니다. 각 앱 자체 페이지에 따르면 둘 다 내장 클라우드 모드를 제공하지 않습니다(현재 기능은 각 페이지에서 확인하세요). 온디바이스 LFM2 채팅, OpenRouter로 호스팅되는 최첨단 모델, 자신의 자체 호스팅 서버를 아우르는 유연한 단일 클라이언트를 원하는 독자는 자신이 지불하기로 선택한 OpenRouter 사용료 외에는 추가 비용 없이 Liquid Apollo에서 정확히 그것을 얻습니다.',
       },
       sources: {
         id: 'sources',
@@ -3575,7 +3575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Private LLM 리뷰](/ko/power-local-llm/private-llm-review) — 클라우드 옵션을 원하지 않는 독자를 위한, 클라우드 경로가 없는 로컬 전용 대안.',
-          '[Enclave AI 리뷰](/ko/power-local-llm/enclave-ai-review) — 내장 클라우드 모드가 없는 또 다른 무료 로컬 전용 Apple 앱.',
+          '[Enclave AI 리뷰](/ko/power-local-llm/enclave-ai-review) — 자체 페이지에 따르면 내장 클라우드 모드를 제공하지 않는 또 다른 무료 Apple 앱.',
           '[Layla 리뷰](/ko/power-local-llm/layla-review) — 선택적이고 기본적으로 꺼져 있는 클라우드 등급을 가진 또 다른 하이브리드 앱.',
           '[Arbiter Local AI Chat 리뷰](/ko/power-local-llm/arbiter-local-ai-chat-review) — Liquid Apollo의 커스텀 백엔드 모드와 가장 가까운 앱.',
           '[2026년 iPhone 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — 더 폭넓은 iPhone 앱 총정리.',

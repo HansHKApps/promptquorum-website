@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: 'Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does Phi-4 Mini really beat 7B models on phone?',
-            a: 'It beats older 7B models (Llama 3.3 7B, Mistral Small v0.1) on standard benchmarks like MMLU and reasoning tasks despite being half the size. It does NOT beat current 7B models (Llama 3.3 7B, Mistral Small v0.3) on raw capability — those still lead on broad knowledge and complex reasoning. The reason Phi-4 Mini punches above its weight is Microsoft\'s training-data mix (heavy on synthetic reasoning chains and high-quality text). On phone, 7B models are usually too slow to be practical anyway, so Phi-4 Mini wins by default.',
+            a: 'It beats older 7B models (Llama 3.1 8B, Mistral Small v0.1) on standard benchmarks like MMLU and reasoning tasks despite being half the size. It does NOT beat current 7B models (Llama 3.1 8B, Mistral Small v0.3) on raw capability — those still lead on broad knowledge and complex reasoning. The reason Phi-4 Mini punches above its weight is Microsoft\'s training-data mix (heavy on synthetic reasoning chains and high-quality text). On phone, 7B models are usually too slow to be practical anyway, so Phi-4 Mini wins by default.',
           },
           {
             q: 'Can SmolLM 2 run on a 4-year-old phone?',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: 'Mejores modelos LLM para teléfonos móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Phi-4 Mini realmente supera a los modelos de 7B en el teléfono?',
-            a: 'Supera a los modelos de 7B más antiguos (Llama 3.3 7B, Mistral Small v0.1) en benchmarks estándar como MMLU y tareas de razonamiento a pesar de tener la mitad del tamaño. NO supera a los modelos de 7B actuales (Llama 3.3 7B, Mistral Small v0.3) en capacidad bruta — estos aún lideran en conocimiento amplio y razonamiento complejo. La razón por la que Phi-4 Mini rinde por encima de su peso es la mezcla de datos de entrenamiento de Microsoft (con mucho contenido de cadenas de razonamiento sintéticas y texto de alta calidad). En teléfonos, los modelos de 7B suelen ser demasiado lentos para ser prácticos de todas formas, así que Phi-4 Mini gana por defecto.',
+            a: 'Supera a los modelos de 7B más antiguos (Llama 3.1 8B, Mistral Small v0.1) en benchmarks estándar como MMLU y tareas de razonamiento a pesar de tener la mitad del tamaño. NO supera a los modelos de 7B actuales (Llama 3.1 8B, Mistral Small v0.3) en capacidad bruta — estos aún lideran en conocimiento amplio y razonamiento complejo. La razón por la que Phi-4 Mini rinde por encima de su peso es la mezcla de datos de entrenamiento de Microsoft (con mucho contenido de cadenas de razonamiento sintéticas y texto de alta calidad). En teléfonos, los modelos de 7B suelen ser demasiado lentos para ser prácticos de todas formas, así que Phi-4 Mini gana por defecto.',
           },
           {
             q: '¿Puede SmolLM 2 ejecutarse en un teléfono de hace 4 años?',
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: 'Melhores modelos de LLM para celulares em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Phi-4 Mini realmente supera os modelos de 7B no celular?',
-            a: 'Ele supera os modelos de 7B mais antigos (Llama 3.3 7B, Mistral Small v0.1) em benchmarks padrão como MMLU e tarefas de raciocínio apesar de ter metade do tamanho. NÃO supera os modelos de 7B atuais (Llama 3.3 7B, Mistral Small v0.3) em capacidade bruta — esses ainda lideram em conhecimento amplo e raciocínio complexo. A razão pela qual o Phi-4 Mini rende acima do seu peso é a mistura de dados de treinamento da Microsoft (com muito conteúdo de cadeias de raciocínio sintéticas e texto de alta qualidade). Em celulares, os modelos de 7B costumam ser lentos demais para serem práticos de qualquer forma, então o Phi-4 Mini vence por padrão.',
+            a: 'Ele supera os modelos de 7B mais antigos (Llama 3.1 8B, Mistral Small v0.1) em benchmarks padrão como MMLU e tarefas de raciocínio apesar de ter metade do tamanho. NÃO supera os modelos de 7B atuais (Llama 3.1 8B, Mistral Small v0.3) em capacidade bruta — esses ainda lideram em conhecimento amplo e raciocínio complexo. A razão pela qual o Phi-4 Mini rende acima do seu peso é a mistura de dados de treinamento da Microsoft (com muito conteúdo de cadeias de raciocínio sintéticas e texto de alta qualidade). Em celulares, os modelos de 7B costumam ser lentos demais para serem práticos de qualquer forma, então o Phi-4 Mini vence por padrão.',
           },
           {
             q: 'O SmolLM 2 consegue rodar em um celular de 4 anos atrás?',
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: 'Beste mobile KI-Modelle für Smartphones 2026: Phi-4 Mini vs. Gemma 3 vs. SmolLM',
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Übertrifft Phi-4 Mini wirklich 7B-Modelle auf dem Smartphone?',
-            a: 'Es übertrifft ältere 7B-Modelle (Llama 3.3 7B, Mistral Small v0.1) auf Standardbenchmarks wie MMLU und Schlussfolgerungsaufgaben trotz seiner halben Größe. Es übertrifft NICHT aktuelle 7B-Modelle (Llama 3.3 7B, Mistral Small v0.3) bei der Rohleistung – diese führen noch bei breitem Wissen und komplexer Schlussfolgerung. Der Grund, warum Phi-4 Mini über seinen Gewicht kämpft, ist Microsofts Trainings-Datenmix (reich an synthetischen Schlussfolgerungsketten und hochwertigem Text). Auf Smartphones sind 7B-Modelle meist zu langsam für die Praxis, sodass Phi-4 Mini standardmäßig gewinnt.',
+            a: 'Es übertrifft ältere 7B-Modelle (Llama 3.1 8B, Mistral Small v0.1) auf Standardbenchmarks wie MMLU und Schlussfolgerungsaufgaben trotz seiner halben Größe. Es übertrifft NICHT aktuelle 7B-Modelle (Llama 3.1 8B, Mistral Small v0.3) bei der Rohleistung – diese führen noch bei breitem Wissen und komplexer Schlussfolgerung. Der Grund, warum Phi-4 Mini über seinen Gewicht kämpft, ist Microsofts Trainings-Datenmix (reich an synthetischen Schlussfolgerungsketten und hochwertigem Text). Auf Smartphones sind 7B-Modelle meist zu langsam für die Praxis, sodass Phi-4 Mini standardmäßig gewinnt.',
           },
           {
             q: 'Läuft SmolLM 2 auf einem 4 Jahre alten Smartphone?',
@@ -2525,7 +2525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: 'Meilleurs modèles LLM pour smartphone en 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM',
@@ -3050,7 +3050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Phi-4 Mini surpasse-t-il vraiment les modèles 7B sur smartphone ?',
-            a: 'Il surpasse les anciens modèles 7B (Llama 3.3 7B, Mistral Small v0.1) sur les benchmarks standard comme MMLU malgré sa taille deux fois inférieure. Il ne surpasse PAS les modèles 7B actuels (Llama 3.3 7B, Mistral Small v0.3) en capacité brute. La raison pour laquelle Phi-4 Mini se bat au-dessus de sa catégorie est le mix de données d\'entraînement Microsoft, riche en chaînes de raisonnement synthétiques. Sur smartphone, les modèles 7B sont généralement trop lents pour être pratiques, donc Phi-4 Mini gagne par défaut.',
+            a: 'Il surpasse les anciens modèles 7B (Llama 3.1 8B, Mistral Small v0.1) sur les benchmarks standard comme MMLU malgré sa taille deux fois inférieure. Il ne surpasse PAS les modèles 7B actuels (Llama 3.1 8B, Mistral Small v0.3) en capacité brute. La raison pour laquelle Phi-4 Mini se bat au-dessus de sa catégorie est le mix de données d\'entraînement Microsoft, riche en chaînes de raisonnement synthétiques. Sur smartphone, les modèles 7B sont généralement trop lents pour être pratiques, donc Phi-4 Mini gagne par défaut.',
           },
           {
             q: 'SmolLM 2 peut-il tourner sur un téléphone de 4 ans ?',
@@ -3145,7 +3145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: '2026年スマートフォン向けLLMモデル比較：Phi-4 Mini vs Gemma 3 vs SmolLM',
@@ -3670,7 +3670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Phi-4 MiniはiPhone上で7Bモデルを本当に上回りますか？',
-            a: '半分のサイズにもかかわらず、MMULや推論タスクなどの標準ベンチマークで古い7Bモデル（Llama 3.3 7B、Mistral Small v0.1）を上回ります。現在の7Bモデル（Llama 3.3 7B、Mistral Small v0.3）の生の能力は上回りません — それらはまだ広い知識と複雑な推論でリードしています。Phi-4 Miniが重量以上に戦える理由はMicrosoftの学習データミックス（合成推論チェーンと高品質テキストに豊富）です。スマートフォンでは7Bモデルは通常実用的には遅すぎるため、Phi-4 Miniがデフォルトで勝ちます。',
+            a: '半分のサイズにもかかわらず、MMULや推論タスクなどの標準ベンチマークで古い7Bモデル（Llama 3.1 8B、Mistral Small v0.1）を上回ります。現在の7Bモデル（Llama 3.1 8B、Mistral Small v0.3）の生の能力は上回りません — それらはまだ広い知識と複雑な推論でリードしています。Phi-4 Miniが重量以上に戦える理由はMicrosoftの学習データミックス（合成推論チェーンと高品質テキストに豊富）です。スマートフォンでは7Bモデルは通常実用的には遅すぎるため、Phi-4 Miniがデフォルトで勝ちます。',
           },
           {
             q: 'SmolLM 2は4年前のスマートフォンで動作しますか？',
@@ -3765,7 +3765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: '2026年手机端最佳LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM对比',
@@ -4290,7 +4290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Phi-4 Mini真的能在手机上超越7B模型吗？',
-            a: '它在MMLU和推理任务等标准基准测试上超越旧款7B模型（Llama 3.3 7B、Mistral Small v0.1），尽管只有一半大小。它不能超越当前7B模型（Llama 3.3 7B、Mistral Small v0.3）的原始能力——后者在广泛知识和复杂推理上仍然领先。Phi-4 Mini能超重发挥的原因是微软的训练数据组合（富含合成推理链和高质量文本）。在手机上，7B模型通常太慢而不实用，所以Phi-4 Mini默认胜出。',
+            a: '它在MMLU和推理任务等标准基准测试上超越旧款7B模型（Llama 3.1 8B、Mistral Small v0.1），尽管只有一半大小。它不能超越当前7B模型（Llama 3.1 8B、Mistral Small v0.3）的原始能力——后者在广泛知识和复杂推理上仍然领先。Phi-4 Mini能超重发挥的原因是微软的训练数据组合（富含合成推理链和高质量文本）。在手机上，7B模型通常太慢而不实用，所以Phi-4 Mini默认胜出。',
           },
           {
             q: 'SmolLM 2能在4年前的手机上运行吗？',
@@ -4386,7 +4386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: 'أفضل نماذج ⁨LLM⁩ للهاتف المحمول في ⁨2026⁩: ⁨Phi-4 Mini⁩ مقابل ⁨Gemma 3⁩ مقابل ⁨SmolLM⁩',
@@ -4805,7 +4805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يتفوق Phi-4 Mini فعلًا على نماذج 7B على الهاتف؟',
-            a: 'يتفوق على نماذج 7B أقدم (Llama 3.3 7B وMistral Small v0.1) في المعايير القياسية كـ MMLU ومهام الاستدلال رغم أنه نصف الحجم. لا يتفوق على نماذج 7B حديثة (Llama 3.3 7B وMistral Small v0.3) في القدرة الخام — تلك لا تزال تتقدم في المعرفة الواسعة والاستدلال المعقد. سبب تفوق Phi-4 Mini النسبي هو مزيج بيانات التدريب من Microsoft (غني بسلاسل التفكير الاصطناعية والنصوص عالية الجودة). على الهاتف، نماذج 7B بطيئة جدًا في الغالب لتكون عملية، فيفوز Phi-4 Mini تلقائيًا.',
+            a: 'يتفوق على نماذج 7B أقدم (Llama 3.1 8B وMistral Small v0.1) في المعايير القياسية كـ MMLU ومهام الاستدلال رغم أنه نصف الحجم. لا يتفوق على نماذج 7B حديثة (Llama 3.1 8B وMistral Small v0.3) في القدرة الخام — تلك لا تزال تتقدم في المعرفة الواسعة والاستدلال المعقد. سبب تفوق Phi-4 Mini النسبي هو مزيج بيانات التدريب من Microsoft (غني بسلاسل التفكير الاصطناعية والنصوص عالية الجودة). على الهاتف، نماذج 7B بطيئة جدًا في الغالب لتكون عملية، فيفوز Phi-4 Mini تلقائيًا.',
           },
           {
             q: 'هل يعمل SmolLM 2 على هاتف عمره 4 سنوات؟',
@@ -4903,7 +4903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'ar',
       datePublished: '2026-05-08',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4913,7 +4913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     title: '2026년 스마트폰용 최고 모바일 LLM 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교',
@@ -5538,7 +5538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'ko',
       datePublished: '2026-05-08',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

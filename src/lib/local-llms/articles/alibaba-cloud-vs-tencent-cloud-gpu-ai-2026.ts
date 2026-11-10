@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-09-25',
     designSkin: 'hub',
     theme: 'Cost & Comparisons',
@@ -1872,7 +1872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qwen-performance',
         title: 'Qwen-Inferenz-Performance je Anbieter',
         content: '**Alibaba Cloud PAI führt Qwen-Modelle 20–30 % schneller aus als vergleichbare Hardware auf anderen Plattformen** — dank der PAI-EAS-Laufzeit, die vom Qwen-Team der Alibaba DAMO Academy mitentwickelt wurde.',
-        columns: ['Plattform', 'GPU', 'Qwen3-72B-Speed (tok/s)', 'Latenz', 'Hinweise'],
+        columns: ['Plattform', 'GPU', 'Qwen2.5-72B-Speed (tok/s)', 'Latenz', 'Hinweise'],
         rows: [
           { '0': 'Alibaba Cloud PAI (PAI-EAS)', '1': 'A100 80 GB', '2': '22–28 tok/s', '3': '~120ms', '4': 'Qwen-optimiert, FlashAttention 3' },
           { '0': 'AutoDL (Ollama)', '1': 'A100 80 GB', '2': '16–20 tok/s', '3': '~180ms', '4': 'Standard-Stack, ohne Optimierung' },
@@ -2035,7 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Alibaba Cloud vs Tencent Cloud GPU für KI 2026: Vollständiger Vergleich',
       description: 'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL: Preise, Qwen-Performance, Datenspeicherung in China und Setup-Anleitung.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-11-09',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

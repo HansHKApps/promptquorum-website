@@ -553,7 +553,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     serpIntent: 'Comparison-dominant',
     ctrRule: 'Conflict (vs vs) + freshness (2026) + specific tension (94% vs 31%)',
     writingBrief:
-      'Model comparison focused on tool/function calling specifically. Test Gemma 4 (9B, 27B), GLM-5.1, Qwen3 (8B, 32B), Llama 3.3, Mistral Small on standardized tool-calling benchmarks (BFCL, ToolBench) plus real workflows (database queries, API chains, multi-step plans). Measure: function selection accuracy, parameter extraction, error recovery, parallel calls, schema adherence. Show JSON output reliability per model. Include latency per tool call. Declare winners per workflow type. Heavy table format. Lead with the verdict — which model wins overall.',
+      'Model comparison focused on tool/function calling specifically. Test Gemma 4 (12B, 31B), GLM-5.1, Qwen3 (8B, 32B), Llama 3.3, Mistral Small on standardized tool-calling benchmarks (BFCL, ToolBench) plus real workflows (database queries, API chains, multi-step plans). Measure: function selection accuracy, parameter extraction, error recovery, parallel calls, schema adherence. Show JSON output reliability per model. Include latency per tool call. Declare winners per workflow type. Heavy table format. Lead with the verdict — which model wins overall.',
     internalLinks: [
       { ref: 'local-ai-agents-with-mcp', reasoning: 'practical implementation' },
       { ref: 'autonomous-local-agents-actually-work', reasoning: 'broader context' },
@@ -564,8 +564,8 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       label: 'Tool-calling benchmark table',
       headers: ['Model', 'BFCL score', 'ToolBench', 'Param extraction', 'Parallel calls', 'Schema adherence', 'Best for'],
       rows: [
-        ['Gemma 4 27B', '', '', '', '', '', ''],
-        ['Gemma 4 9B', '', '', '', '', '', ''],
+        ['Gemma 4 31B', '', '', '', '', '', ''],
+        ['Gemma 4 12B', '', '', '', '', '', ''],
         ['GLM-5.1', '', '', '', '', '', ''],
         ['Qwen3 32B', '', '', '', '', '', ''],
         ['Qwen3 8B', '', '', '', '', '', ''],

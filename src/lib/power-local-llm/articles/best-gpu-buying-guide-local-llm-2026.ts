@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'Best Graphics Card for Local LLMs: GPU Buying Guide 2026',
@@ -63,16 +63,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm gpu requirements',
     ],
     leadAnswerBlock:
-      '**The best graphics card for local LLMs is the one whose VRAM fits your model, not the fastest card. An RTX 3060 12 GB runs any 7B model, a 16 GB card (RTX 5060 Ti, RTX 4060 Ti or RTX 5070 Ti) handles 14B models, an RTX 4090 24 GB handles 33B models, and an RTX 5090 32 GB is the only single consumer card for 70B work.**',
+      '**The best graphics card for local LLMs is the one whose VRAM fits your model, not the fastest card. An RTX 3060 12 GB runs any 7B model, a 16 GB card (RTX 5060 Ti, RTX 4060 Ti or RTX 5070 Ti) handles 14B models, an RTX 4090 24 GB handles 33B models, and an RTX 5090 32 GB is the only consumer card in this guide with 32 GB (70B at Q4 needs about 40 GB, so it still requires aggressive quantization or partial CPU offload).**',
     quickAnswerTop: {
       en: {
         question: 'What is the best graphics card for running local LLMs in 2026?',
         answer:
-          'Buy for VRAM, then speed. An RTX 3060 12 GB (~$320-400) is the budget pick and runs any 7B model. A 16 GB card is the mid-tier pick for 14B models — an RTX 5060 Ti 16 GB (~$620 new) or a used RTX 4060 Ti 16 GB (~$380-490). An RTX 4090 24 GB runs 33B models, and an RTX 5090 32 GB (~$4,900) is the only single consumer card that handles 70B work without a dual-GPU build. Note that 2026 prices run well above MSRP.',
+          'Buy for VRAM, then speed. An RTX 3060 12 GB (~$320-400) is the budget pick and runs any 7B model. A 16 GB card is the mid-tier pick for 14B models — an RTX 5060 Ti 16 GB (~$620 new) or a used RTX 4060 Ti 16 GB (~$380-490). An RTX 4090 24 GB runs 33B models, and an RTX 5090 32 GB (~$4,900) is the only consumer card in this guide with 32 GB; 70B at Q4 needs about 40 GB, so it still requires aggressive quantization or partial CPU offload. Note that 2026 prices run well above MSRP.',
         bullets: [
           'Budget: RTX 3060 12 GB, ~$320-400 new or used, runs every 7B model at 15-20 tok/s',
           'Mid: RTX 5060 Ti 16 GB, ~$620 new (MSRP $429), runs 14B models with headroom',
-          'Enthusiast: RTX 5090 32 GB, ~$4,900, the only consumer card for single-GPU 70B',
+          'Enthusiast: RTX 5090 32 GB, ~$4,900, the only 32 GB card here; 70B needs aggressive quantization or offload',
           '2026 GPU prices run 1.5-2.5x above MSRP — compare new and used before you buy',
         ],
         updatedDate: '2026-10',
@@ -104,11 +104,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**VRAM is the binding constraint.** A model that does not fit in VRAM either fails to load or spills to system RAM and becomes too slow for interactive use. Choose the tier whose VRAM fits your target model, then optimize for speed within that tier.',
           '**Prices surged in 2026.** A memory shortage pushed GPU prices 1.5-2.5x above MSRP — an RTX 5090 lists at ~$4,900, not its $1,999 launch price, and prices rose again between August and October. Treat every price here as a snapshot of US asking prices, and compare new against used before you buy.',
-          '**Budget pick: NVIDIA RTX 3060 12 GB** (~$320-400, new and used now cost about the same) — runs every 7B model at 15-20 tok/s and most 13B models at Q4. The best value entry point for local LLMs in 2026.',
+          '**Budget pick: NVIDIA RTX 3060 12 GB** (~$320-400, new and used now cost about the same) — runs every 7B model at 15-20 tok/s and most 13B models at Q4. A strong value entry point in our view.',
           '**Mid pick: NVIDIA RTX 5060 Ti 16 GB** (~$618 new, ~$649 used asking) — 16 GB of VRAM clears 14B models with context headroom, and its 448 GB/s memory bandwidth is much faster than the older RTX 4060 Ti 16 GB (~$380-490 used), which is now mostly a used-market buy.',
           '**High pick: NVIDIA RTX 4080 Super 16 GB** (~$1,200) — the fastest 16 GB card here. The RTX 4070 Ti Super (~$900) and RTX 5070 Ti (~$1,008) cost less and are the better value if you can accept slightly lower speed.',
-          '**Enthusiast pick: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — the RTX 4090 (~$2,083+ new, ~$2,800 used) runs 33B models; the RTX 5090 (~$4,900) is the only single consumer card that fits a 70B model at Q4 without a dual-GPU build.',
-          '**AMD is viable but higher-friction.** The RX 6700 XT (12 GB) and RX 7800 XT (16 GB) offer VRAM at competitive prices, but ROCm setup adds hours of work versus NVIDIA CUDA.',
+          '**Enthusiast pick: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — the RTX 4090 (~$2,083+ new, ~$2,800 used) runs 33B models; the RTX 5090 (~$4,900) is the only consumer card in this guide with 32 GB (70B at Q4 needs about 40 GB, so it still requires aggressive quantization or partial CPU offload).',
+          '**AMD is viable but higher-friction.** The RX 6700 XT (12 GB) and RX 7800 XT (16 GB) offer VRAM at competitive prices, but ROCm setup time varies by distro and card.',
           '**Power draw scales with the tier.** An RTX 3060 draws 170 W; an RTX 5090 draws 575 W and needs an 850-1000 W power supply. Budget the power supply alongside the card.',
         ],
       },
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Budget tier ($320-400):** RTX 3060 12 GB or RX 6700 XT 12 GB — runs 7B and most 13B models.',
           '**Mid tier ($380-720):** RTX 5060 Ti 16 GB, RTX 4060 Ti 16 GB or RX 7800 XT 16 GB — runs 14B models comfortably.',
           '**High tier ($900-1,200):** RTX 4080 Super, RTX 5070 Ti or RTX 4070 Ti Super, all 16 GB — fast 14B inference, light 22B work.',
-          '**Enthusiast tier ($2,080+):** RTX 4090 24 GB or RTX 5090 32 GB — 33B models, and 70B at Q4 on the 5090.',
+          '**Enthusiast tier ($2,080+):** RTX 4090 24 GB or RTX 5090 32 GB — 33B models, and 70B only with aggressive quantization or partial CPU offload on the 5090.',
           '**VRAM rule of thumb at Q4_K_M:** roughly 0.6 GB per billion parameters, plus 2-4 GB for context and tooling.',
           '**Power draw range:** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 5060 Ti 180 W, RTX 4070 Ti Super 285 W, RTX 5070 Ti 300 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
           '**2026 price reality:** a memory shortage pushed prices 1.5-2.5x above MSRP; used cards no longer reliably cost less than new, so compare both.',
@@ -158,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Ten GPUs Compare for Local LLMs in 2026',
         content:
-          'VRAM and power figures are manufacturer specifications. Inference speeds for the RTX 3060, RTX 4080 Super, RTX 4090, and RTX 5090 are measured 7B Q4 figures from PromptQuorum hardware testing; figures for the RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super, and RTX 5070 Ti are family-level estimates. Prices are the lowest US asking prices seen in October 2026 — the memory shortage pushed them 1.5-2.5x above MSRP, so re-check before buying.',
+          'VRAM and power figures are manufacturer specifications. Inference speeds for the RTX 4090 and RTX 5090 are 7B Q4 figures taken from our linked Best GPUs for Local LLMs page and were not re-measured for this guide; figures for the RTX 3060, RTX 4080 Super, RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super, and RTX 5070 Ti are family-level estimates. Prices are the lowest US asking prices seen in October 2026 — the memory shortage pushed them 1.5-2.5x above MSRP, so re-check before buying.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            'Speed (7B Q4)': '15-20 tok/s',
+            'Speed (7B Q4)': '15-20 tok/s (est.)',
             'Power': '170 W',
             'Price (US, 2026)': '$320-400 new / $320-350 used',
             'Best for': 'Budget entry — any 7B model',
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            'Speed (7B Q4)': '~120 tok/s',
+            'Speed (7B Q4)': '~120 tok/s (est.)',
             'Power': '320 W',
             'Price (US, 2026)': '$1,200 new / $1,149 used',
             'Best for': 'Editor\'s Choice — fastest 16 GB',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Speed (7B Q4)': '~160 tok/s',
             'Power': '575 W',
             'Price (US, 2026)': '$4,921 new / $5,880 used',
-            'Best for': 'Single-GPU 70B at Q4',
+            'Best for': '70B only with aggressive quantization or offload',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp',
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I want a card that runs 14B fast and lasts several years', 'Buy this': 'RTX 5070 Ti or RTX 4070 Ti Super 16 GB' },
           { 'Your situation': 'I want the fastest 16 GB card and price is secondary', 'Buy this': 'RTX 4080 Super 16 GB' },
           { 'Your situation': 'I need 33B models or plan a future dual-GPU 70B build', 'Buy this': 'RTX 4090 24 GB' },
-          { 'Your situation': 'I need a single card that runs 70B models at Q4', 'Buy this': 'RTX 5090 32 GB' },
+          { 'Your situation': 'I need a single card for 70B models (aggressive quantization or partial offload)', 'Buy this': 'RTX 5090 32 GB' },
           { 'Your situation': 'I am unsure and want the safest first GPU', 'Buy this': 'RTX 3060 12 GB — upgrade later if you outgrow it' },
         ],
       },
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'The RX 6700 XT is the cheapest card here, but budget 3-5 hours for ROCm setup on Linux. If the saving versus an RTX 3060 is small, buy the NVIDIA card.',
+            text: 'The RX 6700 XT is the cheapest card here, but ROCm setup time on Linux varies by distro and card, so check AMD\'s supported-GPU list first. If the saving versus an RTX 3060 is small, buy the NVIDIA card.',
           },
         ],
         affiliateLinks: [
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The mid tier exists for one reason: 16 GB of VRAM clears 14B models that 12 GB cards cannot fit with usable context.** If 14B-class models are your target, this is the cheapest tier that runs them properly. The RTX 5060 Ti 16 GB is the current-generation pick, and a used RTX 4060 Ti 16 GB is the cheapest way to get 16 GB.',
         items: [
-          '**RTX 5060 Ti 16 GB (~$618 new / ~$649 used asking, $429 MSRP):** 16 GB GDDR7, 180 W, 448 GB/s memory bandwidth. It was not individually benchmarked for this guide; independent estimates put it around 65-75 tok/s on 7B Q4 — roughly 3x the older RTX 4060 Ti 16 GB. It runs Qwen3 14B-class models comfortably. Prices rose about 44% above MSRP in 2026.',
+          '**RTX 5060 Ti 16 GB (~$618 new / ~$649 used asking, $429 MSRP):** 16 GB GDDR7, 180 W, 448 GB/s memory bandwidth. It was not individually benchmarked for this guide; our estimate from memory bandwidth (not measured) puts it around 65-75 tok/s on 7B Q4. It runs Qwen3 14B-class models comfortably. Prices rose about 44% above MSRP in 2026.',
           '**RTX 4060 Ti 16 GB (~$550+ new, scarce / $380-490 used):** 16 GB VRAM, 165 W, roughly 20-25 tok/s on 7B models. It uses the same GPU die as the 8 GB RTX 4060 Ti, so per-token speed is similar — the 16 GB version buys capacity, not raw speed. It is now mostly a used-market buy.',
           '**RX 7800 XT (~$500-720 new, trackers differ):** 16 GB VRAM, 263 W. It was not individually benchmarked for this guide; expect speed in the RTX 4060 Ti range, with AMD ROCm setup as the trade-off.',
           '**Why buy this tier:** you want 14B models, you want low power draw (RTX 4060 Ti), or you want 16 GB at the lowest possible price.',
@@ -399,10 +399,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'Enthusiast Tier ($2,080+): RTX 4090 and RTX 5090',
         content:
-          '**The enthusiast tier is the only tier that runs models above 22B — and the RTX 5090 32 GB is the only single consumer card that fits a 70B model at Q4.** Buy here for VRAM capacity, not speed; the speed is a side effect. The 2026 surge hit this tier hardest, so prices move week to week.',
+          '**The enthusiast tier is the only tier that runs models above 22B — and the RTX 5090 32 GB is the only consumer card in this guide with 32 GB; a 70B model at Q4 needs about 40 GB, so it still requires aggressive quantization or partial CPU offload.** Buy here for VRAM capacity, not speed; the speed is a side effect. The 2026 surge hit this tier hardest, so prices move week to week.',
         items: [
-          '**RTX 4090 24 GB (~$2,083+ new / ~$2,800 used asking):** 24 GB VRAM, 450 W, roughly 150 tok/s on 7B models and 36 tok/s on a 70B Q4 model. Runs 33B models comfortably. New RTX 4090 stock is thin and the new-price floor may be stale — listings range up to ~$3,800.',
-          '**RTX 5090 32 GB (~$4,921 new / ~$5,880 used asking, $1,999 MSRP):** 32 GB GDDR7 VRAM, 575 W, roughly 160 tok/s on 7B and 45 tok/s on 70B Q4. The 32 GB capacity is the headline — it is the only consumer card that runs a 70B model at Q4 without a second GPU. Asking prices rose about 64% between August and October, and used listings sit above new.',
+          '**RTX 4090 24 GB (~$2,083+ new / ~$2,800 used asking):** 24 GB VRAM, 450 W, roughly 150 tok/s on 7B models. Runs 33B models comfortably. New RTX 4090 stock is thin and the new-price floor may be stale — listings range up to ~$3,800.',
+          '**RTX 5090 32 GB (~$4,921 new / ~$5,880 used asking, $1,999 MSRP):** 32 GB GDDR7 VRAM, 575 W, roughly 160 tok/s on 7B. The 32 GB capacity is the headline — it is the only consumer card in this guide with 32 GB, though a 70B model at Q4 needs about 40 GB and so still requires aggressive quantization or partial CPU offload. Asking prices rose about 64% between August and October, and used listings sit above new.',
           '**Why buy this tier:** you need 33B or 70B models, you run batch inference, or you want a card that will not need replacing for years.',
           '**Why skip this tier:** for 7B-14B models it is overkill — the high tier delivers instant responses on those sizes for less than half the price and power draw.',
         ],
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 Price Tracker](https://capitalandcompute.net/gpu-prices/nvidia/) — MSRP versus street price for the RTX 5090, RTX 5070 Ti, and RTX 5060 Ti 16 GB.',
           '[Club386 — Nvidia indefinitely delays GeForce RTX 50 Super](https://www.club386.com/?p=129641) — report (unconfirmed by NVIDIA) that the RTX 50 Super refresh is postponed over memory supply.',
           '[AMD Radeon Specifications](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Official VRAM and power figures for the RX 7800 XT and RX 6700 XT.',
-          '[Best GPUs for Local LLMs 2026](/local-llms/best-gpus-for-local-llms) — PromptQuorum hardware testing: measured 7B Q4 inference speeds for the RTX 3060, 4080, 4090, and 5090.',
+          '[Best GPUs for Local LLMs 2026](/local-llms/best-gpus-for-local-llms) — 7B Q4 inference speeds for the RTX 4090 and 5090, as reported on that page.',
         ],
       },
       faq: {
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'What is the cheapest GPU for LLM inference in 2026?',
-            a: 'The NVIDIA RTX 3060 12 GB, at roughly $320-400, is the cheapest GPU that runs local LLM inference well. Its 12 GB of VRAM fits every 7B model and most 13B models at Q4 quantization, at 15-20 tokens per second. An RX 6700 XT can be cheaper on the used market, but it is slower and requires AMD ROCm setup. New and used RTX 3060 prices are now close, so compare both.',
+            a: 'The NVIDIA RTX 3060 12 GB, at roughly $320-400, is the lowest-priced new card in this guide that runs local LLM inference well. Its 12 GB of VRAM fits every 7B model and most 13B models at Q4 quantization, at 15-20 tokens per second. An RX 6700 XT can be cheaper on the used market, but it is slower and requires AMD ROCm setup. New and used RTX 3060 prices are now close, so compare both.',
           },
           {
             q: 'Why are GPU prices so high in 2026?',
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which graphics card is best for local LLMs?',
-            a: 'The best graphics card for local LLMs is the one with enough VRAM for your target model at your budget. For 7B models, an RTX 3060 12 GB (~$320-400) is enough. For 14B models, an RTX 5060 Ti 16 GB (~$618) or a used RTX 4060 Ti 16 GB is the mid-tier pick. For 33B models you need an RTX 4090 24 GB, and for single-card 70B an RTX 5090 32 GB. NVIDIA cards are the lowest-friction choice because CUDA works out of the box.',
+            a: 'The best graphics card for local LLMs is the one with enough VRAM for your target model at your budget. For 7B models, an RTX 3060 12 GB (~$320-400) is enough. For 14B models, an RTX 5060 Ti 16 GB (~$618) or a used RTX 4060 Ti 16 GB is the mid-tier pick. For 33B models you need an RTX 4090 24 GB, and an RTX 5090 32 GB for 70B only with aggressive quantization or partial CPU offload (70B at Q4 needs about 40 GB). NVIDIA cards are the lowest-friction choice because CUDA works out of the box.',
           },
           {
             q: 'Is the RTX 4060 Ti 16 GB faster than the 8 GB version?',
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Should I buy NVIDIA or AMD for local LLMs?',
-            a: 'Buy NVIDIA unless you already own AMD hardware or find a steep discount. NVIDIA CUDA works out of the box with Ollama, LM Studio, and llama.cpp. AMD cards like the RX 6700 XT and RX 7800 XT offer competitive VRAM per dollar, but ROCm setup typically costs several hours on Linux.',
+            a: 'Buy NVIDIA unless you already own AMD hardware or find a steep discount. NVIDIA CUDA works out of the box with Ollama, LM Studio, and llama.cpp. AMD cards like the RX 6700 XT and RX 7800 XT offer competitive VRAM per dollar, but ROCm setup time varies by distro and GPU; check AMD\'s supported-GPU list.',
           },
           {
             q: 'Can a single GPU run a 70B model?',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'Beste Grafikkarte für lokale LLMs: GPU-Kaufberatung 2026',
@@ -692,16 +692,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale llm gpu anforderungen',
     ],
     leadAnswerBlock:
-      '**Die beste Grafikkarte für lokale LLMs ist die, deren VRAM zu Ihrem Modell passt — nicht die schnellste Karte. Eine RTX 3060 12 GB führt jedes 7B-Modell aus, eine 16-GB-Karte (RTX 5060 Ti, RTX 4060 Ti oder RTX 5070 Ti) bewältigt 14B-Modelle, eine RTX 4090 24 GB bewältigt 33B-Modelle, und eine RTX 5090 32 GB ist die einzige einzelne Consumer-Karte für 70B-Arbeit.**',
+      '**Die beste Grafikkarte für lokale LLMs ist die, deren VRAM zu Ihrem Modell passt — nicht die schnellste Karte. Eine RTX 3060 12 GB führt jedes 7B-Modell aus, eine 16-GB-Karte (RTX 5060 Ti, RTX 4060 Ti oder RTX 5070 Ti) bewältigt 14B-Modelle, eine RTX 4090 24 GB bewältigt 33B-Modelle, und eine RTX 5090 32 GB ist die einzige Consumer-Karte in diesem Ratgeber mit 32 GB (70B bei Q4 braucht rund 40 GB, erfordert also weiterhin aggressive Quantisierung oder teilweises CPU-Offloading).**',
     quickAnswerTop: {
       de: {
         question: 'Welche Grafikkarte ist 2026 die beste für lokale LLMs?',
         answer:
-          'Kaufen Sie nach VRAM, dann nach Tempo. Eine RTX 3060 12 GB (~320–400 $) ist die Budget-Wahl und führt jedes 7B-Modell aus. Eine 16-GB-Karte ist die Mittelklasse-Wahl für 14B-Modelle — eine RTX 5060 Ti 16 GB (~620 $ neu) oder eine gebrauchte RTX 4060 Ti 16 GB (~380–490 $). Eine RTX 4090 24 GB bewältigt 33B-Modelle, und eine RTX 5090 32 GB (~4.900 $) ist die einzige einzelne Consumer-Karte für 70B-Arbeit ohne Dual-GPU-Aufbau. Beachten Sie: Die Preise 2026 liegen deutlich über der UVP.',
+          'Kaufen Sie nach VRAM, dann nach Tempo. Eine RTX 3060 12 GB (~320–400 $) ist die Budget-Wahl und führt jedes 7B-Modell aus. Eine 16-GB-Karte ist die Mittelklasse-Wahl für 14B-Modelle — eine RTX 5060 Ti 16 GB (~620 $ neu) oder eine gebrauchte RTX 4060 Ti 16 GB (~380–490 $). Eine RTX 4090 24 GB bewältigt 33B-Modelle, und eine RTX 5090 32 GB (~4.900 $) ist die einzige Consumer-Karte in diesem Ratgeber mit 32 GB (70B bei Q4 braucht rund 40 GB, erfordert also weiterhin aggressive Quantisierung oder teilweises CPU-Offloading). Beachten Sie: Die Preise 2026 liegen deutlich über der UVP.',
         bullets: [
           'Budget: RTX 3060 12 GB, ~320–400 $ neu oder gebraucht — führt jedes 7B-Modell mit 15–20 Token/s aus',
           'Mittelklasse: RTX 5060 Ti 16 GB, ~620 $ neu (UVP 429 $) — 14B-Modelle mit Reserve',
-          'Enthusiast: RTX 5090 32 GB, ~4.900 $ — einzige Consumer-Karte für 70B auf einer GPU',
+          'Enthusiast: RTX 5090 32 GB, ~4.900 $ — die einzige 32-GB-Karte hier; 70B erfordert aggressive Quantisierung oder Auslagerung',
           'GPU-Preise liegen 2026 1,5- bis 2,5-fach über der UVP — vergleichen Sie Neu- und Gebrauchtpreise vor dem Kauf',
         ],
         updatedDate: '2026-10',
@@ -733,11 +733,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**VRAM ist die entscheidende Beschränkung.** Ein Modell, das nicht in den VRAM passt, lädt entweder nicht oder weicht in den System-RAM aus und wird zu langsam für den interaktiven Einsatz. Wählen Sie die Klasse, deren VRAM zu Ihrem Zielmodell passt, und optimieren Sie dann innerhalb dieser Klasse auf Tempo.',
           '**Die Preise sind 2026 stark gestiegen.** Eine Speicherknappheit hat die GPU-Preise 1,5- bis 2,5-fach über die UVP getrieben — eine RTX 5090 wird mit ~4.900 $ gelistet, nicht mit ihrem Einführungspreis von 1.999 $, und die Preise sind zwischen August und Oktober erneut gestiegen. Behandeln Sie jeden Preis hier als Momentaufnahme US-amerikanischer Angebotspreise und vergleichen Sie vor dem Kauf Neu- und Gebrauchtpreise.',
-          '**Budget-Wahl: NVIDIA RTX 3060 12 GB** (~320–400 $, neu und gebraucht kosten inzwischen etwa gleich viel) — führt jedes 7B-Modell mit 15–20 Token/s aus und die meisten 13B-Modelle bei Q4. Der beste Einstiegspunkt für lokale LLMs 2026.',
+          '**Budget-Wahl: NVIDIA RTX 3060 12 GB** (~320–400 $, neu und gebraucht kosten inzwischen etwa gleich viel) — führt jedes 7B-Modell mit 15–20 Token/s aus und die meisten 13B-Modelle bei Q4. Aus unserer Sicht ein starker Einstiegspunkt mit gutem Preis-Leistungs-Verhältnis.',
           '**Mittelklasse-Wahl: NVIDIA RTX 5060 Ti 16 GB** (~618 $ neu, ~649 $ gebraucht angeboten) — 16 GB VRAM bewältigen 14B-Modelle mit Kontextreserve, und ihre Speicherbandbreite von 448 GB/s ist deutlich höher als bei der älteren RTX 4060 Ti 16 GB (~380–490 $ gebraucht), die inzwischen vor allem ein Gebrauchtkauf ist.',
           '**Oberklasse-Wahl: NVIDIA RTX 4080 Super 16 GB** (~1.200 $) — die schnellste 16-GB-Karte hier. Die RTX 4070 Ti Super (~900 $) und die RTX 5070 Ti (~1.008 $) kosten weniger und sind das bessere Preis-Leistungs-Verhältnis, wenn Sie etwas weniger Tempo akzeptieren.',
-          '**Enthusiast-Wahl: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — die RTX 4090 (~2.083 $+ neu, ~2.800 $ gebraucht) bewältigt 33B-Modelle; die RTX 5090 (~4.900 $) ist die einzige einzelne Consumer-Karte, die ein 70B-Modell bei Q4 ohne Dual-GPU-Aufbau fasst.',
-          '**AMD ist nutzbar, aber aufwendiger.** Die RX 6700 XT (12 GB) und RX 7800 XT (16 GB) bieten VRAM zu konkurrenzfähigen Preisen, aber die ROCm-Einrichtung kostet Stunden Arbeit gegenüber NVIDIA CUDA.',
+          '**Enthusiast-Wahl: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — die RTX 4090 (~2.083 $+ neu, ~2.800 $ gebraucht) bewältigt 33B-Modelle; die RTX 5090 (~4.900 $) ist die einzige Consumer-Karte in diesem Ratgeber mit 32 GB (70B bei Q4 braucht rund 40 GB, erfordert also weiterhin aggressive Quantisierung oder teilweises CPU-Offloading).',
+          '**AMD ist nutzbar, aber aufwendiger.** Die RX 6700 XT (12 GB) und RX 7800 XT (16 GB) bieten VRAM zu konkurrenzfähigen Preisen, aber der ROCm-Einrichtungsaufwand variiert je nach Distribution und Karte.',
           '**Die Leistungsaufnahme skaliert mit der Klasse.** Eine RTX 3060 zieht 170 W; eine RTX 5090 zieht 575 W und benötigt ein 850–1000-W-Netzteil. Kalkulieren Sie das Netzteil zusammen mit der Karte ein.',
         ],
       },
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Budget-Klasse (320–400 $):** RTX 3060 12 GB oder RX 6700 XT 12 GB — führt 7B- und die meisten 13B-Modelle aus.',
           '**Mittelklasse (380–720 $):** RTX 5060 Ti 16 GB, RTX 4060 Ti 16 GB oder RX 7800 XT 16 GB — führt 14B-Modelle bequem aus.',
           '**Oberklasse (900–1.200 $):** RTX 4080 Super, RTX 5070 Ti oder RTX 4070 Ti Super, alle mit 16 GB — schnelle 14B-Inferenz, leichte 22B-Arbeit.',
-          '**Enthusiast-Klasse (ab 2.080 $):** RTX 4090 24 GB oder RTX 5090 32 GB — 33B-Modelle, und 70B bei Q4 auf der 5090.',
+          '**Enthusiast-Klasse (ab 2.080 $):** RTX 4090 24 GB oder RTX 5090 32 GB — 33B-Modelle, und 70B nur mit aggressiver Quantisierung oder teilweisem CPU-Offload auf der 5090.',
           '**VRAM-Faustregel bei Q4_K_M:** rund 0,6 GB pro Milliarde Parameter, plus 2–4 GB für Kontext und Werkzeuge.',
           '**Leistungsaufnahme:** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 5060 Ti 180 W, RTX 4070 Ti Super 285 W, RTX 5070 Ti 300 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
           '**Stromkosten:** Bei deutschem Strompreis (~0,35 €/kWh) und 4 Stunden Betrieb täglich kostet das von ~7 €/Monat (RTX 3060) bis ~24 €/Monat (RTX 5090).',
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie die zehn GPUs für lokale LLMs 2026 abschneiden',
         content:
-          'VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenztempo für RTX 3060, RTX 4080 Super, RTX 4090 und RTX 5090 sind gemessene 7B-Q4-Werte aus PromptQuorum-Hardwaretests; Werte für RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super und RTX 5070 Ti sind Schätzungen auf Modellreihen-Ebene. Preise sind die niedrigsten im Oktober 2026 gesehenen US-Angebotspreise — die Speicherknappheit trieb sie 1,5- bis 2,5-fach über die UVP, daher vor dem Kauf prüfen.',
+          'VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenztempo für RTX 4090 und RTX 5090 sind 7B-Q4-Werte von unserer verlinkten Seite „Beste GPUs für lokale LLMs“ und wurden für diesen Ratgeber nicht erneut gemessen; Werte für RTX 3060, RTX 4080 Super, RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super und RTX 5070 Ti sind Schätzungen auf Modellreihen-Ebene. Preise sind die niedrigsten im Oktober 2026 gesehenen US-Angebotspreise — die Speicherknappheit trieb sie 1,5- bis 2,5-fach über die UVP, daher vor dem Kauf prüfen.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            'Tempo (7B Q4)': '15–20 Token/s',
+            'Tempo (7B Q4)': '15–20 Token/s (geschätzt)',
             'Leistungsaufnahme': '170 W',
             'Preis (US, 2026)': '320–400 $ neu / 320–350 $ gebraucht',
             'Am besten für': 'Budget-Einstieg — jedes 7B-Modell',
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            'Tempo (7B Q4)': '~120 Token/s',
+            'Tempo (7B Q4)': '~120 Token/s (geschätzt)',
             'Leistungsaufnahme': '320 W',
             'Preis (US, 2026)': '1.200 $ neu / 1.149 $ gebraucht',
             'Am besten für': 'Redaktionsempfehlung — schnellste 16 GB',
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tempo (7B Q4)': '~160 Token/s',
             'Leistungsaufnahme': '575 W',
             'Preis (US, 2026)': '4.921 $ neu / 5.880 $ gebraucht',
-            'Am besten für': '70B bei Q4 auf einer GPU',
+            'Am besten für': '70B nur mit aggressiver Quantisierung oder Offload',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.webp',
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre Situation': 'Ich will eine Karte, die 14B schnell ausführt und mehrere Jahre hält', 'Das kaufen': 'RTX 5070 Ti oder RTX 4070 Ti Super 16 GB' },
           { 'Ihre Situation': 'Ich will die schnellste 16-GB-Karte und der Preis ist zweitrangig', 'Das kaufen': 'RTX 4080 Super 16 GB' },
           { 'Ihre Situation': 'Ich brauche 33B-Modelle oder plane einen späteren Dual-GPU-70B-Aufbau', 'Das kaufen': 'RTX 4090 24 GB' },
-          { 'Ihre Situation': 'Ich brauche eine einzelne Karte, die 70B-Modelle bei Q4 ausführt', 'Das kaufen': 'RTX 5090 32 GB' },
+          { 'Ihre Situation': 'Ich brauche eine einzelne Karte für 70B-Modelle (aggressive Quantisierung oder teilweises Auslagern)', 'Das kaufen': 'RTX 5090 32 GB' },
           { 'Ihre Situation': 'Ich bin unsicher und will die sicherste erste GPU', 'Das kaufen': 'RTX 3060 12 GB — später aufrüsten, falls Sie sie überwachsen' },
         ],
       },
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'Die RX 6700 XT ist die günstigste Karte hier, planen Sie aber 3–5 Stunden für die ROCm-Einrichtung unter Linux ein. Wenn die Ersparnis gegenüber einer RTX 3060 gering ist, kaufen Sie die NVIDIA-Karte.',
+            text: 'Die RX 6700 XT ist die günstigste Karte hier, die Dauer der ROCm-Einrichtung unter Linux hängt jedoch von Distribution und Karte ab, prüfen Sie daher zuerst die Liste der von AMD unterstützten GPUs. Wenn die Ersparnis gegenüber einer RTX 3060 gering ist, kaufen Sie die NVIDIA-Karte.',
           },
         ],
         affiliateLinks: [
@@ -947,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Die Mittelklasse existiert aus einem Grund: 16 GB VRAM bewältigen 14B-Modelle, die 12-GB-Karten nicht mit brauchbarem Kontext fassen.** Wenn 14B-Modelle Ihr Ziel sind, ist dies die günstigste Klasse, die sie richtig ausführt. Die RTX 5060 Ti 16 GB ist die Wahl der aktuellen Generation, und eine gebrauchte RTX 4060 Ti 16 GB ist der günstigste Weg zu 16 GB.',
         items: [
-          '**RTX 5060 Ti 16 GB (~618 $ neu / ~649 $ gebraucht angeboten, UVP 429 $):** 16 GB GDDR7, 180 W, 448 GB/s Speicherbandbreite. Sie wurde für diesen Leitfaden nicht einzeln gemessen; unabhängige Schätzungen liegen bei etwa 65–75 Token/s bei 7B Q4 — grob das Dreifache der älteren RTX 4060 Ti 16 GB. Sie führt Modelle der Klasse Qwen3 14B bequem aus. Die Preise lagen 2026 rund 44 % über der UVP.',
+          '**RTX 5060 Ti 16 GB (~618 $ neu / ~649 $ gebraucht angeboten, UVP 429 $):** 16 GB GDDR7, 180 W, 448 GB/s Speicherbandbreite. Sie wurde für diesen Leitfaden nicht einzeln gemessen; unsere Schätzung aus der Speicherbandbreite (nicht gemessen) liegt bei etwa 65–75 Token/s bei 7B Q4. Sie führt Modelle der Klasse Qwen3 14B bequem aus. Die Preise lagen 2026 rund 44 % über der UVP.',
           '**RTX 4060 Ti 16 GB (~550 $+ neu, knapp / 380–490 $ gebraucht):** 16 GB VRAM, 165 W, rund 20–25 Token/s bei 7B-Modellen. Sie nutzt denselben GPU-Chip wie die 8-GB-RTX-4060-Ti, das Tempo pro Token ist also ähnlich — die 16-GB-Version kauft Kapazität, nicht reines Tempo. Sie ist inzwischen vor allem ein Gebrauchtkauf.',
           '**RX 7800 XT (~500–720 $ neu, Preisportale weichen ab):** 16 GB VRAM, 263 W. Sie wurde für diesen Leitfaden nicht einzeln gemessen; erwarten Sie ein Tempo im Bereich der RTX 4060 Ti, mit der AMD-ROCm-Einrichtung als Kompromiss.',
           '**Warum diese Klasse kaufen:** Sie wollen 14B-Modelle, Sie wollen geringe Leistungsaufnahme (RTX 4060 Ti) oder Sie wollen 16 GB zum niedrigstmöglichen Preis.',
@@ -1029,10 +1029,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'Enthusiast-Klasse (ab 2.080 $): RTX 4090 und RTX 5090',
         content:
-          '**Die Enthusiast-Klasse ist die einzige Klasse, die Modelle über 22B ausführt — und die RTX 5090 32 GB ist die einzige einzelne Consumer-Karte, die ein 70B-Modell bei Q4 fasst.** Kaufen Sie hier wegen der VRAM-Kapazität, nicht wegen des Tempos; das Tempo ist ein Nebeneffekt. Der Preisanstieg 2026 hat diese Klasse am härtesten getroffen, daher bewegen sich die Preise wöchentlich.',
+          '**Die Enthusiast-Klasse ist die einzige Klasse, die Modelle über 22B ausführt — und die RTX 5090 32 GB ist die einzige Consumer-Karte in diesem Ratgeber mit 32 GB; ein 70B-Modell bei Q4 braucht rund 40 GB und erfordert daher weiterhin aggressive Quantisierung oder teilweises CPU-Offloading.** Kaufen Sie hier wegen der VRAM-Kapazität, nicht wegen des Tempos; das Tempo ist ein Nebeneffekt. Der Preisanstieg 2026 hat diese Klasse am härtesten getroffen, daher bewegen sich die Preise wöchentlich.',
         items: [
-          '**RTX 4090 24 GB (~2.083 $+ neu / ~2.800 $ gebraucht angeboten):** 24 GB VRAM, 450 W, rund 150 Token/s bei 7B-Modellen und 36 Token/s bei einem 70B-Q4-Modell. Führt 33B-Modelle bequem aus. Neue RTX 4090 sind kaum noch lieferbar, und der Neupreis-Boden kann veraltet sein — Angebote reichen bis ~3.800 $.',
-          '**RTX 5090 32 GB (~4.921 $ neu / ~5.880 $ gebraucht angeboten, UVP 1.999 $):** 32 GB GDDR7-VRAM, 575 W, rund 160 Token/s bei 7B und 45 Token/s bei 70B Q4. Die 32 GB Kapazität sind das Hauptargument — es ist die einzige Consumer-Karte, die ein 70B-Modell bei Q4 ohne zweite GPU ausführt. Die Angebotspreise stiegen zwischen August und Oktober um rund 64 %, und Gebrauchtangebote liegen über den Neupreisen.',
+          '**RTX 4090 24 GB (~2.083 $+ neu / ~2.800 $ gebraucht angeboten):** 24 GB VRAM, 450 W, rund 150 Token/s bei 7B-Modellen. Führt 33B-Modelle bequem aus. Neue RTX 4090 sind kaum noch lieferbar, und der Neupreis-Boden kann veraltet sein — Angebote reichen bis ~3.800 $.',
+          '**RTX 5090 32 GB (~4.921 $ neu / ~5.880 $ gebraucht angeboten, UVP 1.999 $):** 32 GB GDDR7-VRAM, 575 W, rund 160 Token/s bei 7B. Die 32 GB Kapazität sind das Hauptargument — es ist die einzige Consumer-Karte in diesem Ratgeber mit 32 GB, doch ein 70B-Modell bei Q4 braucht rund 40 GB und erfordert daher weiterhin aggressive Quantisierung oder teilweises CPU-Offloading. Die Angebotspreise stiegen zwischen August und Oktober um rund 64 %, und Gebrauchtangebote liegen über den Neupreisen.',
           '**Warum diese Klasse kaufen:** Sie brauchen 33B- oder 70B-Modelle, Sie betreiben Batch-Inferenz oder Sie wollen eine Karte, die jahrelang nicht ersetzt werden muss.',
           '**Warum diese Klasse überspringen:** Für 7B–14B-Modelle ist sie überdimensioniert — die Oberklasse liefert sofortige Antworten bei diesen Größen für weniger als die Hälfte des Preises und der Leistungsaufnahme.',
         ],
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Club386 — Nvidia indefinitely delays GeForce RTX 50 Super](https://www.club386.com/?p=129641) — Bericht (von NVIDIA nicht bestätigt), dass der Refresh der RTX 50 Super wegen der Speicherversorgung verschoben ist.',
           '[Geizhals Deutschland — Grafikkarten-Preisvergleich](https://geizhals.de/?cat=gra16_512) — Aktuelle deutsche Händlerpreise zum Gegenprüfen; die Preise in diesem Leitfaden sind US-Werte.',
           '[AMD Radeon — Spezifikationen](https://www.amd.com/de/products/graphics/desktops/radeon.html) — Offizielle VRAM- und Leistungsangaben für RX 7800 XT und RX 6700 XT.',
-          '[Beste GPUs für lokale LLMs 2026](/de/local-llms/best-gpus-for-local-llms) — PromptQuorum-Hardwaretests: gemessene 7B-Q4-Inferenztempi für RTX 3060, 4080, 4090 und 5090.',
+          '[Beste GPUs für lokale LLMs 2026](/de/local-llms/best-gpus-for-local-llms) — 7B-Q4-Inferenztempi für RTX 4090 und 5090, wie auf dieser Seite angegeben.',
         ],
       },
       faq: {
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Was ist die günstigste GPU für LLM-Inferenz im Jahr 2026?',
-            a: 'Die NVIDIA RTX 3060 12 GB für rund 320–400 $ ist die günstigste GPU, die lokale LLM-Inferenz gut ausführt. Ihre 12 GB VRAM fassen jedes 7B-Modell und die meisten 13B-Modelle bei Q4-Quantisierung, mit 15–20 Token pro Sekunde. Eine RX 6700 XT kann gebraucht günstiger sein, ist aber langsamer und braucht AMD-ROCm-Einrichtung. Neu- und Gebrauchtpreise der RTX 3060 liegen inzwischen dicht beieinander, vergleichen Sie also beides.',
+            a: 'Die NVIDIA RTX 3060 12 GB für rund 320–400 $ ist die preisgünstigste neue Karte in diesem Ratgeber, die lokale LLM-Inferenz gut ausführt. Ihre 12 GB VRAM fassen jedes 7B-Modell und die meisten 13B-Modelle bei Q4-Quantisierung, mit 15–20 Token pro Sekunde. Eine RX 6700 XT kann gebraucht günstiger sein, ist aber langsamer und braucht AMD-ROCm-Einrichtung. Neu- und Gebrauchtpreise der RTX 3060 liegen inzwischen dicht beieinander, vergleichen Sie also beides.',
           },
           {
             q: 'Warum sind die GPU-Preise 2026 so hoch?',
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Grafikkarte ist am besten für lokale LLMs?',
-            a: 'Die beste Grafikkarte für lokale LLMs ist die mit ausreichend VRAM für Ihr Zielmodell bei Ihrem Budget. Für 7B-Modelle genügt eine RTX 3060 12 GB (~320–400 $). Für 14B-Modelle ist eine RTX 5060 Ti 16 GB (~618 $) oder eine gebrauchte RTX 4060 Ti 16 GB die Mittelklasse-Wahl. Für 33B-Modelle brauchen Sie eine RTX 4090 24 GB, für 70B auf einer Karte eine RTX 5090 32 GB. NVIDIA-Karten sind die reibungsärmste Wahl, weil CUDA sofort funktioniert.',
+            a: 'Die beste Grafikkarte für lokale LLMs ist die mit ausreichend VRAM für Ihr Zielmodell bei Ihrem Budget. Für 7B-Modelle genügt eine RTX 3060 12 GB (~320–400 $). Für 14B-Modelle ist eine RTX 5060 Ti 16 GB (~618 $) oder eine gebrauchte RTX 4060 Ti 16 GB die Mittelklasse-Wahl. Für 33B-Modelle brauchen Sie eine RTX 4090 24 GB, für 70B eine RTX 5090 32 GB, nur mit aggressiver Quantisierung oder teilweisem CPU-Offload (70B bei Q4 braucht etwa 40 GB). NVIDIA-Karten sind die reibungsärmste Wahl, weil CUDA sofort funktioniert.',
           },
           {
             q: 'Ist die RTX 4060 Ti 16 GB schneller als die 8-GB-Version?',
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sollte ich für lokale LLMs NVIDIA oder AMD kaufen?',
-            a: 'Kaufen Sie NVIDIA, außer Sie besitzen bereits AMD-Hardware oder finden einen starken Rabatt. NVIDIA CUDA funktioniert sofort mit Ollama, LM Studio und llama.cpp. AMD-Karten wie die RX 6700 XT und RX 7800 XT bieten VRAM zu konkurrenzfähigen Preisen, aber die ROCm-Einrichtung kostet typischerweise mehrere Stunden unter Linux.',
+            a: 'Kaufen Sie NVIDIA, außer Sie besitzen bereits AMD-Hardware oder finden einen starken Rabatt. NVIDIA CUDA funktioniert sofort mit Ollama, LM Studio und llama.cpp. AMD-Karten wie die RX 6700 XT und RX 7800 XT bieten VRAM zu konkurrenzfähigen Preisen, aber der Aufwand für die ROCm-Einrichtung hängt von Distribution und GPU ab; prüfen Sie die Liste der von AMD unterstützten GPUs.',
           },
           {
             q: 'Kann eine einzelne GPU ein 70B-Modell ausführen?',
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'Meilleure carte graphique pour LLM locaux : guide GPU 2026',
@@ -1322,16 +1322,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu requis pour llm local',
     ],
     leadAnswerBlock:
-      '**La meilleure carte graphique pour les LLM locaux est celle dont la VRAM correspond à votre modèle, pas la carte la plus rapide. Un RTX 3060 12 Go exécute n\'importe quel modèle 7B, une carte 16 Go (RTX 5060 Ti, RTX 4060 Ti ou RTX 5070 Ti) gère les modèles 14B, un RTX 4090 24 Go gère les modèles 33B, et un RTX 5090 32 Go est la seule carte grand public capable de faire tourner un modèle 70B seule.**',
+      '**La meilleure carte graphique pour les LLM locaux est celle dont la VRAM correspond à votre modèle, pas la carte la plus rapide. Un RTX 3060 12 Go exécute n\'importe quel modèle 7B, une carte 16 Go (RTX 5060 Ti, RTX 4060 Ti ou RTX 5070 Ti) gère les modèles 14B, un RTX 4090 24 Go gère les modèles 33B, et un RTX 5090 32 Go est la seule carte grand public de ce guide avec 32 Go (le 70B en Q4 exige environ 40 Go, donc une quantification agressive ou un déchargement partiel sur le CPU reste nécessaire).**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la meilleure carte graphique pour exécuter des LLM locaux en 2026 ?',
         answer:
-          'Achetez d\'abord pour la VRAM, ensuite pour la vitesse. Un RTX 3060 12 Go (env. 320-400 $) est le choix budget et exécute n\'importe quel modèle 7B. Une carte 16 Go est le choix de milieu de gamme pour les modèles 14B — un RTX 5060 Ti 16 Go (env. 620 $ neuf) ou un RTX 4060 Ti 16 Go d\'occasion (env. 380-490 $). Un RTX 4090 24 Go gère les modèles 33B, et un RTX 5090 32 Go (env. 4 900 $) est la seule carte grand public capable de faire tourner un modèle 70B sans configuration bi-GPU. À noter : les prix 2026 sont bien au-dessus des tarifs de lancement.',
+          'Achetez d\'abord pour la VRAM, ensuite pour la vitesse. Un RTX 3060 12 Go (env. 320-400 $) est le choix budget et exécute n\'importe quel modèle 7B. Une carte 16 Go est le choix de milieu de gamme pour les modèles 14B — un RTX 5060 Ti 16 Go (env. 620 $ neuf) ou un RTX 4060 Ti 16 Go d\'occasion (env. 380-490 $). Un RTX 4090 24 Go gère les modèles 33B, et un RTX 5090 32 Go (env. 4 900 $) est la seule carte grand public de ce guide avec 32 Go (le 70B en Q4 exige environ 40 Go, donc une quantification agressive ou un déchargement partiel sur le CPU reste nécessaire). À noter : les prix 2026 sont bien au-dessus des tarifs de lancement.',
         bullets: [
           'Budget : RTX 3060 12 Go, env. 320-400 $ neuf ou d\'occasion — exécute tout modèle 7B à 15-20 tok/s',
           'Milieu de gamme : RTX 5060 Ti 16 Go, env. 620 $ neuf (tarif de lancement 429 $) — modèles 14B avec marge',
-          'Enthousiaste : RTX 5090 32 Go, env. 4 900 $ — seule carte grand public pour le 70B sur un seul GPU',
+          'Enthousiaste : RTX 5090 32 Go, env. 4 900 $ — seule carte de 32 Go ici ; le 70B exige une quantification agressive ou un déchargement',
           'Les prix GPU 2026 sont 1,5 à 2,5 fois au-dessus du tarif de lancement — comparez neuf et occasion avant d\'acheter',
         ],
         updatedDate: '2026-10',
@@ -1363,11 +1363,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**La VRAM est la contrainte déterminante.** Un modèle qui ne tient pas en VRAM échoue au chargement ou déborde sur la RAM système et devient trop lent pour un usage interactif. Choisissez la gamme dont la VRAM correspond à votre modèle visé, puis optimisez la vitesse à l\'intérieur de cette gamme.',
           '**Les prix ont flambé en 2026.** Une pénurie de mémoire a poussé les prix GPU 1,5 à 2,5 fois au-dessus du tarif de lancement — un RTX 5090 s\'affiche à env. 4 900 $, pas à son tarif de lancement de 1 999 $, et les prix ont encore monté entre août et octobre. Traitez chaque prix ici comme un instantané des prix demandés aux États-Unis, et comparez le neuf à l\'occasion avant d\'acheter.',
-          '**Choix budget : NVIDIA RTX 3060 12 Go** (env. 320-400 $, neuf et occasion coûtent désormais à peu près autant) — exécute tout modèle 7B à 15-20 tok/s et la plupart des modèles 13B en Q4. Le meilleur rapport qualité-prix pour débuter avec les LLM locaux en 2026.',
+          '**Choix budget : NVIDIA RTX 3060 12 Go** (env. 320-400 $, neuf et occasion coûtent désormais à peu près autant) — exécute tout modèle 7B à 15-20 tok/s et la plupart des modèles 13B en Q4. À notre avis, un très bon rapport qualité-prix pour débuter.',
           '**Choix milieu de gamme : NVIDIA RTX 5060 Ti 16 Go** (env. 618 $ neuf, env. 649 $ d\'occasion demandé) — 16 Go de VRAM dégagent les modèles 14B avec une marge de contexte, et sa bande passante mémoire de 448 Go/s est bien supérieure à celle du RTX 4060 Ti 16 Go, plus ancien (env. 380-490 $ d\'occasion), désormais surtout un achat d\'occasion.',
           '**Choix haut de gamme : NVIDIA RTX 4080 Super 16 Go** (env. 1 200 $) — la carte 16 Go la plus rapide ici. Le RTX 4070 Ti Super (env. 900 $) et le RTX 5070 Ti (env. 1 008 $) coûtent moins cher et offrent un meilleur rapport qualité-prix si vous acceptez une vitesse légèrement inférieure.',
-          '**Choix enthousiaste : NVIDIA RTX 4090 24 Go / RTX 5090 32 Go** — le RTX 4090 (env. 2 083 $+ neuf, env. 2 800 $ d\'occasion) exécute les modèles 33B ; le RTX 5090 (env. 4 900 $) est la seule carte grand public capable de faire tenir un modèle 70B en Q4 sans configuration bi-GPU.',
-          '**AMD est viable mais plus exigeant.** Le RX 6700 XT (12 Go) et le RX 7800 XT (16 Go) offrent de la VRAM à des prix compétitifs, mais la configuration ROCm ajoute des heures de travail face à NVIDIA CUDA.',
+          '**Choix enthousiaste : NVIDIA RTX 4090 24 Go / RTX 5090 32 Go** — le RTX 4090 (env. 2 083 $+ neuf, env. 2 800 $ d\'occasion) exécute les modèles 33B ; le RTX 5090 (env. 4 900 $) est la seule carte grand public de ce guide avec 32 Go (le 70B en Q4 exige environ 40 Go, donc une quantification agressive ou un déchargement partiel sur le CPU reste nécessaire).',
+          '**AMD est viable mais plus exigeant.** Le RX 6700 XT (12 Go) et le RX 7800 XT (16 Go) offrent de la VRAM à des prix compétitifs, mais la durée de configuration de ROCm varie selon la distribution et la carte.',
           '**La consommation évolue avec la gamme.** Un RTX 3060 tire 170 W ; un RTX 5090 tire 575 W et exige une alimentation de 850 à 1000 W. Budgétez l\'alimentation en même temps que la carte.',
         ],
       },
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Gamme budget (320-400 $) :** RTX 3060 12 Go ou RX 6700 XT 12 Go — exécute le 7B et la plupart des modèles 13B.',
           '**Milieu de gamme (380-720 $) :** RTX 5060 Ti 16 Go, RTX 4060 Ti 16 Go ou RX 7800 XT 16 Go — exécute confortablement les modèles 14B.',
           '**Haut de gamme (900-1 200 $) :** RTX 4080 Super, RTX 5070 Ti ou RTX 4070 Ti Super, tous en 16 Go — inférence 14B rapide, travail 22B léger.',
-          '**Gamme enthousiaste (2 080 $+) :** RTX 4090 24 Go ou RTX 5090 32 Go — modèles 33B, et 70B en Q4 sur le 5090.',
+          '**Gamme enthousiaste (2 080 $+) :** RTX 4090 24 Go ou RTX 5090 32 Go — modèles 33B, et 70B uniquement avec une quantification agressive ou un déchargement partiel vers le CPU sur le 5090.',
           '**Règle VRAM pour Q4_K_M :** environ 0,6 Go par milliard de paramètres, plus 2-4 Go pour le contexte et l\'outillage.',
           '**Plage de consommation :** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 5060 Ti 180 W, RTX 4070 Ti Super 285 W, RTX 5070 Ti 300 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
           '**Réalité des prix 2026 :** une pénurie de mémoire a poussé les prix 1,5 à 2,5 fois au-dessus du tarif de lancement ; l\'occasion n\'est plus fiablement moins chère que le neuf, comparez donc les deux.',
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment les dix GPU se comparent pour les LLM locaux en 2026',
         content:
-          'Les chiffres de VRAM et de consommation sont les spécifications constructeur. Les vitesses d\'inférence du RTX 3060, RTX 4080 Super, RTX 4090 et RTX 5090 sont des valeurs 7B Q4 mesurées par les tests matériels de PromptQuorum ; les chiffres du RTX 4060 Ti 16 Go, du RTX 5060 Ti 16 Go, du RX 7800 XT, du RTX 4070 Ti Super et du RTX 5070 Ti sont des estimations à l\'échelle de la gamme. Les prix sont les prix demandés les plus bas observés aux États-Unis en octobre 2026 — la pénurie de mémoire les a poussés 1,5 à 2,5 fois au-dessus du tarif de lancement, vérifiez donc avant d\'acheter.',
+          'Les chiffres de VRAM et de consommation sont les spécifications constructeur. Les vitesses d\'inférence du RTX 4090 et RTX 5090 sont des valeurs 7B Q4 reprises de notre page liée « Meilleurs GPU pour LLM locaux » et n\'ont pas été re-mesurées pour ce guide ; les chiffres du RTX 3060, du RTX 4080 Super, du RTX 4060 Ti 16 Go, du RTX 5060 Ti 16 Go, du RX 7800 XT, du RTX 4070 Ti Super et du RTX 5070 Ti sont des estimations à l\'échelle de la gamme. Les prix sont les prix demandés les plus bas observés aux États-Unis en octobre 2026 — la pénurie de mémoire les a poussés 1,5 à 2,5 fois au-dessus du tarif de lancement, vérifiez donc avant d\'acheter.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 Go',
             'VRAM': '12 Go',
-            'Vitesse (7B Q4)': '15-20 tok/s',
+            'Vitesse (7B Q4)': '15-20 tok/s (est.)',
             'Consommation': '170 W',
             'Prix (US, 2026)': '320-400 $ neuf / 320-350 $ occasion',
             'Idéal pour': 'Entrée budget — tout modèle 7B',
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 Go',
-            'Vitesse (7B Q4)': '~120 tok/s',
+            'Vitesse (7B Q4)': '~120 tok/s (est.)',
             'Consommation': '320 W',
             'Prix (US, 2026)': '1 200 $ neuf / 1 149 $ occasion',
             'Idéal pour': 'Choix de la rédaction — la 16 Go la plus rapide',
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vitesse (7B Q4)': '~160 tok/s',
             'Consommation': '575 W',
             'Prix (US, 2026)': '4 921 $ neuf / 5 880 $ occasion',
-            'Idéal pour': '70B en Q4 sur un seul GPU',
+            'Idéal pour': '70B uniquement avec quantification agressive ou déchargement',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.webp',
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'Je veux une carte qui exécute le 14B rapidement et dure plusieurs années', 'Achetez ceci': 'RTX 5070 Ti ou RTX 4070 Ti Super 16 Go' },
           { 'Votre situation': 'Je veux la carte 16 Go la plus rapide et le prix est secondaire', 'Achetez ceci': 'RTX 4080 Super 16 Go' },
           { 'Votre situation': 'J\'ai besoin de modèles 33B ou je prévois une future configuration bi-GPU 70B', 'Achetez ceci': 'RTX 4090 24 Go' },
-          { 'Votre situation': 'J\'ai besoin d\'une seule carte qui exécute des modèles 70B en Q4', 'Achetez ceci': 'RTX 5090 32 Go' },
+          { 'Votre situation': 'J\'ai besoin d\'une seule carte pour des modèles 70B (quantification agressive ou déchargement partiel)', 'Achetez ceci': 'RTX 5090 32 Go' },
           { 'Votre situation': 'Je ne suis pas sûr et je veux le premier GPU le plus sûr', 'Achetez ceci': 'RTX 3060 12 Go — montez en gamme plus tard si vous la dépassez' },
         ],
       },
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'Le RX 6700 XT est la carte la moins chère ici, mais prévoyez 3 à 5 heures pour la configuration ROCm sous Linux. Si l\'économie face à un RTX 3060 est faible, achetez la carte NVIDIA.',
+            text: 'Le RX 6700 XT est la carte la moins chère ici, mais la durée de configuration de ROCm sous Linux varie selon la distribution et la carte ; consultez d\'abord la liste des GPU pris en charge par AMD. Si l\'économie face à un RTX 3060 est faible, achetez la carte NVIDIA.',
           },
         ],
         affiliateLinks: [
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le milieu de gamme existe pour une raison : 16 Go de VRAM dégagent les modèles 14B que les cartes 12 Go ne peuvent pas faire tenir avec un contexte utilisable.** Si les modèles de classe 14B sont votre cible, c\'est la gamme la moins chère qui les exécute correctement. Le RTX 5060 Ti 16 Go est le choix de la génération actuelle, et un RTX 4060 Ti 16 Go d\'occasion est la façon la moins chère d\'obtenir 16 Go.',
         items: [
-          '**RTX 5060 Ti 16 Go (env. 618 $ neuf / env. 649 $ d\'occasion demandé, tarif de lancement 429 $) :** 16 Go de GDDR7, 180 W, bande passante mémoire de 448 Go/s. Il n\'a pas été testé individuellement pour ce guide ; des estimations indépendantes le situent autour de 65-75 tok/s en 7B Q4 — environ 3 fois le RTX 4060 Ti 16 Go plus ancien. Il exécute confortablement les modèles de classe Qwen3 14B. Les prix ont grimpé d\'environ 44 % au-dessus du tarif de lancement en 2026.',
+          '**RTX 5060 Ti 16 Go (env. 618 $ neuf / env. 649 $ d\'occasion demandé, tarif de lancement 429 $) :** 16 Go de GDDR7, 180 W, bande passante mémoire de 448 Go/s. Il n\'a pas été testé individuellement pour ce guide ; notre estimation à partir de la bande passante mémoire (non mesurée) le situe autour de 65-75 tok/s en 7B Q4. Il exécute confortablement les modèles de classe Qwen3 14B. Les prix ont grimpé d\'environ 44 % au-dessus du tarif de lancement en 2026.',
           '**RTX 4060 Ti 16 Go (env. 550 $+ neuf, rare / 380-490 $ d\'occasion) :** 16 Go de VRAM, 165 W, environ 20-25 tok/s sur les modèles 7B. Il utilise la même puce GPU que le RTX 4060 Ti 8 Go, la vitesse par token est donc similaire — la version 16 Go achète de la capacité, pas de la vitesse brute. C\'est désormais surtout un achat d\'occasion.',
           '**RX 7800 XT (env. 500-720 $ neuf, les suivis divergent) :** 16 Go de VRAM, 263 W. Il n\'a pas été testé individuellement pour ce guide ; attendez-vous à une vitesse dans la plage du RTX 4060 Ti, avec la configuration AMD ROCm comme contrepartie.',
           '**Pourquoi acheter cette gamme :** vous voulez des modèles 14B, vous voulez une faible consommation (RTX 4060 Ti) ou vous voulez 16 Go au prix le plus bas possible.',
@@ -1658,10 +1658,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'Gamme enthousiaste (2 080 $+) : RTX 4090 et RTX 5090',
         content:
-          '**La gamme enthousiaste est la seule qui exécute des modèles au-delà de 22B — et le RTX 5090 32 Go est la seule carte grand public capable de faire tenir un modèle 70B en Q4.** Achetez ici pour la capacité VRAM, pas pour la vitesse ; la vitesse est un effet secondaire. La flambée de 2026 a frappé cette gamme le plus durement, les prix bougent donc d\'une semaine à l\'autre.',
+          '**La gamme enthousiaste est la seule qui exécute des modèles au-delà de 22B — et le RTX 5090 32 Go est la seule carte grand public de ce guide avec 32 Go ; un modèle 70B en Q4 exige environ 40 Go, donc une quantification agressive ou un déchargement partiel sur le CPU reste nécessaire.** Achetez ici pour la capacité VRAM, pas pour la vitesse ; la vitesse est un effet secondaire. La flambée de 2026 a frappé cette gamme le plus durement, les prix bougent donc d\'une semaine à l\'autre.',
         items: [
-          '**RTX 4090 24 Go (env. 2 083 $+ neuf / env. 2 800 $ d\'occasion demandé) :** 24 Go de VRAM, 450 W, environ 150 tok/s sur les modèles 7B et 36 tok/s sur un modèle 70B Q4. Exécute confortablement les modèles 33B. Le stock neuf de RTX 4090 est mince et le plancher de prix du neuf peut être périmé — les annonces montent jusqu\'à env. 3 800 $.',
-          '**RTX 5090 32 Go (env. 4 921 $ neuf / env. 5 880 $ d\'occasion demandé, tarif de lancement 1 999 $) :** 32 Go de VRAM GDDR7, 575 W, environ 160 tok/s sur le 7B et 45 tok/s sur le 70B Q4. La capacité de 32 Go est l\'argument central — c\'est la seule carte grand public qui exécute un modèle 70B en Q4 sans second GPU. Les prix demandés ont augmenté d\'environ 64 % entre août et octobre, et les annonces d\'occasion se situent au-dessus du neuf.',
+          '**RTX 4090 24 Go (env. 2 083 $+ neuf / env. 2 800 $ d\'occasion demandé) :** 24 Go de VRAM, 450 W, environ 150 tok/s sur les modèles 7B. Exécute confortablement les modèles 33B. Le stock neuf de RTX 4090 est mince et le plancher de prix du neuf peut être périmé — les annonces montent jusqu\'à env. 3 800 $.',
+          '**RTX 5090 32 Go (env. 4 921 $ neuf / env. 5 880 $ d\'occasion demandé, tarif de lancement 1 999 $) :** 32 Go de VRAM GDDR7, 575 W, environ 160 tok/s sur le 7B. La capacité de 32 Go est l\'argument central — c\'est la seule carte grand public de ce guide avec 32 Go, mais un modèle 70B en Q4 exige environ 40 Go et nécessite donc toujours une quantification agressive ou un déchargement partiel sur le CPU. Les prix demandés ont augmenté d\'environ 64 % entre août et octobre, et les annonces d\'occasion se situent au-dessus du neuf.',
           '**Pourquoi acheter cette gamme :** vous avez besoin de modèles 33B ou 70B, vous faites de l\'inférence par lots, ou vous voulez une carte qui n\'aura pas besoin d\'être remplacée avant des années.',
           '**Pourquoi éviter cette gamme :** pour les modèles 7B-14B, elle est surdimensionnée — le haut de gamme délivre des réponses instantanées sur ces tailles pour moins de la moitié du prix et de la consommation.',
         ],
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 Price Tracker](https://capitalandcompute.net/gpu-prices/nvidia/) — tarif de lancement contre prix de rue pour les RTX 5090, RTX 5070 Ti et RTX 5060 Ti 16 Go.',
           '[Club386 — Nvidia indefinitely delays GeForce RTX 50 Super](https://www.club386.com/?p=129641) — information (non confirmée par NVIDIA) selon laquelle le renouvellement RTX 50 Super est repoussé à cause de l\'approvisionnement en mémoire.',
           '[Spécifications AMD Radeon](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Chiffres officiels de VRAM et de consommation pour les RX 7800 XT et RX 6700 XT.',
-          '[Meilleurs GPU pour LLM locaux 2026](/fr/local-llms/best-gpus-for-local-llms) — tests matériels PromptQuorum : vitesses d\'inférence 7B Q4 mesurées pour les RTX 3060, 4080, 4090 et 5090.',
+          '[Meilleurs GPU pour LLM locaux 2026](/fr/local-llms/best-gpus-for-local-llms) — vitesses d\'inférence 7B Q4 pour les RTX 4090 et 5090, telles qu\'indiquées sur cette page.',
         ],
       },
       faq: {
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Quel est le GPU le moins cher pour l\'inférence de LLM en 2026 ?',
-            a: 'Le NVIDIA RTX 3060 12 Go, à environ 320-400 $, est le GPU le moins cher qui exécute bien l\'inférence de LLM locaux. Ses 12 Go de VRAM font tenir tout modèle 7B et la plupart des modèles 13B en quantification Q4, à 15-20 tokens par seconde. Un RX 6700 XT peut être moins cher d\'occasion, mais il est plus lent et exige une configuration AMD ROCm. Les prix du RTX 3060 neuf et d\'occasion sont désormais proches, comparez donc les deux.',
+            a: 'Le NVIDIA RTX 3060 12 Go, à environ 320-400 $, est la carte neuve la moins chère de ce guide qui exécute bien l\'inférence de LLM locaux. Ses 12 Go de VRAM font tenir tout modèle 7B et la plupart des modèles 13B en quantification Q4, à 15-20 tokens par seconde. Un RX 6700 XT peut être moins cher d\'occasion, mais il est plus lent et exige une configuration AMD ROCm. Les prix du RTX 3060 neuf et d\'occasion sont désormais proches, comparez donc les deux.',
           },
           {
             q: 'Pourquoi les prix GPU sont-ils si élevés en 2026 ?',
@@ -1855,7 +1855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle carte graphique est la meilleure pour les LLM locaux ?',
-            a: 'La meilleure carte graphique pour les LLM locaux est celle qui a assez de VRAM pour votre modèle visé à votre budget. Pour les modèles 7B, un RTX 3060 12 Go (env. 320-400 $) suffit. Pour les modèles 14B, un RTX 5060 Ti 16 Go (env. 618 $) ou un RTX 4060 Ti 16 Go d\'occasion est le choix de milieu de gamme. Pour les modèles 33B, il faut un RTX 4090 24 Go, et pour le 70B sur une seule carte un RTX 5090 32 Go. Les cartes NVIDIA sont le choix le plus simple car CUDA fonctionne d\'emblée.',
+            a: 'La meilleure carte graphique pour les LLM locaux est celle qui a assez de VRAM pour votre modèle visé à votre budget. Pour les modèles 7B, un RTX 3060 12 Go (env. 320-400 $) suffit. Pour les modèles 14B, un RTX 5060 Ti 16 Go (env. 618 $) ou un RTX 4060 Ti 16 Go d\'occasion est le choix de milieu de gamme. Pour les modèles 33B, il faut un RTX 4090 24 Go, et pour le 70B un RTX 5090 32 Go, uniquement avec une quantification agressive ou un déchargement partiel vers le CPU (le 70B en Q4 exige environ 40 Go). Les cartes NVIDIA sont le choix le plus simple car CUDA fonctionne d\'emblée.',
           },
           {
             q: 'Le RTX 4060 Ti 16 Go est-il plus rapide que la version 8 Go ?',
@@ -1863,7 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Faut-il acheter NVIDIA ou AMD pour des LLM locaux ?',
-            a: 'Achetez NVIDIA sauf si vous possédez déjà du matériel AMD ou trouvez une forte remise. NVIDIA CUDA fonctionne d\'emblée avec Ollama, LM Studio et llama.cpp. Les cartes AMD comme les RX 6700 XT et RX 7800 XT offrent une VRAM par euro compétitive, mais la configuration ROCm coûte généralement plusieurs heures sous Linux.',
+            a: 'Achetez NVIDIA sauf si vous possédez déjà du matériel AMD ou trouvez une forte remise. NVIDIA CUDA fonctionne d\'emblée avec Ollama, LM Studio et llama.cpp. Les cartes AMD comme les RX 6700 XT et RX 7800 XT offrent une VRAM par euro compétitive, mais la durée de configuration de ROCm varie selon la distribution et le GPU ; consultez la liste des GPU pris en charge par AMD.',
           },
           {
             q: 'Un seul GPU peut-il exécuter un modèle 70B ?',
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'ローカルLLM向けグラフィックカードの選び方：GPU購入ガイド2026',
@@ -1950,16 +1950,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルllm gpu 要件',
     ],
     leadAnswerBlock:
-      '**ローカルLLMにとって最良のグラフィックカードは、最速のカードではなく、VRAMが自分のモデルに合うカードです。RTX 3060 12 GBはあらゆる7Bモデルを動かし、16 GBカード（RTX 5060 Ti、RTX 4060 Ti、RTX 5070 Ti）は14Bモデルを扱い、RTX 4090 24 GBは33Bモデルを扱い、RTX 5090 32 GBは70B作業を1枚でこなせる唯一のコンシューマー向けカードです。**',
+      '**ローカルLLMにとって最良のグラフィックカードは、最速のカードではなく、VRAMが自分のモデルに合うカードです。RTX 3060 12 GBはあらゆる7Bモデルを動かし、16 GBカード（RTX 5060 Ti、RTX 4060 Ti、RTX 5070 Ti）は14Bモデルを扱い、RTX 4090 24 GBは33Bモデルを扱い、RTX 5090 32 GBは本ガイドで唯一の32 GBコンシューマー向けカードです（70BをQ4で動かすには約40 GBが必要なため、積極的な量子化かCPUへの部分オフロードが依然として必要です）。**',
     quickAnswerTop: {
       ja: {
         question: '2026年にローカルLLMを動かすのに最適なグラフィックカードはどれですか？',
         answer:
-          'まずVRAM、次に速度で選びます。RTX 3060 12 GB（約$320～400）は低予算の選択肢で、あらゆる7Bモデルを動かします。中位帯の選択肢は14Bモデル向けの16 GBカードで、RTX 5060 Ti 16 GB（新品で約$620）か、中古のRTX 4060 Ti 16 GB（約$380～490）です。RTX 4090 24 GBは33Bモデルを動かし、RTX 5090 32 GB（約$4,900）はデュアルGPU構成なしで70B作業をこなせる唯一のコンシューマー向けカードです。なお、2026年の価格はメーカー希望小売価格を大きく上回っています。',
+          'まずVRAM、次に速度で選びます。RTX 3060 12 GB（約$320～400）は低予算の選択肢で、あらゆる7Bモデルを動かします。中位帯の選択肢は14Bモデル向けの16 GBカードで、RTX 5060 Ti 16 GB（新品で約$620）か、中古のRTX 4060 Ti 16 GB（約$380～490）です。RTX 4090 24 GBは33Bモデルを動かし、RTX 5090 32 GB（約$4,900）は本ガイドで唯一の32 GBコンシューマー向けカードです（70BをQ4で動かすには約40 GBが必要なため、積極的な量子化かCPUへの部分オフロードが依然として必要です）。なお、2026年の価格はメーカー希望小売価格を大きく上回っています。',
         bullets: [
           '低予算：RTX 3060 12 GB、新品・中古とも約$320～400 — あらゆる7Bモデルを15～20 tok/sで動かす',
           '中位：RTX 5060 Ti 16 GB、新品で約$620（メーカー希望小売価格$429） — 14Bモデルを余裕をもって動かす',
-          'エンスージアスト：RTX 5090 32 GB、約$4,900 — 70Bを1枚でこなせる唯一のコンシューマー向けカード',
+          'エンスージアスト：RTX 5090 32 GB、約$4,900 — ここで唯一の32 GBカード；70Bには積極的な量子化かオフロードが必要',
           '2026年のGPU価格はメーカー希望小売価格の1.5～2.5倍 — 買う前に新品と中古を比べる',
         ],
         updatedDate: '2026-10',
@@ -1991,11 +1991,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**VRAMが決定的な制約です。** VRAMに収まらないモデルは読み込みに失敗するか、システムRAMにあふれて対話用途には遅すぎる状態になります。対象モデルにVRAMが合う価格帯を選び、その帯の中で速度を最適化してください。',
           '**価格は2026年に急騰しました。** メモリ不足がGPU価格をメーカー希望小売価格の1.5～2.5倍に押し上げました。RTX 5090は発売価格の$1,999ではなく約$4,900で掲示されており、価格は8月から10月にかけてさらに上昇しました。本記事の価格はすべて米国の掲示価格のスナップショットとして扱い、買う前に新品と中古を比べてください。',
-          '**低予算の選択：NVIDIA RTX 3060 12 GB**（約$320～400、新品と中古の価格は現在ほぼ同じ） — あらゆる7Bモデルを15～20 tok/sで動かし、ほとんどの13BモデルをQ4で動かします。2026年にローカルLLMを始める入口として最良のコストパフォーマンスです。',
+          '**低予算の選択：NVIDIA RTX 3060 12 GB**（約$320～400、新品と中古の価格は現在ほぼ同じ） — あらゆる7Bモデルを15～20 tok/sで動かし、ほとんどの13BモデルをQ4で動かします。当社の見解では、コストパフォーマンスに優れた入口です。',
           '**中位の選択：NVIDIA RTX 5060 Ti 16 GB**（新品で約$618、中古の掲示価格は約$649） — 16 GBのVRAMはコンテキストの余裕を残して14Bモデルをこなし、448 GB/sのメモリ帯域は旧世代のRTX 4060 Ti 16 GB（中古で約$380～490）よりはるかに高速です。RTX 4060 Ti 16 GBは今では主に中古市場での購入になります。',
           '**上位の選択：NVIDIA RTX 4080 Super 16 GB**（約$1,200） — ここで最速の16 GBカードです。RTX 4070 Ti Super（約$900）とRTX 5070 Ti（約$1,008）はより安く、速度が少し落ちても構わないならコストパフォーマンスで優れます。',
-          '**エンスージアストの選択：NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090（新品で約$2,083以上、中古で約$2,800）は33Bモデルを動かし、RTX 5090（約$4,900）はデュアルGPU構成なしで70BモデルをQ4で収められる唯一のコンシューマー向けカードです。',
-          '**AMDは選択肢になりますが手間が増えます。** RX 6700 XT（12 GB）とRX 7800 XT（16 GB）は競争力のある価格でVRAMを提供しますが、ROCmのセットアップはNVIDIA CUDAに比べて数時間の作業が加わります。',
+          '**エンスージアストの選択：NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090（新品で約$2,083以上、中古で約$2,800）は33Bモデルを動かし、RTX 5090（約$4,900）は本ガイドで唯一の32 GBコンシューマー向けカードです（70BをQ4で動かすには約40 GBが必要なため、積極的な量子化かCPUへの部分オフロードが依然として必要です）。',
+          '**AMDは選択肢になりますが手間が増えます。** RX 6700 XT（12 GB）とRX 7800 XT（16 GB）は競争力のある価格でVRAMを提供しますが、ROCmのセットアップ時間はディストリビューションやカードによって異なります。',
           '**消費電力は価格帯に比例します。** RTX 3060は170 W、RTX 5090は575 Wを消費し、850～1000 Wの電源が必要です。電源はカードと一緒に予算に入れてください。',
         ],
       },
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**低予算帯（$320～400）：** RTX 3060 12 GBまたはRX 6700 XT 12 GB — 7Bとほとんどの13Bモデルを動かす。',
           '**中位帯（$380～720）：** RTX 5060 Ti 16 GB、RTX 4060 Ti 16 GBまたはRX 7800 XT 16 GB — 14Bモデルを余裕をもって動かす。',
           '**上位帯（$900～1,200）：** RTX 4080 Super、RTX 5070 TiまたはRTX 4070 Ti Super（いずれも16 GB） — 高速な14B推論、軽めの22B作業。',
-          '**エンスージアスト帯（$2,080以上）：** RTX 4090 24 GBまたはRTX 5090 32 GB — 33Bモデル、5090ではQ4で70B。',
+          '**エンスージアスト帯（$2,080以上）：** RTX 4090 24 GBまたはRTX 5090 32 GB — 33Bモデル、70Bは5090でも積極的な量子化かCPUへの部分オフロードが必要。',
           '**Q4_K_MでのVRAMの目安：** パラメータ10億あたり約0.6 GB、加えてコンテキストとツールに2～4 GB。',
           '**消費電力の範囲：** RTX 3060 170 W、RTX 4060 Ti 165 W、RTX 5060 Ti 180 W、RTX 4070 Ti Super 285 W、RTX 5070 Ti 300 W、RTX 4080 Super 320 W、RTX 4090 450 W、RTX 5090 575 W。',
           '**2026年の価格の実情：** メモリ不足が価格をメーカー希望小売価格の1.5～2.5倍に押し上げました。中古カードが新品より確実に安いとは限らなくなったため、両方を比べてください。',
@@ -2045,7 +2045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のローカルLLMで10枚のGPUを比較',
         content:
-          'VRAMと消費電力の数値はメーカー仕様です。RTX 3060、RTX 4080 Super、RTX 4090、RTX 5090の推論速度はPromptQuorumのハードウェアテストによる実測7B Q4の値で、RTX 4060 Ti 16 GB、RTX 5060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Super、RTX 5070 Tiの数値はファミリー単位の推定値です。価格は2026年秋に確認できた米国の最安掲示価格（米ドル）です — メモリ不足がメーカー希望小売価格の1.5～2.5倍に押し上げているため、購入前に再確認してください。',
+          'VRAMと消費電力の数値はメーカー仕様です。RTX 4090、RTX 5090の推論速度はリンク先の「ローカルLLM向けベストGPU」ページに掲載されている7B Q4の値で、本ガイドのために再測定したものではなく、RTX 3060、RTX 4080 Super、RTX 4060 Ti 16 GB、RTX 5060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Super、RTX 5070 Tiの数値はファミリー単位の推定値です。価格は2026年秋に確認できた米国の最安掲示価格（米ドル）です — メモリ不足がメーカー希望小売価格の1.5～2.5倍に押し上げているため、購入前に再確認してください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            '速度（7B Q4）': '15～20 tok/s',
+            '速度（7B Q4）': '15～20 tok/s（推定）',
             '消費電力': '170 W',
             '価格（米国、2026）': '$320～400（新品）/ $320～350（中古）',
             '最適な用途': '低予算の入口 — あらゆる7Bモデル',
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            '速度（7B Q4）': '約120 tok/s',
+            '速度（7B Q4）': '約120 tok/s（推定）',
             '消費電力': '320 W',
             '価格（米国、2026）': '$1,200（新品）/ $1,149（中古）',
             '最適な用途': '編集部の選択 — 最速の16 GB',
@@ -2136,7 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '速度（7B Q4）': '約160 tok/s',
             '消費電力': '575 W',
             '価格（米国、2026）': '$4,921（新品）/ $5,880（中古）',
-            '最適な用途': '1枚のGPUでQ4の70B',
+            '最適な用途': '70B（積極的な量子化かオフロードが前提）',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.webp',
@@ -2156,7 +2156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'あなたの状況': '14Bを高速に動かし数年もつカードがほしい', 'これを買う': 'RTX 5070 TiまたはRTX 4070 Ti Super 16 GB' },
           { 'あなたの状況': '最速の16 GBカードがほしく価格は二の次', 'これを買う': 'RTX 4080 Super 16 GB' },
           { 'あなたの状況': '33Bモデルが必要、または将来のデュアルGPU 70B構成を計画している', 'これを買う': 'RTX 4090 24 GB' },
-          { 'あなたの状況': '70BモデルをQ4で動かす1枚のカードが必要', 'これを買う': 'RTX 5090 32 GB' },
+          { 'あなたの状況': '70Bモデル向けの1枚のカードが必要（積極的な量子化か部分オフロード）', 'これを買う': 'RTX 5090 32 GB' },
           { 'あなたの状況': '迷っていて最も無難な最初のGPUがほしい', 'これを買う': 'RTX 3060 12 GB — 物足りなくなったら後で買い替える' },
         ],
       },
@@ -2178,7 +2178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RX 6700 XTはここで最も安いカードですが、LinuxでのROCmセットアップに3～5時間を見込んでください。RTX 3060に対して節約できる金額が小さいなら、NVIDIAのカードを買ってください。',
+            text: 'RX 6700 XTはここで最も安いカードですが、LinuxでのROCmセットアップにかかる時間はディストリビューションやカードによって異なるため、まずAMDの対応GPU一覧を確認してください。RTX 3060に対して節約できる金額が小さいなら、NVIDIAのカードを買ってください。',
           },
         ],
         affiliateLinks: [
@@ -2204,7 +2204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**中位帯はひとつの理由のために存在します。16 GBのVRAMは、12 GBカードでは実用的なコンテキストとともに収められない14Bモデルをこなします。** 14Bクラスのモデルが対象なら、これがそれらを適切に動かす最も安い帯です。RTX 5060 Ti 16 GBは最新世代の選択肢で、中古のRTX 4060 Ti 16 GBは16 GBを手に入れる最も安い方法です。',
         items: [
-          '**RTX 5060 Ti 16 GB（新品で約$618 / 中古の掲示価格で約$649、メーカー希望小売価格$429）：** 16 GB GDDR7、180 W、メモリ帯域448 GB/s。本ガイドでは個別に計測していません。第三者の推定では7B Q4で約65～75 tok/sで、旧世代のRTX 4060 Ti 16 GBのおよそ3倍です。Qwen3 14Bクラスのモデルを余裕をもって動かします。価格は2026年にメーカー希望小売価格を約44%上回りました。',
+          '**RTX 5060 Ti 16 GB（新品で約$618 / 中古の掲示価格で約$649、メーカー希望小売価格$429）：** 16 GB GDDR7、180 W、メモリ帯域448 GB/s。本ガイドでは個別に計測していません。メモリ帯域に基づく当社の推定（実測ではありません）では、7B Q4で約65～75 tok/sです。Qwen3 14Bクラスのモデルを余裕をもって動かします。価格は2026年にメーカー希望小売価格を約44%上回りました。',
           '**RTX 4060 Ti 16 GB（新品で約$550以上、在庫わずか / 中古で$380～490）：** 16 GB VRAM、165 W、7Bモデルで約20～25 tok/s。8 GB版RTX 4060 Tiと同じGPUダイを使うため、トークンあたりの速度は同等です — 16 GB版は速度ではなく容量を買うものです。今では主に中古市場での購入になります。',
           '**RX 7800 XT（新品で約$500～720、トラッカーにより差）：** 16 GB VRAM、263 W。本ガイドでは個別に計測していません。速度はRTX 4060 Tiの範囲を見込み、AMD ROCmのセットアップが引き換えになります。',
           '**この帯を買う理由：** 14Bモデルがほしい、低消費電力がほしい（RTX 4060 Ti）、または可能な限り安く16 GBがほしい。',
@@ -2286,10 +2286,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'エンスージアスト帯（$2,080以上）：RTX 4090とRTX 5090',
         content:
-          '**エンスージアスト帯は22Bを超えるモデルを動かせる唯一の帯であり、RTX 5090 32 GBは70BモデルをQ4で収められる唯一のコンシューマー向けカードです。** ここでは速度ではなくVRAM容量のために買ってください。速度は副産物です。2026年の急騰はこの帯を最も激しく直撃したため、価格は週ごとに動きます。',
+          '**エンスージアスト帯は22Bを超えるモデルを動かせる唯一の帯であり、RTX 5090 32 GBは本ガイドで唯一の32 GBコンシューマー向けカードですが、70BモデルをQ4で動かすには約40 GBが必要なため、積極的な量子化かCPUへの部分オフロードが依然として必要です。** ここでは速度ではなくVRAM容量のために買ってください。速度は副産物です。2026年の急騰はこの帯を最も激しく直撃したため、価格は週ごとに動きます。',
         items: [
-          '**RTX 4090 24 GB（新品で約$2,083以上 / 中古の掲示価格で約$2,800）：** 24 GB VRAM、450 W、7Bモデルで約150 tok/s、70B Q4モデルで36 tok/s。33Bモデルを余裕をもって動かします。新品のRTX 4090は在庫が薄く、新品の最低価格は古い可能性があります — 出品は最大約$3,800まで幅があります。',
-          '**RTX 5090 32 GB（新品で約$4,921 / 中古の掲示価格で約$5,880、メーカー希望小売価格$1,999）：** 32 GB GDDR7 VRAM、575 W、7Bで約160 tok/s、70B Q4で45 tok/s。32 GBの容量が目玉です — 2枚目のGPUなしで70BモデルをQ4で動かせる唯一のコンシューマー向けカードです。掲示価格は8月から10月にかけて約64%上昇し、中古の出品は新品を上回っています。',
+          '**RTX 4090 24 GB（新品で約$2,083以上 / 中古の掲示価格で約$2,800）：** 24 GB VRAM、450 W、7Bモデルで約150 tok/s。33Bモデルを余裕をもって動かします。新品のRTX 4090は在庫が薄く、新品の最低価格は古い可能性があります — 出品は最大約$3,800まで幅があります。',
+          '**RTX 5090 32 GB（新品で約$4,921 / 中古の掲示価格で約$5,880、メーカー希望小売価格$1,999）：** 32 GB GDDR7 VRAM、575 W、7Bで約160 tok/s。32 GBの容量が目玉です — 本ガイドで唯一の32 GBコンシューマー向けカードですが、70BモデルをQ4で動かすには約40 GBが必要なため、積極的な量子化かCPUへの部分オフロードが依然として必要です。掲示価格は8月から10月にかけて約64%上昇し、中古の出品は新品を上回っています。',
           '**この帯を買う理由：** 33Bや70Bモデルが必要、バッチ推論を行う、または何年も買い替え不要のカードがほしい。',
           '**この帯を避ける理由：** 7B～14Bモデルには過剰です — 上位帯はそれらのサイズで、価格と消費電力の半分以下で瞬時の応答を提供します。',
         ],
@@ -2462,7 +2462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 Price Tracker](https://capitalandcompute.net/gpu-prices/nvidia/) — RTX 5090、RTX 5070 Ti、RTX 5060 Ti 16 GBのメーカー希望小売価格と実売価格の比較。',
           '[Club386 — Nvidia indefinitely delays GeForce RTX 50 Super](https://www.club386.com/?p=129641) — RTX 50 Superの更新版がメモリ供給のため延期されたとの報道（NVIDIAは未確認）。',
           '[AMD Radeon 仕様](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XTとRX 6700 XTの公式VRAMと消費電力。',
-          '[ローカルLLM向けベストGPU 2026](/ja/local-llms/best-gpus-for-local-llms) — PromptQuorumのハードウェアテスト：RTX 3060、4080、4090、5090の実測7B Q4推論速度。',
+          '[ローカルLLM向けベストGPU 2026](/ja/local-llms/best-gpus-for-local-llms) — RTX 4090、5090の7B Q4推論速度（当該ページの記載に基づく）。',
         ],
       },
       faq: {
@@ -2471,7 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年にLLM推論で最も安いGPUは何ですか？',
-            a: 'NVIDIA RTX 3060 12 GB（約$320～400）が、ローカルLLM推論をうまく動かせる最も安いGPUです。12 GBのVRAMはあらゆる7Bモデルとほとんどの13BモデルをQ4量子化で、15～20トークン毎秒で収めます。RX 6700 XTは中古市場でより安いことがありますが、より遅く、AMD ROCmのセットアップが必要です。RTX 3060の新品と中古の価格は現在近いため、両方を比べてください。',
+            a: 'NVIDIA RTX 3060 12 GB（約$320～400）が、このガイドの中でローカルLLM推論をうまく動かせる最も低価格の新品カードです。12 GBのVRAMはあらゆる7Bモデルとほとんどの13BモデルをQ4量子化で、15～20トークン毎秒で収めます。RX 6700 XTは中古市場でより安いことがありますが、より遅く、AMD ROCmのセットアップが必要です。RTX 3060の新品と中古の価格は現在近いため、両方を比べてください。',
           },
           {
             q: 'なぜ2026年のGPU価格はこれほど高いのですか？',
@@ -2483,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルLLMに最適なグラフィックカードはどれですか？',
-            a: 'ローカルLLMに最適なグラフィックカードは、予算の範囲で対象モデルに十分なVRAMを持つカードです。7Bモデルには RTX 3060 12 GB（約$320～400）で足ります。14Bモデルの中位帯の選択肢は、RTX 5060 Ti 16 GB（約$618）か中古のRTX 4060 Ti 16 GBです。33BモデルにはRTX 4090 24 GBが、1枚で70BならRTX 5090 32 GBが必要です。CUDAがそのまま動くため、NVIDIAカードが最も手間の少ない選択です。',
+            a: 'ローカルLLMに最適なグラフィックカードは、予算の範囲で対象モデルに十分なVRAMを持つカードです。7Bモデルには RTX 3060 12 GB（約$320～400）で足ります。14Bモデルの中位帯の選択肢は、RTX 5060 Ti 16 GB（約$618）か中古のRTX 4060 Ti 16 GBです。33BモデルにはRTX 4090 24 GBが、70BにはRTX 5090 32 GBが必要ですが、積極的な量子化かCPUへの部分オフロードが前提です（70BをQ4で動かすには約40 GB必要）。CUDAがそのまま動くため、NVIDIAカードが最も手間の少ない選択です。',
           },
           {
             q: 'RTX 4060 Ti 16 GBは8 GB版より速いですか？',
@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルLLMにはNVIDIAとAMDのどちらを買うべきですか？',
-            a: 'すでにAMDのハードウェアを持っているか、大幅な値引きを見つけた場合を除き、NVIDIAを買ってください。NVIDIA CUDAはOllama、LM Studio、llama.cppですぐに動きます。RX 6700 XTやRX 7800 XTといったAMDカードは競争力のある価格でVRAMを提供しますが、ROCmのセットアップはLinuxで通常数時間かかります。',
+            a: 'すでにAMDのハードウェアを持っているか、大幅な値引きを見つけた場合を除き、NVIDIAを買ってください。NVIDIA CUDAはOllama、LM Studio、llama.cppですぐに動きます。RX 6700 XTやRX 7800 XTといったAMDカードは競争力のある価格でVRAMを提供しますが、ROCmのセットアップにかかる時間はディストリビューションやGPUによって異なります。AMDの対応GPU一覧を確認してください。',
           },
           {
             q: '1枚のGPUで70Bモデルを動かせますか？',
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: '本地大模型显卡推荐：显卡选购指南 2026',
@@ -2578,16 +2578,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地大模型显卡要求',
     ],
     leadAnswerBlock:
-      '**本地大模型（开源大模型）最佳显卡是显存与你的模型相匹配的那一款，而不是最快的那一款。RTX 3060 12 GB 能运行任何 7B 模型，16 GB 显卡（RTX 5060 Ti、RTX 4060 Ti 或 RTX 5070 Ti）能处理 14B 模型，RTX 4090 24 GB 能处理 33B 模型，RTX 5090 32 GB 是唯一能单卡运行 70B 工作的消费级显卡。**',
+      '**本地大模型（开源大模型）最佳显卡是显存与你的模型相匹配的那一款，而不是最快的那一款。RTX 3060 12 GB 能运行任何 7B 模型，16 GB 显卡（RTX 5060 Ti、RTX 4060 Ti 或 RTX 5070 Ti）能处理 14B 模型，RTX 4090 24 GB 能处理 33B 模型，RTX 5090 32 GB 是本指南中唯一的 32 GB 消费级显卡（70B 以 Q4 运行约需 40 GB，因此仍需要激进量化或部分 CPU 卸载）。**',
     quickAnswerTop: {
       zh: {
         question: '2026 年运行本地大模型最好的显卡是哪款？',
         answer:
-          '先按显存买，再看速度。RTX 3060 12 GB（约 $320-400）是预算之选，能运行任何 7B 模型。16 GB 显卡是面向 14B 模型的中端之选——全新 RTX 5060 Ti 16 GB（约 $620）或二手 RTX 4060 Ti 16 GB（约 $380-490）。RTX 4090 24 GB 能运行 33B 模型，RTX 5090 32 GB（约 $4,900）是唯一无需双卡构建就能处理 70B 工作的消费级显卡。注意 2026 年价格远高于建议零售价。',
+          '先按显存买，再看速度。RTX 3060 12 GB（约 $320-400）是预算之选，能运行任何 7B 模型。16 GB 显卡是面向 14B 模型的中端之选——全新 RTX 5060 Ti 16 GB（约 $620）或二手 RTX 4060 Ti 16 GB（约 $380-490）。RTX 4090 24 GB 能运行 33B 模型，RTX 5090 32 GB（约 $4,900）是本指南中唯一的 32 GB 消费级显卡（70B 以 Q4 运行约需 40 GB，因此仍需要激进量化或部分 CPU 卸载）。注意 2026 年价格远高于建议零售价。',
         bullets: [
           '预算：RTX 3060 12 GB，全新或二手约 $320-400，以 15-20 tok/s 运行任何 7B 模型',
           '中端：RTX 5060 Ti 16 GB，全新约 $620（建议零售价 $429），运行 14B 模型有余量',
-          '发烧级：RTX 5090 32 GB，约 $4,900，唯一能单卡运行 70B 的消费级显卡',
+          '发烧级：RTX 5090 32 GB，约 $4,900，此处唯一的 32 GB 显卡；70B 需要激进量化或卸载',
           '2026 年显卡价格为建议零售价的 1.5 到 2.5 倍——购买前先比较全新和二手',
         ],
         updatedDate: '2026-10',
@@ -2619,11 +2619,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**显存是决定性约束。** 装不进显存的模型要么加载失败，要么溢出到系统内存，慢到无法交互使用。先选显存匹配目标模型的档次，再在该档次内优化速度。',
           '**2026 年价格大涨。** 内存短缺把显卡价格推高到建议零售价的 1.5 到 2.5 倍——RTX 5090 标价约 $4,900，而非其 $1,999 的发布价，且 8 月到 10 月间价格再度上涨。把本文每个价格当作美国挂牌价的快照，购买前先比较全新和二手。',
-          '**预算之选：NVIDIA RTX 3060 12 GB**（约 $320-400，全新和二手如今价格相近）——以 15-20 tok/s 运行任何 7B 模型，并以 Q4 运行大多数 13B 模型。2026 年入门本地大模型的最佳性价比。',
+          '**预算之选：NVIDIA RTX 3060 12 GB**（约 $320-400，全新和二手如今价格相近）——以 15-20 tok/s 运行任何 7B 模型，并以 Q4 运行大多数 13B 模型。我们认为这是性价比出色的入门之选。',
           '**中端之选：NVIDIA RTX 5060 Ti 16 GB**（全新约 $618，二手挂牌约 $649）——16 GB 显存可容纳 14B 模型并留有上下文余量，其 448 GB/s 的显存带宽远高于旧款 RTX 4060 Ti 16 GB（二手约 $380-490），后者如今主要是二手市场的选择。',
           '**高端之选：NVIDIA RTX 4080 Super 16 GB**（约 $1,200）——这里最快的 16 GB 显卡。RTX 4070 Ti Super（约 $900）和 RTX 5070 Ti（约 $1,008）更便宜，如果能接受稍低的速度，它们性价比更好。',
-          '**发烧之选：NVIDIA RTX 4090 24 GB / RTX 5090 32 GB**——RTX 4090（全新约 $2,083 起，二手约 $2,800）能运行 33B 模型；RTX 5090（约 $4,900）是唯一无需双卡构建就能以 Q4 容纳 70B 模型的消费级显卡。',
-          '**AMD 可行但门槛更高。** RX 6700 XT（12 GB）和 RX 7800 XT（16 GB）价格有竞争力，但 ROCm 配置比 NVIDIA CUDA 多花数小时。',
+          '**发烧之选：NVIDIA RTX 4090 24 GB / RTX 5090 32 GB**——RTX 4090（全新约 $2,083 起，二手约 $2,800）能运行 33B 模型；RTX 5090（约 $4,900）是本指南中唯一的 32 GB 消费级显卡（70B 以 Q4 运行约需 40 GB，因此仍需要激进量化或部分 CPU 卸载）。',
+          '**AMD 可行但门槛更高。** RX 6700 XT（12 GB）和 RX 7800 XT（16 GB）价格有竞争力，但 ROCm 配置所需时间因发行版和显卡而异。',
           '**功耗随档次上升。** RTX 3060 功耗 170 W；RTX 5090 功耗 575 W，需要 850-1000 W 电源。把电源和显卡一起纳入预算。',
         ],
       },
@@ -2634,7 +2634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**预算档（$320-400）：** RTX 3060 12 GB 或 RX 6700 XT 12 GB——运行 7B 和大多数 13B 模型。',
           '**中端档（$380-720）：** RTX 5060 Ti 16 GB、RTX 4060 Ti 16 GB 或 RX 7800 XT 16 GB——轻松运行 14B 模型。',
           '**高端档（$900-1,200）：** RTX 4080 Super、RTX 5070 Ti 或 RTX 4070 Ti Super，均为 16 GB——快速 14B 推理，轻量 22B 工作。',
-          '**发烧档（$2,080 起）：** RTX 4090 24 GB 或 RTX 5090 32 GB——33B 模型，5090 上可 Q4 运行 70B。',
+          '**发烧档（$2,080 起）：** RTX 4090 24 GB 或 RTX 5090 32 GB——33B 模型；70B 即使在 5090 上也需要激进量化或部分 CPU 卸载。',
           '**Q4_K_M 下的显存经验法则：** 每十亿参数约 0.6 GB，外加 2-4 GB 用于上下文和工具。',
           '**功耗范围：** RTX 3060 170 W、RTX 4060 Ti 165 W、RTX 5060 Ti 180 W、RTX 4070 Ti Super 285 W、RTX 5070 Ti 300 W、RTX 4080 Super 320 W、RTX 4090 450 W、RTX 5090 575 W。',
           '**2026 年价格实况：** 内存短缺把价格推高到建议零售价的 1.5 到 2.5 倍；二手卡已不一定比全新便宜，请两者都比较。',
@@ -2673,7 +2673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026 年十款显卡运行本地大模型的对比',
         content:
-          '显存和功耗数字为厂商规格。RTX 3060、RTX 4080 Super、RTX 4090、RTX 5090 的推理速度为 PromptQuorum 硬件测试实测的 7B Q4 数值；RTX 4060 Ti 16 GB、RTX 5060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Super、RTX 5070 Ti 的数字为系列级别估算。价格为 2026 年 10 月观察到的美国最低挂牌价——内存短缺把价格推高到建议零售价的 1.5 到 2.5 倍，购买前请重新核对。',
+          '显存和功耗数字为厂商规格。RTX 4090、RTX 5090 的推理速度取自所链接的“本地大模型最佳显卡”页面的 7B Q4 数值，并未为本指南重新测量；RTX 3060、RTX 4080 Super、RTX 4060 Ti 16 GB、RTX 5060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Super、RTX 5070 Ti 的数字为系列级别估算。价格为 2026 年 10 月观察到的美国最低挂牌价——内存短缺把价格推高到建议零售价的 1.5 到 2.5 倍，购买前请重新核对。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2689,7 +2689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '显卡': 'RTX 3060 12 GB',
             '显存': '12 GB',
-            '速度（7B Q4）': '15-20 tok/s',
+            '速度（7B Q4）': '15-20 tok/s（估算）',
             '功耗': '170 W',
             '价格（美国，2026）': '全新 $320-400 / 二手 $320-350',
             '最适合': '预算入门——任何 7B 模型',
@@ -2745,7 +2745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '显卡': 'RTX 4080 Super',
             '显存': '16 GB',
-            '速度（7B Q4）': '约 120 tok/s',
+            '速度（7B Q4）': '约 120 tok/s（估算）',
             '功耗': '320 W',
             '价格（美国，2026）': '全新 $1,200 / 二手 $1,149',
             '最适合': '编辑推荐——最快的 16 GB',
@@ -2764,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '速度（7B Q4）': '约 160 tok/s',
             '功耗': '575 W',
             '价格（美国，2026）': '全新 $4,921 / 二手 $5,880',
-            '最适合': '单卡 Q4 运行 70B',
+            '最适合': '70B（仅限激进量化或卸载）',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.webp',
@@ -2784,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的情况': '我想要一款能快速运行 14B 并用上数年的显卡', '买这款': 'RTX 5070 Ti 或 RTX 4070 Ti Super 16 GB' },
           { '你的情况': '我想要最快的 16 GB 显卡，价格其次', '买这款': 'RTX 4080 Super 16 GB' },
           { '你的情况': '我需要 33B 模型，或计划将来做双卡 70B 构建', '买这款': 'RTX 4090 24 GB' },
-          { '你的情况': '我需要一张能以 Q4 运行 70B 模型的单卡', '买这款': 'RTX 5090 32 GB' },
+          { '你的情况': '我需要一张用于 70B 模型的单卡（激进量化或部分卸载）', '买这款': 'RTX 5090 32 GB' },
           { '你的情况': '我拿不定主意，想要最稳妥的第一张显卡', '买这款': 'RTX 3060 12 GB——不够用以后再升级' },
         ],
       },
@@ -2806,7 +2806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RX 6700 XT 是这里最便宜的显卡，但要为 Linux 上的 ROCm 配置留出 3-5 小时。如果相对 RTX 3060 省下的钱不多，就买 NVIDIA 显卡。',
+            text: 'RX 6700 XT 是这里最便宜的显卡，但 Linux 上 ROCm 的配置耗时因发行版和显卡而异，请先查看 AMD 的受支持 GPU 列表。如果相对 RTX 3060 省下的钱不多，就买 NVIDIA 显卡。',
           },
         ],
         affiliateLinks: [
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**中端档存在的唯一理由是：16 GB 显存能容纳 12 GB 显卡无法在可用上下文下装下的 14B 模型。** 如果 14B 级别的模型是你的目标，这是能正确运行它们的最便宜档次。RTX 5060 Ti 16 GB 是当代架构之选，二手 RTX 4060 Ti 16 GB 是获得 16 GB 最便宜的方式。',
         items: [
-          '**RTX 5060 Ti 16 GB（全新约 $618 / 二手挂牌约 $649，建议零售价 $429）：** 16 GB GDDR7，180 W，448 GB/s 显存带宽。本指南未对它单独做基准测试；独立估算在 7B Q4 下约 65-75 tok/s——约为旧款 RTX 4060 Ti 16 GB 的 3 倍。可轻松运行 Qwen3 14B 级别模型。2026 年价格比建议零售价高出约 44%。',
+          '**RTX 5060 Ti 16 GB（全新约 $618 / 二手挂牌约 $649，建议零售价 $429）：** 16 GB GDDR7，180 W，448 GB/s 显存带宽。本指南未对它单独做基准测试；我们根据显存带宽做的估算（非实测）显示，7B Q4 下约 65-75 tok/s。可轻松运行 Qwen3 14B 级别模型。2026 年价格比建议零售价高出约 44%。',
           '**RTX 4060 Ti 16 GB（全新约 $550 起，货源紧张 / 二手 $380-490）：** 16 GB 显存，165 W，7B 模型约 20-25 tok/s。它与 8 GB 版 RTX 4060 Ti 使用同一颗 GPU 核心，因此每 token 速度相近——16 GB 版本买的是容量，不是原始速度。如今主要是二手市场的选择。',
           '**RX 7800 XT（全新约 $500-720，各追踪站不一）：** 16 GB 显存，263 W。本指南未对它单独做基准测试；速度预计在 RTX 4060 Ti 范围内，代价是 AMD ROCm 配置。',
           '**为何买这一档：** 你想要 14B 模型、想要低功耗（RTX 4060 Ti），或想以尽可能低的价格获得 16 GB。',
@@ -2914,10 +2914,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: '发烧档（$2,080 起）：RTX 4090 和 RTX 5090',
         content:
-          '**发烧档是唯一能运行 22B 以上模型的档次——而 RTX 5090 32 GB 是唯一能以 Q4 容纳 70B 模型的消费级单卡。** 在这里购买是为显存容量，而非速度；速度是副产品。2026 年涨价对这一档冲击最大，价格逐周变动。',
+          '**发烧档是唯一能运行 22B 以上模型的档次——而 RTX 5090 32 GB 是本指南中唯一的 32 GB 消费级显卡；70B 模型以 Q4 运行约需 40 GB，因此仍需要激进量化或部分 CPU 卸载。** 在这里购买是为显存容量，而非速度；速度是副产品。2026 年涨价对这一档冲击最大，价格逐周变动。',
         items: [
-          '**RTX 4090 24 GB（全新约 $2,083 起 / 二手挂牌约 $2,800）：** 24 GB 显存，450 W，7B 模型约 150 tok/s，70B Q4 模型 36 tok/s。轻松运行 33B 模型。全新 RTX 4090 货源稀少，全新最低价可能已过时——挂牌价最高可达约 $3,800。',
-          '**RTX 5090 32 GB（全新约 $4,921 / 二手挂牌约 $5,880，建议零售价 $1,999）：** 32 GB GDDR7 显存，575 W，7B 约 160 tok/s，70B Q4 为 45 tok/s。32 GB 容量是亮点——它是唯一无需第二张 GPU 就能以 Q4 运行 70B 模型的消费级显卡。8 月到 10 月间挂牌价上涨约 64%，二手挂牌价高于全新。',
+          '**RTX 4090 24 GB（全新约 $2,083 起 / 二手挂牌约 $2,800）：** 24 GB 显存，450 W，7B 模型约 150 tok/s。轻松运行 33B 模型。全新 RTX 4090 货源稀少，全新最低价可能已过时——挂牌价最高可达约 $3,800。',
+          '**RTX 5090 32 GB（全新约 $4,921 / 二手挂牌约 $5,880，建议零售价 $1,999）：** 32 GB GDDR7 显存，575 W，7B 约 160 tok/s。32 GB 容量是亮点——它是本指南中唯一的 32 GB 消费级显卡，但 70B 模型以 Q4 运行约需 40 GB，因此仍需要激进量化或部分 CPU 卸载。8 月到 10 月间挂牌价上涨约 64%，二手挂牌价高于全新。',
           '**为何买这一档：** 你需要 33B 或 70B 模型、你做批量推理，或你想要一款多年无需更换的显卡。',
           '**为何跳过这一档：** 对 7B-14B 模型而言它过剩——高端档以不到一半的价格和功耗就能在这些规模上提供即时响应。',
         ],
@@ -3090,7 +3090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 价格追踪](https://capitalandcompute.net/gpu-prices/nvidia/) — RTX 5090、RTX 5070 Ti 和 RTX 5060 Ti 16 GB 的建议零售价与市场价对比。',
           '[Club386 — Nvidia 无限期推迟 GeForce RTX 50 Super](https://www.club386.com/?p=129641) — 有报道称（NVIDIA 未证实）RTX 50 Super 换代因内存供应而推迟。',
           '[AMD Radeon 规格](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XT 和 RX 6700 XT 的官方显存与功耗数据。',
-          '[本地大模型最佳显卡 2026](/zh/local-llms/best-gpus-for-local-llms) — PromptQuorum 硬件测试：RTX 3060、4080、4090 和 5090 的实测 7B Q4 推理速度。',
+          '[本地大模型最佳显卡 2026](/zh/local-llms/best-gpus-for-local-llms) — RTX 4090 和 5090 的 7B Q4 推理速度（以该页面所载为准）。',
         ],
       },
       faq: {
@@ -3111,7 +3111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026 年 LLM 推理最便宜的显卡是哪款？',
-            a: 'NVIDIA RTX 3060 12 GB（约 $320-400）是能把本地大模型推理跑好的最便宜显卡。它的 12 GB 显存能以 Q4 量化装下每一款 7B 模型和大多数 13B 模型，达到 15-20 token 每秒。二手市场上的 RX 6700 XT 可能更便宜，但更慢且需要 AMD ROCm 配置。RTX 3060 的全新和二手价格如今相近，请两者都比较。',
+            a: 'NVIDIA RTX 3060 12 GB（约 $320-400）是本指南中能把本地大模型推理跑好的价格最低的新显卡。它的 12 GB 显存能以 Q4 量化装下每一款 7B 模型和大多数 13B 模型，达到 15-20 token 每秒。二手市场上的 RX 6700 XT 可能更便宜，但更慢且需要 AMD ROCm 配置。RTX 3060 的全新和二手价格如今相近，请两者都比较。',
           },
           {
             q: '为什么 2026 年显卡价格这么高？',
@@ -3123,7 +3123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地大模型用哪款显卡最好？',
-            a: '本地大模型的最佳显卡，是在你的预算内显存足够运行目标模型的那一款。7B 模型用 RTX 3060 12 GB（约 $320-400）就够了。14B 模型的中端之选是 RTX 5060 Ti 16 GB（约 $618）或二手 RTX 4060 Ti 16 GB。33B 模型需要 RTX 4090 24 GB，单卡 70B 需要 RTX 5090 32 GB。NVIDIA 显卡的上手门槛最低，因为 CUDA 开箱即用。',
+            a: '本地大模型的最佳显卡，是在你的预算内显存足够运行目标模型的那一款。7B 模型用 RTX 3060 12 GB（约 $320-400）就够了。14B 模型的中端之选是 RTX 5060 Ti 16 GB（约 $618）或二手 RTX 4060 Ti 16 GB。33B 模型需要 RTX 4090 24 GB，70B 需要 RTX 5090 32 GB，且仅限激进量化或部分 CPU 卸载（70B 以 Q4 运行约需 40 GB）。NVIDIA 显卡的上手门槛最低，因为 CUDA 开箱即用。',
           },
           {
             q: 'RTX 4060 Ti 16 GB 比 8 GB 版本更快吗？',
@@ -3131,7 +3131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地大模型该买 NVIDIA 还是 AMD？',
-            a: '除非你已拥有 AMD 硬件或找到大幅折扣，否则买 NVIDIA。NVIDIA CUDA 与 Ollama、LM Studio 和 llama.cpp 开箱即用。RX 6700 XT 和 RX 7800 XT 等 AMD 显卡价格有竞争力，但 ROCm 配置在 Linux 上通常要花数小时。',
+            a: '除非你已拥有 AMD 硬件或找到大幅折扣，否则买 NVIDIA。NVIDIA CUDA 与 Ollama、LM Studio 和 llama.cpp 开箱即用。RX 6700 XT 和 RX 7800 XT 等 AMD 显卡价格有竞争力，但 ROCm 配置所需时间因发行版和显卡而异，请查看 AMD 的支持显卡列表。',
           },
           {
             q: '单张显卡能运行 70B 模型吗？',
@@ -3171,7 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'Mejor tarjeta gráfica para LLMs locales: guía de GPUs 2026',
@@ -3218,16 +3218,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'requisitos de gpu para llm local',
     ],
     leadAnswerBlock:
-      '**La mejor tarjeta gráfica para LLMs locales es la que tiene la VRAM que encaja con tu modelo, no la tarjeta más rápida. Una RTX 3060 12 GB ejecuta cualquier modelo de 7B, una tarjeta de 16 GB (RTX 5060 Ti, RTX 4060 Ti o RTX 5070 Ti) maneja modelos de 14B, una RTX 4090 24 GB maneja modelos de 33B, y una RTX 5090 32 GB es la única tarjeta de consumo individual para trabajo con 70B.**',
+      '**La mejor tarjeta gráfica para LLMs locales es la que tiene la VRAM que encaja con tu modelo, no la tarjeta más rápida. Una RTX 3060 12 GB ejecuta cualquier modelo de 7B, una tarjeta de 16 GB (RTX 5060 Ti, RTX 4060 Ti o RTX 5070 Ti) maneja modelos de 14B, una RTX 4090 24 GB maneja modelos de 33B, y una RTX 5090 32 GB es la única tarjeta de consumo de esta guía con 32 GB (70B en Q4 necesita unos 40 GB, así que sigue requiriendo cuantización agresiva o descarga parcial a la CPU).**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor tarjeta gráfica para ejecutar LLMs locales en 2026?',
         answer:
-          'Compra por VRAM, luego por velocidad. Una RTX 3060 12 GB (~$320-400) es la opción de presupuesto y ejecuta cualquier modelo de 7B. Una tarjeta de 16 GB es la opción de gama media para modelos de 14B — una RTX 5060 Ti 16 GB (~$620 nueva) o una RTX 4060 Ti 16 GB de segunda mano (~$380-490). Una RTX 4090 24 GB ejecuta modelos de 33B, y una RTX 5090 32 GB (~$4.900) es la única tarjeta de consumo individual que maneja trabajo con 70B sin una configuración de doble GPU. Ten en cuenta que los precios de 2026 están muy por encima del precio de lista.',
+          'Compra por VRAM, luego por velocidad. Una RTX 3060 12 GB (~$320-400) es la opción de presupuesto y ejecuta cualquier modelo de 7B. Una tarjeta de 16 GB es la opción de gama media para modelos de 14B — una RTX 5060 Ti 16 GB (~$620 nueva) o una RTX 4060 Ti 16 GB de segunda mano (~$380-490). Una RTX 4090 24 GB ejecuta modelos de 33B, y una RTX 5090 32 GB (~$4.900) es la única tarjeta de consumo de esta guía con 32 GB (70B en Q4 necesita unos 40 GB, así que sigue requiriendo cuantización agresiva o descarga parcial a la CPU). Ten en cuenta que los precios de 2026 están muy por encima del precio de lista.',
         bullets: [
           'Presupuesto: RTX 3060 12 GB, ~$320-400 nueva o de segunda mano, ejecuta cualquier modelo de 7B a 15-20 tok/s',
           'Media: RTX 5060 Ti 16 GB, ~$620 nueva (precio de lista $429), ejecuta modelos de 14B con margen',
-          'Entusiasta: RTX 5090 32 GB, ~$4.900, la única tarjeta de consumo para 70B en una sola GPU',
+          'Entusiasta: RTX 5090 32 GB, ~$4.900, la única tarjeta de 32 GB aquí; 70B exige cuantización agresiva o descarga',
           'Los precios de GPU en 2026 son 1,5-2,5x sobre el precio de lista — compara nueva y de segunda mano antes de comprar',
         ],
         updatedDate: '2026-10',
@@ -3259,11 +3259,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**La VRAM es la restricción determinante.** Un modelo que no cabe en VRAM falla al cargar o se desborda hacia la RAM del sistema y se vuelve demasiado lento para uso interactivo. Elige el rango cuya VRAM encaje con tu modelo objetivo, luego optimiza la velocidad dentro de ese rango.',
           '**Los precios se dispararon en 2026.** Una escasez de memoria empujó los precios de GPU entre 1,5 y 2,5 veces por encima del precio de lista — una RTX 5090 se anuncia a ~$4.900, no a su precio de lanzamiento de $1.999, y los precios volvieron a subir entre agosto y octubre. Trata cada precio aquí como una instantánea de precios de venta en EE. UU., y compara nueva frente a segunda mano antes de comprar.',
-          '**Elección de presupuesto: NVIDIA RTX 3060 12 GB** (~$320-400, nueva y de segunda mano cuestan ahora casi lo mismo) — ejecuta cualquier modelo de 7B a 15-20 tok/s y la mayoría de los modelos de 13B en Q4. El mejor punto de entrada en términos de valor para LLMs locales en 2026.',
+          '**Elección de presupuesto: NVIDIA RTX 3060 12 GB** (~$320-400, nueva y de segunda mano cuestan ahora casi lo mismo) — ejecuta cualquier modelo de 7B a 15-20 tok/s y la mayoría de los modelos de 13B en Q4. En nuestra opinión, un punto de entrada con muy buena relación calidad-precio.',
           '**Elección de gama media: NVIDIA RTX 5060 Ti 16 GB** (~$618 nueva, ~$649 de segunda mano en precio de venta) — 16 GB de VRAM resuelve los modelos de 14B con margen de contexto, y su ancho de banda de memoria de 448 GB/s es mucho mayor que el de la RTX 4060 Ti 16 GB anterior (~$380-490 de segunda mano), que ahora es sobre todo una compra del mercado de segunda mano.',
           '**Elección de gama alta: NVIDIA RTX 4080 Super 16 GB** (~$1.200) — la tarjeta de 16 GB más rápida de esta guía. La RTX 4070 Ti Super (~$900) y la RTX 5070 Ti (~$1.008) cuestan menos y son mejor valor si aceptas una velocidad algo menor.',
-          '**Elección entusiasta: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — la RTX 4090 (~$2.083+ nueva, ~$2.800 de segunda mano) ejecuta modelos de 33B; la RTX 5090 (~$4.900) es la única tarjeta de consumo individual que cabe un modelo de 70B en Q4 sin una configuración de doble GPU.',
-          '**AMD es viable pero con más fricción.** La RX 6700 XT (12 GB) y la RX 7800 XT (16 GB) ofrecen VRAM a precios competitivos, pero la configuración de ROCm añade horas de trabajo frente a NVIDIA CUDA.',
+          '**Elección entusiasta: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — la RTX 4090 (~$2.083+ nueva, ~$2.800 de segunda mano) ejecuta modelos de 33B; la RTX 5090 (~$4.900) es la única tarjeta de consumo de esta guía con 32 GB (70B en Q4 necesita unos 40 GB, así que sigue requiriendo cuantización agresiva o descarga parcial a la CPU).',
+          '**AMD es viable pero con más fricción.** La RX 6700 XT (12 GB) y la RX 7800 XT (16 GB) ofrecen VRAM a precios competitivos, pero el tiempo de configuración de ROCm varía según la distribución y la tarjeta.',
           '**El consumo energético escala con el rango.** Una RTX 3060 consume 170 W; una RTX 5090 consume 575 W y necesita una fuente de alimentación de 850-1000 W. Incluye la fuente de alimentación en el presupuesto junto con la tarjeta.',
         ],
       },
@@ -3274,7 +3274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Rango de presupuesto ($320-400):** RTX 3060 12 GB o RX 6700 XT 12 GB — ejecuta modelos de 7B y la mayoría de los de 13B.',
           '**Rango medio ($380-720):** RTX 5060 Ti 16 GB, RTX 4060 Ti 16 GB o RX 7800 XT 16 GB — ejecuta modelos de 14B cómodamente.',
           '**Rango alto ($900-1.200):** RTX 4080 Super, RTX 5070 Ti o RTX 4070 Ti Super, todas de 16 GB — inferencia rápida de 14B, trabajo ligero de 22B.',
-          '**Rango entusiasta ($2.080+):** RTX 4090 24 GB o RTX 5090 32 GB — modelos de 33B, y 70B en Q4 en la 5090.',
+          '**Rango entusiasta ($2.080+):** RTX 4090 24 GB o RTX 5090 32 GB — modelos de 33B, y 70B solo con cuantización agresiva o descarga parcial a la CPU en la 5090.',
           '**Regla general de VRAM en Q4_K_M:** aproximadamente 0,6 GB por cada mil millones de parámetros, más 2-4 GB para contexto y herramientas.',
           '**Rango de consumo energético:** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 5060 Ti 180 W, RTX 4070 Ti Super 285 W, RTX 5070 Ti 300 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
           '**Realidad de precios en 2026:** una escasez de memoria empujó los precios entre 1,5 y 2,5 veces por encima del precio de lista; las tarjetas de segunda mano ya no cuestan siempre menos que las nuevas, así que compara ambas.',
@@ -3313,7 +3313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan las diez GPUs para LLMs locales en 2026',
         content:
-          'Las cifras de VRAM y consumo energético son especificaciones del fabricante. Las velocidades de inferencia para la RTX 3060, RTX 4080 Super, RTX 4090 y RTX 5090 son valores medidos de 7B Q4 de las pruebas de hardware de PromptQuorum; las cifras para la RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super y RTX 5070 Ti son estimaciones a nivel de familia. Los precios son los precios de venta más bajos en EE. UU. observados en octubre de 2026 — la escasez de memoria los empujó entre 1,5 y 2,5 veces por encima del precio de lista, así que verifica antes de comprar.',
+          'Las cifras de VRAM y consumo energético son especificaciones del fabricante. Las velocidades de inferencia para la RTX 4090 y RTX 5090 son valores de 7B Q4 tomados de nuestra página enlazada «Mejores GPUs para LLMs locales» y no se volvieron a medir para esta guía; las cifras para la RTX 3060, RTX 4080 Super, RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super y RTX 5070 Ti son estimaciones a nivel de familia. Los precios son los precios de venta más bajos en EE. UU. observados en octubre de 2026 — la escasez de memoria los empujó entre 1,5 y 2,5 veces por encima del precio de lista, así que verifica antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3329,7 +3329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            'Velocidad (7B Q4)': '15-20 tok/s',
+            'Velocidad (7B Q4)': '15-20 tok/s (est.)',
             'Consumo': '170 W',
             'Precio (EE. UU., 2026)': '$320-400 nueva / $320-350 segunda mano',
             'Ideal para': 'Entrada de presupuesto — cualquier modelo de 7B',
@@ -3385,7 +3385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            'Velocidad (7B Q4)': '~120 tok/s',
+            'Velocidad (7B Q4)': '~120 tok/s (est.)',
             'Consumo': '320 W',
             'Precio (EE. UU., 2026)': '$1.200 nueva / $1.149 segunda mano',
             'Ideal para': 'Elección del editor — la 16 GB más rápida',
@@ -3404,7 +3404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Velocidad (7B Q4)': '~160 tok/s',
             'Consumo': '575 W',
             'Precio (EE. UU., 2026)': '$4.921 nueva / $5.880 segunda mano',
-            'Ideal para': 'GPU única para 70B en Q4',
+            'Ideal para': '70B solo con cuantización agresiva o descarga',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.webp',
@@ -3424,7 +3424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Quiero una tarjeta que ejecute 14B rápido y dure varios años', 'Compra esto': 'RTX 5070 Ti o RTX 4070 Ti Super 16 GB' },
           { 'Tu situación': 'Quiero la tarjeta de 16 GB más rápida y el precio es secundario', 'Compra esto': 'RTX 4080 Super 16 GB' },
           { 'Tu situación': 'Necesito modelos de 33B o planeé una futura configuración de doble GPU con 70B', 'Compra esto': 'RTX 4090 24 GB' },
-          { 'Tu situación': 'Necesito una sola tarjeta que ejecute modelos de 70B en Q4', 'Compra esto': 'RTX 5090 32 GB' },
+          { 'Tu situación': 'Necesito una sola tarjeta para modelos de 70B (cuantización agresiva o descarga parcial)', 'Compra esto': 'RTX 5090 32 GB' },
           { 'Tu situación': 'No estoy seguro y quiero la primera GPU más segura', 'Compra esto': 'RTX 3060 12 GB — actualiza más adelante si la superas' },
         ],
       },
@@ -3446,7 +3446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'La RX 6700 XT es la tarjeta más barata aquí, pero presupuesta 3-5 horas para la configuración de ROCm en Linux. Si el ahorro frente a una RTX 3060 es pequeño, compra la tarjeta NVIDIA.',
+            text: 'La RX 6700 XT es la tarjeta más barata aquí, pero el tiempo de configuración de ROCm en Linux varía según la distribución y la tarjeta; consulta primero la lista de GPUs compatibles de AMD. Si el ahorro frente a una RTX 3060 es pequeño, compra la tarjeta NVIDIA.',
           },
         ],
         affiliateLinks: [
@@ -3472,7 +3472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El rango medio existe por una razón: 16 GB de VRAM resuelve los modelos de 14B que las tarjetas de 12 GB no pueden alojar con contexto utilizable.** Si los modelos de clase 14B son tu objetivo, este es el rango más barato que los ejecuta correctamente. La RTX 5060 Ti 16 GB es la elección de la generación actual, y una RTX 4060 Ti 16 GB de segunda mano es la forma más barata de conseguir 16 GB.',
         items: [
-          '**RTX 5060 Ti 16 GB (~$618 nueva / ~$649 de segunda mano en precio de venta, $429 de precio de lista):** 16 GB GDDR7, 180 W, 448 GB/s de ancho de banda de memoria. No se midió individualmente para esta guía; estimaciones independientes la sitúan en torno a 65-75 tok/s en 7B Q4 — aproximadamente 3 veces la RTX 4060 Ti 16 GB anterior. Ejecuta cómodamente modelos de clase Qwen3 14B. Los precios subieron cerca de un 44 % sobre el precio de lista en 2026.',
+          '**RTX 5060 Ti 16 GB (~$618 nueva / ~$649 de segunda mano en precio de venta, $429 de precio de lista):** 16 GB GDDR7, 180 W, 448 GB/s de ancho de banda de memoria. No se midió individualmente para esta guía; nuestra estimación a partir del ancho de banda de memoria (no medida) la sitúa en torno a 65-75 tok/s en 7B Q4. Ejecuta cómodamente modelos de clase Qwen3 14B. Los precios subieron cerca de un 44 % sobre el precio de lista en 2026.',
           '**RTX 4060 Ti 16 GB (~$550+ nueva, escasa / $380-490 de segunda mano):** 16 GB de VRAM, 165 W, aproximadamente 20-25 tok/s en modelos de 7B. Usa el mismo die de GPU que la RTX 4060 Ti de 8 GB, así que la velocidad por token es similar — la versión de 16 GB compra capacidad, no velocidad bruta. Ahora es sobre todo una compra del mercado de segunda mano.',
           '**RX 7800 XT (~$500-720 nueva, los rastreadores difieren):** 16 GB de VRAM, 263 W. No se midió individualmente para esta guía; espera velocidad en el rango de la RTX 4060 Ti, con la configuración de AMD ROCm como contrapartida.',
           '**Por qué comprar en este rango:** quieres modelos de 14B, quieres bajo consumo energético (RTX 4060 Ti) o quieres 16 GB al precio más bajo posible.',
@@ -3554,10 +3554,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'Rango entusiasta ($2.080+): RTX 4090 y RTX 5090',
         content:
-          '**El rango entusiasta es el único que ejecuta modelos por encima de 22B — y la RTX 5090 32 GB es la única tarjeta de consumo individual que aloja un modelo de 70B en Q4.** Compra aquí por capacidad de VRAM, no por velocidad; la velocidad es un efecto secundario. La subida de 2026 golpeó este rango con más fuerza, así que los precios cambian semana a semana.',
+          '**El rango entusiasta es el único que ejecuta modelos por encima de 22B — y la RTX 5090 32 GB es la única tarjeta de consumo de esta guía con 32 GB; un modelo de 70B en Q4 necesita unos 40 GB, así que sigue requiriendo cuantización agresiva o descarga parcial a la CPU.** Compra aquí por capacidad de VRAM, no por velocidad; la velocidad es un efecto secundario. La subida de 2026 golpeó este rango con más fuerza, así que los precios cambian semana a semana.',
         items: [
-          '**RTX 4090 24 GB (~$2.083+ nueva / ~$2.800 de segunda mano en precio de venta):** 24 GB de VRAM, 450 W, aproximadamente 150 tok/s en modelos de 7B y 36 tok/s en un modelo de 70B Q4. Ejecuta modelos de 33B cómodamente. El stock nuevo de la RTX 4090 es escaso y el precio mínimo de las nuevas puede estar desactualizado — los listados llegan hasta ~$3.800.',
-          '**RTX 5090 32 GB (~$4.921 nueva / ~$5.880 de segunda mano en precio de venta, $1.999 de precio de lista):** 32 GB de VRAM GDDR7, 575 W, aproximadamente 160 tok/s en 7B y 45 tok/s en 70B Q4. Los 32 GB de capacidad son el argumento central — es la única tarjeta de consumo que ejecuta un modelo de 70B en Q4 sin una segunda GPU. Los precios de venta subieron cerca de un 64 % entre agosto y octubre, y los listados de segunda mano quedan por encima de los de nuevas.',
+          '**RTX 4090 24 GB (~$2.083+ nueva / ~$2.800 de segunda mano en precio de venta):** 24 GB de VRAM, 450 W, aproximadamente 150 tok/s en modelos de 7B. Ejecuta modelos de 33B cómodamente. El stock nuevo de la RTX 4090 es escaso y el precio mínimo de las nuevas puede estar desactualizado — los listados llegan hasta ~$3.800.',
+          '**RTX 5090 32 GB (~$4.921 nueva / ~$5.880 de segunda mano en precio de venta, $1.999 de precio de lista):** 32 GB de VRAM GDDR7, 575 W, aproximadamente 160 tok/s en 7B. Los 32 GB de capacidad son el argumento central — es la única tarjeta de consumo de esta guía con 32 GB, aunque un modelo de 70B en Q4 necesita unos 40 GB y por eso sigue requiriendo cuantización agresiva o descarga parcial a la CPU. Los precios de venta subieron cerca de un 64 % entre agosto y octubre, y los listados de segunda mano quedan por encima de los de nuevas.',
           '**Por qué comprar en este rango:** necesitas modelos de 33B o 70B, ejecutas inferencia en lotes, o quieres una tarjeta que no necesite reemplazarse en años.',
           '**Por qué saltarse este rango:** para modelos de 7B-14B es excesivo — el rango alto ofrece respuestas instantáneas en esos tamaños por menos de la mitad del precio y el consumo energético.',
         ],
@@ -3730,7 +3730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Rastreador de precios Nvidia RTX 50](https://capitalandcompute.net/gpu-prices/nvidia/) — precio de lista frente a precio de mercado para la RTX 5090, RTX 5070 Ti y RTX 5060 Ti 16 GB.',
           '[Club386 — Nvidia retrasa indefinidamente las GeForce RTX 50 Super](https://www.club386.com/?p=129641) — informe (sin confirmar por NVIDIA) de que el relanzamiento RTX 50 Super se aplaza por el suministro de memoria.',
           '[Especificaciones AMD Radeon](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Cifras oficiales de VRAM y consumo para la RX 7800 XT y RX 6700 XT.',
-          '[Mejores GPUs para LLMs locales 2026](/es/local-llms/best-gpus-for-local-llms) — Pruebas de hardware de PromptQuorum: velocidades de inferencia medidas de 7B Q4 para la RTX 3060, 4080, 4090 y 5090.',
+          '[Mejores GPUs para LLMs locales 2026](/es/local-llms/best-gpus-for-local-llms) — velocidades de inferencia de 7B Q4 para la RTX 4090 y 5090, según se indica en esa página.',
         ],
       },
       faq: {
@@ -3739,7 +3739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Cuál es la GPU más barata para inferencia de LLM en 2026?',
-            a: 'La NVIDIA RTX 3060 12 GB, a unos $320-400, es la GPU más barata que ejecuta bien la inferencia de LLMs locales. Sus 12 GB de VRAM alojan cualquier modelo de 7B y la mayoría de los de 13B en cuantización Q4, a 15-20 tokens por segundo. Una RX 6700 XT puede ser más barata en el mercado de segunda mano, pero es más lenta y requiere configuración de AMD ROCm. Los precios de la RTX 3060 nueva y de segunda mano están ahora cerca, así que compara ambas.',
+            a: 'La NVIDIA RTX 3060 12 GB, a unos $320-400, es la tarjeta nueva de menor precio de esta guía que ejecuta bien la inferencia de LLMs locales. Sus 12 GB de VRAM alojan cualquier modelo de 7B y la mayoría de los de 13B en cuantización Q4, a 15-20 tokens por segundo. Una RX 6700 XT puede ser más barata en el mercado de segunda mano, pero es más lenta y requiere configuración de AMD ROCm. Los precios de la RTX 3060 nueva y de segunda mano están ahora cerca, así que compara ambas.',
           },
           {
             q: '¿Por qué los precios de GPU son tan altos en 2026?',
@@ -3751,7 +3751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es la mejor tarjeta gráfica para LLMs locales?',
-            a: 'La mejor tarjeta gráfica para LLMs locales es la que tiene VRAM suficiente para tu modelo objetivo dentro de tu presupuesto. Para modelos de 7B basta una RTX 3060 12 GB (~$320-400). Para modelos de 14B, una RTX 5060 Ti 16 GB (~$618) o una RTX 4060 Ti 16 GB de segunda mano es la elección de gama media. Para modelos de 33B necesitas una RTX 4090 24 GB, y para 70B en una sola tarjeta una RTX 5090 32 GB. Las tarjetas NVIDIA son la opción con menos fricción porque CUDA funciona de forma inmediata.',
+            a: 'La mejor tarjeta gráfica para LLMs locales es la que tiene VRAM suficiente para tu modelo objetivo dentro de tu presupuesto. Para modelos de 7B basta una RTX 3060 12 GB (~$320-400). Para modelos de 14B, una RTX 5060 Ti 16 GB (~$618) o una RTX 4060 Ti 16 GB de segunda mano es la elección de gama media. Para modelos de 33B necesitas una RTX 4090 24 GB, y para 70B una RTX 5090 32 GB, solo con cuantización agresiva o descarga parcial a la CPU (el 70B en Q4 necesita unos 40 GB). Las tarjetas NVIDIA son la opción con menos fricción porque CUDA funciona de forma inmediata.',
           },
           {
             q: '¿La RTX 4060 Ti 16 GB es más rápida que la versión de 8 GB?',
@@ -3759,7 +3759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Debo comprar NVIDIA o AMD para LLMs locales?',
-            a: 'Compra NVIDIA a menos que ya tengas hardware AMD o encuentres un descuento considerable. NVIDIA CUDA funciona de forma inmediata con Ollama, LM Studio y llama.cpp. Las tarjetas AMD como la RX 6700 XT y RX 7800 XT ofrecen VRAM competitiva por dólar, pero la configuración de ROCm suele costar varias horas en Linux.',
+            a: 'Compra NVIDIA a menos que ya tengas hardware AMD o encuentres un descuento considerable. NVIDIA CUDA funciona de forma inmediata con Ollama, LM Studio y llama.cpp. Las tarjetas AMD como la RX 6700 XT y RX 7800 XT ofrecen VRAM competitiva por dólar, pero el tiempo de configuración de ROCm varía según la distribución y la GPU; consulta la lista de GPUs compatibles de AMD.',
           },
           {
             q: '¿Puede una sola GPU ejecutar un modelo de 70B?',
@@ -3802,7 +3802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3812,7 +3812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'Melhor placa de vídeo para LLMs locais: guia de GPUs 2026',
@@ -3859,16 +3859,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'requisitos de gpu para llm local',
     ],
     leadAnswerBlock:
-      '**A melhor placa de vídeo para LLMs locais é aquela cuja VRAM se encaixa no seu modelo, não a placa mais rápida. Uma RTX 3060 12 GB executa qualquer modelo 7B, uma placa de 16 GB (RTX 5060 Ti, RTX 4060 Ti ou RTX 5070 Ti) lida com modelos 14B, uma RTX 4090 24 GB lida com modelos 33B, e uma RTX 5090 32 GB é a única placa de consumo individual para trabalho com 70B.**',
+      '**A melhor placa de vídeo para LLMs locais é aquela cuja VRAM se encaixa no seu modelo, não a placa mais rápida. Uma RTX 3060 12 GB executa qualquer modelo 7B, uma placa de 16 GB (RTX 5060 Ti, RTX 4060 Ti ou RTX 5070 Ti) lida com modelos 14B, uma RTX 4090 24 GB lida com modelos 33B, e uma RTX 5090 32 GB é a única placa de consumo deste guia com 32 GB (70B em Q4 precisa de cerca de 40 GB, então ainda exige quantização agressiva ou descarga parcial para a CPU).**',
     quickAnswerTop: {
       pt: {
         question: 'Qual é a melhor placa de vídeo para executar LLMs locais em 2026?',
         answer:
-          'Compre pela VRAM, depois pela velocidade. Uma RTX 3060 12 GB (~$320–400) é a escolha econômica e executa qualquer modelo 7B. Uma placa de 16 GB é a escolha intermediária para modelos 14B — uma RTX 5060 Ti 16 GB (~$620 nova) ou uma RTX 4060 Ti 16 GB usada (~$380–490). Uma RTX 4090 24 GB executa modelos 33B, e uma RTX 5090 32 GB (~$4.900) é a única placa de consumo individual que lida com trabalho 70B sem configuração de GPU dupla. Observe que os preços de 2026 estão bem acima do preço de lista.',
+          'Compre pela VRAM, depois pela velocidade. Uma RTX 3060 12 GB (~$320–400) é a escolha econômica e executa qualquer modelo 7B. Uma placa de 16 GB é a escolha intermediária para modelos 14B — uma RTX 5060 Ti 16 GB (~$620 nova) ou uma RTX 4060 Ti 16 GB usada (~$380–490). Uma RTX 4090 24 GB executa modelos 33B, e uma RTX 5090 32 GB (~$4.900) é a única placa de consumo deste guia com 32 GB (70B em Q4 precisa de cerca de 40 GB, então ainda exige quantização agressiva ou descarga parcial para a CPU). Observe que os preços de 2026 estão bem acima do preço de lista.',
         bullets: [
           'Econômico: RTX 3060 12 GB, ~$320–400 nova ou usada, executa qualquer modelo 7B a 15–20 tok/s',
           'Intermediário: RTX 5060 Ti 16 GB, ~$620 nova (preço de lista $429), executa modelos 14B com folga',
-          'Entusiasta: RTX 5090 32 GB, ~$4.900, única placa de consumo para 70B em uma única GPU',
+          'Entusiasta: RTX 5090 32 GB, ~$4.900, única placa de 32 GB aqui; 70B exige quantização agressiva ou descarga',
           'Os preços de GPU em 2026 são 1,5–2,5x acima do preço de lista — compare nova e usada antes de comprar',
         ],
         updatedDate: '2026-10',
@@ -3900,11 +3900,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**A VRAM é a restrição determinante.** Um modelo que não cabe na VRAM falha ao carregar ou transborda para a RAM do sistema e fica lento demais para uso interativo. Escolha a faixa cuja VRAM se encaixa no seu modelo alvo e depois otimize a velocidade dentro dessa faixa.',
           '**Os preços dispararam em 2026.** Uma escassez de memória empurrou os preços de GPU de 1,5 a 2,5 vezes acima do preço de lista — uma RTX 5090 é anunciada por ~$4.900, não pelo preço de lançamento de $1.999, e os preços subiram de novo entre agosto e outubro. Trate cada preço aqui como uma captura de preços pedidos nos EUA e compare nova e usada antes de comprar.',
-          '**Escolha econômica: NVIDIA RTX 3060 12 GB** (~$320–400, nova e usada agora custam quase o mesmo) — executa qualquer modelo 7B a 15–20 tok/s e a maioria dos modelos 13B em Q4. O melhor ponto de entrada em termos de custo-benefício para LLMs locais em 2026.',
+          '**Escolha econômica: NVIDIA RTX 3060 12 GB** (~$320–400, nova e usada agora custam quase o mesmo) — executa qualquer modelo 7B a 15–20 tok/s e a maioria dos modelos 13B em Q4. Na nossa visão, um ponto de entrada com ótimo custo-benefício.',
           '**Escolha intermediária: NVIDIA RTX 5060 Ti 16 GB** (~$618 nova, ~$649 usada pedida) — 16 GB de VRAM lida com modelos 14B com margem de contexto, e sua largura de banda de memória de 448 GB/s é muito maior que a da RTX 4060 Ti 16 GB mais antiga (~$380–490 usada), que hoje é sobretudo uma compra no mercado de usados.',
           '**Escolha de alta faixa: NVIDIA RTX 4080 Super 16 GB** (~$1.200) — a placa de 16 GB mais rápida aqui. A RTX 4070 Ti Super (~$900) e a RTX 5070 Ti (~$1.008) custam menos e são o melhor custo-benefício se você aceitar uma velocidade um pouco menor.',
-          '**Escolha entusiasta: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — a RTX 4090 (~$2.083+ nova, ~$2.800 usada) executa modelos 33B; a RTX 5090 (~$4.900) é a única placa de consumo individual que cabe um modelo 70B em Q4 sem configuração de GPU dupla.',
-          '**A AMD é viável, mas gera mais atrito.** A RX 6700 XT (12 GB) e a RX 7800 XT (16 GB) oferecem VRAM a preços competitivos, mas a configuração ROCm adiciona horas de trabalho em relação ao CUDA da NVIDIA.',
+          '**Escolha entusiasta: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — a RTX 4090 (~$2.083+ nova, ~$2.800 usada) executa modelos 33B; a RTX 5090 (~$4.900) é a única placa de consumo deste guia com 32 GB (70B em Q4 precisa de cerca de 40 GB, então ainda exige quantização agressiva ou descarga parcial para a CPU).',
+          '**A AMD é viável, mas gera mais atrito.** A RX 6700 XT (12 GB) e a RX 7800 XT (16 GB) oferecem VRAM a preços competitivos, mas o tempo de configuração do ROCm varia conforme a distribuição e a placa.',
           '**O consumo de energia escala com a faixa.** Uma RTX 3060 consome 170 W; uma RTX 5090 consome 575 W e precisa de uma fonte de 850–1000 W. Inclua a fonte de alimentação no orçamento junto com a placa.',
         ],
       },
@@ -3915,7 +3915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Faixa econômica ($320–400):** RTX 3060 12 GB ou RX 6700 XT 12 GB — executa modelos 7B e a maioria dos 13B.',
           '**Faixa intermediária ($380–720):** RTX 5060 Ti 16 GB, RTX 4060 Ti 16 GB ou RX 7800 XT 16 GB — executa modelos 14B confortavelmente.',
           '**Faixa alta ($900–1.200):** RTX 4080 Super, RTX 5070 Ti ou RTX 4070 Ti Super, todas de 16 GB — inferência rápida de 14B, trabalho leve de 22B.',
-          '**Faixa entusiasta ($2.080+):** RTX 4090 24 GB ou RTX 5090 32 GB — modelos 33B, e 70B em Q4 na 5090.',
+          '**Faixa entusiasta ($2.080+):** RTX 4090 24 GB ou RTX 5090 32 GB — modelos 33B, e 70B apenas com quantização agressiva ou offload parcial para a CPU na 5090.',
           '**Regra geral de VRAM em Q4_K_M:** aproximadamente 0,6 GB por bilhão de parâmetros, mais 2–4 GB para contexto e ferramentas.',
           '**Faixa de consumo de energia:** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 5060 Ti 180 W, RTX 4070 Ti Super 285 W, RTX 5070 Ti 300 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
           '**Realidade de preços em 2026:** uma escassez de memória empurrou os preços de 1,5 a 2,5 vezes acima do preço de lista; placas usadas já não custam menos que as novas de forma confiável, então compare as duas.',
@@ -3954,7 +3954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como as dez GPUs se comparam para LLMs locais em 2026',
         content:
-          'As cifras de VRAM e consumo de energia são especificações do fabricante. As velocidades de inferência para a RTX 3060, RTX 4080 Super, RTX 4090 e RTX 5090 são valores medidos de 7B Q4 dos testes de hardware do PromptQuorum; os valores para a RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super e RTX 5070 Ti são estimativas a nível de família. Os preços são os menores preços pedidos nos EUA vistos em outubro de 2026 — a escassez de memória os empurrou de 1,5 a 2,5 vezes acima do preço de lista, então verifique antes de comprar.',
+          'As cifras de VRAM e consumo de energia são especificações do fabricante. As velocidades de inferência para a RTX 4090 e RTX 5090 são valores de 7B Q4 tirados da nossa página vinculada «Melhores GPUs para LLMs locais» e não foram medidos novamente para este guia; os valores para a RTX 3060, RTX 4080 Super, RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super e RTX 5070 Ti são estimativas a nível de família. Os preços são os menores preços pedidos nos EUA vistos em outubro de 2026 — a escassez de memória os empurrou de 1,5 a 2,5 vezes acima do preço de lista, então verifique antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3970,7 +3970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            'Velocidade (7B Q4)': '15–20 tok/s',
+            'Velocidade (7B Q4)': '15–20 tok/s (est.)',
             'Consumo': '170 W',
             'Preço (EUA, 2026)': '$320–400 nova / $320–350 usada',
             'Melhor para': 'Entrada econômica — qualquer modelo 7B',
@@ -4026,7 +4026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            'Velocidade (7B Q4)': '~120 tok/s',
+            'Velocidade (7B Q4)': '~120 tok/s (est.)',
             'Consumo': '320 W',
             'Preço (EUA, 2026)': '$1.200 nova / $1.149 usada',
             'Melhor para': 'Escolha do editor — a 16 GB mais rápida',
@@ -4045,7 +4045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Velocidade (7B Q4)': '~160 tok/s',
             'Consumo': '575 W',
             'Preço (EUA, 2026)': '$4.921 nova / $5.880 usada',
-            'Melhor para': 'GPU única para 70B em Q4',
+            'Melhor para': '70B apenas com quantização agressiva ou offload',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.webp',
@@ -4065,7 +4065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Quero uma placa que execute 14B rápido e dure vários anos', 'Compre esta': 'RTX 5070 Ti ou RTX 4070 Ti Super 16 GB' },
           { 'Sua situação': 'Quero a placa de 16 GB mais rápida e o preço é secundário', 'Compre esta': 'RTX 4080 Super 16 GB' },
           { 'Sua situação': 'Preciso de modelos 33B ou planejo uma futura configuração de GPU dupla com 70B', 'Compre esta': 'RTX 4090 24 GB' },
-          { 'Sua situação': 'Preciso de uma única placa que execute modelos 70B em Q4', 'Compre esta': 'RTX 5090 32 GB' },
+          { 'Sua situação': 'Preciso de uma única placa para modelos 70B (quantização agressiva ou descarga parcial)', 'Compre esta': 'RTX 5090 32 GB' },
           { 'Sua situação': 'Estou inseguro e quero a primeira GPU mais segura', 'Compre esta': 'RTX 3060 12 GB — atualize depois se a superar' },
         ],
       },
@@ -4087,7 +4087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'A RX 6700 XT é a placa mais barata aqui, mas reserve 3–5 horas para a configuração ROCm no Linux. Se a economia em relação a uma RTX 3060 for pequena, compre a placa NVIDIA.',
+            text: 'A RX 6700 XT é a placa mais barata aqui, mas o tempo de configuração do ROCm no Linux varia conforme a distribuição e a placa; consulte primeiro a lista de GPUs compatíveis da AMD. Se a economia em relação a uma RTX 3060 for pequena, compre a placa NVIDIA.',
           },
         ],
         affiliateLinks: [
@@ -4113,7 +4113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A faixa intermediária existe por uma razão: 16 GB de VRAM lida com modelos 14B que placas de 12 GB não conseguem acomodar com contexto utilizável.** Se modelos de classe 14B são seu objetivo, esta é a faixa mais barata que os executa adequadamente. A RTX 5060 Ti 16 GB é a escolha da geração atual, e uma RTX 4060 Ti 16 GB usada é a forma mais barata de ter 16 GB.',
         items: [
-          '**RTX 5060 Ti 16 GB (~$618 nova / ~$649 usada pedida, preço de lista $429):** 16 GB GDDR7, 180 W, largura de banda de memória de 448 GB/s. Não foi medida individualmente para este guia; estimativas independentes apontam cerca de 65–75 tok/s em 7B Q4 — aproximadamente 3x a RTX 4060 Ti 16 GB mais antiga. Executa confortavelmente modelos da classe Qwen3 14B. Os preços ficaram cerca de 44% acima do preço de lista em 2026.',
+          '**RTX 5060 Ti 16 GB (~$618 nova / ~$649 usada pedida, preço de lista $429):** 16 GB GDDR7, 180 W, largura de banda de memória de 448 GB/s. Não foi medida individualmente para este guia; nossa estimativa a partir da largura de banda de memória (não medida) aponta cerca de 65–75 tok/s em 7B Q4. Executa confortavelmente modelos da classe Qwen3 14B. Os preços ficaram cerca de 44% acima do preço de lista em 2026.',
           '**RTX 4060 Ti 16 GB (~$550+ nova, escassa / $380–490 usada):** 16 GB de VRAM, 165 W, aproximadamente 20–25 tok/s em modelos 7B. Usa o mesmo die de GPU que a RTX 4060 Ti de 8 GB, então a velocidade por token é similar — a versão de 16 GB compra capacidade, não velocidade bruta. Hoje é sobretudo uma compra no mercado de usados.',
           '**RX 7800 XT (~$500–720 nova, rastreadores diferem):** 16 GB de VRAM, 263 W. Não foi medida individualmente para este guia; espere velocidade na faixa da RTX 4060 Ti, com a configuração AMD ROCm como contrapartida.',
           '**Por que comprar nesta faixa:** você quer modelos 14B, quer baixo consumo de energia (RTX 4060 Ti) ou quer 16 GB ao menor preço possível.',
@@ -4195,10 +4195,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'Faixa entusiasta ($2.080+): RTX 4090 e RTX 5090',
         content:
-          '**A faixa entusiasta é a única que executa modelos acima de 22B — e a RTX 5090 32 GB é a única placa de consumo individual que acomoda um modelo 70B em Q4.** Compre aqui pela capacidade de VRAM, não pela velocidade; a velocidade é um efeito colateral. O aumento de 2026 atingiu esta faixa com mais força, então os preços se movem semana a semana.',
+          '**A faixa entusiasta é a única que executa modelos acima de 22B — e a RTX 5090 32 GB é a única placa de consumo deste guia com 32 GB; um modelo 70B em Q4 precisa de cerca de 40 GB, então ainda exige quantização agressiva ou descarga parcial para a CPU.** Compre aqui pela capacidade de VRAM, não pela velocidade; a velocidade é um efeito colateral. O aumento de 2026 atingiu esta faixa com mais força, então os preços se movem semana a semana.',
         items: [
-          '**RTX 4090 24 GB (~$2.083+ nova / ~$2.800 usada pedida):** 24 GB de VRAM, 450 W, aproximadamente 150 tok/s em modelos 7B e 36 tok/s em um modelo 70B Q4. Executa modelos 33B confortavelmente. O estoque novo da RTX 4090 é escasso e o piso de preço novo pode estar desatualizado — os anúncios chegam a ~$3.800.',
-          '**RTX 5090 32 GB (~$4.921 nova / ~$5.880 usada pedida, preço de lista $1.999):** 32 GB de VRAM GDDR7, 575 W, aproximadamente 160 tok/s em 7B e 45 tok/s em 70B Q4. A capacidade de 32 GB é o argumento central — é a única placa de consumo que executa um modelo 70B em Q4 sem uma segunda GPU. Os preços pedidos subiram cerca de 64% entre agosto e outubro, e os anúncios de usadas ficam acima dos de novas.',
+          '**RTX 4090 24 GB (~$2.083+ nova / ~$2.800 usada pedida):** 24 GB de VRAM, 450 W, aproximadamente 150 tok/s em modelos 7B. Executa modelos 33B confortavelmente. O estoque novo da RTX 4090 é escasso e o piso de preço novo pode estar desatualizado — os anúncios chegam a ~$3.800.',
+          '**RTX 5090 32 GB (~$4.921 nova / ~$5.880 usada pedida, preço de lista $1.999):** 32 GB de VRAM GDDR7, 575 W, aproximadamente 160 tok/s em 7B. A capacidade de 32 GB é o argumento central — é a única placa de consumo deste guia com 32 GB, embora um modelo 70B em Q4 precise de cerca de 40 GB e por isso ainda exija quantização agressiva ou descarga parcial para a CPU. Os preços pedidos subiram cerca de 64% entre agosto e outubro, e os anúncios de usadas ficam acima dos de novas.',
           '**Por que comprar nesta faixa:** você precisa de modelos 33B ou 70B, executa inferência em lote, ou quer uma placa que não precise ser substituída por anos.',
           '**Por que pular esta faixa:** para modelos 7B–14B é exagero — a faixa alta entrega respostas instantâneas nesses tamanhos por menos da metade do preço e do consumo de energia.',
         ],
@@ -4371,7 +4371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 Price Tracker](https://capitalandcompute.net/gpu-prices/nvidia/) — preço de lista versus preço de rua da RTX 5090, RTX 5070 Ti e RTX 5060 Ti 16 GB.',
           '[Club386 — Nvidia indefinitely delays GeForce RTX 50 Super](https://www.club386.com/?p=129641) — reportagem (não confirmada pela NVIDIA) de que a renovação RTX 50 Super foi adiada por causa do fornecimento de memória.',
           '[Especificações AMD Radeon](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Cifras oficiais de VRAM e consumo para a RX 7800 XT e RX 6700 XT.',
-          '[Melhores GPUs para LLMs locais 2026](/local-llms/best-gpus-for-local-llms) — Testes de hardware do PromptQuorum: velocidades de inferência medidas de 7B Q4 para a RTX 3060, 4080, 4090 e 5090.',
+          '[Melhores GPUs para LLMs locais 2026](/local-llms/best-gpus-for-local-llms) — velocidades de inferência de 7B Q4 para a RTX 4090 e 5090, conforme indicado nessa página.',
         ],
       },
       faq: {
@@ -4380,7 +4380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Qual é a GPU mais barata para inferência de LLM em 2026?',
-            a: 'A NVIDIA RTX 3060 12 GB, por cerca de $320–400, é a GPU mais barata que executa bem a inferência de LLMs locais. Seus 12 GB de VRAM acomodam qualquer modelo 7B e a maioria dos modelos 13B em quantização Q4, a 15–20 tokens por segundo. Uma RX 6700 XT pode sair mais barata no mercado de usados, mas é mais lenta e requer configuração AMD ROCm. Os preços da RTX 3060 nova e usada agora são próximos, então compare as duas.',
+            a: 'A NVIDIA RTX 3060 12 GB, por cerca de $320–400, é a placa nova de menor preço deste guia que executa bem a inferência de LLMs locais. Seus 12 GB de VRAM acomodam qualquer modelo 7B e a maioria dos modelos 13B em quantização Q4, a 15–20 tokens por segundo. Uma RX 6700 XT pode sair mais barata no mercado de usados, mas é mais lenta e requer configuração AMD ROCm. Os preços da RTX 3060 nova e usada agora são próximos, então compare as duas.',
           },
           {
             q: 'Por que os preços de GPU estão tão altos em 2026?',
@@ -4392,7 +4392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual placa de vídeo é a melhor para LLMs locais?',
-            a: 'A melhor placa de vídeo para LLMs locais é aquela com VRAM suficiente para o seu modelo alvo dentro do seu orçamento. Para modelos 7B, uma RTX 3060 12 GB (~$320–400) é suficiente. Para modelos 14B, uma RTX 5060 Ti 16 GB (~$618) ou uma RTX 4060 Ti 16 GB usada é a escolha intermediária. Para modelos 33B você precisa de uma RTX 4090 24 GB, e para 70B em uma única placa, de uma RTX 5090 32 GB. As placas NVIDIA são a escolha de menor atrito porque o CUDA funciona sem configuração extra.',
+            a: 'A melhor placa de vídeo para LLMs locais é aquela com VRAM suficiente para o seu modelo alvo dentro do seu orçamento. Para modelos 7B, uma RTX 3060 12 GB (~$320–400) é suficiente. Para modelos 14B, uma RTX 5060 Ti 16 GB (~$618) ou uma RTX 4060 Ti 16 GB usada é a escolha intermediária. Para modelos 33B você precisa de uma RTX 4090 24 GB, e para 70B de uma RTX 5090 32 GB, apenas com quantização agressiva ou offload parcial para a CPU (o 70B em Q4 precisa de cerca de 40 GB). As placas NVIDIA são a escolha de menor atrito porque o CUDA funciona sem configuração extra.',
           },
           {
             q: 'A RTX 4060 Ti 16 GB é mais rápida que a versão de 8 GB?',
@@ -4400,7 +4400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Devo comprar NVIDIA ou AMD para LLMs locais?',
-            a: 'Compre NVIDIA a menos que você já tenha hardware AMD ou encontre um desconto considerável. O CUDA da NVIDIA funciona imediatamente com Ollama, LM Studio e llama.cpp. As placas AMD como a RX 6700 XT e RX 7800 XT oferecem VRAM competitiva por dólar, mas a configuração ROCm normalmente custa várias horas no Linux.',
+            a: 'Compre NVIDIA a menos que você já tenha hardware AMD ou encontre um desconto considerável. O CUDA da NVIDIA funciona imediatamente com Ollama, LM Studio e llama.cpp. As placas AMD como a RX 6700 XT e RX 7800 XT oferecem VRAM competitiva por dólar, mas o tempo de configuração do ROCm varia conforme a distribuição e a GPU; consulte a lista de GPUs compatíveis da AMD.',
           },
           {
             q: 'Uma única GPU consegue executar um modelo 70B?',
@@ -4443,7 +4443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-22',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4453,7 +4453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'أفضل بطاقة رسومات لتشغيل النماذج اللغوية المحلية: دليل شراء GPU 2026',
@@ -4500,16 +4500,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'متطلبات GPU لتشغيل LLM محلياً',
     ],
     leadAnswerBlock:
-      '**أفضل بطاقة رسومات للنماذج اللغوية المحلية هي التي تناسب VRAM نموذجك، لا الأسرع. RTX 3060 بـ12 جيجابايت تُشغّل أي نموذج 7B، وبطاقة 16 جيجابايت (RTX 5060 Ti أو RTX 4060 Ti أو RTX 5070 Ti) تتعامل مع نماذج 14B، وRTX 4090 بـ24 جيجابايت تتعامل مع نماذج 33B، وRTX 5090 بـ32 جيجابايت هي البطاقة الاستهلاكية الفردية الوحيدة لعمل 70B.**',
+      '**أفضل بطاقة رسومات للنماذج اللغوية المحلية هي التي تناسب VRAM نموذجك، لا الأسرع. RTX 3060 بـ12 جيجابايت تُشغّل أي نموذج 7B، وبطاقة 16 جيجابايت (RTX 5060 Ti أو RTX 4060 Ti أو RTX 5070 Ti) تتعامل مع نماذج 14B، وRTX 4090 بـ24 جيجابايت تتعامل مع نماذج 33B، وRTX 5090 بـ32 جيجابايت هي البطاقة الاستهلاكية الوحيدة في هذا الدليل بذاكرة 32 جيجابايت (نموذج 70B بـQ4 يحتاج نحو 40 جيجابايت، لذا يظل يتطلب تكمية عدوانية أو نقلاً جزئياً إلى المعالج).**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل بطاقة رسومات لتشغيل النماذج اللغوية المحلية في 2026؟',
         answer:
-          'اشترِ بحسب VRAM أولاً ثم بحسب السرعة. RTX 3060 بـ12 جيجابايت (نحو 320–400 دولار) هي الخيار الاقتصادي وتُشغّل أي نموذج 7B. أما بطاقة 16 جيجابايت فهي الخيار المتوسط لنماذج 14B — RTX 5060 Ti 16 GB (نحو 620 دولاراً جديدة) أو RTX 4060 Ti 16 GB مستعملة (نحو 380–490 دولاراً). RTX 4090 بـ24 جيجابايت تُشغّل نماذج 33B، وRTX 5090 بـ32 جيجابايت (نحو 4900 دولار) هي البطاقة الاستهلاكية الفردية الوحيدة لعمل 70B بدون إعداد GPU مزدوج. لاحظ أن أسعار 2026 أعلى بكثير من سعر القائمة.',
+          'اشترِ بحسب VRAM أولاً ثم بحسب السرعة. RTX 3060 بـ12 جيجابايت (نحو 320–400 دولار) هي الخيار الاقتصادي وتُشغّل أي نموذج 7B. أما بطاقة 16 جيجابايت فهي الخيار المتوسط لنماذج 14B — RTX 5060 Ti 16 GB (نحو 620 دولاراً جديدة) أو RTX 4060 Ti 16 GB مستعملة (نحو 380–490 دولاراً). RTX 4090 بـ24 جيجابايت تُشغّل نماذج 33B، وRTX 5090 بـ32 جيجابايت (نحو 4900 دولار) هي البطاقة الاستهلاكية الوحيدة في هذا الدليل بذاكرة 32 جيجابايت (نموذج 70B بـQ4 يحتاج نحو 40 جيجابايت، لذا يظل يتطلب تكمية عدوانية أو نقلاً جزئياً إلى المعالج). لاحظ أن أسعار 2026 أعلى بكثير من سعر القائمة.',
         bullets: [
           'اقتصادي: RTX 3060 12GB، نحو 320–400 دولار جديدة أو مستعملة، تُشغّل أي نموذج 7B بـ15–20 رمز/ثانية',
           'متوسط: RTX 5060 Ti 16GB، نحو 620 دولاراً جديدة (سعر القائمة 429 دولاراً)، تُشغّل نماذج 14B بهامش مريح',
-          'متحمس: RTX 5090 32GB، نحو 4900 دولار، البطاقة الاستهلاكية الوحيدة لـ70B على GPU واحدة',
+          'متحمس: RTX 5090 32GB، نحو 4900 دولار، البطاقة الوحيدة بذاكرة 32 جيجابايت هنا؛ 70B يتطلب تكمية عدوانية أو نقلاً جزئياً',
           'أسعار GPU في 2026 أعلى بـ1.5–2.5× من سعر القائمة — قارن الجديدة بالمستعملة قبل الشراء',
         ],
         updatedDate: '2026-10',
@@ -4541,11 +4541,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**VRAM هو القيد الحاسم.** نموذج لا يناسب VRAM يفشل في التحميل أو يفيض إلى RAM النظام ويصبح بطيئاً جداً للاستخدام التفاعلي. اختر الفئة التي تناسب VRAM نموذجك المستهدف ثم حسّن السرعة ضمن تلك الفئة.',
           '**الأسعار ارتفعت بشكل حاد في 2026.** دفع نقص الذاكرة أسعار GPU إلى ما بين 1.5 و2.5 ضعف سعر القائمة — RTX 5090 تُعرض بنحو 4900 دولار لا سعر إطلاقها البالغ 1999 دولاراً، وارتفعت الأسعار مجدداً بين أغسطس وأكتوبر. تعامل مع كل سعر هنا كلقطة لأسعار العرض الأمريكية، وقارن الجديدة بالمستعملة قبل الشراء.',
-          '**الاختيار الاقتصادي: NVIDIA RTX 3060 12 GB** (نحو 320–400 دولار، والجديدة والمستعملة تكلفان الآن تقريباً المبلغ نفسه) — تُشغّل أي نموذج 7B بـ15–20 رمز/ثانية ومعظم نماذج 13B بـQ4. أفضل نقطة دخول من حيث القيمة للنماذج اللغوية المحلية في 2026.',
+          '**الاختيار الاقتصادي: NVIDIA RTX 3060 12 GB** (نحو 320–400 دولار، والجديدة والمستعملة تكلفان الآن تقريباً المبلغ نفسه) — تُشغّل أي نموذج 7B بـ15–20 رمز/ثانية ومعظم نماذج 13B بـQ4. في رأينا، نقطة دخول قوية من حيث القيمة.',
           '**الاختيار المتوسط: NVIDIA RTX 5060 Ti 16 GB** (نحو 618 دولاراً جديدة، ونحو 649 دولاراً سعر عرض مستعملة) — 16 جيجابايت VRAM تتعامل مع نماذج 14B بهامش للسياق، وعرض نطاقها 448 GB/s أسرع بكثير من RTX 4060 Ti 16 GB الأقدم (نحو 380–490 دولاراً مستعملة)، التي أصبحت الآن شراءً من سوق المستعمل في الغالب.',
           '**الاختيار عالي الفئة: NVIDIA RTX 4080 Super 16 GB** (نحو 1200 دولار) — أسرع بطاقة 16 جيجابايت هنا. أما RTX 4070 Ti Super (نحو 900 دولار) وRTX 5070 Ti (نحو 1008 دولارات) فأرخص، وهما الأفضل قيمة إن قبلت سرعة أقل قليلاً.',
-          '**اختيار المتحمسين: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090 (نحو 2083 دولاراً+ جديدة، ونحو 2800 دولار مستعملة) تُشغّل نماذج 33B؛ RTX 5090 (نحو 4900 دولار) هي البطاقة الاستهلاكية الفردية الوحيدة لنموذج 70B بـQ4 بدون إعداد GPU مزدوج.',
-          '**AMD قابلة للتطبيق لكن تولّد احتكاكاً أكثر.** RX 6700 XT (12 جيجابايت) وRX 7800 XT (16 جيجابايت) تقدمان VRAM بأسعار تنافسية، لكن إعداد ROCm يضيف ساعات عمل مقارنةً بـCUDA من NVIDIA.',
+          '**اختيار المتحمسين: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090 (نحو 2083 دولاراً+ جديدة، ونحو 2800 دولار مستعملة) تُشغّل نماذج 33B؛ RTX 5090 (نحو 4900 دولار) هي البطاقة الاستهلاكية الوحيدة في هذا الدليل بذاكرة 32 جيجابايت (نموذج 70B بـQ4 يحتاج نحو 40 جيجابايت، لذا يظل يتطلب تكمية عدوانية أو نقلاً جزئياً إلى المعالج).',
+          '**AMD قابلة للتطبيق لكن تولّد احتكاكاً أكثر.** RX 6700 XT (12 جيجابايت) وRX 7800 XT (16 جيجابايت) تقدمان VRAM بأسعار تنافسية، لكن مدة إعداد ROCm تختلف حسب التوزيعة والبطاقة.',
           '**استهلاك الطاقة يتصاعد مع الفئة.** RTX 3060 تستهلك 170 واط؛ RTX 5090 تستهلك 575 واطاً وتحتاج إلى وحدة طاقة 850–1000 واط. أدرج وحدة الطاقة في الميزانية مع البطاقة.',
         ],
       },
@@ -4556,7 +4556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الفئة الاقتصادية (320–400 دولار):** RTX 3060 12GB أو RX 6700 XT 12GB — تُشغّل نماذج 7B ومعظم 13B.',
           '**الفئة المتوسطة (380–720 دولاراً):** RTX 5060 Ti 16GB أو RTX 4060 Ti 16GB أو RX 7800 XT 16GB — تُشغّل نماذج 14B براحة.',
           '**الفئة العالية (900–1200 دولار):** RTX 4080 Super أو RTX 5070 Ti أو RTX 4070 Ti Super، وكلها 16GB — استدلال سريع لنماذج 14B وعمل خفيف مع 22B.',
-          '**فئة المتحمسين (2080 دولاراً+):** RTX 4090 24GB أو RTX 5090 32GB — نماذج 33B، و70B بـQ4 على 5090.',
+          '**فئة المتحمسين (2080 دولاراً+):** RTX 4090 24GB أو RTX 5090 32GB — نماذج 33B، و70B فقط بتكميم مكثّف أو تفريغ جزئي إلى CPU على 5090.',
           '**حسابة VRAM المرجعية بـQ4_K_M:** نحو 0.6 جيجابايت لكل مليار معامل، بالإضافة إلى 2–4 جيجابايت للسياق والأدوات.',
           '**نطاق استهلاك الطاقة:** RTX 3060 170 واط، RTX 4060 Ti 165 واط، RTX 5060 Ti 180 واط، RTX 4070 Ti Super 285 واط، RTX 5070 Ti 300 واط، RTX 4080 Super 320 واط، RTX 4090 450 واط، RTX 5090 575 واط.',
           '**واقع أسعار 2026:** دفع نقص الذاكرة الأسعار إلى 1.5–2.5× فوق سعر القائمة؛ لم تعد البطاقات المستعملة أرخص من الجديدة بشكل موثوق، لذا قارن الاثنتين.',
@@ -4595,7 +4595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقارن البطاقات العشر للنماذج اللغوية المحلية في 2026؟',
         content:
-          'أرقام VRAM والطاقة هي مواصفات المصنّع. سرعات الاستدلال لـRTX 3060 وRTX 4080 Super وRTX 4090 وRTX 5090 هي أرقام 7B Q4 مقاسة من اختبارات PromptQuorum للأجهزة؛ أما أرقام RTX 4060 Ti 16 GB وRTX 5060 Ti 16 GB وRX 7800 XT وRTX 4070 Ti Super وRTX 5070 Ti فهي تقديرات على مستوى العائلة. الأسعار هي أدنى أسعار العرض الأمريكية المرصودة في أكتوبر 2026 — دفع نقص الذاكرة بها إلى 1.5–2.5× فوق سعر القائمة، فأعد التحقق قبل الشراء.',
+          'أرقام VRAM والطاقة هي مواصفات المصنّع. سرعات الاستدلال لـRTX 4090 وRTX 5090 هي أرقام 7B Q4 مأخوذة من صفحتنا المرتبطة «أفضل وحدات GPU للنماذج اللغوية المحلية» ولم تُقَس من جديد لهذا الدليل؛ أما أرقام RTX 3060 وRTX 4080 Super وRTX 4060 Ti 16 GB وRTX 5060 Ti 16 GB وRX 7800 XT وRTX 4070 Ti Super وRTX 5070 Ti فهي تقديرات على مستوى العائلة. الأسعار هي أدنى أسعار العرض الأمريكية المرصودة في أكتوبر 2026 — دفع نقص الذاكرة بها إلى 1.5–2.5× فوق سعر القائمة، فأعد التحقق قبل الشراء.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4611,7 +4611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'وحدة GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            'السرعة (7B Q4)': '15-20 tok/s',
+            'السرعة (7B Q4)': '15-20 tok/s (تقدير)',
             'الطاقة': '170 W',
             'السعر (أمريكا، 2026)': '$320-400 جديدة / $320-350 مستعملة',
             'الأنسب لـ': 'بداية اقتصادية — أي نموذج 7B',
@@ -4667,7 +4667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'وحدة GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            'السرعة (7B Q4)': '~120 tok/s',
+            'السرعة (7B Q4)': '~120 tok/s (تقدير)',
             'الطاقة': '320 W',
             'السعر (أمريكا، 2026)': '$1,200 جديدة / $1,149 مستعملة',
             'الأنسب لـ': 'اختيار المحرر — أسرع 16 GB',
@@ -4686,7 +4686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'السرعة (7B Q4)': '~160 tok/s',
             'الطاقة': '575 W',
             'السعر (أمريكا، 2026)': '$4,921 جديدة / $5,880 مستعملة',
-            'الأنسب لـ': '70B بـQ4 على GPU واحدة',
+            'الأنسب لـ': '70B فقط بتكميم مكثّف أو تفريغ',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ar.webp',
@@ -4706,7 +4706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'حالتك': 'أريد بطاقة تُشغّل 14B بسرعة وتدوم سنوات', 'اشترِ هذه': 'RTX 5070 Ti أو RTX 4070 Ti Super 16 GB' },
           { 'حالتك': 'أريد أسرع بطاقة 16 GB والسعر ثانوي', 'اشترِ هذه': 'RTX 4080 Super 16 GB' },
           { 'حالتك': 'أحتاج نماذج 33B أو أخطط لبناء 70B بـGPU مزدوج لاحقاً', 'اشترِ هذه': 'RTX 4090 24 GB' },
-          { 'حالتك': 'أحتاج بطاقة واحدة تُشغّل نماذج 70B بـQ4', 'اشترِ هذه': 'RTX 5090 32 GB' },
+          { 'حالتك': 'أحتاج بطاقة واحدة لنماذج 70B (تكمية عدوانية أو نقل جزئي)', 'اشترِ هذه': 'RTX 5090 32 GB' },
           { 'حالتك': 'لست متأكداً وأريد أأمن أول بطاقة', 'اشترِ هذه': 'RTX 3060 12 GB — وطوّر لاحقاً إن تجاوزتها' },
         ],
       },
@@ -4728,7 +4728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RX 6700 XT هي أرخص بطاقة هنا، لكن خصص 3–5 ساعات لإعداد ROCm على Linux. إن كان الفرق في السعر عن RTX 3060 صغيراً، فاشترِ بطاقة NVIDIA.',
+            text: 'RX 6700 XT هي أرخص بطاقة هنا، لكن مدة إعداد ROCm على Linux تختلف بحسب التوزيعة والبطاقة، فراجع أولاً قائمة وحدات GPU المدعومة من AMD. إن كان الفرق في السعر عن RTX 3060 صغيراً، فاشترِ بطاقة NVIDIA.',
           },
         ],
         affiliateLinks: [
@@ -4754,7 +4754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**الفئة المتوسطة موجودة لسبب واحد: 16 جيجابايت VRAM تتسع لنماذج 14B التي لا تستطيع بطاقات 12 جيجابايت استيعابها مع سياق صالح للاستخدام.** إن كانت نماذج 14B هدفك، فهذه أرخص فئة تُشغّلها بشكل سليم. RTX 5060 Ti 16GB هي خيار الجيل الحالي، وRTX 4060 Ti 16GB المستعملة أرخص طريق للحصول على 16 جيجابايت.',
         items: [
-          '**RTX 5060 Ti 16GB (نحو 618 دولاراً جديدة / نحو 649 دولاراً سعر عرض مستعملة، سعر القائمة 429 دولاراً):** 16 جيجابايت GDDR7 و180 واط وعرض نطاق ذاكرة 448 GB/s. لم تُقِس هذا الدليل أداءها بشكل مستقل؛ تضعها التقديرات المستقلة عند نحو 65–75 رمز/ثانية على 7B Q4 — أي نحو 3 أضعاف RTX 4060 Ti 16GB الأقدم. تُشغّل نماذج من فئة Qwen3 14B براحة. ارتفعت أسعارها نحو 44% فوق سعر القائمة في 2026.',
+          '**RTX 5060 Ti 16GB (نحو 618 دولاراً جديدة / نحو 649 دولاراً سعر عرض مستعملة، سعر القائمة 429 دولاراً):** 16 جيجابايت GDDR7 و180 واط وعرض نطاق ذاكرة 448 GB/s. لم تُقِس هذا الدليل أداءها بشكل مستقل؛ تقديرنا المبني على عرض نطاق الذاكرة (غير مقاس) يضعها عند نحو 65–75 رمز/ثانية على 7B Q4. تُشغّل نماذج من فئة Qwen3 14B براحة. ارتفعت أسعارها نحو 44% فوق سعر القائمة في 2026.',
           '**RTX 4060 Ti 16GB (نحو 550 دولاراً+ جديدة وشحيحة / 380–490 دولاراً مستعملة):** 16 جيجابايت VRAM و165 واط ونحو 20–25 رمز/ثانية على نماذج 7B. تستخدم نفس رقاقة GPU لإصدار 8 جيجابايت من RTX 4060 Ti، لذا سرعة الرمز متشابهة — إصدار 16 جيجابايت يشتري السعة لا السرعة الخام. أصبحت الآن شراءً من سوق المستعمل في الغالب.',
           '**RX 7800 XT (نحو 500–720 دولاراً جديدة، والمتتبعات تختلف):** 16 جيجابايت VRAM و263 واط. لم تُقِس هذا الدليل أداءها بشكل مستقل؛ توقّع سرعة في نطاق RTX 4060 Ti، مع إعداد AMD ROCm كمقايضة.',
           '**لماذا تشتري هذه الفئة:** تريد نماذج 14B، أو تريد استهلاك طاقة منخفضاً (RTX 4060 Ti)، أو تريد 16 جيجابايت بأقل سعر ممكن.',
@@ -4836,10 +4836,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: 'فئة المتحمسين (2080 دولاراً+): RTX 4090 وRTX 5090',
         content:
-          '**فئة المتحمسين هي الوحيدة التي تُشغّل نماذج أكبر من 22B — وRTX 5090 بـ32 جيجابايت هي البطاقة الاستهلاكية الفردية الوحيدة التي تتسع لنموذج 70B بـQ4.** اشترِ هنا من أجل سعة VRAM لا السرعة؛ فالسرعة أثر جانبي. ضربت موجة الارتفاع في 2026 هذه الفئة أشد من غيرها، لذا تتحرك الأسعار من أسبوع لآخر.',
+          '**فئة المتحمسين هي الوحيدة التي تُشغّل نماذج أكبر من 22B — وRTX 5090 بـ32 جيجابايت هي البطاقة الاستهلاكية الوحيدة في هذا الدليل بذاكرة 32 جيجابايت؛ ونموذج 70B بـQ4 يحتاج نحو 40 جيجابايت، لذا يظل يتطلب تكمية عدوانية أو نقلاً جزئياً إلى المعالج.** اشترِ هنا من أجل سعة VRAM لا السرعة؛ فالسرعة أثر جانبي. ضربت موجة الارتفاع في 2026 هذه الفئة أشد من غيرها، لذا تتحرك الأسعار من أسبوع لآخر.',
         items: [
-          '**RTX 4090 24GB (نحو 2083 دولاراً+ جديدة / نحو 2800 دولار سعر عرض مستعملة):** 24 جيجابايت VRAM و450 واط ونحو 150 رمز/ثانية على نماذج 7B و36 رمز/ثانية على نموذج 70B بـQ4. تُشغّل نماذج 33B براحة. المخزون الجديد من RTX 4090 شحيح وقد يكون أدنى سعر جديد مسجّلاً قديماً — تمتد العروض حتى نحو 3800 دولار.',
-          '**RTX 5090 32GB (نحو 4921 دولاراً جديدة / نحو 5880 دولاراً سعر عرض مستعملة، سعر القائمة 1999 دولاراً):** 32 جيجابايت GDDR7 VRAM و575 واط ونحو 160 رمز/ثانية على 7B و45 رمز/ثانية على 70B بـQ4. السعة 32 جيجابايت هي العنوان — هي البطاقة الاستهلاكية الوحيدة التي تُشغّل نموذج 70B بـQ4 بدون GPU ثانية. ارتفعت أسعار العرض نحو 64% بين أغسطس وأكتوبر، وتقع عروض المستعملة فوق الجديدة.',
+          '**RTX 4090 24GB (نحو 2083 دولاراً+ جديدة / نحو 2800 دولار سعر عرض مستعملة):** 24 جيجابايت VRAM و450 واط ونحو 150 رمز/ثانية على نماذج 7B. تُشغّل نماذج 33B براحة. المخزون الجديد من RTX 4090 شحيح وقد يكون أدنى سعر جديد مسجّلاً قديماً — تمتد العروض حتى نحو 3800 دولار.',
+          '**RTX 5090 32GB (نحو 4921 دولاراً جديدة / نحو 5880 دولاراً سعر عرض مستعملة، سعر القائمة 1999 دولاراً):** 32 جيجابايت GDDR7 VRAM و575 واط ونحو 160 رمز/ثانية على 7B. السعة 32 جيجابايت هي العنوان — هي البطاقة الاستهلاكية الوحيدة في هذا الدليل بذاكرة 32 جيجابايت، مع أن نموذج 70B بـQ4 يحتاج نحو 40 جيجابايت ولذا يظل يتطلب تكمية عدوانية أو نقلاً جزئياً إلى المعالج. ارتفعت أسعار العرض نحو 64% بين أغسطس وأكتوبر، وتقع عروض المستعملة فوق الجديدة.',
           '**لماذا تشتري هذه الفئة:** تحتاج نماذج 33B أو 70B، أو تُشغّل استدلالاً دفعياً، أو تريد بطاقة لا تحتاج استبدالاً لسنوات.',
           '**لماذا تتجاوز هذه الفئة:** لنماذج 7B–14B هي مبالغة — فالفئة العالية تقدم استجابات فورية لهذه الأحجام بأقل من نصف السعر واستهلاك الطاقة.',
         ],
@@ -5013,7 +5013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 Price Tracker](https://capitalandcompute.net/gpu-prices/nvidia/) — سعر القائمة مقابل سعر السوق لبطاقات RTX 5090 وRTX 5070 Ti وRTX 5060 Ti 16 GB.',
           '[Club386 — Nvidia indefinitely delays GeForce RTX 50 Super](https://www.club386.com/?p=129641) — تقرير (لم تؤكده NVIDIA) بتأجيل تحديث RTX 50 Super بسبب إمدادات الذاكرة.',
           '[AMD Radeon Specifications](https://www.amd.com/en/products/graphics/desktops/radeon.html) — أرقام رسمية لـVRAM والطاقة لبطاقتي RX 7800 XT وRX 6700 XT.',
-          '[أفضل وحدات GPU للنماذج اللغوية المحلية 2026](/ar/local-llms/best-gpus-for-local-llms) — اختبارات PromptQuorum للأجهزة: سرعات استدلال 7B Q4 المقاسة لبطاقات RTX 3060 وRTX 4080 وRTX 4090 وRTX 5090.',
+          '[أفضل وحدات GPU للنماذج اللغوية المحلية 2026](/ar/local-llms/best-gpus-for-local-llms) — سرعات استدلال 7B Q4 لبطاقتي RTX 4090 وRTX 5090 كما وردت في تلك الصفحة.',
         ],
       },
       faq: {
@@ -5022,7 +5022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'ما أرخص GPU لاستدلال النماذج اللغوية في 2026؟',
-            a: 'NVIDIA RTX 3060 12GB، بنحو 320–400 دولار، هي أرخص GPU تُشغّل استدلال النماذج اللغوية المحلية بشكل جيد. 12 جيجابايت VRAM فيها تتسع لأي نموذج 7B ومعظم نماذج 13B بتكمية Q4، بسرعة 15–20 رمزاً في الثانية. قد تكون RX 6700 XT أرخص في سوق المستعمل، لكنها أبطأ وتتطلب إعداد AMD ROCm. أسعار RTX 3060 الجديدة والمستعملة متقاربة الآن، فقارن الاثنتين.',
+            a: 'NVIDIA RTX 3060 12GB، بنحو 320–400 دولار، هي أرخص بطاقة جديدة في هذا الدليل تُشغّل استدلال النماذج اللغوية المحلية بشكل جيد. 12 جيجابايت VRAM فيها تتسع لأي نموذج 7B ومعظم نماذج 13B بتكمية Q4، بسرعة 15–20 رمزاً في الثانية. قد تكون RX 6700 XT أرخص في سوق المستعمل، لكنها أبطأ وتتطلب إعداد AMD ROCm. أسعار RTX 3060 الجديدة والمستعملة متقاربة الآن، فقارن الاثنتين.',
           },
           {
             q: 'لماذا أسعار GPU مرتفعة جداً في 2026؟',
@@ -5034,7 +5034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل بطاقة رسومات للنماذج اللغوية المحلية؟',
-            a: 'أفضل بطاقة رسومات للنماذج اللغوية المحلية هي التي تملك VRAM كافية لنموذجك المستهدف ضمن ميزانيتك. لنماذج 7B تكفي RTX 3060 12GB (نحو 320–400 دولار). ولنماذج 14B فإن RTX 5060 Ti 16GB (نحو 618 دولاراً) أو RTX 4060 Ti 16GB مستعملة هي الخيار المتوسط. ولنماذج 33B تحتاج RTX 4090 بـ24 جيجابايت، ولنموذج 70B على بطاقة واحدة RTX 5090 بـ32 جيجابايت. وبطاقات NVIDIA هي الخيار الأقل احتكاكاً لأن CUDA يعمل مباشرة دون إعداد.',
+            a: 'أفضل بطاقة رسومات للنماذج اللغوية المحلية هي التي تملك VRAM كافية لنموذجك المستهدف ضمن ميزانيتك. لنماذج 7B تكفي RTX 3060 12GB (نحو 320–400 دولار). ولنماذج 14B فإن RTX 5060 Ti 16GB (نحو 618 دولاراً) أو RTX 4060 Ti 16GB مستعملة هي الخيار المتوسط. ولنماذج 33B تحتاج RTX 4090 بـ24 جيجابايت، ولنموذج 70B تحتاج RTX 5090 بـ32 جيجابايت، وذلك فقط بتكميم مكثّف أو تفريغ جزئي إلى CPU (يحتاج 70B بـQ4 إلى نحو 40 جيجابايت). وبطاقات NVIDIA هي الخيار الأقل احتكاكاً لأن CUDA يعمل مباشرة دون إعداد.',
           },
           {
             q: 'هل RTX 4060 Ti 16GB أسرع من إصدار 8GB؟',
@@ -5042,7 +5042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل أختار NVIDIA أم AMD للنماذج اللغوية المحلية؟',
-            a: 'اختر NVIDIA ما لم تكن تملك أجهزة AMD بالفعل أو وجدت خصماً كبيراً. CUDA من NVIDIA يعمل فوراً مع Ollama وLM Studio وllama.cpp. بطاقات AMD كـRX 6700 XT وRX 7800 XT تقدم VRAM تنافسية مقابل الدولار، لكن إعداد ROCm يستغرق عادةً عدة ساعات في Linux.',
+            a: 'اختر NVIDIA ما لم تكن تملك أجهزة AMD بالفعل أو وجدت خصماً كبيراً. CUDA من NVIDIA يعمل فوراً مع Ollama وLM Studio وllama.cpp. بطاقات AMD كـRX 6700 XT وRX 7800 XT تقدم VRAM تنافسية مقابل الدولار، لكن يختلف وقت إعداد ROCm حسب التوزيعة ووحدة GPU؛ راجع قائمة وحدات GPU المدعومة من AMD.',
           },
           {
             q: 'هل GPU واحدة تستطيع تشغيل نموذج 70B؟',
@@ -5085,7 +5085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -5095,7 +5095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: '로컬 LLM용 최고의 그래픽카드: 2026년 GPU 구매 가이드',
@@ -5142,16 +5142,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 llm gpu 요구 사양',
     ],
     leadAnswerBlock:
-      '**로컬 LLM용 최고의 그래픽카드는 가장 빠른 카드가 아니라 모델에 맞는 VRAM을 갖춘 카드입니다. RTX 3060 12 GB는 7B 모델을 실행하고, 16 GB 카드(RTX 5060 Ti, RTX 4060 Ti 또는 RTX 5070 Ti)는 14B 모델을 처리하며, RTX 4090 24 GB는 33B 모델을 처리하고, RTX 5090 32 GB는 70B 작업을 위한 유일한 단일 소비자용 카드입니다.**',
+      '**로컬 LLM용 최고의 그래픽카드는 가장 빠른 카드가 아니라 모델에 맞는 VRAM을 갖춘 카드입니다. RTX 3060 12 GB는 7B 모델을 실행하고, 16 GB 카드(RTX 5060 Ti, RTX 4060 Ti 또는 RTX 5070 Ti)는 14B 모델을 처리하며, RTX 4090 24 GB는 33B 모델을 처리하고, RTX 5090 32 GB는 이 가이드에서 유일한 32 GB 소비자용 카드입니다 (Q4의 70B 모델은 약 40 GB가 필요하므로 여전히 공격적인 양자화나 CPU로의 부분 오프로드가 필요합니다).**',
     quickAnswerTop: {
       ko: {
         question: '2026년 로컬 LLM 실행에 가장 좋은 그래픽카드는 무엇입니까?',
         answer:
-          'VRAM 기준으로 먼저 구매하고, 그 다음 속도를 고려하십시오. RTX 3060 12 GB (~$320-400)는 보급형 선택지로 7B 모델을 실행합니다. 16 GB 카드는 14B 모델을 위한 중급 선택지로, RTX 5060 Ti 16 GB (신품 ~$620) 또는 중고 RTX 4060 Ti 16 GB (~$380-490)가 있습니다. RTX 4090 24 GB는 33B 모델을 실행하고, RTX 5090 32 GB (~$4,900)는 이중 GPU 구성 없이 70B 작업을 처리할 수 있는 유일한 단일 소비자용 카드입니다. 2026년 가격은 출시 가격을 크게 상회하고 있음을 유의하십시오.',
+          'VRAM 기준으로 먼저 구매하고, 그 다음 속도를 고려하십시오. RTX 3060 12 GB (~$320-400)는 보급형 선택지로 7B 모델을 실행합니다. 16 GB 카드는 14B 모델을 위한 중급 선택지로, RTX 5060 Ti 16 GB (신품 ~$620) 또는 중고 RTX 4060 Ti 16 GB (~$380-490)가 있습니다. RTX 4090 24 GB는 33B 모델을 실행하고, RTX 5090 32 GB (~$4,900)는 이 가이드에서 유일한 32 GB 소비자용 카드입니다 (Q4의 70B 모델은 약 40 GB가 필요하므로 여전히 공격적인 양자화나 CPU로의 부분 오프로드가 필요합니다). 2026년 가격은 출시 가격을 크게 상회하고 있음을 유의하십시오.',
         bullets: [
           '보급형: RTX 3060 12 GB, 신품·중고 모두 ~$320-400, 7B 모델을 15-20 토큰/초로 실행',
           '중급형: RTX 5060 Ti 16 GB, 신품 ~$620 (출시 가격 $429), 여유 있게 14B 모델 실행 가능',
-          '고급형: RTX 5090 32 GB, ~$4,900, 단일 GPU로 70B를 실행할 수 있는 유일한 소비자용 카드',
+          '고급형: RTX 5090 32 GB, ~$4,900, 여기서 유일한 32 GB 카드; 70B에는 공격적인 양자화나 오프로드 필요',
           '2026년 GPU 가격은 출시 가격의 1.5~2.5배 — 구매 전 신품과 중고를 비교하십시오',
         ],
         updatedDate: '2026-10',
@@ -5183,11 +5183,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**VRAM이 결정적인 제약 조건입니다.** VRAM에 맞지 않는 모델은 로드에 실패하거나 시스템 RAM으로 넘쳐 대화형 사용에 너무 느려집니다. 목표 모델에 맞는 VRAM을 가진 등급을 선택한 후, 해당 등급 내에서 속도를 최적화하십시오.',
           '**2026년에 가격이 급등했습니다.** 메모리 공급 부족으로 GPU 가격이 출시 가격보다 1.5~2.5배 상승했습니다. RTX 5090은 ~$4,900에 판매되고 있으며 출시 가격인 $1,999가 아니고, 8월과 10월 사이에 가격이 다시 올랐습니다. 여기의 모든 가격을 미국 호가 기준의 스냅샷으로 취급하고, 구매 전 신품과 중고를 비교하십시오.',
-          '**보급형 추천: NVIDIA RTX 3060 12 GB** (~$320-400, 신품과 중고 가격이 이제 거의 같음) — 7B 모델을 15-20 토큰/초로 실행하고 Q4에서 대부분의 13B 모델도 처리합니다. 2026년 로컬 LLM 입문으로 최고의 가성비입니다.',
+          '**보급형 추천: NVIDIA RTX 3060 12 GB** (~$320-400, 신품과 중고 가격이 이제 거의 같음) — 7B 모델을 15-20 토큰/초로 실행하고 Q4에서 대부분의 13B 모델도 처리합니다. 저희 견해로는 가성비가 뛰어난 입문 선택입니다.',
           '**중급형 추천: NVIDIA RTX 5060 Ti 16 GB** (신품 ~$618, 중고 호가 ~$649) — 16 GB VRAM으로 여유 있는 컨텍스트와 함께 14B 모델을 해결하며, 448 GB/s 메모리 대역폭은 구형 RTX 4060 Ti 16 GB (중고 ~$380-490)보다 훨씬 빠릅니다. RTX 4060 Ti 16 GB는 이제 대부분 중고 시장에서 구매하는 카드입니다.',
           '**고급형 추천: NVIDIA RTX 4080 Super 16 GB** (~$1,200) — 여기서 가장 빠른 16 GB 카드입니다. 속도가 약간 낮아도 괜찮다면 RTX 4070 Ti Super (~$900)와 RTX 5070 Ti (~$1,008)가 더 저렴하여 가성비가 더 좋습니다.',
-          '**최고급형 추천: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090 (신품 ~$2,083 이상, 중고 ~$2,800)은 33B 모델을 실행하고, RTX 5090 (~$4,900)은 이중 GPU 구성 없이 Q4에서 70B 모델을 수용하는 유일한 단일 소비자용 카드입니다.',
-          '**AMD는 실행 가능하지만 설정 작업이 더 많습니다.** RX 6700 XT (12 GB)와 RX 7800 XT (16 GB)는 경쟁력 있는 가격에 VRAM을 제공하지만, ROCm 설정이 NVIDIA CUDA에 비해 몇 시간이 더 걸립니다.',
+          '**최고급형 추천: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090 (신품 ~$2,083 이상, 중고 ~$2,800)은 33B 모델을 실행하고, RTX 5090 (~$4,900)은 이 가이드에서 유일한 32 GB 소비자용 카드입니다 (Q4의 70B 모델은 약 40 GB가 필요하므로 여전히 공격적인 양자화나 CPU로의 부분 오프로드가 필요합니다).',
+          '**AMD는 실행 가능하지만 설정 작업이 더 많습니다.** RX 6700 XT (12 GB)와 RX 7800 XT (16 GB)는 경쟁력 있는 가격에 VRAM을 제공하지만, ROCm 설정 시간은 배포판과 카드에 따라 다릅니다.',
           '**전력 소비는 등급에 따라 증가합니다.** RTX 3060은 170 W를 사용하고, RTX 5090은 575 W를 사용하며 850-1000 W 파워 서플라이가 필요합니다. 카드 가격과 함께 파워 서플라이 비용도 예산에 포함하십시오.',
         ],
       },
@@ -5198,7 +5198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**보급형 ($320-400):** RTX 3060 12 GB 또는 RX 6700 XT 12 GB — 7B 모델과 대부분의 13B 모델을 실행합니다.',
           '**중급형 ($380-720):** RTX 5060 Ti 16 GB, RTX 4060 Ti 16 GB 또는 RX 7800 XT 16 GB — 14B 모델을 편안하게 실행합니다.',
           '**고급형 ($900-1,200):** RTX 4080 Super, RTX 5070 Ti 또는 RTX 4070 Ti Super (모두 16 GB) — 14B 추론 고속화, 22B 경량 작업 가능.',
-          '**최고급형 ($2,080+):** RTX 4090 24 GB 또는 RTX 5090 32 GB — 33B 모델, RTX 5090에서 Q4로 70B도 가능.',
+          '**최고급형 ($2,080+):** RTX 4090 24 GB 또는 RTX 5090 32 GB — 33B 모델, 70B는 RTX 5090에서도 공격적인 양자화나 부분 CPU 오프로드가 필요.',
           '**Q4_K_M VRAM 기본 규칙:** 파라미터 10억 개당 약 0.6 GB, 여기에 컨텍스트와 도구를 위한 2-4 GB 추가.',
           '**전력 소비 범위:** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 5060 Ti 180 W, RTX 4070 Ti Super 285 W, RTX 5070 Ti 300 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
           '**2026년 가격 현실:** 메모리 공급 부족으로 가격이 출시 가격의 1.5~2.5배 상승했으며, 중고 카드가 더 이상 신품보다 항상 저렴하지는 않으므로 둘 다 비교하십시오.',
@@ -5237,7 +5237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 로컬 LLM용 10종 GPU 비교',
         content:
-          'VRAM과 전력 소비 수치는 제조사 사양입니다. RTX 3060, RTX 4080 Super, RTX 4090, RTX 5090의 추론 속도는 PromptQuorum 하드웨어 테스트에서 측정된 7B Q4 값이며, RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super, RTX 5070 Ti의 수치는 제품군 수준 추정치입니다. 가격은 2026년 10월에 확인된 미국 최저 호가이며, 메모리 공급 부족으로 출시 가격의 1.5~2.5배에 판매되고 있으므로 구매 전 반드시 다시 확인하십시오.',
+          'VRAM과 전력 소비 수치는 제조사 사양입니다. RTX 4090, RTX 5090의 추론 속도는 링크된 「2026년 로컬 LLM 최고의 GPU」 페이지에 실린 7B Q4 값이며 이 가이드를 위해 다시 측정한 것은 아니고, RTX 3060, RTX 4080 Super, RTX 4060 Ti 16 GB, RTX 5060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super, RTX 5070 Ti의 수치는 제품군 수준 추정치입니다. 가격은 2026년 10월에 확인된 미국 최저 호가이며, 메모리 공급 부족으로 출시 가격의 1.5~2.5배에 판매되고 있으므로 구매 전 반드시 다시 확인하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -5253,7 +5253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
-            '속도 (7B Q4)': '15-20 토큰/초',
+            '속도 (7B Q4)': '15-20 토큰/초 (추정)',
             '전력 소비': '170 W',
             '가격 (미국, 2026)': '신품 $320-400 / 중고 $320-350',
             '적합 용도': '보급형 입문 — 7B 모델',
@@ -5309,7 +5309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'GPU': 'RTX 4080 Super',
             'VRAM': '16 GB',
-            '속도 (7B Q4)': '~120 토큰/초',
+            '속도 (7B Q4)': '~120 토큰/초 (추정)',
             '전력 소비': '320 W',
             '가격 (미국, 2026)': '신품 $1,200 / 중고 $1,149',
             '적합 용도': '편집자 추천 — 가장 빠른 16 GB 카드',
@@ -5328,7 +5328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '속도 (7B Q4)': '~160 토큰/초',
             '전력 소비': '575 W',
             '가격 (미국, 2026)': '신품 $4,921 / 중고 $5,880',
-            '적합 용도': '단일 GPU로 Q4에서 70B 실행',
+            '적합 용도': '70B (공격적인 양자화나 오프로드 전제)',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.webp',
@@ -5348,7 +5348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': '14B를 빠르게 실행하고 몇 년간 오래 쓸 카드를 원합니다', '구매 권장': 'RTX 5070 Ti 또는 RTX 4070 Ti Super 16 GB' },
           { '상황': '가장 빠른 16 GB 카드를 원하고 가격은 부차적입니다', '구매 권장': 'RTX 4080 Super 16 GB' },
           { '상황': '33B 모델이 필요하거나 70B용 이중 GPU 구성을 계획하고 있습니다', '구매 권장': 'RTX 4090 24 GB' },
-          { '상황': '단일 카드로 Q4에서 70B 모델을 실행해야 합니다', '구매 권장': 'RTX 5090 32 GB' },
+          { '상황': '70B 모델용 단일 카드가 필요합니다 (공격적인 양자화 또는 부분 오프로드)', '구매 권장': 'RTX 5090 32 GB' },
           { '상황': '확신이 없고 가장 안전한 첫 번째 GPU를 원합니다', '구매 권장': 'RTX 3060 12 GB — 나중에 필요하면 업그레이드하십시오' },
         ],
       },
@@ -5370,7 +5370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RX 6700 XT는 여기서 가장 저렴한 카드이지만, Linux에서 ROCm 설정에 3-5시간을 예산으로 잡으십시오. RTX 3060 대비 절약 폭이 작다면 NVIDIA 카드를 구매하십시오.',
+            text: 'RX 6700 XT는 여기서 가장 저렴한 카드이지만, Linux에서 ROCm 설정 시간은 배포판과 카드에 따라 다르므로 먼저 AMD의 지원 GPU 목록을 확인하십시오. RTX 3060 대비 절약 폭이 작다면 NVIDIA 카드를 구매하십시오.',
           },
         ],
         affiliateLinks: [
@@ -5396,7 +5396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**중급형이 존재하는 이유는 하나입니다: 16 GB VRAM이 12 GB 카드가 수용할 수 없는 14B 모델을 해결하기 때문입니다.** 14B급 모델이 목표라면 이것이 가장 저렴하게 올바르게 실행할 수 있는 등급입니다. RTX 5060 Ti 16 GB는 최신 세대 선택이고, 중고 RTX 4060 Ti 16 GB는 16 GB를 얻는 가장 저렴한 방법입니다.',
         items: [
-          '**RTX 5060 Ti 16 GB (신품 ~$618 / 중고 호가 ~$649, 출시 가격 $429):** 16 GB GDDR7, 180 W, 448 GB/s 메모리 대역폭. 이 가이드를 위해 개별적으로 측정되지 않았습니다. 독립 추정치에 따르면 7B Q4에서 약 65-75 토큰/초로, 구형 RTX 4060 Ti 16 GB의 약 3배입니다. Qwen3 14B급 모델을 편안하게 실행합니다. 2026년에 가격이 출시 가격보다 약 44% 올랐습니다.',
+          '**RTX 5060 Ti 16 GB (신품 ~$618 / 중고 호가 ~$649, 출시 가격 $429):** 16 GB GDDR7, 180 W, 448 GB/s 메모리 대역폭. 이 가이드를 위해 개별적으로 측정되지 않았습니다. 메모리 대역폭을 기반으로 한 당사 추정치(실측 아님)로는 7B Q4에서 약 65-75 토큰/초입니다. Qwen3 14B급 모델을 편안하게 실행합니다. 2026년에 가격이 출시 가격보다 약 44% 올랐습니다.',
           '**RTX 4060 Ti 16 GB (신품 ~$550+, 재고 부족 / 중고 $380-490):** VRAM 16 GB, 165 W, 7B 모델 약 20-25 토큰/초. 8 GB 버전과 동일한 GPU 다이를 사용하므로 토큰당 속도는 비슷합니다. 16 GB 버전은 용량을 구매하는 것이지 순수 속도를 구매하는 것이 아닙니다. 이제 대부분 중고 시장에서 구매하는 카드입니다.',
           '**RX 7800 XT (신품 ~$500-720, 추적 사이트별 상이):** VRAM 16 GB, 263 W. 이 가이드를 위해 개별적으로 측정되지 않았습니다. RTX 4060 Ti 범위의 속도를 예상하며, AMD ROCm 설정이 단점입니다.',
           '**이 등급을 선택하는 이유:** 14B 모델을 원하거나, 낮은 전력 소비를 원하거나 (RTX 4060 Ti), 가능한 가장 낮은 가격에 16 GB를 원합니다.',
@@ -5478,10 +5478,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'enthusiast-tier',
         title: '최고급형 ($2,080+): RTX 4090과 RTX 5090',
         content:
-          '**최고급형만이 22B 이상의 모델을 실행할 수 있으며, RTX 5090 32 GB는 Q4에서 70B 모델을 수용하는 유일한 단일 소비자용 카드입니다.** 속도가 아닌 VRAM 용량을 위해 여기에서 구매하십시오. 속도는 부수적인 효과입니다. 2026년 가격 급등이 이 등급을 가장 크게 타격했으며, 가격은 주별로 변동됩니다.',
+          '**최고급형만이 22B 이상의 모델을 실행할 수 있으며, RTX 5090 32 GB는 이 가이드에서 유일한 32 GB 소비자용 카드이지만, Q4의 70B 모델은 약 40 GB가 필요하므로 여전히 공격적인 양자화나 CPU로의 부분 오프로드가 필요합니다.** 속도가 아닌 VRAM 용량을 위해 여기에서 구매하십시오. 속도는 부수적인 효과입니다. 2026년 가격 급등이 이 등급을 가장 크게 타격했으며, 가격은 주별로 변동됩니다.',
         items: [
-          '**RTX 4090 24 GB (신품 ~$2,083 이상 / 중고 호가 ~$2,800):** VRAM 24 GB, 450 W, 7B 모델 약 150 토큰/초, 70B Q4 모델 36 토큰/초. 33B 모델을 편안하게 실행합니다. 신품 RTX 4090 재고는 얇고 신품 최저가는 오래된 값일 수 있으며, 목록 가격은 최대 ~$3,800까지 분포합니다.',
-          '**RTX 5090 32 GB (신품 ~$4,921 / 중고 호가 ~$5,880, 출시 가격 $1,999):** VRAM 32 GB GDDR7, 575 W, 7B 모델 약 160 토큰/초, 70B Q4 45 토큰/초. 32 GB 용량이 핵심 논거입니다 — 두 번째 GPU 없이 Q4에서 70B 모델을 실행하는 유일한 소비자용 카드입니다. 호가는 8월과 10월 사이에 약 64% 올랐으며, 중고 목록이 신품 가격을 상회합니다.',
+          '**RTX 4090 24 GB (신품 ~$2,083 이상 / 중고 호가 ~$2,800):** VRAM 24 GB, 450 W, 7B 모델 약 150 토큰/초. 33B 모델을 편안하게 실행합니다. 신품 RTX 4090 재고는 얇고 신품 최저가는 오래된 값일 수 있으며, 목록 가격은 최대 ~$3,800까지 분포합니다.',
+          '**RTX 5090 32 GB (신품 ~$4,921 / 중고 호가 ~$5,880, 출시 가격 $1,999):** VRAM 32 GB GDDR7, 575 W, 7B 모델 약 160 토큰/초. 32 GB 용량이 핵심 논거입니다 — 이 가이드에서 유일한 32 GB 소비자용 카드이지만, Q4의 70B 모델은 약 40 GB가 필요하므로 여전히 공격적인 양자화나 CPU로의 부분 오프로드가 필요합니다. 호가는 8월과 10월 사이에 약 64% 올랐으며, 중고 목록이 신품 가격을 상회합니다.',
           '**이 등급을 선택하는 이유:** 33B 또는 70B 모델이 필요하거나, 배치 추론을 실행하거나, 몇 년간 교체 없이 사용할 카드를 원합니다.',
           '**이 등급을 건너뛰는 이유:** 7B-14B 모델에는 과도합니다 — 고급형은 해당 크기에서 즉각적인 응답을 제공하며 절반 미만의 가격과 전력 소비로 이용할 수 있습니다.',
         ],
@@ -5654,7 +5654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Capital & Compute — Nvidia RTX 50 가격 추적기](https://capitalandcompute.net/gpu-prices/nvidia/) — RTX 5090, RTX 5070 Ti, RTX 5060 Ti 16 GB의 출시 가격 대비 실거래 가격.',
           '[Club386 — Nvidia, GeForce RTX 50 Super 무기한 연기](https://www.club386.com/?p=129641) — 메모리 공급 문제로 RTX 50 Super 갱신이 연기되었다는 보도 (NVIDIA는 확인하지 않음).',
           '[AMD Radeon 사양](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XT 및 RX 6700 XT의 공식 VRAM 및 전력 수치.',
-          '[2026년 로컬 LLM 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) — PromptQuorum 하드웨어 테스트: RTX 3060, 4080, 4090, 5090의 7B Q4 추론 속도 측정값.',
+          '[2026년 로컬 LLM 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) — RTX 4090, 5090의 7B Q4 추론 속도(해당 페이지 기준).',
         ],
       },
       faq: {
@@ -5663,7 +5663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026년 LLM 추론용으로 가장 저렴한 GPU는 무엇입니까?',
-            a: '약 $320-400의 NVIDIA RTX 3060 12 GB가 로컬 LLM 추론을 잘 실행하는 가장 저렴한 GPU입니다. 12 GB VRAM으로 Q4 양자화에서 7B 모델과 대부분의 13B 모델을 초당 15-20 토큰으로 실행합니다. RX 6700 XT는 중고 시장에서 더 저렴할 수 있지만 더 느리고 AMD ROCm 설정이 필요합니다. 신품과 중고 RTX 3060 가격이 이제 가까우므로 둘 다 비교하십시오.',
+            a: '약 $320-400의 NVIDIA RTX 3060 12 GB가 이 가이드에서 로컬 LLM 추론을 잘 실행하는 가장 저렴한 신제품 카드입니다. 12 GB VRAM으로 Q4 양자화에서 7B 모델과 대부분의 13B 모델을 초당 15-20 토큰으로 실행합니다. RX 6700 XT는 중고 시장에서 더 저렴할 수 있지만 더 느리고 AMD ROCm 설정이 필요합니다. 신품과 중고 RTX 3060 가격이 이제 가까우므로 둘 다 비교하십시오.',
           },
           {
             q: '2026년에 GPU 가격이 왜 이렇게 높습니까?',
@@ -5675,7 +5675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 LLM에 가장 좋은 그래픽카드는 무엇입니까?',
-            a: '로컬 LLM에 가장 좋은 그래픽카드는 예산 내에서 목표 모델에 충분한 VRAM을 갖춘 카드입니다. 7B 모델에는 RTX 3060 12 GB (~$320-400)로 충분합니다. 14B 모델에는 RTX 5060 Ti 16 GB (~$618) 또는 중고 RTX 4060 Ti 16 GB가 중급 선택입니다. 33B 모델에는 RTX 4090 24 GB가, 단일 카드 70B에는 RTX 5090 32 GB가 필요합니다. CUDA가 바로 작동하므로 NVIDIA 카드가 마찰이 가장 적은 선택입니다.',
+            a: '로컬 LLM에 가장 좋은 그래픽카드는 예산 내에서 목표 모델에 충분한 VRAM을 갖춘 카드입니다. 7B 모델에는 RTX 3060 12 GB (~$320-400)로 충분합니다. 14B 모델에는 RTX 5060 Ti 16 GB (~$618) 또는 중고 RTX 4060 Ti 16 GB가 중급 선택입니다. 33B 모델에는 RTX 4090 24 GB가, 70B에는 RTX 5090 32 GB가 필요하며, 공격적인 양자화나 부분 CPU 오프로드를 전제로 합니다 (70B Q4는 약 40 GB 필요). CUDA가 바로 작동하므로 NVIDIA 카드가 마찰이 가장 적은 선택입니다.',
           },
           {
             q: 'RTX 4060 Ti 16 GB가 8 GB 버전보다 빠릅니까?',
@@ -5683,7 +5683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 LLM용으로 NVIDIA와 AMD 중 무엇을 구매해야 합니까?',
-            a: '이미 AMD 하드웨어를 보유하고 있거나 상당한 할인을 찾지 않는 한 NVIDIA를 구매하십시오. NVIDIA CUDA는 Ollama, LM Studio, llama.cpp와 즉시 작동합니다. RX 6700 XT 및 RX 7800 XT와 같은 AMD 카드는 경쟁력 있는 가격에 VRAM을 제공하지만, ROCm 설정은 Linux에서 보통 몇 시간이 소요됩니다.',
+            a: '이미 AMD 하드웨어를 보유하고 있거나 상당한 할인을 찾지 않는 한 NVIDIA를 구매하십시오. NVIDIA CUDA는 Ollama, LM Studio, llama.cpp와 즉시 작동합니다. RX 6700 XT 및 RX 7800 XT와 같은 AMD 카드는 경쟁력 있는 가격에 VRAM을 제공하지만, ROCm 설정 시간은 배포판과 GPU에 따라 다르므로 AMD의 지원 GPU 목록을 확인하십시오.',
           },
           {
             q: '단일 GPU로 70B 모델을 실행할 수 있습니까?',
@@ -5726,7 +5726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
