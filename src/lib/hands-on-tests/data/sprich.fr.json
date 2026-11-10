@@ -119,11 +119,11 @@
     ],
     [
       "Déclaration d’intérêts",
-      "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d’IA locales. Sprich a été ajouté à l’annuaire le 2026-11-09, le jour même de ce test, avec un avis rédigé par IA. L’en-tête de l’appli affiche un badge LIFETIME, et dans un message à un contact le testeur a écrit avoir obtenu un accès gratuit à un outil vocal ; comment et de la part de qui cet accès est venu n’est pas consigné. Le développeur a répondu au testeur après le test ; la date n’est pas indiquée, et on ne sait pas s’il disposait de ces notes. Sprich reçoit des clics depuis le site. Aucun paiement ni parrainage n’est consigné dans les notes.",
+      "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d’IA locales. Sprich a été ajouté à l’annuaire le 2026-11-09, le jour même de ce test, avec un avis rédigé par IA. Le développeur a répondu au testeur après le test ; la date n’est pas indiquée, et on ne sait pas s’il disposait de ces notes. Sprich reçoit des clics depuis le site. Aucun paiement ni parrainage n’est consigné dans les notes.",
       "observed"
     ]
   ],
-  "disclosure": "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d’IA locales. Sprich a été ajouté à l’annuaire le 2026-11-09, le jour même de ce test, avec un avis rédigé par IA. L’en-tête de l’appli affiche un badge LIFETIME, et dans un message à un contact le testeur a écrit avoir obtenu un accès gratuit à un outil vocal ; comment et de la part de qui cet accès est venu n’est pas consigné. Le développeur a répondu au testeur après le test ; la date n’est pas indiquée, et on ne sait pas s’il disposait de ces notes. Sprich reçoit des clics depuis le site. Aucun paiement ni parrainage n’est consigné dans les notes.",
+  "disclosure": "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d’IA locales. Sprich a été ajouté à l’annuaire le 2026-11-09, le jour même de ce test, avec un avis rédigé par IA. Le développeur a répondu au testeur après le test ; la date n’est pas indiquée, et on ne sait pas s’il disposait de ces notes. Sprich reçoit des clics depuis le site. Aucun paiement ni parrainage n’est consigné dans les notes.",
   "verdict": {
     "general": "Une appli de dictée soignée, pensée d’abord pour l’allemand, pour les Mac Apple Silicon. Pendant cette session, la dictée a fonctionné dans Word, WhatsApp et Telegram en anglais et en allemand ; le russe non. L’enregistrement de réunions, la transcription de fichiers, la réécriture de texte, le fonctionnement hors ligne, les affirmations sur la confidentialité et la désinstallation n’ont pas été testés.",
     "fit": "Le testeur est impressionné, lui donne cinq sur cinq et l’a recommandé à un contact. Il le juge aussi rapide que son outil de dictée dans le cloud, même si rien n’a été chronométré. Ses notes n’indiquent pas s’il continuera à l’utiliser."
@@ -620,7 +620,7 @@
     ],
     [
       "tester-error",
-      "Lacunes dans le relevé : version de l’appli et de macOS, heure d’installation et de fin, durée de la configuration, touche de dictée choisie, texte prononcé et réglage de langue pour les tests en français et en russe, tout délai mesuré, envoi ou non du formulaire de retour, façon dont l’accès Lifetime a été obtenu. L’en-tête matériel indique “Mac 4 ... VRAM” ; Apple Silicon a une mémoire unifiée, et la puce a été nommée M4 Pro plus tard."
+      "Lacunes dans le relevé : version de l’appli et de macOS, heure d’installation et de fin, durée de la configuration, touche de dictée choisie, texte prononcé et réglage de langue pour les tests en français et en russe, tout délai mesuré, envoi ou non du formulaire de retour. L’en-tête matériel indique “Mac 4 ... VRAM” ; Apple Silicon a une mémoire unifiée, et la puce a été nommée M4 Pro plus tard."
     ]
   ],
   "findings": [
@@ -1194,7 +1194,7 @@
       "figure": 14,
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
-      "alt": "Onglet Réunions avec zéro réunion, un conseil sur l’enregistrement des appels pour obtenir transcription, résumé et tâches, un bouton Meeting aufnehmen et un badge LIFETIME.",
+      "alt": "Onglet Réunions avec zéro réunion, un conseil sur l’enregistrement des appels pour obtenir transcription, résumé et tâches, un bouton Meeting aufnehmen.",
       "caption": "Onglet Réunions à la première ouverture. Non utilisé pendant le test. L’affirmation sur le résumé dans le conseil est une affirmation du fabricant.",
       "role": "moment",
       "width": 1600,

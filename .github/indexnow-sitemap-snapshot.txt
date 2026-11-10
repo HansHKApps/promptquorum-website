@@ -640,6 +640,7 @@ https://www.promptquorum.com/power-local-llm/solair-ai-review
 https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
 https://www.promptquorum.com/power-local-llm/speechbrain-review
 https://www.promptquorum.com/power-local-llm/spiritbox-ultimate-review
+https://www.promptquorum.com/power-local-llm/sprich-hands-on-test
 https://www.promptquorum.com/power-local-llm/sprich-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-forge-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-review

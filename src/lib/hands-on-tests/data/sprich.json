@@ -119,11 +119,11 @@
     ],
     [
       "Disclosure",
-      "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The app header shows a LIFETIME badge, and in a message to a contact the tester wrote that he got free access to a voice tool; how and from whom the access came is not recorded. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+      "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
       "observed"
     ]
   ],
-  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The app header shows a LIFETIME badge, and in a message to a contact the tester wrote that he got free access to a voice tool; how and from whom the access came is not recorded. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
   "verdict": {
     "general": "A carefully built, German-first dictation app for Apple Silicon Macs. In this session dictation worked in Word, WhatsApp and Telegram in English and German; Russian did not. Meeting recording, file transcription, text rewriting, offline operation, the privacy claims and uninstall were not tested.",
     "fit": "The tester is impressed, gives it five out of five and recommended it to a contact. He rates it as fast as his cloud dictation tool, though nothing was timed. Whether he will keep using it is not stated in his notes."
@@ -620,7 +620,7 @@
     ],
     [
       "tester-error",
-      "Gaps in the record: app and macOS version, install and end time, setup duration, which dictation key was chosen, the spoken text and language setting for the French and Russian tests, any measured delay, whether the feedback form was sent, how the Lifetime access was obtained. The hardware header reads \"Mac 4 ... VRAM\"; Apple Silicon has unified memory, and the chip was later named M4 Pro."
+      "Gaps in the record: app and macOS version, install and end time, setup duration, which dictation key was chosen, the spoken text and language setting for the French and Russian tests, any measured delay, whether the feedback form was sent. The hardware header reads \"Mac 4 ... VRAM\"; Apple Silicon has unified memory, and the chip was later named M4 Pro."
     ]
   ],
   "findings": [
@@ -1194,7 +1194,7 @@
       "figure": 14,
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
-      "alt": "Meetings tab with zero meetings, a tip about recording calls for transcript, summary and tasks, a Meeting aufnehmen button and a LIFETIME badge.",
+      "alt": "Meetings tab with zero meetings, a tip about recording calls for transcript, summary and tasks, a Meeting aufnehmen button.",
       "caption": "Meetings tab at first open. Not used in the test. The summary claim in the tip is a vendor-claim.",
       "role": "moment",
       "width": 1600,

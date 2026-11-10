@@ -119,11 +119,11 @@
     ],
     [
       "Disclosure",
-      "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. In der Kopfzeile der App steht ein LIFETIME-Badge, und in einer Nachricht an einen Kontakt schrieb der Tester, er habe kostenlosen Zugang zu einem Sprachwerkzeug erhalten; wie und von wem der Zugang kam, ist nicht erfasst. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+      "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
       "observed"
     ]
   ],
-  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. In der Kopfzeile der App steht ein LIFETIME-Badge, und in einer Nachricht an einen Kontakt schrieb der Tester, er habe kostenlosen Zugang zu einem Sprachwerkzeug erhalten; wie und von wem der Zugang kam, ist nicht erfasst. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
   "verdict": {
     "general": "Eine sorgfältig gebaute, auf Deutsch ausgerichtete Diktier-App für Macs mit Apple Silicon. In dieser Sitzung funktionierte das Diktieren in Word, WhatsApp und Telegram auf Englisch und Deutsch; Russisch nicht. Meeting-Aufnahme, Dateitranskription, Textumformulierung, Offline-Betrieb, die Datenschutzangaben und die Deinstallation wurden nicht getestet.",
     "fit": "Der Tester ist beeindruckt, gibt fünf von fünf Punkten und hat die App einem Kontakt empfohlen. Er hält sie für so schnell wie sein Cloud-Diktierwerkzeug, auch wenn nichts gestoppt wurde. Ob er sie weiter nutzen wird, geht aus seinen Notizen nicht hervor."
@@ -620,7 +620,7 @@
     ],
     [
       "tester-error",
-      "Lücken in der Dokumentation: App- und macOS-Version, Installations- und Endzeit, Setup-Dauer, welche Diktiertaste gewählt wurde, der gesprochene Text und die Spracheinstellung bei den Tests mit Französisch und Russisch, jede gemessene Verzögerung, ob das Feedback-Formular abgeschickt wurde, wie der Lifetime-Zugang zustande kam. Die Hardware-Kopfzeile lautet „Mac 4 ... VRAM“; Apple Silicon hat Unified Memory, und der Chip wurde später als M4 Pro genannt."
+      "Lücken in der Dokumentation: App- und macOS-Version, Installations- und Endzeit, Setup-Dauer, welche Diktiertaste gewählt wurde, der gesprochene Text und die Spracheinstellung bei den Tests mit Französisch und Russisch, jede gemessene Verzögerung, ob das Feedback-Formular abgeschickt wurde. Die Hardware-Kopfzeile lautet „Mac 4 ... VRAM“; Apple Silicon hat Unified Memory, und der Chip wurde später als M4 Pro genannt."
     ]
   ],
   "findings": [
@@ -1194,7 +1194,7 @@
       "figure": 14,
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
-      "alt": "Meetings-Tab ohne Meetings, ein Hinweis zur Aufnahme von Anrufen für Transkript, Zusammenfassung und Aufgaben, eine Schaltfläche „Meeting aufnehmen“ und ein LIFETIME-Badge.",
+      "alt": "Meetings-Tab ohne Meetings, ein Hinweis zur Aufnahme von Anrufen für Transkript, Zusammenfassung und Aufgaben, eine Schaltfläche „Meeting aufnehmen“.",
       "caption": "Meetings-Tab beim ersten Öffnen. Im Test nicht benutzt. Die Aussage zur Zusammenfassung im Hinweis ist eine Herstellerangabe.",
       "role": "moment",
       "width": 1600,

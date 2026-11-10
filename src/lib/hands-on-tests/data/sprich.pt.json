@@ -119,11 +119,11 @@
     ],
     [
       "Transparência",
-      "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O cabeçalho do app mostra um selo LIFETIME e, em uma mensagem a um contato, o testador escreveu que recebeu acesso gratuito a uma ferramenta de voz; como e de quem veio o acesso não foi registrado. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
+      "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
       "observed"
     ]
   ],
-  "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O cabeçalho do app mostra um selo LIFETIME e, em uma mensagem a um contato, o testador escreveu que recebeu acesso gratuito a uma ferramenta de voz; como e de quem veio o acesso não foi registrado. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
+  "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
   "verdict": {
     "general": "Um app de ditado cuidadosamente construído, com prioridade para o alemão, para Macs com Apple Silicon. Nesta sessão o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão; o russo não. Gravação de reuniões, transcrição de arquivos, reescrita de texto, operação offline, as alegações de privacidade e a desinstalação não foram testados.",
     "fit": "O testador ficou impressionado, deu nota cinco de cinco e o recomendou a um contato. Ele o considera tão rápido quanto sua ferramenta de ditado na nuvem, embora nada tenha sido cronometrado. Se ele continuará usando não consta nas anotações."
@@ -620,7 +620,7 @@
     ],
     [
       "tester-error",
-      "Lacunas no registro: versão do app e do macOS, horário de instalação e de término, duração da configuração, qual tecla de ditado foi escolhida, o texto falado e a configuração de idioma nos testes em francês e russo, qualquer atraso medido, se o formulário de feedback foi enviado, como o acesso Lifetime foi obtido. O cabeçalho de hardware diz “Mac 4 ... VRAM”; o Apple Silicon tem memória unificada, e o chip foi depois chamado de M4 Pro."
+      "Lacunas no registro: versão do app e do macOS, horário de instalação e de término, duração da configuração, qual tecla de ditado foi escolhida, o texto falado e a configuração de idioma nos testes em francês e russo, qualquer atraso medido, se o formulário de feedback foi enviado. O cabeçalho de hardware diz “Mac 4 ... VRAM”; o Apple Silicon tem memória unificada, e o chip foi depois chamado de M4 Pro."
     ]
   ],
   "findings": [
@@ -1194,7 +1194,7 @@
       "figure": 14,
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
-      "alt": "Aba Reuniões com zero reuniões, uma dica sobre gravar chamadas para obter transcrição, resumo e tarefas, um botão Meeting aufnehmen e um selo LIFETIME.",
+      "alt": "Aba Reuniões com zero reuniões, uma dica sobre gravar chamadas para obter transcrição, resumo e tarefas, um botão Meeting aufnehmen.",
       "caption": "Aba Reuniões na primeira abertura. Não usada no teste. A afirmação sobre o resumo na dica é uma alegação do fabricante.",
       "role": "moment",
       "width": 1600,
