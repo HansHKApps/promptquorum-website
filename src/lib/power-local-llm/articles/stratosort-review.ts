@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/stratosort-review-hero-de.webp',
     title: 'StratoSort Rezension: Lokaler KI-Dateiorganizer für Mac, Windows und Linux',
     seoTitle: 'StratoSort Rezension: Lokaler KI-Dateiorganizer-App',
-    intro: 'StratoSort ist eine Desktop-App, die liest, was in Ihren Dateien steckt, Namen und Ordner vorschlägt und Dateien laut Dokumentation erst nach Ihrer Freigabe verschiebt. Dafür nutzt sie Sprachmodelle, die über llama.cpp auf Ihrem eigenen Computer laufen. Außerdem bietet sie semantische Suche, Chat mit Ihren Dokumenten und einen Wissensgraphen. Diese Rezension fasst zusammen, was Website, Dokumentation und GitHub-Repository des Herstellers sagen, wo der lokale Weg endet, wie die Lizenz die kommerzielle Nutzung einschränkt und wie StratoSort im Vergleich zu ähnlichen Werkzeugen im Verzeichnis abschneidet.',
+    intro: 'StratoSort ist eine Desktop-App, die Dateien nach ihrem Inhalt sortiert und zugleich als private Such-, Chat- und Wissensgraph-Anwendung für Ihre Dokumente dient. Dafür nutzt sie Sprachmodelle, die über llama.cpp auf Ihrem eigenen Computer laufen. Laut Dokumentation verschiebt sie Dateien erst nach Ihrer Freigabe. Diese Rezension fasst zusammen, was Website, Dokumentation und GitHub-Repository des Herstellers sagen, wo der lokale Weg endet, wie die Lizenz die kommerzielle Nutzung einschränkt und wie StratoSort im Vergleich zu ähnlichen Werkzeugen im Verzeichnis abschneidet.',
     metaDescription: 'StratoSort Rezension: KI-Dateiorganizer für Mac, Windows, Linux mit lokalen llama.cpp-Modellen, offline nach Installation. Lizenz, Grenzen. Nicht getestet.',
     twitterDescription: 'StratoSort Rezension: lokale KI, die Ihre Dateien auf Mac, Windows und Linux umbenennt, sortiert und durchsucht. Kostenlos für private Nutzung. Datenschutz, Lizenz, Grenzen und Alternativen.',
     audience: 'Menschen mit unaufgeräumten Ordnern voller Dokumente, Scans, Bilder und Audiodateien, die sich von KI Namen und Ordner vorschlagen lassen möchten, ohne Dateien an einen Cloud-Dienst hochzuladen — behandelt Installation, Modelle, Datenschutz, Lizenz, Grenzen und Alternativen.',
@@ -447,6 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funktionen', anchor: 'features' },
       { label: 'Modelle und Hardware', anchor: 'models-hardware' },
       { label: 'Datenschutz, Lizenz und Kosten', anchor: 'privacy' },
+      { label: 'Vom Hersteller', anchor: 'from-the-maker' },
       { label: 'Abwägungen: Vorteile und Einschränkungen', anchor: 'tradeoffs' },
       { label: 'StratoSort im Vergleich zu Alternativen', anchor: 'vs-alternatives' },
       { label: 'Für wen StratoSort geeignet ist', anchor: 'who-should-use' },
@@ -464,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'StratoSort ist eine Desktop-App, die laut Dokumentation lokale llama.cpp-Modelle nutzt, um Namen und Ordner für Ihre Dateien vorzuschlagen, und nach einem Modell-Download offline funktioniert.',
+            text: 'StratoSort ist eine Desktop-App, die liest, was in Ihren Dateien steckt, und sie laut Hersteller in Ordner verschiebt, die Sie in einfacher Sprache beschreiben, wobei sie die Dateien in einem einheitlichen Format umbenennt oder die ursprünglichen Namen beibehält, mit Modellen, die auf Ihrem eigenen Computer laufen.',
           },
           {
             type: 'plain-terms',
@@ -475,6 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lokale Aussage: Die Modelle laufen auf dem Gerät; Modell-Downloads, Prüfungen auf neue Versionen und jeder von Ihnen hinzugefügte Cloud-Anbieter nutzen das Internet.',
           'Hersteller: Kennedy Applied Sciences, Inc., mit öffentlichem Code auf GitHub unter iLevyTate.',
           'Pflege: Version 5.1.2 erschien am 1. November 2026 und das Repository wurde am 10. November 2026 aktualisiert, das Projekt wird also aktiv entwickelt.',
+          'Knowledge OS: Laut Hersteller macht die Seite aus Suche, Chat und Graph etwa die Hälfte dessen aus, was die App leistet, und die Suche findet sowohl exakte Begriffe wie Rechnungsnummern als auch inhaltlich passende Treffer.',
           'Lücken: kein eigener Praxistest hier, ein junges öffentliches Projekt und Modelle, die einen großen ersten Download erfordern.',
         ],
       },
@@ -507,6 +509,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: '[stratosort.com](https://stratosort.com/)',
           },
           {
+            Plattform: 'Demovideo',
+            Bezugsquelle: '[StratoSort-Demovideo](https://stratosort.com/assets/strato-ad.mp4) — kurzes mp4 vom Hersteller',
+          },
+          {
+            Plattform: 'Air-gapped-Installation',
+            Bezugsquelle: '[Installationsanleitung: Offline- und Air-gapped-Installation](https://stratosort.com/docs/INSTALL_GUIDE.html#offline-and-air-gapped-install) — für Rechner, die nie online gehen',
+          },
+          {
             Plattform: 'Datenschutzerklärung',
             Bezugsquelle: '[Datenschutzerklärung von StratoSort](https://stratosort.com/privacy.html)',
           },
@@ -515,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: '[github.com/iLevyTate/StratoSortStack](https://github.com/iLevyTate/StratoSortStack) — PolyForm Noncommercial 1.0.0',
           },
         ],
-        note: 'Die Installationsdateien sind groß (das Linux-.deb hat etwa 534 MB), und jede Version listet SHA-256-Prüfsummendateien auf.',
+        note: 'Die Installationsdateien sind groß (das Linux-.deb hat etwa 534 MB), und jede Version listet SHA-256-Prüfsummendateien auf. Laut Hersteller sind die Windows-Installationsprogramme von Kennedy Applied Sciences, Inc. signiert, und Mac-Builds werden seit Version 4.0.0 notarisiert.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -538,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was StratoSort ist',
         content: [
           '**StratoSort ist ein Dateiorganizer, der Inhalte liest, nicht nur Dateinamen.** Die App schaut in Dokumente, Tabellen, Bilder, Scans, Audio und Video, schlägt einen Namen und einen Ordner vor und verschiebt Dateien in „Smart Folders“, die Sie in einfacher Sprache beschreiben.',
-          'Das Repository heißt StratoSortStack und bezeichnet sich als Nachfolger des ursprünglichen StratoSort; Website und diese Rezension verwenden den Namen StratoSort. Über das Sortieren hinaus bietet die App semantische Suche, Chat mit Ihren Dokumenten samt Quellenangaben, einen Wissensgraphen und einen optionalen lokalen MCP-Server für Werkzeuge wie Claude Desktop, Cursor und Zed.',
+          'Das Repository heißt StratoSortStack und bezeichnet sich als Nachfolger des ursprünglichen StratoSort; Website und diese Rezension verwenden den Namen StratoSort. Über das Sortieren hinaus hat die App eine Seite für Suche, Chat und Graph, die der Hersteller Knowledge OS nennt und als etwa die Hälfte dessen beschreibt, was sie leistet, sowie einen optionalen lokalen MCP-Server.',
           'Diese Rezension stützt sich auf Website, Dokumentation, Datenschutzerklärung und GitHub-Repository. Einen Praxistest gab es nicht; wie gut die App Dateien benennt und sortiert und wie schnell sie läuft, wird hier daher nicht bewertet.',
         ],
       },
@@ -551,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'App installieren',
-            whyItMatters: 'Laden Sie das Installationsprogramm für Ihr System von der [GitHub-Release-Seite](https://github.com/iLevyTate/StratoSortStack/releases/latest) herunter und öffnen Sie es.',
+            whyItMatters: 'Laden Sie das Installationsprogramm für Ihr System aus der Tabelle „StratoSort herunterladen“ oben herunter und öffnen Sie es.',
           },
           {
             title: 'Modelle herunterladen',
@@ -571,15 +581,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Funktionen',
         content: [
-          '**Der Funktionsumfang konzentriert sich auf das Ordnen und Wiederfinden von Dateien.** Alles Folgende stammt von Website, Dokumentation und Versionshinweisen.',
+          '**Der Funktionsumfang konzentriert sich auf das Ordnen und Wiederfinden von Dateien.** Alles Folgende stammt von Website, Dokumentation, Versionshinweisen und den Anmerkungen des Herstellers vom 10. November 2026.',
         ],
         items: [
-          '**Sortieren nach Inhalt.** Dateinamen und Ordner werden aus dem vorgeschlagen, was die Datei enthält, einschließlich Scans und Bilder über ein Bildmodell und OCR.',
+          '**Sortieren nach Inhalt.** Ordner werden danach gewählt, was die Datei enthält, einschließlich Scans und Bilder über ein Bildmodell und OCR. Das Umbenennen ist optional: Dateien können in einem einheitlichen Format umbenannt oder über eine Option zum Beibehalten der Namen mit ihren ursprünglichen Namen verschoben werden.',
+          '**Ordnerüberwachung.** Laut Hersteller kann die App Downloads und Ihre Smart Folders beobachten und vorschlagen, wohin neue Dateien gehören.',
           '**Prüfen und rückgängig machen.** Vorgeschlagene Verschiebungen warten auf Ihre Freigabe und lassen sich umkehren.',
-          '**Semantische Suche und Chat.** Suchen Sie nach Bedeutung und stellen Sie Fragen zu Ihren Dokumenten, wobei die Quellen angezeigt werden.',
+          '**Suche und Chat.** Die Suche findet sowohl exakte Begriffe wie Rechnungsnummern als auch inhaltlich passende Treffer, und Chat-Antworten nennen ihre Quelldateien.',
           '**Audio und Video.** Sprache wird mit Whisper transkribiert, und die Transkripte werden zusammen mit Ihren Dokumenten indexiert.',
-          '**Wissensgraph.** Die Ansichten Relate und Atlas zeigen, wie Dokumente zusammenhängen.',
-          '**MCP-Server.** Ein optionaler lokaler Server lässt Werkzeuge wie Claude Desktop, Cursor und Zed Ihre Dateien abfragen.',
+          '**Wissensgraph.** Drei Ansichten: Relate (Cluster und Ähnlichkeitsverknüpfungen), Atlas (eine Karte der Vektor-Embeddings, in der Sie Dateien mit dem Lasso auswählen, verschieben, mit Tags versehen oder in einen Smart Folder verwandeln können) und Timeline.',
+          '**MCP-Server.** Ein optionaler lokaler Server, nur lesend und an 127.0.0.1 gebunden, lässt Werkzeuge wie Claude Desktop, Cursor und Zed Ihre Dateien abfragen; laut Hersteller erhalten verbundene Clients Zusammenfassungen und Quellenangaben, nie die Rohdateien.',
         ],
       },
       modelsHardware: {
@@ -595,9 +606,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz, Lizenz und Kosten',
         content: [
           '**Laut Datenschutzerklärung läuft die App auf Ihrem Rechner, und Dokumentinhalte, Dateipfade, Embeddings und Suchanfragen verlassen ihn in der Standardkonfiguration nicht.** Außerdem heißt es dort, die App enthalte keine Analyse-, Telemetrie-, Absturzberichts- oder Feature-Flag-Dienste, die nach Hause melden, und die Website kenne weder Konto noch Synchronisierungsdienst.',
-          'Die Netzwerkdokumentation listet die Verbindungen auf, die die App aufbauen kann: Modell-Downloads von huggingface.co, eine Prüfung auf neue Versionen bei GitHub sowie einmalige Downloads des Sprachmodells, eines Bild-Hilfsmodells und von OCR-Sprachdaten. Die Versionsprüfung ist in installierten Builds standardmäßig aktiv und lässt sich in den Einstellungen ausschalten. Cloud-KI bleibt aus, solange Sie keinen eigenen Schlüssel von Anthropic oder einem OpenAI-kompatiblen Anbieter hinzufügen; danach geht der von Ihnen gesendete Text an diesen Anbieter, und dessen eigene Bedingungen gelten. Der Code ist öffentlich, und PromptQuorum hat den Netzwerkverkehr nicht untersucht, daher sind diese Aussagen die des Herstellers selbst.',
+          'Die Netzwerkdokumentation listet die Verbindungen auf, die die App aufbauen kann: Modell-Downloads von huggingface.co, eine Prüfung auf neue Versionen bei GitHub sowie ein einmaliger Download des Sprachmodells. Der Hersteller sagt, die Bild-Laufzeitumgebung und die OCR-Sprachdaten seien in den Installationsprogrammen enthalten und würden nur als Ausweichlösung heruntergeladen, falls eine mitgelieferte Datei fehlt; im normalen Gebrauch ist das Sprachmodell also der einzige einmalige Download dieser Extras, und nur, wenn Sie es installieren möchten. Die Versionsprüfung ist in installierten Builds standardmäßig aktiv und lässt sich in den Einstellungen ausschalten. Cloud-KI bleibt aus, solange Sie keinen eigenen Schlüssel von Anthropic oder einem OpenAI-kompatiblen Anbieter hinzufügen; danach geht der von Ihnen gesendete Text an diesen Anbieter, und dessen eigene Bedingungen gelten. Der Code ist öffentlich, und PromptQuorum hat den Netzwerkverkehr nicht untersucht, daher sind diese Aussagen die des Herstellers selbst.',
           'Die Lizenz ist PolyForm Noncommercial 1.0.0, die quelloffen einsehbar (source-available), aber nicht Open Source ist. Private und andere nichtkommerzielle Nutzung ist mit allen Funktionen kostenlos; kommerzielle Nutzung erfordert eine kostenpflichtige Lizenz pro Arbeitsplatz von Kennedy Applied Sciences, Inc., die per E-Mail angefragt wird, ohne veröffentlichten Preis.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Hersteller',
+        content: [
+          'Der Hersteller von StratoSort hat am 10. November 2026 Korrekturen und die folgende Notiz geschickt. Sie ist als Aussage des Herstellers wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum, und PromptQuorum konnte sie weder im Code noch durch Tests prüfen:',
+          '„Ich habe StratoSort für Menschen gebaut, deren Dateien zu privat sind, um sie bei einem Cloud-KI-Dienst hochzuladen. Nachdem die Modelle heruntergeladen sind, laufen Sortieren, Suche, Chat und Transkription auf Ihrem Rechner. Es gibt kein Konto und keine Telemetrie, und mit ausgeschalteter Update-Prüfung und ohne Cloud-Schlüssel stellt die App keine ausgehenden Anfragen. Ich habe es allein in etwa 17 Monaten Teilzeitarbeit gebaut. Wenn sich etwas anders verhält, als es in der Dokumentation steht, eröffnen Sie ein Issue auf GitHub, und ich schaue es mir an.“',
+        ],
+        note: '— Der Hersteller von StratoSort',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -694,7 +714,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Unternehmen ohne Lizenz.** Kommerzielle Nutzung erfordert eine kostenpflichtige Lizenz unter PolyForm Noncommercial.',
           '**Alle, die Open-Source-Code brauchen.** Die Lizenz ist source-available, nicht Open Source im Sinne der OSI.',
           '**Computer mit weniger als 8 GB RAM.** Das ist das angegebene Minimum.',
-          '**Alle, die keinen automatischen Netzwerkverkehr wünschen.** Die Versionsprüfung ist standardmäßig aktiv und muss ausgeschaltet werden.',
         ],
       },
       faq: {
@@ -703,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Funktioniert StratoSort offline?',
-            a: 'Laut Dokumentation ja, sobald die Modelle installiert sind, und sie empfiehlt einen Test im Flugmodus. Der erste Start braucht Internet, um sie herunterzuladen, es sei denn, Sie fahren mit eingeschränkter KI fort. PromptQuorum hat es nicht offline getestet.',
+            a: 'Laut Dokumentation ja, sobald die Modelle installiert sind, und sie empfiehlt einen Test im Flugmodus. Der erste Start braucht Internet, um sie herunterzuladen, es sei denn, Sie fahren mit eingeschränkter KI fort, und die Installationsanleitung dokumentiert eine Air-gapped-Installation für Rechner, die nie online gehen (siehe „StratoSort herunterladen“). PromptQuorum hat es nicht offline getestet.',
           },
           {
             q: 'Kann ich es bei der Arbeit nutzen?',
@@ -740,6 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Datenschutzerklärung](https://stratosort.com/privacy.html) — Umgang mit Daten, zuletzt aktualisiert am 29. Oktober 2026.',
           '[GitHub-Repository](https://github.com/iLevyTate/StratoSortStack) — README, Lizenz und Quellcode.',
           '[GitHub Releases](https://github.com/iLevyTate/StratoSortStack/releases) — Installationsdateien und Veröffentlichungsdatum von Version 5.1.2.',
+          '[Installationsanleitung](https://stratosort.com/docs/INSTALL_GUIDE.html#offline-and-air-gapped-install) — Installationsprogramme sowie die Offline- und Air-gapped-Installation.',
         ],
       },
       relatedReading: {
