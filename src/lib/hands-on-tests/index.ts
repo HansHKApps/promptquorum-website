@@ -47,6 +47,15 @@ import locallyUncensoredEs from './data/locally-uncensored.es.json'
 import locallyUncensoredPt from './data/locally-uncensored.pt.json'
 import locallyUncensoredAr from './data/locally-uncensored.ar.json'
 import locallyUncensoredKo from './data/locally-uncensored.ko.json'
+import sprich from './data/sprich.json'
+import sprichDe from './data/sprich.de.json'
+import sprichFr from './data/sprich.fr.json'
+import sprichJa from './data/sprich.ja.json'
+import sprichZh from './data/sprich.zh.json'
+import sprichEs from './data/sprich.es.json'
+import sprichPt from './data/sprich.pt.json'
+import sprichAr from './data/sprich.ar.json'
+import sprichKo from './data/sprich.ko.json'
 import caelum from './data/caelum.json'
 import caelumDe from './data/caelum.de.json'
 import caelumFr from './data/caelum.fr.json'
@@ -299,6 +308,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: locallyUncensoredPt as unknown as HandsOnTest,
     ar: locallyUncensoredAr as unknown as HandsOnTest,
     ko: locallyUncensoredKo as unknown as HandsOnTest,
+  },
+  sprich: {
+    en: sprich as unknown as HandsOnTest,
+    de: sprichDe as unknown as HandsOnTest,
+    fr: sprichFr as unknown as HandsOnTest,
+    ja: sprichJa as unknown as HandsOnTest,
+    zh: sprichZh as unknown as HandsOnTest,
+    es: sprichEs as unknown as HandsOnTest,
+    pt: sprichPt as unknown as HandsOnTest,
+    ar: sprichAr as unknown as HandsOnTest,
+    ko: sprichKo as unknown as HandsOnTest,
   },
   caelum: {
     en: caelum as unknown as HandsOnTest,

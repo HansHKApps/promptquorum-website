@@ -1,0 +1,1350 @@
+{
+  "id": "pq-test-sprich-2026-11-09",
+  "hero": "sprich-welcome-screen-press-once-speak-press-again",
+  "date_human": "9. November 2026",
+  "captured": "9.11.2026; 17:43 bis 18:07 Uhr laut App-Verlauf; Beginn und Ende der Installation nicht erfasst",
+  "standard_version": "0.2",
+  "locale": "de",
+  "app": {
+    "name": "Sprich",
+    "slug": "sprich",
+    "vendor": "Not recorded (the maker is not named in the notes)",
+    "category": "Lokales Diktieren / Spracherkennung, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://www.sprich.ai"
+  },
+  "title": "Sprich auf einem M4 Pro Mac mit 24 GB: Lokales Diktieren, das in jede App tippt",
+  "page_title": "Sprich-Test",
+  "dek": "Eine erste Sitzung am 9. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, eine nur deutsche Oberfläche und die meisten Nebenfunktionen nicht ausprobiert.",
+  "seo": {
+    "title": "Sprich im Praxistest: Lokales Diktieren auf dem M4 Pro Mac",
+    "description": "Praxistest von Sprich auf einem M4 Pro Mac mit 24 GB: Diktieren klappte in Word, WhatsApp und Telegram auf Englisch und Deutsch, Russisch scheiterte."
+  },
+  "faq": [
+    [
+      "Funktioniert Sprich in anderen Apps?",
+      "Ja, in den Apps, die der Tester ausprobiert hat. Das Diktat erzeugte Text in Microsoft Word, WhatsApp und Telegram. Mail, Notizen, Slack und ein Browser wurden nicht ausprobiert.",
+      "observed"
+    ],
+    [
+      "Welche Sprachen hat Sprich im Test verstanden?",
+      "Englisch und Deutsch funktionierten. Ein französischer Satz wurde diktiert und sein Text steht in den Notizen, die Genauigkeit wurde aber nicht beurteilt. Ein russischer Test scheiterte: Die Ausgabe war unleserlich. Die damals eingestellte Diktiersprache ist nicht erfasst.",
+      "observed"
+    ],
+    [
+      "Gibt es die Oberfläche von Sprich auf Englisch?",
+      "Nein. Der Tester fand nur eine deutsche Oberfläche und keinen Sprachwechsel. Der Entwickler sagt, sie sei bisher nur auf Deutsch verfügbar, eine bewusste Entscheidung, weil die lokale Version auf Deutsch optimiert sei; das ist nicht überprüft.",
+      "observed"
+    ],
+    [
+      "Wie groß ist der Download von Sprich?",
+      "Das Setup lädt zwei Modelle herunter, Sprich Transcribe v3 (etwa 480 MB) und Sprich Turbo v3 (etwa 2,8 GB), zusammen etwa 3,3 GB laut App-Text. Das sind Download-Größen; der Arbeitsspeicherbedarf im Betrieb wurde nicht gemessen.",
+      "measured"
+    ],
+    [
+      "Läuft Sprich wirklich offline und lokal?",
+      "Die App gibt an, dass alles lokal läuft, dass Stimme und Text den Mac nie verlassen und dass sie vollständig offline funktioniert. Der Netzwerkverkehr wurde nicht untersucht und ein Offline-Lauf nicht ausprobiert; das ist daher nicht überprüft.",
+      "vendor-claim"
+    ],
+    [
+      "War Sprich schnell?",
+      "Der Tester hielt es zunächst für langsam, weil er den Standardmodus (einmal drücken, sprechen, erneut drücken) falsch benutzte. Nach richtiger Benutzung fand er es augenblicklich und so schnell wie sein Cloud-Diktierwerkzeug. Es wurde nichts gestoppt.",
+      "tester-estimate"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-10",
+  "started": "2026-11-09",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Sprich (sprich.ai); die Kopfzeile des Fensters zeigt „sprich.ai“",
+      "observed"
+    ],
+    [
+      "Version",
+      "Nicht erfasst. Das Verzeichnis hat am 9.11.2026 auf der Herstellerseite die Version 2.2.4 geprüft; der Build des Testers kann abweichen.",
+      null
+    ],
+    [
+      "Source",
+      "Nicht erfasst. Das Verzeichnis nennt die Download-Seite des Herstellers auf sprich.ai.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans (Gründer von PromptQuorum)",
+      "observed"
+    ],
+    [
+      "Start",
+      "9.11.2026. Das erste Diktat im Verlauf stammt von 17:43 Uhr, der letzte Screenshot von 18:07 Uhr; Beginn und Ende der Installation sind nicht erfasst.",
+      "observed"
+    ],
+    [
+      "Ended",
+      "Nicht erfasst",
+      null
+    ],
+    [
+      "Hardware",
+      "Apple M4 Pro, 24 GB Unified Memory, nichts anderes lief. In der Kopfzeile der Notizen steht „Mac 4 ... VRAM“; der Chip wurde in den diktierten Notizen als M4 Pro genannt.",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS-Version nicht erfasst. Das Verzeichnis nennt macOS 15 oder neuer und nur Apple Silicon (Drittquelle).",
+      null
+    ],
+    [
+      "Why tested",
+      "Die Notizen vergleichen die App mit dem Cloud-Diktierwerkzeug, das der Tester derzeit nutzt, und besagen, dass er vertrauliche Daten nicht mit diesem Werkzeug teilen würde.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "Nicht als Ziel angegeben. Die Notizen zeigen einen ersten Blick auf Setup, Diktat in drei Apps, Sprachen, Verlauf, Einstellungen und den Meetings-Tab.",
+      null
+    ],
+    [
+      "Diktiert in Apps",
+      "Microsoft Word, WhatsApp, Telegram",
+      "observed"
+    ],
+    [
+      "Genutzte KI-Hilfe",
+      "Claude entwarf diesen Bericht aus den Word-Notizen des Testers und 15 Screenshots. Die diktierten Teile der Notizen stammen offenbar von Sprich selbst (Annahme: Die Verlaufseinträge stimmen mit dem Text der Notizen überein), sodass manche Ungenauigkeiten in den Notizen Ausgaben der App sein können.",
+      "assumption"
+    ],
+    [
+      "Disclosure",
+      "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. In der Kopfzeile der App steht ein LIFETIME-Badge, und in einer Nachricht an einen Kontakt schrieb der Tester, er habe kostenlosen Zugang zu einem Sprachwerkzeug erhalten; wie und von wem der Zugang kam, ist nicht erfasst. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+      "observed"
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. In der Kopfzeile der App steht ein LIFETIME-Badge, und in einer Nachricht an einen Kontakt schrieb der Tester, er habe kostenlosen Zugang zu einem Sprachwerkzeug erhalten; wie und von wem der Zugang kam, ist nicht erfasst. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+  "verdict": {
+    "general": "Eine sorgfältig gebaute, auf Deutsch ausgerichtete Diktier-App für Macs mit Apple Silicon. In dieser Sitzung funktionierte das Diktieren in Word, WhatsApp und Telegram auf Englisch und Deutsch; Russisch nicht. Meeting-Aufnahme, Dateitranskription, Textumformulierung, Offline-Betrieb, die Datenschutzangaben und die Deinstallation wurden nicht getestet.",
+    "fit": "Der Tester ist beeindruckt, gibt fünf von fünf Punkten und hat die App einem Kontakt empfohlen. Er hält sie für so schnell wie sein Cloud-Diktierwerkzeug, auch wenn nichts gestoppt wurde. Ob er sie weiter nutzen wird, geht aus seinen Notizen nicht hervor."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Kleine DMG, per Drag-and-drop in „Programme“; ein Konto ist erforderlich."
+    ],
+    [
+      "Einstieg und Modellauswahl",
+      4,
+      "Fünf klare Schritte, Download im Hintergrund; es wird keine Modellauswahl angeboten."
+    ],
+    [
+      "Kernfunktion",
+      4,
+      "Das Diktieren funktionierte in drei Apps auf Englisch und Deutsch; Russisch scheiterte."
+    ],
+    [
+      "Führung und Nachbessern",
+      3,
+      "Der Standard-Tastenmodus führte den Tester einmal in die Irre, und die Oberfläche ist nur deutsch; ein Feedback-Formular ist eingebaut."
+    ],
+    [
+      "Leistung",
+      null,
+      "Nicht gestoppt. Der Tester schätzt sie nach richtiger Benutzung als augenblicklich ein."
+    ],
+    [
+      "Dokumentation",
+      null,
+      "Nur App-Texte wurden gesehen; weder ein Handbuch noch eine Anleitung auf der Website wurde geöffnet."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Nicht geprüft. Die Angaben zu lokal und offline wurden nicht getestet."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Die Bewertungen sind Vorschläge des Berichtsautors, abgeleitet aus den Belegen des Testers; k. A. bedeutet nicht getestet, nicht null.",
+  "tldr": [
+    [
+      "observed",
+      "Sprich ist eine Diktier-App für den Mac: Taste drücken, sprechen, und der Text erscheint dort, wo der Cursor steht. Der Tester nutzte sie auf einem Apple M4 Pro mit 24 GB. Das Setup hat fünf Schritte und lädt zwei Modelle mit zusammen etwa 3,3 GB herunter."
+    ],
+    [
+      "observed",
+      "Das Diktieren funktionierte in Microsoft Word, WhatsApp und Telegram, auf Englisch und Deutsch. Ein russischer Test scheiterte. Ein Produktname erschien im Verlauf als „Sprich Ae“."
+    ],
+    [
+      "tester-error",
+      "Der Tester hielt die App zunächst für langsam, weil er den Standardmodus (einmal drücken, sprechen, erneut drücken) falsch benutzte. Nach richtiger Benutzung fand er sie augenblicklich. Die Geschwindigkeit wurde nie gestoppt."
+    ],
+    [
+      "observed",
+      "Die Oberfläche ist nur deutsch; der Tester fand keinen Sprachwechsel."
+    ],
+    [
+      "vendor-claim",
+      "Die App gibt an, dass alles lokal und offline läuft und dass Stimme und Text den Mac nie verlassen. Das wurde nicht getestet."
+    ],
+    [
+      "observed",
+      "Meeting-Aufnahme, das Menü zur Textumformulierung, Dateitranskription, das Wörterbuch, die Wirkung der Tonalitätseinstellung, Offline-Nutzung und Deinstallation wurden nicht getestet."
+    ]
+  ],
+  "quotes": [
+    "Die Oberfläche, das Setup, wirklich schön, wirklich professionell, erstklassig.",
+    "Fünf von fünf, zehn von zehn, ich weiß nicht, was ich sagen soll."
+  ],
+  "quote_note": "Notizen des Testers, leicht bearbeitet aus einem Diktat und ins Deutsche übertragen. Beides sind seine Urteile, keine Messungen.",
+  "moments_title": "Sechs Momente, die diesen Test geprägt haben",
+  "moments_nav": "Sechs Momente",
+  "moments": [
+    [
+      "Zwei Modelle zum Herunterladen",
+      "Setup-Schritt 2: zwei Modelle mit zusammen etwa 3,3 GB, einmal heruntergeladen.",
+      "sprich-setup-two-models-download-3-3-gb",
+      "chapter-install"
+    ],
+    [
+      "Einmal drücken, erneut drücken",
+      "Schritt zu Taste und Modus im Setup. Der Standard-Umschaltmodus führte den Tester zunächst in die Irre.",
+      "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "chapter-install"
+    ],
+    [
+      "Die ersten vier Word-Diktate",
+      "Verlauf um 17:49 Uhr. Ein Eintrag lautet „Sprich Ae“.",
+      "sprich-history-first-four-dictations-in-word",
+      "chapter-usage"
+    ],
+    [
+      "32 Diktate, zwei Werte für gesparte Zeit",
+      "Verlauf um 18:07 Uhr: Die Überschrift und die Kachel widersprechen sich.",
+      "sprich-history-32-dictations-time-saved-counters",
+      "chapter-usage"
+    ],
+    [
+      "Ein Umformulierungsmenü, das noch niemand benutzt hat",
+      "Popup-Menü, im Test nicht benutzt.",
+      "sprich-text-rewrite-popup-menu",
+      "chapter-explore"
+    ],
+    [
+      "Meetings, lokal aufgenommen",
+      "Meetings-Tab, im Test nicht benutzt.",
+      "sprich-meetings-tab-record-meeting-tip",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Download, erster Start und Setup",
+      "items": [
+        [
+          "observed",
+          "Der Test lief am 9. November 2026. Der Tester lud eine kleine DMG herunter, die er mit 20 MB ablas; kein Screenshot. Das Installationsfenster zeigt das App-Symbol neben einer Verknüpfung zu „Programme“. Das Verzeichnis nennt 18,2 MB für Version 2.2.4 (Drittquelle).",
+          "sprich-app-icon-and-applications-folder"
+        ],
+        [
+          "tester-view",
+          "Dem Tester gefällt das Logo, ein deutsches Wortspiel mit dem Wort „Sprich“, aufgeteilt in „spr“ und „ich“.",
+          null
+        ],
+        [
+          "observed",
+          "Ein Konto ist nötig: Setup-Schritt 1, „Anmelden“, ist vor dem Modellschritt abgehakt, und der Tester sagt, eine Registrierung sei erforderlich.",
+          null
+        ],
+        [
+          "measured",
+          "Schritt 2 lädt zwei Modelle einmalig herunter: Sprich Transcribe v3 (Spracherkennung, etwa 480 MB) und Sprich Turbo v3 (Textverbesserung, etwa 2,8 GB), zusammen etwa 3,3 GB laut App-Text. Der Download läuft im Hintergrund, während die nächsten Schritte erledigt werden. Das sind Download-Größen, nicht der Arbeitsspeicherbedarf im Betrieb.",
+          "sprich-setup-two-models-download-3-3-gb"
+        ],
+        [
+          "observed",
+          "Die Bildschirme nennen die zugrunde liegenden Modelle nicht. Der Tester bemerkte das und wollte es herausfinden.",
+          null
+        ],
+        [
+          "observed",
+          "Er änderte die Diktiertaste; welche Taste er wählte, ist nicht erfasst. Schritt 4 zeigt Fn, während die Illustration des Willkommensbildschirms die rechte Befehlstaste zeigt. Es gibt zwei Modi: Einrasten (zum Starten drücken, zum Stoppen drücken; als Standard markiert) und Gedrückt halten (Aufnahme, solange die Taste gehalten wird).",
+          "sprich-setup-dictation-key-fn-toggle-or-hold"
+        ],
+        [
+          "measured",
+          "Er erreichte den letzten Schritt, „Fast geschafft“, während die Modelle noch heruntergeladen wurden: Spracherkennung 72 %, Textverbesserung 12 %. Die gesamte Download- und Setup-Dauer ist nicht erfasst.",
+          "sprich-setup-final-step-models-still-loading"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "Nutzung",
+      "items": [
+        [
+          "tester-error",
+          "Die ersten Word-Tests fühlten sich langsam an, und ein Text schien verloren zu gehen. Der Tester schrieb, ein Sprachwerkzeug müsse innerhalb von ein oder zwei Sekunden antworten, und sein Cloud-Werkzeug sei schneller gewesen. Dann entdeckte er seinen eigenen Fehler: Im Standard-Umschaltmodus muss die Taste einmal zum Starten und einmal zum Stoppen gedrückt werden. Er korrigierte die Notizen.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Bei falsch benutzter Taste schätzt der Tester mehrere Sekunden, manchmal über 10 s, bis Text erschien. Nach richtiger Benutzung fand er die App augenblicklich. Es wurde nichts gestoppt.",
+          null
+        ],
+        [
+          "observed",
+          "Die ersten vier englischen Diktate in Word, 17:43 bis 17:49 Uhr, haben je 7 bis 13 Wörter. Eines lautet im Verlauf „Sprich Ae“, wo die Notizen des Testers „Sprich AI“ zeigen; was er sagte und ob er den Text bearbeitete, ist nicht erfasst.",
+          "sprich-history-first-four-dictations-in-word"
+        ],
+        [
+          "observed",
+          "Das deutsche Diktat in WhatsApp kam mit Anrede, Absätzen und Satzzeichen an, und der Tester sagt, es habe den Text richtig gegliedert. Eine Formulierung, „die doppelt drücken knüpfen muss“, wirkt merkwürdig; der gemeinte Wortlaut ist nicht erfasst.",
+          "sprich-whatsapp-german-dictation-result"
+        ],
+        [
+          "observed",
+          "Das englische Diktat in Telegram kam als drei Nachrichten an, wobei Füllwörter wie „Uh“ erhalten blieben. Der Setup-Bildschirm verspricht die Korrektur von Satzzeichen, Groß- und Kleinschreibung und Erkennungsfehlern, nicht von Füllwörtern.",
+          "sprich-telegram-english-dictation-result"
+        ],
+        [
+          "observed",
+          "Ein französischer Satz wurde diktiert und sein Text steht in den Notizen; der Tester beurteilte die Genauigkeit nicht, und der gesprochene Satz ist nicht erfasst. Ein russischer Test funktionierte nicht: Die App verstand die Wörter nicht, und die Ausgabe war unleserlich. Die damalige Spracheinstellung ist nicht erfasst; dass sie auf Deutsch stand, ist eine Schlussfolgerung.",
+          null
+        ],
+        [
+          "measured",
+          "Der Tab „Verlauf“ speicherte jedes Diktat mit Uhrzeit, Ziel-App, Text, Aufnahmelänge, Wortzahl und gesparter Zeit, dazu ein Suchfeld und einen App-Filter. Um 17:49 Uhr zeigte die Überschrift 41 s gespart in dieser Woche und die Kachel 56 s; um 18:07 Uhr (32 Transkriptionen, 676 Wörter) zeigte die Überschrift 12 min 23 s und die Kachel 19 m. Die App erklärt nicht, wie „gespart“ berechnet wird.",
+          "sprich-history-32-dictations-time-saved-counters"
+        ],
+        [
+          "tester-view",
+          "Später wechselte er zum Halten-zum-Sprechen-Modus, den er gewohnt ist, und war erneut beeindruckt. Nicht gestoppt.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "Einstellungen, Extras und die Antwort des Entwicklers",
+      "items": [
+        [
+          "observed",
+          "Ein Popup-Menü bietet Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle und Verfassen. Der Tester wollte verstehen, wie es funktioniert, und benutzte es nicht. Welches Programm das Menü bereitstellt, Sprich oder macOS, ist nicht erfasst.",
+          "sprich-text-rewrite-popup-menu"
+        ],
+        [
+          "observed",
+          "Die Einstellungen haben ein Dropdown Schreibton, Formal (abgehakt) oder Informell. Gesehen wurde nur das Dropdown; das „Wow“ des Testers bezieht sich auf die Option, nicht auf ein getestetes Ergebnis.",
+          "sprich-settings-writing-tone-formal-informal"
+        ],
+        [
+          "observed",
+          "Die Aufnahmeanzeige lässt sich auf Taste, Mikro (ausgewählt) oder Kein stellen. Der Tester sah eine Mikrofon-Blase von Grau zu Orange wechseln; die Kopfzeile zeigt „Mikro bereit“.",
+          "sprich-settings-recording-indicator-mic"
+        ],
+        [
+          "observed",
+          "Die Kontoseite auf sprich.ai bietet eine Passwortänderung und die Zwei-Faktor-Authentifizierung. Von Letzterer war der Tester „wirklich beeindruckt“, doch die Karte zeigt nur einen Link „Aktivieren“, sie war also nicht eingeschaltet.",
+          "sprich-account-security-page-two-factor-off"
+        ],
+        [
+          "vendor-claim",
+          "Der Tab „Meetings“ bietet „Meeting aufnehmen“; sein Hinweis besagt, dass Anrufe ein Transkript, eine Zusammenfassung und Aufgaben liefern und alles auf dem Mac bleibt. Der Tester hat noch kein Meeting aufgenommen und plant, es mit ein paar Personen in einem Raum auszuprobieren.",
+          "sprich-meetings-tab-record-meeting-tip"
+        ],
+        [
+          "observed",
+          "Er suchte nach einem Sprachwechsel, um englische Screenshots zu machen, und fand keinen; die Oberfläche ist nur deutsch.",
+          null
+        ],
+        [
+          "observed",
+          "Das eingebaute Formular „Bug melden“ hat die Tabs Bug, Feedback und Feature und Felder für Titel, Beschreibung, erwartetes und tatsächliches Ergebnis, Häufigkeit und bis zu 3 Anhänge von je 1 MB. Der Abschnitt „Mitgesendete Daten“ wurde nicht geöffnet, und ob etwas gesendet wurde, ist nicht erfasst. „Transcripts are never sent“ ist die eigene Zeile des Formulars.",
+          "sprich-bug-report-form"
+        ],
+        [
+          "vendor-claim",
+          "Der Entwickler antwortete dem Tester nach dem Test auf Deutsch; das Datum ist nicht genannt. Sinngemäß: Er freue sich, dass der Tester seine Aufnahmen jetzt mit Sprich macht; Parakeet verstehe etwa 25 europäische Sprachen, die sich für die Dateitranskription auswählen lassen; das Diktat sei auf Deutsch optimiert, und englische Begriffe in einem deutschen Satz funktionierten gut; die Oberfläche sei bisher nur deutsch, eine bewusste Entscheidung, weil die lokale Version auf Deutsch optimiert sei. Nichts davon ist überprüft.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Entscheidung",
+      "items": [
+        [
+          "observed",
+          "Die Notizen enden mit dem Feedback-Formular und ohne Entscheidung über die weitere Nutzung.",
+          null
+        ],
+        [
+          "tester-view",
+          "Der Tester vergleicht die App mit seinem Cloud-Werkzeug, dessen Serverstandorte er nicht kennt, und sagt, er würde dort keine vertraulichen Daten teilen.",
+          null
+        ],
+        [
+          "tester-view",
+          "Aus seinen 30 Jahren in der Beratung schätzt er es, Meeting-Notizen selbst zu schreiben, und hofft, lokale Meeting-Notizen mit ein paar Personen in einem Raum auszuprobieren.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "„Sprich schreibt, was du sagst.“ Diktiere in jede App: Mail, Notizen, Slack, Browser.",
+      "Willkommensbildschirm der App",
+      "In Word, WhatsApp und Telegram gesehen. Mail, Notizen, Slack und ein Browser wurden nicht ausprobiert.",
+      "observed"
+    ],
+    [
+      "Alles läuft lokal; Stimme und Text verlassen den Mac nie; die App funktioniert vollständig offline.",
+      "Willkommensbildschirm und Setup der App",
+      "Nicht überprüft. Der Netzwerkverkehr wurde nicht untersucht und ein Offline-Lauf nicht ausprobiert.",
+      "vendor-claim"
+    ],
+    [
+      "Das Setup „dauert nur wenige Minuten“.",
+      "Willkommensbildschirm der App",
+      "Dauer nicht erfasst; die Modelle wurden im letzten Schritt noch heruntergeladen.",
+      "observed"
+    ],
+    [
+      "Zwei Modelle, zusammen etwa 3,3 GB.",
+      "Setup-Schritt 2",
+      "Die angezeigten Größen ergeben diese Summe; Speicherplatz- oder Arbeitsspeicherbedarf wurde nicht gemessen.",
+      "measured"
+    ],
+    [
+      "Der Textschritt korrigiert Satzzeichen, Groß- und Kleinschreibung und Erkennungsfehler.",
+      "Setup-Schritt 2",
+      "Satzzeichen und Absätze in WhatsApp gesehen; Füllwörter bleiben in Telegram erhalten.",
+      "observed"
+    ],
+    [
+      "Taste und Modus lassen sich jederzeit unter Einstellungen, Tastatur ändern.",
+      "Setup-Schritt 4",
+      "Der Tester änderte die Taste und später den Modus.",
+      "observed"
+    ],
+    [
+      "Meetings: Transkript, Zusammenfassung und Aufgaben, alles auf dem Mac.",
+      "Hinweis im Meetings-Tab",
+      "Nicht getestet.",
+      "vendor-claim"
+    ],
+    [
+      "Das Diktat ist auf Deutsch optimiert; Parakeet versteht etwa 25 europäische Sprachen.",
+      "Nachricht des Entwicklers",
+      "Englisch und Deutsch funktionierten, Russisch scheiterte; Dateitranskription nicht ausprobiert.",
+      "vendor-claim"
+    ],
+    [
+      "57 Sprachen.",
+      "Eintrag im PromptQuorum-Verzeichnis",
+      "Nicht überprüft; die Angabe stimmt nicht mit der Zahl des Entwicklers überein.",
+      "third-party"
+    ],
+    [
+      "Feedback-Formular: Transkripte werden nie gesendet.",
+      "Bug-Melde-Formular",
+      "Nicht überprüft.",
+      "vendor-claim"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Englischen Testsatz in Word diktieren",
+      "Word",
+      "7 Wörter, 10 s aufgenommen, „+7s“ gespart",
+      "17:43",
+      "Pass",
+      []
+    ],
+    [
+      "Englischen Satz in Word diktieren",
+      "Word",
+      "13 Wörter, 20 s, „+14s“",
+      "17:45",
+      "Pass",
+      []
+    ],
+    [
+      "Englischen Satz in Word diktieren",
+      "Word",
+      "8 Wörter, 12 s, „+8s“; Produktname weicht ab („Sprich Ae“)",
+      "17:46",
+      "Partial",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "Englischen Satz in Word diktieren",
+      "Word",
+      "10 Wörter, 15 s, „+11s“",
+      "17:49",
+      "Pass",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "Erste Versuche mit falsch benutzter Taste",
+      "Word",
+      "Schätzung des Testers: mehrere Sekunden, manchmal über 10 s, bis Text erschien",
+      "Nicht erfasst",
+      "Fail",
+      []
+    ],
+    [
+      "Englischen Satz in Word diktieren",
+      "Word",
+      "6 Wörter, 11 s, „+6s“; Verzögerung nicht gestoppt",
+      "18:07",
+      "Pass",
+      [
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "Deutsche Nachricht in WhatsApp",
+      "WhatsApp",
+      "Anrede, Absätze und Satzzeichen wie eingefügt",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "Drei englische Nachrichten in Telegram",
+      "Telegram",
+      "68 Wörter 125 s „+1 min 14s“; 37 Wörter 63 s „+40s“; 29 Wörter 49 s „+31s“",
+      "18:06",
+      "Pass",
+      [
+        "sprich-telegram-english-dictation-result",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "Französischer Satz",
+      "Nicht erfasst",
+      "Ausgabe in den Notizen gezeigt; Genauigkeit nicht beurteilt",
+      "Nicht erfasst",
+      "Not completed",
+      []
+    ],
+    [
+      "Russische Wörter",
+      "Nicht erfasst",
+      "Unleserlich, nicht erkannt",
+      "Nicht erfasst",
+      "Fail",
+      []
+    ],
+    [
+      "Halten-zum-Sprechen-Modus",
+      "Nicht erfasst",
+      "Funktionierte laut Tester; nicht gestoppt",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Menü zur Textumformulierung",
+      "-",
+      "Nicht benutzt",
+      "-",
+      "Not completed",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "Meeting-Aufnahme",
+      "-",
+      "Nicht benutzt",
+      "-",
+      "Not completed",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "Feedback-Formular",
+      "-",
+      "Geöffnet; Absenden nicht erfasst",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "Schreibton Formal / Informell",
+      "-",
+      "Dropdown geöffnet; Wirkung nicht getestet",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Hielt die App schriftlich und im Vergleich zu seinem Cloud-Werkzeug für langsam, bevor er den Standard-Umschaltmodus verstand, und schrieb danach „jede Aussage zur Länge und so weiter war falsch“. Der Willkommensbildschirm und Setup-Schritt 4 erklären beide „drücken, sprechen, erneut drücken“; er sagt, er habe es übersehen oder als schwer verständlich empfunden."
+    ],
+    [
+      "tester-error",
+      "Schrieb, das Modell sei „drei Gigabyte“ groß, und sagte einem Kontakt, die App „frisst 3,3 Gigabyte auf deinem Speicher“. 3,3 GB ist die gemeinsame Download-Größe auf dem Setup-Bildschirm; der Arbeitsspeicherbedarf im Betrieb wurde nicht gemessen."
+    ],
+    [
+      "tester-error",
+      "War von der Zwei-Faktor-Authentifizierung „wirklich beeindruckt“, doch der Screenshot zeigt nur einen Link „Aktivieren“; sie war nicht eingeschaltet."
+    ],
+    [
+      "assumption",
+      "Das Scheitern bei Russisch kann daran liegen, dass die Diktiersprache auf Deutsch stand. Die damalige Einstellung wurde nicht erfasst; das ist eine Schlussfolgerung."
+    ],
+    [
+      "tester-error",
+      "Lücken in der Dokumentation: App- und macOS-Version, Installations- und Endzeit, Setup-Dauer, welche Diktiertaste gewählt wurde, der gesprochene Text und die Spracheinstellung bei den Tests mit Französisch und Russisch, jede gemessene Verzögerung, ob das Feedback-Formular abgeschickt wurde, wie der Lifetime-Zugang zustande kam. Die Hardware-Kopfzeile lautet „Mac 4 ... VRAM“; Apple Silicon hat Unified Memory, und der Chip wurde später als M4 Pro genannt."
+    ]
+  ],
+  "findings": [
+    [
+      "SP-01",
+      "Der Tester las die DMG-Größe mit 20 MB ab; kein Screenshot. Das Installationsfenster zeigt das App-Symbol neben einer Verknüpfung zu „Programme“. Die eigene Prüfung des Verzeichnisses am selben Tag nennt 18,2 MB für Version 2.2.4 (Drittquelle).",
+      "Installation",
+      "observed",
+      "Positive",
+      [
+        "sprich-app-icon-and-applications-folder"
+      ]
+    ],
+    [
+      "SP-02",
+      "Ein Konto ist nötig: Setup-Schritt 1, „Anmelden“, ist vor dem Modellschritt abgehakt, und der Tester sagt, eine Registrierung sei erforderlich.",
+      "Installation",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "SP-03",
+      "Das Setup lädt zwei Modelle einmalig herunter: Sprich Transcribe v3 (Spracherkennung, etwa 480 MB) und Sprich Turbo v3 (Textverbesserung, etwa 2,8 GB), zusammen etwa 3,3 GB laut App-Text. Der Download läuft im Hintergrund, während die nächsten Schritte erledigt werden. Das sind Download-Größen, nicht der Arbeitsspeicherbedarf im Betrieb.",
+      "Einstieg",
+      "measured",
+      "Positive",
+      [
+        "sprich-setup-two-models-download-3-3-gb"
+      ]
+    ],
+    [
+      "SP-04",
+      "Die Bildschirme nennen nur „Sprich Transcribe v3“ und „Sprich Turbo v3“; die zugrunde liegenden Modelle werden nicht genannt. Der Entwickler nennt Parakeet und etwa 25 europäische Sprachen; das PromptQuorum-Verzeichnis nennt 57 Sprachen (Drittquelle). Keine der beiden Angaben wurde überprüft, und sie stimmen nicht überein.",
+      "Einstieg",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SP-05",
+      "Setup-Schritt 5, „Fast geschafft“, erschien, während die Modelle noch heruntergeladen wurden (Spracherkennung 72 %, Textverbesserung 12 %), und besagt, dass das Diktieren beginnt, sobald sie fertig sind. Die gesamte Download- und Setup-Dauer ist nicht erfasst.",
+      "Einstieg",
+      "measured",
+      "Info",
+      [
+        "sprich-setup-final-step-models-still-loading"
+      ]
+    ],
+    [
+      "SP-06",
+      "Die Diktiertaste lässt sich ändern, und der Tester änderte sie; welche Taste er wählte, ist nicht erfasst. Setup-Schritt 4 zeigt Fn, während die Illustration des Willkommensbildschirms die rechte Befehlstaste zeigt („⌘ Rechts“); welche die Standardtaste ist und welche er einstellte, ist nicht erfasst. Es gibt zwei Modi: Einrasten (zum Starten drücken, zum Stoppen drücken; als Standard markiert) und Gedrückt halten (Aufnahme, solange die Taste gehalten wird).",
+      "Einstieg",
+      "observed",
+      "Low",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold",
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-07",
+      "Im Standard-Umschaltmodus benutzte der Tester die Taste falsch und las das Ergebnis als langsame App: Schätzung des Testers, mehrere Sekunden, manchmal über 10 s, bis Text erschien. Nach richtiger Benutzung fand er sie schnell. Die Anleitung steht zweimal auf dem Bildschirm, auf Deutsch. Dass sich ein Standard-Umschaltmodus von der Halten-zum-Sprechen-Gewohnheit vieler Nutzer unterscheidet, ist eine Annahme.",
+      "Nutzung",
+      "observed",
+      "Medium",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold"
+      ]
+    ],
+    [
+      "SP-08",
+      "Nach dem Fehler beurteilte der Tester das Diktieren als „augenblicklich“ und, in einer Nachricht an einen Kontakt, als so schnell wie seine Online-Diktier-App, die nicht genannt wird. Es wurde keine Verzögerung gestoppt; der Verlauf zeigt Aufnahmelänge und gesparte Zeit, nicht die Latenz.",
+      "Nutzung",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "SP-09",
+      "Das englische Diktat in Word ergab vier Verlaufseinträge mit 7 bis 13 Wörtern. Einer lautet im Verlauf „Sprich Ae“, wo die Notizen des Testers „Sprich AI“ zeigen; was er sagte und ob er den Text bearbeitete, ist nicht erfasst.",
+      "Kernfunktion",
+      "observed",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-10",
+      "Das deutsche Diktat in WhatsApp kam mit Anrede, Absätzen und Satzzeichen an; der Tester sagt, es habe den Text richtig gegliedert (Tester-Meinung). Eine Formulierung, „die doppelt drücken knüpfen muss“, wirkt merkwürdig; der gemeinte Wortlaut ist nicht erfasst.",
+      "Kernfunktion",
+      "observed",
+      "Positive",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "SP-11",
+      "Das englische Diktat in Telegram kam als drei Nachrichten an, wobei Füllwörter wie „Uh“ erhalten blieben. Der Setup-Bildschirm verspricht die Korrektur von Satzzeichen, Groß- und Kleinschreibung und Erkennungsfehlern, nicht von Füllwörtern; es ist also kein Verfehlen dieses Versprechens.",
+      "Kernfunktion",
+      "observed",
+      "Info",
+      [
+        "sprich-telegram-english-dictation-result"
+      ]
+    ],
+    [
+      "SP-12",
+      "Ein französischer Satz wurde diktiert und sein Text steht in den Notizen. Der Tester beurteilte die Genauigkeit nicht, und der gesprochene Satz ist nicht erfasst.",
+      "Sprachen",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SP-13",
+      "Ein russischer Test „ging verloren“, so der Tester: Die App verstand die Wörter nicht, und die Ausgabe war unleserlich. Der gesprochene Satz und die damalige Diktiersprache sind nicht erfasst.",
+      "Sprachen",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-14",
+      "Ein Tab „Verlauf“ listet jedes Diktat mit Uhrzeit, Ziel-App, Text, Aufnahmelänge, Wortzahl und gesparter Zeit, dazu ein Suchfeld und einen App-Filter. Dem Tester gefällt, dass die Texte erhalten bleiben, und er sieht darin eine Möglichkeit, alles Diktierte wiederzufinden (Tester-Meinung).",
+      "Verlauf",
+      "observed",
+      "Positive",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-15",
+      "Die Werte für gesparte Zeit widersprechen sich auf demselben Bildschirm (siehe die Zahlentabelle). Die App erklärt nicht, wie „gespart“ berechnet wird oder was jeder Wert umfasst.",
+      "Verlauf",
+      "measured",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "SP-16",
+      "Ein Popup-Menü bietet Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle und Verfassen. Der Tester wollte verstehen, wie es funktioniert, und benutzte es nicht. Welches Programm das Menü bereitstellt, Sprich oder macOS, ist nicht erfasst.",
+      "Funktionen",
+      "observed",
+      "Info",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "SP-17",
+      "Die Einstellungen haben ein Dropdown Schreibton, Formal (abgehakt) oder Informell. Gesehen wurde nur das Dropdown; das „Wow“ des Testers bezieht sich auf die Option, nicht auf ein getestetes Ergebnis.",
+      "Funktionen",
+      "observed",
+      "Info",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ],
+    [
+      "SP-18",
+      "Die Aufnahmeanzeige lässt sich auf Taste, Mikro (ausgewählt) oder Kein stellen. Der Tester sah eine Mikrofon-Blase von Grau zu Orange wechseln; die Kopfzeile zeigt „Mikro bereit“.",
+      "Funktionen",
+      "observed",
+      "Positive",
+      [
+        "sprich-settings-recording-indicator-mic"
+      ]
+    ],
+    [
+      "SP-19",
+      "Die Oberfläche ist nur deutsch, und der Tester fand keinen Sprachwechsel, sodass er keine englischen Screenshots machen konnte. Der Entwickler sagt, sie sei bisher nur deutsch, weil die lokale Version auf Deutsch optimiert sei (Herstellerangabe).",
+      "Oberfläche",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-20",
+      "Ein Tab „Meetings“ bietet „Meeting aufnehmen“; sein Hinweis besagt, dass Anrufe ein Transkript, eine Zusammenfassung und Aufgaben liefern und alles auf dem Mac bleibt. Der Tester hat noch kein Meeting aufgenommen und plant, es mit ein paar Personen in einem Raum auszuprobieren.",
+      "Funktionen",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "SP-21",
+      "Die Kontoseite auf sprich.ai bietet eine Passwortänderung und die Zwei-Faktor-Authentifizierung. Die 2FA-Karte zeigt einen Link „Aktivieren“, sie ist also ausgeschaltet.",
+      "Website",
+      "observed",
+      "Info",
+      [
+        "sprich-account-security-page-two-factor-off"
+      ]
+    ],
+    [
+      "SP-22",
+      "Ein Formular „Bug melden“ hat die Tabs Bug, Feedback und Feature und Felder für Titel, Beschreibung, erwartetes und tatsächliches Ergebnis, Häufigkeit und bis zu 3 Anhänge von je 1 MB. Der Abschnitt „Mitgesendete Daten“ wurde nicht geöffnet, und ob etwas gesendet wurde, ist nicht erfasst. Der Tester nennt es beeindruckend (Tester-Meinung). „Transcripts are never sent“ ist eine Herstellerangabe.",
+      "Feedback",
+      "observed",
+      "Positive",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "SP-23",
+      "Der Willkommensbildschirm und das Setup besagen, dass alles lokal läuft, dass Stimme und Text den Mac nie verlassen und dass die App vollständig offline funktioniert. Der Netzwerkverkehr wurde nicht untersucht und ein Offline-Lauf nicht ausprobiert.",
+      "Vertrauen",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-24",
+      "Nicht getestet oder nicht erfasst: Dateitranskription und der Wörterbuch-Tab (beide in der Navigation sichtbar), die Wirkung des Umformulierungsmenüs und der Tonalitätseinstellung, Diktat in Mail, Notizen, Slack oder einen Browser, Tarif und Preis, Arbeitsspeicherbedarf im Betrieb, Deinstallation.",
+      "Umfang",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf einen Erstnutzer. Vorgeschlagen, nicht gemessen. „Info“ kennzeichnet einen Befund, der weder ein Problem noch eine Stärke ist; „Positiv“ kennzeichnet etwas, das gut funktionierte.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Deutschsprachige Mac-Nutzer mit Apple Silicon, die auf Deutsch oder Englisch in Alltags-Apps diktieren und die Verarbeitung lokal haben wollen, wie die App es angibt (Annahme aus einer Sitzung)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Alle, die heute Russisch oder eine nicht deutsche Oberfläche brauchen, oder einen Intel-Mac (das Verzeichnis nennt nur Apple Silicon)."
+      ]
+    ],
+    "retest": "Neutest bei einer neuen Hauptversion, einer veröffentlichten englischen Oberfläche oder einer bestätigten Sprachliste. Abdecken: App- und macOS-Version erfassen; die Verzögerung stoppen; Russisch mit eingestellter Sprache; Dateitranskription; Meetings; das Umformulierungsmenü; Offline-Nutzung bei untersuchtem Netzwerkverkehr; Arbeitsspeicherbedarf im Betrieb; Deinstallation."
+  },
+  "background_intro": "Nicht aus der Praxis. Der folgende Punkt stammt aus dem PromptQuorum-Verzeichniseintrag zu Sprich und wurde hier nicht überprüft.",
+  "background": [
+    [
+      "third-party",
+      "Closed Source, Freemium mit einmaliger Lifetime-Option; macOS 15 oder neuer, nur Apple Silicon; Website nur auf Deutsch. Das Verzeichnis merkt an, dass die eigenen Seiten des Herstellers die Angaben zu Sprachmodell und Windows nicht in Einklang bringen. Quelle: PromptQuorum-Verzeichnistestbericht, Version 2.2.4, geprüft am 9.11.2026; das Changelog zeigt ein Update am 22.10.2026."
+    ]
+  ],
+  "sources": [
+    "Hands-on-Notizen und Screenshots des Testers, 9. November 2026 (Original-Word-Notizen; PDF der Rohnotizen folgt).",
+    "PromptQuorum-Verzeichniseintrag und Testbericht zu Sprich (Slug: sprich), geprüft am 9.11.2026.",
+    "Herstellerseite sprich.ai (Herstellerangaben)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "sprich-welcome-screen-press-once-speak-press-again",
+      "figure": 1,
+      "file": "sprich-welcome-screen-press-once-speak-press-again.webp",
+      "path": "images/sprich-welcome-screen-press-once-speak-press-again.webp",
+      "alt": "Willkommensbildschirm von Sprich: Überschrift „Sprich schreibt, was du sagst“, drei Schritte drücken, sprechen, erneut drücken und ein Hinweis, dass Stimme und Text den Mac nie verlassen.",
+      "caption": "Willkommensbildschirm (deutsch). Er zeigt „einmal drücken, sprechen, erneut drücken“. Die Zeile „verlassen nie deinen Mac“ ist eine Herstellerangabe.",
+      "role": "hero",
+      "width": 1434,
+      "height": 1258,
+      "bytes": 62152,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-app-icon-and-applications-folder",
+      "figure": 2,
+      "file": "sprich-app-icon-and-applications-folder.webp",
+      "path": "images/sprich-app-icon-and-applications-folder.webp",
+      "alt": "App-Symbol von Sprich, eine weiße Kachel mit „spr“ in Schwarz, einem Schallwellen-Zeichen und „ich“ in Orange, neben der Verknüpfung zum Ordner „Programme“ im DMG-Fenster.",
+      "caption": "Installationsfenster. Beobachtet.",
+      "role": "moment",
+      "width": 1158,
+      "height": 542,
+      "bytes": 12762,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-setup-two-models-download-3-3-gb",
+      "figure": 3,
+      "file": "sprich-setup-two-models-download-3-3-gb.webp",
+      "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
+      "alt": "Setup-Schritt 2 von 5: Zwei Modelle werden einmalig heruntergeladen, Sprich Transcribe v3 mit etwa 480 MB und Sprich Turbo v3 mit etwa 2,8 GB, zusammen etwa 3,3 GB.",
+      "caption": "Modellschritt des Setups. Die Größen sind die eigenen Angaben der App (gemessen); „funktioniert vollständig offline“ ist eine Herstellerangabe.",
+      "role": "moment",
+      "width": 1386,
+      "height": 1306,
+      "bytes": 61892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "figure": 4,
+      "file": "sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "path": "images/sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "alt": "Setup-Schritt 4 von 5: Diktiertaste auf Fn gesetzt, mit der Wahl zwischen Einrasten (zum Starten drücken, zum Stoppen drücken, Standard) und Gedrückt halten (zum Aufnehmen halten).",
+      "caption": "Schritt zu Taste und Modus. Der Umschaltmodus ist als Standard markiert. Beobachtet.",
+      "role": "moment",
+      "width": 1388,
+      "height": 1364,
+      "bytes": 78912,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-setup-final-step-models-still-loading",
+      "figure": 5,
+      "file": "sprich-setup-final-step-models-still-loading.webp",
+      "path": "images/sprich-setup-final-step-models-still-loading.webp",
+      "alt": "Setup-Schritt 5 von 5, „Fast geschafft“: Download der Spracherkennung bei 72 Prozent und der Textverbesserung bei 12 Prozent, Schritte 1 bis 4 abgehakt.",
+      "caption": "Modelle werden am Ende des Setups noch heruntergeladen. Uhrzeit nicht erfasst. Gemessen.",
+      "role": "moment",
+      "width": 1376,
+      "height": 1174,
+      "bytes": 32056,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-history-first-four-dictations-in-word",
+      "figure": 6,
+      "file": "sprich-history-first-four-dictations-in-word.webp",
+      "path": "images/sprich-history-first-four-dictations-in-word.webp",
+      "alt": "Verlauf von Sprich mit vier Diktaten in Microsoft Word, je 7 bis 13 Wörter, insgesamt 38 Wörter; ein Eintrag lautet „Sprich Ae“.",
+      "caption": "Verlauf nach den ersten vier Tests in Word, 9. November, 17:43 bis 17:49 Uhr. Beobachtet.",
+      "role": "moment",
+      "width": 1600,
+      "height": 967,
+      "bytes": 62072,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-whatsapp-german-dictation-result",
+      "figure": 7,
+      "file": "sprich-whatsapp-german-dictation-result.webp",
+      "path": "images/sprich-whatsapp-german-dictation-result.webp",
+      "alt": "WhatsApp-Eingabefeld, per Diktat gefüllt: eine deutsche Nachricht mit Anrede, Absätzen und Satzzeichen, die besagt, dass die App jetzt so schnell sei wie seine Online-App.",
+      "caption": "Deutsches Diktat in WhatsApp. Text und Satzzeichen wie eingefügt; eine Formulierung wirkt merkwürdig. Beobachtet.",
+      "role": "moment",
+      "width": 912,
+      "height": 420,
+      "bytes": 45228,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-telegram-english-dictation-result",
+      "figure": 8,
+      "file": "sprich-telegram-english-dictation-result.webp",
+      "path": "images/sprich-telegram-english-dictation-result.webp",
+      "alt": "Telegram-Chat mit drei englischen, per Diktat erzeugten Nachrichten, bei denen Füllwörter wie „Uh“ erhalten blieben, und einer Empfehlung des Werkzeugs an einen Kontakt.",
+      "caption": "Englisches Diktat in Telegram. Füllwörter bleiben im Text. Beobachtet.",
+      "role": "moment",
+      "width": 1058,
+      "height": 904,
+      "bytes": 107030,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-history-32-dictations-time-saved-counters",
+      "figure": 9,
+      "file": "sprich-history-32-dictations-time-saved-counters.webp",
+      "path": "images/sprich-history-32-dictations-time-saved-counters.webp",
+      "alt": "Kopfzeile des Sprich-Verlaufs: 32 Transkriptionen, 676 Wörter, 19 Minuten gespart und eine Überschrift mit 12 Minuten 23 Sekunden gespart in dieser Woche; darunter drei Einträge.",
+      "caption": "Verlauf um 18:07 Uhr am 9. November. Die beiden Werte für gesparte Zeit weichen voneinander ab. Von der App gemessen.",
+      "role": "moment",
+      "width": 1600,
+      "height": 979,
+      "bytes": 66118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-text-rewrite-popup-menu",
+      "figure": 10,
+      "file": "sprich-text-rewrite-popup-menu.webp",
+      "path": "images/sprich-text-rewrite-popup-menu.webp",
+      "alt": "Popup-Menü: Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle, Verfassen.",
+      "caption": "Menü zur Textumformulierung. Im Test nicht benutzt; welches Programm es bereitstellt, ist nicht erfasst. Beobachtet.",
+      "role": "moment",
+      "width": 570,
+      "height": 720,
+      "bytes": 29550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-settings-writing-tone-formal-informal",
+      "figure": 11,
+      "file": "sprich-settings-writing-tone-formal-informal.webp",
+      "path": "images/sprich-settings-writing-tone-formal-informal.webp",
+      "alt": "Einstellungen: Dropdown Schreibton geöffnet, Formal abgehakt und Informell darunter.",
+      "caption": "Einstellung zum Schreibton. Gesehen wurde nur das Dropdown; die Wirkung wurde nicht getestet. Beobachtet.",
+      "role": "moment",
+      "width": 1431,
+      "height": 178,
+      "bytes": 8862,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-settings-recording-indicator-mic",
+      "figure": 12,
+      "file": "sprich-settings-recording-indicator-mic.webp",
+      "path": "images/sprich-settings-recording-indicator-mic.webp",
+      "alt": "Einstellungen, Anzeige: Indikator dafür, was während der Aufnahme angezeigt wird, mit den Optionen Taste, Mikro (ausgewählt) und Kein.",
+      "caption": "Einstellung zur Aufnahmeanzeige. Beobachtet.",
+      "role": "moment",
+      "width": 1600,
+      "height": 214,
+      "bytes": 7838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-account-security-page-two-factor-off",
+      "figure": 13,
+      "file": "sprich-account-security-page-two-factor-off.webp",
+      "path": "images/sprich-account-security-page-two-factor-off.webp",
+      "alt": "Kontoseite auf sprich.ai, Sicherheit: Passwortoptionen und eine Karte zur Zwei-Faktor-Authentifizierung mit einem Link „Aktivieren“, sie ist also nicht eingeschaltet.",
+      "caption": "Kontoseite der Website. Beobachtet.",
+      "role": "moment",
+      "width": 1429,
+      "height": 603,
+      "bytes": 32114,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-meetings-tab-record-meeting-tip",
+      "figure": 14,
+      "file": "sprich-meetings-tab-record-meeting-tip.webp",
+      "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
+      "alt": "Meetings-Tab ohne Meetings, ein Hinweis zur Aufnahme von Anrufen für Transkript, Zusammenfassung und Aufgaben, eine Schaltfläche „Meeting aufnehmen“ und ein LIFETIME-Badge.",
+      "caption": "Meetings-Tab beim ersten Öffnen. Im Test nicht benutzt. Die Aussage zur Zusammenfassung im Hinweis ist eine Herstellerangabe.",
+      "role": "moment",
+      "width": 1600,
+      "height": 1050,
+      "bytes": 54740,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-bug-report-form",
+      "figure": 15,
+      "file": "sprich-bug-report-form.webp",
+      "path": "images/sprich-bug-report-form.webp",
+      "alt": "Formular „Bug melden“ mit den Tabs Bug, Feedback und Feature, Feldern für Titel, Beschreibung, erwartetes und tatsächliches Ergebnis, Häufigkeit und einem Datenschutzhinweis.",
+      "caption": "Feedback-Formular. Ob es abgeschickt wurde, ist nicht erfasst. Die Zeile „nie gesendet“ ist eine Herstellerangabe.",
+      "role": "moment",
+      "width": 1126,
+      "height": 1172,
+      "bytes": 43534,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    }
+  ],
+  "figure_order": [
+    "sprich-welcome-screen-press-once-speak-press-again",
+    "sprich-app-icon-and-applications-folder",
+    "sprich-setup-two-models-download-3-3-gb",
+    "sprich-setup-dictation-key-fn-toggle-or-hold",
+    "sprich-setup-final-step-models-still-loading",
+    "sprich-history-first-four-dictations-in-word",
+    "sprich-whatsapp-german-dictation-result",
+    "sprich-telegram-english-dictation-result",
+    "sprich-history-32-dictations-time-saved-counters",
+    "sprich-text-rewrite-popup-menu",
+    "sprich-settings-writing-tone-formal-informal",
+    "sprich-settings-recording-indicator-mic",
+    "sprich-account-security-page-two-factor-off",
+    "sprich-meetings-tab-record-meeting-tip",
+    "sprich-bug-report-form"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "9. November 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "Speicher",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Quelle",
+      "Beobachtung",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passt es in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "App",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv",
+      "Info": "Info"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
+  }
+}

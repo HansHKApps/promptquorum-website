@@ -1,0 +1,1350 @@
+{
+  "id": "pq-test-sprich-2026-11-09",
+  "hero": "sprich-welcome-screen-press-once-speak-press-again",
+  "date_human": "2026년 11월 9일",
+  "captured": "2026-11-09; 앱 기록 기준 17:43부터 18:07까지, 설치 시작과 종료 시각은 기록 없음",
+  "standard_version": "0.2",
+  "locale": "ko",
+  "app": {
+    "name": "Sprich",
+    "slug": "sprich",
+    "vendor": "Not recorded (the maker is not named in the notes)",
+    "category": "로컬 받아쓰기 / 음성 인식(STT), Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://www.sprich.ai"
+  },
+  "title": "24 GB M4 Pro Mac에서 Sprich 직접 사용: 모든 앱에 입력되는 로컬 받아쓰기",
+  "page_title": "Sprich 테스트",
+  "dek": "2026년 11월 9일의 첫 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 대부분 사용해 보지 않았습니다.",
+  "seo": {
+    "title": "Sprich 직접 테스트: M4 Pro Mac 로컬 받아쓰기",
+    "description": "24 GB M4 Pro Mac에서 Sprich를 직접 테스트했습니다. Word·WhatsApp·Telegram에서 영어와 독일어 받아쓰기는 작동했고 러시아어는 실패했습니다."
+  },
+  "faq": [
+    [
+      "Sprich는 다른 앱에서도 작동하나요?",
+      "테스터가 써 본 앱에서는 작동했습니다. 받아쓰기로 Microsoft Word, WhatsApp, Telegram에 텍스트가 입력되었습니다. Mail, Notes, Slack, 브라우저는 사용해 보지 않았습니다.",
+      "observed"
+    ],
+    [
+      "테스트에서 Sprich는 어떤 언어를 처리했나요?",
+      "영어와 독일어는 작동했습니다. 프랑스어 문장도 받아쓰기했고 그 텍스트가 메모에 있지만 정확도는 판단하지 않았습니다. 러시아어 테스트는 실패했고 출력이 알아볼 수 없게 깨졌습니다. 당시 설정된 받아쓰기 언어는 기록되어 있지 않습니다.",
+      "observed"
+    ],
+    [
+      "Sprich의 인터페이스는 영어로 제공되나요?",
+      "아니요. 테스터는 독일어 인터페이스만 확인했고 언어 전환 기능은 찾지 못했습니다. 개발자는 지금까지 독일어 전용이며, 로컬 버전이 독일어에 맞춰 최적화되어 있어 의도적으로 그렇게 했다고 밝혔지만, 이는 확인되지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Sprich의 내려받기 크기는 얼마나 되나요?",
+      "설정 과정에서 모델 두 개, Sprich Transcribe v3(약 480 MB)와 Sprich Turbo v3(약 2.8 GB)를 내려받으며, 앱 자체 문구 기준으로 합쳐서 약 3.3 GB입니다. 이는 내려받기 크기이며 실행 시 메모리는 측정하지 않았습니다.",
+      "measured"
+    ],
+    [
+      "Sprich는 정말 오프라인으로, 로컬에서 실행되나요?",
+      "앱은 모든 처리가 로컬에서 이루어지고, 음성과 텍스트가 Mac 밖으로 나가지 않으며, 완전히 오프라인으로 작동한다고 밝힙니다. 네트워크 트래픽은 점검하지 않았고 오프라인 실행도 시도하지 않았으므로 확인되지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "Sprich는 빨랐나요?",
+      "테스터는 처음에 기본 토글 모드를 잘못 사용해서(한 번 누르고, 말하고, 다시 누르기) 느리다고 판단했습니다. 올바르게 사용한 뒤에는 즉각적이고 자신이 쓰는 클라우드 받아쓰기 도구만큼 빠르다고 평가했습니다. 시간을 잰 것은 없습니다.",
+      "tester-estimate"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-10",
+  "started": "2026-11-09",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Sprich(sprich.ai), 창 제목에는 “sprich.ai”라고 표시됩니다",
+      "observed"
+    ],
+    [
+      "Version",
+      "기록 없음. 디렉터리는 2026-11-09에 공급업체 사이트에서 버전 2.2.4를 확인했으며, 테스터의 빌드는 다를 수 있습니다.",
+      null
+    ],
+    [
+      "Source",
+      "기록 없음. 디렉터리는 sprich.ai의 공급업체 내려받기 페이지를 기재하고 있습니다.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans(PromptQuorum 설립자)",
+      "observed"
+    ],
+    [
+      "Start",
+      "2026-11-09. 기록상 첫 받아쓰기는 17:43이고 마지막 스크린샷은 18:07이며, 설치 시작과 종료 시각은 기록되어 있지 않습니다.",
+      "observed"
+    ],
+    [
+      "Ended",
+      "기록 없음",
+      null
+    ],
+    [
+      "Hardware",
+      "Apple M4 Pro, 24 GB 통합 메모리, 다른 작업은 실행하지 않음. 메모의 머리글에는 “Mac 4 ... VRAM”이라고 적혀 있으나, 받아쓰기한 메모에서 칩은 M4 Pro로 언급되었습니다.",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS 버전은 기록 없음. 디렉터리는 macOS 15 이상, Apple Silicon 전용이라고 기재합니다(제3자).",
+      null
+    ],
+    [
+      "Why tested",
+      "메모는 이 앱을 테스터가 지금 쓰는 클라우드 받아쓰기 도구와 비교하며, 그 도구에는 기밀 데이터를 공유하지 않겠다고 적고 있습니다.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "목표로 명시되어 있지 않습니다. 메모에는 설정, 앱 세 곳에서의 받아쓰기, 언어, 기록, 설정과 Meetings 탭을 처음 살펴본 내용이 담겨 있습니다.",
+      null
+    ],
+    [
+      "Apps dictated into",
+      "Microsoft Word, WhatsApp, Telegram",
+      "observed"
+    ],
+    [
+      "AI help used",
+      "Claude가 테스터의 Word 메모와 스크린샷 15장을 바탕으로 이 보고서를 작성했습니다. 메모의 받아쓰기 부분은 Sprich 자체에서 나온 것으로 보이므로(가정: 기록 항목이 메모 텍스트와 일치함), 메모의 일부 오타는 앱 출력일 수 있습니다.",
+      "assumption"
+    ],
+    [
+      "Disclosure",
+      "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. Sprich는 이 테스트와 같은 날인 2026-11-09에 AI가 작성한 리뷰와 함께 디렉터리에 등재되었습니다. 앱 머리글에는 LIFETIME 배지가 표시되며, 테스터는 지인에게 보낸 메시지에서 음성 도구를 무료로 쓸 수 있게 되었다고 적었으나, 어떤 경위로 누구에게서 받았는지는 기록되어 있지 않습니다. 개발자는 테스트 후 테스터에게 답장했으며, 날짜는 밝혀져 있지 않고 개발자가 이 메모를 받았는지도 기록되어 있지 않습니다. Sprich는 이 사이트로부터 클릭을 받습니다. 메모에는 결제나 후원이 기록되어 있지 않습니다.",
+      "observed"
+    ]
+  ],
+  "disclosure": "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. Sprich는 이 테스트와 같은 날인 2026-11-09에 AI가 작성한 리뷰와 함께 디렉터리에 등재되었습니다. 앱 머리글에는 LIFETIME 배지가 표시되며, 테스터는 지인에게 보낸 메시지에서 음성 도구를 무료로 쓸 수 있게 되었다고 적었으나, 어떤 경위로 누구에게서 받았는지는 기록되어 있지 않습니다. 개발자는 테스트 후 테스터에게 답장했으며, 날짜는 밝혀져 있지 않고 개발자가 이 메모를 받았는지도 기록되어 있지 않습니다. Sprich는 이 사이트로부터 클릭을 받습니다. 메모에는 결제나 후원이 기록되어 있지 않습니다.",
+  "verdict": {
+    "general": "Apple Silicon Mac용으로 공들여 만든, 독일어 우선 받아쓰기 앱입니다. 이번 세션에서는 Word, WhatsApp, Telegram에서 영어와 독일어 받아쓰기가 작동했고 러시아어는 작동하지 않았습니다. 회의 녹음, 파일 텍스트 변환, 텍스트 다시 쓰기, 오프라인 작동, 개인정보 보호 주장, 삭제는 테스트하지 않았습니다.",
+    "fit": "테스터는 깊은 인상을 받았고, 5점 만점에 5점을 주었으며 지인에게 추천했습니다. 시간을 잰 것은 없지만 자신이 쓰는 클라우드 받아쓰기 도구만큼 빠르다고 평가합니다. 계속 사용할지는 그의 메모에 적혀 있지 않습니다."
+  },
+  "scores": [
+    [
+      "설치",
+      4,
+      "작은 DMG 파일을 응용 프로그램 폴더로 끌어다 놓으면 됩니다. 계정이 필요합니다."
+    ],
+    [
+      "온보딩과 모델 선택",
+      4,
+      "명확한 5단계와 백그라운드 내려받기가 있고, 모델 선택은 제공되지 않습니다."
+    ],
+    [
+      "핵심 기능",
+      4,
+      "앱 세 곳에서 영어와 독일어 받아쓰기가 작동했고 러시아어는 실패했습니다."
+    ],
+    [
+      "안내와 반복 작업",
+      3,
+      "기본 키 모드가 테스터를 한 번 헷갈리게 했고 인터페이스는 독일어 전용이며, 피드백 양식이 내장되어 있습니다."
+    ],
+    [
+      "성능",
+      null,
+      "시간을 재지 않았습니다. 테스터는 올바르게 사용한 뒤 즉각적이었다고 추정합니다."
+    ],
+    [
+      "문서",
+      null,
+      "앱 내 문구만 확인했고, 설명서나 웹사이트 가이드는 열어 보지 않았습니다."
+    ],
+    [
+      "신뢰와 개인정보 보호",
+      null,
+      "감사하지 않았습니다. 로컬 및 오프라인 주장은 테스트하지 않았습니다."
+    ],
+    [
+      "삭제",
+      null,
+      "테스트하지 않았습니다."
+    ]
+  ],
+  "scores_note": "점수는 보고서 작성자가 테스터의 근거를 바탕으로 제안한 것입니다. n/a는 0점이 아니라 테스트하지 않았다는 뜻입니다.",
+  "tldr": [
+    [
+      "observed",
+      "Sprich는 Mac용 받아쓰기 앱입니다. 키를 누르고 말하면 커서가 있는 곳에 텍스트가 나타납니다. 테스터는 24 GB의 Apple M4 Pro에서 실행했습니다. 설정은 5단계이며 모델 두 개를 합쳐 약 3.3 GB 내려받습니다."
+    ],
+    [
+      "observed",
+      "받아쓰기는 Microsoft Word, WhatsApp, Telegram에서 영어와 독일어로 작동했습니다. 러시아어 테스트는 실패했습니다. 기록에서는 제품명이 “Sprich Ae”로 나왔습니다."
+    ],
+    [
+      "tester-error",
+      "테스터는 기본 토글 모드를 잘못 사용해서(한 번 누르고, 말하고, 다시 누르기) 처음에는 앱이 느리다고 판단했습니다. 올바르게 사용한 뒤에는 즉각적이라고 느꼈습니다. 속도는 한 번도 재지 않았습니다."
+    ],
+    [
+      "observed",
+      "인터페이스는 독일어 전용이며, 테스터는 언어 전환 기능을 찾지 못했습니다."
+    ],
+    [
+      "vendor-claim",
+      "앱은 모든 처리가 로컬과 오프라인에서 이루어지고 음성과 텍스트가 Mac 밖으로 나가지 않는다고 밝힙니다. 이는 테스트하지 않았습니다."
+    ],
+    [
+      "observed",
+      "회의 녹음, 텍스트 다시 쓰기 메뉴, 파일 텍스트 변환, 사전, 어조 설정의 효과, 오프라인 사용, 삭제는 테스트하지 않았습니다."
+    ]
+  ],
+  "quotes": [
+    "인터페이스도, 설정 과정도 정말 훌륭하고 정말 전문적이며 최고 수준입니다.",
+    "5점 만점에 5점, 10점 만점에 10점, 뭐라고 말해야 할지 모르겠습니다."
+  ],
+  "quote_note": "받아쓰기에서 가볍게 다듬은 테스터의 메모입니다. 둘 다 그의 판단이며 측정값이 아닙니다.",
+  "moments_title": "이 테스트를 형성한 여섯 가지 순간",
+  "moments_nav": "여섯 가지 순간",
+  "moments": [
+    [
+      "모델 두 개 내려받기",
+      "설정 2단계: 모델 두 개를 합쳐 약 3.3 GB, 한 번만 내려받습니다.",
+      "sprich-setup-two-models-download-3-3-gb",
+      "chapter-install"
+    ],
+    [
+      "한 번 누르고, 다시 누르기",
+      "설정의 키와 모드 단계. 기본 토글 모드가 처음에 테스터를 헷갈리게 했습니다.",
+      "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "chapter-install"
+    ],
+    [
+      "Word에서의 첫 받아쓰기 네 건",
+      "17:49의 기록. 항목 하나가 “Sprich Ae”로 나옵니다.",
+      "sprich-history-first-four-dictations-in-word",
+      "chapter-usage"
+    ],
+    [
+      "받아쓰기 32건, 절약 시간 수치 두 개",
+      "18:07의 기록: 머리글과 타일의 수치가 서로 다릅니다.",
+      "sprich-history-32-dictations-time-saved-counters",
+      "chapter-usage"
+    ],
+    [
+      "아직 아무도 쓰지 않은 다시 쓰기 메뉴",
+      "팝업 메뉴이며, 테스트에서는 사용하지 않았습니다.",
+      "sprich-text-rewrite-popup-menu",
+      "chapter-explore"
+    ],
+    [
+      "로컬에서 녹음하는 회의",
+      "Meetings 탭이며, 테스트에서는 사용하지 않았습니다.",
+      "sprich-meetings-tab-record-meeting-tip",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "내려받기, 첫 실행, 설정",
+      "items": [
+        [
+          "observed",
+          "테스트는 2026년 11월 9일에 진행되었습니다. 테스터는 작은 DMG 파일을 내려받았고 크기를 20 MB로 읽었으며, 스크린샷은 없습니다. 설치 창에는 앱 아이콘이 응용 프로그램 바로 가기 옆에 표시됩니다. 디렉터리는 버전 2.2.4를 18.2 MB로 기재합니다(제3자).",
+          "sprich-app-icon-and-applications-folder"
+        ],
+        [
+          "tester-view",
+          "테스터는 로고가 마음에 든다고 합니다. 독일어 단어 Sprich를 “spr”와 “ich”로 나눈 언어유희입니다.",
+          null
+        ],
+        [
+          "observed",
+          "계정이 필요합니다. 설정 1단계 “Anmelden”은 모델 단계 전에 완료 표시가 되며, 테스터는 가입이 필수라고 말합니다.",
+          null
+        ],
+        [
+          "measured",
+          "2단계에서 모델 두 개를 한 번 내려받습니다: Sprich Transcribe v3(음성 인식, 약 480 MB)와 Sprich Turbo v3(텍스트 개선, 약 2.8 GB)이며, 앱 자체 문구 기준으로 합쳐서 약 3.3 GB입니다. 내려받기는 다음 단계를 진행하는 동안 백그라운드에서 이루어집니다. 이는 내려받기 크기이며 실행 시 메모리가 아닙니다.",
+          "sprich-setup-two-models-download-3-3-gb"
+        ],
+        [
+          "observed",
+          "화면에는 그 밑에 있는 모델 이름이 나오지 않습니다. 테스터는 이를 알아차리고 알아보고 싶어 했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그는 받아쓰기 키를 바꿨으며, 어떤 키를 골랐는지는 기록되어 있지 않습니다. 4단계에는 Fn이 표시되는 반면 환영 화면의 그림에는 오른쪽 Command가 표시됩니다. 모드는 두 가지입니다: Einrasten(눌러서 시작, 다시 눌러서 중지, Standard로 표시됨)과 Gedrückt halten(누르고 있는 동안 녹음).",
+          "sprich-setup-dictation-key-fn-toggle-or-hold"
+        ],
+        [
+          "measured",
+          "모델이 아직 내려받는 중일 때 그는 마지막 단계 “Fast geschafft”에 도달했습니다: 음성 인식 72 %, 텍스트 개선 12 %. 총 내려받기 시간과 설정 소요 시간은 기록되어 있지 않습니다.",
+          "sprich-setup-final-step-models-still-loading"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "사용",
+      "items": [
+        [
+          "tester-error",
+          "Word에서의 첫 테스트는 느리게 느껴졌고 텍스트 하나가 사라진 것 같았습니다. 테스터는 음성 도구가 1~2초 안에 응답해야 하며 자신의 클라우드 도구가 더 빨랐다고 적었습니다. 그러다 자신의 실수를 알아챘습니다: 기본 토글 모드에서는 시작할 때 한 번, 멈출 때 한 번 키를 눌러야 합니다. 그는 메모를 정정했습니다.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "키를 잘못 사용했을 때 텍스트가 나타나기까지 몇 초, 때로는 10초 넘게 걸렸다고 테스터는 추정합니다. 올바르게 사용한 뒤에는 앱이 즉각적이라고 느꼈습니다. 시간을 잰 것은 없습니다.",
+          null
+        ],
+        [
+          "observed",
+          "Word에 한 영어 받아쓰기 첫 네 건(17:43~17:49)은 각각 7~13단어입니다. 하나는 테스터의 메모에 “Sprich AI”로 적힌 곳이 기록에는 “Sprich Ae”로 나와 있으며, 그가 무엇이라고 말했는지와 텍스트를 수정했는지는 기록되어 있지 않습니다.",
+          "sprich-history-first-four-dictations-in-word"
+        ],
+        [
+          "observed",
+          "WhatsApp에 한 독일어 받아쓰기는 인사말, 단락, 문장 부호와 함께 입력되었고, 테스터는 텍스트를 올바르게 정리해 주었다고 말합니다. “die doppelt drücken knüpfen muss”라는 구절 하나는 어색하게 읽히며, 의도한 문구는 기록되어 있지 않습니다.",
+          "sprich-whatsapp-german-dictation-result"
+        ],
+        [
+          "observed",
+          "Telegram에 한 영어 받아쓰기는 “Uh” 같은 군더더기 말이 그대로 남은 채 메시지 세 개로 입력되었습니다. 설정 화면은 문장 부호, 대문자 표기, 인식 오류의 교정을 약속하며 군더더기 말은 약속하지 않습니다.",
+          "sprich-telegram-english-dictation-result"
+        ],
+        [
+          "observed",
+          "프랑스어 문장도 받아쓰기했고 그 텍스트가 메모에 있습니다. 테스터는 정확도를 판단하지 않았고 말한 문장은 기록되어 있지 않습니다. 러시아어 테스트는 작동하지 않았습니다: 앱이 단어를 알아듣지 못했고 출력이 알아볼 수 없게 깨졌습니다. 당시의 언어 설정은 기록되어 있지 않으며, 독일어로 설정되어 있었다는 것은 추론입니다.",
+          null
+        ],
+        [
+          "measured",
+          "History 탭에는 모든 받아쓰기가 시각, 대상 앱, 텍스트, 녹음 길이, 단어 수, 절약한 시간과 함께 보관되어 있고, 검색창과 앱 필터도 있습니다. 17:49에는 머리글이 이번 주 41 s 절약, 타일이 56 s라고 표시했고, 18:07(전사 32건, 676단어)에는 머리글이 12 min 23 s, 타일이 19 m라고 표시했습니다. 앱은 “절약”이 어떻게 계산되는지 설명하지 않습니다.",
+          "sprich-history-32-dictations-time-saved-counters"
+        ],
+        [
+          "tester-view",
+          "나중에 그는 익숙한 누르고 있는 동안 말하기 모드로 바꿨고 다시 깊은 인상을 받았습니다. 시간은 재지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "설정, 부가 기능, 개발자의 답장",
+      "items": [
+        [
+          "observed",
+          "팝업 메뉴에는 Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle, Verfassen이 있습니다. 테스터는 작동 방식을 이해하고 싶었지만 사용하지는 않았습니다. 이 메뉴를 제공하는 것이 Sprich인지 macOS인지는 기록되어 있지 않습니다.",
+          "sprich-text-rewrite-popup-menu"
+        ],
+        [
+          "observed",
+          "설정에는 Schreibton 드롭다운이 있으며 Formal(선택됨) 또는 Informell을 고를 수 있습니다. 드롭다운만 확인했고, 테스터의 “Wow”는 테스트한 결과가 아니라 이 옵션에 대한 것입니다.",
+          "sprich-settings-writing-tone-formal-informal"
+        ],
+        [
+          "observed",
+          "녹음 표시기는 Taste, Mikro(선택됨), Kein으로 설정할 수 있습니다. 테스터는 마이크 말풍선이 회색에서 주황색으로 바뀌는 것을 보았으며, 머리글에는 “Mikro bereit”라고 표시됩니다.",
+          "sprich-settings-recording-indicator-mic"
+        ],
+        [
+          "observed",
+          "sprich.ai 계정 페이지에서는 비밀번호 변경과 2단계 인증을 제공합니다. 테스터는 후자에 “정말 깊은 인상”을 받았지만, 카드에는 “Aktivieren” 링크만 보이므로 켜지지 않은 상태였습니다.",
+          "sprich-account-security-page-two-factor-off"
+        ],
+        [
+          "vendor-claim",
+          "Meetings 탭에는 “Meeting aufnehmen”이 있으며, 안내 문구는 통화에서 전사본, 요약, 할 일이 나오고 모든 것이 Mac에 남는다고 말합니다. 테스터는 회의를 녹음한 적이 없고, 방에 몇 사람이 모인 자리에서 시험해 볼 계획입니다.",
+          "sprich-meetings-tab-record-meeting-tip"
+        ],
+        [
+          "observed",
+          "그는 영어 스크린샷을 만들려고 언어 전환 기능을 찾았지만 찾지 못했습니다. 인터페이스는 독일어 전용입니다.",
+          null
+        ],
+        [
+          "observed",
+          "내장된 “Bug melden” 양식에는 Bug, Feedback, Feature 탭이 있고, 제목, 설명, 예상 결과와 실제 결과, 빈도 입력란과 각 1 MB의 첨부 파일을 최대 3개까지 넣을 수 있습니다. “Mitgesendete Daten” 항목은 열어 보지 않았고 무언가 전송되었는지는 기록되어 있지 않습니다. “Transcripts are never sent”는 양식 자체의 문구입니다.",
+          "sprich-bug-report-form"
+        ],
+        [
+          "vendor-claim",
+          "개발자는 테스트 후 테스터에게 독일어로 답장했으며, 날짜는 밝혀져 있지 않습니다. 의역하면 다음과 같습니다: 테스터가 이제 녹음을 Sprich로 하게 되어 기쁘다. Parakeet는 약 25개 유럽 언어를 알아듣고, 파일 텍스트 변환에서는 선택할 수 있다. 받아쓰기는 독일어에 맞춰 최적화되어 있으며, 독일어 문장 안의 영어 용어도 잘 작동한다. 인터페이스는 지금까지 독일어 전용이며, 로컬 버전이 독일어에 맞춰 최적화되어 있어 의도적으로 그렇게 했다. 이 중 어느 것도 확인되지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "결정",
+      "items": [
+        [
+          "observed",
+          "메모는 피드백 양식으로 끝나며, 계속 사용할지에 대한 결정은 없습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "테스터는 이 앱을 서버 위치를 알지 못하는 자신의 클라우드 도구와 비교하며, 그곳에는 기밀 데이터를 공유하지 않겠다고 말합니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "30년간의 컨설팅 경험에서 그는 회의록을 직접 쓰는 것을 중요하게 여기며, 방에 몇 사람이 모인 자리에서 로컬 회의록을 시험해 보고 싶어 합니다.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“Sprich schreibt, was du sagst.” 모든 앱에 받아쓰기: Mail, Notes, Slack, 브라우저. (Sprich는 당신이 말하는 것을 씁니다)",
+      "앱 환영 화면",
+      "Word, WhatsApp, Telegram에서 확인했습니다. Mail, Notes, Slack, 브라우저는 사용해 보지 않았습니다.",
+      "observed"
+    ],
+    [
+      "모든 처리가 로컬에서 이루어지고, 음성과 텍스트가 Mac 밖으로 나가지 않으며, 앱은 완전히 오프라인으로 작동합니다.",
+      "앱 환영 화면과 설정",
+      "확인하지 않았습니다. 네트워크 트래픽은 점검하지 않았고 오프라인 실행도 시도하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "설정은 “몇 분이면 끝납니다”.",
+      "앱 환영 화면",
+      "소요 시간은 기록되어 있지 않으며, 마지막 단계에서도 모델은 아직 내려받는 중이었습니다.",
+      "observed"
+    ],
+    [
+      "모델 두 개, 합쳐서 약 3.3 GB.",
+      "설정 2단계",
+      "표시된 크기는 합계와 일치하며, 디스크나 메모리 사용량은 측정하지 않았습니다.",
+      "measured"
+    ],
+    [
+      "텍스트 단계는 문장 부호, 대문자 표기, 인식 오류를 교정합니다.",
+      "설정 2단계",
+      "문장 부호와 단락은 WhatsApp에서 확인했고, Telegram에서는 군더더기 말이 남았습니다.",
+      "observed"
+    ],
+    [
+      "키와 모드는 설정의 Keyboard에서 언제든 바꿀 수 있습니다.",
+      "설정 4단계",
+      "테스터는 키를 바꿨고 나중에 모드도 바꿨습니다.",
+      "observed"
+    ],
+    [
+      "Meetings: 전사본, 요약, 할 일, 모두 Mac에서 처리됩니다.",
+      "Meetings 탭 안내 문구",
+      "테스트하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "받아쓰기는 독일어에 맞춰 최적화되어 있으며, Parakeet는 약 25개 유럽 언어를 알아듣습니다.",
+      "개발자 메시지",
+      "영어와 독일어는 작동했고 러시아어는 실패했으며, 파일 텍스트 변환은 사용해 보지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "57개 언어.",
+      "PromptQuorum 디렉터리 항목",
+      "확인되지 않았으며, 개발자가 밝힌 수치와 일치하지 않습니다.",
+      "third-party"
+    ],
+    [
+      "피드백 양식: 전사본은 절대 전송되지 않습니다.",
+      "버그 보고 양식",
+      "확인되지 않았습니다.",
+      "vendor-claim"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Word에 영어 테스트 문장 받아쓰기",
+      "Word",
+      "7단어, 10 s 녹음, “+7s” 절약",
+      "17:43",
+      "Pass",
+      []
+    ],
+    [
+      "Word에 영어 문장 받아쓰기",
+      "Word",
+      "13단어, 20 s, “+14s”",
+      "17:45",
+      "Pass",
+      []
+    ],
+    [
+      "Word에 영어 문장 받아쓰기",
+      "Word",
+      "8단어, 12 s, “+8s”, 제품명이 다름(“Sprich Ae”)",
+      "17:46",
+      "Partial",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "Word에 영어 문장 받아쓰기",
+      "Word",
+      "10단어, 15 s, “+11s”",
+      "17:49",
+      "Pass",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "키를 잘못 사용한 첫 시도",
+      "Word",
+      "테스터 추정: 텍스트가 나타나기까지 몇 초, 때로는 10 s 넘게 걸림",
+      "기록 없음",
+      "Fail",
+      []
+    ],
+    [
+      "Word에 영어 문장 받아쓰기",
+      "Word",
+      "6단어, 11 s, “+6s”, 지연 시간은 재지 않음",
+      "18:07",
+      "Pass",
+      [
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "WhatsApp에 독일어 메시지",
+      "WhatsApp",
+      "인사말, 단락, 문장 부호가 입력된 그대로",
+      "기록 없음",
+      "Pass",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "Telegram에 영어 메시지 세 건",
+      "Telegram",
+      "68단어 125 s “+1 min 14s”, 37단어 63 s “+40s”, 29단어 49 s “+31s”",
+      "18:06",
+      "Pass",
+      [
+        "sprich-telegram-english-dictation-result",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "프랑스어 문장",
+      "기록 없음",
+      "출력은 메모에 있고, 정확도는 판단하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ],
+    [
+      "러시아어 단어",
+      "기록 없음",
+      "깨짐, 인식되지 않음",
+      "기록 없음",
+      "Fail",
+      []
+    ],
+    [
+      "누르고 있는 동안 말하기 모드",
+      "기록 없음",
+      "테스터에 따르면 작동했으며, 시간은 재지 않음",
+      "기록 없음",
+      "Pass",
+      []
+    ],
+    [
+      "텍스트 다시 쓰기 메뉴",
+      "-",
+      "사용하지 않음",
+      "-",
+      "Not completed",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "회의 녹음",
+      "-",
+      "사용하지 않음",
+      "-",
+      "Not completed",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "피드백 양식",
+      "-",
+      "열어 봄, 전송 여부는 기록 없음",
+      "기록 없음",
+      "Partial",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "작성 어조 Formal / Informell",
+      "-",
+      "드롭다운을 열어 봄, 효과는 테스트하지 않음",
+      "기록 없음",
+      "Partial",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "기본 토글 모드를 이해하기 전에 앱이 느리다고, 글로 그리고 자신의 클라우드 도구와 비교해서 판단했으며, 바로잡은 뒤에는 “길이 등에 대한 모든 서술이 틀렸다”고 적었습니다. 환영 화면과 설정 4단계 모두 누르고, 말하고, 다시 누르라고 설명하는데, 그는 이를 놓쳤거나 따라가기 어려웠다고 말합니다."
+    ],
+    [
+      "tester-error",
+      "모델이 “3기가바이트”라고 적었고, 지인에게 이 앱이 “메모리를 3.3기가바이트 잡아먹는다”고 말했습니다. 3.3 GB는 설정 화면에 표시된 내려받기 크기의 합계이며, 실행 시 메모리는 측정하지 않았습니다."
+    ],
+    [
+      "tester-error",
+      "2단계 인증에 “정말 깊은 인상”을 받았지만, 스크린샷에는 “Aktivieren” 링크만 보이며 켜지지 않은 상태였습니다."
+    ],
+    [
+      "assumption",
+      "러시아어 실패는 받아쓰기 언어가 독일어로 설정되어 있었기 때문일 수 있습니다. 당시의 설정은 기록되어 있지 않으며, 이는 추론입니다."
+    ],
+    [
+      "tester-error",
+      "기록의 빈틈: 앱과 macOS 버전, 설치와 종료 시각, 설정 소요 시간, 선택한 받아쓰기 키, 프랑스어와 러시아어 테스트에서 말한 내용과 언어 설정, 측정한 지연 시간, 피드백 양식을 보냈는지, Lifetime 이용권을 어떻게 얻었는지. 하드웨어 머리글에는 “Mac 4 ... VRAM”이라고 적혀 있습니다. Apple Silicon은 통합 메모리를 쓰며, 칩은 나중에 M4 Pro로 언급되었습니다."
+    ]
+  ],
+  "findings": [
+    [
+      "SP-01",
+      "DMG 파일의 내려받기 크기를 테스터는 20 MB로 읽었으며, 스크린샷은 없습니다. 설치 창에는 앱 아이콘이 응용 프로그램 바로 가기 옆에 표시됩니다. 같은 날 디렉터리 자체 확인은 버전 2.2.4를 18.2 MB로 기재합니다(제3자).",
+      "설치",
+      "observed",
+      "Positive",
+      [
+        "sprich-app-icon-and-applications-folder"
+      ]
+    ],
+    [
+      "SP-02",
+      "계정이 필요합니다. 설정 1단계 \"Anmelden\"은 모델 단계 전에 완료 표시가 되며, 테스터는 가입이 필수라고 말합니다.",
+      "설치",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "SP-03",
+      "설정에서 모델 두 개를 한 번 내려받습니다: Sprich Transcribe v3(음성 인식, 약 480 MB)와 Sprich Turbo v3(텍스트 개선, 약 2.8 GB)이며, 앱 자체 문구 기준으로 합쳐서 약 3.3 GB입니다. 내려받기는 다음 단계를 진행하는 동안 백그라운드에서 이루어집니다. 이는 내려받기 크기이며 실행 시 메모리가 아닙니다.",
+      "온보딩",
+      "measured",
+      "Positive",
+      [
+        "sprich-setup-two-models-download-3-3-gb"
+      ]
+    ],
+    [
+      "SP-04",
+      "화면에는 \"Sprich Transcribe v3\"와 \"Sprich Turbo v3\"만 나오며, 그 밑에 있는 모델은 이름이 나오지 않습니다. 개발자는 Parakeet와 약 25개 유럽 언어를 언급하고, PromptQuorum 디렉터리는 57개 언어를 기재합니다(제3자). 어느 수치도 확인되지 않았고 서로 일치하지 않습니다.",
+      "온보딩",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SP-05",
+      "설정 5단계 \"Fast geschafft\"는 모델이 아직 내려받는 중일 때(음성 인식 72 %, 텍스트 개선 12 %) 나타났으며, 모델이 끝나면 받아쓰기가 시작된다고 안내합니다. 총 내려받기 시간과 설정 소요 시간은 기록되어 있지 않습니다.",
+      "온보딩",
+      "measured",
+      "Info",
+      [
+        "sprich-setup-final-step-models-still-loading"
+      ]
+    ],
+    [
+      "SP-06",
+      "받아쓰기 키는 바꿀 수 있으며 테스터는 바꿨지만, 어떤 키를 골랐는지는 기록되어 있지 않습니다. 설정 4단계에는 Fn이 표시되는 반면 환영 화면의 그림에는 오른쪽 Command(\"⌘ Rechts\")가 표시되며, 어느 쪽이 기본값이고 어느 쪽을 그가 설정했는지는 기록되어 있지 않습니다. 모드는 두 가지입니다: Einrasten(눌러서 시작, 다시 눌러서 중지, Standard로 표시됨)과 Gedrückt halten(누르고 있는 동안 녹음).",
+      "온보딩",
+      "observed",
+      "Low",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold",
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-07",
+      "기본 토글 모드에서 테스터는 키를 잘못 사용했고 그 결과를 앱이 느리다고 읽었습니다: 테스터 추정으로 텍스트가 나타나기까지 몇 초, 때로는 10 s 넘게 걸렸습니다. 올바르게 사용한 뒤에는 빠르다고 느꼈습니다. 이 안내는 화면에 독일어로 두 번 나옵니다. 기본 토글이 많은 사용자의 누르고 있는 동안 말하기 습관과 다르다는 것은 가정입니다.",
+      "사용",
+      "observed",
+      "Medium",
+      [
+        "sprich-setup-dictation-key-fn-toggle-or-hold"
+      ]
+    ],
+    [
+      "SP-08",
+      "실수 뒤에 테스터는 받아쓰기가 \"즉각적\"이라고, 그리고 지인에게 보낸 메시지에서는 이름을 밝히지 않은 자신의 온라인 받아쓰기 앱만큼 빠르다고 평가했습니다. 지연 시간은 재지 않았으며, 기록에는 지연 시간이 아니라 녹음 길이와 절약한 시간이 표시됩니다.",
+      "사용",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "SP-09",
+      "Word에 한 영어 받아쓰기로 7~13단어의 기록 항목 네 개가 생겼습니다. 하나는 테스터의 메모에 \"Sprich AI\"로 적힌 곳이 기록에는 \"Sprich Ae\"로 나와 있으며, 그가 무엇이라고 말했는지와 텍스트를 수정했는지는 기록되어 있지 않습니다.",
+      "핵심 기능",
+      "observed",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-10",
+      "WhatsApp에 한 독일어 받아쓰기는 인사말, 단락, 문장 부호와 함께 입력되었으며, 테스터는 텍스트를 올바르게 정리해 주었다고 말합니다(테스터 의견). \"die doppelt drücken knüpfen muss\"라는 구절 하나는 어색하게 읽히며, 의도한 문구는 기록되어 있지 않습니다.",
+      "핵심 기능",
+      "observed",
+      "Positive",
+      [
+        "sprich-whatsapp-german-dictation-result"
+      ]
+    ],
+    [
+      "SP-11",
+      "Telegram에 한 영어 받아쓰기는 \"Uh\" 같은 군더더기 말이 그대로 남은 채 메시지 세 개로 입력되었습니다. 설정 화면은 문장 부호, 대문자 표기, 인식 오류의 교정을 약속하며 군더더기 말은 약속하지 않으므로, 이는 그 약속에 어긋나는 것은 아닙니다.",
+      "핵심 기능",
+      "observed",
+      "Info",
+      [
+        "sprich-telegram-english-dictation-result"
+      ]
+    ],
+    [
+      "SP-12",
+      "프랑스어 문장도 받아쓰기했고 그 텍스트가 메모에 있습니다. 테스터는 정확도를 판단하지 않았고 말한 문장은 기록되어 있지 않습니다.",
+      "언어",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SP-13",
+      "러시아어 테스트는 테스터의 설명에 따르면 \"엉망이 되었으며\", 앱이 단어를 알아듣지 못했고 출력이 알아볼 수 없게 깨졌습니다. 말한 구절과 당시의 받아쓰기 언어는 기록되어 있지 않습니다.",
+      "언어",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-14",
+      "History 탭에는 모든 받아쓰기가 시각, 대상 앱, 텍스트, 녹음 길이, 단어 수, 절약한 시간과 함께 나열되며, 검색창과 앱 필터도 있습니다. 테스터는 텍스트가 보관되는 점이 마음에 들고, 받아쓴 모든 내용을 다시 찾을 수 있는 방법으로 봅니다(테스터 의견).",
+      "기록",
+      "observed",
+      "Positive",
+      [
+        "sprich-history-first-four-dictations-in-word"
+      ]
+    ],
+    [
+      "SP-15",
+      "절약 시간 수치가 같은 화면에서 서로 다릅니다(숫자 표 참조). 앱은 \"절약\"이 어떻게 계산되는지, 각 수치가 무엇을 포함하는지 설명하지 않습니다.",
+      "기록",
+      "measured",
+      "Low",
+      [
+        "sprich-history-first-four-dictations-in-word",
+        "sprich-history-32-dictations-time-saved-counters"
+      ]
+    ],
+    [
+      "SP-16",
+      "팝업 메뉴에는 Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle, Verfassen이 있습니다. 테스터는 작동 방식을 이해하고 싶었지만 사용하지는 않았습니다. 이 메뉴를 제공하는 것이 Sprich인지 macOS인지는 기록되어 있지 않습니다.",
+      "기능",
+      "observed",
+      "Info",
+      [
+        "sprich-text-rewrite-popup-menu"
+      ]
+    ],
+    [
+      "SP-17",
+      "설정에는 Schreibton 드롭다운이 있으며 Formal(선택됨) 또는 Informell을 고를 수 있습니다. 드롭다운만 확인했고, 테스터의 \"Wow\"는 테스트한 결과가 아니라 이 옵션에 대한 것입니다.",
+      "기능",
+      "observed",
+      "Info",
+      [
+        "sprich-settings-writing-tone-formal-informal"
+      ]
+    ],
+    [
+      "SP-18",
+      "녹음 표시기는 Taste, Mikro(선택됨), Kein으로 설정할 수 있습니다. 테스터는 마이크 말풍선이 회색에서 주황색으로 바뀌는 것을 보았으며, 머리글에는 \"Mikro bereit\"라고 표시됩니다.",
+      "기능",
+      "observed",
+      "Positive",
+      [
+        "sprich-settings-recording-indicator-mic"
+      ]
+    ],
+    [
+      "SP-19",
+      "인터페이스는 독일어 전용이며 테스터는 언어 전환 기능을 찾지 못해, 영어 스크린샷을 만들 수 없었습니다. 개발자는 로컬 버전이 독일어에 맞춰 최적화되어 있어 지금까지 독일어 전용이라고 밝힙니다(업체 주장).",
+      "인터페이스",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SP-20",
+      "Meetings 탭에는 \"Meeting aufnehmen\"이 있으며, 안내 문구는 통화에서 전사본, 요약, 할 일이 나오고 모든 것이 Mac에 남는다고 말합니다. 테스터는 회의를 녹음한 적이 없고, 방에 몇 사람이 모인 자리에서 시험해 볼 계획입니다.",
+      "기능",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meetings-tab-record-meeting-tip"
+      ]
+    ],
+    [
+      "SP-21",
+      "sprich.ai 계정 페이지에서는 비밀번호 변경과 2단계 인증을 제공합니다. 2단계 인증 카드에는 \"Aktivieren\" 링크가 보이므로 꺼져 있는 상태입니다.",
+      "웹사이트",
+      "observed",
+      "Info",
+      [
+        "sprich-account-security-page-two-factor-off"
+      ]
+    ],
+    [
+      "SP-22",
+      "\"Bug melden\" 양식에는 Bug, Feedback, Feature 탭이 있고, 제목, 설명, 예상 결과와 실제 결과, 빈도 입력란과 각 1 MB의 첨부 파일을 최대 3개까지 넣을 수 있습니다. \"Mitgesendete Daten\" 항목은 열어 보지 않았고 무언가 전송되었는지는 기록되어 있지 않습니다. 테스터는 인상적이라고 평가합니다(테스터 의견). \"Transcripts are never sent\"는 업체 주장입니다.",
+      "피드백",
+      "observed",
+      "Positive",
+      [
+        "sprich-bug-report-form"
+      ]
+    ],
+    [
+      "SP-23",
+      "환영 화면과 설정은 모든 처리가 로컬에서 이루어지고, 음성과 텍스트가 Mac 밖으로 나가지 않으며, 앱이 완전히 오프라인으로 작동한다고 밝힙니다. 네트워크 트래픽은 점검하지 않았고 오프라인 실행도 시도하지 않았습니다.",
+      "신뢰",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-welcome-screen-press-once-speak-press-again"
+      ]
+    ],
+    [
+      "SP-24",
+      "테스트하지 않았거나 기록되지 않은 항목: 파일 텍스트 변환과 사전 탭(둘 다 탐색 메뉴에 보임), 다시 쓰기 메뉴와 어조 설정의 효과, Mail, Notes, Slack 또는 브라우저에 하는 받아쓰기, 요금제와 가격, 실행 시 메모리, 삭제.",
+      "범위",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "심각도는 처음 사용하는 사용자에게 미치는 영향입니다. 측정값이 아니라 제안입니다. Info는 문제도 장점도 아닌 발견 사항을, Positive는 잘 작동한 부분을 뜻합니다.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Apple Silicon Mac에서 독일어 또는 영어를 일상적인 앱에 받아쓰고, 앱이 밝히는 대로 처리를 로컬에서 하고 싶은 독일어권 Mac 사용자(한 번의 세션에서 나온 가정)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "지금 당장 러시아어나 독일어 이외의 인터페이스가 필요한 사람, 또는 Intel Mac 사용자(디렉터리는 Apple Silicon 전용이라고 기재합니다)."
+      ]
+    ],
+    "retest": "새 메이저 버전, 영어 인터페이스의 공개 또는 확정된 언어 목록이 나오면 다시 테스트합니다. 범위: 앱과 macOS 버전 기록, 지연 시간 측정, 언어를 설정한 러시아어, 파일 텍스트 변환, Meetings, 다시 쓰기 메뉴, 트래픽을 점검한 오프라인 사용, 실행 시 메모리, 삭제."
+  },
+  "background_intro": "직접 테스트가 아닙니다. 아래 항목은 PromptQuorum 디렉터리의 Sprich 항목에서 나온 것이며, 여기서 확인하지 않았습니다.",
+  "background": [
+    [
+      "third-party",
+      "비공개 소스이며, 한 번 결제하는 Lifetime 옵션이 있는 프리미엄 모델입니다. macOS 15 이상, Apple Silicon 전용이며, 웹사이트는 독일어 전용입니다. 디렉터리는 개발사 자체 페이지의 음성 모델과 Windows 관련 서술이 서로 맞지 않는다고 기록합니다. 출처: PromptQuorum 디렉터리 리뷰, 버전 2.2.4, 2026-11-09 확인, 변경 내역에는 2026-10-22의 업데이트가 표시됩니다."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 사용 메모와 스크린샷, 2026년 11월 9일(원본 Word 메모, 원본 메모 PDF는 추가 예정).",
+    "Sprich의 PromptQuorum 디렉터리 항목과 리뷰(슬러그: sprich), 2026-11-09 확인.",
+    "공급업체 사이트 sprich.ai(업체 주장)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 메모에서 직접 확인한 내용입니다."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 숫자를 함께 제시합니다."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 자신의 추정이며, 시간을 재거나 세지 않았습니다."
+    },
+    "vendor-claim": {
+      "label": "업체 주장",
+      "meaning": "앱, 스토어 등록 정보 또는 웹사이트가 밝힌 내용이며 검증하지 않았습니다."
+    },
+    "third-party": {
+      "label": "제3자",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 나온 내용이며 여기서는 검증하지 않았습니다."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견입니다."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분입니다."
+    }
+  },
+  "images": [
+    {
+      "id": "sprich-welcome-screen-press-once-speak-press-again",
+      "figure": 1,
+      "file": "sprich-welcome-screen-press-once-speak-press-again.webp",
+      "path": "images/sprich-welcome-screen-press-once-speak-press-again.webp",
+      "alt": "Sprich 환영 화면: 제목 \"Sprich schreibt, was du sagst\", 누르고, 말하고, 다시 누르는 세 단계, 음성과 텍스트가 Mac 밖으로 나가지 않는다는 안내.",
+      "caption": "환영 화면(독일어). 한 번 누르고, 말하고, 다시 누르는 방식을 보여 줍니다. \"Mac 밖으로 나가지 않는다\"는 문구는 업체 주장입니다.",
+      "role": "hero",
+      "width": 1434,
+      "height": 1258,
+      "bytes": 62152,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-app-icon-and-applications-folder",
+      "figure": 2,
+      "file": "sprich-app-icon-and-applications-folder.webp",
+      "path": "images/sprich-app-icon-and-applications-folder.webp",
+      "alt": "Sprich 앱 아이콘: 검은색 \"spr\", 음파 표시, 주황색 \"ich\"가 있는 흰색 타일이 DMG 창의 응용 프로그램 폴더 바로 가기 옆에 있음.",
+      "caption": "설치 창. 관찰.",
+      "role": "moment",
+      "width": 1158,
+      "height": 542,
+      "bytes": 12762,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-setup-two-models-download-3-3-gb",
+      "figure": 3,
+      "file": "sprich-setup-two-models-download-3-3-gb.webp",
+      "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
+      "alt": "설정 5단계 중 2단계: 모델 두 개를 한 번 내려받음, Sprich Transcribe v3 약 480 MB와 Sprich Turbo v3 약 2.8 GB, 합쳐서 약 3.3 GB.",
+      "caption": "설정의 모델 단계. 크기는 앱 자체 수치(측정)이며, \"완전히 오프라인으로 작동\"은 업체 주장입니다.",
+      "role": "moment",
+      "width": 1386,
+      "height": 1306,
+      "bytes": 61892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-setup-dictation-key-fn-toggle-or-hold",
+      "figure": 4,
+      "file": "sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "path": "images/sprich-setup-dictation-key-fn-toggle-or-hold.webp",
+      "alt": "설정 5단계 중 4단계: 받아쓰기 키가 Fn으로 설정되어 있고, Einrasten(눌러서 시작, 눌러서 중지, 기본값)과 Gedrückt halten(누르고 있는 동안 녹음) 중에서 선택.",
+      "caption": "키와 모드 단계. 토글 모드가 Standard로 표시되어 있습니다. 관찰.",
+      "role": "moment",
+      "width": 1388,
+      "height": 1364,
+      "bytes": 78912,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-setup-final-step-models-still-loading",
+      "figure": 5,
+      "file": "sprich-setup-final-step-models-still-loading.webp",
+      "path": "images/sprich-setup-final-step-models-still-loading.webp",
+      "alt": "설정 5단계 중 5단계 \"Fast geschafft\": 음성 인식 내려받기 72퍼센트, 텍스트 개선 12퍼센트, 1~4단계는 완료 표시.",
+      "caption": "설정 마지막에도 모델을 아직 내려받는 중. 시각은 기록 없음. 측정.",
+      "role": "moment",
+      "width": 1376,
+      "height": 1174,
+      "bytes": 32056,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-history-first-four-dictations-in-word",
+      "figure": 6,
+      "file": "sprich-history-first-four-dictations-in-word.webp",
+      "path": "images/sprich-history-first-four-dictations-in-word.webp",
+      "alt": "Microsoft Word에 한 받아쓰기 네 건의 Sprich 기록, 각 7~13단어, 총 38단어, 항목 하나는 \"Sprich Ae\"로 표시됨.",
+      "caption": "Word에서의 첫 테스트 네 건 뒤의 기록, 11월 9일 17:43~17:49. 관찰.",
+      "role": "moment",
+      "width": 1600,
+      "height": 967,
+      "bytes": 62072,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-whatsapp-german-dictation-result",
+      "figure": 7,
+      "file": "sprich-whatsapp-german-dictation-result.webp",
+      "path": "images/sprich-whatsapp-german-dictation-result.webp",
+      "alt": "받아쓰기로 채워진 WhatsApp 메시지 입력란: 인사말, 단락, 문장 부호가 있는 독일어 메시지로, 이 앱이 이제 자신의 온라인 앱만큼 빠르다는 내용.",
+      "caption": "WhatsApp에 한 독일어 받아쓰기. 텍스트와 문장 부호는 입력된 그대로이며, 구절 하나는 어색하게 읽힙니다. 관찰.",
+      "role": "moment",
+      "width": 912,
+      "height": 420,
+      "bytes": 45228,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-telegram-english-dictation-result",
+      "figure": 8,
+      "file": "sprich-telegram-english-dictation-result.webp",
+      "path": "images/sprich-telegram-english-dictation-result.webp",
+      "alt": "받아쓰기로 만든 영어 메시지 세 개가 있는 Telegram 대화. \"Uh\" 같은 군더더기 말이 남아 있고, 지인에게 이 도구를 추천하는 내용이 있음.",
+      "caption": "Telegram에 한 영어 받아쓰기. 군더더기 말이 텍스트에 남아 있습니다. 관찰.",
+      "role": "moment",
+      "width": 1058,
+      "height": 904,
+      "bytes": 107030,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-history-32-dictations-time-saved-counters",
+      "figure": 9,
+      "file": "sprich-history-32-dictations-time-saved-counters.webp",
+      "path": "images/sprich-history-32-dictations-time-saved-counters.webp",
+      "alt": "Sprich 기록 머리글: 전사 32건, 676단어, 19분 절약, 그리고 이번 주 12분 23초 절약이라는 제목, 아래에 항목 세 개.",
+      "caption": "11월 9일 18:07의 기록. 절약 시간 수치 두 개가 서로 다릅니다. 앱이 측정한 값.",
+      "role": "moment",
+      "width": 1600,
+      "height": 979,
+      "bytes": 66118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-text-rewrite-popup-menu",
+      "figure": 10,
+      "file": "sprich-text-rewrite-popup-menu.webp",
+      "path": "images/sprich-text-rewrite-popup-menu.webp",
+      "alt": "팝업 메뉴: Änderung beschreiben, Korrekturlesen, Umformulieren, Freundlich, Sachlich, Kompakt, Zusammenfassung, Hauptpunkte, Liste, Tabelle, Verfassen.",
+      "caption": "텍스트 다시 쓰기 메뉴. 테스트에서는 사용하지 않았고, 어느 프로그램이 제공하는지는 기록 없음. 관찰.",
+      "role": "moment",
+      "width": 570,
+      "height": 720,
+      "bytes": 29550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-settings-writing-tone-formal-informal",
+      "figure": 11,
+      "file": "sprich-settings-writing-tone-formal-informal.webp",
+      "path": "images/sprich-settings-writing-tone-formal-informal.webp",
+      "alt": "설정: Schreibton 드롭다운이 열려 있고 Formal이 선택되어 있으며 그 아래에 Informell이 있음.",
+      "caption": "작성 어조 설정. 드롭다운만 확인했고 효과는 테스트하지 않았습니다. 관찰.",
+      "role": "moment",
+      "width": 1431,
+      "height": 178,
+      "bytes": 8862,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-settings-recording-indicator-mic",
+      "figure": 12,
+      "file": "sprich-settings-recording-indicator-mic.webp",
+      "path": "images/sprich-settings-recording-indicator-mic.webp",
+      "alt": "설정, Anzeige: 녹음 중 표시할 항목을 정하는 Indikator, 옵션은 Taste, Mikro(선택됨), Kein.",
+      "caption": "녹음 표시기 설정. 관찰.",
+      "role": "moment",
+      "width": 1600,
+      "height": 214,
+      "bytes": 7838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-account-security-page-two-factor-off",
+      "figure": 13,
+      "file": "sprich-account-security-page-two-factor-off.webp",
+      "path": "images/sprich-account-security-page-two-factor-off.webp",
+      "alt": "sprich.ai 계정 페이지, 보안: 비밀번호 옵션과 Aktivieren 링크가 있는 2단계 인증 카드로, 켜져 있지 않음.",
+      "caption": "웹사이트 계정 페이지. 관찰.",
+      "role": "moment",
+      "width": 1429,
+      "height": 603,
+      "bytes": 32114,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-meetings-tab-record-meeting-tip",
+      "figure": 14,
+      "file": "sprich-meetings-tab-record-meeting-tip.webp",
+      "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
+      "alt": "회의가 0건인 Meetings 탭, 통화의 전사본, 요약, 할 일에 대한 안내 문구, Meeting aufnehmen 버튼, LIFETIME 배지.",
+      "caption": "처음 열었을 때의 Meetings 탭. 테스트에서는 사용하지 않았습니다. 안내 문구의 요약 관련 서술은 업체 주장입니다.",
+      "role": "moment",
+      "width": 1600,
+      "height": 1050,
+      "bytes": 54740,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-bug-report-form",
+      "figure": 15,
+      "file": "sprich-bug-report-form.webp",
+      "path": "images/sprich-bug-report-form.webp",
+      "alt": "Bug, Feedback, Feature 탭, 제목, 설명, 예상 결과와 실제 결과, 빈도 입력란과 개인정보 안내가 있는 Bug melden 양식.",
+      "caption": "피드백 양식. 전송했는지는 기록 없음. \"전송되지 않음\" 문구는 업체 주장입니다.",
+      "role": "moment",
+      "width": 1126,
+      "height": 1172,
+      "bytes": 43534,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    }
+  ],
+  "figure_order": [
+    "sprich-welcome-screen-press-once-speak-press-again",
+    "sprich-app-icon-and-applications-folder",
+    "sprich-setup-two-models-download-3-3-gb",
+    "sprich-setup-dictation-key-fn-toggle-or-hold",
+    "sprich-setup-final-step-models-still-loading",
+    "sprich-history-first-four-dictations-in-word",
+    "sprich-whatsapp-german-dictation-result",
+    "sprich-telegram-english-dictation-result",
+    "sprich-history-32-dictations-time-saved-counters",
+    "sprich-text-rewrite-popup-menu",
+    "sprich-settings-writing-tone-formal-informal",
+    "sprich-settings-recording-indicator-mic",
+    "sprich-account-security-page-two-factor-off",
+    "sprich-meetings-tab-record-meeting-tip",
+    "sprich-bug-report-form"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 11월 9일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "여섯 가지 순간",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "메모리",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 형성한 여섯 가지 순간",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "출처",
+      "확인한 내용",
+      "라벨"
+    ],
+    "fit_h": "24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "앱",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정",
+      "Info": "정보"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
+  }
+}
