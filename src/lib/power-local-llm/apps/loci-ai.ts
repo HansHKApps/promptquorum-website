@@ -1,6 +1,8 @@
 // Local AI App Directory — Loci AI (layer: mobile)
 // Added manually — has a full PromptQuorum review (loci-ai-review-offline-local-ai),
 // so tagline/url/license/platforms are sourced from that article, not TODO placeholders.
+// 2026-11-08: maker follow-up (Michael Waldman, inference engine, agent harness, messaging) summarized in the review as maker-stated;
+// founderReviewedDate deliberately NOT bumped (a news/feature update, not a second round of review comments integrated 1:1).
 
 import type { ToolRecord } from './types'
 
@@ -20,7 +22,7 @@ export const app: ToolRecord = {
   addedDate: '2026-08-22',
   founderReviewedDate: '2026-10-23',
   status: 'listed',
-  uses: ['chat'],
+  uses: ['chat', 'agent'], // 'agent' added 2026-11-08: askloci.ai/agents documents a Mac MCP + OpenAI-compatible interface for coding agents
   url: 'askloci.ai',
   storeLinks: {
     appStore: 'https://apps.apple.com/us/app/loci-private-local-ai/id6762100748',
@@ -28,7 +30,7 @@ export const app: ToolRecord = {
     web: 'https://askloci.ai/download/',
   },
   installEffort: 'installer',
-  installEvidence: 'askloci.ai (read 2026-10-23): App Store listing (iOS 18+), Google Play app.lociai.loci, direct Mac download (/api/mac-download), Windows x64/ARM64 installer marked beta (askloci.ai/windows)',
+  installEvidence: 'askloci.ai (read 2026-10-23, re-read 2026-11-08): App Store listing (iOS 18+), Google Play app.lociai.loci, direct Mac download (/api/mac-download) and Mac App Store listing id6768186318 (v2.0.0, macOS 26.2+, free), Windows x64/ARM64 installer marked beta (askloci.ai/windows)',
   tagline: {
     en: 'Offline AI assistant for iPhone, Android, iPad, Mac and Windows',
     de: 'Offline-KI-Assistent für iPhone, Android, iPad, Mac und Windows',
@@ -43,12 +45,12 @@ export const app: ToolRecord = {
   reviewSlug: 'loci-ai-review-offline-local-ai', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { offline: true, modelDownloads: true },
-  lastVerifiedDate: '2026-10-23',
-  lastUpstreamUpdate: '2026-10-23', // App Store version history: v1.3.31 released 2026-10-23 03:11 UTC (re-verified 2026-10-23; 25 releases since 1.3.4 on 2026-08-09); mobile builds only
+  lastVerifiedDate: '2026-11-08',
+  lastUpstreamUpdate: '2026-11-05', // Apple iTunes lookup API (re-verified 2026-11-08): iOS v1.3.40 released 2026-11-05 22:15 UTC; Mac App Store v2.0.0 released 2026-10-29. Newer of the two; Android/Windows builds publish no version number
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/loci/id6762100748',
   pqReview: {
-    date: '2026-10-23',
-    version: '1.3.31',
+    date: '2026-11-08',
+    version: '1.3.40',
     versionSourceUrl: 'https://apps.apple.com/us/app/loci-private-local-ai/id6762100748', // iOS build; Mac/Windows/Android builds publish no version number
   },
   founder: {
