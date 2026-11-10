@@ -119,11 +119,11 @@
     ],
     [
       "Transparencia",
-      "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba, con una reseña redactada con IA. La cabecera de la app muestra una insignia LIFETIME y, en un mensaje a un contacto, el evaluador escribió que había obtenido acceso gratuito a una herramienta de voz; no está registrado cómo ni de quién procedía ese acceso. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
+      "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba, con una reseña redactada con IA. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
       "observed"
     ]
   ],
-  "disclosure": "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba, con una reseña redactada con IA. La cabecera de la app muestra una insignia LIFETIME y, en un mensaje a un contacto, el evaluador escribió que había obtenido acceso gratuito a una herramienta de voz; no está registrado cómo ni de quién procedía ese acceso. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
+  "disclosure": "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba, con una reseña redactada con IA. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
   "verdict": {
     "general": "Una app de dictado para Mac con Apple Silicon, cuidada y pensada primero para el alemán. En esta sesión el dictado funcionó en Word, WhatsApp y Telegram en inglés y alemán; en ruso, no. La grabación de reuniones, la transcripción de archivos, la reescritura de texto, el funcionamiento sin conexión, las afirmaciones de privacidad y la desinstalación no se probaron.",
     "fit": "El evaluador queda impresionado, le da cinco sobre cinco y la recomendó a un contacto. La considera tan rápida como su herramienta de dictado en la nube, aunque no se cronometró nada. Sus notas no indican si seguirá usándola."
@@ -620,7 +620,7 @@
     ],
     [
       "tester-error",
-      "Lagunas en el registro: versión de la app y de macOS, hora de instalación y de fin, duración de la configuración, qué tecla de dictado se eligió, el texto dicho y el ajuste de idioma de las pruebas en francés y ruso, cualquier retraso medido, si se envió el formulario de comentarios, cómo se obtuvo el acceso Lifetime. La cabecera de hardware dice \"Mac 4 ... VRAM\"; Apple Silicon tiene memoria unificada, y el chip se nombró después como M4 Pro."
+      "Lagunas en el registro: versión de la app y de macOS, hora de instalación y de fin, duración de la configuración, qué tecla de dictado se eligió, el texto dicho y el ajuste de idioma de las pruebas en francés y ruso, cualquier retraso medido, si se envió el formulario de comentarios. La cabecera de hardware dice \"Mac 4 ... VRAM\"; Apple Silicon tiene memoria unificada, y el chip se nombró después como M4 Pro."
     ]
   ],
   "findings": [
@@ -1194,7 +1194,7 @@
       "figure": 14,
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
-      "alt": "Pestaña Meetings con cero reuniones, un consejo sobre grabar llamadas para obtener transcripción, resumen y tareas, un botón Meeting aufnehmen y una insignia LIFETIME.",
+      "alt": "Pestaña Meetings con cero reuniones, un consejo sobre grabar llamadas para obtener transcripción, resumen y tareas, un botón Meeting aufnehmen.",
       "caption": "Pestaña Meetings en la primera apertura. No usada en la prueba. La afirmación del resumen en el consejo es una afirmación del fabricante.",
       "role": "moment",
       "width": 1600,
