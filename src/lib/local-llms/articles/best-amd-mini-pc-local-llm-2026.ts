@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-09',
     seoTitle: 'Best Mini PC for Local LLM 2026: AMD Ryzen AI Max+ Compared',
     metaDescription: 'Best AMD mini PC for AI and local LLMs in 2026: Minisforum MS-A2, Beelink GTR9 Pro, GMKtec EVO-X2 \u2014 128GB unified memory, benchmarks and Ollama setup.',
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.webp',
@@ -1979,7 +1979,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Modelo', 'Quantização', 'RAM usada', 'Velocidade est.', 'Dispositivo'],
         rows: [
           { 'Modelo': 'Llama 3.3 70B', 'Quantização': 'Q4_K_M', 'RAM usada': '~40 GB', 'Velocidade est.': '20-30 tok/s', 'Dispositivo': 'Minisforum/Beelink/AOOSTAR' },
-          { 'Modelo': 'Qwen3 72B', 'Quantização': 'Q4_K_M', 'RAM usada': '~43 GB', 'Velocidade est.': '18-28 tok/s', 'Dispositivo': 'Beelink 128 GB' },
           { 'Modelo': 'Qwen 3.6 27B', 'Quantização': 'Q4_K_M', 'RAM usada': '~22 GB', 'Velocidade est.': '30-45 tok/s', 'Dispositivo': 'Todos' },
           { 'Modelo': 'Llama 3.1 8B', 'Quantização': 'Q4_K_M', 'RAM usada': '~5 GB', 'Velocidade est.': '60-80 tok/s', 'Dispositivo': 'Todos' },
         ],
@@ -1998,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas Frequentes',
         faqs: [
-          { q: 'Os mini PCs AMD podem rodar LLMs locais de 70B?', a: 'Sim. Minisforum MS-A2 (96 GB), Beelink GTR9 Pro (128 GB) e AOOSTAR GEM12 Pro (96 GB) rodam Llama 3.3 70B Q4 (~40 GB) e Qwen3 72B Q4 (~43 GB) com espaço para o SO. Velocidade estimada: 20-30 tok/s.' },
+          { q: 'Os mini PCs AMD podem rodar LLMs locais de 70B?', a: 'Sim. Minisforum MS-A2 (96 GB), Beelink GTR9 Pro (128 GB) e AOOSTAR GEM12 Pro (96 GB) rodam Llama 3.3 70B Q4 (~40 GB) com espaço para o SO. Velocidade estimada: 20-30 tok/s.' },
           { q: 'O ROCm funciona bem em Linux para esses mini PCs?', a: 'Sim, com kernel 6.11+ e ROCm 6.2+. Ollama, vLLM e LM Studio suportam iGPU AMD nativamente. Menos polido que CUDA, mas estável para uso em produção em 2026.' },
           { q: 'Posso comprar esses mini PCs no Brasil?', a: 'Importação é possível, mas os preços ficam significativamente mais altos devido a impostos. Considere custo total incluindo importação, garantia e suporte antes de comprar. Consulte importadores especializados em hardware de IA.' },
           { q: 'AMD mini PC ou Mac Studio para conformidade com LGPD?', a: 'Ambos são equivalentes para LGPD -- rodam LLMs completamente offline sem enviar dados a terceiros. AMD mini PC é mais barato. Mac Studio tem ecossistema mais maduro. Para empresas brasileiras sem restrições de OS, AMD mini PC é a escolha mais econômica.' },

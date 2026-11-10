@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     last_full_refresh: '2026-08-25',
     designSkin: 'hub',
@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3 is the working 2026 stack for a local-LLM WeChat assistant — Windows only, no cloud API involved',
-          'Buy hardware for the job you actually want: a budget N150 box (GMKtec G3 Plus, from €159.99/$140–200) is enough for a light Qwen3 3B assistant',
+          'Buy hardware for the job you actually want: a budget N150 box (GMKtec G3 Plus, from €159.99/$140–200) is enough for a light Qwen3 4B assistant',
           'For an always-on local AI server that can grow past a simple bot, the Minisforum UM890 Pro (from $439 barebones/~$649 with 32GB) is the better spend — roughly 3–4x the price, a different class of headroom',
           'Qwen3 8B is the recommended starting model for Chinese-language quality; setup takes about 30–60 minutes for someone comfortable with Python',
           'Real risk: WeChat\'s Terms of Service prohibit automated bots — this is personal-productivity territory, not a mass-messaging tool',
@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Buy If / Skip If — Which Hardware Path Fits You',
         body: 'Match your actual goal to a hardware tier before you buy anything — this is the single most consequential decision on this page, not the Python code.',
         items: [
-          '**Get a budget N150 mini PC (GMKtec G3 Plus or Beelink EQ14) if:** the WeChat assistant is your only serious local-AI workload, you\'re fine with a Qwen3 3B model, and low power draw for 24/7 operation matters more than speed.',
+          '**Get a budget N150 mini PC (GMKtec G3 Plus or Beelink EQ14) if:** the WeChat assistant is your only serious local-AI workload, you\'re fine with a Qwen3 4B model, and low power draw for 24/7 operation matters more than speed.',
           '**Get a Ryzen-class box (Minisforum UM890 Pro) if:** you want Qwen3 8B or 14B to feel responsive, you plan to add RAG, a document search, or other local services later, or you want real headroom instead of buying twice.',
           '**Skip building this at all if:** you need this to run on macOS/Linux natively (WeChatFerry is Windows-only), you\'re not comfortable accepting some account risk from an unofficial integration, or you need message volume higher than personal-assistant scale.',
         ],
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**You do not need an expensive AI machine just to run a WeChat bot.** Buy based on the model size and the number of concurrent services you actually want, not because the words "local AI" suggest you need the biggest box available.',
         columns: ['Tier', 'RAM', 'Model it fits', 'Best for'],
         rows: [
-          { Tier: 'Budget', RAM: '16 GB', 'Model it fits': 'Qwen3 3B', 'Best for': 'Experimenting with the concept, low-volume personal use, simple Chinese-language replies' },
+          { Tier: 'Budget', RAM: '16 GB', 'Model it fits': 'Qwen3 4B', 'Best for': 'Experimenting with the concept, low-volume personal use, simple Chinese-language replies' },
           { Tier: 'Recommended', RAM: '32 GB', 'Model it fits': 'Qwen3 8B', 'Best for': 'Most serious installs — longer history, 24/7 use, faster replies' },
           { Tier: 'Heavy local-AI', RAM: '64 GB+', 'Model it fits': 'Qwen3 14B and larger', 'Best for': 'Multiple concurrent users, RAG, document search, agent workflows, additional local AI services' },
         ],
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RAM headroom is the actual reason to choose it, not raw CPU speed.** A local AI server needs memory for the OS, Ollama, the model itself, conversation history, and — if you add it later — embeddings and a database. 96 GB of ceiling gives real room to grow; a budget N150 box tops out far lower.',
           '**Two SSD slots** let you dedicate one to the OS and applications and a second to models and data, which matters once you\'re running more than one local AI service.',
           '**Dual 2.5GbE** is unnecessary for a simple WeChat bot but genuinely useful if the machine eventually becomes a broader local server on your network.',
-          '**The honest downside:** you do not need this much machine for Qwen3 3B or light 8B usage. If "I want a cheap WeChat bot" is the whole goal, this is overkill — see the budget option below instead. If the goal is "an always-on local AI server that starts with WeChat and can grow," the UM890 Pro is the more defensible spend.',
+          '**The honest downside:** you do not need this much machine for Qwen3 4B or light 8B usage. If "I want a cheap WeChat bot" is the whole goal, this is overkill — see the budget option below instead. If the goal is "an always-on local AI server that starts with WeChat and can grow," the UM890 Pro is the more defensible spend.',
         ],
         affiliateLinks: [
           { label: 'Check Minisforum UM890 Pro price — official store', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '$439–649' },
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Budget Alternative: N150 Mini PC',
         body: '**If the WeChat assistant is genuinely the only serious workload, an N150 mini PC is much cheaper and still gets the job done.** Two real options: the GMKtec G3 Plus (from €159.99 on GMKtec\'s own EU store, or $140–200 on US listings — its RAM is a replaceable DDR4 SO-DIMM up to 32 GB, a real advantage over soldered-RAM rivals) and the Beelink EQ14 (roughly $189–199, dual 2.5GbE networking but capped at a soldered 16 GB). Both use the same Intel N150 CPU as each other, so neither meaningfully outruns the other on this specific workload.',
         items: [
-          'Choose an N150 machine if: price matters most, a Qwen3 3B model is genuinely enough for your use case, you want very low power consumption, and the box might also run Home Assistant or other light services alongside the bot.',
+          'Choose an N150 machine if: price matters most, a Qwen3 4B model is genuinely enough for your use case, you want very low power consumption, and the box might also run Home Assistant or other light services alongside the bot.',
           'Choose the UM890 Pro instead if: local AI is the primary workload, you want Qwen3 8B+ to feel responsive, you want 32 GB+ RAM, or you plan to run RAG or multiple local AI services on the same box.',
           'See the [full GMKtec G3 Plus review](/smart-home/gmktec-g3-plus-local-ai-review) and [Beelink EQ14 review](/smart-home/beelink-eq14-local-ai-review) for the complete spec breakdowns, or the [best mini PCs for local AI roundup](/smart-home/best-mini-pc-home-assistant-local-ai) to compare more options.',
         ],
@@ -169,10 +169,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Which Qwen Model Should You Use?',
         body: 'For Chinese-language WeChat conversations, the Qwen family is the obvious starting point. Model choice significantly affects response quality and speed — these figures are estimates based on typical hardware and quantization, not a PromptQuorum-measured benchmark on a physical unit.',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: 'Estimated CPU speed by model for Chinese WeChat replies: Qwen3:3b runs fastest at roughly 8–12 tok/s, Qwen3:8b balances quality and speed at roughly 3–5 tok/s, Llama3.1:8b runs at a similar speed with weaker Chinese support, and Qwen3:14b is highest quality at roughly 1–2 tok/s on CPU.',
+        imageCaption: 'Estimated CPU speed by model for Chinese WeChat replies: Qwen3:4b is the lightest option, Qwen3:8b balances quality and speed at roughly 3–5 tok/s, Llama3.1:8b runs at a similar speed with weaker Chinese support, and Qwen3:14b is highest quality at roughly 1–2 tok/s on CPU.',
         columns: ['Model', 'Approx. size (Q4)', 'Chinese quality', 'Speed (CPU)', 'Speed (8GB VRAM)'],
         rows: [
-          { Model: 'Qwen3:3b', 'Approx. size (Q4)': '~2 GB', 'Chinese quality': 'Good', 'Speed (CPU)': '8–12 tok/s', 'Speed (8GB VRAM)': '60+ tok/s' },
+          { Model: 'Qwen3:4b', 'Approx. size (Q4)': '~2.5 GB', 'Chinese quality': 'Varies by device', 'Speed (CPU)': 'Varies by device', 'Speed (8GB VRAM)': 'Varies by device' },
           { Model: 'Qwen3:8b', 'Approx. size (Q4)': '~4.7 GB', 'Chinese quality': 'Excellent — best starting point', 'Speed (CPU)': '3–5 tok/s', 'Speed (8GB VRAM)': '30–45 tok/s' },
           { Model: 'Qwen3:14b', 'Approx. size (Q4)': '~9 GB', 'Chinese quality': 'Best', 'Speed (CPU)': '1–2 tok/s', 'Speed (8GB VRAM)': '15–20 tok/s' },
           { Model: 'Llama3.1:8b', 'Approx. size (Q4)': '~4.7 GB', 'Chinese quality': 'Moderate', 'Speed (CPU)': '3–5 tok/s', 'Speed (8GB VRAM)': '30–45 tok/s' },
@@ -220,8 +220,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Will my WeChat account get banned for using a bot?', a: 'WeChat\'s Terms of Service prohibit automated bots. Accounts detected using automation tools risk temporary suspension or a permanent ban. Use this only for personal productivity at low message volumes — the account risk is real, and this is not an officially sanctioned integration.' },
             { q: 'What is the best Ollama model for Chinese WeChat messages?', a: 'Qwen3 8B is the best balance of quality and speed for Chinese-language WeChat responses for most users — strong Chinese comprehension, and the roughly 4.7 GB (Q4) model fits in 8 GB of VRAM or runs at an acceptable pace on 16 GB of CPU RAM.' },
             { q: 'Can the bot handle group chats?', a: 'Yes. WeChatFerry exposes group messages with a room ID. Filter which groups the bot responds in via `msg.roomid`, and require an explicit trigger keyword (e.g. "@ai") so the bot doesn\'t reply to every message in a group.' },
-            { q: 'What hardware do I actually need for this?', a: 'For a light Qwen3 3B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.' },
-            { q: 'Is the Minisforum UM890 Pro overkill for a WeChat bot?', a: 'For a simple WeChat bot running Qwen3 3B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.' },
+            { q: 'What hardware do I actually need for this?', a: 'For a light Qwen3 4B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.' },
+            { q: 'Is the Minisforum UM890 Pro overkill for a WeChat bot?', a: 'For a simple WeChat bot running Qwen3 4B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.' },
             { q: 'Does running the LLM locally make WeChat private?', a: 'No, and this is an important distinction. Local inference means your message content is not sent to a third-party cloud LLM provider for processing. It does not make WeChat itself a private communications platform — WeChat still operates through Tencent\'s own infrastructure regardless of where the AI model runs.' },
             { q: 'Is this an official WeChat integration?', a: 'No. WeChatFerry is an unofficial automation/integration approach, not an official WeChat bot API. Use it cautiously, keep message volume low and personal, and understand the account risk that comes with any unofficial automation tool.' },
             { q: 'How do I build a WeChat bot with a local LLM?', a: 'Use WeChatFerry (Windows) to hook into the WeChat PC client, connect to Ollama via its local HTTP API, and route incoming messages to a Qwen3 model. Total setup time is roughly 30–60 minutes for someone comfortable with Python.' },
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'What hardware do I actually need for this?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For a light Qwen3 3B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.',
+              'text': 'For a light Qwen3 4B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.',
             },
           },
           {
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is the Minisforum UM890 Pro overkill for a WeChat bot?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For a simple WeChat bot running Qwen3 3B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.',
+              'text': 'For a simple WeChat bot running Qwen3 4B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.',
             },
           },
           {
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-11-09',
       'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3 ist der funktionierende Stack 2026 für einen WeChat-Assistenten mit lokalem LLM — nur Windows, keine Cloud-API',
-          'Kaufen Sie Hardware für die Aufgabe, die Sie wirklich haben: Ein günstiger N150-Rechner (GMKtec G3 Plus, ab 159,99 €) reicht für einen leichten Qwen3-3B-Assistenten',
+          'Kaufen Sie Hardware für die Aufgabe, die Sie wirklich haben: Ein günstiger N150-Rechner (GMKtec G3 Plus, ab 159,99 €) reicht für einen leichten Qwen3-4B-Assistenten',
           'Für einen dauerhaft laufenden lokalen KI-Server, der über einen einfachen Bot hinauswächst, ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB) die bessere Wahl — etwa das 3- bis 4-Fache des Preises, aber eine andere Klasse an Spielraum',
           'Qwen3 8B ist das empfohlene Startmodell für chinesischsprachige Qualität; die Einrichtung dauert für jemanden mit Python-Kenntnissen etwa 30–60 Minuten',
           'Echtes Risiko: Die WeChat-Nutzungsbedingungen verbieten automatisierte Bots — dies ist persönliche Produktivität, kein Massenversand-Werkzeug',
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Kaufen, wenn / Überspringen, wenn — welcher Hardware-Weg passt',
         body: 'Ordnen Sie Ihr tatsächliches Ziel einer Hardware-Stufe zu, bevor Sie irgendetwas kaufen — das ist die wichtigste Entscheidung auf dieser Seite, nicht der Python-Code.',
         items: [
-          '**Günstigen N150-Mini-PC (GMKtec G3 Plus oder Beelink EQ14) kaufen, wenn:** der WeChat-Assistent Ihre einzige ernsthafte lokale KI-Aufgabe ist, ein Qwen3-3B-Modell für Sie ausreicht und niedriger Stromverbrauch im 24/7-Betrieb wichtiger ist als Geschwindigkeit.',
+          '**Günstigen N150-Mini-PC (GMKtec G3 Plus oder Beelink EQ14) kaufen, wenn:** der WeChat-Assistent Ihre einzige ernsthafte lokale KI-Aufgabe ist, ein Qwen3-4B-Modell für Sie ausreicht und niedriger Stromverbrauch im 24/7-Betrieb wichtiger ist als Geschwindigkeit.',
           '**Ryzen-Box (Minisforum UM890 Pro) kaufen, wenn:** Qwen3 8B oder 14B sich reaktionsschnell anfühlen soll, Sie später RAG, eine Dokumentensuche oder andere lokale Dienste hinzufügen wollen, oder Sie echten Spielraum statt eines zweiten Kaufs wollen.',
           '**Dieses Projekt ganz überspringen, wenn:** Sie es nativ unter macOS/Linux betreiben müssen (WeChatFerry ist reines Windows), Sie das Kontenrisiko einer inoffiziellen Integration nicht akzeptieren möchten, oder Sie ein Nachrichtenvolumen jenseits persönlicher Nutzung brauchen.',
         ],
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Für einen WeChat-Bot brauchen Sie keine teure KI-Maschine.** Kaufen Sie nach der tatsächlichen Modellgröße und der Anzahl gleichzeitiger Dienste, die Sie wollen — nicht, weil die Worte „lokale KI" die größte verfügbare Box nahelegen.',
         columns: ['Stufe', 'RAM', 'Passendes Modell', 'Am besten für'],
         rows: [
-          { Stufe: 'Budget', RAM: '16 GB', 'Passendes Modell': 'Qwen3 3B', 'Am besten für': 'Zum Ausprobieren des Konzepts, geringes Nachrichtenvolumen, einfache chinesischsprachige Antworten' },
+          { Stufe: 'Budget', RAM: '16 GB', 'Passendes Modell': 'Qwen3 4B', 'Am besten für': 'Zum Ausprobieren des Konzepts, geringes Nachrichtenvolumen, einfache chinesischsprachige Antworten' },
           { Stufe: 'Empfohlen', RAM: '32 GB', 'Passendes Modell': 'Qwen3 8B', 'Am besten für': 'Die meisten ernsthaften Installationen — mehr Verlauf, 24/7-Betrieb, schnellere Antworten' },
           { Stufe: 'Umfangreiche lokale KI', RAM: '64 GB+', 'Passendes Modell': 'Qwen3 14B und größer', 'Am besten für': 'Mehrere gleichzeitige Nutzer, RAG, Dokumentensuche, Agenten-Workflows, weitere lokale KI-Dienste' },
         ],
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Der RAM-Spielraum ist der eigentliche Grund für die Wahl, nicht die reine CPU-Geschwindigkeit.** Ein lokaler KI-Server braucht Speicher für das Betriebssystem, Ollama, das Modell selbst, den Gesprächsverlauf und — falls Sie es später hinzufügen — Embeddings und eine Datenbank. Eine Obergrenze von 96 GB gibt echten Raum zum Wachsen; eine günstige N150-Box endet weit darunter.',
           '**Zwei SSD-Steckplätze** erlauben, einen für Betriebssystem und Anwendungen zu nutzen und den zweiten für Modelle und Daten zu reservieren — relevant, sobald mehr als ein lokaler KI-Dienst läuft.',
           '**Dual-2,5GbE** ist für einen einfachen WeChat-Bot unnötig, aber nützlich, falls die Maschine später zu einem breiteren lokalen Server im Netzwerk wird.',
-          '**Der ehrliche Nachteil:** Für Qwen3 3B oder leichte 8B-Nutzung brauchen Sie nicht so viel Maschine. Wenn „ich will einen günstigen WeChat-Bot" das ganze Ziel ist, ist dies überdimensioniert — siehe die Budget-Option unten. Wenn das Ziel „ein dauerhaft laufender lokaler KI-Server, der mit WeChat beginnt und wachsen kann" ist, ist der UM890 Pro die vertretbarere Ausgabe.',
+          '**Der ehrliche Nachteil:** Für Qwen3 4B oder leichte 8B-Nutzung brauchen Sie nicht so viel Maschine. Wenn „ich will einen günstigen WeChat-Bot" das ganze Ziel ist, ist dies überdimensioniert — siehe die Budget-Option unten. Wenn das Ziel „ein dauerhaft laufender lokaler KI-Server, der mit WeChat beginnt und wachsen kann" ist, ist der UM890 Pro die vertretbarere Ausgabe.',
         ],
         affiliateLinks: [
           { label: 'Minisforum-UM890-Pro-Preis prüfen — offizieller Store', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '489–649 €' },
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Budget-Alternative: N150-Mini-PC',
         body: '**Wenn der WeChat-Assistent wirklich die einzige ernsthafte Aufgabe ist, ist ein N150-Mini-PC deutlich günstiger und erledigt die Aufgabe trotzdem.** Zwei echte Optionen: der GMKtec G3 Plus (ab 159,99 € im offiziellen GMKtec-EU-Store, Stand August 2026 — sein RAM ist ein austauschbares DDR4-SO-DIMM bis 32 GB, ein echter Vorteil gegenüber verlöteten Konkurrenten) und der Beelink EQ14 (ca. 199 €, Dual-2,5GbE-Netzwerk, aber auf verlötete 16 GB begrenzt). Beide nutzen denselben Intel N150, sodass keiner den anderen bei dieser konkreten Aufgabe deutlich übertrifft.',
         items: [
-          'Wählen Sie eine N150-Maschine, wenn: der Preis am wichtigsten ist, ein Qwen3-3B-Modell für Ihren Anwendungsfall wirklich ausreicht, Sie sehr niedrigen Stromverbrauch wollen und die Box daneben eventuell auch Home Assistant oder andere leichte Dienste betreiben soll.',
+          'Wählen Sie eine N150-Maschine, wenn: der Preis am wichtigsten ist, ein Qwen3-4B-Modell für Ihren Anwendungsfall wirklich ausreicht, Sie sehr niedrigen Stromverbrauch wollen und die Box daneben eventuell auch Home Assistant oder andere leichte Dienste betreiben soll.',
           'Wählen Sie stattdessen den UM890 Pro, wenn: lokale KI die Hauptaufgabe ist, Qwen3 8B+ sich reaktionsschnell anfühlen soll, Sie 32 GB+ RAM wollen, oder Sie RAG oder mehrere lokale KI-Dienste auf derselben Box betreiben wollen.',
           'Siehe den [vollständigen GMKtec-G3-Plus-Test](/de/smart-home/gmktec-g3-plus-local-ai-review) und [Beelink-EQ14-Test](/de/smart-home/beelink-eq14-local-ai-review) für die kompletten Spezifikationen, oder die [Übersicht der besten Mini-PCs für lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) für weitere Optionen.',
         ],
@@ -469,10 +469,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Welches Qwen-Modell sollten Sie verwenden?',
         body: 'Für chinesischsprachige WeChat-Gespräche ist die Qwen-Familie der naheliegende Startpunkt. Die Modellwahl beeinflusst Antwortqualität und -geschwindigkeit erheblich — diese Angaben sind Schätzungen basierend auf typischer Hardware und Quantisierung, kein von PromptQuorum gemessener Benchmark auf einem physischen Gerät.',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: 'Geschätzte CPU-Geschwindigkeit je Modell für chinesische WeChat-Antworten: Qwen3:3b läuft am schnellsten mit etwa 8–12 Tok/s, Qwen3:8b balanciert Qualität und Geschwindigkeit mit etwa 3–5 Tok/s, Llama3.1:8b läuft ähnlich schnell mit schwächerem Chinesisch, und Qwen3:14b liefert die beste Qualität mit etwa 1–2 Tok/s auf der CPU.',
+        imageCaption: 'Geschätzte CPU-Geschwindigkeit je Modell für chinesische WeChat-Antworten: Qwen3:4b ist die leichteste Option, Qwen3:8b balanciert Qualität und Geschwindigkeit mit etwa 3–5 Tok/s, Llama3.1:8b läuft ähnlich schnell mit schwächerem Chinesisch, und Qwen3:14b liefert die beste Qualität mit etwa 1–2 Tok/s auf der CPU.',
         columns: ['Modell', 'Ca. Größe (Q4)', 'Chinesisch-Qualität', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (8 GB VRAM)'],
         rows: [
-          { Modell: 'Qwen3:3b', 'Ca. Größe (Q4)': '~2 GB', 'Chinesisch-Qualität': 'Gut', 'Geschwindigkeit (CPU)': '8–12 Tok/s', 'Geschwindigkeit (8 GB VRAM)': '60+ Tok/s' },
+          { Modell: 'Qwen3:4b', 'Ca. Größe (Q4)': '~2,5 GB', 'Chinesisch-Qualität': 'Je nach Gerät unterschiedlich', 'Geschwindigkeit (CPU)': 'Je nach Gerät unterschiedlich', 'Geschwindigkeit (8 GB VRAM)': 'Je nach Gerät unterschiedlich' },
           { Modell: 'Qwen3:8b', 'Ca. Größe (Q4)': '~4,7 GB', 'Chinesisch-Qualität': 'Ausgezeichnet — bester Startpunkt', 'Geschwindigkeit (CPU)': '3–5 Tok/s', 'Geschwindigkeit (8 GB VRAM)': '30–45 Tok/s' },
           { Modell: 'Qwen3:14b', 'Ca. Größe (Q4)': '~9 GB', 'Chinesisch-Qualität': 'Beste', 'Geschwindigkeit (CPU)': '1–2 Tok/s', 'Geschwindigkeit (8 GB VRAM)': '15–20 Tok/s' },
           { Modell: 'Llama3.1:8b', 'Ca. Größe (Q4)': '~4,7 GB', 'Chinesisch-Qualität': 'Mäßig', 'Geschwindigkeit (CPU)': '3–5 Tok/s', 'Geschwindigkeit (8 GB VRAM)': '30–45 Tok/s' },
@@ -520,8 +520,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Riskiert mein WeChat-Konto eine Sperre durch die Nutzung eines Bots?', a: 'Die WeChat-Nutzungsbedingungen verbieten automatisierte Bots. Konten, bei denen Automatisierungstools erkannt werden, riskieren eine vorübergehende Sperre oder einen dauerhaften Bann. Nutzen Sie dies nur bei geringem Nachrichtenvolumen für persönliche Produktivität — das Kontenrisiko ist real, und dies ist keine offiziell sanktionierte Integration.' },
             { q: 'Welches Ollama-Modell eignet sich am besten für chinesische WeChat-Nachrichten?', a: 'Qwen3 8B bietet für die meisten Nutzer die beste Balance aus Qualität und Geschwindigkeit — starkes Chinesisch-Verständnis, und das etwa 4,7 GB große (Q4) Modell passt in 8 GB VRAM oder läuft mit 16 GB CPU-RAM in akzeptablem Tempo.' },
             { q: 'Kann der Bot Gruppenchats verarbeiten?', a: 'Ja. WeChatFerry liefert Gruppennachrichten inklusive Raum-ID. Filtern Sie über `msg.roomid`, in welchen Gruppen der Bot antworten soll, und verlangen Sie ein explizites Auslöse-Schlüsselwort (z. B. „@ai"), damit der Bot nicht auf jede Gruppennachricht reagiert.' },
-            { q: 'Welche Hardware brauche ich für dieses Projekt wirklich?', a: 'Für einen leichten Qwen3-3B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).' },
-            { q: 'Ist der Minisforum UM890 Pro für einen WeChat-Bot überdimensioniert?', a: 'Für einen einfachen WeChat-Bot mit Qwen3 3B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.' },
+            { q: 'Welche Hardware brauche ich für dieses Projekt wirklich?', a: 'Für einen leichten Qwen3-4B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).' },
+            { q: 'Ist der Minisforum UM890 Pro für einen WeChat-Bot überdimensioniert?', a: 'Für einen einfachen WeChat-Bot mit Qwen3 4B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.' },
             { q: 'Macht lokale LLM-Inferenz WeChat privat?', a: 'Nein, und diese Unterscheidung ist wichtig. Lokale Inferenz bedeutet, dass Ihre Nachrichteninhalte nicht zur Verarbeitung an einen Cloud-LLM-Anbieter gesendet werden. Sie macht WeChat selbst nicht zu einer privaten Kommunikationsplattform — WeChat läuft weiterhin über die eigene Infrastruktur von Tencent, unabhängig davon, wo das KI-Modell läuft.' },
             { q: 'Ist dies eine offizielle WeChat-Integration?', a: 'Nein. WeChatFerry ist ein inoffizieller Automatisierungs-/Integrationsansatz, keine offizielle WeChat-Bot-API. Nutzen Sie es vorsichtig, halten Sie das Nachrichtenvolumen niedrig und persönlich, und seien Sie sich des Kontenrisikos jeder inoffiziellen Automatisierung bewusst.' },
             { q: 'Muss ich bei diesem Setup die DSGVO beachten?', a: 'Die lokale Verarbeitung durch Ollama und das Qwen-Modell erleichtert die DSGVO-Konformität, weil Nachrichteninhalte zur KI-Verarbeitung nicht an einen Drittanbieter außerhalb Ihres Netzwerks übermittelt werden — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28. Das ändert jedoch nichts daran, dass WeChat selbst als Messaging-Plattform über die eigene Infrastruktur von Tencent läuft; für sensible dienstliche Nutzung dokumentieren Sie den Datenfluss und sichern Sie den Rechner im Netzwerk ab.' },
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Welche Hardware brauche ich für dieses Projekt wirklich?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Für einen leichten Qwen3-3B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).',
+              'text': 'Für einen leichten Qwen3-4B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).',
             },
           },
           {
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Ist der Minisforum UM890 Pro für einen WeChat-Bot überdimensioniert?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Für einen einfachen WeChat-Bot mit Qwen3 3B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.',
+              'text': 'Für einen einfachen WeChat-Bot mit Qwen3 4B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.',
             },
           },
           {
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: 'Testen und als Dienst ausführen', text: 'Mit einer Selbstnachricht testen, dann per NSSM als Windows-Hintergrunddienst ausführen' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'WeChat-Bot mit lokalem LLM: Ein privater KI-Assistent (2026)', description: 'WeChat-Assistent mit lokalem LLM 2026 bauen: WeChatFerry + Ollama unter Windows, aktuelle Hardwarepreise und das richtige Qwen3-Modell.', url: 'https://www.promptquorum.com/de/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'de', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'WeChat-Bot mit lokalem LLM: Ein privater KI-Assistent (2026)', description: 'WeChat-Assistent mit lokalem LLM 2026 bauen: WeChatFerry + Ollama unter Windows, aktuelle Hardwarepreise und das richtige Qwen3-Modell.', url: 'https://www.promptquorum.com/de/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'de', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[WeChat Lokale LLM Integration — 3 Integrationsmuster](/de/power-local-llm/wechat-local-llm-integration-2026) — Webhook-, WeChatFerry- und Mini-PC-Server-Muster für Entwickler',
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3 est la pile qui fonctionne en 2026 pour un assistant WeChat avec LLM local — Windows uniquement, aucune API cloud',
-          "Achetez le matériel pour l'usage réel visé : un boîtier N150 économique (GMKtec G3 Plus, à partir de 170 €) suffit pour un assistant léger Qwen3 3B",
+          "Achetez le matériel pour l'usage réel visé : un boîtier N150 économique (GMKtec G3 Plus, à partir de 170 €) suffit pour un assistant léger Qwen3 4B",
           "Pour un serveur IA local permanent qui dépasse un simple bot, le Minisforum UM890 Pro (à partir d'env. 470 € barebone / env. 630 € avec 32 Go) est le meilleur investissement — environ 3 à 4 fois le prix, mais une autre classe de marge",
           "Qwen3 8B est le modèle de départ recommandé pour la qualité en chinois ; l'installation prend environ 30 à 60 minutes pour quelqu'un à l'aise avec Python",
           "Risque réel : les conditions d'utilisation de WeChat interdisent les bots automatisés — ceci relève de la productivité personnelle, pas d'un outil d'envoi massif",
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Acheter si / Passer si — quelle voie matérielle vous correspond',
         body: "Faites correspondre votre objectif réel à un niveau de matériel avant d'acheter quoi que ce soit — c'est la décision la plus importante de cette page, pas le code Python.",
         items: [
-          "**Prenez un mini-PC N150 économique (GMKtec G3 Plus ou Beelink EQ14) si :** l'assistant WeChat est votre seule charge d'IA locale sérieuse, un modèle Qwen3 3B vous suffit, et une faible consommation en fonctionnement 24/7 compte plus que la vitesse.",
+          "**Prenez un mini-PC N150 économique (GMKtec G3 Plus ou Beelink EQ14) si :** l'assistant WeChat est votre seule charge d'IA locale sérieuse, un modèle Qwen3 4B vous suffit, et une faible consommation en fonctionnement 24/7 compte plus que la vitesse.",
           "**Prenez un boîtier Ryzen (Minisforum UM890 Pro) si :** vous voulez que Qwen3 8B ou 14B soit réactif, vous prévoyez d'ajouter du RAG, une recherche documentaire ou d'autres services locaux plus tard, ou vous voulez une vraie marge plutôt qu'un second achat.",
           "**Ne montez pas ce projet si :** vous devez le faire tourner nativement sous macOS/Linux (WeChatFerry est exclusivement Windows), vous n'acceptez pas le risque de compte d'une intégration non officielle, ou vous avez besoin d'un volume de messages dépassant l'usage personnel.",
         ],
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: "**Une machine IA coûteuse n'est pas nécessaire pour un bot WeChat.** Achetez en fonction de la taille de modèle et du nombre de services simultanés que vous voulez réellement, pas parce que les mots « IA locale » suggèrent la plus grosse machine disponible.",
         columns: ['Niveau', 'RAM', 'Modèle adapté', 'Idéal pour'],
         rows: [
-          { Niveau: 'Économique', RAM: '16 Go', 'Modèle adapté': 'Qwen3 3B', 'Idéal pour': "Tester le concept, faible volume d'usage personnel, réponses simples en chinois" },
+          { Niveau: 'Économique', RAM: '16 Go', 'Modèle adapté': 'Qwen3 4B', 'Idéal pour': "Tester le concept, faible volume d'usage personnel, réponses simples en chinois" },
           { Niveau: 'Recommandé', RAM: '32 Go', 'Modèle adapté': 'Qwen3 8B', 'Idéal pour': "La plupart des installations sérieuses — historique plus long, 24/7, réponses plus rapides" },
           { Niveau: 'IA locale poussée', RAM: '64 Go+', 'Modèle adapté': 'Qwen3 14B et plus', 'Idéal pour': 'Plusieurs utilisateurs, RAG, recherche documentaire, agents IA' },
         ],
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**La marge de RAM est la vraie raison de ce choix, pas seulement la vitesse du CPU.** Un serveur IA local a besoin de mémoire pour le système d'exploitation, Ollama, le modèle lui-même, l'historique de conversation et — si vous l'ajoutez plus tard — les embeddings et une base de données. Un plafond de 96 Go laisse une vraie marge de croissance ; un boîtier N150 économique plafonne bien plus bas.",
           "**Deux emplacements SSD** permettent de dédier l'un au système et aux applications, et le second aux modèles et aux données — utile dès que plus d'un service IA local tourne.",
           "**Le double 2,5GbE** est inutile pour un simple bot WeChat, mais utile si la machine devient plus tard un serveur local plus large sur votre réseau.",
-          "**L'inconvénient honnête :** vous n'avez pas besoin d'une machine aussi puissante pour Qwen3 3B ou un usage léger en 8B. Si « je veux un bot WeChat pas cher » est tout l'objectif, c'est surdimensionné — voir l'option économique ci-dessous. Si l'objectif est « un serveur IA local permanent qui commence par WeChat et peut grandir », le UM890 Pro est la dépense la plus défendable.",
+          "**L'inconvénient honnête :** vous n'avez pas besoin d'une machine aussi puissante pour Qwen3 4B ou un usage léger en 8B. Si « je veux un bot WeChat pas cher » est tout l'objectif, c'est surdimensionné — voir l'option économique ci-dessous. Si l'objectif est « un serveur IA local permanent qui commence par WeChat et peut grandir », le UM890 Pro est la dépense la plus défendable.",
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix du Minisforum UM890 Pro — boutique officielle', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '470–630 €' },
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Alternative économique : mini-PC N150',
         body: "**Si l'assistant WeChat est vraiment votre seule charge sérieuse, un mini-PC N150 est bien moins cher et fait le travail.** Deux options réelles : le GMKtec G3 Plus (à partir de 170 € sur la boutique officielle EU de GMKtec, août 2026 — sa RAM est un SO-DIMM DDR4 remplaçable jusqu'à 32 Go, un vrai atout face aux rivaux à RAM soudée) et le Beelink EQ14 (environ 185 €, réseau double 2,5GbE mais limité à 16 Go soudés). Les deux utilisent le même Intel N150, donc aucun ne surpasse vraiment l'autre sur cet usage précis.",
         items: [
-          "Choisissez une machine N150 si : le prix compte le plus, un modèle Qwen3 3B suffit vraiment pour votre usage, vous voulez une très faible consommation, et la machine doit aussi faire tourner Home Assistant ou d'autres services légers.",
+          "Choisissez une machine N150 si : le prix compte le plus, un modèle Qwen3 4B suffit vraiment pour votre usage, vous voulez une très faible consommation, et la machine doit aussi faire tourner Home Assistant ou d'autres services légers.",
           "Choisissez plutôt le UM890 Pro si : l'IA locale est la charge principale, vous voulez que Qwen3 8B+ soit réactif, vous voulez 32 Go+ de RAM, ou vous prévoyez de faire tourner du RAG ou plusieurs services IA locaux sur la même machine.",
           "Voir le [test complet du GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) et le [test du Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) pour les spécifications complètes, ou le [comparatif des meilleurs mini-PC pour l'IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) pour d'autres options.",
         ],
@@ -777,10 +777,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Quel modèle Qwen choisir ?',
         body: "Pour les conversations WeChat en chinois, la famille Qwen est le point de départ évident. Le choix du modèle affecte fortement la qualité et la vitesse des réponses — ces chiffres sont des estimations basées sur du matériel et une quantification typiques, pas un benchmark mesuré par PromptQuorum sur un appareil physique.",
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: "Vitesse CPU estimée par modèle pour les réponses WeChat en chinois : Qwen3:3b est le plus rapide à environ 8–12 tok/s, Qwen3:8b équilibre qualité et vitesse à environ 3–5 tok/s, Llama3.1:8b tourne à une vitesse similaire avec un chinois plus faible, et Qwen3:14b offre la meilleure qualité à environ 1–2 tok/s sur CPU.",
+        imageCaption: "Vitesse CPU estimée par modèle pour les réponses WeChat en chinois : Qwen3:4b est l'option la plus légère, Qwen3:8b équilibre qualité et vitesse à environ 3–5 tok/s, Llama3.1:8b tourne à une vitesse similaire avec un chinois plus faible, et Qwen3:14b offre la meilleure qualité à environ 1–2 tok/s sur CPU.",
         columns: ['Modèle', 'Taille approx. (Q4)', 'Qualité en chinois', 'Vitesse (CPU)', 'Vitesse (8 Go VRAM)'],
         rows: [
-          { Modèle: 'Qwen3:3b', 'Taille approx. (Q4)': '~2 Go', 'Qualité en chinois': 'Bonne', 'Vitesse (CPU)': '8–12 tok/s', 'Vitesse (8 Go VRAM)': '60+ tok/s' },
+          { Modèle: 'Qwen3:4b', 'Taille approx. (Q4)': '~2.5 Go', 'Qualité en chinois': 'Variable selon l\'appareil', 'Vitesse (CPU)': 'Variable selon l\'appareil', 'Vitesse (8 Go VRAM)': 'Variable selon l\'appareil' },
           { Modèle: 'Qwen3:8b', 'Taille approx. (Q4)': '~4,7 Go', 'Qualité en chinois': 'Excellente — meilleur point de départ', 'Vitesse (CPU)': '3–5 tok/s', 'Vitesse (8 Go VRAM)': '30–45 tok/s' },
           { Modèle: 'Qwen3:14b', 'Taille approx. (Q4)': '~9 Go', 'Qualité en chinois': 'Meilleure', 'Vitesse (CPU)': '1–2 tok/s', 'Vitesse (8 Go VRAM)': '15–20 tok/s' },
           { Modèle: 'Llama3.1:8b', 'Taille approx. (Q4)': '~4,7 Go', 'Qualité en chinois': 'Moyenne', 'Vitesse (CPU)': '3–5 tok/s', 'Vitesse (8 Go VRAM)': '30–45 tok/s' },
@@ -828,8 +828,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Mon compte WeChat risque-t-il d\'être banni en utilisant un bot ?', a: "Les conditions d'utilisation de WeChat interdisent les bots automatisés. Les comptes détectés utilisant des outils d'automatisation risquent une suspension temporaire ou un bannissement permanent. Réservez ceci à la productivité personnelle à faible volume de messages — le risque sur le compte est réel, et ceci n'est pas une intégration officiellement sanctionnée." },
             { q: 'Quel est le meilleur modèle Ollama pour les messages WeChat en chinois ?', a: "Qwen3 8B offre le meilleur équilibre qualité/vitesse pour la plupart des utilisateurs — bonne compréhension du chinois, et le modèle d'environ 4,7 Go (Q4) tient dans 8 Go de VRAM ou tourne à un rythme acceptable avec 16 Go de RAM CPU." },
             { q: 'Le bot peut-il gérer les discussions de groupe ?', a: "Oui. WeChatFerry expose les messages de groupe avec un identifiant de salon. Filtrez via `msg.roomid` les groupes où le bot doit répondre, et exigez un mot-clé déclencheur explicite (ex. « @ai ») pour qu'il ne réponde pas à chaque message de groupe." },
-            { q: 'De quel matériel ai-je vraiment besoin pour ce projet ?', a: "Pour un assistant léger Qwen3 3B, tout PC Windows moderne avec 16 Go de RAM suffit — un mini-PC N150 économique comme le GMKtec G3 Plus (à partir de 170 €) couvre ce besoin. Pour que Qwen3 8B soit réactif et pour un fonctionnement 24/7 permanent, 32 Go de RAM et un CPU classe Ryzen sont le meilleur investissement — notre choix pour ce niveau est le Minisforum UM890 Pro (à partir d'env. 470 € barebone / env. 630 € avec 32 Go)." },
-            { q: 'Le Minisforum UM890 Pro est-il surdimensionné pour un bot WeChat ?', a: "Pour un simple bot WeChat avec Qwen3 3B, oui — un boîtier N150 économique suffit et coûte environ un tiers du prix. Pour un serveur IA local généraliste avec 32 à 96 Go de RAM, plusieurs modèles, du RAG et d'autres services en parallèle du bot, le UM890 Pro est bien plus facile à justifier." },
+            { q: 'De quel matériel ai-je vraiment besoin pour ce projet ?', a: "Pour un assistant léger Qwen3 4B, tout PC Windows moderne avec 16 Go de RAM suffit — un mini-PC N150 économique comme le GMKtec G3 Plus (à partir de 170 €) couvre ce besoin. Pour que Qwen3 8B soit réactif et pour un fonctionnement 24/7 permanent, 32 Go de RAM et un CPU classe Ryzen sont le meilleur investissement — notre choix pour ce niveau est le Minisforum UM890 Pro (à partir d'env. 470 € barebone / env. 630 € avec 32 Go)." },
+            { q: 'Le Minisforum UM890 Pro est-il surdimensionné pour un bot WeChat ?', a: "Pour un simple bot WeChat avec Qwen3 4B, oui — un boîtier N150 économique suffit et coûte environ un tiers du prix. Pour un serveur IA local généraliste avec 32 à 96 Go de RAM, plusieurs modèles, du RAG et d'autres services en parallèle du bot, le UM890 Pro est bien plus facile à justifier." },
             { q: "L'inférence LLM locale rend-elle WeChat privé ?", a: "Non, et cette distinction est importante. L'inférence locale signifie que le contenu de vos messages n'est pas envoyé à un fournisseur LLM cloud tiers pour traitement. Elle ne fait pas de WeChat lui-même une plateforme de communication privée — WeChat continue de fonctionner via sa propre infrastructure Tencent, quel que soit l'endroit où tourne le modèle d'IA." },
             { q: "Est-ce une intégration WeChat officielle ?", a: "Non. WeChatFerry est une approche d'automatisation/intégration non officielle, pas une API bot WeChat officielle. Utilisez-la avec prudence, gardez un volume de messages faible et personnel, et soyez conscient du risque de compte lié à toute automatisation non officielle." },
             { q: 'Comment créer un bot WeChat avec un LLM local ?', a: "Utilisez WeChatFerry (Windows) pour vous accrocher au client PC WeChat, connectez-le à Ollama via son API HTTP locale, et acheminez les messages vers un modèle Qwen3. Installation : environ 30 à 60 minutes avec Python." },
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'De quel matériel ai-je vraiment besoin pour ce projet ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': "Pour un assistant léger Qwen3 3B, tout PC Windows moderne avec 16 Go de RAM suffit — un mini-PC N150 économique comme le GMKtec G3 Plus (à partir de 170 €) couvre ce besoin. Pour que Qwen3 8B soit réactif et pour un fonctionnement 24/7 permanent, 32 Go de RAM et un CPU classe Ryzen sont le meilleur investissement — notre choix pour ce niveau est le Minisforum UM890 Pro (à partir d'env. 470 € barebone / env. 630 € avec 32 Go).",
+              'text': "Pour un assistant léger Qwen3 4B, tout PC Windows moderne avec 16 Go de RAM suffit — un mini-PC N150 économique comme le GMKtec G3 Plus (à partir de 170 €) couvre ce besoin. Pour que Qwen3 8B soit réactif et pour un fonctionnement 24/7 permanent, 32 Go de RAM et un CPU classe Ryzen sont le meilleur investissement — notre choix pour ce niveau est le Minisforum UM890 Pro (à partir d'env. 470 € barebone / env. 630 € avec 32 Go).",
             },
           },
           {
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Le Minisforum UM890 Pro est-il surdimensionné pour un bot WeChat ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': "Pour un simple bot WeChat avec Qwen3 3B, oui — un boîtier N150 économique suffit et coûte environ un tiers du prix. Pour un serveur IA local généraliste avec 32 à 96 Go de RAM, plusieurs modèles, du RAG et d'autres services en parallèle du bot, le UM890 Pro est bien plus facile à justifier.",
+              'text': "Pour un simple bot WeChat avec Qwen3 4B, oui — un boîtier N150 économique suffit et coûte environ un tiers du prix. Pour un serveur IA local généraliste avec 32 à 96 Go de RAM, plusieurs modèles, du RAG et d'autres services en parallèle du bot, le UM890 Pro est bien plus facile à justifier.",
             },
           },
           {
@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: 'Tester et exécuter en service', text: "Tester avec un message à soi-même, puis exécuter comme service Windows en arrière-plan via NSSM" },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot WeChat avec LLM local : un assistant IA privé (2026)', description: 'Créez un assistant WeChat avec un LLM local en 2026 : WeChatFerry + Ollama sous Windows, prix matériel actuels, quel modèle Qwen3 choisir.', url: 'https://www.promptquorum.com/fr/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'fr', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot WeChat avec LLM local : un assistant IA privé (2026)', description: 'Créez un assistant WeChat avec un LLM local en 2026 : WeChatFerry + Ollama sous Windows, prix matériel actuels, quel modèle Qwen3 choisir.', url: 'https://www.promptquorum.com/fr/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'fr', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[Intégration WeChat LLM local — 3 modèles d\'intégration](/fr/power-local-llm/wechat-local-llm-integration-2026) — modèles webhook, WeChatFerry et serveur mini-PC pour développeurs',
@@ -941,7 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '2026年、ローカルLLMでWeChatパーソナルアシスタントを構築する方法。WeChatFerry＋Ollama（Windows）、現在のハードウェア価格、最適なQwen3モデルを解説。クラウドAPI不使用。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
-    leadAnswerBlock: '**はい——WeChatFerryでWeChatクライアントにフックし、Ollamaでモデルを実行し、Qwen3で中国語の応答を生成することで、メッセージ内容をクラウドLLM APIに送信せずに、完全に自分のWindows PC上で動くWeChatパーソナルアシスタントを構築できます。** アーキテクチャ自体はシンプルです。本当に重要な判断はハードウェアです——軽量なQwen3 3Bアシスタントであれば安価なN150ミニPC（約2万〜3万円台から）で十分ですが、常時稼働するローカルAIサーバーへと発展させたい場合はMinisforum UM890 ProのようなRyzen級マシン（32GB構成で約15万〜18万円）の方が適しています。',
+    leadAnswerBlock: '**はい——WeChatFerryでWeChatクライアントにフックし、Ollamaでモデルを実行し、Qwen3で中国語の応答を生成することで、メッセージ内容をクラウドLLM APIに送信せずに、完全に自分のWindows PC上で動くWeChatパーソナルアシスタントを構築できます。** アーキテクチャ自体はシンプルです。本当に重要な判断はハードウェアです——軽量なQwen3 4Bアシスタントであれば安価なN150ミニPC（約2万〜3万円台から）で十分ですが、常時稼働するローカルAIサーバーへと発展させたい場合はMinisforum UM890 ProのようなRyzen級マシン（32GB構成で約15万〜18万円）の方が適しています。',
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLMでWeChatボットを構築するには？',
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry＋Ollama＋Qwen3が2026年時点で機能するローカルLLM WeChatアシスタントの構成——Windows専用、クラウドAPIなし',
-          '実際の用途に合わせてハードウェアを選ぶ：軽量なQwen3 3Bアシスタントなら安価なN150ボックス（GMKtec G3 Plus、約2万〜3万円台から）で十分',
+          '実際の用途に合わせてハードウェアを選ぶ：軽量なQwen3 4Bアシスタントなら安価なN150ボックス（GMKtec G3 Plus、約2万〜3万円台から）で十分',
           '単純なボットを超えて常時稼働のローカルAIサーバーを目指すなら、Minisforum UM890 Pro（32GB構成で約15万〜18万円）がより良い投資——価格は約3〜4倍だが、拡張性のクラスが異なる',
           '中国語の品質にはQwen3 8Bが推奨される出発点。Pythonに慣れた人であればセットアップは約30〜60分',
           '実在するリスク：WeChatの利用規約は自動化ボットを禁止しており、これは個人的な生産性向上のための用途であって、大量送信ツールではない',
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '買うべきか／見送るべきか——自分に合ったハードウェアの選び方',
         body: '何かを購入する前に、実際の目的をハードウェアのティアに当てはめてください——これはPythonコードよりもこのページで最も重要な判断です。',
         items: [
-          '**次の場合は安価なN150ミニPC（GMKtec G3 PlusまたはBeelink EQ14）を：** WeChatアシスタントが唯一の本格的なローカルAI用途で、Qwen3 3Bモデルで十分、24時間稼働時の低消費電力が速度より重要な場合。',
+          '**次の場合は安価なN150ミニPC（GMKtec G3 PlusまたはBeelink EQ14）を：** WeChatアシスタントが唯一の本格的なローカルAI用途で、Qwen3 4Bモデルで十分、24時間稼働時の低消費電力が速度より重要な場合。',
           '**次の場合はRyzen級マシン（Minisforum UM890 Pro）を：** Qwen3 8Bや14Bを快適に応答させたい、後でRAGやドキュメント検索など他のローカルサービスを追加したい、あるいは買い直しではなく本当の余裕が欲しい場合。',
           '**次の場合はこのプロジェクト自体を見送る：** macOS/Linuxでネイティブに動かす必要がある（WeChatFerryはWindows専用）、非公式インテグレーションのアカウントリスクを受け入れられない、または個人利用を超えるメッセージ量が必要な場合。',
         ],
@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**WeChatボットを動かすだけなら高価なAIマシンは不要です。** 「ローカルAI」という言葉から連想される最大級のマシンではなく、実際に使いたいモデルサイズと同時実行サービス数に基づいて購入してください。',
         columns: ['ティア', 'RAM', '対応モデル', '最適な用途'],
         rows: [
-          { ティア: '予算重視', RAM: '16GB', '対応モデル': 'Qwen3 3B', '最適な用途': 'コンセプトの試用、低頻度の個人利用、シンプルな中国語応答' },
+          { ティア: '予算重視', RAM: '16GB', '対応モデル': 'Qwen3 4B', '最適な用途': 'コンセプトの試用、低頻度の個人利用、シンプルな中国語応答' },
           { ティア: '推奨', RAM: '32GB', '対応モデル': 'Qwen3 8B', '最適な用途': 'ほとんどの本格的なアシスタント導入——長めの会話履歴、24時間稼働、より応答性の高い返信' },
           { ティア: '本格的なローカルAI', RAM: '64GB以上', '対応モデル': 'Qwen3 14B以上', '最適な用途': '複数同時ユーザー、RAG、ドキュメント検索、エージェントワークフロー、追加のローカルAIサービス' },
         ],
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**選ぶ理由は純粋なCPU速度ではなく、RAMの余裕です。** ローカルAIサーバーには、OS、Ollama、モデル本体、会話履歴、そして後で追加する場合はエンベディングやデータベース用のメモリが必要です。96GBという上限は本当の成長余地を与えてくれます——予算重視のN150ボックスははるかに低い上限で頭打ちになります。',
           '**2つのSSDスロット**により、一方をOSとアプリケーション用に、もう一方をモデルとデータ用に割り当てられます——複数のローカルAIサービスを動かすようになると重要になります。',
           '**デュアル2.5GbE**はシンプルなWeChatボットには不要ですが、後にこのマシンがネットワーク上のより広範なローカルサーバーになる場合には本当に役立ちます。',
-          '**正直な欠点：** Qwen3 3Bや軽量な8B利用のためだけならここまでのマシンは不要です。「安価なWeChatボットが欲しいだけ」が目的のすべてなら、これはオーバースペックです——下記の予算オプションを参照してください。「WeChatから始めて成長できる常時稼働のローカルAIサーバーが欲しい」が目的なら、UM890 Proの方が正当化しやすい投資です。',
+          '**正直な欠点：** Qwen3 4Bや軽量な8B利用のためだけならここまでのマシンは不要です。「安価なWeChatボットが欲しいだけ」が目的のすべてなら、これはオーバースペックです——下記の予算オプションを参照してください。「WeChatから始めて成長できる常時稼働のローカルAIサーバーが欲しい」が目的なら、UM890 Proの方が正当化しやすい投資です。',
         ],
         affiliateLinks: [
           { label: 'Minisforum UM890 Proの価格を確認——公式ストア', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '約15万〜18万円' },
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '予算重視の代替案：N150ミニPC',
         body: '**WeChatアシスタントが本当に唯一の本格的な用途であれば、N150ミニPCの方がはるかに安く、それでも十分に役目を果たします。** 現実的な選択肢は2つ：GMKtec G3 Plus（RAMは32GBまで交換可能なDDR4 SO-DIMMで、はんだ付けされたライバル製品に対する実質的な強みがあります）とBeelink EQ14（デュアル2.5GbEネットワークを備えるが、はんだ付けされた16GBが上限）です。どちらも同じIntel N150を使用しているため、この用途に関してはどちらか一方が明確に優れているわけではありません。日本国内での正確な販売価格は変動するため、購入前にAmazon.co.jpや価格.comで最新価格を確認してください。',
         items: [
-          '価格が最優先、Qwen3 3Bモデルで本当に十分、非常に低い消費電力が欲しい、そしてこのボックスがHome Assistantなど他の軽量サービスも兼ねる場合はN150マシンを選んでください。',
+          '価格が最優先、Qwen3 4Bモデルで本当に十分、非常に低い消費電力が欲しい、そしてこのボックスがHome Assistantなど他の軽量サービスも兼ねる場合はN150マシンを選んでください。',
           'ローカルAIが主目的、Qwen3 8B以上を快適に動かしたい、32GB以上のRAMが欲しい、あるいは同じボックスでRAGや複数のローカルAIサービスを動かす予定があるなら、代わりにUM890 Proを選んでください。',
           '完全な仕様比較は[GMKtec G3 Plusレビュー](/ja/smart-home/gmktec-g3-plus-local-ai-review)と[Beelink EQ14レビュー](/ja/smart-home/beelink-eq14-local-ai-review)を、他の選択肢は[ローカルAI向けベストミニPC総まとめ](/ja/smart-home/best-mini-pc-home-assistant-local-ai)を参照してください。',
         ],
@@ -1067,10 +1067,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'どのQwenモデルを使うべきか',
         body: '中国語のWeChat会話には、Qwenファミリーが自然な出発点です。モデル選びは応答品質と速度に大きく影響します——以下の数値は典型的なハードウェアと量子化に基づく推定であり、PromptQuorumが実機で測定したベンチマークではありません。',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: '中国語WeChat応答のモデル別推定CPU速度：Qwen3:3bが最速で約8〜12トークン/秒、Qwen3:8bは品質と速度のバランスで約3〜5トークン/秒、Llama3.1:8bは同程度の速度だが中国語対応は弱く、Qwen3:14bはCPU上で約1〜2トークン/秒ながら最高品質。',
+        imageCaption: '中国語WeChat応答のモデル別推定CPU速度：Qwen3:4bは最も軽量で、Qwen3:8bは品質と速度のバランスで約3〜5トークン/秒、Llama3.1:8bは同程度の速度だが中国語対応は弱く、Qwen3:14bはCPU上で約1〜2トークン/秒ながら最高品質。',
         columns: ['モデル', '概算サイズ（Q4）', '中国語品質', '速度（CPU）', '速度（8GB VRAM）'],
         rows: [
-          { モデル: 'Qwen3:3b', '概算サイズ（Q4）': '約2GB', '中国語品質': '良好', '速度（CPU）': '8〜12トークン/秒', '速度（8GB VRAM）': '60トークン/秒以上' },
+          { モデル: 'Qwen3:4b', '概算サイズ（Q4）': '約2.5GB', '中国語品質': 'デバイスにより異なる', '速度（CPU）': 'デバイスにより異なる', '速度（8GB VRAM）': 'デバイスにより異なる' },
           { モデル: 'Qwen3:8b', '概算サイズ（Q4）': '約4.7GB', '中国語品質': '優秀——最良の出発点', '速度（CPU）': '3〜5トークン/秒', '速度（8GB VRAM）': '30〜45トークン/秒' },
           { モデル: 'Qwen3:14b', '概算サイズ（Q4）': '約9GB', '中国語品質': '最良', '速度（CPU）': '1〜2トークン/秒', '速度（8GB VRAM）': '15〜20トークン/秒' },
           { モデル: 'Llama3.1:8b', '概算サイズ（Q4）': '約4.7GB', '中国語品質': '普通', '速度（CPU）': '3〜5トークン/秒', '速度（8GB VRAM）': '30〜45トークン/秒' },
@@ -1118,8 +1118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'ボットを使うとWeChatアカウントが停止されますか？', a: 'WeChatの利用規約は自動化ボットを禁止しています。自動化ツールの使用が検出されたアカウントは、一時停止または永久停止のリスクがあります。低頻度の個人的な生産性向上目的にのみ使用してください——アカウントリスクは実在し、これは公式に承認されたインテグレーションではありません。' },
             { q: '中国語のWeChatメッセージに最適なOllamaモデルは？', a: 'ほとんどのユーザーにとって、Qwen3 8Bが品質と速度の最良のバランスです——中国語の理解力が高く、約4.7GB（Q4）のモデルは8GBのVRAMに収まるか、16GBのCPU RAMで許容できる速度で動作します。' },
             { q: 'ボットはグループチャットに対応できますか？', a: 'はい。WeChatFerryはルームIDとともにグループメッセージを公開します。`msg.roomid`でボットが応答すべきグループをフィルタリングし、すべてのグループメッセージに反応しないよう「@ai」などの明示的なトリガーキーワードを設定してください。' },
-            { q: 'このプロジェクトに実際に必要なハードウェアは？', a: '軽量なQwen3 3Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。' },
-            { q: 'Minisforum UM890 ProはWeChatボットにはオーバースペックですか？', a: 'Qwen3 3BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。' },
+            { q: 'このプロジェクトに実際に必要なハードウェアは？', a: '軽量なQwen3 4Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。' },
+            { q: 'Minisforum UM890 ProはWeChatボットにはオーバースペックですか？', a: 'Qwen3 4BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。' },
             { q: 'ローカルLLM推論を使えばWeChatはプライベートになりますか？', a: 'いいえ、この区別は重要です。ローカル推論とは、メッセージ内容がサードパーティのクラウドLLMプロバイダーに処理のため送信されないことを意味します。それによってWeChat自体がプライベートな通信プラットフォームになるわけではありません——AIモデルがどこで動作していても、WeChatは引き続き自社のTencentインフラ上で動作します。' },
             { q: 'これは公式のWeChatインテグレーションですか？', a: 'いいえ。WeChatFerryは非公式な自動化・インテグレーション手法であり、公式のWeChatボットAPIではありません。慎重に使用し、メッセージ量を低く個人的な範囲に抑え、あらゆる非公式自動化に伴うアカウントリスクを理解した上で利用してください。' },
             { q: 'ローカルLLMでWeChatボットを構築するには？', a: 'WeChatFerry（Windows）でWeChat PCクライアントにフックし、ローカルのHTTP API経由でOllamaに接続し、メッセージをQwen3モデルに転送します。セットアップ時間はPythonの知識があれば約30〜60分です。' },
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'このプロジェクトに実際に必要なハードウェアは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '軽量なQwen3 3Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。',
+              'text': '軽量なQwen3 4Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。',
             },
           },
           {
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Minisforum UM890 ProはWeChatボットにはオーバースペックですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 3BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。',
+              'text': 'Qwen3 4BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。',
             },
           },
           {
@@ -1217,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: 'テストしてサービスとして実行', text: '自分宛のメッセージでテストし、NSSM経由でWindowsバックグラウンドサービスとして実行' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ローカルLLMでWeChatボットを構築：プライベートAIパーソナルアシスタント（2026）', description: '2026年、ローカルLLMでWeChatパーソナルアシスタントを構築する方法。WeChatFerry＋Ollama（Windows）、現在のハードウェア価格、最適なQwen3モデルを解説。', url: 'https://www.promptquorum.com/ja/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ローカルLLMでWeChatボットを構築：プライベートAIパーソナルアシスタント（2026）', description: '2026年、ローカルLLMでWeChatパーソナルアシスタントを構築する方法。WeChatFerry＋Ollama（Windows）、現在のハードウェア価格、最適なQwen3モデルを解説。', url: 'https://www.promptquorum.com/ja/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[WeChatローカルLLM統合ガイド——3つの統合パターン](/ja/power-local-llm/wechat-local-llm-integration-2026) — 開発者向けのWebhook、WeChatFerry、ミニPCサーバーパターン',
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '2026年用本地LLM打造微信个人助手：Windows下的WeChatFerry + Ollama，附真实硬件价格与Qwen3模型选择建议，全程无需云端API。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
-    leadAnswerBlock: '**可以——你能在自己的Windows电脑上完全本地运行一个微信个人助手：用WeChatFerry挂接微信客户端，用Ollama运行模型，用Qwen3生成中文回复，消息内容不会发送到云端LLM API。** 架构本身很简单，真正的决定在于硬件——预算有限的N150迷你主机（约140–200美元起）足以支撑一个轻量的Qwen3 3B助手；而像Minisforum UM890 Pro这样的Ryzen级主机（32GB配置约649美元）更适合把这个项目发展成一台常驻运行的本地AI服务器，而不仅仅是一个微信机器人。',
+    leadAnswerBlock: '**可以——你能在自己的Windows电脑上完全本地运行一个微信个人助手：用WeChatFerry挂接微信客户端，用Ollama运行模型，用Qwen3生成中文回复，消息内容不会发送到云端LLM API。** 架构本身很简单，真正的决定在于硬件——预算有限的N150迷你主机（约140–200美元起）足以支撑一个轻量的Qwen3 4B助手；而像Minisforum UM890 Pro这样的Ryzen级主机（32GB配置约649美元）更适合把这个项目发展成一台常驻运行的本地AI服务器，而不仅仅是一个微信机器人。',
     quickAnswerTop: {
       zh: {
         question: '如何用本地LLM搭建微信机器人？',
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3是2026年可行的本地LLM微信助手方案——仅限Windows，不涉及任何云端API',
-          '按实际需求购买硬件：一台预算款N150主机（GMKtec G3 Plus，约$140–200）足以支撑一个轻量的Qwen3 3B助手',
+          '按实际需求购买硬件：一台预算款N150主机（GMKtec G3 Plus，约$140–200）足以支撑一个轻量的Qwen3 4B助手',
           '如果目标是一台能超越简单机器人的常驻本地AI服务器，Minisforum UM890 Pro（32GB配置约$649）是更值得的投入——价格约为前者的3–4倍，但拓展空间完全不是一个量级',
           '中文质量方面推荐从Qwen3 8B开始；对熟悉Python的人来说搭建大约需要30–60分钟',
           '真实存在的风险：微信服务条款禁止自动化机器人——这属于个人生产力工具的范畴，不是群发工具',
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '该买什么／该跳过什么——找到适合你的硬件路线',
         body: '在购买任何设备之前，先把你的实际目标对应到某个硬件档位——这是本页最重要的决定，比Python代码更重要。',
         items: [
-          '**以下情况选购预算款N150迷你主机（GMKtec G3 Plus或Beelink EQ14）：** 微信助手是你唯一认真对待的本地AI任务，Qwen3 3B模型对你来说已经够用，且24小时运行时的低功耗比速度更重要。',
+          '**以下情况选购预算款N150迷你主机（GMKtec G3 Plus或Beelink EQ14）：** 微信助手是你唯一认真对待的本地AI任务，Qwen3 4B模型对你来说已经够用，且24小时运行时的低功耗比速度更重要。',
           '**以下情况选购Ryzen级主机（Minisforum UM890 Pro）：** 你希望Qwen3 8B或14B运行得更流畅，计划后续加入RAG、文档检索或其他本地服务，或者你想要真正的余量而不是买了一台又买一台。',
           '**以下情况直接跳过这个项目：** 你必须原生在macOS/Linux上运行（WeChatFerry仅支持Windows）、你无法接受非官方集成带来的账号风险，或你的消息量已经超出个人使用规模。',
         ],
@@ -1300,7 +1300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**搭建一个微信机器人并不需要昂贵的AI主机。** 请根据你实际想运行的模型大小和并发服务数量来购买，而不是因为"本地AI"这个词听起来就该买最大的那台机器。',
         columns: ['档位', '内存', '适配模型', '最适合'],
         rows: [
-          { 档位: '预算款', 内存: '16GB', '适配模型': 'Qwen3 3B', '最适合': '体验这个概念、低频个人使用、简单的中文回复' },
+          { 档位: '预算款', 内存: '16GB', '适配模型': 'Qwen3 4B', '最适合': '体验这个概念、低频个人使用、简单的中文回复' },
           { 档位: '推荐配置', 内存: '32GB', '适配模型': 'Qwen3 8B', '最适合': '大多数认真的个人助手部署——更长的对话历史、24/7运行、更流畅的回复' },
           { 档位: '重度本地AI', 内存: '64GB以上', '适配模型': 'Qwen3 14B及更大模型', '最适合': '多用户并发、RAG、文档检索、智能体工作流、其他本地AI服务' },
         ],
@@ -1317,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**选择它的真正原因是内存余量，而不是单纯的CPU速度。** 一台本地AI服务器需要为操作系统、Ollama、模型本身、对话历史，以及后续可能添加的嵌入向量和数据库预留内存。96GB的上限带来真正的成长空间；预算款N150主机的上限要低得多。',
           '**两个SSD插槽**可以让你专门用一个存放系统和应用，另一个存放模型和数据——一旦你运行不止一个本地AI服务，这一点就很重要。',
           '**双2.5GbE网络**对简单的微信机器人来说并非必需，但如果这台主机以后要成为你网络中更广泛的本地服务器，这个功能会真正派上用场。',
-          '**诚实的缺点：** 如果只运行Qwen3 3B或轻度使用8B，你并不需要这么强的主机。如果"我只想要一个便宜的微信机器人"是全部目标，这台主机就是过度配置——请看下方的预算选项。如果目标是"一台从微信开始、并能持续成长的常驻本地AI服务器"，UM890 Pro就是更站得住脚的投入。',
+          '**诚实的缺点：** 如果只运行Qwen3 4B或轻度使用8B，你并不需要这么强的主机。如果"我只想要一个便宜的微信机器人"是全部目标，这台主机就是过度配置——请看下方的预算选项。如果目标是"一台从微信开始、并能持续成长的常驻本地AI服务器"，UM890 Pro就是更站得住脚的投入。',
         ],
         affiliateLinks: [
           { label: '查看Minisforum UM890 Pro价格——官方商店', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '$439–649' },
@@ -1328,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '预算替代方案：N150迷你主机',
         body: '**如果微信助手确实是你唯一认真对待的任务，N150迷你主机会便宜得多，而且照样能完成任务。** 两个真实的选择：GMKtec G3 Plus（截至2026年8月GMKtec欧洲官方商店起价€159.99，美国市场约$140–200——其内存是可更换的DDR4 SO-DIMM，最高可升至32GB，相比焊死内存的竞品是真实优势）和Beelink EQ14（约$189–199，双2.5GbE网络，但内存焊死上限为16GB）。两者使用相同的Intel N150处理器，因此在这项具体任务上谁也不会明显压倒对方。',
         items: [
-          '如果价格最重要、Qwen3 3B模型对你的用途确实足够、你想要极低的功耗，且这台主机可能还要顺带运行Home Assistant等轻量服务，请选择N150主机。',
+          '如果价格最重要、Qwen3 4B模型对你的用途确实足够、你想要极低的功耗，且这台主机可能还要顺带运行Home Assistant等轻量服务，请选择N150主机。',
           '如果本地AI是主要任务、你希望Qwen3 8B以上运行流畅、你想要32GB以上内存，或计划在同一台主机上运行RAG或多个本地AI服务，请改选UM890 Pro。',
           '完整规格对比请见[GMKtec G3 Plus评测](/zh/smart-home/gmktec-g3-plus-local-ai-review)和[Beelink EQ14评测](/zh/smart-home/beelink-eq14-local-ai-review)，更多选项参见[家庭助理+本地AI最佳迷你主机汇总](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。',
         ],
@@ -1357,10 +1357,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '应该使用哪个Qwen模型？',
         body: '对于中文微信对话，Qwen系列是显而易见的起点。模型选择对回复质量和速度影响很大——以下数据是基于典型硬件和量化方式的估算，不是PromptQuorum在实体设备上测得的基准测试。',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: '中文微信回复各模型的估计CPU速度：Qwen3:3b最快，约8–12 tok/s；Qwen3:8b在质量和速度之间取得平衡，约3–5 tok/s；Llama3.1:8b速度相近但中文能力较弱；Qwen3:14b质量最高，但CPU上约为1–2 tok/s。',
+        imageCaption: '中文微信回复各模型的估计CPU速度：Qwen3:4b最轻量；Qwen3:8b在质量和速度之间取得平衡，约3–5 tok/s；Llama3.1:8b速度相近但中文能力较弱；Qwen3:14b质量最高，但CPU上约为1–2 tok/s。',
         columns: ['模型', '大致体积（Q4）', '中文质量', '速度（CPU）', '速度（8GB显存）'],
         rows: [
-          { 模型: 'Qwen3:3b', '大致体积（Q4）': '约2GB', '中文质量': '良好', '速度（CPU）': '8–12 tok/s', '速度（8GB显存）': '60+ tok/s' },
+          { 模型: 'Qwen3:4b', '大致体积（Q4）': '约2.5GB', '中文质量': '因设备而异', '速度（CPU）': '因设备而异', '速度（8GB显存）': '因设备而异' },
           { 模型: 'Qwen3:8b', '大致体积（Q4）': '约4.7GB', '中文质量': '优秀——最佳起点', '速度（CPU）': '3–5 tok/s', '速度（8GB显存）': '30–45 tok/s' },
           { 模型: 'Qwen3:14b', '大致体积（Q4）': '约9GB', '中文质量': '最佳', '速度（CPU）': '1–2 tok/s', '速度（8GB显存）': '15–20 tok/s' },
           { 模型: 'Llama3.1:8b', '大致体积（Q4）': '约4.7GB', '中文质量': '一般', '速度（CPU）': '3–5 tok/s', '速度（8GB显存）': '30–45 tok/s' },
@@ -1408,8 +1408,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '使用机器人会导致我的微信账号被封吗？', a: '微信服务条款禁止自动化机器人。被检测到使用自动化工具的账号存在临时限制或永久封禁的风险。请仅在低消息量的个人生产力场景下使用——账号风险是真实存在的，这不是一项官方认可的集成。' },
             { q: '中文微信消息最适合用哪个Ollama模型？', a: '对大多数用户而言，Qwen3 8B在质量和速度之间取得了最佳平衡——中文理解能力强，约4.7GB（Q4）的模型能装入8GB显存，或在16GB CPU内存上以尚可接受的速度运行。' },
             { q: '机器人能处理群聊吗？', a: '可以。WeChatFerry会连同房间ID一起暴露群消息。通过`msg.roomid`过滤机器人应该在哪些群回复，并设置一个明确的触发关键词（如"@ai"），避免它回复群里的每一条消息。' },
-            { q: '这个项目实际需要什么硬件？', a: '如果只是轻量的Qwen3 3B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。' },
-            { q: 'Minisforum UM890 Pro对一个微信机器人来说是不是配置过高？', a: '如果只是运行Qwen3 3B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。' },
+            { q: '这个项目实际需要什么硬件？', a: '如果只是轻量的Qwen3 4B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。' },
+            { q: 'Minisforum UM890 Pro对一个微信机器人来说是不是配置过高？', a: '如果只是运行Qwen3 4B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。' },
             { q: '本地LLM推理能让微信变得私密吗？', a: '不能，这个区别很重要。本地推理意味着你的消息内容不会被发送给第三方云LLM提供商进行处理。它并不会让微信本身变成一个私密的通信平台——无论AI模型运行在哪里，微信依然运行在腾讯自己的基础设施之上。' },
             { q: '这是官方的微信集成方式吗？', a: '不是。WeChatFerry是一种非官方的自动化/集成方案，不是官方的微信机器人API。请谨慎使用，将消息量控制在较低且个人化的范围内，并了解任何非官方自动化方案都伴随着账号风险。' },
             { q: '如何用本地LLM搭建微信机器人？', a: '使用WeChatFerry（Windows）挂接微信PC客户端，通过本地HTTP API连接Ollama，并将消息转发给Qwen3模型。使用Python的话，搭建时间大约30–60分钟。' },
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '这个项目实际需要什么硬件？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '如果只是轻量的Qwen3 3B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。',
+              'text': '如果只是轻量的Qwen3 4B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。',
             },
           },
           {
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Minisforum UM890 Pro对一个微信机器人来说是不是配置过高？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '如果只是运行Qwen3 3B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。',
+              'text': '如果只是运行Qwen3 4B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。',
             },
           },
           {
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: '测试并作为服务运行', text: '发送自测消息进行测试，然后通过NSSM作为Windows后台服务运行' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '用本地LLM打造微信机器人：2026年私人AI助手构建指南', description: '2026年用本地LLM打造微信个人助手：Windows下的WeChatFerry + Ollama，附真实硬件价格与Qwen3模型选择建议。', url: 'https://www.promptquorum.com/zh/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '用本地LLM打造微信机器人：2026年私人AI助手构建指南', description: '2026年用本地LLM打造微信个人助手：Windows下的WeChatFerry + Ollama，附真实硬件价格与Qwen3模型选择建议。', url: 'https://www.promptquorum.com/zh/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[微信本地LLM集成指南——3种集成模式](/zh/power-local-llm/wechat-local-llm-integration-2026) — 面向开发者的webhook、WeChatFerry和迷你主机服务器模式',
@@ -1521,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3 es la combinación que funciona en 2026 para un asistente de WeChat con LLM local — solo Windows, sin ninguna API en la nube',
-          'Compra el hardware según la tarea real: un equipo N150 económico (GMKtec G3 Plus, desde ~170 €/$140–200) basta para un asistente ligero con Qwen3 3B',
+          'Compra el hardware según la tarea real: un equipo N150 económico (GMKtec G3 Plus, desde ~170 €/$140–200) basta para un asistente ligero con Qwen3 4B',
           'Para un servidor de IA local siempre activo que crezca más allá de un bot simple, el Minisforum UM890 Pro (desde ~470 €/$439–649) es mejor inversión — unas 3–4 veces el precio, pero otra clase de margen',
           'Qwen3 8B es el modelo de partida recomendado para calidad en chino; la instalación toma entre 30 y 60 minutos para alguien cómodo con Python',
           'Riesgo real: los términos de servicio de WeChat prohíben los bots automatizados — esto es un uso de productividad personal, no una herramienta de envío masivo',
@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Comprar si / Saltar si — qué ruta de hardware te conviene',
         body: 'Antes de comprar nada, haz coincidir tu objetivo real con un nivel de hardware — es la decisión más importante de esta página, más que el código en Python.',
         items: [
-          '**Compra un mini PC N150 económico (GMKtec G3 Plus o Beelink EQ14) si:** el asistente de WeChat es tu única carga seria de IA local, un modelo Qwen3 3B te resulta suficiente, y el bajo consumo en funcionamiento 24/7 importa más que la velocidad.',
+          '**Compra un mini PC N150 económico (GMKtec G3 Plus o Beelink EQ14) si:** el asistente de WeChat es tu única carga seria de IA local, un modelo Qwen3 4B te resulta suficiente, y el bajo consumo en funcionamiento 24/7 importa más que la velocidad.',
           '**Compra un equipo de clase Ryzen (Minisforum UM890 Pro) si:** quieres que Qwen3 8B o 14B se sienta ágil, planeas añadir RAG, búsqueda de documentos u otros servicios locales más adelante, o quieres margen real en vez de comprar dos veces.',
           '**Salta este proyecto por completo si:** necesitas ejecutarlo de forma nativa en macOS/Linux (WeChatFerry es solo para Windows), no estás dispuesto a aceptar el riesgo de cuenta de una integración no oficial, o necesitas un volumen de mensajes que supere el uso personal.',
         ],
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**No necesitas una máquina de IA cara solo para ejecutar un bot de WeChat.** Compra según el tamaño de modelo y el número de servicios simultáneos que realmente quieras, no porque las palabras "IA local" sugieran la máquina más grande disponible.',
         columns: ['Nivel', 'RAM', 'Modelo que soporta', 'Ideal para'],
         rows: [
-          { Nivel: 'Económico', RAM: '16 GB', 'Modelo que soporta': 'Qwen3 3B', 'Ideal para': 'Probar el concepto, uso personal de bajo volumen, respuestas sencillas en chino' },
+          { Nivel: 'Económico', RAM: '16 GB', 'Modelo que soporta': 'Qwen3 4B', 'Ideal para': 'Probar el concepto, uso personal de bajo volumen, respuestas sencillas en chino' },
           { Nivel: 'Recomendado', RAM: '32 GB', 'Modelo que soporta': 'Qwen3 8B', 'Ideal para': 'La mayoría de instalaciones serias — más historial, uso 24/7, respuestas más ágiles' },
           { Nivel: 'IA local intensiva', RAM: '64 GB+', 'Modelo que soporta': 'Qwen3 14B y mayores', 'Ideal para': 'Varios usuarios simultáneos, RAG, búsqueda de documentos, flujos de agentes, servicios de IA local adicionales' },
         ],
@@ -1607,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El margen de RAM es la razón real para elegirlo, no solo la velocidad de la CPU.** Un servidor de IA local necesita memoria para el sistema operativo, Ollama, el modelo en sí, el historial de conversación y — si lo añades más adelante — embeddings y una base de datos. Un techo de 96 GB da margen real para crecer; un equipo N150 económico se queda muy por debajo.',
           '**Dos ranuras SSD** permiten dedicar una al sistema y las aplicaciones, y la segunda a modelos y datos — algo relevante en cuanto ejecutas más de un servicio de IA local.',
           '**La red doble de 2,5GbE** es innecesaria para un bot de WeChat sencillo, pero útil si la máquina acaba convirtiéndose en un servidor local más amplio en tu red.',
-          '**La desventaja honesta:** no necesitas tanta máquina para Qwen3 3B o un uso ligero de 8B. Si "quiero un bot de WeChat barato" es todo el objetivo, esto es excesivo — mira la opción económica más abajo. Si el objetivo es "un servidor de IA local siempre activo que empieza con WeChat y puede crecer", el UM890 Pro es el gasto más defendible.',
+          '**La desventaja honesta:** no necesitas tanta máquina para Qwen3 4B o un uso ligero de 8B. Si "quiero un bot de WeChat barato" es todo el objetivo, esto es excesivo — mira la opción económica más abajo. Si el objetivo es "un servidor de IA local siempre activo que empieza con WeChat y puede crecer", el UM890 Pro es el gasto más defendible.',
         ],
         affiliateLinks: [
           { label: 'Ver precio del Minisforum UM890 Pro — tienda oficial', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '$439–649 / ~470–630 €' },
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Alternativa económica: mini PC N150',
         body: '**Si el asistente de WeChat es realmente tu única carga seria, un mini PC N150 es mucho más barato y aun así cumple.** Dos opciones reales: el GMKtec G3 Plus (desde 159,99 € en la tienda oficial de GMKtec para la UE en agosto de 2026, o $140–200 USD en listados de Estados Unidos — su RAM es un SO-DIMM DDR4 reemplazable hasta 32 GB, una ventaja real frente a rivales con RAM soldada) y el Beelink EQ14 (unos $189–199 USD, red doble de 2,5GbE pero limitado a 16 GB soldados). Ambos usan el mismo Intel N150, así que ninguno supera claramente al otro en esta tarea concreta.',
         items: [
-          'Elige una máquina N150 si: el precio es lo más importante, un modelo Qwen3 3B te resulta realmente suficiente, quieres un consumo muy bajo, y la máquina también va a ejecutar Home Assistant u otros servicios ligeros.',
+          'Elige una máquina N150 si: el precio es lo más importante, un modelo Qwen3 4B te resulta realmente suficiente, quieres un consumo muy bajo, y la máquina también va a ejecutar Home Assistant u otros servicios ligeros.',
           'Elige en su lugar el UM890 Pro si: la IA local es la carga principal, quieres que Qwen3 8B o superior se sienta ágil, quieres 32 GB+ de RAM, o planeas ejecutar RAG o varios servicios de IA local en la misma máquina.',
           'Consulta la [reseña completa del GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) y la [reseña del Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review) para las especificaciones completas, o el [comparativo de los mejores mini PC para IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) para más opciones.',
         ],
@@ -1647,10 +1647,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '¿Qué modelo Qwen deberías usar?',
         body: 'Para conversaciones de WeChat en chino, la familia Qwen es el punto de partida evidente. La elección del modelo afecta mucho a la calidad y velocidad de las respuestas — estas cifras son estimaciones basadas en hardware y cuantización típicos, no un benchmark medido por PromptQuorum en un equipo físico.',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: 'Velocidad estimada en CPU por modelo para respuestas de WeChat en chino: Qwen3:3b es el más rápido, con unos 8–12 tok/s; Qwen3:8b equilibra calidad y velocidad con unos 3–5 tok/s; Llama3.1:8b funciona a una velocidad similar con peor soporte de chino; y Qwen3:14b ofrece la mejor calidad con unos 1–2 tok/s en CPU.',
+        imageCaption: 'Velocidad estimada en CPU por modelo para respuestas de WeChat en chino: Qwen3:4b es la opción más ligera; Qwen3:8b equilibra calidad y velocidad con unos 3–5 tok/s; Llama3.1:8b funciona a una velocidad similar con peor soporte de chino; y Qwen3:14b ofrece la mejor calidad con unos 1–2 tok/s en CPU.',
         columns: ['Modelo', 'Tamaño aprox. (Q4)', 'Calidad en chino', 'Velocidad (CPU)', 'Velocidad (8 GB VRAM)'],
         rows: [
-          { Modelo: 'Qwen3:3b', 'Tamaño aprox. (Q4)': '~2 GB', 'Calidad en chino': 'Buena', 'Velocidad (CPU)': '8–12 tok/s', 'Velocidad (8 GB VRAM)': '60+ tok/s' },
+          { Modelo: 'Qwen3:4b', 'Tamaño aprox. (Q4)': '~2.5 GB', 'Calidad en chino': 'Varía según el dispositivo', 'Velocidad (CPU)': 'Varía según el dispositivo', 'Velocidad (8 GB VRAM)': 'Varía según el dispositivo' },
           { Modelo: 'Qwen3:8b', 'Tamaño aprox. (Q4)': '~4,7 GB', 'Calidad en chino': 'Excelente — mejor punto de partida', 'Velocidad (CPU)': '3–5 tok/s', 'Velocidad (8 GB VRAM)': '30–45 tok/s' },
           { Modelo: 'Qwen3:14b', 'Tamaño aprox. (Q4)': '~9 GB', 'Calidad en chino': 'La mejor', 'Velocidad (CPU)': '1–2 tok/s', 'Velocidad (8 GB VRAM)': '15–20 tok/s' },
           { Modelo: 'Llama3.1:8b', 'Tamaño aprox. (Q4)': '~4,7 GB', 'Calidad en chino': 'Moderada', 'Velocidad (CPU)': '3–5 tok/s', 'Velocidad (8 GB VRAM)': '30–45 tok/s' },
@@ -1698,8 +1698,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '¿Puede mi cuenta de WeChat ser bloqueada por usar un bot?', a: 'Los términos de servicio de WeChat prohíben los bots automatizados. Las cuentas detectadas usando herramientas de automatización corren el riesgo de suspensión temporal o bloqueo permanente. Úsalo solo con bajo volumen de mensajes para productividad personal — el riesgo de cuenta es real, y esto no es una integración oficialmente sancionada.' },
             { q: '¿Cuál es el mejor modelo de Ollama para mensajes de WeChat en chino?', a: 'Para la mayoría de usuarios, Qwen3 8B ofrece el mejor equilibrio entre calidad y velocidad — buena comprensión del chino, y el modelo de unos 4,7 GB (Q4) cabe en 8 GB de VRAM o funciona a un ritmo aceptable con 16 GB de RAM en CPU.' },
             { q: '¿Puede el bot gestionar chats grupales?', a: 'Sí. WeChatFerry expone los mensajes de grupo junto con el ID de la sala. Filtra mediante `msg.roomid` en qué grupos debe responder el bot, y exige una palabra clave de activación explícita (p. ej. "@ai") para que no responda a cada mensaje del grupo.' },
-            { q: '¿Qué hardware necesito realmente para este proyecto?', a: 'Para un asistente ligero con Qwen3 3B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).' },
-            { q: '¿Es excesivo el Minisforum UM890 Pro para un bot de WeChat?', a: 'Para un bot de WeChat sencillo con Qwen3 3B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.' },
+            { q: '¿Qué hardware necesito realmente para este proyecto?', a: 'Para un asistente ligero con Qwen3 4B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).' },
+            { q: '¿Es excesivo el Minisforum UM890 Pro para un bot de WeChat?', a: 'Para un bot de WeChat sencillo con Qwen3 4B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.' },
             { q: '¿La inferencia de LLM local hace que WeChat sea privado?', a: 'No, y esta distinción es importante. La inferencia local significa que el contenido de tus mensajes no se envía a un proveedor de LLM en la nube de terceros para su procesamiento. No convierte a WeChat en sí en una plataforma de comunicación privada — WeChat sigue funcionando a través de su propia infraestructura de Tencent, sin importar dónde se ejecute el modelo de IA.' },
             { q: '¿Es esta una integración oficial de WeChat?', a: 'No. WeChatFerry es un enfoque de automatización/integración no oficial, no una API oficial de bots de WeChat. Úsalo con precaución, mantén el volumen de mensajes bajo y personal, y sé consciente del riesgo de cuenta que conlleva cualquier automatización no oficial.' },
             { q: '¿Cómo creo un bot de WeChat con un LLM local?', a: 'Usa WeChatFerry (Windows) para conectarte al cliente de WeChat, conéctalo a Ollama mediante su API HTTP local y enruta los mensajes a un modelo Qwen3. La configuración toma entre 30 y 60 minutos con Python.' },
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Qué hardware necesito realmente para este proyecto?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para un asistente ligero con Qwen3 3B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).',
+              'text': 'Para un asistente ligero con Qwen3 4B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).',
             },
           },
           {
@@ -1755,7 +1755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Es excesivo el Minisforum UM890 Pro para un bot de WeChat?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para un bot de WeChat sencillo con Qwen3 3B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.',
+              'text': 'Para un bot de WeChat sencillo con Qwen3 4B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.',
             },
           },
           {
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: 'Probar y ejecutar como servicio', text: 'Prueba con un mensaje a ti mismo, luego ejecútalo como servicio de Windows en segundo plano mediante NSSM' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot de WeChat con LLM local: crea un asistente de IA privado (2026)', description: 'Crea un asistente personal de WeChat con un LLM local en 2026: WeChatFerry + Ollama en Windows, precios de hardware actuales y qué modelo Qwen3 elegir.', url: 'https://www.promptquorum.com/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'es', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot de WeChat con LLM local: crea un asistente de IA privado (2026)', description: 'Crea un asistente personal de WeChat con un LLM local en 2026: WeChatFerry + Ollama en Windows, precios de hardware actuales y qué modelo Qwen3 elegir.', url: 'https://www.promptquorum.com/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'es', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[Guía de integración de WeChat con LLM local — 3 patrones de integración](/es/power-local-llm/wechat-local-llm-integration-2026) — patrones de webhook, WeChatFerry y servidor mini PC para desarrolladores',
@@ -1811,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -1853,7 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3은 2026년 기준 실제로 동작하는 로컬 LLM 위챗 비서 스택입니다 — Windows 전용, 클라우드 API 없음',
-          '실제 필요에 맞게 하드웨어를 구매하세요: 저가형 N150 기기(GMKtec G3 Plus, 약 $140–200)면 가벼운 Qwen3 3B 비서에 충분합니다',
+          '실제 필요에 맞게 하드웨어를 구매하세요: 저가형 N150 기기(GMKtec G3 Plus, 약 $140–200)면 가벼운 Qwen3 4B 비서에 충분합니다',
           '단순한 봇을 넘어서는 상시 가동 로컬 AI 서버를 원한다면 Minisforum UM890 Pro(32GB 구성 기준 약 $649)가 더 나은 투자입니다 — 가격은 약 3~4배지만 여유 공간의 수준 자체가 다릅니다',
           '중국어 품질에는 Qwen3 8B가 추천되는 시작 모델이며, Python에 익숙한 사람이라면 설정에 약 30~60분이 걸립니다',
           '실재하는 위험: 위챗 이용약관은 자동화된 봇을 금지합니다 — 이는 대량 발송 도구가 아니라 개인 생산성 향상을 위한 용도입니다',
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '살 것인가 / 건너뛸 것인가 — 나에게 맞는 하드웨어 경로',
         body: '무엇이든 구매하기 전에 실제 목표를 하드웨어 등급에 맞춰보세요 — Python 코드보다 이 페이지에서 가장 중요한 결정입니다.',
         items: [
-          '**다음 경우 저가형 N150 미니PC(GMKtec G3 Plus 또는 Beelink EQ14)를 구매하세요:** 위챗 비서가 유일한 진지한 로컬 AI 작업이고, Qwen3 3B 모델로 충분하며, 24/7 가동 시 낮은 전력 소비가 속도보다 중요한 경우.',
+          '**다음 경우 저가형 N150 미니PC(GMKtec G3 Plus 또는 Beelink EQ14)를 구매하세요:** 위챗 비서가 유일한 진지한 로컬 AI 작업이고, Qwen3 4B 모델로 충분하며, 24/7 가동 시 낮은 전력 소비가 속도보다 중요한 경우.',
           '**다음 경우 Ryzen급 기기(Minisforum UM890 Pro)를 구매하세요:** Qwen3 8B나 14B가 반응성 있게 느껴지길 원하고, 나중에 RAG나 문서 검색 등 다른 로컬 서비스를 추가할 계획이 있거나, 재구매 대신 진짜 여유 공간을 원하는 경우.',
           '**다음 경우 이 프로젝트 자체를 건너뛰세요:** macOS/Linux에서 네이티브로 실행해야 하는 경우(WeChatFerry는 Windows 전용), 비공식 통합에 따르는 계정 위험을 감수할 수 없는 경우, 개인 사용 범위를 넘어서는 메시지 양이 필요한 경우.',
         ],
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**위챗 봇을 실행하는 데 값비싼 AI 머신은 필요 없습니다.** "로컬 AI"라는 단어가 가장 큰 기기를 연상시킨다고 해서가 아니라, 실제로 원하는 모델 크기와 동시 실행 서비스 수에 맞춰 구매하세요.',
         columns: ['등급', 'RAM', '적합한 모델', '최적 용도'],
         rows: [
-          { 등급: '예산형', RAM: '16GB', '적합한 모델': 'Qwen3 3B', '최적 용도': '개념 실험, 낮은 사용량의 개인 용도, 간단한 중국어 응답' },
+          { 등급: '예산형', RAM: '16GB', '적합한 모델': 'Qwen3 4B', '최적 용도': '개념 실험, 낮은 사용량의 개인 용도, 간단한 중국어 응답' },
           { 등급: '추천', RAM: '32GB', '적합한 모델': 'Qwen3 8B', '최적 용도': '대부분의 진지한 개인 비서 구축 — 더 긴 대화 기록, 24/7 가동, 더 반응성 있는 응답' },
           { 등급: '고성능 로컬 AI', RAM: '64GB 이상', '적합한 모델': 'Qwen3 14B 이상', '최적 용도': '다중 동시 사용자, RAG, 문서 검색, 에이전트 워크플로, 추가 로컬 AI 서비스' },
         ],
@@ -1897,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**선택 이유는 순수한 CPU 속도가 아니라 RAM 여유 공간입니다.** 로컬 AI 서버는 운영체제, Ollama, 모델 자체, 대화 기록, 그리고 나중에 추가한다면 임베딩과 데이터베이스를 위한 메모리가 필요합니다. 96GB의 상한은 진짜 성장 여지를 줍니다 — 저가형 N150 기기는 훨씬 낮은 지점에서 한계에 도달합니다.',
           '**SSD 슬롯 2개**로 하나는 운영체제와 애플리케이션 전용, 다른 하나는 모델과 데이터 전용으로 사용할 수 있습니다 — 로컬 AI 서비스를 하나 이상 실행하게 되면 중요해지는 부분입니다.',
           '**듀얼 2.5GbE**는 단순한 위챗 봇에는 불필요하지만, 이 기기가 나중에 네트워크상의 더 넓은 로컬 서버가 된다면 실제로 유용합니다.',
-          '**솔직한 단점:** Qwen3 3B나 가벼운 8B 사용에는 이만큼 강력한 기기가 필요하지 않습니다. "저렴한 위챗 봇을 원한다"가 전부라면 이는 과잉 사양입니다 — 아래 예산형 옵션을 참고하세요. "위챗으로 시작해 성장할 수 있는 상시 가동 로컬 AI 서버"가 목표라면, UM890 Pro가 더 정당화하기 쉬운 지출입니다.',
+          '**솔직한 단점:** Qwen3 4B나 가벼운 8B 사용에는 이만큼 강력한 기기가 필요하지 않습니다. "저렴한 위챗 봇을 원한다"가 전부라면 이는 과잉 사양입니다 — 아래 예산형 옵션을 참고하세요. "위챗으로 시작해 성장할 수 있는 상시 가동 로컬 AI 서버"가 목표라면, UM890 Pro가 더 정당화하기 쉬운 지출입니다.',
         ],
         affiliateLinks: [
           { label: 'Minisforum UM890 Pro 가격 확인 — 공식 스토어', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '$439–649' },
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '예산형 대안: N150 미니PC',
         body: '**위챗 비서가 정말로 유일한 진지한 작업이라면, N150 미니PC가 훨씬 저렴하면서도 제 역할을 합니다.** 현실적인 선택지는 두 가지입니다: GMKtec G3 Plus(2026년 8월 기준 GMKtec EU 공식 스토어에서 €159.99부터, 미국에서는 약 $140–200 — RAM은 32GB까지 교체 가능한 DDR4 SO-DIMM으로, 납땜형 경쟁 제품 대비 실질적인 장점입니다)와 Beelink EQ14(약 $189–199, 듀얼 2.5GbE 네트워킹이지만 납땜된 16GB로 제한). 둘 다 동일한 Intel N150을 사용하므로 이 특정 작업에서 어느 한쪽이 다른 쪽을 확실히 앞서지는 않습니다.',
         items: [
-          '가격이 가장 중요하고, Qwen3 3B 모델로 충분하며, 매우 낮은 전력 소비를 원하고, 이 기기가 Home Assistant 등 다른 가벼운 서비스도 함께 실행할 예정이라면 N150 기기를 선택하세요.',
+          '가격이 가장 중요하고, Qwen3 4B 모델로 충분하며, 매우 낮은 전력 소비를 원하고, 이 기기가 Home Assistant 등 다른 가벼운 서비스도 함께 실행할 예정이라면 N150 기기를 선택하세요.',
           '로컬 AI가 주된 작업이고, Qwen3 8B 이상이 반응성 있게 느껴지길 원하며, 32GB 이상의 RAM을 원하거나, 같은 기기에서 RAG나 여러 로컬 AI 서비스를 실행할 계획이라면 대신 UM890 Pro를 선택하세요.',
           '전체 사양 비교는 [GMKtec G3 Plus 리뷰](/ko/smart-home/gmktec-g3-plus-local-ai-review)와 [Beelink EQ14 리뷰](/ko/smart-home/beelink-eq14-local-ai-review)를, 다른 옵션은 [로컬 AI를 위한 최고의 미니PC 정리](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참고하세요.',
         ],
@@ -1937,10 +1937,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: '어떤 Qwen 모델을 사용해야 하는가',
         body: '중국어 위챗 대화에는 Qwen 계열이 자연스러운 출발점입니다. 모델 선택은 응답 품질과 속도에 큰 영향을 미칩니다 — 아래 수치는 일반적인 하드웨어와 양자화에 기반한 추정치이며, PromptQuorum이 실제 기기에서 측정한 벤치마크가 아닙니다.',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: '중국어 위챗 응답의 모델별 추정 CPU 속도: Qwen3:3b가 가장 빨라 약 8~12 tok/s, Qwen3:8b는 품질과 속도의 균형으로 약 3~5 tok/s, Llama3.1:8b는 비슷한 속도지만 중국어는 더 약하고, Qwen3:14b는 CPU에서 약 1~2 tok/s로 가장 높은 품질을 보입니다.',
+        imageCaption: '중국어 위챗 응답의 모델별 추정 CPU 속도: Qwen3:4b는 가장 가볍고, Qwen3:8b는 품질과 속도의 균형으로 약 3~5 tok/s, Llama3.1:8b는 비슷한 속도지만 중국어는 더 약하고, Qwen3:14b는 CPU에서 약 1~2 tok/s로 가장 높은 품질을 보입니다.',
         columns: ['모델', '대략적 크기 (Q4)', '중국어 품질', '속도 (CPU)', '속도 (8GB VRAM)'],
         rows: [
-          { 모델: 'Qwen3:3b', '대략적 크기 (Q4)': '~2GB', '중국어 품질': '양호', '속도 (CPU)': '8–12 tok/s', '속도 (8GB VRAM)': '60+ tok/s' },
+          { 모델: 'Qwen3:4b', '대략적 크기 (Q4)': '~2.5GB', '중국어 품질': '기기에 따라 다름', '속도 (CPU)': '기기에 따라 다름', '속도 (8GB VRAM)': '기기에 따라 다름' },
           { 모델: 'Qwen3:8b', '대략적 크기 (Q4)': '~4.7GB', '중국어 품질': '우수 — 최적의 시작점', '속도 (CPU)': '3–5 tok/s', '속도 (8GB VRAM)': '30–45 tok/s' },
           { 모델: 'Qwen3:14b', '대략적 크기 (Q4)': '~9GB', '중국어 품질': '최고', '속도 (CPU)': '1–2 tok/s', '속도 (8GB VRAM)': '15–20 tok/s' },
           { 모델: 'Llama3.1:8b', '대략적 크기 (Q4)': '~4.7GB', '중국어 품질': '보통', '속도 (CPU)': '3–5 tok/s', '속도 (8GB VRAM)': '30–45 tok/s' },
@@ -1988,8 +1988,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '봇을 사용하면 위챗 계정이 정지될 수 있나요?', a: '위챗 이용약관은 자동화된 봇을 금지합니다. 자동화 도구 사용이 탐지된 계정은 일시 정지나 영구 차단의 위험이 있습니다. 낮은 메시지량의 개인 생산성 향상 용도로만 사용하세요 — 계정 위험은 실재하며, 이는 공식적으로 승인된 통합이 아닙니다.' },
             { q: '중국어 위챗 메시지에 가장 적합한 Ollama 모델은?', a: '대부분의 사용자에게는 Qwen3 8B가 품질과 속도의 최적 균형을 제공합니다 — 중국어 이해력이 뛰어나며, 약 4.7GB(Q4)의 모델은 8GB VRAM에 들어가거나 16GB CPU RAM에서 받아들일 만한 속도로 동작합니다.' },
             { q: '봇이 그룹 채팅을 처리할 수 있나요?', a: '네. WeChatFerry는 방 ID와 함께 그룹 메시지를 노출합니다. `msg.roomid`로 봇이 응답해야 할 그룹을 필터링하고, 모든 그룹 메시지에 반응하지 않도록 명시적인 트리거 키워드(예: "@ai")를 요구하세요.' },
-            { q: '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?', a: '가벼운 Qwen3 3B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.' },
-            { q: 'Minisforum UM890 Pro는 위챗 봇에 과잉 사양인가요?', a: 'Qwen3 3B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.' },
+            { q: '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?', a: '가벼운 Qwen3 4B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.' },
+            { q: 'Minisforum UM890 Pro는 위챗 봇에 과잉 사양인가요?', a: 'Qwen3 4B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.' },
             { q: '로컬 LLM 추론이 위챗을 프라이빗하게 만들어주나요?', a: '아닙니다. 그리고 이 구분은 중요합니다. 로컬 추론은 메시지 내용이 처리를 위해 제3자 클라우드 LLM 제공업체로 전송되지 않는다는 것을 의미합니다. 이것이 위챗 자체를 프라이빗 통신 플랫폼으로 만들어주지는 않습니다 — AI 모델이 어디서 동작하든 위챗은 여전히 텐센트 자체 인프라를 통해 동작합니다.' },
             { q: '이것은 공식 위챗 통합인가요?', a: '아닙니다. WeChatFerry는 비공식 자동화/통합 방식이며 공식 위챗 봇 API가 아닙니다. 신중하게 사용하고, 메시지량을 낮고 개인적인 수준으로 유지하며, 모든 비공식 자동화에 따르는 계정 위험을 이해하세요.' },
             { q: '로컬 LLM으로 위챗 봇을 만들려면 어떻게 해야 하나요?', a: 'WeChatFerry(Windows)로 위챗 PC 클라이언트에 연결하고, 로컬 HTTP API를 통해 Ollama에 연결한 뒤, 메시지를 Qwen3 모델로 전달합니다. Python 사용 시 설정에 약 30~60분이 걸립니다.' },
@@ -2037,7 +2037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '가벼운 Qwen3 3B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.',
+              'text': '가벼운 Qwen3 4B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.',
             },
           },
           {
@@ -2045,7 +2045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Minisforum UM890 Pro는 위챗 봇에 과잉 사양인가요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 3B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.',
+              'text': 'Qwen3 4B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.',
             },
           },
           {
@@ -2087,7 +2087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: '테스트 및 서비스로 실행', text: '자신에게 보내는 메시지로 테스트한 뒤 NSSM으로 Windows 백그라운드 서비스로 실행' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '로컬 LLM으로 위챗 봇 만들기: 프라이빗 AI 개인 비서 구축 (2026)', description: '2026년 로컬 LLM으로 위챗 개인 비서를 구축하는 방법: Windows에서 WeChatFerry + Ollama, 실제 하드웨어 가격, 최적의 Qwen3 모델까지.', url: 'https://www.promptquorum.com/ko/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'ko', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '로컬 LLM으로 위챗 봇 만들기: 프라이빗 AI 개인 비서 구축 (2026)', description: '2026년 로컬 LLM으로 위챗 개인 비서를 구축하는 방법: Windows에서 WeChatFerry + Ollama, 실제 하드웨어 가격, 최적의 Qwen3 모델까지.', url: 'https://www.promptquorum.com/ko/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'ko', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[위챗 로컬 LLM 통합 가이드 — 3가지 통합 패턴](/ko/power-local-llm/wechat-local-llm-integration-2026) — 개발자를 위한 웹훅, WeChatFerry, 미니PC 서버 패턴',
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -2143,7 +2143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama + Qwen3 é a combinação que funciona em 2026 para um assistente do WeChat com LLM local — somente Windows, sem nenhuma API na nuvem',
-          'Compre o hardware pela tarefa real: uma máquina N150 econômica (GMKtec G3 Plus) já basta para um assistente leve com Qwen3 3B',
+          'Compre o hardware pela tarefa real: uma máquina N150 econômica (GMKtec G3 Plus) já basta para um assistente leve com Qwen3 4B',
           'Para um servidor de IA local sempre ativo que cresça além de um bot simples, o Minisforum UM890 Pro (no Brasil, a partir de ~R$ 3.900 importado) é o melhor investimento — bem mais caro, mas outra classe de capacidade',
           'O Qwen3 8B é o modelo inicial recomendado para qualidade em chinês; a configuração leva de 30 a 60 minutos para quem tem familiaridade com Python',
           'Risco real: os termos de uso do WeChat proíbem bots automatizados — isso é uso de produtividade pessoal, não uma ferramenta de envio em massa',
@@ -2154,7 +2154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Compre se / Pule se — qual caminho de hardware combina com você',
         body: 'Combine seu objetivo real com um nível de hardware antes de comprar qualquer coisa — essa é a decisão mais importante desta página, mais do que o código em Python.',
         items: [
-          '**Compre um mini PC N150 econômico (GMKtec G3 Plus ou Beelink EQ14) se:** o assistente do WeChat é sua única carga séria de IA local, um modelo Qwen3 3B já é suficiente para você, e o baixo consumo de energia em operação 24/7 importa mais que a velocidade.',
+          '**Compre um mini PC N150 econômico (GMKtec G3 Plus ou Beelink EQ14) se:** o assistente do WeChat é sua única carga séria de IA local, um modelo Qwen3 4B já é suficiente para você, e o baixo consumo de energia em operação 24/7 importa mais que a velocidade.',
           '**Compre uma máquina classe Ryzen (Minisforum UM890 Pro) se:** você quer que o Qwen3 8B ou 14B pareça responsivo, planeja adicionar RAG, busca em documentos ou outros serviços locais depois, ou quer folga de verdade em vez de comprar duas vezes.',
           '**Pule este projeto por completo se:** precisa rodá-lo nativamente em macOS/Linux (o WeChatFerry é exclusivo do Windows), não está disposto a aceitar o risco de conta de uma integração não oficial, ou precisa de um volume de mensagens além do uso pessoal.',
         ],
@@ -2170,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Você não precisa de uma máquina de IA cara só para rodar um bot do WeChat.** Compre com base no tamanho de modelo e no número de serviços simultâneos que você realmente quer, não porque as palavras "IA local" sugerem a maior máquina disponível.',
         columns: ['Nível', 'RAM', 'Modelo que cabe', 'Melhor para'],
         rows: [
-          { Nível: 'Econômico', RAM: '16 GB', 'Modelo que cabe': 'Qwen3 3B', 'Melhor para': 'Testar o conceito, uso pessoal de baixo volume, respostas simples em chinês' },
+          { Nível: 'Econômico', RAM: '16 GB', 'Modelo que cabe': 'Qwen3 4B', 'Melhor para': 'Testar o conceito, uso pessoal de baixo volume, respostas simples em chinês' },
           { Nível: 'Recomendado', RAM: '32 GB', 'Modelo que cabe': 'Qwen3 8B', 'Melhor para': 'A maioria das instalações sérias — mais histórico, operação 24/7, respostas mais rápidas' },
           { Nível: 'IA local pesada', RAM: '64 GB+', 'Modelo que cabe': 'Qwen3 14B e maiores', 'Melhor para': 'Vários usuários simultâneos, RAG, busca em documentos, fluxos de agentes, serviços adicionais de IA local' },
         ],
@@ -2187,7 +2187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A folga de RAM é o motivo real para escolhê-lo, não apenas a velocidade da CPU.** Um servidor de IA local precisa de memória para o sistema operacional, o Ollama, o modelo em si, o histórico de conversa e — se você adicionar depois — embeddings e um banco de dados. Um teto de 96 GB dá espaço real para crescer; uma máquina N150 econômica estanca bem abaixo disso.',
           '**Dois slots de SSD** permitem dedicar um ao sistema operacional e aplicativos, e o segundo a modelos e dados — relevante assim que você roda mais de um serviço de IA local.',
           '**A rede dupla 2,5GbE** é desnecessária para um bot simples do WeChat, mas útil se a máquina virar depois um servidor local mais amplo na sua rede.',
-          '**A desvantagem honesta:** você não precisa de tanta máquina para o Qwen3 3B ou uso leve do 8B. Se "eu quero um bot do WeChat barato" é todo o objetivo, isso é superdimensionado — veja a opção econômica abaixo. Se o objetivo é "um servidor de IA local sempre ativo que começa com o WeChat e pode crescer", o UM890 Pro é o gasto mais defensável.',
+          '**A desvantagem honesta:** você não precisa de tanta máquina para o Qwen3 4B ou uso leve do 8B. Se "eu quero um bot do WeChat barato" é todo o objetivo, isso é superdimensionado — veja a opção econômica abaixo. Se o objetivo é "um servidor de IA local sempre ativo que começa com o WeChat e pode crescer", o UM890 Pro é o gasto mais defensável.',
         ],
         affiliateLinks: [
           { label: 'Ver preço do Minisforum UM890 Pro — loja oficial', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: 'US$439–649 / a partir de ~R$ 3.900 no Brasil' },
@@ -2198,7 +2198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Alternativa econômica: mini PC N150',
         body: '**Se o assistente do WeChat é realmente sua única carga séria, um mini PC N150 é bem mais barato e ainda dá conta do recado.** Duas opções reais: o GMKtec G3 Plus (a RAM é um SO-DIMM DDR4 substituível até 32 GB, uma vantagem real sobre rivais com RAM soldada) e o Beelink EQ14 (rede dupla 2,5GbE, mas limitado a 16 GB soldados). Ambos usam o mesmo Intel N150, então nenhum supera claramente o outro nessa tarefa específica. Os preços no Brasil são bastante voláteis por causa de impostos de importação e câmbio — confira o preço atual em lojas brasileiras antes de comprar.',
         items: [
-          'Escolha uma máquina N150 se: o preço é o mais importante, um modelo Qwen3 3B já é suficiente para o seu uso, você quer consumo bem baixo, e a máquina também vai rodar o Home Assistant ou outros serviços leves.',
+          'Escolha uma máquina N150 se: o preço é o mais importante, um modelo Qwen3 4B já é suficiente para o seu uso, você quer consumo bem baixo, e a máquina também vai rodar o Home Assistant ou outros serviços leves.',
           'Escolha o UM890 Pro em vez disso se: a IA local é a carga principal, você quer que o Qwen3 8B ou maior pareça responsivo, quer 32 GB+ de RAM, ou planeja rodar RAG ou vários serviços de IA local na mesma máquina.',
           'Veja a [análise completa do GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) e a [análise do Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) para as especificações completas, ou o [comparativo dos melhores mini PCs para IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) para mais opções.',
         ],
@@ -2227,10 +2227,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Qual modelo Qwen você deve usar?',
         body: 'Para conversas em chinês no WeChat, a família Qwen é o ponto de partida óbvio. A escolha do modelo afeta bastante a qualidade e a velocidade das respostas — esses números são estimativas baseadas em hardware e quantização típicos, não um benchmark medido pela PromptQuorum em um aparelho físico.',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: 'Velocidade estimada em CPU por modelo para respostas em chinês no WeChat: o Qwen3:3b é o mais rápido, com cerca de 8–12 tok/s; o Qwen3:8b equilibra qualidade e velocidade com cerca de 3–5 tok/s; o Llama3.1:8b roda em velocidade parecida com chinês mais fraco; e o Qwen3:14b tem a melhor qualidade, com cerca de 1–2 tok/s na CPU.',
+        imageCaption: 'Velocidade estimada em CPU por modelo para respostas em chinês no WeChat: o Qwen3:4b é a opção mais leve; o Qwen3:8b equilibra qualidade e velocidade com cerca de 3–5 tok/s; o Llama3.1:8b roda em velocidade parecida com chinês mais fraco; e o Qwen3:14b tem a melhor qualidade, com cerca de 1–2 tok/s na CPU.',
         columns: ['Modelo', 'Tamanho aprox. (Q4)', 'Qualidade em chinês', 'Velocidade (CPU)', 'Velocidade (8 GB VRAM)'],
         rows: [
-          { Modelo: 'Qwen3:3b', 'Tamanho aprox. (Q4)': '~2 GB', 'Qualidade em chinês': 'Boa', 'Velocidade (CPU)': '8–12 tok/s', 'Velocidade (8 GB VRAM)': '60+ tok/s' },
+          { Modelo: 'Qwen3:4b', 'Tamanho aprox. (Q4)': '~2.5 GB', 'Qualidade em chinês': 'Varia conforme o dispositivo', 'Velocidade (CPU)': 'Varia conforme o dispositivo', 'Velocidade (8 GB VRAM)': 'Varia conforme o dispositivo' },
           { Modelo: 'Qwen3:8b', 'Tamanho aprox. (Q4)': '~4,7 GB', 'Qualidade em chinês': 'Excelente — melhor ponto de partida', 'Velocidade (CPU)': '3–5 tok/s', 'Velocidade (8 GB VRAM)': '30–45 tok/s' },
           { Modelo: 'Qwen3:14b', 'Tamanho aprox. (Q4)': '~9 GB', 'Qualidade em chinês': 'Melhor', 'Velocidade (CPU)': '1–2 tok/s', 'Velocidade (8 GB VRAM)': '15–20 tok/s' },
           { Modelo: 'Llama3.1:8b', 'Tamanho aprox. (Q4)': '~4,7 GB', 'Qualidade em chinês': 'Moderada', 'Velocidade (CPU)': '3–5 tok/s', 'Velocidade (8 GB VRAM)': '30–45 tok/s' },
@@ -2278,8 +2278,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Minha conta do WeChat pode ser banida por usar um bot?', a: 'Os termos de uso do WeChat proíbem bots automatizados. Contas detectadas usando ferramentas de automação correm o risco de suspensão temporária ou banimento permanente. Use isso apenas em baixo volume de mensagens para produtividade pessoal — o risco de conta é real, e isso não é uma integração oficialmente sancionada.' },
             { q: 'Qual é o melhor modelo do Ollama para mensagens do WeChat em chinês?', a: 'Para a maioria dos usuários, o Qwen3 8B oferece o melhor equilíbrio entre qualidade e velocidade — boa compreensão do chinês, e o modelo de cerca de 4,7 GB (Q4) cabe em 8 GB de VRAM ou roda em ritmo aceitável com 16 GB de RAM na CPU.' },
             { q: 'O bot consegue lidar com chats em grupo?', a: 'Sim. O WeChatFerry expõe mensagens de grupo junto com um ID de sala. Filtre via `msg.roomid` em quais grupos o bot deve responder, e exija uma palavra-chave de gatilho explícita (ex.: "@ai") para que ele não responda a toda mensagem do grupo.' },
-            { q: 'De que hardware eu realmente preciso para este projeto?', a: 'Para um assistente leve com Qwen3 3B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).' },
-            { q: 'O Minisforum UM890 Pro é superdimensionado para um bot do WeChat?', a: 'Para um bot simples do WeChat com Qwen3 3B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.' },
+            { q: 'De que hardware eu realmente preciso para este projeto?', a: 'Para um assistente leve com Qwen3 4B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).' },
+            { q: 'O Minisforum UM890 Pro é superdimensionado para um bot do WeChat?', a: 'Para um bot simples do WeChat com Qwen3 4B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.' },
             { q: 'A inferência de LLM local torna o WeChat privado?', a: 'Não, e essa distinção é importante. A inferência local significa que o conteúdo das suas mensagens não é enviado a um provedor de LLM na nuvem de terceiros para processamento. Ela não transforma o WeChat em si em uma plataforma de comunicação privada — o WeChat continua rodando pela própria infraestrutura da Tencent, não importa onde o modelo de IA rode.' },
             { q: 'Essa é uma integração oficial do WeChat?', a: 'Não. O WeChatFerry é uma abordagem de automação/integração não oficial, não uma API oficial de bots do WeChat. Use com cautela, mantenha o volume de mensagens baixo e pessoal, e esteja ciente do risco de conta que acompanha qualquer automação não oficial.' },
             { q: 'Como eu crio um bot do WeChat com um LLM local?', a: 'Use o WeChatFerry (Windows) para se conectar ao cliente do WeChat no PC, conecte-o ao Ollama via API HTTP local e encaminhe as mensagens para um modelo Qwen3. A configuração leva de 30 a 60 minutos com Python.' },
@@ -2327,7 +2327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'De que hardware eu realmente preciso para este projeto?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para um assistente leve com Qwen3 3B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).',
+              'text': 'Para um assistente leve com Qwen3 4B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).',
             },
           },
           {
@@ -2335,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'O Minisforum UM890 Pro é superdimensionado para um bot do WeChat?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para um bot simples do WeChat com Qwen3 3B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.',
+              'text': 'Para um bot simples do WeChat com Qwen3 4B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.',
             },
           },
           {
@@ -2377,7 +2377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: 'Testar e rodar como serviço', text: 'Teste com uma mensagem para si mesmo, depois rode como serviço do Windows em segundo plano via NSSM' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot do WeChat com LLM local: crie um assistente de IA privado (2026)', description: 'Crie um assistente pessoal do WeChat com um LLM local em 2026: WeChatFerry + Ollama no Windows, preços de hardware atuais e qual modelo Qwen3 escolher.', url: 'https://www.promptquorum.com/pt/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'pt-BR', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot do WeChat com LLM local: crie um assistente de IA privado (2026)', description: 'Crie um assistente pessoal do WeChat com um LLM local em 2026: WeChatFerry + Ollama no Windows, preços de hardware atuais e qual modelo Qwen3 escolher.', url: 'https://www.promptquorum.com/pt/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'pt-BR', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[Guia de integração do WeChat com LLM local — 3 padrões de integração](/pt/power-local-llm/wechat-local-llm-integration-2026) — padrões de webhook, WeChatFerry e servidor mini PC para desenvolvedores',
@@ -2391,7 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-11-09',
     next_refresh_due: '2027-02-25',
     designSkin: 'hub',
     theme: 'Productivity & Knowledge Tools',
@@ -2433,7 +2433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'يشكّل WeChatFerry مع Ollama وQwen3 الحزمة العاملة فعليًا في 2026 لمساعد WeChat بنموذج LLM محلي — Windows فقط، دون أي واجهة برمجة تطبيقات سحابية',
-          'اشترِ الجهاز وفق الاستخدام الفعلي: جهاز N150 اقتصادي (GMKtec G3 Plus، حوالي $140–200) يكفي لمساعد خفيف بنموذج Qwen3 3B',
+          'اشترِ الجهاز وفق الاستخدام الفعلي: جهاز N150 اقتصادي (GMKtec G3 Plus، حوالي $140–200) يكفي لمساعد خفيف بنموذج Qwen3 4B',
           'لخادم ذكاء اصطناعي محلي يعمل باستمرار ويتجاوز مجرد بوت بسيط، يُعد Minisforum UM890 Pro (حوالي $649 مع 32GB) الاستثمار الأفضل — بسعر يقارب 3 إلى 4 أضعاف، لكن بمستوى مختلف تمامًا من السعة',
           'يُنصح بالبدء بـ Qwen3 8B لجودة اللغة الصينية؛ يستغرق الإعداد نحو 30 إلى 60 دقيقة لمن لديه إلمام بلغة Python',
           'خطر حقيقي: تحظر شروط استخدام WeChat البوتات الآلية — هذا استخدام لزيادة الإنتاجية الشخصية، وليس أداة إرسال جماعي',
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'اشترِ إذا / تجاوز إذا — أي مسار للأجهزة يناسبك',
         body: 'قبل شراء أي شيء، طابق هدفك الفعلي مع مستوى أجهزة معيّن — هذا هو القرار الأهم في هذه الصفحة، أهم من كود بايثون نفسه.',
         items: [
-          '**اختر جهاز N150 المصغّر الاقتصادي (GMKtec G3 Plus أو Beelink EQ14) إذا:** كان مساعد WeChat هو مهمتك الجادة الوحيدة في الذكاء الاصطناعي المحلي، ونموذج Qwen3 3B كافٍ لك، وكان استهلاك الطاقة المنخفض عند التشغيل على مدار الساعة أهم من السرعة.',
+          '**اختر جهاز N150 المصغّر الاقتصادي (GMKtec G3 Plus أو Beelink EQ14) إذا:** كان مساعد WeChat هو مهمتك الجادة الوحيدة في الذكاء الاصطناعي المحلي، ونموذج Qwen3 4B كافٍ لك، وكان استهلاك الطاقة المنخفض عند التشغيل على مدار الساعة أهم من السرعة.',
           '**اختر جهازًا من فئة Ryzen (Minisforum UM890 Pro) إذا:** أردت أن يشعر Qwen3 8B أو 14B بالاستجابة السريعة، أو تخطط لإضافة RAG أو بحث في المستندات أو خدمات محلية أخرى لاحقًا، أو أردت هامشًا حقيقيًا بدلًا من الشراء مرتين.',
           '**تجاوز هذا المشروع بالكامل إذا:** احتجت تشغيله أصليًا على macOS/Linux (WeChatFerry حصري لـ Windows)، أو لم تكن مستعدًا لقبول مخاطر الحساب المرتبطة بتكامل غير رسمي، أو احتجت حجم رسائل يتجاوز الاستخدام الشخصي.',
         ],
@@ -2460,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**لا تحتاج إلى جهاز ذكاء اصطناعي باهظ الثمن لمجرد تشغيل بوت WeChat.** اشترِ بناءً على حجم النموذج الذي تريده فعليًا وعدد الخدمات المتزامنة، لا لأن عبارة "ذكاء اصطناعي محلي" توحي بأكبر جهاز متاح.',
         columns: ['المستوى', 'الذاكرة', 'النموذج المناسب', 'الأفضل لـ'],
         rows: [
-          { المستوى: 'اقتصادي', الذاكرة: '16GB', 'النموذج المناسب': 'Qwen3 3B', 'الأفضل لـ': 'تجربة الفكرة، استخدام شخصي منخفض الحجم، ردود بسيطة بالصينية' },
+          { المستوى: 'اقتصادي', الذاكرة: '16GB', 'النموذج المناسب': 'Qwen3 4B', 'الأفضل لـ': 'تجربة الفكرة، استخدام شخصي منخفض الحجم، ردود بسيطة بالصينية' },
           { المستوى: 'موصى به', الذاكرة: '32GB', 'النموذج المناسب': 'Qwen3 8B', 'الأفضل لـ': 'معظم عمليات إعداد المساعد الشخصي الجادة — سجل محادثة أطول، تشغيل على مدار الساعة، ردود أكثر استجابة' },
           { المستوى: 'ذكاء اصطناعي محلي مكثّف', الذاكرة: '64GB فأكثر', 'النموذج المناسب': 'Qwen3 14B وأكبر', 'الأفضل لـ': 'مستخدمون متزامنون متعددون، RAG، بحث في المستندات، سير عمل الوكلاء، خدمات ذكاء اصطناعي محلية إضافية' },
         ],
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**السبب الحقيقي لاختياره هو هامش الذاكرة، لا سرعة المعالج وحدها.** يحتاج خادم الذكاء الاصطناعي المحلي إلى ذاكرة لنظام التشغيل وOllama والنموذج نفسه وسجل المحادثة — وإذا أضفتها لاحقًا، للتضمينات (embeddings) وقاعدة بيانات. سقف 96GB يمنح مساحة حقيقية للنمو؛ بينما يتوقف جهاز N150 الاقتصادي عند حد أقل بكثير.',
           '**فتحتا SSD** تتيحان تخصيص واحدة لنظام التشغيل والتطبيقات، والثانية للنماذج والبيانات — وهذا مهم بمجرد تشغيل أكثر من خدمة ذكاء اصطناعي محلية واحدة.',
           '**الشبكة المزدوجة بسرعة 2.5GbE** غير ضرورية لبوت WeChat بسيط، لكنها مفيدة إذا تحوّل الجهاز لاحقًا إلى خادم محلي أوسع على شبكتك.',
-          '**العيب الصريح:** لا تحتاج جهازًا بهذه القوة لتشغيل Qwen3 3B أو استخدام خفيف لـ 8B. إذا كان هدفك الوحيد "أريد بوت WeChat رخيصًا"، فهذا مبالغ فيه — راجع الخيار الاقتصادي أدناه. أما إذا كان الهدف "خادم ذكاء اصطناعي محلي يعمل باستمرار يبدأ بـ WeChat ويمكن أن ينمو"، فإن UM890 Pro هو الإنفاق الأكثر منطقية.',
+          '**العيب الصريح:** لا تحتاج جهازًا بهذه القوة لتشغيل Qwen3 4B أو استخدام خفيف لـ 8B. إذا كان هدفك الوحيد "أريد بوت WeChat رخيصًا"، فهذا مبالغ فيه — راجع الخيار الاقتصادي أدناه. أما إذا كان الهدف "خادم ذكاء اصطناعي محلي يعمل باستمرار يبدأ بـ WeChat ويمكن أن ينمو"، فإن UM890 Pro هو الإنفاق الأكثر منطقية.',
         ],
         affiliateLinks: [
           { label: 'تحقق من سعر Minisforum UM890 Pro — المتجر الرسمي', url: 'https://store.minisforum.com/products/minisforum-um890pro-mini-pc', productName: 'Minisforum UM890 Pro', productCategory: 'hardware', priceRange: '$439–649' },
@@ -2488,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'البديل الاقتصادي: جهاز N150 المصغّر',
         body: '**إذا كان مساعد WeChat فعليًا هو مهمتك الجادة الوحيدة، فإن جهاز N150 المصغّر أرخص بكثير ويكفي للمهمة.** هناك خياران حقيقيان: GMKtec G3 Plus (ذاكرته من نوع DDR4 SO-DIMM قابلة للاستبدال حتى 32GB، وهي ميزة حقيقية مقارنةً بالمنافسين ذوي الذاكرة الملحومة) وBeelink EQ14 (حوالي $189–199، شبكة مزدوجة بسرعة 2.5GbE لكن بحد أقصى 16GB ملحومة). يستخدم كلاهما نفس معالج Intel N150، لذا لا يتفوق أحدهما بوضوح على الآخر في هذه المهمة تحديدًا.',
         items: [
-          'اختر جهاز N150 إذا كان السعر هو الأهم، وكان نموذج Qwen3 3B كافيًا فعليًا لاستخدامك، وأردت استهلاك طاقة منخفضًا جدًا، وكان الجهاز سيشغّل أيضًا Home Assistant أو خدمات خفيفة أخرى.',
+          'اختر جهاز N150 إذا كان السعر هو الأهم، وكان نموذج Qwen3 4B كافيًا فعليًا لاستخدامك، وأردت استهلاك طاقة منخفضًا جدًا، وكان الجهاز سيشغّل أيضًا Home Assistant أو خدمات خفيفة أخرى.',
           'اختر UM890 Pro بدلًا من ذلك إذا كان الذكاء الاصطناعي المحلي هو المهمة الرئيسية، وأردت أن يشعر Qwen3 8B فأعلى بالاستجابة السريعة، أو أردت 32GB+ من الذاكرة، أو تخطط لتشغيل RAG أو عدة خدمات ذكاء اصطناعي محلية على نفس الجهاز.',
           'راجع [مراجعة GMKtec G3 Plus الكاملة](/ar/smart-home/gmktec-g3-plus-local-ai-review) و[مراجعة Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) للمواصفات الكاملة، أو [ملخص أفضل الأجهزة المصغّرة للذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) لمزيد من الخيارات.',
         ],
@@ -2517,10 +2517,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'أي نموذج Qwen يجب أن تستخدم؟',
         body: 'بالنسبة لمحادثات WeChat باللغة الصينية، تُعد عائلة Qwen نقطة البداية الواضحة. يؤثر اختيار النموذج كثيرًا على جودة الردود وسرعتها — الأرقام التالية تقديرات مبنية على أجهزة وتكميم نموذجيين، وليست اختبارًا معياريًا قاسته PromptQuorum على جهاز فعلي.',
         image: '/images/wechat-bot-model-speed-chinese-en.svg',
-        imageCaption: 'سرعة المعالج التقديرية لكل نموذج في ردود WeChat بالصينية: Qwen3:3b الأسرع بنحو 8–12 رمزًا/ثانية، وQwen3:8b يوازن بين الجودة والسرعة بنحو 3–5 رموز/ثانية، وLlama3.1:8b بسرعة مماثلة لكن بدعم أضعف للصينية، وQwen3:14b يقدّم أفضل جودة بنحو 1–2 رمز/ثانية على المعالج.',
+        imageCaption: 'سرعة المعالج التقديرية لكل نموذج في ردود WeChat بالصينية: Qwen3:4b هو الأخف، وQwen3:8b يوازن بين الجودة والسرعة بنحو 3–5 رموز/ثانية، وLlama3.1:8b بسرعة مماثلة لكن بدعم أضعف للصينية، وQwen3:14b يقدّم أفضل جودة بنحو 1–2 رمز/ثانية على المعالج.',
         columns: ['النموذج', 'الحجم التقريبي (Q4)', 'جودة اللغة الصينية', 'السرعة (المعالج)', 'السرعة (8GB VRAM)'],
         rows: [
-          { النموذج: 'Qwen3:3b', 'الحجم التقريبي (Q4)': '~2GB', 'جودة اللغة الصينية': 'جيدة', 'السرعة (المعالج)': '8–12 رمز/ثانية', 'السرعة (8GB VRAM)': '60+ رمز/ثانية' },
+          { النموذج: 'Qwen3:4b', 'الحجم التقريبي (Q4)': '~2.5GB', 'جودة اللغة الصينية': 'تختلف حسب الجهاز', 'السرعة (المعالج)': 'تختلف حسب الجهاز', 'السرعة (8GB VRAM)': 'تختلف حسب الجهاز' },
           { النموذج: 'Qwen3:8b', 'الحجم التقريبي (Q4)': '~4.7GB', 'جودة اللغة الصينية': 'ممتازة — أفضل نقطة بداية', 'السرعة (المعالج)': '3–5 رموز/ثانية', 'السرعة (8GB VRAM)': '30–45 رمزًا/ثانية' },
           { النموذج: 'Qwen3:14b', 'الحجم التقريبي (Q4)': '~9GB', 'جودة اللغة الصينية': 'الأفضل', 'السرعة (المعالج)': '1–2 رمز/ثانية', 'السرعة (8GB VRAM)': '15–20 رمزًا/ثانية' },
           { النموذج: 'Llama3.1:8b', 'الحجم التقريبي (Q4)': '~4.7GB', 'جودة اللغة الصينية': 'متوسطة', 'السرعة (المعالج)': '3–5 رموز/ثانية', 'السرعة (8GB VRAM)': '30–45 رمزًا/ثانية' },
@@ -2568,8 +2568,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'هل يمكن أن يُحظر حسابي على WeChat بسبب استخدام البوت؟', a: 'تحظر شروط استخدام WeChat البوتات الآلية. الحسابات التي يُكتشف استخدامها لأدوات أتمتة تواجه خطر التعليق المؤقت أو الحظر الدائم. استخدمه فقط بحجم رسائل منخفض للإنتاجية الشخصية — خطر الحساب حقيقي، وهذا ليس تكاملًا معتمدًا رسميًا.' },
             { q: 'ما أفضل نموذج Ollama لرسائل WeChat بالصينية؟', a: 'بالنسبة لمعظم المستخدمين، يقدّم Qwen3 8B أفضل توازن بين الجودة والسرعة — فهم قوي للغة الصينية، والنموذج بحجم نحو 4.7GB (بصيغة Q4) يتسع في 8GB من VRAM أو يعمل بوتيرة مقبولة مع 16GB من ذاكرة المعالج.' },
             { q: 'هل يمكن للبوت التعامل مع الدردشات الجماعية؟', a: 'نعم. يكشف WeChatFerry عن رسائل المجموعات مع معرّف الغرفة. صفِّ عبر `msg.roomid` المجموعات التي يجب أن يرد فيها البوت، واشترط كلمة تفعيل محفّزة صريحة (مثل "@ai") كي لا يرد على كل رسالة في المجموعة.' },
-            { q: 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟', a: 'بالنسبة لمساعد خفيف بنموذج Qwen3 3B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).' },
-            { q: 'هل Minisforum UM890 Pro مبالغ فيه لبوت WeChat؟', a: 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 3B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.' },
+            { q: 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟', a: 'بالنسبة لمساعد خفيف بنموذج Qwen3 4B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).' },
+            { q: 'هل Minisforum UM890 Pro مبالغ فيه لبوت WeChat؟', a: 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 4B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.' },
             { q: 'هل يجعل الاستدلال المحلي لنموذج LLM WeChat خاصًا؟', a: 'لا، وهذا التمييز مهم. يعني الاستدلال المحلي أن محتوى رسائلك لا يُرسل إلى مزوّد LLM سحابي تابع لجهة خارجية لمعالجته. لكنه لا يجعل WeChat نفسه منصة اتصال خاصة — يظل WeChat يعمل عبر بنية Tencent التحتية الخاصة به، بصرف النظر عن مكان تشغيل نموذج الذكاء الاصطناعي.' },
             { q: 'هل هذا تكامل رسمي مع WeChat؟', a: 'لا. WeChatFerry نهج أتمتة/تكامل غير رسمي، وليس واجهة برمجة تطبيقات رسمية لبوتات WeChat. استخدمه بحذر، وحافظ على حجم رسائل منخفض وشخصي، وكن على دراية بمخاطر الحساب المصاحبة لأي أتمتة غير رسمية.' },
             { q: 'كيف أبني بوت WeChat بنموذج LLM محلي؟', a: 'استخدم WeChatFerry (Windows) للاتصال بعميل WeChat لسطح المكتب، واربطه بـ Ollama عبر واجهة HTTP محلية، ووجّه الرسائل إلى نموذج Qwen3. يستغرق الإعداد نحو 30 إلى 60 دقيقة باستخدام بايثون.' },
@@ -2617,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'بالنسبة لمساعد خفيف بنموذج Qwen3 3B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).',
+              'text': 'بالنسبة لمساعد خفيف بنموذج Qwen3 4B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).',
             },
           },
           {
@@ -2625,7 +2625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل Minisforum UM890 Pro مبالغ فيه لبوت WeChat؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 3B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.',
+              'text': 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 4B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.',
             },
           },
           {
@@ -2667,7 +2667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', name: 'الاختبار والتشغيل كخدمة', text: 'اختبر برسالة موجّهة لنفسك، ثم شغّله كخدمة Windows في الخلفية عبر NSSM' },
       ],
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'بوت WeChat بنموذج LLM محلي: بناء مساعد ذكاء اصطناعي شخصي خاص (2026)', description: 'بناء مساعد شخصي على WeChat باستخدام نموذج LLM محلي في 2026: WeChatFerry مع Ollama على Windows، أسعار الأجهزة الحالية، وأفضل نموذج Qwen3.', url: 'https://www.promptquorum.com/ar/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'ar', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'بوت WeChat بنموذج LLM محلي: بناء مساعد ذكاء اصطناعي شخصي خاص (2026)', description: 'بناء مساعد شخصي على WeChat باستخدام نموذج LLM محلي في 2026: WeChatFerry مع Ollama على Windows، أسعار الأجهزة الحالية، وأفضل نموذج Qwen3.', url: 'https://www.promptquorum.com/ar/power-local-llm/wechat-bot-local-llm-personal-assistant-2026', inLanguage: 'ar', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-09' },
     relatedReading: {
       items: [
         '[دليل تكامل WeChat مع LLM محلي — 3 أنماط تكامل](/ar/power-local-llm/wechat-local-llm-integration-2026) — أنماط webhook وWeChatFerry وخادم الجهاز المصغّر للمطورين',

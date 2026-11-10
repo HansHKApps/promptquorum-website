@@ -1,7 +1,7 @@
 <svg viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="1000" height="380" fill="#FFFFFF"/>
   <text x="500" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Speicherbandbreite bestimmt die Token-Geschwindigkeit</text>
-  <text x="500" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Llama 3.3 8B Q4 — die Geschwindigkeit skaliert linear mit der Bandbreite, nicht mit der Zahl der GPU-Kerne</text>
+  <text x="500" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Llama 3.1 8B Q4 — die Geschwindigkeit skaliert linear mit der Bandbreite, nicht mit der Zahl der GPU-Kerne</text>
 
   <!-- M5 base -->
   <rect x="80" y="80" width="180" height="240" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>

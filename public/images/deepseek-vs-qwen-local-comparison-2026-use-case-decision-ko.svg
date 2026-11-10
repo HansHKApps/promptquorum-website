@@ -10,11 +10,11 @@
   <line x1="18" y1="122" x2="782" y2="122" stroke="#F7F2FA" stroke-width="1"/>
   <text x="40" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="600" fill="#1C1B1F" text-anchor="start">코드 생성/검토</text>
   <circle cx="460" cy="150" r="6" fill="#6750A4"/>
-  <text x="478" y="155" font-family="'SF Mono', Monaco, monospace" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Qwen3-Coder 32B</text>
+  <text x="478" y="155" font-family="'SF Mono', Monaco, monospace" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Qwen3-Coder 30B</text>
   <line x1="18" y1="177" x2="782" y2="177" stroke="#F7F2FA" stroke-width="1"/>
   <text x="40" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="600" fill="#1C1B1F" text-anchor="start">중국어 채팅</text>
   <circle cx="460" cy="205" r="6" fill="#6750A4"/>
-  <text x="478" y="210" font-family="'SF Mono', Monaco, monospace" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Qwen3 7B</text>
+  <text x="478" y="210" font-family="'SF Mono', Monaco, monospace" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Qwen3 8B</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
   <text x="40" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="600" fill="#1C1B1F" text-anchor="start">단계별 추론 체인</text>
   <circle cx="460" cy="260" r="6" fill="#1C1B1F"/>

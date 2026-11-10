@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -163,7 +163,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Qwen3 8B', 'Q4_K_M Size': '5.5 GB', 'Q8_0 Size': '8.5 GB', 'VRAM Required': '~6 GB' },
           { 'Model': 'Qwen3 14B', 'Q4_K_M Size': '9.5 GB', 'Q8_0 Size': '15 GB', 'VRAM Required': '12 GB' },
           { 'Model': 'Qwen3 32B', 'Q4_K_M Size': '20.5 GB', 'Q8_0 Size': '34 GB', 'VRAM Required': '24 GB' },
-          { 'Model': 'Qwen3 72B', 'Q4_K_M Size': '46 GB', 'Q8_0 Size': '75 GB', 'VRAM Required': '48 GB' },
           { 'Model': 'nomic-embed-text', 'Q4_K_M Size': '0.27 GB', 'Q8_0 Size': '0.5 GB', 'VRAM Required': '1 GB' },
         ],
         items: [
@@ -202,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
             { q: 'Does Ollama make any network calls when running offline?', a: 'By default, Ollama does not make network calls when serving a locally cached model. It contacts ollama.com only to pull or update models. Running `OLLAMA_MODELS` pointed at a local cache with `ollama serve` makes no outbound calls.' },
-            { q: 'Can I run Qwen3 72B on a NAS-mounted path?', a: 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.' },
+            { q: 'Can I run Qwen3 32B on a NAS-mounted path?', a: 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.' },
             { q: 'What is the smallest model that handles Chinese text well offline?', a: 'Qwen3 8B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.' },
             { q: 'Do I need a CAC security assessment for an internal offline deployment?', a: 'Generally no. CAC\'s Algorithm Security Assessment rules target public-facing AI services. Internal deployments accessible only to employees are out of scope. Consult a compliance professional for your specific situation.' },
             { q: 'Can llama.cpp run without any system dependencies?', a: 'On Linux, the pre-built binary requires GLIBC 2.28+ (standard on Ubuntu 20.04+). On macOS arm64, the binary is self-contained. On Windows, the CUDA build requires CUDA runtime DLLs.' },
@@ -230,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-11-06',
+      dateModified: '2026-11-09',
       about: [{ '@type': 'Thing', name: 'Air-gapped LLM' }, { '@type': 'Thing', name: 'Offline AI deployment' }, { '@type': 'Thing', name: 'China Data Security Law' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -250,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Can I run Qwen3 72B on a NAS-mounted path?',
+            'name': 'Can I run Qwen3 32B on a NAS-mounted path?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.',
@@ -295,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -348,12 +347,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ] },
       relatedReading: { id: 'related-reading', title: 'Verwandte Artikel', items: ['[Lokales RAG für private Geschäftsdaten](/de/power-local-llm/local-rag-for-private-business-data)', '[Bestes NAS für lokale KI-Modelle 2026](/de/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen Lokal-Deployment-Guide 2026](/de/local-llms/qwen-local-deployment-guide-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026', description: 'Lokale LLMs offline hinter Firewall: vollständige Checkliste, Ollama Air-Gap-Workflow, NAS-Speicherbedarf, DSGVO-Hinweise.', url: 'https://www.promptquorum.com/de/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'de', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: 'Offline LLM' }, { '@type': 'Thing', name: 'DSGVO' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026', description: 'Lokale LLMs offline hinter Firewall: vollständige Checkliste, Ollama Air-Gap-Workflow, NAS-Speicherbedarf, DSGVO-Hinweise.', url: 'https://www.promptquorum.com/de/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'de', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-09', about: [{ '@type': 'Thing', name: 'Offline LLM' }, { '@type': 'Thing', name: 'DSGVO' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'de', mainEntity: [{ '@type': 'Question', name: 'Macht Ollama Netzwerkaufrufe im Offline-Betrieb?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. `ollama serve` mit lokalem Cache macht keine ausgehenden Verbindungen.' } }, { '@type': 'Question', name: 'Ist das Offline-Deployment DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Lokale Inferenz erfordert keinen Auftragsverarbeitungsvertrag nach DSGVO Art. 28.' } }] },
   },
 
   fr: {
-    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-06', next_refresh_due: '2026-11-26',
+    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-09', next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-fr.webp',
@@ -392,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: 'Lectures connexes', items: ['[RAG local pour données professionnelles privées](/fr/power-local-llm/local-rag-for-private-business-data)', '[Meilleur NAS pour modèles IA locaux 2026](/fr/power-local-llm/best-nas-storage-local-ai-models-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026', description: 'Déployer des LLM locaux hors ligne : liste de contrôle, Ollama air-gap, NAS, RGPD.', url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: 'LLM hors ligne' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026', description: 'Déployer des LLM locaux hors ligne : liste de contrôle, Ollama air-gap, NAS, RGPD.', url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-09', about: [{ '@type': 'Thing', name: 'LLM hors ligne' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [
           {
             '@type': 'Question',
@@ -414,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-06', next_refresh_due: '2026-11-26',
+    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-09', next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ja.webp',
@@ -453,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: '関連記事', items: ['[プライベートビジネスデータ用ローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data)', '[ローカルAIモデル向けNAS 2026](/ja/power-local-llm/best-nas-storage-local-ai-models-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ファイアウォール背後のローカルAI：オフライン展開ガイド 2026', description: 'ファイアウォール背後でのオフラインLLM展開：事前チェックリスト・Ollama air-gap・NASサイジング・METIガイドライン対応。', url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: 'オフラインLLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ファイアウォール背後のローカルAI：オフライン展開ガイド 2026', description: 'ファイアウォール背後でのオフラインLLM展開：事前チェックリスト・Ollama air-gap・NASサイジング・METIガイドライン対応。', url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-09', about: [{ '@type': 'Thing', name: 'オフラインLLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [
           {
             '@type': 'Question',
@@ -475,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-06', next_refresh_due: '2026-11-26',
+    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-09', next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-zh.webp',
@@ -517,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: '相关阅读', items: ['[本地RAG用于私人业务数据](/zh/power-local-llm/local-rag-for-private-business-data)', '[本地AI模型最佳NAS存储 2026](/zh/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen本地部署指南 2026](/zh/local-llms/qwen-local-deployment-guide-2026)', '[微信本地LLM集成2026](/zh/power-local-llm/wechat-local-llm-integration-2026) — 将离线Ollama后端接入微信机器人：技术路线与合规注意事项。'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '防火墙后的本地AI：离线部署指南 2026', description: '防火墙后本地LLM离线部署：完整检查清单、Ollama air-gap、NAS存储规划、《数据安全法》/CAC合规说明。', url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: '离线LLM' }, { '@type': 'Thing', name: '数据安全法' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '防火墙后的本地AI：离线部署指南 2026', description: '防火墙后本地LLM离线部署：完整检查清单、Ollama air-gap、NAS存储规划、《数据安全法》/CAC合规说明。', url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-09', about: [{ '@type': 'Thing', name: '离线LLM' }, { '@type': 'Thing', name: '数据安全法' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'zh', mainEntity: [
           {
             '@type': 'Question',
@@ -565,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -698,7 +697,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Qwen3 8B', 'Tamaño Q4_K_M': '5,5 GB', 'Tamaño Q8_0': '8,5 GB', 'VRAM necesaria': '~6 GB' },
           { 'Modelo': 'Qwen3 14B', 'Tamaño Q4_K_M': '9,5 GB', 'Tamaño Q8_0': '15 GB', 'VRAM necesaria': '12 GB' },
           { 'Modelo': 'Qwen3 32B', 'Tamaño Q4_K_M': '20,5 GB', 'Tamaño Q8_0': '34 GB', 'VRAM necesaria': '24 GB' },
-          { 'Modelo': 'Qwen3 72B', 'Tamaño Q4_K_M': '46 GB', 'Tamaño Q8_0': '75 GB', 'VRAM necesaria': '48 GB' },
           { 'Modelo': 'nomic-embed-text', 'Tamaño Q4_K_M': '0,27 GB', 'Tamaño Q8_0': '0,5 GB', 'VRAM necesaria': '1 GB' },
         ],
         items: [
@@ -737,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
             { q: '¿Ollama realiza llamadas de red cuando se ejecuta sin conexión?', a: 'Por defecto, Ollama no realiza llamadas de red cuando sirve un modelo almacenado en caché localmente. Solo contacta ollama.com para descargar o actualizar modelos. Ejecutar `ollama serve` con `OLLAMA_MODELS` apuntando a una caché local no genera ninguna conexión saliente.' },
-            { q: '¿Puedo ejecutar Qwen3 72B desde una ruta montada en NAS?', a: 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.' },
+            { q: '¿Puedo ejecutar Qwen3 32B desde una ruta montada en NAS?', a: 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.' },
             { q: '¿Cuál es el modelo más pequeño que maneja bien el español offline?', a: 'Qwen3 8B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.' },
             { q: '¿Necesito una evaluación de seguridad regulatoria para un despliegue offline interno?', a: 'Generalmente no. La mayoría de normativas regulatorias sobre IA se aplican a servicios orientados al público. Los despliegues internos accesibles solo por empleados suelen estar fuera del ámbito de aplicación. Consulta a un profesional de cumplimiento normativo para tu situación específica.' },
             { q: '¿Puede llama.cpp ejecutarse sin dependencias del sistema?', a: 'En Linux, el binario precompilado requiere GLIBC 2.28+ (estándar en Ubuntu 20.04+). En macOS arm64, el binario es autocontenido. En Windows, la compilación con CUDA requiere las DLL del runtime de CUDA.' },
@@ -764,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-11-06',
+      dateModified: '2026-11-09',
       about: [{ '@type': 'Thing', name: 'LLM air-gapped' }, { '@type': 'Thing', name: 'Despliegue de IA offline' }, { '@type': 'Thing', name: 'Cumplimiento normativo de datos' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -784,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '¿Puedo ejecutar Qwen3 72B desde una ruta montada en NAS?',
+            'name': '¿Puedo ejecutar Qwen3 32B desde una ruta montada en NAS?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.',
@@ -828,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -961,7 +959,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Qwen3 8B', 'Q4_K_M 크기': '5.5 GB', 'Q8_0 크기': '8.5 GB', '필요 VRAM': '~6 GB' },
           { '모델': 'Qwen3 14B', 'Q4_K_M 크기': '9.5 GB', 'Q8_0 크기': '15 GB', '필요 VRAM': '12 GB' },
           { '모델': 'Qwen3 32B', 'Q4_K_M 크기': '20.5 GB', 'Q8_0 크기': '34 GB', '필요 VRAM': '24 GB' },
-          { '모델': 'Qwen3 72B', 'Q4_K_M 크기': '46 GB', 'Q8_0 크기': '75 GB', '필요 VRAM': '48 GB' },
           { '모델': 'nomic-embed-text', 'Q4_K_M 크기': '0.27 GB', 'Q8_0 크기': '0.5 GB', '필요 VRAM': '1 GB' },
         ],
         items: [
@@ -1000,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Ollama는 오프라인 실행 시 네트워크 호출을 합니까?', a: '기본적으로 Ollama는 로컬에 캐시된 모델을 서빙할 때 네트워크 호출을 하지 않습니다. ollama.com은 모델 다운로드 또는 업데이트 시에만 접속합니다. 로컬 캐시와 함께 `OLLAMA_MODELS`를 설정하고 `ollama serve`를 실행하면 외부 연결이 발생하지 않습니다.' },
-          { q: 'NAS 마운트 경로에서 Qwen3 72B를 실행할 수 있습니까?', a: '가능합니다. 다만 모델 로드 시 NFS 지연으로 인해 로딩 시간이 10~30초 더 소요됩니다. 로드 완료 후 추론 성능은 스토리지 속도가 아닌 GPU/CPU의 VRAM에만 의존합니다.' },
+          { q: 'NAS 마운트 경로에서 Qwen3 32B를 실행할 수 있습니까?', a: '가능합니다. 다만 모델 로드 시 NFS 지연으로 인해 로딩 시간이 10~30초 더 소요됩니다. 로드 완료 후 추론 성능은 스토리지 속도가 아닌 GPU/CPU의 VRAM에만 의존합니다.' },
           { q: '오프라인에서 한국어를 잘 처리하는 가장 작은 모델은 무엇입니까?', a: 'Qwen3 8B Q4_K_M(VRAM 5.5 GB)입니다. 한국어를 네이티브 토크나이저로 처리하며, RTX 3060에서 50~80 tok/s로 일관된 응답을 생성합니다.' },
           { q: '내부 오프라인 배포에 규제 보안 평가가 필요합니까?', a: '일반적으로 필요하지 않습니다. 대부분의 AI 규제는 공개 서비스에 적용됩니다. 직원만 사용하는 내부 배포는 일반적으로 적용 범위 밖입니다. 구체적인 상황에 대해서는 컴플라이언스 전문가에게 문의하십시오.' },
           { q: 'llama.cpp는 시스템 의존성 없이 실행 가능합니까?', a: 'Linux에서는 사전 컴파일된 바이너리가 GLIBC 2.28 이상을 필요로 합니다(Ubuntu 20.04 이상에는 표준 포함). macOS arm64에서는 바이너리가 독립 실행됩니다. Windows CUDA 빌드는 CUDA 런타임 DLL이 필요합니다.' },
@@ -1027,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-11-06',
+      dateModified: '2026-11-09',
       about: [{ '@type': 'Thing', name: 'LLM 에어갭' }, { '@type': 'Thing', name: '오프라인 AI 배포' }, { '@type': 'Thing', name: '데이터 컴플라이언스' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1046,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1179,7 +1176,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Qwen3 8B', 'Tamanho Q4_K_M': '5,5 GB', 'Tamanho Q8_0': '8,5 GB', 'VRAM necessária': '~6 GB' },
           { 'Modelo': 'Qwen3 14B', 'Tamanho Q4_K_M': '9,5 GB', 'Tamanho Q8_0': '15 GB', 'VRAM necessária': '12 GB' },
           { 'Modelo': 'Qwen3 32B', 'Tamanho Q4_K_M': '20,5 GB', 'Tamanho Q8_0': '34 GB', 'VRAM necessária': '24 GB' },
-          { 'Modelo': 'Qwen3 72B', 'Tamanho Q4_K_M': '46 GB', 'Tamanho Q8_0': '75 GB', 'VRAM necessária': '48 GB' },
           { 'Modelo': 'nomic-embed-text', 'Tamanho Q4_K_M': '0,27 GB', 'Tamanho Q8_0': '0,5 GB', 'VRAM necessária': '1 GB' },
         ],
         items: [
@@ -1218,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
             { q: 'O Ollama faz alguma chamada de rede ao executar offline?', a: 'Por padrão, o Ollama não faz chamadas de rede ao servir um modelo armazenado em cache localmente. Ele contata ollama.com apenas para baixar ou atualizar modelos. Executar `ollama serve` com `OLLAMA_MODELS` apontando para um cache local não gera nenhuma conexão de saída.' },
-            { q: 'Posso executar o Qwen3 72B a partir de um caminho montado em NAS?', a: 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.' },
+            { q: 'Posso executar o Qwen3 32B a partir de um caminho montado em NAS?', a: 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.' },
             { q: 'Qual é o menor modelo que lida bem com texto em português offline?', a: 'Qwen3 8B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.' },
             { q: 'Preciso de uma avaliação de segurança regulatória para uma implantação offline interna?', a: 'Geralmente não. A maioria das normas regulatórias sobre IA se aplica a serviços voltados ao público. Implantações internas acessíveis apenas por funcionários costumam estar fora do âmbito de aplicação. Consulte um profissional de conformidade para a sua situação específica.' },
             { q: 'O llama.cpp consegue rodar sem dependências do sistema?', a: 'No Linux, o binário pré-compilado requer GLIBC 2.28+ (padrão no Ubuntu 20.04+). No macOS arm64, o binário é autocontido. No Windows, a compilação com CUDA requer as DLLs do runtime do CUDA.' },
@@ -1245,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-11-06',
+      dateModified: '2026-11-09',
       about: [{ '@type': 'Thing', name: 'LLM air-gapped' }, { '@type': 'Thing', name: 'Implantação de IA offline' }, { '@type': 'Thing', name: 'Conformidade de residência de dados' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1265,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Posso executar o Qwen3 72B a partir de um caminho montado em NAS?',
+            'name': 'Posso executar o Qwen3 32B a partir de um caminho montado em NAS?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.',
@@ -1309,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-09',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1442,7 +1438,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Qwen3 8B', 'حجم Q4_K_M': '5.5 جيجابايت', 'حجم Q8_0': '8.5 جيجابايت', 'VRAM المطلوب': '~6 جيجابايت' },
           { 'النموذج': 'Qwen3 14B', 'حجم Q4_K_M': '9.5 جيجابايت', 'حجم Q8_0': '15 جيجابايت', 'VRAM المطلوب': '12 جيجابايت' },
           { 'النموذج': 'Qwen3 32B', 'حجم Q4_K_M': '20.5 جيجابايت', 'حجم Q8_0': '34 جيجابايت', 'VRAM المطلوب': '24 جيجابايت' },
-          { 'النموذج': 'Qwen3 72B', 'حجم Q4_K_M': '46 جيجابايت', 'حجم Q8_0': '75 جيجابايت', 'VRAM المطلوب': '48 جيجابايت' },
           { 'النموذج': 'nomic-embed-text', 'حجم Q4_K_M': '0.27 جيجابايت', 'حجم Q8_0': '0.5 جيجابايت', 'VRAM المطلوب': '1 جيجابايت' },
         ],
         items: [
@@ -1481,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
             { q: 'هل تُجري Ollama أي اتصالات شبكية عند العمل دون إنترنت؟', a: 'لا. لا تتصل Ollama بـ ollama.com إلا عند تنزيل النماذج أو تحديثها. تشغيل `ollama serve` مع تعيين `OLLAMA_MODELS` ليشير إلى ذاكرة تخزين محلية لا يولّد أي اتصالات صادرة.' },
-            { q: 'هل يمكنني تشغيل Qwen3 72B من مسار مثبّت على NAS؟', a: 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.' },
+            { q: 'هل يمكنني تشغيل Qwen3 32B من مسار مثبّت على NAS؟', a: 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.' },
             { q: 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟', a: 'Qwen3 8B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.' },
             { q: 'هل أحتاج إلى تقييم أمني تنظيمي للنشر الداخلي المعزول؟', a: 'بشكل عام لا. تنطبق معظم اللوائح التنظيمية للذكاء الاصطناعي على الخدمات الموجهة للعموم. عمليات النشر الداخلية المتاحة فقط للموظفين تقع عمومًا خارج نطاق التطبيق. استشر متخصصًا في الامتثال لوضعك المحدد.' },
             { q: 'هل يمكن تشغيل llama.cpp دون أي تبعيات للنظام؟', a: 'على Linux، يتطلب الملف التنفيذي المبني مسبقًا GLIBC 2.28+ (القياسي في Ubuntu 20.04+). على macOS arm64، الملف التنفيذي مكتفٍ ذاتيًا. على Windows، يتطلب بناء CUDA ملفات DLL لوقت تشغيل CUDA.' },
@@ -1508,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-11-06',
+      dateModified: '2026-11-09',
       about: [{ '@type': 'Thing', name: 'LLM معزول air-gapped' }, { '@type': 'Thing', name: 'نشر الذكاء الاصطناعي بدون إنترنت' }, { '@type': 'Thing', name: 'قوانين إقامة البيانات' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1528,7 +1523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'هل يمكنني تشغيل Qwen3 72B من مسار مثبّت على NAS؟',
+            'name': 'هل يمكنني تشغيل Qwen3 32B من مسار مثبّت على NAS؟',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.',

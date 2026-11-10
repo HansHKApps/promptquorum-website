@@ -15,7 +15,7 @@
   <text x="400" y="158" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
   <text x="400" y="207" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pull a Model</text>
   <text x="400" y="228" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">ollama pull llama2</text>
-  <text x="400" y="244" font-family="system-ui, sans-serif" font-size="10.5" fill="#79747E" text-anchor="middle">Llama 3.3 7B, ~4 GB</text>
+  <text x="400" y="244" font-family="system-ui, sans-serif" font-size="10.5" fill="#79747E" text-anchor="middle">Llama 3.1 8B, ~4 GB</text>
 
   <text x="535" y="158" font-family="system-ui, sans-serif" font-size="22" fill="#6750A4" text-anchor="middle">→</text>
 

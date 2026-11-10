@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     designSkin: 'hub',
     title: 'Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-09',
     seoTitle: 'Best AI Coding Assistant & IDE for Local LLMs 2026',
     metaDescription: 'Compare 5 AI coding assistants & IDEs with native local LLM support: Ollama, LM Studio, pricing, privacy. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp',
@@ -1303,7 +1303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     designSkin: 'hub',
     title: 'Melhor assistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-09',
     seoTitle: 'Melhor assistente de código IA e IDE para LLM local 2026',
     metaDescription: 'Compare 5 assistentes de código IA com suporte LLM local nativo: Ollama, LM Studio, privacidade, preços. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-pt.webp',
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual assistente de código IA funciona melhor com LLMs locais?', a: 'Continue.dev é o vencedor claro para desenvolvedores que priorizam o local -- foi construído com Ollama e LM Studio como alvos principais. Cursor é melhor para fluxos de trabalho híbridos (nuvem + local ocasional).' },
-          { q: 'O Continue.dev funciona com Ollama em português?', a: 'Sim. O Continue.dev funciona com qualquer modelo Ollama, incluindo modelos com suporte em português como Qwen3 8B e Llama 3.3 7B. A interface do IDE permanece em inglês, mas as sugestões de código podem ser geradas em português.' },
+          { q: 'O Continue.dev funciona com Ollama em português?', a: 'Sim. O Continue.dev funciona com qualquer modelo Ollama, incluindo modelos com suporte em português como Qwen3 8B e Llama 3.1 8B. A interface do IDE permanece em inglês, mas as sugestões de código podem ser geradas em português.' },
           { q: 'Qual assistente de código é melhor para conformidade com a LGPD?', a: 'Tabnine com opção self-hosted é a melhor escolha para conformidade com a LGPD. Continue.dev com LLMs locais também garante que nenhum código saia da organização. Evite ferramentas cloud-only para código que contém dados pessoais.' },
           { q: 'O Cursor suporta LLMs locais?', a: 'Sim, via configuração de endpoint OpenAI personalizado. Configure o Ollama como backend e aponte o Cursor para localhost:11434. Não é tão simples quanto o Continue.dev, mas funciona bem.' },
           { q: 'Continue.dev vs Cursor: qual é melhor para uma startup brasileira?', a: 'Continue.dev para equipes conscientes de privacidade e LGPD -- gratuito, local-first, sem dados enviados a terceiros. Cursor para equipes que priorizam velocidade de desenvolvimento e UX refinada e aceitam dados na nuvem.' },
@@ -2455,7 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-zh.webp',
     intro: '本地运行AI编程助手能保护企业代码隐私，满足监管要求。本指南对比5款领先工具，帮助您根据团队规模、预算、数据安全需求做出最佳选择。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-09',
     readTime: '8 分钟',
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM AI coding assistant',

@@ -13,7 +13,7 @@
   <line x1="495" y1="38" x2="495" y2="212" stroke="#E8DEF8" stroke-width="1"/>
   <line x1="625" y1="38" x2="625" y2="212" stroke="#E8DEF8" stroke-width="1"/>
   <rect x="0" y="74" width="800" height="46" fill="#FFFFFF"/>
-  <text x="105" y="93" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Llama 3.3 8B</text>
+  <text x="105" y="93" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Llama 3.1 8B</text>
   <text x="105" y="109" font-family="'SF Mono',Monaco,monospace" font-size="10" fill="#49454F" text-anchor="middle">Q4_K_M · recommended</text>
   <text x="285" y="101" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">16 GB</text>
   <text x="430" y="101" font-family="'SF Mono',Monaco,monospace" font-size="12" fill="#49454F" text-anchor="middle">~4.9 GB</text>
