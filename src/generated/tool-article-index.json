@@ -12045,6 +12045,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-file-sorter-review",
+        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
+        "url": "/power-local-llm/ai-file-sorter-review",
+        "dateModified": "2026-11-10",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "amical-review",
         "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
         "url": "/power-local-llm/amical-review",
@@ -12105,14 +12113,6 @@
         "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
         "url": "/power-local-llm/sablate-review",
         "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-06",
         "tier": "mentioned"
       }
     ],
@@ -13266,7 +13266,7 @@
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-11-10",
         "tier": "about"
       }
     ],

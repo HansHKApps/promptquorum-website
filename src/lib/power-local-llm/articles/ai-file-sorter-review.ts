@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-en.webp',
@@ -256,6 +256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'App': '[Hyperlink (Nexa AI)](/power-local-llm/hyperlink-nexa-review)', 'Platforms': 'Windows, macOS', 'Price / license': 'Free / Proprietary', 'Key difference': 'Searches and answers questions across your local files instead of renaming or moving them' },
           { 'App': '[PixlStash](/power-local-llm/pixlstash-review)', 'Platforms': 'Windows, macOS, Linux', 'Price / license': 'Free / GPL-3.0', 'Key difference': 'Image library manager with local AI tagging and search; covers pictures only' },
+          { 'App': '[StratoSort](/power-local-llm/stratosort-review)', 'Platforms': 'Windows, macOS, Linux', 'Price / license': 'Free for noncommercial use / PolyForm Noncommercial', 'Key difference': 'Adds semantic search, document chat and a knowledge graph; source-available, not open source' },
         ],
         note: 'Confirm each app\'s current price, license and platforms on its own page.',
       },
@@ -306,6 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Hyperlink (Nexa AI) Review](/power-local-llm/hyperlink-nexa-review) — on-device assistant that searches and answers questions across local files.',
           '[PixlStash Review](/power-local-llm/pixlstash-review) — self-hosted image library manager with local AI tagging.',
+          '[StratoSort Review](/power-local-llm/stratosort-review) — a desktop file organizer with local llama.cpp models that also offers semantic search and document chat.',
           '[Local LLM Software Directory](/directory) — the full catalogue of local AI tools.',
         ],
       },
@@ -319,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/ai-file-sorter-review',
       inLanguage: 'en',
       datePublished: '2026-10-28',
-      dateModified: '2026-10-28',
+      dateModified: '2026-11-10',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Beginner',
@@ -348,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-de.webp',
@@ -587,6 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'App': '[Hyperlink (Nexa AI)](/de/power-local-llm/hyperlink-nexa-review)', 'Plattformen': 'Windows, macOS', 'Preis / Lizenz': 'Kostenlos / Proprietär', 'Wichtigster Unterschied': 'Durchsucht Ihre lokalen Dateien und beantwortet Fragen dazu, statt sie umzubenennen oder zu verschieben' },
           { 'App': '[PixlStash](/de/power-local-llm/pixlstash-review)', 'Plattformen': 'Windows, macOS, Linux', 'Preis / Lizenz': 'Kostenlos / GPL-3.0', 'Wichtigster Unterschied': 'Bildbibliotheks-Manager mit lokaler KI-Verschlagwortung und Suche; deckt nur Bilder ab' },
+          { 'App': '[StratoSort](/de/power-local-llm/stratosort-review)', 'Plattformen': 'Windows, macOS, Linux', 'Preis / Lizenz': 'Kostenlos (nichtkommerziell) / PolyForm Noncommercial', 'Wichtigster Unterschied': 'Ergänzt semantische Suche, Dokument-Chat und Wissensgraph; source-available, nicht Open Source' },
         ],
         note: 'Prüfen Sie aktuellen Preis, Lizenz und Plattformen jeder App auf ihrer eigenen Seite.',
       },
@@ -637,6 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Hyperlink-(Nexa-AI)-Rezension](/de/power-local-llm/hyperlink-nexa-review) — Assistent auf dem Gerät, der lokale Dateien durchsucht und Fragen dazu beantwortet.',
           '[PixlStash-Rezension](/de/power-local-llm/pixlstash-review) — selbst gehosteter Bildbibliotheks-Manager mit lokaler KI-Verschlagwortung.',
+          '[StratoSort-Rezension](/de/power-local-llm/stratosort-review) — ein Desktop-Dateiorganizer mit lokalen llama.cpp-Modellen, der zusätzlich semantische Suche und Dokument-Chat bietet.',
           '[Local-LLM-Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Werkzeuge.',
         ],
       },
@@ -647,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-es.webp',
@@ -886,6 +890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'App': '[Hyperlink (Nexa AI)](/es/power-local-llm/hyperlink-nexa-review)', 'Plataformas': 'Windows, macOS', 'Precio / licencia': 'Gratis / Propietaria', 'Diferencia clave': 'Busca en tus archivos locales y responde preguntas sobre ellos en lugar de renombrarlos o moverlos' },
           { 'App': '[PixlStash](/es/power-local-llm/pixlstash-review)', 'Plataformas': 'Windows, macOS, Linux', 'Precio / licencia': 'Gratis / GPL-3.0', 'Diferencia clave': 'Gestor de biblioteca de imágenes con etiquetado y búsqueda con IA local; solo cubre imágenes' },
+          { 'App': '[StratoSort](/es/power-local-llm/stratosort-review)', 'Plataformas': 'Windows, macOS, Linux', 'Precio / licencia': 'Gratis (no comercial) / PolyForm Noncommercial', 'Diferencia clave': 'Añade búsqueda semántica, chat con documentos y grafo de conocimiento; código disponible, no abierto' },
         ],
         note: 'Comprueba el precio, la licencia y las plataformas actuales de cada app en su propia página.',
       },
@@ -936,6 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de Hyperlink (Nexa AI)](/es/power-local-llm/hyperlink-nexa-review) — asistente en el dispositivo que busca en los archivos locales y responde preguntas sobre ellos.',
           '[Reseña de PixlStash](/es/power-local-llm/pixlstash-review) — gestor de biblioteca de imágenes autoalojado con etiquetado por IA local.',
+          '[Reseña de StratoSort](/es/power-local-llm/stratosort-review) — un organizador de archivos de escritorio con modelos llama.cpp locales que también ofrece búsqueda semántica y chat con documentos.',
           '[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA local.',
         ],
       },
@@ -946,7 +952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-fr.webp',
@@ -1185,6 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Application': '[Hyperlink (Nexa AI)](/fr/power-local-llm/hyperlink-nexa-review)', 'Plateformes': 'Windows, macOS', 'Prix / licence': 'Gratuit / Propriétaire', 'Différence clé': 'Recherche dans vos fichiers locaux et répond à des questions à leur sujet au lieu de les renommer ou de les déplacer' },
           { 'Application': '[PixlStash](/fr/power-local-llm/pixlstash-review)', 'Plateformes': 'Windows, macOS, Linux', 'Prix / licence': 'Gratuit / GPL-3.0', 'Différence clé': 'Gestionnaire de bibliothèque d’images avec étiquetage et recherche par IA locale ; ne couvre que les images' },
+          { 'Application': '[StratoSort](/fr/power-local-llm/stratosort-review)', 'Plateformes': 'Windows, macOS, Linux', 'Prix / licence': 'Gratuit (non commercial) / PolyForm Noncommercial', 'Différence clé': 'Ajoute recherche sémantique, chat documentaire et graphe de connaissances ; code accessible, pas open source' },
         ],
         note: 'Vérifiez le prix, la licence et les plateformes actuels de chaque application sur sa propre page.',
       },
@@ -1235,6 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Test d’Hyperlink (Nexa AI)](/fr/power-local-llm/hyperlink-nexa-review) — assistant sur l’appareil qui recherche dans les fichiers locaux et répond à des questions à leur sujet.',
           '[Test de PixlStash](/fr/power-local-llm/pixlstash-review) — gestionnaire de bibliothèque d’images auto-hébergé avec étiquetage par IA locale.',
+          '[Test de StratoSort](/fr/power-local-llm/stratosort-review) — un organiseur de fichiers de bureau avec modèles llama.cpp locaux, qui propose aussi recherche sémantique et chat avec les documents.',
           '[Répertoire de logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale.',
         ],
       },
@@ -1245,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-ja.webp',
@@ -1484,6 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'アプリ': '[Hyperlink (Nexa AI)](/ja/power-local-llm/hyperlink-nexa-review)', '対応プラットフォーム': 'Windows、macOS', '価格／ライセンス': '無料／プロプライエタリ', '主な違い': 'ファイルを改名・移動せず、ローカルのファイルを検索してそれに関する質問に答える' },
           { 'アプリ': '[PixlStash](/ja/power-local-llm/pixlstash-review)', '対応プラットフォーム': 'Windows、macOS、Linux', '価格／ライセンス': '無料／GPL-3.0', '主な違い': 'ローカルAIでタグ付けと検索を行う画像ライブラリ管理ツール。対象は画像のみ' },
+          { 'アプリ': '[StratoSort](/ja/power-local-llm/stratosort-review)', '対応プラットフォーム': 'Windows、macOS、Linux', '価格／ライセンス': '非商用は無料／PolyForm Noncommercial', '主な違い': '意味検索、ドキュメントチャット、ナレッジグラフを追加。ソース公開型でオープンソースではない' },
         ],
         note: '各アプリの最新の価格、ライセンス、対応プラットフォームは、それぞれの公式ページで確認してください。',
       },
@@ -1534,6 +1543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Hyperlink (Nexa AI)レビュー](/ja/power-local-llm/hyperlink-nexa-review) — ローカルのファイルを検索し、それに関する質問に答える端末内アシスタント。',
           '[PixlStashレビュー](/ja/power-local-llm/pixlstash-review) — ローカルAIでタグ付けを行う、セルフホスト型の画像ライブラリ管理ツール。',
+          '[StratoSortレビュー](/ja/power-local-llm/stratosort-review) — ローカルのllama.cppモデルを使い、セマンティック検索とドキュメントチャットも備えたデスクトップのファイル整理アプリ。',
           '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。',
         ],
       },
@@ -1544,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-pt.webp',
@@ -1783,6 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'App': '[Hyperlink (Nexa AI)](/pt/power-local-llm/hyperlink-nexa-review)', 'Plataformas': 'Windows, macOS', 'Preço / licença': 'Grátis / Proprietária', 'Diferença principal': 'Pesquisa os seus arquivos locais e responde a perguntas sobre eles, em vez de renomeá-los ou movê-los' },
           { 'App': '[PixlStash](/pt/power-local-llm/pixlstash-review)', 'Plataformas': 'Windows, macOS, Linux', 'Preço / licença': 'Grátis / GPL-3.0', 'Diferença principal': 'Gerenciador de biblioteca de imagens com marcação e busca por IA local; cobre apenas imagens' },
+          { 'App': '[StratoSort](/pt/power-local-llm/stratosort-review)', 'Plataformas': 'Windows, macOS, Linux', 'Preço / licença': 'Grátis (não comercial) / PolyForm Noncommercial', 'Diferença principal': 'Acrescenta busca semântica, chat com documentos e grafo de conhecimento; código disponível, não aberto' },
         ],
         note: 'Confirme o preço, a licença e as plataformas atuais de cada app na própria página dele.',
       },
@@ -1833,6 +1844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Hyperlink (Nexa AI)](/pt/power-local-llm/hyperlink-nexa-review) — assistente no dispositivo que pesquisa os arquivos locais e responde a perguntas sobre eles.',
           '[Análise do PixlStash](/pt/power-local-llm/pixlstash-review) — gerenciador de biblioteca de imagens auto-hospedado com marcação por IA local.',
+          '[Análise do StratoSort](/pt/power-local-llm/stratosort-review) — um organizador de arquivos de desktop com modelos llama.cpp locais que também oferece busca semântica e chat com documentos.',
           '[Diretório de software para LLMs locais](/pt/directory) — o catálogo completo de ferramentas de IA local.',
         ],
       },
@@ -1843,7 +1855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-ar.webp',
@@ -2082,6 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'التطبيق': '[Hyperlink (Nexa AI)](/ar/power-local-llm/hyperlink-nexa-review)', 'المنصات': 'Windows وmacOS', 'السعر / الرخصة': 'مجاني / مملوك', 'الفرق الأبرز': 'يبحث في ملفاتك المحلية ويجيب عن الأسئلة المتعلقة بها بدلًا من إعادة تسميتها أو نقلها' },
           { 'التطبيق': '[PixlStash](/ar/power-local-llm/pixlstash-review)', 'المنصات': 'Windows وmacOS وLinux', 'السعر / الرخصة': 'مجاني / GPL-3.0', 'الفرق الأبرز': 'مدير لمكتبة الصور مع وسم وبحث بذكاء اصطناعي محلي؛ يغطي الصور فقط' },
+          { 'التطبيق': '[StratoSort](/ar/power-local-llm/stratosort-review)', 'المنصات': 'Windows وmacOS وLinux', 'السعر / الرخصة': 'مجاني لغير التجاري / PolyForm Noncommercial', 'الفرق الأبرز': 'يضيف بحثًا دلاليًا ومحادثة مع المستندات ورسمًا معرفيًا؛ متاح المصدر وليس مفتوح المصدر' },
         ],
         note: 'تحقق من السعر والرخصة والمنصات الحالية لكل تطبيق في صفحته الخاصة.',
       },
@@ -2132,6 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Hyperlink (Nexa AI)](/ar/power-local-llm/hyperlink-nexa-review) — مساعد يعمل على الجهاز يبحث في الملفات المحلية ويجيب عن الأسئلة المتعلقة بها.',
           '[مراجعة PixlStash](/ar/power-local-llm/pixlstash-review) — مدير مكتبة صور مستضاف ذاتيًا مع وسم بذكاء اصطناعي محلي.',
+          '[مراجعة StratoSort](/ar/power-local-llm/stratosort-review) — منظّم ملفات مكتبي بنماذج llama.cpp محلية يقدّم أيضًا بحثًا دلاليًا ومحادثة مع المستندات.',
           '[دليل برامج LLM المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي.',
         ],
       },
@@ -2142,7 +2156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-zh.webp',
@@ -2381,6 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '应用': '[Hyperlink (Nexa AI)](/zh/power-local-llm/hyperlink-nexa-review)', '平台': 'Windows、macOS', '价格 / 许可证': '免费 / 专有', '主要区别': '搜索你的本地文件并回答相关问题，而不是重命名或移动文件' },
           { '应用': '[PixlStash](/zh/power-local-llm/pixlstash-review)', '平台': 'Windows、macOS、Linux', '价格 / 许可证': '免费 / GPL-3.0', '主要区别': '带本地 AI 标签和搜索的图片库管理工具；只处理图片' },
+          { '应用': '[StratoSort](/zh/power-local-llm/stratosort-review)', '平台': 'Windows、macOS、Linux', '价格 / 许可证': '非商业免费 / PolyForm Noncommercial', '主要区别': '增加语义搜索、文档对话和知识图谱；源码可见，但并非开源' },
         ],
         note: '请在各应用自己的页面上确认其当前价格、许可证和平台。',
       },
@@ -2431,6 +2446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Hyperlink (Nexa AI) 评测](/zh/power-local-llm/hyperlink-nexa-review) — 在设备上搜索本地文件并回答相关问题的助手。',
           '[PixlStash 评测](/zh/power-local-llm/pixlstash-review) — 带本地 AI 标签的自托管图片库管理工具。',
+          '[StratoSort 评测](/zh/power-local-llm/stratosort-review) — 使用本地 llama.cpp 模型的桌面文件整理应用，同时提供语义搜索和文档对话。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具完整目录。',
         ],
       },
@@ -2441,7 +2457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-11-10',
     next_refresh_due: '2027-04-28',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/ai-file-sorter-review-hero-ko.webp',
@@ -2680,6 +2696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '앱': '[Hyperlink (Nexa AI)](/ko/power-local-llm/hyperlink-nexa-review)', '플랫폼': 'Windows, macOS', '가격 / 라이선스': '무료 / 독점', '핵심 차이점': '파일 이름을 바꾸거나 이동하지 않고, 로컬 파일을 검색해 관련 질문에 답함' },
           { '앱': '[PixlStash](/ko/power-local-llm/pixlstash-review)', '플랫폼': 'Windows, macOS, Linux', '가격 / 라이선스': '무료 / GPL-3.0', '핵심 차이점': '로컬 AI로 태그를 붙이고 검색하는 이미지 라이브러리 관리 도구로, 이미지만 다룸' },
+          { '앱': '[StratoSort](/ko/power-local-llm/stratosort-review)', '플랫폼': 'Windows, macOS, Linux', '가격 / 라이선스': '비상업용 무료 / PolyForm Noncommercial', '핵심 차이점': '의미 기반 검색, 문서 채팅, 지식 그래프를 추가하며 소스 공개형이고 오픈소스는 아님' },
         ],
         note: '각 앱의 현재 가격, 라이선스, 플랫폼은 해당 앱의 공식 페이지에서 확인하세요.',
       },
@@ -2730,6 +2747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Hyperlink (Nexa AI) 리뷰](/ko/power-local-llm/hyperlink-nexa-review) — 로컬 파일을 검색하고 관련 질문에 답하는 온디바이스 어시스턴트.',
           '[PixlStash 리뷰](/ko/power-local-llm/pixlstash-review) — 로컬 AI 태깅을 갖춘 셀프 호스팅 이미지 라이브러리 관리 도구.',
+          '[StratoSort 리뷰](/ko/power-local-llm/stratosort-review) — 로컬 llama.cpp 모델을 사용하며 의미 기반 검색과 문서 채팅도 제공하는 데스크톱 파일 정리 앱입니다.',
           '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 카탈로그.',
         ],
       },
