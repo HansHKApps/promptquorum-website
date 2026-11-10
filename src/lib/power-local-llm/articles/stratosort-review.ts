@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The maker of StratoSort sent corrections and the note below on 10 November 2026. It is presented as the maker\'s own words, not as PromptQuorum\'s independent editorial assessment, and PromptQuorum could not verify it in code or by testing:',
           '"I built StratoSort for people whose files are too private to upload to a cloud AI service. After the models download, sorting, search, chat and transcription all run on your machine. There\'s no account and no telemetry, and with update checks off and no cloud key it makes no outbound requests. I\'ve built it solo over about 17 months of part-time work. If anything behaves differently from what the docs say, open an issue on GitHub and I\'ll look at it."',
         ],
-        note: '— The maker of StratoSort',
+        note: '— Ben Kennedy, Ph.D., maker of StratoSort',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der Hersteller von StratoSort hat am 10. November 2026 Korrekturen und die folgende Notiz geschickt. Sie ist als Aussage des Herstellers wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum, und PromptQuorum konnte sie weder im Code noch durch Tests prüfen:',
           '„Ich habe StratoSort für Menschen gebaut, deren Dateien zu privat sind, um sie bei einem Cloud-KI-Dienst hochzuladen. Nachdem die Modelle heruntergeladen sind, laufen Sortieren, Suche, Chat und Transkription auf Ihrem Rechner. Es gibt kein Konto und keine Telemetrie, und mit ausgeschalteter Update-Prüfung und ohne Cloud-Schlüssel stellt die App keine ausgehenden Anfragen. Ich habe es allein in etwa 17 Monaten Teilzeitarbeit gebaut. Wenn sich etwas anders verhält, als es in der Dokumentation steht, eröffnen Sie ein Issue auf GitHub, und ich schaue es mir an.“',
         ],
-        note: '— Der Hersteller von StratoSort',
+        note: '— Ben Kennedy, Ph.D., Hersteller von StratoSort',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "L'éditeur de StratoSort a envoyé des corrections et la note ci-dessous le 10 novembre 2026. Elle est présentée comme les propres mots de l'éditeur, et non comme une évaluation éditoriale indépendante de PromptQuorum ; PromptQuorum n'a pu la vérifier ni dans le code ni par des tests :",
           "« J'ai créé StratoSort pour les personnes dont les fichiers sont trop privés pour être envoyés à un service d'IA dans le cloud. Une fois les modèles téléchargés, le tri, la recherche, le chat et la transcription fonctionnent tous sur votre machine. Il n'y a ni compte ni télémétrie, et, avec les vérifications de mises à jour désactivées et sans clé cloud, l'application n'effectue aucune requête sortante. Je l'ai développée seul, en environ 17 mois de travail à temps partiel. Si quelque chose se comporte autrement que ce qu'indique la documentation, ouvrez un ticket sur GitHub et je regarderai. »",
         ],
-        note: "— L'éditeur de StratoSort",
+        note: "— Ben Kennedy, Ph.D., éditeur de StratoSort",
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'StratoSortの開発元は、2026年11月10日に訂正と以下のメッセージを送ってくれました。これは開発元自身の言葉であり、PromptQuorumの独立した編集上の評価ではありません。PromptQuorumはコードの確認や検証ではこの内容を確かめられていません。',
           '「StratoSortは、ファイルがあまりにプライベートで、クラウドのAIサービスにアップロードできない人のために作りました。モデルをダウンロードしたあとは、整理、検索、チャット、文字起こしのすべてがお使いのマシン上で動作します。アカウントもテレメトリーもなく、更新の確認をオフにしてクラウドのキーも設定しなければ、外部へのリクエストは一切行いません。私は約17か月、パートタイムで一人で開発してきました。ドキュメントと動作が違う点があれば、GitHubでissueを立ててください。確認します。」',
         ],
-        note: '— StratoSortの開発元',
+        note: '— Ben Kennedy, Ph.D.、StratoSortの開発元',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'StratoSort的开发者于2026年11月10日发来了更正和下面这段说明。它作为开发者自己的原话呈现，不代表PromptQuorum的独立编辑评估，PromptQuorum也无法通过代码或测试对其进行核实：',
           '“我开发StratoSort，是为了那些文件太私密、不能上传到云端AI服务的人。模型下载完成后，整理、搜索、问答和转写都在你的电脑上运行。没有账号，没有遥测；关闭更新检查且没有云端密钥时，它不会发出任何对外请求。我独自开发了大约17个月，都是利用业余时间。如果有任何表现与文档所述不同，请在GitHub上提交issue，我会去查看。”',
         ],
-        note: '— StratoSort的开发者',
+        note: '— Ben Kennedy, Ph.D.，StratoSort的开发者',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2165,7 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El desarrollador de StratoSort envió correcciones y la nota que sigue el 10 de noviembre de 2026. Se presenta como palabras propias del desarrollador, no como una valoración editorial independiente de PromptQuorum, y PromptQuorum no pudo verificarla ni en el código ni con pruebas:',
           '“Creé StratoSort para personas cuyos archivos son demasiado privados para subirlos a un servicio de IA en la nube. Una vez descargados los modelos, la ordenación, la búsqueda, el chat y la transcripción se ejecutan en tu equipo. No hay cuenta ni telemetría, y con las comprobaciones de actualizaciones desactivadas y sin clave de la nube no hace ninguna solicitud saliente. Lo he construido yo solo a lo largo de unos 17 meses de trabajo a tiempo parcial. Si algo se comporta de forma distinta a lo que dice la documentación, abre una incidencia en GitHub y le echaré un vistazo.”',
         ],
-        note: '— El desarrollador de StratoSort',
+        note: '— Ben Kennedy, Ph.D., desarrollador de StratoSort',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2548,7 +2548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O desenvolvedor do StratoSort enviou correções e a nota abaixo em 10 de novembro de 2026. Ela é apresentada como palavras do próprio desenvolvedor, não como avaliação editorial independente da PromptQuorum, e a PromptQuorum não pôde verificá-la nem no código nem em testes:',
           '“Criei o StratoSort para pessoas cujos arquivos são particulares demais para enviar a um serviço de IA na nuvem. Depois que os modelos são baixados, organização, busca, chat e transcrição rodam todos na sua máquina. Não há conta nem telemetria, e com as verificações de atualização desativadas e sem chave de nuvem ele não faz nenhuma requisição de saída. Desenvolvi o app sozinho ao longo de cerca de 17 meses de trabalho em meio período. Se algo se comportar de forma diferente do que a documentação diz, abra uma issue no GitHub que eu vou analisar.”',
         ],
-        note: '— O desenvolvedor do StratoSort',
+        note: '— Ben Kennedy, Ph.D., desenvolvedor do StratoSort',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2937,7 +2937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أرسل مطوّر StratoSort تصحيحات والملاحظة التالية في 10 نوفمبر 2026. تُعرض بوصفها كلام المطوّر نفسه لا تقييمًا تحريريًا مستقلًا من PromptQuorum، ولم تتمكن PromptQuorum من التحقق منها في الشيفرة أو بالاختبار:',
           '«بنيت StratoSort لأصحاب الملفات الخاصة جدًا بحيث لا يمكن رفعها إلى خدمة ذكاء اصطناعي سحابية. فبعد تنزيل النماذج، تعمل عمليات الترتيب والبحث والمحادثة والتفريغ الصوتي كلها على جهازك. لا يوجد حساب ولا قياس عن بُعد (telemetry)، ومع إيقاف فحص التحديثات وعدم وجود مفتاح سحابي لا يجري أي طلبات صادرة. بنيته بمفردي خلال نحو 17 شهرًا من العمل بدوام جزئي. وإذا تصرّف أي شيء بخلاف ما تقوله الوثائق، فافتح بلاغًا (issue) على GitHub وسأنظر فيه.»',
         ],
-        note: '— مطوّر StratoSort',
+        note: '— Ben Kennedy, Ph.D.، مطوّر StratoSort',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3330,7 +3330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'StratoSort 개발사는 2026년 11월 10일에 정정 사항과 아래 메모를 보내 왔습니다. 이는 개발사 본인의 말로 소개하는 것이며 PromptQuorum의 독립적인 편집 평가가 아니고, PromptQuorum은 코드나 테스트로 이를 검증하지 못했습니다.',
           '“저는 파일이 너무 사적이라 클라우드 AI 서비스에 올릴 수 없는 사람들을 위해 StratoSort를 만들었습니다. 모델을 내려받고 나면 정리, 검색, 대화, 전사가 모두 사용자의 컴퓨터에서 실행됩니다. 계정도 원격 측정도 없으며, 업데이트 확인을 끄고 클라우드 키를 추가하지 않으면 외부로 나가는 요청이 전혀 없습니다. 저는 약 17개월 동안 파트타임으로 혼자 만들었습니다. 동작이 문서와 다르다면 GitHub에 이슈를 열어 주시면 확인하겠습니다.”',
         ],
-        note: '— StratoSort 개발사',
+        note: '— Ben Kennedy, Ph.D., StratoSort 개발사',
       },
       tradeOffs: {
         id: 'tradeoffs',
