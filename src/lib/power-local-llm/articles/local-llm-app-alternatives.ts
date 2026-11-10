@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -110,6 +110,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'Most of these apps run the same models. They differ in how you use them, what they cost, which license they use and which devices they support.',
           },
+        ],
+        items: [
+          '**After the app, pick the model.** Locul tested 14 models on 50 office tasks, 3 runs each. On email tasks where the person dictates or gives a rough answer, at least one laptop-size model finished 18 of 21, but on Excel tasks only 2 of 8. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**Local models are not frontier models.** In the same test, Claude Opus 5.5 finished 21 of 21 of those email tasks and 8 of 8 Excel tasks, and GPT-5.4 finished 17 of 21 and 7 of 8. Local apps run smaller open-weight models on your own device: prompts are processed locally, it works offline and there is no per-message fee. Online frontier models such as ChatGPT or Claude are far larger and handle multi-step work like spreadsheets better, but your data is sent to the provider. Choose local for privacy, offline use and cost; choose a frontier model when accuracy on complex tasks matters more.',
+          '**Read the numbers with care.** They are Locul\'s own results, which we have not reproduced. Most of the laptop-size models in the test ran on cloud hosts; only Gemma 3 4B ran on a real laptop (an M1 Pro MacBook Pro with 16 GB), and it covered 16 email tasks only. Your hardware may give different results.',
         ],
       },
       comparisonTable: {
@@ -281,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -381,6 +386,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'Die meisten dieser Apps führen dieselben Modelle aus. Sie unterscheiden sich darin, wie Sie sie bedienen, was sie kosten, welche Lizenz sie nutzen und welche Geräte sie unterstützen.',
           },
+        ],
+        items: [
+          '**Nach der App folgt die Modellwahl.** Locul hat 14 Modelle an 50 Büroaufgaben getestet, jeweils mit 3 Durchläufen. Bei E-Mail-Aufgaben, bei denen die Person diktiert oder eine grobe Antwort vorgibt, hat mindestens ein Modell in Laptop-Größe 18 von 21 gelöst, bei Excel-Aufgaben nur 2 von 8. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**Lokale Modelle sind keine Frontier-Modelle.** Im selben Test lösten Claude Opus 5.5 alle 21 dieser E-Mail-Aufgaben und 8 von 8 Excel-Aufgaben, GPT-5.4 17 von 21 und 7 von 8. Lokale Apps führen kleinere Open-Weight-Modelle auf Ihrem eigenen Gerät aus: Ihre Eingaben werden lokal verarbeitet, es funktioniert offline und es fällt keine Gebühr pro Nachricht an. Online-Frontier-Modelle wie ChatGPT oder Claude sind weit größer und bewältigen mehrstufige Aufgaben wie Tabellenkalkulation besser, doch Ihre Daten werden an den Anbieter gesendet. Wählen Sie lokal für Datenschutz, Offline-Nutzung und Kosten; wählen Sie ein Frontier-Modell, wenn Genauigkeit bei komplexen Aufgaben wichtiger ist.',
+          '**Lesen Sie die Zahlen mit Vorsicht.** Es sind Loculs eigene Ergebnisse, die wir nicht nachgeprüft haben. Die meisten Modelle in Laptop-Größe liefen im Test bei Cloud-Anbietern; nur Gemma 3 4B lief auf einem echten Laptop (MacBook Pro mit M1 Pro und 16 GB) und deckte nur 16 E-Mail-Aufgaben ab. Auf Ihrer Hardware können die Ergebnisse abweichen.',
         ],
       },
       comparisonTable: {
@@ -552,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -652,6 +662,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'これらのアプリの多くは同じモデルを動かします。違うのは、操作のしかた、費用、ライセンス、対応デバイスです。',
           },
+        ],
+        items: [
+          '**アプリの次はモデル選びです。** Locul は14のモデルを50のオフィス業務で、それぞれ3回ずつテストしました。本人が音声で口述するか大まかな回答を示すメール業務では、ノートPCサイズのモデルのうち少なくとも1つが21件中18件を完了しましたが、Excel業務では8件中2件にとどまりました。[Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**ローカルモデルはフロンティアモデルではありません。** 同じテストで、Claude Opus 5.5 はこれらのメール業務21件すべてとExcel業務8件すべてを完了し、GPT-5.4 は21件中17件と8件中7件を完了しました。ローカルアプリは、より小さなオープンウェイトモデルを自分のデバイス上で動かします。入力は端末内で処理され、オフラインで動作し、メッセージごとの料金もかかりません。ChatGPT や Claude のようなオンラインのフロンティアモデルははるかに大規模で、表計算のような複数ステップの作業をより上手くこなしますが、データは提供元に送信されます。プライバシー、オフライン利用、コストを重視するならローカル、複雑な作業の精度を重視するならフロンティアモデルを選んでください。',
+          '**数字は慎重に読んでください。** これらは Locul 自身の結果で、当サイトでは再現していません。テストのノートPCサイズのモデルの多くはクラウド上で動かされており、実際のノートPCで動かしたのは Gemma 3 4B（16 GB の M1 Pro MacBook Pro）だけで、対象もメール16件のみです。お使いのハードウェアでは結果が異なる場合があります。',
         ],
       },
       comparisonTable: {
@@ -823,7 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -923,6 +938,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'La plupart de ces apps exécutent les mêmes modèles. Elles diffèrent par la façon de les utiliser, le coût, la licence et les appareils pris en charge.',
           },
+        ],
+        items: [
+          '**Après l\'app, il faut choisir le modèle.** Locul a testé 14 modèles sur 50 tâches de bureau, avec 3 essais chacun. Sur les tâches d\'e-mail où la personne dicte ou donne une réponse approximative, au moins un modèle de la taille d\'un portable en a réussi 18 sur 21, mais seulement 2 sur 8 pour les tâches Excel. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**Les modèles locaux ne sont pas des modèles de pointe.** Dans le même test, Claude Opus 5.5 a réussi les 21 tâches d\'e-mail et les 8 tâches Excel, et GPT-5.4 en a réussi 17 sur 21 et 7 sur 8. Les apps locales exécutent des modèles open-weight plus petits sur votre propre appareil : vos requêtes sont traitées localement, cela fonctionne hors ligne et il n\'y a pas de frais par message. Les modèles de pointe en ligne, comme ChatGPT ou Claude, sont bien plus grands et gèrent mieux les tâches à plusieurs étapes comme les tableurs, mais vos données sont envoyées au fournisseur. Choisissez le local pour la confidentialité, l\'usage hors ligne et le coût ; choisissez un modèle de pointe quand la précision sur les tâches complexes compte davantage.',
+          '**Lisez ces chiffres avec prudence.** Ce sont les résultats propres de Locul, que nous n\'avons pas reproduits. La plupart des modèles de la taille d\'un portable ont tourné chez des hébergeurs cloud ; seul Gemma 3 4B a tourné sur un vrai portable (un MacBook Pro M1 Pro de 16 Go), et il n\'a couvert que 16 tâches d\'e-mail. Votre matériel peut donner d\'autres résultats.',
         ],
       },
       comparisonTable: {
@@ -1094,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1194,6 +1214,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: '这些应用大多运行相同的模型。区别在于使用方式、费用、许可证和支持的设备。',
           },
+        ],
+        items: [
+          '**选好应用后，要选模型。** Locul 在50项办公任务上测试了14个模型，每项任务运行3次。在由本人口述或给出粗略答复的邮件任务中，至少有一个笔记本电脑级别的模型完成了21项中的18项，而在 Excel 任务中只完成了8项中的2项。[Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**本地模型不是前沿模型。** 在同一测试中，Claude Opus 5.5 完成了全部21项此类邮件任务和全部8项 Excel 任务，GPT-5.4 分别完成了21项中的17项和8项中的7项。本地应用在您自己的设备上运行较小的开放权重模型：提示词在本地处理，可离线使用，也没有按消息计费。ChatGPT 或 Claude 等在线前沿模型规模大得多，处理电子表格等多步骤工作的表现更好，但您的数据会发送给服务提供方。看重隐私、离线使用和成本时选择本地；更看重复杂任务的准确性时选择前沿模型。',
+          '**请谨慎解读这些数字。** 它们是 Locul 自己的结果，我们没有复现。测试中大多数笔记本电脑级别的模型运行在云端主机上；只有 Gemma 3 4B 在真实笔记本电脑（16 GB 的 M1 Pro MacBook Pro）上运行，而且只覆盖了16项邮件任务。您的硬件可能得到不同的结果。',
         ],
       },
       comparisonTable: {
@@ -1365,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1465,6 +1490,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'La mayoría de estas apps ejecutan los mismos modelos. Se diferencian en cómo las usas, cuánto cuestan, qué licencia tienen y qué dispositivos admiten.',
           },
+        ],
+        items: [
+          '**Después de la app, elige el modelo.** Locul probó 14 modelos en 50 tareas de oficina, con 3 ejecuciones cada una. En las tareas de correo en las que la persona dicta o da una respuesta aproximada, al menos un modelo del tamaño de un portátil resolvió 18 de 21, pero en las tareas de Excel solo 2 de 8. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**Los modelos locales no son modelos de frontera.** En la misma prueba, Claude Opus 5.5 resolvió las 21 tareas de correo y las 8 de Excel, y GPT-5.4 resolvió 17 de 21 y 7 de 8. Las apps locales ejecutan modelos de pesos abiertos más pequeños en tu propio dispositivo: tus peticiones se procesan localmente, funciona sin conexión y no hay tarifa por mensaje. Los modelos de frontera en línea, como ChatGPT o Claude, son mucho más grandes y manejan mejor el trabajo de varios pasos, como las hojas de cálculo, pero tus datos se envían al proveedor. Elige local por privacidad, uso sin conexión y coste; elige un modelo de frontera cuando la precisión en tareas complejas importe más.',
+          '**Lee las cifras con cuidado.** Son resultados propios de Locul, que no hemos reproducido. La mayoría de los modelos del tamaño de un portátil se ejecutaron en servidores en la nube; solo Gemma 3 4B se ejecutó en un portátil real (un MacBook Pro M1 Pro de 16 GB) y cubrió únicamente 16 tareas de correo. Tu hardware puede dar resultados distintos.',
         ],
       },
       comparisonTable: {
@@ -1636,7 +1666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1736,6 +1766,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: '이 앱들 대부분은 같은 모델을 실행합니다. 차이는 사용 방식, 비용, 라이선스, 지원하는 기기입니다.',
           },
+        ],
+        items: [
+          '**앱을 고른 다음에는 모델을 골라야 합니다.** Locul은 14개 모델을 50개 사무 작업에서 각각 3회씩 테스트했습니다. 사용자가 음성으로 불러 주거나 대략적인 답을 주는 이메일 작업에서는 노트북 크기 모델 중 적어도 하나가 21개 중 18개를 해냈지만, Excel 작업에서는 8개 중 2개에 그쳤습니다. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**로컬 모델은 프런티어 모델이 아닙니다.** 같은 테스트에서 Claude Opus 5.5는 해당 이메일 작업 21개 전부와 Excel 작업 8개 전부를 해냈고, GPT-5.4는 21개 중 17개와 8개 중 7개를 해냈습니다. 로컬 앱은 더 작은 오픈 웨이트 모델을 내 기기에서 실행합니다. 프롬프트가 기기에서 처리되고, 오프라인에서 작동하며, 메시지당 요금이 없습니다. ChatGPT나 Claude 같은 온라인 프런티어 모델은 훨씬 크고 스프레드시트 같은 다단계 작업을 더 잘 처리하지만, 데이터가 제공업체로 전송됩니다. 개인정보 보호, 오프라인 사용, 비용이 중요하면 로컬을, 복잡한 작업의 정확도가 더 중요하면 프런티어 모델을 선택하세요.',
+          '**수치는 신중하게 읽으세요.** Locul 자체 결과이며 저희가 재현한 것은 아닙니다. 테스트에서 노트북 크기 모델 대부분은 클라우드 호스트에서 실행되었고, 실제 노트북(16GB M1 Pro MacBook Pro)에서 실행된 것은 Gemma 3 4B뿐이며 이메일 작업 16개만 다뤘습니다. 사용하는 하드웨어에 따라 결과가 다를 수 있습니다.',
         ],
       },
       comparisonTable: {
@@ -1907,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2007,6 +2042,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'A maioria desses apps executa os mesmos modelos. Eles diferem em como você os usa, quanto custam, que licença têm e quais dispositivos suportam.',
           },
+        ],
+        items: [
+          '**Depois do app, escolha o modelo.** A Locul testou 14 modelos em 50 tarefas de escritório, com 3 execuções cada. Nas tarefas de e-mail em que a pessoa dita ou dá uma resposta aproximada, pelo menos um modelo do tamanho de um notebook concluiu 18 de 21, mas nas tarefas de Excel apenas 2 de 8. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**Modelos locais não são modelos de fronteira.** No mesmo teste, o Claude Opus 5.5 concluiu as 21 tarefas de e-mail e as 8 de Excel, e o GPT-5.4 concluiu 17 de 21 e 7 de 8. Os apps locais executam modelos de pesos abertos menores no seu próprio dispositivo: seus prompts são processados localmente, funciona offline e não há tarifa por mensagem. Os modelos de fronteira online, como ChatGPT ou Claude, são muito maiores e lidam melhor com trabalho de várias etapas, como planilhas, mas seus dados são enviados ao provedor. Escolha local por privacidade, uso offline e custo; escolha um modelo de fronteira quando a precisão em tarefas complexas importar mais.',
+          '**Leia os números com cuidado.** São resultados próprios da Locul, que não reproduzimos. A maioria dos modelos do tamanho de um notebook rodou em hosts na nuvem; só o Gemma 3 4B rodou em um notebook de verdade (um MacBook Pro M1 Pro de 16 GB) e cobriu apenas 16 tarefas de e-mail. Seu hardware pode dar resultados diferentes.',
         ],
       },
       comparisonTable: {
@@ -2178,7 +2218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-10',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2278,6 +2318,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'تشغّل معظم هذه التطبيقات النماذج نفسها. وتختلف في طريقة الاستخدام والتكلفة والترخيص والأجهزة المدعومة.',
           },
+        ],
+        items: [
+          '**بعد اختيار التطبيق، اختر النموذج.** اختبرت Locul ‏14 نموذجًا على 50 مهمة مكتبية، بثلاث تشغيلات لكل مهمة. في مهام البريد الإلكتروني التي يمليها الشخص أو يعطي فيها ردًا تقريبيًا، أنجز نموذج واحد على الأقل بحجم الحاسوب المحمول 18 مهمة من 21، لكنه أنجز في مهام Excel مهمتين فقط من 8. [Locul Office AI Benchmark](https://locul.ai/research/office-ai-benchmark/)',
+          '**النماذج المحلية ليست نماذج رائدة.** في الاختبار نفسه، أنجز Claude Opus 5.5 جميع مهام البريد الإلكتروني الـ21 وجميع مهام Excel الـ8، وأنجز GPT-5.4 ‏17 من 21 و7 من 8. تشغّل التطبيقات المحلية نماذج مفتوحة الأوزان أصغر على جهازك: تُعالج مدخلاتك محليًا، وتعمل دون اتصال، ولا توجد رسوم لكل رسالة. أما النماذج الرائدة عبر الإنترنت مثل ChatGPT أو Claude فهي أكبر بكثير وتتعامل بشكل أفضل مع الأعمال متعددة الخطوات مثل جداول البيانات، لكن بياناتك تُرسل إلى المزوّد. اختر المحلي من أجل الخصوصية والاستخدام دون اتصال والتكلفة، واختر نموذجًا رائدًا عندما تكون الدقة في المهام المعقدة أهم.',
+          '**اقرأ الأرقام بحذر.** هذه نتائج Locul نفسها ولم نعد إنتاجها. تم تشغيل معظم النماذج بحجم الحاسوب المحمول في الاختبار على خوادم سحابية؛ ولم يعمل على حاسوب محمول حقيقي (MacBook Pro بمعالج M1 Pro وذاكرة 16 GB) سوى Gemma 3 4B، وقد غطّى 16 مهمة بريد إلكتروني فقط. قد تعطي أجهزتك نتائج مختلفة.',
         ],
       },
       comparisonTable: {
