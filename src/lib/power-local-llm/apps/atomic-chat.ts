@@ -33,10 +33,11 @@ export const app: ToolRecord = {
     ar: 'تطبيق دردشة يعمل دون اتصال للحاسوب والهاتف مع تشغيل وكلاء محليين بنقرة واحدة',
     ko: '데스크톱과 모바일용 오프라인 채팅 앱, 원클릭으로 로컬 에이전트 실행',
   },
+  pqReview: { date: '2026-11-11', version: 'v2.3.5', versionSourceUrl: 'https://github.com/AtomicBot-ai/Atomic-Chat/releases/tag/v2.3.5' },
   reviewSlug: 'atomic-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { localLlm: true, memory: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-11', // GitHub API (newer of latest release 2026-11-04 and last push 2026-11-11), read 2026-11-11
   lastUpstreamUpdateSource: 'https://github.com/AtomicBot-ai/Atomic-Chat',
 }
