@@ -27,6 +27,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "phantasm-review",
+        "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
+        "url": "/power-local-llm/phantasm-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -72,17 +80,9 @@
         "url": "/local-llms/best-budget-gpus-local-llm",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-mini-pcs-local-llm",
-        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
-        "url": "/local-llms/best-mini-pcs-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
-    "totalCount": 348,
+    "totalCount": 349,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 186,
+    "totalCount": 187,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 102,
+    "totalCount": 103,
     "capped": true
   },
   "LocalAI": {
@@ -6933,6 +6933,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "phantasm-review",
+        "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
+        "url": "/power-local-llm/phantasm-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
@@ -6994,17 +7002,9 @@
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dreamserver-review",
-        "title": "DreamServer Review: One-Command Local AI Server Stack",
-        "url": "/power-local-llm/dreamserver-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 25,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -10271,6 +10271,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Phantasm": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "phantasm-review",
+        "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
+        "url": "/power-local-llm/phantasm-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Open Voice OS": {
     "articles": [
       {
@@ -12069,6 +12083,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "phantasm-review",
+        "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
+        "url": "/power-local-llm/phantasm-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
@@ -12114,17 +12136,9 @@
         "url": "/power-local-llm/best-nas-storage-local-ai-models-2026",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-vpn-ai-privacy-local-llm-2026",
-        "title": "Best VPN for AI Privacy: Protect Your Local LLM Setup 2026",
-        "url": "/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 254,
+    "totalCount": 255,
     "capped": true
   },
   "Qdrant": {
