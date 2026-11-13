@@ -24058,5 +24058,115 @@
       "t14": "2026-11-21",
       "t28": "2026-12-05"
     }
+  },
+  {
+    "id": "5310d25a-c176-4b21-83ed-115866a945c8",
+    "slug": "/power-local-llm/local-ai-on-android-guide",
+    "date": "2026-11-13T10:07:37.096Z",
+    "fields": [
+      {
+        "field": "page",
+        "old": "(new page)",
+        "new": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover"
+      }
+    ],
+    "reason": "New platform pillar (what is possible, what is not, apps we cover); linked from the Android roundup",
+    "queries": [
+      "local ai on android",
+      "how to run ai locally on android",
+      "run llm on android",
+      "local llm on android"
+    ],
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "21d50f21-2892-485b-a911-1b42c1f0c171",
+    "slug": "/power-local-llm/local-ai-on-iphone-guide",
+    "date": "2026-11-13T10:07:37.201Z",
+    "fields": [
+      {
+        "field": "page",
+        "old": "(new page)",
+        "new": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover"
+      }
+    ],
+    "reason": "New platform pillar (what is possible, what is not, iPhone apps we cover); linked from the iPhone roundup",
+    "queries": [
+      "local ai on iphone",
+      "run llm on iphone",
+      "iphone local llm",
+      "ios local llm"
+    ],
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "839511ad-2df7-4862-b8f0-490134326f54",
+    "slug": "/power-local-llm/best-local-llm-apps-android-2026",
+    "date": "2026-11-13T10:07:37.305Z",
+    "fields": [
+      {
+        "field": "relatedReading",
+        "old": "no pillar link",
+        "new": "pillar link first"
+      }
+    ],
+    "reason": "Added internal link to the new Android pillar (first Related Reading item); watch for cannibalisation on 'local llm on android'",
+    "queries": [
+      "android local llm",
+      "local llm on android",
+      "best local llm for android"
+    ],
+    "baseline": {
+      "position": 5.29,
+      "impressions": 108067,
+      "clicks": 2129,
+      "ctr": 0.019700741206843904,
+      "period": "90d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2a2ffcca-8a57-4a1a-a32a-0e2e8e8b9b98",
+    "slug": "/power-local-llm/best-local-llm-apps-iphone-2026",
+    "date": "2026-11-13T10:07:37.411Z",
+    "fields": [
+      {
+        "field": "relatedReading",
+        "old": "no pillar link",
+        "new": "pillar link first"
+      }
+    ],
+    "reason": "Added internal link to the new iPhone pillar (first Related Reading item)",
+    "queries": [
+      "iphone local llm",
+      "ios local llm",
+      "best local llm for iphone"
+    ],
+    "baseline": {
+      "position": 5.25,
+      "impressions": 50313,
+      "clicks": 797,
+      "ctr": 0.015840836364359113,
+      "period": "90d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   }
 ]

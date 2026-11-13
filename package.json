@@ -48,6 +48,7 @@
     "seo:log": "node scripts/seo-log-change.mjs",
     "test:directory-date": "node scripts/test-directory-date.mjs",
     "test:app-activity": "node scripts/test-app-activity.mjs",
+    "test:askhans-experiment": "npx -y tsx@4.21.0 scripts/test-askhans-experiment.tsx",
     "askhans:check": "node scripts/check-askhans-config.mjs",
     "askhans:pictures": "node scripts/gen-askhans-pictures.mjs",
     "askhans:promo": "node scripts/gen-askhans-promo.mjs",

@@ -196,7 +196,7 @@ function Part({ tone, verb, icon, title, oneLiner, children, connectsLabel, conn
         <strong className="text-text-primary">{connectsLabel}</strong> {connects}
       </p>
       {askHans ? (
-        <AboutAskHansButton label={`${cta} ${arrow}`} className={`${LINK} ${HUB_TONES[tone].ink} text-sm mt-auto text-start`} />
+        <AboutAskHansButton label={cta} arrow={arrow} className={`${LINK} ${HUB_TONES[tone].ink} text-sm text-start`} />
       ) : (
         <AboutTrackedLink href={href} via={via} className={`${LINK} ${HUB_TONES[tone].ink} text-sm mt-auto`}>
           {cta} {arrow}

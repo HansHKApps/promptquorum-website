@@ -134,6 +134,7 @@ https://www.promptquorum.com/local-llms/galaxy-vs-iphone-on-device-ai-2026
 https://www.promptquorum.com/local-llms/gdpr-llm-risk-comparison-2026
 https://www.promptquorum.com/local-llms/glm-5-2-open-weights-frontier-2026
 https://www.promptquorum.com/local-llms/gmktec-evo-x2-local-ai-workstation
+https://www.promptquorum.com/local-llms/gmktec-evo-x5-pro-local-ai-workstation
 https://www.promptquorum.com/local-llms/gpu-vs-ai-subscription-roi
 https://www.promptquorum.com/local-llms/gpu-vs-cpu-vs-apple-silicon
 https://www.promptquorum.com/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026
@@ -261,6 +262,7 @@ https://www.promptquorum.com/power-local-llm/aori-ai-personal-agent-review
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
 https://www.promptquorum.com/power-local-llm/aquavoice-review
 https://www.promptquorum.com/power-local-llm/arbiter-local-ai-chat-review
+https://www.promptquorum.com/power-local-llm/argos-translate-review
 https://www.promptquorum.com/power-local-llm/arynwood-mcp-review
 https://www.promptquorum.com/power-local-llm/asiden-review
 https://www.promptquorum.com/power-local-llm/asus-mini-pc-local-ai
@@ -344,6 +346,7 @@ https://www.promptquorum.com/power-local-llm/coqui-tts-review
 https://www.promptquorum.com/power-local-llm/crewai-review
 https://www.promptquorum.com/power-local-llm/cursor-local-mode-review
 https://www.promptquorum.com/power-local-llm/cursor-vs-windsurf-vs-copilot-cline
+https://www.promptquorum.com/power-local-llm/dayflow-review
 https://www.promptquorum.com/power-local-llm/deepseek-offline-china-self-hosted-2026
 https://www.promptquorum.com/power-local-llm/deepseek-r1-vs-distills-explained-2026
 https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026
@@ -442,6 +445,7 @@ https://www.promptquorum.com/power-local-llm/leon-ai-review
 https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
 https://www.promptquorum.com/power-local-llm/libredb-studio-review
+https://www.promptquorum.com/power-local-llm/linguister-review
 https://www.promptquorum.com/power-local-llm/linkwarden-review
 https://www.promptquorum.com/power-local-llm/liquid-apollo-review
 https://www.promptquorum.com/power-local-llm/litellm-review
@@ -471,6 +475,8 @@ https://www.promptquorum.com/power-local-llm/local-ai-chat-pocket-review
 https://www.promptquorum.com/power-local-llm/local-ai-geetmark-review
 https://www.promptquorum.com/power-local-llm/local-ai-image-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-mail-review
+https://www.promptquorum.com/power-local-llm/local-ai-on-android-guide
+https://www.promptquorum.com/power-local-llm/local-ai-on-iphone-guide
 https://www.promptquorum.com/power-local-llm/local-ai-video-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-workstation-build-guide
 https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet
@@ -582,6 +588,7 @@ https://www.promptquorum.com/power-local-llm/parrot-review
 https://www.promptquorum.com/power-local-llm/pcai-photo-retouch-review
 https://www.promptquorum.com/power-local-llm/pearai-review
 https://www.promptquorum.com/power-local-llm/perfect-memory-review
+https://www.promptquorum.com/power-local-llm/phantasm-review
 https://www.promptquorum.com/power-local-llm/phone-harness-review
 https://www.promptquorum.com/power-local-llm/phoneclaw-review
 https://www.promptquorum.com/power-local-llm/photoprism-review
@@ -672,6 +679,7 @@ https://www.promptquorum.com/power-local-llm/turbo-fieldfare-review
 https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
+https://www.promptquorum.com/power-local-llm/univocal-review
 https://www.promptquorum.com/power-local-llm/unsloth-hands-on-test
 https://www.promptquorum.com/power-local-llm/unsloth-review
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance

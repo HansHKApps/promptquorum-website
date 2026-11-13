@@ -378,7 +378,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Enchanted Review](/power-local-llm/enchanted-review) — a free, Apache-2.0 Ollama client for iPhone and Mac.",
           "[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — a free, open-source on-device chat client for iOS and Android.",
           "[Best Local LLM Apps for iPhone](/power-local-llm/best-local-llm-apps-iphone-2026) — the roundup this review belongs to.",
-          "[Local LLM Software Directory](/directory) — the full catalogue of local AI tools."
+          "[Local LLM Software Directory](/directory) — the full catalogue of local AI tools.",
+          "[Phantasm Review](/power-local-llm/phantasm-review) — a free iPhone chat client for your own Ollama, vLLM or llama.cpp server, with no account per the developer."
         ]
       }
     },
@@ -824,7 +825,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Enchanted-Rezension](/de/power-local-llm/enchanted-review) — ein kostenloser Ollama-Client unter Apache 2.0 für iPhone und Mac.",
           "[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — ein kostenloser, quelloffener On-Device-Chat-Client für iOS und Android.",
           "[Beste lokale LLM-Apps für das iPhone](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die Übersicht, zu der diese Rezension gehört.",
-          "[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools."
+          "[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools.",
+          "[Phantasm-Rezension](/de/power-local-llm/phantasm-review) — ein kostenloser iPhone-Chat-Client für Ihren eigenen Ollama-, vLLM- oder llama.cpp-Server, laut Entwickler ohne Konto."
         ]
       }
     }
@@ -1198,7 +1200,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Reseña de Enchanted](/es/power-local-llm/enchanted-review) — un cliente de Ollama gratuito con licencia Apache 2.0 para iPhone y Mac.",
           "[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — un cliente de chat en el dispositivo gratuito y de código abierto para iOS y Android.",
           "[Las mejores apps de LLM locales para iPhone](/es/power-local-llm/best-local-llm-apps-iphone-2026) — la comparativa a la que pertenece esta reseña.",
-          "[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA locales."
+          "[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA locales.",
+          "[Reseña de Phantasm](/es/power-local-llm/phantasm-review) — un cliente de chat gratuito para iPhone pensado para tu propio servidor Ollama, vLLM o llama.cpp, sin cuenta según el desarrollador."
         ]
       }
     }
@@ -1572,7 +1575,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Test d’Enchanted](/fr/power-local-llm/enchanted-review) — un client Ollama gratuit sous licence Apache 2.0 pour iPhone et Mac.",
           "[Test de PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — un client de chat gratuit et open source sur l’appareil pour iOS et Android.",
           "[Meilleures applis LLM locales pour iPhone](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — le comparatif auquel appartient ce test.",
-          "[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale."
+          "[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale.",
+          "[Avis Phantasm](/fr/power-local-llm/phantasm-review) — un client de chat gratuit pour iPhone destiné à votre propre serveur Ollama, vLLM ou llama.cpp, sans compte selon le développeur."
         ]
       }
     }
@@ -1946,7 +1950,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Enchantedレビュー](/ja/power-local-llm/enchanted-review) — iPhoneとMac向けの無料のApache 2.0 Ollamaクライアント。",
           "[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — iOSとAndroid向けの無料のオープンソース端末内チャットクライアント。",
           "[iPhone向けローカルLLMアプリ比較](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — このレビューが属する比較記事。",
-          "[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。"
+          "[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。",
+          "[Phantasmレビュー](/ja/power-local-llm/phantasm-review) — 自分のOllama・vLLM・llama.cppサーバー向けの無料iPhoneチャットクライアント。開発者によればアカウントは不要です。"
         ]
       }
     }
@@ -2320,7 +2325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Análise do Enchanted](/pt/power-local-llm/enchanted-review) — um cliente Ollama gratuito, sob Apache 2.0, para iPhone e Mac.",
           "[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — um cliente de chat no aparelho, gratuito e de código aberto, para iOS e Android.",
           "[Melhores apps de LLM local para iPhone](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o comparativo a que esta análise pertence.",
-          "[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local."
+          "[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local.",
+          "[Análise do Phantasm](/pt/power-local-llm/phantasm-review) — um cliente de chat gratuito para iPhone para o seu próprio servidor Ollama, vLLM ou llama.cpp, sem conta segundo o desenvolvedor."
         ]
       }
     }
@@ -2694,7 +2700,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[مراجعة Enchanted](/ar/power-local-llm/enchanted-review) — عميل Ollama مجاني بترخيص Apache 2.0 لـ iPhone وMac.",
           "[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — عميل دردشة مجاني ومفتوح المصدر على الجهاز لـ iOS وAndroid.",
           "[أفضل تطبيقات النماذج المحلية لـ iPhone](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — المقارنة الشاملة التي تنتمي إليها هذه المراجعة.",
-          "[دليل برمجيات النماذج المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية."
+          "[دليل برمجيات النماذج المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية.",
+          "[مراجعة Phantasm](/ar/power-local-llm/phantasm-review) — عميل دردشة مجاني لـ iPhone لخادم Ollama أو vLLM أو llama.cpp الخاص بك، دون حساب بحسب المطوّر."
         ]
       }
     }
@@ -3068,7 +3075,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Enchanted 评测](/zh/power-local-llm/enchanted-review) — 面向 iPhone 和 Mac 的免费 Apache 2.0 Ollama 客户端。",
           "[PocketPal AI 评测](/zh/power-local-llm/pocketpal-ai-review) — 面向 iOS 和 Android 的免费开源设备端聊天客户端。",
           "[iPhone 本地大模型应用推荐](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 本评测所属的综合对比。",
-          "[本地大模型软件目录](/zh/directory) — 本地 AI 工具的完整目录。"
+          "[本地大模型软件目录](/zh/directory) — 本地 AI 工具的完整目录。",
+          "[Phantasm评测](/zh/power-local-llm/phantasm-review) — 面向自建 Ollama、vLLM 或 llama.cpp 服务器的免费 iPhone 聊天客户端,据开发者称无需账号。"
         ]
       }
     }
@@ -3442,7 +3450,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Enchanted 리뷰](/ko/power-local-llm/enchanted-review) — iPhone과 Mac용 무료 Apache 2.0 Ollama 클라이언트.",
           "[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — iOS와 Android용 무료 오픈소스 기기 내 채팅 클라이언트.",
           "[iPhone용 로컬 LLM 앱 추천](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — 이 리뷰가 속한 종합 비교 글.",
-          "[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 목록."
+          "[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 목록.",
+          "[Phantasm 리뷰](/ko/power-local-llm/phantasm-review) — 직접 운영하는 Ollama·vLLM·llama.cpp 서버용 무료 iPhone 채팅 클라이언트로, 개발자에 따르면 계정이 필요 없습니다."
         ]
       }
     }

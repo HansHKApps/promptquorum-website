@@ -24,55 +24,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best model for Chinese roleplay in SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (about 20 GB) is the largest dense Qwen3 model and a strong local option for Chinese roleplay; compare model cards and test it on your own character cards. Yi-34B excels at emotional character depth. For users with 8 GB VRAM, Qwen3 8B runs well at 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (about 20 GB) is the largest dense Qwen3 model and a strong local option for Chinese roleplay; compare model cards and test it on your own character cards. Yi-34B excels at emotional character depth. For users with 8 GB VRAM, Qwen3 8B is the practical choice; speed varies by hardware.',
         bullets: [
           'Qwen3-32B Q4_K_M: about 20 GB, the largest dense Qwen3 — for high-memory GPUs or Macs',
           'Yi-34B Q4_K_M: 21 GB RAM, excellent character voice and emotional range',
-          'Qwen3 8B Q4_K_M: 5.5 GB VRAM, 8–12 tok/s — best for 8 GB VRAM cards',
+          'Qwen3 8B Q4_K_M: 5.5 GB VRAM — best for 8 GB VRAM cards',
           'ChatGLM3-6B: 4.5 GB VRAM, fastest inference but weaker character consistency',
         ],
         updatedDate: '2026-05',
       },
       de: {
         question: 'Bestes Modell für chinesisches Rollenspiel in SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (ca. 20 GB) ist das größte dichte Qwen3-Modell und eine starke lokale Option für chinesisches Rollenspiel; vergleichen Sie die Model Cards und testen Sie es mit Ihren eigenen Charakterkarten. Yi-34B glänzt bei emotionaler Charaktertiefe. Mit 8 GB VRAM läuft Qwen3 8B flüssig mit 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (ca. 20 GB) ist das größte dichte Qwen3-Modell und eine starke lokale Option für chinesisches Rollenspiel; vergleichen Sie die Model Cards und testen Sie es mit Ihren eigenen Charakterkarten. Yi-34B glänzt bei emotionaler Charaktertiefe. Mit 8 GB VRAM ist Qwen3 8B die praktische Wahl; die Geschwindigkeit hängt von der Hardware ab.',
         bullets: [
           'Qwen3-32B Q4_K_M: ca. 20 GB, größtes dichtes Qwen3 — für Grafikkarten oder Macs mit viel Speicher',
           'Yi-34B Q4_K_M: 21 GB RAM, exzellente Charakterstimme und emotionale Tiefe',
-          'Qwen3 8B Q4_K_M: 5,5 GB VRAM, 8–12 tok/s — ideal für 8-GB-Grafikkarten',
+          'Qwen3 8B Q4_K_M: 5,5 GB VRAM — ideal für 8-GB-Grafikkarten',
           'ChatGLM3-6B: 4,5 GB VRAM, schnellste Inferenz, aber schwächere Charakterkonsistenz',
         ],
         updatedDate: '2026-05',
       },
       fr: {
         question: 'Meilleur modèle pour le jeu de rôle en chinois dans SillyTavern ?',
-        answer: "Qwen3-32B Q4_K_M (environ 20 Go) est le plus grand modèle dense de Qwen3 et une solide option locale pour le jeu de rôle en chinois ; comparez les fiches de modèle et testez-le avec vos propres cartes de personnage. Yi-34B excelle dans la profondeur émotionnelle des personnages. Avec 8 Go de VRAM, Qwen3 8B tourne à 8–12 tok/s.",
+        answer: "Qwen3-32B Q4_K_M (environ 20 Go) est le plus grand modèle dense de Qwen3 et une solide option locale pour le jeu de rôle en chinois ; comparez les fiches de modèle et testez-le avec vos propres cartes de personnage. Yi-34B excelle dans la profondeur émotionnelle des personnages. Avec 8 Go de VRAM, Qwen3 8B est le choix pratique ; la vitesse varie selon le matériel.",
         bullets: [
           'Qwen3-32B Q4_K_M : environ 20 Go, plus grand modèle dense de Qwen3 — pour GPU ou Mac à grande mémoire',
           'Yi-34B Q4_K_M : 21 Go RAM, excellente voix de personnage et gamme émotionnelle',
-          'Qwen3 8B Q4_K_M : 5,5 Go VRAM, 8–12 tok/s — idéal pour les cartes 8 Go',
+          'Qwen3 8B Q4_K_M : 5,5 Go VRAM — idéal pour les cartes 8 Go',
           'ChatGLM3-6B : 4,5 Go VRAM, inférence la plus rapide mais cohérence de personnage plus faible',
         ],
         updatedDate: '2026-05',
       },
       ja: {
         question: 'SillyTavernで中国語ロールプレイに最適なモデルは？',
-        answer: 'Qwen3-32B Q4_K_M（約20GB）はQwen3で最大の密（Dense）モデルで、中国語ロールプレイに有力なローカルの選択肢です。モデルカードを比較し、自分のキャラクターカードで試してください。Yi-34Bは感情的なキャラクター表現に優れています。8GB VRAMならQwen3 8Bが8〜12トークン/秒で動作します。',
+        answer: 'Qwen3-32B Q4_K_M（約20GB）はQwen3で最大の密（Dense）モデルで、中国語ロールプレイに有力なローカルの選択肢です。モデルカードを比較し、自分のキャラクターカードで試してください。Yi-34Bは感情的なキャラクター表現に優れています。8GB VRAMならQwen3 8Bが実用的な選択肢です。速度はハードウェアによって異なります。',
         bullets: [
           'Qwen3-32B Q4_K_M: RAM 約20GB、Qwen3で最大の密モデル',
           'Yi-34B Q4_K_M: RAM 21GB、優れたキャラクターボイスと感情表現',
-          'Qwen3 8B Q4_K_M: VRAM 5.5GB、8〜12トークン/秒 — 8GB GPUに最適',
+          'Qwen3 8B Q4_K_M: VRAM 5.5GB — 8GB GPUに最適',
           'ChatGLM3-6B: VRAM 4.5GB、最速推論だがキャラクター一貫性は低め',
         ],
         updatedDate: '2026-05',
       },
       zh: {
         question: 'SillyTavern 中文角色扮演最佳模型？',
-        answer: 'Qwen3-32B Q4_K_M（约 20 GB）是 Qwen3 中最大的稠密模型，是中文角色扮演的有力本地选择；建议对比模型卡片，并用自己的角色卡实测。Yi-34B 擅长角色情感深度。8GB 显存用户推荐 Qwen3 8B，速度 8–12 token/秒。',
+        answer: 'Qwen3-32B Q4_K_M（约 20 GB）是 Qwen3 中最大的稠密模型，是中文角色扮演的有力本地选择；建议对比模型卡片，并用自己的角色卡实测。Yi-34B 擅长角色情感深度。8GB 显存用户推荐 Qwen3 8B，速度因硬件而异。',
         bullets: [
           'Qwen3-32B Q4_K_M：约 20 GB，Qwen3 中最大的稠密模型——适合大显存显卡或 Mac',
           'Yi-34B Q4_K_M：21 GB 内存，出色的角色声音和情感层次',
-          'Qwen3 8B Q4_K_M：5.5 GB 显存，8–12 token/秒——8GB 显卡首选',
+          'Qwen3 8B Q4_K_M：5.5 GB 显存——8GB 显卡首选',
           'ChatGLM3-6B：4.5 GB 显存，推理最快但角色一致性较弱',
         ],
         updatedDate: '2026-05',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M (about 20 GB) is a strong local option for Chinese roleplay; for 8 GB VRAM, Qwen3 8B is the practical choice at 8–12 tok/s.',
+        content: 'Qwen3-32B Q4_K_M (about 20 GB) is a strong local option for Chinese roleplay; for 8 GB VRAM, Qwen3 8B is the practical choice; speed varies by hardware.',
       },
       {
         type: 'plain-terms',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M: largest dense Qwen3, about 20 GB',
           'Yi-34B Q4_K_M: best character depth, 21 GB RAM',
-          'Qwen3 8B Q4_K_M: best for 8 GB VRAM, 8–12 tok/s',
+          'Qwen3 8B Q4_K_M: best for 8 GB VRAM',
           'SillyTavern → API type: OpenAI-compatible → URL: http://127.0.0.1:11434/v1',
           'Character cards: paste Chinese text directly, save as UTF-8',
           'System prompt: 始终用简体中文回复。保持角色一致性。',
@@ -120,13 +120,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Four models cover the main hardware tiers. Qwen3-32B is the largest dense Qwen3 model and needs about 20 GB at Q4_K_M (a high-memory GPU or a Mac with enough unified memory); its Chinese prose quality is not rated here, so compare model cards and test it yourself. Yi-34B is the runner-up for users who prioritise character voice and emotional range over raw fluency. Qwen3 8B is the practical choice for anyone with a standard gaming GPU.',
         ],
         comparisonTable: {
-          columns: ['Model', 'VRAM / RAM', 'Chinese Score', 'Speed', 'Best For'],
+          columns: ['Model', 'VRAM / RAM', 'Best For'],
           rows: [
-            { 'Model': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Chinese Score': '—', 'Speed': '—', 'Best For': 'Largest dense Qwen3' },
-            { 'Model': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Chinese Score': '★★★★☆', 'Speed': '2–5 tok/s', 'Best For': 'Emotional depth, character voice' },
-            { 'Model': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'Chinese Score': '★★★★☆', 'Speed': '4–8 tok/s', 'Best For': 'Balance of quality + speed' },
-            { 'Model': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'Chinese Score': '★★★☆☆', 'Speed': '8–12 tok/s', 'Best For': 'RTX 3060, 8 GB VRAM cards' },
-            { 'Model': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'Chinese Score': '★★★☆☆', 'Speed': '12–18 tok/s', 'Best For': 'Fastest, limited context (8K)' },
+            { 'Model': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Best For': 'Largest dense Qwen3' },
+            { 'Model': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Best For': 'Emotional depth, character voice' },
+            { 'Model': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'Best For': 'Balance of quality + speed' },
+            { 'Model': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'Best For': 'RTX 3060, 8 GB VRAM cards' },
+            { 'Model': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'Best For': 'Fastest, limited context (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-en.webp',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavern communicates with Ollama through an OpenAI-compatible API endpoint. No plugin needed — Ollama exposes this natively at port 11434.',
         ],
         numberedItems: [
-          'Pull the model: run `ollama pull qwen2.5:7b` (or `qwen2.5:72b`, `yi:34b`) in your terminal',
+          'Pull the model: run `ollama pull qwen3:8b` (or `qwen3:32b`, `yi:34b`) in your terminal',
           'Open SillyTavern → API Connections → select **OpenAI-compatible**',
           'Set Custom API URL to: `http://127.0.0.1:11434/v1`',
           'Set API Key to any non-empty string (e.g., `ollama`) — Ollama ignores the key',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can Qwen3 8B handle long roleplay sessions in Chinese?',
-            a: 'Yes. Qwen3 8B Q4_K_M supports 32K context by default in Ollama. For long sessions with world-lore or extensive dialogue history, increase the context window in SillyTavern\'s API settings and use Qwen3-14B or higher for better coherence across 10K+ tokens.',
+            a: 'Yes. Qwen3 8B supports long context natively, but the default context window in Ollama is much smaller and must be raised (see the Ollama documentation). For long sessions with world-lore or extensive dialogue history, increase the context window in SillyTavern\'s API settings and use Qwen3-14B or higher for better coherence across 10K+ tokens.',
           },
           {
             q: 'Does SillyTavern support Chinese character names and descriptions?',
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is Yi-34B better than Qwen3-14B for Chinese roleplay?',
-            a: 'Yi-34B produces more expressive and emotionally varied character responses, especially for emotionally complex or literary scenes. Qwen3-14B is faster (4–8 tok/s vs 2–5 tok/s) and requires less RAM. For pure roleplay immersion, Yi-34B wins; for speed and lower hardware requirements, Qwen3-14B is the better choice.',
+            a: 'Yi-34B produces more expressive and emotionally varied character responses, especially for emotionally complex or literary scenes. Qwen3-14B is generally faster and requires less RAM. For pure roleplay immersion, Yi-34B wins; for speed and lower hardware requirements, Qwen3-14B is the better choice.',
           },
           {
             q: 'Why is the model outputting mixed Chinese and English?',
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Can Qwen3 8B handle long roleplay sessions in Chinese?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Qwen3 8B Q4_K_M supports 32K context by default in Ollama. For long sessions, increase the context window in SillyTavern API settings and use Qwen3-14B or higher for better coherence across 10K+ tokens.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Qwen3 8B supports long context natively, but the default context window in Ollama is much smaller and must be raised (see the Ollama documentation). For long sessions, increase the context window in SillyTavern API settings and use Qwen3-14B or higher for better coherence across 10K+ tokens.' },
         },
         {
           '@type': 'Question',
@@ -287,55 +287,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best model for Chinese roleplay in SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (about 20 GB) is the largest dense Qwen3 model and a strong local option for Chinese roleplay; compare model cards and test it on your own character cards. Yi-34B excels at emotional character depth. For users with 8 GB VRAM, Qwen3 8B runs well at 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (about 20 GB) is the largest dense Qwen3 model and a strong local option for Chinese roleplay; compare model cards and test it on your own character cards. Yi-34B excels at emotional character depth. For users with 8 GB VRAM, Qwen3 8B is the practical choice; speed varies by hardware.',
         bullets: [
           'Qwen3-32B Q4_K_M: about 20 GB, the largest dense Qwen3 — for high-memory GPUs or Macs',
           'Yi-34B Q4_K_M: 21 GB RAM, excellent character voice and emotional range',
-          'Qwen3 8B Q4_K_M: 5.5 GB VRAM, 8–12 tok/s — best for 8 GB VRAM cards',
+          'Qwen3 8B Q4_K_M: 5.5 GB VRAM — best for 8 GB VRAM cards',
           'ChatGLM3-6B: 4.5 GB VRAM, fastest inference but weaker character consistency',
         ],
         updatedDate: '2026-05',
       },
       de: {
         question: 'Bestes Modell für chinesisches Rollenspiel in SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (ca. 20 GB) ist das größte dichte Qwen3-Modell und eine starke lokale Option für chinesisches Rollenspiel; vergleichen Sie die Model Cards und testen Sie es mit Ihren eigenen Charakterkarten. Yi-34B glänzt bei emotionaler Charaktertiefe. Mit 8 GB VRAM läuft Qwen3 8B flüssig mit 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (ca. 20 GB) ist das größte dichte Qwen3-Modell und eine starke lokale Option für chinesisches Rollenspiel; vergleichen Sie die Model Cards und testen Sie es mit Ihren eigenen Charakterkarten. Yi-34B glänzt bei emotionaler Charaktertiefe. Mit 8 GB VRAM ist Qwen3 8B die praktische Wahl; die Geschwindigkeit hängt von der Hardware ab.',
         bullets: [
           'Qwen3-32B Q4_K_M: ca. 20 GB, größtes dichtes Qwen3 — für Grafikkarten oder Macs mit viel Speicher',
           'Yi-34B Q4_K_M: 21 GB RAM, exzellente Charakterstimme und emotionale Tiefe',
-          'Qwen3 8B Q4_K_M: 5,5 GB VRAM, 8–12 tok/s — ideal für 8-GB-Grafikkarten',
+          'Qwen3 8B Q4_K_M: 5,5 GB VRAM — ideal für 8-GB-Grafikkarten',
           'ChatGLM3-6B: 4,5 GB VRAM, schnellste Inferenz, aber schwächere Charakterkonsistenz',
         ],
         updatedDate: '2026-05',
       },
       fr: {
         question: 'Meilleur modèle pour le jeu de rôle en chinois dans SillyTavern ?',
-        answer: "Qwen3-32B Q4_K_M (environ 20 Go) est le plus grand modèle dense de Qwen3 et une solide option locale pour le jeu de rôle en chinois ; comparez les fiches de modèle et testez-le avec vos propres cartes de personnage. Yi-34B excelle dans la profondeur émotionnelle des personnages. Avec 8 Go de VRAM, Qwen3 8B tourne à 8–12 tok/s.",
+        answer: "Qwen3-32B Q4_K_M (environ 20 Go) est le plus grand modèle dense de Qwen3 et une solide option locale pour le jeu de rôle en chinois ; comparez les fiches de modèle et testez-le avec vos propres cartes de personnage. Yi-34B excelle dans la profondeur émotionnelle des personnages. Avec 8 Go de VRAM, Qwen3 8B est le choix pratique ; la vitesse varie selon le matériel.",
         bullets: [
           'Qwen3-32B Q4_K_M : environ 20 Go, plus grand modèle dense de Qwen3 — pour GPU ou Mac à grande mémoire',
           'Yi-34B Q4_K_M : 21 Go RAM, excellente voix de personnage et gamme émotionnelle',
-          'Qwen3 8B Q4_K_M : 5,5 Go VRAM, 8–12 tok/s — idéal pour les cartes 8 Go',
+          'Qwen3 8B Q4_K_M : 5,5 Go VRAM — idéal pour les cartes 8 Go',
           'ChatGLM3-6B : 4,5 Go VRAM, inférence la plus rapide mais cohérence de personnage plus faible',
         ],
         updatedDate: '2026-05',
       },
       ja: {
         question: 'SillyTavernで中国語ロールプレイに最適なモデルは？',
-        answer: 'Qwen3-32B Q4_K_M（約20GB）はQwen3で最大の密（Dense）モデルで、中国語ロールプレイに有力なローカルの選択肢です。モデルカードを比較し、自分のキャラクターカードで試してください。Yi-34Bは感情的なキャラクター表現に優れています。8GB VRAMならQwen3 8Bが8〜12トークン/秒で動作します。',
+        answer: 'Qwen3-32B Q4_K_M（約20GB）はQwen3で最大の密（Dense）モデルで、中国語ロールプレイに有力なローカルの選択肢です。モデルカードを比較し、自分のキャラクターカードで試してください。Yi-34Bは感情的なキャラクター表現に優れています。8GB VRAMならQwen3 8Bが実用的な選択肢です。速度はハードウェアによって異なります。',
         bullets: [
           'Qwen3-32B Q4_K_M: RAM 約20GB、Qwen3で最大の密モデル',
           'Yi-34B Q4_K_M: RAM 21GB、優れたキャラクターボイスと感情表現',
-          'Qwen3 8B Q4_K_M: VRAM 5.5GB、8〜12トークン/秒 — 8GB GPUに最適',
+          'Qwen3 8B Q4_K_M: VRAM 5.5GB — 8GB GPUに最適',
           'ChatGLM3-6B: VRAM 4.5GB、最速推論だがキャラクター一貫性は低め',
         ],
         updatedDate: '2026-05',
       },
       zh: {
         question: 'SillyTavern 中文角色扮演最佳模型？',
-        answer: 'Qwen3-32B Q4_K_M（约 20 GB）是 Qwen3 中最大的稠密模型，是中文角色扮演的有力本地选择；建议对比模型卡片，并用自己的角色卡实测。Yi-34B 擅长角色情感深度。8GB 显存用户推荐 Qwen3 8B，速度 8–12 token/秒。',
+        answer: 'Qwen3-32B Q4_K_M（约 20 GB）是 Qwen3 中最大的稠密模型，是中文角色扮演的有力本地选择；建议对比模型卡片，并用自己的角色卡实测。Yi-34B 擅长角色情感深度。8GB 显存用户推荐 Qwen3 8B，速度因硬件而异。',
         bullets: [
           'Qwen3-32B Q4_K_M：约 20 GB，Qwen3 中最大的稠密模型——适合大显存显卡或 Mac',
           'Yi-34B Q4_K_M：21 GB 内存，出色的角色声音和情感层次',
-          'Qwen3 8B Q4_K_M：5.5 GB 显存，8–12 token/秒——8GB 显卡首选',
+          'Qwen3 8B Q4_K_M：5.5 GB 显存——8GB 显卡首选',
           'ChatGLM3-6B：4.5 GB 显存，推理最快但角色一致性较弱',
         ],
         updatedDate: '2026-05',
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M (ca. 20 GB) ist eine starke lokale Option für chinesisches Rollenspiel; für 8 GB VRAM ist Qwen3 8B die praktische Wahl mit 8–12 tok/s.',
+        content: 'Qwen3-32B Q4_K_M (ca. 20 GB) ist eine starke lokale Option für chinesisches Rollenspiel; für 8 GB VRAM ist Qwen3 8B die praktische Wahl; die Geschwindigkeit hängt von der Hardware ab.',
       },
       {
         type: 'plain-terms',
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M: größtes dichtes Qwen3, ca. 20 GB',
           'Yi-34B Q4_K_M: beste Charaktertiefe, 21 GB RAM',
-          'Qwen3 8B Q4_K_M: beste Wahl für 8 GB VRAM, 8–12 tok/s',
+          'Qwen3 8B Q4_K_M: beste Wahl für 8 GB VRAM',
           'SillyTavern → API-Typ: OpenAI-kompatibel → URL: http://127.0.0.1:11434/v1',
           'Charakterkarten: Chinesischen Text direkt einfügen, als UTF-8 speichern',
           'Systemprompt: 始终用简体中文回复。保持角色一致性。',
@@ -383,13 +383,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Vier Modelle decken die wichtigsten Hardware-Stufen ab. Qwen3-32B ist das größte dichte Qwen3-Modell und benötigt bei Q4_K_M etwa 20 GB (Grafikkarte oder Mac mit ausreichend Unified Memory); die chinesische Prosaqualität wird hier nicht bewertet, vergleichen Sie daher die Model Cards und testen Sie selbst. Yi-34B ist die zweite Wahl für Nutzer, die Charakterstimme und emotionale Tiefe priorisieren. Qwen3 8B ist die praktische Wahl für Standard-Gaming-GPUs.',
         ],
         comparisonTable: {
-          columns: ['Modell', 'VRAM / RAM', 'Chinesisch-Score', 'Geschwindigkeit', 'Ideal für'],
+          columns: ['Modell', 'VRAM / RAM', 'Ideal für'],
           rows: [
-            { 'Modell': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Chinesisch-Score': '—', 'Geschwindigkeit': '—', 'Ideal für': 'Größtes dichtes Qwen3' },
-            { 'Modell': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Chinesisch-Score': '★★★★☆', 'Geschwindigkeit': '2–5 tok/s', 'Ideal für': 'Emotionale Tiefe, Charakterstimme' },
-            { 'Modell': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9,5 GB VRAM', 'Chinesisch-Score': '★★★★☆', 'Geschwindigkeit': '4–8 tok/s', 'Ideal für': 'Balance aus Qualität und Geschwindigkeit' },
-            { 'Modell': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5,5 GB VRAM', 'Chinesisch-Score': '★★★☆☆', 'Geschwindigkeit': '8–12 tok/s', 'Ideal für': 'RTX 3060, 8-GB-VRAM-Karten' },
-            { 'Modell': 'ChatGLM3-6B', 'VRAM / RAM': '4,5 GB VRAM', 'Chinesisch-Score': '★★★☆☆', 'Geschwindigkeit': '12–18 tok/s', 'Ideal für': 'Schnellste Inferenz, begrenzter Kontext (8K)' },
+            { 'Modell': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Ideal für': 'Größtes dichtes Qwen3' },
+            { 'Modell': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Ideal für': 'Emotionale Tiefe, Charakterstimme' },
+            { 'Modell': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9,5 GB VRAM', 'Ideal für': 'Balance aus Qualität und Geschwindigkeit' },
+            { 'Modell': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5,5 GB VRAM', 'Ideal für': 'RTX 3060, 8-GB-VRAM-Karten' },
+            { 'Modell': 'ChatGLM3-6B', 'VRAM / RAM': '4,5 GB VRAM', 'Ideal für': 'Schnellste Inferenz, begrenzter Kontext (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-de.webp',
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavern kommuniziert mit Ollama über einen OpenAI-kompatiblen API-Endpunkt. Kein Plugin erforderlich — Ollama stellt diesen nativ auf Port 11434 bereit.',
         ],
         numberedItems: [
-          'Modell herunterladen: `ollama pull qwen2.5:7b` (oder `qwen2.5:72b`, `yi:34b`) im Terminal ausführen',
+          'Modell herunterladen: `ollama pull qwen3:8b` (oder `qwen3:32b`, `yi:34b`) im Terminal ausführen',
           'SillyTavern öffnen → API-Verbindungen → **OpenAI-kompatibel** auswählen',
           'Benutzerdefinierte API-URL setzen auf: `http://127.0.0.1:11434/v1`',
           'API-Schlüssel auf einen beliebigen nicht leeren String setzen (z.B. `ollama`) — Ollama ignoriert den Schlüssel',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann Qwen3 8B lange Rollenspiel-Sitzungen auf Chinesisch verarbeiten?',
-            a: 'Ja. Qwen3 8B Q4_K_M unterstützt standardmäßig 32K Kontext in Ollama. Für lange Sitzungen den Kontextfenster in den SillyTavern-API-Einstellungen erhöhen und Qwen3-14B oder höher für bessere Kohärenz bei 10K+ Token verwenden.',
+            a: 'Ja. Qwen3 8B unterstützt von Haus aus langen Kontext, aber das Standard-Kontextfenster in Ollama ist deutlich kleiner und muss erhöht werden (siehe die Ollama-Dokumentation). Für lange Sitzungen den Kontextfenster in den SillyTavern-API-Einstellungen erhöhen und Qwen3-14B oder höher für bessere Kohärenz bei 10K+ Token verwenden.',
           },
           {
             q: 'Unterstützt SillyTavern chinesische Charakternamen und -beschreibungen?',
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Kann Qwen3 8B lange Rollenspiel-Sitzungen auf Chinesisch verarbeiten?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ja. Qwen3 8B Q4_K_M unterstützt standardmäßig 32K Kontext in Ollama. Für lange Sitzungen den Kontextfenster erhöhen und Qwen3-14B oder höher für bessere Kohärenz bei 10K+ Token verwenden.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Ja. Qwen3 8B unterstützt von Haus aus langen Kontext, aber das Standard-Kontextfenster in Ollama ist deutlich kleiner und muss erhöht werden (siehe die Ollama-Dokumentation). Für lange Sitzungen den Kontextfenster erhöhen und Qwen3-14B oder höher für bessere Kohärenz bei 10K+ Token verwenden.' },
         },
         {
           '@type': 'Question',
@@ -535,11 +535,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best model for Chinese roleplay in SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (about 20 GB) is the largest dense Qwen3 model and a strong local option for Chinese roleplay; compare model cards and test it on your own character cards. Yi-34B excels at emotional character depth. For users with 8 GB VRAM, Qwen3 8B runs well at 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (about 20 GB) is the largest dense Qwen3 model and a strong local option for Chinese roleplay; compare model cards and test it on your own character cards. Yi-34B excels at emotional character depth. For users with 8 GB VRAM, Qwen3 8B is the practical choice; speed varies by hardware.',
         bullets: [
           'Qwen3-32B Q4_K_M: about 20 GB, the largest dense Qwen3 — for high-memory GPUs or Macs',
           'Yi-34B Q4_K_M: 21 GB RAM, excellent character voice and emotional range',
-          'Qwen3 8B Q4_K_M: 5.5 GB VRAM, 8–12 tok/s — best for 8 GB VRAM cards',
+          'Qwen3 8B Q4_K_M: 5.5 GB VRAM — best for 8 GB VRAM cards',
           'ChatGLM3-6B: 4.5 GB VRAM, fastest inference but weaker character consistency',
         ],
         updatedDate: '2026-05',
@@ -550,18 +550,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Qwen3-32B Q4_K_M: ca. 20 GB, größtes dichtes Qwen3',
           'Yi-34B Q4_K_M: 21 GB RAM, exzellente Charakterstimme',
-          'Qwen3 8B Q4_K_M: 5,5 GB VRAM, 8–12 tok/s',
+          'Qwen3 8B Q4_K_M: 5,5 GB VRAM',
           'ChatGLM3-6B: 4,5 GB VRAM, schnellste Inferenz',
         ],
         updatedDate: '2026-05',
       },
       fr: {
         question: 'Meilleur modèle pour le jeu de rôle en chinois dans SillyTavern ?',
-        answer: "Qwen3-32B Q4_K_M (environ 20 Go) est le plus grand modèle dense de Qwen3 et une solide option locale pour le jeu de rôle en chinois ; comparez les fiches de modèle et testez-le avec vos propres cartes de personnage. Yi-34B excelle dans la profondeur émotionnelle des personnages. Avec 8 Go de VRAM, Qwen3 8B tourne à 8–12 tok/s.",
+        answer: "Qwen3-32B Q4_K_M (environ 20 Go) est le plus grand modèle dense de Qwen3 et une solide option locale pour le jeu de rôle en chinois ; comparez les fiches de modèle et testez-le avec vos propres cartes de personnage. Yi-34B excelle dans la profondeur émotionnelle des personnages. Avec 8 Go de VRAM, Qwen3 8B est le choix pratique ; la vitesse varie selon le matériel.",
         bullets: [
           'Qwen3-32B Q4_K_M : environ 20 Go, plus grand modèle dense de Qwen3 — pour GPU ou Mac à grande mémoire',
           'Yi-34B Q4_K_M : 21 Go RAM, excellente voix de personnage et gamme émotionnelle',
-          'Qwen3 8B Q4_K_M : 5,5 Go VRAM, 8–12 tok/s — idéal pour les cartes 8 Go',
+          'Qwen3 8B Q4_K_M : 5,5 Go VRAM — idéal pour les cartes 8 Go',
           'ChatGLM3-6B : 4,5 Go VRAM, inférence la plus rapide mais cohérence de personnage plus faible',
         ],
         updatedDate: '2026-05',
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M (environ 20 Go) est une solide option locale pour le jeu de rôle en chinois ; pour 8 Go de VRAM, Qwen3 8B est le choix pratique à 8–12 tok/s.',
+        content: 'Qwen3-32B Q4_K_M (environ 20 Go) est une solide option locale pour le jeu de rôle en chinois ; pour 8 Go de VRAM, Qwen3 8B est le choix pratique ; la vitesse varie selon le matériel.',
       },
       {
         type: 'plain-terms',
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M : plus grand modèle dense de Qwen3, environ 20 Go',
           'Yi-34B Q4_K_M : meilleure profondeur de personnage, 21 Go RAM',
-          'Qwen3 8B Q4_K_M : meilleur pour 8 Go VRAM, 8–12 tok/s',
+          'Qwen3 8B Q4_K_M : meilleur pour 8 Go VRAM',
           'SillyTavern → Type API : Compatible OpenAI → URL : http://127.0.0.1:11434/v1',
           'Cartes de personnage : coller le texte chinois directement, enregistrer en UTF-8',
           'Prompt système : 始终用简体中文回复。保持角色一致性。',
@@ -631,13 +631,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "Quatre modèles couvrent les principaux niveaux matériels. Qwen3-32B est le plus grand modèle dense de Qwen3 et demande environ 20 Go en Q4_K_M (GPU ou Mac avec assez de mémoire unifiée) ; la qualité de sa prose chinoise reste non évaluée ici, comparez donc les fiches de modèle et testez-le vous-même. Yi-34B est le second choix pour les utilisateurs qui privilégient la voix des personnages et la profondeur émotionnelle. Qwen3 8B est le choix pratique pour un GPU de jeu standard.",
         ],
         comparisonTable: {
-          columns: ['Modèle', 'VRAM / RAM', 'Score chinois', 'Vitesse', 'Idéal pour'],
+          columns: ['Modèle', 'VRAM / RAM', 'Idéal pour'],
           rows: [
-            { 'Modèle': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 Go', 'Score chinois': '—', 'Vitesse': '—', 'Idéal pour': 'Plus grand modèle dense de Qwen3' },
-            { 'Modèle': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 Go RAM', 'Score chinois': '★★★★☆', 'Vitesse': '2–5 tok/s', 'Idéal pour': 'Profondeur émotionnelle, voix de personnage' },
-            { 'Modèle': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9,5 Go VRAM', 'Score chinois': '★★★★☆', 'Vitesse': '4–8 tok/s', 'Idéal pour': 'Équilibre qualité + vitesse' },
-            { 'Modèle': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5,5 Go VRAM', 'Score chinois': '★★★☆☆', 'Vitesse': '8–12 tok/s', 'Idéal pour': 'RTX 3060, cartes 8 Go VRAM' },
-            { 'Modèle': 'ChatGLM3-6B', 'VRAM / RAM': '4,5 Go VRAM', 'Score chinois': '★★★☆☆', 'Vitesse': '12–18 tok/s', 'Idéal pour': 'Inférence la plus rapide, contexte limité (8K)' },
+            { 'Modèle': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 Go', 'Idéal pour': 'Plus grand modèle dense de Qwen3' },
+            { 'Modèle': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 Go RAM', 'Idéal pour': 'Profondeur émotionnelle, voix de personnage' },
+            { 'Modèle': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9,5 Go VRAM', 'Idéal pour': 'Équilibre qualité + vitesse' },
+            { 'Modèle': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5,5 Go VRAM', 'Idéal pour': 'RTX 3060, cartes 8 Go VRAM' },
+            { 'Modèle': 'ChatGLM3-6B', 'VRAM / RAM': '4,5 Go VRAM', 'Idéal pour': 'Inférence la plus rapide, contexte limité (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-fr.webp',
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "SillyTavern communique avec Ollama via un endpoint API compatible OpenAI. Aucun plugin nécessaire — Ollama l'expose nativement sur le port 11434.",
         ],
         numberedItems: [
-          'Télécharger le modèle : exécuter `ollama pull qwen2.5:7b` (ou `qwen2.5:72b`, `yi:34b`) dans le terminal',
+          'Télécharger le modèle : exécuter `ollama pull qwen3:8b` (ou `qwen3:32b`, `yi:34b`) dans le terminal',
           'Ouvrir SillyTavern → Connexions API → sélectionner **Compatible OpenAI**',
           "Définir l'URL API personnalisée sur : `http://127.0.0.1:11434/v1`",
           "Définir la clé API sur n'importe quelle chaîne non vide (ex. `ollama`) — Ollama ignore la clé",
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Qwen3 8B peut-il gérer de longues sessions de jeu de rôle en chinois ?',
-            a: "Oui. Qwen3 8B Q4_K_M supporte 32K de contexte par défaut dans Ollama. Pour les longues sessions, augmentez la fenêtre de contexte dans les paramètres API de SillyTavern et utilisez Qwen3-14B ou supérieur pour une meilleure cohérence au-delà de 10K tokens.",
+            a: "Oui. Qwen3 8B prend en charge nativement un long contexte, mais la fenêtre de contexte par défaut d'Ollama est bien plus petite et doit être augmentée (voir la documentation d'Ollama). Pour les longues sessions, augmentez la fenêtre de contexte dans les paramètres API de SillyTavern et utilisez Qwen3-14B ou supérieur pour une meilleure cohérence au-delà de 10K tokens.",
           },
           {
             q: 'Pourquoi le modèle produit-il du chinois et de l\'anglais mélangés ?',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Qwen3-32B Q4_K_M: RAM 約20GB、Qwen3で最大の密モデル',
           'Yi-34B Q4_K_M: RAM 21GB、優れたキャラクターボイスと感情表現',
-          'Qwen3 8B Q4_K_M: VRAM 5.5GB、8〜12トークン/秒 — 8GB GPUに最適',
+          'Qwen3 8B Q4_K_M: VRAM 5.5GB — 8GB GPUに最適',
           'ChatGLM3-6B: VRAM 4.5GB、最速推論',
         ],
         updatedDate: '2026-05',
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M（約20GB）は中国語ロールプレイに有力なローカルの選択肢です。8GB VRAMにはQwen3 8B（8〜12トークン/秒）が実用的な選択肢です。',
+        content: 'Qwen3-32B Q4_K_M（約20GB）は中国語ロールプレイに有力なローカルの選択肢です。8GB VRAMにはQwen3 8Bが実用的な選択肢です（速度はハードウェアによって異なります）。',
       },
       {
         type: 'plain-terms',
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M：Qwen3で最大の密モデル、約20GB',
           'Yi-34B Q4_K_M：最高のキャラクター深度、RAM 21GB',
-          'Qwen3 8B Q4_K_M：8GB VRAMに最適、8〜12トークン/秒',
+          'Qwen3 8B Q4_K_M：8GB VRAMに最適',
           'SillyTavern → APIタイプ：OpenAI互換 → URL：http://127.0.0.1:11434/v1',
           'キャラクターカード：中国語テキストを直接貼り付け、UTF-8で保存',
           'システムプロンプト：始终用简体中文回复。保持角色一致性。',
@@ -850,13 +850,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '4つのモデルが主要なハードウェアレベルをカバーしています。Qwen3-32BはQwen3で最大の密モデルで、Q4_K_Mで約20GB必要です（大容量メモリのGPU、または十分なユニファイドメモリを持つMac）。中国語の文章品質はここでは評価しておらず、モデルカードを比較して自分で試してください。Yi-34Bはキャラクターの声と感情の深さを優先するユーザーに最適です。Qwen3 8Bは標準的なゲーミングGPUの実用的な選択肢です。',
         ],
         comparisonTable: {
-          columns: ['モデル', 'VRAM / RAM', '中国語スコア', '速度', '最適な用途'],
+          columns: ['モデル', 'VRAM / RAM', '最適な用途'],
           rows: [
-            { 'モデル': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': 'RAM ~20GB', '中国語スコア': '—', '速度': '—', '最適な用途': 'Qwenで最大の密モデル' },
-            { 'モデル': 'Yi-34B Q4_K_M', 'VRAM / RAM': 'RAM 21GB', '中国語スコア': '★★★★☆', '速度': '2〜5トークン/秒', '最適な用途': '感情的深度、キャラクターの声' },
-            { 'モデル': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': 'VRAM 9.5GB', '中国語スコア': '★★★★☆', '速度': '4〜8トークン/秒', '最適な用途': '品質と速度のバランス' },
-            { 'モデル': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': 'VRAM 5.5GB', '中国語スコア': '★★★☆☆', '速度': '8〜12トークン/秒', '最適な用途': 'RTX 3060、8GB VRAMカード' },
-            { 'モデル': 'ChatGLM3-6B', 'VRAM / RAM': 'VRAM 4.5GB', '中国語スコア': '★★★☆☆', '速度': '12〜18トークン/秒', '最適な用途': '最速推論、限られたコンテキスト(8K)' },
+            { 'モデル': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': 'RAM ~20GB', '最適な用途': 'Qwenで最大の密モデル' },
+            { 'モデル': 'Yi-34B Q4_K_M', 'VRAM / RAM': 'RAM 21GB', '最適な用途': '感情的深度、キャラクターの声' },
+            { 'モデル': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': 'VRAM 9.5GB', '最適な用途': '品質と速度のバランス' },
+            { 'モデル': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': 'VRAM 5.5GB', '最適な用途': 'RTX 3060、8GB VRAMカード' },
+            { 'モデル': 'ChatGLM3-6B', 'VRAM / RAM': 'VRAM 4.5GB', '最適な用途': '最速推論、限られたコンテキスト(8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-ja.webp',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavernはOpenAI互換APIエンドポイントを通じてOllamaと通信します。プラグイン不要 — Ollamaはポート11434でこれをネイティブに公開しています。',
         ],
         numberedItems: [
-          'モデルのダウンロード：ターミナルで`ollama pull qwen2.5:7b`（または`qwen2.5:72b`、`yi:34b`）を実行',
+          'モデルのダウンロード：ターミナルで`ollama pull qwen3:8b`（または`qwen3:32b`、`yi:34b`）を実行',
           'SillyTavernを開く → API接続 → **OpenAI互換**を選択',
           'カスタムAPI URLを設定：`http://127.0.0.1:11434/v1`',
           'APIキーを任意の空でない文字列に設定（例：`ollama`）— Ollamaはキーを無視',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Qwen3 8Bは中国語の長いロールプレイセッションを処理できますか？',
-            a: 'はい。Qwen3 8B Q4_K_MはOllamaでデフォルトで32Kコンテキストをサポートしています。長いセッションには、SillyTavernのAPI設定でコンテキストウィンドウを増やし、10K+トークン以上の一貫性向上のためQwen3-14B以上を使用してください。',
+            a: 'はい。Qwen3 8Bはネイティブで長いコンテキストをサポートしていますが、Ollamaのデフォルトのコンテキストウィンドウはずっと小さく、引き上げる必要があります（Ollamaのドキュメントを参照）。長いセッションには、SillyTavernのAPI設定でコンテキストウィンドウを増やし、10K+トークン以上の一貫性向上のためQwen3-14B以上を使用してください。',
           },
           {
             q: 'なぜモデルが中国語と英語が混在した出力をするのですか？',
@@ -1017,11 +1017,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: 'SillyTavern 中文角色扮演最佳模型？',
-        answer: 'Qwen3-32B Q4_K_M（约 20 GB）是 Qwen3 中最大的稠密模型，是中文角色扮演的有力本地选择；建议对比模型卡片，并用自己的角色卡实测。Yi-34B 擅长角色情感深度。8GB 显存推荐 Qwen3 8B，速度 8–12 token/秒。',
+        answer: 'Qwen3-32B Q4_K_M（约 20 GB）是 Qwen3 中最大的稠密模型，是中文角色扮演的有力本地选择；建议对比模型卡片，并用自己的角色卡实测。Yi-34B 擅长角色情感深度。8GB 显存推荐 Qwen3 8B，速度因硬件而异。',
         bullets: [
           'Qwen3-32B Q4_K_M：约 20 GB，Qwen3 中最大的稠密模型——适合大显存显卡或 Mac',
           'Yi-34B Q4_K_M：21 GB 内存，出色的角色声音与情感层次',
-          'Qwen3 8B Q4_K_M：5.5 GB 显存，8–12 token/秒——8GB 显卡首选',
+          'Qwen3 8B Q4_K_M：5.5 GB 显存——8GB 显卡首选',
           'ChatGLM3-6B：4.5 GB 显存，推理最快但角色一致性较弱',
         ],
         updatedDate: '2026-05',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M（约 20 GB）是中文角色扮演的有力本地选择；8GB 显存用户选 Qwen3 8B（8–12 token/秒）。',
+        content: 'Qwen3-32B Q4_K_M（约 20 GB）是中文角色扮演的有力本地选择；8GB 显存用户选 Qwen3 8B（速度因硬件而异）。',
       },
       {
         type: 'plain-terms',
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M：Qwen3 中最大的稠密模型，约 20 GB',
           'Yi-34B Q4_K_M：最佳角色深度，21 GB 内存',
-          'Qwen3 8B Q4_K_M：8GB 显存首选，8–12 token/秒',
+          'Qwen3 8B Q4_K_M：8GB 显存首选',
           'SillyTavern → API 类型：OpenAI 兼容 → URL：http://127.0.0.1:11434/v1',
           '角色卡：直接粘贴中文文本，保存为 UTF-8',
           '系统提示词：始终用简体中文回复。保持角色一致性。',
@@ -1069,13 +1069,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '四款模型覆盖主要硬件档次。Qwen3-32B 是 Qwen3 中最大的稠密模型，Q4_K_M 约需 20 GB（大显存显卡或统一内存足够的 Mac）；其中文散文质量此处未做评分，建议对比模型卡片并自行测试。Yi-34B 适合重视角色声音和情感层次的用户。Qwen3 8B 是标准游戏显卡的实用之选。',
         ],
         comparisonTable: {
-          columns: ['模型', '显存 / 内存', '中文评分', '速度', '最适场景'],
+          columns: ['模型', '显存 / 内存', '最适场景'],
           rows: [
-            { '模型': 'Qwen3-32B Q4_K_M', '显存 / 内存': '~20 GB 内存', '中文评分': '—', '速度': '—', '最适场景': 'Qwen3 中最大的稠密模型' },
-            { '模型': 'Yi-34B Q4_K_M', '显存 / 内存': '21 GB 内存', '中文评分': '★★★★☆', '速度': '2–5 token/秒', '最适场景': '情感深度，角色声音' },
-            { '模型': 'Qwen3-14B Q4_K_M', '显存 / 内存': '9.5 GB 显存', '中文评分': '★★★★☆', '速度': '4–8 token/秒', '最适场景': '质量与速度的平衡' },
-            { '模型': 'Qwen3 8B Q4_K_M', '显存 / 内存': '5.5 GB 显存', '中文评分': '★★★☆☆', '速度': '8–12 token/秒', '最适场景': 'RTX 3060，8GB 显存显卡' },
-            { '模型': 'ChatGLM3-6B', '显存 / 内存': '4.5 GB 显存', '中文评分': '★★★☆☆', '速度': '12–18 token/秒', '最适场景': '速度最快，上下文有限（8K）' },
+            { '模型': 'Qwen3-32B Q4_K_M', '显存 / 内存': '~20 GB 内存', '最适场景': 'Qwen3 中最大的稠密模型' },
+            { '模型': 'Yi-34B Q4_K_M', '显存 / 内存': '21 GB 内存', '最适场景': '情感深度，角色声音' },
+            { '模型': 'Qwen3-14B Q4_K_M', '显存 / 内存': '9.5 GB 显存', '最适场景': '质量与速度的平衡' },
+            { '模型': 'Qwen3 8B Q4_K_M', '显存 / 内存': '5.5 GB 显存', '最适场景': 'RTX 3060，8GB 显存显卡' },
+            { '模型': 'ChatGLM3-6B', '显存 / 内存': '4.5 GB 显存', '最适场景': '速度最快，上下文有限（8K）' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-zh.webp',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavern 通过 OpenAI 兼容 API 端点与 Ollama 通信。无需插件——Ollama 原生在 11434 端口暴露此接口。',
         ],
         numberedItems: [
-          '下载模型：在终端运行 `ollama pull qwen2.5:7b`（或 `qwen2.5:72b`、`yi:34b`）',
+          '下载模型：在终端运行 `ollama pull qwen3:8b`（或 `qwen3:32b`、`yi:34b`）',
           '打开 SillyTavern → API 连接 → 选择 **OpenAI 兼容**',
           '自定义 API URL 设为：`http://127.0.0.1:11434/v1`',
           'API 密钥设为任意非空字符串（如 `ollama`）——Ollama 忽略密钥',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Qwen3 8B 能处理长篇中文角色扮演吗？',
-            a: '可以。Ollama 中 Qwen3 8B Q4_K_M 默认支持 32K 上下文。长篇对话可在 SillyTavern API 设置中增大上下文窗口，10K+ token 的一致性建议升级到 Qwen3-14B 或更高。',
+            a: '可以。Qwen3 8B 原生支持长上下文，但 Ollama 默认的上下文窗口要小得多，需要手动调大（参见 Ollama 文档）。长篇对话可在 SillyTavern API 设置中增大上下文窗口，10K+ token 的一致性建议升级到 Qwen3-14B 或更高。',
           },
           {
             q: 'SillyTavern 支持中文角色名和描述吗？',
@@ -1267,11 +1267,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor modelo para roleplay em chinês no SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (cerca de 20 GB) é o maior modelo denso do Qwen3 e uma boa opção local para roleplay em chinês; compare os model cards e teste com seus próprios cartões de personagem. Yi-34B se destaca em profundidade emocional dos personagens. Com 8 GB de VRAM, Qwen3 8B funciona a 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (cerca de 20 GB) é o maior modelo denso do Qwen3 e uma boa opção local para roleplay em chinês; compare os model cards e teste com seus próprios cartões de personagem. Yi-34B se destaca em profundidade emocional dos personagens. Com 8 GB de VRAM, Qwen3 8B é a escolha prática; a velocidade varia conforme o hardware.',
         bullets: [
           'Qwen3-32B Q4_K_M: cerca de 20 GB, maior modelo denso do Qwen3 — para GPUs ou Macs com muita memória',
           'Yi-34B Q4_K_M: 21 GB RAM, excelente voz de personagem e alcance emocional',
-          'Qwen3 8B Q4_K_M: 5,5 GB VRAM, 8–12 tok/s — melhor para GPUs de 8 GB',
+          'Qwen3 8B Q4_K_M: 5,5 GB VRAM — melhor para GPUs de 8 GB',
           'ChatGLM3-6B: 4,5 GB VRAM, inferência mais rápida mas menor consistência de personagem',
         ],
         updatedDate: '2026-05',
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M (cerca de 20 GB) é uma boa opção local para roleplay em chinês; para 8 GB de VRAM, Qwen3 8B é a escolha prática a 8–12 tok/s.',
+        content: 'Qwen3-32B Q4_K_M (cerca de 20 GB) é uma boa opção local para roleplay em chinês; para 8 GB de VRAM, Qwen3 8B é a escolha prática; a velocidade varia conforme o hardware.',
       },
       {
         type: 'plain-terms',
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M: maior modelo denso do Qwen3, cerca de 20 GB',
           'Yi-34B Q4_K_M: melhor profundidade de personagem, 21 GB de RAM',
-          'Qwen3 8B Q4_K_M: melhor para 8 GB de VRAM, 8–12 tok/s',
+          'Qwen3 8B Q4_K_M: melhor para 8 GB de VRAM',
           'SillyTavern → Tipo de API: compatível com OpenAI → URL: http://127.0.0.1:11434/v1',
           'Cartões de personagem: cole o texto em chinês diretamente, salve como UTF-8',
           'System prompt: 始终用简体中文回复。保持角色一致性。',
@@ -1319,13 +1319,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Quatro modelos cobrem os principais níveis de hardware. Qwen3-32B é o maior modelo denso do Qwen3 e precisa de cerca de 20 GB em Q4_K_M (GPU ou Mac com memória unificada suficiente); a qualidade da sua prosa em chinês não é avaliada aqui, então compare os model cards e teste você mesmo. Yi-34B é a segunda opção para usuários que priorizam a voz e a profundidade emocional dos personagens. Qwen3 8B é a escolha prática para qualquer GPU de gaming padrão.',
         ],
         comparisonTable: {
-          columns: ['Modelo', 'VRAM / RAM', 'Pontuação chinês', 'Velocidade', 'Melhor para'],
+          columns: ['Modelo', 'VRAM / RAM', 'Melhor para'],
           rows: [
-            { 'Modelo': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Pontuação chinês': '—', 'Velocidade': '—', 'Melhor para': 'Maior modelo denso do Qwen3' },
-            { 'Modelo': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Pontuação chinês': '★★★★☆', 'Velocidade': '2–5 tok/s', 'Melhor para': 'Profundidade emocional, voz de personagem' },
-            { 'Modelo': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9,5 GB VRAM', 'Pontuação chinês': '★★★★☆', 'Velocidade': '4–8 tok/s', 'Melhor para': 'Equilíbrio qualidade + velocidade' },
-            { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5,5 GB VRAM', 'Pontuação chinês': '★★★☆☆', 'Velocidade': '8–12 tok/s', 'Melhor para': 'RTX 3060, GPUs de 8 GB VRAM' },
-            { 'Modelo': 'ChatGLM3-6B', 'VRAM / RAM': '4,5 GB VRAM', 'Pontuação chinês': '★★★☆☆', 'Velocidade': '12–18 tok/s', 'Melhor para': 'Mais rápido, contexto limitado (8K)' },
+            { 'Modelo': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Melhor para': 'Maior modelo denso do Qwen3' },
+            { 'Modelo': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Melhor para': 'Profundidade emocional, voz de personagem' },
+            { 'Modelo': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9,5 GB VRAM', 'Melhor para': 'Equilíbrio qualidade + velocidade' },
+            { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5,5 GB VRAM', 'Melhor para': 'RTX 3060, GPUs de 8 GB VRAM' },
+            { 'Modelo': 'ChatGLM3-6B', 'VRAM / RAM': '4,5 GB VRAM', 'Melhor para': 'Mais rápido, contexto limitado (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-pt.webp',
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavern se comunica com Ollama por meio de um endpoint de API compatível com OpenAI. Nenhum plugin é necessário — Ollama o expõe nativamente na porta 11434.',
         ],
         numberedItems: [
-          'Baixe o modelo: execute `ollama pull qwen2.5:7b` (ou `qwen2.5:72b`, `yi:34b`) no seu terminal',
+          'Baixe o modelo: execute `ollama pull qwen3:8b` (ou `qwen3:32b`, `yi:34b`) no seu terminal',
           'Abra SillyTavern → Conexões API → selecione **Compatível com OpenAI**',
           'Defina a URL de API personalizada como: `http://127.0.0.1:11434/v1`',
           'Defina a chave de API como qualquer string não vazia (ex.: `ollama`) — Ollama ignora a chave',
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Qwen3 8B consegue lidar com sessões longas de roleplay em chinês?',
-            a: 'Sim. Qwen3 8B Q4_K_M suporta contexto de 32K por padrão no Ollama. Para sessões longas com lore extenso ou histórico de diálogo, aumente a janela de contexto nas configurações de API do SillyTavern e use Qwen3-14B ou superior para melhor coerência com 10K+ tokens.',
+            a: 'Sim. O Qwen3 8B suporta contexto longo nativamente, mas a janela de contexto padrão do Ollama é bem menor e precisa ser aumentada (veja a documentação do Ollama). Para sessões longas com lore extenso ou histórico de diálogo, aumente a janela de contexto nas configurações de API do SillyTavern e use Qwen3-14B ou superior para melhor coerência com 10K+ tokens.',
           },
           {
             q: 'SillyTavern suporta nomes e descrições de personagens em chinês?',
@@ -1402,7 +1402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Yi-34B é melhor que Qwen3-14B para roleplay em chinês?',
-            a: 'Yi-34B produz respostas de personagem mais expressivas e emocionalmente variadas, especialmente para cenas complexas ou literárias. Qwen3-14B é mais rápido (4–8 tok/s vs 2–5 tok/s) e requer menos RAM. Para imersão pura no roleplay, Yi-34B vence; para velocidade e menores requisitos de hardware, Qwen3-14B é a melhor escolha.',
+            a: 'Yi-34B produz respostas de personagem mais expressivas e emocionalmente variadas, especialmente para cenas complexas ou literárias. Qwen3-14B costuma ser mais rápido e requer menos RAM. Para imersão pura no roleplay, Yi-34B vence; para velocidade e menores requisitos de hardware, Qwen3-14B é a melhor escolha.',
           },
           {
             q: 'Por que o modelo está produzindo chinês e inglês misturados?',
@@ -1451,7 +1451,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Qwen3 8B consegue lidar com sessões longas de roleplay em chinês?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Sim. Qwen3 8B Q4_K_M suporta contexto de 32K por padrão no Ollama. Para sessões longas, aumente a janela de contexto e use Qwen3-14B ou superior.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Qwen3 8B suporta contexto longo nativamente, mas a janela de contexto padrão do Ollama é bem menor e precisa ser aumentada (veja a documentação do Ollama). Para sessões longas, aumente a janela de contexto e use Qwen3-14B ou superior.' },
         },
         {
           '@type': 'Question',
@@ -1510,11 +1510,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor modelo para roleplay en chino en SillyTavern?',
-        answer: 'Qwen3-32B Q4_K_M (unos 20 GB) es el modelo denso más grande de Qwen3 y una buena opción local para roleplay en chino; compara las model cards y pruébalo con tus propias tarjetas de personaje. Yi-34B destaca en profundidad emocional de los personajes. Con 8 GB VRAM, Qwen3 8B funciona a 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (unos 20 GB) es el modelo denso más grande de Qwen3 y una buena opción local para roleplay en chino; compara las model cards y pruébalo con tus propias tarjetas de personaje. Yi-34B destaca en profundidad emocional de los personajes. Con 8 GB VRAM, Qwen3 8B es la opción práctica; la velocidad varía según el hardware.',
         bullets: [
           'Qwen3-32B Q4_K_M: unos 20 GB, el modelo denso más grande de Qwen3 — para GPUs o Macs con mucha memoria',
           'Yi-34B Q4_K_M: 21 GB RAM, excelente voz de personaje y rango emocional',
-          'Qwen3 8B Q4_K_M: 5.5 GB VRAM, 8–12 tok/s — mejor para GPUs de 8 GB',
+          'Qwen3 8B Q4_K_M: 5.5 GB VRAM — mejor para GPUs de 8 GB',
           'ChatGLM3-6B: 4.5 GB VRAM, inferencia más rápida pero menor consistencia de personaje',
         ],
         updatedDate: '2026-05',
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M (unos 20 GB) es una buena opción local para roleplay en chino; para 8 GB VRAM, Qwen3 8B es la opción práctica a 8–12 tok/s.',
+        content: 'Qwen3-32B Q4_K_M (unos 20 GB) es una buena opción local para roleplay en chino; para 8 GB VRAM, Qwen3 8B es la opción práctica; la velocidad varía según el hardware.',
       },
       {
         type: 'plain-terms',
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M: el modelo denso más grande de Qwen3, unos 20 GB',
           'Yi-34B Q4_K_M: mejor profundidad de personaje, 21 GB RAM',
-          'Qwen3 8B Q4_K_M: mejor para 8 GB VRAM, 8–12 tok/s',
+          'Qwen3 8B Q4_K_M: mejor para 8 GB VRAM',
           'SillyTavern → Tipo API: compatible con OpenAI → URL: http://127.0.0.1:11434/v1',
           'Tarjetas de personaje: pega el texto en chino directamente, guarda como UTF-8',
           'System prompt: 始终用简体中文回复。保持角色一致性。',
@@ -1562,13 +1562,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Cuatro modelos cubren los niveles de hardware principales. Qwen3-32B es el modelo denso más grande de Qwen3 y necesita unos 20 GB en Q4_K_M (GPU o Mac con suficiente memoria unificada); la calidad de su prosa en chino no se evalúa aquí, así que compara las model cards y pruébalo tú mismo. Yi-34B es la segunda opción para usuarios que priorizan la voz y la profundidad emocional de los personajes. Qwen3 8B es la opción práctica para cualquier GPU de gaming estándar.',
         ],
         comparisonTable: {
-          columns: ['Modelo', 'VRAM / RAM', 'Puntuación chino', 'Velocidad', 'Mejor para'],
+          columns: ['Modelo', 'VRAM / RAM', 'Mejor para'],
           rows: [
-            { 'Modelo': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Puntuación chino': '—', 'Velocidad': '—', 'Mejor para': 'El modelo denso más grande de Qwen3' },
-            { 'Modelo': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Puntuación chino': '★★★★☆', 'Velocidad': '2–5 tok/s', 'Mejor para': 'Profundidad emocional, voz de personaje' },
-            { 'Modelo': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'Puntuación chino': '★★★★☆', 'Velocidad': '4–8 tok/s', 'Mejor para': 'Equilibrio calidad + velocidad' },
-            { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'Puntuación chino': '★★★☆☆', 'Velocidad': '8–12 tok/s', 'Mejor para': 'RTX 3060, GPUs de 8 GB VRAM' },
-            { 'Modelo': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'Puntuación chino': '★★★☆☆', 'Velocidad': '12–18 tok/s', 'Mejor para': 'Más rápido, contexto limitado (8K)' },
+            { 'Modelo': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'Mejor para': 'El modelo denso más grande de Qwen3' },
+            { 'Modelo': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'Mejor para': 'Profundidad emocional, voz de personaje' },
+            { 'Modelo': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'Mejor para': 'Equilibrio calidad + velocidad' },
+            { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'Mejor para': 'RTX 3060, GPUs de 8 GB VRAM' },
+            { 'Modelo': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'Mejor para': 'Más rápido, contexto limitado (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-es.webp',
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavern se comunica con Ollama a través de un endpoint de API compatible con OpenAI. No se necesita ningún plugin — Ollama lo expone nativamente en el puerto 11434.',
         ],
         numberedItems: [
-          'Descarga el modelo: ejecuta `ollama pull qwen2.5:7b` (o `qwen2.5:72b`, `yi:34b`) en tu terminal',
+          'Descarga el modelo: ejecuta `ollama pull qwen3:8b` (o `qwen3:32b`, `yi:34b`) en tu terminal',
           'Abre SillyTavern → Conexiones API → selecciona **Compatible con OpenAI**',
           'Establece la URL de API personalizada en: `http://127.0.0.1:11434/v1`',
           'Establece la API Key en cualquier cadena no vacía (p.ej. `ollama`) — Ollama ignora la clave',
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Qwen3 8B puede manejar sesiones largas de roleplay en chino?',
-            a: 'Sí. Qwen3 8B Q4_K_M admite contexto de 32K por defecto en Ollama. Para sesiones largas con lore extenso o historial de diálogo, aumenta la ventana de contexto en los ajustes de API de SillyTavern y usa Qwen3-14B o superior para mejor coherencia con 10K+ tokens.',
+            a: 'Sí. Qwen3 8B admite contexto largo de forma nativa, pero la ventana de contexto predeterminada de Ollama es mucho menor y hay que aumentarla (consulta la documentación de Ollama). Para sesiones largas con lore extenso o historial de diálogo, aumenta la ventana de contexto en los ajustes de API de SillyTavern y usa Qwen3-14B o superior para mejor coherencia con 10K+ tokens.',
           },
           {
             q: '¿SillyTavern admite nombres y descripciones de personajes en chino?',
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es Yi-34B mejor que Qwen3-14B para roleplay en chino?',
-            a: 'Yi-34B produce respuestas de personaje más expresivas y emocionalmente variadas, especialmente para escenas complejas o literarias. Qwen3-14B es más rápido (4–8 tok/s vs 2–5 tok/s) y requiere menos RAM. Para inmersión pura en el roleplay, gana Yi-34B; para velocidad y menores requisitos de hardware, Qwen3-14B es la mejor opción.',
+            a: 'Yi-34B produce respuestas de personaje más expresivas y emocionalmente variadas, especialmente para escenas complejas o literarias. Qwen3-14B suele ser más rápido y requiere menos RAM. Para inmersión pura en el roleplay, gana Yi-34B; para velocidad y menores requisitos de hardware, Qwen3-14B es la mejor opción.',
           },
           {
             q: '¿Por qué el modelo produce chino y inglés mezclados?',
@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: '¿Qwen3 8B puede manejar sesiones largas de roleplay en chino?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Sí. Qwen3 8B Q4_K_M admite contexto de 32K por defecto en Ollama. Para sesiones largas, aumenta la ventana de contexto y usa Qwen3-14B o superior.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Sí. Qwen3 8B admite contexto largo de forma nativa, pero la ventana de contexto predeterminada de Ollama es mucho menor y hay que aumentarla (consulta la documentación de Ollama). Para sesiones largas, aumenta la ventana de contexto y usa Qwen3-14B o superior.' },
         },
         {
           '@type': 'Question',
@@ -1723,11 +1723,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل نموذج للعب الأدوار باللغة الصينية في SillyTavern؟',
-        answer: 'Qwen3-32B Q4_K_M (حوالي 20 GB) هو أكبر نموذج كثيف في Qwen3 وخيار محلي قوي للعب الأدوار باللغة الصينية؛ قارن بطاقات النماذج وجرّبه مع بطاقات الشخصيات الخاصة بك. يتميز Yi-34B في العمق العاطفي للشخصيات. مع 8 GB VRAM، يعمل Qwen3 8B بسرعة 8–12 tok/s.',
+        answer: 'Qwen3-32B Q4_K_M (حوالي 20 GB) هو أكبر نموذج كثيف في Qwen3 وخيار محلي قوي للعب الأدوار باللغة الصينية؛ قارن بطاقات النماذج وجرّبه مع بطاقات الشخصيات الخاصة بك. يتميز Yi-34B في العمق العاطفي للشخصيات. مع 8 GB VRAM، يُعد Qwen3 8B الخيار العملي؛ وتختلف السرعة بحسب العتاد.',
         bullets: [
           'Qwen3-32B Q4_K_M: حوالي 20 GB، أكبر نموذج كثيف في Qwen3 — لبطاقات GPU أو أجهزة Mac ذات الذاكرة الكبيرة',
           'Yi-34B Q4_K_M: 21 GB RAM، صوت شخصية ممتاز ونطاق عاطفي واسع',
-          'Qwen3 8B Q4_K_M: 5.5 GB VRAM، 8–12 tok/s — الأفضل لـ GPU بـ 8 GB',
+          'Qwen3 8B Q4_K_M: 5.5 GB VRAM — الأفضل لـ GPU بـ 8 GB',
           'ChatGLM3-6B: 4.5 GB VRAM، استنتاج أسرع لكن اتساق شخصية أقل',
         ],
         updatedDate: '2026-05',
@@ -1739,7 +1739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'يُعد Qwen3-32B Q4_K_M (حوالي 20 GB) خيارًا محليًا قويًا للعب الأدوار الصيني؛ لـ 8 GB VRAM، Qwen3 8B هو الخيار العملي بسرعة 8–12 tok/s.',
+        content: 'يُعد Qwen3-32B Q4_K_M (حوالي 20 GB) خيارًا محليًا قويًا للعب الأدوار الصيني؛ لـ 8 GB VRAM، Qwen3 8B هو الخيار العملي؛ وتختلف السرعة بحسب العتاد.',
       },
       {
         type: 'plain-terms',
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M: أكبر نموذج كثيف في Qwen3، حوالي 20 GB',
           'Yi-34B Q4_K_M: أفضل عمق شخصية، 21 GB RAM',
-          'Qwen3 8B Q4_K_M: الأفضل لـ 8 GB VRAM، 8–12 tok/s',
+          'Qwen3 8B Q4_K_M: الأفضل لـ 8 GB VRAM',
           'SillyTavern ← نوع API: متوافق مع OpenAI ← URL: http://127.0.0.1:11434/v1',
           'بطاقات الشخصية: الصق النص الصيني مباشرةً، احفظ بـ UTF-8',
           'موجّه النظام: 始终用简体中文回复。保持角色一致性。',
@@ -1775,13 +1775,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يغطي أربعة نماذج مستويات الأجهزة الرئيسية. Qwen3-32B هو أكبر نموذج كثيف في Qwen3 ويحتاج حوالي 20 GB بصيغة Q4_K_M (بطاقة GPU أو Mac بذاكرة موحدة كافية)؛ جودة نثره الصيني غير مقيّمة هنا، لذا قارن بطاقات النماذج وجرّبه بنفسك. Yi-34B هو الخيار الثاني للمستخدمين الذين يُعطون الأولوية لصوت الشخصية وعمقها العاطفي. Qwen3 8B هو الخيار العملي لأي بطاقة GPU للألعاب.',
         ],
         comparisonTable: {
-          columns: ['النموذج', 'VRAM / RAM', 'درجة الصينية', 'السرعة', 'الأفضل لـ'],
+          columns: ['النموذج', 'VRAM / RAM', 'الأفضل لـ'],
           rows: [
-            { 'النموذج': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'درجة الصينية': '—', 'السرعة': '—', 'الأفضل لـ': 'أكبر نموذج كثيف في Qwen3' },
-            { 'النموذج': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'درجة الصينية': '★★★★☆', 'السرعة': '2–5 tok/s', 'الأفضل لـ': 'العمق العاطفي، صوت الشخصية' },
-            { 'النموذج': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'درجة الصينية': '★★★★☆', 'السرعة': '4–8 tok/s', 'الأفضل لـ': 'توازن جودة + سرعة' },
-            { 'النموذج': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'درجة الصينية': '★★★☆☆', 'السرعة': '8–12 tok/s', 'الأفضل لـ': 'RTX 3060، GPU بـ 8 GB VRAM' },
-            { 'النموذج': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'درجة الصينية': '★★★☆☆', 'السرعة': '12–18 tok/s', 'الأفضل لـ': 'أسرع، سياق محدود (8K)' },
+            { 'النموذج': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', 'الأفضل لـ': 'أكبر نموذج كثيف في Qwen3' },
+            { 'النموذج': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'الأفضل لـ': 'العمق العاطفي، صوت الشخصية' },
+            { 'النموذج': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'الأفضل لـ': 'توازن جودة + سرعة' },
+            { 'النموذج': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'الأفضل لـ': 'RTX 3060، GPU بـ 8 GB VRAM' },
+            { 'النموذج': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'الأفضل لـ': 'أسرع، سياق محدود (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-ar.webp',
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يتواصل SillyTavern مع Ollama عبر نقطة نهاية API متوافقة مع OpenAI. لا يلزم أي مكوّن إضافي — Ollama يُظهرها أصليًا على المنفذ 11434.',
         ],
         numberedItems: [
-          'حمّل النموذج: نفّذ `ollama pull qwen2.5:7b` (أو `qwen2.5:72b` أو `yi:34b`) في طرفيتك',
+          'حمّل النموذج: نفّذ `ollama pull qwen3:8b` (أو `qwen3:32b` أو `yi:34b`) في طرفيتك',
           'افتح SillyTavern ← اتصالات API ← اختر **متوافق مع OpenAI**',
           'اضبط عنوان URL المخصص للـ API على: `http://127.0.0.1:11434/v1`',
           'اضبط مفتاح API على أي سلسلة غير فارغة (مثلاً `ollama`) — Ollama يتجاهل المفتاح',
@@ -1850,7 +1850,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل يستطيع Qwen3 8B التعامل مع جلسات لعب أدوار طويلة باللغة الصينية؟',
-            a: 'نعم. يدعم Qwen3 8B Q4_K_M سياقًا بـ 32K افتراضيًا في Ollama. للجلسات الطويلة التي تحتوي على لور موسّع أو سجل حوار طويل، وسّع نافذة السياق في إعدادات API في SillyTavern واستخدم Qwen3-14B أو أعلى لاتساق أفضل مع 10K+ رمز.',
+            a: 'نعم. يدعم Qwen3 8B سياقًا طويلًا أصلًا، لكن نافذة السياق الافتراضية في Ollama أصغر بكثير وتجب زيادتها (راجع وثائق Ollama). للجلسات الطويلة التي تحتوي على لور موسّع أو سجل حوار طويل، وسّع نافذة السياق في إعدادات API في SillyTavern واستخدم Qwen3-14B أو أعلى لاتساق أفضل مع 10K+ رمز.',
           },
           {
             q: 'هل يدعم SillyTavern أسماء ووصف الشخصيات بالصينية؟',
@@ -1858,7 +1858,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل Yi-34B أفضل من Qwen3-14B للعب الأدوار بالصينية؟',
-            a: 'يُنتج Yi-34B استجابات شخصية أكثر تعبيرًا وتنوعًا عاطفيًا، خاصةً للمشاهد المعقدة أو الأدبية. Qwen3-14B أسرع (4–8 tok/s مقابل 2–5 tok/s) ويتطلب ذاكرة RAM أقل. للانغماس الكامل في اللعب، يفوز Yi-34B؛ للسرعة ومتطلبات الأجهزة الأقل، Qwen3-14B هو الخيار الأفضل.',
+            a: 'يُنتج Yi-34B استجابات شخصية أكثر تعبيرًا وتنوعًا عاطفيًا، خاصةً للمشاهد المعقدة أو الأدبية. Qwen3-14B عادةً أسرع ويتطلب ذاكرة RAM أقل. للانغماس الكامل في اللعب، يفوز Yi-34B؛ للسرعة ومتطلبات الأجهزة الأقل، Qwen3-14B هو الخيار الأفضل.',
           },
           {
             q: 'لماذا ينتج النموذج خليطًا من الصينية والإنجليزية؟',
@@ -1907,7 +1907,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'هل يستطيع Qwen3 8B التعامل مع جلسات لعب أدوار طويلة باللغة الصينية؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'نعم. Qwen3 8B Q4_K_M يدعم سياق 32K افتراضيًا في Ollama. للجلسات الطويلة، وسّع نافذة السياق واستخدم Qwen3-14B أو أعلى.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'نعم. يدعم Qwen3 8B سياقًا طويلًا أصلًا، لكن نافذة السياق الافتراضية في Ollama أصغر بكثير وتجب زيادتها (راجع وثائق Ollama). للجلسات الطويلة، وسّع نافذة السياق واستخدم Qwen3-14B أو أعلى.' },
         },
         {
           '@type': 'Question',
@@ -1936,11 +1936,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'SillyTavern에서 중국어 롤플레이에 가장 적합한 모델은 무엇입니까?',
-        answer: 'Qwen3-32B Q4_K_M(약 20 GB)은 Qwen3에서 가장 큰 dense 모델이며 중국어 롤플레이에 쓸 만한 로컬 선택지입니다. 모델 카드를 비교하고 직접 만든 캐릭터 카드로 테스트해 보십시오. Yi-34B는 캐릭터의 감정적 깊이에 탁월합니다. 8 GB VRAM에서는 Qwen3 8B가 8~12 tok/s로 작동합니다.',
+        answer: 'Qwen3-32B Q4_K_M(약 20 GB)은 Qwen3에서 가장 큰 dense 모델이며 중국어 롤플레이에 쓸 만한 로컬 선택지입니다. 모델 카드를 비교하고 직접 만든 캐릭터 카드로 테스트해 보십시오. Yi-34B는 캐릭터의 감정적 깊이에 탁월합니다. 8 GB VRAM에서는 Qwen3 8B가 실용적인 선택이며, 속도는 하드웨어에 따라 다릅니다.',
         bullets: [
           'Qwen3-32B Q4_K_M: 약 20 GB, Qwen3에서 가장 큰 dense 모델 — 메모리가 큰 GPU 또는 Mac용',
           'Yi-34B Q4_K_M: 21 GB RAM, 탁월한 캐릭터 음성 및 감정 범위',
-          'Qwen3 8B Q4_K_M: 5.5 GB VRAM, 8~12 tok/s — 8 GB GPU에 최적',
+          'Qwen3 8B Q4_K_M: 5.5 GB VRAM — 8 GB GPU에 최적',
           'ChatGLM3-6B: 4.5 GB VRAM, 더 빠른 추론이지만 캐릭터 일관성 낮음',
         ],
         updatedDate: '2026-05',
@@ -1952,7 +1952,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     snippetBlocks: [
       {
         type: 'one-sentence',
-        content: 'Qwen3-32B Q4_K_M(약 20 GB)은 중국어 롤플레이에 쓸 만한 로컬 선택지입니다. 8 GB VRAM에서는 Qwen3 8B가 8~12 tok/s로 실용적인 선택입니다.',
+        content: 'Qwen3-32B Q4_K_M(약 20 GB)은 중국어 롤플레이에 쓸 만한 로컬 선택지입니다. 8 GB VRAM에서는 Qwen3 8B가 실용적인 선택이며, 속도는 하드웨어에 따라 다릅니다.',
       },
       {
         type: 'plain-terms',
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Qwen3-32B Q4_K_M: Qwen3에서 가장 큰 dense 모델, 약 20 GB',
           'Yi-34B Q4_K_M: 최고의 캐릭터 깊이, 21 GB RAM 필요',
-          'Qwen3 8B Q4_K_M: 8 GB VRAM에 최적, 8~12 tok/s',
+          'Qwen3 8B Q4_K_M: 8 GB VRAM에 최적',
           'SillyTavern → API 유형: OpenAI 호환 → URL: http://127.0.0.1:11434/v1',
           '캐릭터 카드: 중국어 텍스트를 직접 붙여넣고 UTF-8로 저장',
           '시스템 프롬프트: 始终用简体中文回复。保持角色一致性。',
@@ -1995,13 +1995,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '네 가지 모델이 주요 하드웨어 수준을 커버합니다. Qwen3-32B는 Qwen3에서 가장 큰 dense 모델로 Q4_K_M 기준 약 20 GB가 필요합니다(메모리가 큰 GPU 또는 통합 메모리가 충분한 Mac). 중국어 산문 품질은 여기서 평가하지 않았으므로 모델 카드를 비교하고 직접 테스트해 보십시오. Yi-34B는 캐릭터 음성과 감정적 깊이를 우선시하는 사용자를 위한 두 번째 선택입니다. Qwen3 8B는 일반 게이밍 GPU에 적합한 실용적인 옵션입니다.',
         ],
         comparisonTable: {
-          columns: ['모델', 'VRAM / RAM', '중국어 점수', '속도', '최적 용도'],
+          columns: ['모델', 'VRAM / RAM', '최적 용도'],
           rows: [
-            { '모델': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', '중국어 점수': '—', '속도': '—', '최적 용도': 'Qwen3에서 가장 큰 dense 모델' },
-            { '모델': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', '중국어 점수': '★★★★☆', '속도': '2~5 tok/s', '최적 용도': '감정적 깊이, 캐릭터 음성' },
-            { '모델': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', '중국어 점수': '★★★★☆', '속도': '4~8 tok/s', '최적 용도': '품질과 속도의 균형' },
-            { '모델': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', '중국어 점수': '★★★☆☆', '속도': '8~12 tok/s', '최적 용도': 'RTX 3060, 8 GB VRAM GPU' },
-            { '모델': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', '중국어 점수': '★★★☆☆', '속도': '12~18 tok/s', '최적 용도': '더 빠름, 제한된 컨텍스트 (8K)' },
+            { '모델': 'Qwen3-32B Q4_K_M', 'VRAM / RAM': '~20 GB', '최적 용도': 'Qwen3에서 가장 큰 dense 모델' },
+            { '모델': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', '최적 용도': '감정적 깊이, 캐릭터 음성' },
+            { '모델': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', '최적 용도': '품질과 속도의 균형' },
+            { '모델': 'Qwen3 8B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', '최적 용도': 'RTX 3060, 8 GB VRAM GPU' },
+            { '모델': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', '최적 용도': '더 빠름, 제한된 컨텍스트 (8K)' },
           ],
         },
         image: '/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-ko.webp',
@@ -2014,7 +2014,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SillyTavern은 OpenAI 호환 API 엔드포인트를 통해 Ollama와 통신합니다. 별도의 플러그인이 필요하지 않습니다 — Ollama가 포트 11434에서 네이티브로 이를 제공합니다.',
         ],
         numberedItems: [
-          '모델 다운로드: 터미널에서 `ollama pull qwen2.5:7b` (또는 `qwen2.5:72b`, `yi:34b`)를 실행하십시오',
+          '모델 다운로드: 터미널에서 `ollama pull qwen3:8b` (또는 `qwen3:32b`, `yi:34b`)를 실행하십시오',
           'SillyTavern 열기 → API 연결 → **OpenAI 호환** 선택',
           '사용자 정의 API URL을 `http://127.0.0.1:11434/v1`로 설정하십시오',
           'API 키를 비어있지 않은 임의의 문자열로 설정하십시오 (예: `ollama`) — Ollama는 키를 무시합니다',
@@ -2070,7 +2070,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Qwen3 8B는 긴 중국어 롤플레이 세션을 처리할 수 있습니까?',
-            a: '예. Qwen3 8B Q4_K_M은 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 방대한 설정이나 긴 대화 기록이 있는 긴 세션의 경우, SillyTavern의 API 설정에서 컨텍스트 창을 늘리고 10K+ 토큰에서 더 나은 일관성을 위해 Qwen3-14B 이상을 사용하십시오.',
+            a: '예. Qwen3 8B는 긴 컨텍스트를 기본적으로 지원하지만 Ollama의 기본 컨텍스트 창은 훨씬 작아 늘려야 합니다(Ollama 문서 참조). 방대한 설정이나 긴 대화 기록이 있는 긴 세션의 경우, SillyTavern의 API 설정에서 컨텍스트 창을 늘리고 10K+ 토큰에서 더 나은 일관성을 위해 Qwen3-14B 이상을 사용하십시오.',
           },
           {
             q: 'SillyTavern은 중국어 캐릭터 이름과 설명을 지원합니까?',
@@ -2078,7 +2078,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Yi-34B가 중국어 롤플레이에서 Qwen3-14B보다 낫습니까?',
-            a: 'Yi-34B는 특히 복잡하거나 문학적인 장면에서 더 표현적이고 감정적으로 다양한 캐릭터 응답을 생성합니다. Qwen3-14B는 더 빠르고(4~8 tok/s 대 2~5 tok/s) RAM이 덜 필요합니다. 순수한 롤플레이 몰입감을 위해서는 Yi-34B가 우수하고, 속도와 낮은 하드웨어 요구 사항을 위해서는 Qwen3-14B가 최선입니다.',
+            a: 'Yi-34B는 특히 복잡하거나 문학적인 장면에서 더 표현적이고 감정적으로 다양한 캐릭터 응답을 생성합니다. Qwen3-14B는 일반적으로 더 빠르고 RAM이 덜 필요합니다. 순수한 롤플레이 몰입감을 위해서는 Yi-34B가 우수하고, 속도와 낮은 하드웨어 요구 사항을 위해서는 Qwen3-14B가 최선입니다.',
           },
           {
             q: '모델이 중국어와 영어를 혼합하여 출력하는 이유는 무엇입니까?',
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Qwen3 8B는 긴 중국어 롤플레이 세션을 처리할 수 있습니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '예. Qwen3 8B Q4_K_M은 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 긴 세션의 경우 컨텍스트 창을 늘리고 Qwen3-14B 이상을 사용하십시오.' },
+          acceptedAnswer: { '@type': 'Answer', text: '예. Qwen3 8B는 긴 컨텍스트를 기본적으로 지원하지만 Ollama의 기본 컨텍스트 창은 훨씬 작아 늘려야 합니다(Ollama 문서 참조). 긴 세션의 경우 컨텍스트 창을 늘리고 Qwen3-14B 이상을 사용하십시오.' },
         },
         {
           '@type': 'Question',

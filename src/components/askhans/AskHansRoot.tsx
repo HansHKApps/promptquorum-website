@@ -24,6 +24,8 @@ import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadCon
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
 import { logEvent, streamAnswer } from './useAskStream'
 import { trackPromoOpen } from '@/lib/tracking/promo'
+import { CTA_EXPERIMENT_ENABLED, type CtaPlacement } from '@/lib/askhans/experiment/config'
+import { onceCta, trackCta } from '@/lib/askhans/experiment/track'
 import { useIsDesktop } from './useIsDesktop'
 import { WelcomeBox } from './WelcomeBox'
 
@@ -90,6 +92,10 @@ export function AskHansRoot() {
   /** answers that already produced a counted click (each answer counts once in the click-through rate) */
   const clickedAnswers = useRef(new Set<string>())
   const wasOpen = useRef<boolean | null>(null)
+  /** which experiment button asked for this open (header / floating / about / page); sent once with ask_hans_opened, then cleared */
+  const ctaVia = useRef<CtaPlacement | null>(null)
+  /** successful answers per conversation in this use session (button-wording experiment funnel; in memory only, never stored) */
+  const convQuestions = useRef(new Map<string, number>())
   /** promo slot that asked for this open (`promo_<target>_<placement>`), sent once with the 'open' counter, then cleared */
   const openSource = useRef<string | null>(null)
   /** element that opened the window (promo button): gets focus back when the window closes */
@@ -110,6 +116,13 @@ export function AskHansRoot() {
     if (consentRef.current?.value === 'yes' && info && seconds >= 3) {
       logEvent({ type: 'session_end', ret: info.returning ? 'back' : 'new', days: daysBucket(info.daysSinceFirst), dur: durationBucket(seconds), msgs: questionBucket(sessionQuestions.current) })
     }
+    // Button experiment: one anonymous sum per use session (conversations, questions, active seconds), consent only.
+    if (CTA_EXPERIMENT_ENABLED && consentRef.current?.value === 'yes' && convQuestions.current.size > 0) {
+      let qs = 0
+      convQuestions.current.forEach((n) => (qs += n))
+      trackCta('ask_hans_session_end', true, { convs: convQuestions.current.size, qs, secs: Math.round(seconds) })
+    }
+    convQuestions.current.clear()
     segMs.current = 0
     sessionQuestions.current = 0
   }, [])
@@ -128,6 +141,7 @@ export function AskHansRoot() {
     setConsent(c)
     consentRef.current = c
     if (c?.value === 'yes') usageInfo.current = touchUsage()
+    if (usageInfo.current?.returning && onceCta('return')) trackCta('ask_hans_return_visit', true)
     try {
       if (sessionStorage.getItem(ASK_HANS_STORAGE.promoShown)) totalMs.current = ASK_HANS_PROMO_AFTER_S * 1000
     } catch {
@@ -146,6 +160,9 @@ export function AskHansRoot() {
     // (anonymous counter, no visitor ID).
     if (!ready) return
     if (wasOpen.current === false && ui.open) {
+      // Button experiment: the window really opened (separate from the click). `via` says which experiment button asked for it.
+      trackCta('ask_hans_opened', false, { via: ctaVia.current ?? 'other' })
+      ctaVia.current = null
       // Totals are consent-only (privacy decision 2026-11-07). A promo slot adds only its fixed source name.
       if (consentRef.current?.value === 'yes') logEvent(openSource.current ? { type: 'open', source: openSource.current } : { type: 'open' })
       // Promo opens are also counted in Umami (cookieless, anonymous, listed under "Necessary", same as promo_click),
@@ -192,6 +209,12 @@ export function AskHansRoot() {
     if (consent?.saveHistory) saveConversations(conversations)
     else clearSavedConversations()
   }, [conversations, streaming, ready, consent?.saveHistory])
+
+  // Button experiment: Power Mode screen entered by a visitor who said "Yes" (once per session). Separate from the existing
+  // per-report Power Mode totals, which are untouched.
+  useEffect(() => {
+    if (mode === 'power' && consentRef.current?.value === 'yes' && onceCta('power')) trackCta('ask_hans_power_mode_used', true)
+  }, [mode])
 
   // Opening an earlier conversation renders it below the cards: bring it into view.
   useEffect(() => {
@@ -268,6 +291,15 @@ export function AskHansRoot() {
         } else if (ev.t === 'done') {
           const empty = !acc.trim()
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : { overview: ev.overview }) }))
+          if (!empty) {
+            // Button experiment funnel: a successful answer = a successfully submitted question (empty or failed requests never get here).
+            const n = (convQuestions.current.get(conv.id) ?? 0) + 1
+            convQuestions.current.set(conv.id, n)
+            const yes = consentValue?.value === 'yes'
+            if (n === 1) trackCta('ask_hans_first_question', yes)
+            else if (n === 2) trackCta('ask_hans_second_question', yes)
+            else if (n === 3) trackCta('ask_hans_three_questions', yes)
+          }
           if (!empty && consentValue?.value === 'yes') {
             logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, topics: ev.topics, lang: ev.qlang ?? lang })
           }
@@ -321,11 +353,12 @@ export function AskHansRoot() {
   useEffect(() => {
     if (!ready) return
     const on = (e: Event) => {
-      const detail = (e as CustomEvent<{ question?: string; power?: boolean; source?: string; returnFocusTo?: HTMLElement }>).detail
+      const detail = (e as CustomEvent<{ question?: string; power?: boolean; source?: string; cta?: string; returnFocusTo?: HTMLElement }>).detail
       const q = detail?.question
       // Promo opens only: remember the source and the trigger, but only if this call really opens the window
       // (an already open window logs no 'open' and keeps its own focus).
       if (wasOpen.current === false) {
+        if (detail?.cta === 'header' || detail?.cta === 'about' || detail?.cta === 'page') ctaVia.current = detail.cta
         if (typeof detail?.source === 'string') openSource.current = detail.source
         if (detail?.returnFocusTo instanceof HTMLElement) returnFocusTo.current = detail.returnFocusTo
       }
@@ -359,7 +392,9 @@ export function AskHansRoot() {
     setConsent(rec)
     setConsentOpen(false)
     consentRef.current = rec
+    trackCta('ask_hans_consent_choice', false, { choice: value })
     if (value === 'yes') usageInfo.current = touchUsage()
+    if (value === 'yes' && usageInfo.current?.returning && onceCta('return')) trackCta('ask_hans_return_visit', true)
     if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
     return rec
   }
@@ -415,6 +450,9 @@ export function AskHansRoot() {
     const section = clickSection(href)
     const first = section !== 'external' && !!answerId && !clickedAnswers.current.has(answerId)
     if (first && answerId) clickedAnswers.current.add(answerId)
+    // Button experiment: "conversation completed" = the first click from an answer through to a site page (the existing
+    // click-through success measure), once per browser session. Closing the window does not count.
+    if (first && onceCta('completed')) trackCta('ask_hans_conversation_completed', true)
     logEvent({ type: 'answer_click', visitId: visitId.current, source, section, firstForAnswer: first })
   }
 
@@ -532,7 +570,9 @@ export function AskHansRoot() {
       {showLogo && <AskHansLogo
           ref={logoRef}
           onOpen={() => {
-            window.umami?.track('ask_hans_button_click', { source_page: window.location.pathname })
+            // With the button experiment on, the same event name is sent (with variant props) by useCta: not twice.
+            if (!CTA_EXPERIMENT_ENABLED) window.umami?.track('ask_hans_button_click', { source_page: window.location.pathname })
+            ctaVia.current = 'floating'
             openWindow()
           }}
         />}

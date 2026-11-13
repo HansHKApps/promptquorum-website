@@ -72,7 +72,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Category 6 — Mobile & Edge LLMs
   'best-local-llm-apps-iphone-2026':             'best-local-llm-apps-iphone-2026',
+  'local-ai-on-iphone-guide':                    'local-ai-on-iphone-guide',
   'best-local-llm-apps-android-2026':            'best-local-llm-apps-android-2026',
+  'local-ai-on-android-guide':                   'local-ai-on-android-guide',
   'best-local-llm-apps-mac':                     'best-local-llm-apps-mac',
   'local-llm-app-alternatives':                  'local-llm-app-alternatives',
   'loci-ai-review-offline-local-ai':             'loci-ai-review-offline-local-ai',
@@ -426,6 +428,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'whisper-notes-review':                   'whisper-notes-review',
   'aiko-review':                            'aiko-review',
   'amical-review':                          'amical-review',
+  'argos-translate-review':                 'argos-translate-review',
+  'linguister-review':                      'linguister-review',
+  'dayflow-review':                         'dayflow-review',
+  'univocal-review':                        'univocal-review',
   'stratosort-review':                      'stratosort-review',
   'sprich-review':                          'sprich-review',
   'weesper-neon-flow-review':               'weesper-neon-flow-review',
@@ -593,6 +599,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'murmur-review':                            'murmur-review',
   'fullmoon-review':                          'fullmoon-review',
   'reins-review':                             'reins-review',
+  'phantasm-review':                          'phantasm-review',
   'openvoiceos-review':                       'openvoiceos-review',
   'hillnote-review':                          'hillnote-review',
   'trilium-notes-review':                     'trilium-notes-review',
