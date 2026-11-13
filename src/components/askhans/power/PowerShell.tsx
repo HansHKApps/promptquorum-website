@@ -26,10 +26,11 @@ import { HardwareStep } from './HardwareStep'
 import { MobileStep } from './MobileStep'
 import { profileFromHardware, profileFromMobile, saveProfile } from './profile'
 import { ReportView } from './ReportView'
+import { ToolCards, ToolView, toolTitle, type ToolId } from './ToolsPanel'
 import { buildFileBase, localIsoDate, nextReportNumber } from './export/fileName'
 import { clearSavedAudit, parseImprovements, readSavedAudit, writeSavedAudit, type SavedAudit } from './auditStore'
 
-type View = { k: 'menu' } | { k: 'wizard'; process: ProcessId; index: number } | { k: 'consent'; process: ProcessId } | { k: 'run'; process: ProcessId } | { k: 'report'; process: ProcessId }
+type View = { k: 'menu' } | { k: 'tool'; tool: ToolId } | { k: 'wizard'; process: ProcessId; index: number } | { k: 'consent'; process: ProcessId } | { k: 'run'; process: ProcessId } | { k: 'report'; process: ProcessId }
 
 interface Props {
   /** anonymous visit ID (read when the report is requested, not during render) */
@@ -105,7 +106,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
 
   const ownTextFor = (id: string) => (id === 'auditSetup' ? tx.audit.setupText : id === 'auditProblems' ? tx.audit.problemsText : tx.wizard.ownText)
 
-  const processOf = view.k === 'menu' ? null : view.process
+  const processOf = view.k === 'menu' || view.k === 'tool' ? null : view.process
 
   // A saved audit lives only in this browser; read it when the process list is shown.
   // eslint-disable-next-line react-hooks/exhaustive-deps -- savedTick re-reads the store after a delete
@@ -164,6 +165,10 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
   const goBack = useCallback((): boolean => {
     if (view.k === 'menu') {
       onExit()
+      return true
+    }
+    if (view.k === 'tool') {
+      setView({ k: 'menu' })
       return true
     }
     if (view.k === 'wizard') {
@@ -391,6 +396,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
 
   // ---- rendering --------------------------------------------------------------------------------
   const backLabel = view.k === 'menu' ? tx.menu.back : tx.wizard.back
+  const toolOf = view.k === 'tool' ? view.tool : null
 
   const topBar = (
     <div className="mb-3 flex items-center justify-between gap-2">
@@ -402,6 +408,7 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
         <AskIcon name="ArrowLeft" className="h-4 w-4 rtl:-scale-x-100" />
         {backLabel}
       </button>
+      {toolOf && <span className="truncate text-[12px] font-semibold text-muted-foreground">{toolTitle(toolOf, lang as Language)}</span>}
       {processOf && <span className="truncate text-[12px] font-semibold text-muted-foreground">{tx.processes[processOf].name}</span>}
     </div>
   )
@@ -446,9 +453,12 @@ export function PowerShell({ getVisitId, consent, onConsent, backRef, onExit }: 
             </li>
           ))}
         </ul>
+        <ToolCards lang={lang as Language} onOpen={(tool) => setView({ k: 'tool', tool })} />
         <p className="mt-3 text-[12px] text-muted-foreground">{tx.menu.escHint}</p>
       </>
     )
+  } else if (view.k === 'tool') {
+    body = <ToolView id={view.tool} lang={lang as Language} />
   } else if (view.k === 'wizard') {
     const steps = visibleSteps(view.process, { choices })
     const step = steps[Math.min(view.index, steps.length - 1)]
