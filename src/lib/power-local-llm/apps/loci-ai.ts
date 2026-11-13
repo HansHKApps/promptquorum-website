@@ -9,7 +9,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'loci-ai',
   name: 'Loci AI',
-  categories: ['general-chat-clients'],
+  categories: ['general-chat-clients', 'inference-engines', 'autonomous-agents', 'computer-browser-agents', 'mcp-servers-skills', 'chat-app-bots', 'image-generation', 'video-generation'], // 2026-11-13: extra categories follow Michael Waldman's Nov 2026 statements (inference engine, agent harness, browser control, MCP for coding agents, messaging, image/video models) — maker-stated, not tested by PromptQuorum
   interfaces: ['mobile', 'desktop'], // desktop added 2026-10-23: Mac + Windows (beta) builds listed on askloci.ai
   locality: 'local',
   platforms: ['ios', 'android', 'mac', 'win'],
@@ -22,7 +22,7 @@ export const app: ToolRecord = {
   addedDate: '2026-08-22',
   founderReviewedDate: '2026-10-23',
   status: 'listed',
-  uses: ['chat', 'agent'], // 'agent' added 2026-11-08: askloci.ai/agents documents a Mac MCP + OpenAI-compatible interface for coding agents
+  uses: ['chat', 'agent', 'code', 'image'], // 'agent' added 2026-11-08: askloci.ai/agents documents a Mac MCP + OpenAI-compatible interface for coding agents
   url: 'askloci.ai',
   storeLinks: {
     appStore: 'https://apps.apple.com/us/app/loci-private-local-ai/id6762100748',
@@ -46,7 +46,7 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: '2026-11-08',
-  lastUpstreamUpdate: '2026-11-05', // Apple iTunes lookup API (re-verified 2026-11-08): iOS v1.3.40 released 2026-11-05 22:15 UTC; Mac App Store v2.0.0 released 2026-10-29. Newer of the two; Android/Windows builds publish no version number
+  lastUpstreamUpdate: '2026-11-10', // Apple iTunes lookup API (re-verified 2026-11-08): iOS v1.3.40 released 2026-11-05 22:15 UTC; Mac App Store v2.0.0 released 2026-10-29. Newer of the two; Android/Windows builds publish no version number
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/loci/id6762100748',
   pqReview: {
     date: '2026-11-08',
