@@ -261,6 +261,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'murmur':                                  'murmur',
   'fullmoon':                                'fullmoon',
   'reins':                                   'reins',
+  'phantasm':                                'phantasm',
   'openvoiceos':                             'openvoiceos',
   'hillnote':                                'hillnote',
   'trilium-notes':                           'trilium-notes',

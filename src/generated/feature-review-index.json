@@ -1044,6 +1044,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "phantasm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "phantasm-review",
+    "url": "/power-local-llm/phantasm-review"
+  },
   "openvoiceos": {
     "cluster": "power-local-llm",
     "urlSlug": "openvoiceos-review",
