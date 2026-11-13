@@ -111,6 +111,7 @@ import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_fullmoon_review } from './articles/fullmoon-review'
 import { article as a_reins_review } from './articles/reins-review'
+import { article as a_phantasm_review } from './articles/phantasm-review'
 import { article as a_openvoiceos_review } from './articles/openvoiceos-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
 import { article as a_trilium_notes_review } from './articles/trilium-notes-review'
@@ -821,6 +822,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'murmur-review':                                 a_murmur_review,
   'fullmoon-review':                               a_fullmoon_review,
   'reins-review':                                  a_reins_review,
+  'phantasm-review':                               a_phantasm_review,
   'openvoiceos-review':                            a_openvoiceos_review,
   'hillnote-review':                               a_hillnote_review,
   'trilium-notes-review':                          a_trilium_notes_review,
