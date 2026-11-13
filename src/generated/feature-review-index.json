@@ -1714,6 +1714,11 @@
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
   },
+  "linguister": {
+    "cluster": "power-local-llm",
+    "urlSlug": "linguister-review",
+    "url": "/power-local-llm/linguister-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",
