@@ -409,9 +409,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Passt:** Käufer, die 192 GB Unified Memory in einem Gerät brauchen und Windows oder Linux dem DGX OS von NVIDIA vorziehen.',
           '**Passt:** Nutzer, die zwei 10GbE-Anschlüsse und USB4 v2 für ein schnelles lokales Netzwerk oder externen Massenspeicher wollen.',
-          '**Nichts:** Entwickler, die CUDA, Fine-Tuning mit NVIDIA-Werkzeugen oder eine 200-Gbit/s-Verbindung zwischen zwei Geräten brauchen; vergleichen Sie die [DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation).',
-          '**Nichts:** wer nur 128 GB braucht; vergleichen Sie die Datenblätter anderer Strix-Halo-Mini-PCs und der Spark.',
-          '**Nichts:** Käufer, die vor der Zahlung einen unabhängig gemessenen Wert in Token pro Sekunde für genau dieses Gerät brauchen, denn wir haben keinen gefunden.',
+          '**Eher nicht:** Entwickler, die CUDA, Fine-Tuning mit NVIDIA-Werkzeugen oder eine 200-Gbit/s-Verbindung zwischen zwei Geräten brauchen; vergleichen Sie die [DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation).',
+          '**Eher nicht:** wer nur 128 GB braucht; vergleichen Sie die Datenblätter anderer Strix-Halo-Mini-PCs und der Spark.',
+          '**Eher nicht:** Käufer, die vor der Zahlung einen unabhängig gemessenen Wert in Token pro Sekunde für genau dieses Gerät brauchen, denn wir haben keinen gefunden.',
         ],
       },
       alternatives: {
