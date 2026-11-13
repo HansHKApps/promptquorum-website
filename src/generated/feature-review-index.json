@@ -1734,6 +1734,11 @@
     "urlSlug": "dayflow-review",
     "url": "/power-local-llm/dayflow-review"
   },
+  "univocal": {
+    "cluster": "power-local-llm",
+    "urlSlug": "univocal-review",
+    "url": "/power-local-llm/univocal-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",
