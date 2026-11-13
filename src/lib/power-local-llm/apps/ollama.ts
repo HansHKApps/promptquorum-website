@@ -37,7 +37,7 @@ export const app: ToolRecord = {
   reviewSlug: 'ollama-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { modelLibrary: true },
-  lastVerifiedDate: '2026-09-12',
-  lastUpstreamUpdate: '2026-10-23', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
+  lastVerifiedDate: '2026-11-13',
+  lastUpstreamUpdate: '2026-11-13', // GitHub API (latest release v0.40.16 on 2026-11-09; last push 2026-11-13 is newer), read 2026-11-13
   lastUpstreamUpdateSource: 'https://github.com/ollama/ollama',
 }
