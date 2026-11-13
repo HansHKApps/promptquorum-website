@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacy, License and Cost',
         content: [
-          '**The README calls Argos Translate an offline library, and the text you translate does not need to leave your computer.** The network is used by pip, by `argospm update` for the package index and to download each `.argosmodel` file. Dependencies such as Stanza and SentencePiece are installed with it; the newest repository commit makes Stanza optional, but PyPI 1.11.0 still lists it as required. The code is open and PromptQuorum did not examine network traffic or what the dependencies fetch at run time, so the privacy claims are the maker\'s own.',
+          '**According to its README, Argos Translate is an offline library, so the text you translate should not need to leave your computer once the packages are installed.** The network is used by pip, by `argospm update` for the package index and to download each `.argosmodel` file. Dependencies such as Stanza and SentencePiece are installed with it; the newest repository commit makes Stanza optional, but PyPI 1.11.0 still lists it as required. The code is open and PromptQuorum did not examine network traffic or what the dependencies fetch at run time, so the privacy claims are the maker\'s own.',
           'The license is MIT and the software is free. The project accepts donations and lists a sponsor on its README; it makes no claim about the license of the individual language packages, which PromptQuorum did not check.',
         ],
       },
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Datenschutz, Lizenz und Kosten',
         content: [
-          '**Das README nennt Argos Translate eine Offline-Bibliothek, und der zu übersetzende Text muss Ihren Computer nicht verlassen.** Das Netzwerk nutzen pip, `argospm update` für den Paketindex und der Download jeder `.argosmodel`-Datei. Abhängigkeiten wie Stanza und SentencePiece werden mitinstalliert; der neueste Commit im Repository macht Stanza optional, PyPI 1.11.0 führt es aber weiterhin als Pflicht auf. Der Code ist offen, und PromptQuorum hat weder den Netzwerkverkehr noch das, was die Abhängigkeiten zur Laufzeit laden, untersucht; die Datenschutzaussagen stammen daher vom Hersteller.',
+          '**Laut README ist Argos Translate eine Offline-Bibliothek, der zu übersetzende Text sollte Ihren Computer nach der Paketinstallation also nicht verlassen müssen.** Das Netzwerk nutzen pip, `argospm update` für den Paketindex und der Download jeder `.argosmodel`-Datei. Abhängigkeiten wie Stanza und SentencePiece werden mitinstalliert; der neueste Commit im Repository macht Stanza optional, PyPI 1.11.0 führt es aber weiterhin als Pflicht auf. Der Code ist offen, und PromptQuorum hat weder den Netzwerkverkehr noch das, was die Abhängigkeiten zur Laufzeit laden, untersucht; die Datenschutzaussagen stammen daher vom Hersteller.',
           'Die Lizenz ist MIT, die Software ist kostenlos. Das Projekt nimmt Spenden an und nennt im README einen Sponsor; zur Lizenz der einzelnen Sprachpakete macht es keine Aussage, und PromptQuorum hat sie nicht geprüft.',
         ],
       },
@@ -904,7 +904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Confidentialité, licence et coût',
         content: [
-          '**Le README qualifie Argos Translate de bibliothèque hors ligne, et le texte à traduire n’a pas besoin de quitter votre ordinateur.** Le réseau est utilisé par pip, par `argospm update` pour l’index des paquets et pour télécharger chaque fichier `.argosmodel`. Des dépendances comme Stanza et SentencePiece sont installées avec lui ; le commit le plus récent du dépôt rend Stanza facultatif, mais PyPI 1.11.0 le liste toujours comme obligatoire. Le code est ouvert et PromptQuorum n’a examiné ni le trafic réseau ni ce que les dépendances récupèrent à l’exécution ; les affirmations de confidentialité sont donc celles de l’éditeur.',
+          '**Selon son README, Argos Translate est une bibliothèque hors ligne ; le texte à traduire ne devrait donc pas avoir besoin de quitter votre ordinateur une fois les paquets installés.** Le réseau est utilisé par pip, par `argospm update` pour l’index des paquets et pour télécharger chaque fichier `.argosmodel`. Des dépendances comme Stanza et SentencePiece sont installées avec lui ; le commit le plus récent du dépôt rend Stanza facultatif, mais PyPI 1.11.0 le liste toujours comme obligatoire. Le code est ouvert et PromptQuorum n’a examiné ni le trafic réseau ni ce que les dépendances récupèrent à l’exécution ; les affirmations de confidentialité sont donc celles de l’éditeur.',
           'La licence est MIT et le logiciel est gratuit. Le projet accepte les dons et cite un sponsor dans son README ; il ne dit rien de la licence de chaque paquet de langue, que PromptQuorum n’a pas vérifiée.',
         ],
       },
@@ -1254,7 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'プライバシー・ライセンス・費用',
         content: [
-          '**READMEはArgos Translateをオフラインのライブラリと説明しており、翻訳するテキストがPCの外に出る必要はありません。**ネットワークを使うのは、pip、パッケージ索引のための`argospm update`、各`.argosmodel`ファイルのダウンロードです。StanzaやSentencePieceなどの依存ライブラリも一緒にインストールされます。リポジトリの最新コミットではStanzaが任意になりましたが、PyPIの1.11.0では今も必須として載っています。コードは公開されていますが、PromptQuorumはネットワーク通信や、依存ライブラリが実行時に取得するものを調べていないため、プライバシーに関する記述は開発元自身のものです。',
+          '**READMEによると、Argos Translateはオフラインのライブラリであり、パッケージのインストール後は、翻訳するテキストがPCの外に出る必要はないはずです。**ネットワークを使うのは、pip、パッケージ索引のための`argospm update`、各`.argosmodel`ファイルのダウンロードです。StanzaやSentencePieceなどの依存ライブラリも一緒にインストールされます。リポジトリの最新コミットではStanzaが任意になりましたが、PyPIの1.11.0では今も必須として載っています。コードは公開されていますが、PromptQuorumはネットワーク通信や、依存ライブラリが実行時に取得するものを調べていないため、プライバシーに関する記述は開発元自身のものです。',
           'ライセンスはMITで、ソフトウェアは無料です。プロジェクトは寄付を受け付け、READMEにスポンサーを掲載しています。個々の言語パッケージのライセンスについては記載がなく、PromptQuorumも確認していません。',
         ],
       },
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '隐私、许可与费用',
         content: [
-          '**README称Argos Translate是离线库，你要翻译的文本不必离开你的电脑。**pip、用于更新软件包索引的`argospm update`以及每个`.argosmodel`文件的下载都会用到网络。Stanza和SentencePiece等依赖项会一同安装；仓库最新提交已把Stanza改为可选，但PyPI上的1.11.0仍把它列为必需。代码是开放的，PromptQuorum没有检查网络流量，也没有检查依赖项在运行时会获取什么，因此隐私方面的说法来自开发方自己。',
+          '**据README称，Argos Translate是离线库，因此安装好软件包后，你要翻译的文本应当不必离开你的电脑。**pip、用于更新软件包索引的`argospm update`以及每个`.argosmodel`文件的下载都会用到网络。Stanza和SentencePiece等依赖项会一同安装；仓库最新提交已把Stanza改为可选，但PyPI上的1.11.0仍把它列为必需。代码是开放的，PromptQuorum没有检查网络流量，也没有检查依赖项在运行时会获取什么，因此隐私方面的说法来自开发方自己。',
           '许可证是MIT，软件免费。项目接受捐赠，并在README中列出一家赞助商；它没有说明各个语言包的许可，PromptQuorum也没有核实。',
         ],
       },
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacidad, licencia y coste',
         content: [
-          '**El README llama a Argos Translate una biblioteca sin conexión, y el texto que traduces no necesita salir de tu ordenador.** La red la usan pip, `argospm update` para el índice de paquetes y la descarga de cada archivo `.argosmodel`. Dependencias como Stanza y SentencePiece se instalan con ella; el commit más reciente del repositorio hace opcional Stanza, pero PyPI 1.11.0 todavía lo lista como obligatorio. El código es abierto y PromptQuorum no examinó el tráfico de red ni lo que las dependencias descargan en tiempo de ejecución, así que las afirmaciones de privacidad son del propio creador.',
+          '**Según su README, Argos Translate es una biblioteca sin conexión, así que el texto que traduces no debería necesitar salir de tu ordenador una vez instalados los paquetes.** La red la usan pip, `argospm update` para el índice de paquetes y la descarga de cada archivo `.argosmodel`. Dependencias como Stanza y SentencePiece se instalan con ella; el commit más reciente del repositorio hace opcional Stanza, pero PyPI 1.11.0 todavía lo lista como obligatorio. El código es abierto y PromptQuorum no examinó el tráfico de red ni lo que las dependencias descargan en tiempo de ejecución, así que las afirmaciones de privacidad son del propio creador.',
           'La licencia es MIT y el software es gratuito. El proyecto acepta donaciones y menciona un patrocinador en su README; no dice nada sobre la licencia de cada paquete de idioma, que PromptQuorum no comprobó.',
         ],
       },
@@ -2304,7 +2304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacidade, licença e custo',
         content: [
-          '**O README chama o Argos Translate de biblioteca offline, e o texto que você traduz não precisa sair do seu computador.** A rede é usada pelo pip, pelo `argospm update` para o índice de pacotes e para baixar cada arquivo `.argosmodel`. Dependências como Stanza e SentencePiece são instaladas junto; o commit mais recente do repositório torna o Stanza opcional, mas o PyPI 1.11.0 ainda o lista como obrigatório. O código é aberto e o PromptQuorum não examinou o tráfego de rede nem o que as dependências baixam em tempo de execução, então as afirmações de privacidade são do próprio criador.',
+          '**Segundo o README, o Argos Translate é uma biblioteca offline, então o texto que você traduz não deveria precisar sair do seu computador depois que os pacotes forem instalados.** A rede é usada pelo pip, pelo `argospm update` para o índice de pacotes e para baixar cada arquivo `.argosmodel`. Dependências como Stanza e SentencePiece são instaladas junto; o commit mais recente do repositório torna o Stanza opcional, mas o PyPI 1.11.0 ainda o lista como obrigatório. O código é aberto e o PromptQuorum não examinou o tráfego de rede nem o que as dependências baixam em tempo de execução, então as afirmações de privacidade são do próprio criador.',
           'A licença é MIT e o software é gratuito. O projeto aceita doações e cita um patrocinador no README; não diz nada sobre a licença de cada pacote de idioma, que o PromptQuorum não verificou.',
         ],
       },
@@ -2660,7 +2660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'الخصوصية والترخيص والتكلفة',
         content: [
-          '**يسمّي README مكتبة Argos Translate مكتبة تعمل دون اتصال، ولا يلزم أن يغادر النص الذي تترجمه حاسوبك.** تستخدم الشبكةَ أداة pip والأمر `argospm update` لفهرس الحزم وتنزيل كل ملف `.argosmodel`. وتُثبَّت معها تبعيات مثل Stanza وSentencePiece؛ وأحدث commit في المستودع يجعل Stanza اختياريًا، لكن PyPI 1.11.0 ما زال يدرجها إلزامية. الشيفرة مفتوحة، ولم تفحص PromptQuorum حركة الشبكة ولا ما تجلبه التبعيات أثناء التشغيل، لذا فادعاءات الخصوصية من المطوّر نفسه.',
+          '**بحسب README، فإن Argos Translate مكتبة تعمل دون اتصال، ولذا ينبغي ألا يحتاج النص الذي تترجمه إلى مغادرة حاسوبك بعد تثبيت الحزم.** تستخدم الشبكةَ أداة pip والأمر `argospm update` لفهرس الحزم وتنزيل كل ملف `.argosmodel`. وتُثبَّت معها تبعيات مثل Stanza وSentencePiece؛ وأحدث commit في المستودع يجعل Stanza اختياريًا، لكن PyPI 1.11.0 ما زال يدرجها إلزامية. الشيفرة مفتوحة، ولم تفحص PromptQuorum حركة الشبكة ولا ما تجلبه التبعيات أثناء التشغيل، لذا فادعاءات الخصوصية من المطوّر نفسه.',
           'الترخيص هو MIT والبرنامج مجاني. يقبل المشروع التبرعات ويذكر راعيًا في README؛ ولا يقول شيئًا عن ترخيص كل حزمة لغة، ولم تتحقق منه PromptQuorum.',
         ],
       },
@@ -3020,7 +3020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '개인정보 보호, 라이선스, 비용',
         content: [
-          '**README는 Argos Translate를 오프라인 라이브러리라고 부르며, 번역할 텍스트가 내 컴퓨터를 떠날 필요는 없습니다.** 네트워크는 pip, 패키지 색인을 위한 `argospm update`, 각 `.argosmodel` 파일 다운로드에 쓰입니다. Stanza와 SentencePiece 같은 의존 라이브러리가 함께 설치되며, 저장소의 최신 커밋은 Stanza를 선택 사항으로 바꿨지만 PyPI의 1.11.0은 여전히 필수로 표시합니다. 코드는 공개되어 있으나 PromptQuorum은 네트워크 트래픽이나 의존 라이브러리가 실행 중에 가져오는 내용을 점검하지 않았으므로, 개인정보 보호에 관한 설명은 개발사 자체의 것입니다.',
+          '**README에 따르면 Argos Translate는 오프라인 라이브러리이므로, 패키지를 설치한 뒤에는 번역할 텍스트가 내 컴퓨터를 떠날 필요가 없을 것으로 보입니다.** 네트워크는 pip, 패키지 색인을 위한 `argospm update`, 각 `.argosmodel` 파일 다운로드에 쓰입니다. Stanza와 SentencePiece 같은 의존 라이브러리가 함께 설치되며, 저장소의 최신 커밋은 Stanza를 선택 사항으로 바꿨지만 PyPI의 1.11.0은 여전히 필수로 표시합니다. 코드는 공개되어 있으나 PromptQuorum은 네트워크 트래픽이나 의존 라이브러리가 실행 중에 가져오는 내용을 점검하지 않았으므로, 개인정보 보호에 관한 설명은 개발사 자체의 것입니다.',
           '라이선스는 MIT이며 소프트웨어는 무료입니다. 프로젝트는 기부를 받고 README에 후원사를 표시합니다. 개별 언어 패키지의 라이선스에 대한 언급은 없으며, PromptQuorum도 확인하지 않았습니다.',
         ],
       },

@@ -1272,6 +1272,7 @@ const HUB_THEMES: Array<{
       'whisper-notes-review',
       'aiko-review',
       'amical-review',
+      'univocal-review',
       'sprich-review',
       'weesper-neon-flow-review',
       'sablate-review',
