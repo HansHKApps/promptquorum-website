@@ -3,23 +3,18 @@
 // Visitor assignment for the Ask Hans button experiment. Client only.
 //
 // - Uniform random A/B/C (crypto.getRandomValues, rejection sampling: exactly 1/3 each).
-// - Stored in sessionStorage under one key (same class of storage as the existing anonymous Ask Hans visit ID), so the
-//   variant is the same on every page and across client-side navigation within a visit. A new browser session draws
-//   again: returning visitors are re-randomised on purpose (no persistent storage before consent, TDDDG §25).
-// - If storage is blocked the assignment lives in memory for the page's lifetime.
+// - Held in memory only (module variable): NOTHING is written to cookies, localStorage, sessionStorage or IndexedDB. The
+//   variant is stable across client-side navigation; a full page load draws again (no visitor ID, no persistence).
 // - Bots / automated browsers, and visitors sending Do-Not-Track or Global Privacy Control, still see a wording (the
 //   page must work) but are never counted: `tracked` is false.
 
-import { CTA_EXPERIMENT_ID, CTA_VARIANTS, type CtaVariant } from './config'
+import { CTA_VARIANTS, type CtaVariant } from './config'
 
 export interface CtaAssignment {
   variant: CtaVariant
-  /** random per-session ID, used only to estimate unique sessions server-side (HyperLogLog, never stored as an ID) */
-  sid: string
   tracked: boolean
 }
 
-const KEY = 'askhans.cta.v1'
 const BOT_UA = /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|gtmetrix|prerender|preview|facebookexternalhit|monitor|curl|wget|python-requests|httpx/i
 
 function randomBytes(n: number): Uint8Array {
@@ -34,10 +29,6 @@ export function pickVariant(rand: () => number = () => randomBytes(1)[0]): CtaVa
     const b = rand()
     if (b < 255) return CTA_VARIANTS[b % 3] // 0..254 = 85 full cycles of 3
   }
-}
-
-function newSid(): string {
-  return Array.from(randomBytes(12), (b) => b.toString(16).padStart(2, '0')).join('')
 }
 
 export function isAutomated(): boolean {
@@ -57,25 +48,7 @@ let memo: CtaAssignment | null = null
 /** The visitor's assignment (created on first call). Never throws. */
 export function getAssignment(): CtaAssignment {
   if (memo) return memo
-  const tracked = !isAutomated()
-  try {
-    const raw = sessionStorage.getItem(KEY)
-    if (raw) {
-      const j = JSON.parse(raw) as { e?: string; v?: string; s?: string }
-      if (j.e === CTA_EXPERIMENT_ID && (CTA_VARIANTS as readonly string[]).includes(j.v ?? '') && typeof j.s === 'string') {
-        memo = { variant: j.v as CtaVariant, sid: j.s, tracked }
-        return memo
-      }
-    }
-  } catch {
-    // unreadable storage: draw below
-  }
-  const a: CtaAssignment = { variant: pickVariant(), sid: newSid(), tracked }
-  try {
-    sessionStorage.setItem(KEY, JSON.stringify({ e: CTA_EXPERIMENT_ID, v: a.variant, s: a.sid }))
-  } catch {
-    // blocked storage: memory only
-  }
+  const a: CtaAssignment = { variant: pickVariant(), tracked: !isAutomated() }
   memo = a
   return a
 }

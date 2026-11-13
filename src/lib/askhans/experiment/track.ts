@@ -18,17 +18,11 @@ export interface CtaEventExtra {
 
 const onceMemory = new Set<string>()
 
-/** True the first time `key` is seen in this browser session (sessionStorage, memory fallback). */
+/** True the first time `key` is seen in this page load (memory only, nothing is written to browser storage). */
 export function onceCta(key: string): boolean {
   const k = `askhans.cta.once.${key}`
   if (onceMemory.has(k)) return false
   onceMemory.add(k)
-  try {
-    if (sessionStorage.getItem(k)) return false
-    sessionStorage.setItem(k, '1')
-  } catch {
-    // memory only
-  }
   return true
 }
 
@@ -65,7 +59,7 @@ export function trackCta(event: CtaEvent, consentYes: boolean, extra: CtaEventEx
     void fetch('/api/ask/exp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ev: event, sid: a.sid, ...base, ...extra }),
+      body: JSON.stringify({ ev: event, ...base, ...extra }),
       keepalive: true,
     }).catch(() => undefined)
   } catch {

@@ -1,8 +1,9 @@
 // Ask Hans button experiment: read the counters and evaluate them (server only).
 //
-// Unit of analysis for the primary KPI is the browser SESSION:
-//   conversion = unique sessions with a first question / unique sessions that saw the button.
-// Both numbers are HyperLogLog estimates (standard error about 0.8%). Event counters (clicks, impressions, ...) are exact.
+// Unit of analysis for the primary KPI is the EXPOSURE = one button impression (no visitor or session ID exists, the
+// variant is held in memory only):
+//   conversion = first questions / button impressions.
+// All numbers are exact event counters. A visitor who reloads is drawn again, so repeat visitors count as several impressions.
 // The first-question numerator only contains visitors who said "Yes" in the consent step (see docs/askhans-cta-experiment.md),
 // so absolute rates are understated by the consent rate; the comparison between variants is not, as long as the consent
 // rate is about equal. The dashboard shows the consent share per variant so that assumption can be checked.
@@ -156,7 +157,7 @@ export function decide(
   const reasons: string[] = []
   if (days < CTA_MIN_DAYS) reasons.push(`Only ${days} of the minimum ${CTA_MIN_DAYS} days have passed.`)
   for (const p of posterior) {
-    if (p.n < CTA_MIN_EXPOSED_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.n} exposed sessions, need ${CTA_MIN_EXPOSED_PER_VARIANT}.`)
+    if (p.n < CTA_MIN_EXPOSED_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.n} impressions, need ${CTA_MIN_EXPOSED_PER_VARIANT}.`)
     if (p.k < CTA_MIN_CONVERSIONS_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.k} first-question sessions, need ${CTA_MIN_CONVERSIONS_PER_VARIANT}.`)
   }
   const top = [...posterior].sort((a, b) => b.probBest - a.probBest)[0]
@@ -169,14 +170,6 @@ export function decide(
 }
 
 // ---- Reading Redis -------------------------------------------------------------------------------------------------
-
-async function pf(key: string): Promise<number> {
-  try {
-    return Number(await redis.pfcount(key)) || 0
-  } catch {
-    return 0
-  }
-}
 
 function subgroup(h: Hash, dim: 'lang' | 'dev' | 'cat', keys: readonly string[]): SubgroupRow[] {
   return keys
@@ -204,8 +197,8 @@ export async function getExperimentReport(): Promise<ExperimentReport> {
 
   const variants = {} as Record<CtaVariant, VariantStats>
   for (const v of CTA_VARIANTS) {
-    const u = (ev: string) => pf(`${key}:u:${ev}:${v}`)
-    const [exposed, fqU] = await Promise.all([u('ask_hans_button_impression'), u('ask_hans_first_question')])
+    const exposed = num(h, `ask_hans_button_impression:${v}`)
+    const fqU = num(h, `ask_hans_first_question:${v}`)
     variants[v] = {
       variant: v,
       exposedSessions: exposed,
