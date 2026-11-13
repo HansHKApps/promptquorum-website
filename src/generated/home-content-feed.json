@@ -19603,6 +19603,87 @@
   },
   {
     "lang": "en",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: Specs, Price and Verdict",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) against the NVIDIA DGX Spark: sourced specs, US prices, networking, and who should skip each.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "GMKtec EVO-X5 Pro vs. DGX Spark: Specs, Preis und Fazit",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) gegen NVIDIA DGX Spark: Specs, US-Preise mit Quellen, Netzwerk und für wen welches Gerät nichts ist.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark : specs, prix et verdict",
+    "excerpt": "GMKtec EVO-X5 Pro (192 Go, Ryzen AI Max+ PRO 495) face au NVIDIA DGX Spark : specs sourcées, prix US, réseau et pour qui chacun est à éviter.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: 仕様・価格・総評",
+    "excerpt": "192GBのGMKtec EVO-X5 Pro（Ryzen AI Max+ PRO 495）とNVIDIA DGX Sparkを比較。情報源つきの仕様、米国価格、ネットワーク、それぞれを見送るべき人を解説します。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "GMKtec EVO-X5 Pro对比DGX Spark：规格、价格与结论",
+    "excerpt": "GMKtec EVO-X5 Pro（192 GB，Ryzen AI Max+ PRO 495）对比NVIDIA DGX Spark：有来源的规格、美国价格、网络，以及哪些人应跳过哪一款。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: especificaciones, precio y veredicto",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) frente a la NVIDIA DGX Spark: especificaciones con fuentes, precios en EE. UU., red y a quién no encaja.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: especificações, preço e veredito",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) contra o NVIDIA DGX Spark: specs com fontes, preços nos EUA, rede e quem deve evitar cada um.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "GMKtec EVO-X5 Pro مقابل DGX Spark: المواصفات والسعر والحكم",
+    "excerpt": "GMKtec EVO-X5 Pro (ذاكرة 192 GB ومعالج Ryzen AI Max+ PRO 495) مقابل NVIDIA DGX Spark: مواصفات موثقة وأسعار أمريكية وشبكات ولمن لا يناسب كل جهاز.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "GMKtec EVO-X5 Pro 대 DGX Spark: 사양, 가격, 평가",
+    "excerpt": "GMKtec EVO-X5 Pro(192GB, Ryzen AI Max+ PRO 495)와 NVIDIA DGX Spark: 출처가 확인된 사양, 미국 가격, 네트워킹, 비추천 대상.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
     "title": "Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict",
     "excerpt": "Minisforum MS-S1 MAX for local AI: Ryzen AI Max+ 395, 128 GB, dual 10GbE, PCIe slot, plus the 192 GB P495. Sourced US prices and what reviews found.",
     "publishDate": "2026-10-31",
