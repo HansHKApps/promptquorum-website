@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -94,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: System-Integrated On-Device AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
       { label: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)', anchor: '#reins' },
+      { label: 'Phantasm: Chat Client for Your Ollama, vLLM or llama.cpp Server (Not Benchmarked)', anchor: '#phantasm' },
       { label: 'fullmoon: Free Open-Source Chat on Apple MLX (No Release Since Early 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: Paid-Once Offline Chat (Not Benchmarked)', anchor: '#cloak-local-ai' },
       { label: 'Models by iPhone Tier', anchor: '#models-by-tier' },
@@ -440,6 +441,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm: Chat Client for Your Ollama, vLLM or llama.cpp Server (Not Benchmarked)',
+        content:
+          '**Phantasm is a free iPhone chat app that connects to an OpenAI-compatible server you run yourself, such as Ollama, vLLM or llama.cpp; it does not run models on the phone.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**Model access:** The app is a client: it sends your messages to the backend URL you enter, and the models run on your own hardware. Several backend profiles cover home network, VPN or tunnel setups.',
+          '**Features:** Photo and file attachments, on-device dictation, and an optional companion server that adds web search and image generation.',
+          '**Requirements and price:** iOS 18.0 or later and a server of your own. Free download; the listing names no in-app purchases.',
+          '**Privacy and licence:** The developer says there are no accounts, analytics or telemetry. The website calls the project open source, but the repository showed no licence file when checked.',
+          '**Install path:** App Store. The App Store lists version 1.2, released on 25 July 2026; the last repository commit is dated 16 August 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the App Store listing, the developer\'s website, privacy policy and GitHub repository; we have not timed or tested Phantasm on our test phones. Full notes: [Phantasm review](/power-local-llm/phantasm-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Models by iPhone Tier',
@@ -646,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -731,6 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: Systemintegrierte On-Device-KI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
       { label: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)', anchor: '#reins' },
+      { label: 'Phantasm: Chat-Client für Ihren Ollama-, vLLM- oder llama.cpp-Server (nicht gemessen)', anchor: '#phantasm' },
       { label: 'fullmoon: kostenloser Open-Source-Chat auf Apple MLX (kein Release seit Anfang 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: Offline-Chat im Einmalkauf (nicht gemessen)', anchor: '#cloak-local-ai' },
       { label: 'Modelle nach iPhone-Modell', anchor: '#models-by-tier' },
@@ -1077,6 +1098,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm: Chat-Client für Ihren Ollama-, vLLM- oder llama.cpp-Server (nicht gemessen)',
+        content:
+          '**Phantasm ist eine kostenlose iPhone-Chat-App, die sich mit einem OpenAI-kompatiblen Server verbindet, den Sie selbst betreiben, etwa Ollama, vLLM oder llama.cpp; Modelle laufen nicht auf dem Telefon.** Sie wurde nach dem Hauptvergleich ergänzt, steht daher nicht in der Vergleichstabelle und war nicht Teil unserer Tests.',
+        items: [
+          '**Modellzugriff:** Die App ist ein Client: Sie sendet Ihre Nachrichten an die eingegebene Backend-URL, die Modelle laufen auf Ihrer eigenen Hardware. Mehrere Backend-Profile decken Heimnetz-, VPN- und Tunnel-Setups ab.',
+          '**Funktionen:** Foto- und Dateianhänge, Diktat auf dem Gerät und ein optionaler Begleitserver, der Websuche und Bildgenerierung ergänzt.',
+          '**Anforderungen und Preis:** iOS 18.0 oder neuer und ein eigener Server. Der Download ist kostenlos; der Eintrag nennt keine In-App-Käufe.',
+          '**Datenschutz und Lizenz:** Laut Entwickler gibt es keine Konten, keine Analyse und keine Telemetrie. Die Website nennt das Projekt Open Source, das Repository enthielt bei der Prüfung jedoch keine Lizenzdatei.',
+          '**Installationsweg:** App Store. Der App Store nennt Version 1.2, veröffentlicht am 25. Juli 2026; der letzte Repository-Commit stammt vom 16. August 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem App-Store-Eintrag sowie der Website, den Datenschutzhinweisen und dem GitHub-Repository des Entwicklers; wir haben Phantasm nicht auf unseren Testtelefonen gemessen oder getestet. Alle Details: [Phantasm-Rezension](/de/power-local-llm/phantasm-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelle nach iPhone-Modell',
@@ -1291,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1376,6 +1416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence：システム統合型オンデバイスAI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
       { label: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)', anchor: '#reins' },
+      { label: 'Phantasm:自分のOllama・vLLM・llama.cppサーバー向けチャットクライアント(未計測)', anchor: '#phantasm' },
       { label: 'fullmoon：Apple MLX上で動く無料オープンソースのチャット（2025年初頭以降リリースなし）', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI:買い切りのオフラインチャット(未計測)', anchor: '#cloak-local-ai' },
       { label: 'iPhoneモデル別推奨モデル', anchor: '#models-by-tier' },
@@ -1722,6 +1763,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm:自分のOllama・vLLM・llama.cppサーバー向けチャットクライアント(未計測)',
+        content:
+          '**Phantasmは、自分で運用するOllama、vLLM、llama.cppなどのOpenAI互換サーバーに接続する無料のiPhoneチャットアプリで、モデルをスマートフォン上で実行するものではありません。**メインの比較のあとに追加したため、比較表には含まれず、当方のテスト対象でもありません。',
+        items: [
+          '**モデルへのアクセス:**アプリはクライアントです。入力したバックエンドURLにメッセージを送り、モデルは自分のハードウェアで動きます。複数のバックエンドプロファイルにより、家庭内ネットワーク、VPN、トンネルの構成に対応します。',
+          '**機能:**写真・ファイルの添付、端末上での音声入力、Web検索と画像生成を追加する任意の補助サーバー。',
+          '**要件と価格:**iOS 18.0以降と自前のサーバーが必要です。ダウンロードは無料で、掲載情報にアプリ内課金の記載はありません。',
+          '**プライバシーとライセンス:**開発者によれば、アカウント、分析、テレメトリはありません。公式サイトはオープンソースとしていますが、確認時点でリポジトリにライセンスファイルはありませんでした。',
+          '**入手方法:**App Store。App Storeにはバージョン1.2(2026年7月25日公開)と表示され、リポジトリの最新コミットは2026年8月16日付です。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はApp Storeの掲載情報、開発者の公式サイト、プライバシーポリシー、GitHubリポジトリに基づく内容で、当方のテスト用端末でPhantasmを計測・テストしてはいません。詳細は[Phantasmレビュー](/ja/power-local-llm/phantasm-review)をご覧ください。',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'iPhoneモデル別推奨モデル',
@@ -1928,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2013,6 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence : IA on-device intégrée au système', anchor: '#apple-intelligence' },
       { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
       { label: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)', anchor: '#reins' },
+      { label: 'Phantasm : client de chat pour votre serveur Ollama, vLLM ou llama.cpp (non mesuré)', anchor: '#phantasm' },
       { label: 'fullmoon : chat gratuit et open source sur Apple MLX (aucune version depuis début 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI : chat hors ligne à achat unique (non mesuré)', anchor: '#cloak-local-ai' },
       { label: 'Modèles par génération d\'iPhone', anchor: '#models-by-tier' },
@@ -2359,6 +2420,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm : client de chat pour votre serveur Ollama, vLLM ou llama.cpp (non mesuré)',
+        content:
+          '**Phantasm est une appli de chat gratuite pour iPhone qui se connecte à un serveur compatible OpenAI que vous hébergez vous-même, comme Ollama, vLLM ou llama.cpp ; elle n’exécute pas de modèles sur le téléphone.** Elle a été ajoutée après le comparatif principal ; elle ne figure donc pas dans le tableau comparatif et n’a pas fait partie de nos tests.',
+        items: [
+          '**Accès aux modèles :** l’appli est un client : elle envoie vos messages à l’URL du backend que vous saisissez, et les modèles tournent sur votre propre matériel. Plusieurs profils de backend couvrent les configurations réseau domestique, VPN ou tunnel.',
+          '**Fonctions :** pièces jointes photo et fichier, dictée sur l’appareil et serveur complémentaire facultatif qui ajoute la recherche web et la génération d’images.',
+          '**Configuration et prix :** iOS 18.0 ou ultérieur et un serveur à vous. Téléchargement gratuit ; la fiche ne mentionne aucun achat intégré.',
+          '**Confidentialité et licence :** le développeur affirme qu’il n’y a ni compte, ni analytique, ni télémétrie. Le site présente le projet comme open source, mais le dépôt ne contenait aucun fichier de licence lors de la vérification.',
+          '**Installation :** App Store. L’App Store indique la version 1.2, publiée le 25 juillet 2026 ; le dernier commit du dépôt date du 16 août 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ces informations viennent de la fiche de l’App Store, du site, de la politique de confidentialité et du dépôt GitHub du développeur ; nous n’avons ni mesuré ni testé Phantasm sur nos téléphones de test. Notes complètes : [test de Phantasm](/fr/power-local-llm/phantasm-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modèles par génération d\'iPhone',
@@ -2565,7 +2645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2650,6 +2730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence：系统级内置AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
       { label: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)', anchor: '#reins' },
+      { label: 'Phantasm:面向自建 Ollama、vLLM 或 llama.cpp 服务器的聊天客户端(未实测)', anchor: '#phantasm' },
       { label: 'fullmoon：基于 Apple MLX 的免费开源聊天应用（2025 年初以来无新版本）', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI：一次性付费的离线聊天（未实测）', anchor: '#cloak-local-ai' },
       { label: '按iPhone档次推荐模型', anchor: '#models-by-tier' },
@@ -2996,6 +3077,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm:面向自建 Ollama、vLLM 或 llama.cpp 服务器的聊天客户端(未实测)',
+        content:
+          '**Phantasm 是一款免费的 iPhone 聊天应用,连接你自己运行的、兼容 OpenAI 的服务器(如 Ollama、vLLM 或 llama.cpp);它不会在手机上运行模型。**它是在主对比之后加入的,因此不在对比表中,也不属于我们的测试范围。',
+        items: [
+          '**模型访问:**应用只是客户端:它把消息发送到你填写的后端地址,模型运行在你自己的硬件上。多个后端配置文件可覆盖家庭网络、VPN 或隧道方案。',
+          '**功能:**照片和文件附件、设备端语音听写,以及可选的配套服务器(增加网页搜索和图像生成)。',
+          '**要求与价格:**iOS 18.0 及以上,并需自备服务器。免费下载;App Store 页面未列出应用内购买。',
+          '**隐私与许可:**开发者称没有账号、分析或遥测。官网称该项目为开源,但检查时仓库中没有许可证文件。',
+          '**安装途径:**App Store。App Store 列出的版本为 1.2,发布于 2026 年 7 月 25 日;仓库最近一次提交日期为 2026 年 8 月 16 日。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自 App Store 页面、开发者官网、隐私政策和 GitHub 仓库;我们没有在测试手机上实测或测试 Phantasm。完整说明:[Phantasm 评测](/zh/power-local-llm/phantasm-review)。',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: '按iPhone档次推荐模型',
@@ -3202,7 +3302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3287,6 +3387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: IA en dispositivo integrada en el sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
       { label: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)', anchor: '#reins' },
+      { label: 'Phantasm: cliente de chat para tu servidor Ollama, vLLM o llama.cpp (sin medir)', anchor: '#phantasm' },
       { label: 'fullmoon: chat gratuito y de código abierto sobre Apple MLX (sin versiones desde principios de 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: chat sin conexión de pago único (sin medir)', anchor: '#cloak-local-ai' },
       { label: 'Modelos según el modelo de iPhone', anchor: '#models-by-tier' },
@@ -3633,6 +3734,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm: cliente de chat para tu servidor Ollama, vLLM o llama.cpp (sin medir)',
+        content:
+          '**Phantasm es una app de chat gratuita para iPhone que se conecta a un servidor compatible con OpenAI que tú mismo ejecutas, como Ollama, vLLM o llama.cpp; no ejecuta modelos en el teléfono.** Se añadió después de la comparativa principal, así que no está en la tabla comparativa y no formó parte de nuestras pruebas.',
+        items: [
+          '**Acceso a los modelos:** la app es un cliente: envía tus mensajes a la URL del backend que introduces, y los modelos se ejecutan en tu propio hardware. Varios perfiles de backend cubren configuraciones de red doméstica, VPN o túnel.',
+          '**Funciones:** adjuntos de fotos y archivos, dictado en el dispositivo y un servidor complementario opcional que añade búsqueda web y generación de imágenes.',
+          '**Requisitos y precio:** iOS 18.0 o posterior y un servidor propio. Descarga gratuita; la ficha no menciona compras dentro de la app.',
+          '**Privacidad y licencia:** el desarrollador dice que no hay cuentas, analítica ni telemetría. El sitio describe el proyecto como de código abierto, pero el repositorio no tenía archivo de licencia al comprobarlo.',
+          '**Instalación:** App Store. La App Store indica la versión 1.2, publicada el 25 de julio de 2026; el último commit del repositorio es del 16 de agosto de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos proceden de la ficha de la App Store, el sitio, la política de privacidad y el repositorio de GitHub del desarrollador; no hemos medido ni probado Phantasm en nuestros teléfonos de prueba. Notas completas: [reseña de Phantasm](/es/power-local-llm/phantasm-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelos según el modelo de iPhone',
@@ -3839,7 +3959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3924,6 +4044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: 시스템 내장 기기 내 AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
       { label: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)', anchor: '#reins' },
+      { label: 'Phantasm: 직접 운영하는 Ollama·vLLM·llama.cpp 서버용 채팅 클라이언트(미측정)', anchor: '#phantasm' },
       { label: 'fullmoon: Apple MLX 기반 무료 오픈소스 채팅 앱(2025년 초 이후 릴리스 없음)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: 1회 구매형 오프라인 채팅(미측정)', anchor: '#cloak-local-ai' },
       { label: 'iPhone 등급별 모델', anchor: '#models-by-tier' },
@@ -4272,6 +4393,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm: 직접 운영하는 Ollama·vLLM·llama.cpp 서버용 채팅 클라이언트(미측정)',
+        content:
+          '**Phantasm은 Ollama, vLLM, llama.cpp처럼 직접 운영하는 OpenAI 호환 서버에 연결하는 무료 iPhone 채팅 앱이며, 휴대폰에서 모델을 실행하지는 않습니다.** 주요 비교 이후에 추가되었으므로 비교표에는 없고 저희 테스트에도 포함되지 않았습니다.',
+        items: [
+          '**모델 접근:** 앱은 클라이언트입니다. 입력한 백엔드 URL로 메시지를 보내며, 모델은 직접 운영하는 하드웨어에서 실행됩니다. 여러 백엔드 프로필로 집 네트워크, VPN, 터널 구성을 지원합니다.',
+          '**기능:** 사진·파일 첨부, 기기 내 음성 받아쓰기, 웹 검색과 이미지 생성을 추가하는 선택형 보조 서버.',
+          '**요구 사항과 가격:** iOS 18.0 이상과 직접 운영하는 서버가 필요합니다. 다운로드는 무료이며 목록에는 앱 내 구입이 표시되어 있지 않습니다.',
+          '**개인정보와 라이선스:** 개발자에 따르면 계정, 분석, 텔레메트리가 없습니다. 웹사이트는 오픈 소스라고 하지만, 확인 시점에 저장소에는 라이선스 파일이 없었습니다.',
+          '**설치 경로:** App Store. App Store에는 2026년 7월 25일에 출시된 버전 1.2가 표시되며, 저장소의 마지막 커밋은 2026년 8월 16일자입니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 App Store 페이지, 개발자의 웹사이트, 개인정보 처리방침, GitHub 저장소에 근거하며, 저희 테스트 휴대폰에서 Phantasm을 측정하거나 테스트하지는 않았습니다. 자세한 내용: [Phantasm 리뷰](/ko/power-local-llm/phantasm-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'iPhone 등급별 모델',
@@ -4481,7 +4621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4566,6 +4706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: IA no aparelho integrada ao sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
       { label: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)', anchor: '#reins' },
+      { label: 'Phantasm: cliente de chat para o seu servidor Ollama, vLLM ou llama.cpp (não medido)', anchor: '#phantasm' },
       { label: 'fullmoon: chat gratuito e de código aberto sobre Apple MLX (sem versões desde o início de 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: chat offline de pagamento único (não medido)', anchor: '#cloak-local-ai' },
       { label: 'Modelos conforme o modelo de iPhone', anchor: '#models-by-tier' },
@@ -4912,6 +5053,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm: cliente de chat para o seu servidor Ollama, vLLM ou llama.cpp (não medido)',
+        content:
+          '**O Phantasm é um app de chat gratuito para iPhone que se conecta a um servidor compatível com OpenAI que você mesmo executa, como Ollama, vLLM ou llama.cpp; ele não executa modelos no celular.** Foi adicionado depois da comparação principal, portanto não está na tabela comparativa e não fez parte dos nossos testes.',
+        items: [
+          '**Acesso aos modelos:** o app é um cliente: envia suas mensagens para a URL do backend que você informa, e os modelos rodam no seu próprio hardware. Vários perfis de backend cobrem configurações de rede doméstica, VPN ou túnel.',
+          '**Recursos:** anexos de fotos e arquivos, ditado no aparelho e um servidor complementar opcional que adiciona busca na web e geração de imagens.',
+          '**Requisitos e preço:** iOS 18.0 ou posterior e um servidor próprio. Download gratuito; a página não menciona compras no app.',
+          '**Privacidade e licença:** o desenvolvedor diz que não há contas, análise nem telemetria. O site descreve o projeto como de código aberto, mas o repositório não tinha arquivo de licença na verificação.',
+          '**Instalação:** App Store. A App Store lista a versão 1.2, lançada em 25 de julho de 2026; o último commit do repositório é de 16 de agosto de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados vêm da página da App Store, do site, da política de privacidade e do repositório do GitHub do desenvolvedor; não medimos nem testamos o Phantasm em nossos celulares de teste. Notas completas: [análise do Phantasm](/pt/power-local-llm/phantasm-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelos conforme o modelo de iPhone',
@@ -5118,7 +5278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -5203,6 +5363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: ذكاء اصطناعي على الجهاز مدمج في النظام', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
       { label: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)', anchor: '#reins' },
+      { label: 'Phantasm: عميل دردشة لخادم Ollama أو vLLM أو llama.cpp الخاص بك (لم يُقَس)', anchor: '#phantasm' },
       { label: 'fullmoon: دردشة مجانية مفتوحة المصدر على Apple MLX (بلا إصدارات منذ مطلع 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: دردشة دون اتصال بشراء لمرة واحدة (لم يُقَس)', anchor: '#cloak-local-ai' },
       { label: 'النماذج حسب فئة iPhone', anchor: '#models-by-tier' },
@@ -5546,6 +5707,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'مصدر هذه التفاصيل صفحة App Store وموقع المطوّر وسياساته؛ ولم نقِس أداء Reins على هواتف الاختبار لدينا. التفاصيل الكاملة: [مراجعة Reins](/ar/power-local-llm/reins-review).',
+          },
+        ],
+      },
+      phantasm: {
+        id: 'phantasm',
+        title: 'Phantasm: عميل دردشة لخادم Ollama أو vLLM أو llama.cpp الخاص بك (لم يُقَس)',
+        content:
+          '**Phantasm تطبيق دردشة مجاني لـ iPhone يتصل بخادم متوافق مع OpenAI تديره بنفسك، مثل Ollama أو vLLM أو llama.cpp؛ ولا يشغّل النماذج على الهاتف.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن ضمن اختباراتنا.',
+        items: [
+          '**الوصول إلى النماذج:** التطبيق عميل: يرسل رسائلك إلى عنوان الخادم الذي تدخله، وتعمل النماذج على جهازك الخاص. تغطي عدة ملفات تعريف للخادم إعدادات الشبكة المنزلية أو VPN أو النفق.',
+          '**الميزات:** مرفقات الصور والملفات، والإملاء على الجهاز، وخادم مساعد اختياري يضيف البحث على الويب وتوليد الصور.',
+          '**المتطلبات والسعر:** iOS 18.0 أو أحدث وخادم خاص بك. التنزيل مجاني؛ ولا تذكر الصفحة أي عمليات شراء داخل التطبيق.',
+          '**الخصوصية والترخيص:** يقول المطوّر إنه لا توجد حسابات ولا تحليلات ولا قياس عن بُعد. يصف الموقع المشروع بأنه مفتوح المصدر، لكن المستودع لم يكن يحتوي ملف ترخيص عند التحقق.',
+          '**طريقة التثبيت:** App Store. يعرض App Store الإصدار 1.2 الذي صدر في 25 يوليو 2026؛ وآخر إيداع في المستودع بتاريخ 16 أغسطس 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'مصدر هذه التفاصيل صفحة App Store وموقع المطوّر وسياسة الخصوصية ومستودع GitHub؛ ولم نقِس أداء Phantasm أو نختبره على هواتف الاختبار لدينا. التفاصيل الكاملة: [مراجعة Phantasm](/ar/power-local-llm/phantasm-review).',
           },
         ],
       },
