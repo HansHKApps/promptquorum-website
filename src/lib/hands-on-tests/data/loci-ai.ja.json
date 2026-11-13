@@ -1,0 +1,1891 @@
+{
+  "id": "pq-test-loci-2026-11-11",
+  "hero": "loci-setup-step1-choose-what-loci-is-best-at",
+  "date_human": "2026年11月11日",
+  "captured": "2026-11-11；Macのダウンロード確認画面は06:19、スマートフォンの最後のスクリーンショットは11:11。終了時刻は記録なし",
+  "standard_version": "0.2",
+  "locale": "ja",
+  "app": {
+    "name": "Loci",
+    "slug": "loci-ai",
+    "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
+    "category": "ローカルAIチャット、MacとAndroid",
+    "platform": "macOS（Apple Silicon）とAndroid",
+    "pricing_url": "https://loci.ai"
+  },
+  "title": "24 GBのM4 Pro MacでのLoci：Web検索、スマートフォン連携、MCPサーバーに対応したローカルチャット",
+  "page_title": "Lociテスト",
+  "dek": "2026年11月11日の最初のセッション：スムーズなセットアップ、Web検索、Macのモデルを借りるAndroidスマートフォン、そしてテスターが自分のMCPサーバーを接続したときにモデルが返した無効なリンク。",
+  "seo": {
+    "title": "Loci実機テスト：M4 Pro MacでのローカルAIチャット",
+    "description": "24 GBのM4 Pro MacでのLoci実機テスト。セットアップ、Web検索、スマートフォン連携、MCPは動作。ドイツ語の音声入力は設定変更が必要で、MCPのリンクは2回誤りました。"
+  },
+  "faq": [
+    [
+      "Lociにはアカウントが必要ですか？",
+      "キャプチャした画面にサインインのステップはなく、ベンダーはアカウント、広告、サブスクリプションはないと述べています。料金はそれ以外には確認していません。",
+      "observed"
+    ],
+    [
+      "Lociはローカルモデルからウェブを検索できますか？",
+      "はい。天気の質問では「Searched the web」のステップと6件のソースが表示されました。値が正しかったかどうかは確認していません。",
+      "observed"
+    ],
+    [
+      "Lociはドイツ語の音声入力を認識しますか？",
+      "設定を変更した後のみです。デフォルトのLanguage設定ではドイツ語は文字化けし、「Automatic — multilingual」を選ぶとドイツ語の文が正しく文字起こしされました。",
+      "observed"
+    ],
+    [
+      "AndroidスマートフォンはMacのモデルを使えますか？",
+      "はい。メモと、MacがReadyで1つのモデルを持つと表示されるスマートフォンのLinked computers画面によれば可能です。スマートフォン自身の小型モデルは、単独で実行したときに難問セットへの回答を拒否しました。",
+      "observed"
+    ],
+    [
+      "LociはMCPサーバーに対応していますか？",
+      "はい。テスターはPromptQuorum自身のMCPサーバーを追加し、最初の試行で接続して27のツールが表示されました。ローカルモデルは最初、404ページに繋がるリンクを返しました。",
+      "observed"
+    ],
+    [
+      "Lociはプライベートですか？",
+      "未検証です。アプリはローカルモデルが言葉をMacの外に送ることはないと述べていますが、Web検索やMCPツールは仕組み上データを外部に送り、通信は調べていません。",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-11",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "Loci。ダウンロードページには「Download Loci」と表示されています。ディレクトリのレビュー（第三者情報）では、開発元はLoci AI, Inc.とされています。",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし。",
+      null
+    ],
+    [
+      "入手元",
+      "ベンダーのダウンロードページ。Chromeは「Loci.dmg」を保存しました。ページのアドレスは記録なし。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans（PromptQuorum創設者）",
+      "observed"
+    ],
+    [
+      "日付、開始、終了",
+      "2026年11月11日。アプリの回答「as of Wednesday, November 11, 2026」から判断しており、メモに日付の記載はありません。macOSの確認画面ではダウンロードが06:19、スマートフォンの最後のスクリーンショットのタイムスタンプは11:11です。テスターは約三時間だったと述べています。終了時刻は記録なし。",
+      "observed"
+    ],
+    [
+      "ハードウェア",
+      "Mac：Apple M4 Pro、24 GBユニファイドメモリ。アプリには「Picked for its 24 GB of memory」と表示されます。メモには「m 4」としか書かれておらず、テスターが後からM4 Proだと確認しました。スマートフォン：Android、メーカーと機種は記録なし（「古いスマートフォン」）。",
+      "observed"
+    ],
+    [
+      "システム",
+      "macOSとAndroidのバージョンは記録なし。",
+      null
+    ],
+    [
+      "テストの理由",
+      "開発者から連絡があり、テスターにこのアプリを見てみるよう勧めました。",
+      "tester-view"
+    ],
+    [
+      "目的",
+      "目標としては明記されていません。メモに残っているのは、セットアップ、チャット、検索、音声、設定、スマートフォン連携、MCPサーバーを最初に見た内容です。",
+      null
+    ],
+    [
+      "モデル",
+      "Mac：Gemma 4 12B。セットアップで「Best all-round」として選択。量子化は記録なし。スマートフォン：ダウンロードカードによればオンデバイスのBonsai 2 4B。サイズは画面に表示なし。",
+      "observed"
+    ],
+    [
+      "使用したAI支援",
+      "ChatGPTがテスト中に論理ベンチマークを作成し、採点しました。Claudeが、テスターのWordメモと52枚の画像からこのレポートを下書きしました。メモの一部は音声入力であり、誤りの一部はLociではなく音声入力ツールによるものかもしれません。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターは、ローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。Lociはそこに、AIが作成したレビュー付きで掲載されています。開発者がテスターに連絡し、メモは彼への感謝の言葉で終わっています。テストで使ったMCPサーバーはPromptQuorum自身のものです。メモには、支払いやスポンサーシップの記録はありません。",
+  "verdict": {
+    "general": "MacとAndroid向けの、最初の起動が際立って分かりやすい一般ユーザー向けのローカルAIアプリです。このセッションでは、セットアップ、組み込みのWeb検索、英語の音声入力、ドイツ語の音声入力（設定変更後）、スマートフォンとMacのリンク、MCP接続が動作しました。デフォルトのモデルは十問の論理問題に正しく答えましたが、MCP経由では訂正されるまで無効なリンクを返し、スマートフォン自身の小型モデルは難問セットへの回答を拒否しました。メール、カレンダー、画像・動画の生成、Macでのオフライン利用、プライバシーに関する主張、チャットの同期、アンインストールはテストしていません。",
+    "fit": "テスターははっきりと前向きで、本当に感銘を受けたと述べ、このアプリをローカルLLM分野を前進させるもう一つの「卵」だと呼んでいます。使い続けるかどうかは記載がなく、二〜三か月後に再レビューする予定です。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "インストーラーアプリで、ドラッグ操作は不要。Intel Macとアプリのバージョンは記録なし。"
+    ],
+    [
+      "オンボーディングとモデル選び",
+      4,
+      "サイズ、時間の目安、Macごとのおすすめを表示。誤解を招くヒントが一つ。"
+    ],
+    [
+      "中核機能",
+      4,
+      "チャット、検索、音声入力、スマートフォン連携、MCP接続が動作。二つの失敗は結論に記載。"
+    ],
+    [
+      "ガイダンスと試行錯誤",
+      4,
+      "平易な言葉の設定。言語設定へのヒントなし。コンテキストメーターの説明なし。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "計時していません。テスターは、MCPの回答はGrokやClaudeの構成より遅いと述べています。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "マニュアルやウェブサイトのガイドは開いていません。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "主張は監査していません。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、テスターが示した根拠からレポート作成者が案として付けたものです。該当なしは「未テスト」を意味し、ゼロ点ではありません。",
+  "tldr": [
+    [
+      "observed",
+      "Lociは、MacとAndroid向けのローカルAIチャットアプリです。テスターは24 GBのApple M4 Proで実行し、セットアップでGemma 4 12B（7.12 GB）を選びました。"
+    ],
+    [
+      "observed",
+      "セットアップではモデルのサイズ、ダウンロード時間の目安、Macごとのおすすめが表示されます。組み込みのWeb検索は、天気の質問に6件のソースで答えました。"
+    ],
+    [
+      "observed",
+      "ドイツ語の音声入力は、デフォルトのLanguage設定では文字化けし、「Automatic — multilingual」に変更すると動作しました。"
+    ],
+    [
+      "observed",
+      "AndroidスマートフォンがMacにリンクし、Macが「Ready」と表示されました。単独で実行したスマートフォンの小型モデルは、難問セットへの回答を拒否しました。"
+    ],
+    [
+      "observed",
+      "PromptQuorumのMCPサーバーは最初の試行で27のツールとともに接続しました。ローカルモデルは二度無効なリンクを返し、三回目で正しいツールが使われました。"
+    ],
+    [
+      "assumption",
+      "メール、カレンダー、画像・動画の生成、Macでのオフライン利用、プライバシーに関する主張、チャットの同期、アンインストールはテストしていないため、これは最初の印象であり、結論ではありません。"
+    ]
+  ],
+  "quotes": [
+    "「小さなことが大切です。」",
+    "「あらかじめ選ばれていて誰でも入りやすいのに、その先の選択肢は本当に幅広い。両方のいいところ取りです。」",
+    "「ちゃんと動きます。ユーザーインターフェースはよくできていて、嫌な驚きはありません。」"
+  ],
+  "quote_note": "テスターのメモ。音声入力から軽く編集。英語から翻訳。三つとも本人の判断であり、測定値ではありません。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "待つ前にサイズと時間",
+      "サイズと推定時間が表示されるダウンロードカード。",
+      "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "chapter-setup"
+    ],
+    [
+      "非表示ではなくグレー表示",
+      "より多くのメモリを必要とするモデルは「Unavailable」として一覧に表示されます。",
+      "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "chapter-setup"
+    ],
+    [
+      "ドイツ語を入れたら、意味不明な出力",
+      "言語設定を変更する前のドイツ語の音声入力。",
+      "loci-german-dictation-garbled-text",
+      "chapter-voice"
+    ],
+    [
+      "スマートフォンがMacにリンク",
+      "スマートフォンにMacがリンク済みのコンピューターとして表示されます。",
+      "loci-phone-linked-computers-macbook-pro-ready",
+      "chapter-phone"
+    ],
+    [
+      "モデルが作り話のリンクを認める",
+      "無効なURLについてのテスターの質問への返信。",
+      "loci-mcp-model-admits-hallucinated-links",
+      "chapter-mcp"
+    ],
+    [
+      "自分のMCPサーバーが接続",
+      "サーバーがアプリにツールの一覧を表示しました。",
+      "loci-mcp-promptquorum-connected-27-tools",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "ダウンロードとインストール",
+      "items": [
+        [
+          "observed",
+          "テスターは、ベンダーのダウンロードページ（iPhone、Android、Mac、Windows向けが並ぶ）からMac版をダウンロードしました。ディスクイメージのLoci.dmgには、開く前にmacOSが確認するインストーラーアプリが入っていました。",
+          "loci-install-loci-app-macos-open-prompt"
+        ],
+        [
+          "tester-view",
+          "Applicationsへのドラッグ操作が不要だった点を、彼は気に入っています。ほかにテストしたアプリではこの手順がありました。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "初回起動とセットアップ",
+      "items": [
+        [
+          "observed",
+          "ウェルカム画面のあと、2つのステップがありました。Lociに何を最も得意にさせるかを選び、次にモデルをダウンロードします。彼が選んだのはGemma 4 12Bで、アプリが「Best all-round」と表示するモデルです。",
+          "loci-setup-step1-choose-what-loci-is-best-at"
+        ],
+        [
+          "tester-view",
+          "ダウンロードカードには推定時間が表示されます。数GBのモデルを扱うアプリには必須の基本機能だと、彼は考えています。",
+          "loci-gemma-4-12b-download-50-percent-time-estimate"
+        ],
+        [
+          "observed",
+          "ダウンロード中にチャットを始められるというヒントは、実際の動作と合いませんでした。ダウンロード中に送ったチャットは、モデルが届くまで応答がありませんでした。",
+          "loci-setup-step2-start-chatting-in-the-meantime"
+        ],
+        [
+          "observed",
+          "早い段階で書き留めた2つの疑問、アプリがハードウェアを確認するか、Ollamaなどほかのランナーを追加できるかは、のちに部分的に解決しました。アプリはMacに合わせてモデルをおすすめし、合わないものをグレー表示にします。Modelsの画面にOllamaの項目は見つかりませんでした。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "チャット、Web検索、論理ベンチマーク",
+      "items": [
+        [
+          "observed",
+          "天気の質問では組み込みのWeb検索が使われ、ソースが一覧表示されました。",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターは、ChatGPTが作成した十問の論理ベンチマークをデフォルトのモデルに与えました。これはアプリではなくモデルのテストだが、アプリがその場面で役立つことを示していると、彼は述べています。",
+          null
+        ],
+        [
+          "third-party",
+          "ChatGPTは回答を100点中94点と採点しました。レポート作成者が再確認したところ、十問すべての最終回答が正しいものでした。",
+          null
+        ],
+        [
+          "observed",
+          "アプリを終了して再起動した後も、チャット検索でベンチマークのチャットが見つかりました。入力欄のそばのコンテキストメーターは8.1k / 64kを示しています。",
+          "loci-chat-search-bob-after-restart"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-voice",
+      "title": "音声とドイツ語",
+      "items": [
+        [
+          "observed",
+          "英語の音声入力はすぐに動作しました。",
+          "loci-english-dictation-fifteen-times-five"
+        ],
+        [
+          "tester-error",
+          "ドイツ語は動作せず、テスターはLociは英語専用だと書きました。のちにLanguage設定を見つけると、ドイツ語が動作しました。",
+          "loci-german-dictation-works-after-language-setting"
+        ],
+        [
+          "observed",
+          "音声入力のキーには権限の警告が表示されていましたが、メモには記載がありません。",
+          "loci-settings-dictation-key-permission-warning"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-settings",
+      "title": "設定、モデル、接続",
+      "items": [
+        [
+          "tester-view",
+          "彼は、平易な言葉の設定と、シンプルな最初の選択肢の先にある幅広いモデルカタログを気に入りました。",
+          "loci-model-catalogue-chat-and-coding"
+        ],
+        [
+          "observed",
+          "メモリのインポートと、メール、カレンダーの接続は見たものの、試していません。",
+          "loci-connections-mail-calendar-reminders"
+        ],
+        [
+          "tester-view",
+          "メール連携は、ローカルアプリで彼が見た中でおそらく最強のビジネス機能だと、彼は述べています。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-phone",
+      "title": "スマートフォンとLoci Link",
+      "items": [
+        [
+          "observed",
+          "彼はAndroidスマートフォンにLociをインストールし、Macとペアリングしました。ペアリング後、スマートフォンにはMacが「Ready」で1つのモデルを持つと表示されます。",
+          "loci-phone-linked-computers-macbook-pro-ready"
+        ],
+        [
+          "tester-error",
+          "Macのチャット一覧を確認しなかったため、スマートフォンのチャットがMacに見つかりませんでした。スマートフォンの画面には、読み取り専用のコピーがそこに保存されると書かれています。",
+          null
+        ],
+        [
+          "third-party",
+          "その後、リンク経由で難問セットを送りました。ChatGPTの採点は一部のみ正解でした。",
+          null
+        ],
+        [
+          "observed",
+          "同じセットをスマートフォン自身の小型モデルで再度実行すると、回答を拒否しました。",
+          "loci-phone-on-device-model-refuses-question-set"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "MCPと無効なリンク",
+      "items": [
+        [
+          "observed",
+          "彼はPromptQuorum自身のMCPサーバーを追加しました。最初の回答は12個のアプリをグループ分けした一覧で、リンクはありませんでした。",
+          "loci-mcp-promptquorum-connected-27-tools"
+        ],
+        [
+          "observed",
+          "その後モデルが出したリンクは誤っており、うち一つはPromptQuorumの404ページが開きました。作り話ではないかと尋ねると、モデルはそれらが作り話だったと答えました。",
+          "loci-mcp-model-admits-hallucinated-links"
+        ],
+        [
+          "observed",
+          "二組目も失敗しました。モデルはセルフチェックでリンクがまだ誤っていると分かったと述べ、「search apps」ツールを実行して三組目を返しました。テスターは、これが正しかったと述べています。",
+          "loci-mcp-final-links-download-install-review"
+        ],
+        [
+          "tester-view",
+          "これがローカルモデルでMCPを使う強みだと、テスターは捉えています。ライブデータを使え、指摘されれば自分で訂正できるからです。",
+          null
+        ],
+        [
+          "observed",
+          "この会話の途中で、評価を求めるポップアップが表示されました。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "結論",
+      "items": [
+        [
+          "observed",
+          "メモは、まとめと再テストの予定で終わっており、使い続けるかどうかの判断は書かれていません。",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターは、本当に感銘を受けたと述べ、このアプリをローカルLLM分野を前進させるもう一つの「卵」だと呼んでいます。二〜三か月後に再レビューし、チャットの同期について開発者に尋ねる予定です。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "「No account, no ads, completely free.」",
+      "ダウンロードページ",
+      "キャプチャした画面にサインインのステップや広告はなし。料金はそれ以外には確認していません。",
+      "observed"
+    ],
+    [
+      "「With a local model, your words never leave this Mac.」",
+      "アプリのウェルカム画面",
+      "未検証。Web検索とMCP呼び出しは仕組み上データを外部に送ります。",
+      "vendor-claim"
+    ],
+    [
+      "「You can start chatting in the meantime.」",
+      "セットアップのステップ2",
+      "テスター：チャットはモデルを待つ。",
+      "observed"
+    ],
+    [
+      "オンデバイスのモデルはMacの外に出ない。クラウドのチャットは、あなたのキーでプロバイダーに直接送られる。",
+      "Modelsの画面",
+      "未検証。クラウドのキーは追加していません。",
+      "vendor-claim"
+    ],
+    [
+      "「Automatic supports 25 European languages.」",
+      "音声入力の設定",
+      "設定後にドイツ語は動作。ほかの言語は試していません。",
+      "observed"
+    ],
+    [
+      "「Run your computer’s more powerful models from your phone.」",
+      "スマートフォンの設定",
+      "メモとLinked computersの画面によれば、動作を確認。",
+      "observed"
+    ],
+    [
+      "「Your mail never leaves this Mac.」",
+      "Connectionsのページ",
+      "未テスト。アカウントは接続していません。",
+      "vendor-claim"
+    ],
+    [
+      "「Nothing is uploaded.」",
+      "Memoriesのインポート",
+      "試していません。",
+      "vendor-claim"
+    ],
+    [
+      "ほかのアプリよりハルシネーションとクラッシュが少ない。",
+      "ディレクトリのレビュー（第三者情報）",
+      "1回のセッションではテスト不可。クラッシュは見ていません。",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "title": "ダウンロードサイズと24 GBの比較",
+    "nav": "サイズ",
+    "rows": [
+      [
+        "Qwen3.5 4B（Deep thinking）",
+        2.74,
+        "2.74 GB · セットアップ",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4-bit（Unavailable）",
+        4.62,
+        "4.62 GB · 画像モデル",
+        "measured"
+      ],
+      [
+        "Gemma 4 E4B",
+        4.98,
+        "4.98 GB · カタログ",
+        "measured"
+      ],
+      [
+        "Nemotron 3.5 Bolt E4B（Coding）",
+        6.18,
+        "6.18 GB · カタログ",
+        "measured"
+      ],
+      [
+        "Gemma 4 12B（セットアップで選択）",
+        7.12,
+        "7.12 GB · セットアップのダウンロード",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 8-bit（Unavailable）",
+        8.57,
+        "8.57 GB · 画像モデル",
+        "measured"
+      ],
+      [
+        "Qwen3.8 27B（Coding）",
+        10.93,
+        "10.93 GB · セットアップとカタログ",
+        "measured"
+      ],
+      [
+        "Wan 2.2 5B動画（「Best for this Mac」）",
+        16.74,
+        "16.74 GB · 動画モデル",
+        "measured"
+      ]
+    ],
+    "note": "これらはアプリ自身の画面から読み取ったダウンロードサイズであり、実行中のメモリ使用量ではありません。アプリはモデルごとのメモリ必要量を表示せず、適合ラベルのみです。実行時のメモリは測定していません。テスト用Macのユニファイドメモリは24 GBです。"
+  },
+  "usage_log": [
+    [
+      "Macのインストーラーをダウンロードして開く",
+      "—",
+      "「Install Loci」の確認画面を通過。アプリはインストール済み。インストール時間は記録なし",
+      "06:19",
+      "Pass",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "Gemma 4 12Bをダウンロード",
+      "Gemma 4 12B",
+      "メモによれば完了（「スムーズに動く」）。合計時間は記録なし",
+      "記録なし",
+      "Pass",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "Web検索を使う天気の質問",
+      "Gemma 4 12B",
+      "6件のソース付きの回答。正確さは未確認",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "論理ベンチマーク、10問",
+      "Gemma 4 12B",
+      "再確認で最終回答は10問中10問が正解。ChatGPTのスコアは94/100",
+      "記録なし",
+      "Pass",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "チャット検索、再起動してもう一度検索",
+      "—",
+      "両方ともチャットが見つかった",
+      "記録なし",
+      "Pass",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "英語で音声入力：「What is fifteen times five」",
+      "Loci音声入力",
+      "テキストは正しい",
+      "記録なし",
+      "Pass",
+      [
+        "loci-english-dictation-fifteen-times-five"
+      ]
+    ],
+    [
+      "ドイツ語で音声入力、デフォルトの言語",
+      "Loci音声入力",
+      "文字化けしたテキスト",
+      "記録なし",
+      "Fail",
+      [
+        "loci-german-dictation-garbled-text"
+      ]
+    ],
+    [
+      "ドイツ語で音声入力、言語をAutomatic multilingualに設定",
+      "Loci音声入力",
+      "「Wie spät ist es momentan?」が正しく出力",
+      "記録なし",
+      "Pass",
+      [
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "返信を読み上げ",
+      "—",
+      "メモによれば動作。計時せず",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "AndroidスマートフォンをMacとペアリング",
+      "—",
+      "リンク済み。MacはReady、1 models。ペアリング時間は記録なし",
+      "記録なし",
+      "Pass",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "スマートフォンからMac経由で難問セット",
+      "Macのモデル（メモ：Qwen、スクリーンショット：Gemma 4 12B）",
+      "回答は返った。ChatGPTの採点は一部のみ正解。計時せず",
+      "記録なし",
+      "Partial",
+      []
+    ],
+    [
+      "同じセットをスマートフォンのオンデバイスのみで",
+      "Bonsai 2 4B",
+      "拒否",
+      "11:11",
+      "Fail",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "PromptQuorumのMCPサーバーを追加",
+      "—",
+      "最初の試行で接続",
+      "記録なし",
+      "Pass",
+      [
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "MCP：「Which are the video apps that you can propose?」",
+      "Gemma 4 12B",
+      "12個のアプリのグループ別リスト、リンクなし。「時間がかかった」、計時せず",
+      "記録なし",
+      "Partial",
+      []
+    ],
+    [
+      "MCP：リンクを依頼、三回",
+      "Gemma 4 12B",
+      "二回は誤ったリンク、その後テスターによれば正しい",
+      "記録なし",
+      "Partial",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "メール、カレンダー、リマインダー",
+      "—",
+      "未開始",
+      "記録なし",
+      "Not completed",
+      []
+    ],
+    [
+      "画像・動画の生成",
+      "—",
+      "未開始",
+      "記録なし",
+      "Not completed",
+      []
+    ],
+    [
+      "Deep Research、Thinking、メモリーのインポート",
+      "—",
+      "未開始",
+      "記録なし",
+      "Not completed",
+      []
+    ],
+    [
+      "アンインストール",
+      "—",
+      "未テスト",
+      "記録なし",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "ドイツ語の音声入力が「クラッシュした」と書き、Lociは英語に限られているようだと書きました。スクリーンショットに写っているのはクラッシュではなく文字化けしたテキストで、原因はLanguage設定であり、彼は後で自分で見つけました。"
+    ],
+    [
+      "tester-error",
+      "アプリは「動作するモデルだけを提案する」と書きました。Unavailableのモデルは非表示ではなく、グレー表示で一覧に載っています。「Best for this Mac」と表示された16.74 GBの動画モデルはダウンロードしていないため、24 GBで動くかどうかは未テストですが、彼はこの種のモデルは通常Macがクラッシュすると述べています。"
+    ],
+    [
+      "tester-error",
+      "確認せずに、スマートフォンのチャットがノートパソコンに表示されないと報告しました。スマートフォンのLinked computers画面には、リンクしたコンピューターが応答したチャットは読み取り専用のコピーとしてそこに保存されると書かれていますが、Macのチャット一覧は確認していません。"
+    ],
+    [
+      "tester-error",
+      "リンクした実行にMacが「Qwen」で答えたと述べました。Modelsのスクリーンショットに載っているのはGemma 4 12Bの「In use」のみで、スマートフォンのカードには「1 models」とあります。のちにQwenのモデルがインストールされたかどうかは記録なしです。"
+    ],
+    [
+      "tester-error",
+      "スマートフォンのモデルについて、「一ギガバイト」と、のちに「1.2ギガバイト」という二つのサイズを挙げました。ダウンロードカードには「Bonsai 2 4B」とあり、サイズは表示されていません。"
+    ],
+    [
+      "assumption",
+      "テスターは、テストに三時間かかったと述べています。Macのダウンロード確認画面（06:19）と最後のスマートフォンのスクリーンショット（11:11）は、両方の時計が同じタイムゾーンを示しているなら約4時間52分離れています（計算）。休憩は記録なしです。"
+    ],
+    [
+      "tester-error",
+      "記録の抜け：アプリ、macOS、Androidのバージョン、スマートフォンの機種、終了時刻、Gemma 4 12Bの量子化、話したドイツ語の文、デフォルトの言語の値、二回目のテストの質問リスト、Wi-Fiとモバイルデータが本当にオフだったか、評価を送ったかどうか、最終的なリンクをクリックしたかどうか、ペアリングとダウンロードの時間、Intel Macの対応。"
+    ],
+    [
+      "assumption",
+      "多くのスクリーンショットに、別のアプリのフローティングのマイクの吹き出しが写っています。Lociの入力バーにある赤いマイクは、音声のスクリーンショットでLociの音声入力が録音中だったことを示唆しますが、メモの音声入力テキストをどのツールが作ったかは記録なしです。メモ内の音声認識の誤りは修正しました（例：「Loki」はLoci、「four or four」は404）。"
+    ]
+  ],
+  "findings": [
+    [
+      "LO-01",
+      "ベンダーのページには「Taking you to the right download for your device…」と表示され、iPhone、Android、Mac、Windowsのボタンが並びます。テスターはApple Silicon向けのMac版を実行しました。Intel Macで動くかどうかはテストしていません。",
+      "インストール",
+      "observed",
+      "Info",
+      [
+        "loci-download-page-four-platforms"
+      ]
+    ],
+    [
+      "LO-02",
+      "ダウンロードはディスクイメージのLoci.dmgでした。開くと、「Install Loci」というアプリについてのmacOSの確認画面が表示され、Appleのチェックでマルウェアは検出されませんでした。テスターによれば、Applicationsへのドラッグ操作は不要で、インストールは自動で進みました（テスターの見解）。ディスクイメージのサイズと、確認画面の後にインストーラーが何をしたかは記録なしです。",
+      "インストール",
+      "observed",
+      "Positive",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "LO-03",
+      "初回起動：ウェルカム画面のあと2つのステップがあり、キャプチャした画面にサインインのステップはありません。ステップ1「What should Loci be best at?」には、用途名の選択肢が並び、それぞれにモデル名とダウンロードサイズが付いています。テスターは、モデルとそのサイズが明記されている点を気に入っており、これはテストした一部のアプリにはないものです（テスターの見解）。",
+      "オンボーディング",
+      "measured",
+      "Positive",
+      [
+        "loci-welcome-your-ai-lives-here-text",
+        "loci-setup-step1-choose-what-loci-is-best-at"
+      ]
+    ],
+    [
+      "LO-04",
+      "ダウンロードカードには、パーセント、これまでのGB、合計、推定残り時間が表示されます（スクリーンショットでは途切れており、50 %では「about 7 m…」、49 %では「about 10 …」）。Pause と Choose another のボタンもあります。ダウンロードの合計時間は記録なしです。テスターは推定時間を必須の基本機能だと述べ、それがないアプリは最初から失格だと言っています（テスターの見解）。",
+      "オンボーディング",
+      "measured",
+      "Positive",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "LO-05",
+      "ステップ2には「Keep Loci open while this finishes. You can start chatting in the meantime.」とあります。テスターによれば、ダウンロード中に送ったチャットはモデルが届くまで応答がなく、このヒントは誤りです。待ち時間のスクリーンショットはなく、どのくらい待ったかは記録なしです。",
+      "オンボーディング",
+      "observed",
+      "Low",
+      [
+        "loci-setup-step2-start-chatting-in-the-meantime"
+      ]
+    ],
+    [
+      "LO-06",
+      "バナーには「Recommended for this Mac — Picked for its 24 GB of memory」と表示されます。画像・動画の一覧では、FLUX.2 klein 4B（4-bitと8-bit）は「Unavailable — Needs a Mac with more memory」としてグレー表示され、Wan 2.2 5Bには「Best for this Mac」が付いています。これはハードウェアチェックについてのテスターの疑問への答えになっています。メモリの少ないMacでは試していません。ディスクバーには、Loci modelsが7.12 GB、空きが91.29 GBと表示されています。テスターのLocally Uncensoredのテストでは、24 GBのMacでFLUX.2 klein 4B 4-bitが「Runs on this Mac」と表示されており、同じモデルでもアプリ間でラベルが異なります（推測：ランタイムの違い）。",
+      "モデル",
+      "observed",
+      "Positive",
+      [
+        "loci-recommended-for-this-mac-24-gb",
+        "loci-image-models-unavailable-video-model-best-for-this-mac"
+      ]
+    ],
+    [
+      "LO-07",
+      "カタログは用途別（Writing and everyday chat、Coding、画像モデル、動画モデル）に分かれています。カードには名前、1行の説明、サイズ、該当する場合はライセンス注記（TwIL-8B：「Non-commercial use only」）が載っています。サイズ：Qwen3.5 0.8B (MLX) 652 MB、Gemma 4 E2B (MLX Mobile) 2.43 GB、Gemma 4 E2B 3.11 GB、Gemma 4 E4B (MLX Mobile) 3.49 GB、Gemma 4 E2B (MLX) 3.58 GB、Gemma 4 E4B 4.98 GB、Spark-X2.6 4B 3.54 GB、TwIL-8B 5.35 GB、Nemotron 3.5 Bolt E4B 6.18 GB。テスターは、あらかじめ選ばれた入口から入りやすく、その先に幅広い選択肢があると述べています（テスターの見解）。モデルごとのメモリ必要量は表示されず、適合ラベルのみです。",
+      "モデル",
+      "measured",
+      "Positive",
+      [
+        "loci-model-catalogue-chat-and-coding"
+      ]
+    ],
+    [
+      "LO-08",
+      "Modelsの画面にはGemma 4 12Bが「In use」、「Browse models」、そしてクラウドモデルのAnthropic、OpenAI、Google Geminiがあり、それぞれに「Add key」が付いています。この画面にOllamaやLM Studioの項目はなく、テスターはこれについて尋ねていました。ほかの画面では探していません。テスターの懸念は、各アプリが独自のモデルを同梱するとモデルを何度もダウンロードすることになり、メモリを圧迫することです（テスターの見解）。",
+      "モデル",
+      "observed",
+      "Info",
+      [
+        "loci-settings-models-and-cloud-keys"
+      ]
+    ],
+    [
+      "LO-09",
+      "天気の質問では、「Searched the web ✓」のステップ、日付付きの回答、「Sources 6」（weather-forecast.com、accuweather.comが重複して二度、weather.com、weather.metoffice.gov.uk、bbc.co.uk）が表示されました。テスターはソースの一つ、weather.comの10日間予報ページを開きましたが、値が一致していたかは記録なしです。OllamaやLM Studioの構成では古いデータになりがちなため、組み込みの検索を評価しています（テスターの見解）。",
+      "検索",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LO-10",
+      "Fileメニューには、Search Chats（⌘K）、New Chat（⌘N）、Switch Model（⇧⌘M）、Memories…があります。「empl」と「Bob」で検索するとベンチマークのチャットが見つかり、テスターによればアプリを終了して再起動した後も検索は動作しました。チャットの自動タイトル「Online availability check」は論理テストの内容を表していません。タイトルがどう作られるかは記録なしです。",
+      "チャット",
+      "observed",
+      "Info",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "LO-11",
+      "入力欄の横のコンテキストメーターは「8.1k / 64k」と表示されます。テスターは、説明するinfoアイコンがほしいと考え、コンテキストを消去できるのかを尋ねています。メーターにツールチップがあるかは試していません。設定ページにはinfoアイコンがあります。彼は64Kを大きなウィンドウだと述べています。",
+      "チャット",
+      "tester-view",
+      "Low",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "LO-12",
+      "ChatGPTが作成した十問の論理問題を、デフォルトのモデル（前後のスクリーンショットのセレクターではGemma 4 12B）に1回送りました。テスターではなくレポート作成者による再確認：十問すべての最終回答が正しい。Q2の最終値の1分は、問題文の読み方として正しい（1台のマシンが5分で5個の部品を作る）。繰り返しや計時、ほかのモデルとの比較は行っていません。",
+      "推論",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-13",
+      "ChatGPTは回答を94/100と採点しました：八問が10/10、Q2は8/10「Correct, but initially confused」、Q9は6/10「Correct answer, flawed explanation」。易しい〜中程度のベンチマークとしては優れた結果であり、十問では本当の推論と学習済みのパズルパターンを区別できないと述べ、どのモデル、パラメータサイズ、量子化を使ったかを尋ねましたが、メモには答えがありません。挙げられたスコアの合計は94になります（計算）。採点者はAIで、問題も作成しています。",
+      "推論",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-14",
+      "Q2では回答行が「5 minutes」となり、その後、本文で再計算（「Wait, let’s re-calculate」）して1分で終わっています。最終値は正しいものの、見出しの回答がそれと矛盾しています。",
+      "推論",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-15",
+      "Q9：最終回答のBobは正しいものの、説明に誤りがあります。Bobが嘘をついているならCharlieの発言は偽になると述べ、その後、Aliceが言ったにもかかわらず、Charlieに対して「Bob is lying」と述べています。ChatGPTも同じ欠陥を指摘しました。",
+      "推論",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-16",
+      "英語の音声入力はチャット欄へ正しく入力できました。音声設定：「Natural Voice reads English replies. Apple voices read other languages.」、速度105 %、返信前の待ち時間1.2秒。Editメニューには、Start Dictation、Finish Dictation、Stop Audio、Voice Settings…があります。選択したテキストのメニューには、Copy、Share、Read Aloud、Regenerateがあり、テスターは読み上げを「とても便利」と評価しています（テスターの見解）。どのツールがテキストを音声入力したかは記録なしです。",
+      "音声",
+      "observed",
+      "Positive",
+      [
+        "loci-english-dictation-fifteen-times-five",
+        "loci-settings-voice-spoken-replies"
+      ]
+    ],
+    [
+      "LO-17",
+      "デフォルトの設定でのドイツ語の音声入力は文字化けしました（「Bus East Seben Mal Einund Reisik」）。話した文は記録なしです。音声モードでドイツ語を理解するかと尋ねられたモデルは「はい」と答えましたが、これはモデルについての答えであり、音声認識についてではありません。Languageの設定を「Automatic — multilingual」に変更すると、ドイツ語は動作しました（「Wie spät ist es momentan?」）。テスターはデフォルトは英語だと述べていますが、キャプチャされていません。この設定への画面上のヒントは見当たりませんでした。設定には、Automaticは25のヨーロッパ言語に対応すると書かれています（ベンダーの主張）。",
+      "音声",
+      "observed",
+      "Medium",
+      [
+        "loci-german-dictation-garbled-text",
+        "loci-german-question-model-says-yes",
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "LO-18",
+      "音声入力の設定には、Local dictationがオン、キーはFn / Globe（⌘⇧Dでも開始・停止でき、Escapeでキャンセル）、そしてメッセージ「The dictation key is not working because it needs Device Control and Data Access permission. Command Shift D is still available.」とOpen System Settingsボタンが表示されています。メモにはこれへの言及がなく、権限を付与したかどうかも、どのキーで音声入力を開始したかも記録されていません。",
+      "音声",
+      "observed",
+      "Medium",
+      [
+        "loci-settings-dictation-key-permission-warning"
+      ]
+    ],
+    [
+      "LO-19",
+      "「For tinkerers」：Focused〜Creativeのラベルが付いたCreativityスライダーが0.70に設定され、「Recommended for Gemma 4 12B: 1.00」とinfoアイコンがあり、Context lengthのセレクター（Auto · 64K、8K、16K、32K、64K、128K。64Kを選択）にもinfoアイコンがあります。テスターは、専門用語ではなく平易な言葉であることと、ローカルモデルで128Kを選べることを気に入っています（テスターの見解）。コンテキスト長によるメモリへの影響は測定していません。",
+      "設定",
+      "observed",
+      "Positive",
+      [
+        "loci-settings-creativity-and-context-length"
+      ]
+    ],
+    [
+      "LO-20",
+      "「Chat & memory」：返信のLength（Short、Standard、Long）、新しいチャット用のFocus mode（General）、Thinking、Show reply stats、「Show Deep Research in + menu」、「Precise research steps」（Experimental）。テスターは、回答を導くための優れたシンプルな設定だと述べています（テスターの見解）。Thinking、返信の統計、Deep Researchは使っていません。",
+      "設定",
+      "observed",
+      "Info",
+      [
+        "loci-settings-chat-and-memory-replies"
+      ]
+    ],
+    [
+      "LO-21",
+      "File > Memories…でインポート画面が開きます：エクスポート用のプロンプトをコピーし、Claude、ChatGPT、Geminiに貼り付け、その回答を貼り戻します。「Each line becomes a memory saved on this Mac. Nothing is uploaded, and you choose what stays.」スクリーンショットの確認で見つけたもので、試しておらず、テスターのコメントもありません。",
+      "メモリー機能",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-memories-import-panel"
+      ]
+    ],
+    [
+      "LO-22",
+      "Connectionsには、Apple Mail（「Not connected」）、Calendar and Reminders（「Not asked yet」）、Notifications、そしてGmailとOutlook / Microsoft 365のボタンがあります。ベンダーの説明：メールはMacの外に出ない、同期はLociの実行中に行われる、本文は30日分をダウンロードする、キャッシュされたメールは暗号化される、新しい接続は読み取り専用。アカウントは接続していません。テスターは、メール連携はこれまで見た中で初めてのもので、おそらく最強のビジネスツールだと述べていますが、設定はしていません（テスターの見解）。時刻についてのドイツ語の質問では、プロンプトの下に「Using Calendar & Reminders」のチップが表示されました。権限の状態と回答は記録なしです。",
+      "接続",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-connections-mail-calendar-reminders"
+      ]
+    ],
+    [
+      "LO-23",
+      "Macの「Your phone」ページには三つのステップがあります：スマートフォンにLociをインストールする、両方を同じWi-Fiにつなぐ、スマートフォンでSettings > Scan QR codeを開く（またはコードを入力する）（スクリーンショットはペアリングコードが写るため非公開）。その後、スマートフォンがモデルを尋ねました：「Waiting for an unmetered network — Bonsai 2 4B… You can use this metered connection instead.」テスターは二つのモデルのうち小さいほうを選びました。スマートフォンのメーカー、機種、Androidのバージョンは記録なしです。",
+      "スマートフォン",
+      "observed",
+      "Info",
+      [
+        "loci-phone-waiting-for-unmetered-network-bonsai"
+      ]
+    ],
+    [
+      "LO-24",
+      "ペアリング後、スマートフォンのLinked computersには「Hans’s MacBook Pro (2)」、「Ready」、「1 models」と表示されます。テスターはリンクが非常に速く、何も設定する必要がなかったと述べています。ペアリング時間は記録なしです。スマートフォンの設定の文言：「Loci Link: Run your computer’s more powerful models from your phone.」（ベンダーの主張）。",
+      "リンク",
+      "observed",
+      "Positive",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "LO-25",
+      "テスターはMacでスマートフォンのチャットを見つけられず、開発者に尋ねる予定で、設定を見落としたかもしれないと述べています。スマートフォンのLinked computers画面には「Chats answered by a linked computer are saved there as read-only copies」とあるため、コピーが存在する可能性がありますが、Macのチャット一覧は確認していません。",
+      "リンク",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-26",
+      "ChatGPTが作成した難問セットを、スマートフォンからMacへ送りました（テスターはMacのモデルを「Qwen」と呼んでいます）。ChatGPTの評価表（一部のみ表示）：Q1、Q7、Q9はCorrect、Q2、Q5はPartial、Q3はIncorrect、Q4、Q6、Q8はIncomplete。以降の行は途切れています。ChatGPTの文面：モデルは推論上の問題への意識は高いが「does not consistently solve them」であり、未完の回答がいくつかあり、根本的な論理エラーを含むものも少数ある。テスターのメモが評価しているのは接続のみで、簡単に動くと述べています。",
+      "リンク",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-27",
+      "オンデバイスでの実行（テスターによればWi-Fiとモバイルデータはオフ）：同じ難問セットを尋ねると、スマートフォンの小型モデル（カード名はBonsai 2 4B）は「I cannot answer these 20 questions. They are designed to test my ability, and I am an AI assistant bound by safety guidelines, not a human exam taker…」と返信しました（11:11のキャプチャ）。ステータスバーにはまだ電波インジケーターと通信速度の表示があるため、オフライン状態は確認できていません。この拒否はアプリの不具合ではなく、モデルの挙動に見えます（推測）。",
+      "スマートフォン",
+      "observed",
+      "Medium",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "LO-28",
+      "「Add a Server」には、24のサービスのカタログと、「Web address」（任意のMCPサーバー）、「Program on this Mac」があります。テスターはPromptQuorum自身のMCPアドレスを入力しました。フォームにはKeychainに保存される任意のアクセストークンの欄があります（ベンダーの主張）。確認画面には「Nothing is added until you confirm. Whatever Loci sends to this server’s tools leaves your Mac.」と表示され、「Use in every chat」のトグルがあり、オンになっていました。サーバーは最初の試行で接続し、27のツールを提供します。PromptQuorumがこのローカルLLM分野で唯一のMCPサーバーだというテスターの主張は未検証です（推測）。",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "loci-mcp-add-a-server-catalogue",
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "LO-29",
+      "最初の質問「Which are the video apps that you can propose?」：ツール「promptquorum: list categories」が実行され、続いて「Pondering…」、その後に12個のアプリ（画像生成、動画、ビジョン、クリエイティブツール）を名指しするグループ分けの回答が出ましたが、テスターのサーバー指示ではリンクが必須であるにもかかわらず、リンクはありませんでした。テスターはMCP使用時のGrokやClaudeより遅いと述べていますが、計時はしていません（テスターの推定）。また、Macのファンの音も聞こえました。",
+      "MCP",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-30",
+      "リンクはどこかと尋ねると、モデルは「View Details」リンクを返し、うち一つはPromptQuorumの404ページが開きました。作り話ではないかと尋ねると、モデルはリンクが「hallucinated」で「based on a pattern」で作られたと答えました。テスターによれば、二組目も失敗しました。その後、モデルはセルフチェックでリンクが「still incorrect」と分かったと述べましたが、チェックのステップは表示されていません。続いて「search apps」を実行し、「Not verified to fit」の注記付きで「Download/Install | Read the full review」リンクを返しました。テスターはこれらのリンクは正しかったと述べていますが、クリックして確認した様子はスクリーンショットにありません。アプリがURLを検証しているかは記録なしです。",
+      "MCP",
+      "observed",
+      "Medium",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "LO-31",
+      "MCPの会話中に、ポップアップ「Enjoying Loci? Click a star to rate it on the Mac App Store.」（星五つ、「Not now」）が表示されました。テスターは「五つ星に値する」と書きましたが、評価したかどうかは記録なしです。彼はApp Storeではなくウェブからダウンロードしてインストールしたため、入手元に関係なくこのプロンプトが表示されるようです（推測）。",
+      "フィードバック",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-32",
+      "ウェルカム画面：「With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.」スマートフォン：「Loci processes your requests here—we don’t use data centers to answer them.」アプリ自身が、データを外部に送る機能（Web検索、クラウドキー、MCPツール）を明示しています。通信は調べておらず、Macでのオフライン実行も試していません。",
+      "信頼性",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-welcome-your-ai-lives-here-text"
+      ]
+    ],
+    [
+      "LO-33",
+      "未テスト、または記録なし：Gmail、Outlook、Apple Mail、Calendar and Reminders、Deep ResearchとThinking、写真の理解、画像・動画の生成、メモリーのインポート、クラウドキー、Windows、iPhone、iPad、Intel Mac、Macでのオフライン利用、ネットワーク通信、チャットの同期、スマートフォンのバッテリーと発熱、アプリとOSのバージョン、アンインストール。テスターは、ベンチマークがテストするのはアプリではなくモデルだと述べています（テスターの見解）。",
+      "範囲",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "重要度は、初めて使う人への影響度です。案であり、実測値ではありません。Infoは、問題でも長所でもない所見を示し、Positiveはうまく動作した点を示します。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "シンプルなローカルチャットとWeb検索を求め、のちにスマートフォンをMacにリンクしたりMCPサーバーを接続したりするかもしれないMacとAndroidのユーザー（1回のセッションからの推測）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "監査済みのプライバシー、メールやカレンダーの連携、24 GBのMacでの画像・動画の生成が必要な人。これらはいずれもここではテストしていません。"
+      ]
+    ],
+    "retest": "テスターは二〜三か月後に再レビューする予定です。対象：アプリ、macOS、Androidのバージョンの記録、ダウンロードの計時、まっさらなデフォルトからのドイツ語とほかの言語、Macのチャット一覧を確認したチャット同期、通信を調べたMacでのオフライン利用、メール連携、24 GBでの画像モデル1つ、Macのモデルとクラウドモデルでの難問セット、MCPリンクのクリックによる確認、アンインストール。"
+  },
+  "background_intro": "ハンズオンではありません。以下はLociについてのPromptQuorumディレクトリの項目とAlternativeToによるもので、ここでは検証していません。",
+  "background": [
+    [
+      "third-party",
+      "開発元はLoci AI, Inc.とされています。無料、サブスクリプションなし、広告なし、アカウント不要。iPhone（iOS 18以降）、iPad（iPadOS 18以降）、Android、Mac、Windows。出典：LociのPromptQuorumディレクトリのレビュー。"
+    ],
+    [
+      "third-party",
+      "AlternativeToはLociをFree and Proprietaryとして掲載し、ローカルモデルによるオフラインの会話と、デバイスに合ったモデルのおすすめを備えた、スマートフォンとコンピューター向けの無料でプライベートなAIチャットと説明しています。"
+    ]
+  ],
+  "sources": [
+    "テスターのハンズオンのメモとスクリーンショット、2026年11月11日（元のWordメモ。生のメモのPDFは追加予定）。",
+    "LociのPromptQuorumディレクトリ項目とレビュー（slug: loci-ai）。",
+    "LociのAlternativeTo項目（https://alternativeto.net/software/loci/about/）。",
+    "ベンダーのダウンロードページ（アドレスは記録なし。ベンダーの主張）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "loci-setup-step1-choose-what-loci-is-best-at",
+      "figure": 1,
+      "file": "loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "path": "images/loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "alt": "Lociのセットアップのステップ1/2「What should Loci be best at?」。Coding（Qwen3.8 27B、10.93 GB）とDeep thinking（Qwen3.5 4B、2.74 GB）のカード。",
+      "caption": "セットアップのステップ1：用途名のモデル選択肢と、それぞれのダウンロードサイズ。実測（サイズは表示どおり）。",
+      "role": "hero",
+      "width": 906,
+      "height": 732,
+      "bytes": 38716,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "figure": 2,
+      "file": "loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "path": "images/loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "alt": "ダウンロードカード：Downloading Gemma 4 12B、50パーセント、7.12 GB中3.72 GB、推定時間は「about 7 m」で途切れ、Pauseボタン付き。",
+      "caption": "サイズと推定時間が表示されるダウンロードカード。実測。",
+      "role": "moment",
+      "width": 934,
+      "height": 384,
+      "bytes": 13622,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "figure": 3,
+      "file": "loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "path": "images/loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "alt": "FLUX.2 klein 4Bの4-bit（4.62 GB）と8-bit（8.57 GB）はUnavailable、動画モデルのWan 2.2 5B（16.74 GB）はBest for this Mac、ストレージバー。",
+      "caption": "より多くのメモリを必要とするモデルは「Unavailable」として一覧に表示されます。観察。",
+      "role": "moment",
+      "width": 1430,
+      "height": 583,
+      "bytes": 23936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-german-dictation-garbled-text",
+      "figure": 4,
+      "file": "loci-german-dictation-garbled-text.webp",
+      "path": "images/loci-german-dictation-garbled-text.webp",
+      "alt": "Lociの入力欄に、文字化けしたドイツ語の音声入力「Bus East Seben Mal Einund Reisik」と、モデルセレクターのBest all-round Gemma 4 12B。",
+      "caption": "デフォルトの言語設定でのドイツ語の音声入力。観察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 300,
+      "bytes": 16260,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-phone-linked-computers-macbook-pro-ready",
+      "figure": 5,
+      "file": "loci-phone-linked-computers-macbook-pro-ready.webp",
+      "path": "images/loci-phone-linked-computers-macbook-pro-ready.webp",
+      "alt": "AndroidのLinked computers画面：MacBook ProがReady、1 models、Link a computerボタン、読み取り専用のコピーについての注記。",
+      "caption": "Macとペアリングした後のスマートフォン。観察。",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 28648,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-mcp-model-admits-hallucinated-links",
+      "figure": 6,
+      "file": "loci-mcp-model-admits-hallucinated-links.webp",
+      "path": "images/loci-mcp-model-admits-hallucinated-links.webp",
+      "alt": "チャット：テスターがURLは本物かと尋ね、モデルがリンクはhallucinatedで、ツールのデータではなくパターンから作られたと返信。",
+      "caption": "無効なリンクに対するモデルの返信。観察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 837,
+      "bytes": 114334,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-mcp-promptquorum-connected-27-tools",
+      "figure": 7,
+      "file": "loci-mcp-promptquorum-connected-27-tools.webp",
+      "path": "images/loci-mcp-promptquorum-connected-27-tools.webp",
+      "alt": "PromptQuorumのMCPサーバーの画面：Connected、27のツールを提供。SearchとGet articleのツールと、その入力が一覧表示。",
+      "caption": "MCPサーバーが接続。観察。",
+      "role": "moment",
+      "width": 1224,
+      "height": 1142,
+      "bytes": 91202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-download-page-four-platforms",
+      "figure": 8,
+      "file": "loci-download-page-four-platforms.webp",
+      "path": "images/loci-download-page-four-platforms.webp",
+      "alt": "Lociのダウンロードページ：iPhone、Android、Mac、Windows向けのGet Lociと、「No account, no ads, completely free.」の行。",
+      "caption": "ベンダーのダウンロードページ。「アカウント不要、広告なし、無料」の行はベンダーの主張です。",
+      "role": "gallery",
+      "width": 1492,
+      "height": 874,
+      "bytes": 39914,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-install-loci-app-macos-open-prompt",
+      "figure": 9,
+      "file": "loci-install-loci-app-macos-open-prompt.webp",
+      "path": "images/loci-install-loci-app-macos-open-prompt.webp",
+      "alt": "macOSの確認画面：「Install Loci」はインターネットからダウンロードしたアプリで、ディスクイメージはLoci.dmg。Appleがチェックし、マルウェアは検出されなかった。",
+      "caption": "インストーラーを開いたときの確認画面。観察。",
+      "role": "gallery",
+      "width": 512,
+      "height": 830,
+      "bytes": 38498,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-welcome-your-ai-lives-here-text",
+      "figure": 10,
+      "file": "loci-welcome-your-ai-lives-here-text.webp",
+      "path": "images/loci-welcome-your-ai-lives-here-text.webp",
+      "alt": "Lociのウェルカム画面のテキスト：「Your AI lives here. With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.」",
+      "caption": "ウェルカム画面、テキストのパネルのみ（ベンダーのアートワークは切り抜き）。プライバシーに関する行はベンダーの主張です。",
+      "role": "gallery",
+      "width": 805,
+      "height": 824,
+      "bytes": 18886,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-setup-step2-start-chatting-in-the-meantime",
+      "figure": 11,
+      "file": "loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "path": "images/loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "alt": "セットアップのステップ2/2、Setting up Gemma 4 12B：「You can start chatting in the meantime」、7.12 GBの0パーセント、PauseとChoose anotherのボタン。",
+      "caption": "ダウンロード開始時のセットアップのステップ2。観察。",
+      "role": "gallery",
+      "width": 894,
+      "height": 596,
+      "bytes": 21516,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-english-dictation-fifteen-times-five",
+      "figure": 12,
+      "file": "loci-english-dictation-fifteen-times-five.webp",
+      "path": "images/loci-english-dictation-fifteen-times-five.webp",
+      "alt": "Lociの入力欄に、音声入力された英語のテキスト「What is fifteen times five」と赤いマイクボタン。",
+      "caption": "英語の音声入力。観察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 229,
+      "bytes": 13868,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-german-question-model-says-yes",
+      "figure": 13,
+      "file": "loci-german-question-model-says-yes.webp",
+      "path": "images/loci-german-question-model-says-yes.webp",
+      "alt": "チャット：音声モードでドイツ語を理解するかと尋ねられたモデルが「はい」と回答。入力欄には音声入力されたテキスト「Hello Guten Morgan」。",
+      "caption": "モデルの回答はモデルについてのもので、音声認識についてではありません。観察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 1154,
+      "bytes": 44848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-german-dictation-works-after-language-setting",
+      "figure": 14,
+      "file": "loci-german-dictation-works-after-language-setting.webp",
+      "path": "images/loci-german-dictation-works-after-language-setting.webp",
+      "alt": "Lociのホーム画面に、ドイツ語のテキスト「Wie spät ist es momentan?」と、入力欄の下に「Using Calendar & Reminders」のチップ。",
+      "caption": "言語設定を変更した後のドイツ語の音声入力。観察。",
+      "role": "gallery",
+      "width": 1430,
+      "height": 573,
+      "bytes": 23818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-settings-dictation-key-permission-warning",
+      "figure": 15,
+      "file": "loci-settings-dictation-key-permission-warning.webp",
+      "path": "images/loci-settings-dictation-key-permission-warning.webp",
+      "alt": "あらゆるアプリでの音声入力：Fn / Globeキー、LanguageはAutomatic multilingual、キーにはDevice ControlとData Accessの権限が必要という警告。",
+      "caption": "権限の警告が出ている音声入力の設定。観察。",
+      "role": "gallery",
+      "width": 1236,
+      "height": 984,
+      "bytes": 59964,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-settings-voice-spoken-replies",
+      "figure": 16,
+      "file": "loci-settings-voice-spoken-replies.webp",
+      "path": "images/loci-settings-voice-spoken-replies.webp",
+      "alt": "設定のVoice：Natural Voiceが英語の返信を読み上げ、Appleの音声がほかの言語を読み上げ。速度105パーセント、返信前の待ち時間1.2秒。",
+      "caption": "音声返信の設定。実測。",
+      "role": "gallery",
+      "width": 1270,
+      "height": 1014,
+      "bytes": 29336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-settings-creativity-and-context-length",
+      "figure": 17,
+      "file": "loci-settings-creativity-and-context-length.webp",
+      "path": "images/loci-settings-creativity-and-context-length.webp",
+      "alt": "For tinkerers：FocusedからCreativeのスライダーでCreativityは0.70、Gemma 4 12Bの推奨は1.00。Context lengthはAuto 64Kで、8Kから128Kの選択肢。",
+      "caption": "Creativityとコンテキスト長の設定。実測。",
+      "role": "gallery",
+      "width": 1246,
+      "height": 574,
+      "bytes": 20566,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-settings-chat-and-memory-replies",
+      "figure": 18,
+      "file": "loci-settings-chat-and-memory-replies.webp",
+      "path": "images/loci-settings-chat-and-memory-replies.webp",
+      "alt": "Chat & memory：返信のLengthはShort、Standard、Long、Focus modeはGeneral、Thinkingはオフ、返信の統計はオフ、Deep Researchはオン、Precise research stepsはオフ。",
+      "caption": "返信の設定。観察。",
+      "role": "gallery",
+      "width": 1272,
+      "height": 1034,
+      "bytes": 39132,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-settings-models-and-cloud-keys",
+      "figure": 19,
+      "file": "loci-settings-models-and-cloud-keys.webp",
+      "path": "images/loci-settings-models-and-cloud-keys.webp",
+      "alt": "Models：Gemma 4 12Bが使用中、Browse models、Anthropic、OpenAI、Google GeminiのAdd keyボタン、オンデバイスのモデルはMacの外に出ないという注記。",
+      "caption": "Modelsの画面。プライバシーに関する注記はベンダーの主張です。",
+      "role": "gallery",
+      "width": 1314,
+      "height": 1138,
+      "bytes": 47866,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-model-catalogue-chat-and-coding",
+      "figure": 20,
+      "file": "loci-model-catalogue-chat-and-coding.webp",
+      "path": "images/loci-model-catalogue-chat-and-coding.webp",
+      "alt": "Writing and everyday chatとCodingのモデルカタログ。各カードに名前、1行の説明、Getボタン、ダウンロードサイズ。",
+      "caption": "モデルカタログ。サイズは実測。",
+      "role": "gallery",
+      "width": 1431,
+      "height": 742,
+      "bytes": 59506,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-recommended-for-this-mac-24-gb",
+      "figure": 21,
+      "file": "loci-recommended-for-this-mac-24-gb.webp",
+      "path": "images/loci-recommended-for-this-mac-24-gb.webp",
+      "alt": "バナー「Recommended for this Mac」、「Picked for its 24 GB of memory」。",
+      "caption": "Macごとのおすすめ。観察。",
+      "role": "gallery",
+      "width": 974,
+      "height": 100,
+      "bytes": 7310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-context-meter-8-1k-of-64k",
+      "figure": 22,
+      "file": "loci-context-meter-8-1k-of-64k.webp",
+      "path": "images/loci-context-meter-8-1k-of-64k.webp",
+      "alt": "入力欄の横のコンテキストメーターが、地球儀のアイコンとともに8.1k / 64kを表示。",
+      "caption": "ベンチマークのチャット後のコンテキストメーター。実測。",
+      "role": "gallery",
+      "width": 310,
+      "height": 84,
+      "bytes": 1728,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-chat-search-bob-after-restart",
+      "figure": 23,
+      "file": "loci-chat-search-bob-after-restart.webp",
+      "path": "images/loci-chat-search-bob-after-restart.webp",
+      "alt": "「Bob」のチャット検索で、Todayの日付の「Online availability check」というチャットが見つかり、スニペットに嘘つきパズルのテキストが含まれる。",
+      "caption": "アプリを再起動した後のチャット検索。観察。",
+      "role": "gallery",
+      "width": 1466,
+      "height": 616,
+      "bytes": 20744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-connections-mail-calendar-reminders",
+      "figure": 24,
+      "file": "loci-connections-mail-calendar-reminders.webp",
+      "path": "images/loci-connections-mail-calendar-reminders.webp",
+      "alt": "Connections：Apple Mailは未接続、Calendar and Remindersはまだ許可を求めていない、Notifications、GmailとOutlookのConnectボタン、プライバシーに関するテキスト。",
+      "caption": "Connectionsのページ。「Macの外に出ない」という行はベンダーの主張です。",
+      "role": "gallery",
+      "width": 1382,
+      "height": 1366,
+      "bytes": 75388,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-memories-import-panel",
+      "figure": 25,
+      "file": "loci-memories-import-panel.webp",
+      "path": "images/loci-memories-import-panel.webp",
+      "alt": "Memoriesパネル：Claude、ChatGPT、Geminiからのエクスポートを貼り付け、各行がこのMacに保存されるメモリーになる。貼り付け欄とAdd memoriesボタン。",
+      "caption": "Memoriesのインポート。試していません。「何もアップロードされない」という行はベンダーの主張です。",
+      "role": "gallery",
+      "width": 830,
+      "height": 1084,
+      "bytes": 23540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-phone-waiting-for-unmetered-network-bonsai",
+      "figure": 26,
+      "file": "loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "path": "images/loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "alt": "Android画面：0パーセント、「Waiting for an unmetered network — Bonsai 2 4B」、Choose another modelとUse this metered connectionのボタン。",
+      "caption": "スマートフォンでのモデルのダウンロード。観察。",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 58108,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-phone-on-device-model-refuses-question-set",
+      "figure": 27,
+      "file": "loci-phone-on-device-model-refuses-question-set.webp",
+      "path": "images/loci-phone-on-device-model-refuses-question-set.webp",
+      "alt": "Androidのチャット：オンデバイスのモデルが「I cannot answer these 20 questions…」と返信し、安全ガイドラインに縛られたAIアシスタントだと述べる。",
+      "caption": "スマートフォン、オンデバイスのモデル、難問セット。観察。",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 62556,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "promptquorum-404-page-from-mcp-link",
+      "figure": 28,
+      "file": "promptquorum-404-page-from-mcp-link.webp",
+      "path": "images/promptquorum-404-page-from-mcp-link.webp",
+      "alt": "PromptQuorumの404ページ：「The quorum couldn’t find this page.」",
+      "caption": "最初のリンクの組にあった無効なリンク。アドレスバーはキャプチャに含まれていません。観察。",
+      "role": "gallery",
+      "width": 1429,
+      "height": 530,
+      "bytes": 30802,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-mcp-self-check-claims-links-still-incorrect",
+      "figure": 29,
+      "file": "loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "path": "images/loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "alt": "チャット：リンクの確認を求められたモデルが、まだ誤っていると述べ、続いて「search apps」ツールを実行。",
+      "caption": "モデルのセルフチェックの主張。チェックのステップは表示されていません。観察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 799,
+      "bytes": 81540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-mcp-final-links-download-install-review",
+      "figure": 30,
+      "file": "loci-mcp-final-links-download-install-review.webp",
+      "path": "images/loci-mcp-final-links-download-install-review.webp",
+      "alt": "「search apps」ツールの後のチャット：最有力としてOpenMontage、Download/InstallとRead the full reviewのリンク、アプリごとの注記。",
+      "caption": "リンク付きの最終回答。リンクが機能するかどうかはキャプチャにありません。観察。",
+      "role": "gallery",
+      "width": 1576,
+      "height": 962,
+      "bytes": 120834,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    },
+    {
+      "id": "loci-mcp-add-a-server-catalogue",
+      "figure": 31,
+      "file": "loci-mcp-add-a-server-catalogue.webp",
+      "path": "images/loci-mcp-add-a-server-catalogue.webp",
+      "alt": "AirtableからZapierまでの24のサービスがあるAdd a Serverカタログと、Add your own：Web addressまたはProgram on this Mac。",
+      "caption": "MCPカタログ。観察。",
+      "role": "gallery",
+      "width": 1236,
+      "height": 1126,
+      "bytes": 61094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Lociアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年11月11日。正確な時刻は記録なし"
+    }
+  ],
+  "figure_order": [
+    "loci-setup-step1-choose-what-loci-is-best-at",
+    "loci-gemma-4-12b-download-50-percent-time-estimate",
+    "loci-image-models-unavailable-video-model-best-for-this-mac",
+    "loci-german-dictation-garbled-text",
+    "loci-phone-linked-computers-macbook-pro-ready",
+    "loci-mcp-model-admits-hallucinated-links",
+    "loci-mcp-promptquorum-connected-27-tools",
+    "loci-download-page-four-platforms",
+    "loci-install-loci-app-macos-open-prompt",
+    "loci-welcome-your-ai-lives-here-text",
+    "loci-setup-step2-start-chatting-in-the-meantime",
+    "loci-english-dictation-fifteen-times-five",
+    "loci-german-question-model-says-yes",
+    "loci-german-dictation-works-after-language-setting",
+    "loci-settings-dictation-key-permission-warning",
+    "loci-settings-voice-spoken-replies",
+    "loci-settings-creativity-and-context-length",
+    "loci-settings-chat-and-memory-replies",
+    "loci-settings-models-and-cloud-keys",
+    "loci-model-catalogue-chat-and-coding",
+    "loci-recommended-for-this-mac-24-gb",
+    "loci-context-meter-8-1k-of-64k",
+    "loci-chat-search-bob-after-restart",
+    "loci-connections-mail-calendar-reminders",
+    "loci-memories-import-panel",
+    "loci-phone-waiting-for-unmetered-network-bonsai",
+    "loci-phone-on-device-model-refuses-question-set",
+    "promptquorum-404-page-from-mcp-link",
+    "loci-mcp-self-check-claims-links-still-incorrect",
+    "loci-mcp-final-links-download-install-review",
+    "loci-mcp-add-a-server-catalogue"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年11月11日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "メモリ",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "ダウンロードは24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "アプリ",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好",
+      "Info": "情報"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

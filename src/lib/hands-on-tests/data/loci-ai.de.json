@@ -1,0 +1,1891 @@
+{
+  "id": "pq-test-loci-2026-11-11",
+  "hero": "loci-setup-step1-choose-what-loci-is-best-at",
+  "date_human": "11. November 2026",
+  "captured": "11.11.2026; Mac-Download-Hinweis 06:19, letzter Handy-Screenshot 11:11; Endzeit nicht erfasst",
+  "standard_version": "0.2",
+  "locale": "de",
+  "app": {
+    "name": "Loci",
+    "slug": "loci-ai",
+    "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
+    "category": "Lokaler KI-Chat, Mac und Android",
+    "platform": "macOS (Apple Silicon) und Android",
+    "pricing_url": "https://loci.ai"
+  },
+  "title": "Loci auf einem M4 Pro Mac mit 24 GB: Lokaler Chat mit Websuche, Handy-Verbindung und MCP-Server",
+  "page_title": "Loci-Test",
+  "dek": "Eine erste Sitzung am 11. November 2026: ein reibungsloses Setup, Websuche, ein Android-Handy, das das Modell des Macs mitnutzt, und tote Links vom Modell, als der Tester seinen eigenen MCP-Server anschloss.",
+  "seo": {
+    "title": "Loci im Praxistest: Lokaler KI-Chat auf dem M4 Pro Mac",
+    "description": "Loci auf M4 Pro Mac mit 24 GB im Praxistest: Setup, Websuche, Handy-Link und MCP liefen; Deutsch-Diktat brauchte eine Einstellung, MCP-Links zweimal falsch."
+  },
+  "faq": [
+    [
+      "Braucht Loci ein Konto?",
+      "In den erfassten Screenshots erschien kein Anmeldeschritt, und laut Hersteller gibt es kein Konto, keine Werbung und kein Abo. Der Preis wurde nicht weiter geprüft.",
+      "observed"
+    ],
+    [
+      "Durchsucht Loci das Web mit einem lokalen Modell?",
+      "Ja. Eine Wetterfrage zeigte den Schritt „Searched the web“ und sechs Quellen. Ob die Werte stimmten, wurde nicht geprüft.",
+      "observed"
+    ],
+    [
+      "Versteht Loci deutsches Diktat?",
+      "Erst nach einer Einstellungsänderung. Mit der Standardeinstellung für die Sprache kam Deutsch unleserlich an; nach Auswahl von „Automatic — multilingual“ wurde ein deutscher Satz richtig transkribiert.",
+      "observed"
+    ],
+    [
+      "Kann ein Android-Handy das Modell des Macs nutzen?",
+      "Ja, laut Notizen und dem Bildschirm „Linked computers“ des Handys, der den Mac als Ready mit einem Modell zeigt. Das kleine eigene Modell des Handys lehnte eine schwierige Fragenreihe ab, als es allein lief.",
+      "observed"
+    ],
+    [
+      "Funktioniert Loci mit MCP-Servern?",
+      "Ja. Der Tester fügte den eigenen MCP-Server von PromptQuorum hinzu, der sich beim ersten Versuch verband und 27 Werkzeuge anbot. Das lokale Modell lieferte zunächst Links, die auf eine 404-Seite führten.",
+      "observed"
+    ],
+    [
+      "Ist Loci privat?",
+      "Nicht überprüft. Die App sagt, ein lokales Modell sende keine Worte vom Mac, doch Websuche und MCP-Werkzeuge senden Daten bauartbedingt nach außen, und es wurde kein Datenverkehr untersucht.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-11",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Loci. Die Download-Seite lautet „Download Loci“; der Verzeichnis-Testbericht (Drittquelle) nennt Loci AI, Inc. als Hersteller.",
+      "observed"
+    ],
+    [
+      "Version",
+      "Nicht erfasst.",
+      null
+    ],
+    [
+      "Quelle",
+      "Download-Seite des Herstellers; Chrome speicherte „Loci.dmg“. Die Seitenadresse ist nicht erfasst.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans (Gründer von PromptQuorum)",
+      "observed"
+    ],
+    [
+      "Datum, Start, Ende",
+      "11. November 2026, abgeleitet aus der Antwort der App „as of Wednesday, November 11, 2026“; die Notizen nennen kein Datum. Der macOS-Hinweis zeigt den Download um 06:19 Uhr; der letzte Handy-Screenshot trägt den Zeitstempel 11:11. Der Tester sagt, es habe etwa drei Stunden gedauert. Endzeit nicht erfasst.",
+      "observed"
+    ],
+    [
+      "Hardware",
+      "Mac: Apple M4 Pro, 24 GB Unified Memory; die App sagt „Picked for its 24 GB of memory“. Die Notizen sagen nur „m 4“; der Tester bestätigte danach M4 Pro. Handy: Android, Marke und Modell nicht erfasst („my old phone“).",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS- und Android-Versionen nicht erfasst.",
+      null
+    ],
+    [
+      "Warum getestet",
+      "Der Entwickler meldete sich beim Tester und regte an, sich die App anzusehen.",
+      "tester-view"
+    ],
+    [
+      "Ziel",
+      "Nicht als Ziel angegeben. Die Notizen zeigen einen ersten Blick auf Setup, Chat, Suche, Sprache, Einstellungen, Handy-Verbindung und einen MCP-Server.",
+      null
+    ],
+    [
+      "Modelle",
+      "Mac: Gemma 4 12B, im Setup als „Best all-round“ gewählt; Quantisierung nicht erfasst. Handy: Bonsai 2 4B auf dem Gerät laut Download-Karte; Größe nicht auf dem Bildschirm.",
+      "observed"
+    ],
+    [
+      "Genutzte KI-Hilfe",
+      "ChatGPT schrieb und bewertete während des Tests den Logik-Benchmark. Claude entwarf diesen Bericht aus den Word-Notizen des Testers und 52 Bildern. Die Notizen sind teils diktiert; manche Ungenauigkeiten können vom Diktierwerkzeug stammen, nicht von Loci.",
+      "observed"
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Loci ist dort mit einem KI-geschriebenen Testbericht aufgeführt. Der Entwickler ist auf den Tester zugegangen, und die Notizen enden mit einem an ihn gerichteten Dank. Der im Test genutzte MCP-Server ist der eigene von PromptQuorum. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+  "verdict": {
+    "general": "Eine KI-App im Verbraucherstil für Mac und Android mit einem ungewöhnlich klaren ersten Start. In dieser Sitzung funktionierten Setup, eingebaute Websuche, englisches Diktat, deutsches Diktat (nach einer Einstellungsänderung), die Verbindung von Handy und Mac sowie eine MCP-Anbindung. Das Standardmodell beantwortete zehn Logikfragen richtig, lieferte über MCP aber tote Links, bis es zweimal korrigiert wurde, und das kleine eigene Modell des Handys lehnte eine schwierige Fragenreihe ab. E-Mail, Kalender, Bild- und Videoerzeugung, Offline-Betrieb am Mac, die Datenschutzangaben, Chat-Synchronisierung und Deinstallation wurden nicht getestet.",
+    "fit": "Der Tester ist eindeutig positiv: wirklich beeindruckt, und er nennt die App ein weiteres Ei, das den Sektor der lokalen LLMs voranbringen wird. Ob er sie weiter nutzen wird, geht aus den Notizen nicht hervor; er plant, sie in zwei bis drei Monaten erneut zu testen."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Installer-App, kein Ziehen in „Programme“. Intel-Mac und App-Version nicht erfasst."
+    ],
+    [
+      "Einstieg und Modellauswahl",
+      4,
+      "Größen, Zeitschätzung und eine Empfehlung je Mac; ein irreführender Hinweis."
+    ],
+    [
+      "Kernfunktion",
+      4,
+      "Chat, Suche, Diktat, Handy-Verbindung und MCP-Anbindung funktionierten; zwei Fehlschläge stehen im Fazit."
+    ],
+    [
+      "Führung und Nachbessern",
+      4,
+      "Einstellungen in einfachen Worten; kein Hinweis auf die Spracheinstellung; die Kontextanzeige wird nicht erklärt."
+    ],
+    [
+      "Leistung",
+      null,
+      "Nicht gestoppt. Der Tester nennt die MCP-Antwort langsamer als seine Grok- und Claude-Setups."
+    ],
+    [
+      "Dokumentation",
+      null,
+      "Weder ein Handbuch noch eine Anleitung auf der Website wurde geöffnet."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Angaben nicht geprüft."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Die Bewertungen sind Vorschläge des Berichtsautors, abgeleitet aus den Belegen des Testers; k. A. bedeutet nicht getestet, nicht null.",
+  "tldr": [
+    [
+      "observed",
+      "Loci ist eine lokale KI-Chat-App für Mac und Android. Der Tester nutzte sie auf einem Apple M4 Pro mit 24 GB und wählte im Setup Gemma 4 12B (7,12 GB)."
+    ],
+    [
+      "observed",
+      "Das Setup zeigt Modellgrößen, eine Download-Zeitschätzung und eine Empfehlung je Mac. Die eingebaute Websuche beantwortete eine Wetterfrage mit sechs Quellen."
+    ],
+    [
+      "observed",
+      "Deutsches Diktat kam mit der Standardeinstellung für die Sprache unleserlich an und funktionierte, nachdem sie auf „Automatic — multilingual“ gestellt wurde."
+    ],
+    [
+      "observed",
+      "Ein Android-Handy verband sich mit dem Mac und zeigte ihn als Ready. Allein betrieben, lehnte das kleine Modell des Handys eine schwierige Fragenreihe ab."
+    ],
+    [
+      "observed",
+      "Der MCP-Server von PromptQuorum verband sich beim ersten Versuch mit 27 Werkzeugen. Das lokale Modell lieferte zweimal tote Links, bevor eine dritte Runde das richtige Werkzeug nutzte."
+    ],
+    [
+      "assumption",
+      "E-Mail, Kalender, Bild- und Videoerzeugung, Offline-Betrieb am Mac, Datenschutzangaben, Chat-Synchronisierung und Deinstallation wurden nicht getestet; dies ist also ein erster Blick, kein Urteil."
+    ]
+  ],
+  "quotes": [
+    "„Die kleinen Dinge zählen.“",
+    "„Einfacher Einstieg für alle durch Vorauswahl, danach aber eine wirklich große Auswahl. Das Beste aus beiden Welten.“",
+    "„Die Dinge funktionieren. Die Oberfläche ist gut gemacht, und es gibt keine unangenehmen Überraschungen.“"
+  ],
+  "quote_note": "Notizen des Testers, leicht bearbeitet aus einem Diktat und ins Deutsche übertragen. Alle drei sind seine Urteile, keine Messungen.",
+  "moments_title": "Sechs Momente, die diesen Test geprägt haben",
+  "moments_nav": "Sechs Momente",
+  "moments": [
+    [
+      "Größe und Zeit vor dem Warten",
+      "Download-Karte mit Größe und geschätzter Zeit.",
+      "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "chapter-setup"
+    ],
+    [
+      "Ausgegraut, nicht versteckt",
+      "Modelle mit höherem Speicherbedarf sind als Unavailable aufgeführt.",
+      "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "chapter-setup"
+    ],
+    [
+      "Deutsch hinein, Unsinn heraus",
+      "Deutsches Diktat, bevor die Spracheinstellung geändert wurde.",
+      "loci-german-dictation-garbled-text",
+      "chapter-voice"
+    ],
+    [
+      "Handy mit dem Mac verbunden",
+      "Das Handy führt den Mac als verbundenen Computer auf.",
+      "loci-phone-linked-computers-macbook-pro-ready",
+      "chapter-phone"
+    ],
+    [
+      "Das Modell gibt erfundene Links zu",
+      "Antwort auf die Frage des Testers nach den toten URLs.",
+      "loci-mcp-model-admits-hallucinated-links",
+      "chapter-mcp"
+    ],
+    [
+      "Eigener MCP-Server verbunden",
+      "Der Server listete seine Werkzeuge in der App auf.",
+      "loci-mcp-promptquorum-connected-27-tools",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Download und Installation",
+      "items": [
+        [
+          "observed",
+          "Der Tester lud den Mac-Build von der Download-Seite des Herstellers herunter, die iPhone, Android, Mac und Windows anbietet. Das Disk-Image Loci.dmg enthielt eine Installer-App, die macOS prüfte, bevor sie sich öffnete.",
+          "loci-install-loci-app-macos-open-prompt"
+        ],
+        [
+          "tester-view",
+          "Ihm gefiel, dass kein Ziehen nach „Programme“ nötig war, ein Schritt, dem er bei anderen getesteten Apps begegnet ist.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "Erster Start und Setup",
+      "items": [
+        [
+          "observed",
+          "Ein Willkommensbildschirm führte zu zwei Schritten: wählen, worin Loci am besten sein soll, dann das Modell herunterladen. Er landete bei Gemma 4 12B, dem Modell, das die App als „Best all-round“ kennzeichnet.",
+          "loci-setup-step1-choose-what-loci-is-best-at"
+        ],
+        [
+          "tester-view",
+          "Die Download-Karte gab eine geschätzte Zeit an, die er als Grundvoraussetzung für jede App mit mehrere Gigabyte großen Modellen ansieht.",
+          "loci-gemma-4-12b-download-50-percent-time-estimate"
+        ],
+        [
+          "observed",
+          "Der Hinweis, während des Downloads schon zu chatten, passte nicht zu dem, was er sah: Ein während des Downloads gesendeter Chat blieb unbeantwortet, bis das Modell da war.",
+          "loci-setup-step2-start-chatting-in-the-meantime"
+        ],
+        [
+          "observed",
+          "Zwei Fragen, die er früh notierte, ob die App die Hardware prüft und ob sich andere Runner wie Ollama hinzufügen lassen, wurden später teilweise beantwortet: Die App empfiehlt Modelle für den Mac und graut ungeeignete aus; ein Ollama-Eintrag war auf dem Modelle-Bildschirm nicht zu finden.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "Chat, Websuche und der Logik-Benchmark",
+      "items": [
+        [
+          "observed",
+          "Eine Wetterfrage nutzte die eingebaute Websuche und listete ihre Quellen auf.",
+          null
+        ],
+        [
+          "tester-view",
+          "Der Tester gab dem Standardmodell dann einen Logik-Benchmark mit zehn Fragen, den ChatGPT geschrieben hatte. Er merkt an, dass dies das Modell testet, nicht die App, aber zeigt, dass die App in diesem Zusammenhang nützlich ist.",
+          null
+        ],
+        [
+          "third-party",
+          "ChatGPT bewertete die Antworten mit 94 von 100. Der Berichtsautor prüfte sie nach: Alle zehn Endantworten sind richtig.",
+          null
+        ],
+        [
+          "observed",
+          "Die Chat-Suche fand den Benchmark-Chat wieder, nachdem die App beendet und neu gestartet worden war. Eine Kontextanzeige neben dem Eingabefeld zeigt 8.1k / 64k.",
+          "loci-chat-search-bob-after-restart"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-voice",
+      "title": "Sprache und Deutsch",
+      "items": [
+        [
+          "observed",
+          "Englisches Diktat funktionierte sofort.",
+          "loci-english-dictation-fifteen-times-five"
+        ],
+        [
+          "tester-error",
+          "Deutsch funktionierte nicht, und der Tester schrieb, Loci sei nur englisch. Später fand er die Spracheinstellung, und Deutsch funktionierte.",
+          "loci-german-dictation-works-after-language-setting"
+        ],
+        [
+          "observed",
+          "Die Diktiertaste zeigte eine Berechtigungswarnung, die die Notizen nicht erwähnen.",
+          "loci-settings-dictation-key-permission-warning"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-settings",
+      "title": "Einstellungen, Modelle und Verbindungen",
+      "items": [
+        [
+          "tester-view",
+          "Ihm gefielen die Einstellungen in einfachen Worten und der große Modellkatalog hinter einer einfachen ersten Wahl.",
+          "loci-model-catalogue-chat-and-coding"
+        ],
+        [
+          "observed",
+          "Einen Erinnerungsimport sowie die Verbindungen zu E-Mail und Kalender sah er, probierte sie aber nicht aus.",
+          "loci-connections-mail-calendar-reminders"
+        ],
+        [
+          "tester-view",
+          "Er nennt die E-Mail-Integration möglicherweise die stärkste Business-Funktion, die er in einer lokalen App gesehen hat.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-phone",
+      "title": "Handy und Loci Link",
+      "items": [
+        [
+          "observed",
+          "Er installierte Loci auf einem Android-Handy und koppelte es mit dem Mac. Nach dem Koppeln führt das Handy den Mac als Ready mit einem Modell auf.",
+          "loci-phone-linked-computers-macbook-pro-ready"
+        ],
+        [
+          "tester-error",
+          "Er fand seine Handy-Chats nicht auf dem Mac, ohne die Chat-Liste des Macs zu prüfen; der Bildschirm des Handys sagt, dass dort schreibgeschützte Kopien gespeichert werden.",
+          null
+        ],
+        [
+          "third-party",
+          "Er schickte dann eine schwierige Fragenreihe über die Verbindung; die Bewertung durch ChatGPT fiel gemischt aus.",
+          null
+        ],
+        [
+          "observed",
+          "Dieselbe Reihe ließ er noch einmal mit dem kleinen eigenen Modell des Handys laufen, das ablehnte.",
+          "loci-phone-on-device-model-refuses-question-set"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "MCP und die toten Links",
+      "items": [
+        [
+          "observed",
+          "Er fügte den eigenen MCP-Server von PromptQuorum hinzu. Die erste Antwort, eine gruppierte Liste von 12 Apps, hatte keine Links.",
+          "loci-mcp-promptquorum-connected-27-tools"
+        ],
+        [
+          "observed",
+          "Die Links, die das Modell danach erzeugte, waren falsch, und einer öffnete die 404-Seite von PromptQuorum. Gefragt, ob es sie erfunden habe, sagte das Modell, sie seien halluziniert.",
+          "loci-mcp-model-admits-hallucinated-links"
+        ],
+        [
+          "observed",
+          "Auch ein zweiter Satz scheiterte. Das Modell sagte, eine Selbstprüfung habe die Links weiterhin als falsch eingestuft, führte dann das Werkzeug „search apps“ aus und lieferte einen dritten Satz, der laut Tester richtig war.",
+          "loci-mcp-final-links-download-install-review"
+        ],
+        [
+          "tester-view",
+          "Der Tester liest dies als Stärke von MCP mit einem lokalen Modell: Es kann Live-Daten nutzen und sich korrigieren, wenn man es darauf hinweist.",
+          null
+        ],
+        [
+          "observed",
+          "Während dieser Unterhaltung erschien ein Bewertungs-Popup.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Entscheidung",
+      "items": [
+        [
+          "observed",
+          "Die Notizen enden mit einer Zusammenfassung und dem Plan eines erneuten Tests, nicht mit einem Urteil über die weitere Nutzung.",
+          null
+        ],
+        [
+          "tester-view",
+          "Der Tester sagt, er sei wirklich beeindruckt, und nennt die App ein weiteres Ei, das den Sektor der lokalen LLMs voranbringen wird. Er plant, sie in zwei bis drei Monaten erneut zu testen und den Entwickler nach der Chat-Synchronisierung zu fragen.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "„No account, no ads, completely free.“",
+      "Download-Seite",
+      "In den erfassten Screenshots kein Anmeldeschritt und keine Werbung; der Preis wurde nicht weiter geprüft.",
+      "observed"
+    ],
+    [
+      "„With a local model, your words never leave this Mac.“",
+      "Willkommensbildschirm der App",
+      "Nicht überprüft. Websuche und MCP-Aufrufe senden Daten bauartbedingt nach außen.",
+      "vendor-claim"
+    ],
+    [
+      "„You can start chatting in the meantime.“",
+      "Setup-Schritt 2",
+      "Tester: Der Chat wartet auf das Modell.",
+      "observed"
+    ],
+    [
+      "Modelle auf dem Gerät verlassen den Mac nie; Cloud-Chats gehen mit Ihrem Schlüssel direkt an den Anbieter.",
+      "Modelle-Bildschirm",
+      "Nicht überprüft; es wurde kein Cloud-Schlüssel hinzugefügt.",
+      "vendor-claim"
+    ],
+    [
+      "„Automatic supports 25 European languages.“",
+      "Diktiereinstellung",
+      "Deutsch funktionierte nach der Einstellung; keine andere Sprache probiert.",
+      "observed"
+    ],
+    [
+      "„Run your computer’s more powerful models from your phone.“",
+      "Handy-Einstellungen",
+      "Funktionierend gesehen, laut Notizen und dem Bildschirm „Linked computers“.",
+      "observed"
+    ],
+    [
+      "„Your mail never leaves this Mac.“",
+      "Seite „Connections“",
+      "Nicht getestet; kein Konto verbunden.",
+      "vendor-claim"
+    ],
+    [
+      "„Nothing is uploaded.“",
+      "Erinnerungsimport",
+      "Nicht ausprobiert.",
+      "vendor-claim"
+    ],
+    [
+      "Weniger Halluzinationen und weniger Abstürze als andere Apps.",
+      "Verzeichnis-Testbericht (Drittquelle)",
+      "In einer Sitzung nicht prüfbar. Kein Absturz gesehen.",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "title": "Download-Größen im Vergleich zu 24 GB",
+    "nav": "Größen",
+    "rows": [
+      [
+        "Qwen3.5 4B (Deep thinking)",
+        2.74,
+        "2,74 GB · Setup",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4-bit (Unavailable)",
+        4.62,
+        "4,62 GB · Bildmodelle",
+        "measured"
+      ],
+      [
+        "Gemma 4 E4B",
+        4.98,
+        "4,98 GB · Katalog",
+        "measured"
+      ],
+      [
+        "Nemotron 3.5 Bolt E4B (Coding)",
+        6.18,
+        "6,18 GB · Katalog",
+        "measured"
+      ],
+      [
+        "Gemma 4 12B (im Setup gewählt)",
+        7.12,
+        "7,12 GB · Setup-Download",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 8-bit (Unavailable)",
+        8.57,
+        "8,57 GB · Bildmodelle",
+        "measured"
+      ],
+      [
+        "Qwen3.8 27B (Coding)",
+        10.93,
+        "10,93 GB · Setup und Katalog",
+        "measured"
+      ],
+      [
+        "Wan 2.2 5B Video („Best for this Mac“)",
+        16.74,
+        "16,74 GB · Videomodelle",
+        "measured"
+      ]
+    ],
+    "note": "Dies sind Download-Größen, abgelesen von den eigenen Bildschirmen der App, nicht der Arbeitsspeicher im Betrieb; die App zeigt keinen Speicherbedarf je Modell, nur Eignungs-Labels. Der Arbeitsspeicher im Betrieb wurde nicht gemessen. Der Test-Mac hat 24 GB Unified Memory."
+  },
+  "usage_log": [
+    [
+      "Mac-Installer herunterladen und öffnen",
+      "—",
+      "Hinweis „Install Loci“ bestanden; App installiert; Installationsdauer nicht erfasst",
+      "06:19",
+      "Pass",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "Gemma 4 12B herunterladen",
+      "Gemma 4 12B",
+      "Laut Notizen abgeschlossen („works smoothly“); Gesamtdauer nicht erfasst",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "Wetterfrage mit Websuche",
+      "Gemma 4 12B",
+      "Antwort mit 6 Quellen; Richtigkeit nicht geprüft",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Logik-Benchmark, 10 Fragen",
+      "Gemma 4 12B",
+      "10 von 10 Endantworten bei der Nachprüfung richtig; ChatGPT-Bewertung 94/100",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "Chat-Suche, dann Neustart und erneut suchen",
+      "—",
+      "Chat beide Male gefunden",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "Englisch diktieren: „What is fifteen times five“",
+      "Loci-Diktat",
+      "Text richtig",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-english-dictation-fifteen-times-five"
+      ]
+    ],
+    [
+      "Deutsch diktieren, Standardsprache",
+      "Loci-Diktat",
+      "Unleserlicher Text",
+      "Nicht erfasst",
+      "Fail",
+      [
+        "loci-german-dictation-garbled-text"
+      ]
+    ],
+    [
+      "Deutsch diktieren, Sprache auf Automatic multilingual",
+      "Loci-Diktat",
+      "„Wie spät ist es momentan?“ richtig",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "Eine Antwort vorlesen lassen",
+      "—",
+      "Funktionierte laut Notizen; nicht gestoppt",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Android-Handy mit dem Mac koppeln",
+      "—",
+      "Verbunden; Mac als Ready angezeigt, 1 models; Kopplungsdauer nicht erfasst",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "Schwierige Fragenreihe vom Handy über den Mac",
+      "Mac-Modell (Notizen: Qwen; Screenshots: Gemma 4 12B)",
+      "Antworten geliefert; ChatGPT-Bewertung gemischt; nicht gestoppt",
+      "Nicht erfasst",
+      "Partial",
+      []
+    ],
+    [
+      "Dieselbe Reihe auf dem Handy, nur auf dem Gerät",
+      "Bonsai 2 4B",
+      "Ablehnung",
+      "11:11",
+      "Fail",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "MCP-Server von PromptQuorum hinzufügen",
+      "—",
+      "Beim ersten Versuch verbunden",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "MCP: „Which are the video apps that you can propose?“",
+      "Gemma 4 12B",
+      "Gruppierte Liste von 12 Apps, keine Links; „took a while“, nicht gestoppt",
+      "Nicht erfasst",
+      "Partial",
+      []
+    ],
+    [
+      "MCP: nach den Links fragen, drei Runden",
+      "Gemma 4 12B",
+      "Zwei Runden falscher Links, dann laut Tester richtig",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "E-Mail, Kalender und Erinnerungen",
+      "—",
+      "Nicht begonnen",
+      "Nicht erfasst",
+      "Not completed",
+      []
+    ],
+    [
+      "Bild- und Videoerzeugung",
+      "—",
+      "Nicht begonnen",
+      "Nicht erfasst",
+      "Not completed",
+      []
+    ],
+    [
+      "Deep Research, Thinking, Erinnerungsimport",
+      "—",
+      "Nicht begonnen",
+      "Nicht erfasst",
+      "Not completed",
+      []
+    ],
+    [
+      "Deinstallation",
+      "—",
+      "Nicht getestet",
+      "Nicht erfasst",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Schrieb, das deutsche Diktat sei „abgestürzt“ und Loci scheine auf Englisch beschränkt. Der Screenshot zeigt unleserlichen Text, keinen Absturz; die Ursache war die Spracheinstellung, die er später selbst fand."
+    ],
+    [
+      "tester-error",
+      "Schrieb, die App „schlage nur Modelle vor, die funktionieren“. Nicht verfügbare Modelle sind ausgegraut aufgeführt, nicht versteckt. Das 16,74 GB große Videomodell mit der Kennzeichnung „Best for this Mac“ wurde nicht heruntergeladen; ob es auf 24 GB läuft, ist also ungetestet, obwohl er sagt, ein solches Modell bringe seinen Mac normalerweise zum Absturz."
+    ],
+    [
+      "tester-error",
+      "Berichtete, Handy-Chats erschienen nicht auf dem Laptop, ohne dies zu prüfen. Der Bildschirm „Linked computers“ des Handys sagt, dass von einem verbundenen Computer beantwortete Chats dort als schreibgeschützte Kopien gespeichert werden; die Chat-Liste des Macs wurde nicht geprüft."
+    ],
+    [
+      "tester-error",
+      "Sagte, der Mac habe den verbundenen Lauf mit „Qwen“ beantwortet. Der Modelle-Screenshot führt nur Gemma 4 12B als „In use“, und die Karte des Handys sagt „1 models“. Ob später ein Qwen-Modell installiert wurde, ist nicht erfasst."
+    ],
+    [
+      "tester-error",
+      "Nannte zwei Größen für das Handy-Modell, „one gigabyte“ und später „1.2 gigabyte“. Die Download-Karte lautet „Bonsai 2 4B“ und zeigt keine Größe."
+    ],
+    [
+      "assumption",
+      "Der Tester sagt, der Test habe drei Stunden gedauert. Der Mac-Download-Hinweis (06:19) und der letzte Handy-Screenshot (11:11) liegen etwa 4 Std. 52 Min. auseinander, wenn beide Uhren dieselbe Zeitzone zeigen (Berechnung); Pausen sind nicht erfasst."
+    ],
+    [
+      "tester-error",
+      "Lücken in der Dokumentation: App-, macOS- und Android-Versionen; Handy-Modell; Endzeit; Quantisierung von Gemma 4 12B; der gesprochene deutsche Satz; der Standardwert der Sprache; die Fragenliste des zweiten Tests; ob WLAN und mobile Daten wirklich aus waren; ob er eine Bewertung abgeschickt hat; ob er die finalen Links angeklickt hat; Kopplungs- und Download-Zeiten; Unterstützung für Intel-Macs."
+    ],
+    [
+      "assumption",
+      "Auf vielen Screenshots ist eine schwebende Mikrofon-Blase einer anderen App zu sehen. Das rote Mikrofon in der Eingabeleiste von Loci selbst legt nahe, dass das Loci-Diktat auf den Sprach-Screenshots aufnahm; welches Werkzeug den diktierten Text der Notizen erzeugte, ist nicht erfasst. Spracherkennungsfehler in den Notizen wurden bereinigt (zum Beispiel ist „Loki“ Loci und „four or four“ 404)."
+    ]
+  ],
+  "findings": [
+    [
+      "LO-01",
+      "Die Seite des Herstellers lautet „Taking you to the right download for your device…“ mit Schaltflächen für iPhone, Android, Mac und Windows. Der Tester nutzte den Mac-Build auf Apple Silicon; ob er auf einem Intel-Mac läuft, wurde nicht getestet.",
+      "Installation",
+      "observed",
+      "Info",
+      [
+        "loci-download-page-four-platforms"
+      ]
+    ],
+    [
+      "LO-02",
+      "Der Download war ein Disk-Image, Loci.dmg. Beim Öffnen erschien der macOS-Hinweis für eine App namens „Install Loci“, von Apple geprüft, keine Schadsoftware gefunden. Der Tester sagt, ein Ziehen nach „Programme“ sei nicht nötig gewesen und die Installation sei von selbst gelaufen (Tester-Meinung). Die Größe des Disk-Images und was der Installer nach dem Hinweis tat, sind nicht erfasst.",
+      "Installation",
+      "observed",
+      "Positive",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "LO-03",
+      "Erster Start: ein Willkommensbildschirm, dann zwei Schritte, ohne Anmeldeschritt in den erfassten Screenshots. Schritt 1, „What should Loci be best at?“, listet nach Aufgaben benannte Auswahlmöglichkeiten, jeweils mit Modellname und Download-Größe. Dem Tester gefällt, dass Modell und Größe genannt werden, was manche seiner getesteten Apps nicht tun (Tester-Meinung).",
+      "Einstieg",
+      "measured",
+      "Positive",
+      [
+        "loci-welcome-your-ai-lives-here-text",
+        "loci-setup-step1-choose-what-loci-is-best-at"
+      ]
+    ],
+    [
+      "LO-04",
+      "Die Download-Karte zeigt Prozent, bisherige GB, Gesamtgröße und eine geschätzte Zeit (auf den Screenshots abgeschnitten: „about 7 m…“ bei 50 %, „about 10 …“ bei 49 %), mit Pause und Choose another. Gesamtdauer des Downloads nicht erfasst. Der Tester nennt geschätzte Zeiten ein grundlegendes Muss und sagt, Apps ohne sie seien von vornherein ausgeschlossen (Tester-Meinung).",
+      "Einstieg",
+      "measured",
+      "Positive",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "LO-05",
+      "Schritt 2 sagt „Keep Loci open while this finishes. You can start chatting in the meantime.“ Der Tester sagt, ein während des Downloads gesendeter Chat bleibe unbeantwortet, bis das Modell da ist; der Hinweis stimmt also nicht. Kein Screenshot des Wartens; wie lange er wartete, ist nicht erfasst.",
+      "Einstieg",
+      "observed",
+      "Low",
+      [
+        "loci-setup-step2-start-chatting-in-the-meantime"
+      ]
+    ],
+    [
+      "LO-06",
+      "Ein Banner lautet „Recommended for this Mac — Picked for its 24 GB of memory“. In den Listen für Bild- und Videomodelle sind FLUX.2 klein 4B (4-bit und 8-bit) als „Unavailable — Needs a Mac with more memory“ ausgegraut, und Wan 2.2 5B ist mit „Best for this Mac“ gekennzeichnet. Das beantwortet die Frage des Testers nach einer Hardware-Prüfung. Auf einem kleineren Mac nicht ausprobiert. Die Datenträgerleiste zeigt Loci-Modelle 7,12 GB und 91,29 GB frei. Im Test des Testers zu Locally Uncensored auf einem 24-GB-Mac wurde FLUX.2 klein 4B 4-bit mit „Runs on this Mac“ gekennzeichnet; die Labels der Apps unterscheiden sich also für dasselbe Modell (Annahme: unterschiedliche Laufzeitumgebungen).",
+      "Modelle",
+      "observed",
+      "Positive",
+      [
+        "loci-recommended-for-this-mac-24-gb",
+        "loci-image-models-unavailable-video-model-best-for-this-mac"
+      ]
+    ],
+    [
+      "LO-07",
+      "Der Katalog ist nach Zweck gruppiert (Writing and everyday chat, Coding, Bildmodelle, Videomodelle). Die Karten tragen einen Namen, eine Zeile, die Größe und, wo es zutrifft, einen Lizenzhinweis (TwIL-8B: „Non-commercial use only“). Größen: Qwen3.5 0.8B (MLX) 652 MB; Gemma 4 E2B (MLX Mobile) 2,43 GB; Gemma 4 E2B 3,11 GB; Gemma 4 E4B (MLX Mobile) 3,49 GB; Gemma 4 E2B (MLX) 3,58 GB; Gemma 4 E4B 4,98 GB; Spark-X2.6 4B 3,54 GB; TwIL-8B 5,35 GB; Nemotron 3.5 Bolt E4B 6,18 GB. Der Tester: einfacher Einstieg durch Vorauswahl, danach große Auswahl (Tester-Meinung). Der Speicherbedarf je Modell wird nicht angezeigt, nur die Eignungs-Labels.",
+      "Modelle",
+      "measured",
+      "Positive",
+      [
+        "loci-model-catalogue-chat-and-coding"
+      ]
+    ],
+    [
+      "LO-08",
+      "Der Modelle-Bildschirm zeigt Gemma 4 12B als „In use“, „Browse models“ und die Cloud-Modelle Anthropic, OpenAI und Google Gemini, jeweils mit „Add key“. Auf diesem Bildschirm gibt es keinen Eintrag für Ollama oder LM Studio, wonach der Tester gefragt hatte; andere Bildschirme wurden nicht danach durchsucht. Die Sorge des Testers ist, dass jede App mit eigenen Modellen diese erneut herunterlädt und den Speicher aufbläht (Tester-Meinung).",
+      "Modelle",
+      "observed",
+      "Info",
+      [
+        "loci-settings-models-and-cloud-keys"
+      ]
+    ],
+    [
+      "LO-09",
+      "Eine Wetterfrage zeigte den Schritt „Searched the web ✓“, eine datierte Antwort und „Sources 6“ (weather-forecast.com, accuweather.com zweimal, weather.com, weather.metoffice.gov.uk, bbc.co.uk). Der Tester öffnete eine Quelle, die 10-Tage-Seite von weather.com; ob die Werte übereinstimmten, ist nicht erfasst. Er schätzt die eingebaute Suche, weil Ollama- oder LM-Studio-Setups sonst alte Daten liefern (Tester-Meinung).",
+      "Suche",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LO-10",
+      "Das Menü „File“ listet Search Chats (⌘K), New Chat (⌘N), Switch Model (⇧⌘M) und Memories…. Die Suche nach „empl“ und „Bob“ fand den Benchmark-Chat, und der Tester sagt, die Suche habe auch nach Beenden und Neustart noch funktioniert. Der automatische Titel des Chats, „Online availability check“, beschreibt den Logiktest nicht; wie Titel entstehen, ist nicht erfasst.",
+      "Chat",
+      "observed",
+      "Info",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "LO-11",
+      "Die Kontextanzeige neben dem Eingabefeld zeigt „8.1k / 64k“. Der Tester wünscht sich ein Info-Symbol, das sie erklärt, und fragt, ob sich der Kontext leeren lässt. Ob die Anzeige einen Tooltip hat, wurde nicht ausprobiert; die Einstellungsseite hat Info-Symbole. Er nennt 64K ein großes Fenster.",
+      "Chat",
+      "tester-view",
+      "Low",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "LO-12",
+      "Zehn von ChatGPT geschriebene Logikfragen wurden einmal an das Standardmodell gesendet (Gemma 4 12B laut Auswahlfeld auf den umliegenden Screenshots). Nachprüfung durch den Berichtsautor, nicht durch den Tester: Alle zehn Endantworten sind richtig. Für Q2 ist der Endwert, 1 minute, für die Frage in ihrer Formulierung richtig (eine Maschine fertigt 5 Teile in 5 Minuten). Nicht wiederholt, nicht gestoppt und nicht mit einem anderen Modell verglichen.",
+      "Schlussfolgern",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-13",
+      "ChatGPT bewertete die Antworten mit 94/100: acht Fragen 10/10, Q2 8/10 „Correct, but initially confused“, Q9 6/10 „Correct answer, flawed explanation“. Es nennt dies ein starkes Ergebnis bei einem Benchmark leichter bis mittlerer Schwierigkeit, sagt, zehn Fragen könnten echtes Schlussfolgern nicht von gelernten Rätselmustern trennen, und fragte, welches Modell, welche Parametergröße und Quantisierung genutzt wurden; die Notizen antworten nicht. Die aufgeführten Bewertungen ergeben 94 (Berechnung). Der Bewerter ist eine KI und hat auch die Fragen geschrieben.",
+      "Schlussfolgern",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-14",
+      "Bei Q2 sagt die Antwortzeile „5 minutes“, dann rechnet der Text neu („Wait, let’s re-calculate“) und endet bei 1 minute. Der Endwert ist richtig, doch die Kopfantwort widerspricht ihm.",
+      "Schlussfolgern",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-15",
+      "Q9: Die Endantwort, Bob, ist richtig, aber die Erklärung irrt. Sie sagt, wenn Bob lügt, sei Charlies Aussage falsch, und schreibt später „Bob is lying“ Charlie zu, obwohl Alice es sagte. ChatGPT bemängelte denselben Fehler.",
+      "Schlussfolgern",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-16",
+      "Englisches Diktat ins Chatfeld funktionierte. Spracheinstellungen: „Natural Voice reads English replies. Apple voices read other languages.“, Tempo 105 %, Wartezeit vor der Antwort 1,2 s. Das Menü „Edit“ hat Start Dictation, Finish Dictation, Stop Audio und Voice Settings…. Das Menü für markierten Text bietet Copy, Share, Read Aloud und Regenerate; der Tester fand das Vorlesen „really useful“ (Tester-Meinung). Welches Werkzeug den Text diktierte, ist nicht erfasst.",
+      "Sprache",
+      "observed",
+      "Positive",
+      [
+        "loci-english-dictation-fifteen-times-five",
+        "loci-settings-voice-spoken-replies"
+      ]
+    ],
+    [
+      "LO-17",
+      "Deutsches Diktat mit der Standardeinstellung ergab unleserlichen Text („Bus East Seben Mal Einund Reisik“); der gesprochene Satz ist nicht erfasst. Gefragt, ob es Deutsch im Sprachmodus versteht, antwortete das Modell mit Ja, was das Modell betrifft, nicht die Spracherkennung. Nachdem die Spracheinstellung auf „Automatic — multilingual“ gestellt wurde, funktionierte Deutsch („Wie spät ist es momentan?“). Der Tester sagt, die Standardsprache sei Englisch; das wurde nicht erfasst. Auf dem Bildschirm war kein Hinweis auf die Einstellung zu sehen. Die Einstellung sagt, Automatic unterstütze 25 europäische Sprachen (Herstellerangabe).",
+      "Sprache",
+      "observed",
+      "Medium",
+      [
+        "loci-german-dictation-garbled-text",
+        "loci-german-question-model-says-yes",
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "LO-18",
+      "Die Diktiereinstellungen zeigen Local dictation an, die Taste Fn / Globe (⌘⇧D startet und stoppt ebenfalls, Escape bricht ab) und eine Meldung: „The dictation key is not working because it needs Device Control and Data Access permission. Command Shift D is still available.“ mit einer Schaltfläche Open System Settings. Die Notizen erwähnen sie nicht, sagen nicht, ob die Berechtigung erteilt wurde, und nicht, welche Taste das Diktat startete.",
+      "Sprache",
+      "observed",
+      "Medium",
+      [
+        "loci-settings-dictation-key-permission-warning"
+      ]
+    ],
+    [
+      "LO-19",
+      "„For tinkerers“: ein Schieberegler Creativity von Focused bis Creative, auf 0,70 gestellt mit „Recommended for Gemma 4 12B: 1.00“ und einem Info-Symbol, sowie eine Auswahl Context length (Auto · 64K, 8K, 16K, 32K, 64K, 128K; 64K gewählt) mit einem Info-Symbol. Dem Tester gefallen die einfachen Worte statt Fachbegriffen und die Option 128K für lokale Modelle (Tester-Meinung). Die Auswirkung der Kontextlänge auf den Speicher wurde nicht gemessen.",
+      "Einstellungen",
+      "observed",
+      "Positive",
+      [
+        "loci-settings-creativity-and-context-length"
+      ]
+    ],
+    [
+      "LO-20",
+      "„Chat & memory“: Antwortlänge Length (Short, Standard, Long), Focus mode für neue Chats (General), Thinking, Show reply stats, „Show Deep Research in + menu“ und „Precise research steps“ (Experimental). Der Tester nennt sie großartige einfache Einstellungen, um die Antworten zu steuern (Tester-Meinung). Thinking, Antwortstatistiken und Deep Research wurden nicht genutzt.",
+      "Einstellungen",
+      "observed",
+      "Info",
+      [
+        "loci-settings-chat-and-memory-replies"
+      ]
+    ],
+    [
+      "LO-21",
+      "File > Memories… öffnet einen Import: einen Export-Prompt kopieren, in Claude, ChatGPT oder Gemini einfügen, dann die Antwort zurückkopieren. „Each line becomes a memory saved on this Mac. Nothing is uploaded, and you choose what stays.“ In der Screenshot-Durchsicht gefunden; nicht ausprobiert; der Tester kommentierte es nicht.",
+      "Erinnerungen",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-memories-import-panel"
+      ]
+    ],
+    [
+      "LO-22",
+      "„Connections“ listet Apple Mail („Not connected“), Calendar und Reminders („Not asked yet“), Notifications sowie Schaltflächen für Gmail und Outlook / Microsoft 365. Text des Herstellers: E-Mails verlassen den Mac nie; die Synchronisierung läuft, solange Loci läuft; 30 Tage an Nachrichtentexten werden geladen; zwischengespeicherte Mails sind verschlüsselt; neue Verbindungen sind schreibgeschützt. Es wurde kein Konto verbunden. Der Tester nennt die E-Mail-Integration die erste, die er gesehen hat, und möglicherweise das stärkste Business-Werkzeug, und richtete sie nicht ein (Tester-Meinung). Unter dem Prompt erschien bei einer deutschen Frage nach der Uhrzeit ein Chip „Using Calendar & Reminders“; Berechtigungsstatus und Antwort nicht erfasst.",
+      "Verbindungen",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-connections-mail-calendar-reminders"
+      ]
+    ],
+    [
+      "LO-23",
+      "Die Seite „Your phone“ des Macs listet drei Schritte: Loci auf dem Handy installieren, beide im selben WLAN halten, auf dem Handy Settings > Scan QR code öffnen oder einen Code eingeben (Screenshot zurückgehalten, er zeigt einen Kopplungscode). Das Handy fragte dann nach einem Modell: „Waiting for an unmetered network — Bonsai 2 4B… You can use this metered connection instead.“ Der Tester wählte das kleinere von zwei Modellen. Marke, Modell und Android-Version des Handys nicht erfasst.",
+      "Handy",
+      "observed",
+      "Info",
+      [
+        "loci-phone-waiting-for-unmetered-network-bonsai"
+      ]
+    ],
+    [
+      "LO-24",
+      "Nach dem Koppeln führt „Linked computers“ des Handys „Hans’s MacBook Pro (2)“ auf, „Ready“, „1 models“. Der Tester nennt die Verbindung sehr schnell und sagt, es habe nichts eingerichtet werden müssen; Kopplungsdauer nicht erfasst. Text der Handy-Einstellungen: „Loci Link: Run your computer’s more powerful models from your phone.“ (Herstellerangabe).",
+      "Link",
+      "observed",
+      "Positive",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "LO-25",
+      "Der Tester sah seine Handy-Chats nicht auf dem Mac, plant, den Entwickler zu fragen, und sagt, er habe vielleicht eine Einstellung übersehen. Der Bildschirm „Linked computers“ des Handys sagt „Chats answered by a linked computer are saved there as read-only copies“, es könnten also Kopien existieren; die Chat-Liste des Macs wurde nicht geprüft.",
+      "Link",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-26",
+      "Eine von ChatGPT geschriebene schwierige Fragenreihe wurde vom Handy an den Mac gesendet (der Tester nennt das Modell des Macs „Qwen“). Auswertungstabelle von ChatGPT, teilweise sichtbar: Q1, Q7, Q9 Correct; Q2, Q5 Partial; Q3 Incorrect; Q4, Q6, Q8 Incomplete; spätere Zeilen sind abgeschnitten. Text von ChatGPT: Das Modell zeige gutes Bewusstsein für Denkprobleme, „does not consistently solve them“; mehrere Antworten seien unfertig, und einige enthielten grundlegende Logikfehler. Die Notizen des Testers beurteilen nur die Verbindung, die seiner Aussage nach einfach funktioniert.",
+      "Link",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-27",
+      "Lauf auf dem Gerät (der Tester sagt, WLAN und mobile Daten seien aus gewesen): Auf dieselbe schwierige Reihe antwortete das kleine Modell des Handys (Kartenname Bonsai 2 4B) mit „I cannot answer these 20 questions. They are designed to test my ability, and I am an AI assistant bound by safety guidelines, not a human exam taker…“ (Aufnahme von 11:11). Die Statusleiste zeigt weiterhin eine Signalanzeige und eine Datenraten-Anzeige, der Offline-Zustand ist also nicht bestätigt. Die Ablehnung wirkt wie Modellverhalten, nicht wie ein App-Fehler (Annahme).",
+      "Handy",
+      "observed",
+      "Medium",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "LO-28",
+      "„Add a Server“ bietet einen Katalog mit 24 Diensten sowie „Web address“ (beliebiger MCP-Server) und „Program on this Mac“. Der Tester gab die eigene MCP-Adresse von PromptQuorum ein; das Formular hat ein optionales Zugriffstoken, das im Schlüsselbund gespeichert wird (Herstellerangabe). Eine Bestätigung sagt „Nothing is added until you confirm. Whatever Loci sends to this server’s tools leaves your Mac.“ und bietet einen Schalter „Use in every chat“, der an war. Der Server verband sich beim ersten Versuch und bietet 27 Werkzeuge. Die Aussage des Testers, PromptQuorum sei der einzige MCP-Server in diesem Segment lokaler LLMs, ist nicht überprüft (Annahme).",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "loci-mcp-add-a-server-catalogue",
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "LO-29",
+      "Erste Anfrage, „Which are the video apps that you can propose?“: Das Werkzeug „promptquorum: list categories“ lief, dann „Pondering…“, dann eine gruppierte Antwort mit 12 Apps (Bilderzeugung, Video, Vision, Kreativwerkzeuge) ohne Links, obwohl die Server-Anweisungen des Testers Links verlangen. Der Tester nennt es langsamer als Grok oder Claude mit MCP, nicht gestoppt (Tester-Schätzung), und hörte den Lüfter des Macs.",
+      "MCP",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-30",
+      "Auf die Frage, wo die Links seien, lieferte das Modell „View Details“-Links; einer öffnete die 404-Seite von PromptQuorum. Gefragt, ob es sie erfunden habe, sagte das Modell, die Links seien „hallucinated“ und „based on a pattern“ gebaut. Auch ein zweiter Satz scheiterte laut Tester; das Modell sagte dann, eine Selbstprüfung habe sie als „still incorrect“ eingestuft, obwohl kein Prüfschritt sichtbar ist. Dann führte es „search apps“ aus und lieferte Links „Download/Install | Read the full review“ mit Hinweisen „Not verified to fit“. Der Tester sagt, diese Links seien richtig gewesen; sein Durchklicken ist nicht auf den Screenshots. Ob die App URLs validiert, ist nicht erfasst.",
+      "MCP",
+      "observed",
+      "Medium",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "LO-31",
+      "Während der MCP-Unterhaltung fragte ein Popup „Enjoying Loci? Click a star to rate it on the Mac App Store.“ (fünf Sterne, „Not now“). Der Tester schrieb „deserves a five“; ob er bewertete, ist nicht erfasst. Er installierte per Web-Download, nicht über den App Store; das Popup erscheint also unabhängig von der Quelle (Annahme).",
+      "Feedback",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-32",
+      "Willkommen: „With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.“ Handy: „Loci processes your requests here—we don’t use data centers to answer them.“ Die App kennzeichnet selbst Funktionen, die Daten nach außen senden: Websuche, Cloud-Schlüssel und MCP-Werkzeuge. Es wurde kein Datenverkehr untersucht und kein Offline-Lauf am Mac ausprobiert.",
+      "Vertrauen",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-welcome-your-ai-lives-here-text"
+      ]
+    ],
+    [
+      "LO-33",
+      "Nicht getestet oder nicht erfasst: Gmail, Outlook und Apple Mail; Calendar und Reminders; Deep Research und Thinking; Fotoverständnis; Bild- und Videoerzeugung; Erinnerungsimport; Cloud-Schlüssel; Windows, iPhone und iPad; Intel-Macs; Offline-Nutzung am Mac; Netzwerkverkehr; Chat-Synchronisierung; Akku und Wärme am Handy; App- und Betriebssystemversionen; Deinstallation. Der Tester merkt an, dass der Benchmark das Modell testet, nicht die App (Tester-Meinung).",
+      "Umfang",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf einen Erstnutzer. Vorgeschlagen, nicht gemessen. „Info“ kennzeichnet einen Befund, der weder ein Problem noch eine Stärke ist; „Positiv“ kennzeichnet etwas, das gut funktionierte.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Mac- und Android-Nutzer, die einen einfachen lokalen Chat mit Websuche wollen und später ein Handy mit dem Mac verbinden oder MCP-Server anschließen möchten (Annahme aus einer Sitzung)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Alle, die geprüften Datenschutz, E-Mail- oder Kalender-Integration oder Bild- und Videoerzeugung auf einem 24-GB-Mac brauchen: Nichts davon wurde hier getestet."
+      ]
+    ],
+    "retest": "Der Tester plant, die App in zwei bis drei Monaten erneut zu testen. Abdecken: App-, macOS- und Android-Version erfassen; die Downloads stoppen; Deutsch und andere Sprachen mit sauberer Standardeinstellung; Chat-Synchronisierung bei geprüfter Chat-Liste des Macs; Offline-Nutzung am Mac bei untersuchtem Datenverkehr; E-Mail-Integration; ein Bildmodell auf 24 GB; die schwierige Fragenreihe auf dem Modell des Macs im Vergleich zu einem Cloud-Modell; MCP-Links durchklicken; Deinstallation."
+  },
+  "background_intro": "Nicht aus der Praxis. Die folgenden Punkte stammen aus dem PromptQuorum-Verzeichniseintrag zu Loci und von AlternativeTo und wurden hier nicht überprüft.",
+  "background": [
+    [
+      "third-party",
+      "Hersteller als Loci AI, Inc. genannt; kostenlos, kein Abo, keine Werbung, kein Konto; iPhone (iOS 18+), iPad (iPadOS 18+), Android, Mac und Windows. Quelle: PromptQuorum-Verzeichnistestbericht zu Loci."
+    ],
+    [
+      "third-party",
+      "AlternativeTo führt Loci als Free und Proprietary, beschrieben als kostenloser, privater KI-Chat für Handys und Computer mit lokalen Modellen, Offline-Unterhaltungen und auf das Gerät abgestimmten Modellempfehlungen."
+    ]
+  ],
+  "sources": [
+    "Hands-on-Notizen und Screenshots des Testers, 11. November 2026 (Original-Word-Notizen; PDF der Rohnotizen folgt).",
+    "PromptQuorum-Verzeichniseintrag und Testbericht zu Loci (Slug: loci-ai).",
+    "AlternativeTo-Eintrag zu Loci (https://alternativeto.net/software/loci/about/).",
+    "Download-Seite des Herstellers (Adresse nicht erfasst; Herstellerangaben)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "loci-setup-step1-choose-what-loci-is-best-at",
+      "figure": 1,
+      "file": "loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "path": "images/loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "alt": "Loci-Setup, Schritt 1 von 2, „What should Loci be best at?“, mit den Karten Coding (Qwen3.8 27B, 10,93 GB) und Deep thinking (Qwen3.5 4B, 2,74 GB).",
+      "caption": "Setup-Schritt 1: nach Aufgaben benannte Modellwahl, jeweils mit Download-Größe. Gemessen (Größen wie angezeigt).",
+      "role": "hero",
+      "width": 906,
+      "height": 732,
+      "bytes": 38716,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "figure": 2,
+      "file": "loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "path": "images/loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "alt": "Download-Karte: Downloading Gemma 4 12B, 50 Prozent, 3,72 GB von 7,12 GB, geschätzte Zeit nach „about 7 m“ abgeschnitten, mit einer Schaltfläche Pause.",
+      "caption": "Download-Karte mit Größe und geschätzter Zeit. Gemessen.",
+      "role": "moment",
+      "width": 934,
+      "height": 384,
+      "bytes": 13622,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "figure": 3,
+      "file": "loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "path": "images/loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "alt": "FLUX.2 klein 4B in 4-bit (4,62 GB) und 8-bit (8,57 GB) als Unavailable gekennzeichnet; Videomodell Wan 2.2 5B (16,74 GB) als Best for this Mac gekennzeichnet; Speicherleiste.",
+      "caption": "Modelle mit höherem Speicherbedarf sind als Unavailable aufgeführt. Beobachtet.",
+      "role": "moment",
+      "width": 1430,
+      "height": 583,
+      "bytes": 23936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-german-dictation-garbled-text",
+      "figure": 4,
+      "file": "loci-german-dictation-garbled-text.webp",
+      "path": "images/loci-german-dictation-garbled-text.webp",
+      "alt": "Eingabefeld von Loci mit unleserlichem deutschem Diktat „Bus East Seben Mal Einund Reisik“ und der Modellauswahl Best all-round Gemma 4 12B.",
+      "caption": "Deutsches Diktat mit der Standardeinstellung für die Sprache. Beobachtet.",
+      "role": "moment",
+      "width": 1600,
+      "height": 300,
+      "bytes": 16260,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-phone-linked-computers-macbook-pro-ready",
+      "figure": 5,
+      "file": "loci-phone-linked-computers-macbook-pro-ready.webp",
+      "path": "images/loci-phone-linked-computers-macbook-pro-ready.webp",
+      "alt": "Android-Bildschirm Linked computers: ein MacBook Pro mit Kennzeichnung Ready und 1 models, eine Schaltfläche Link a computer und ein Hinweis auf schreibgeschützte Kopien.",
+      "caption": "Handy nach dem Koppeln mit dem Mac. Beobachtet.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 28648,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-mcp-model-admits-hallucinated-links",
+      "figure": 6,
+      "file": "loci-mcp-model-admits-hallucinated-links.webp",
+      "path": "images/loci-mcp-model-admits-hallucinated-links.webp",
+      "alt": "Chat: Der Tester fragt, ob die URLs echt sind; das Modell antwortet, die Links seien halluziniert und nach einem Muster gebaut, nicht aus Werkzeugdaten.",
+      "caption": "Die Antwort des Modells auf die toten Links. Beobachtet.",
+      "role": "moment",
+      "width": 1600,
+      "height": 837,
+      "bytes": 114334,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-mcp-promptquorum-connected-27-tools",
+      "figure": 7,
+      "file": "loci-mcp-promptquorum-connected-27-tools.webp",
+      "path": "images/loci-mcp-promptquorum-connected-27-tools.webp",
+      "alt": "Bildschirm des MCP-Servers von PromptQuorum: Connected, bietet 27 Werkzeuge, mit den Werkzeugen Search und Get article und ihren Eingaben.",
+      "caption": "MCP-Server verbunden. Beobachtet.",
+      "role": "moment",
+      "width": 1224,
+      "height": 1142,
+      "bytes": 91202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-download-page-four-platforms",
+      "figure": 8,
+      "file": "loci-download-page-four-platforms.webp",
+      "path": "images/loci-download-page-four-platforms.webp",
+      "alt": "Download-Seite von Loci: Get Loci for iPhone, Android, Mac und Windows sowie die Zeile „No account, no ads, completely free.“",
+      "caption": "Download-Seite des Herstellers. Die Zeile „no account, no ads, free“ ist eine Herstellerangabe.",
+      "role": "gallery",
+      "width": 1492,
+      "height": 874,
+      "bytes": 39914,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-install-loci-app-macos-open-prompt",
+      "figure": 9,
+      "file": "loci-install-loci-app-macos-open-prompt.webp",
+      "path": "images/loci-install-loci-app-macos-open-prompt.webp",
+      "alt": "macOS-Hinweis: „Install Loci“ ist eine aus dem Internet geladene App, auf dem Disk-Image Loci.dmg; Apple hat sie geprüft und keine Schadsoftware gefunden.",
+      "caption": "Hinweis beim Öffnen des Installers. Beobachtet.",
+      "role": "gallery",
+      "width": 512,
+      "height": 830,
+      "bytes": 38498,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-welcome-your-ai-lives-here-text",
+      "figure": 10,
+      "file": "loci-welcome-your-ai-lives-here-text.webp",
+      "path": "images/loci-welcome-your-ai-lives-here-text.webp",
+      "alt": "Text des Willkommensbildschirms von Loci: „Your AI lives here. With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.“",
+      "caption": "Willkommensbildschirm, nur das Textfeld (Grafik des Herstellers abgeschnitten). Die Datenschutzzeile ist eine Herstellerangabe.",
+      "role": "gallery",
+      "width": 805,
+      "height": 824,
+      "bytes": 18886,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-setup-step2-start-chatting-in-the-meantime",
+      "figure": 11,
+      "file": "loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "path": "images/loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "alt": "Setup-Schritt 2 von 2, Setting up Gemma 4 12B: „You can start chatting in the meantime“, 0 Prozent von 7,12 GB, Schaltflächen Pause und Choose another.",
+      "caption": "Setup-Schritt 2 zu Beginn des Downloads. Beobachtet.",
+      "role": "gallery",
+      "width": 894,
+      "height": 596,
+      "bytes": 21516,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-english-dictation-fifteen-times-five",
+      "figure": 12,
+      "file": "loci-english-dictation-fifteen-times-five.webp",
+      "path": "images/loci-english-dictation-fifteen-times-five.webp",
+      "alt": "Eingabefeld von Loci mit dem diktierten englischen Text „What is fifteen times five“ und einer roten Mikrofon-Schaltfläche.",
+      "caption": "Englisches Diktat. Beobachtet.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 229,
+      "bytes": 13868,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-german-question-model-says-yes",
+      "figure": 13,
+      "file": "loci-german-question-model-says-yes.webp",
+      "path": "images/loci-german-question-model-says-yes.webp",
+      "alt": "Chat: Auf die Frage, ob der Sprachmodus Deutsch versteht, antwortet das Modell mit Ja; das Eingabefeld enthält den diktierten Text „Hello Guten Morgan“.",
+      "caption": "Die Antwort des Modells betrifft das Modell, nicht die Spracherkennung. Beobachtet.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 1154,
+      "bytes": 44848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-german-dictation-works-after-language-setting",
+      "figure": 14,
+      "file": "loci-german-dictation-works-after-language-setting.webp",
+      "path": "images/loci-german-dictation-works-after-language-setting.webp",
+      "alt": "Startbildschirm von Loci mit dem deutschen Text „Wie spät ist es momentan?“ und einem Chip „Using Calendar & Reminders“ unter dem Eingabefeld.",
+      "caption": "Deutsches Diktat, nachdem die Spracheinstellung geändert wurde. Beobachtet.",
+      "role": "gallery",
+      "width": 1430,
+      "height": 573,
+      "bytes": 23818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-settings-dictation-key-permission-warning",
+      "figure": 15,
+      "file": "loci-settings-dictation-key-permission-warning.webp",
+      "path": "images/loci-settings-dictation-key-permission-warning.webp",
+      "alt": "Dictation in any app: Taste Fn / Globe, Language Automatic multilingual und eine Warnung, dass die Taste die Berechtigung Device Control and Data Access braucht.",
+      "caption": "Diktiereinstellungen mit der Berechtigungswarnung. Beobachtet.",
+      "role": "gallery",
+      "width": 1236,
+      "height": 984,
+      "bytes": 59964,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-settings-voice-spoken-replies",
+      "figure": 16,
+      "file": "loci-settings-voice-spoken-replies.webp",
+      "path": "images/loci-settings-voice-spoken-replies.webp",
+      "alt": "Einstellungen, Voice: Natural Voice reads English replies, Apple voices read other languages; Tempo 105 Prozent; Wartezeit vor der Antwort 1,2 Sekunden.",
+      "caption": "Einstellungen für gesprochene Antworten. Gemessen.",
+      "role": "gallery",
+      "width": 1270,
+      "height": 1014,
+      "bytes": 29336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-settings-creativity-and-context-length",
+      "figure": 17,
+      "file": "loci-settings-creativity-and-context-length.webp",
+      "path": "images/loci-settings-creativity-and-context-length.webp",
+      "alt": "For tinkerers: Creativity 0,70 auf einem Schieberegler von Focused bis Creative, empfohlen 1,00 für Gemma 4 12B; Context length Auto 64K mit den Optionen 8K bis 128K.",
+      "caption": "Einstellungen für Creativity und Kontextlänge. Gemessen.",
+      "role": "gallery",
+      "width": 1246,
+      "height": 574,
+      "bytes": 20566,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-settings-chat-and-memory-replies",
+      "figure": 18,
+      "file": "loci-settings-chat-and-memory-replies.webp",
+      "path": "images/loci-settings-chat-and-memory-replies.webp",
+      "alt": "Chat & memory: Antwortlänge Short, Standard oder Long, Focus mode General, Thinking aus, Antwortstatistik aus, Deep Research an, Precise research steps aus.",
+      "caption": "Einstellungen für Antworten. Beobachtet.",
+      "role": "gallery",
+      "width": 1272,
+      "height": 1034,
+      "bytes": 39132,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-settings-models-and-cloud-keys",
+      "figure": 19,
+      "file": "loci-settings-models-and-cloud-keys.webp",
+      "path": "images/loci-settings-models-and-cloud-keys.webp",
+      "alt": "Modelle: Gemma 4 12B in Gebrauch, Browse models und Schaltflächen Add key für Anthropic, OpenAI und Google Gemini, mit einem Hinweis, dass Modelle auf dem Gerät auf dem Mac bleiben.",
+      "caption": "Modelle-Bildschirm. Der Datenschutzhinweis ist eine Herstellerangabe.",
+      "role": "gallery",
+      "width": 1314,
+      "height": 1138,
+      "bytes": 47866,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-model-catalogue-chat-and-coding",
+      "figure": 20,
+      "file": "loci-model-catalogue-chat-and-coding.webp",
+      "path": "images/loci-model-catalogue-chat-and-coding.webp",
+      "alt": "Modellkatalog mit Listen für Writing and everyday chat und für Coding, jede Karte mit Name, einer Zeile, einer Schaltfläche Get und einer Download-Größe.",
+      "caption": "Modellkatalog. Größen gemessen.",
+      "role": "gallery",
+      "width": 1431,
+      "height": 742,
+      "bytes": 59506,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-recommended-for-this-mac-24-gb",
+      "figure": 21,
+      "file": "loci-recommended-for-this-mac-24-gb.webp",
+      "path": "images/loci-recommended-for-this-mac-24-gb.webp",
+      "alt": "Banner „Recommended for this Mac“, „Picked for its 24 GB of memory“.",
+      "caption": "Empfehlung je Mac. Beobachtet.",
+      "role": "gallery",
+      "width": 974,
+      "height": 100,
+      "bytes": 7310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-context-meter-8-1k-of-64k",
+      "figure": 22,
+      "file": "loci-context-meter-8-1k-of-64k.webp",
+      "path": "images/loci-context-meter-8-1k-of-64k.webp",
+      "alt": "Kontextanzeige neben dem Eingabefeld mit 8.1k / 64k und einem Globus-Symbol.",
+      "caption": "Kontextanzeige nach dem Benchmark-Chat. Gemessen.",
+      "role": "gallery",
+      "width": 310,
+      "height": 84,
+      "bytes": 1728,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-chat-search-bob-after-restart",
+      "figure": 23,
+      "file": "loci-chat-search-bob-after-restart.webp",
+      "path": "images/loci-chat-search-bob-after-restart.webp",
+      "alt": "Chat-Suche nach „Bob“ findet den Chat „Online availability check“, datiert Today, mit dem Lügner-Rätseltext im Ausschnitt.",
+      "caption": "Chat-Suche nach dem Neustart der App. Beobachtet.",
+      "role": "gallery",
+      "width": 1466,
+      "height": 616,
+      "bytes": 20744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-connections-mail-calendar-reminders",
+      "figure": 24,
+      "file": "loci-connections-mail-calendar-reminders.webp",
+      "path": "images/loci-connections-mail-calendar-reminders.webp",
+      "alt": "Connections: Apple Mail nicht verbunden, Calendar und Reminders noch nicht angefragt, Notifications sowie Schaltflächen Connect Gmail und Outlook, mit Datenschutztext.",
+      "caption": "Seite „Connections“. Die Zeile „never leaves this Mac“ ist eine Herstellerangabe.",
+      "role": "gallery",
+      "width": 1382,
+      "height": 1366,
+      "bytes": 75388,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-memories-import-panel",
+      "figure": 25,
+      "file": "loci-memories-import-panel.webp",
+      "path": "images/loci-memories-import-panel.webp",
+      "alt": "Memories-Bereich: einen Export aus Claude, ChatGPT oder Gemini einfügen; jede Zeile wird zu einer auf diesem Mac gespeicherten Erinnerung; ein Einfügefeld und eine Schaltfläche Add memories.",
+      "caption": "Erinnerungsimport, nicht ausprobiert. Die Zeile „nothing is uploaded“ ist eine Herstellerangabe.",
+      "role": "gallery",
+      "width": 830,
+      "height": 1084,
+      "bytes": 23540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-phone-waiting-for-unmetered-network-bonsai",
+      "figure": 26,
+      "file": "loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "path": "images/loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "alt": "Android-Bildschirm: 0 Prozent, „Waiting for an unmetered network — Bonsai 2 4B“, mit den Schaltflächen Choose another model und Use this metered connection.",
+      "caption": "Modell-Download auf dem Handy. Beobachtet.",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 58108,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-phone-on-device-model-refuses-question-set",
+      "figure": 27,
+      "file": "loci-phone-on-device-model-refuses-question-set.webp",
+      "path": "images/loci-phone-on-device-model-refuses-question-set.webp",
+      "alt": "Android-Chat: Das Modell auf dem Gerät antwortet „I cannot answer these 20 questions…“ und sagt, es sei ein KI-Assistent, der an Sicherheitsrichtlinien gebunden ist.",
+      "caption": "Handy, Modell auf dem Gerät, schwierige Fragenreihe. Beobachtet.",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 62556,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "promptquorum-404-page-from-mcp-link",
+      "figure": 28,
+      "file": "promptquorum-404-page-from-mcp-link.webp",
+      "path": "images/promptquorum-404-page-from-mcp-link.webp",
+      "alt": "404-Seite von PromptQuorum: „The quorum couldn’t find this page.“",
+      "caption": "Toter Link aus dem ersten Satz von Links. Die Adressleiste ist nicht auf der Aufnahme. Beobachtet.",
+      "role": "gallery",
+      "width": 1429,
+      "height": 530,
+      "bytes": 30802,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-mcp-self-check-claims-links-still-incorrect",
+      "figure": 29,
+      "file": "loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "path": "images/loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "alt": "Chat: Gebeten, seine Links zu prüfen, sagt das Modell, sie seien weiterhin falsch, und führt dann das Werkzeug „search apps“ aus.",
+      "caption": "Behauptung der Selbstprüfung des Modells; kein Prüfschritt sichtbar. Beobachtet.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 799,
+      "bytes": 81540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-mcp-final-links-download-install-review",
+      "figure": 30,
+      "file": "loci-mcp-final-links-download-install-review.webp",
+      "path": "images/loci-mcp-final-links-download-install-review.webp",
+      "alt": "Chat nach dem Werkzeug „search apps“: OpenMontage als beste Wahl, mit Links Download/Install und Read the full review und einem Hinweis je App.",
+      "caption": "Endgültige Antwort mit Links. Ob die Links funktionieren, ist nicht auf der Aufnahme. Beobachtet.",
+      "role": "gallery",
+      "width": 1576,
+      "height": 962,
+      "bytes": 120834,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "loci-mcp-add-a-server-catalogue",
+      "figure": 31,
+      "file": "loci-mcp-add-a-server-catalogue.webp",
+      "path": "images/loci-mcp-add-a-server-catalogue.webp",
+      "alt": "Katalog „Add a Server“ mit 24 Diensten, von Airtable bis Zapier, und Add your own: Web address oder Program on this Mac.",
+      "caption": "MCP-Katalog. Beobachtet.",
+      "role": "gallery",
+      "width": 1236,
+      "height": 1126,
+      "bytes": 61094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Screenshot der Anwendung Loci",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "11.11.2026; genaue Uhrzeit nicht erfasst"
+    }
+  ],
+  "figure_order": [
+    "loci-setup-step1-choose-what-loci-is-best-at",
+    "loci-gemma-4-12b-download-50-percent-time-estimate",
+    "loci-image-models-unavailable-video-model-best-for-this-mac",
+    "loci-german-dictation-garbled-text",
+    "loci-phone-linked-computers-macbook-pro-ready",
+    "loci-mcp-model-admits-hallucinated-links",
+    "loci-mcp-promptquorum-connected-27-tools",
+    "loci-download-page-four-platforms",
+    "loci-install-loci-app-macos-open-prompt",
+    "loci-welcome-your-ai-lives-here-text",
+    "loci-setup-step2-start-chatting-in-the-meantime",
+    "loci-english-dictation-fifteen-times-five",
+    "loci-german-question-model-says-yes",
+    "loci-german-dictation-works-after-language-setting",
+    "loci-settings-dictation-key-permission-warning",
+    "loci-settings-voice-spoken-replies",
+    "loci-settings-creativity-and-context-length",
+    "loci-settings-chat-and-memory-replies",
+    "loci-settings-models-and-cloud-keys",
+    "loci-model-catalogue-chat-and-coding",
+    "loci-recommended-for-this-mac-24-gb",
+    "loci-context-meter-8-1k-of-64k",
+    "loci-chat-search-bob-after-restart",
+    "loci-connections-mail-calendar-reminders",
+    "loci-memories-import-panel",
+    "loci-phone-waiting-for-unmetered-network-bonsai",
+    "loci-phone-on-device-model-refuses-question-set",
+    "promptquorum-404-page-from-mcp-link",
+    "loci-mcp-self-check-claims-links-still-incorrect",
+    "loci-mcp-final-links-download-install-review",
+    "loci-mcp-add-a-server-catalogue"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "11. November 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "Speicher",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Quelle",
+      "Beobachtung",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passen die Downloads in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "App",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv",
+      "Info": "Info"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
+  }
+}

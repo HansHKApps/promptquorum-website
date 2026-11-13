@@ -56,6 +56,15 @@ import sprichEs from './data/sprich.es.json'
 import sprichPt from './data/sprich.pt.json'
 import sprichAr from './data/sprich.ar.json'
 import sprichKo from './data/sprich.ko.json'
+import lociAi from './data/loci-ai.json'
+import lociAiDe from './data/loci-ai.de.json'
+import lociAiFr from './data/loci-ai.fr.json'
+import lociAiJa from './data/loci-ai.ja.json'
+import lociAiZh from './data/loci-ai.zh.json'
+import lociAiEs from './data/loci-ai.es.json'
+import lociAiPt from './data/loci-ai.pt.json'
+import lociAiAr from './data/loci-ai.ar.json'
+import lociAiKo from './data/loci-ai.ko.json'
 import caelum from './data/caelum.json'
 import caelumDe from './data/caelum.de.json'
 import caelumFr from './data/caelum.fr.json'
@@ -319,6 +328,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: sprichPt as unknown as HandsOnTest,
     ar: sprichAr as unknown as HandsOnTest,
     ko: sprichKo as unknown as HandsOnTest,
+  },
+  'loci-ai': {
+    en: lociAi as unknown as HandsOnTest,
+    de: lociAiDe as unknown as HandsOnTest,
+    fr: lociAiFr as unknown as HandsOnTest,
+    ja: lociAiJa as unknown as HandsOnTest,
+    zh: lociAiZh as unknown as HandsOnTest,
+    es: lociAiEs as unknown as HandsOnTest,
+    pt: lociAiPt as unknown as HandsOnTest,
+    ar: lociAiAr as unknown as HandsOnTest,
+    ko: lociAiKo as unknown as HandsOnTest,
   },
   caelum: {
     en: caelum as unknown as HandsOnTest,

@@ -1,0 +1,1891 @@
+{
+  "id": "pq-test-loci-2026-11-11",
+  "hero": "loci-setup-step1-choose-what-loci-is-best-at",
+  "date_human": "2026年11月11日",
+  "captured": "2026-11-11；Mac 下载提示 06:19，最后一张手机截图 11:11；结束时间未记录",
+  "standard_version": "0.2",
+  "locale": "zh",
+  "app": {
+    "name": "Loci",
+    "slug": "loci-ai",
+    "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
+    "category": "Local AI chat, Mac and Android",
+    "platform": "macOS (Apple Silicon) and Android",
+    "pricing_url": "https://loci.ai"
+  },
+  "title": "24 GB 内存 M4 Pro Mac 上的 Loci：带联网搜索、手机互联和 MCP 服务器的本地聊天",
+  "page_title": "Loci 测试",
+  "dek": "2026年11月11日的首次试用：设置顺畅，联网搜索可用，一部 Android 手机借用了 Mac 上的模型；测试者连接自己的 MCP 服务器后，模型给出了打不开的链接。",
+  "seo": {
+    "title": "Loci 实测：M4 Pro Mac 上的本地 AI 聊天",
+    "description": "Loci 在 24 GB M4 Pro Mac 上的实测：设置、联网搜索、手机互联和 MCP 可用；德语听写需改设置；MCP 链接两次出错。"
+  },
+  "faq": [
+    [
+      "Loci 需要账号吗？",
+      "截图中没有出现登录步骤，厂商称没有账号、没有广告、没有订阅。价格没有另行核实。",
+      "observed"
+    ],
+    [
+      "Loci 能让本地模型联网搜索吗？",
+      "能。一个天气问题出现了“Searched the web”步骤和六个来源。数值是否正确没有核对。",
+      "observed"
+    ],
+    [
+      "Loci 能听懂德语听写吗？",
+      "只有改了设置之后才行。使用默认的“语言”设置时，德语被识别成乱码；选择“Automatic — multilingual”后，一句德语被正确转写。",
+      "observed"
+    ],
+    [
+      "Android 手机能用 Mac 上的模型吗？",
+      "能，笔记和手机的“Linked computers”界面都显示了这一点，Mac 显示为 Ready，带一个模型。手机自带的小模型单独运行时，拒绝回答一组高难度题目。",
+      "observed"
+    ],
+    [
+      "Loci 支持 MCP 服务器吗？",
+      "支持。测试者添加了 PromptQuorum 自己的 MCP 服务器，第一次就连上了，并提供 27 个工具。本地模型最初给出的链接指向了 404 页面。",
+      "observed"
+    ],
+    [
+      "Loci 是私密的吗？",
+      "未核实。应用称本地模型不会把你的文字发出 Mac，但联网搜索和 MCP 工具按设计会把数据发送出去，也没有检查网络流量。",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-11",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Loci。下载页面写着“Download Loci”；目录评测（第三方）将开发方列为 Loci AI, Inc.。",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录。",
+      null
+    ],
+    [
+      "来源",
+      "厂商下载页面；Chrome 保存了“Loci.dmg”。页面地址未记录。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans（PromptQuorum 创始人）",
+      "observed"
+    ],
+    [
+      "日期、开始、结束",
+      "2026年11月11日，依据应用回答中的“as of Wednesday, November 11, 2026”；笔记没有给出日期。macOS 提示显示下载发生在 06:19；最后一张手机截图的时间戳是 11:11。测试者说大约用了三个小时。结束时间未记录。",
+      "observed"
+    ],
+    [
+      "硬件",
+      "Mac：Apple M4 Pro，24 GB 统一内存；应用显示“Picked for its 24 GB of memory”。笔记里只写了“m 4”；测试者事后确认是 M4 Pro。手机：Android，品牌和型号未记录（“my old phone”）。",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS 和 Android 版本未记录。",
+      null
+    ],
+    [
+      "测试原因",
+      "开发者主动联系测试者，并鼓励他看看这款应用。",
+      "tester-view"
+    ],
+    [
+      "目标",
+      "没有作为目标说明。笔记显示的是对设置、聊天、搜索、语音、设置项、手机互联和 MCP 服务器的初次体验。",
+      null
+    ],
+    [
+      "模型",
+      "Mac：Gemma 4 12B，设置时选择了“Best all-round”；量化方式未记录。手机：根据下载卡片，为设备端的 Bonsai 2 4B；屏幕上没有显示大小。",
+      "observed"
+    ],
+    [
+      "AI 辅助",
+      "ChatGPT 在测试期间编写并评分了逻辑基准题。Claude 根据测试者的 Word 笔记和 52 张图片起草了本报告。笔记部分由语音口述而来；有些口误可能来自听写工具，而不是 Loci。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Loci 已列入该目录，并附有一篇由 AI 撰写的评测。开发者主动联系了测试者，笔记结尾有一句写给他的感谢。测试中使用的 MCP 服务器就是 PromptQuorum 自己的。笔记中没有付款或赞助的记录。",
+  "verdict": {
+    "general": "一款面向 Mac 和 Android 的消费级本地 AI 应用，首次使用流程异常清晰。在这次测试中，设置、内置联网搜索、英语听写、德语听写（改设置之后）、手机与 Mac 互联以及 MCP 连接均可用。默认模型答对了十道逻辑题，但通过 MCP 给出的链接失效，被纠正两次后才正确；手机自带的小模型拒绝回答一组高难度题目。电子邮件、日历、图像和视频生成、Mac 离线使用、隐私声明、聊天同步和卸载均未测试。",
+    "fit": "测试者明确持正面态度：他印象深刻，称这款应用是又一颗将推动本地 LLM 领域前进的“蛋”。他是否会继续使用没有说明；他计划在两到三个月后再次评测。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "安装器应用，无需拖拽。Intel Mac 和应用版本未记录。"
+    ],
+    [
+      "引导与模型选择",
+      4,
+      "有大小、时间估计和针对每台 Mac 的推荐；有一处误导性提示。"
+    ],
+    [
+      "核心功能",
+      4,
+      "聊天、搜索、听写、手机互联和 MCP 连接可用；两处失败已在结论中说明。"
+    ],
+    [
+      "引导与迭代",
+      4,
+      "设置项用词通俗；没有提示语言设置；上下文计量条没有说明。"
+    ],
+    [
+      "性能",
+      null,
+      "未计时。测试者称 MCP 的回答比他用的 Grok 和 Claude 方案慢。"
+    ],
+    [
+      "文档",
+      null,
+      "没有打开手册或网站指南。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "声明未经审核。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是报告作者根据测试者的证据提出的建议；n/a 表示未测试，不是零分。",
+  "tldr": [
+    [
+      "observed",
+      "Loci 是一款适用于 Mac 和 Android 的本地 AI 聊天应用。测试者在 24 GB 的 Apple M4 Pro 上运行它，设置时选择了 Gemma 4 12B（7.12 GB）。"
+    ],
+    [
+      "observed",
+      "设置界面显示模型大小、下载时间估计和针对每台 Mac 的推荐。内置联网搜索用六个来源回答了一个天气问题。"
+    ],
+    [
+      "observed",
+      "使用默认的“语言”设置时，德语听写是乱码；改成“Automatic — multilingual”后可用。"
+    ],
+    [
+      "observed",
+      "一部 Android 手机连上了 Mac，并将其显示为 Ready。手机自带的小模型单独运行时，拒绝回答一组高难度题目。"
+    ],
+    [
+      "observed",
+      "PromptQuorum 的 MCP 服务器第一次就连上了，提供 27 个工具。本地模型两次给出失效链接，第三轮才用对了工具。"
+    ],
+    [
+      "assumption",
+      "电子邮件、日历、图像和视频生成、Mac 离线使用、隐私声明、聊天同步和卸载均未测试，因此这只是初步印象，不是结论。"
+    ]
+  ],
+  "quotes": [
+    "“小事决定体验。”",
+    "“通过预选让所有人轻松上手，同时又有非常广泛的选择。两全其美。”",
+    "“东西都能用。界面做得好，没有负面惊喜。”"
+  ],
+  "quote_note": "测试者笔记，由语音口述略作整理。三句都是他的个人判断，不是测量结果。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "等待之前就知道大小和时间",
+      "带有大小和预计时间的下载卡片。",
+      "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "chapter-setup"
+    ],
+    [
+      "灰显，而不是隐藏",
+      "需要更多内存的模型被列为 Unavailable。",
+      "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "chapter-setup"
+    ],
+    [
+      "输入德语，输出乱码",
+      "修改语言设置之前的德语听写。",
+      "loci-german-dictation-garbled-text",
+      "chapter-voice"
+    ],
+    [
+      "手机连上了 Mac",
+      "手机把 Mac 列为已连接的电脑。",
+      "loci-phone-linked-computers-macbook-pro-ready",
+      "chapter-phone"
+    ],
+    [
+      "模型承认链接是编造的",
+      "对测试者追问失效 URL 的回复。",
+      "loci-mcp-model-admits-hallucinated-links",
+      "chapter-mcp"
+    ],
+    [
+      "自己的 MCP 服务器已连接",
+      "服务器在应用中列出了它的工具。",
+      "loci-mcp-promptquorum-connected-27-tools",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "下载与安装",
+      "items": [
+        [
+          "observed",
+          "Mac 版是测试者从厂商下载页面下载的，该页面提供 iPhone、Android、Mac 和 Windows 版本。磁盘映像 Loci.dmg 里是一个安装器应用，macOS 在打开前对其做了检查。",
+          "loci-install-loci-app-macos-open-prompt"
+        ],
+        [
+          "tester-view",
+          "他喜欢不需要拖到“应用程序”这一步，这一步他在测试的其他应用里遇到过。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "首次启动与设置",
+      "items": [
+        [
+          "observed",
+          "欢迎界面之后是两个步骤：选择 Loci 应该擅长什么，然后下载模型。他最终得到的是 Gemma 4 12B，即应用标为“Best all-round”的模型。",
+          "loci-setup-step1-choose-what-loci-is-best-at"
+        ],
+        [
+          "tester-view",
+          "下载卡片给出了预计时间，他认为对任何带有数 GB 模型的应用，这都是基本要求。",
+          "loci-gemma-4-12b-download-50-percent-time-estimate"
+        ],
+        [
+          "observed",
+          "“下载期间可以开始聊天”的提示与他看到的不符：下载期间发出的聊天没有得到回答，直到模型下载完成。",
+          "loci-setup-step2-start-chatting-in-the-meantime"
+        ],
+        [
+          "observed",
+          "他早先记下的两个问题，即应用是否检查硬件、能否添加 Ollama 这类其他运行器，后来得到了部分解答：应用会针对这台 Mac 推荐模型并将不适用的模型灰显；在 Models 界面没有找到 Ollama 条目。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "聊天、联网搜索与逻辑基准题",
+      "items": [
+        [
+          "observed",
+          "一个天气问题使用了内置联网搜索，并列出了来源。",
+          null
+        ],
+        [
+          "tester-view",
+          "随后测试者让默认模型做了一套由 ChatGPT 编写的十道逻辑基准题。他指出这测试的是模型而不是应用，但说明应用在这种场景下是有用的。",
+          null
+        ],
+        [
+          "third-party",
+          "ChatGPT 给这些回答打了 94 分（满分 100）。报告作者复核过：十道题的最终答案都是正确的。",
+          null
+        ],
+        [
+          "observed",
+          "应用退出并重新启动后，聊天搜索又找到了那次基准题对话。输入框旁的上下文计量条显示 8.1k / 64k。",
+          "loci-chat-search-bob-after-restart"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-voice",
+      "title": "语音与德语",
+      "items": [
+        [
+          "observed",
+          "英语听写立刻可用。",
+          "loci-english-dictation-fifteen-times-five"
+        ],
+        [
+          "tester-error",
+          "德语不行，测试者写道 Loci 只支持英语。后来他找到了“语言”设置，德语就可用了。",
+          "loci-german-dictation-works-after-language-setting"
+        ],
+        [
+          "observed",
+          "听写键显示了一条权限警告，笔记中没有提到。",
+          "loci-settings-dictation-key-permission-warning"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-settings",
+      "title": "设置、模型与连接",
+      "items": [
+        [
+          "tester-view",
+          "他喜欢用词通俗的设置项，以及简单的首次选择背后的丰富模型目录。",
+          "loci-model-catalogue-chat-and-coding"
+        ],
+        [
+          "observed",
+          "他看到了记忆导入以及邮件和日历连接，但没有试用。",
+          "loci-connections-mail-calendar-reminders"
+        ],
+        [
+          "tester-view",
+          "他认为电子邮件集成可能是他在本地应用中见过的最强的商务功能。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-phone",
+      "title": "手机与 Loci Link",
+      "items": [
+        [
+          "observed",
+          "他在一部 Android 手机上安装了 Loci，并与 Mac 配对。配对后，手机把 Mac 列为 Ready，带一个模型。",
+          "loci-phone-linked-computers-macbook-pro-ready"
+        ],
+        [
+          "tester-error",
+          "他没有检查 Mac 的聊天列表就说在 Mac 上找不到手机上的聊天；手机界面写着那里会保存只读副本。",
+          null
+        ],
+        [
+          "third-party",
+          "随后他通过这个连接发送了一组高难度题目；ChatGPT 的评分好坏参半。",
+          null
+        ],
+        [
+          "observed",
+          "他又用手机自带的小模型运行同一组题目，结果它拒绝回答。",
+          "loci-phone-on-device-model-refuses-question-set"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "MCP 与失效链接",
+      "items": [
+        [
+          "observed",
+          "他添加了 PromptQuorum 自己的 MCP 服务器。第一个回答是按类别分组的 12 个应用列表，没有链接。",
+          "loci-mcp-promptquorum-connected-27-tools"
+        ],
+        [
+          "observed",
+          "随后模型生成的链接是错的，其中一个打开了 PromptQuorum 的 404 页面。被问到是否编造了链接时，模型说它们是“hallucinated”（幻觉出来的）。",
+          "loci-mcp-model-admits-hallucinated-links"
+        ],
+        [
+          "observed",
+          "第二组链接也失败了。模型说自检发现链接仍然不正确，然后运行了“search apps”工具并给出第三组链接，测试者说这一组是正确的。",
+          "loci-mcp-final-links-download-install-review"
+        ],
+        [
+          "tester-view",
+          "测试者认为这体现了 MCP 搭配本地模型的优势：可以使用实时数据，并在被告知后自行纠正。",
+          null
+        ],
+        [
+          "observed",
+          "这段对话中弹出了一个评分提示。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "observed",
+          "笔记以总结和再次测试的计划收尾，没有就是否继续使用给出结论。",
+          null
+        ],
+        [
+          "tester-view",
+          "测试者说他印象很深，称这款应用是又一颗将推动本地 LLM 领域前进的“蛋”。他计划在两到三个月后再次评测，并向开发者询问聊天同步的问题。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“No account, no ads, completely free.”",
+      "下载页面",
+      "截图中没有登录步骤或广告；价格没有另行核实。",
+      "observed"
+    ],
+    [
+      "“With a local model, your words never leave this Mac.”",
+      "应用欢迎界面",
+      "未核实。联网搜索和 MCP 调用按设计会把数据发送出去。",
+      "vendor-claim"
+    ],
+    [
+      "“You can start chatting in the meantime.”",
+      "设置第 2 步",
+      "测试者：聊天要等模型下载完才有回应。",
+      "observed"
+    ],
+    [
+      "设备端模型不会离开 Mac；云端聊天用你的密钥直接发给提供商。",
+      "Models 界面",
+      "未核实；没有添加云端密钥。",
+      "vendor-claim"
+    ],
+    [
+      "“Automatic supports 25 European languages.”",
+      "听写设置",
+      "改设置后德语可用；没有试其他语言。",
+      "observed"
+    ],
+    [
+      "“Run your computer’s more powerful models from your phone.”",
+      "手机设置",
+      "笔记和 Linked computers 界面都显示这一点可用。",
+      "observed"
+    ],
+    [
+      "“Your mail never leaves this Mac.”",
+      "Connections 页面",
+      "未测试；没有连接账号。",
+      "vendor-claim"
+    ],
+    [
+      "“Nothing is uploaded.”",
+      "Memories 导入",
+      "没有试用。",
+      "vendor-claim"
+    ],
+    [
+      "比其他应用更少的幻觉和更少的崩溃。",
+      "目录评测（第三方）",
+      "一次测试无法验证。没有看到崩溃。",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "title": "下载大小与 24 GB 内存对比",
+    "nav": "大小",
+    "rows": [
+      [
+        "Qwen3.5 4B（“Deep thinking”）",
+        2.74,
+        "2.74 GB · 设置",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4-bit（“Unavailable”）",
+        4.62,
+        "4.62 GB · 图像模型",
+        "measured"
+      ],
+      [
+        "Gemma 4 E4B",
+        4.98,
+        "4.98 GB · 目录",
+        "measured"
+      ],
+      [
+        "Nemotron 3.5 Bolt E4B（“Coding”）",
+        6.18,
+        "6.18 GB · 目录",
+        "measured"
+      ],
+      [
+        "Gemma 4 12B（设置时所选）",
+        7.12,
+        "7.12 GB · 设置下载",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 8-bit（“Unavailable”）",
+        8.57,
+        "8.57 GB · 图像模型",
+        "measured"
+      ],
+      [
+        "Qwen3.8 27B（“Coding”）",
+        10.93,
+        "10.93 GB · 设置和目录",
+        "measured"
+      ],
+      [
+        "Wan 2.2 5B 视频（“Best for this Mac”）",
+        16.74,
+        "16.74 GB · 视频模型",
+        "measured"
+      ]
+    ],
+    "note": "这些是从应用自己的界面读取的下载大小，不是运行时占用的内存；应用没有显示每个模型所需的内存，只有适配标签。运行时内存没有测量。测试用 Mac 有 24 GB 统一内存。"
+  },
+  "usage_log": [
+    [
+      "下载并打开 Mac 安装器",
+      "—",
+      "“Install Loci”提示通过；应用已安装；安装耗时未记录",
+      "06:19",
+      "Pass",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "下载 Gemma 4 12B",
+      "Gemma 4 12B",
+      "据笔记已完成（“works smoothly”）；总耗时未记录",
+      "未记录",
+      "Pass",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "带联网搜索的天气问题",
+      "Gemma 4 12B",
+      "带 6 个来源的回答；准确性未核对",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "逻辑基准题，10 道",
+      "Gemma 4 12B",
+      "最终答案复核后 10 道中 10 道正确；ChatGPT 评分 94/100",
+      "未记录",
+      "Pass",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "搜索聊天，然后重启再搜索",
+      "—",
+      "两次都找到了该聊天",
+      "未记录",
+      "Pass",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "听写英语：“What is fifteen times five”",
+      "Loci 听写",
+      "文字正确",
+      "未记录",
+      "Pass",
+      [
+        "loci-english-dictation-fifteen-times-five"
+      ]
+    ],
+    [
+      "听写德语，默认语言",
+      "Loci 听写",
+      "乱码",
+      "未记录",
+      "Fail",
+      [
+        "loci-german-dictation-garbled-text"
+      ]
+    ],
+    [
+      "听写德语，语言设为 Automatic multilingual",
+      "Loci 听写",
+      "“Wie spät ist es momentan?”正确",
+      "未记录",
+      "Pass",
+      [
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "朗读一条回复",
+      "—",
+      "据笔记可用；未计时",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "将 Android 手机与 Mac 配对",
+      "—",
+      "已连接；Mac 显示为 Ready，1 models；配对耗时未记录",
+      "未记录",
+      "Pass",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "从手机经 Mac 发送高难度题目组",
+      "Mac 上的模型（笔记：Qwen；截图：Gemma 4 12B）",
+      "有回答；ChatGPT 评分好坏参半；未计时",
+      "未记录",
+      "Partial",
+      []
+    ],
+    [
+      "在手机上运行同一组题目，仅设备端",
+      "Bonsai 2 4B",
+      "拒绝回答",
+      "11:11",
+      "Fail",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "添加 PromptQuorum MCP 服务器",
+      "—",
+      "第一次就连上了",
+      "未记录",
+      "Pass",
+      [
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "MCP：“Which are the video apps that you can propose?”",
+      "Gemma 4 12B",
+      "按类别分组的 12 个应用列表，没有链接；“took a while”，未计时",
+      "未记录",
+      "Partial",
+      []
+    ],
+    [
+      "MCP：索要链接，共三轮",
+      "Gemma 4 12B",
+      "两轮错误链接，之后据测试者说正确",
+      "未记录",
+      "Partial",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "电子邮件、日历和提醒事项",
+      "—",
+      "未开始",
+      "未记录",
+      "Not completed",
+      []
+    ],
+    [
+      "图像和视频生成",
+      "—",
+      "未开始",
+      "未记录",
+      "Not completed",
+      []
+    ],
+    [
+      "Deep Research、Thinking、记忆导入",
+      "—",
+      "未开始",
+      "未记录",
+      "Not completed",
+      []
+    ],
+    [
+      "卸载",
+      "—",
+      "未测试",
+      "未记录",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "写道德语听写“crashed”（崩溃了），并且 Loci 似乎只支持英语。截图显示的是乱码，不是崩溃；原因是“语言”设置，他后来自己找到了。"
+    ],
+    [
+      "tester-error",
+      "写道应用“proposes only models that work”（只推荐能用的模型）。Unavailable 的模型是灰显列出的，而不是隐藏。标为“Best for this Mac”的 16.74 GB 视频模型没有下载，所以它能否在 24 GB 上运行尚未测试，不过他说这类模型通常会让他的 Mac 崩溃。"
+    ],
+    [
+      "tester-error",
+      "没有核实就说手机聊天没有出现在笔记本上。手机的 Linked computers 界面写着，由已连接电脑回答的聊天会在那里保存为只读副本；Mac 的聊天列表没有检查。"
+    ],
+    [
+      "tester-error",
+      "说 Mac 用“Qwen”回答了联动运行。Models 截图只列出了 Gemma 4 12B “In use”，手机卡片写着“1 models”。之后是否安装过 Qwen 模型没有记录。"
+    ],
+    [
+      "tester-error",
+      "给手机模型报了两个大小，“one gigabyte”和后来的“1.2 gigabyte”。下载卡片写的是“Bonsai 2 4B”，没有显示大小。"
+    ],
+    [
+      "assumption",
+      "测试者说测试用了三个小时。如果两个时钟显示同一时区，Mac 下载提示（06:19）与最后一张手机截图（11:11）相隔约 4 小时 52 分钟（计算）；休息时间没有记录。"
+    ],
+    [
+      "tester-error",
+      "记录中的空白：应用、macOS 和 Android 版本；手机型号；结束时间；Gemma 4 12B 的量化方式；口述的德语句子；默认语言取值；第二次测试的题目列表；Wi-Fi 和移动数据是否真的关闭；他是否提交了评分；他是否点击了最终的链接；配对和下载耗时；是否支持 Intel Mac。"
+    ],
+    [
+      "assumption",
+      "许多截图中可以看到来自另一个应用的悬浮麦克风气泡。Loci 自己输入栏里的红色麦克风说明，语音截图中 Loci 的听写正在录音；笔记中口述文字是用哪个工具生成的没有记录。笔记里的语音转文字口误已被规范化（例如“Loki”指 Loci，“four or four”指 404）。"
+    ]
+  ],
+  "findings": [
+    [
+      "LO-01",
+      "厂商页面写着“Taking you to the right download for your device…”，并有 iPhone、Android、Mac 和 Windows 的按钮。测试者运行的是 Apple 芯片上的 Mac 版；它能否在 Intel Mac 上运行没有测试。",
+      "安装",
+      "observed",
+      "Info",
+      [
+        "loci-download-page-four-platforms"
+      ]
+    ],
+    [
+      "LO-02",
+      "下载的是磁盘映像 Loci.dmg。打开后 macOS 弹出名为“Install Loci”的应用提示，Apple 已检查，未发现恶意软件。测试者说不需要拖到“应用程序”，安装自己就完成了（测试者观点）。磁盘映像的大小以及提示之后安装器做了什么，均未记录。",
+      "安装",
+      "observed",
+      "Positive",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "LO-03",
+      "首次运行：一个欢迎界面，然后是两个步骤，截图中没有登录步骤。第 1 步“What should Loci be best at?”列出以任务命名的选项，每项都带模型名称和下载大小。测试者喜欢明确标出模型及其大小，他测试过的一些应用没有这样做（测试者观点）。",
+      "引导",
+      "measured",
+      "Positive",
+      [
+        "loci-welcome-your-ai-lives-here-text",
+        "loci-setup-step1-choose-what-loci-is-best-at"
+      ]
+    ],
+    [
+      "LO-04",
+      "下载卡片显示百分比、已下载 GB、总量和预计时间（截图中被截断：50 % 时为“about 7 m…”，49 % 时为“about 10 …”），并带有 Pause 和 Choose another。总下载时间未记录。测试者认为预计时间是基本必备项，没有它的应用一开始就被淘汰（测试者观点）。",
+      "引导",
+      "measured",
+      "Positive",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "LO-05",
+      "第 2 步写着“Keep Loci open while this finishes. You can start chatting in the meantime.”。测试者说下载期间发出的聊天要等模型下载完才有回应，所以这个提示是错的。没有等待过程的截图；他等了多久没有记录。",
+      "引导",
+      "observed",
+      "Low",
+      [
+        "loci-setup-step2-start-chatting-in-the-meantime"
+      ]
+    ],
+    [
+      "LO-06",
+      "一个横幅写着“Recommended for this Mac — Picked for its 24 GB of memory”。在图像和视频列表中，FLUX.2 klein 4B（4-bit 和 8-bit）被灰显为“Unavailable — Needs a Mac with more memory”，Wan 2.2 5B 被标为“Best for this Mac”。这回答了测试者关于硬件检查的问题。没有在内存更小的 Mac 上试过。磁盘条显示 Loci 的模型占 7.12 GB，可用 91.29 GB。在测试者对 Locally Uncensored 的测试中（24 GB Mac），FLUX.2 klein 4B 4-bit 被标为“Runs on this Mac”，所以两个应用对同一个模型的标签不同（假设：运行时不同）。",
+      "模型",
+      "observed",
+      "Positive",
+      [
+        "loci-recommended-for-this-mac-24-gb",
+        "loci-image-models-unavailable-video-model-best-for-this-mac"
+      ]
+    ],
+    [
+      "LO-07",
+      "目录按用途分组（Writing and everyday chat、Coding、图像模型、视频模型）。卡片带有名称、一行说明、大小，以及适用时的许可说明（TwIL-8B：“Non-commercial use only”）。大小：Qwen3.5 0.8B (MLX) 652 MB；Gemma 4 E2B (MLX Mobile) 2.43 GB；Gemma 4 E2B 3.11 GB；Gemma 4 E4B (MLX Mobile) 3.49 GB；Gemma 4 E2B (MLX) 3.58 GB；Gemma 4 E4B 4.98 GB；Spark-X2.6 4B 3.54 GB；TwIL-8B 5.35 GB；Nemotron 3.5 Bolt E4B 6.18 GB。测试者：通过预选让人轻松上手，之后有广泛的选择（测试者观点）。没有显示每个模型所需的内存，只有适配标签。",
+      "模型",
+      "measured",
+      "Positive",
+      [
+        "loci-model-catalogue-chat-and-coding"
+      ]
+    ],
+    [
+      "LO-08",
+      "Models 界面显示 Gemma 4 12B “In use”、“Browse models”，以及 Anthropic、OpenAI 和 Google Gemini 等云端模型，每个都带“Add key”。这个界面上没有 Ollama 或 LM Studio 条目，测试者问过这一点；没有在其他界面查找。测试者担心每个应用都捆绑自己的模型，会重复下载并占满内存（测试者观点）。",
+      "模型",
+      "observed",
+      "Info",
+      [
+        "loci-settings-models-and-cloud-keys"
+      ]
+    ],
+    [
+      "LO-09",
+      "一个天气问题显示了“Searched the web ✓”步骤、一个带日期的回答和“Sources 6”（weather-forecast.com、accuweather.com 两次、weather.com、weather.metoffice.gov.uk、bbc.co.uk）。测试者打开了一个来源，即 weather.com 的 10 天页面；数值是否一致没有记录。他看重内置搜索，因为 Ollama 或 LM Studio 的方案否则会给出旧数据（测试者观点）。",
+      "搜索",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LO-10",
+      "File 菜单列出 Search Chats (⌘K)、New Chat (⌘N)、Switch Model (⇧⌘M) 和 Memories…。搜索“empl”和“Bob”都找到了基准题对话，测试者说退出并重启后搜索仍然可用。该聊天的自动标题“Online availability check”并不描述逻辑测试；标题如何生成没有记录。",
+      "聊天",
+      "observed",
+      "Info",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "LO-11",
+      "输入框旁的上下文计量条显示“8.1k / 64k”。测试者希望有一个说明它的信息图标，并问能否清除上下文。计量条是否有提示气泡没有试；设置页有信息图标。他称 64K 是很大的窗口。",
+      "聊天",
+      "tester-view",
+      "Low",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "LO-12",
+      "ChatGPT 编写的十道逻辑题被一次性发给了默认模型（根据前后截图中的选择器，是 Gemma 4 12B）。由报告作者而非测试者复核：十道题的最终答案都是正确的。第 2 题的最终值 1 分钟，对题目的表述来说是正确的（一台机器 5 分钟生产 5 个部件）。没有重复、计时或与其他模型比较。",
+      "推理",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-13",
+      "ChatGPT 给回答打了 94/100：八道题 10/10，第 2 题 8/10“Correct, but initially confused”，第 9 题 6/10“Correct answer, flawed explanation”。它称这对一套中低难度的基准题来说是很强的结果，并指出十道题无法区分真正的推理和学来的谜题套路，还问到用了哪个模型、参数规模和量化方式；笔记没有回答。列出的分数加起来是 94（计算）。评分者是 AI，题目也是它出的。",
+      "推理",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-14",
+      "第 2 题的答案行写着“5 minutes”，随后文字重新计算（“Wait, let’s re-calculate”），最终得出 1 分钟。最终值是对的，但标题答案与之矛盾。",
+      "推理",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-15",
+      "第 9 题：最终答案 Bob 是对的，但解释有误。它说如果 Bob 撒谎，Charlie 的陈述就是假的，后来又把“Bob is lying”说成是 Charlie 说的，而实际是 Alice 说的。ChatGPT 指出了同样的问题。",
+      "推理",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-16",
+      "向聊天框的英语听写可用。语音设置：“Natural Voice reads English replies. Apple voices read other languages.”，语速 105 %，回复前等待 1.2 秒。Edit 菜单有 Start Dictation、Finish Dictation、Stop Audio 和 Voice Settings…。选中文字的菜单提供 Copy、Share、Read Aloud 和 Regenerate；测试者觉得朗读“really useful”（测试者观点）。笔记中的文字是用哪个工具听写的没有记录。",
+      "语音",
+      "observed",
+      "Positive",
+      [
+        "loci-english-dictation-fifteen-times-five",
+        "loci-settings-voice-spoken-replies"
+      ]
+    ],
+    [
+      "LO-17",
+      "使用默认设置的德语听写得到乱码（“Bus East Seben Mal Einund Reisik”）；口述的句子没有记录。被问到它在语音模式下是否听得懂德语时，模型回答“是”，这说的是模型，而不是语音识别。语言设置改为“Automatic — multilingual”之后，德语可用（“Wie spät ist es momentan?”）。测试者说默认是英语；没有截图。没有看到指向该设置的界面提示。该设置写着 Automatic 支持 25 种欧洲语言（厂商声明）。",
+      "语音",
+      "observed",
+      "Medium",
+      [
+        "loci-german-dictation-garbled-text",
+        "loci-german-question-model-says-yes",
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "LO-18",
+      "听写设置显示 Local dictation 已开启，按键为 Fn / Globe（⌘⇧D 也可开始和停止，Escape 取消），并有一条消息：“The dictation key is not working because it needs Device Control and Data Access permission. Command Shift D is still available.”，带一个 Open System Settings 按钮。笔记没有提到这条消息，没有说明权限是否已授予，也没有说明是哪个键触发了听写。",
+      "语音",
+      "observed",
+      "Medium",
+      [
+        "loci-settings-dictation-key-permission-warning"
+      ]
+    ],
+    [
+      "LO-19",
+      "“For tinkerers”：一个标注为 Focused 到 Creative 的 Creativity 滑块，设为 0.70，旁有“Recommended for Gemma 4 12B: 1.00”和信息图标；还有一个 Context length 选择器（Auto · 64K、8K、16K、32K、64K、128K；已选 64K），也带信息图标。测试者喜欢用通俗的词代替技术术语，也喜欢本地模型有 128K 选项（测试者观点）。上下文长度对内存的影响没有测量。",
+      "设置",
+      "observed",
+      "Positive",
+      [
+        "loci-settings-creativity-and-context-length"
+      ]
+    ],
+    [
+      "LO-20",
+      "“Chat & memory”：回复 Length（Short、Standard、Long）、新聊天的 Focus mode（General）、Thinking、Show reply stats、“Show Deep Research in + menu”和“Precise research steps”（Experimental）。测试者称它们是引导回答的很好的简单设置（测试者观点）。Thinking、回复统计和 Deep Research 没有使用。",
+      "设置",
+      "observed",
+      "Info",
+      [
+        "loci-settings-chat-and-memory-replies"
+      ]
+    ],
+    [
+      "LO-21",
+      "File > Memories… 打开一个导入界面：复制导出提示词，粘贴到 Claude、ChatGPT 或 Gemini，再把回答粘贴回来。“Each line becomes a memory saved on this Mac. Nothing is uploaded, and you choose what stays.” 这是在回看截图时发现的；没有试用；测试者没有评论。",
+      "记忆",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-memories-import-panel"
+      ]
+    ],
+    [
+      "LO-22",
+      "Connections 列出 Apple Mail（“Not connected”）、Calendar and Reminders（“Not asked yet”）、Notifications，以及 Gmail 和 Outlook / Microsoft 365 按钮。厂商文字：邮件不会离开 Mac；同步在 Loci 运行时进行；下载 30 天的邮件正文；缓存的邮件已加密；新连接为只读。没有连接任何账号。测试者称电子邮件集成是他见过的第一个，可能是最强的商务工具，但他没有设置（测试者观点）。在一个关于时间的德语问题下，输入框下方出现了“Using Calendar & Reminders”标签；权限状态和回答均未记录。",
+      "连接服务",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-connections-mail-calendar-reminders"
+      ]
+    ],
+    [
+      "LO-23",
+      "Mac 上的“Your phone”页面列出三个步骤：在手机上安装 Loci，让两者连接同一个 Wi-Fi，在手机上打开 Settings > Scan QR code，或输入一个代码（截图未公开，因为其中有配对码）。随后手机要求选一个模型：“Waiting for an unmetered network — Bonsai 2 4B… You can use this metered connection instead.”测试者选了两个模型中较小的一个。手机品牌、型号和 Android 版本未记录。",
+      "手机互联",
+      "observed",
+      "Info",
+      [
+        "loci-phone-waiting-for-unmetered-network-bonsai"
+      ]
+    ],
+    [
+      "LO-24",
+      "配对后，手机的 Linked computers 列出“Hans’s MacBook Pro (2)”、“Ready”、“1 models”。测试者称互联非常快，说什么都不需要设置；配对耗时未记录。手机设置文字：“Loci Link: Run your computer’s more powerful models from your phone.”（厂商声明）。",
+      "手机互联",
+      "observed",
+      "Positive",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "LO-25",
+      "测试者没有在 Mac 上看到手机上的聊天，打算问开发者，并说可能漏掉了某个设置。手机的 Linked computers 界面写着“Chats answered by a linked computer are saved there as read-only copies”，所以副本可能存在；Mac 的聊天列表没有检查。",
+      "手机互联",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-26",
+      "一组由 ChatGPT 编写的高难度题目从手机发到了 Mac（测试者称 Mac 上的模型为“Qwen”）。ChatGPT 的评估表（部分可见）：Q1、Q7、Q9 Correct；Q2、Q5 Partial；Q3 Incorrect；Q4、Q6、Q8 Incomplete；后面的行被截断。ChatGPT 的文字：该模型对推理问题有不错的认识，但“does not consistently solve them”；有几个回答没写完，少数含有根本性的逻辑错误。测试者的笔记只评价了连接，他说连接很轻松。",
+      "手机互联",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-27",
+      "设备端运行（测试者说 Wi-Fi 和移动数据已关闭）：被问到同一组高难度题时，手机上的小模型（卡片名称 Bonsai 2 4B）回复“I cannot answer these 20 questions. They are designed to test my ability, and I am an AI assistant bound by safety guidelines, not a human exam taker…”（11:11 的截图）。状态栏仍显示信号指示和数据速率读数，所以离线状态未得到确认。这次拒绝看起来是模型行为，而不是应用故障（假设）。",
+      "手机",
+      "observed",
+      "Medium",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "LO-28",
+      "“Add a Server”提供包含 24 项服务的目录，外加“Web address”（任意 MCP 服务器）和“Program on this Mac”。测试者输入了 PromptQuorum 自己的 MCP 地址；表单有一个可选的访问令牌，保存在 Keychain 中（厂商声明）。确认界面写着“Nothing is added until you confirm. Whatever Loci sends to this server’s tools leaves your Mac.”，并提供一个“Use in every chat”开关，当时是开启的。服务器第一次就连上了，提供 27 个工具。测试者说 PromptQuorum 是这个本地 LLM 领域唯一的 MCP 服务器，这一说法未核实（假设）。",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "loci-mcp-add-a-server-catalogue",
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "LO-29",
+      "第一个问题“Which are the video apps that you can propose?”：先运行了工具“promptquorum: list categories”，然后是“Pondering…”，再给出一个按类别分组、列出 12 个应用（图像生成、视频、视觉、创作工具）的回答，没有链接，尽管测试者的服务器说明要求提供链接。测试者称它比使用 MCP 的 Grok 或 Claude 慢，未计时（测试者估计），并且听到了 Mac 的风扇声。",
+      "MCP",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-30",
+      "被问到链接在哪里时，模型给出了“View Details”链接；其中一个打开了 PromptQuorum 的 404 页面。被问到是否编造了这些链接，模型说这些链接是“hallucinated”，并且是“based on a pattern”生成的。据测试者说，第二组也失败了；随后模型说自检发现它们“still incorrect”，尽管看不到任何检查步骤。接着它运行了“search apps”，返回带有“Not verified to fit”备注的“Download/Install | Read the full review”链接。测试者说这些链接是正确的；他的点击过程不在截图中。应用是否会验证 URL 没有记录。",
+      "MCP",
+      "observed",
+      "Medium",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "LO-31",
+      "在 MCP 对话期间弹出一个提示：“Enjoying Loci? Click a star to rate it on the Mac App Store.”（五颗星，“Not now”）。测试者写道“deserves a five”；他是否打了分没有记录。他是通过网页下载而不是 App Store 安装的，所以无论来源如何都会出现该提示（假设）。",
+      "反馈",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-32",
+      "欢迎界面：“With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.” 手机：“Loci processes your requests here—we don’t use data centers to answer them.” 应用自己标出了会把数据发送出去的功能：联网搜索、云端密钥和 MCP 工具。没有检查网络流量，也没有在 Mac 上试过离线运行。",
+      "信任",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-welcome-your-ai-lives-here-text"
+      ]
+    ],
+    [
+      "LO-33",
+      "未测试或未记录：Gmail、Outlook 和 Apple Mail；日历和提醒事项；Deep Research 和 Thinking；照片理解；图像和视频生成；记忆导入；云端密钥；Windows、iPhone 和 iPad；Intel Mac；Mac 离线使用；网络流量；聊天同步；手机的电池和发热；应用和系统版本；卸载。测试者指出这套基准题测试的是模型，而不是应用（测试者观点）。",
+      "范围",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现；Positive 表示表现良好的地方。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "想要带联网搜索的简单本地聊天、之后可能把手机连到 Mac 或接入 MCP 服务器的 Mac 和 Android 用户（基于一次测试的假设）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "需要经过审核的隐私保护、电子邮件或日历集成，或需要在 24 GB Mac 上生成图像和视频的人：这些在本次测试中都没有测试。"
+      ]
+    ],
+    "retest": "测试者计划在两到三个月后再次评测。覆盖：记录应用、macOS 和 Android 版本；为下载计时；从干净的默认设置测试德语和其他语言；检查 Mac 的聊天列表以确认聊天同步；检查流量后在 Mac 上离线使用；电子邮件集成；在 24 GB 上试一个图像模型；用 Mac 上的模型与云端模型对比那组高难度题目；点击验证 MCP 链接；卸载。"
+  },
+  "background_intro": "非实测内容。以下条目来自 PromptQuorum 目录中的 Loci 条目和 AlternativeTo，此处未核实。",
+  "background": [
+    [
+      "third-party",
+      "开发方列为 Loci AI, Inc.；免费，无订阅、无广告、无账号；支持 iPhone（iOS 18+）、iPad（iPadOS 18+）、Android、Mac 和 Windows。来源：PromptQuorum 目录中的 Loci 评测。"
+    ],
+    [
+      "third-party",
+      "AlternativeTo 将 Loci 列为 Free and Proprietary，描述为面向手机和电脑的免费、私密 AI 聊天，支持本地模型、离线对话，并按设备推荐模型。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和截图，2026年11月11日（原始 Word 笔记；原始笔记 PDF 待补充）。",
+    "PromptQuorum 目录中 Loci 的条目和评测（slug：loci-ai）。",
+    "AlternativeTo 上的 Loci 条目（https://alternativeto.net/software/loci/about/）。",
+    "厂商下载页面（地址未记录；厂商声明）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "loci-setup-step1-choose-what-loci-is-best-at",
+      "figure": 1,
+      "file": "loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "path": "images/loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "alt": "Loci 设置第 1 步（共 2 步），“What should Loci be best at?”，带有 Coding（Qwen3.8 27B，10.93 GB）和 Deep thinking（Qwen3.5 4B，2.74 GB）卡片。",
+      "caption": "设置第 1 步：以任务命名的模型选项，每项带下载大小。测量（大小如界面所示）。",
+      "role": "hero",
+      "width": 906,
+      "height": 732,
+      "bytes": 38716,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "figure": 2,
+      "file": "loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "path": "images/loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "alt": "下载卡片：Downloading Gemma 4 12B，50 %，7.12 GB 中的 3.72 GB，预计时间在“about 7 m”之后被截断，带有 Pause 按钮。",
+      "caption": "带大小和预计时间的下载卡片。测量。",
+      "role": "moment",
+      "width": 934,
+      "height": 384,
+      "bytes": 13622,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "figure": 3,
+      "file": "loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "path": "images/loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "alt": "4-bit（4.62 GB）和 8-bit（8.57 GB）的 FLUX.2 klein 4B 被标为 Unavailable；视频模型 Wan 2.2 5B（16.74 GB）被标为 Best for this Mac；还有存储条。",
+      "caption": "需要更多内存的模型被列为 Unavailable。观察。",
+      "role": "moment",
+      "width": 1430,
+      "height": 583,
+      "bytes": 23936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-german-dictation-garbled-text",
+      "figure": 4,
+      "file": "loci-german-dictation-garbled-text.webp",
+      "path": "images/loci-german-dictation-garbled-text.webp",
+      "alt": "Loci 输入框里是乱码的德语听写“Bus East Seben Mal Einund Reisik”，以及模型选择器 Best all-round Gemma 4 12B。",
+      "caption": "默认语言设置下的德语听写。观察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 300,
+      "bytes": 16260,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-phone-linked-computers-macbook-pro-ready",
+      "figure": 5,
+      "file": "loci-phone-linked-computers-macbook-pro-ready.webp",
+      "path": "images/loci-phone-linked-computers-macbook-pro-ready.webp",
+      "alt": "Android 的 Linked computers 界面：一台标为 Ready、带 1 models 的 MacBook Pro，一个 Link a computer 按钮，以及一条关于只读副本的说明。",
+      "caption": "手机与 Mac 配对之后。观察。",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 28648,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-mcp-model-admits-hallucinated-links",
+      "figure": 6,
+      "file": "loci-mcp-model-admits-hallucinated-links.webp",
+      "path": "images/loci-mcp-model-admits-hallucinated-links.webp",
+      "alt": "聊天：测试者问这些 URL 是否真实；模型回复说这些链接是 hallucinated，是根据模式生成的，而不是来自工具数据。",
+      "caption": "模型对失效链接的回复。观察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 837,
+      "bytes": 114334,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-mcp-promptquorum-connected-27-tools",
+      "figure": 7,
+      "file": "loci-mcp-promptquorum-connected-27-tools.webp",
+      "path": "images/loci-mcp-promptquorum-connected-27-tools.webp",
+      "alt": "PromptQuorum MCP 服务器界面：Connected，提供 27 个工具，并列出 Search 和 Get article 工具及其输入。",
+      "caption": "MCP 服务器已连接。观察。",
+      "role": "moment",
+      "width": 1224,
+      "height": 1142,
+      "bytes": 91202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-download-page-four-platforms",
+      "figure": 8,
+      "file": "loci-download-page-four-platforms.webp",
+      "path": "images/loci-download-page-four-platforms.webp",
+      "alt": "Loci 下载页面：Get Loci for iPhone、Android、Mac 和 Windows，以及“No account, no ads, completely free.”一行。",
+      "caption": "厂商下载页面。“无账号、无广告、免费”一行属于厂商声明。",
+      "role": "gallery",
+      "width": 1492,
+      "height": 874,
+      "bytes": 39914,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-install-loci-app-macos-open-prompt",
+      "figure": 9,
+      "file": "loci-install-loci-app-macos-open-prompt.webp",
+      "path": "images/loci-install-loci-app-macos-open-prompt.webp",
+      "alt": "macOS 提示：“Install Loci”是从互联网下载的应用，位于磁盘映像 Loci.dmg 中；Apple 已检查，未发现恶意软件。",
+      "caption": "打开安装器时的提示。观察。",
+      "role": "gallery",
+      "width": 512,
+      "height": 830,
+      "bytes": 38498,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-welcome-your-ai-lives-here-text",
+      "figure": 10,
+      "file": "loci-welcome-your-ai-lives-here-text.webp",
+      "path": "images/loci-welcome-your-ai-lives-here-text.webp",
+      "alt": "Loci 欢迎界面文字：“Your AI lives here. With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.”",
+      "caption": "欢迎界面，仅文字面板（已裁掉厂商的插图）。隐私一行属于厂商声明。",
+      "role": "gallery",
+      "width": 805,
+      "height": 824,
+      "bytes": 18886,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-setup-step2-start-chatting-in-the-meantime",
+      "figure": 11,
+      "file": "loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "path": "images/loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "alt": "设置第 2 步（共 2 步），Setting up Gemma 4 12B：“You can start chatting in the meantime”，7.12 GB 的 0 %，带 Pause 和 Choose another 按钮。",
+      "caption": "下载开始时的设置第 2 步。观察。",
+      "role": "gallery",
+      "width": 894,
+      "height": 596,
+      "bytes": 21516,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-english-dictation-fifteen-times-five",
+      "figure": 12,
+      "file": "loci-english-dictation-fifteen-times-five.webp",
+      "path": "images/loci-english-dictation-fifteen-times-five.webp",
+      "alt": "Loci 输入框里是听写出的英语文字“What is fifteen times five”，以及一个红色麦克风按钮。",
+      "caption": "英语听写。观察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 229,
+      "bytes": 13868,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-german-question-model-says-yes",
+      "figure": 13,
+      "file": "loci-german-question-model-says-yes.webp",
+      "path": "images/loci-german-question-model-says-yes.webp",
+      "alt": "聊天：被问到语音模式是否听得懂德语，模型回答是；输入框里是听写文字“Hello Guten Morgan”。",
+      "caption": "模型的回答说的是模型，而不是语音识别。观察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 1154,
+      "bytes": 44848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-german-dictation-works-after-language-setting",
+      "figure": 14,
+      "file": "loci-german-dictation-works-after-language-setting.webp",
+      "path": "images/loci-german-dictation-works-after-language-setting.webp",
+      "alt": "Loci 主界面，带有德语文字“Wie spät ist es momentan?”，输入框下方有“Using Calendar & Reminders”标签。",
+      "caption": "修改语言设置之后的德语听写。观察。",
+      "role": "gallery",
+      "width": 1430,
+      "height": 573,
+      "bytes": 23818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-settings-dictation-key-permission-warning",
+      "figure": 15,
+      "file": "loci-settings-dictation-key-permission-warning.webp",
+      "path": "images/loci-settings-dictation-key-permission-warning.webp",
+      "alt": "Dictation in any app：Fn / Globe 键，Language 为 Automatic multilingual，以及一条警告：该键需要 Device Control and Data Access 权限。",
+      "caption": "带权限警告的听写设置。观察。",
+      "role": "gallery",
+      "width": 1236,
+      "height": 984,
+      "bytes": 59964,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-settings-voice-spoken-replies",
+      "figure": 16,
+      "file": "loci-settings-voice-spoken-replies.webp",
+      "path": "images/loci-settings-voice-spoken-replies.webp",
+      "alt": "Settings，Voice：Natural Voice 朗读英语回复，Apple 语音朗读其他语言；语速 105 %；回复前等待 1.2 秒。",
+      "caption": "语音回复设置。测量。",
+      "role": "gallery",
+      "width": 1270,
+      "height": 1014,
+      "bytes": 29336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-settings-creativity-and-context-length",
+      "figure": 17,
+      "file": "loci-settings-creativity-and-context-length.webp",
+      "path": "images/loci-settings-creativity-and-context-length.webp",
+      "alt": "For tinkerers：Focused 到 Creative 滑块上 Creativity 为 0.70，Gemma 4 12B 的推荐值为 1.00；Context length 为 Auto 64K，可选 8K 到 128K。",
+      "caption": "Creativity 和 Context length 设置。测量。",
+      "role": "gallery",
+      "width": 1246,
+      "height": 574,
+      "bytes": 20566,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-settings-chat-and-memory-replies",
+      "figure": 18,
+      "file": "loci-settings-chat-and-memory-replies.webp",
+      "path": "images/loci-settings-chat-and-memory-replies.webp",
+      "alt": "Chat & memory：回复 Length 为 Short、Standard 或 Long，Focus mode 为 General，Thinking 关闭，reply stats 关闭，Deep Research 开启，Precise research steps 关闭。",
+      "caption": "回复设置。观察。",
+      "role": "gallery",
+      "width": 1272,
+      "height": 1034,
+      "bytes": 39132,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-settings-models-and-cloud-keys",
+      "figure": 19,
+      "file": "loci-settings-models-and-cloud-keys.webp",
+      "path": "images/loci-settings-models-and-cloud-keys.webp",
+      "alt": "Models：Gemma 4 12B 使用中，Browse models，以及 Anthropic、OpenAI 和 Google Gemini 的 Add key 按钮，并注明设备端模型留在 Mac 上。",
+      "caption": "Models 界面。隐私说明属于厂商声明。",
+      "role": "gallery",
+      "width": 1314,
+      "height": 1138,
+      "bytes": 47866,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-model-catalogue-chat-and-coding",
+      "figure": 20,
+      "file": "loci-model-catalogue-chat-and-coding.webp",
+      "path": "images/loci-model-catalogue-chat-and-coding.webp",
+      "alt": "模型目录列出 Writing and everyday chat 和 Coding 两类，每张卡片带名称、一行说明、Get 按钮和下载大小。",
+      "caption": "模型目录。大小为测量值。",
+      "role": "gallery",
+      "width": 1431,
+      "height": 742,
+      "bytes": 59506,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-recommended-for-this-mac-24-gb",
+      "figure": 21,
+      "file": "loci-recommended-for-this-mac-24-gb.webp",
+      "path": "images/loci-recommended-for-this-mac-24-gb.webp",
+      "alt": "横幅“Recommended for this Mac”，“Picked for its 24 GB of memory”。",
+      "caption": "针对这台 Mac 的推荐。观察。",
+      "role": "gallery",
+      "width": 974,
+      "height": 100,
+      "bytes": 7310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-context-meter-8-1k-of-64k",
+      "figure": 22,
+      "file": "loci-context-meter-8-1k-of-64k.webp",
+      "path": "images/loci-context-meter-8-1k-of-64k.webp",
+      "alt": "输入框旁的上下文计量条显示 8.1k / 64k，带一个地球图标。",
+      "caption": "基准题对话之后的上下文计量条。测量。",
+      "role": "gallery",
+      "width": 310,
+      "height": 84,
+      "bytes": 1728,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-chat-search-bob-after-restart",
+      "figure": 23,
+      "file": "loci-chat-search-bob-after-restart.webp",
+      "path": "images/loci-chat-search-bob-after-restart.webp",
+      "alt": "聊天搜索“Bob”找到了日期为 Today 的聊天“Online availability check”，摘要中有说谎者谜题的文字。",
+      "caption": "应用重启之后的聊天搜索。观察。",
+      "role": "gallery",
+      "width": 1466,
+      "height": 616,
+      "bytes": 20744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-connections-mail-calendar-reminders",
+      "figure": 24,
+      "file": "loci-connections-mail-calendar-reminders.webp",
+      "path": "images/loci-connections-mail-calendar-reminders.webp",
+      "alt": "Connections：Apple Mail 未连接，Calendar and Reminders 尚未询问，Notifications，以及 Connect Gmail 和 Outlook 按钮，并附有隐私文字。",
+      "caption": "Connections 页面。“never leaves this Mac”一行属于厂商声明。",
+      "role": "gallery",
+      "width": 1382,
+      "height": 1366,
+      "bytes": 75388,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-memories-import-panel",
+      "figure": 25,
+      "file": "loci-memories-import-panel.webp",
+      "path": "images/loci-memories-import-panel.webp",
+      "alt": "Memories 面板：粘贴来自 Claude、ChatGPT 或 Gemini 的导出内容；每一行成为保存在这台 Mac 上的一条记忆；有一个粘贴框和一个 Add memories 按钮。",
+      "caption": "记忆导入，未试用。“nothing is uploaded”一行属于厂商声明。",
+      "role": "gallery",
+      "width": 830,
+      "height": 1084,
+      "bytes": 23540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-phone-waiting-for-unmetered-network-bonsai",
+      "figure": 26,
+      "file": "loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "path": "images/loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "alt": "Android 界面：0 %，“Waiting for an unmetered network — Bonsai 2 4B”，带有 Choose another model 和 Use this metered connection 按钮。",
+      "caption": "手机上的模型下载。观察。",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 58108,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-phone-on-device-model-refuses-question-set",
+      "figure": 27,
+      "file": "loci-phone-on-device-model-refuses-question-set.webp",
+      "path": "images/loci-phone-on-device-model-refuses-question-set.webp",
+      "alt": "Android 聊天：设备端模型回复“I cannot answer these 20 questions…”，并说它是受安全准则约束的 AI 助手。",
+      "caption": "手机，设备端模型，高难度题目组。观察。",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 62556,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "promptquorum-404-page-from-mcp-link",
+      "figure": 28,
+      "file": "promptquorum-404-page-from-mcp-link.webp",
+      "path": "images/promptquorum-404-page-from-mcp-link.webp",
+      "alt": "PromptQuorum 404 页面：“The quorum couldn’t find this page.”",
+      "caption": "第一组链接中的失效链接。截图中没有地址栏。观察。",
+      "role": "gallery",
+      "width": 1429,
+      "height": 530,
+      "bytes": 30802,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-mcp-self-check-claims-links-still-incorrect",
+      "figure": 29,
+      "file": "loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "path": "images/loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "alt": "聊天：被要求检查链接时，模型说它们仍然不正确，然后运行了工具“search apps”。",
+      "caption": "模型声称自检过；看不到任何检查步骤。观察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 799,
+      "bytes": 81540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-mcp-final-links-download-install-review",
+      "figure": 30,
+      "file": "loci-mcp-final-links-download-install-review.webp",
+      "path": "images/loci-mcp-final-links-download-install-review.webp",
+      "alt": "运行工具“search apps”之后的聊天：OpenMontage 为最佳推荐，带有 Download/Install 和 Read the full review 链接，每个应用附一条说明。",
+      "caption": "带链接的最终回答。链接是否有效不在截图中。观察。",
+      "role": "gallery",
+      "width": 1576,
+      "height": 962,
+      "bytes": 120834,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    },
+    {
+      "id": "loci-mcp-add-a-server-catalogue",
+      "figure": 31,
+      "file": "loci-mcp-add-a-server-catalogue.webp",
+      "path": "images/loci-mcp-add-a-server-catalogue.webp",
+      "alt": "Add a Server 目录，含 24 项服务，从 Airtable 到 Zapier，以及 Add your own：Web address 或 Program on this Mac。",
+      "caption": "MCP 目录。观察。",
+      "role": "gallery",
+      "width": 1236,
+      "height": 1126,
+      "bytes": 61094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-11；具体时间未记录"
+    }
+  ],
+  "figure_order": [
+    "loci-setup-step1-choose-what-loci-is-best-at",
+    "loci-gemma-4-12b-download-50-percent-time-estimate",
+    "loci-image-models-unavailable-video-model-best-for-this-mac",
+    "loci-german-dictation-garbled-text",
+    "loci-phone-linked-computers-macbook-pro-ready",
+    "loci-mcp-model-admits-hallucinated-links",
+    "loci-mcp-promptquorum-connected-27-tools",
+    "loci-download-page-four-platforms",
+    "loci-install-loci-app-macos-open-prompt",
+    "loci-welcome-your-ai-lives-here-text",
+    "loci-setup-step2-start-chatting-in-the-meantime",
+    "loci-english-dictation-fifteen-times-five",
+    "loci-german-question-model-says-yes",
+    "loci-german-dictation-works-after-language-setting",
+    "loci-settings-dictation-key-permission-warning",
+    "loci-settings-voice-spoken-replies",
+    "loci-settings-creativity-and-context-length",
+    "loci-settings-chat-and-memory-replies",
+    "loci-settings-models-and-cloud-keys",
+    "loci-model-catalogue-chat-and-coding",
+    "loci-recommended-for-this-mac-24-gb",
+    "loci-context-meter-8-1k-of-64k",
+    "loci-chat-search-bob-after-restart",
+    "loci-connections-mail-calendar-reminders",
+    "loci-memories-import-panel",
+    "loci-phone-waiting-for-unmetered-network-bonsai",
+    "loci-phone-on-device-model-refuses-question-set",
+    "promptquorum-404-page-from-mcp-link",
+    "loci-mcp-self-check-claims-links-still-incorrect",
+    "loci-mcp-final-links-download-install-review",
+    "loci-mcp-add-a-server-catalogue"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年11月11日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "内存",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "下载文件能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "应用",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面",
+      "Info": "提示"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}
