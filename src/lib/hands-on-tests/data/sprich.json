@@ -1,8 +1,8 @@
 {
   "id": "pq-test-sprich-2026-11-09",
   "hero": "sprich-welcome-screen-press-once-speak-press-again",
-  "date_human": "9 November 2026",
-  "captured": "2026-11-09; 17:43 to 18:07 per the app history; install start and end not recorded",
+  "date_human": "9 and 13 November 2026",
+  "captured": "2026-11-09; 17:43 to 18:07 per the app history; install start and end not recorded. Meeting session 2026-11-13; recording started 12:24 per the app header.",
   "standard_version": "0.2",
   "locale": "en",
   "app": {
@@ -15,10 +15,10 @@
   },
   "title": "Sprich on an M4 Pro Mac with 24 GB: Local Dictation That Types Into Any App",
   "page_title": "Sprich Test",
-  "dek": "A first session on 9 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a German-only interface, and most side features not tried.",
+  "dek": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers despite poor room sound, a German-only interface, and several side features not tried.",
   "seo": {
     "title": "Sprich Hands-on Test: Local Dictation on an M4 Pro Mac",
-    "description": "Hands-on test of Sprich on a 24 GB M4 Pro Mac: dictation worked in Word, WhatsApp and Telegram in English and German, Russian failed."
+    "description": "Hands-on test of Sprich on a 24 GB M4 Pro Mac: dictation in Word, WhatsApp and Telegram, plus a 6-minute meeting with two speakers. Russian failed."
   },
   "faq": [
     [
@@ -50,6 +50,11 @@
       "Was Sprich fast?",
       "The tester first judged it slow because he used the default toggle mode wrongly (press once, speak, press again). After correct use he found it instant and as fast as his cloud dictation tool. Nothing was timed.",
       "tester-estimate"
+    ],
+    [
+      "Does Sprich’s meeting mode work?",
+      "In one short test, yes. On 13 November the tester recorded a 6-minute meeting with two people. The room sound was very bad, but Sprich still transcribed it and assigned two speakers. It then offers summary, minutes, follow-up e-mail and doctor’s letter formats. Accuracy was not scored and which format was generated is not recorded.",
+      "observed"
     ]
   ],
   "status": "Partial",
@@ -79,7 +84,7 @@
     ],
     [
       "Start",
-      "2026-11-09. The first dictation in the history is at 17:43 and the last screenshot at 18:07; install start and end time are not recorded.",
+      "2026-11-09. The first dictation in the history is at 17:43 and the last screenshot at 18:07; install start and end time are not recorded. A second session on 2026-11-13 covered one meeting recording (12:24 per the app header).",
       "observed"
     ],
     [
@@ -104,7 +109,7 @@
     ],
     [
       "Objective",
-      "Not stated as a goal. The notes show a first look at setup, dictation in three apps, languages, history, settings and the meetings tab.",
+      "Not stated as a goal. The notes show a first look at setup, dictation in three apps, languages, history, settings and the meetings tab. The second session recorded one meeting.",
       null
     ],
     [
@@ -114,7 +119,7 @@
     ],
     [
       "AI help used",
-      "Claude drafted this report from the tester's Word notes and 15 screenshots. The dictated parts of the notes appear to come from Sprich itself (assumption: the history entries match the notes' text), so some slips in the notes may be app output.",
+      "Claude drafted this report from the tester's Word notes and 15 screenshots, and the Meeting mode chapter from the tester's message of 13 November and 2 further screenshots. The dictated parts of the notes appear to come from Sprich itself (assumption: the history entries match the notes' text), so some slips in the notes may be app output.",
       "assumption"
     ],
     [
@@ -125,8 +130,8 @@
   ],
   "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
   "verdict": {
-    "general": "A carefully built, German-first dictation app for Apple Silicon Macs. In this session dictation worked in Word, WhatsApp and Telegram in English and German; Russian did not. Meeting recording, file transcription, text rewriting, offline operation, the privacy claims and uninstall were not tested.",
-    "fit": "The tester is impressed, gives it five out of five and recommended it to a contact. He rates it as fast as his cloud dictation tool, though nothing was timed. Whether he will keep using it is not stated in his notes."
+    "general": "A carefully built, German-first dictation app for Apple Silicon Macs. In this session dictation worked in Word, WhatsApp and Telegram in English and German; Russian did not. In a second session on 13 November a 6-minute meeting with two people was recorded and transcribed, with the speakers told apart, despite very poor room sound; the tester says the meeting function works well. File transcription, text rewriting, offline operation, the privacy claims and uninstall were not tested.",
+    "fit": "The tester is impressed, gives it five out of five and recommended it to a contact. He rates it as fast as his cloud dictation tool, though nothing was timed. Whether he will keep using it is not stated in his notes. He also finds it really great that the meeting notes run locally."
   },
   "scores": [
     [
@@ -194,7 +199,11 @@
     ],
     [
       "observed",
-      "Meeting recording, the text-rewrite menu, file transcription, the dictionary, the tone setting's effect, offline use and uninstall were not tested."
+      "In a second session on 13 November the tester recorded a 6-minute meeting with two people. The room sound was very bad; Sprich still transcribed it and assigned two speakers. A follow-up dialog offers Zusammenfassung, Protokoll, Follow-up-E-Mail and Arztbrief. The tester says the meeting function works well."
+    ],
+    [
+      "observed",
+      "The text-rewrite menu, file transcription, the dictionary, the tone setting's effect, offline use and uninstall were not tested."
     ]
   ],
   "quotes": [
@@ -236,10 +245,10 @@
       "chapter-explore"
     ],
     [
-      "Meetings, recorded locally",
-      "Meetings tab, not used in the test.",
-      "sprich-meetings-tab-record-meeting-tip",
-      "chapter-explore"
+      "Meeting mode, tried four days later",
+      "Two speakers and a transcript from very poor room sound, with a follow-up menu for summary, minutes, e-mail and doctor's letter.",
+      "sprich-meeting-transcript-two-speakers",
+      "chapter-meetings"
     ]
   ],
   "chapters": [
@@ -356,7 +365,7 @@
         ],
         [
           "vendor-claim",
-          "The Meetings tab offers “Meeting aufnehmen”; its tip says calls give a transcript, summary and tasks and everything stays on the Mac. The tester has not recorded a meeting and plans to try it with a few people in a room.",
+          "The Meetings tab offers “Meeting aufnehmen”; its tip says calls give a transcript, summary and tasks and everything stays on the Mac. The tester tried it in a second session (see the Meeting mode chapter).",
           "sprich-meetings-tab-record-meeting-tip"
         ],
         [
@@ -377,6 +386,52 @@
       ]
     },
     {
+      "id": "chapter-meetings",
+      "title": "Meeting mode, tried on 13 November",
+      "items": [
+        [
+          "observed",
+          "On 13 November 2026 the tester recorded a meeting with the Meetings tab. The header of the saved meeting reads “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (utterances). Which app version he used is not recorded.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "tester-view",
+          "He says the meeting function works well and that it lets him record a meeting.",
+          null
+        ],
+        [
+          "tester-view",
+          "The sound quality in the room was very bad.",
+          null
+        ],
+        [
+          "observed",
+          "Sprich recorded and transcribed it anyway and assigned the speech to two speakers, Person 1 and Person 2. A hint reads “Klicken zum Umbenennen” (click to rename). Each utterance has a speaker and a time stamp (00:00 and 00:14 in the excerpt). The excerpt is English text with some rough phrasing; whether that comes from the speech or from the recognition is not recorded. Accuracy of the text and of the speaker assignment was not scored.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "observed",
+          "A button “Auswertung erstellen” (create evaluation) opens a dialog with four formats: Zusammenfassung (key statements, decisions, tasks; preselected), Protokoll (by topic, with resolutions), Follow-up-E-Mail (a ready-to-send message to the participants) and Arztbrief (history, findings, assessment, procedure). Which format the tester generated and what came out is not recorded.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "vendor-claim",
+          "The dialog says it runs locally on your Mac and usually takes 20 to 60 seconds (“Läuft lokal auf deinem Mac · meist 20–60 Sekunden”). Nothing was timed and no network traffic was inspected.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "tester-view",
+          "The tester finds it really great that this runs locally.",
+          null
+        ],
+        [
+          "observed",
+          "Scope: one 6-minute recording with two people. Longer meetings, system-sound capture, offline operation and the quality of the generated evaluations were not tested or not recorded.",
+          null
+        ]
+      ]
+    },
+    {
       "id": "chapter-decision",
       "title": "Decision",
       "items": [
@@ -392,7 +447,7 @@
         ],
         [
           "tester-view",
-          "From his 30 years in consulting he values writing meeting notes himself and hopes to try local meeting notes with a few people in a room.",
+          "From his 30 years in consulting he values writing meeting notes himself. He then recorded a meeting in a room with the app and finds it really great that it runs locally.",
           null
         ]
       ]
@@ -436,9 +491,9 @@
       "observed"
     ],
     [
-      "Meetings: transcript, summary and tasks, all on the Mac.",
-      "Meetings tab tip",
-      "Not tested.",
+      "Meetings: transcript, summary and tasks, all on the Mac. The evaluation runs locally, \"usually 20 to 60 seconds\".",
+      "Meetings tab tip and evaluation dialog",
+      "A 6-minute meeting was recorded and transcribed on 13 November and two speakers were assigned. The evaluation dialog was seen; which format was generated, how long it took and whether it ran locally are not recorded.",
       "vendor-claim"
     ],
     [
@@ -571,13 +626,23 @@
       ]
     ],
     [
-      "Meeting recording",
-      "-",
-      "Not used",
-      "-",
-      "Not completed",
+      "Record a meeting in a room",
+      "Meetings",
+      "6 min, 2 persons, 28 utterances; room sound very bad (tester); transcript with two speakers produced",
+      "12:24 (13 Nov)",
+      "Pass",
       [
-        "sprich-meetings-tab-record-meeting-tip"
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "Open the evaluation dialog",
+      "Meetings",
+      "Four formats offered; which one was generated and its output are not recorded",
+      "Not recorded",
+      "Partial",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
       ]
     ],
     [
@@ -806,7 +871,7 @@
     ],
     [
       "SP-20",
-      "A Meetings tab offers \"Meeting aufnehmen\"; its tip says calls give a transcript, summary and tasks and everything stays on the Mac. The tester has not recorded a meeting and plans to try it with a few people in a room.",
+      "A Meetings tab offers \"Meeting aufnehmen\"; its tip says calls give a transcript, summary and tasks and everything stays on the Mac. This tip is a vendor-claim; the tester's own meeting session is SP-25 to SP-30.",
       "Features",
       "vendor-claim",
       "Info",
@@ -851,6 +916,62 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SP-25",
+      "On 13 November the tester recorded a meeting in a room. The saved meeting shows \"Meeting vom 13. November\", 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen. He says the meeting function works well. App version, language setting and who spoke are not recorded.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-26",
+      "The room sound was very bad by the tester's account (tester-view). Sprich still produced a transcript with time stamps and two speakers, Person 1 and Person 2, which can be renamed by click. The screenshot excerpt is English with some rough phrasing; accuracy of the text and of the speaker assignment was not scored.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-27",
+      "\"Auswertung erstellen\" opens a dialog with four formats: Zusammenfassung (key statements, decisions, tasks), Protokoll (by topic, with resolutions), Follow-up-E-Mail (ready to send to the participants) and Arztbrief (history, findings, assessment, procedure). Which one the tester generated and its output are not recorded.",
+      "Meetings",
+      "observed",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-28",
+      "The dialog says \"Läuft lokal auf deinem Mac · meist 20–60 Sekunden\" (runs locally on your Mac, usually 20 to 60 seconds). Nothing was timed and no network traffic was inspected.",
+      "Trust",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-29",
+      "The tester finds it really great that the meeting recording and what follows run locally (tester-view).",
+      "Meetings",
+      "tester-view",
+      "Positive",
+      []
+    ],
+    [
+      "SP-30",
+      "Meeting scope: one 6-minute recording with two people. Not tested or not recorded: which evaluation format was generated and its output, evaluation time, transcript and speaker accuracy, longer meetings, system-sound capture, offline operation.",
+      "Scope",
+      "observed",
+      "Info",
+      []
     ]
   ],
   "severity_note": "Severity is the impact on a first-time user. Proposed, not measured. Info marks a finding that is neither a problem nor a strength; Positive marks something that worked well.",
@@ -867,7 +988,7 @@
         "Anyone who needs Russian or a non-German interface today, or an Intel Mac (the directory lists Apple Silicon only)."
       ]
     ],
-    "retest": "Retest on a new major version, a published English interface or confirmed language list. Cover: record the app and macOS versions; time the delay; Russian with the language set; file transcription; Meetings; the rewrite menu; offline use with traffic inspected; runtime memory; uninstall."
+    "retest": "Retest on a new major version, a published English interface or confirmed language list. Cover: record the app and macOS versions; time the delay; Russian with the language set; file transcription; longer meetings with each evaluation format generated and timed; the rewrite menu; offline use with traffic inspected; runtime memory; uninstall."
   },
   "background_intro": "Not hands-on. The item below comes from the PromptQuorum directory entry for Sprich and is not verified here.",
   "background": [
@@ -878,6 +999,7 @@
   ],
   "sources": [
     "Tester’s hands-on notes and screenshots, 9 November 2026 (original Word notes; PDF of the raw notes to be added).",
+    "Tester’s message and two screenshots of the meeting session, 13 November 2026.",
     "PromptQuorum directory entry and review of Sprich (slug: sprich), verified 2026-11-09.",
     "Vendor site sprich.ai (vendor claims)."
   ],
@@ -1195,7 +1317,7 @@
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
       "alt": "Meetings tab with zero meetings, a tip about recording calls for transcript, summary and tasks, a Meeting aufnehmen button.",
-      "caption": "Meetings tab at first open. Not used in the test. The summary claim in the tip is a vendor-claim.",
+      "caption": "Meetings tab at first open, before the 13 November recording. The summary claim in the tip is a vendor-claim.",
       "role": "moment",
       "width": 1600,
       "height": 1050,
@@ -1230,6 +1352,48 @@
       "subject": "Screenshot of the Sprich app",
       "rights": "Tester's own screenshot of third-party software UI.",
       "captured": "2026-11-09; exact time not recorded"
+    },
+    {
+      "id": "sprich-meeting-transcript-two-speakers",
+      "figure": 16,
+      "file": "sprich-meeting-transcript-two-speakers.webp",
+      "path": "images/sprich-meeting-transcript-two-speakers.webp",
+      "alt": "Saved meeting \"Meeting vom 13. November\" with header Heute, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen, a Person 1 and Person 2 chip with the hint to click to rename, and the first transcript lines with time stamps.",
+      "caption": "Saved meeting from 13 November: 6 min, 2 persons, 28 utterances, speakers Person 1 and Person 2 with time stamps. The room sound was very bad by the tester's account.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 46486,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-13; recording at 12:24 per the header; time of the screenshot not recorded"
+    },
+    {
+      "id": "sprich-meeting-auswertung-erstellen-dialog",
+      "figure": 17,
+      "file": "sprich-meeting-auswertung-erstellen-dialog.webp",
+      "path": "images/sprich-meeting-auswertung-erstellen-dialog.webp",
+      "alt": "Dialog \"Auswertung erstellen\" with four options: Zusammenfassung (selected), Protokoll, Follow-up-E-Mail and Arztbrief, and a footer line \"Läuft lokal auf deinem Mac, meist 20-60 Sekunden\" next to an Erstellen button.",
+      "caption": "Evaluation dialog over the meeting. Four formats; the local-processing and 20 to 60 seconds line is a vendor-claim. Which format was generated is not recorded.",
+      "role": "moment",
+      "width": 1012,
+      "height": 798,
+      "bytes": 32156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Screenshot of the Sprich app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-11-13; recording at 12:24 per the header; time of the screenshot not recorded"
     }
   ],
   "figure_order": [
@@ -1247,11 +1411,13 @@
     "sprich-settings-recording-indicator-mic",
     "sprich-account-security-page-two-factor-off",
     "sprich-meetings-tab-record-meeting-tip",
-    "sprich-bug-report-form"
+    "sprich-bug-report-form",
+    "sprich-meeting-transcript-two-speakers",
+    "sprich-meeting-auswertung-erstellen-dialog"
   ],
   "ui": {
     "kicker": "PromptQuorum hands-on test · {app} · {date}",
-    "date_line": "9 November 2026",
+    "date_line": "9 and 13 November 2026",
     "nav_aria": "Sections",
     "nav": {
       "verdict": "Verdict",
