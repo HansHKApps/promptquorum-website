@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Privacy-conscious users, developers, and non-technical people evaluating Atomic Chat as a local AI app, a local OpenAI-compatible API for agents, or both',
     primaryTerm: 'Atomic Chat',
@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open-source codebase (Apache 2.0), originally forked from Jan by Menlo Research',
           'Runs fully offline once a model is downloaded; optional cloud providers require their own API keys',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -70,6 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Free and open-source (Apache 2.0), no account or subscription required for local use',
+          'Version reviewed: v2.3.5, released 4 November 2026; the repository was last updated on 11 November 2026',
           'Platforms: macOS (Apple Silicon M1+, macOS 13+), Windows (x64), Linux (x86_64), iOS, and Android',
           'Model formats: GGUF, MLX, and ONNX',
           'Runs model families including Llama, Qwen, DeepSeek, Kimi, Mistral, Gemma, and MiniMax',
@@ -166,16 +167,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No separate local inference server (for example, a standalone llama.cpp server process) is necessarily required, since Atomic Chat itself hosts the endpoint',
           'Local models and optional cloud models can be used through the same API, so switching between them does not require reconfiguring every connected tool',
         ],
+        subsections: [
+          {
+            title: 'Who can reach the local API',
+            content: 'Per the repository, the server is bound to 127.0.0.1 by default, which means only software running on the same machine can connect. Setting the host to 0.0.0.0 exposes the endpoint to other devices on your local network. The README\'s own code examples pass a placeholder API key ("not-needed"); this review did not test whether the server enforces authentication, so treat a LAN-exposed endpoint as open to anyone on that network until you have verified otherwise.',
+            list: [
+              'Default (127.0.0.1): reachable only from the same computer — the setting that fits a single-machine coding-agent workflow',
+              'LAN (0.0.0.0): reachable from every device on the network, including guests and other users — use it only on a network you trust, behind a firewall, and never forward the port to the internet',
+              'If the endpoint has no authentication, anyone who can reach it could use your local models and, if a cloud provider is connected, might be able to send requests billed to that provider\'s API key — one more reason to keep the default binding unless you need remote access',
+            ],
+          },
+        ],
         note: 'This is one of the more developer-relevant differentiators between Atomic Chat and single-purpose local chat apps: it functions as a local inference backend that other tools consume, not only as a standalone chat window. Whether that integration list stays current, and how each individual integration behaves, was not independently tested for this review — verify the specific tool you plan to use against Atomic Chat\'s own documentation before relying on it.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'What Is TurboQuant?',
-        content: 'TurboQuant is Atomic Chat\'s name for an inference optimization built on its own fork of llama.cpp, aimed at reducing memory use and increasing generation speed. The vendor\'s performance claims and the GitHub repository\'s technical description are not identical, and a review should separate the two rather than repeating either uncritically.',
+        content: 'TurboQuant is Atomic Chat\'s name for an inference optimization built on its own fork of llama.cpp, aimed at reducing memory use and increasing generation speed. The vendor\'s performance claims and the GitHub repository\'s technical description are not identical, and a review should separate the two rather than repeating either uncritically. It is also one selectable engine among several, not the path every model takes.',
         items: [
           'Atomic Chat\'s official site claims TurboQuant computes attention up to 8x faster than standard 32-bit models on H100 GPUs, and compresses the KV cache by at least 6x with no stated degradation in output quality',
           'Atomic Chat\'s GitHub repository describes TurboQuant as a llama.cpp fork with KV-cache optimizations (referred to as turbo3/turbo4) that the project documents as achieving up to approximately 4.3x smaller KV-cache footprint, running on CPU and GPU (CUDA and Vulkan) across Windows, Linux, and macOS',
           'The 8x/6x figures on the official site are framed around H100 GPU comparisons — server-class hardware most consumer users of Atomic Chat will not have — while the GitHub repository\'s ~4.3x figure describes the KV-cache implementation itself, not an end-to-end speed claim on consumer hardware',
+          'The repository lists the TurboQuant fork as a separate engine for GGUF models, next to upstream llama.cpp (the documented default on Windows and Linux) and MLX-VLM on Apple Silicon, so a model is only processed through the fork when that engine is the one selected',
         ],
         note: 'Atomic Chat includes TurboQuant, an optimized inference path designed to reduce KV-cache memory requirements and accelerate inference. Atomic Chat cites up to 8x faster attention and 6x lower memory usage in its TurboQuant marketing material, while its GitHub repository documents an implementation-specific KV-cache reduction of roughly 4.3x. Both are vendor-published figures rather than independent benchmarks of Atomic Chat on consumer hardware, and this article has not measured TurboQuant\'s real-world impact on typical desktop or mobile hardware itself.',
       },
@@ -199,8 +212,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Supporting all three formats in one app means you are not locked into downloading only GGUF quantizations (common on Windows/Linux-focused apps) or only MLX builds (common on Mac-only apps) — Atomic Chat can load whichever format a given model on Hugging Face ships in.',
         subsections: [
           {
+            title: 'Which inference engine runs the model?',
+            content: 'The repository describes twelve engines behind one API, each shown as a provider only where it can run. The engines most relevant for readers choosing between the formats above:',
+            list: [
+              'Upstream llama.cpp — runs GGUF models; documented as the default engine on Windows and Linux for the widest hardware coverage (CPU, Metal, CUDA, Vulkan)',
+              'Atomic\'s llama.cpp TurboQuant fork — also GGUF, with the TurboQuant KV cache; a separate engine you select on macOS, Windows, or Linux, not a replacement for upstream llama.cpp',
+              'MLX-VLM — runs MLX models, including vision-language models, on Apple Silicon only; the README says it is faster than llama.cpp on M-series chips for supported models (a vendor claim)',
+              'Linux: the README states that only GGUF models run there, so MLX builds are not an option on that platform',
+              'The remaining engines (Foundry Local for ONNX, LiteRT-LM, GenieX for Snapdragon, FastFlowLM, TensorRT-LLM, vLLM, SGLang and others) target specific hardware; tools connected to the API do not need reconfiguring when you switch engines',
+            ],
+          },
+          {
             title: 'Hardware requirements',
-            content: 'Atomic Chat does not publish app-specific minimum RAM or VRAM figures beyond the operating-system and chip requirements listed in the table above. In practice, the model you choose — not the app itself — is almost always the limiting factor: a small quantized model can run on a few gigabytes of RAM, while a large model needs tens of gigabytes of RAM or a dedicated GPU with enough VRAM to hold it. Before downloading a model, check its listed size on Hugging Face against your device\'s available memory rather than assuming any model will run acceptably on any device that meets the platform requirements above.',
+            content: 'The project publishes RAM tiers for desktop only; these are the vendor\'s guidance, not measurements made for this review, and the model you choose matters more than the app. Check a model\'s listed size on Hugging Face against your free memory before downloading.',
+            columns: ['Device', 'Model size', 'RAM guidance (vendor)'],
+            rows: [
+              { 'Device': 'macOS, Windows, Linux', 'Model size': '3B parameters', 'RAM guidance (vendor)': '8 GB' },
+              { 'Device': 'macOS, Windows, Linux', 'Model size': '7B parameters', 'RAM guidance (vendor)': '16 GB' },
+              { 'Device': 'macOS, Windows, Linux', 'Model size': '13B parameters', 'RAM guidance (vendor)': '32 GB' },
+              { 'Device': 'iOS, Android', 'Model size': 'Any', 'RAM guidance (vendor)': 'Not published — check the model size against your device memory' },
+            ],
           },
         ],
       },
@@ -390,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'المستخدمون المهتمون بالخصوصية والمطورون والأشخاص غير التقنيين الذين يقيّمون Atomic Chat كتطبيق ذكاء اصطناعي محلي، أو كواجهة برمجية محلية متوافقة مع OpenAI للوكلاء، أو كليهما',
     primaryTerm: 'Atomic Chat',
@@ -419,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'قاعدة برمجية مفتوحة المصدر (Apache 2.0)، وهي أصلاً فرع (fork) من Jan التابع لـ Menlo Research',
           'يعمل بشكل كامل دون اتصال بالإنترنت بعد تنزيل النموذج؛ مزودو السحابة الاختياريون يتطلبون مفاتيح API خاصة بهم',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -451,6 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'مجاني ومفتوح المصدر (Apache 2.0)، بدون حاجة لحساب أو اشتراك للاستخدام المحلي',
+          'الإصدار الذي جرت مراجعته: v2.3.5، صدر في 4 نوفمبر 2026؛ وآخر تحديث للمستودع في 11 نوفمبر 2026',
           'المنصات: macOS (‏Apple Silicon M1 فأحدث، macOS 13+)، Windows (x64)، Linux (x86_64)، iOS، وAndroid',
           'صيغ النماذج: GGUF وMLX وONNX',
           'يشغّل عائلات نماذج تشمل Llama وQwen وDeepSeek وKimi وMistral وGemma وMiniMax',
@@ -547,16 +579,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا يلزم بالضرورة خادم استدلال محلي منفصل (مثل عملية خادم llama.cpp مستقلة)، لأن Atomic Chat نفسه يستضيف نقطة النهاية',
           'يمكن استخدام النماذج المحلية والنماذج السحابية الاختيارية عبر نفس الواجهة البرمجية، بحيث لا يتطلب التبديل بينها إعادة ضبط كل أداة متصلة',
         ],
+        subsections: [
+          {
+            title: 'من يمكنه الوصول إلى واجهة API المحلية؟',
+            content: 'بحسب المستودع، يرتبط الخادم افتراضيًا بالعنوان 127.0.0.1، أي أن البرامج العاملة على الجهاز نفسه وحدها تستطيع الاتصال به. وإذا ضبطتَ المضيف على 0.0.0.0 أصبحت نقطة الاتصال متاحة للأجهزة الأخرى في شبكتك المحلية. وتمرّر أمثلة الشيفرة في README مفتاح API وهميًا («not-needed»)؛ ولم تختبر هذه المراجعة ما إذا كان الخادم يفرض المصادقة، لذا تعامل مع أي نقطة اتصال مكشوفة على الشبكة المحلية على أنها مفتوحة لكل من في تلك الشبكة إلى أن تتحقق من خلاف ذلك.',
+            list: [
+              'الافتراضي (127.0.0.1): لا يمكن الوصول إليه إلا من الحاسوب نفسه — وهو الإعداد المناسب لسير عمل وكيل برمجة على جهاز واحد',
+              'الشبكة المحلية (0.0.0.0): يمكن الوصول إليه من جميع الأجهزة في الشبكة، بما فيها أجهزة الضيوف والمستخدمين الآخرين — استخدمه فقط في شبكة موثوقة وخلف جدار حماية، ولا تُحوّل المنفذ إلى الإنترنت أبدًا',
+              'إذا لم تفرض نقطة الاتصال أي مصادقة، فقد يتمكن كل من يصل إليها من استخدام نماذجك المحلية، وإذا كان مزوّد سحابي متصلًا فقد يتمكن من إرسال طلبات تُحتسب على مفتاح API الخاص بذلك المزوّد — وهذا سبب آخر للإبقاء على الربط الافتراضي ما لم تحتج إلى وصول عن بُعد',
+            ],
+          },
+        ],
         note: 'هذا أحد أبرز عوامل التمايز ذات الصلة بالمطورين بين Atomic Chat وتطبيقات الدردشة المحلية أحادية الغرض: فهو يعمل كخلفية استدلال محلية تستهلكها أدوات أخرى، وليس فقط كنافذة دردشة مستقلة. لم يُختبر بشكل مستقل لهذه المراجعة ما إذا كانت قائمة التكاملات هذه محدَّثة، ولا كيف يتصرف كل تكامل على حدة — تحقق من الأداة المحددة التي تخطط لاستخدامها مقابل وثائق Atomic Chat الخاصة قبل الاعتماد عليها.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'ما هو TurboQuant؟',
-        content: 'TurboQuant هو اسم Atomic Chat لتحسين استدلال مبني على فرعه الخاص من llama.cpp، يهدف إلى تقليل استهلاك الذاكرة وزيادة سرعة التوليد. ادعاءات الأداء من الشركة المصنّعة والوصف التقني في مستودع GitHub ليسا متطابقين، وينبغي لمراجعة جادة الفصل بينهما بدلاً من تكرار أي منهما دون تمحيص.',
+        content: 'TurboQuant هو اسم Atomic Chat لتحسين استدلال مبني على فرعه الخاص من llama.cpp، يهدف إلى تقليل استهلاك الذاكرة وزيادة سرعة التوليد. ادعاءات الأداء من الشركة المصنّعة والوصف التقني في مستودع GitHub ليسا متطابقين، وينبغي لمراجعة جادة الفصل بينهما بدلاً من تكرار أي منهما دون تمحيص. وهو أيضًا محرك واحد قابل للاختيار من بين عدة محركات، وليس المسار الذي يمر به كل نموذج.',
         items: [
           'يزعم الموقع الرسمي لـ Atomic Chat أن TurboQuant يحسب الانتباه (attention) بسرعة تصل إلى 8 أضعاف مقارنة بالنماذج القياسية 32-بت على معالجات H100 الرسومية، ويضغط ذاكرة التخزين المؤقت للمفاتيح والقيم (KV cache) بمقدار 6 أضعاف على الأقل دون أي تدهور مذكور في جودة الإخراج',
           'يصف مستودع Atomic Chat على GitHub‏ TurboQuant بأنه فرع من llama.cpp مع تحسينات لذاكرة KV cache (يُشار إليها بـ turbo3/turbo4) يوثّق المشروع أنها تحقق تقليصًا يصل إلى نحو 4.3 أضعاف في حجم ذاكرة KV cache، ويعمل على المعالج والمعالج الرسومي (CUDA وVulkan) عبر Windows وLinux وmacOS',
           'أرقام 8x/6x على الموقع الرسمي مُؤطَّرة حول مقارنات معالجات H100 الرسومية — أجهزة من فئة الخوادم لن يمتلكها معظم مستخدمي Atomic Chat العاديين — بينما رقم ~4.3x في مستودع GitHub يصف تنفيذ ذاكرة KV cache نفسه، وليس ادعاء سرعة شاملة على أجهزة المستهلكين',
+          'يدرج المستودع فرع TurboQuant كمحرك منفصل لنماذج GGUF إلى جانب llama.cpp الأصلي (المحرك الافتراضي الموثّق على Windows وLinux) وMLX-VLM على Apple Silicon؛ ولذلك لا يعالج هذا الفرع النموذج إلا عند اختيار ذلك المحرك',
         ],
         note: 'يتضمن Atomic Chat ميزة TurboQuant، وهو مسار استدلال محسَّن مصمم لتقليل متطلبات ذاكرة KV cache وتسريع الاستدلال. يذكر Atomic Chat في مواده التسويقية عن TurboQuant سرعة انتباه أعلى تصل إلى 8 أضعاف واستهلاك ذاكرة أقل بمقدار 6 أضعاف، بينما يوثّق مستودعه على GitHub تقليصًا خاصًا بالتنفيذ لذاكرة KV cache بنحو 4.3 أضعاف. كلا الرقمين صادران عن الشركة المصنّعة وليسا معياري أداء مستقلين لـ Atomic Chat على أجهزة المستهلكين، ولم يقِس هذا المقال بنفسه أثر TurboQuant الفعلي على أجهزة سطح المكتب أو الجوال النموذجية.',
       },
@@ -580,8 +624,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'دعم الصيغ الثلاث في تطبيق واحد يعني أنك لست مقيدًا بتنزيل صيغ GGUF فقط (شائعة في تطبيقات Windows/Linux) أو بنيات MLX فقط (شائعة في تطبيقات macOS فقط) — يمكن لـ Atomic Chat تحميل أي صيغة يوفرها نموذج معين على Hugging Face.',
         subsections: [
           {
-            title: 'متطلبات الأجهزة',
-            content: 'لا ينشر Atomic Chat أرقام حد أدنى خاصة بالتطبيق للذاكرة العشوائية أو ذاكرة الفيديو بخلاف متطلبات نظام التشغيل والمعالج المذكورة في الجدول أعلاه. عمليًا، النموذج الذي تختاره — وليس التطبيق نفسه — هو دائمًا تقريبًا العامل المحدِّد: يمكن لنموذج مُكمَّم صغير العمل على بضعة غيغابايت من الذاكرة، بينما يحتاج نموذج كبير إلى عشرات الغيغابايتات من الذاكرة أو معالج رسومي مخصص بذاكرة فيديو كافية لاستيعابه. قبل تنزيل نموذج، تحقق من حجمه المذكور على Hugging Face مقارنة بالذاكرة المتاحة على جهازك، بدلاً من افتراض أن أي نموذج سيعمل بشكل مقبول على أي جهاز يستوفي متطلبات المنصة أعلاه.',
+            title: 'أي محرك استدلال يشغّل النموذج؟',
+            content: 'يصف المستودع اثني عشر محركًا خلف واجهة API واحدة، يظهر كل منها كمزوّد فقط حيث يمكنه العمل. وأكثرها صلة بمن يختار بين الصيغ المذكورة أعلاه:',
+            list: [
+              'llama.cpp الأصلي — يشغّل نماذج GGUF؛ موثّق كمحرك افتراضي على Windows وLinux لأوسع تغطية للعتاد (CPU وMetal وCUDA وVulkan)',
+              'فرع llama.cpp TurboQuant من Atomic — يشغّل GGUF أيضًا مع ذاكرة KV الخاصة بـ TurboQuant؛ محرك منفصل تختاره على macOS أو Windows أو Linux، وليس بديلًا عن llama.cpp الأصلي',
+              'MLX-VLM — يشغّل نماذج MLX بما فيها نماذج الرؤية واللغة، على Apple Silicon فقط؛ ويذكر README أنه أسرع من llama.cpp على رقائق M مع النماذج المدعومة (ادعاء من الشركة)',
+              'Linux: يذكر README أن نماذج GGUF وحدها تعمل هناك، فلا تتوافر نسخ MLX على هذه المنصة',
+              'تستهدف بقية المحركات (Foundry Local لـ ONNX وLiteRT-LM وGenieX لـ Snapdragon وFastFlowLM وTensorRT-LLM وvLLM وSGLang وغيرها) عتادًا محددًا؛ ولا تحتاج الأدوات المتصلة بالواجهة إلى إعادة ضبط عند تبديل المحرك',
+            ],
+          },
+          {
+            title: 'متطلبات العتاد',
+            content: 'ينشر المشروع مستويات الذاكرة العشوائية لأجهزة سطح المكتب فقط؛ وهذه إرشادات من الشركة وليست قياسات أُجريت لهذه المراجعة، كما أن النموذج الذي تختاره أهم من التطبيق نفسه. قبل التنزيل، قارن حجم النموذج المدرج على Hugging Face بالذاكرة المتاحة لديك.',
+            columns: ['الجهاز', 'حجم النموذج', 'الذاكرة الموصى بها (الشركة)'],
+            rows: [
+              { 'الجهاز': 'macOS, Windows, Linux', 'حجم النموذج': '3B معامل', 'الذاكرة الموصى بها (الشركة)': '8 GB' },
+              { 'الجهاز': 'macOS, Windows, Linux', 'حجم النموذج': '7B معامل', 'الذاكرة الموصى بها (الشركة)': '16 GB' },
+              { 'الجهاز': 'macOS, Windows, Linux', 'حجم النموذج': '13B معامل', 'الذاكرة الموصى بها (الشركة)': '32 GB' },
+              { 'الجهاز': 'iOS, Android', 'حجم النموذج': 'أي حجم', 'الذاكرة الموصى بها (الشركة)': 'غير منشور — قارن حجم النموذج بذاكرة جهازك' },
+            ],
           },
         ],
       },
@@ -771,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Datenschutzbewusste Nutzerinnen und Nutzer, Entwicklerinnen und Entwickler sowie nicht-technische Personen, die Atomic Chat als lokale KI-App, als lokale OpenAI-kompatible API für Agenten oder als beides bewerten möchten',
     primaryTerm: 'Atomic Chat',
@@ -800,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quelloffene Codebasis (Apache 2.0), ursprünglich als Fork von Jan von Menlo Research entstanden',
           'Läuft nach dem Modell-Download vollständig offline; optionale Cloud-Anbieter benötigen eigene API-Schlüssel',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -832,6 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Kostenlos und quelloffen (Apache 2.0), kein Konto oder Abonnement für die lokale Nutzung erforderlich',
+          'Geprüfte Version: v2.3.5, veröffentlicht am 4. November 2026; das Repository wurde zuletzt am 11. November 2026 aktualisiert',
           'Plattformen: macOS (Apple Silicon M1+, macOS 13+), Windows (x64), Linux (x86_64), iOS und Android',
           'Modellformate: GGUF, MLX und ONNX',
           'Unterstützt Modellfamilien wie Llama, Qwen, DeepSeek, Kimi, Mistral, Gemma und MiniMax',
@@ -928,16 +991,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ein separater lokaler Inferenz-Server (etwa ein eigenständiger llama.cpp-Serverprozess) ist nicht zwingend nötig, da Atomic Chat den Endpunkt selbst bereitstellt',
           'Lokale und optionale Cloud-Modelle lassen sich über dieselbe API nutzen, sodass ein Wechsel zwischen beiden nicht bedeutet, jedes angebundene Tool neu konfigurieren zu müssen',
         ],
+        subsections: [
+          {
+            title: 'Wer kann auf die lokale API zugreifen?',
+            content: 'Laut Repository ist der Server standardmäßig an 127.0.0.1 gebunden, sodass sich nur Software auf demselben Rechner verbinden kann. Setzt man den Host auf 0.0.0.0, ist der Endpunkt für andere Geräte im lokalen Netzwerk erreichbar. Die Codebeispiele im README übergeben einen Platzhalter-API-Schlüssel („not-needed“); ob der Server eine Authentifizierung durchsetzt, wurde in diesem Review nicht getestet — behandeln Sie einen im LAN freigegebenen Endpunkt daher als offen für jeden in diesem Netzwerk, bis Sie das Gegenteil geprüft haben.',
+            list: [
+              'Standard (127.0.0.1): nur vom selben Computer erreichbar — die passende Einstellung für einen Coding-Agent-Workflow auf einem einzelnen Rechner',
+              'LAN (0.0.0.0): von allen Geräten im Netzwerk erreichbar, einschließlich Gästen und anderen Nutzern — nur in einem vertrauenswürdigen Netzwerk und hinter einer Firewall verwenden, den Port niemals ins Internet weiterleiten',
+              'Falls der Endpunkt keine Authentifizierung verlangt, könnte jeder, der ihn erreicht, Ihre lokalen Modelle nutzen und, wenn ein Cloud-Anbieter verbunden ist, womöglich Anfragen senden, die über dessen API-Schlüssel abgerechnet werden — ein weiterer Grund, die Standardbindung beizubehalten, solange kein Fernzugriff nötig ist',
+            ],
+          },
+        ],
         note: 'Das ist einer der für Entwicklerinnen und Entwickler relevanteren Unterschiede zwischen Atomic Chat und rein lokalen Einzweck-Chat-Apps: Es fungiert als lokales Inferenz-Backend, das andere Tools nutzen, nicht nur als eigenständiges Chatfenster. Ob diese Integrationsliste aktuell bleibt und wie sich jede einzelne Integration verhält, wurde für diese Rezension nicht unabhängig geprüft — verifizieren Sie das jeweils genutzte Tool anhand der eigenen Dokumentation von Atomic Chat, bevor Sie sich darauf verlassen.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'Was ist TurboQuant?',
-        content: 'TurboQuant ist die Bezeichnung von Atomic Chat für eine Inferenzoptimierung, die auf einem eigenen Fork von llama.cpp basiert und Speicherverbrauch senken sowie Generierungsgeschwindigkeit erhöhen soll. Die Leistungsangaben des Herstellers und die technische Beschreibung im GitHub-Repository sind nicht identisch, und ein Test sollte beides trennen, statt eines von beidem unkritisch zu wiederholen.',
+        content: 'TurboQuant ist die Bezeichnung von Atomic Chat für eine Inferenzoptimierung, die auf einem eigenen Fork von llama.cpp basiert und Speicherverbrauch senken sowie Generierungsgeschwindigkeit erhöhen soll. Die Leistungsangaben des Herstellers und die technische Beschreibung im GitHub-Repository sind nicht identisch, und ein Test sollte beides trennen, statt eines von beidem unkritisch zu wiederholen. Sie ist außerdem eine von mehreren wählbaren Engines und nicht der Weg, den jedes Modell nimmt.',
         items: [
           'Die offizielle Website von Atomic Chat behauptet, TurboQuant berechne Attention bis zu 8x schneller als Standard-32-Bit-Modelle auf H100-GPUs und komprimiere den KV-Cache um mindestens das 6-Fache, ohne dass eine Verschlechterung der Ausgabequalität angegeben wird',
           'Das GitHub-Repository von Atomic Chat beschreibt TurboQuant als llama.cpp-Fork mit KV-Cache-Optimierungen (als turbo3/turbo4 bezeichnet), die das Projekt als bis zu ca. 4,3x kleinere KV-Cache-Fläche dokumentiert, lauffähig auf CPU und GPU (CUDA und Vulkan) unter Windows, Linux und macOS',
           'Die Angaben von 8x/6x auf der offiziellen Website beziehen sich auf Vergleiche mit H100-GPUs — Hardware der Serverklasse, die die meisten privaten Nutzer von Atomic Chat nicht besitzen —, während sich die ca. 4,3x-Angabe aus dem GitHub-Repository auf die KV-Cache-Implementierung selbst bezieht, nicht auf eine Ende-zu-Ende-Geschwindigkeitsangabe auf Consumer-Hardware',
+          'Das Repository führt den TurboQuant-Fork als eigenständige Engine für GGUF-Modelle neben dem Upstream-llama.cpp (laut Dokumentation Standard unter Windows und Linux) und MLX-VLM auf Apple Silicon auf; ein Modell läuft also nur dann über den Fork, wenn diese Engine ausgewählt ist',
         ],
         note: 'Atomic Chat enthält TurboQuant, einen optimierten Inferenzpfad, der den KV-Cache-Speicherbedarf senken und die Inferenz beschleunigen soll. Atomic Chat nennt in seinem TurboQuant-Marketingmaterial bis zu 8x schnellere Attention und 6x geringeren Speicherverbrauch, während das GitHub-Repository eine implementierungsspezifische KV-Cache-Reduktion von etwa 4,3x dokumentiert. Beides sind vom Hersteller veröffentlichte Zahlen und keine unabhängigen Benchmarks von Atomic Chat auf Consumer-Hardware, und dieser Artikel hat die reale Auswirkung von TurboQuant auf typische Desktop- oder Mobilhardware selbst nicht gemessen.',
       },
@@ -961,8 +1036,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Die Unterstützung aller drei Formate in einer App bedeutet, dass Sie nicht nur auf GGUF-Quantisierungen (häufig bei Windows/Linux-fokussierten Apps) oder nur auf MLX-Builds (häufig bei reinen Mac-Apps) beschränkt sind — Atomic Chat kann laden, in welchem Format ein Modell auf Hugging Face auch immer vorliegt.',
         subsections: [
           {
-            title: 'Hardware-Voraussetzungen',
-            content: 'Atomic Chat veröffentlicht über die in der Tabelle oben genannten Betriebssystem- und Chip-Anforderungen hinaus keine app-spezifischen Mindestwerte für RAM oder VRAM. In der Praxis ist fast immer das gewählte Modell — nicht die App selbst — der begrenzende Faktor: Ein kleines quantisiertes Modell läuft mit wenigen Gigabyte RAM, während ein großes Modell zig Gigabyte RAM oder eine dedizierte GPU mit ausreichend VRAM benötigt. Prüfen Sie vor dem Download eines Modells dessen auf Hugging Face angegebene Größe gegen den verfügbaren Speicher Ihres Geräts, statt anzunehmen, dass jedes Modell auf jedem Gerät, das die obigen Plattformanforderungen erfüllt, zufriedenstellend läuft.',
+            title: 'Welche Inferenz-Engine führt das Modell aus?',
+            content: 'Das Repository beschreibt zwölf Engines hinter einer einzigen API, die jeweils nur dort als Anbieter erscheinen, wo sie laufen können. Die für die Wahl zwischen den oben genannten Formaten wichtigsten:',
+            list: [
+              'Upstream-llama.cpp — führt GGUF-Modelle aus; laut Dokumentation die Standard-Engine unter Windows und Linux mit der breitesten Hardware-Abdeckung (CPU, Metal, CUDA, Vulkan)',
+              'Atomics llama.cpp-TurboQuant-Fork — ebenfalls GGUF, mit dem TurboQuant-KV-Cache; eine eigene Engine, die Sie unter macOS, Windows oder Linux auswählen, kein Ersatz für das Upstream-llama.cpp',
+              'MLX-VLM — führt MLX-Modelle einschließlich Vision-Language-Modellen aus, nur auf Apple Silicon; laut README auf M-Chips bei unterstützten Modellen schneller als llama.cpp (eine Herstelleraussage)',
+              'Linux: Laut README laufen dort nur GGUF-Modelle, MLX-Builds sind auf dieser Plattform also keine Option',
+              'Die übrigen Engines (Foundry Local für ONNX, LiteRT-LM, GenieX für Snapdragon, FastFlowLM, TensorRT-LLM, vLLM, SGLang und weitere) zielen auf bestimmte Hardware; an die API angeschlossene Tools müssen beim Wechsel der Engine nicht neu konfiguriert werden',
+            ],
+          },
+          {
+            title: 'Hardware-Anforderungen',
+            content: 'Das Projekt veröffentlicht RAM-Stufen nur für Desktop-Systeme; es sind Herstellerangaben und keine für diesen Review erhobenen Messwerte, und das gewählte Modell zählt mehr als die App. Vergleichen Sie vor dem Download die auf Hugging Face angegebene Modellgröße mit Ihrem freien Arbeitsspeicher.',
+            columns: ['Gerät', 'Modellgröße', 'RAM-Empfehlung (Hersteller)'],
+            rows: [
+              { 'Gerät': 'macOS, Windows, Linux', 'Modellgröße': '3B Parameter', 'RAM-Empfehlung (Hersteller)': '8 GB' },
+              { 'Gerät': 'macOS, Windows, Linux', 'Modellgröße': '7B Parameter', 'RAM-Empfehlung (Hersteller)': '16 GB' },
+              { 'Gerät': 'macOS, Windows, Linux', 'Modellgröße': '13B Parameter', 'RAM-Empfehlung (Hersteller)': '32 GB' },
+              { 'Gerät': 'iOS, Android', 'Modellgröße': 'Beliebig', 'RAM-Empfehlung (Hersteller)': 'Nicht veröffentlicht — Modellgröße mit dem Gerätespeicher abgleichen' },
+            ],
           },
         ],
       },
@@ -1152,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Usuarios preocupados por la privacidad, desarrolladores y personas sin conocimientos técnicos que evalúan Atomic Chat como app de IA local, como API local compatible con OpenAI para agentes, o ambas cosas',
     primaryTerm: 'Atomic Chat',
@@ -1181,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Código base de código abierto (Apache 2.0), originalmente derivado de Jan por Menlo Research',
           'Funciona completamente sin conexión una vez descargado un modelo; los proveedores en la nube opcionales requieren su propia clave de API',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1213,6 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Gratuita y de código abierto (Apache 2.0), sin necesidad de cuenta ni suscripción para el uso local',
+          'Versión revisada: v2.3.5, publicada el 4 de noviembre de 2026; el repositorio se actualizó por última vez el 11 de noviembre de 2026',
           'Plataformas: macOS (Apple Silicon M1 o superior, macOS 13+), Windows (x64), Linux (x86_64), iOS y Android',
           'Formatos de modelo: GGUF, MLX y ONNX',
           'Ejecuta familias de modelos como Llama, Qwen, DeepSeek, Kimi, Mistral, Gemma y MiniMax',
@@ -1309,16 +1403,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No es necesariamente preciso un servidor de inferencia local independiente (por ejemplo, un proceso de servidor de llama.cpp autónomo), ya que el propio Atomic Chat aloja el endpoint',
           'Los modelos locales y los modelos en la nube opcionales se pueden usar a través de la misma API, de modo que cambiar entre ellos no requiere reconfigurar cada herramienta conectada',
         ],
+        subsections: [
+          {
+            title: '¿Quién puede acceder a la API local?',
+            content: 'Según el repositorio, el servidor está vinculado por defecto a 127.0.0.1, lo que significa que solo el software que se ejecuta en el mismo equipo puede conectarse. Si configuras el host como 0.0.0.0, el endpoint queda expuesto a otros dispositivos de tu red local. Los ejemplos de código del README pasan una clave de API de relleno («not-needed»); esta reseña no comprobó si el servidor exige autenticación, así que trata un endpoint expuesto en la LAN como abierto para cualquiera en esa red hasta que verifiques lo contrario.',
+            list: [
+              'Predeterminado (127.0.0.1): accesible solo desde el mismo equipo — la opción adecuada para un flujo de trabajo con agentes de programación en una sola máquina',
+              'LAN (0.0.0.0): accesible desde todos los dispositivos de la red, incluidos invitados y otros usuarios — úsalo solo en una red de confianza y detrás de un firewall, y nunca reenvíes el puerto a internet',
+              'Si el endpoint no exige autenticación, cualquiera que pueda alcanzarlo podría usar tus modelos locales y, si hay un proveedor en la nube conectado, quizá pudiera enviar solicitudes que se facturen a la clave de API de ese proveedor — otra razón para mantener el enlace predeterminado salvo que necesites acceso remoto',
+            ],
+          },
+        ],
         note: 'Este es uno de los diferenciadores más relevantes para desarrolladores entre Atomic Chat y las apps de chat local de propósito único: funciona como un backend de inferencia local que otras herramientas consumen, no solo como una ventana de chat independiente. Si esa lista de integraciones se mantiene actualizada, y cómo se comporta cada integración concreta, no se ha probado de forma independiente para esta reseña; verifica la herramienta específica que planeas usar contra la propia documentación de Atomic Chat antes de confiar en ella.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: '¿Qué es TurboQuant?',
-        content: 'TurboQuant es el nombre que da Atomic Chat a una optimización de inferencia construida sobre su propia versión derivada de llama.cpp, orientada a reducir el uso de memoria y aumentar la velocidad de generación. Las afirmaciones de rendimiento del fabricante y la descripción técnica del repositorio de GitHub no son idénticas, y una reseña debería separar ambas en lugar de repetir cualquiera de las dos sin cuestionarla.',
+        content: 'TurboQuant es el nombre que da Atomic Chat a una optimización de inferencia construida sobre su propia versión derivada de llama.cpp, orientada a reducir el uso de memoria y aumentar la velocidad de generación. Las afirmaciones de rendimiento del fabricante y la descripción técnica del repositorio de GitHub no son idénticas, y una reseña debería separar ambas en lugar de repetir cualquiera de las dos sin cuestionarla. Además, es un motor seleccionable entre varios, no el camino que sigue cada modelo.',
         items: [
           'El sitio oficial de Atomic Chat afirma que TurboQuant calcula la atención hasta 8 veces más rápido que los modelos estándar de 32 bits en GPU H100, y comprime la caché KV al menos 6 veces sin degradación declarada en la calidad de la salida',
           'El repositorio de GitHub de Atomic Chat describe TurboQuant como una versión derivada de llama.cpp con optimizaciones de caché KV (llamadas turbo3/turbo4) que el proyecto documenta como capaces de lograr una reducción de hasta aproximadamente 4,3 veces en el tamaño de la caché KV, funcionando en CPU y GPU (CUDA y Vulkan) en Windows, Linux y macOS',
           'Las cifras de 8x/6x del sitio oficial se enmarcan en comparaciones con GPU H100, hardware de clase servidor que la mayoría de los usuarios habituales de Atomic Chat no tendrán, mientras que la cifra de ~4,3x del repositorio de GitHub describe la propia implementación de la caché KV, no una afirmación de velocidad de extremo a extremo en hardware de consumo',
+          'El repositorio lista el fork de TurboQuant como un motor independiente para modelos GGUF, junto a llama.cpp upstream (el predeterminado documentado en Windows y Linux) y MLX-VLM en Apple Silicon, así que un modelo solo se procesa con el fork cuando ese es el motor seleccionado',
         ],
         note: 'Atomic Chat incluye TurboQuant, una vía de inferencia optimizada diseñada para reducir los requisitos de memoria de la caché KV y acelerar la inferencia. Atomic Chat cita hasta 8 veces más velocidad de atención y 6 veces menos uso de memoria en su material de marketing de TurboQuant, mientras que su repositorio de GitHub documenta una reducción de caché KV específica de la implementación de aproximadamente 4,3 veces. Ambas son cifras publicadas por el fabricante y no benchmarks independientes de Atomic Chat en hardware de consumo, y este artículo no ha medido por sí mismo el impacto real de TurboQuant en hardware de escritorio o móvil típico.',
       },
@@ -1342,8 +1448,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Admitir los tres formatos en una sola app significa que no estás limitado a descargar solo cuantizaciones GGUF (comunes en apps enfocadas a Windows/Linux) o solo builds MLX (comunes en apps exclusivas de Mac); Atomic Chat puede cargar el formato en el que venga publicado un modelo concreto en Hugging Face.',
         subsections: [
           {
+            title: '¿Qué motor de inferencia ejecuta el modelo?',
+            content: 'El repositorio describe doce motores detrás de una sola API, cada uno visible como proveedor solo donde puede ejecutarse. Los más relevantes para elegir entre los formatos anteriores:',
+            list: [
+              'llama.cpp upstream — ejecuta modelos GGUF; documentado como el motor predeterminado en Windows y Linux por su amplia cobertura de hardware (CPU, Metal, CUDA, Vulkan)',
+              'Fork de llama.cpp con TurboQuant de Atomic — también GGUF, con la caché KV de TurboQuant; un motor aparte que seleccionas en macOS, Windows o Linux, no un reemplazo de llama.cpp upstream',
+              'MLX-VLM — ejecuta modelos MLX, incluidos los de visión y lenguaje, solo en Apple Silicon; el README dice que es más rápido que llama.cpp en chips M con los modelos compatibles (una afirmación del fabricante)',
+              'Linux: el README indica que allí solo se ejecutan modelos GGUF, así que las versiones MLX no son una opción en esa plataforma',
+              'Los demás motores (Foundry Local para ONNX, LiteRT-LM, GenieX para Snapdragon, FastFlowLM, TensorRT-LLM, vLLM, SGLang y otros) apuntan a hardware específico; las herramientas conectadas a la API no necesitan reconfigurarse al cambiar de motor',
+            ],
+          },
+          {
             title: 'Requisitos de hardware',
-            content: 'Atomic Chat no publica cifras mínimas de RAM o VRAM específicas de la app más allá de los requisitos de sistema operativo y chip listados en la tabla anterior. En la práctica, el modelo que elijas, no la app en sí, es casi siempre el factor limitante: un modelo cuantizado pequeño puede ejecutarse con unos pocos gigabytes de RAM, mientras que un modelo grande necesita decenas de gigabytes de RAM o una GPU dedicada con suficiente VRAM para cargarlo. Antes de descargar un modelo, comprueba su tamaño indicado en Hugging Face frente a la memoria disponible de tu dispositivo, en lugar de asumir que cualquier modelo funcionará aceptablemente en cualquier dispositivo que cumpla los requisitos de plataforma anteriores.',
+            content: 'El proyecto publica niveles de RAM solo para escritorio; son orientaciones del fabricante, no mediciones hechas para esta reseña, y el modelo que elijas importa más que la app. Antes de descargar, compara el tamaño del modelo indicado en Hugging Face con tu memoria libre.',
+            columns: ['Dispositivo', 'Tamaño del modelo', 'RAM recomendada (fabricante)'],
+            rows: [
+              { 'Dispositivo': 'macOS, Windows, Linux', 'Tamaño del modelo': '3B parámetros', 'RAM recomendada (fabricante)': '8 GB' },
+              { 'Dispositivo': 'macOS, Windows, Linux', 'Tamaño del modelo': '7B parámetros', 'RAM recomendada (fabricante)': '16 GB' },
+              { 'Dispositivo': 'macOS, Windows, Linux', 'Tamaño del modelo': '13B parámetros', 'RAM recomendada (fabricante)': '32 GB' },
+              { 'Dispositivo': 'iOS, Android', 'Tamaño del modelo': 'Cualquiera', 'RAM recomendada (fabricante)': 'No publicado — compara el tamaño del modelo con la memoria de tu dispositivo' },
+            ],
           },
         ],
       },
@@ -1533,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Utilisateurs soucieux de leur vie privée, développeurs et personnes non techniques évaluant Atomic Chat en tant qu\'application d\'IA locale, API locale compatible OpenAI pour agents, ou les deux',
     primaryTerm: 'Atomic Chat',
@@ -1562,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Base de code open source (Apache 2.0), à l\'origine un fork de Jan par Menlo Research',
           'Fonctionne entièrement hors ligne une fois un modèle téléchargé ; les fournisseurs cloud optionnels nécessitent leurs propres clés API',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1594,6 +1718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Gratuite et open source (Apache 2.0), aucun compte ni abonnement requis pour un usage local',
+          'Version testée : v2.3.5, publiée le 4 novembre 2026 ; le dépôt a été mis à jour pour la dernière fois le 11 novembre 2026',
           'Plateformes : macOS (Apple Silicon M1+, macOS 13+), Windows (x64), Linux (x86_64), iOS et Android',
           'Formats de modèles : GGUF, MLX et ONNX',
           'Fait tourner des familles de modèles telles que Llama, Qwen, DeepSeek, Kimi, Mistral, Gemma et MiniMax',
@@ -1690,16 +1815,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucun serveur d\'inférence local séparé (par exemple, un processus serveur llama.cpp autonome) n\'est nécessairement requis, puisqu\'Atomic Chat héberge elle-même le point de terminaison',
           'Les modèles locaux et les modèles cloud optionnels peuvent être utilisés via la même API, de sorte que passer de l\'un à l\'autre ne nécessite pas de reconfigurer chaque outil connecté',
         ],
+        subsections: [
+          {
+            title: 'Qui peut accéder à l\'API locale ?',
+            content: 'Selon le dépôt, le serveur est lié par défaut à 127.0.0.1 : seuls les logiciels exécutés sur la même machine peuvent s\'y connecter. Si vous définissez l\'hôte sur 0.0.0.0, le point d\'accès devient joignable depuis les autres appareils du réseau local. Les exemples de code du README transmettent une clé d\'API factice (« not-needed ») ; cette revue n\'a pas testé si le serveur impose une authentification — considérez donc un point d\'accès exposé sur le réseau local comme ouvert à tous les appareils de ce réseau tant que vous n\'avez pas vérifié le contraire.',
+            list: [
+              'Par défaut (127.0.0.1) : accessible uniquement depuis le même ordinateur — le réglage adapté à un flux de travail avec agent de code sur une seule machine',
+              'Réseau local (0.0.0.0) : accessible depuis tous les appareils du réseau, invités et autres utilisateurs compris — à réserver à un réseau de confiance, derrière un pare-feu, sans jamais rediriger le port vers Internet',
+              'Si le point d\'accès n\'exige aucune authentification, quiconque peut l\'atteindre pourrait utiliser vos modèles locaux et, si un fournisseur cloud est connecté, peut-être envoyer des requêtes facturées sur la clé d\'API de ce fournisseur — une raison de plus de garder la liaison par défaut tant que vous n\'avez pas besoin d\'un accès distant',
+            ],
+          },
+        ],
         note: 'C\'est l\'un des éléments différenciateurs les plus pertinents pour les développeurs entre Atomic Chat et les applications de chat local à usage unique : elle fonctionne comme un backend d\'inférence local que d\'autres outils consomment, pas seulement comme une fenêtre de chat autonome. La question de savoir si cette liste d\'intégrations reste à jour, et comment se comporte chaque intégration prise individuellement, n\'a pas été testée de manière indépendante pour ce test — vérifiez l\'outil précis que vous prévoyez d\'utiliser auprès de la documentation propre d\'Atomic Chat avant de vous y fier.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'Qu\'est-ce que TurboQuant ?',
-        content: 'TurboQuant est le nom donné par Atomic Chat à une optimisation d\'inférence construite sur son propre fork de llama.cpp, visant à réduire l\'utilisation mémoire et à augmenter la vitesse de génération. Les affirmations de performance de l\'éditeur et la description technique du dépôt GitHub ne sont pas identiques, et un test se doit de distinguer les deux plutôt que de reprendre l\'une ou l\'autre sans esprit critique.',
+        content: 'TurboQuant est le nom donné par Atomic Chat à une optimisation d\'inférence construite sur son propre fork de llama.cpp, visant à réduire l\'utilisation mémoire et à augmenter la vitesse de génération. Les affirmations de performance de l\'éditeur et la description technique du dépôt GitHub ne sont pas identiques, et un test se doit de distinguer les deux plutôt que de reprendre l\'une ou l\'autre sans esprit critique. C\'est aussi un moteur sélectionnable parmi d\'autres, et non le chemin que suit chaque modèle.',
         items: [
           'Le site officiel d\'Atomic Chat affirme que TurboQuant calcule l\'attention jusqu\'à 8x plus vite que les modèles standard en 32 bits sur des GPU H100, et compresse le cache KV d\'au moins 6x sans dégradation annoncée de la qualité de sortie',
           'Le dépôt GitHub d\'Atomic Chat décrit TurboQuant comme un fork de llama.cpp doté d\'optimisations du cache KV (désignées turbo3/turbo4) que le projet documente comme atteignant jusqu\'à environ 4,3x de réduction de l\'empreinte du cache KV, fonctionnant sur CPU et GPU (CUDA et Vulkan) sous Windows, Linux et macOS',
           'Les chiffres de 8x/6x du site officiel sont formulés autour de comparaisons sur GPU H100 — du matériel de classe serveur que la plupart des utilisateurs grand public d\'Atomic Chat ne possèdent pas — tandis que le chiffre d\'environ 4,3x du dépôt GitHub décrit l\'implémentation du cache KV elle-même, et non une affirmation de vitesse de bout en bout sur du matériel grand public',
+          'Le dépôt présente le fork TurboQuant comme un moteur distinct pour les modèles GGUF, à côté de llama.cpp upstream (moteur par défaut documenté sous Windows et Linux) et de MLX-VLM sur Apple Silicon ; un modèle ne passe donc par le fork que si ce moteur est sélectionné',
         ],
         note: 'Atomic Chat inclut TurboQuant, un chemin d\'inférence optimisé conçu pour réduire les besoins mémoire du cache KV et accélérer l\'inférence. Atomic Chat cite jusqu\'à 8x plus de rapidité d\'attention et 6x moins de mémoire utilisée dans son matériel marketing TurboQuant, tandis que son dépôt GitHub documente une réduction du cache KV propre à l\'implémentation d\'environ 4,3x. Les deux sont des chiffres publiés par l\'éditeur plutôt que des benchmarks indépendants d\'Atomic Chat sur du matériel grand public, et cet article n\'a pas mesuré lui-même l\'impact réel de TurboQuant sur du matériel de bureau ou mobile classique.',
       },
@@ -1723,8 +1860,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Prendre en charge les trois formats dans une seule application signifie que vous n\'êtes pas limité aux seules quantifications GGUF (courantes sur les applications orientées Windows/Linux) ou aux seuls builds MLX (courants sur les applications réservées à Mac) — Atomic Chat peut charger le format dans lequel un modèle donné est disponible sur Hugging Face.',
         subsections: [
           {
+            title: 'Quel moteur d\'inférence exécute le modèle ?',
+            content: 'Le dépôt décrit douze moteurs derrière une seule API, chacun n\'apparaissant comme fournisseur que là où il peut fonctionner. Ceux qui comptent le plus pour choisir entre les formats ci-dessus :',
+            list: [
+              'llama.cpp upstream — exécute les modèles GGUF ; documenté comme le moteur par défaut sous Windows et Linux pour la couverture matérielle la plus large (CPU, Metal, CUDA, Vulkan)',
+              'Fork llama.cpp TurboQuant d\'Atomic — également GGUF, avec le cache KV TurboQuant ; un moteur distinct à sélectionner sous macOS, Windows ou Linux, qui ne remplace pas llama.cpp upstream',
+              'MLX-VLM — exécute les modèles MLX, y compris vision-langage, uniquement sur Apple Silicon ; le README affirme qu\'il est plus rapide que llama.cpp sur les puces M pour les modèles pris en charge (une affirmation de l\'éditeur)',
+              'Linux : le README précise que seuls les modèles GGUF y fonctionnent ; les versions MLX ne sont donc pas une option sur cette plateforme',
+              'Les autres moteurs (Foundry Local pour ONNX, LiteRT-LM, GenieX pour Snapdragon, FastFlowLM, TensorRT-LLM, vLLM, SGLang et d\'autres) ciblent du matériel précis ; les outils connectés à l\'API n\'ont pas besoin d\'être reconfigurés quand vous changez de moteur',
+            ],
+          },
+          {
             title: 'Configuration matérielle requise',
-            content: 'Atomic Chat ne publie pas de chiffres minimaux de RAM ou de VRAM propres à l\'application au-delà des exigences de système d\'exploitation et de puce listées dans le tableau ci-dessus. En pratique, le modèle que vous choisissez — et non l\'application elle-même — est presque toujours le facteur limitant : un petit modèle quantifié peut tourner avec quelques gigaoctets de RAM, tandis qu\'un grand modèle nécessite des dizaines de gigaoctets de RAM ou un GPU dédié avec suffisamment de VRAM pour le contenir. Avant de télécharger un modèle, comparez sa taille indiquée sur Hugging Face à la mémoire disponible de votre appareil plutôt que de supposer qu\'un modèle donné tournera correctement sur n\'importe quel appareil répondant aux exigences de plateforme ci-dessus.',
+            content: 'Le projet ne publie des paliers de RAM que pour les ordinateurs de bureau ; ce sont des recommandations de l\'éditeur, pas des mesures réalisées pour cette revue, et le modèle choisi compte plus que l\'application. Avant de télécharger, comparez la taille du modèle indiquée sur Hugging Face à votre mémoire disponible.',
+            columns: ['Appareil', 'Taille du modèle', 'RAM recommandée (éditeur)'],
+            rows: [
+              { 'Appareil': 'macOS, Windows, Linux', 'Taille du modèle': '3B paramètres', 'RAM recommandée (éditeur)': '8 GB' },
+              { 'Appareil': 'macOS, Windows, Linux', 'Taille du modèle': '7B paramètres', 'RAM recommandée (éditeur)': '16 GB' },
+              { 'Appareil': 'macOS, Windows, Linux', 'Taille du modèle': '13B paramètres', 'RAM recommandée (éditeur)': '32 GB' },
+              { 'Appareil': 'iOS, Android', 'Taille du modèle': 'Toutes', 'RAM recommandée (éditeur)': 'Non publié — comparez la taille du modèle à la mémoire de votre appareil' },
+            ],
           },
         ],
       },
@@ -1914,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Atomic Chatをローカルで動くAIアプリとして、エージェント向けのローカルOpenAI互換APIとして、あるいはその両方として検討している、プライバシー重視のユーザー、開発者、非技術系ユーザー',
     primaryTerm: 'Atomic Chat',
@@ -1943,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'オープンソースのコードベース（Apache 2.0）で、Menlo Researchによる[Jan](https://jan.ai)のフォークが起源',
           'モデルをダウンロードすれば完全にオフラインで動作。オプションのクラウドプロバイダーはそれぞれ独自のAPIキーが必要',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1975,6 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '無料・オープンソース（Apache 2.0）で、ローカル利用にアカウントもサブスクリプションも不要',
+          '確認したバージョン：v2.3.5（2026年11月4日リリース）、リポジトリの最終更新は2026年11月11日',
           '対応プラットフォーム：macOS（Apple Silicon M1以降、macOS 13以降）、Windows（x64）、Linux（x86_64）、iOS、Android',
           'モデル形式：GGUF、MLX、ONNX',
           'Llama、Qwen、DeepSeek、Kimi、Mistral、Gemma、MiniMaxを含むモデルファミリーに対応',
@@ -2071,16 +2227,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atomic Chat自体がエンドポイントをホストするため、別途のローカル推論サーバー（例えば独立したllama.cppサーバープロセス）は必ずしも必要ない',
           'ローカルモデルとオプションのクラウドモデルは同じAPI経由で利用できるため、切り替えても接続済みの各ツールを再設定する必要がない',
         ],
+        subsections: [
+          {
+            title: 'ローカルAPIにアクセスできるのは誰か',
+            content: 'リポジトリによると、サーバーは既定で127.0.0.1にバインドされ、同じマシン上のソフトウェアだけが接続できます。ホストを0.0.0.0に設定すると、ローカルネットワーク上の他のデバイスからもエンドポイントに到達できます。READMEのコード例ではダミーのAPIキー（「not-needed」）を渡しており、サーバーが認証を強制するかどうかは本レビューでは検証していません。そのため、LANに公開したエンドポイントは、確認するまでそのネットワーク上の誰でも使えるものとして扱ってください。',
+            list: [
+              '既定（127.0.0.1）：同じコンピューターからのみ到達可能。1台のマシンでコーディングエージェントを使う運用に適した設定です',
+              'LAN（0.0.0.0）：ゲストや他のユーザーを含むネットワーク上のすべてのデバイスから到達可能。信頼できるネットワーク内でファイアウォールの背後でのみ使用し、ポートをインターネットに転送しないでください',
+              'エンドポイントに認証がない場合、到達できる人は誰でもローカルモデルを利用でき、クラウドプロバイダーを接続していれば、そのAPIキーに課金されるリクエストを送れる可能性があります。リモートアクセスが不要なら既定のバインドを維持すべき理由の1つです',
+            ],
+          },
+        ],
         note: 'これはAtomic Chatと単一目的のローカルチャットアプリとの間で、開発者にとって特に関係の深い差別化要因の1つです — スタンドアロンのチャットウィンドウとしてだけでなく、他のツールが利用するローカル推論バックエンドとしても機能します。その連携リストが最新の状態を保っているか、また個々の連携がどう動作するかは本レビューのために独自に検証していません — 依拠する前に、利用予定の具体的なツールをAtomic Chat自身のドキュメントで確認してください。',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'TurboQuantとは何ですか',
-        content: 'TurboQuantは、独自のllama.cppフォークを基盤とした、メモリ使用量の削減と生成速度の向上を目指すAtomic Chatの推論最適化機能の名称です。ベンダーの性能に関する主張とGitHubリポジトリの技術的な説明は同一ではなく、レビューではどちらか一方をそのまま繰り返すのではなく、両者を区別すべきです。',
+        content: 'TurboQuantは、独自のllama.cppフォークを基盤とした、メモリ使用量の削減と生成速度の向上を目指すAtomic Chatの推論最適化機能の名称です。ベンダーの性能に関する主張とGitHubリポジトリの技術的な説明は同一ではなく、レビューではどちらか一方をそのまま繰り返すのではなく、両者を区別すべきです。また、複数ある選択可能なエンジンの1つであり、すべてのモデルが通る経路ではありません。',
         items: [
           'Atomic Chatの公式サイトは、TurboQuantがH100 GPU上で標準的な32ビットモデルと比較してアテンション計算を最大8倍高速化し、出力品質の低下を明言せずにKVキャッシュを少なくとも6倍圧縮すると主張している',
           'Atomic ChatのGitHubリポジトリは、TurboQuantを、KVキャッシュ最適化（turbo3/turbo4と呼ばれる）を備えたllama.cppフォークとして説明しており、Windows、Linux、macOS上でCPUおよびGPU（CUDAおよびVulkan）で動作し、KVキャッシュのフットプリントを最大約4.3倍縮小すると文書化している',
           '公式サイトの8倍/6倍という数値は、Atomic Chatの一般的な消費者ユーザーの多くが所有していないサーバー級ハードウェアであるH100 GPUの比較を前提としているのに対し、GitHubリポジトリの約4.3倍という数値は、コンシューマー向けハードウェアでのエンドツーエンドの速度主張ではなく、KVキャッシュ実装自体を説明している',
+          'リポジトリでは、TurboQuantフォークはGGUFモデル向けの独立したエンジンとして、アップストリームのllama.cpp（WindowsとLinuxの既定として記載）やApple Silicon向けのMLX-VLMと並んで挙げられています。つまり、そのエンジンを選択した場合にのみ、モデルはフォーク経由で処理されます',
         ],
         note: 'Atomic ChatにはTurboQuantという、KVキャッシュのメモリ要件を削減し推論を高速化することを目的とした最適化された推論経路が含まれています。Atomic ChatはTurboQuantのマーケティング資料の中で最大8倍高速なアテンションと6倍低いメモリ使用量を主張する一方、GitHubリポジトリは実装固有のKVキャッシュ削減率を約4.3倍と文書化しています。いずれもコンシューマー向けハードウェア上でAtomic Chatを独立してベンチマークした数値ではなくベンダーが公開した数値であり、本記事はTurboQuantの実際のデスクトップやモバイルハードウェアへの影響そのものを測定していません。',
       },
@@ -2104,8 +2272,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: '1つのアプリで3つすべての形式に対応しているため、GGUFの量子化モデルのみ（Windows/Linux向けアプリに多い）やMLXビルドのみ（Mac専用アプリに多い）に限定されることがありません。Atomic Chatは、Hugging Face上のモデルがどの形式で提供されていても読み込めます。',
         subsections: [
           {
+            title: 'どの推論エンジンがモデルを実行するのか',
+            content: 'リポジトリでは、1つのAPIの背後に12のエンジンがあると説明されており、各エンジンは実行可能な環境でのみプロバイダーとして表示されます。上記の形式を選ぶ際に特に重要なものは次のとおりです。',
+            list: [
+              'アップストリームのllama.cpp — GGUFモデルを実行。WindowsとLinuxで最も幅広いハードウェアに対応する既定エンジンとして記載されています（CPU、Metal、CUDA、Vulkan）',
+              'Atomicのllama.cpp TurboQuantフォーク — こちらもGGUF対応で、TurboQuant KVキャッシュを使用。macOS、Windows、Linuxで選択する独立したエンジンであり、アップストリームのllama.cppの置き換えではありません',
+              'MLX-VLM — ビジョン言語モデルを含むMLXモデルをApple Silicon上でのみ実行。READMEは、対応モデルではMシリーズのチップでllama.cppより高速としています（ベンダーの主張）',
+              'Linux：READMEによれば、動作するのはGGUFモデルのみで、このプラットフォームではMLX版は選べません',
+              'その他のエンジン（ONNX用のFoundry Local、LiteRT-LM、Snapdragon向けのGenieX、FastFlowLM、TensorRT-LLM、vLLM、SGLangなど）は特定のハードウェア向けです。APIに接続したツールは、エンジンを切り替えても再設定不要です',
+            ],
+          },
+          {
             title: 'ハードウェア要件',
-            content: 'Atomic Chatは、上の表に記載したOSとチップの要件を超えるアプリ固有の最小RAMやVRAMの数値を公開していません。実際には、アプリ自体ではなく選んだモデルがほぼ常に制約要因になります — 小さい量子化モデルは数ギガバイトのRAMで動作しますが、大きいモデルは数十ギガバイトのRAM、あるいは十分なVRAMを備えた専用GPUを必要とします。モデルをダウンロードする前に、上記のプラットフォーム要件を満たすデバイスなら何でも快適に動作すると仮定するのではなく、Hugging Faceに記載されているモデルサイズと自分のデバイスの利用可能メモリを照らし合わせてください。',
+            content: 'プロジェクトがRAMの目安を公開しているのはデスクトップのみです。これはベンダーの目安であり、本レビューで測定した値ではなく、アプリよりも選ぶモデルの影響が大きくなります。ダウンロード前に、Hugging Faceに記載のモデルサイズと空きメモリを比較してください。',
+            columns: ['デバイス', 'モデルサイズ', 'RAMの目安（ベンダー）'],
+            rows: [
+              { 'デバイス': 'macOS, Windows, Linux', 'モデルサイズ': '3Bパラメータ', 'RAMの目安（ベンダー）': '8 GB' },
+              { 'デバイス': 'macOS, Windows, Linux', 'モデルサイズ': '7Bパラメータ', 'RAMの目安（ベンダー）': '16 GB' },
+              { 'デバイス': 'macOS, Windows, Linux', 'モデルサイズ': '13Bパラメータ', 'RAMの目安（ベンダー）': '32 GB' },
+              { 'デバイス': 'iOS, Android', 'モデルサイズ': '任意', 'RAMの目安（ベンダー）': '非公開 — モデルサイズをデバイスのメモリと照らし合わせてください' },
+            ],
           },
         ],
       },
@@ -2295,7 +2481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Usuários preocupados com privacidade, desenvolvedores e pessoas não técnicas avaliando o Atomic Chat como app de IA local, como API local compatível com OpenAI para agentes, ou como ambos',
     primaryTerm: 'Atomic Chat',
@@ -2324,7 +2510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Base de código aberta (Apache 2.0), originalmente derivada (fork) do Jan, feito pela Menlo Research',
           'Funciona totalmente offline depois que um modelo é baixado; provedores de nuvem opcionais exigem suas próprias chaves de API',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2356,6 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Gratuito e de código aberto (Apache 2.0), sem necessidade de conta ou assinatura para uso local',
+          'Versão analisada: v2.3.5, lançada em 4 de novembro de 2026; o repositório foi atualizado pela última vez em 11 de novembro de 2026',
           'Plataformas: macOS (Apple Silicon M1 ou superior, macOS 13+), Windows (x64), Linux (x86_64), iOS e Android',
           'Formatos de modelo: GGUF, MLX e ONNX',
           'Executa famílias de modelos incluindo Llama, Qwen, DeepSeek, Kimi, Mistral, Gemma e MiniMax',
@@ -2452,16 +2639,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não é necessariamente preciso um servidor de inferência local separado (por exemplo, um processo autônomo de servidor llama.cpp), já que o próprio Atomic Chat hospeda o endpoint',
           'Modelos locais e modelos em nuvem opcionais podem ser usados pela mesma API, então alternar entre eles não exige reconfigurar cada ferramenta conectada',
         ],
+        subsections: [
+          {
+            title: 'Quem pode acessar a API local?',
+            content: 'Segundo o repositório, o servidor fica vinculado por padrão a 127.0.0.1, o que significa que apenas softwares no mesmo computador conseguem se conectar. Se você definir o host como 0.0.0.0, o endpoint fica acessível para outros dispositivos da sua rede local. Os exemplos de código do README passam uma chave de API de exemplo («not-needed»); esta análise não testou se o servidor exige autenticação, então trate um endpoint exposto na LAN como aberto para qualquer pessoa nessa rede até verificar o contrário.',
+            list: [
+              'Padrão (127.0.0.1): acessível apenas do mesmo computador — a configuração adequada para um fluxo de trabalho com agentes de programação em uma única máquina',
+              'LAN (0.0.0.0): acessível de todos os dispositivos da rede, incluindo convidados e outros usuários — use apenas em uma rede confiável e atrás de um firewall, e nunca encaminhe a porta para a internet',
+              'Se o endpoint não exigir autenticação, qualquer pessoa que consiga alcançá-lo poderia usar seus modelos locais e, se houver um provedor de nuvem conectado, talvez conseguisse enviar solicitações cobradas na chave de API desse provedor — mais um motivo para manter a vinculação padrão, a menos que você precise de acesso remoto',
+            ],
+          },
+        ],
         note: 'Este é um dos diferenciais mais relevantes para desenvolvedores entre o Atomic Chat e apps de chat local de propósito único: ele funciona como um backend de inferência local que outras ferramentas consomem, não apenas como uma janela de chat autônoma. Se essa lista de integrações permanece atualizada, e como cada integração individual se comporta, não foi testado de forma independente para esta análise — verifique a ferramenta específica que pretende usar na documentação oficial do Atomic Chat antes de confiar nela.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'O que é o TurboQuant?',
-        content: 'TurboQuant é o nome que o Atomic Chat dá a uma otimização de inferência construída sobre seu próprio fork do llama.cpp, com o objetivo de reduzir o uso de memória e aumentar a velocidade de geração. As afirmações de desempenho do fabricante e a descrição técnica do repositório no GitHub não são idênticas, e uma análise deve separar as duas em vez de repetir qualquer uma delas sem crítica.',
+        content: 'TurboQuant é o nome que o Atomic Chat dá a uma otimização de inferência construída sobre seu próprio fork do llama.cpp, com o objetivo de reduzir o uso de memória e aumentar a velocidade de geração. As afirmações de desempenho do fabricante e a descrição técnica do repositório no GitHub não são idênticas, e uma análise deve separar as duas em vez de repetir qualquer uma delas sem crítica. Ele também é um motor selecionável entre vários, e não o caminho que todo modelo percorre.',
         items: [
           'O site oficial do Atomic Chat afirma que o TurboQuant computa atenção até 8x mais rápido do que modelos padrão de 32 bits em GPUs H100, e comprime o cache KV em pelo menos 6x, sem degradação declarada na qualidade da saída',
           'O repositório do Atomic Chat no GitHub descreve o TurboQuant como um fork do llama.cpp com otimizações de cache KV (chamadas de turbo3/turbo4) que o projeto documenta como capazes de atingir uma redução de aproximadamente 4,3x no tamanho do cache KV, rodando em CPU e GPU (CUDA e Vulkan) em Windows, Linux e macOS',
           'Os números de 8x/6x do site oficial são baseados em comparações com GPUs H100 — hardware de classe servidor que a maioria dos usuários comuns do Atomic Chat não possui —, enquanto o número de ~4,3x do repositório no GitHub descreve a implementação do cache KV em si, não uma afirmação de velocidade ponta a ponta em hardware de consumo',
+          'O repositório lista o fork do TurboQuant como um motor separado para modelos GGUF, ao lado do llama.cpp upstream (o padrão documentado no Windows e no Linux) e do MLX-VLM no Apple Silicon; portanto, um modelo só é processado pelo fork quando esse motor está selecionado',
         ],
         note: 'O Atomic Chat inclui o TurboQuant, um caminho de inferência otimizado projetado para reduzir os requisitos de memória do cache KV e acelerar a inferência. O Atomic Chat cita até 8x mais rapidez na atenção e 6x menos uso de memória em seu material de marketing do TurboQuant, enquanto seu repositório no GitHub documenta uma redução específica de implementação do cache KV de aproximadamente 4,3x. Ambos são números publicados pelo fabricante, não benchmarks independentes do Atomic Chat em hardware de consumo, e este artigo não mediu o impacto real do TurboQuant em hardware de desktop ou móvel típico.',
       },
@@ -2485,8 +2684,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Suportar os três formatos em um único app significa que você não fica limitado a baixar apenas quantizações GGUF (comuns em apps voltados para Windows/Linux) ou apenas builds MLX (comuns em apps exclusivos para Mac) — o Atomic Chat consegue carregar o formato em que um determinado modelo esteja disponível no Hugging Face.',
         subsections: [
           {
+            title: 'Qual motor de inferência executa o modelo?',
+            content: 'O repositório descreve doze motores por trás de uma única API, cada um exibido como provedor apenas onde pode rodar. Os mais relevantes para quem escolhe entre os formatos acima:',
+            list: [
+              'llama.cpp upstream — executa modelos GGUF; documentado como o motor padrão no Windows e no Linux, com a cobertura de hardware mais ampla (CPU, Metal, CUDA, Vulkan)',
+              'Fork do llama.cpp com TurboQuant da Atomic — também GGUF, com o cache KV do TurboQuant; um motor separado que você seleciona no macOS, Windows ou Linux, e não um substituto do llama.cpp upstream',
+              'MLX-VLM — executa modelos MLX, incluindo modelos de visão e linguagem, apenas no Apple Silicon; o README diz que é mais rápido que o llama.cpp em chips M para modelos compatíveis (uma afirmação do fabricante)',
+              'Linux: o README informa que lá só rodam modelos GGUF, então as versões MLX não são uma opção nessa plataforma',
+              'Os demais motores (Foundry Local para ONNX, LiteRT-LM, GenieX para Snapdragon, FastFlowLM, TensorRT-LLM, vLLM, SGLang e outros) miram hardware específico; as ferramentas conectadas à API não precisam ser reconfiguradas ao trocar de motor',
+            ],
+          },
+          {
             title: 'Requisitos de hardware',
-            content: 'O Atomic Chat não publica valores mínimos específicos de RAM ou VRAM além dos requisitos de sistema operacional e chip listados na tabela acima. Na prática, o modelo escolhido — não o app em si — é quase sempre o fator limitante: um modelo quantizado pequeno pode rodar com poucos gigabytes de RAM, enquanto um modelo grande precisa de dezenas de gigabytes de RAM ou de uma GPU dedicada com VRAM suficiente para carregá-lo. Antes de baixar um modelo, verifique o tamanho listado no Hugging Face em comparação com a memória disponível no seu dispositivo, em vez de presumir que qualquer modelo vai rodar bem em qualquer dispositivo que atenda apenas aos requisitos de plataforma acima.',
+            content: 'O projeto publica faixas de RAM apenas para desktop; são orientações do fabricante, não medições feitas para esta análise, e o modelo escolhido importa mais que o app. Antes de baixar, compare o tamanho do modelo indicado no Hugging Face com a memória livre do seu dispositivo.',
+            columns: ['Dispositivo', 'Tamanho do modelo', 'RAM recomendada (fabricante)'],
+            rows: [
+              { 'Dispositivo': 'macOS, Windows, Linux', 'Tamanho do modelo': '3B parâmetros', 'RAM recomendada (fabricante)': '8 GB' },
+              { 'Dispositivo': 'macOS, Windows, Linux', 'Tamanho do modelo': '7B parâmetros', 'RAM recomendada (fabricante)': '16 GB' },
+              { 'Dispositivo': 'macOS, Windows, Linux', 'Tamanho do modelo': '13B parâmetros', 'RAM recomendada (fabricante)': '32 GB' },
+              { 'Dispositivo': 'iOS, Android', 'Tamanho do modelo': 'Qualquer', 'RAM recomendada (fabricante)': 'Não publicado — compare o tamanho do modelo com a memória do seu dispositivo' },
+            ],
           },
         ],
       },
@@ -2676,7 +2893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: '正在评估 Atomic Chat 作为本地 AI 应用、面向智能体的本地 OpenAI 兼容 API，或两者兼具的注重隐私的用户、开发者和非技术人员',
     primaryTerm: 'Atomic Chat',
@@ -2705,7 +2922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '代码库开源（Apache 2.0），最初由 Menlo Research 从 Jan 分叉而来',
           '模型下载完成后可完全离线运行；可选的云端服务商需要各自的 API 密钥',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2737,6 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '免费开源（Apache 2.0），本地使用无需账户或订阅',
+          '评测版本：v2.3.5，发布于2026年11月4日；仓库最近一次更新为2026年11月11日',
           '支持平台：macOS（Apple Silicon M1 及以上，macOS 13+）、Windows（x64）、Linux（x86_64）、iOS 和 Android',
           '模型格式：GGUF、MLX 和 ONNX',
           '支持的模型系列包括 Llama、Qwen、DeepSeek、Kimi、Mistral、Gemma 和 MiniMax',
@@ -2833,16 +3051,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '不一定需要单独的本地推理服务器（例如一个独立的 llama.cpp 服务器进程），因为 Atomic Chat 本身就托管着该端点',
           '本地模型和可选的云端模型可以通过同一个 API 使用，因此在两者之间切换不需要重新配置每一个已连接的工具',
         ],
+        subsections: [
+          {
+            title: '谁可以访问本地 API？',
+            content: '根据仓库说明，服务器默认绑定到 127.0.0.1，即只有同一台机器上的软件才能连接。若将 host 设为 0.0.0.0，局域网内的其他设备也能访问该端点。README 中的代码示例传入的是占位 API 密钥（“not-needed”）；本评测未测试服务器是否强制身份验证，因此在你自行验证之前，请把暴露在局域网中的端点视为对该网络内所有人开放。',
+            list: [
+              '默认（127.0.0.1）：仅同一台电脑可访问——适合单机使用编程智能体的工作流',
+              '局域网（0.0.0.0）：网络内所有设备均可访问，包括访客和其他用户——仅在可信网络中并配合防火墙使用，切勿将端口转发到互联网',
+              '如果该端点没有身份验证，任何能访问它的人都可能使用你的本地模型；若连接了云服务商，还可能发送按该服务商 API 密钥计费的请求——除非需要远程访问，否则应保留默认绑定',
+            ],
+          },
+        ],
         note: '这是 Atomic Chat 与单一用途本地聊天应用之间对开发者更有意义的差异之一：它作为其他工具消费的本地推理后端存在，而不仅仅是一个独立的聊天窗口。这份集成列表是否保持更新，以及每个具体集成的实际表现如何，本文并未进行独立测试——在依赖之前，请对照 Atomic Chat 自身的文档核实你打算使用的具体工具。',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'TurboQuant 是什么？',
-        content: 'TurboQuant 是 Atomic Chat 为一项基于其自有 llama.cpp 分支构建的推理优化所起的名字，旨在降低内存占用并提升生成速度。厂商的性能宣称与 GitHub 仓库的技术描述并不完全一致，评测应当把两者区分开，而不是不加批判地重复其中任何一个。',
+        content: 'TurboQuant 是 Atomic Chat 为一项基于其自有 llama.cpp 分支构建的推理优化所起的名字，旨在降低内存占用并提升生成速度。厂商的性能宣称与 GitHub 仓库的技术描述并不完全一致，评测应当把两者区分开，而不是不加批判地重复其中任何一个。它也只是多个可选引擎之一，并非每个模型都会经过的路径。',
         items: [
           'Atomic Chat 官方网站宣称，TurboQuant 在 H100 GPU 上计算注意力的速度比标准 32 位模型快至多 8 倍，并将 KV 缓存压缩至少 6 倍，且不会带来输出质量的下降',
           'Atomic Chat 的 GitHub 仓库将 TurboQuant 描述为一个带有 KV 缓存优化（称为 turbo3/turbo4）的 llama.cpp 分支，项目文档记录其实现了约 4.3 倍的 KV 缓存占用缩减，可在 Windows、Linux 和 macOS 上的 CPU 和 GPU（CUDA 和 Vulkan）上运行',
           '官方网站上 8 倍/6 倍的数字是围绕 H100 GPU 对比给出的——这是大多数 Atomic Chat 消费级用户不会拥有的服务器级硬件——而 GitHub 仓库中约 4.3 倍的数字描述的是 KV 缓存实现本身，而非消费级硬件上的端到端速度宣称',
+          '仓库将 TurboQuant 分支列为面向 GGUF 模型的独立引擎，与上游 llama.cpp（文档记载为 Windows 和 Linux 的默认引擎）以及 Apple Silicon 上的 MLX-VLM 并列；因此只有选择该引擎时，模型才会经由该分支处理',
         ],
         note: 'Atomic Chat 包含 TurboQuant，这是一条旨在降低 KV 缓存内存需求并加速推理的优化推理路径。Atomic Chat 在其 TurboQuant 宣传材料中宣称速度提升至多 8 倍、内存占用降低 6 倍，而其 GitHub 仓库记录的是约 4.3 倍的实现层面 KV 缓存缩减。两者都是厂商发布的数字，而非对 Atomic Chat 在消费级硬件上的独立基准测试，本文也未曾自行测量过 TurboQuant 在典型桌面或移动硬件上的实际效果。',
       },
@@ -2866,8 +3096,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: '在一个应用中支持全部三种格式，意味着你不会被局限于只能下载 GGUF 量化版本（常见于面向 Windows/Linux 的应用）或只能下载 MLX 版本（常见于仅支持 Mac 的应用）——无论 Hugging Face 上的某个模型以哪种格式提供，Atomic Chat 都能加载。',
         subsections: [
           {
+            title: '由哪个推理引擎运行模型？',
+            content: '仓库说明在同一个 API 背后有十二个引擎，每个引擎只在能运行的平台上显示为提供方。对于选择上述格式的读者来说，最相关的是：',
+            list: [
+              '上游 llama.cpp——运行 GGUF 模型；文档记载为 Windows 和 Linux 上硬件覆盖最广的默认引擎（CPU、Metal、CUDA、Vulkan）',
+              'Atomic 的 llama.cpp TurboQuant 分支——同样运行 GGUF，使用 TurboQuant KV 缓存；是在 macOS、Windows 或 Linux 上单独选择的引擎，而非上游 llama.cpp 的替代品',
+              'MLX-VLM——仅在 Apple Silicon 上运行 MLX 模型（包括视觉语言模型）；README 称其在受支持模型上比 M 系列芯片上的 llama.cpp 更快（厂商声明）',
+              'Linux：README 指出该平台只能运行 GGUF 模型，因此无法使用 MLX 版本',
+              '其余引擎（用于 ONNX 的 Foundry Local、LiteRT-LM、面向骁龙的 GenieX、FastFlowLM、TensorRT-LLM、vLLM、SGLang 等）针对特定硬件；连接到 API 的工具在切换引擎时无需重新配置',
+            ],
+          },
+          {
             title: '硬件要求',
-            content: 'Atomic Chat 除了上表列出的操作系统和芯片要求外，并未公布应用本身特定的最低 RAM 或 VRAM 数值。实际上，限制因素几乎总是你选择的模型——而不是应用本身：一个小型量化模型可以在几 GB 的 RAM 上运行，而一个大模型则需要几十 GB 的 RAM 或一块拥有足够 VRAM 容纳它的独立 GPU。下载模型之前，请对照 Hugging Face 上列出的模型大小和你设备的可用内存进行核对，而不要假设任何模型都能在满足上述平台要求的任何设备上正常运行。',
+            content: '项目只公布了桌面端的内存档位；这些是厂商给出的参考，并非本评测的实测数据，而且所选模型比应用本身更重要。下载前，请将 Hugging Face 上标注的模型大小与你的可用内存对照。',
+            columns: ['设备', '模型大小', '内存建议（厂商）'],
+            rows: [
+              { '设备': 'macOS, Windows, Linux', '模型大小': '3B 参数', '内存建议（厂商）': '8 GB' },
+              { '设备': 'macOS, Windows, Linux', '模型大小': '7B 参数', '内存建议（厂商）': '16 GB' },
+              { '设备': 'macOS, Windows, Linux', '模型大小': '13B 参数', '内存建议（厂商）': '32 GB' },
+              { '设备': 'iOS, Android', '模型大小': '任意', '内存建议（厂商）': '未公布——请将模型大小与设备内存对照' },
+            ],
           },
         ],
       },
@@ -3057,7 +3305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-09-05',
+    dateModified: '2026-11-11',
     educationalLevel: 'Beginner',
     audience: 'Atomic Chat을 로컬 AI 앱으로, 에이전트를 위한 로컬 OpenAI 호환 API로, 또는 둘 다로 평가하는 프라이버시 중시 사용자, 개발자, 비기술직 사용자',
     primaryTerm: 'Atomic Chat',
@@ -3086,7 +3334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Menlo Research의 Jan에서 포크되어 시작된 오픈소스 코드베이스(Apache 2.0)',
           '모델을 다운로드하면 완전히 오프라인으로 작동하며, 선택적 클라우드 제공업체는 자체 API 키가 필요',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -3118,6 +3366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '무료이자 오픈소스(Apache 2.0)이며, 로컬 사용에는 계정이나 구독이 필요하지 않음',
+          '검토한 버전: v2.3.5, 2026년 11월 4일 출시; 저장소는 2026년 11월 11일에 마지막으로 업데이트되었습니다',
           '지원 플랫폼: macOS(Apple Silicon M1 이상, macOS 13+), Windows(x64), Linux(x86_64), iOS, Android',
           '모델 형식: GGUF, MLX, ONNX',
           'Llama, Qwen, DeepSeek, Kimi, Mistral, Gemma, MiniMax 등의 모델 계열 실행 가능',
@@ -3214,16 +3463,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atomic Chat 자체가 엔드포인트를 호스팅하므로 별도의 로컬 추론 서버(예: 독립적인 llama.cpp 서버 프로세스)가 반드시 필요하지는 않음',
           '로컬 모델과 선택적 클라우드 모델을 같은 API를 통해 사용할 수 있어, 둘 사이를 전환해도 연결된 모든 도구를 다시 설정할 필요가 없음',
         ],
+        subsections: [
+          {
+            title: '로컬 API에는 누가 접근할 수 있나요?',
+            content: '저장소에 따르면 서버는 기본적으로 127.0.0.1에 바인딩되어 같은 컴퓨터에서 실행 중인 소프트웨어만 연결할 수 있습니다. 호스트를 0.0.0.0으로 설정하면 로컬 네트워크의 다른 기기에서도 엔드포인트에 접근할 수 있습니다. README의 코드 예시는 자리 표시용 API 키("not-needed")를 전달하며, 서버가 인증을 강제하는지는 이 리뷰에서 테스트하지 않았습니다. 따라서 LAN에 노출한 엔드포인트는 직접 확인하기 전까지 해당 네트워크의 모든 사람에게 열려 있는 것으로 간주하십시오.',
+            list: [
+              '기본값(127.0.0.1): 같은 컴퓨터에서만 접근 가능 — 한 대의 컴퓨터에서 코딩 에이전트를 쓰는 작업 방식에 적합한 설정입니다',
+              'LAN(0.0.0.0): 손님과 다른 사용자를 포함해 네트워크의 모든 기기에서 접근 가능 — 신뢰할 수 있는 네트워크와 방화벽 뒤에서만 사용하고 포트를 인터넷으로 포워딩하지 마십시오',
+              '엔드포인트에 인증이 없다면 접근할 수 있는 사람은 누구나 로컬 모델을 사용할 수 있고, 클라우드 제공업체가 연결되어 있다면 해당 업체의 API 키로 과금되는 요청을 보낼 수도 있습니다 — 원격 접근이 필요하지 않다면 기본 바인딩을 유지해야 하는 또 다른 이유입니다',
+            ],
+          },
+        ],
         note: '이는 Atomic Chat과 단일 목적 로컬 채팅 앱 사이의 개발자 관점에서 더 관련성 높은 차별점 중 하나입니다. 즉 독립형 채팅창일 뿐 아니라 다른 도구가 소비하는 로컬 추론 백엔드로도 기능한다는 것입니다. 그 연동 목록이 계속 최신 상태로 유지되는지, 그리고 각 개별 연동이 실제로 어떻게 동작하는지는 이 리뷰에서 독립적으로 테스트하지 않았습니다 — 사용하려는 특정 도구는 신뢰하기 전에 Atomic Chat 자체 문서를 통해 직접 확인하세요.',
       },
       turboQuant: {
         id: 'turboquant-explained',
         title: 'TurboQuant란 무엇인가요?',
-        content: 'TurboQuant는 자체 llama.cpp 포크를 기반으로 구축된 추론 최적화 기능에 Atomic Chat이 붙인 이름으로, 메모리 사용량을 줄이고 생성 속도를 높이는 것을 목표로 합니다. 제작사의 성능 주장과 GitHub 저장소의 기술적 설명은 서로 동일하지 않으며, 리뷰라면 둘 중 하나를 무비판적으로 반복하기보다 둘을 구분해야 합니다.',
+        content: 'TurboQuant는 자체 llama.cpp 포크를 기반으로 구축된 추론 최적화 기능에 Atomic Chat이 붙인 이름으로, 메모리 사용량을 줄이고 생성 속도를 높이는 것을 목표로 합니다. 제작사의 성능 주장과 GitHub 저장소의 기술적 설명은 서로 동일하지 않으며, 리뷰라면 둘 중 하나를 무비판적으로 반복하기보다 둘을 구분해야 합니다. 또한 여러 선택 가능한 엔진 중 하나일 뿐, 모든 모델이 거치는 경로는 아닙니다.',
         items: [
           'Atomic Chat 공식 사이트는 TurboQuant가 H100 GPU에서 표준 32비트 모델 대비 최대 8배 빠른 어텐션 연산을 수행하고, 출력 품질 저하 없이 KV 캐시를 최소 6배 압축한다고 주장함',
           'Atomic Chat의 GitHub 저장소는 TurboQuant를 KV 캐시 최적화(turbo3/turbo4로 지칭)를 갖춘 llama.cpp 포크로 설명하며, Windows·Linux·macOS 전반의 CPU 및 GPU(CUDA, Vulkan)에서 실행되고 KV 캐시 사용 공간을 최대 약 4.3배 줄인다고 문서화함',
           '공식 사이트의 8배/6배 수치는 대부분의 Atomic Chat 소비자 사용자가 보유하지 않을 서버급 하드웨어인 H100 GPU 비교를 기준으로 하며, GitHub 저장소의 약 4.3배 수치는 소비자 하드웨어에서의 종단 간 속도 주장이 아니라 KV 캐시 구현 자체를 설명한 것임',
+          '저장소는 TurboQuant 포크를 GGUF 모델용 별도 엔진으로 소개하며, 업스트림 llama.cpp(Windows와 Linux의 기본값으로 문서화됨), Apple Silicon의 MLX-VLM과 나란히 나열합니다. 따라서 해당 엔진을 선택했을 때만 모델이 포크를 통해 처리됩니다',
         ],
         note: 'Atomic Chat은 KV 캐시 메모리 요구량을 줄이고 추론 속도를 높이도록 설계된 최적화된 추론 경로인 TurboQuant를 포함합니다. Atomic Chat은 TurboQuant 마케팅 자료에서 최대 8배 빠른 어텐션과 6배 낮은 메모리 사용량을 언급하는 반면, GitHub 저장소는 구현 특유의 KV 캐시 감소율을 약 4.3배로 문서화합니다. 둘 다 소비자 하드웨어에서 Atomic Chat을 독립적으로 벤치마크한 결과가 아니라 제작사가 공개한 수치이며, 이 기사는 일반적인 데스크톱이나 모바일 하드웨어에서 TurboQuant의 실제 영향을 직접 측정하지 않았습니다.',
       },
@@ -3247,8 +3508,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: '하나의 앱에서 세 가지 형식을 모두 지원한다는 것은 GGUF 양자화 모델만(Windows/Linux 중심 앱에서 흔함) 또는 MLX 빌드만(Mac 전용 앱에서 흔함) 다운로드해야 하는 제약이 없다는 의미입니다 — Atomic Chat은 Hugging Face에 올라온 모델이 어떤 형식으로 제공되든 불러올 수 있습니다.',
         subsections: [
           {
+            title: '어떤 추론 엔진이 모델을 실행하나요?',
+            content: '저장소는 하나의 API 뒤에 12개의 엔진이 있다고 설명하며, 각 엔진은 실행 가능한 환경에서만 제공자로 표시됩니다. 위의 형식 중에서 고르는 독자에게 가장 관련 있는 엔진은 다음과 같습니다.',
+            list: [
+              '업스트림 llama.cpp — GGUF 모델을 실행하며, 가장 넓은 하드웨어를 지원하는 Windows와 Linux의 기본 엔진으로 문서화되어 있습니다(CPU, Metal, CUDA, Vulkan)',
+              'Atomic의 llama.cpp TurboQuant 포크 — 마찬가지로 GGUF를 실행하며 TurboQuant KV 캐시를 사용합니다. macOS, Windows, Linux에서 선택하는 별도 엔진이며 업스트림 llama.cpp를 대체하지 않습니다',
+              'MLX-VLM — 비전-언어 모델을 포함한 MLX 모델을 Apple Silicon에서만 실행합니다. README는 지원 모델에서 M 시리즈 칩의 llama.cpp보다 빠르다고 설명합니다(벤더 주장)',
+              'Linux: README에 따르면 GGUF 모델만 실행되므로 이 플랫폼에서는 MLX 빌드를 쓸 수 없습니다',
+              '나머지 엔진(ONNX용 Foundry Local, LiteRT-LM, Snapdragon용 GenieX, FastFlowLM, TensorRT-LLM, vLLM, SGLang 등)은 특정 하드웨어를 대상으로 하며, API에 연결된 도구는 엔진을 바꿔도 다시 설정할 필요가 없습니다',
+            ],
+          },
+          {
             title: '하드웨어 요구 사항',
-            content: 'Atomic Chat은 위 표에 나열된 운영체제 및 칩 요구 사항 외에 앱 자체의 최소 RAM이나 VRAM 수치를 별도로 공개하지 않습니다. 실제로는 앱 자체가 아니라 선택한 모델이 거의 항상 제한 요인이 됩니다. 작은 양자화 모델은 몇 기가바이트의 RAM으로도 실행되는 반면, 큰 모델은 수십 기가바이트의 RAM이나 이를 담을 만큼 충분한 VRAM을 갖춘 전용 GPU가 필요합니다. 모델을 다운로드하기 전에 위 플랫폼 요구 사항을 충족하는 기기라면 어떤 모델이든 무난히 실행되리라 가정하지 말고, Hugging Face에 표시된 모델 크기를 사용자 기기의 사용 가능한 메모리와 비교해 확인하세요.',
+            content: '프로젝트는 데스크톱용 RAM 구간만 공개합니다. 이는 벤더의 권장 사항이며 이 리뷰를 위해 측정한 값이 아니고, 앱보다 선택하는 모델이 더 중요합니다. 다운로드 전에 Hugging Face에 표시된 모델 크기를 여유 메모리와 비교하십시오.',
+            columns: ['기기', '모델 크기', 'RAM 권장(벤더)'],
+            rows: [
+              { '기기': 'macOS, Windows, Linux', '모델 크기': '3B 파라미터', 'RAM 권장(벤더)': '8 GB' },
+              { '기기': 'macOS, Windows, Linux', '모델 크기': '7B 파라미터', 'RAM 권장(벤더)': '16 GB' },
+              { '기기': 'macOS, Windows, Linux', '모델 크기': '13B 파라미터', 'RAM 권장(벤더)': '32 GB' },
+              { '기기': 'iOS, Android', '모델 크기': '모두', 'RAM 권장(벤더)': '비공개 — 모델 크기를 기기 메모리와 비교하십시오' },
+            ],
           },
         ],
       },
