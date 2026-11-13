@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/on-device-llm-review-hero-ja.webp',
     title: 'On Device LLMレビュー:Android向けの無料オフラインチャットアプリ',
-    seoTitle: 'On Device LLMレビュー:Android向け無料オフラインチャット',
+    seoTitle: 'On Device LLMレビュー:Androidオフライン',
     intro:
       'On Device LLMは、Google Playの掲載情報とプライバシーポリシーによれば、アカウントなしでオープンウェイトの言語モデルを端末上で動かす、Android向けの無料チャットアプリです。Google Playでの掲載タイトルは「Local LLM」で、iPhone・Mac向けのアプリOn Device AIやAI on Deviceとは別のアプリです。本レビューは、2026年10月26日に確認したストアの掲載情報と、開発者のウェブサイトおよびプライバシーポリシーに基づいています。',
     metaDescription:
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'On Device LLM تطبيق دردشة مجاني لنظام Android يشغّل، بحسب صفحته على Google Play وسياسة الخصوصية، نماذج لغوية مفتوحة الأوزان على الهاتف دون حساب. تعنونه Google Play بـ «Local LLM»، وهو تطبيق مختلف عن تطبيقَي iPhone وMac المسميين On Device AI وAI on Device. تعكس هذه المراجعة صفحة المتجر وموقع المطوّر وسياسة الخصوصية، كما جرى التحقق منها في 26 أكتوبر 2026.',
     metaDescription:
-      'مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وواجهة API محلية اختيارية.',
+      'مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وAPI محلي اختياري.',
     twitterDescription:
       'مراجعة On Device LLM: تطبيق Android مجاني وجديد يقول إن ذكاءه الاصطناعي يعمل دون اتصال. ما تدّعيه صفحة Google Play وسياسة الخصوصية، وكيف تختلفان في التحليلات، وما لم يُتحقق منه.',
     audience:
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/on-device-llm-review-hero-zh.webp',
     title: 'On Device LLM 评测：适用于 Android 的免费离线聊天应用',
-    seoTitle: 'On Device LLM 评测：免费离线 Android 聊天应用',
+    seoTitle: 'On Device LLM 评测：免费离线 Android 聊天',
     intro:
       'On Device LLM 是一款适用于 Android 的免费聊天应用。根据其 Google Play 页面和隐私政策，它在手机上运行开放权重语言模型，无需账号。Google Play 上的标题是“Local LLM”；它与 iPhone 和 Mac 应用 On Device AI 及 AI on Device 是不同的应用。本评测反映其应用商店页面以及开发者网站和隐私政策在 2026 年 10 月 26 日的情况。',
     metaDescription:

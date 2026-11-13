@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/photoprism-review-hero-zh.webp',
     title: 'PhotoPrism 评测：自托管 AI 照片库',
-    seoTitle: 'PhotoPrism 评测：自托管 AI 照片库，Community 版免费',
+    seoTitle: 'PhotoPrism 评测：自托管 AI 照片库，社区版免费',
     intro:
       'PhotoPrism 是柏林公司 [PhotoPrism UG](https://www.photoprism.app) 推出的自托管照片和视频管理软件，运行在你自己的服务器上，内置 AI 模型可为图片打标签并识别人脸。Community 版免费且开源，付费会员可增加地图等功能。本评测基于该项目的网站、文档、隐私政策和 GitHub 仓库（2026 年 10 月 24 日查阅）；PromptQuorum 没有亲自实测该软件。',
     metaDescription:

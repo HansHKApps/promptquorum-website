@@ -24954,5 +24954,770 @@
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "fe18d7f3-6e05-4304-b7ea-662330b83159",
+    "slug": "/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "date": "2026-11-13T17:42:46.558Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات والسعر",
+        "new": "HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2c5c5460-cf1d-4ecf-94dc-5d268d531fd5",
+    "slug": "/ar/power-local-llm/anarlog-review",
+    "date": "2026-11-13T17:42:46.592Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Anarlog: ملاحظات اجتماعات بالذكاء الاصطناعي بلا بوت",
+        "new": "مراجعة Anarlog: ملاحظات اجتماعات ذكية بلا بوت"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b18c0d1b-23e4-48ae-83eb-10991b01fae8",
+    "slug": "/ja/power-local-llm/anarlog-review",
+    "date": "2026-11-13T17:42:46.623Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Anarlogレビュー：ボット不要のAI議事メモ（旧Hyprnote）",
+        "new": "Anarlogレビュー：AI議事メモ（旧Hyprnote）"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fd9857e5-5332-4208-b13f-100eb028870a",
+    "slug": "/zh/power-local-llm/anarlog-review",
+    "date": "2026-11-13T17:42:46.654Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Anarlog 评测：无机器人的 AI 会议笔记（前身 Hyprnote）",
+        "new": "Anarlog 评测：无机器人会议笔记（原Hyprnote）"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "cfff094d-41d3-4dd9-b97f-19c4d8327103",
+    "slug": "/ar/power-local-llm/asiden-review",
+    "date": "2026-11-13T17:42:46.685Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بشخصيات 3D وLive2D ومحادثة وذاكرة محليتين وذكاء سحابي اختياري. وما لم يُتحقق منه بعد في هذه المراجعة.",
+        "new": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بشخصيات 3D وLive2D ومحادثة وذاكرة محليتين وذكاء سحابي اختياري. وما لم يُتحقق منه."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f2f4c22e-847f-4491-ae96-279e3f68b2ab",
+    "slug": "/ar/power-local-llm/chaterminal-review",
+    "date": "2026-11-13T17:42:46.717Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات لم تُختبر.",
+        "new": "مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات غير مؤكدة"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b770ae0d-5007-4a3a-bb7c-5b5d52a97277",
+    "slug": "/power-local-llm/chaterminal-review",
+    "date": "2026-11-13T17:42:46.748Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads, purchases and unverified claims.",
+        "new": "Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads and unverified claims."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "cfde5293-75ee-44d2-9e01-c0ed9ed62418",
+    "slug": "/zh/power-local-llm/chaterminal-review",
+    "date": "2026-11-13T17:42:46.778Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mobile LM Server 评测：Android 本地模型与 API",
+        "new": "Mobile LM Server 评测：安卓本地模型与 API"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9932b3db-bed3-4bd1-bdc0-7eadcef4fcdc",
+    "slug": "/ar/power-local-llm/laria-review",
+    "date": "2026-11-13T17:42:46.809Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Laria: مساعد ذكاء اصطناعي لـ Android بنماذج محلية",
+        "new": "مراجعة Laria: مساعد ذكي لـ Android بنماذج محلية"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع ومغلق المصدر لـ Android، مع نماذج محلية قابلة للتنزيل ومزودين سحابيين اختياريين وأدوات للصور وهويات قابلة للتخصيص.",
+        "new": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع ومغلق المصدر لـ Android، مع نماذج محلية قابلة للتنزيل ومزودين سحابيين اختياريين وأدوات للصور وهويات مخصصة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2ab5c9f6-57a7-4da3-910a-2d6a0956e998",
+    "slug": "/ar/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.839Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة LibreDB Studio: محرّر SQL مع وكيل ذكاء اصطناعي محلي",
+        "new": "مراجعة LibreDB Studio: محرر SQL بوكيل ذكاء اصطناعي محلي"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة LibreDB Studio: محرّر SQL مجاني بترخيص MIT في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود.",
+        "new": "مراجعة LibreDB Studio: محرّر SQL مجاني (MIT) في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8e066776-6885-4961-b8df-d0faa7eaa3b3",
+    "slug": "/de/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.869Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LibreDB-Studio-Rezension: kostenloser, MIT-lizenzierter SQL-Editor im Browser für 41 Datenbank-Engines mit optionalem KI-Agenten für lokales Ollama. Setup, Grenzen.",
+        "new": "LibreDB-Studio-Rezension: kostenloser SQL-Editor (MIT) im Browser für 41 Datenbank-Engines, optionaler KI-Agent mit lokalem Ollama. Setup, Grenzen."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bac449cc-8399-436c-af0b-916645940da2",
+    "slug": "/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.899Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LibreDB Studio review: a free MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can run on local Ollama. Setup and limits.",
+        "new": "LibreDB Studio review: free, MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can use local Ollama. Setup, limits."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2135760e-ea66-40ac-811c-cf9ba5439cd3",
+    "slug": "/es/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.929Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de LibreDB Studio: editor SQL con agente de IA local",
+        "new": "Reseña de LibreDB Studio: editor SQL con agente IA local"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de LibreDB Studio: editor SQL gratuito con licencia MIT en el navegador para 41 motores de bases de datos, con agente de IA opcional que puede usar Ollama local.",
+        "new": "Reseña de LibreDB Studio: editor SQL gratuito (MIT) en el navegador para 41 motores de bases de datos, con agente de IA opcional que usa Ollama local."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d11d7fd1-9b32-46e6-a425-02de3a75b366",
+    "slug": "/fr/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.961Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de LibreDB Studio : éditeur SQL gratuit sous licence MIT dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local.",
+        "new": "Test de LibreDB Studio : éditeur SQL gratuit (MIT) dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c11c2eea-2f33-4c51-9632-4c617e0352e0",
+    "slug": "/ja/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.991Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LibreDB Studioレビュー：ローカルAIエージェント対応SQLエディタ",
+        "new": "LibreDB Studioレビュー：AI対応SQLエディタ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a390b75b-6e92-4fc6-9eaa-c888b387d25e",
+    "slug": "/pt/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:47.022Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do LibreDB Studio: editor SQL com agente de IA local",
+        "new": "Análise do LibreDB Studio: editor SQL com agente IA local"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Análise do LibreDB Studio: editor SQL gratuito com licença MIT no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que pode usar o Ollama local.",
+        "new": "Análise do LibreDB Studio: editor SQL gratuito (MIT) no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que usa Ollama local."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a5a38375-050d-4cfc-87cb-5a1260520f74",
+    "slug": "/ar/power-local-llm/linkwarden-review",
+    "date": "2026-11-13T17:42:47.053Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Linkwarden: إشارات مرجعية ذاتية الاستضافة ووسم ذكي",
+        "new": "مراجعة Linkwarden: إشارات مرجعية ذاتية الاستضافة"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Linkwarden: مدير إشارات مرجعية ذاتي الاستضافة يؤرشف الصفحات ويصنّف الروابط بنموذج Ollama محلي أو ذكاء سحابي. إعداد Docker وسعر Cloud؛ دون تجربة.",
+        "new": "مراجعة Linkwarden: مدير إشارات مرجعية ذاتي الاستضافة يؤرشف الصفحات ويصنّف الروابط بنموذج Ollama محلي أو ذكاء سحابي. إعداد Docker وسعر Cloud؛ دون تجربة"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3f9d5980-a194-40ab-a6c7-2080e739e199",
+    "slug": "/ja/power-local-llm/linkwarden-review",
+    "date": "2026-11-13T17:42:47.082Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Linkwardenレビュー：ローカルAI対応のセルフホスト型ブックマーク",
+        "new": "Linkwardenレビュー：セルフホスト型ブックマーク管理"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "693107a7-64c8-42fa-b094-735ff5da8e82",
+    "slug": "/ar/power-local-llm/lm-mini-review",
+    "date": "2026-11-13T17:42:47.112Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة LM Mini: تطبيق دردشة مجاني لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وماذا تقول سياسة الخصوصية.",
+        "new": "مراجعة LM Mini: دردشة مجانية لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وما تقوله سياسة الخصوصية."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a0eec91b-a551-4e55-bbbb-196fe9e522f6",
+    "slug": "/zh/power-local-llm/lm-mini-review",
+    "date": "2026-11-13T17:42:47.142Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Mini 评测：设备端与家用服务器 AI 的 iPhone 应用",
+        "new": "LM Mini 评测：设备端与家用服务器 AI 应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "18d4b924-cb77-404b-a4f1-1dfd12feb503",
+    "slug": "/zh/power-local-llm/localmcp-review",
+    "date": "2026-11-13T17:42:47.171Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LocalMCP 评测：适用于 Mac 数据的本地 MCP 服务器",
+        "new": "LocalMCP 评测：Mac 数据的本地 MCP 服务器"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f0e4f2b5-0b42-4fbf-8a74-65bf582dc874",
+    "slug": "/ja/power-local-llm/on-device-ai-translator-review",
+    "date": "2026-11-13T17:42:47.201Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On-Device AI Translatorレビュー：オフライン翻訳アプリ",
+        "new": "On-Device AI Translatorレビュー"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1146b034-ae68-46fc-ae25-4ca0838fbe14",
+    "slug": "/zh/power-local-llm/on-device-ai-translator-review",
+    "date": "2026-11-13T17:42:47.231Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On-Device AI Translator 评测:iPhone 离线翻译",
+        "new": "On-Device AI Translator 评测:离线翻译"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9c35e9ab-24df-4ede-bedd-219aa7f6b362",
+    "slug": "/ar/power-local-llm/on-device-llm-review",
+    "date": "2026-11-13T17:42:47.261Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وواجهة API محلية اختيارية.",
+        "new": "مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وAPI محلي اختياري."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1c7d4803-3cfb-4521-b7b0-27cdaa9ce122",
+    "slug": "/ja/power-local-llm/on-device-llm-review",
+    "date": "2026-11-13T17:42:47.291Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On Device LLMレビュー:Android向け無料オフラインチャット",
+        "new": "On Device LLMレビュー:Androidオフライン"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "25307f86-42d7-4360-9505-e5bb67dd6d7d",
+    "slug": "/zh/power-local-llm/on-device-llm-review",
+    "date": "2026-11-13T17:42:47.321Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On Device LLM 评测：免费离线 Android 聊天应用",
+        "new": "On Device LLM 评测：免费离线 Android 聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "cbffea1f-3e25-4efc-ac0e-d38a5eb94d3e",
+    "slug": "/ja/power-local-llm/openclient-review",
+    "date": "2026-11-13T17:42:47.351Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenClientレビュー:Ollama・LiteLLM向け無料チャット",
+        "new": "OpenClientレビュー:Ollama・LiteLLM対応"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4800df8c-a6c3-41b7-b562-3e7a46c9496e",
+    "slug": "/zh/power-local-llm/openclient-review",
+    "date": "2026-11-13T17:42:47.382Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenClient 评测：Ollama 与 LiteLLM 免费聊天应用",
+        "new": "OpenClient评测：Ollama与LiteLLM聊天应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "aa3eabd1-26a3-40bf-b0a0-558f393e0920",
+    "slug": "/ar/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.411Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية والنقاط غير المؤكدة.",
+        "new": "مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية وأسئلة مفتوحة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0fbca9d4-628b-4e53-8cbe-714d5d25edcd",
+    "slug": "/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.442Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, cloud pricing, privacy policy and open questions.",
+        "new": "Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, MCP, cloud pricing, privacy and open questions."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'phone harness mcp' 23 impr; meta now names MCP (body covers the hosted MCP endpoint)",
+    "queries": [
+      "phone harness",
+      "phone-harness",
+      "phone harness mcp",
+      "phone harness github",
+      "mobile harness",
+      "android harness"
+    ],
+    "baseline": {
+      "position": 10.1,
+      "impressions": 220,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b2be57ba-d536-4e63-be33-a7b8f130e2c2",
+    "slug": "/ja/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.471Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phone Harness レビュー:iPhone・Android操作",
+        "new": "Phone Harnessレビュー:iPhoneとAndroid"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "169d0588-b099-45bc-897d-713845b43b31",
+    "slug": "/zh/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.501Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phone Harness评测：让智能体操控iPhone与Android手机",
+        "new": "Phone Harness评测：智能体操控iPhone与安卓"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4e728dab-0571-46cc-98ba-7974b48c5cfd",
+    "slug": "/zh/power-local-llm/photoprism-review",
+    "date": "2026-11-13T17:42:47.531Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PhotoPrism 评测：自托管 AI 照片库，Community 版免费",
+        "new": "PhotoPrism 评测：自托管 AI 照片库，社区版免费"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "642d8ccb-3b3c-4cf7-8f14-6ff7bfa76861",
+    "slug": "/ja/power-local-llm/picoclaw-review",
+    "date": "2026-11-13T17:42:47.560Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PicoClawレビュー：Go製の軽量オープンソースAIエージェント",
+        "new": "PicoClawレビュー：Go製オープンソースAIエージェント"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e70f230d-d306-4d88-a9dc-b8910ec54b7d",
+    "slug": "/zh/power-local-llm/picoclaw-review",
+    "date": "2026-11-13T17:42:47.589Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "PicoClaw 评测：Sipeed 用 Go 编写的免费 AI 智能体，适用于小型开发板、Android 和桌面，支持 Ollama 与 vLLM，MIT 许可证。处于早期阶段，未经实测。",
+        "new": "PicoClaw 评测：Sipeed 用 Go 编写的免费 AI 智能体，适用于小型开发板、Android 和桌面，支持 Ollama 与 vLLM，MIT 许可证。处于早期阶段，尚未验证。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: zh meta said 实测 (measured) but page did not measure; reworded to 尚未验证 (not yet verified)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2310b1d6-4a6d-41ec-9a5d-3f6928f15f55",
+    "slug": "/ar/power-local-llm/pocketllm-lite-review",
+    "date": "2026-11-13T17:42:47.619Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة PocketLLM Lite: دردشة ذكاء اصطناعي محلية لـ Android",
+        "new": "مراجعة PocketLLM Lite: دردشة AI محلية لـ Android"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e80d67ed-b04d-4b0c-9a3f-a93d36ebe6c5",
+    "slug": "/ja/power-local-llm/pocketllm-lite-review",
+    "date": "2026-11-13T17:42:47.649Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PocketLLM Liteレビュー：AndroidのローカルAIチャット",
+        "new": "PocketLLM Liteレビュー：AndroidローカルAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "753a517b-69d0-4088-902b-62b298ecea53",
+    "slug": "/zh/power-local-llm/pocketllm-lite-review",
+    "date": "2026-11-13T17:42:47.678Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PocketLLM Lite 评测：Android 本地 AI 聊天应用",
+        "new": "PocketLLM Lite 评测：Android 本地AI聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5cf79fa3-6fb2-4d9b-a30a-e390001ca8c1",
+    "slug": "/ar/power-local-llm/reins-review",
+    "date": "2026-11-13T17:42:47.707Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "مراجعة Reins: تطبيق دردشة لـ iPhone مع Ollama وLM Studio",
+        "new": "مراجعة Reins: تطبيق دردشة iPhone مع Ollama وLM Studio"
+      },
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Reins: تطبيق دردشة لـ iPhone مع Ollama وLM Studio",
+        "new": "مراجعة Reins: تطبيق دردشة iPhone مع Ollama وLM Studio"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e6ad5948-f50e-4cfc-87e0-42ad8e56ddfc",
+    "slug": "/ja/power-local-llm/reins-review",
+    "date": "2026-11-13T17:42:47.737Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reinsレビュー：Ollama・LM Studio向けiPhoneチャット",
+        "new": "Reinsレビュー：Ollama対応iPhoneチャット"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6b656415-43c0-4185-ad7e-90e1ed3e19e8",
+    "slug": "/zh/power-local-llm/reins-review",
+    "date": "2026-11-13T17:42:47.766Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reins 评测：Ollama、LM Studio 的 iPhone 客户端",
+        "new": "Reins 评测：Ollama 的 iPhone 客户端"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f7dd27bb-572d-4848-bd4f-167c5a7fd01c",
+    "slug": "/ja/power-local-llm/tolaria-review",
+    "date": "2026-11-13T17:42:47.797Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Tolariaレビュー：GitとAIに対応するMarkdownノート",
+        "new": "Tolariaレビュー：Git管理のMarkdownノートとAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ca30631a-e8f9-4886-abaa-f591f7999eb7",
+    "slug": "/zh/power-local-llm/tolaria-review",
+    "date": "2026-11-13T17:42:47.827Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Tolaria 评测：支持 Git 与 AI 的 Markdown 笔记",
+        "new": "Tolaria 评测：Git+AI 的 Markdown 笔记"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "93602999-c3b0-446e-a123-5a9bf10e5c1f",
+    "slug": "/ar/power-local-llm/tonfotos-review",
+    "date": "2026-11-13T17:42:47.857Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة مفتوحة عن الخصوصية.",
+        "new": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة خصوصية مفتوحة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "99e228bf-2427-4b56-a909-fc93d7391921",
+    "slug": "/power-local-llm/voicebox-review",
+    "date": "2026-11-13T17:42:47.886Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Voicebox review: MIT-licensed local voice studio for Mac and Windows with voice cloning, text-to-speech, Whisper dictation and an MCP server. Not tested.",
+        "new": "Voicebox review: free MIT-licensed local voice studio for Mac and Windows. Voice cloning, TTS, Whisper dictation, requirements, privacy. Not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'is voicebox free' and 'system requirements' queries; meta now says free, requirements, privacy (body has Plans, Requirements, Data Flow sections); 2 targetKeywords added",
+    "queries": [
+      "voicebox github",
+      "voicebox",
+      "voicebox system requirements",
+      "is voicebox free",
+      "is voicebox legit",
+      "voicebox.sh review",
+      "voicebox review",
+      "voice studio vs voicebox"
+    ],
+    "baseline": {
+      "position": 8.3,
+      "impressions": 161,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "71ba7d49-6734-461d-b8cf-3969b1a5eb8e",
+    "slug": "/ar/power-local-llm/xberg-review",
+    "date": "2026-11-13T17:42:47.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص.",
+        "new": "Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "240b7463-a56e-48c7-a18d-d6a3b61d1c60",
+    "slug": "/ja/power-local-llm/xberg-review",
+    "date": "2026-11-13T17:42:47.946Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Xbergレビュー：LLM・RAG向けオープンソース文書抽出エンジン",
+        "new": "Xbergレビュー：LLM向けオープンソース文書抽出エンジン"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
   }
 ]

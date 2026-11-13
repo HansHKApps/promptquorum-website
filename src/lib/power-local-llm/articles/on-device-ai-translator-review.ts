@@ -1131,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/on-device-ai-translator-review-hero-ja.webp',
     title: 'On-Device AI Translatorレビュー：iPhoneで使うオフラインAI翻訳',
-    seoTitle: 'On-Device AI Translatorレビュー：オフライン翻訳アプリ',
+    seoTitle: 'On-Device AI Translatorレビュー',
     intro:
       'On-Device AI Translatorは、App Storeで「Changwen Li（昌文 李）」と表示される個人開発者によるiPhone向け翻訳アプリです。Appleの標準翻訳か、端末上で動く言語モデルで翻訳し、最初のリリースは2026年3月1日でした。本レビューは、2026年10月24日に確認したApp Storeの掲載情報、開発者のサポートページ、プライバシーポリシーに基づいています。',
     metaDescription:
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/on-device-ai-translator-review-hero-zh.webp',
     title: 'On-Device AI Translator 评测：iPhone 上的离线 AI 翻译',
-    seoTitle: 'On-Device AI Translator 评测:iPhone 离线翻译',
+    seoTitle: 'On-Device AI Translator 评测:离线翻译',
     intro:
       'On-Device AI Translator 是一款 iPhone 翻译应用,由在 App Store 中署名为 Changwen Li(昌文 李)的个人开发者提供。它使用 Apple 内置翻译或在手机上运行的语言模型进行翻译,首次发布于 2026 年 3 月 1 日。本评测基于 2026 年 10 月 24 日核对的 App Store 页面、开发者支持页面和隐私政策。',
     metaDescription:

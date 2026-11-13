@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/hp-z2-mini-g1a-local-ai-workstation-hero-ar.webp',
     title: 'HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم',
-    seoTitle: 'HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات والسعر',
+    seoTitle: 'HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات',
     intro:
       'جهاز HP Z2 Mini G1a محطة عمل بحجم نحو 3 لترات، بمعالج AMD Ryzen AI Max+ PRO 395 وذاكرة LPDDR5X ملحومة بسعة تصل إلى 128 GB، تقول HP إن ما يصل إلى 96 GB منها يمكن تخصيصه لرقاقة الرسومات. هو جهاز خط محطات العمل من HP على منصة Strix Halo، ويستخدم نسخة PRO من Ryzen AI Max+ 395 ويوفر فتحات توسعة Flex I/O. تستند هذه الصفحة إلى مواصفات HP وقوائم البائعين وتقارير أطراف ثالثة؛ ولم تختبر PromptQuorum الجهاز. تتفاوت الأسعار الأمريكية بعدة آلاف من الدولارات بين البائعين، لذلك يذكر كل سعر أدناه مصدره.',
     metaDescription:

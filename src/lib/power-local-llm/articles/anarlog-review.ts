@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/anarlog-review-hero-ja.webp',
     title: 'Anarlogレビュー：旧Hyprnote、オープンソースのAI議事メモ',
-    seoTitle: 'Anarlogレビュー：ボット不要のAI議事メモ（旧Hyprnote）',
+    seoTitle: 'Anarlogレビュー：AI議事メモ（旧Hyprnote）',
     intro:
       'Anarlogは[Fastrepl, Inc.](https://anarlog.so)が提供する、macOS・Windows・Linux向けのオープンソースAI議事メモアプリで、会議にボットを参加させずにパソコンの音声を録音します。このレビューは公式サイト、ドキュメント、プライバシーポリシー、GitHubリポジトリ（2026年10月24日確認）に基づいており、PromptQuorumは実機での検証を行っていません。',
     metaDescription:
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/anarlog-review-hero-ar.webp',
     title: 'مراجعة Anarlog: ملاحظات اجتماعات بالذكاء الاصطناعي مفتوحة المصدر، كان اسمه Hyprnote',
-    seoTitle: 'مراجعة Anarlog: ملاحظات اجتماعات بالذكاء الاصطناعي بلا بوت',
+    seoTitle: 'مراجعة Anarlog: ملاحظات اجتماعات ذكية بلا بوت',
     intro:
       'Anarlog دفتر ملاحظات اجتماعات بالذكاء الاصطناعي ومفتوح المصدر من [Fastrepl, Inc.](https://anarlog.so) يعمل على macOS وWindows وLinux، ويسجّل صوت حاسوبك دون إرسال بوت إلى المكالمة. تستند هذه المراجعة إلى الموقع الرسمي والوثائق وسياسة الخصوصية ومستودع GitHub، وجرى الاطلاع عليها في 24 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/anarlog-review-hero-zh.webp',
     title: 'Anarlog 评测：开源 AI 会议笔记，前身为 Hyprnote',
-    seoTitle: 'Anarlog 评测：无机器人的 AI 会议笔记（前身 Hyprnote）',
+    seoTitle: 'Anarlog 评测：无机器人会议笔记（原Hyprnote）',
     intro:
       'Anarlog 是 [Fastrepl, Inc.](https://anarlog.so) 推出的开源 AI 会议笔记应用，支持 macOS、Windows 和 Linux，无需向会议派出机器人即可录制电脑音频。本评测基于官网、文档、隐私政策和 GitHub 仓库（2026 年 10 月 24 日核对）；PromptQuorum 未对该应用做实际测试。',
     metaDescription:

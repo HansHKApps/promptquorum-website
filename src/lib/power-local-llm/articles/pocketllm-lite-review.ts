@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketllm-lite-review-hero-ja.webp',
     title: 'PocketLLM Liteレビュー：Android向けローカルAIチャットアプリ',
-    seoTitle: 'PocketLLM Liteレビュー：AndroidのローカルAIチャット',
+    seoTitle: 'PocketLLM Liteレビュー：AndroidローカルAI',
     intro:
       'PocketLLM Liteは、対応モデルを端末上で実行するか、自分のOllamaまたはOpenAI互換サーバーに接続する、無料でMITライセンスのAndroid用チャットアプリです。開発者名は公表されておらず、コードは[GitHub組織PocketLLM](https://github.com/PocketLLM/pocketllm-lite)にあり、製品専用サイトは[pocketllm-lite.vercel.app](https://pocketllm-lite.vercel.app)です。このレビューは、そのサイト、GitHubのリリースv1.0.40、リポジトリの文書に基づき、2026年10月24日に確認しました。PromptQuorumはアプリをインストールもテストもしていません。',
     metaDescription:
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketllm-lite-review-hero-ar.webp',
     title: 'مراجعة PocketLLM Lite: تطبيق دردشة بالذكاء الاصطناعي المحلي لـ Android',
-    seoTitle: 'مراجعة PocketLLM Lite: دردشة ذكاء اصطناعي محلية لـ Android',
+    seoTitle: 'مراجعة PocketLLM Lite: دردشة AI محلية لـ Android',
     intro:
       'PocketLLM Lite تطبيق دردشة لنظام Android، مجاني وبترخيص MIT، يشغّل نماذج متوافقة على الهاتف أو يتصل بخادم Ollama أو خادم متوافق مع OpenAI تملكه. لا يُذكر اسم مطوّر؛ فالشيفرة في [منظمة PocketLLM على GitHub](https://github.com/PocketLLM/pocketllm-lite) وللمنتج موقع خاص على [pocketllm-lite.vercel.app](https://pocketllm-lite.vercel.app). تستند هذه المراجعة إلى ذلك الموقع وإصدار GitHub رقم v1.0.40 ووثائق المستودع، وقد جرى التحقق منها في 24 أكتوبر 2026؛ ولم تثبّت PromptQuorum التطبيق ولم تختبره.',
     metaDescription:
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketllm-lite-review-hero-zh.webp',
     title: 'PocketLLM Lite 评测：Android 本地优先 AI 聊天应用',
-    seoTitle: 'PocketLLM Lite 评测：Android 本地 AI 聊天应用',
+    seoTitle: 'PocketLLM Lite 评测：Android 本地AI聊天',
     intro:
       'PocketLLM Lite 是一款免费、采用 MIT 许可的 Android 聊天应用，可在手机上运行兼容模型，或连接你自己的 Ollama 或兼容 OpenAI 的服务器。项目未公布开发者姓名，代码位于 [GitHub 组织 PocketLLM](https://github.com/PocketLLM/pocketllm-lite)，产品另有专属网站 [pocketllm-lite.vercel.app](https://pocketllm-lite.vercel.app)。本评测基于该网站、GitHub 发布版 v1.0.40 和仓库文档，核查日期为 2026 年 10 月 24 日；PromptQuorum 未安装也未测试该应用。',
     metaDescription:

@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Phone Harness is an MIT-licensed command-line tool from Phone Harness Inc. that, per its own pages, lets a coding agent such as Claude Code or Codex tap, type and scroll a real iPhone or Android phone, with optional hosted cloud phones. This review reflects the maker\'s site, privacy policy, repository and PyPI listing as checked on 8 November 2026.',
     metaDescription:
-      'Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, cloud pricing, privacy policy and open questions.',
+      'Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, MCP, cloud pricing, privacy and open questions.',
     twitterDescription:
       'Phone Harness review: an MIT-licensed CLI for driving a real iPhone or Android phone from a coding agent. Requirements, cloud prices and what is unverified.',
     audience:
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/phone-harness-review-hero-ja.webp',
     title: 'Phone Harness レビュー:コーディングエージェントでiPhoneやAndroidを操作する',
-    seoTitle: 'Phone Harness レビュー:iPhone・Android操作',
+    seoTitle: 'Phone Harnessレビュー:iPhoneとAndroid',
     intro:
       'Phone Harnessは、Phone Harness Inc.が公開しているMITライセンスのコマンドラインツールです。公式ページによると、Claude CodeやCodexなどのコーディングエージェントが実機のiPhoneやAndroidをタップ・入力・スクロールでき、ホスト型のクラウドフォンも任意で利用できます。このレビューは、2026年11月8日に確認した提供元のサイト、プライバシーポリシー、リポジトリ、PyPIの掲載内容に基づいています。',
     metaDescription:
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/phone-harness-review-hero-zh.webp',
     title: 'Phone Harness 评测：让编程智能体使用你的 iPhone 或 Android 手机',
-    seoTitle: 'Phone Harness评测：让智能体操控iPhone与Android手机',
+    seoTitle: 'Phone Harness评测：智能体操控iPhone与安卓',
     intro:
       'Phone Harness 是 Phone Harness Inc. 推出的 MIT 许可命令行工具。据其官方页面介绍，它能让 Claude Code 或 Codex 等编程智能体点击、输入并滚动真实的 iPhone 或 Android 手机，并可选用托管的云手机。本评测依据 2026 年 11 月 8 日查阅的厂商网站、隐私政策、代码仓库和 PyPI 页面。',
     metaDescription:
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Phone Harness أداة سطر أوامر مفتوحة المصدر بترخيص MIT من شركة Phone Harness Inc.، وبحسب صفحاتها الخاصة تتيح لوكيل برمجة مثل Claude Code أو Codex النقر والكتابة والتمرير على هاتف iPhone أو Android حقيقي، مع هواتف سحابية مستضافة اختيارية. تعكس هذه المراجعة موقع الجهة المطورة وسياسة الخصوصية والمستودع وصفحة PyPI كما جرى فحصها في 8 نوفمبر 2026.',
     metaDescription:
-      'مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية والنقاط غير المؤكدة.',
+      'مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية وأسئلة مفتوحة.',
     twitterDescription:
       'مراجعة Phone Harness: أداة سطر أوامر بترخيص MIT لتشغيل هاتف iPhone أو Android حقيقي من وكيل برمجة. المتطلبات وأسعار السحابة وما لم يتم التحقق منه.',
     audience:
