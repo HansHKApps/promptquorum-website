@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Benefit: 'Analysis on your own Mac',
-            'What it means in real use': 'With Ollama or LM Studio, screenshots stay on the machine.',
+            'What it means in real use': 'Per the README, with Ollama or LM Studio, screenshots stay on the machine.',
             'Limitation / caveat': 'You install and run the model yourself; local inference is demanding on GPU and battery per the homepage.',
           },
           {
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          'Dayflow is a good fit if you use a Mac, want an automatic and open-source record of your workday, and are ready to run Ollama or LM Studio so the analysis stays on your machine. It has an MIT license, a free tier and a release from this week.',
+          'Dayflow is a good fit if you use a Mac, want an automatic and open-source record of your workday, and are ready to run Ollama or LM Studio so the analysis stays on your machine. It has an MIT license, a free tier and a release on 10 November 2026.',
           'The caveats are scope and verifiability: Mac only, a separate local-model setup, cloud paths that send screenshots away, and privacy and accuracy claims that PromptQuorum could not check. Try the free local setup before considering Pro.',
         ],
       },
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Vorteil: 'Analyse auf Ihrem eigenen Mac',
-            'Was das im Alltag bedeutet': 'Mit Ollama oder LM Studio bleiben Bildschirmfotos auf dem Rechner.',
+            'Was das im Alltag bedeutet': 'Laut README bleiben Bildschirmfotos mit Ollama oder LM Studio auf dem Rechner.',
             'Einschränkung / Hinweis': 'Sie installieren und starten das Modell selbst; lokale Inferenz belastet laut Startseite GPU und Akku stark.',
           },
           {
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content: [
-          'Dayflow passt, wenn Sie einen Mac nutzen, Ihren Arbeitstag automatisch und quelloffen festhalten möchten und bereit sind, Ollama oder LM Studio zu betreiben, damit die Analyse auf Ihrem Rechner bleibt. Es hat eine MIT-Lizenz, einen kostenlosen Tarif und ein Release aus dieser Woche.',
+          'Dayflow passt, wenn Sie einen Mac nutzen, Ihren Arbeitstag automatisch und quelloffen festhalten möchten und bereit sind, Ollama oder LM Studio zu betreiben, damit die Analyse auf Ihrem Rechner bleibt. Es hat eine MIT-Lizenz, einen kostenlosen Tarif und ein Release vom 10. November 2026.',
           'Die Vorbehalte sind Umfang und Überprüfbarkeit: nur Mac, eine separate Einrichtung des lokalen Modells, Cloud-Wege, die Bildschirmfotos versenden, und Datenschutz- und Genauigkeitsangaben, die PromptQuorum nicht prüfen konnte. Probieren Sie die kostenlose lokale Einrichtung, bevor Sie Pro erwägen.',
         ],
       },
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Avantage: 'Analyse sur votre propre Mac',
-            'Ce que cela donne à l’usage': 'Avec Ollama ou LM Studio, les captures restent sur la machine.',
+            'Ce que cela donne à l’usage': 'Selon le README, avec Ollama ou LM Studio, les captures restent sur la machine.',
             'Limite / réserve': 'Vous installez et lancez le modèle vous-même ; selon la page d’accueil, l’inférence locale sollicite fortement le GPU et la batterie.',
           },
           {
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          'Dayflow convient si vous utilisez un Mac, voulez un suivi automatique et open source de votre journée de travail, et êtes prêt à faire tourner Ollama ou LM Studio pour que l’analyse reste sur votre machine. Elle a une licence MIT, une offre gratuite et une version sortie cette semaine.',
+          'Dayflow convient si vous utilisez un Mac, voulez un suivi automatique et open source de votre journée de travail, et êtes prêt à faire tourner Ollama ou LM Studio pour que l’analyse reste sur votre machine. Elle a une licence MIT, une offre gratuite et une version du 10 novembre 2026.',
           'Les réserves tiennent à la portée et à la vérifiabilité : Mac uniquement, une configuration de modèle local à part, des voies cloud qui envoient les captures ailleurs, et des affirmations de confidentialité et de précision que PromptQuorum n’a pas pu vérifier. Essayez la configuration locale gratuite avant d’envisager Pro.',
         ],
       },
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'メリット': '自分のMac上での分析',
-            '実際の使い勝手': 'OllamaまたはLM Studioを使えば、スクリーンショットはMacにとどまります。',
+            '実際の使い勝手': 'READMEによると、OllamaまたはLM Studioを使えば、スクリーンショットはMacにとどまります。',
             '制限・注意点': 'モデルは自分で導入して起動します。トップページによれば、ローカル推論はGPUとバッテリーへの負荷が高めです。',
           },
           {
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content: [
-          'Macを使っていて、仕事の一日を自動かつオープンソースで記録したく、分析を手元にとどめるためにOllamaやLM Studioを動かす用意があるなら、Dayflowは向いています。MITライセンス、無料プラン、今週のリリースがあります。',
+          'Macを使っていて、仕事の一日を自動かつオープンソースで記録したく、分析を手元にとどめるためにOllamaやLM Studioを動かす用意があるなら、Dayflowは向いています。MITライセンス、無料プラン、2026年11月10日のリリースがあります。',
           '注意点は、対象範囲と検証のしにくさです。Mac専用であること、ローカルモデルを別途用意する必要があること、クラウド経路ではスクリーンショットが外部に送られること、そしてPromptQuorumが確認できなかったプライバシーと精度に関する記載です。Proを検討する前に、無料のローカル構成を試してください。',
         ],
       },
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '优势': '在你自己的Mac上分析',
-            '实际使用中的意义': '使用Ollama或LM Studio时，截图留在本机。',
+            '实际使用中的意义': '据README称，使用Ollama或LM Studio时，截图留在本机。',
             '局限 / 注意事项': '模型需要你自己安装和运行；官网称本地推理对GPU和电池要求较高。',
           },
           {
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content: [
-          '如果你用Mac，想要自动且开源的工作日记录，并愿意运行Ollama或LM Studio让分析留在本机，Dayflow就很合适。它有MIT许可证、免费套餐，以及本周发布的版本。',
+          '如果你用Mac，想要自动且开源的工作日记录，并愿意运行Ollama或LM Studio让分析留在本机，Dayflow就很合适。它有MIT许可证、免费套餐，以及2026年11月10日发布的版本。',
           '需要留意的是适用范围和可验证性：仅限Mac，需要另行配置本地模型，云端路径会把截图发送出去，以及PromptQuorum无法核实的隐私和准确性说法。考虑Pro之前，先试试免费的本地方案。',
         ],
       },
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Ventaja: 'Análisis en tu propio Mac',
-            'Qué significa en el uso real': 'Con Ollama o LM Studio, las capturas se quedan en el equipo.',
+            'Qué significa en el uso real': 'Según el README, con Ollama o LM Studio las capturas se quedan en el equipo.',
             'Limitación / advertencia': 'Instalas y ejecutas el modelo tú; según la página de inicio, la inferencia local exige mucho a la GPU y la batería.',
           },
           {
@@ -2079,7 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content: [
-          'Dayflow encaja si usas un Mac, quieres un registro automático y de código abierto de tu jornada y estás dispuesto a ejecutar Ollama o LM Studio para que el análisis se quede en tu equipo. Tiene licencia MIT, un plan gratuito y una versión de esta semana.',
+          'Dayflow encaja si usas un Mac, quieres un registro automático y de código abierto de tu jornada y estás dispuesto a ejecutar Ollama o LM Studio para que el análisis se quede en tu equipo. Tiene licencia MIT, un plan gratuito y una versión del 10 de noviembre de 2026.',
           'Las reservas son el alcance y la verificabilidad: solo Mac, una configuración aparte del modelo local, rutas en la nube que envían las capturas fuera y afirmaciones de privacidad y precisión que PromptQuorum no pudo comprobar. Prueba la configuración local gratuita antes de plantearte Pro.',
         ],
       },
@@ -2314,7 +2314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Vantagem: 'Análise no seu próprio Mac',
-            'O que significa na prática': 'Com Ollama ou LM Studio, as capturas ficam na máquina.',
+            'O que significa na prática': 'Segundo o README, com Ollama ou LM Studio as capturas ficam na máquina.',
             'Limitação / ressalva': 'Você instala e executa o modelo; segundo a página inicial, a inferência local exige bastante da GPU e da bateria.',
           },
           {
@@ -2429,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content: [
-          'O Dayflow é uma boa opção se você usa um Mac, quer um registro automático e de código aberto do seu dia de trabalho e está disposto a rodar Ollama ou LM Studio para que a análise fique na sua máquina. Tem licença MIT, um plano gratuito e uma versão desta semana.',
+          'O Dayflow é uma boa opção se você usa um Mac, quer um registro automático e de código aberto do seu dia de trabalho e está disposto a rodar Ollama ou LM Studio para que a análise fique na sua máquina. Tem licença MIT, um plano gratuito e uma versão de 10 de novembro de 2026.',
           'As ressalvas são o escopo e a verificabilidade: só Mac, uma configuração à parte do modelo local, caminhos na nuvem que enviam as capturas para fora e afirmações de privacidade e de precisão que o PromptQuorum não pôde verificar. Experimente a configuração local gratuita antes de considerar o Pro.',
         ],
       },
@@ -2664,7 +2664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'الميزة': 'التحليل على جهاز Mac الخاص بك',
-            'ما تعنيه في الاستخدام الفعلي': 'مع Ollama أو LM Studio تبقى لقطات الشاشة على الجهاز.',
+            'ما تعنيه في الاستخدام الفعلي': 'بحسب README، مع Ollama أو LM Studio تبقى لقطات الشاشة على الجهاز.',
             'القيد / تنبيه': 'تثبّت النموذج وتشغّله بنفسك؛ وبحسب الصفحة الرئيسية فإن الاستدلال المحلي يرهق وحدة GPU والبطارية.',
           },
           {
@@ -2779,7 +2779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content: [
-          'يناسب Dayflow من يستخدم جهاز Mac ويريد سجلًا تلقائيًا ومفتوح المصدر ليوم عمله ومستعدًا لتشغيل Ollama أو LM Studio كي يبقى التحليل على جهازه. له ترخيص MIT وخطة مجانية وإصدار من هذا الأسبوع.',
+          'يناسب Dayflow من يستخدم جهاز Mac ويريد سجلًا تلقائيًا ومفتوح المصدر ليوم عمله ومستعدًا لتشغيل Ollama أو LM Studio كي يبقى التحليل على جهازه. له ترخيص MIT وخطة مجانية وإصدار بتاريخ 10 نوفمبر 2026.',
           'التحفظات تتعلق بالنطاق وإمكانية التحقق: لأجهزة Mac فقط، وإعداد منفصل للنموذج المحلي، ومسارات سحابية ترسل لقطات الشاشة إلى الخارج، وادعاءات خصوصية ودقة لم تستطع PromptQuorum التحقق منها. جرّب الإعداد المحلي المجاني قبل التفكير في Pro.',
         ],
       },
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '장점': '내 Mac에서 분석',
-            '실제 사용에서의 의미': 'Ollama나 LM Studio를 쓰면 스크린샷이 기기에 머뭅니다.',
+            '실제 사용에서의 의미': 'README에 따르면 Ollama나 LM Studio를 쓰면 스크린샷이 기기에 머뭅니다.',
             '한계 / 주의점': '모델은 직접 설치해 실행해야 하며, 홈페이지에 따르면 로컬 추론은 GPU와 배터리 부담이 큽니다.',
           },
           {
@@ -3129,7 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content: [
-          'Mac을 사용하고, 업무일을 자동으로 그리고 오픈소스로 기록하고 싶으며, 분석을 내 기기에 두기 위해 Ollama나 LM Studio를 실행할 준비가 되어 있다면 Dayflow가 잘 맞습니다. MIT 라이선스, 무료 플랜, 이번 주의 릴리스가 있습니다.',
+          'Mac을 사용하고, 업무일을 자동으로 그리고 오픈소스로 기록하고 싶으며, 분석을 내 기기에 두기 위해 Ollama나 LM Studio를 실행할 준비가 되어 있다면 Dayflow가 잘 맞습니다. MIT 라이선스, 무료 플랜, 2026년 11월 10일의 릴리스가 있습니다.',
           '주의할 점은 범위와 검증 가능성입니다. Mac 전용이고, 로컬 모델을 따로 설정해야 하며, 클라우드 경로에서는 스크린샷이 외부로 전송되고, PromptQuorum이 확인하지 못한 개인정보 보호와 정확도에 관한 주장이 있습니다. Pro를 고려하기 전에 무료 로컬 구성을 먼저 사용해 보십시오.',
         ],
       },
