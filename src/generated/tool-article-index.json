@@ -11,6 +11,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -64,25 +80,9 @@
         "url": "/local-llms/best-mini-pcs-local-llm",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-models-apple-silicon-2026",
-        "title": "Best Ollama Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB",
-        "url": "/local-llms/best-models-apple-silicon-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-much-vram-local-llm",
-        "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
-        "url": "/local-llms/how-much-vram-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
-    "totalCount": 346,
+    "totalCount": 348,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "soc2-iso27001-self-hosted-llm-compliance",
         "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
         "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
         "dateModified": "2026-11-07",
         "tier": "about"
       }
@@ -861,6 +861,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -914,25 +930,9 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-11-07",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atlarix-review",
-        "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-        "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-11-07",
-        "tier": "about"
       }
     ],
-    "totalCount": 172,
+    "totalCount": 173,
     "capped": true
   },
   "Atomic Chat": {
@@ -993,6 +993,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -1004,14 +1012,6 @@
         "slug": "best-local-ai-app-low-end-pc",
         "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-06",
         "tier": "about"
       },
@@ -1165,18 +1165,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-11-10",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -1251,18 +1251,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-11-10",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-11-10",
         "tier": "about"
       },
       {
@@ -2089,6 +2089,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -2101,14 +2109,6 @@
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -2647,6 +2647,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -2659,14 +2667,6 @@
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -6792,9 +6792,17 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Off Grid AI": {
@@ -11885,6 +11893,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -11896,14 +11912,6 @@
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-06",
         "tier": "about"
       },
@@ -12045,6 +12053,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
@@ -12098,25 +12122,9 @@
         "url": "/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-workstation-build-guide",
-        "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
-        "url": "/power-local-llm/local-ai-workstation-build-guide",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 253,
+    "totalCount": 254,
     "capped": true
   },
   "Qdrant": {
@@ -13610,6 +13618,34 @@
         "slug": "argos-translate-review",
         "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
         "url": "/power-local-llm/argos-translate-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Linguist": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "linguister-review",
+        "title": "Linguist Review: Open-Source Browser Translator With an Offline Mode",
+        "url": "/power-local-llm/linguister-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Dayflow": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
         "dateModified": "2026-11-13",
         "tier": "about"
       }
