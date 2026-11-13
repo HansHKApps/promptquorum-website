@@ -19603,6 +19603,87 @@
   },
   {
     "lang": "en",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: Specs, Price and Verdict",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) against the NVIDIA DGX Spark: sourced specs, US prices, networking, and who should skip each.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "GMKtec EVO-X5 Pro vs. DGX Spark: Specs, Preis und Fazit",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) gegen NVIDIA DGX Spark: Specs, US-Preise mit Quellen, Netzwerk und für wen welches Gerät nichts ist.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark : specs, prix et verdict",
+    "excerpt": "GMKtec EVO-X5 Pro (192 Go, Ryzen AI Max+ PRO 495) face au NVIDIA DGX Spark : specs sourcées, prix US, réseau et pour qui chacun est à éviter.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: 仕様・価格・総評",
+    "excerpt": "192GBのGMKtec EVO-X5 Pro（Ryzen AI Max+ PRO 495）とNVIDIA DGX Sparkを比較。情報源つきの仕様、米国価格、ネットワーク、それぞれを見送るべき人を解説します。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "GMKtec EVO-X5 Pro对比DGX Spark：规格、价格与结论",
+    "excerpt": "GMKtec EVO-X5 Pro（192 GB，Ryzen AI Max+ PRO 495）对比NVIDIA DGX Spark：有来源的规格、美国价格、网络，以及哪些人应跳过哪一款。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: especificaciones, precio y veredicto",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) frente a la NVIDIA DGX Spark: especificaciones con fuentes, precios en EE. UU., red y a quién no encaja.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "GMKtec EVO-X5 Pro vs DGX Spark: especificações, preço e veredito",
+    "excerpt": "GMKtec EVO-X5 Pro (192 GB, Ryzen AI Max+ PRO 495) contra o NVIDIA DGX Spark: specs com fontes, preços nos EUA, rede e quem deve evitar cada um.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "GMKtec EVO-X5 Pro مقابل DGX Spark: المواصفات والسعر والحكم",
+    "excerpt": "GMKtec EVO-X5 Pro (ذاكرة 192 GB ومعالج Ryzen AI Max+ PRO 495) مقابل NVIDIA DGX Spark: مواصفات موثقة وأسعار أمريكية وشبكات ولمن لا يناسب كل جهاز.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "GMKtec EVO-X5 Pro 대 DGX Spark: 사양, 가격, 평가",
+    "excerpt": "GMKtec EVO-X5 Pro(192GB, Ryzen AI Max+ PRO 495)와 NVIDIA DGX Spark: 출처가 확인된 사양, 미국 가격, 네트워킹, 비추천 대상.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
     "title": "Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict",
     "excerpt": "Minisforum MS-S1 MAX for local AI: Ryzen AI Max+ 395, 128 GB, dual 10GbE, PCIe slot, plus the 192 GB P495. Sourced US prices and what reviews found.",
     "publishDate": "2026-10-31",
@@ -21307,7 +21388,7 @@
     "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
     "excerpt": "How local LLMs run on Android in 2026 — real benchmarks on S25 Ultra, Pixel 9 Pro, and OnePlus 13. NPU speeds, GGUF support, RAM limits. 6 apps compared.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21316,7 +21397,7 @@
     "title": "Beste lokale LLM-Apps für Android 2026: 6 Apps im Vergleich auf echten Telefonen",
     "excerpt": "Wie lokale LLMs wirklich auf Android laufen — Benchmarks auf S25 Ultra, Pixel 9 Pro, OnePlus 13. NPU-Geschwindigkeit, GGUF-Support, RAM-Limits. 6 Apps verglichen.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/de/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21325,7 +21406,7 @@
     "title": "Meilleures applications LLM locales pour Android en 2026 : 6 applications testées sur de vrais téléphones",
     "excerpt": "Comment les LLMs locaux fonctionnent sur Android 2026 — benchmarks sur S25 Ultra, Pixel 9 Pro, OnePlus 13. Vitesses NPU, support GGUF, limites RAM. 6 apps comparées.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/fr/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21334,7 +21415,7 @@
     "title": "2026年 Android用ローカルLLMアプリの最良 : 6つのアプリ実機比較",
     "excerpt": "スマホでローカル LLM を動かす 2026年 — S25 Ultra、Pixel 9 Pro、OnePlus 13 の実機ベンチマーク。NPU 速度、GGUF 対応、RAM 制限、おすすめアプリ 6 本と使い方を比較。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/ja/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21343,7 +21424,7 @@
     "title": "2026年安卓最佳本地LLM应用：6款应用真机对比",
     "excerpt": "Android 上本地 LLM 的实际运行情况 2026 — S25 Ultra、Pixel 9 Pro、OnePlus 13 真机基准测试。NPU 速度、GGUF 支持、RAM 限制。6 款应用对比。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/zh/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21352,7 +21433,7 @@
     "title": "Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales",
     "excerpt": "Cómo funcionan los LLMs locales en Android 2026 — benchmarks en S25 Ultra, Pixel 9 Pro y OnePlus 13. Velocidades NPU, soporte GGUF, límites RAM. 6 apps comparadas.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/es/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21361,7 +21442,7 @@
     "title": "Os melhores apps de LLM local para Android em 2026: 6 apps comparados em celulares reais",
     "excerpt": "Como os LLMs locais rodam no Android 2026 — benchmarks no S25 Ultra, Pixel 9 Pro e OnePlus 13. Velocidades NPU, suporte GGUF, limites de RAM. 6 apps comparados.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/pt/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21370,7 +21451,7 @@
     "title": "أفضل تطبيقات النماذج اللغوية المحلية لنظام ⁨Android⁩ في ⁨2026⁩: مقارنة ⁨6⁩ تطبيقات على هواتف حقيقية",
     "excerpt": "أداء النماذج اللغوية المحلية فعلياً على Android 2026: قياسات على S25 Ultra وPixel 9 Pro. سرعات NPU ودعم GGUF وحدود RAM. 6 تطبيقات.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/ar/power-local-llm/best-local-llm-apps-android-2026",
     "cluster": "power-local-llm"
   },
@@ -21379,8 +21460,89 @@
     "title": "2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱",
     "excerpt": "Android에서 로컬 LLM이 실제로 작동하는 방식 2026 — S25 Ultra, Pixel 9 Pro, OnePlus 13에서 실제 벤치마크. NPU 속도, GGUF 지원, RAM 한계. 6개 앱 비교.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-13",
     "url": "/ko/power-local-llm/best-local-llm-apps-android-2026",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+    "excerpt": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover mapped to chat, voice, vision, documents and more.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Lokale KI auf Android 2026: Was möglich ist, was nicht, und die Apps, die wir behandeln",
+    "excerpt": "Lokale KI auf Android 2026: was offline läuft, was nicht, RAM- und Chip-Grenzen sowie die behandelten Apps nach Aufgabe, von Chat bis Dokumente.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "IA locale sur Android en 2026 : ce qui est possible, ce qui ne l'est pas et les applications que nous couvrons",
+    "excerpt": "IA locale sur Android en 2026 : ce qui marche hors ligne, limites de RAM et de puce, et nos applications classées par usage : chat, voix, vision, docs.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "2026年のAndroidローカルAI：できること、できないこと、対応アプリ",
+    "excerpt": "2026年のAndroidローカルAIを解説。オフラインで動くこと、動かないこと、RAMとチップの限界、チャットや音声など用途別の対応アプリをまとめました。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "2026年安卓本地AI：能做什么、不能做什么，以及我们收录的应用",
+    "excerpt": "2026年安卓本地AI指南：哪些任务能离线运行、哪些不能，内存与芯片限制，以及我们收录的应用按聊天、语音、视觉、文档等任务的分类，另含开发者路径。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "IA local en Android en 2026: qué es posible, qué no y las apps que cubrimos",
+    "excerpt": "IA local en Android en 2026: qué funciona sin conexión, qué no, límites de RAM y chip, y las apps que cubrimos según chat, voz, visión y documentos.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "IA local no Android em 2026: o que é possível, o que não é e os apps que cobrimos",
+    "excerpt": "IA local no Android em 2026: o que roda offline, o que não roda, limites de RAM e chip, e os apps que cobrimos para chat, voz, visão, documentos e mais.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "الذكاء الاصطناعي المحلي على Android في 2026: ما الممكن وما غير الممكن والتطبيقات التي نغطيها",
+    "excerpt": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، من الدردشة إلى الصوت.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 Android 로컬 AI: 가능한 것, 불가능한 것, 그리고 다루는 앱",
+    "excerpt": "2026년 Android 로컬 AI: 오프라인으로 되는 것과 안 되는 것, RAM과 칩의 한계, 우리가 다루는 앱을 용도별로 정리했습니다.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/local-ai-on-android-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -21462,6 +21624,87 @@
     "publishDate": "2026-05-08",
     "dateModified": "2026-11-13",
     "url": "/ko/power-local-llm/best-local-llm-apps-iphone-2026",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+    "excerpt": "What local AI on iPhone can and cannot do in 2026: chip and RAM limits, Apple Intelligence, App Store rules, and the iPhone apps we cover by use case.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Lokale KI auf dem iPhone 2026: Was möglich ist, was nicht und welche iPhone-Apps wir behandeln",
+    "excerpt": "Was lokale KI auf dem iPhone 2026 kann und was nicht: Chip- und RAM-Grenzen, Apple Intelligence, App-Store-Regeln und iPhone-Apps nach Einsatzzweck.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "IA locale sur iPhone en 2026 : ce qui est possible, ce qui ne l'est pas, et les applications iPhone que nous couvrons",
+    "excerpt": "Ce que l'IA locale sur iPhone peut et ne peut pas faire en 2026 : limites de puce et de RAM, Apple Intelligence, règles App Store et apps par usage.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "2026年のiPhoneローカルAI：できること、できないこと、当サイトが扱うiPhoneアプリ",
+    "excerpt": "iPhoneのローカルAIでできること・できないことを2026年版で解説。チップとRAMの限界、Apple Intelligence、App Storeの規則、用途別のiPhoneアプリを紹介します。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "iPhone本地AI 2026：能做什么、不能做什么，以及我们收录的iPhone应用",
+    "excerpt": "2026年iPhone本地AI能做什么、不能做什么：芯片与内存限制、Apple Intelligence、App Store规则，以及按用途整理的我们收录的iPhone应用。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "IA local en iPhone en 2026: qué es posible, qué no y las apps de iPhone que cubrimos",
+    "excerpt": "Qué puede y qué no puede hacer la IA local en iPhone en 2026: límites de chip y RAM, Apple Intelligence, reglas de la App Store y apps según el uso.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "IA local no iPhone em 2026: o que é possível, o que não é e os apps de iPhone que cobrimos",
+    "excerpt": "O que a IA local no iPhone faz e não faz em 2026: limites de chip e RAM, Apple Intelligence, regras da App Store e os apps de iPhone por caso de uso.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "الذكاء الاصطناعي المحلي على iPhone في 2026: ما الممكن وما غير الممكن وتطبيقات iPhone التي نغطيها",
+    "excerpt": "ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله وما لا يستطيعه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store والتطبيقات حسب الاستخدام.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 iPhone 로컬 AI: 가능한 것, 불가능한 것, 그리고 이 가이드가 다루는 iPhone 앱",
+    "excerpt": "2026년 iPhone 로컬 AI로 되는 것과 안 되는 것: 칩·RAM 한계, Apple Intelligence, App Store 규정, 용도별 iPhone 앱 정리.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/local-ai-on-iphone-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -29731,7 +29974,7 @@
     "title": "Atomic Chat Review: Local AI, Agents, and API",
     "excerpt": "Atomic Chat review: free, open-source local AI app for Mac, Windows, Linux, iOS, and Android with agents, a local OpenAI-compatible API, and optional cloud models.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29740,7 +29983,7 @@
     "title": "Atomic-Chat-Rezension: Lokale KI, Agenten und API",
     "excerpt": "Atomic-Chat-Rezension: kostenlose, quelloffene lokale KI-App für Mac, Windows, Linux, iOS und Android mit Agenten, lokaler OpenAI-kompatibler API und optionalen Cloud-Modellen.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/de/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29749,7 +29992,7 @@
     "title": "Test d'Atomic Chat: IA locale, agents et API",
     "excerpt": "Test d'Atomic Chat : app d'IA locale gratuite et open source pour Mac, Windows, Linux, iOS et Android, avec agents, API locale compatible OpenAI et modèles cloud optionnels.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/fr/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29758,7 +30001,7 @@
     "title": "Atomic Chatレビュー：ローカルAI、エージェント、API",
     "excerpt": "Atomic Chatレビュー：Mac、Windows、Linux、iOS、Android向けの無料・オープンソースのローカルAIアプリ。エージェント、ローカルOpenAI互換API、オプションのクラウドモデルに対応。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/ja/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29767,7 +30010,7 @@
     "title": "Atomic Chat 评测：本地 AI、智能体与 API",
     "excerpt": "Atomic Chat 评测：面向 Mac、Windows、Linux、iOS 和 Android 的免费开源本地 AI 应用，支持智能体、本地 OpenAI 兼容 API 以及可选云端模型。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/zh/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29776,7 +30019,7 @@
     "title": "Atomic Chat: Reseña de IA local, agentes y API",
     "excerpt": "Reseña de Atomic Chat: app de IA local gratuita y de código abierto para Mac, Windows, Linux, iOS y Android con agentes, API local compatible con OpenAI y modelos en la nube opcionales.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/es/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29785,7 +30028,7 @@
     "title": "Atomic Chat: Análise do App de IA Local, Agentes e API",
     "excerpt": "Análise do Atomic Chat: app de IA local gratuito e de código aberto para Mac, Windows, Linux, iOS e Android, com agentes, API local compatível com OpenAI e modelos em nuvem opcionais.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/pt/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29794,7 +30037,7 @@
     "title": "مراجعة Atomic Chat: ذكاء اصطناعي محلي ووكلاء وواجهة برمجية",
     "excerpt": "مراجعة Atomic Chat: تطبيق ذكاء اصطناعي محلي مجاني ومفتوح المصدر لـ Mac وWindows وLinux وiOS وAndroid مع وكلاء وواجهة برمجية محلية متوافقة مع OpenAI ونماذج سحابية اختيارية.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/ar/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -29803,7 +30046,7 @@
     "title": "Atomic Chat 리뷰: 로컬 AI, 에이전트, API",
     "excerpt": "Atomic Chat 리뷰: Mac, Windows, Linux, iOS, Android용 무료 오픈소스 로컬 AI 앱. 에이전트, 로컬 OpenAI 호환 API, 선택적 클라우드 모델 지원.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-11",
     "url": "/ko/power-local-llm/atomic-chat-review",
     "cluster": "power-local-llm"
   },
@@ -36614,81 +36857,81 @@
   {
     "lang": "en",
     "title": "Ollama Review: The One-Command Local LLM Runtime",
-    "excerpt": "Ollama is a free, open-source command-line tool and API for running AI models locally via llama.cpp. Verified install steps, API details, and license for 2026.",
+    "excerpt": "Ollama is a free, open-source command-line tool and API for running AI models locally via llama.cpp and MLX. Verified install steps, API details, and license for 2026.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Ollama Review: Die lokale LLM-Laufzeitumgebung mit einem Befehl",
-    "excerpt": "Ollama ist ein kostenloses, quelloffenes Kommandozeilen-Tool und API zum lokalen Ausführen von KI-Modellen via llama.cpp. Geprüfte Installationsschritte, API-Details und Lizenz für 2026.",
+    "excerpt": "Ollama ist ein kostenloses, quelloffenes Kommandozeilen-Tool und API zum lokalen Ausführen von KI-Modellen via llama.cpp und MLX. Geprüfte Installationsschritte, API-Details und Lizenz für 2026.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/de/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Ollama Review: le moteur d'exécution local LLM en une commande",
-    "excerpt": "Ollama est un outil en ligne de commande et une API gratuits et open source pour exécuter des modèles d'IA localement via llama.cpp. Étapes d'installation, API et licence vérifiées pour 2026.",
+    "excerpt": "Ollama est un outil en ligne de commande et une API gratuits et open source pour exécuter des modèles d'IA localement via llama.cpp et MLX. Étapes d'installation, API et licence vérifiées pour 2026.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/fr/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Ollama レビュー：ワンコマンドで動くローカルLLMランタイム",
-    "excerpt": "Ollamaはllama.cpp経由でAIモデルをローカル実行できる無料・オープンソースのコマンドラインツールとAPIです。2026年版として検証済みのインストール手順、API詳細、ライセンスを掲載。",
+    "excerpt": "Ollamaはllama.cppとMLX経由でAIモデルをローカル実行できる無料・オープンソースのコマンドラインツールとAPIです。2026年版として検証済みのインストール手順、API詳細、ライセンスを掲載。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/ja/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Ollama 评测：一条命令搞定的本地LLM运行时",
-    "excerpt": "Ollama是一款免费、开源的命令行工具和API，可通过llama.cpp在本地运行AI模型。本文提供2026年经过核实的安装步骤、API详情与许可证信息。",
+    "excerpt": "Ollama是一款免费、开源的命令行工具和API，可通过llama.cpp和MLX在本地运行AI模型。本文提供2026年经过核实的安装步骤、API详情与许可证信息。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/zh/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Ollama Review: el motor de ejecución local de LLM en un solo comando",
-    "excerpt": "Ollama es una herramienta de línea de comandos y una API gratuitas y de código abierto para ejecutar modelos de IA localmente vía llama.cpp. Pasos de instalación, detalles de la API y licencia verificados para 2026.",
+    "excerpt": "Ollama es una herramienta de línea de comandos y una API gratuitas y de código abierto para ejecutar modelos de IA localmente vía llama.cpp y MLX. Pasos de instalación, detalles de la API y licencia verificados para 2026.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/es/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Ollama Review: o runtime local de LLM em um só comando",
-    "excerpt": "Ollama é uma ferramenta de linha de comando e API gratuitas e de código aberto para executar modelos de IA localmente via llama.cpp. Passos de instalação, detalhes da API e licença verificados para 2026.",
+    "excerpt": "Ollama é uma ferramenta de linha de comando e API gratuitas e de código aberto para executar modelos de IA localmente via llama.cpp e MLX. Passos de instalação, detalhes da API e licença verificados para 2026.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/pt/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة Ollama: بيئة تشغيل LLM محلية بأمر واحد",
-    "excerpt": "Ollama أداة سطر أوامر وواجهة API مجانية ومفتوحة المصدر لتشغيل نماذج AI محليًا عبر llama.cpp. خطوات تثبيت وتفاصيل API وترخيص مُتحقَّق منها لعام 2026.",
+    "excerpt": "Ollama أداة سطر أوامر وواجهة API مجانية ومفتوحة المصدر لتشغيل نماذج AI محليًا عبر llama.cpp وMLX. خطوات تثبيت وتفاصيل API وترخيص مُتحقَّق منها لعام 2026.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/ar/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Ollama 리뷰: 명령어 하나로 끝나는 로컬 LLM 런타임",
-    "excerpt": "Ollama는 llama.cpp를 통해 AI 모델을 로컬에서 실행하는 무료 오픈소스 명령줄 도구이자 API입니다. 2026년 기준으로 검증된 설치 단계, API 세부사항, 라이선스 정보를 제공합니다.",
+    "excerpt": "Ollama는 llama.cpp와 MLX를 통해 AI 모델을 로컬에서 실행하는 무료 오픈소스 명령줄 도구이자 API입니다. 2026년 기준으로 검증된 설치 단계, API 세부사항, 라이선스 정보를 제공합니다.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-13",
     "url": "/ko/power-local-llm/ollama-review",
     "cluster": "power-local-llm"
   },

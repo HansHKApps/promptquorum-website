@@ -1097,6 +1097,8 @@ const HUB_THEMES: Array<{
     slugs: [
       'best-local-llm-apps-iphone-2026',
       'best-local-llm-apps-android-2026',
+      'local-ai-on-iphone-guide',
+      'local-ai-on-android-guide',
       'loci-ai-review-offline-local-ai',
       'run-ai-on-tablet-ipad-android',
       'mobile-llm-models-phi4-gemma-smollm',

@@ -6,7 +6,15 @@
         "slug": "ollama-review",
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -35,6 +43,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phantasm-review",
         "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
         "url": "/power-local-llm/phantasm-review",
@@ -56,33 +80,9 @@
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-mini-pc-local-llm-2026",
-        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
-        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-beginner-local-llm-models",
-        "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
-        "url": "/local-llms/best-beginner-local-llm-models",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
-    "totalCount": 349,
+    "totalCount": 351,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -112,6 +120,38 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
@@ -126,49 +166,9 @@
         "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "what-are-local-llms",
-        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
-        "url": "/local-llms/what-are-local-llms",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-behind-firewall-offline-2026",
-        "title": "Run Local AI Behind a Firewall: Offline Deployment Guide 2026",
-        "url": "/power-local-llm/local-ai-behind-firewall-offline-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mobile-llm-models-phi4-gemma-smollm",
-        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
-        "tier": "about"
       }
     ],
-    "totalCount": 187,
+    "totalCount": 189,
     "capped": true
   },
   "vLLM": {
@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llm-vision-review",
         "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
         "url": "/power-local-llm/llm-vision-review",
@@ -330,17 +338,9 @@
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "jan-review",
-        "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
-        "url": "/power-local-llm/jan-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "TensorRT-LLM": {
@@ -449,6 +449,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -481,6 +489,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mobile-llm-models-phi4-gemma-smollm",
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -488,7 +504,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 9,
     "capped": false
   },
   "SGLang": {
@@ -822,6 +838,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
@@ -836,17 +860,9 @@
         "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "swiftlm-review",
-        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/swiftlm-review",
-        "dateModified": "2026-10-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "LM Studio": {
@@ -885,6 +901,38 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -898,41 +946,9 @@
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-limitations",
-        "title": "Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)",
-        "url": "/local-llms/local-llm-limitations",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "what-are-local-llms",
-        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
-        "url": "/local-llms/what-are-local-llms",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 175,
     "capped": true
   },
   "Atomic Chat": {
@@ -942,7 +958,7 @@
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -963,6 +979,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-bot-review",
         "title": "Atomic Bot Review: A Packaged OpenClaw Agent App, Free Locally or Paid in the Cloud",
         "url": "/power-local-llm/atomic-bot-review",
@@ -978,7 +1002,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Jan": {
@@ -997,6 +1021,14 @@
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -1054,14 +1086,6 @@
         "url": "/power-local-llm/lm-mini-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -1075,6 +1099,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -1140,14 +1172,6 @@
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
     "totalCount": 29,
@@ -1168,6 +1192,14 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -1226,17 +1258,9 @@
         "url": "/local-llms/cherry-studio-ai-desktop-client",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 43,
+    "totalCount": 45,
     "capped": true
   },
   "Msty": {
@@ -1468,6 +1492,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -1530,17 +1562,9 @@
         "url": "/power-local-llm/tina-review",
         "dateModified": "2026-10-04",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sidekick-review",
-        "title": "Sidekick Review: A Free, Native macOS Local AI Chat App",
-        "url": "/power-local-llm/sidekick-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "h2oGPT": {
@@ -1795,6 +1819,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
@@ -1810,7 +1842,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Ekorbia": {
@@ -2418,7 +2450,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "LobeHub": {
@@ -2795,6 +2827,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -2855,14 +2895,6 @@
         "title": "Kilo Code Review: The Open-Source Coding Agent Now Owned by Anaconda",
         "url": "/power-local-llm/kilo-code-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       }
     ],
@@ -3149,18 +3181,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "goose-review",
-        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
-        "url": "/power-local-llm/goose-review",
-        "dateModified": "2026-10-30",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "slug": "goose-review",
+        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
+        "url": "/power-local-llm/goose-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -4953,6 +4985,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phone-harness-review",
         "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
         "url": "/power-local-llm/phone-harness-review",
@@ -4966,25 +5014,9 @@
         "url": "/power-local-llm/picoclaw-review",
         "dateModified": "2026-11-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kai-9000-review",
-        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
-        "url": "/power-local-llm/kai-9000-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "strata-review",
-        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
-        "url": "/power-local-llm/strata-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 17,
     "capped": true
   },
   "Hermes Agent": {
@@ -5020,6 +5052,14 @@
         "url": "/power-local-llm/atomic-bot-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -5062,7 +5102,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Msty Go": {
@@ -5877,9 +5917,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -5897,14 +5961,6 @@
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
         "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -5930,18 +5986,10 @@
         "url": "/power-local-llm/runanywhere-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "galaxy-vs-iphone-on-device-ai-2026",
-        "title": "Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)",
-        "url": "/local-llms/galaxy-vs-iphone-on-device-ai-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "PocketPal AI": {
     "articles": [
@@ -5955,9 +6003,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -5995,38 +6067,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "google-ai-edge-gallery-review",
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
         "dateModified": "2026-10-26",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "private-llm-review",
-        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 54,
+    "totalCount": 56,
     "capped": true
   },
   "Pocket AI": {
@@ -6037,6 +6085,14 @@
         "title": "Pocket AI Review: Offline On-Device AI Chat for iPhone",
         "url": "/power-local-llm/pocket-ai-review",
         "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6056,7 +6112,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Private LLM": {
@@ -6142,7 +6198,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -6160,6 +6216,22 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -6212,7 +6284,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 10,
     "capped": false
   },
   "LLM Farm": {
@@ -6230,6 +6302,14 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -6258,7 +6338,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Layla": {
@@ -6276,7 +6356,15 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6312,7 +6400,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Maid": {
@@ -6327,18 +6415,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-10-30",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6356,6 +6444,22 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -6380,18 +6484,10 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llm-farm-review",
-        "title": "LLM Farm Review: Open-Source GGUF App, Off the App Store",
-        "url": "/power-local-llm/llm-farm-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Chapper": {
     "articles": [
@@ -6402,9 +6498,25 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "RikkaHub": {
@@ -6424,6 +6536,14 @@
         "url": "/power-local-llm/localai-apexcreator-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -6474,7 +6594,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "AnythingLLM Mobile": {
@@ -6489,11 +6609,27 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-review",
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -6512,7 +6648,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 6,
     "capped": false
   },
   "Enclave AI": {
@@ -6523,6 +6659,14 @@
         "title": "Enclave AI Review: On-Device AI for iPhone, iPad, Mac",
         "url": "/power-local-llm/enclave-ai-review",
         "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6566,7 +6710,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Liquid Apollo": {
@@ -6581,6 +6725,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -6588,7 +6740,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Noema": {
@@ -6599,6 +6751,14 @@
         "title": "Noema Review: Multi-Format Local AI for iPhone, iPad, and Mac",
         "url": "/power-local-llm/noema-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6626,7 +6786,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "AI on Device": {
@@ -6637,6 +6797,14 @@
         "title": "AI on Device Review: A $4.99 Apple Intelligence-Only App",
         "url": "/power-local-llm/ai-on-device-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6664,7 +6832,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Locally AI": {
@@ -6682,6 +6850,14 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -6740,17 +6916,9 @@
         "url": "/power-local-llm/kernelai-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "localmindai-review",
-        "title": "LocalMindAI Review: On-Device AI Companion for iPhone",
-        "url": "/power-local-llm/localmindai-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Arbiter": {
@@ -6773,6 +6941,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
@@ -6780,7 +6956,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Loci AI": {
@@ -6808,9 +6984,17 @@
         "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Off Grid AI": {
@@ -6821,6 +7005,14 @@
         "title": "Off Grid AI Review: Cross-Platform Local AI for iOS, Android, macOS, and Windows",
         "url": "/power-local-llm/off-grid-ai-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6840,7 +7032,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Stable Diffusion": {
@@ -6851,6 +7043,22 @@
         "title": "Stable Diffusion Review: Free Local Text-to-Image Models",
         "url": "/power-local-llm/stable-diffusion-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6908,25 +7116,9 @@
         "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
         "dateModified": "2026-10-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "easy-diffusion-review",
-        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
-        "url": "/power-local-llm/easy-diffusion-review",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "cloud-gpu-rental-comparison-2026",
-        "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
-        "url": "/local-llms/cloud-gpu-rental-comparison-2026",
-        "dateModified": "2026-10-16",
-        "tier": "about"
       }
     ],
-    "totalCount": 35,
+    "totalCount": 37,
     "capped": true
   },
   "ComfyUI": {
@@ -7012,7 +7204,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -7941,6 +8133,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-creative-writing",
         "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
         "url": "/power-local-llm/best-local-llm-creative-writing",
@@ -7962,17 +8162,9 @@
         "url": "/power-local-llm/swerve-ai-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "risuai-review",
-        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
-        "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "RisuAI": {
@@ -8043,22 +8235,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-creative-writing",
         "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
         "url": "/power-local-llm/best-local-llm-creative-writing",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Second Me": {
@@ -8127,6 +8319,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -8167,14 +8367,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "coil-review",
         "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
         "url": "/power-local-llm/coil-review",
@@ -8205,18 +8397,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -8352,7 +8544,7 @@
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-11-11",
         "tier": "mentioned"
       }
     ],
@@ -8393,18 +8585,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -8431,6 +8623,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "tgpt-review",
         "title": "tgpt Review: AI in Your Terminal, No API Key Required",
         "url": "/power-local-llm/tgpt-review",
@@ -8451,22 +8659,6 @@
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-review",
-        "title": "Ollama Review: The One-Command Local LLM Runtime",
-        "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -8563,6 +8755,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -8578,7 +8778,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "NVIDIA Project G-Assist": {
@@ -8675,6 +8875,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -8688,17 +8912,9 @@
         "url": "/power-local-llm/nvidia-g-assist-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 6,
     "capped": false
   },
   "Odysseus": {
@@ -9097,6 +9313,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "on-device-llm-review",
         "title": "On Device LLM Review: Free Offline Android Chat App",
         "url": "/power-local-llm/on-device-llm-review",
@@ -9104,7 +9328,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "ToolNeuron": {
@@ -9115,6 +9339,14 @@
         "title": "ToolNeuron Review: Open-Source Encrypted Android AI App",
         "url": "/power-local-llm/toolneuron-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -9158,7 +9390,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "LocalAI: Offline AI Chat LLM": {
@@ -9170,9 +9402,17 @@
         "url": "/power-local-llm/localai-apexcreator-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "DiffusionBee": {
@@ -9282,9 +9522,17 @@
         "url": "/power-local-llm/macwhisper-review",
         "dateModified": "2026-11-09",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Solair AI": {
@@ -9307,6 +9555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anyllm-review",
         "title": "AnyLLM Review: BYOK AI Chat Client for Android",
         "url": "/power-local-llm/anyllm-review",
@@ -9322,7 +9578,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Aori": {
@@ -9345,6 +9601,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
@@ -9352,7 +9616,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "RAPR AI": {
@@ -9813,6 +10077,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -9828,7 +10100,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "SurfSense": {
@@ -9924,9 +10196,17 @@
         "url": "/power-local-llm/llm-studio-go-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "OpenClient": {
@@ -10029,6 +10309,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "amical-review",
         "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
         "url": "/power-local-llm/amical-review",
@@ -10074,17 +10362,9 @@
         "url": "/power-local-llm/swerve-ai-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "trilium-notes-review",
-        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
-        "url": "/power-local-llm/trilium-notes-review",
-        "dateModified": "2026-11-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "FluidVoice": {
@@ -10110,9 +10390,17 @@
         "url": "/power-local-llm/openwhispr-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Voicebox": {
@@ -10216,9 +10504,17 @@
         "url": "/power-local-llm/localmindai-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Murmur": {
@@ -10233,6 +10529,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nekoni-review",
         "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
         "url": "/power-local-llm/nekoni-review",
@@ -10240,7 +10544,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "fullmoon": {
@@ -10260,9 +10564,17 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-13",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Reins": {
@@ -10282,9 +10594,17 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-13",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Phantasm": {
@@ -10332,9 +10652,25 @@
         "url": "/power-local-llm/hillnote-review",
         "dateModified": "2026-11-01",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Trilium Notes": {
@@ -10410,9 +10746,17 @@
         "url": "/power-local-llm/scrypted-review",
         "dateModified": "2026-11-01",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Lyonesse": {
@@ -10427,6 +10771,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pajdo-review",
         "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
         "url": "/power-local-llm/pajdo-review",
@@ -10434,7 +10786,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Open-LLM-VTuber": {
@@ -10547,30 +10899,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "blinko-review",
         "title": "Blinko Review: Self-Hosted AI Notes with RAG Search",
         "url": "/power-local-llm/blinko-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "bmo-chatbot-review",
-        "title": "BMO Chatbot Review: Lightweight Local AI Sidebar for Obsidian",
-        "url": "/power-local-llm/bmo-chatbot-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "smart-connections-review",
-        "title": "Smart Connections Review: Local Semantic Search for Obsidian",
-        "url": "/power-local-llm/smart-connections-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 13,
     "capped": true
   },
   "Anarlog": {
@@ -10702,9 +11054,25 @@
         "url": "/power-local-llm/karakeep-review",
         "dateModified": "2026-09-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "Tolaria": {
@@ -10752,9 +11120,25 @@
         "url": "/power-local-llm/home-assistant-assist-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Home Generative Agent": {
@@ -10780,9 +11164,25 @@
         "url": "/power-local-llm/ente-photos-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Local Operator": {
@@ -10808,9 +11208,17 @@
         "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "IIMAGINE Desktop": {
@@ -10867,6 +11275,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ente-photos-review",
         "title": "Ente Photos Review: Encrypted Backup with On-Device AI Search",
         "url": "/power-local-llm/ente-photos-review",
@@ -10874,7 +11298,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "KernelAI": {
@@ -10886,9 +11310,25 @@
         "url": "/power-local-llm/kernelai-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Llama (llama.app)": {
@@ -11317,6 +11757,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "linkwarden-review",
         "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
         "url": "/power-local-llm/linkwarden-review",
@@ -11332,7 +11788,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 7,
     "capped": false
   },
   "KServe": {
@@ -11914,9 +12370,17 @@
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "oMLX": {
@@ -12091,6 +12555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -12115,9 +12587,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
@@ -12128,41 +12624,9 @@
         "url": "/power-local-llm/phantasm-review",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-file-sorter-review",
-        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
-        "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-11-10",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sprich-review",
-        "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
-        "url": "/power-local-llm/sprich-review",
-        "dateModified": "2026-11-10",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "what-are-local-llms",
-        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
-        "url": "/local-llms/what-are-local-llms",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 255,
+    "totalCount": 257,
     "capped": true
   },
   "Qdrant": {
@@ -12423,6 +12887,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -12430,7 +12910,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "Stable Diffusion WebUI Forge": {
@@ -12502,9 +12982,17 @@
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "TranslateBooksWithLLMs": {
@@ -12758,9 +13246,17 @@
         "url": "/power-local-llm/ollama-local-ai-review",
         "dateModified": "2026-10-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "PAIOS": {
@@ -12772,9 +13268,17 @@
         "url": "/power-local-llm/paios-review",
         "dateModified": "2026-10-05",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "AI CutoutWerk": {
@@ -12786,9 +13290,17 @@
         "url": "/power-local-llm/ai-cutoutwerk-review",
         "dateModified": "2026-10-16",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "OpenMontage": {
@@ -12813,6 +13325,22 @@
         "title": "Private Mind Review: Open-Source Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/private-mind-review",
         "dateModified": "2026-10-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -12870,25 +13398,9 @@
         "url": "/power-local-llm/haplo-ai-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-mini-review",
-        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
-        "url": "/power-local-llm/lm-mini-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "on-device-ai-translator-review",
-        "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
-        "url": "/power-local-llm/on-device-ai-translator-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 21,
     "capped": true
   },
   "LLM Hub": {
@@ -12899,6 +13411,22 @@
         "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
         "url": "/power-local-llm/llm-hub-review",
         "dateModified": "2026-10-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -12934,7 +13462,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 7,
     "capped": false
   },
   "LM Playground": {
@@ -12946,9 +13474,17 @@
         "url": "/power-local-llm/lm-playground-review",
         "dateModified": "2026-10-16",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "LocalMind": {
@@ -12963,6 +13499,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "localmindai-review",
         "title": "LocalMindAI Review: On-Device AI Companion for iPhone",
         "url": "/power-local-llm/localmindai-review",
@@ -12970,7 +13514,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "TokForge": {
@@ -12985,6 +13529,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hiwaifu-review",
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
@@ -12992,7 +13544,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "FriedrichAI": {
@@ -13054,9 +13606,17 @@
         "url": "/power-local-llm/oscilla-review",
         "dateModified": "2026-10-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Tina": {
@@ -13068,9 +13628,17 @@
         "url": "/power-local-llm/tina-review",
         "dateModified": "2026-10-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Return Editor": {
@@ -13096,9 +13664,17 @@
         "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Local AI Chat - pocket": {
@@ -13110,9 +13686,17 @@
         "url": "/power-local-llm/local-ai-chat-pocket-review",
         "dateModified": "2026-10-06",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "TecAdRiseBot": {
@@ -13138,9 +13722,17 @@
         "url": "/power-local-llm/frankly-ai-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Haplo AI": {
@@ -13152,9 +13744,17 @@
         "url": "/power-local-llm/haplo-ai-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "PixlStash": {
@@ -13180,9 +13780,17 @@
         "url": "/power-local-llm/photoprism-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Photoview": {
@@ -13194,9 +13802,17 @@
         "url": "/power-local-llm/photoview-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Immich": {
@@ -13211,6 +13827,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -13218,7 +13850,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "EverShelf": {
@@ -13272,9 +13904,25 @@
         "url": "/power-local-llm/mylio-photos-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "ACDSee Photo Studio Ultimate 2027": {
@@ -13328,9 +13976,17 @@
         "url": "/power-local-llm/home-gallery-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "HiWaifu": {
@@ -13342,9 +13998,17 @@
         "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-11-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "MemoryAI": {
@@ -13359,6 +14023,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -13367,14 +14039,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 5,
     "capped": false
   },
   "On-Device AI Translator": {
@@ -13394,9 +14074,17 @@
         "url": "/power-local-llm/argos-translate-review",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Llamatik": {
@@ -13408,9 +14096,17 @@
         "url": "/power-local-llm/llamatik-review",
         "dateModified": "2026-10-23",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Mobile LM Server": {
@@ -13428,11 +14124,19 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "LM Mini": {
@@ -13444,9 +14148,17 @@
         "url": "/power-local-llm/lm-mini-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Compass - Local AI": {
@@ -13458,9 +14170,17 @@
         "url": "/power-local-llm/compass-local-ai-review",
         "dateModified": "2026-10-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Cloak: Local AI": {
@@ -13480,9 +14200,17 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-13",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "GreenCube": {
@@ -13508,9 +14236,17 @@
         "url": "/power-local-llm/kai-9000-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Laria": {
@@ -13528,11 +14264,19 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-13",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "CompactifAI APP": {
@@ -13544,9 +14288,17 @@
         "url": "/power-local-llm/compactifai-app-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "PocketLLM Lite": {
@@ -13558,9 +14310,17 @@
         "url": "/power-local-llm/pocketllm-lite-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Obscurify.ai": {
@@ -13586,9 +14346,17 @@
         "url": "/power-local-llm/genva-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Whisper Notes": {
@@ -13600,9 +14368,17 @@
         "url": "/power-local-llm/whisper-notes-review",
         "dateModified": "2026-10-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Aiko": {
@@ -13614,9 +14390,17 @@
         "url": "/power-local-llm/aiko-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Amical": {
@@ -13824,9 +14608,17 @@
         "url": "/power-local-llm/anyllm-review",
         "dateModified": "2026-10-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Local AI Mail": {
@@ -13838,9 +14630,17 @@
         "url": "/power-local-llm/local-ai-mail-review",
         "dateModified": "2026-10-11",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "pcAI Photo Retouch": {
@@ -13852,9 +14652,17 @@
         "url": "/power-local-llm/pcai-photo-retouch-review",
         "dateModified": "2026-10-16",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Honey LLM": {
@@ -13866,9 +14674,17 @@
         "url": "/power-local-llm/honey-llm-review",
         "dateModified": "2026-10-16",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Secret AI": {
@@ -13880,9 +14696,17 @@
         "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-23",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "ECC": {

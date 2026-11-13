@@ -71,7 +71,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Category 6 — Mobile & Edge LLMs
   'best-local-llm-apps-iphone-2026':             'best-local-llm-apps-iphone-2026',
+  'local-ai-on-iphone-guide':                    'local-ai-on-iphone-guide',
   'best-local-llm-apps-android-2026':            'best-local-llm-apps-android-2026',
+  'local-ai-on-android-guide':                   'local-ai-on-android-guide',
   'best-local-llm-apps-mac':                     'best-local-llm-apps-mac',
   'local-llm-app-alternatives':                  'local-llm-app-alternatives',
   'loci-ai-review-offline-local-ai':             'loci-ai-review-offline-local-ai',

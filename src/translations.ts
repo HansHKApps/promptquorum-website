@@ -143,6 +143,8 @@ export const translations = {
     privacyS3Para1: "When you enter your email and click \"Join Waitlist\", you give us explicit consent to contact you with beta launch announcements and product updates. Consent is the lawful basis under Art. 6(1)(a) GDPR. You may withdraw consent at any time by clicking the unsubscribe link in any email we send, or by emailing {{email}}. Withdrawal of consent does not affect the lawfulness of processing before withdrawal.",
     privacyS3Sub2: "Analytics — legitimate interest (Umami, Clarity cookieless) and consent (Clarity cookies and recordings)",
     privacyS3Para2: "We use Umami, a privacy-friendly, cookieless analytics tool, to understand how visitors use the site in aggregate. Umami sets no cookies; only aggregated, non-identifying usage data is processed, on the basis of our legitimate interest under Art. 6(1)(f) GDPR, and you can object to this processing at any time by emailing us. Microsoft Clarity (session analytics and heatmaps) loads for every visitor in cookieless mode: it sets no cookies and no persistent visitor ID, on the basis of our legitimate interest (Art. 6(1)(f) GDPR), and you can object at any time by emailing us. Only if you allow “Session recordings” in the cookie dialog does Clarity switch to full mode and set its cookies (_clck, _clsk); that rests on your consent (Art. 6(1)(a) GDPR, § 25 TDDDG). You can withdraw it at any time via “Cookie settings” in the footer.",
+    privacyS3Sub3: "Ask Hans button experiment",
+    privacyS3Para3: "To compare wording variants of the \"Ask Hans\" button, we count impressions, clicks and openings without cookies and without asking for consent. Only aggregated counters per variant, language, device type and page category are stored. No IP address, text input or visitor identifier is stored.",
 
     // Section 4
     privacyS4Title: "Data processors and third parties",
@@ -459,6 +461,8 @@ export const translations = {
     privacyS3Para1: "Wenn Sie Ihre E-Mail eingeben und auf \"Warteliste beitreten\" klicken, erteilen Sie uns ausdrückliche Zustimmung, Sie mit Beta-Start-Ankündigungen und Produkt-Updates zu kontaktieren. Die Einwilligung ist die rechtliche Grundlage nach Art. 6(1)(a) DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie auf den Abmeldelink in einer E-Mail klicken, die wir Ihnen senden, oder indem Sie uns unter {{email}} anschreiben. Der Widerruf der Einwilligung hat keine Auswirkungen auf die Rechtmäßigkeit der Verarbeitung vor dem Widerruf.",
     privacyS3Sub2: "Analyse — berechtigtes Interesse (Umami, Clarity cookielos) und Einwilligung (Clarity-Cookies und Aufzeichnungen)",
     privacyS3Para2: "Wir verwenden Umami, ein datenschutzfreundliches, cookieloses Analysewerkzeug, um die Nutzung der Website in aggregierter Form zu verstehen. Umami setzt keine Cookies; verarbeitet werden ausschließlich aggregierte, nicht identifizierende Nutzungsdaten auf Grundlage unseres berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO. Sie können dieser Verarbeitung jederzeit per E-Mail widersprechen. Microsoft Clarity (Sitzungsanalyse und Heatmaps) wird für alle Besucher im cookielosen Modus geladen: Es setzt keine Cookies und keine dauerhafte Besucher-ID, auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO); Sie können jederzeit per E-Mail widersprechen. Nur wenn Sie im Cookie-Dialog „Sitzungsaufzeichnungen“ erlauben, wechselt Clarity in den Vollmodus und setzt seine Cookies (_clck, _clsk); das beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TDDDG). Sie können sie jederzeit über „Cookie-Einstellungen“ im Footer widerrufen.",
+    privacyS3Sub3: "Experiment zum „Ask Hans“-Button",
+    privacyS3Para3: "Zum Vergleich verschiedener Formulierungen des „Ask Hans“-Buttons zählen wir Einblendungen, Klicks und Öffnungen ohne Cookies und ohne Einwilligungsabfrage. Gespeichert werden ausschließlich aggregierte Zähler je Variante, Sprache, Gerätetyp und Seitenkategorie. IP-Adressen, Texteingaben oder Besucherkennungen werden nicht gespeichert.",
 
     // Section 4
     privacyS4Title: "Datenverarbeiter und Dritte",
@@ -783,6 +787,8 @@ export const translations = {
     privacyS3Para1: "Lorsque vous entrez votre e-mail et cliquez sur \"Rejoindre la liste d'attente\", vous nous donnez un consentement explicite pour vous contacter avec les annonces de lancement bêta et les mises à jour de produits. Le consentement est le fondement juridique en vertu de l'art. 6(1)(a) RGPD. Vous pouvez retirer votre consentement à tout moment en cliquant sur le lien de désinscription dans tout e-mail que nous vous envoyons, ou en nous envoyant un e-mail à {{email}}. Le retrait du consentement n'affecte pas la licéité du traitement avant le retrait.",
     privacyS3Sub2: "Analytique — intérêt légitime (Umami, Clarity sans cookies) et consentement (cookies et enregistrements Clarity)",
     privacyS3Para2: "Nous utilisons Umami, un outil d'analyse respectueux de la vie privée et sans cookie, afin de comprendre, de manière agrégée, comment les visiteurs utilisent le site. Umami ne dépose aucun cookie ; seules des données d'utilisation agrégées et non identifiantes sont traitées, sur la base de notre intérêt légitime au titre de l'art. 6(1)(f) du RGPD, et vous pouvez vous opposer à ce traitement à tout moment en nous écrivant. Microsoft Clarity (analyse de session et cartes de chaleur) se charge pour tous les visiteurs en mode sans cookies : il ne dépose aucun cookie ni identifiant de visiteur persistant, sur la base de notre intérêt légitime (art. 6(1)(f) du RGPD), et vous pouvez vous y opposer à tout moment en nous écrivant. Ce n'est que si vous autorisez « Enregistrements de session » dans la fenêtre des cookies que Clarity passe en mode complet et dépose ses cookies (_clck, _clsk) ; cela repose sur votre consentement (art. 6(1)(a) du RGPD, § 25 TDDDG). Vous pouvez le retirer à tout moment via « Paramètres des cookies » en pied de page.",
+    privacyS3Sub3: "Expérience sur le bouton « Ask Hans »",
+    privacyS3Para3: "Pour comparer différentes formulations du bouton « Ask Hans », nous comptons les affichages, les clics et les ouvertures, sans cookies et sans demander de consentement. Seuls des compteurs agrégés par variante, langue, type d'appareil et catégorie de page sont enregistrés. Aucune adresse IP, saisie de texte ni identifiant de visiteur n'est stocké.",
 
     // Section 4
     privacyS4Title: "Sous-traitants et tiers",
@@ -1099,6 +1105,8 @@ export const translations = {
     privacyS3Para1: "メールを入力して\"ウェイティングリストに参加\"をクリックすると、ベータ版起動アナウンスと製品更新であなたに連絡する明示的な同意を与えます。同意はGDPR第6条(1)(a)に基づく法的根拠です。あなたが送信した電子メール内の登録解除リンクをクリックするか、{{email}}にメールを送信することで、いつでも同意を撤回できます。同意の撤回は、撤回前の処理の適法性に影響しません。",
     privacyS3Sub2: "分析 — 正当な利益（Umami、クッキーレスのClarity）と同意（Clarityのcookieと記録）",
     privacyS3Para2: "当サイトでは、プライバシーに配慮したクッキーレスの分析ツールUmamiを使用し、訪問者のサイト利用状況を集計ベースで把握しています。Umamiはcookieを設定せず、処理されるのは集計された識別不能な利用データのみで、当社の正当な利益（GDPR第6条(1)(f)）に基づきます。この処理にはいつでもメールで異議を申し立てることができます。Microsoft Clarity（セッション分析とヒートマップ）は、すべての訪問者に対してクッキーレスモードで読み込まれます。cookieも永続的な訪問者IDも設定せず、当社の正当な利益（GDPR第6条(1)(f)）に基づき、いつでもメールで異議を申し立てることができます。cookie設定ダイアログで「セッション記録」を許可していただいた場合にのみ、Clarityはフルモードに切り替わり、cookie（_clck、_clsk）を設定します。これはお客様の同意（GDPR第6条(1)(a)、TDDDG第25条）に基づき、フッターの「Cookie設定」からいつでも撤回できます。",
+    privacyS3Sub3: "「Ask Hans」ボタンの実験",
+    privacyS3Para3: "「Ask Hans」ボタンの文言を比較するため、Cookie を使用せず、同意の取得も行わずに、表示回数・クリック数・開封（起動）回数を集計しています。保存されるのは、バリアント・言語・デバイス種別・ページカテゴリごとの集計カウンターのみです。IP アドレス、入力テキスト、訪問者識別子は保存されません。",
 
     // Section 4
     privacyS4Title: "データ処理業者と第三者",
@@ -1415,6 +1423,8 @@ export const translations = {
     privacyS3Para1: "当您输入电子邮件地址并点击\"加入候补名单\"时,您明确同意我们使用测试版启动公告和产品更新与您联系。同意是GDPR第6条(1)(a)下的法律依据。您可以通过点击我们发送给您的任何电子邮件中的取消订阅链接或向{{email}}发送电子邮件,随时撤回您的同意。撤回同意不影响撤回前处理的合法性。",
     privacyS3Sub2: "分析 — 合法利益（Umami、无 Cookie 模式的 Clarity）与同意（Clarity 的 Cookie 和录制）",
     privacyS3Para2: "我们使用注重隐私、不使用 Cookie 的分析工具 Umami，以汇总方式了解访问者如何使用本网站。Umami 不设置 Cookie，仅处理汇总的、不可识别身份的使用数据，依据我们的合法利益（GDPR第6(1)(f)条）；您可以随时通过电子邮件反对此项处理。Microsoft Clarity（会话分析和热力图）对所有访问者以无 Cookie 模式加载：不设置 Cookie，也不设置持久的访问者 ID，依据我们的合法利益（GDPR第6(1)(f)条），您可随时通过电子邮件反对。仅当您在 Cookie 对话框中允许“会话录制”时，Clarity 才会切换到完整模式并设置其 Cookie（_clck、_clsk），此项处理基于您的同意（GDPR第6(1)(a)条、TDDDG第25条），您可随时通过页脚的“Cookie 设置”撤回。",
+    privacyS3Sub3: "“Ask Hans”按钮实验",
+    privacyS3Para3: "为比较“Ask Hans”按钮的不同文案，我们在不使用 Cookie、也不征求同意的情况下，统计展示次数、点击次数和打开次数。仅按变体、语言、设备类型和页面类别存储汇总计数，不存储 IP 地址、输入文本或访客标识符。",
 
     // Section 4
     privacyS4Title: "数据处理人和第三方",
@@ -1731,6 +1741,8 @@ export const translations = {
     privacyS3Para1: "Cuando introduces tu email y haces clic en \"Unirse a la lista de espera\", nos das consentimiento explícito para contactarte con anuncios de lanzamiento beta y actualizaciones del producto. El consentimiento es la base jurídica según el Art. 6(1)(a) del RGPD. Puedes retirar el consentimiento en cualquier momento haciendo clic en el enlace de cancelación de suscripción de cualquier email que te enviemos, o enviando un email a {{email}}. La retirada del consentimiento no afecta a la licitud del tratamiento anterior.",
     privacyS3Sub2: "Analítica — interés legítimo (Umami, Clarity sin cookies) y consentimiento (cookies y grabaciones de Clarity)",
     privacyS3Para2: "Utilizamos Umami, una herramienta de analítica respetuosa con la privacidad y sin cookies, para entender de forma agregada cómo usan el sitio los visitantes. Umami no establece cookies; solo se tratan datos de uso agregados y no identificativos, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD), y puedes oponerte a este tratamiento en cualquier momento escribiéndonos un correo. Microsoft Clarity (análisis de sesiones y mapas de calor) se carga para todos los visitantes en modo sin cookies: no establece cookies ni un identificador de visitante persistente, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD), y puedes oponerte en cualquier momento escribiéndonos un correo. Solo si permites «Grabaciones de sesión» en el cuadro de cookies, Clarity pasa al modo completo y establece sus cookies (_clck, _clsk); eso se basa en tu consentimiento (art. 6(1)(a) del RGPD, § 25 TDDDG). Puedes retirarlo en cualquier momento desde «Configuración de cookies» en el pie de página.",
+    privacyS3Sub3: "Experimento con el botón «Ask Hans»",
+    privacyS3Para3: "Para comparar distintas formulaciones del botón «Ask Hans», contamos las visualizaciones, los clics y las aperturas, sin cookies y sin solicitar consentimiento. Solo se almacenan contadores agregados por variante, idioma, tipo de dispositivo y categoría de página. No se almacena ninguna dirección IP, texto introducido ni identificador de visitante.",
 
     // Section 4
     privacyS4Title: "Encargados del tratamiento y terceros",
@@ -2047,6 +2059,8 @@ export const translations = {
     privacyS3Para1: "Quando você insere seu e-mail e clica em \"Entrar na lista de espera\", nos dá consentimento explícito para contatá-lo com anúncios de lançamento beta e atualizações do produto. O consentimento é a base jurídica nos termos do Art. 6(1)(a) do GDPR e do Art. 7 da LGPD. Você pode retirar o consentimento a qualquer momento clicando no link de cancelamento de inscrição em qualquer e-mail que enviamos, ou enviando um e-mail para {{email}}. A retirada do consentimento não afeta a licitude do tratamento anterior.",
     privacyS3Sub2: "Análise — interesse legítimo (Umami, Clarity sem cookies) e consentimento (cookies e gravações do Clarity)",
     privacyS3Para2: "Usamos o Umami, uma ferramenta de análise que respeita a privacidade e não usa cookies, para entender, de forma agregada, como os visitantes usam o site. O Umami não define cookies; são tratados apenas dados de uso agregados e não identificáveis, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR), e você pode se opor a esse tratamento a qualquer momento enviando um e-mail para nós. O Microsoft Clarity (análise de sessões e mapas de calor) é carregado para todos os visitantes no modo sem cookies: não define cookies nem um identificador de visitante persistente, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR), e você pode se opor a qualquer momento enviando um e-mail para nós. Somente se você permitir «Gravações de sessão» na caixa de cookies, o Clarity passa para o modo completo e define seus cookies (_clck, _clsk); isso se baseia no seu consentimento (art. 6(1)(a) do GDPR, § 25 TDDDG). Você pode retirá-lo a qualquer momento em «Configurações de cookies», no rodapé.",
+    privacyS3Sub3: "Experimento com o botão «Ask Hans»",
+    privacyS3Para3: "Para comparar diferentes formulações do botão «Ask Hans», contamos as exibições, os cliques e as aberturas, sem cookies e sem pedir consentimento. Apenas são armazenados contadores agregados por variante, idioma, tipo de dispositivo e categoria de página. Não é armazenado nenhum endereço IP, texto introduzido ou identificador de visitante.",
 
     // Section 4
     privacyS4Title: "Processadores de dados e terceiros",
@@ -2363,6 +2377,8 @@ export const translations = {
     privacyS3Para1: "عندما تُدخل بريدك الإلكتروني وتنقر على \"الانضمام إلى قائمة الانتظار\"، تمنحنا موافقة صريحة للتواصل معك بشأن إعلانات إطلاق النسخة التجريبية وتحديثات المنتج. الموافقة هي الأساس القانوني بموجب المادة 6(1)(أ) من RGPD. يمكنك سحب الموافقة في أي وقت بالنقر على رابط إلغاء الاشتراك في أي بريد إلكتروني نرسله إليك، أو بإرسال بريد إلكتروني إلى {{email}}. لا يؤثر سحب الموافقة في مشروعية المعالجة السابقة.",
     privacyS3Sub2: "التحليلات — المصلحة المشروعة (Umami وClarity بدون ملفات تعريف الارتباط) والموافقة (ملفات تعريف الارتباط والتسجيلات في Clarity)",
     privacyS3Para2: "نستخدم Umami، وهي أداة تحليلات تحترم الخصوصية وتعمل بدون ملفات تعريف ارتباط، لفهم كيفية استخدام الزوار للموقع بصورة مجمَّعة. لا يُعيِّن Umami أي ملفات تعريف ارتباط؛ وتُعالَج فقط بيانات استخدام مجمَّعة وغير معرِّفة، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)، ويمكنك الاعتراض على هذه المعالجة في أي وقت بمراسلتنا. أما Microsoft Clarity (تحليل الجلسات والخرائط الحرارية) فيُحمَّل لجميع الزوار في الوضع بدون ملفات تعريف الارتباط: فلا يُعيِّن أي ملفات تعريف ارتباط ولا معرّف زائر دائمًا، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)، ويمكنك الاعتراض في أي وقت بمراسلتنا. وفقط إذا سمحت بـ«تسجيلات الجلسات» في نافذة ملفات تعريف الارتباط ينتقل Clarity إلى الوضع الكامل ويعيّن ملفاته (_clck و_clsk)؛ وتستند هذه المعالجة إلى موافقتك (المادة 6(1)(أ) من RGPD، § 25 TDDDG). ويمكنك سحبها في أي وقت عبر «إعدادات ملفات تعريف الارتباط» في تذييل الصفحة.",
+    privacyS3Sub3: "تجربة زر «Ask Hans»",
+    privacyS3Para3: "لمقارنة صيغ مختلفة لزر «Ask Hans»، نحتسب مرات الظهور والنقرات وعمليات الفتح دون استخدام ملفات تعريف الارتباط ودون طلب الموافقة. يتم تخزين عدّادات مجمّعة فقط حسب النسخة واللغة ونوع الجهاز وفئة الصفحة. لا يتم تخزين أي عنوان IP أو نص مُدخل أو معرّف للزائر.",
 
     // Section 4
     privacyS4Title: "المعالجون المفوَّضون والأطراف الثالثة",
@@ -2679,6 +2695,8 @@ export const translations = {
     privacyS3Para1: "이메일을 입력하고 \"대기자 명단 등록\"을 클릭하면 베타 출시 공지 및 제품 업데이트에 대한 명시적 동의를 제공하는 것입니다. 동의는 GDPR 제6조 제1항 (a)호에 따른 법적 근거입니다. 당사가 보내는 이메일의 수신 거부 링크를 클릭하거나 {{email}}로 이메일을 보내 언제든지 동의를 철회할 수 있습니다. 동의 철회는 철회 전 처리의 적법성에 영향을 미치지 않습니다.",
     privacyS3Sub2: "분석 — 정당한 이익(Umami, 쿠키 없는 Clarity) 및 동의(Clarity 쿠키와 녹화)",
     privacyS3Para2: "당사는 집계 방식으로 방문자가 사이트를 사용하는 방법을 이해하기 위해 개인정보를 존중하는 쿠키 없는 분석 도구 Umami를 사용합니다. Umami는 쿠키를 설정하지 않으며, GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 집계된 비식별 사용 데이터만 처리합니다. 언제든지 이메일로 이 처리에 이의를 제기하실 수 있습니다. Microsoft Clarity(세션 분석 및 히트맵)는 모든 방문자에게 쿠키 없는 모드로 로드됩니다. 쿠키도 지속적인 방문자 ID도 설정하지 않으며, GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 하고, 언제든지 이메일로 이의를 제기하실 수 있습니다. 쿠키 대화상자에서 «세션 녹화»를 허용하신 경우에만 Clarity가 전체 모드로 전환되어 쿠키(_clck, _clsk)를 설정하며, 이는 귀하의 동의(GDPR 제6조 제1항 (a)호, TDDDG 제25조)에 근거합니다. 동의는 푸터의 «쿠키 설정»을 통해 언제든지 철회하실 수 있습니다.",
+    privacyS3Sub3: "「Ask Hans」 버튼 실험",
+    privacyS3Para3: "「Ask Hans」 버튼의 문구를 비교하기 위해 쿠키를 사용하지 않고 동의를 요청하지 않은 채 노출 수, 클릭 수, 열기 수를 집계합니다. 변형, 언어, 기기 유형, 페이지 카테고리별 합산 카운터만 저장되며, IP 주소, 입력 텍스트 또는 방문자 식별자는 저장되지 않습니다.",
 
     // Section 4
     privacyS4Title: "데이터 처리자 및 제3자",

@@ -645,6 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover](/power-local-llm/local-ai-on-iphone-guide) — the platform guide behind this list: capability map, RAM and chip tiers, Apple Intelligence and App Store limits.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — PromptQuorum\'s full review of the free open-source default.',
           '[Private LLM Review](/power-local-llm/private-llm-review) — the paid option with Siri and Shortcuts.',
           '[Locally AI Review](/power-local-llm/locally-ai-review) — the free MLX app from the LM Studio team.',
@@ -1310,6 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weitere Apps und ausführliche Tests',
         items: [
+          '[Lokale KI auf dem iPhone 2026: Was möglich ist, was nicht und welche iPhone-Apps wir behandeln](/de/power-local-llm/local-ai-on-iphone-guide) — der Plattform-Leitfaden hinter dieser Liste: Fähigkeitenübersicht, RAM- und Chip-Stufen sowie die Grenzen von Apple Intelligence und App Store.',
           '[PocketPal AI Review](/de/power-local-llm/pocketpal-ai-review) — der ausführliche PromptQuorum-Test der kostenlosen Open-Source-Standard-App.',
           '[Private LLM Review](/de/power-local-llm/private-llm-review) — die kostenpflichtige Option mit Siri und Kurzbefehlen.',
           '[Locally AI Review](/de/power-local-llm/locally-ai-review) — die kostenlose MLX-App vom LM-Studio-Team.',
@@ -1967,6 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[2026年のiPhoneローカルAI：できること、できないこと、当サイトが扱うiPhoneアプリ](/ja/power-local-llm/local-ai-on-iphone-guide) — このリストの背景にあるプラットフォームガイド：できることの一覧、RAMとチップの段階、Apple IntelligenceとApp Storeの制限。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — 無料オープンソースの定番アプリのPromptQuorumによる詳細レビュー。',
           '[Private LLMレビュー](/ja/power-local-llm/private-llm-review) — SiriとShortcuts対応の有料オプション。',
           '[Locally AIレビュー](/ja/power-local-llm/locally-ai-review) — LM Studioチーム製の無料MLXアプリ。',
@@ -2624,6 +2627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[IA locale sur iPhone en 2026 : ce qui est possible, ce qui ne l\'est pas, et les applications iPhone que nous couvrons](/fr/power-local-llm/local-ai-on-iphone-guide) — le guide de la plateforme derrière cette liste : carte des capacités, paliers de RAM et de puce, limites d\'Apple Intelligence et de l\'App Store.',
           '[Test de PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — le test complet de PromptQuorum sur l\'option gratuite open source par défaut.',
           '[Test de Private LLM](/fr/power-local-llm/private-llm-review) — l\'option payante avec Siri et Shortcuts.',
           '[Test de Locally AI](/fr/power-local-llm/locally-ai-review) — l\'application MLX gratuite de l\'équipe LM Studio.',
@@ -3281,6 +3285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[iPhone本地AI 2026：能做什么、不能做什么，以及我们收录的iPhone应用](/zh/power-local-llm/local-ai-on-iphone-guide) — 本榜单背后的平台指南：能力图谱、RAM 与芯片档位，以及 Apple Intelligence 和 App Store 的限制。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review) — PromptQuorum对这款免费开源默认选择的完整评测。',
           '[Private LLM评测](/zh/power-local-llm/private-llm-review) — 支持Siri和快捷指令的付费选项。',
           '[Locally AI评测](/zh/power-local-llm/locally-ai-review) — LM Studio团队出品的免费MLX应用。',
@@ -3938,6 +3943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
+          '[IA local en iPhone en 2026: qué es posible, qué no y las apps de iPhone que cubrimos](/es/power-local-llm/local-ai-on-iphone-guide) — la guía de la plataforma detrás de esta lista: mapa de capacidades, niveles de RAM y de chip, y los límites de Apple Intelligence y de la App Store.',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — la reseña completa de PromptQuorum de la opción gratuita y de código abierto por defecto.',
           '[Reseña de Private LLM](/es/power-local-llm/private-llm-review) — la opción de pago con Siri y Shortcuts.',
           '[Reseña de Locally AI](/es/power-local-llm/locally-ai-review) — la app MLX gratuita del equipo de LM Studio.',
@@ -4600,6 +4606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
+          '[2026년 iPhone 로컬 AI: 가능한 것, 불가능한 것, 그리고 이 가이드가 다루는 iPhone 앱](/ko/power-local-llm/local-ai-on-iphone-guide) — 이 목록의 바탕이 되는 플랫폼 가이드: 기능 지도, RAM 및 칩 단계, Apple Intelligence와 App Store의 제한.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — 무료 오픈 소스 기본 선택에 대한 PromptQuorum의 전체 리뷰.',
           '[Private LLM 리뷰](/ko/power-local-llm/private-llm-review) — Siri와 Shortcuts를 지원하는 유료 선택.',
           '[Locally AI 리뷰](/ko/power-local-llm/locally-ai-review) — LM Studio 팀의 무료 MLX 앱.',
@@ -5257,6 +5264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
+          '[IA local no iPhone em 2026: o que é possível, o que não é e os apps de iPhone que cobrimos](/pt/power-local-llm/local-ai-on-iphone-guide) — o guia da plataforma por trás desta lista: mapa de capacidades, níveis de RAM e de chip, e os limites do Apple Intelligence e da App Store.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — a análise completa do PromptQuorum sobre a opção gratuita e de código aberto.',
           '[Análise do Private LLM](/pt/power-local-llm/private-llm-review) — a opção paga com Siri e Shortcuts.',
           '[Análise do Locally AI](/pt/power-local-llm/locally-ai-review) — o app MLX gratuito da equipe da LM Studio.',
@@ -5914,6 +5922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
+          '[الذكاء الاصطناعي المحلي على iPhone في 2026: ما الممكن وما غير الممكن وتطبيقات iPhone التي نغطيها](/ar/power-local-llm/local-ai-on-iphone-guide) — دليل المنصة الذي تقوم عليه هذه القائمة: خريطة القدرات، ومستويات RAM والمعالج، وحدود Apple Intelligence وApp Store.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — مراجعة PromptQuorum الكاملة للخيار المجاني مفتوح المصدر الافتراضي.',
           '[مراجعة Private LLM](/ar/power-local-llm/private-llm-review) — الخيار المدفوع مع Siri وShortcuts.',
           '[مراجعة Locally AI](/ar/power-local-llm/locally-ai-review) — تطبيق MLX المجاني من فريق LM Studio.',

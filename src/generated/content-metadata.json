@@ -4152,6 +4152,24 @@
       ],
       "images": []
     },
+    "gmktec-evo-x5-pro-local-ai-workstation": {
+      "dateModified": "2026-11-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-13",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "minisforum-ms-s1-max-local-ai-workstation": {
       "dateModified": "2026-10-31",
       "lastFactChecked": null,
@@ -6324,7 +6342,7 @@
       ]
     },
     "best-local-llm-apps-android-2026": {
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-11-13",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6349,6 +6367,24 @@
           "title": "Snapdragon 8 Elite's exposed Hexagon NPU runs Phi-4 Mini at 22 tok/sec; Tensor G5's CPU-only path manages 10-18."
         }
       ]
+    },
+    "local-ai-on-android-guide": {
+      "dateModified": "2026-11-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-13",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     },
     "best-local-llm-apps-iphone-2026": {
       "dateModified": "2026-11-13",
@@ -6388,6 +6424,24 @@
           "title": "iOS integration of iPhone local LLM apps: which support Shortcuts, Siri, open source and App Store install"
         }
       ]
+    },
+    "local-ai-on-iphone-guide": {
+      "dateModified": "2026-11-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-13",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     },
     "best-local-llm-apps-mac": {
       "dateModified": "2026-11-13",
@@ -8715,7 +8769,7 @@
       "images": []
     },
     "atomic-chat-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-11",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -10250,7 +10304,7 @@
       "images": []
     },
     "ollama-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-13",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
