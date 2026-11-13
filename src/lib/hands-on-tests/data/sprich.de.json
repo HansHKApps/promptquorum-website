@@ -1,8 +1,8 @@
 {
   "id": "pq-test-sprich-2026-11-09",
   "hero": "sprich-welcome-screen-press-once-speak-press-again",
-  "date_human": "9. November 2026",
-  "captured": "9.11.2026; 17:43 bis 18:07 Uhr laut App-Verlauf; Beginn und Ende der Installation nicht erfasst",
+  "date_human": "9. und 13. November 2026",
+  "captured": "9.11.2026; 17:43 bis 18:07 Uhr laut App-Verlauf; Beginn und Ende der Installation nicht erfasst. Meeting-Sitzung 13.11.2026; Aufnahmebeginn 12:24 Uhr laut App-Kopfzeile.",
   "standard_version": "0.2",
   "locale": "de",
   "app": {
@@ -15,10 +15,10 @@
   },
   "title": "Sprich auf einem M4 Pro Mac mit 24 GB: Lokales Diktieren, das in jede App tippt",
   "page_title": "Sprich-Test",
-  "dek": "Eine erste Sitzung am 9. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, eine nur deutsche Oberfläche und die meisten Nebenfunktionen nicht ausprobiert.",
+  "dek": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein trotz schlechtem Raumklang aufgenommenes und auf zwei Sprecher aufgeteiltes Meeting, eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
   "seo": {
     "title": "Sprich im Praxistest: Lokales Diktieren auf dem M4 Pro Mac",
-    "description": "Praxistest von Sprich auf einem M4 Pro Mac mit 24 GB: Diktieren klappte in Word, WhatsApp und Telegram auf Englisch und Deutsch, Russisch scheiterte."
+    "description": "Praxistest von Sprich (M4 Pro, 24 GB): Diktat in Word, WhatsApp und Telegram sowie ein 6-Minuten-Meeting mit zwei Sprechern. Russisch scheiterte."
   },
   "faq": [
     [
@@ -50,6 +50,11 @@
       "War Sprich schnell?",
       "Der Tester hielt es zunächst für langsam, weil er den Standardmodus (einmal drücken, sprechen, erneut drücken) falsch benutzte. Nach richtiger Benutzung fand er es augenblicklich und so schnell wie sein Cloud-Diktierwerkzeug. Es wurde nichts gestoppt.",
       "tester-estimate"
+    ],
+    [
+      "Funktioniert der Meeting-Modus von Sprich?",
+      "In einem kurzen Test ja. Am 13. November nahm der Tester ein 6-minütiges Meeting mit zwei Personen auf. Der Raumklang war sehr schlecht, trotzdem transkribierte Sprich es und ordnete zwei Sprecher zu. Danach bietet die App die Formate Zusammenfassung, Protokoll, Follow-up-E-Mail und Arztbrief an. Die Genauigkeit wurde nicht bewertet, und welches Format erzeugt wurde, ist nicht erfasst.",
+      "observed"
     ]
   ],
   "status": "Partial",
@@ -79,7 +84,7 @@
     ],
     [
       "Start",
-      "9.11.2026. Das erste Diktat im Verlauf stammt von 17:43 Uhr, der letzte Screenshot von 18:07 Uhr; Beginn und Ende der Installation sind nicht erfasst.",
+      "9.11.2026. Das erste Diktat im Verlauf stammt von 17:43 Uhr, der letzte Screenshot von 18:07 Uhr; Beginn und Ende der Installation sind nicht erfasst. Eine zweite Sitzung am 13.11.2026 umfasste eine Meeting-Aufnahme (12:24 Uhr laut App-Kopfzeile).",
       "observed"
     ],
     [
@@ -104,7 +109,7 @@
     ],
     [
       "Objective",
-      "Nicht als Ziel angegeben. Die Notizen zeigen einen ersten Blick auf Setup, Diktat in drei Apps, Sprachen, Verlauf, Einstellungen und den Meetings-Tab.",
+      "Nicht als Ziel angegeben. Die Notizen zeigen einen ersten Blick auf Setup, Diktat in drei Apps, Sprachen, Verlauf, Einstellungen und den Meetings-Tab. Die zweite Sitzung nahm ein Meeting auf.",
       null
     ],
     [
@@ -114,7 +119,7 @@
     ],
     [
       "Genutzte KI-Hilfe",
-      "Claude entwarf diesen Bericht aus den Word-Notizen des Testers und 15 Screenshots. Die diktierten Teile der Notizen stammen offenbar von Sprich selbst (Annahme: Die Verlaufseinträge stimmen mit dem Text der Notizen überein), sodass manche Ungenauigkeiten in den Notizen Ausgaben der App sein können.",
+      "Claude entwarf diesen Bericht aus den Word-Notizen des Testers und 15 Screenshots sowie das Kapitel zum Meeting-Modus aus der Nachricht des Testers vom 13. November und 2 weiteren Screenshots. Die diktierten Teile der Notizen stammen offenbar von Sprich selbst (Annahme: Die Verlaufseinträge stimmen mit dem Text der Notizen überein), sodass manche Ungenauigkeiten in den Notizen Ausgaben der App sein können.",
       "assumption"
     ],
     [
@@ -125,8 +130,8 @@
   ],
   "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
   "verdict": {
-    "general": "Eine sorgfältig gebaute, auf Deutsch ausgerichtete Diktier-App für Macs mit Apple Silicon. In dieser Sitzung funktionierte das Diktieren in Word, WhatsApp und Telegram auf Englisch und Deutsch; Russisch nicht. Meeting-Aufnahme, Dateitranskription, Textumformulierung, Offline-Betrieb, die Datenschutzangaben und die Deinstallation wurden nicht getestet.",
-    "fit": "Der Tester ist beeindruckt, gibt fünf von fünf Punkten und hat die App einem Kontakt empfohlen. Er hält sie für so schnell wie sein Cloud-Diktierwerkzeug, auch wenn nichts gestoppt wurde. Ob er sie weiter nutzen wird, geht aus seinen Notizen nicht hervor."
+    "general": "Eine sorgfältig gebaute, auf Deutsch ausgerichtete Diktier-App für Macs mit Apple Silicon. In dieser Sitzung funktionierte das Diktieren in Word, WhatsApp und Telegram auf Englisch und Deutsch; Russisch nicht. In einer zweiten Sitzung am 13. November wurde ein 6-minütiges Meeting mit zwei Personen aufgenommen und transkribiert, wobei die Sprecher trotz sehr schlechtem Raumklang unterschieden wurden; der Tester sagt, die Meeting-Funktion funktioniere gut. Dateitranskription, Textumformulierung, Offline-Betrieb, die Datenschutzangaben und die Deinstallation wurden nicht getestet.",
+    "fit": "Der Tester ist beeindruckt, gibt fünf von fünf Punkten und hat die App einem Kontakt empfohlen. Er hält sie für so schnell wie sein Cloud-Diktierwerkzeug, auch wenn nichts gestoppt wurde. Ob er sie weiter nutzen wird, geht aus seinen Notizen nicht hervor. Er findet es außerdem richtig toll, dass die Meeting-Notizen lokal laufen."
   },
   "scores": [
     [
@@ -194,7 +199,11 @@
     ],
     [
       "observed",
-      "Meeting-Aufnahme, das Menü zur Textumformulierung, Dateitranskription, das Wörterbuch, die Wirkung der Tonalitätseinstellung, Offline-Nutzung und Deinstallation wurden nicht getestet."
+      "In einer zweiten Sitzung am 13. November nahm der Tester ein 6-minütiges Meeting mit zwei Personen auf. Der Raumklang war sehr schlecht; Sprich transkribierte es trotzdem und ordnete zwei Sprecher zu. Ein Folgedialog bietet Zusammenfassung, Protokoll, Follow-up-E-Mail und Arztbrief an. Der Tester sagt, die Meeting-Funktion funktioniere gut."
+    ],
+    [
+      "observed",
+      "Das Menü zur Textumformulierung, Dateitranskription, das Wörterbuch, die Wirkung der Tonalitätseinstellung, Offline-Nutzung und Deinstallation wurden nicht getestet."
     ]
   ],
   "quotes": [
@@ -236,10 +245,10 @@
       "chapter-explore"
     ],
     [
-      "Meetings, lokal aufgenommen",
-      "Meetings-Tab, im Test nicht benutzt.",
-      "sprich-meetings-tab-record-meeting-tip",
-      "chapter-explore"
+      "Meeting-Modus, vier Tage später ausprobiert",
+      "Zwei Sprecher und ein Transkript trotz sehr schlechtem Raumklang, mit einem Folgemenü für Zusammenfassung, Protokoll, E-Mail und Arztbrief.",
+      "sprich-meeting-transcript-two-speakers",
+      "chapter-meetings"
     ]
   ],
   "chapters": [
@@ -356,7 +365,7 @@
         ],
         [
           "vendor-claim",
-          "Der Tab „Meetings“ bietet „Meeting aufnehmen“; sein Hinweis besagt, dass Anrufe ein Transkript, eine Zusammenfassung und Aufgaben liefern und alles auf dem Mac bleibt. Der Tester hat noch kein Meeting aufgenommen und plant, es mit ein paar Personen in einem Raum auszuprobieren.",
+          "Der Tab „Meetings“ bietet „Meeting aufnehmen“; sein Hinweis besagt, dass Anrufe ein Transkript, eine Zusammenfassung und Aufgaben liefern und alles auf dem Mac bleibt. Der Tester probierte es in einer zweiten Sitzung aus (siehe Kapitel Meeting-Modus).",
           "sprich-meetings-tab-record-meeting-tip"
         ],
         [
@@ -377,6 +386,52 @@
       ]
     },
     {
+      "id": "chapter-meetings",
+      "title": "Meeting-Modus, ausprobiert am 13. November",
+      "items": [
+        [
+          "observed",
+          "Am 13. November 2026 nahm der Tester ein Meeting über den Tab „Meetings“ auf. Die Kopfzeile des gespeicherten Meetings lautet „Meeting vom 13. November“, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (Äußerungen). Welche App-Version er nutzte, ist nicht erfasst.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "tester-view",
+          "Er sagt, die Meeting-Funktion funktioniere gut und ermögliche es ihm, ein Meeting aufzunehmen.",
+          null
+        ],
+        [
+          "tester-view",
+          "Die Tonqualität im Raum war sehr schlecht.",
+          null
+        ],
+        [
+          "observed",
+          "Sprich nahm es trotzdem auf, transkribierte es und ordnete die Sprachanteile zwei Sprechern zu, Person 1 und Person 2. Ein Hinweis lautet „Klicken zum Umbenennen“. Jede Wortmeldung hat einen Sprecher und einen Zeitstempel (im Ausschnitt 00:00 und 00:14). Der Ausschnitt ist englischer Text mit einigen holprigen Formulierungen; ob das von der Sprache oder von der Erkennung kommt, ist nicht erfasst. Die Genauigkeit des Textes und der Sprecherzuordnung wurde nicht bewertet.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "observed",
+          "Eine Schaltfläche „Auswertung erstellen“ öffnet einen Dialog mit vier Formaten: Zusammenfassung (Kernaussagen, Entscheidungen, Aufgaben; vorausgewählt), Protokoll (nach Themen, mit Beschlüssen), Follow-up-E-Mail (eine versandfertige Nachricht an die Teilnehmer) und Arztbrief (Anamnese, Befunde, Beurteilung, Vorgehen). Welches Format der Tester erzeugte und was dabei herauskam, ist nicht erfasst.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "vendor-claim",
+          "Der Dialog besagt, dass es lokal auf dem Mac läuft und meist 20 bis 60 Sekunden dauert („Läuft lokal auf deinem Mac · meist 20–60 Sekunden“). Es wurde nichts gestoppt und kein Netzwerkverkehr untersucht.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "tester-view",
+          "Der Tester findet es richtig toll, dass dies lokal läuft.",
+          null
+        ],
+        [
+          "observed",
+          "Umfang: eine 6-minütige Aufnahme mit zwei Personen. Längere Meetings, die Aufnahme des Systemtons, Offline-Betrieb und die Qualität der erzeugten Auswertungen wurden nicht getestet oder nicht erfasst.",
+          null
+        ]
+      ]
+    },
+    {
       "id": "chapter-decision",
       "title": "Entscheidung",
       "items": [
@@ -392,7 +447,7 @@
         ],
         [
           "tester-view",
-          "Aus seinen 30 Jahren in der Beratung schätzt er es, Meeting-Notizen selbst zu schreiben, und hofft, lokale Meeting-Notizen mit ein paar Personen in einem Raum auszuprobieren.",
+          "Aus seinen 30 Jahren in der Beratung schätzt er es, Meeting-Notizen selbst zu schreiben. Danach nahm er mit der App ein Meeting in einem Raum auf und findet es richtig toll, dass es lokal läuft.",
           null
         ]
       ]
@@ -436,9 +491,9 @@
       "observed"
     ],
     [
-      "Meetings: Transkript, Zusammenfassung und Aufgaben, alles auf dem Mac.",
-      "Hinweis im Meetings-Tab",
-      "Nicht getestet.",
+      "Meetings: Transkript, Zusammenfassung und Aufgaben, alles auf dem Mac. Die Auswertung läuft lokal, „meist 20 bis 60 Sekunden“.",
+      "Hinweis im Meetings-Tab und Auswertungsdialog",
+      "Am 13. November wurde ein 6-minütiges Meeting aufgenommen und transkribiert, und es wurden zwei Sprecher zugeordnet. Der Auswertungsdialog wurde gesehen; welches Format erzeugt wurde, wie lange es dauerte und ob es lokal lief, ist nicht erfasst.",
       "vendor-claim"
     ],
     [
@@ -571,13 +626,23 @@
       ]
     ],
     [
-      "Meeting-Aufnahme",
-      "-",
-      "Nicht benutzt",
-      "-",
-      "Not completed",
+      "Meeting in einem Raum aufnehmen",
+      "Meetings",
+      "6 min, 2 Personen, 28 Wortmeldungen; Raumklang sehr schlecht (Tester); Transkript mit zwei Sprechern erzeugt",
+      "12:24 (13. Nov.)",
+      "Pass",
       [
-        "sprich-meetings-tab-record-meeting-tip"
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "Auswertungsdialog öffnen",
+      "Meetings",
+      "Vier Formate angeboten; welches erzeugt wurde und die Ausgabe sind nicht erfasst",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
       ]
     ],
     [
@@ -806,7 +871,7 @@
     ],
     [
       "SP-20",
-      "Ein Tab „Meetings“ bietet „Meeting aufnehmen“; sein Hinweis besagt, dass Anrufe ein Transkript, eine Zusammenfassung und Aufgaben liefern und alles auf dem Mac bleibt. Der Tester hat noch kein Meeting aufgenommen und plant, es mit ein paar Personen in einem Raum auszuprobieren.",
+      "Ein Tab „Meetings“ bietet „Meeting aufnehmen“; sein Hinweis besagt, dass Anrufe ein Transkript, eine Zusammenfassung und Aufgaben liefern und alles auf dem Mac bleibt. Dieser Hinweis ist eine Herstellerangabe; die eigene Meeting-Sitzung des Testers ist SP-25 bis SP-30.",
       "Funktionen",
       "vendor-claim",
       "Info",
@@ -851,6 +916,62 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SP-25",
+      "Am 13. November nahm der Tester ein Meeting in einem Raum auf. Das gespeicherte Meeting zeigt „Meeting vom 13. November“, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen. Er sagt, die Meeting-Funktion funktioniere gut. App-Version, Spracheinstellung und wer sprach, sind nicht erfasst.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-26",
+      "Der Raumklang war nach Angabe des Testers sehr schlecht (Tester-Meinung). Sprich erzeugte trotzdem ein Transkript mit Zeitstempeln und zwei Sprechern, Person 1 und Person 2, die sich per Klick umbenennen lassen. Der Screenshot-Ausschnitt ist englisch mit einigen holprigen Formulierungen; die Genauigkeit des Textes und der Sprecherzuordnung wurde nicht bewertet.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-27",
+      "„Auswertung erstellen“ öffnet einen Dialog mit vier Formaten: Zusammenfassung (Kernaussagen, Entscheidungen, Aufgaben), Protokoll (nach Themen, mit Beschlüssen), Follow-up-E-Mail (versandfertig an die Teilnehmer) und Arztbrief (Anamnese, Befunde, Beurteilung, Vorgehen). Welches der Tester erzeugte und die Ausgabe sind nicht erfasst.",
+      "Meetings",
+      "observed",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-28",
+      "Der Dialog besagt „Läuft lokal auf deinem Mac · meist 20–60 Sekunden“ (läuft lokal auf deinem Mac, meist 20 bis 60 Sekunden). Es wurde nichts gestoppt und kein Netzwerkverkehr untersucht.",
+      "Vertrauen",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-29",
+      "Der Tester findet es richtig toll, dass die Meeting-Aufnahme und alles Folgende lokal laufen (Tester-Meinung).",
+      "Meetings",
+      "tester-view",
+      "Positive",
+      []
+    ],
+    [
+      "SP-30",
+      "Umfang des Meetings: eine 6-minütige Aufnahme mit zwei Personen. Nicht getestet oder nicht erfasst: welches Auswertungsformat erzeugt wurde und dessen Ausgabe, Dauer der Auswertung, Genauigkeit von Transkript und Sprechern, längere Meetings, Aufnahme des Systemtons, Offline-Betrieb.",
+      "Umfang",
+      "observed",
+      "Info",
+      []
     ]
   ],
   "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf einen Erstnutzer. Vorgeschlagen, nicht gemessen. „Info“ kennzeichnet einen Befund, der weder ein Problem noch eine Stärke ist; „Positiv“ kennzeichnet etwas, das gut funktionierte.",
@@ -867,7 +988,7 @@
         "Alle, die heute Russisch oder eine nicht deutsche Oberfläche brauchen, oder einen Intel-Mac (das Verzeichnis nennt nur Apple Silicon)."
       ]
     ],
-    "retest": "Neutest bei einer neuen Hauptversion, einer veröffentlichten englischen Oberfläche oder einer bestätigten Sprachliste. Abdecken: App- und macOS-Version erfassen; die Verzögerung stoppen; Russisch mit eingestellter Sprache; Dateitranskription; Meetings; das Umformulierungsmenü; Offline-Nutzung bei untersuchtem Netzwerkverkehr; Arbeitsspeicherbedarf im Betrieb; Deinstallation."
+    "retest": "Neutest bei einer neuen Hauptversion, einer veröffentlichten englischen Oberfläche oder einer bestätigten Sprachliste. Abdecken: App- und macOS-Version erfassen; die Verzögerung stoppen; Russisch mit eingestellter Sprache; Dateitranskription; längere Meetings, bei denen jedes Auswertungsformat erzeugt und gestoppt wird; das Umformulierungsmenü; Offline-Nutzung bei untersuchtem Netzwerkverkehr; Arbeitsspeicherbedarf im Betrieb; Deinstallation."
   },
   "background_intro": "Nicht aus der Praxis. Der folgende Punkt stammt aus dem PromptQuorum-Verzeichniseintrag zu Sprich und wurde hier nicht überprüft.",
   "background": [
@@ -878,6 +999,7 @@
   ],
   "sources": [
     "Hands-on-Notizen und Screenshots des Testers, 9. November 2026 (Original-Word-Notizen; PDF der Rohnotizen folgt).",
+    "Nachricht des Testers und zwei Screenshots der Meeting-Sitzung, 13. November 2026.",
     "PromptQuorum-Verzeichniseintrag und Testbericht zu Sprich (Slug: sprich), geprüft am 9.11.2026.",
     "Herstellerseite sprich.ai (Herstellerangaben)."
   ],
@@ -1195,7 +1317,7 @@
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
       "alt": "Meetings-Tab ohne Meetings, ein Hinweis zur Aufnahme von Anrufen für Transkript, Zusammenfassung und Aufgaben, eine Schaltfläche „Meeting aufnehmen“.",
-      "caption": "Meetings-Tab beim ersten Öffnen. Im Test nicht benutzt. Die Aussage zur Zusammenfassung im Hinweis ist eine Herstellerangabe.",
+      "caption": "Meetings-Tab beim ersten Öffnen, vor der Aufnahme vom 13. November. Die Aussage zur Zusammenfassung im Hinweis ist eine Herstellerangabe.",
       "role": "moment",
       "width": 1600,
       "height": 1050,
@@ -1230,6 +1352,48 @@
       "subject": "Screenshot der Anwendung Sprich",
       "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
       "captured": "9.11.2026; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "sprich-meeting-transcript-two-speakers",
+      "figure": 16,
+      "file": "sprich-meeting-transcript-two-speakers.webp",
+      "path": "images/sprich-meeting-transcript-two-speakers.webp",
+      "alt": "Gespeichertes Meeting „Meeting vom 13. November“ mit der Kopfzeile Heute, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen, den Chips Person 1 und Person 2 mit dem Hinweis „Klicken zum Umbenennen“ und den ersten Transkriptzeilen mit Zeitstempeln.",
+      "caption": "Gespeichertes Meeting vom 13. November: 6 min, 2 Personen, 28 Wortmeldungen, Sprecher Person 1 und Person 2 mit Zeitstempeln. Der Raumklang war nach Angabe des Testers sehr schlecht.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 46486,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "13.11.2026; Aufnahme um 12:24 Uhr laut Kopfzeile; Uhrzeit des Screenshots nicht erfasst"
+    },
+    {
+      "id": "sprich-meeting-auswertung-erstellen-dialog",
+      "figure": 17,
+      "file": "sprich-meeting-auswertung-erstellen-dialog.webp",
+      "path": "images/sprich-meeting-auswertung-erstellen-dialog.webp",
+      "alt": "Dialog „Auswertung erstellen“ mit vier Optionen: Zusammenfassung (ausgewählt), Protokoll, Follow-up-E-Mail und Arztbrief, und einer Fußzeile „Läuft lokal auf deinem Mac, meist 20-60 Sekunden“ neben einer Schaltfläche „Erstellen“.",
+      "caption": "Auswertungsdialog über dem Meeting. Vier Formate; die Zeile zur lokalen Verarbeitung und zu 20 bis 60 Sekunden ist eine Herstellerangabe. Welches Format erzeugt wurde, ist nicht erfasst.",
+      "role": "moment",
+      "width": 1012,
+      "height": 798,
+      "bytes": 32156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Screenshot der Anwendung Sprich",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "13.11.2026; Aufnahme um 12:24 Uhr laut Kopfzeile; Uhrzeit des Screenshots nicht erfasst"
     }
   ],
   "figure_order": [
@@ -1247,11 +1411,13 @@
     "sprich-settings-recording-indicator-mic",
     "sprich-account-security-page-two-factor-off",
     "sprich-meetings-tab-record-meeting-tip",
-    "sprich-bug-report-form"
+    "sprich-bug-report-form",
+    "sprich-meeting-transcript-two-speakers",
+    "sprich-meeting-auswertung-erstellen-dialog"
   ],
   "ui": {
     "kicker": "PromptQuorum Praxistest · {app} · {date}",
-    "date_line": "9. November 2026",
+    "date_line": "9. und 13. November 2026",
     "nav_aria": "Abschnitte",
     "nav": {
       "verdict": "Fazit",

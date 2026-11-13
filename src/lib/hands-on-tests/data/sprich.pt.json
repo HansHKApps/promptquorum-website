@@ -1,8 +1,8 @@
 {
   "id": "pq-test-sprich-2026-11-09",
   "hero": "sprich-welcome-screen-press-once-speak-press-again",
-  "date_human": "9 de novembro de 2026",
-  "captured": "2026-11-09; 17:43 às 18:07 segundo o histórico do app; início e fim da instalação não registrados",
+  "date_human": "9 e 13 de novembro de 2026",
+  "captured": "2026-11-09; 17:43 às 18:07 segundo o histórico do app; início e fim da instalação não registrados. Sessão de reunião em 2026-11-13; gravação iniciada às 12:24 segundo o cabeçalho do app.",
   "standard_version": "0.2",
   "locale": "pt",
   "app": {
@@ -15,10 +15,10 @@
   },
   "title": "Sprich em um Mac M4 Pro com 24 GB: ditado local que digita em qualquer app",
   "page_title": "Teste do Sprich",
-  "dek": "Uma primeira sessão em 9 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, interface somente em alemão e a maioria dos recursos extras sem ser testada.",
+  "dek": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada em dois falantes apesar do som ruim da sala, interface somente em alemão e vários recursos extras sem ser testados.",
   "seo": {
     "title": "Teste prático do Sprich: ditado local em um Mac M4 Pro",
-    "description": "Teste prático do Sprich em um Mac M4 Pro de 24 GB: o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão; o russo falhou."
+    "description": "Teste prático do Sprich em um Mac M4 Pro de 24 GB: ditado no Word, WhatsApp e Telegram e uma reunião de 6 minutos com dois falantes. O russo falhou."
   },
   "faq": [
     [
@@ -50,6 +50,11 @@
       "O Sprich foi rápido?",
       "O testador achou-o lento no início porque usou o modo alternado padrão de forma errada (pressionar uma vez, falar, pressionar de novo). Depois de usar corretamente, achou-o instantâneo e tão rápido quanto sua ferramenta de ditado na nuvem. Nada foi cronometrado.",
       "tester-estimate"
+    ],
+    [
+      "O modo de reunião do Sprich funciona?",
+      "Em um teste curto, sim. Em 13 de novembro o testador gravou uma reunião de 6 minutos com duas pessoas. O som da sala estava muito ruim, mas o Sprich transcreveu mesmo assim e atribuiu a fala a dois falantes. Depois ele oferece os formatos resumo, ata, e-mail de follow-up e carta médica. A precisão não foi avaliada e não se sabe qual formato foi gerado.",
+      "observed"
     ]
   ],
   "status": "Partial",
@@ -79,7 +84,7 @@
     ],
     [
       "Início",
-      "2026-11-09. O primeiro ditado no histórico é às 17:43 e a última captura de tela às 18:07; o início e o fim da instalação não foram registrados.",
+      "2026-11-09. O primeiro ditado no histórico é às 17:43 e a última captura de tela às 18:07; o início e o fim da instalação não foram registrados. Uma segunda sessão em 2026-11-13 abrangeu a gravação de uma reunião (12:24 segundo o cabeçalho do app).",
       "observed"
     ],
     [
@@ -104,7 +109,7 @@
     ],
     [
       "Objetivo",
-      "Não consta como objetivo. As anotações mostram uma primeira olhada na configuração, no ditado em três apps, nos idiomas, no histórico, nos ajustes e na aba Reuniões.",
+      "Não consta como objetivo. As anotações mostram uma primeira olhada na configuração, no ditado em três apps, nos idiomas, no histórico, nos ajustes e na aba Reuniões. A segunda sessão gravou uma reunião.",
       null
     ],
     [
@@ -114,7 +119,7 @@
     ],
     [
       "Ajuda de IA usada",
-      "O Claude redigiu este relatório a partir das anotações do testador em Word e de 15 capturas de tela. As partes ditadas das anotações parecem vir do próprio Sprich (suposição: as entradas do histórico coincidem com o texto das anotações), então alguns deslizes nas anotações podem ser saída do app.",
+      "O Claude redigiu este relatório a partir das anotações do testador em Word e de 15 capturas de tela, e o capítulo sobre o modo de reunião a partir da mensagem do testador de 13 de novembro e de 2 capturas de tela adicionais. As partes ditadas das anotações parecem vir do próprio Sprich (suposição: as entradas do histórico coincidem com o texto das anotações), então alguns deslizes nas anotações podem ser saída do app.",
       "assumption"
     ],
     [
@@ -125,8 +130,8 @@
   ],
   "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
   "verdict": {
-    "general": "Um app de ditado cuidadosamente construído, com prioridade para o alemão, para Macs com Apple Silicon. Nesta sessão o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão; o russo não. Gravação de reuniões, transcrição de arquivos, reescrita de texto, operação offline, as alegações de privacidade e a desinstalação não foram testados.",
-    "fit": "O testador ficou impressionado, deu nota cinco de cinco e o recomendou a um contato. Ele o considera tão rápido quanto sua ferramenta de ditado na nuvem, embora nada tenha sido cronometrado. Se ele continuará usando não consta nas anotações."
+    "general": "Um app de ditado cuidadosamente construído, com prioridade para o alemão, para Macs com Apple Silicon. Nesta sessão o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão; o russo não. Em uma segunda sessão, em 13 de novembro, uma reunião de 6 minutos com duas pessoas foi gravada e transcrita, com os falantes diferenciados, apesar do som muito ruim da sala; o testador diz que a função de reunião funciona bem. Transcrição de arquivos, reescrita de texto, operação offline, as alegações de privacidade e a desinstalação não foram testados.",
+    "fit": "O testador ficou impressionado, deu nota cinco de cinco e o recomendou a um contato. Ele o considera tão rápido quanto sua ferramenta de ditado na nuvem, embora nada tenha sido cronometrado. Se ele continuará usando não consta nas anotações. Ele também acha realmente ótimo que as anotações de reunião rodem localmente."
   },
   "scores": [
     [
@@ -194,7 +199,11 @@
     ],
     [
       "observed",
-      "Gravação de reuniões, o menu de reescrita de texto, transcrição de arquivos, o dicionário, o efeito da configuração de tom, o uso offline e a desinstalação não foram testados."
+      "Em uma segunda sessão, em 13 de novembro, o testador gravou uma reunião de 6 minutos com duas pessoas. O som da sala estava muito ruim; o Sprich ainda assim a transcreveu e atribuiu dois falantes. Uma caixa de diálogo posterior oferece Zusammenfassung, Protokoll, Follow-up-E-Mail e Arztbrief. O testador diz que a função de reunião funciona bem."
+    ],
+    [
+      "observed",
+      "O menu de reescrita de texto, a transcrição de arquivos, o dicionário, o efeito da configuração de tom, o uso offline e a desinstalação não foram testados."
     ]
   ],
   "quotes": [
@@ -236,10 +245,10 @@
       "chapter-explore"
     ],
     [
-      "Reuniões, gravadas localmente",
-      "Aba Reuniões, não usada no teste.",
-      "sprich-meetings-tab-record-meeting-tip",
-      "chapter-explore"
+      "Modo de reunião, testado quatro dias depois",
+      "Dois falantes e uma transcrição a partir de um som de sala muito ruim, com um menu posterior para resumo, ata, e-mail e carta médica.",
+      "sprich-meeting-transcript-two-speakers",
+      "chapter-meetings"
     ]
   ],
   "chapters": [
@@ -356,7 +365,7 @@
         ],
         [
           "vendor-claim",
-          "A aba Reuniões oferece “Meeting aufnehmen”; a dica diz que as chamadas geram transcrição, resumo e tarefas e que tudo fica no Mac. O testador não gravou nenhuma reunião e pretende experimentar com algumas pessoas em uma sala.",
+          "A aba Reuniões oferece “Meeting aufnehmen”; a dica diz que as chamadas geram transcrição, resumo e tarefas e que tudo fica no Mac. O testador a experimentou em uma segunda sessão (veja o capítulo Modo de reunião).",
           "sprich-meetings-tab-record-meeting-tip"
         ],
         [
@@ -377,6 +386,52 @@
       ]
     },
     {
+      "id": "chapter-meetings",
+      "title": "Modo de reunião, testado em 13 de novembro",
+      "items": [
+        [
+          "observed",
+          "Em 13 de novembro de 2026 o testador gravou uma reunião com a aba Reuniões. O cabeçalho da reunião salva diz “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (falas). A versão do app usada não foi registrada.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "tester-view",
+          "Ele diz que a função de reunião funciona bem e que ela permite gravar uma reunião.",
+          null
+        ],
+        [
+          "tester-view",
+          "A qualidade do som na sala era muito ruim.",
+          null
+        ],
+        [
+          "observed",
+          "Mesmo assim o Sprich gravou e transcreveu e atribuiu a fala a dois falantes, Person 1 e Person 2. Uma dica diz “Klicken zum Umbenennen” (clique para renomear). Cada fala tem um falante e um carimbo de tempo (00:00 e 00:14 no trecho). O trecho está em inglês, com algumas formulações estranhas; não se sabe se isso vem da fala ou do reconhecimento. A precisão do texto e da atribuição dos falantes não foi avaliada.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "observed",
+          "Um botão “Auswertung erstellen” (criar avaliação) abre uma caixa de diálogo com quatro formatos: Zusammenfassung (principais afirmações, decisões, tarefas; pré-selecionado), Protokoll (por tópico, com resoluções), Follow-up-E-Mail (mensagem pronta para enviar aos participantes) e Arztbrief (histórico, achados, avaliação, procedimento). Não se sabe qual formato o testador gerou nem o que resultou.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "vendor-claim",
+          "A caixa de diálogo diz que roda localmente no seu Mac e costuma levar de 20 a 60 segundos (“Läuft lokal auf deinem Mac · meist 20–60 Sekunden”). Nada foi cronometrado e o tráfego de rede não foi inspecionado.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "tester-view",
+          "O testador acha realmente ótimo que isso rode localmente.",
+          null
+        ],
+        [
+          "observed",
+          "Escopo: uma gravação de 6 minutos com duas pessoas. Reuniões mais longas, captura do som do sistema, operação offline e a qualidade das avaliações geradas não foram testadas ou não foram registradas.",
+          null
+        ]
+      ]
+    },
+    {
       "id": "chapter-decision",
       "title": "Decisão",
       "items": [
@@ -392,7 +447,7 @@
         ],
         [
           "tester-view",
-          "Com seus 30 anos em consultoria, ele valoriza escrever ele mesmo as atas de reunião e espera experimentar atas locais com algumas pessoas em uma sala.",
+          "Com seus 30 anos em consultoria, ele valoriza escrever ele mesmo as atas de reunião. Depois ele gravou uma reunião em uma sala com o app e acha realmente ótimo que ela rode localmente.",
           null
         ]
       ]
@@ -436,9 +491,9 @@
       "observed"
     ],
     [
-      "Reuniões: transcrição, resumo e tarefas, tudo no Mac.",
-      "Dica da aba Reuniões",
-      "Não testado.",
+      "Reuniões: transcrição, resumo e tarefas, tudo no Mac. A avaliação roda localmente, “normalmente de 20 a 60 segundos”.",
+      "Dica da aba Reuniões e caixa de diálogo de avaliação",
+      "Uma reunião de 6 minutos foi gravada e transcrita em 13 de novembro e dois falantes foram atribuídos. A caixa de diálogo de avaliação foi vista; não se sabe qual formato foi gerado, quanto tempo levou nem se rodou localmente.",
       "vendor-claim"
     ],
     [
@@ -571,13 +626,23 @@
       ]
     ],
     [
-      "Gravação de reunião",
-      "-",
-      "Não usada",
-      "-",
-      "Not completed",
+      "Gravar uma reunião em uma sala",
+      "Reuniões",
+      "6 min, 2 pessoas, 28 falas; som da sala muito ruim (testador); transcrição com dois falantes gerada",
+      "12:24 (13 nov.)",
+      "Pass",
       [
-        "sprich-meetings-tab-record-meeting-tip"
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "Abrir a caixa de diálogo de avaliação",
+      "Reuniões",
+      "Quatro formatos oferecidos; qual foi gerado e o resultado não foram registrados",
+      "Não registrado",
+      "Partial",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
       ]
     ],
     [
@@ -806,7 +871,7 @@
     ],
     [
       "SP-20",
-      "Uma aba Reuniões oferece “Meeting aufnehmen”; a dica diz que as chamadas geram transcrição, resumo e tarefas e que tudo fica no Mac. O testador não gravou nenhuma reunião e pretende experimentar com algumas pessoas em uma sala.",
+      "Uma aba Reuniões oferece “Meeting aufnehmen”; a dica diz que as chamadas geram transcrição, resumo e tarefas e que tudo fica no Mac. Essa dica é uma alegação do fabricante; a sessão de reunião do próprio testador corresponde a SP-25 a SP-30.",
       "Recursos",
       "vendor-claim",
       "Info",
@@ -851,6 +916,62 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SP-25",
+      "Em 13 de novembro o testador gravou uma reunião em uma sala. A reunião salva mostra “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen. Ele diz que a função de reunião funciona bem. Versão do app, configuração de idioma e quem falou não foram registrados.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-26",
+      "O som da sala estava muito ruim segundo o testador (tester-view). Mesmo assim o Sprich gerou uma transcrição com carimbos de tempo e dois falantes, Person 1 e Person 2, que podem ser renomeados com um clique. O trecho da captura de tela está em inglês, com algumas formulações estranhas; a precisão do texto e da atribuição dos falantes não foi avaliada.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-27",
+      "“Auswertung erstellen” (criar avaliação) abre uma caixa de diálogo com quatro formatos: Zusammenfassung (principais afirmações, decisões, tarefas), Protokoll (por tópico, com resoluções), Follow-up-E-Mail (pronto para enviar aos participantes) e Arztbrief (histórico, achados, avaliação, procedimento). Qual deles o testador gerou e o resultado não foram registrados.",
+      "Meetings",
+      "observed",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-28",
+      "A caixa de diálogo diz “Läuft lokal auf deinem Mac · meist 20–60 Sekunden” (roda localmente no seu Mac, normalmente de 20 a 60 segundos). Nada foi cronometrado e o tráfego de rede não foi inspecionado.",
+      "Trust",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-29",
+      "O testador acha realmente ótimo que a gravação da reunião e o que vem depois rodem localmente (tester-view).",
+      "Meetings",
+      "tester-view",
+      "Positive",
+      []
+    ],
+    [
+      "SP-30",
+      "Escopo da reunião: uma gravação de 6 minutos com duas pessoas. Não testado ou não registrado: qual formato de avaliação foi gerado e seu resultado, tempo de avaliação, precisão da transcrição e dos falantes, reuniões mais longas, captura do som do sistema, operação offline.",
+      "Scope",
+      "observed",
+      "Info",
+      []
     ]
   ],
   "severity_note": "A gravidade é o impacto sobre quem usa o app pela primeira vez. Proposta, não medida. Info marca um achado que não é nem problema nem ponto positivo.",
@@ -867,7 +988,7 @@
         "Quem precisa hoje de russo ou de uma interface que não seja em alemão, ou de um Mac Intel (o diretório lista somente Apple Silicon)."
       ]
     ],
-    "retest": "Refazer o teste numa nova versão principal, quando houver uma interface em inglês publicada ou uma lista de idiomas confirmada. Cobrir: registrar as versões do app e do macOS; cronometrar o atraso; russo com o idioma definido; transcrição de arquivos; Reuniões; o menu de reescrita; uso offline com o tráfego inspecionado; memória em uso; desinstalação."
+    "retest": "Refazer o teste numa nova versão principal, quando houver uma interface em inglês publicada ou uma lista de idiomas confirmada. Cobrir: registrar as versões do app e do macOS; cronometrar o atraso; russo com o idioma definido; transcrição de arquivos; reuniões mais longas com cada formato de avaliação gerado e cronometrado; o menu de reescrita; uso offline com o tráfego inspecionado; memória em uso; desinstalação."
   },
   "background_intro": "Não faz parte da sessão prática. O item abaixo vem da entrada do Sprich no diretório da PromptQuorum e não foi verificado aqui.",
   "background": [
@@ -878,6 +999,7 @@
   ],
   "sources": [
     "Anotações práticas e capturas de tela do testador, 9 de novembro de 2026 (anotações originais em Word; PDF das anotações originais a ser adicionado).",
+    "Mensagem do testador e duas capturas de tela da sessão de reunião, 13 de novembro de 2026.",
     "Entrada do diretório da PromptQuorum e análise do Sprich (slug: sprich), verificadas em 2026-11-09.",
     "Site do fabricante sprich.ai (alegações do fabricante)."
   ],
@@ -1195,7 +1317,7 @@
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
       "alt": "Aba Reuniões com zero reuniões, uma dica sobre gravar chamadas para obter transcrição, resumo e tarefas, um botão Meeting aufnehmen.",
-      "caption": "Aba Reuniões na primeira abertura. Não usada no teste. A afirmação sobre o resumo na dica é uma alegação do fabricante.",
+      "caption": "Aba Reuniões na primeira abertura, antes da gravação de 13 de novembro. A afirmação sobre o resumo na dica é uma alegação do fabricante.",
       "role": "moment",
       "width": 1600,
       "height": 1050,
@@ -1230,6 +1352,48 @@
       "subject": "Captura de tela do app Sprich",
       "rights": "Captura de tela do próprio testador da interface de um software de terceiros.",
       "captured": "2026-11-09; hora exata não registrada"
+    },
+    {
+      "id": "sprich-meeting-transcript-two-speakers",
+      "figure": 16,
+      "file": "sprich-meeting-transcript-two-speakers.webp",
+      "path": "images/sprich-meeting-transcript-two-speakers.webp",
+      "alt": "Reunião salva “Meeting vom 13. November” com o cabeçalho Heute, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen, um chip Person 1 e Person 2 com a dica para clicar e renomear, e as primeiras linhas da transcrição com carimbos de tempo.",
+      "caption": "Reunião salva de 13 de novembro: 6 min, 2 pessoas, 28 falas, falantes Person 1 e Person 2 com carimbos de tempo. O som da sala estava muito ruim segundo o testador.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 46486,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Captura de tela do app Sprich",
+      "rights": "Captura de tela do próprio testador da interface de um software de terceiros.",
+      "captured": "2026-11-13; gravação às 12:24 segundo o cabeçalho; hora da captura de tela não registrada"
+    },
+    {
+      "id": "sprich-meeting-auswertung-erstellen-dialog",
+      "figure": 17,
+      "file": "sprich-meeting-auswertung-erstellen-dialog.webp",
+      "path": "images/sprich-meeting-auswertung-erstellen-dialog.webp",
+      "alt": "Caixa de diálogo “Auswertung erstellen” com quatro opções: Zusammenfassung (selecionada), Protokoll, Follow-up-E-Mail e Arztbrief, e uma linha de rodapé “Läuft lokal auf deinem Mac, meist 20-60 Sekunden” ao lado de um botão Erstellen.",
+      "caption": "Caixa de diálogo de avaliação sobre a reunião. Quatro formatos; a linha sobre processamento local e 20 a 60 segundos é uma alegação do fabricante. Não se sabe qual formato foi gerado.",
+      "role": "moment",
+      "width": 1012,
+      "height": 798,
+      "bytes": 32156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Captura de tela do app Sprich",
+      "rights": "Captura de tela do próprio testador da interface de um software de terceiros.",
+      "captured": "2026-11-13; gravação às 12:24 segundo o cabeçalho; hora da captura de tela não registrada"
     }
   ],
   "figure_order": [
@@ -1247,11 +1411,13 @@
     "sprich-settings-recording-indicator-mic",
     "sprich-account-security-page-two-factor-off",
     "sprich-meetings-tab-record-meeting-tip",
-    "sprich-bug-report-form"
+    "sprich-bug-report-form",
+    "sprich-meeting-transcript-two-speakers",
+    "sprich-meeting-auswertung-erstellen-dialog"
   ],
   "ui": {
     "kicker": "Teste prático do PromptQuorum · {app} · {date}",
-    "date_line": "9 de novembro de 2026",
+    "date_line": "9 e 13 de novembro de 2026",
     "nav_aria": "Seções",
     "nav": {
       "verdict": "Veredito",

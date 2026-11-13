@@ -1,8 +1,8 @@
 {
   "id": "pq-test-sprich-2026-11-09",
   "hero": "sprich-welcome-screen-press-once-speak-press-again",
-  "date_human": "2026年11月9日",
-  "captured": "2026-11-09；应用历史记录显示 17:43 至 18:07；安装开始和结束时间未记录",
+  "date_human": "2026年11月9日和13日",
+  "captured": "2026-11-09；应用历史记录显示 17:43 至 18:07；安装开始和结束时间未记录。会议测试 2026-11-13；应用标题栏显示录制开始于 12:24。",
   "standard_version": "0.2",
   "locale": "zh",
   "app": {
@@ -15,10 +15,10 @@
   },
   "title": "24 GB 内存 M4 Pro Mac 上的 Sprich：能在任意应用中输入文字的本地听写",
   "page_title": "Sprich 测试",
-  "dek": "2026年11月9日的首次试用：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；界面只有德语；多数附加功能没有试用。",
+  "dek": "两次试用，2026年11月9日和13日：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；尽管房间里的声音很差，一场会议仍被录下并区分出两位说话人；界面只有德语；有几项附加功能没有试用。",
   "seo": {
     "title": "Sprich 实测：M4 Pro Mac 上的本地听写",
-    "description": "Sprich 在 24 GB M4 Pro Mac 上的实测：Word、WhatsApp 和 Telegram 中的英语和德语听写可用，俄语失败。"
+    "description": "Sprich 在 24 GB M4 Pro Mac 上的实测：Word、WhatsApp、Telegram 中的听写，以及一场两位说话人、6 分钟的会议。俄语失败。"
   },
   "faq": [
     [
@@ -50,6 +50,11 @@
       "Sprich 快吗？",
       "测试者起初认为它很慢，因为他错误地使用了默认的切换模式（按一次、说话、再按一次）。正确使用之后，他觉得它是即时的，和他用的云端听写工具一样快。没有计时。",
       "tester-estimate"
+    ],
+    [
+      "Sprich 的会议模式可用吗？",
+      "在一次简短的测试中可用。11 月 13 日，测试者录制了一场两人参加、时长 6 分钟的会议。房间里的声音很差，但 Sprich 仍然完成了转写，并区分出两位说话人。之后它提供摘要、会议记录、跟进邮件和医生信函几种格式。准确率没有评分，生成的是哪种格式也未记录。",
+      "observed"
     ]
   ],
   "status": "Partial",
@@ -79,7 +84,7 @@
     ],
     [
       "开始时间",
-      "2026-11-09。历史记录中的第一次听写在 17:43，最后一张截图在 18:07；安装开始和结束时间未记录。",
+      "2026-11-09。历史记录中的第一次听写在 17:43，最后一张截图在 18:07；安装开始和结束时间未记录。2026-11-13 的第二次测试包含一次会议录音（应用标题栏显示 12:24）。",
       "observed"
     ],
     [
@@ -104,7 +109,7 @@
     ],
     [
       "目标",
-      "笔记中没有写明目标。笔记显示的是对设置、三个应用中的听写、语言、历史记录、设置和“会议”标签页的初步查看。",
+      "笔记中没有写明目标。笔记显示的是对设置、三个应用中的听写、语言、历史记录、设置和“会议”标签页的初步查看。第二次测试录制了一场会议。",
       null
     ],
     [
@@ -114,7 +119,7 @@
     ],
     [
       "AI 辅助",
-      "本报告由 Claude 根据测试者的 Word 笔记和 15 张截图起草。笔记中口述的部分看起来出自 Sprich 本身（假设：历史记录中的条目与笔记文字一致），因此笔记中的一些笔误可能是应用的输出。",
+      "本报告由 Claude 根据测试者的 Word 笔记和 15 张截图起草；“会议模式”一章则根据测试者 11 月 13 日的消息和另外 2 张截图起草。笔记中口述的部分看起来出自 Sprich 本身（假设：历史记录中的条目与笔记文字一致），因此笔记中的一些笔误可能是应用的输出。",
       "assumption"
     ],
     [
@@ -125,8 +130,8 @@
   ],
   "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Sprich 于 2026-11-09 加入目录，与本次测试是同一天，并附有一篇由 AI 撰写的评测。测试之后开发者回复了测试者；日期未说明，开发者回复时是否已拿到这些笔记也未记录。Sprich 从本站获得点击。笔记中没有付款或赞助的记录。",
   "verdict": {
-    "general": "一款做工用心、以德语优先的 Apple 芯片 Mac 听写应用。在这次测试中，Word、WhatsApp 和 Telegram 里的英语和德语听写可用；俄语不可用。会议录音、文件转写、文字改写、离线运行、隐私声明和卸载均未测试。",
-    "fit": "测试者印象深刻，给了五分（满分五分），并向一位联系人推荐了它。他认为它和自己用的云端听写工具一样快，但没有计时。他的笔记中没有说明是否会继续使用。"
+    "general": "一款做工用心、以德语优先的 Apple 芯片 Mac 听写应用。在第一次测试中，Word、WhatsApp 和 Telegram 里的英语和德语听写可用；俄语不可用。在 11 月 13 日的第二次测试中，一场两人参加、时长 6 分钟的会议被录制并转写，尽管房间里的声音很差，两位说话人仍被区分开来；测试者说会议功能效果很好。文件转写、文字改写、离线运行、隐私声明和卸载均未测试。",
+    "fit": "测试者印象深刻，给了五分（满分五分），并向一位联系人推荐了它。他认为它和自己用的云端听写工具一样快，但没有计时。他的笔记中没有说明是否会继续使用。他还觉得会议记录在本地运行真的很棒。"
   },
   "scores": [
     [
@@ -194,7 +199,11 @@
     ],
     [
       "observed",
-      "会议录音、文字改写菜单、文件转写、词典、语气设置的实际效果、离线使用和卸载均未测试。"
+      "在 11 月 13 日的第二次测试中，测试者录制了一场两人参加、时长 6 分钟的会议。房间里的声音很差；Sprich 仍然完成了转写，并区分出两位说话人。随后弹出的对话框提供 Zusammenfassung、Protokoll、Follow-up-E-Mail 和 Arztbrief。测试者说会议功能效果很好。"
+    ],
+    [
+      "observed",
+      "文字改写菜单、文件转写、词典、语气设置的实际效果、离线使用和卸载均未测试。"
     ]
   ],
   "quotes": [
@@ -236,10 +245,10 @@
       "chapter-explore"
     ],
     [
-      "会议，在本地录制",
-      "“会议”标签页，测试中未使用。",
-      "sprich-meetings-tab-record-meeting-tip",
-      "chapter-explore"
+      "会议模式，四天后试用",
+      "房间里的声音很差，仍得到两位说话人的文字记录，并有摘要、会议记录、邮件和医生信函的后续菜单。",
+      "sprich-meeting-transcript-two-speakers",
+      "chapter-meetings"
     ]
   ],
   "chapters": [
@@ -356,7 +365,7 @@
         ],
         [
           "vendor-claim",
-          "“会议”标签页提供“Meeting aufnehmen”；其提示说通话会生成文字记录、摘要和任务，并且一切都留在这台 Mac 上。测试者还没有录过会议，打算和房间里的几个人一起试试。",
+          "“会议”标签页提供“Meeting aufnehmen”；其提示说通话会生成文字记录、摘要和任务，并且一切都留在这台 Mac 上。测试者在第二次测试中试用了它（见“会议模式”一章）。",
           "sprich-meetings-tab-record-meeting-tip"
         ],
         [
@@ -377,6 +386,52 @@
       ]
     },
     {
+      "id": "chapter-meetings",
+      "title": "会议模式，11 月 13 日试用",
+      "items": [
+        [
+          "observed",
+          "2026 年 11 月 13 日，测试者用“会议”标签页录制了一场会议。已保存会议的标题信息显示“Meeting vom 13. November”、12:24、Mikrofon、6 min、2 Personen、28 Wortmeldungen（发言）。他使用的应用版本未记录。",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "tester-view",
+          "他说会议功能效果很好，可以用它录制会议。",
+          null
+        ],
+        [
+          "tester-view",
+          "房间里的音质很差。",
+          null
+        ],
+        [
+          "observed",
+          "Sprich 仍然完成了录音和转写，并把语音分配给两位说话人，即 Person 1 和 Person 2。界面上有一条提示“Klicken zum Umbenennen”（点击重命名）。每条发言都有说话人和时间戳（摘录中为 00:00 和 00:14）。摘录是英文文本，措辞有些生硬；这是来自说话本身还是来自识别，未记录。文字和说话人分配的准确率没有评分。",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "observed",
+          "“Auswertung erstellen”（生成评估）按钮会打开一个对话框，提供四种格式：Zusammenfassung（要点、决定、任务；默认选中）、Protokoll（按主题整理，含决议）、Follow-up-E-Mail（可直接发给与会者的邮件）和 Arztbrief（病史、检查结果、评估、处理）。测试者生成了哪种格式、结果如何，均未记录。",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "vendor-claim",
+          "对话框称在你的 Mac 上本地运行，通常需要 20 到 60 秒（“Läuft lokal auf deinem Mac · meist 20–60 Sekunden”）。没有计时，也没有检查网络流量。",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "tester-view",
+          "测试者觉得这一切在本地运行真的很棒。",
+          null
+        ],
+        [
+          "observed",
+          "范围：一段 6 分钟、两人参加的录音。更长的会议、系统声音采集、离线运行以及所生成评估的质量，均未测试或未记录。",
+          null
+        ]
+      ]
+    },
+    {
       "id": "chapter-decision",
       "title": "决定",
       "items": [
@@ -392,7 +447,7 @@
         ],
         [
           "tester-view",
-          "凭借 30 年的咨询经验，他看重亲自撰写会议记录，并希望与房间里的几个人一起试试本地会议记录。",
+          "凭借 30 年的咨询经验，他看重亲自撰写会议记录。随后他在房间里用这款应用录了一场会议，并觉得它在本地运行真的很棒。",
           null
         ]
       ]
@@ -436,9 +491,9 @@
       "observed"
     ],
     [
-      "会议：文字记录、摘要和任务，全部在这台 Mac 上。",
-      "“会议”标签页提示",
-      "未测试。",
+      "会议：文字记录、摘要和任务，全部在这台 Mac 上。评估在本地运行，“通常 20 到 60 秒”。",
+      "“会议”标签页提示和评估对话框",
+      "11 月 13 日录制并转写了一场 6 分钟的会议，并区分出两位说话人。看到了评估对话框；生成了哪种格式、用了多久、是否在本地运行，均未记录。",
       "vendor-claim"
     ],
     [
@@ -571,13 +626,23 @@
       ]
     ],
     [
-      "会议录音",
-      "-",
-      "未使用",
-      "-",
-      "Not completed",
+      "在房间里录制会议",
+      "会议",
+      "6 分钟，2 人，28 条发言；房间声音很差（测试者）；生成了含两位说话人的文字记录",
+      "12:24（11 月 13 日）",
+      "Pass",
       [
-        "sprich-meetings-tab-record-meeting-tip"
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "打开评估对话框",
+      "会议",
+      "提供四种格式；生成了哪种及其输出均未记录",
+      "未记录",
+      "Partial",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
       ]
     ],
     [
@@ -806,7 +871,7 @@
     ],
     [
       "SP-20",
-      "“会议”标签页提供“Meeting aufnehmen”；其提示说通话会生成文字记录、摘要和任务，并且一切都留在这台 Mac 上。测试者还没有录过会议，打算和房间里的几个人一起试试。",
+      "“会议”标签页提供“Meeting aufnehmen”；其提示说通话会生成文字记录、摘要和任务，并且一切都留在这台 Mac 上。这条提示属于厂商声明；测试者自己的会议测试见 SP-25 至 SP-30。",
       "功能",
       "vendor-claim",
       "Info",
@@ -851,6 +916,62 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SP-25",
+      "11 月 13 日，测试者在房间里录制了一场会议。已保存的会议显示“Meeting vom 13. November”、12:24、Mikrofon、6 min、2 Personen、28 Wortmeldungen。他说会议功能效果很好。应用版本、语言设置以及谁在说话均未记录。",
+      "会议",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-26",
+      "据测试者说，房间里的声音很差（tester-view）。Sprich 仍然生成了带时间戳的文字记录和两位说话人，即 Person 1 和 Person 2，可点击重命名。截图摘录是英文，措辞有些生硬；文字和说话人分配的准确率没有评分。",
+      "会议",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-27",
+      "“Auswertung erstellen”会打开一个对话框，提供四种格式：Zusammenfassung（要点、决定、任务）、Protokoll（按主题整理，含决议）、Follow-up-E-Mail（可直接发给与会者）和 Arztbrief（病史、检查结果、评估、处理）。测试者生成了哪一种及其输出均未记录。",
+      "会议",
+      "observed",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-28",
+      "对话框写着“Läuft lokal auf deinem Mac · meist 20–60 Sekunden”（在你的 Mac 上本地运行，通常 20 到 60 秒）。没有计时，也没有检查网络流量。",
+      "信任",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-29",
+      "测试者觉得会议录音及其后续处理在本地运行真的很棒（tester-view）。",
+      "会议",
+      "tester-view",
+      "Positive",
+      []
+    ],
+    [
+      "SP-30",
+      "会议测试范围：一段 6 分钟、两人参加的录音。未测试或未记录：生成了哪种评估格式及其输出、评估耗时、文字记录和说话人的准确率、更长的会议、系统声音采集、离线运行。",
+      "范围",
+      "observed",
+      "Info",
+      []
     ]
   ],
   "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现；Positive 表示表现良好的地方。",
@@ -867,7 +988,7 @@
         "现在就需要俄语或非德语界面的人，或使用 Intel Mac 的人（目录只列出 Apple 芯片）。"
       ]
     ],
-    "retest": "在新的主版本、正式发布的英语界面或确认的语言列表出现时复测。覆盖：记录应用和 macOS 版本；为延迟计时；设置好语言后测试俄语；文件转写；会议；改写菜单；检查流量后的离线使用；运行时内存；卸载。"
+    "retest": "在新的主版本、正式发布的英语界面或确认的语言列表出现时复测。覆盖：记录应用和 macOS 版本；为延迟计时；设置好语言后测试俄语；文件转写；更长的会议，并逐一生成每种评估格式并计时；改写菜单；检查流量后的离线使用；运行时内存；卸载。"
   },
   "background_intro": "非实测内容。以下条目来自 PromptQuorum 目录中的 Sprich 条目，此处未核实。",
   "background": [
@@ -878,6 +999,7 @@
   ],
   "sources": [
     "测试者的实测笔记和截图，2026年11月9日（原始 Word 笔记；原始笔记 PDF 待补充）。",
+    "测试者关于会议测试的消息和两张截图，2026年11月13日。",
     "PromptQuorum 目录中 Sprich 的条目和评测（slug：sprich），核实于 2026-11-09。",
     "厂商网站 sprich.ai（厂商声明）。"
   ],
@@ -1195,7 +1317,7 @@
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
       "alt": "“会议”标签页，会议数为零，有一条关于录制通话以获得文字记录、摘要和任务的提示，一个 Meeting aufnehmen 按钮。",
-      "caption": "首次打开时的“会议”标签页。测试中未使用。提示中关于摘要的说法属于厂商声明。",
+      "caption": "首次打开时的“会议”标签页，在 11 月 13 日录音之前。提示中关于摘要的说法属于厂商声明。",
       "role": "moment",
       "width": 1600,
       "height": 1050,
@@ -1230,6 +1352,48 @@
       "subject": "Sprich 应用的截图",
       "rights": "测试者本人对第三方软件界面所截的截图。",
       "captured": "2026-11-09；具体时间未记录"
+    },
+    {
+      "id": "sprich-meeting-transcript-two-speakers",
+      "figure": 16,
+      "file": "sprich-meeting-transcript-two-speakers.webp",
+      "path": "images/sprich-meeting-transcript-two-speakers.webp",
+      "alt": "已保存的会议“Meeting vom 13. November”，标题信息为 Heute、12:24、Mikrofon、6 min、2 Personen、28 Wortmeldungen，一个 Person 1 和 Person 2 标签，带有点击重命名的提示，以及带时间戳的前几行文字记录。",
+      "caption": "11 月 13 日已保存的会议：6 分钟，2 人，28 条发言，说话人为 Person 1 和 Person 2，带时间戳。据测试者说，房间里的声音很差。",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 46486,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-13；录制时间为 12:24（据标题栏）；截图时间未记录"
+    },
+    {
+      "id": "sprich-meeting-auswertung-erstellen-dialog",
+      "figure": 17,
+      "file": "sprich-meeting-auswertung-erstellen-dialog.webp",
+      "path": "images/sprich-meeting-auswertung-erstellen-dialog.webp",
+      "alt": "对话框“Auswertung erstellen”，有四个选项：Zusammenfassung（已选中）、Protokoll、Follow-up-E-Mail 和 Arztbrief，底部有一行“Läuft lokal auf deinem Mac, meist 20-60 Sekunden”，旁边是 Erstellen 按钮。",
+      "caption": "会议上方的评估对话框。四种格式；本地处理和 20 到 60 秒这一行属于厂商声明。生成了哪种格式未记录。",
+      "role": "moment",
+      "width": 1012,
+      "height": 798,
+      "bytes": 32156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Sprich 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-13；录制时间为 12:24（据标题栏）；截图时间未记录"
     }
   ],
   "figure_order": [
@@ -1247,11 +1411,13 @@
     "sprich-settings-recording-indicator-mic",
     "sprich-account-security-page-two-factor-off",
     "sprich-meetings-tab-record-meeting-tip",
-    "sprich-bug-report-form"
+    "sprich-bug-report-form",
+    "sprich-meeting-transcript-two-speakers",
+    "sprich-meeting-auswertung-erstellen-dialog"
   ],
   "ui": {
     "kicker": "PromptQuorum 上手测试 · {app} · {date}",
-    "date_line": "2026年11月9日",
+    "date_line": "2026年11月9日和13日",
     "nav_aria": "章节",
     "nav": {
       "verdict": "结论",

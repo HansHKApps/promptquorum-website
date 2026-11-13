@@ -1,8 +1,8 @@
 {
   "id": "pq-test-sprich-2026-11-09",
   "hero": "sprich-welcome-screen-press-once-speak-press-again",
-  "date_human": "2026년 11월 9일",
-  "captured": "2026-11-09; 앱 기록 기준 17:43부터 18:07까지, 설치 시작과 종료 시각은 기록 없음",
+  "date_human": "2026년 11월 9일과 13일",
+  "captured": "2026-11-09; 앱 기록 기준 17:43부터 18:07까지, 설치 시작과 종료 시각은 기록 없음. 회의 세션 2026-11-13; 녹음 시작은 앱 머리글 기준 12:24.",
   "standard_version": "0.2",
   "locale": "ko",
   "app": {
@@ -15,10 +15,10 @@
   },
   "title": "24 GB M4 Pro Mac에서 Sprich 직접 사용: 모든 앱에 입력되는 로컬 받아쓰기",
   "page_title": "Sprich 테스트",
-  "dek": "2026년 11월 9일의 첫 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 대부분 사용해 보지 않았습니다.",
+  "dek": "2026년 11월 9일과 13일의 두 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 방 안의 소리가 좋지 않았는데도 두 화자로 나뉘어 기록된 회의, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 여럿 사용해 보지 않았습니다.",
   "seo": {
     "title": "Sprich 직접 테스트: M4 Pro Mac 로컬 받아쓰기",
-    "description": "24 GB M4 Pro Mac에서 Sprich를 직접 테스트했습니다. Word·WhatsApp·Telegram에서 영어와 독일어 받아쓰기는 작동했고 러시아어는 실패했습니다."
+    "description": "24 GB M4 Pro Mac에서 Sprich를 직접 테스트했습니다. Word·WhatsApp·Telegram 받아쓰기와 2인 6분 회의 녹음을 확인했고 러시아어는 실패했습니다."
   },
   "faq": [
     [
@@ -50,6 +50,11 @@
       "Sprich는 빨랐나요?",
       "테스터는 처음에 기본 토글 모드를 잘못 사용해서(한 번 누르고, 말하고, 다시 누르기) 느리다고 판단했습니다. 올바르게 사용한 뒤에는 즉각적이고 자신이 쓰는 클라우드 받아쓰기 도구만큼 빠르다고 평가했습니다. 시간을 잰 것은 없습니다.",
       "tester-estimate"
+    ],
+    [
+      "Sprich의 회의 모드는 작동하나요?",
+      "짧은 테스트 한 번에서는 작동했습니다. 11월 13일에 테스터는 두 사람이 참여한 6분짜리 회의를 녹음했습니다. 방 안의 소리는 매우 좋지 않았지만 Sprich는 이를 텍스트로 변환하고 두 화자를 구분해 지정했습니다. 이어서 요약, 회의록, 후속 이메일, 진료 소견서 형식을 제안합니다. 정확도는 평가하지 않았으며 어떤 형식을 생성했는지는 기록되어 있지 않습니다.",
+      "observed"
     ]
   ],
   "status": "Partial",
@@ -79,7 +84,7 @@
     ],
     [
       "Start",
-      "2026-11-09. 기록상 첫 받아쓰기는 17:43이고 마지막 스크린샷은 18:07이며, 설치 시작과 종료 시각은 기록되어 있지 않습니다.",
+      "2026-11-09. 기록상 첫 받아쓰기는 17:43이고 마지막 스크린샷은 18:07이며, 설치 시작과 종료 시각은 기록되어 있지 않습니다. 2026-11-13의 두 번째 세션에서는 회의 녹음 한 건을 다뤘습니다(앱 머리글 기준 12:24).",
       "observed"
     ],
     [
@@ -104,7 +109,7 @@
     ],
     [
       "Objective",
-      "목표로 명시되어 있지 않습니다. 메모에는 설정, 앱 세 곳에서의 받아쓰기, 언어, 기록, 설정과 Meetings 탭을 처음 살펴본 내용이 담겨 있습니다.",
+      "목표로 명시되어 있지 않습니다. 메모에는 설정, 앱 세 곳에서의 받아쓰기, 언어, 기록, 설정과 Meetings 탭을 처음 살펴본 내용이 담겨 있습니다. 두 번째 세션에서는 회의 한 건을 녹음했습니다.",
       null
     ],
     [
@@ -114,7 +119,7 @@
     ],
     [
       "AI help used",
-      "Claude가 테스터의 Word 메모와 스크린샷 15장을 바탕으로 이 보고서를 작성했습니다. 메모의 받아쓰기 부분은 Sprich 자체에서 나온 것으로 보이므로(가정: 기록 항목이 메모 텍스트와 일치함), 메모의 일부 오타는 앱 출력일 수 있습니다.",
+      "Claude가 테스터의 Word 메모와 스크린샷 15장을 바탕으로, 그리고 회의 모드 장은 11월 13일의 테스터 메시지와 추가 스크린샷 2장을 바탕으로 이 보고서를 작성했습니다. 메모의 받아쓰기 부분은 Sprich 자체에서 나온 것으로 보이므로(가정: 기록 항목이 메모 텍스트와 일치함), 메모의 일부 오타는 앱 출력일 수 있습니다.",
       "assumption"
     ],
     [
@@ -125,8 +130,8 @@
   ],
   "disclosure": "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. Sprich는 이 테스트와 같은 날인 2026-11-09에 AI가 작성한 리뷰와 함께 디렉터리에 등재되었습니다. 개발자는 테스트 후 테스터에게 답장했으며, 날짜는 밝혀져 있지 않고 개발자가 이 메모를 받았는지도 기록되어 있지 않습니다. Sprich는 이 사이트로부터 클릭을 받습니다. 메모에는 결제나 후원이 기록되어 있지 않습니다.",
   "verdict": {
-    "general": "Apple Silicon Mac용으로 공들여 만든, 독일어 우선 받아쓰기 앱입니다. 이번 세션에서는 Word, WhatsApp, Telegram에서 영어와 독일어 받아쓰기가 작동했고 러시아어는 작동하지 않았습니다. 회의 녹음, 파일 텍스트 변환, 텍스트 다시 쓰기, 오프라인 작동, 개인정보 보호 주장, 삭제는 테스트하지 않았습니다.",
-    "fit": "테스터는 깊은 인상을 받았고, 5점 만점에 5점을 주었으며 지인에게 추천했습니다. 시간을 잰 것은 없지만 자신이 쓰는 클라우드 받아쓰기 도구만큼 빠르다고 평가합니다. 계속 사용할지는 그의 메모에 적혀 있지 않습니다."
+    "general": "Apple Silicon Mac용으로 공들여 만든, 독일어 우선 받아쓰기 앱입니다. 첫 세션에서는 Word, WhatsApp, Telegram에서 영어와 독일어 받아쓰기가 작동했고 러시아어는 작동하지 않았습니다. 11월 13일의 두 번째 세션에서는 두 사람이 참여한 6분짜리 회의를 방 안의 소리가 매우 좋지 않았는데도 녹음해 텍스트로 변환했고 화자도 구분했습니다. 테스터는 회의 기능이 잘 작동한다고 말합니다. 파일 텍스트 변환, 텍스트 다시 쓰기, 오프라인 작동, 개인정보 보호 주장, 삭제는 테스트하지 않았습니다.",
+    "fit": "테스터는 깊은 인상을 받았고, 5점 만점에 5점을 주었으며 지인에게 추천했습니다. 시간을 잰 것은 없지만 자신이 쓰는 클라우드 받아쓰기 도구만큼 빠르다고 평가합니다. 계속 사용할지는 그의 메모에 적혀 있지 않습니다. 또한 회의 메모가 로컬에서 처리된다는 점이 정말 좋다고 말합니다."
   },
   "scores": [
     [
@@ -194,7 +199,11 @@
     ],
     [
       "observed",
-      "회의 녹음, 텍스트 다시 쓰기 메뉴, 파일 텍스트 변환, 사전, 어조 설정의 효과, 오프라인 사용, 삭제는 테스트하지 않았습니다."
+      "11월 13일의 두 번째 세션에서 테스터는 두 사람이 참여한 6분짜리 회의를 녹음했습니다. 방 안의 소리는 매우 좋지 않았지만 Sprich는 이를 텍스트로 변환하고 두 화자를 구분했으며, 이어서 요약, 회의록, 후속 이메일, 진료 소견서(독일어 화면 표시: Zusammenfassung, Protokoll, Follow-up-E-Mail, Arztbrief) 형식을 제안했습니다. 테스터는 회의 기능이 잘 작동한다고 말합니다."
+    ],
+    [
+      "observed",
+      "텍스트 다시 쓰기 메뉴, 파일 텍스트 변환, 사전, 어조 설정의 효과, 오프라인 사용, 삭제는 테스트하지 않았습니다."
     ]
   ],
   "quotes": [
@@ -236,10 +245,10 @@
       "chapter-explore"
     ],
     [
-      "로컬에서 녹음하는 회의",
-      "Meetings 탭이며, 테스트에서는 사용하지 않았습니다.",
-      "sprich-meetings-tab-record-meeting-tip",
-      "chapter-explore"
+      "나흘 뒤에 시험한 회의 모드",
+      "매우 좋지 않은 방 안의 소리에서 나온 두 화자와 전사본, 그리고 요약, 회의록, 이메일, 진료 소견서를 위한 후속 메뉴.",
+      "sprich-meeting-transcript-two-speakers",
+      "chapter-meetings"
     ]
   ],
   "chapters": [
@@ -356,7 +365,7 @@
         ],
         [
           "vendor-claim",
-          "Meetings 탭에는 “Meeting aufnehmen”이 있으며, 안내 문구는 통화에서 전사본, 요약, 할 일이 나오고 모든 것이 Mac에 남는다고 말합니다. 테스터는 회의를 녹음한 적이 없고, 방에 몇 사람이 모인 자리에서 시험해 볼 계획입니다.",
+          "Meetings 탭에는 “Meeting aufnehmen”이 있으며, 안내 문구는 통화에서 전사본, 요약, 할 일이 나오고 모든 것이 Mac에 남는다고 말합니다. 테스터는 두 번째 세션에서 이를 시험했습니다(회의 모드 장 참조).",
           "sprich-meetings-tab-record-meeting-tip"
         ],
         [
@@ -377,6 +386,52 @@
       ]
     },
     {
+      "id": "chapter-meetings",
+      "title": "11월 13일에 시험한 회의 모드",
+      "items": [
+        [
+          "observed",
+          "2026년 11월 13일에 테스터는 Meetings 탭으로 회의를 녹음했습니다. 저장된 회의의 머리글에는 “Meeting vom 13. November”, 12:24, Mikrofon(마이크), 6 min, 2 Personen(2명), 28 Wortmeldungen(발언)이라고 적혀 있습니다. 어떤 앱 버전을 사용했는지는 기록되어 있지 않습니다.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "tester-view",
+          "그는 회의 기능이 잘 작동하며 회의를 녹음할 수 있다고 말합니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "방 안의 음질은 매우 좋지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그럼에도 Sprich는 이를 녹음해 텍스트로 변환했고 발언을 두 화자, Person 1과 Person 2에 배정했습니다. “Klicken zum Umbenennen”(클릭해서 이름 변경)이라는 안내가 표시됩니다. 각 발언에는 화자와 타임스탬프가 붙어 있습니다(발췌본에서는 00:00과 00:14). 발췌본은 어색한 표현이 섞인 영어 텍스트이며, 그것이 말 자체에서 비롯된 것인지 인식 과정에서 비롯된 것인지는 기록되어 있지 않습니다. 텍스트와 화자 배정의 정확도는 평가하지 않았습니다.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "observed",
+          "“Auswertung erstellen”(평가 생성) 버튼을 누르면 네 가지 형식이 있는 대화 상자가 열립니다. Zusammenfassung(요약: 핵심 발언, 결정, 할 일; 기본 선택), Protokoll(회의록: 주제별, 결의 사항 포함), Follow-up-E-Mail(참석자에게 보낼 수 있게 완성된 메시지), Arztbrief(진료 소견서: 병력, 소견, 평가, 처치)입니다. 테스터가 어떤 형식을 생성했는지와 무엇이 나왔는지는 기록되어 있지 않습니다.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "vendor-claim",
+          "대화 상자는 Mac에서 로컬로 실행되며 보통 20~60초가 걸린다고 밝힙니다(“Läuft lokal auf deinem Mac · meist 20–60 Sekunden”). 시간을 잰 것은 없으며 네트워크 트래픽도 점검하지 않았습니다.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "tester-view",
+          "테스터는 이것이 로컬에서 실행된다는 점이 정말 좋다고 말합니다.",
+          null
+        ],
+        [
+          "observed",
+          "범위: 두 사람이 참여한 6분짜리 녹음 한 건. 더 긴 회의, 시스템 소리 캡처, 오프라인 작동, 생성된 평가의 품질은 테스트하지 않았거나 기록되어 있지 않습니다.",
+          null
+        ]
+      ]
+    },
+    {
       "id": "chapter-decision",
       "title": "결정",
       "items": [
@@ -392,7 +447,7 @@
         ],
         [
           "tester-view",
-          "30년간의 컨설팅 경험에서 그는 회의록을 직접 쓰는 것을 중요하게 여기며, 방에 몇 사람이 모인 자리에서 로컬 회의록을 시험해 보고 싶어 합니다.",
+          "30년간의 컨설팅 경험에서 그는 회의록을 직접 쓰는 것을 중요하게 여깁니다. 그 뒤 방 안에서 앱으로 회의를 녹음했고, 로컬에서 실행된다는 점이 정말 좋다고 말합니다.",
           null
         ]
       ]
@@ -436,9 +491,9 @@
       "observed"
     ],
     [
-      "Meetings: 전사본, 요약, 할 일, 모두 Mac에서 처리됩니다.",
-      "Meetings 탭 안내 문구",
-      "테스트하지 않았습니다.",
+      "Meetings: 전사본, 요약, 할 일, 모두 Mac에서 처리됩니다. 평가는 로컬에서 실행되며 “보통 20~60초”가 걸립니다.",
+      "Meetings 탭 안내 문구와 평가 대화 상자",
+      "11월 13일에 6분짜리 회의를 녹음해 텍스트로 변환했고 두 화자를 배정했습니다. 평가 대화 상자는 확인했으며, 어떤 형식을 생성했는지, 시간이 얼마나 걸렸는지, 로컬에서 실행되었는지는 기록되어 있지 않습니다.",
       "vendor-claim"
     ],
     [
@@ -571,13 +626,23 @@
       ]
     ],
     [
-      "회의 녹음",
-      "-",
-      "사용하지 않음",
-      "-",
-      "Not completed",
+      "방 안에서 회의 녹음",
+      "Meetings",
+      "6분, 2명, 발언 28건. 방 안의 소리는 매우 좋지 않음(테스터). 두 화자의 전사본 생성됨",
+      "12:24(11월 13일)",
+      "Pass",
       [
-        "sprich-meetings-tab-record-meeting-tip"
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "평가 대화 상자 열기",
+      "Meetings",
+      "네 가지 형식 제시. 어떤 형식을 생성했는지와 그 결과는 기록 없음",
+      "기록 없음",
+      "Partial",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
       ]
     ],
     [
@@ -806,7 +871,7 @@
     ],
     [
       "SP-20",
-      "Meetings 탭에는 \"Meeting aufnehmen\"이 있으며, 안내 문구는 통화에서 전사본, 요약, 할 일이 나오고 모든 것이 Mac에 남는다고 말합니다. 테스터는 회의를 녹음한 적이 없고, 방에 몇 사람이 모인 자리에서 시험해 볼 계획입니다.",
+      "Meetings 탭에는 \"Meeting aufnehmen\"이 있으며, 안내 문구는 통화에서 전사본, 요약, 할 일이 나오고 모든 것이 Mac에 남는다고 말합니다. 이 안내 문구는 업체 주장이며, 테스터가 직접 한 회의 세션은 SP-25부터 SP-30입니다.",
       "기능",
       "vendor-claim",
       "Info",
@@ -851,6 +916,62 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SP-25",
+      "11월 13일에 테스터는 방 안에서 회의를 녹음했습니다. 저장된 회의에는 \"Meeting vom 13. November\", 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen이 표시됩니다. 그는 회의 기능이 잘 작동한다고 말합니다. 앱 버전, 언어 설정, 누가 말했는지는 기록되어 있지 않습니다.",
+      "회의",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-26",
+      "테스터의 설명에 따르면 방 안의 소리는 매우 좋지 않았습니다(테스터 의견). 그럼에도 Sprich는 타임스탬프가 있는 전사본과 두 화자 Person 1, Person 2를 만들었으며, 화자 이름은 클릭해서 바꿀 수 있습니다. 스크린샷 발췌본은 어색한 표현이 섞인 영어이며, 텍스트와 화자 배정의 정확도는 평가하지 않았습니다.",
+      "회의",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-27",
+      "\"Auswertung erstellen\"은 네 가지 형식이 있는 대화 상자를 엽니다. Zusammenfassung(핵심 발언, 결정, 할 일), Protokoll(주제별, 결의 사항 포함), Follow-up-E-Mail(참석자에게 보낼 수 있게 완성), Arztbrief(병력, 소견, 평가, 처치)입니다. 테스터가 어떤 형식을 생성했는지와 그 결과는 기록되어 있지 않습니다.",
+      "회의",
+      "observed",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-28",
+      "대화 상자에는 \"Läuft lokal auf deinem Mac · meist 20–60 Sekunden\"(Mac에서 로컬로 실행, 보통 20~60초)라고 적혀 있습니다. 시간을 잰 것은 없으며 네트워크 트래픽도 점검하지 않았습니다.",
+      "신뢰",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-29",
+      "테스터는 회의 녹음과 그 이후의 처리가 로컬에서 이루어진다는 점이 정말 좋다고 말합니다(테스터 의견).",
+      "회의",
+      "tester-view",
+      "Positive",
+      []
+    ],
+    [
+      "SP-30",
+      "회의 범위: 두 사람이 참여한 6분짜리 녹음 한 건. 테스트하지 않았거나 기록되지 않은 항목: 어떤 평가 형식을 생성했는지와 그 결과, 평가 소요 시간, 전사본과 화자 배정의 정확도, 더 긴 회의, 시스템 소리 캡처, 오프라인 작동.",
+      "범위",
+      "observed",
+      "Info",
+      []
     ]
   ],
   "severity_note": "심각도는 처음 사용하는 사용자에게 미치는 영향입니다. 측정값이 아니라 제안입니다. Info는 문제도 장점도 아닌 발견 사항을, Positive는 잘 작동한 부분을 뜻합니다.",
@@ -867,7 +988,7 @@
         "지금 당장 러시아어나 독일어 이외의 인터페이스가 필요한 사람, 또는 Intel Mac 사용자(디렉터리는 Apple Silicon 전용이라고 기재합니다)."
       ]
     ],
-    "retest": "새 메이저 버전, 영어 인터페이스의 공개 또는 확정된 언어 목록이 나오면 다시 테스트합니다. 범위: 앱과 macOS 버전 기록, 지연 시간 측정, 언어를 설정한 러시아어, 파일 텍스트 변환, Meetings, 다시 쓰기 메뉴, 트래픽을 점검한 오프라인 사용, 실행 시 메모리, 삭제."
+    "retest": "새 메이저 버전, 영어 인터페이스의 공개 또는 확정된 언어 목록이 나오면 다시 테스트합니다. 범위: 앱과 macOS 버전 기록, 지연 시간 측정, 언어를 설정한 러시아어, 파일 텍스트 변환, 더 긴 회의에서 각 평가 형식을 생성하고 시간 재기, 다시 쓰기 메뉴, 트래픽을 점검한 오프라인 사용, 실행 시 메모리, 삭제."
   },
   "background_intro": "직접 테스트가 아닙니다. 아래 항목은 PromptQuorum 디렉터리의 Sprich 항목에서 나온 것이며, 여기서 확인하지 않았습니다.",
   "background": [
@@ -878,6 +999,7 @@
   ],
   "sources": [
     "테스터의 직접 사용 메모와 스크린샷, 2026년 11월 9일(원본 Word 메모, 원본 메모 PDF는 추가 예정).",
+    "테스터의 메시지와 회의 세션 스크린샷 두 장, 2026년 11월 13일.",
     "Sprich의 PromptQuorum 디렉터리 항목과 리뷰(슬러그: sprich), 2026-11-09 확인.",
     "공급업체 사이트 sprich.ai(업체 주장)."
   ],
@@ -1195,7 +1317,7 @@
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
       "alt": "회의가 0건인 Meetings 탭, 통화의 전사본, 요약, 할 일에 대한 안내 문구, Meeting aufnehmen 버튼.",
-      "caption": "처음 열었을 때의 Meetings 탭. 테스트에서는 사용하지 않았습니다. 안내 문구의 요약 관련 서술은 업체 주장입니다.",
+      "caption": "처음 열었을 때의 Meetings 탭, 11월 13일 녹음 이전. 안내 문구의 요약 관련 서술은 업체 주장입니다.",
       "role": "moment",
       "width": 1600,
       "height": 1050,
@@ -1230,6 +1352,48 @@
       "subject": "Sprich 앱의 스크린샷",
       "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
       "captured": "2026-11-09, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-meeting-transcript-two-speakers",
+      "figure": 16,
+      "file": "sprich-meeting-transcript-two-speakers.webp",
+      "path": "images/sprich-meeting-transcript-two-speakers.webp",
+      "alt": "저장된 회의 \"Meeting vom 13. November\". 머리글에는 Heute, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen이 있고, Person 1과 Person 2 칩, 클릭해서 이름을 바꾸라는 안내, 타임스탬프가 붙은 전사본의 첫 줄들이 보입니다.",
+      "caption": "11월 13일의 저장된 회의: 6 min, 2명, 발언 28건, 타임스탬프가 붙은 화자 Person 1과 Person 2. 테스터의 설명에 따르면 방 안의 소리는 매우 좋지 않았습니다.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 46486,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-13; 헤더 기준 녹음 12:24; 스크린샷 시각은 기록 없음"
+    },
+    {
+      "id": "sprich-meeting-auswertung-erstellen-dialog",
+      "figure": 17,
+      "file": "sprich-meeting-auswertung-erstellen-dialog.webp",
+      "path": "images/sprich-meeting-auswertung-erstellen-dialog.webp",
+      "alt": "\"Auswertung erstellen\" 대화 상자. Zusammenfassung(선택됨), Protokoll, Follow-up-E-Mail, Arztbrief의 네 가지 옵션이 있고, Erstellen 버튼 옆에 \"Läuft lokal auf deinem Mac, meist 20-60 Sekunden\"이라는 하단 문구가 있습니다.",
+      "caption": "회의 위에 열린 평가 대화 상자. 네 가지 형식. 로컬 처리와 20~60초 문구는 업체 주장입니다. 어떤 형식을 생성했는지는 기록되어 있지 않습니다.",
+      "role": "moment",
+      "width": 1012,
+      "height": 798,
+      "bytes": 32156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Sprich 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-13; 헤더 기준 녹음 12:24; 스크린샷 시각은 기록 없음"
     }
   ],
   "figure_order": [
@@ -1247,11 +1411,13 @@
     "sprich-settings-recording-indicator-mic",
     "sprich-account-security-page-two-factor-off",
     "sprich-meetings-tab-record-meeting-tip",
-    "sprich-bug-report-form"
+    "sprich-bug-report-form",
+    "sprich-meeting-transcript-two-speakers",
+    "sprich-meeting-auswertung-erstellen-dialog"
   ],
   "ui": {
     "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
-    "date_line": "2026년 11월 9일",
+    "date_line": "2026년 11월 9일과 13일",
     "nav_aria": "섹션",
     "nav": {
       "verdict": "결론",
