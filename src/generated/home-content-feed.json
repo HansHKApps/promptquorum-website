@@ -23170,7 +23170,7 @@
     "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
     "excerpt": "Loci AI review: a free private AI app for iPhone, Android, iPad, Mac and Windows. Offline use, App Store privacy label and comparison with Private LLM.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23179,7 +23179,7 @@
     "title": "Loci AI Review (2026): Private Offline-KI für iPhone, Android, iPad, Mac und Windows",
     "excerpt": "Loci AI Review: kostenlose private KI-App für iPhone, Android, iPad, Mac und Windows. Offline-Nutzung, Datenschutzlabel, Vergleich mit Private LLM.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/de/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23188,7 +23188,7 @@
     "title": "Critique de Loci AI (2026) : IA hors ligne privée sur iPhone, Android, iPad, Mac et Windows",
     "excerpt": "Critique de Loci AI : appli d'IA privée gratuite pour iPhone, Android, iPad, Mac et Windows. Usage hors ligne, étiquette de confidentialité, comparaison.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/fr/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23197,7 +23197,7 @@
     "title": "Loci AI レビュー (2026): iPhone、Android、iPad、Mac、Windows 対応のオフラインAI",
     "excerpt": "Loci AI レビュー: iPhone・Android・iPad・Mac・Windows対応の無料プライベートAIアプリ。オフライン利用、プライバシーラベル、Private LLMとの比較。",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/ja/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23206,7 +23206,7 @@
     "title": "Loci AI 评测（2026）：iPhone、Android、iPad、Mac 和 Windows 上的离线 AI",
     "excerpt": "Loci AI 评测：iPhone、Android、iPad、Mac 和 Windows 上的免费私密 AI 应用。离线使用、隐私标签以及与 Private LLM 的比较。",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/zh/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23215,7 +23215,7 @@
     "title": "Reseña de Loci AI (2026): IA privada sin conexión para iPhone, Android, iPad, Mac y Windows",
     "excerpt": "Reseña de Loci AI: app de IA privada y gratuita para iPhone, Android, iPad, Mac y Windows. Uso sin conexión, etiqueta de privacidad y comparativa.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/es/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23224,7 +23224,7 @@
     "title": "Revisão do Loci AI (2026): IA Offline para iPhone, Android, iPad, Mac e Windows",
     "excerpt": "Revisão do Loci AI: app de IA privada e gratuito para iPhone, Android, iPad, Mac e Windows. Uso offline, rótulo de privacidade e comparação.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/pt/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23233,7 +23233,7 @@
     "title": "مراجعة Loci AI (2026): ذكاء اصطناعي خاص دون إنترنت عبر iPhone و Android و iPad و Mac و Windows",
     "excerpt": "مراجعة Loci AI: تطبيق ذكاء اصطناعي خاص ومجاني لأجهزة iPhone وAndroid وiPad وMac وWindows. الاستخدام دون إنترنت وملصق الخصوصية والمقارنة.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/ar/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23242,7 +23242,7 @@
     "title": "Loci AI 리뷰 (2026): iPhone, Android, iPad, Mac, Windows용 오프라인 AI",
     "excerpt": "Loci AI 리뷰: iPhone, Android, iPad, Mac, Windows용 무료 프라이빗 AI 앱. 오프라인 사용, 개인정보 라벨, Private LLM 비교.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-08",
     "url": "/ko/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -24378,6 +24378,87 @@
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-18",
     "url": "/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+    "excerpt": "Uncensored AI models explained: abliteration, Heretic 2.0, 10 checked downloads, how to run them in LM Studio and Open WebUI, plus risks and EU law.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Uncensored KI-Modelle 2026: Der vollständige Leitfaden zu ungefilterten, unausgerichteten und abliterierten LLMs",
+    "excerpt": "Uncensored KI-Modelle erklärt: Abliteration, Heretic 2.0, 10 geprüfte Downloads, Nutzung in LM Studio und Open WebUI sowie Risiken und EU-Recht.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Modèles d'IA non censurés 2026 : le guide complet des LLM sans filtre, non alignés et abliterated",
+    "excerpt": "IA non censurée expliquée : abliteration, Heretic 2.0, 10 modèles vérifiés, usage dans LM Studio et Open WebUI, risques et cadre juridique européen.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "無検閲AIモデル完全ガイド2026：フィルターなし・非アライン・アブリタレーション済みLLM",
+    "excerpt": "無検閲AIモデルを解説。アブリタレーションとHeretic 2.0の仕組み、確認済みの10モデル、LM StudioやOpen WebUIでの使い方、リスクとEU法まで。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "无审查AI模型2026：未过滤、未对齐与Abliterated大语言模型完全指南",
+    "excerpt": "无审查AI模型详解：abliteration原理、Heretic 2.0、10个已核实的下载模型，以及在LM Studio、Open WebUI中的用法、风险与欧盟法律。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Modelos de IA sin censura 2026: la guía completa de LLMs sin filtros, sin alineación y abliterados",
+    "excerpt": "Modelos de IA sin censura explicados: abliteración, Heretic 2.0, 10 descargas verificadas, uso en LM Studio y Open WebUI, riesgos y ley de la UE.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Modelos de IA sem censura 2026: o guia completo de LLMs sem filtros, não alinhados e abliterados",
+    "excerpt": "IA sem censura explicada: abliteração, Heretic 2.0, 10 modelos verificados, uso em apps locais como LM Studio e Open WebUI, além de riscos e lei da UE.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "نماذج الذكاء الاصطناعي بدون قيود ⁨2026⁩: الدليل الكامل لنماذج ⁨LLM⁩ غير المفلترة وغير المُحاذاة و⁨abliterated⁩",
+    "excerpt": "نماذج ⁨AI⁩ بدون قيود: شرح ⁨abliteration⁩ و⁨Heretic 2.0⁩ و10 نماذج موثّقة وتشغيلها في ⁨LM Studio⁩ و⁨Open WebUI⁩ مع المخاطر والقانون الأوروبي.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/uncensored-llm-models",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "검열 없는 AI 모델 2026: 필터 없는·비정렬·Abliteration 적용 LLM 완전 가이드",
+    "excerpt": "검열 없는 AI 모델 해설: abliteration, Heretic 2.0, 검증된 모델 10개, LM Studio·Open WebUI 활용법, 위험과 EU 법규까지 정리했습니다.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/uncensored-llm-models",
     "cluster": "power-local-llm"
   },
   {

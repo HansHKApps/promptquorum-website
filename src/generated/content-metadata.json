@@ -6971,7 +6971,7 @@
       ]
     },
     "loci-ai-review-offline-local-ai": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-08",
       "lastFactChecked": null,
       "publishDate": "2026-08-22",
       "hasSections": true,
@@ -7375,6 +7375,41 @@
         {
           "url": "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-en.webp",
           "title": "Most writers use the uncensored model for specific scenes only — not as a default replacement."
+        }
+      ]
+    },
+    "uncensored-llm-models": {
+      "dateModified": "2026-11-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-13",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/uncensored-llm-models-refusal-residual-stream-en.svg",
+          "title": "Conceptual view: activations for requests the model refuses and requests it answers separate along one direction in the residual stream. Simplified; real models have many layers and dimensions."
+        },
+        {
+          "url": "/images/uncensored-llm-models-abliteration-before-after-en.svg",
+          "title": "Original model versus abliterated model: the weights that write into the residual stream are edited so they cannot add the refusal direction. No retraining is involved."
+        },
+        {
+          "url": "/images/uncensored-llm-models-model-ecosystem-en.svg",
+          "title": "How repositories, indexes and local runtimes connect: hosts store the files, indexes only help you find them, runtimes load them, apps use them."
+        },
+        {
+          "url": "/images/uncensored-llm-models-hardware-vram-en.svg",
+          "title": "Approximate memory for Q4 quantized models against typical hardware tiers. Estimates: file size plus runtime and context cache."
         }
       ]
     },
