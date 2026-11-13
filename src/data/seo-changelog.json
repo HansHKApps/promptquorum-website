@@ -24182,7 +24182,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9e947cae-7d96-4386-b0f8-3c4d8f9d4bdb",
@@ -24197,7 +24201,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "ff56763d-5406-4ea6-af2a-c54e0b2023a7",
@@ -24217,7 +24225,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "367a7f01-9f5c-4281-a5e4-5515b5acddb1",
@@ -24232,7 +24244,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "32b6ab63-77af-4151-be51-f0cb6eaccb7f",
@@ -24247,7 +24263,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "4e5c3d24-ecba-47d4-9314-1c03a6c1cb1c",
@@ -24262,7 +24282,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "907282e3-0b62-42c9-bba8-b61a306a60d9",
@@ -24282,7 +24306,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published plus CJK title length fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b40f20d5-013f-459b-98c0-9742bfc73f1a",
@@ -24297,7 +24325,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3e762149-cdf6-446e-9447-1e34512a091c",
@@ -24312,7 +24344,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "bee45abe-7db8-4f66-a5ab-0651f79157c0",
@@ -24332,7 +24368,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published plus CJK title length fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "32c2fe72-6de6-46e1-8a8b-92f7502d8702",
@@ -24347,7 +24387,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "60558ab5-5fbf-43ae-85af-974e5ddd6c1c",
@@ -24362,7 +24406,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f56334b1-b25e-4983-8c53-166222d294b4",
@@ -24395,7 +24443,11 @@
       "ctr": 0.0010309278350515464,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "8d4f6f21-4225-4890-ba25-b9a8e294b0da",
@@ -24410,7 +24462,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "df715b19-472e-46ec-ab3f-1e4fc0761a31",
@@ -24425,7 +24481,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "5d894c2c-09c2-47b0-971d-58e58e1a2a84",
@@ -24457,7 +24517,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "316b64dd-accf-4b8d-98db-50619e8e1414",
@@ -24483,7 +24547,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "caa5dd27-ca85-4b9e-8b40-0af034d04ec8",
@@ -24498,7 +24566,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3de28cfa-f033-4553-b549-cdd465dc225a",
@@ -24513,7 +24585,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "70f397af-0223-41c0-80e7-6b1446334f54",
@@ -24528,7 +24604,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e7c25241-7398-4b5e-a28c-e1b46ab73fa8",
@@ -24543,7 +24623,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1b87bfbd-e3b2-45e6-9e5b-7e309dc0479b",
@@ -24558,7 +24642,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3433fa0e-5d17-4e71-bce7-a9696d4ccb2f",
@@ -24573,7 +24661,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "542121fd-e1b7-4fce-9e17-488c04984dad",
@@ -24588,7 +24680,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "97699475-af45-43e6-8ec3-07d44fade01d",
@@ -24603,7 +24699,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "5e81e0e6-d807-4d49-b880-47bbcab82ff3",
@@ -24618,7 +24718,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d555b0c4-95d1-47b9-b56c-deb44c785323",
@@ -24633,7 +24737,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "912ade6a-4f79-4eeb-abc9-d3eb4a09676d",
@@ -24648,7 +24756,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d967e263-d857-4891-ae94-17fd4624f81c",
@@ -24663,7 +24775,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e0267470-8750-4dbb-91b9-80da923b9843",
@@ -24678,7 +24794,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "0c4623b9-0fad-4385-afcc-f99e16df6a24",
@@ -24693,7 +24813,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d914a345-e5a7-4e42-b0f8-e122622d0aa3",
@@ -24708,7 +24832,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "df1caa45-92c1-4dc4-b1d7-a3beb51e4d09",
@@ -24736,7 +24864,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "84533523-b81d-489d-9a8c-ae4b763ab3a1",
@@ -24763,7 +24895,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "531d929f-7657-4a02-a512-bf023085005d",
@@ -24790,7 +24926,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "7105b296-da06-4d72-996e-20eda0bcda0f",
@@ -24805,7 +24945,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d6f4c26e-c961-453e-816e-951e55939b8d",
@@ -24820,7 +24964,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "4a18e061-248d-4fe6-a91f-23bfa54a7b4a",
@@ -24849,7 +24997,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d840b5cf-b54b-4738-a606-f3758c999c9e",
@@ -24877,7 +25029,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1be31556-a27b-4fc6-948f-e5c7b7c6a4c8",
@@ -24903,7 +25059,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "89a3b74b-8c71-4d7e-9709-1d0e2630270d",
@@ -24918,7 +25078,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "5cf937a0-9a16-44be-8645-0bec5a530af4",
@@ -24938,7 +25102,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2cedeea1-6eda-4de1-afb4-6e8d57b0c2a5",
@@ -24953,7 +25121,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fe18d7f3-6e05-4304-b7ea-662330b83159",
@@ -24968,7 +25140,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2c5c5460-cf1d-4ecf-94dc-5d268d531fd5",
@@ -24983,7 +25159,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b18c0d1b-23e4-48ae-83eb-10991b01fae8",
@@ -24998,7 +25178,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fd9857e5-5332-4208-b13f-100eb028870a",
@@ -25013,7 +25197,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "cfff094d-41d3-4dd9-b97f-19c4d8327103",
@@ -25028,7 +25216,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f2f4c22e-847f-4491-ae96-279e3f68b2ab",
@@ -25043,7 +25235,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b770ae0d-5007-4a3a-bb7c-5b5d52a97277",
@@ -25058,7 +25254,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "cfde5293-75ee-44d2-9e01-c0ed9ed62418",
@@ -25073,7 +25273,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9932b3db-bed3-4bd1-bdc0-7eadcef4fcdc",
@@ -25093,7 +25297,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2ab5c9f6-57a7-4da3-910a-2d6a0956e998",
@@ -25113,7 +25321,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "8e066776-6885-4961-b8df-d0faa7eaa3b3",
@@ -25128,7 +25340,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "bac449cc-8399-436c-af0b-916645940da2",
@@ -25143,7 +25359,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2135760e-ea66-40ac-811c-cf9ba5439cd3",
@@ -25163,7 +25383,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d11d7fd1-9b32-46e6-a425-02de3a75b366",
@@ -25178,7 +25402,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "c11c2eea-2f33-4c51-9632-4c617e0352e0",
@@ -25193,7 +25421,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "a390b75b-6e92-4fc6-9eaa-c888b387d25e",
@@ -25213,7 +25445,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "a5a38375-050d-4cfc-87cb-5a1260520f74",
@@ -25233,7 +25469,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3f9d5980-a194-40ab-a6c7-2080e739e199",
@@ -25248,7 +25488,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "693107a7-64c8-42fa-b094-735ff5da8e82",
@@ -25263,7 +25507,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "a0eec91b-a551-4e55-bbbb-196fe9e522f6",
@@ -25278,7 +25526,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "18d4b924-cb77-404b-a4f1-1dfd12feb503",
@@ -25293,7 +25545,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f0e4f2b5-0b42-4fbf-8a74-65bf582dc874",
@@ -25308,7 +25564,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1146b034-ae68-46fc-ae25-4ca0838fbe14",
@@ -25323,7 +25583,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9c35e9ab-24df-4ede-bedd-219aa7f6b362",
@@ -25338,7 +25602,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1c7d4803-3cfb-4521-b7b0-27cdaa9ce122",
@@ -25353,7 +25621,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "25307f86-42d7-4360-9505-e5bb67dd6d7d",
@@ -25368,7 +25640,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "cbffea1f-3e25-4efc-ac0e-d38a5eb94d3e",
@@ -25383,7 +25659,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "4800df8c-a6c3-41b7-b562-3e7a46c9496e",
@@ -25398,7 +25678,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "aa3eabd1-26a3-40bf-b0a0-558f393e0920",
@@ -25413,7 +25697,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "0fbca9d4-628b-4e53-8cbe-714d5d25edcd",
@@ -25442,7 +25730,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b2be57ba-d536-4e63-be33-a7b8f130e2c2",
@@ -25457,7 +25749,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "169d0588-b099-45bc-897d-713845b43b31",
@@ -25472,7 +25768,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "4e728dab-0571-46cc-98ba-7974b48c5cfd",
@@ -25487,7 +25787,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "642d8ccb-3b3c-4cf7-8f14-6ff7bfa76861",
@@ -25502,7 +25806,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e70f230d-d306-4d88-a9dc-b8910ec54b7d",
@@ -25517,7 +25825,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: zh meta said 实测 (measured) but page did not measure; reworded to 尚未验证 (not yet verified)",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2310b1d6-4a6d-41ec-9a5d-3f6928f15f55",
@@ -25532,7 +25844,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e80d67ed-b04d-4b0c-9a3f-a93d36ebe6c5",
@@ -25547,7 +25863,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "753a517b-69d0-4088-902b-62b298ecea53",
@@ -25562,7 +25882,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "5cf79fa3-6fb2-4d9b-a30a-e390001ca8c1",
@@ -25582,7 +25906,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e6ad5948-f50e-4cfc-87e0-42ad8e56ddfc",
@@ -25597,7 +25925,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "6b656415-43c0-4185-ad7e-90e1ed3e19e8",
@@ -25612,7 +25944,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f7dd27bb-572d-4848-bd4f-167c5a7fd01c",
@@ -25627,7 +25963,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "ca30631a-e8f9-4886-abaa-f591f7999eb7",
@@ -25642,7 +25982,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "93602999-c3b0-446e-a123-5a9bf10e5c1f",
@@ -25657,7 +26001,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "99e228bf-2427-4b56-a909-fc93d7391921",
@@ -25688,7 +26036,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-13"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "71ba7d49-6734-461d-b8cf-3969b1a5eb8e",
@@ -25703,7 +26055,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "240b7463-a56e-48c7-a18d-d6a3b61d1c60",
@@ -25718,7 +26074,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1aab8a19-f617-44df-95f7-68f01f3f03b2",
@@ -25733,7 +26093,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fdc5873c-b434-4a5e-b645-91e503ac52a7",
@@ -25748,7 +26112,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9b393e50-698b-45a2-9798-f564facf32e6",
@@ -25763,7 +26131,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b5c9ac17-faa7-4ad9-8624-5da9983b0b30",
@@ -25778,7 +26150,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3ec21db2-f63d-4c95-9714-7343f43dac16",
@@ -25793,7 +26169,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "44c91b70-00a1-426a-a549-0ff102987dd0",
@@ -25808,7 +26188,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f43182f0-b294-43b0-bce4-b7a25d71a12e",
@@ -25823,7 +26207,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1007e566-a500-4912-9d8e-89d3878d9e9e",
@@ -25838,7 +26226,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "6088a738-57fe-4615-b0b0-b3d96f7e2af4",
@@ -25853,7 +26245,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "da5ff789-462e-40ec-b103-8ee530018831",
@@ -25868,7 +26264,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "68260474-d7c0-4a53-866e-d3d65434ef8e",
@@ -25883,7 +26283,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1939e81f-95ff-4bc5-8cfb-f13acf46081e",
@@ -25898,7 +26302,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): zh meta under 70-char minimum; now also says PromptQuorum did not test",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f1c7d969-1b3d-422c-af98-58883a8a7937",
@@ -25913,7 +26321,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "20c69b7c-36bc-4210-9170-2a1b45f3bac0",
@@ -25928,7 +26340,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "57894b81-99f1-4e17-815f-fa90187c3752",
@@ -25943,7 +26359,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9cf6113a-7a0d-4027-9697-1821d1a70150",
@@ -25958,7 +26378,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "83c74df8-4c3c-4d24-aa0e-f0321d15153e",
@@ -25973,7 +26397,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d6d85c72-e3b3-4230-b95b-31969e9633a4",
@@ -25993,7 +26421,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fd65a5ac-eab2-475e-b4ea-ea3dfc9eb8f4",
@@ -26008,7 +26440,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "91a9e503-1ba3-4430-851a-ba31fe9438af",
@@ -26023,7 +26459,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2f5e3961-6a76-4d39-a071-e10eb08b1fe8",
@@ -26038,7 +26478,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "86290d1b-0beb-437c-90fc-fc4837b2023f",
@@ -26053,7 +26497,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "a096910a-526a-4940-adcd-e5c106176897",
@@ -26068,7 +26516,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "491250a1-17f3-4a4a-b8e5-5940aef00777",
@@ -26083,7 +26535,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "224ceb83-832c-48fc-9633-ee29db46cecd",
@@ -26098,7 +26554,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f01fc919-cbd6-440f-83a1-22a6a2b6b595",
@@ -26113,7 +26573,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "8c5caed8-bf0f-47f3-939a-0dbe7e33eade",
@@ -26128,7 +26592,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "28391cd4-ae73-4bf0-9a2c-56e1b05a7d68",
@@ -26143,7 +26611,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e77c0b92-842e-4d48-919e-d47a28dbc8b7",
@@ -26158,7 +26630,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f387f8e3-8cb0-46ee-a9f6-c03a3f5a19ea",
@@ -26173,7 +26649,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "79db75c1-fff8-4649-9442-321713b5d816",
@@ -26188,7 +26668,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "bdbf2874-c019-4e72-8fa2-4a31fc1df91e",
@@ -26203,7 +26687,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9214f1a1-4519-42ea-b05c-1b569995f947",
@@ -26218,7 +26706,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "adee0f42-d41d-43b0-82d1-4d647329a0a1",
@@ -26233,7 +26725,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2c6496bf-962b-4739-af8a-83758ea48118",
@@ -26248,7 +26744,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "32b65315-ffa4-4b06-937f-63de5c0e3796",
@@ -26263,7 +26763,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "84d228dd-89ef-47fc-8492-f73145a1f2c4",
@@ -26278,7 +26782,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "6a760886-ce2e-473f-af4d-ab75ccf3b90f",
@@ -26298,7 +26806,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e987cdca-6987-4e10-9239-fb0aa88760e5",
@@ -26313,7 +26825,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b6c2f173-fce5-4a4c-8e4e-d9df8f57c94e",
@@ -26328,7 +26844,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "a266f226-02c5-43f7-9249-8fb7f6d8fbdb",
@@ -26343,7 +26863,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "166ff862-edef-4c56-ac88-2dbf984d853c",
@@ -26358,7 +26882,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9a344899-9be4-4331-85d5-8e19929e7ab6",
@@ -26373,7 +26901,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d96d1fc0-37e6-4256-a759-b968f222c706",
@@ -26388,7 +26920,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "88d75f71-578c-4399-b30c-e12e43eebac7",
@@ -26403,7 +26939,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "67737b8b-ef57-41c2-b314-181331511490",
@@ -26418,7 +26958,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b32d9576-850e-4959-a7fd-3f6338e71771",
@@ -26438,7 +26982,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3c872542-b1a6-4a84-8e9e-077c27389537",
@@ -26453,7 +27001,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "a0d3000f-155a-4760-930f-6d38bf1b6d2b",
@@ -26473,7 +27025,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e4472a6c-d924-4d0c-b0ab-12137f826979",
@@ -26488,7 +27044,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "e117100c-0f6d-4e10-969b-1abccdc586d7",
@@ -26503,7 +27063,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2a3ceeae-da2a-404a-a080-0cd1701d67d5",
@@ -26518,7 +27082,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "ed3744e8-c598-4b0e-8dcf-84fea5cc69c3",
@@ -26533,7 +27101,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "0ab8f4fc-4a2a-4736-af06-93fd7adbc21f",
@@ -26548,7 +27120,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "0bc60a69-1b51-4b24-91fc-702ad3384cf3",
@@ -26563,7 +27139,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "8cca517e-71b2-40ee-8820-3970b7f65e51",
@@ -26578,7 +27158,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "13b2d3de-878b-4de1-8cef-4a513172d2e9",
@@ -26593,7 +27177,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "1568b131-bb9d-4f5f-abbf-758411624968",
@@ -26608,7 +27196,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "14930569-394c-456a-9c19-4b24ca49380e",
@@ -26623,7 +27215,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b239f953-7dc2-45c7-9c7d-beb2732a3041",
@@ -26638,7 +27234,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "664ea2a9-a828-429b-af8b-9e8b1666e0c5",
@@ -26653,7 +27253,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9feb2423-d9e1-427d-8b78-0a5a44b2d478",
@@ -26668,7 +27272,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d4cc6514-b348-4122-b42a-a1e9bca53fa0",
@@ -26683,7 +27291,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "bd097b52-dac3-49f7-8c02-73efa7e3ad4a",
@@ -26698,7 +27310,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d2d72094-cb30-4372-9940-3f4e9a8c427a",
@@ -26713,7 +27329,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "3c25f34f-a1f2-4545-a680-ce1252ccf0f4",
@@ -26728,7 +27348,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fc0809dc-4f13-42b3-b6a1-8e937e6ea8ab",
@@ -26743,7 +27367,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "c43c549f-e98d-43da-a1db-27ec237c61de",
@@ -26763,7 +27391,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "b619640e-2eb0-4516-b3b9-b380991150f3",
@@ -26778,7 +27410,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2484f0db-f940-4bac-9c3b-50b9504409af",
@@ -26793,7 +27429,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "c5bb688b-65cc-465f-b9ae-297eed5c70da",
@@ -26808,7 +27448,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "38cbfa9d-2ac1-410a-8678-bc434e626f4e",
@@ -26823,7 +27467,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "4b189b4a-f6f5-4cc3-8b86-9eeee74b4fec",
@@ -26838,7 +27486,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "feac040c-62e7-4dab-8602-a399cbcadf6b",
@@ -26853,7 +27505,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "5dd46ebb-2520-4162-9eba-068296e6e719",
@@ -26868,7 +27524,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "2baad253-1c5e-41ef-a8ef-470a2cfa40cf",
@@ -26883,7 +27543,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "93eac896-d54d-4a4a-83fc-4da171bdeb7e",
@@ -26903,7 +27567,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fe1cec0a-bd83-447e-aaac-a20fe1aa1ec9",
@@ -26918,7 +27586,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "0a90350d-e0d8-49a1-9501-55d3024bfddf",
@@ -26938,7 +27610,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9fb258b4-1cba-4f74-b110-64d4d4931742",
@@ -26953,7 +27629,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "7823d259-543d-406e-a72e-b4f6b2914ea6",
@@ -26968,7 +27648,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "9a93bbf6-8b7c-41d2-ba54-346e6b6775f5",
@@ -26983,7 +27667,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "f209c727-7e42-4446-98e0-ceb7c273d711",
@@ -26998,7 +27686,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "fd541535-ab42-4ef6-a673-0138f8712e25",
@@ -27013,7 +27705,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "d2e510c3-30e0-4b79-a1ba-b703444ddd8f",
@@ -27028,7 +27724,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "62f99a54-90d0-45e2-a2dd-a8196051d95e",
@@ -27043,7 +27743,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "10aa632a-3eb6-477f-9372-3430e04a76ae",
@@ -27058,7 +27762,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "79bf9c0d-4979-4c14-8d9d-a830689a13dc",
@@ -27073,7 +27781,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "5d9ea803-f6cc-4d51-8533-12675cd7688e",
@@ -27088,7 +27800,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "380bb87d-b536-4321-bd24-bf67e5d11178",
@@ -27103,7 +27819,11 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   },
   {
     "id": "39700be4-f041-4482-bdc2-1aa548e01d48",
@@ -27118,6 +27838,10 @@
     ],
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
   }
 ]
