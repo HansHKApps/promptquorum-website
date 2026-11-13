@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-univocal-2026-11-13",
+  "hero": "univocal-first-dictation-hold-left-control",
+  "date_human": "2026年11月13日",
+  "captured": "テスト日と終了時刻は記録なし。Chromeでのダウンロードはテスト当日の11:06。このページのIDと日付は下書きの日付2026-11-13を使用",
+  "standard_version": "0.2",
+  "locale": "ja",
+  "app": {
+    "name": "Univocal",
+    "slug": "univocal",
+    "vendor": "NarNar Labs LLC (per the licence screen)",
+    "category": "Local dictation and read aloud, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://univocalapp.com"
+  },
+  "title": "24 GBのM4 Pro MacでのUnivocal：3言語で音声入力は動作し、読み上げは始まらなかった",
+  "page_title": "Univocalテスト",
+  "dek": "音声入力と読み上げができるMacアプリの最初のセッション：ライセンス条項が先に表示される丁寧な初回起動、英語・フランス語・ドイツ語での音声入力、テスターがたどれなかったプレミアム音声への案内、そして使ったときに始まらなかった読み上げ機能。",
+  "seo": {
+    "title": "Univocal実機テスト：Macの音声入力と読み上げ",
+    "description": "24 GBのM4 ProのMacでのUnivocal実機テスト。英語・フランス語・ドイツ語の音声入力は動作し、選択したテキストの読み上げは始まりませんでした。"
+  },
+  "faq": [
+    [
+      "Univocalの音声入力は複数の言語で使えますか？",
+      "セッションでは使えました。テスターのメモには、わざと非常に速く話したドイツ語を含め、英語・フランス語・ドイツ語のテキストが音声入力で生成されています。精度の集計はしておらず、フランス語の結果はテスターが判断していません。",
+      "observed"
+    ],
+    [
+      "Univocalの読み上げは動作しましたか？",
+      "テスターがマークしたテキストで使ったときは動作しませんでした。読み上げは始まらず、キーも変更できませんでした。ショートカットはセットアップのステップで1回は動作し、そこでリーダーウィンドウが開きましたが、音声が再生されたかどうかは記録なしです。原因は特定していません。",
+      "observed"
+    ],
+    [
+      "Univocalのダウンロードサイズはどのくらいですか？",
+      "インストーラーはテスターの読み取りで約6.5 MBで、メインウィンドウには初回ダウンロード中に574 MBの音声入力モデルが表示されていました。初回起動時のダウンロード総量は記録なしで、ディレクトリには約1.2 GBと記載されています（第三者情報）。実行時のメモリ使用量は測定していません。",
+      "measured"
+    ],
+    [
+      "Univocalはオフラインで動作し、音声をMac内にとどめますか？",
+      "セットアップの文言には、音声はMac上で文字起こしされ、アップロードされることはないと書かれており、リーダーの文言には、読み上げたものも話したものもMacの外に出ないと書かれています。ネットワーク通信は調べておらず、オフラインでの実行も試していないため、これは未検証です。",
+      "vendor-claim"
+    ],
+    [
+      "Univocalの料金はいくらで、試用はありますか？",
+      "アプリには14日間のトライアルとBuyボタンが表示されていました。スクリーンショットで確認したベンダーのサイトには、39ドルの買い切り、11月20日から30日までのコード利用でブラックフライデー価格15ドル、サブスクリプションなし、アカウントなしと記載されています。これらはベンダーの主張です。",
+      "vendor-claim"
+    ],
+    [
+      "Univocalは話した箇条書きをリストにできますか？",
+      "セッションではできませんでした。英語とドイツ語で箇条書きを依頼しましたが、プレーンテキストになり、ドイツ語の結果では2つの単語がつながっていました。箇条書き機能はスクリーンショットでは宣伝されていないため、主張に対する失点ではありません。",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-13",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "Univocal（ライセンス画面によればNarNar Labs LLC）",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "0.3.33（一般設定）",
+      "measured"
+    ],
+    [
+      "入手元",
+      "Chromeでダウンロード。正確なページは記録なし。ディレクトリにはベンダーサイトunivocalapp.comが掲載されています。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans（PromptQuorum創設者）",
+      "observed"
+    ],
+    [
+      "開始・終了",
+      "Chromeのダウンロードはテスト当日の11:06（macOSのダイアログには「今日」と表示）。テスト日と終了時刻は記録なしで、IDには下書きの日付を使用。",
+      null
+    ],
+    [
+      "ハードウェア",
+      "Apple M4 Pro、24 GBユニファイドメモリ（メモには「always on an M4 Pro 24GB」）。このシリーズの以前のテストではM3 Proを記録していました。SprichとLUを参照。",
+      "tester-view"
+    ],
+    [
+      "システム",
+      "macOSのバージョンは記録なし。",
+      null
+    ],
+    [
+      "テストの理由",
+      "開発者が、PromptQuorumサイトのSprichのハンズオンテストを見たあと、テスターに連絡してきました。",
+      "tester-view"
+    ],
+    [
+      "目的",
+      "目標としては示されていません。メモには、インストール、初回起動、3言語での音声入力、設定、読み上げ、箇条書きのテストが記されています。",
+      null
+    ],
+    [
+      "使用したAI支援",
+      "Claudeが、テスターのWordメモと15枚のスクリーンショットからこのレポートを下書きしました。メモの音声入力部分はおそらくUnivocal自身の出力です（推測）。",
+      "assumption"
+    ],
+    [
+      "開示事項",
+      "テスターは、ローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。Univocalは、2026-11-13に、ハンズオンテストではなく開発元のページに基づくAI作成のレビュー付きでディレクトリに追加されました。このテストが最初のハンズオンです。開発者がテスターに連絡してきましたが、何を依頼されたかは記録なしです。テスターは14日間のトライアルを使い、スクリーンショットに永久ライセンスは見当たりません。Univocalはサイトからのクリックを受けています。支払いやスポンサーシップの記録はありません。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターは、ローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。Univocalは、2026-11-13に、ハンズオンテストではなく開発元のページに基づくAI作成のレビュー付きでディレクトリに追加されました。このテストが最初のハンズオンです。開発者がテスターに連絡してきましたが、何を依頼されたかは記録なしです。テスターは14日間のトライアルを使い、スクリーンショットに永久ライセンスは見当たりません。Univocalはサイトからのクリックを受けています。支払いやスポンサーシップの記録はありません。テスターは、開発者は韓国の人で、韓国はこのウェブサイトの主要市場の一つだと述べています（テスターの見解で、ここでは未検証）。どのスクリーンショットにも国名は出ていません。",
+  "verdict": {
+    "general": "音声入力と読み上げのための、コンパクトでよく作り込まれたMacアプリです。このセッションでは3言語で音声入力が動作し、初回起動では各ステップが説明されていました。一方、選択したテキストの読み上げは始まらず、アプリが案内していたより良いドイツ語音声は見つかりませんでした。オフライン動作、プライバシーに関する主張、メモリ使用量、遅延、ブラウザ拡張機能、ConnectionsとVocabularyのタブ、アンインストールはテストしていません。",
+    "fit": "テスターは、ライセンス画面、言語の設定、セットアップを気に入っています。メモは、失敗した箇条書きのテストで終わっており、使い続けるかどうかの決定は記されていません。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "小さなDMG、Applicationsへドラッグ、アカウント画面は見当たらず。"
+    ],
+    [
+      "オンボーディングとモデル選び",
+      3,
+      "手順が明確でダウンロードの見積もりも表示されたが、音声のポップアップはたどれなかった。音声入力モデルの選択肢はない。"
+    ],
+    [
+      "中核機能",
+      3,
+      "音声入力は動作したが、読み上げは動作しなかった。"
+    ],
+    [
+      "ガイダンスと試行錯誤",
+      3,
+      "説明文は多いが、読み上げのショートカットと書式の制限は分かりにくいままだった。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "計時なし。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "アプリ内の文言のみを確認。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していない。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、テスターが示した根拠からレポート作成者が案として付けたものです。該当なしは「未テスト」を意味し、ゼロ点ではありません。",
+  "tldr": [
+    [
+      "observed",
+      "Univocalは、あらゆるアプリに音声入力し、テキストを読み上げるMacアプリです。テスターは24 GBのApple M4 Proで実行しました。インストーラーは小さく、セットアップの前にライセンス画面が表示され、メインウィンドウには574 MBの音声入力モデルのダウンロード中の表示がありました。"
+    ],
+    [
+      "observed",
+      "音声入力は動作しました。セットアップのボックスでも、テスターのメモの英語・フランス語・ドイツ語でも動作し、わざと非常に速く話したドイツ語も含まれます。精度の集計や計時はしていません。"
+    ],
+    [
+      "observed",
+      "マークしたテキストの読み上げは始まらず、テスターはキーを変更できませんでした。ショートカットはセットアップのステップで1回は動作していました。原因は特定していません。"
+    ],
+    [
+      "observed",
+      "ポップアップは、macOSの設定にあるより良いドイツ語音声を案内していました。テスターは4つの手順に従いましたが、プレミアム音声は見つかりませんでした。"
+    ],
+    [
+      "observed",
+      "英語とドイツ語で箇条書きを音声で依頼しても、箇条書きにはなりませんでした。箇条書き機能はスクリーンショットでは宣伝されていません。"
+    ],
+    [
+      "vendor-claim",
+      "アプリは、音声はこのMac上で文字起こしされ、アップロードされることはないと述べています。オフライン利用、ネットワーク通信、メモリ、遅延、ブラウザ拡張機能、ConnectionsとVocabularyのタブ、アンインストールはテストしていません。"
+    ]
+  ],
+  "quotes": [
+    "ほかのアプリはどれも、ただ開くだけで何もありませんでした。これはちゃんとライセンス条項があって、クリックして進める画面があります。",
+    "言語まわりは本当によくできています。使いたい言語を実際に自分で定義できます。",
+    "そのうち、こうした特別な機能にあてるキーがコンピューターから足りなくなりそうです。"
+  ],
+  "quote_note": "テスターのメモ。音声入力から軽く編集。3つとも本人の判断であり、測定値ではありません。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "左右が逆のインストーラーウィンドウ",
+      "左にApplications、右にアプリ。",
+      "univocal-dmg-window-applications-left",
+      "chapter-install"
+    ],
+    [
+      "セットアップ前のライセンス条項",
+      "何かを設定する前に表示される、クリックして進める画面。",
+      "univocal-licence-terms-before-setup",
+      "chapter-install"
+    ],
+    [
+      "時間の見積もりが付いたダウンロード",
+      "権限のステップに、16 %と約23分の表示。",
+      "univocal-setup-permissions-download-time-estimate",
+      "chapter-install"
+    ],
+    [
+      "見つけにくい、より良いドイツ語音声",
+      "4つの手順を示すポップアップ。テスターはプレミアム音声までたどれなかった。",
+      "univocal-better-german-voice-popup",
+      "chapter-install"
+    ],
+    [
+      "最初の音声入力",
+      "セットアップのボックスで、Left Controlを押している間だけ話す方式。",
+      "univocal-first-dictation-hold-left-control",
+      "chapter-usage"
+    ],
+    [
+      "空に見えるショートカット欄",
+      "読み上げの設定。欄には「Press keys...」と表示。",
+      "univocal-read-aloud-settings-shortcut-field",
+      "chapter-usage"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "ダウンロード、インストール、セットアップ",
+      "items": [
+        [
+          "observed",
+          "開発者は、Sprichのテストが公開された後にテスターへ連絡してきました。DMGは小さく、テスターの読み取りで6.5 MBです。スクリーンショットはありません。ディレクトリにはバージョン0.3.33で約6.3 MBと記載されています（第三者情報）。",
+          null
+        ],
+        [
+          "observed",
+          "インストーラーのウィンドウは、左にApplications、右にUnivocalが表示され、通常のレイアウトとは逆です。ドラッグの手順は依然として必要です。",
+          "univocal-dmg-window-applications-left"
+        ],
+        [
+          "observed",
+          "初回に開くとき、macOSは「Are you sure you want to open it?」と尋ね、Chromeが11:06にファイルをダウンロードしたこと、Appleが悪意のあるソフトウェアを検出しなかったことを表示しました。署名と公証の状態は表示されません。",
+          "univocal-gatekeeper-open-confirmation"
+        ],
+        [
+          "observed",
+          "セットアップの前にライセンスのウィンドウが開きました。バージョン1.0、2026年9月23日発効、ユーザーとNarNar Labs LLCの間のもので、アプリ、付属のブラウザ拡張機能、音声モデルが対象です。ボタンはQuitとAgree。同意しない購入者には30日間の返金が提示されています。最初の数行のみ読みました。",
+          "univocal-licence-terms-before-setup"
+        ],
+        [
+          "tester-view",
+          "「ほかのアプリはどれも、ただ開くだけで何もありませんでした。これはちゃんとライセンス条項があって、クリックして進める画面があります。」アプリごとの確認はしていません。",
+          null
+        ],
+        [
+          "observed",
+          "セットアップでは、英語（イギリス）が主言語としてあらかじめ設定され、長いリストから言語を追加できます。最初の言語はアプリのウィンドウの言語にもなり、順序はドラッグで変更できます。ドイツ語とフランス語を追加しました。",
+          "univocal-languages-add-dropdown"
+        ],
+        [
+          "observed",
+          "ポップアップには、より良いドイツ語音声はmacOSの無料ダウンロードだと書かれ、4つの手順が示されていました。Read & Speak、System voiceの横の情報アイコン、左の列でドイツ語、EnhancedまたはPremiumの音声の横のダウンロードアイコン。テスターはそれに従いましたが、プレミアム音声は見つかりませんでした。iOSにはそうした音声があることは知っているとのことです。どの手順で失敗したかは記録なしです。",
+          "univocal-better-german-voice-popup"
+        ],
+        [
+          "measured",
+          "セットアップでは2つの権限を求められました。Accessibility（チェック済み）とMicrophone（Grant）。ダウンロードのボタンには「Wait for advanced voices」、16 %、約23分と表示され、「Start now」は2つの権限が揃うまで待機していました。",
+          "univocal-setup-permissions-download-time-estimate"
+        ],
+        [
+          "measured",
+          "メインウィンドウには「Downloading the dictation model (574 MB)... 17%」と、39 %のDictateタイルが表示されていました。Read aloudタイルは準備完了で、Option-Shift-Rと表示されていました。2つのパーセンテージが何を測っているのか、ダウンロードの総量は記録なしです。ウィンドウには、ダウンロードは「happens once and takes a few minutes」とありますが、総所要時間は記録なしです。",
+          "univocal-setting-up-model-download-trial"
+        ],
+        [
+          "observed",
+          "音声の選択画面では、言語ごとに音声が一覧表示され、検索ボックス、All/Female/Maleのフィルター、「Your languages」メニュー、音声ごとの再生ボタンがあります。Appleの音声にはAppleのタグが付いています。German (Germany)ではAnnaにチェックが付いていました。テスターは、音声の選び方がよく整理されていると感じています。",
+          "univocal-voice-picker-german-anna"
+        ],
+        [
+          "observed",
+          "「Hear it」のステップでは、Option-Shift-Rでリーダーウィンドウが開き、ウェルカムテキスト、Play、速度1x、言語Auto (English)、音声Emma、文字サイズ、閉じるためのEscapeが表示されました。音声が再生され、単語がハイライトされたかどうかは記録なしです。",
+          "univocal-reader-window-welcome-text"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "使ってみて",
+      "items": [
+        [
+          "observed",
+          "「Say something」のステップで、Left Controlを押したまま話すと、ボックスに「Hello, what's going on? Does it work?」と入力されました。両方のステップにチェックが付きました。",
+          "univocal-first-dictation-hold-left-control"
+        ],
+        [
+          "observed",
+          "メモには、わざと非常に速く話したドイツ語を含め、英語・フランス語・ドイツ語のテキストが音声入力で生成されており、テスターはそれが動作したと述べています。これらの間での言語の切り替えは記録されておらず、Dictationのページには「Mix your languages」とあります（推測：自動検出）。時間、精度の集計、対象アプリは記録なしです。",
+          null
+        ],
+        [
+          "observed",
+          "Dictationの設定：音声キーはLeft Control、モードはPush（選択中）またはToggle、「Remove fillers and false starts」はオン、「Keep transcript on clipboard」はオフ、「Type words as you speak」はオフ、聞き取り中のグローはオン、処理中はスピナー、Recent dictationsのリスト。テスターは、両方のモードが用意されている点を気に入っています。",
+          "univocal-settings-dictation-push-toggle"
+        ],
+        [
+          "measured",
+          "一般設定：バージョン0.3.33、ログイン時に起動はオン、Dockアイコンはオン、言語はEnglish、外観はSystem、自動アップデートの確認はオン。タブはLanguages、Dictation、Read Aloud、Connections、Vocabulary、Permissions、Licenceで、ConnectionsとVocabularyは開いていません。",
+          "univocal-settings-general-version-0-3-33"
+        ],
+        [
+          "observed",
+          "Languagesのリストには、English (United Kingdom)が主言語でEmma、German (Germany)がWren、French (France)がSiwisと表示され、それぞれに再生ボタンがあります。テスターは、これらの名前を面白いと言っています。",
+          "univocal-settings-languages-voices"
+        ],
+        [
+          "observed",
+          "テスターがテキストをマークしてボタンを押しても、読み上げは始まらず、キーも変更できませんでした。使ったテキスト、アプリ、キーは記録なしです。ショートカットはセットアップのステップで1回は動作しました。",
+          null
+        ],
+        [
+          "observed",
+          "Read Aloudの設定：速度1x、「Use a separate shortcut」はオン、Shortcut欄には「Press keys...」と表示、「Format Markdown」はオン、不透明度のスライダー、ハイライトの色、履歴。欄が空だったのか、案内文が表示されていたのかは不明です（推測：失敗の原因の可能性）。",
+          "univocal-read-aloud-settings-shortcut-field"
+        ],
+        [
+          "observed",
+          "「cat, house, dog」をリストにするよう英語で話して依頼したときも、ドイツ語での依頼（「Bitte als Bullet Points」）でも、箇条書きにはなりませんでした。ドイツ語の結果では2つの単語がつながって「Katzenhaus」になりました。スクリーンショットはありません。テスターは、試した別のアプリも同じだったと述べています。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "テスターは、音声とモデルのプログラム3つを同時に開いたままにしていましたが、Macは問題なく動いていました。測定はしていません。それぞれが小さなモデルを使っているためだと、彼は考えています。",
+          null
+        ],
+        [
+          "tester-view",
+          "「そのうち、こうした特別な機能にあてるキーがコンピューターから足りなくなりそうです。」",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "判断",
+      "items": [
+        [
+          "observed",
+          "メモは、箇条書きのテストと、料金とトライアルについてのメモで終わっており、使い続けるかどうかの決定は記されていません。",
+          null
+        ],
+        [
+          "observed",
+          "アプリには「Trial · 14 days left」とBuyボタンが表示されています。ベンダーのサイト（スクリーンショット。ここでは非掲載）には、39ドルの買い切り、11月20日から30日までのコード利用でブラックフライデー価格15ドル、14日間無料、サブスクリプションなし、アカウントなしと記載されています。スクリーンショットの中にアカウントのステップは見当たりません。",
+          "univocal-setting-up-model-download-trial"
+        ],
+        [
+          "tester-view",
+          "彼がテストした別の音声入力ツールには2 GBを超える整形エンジンが付いていたのに対し、こちらは574 MBの音声入力モデルを表示していることに、彼は驚いています。",
+          null
+        ],
+        [
+          "tester-view",
+          "「言語まわりは本当によくできています。使いたい言語を実際に自分で定義できます。」",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "セットアップの文言：音声モデルと音声認識モデルのダウンロードは「once and takes a few minutes」。",
+      "メインウィンドウ",
+      "先の画面では16 %の時点で約23分と見積もられていました。総所要時間は記録なし。",
+      "observed"
+    ],
+    [
+      "「Audio is transcribed on this Mac and never uploaded.」リーダーの文言：読み上げたものも話したものもMacの外に出ない。",
+      "セットアップとリーダーの文言",
+      "未検証。ネットワーク通信は調べておらず、オフラインでの実行も試していません。",
+      "vendor-claim"
+    ],
+    [
+      "リーダー：「Every word you hear lights up as it is spoken.」",
+      "リーダーウィンドウ",
+      "リーダーウィンドウは確認。音声とハイライトは記録なし。",
+      "observed"
+    ],
+    [
+      "Univocalは、選んだ言語で読み上げと音声入力を行う。",
+      "言語のステップ",
+      "英語・フランス語・ドイツ語での音声入力を確認。ドイツ語とフランス語の読み上げは記録なし。",
+      "observed"
+    ],
+    [
+      "macOSには、無料でダウンロードできるより良いドイツ語音声がある。",
+      "セットアップのポップアップ",
+      "テスターは見つけられませんでした。",
+      "observed"
+    ],
+    [
+      "39ドルの買い切り、14日間無料、カード不要、アカウント不要。ブラックフライデーの11月20日から30日：コード利用で15ドル。",
+      "ベンダーサイト（スクリーンショット）",
+      "トライアルのバナーは確認。スクリーンショットの中にアカウント画面は見当たらず。",
+      "vendor-claim"
+    ],
+    [
+      "初回起動時のダウンロードは約1.2 GB、32言語、DMGは約6.3 MB。",
+      "PromptQuorumディレクトリの項目",
+      "574 MBのコンポーネントを確認。言語リストは長いが数えていない。DMGはテスターが6.5 MBと読み取り。",
+      "third-party"
+    ]
+  ],
+  "usage_log": [
+    [
+      "セットアップのボックスで音声入力、Left Controlを押し続ける",
+      "Univocalのセットアップ",
+      "ボックスに文が入力された",
+      "記録なし",
+      "Pass",
+      [
+        "univocal-first-dictation-hold-left-control"
+      ]
+    ],
+    [
+      "英語の文（「Hi, how are you? How does it work?」）",
+      "記録なし",
+      "メモにテキスト。対象アプリは記録なし",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "フランス語の質問",
+      "記録なし",
+      "メモにテキスト。精度はテスターが判断していない",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "わざと非常に速く話したドイツ語の質問",
+      "記録なし",
+      "テスターによれば動作した",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "セットアップのステップからリーダーウィンドウ、Option-Shift-R",
+      "Univocalのセットアップ",
+      "ウィンドウは開いた。音声は記録なし",
+      "記録なし",
+      "Partial",
+      [
+        "univocal-reader-window-welcome-text"
+      ]
+    ],
+    [
+      "マークしたテキストを読み上げる",
+      "記録なし",
+      "始まらなかった",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "読み上げのキーを変更する",
+      "Univocalの設定",
+      "できなかった",
+      "記録なし",
+      "Fail",
+      [
+        "univocal-read-aloud-settings-shortcut-field"
+      ]
+    ],
+    [
+      "プレミアムのドイツ語音声を探す",
+      "macOSの設定",
+      "見つからなかった",
+      "記録なし",
+      "Fail",
+      [
+        "univocal-better-german-voice-popup"
+      ]
+    ],
+    [
+      "音声で箇条書き、英語での依頼",
+      "記録なし",
+      "箇条書きにならなかった",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "音声で箇条書き、ドイツ語での依頼",
+      "記録なし",
+      "2つの単語がつながり、箇条書きにならなかった",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "音声とモデルのプログラム3つを同時に",
+      "Mac",
+      "テスターによればコンピューターは使える状態のままだった",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "オフライン利用、アンインストール、Connections、Vocabulary、ブラウザ拡張機能",
+      "該当なし",
+      "未テスト",
+      "記録なし",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "macOSの初回オープン時のダイアログを、App Storeのものではなく、Appleに登録されていないアプリに対する標準的な警告だと呼びました。ダイアログには、Appleが確認して悪意のあるソフトウェアは見つからなかったと書かれており、署名の状態は表示されていません。"
+    ],
+    [
+      "tester-error",
+      "選択したドイツ語の音声はEmmaだと述べました。スクリーンショットでは、EmmaはEnglish (United Kingdom)の音声で、ドイツ語は音声リストではAnna、LanguagesのリストではWrenと表示されています。"
+    ],
+    [
+      "assumption",
+      "メモの最初の音声入力の文は、セットアップのスクリーンショットの文と異なります。おそらく別々の2回の試行ですが、不明です。"
+    ],
+    [
+      "assumption",
+      "「I like this version one zero」は、アプリのバージョン0.3.33ではなく、ライセンスのバージョン1.0を指していると解釈しています。"
+    ],
+    [
+      "tester-error",
+      "記録の欠落：テスト日、終了時刻、macOSのバージョン、ダウンロードの総所要時間、フランス語とドイツ語のテストで使ったアプリ、読み上げが失敗したときのキーとテキスト、箇条書きテストのスクリーンショット、開発者が書いた内容、ほかの2つのプログラムの名前。音声からテキストへの誤変換は正規化しました。「meeting」は「setting」と読み替えています（ポップアップのボタンはOpen System Settings）。「Strato sort program」は不明で、省きました。フランス語のやり取りの「Bien sûr !」には、発言者の記録がありません。"
+    ]
+  ],
+  "findings": [
+    [
+      "UV-01",
+      "DMGはテスターによれば6.5 MBで、スクリーンショットはありません。ディレクトリには0.3.33で約6.3 MBと記載されています（第三者情報）。",
+      "インストール",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UV-02",
+      "インストーラーのウィンドウは、左にApplications、右にUnivocalが表示され、通常のレイアウトとは逆です（テスターの見解）。ドラッグの手順は依然として必要で、テスターはドラッグを不要にしているアプリもあると述べています。",
+      "インストール",
+      "observed",
+      "Info",
+      [
+        "univocal-dmg-window-applications-left"
+      ]
+    ],
+    [
+      "UV-03",
+      "初回に開くとき、macOSは「Are you sure you want to open it?」と尋ね、Chromeが11:06にダウンロードしたこと、Appleが悪意のあるソフトウェアを検出しなかったことを表示します。署名と公証の状態は表示されません。",
+      "インストール",
+      "observed",
+      "Info",
+      [
+        "univocal-gatekeeper-open-confirmation"
+      ]
+    ],
+    [
+      "UV-04",
+      "セットアップの前にライセンスのウィンドウが開きます。バージョン1.0、2026年9月23日発効、ユーザーとNarNar Labs LLCの間のもので、アプリ、付属のブラウザ拡張機能、音声モデルが対象です。ボタンはQuitとAgree。同意しない購入者には30日間の返金が提示されています。テスターは、テストしたほかのアプリはただ開くだけだったと述べています（テスターの見解。アプリごとの確認はしていません）。最初の数行のみ読みました。",
+      "オンボーディング",
+      "observed",
+      "Positive",
+      [
+        "univocal-licence-terms-before-setup"
+      ]
+    ],
+    [
+      "UV-05",
+      "言語のステップでは、英語（イギリス）が主言語としてあらかじめ設定され、長いリスト（アラビア語からデンマーク語、さらにその先まで）から言語を追加できます。最初の言語はアプリのウィンドウの言語にもなり、順序はドラッグで変更できます。ドイツ語とフランス語を追加しました。言語を増やすとメモリを消費するかどうかは不明です。ディレクトリには32言語と記載されています（第三者情報）。一部隠れた文言から、このステップの後にダウンロードが始まるようです（推測）。",
+      "オンボーディング",
+      "observed",
+      "Positive",
+      [
+        "univocal-languages-add-dropdown"
+      ]
+    ],
+    [
+      "UV-06",
+      "ポップアップには、より良いドイツ語音声はmacOSの無料ダウンロードだと書かれ、4つの手順が示されています。Read & Speak、System voiceの横の情報アイコン、左の列でドイツ語、EnhancedまたはPremiumの音声の横のダウンロードアイコン。テスターはそれに従いましたが、プレミアム音声は見つかりませんでした。iOSにはそうした音声があることは知っているとのことです。どの手順で失敗したかは記録なしです。「System voice」のコントロールは、どのスクリーンショットにも写っていません。",
+      "オンボーディング",
+      "observed",
+      "Medium",
+      [
+        "univocal-better-german-voice-popup"
+      ]
+    ],
+    [
+      "UV-07",
+      "セットアップでは2つの権限を求められます。Accessibility（チェック済み）とMicrophone（Grant）。ダウンロードのボタンには「Wait for advanced voices」、16 %、約23分と表示され、「Start now」は2つの権限が揃うまで待機します。文言には、音声はこのMac上で文字起こしされ、アップロードされることはないと書かれています（ベンダーの主張）。",
+      "オンボーディング",
+      "measured",
+      "Positive",
+      [
+        "univocal-setup-permissions-download-time-estimate"
+      ]
+    ],
+    [
+      "UV-08",
+      "メインウィンドウには「Downloading the dictation model (574 MB)... 17%」と、39 %のDictateタイルが表示されます。Read aloudタイルは準備完了で、Option-Shift-Rと表示されています。2つのパーセンテージが何を測っているのか、ダウンロードの総量は、表示も記録もされていません。ディレクトリには約1.2 GBと記載されています（第三者情報）。テスターは、尋ねられることなくダウンロードが始まったと述べています。",
+      "オンボーディング",
+      "measured",
+      "Info",
+      [
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-09",
+      "メインウィンドウには、ダウンロードは「happens once and takes a few minutes」とあります。先のセットアップのボタンでは、16 %の時点で約23分と見積もられていました。23分が全体の時間なのか残り時間なのかは示されていません（推測：残り時間）。実際の所要時間は記録なしです。",
+      "オンボーディング",
+      "measured",
+      "Low",
+      [
+        "univocal-setup-permissions-download-time-estimate",
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-10",
+      "音声の選択画面では、言語ごとに音声が一覧表示され、検索ボックス、All/Female/Maleのフィルター、「Your languages」メニュー、音声ごとの再生ボタンがあります。Appleの音声にはAppleのタグが付いています。German (Germany)ではAnnaにチェックが付いていました。テスターは、音声の選び方がよく整理されていると感じています（テスターの見解）。",
+      "オンボーディング",
+      "observed",
+      "Positive",
+      [
+        "univocal-voice-picker-german-anna"
+      ]
+    ],
+    [
+      "UV-11",
+      "「Hear it」のステップでは、Option-Shift-Rでリーダーウィンドウが開き、ウェルカムテキスト、Play、速度1x、言語Auto (English)、音声Emma、文字サイズ、閉じるためのEscapeが表示されました。音声が再生され、単語がハイライトされたかどうかは記録なしです。",
+      "オンボーディング",
+      "observed",
+      "Info",
+      [
+        "univocal-reader-window-welcome-text"
+      ]
+    ],
+    [
+      "UV-12",
+      "「Say something」のステップで、Left Controlを押したまま話すと、ボックスに「Hello, what's going on? Does it work?」と入力されました。両方のステップにチェックが付きました。",
+      "音声入力",
+      "observed",
+      "Positive",
+      [
+        "univocal-first-dictation-hold-left-control"
+      ]
+    ],
+    [
+      "UV-13",
+      "メモには、わざと非常に速く話したドイツ語を含め、英語・フランス語・ドイツ語のテキストが音声入力で生成されており、テスターはそれが動作したと述べています。これらの間での言語の切り替えは記録されておらず、Dictationのページには「Mix your languages」とあります（推測：自動検出）。時間、精度の集計、アプリは記録なしです。",
+      "音声入力",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UV-14",
+      "Dictationの設定：音声キーはLeft Control、モードはPush（選択中）またはToggle、「Remove fillers and false starts」はオン、「Keep transcript on clipboard」はオフ、「Type words as you speak」はオフ、聞き取り中のグローはオン、処理中はスピナー、Recent dictationsのリスト。テスターは、両方のモードが用意されている点を気に入っています（テスターの見解）。",
+      "音声入力",
+      "observed",
+      "Info",
+      [
+        "univocal-settings-dictation-push-toggle"
+      ]
+    ],
+    [
+      "UV-15",
+      "一般設定：バージョン0.3.33、ログイン時に起動はオン、Dockアイコンはオン、言語はEnglish、外観はSystem、自動アップデートの確認はオン、Check Now、Report Issue。タブはLanguages、Dictation、Read Aloud、Connections、Vocabulary、Permissions、Licenceで、ConnectionsとVocabularyは開いていません。ディレクトリには、0.3.33が2026-11-11にリリースされたと記載されています（第三者情報）。",
+      "設定",
+      "measured",
+      "Info",
+      [
+        "univocal-settings-general-version-0-3-33"
+      ]
+    ],
+    [
+      "UV-16",
+      "Languagesのリスト：English (United Kingdom)が主言語でEmma、German (Germany)がWren、French (France)がSiwisで、それぞれに再生ボタンがあります。テスターは、これらの名前を面白いと言っています（テスターの見解）。どの音声がAppleのものかは示されておらず、選択画面だけが音声にAppleのラベルを付けています。",
+      "設定",
+      "observed",
+      "Low",
+      [
+        "univocal-settings-languages-voices",
+        "univocal-voice-picker-german-anna"
+      ]
+    ],
+    [
+      "UV-17",
+      "テスターがテキストをマークしてボタンを押しても、読み上げは始まらず、キーも変更できませんでした。使ったテキスト、アプリ、キーは記録なしです。ショートカットはセットアップのステップで1回は動作しました。原因は特定していません。",
+      "読み上げ",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "UV-18",
+      "Read Aloudの設定：速度1x、「Use a separate shortcut」はオン、Shortcut欄には「Press keys...」と表示、「Format Markdown」はオン、不透明度のスライダー、ハイライトの色、履歴。欄が空だったのか、案内文が表示されていたのかは不明です（推測：UV-17の原因の可能性）。",
+      "読み上げ",
+      "observed",
+      "Low",
+      [
+        "univocal-read-aloud-settings-shortcut-field"
+      ]
+    ],
+    [
+      "UV-19",
+      "アプリには「Trial · 14 days left」とBuyボタンが表示されています。ベンダーのサイト（スクリーンショット。ここでは非掲載）には、39ドルの買い切り、11月20日から30日までのコード利用でブラックフライデー価格15ドル、14日間無料、サブスクリプションなし、アカウントなしと記載されています（ベンダーの主張）。スクリーンショットの中にアカウントのステップは見当たりません。",
+      "トライアルと価格",
+      "observed",
+      "Info",
+      [
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-20",
+      "「cat, house, dog」をリストにするよう英語で話して依頼したときも、ドイツ語での依頼（「Bitte als Bullet Points」）でも、箇条書きにはなりませんでした。ドイツ語の結果では2つの単語がつながって「Katzenhaus」になりました。スクリーンショットはありません。テスターは、試した別のアプリも同じだったと述べています。箇条書き機能はスクリーンショットでは宣伝されていないため、主張に対する失点ではありません。",
+      "書式",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "UV-21",
+      "テスターは、音声とモデルのプログラム3つを同時に動かしましたが、Macは問題なく動いていました。測定はしていません（テスターの見解：それぞれが小さなモデルを使っているため）。",
+      "パフォーマンス",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "UV-22",
+      "セットアップとリーダーの文言には、すべてMac内にとどまると書かれています。ネットワーク通信は調べておらず、オフラインでの実行も試していません。",
+      "信頼性",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "UV-23",
+      "未テストまたは記録なし：オフライン利用、遅延、メモリ、Connections、Vocabulary、ブラウザ拡張機能、リアルタイムの入力、ほかの言語、ドイツ語やフランス語での読み上げ、アンインストール、macOSのバージョン。",
+      "範囲",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "重要度は、初めて使う人への影響度です。案であり、実測値ではありません。Infoは、問題でも長所でもない所見を示します。Positiveは、うまく動作したことを示します。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Apple SiliconのMacで英語・フランス語・ドイツ語の音声入力を行い、トライアル付きの小さな有料アプリを求める人（1回のセッションからの推測）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "読み上げが最初から動作することや、音声での箇条書き整形を必要とする人。"
+      ]
+    ],
+    "retest": "バージョンが変わったとき、または読み上げの失敗の原因が分かったときに再テストしてください。対象：既定のショートカットでの読み上げ、プレミアムのドイツ語音声、ConnectionsとVocabularyのタブ、通信を調べたオフライン利用、遅延、メモリ、アンインストール。macOSのバージョンと日付も記録すること。"
+  },
+  "background_intro": "第三者情報で、未検証です。テストとは分けて記載しています。",
+  "background": [
+    [
+      "third-party",
+      "NarNar Labs LLCが公開。プロプライエタリで、ソースリポジトリは見つかっていません。開発元のページには創設者、国、住所の記載がありません。Apple siliconのMacでmacOS 14以降のみ対応。"
+    ],
+    [
+      "third-party",
+      "最も古い変更履歴の項目は2026-07-29の0.3.0、0.3.33は2026-11-11。インターフェース言語には、英語、韓国語、日本語、中国語、スペイン語、ドイツ語、フランス語が含まれます。出典：PromptQuorumディレクトリのレビュー、2026-11-13確認。"
+    ]
+  ],
+  "sources": [
+    "テスターのハンズオンのメモとスクリーンショット（元のWordメモ。生のメモのPDFは追加予定）。",
+    "UnivocalのPromptQuorumディレクトリ項目とレビュー（slug: univocal）、2026-11-13確認。",
+    "ベンダーサイトunivocalapp.com（ベンダーの主張）。ディレクトリに記載のベンダーの変更履歴は、このテストでは開いていません。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "univocal-first-dictation-hold-left-control",
+      "figure": 1,
+      "file": "univocal-first-dictation-hold-left-control.webp",
+      "path": "images/univocal-first-dictation-hold-left-control.webp",
+      "alt": "Univocalのセットアップのステップ「Say something」：Left Controlを押したまま話し、離す。ボックスには入力された文「Hello, what's going on? Does it work?」が表示されている。",
+      "caption": "セットアップでの最初の音声入力。観察。",
+      "role": "hero",
+      "width": 1124,
+      "height": 994,
+      "bytes": 35242,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-usage"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-dmg-window-applications-left",
+      "figure": 2,
+      "file": "univocal-dmg-window-applications-left.webp",
+      "path": "images/univocal-dmg-window-applications-left.webp",
+      "alt": "左にApplicationsフォルダへのショートカット、右に黒地に白い引用符2つのUnivocalアプリアイコンが表示されたインストーラーのウィンドウ。",
+      "caption": "左右が逆のインストーラーウィンドウ。観察。",
+      "role": "moment",
+      "width": 1427,
+      "height": 625,
+      "bytes": 17744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-licence-terms-before-setup",
+      "figure": 3,
+      "file": "univocal-licence-terms-before-setup.webp",
+      "path": "images/univocal-licence-terms-before-setup.webp",
+      "alt": "「Before you start」というタイトルのUnivocalのライセンス条項ウィンドウ。バージョン1.0、2026年9月23日発効、QuitとAgreeのボタン。",
+      "caption": "何かを設定する前に表示されるライセンス条項。観察。",
+      "role": "moment",
+      "width": 1328,
+      "height": 1392,
+      "bytes": 143158,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-setup-permissions-download-time-estimate",
+      "figure": 4,
+      "file": "univocal-setup-permissions-download-time-estimate.webp",
+      "path": "images/univocal-setup-permissions-download-time-estimate.webp",
+      "alt": "セットアップのウィンドウ：Accessibilityにチェック、MicrophoneにGrantボタン、16パーセントと約23分を表示した「Wait for advanced voices」ボタン。",
+      "caption": "ダウンロードの見積もりが付いた権限のステップ。実測。",
+      "role": "moment",
+      "width": 1114,
+      "height": 974,
+      "bytes": 35434,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-better-german-voice-popup",
+      "figure": 5,
+      "file": "univocal-better-german-voice-popup.webp",
+      "path": "images/univocal-better-german-voice-popup.webp",
+      "alt": "「A better German voice is available」のポップアップ。macOSでEnhancedまたはPremiumの音声をダウンロードする4つの手順と、Not NowおよびOpen System Settingsのボタン。",
+      "caption": "macOSの音声を案内するポップアップ。観察。",
+      "role": "moment",
+      "width": 1066,
+      "height": 550,
+      "bytes": 44006,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-read-aloud-settings-shortcut-field",
+      "figure": 6,
+      "file": "univocal-read-aloud-settings-shortcut-field.webp",
+      "path": "images/univocal-read-aloud-settings-shortcut-field.webp",
+      "alt": "Read Aloudの設定：速度1x、「Use a separate shortcut」がオン、「Press keys」と表示されたShortcut欄、「Format Markdown」がオン、ピンクのハイライト色。",
+      "caption": "Read Aloudの設定。ショートカット欄には「Press keys」と表示。観察。",
+      "role": "moment",
+      "width": 1224,
+      "height": 944,
+      "bytes": 27010,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-gatekeeper-open-confirmation",
+      "figure": 7,
+      "file": "univocal-gatekeeper-open-confirmation.webp",
+      "path": "images/univocal-gatekeeper-open-confirmation.webp",
+      "alt": "macOSのダイアログ：Univocalはインターネットからダウンロードしたアプリで、Chromeが11:06にダウンロードし、Appleが確認して問題は見つからなかった。CancelとOpenのボタン。",
+      "caption": "macOSの初回オープン時の確認。観察。",
+      "role": "gallery",
+      "width": 534,
+      "height": 540,
+      "bytes": 25202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-languages-add-dropdown",
+      "figure": 8,
+      "file": "univocal-languages-add-dropdown.webp",
+      "path": "images/univocal-languages-add-dropdown.webp",
+      "alt": "「Your languages」のステップ：English (United Kingdom)が主言語で、「Add a language」のリストがアラビア語からデンマーク語まで開いており、Nextボタンがある。",
+      "caption": "リストを開いた言語のステップ。観察。",
+      "role": "gallery",
+      "width": 1114,
+      "height": 1266,
+      "bytes": 55766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-setting-up-model-download-trial",
+      "figure": 9,
+      "file": "univocal-setting-up-model-download-trial.webp",
+      "path": "images/univocal-setting-up-model-download-trial.webp",
+      "alt": "メインウィンドウ「Setting up」：音声入力モデル574 MBが17パーセント、Dictateタイルが39パーセント、Read aloudタイル、音声Emma、Trial 14 days left、Buyボタン。",
+      "caption": "初回ダウンロード中のメインウィンドウ。実測。",
+      "role": "gallery",
+      "width": 766,
+      "height": 812,
+      "bytes": 34156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-voice-picker-german-anna",
+      "figure": 10,
+      "file": "univocal-voice-picker-german-anna.webp",
+      "path": "images/univocal-voice-picker-german-anna.webp",
+      "alt": "検索とフィルター付きの音声リスト：アメリカ英語の音声、イギリス英語のDaniel、そしてAnnaにチェックが付いたGerman (Germany)の音声。",
+      "caption": "音声の選択画面。観察。",
+      "role": "gallery",
+      "width": 812,
+      "height": 882,
+      "bytes": 36484,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-reader-window-welcome-text",
+      "figure": 11,
+      "file": "univocal-reader-window-welcome-text.webp",
+      "path": "images/univocal-reader-window-welcome-text.webp",
+      "alt": "「Welcome to Univocal」というテキストのリーダーウィンドウ。操作はPlay、1x、Auto (English)、Emma。セットアップのステップ「Press Escape to put the reader away」も表示されている。",
+      "caption": "「Hear it」のステップのリーダーウィンドウ。観察。",
+      "role": "gallery",
+      "width": 1431,
+      "height": 613,
+      "bytes": 35094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-settings-general-version-0-3-33",
+      "figure": 12,
+      "file": "univocal-settings-general-version-0-3-33.webp",
+      "path": "images/univocal-settings-general-version-0-3-33.webp",
+      "alt": "一般設定：ログイン時に起動とDockアイコンがオン、言語English、外観System、バージョン0.3.33、自動アップデートの確認がオン、Report Issueボタン。",
+      "caption": "一般設定。実測：バージョン0.3.33。",
+      "role": "gallery",
+      "width": 1432,
+      "height": 974,
+      "bytes": 30982,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-settings-languages-voices",
+      "figure": 13,
+      "file": "univocal-settings-languages-voices.webp",
+      "path": "images/univocal-settings-languages-voices.webp",
+      "alt": "Languagesの設定：English (United Kingdom)が主言語で音声Emma、German (Germany)がWren、French (France)がSiwis、それぞれに再生ボタン。",
+      "caption": "言語と音声。観察。",
+      "role": "gallery",
+      "width": 1158,
+      "height": 638,
+      "bytes": 21024,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "univocal-settings-dictation-push-toggle",
+      "figure": 14,
+      "file": "univocal-settings-dictation-push-toggle.webp",
+      "path": "images/univocal-settings-dictation-push-toggle.webp",
+      "alt": "Dictationの設定：音声キーはLeft Control、モードはToggleの隣でPushが選択中、Remove fillersがオン、聞き取り中のグローがオン、処理中はスピナー。",
+      "caption": "Dictationの設定。観察。",
+      "role": "gallery",
+      "width": 1212,
+      "height": 1200,
+      "bytes": 32614,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocalアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    }
+  ],
+  "figure_order": [
+    "univocal-first-dictation-hold-left-control",
+    "univocal-dmg-window-applications-left",
+    "univocal-licence-terms-before-setup",
+    "univocal-setup-permissions-download-time-estimate",
+    "univocal-better-german-voice-popup",
+    "univocal-read-aloud-settings-shortcut-field",
+    "univocal-gatekeeper-open-confirmation",
+    "univocal-languages-add-dropdown",
+    "univocal-setting-up-model-download-trial",
+    "univocal-voice-picker-german-anna",
+    "univocal-reader-window-welcome-text",
+    "univocal-settings-general-version-0-3-33",
+    "univocal-settings-languages-voices",
+    "univocal-settings-dictation-push-toggle"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年11月13日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "メモリ",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "アプリ",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好",
+      "Info": "情報"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

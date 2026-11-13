@@ -50954,6 +50954,16 @@
     "width": 1600,
     "height": 967
   },
+  "/images/sprich-meeting-auswertung-erstellen-dialog.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1012,
+    "height": 798
+  },
+  "/images/sprich-meeting-transcript-two-speakers.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 795
+  },
   "/images/sprich-meetings-tab-record-meeting-tip.webp": {
     "encodingFormat": "image/webp",
     "width": 1600,
@@ -53284,6 +53294,46 @@
     "width": 800,
     "height": 455
   },
+  "/images/univocal-better-german-voice-popup.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1066,
+    "height": 550
+  },
+  "/images/univocal-dmg-window-applications-left.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1427,
+    "height": 625
+  },
+  "/images/univocal-first-dictation-hold-left-control.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1124,
+    "height": 994
+  },
+  "/images/univocal-gatekeeper-open-confirmation.webp": {
+    "encodingFormat": "image/webp",
+    "width": 534,
+    "height": 540
+  },
+  "/images/univocal-languages-add-dropdown.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1114,
+    "height": 1266
+  },
+  "/images/univocal-licence-terms-before-setup.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1328,
+    "height": 1392
+  },
+  "/images/univocal-read-aloud-settings-shortcut-field.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1224,
+    "height": 944
+  },
+  "/images/univocal-reader-window-welcome-text.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 613
+  },
   "/images/univocal-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -53328,6 +53378,36 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/univocal-setting-up-model-download-trial.webp": {
+    "encodingFormat": "image/webp",
+    "width": 766,
+    "height": 812
+  },
+  "/images/univocal-settings-dictation-push-toggle.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1212,
+    "height": 1200
+  },
+  "/images/univocal-settings-general-version-0-3-33.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1432,
+    "height": 974
+  },
+  "/images/univocal-settings-languages-voices.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1158,
+    "height": 638
+  },
+  "/images/univocal-setup-permissions-download-time-estimate.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1114,
+    "height": 974
+  },
+  "/images/univocal-voice-picker-german-anna.webp": {
+    "encodingFormat": "image/webp",
+    "width": 812,
+    "height": 882
   },
   "/images/unsloth-activity-monitor-memory-used-12-92-gb.webp": {
     "encodingFormat": "image/webp",

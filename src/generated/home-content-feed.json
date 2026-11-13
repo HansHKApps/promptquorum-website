@@ -19118,7 +19118,7 @@
   {
     "lang": "en",
     "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
-    "excerpt": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, tested speed, sourced prices.",
+    "excerpt": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, reported speed, sourced prices.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19136,7 +19136,7 @@
   {
     "lang": "fr",
     "title": "Stations de travail IA locales : AMD Strix Halo contre NVIDIA DGX Spark",
-    "excerpt": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse mesurée, prix sourcés.",
+    "excerpt": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse publiée, prix sourcés.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19145,7 +19145,7 @@
   {
     "lang": "ja",
     "title": "ローカルAIワークステーション: AMD Strix Halo vs. NVIDIA DGX Spark",
-    "excerpt": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・実測速度・出典付き価格で整理。",
+    "excerpt": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・公表速度・出典付き価格で整理。",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19154,7 +19154,7 @@
   {
     "lang": "zh",
     "title": "本地AI工作站：AMD Strix Halo对比NVIDIA DGX Spark",
-    "excerpt": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、实测速度和有来源的价格全面比较。",
+    "excerpt": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、公布速度和有来源的价格全面比较。",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19163,7 +19163,7 @@
   {
     "lang": "es",
     "title": "Estaciones de trabajo de IA local: AMD Strix Halo vs. NVIDIA DGX Spark",
-    "excerpt": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad medida y precios.",
+    "excerpt": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad indicada y precios.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19172,7 +19172,7 @@
   {
     "lang": "pt",
     "title": "Workstations de IA local: AMD Strix Halo vs. NVIDIA DGX Spark",
-    "excerpt": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade medida e preços.",
+    "excerpt": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade divulgada e preços.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19181,7 +19181,7 @@
   {
     "lang": "ar",
     "title": "محطات عمل الذكاء الاصطناعي المحلي: AMD Strix Halo مقابل NVIDIA DGX Spark",
-    "excerpt": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.",
+    "excerpt": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19190,7 +19190,7 @@
   {
     "lang": "ko",
     "title": "로컬 AI 워크스테이션: AMD Strix Halo 대 NVIDIA DGX Spark",
-    "excerpt": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 실측 속도, 출처 표기 가격.",
+    "excerpt": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 공개된 속도, 출처 표기 가격.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
@@ -19199,7 +19199,7 @@
   {
     "lang": "en",
     "title": "NVIDIA DGX Spark for Local AI: Specs, Price and Verdict",
-    "excerpt": "NVIDIA DGX Spark for local AI: verified GB10 specs, 128 GB and 64 GB US prices with sources, what independent tests show, and who should skip it.",
+    "excerpt": "NVIDIA DGX Spark price: $4,699 Founders Edition, up from $3,999 at launch. Sourced US prices, GB10 specs, independent tests, who should skip it.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -21467,7 +21467,7 @@
   {
     "lang": "en",
     "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
-    "excerpt": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover mapped to chat, voice, vision, documents and more.",
+    "excerpt": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover by chat, voice, vision, documents and more.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/power-local-llm/local-ai-on-android-guide",
@@ -21530,7 +21530,7 @@
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي على Android في 2026: ما الممكن وما غير الممكن والتطبيقات التي نغطيها",
-    "excerpt": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، من الدردشة إلى الصوت.",
+    "excerpt": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، كالدردشة والصوت.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/ar/power-local-llm/local-ai-on-android-guide",
@@ -21692,7 +21692,7 @@
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي على iPhone في 2026: ما الممكن وما غير الممكن وتطبيقات iPhone التي نغطيها",
-    "excerpt": "ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله وما لا يستطيعه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store والتطبيقات حسب الاستخدام.",
+    "excerpt": "ما يمكن للذكاء الاصطناعي المحلي على iPhone فعله وما لا يمكنه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store وتطبيقات حسب الاستخدام.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/ar/power-local-llm/local-ai-on-iphone-guide",
@@ -21737,7 +21737,7 @@
   {
     "lang": "ja",
     "title": "Mac向けローカルLLMアプリ2026年版：LM Studio、Ollama、Janほか全8本を比較",
-    "excerpt": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、向く用途を整理。",
+    "excerpt": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、おすすめの用途を整理。",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-13",
     "url": "/ja/power-local-llm/best-local-llm-apps-mac",
@@ -22277,7 +22277,7 @@
   {
     "lang": "en",
     "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-    "excerpt": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub with Goose. Working config, maintained servers, safe permissions.",
+    "excerpt": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub via Goose. Working config, maintained servers, safe permissions.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-06",
     "url": "/power-local-llm/local-ai-agents-with-mcp",
@@ -41564,7 +41564,7 @@
   {
     "lang": "de",
     "title": "Argos Translate Rezension: Kostenlose Offline-Übersetzung für Python und die Kommandozeile",
-    "excerpt": "Argos Translate Rezension: kostenlose, MIT-lizenzierte Offline-Übersetzung für Python und Kommandozeile, Installation mit pip. Wartungshinweis. Nicht getestet.",
+    "excerpt": "Argos Translate Rezension: kostenlose Offline-Übersetzung (MIT) für Python und Kommandozeile, per pip installiert. Wartungshinweis. Nicht getestet.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/de/power-local-llm/argos-translate-review",
@@ -41573,7 +41573,7 @@
   {
     "lang": "fr",
     "title": "Test d’Argos Translate : traduction hors ligne gratuite pour Python et la ligne de commande",
-    "excerpt": "Test d’Argos Translate : traduction hors ligne gratuite sous licence MIT pour Python et la ligne de commande, installée avec pip. Avertissement de maintenance. Non testé.",
+    "excerpt": "Test d’Argos Translate : traduction hors ligne gratuite (MIT) pour Python et la ligne de commande, via pip. Avertissement de maintenance. Non testé.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/fr/power-local-llm/argos-translate-review",
@@ -41591,7 +41591,7 @@
   {
     "lang": "zh",
     "title": "Argos Translate评测：适用于Python和命令行的免费离线翻译",
-    "excerpt": "Argos Translate评测：适用于Python和命令行的免费MIT许可离线翻译，用pip安装。含维护警告。未经测试。",
+    "excerpt": "Argos Translate评测：适用于Python和命令行的免费MIT许可离线翻译库，用pip安装。含维护警告，PromptQuorum未做测试。",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/zh/power-local-llm/argos-translate-review",
@@ -41600,7 +41600,7 @@
   {
     "lang": "es",
     "title": "Reseña de Argos Translate: traducción sin conexión gratuita para Python y la línea de comandos",
-    "excerpt": "Reseña de Argos Translate: traducción sin conexión gratuita con licencia MIT para Python y la línea de comandos, instalada con pip. Aviso de mantenimiento. Sin probar.",
+    "excerpt": "Reseña de Argos Translate: traducción sin conexión gratuita (licencia MIT) para Python y la terminal, con pip. Aviso de mantenimiento. Sin probar.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/es/power-local-llm/argos-translate-review",
@@ -41798,7 +41798,7 @@
   {
     "lang": "en",
     "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
-    "excerpt": "Univocal review: a Mac app for read-aloud and dictation that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Not tested.",
+    "excerpt": "Univocal review: Mac read-aloud and dictation app that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Hands-on test linked.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/power-local-llm/univocal-review",
@@ -41807,7 +41807,7 @@
   {
     "lang": "de",
     "title": "Univocal Rezension: Vorlesen und Diktieren auf dem Mac",
-    "excerpt": "Univocal Rezension: Mac-App zum Vorlesen und Diktieren, laut Hersteller lokal. 39 $ einmalig nach 14 Tagen Test. Nur Apple Silicon. Nicht getestet.",
+    "excerpt": "Univocal Rezension: Mac-App zum Vorlesen und Diktieren, laut Hersteller lokal. 39 $ einmalig nach 14 Tagen Test. Nur Apple Silicon. Praxistest verlinkt.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/de/power-local-llm/univocal-review",
@@ -41816,7 +41816,7 @@
   {
     "lang": "fr",
     "title": "Test d'Univocal : lecture à voix haute et dictée sur Mac",
-    "excerpt": "Test d'Univocal : lecture à voix haute et dictée sur Mac, exécutées sur votre Mac selon l'éditeur. 39 $ une fois après 14 jours d'essai. Non testée.",
+    "excerpt": "Test d'Univocal : lecture à voix haute et dictée sur Mac, exécutées sur votre Mac selon l'éditeur. 39 $ une fois après 14 jours d'essai. Test pratique lié.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/fr/power-local-llm/univocal-review",
@@ -41825,7 +41825,7 @@
   {
     "lang": "ja",
     "title": "Univocal レビュー：Macで使える読み上げ・音声入力アプリ",
-    "excerpt": "Univocalのレビュー：開発元によるとMac上で動く読み上げ・音声入力アプリ。14日間の体験後は$39の買い切り。Apple Silicon専用。実機検証なし。",
+    "excerpt": "Univocalのレビュー：開発元によるとMac上で動く読み上げ・音声入力アプリ。14日間の体験後は$39の買い切り。Apple Silicon専用。ハンズオンテストへのリンクあり。",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/ja/power-local-llm/univocal-review",
@@ -41834,7 +41834,7 @@
   {
     "lang": "zh",
     "title": "Univocal评测：在Mac上朗读文字并听写",
-    "excerpt": "Univocal评测：适用于Mac的朗读与听写应用，据开发者称在你的Mac上运行。14天试用后一次性$39，仅限Apple silicon，未经实测。",
+    "excerpt": "Univocal评测：适用于Mac的朗读与听写应用，据开发者称在你的Mac上运行。14天试用后一次性$39，仅限Apple silicon，已链接实测文章。",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/zh/power-local-llm/univocal-review",
@@ -41843,7 +41843,7 @@
   {
     "lang": "es",
     "title": "Reseña de Univocal: lectura en voz alta y dictado en tu Mac",
-    "excerpt": "Reseña de Univocal: app para Mac de lectura en voz alta y dictado que, según su fabricante, funciona en tu Mac. 39 $ únicos, 14 días de prueba. Sin probar.",
+    "excerpt": "Reseña de Univocal: app para Mac de lectura en voz alta y dictado que, según su fabricante, funciona en tu Mac. 39 $ únicos, 14 días de prueba. Prueba práctica enlazada.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/es/power-local-llm/univocal-review",
@@ -41852,7 +41852,7 @@
   {
     "lang": "pt",
     "title": "Análise do Univocal: leitura em voz alta e ditado no seu Mac",
-    "excerpt": "Análise do Univocal: app de Mac para leitura em voz alta e ditado, local segundo o fabricante. $39 únicos, teste de 14 dias. Só Apple silicon. Não testado.",
+    "excerpt": "Análise do Univocal: app de Mac para leitura em voz alta e ditado, local segundo o fabricante. $39 únicos, teste de 14 dias. Só Apple silicon. Teste prático vinculado.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/pt/power-local-llm/univocal-review",
@@ -41861,7 +41861,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Univocal: القراءة الصوتية والإملاء على جهاز Mac",
-    "excerpt": "مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. سعره $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. لم يُختبر.",
+    "excerpt": "مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. الاختبار العملي مرتبط.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/ar/power-local-llm/univocal-review",
@@ -41870,7 +41870,7 @@
   {
     "lang": "ko",
     "title": "Univocal 리뷰: Mac용 텍스트 읽어주기·받아쓰기 앱",
-    "excerpt": "Univocal 리뷰: 개발사에 따르면 Mac에서 실행되는 읽어주기·받아쓰기 앱. 14일 체험 후 $39 일회성, Apple silicon 전용. 직접 테스트하지 않았습니다.",
+    "excerpt": "Univocal 리뷰: 개발사에 따르면 Mac에서 실행되는 읽어주기·받아쓰기 앱. 14일 체험 후 $39 일회성, Apple silicon 전용. 직접 테스트 링크 있음.",
     "publishDate": "2026-11-13",
     "dateModified": "2026-11-13",
     "url": "/ko/power-local-llm/univocal-review",
@@ -41879,7 +41879,7 @@
   {
     "lang": "en",
     "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
-    "excerpt": "StratoSort review: desktop AI file organizer for Mac, Windows and Linux with local llama.cpp models that work offline after install. Licence, privacy, limits. Not tested.",
+    "excerpt": "StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, privacy, limits. Not tested.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/power-local-llm/stratosort-review",
@@ -41942,7 +41942,7 @@
   {
     "lang": "ar",
     "title": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي المحلي لأجهزة Mac وWindows وLinux",
-    "excerpt": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية تعمل دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر.",
+    "excerpt": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ar/power-local-llm/stratosort-review",
@@ -41960,7 +41960,7 @@
   {
     "lang": "en",
     "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
-    "excerpt": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet on the Mac, about 25 European languages, German interface only. Hands-on test linked.",
+    "excerpt": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet runs on the Mac, about 25 languages, German-only interface.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/power-local-llm/sprich-review",
@@ -41969,7 +41969,7 @@
   {
     "lang": "de",
     "title": "Sprich Rezension: Diktier-App aus Deutschland für den Apple-Silicon-Mac",
-    "excerpt": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 europäische Sprachen, Oberfläche nur Deutsch. Praxistest verlinkt.",
+    "excerpt": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 Sprachen, Oberfläche nur Deutsch.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/de/power-local-llm/sprich-review",
@@ -41978,7 +41978,7 @@
   {
     "lang": "fr",
     "title": "Test de Sprich : application de dictée allemande pour Mac Apple Silicon",
-    "excerpt": "Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand. Test pratique lié.",
+    "excerpt": "Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/fr/power-local-llm/sprich-review",
@@ -41996,7 +41996,7 @@
   {
     "lang": "zh",
     "title": "Sprich评测：适用于 Apple Silicon Mac 的德国听写应用",
-    "excerpt": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接实测文章。",
+    "excerpt": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接动手测试文章。",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/zh/power-local-llm/sprich-review",
@@ -42005,7 +42005,7 @@
   {
     "lang": "es",
     "title": "Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon",
-    "excerpt": "Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán. Prueba práctica enlazada.",
+    "excerpt": "Reseña de Sprich: dictado alemán para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/es/power-local-llm/sprich-review",
@@ -42014,7 +42014,7 @@
   {
     "lang": "pt",
     "title": "Análise do Sprich: app de ditado alemão para Mac com Apple Silicon",
-    "excerpt": "Análise do Sprich: app de ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão. Teste prático vinculado.",
+    "excerpt": "Análise do Sprich: ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/pt/power-local-llm/sprich-review",
@@ -42023,7 +42023,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon",
-    "excerpt": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط. الاختبار العملي مرتبط.",
+    "excerpt": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/ar/power-local-llm/sprich-review",
@@ -42032,7 +42032,7 @@
   {
     "lang": "ko",
     "title": "Sprich 리뷰: Apple Silicon Mac용 독일산 받아쓰기 앱",
-    "excerpt": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어만 제공. 직접 테스트 링크 있음.",
+    "excerpt": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어 전용.",
     "publishDate": "2026-11-09",
     "dateModified": "2026-11-10",
     "url": "/ko/power-local-llm/sprich-review",
@@ -42059,7 +42059,7 @@
   {
     "lang": "fr",
     "title": "Test de Weesper Neon Flow : dictée hors ligne pour Mac et Windows",
-    "excerpt": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois. Non testée.",
+    "excerpt": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois ou 99 € une fois. Non testée.",
     "publishDate": "2026-11-06",
     "dateModified": "2026-11-09",
     "url": "/fr/power-local-llm/weesper-neon-flow-review",
@@ -42104,7 +42104,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Weesper Neon Flow: إملاء صوتي دون اتصال لأجهزة Mac وWindows",
-    "excerpt": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا أو 99 EUR لمرة واحدة. لم يُختبر.",
+    "excerpt": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا. لم يُختبر.",
     "publishDate": "2026-11-06",
     "dateModified": "2026-11-09",
     "url": "/ar/power-local-llm/weesper-neon-flow-review",
@@ -42113,7 +42113,7 @@
   {
     "lang": "ko",
     "title": "Weesper Neon Flow 리뷰: Mac·Windows용 오프라인 받아쓰기 앱",
-    "excerpt": "Weesper Neon Flow 리뷰: 개발사에 따르면 컴퓨터에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR 또는 99 EUR 일회성. 직접 테스트하지 않았습니다.",
+    "excerpt": "Weesper Neon Flow 리뷰: 개발사에 따르면 PC에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR. 직접 테스트하지 않았습니다.",
     "publishDate": "2026-11-06",
     "dateModified": "2026-11-09",
     "url": "/ko/power-local-llm/weesper-neon-flow-review",
@@ -42266,7 +42266,7 @@
   {
     "lang": "ar",
     "title": "مراجعة CocoIndex: إطار بيانات تزايدي لـ RAG ووكلاء الذكاء الاصطناعي",
-    "excerpt": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لأنظمة RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر عمليًا.",
+    "excerpt": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لـ RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر.",
     "publishDate": "2026-11-08",
     "dateModified": "2026-11-08",
     "url": "/ar/power-local-llm/cocoindex-review",
@@ -42689,7 +42689,7 @@
   {
     "lang": "en",
     "title": "Meetini Review: Meeting and Interview Assistant for Mac",
-    "excerpt": "Meetini review: paid Mac app for live captions, meeting notes and interview prep. The maker says captions run locally; its privacy notice says audio goes to OpenAI.",
+    "excerpt": "Meetini review: paid Mac app for live captions, meeting notes, interview prep. Maker says captions run locally; privacy notice says audio goes to OpenAI.",
     "publishDate": "2026-11-07",
     "dateModified": "2026-11-07",
     "url": "/power-local-llm/meetini-review",
@@ -42752,7 +42752,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Meetini: مساعد اجتماعات ومقابلات لأجهزة Mac",
-    "excerpt": "مراجعة Meetini: تطبيق Mac مدفوع للتسميات التوضيحية المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.",
+    "excerpt": "مراجعة Meetini: تطبيق Mac مدفوع للتسميات المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.",
     "publishDate": "2026-11-07",
     "dateModified": "2026-11-07",
     "url": "/ar/power-local-llm/meetini-review",
@@ -43076,7 +43076,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Pajdo: رفيق Apple Health يجيب عن أسئلتك على iPhone",
-    "excerpt": "مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة باستخدام Apple Intelligence على الجهاز. الأسعار والخصوصية.",
+    "excerpt": "مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة عبر Apple Intelligence على الجهاز. الأسعار والخصوصية.",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/pajdo-review",
@@ -43175,7 +43175,7 @@
   {
     "lang": "en",
     "title": "Immich Review: Self-Hosted Photo Library with Smart Search",
-    "excerpt": "Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your own server. Setup and privacy.",
+    "excerpt": "Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your server. Setup, privacy.",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/power-local-llm/immich-review",
@@ -43436,7 +43436,7 @@
   {
     "lang": "fr",
     "title": "Test d’Excire Foto : gestionnaire de photos IA local pour Windows et Mac",
-    "excerpt": "Test d’Excire Foto : gestionnaire de photos pour Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique.",
+    "excerpt": "Test d’Excire Foto : gestionnaire de photos Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique.",
     "publishDate": "2026-10-28",
     "dateModified": "2026-10-28",
     "url": "/fr/power-local-llm/excire-foto-review",
@@ -43463,7 +43463,7 @@
   {
     "lang": "es",
     "title": "Reseña de Excire Foto: gestor de fotos con IA local para Windows y Mac",
-    "excerpt": "Reseña de Excire Foto: gestor de fotos para Windows y Mac cuya búsqueda con IA y reconocimiento de texto se ejecutan en local, según su fabricante. Pago único.",
+    "excerpt": "Reseña de Excire Foto: gestor de fotos para Windows y Mac con búsqueda con IA y reconocimiento de texto en local, según su fabricante. Pago único.",
     "publishDate": "2026-10-28",
     "dateModified": "2026-10-28",
     "url": "/es/power-local-llm/excire-foto-review",
@@ -43472,7 +43472,7 @@
   {
     "lang": "pt",
     "title": "Análise do Excire Foto: gerenciador de fotos com IA local para Windows e Mac",
-    "excerpt": "Análise do Excire Foto: gerenciador de fotos para Windows e Mac cuja busca por IA e reconhecimento de texto rodam localmente, segundo o fabricante. Compra única.",
+    "excerpt": "Análise do Excire Foto: gerenciador de fotos para Windows e Mac com busca por IA e reconhecimento de texto locais, segundo o fabricante. Compra única.",
     "publishDate": "2026-10-28",
     "dateModified": "2026-10-28",
     "url": "/pt/power-local-llm/excire-foto-review",
@@ -43481,7 +43481,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Excire Foto: مدير صور بذكاء اصطناعي محلي",
-    "excerpt": "مراجعة Excire Foto: برنامج لإدارة الصور على Windows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا.",
+    "excerpt": "مراجعة Excire Foto: مدير صور لـWindows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا.",
     "publishDate": "2026-10-28",
     "dateModified": "2026-10-28",
     "url": "/ar/power-local-llm/excire-foto-review",
@@ -43724,7 +43724,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Tonfotos: مدير صور بتعرّف محلي على الوجوه",
-    "excerpt": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة مفتوحة عن الخصوصية.",
+    "excerpt": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة خصوصية مفتوحة.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/ar/power-local-llm/tonfotos-review",
@@ -43967,7 +43967,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Frankly AI: تطبيق دردشة لـ iPhone بنماذج محلية قابلة للتنزيل",
-    "excerpt": "مراجعة Frankly AI: تطبيق دردشة مجاني لـ iPhone بنماذج محلية قابلة للتنزيل وشخصيات متعددة. ما تؤكده صفحة المتجر وصفحة المنتج وسياسة الخصوصية وما لا تؤكده.",
+    "excerpt": "مراجعة Frankly AI: تطبيق دردشة مجاني لـ iPhone بنماذج محلية قابلة للتنزيل وشخصيات. ما تؤكده صفحة المتجر وصفحة المنتج وسياسة الخصوصية وما لا تؤكده.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/frankly-ai-review",
@@ -44309,7 +44309,7 @@
   {
     "lang": "en",
     "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
-    "excerpt": "Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, cloud pricing, privacy policy and open questions.",
+    "excerpt": "Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, MCP, cloud pricing, privacy and open questions.",
     "publishDate": "2026-11-08",
     "dateModified": "2026-11-08",
     "url": "/power-local-llm/phone-harness-review",
@@ -44372,7 +44372,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Phone Harness: دع وكيل البرمجة يستخدم هاتف iPhone أو Android",
-    "excerpt": "مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية والنقاط غير المؤكدة.",
+    "excerpt": "مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية وأسئلة مفتوحة.",
     "publishDate": "2026-11-08",
     "dateModified": "2026-11-08",
     "url": "/ar/power-local-llm/phone-harness-review",
@@ -44399,7 +44399,7 @@
   {
     "lang": "de",
     "title": "Kruvo-Rezension: Ein Desktop-KI-Kollege, der vor dem Handeln nachfragt",
-    "excerpt": "Kruvo-Rezension: KI-Kollege für Windows und macOS, der in Ihrem Ordner mit eigenem API-Schlüssel oder Ollama arbeitet und vorher fragt. Preis, Bedarf, offene Punkte.",
+    "excerpt": "Kruvo-Rezension: KI-Kollege für Windows und macOS, arbeitet im Ordner mit eigenem API-Schlüssel oder Ollama und fragt vorher. Preis, Bedarf, offene Punkte.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/de/power-local-llm/kruvo-review",
@@ -44408,7 +44408,7 @@
   {
     "lang": "fr",
     "title": "Test de Kruvo : un collègue IA de bureau qui demande avant d’agir",
-    "excerpt": "Test de Kruvo : collègue IA pour Windows et macOS qui travaille dans votre dossier avec votre clé API ou Ollama et demande avant d’agir. Prix, besoins, points ouverts.",
+    "excerpt": "Test de Kruvo : collègue IA pour Windows et macOS qui travaille dans votre dossier avec votre clé API ou Ollama, demande avant d’agir. Prix, besoins.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/fr/power-local-llm/kruvo-review",
@@ -44435,7 +44435,7 @@
   {
     "lang": "es",
     "title": "Reseña de Kruvo: un compañero de IA de escritorio que pregunta antes de actuar",
-    "excerpt": "Reseña de Kruvo: compañero de IA para Windows y macOS que trabaja en tu carpeta con tu clave API u Ollama y pregunta antes de actuar. Precio, requisitos, dudas.",
+    "excerpt": "Reseña de Kruvo: compañero de IA para Windows y macOS que trabaja en tu carpeta con tu clave API u Ollama y pregunta antes. Precio, requisitos, dudas.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/es/power-local-llm/kruvo-review",
@@ -44444,7 +44444,7 @@
   {
     "lang": "pt",
     "title": "Análise do Kruvo: um colega de IA para desktop que pergunta antes de agir",
-    "excerpt": "Análise do Kruvo: colega de IA para Windows e macOS que trabalha na sua pasta com sua chave de API ou Ollama e pergunta antes de agir. Preço, requisitos, pontos em aberto.",
+    "excerpt": "Análise do Kruvo: colega de IA para Windows e macOS que trabalha na sua pasta com chave de API ou Ollama e pergunta antes. Preço, requisitos, dúvidas.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/pt/power-local-llm/kruvo-review",
@@ -44453,7 +44453,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Kruvo: زميل ذكاء اصطناعي مكتبي يسأل قبل أن يتصرف",
-    "excerpt": "مراجعة Kruvo: زميل ذكاء اصطناعي لنظامي Windows وmacOS يعمل في مجلدك بمفتاح API الخاص بك أو Ollama ويسأل قبل التنفيذ. السعر والمتطلبات والنقاط المفتوحة.",
+    "excerpt": "مراجعة Kruvo: زميل ذكاء اصطناعي لنظامي Windows وmacOS يعمل في مجلدك بمفتاح API أو Ollama ويسأل قبل التنفيذ. السعر والمتطلبات والنقاط المفتوحة.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/kruvo-review",
@@ -44795,7 +44795,7 @@
   {
     "lang": "en",
     "title": "SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text",
-    "excerpt": "SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy and open questions.",
+    "excerpt": "SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy, open points.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/power-local-llm/speechbrain-review",
@@ -44858,7 +44858,7 @@
   {
     "lang": "ar",
     "title": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مفتوحة المصدر للكلام والنص",
-    "excerpt": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية وأسئلة مفتوحة.",
+    "excerpt": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/speechbrain-review",
@@ -44957,7 +44957,7 @@
   {
     "lang": "en",
     "title": "LibreDB Studio Review: Open-Source SQL Editor With an Optional Local AI Agent",
-    "excerpt": "LibreDB Studio review: a free MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can run on local Ollama. Setup and limits.",
+    "excerpt": "LibreDB Studio review: free, MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can use local Ollama. Setup, limits.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/power-local-llm/libredb-studio-review",
@@ -44966,7 +44966,7 @@
   {
     "lang": "de",
     "title": "LibreDB-Studio-Rezension: Quelloffener SQL-Editor mit optionalem lokalem KI-Agenten",
-    "excerpt": "LibreDB-Studio-Rezension: kostenloser, MIT-lizenzierter SQL-Editor im Browser für 41 Datenbank-Engines mit optionalem KI-Agenten für lokales Ollama. Setup, Grenzen.",
+    "excerpt": "LibreDB-Studio-Rezension: kostenloser SQL-Editor (MIT) im Browser für 41 Datenbank-Engines, optionaler KI-Agent mit lokalem Ollama. Setup, Grenzen.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/libredb-studio-review",
@@ -44975,7 +44975,7 @@
   {
     "lang": "fr",
     "title": "Test de LibreDB Studio : éditeur SQL open source avec agent IA local facultatif",
-    "excerpt": "Test de LibreDB Studio : éditeur SQL gratuit sous licence MIT dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local.",
+    "excerpt": "Test de LibreDB Studio : éditeur SQL gratuit (MIT) dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/libredb-studio-review",
@@ -45002,7 +45002,7 @@
   {
     "lang": "es",
     "title": "Reseña de LibreDB Studio: editor SQL de código abierto con agente de IA local opcional",
-    "excerpt": "Reseña de LibreDB Studio: editor SQL gratuito con licencia MIT en el navegador para 41 motores de bases de datos, con agente de IA opcional que puede usar Ollama local.",
+    "excerpt": "Reseña de LibreDB Studio: editor SQL gratuito (MIT) en el navegador para 41 motores de bases de datos, con agente de IA opcional que usa Ollama local.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/libredb-studio-review",
@@ -45011,7 +45011,7 @@
   {
     "lang": "pt",
     "title": "Análise do LibreDB Studio: editor SQL de código aberto com agente de IA local opcional",
-    "excerpt": "Análise do LibreDB Studio: editor SQL gratuito com licença MIT no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que pode usar o Ollama local.",
+    "excerpt": "Análise do LibreDB Studio: editor SQL gratuito (MIT) no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que usa Ollama local.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/libredb-studio-review",
@@ -45020,7 +45020,7 @@
   {
     "lang": "ar",
     "title": "مراجعة LibreDB Studio: محرّر SQL مفتوح المصدر مع وكيل ذكاء اصطناعي محلي اختياري",
-    "excerpt": "مراجعة LibreDB Studio: محرّر SQL مجاني بترخيص MIT في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود.",
+    "excerpt": "مراجعة LibreDB Studio: محرّر SQL مجاني (MIT) في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/libredb-studio-review",
@@ -45362,7 +45362,7 @@
   {
     "lang": "en",
     "title": "fullmoon Review: Free Offline AI Chat for iPhone, iPad and Mac",
-    "excerpt": "fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since January 2025, so check before relying on it.",
+    "excerpt": "fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since early 2025, so check before relying on it.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/power-local-llm/fullmoon-review",
@@ -45371,7 +45371,7 @@
   {
     "lang": "de",
     "title": "fullmoon-Rezension: Kostenloser Offline-KI-Chat für iPhone, iPad und Mac",
-    "excerpt": "fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Januar 2025 kein Release – vorher prüfen.",
+    "excerpt": "fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Anfang 2025 kein Release – vorher prüfen.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/de/power-local-llm/fullmoon-review",
@@ -45380,7 +45380,7 @@
   {
     "lang": "fr",
     "title": "Test de fullmoon : chat IA gratuit hors ligne pour iPhone, iPad et Mac",
-    "excerpt": "Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis janvier 2025 : vérifiez avant usage.",
+    "excerpt": "Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis début 2025 : vérifiez avant usage.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/fr/power-local-llm/fullmoon-review",
@@ -45389,7 +45389,7 @@
   {
     "lang": "ja",
     "title": "fullmoonレビュー：iPhone・iPad・Mac向け無料オフラインAIチャット",
-    "excerpt": "fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年1月以降リリースなし、利用前に確認を。",
+    "excerpt": "fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年初頭以降リリースなし、利用前に確認を。",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/ja/power-local-llm/fullmoon-review",
@@ -45398,7 +45398,7 @@
   {
     "lang": "zh",
     "title": "fullmoon 评测：适用于 iPhone、iPad 和 Mac 的免费离线 AI 聊天应用",
-    "excerpt": "fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年 1 月后无新版本，使用前请先确认。",
+    "excerpt": "fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年初以来无新版本，使用前请先确认。",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/zh/power-local-llm/fullmoon-review",
@@ -45407,7 +45407,7 @@
   {
     "lang": "es",
     "title": "Reseña de fullmoon: chat de IA gratis y sin conexión para iPhone, iPad y Mac",
-    "excerpt": "Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde enero de 2025: compruébalo antes.",
+    "excerpt": "Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde inicios de 2025: compruébalo antes.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/es/power-local-llm/fullmoon-review",
@@ -45416,7 +45416,7 @@
   {
     "lang": "pt",
     "title": "Análise do fullmoon: chat de IA grátis e offline para iPhone, iPad e Mac",
-    "excerpt": "Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde janeiro de 2025: confira antes de usar.",
+    "excerpt": "Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde o início de 2025: confira antes de usar.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/pt/power-local-llm/fullmoon-review",
@@ -45425,7 +45425,7 @@
   {
     "lang": "ar",
     "title": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية دون اتصال لـ iPhone وiPad وMac",
-    "excerpt": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ يناير 2025، فتحقق قبل الاعتماد.",
+    "excerpt": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ بداية 2025، فتحقق قبل الاعتماد.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/ar/power-local-llm/fullmoon-review",
@@ -45434,7 +45434,7 @@
   {
     "lang": "ko",
     "title": "fullmoon 리뷰: iPhone·iPad·Mac용 무료 오프라인 AI 채팅 앱",
-    "excerpt": "fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 1월 이후 릴리스가 없으니 사용 전 확인하십시오.",
+    "excerpt": "fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 초 이후 릴리스가 없으니 사용 전 확인하십시오.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/ko/power-local-llm/fullmoon-review",
@@ -45505,7 +45505,7 @@
   },
   {
     "lang": "ar",
-    "title": "مراجعة Reins: تطبيق دردشة لـ iPhone مع Ollama وLM Studio",
+    "title": "مراجعة Reins: تطبيق دردشة iPhone مع Ollama وLM Studio",
     "excerpt": "مراجعة Reins: تطبيق دردشة لـ iPhone وiPad يتصل بخادم Ollama أو LM Studio ويشغّل نماذج MLX على الجهاز أيضًا. مجاني مع خطط Pro، ولم يُختبر عمليًا.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
@@ -45830,7 +45830,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Trilium Notes: ملاحظات هرمية مجانية مع ذكاء اصطناعي اختياري",
-    "excerpt": "مراجعة Trilium Notes: ملاحظات هرمية مجانية بترخيص AGPL-3.0 لأجهزة Mac وWindows وLinux وخادمك، مع ذكاء اصطناعي اختياري عبر Ollama أو LM Studio أو السحابة.",
+    "excerpt": "مراجعة Trilium Notes: ملاحظات مجانية بترخيص AGPL-3.0 لأجهزة Mac وWindows وLinux وخادمك، مع ذكاء اصطناعي اختياري عبر Ollama أو LM Studio أو السحابة.",
     "publishDate": "2026-11-03",
     "dateModified": "2026-11-03",
     "url": "/ar/power-local-llm/trilium-notes-review",
@@ -46046,7 +46046,7 @@
   {
     "lang": "zh",
     "title": "PicoClaw 评测：面向小型设备的开源 AI 智能体",
-    "excerpt": "PicoClaw 评测：Sipeed 用 Go 编写的免费 AI 智能体，适用于小型开发板、Android 和桌面，支持 Ollama 与 vLLM，MIT 许可证。处于早期阶段，未经实测。",
+    "excerpt": "PicoClaw 评测：Sipeed 用 Go 编写的免费 AI 智能体，适用于小型开发板、Android 和桌面，支持 Ollama 与 vLLM，MIT 许可证。处于早期阶段，尚未验证。",
     "publishDate": "2026-11-01",
     "dateModified": "2026-11-01",
     "url": "/zh/power-local-llm/picoclaw-review",
@@ -46685,7 +46685,7 @@
   {
     "lang": "ja",
     "title": "SearXNGレビュー：ローカルLLM向けセルフホスト検索バックエンド",
-    "excerpt": "SearXNGのレビュー。Open WebUIなどのローカルLLMフロントエンドがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジン。AGPL-3.0、Docker構成。未検証。",
+    "excerpt": "SearXNGとは、Open WebUIなどのローカルLLMがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジンです。AGPL-3.0、Docker構成のレビュー。未検証。",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ja/power-local-llm/searxng-review",
@@ -46802,7 +46802,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Linkwarden: إشارات مرجعية مستضافة ذاتيًا مع وسم بالذكاء الاصطناعي المحلي",
-    "excerpt": "مراجعة Linkwarden: مدير إشارات مرجعية ذاتي الاستضافة يؤرشف الصفحات ويصنّف الروابط بنموذج Ollama محلي أو ذكاء سحابي. إعداد Docker وسعر Cloud؛ دون تجربة.",
+    "excerpt": "مراجعة Linkwarden: مدير إشارات مرجعية ذاتي الاستضافة يؤرشف الصفحات ويصنّف الروابط بنموذج Ollama محلي أو ذكاء سحابي. إعداد Docker وسعر Cloud؛ دون تجربة",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/linkwarden-review",
@@ -47063,7 +47063,7 @@
   {
     "lang": "en",
     "title": "Voicebox Review: Open-Source Local Voice Studio",
-    "excerpt": "Voicebox review: MIT-licensed local voice studio for Mac and Windows with voice cloning, text-to-speech, Whisper dictation and an MCP server. Not tested.",
+    "excerpt": "Voicebox review: free MIT-licensed local voice studio for Mac and Windows. Voice cloning, TTS, Whisper dictation, requirements, privacy. Not tested.",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/power-local-llm/voicebox-review",
@@ -47306,7 +47306,7 @@
   {
     "lang": "en",
     "title": "Subtitle Edit Review: Local Whisper Transcription and Auto-Translate",
-    "excerpt": "Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper-family transcription and local-LLM or cloud auto-translate; read, not tested.",
+    "excerpt": "Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper speech-to-text and auto-translate via local LLM or cloud; read, not tested.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/power-local-llm/subtitle-edit-review",
@@ -47693,7 +47693,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني يشغّل الشيفرة على حاسوبك",
-    "excerpt": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والإصدار والتثبيت؛ دون اختبار.",
+    "excerpt": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والتثبيت؛ دون اختبار.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/local-operator-review",
@@ -47855,7 +47855,7 @@
   {
     "lang": "ar",
     "title": "مراجعة IIMAGINE Desktop: تطبيق دردشة بذكاء اصطناعي محلي مفتوح المصدر",
-    "excerpt": "مراجعة IIMAGINE Desktop: تطبيق سطح مكتب مفتوح المصدر (MIT) بمحرك محلي مدمج ودردشة مع المستندات وصوت وواجهة API على localhost. الإصدار 0.1.2؛ لم يُختبر.",
+    "excerpt": "مراجعة IIMAGINE Desktop: تطبيق سطح مكتب مفتوح المصدر (MIT) بمحرك محلي ودردشة مع المستندات وصوت وواجهة API على localhost. الإصدار 0.1.2؛ لم يُختبر.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/iimagine-desktop-review",
@@ -48017,7 +48017,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بتشغيل محلي وذكاء سحابي اختياري",
-    "excerpt": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بشخصيات 3D وLive2D ومحادثة وذاكرة محليتين وذكاء سحابي اختياري. وما لم يُتحقق منه بعد في هذه المراجعة.",
+    "excerpt": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بشخصيات 3D وLive2D ومحادثة وذاكرة محليتين وذكاء سحابي اختياري. وما لم يُتحقق منه.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/asiden-review",
@@ -48260,7 +48260,7 @@
   {
     "lang": "ar",
     "title": "مراجعة تطبيق Llama: تطبيق سطح المكتب لـ llama.cpp على Mac وWindows",
-    "excerpt": "مراجعة تطبيق Llama: تطبيق مجاني ومفتوح المصدر من فريق llama.cpp وHugging Face لنظامي Mac وWindows 11، مع اقتراح النماذج وواجهة API محلية وتدفق البيانات.",
+    "excerpt": "مراجعة تطبيق Llama: تطبيق مجاني ومفتوح المصدر من فريق llama.cpp وHugging Face لنظامي Mac وWindows 11، مع اقتراح النماذج وAPI محلية وتدفق البيانات.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/llama-app-review",
@@ -48341,7 +48341,7 @@
   {
     "lang": "ar",
     "title": "مراجعة On Device LLM: تطبيق دردشة مجاني دون اتصال لـ Android",
-    "excerpt": "مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وواجهة API محلية اختيارية.",
+    "excerpt": "مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وAPI محلي اختياري.",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/on-device-llm-review",
@@ -48440,7 +48440,7 @@
   {
     "lang": "en",
     "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
-    "excerpt": "Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads, purchases and unverified claims.",
+    "excerpt": "Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads and unverified claims.",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/power-local-llm/chaterminal-review",
@@ -48503,7 +48503,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Mobile LM Server: تطبيق Android للنماذج المحلية وواجهة API على الهاتف",
-    "excerpt": "مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات لم تُختبر.",
+    "excerpt": "مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات غير مؤكدة",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/chaterminal-review",
@@ -48584,7 +48584,7 @@
   {
     "lang": "ar",
     "title": "مراجعة LM Mini: تطبيق دردشة لـ iPhone بذكاء اصطناعي على الجهاز وعلى خادمك المنزلي",
-    "excerpt": "مراجعة LM Mini: تطبيق دردشة مجاني لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وماذا تقول سياسة الخصوصية.",
+    "excerpt": "مراجعة LM Mini: دردشة مجانية لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وما تقوله سياسة الخصوصية.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/lm-mini-review",
@@ -48989,7 +48989,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع لنظام Android مع نماذج محلية",
-    "excerpt": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع ومغلق المصدر لـ Android، مع نماذج محلية قابلة للتنزيل ومزودين سحابيين اختياريين وأدوات للصور وهويات قابلة للتخصيص.",
+    "excerpt": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع ومغلق المصدر لـ Android، مع نماذج محلية قابلة للتنزيل ومزودين سحابيين اختياريين وأدوات للصور وهويات مخصصة.",
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/laria-review",
@@ -49313,7 +49313,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Genva: مولّد صور بالذكاء الاصطناعي مجاني يعمل على جهاز iPhone",
-    "excerpt": "مراجعة Genva: تطبيق مجاني لـ iPhone وiPad يولّد الصور على الجهاز بعد تنزيل النموذج مرة واحدة. الميزات والأسعار وملصق الخصوصية والادعاءات غير المتحقق منها.",
+    "excerpt": "مراجعة Genva: تطبيق مجاني لـ iPhone وiPad يولّد الصور على الجهاز بعد تنزيل النموذج مرة واحدة. الميزات والأسعار وملصق الخصوصية وما لم يُتحقق منه.",
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/ar/power-local-llm/genva-review",
@@ -54983,7 +54983,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Xberg: ذكاء المستندات مفتوح المصدر لمسارات LLM وRAG",
-    "excerpt": "Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص.",
+    "excerpt": "Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
     "url": "/ar/power-local-llm/xberg-review",
@@ -55649,7 +55649,7 @@
   {
     "lang": "en",
     "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
-    "excerpt": "LastBrowser review: a free Windows browser (Linux preview) with a built-in Sidekick AI sidebar that works with local Ollama models. Licence, privacy, risks.",
+    "excerpt": "LastBrowser review: a free Windows browser (Linux preview) with a built-in Sidekick AI sidebar for local Ollama models. Licence, privacy, risks.",
     "publishDate": "2026-11-06",
     "dateModified": "2026-11-06",
     "url": "/power-local-llm/lastbrowser-review",
@@ -57188,7 +57188,7 @@
   {
     "lang": "en",
     "title": "ECC Review: Agent Toolkit for Claude Code and Codex",
-    "excerpt": "ECC is an MIT-licensed toolkit of agents, skills and hooks for Claude Code and Codex, plus a paid GitHub App. Setup, data flow and pricing explained.",
+    "excerpt": "ECC (ecc-universal) is an MIT-licensed toolkit of agents, skills and hooks for Claude Code and Codex, plus a paid GitHub App. Setup, data flow, pricing.",
     "publishDate": "2026-10-23",
     "dateModified": "2026-10-23",
     "url": "/power-local-llm/ecc-review",
@@ -76952,7 +76952,7 @@
   {
     "lang": "ar",
     "title": "⁦Sprich⁩ على جهاز ⁦Mac⁩ بمعالج ⁦M4 Pro⁩ وذاكرة ⁦24 GB⁩: إملاء محلي يكتب في أي تطبيق",
-    "excerpt": "جلسة أولى في ⁦9⁩ نوفمبر ⁦2026⁩: إعداد متقن من خمس خطوات، وإملاء سريع بالإنجليزية والألمانية بعد أن استخدم المختبِر المفتاح بشكل صحيح، وواجهة بالألمانية فقط، ولم تُجرَّب معظم الميزات الجانبية.",
+    "excerpt": "جلستان في ⁦9⁩ و⁦13⁩ نوفمبر ⁦2026⁩: إعداد متقن من خمس خطوات، وإملاء سريع بالإنجليزية والألمانية بعد أن استخدم المختبِر المفتاح بشكل صحيح، واجتماع سُجّل وقُسّم إلى متحدثين اثنين رغم رداءة صوت الغرفة، وواجهة بالألمانية فقط، ولم تُجرَّب عدة ميزات جانبية.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ar/power-local-llm/sprich-hands-on-test",
@@ -76961,7 +76961,7 @@
   {
     "lang": "de",
     "title": "Sprich auf einem M4 Pro Mac mit 24 GB: Lokales Diktieren, das in jede App tippt",
-    "excerpt": "Eine erste Sitzung am 9. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, eine nur deutsche Oberfläche und die meisten Nebenfunktionen nicht ausprobiert.",
+    "excerpt": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein trotz schlechtem Raumklang aufgenommenes und auf zwei Sprecher aufgeteiltes Meeting, eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/de/power-local-llm/sprich-hands-on-test",
@@ -76970,7 +76970,7 @@
   {
     "lang": "es",
     "title": "Sprich en un Mac M4 Pro de 24 GB: dictado local que escribe en cualquier app",
-    "excerpt": "Una primera sesión el 9 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una interfaz solo en alemán y la mayoría de las funciones secundarias sin probar.",
+    "excerpt": "Dos sesiones, el 9 y el 13 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una reunión grabada y separada en dos voces pese al mal sonido de la sala, una interfaz solo en alemán y varias funciones secundarias sin probar.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/es/power-local-llm/sprich-hands-on-test",
@@ -76979,7 +76979,7 @@
   {
     "lang": "fr",
     "title": "Sprich sur un Mac M4 Pro de 24 GB : une dictée locale qui écrit dans n’importe quelle appli",
-    "excerpt": "Une première session le 9 novembre 2026 : une configuration soignée en cinq étapes, une dictée rapide en anglais et en allemand une fois la touche bien utilisée, une interface uniquement en allemand, et la plupart des fonctions annexes non essayées.",
+    "excerpt": "Deux sessions, les 9 et 13 novembre 2026 : une configuration soignée en cinq étapes, une dictée rapide en anglais et en allemand une fois la touche bien utilisée, une réunion enregistrée et répartie entre deux intervenants malgré un son de pièce médiocre, une interface uniquement en allemand, et plusieurs fonctions annexes non essayées.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/fr/power-local-llm/sprich-hands-on-test",
@@ -76988,7 +76988,7 @@
   {
     "lang": "ja",
     "title": "24 GBのM4 Pro MacでのSprich：あらゆるアプリに入力できるローカル音声入力",
-    "excerpt": "2026年11月9日の最初のセッション：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
+    "excerpt": "2回のセッション（2026年11月9日と13日）：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、室内の音がひどく悪いなか2人の話者に分けて記録された会議、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ja/power-local-llm/sprich-hands-on-test",
@@ -76997,7 +76997,7 @@
   {
     "lang": "en",
     "title": "Sprich on an M4 Pro Mac with 24 GB: Local Dictation That Types Into Any App",
-    "excerpt": "A first session on 9 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a German-only interface, and most side features not tried.",
+    "excerpt": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers despite poor room sound, a German-only interface, and several side features not tried.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/power-local-llm/sprich-hands-on-test",
@@ -77006,7 +77006,7 @@
   {
     "lang": "ko",
     "title": "24 GB M4 Pro Mac에서 Sprich 직접 사용: 모든 앱에 입력되는 로컬 받아쓰기",
-    "excerpt": "2026년 11월 9일의 첫 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 대부분 사용해 보지 않았습니다.",
+    "excerpt": "2026년 11월 9일과 13일의 두 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 방 안의 소리가 좋지 않았는데도 두 화자로 나뉘어 기록된 회의, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 여럿 사용해 보지 않았습니다.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ko/power-local-llm/sprich-hands-on-test",
@@ -77015,7 +77015,7 @@
   {
     "lang": "pt",
     "title": "Sprich em um Mac M4 Pro com 24 GB: ditado local que digita em qualquer app",
-    "excerpt": "Uma primeira sessão em 9 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, interface somente em alemão e a maioria dos recursos extras sem ser testada.",
+    "excerpt": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada em dois falantes apesar do som ruim da sala, interface somente em alemão e vários recursos extras sem ser testados.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/pt/power-local-llm/sprich-hands-on-test",
@@ -77024,10 +77024,91 @@
   {
     "lang": "zh",
     "title": "24 GB 内存 M4 Pro Mac 上的 Sprich：能在任意应用中输入文字的本地听写",
-    "excerpt": "2026年11月9日的首次试用：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；界面只有德语；多数附加功能没有试用。",
+    "excerpt": "两次试用，2026年11月9日和13日：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；尽管房间里的声音很差，一场会议仍被录下并区分出两位说话人；界面只有德语；有几项附加功能没有试用。",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/zh/power-local-llm/sprich-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Univocal⁩ على جهاز ⁦Mac⁩ بمعالج ⁦M4 Pro⁩ وذاكرة ⁦24 GB⁩: نجح الإملاء بثلاث لغات ولم تبدأ القراءة بصوت عالٍ",
+    "excerpt": "جلسة أولى مع تطبيق ⁦Mac⁩ يُملي ويقرأ بصوت عالٍ: تشغيل أول حذر تتصدره شروط الترخيص، وإملاء بالإنجليزية والفرنسية والألمانية، ومسار إلى صوت مميز لم يستطع المختبِر اتباعه، ووظيفة قراءة بصوت عالٍ لم تبدأ عند استخدامها.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Univocal auf einem M4 Pro Mac mit 24 GB: Diktieren klappte in drei Sprachen, Vorlesen startete nicht",
+    "excerpt": "Eine erste Sitzung mit einer Mac-App, die diktiert und vorliest: ein sorgfältiger erster Start mit Lizenzbedingungen vorab, Diktieren auf Englisch, Französisch und Deutsch, ein Weg zu einer Premium-Stimme, dem der Tester nicht folgen konnte, und eine Vorlesefunktion, die bei der Benutzung nicht startete.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Univocal en un Mac M4 Pro de 24 GB: el dictado funcionó en tres idiomas, la lectura en voz alta no arrancó",
+    "excerpt": "Una primera sesión con una app para Mac que dicta y lee en voz alta: una primera ejecución cuidada con los términos de licencia por delante, dictado en inglés, francés y alemán, una ruta hacia una voz premium que el evaluador no pudo seguir y una función de lectura en voz alta que no arrancó al usarla.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Univocal sur un Mac M4 Pro de 24 GB : la dictée a fonctionné en trois langues, la lecture à voix haute ne s’est pas lancée",
+    "excerpt": "Une première session avec une appli Mac qui dicte et lit à voix haute : un premier lancement soigné avec les conditions de licence d’emblée, une dictée en anglais, en français et en allemand, une piste vers une voix premium que le testeur n’a pas pu suivre, et une fonction de lecture à voix haute qui ne s’est pas lancée à l’usage.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのM4 Pro MacでのUnivocal：3言語で音声入力は動作し、読み上げは始まらなかった",
+    "excerpt": "音声入力と読み上げができるMacアプリの最初のセッション：ライセンス条項が先に表示される丁寧な初回起動、英語・フランス語・ドイツ語での音声入力、テスターがたどれなかったプレミアム音声への案内、そして使ったときに始まらなかった読み上げ機能。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Univocal on an M4 Pro Mac with 24 GB: Dictation Worked in Three Languages, Read Aloud Did Not Start",
+    "excerpt": "A first session with a Mac app that dictates and reads aloud: a careful first run with licence terms up front, dictation in English, French and German, a premium-voice route the tester could not follow, and a read-aloud function that did not start when used.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB M4 Pro Mac에서 Univocal 직접 사용: 세 언어로 받아쓰기는 작동했고, 소리 내어 읽기는 시작되지 않았습니다",
+    "excerpt": "받아쓰기와 소리 내어 읽기를 함께 제공하는 Mac 앱의 첫 세션입니다. 라이선스 약관이 먼저 나오는 꼼꼼한 첫 실행, 영어·프랑스어·독일어 받아쓰기, 테스터가 따라가지 못한 프리미엄 음성 경로, 사용했을 때 시작되지 않은 소리 내어 읽기 기능을 다룹니다.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Univocal em um Mac M4 Pro com 24 GB: o ditado funcionou em três idiomas, a leitura em voz alta não começou",
+    "excerpt": "Uma primeira sessão com um app para Mac que dita e lê em voz alta: uma primeira execução cuidadosa, com os termos de licença logo de início, ditado em inglês, francês e alemão, um caminho para vozes premium que o testador não conseguiu seguir e uma função de leitura em voz alta que não começou quando usada.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/univocal-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB 内存 M4 Pro Mac 上的 Univocal：三种语言的听写可用，朗读未能启动",
+    "excerpt": "首次试用一款既能听写又能朗读的 Mac 应用：谨慎的首次运行，许可条款在前；英语、法语和德语听写；测试者无法跟着走完的高级语音路径；以及实际使用时没有启动的朗读功能。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/univocal-hands-on-test",
     "cluster": "power-local-llm"
   },
   {

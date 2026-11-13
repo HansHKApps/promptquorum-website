@@ -2,7 +2,7 @@
 // Slug: univocal-review
 // Companion to: parrot-review, voicebox-review, sprich-review, macwhisper-review, weesper-neon-flow-review, local-llm-voice-audio-compared
 // Facts verified 2026-11-13 against univocalapp.com (home, /download, /downloading, /purchase, /changelog, /privacy, /alternatives, /guides/read-aloud-mac).
-// Not hands-on tested; the DMG was not opened. Stale-project warning is OFF (2 days since version 0.3.33 on 2026-11-11).
+// One first-hand session (hands-on test, 2026-11-13); not a full evaluation. Stale-project warning is OFF (2 days since version 0.3.33 on 2026-11-11).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Univocal Review: Read-Aloud and Dictation on Your Mac',
     seoTitle: 'Univocal Review: Mac Read-Aloud and Dictation App',
     intro: "Univocal is a paid Mac app that does two jobs with one install: it reads selected text aloud and it types what you dictate into whatever app has the cursor. Its maker says both run on your own Apple silicon Mac. This review covers what the maker's website, changelog and privacy page document, what they leave out, and how Univocal compares with other voice tools in the directory.",
-    metaDescription: 'Univocal review: Mac read-aloud and dictation app that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Not tested.',
+    metaDescription: 'Univocal review: Mac read-aloud and dictation app that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Hands-on test linked.',
     twitterDescription: 'Univocal review: one Mac app for reading text aloud and dictating, processed on your own Mac per its maker. Price, privacy, limits and alternatives.',
     audience: 'Mac users who want text-to-speech and dictation in one app without a cloud service or subscription — covers price, install, privacy, limits and alternatives.',
     readTime: '8 min read',
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: "**Univocal is a Mac app with no published source code that reads selected text aloud and types your dictation, and its maker says both run on your own Apple silicon Mac with nothing sent anywhere.** It costs $39 once after a 14-day free trial, with no subscription. The newest release is version 0.3.33 from 11 November 2026. This review rests on the maker's public website, changelog and privacy page, not on hands-on testing.",
+    leadAnswerBlock: "**Univocal is a Mac app with no published source code that reads selected text aloud and types your dictation, and its maker says both run on your own Apple silicon Mac with nothing sent anywhere.** It costs $39 once after a 14-day free trial, with no subscription. The newest release is version 0.3.33 from 11 November 2026. This review rests on the maker's public website, changelog and privacy page; the one first-hand session is in the linked hands-on test.",
     quickAnswerTop: {
       en: {
         question: 'Is Univocal a local read-aloud and dictation app?',
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Univocal Is',
         content: [
           '**Univocal is a voice utility with two functions: read aloud and dictation.** You select text and press a shortcut to hear it, or hold a key, speak and release to have text typed at the cursor, for example in a mail client, a note or a chat.',
-          'It is published by NarNar Labs LLC. The maker\'s pages do not name a founder, a country or a postal address, only a support email. This review covers the pages listed under Sources and involved no hands-on testing, so voice quality, accuracy and speed are not rated here.',
+          'It is published by NarNar Labs LLC. The maker\'s pages do not name a founder, a country or a postal address, only a support email. This review rests on the pages listed under Sources; PromptQuorum also ran one first-hand session on a 24 GB M4 Pro Mac (see Related Reading), a first look and not a full evaluation: dictation worked in English, French and German, reading selected text aloud did not start. Voice quality, accuracy and speed are still not rated here.',
         ],
       },
       howToGetStarted: {
@@ -377,6 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Univocal Hands-on Test](/power-local-llm/univocal-hands-on-test) — a first session on a 24 GB M4 Pro Mac: dictation worked in English, French and German, reading selected text aloud did not start; every statement is labelled by how it is known.',
           '[Local Voice and Speech Tools Compared](/power-local-llm/local-llm-voice-audio-compared) — text-to-speech, speech-to-text and voice agents side by side.',
           '[Parrot Review](/power-local-llm/parrot-review) — a free offline read-aloud app for three desktop systems.',
           '[Voicebox Review](/power-local-llm/voicebox-review) — a free voice studio with dictation and voice cloning.',
@@ -398,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Univocal Rezension: Vorlesen und Diktieren auf dem Mac',
     seoTitle: 'Univocal Rezension: Mac-App zum Vorlesen und Diktieren',
     intro: 'Univocal ist eine kostenpflichtige Mac-App, die mit einer Installation zwei Aufgaben erledigt: Sie liest markierten Text laut vor und tippt, was Sie diktieren, in die App, in der gerade der Cursor steht. Laut Hersteller laufen beide Funktionen auf Ihrem eigenen Apple-silicon-Mac. Diese Rezension fasst zusammen, was Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers dokumentieren, was sie offenlassen und wie Univocal im Vergleich zu anderen Sprach-Werkzeugen im Verzeichnis abschneidet.',
-    metaDescription: 'Univocal Rezension: Mac-App zum Vorlesen und Diktieren, laut Hersteller lokal. 39 $ einmalig nach 14 Tagen Test. Nur Apple Silicon. Nicht getestet.',
+    metaDescription: 'Univocal Rezension: Mac-App zum Vorlesen und Diktieren, laut Hersteller lokal. 39 $ einmalig nach 14 Tagen Test. Nur Apple Silicon. Praxistest verlinkt.',
     twitterDescription: 'Univocal Rezension: eine Mac-App zum Vorlesen und Diktieren, laut Hersteller auf dem eigenen Mac verarbeitet. Preis, Datenschutz, Grenzen und Alternativen.',
     audience: 'Mac-Nutzer, die Text-to-Speech und Diktat in einer App ohne Cloud-Dienst und ohne Abo möchten — behandelt Preis, Installation, Datenschutz, Grenzen und Alternativen.',
     readTime: '8 Min. Lesezeit',
@@ -418,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**Univocal ist eine Mac-App ohne veröffentlichten Quellcode, die markierten Text laut vorliest und Ihr Diktat tippt; laut Hersteller laufen beide Funktionen auf Ihrem eigenen Apple-silicon-Mac, ohne dass etwas irgendwohin gesendet wird.** Sie kostet nach 14 Tagen kostenloser Testphase einmalig 39 $, ohne Abo. Die neueste Version ist 0.3.33 vom 11. November 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers, nicht auf einen eigenen Praxistest.',
+    leadAnswerBlock: '**Univocal ist eine Mac-App ohne veröffentlichten Quellcode, die markierten Text laut vorliest und Ihr Diktat tippt; laut Hersteller laufen beide Funktionen auf Ihrem eigenen Apple-silicon-Mac, ohne dass etwas irgendwohin gesendet wird.** Sie kostet nach 14 Tagen kostenloser Testphase einmalig 39 $, ohne Abo. Die neueste Version ist 0.3.33 vom 11. November 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers; die eine Sitzung aus erster Hand steht im verlinkten Praxistest.',
     quickAnswerTop: {
       de: {
         question: 'Ist Univocal eine lokale App zum Vorlesen und Diktieren?',
@@ -535,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Univocal ist',
         content: [
           '**Univocal ist ein Sprach-Werkzeug mit zwei Funktionen: Vorlesen und Diktat.** Sie markieren Text und drücken ein Kürzel, um ihn zu hören, oder halten eine Taste gedrückt, sprechen und lassen los, damit der Text am Cursor getippt wird, zum Beispiel in einem Mailprogramm, einer Notiz oder einem Chat.',
-          'Veröffentlicht wird die App von NarNar Labs LLC. Die Seiten des Herstellers nennen weder einen Gründer noch ein Land oder eine Postanschrift, nur eine Support-E-Mail-Adresse. Diese Rezension behandelt die unter Quellen aufgeführten Seiten und umfasste keinen eigenen Praxistest; Stimmqualität, Genauigkeit und Geschwindigkeit werden hier daher nicht bewertet.',
+          'Veröffentlicht wird die App von NarNar Labs LLC. Die Seiten des Herstellers nennen weder einen Gründer noch ein Land oder eine Postanschrift, nur eine Support-E-Mail-Adresse. Diese Rezension stützt sich auf die unter Quellen aufgeführten Seiten; PromptQuorum hat außerdem eine Sitzung aus erster Hand auf einem M4-Pro-Mac mit 24 GB durchgeführt (siehe Weiterführende Artikel), einen ersten Blick und keine vollständige Bewertung: Das Diktieren funktionierte auf Englisch, Französisch und Deutsch, das Vorlesen markierten Textes startete nicht. Stimmqualität, Genauigkeit und Geschwindigkeit werden hier weiterhin nicht bewertet.',
         ],
       },
       howToGetStarted: {
@@ -756,6 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Univocal Praxistest](/de/power-local-llm/univocal-hands-on-test) — eine erste Sitzung auf einem M4-Pro-Mac mit 24 GB: Das Diktieren funktionierte auf Englisch, Französisch und Deutsch, das Vorlesen markierten Textes startete nicht; jede Aussage ist danach gekennzeichnet, wie sie belegt ist.',
           '[Lokale Sprach- und Audio-Werkzeuge im Vergleich](/de/power-local-llm/local-llm-voice-audio-compared) — Text-to-Speech, Spracherkennung und Sprachassistenten nebeneinander.',
           '[Parrot Rezension](/de/power-local-llm/parrot-review) — eine kostenlose Offline-Vorlese-App für drei Desktop-Systeme.',
           '[Voicebox Rezension](/de/power-local-llm/voicebox-review) — ein kostenloses Sprachstudio mit Diktat und Stimmklonen.',
@@ -777,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: "Test d'Univocal : lecture à voix haute et dictée sur Mac",
     seoTitle: "Test d'Univocal : lecture à voix haute et dictée Mac",
     intro: "Univocal est une application Mac payante qui remplit deux fonctions avec une seule installation : elle lit à voix haute le texte sélectionné et saisit ce que vous dictez dans l'application où se trouve le curseur. Selon son éditeur, les deux fonctions s'exécutent sur votre propre Mac Apple silicon. Ce test résume ce que documentent le site de l'éditeur, son journal des modifications et sa politique de confidentialité, ce qu'ils omettent, et comment Univocal se compare aux autres outils vocaux du répertoire.",
-    metaDescription: "Test d'Univocal : lecture à voix haute et dictée sur Mac, exécutées sur votre Mac selon l'éditeur. 39 $ une fois après 14 jours d'essai. Non testée.",
+    metaDescription: "Test d'Univocal : lecture à voix haute et dictée sur Mac, exécutées sur votre Mac selon l'éditeur. 39 $ une fois après 14 jours d'essai. Test pratique lié.",
     twitterDescription: "Test d'Univocal : une seule application Mac pour lire du texte à voix haute et dicter, traitée sur votre propre Mac selon l'éditeur. Prix, confidentialité, limites et alternatives.",
     audience: "Utilisateurs de Mac qui veulent la synthèse vocale et la dictée dans une seule application, sans service cloud ni abonnement — couvre le prix, l'installation, la confidentialité, les limites et les alternatives.",
     readTime: '8 min de lecture',
@@ -797,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: "**Univocal est une application Mac dont le code source n'est pas publié et qui lit à voix haute le texte sélectionné et saisit votre dictée ; selon son éditeur, les deux fonctions s'exécutent sur votre propre Mac Apple silicon, sans rien envoyer ailleurs.** Elle coûte 39 $ en achat unique après un essai gratuit de 14 jours, sans abonnement. La version la plus récente est la 0.3.33, du 11 novembre 2026. Ce test s'appuie sur le site public de l'éditeur, son journal des modifications et sa politique de confidentialité, pas sur un essai pratique.",
+    leadAnswerBlock: "**Univocal est une application Mac dont le code source n'est pas publié et qui lit à voix haute le texte sélectionné et saisit votre dictée ; selon son éditeur, les deux fonctions s'exécutent sur votre propre Mac Apple silicon, sans rien envoyer ailleurs.** Elle coûte 39 $ en achat unique après un essai gratuit de 14 jours, sans abonnement. La version la plus récente est la 0.3.33, du 11 novembre 2026. Ce test s'appuie sur le site public de l'éditeur, son journal des modifications et sa politique de confidentialité ; la seule session de première main figure dans le test pratique lié.",
     quickAnswerTop: {
       fr: {
         question: "Univocal est-elle une application locale de lecture à voix haute et de dictée ?",
@@ -914,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Ce qu'est Univocal",
         content: [
           "**Univocal est un utilitaire vocal à deux fonctions : la lecture à voix haute et la dictée.** Vous sélectionnez du texte et appuyez sur un raccourci pour l'entendre, ou vous maintenez une touche, parlez et relâchez pour que le texte soit saisi au curseur, par exemple dans un client de messagerie, une note ou une discussion.",
-          "Elle est publiée par NarNar Labs LLC. Les pages de l'éditeur ne nomment ni fondateur, ni pays, ni adresse postale, seulement une adresse e-mail d'assistance. Ce test couvre les pages citées dans les Sources et n'a donné lieu à aucun essai pratique : la qualité des voix, la précision et la vitesse ne sont donc pas évaluées ici.",
+          "Elle est publiée par NarNar Labs LLC. Les pages de l'éditeur ne nomment ni fondateur, ni pays, ni adresse postale, seulement une adresse e-mail d'assistance. Ce test s'appuie sur les pages citées dans les Sources ; PromptQuorum a aussi mené une session de première main sur un Mac M4 Pro de 24 Go (voir « À lire aussi »), un premier aperçu et non une évaluation complète : la dictée a fonctionné en anglais, en français et en allemand, la lecture à voix haute du texte sélectionné ne s'est pas lancée. La qualité des voix, la précision et la vitesse ne sont donc toujours pas notées ici.",
         ],
       },
       howToGetStarted: {
@@ -1135,6 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
+          '[Test pratique d\'Univocal](/fr/power-local-llm/univocal-hands-on-test) — une première session sur un Mac M4 Pro de 24 Go : la dictée a fonctionné en anglais, en français et en allemand, la lecture à voix haute du texte sélectionné ne s\'est pas lancée ; chaque affirmation est étiquetée selon la façon dont elle est établie.',
           '[Outils vocaux locaux comparés](/fr/power-local-llm/local-llm-voice-audio-compared) — synthèse vocale, reconnaissance vocale et agents vocaux côte à côte.',
           '[Test de Parrot](/fr/power-local-llm/parrot-review) — une application de lecture à voix haute hors ligne et gratuite pour trois systèmes de bureau.',
           '[Test de Voicebox](/fr/power-local-llm/voicebox-review) — un studio vocal gratuit avec dictée et clonage de voix.',
@@ -1156,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Univocal レビュー：Macで使える読み上げ・音声入力アプリ',
     seoTitle: 'Univocal レビュー：Mac向け読み上げ・音声入力アプリ',
     intro: 'Univocalは、1回のインストールで2つの役割をこなす有料のMacアプリです。選択したテキストを読み上げ、話した内容をカーソルのあるアプリに入力します。開発元によると、どちらもお使いのApple Silicon搭載Mac上で動作します。このレビューでは、開発元の公式サイト、変更履歴、プライバシーポリシーに記載されている点、記載がない点、ディレクトリ内の他の音声ツールとの比較をまとめます。',
-    metaDescription: 'Univocalのレビュー：開発元によるとMac上で動く読み上げ・音声入力アプリ。14日間の体験後は$39の買い切り。Apple Silicon専用。実機検証なし。',
+    metaDescription: 'Univocalのレビュー：開発元によるとMac上で動く読み上げ・音声入力アプリ。14日間の体験後は$39の買い切り。Apple Silicon専用。ハンズオンテストへのリンクあり。',
     twitterDescription: 'Univocalのレビュー：開発元によるとMac上で処理される、読み上げと音声入力を1つにまとめたMacアプリ。価格、プライバシー、制限、代替ツールを解説します。',
     audience: 'クラウドサービスやサブスクリプションなしで、読み上げと音声入力を1つのアプリで使いたいMacユーザー向け。価格、インストール、プライバシー、制限、代替ツールを扱います。',
     readTime: '8分で読める',
@@ -1176,7 +1179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**Univocalは、選択したテキストを読み上げ、話した内容を入力するソースコードが公開されていないMacアプリです。開発元によると、どちらもお使いのApple Silicon搭載Mac上で動作し、外部には何も送信されません。** 14日間の無料体験後は$39の買い切りで、サブスクリプションはありません。最新リリースは2026年11月11日のバージョン0.3.33です。このレビューは、開発元の公開されている公式サイト、変更履歴、プライバシーポリシーに基づいており、実機での検証は行っていません。',
+    leadAnswerBlock: '**Univocalは、選択したテキストを読み上げ、話した内容を入力するソースコードが公開されていないMacアプリです。開発元によると、どちらもお使いのApple Silicon搭載Mac上で動作し、外部には何も送信されません。** 14日間の無料体験後は$39の買い切りで、サブスクリプションはありません。最新リリースは2026年11月11日のバージョン0.3.33です。このレビューは、開発元の公開されている公式サイト、変更履歴、プライバシーポリシーに基づいています。1回だけ行った実機セッションは、リンク先のハンズオンテストにあります。',
     quickAnswerTop: {
       ja: {
         question: 'Univocalはローカルで動く読み上げ・音声入力アプリですか？',
@@ -1299,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Univocalとは',
         content: [
           '**Univocalは、読み上げと音声入力の2つの機能を持つ音声ユーティリティです。** テキストを選択してショートカットを押すと読み上げが始まり、キーを押したまま話して離すと、メールクライアント、ノート、チャットなど、カーソル位置にテキストが入力されます。',
-          '公開元はNarNar Labs LLCです。開発元のページには、創業者、所在国、住所の記載はなく、サポート用のメールアドレスがあるだけです。このレビューは「情報源」に挙げたページに基づいており、実機での検証は行っていないため、音声の品質、精度、速度は評価していません。',
+          '公開元はNarNar Labs LLCです。開発元のページには、創業者、所在国、住所の記載はなく、サポート用のメールアドレスがあるだけです。このレビューは「情報源」に挙げたページに基づいています。PromptQuorumは24 GBのM4 Pro Macで1回だけ実機セッションも行いました（関連記事を参照）。これは最初の確認であり、完全な評価ではありません。英語、フランス語、ドイツ語の音声入力は動作しましたが、選択したテキストの読み上げは開始しませんでした。そのため、音声の品質、精度、速度は引き続き評価していません。',
         ],
       },
       howToGetStarted: {
@@ -1530,6 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Univocal実機テスト](/ja/power-local-llm/univocal-hands-on-test) — 24 GBのM4 ProのMacでの最初のセッション：英語、フランス語、ドイツ語の音声入力は動作しましたが、選択したテキストの読み上げは開始しませんでした。各記述には根拠の種類を示すラベルが付いています。',
           '[ローカル音声・オーディオツール比較](/ja/power-local-llm/local-llm-voice-audio-compared) — 音声合成、音声認識、音声エージェントを並べて比較。',
           '[Parrotレビュー](/ja/power-local-llm/parrot-review) — 3つのデスクトップOSに対応する、無料のオフライン読み上げアプリ。',
           '[Voiceboxレビュー](/ja/power-local-llm/voicebox-review) — 音声入力と音声クローン機能を持つ、無料のボイススタジオ。',
@@ -1551,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Univocal评测：在Mac上朗读文字并听写',
     seoTitle: 'Univocal评测：Mac朗读与听写应用的价格、隐私与限制',
     intro: 'Univocal是一款付费的Mac应用，一次安装完成两件事：朗读选中的文字，并把你口述的内容输入到光标所在的任意应用中。其开发者称两项功能都在你自己的Apple silicon Mac上运行。本评测梳理开发者官网、更新日志和隐私政策记载的内容、这些页面没有说明的部分，以及Univocal与目录中其他语音工具的对比。',
-    metaDescription: 'Univocal评测：适用于Mac的朗读与听写应用，据开发者称在你的Mac上运行。14天试用后一次性$39，仅限Apple silicon，未经实测。',
+    metaDescription: 'Univocal评测：适用于Mac的朗读与听写应用，据开发者称在你的Mac上运行。14天试用后一次性$39，仅限Apple silicon，已链接实测文章。',
     twitterDescription: 'Univocal评测：一款既能朗读文字又能听写的Mac应用，据开发者称在你自己的Mac上处理。价格、隐私、限制与替代方案。',
     audience: '希望在一个应用里同时使用文字转语音和听写、又不想依赖云服务或订阅的Mac用户——涵盖价格、安装、隐私、限制和替代方案。',
     readTime: '阅读约8分钟',
@@ -1571,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**Univocal是一款未公开源代码的Mac应用，可朗读选中的文字并输入你的口述内容，其开发者称两项功能都在你自己的Apple silicon Mac上运行，不会向任何地方发送数据。** 14天免费试用之后一次性收费$39，没有订阅。最新版本为2026年11月11日发布的0.3.33。本评测依据开发者公开的官网、更新日志和隐私政策，并非实际上手测试。',
+    leadAnswerBlock: '**Univocal是一款未公开源代码的Mac应用，可朗读选中的文字并输入你的口述内容，其开发者称两项功能都在你自己的Apple silicon Mac上运行，不会向任何地方发送数据。** 14天免费试用之后一次性收费$39，没有订阅。最新版本为2026年11月11日发布的0.3.33。本评测依据开发者公开的官网、更新日志和隐私政策；唯一的第一手测试见所链接的实测文章。',
     quickAnswerTop: {
       zh: {
         question: 'Univocal是本地朗读和听写应用吗？',
@@ -1688,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Univocal是什么',
         content: [
           '**Univocal是一款语音工具，有两项功能：朗读和听写。** 你选中文字并按下快捷键即可听它朗读，或者按住一个键、说话、松开，让文字输入到光标处，例如邮件客户端、笔记或聊天中。',
-          '它由NarNar Labs LLC发布。开发者的页面没有点明创始人、国家或邮寄地址，只给出了一个支持邮箱。本评测涵盖“资料来源”中列出的页面，没有进行实际上手测试，因此这里不对语音质量、准确度和速度做评级。',
+          '它由NarNar Labs LLC发布。开发者的页面没有点明创始人、国家或邮寄地址，只给出了一个支持邮箱。本评测依据“资料来源”中列出的页面；PromptQuorum 另在一台24 GB的M4 Pro Mac上进行了一次第一手测试（见相关阅读），那只是初步试用，而非完整评估：英语、法语和德语听写可用，朗读所选文本未能启动。因此这里仍不对语音质量、准确度和速度做评级。',
         ],
       },
       howToGetStarted: {
@@ -1909,6 +1913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[Univocal 实测](/zh/power-local-llm/univocal-hands-on-test) — 在24 GB的M4 Pro Mac上的首次测试：英语、法语和德语听写可用，朗读所选文本未能启动；每条陈述都标注了其依据类型。',
           '[本地语音和音频工具对比](/zh/power-local-llm/local-llm-voice-audio-compared) — 文字转语音、语音转文字和语音代理并排比较。',
           '[Parrot评测](/zh/power-local-llm/parrot-review) — 适用于三种桌面系统的免费离线朗读应用。',
           '[Voicebox评测](/zh/power-local-llm/voicebox-review) — 带听写和声音克隆的免费语音工作室。',
@@ -1930,7 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Univocal: lectura en voz alta y dictado en tu Mac',
     seoTitle: 'Reseña de Univocal: lectura en voz alta y dictado en Mac',
     intro: 'Univocal es una app de pago para Mac que hace dos cosas con una sola instalación: lee en voz alta el texto seleccionado y escribe lo que dictas en la app que tenga el cursor. Su fabricante afirma que ambas funciones se ejecutan en tu propio Mac con Apple silicon. Esta reseña resume lo que documentan la web, el registro de cambios y la política de privacidad del fabricante, lo que omiten y cómo se compara Univocal con otras herramientas de voz del directorio.',
-    metaDescription: 'Reseña de Univocal: app para Mac de lectura en voz alta y dictado que, según su fabricante, funciona en tu Mac. 39 $ únicos, 14 días de prueba. Sin probar.',
+    metaDescription: 'Reseña de Univocal: app para Mac de lectura en voz alta y dictado que, según su fabricante, funciona en tu Mac. 39 $ únicos, 14 días de prueba. Prueba práctica enlazada.',
     twitterDescription: 'Reseña de Univocal: una app para Mac que lee texto en voz alta y dicta, procesado en tu propio Mac según su fabricante. Precio, privacidad, límites y alternativas.',
     audience: 'Usuarios de Mac que quieren texto a voz y dictado en una sola app, sin servicio en la nube ni suscripción — cubre precio, instalación, privacidad, límites y alternativas.',
     readTime: '8 min de lectura',
@@ -1950,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**Univocal es una app para Mac sin código fuente publicado que lee en voz alta el texto seleccionado y escribe tu dictado, y su fabricante afirma que ambas funciones se ejecutan en tu propio Mac con Apple silicon sin enviar nada a ningún sitio.** Cuesta 39 $ de pago único tras una prueba gratuita de 14 días, sin suscripción. La versión más reciente es la 0.3.33, del 11 de noviembre de 2026. Esta reseña se basa en la web pública, el registro de cambios y la política de privacidad del fabricante, no en una prueba práctica.',
+    leadAnswerBlock: '**Univocal es una app para Mac sin código fuente publicado que lee en voz alta el texto seleccionado y escribe tu dictado, y su fabricante afirma que ambas funciones se ejecutan en tu propio Mac con Apple silicon sin enviar nada a ningún sitio.** Cuesta 39 $ de pago único tras una prueba gratuita de 14 días, sin suscripción. La versión más reciente es la 0.3.33, del 11 de noviembre de 2026. Esta reseña se basa en la web pública, el registro de cambios y la política de privacidad del fabricante; la única sesión de primera mano está en la prueba práctica enlazada.',
     quickAnswerTop: {
       es: {
         question: '¿Es Univocal una app local de lectura en voz alta y dictado?',
@@ -2067,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Univocal',
         content: [
           '**Univocal es una utilidad de voz con dos funciones: lectura en voz alta y dictado.** Seleccionas texto y pulsas un atajo para oírlo, o mantienes pulsada una tecla, hablas y la sueltas para que el texto se escriba en el cursor, por ejemplo en un cliente de correo, una nota o un chat.',
-          'La publica NarNar Labs LLC. Las páginas del fabricante no nombran a un fundador, un país ni una dirección postal, solo un correo de soporte. Esta reseña cubre las páginas citadas en Fuentes y no incluyó ninguna prueba práctica, así que aquí no se valoran la calidad de la voz, la precisión ni la velocidad.',
+          'La publica NarNar Labs LLC. Las páginas del fabricante no nombran a un fundador, un país ni una dirección postal, solo un correo de soporte. Esta reseña se basa en las páginas citadas en Fuentes; PromptQuorum también realizó una sesión de primera mano en un Mac M4 Pro con 24 GB (véase Lecturas relacionadas), un primer vistazo y no una evaluación completa: el dictado funcionó en inglés, francés y alemán, la lectura en voz alta del texto seleccionado no se inició. Por eso la calidad de la voz, la precisión y la velocidad siguen sin valorarse aquí.',
         ],
       },
       howToGetStarted: {
@@ -2288,6 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Prueba práctica de Univocal](/es/power-local-llm/univocal-hands-on-test) — una primera sesión en un Mac M4 Pro con 24 GB: el dictado funcionó en inglés, francés y alemán, la lectura en voz alta del texto seleccionado no se inició; cada afirmación está etiquetada según cómo se sabe.',
           '[Herramientas locales de voz y audio comparadas](/es/power-local-llm/local-llm-voice-audio-compared) — texto a voz, voz a texto y agentes de voz lado a lado.',
           '[Reseña de Parrot](/es/power-local-llm/parrot-review) — una app gratuita de lectura en voz alta sin conexión para tres sistemas de escritorio.',
           '[Reseña de Voicebox](/es/power-local-llm/voicebox-review) — un estudio de voz gratuito con dictado y clonación de voz.',
@@ -2309,7 +2315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do Univocal: leitura em voz alta e ditado no seu Mac',
     seoTitle: 'Análise do Univocal: leitura em voz alta e ditado no Mac',
     intro: 'O Univocal é um app pago para Mac que faz dois trabalhos com uma só instalação: lê em voz alta o texto selecionado e digita o que você dita no app em que estiver o cursor. O fabricante afirma que os dois funcionam no seu próprio Mac com Apple silicon. Esta análise resume o que o site, o changelog e a política de privacidade do fabricante documentam, o que eles deixam de dizer e como o Univocal se compara a outras ferramentas de voz do diretório.',
-    metaDescription: 'Análise do Univocal: app de Mac para leitura em voz alta e ditado, local segundo o fabricante. $39 únicos, teste de 14 dias. Só Apple silicon. Não testado.',
+    metaDescription: 'Análise do Univocal: app de Mac para leitura em voz alta e ditado, local segundo o fabricante. $39 únicos, teste de 14 dias. Só Apple silicon. Teste prático vinculado.',
     twitterDescription: 'Análise do Univocal: um app de Mac para ler texto em voz alta e ditar, processado no seu próprio Mac segundo o fabricante. Preço, privacidade, limites e alternativas.',
     audience: 'Usuários de Mac que querem texto para voz e ditado em um só app, sem serviço na nuvem nem assinatura — cobre preço, instalação, privacidade, limites e alternativas.',
     readTime: '8 min de leitura',
@@ -2329,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**O Univocal é um app para Mac sem código-fonte publicado que lê em voz alta o texto selecionado e digita o seu ditado, e o fabricante afirma que os dois funcionam no seu próprio Mac com Apple silicon, sem enviar nada para lugar nenhum.** Custa $39 únicos após um teste grátis de 14 dias, sem assinatura. A versão mais recente é a 0.3.33, de 11 de novembro de 2026. Esta análise se baseia no site público, no changelog e na política de privacidade do fabricante, não em um teste prático.',
+    leadAnswerBlock: '**O Univocal é um app para Mac sem código-fonte publicado que lê em voz alta o texto selecionado e digita o seu ditado, e o fabricante afirma que os dois funcionam no seu próprio Mac com Apple silicon, sem enviar nada para lugar nenhum.** Custa $39 únicos após um teste grátis de 14 dias, sem assinatura. A versão mais recente é a 0.3.33, de 11 de novembro de 2026. Esta análise se baseia no site público, no changelog e na política de privacidade do fabricante; a única sessão prática está no teste prático vinculado.',
     quickAnswerTop: {
       pt: {
         question: 'O Univocal é um app local de leitura em voz alta e ditado?',
@@ -2446,7 +2452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Univocal',
         content: [
           '**O Univocal é um utilitário de voz com duas funções: leitura em voz alta e ditado.** Você seleciona um texto e pressiona um atalho para ouvi-lo, ou segura uma tecla, fala e solta para que o texto seja digitado no cursor, por exemplo em um cliente de e-mail, em uma nota ou em um chat.',
-          'Ele é publicado pela NarNar Labs LLC. As páginas do fabricante não citam um fundador, um país nem um endereço postal, apenas um e-mail de suporte. Esta análise cobre as páginas listadas em Fontes e não envolveu teste prático, então qualidade da voz, precisão e velocidade não são avaliadas aqui.',
+          'Ele é publicado pela NarNar Labs LLC. As páginas do fabricante não citam um fundador, um país nem um endereço postal, apenas um e-mail de suporte. Esta análise se baseia nas páginas listadas em Fontes; a PromptQuorum também fez uma sessão em primeira mão em um Mac M4 Pro de 24 GB (veja Leituras relacionadas), uma primeira olhada e não uma avaliação completa: o ditado funcionou em inglês, francês e alemão, a leitura em voz alta do texto selecionado não iniciou. Por isso qualidade da voz, precisão e velocidade continuam sem avaliação aqui.',
         ],
       },
       howToGetStarted: {
@@ -2667,6 +2673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
+          '[Teste prático do Univocal](/pt/power-local-llm/univocal-hands-on-test) — uma primeira sessão em um Mac M4 Pro de 24 GB: o ditado funcionou em inglês, francês e alemão, a leitura em voz alta do texto selecionado não iniciou; cada afirmação é rotulada conforme a forma como se sabe.',
           '[Ferramentas locais de voz e fala comparadas](/pt/power-local-llm/local-llm-voice-audio-compared) — texto para voz, voz para texto e agentes de voz lado a lado.',
           '[Análise do Parrot](/pt/power-local-llm/parrot-review) — um app gratuito de leitura em voz alta offline para três sistemas de desktop.',
           '[Análise do Voicebox](/pt/power-local-llm/voicebox-review) — um estúdio de voz gratuito com ditado e clonagem de voz.',
@@ -2688,7 +2695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Univocal: القراءة الصوتية والإملاء على جهاز Mac',
     seoTitle: 'مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac',
     intro: 'Univocal تطبيق مدفوع لأجهزة Mac يؤدي مهمتين بتثبيت واحد: يقرأ النص المحدد بصوت مسموع، ويكتب ما تمليه في أي تطبيق يوجد فيه المؤشر. ويقول مطوّره إن الوظيفتين تعملان على جهاز Mac لديك الذي يعمل بمعالج Apple silicon. تلخّص هذه المراجعة ما يوثّقه موقع المطوّر وسجل التغييرات وسياسة الخصوصية، وما تتركه دون ذكر، وكيف يقارن Univocal بأدوات الصوت الأخرى في الدليل.',
-    metaDescription: 'مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. لم يُختبر.',
+    metaDescription: 'مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. الاختبار العملي مرتبط.',
     twitterDescription: 'مراجعة Univocal: تطبيق واحد لأجهزة Mac للقراءة الصوتية والإملاء، تتم معالجتهما على جهازك بحسب مطوّره. السعر والخصوصية والحدود والبدائل.',
     audience: 'مستخدمو Mac الذين يريدون تحويل النص إلى كلام والإملاء في تطبيق واحد دون خدمة سحابية أو اشتراك — يغطي السعر والتثبيت والخصوصية والحدود والبدائل.',
     readTime: '8 دقائق للقراءة',
@@ -2708,7 +2715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**Univocal تطبيق لأجهزة Mac دون شيفرة مصدرية منشورة يقرأ النص المحدد بصوت مسموع ويكتب ما تمليه، ويقول مطوّره إن الوظيفتين تعملان على جهاز Mac لديك بمعالج Apple silicon دون إرسال أي شيء إلى أي جهة.** يكلّف $39 لمرة واحدة بعد تجربة مجانية لمدة 14 يومًا، دون اشتراك. وأحدث إصدار هو 0.3.33 الصادر في 11 نوفمبر 2026. تعتمد هذه المراجعة على الموقع العام للمطوّر وسجل التغييرات وسياسة الخصوصية، وليس على اختبار عملي.',
+    leadAnswerBlock: '**Univocal تطبيق لأجهزة Mac دون شيفرة مصدرية منشورة يقرأ النص المحدد بصوت مسموع ويكتب ما تمليه، ويقول مطوّره إن الوظيفتين تعملان على جهاز Mac لديك بمعالج Apple silicon دون إرسال أي شيء إلى أي جهة.** يكلّف $39 لمرة واحدة بعد تجربة مجانية لمدة 14 يومًا، دون اشتراك. وأحدث إصدار هو 0.3.33 الصادر في 11 نوفمبر 2026. تعتمد هذه المراجعة على الموقع العام للمطوّر وسجل التغييرات وسياسة الخصوصية؛ أما الجلسة الوحيدة من التجربة المباشرة فموجودة في الاختبار العملي المرتبط.',
     quickAnswerTop: {
       ar: {
         question: 'هل Univocal تطبيق محلي للقراءة الصوتية والإملاء؟',
@@ -2906,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Univocal',
         content: [
           '**Univocal أداة صوتية بوظيفتين: القراءة الصوتية والإملاء.** تحدد نصًا وتضغط على اختصار لسماعه، أو تضغط مطولًا على مفتاح وتتحدث ثم تتركه ليُكتب النص عند المؤشر، مثلًا في برنامج بريد أو ملاحظة أو دردشة.',
-          'تنشره NarNar Labs LLC. ولا تذكر صفحات المطوّر مؤسسًا ولا بلدًا ولا عنوانًا بريديًا، بل بريدًا إلكترونيًا للدعم فقط. تغطي هذه المراجعة الصفحات المدرجة تحت «المصادر» ولم يُجرَ فيها اختبار عملي، لذا لا تُقيَّم هنا جودة الصوت والدقة والسرعة.',
+          'تنشره NarNar Labs LLC. ولا تذكر صفحات المطوّر مؤسسًا ولا بلدًا ولا عنوانًا بريديًا، بل بريدًا إلكترونيًا للدعم فقط. تعتمد هذه المراجعة على الصفحات المدرجة تحت «المصادر»؛ وأجرت PromptQuorum أيضًا جلسة واحدة مباشرة على جهاز Mac M4 Pro بذاكرة 24 GB (انظر «قراءات ذات صلة»)، وكانت نظرة أولى وليست تقييمًا كاملًا: عمل الإملاء بالإنجليزية والفرنسية والألمانية، ولم تبدأ قراءة النص المحدد بصوت عالٍ. لذلك ما زالت جودة الصوت والدقة والسرعة غير مقيَّمة هنا.',
         ],
       },
       howToGetStarted: {
@@ -3137,6 +3144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[اختبار Univocal العملي](/ar/power-local-llm/univocal-hands-on-test) — جلسة أولى على جهاز Mac M4 Pro بذاكرة 24 GB: عمل الإملاء بالإنجليزية والفرنسية والألمانية، ولم تبدأ قراءة النص المحدد بصوت عالٍ؛ وكل عبارة موسومة بحسب طريقة معرفتها.',
           '[مقارنة أدوات الصوت والكلام المحلية](/ar/power-local-llm/local-llm-voice-audio-compared) — تحويل النص إلى كلام والكلام إلى نص ووكلاء الصوت جنبًا إلى جنب.',
           '[مراجعة Parrot](/ar/power-local-llm/parrot-review) — تطبيق قراءة صوتية مجاني دون اتصال لثلاثة أنظمة مكتبية.',
           '[مراجعة Voicebox](/ar/power-local-llm/voicebox-review) — استوديو صوتي مجاني مع إملاء واستنساخ للأصوات.',
@@ -3158,7 +3166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Univocal 리뷰: Mac용 텍스트 읽어주기·받아쓰기 앱',
     seoTitle: 'Univocal 리뷰: Mac 읽어주기·받아쓰기 앱',
     intro: 'Univocal은 설치 하나로 두 가지 일을 하는 유료 Mac 앱입니다. 선택한 텍스트를 소리 내어 읽어 주고, 말한 내용을 커서가 있는 앱에 입력해 줍니다. 개발사는 두 기능 모두 사용자의 Apple silicon Mac에서 실행된다고 밝힙니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침이 밝히는 내용과 빠뜨린 내용, 그리고 디렉터리의 다른 음성 도구와의 비교를 정리합니다.',
-    metaDescription: 'Univocal 리뷰: 개발사에 따르면 Mac에서 실행되는 읽어주기·받아쓰기 앱. 14일 체험 후 $39 일회성, Apple silicon 전용. 직접 테스트하지 않았습니다.',
+    metaDescription: 'Univocal 리뷰: 개발사에 따르면 Mac에서 실행되는 읽어주기·받아쓰기 앱. 14일 체험 후 $39 일회성, Apple silicon 전용. 직접 테스트 링크 있음.',
     twitterDescription: 'Univocal 리뷰: 개발사에 따르면 내 Mac에서 처리되는, 텍스트 읽어주기와 받아쓰기를 겸한 Mac 앱. 가격, 개인정보 보호, 한계, 대안을 정리했습니다.',
     audience: '클라우드 서비스나 구독 없이 텍스트 읽어주기와 받아쓰기를 앱 하나로 쓰려는 Mac 사용자를 위한 글입니다. 가격, 설치, 개인정보 보호, 한계, 대안을 다룹니다.',
     readTime: '8분 읽기',
@@ -3178,7 +3186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Apple Silicon',
     ],
-    leadAnswerBlock: '**Univocal은 선택한 텍스트를 읽어 주고 받아쓰기를 입력해 주는 소스 코드가 공개되지 않은 Mac 앱이며, 개발사는 두 기능 모두 사용자의 Apple silicon Mac에서 실행되고 어디로도 전송되지 않는다고 밝힙니다.** 14일 무료 체험 이후 $39 일회성 결제이며 구독은 없습니다. 최신 릴리스는 2026년 11월 11일의 버전 0.3.33입니다. 이 리뷰는 개발사의 공개 웹사이트, 변경 내역, 개인정보 처리방침에 근거하며 직접 사용해 본 테스트는 아닙니다.',
+    leadAnswerBlock: '**Univocal은 선택한 텍스트를 읽어 주고 받아쓰기를 입력해 주는 소스 코드가 공개되지 않은 Mac 앱이며, 개발사는 두 기능 모두 사용자의 Apple silicon Mac에서 실행되고 어디로도 전송되지 않는다고 밝힙니다.** 14일 무료 체험 이후 $39 일회성 결제이며 구독은 없습니다. 최신 릴리스는 2026년 11월 11일의 버전 0.3.33입니다. 이 리뷰는 개발사의 공개 웹사이트, 변경 내역, 개인정보 처리방침에 근거하며, 직접 진행한 첫 세션은 링크된 직접 테스트에 있습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Univocal은 로컬 읽어주기·받아쓰기 앱입니까?',
@@ -3295,7 +3303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Univocal이란',
         content: [
           '**Univocal은 읽어주기와 받아쓰기, 두 가지 기능을 가진 음성 유틸리티입니다.** 텍스트를 선택하고 단축키를 누르면 읽어 주고, 키를 누른 채 말한 뒤 놓으면 메일 클라이언트, 메모, 채팅 등 커서 위치에 텍스트가 입력됩니다.',
-          '배포사는 NarNar Labs LLC입니다. 개발사의 페이지에는 창업자, 소재 국가, 우편 주소가 나와 있지 않고 지원 이메일만 있습니다. 이 리뷰는 출처에 나열된 페이지에 근거하며 직접 사용해 본 테스트는 하지 않았으므로 음성 품질, 정확도, 속도는 평가하지 않습니다.',
+          '배포사는 NarNar Labs LLC입니다. 개발사의 페이지에는 창업자, 소재 국가, 우편 주소가 나와 있지 않고 지원 이메일만 있습니다. 이 리뷰는 출처에 나열된 페이지에 근거합니다. PromptQuorum은 24 GB M4 Pro Mac에서 직접 진행한 세션도 한 번 가졌으며(관련 읽을거리 참조), 이는 완전한 평가가 아닌 첫인상입니다. 영어, 프랑스어, 독일어 받아쓰기는 작동했고 선택한 텍스트 읽어주기는 시작되지 않았습니다. 따라서 음성 품질, 정확도, 속도는 여기서 여전히 평가하지 않습니다.',
         ],
       },
       howToGetStarted: {
@@ -3516,6 +3524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
+          '[Univocal 직접 테스트](/ko/power-local-llm/univocal-hands-on-test) — 24 GB M4 Pro Mac에서 진행한 첫 세션입니다. 영어, 프랑스어, 독일어 받아쓰기는 작동했고 선택한 텍스트 읽어주기는 시작되지 않았습니다. 모든 서술에는 근거 유형 라벨이 붙어 있습니다.',
           '[로컬 음성·오디오 도구 비교](/ko/power-local-llm/local-llm-voice-audio-compared) — 음성 합성, 음성 인식, 음성 에이전트를 나란히 비교합니다.',
           '[Parrot 리뷰](/ko/power-local-llm/parrot-review) — 데스크톱 시스템 세 가지용 무료 오프라인 읽어주기 앱.',
           '[Voicebox 리뷰](/ko/power-local-llm/voicebox-review) — 받아쓰기와 음성 복제를 갖춘 무료 음성 스튜디오.',
