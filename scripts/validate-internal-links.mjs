@@ -61,6 +61,7 @@ const EXTRA_FILES = [
 const STATIC_ALLOW = new Set([
   '/', '/pq-apps', '/directory', '/about', '/blog',
   '/privacy', '/terms', '/glossary', '/contact', '/download',
+  '/askhans', // real route (src/app/askhans + per-locale folders), not slug-mapped
 ])
 
 // No more UNVALIDATED_CLUSTERS — frameworks is now covered by readFrameworkSlugs().

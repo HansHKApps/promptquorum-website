@@ -783,6 +783,7 @@ const HUB_THEMES: Array<{
       'deepseek-vs-qwen-local-comparison-2026',
       'docker-model-runner-review',
       'ai-tool-licenses-explained',
+      'uncensored-llm-models',
       'exllamav2-explained',
       'llama-cpp-explained',
       'llamafile-explained',
