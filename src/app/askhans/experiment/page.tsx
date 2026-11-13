@@ -37,17 +37,16 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
 
   type Row = [string, (v: VariantStats) => string]
   const rows: Row[] = [
-    ['Unique sessions exposed (estimate)', (v) => n0(v.exposedSessions)],
+    ['Exposures (= button impressions)', (v) => n0(v.exposedSessions)],
     ['Button impressions (events)', (v) => n0(v.impressions)],
-    ['Impressions per exposed session', (v) => f(ratio(v.impressions, v.exposedSessions))],
     ['Button clicks', (v) => n0(v.clicks)],
     ['Click-through rate (clicks / impressions)', (v) => pct(ratio(v.clicks, v.impressions))],
     ['Successful openings (all)', (v) => n0(v.opened)],
     ['Successful openings via an experiment button', (v) => n0(v.openedViaButton)],
     ['Opening rate (via button / clicks)', (v) => pct(ratio(v.openedViaButton, v.clicks))],
     ['First questions (events, consented)', (v) => n0(v.firstQuestions)],
-    ['Sessions with a first question (consented)', (v) => n0(v.firstQuestionSessions)],
-    ['PRIMARY: conversion (first-question sessions / exposed sessions)', (v) => pct(ratio(v.firstQuestionSessions, v.exposedSessions), 3)],
+    ['First questions (consented)', (v) => n0(v.firstQuestionSessions)],
+    ['PRIMARY: conversion (first questions / impressions)', (v) => pct(ratio(v.firstQuestionSessions, v.exposedSessions), 3)],
     ['Second questions', (v) => n0(v.secondQuestions)],
     ['Second-question rate (second / first)', (v) => pct(ratio(v.secondQuestions, v.firstQuestions))],
     ['Three-question conversations', (v) => n0(v.threeQuestions)],
@@ -57,7 +56,7 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
     ['Conversations completed (click-through from an answer)', (v) => n0(v.completed)],
     ['Return visits (visitors who said Yes)', (v) => n0(v.returnVisits)],
     ['Power Mode used', (v) => n0(v.powerMode)],
-    ['Conversations per 1,000 exposed sessions', (v) => f(ratio(v.firstQuestions, v.exposedSessions) * 1000)],
+    ['Conversations per 1,000 impressions', (v) => f(ratio(v.firstQuestions, v.exposedSessions) * 1000)],
     ['Conversations per 1,000 button impressions', (v) => f(ratio(v.firstQuestions, v.impressions) * 1000)],
     ['Consent share (Yes / answered)', (v) => pct(ratio(v.consentYes, v.consentYes + v.consentNo), 1)],
   ]
@@ -85,7 +84,7 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
           </ul>
         )}
         <p className="mt-2 text-text-secondary">
-          Rule for naming a leader: at least {CTA_MIN_DAYS} days, {n0(CTA_MIN_EXPOSED_PER_VARIANT)} exposed sessions and {CTA_MIN_CONVERSIONS_PER_VARIANT} first-question sessions per variant, probability of being best of 95% or more, median lift of 10% or more over the runner-up, and a 95% interval that excludes zero.
+          Rule for naming a leader: at least {CTA_MIN_DAYS} days, {n0(CTA_MIN_EXPOSED_PER_VARIANT)} impressions and {CTA_MIN_CONVERSIONS_PER_VARIANT} first questions per variant, probability of being best of 95% or more, median lift of 10% or more over the runner-up, and a 95% interval that excludes zero.
         </p>
       </section>
 
@@ -155,12 +154,12 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
       <section className="mt-8 text-text-secondary" aria-label="Limitations">
         <h2 className="mb-2 text-lg font-bold text-text-primary">How to read this (limitations)</h2>
         <ul className="list-disc space-y-1 ps-5">
-          <li>A &quot;visitor&quot; is a browser session: the variant is kept in sessionStorage, so a returning visitor is drawn again. Cross-device and cross-session use cannot be linked. Return visits are attributed to the variant of the return session.</li>
-          <li>Unique-session counts are HyperLogLog estimates (about 1% error). Automated browsers and visitors sending Do-Not-Track / Global Privacy Control are not counted.</li>
+          <li>The variant is held in memory only (nothing is written to browser storage), so every full page load draws again and no visitor or session can be linked. A visitor who reloads counts as new impressions, and a reload between button and first question can split the two across variants (adds noise, not bias).</li>
+          <li>All numbers are exact event counters. Automated browsers and visitors sending Do-Not-Track / Global Privacy Control are not counted.</li>
           <li>Impressions, clicks and openings are counted for everybody (anonymous counters); first/second/third question, completion, return visits and Power Mode only for visitors who said Yes in the consent step. Absolute rates are therefore understated by the consent share (last row of the table); the comparison between variants holds when that share is about equal.</li>
           <li>The header pill opens the search box first; the assistant opens when the question is sent. The click-to-opening rate therefore includes people who closed the box.</li>
           <li>Phones show an icon only in the header: there the wording appears as tooltip/accessible name, and visibly only on the floating pill (after a chat was closed), About and /askhans.</li>
-          <li>Subgroup rows below {500} impressions per variant are greyed out and must not be interpreted. Subgroup figures are event counts, not unique sessions.</li>
+          <li>Subgroup rows below {500} impressions per variant are greyed out and must not be interpreted.</li>
           <li>There is no unchanged &quot;Ask Hans&quot; control arm: all three variants replace the previous wording.</li>
         </ul>
       </section>

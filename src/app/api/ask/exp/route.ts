@@ -2,16 +2,14 @@
 //
 // Separate from /api/ask/event on purpose: the existing endpoint, its rate limit and its counters are untouched.
 // Storage: Upstash Redis (already used). Nothing personal is stored:
-//   - no IP address, no free text, no visitor ID;
-//   - `sid` (random per browser session, sent by the client) is only fed into a HyperLogLog (PFADD) to estimate
-//     "unique sessions"; HyperLogLog keeps no list of IDs, so individual IDs cannot be read back.
+//   - no IP address (it is only hashed with a salt as a short-lived rate-limit key), no free text, no visitor or session ID;
+//   - only aggregated counters per variant, language, device type and page category.
 // Consent: ask_hans_button_impression / _click / _opened are sent without consent, like Umami (cookieless,
 // anonymous). All funnel events after the first question are sent by the client only after "Yes" (see CTA_EVENTS).
 //
 // Keys (all expire after 120 days):
 //   askhans:exp:<id>                hash   since, consent:<V>:yes|no, <ev>:<V>, <ev>:<V>:lang:<xx>|dev:<d>|cat:<c>, via:<ev>:<V>:<placement>,
 //                                          sum:convs:<V>, sum:qs:<V>, sum:secs:<V>
-//   askhans:exp:<id>:u:<ev>:<V>     hyperloglog of unique sessions per event and variant
 
 import { NextRequest, NextResponse } from 'next/server'
 import { Ratelimit } from '@upstash/ratelimit'
@@ -25,7 +23,6 @@ export const runtime = 'nodejs'
 
 const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(120, '1 m'), prefix: 'rl:askhans:exp' })
 const TTL_S = 120 * 86_400
-const SID = /^[a-zA-Z0-9-]{8,64}$/
 const has = (list: readonly string[], v: unknown): v is string => typeof v === 'string' && list.includes(v)
 const int = (v: unknown, max: number): number | null => (typeof v === 'number' && Number.isInteger(v) && v >= 0 && v <= max ? v : null)
 
@@ -73,11 +70,6 @@ export async function POST(req: NextRequest) {
       pipe.hincrby(key, `${ev}:${v}:dev:${b.device}`, 1)
       pipe.hincrby(key, `${ev}:${v}:cat:${b.cat}`, 1)
       if (has(CTA_PLACEMENTS, b.via) || b.via === 'other') pipe.hincrby(key, `via:${ev}:${v}:${b.via}`, 1)
-      if (typeof b.sid === 'string' && SID.test(b.sid)) {
-        const hll = `${key}:u:${ev}:${v}`
-        pipe.pfadd(hll, b.sid)
-        pipe.expire(hll, TTL_S)
-      }
     }
     pipe.expire(key, TTL_S)
     await pipe.exec()
