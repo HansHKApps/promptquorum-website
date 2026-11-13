@@ -1960,7 +1960,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -2035,17 +2035,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-11-09",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
@@ -5123,17 +5123,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-11-09",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
         "dateModified": "2026-11-09",
         "tier": "about"
       },
@@ -5212,7 +5212,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -5342,18 +5342,18 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "mac-mini-m5-local-ai-server",
-        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
-        "url": "/local-llms/mac-mini-m5-local-ai-server",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
@@ -5378,9 +5378,17 @@
         "url": "/power-local-llm/parrot-review",
         "dateModified": "2026-10-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "univocal-review",
+        "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
+        "url": "/power-local-llm/univocal-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Coqui TTS": {
@@ -5398,7 +5406,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -5570,7 +5578,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -5656,7 +5664,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -8366,7 +8374,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -9226,7 +9234,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -10116,9 +10124,17 @@
         "url": "/power-local-llm/voicebox-review",
         "dateModified": "2026-10-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "univocal-review",
+        "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
+        "url": "/power-local-llm/univocal-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Krita AI Diffusion": {
@@ -10600,7 +10616,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -11214,7 +11230,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -11266,7 +11282,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       }
     ],
@@ -11668,7 +11684,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -12004,7 +12020,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -12056,7 +12072,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -12099,6 +12115,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phantasm-review",
         "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
         "url": "/power-local-llm/phantasm-review",
@@ -12134,14 +12158,6 @@
         "slug": "what-are-local-llms",
         "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
         "url": "/local-llms/what-are-local-llms",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "amical-review",
-        "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
-        "url": "/power-local-llm/amical-review",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
@@ -12712,7 +12728,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "about"
       }
     ],
@@ -13618,7 +13634,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -13675,6 +13691,28 @@
     "totalCount": 1,
     "capped": false
   },
+  "Univocal": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "univocal-review",
+        "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
+        "url": "/power-local-llm/univocal-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "StratoSort": {
     "articles": [
       {
@@ -13704,7 +13742,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -13734,7 +13772,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -13756,7 +13794,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
