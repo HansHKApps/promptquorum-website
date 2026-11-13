@@ -56,6 +56,15 @@ import sprichEs from './data/sprich.es.json'
 import sprichPt from './data/sprich.pt.json'
 import sprichAr from './data/sprich.ar.json'
 import sprichKo from './data/sprich.ko.json'
+import univocal from './data/univocal.json'
+import univocalDe from './data/univocal.de.json'
+import univocalFr from './data/univocal.fr.json'
+import univocalJa from './data/univocal.ja.json'
+import univocalZh from './data/univocal.zh.json'
+import univocalEs from './data/univocal.es.json'
+import univocalPt from './data/univocal.pt.json'
+import univocalAr from './data/univocal.ar.json'
+import univocalKo from './data/univocal.ko.json'
 import caelum from './data/caelum.json'
 import caelumDe from './data/caelum.de.json'
 import caelumFr from './data/caelum.fr.json'
@@ -319,6 +328,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: sprichPt as unknown as HandsOnTest,
     ar: sprichAr as unknown as HandsOnTest,
     ko: sprichKo as unknown as HandsOnTest,
+  },
+  univocal: {
+    en: univocal as unknown as HandsOnTest,
+    de: univocalDe as unknown as HandsOnTest,
+    fr: univocalFr as unknown as HandsOnTest,
+    ja: univocalJa as unknown as HandsOnTest,
+    zh: univocalZh as unknown as HandsOnTest,
+    es: univocalEs as unknown as HandsOnTest,
+    pt: univocalPt as unknown as HandsOnTest,
+    ar: univocalAr as unknown as HandsOnTest,
+    ko: univocalKo as unknown as HandsOnTest,
   },
   caelum: {
     en: caelum as unknown as HandsOnTest,
