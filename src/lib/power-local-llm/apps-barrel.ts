@@ -165,6 +165,7 @@ import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_aiko } from './apps/aiko'
 import { app as app_amical } from './apps/amical'
+import { app as app_argos_translate } from './apps/argos-translate'
 import { app as app_stratosort } from './apps/stratosort'
 import { app as app_sprich } from './apps/sprich'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
@@ -713,6 +714,7 @@ export const localAiApps: ToolRecord[] = [
   app_whisper_notes,
   app_aiko,
   app_amical,
+  app_argos_translate,
   app_stratosort,
   app_sprich,
   app_weesper_neon_flow,

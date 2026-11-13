@@ -19,66 +19,66 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-ai-coding-assistant-local-llm",
+        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
+        "url": "/local-llms/best-ai-coding-assistant-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-amd-mini-pc-local-llm-2026",
+        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
+        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-beginner-local-llm-models",
+        "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
+        "url": "/local-llms/best-beginner-local-llm-models",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-budget-gpus-local-llm",
+        "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
+        "url": "/local-llms/best-budget-gpus-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-mini-pcs-local-llm",
+        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
+        "url": "/local-llms/best-mini-pcs-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-models-apple-silicon-2026",
+        "title": "Best Ollama Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB",
+        "url": "/local-llms/best-models-apple-silicon-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "how-much-vram-local-llm",
         "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
         "url": "/local-llms/how-much-vram-local-llm",
         "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cocoindex-review",
-        "title": "CocoIndex Review: Incremental Data Framework for RAG and AI Agents",
-        "url": "/power-local-llm/cocoindex-review",
-        "dateModified": "2026-11-08",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "soc2-iso27001-self-hosted-llm-compliance",
-        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
-        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atlarix-review",
-        "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-        "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-11-07",
         "tier": "about"
       }
     ],
@@ -97,6 +97,62 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "m5-pro-max-llm-benchmarks-2026",
+        "title": "M5 Pro vs M5 Max LLM Benchmarks 2026: Tokens/Sec, Memory Bandwidth, Power",
+        "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "what-are-local-llms",
+        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
+        "url": "/local-llms/what-are-local-llms",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-behind-firewall-offline-2026",
+        "title": "Run Local AI Behind a Firewall: Offline Deployment Guide 2026",
+        "url": "/power-local-llm/local-ai-behind-firewall-offline-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mobile-llm-models-phi4-gemma-smollm",
+        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-08",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "soc2-iso27001-self-hosted-llm-compliance",
         "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
         "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
@@ -109,62 +165,6 @@
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tensorrt-llm-explained",
-        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
-        "url": "/power-local-llm/tensorrt-llm-explained",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "llm-quantization-explained",
-        "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
-        "url": "/local-llms/llm-quantization-explained",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-ai-app-low-end-pc",
-        "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
-        "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-behind-firewall-offline-2026",
-        "title": "Run Local AI Behind a Firewall: Offline Deployment Guide 2026",
-        "url": "/power-local-llm/local-ai-behind-firewall-offline-2026",
-        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],
@@ -484,7 +484,7 @@
         "slug": "mobile-llm-models-phi4-gemma-smollm",
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -822,19 +822,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
         "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "dateModified": "2026-11-06",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-10-20",
         "tier": "mentioned"
       },
       {
@@ -869,9 +869,41 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-limitations",
+        "title": "Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)",
+        "url": "/local-llms/local-llm-limitations",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "what-are-local-llms",
+        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
+        "url": "/local-llms/what-are-local-llms",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
         "dateModified": "2026-11-09",
         "tier": "about"
       },
@@ -897,38 +929,6 @@
         "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
         "url": "/power-local-llm/atlarix-review",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "llm-quantization-explained",
-        "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
-        "url": "/local-llms/llm-quantization-explained",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],
@@ -1310,7 +1310,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -1492,6 +1492,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
@@ -1529,14 +1537,6 @@
         "title": "Sidekick Review: A Free, Native macOS Local AI Chat App",
         "url": "/power-local-llm/sidekick-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ekorbia-review",
-        "title": "Ekorbia Review: Free Open-Source Local AI Desktop App",
-        "url": "/power-local-llm/ekorbia-review",
-        "dateModified": "2026-09-07",
         "tier": "mentioned"
       }
     ],
@@ -2035,6 +2035,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -2063,14 +2071,6 @@
         "title": "NVIDIA Project G-Assist Review: On-Device RTX AI Assistant, Requirements, and Setup",
         "url": "/power-local-llm/nvidia-g-assist-review",
         "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-08-28",
         "tier": "mentioned"
       }
     ],
@@ -2284,19 +2284,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
         "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-06",
         "tier": "mentioned"
       },
       {
@@ -2709,6 +2709,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-ai-coding-assistant-local-llm",
+        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
+        "url": "/local-llms/best-ai-coding-assistant-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-local-llms-for-coding",
         "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
         "url": "/local-llms/best-local-llms-for-coding",
@@ -2753,14 +2761,6 @@
         "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
         "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -2920,7 +2920,7 @@
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -3006,7 +3006,7 @@
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -3341,10 +3341,10 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "soc2-iso27001-self-hosted-llm-compliance",
-        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
-        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
-        "dateModified": "2026-11-07",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -5123,6 +5123,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -5184,14 +5192,6 @@
         "url": "/power-local-llm/funclip-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "izwi-review",
-        "title": "Izwi Review: Local Voice AI for TTS, STT, and Cloning",
-        "url": "/power-local-llm/izwi-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
     "totalCount": 31,
@@ -5249,6 +5249,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "macwhisper-review",
         "title": "MacWhisper Review: Local Speech-to-Text for Mac",
         "url": "/power-local-llm/macwhisper-review",
@@ -5270,14 +5278,6 @@
         "url": "/power-local-llm/transcriptionsuite-review",
         "dateModified": "2026-10-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 17,
@@ -5291,6 +5291,14 @@
         "title": "Piper TTS Review: Fast, Local Neural Text-to-Speech",
         "url": "/power-local-llm/piper-tts-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -5318,14 +5326,6 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
         "cluster": "local-llms",
         "slug": "apple-silicon-whisper-metal-benchmark",
         "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
@@ -5342,6 +5342,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
@@ -5355,14 +5363,6 @@
         "title": "Willow Inference Server Review: Self-Hosted Whisper ASR and TTS",
         "url": "/power-local-llm/willow-inference-server-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-tts-mac",
-        "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
-        "url": "/power-local-llm/best-local-tts-mac",
-        "dateModified": "2026-09-11",
         "tier": "mentioned"
       }
     ],
@@ -5435,6 +5435,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "willow-inference-server-review",
         "title": "Willow Inference Server Review: Self-Hosted Whisper ASR and TTS",
         "url": "/power-local-llm/willow-inference-server-review",
@@ -5454,14 +5462,6 @@
         "slug": "best-local-tts-nvidia-gpu",
         "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
         "url": "/power-local-llm/best-local-tts-nvidia-gpu",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-tts-for-ollama",
-        "title": "Best TTS for Ollama (2026): Adding Voice Output to a Local LLM Setup",
-        "url": "/power-local-llm/best-tts-for-ollama",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
       }
@@ -5706,19 +5706,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-vision-models-llava-ollama-2026",
         "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
         "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
         "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -5877,6 +5877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mobile-llm-models-phi4-gemma-smollm",
+        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5889,14 +5897,6 @@
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mobile-llm-models-phi4-gemma-smollm",
-        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -5955,6 +5955,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mobile-llm-models-phi4-gemma-smollm",
+        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-08",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5987,14 +6003,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "private-llm-review",
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
@@ -6007,14 +6015,6 @@
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mobile-llm-models-phi4-gemma-smollm",
-        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-10-19",
         "tier": "about"
       }
     ],
@@ -6071,6 +6071,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-08",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -6091,22 +6107,6 @@
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -6184,7 +6184,7 @@
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-10-23",
+        "dateModified": "2026-11-08",
         "tier": "mentioned"
       },
       {
@@ -6246,7 +6246,7 @@
         "slug": "mobile-llm-models-phi4-gemma-smollm",
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -6492,7 +6492,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -6522,7 +6522,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -6568,7 +6568,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -6768,7 +6768,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -6782,7 +6782,7 @@
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-10-23",
+        "dateModified": "2026-11-08",
         "tier": "about"
       },
       {
@@ -7270,7 +7270,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -9387,6 +9387,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "future-of-local-llms",
+        "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
+        "url": "/local-llms/future-of-local-llms",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "llm-quantization-explained",
         "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
         "url": "/local-llms/llm-quantization-explained",
@@ -9443,18 +9451,10 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "future-of-local-llms",
-        "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
-        "url": "/local-llms/future-of-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-06",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -10005,6 +10005,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "argos-translate-review",
+        "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
+        "url": "/power-local-llm/argos-translate-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "amical-review",
         "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
         "url": "/power-local-llm/amical-review",
@@ -10017,6 +10025,14 @@
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
         "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-08",
         "tier": "mentioned"
       },
       {
@@ -10050,25 +10066,9 @@
         "url": "/power-local-llm/trilium-notes-review",
         "dateModified": "2026-11-03",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hillnote-review",
-        "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
-        "url": "/power-local-llm/hillnote-review",
-        "dateModified": "2026-11-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "home-generative-agent-review",
-        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
-        "url": "/power-local-llm/home-generative-agent-review",
-        "dateModified": "2026-11-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "FluidVoice": {
@@ -10956,11 +10956,11 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-11-06",
+        "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -12060,6 +12060,22 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-ai-coding-assistant-local-llm",
+        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
+        "url": "/local-llms/best-ai-coding-assistant-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "what-are-local-llms",
+        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
+        "url": "/local-llms/what-are-local-llms",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "amical-review",
         "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
@@ -12069,50 +12085,34 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-nas-storage-local-ai-models-2026",
+        "title": "NAS and Storage for Local AI Models 2026: Buying Guide",
+        "url": "/power-local-llm/best-nas-storage-local-ai-models-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-vpn-ai-privacy-local-llm-2026",
+        "title": "Best VPN for AI Privacy: Protect Your Local LLM Setup 2026",
+        "url": "/power-local-llm/best-vpn-ai-privacy-local-llm-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-workstation-build-guide",
+        "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
+        "url": "/power-local-llm/local-ai-workstation-build-guide",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
         "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "weesper-neon-flow-review",
-        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
-        "url": "/power-local-llm/weesper-neon-flow-review",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "soc2-iso27001-self-hosted-llm-compliance",
-        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
-        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atlarix-review",
-        "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-        "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "meetini-review",
-        "title": "Meetini Review: Meeting and Interview Assistant for Mac",
-        "url": "/power-local-llm/meetini-review",
-        "dateModified": "2026-11-07",
         "tier": "mentioned"
       }
     ],
@@ -13340,9 +13340,17 @@
         "url": "/power-local-llm/on-device-ai-translator-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "argos-translate-review",
+        "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
+        "url": "/power-local-llm/argos-translate-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Llamatik": {
@@ -13593,6 +13601,20 @@
       }
     ],
     "totalCount": 3,
+    "capped": false
+  },
+  "Argos Translate": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "argos-translate-review",
+        "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
+        "url": "/power-local-llm/argos-translate-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "StratoSort": {

@@ -1714,6 +1714,11 @@
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
   },
+  "argos-translate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "argos-translate-review",
+    "url": "/power-local-llm/argos-translate-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",
