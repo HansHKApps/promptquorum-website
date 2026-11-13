@@ -80,6 +80,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // next to its closest topical neighbor - 2026-09-05
   'metagpt-agnai-risuai-explained',
   'uncensored-local-llm-creative-writing-ethics',
+  // Flagship pillar: uncensored / abliterated LLMs + local apps - 2026-11-13
+  'uncensored-llm-models',
 
   // Backyard AI review — 2026-09-02
   'backyard-ai-review-local-roleplay',

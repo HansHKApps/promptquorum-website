@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="t d" font-family="Inter, Arial, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <title id="t">How uncensored model repositories, indexes and local apps connect</title>
+  <desc id="d">Base models and modification tools produce modified weights that are hosted on Hugging Face or ModelScope and indexed by abliter.cn and abliteration.org. Runtimes such as Ollama, LM Studio and llama.cpp load them and expose an API to local apps.</desc>
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">From base model to local app</text>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker></defs>
+  <g font-size="13" fill="#0f172a" text-anchor="middle">
+    <rect x="30" y="90" width="150" height="70" rx="10" fill="#f1f5f9" stroke="#475569"/><text x="105" y="120" font-weight="700">Base model</text><text x="105" y="140">Gemma, Qwen, Llama</text>
+    <rect x="30" y="200" width="150" height="70" rx="10" fill="#fef9c3" stroke="#ca8a04"/><text x="105" y="230" font-weight="700">Tools and methods</text><text x="105" y="250">Heretic, fine-tuning</text>
+    <rect x="240" y="145" width="150" height="70" rx="10" fill="#ffedd5" stroke="#ea580c"/><text x="315" y="175" font-weight="700">Modified weights</text><text x="315" y="195">safetensors, GGUF</text>
+    <rect x="450" y="80" width="170" height="70" rx="10" fill="#e0f2fe" stroke="#0369a1"/><text x="535" y="110" font-weight="700">Hosts</text><text x="535" y="130">Hugging Face, ModelScope</text>
+    <rect x="450" y="210" width="170" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed"/><text x="535" y="240" font-weight="700">Indexes (discovery)</text><text x="535" y="260">abliter.cn, abliteration.org</text>
+    <rect x="680" y="60" width="190" height="70" rx="10" fill="#dcfce7" stroke="#16a34a"/><text x="775" y="90" font-weight="700">Runtimes</text><text x="775" y="110">Ollama, LM Studio, llama.cpp</text>
+    <rect x="680" y="170" width="190" height="130" rx="10" fill="#f0fdf4" stroke="#16a34a"/><text x="775" y="198" font-weight="700">Local apps</text><text x="775" y="220">Chat, roleplay, RAG,</text><text x="775" y="240">coding agents, automation</text><text x="775" y="266" fill="#166534">The model is a setting</text>
+  </g>
+  <g stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M180 125 L240 165"/><path d="M180 235 L240 195"/><path d="M390 170 L450 125"/><path d="M620 115 L680 95"/><path d="M775 130 V168"/>
+  </g>
+  <path d="M535 210 V152" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+  <text x="545" y="185" font-size="11" fill="#6d28d9">crawls</text>
+  <text x="450" y="360" text-anchor="middle" font-size="14" fill="#0f172a">Provenance questions (author, license, file format) are always about the host, not the index.</text>
+  <text x="450" y="384" text-anchor="middle" font-size="12" fill="#475569">Simplified overview. Apps differ in how they accept custom models: check each one.</text>
+<text x="892" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

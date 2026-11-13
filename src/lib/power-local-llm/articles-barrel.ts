@@ -276,6 +276,7 @@ import { article as a_local_llm_screenwriting_and_novel_drafting } from './artic
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
 import { article as a_metagpt_agnai_risuai_explained } from './articles/metagpt-agnai-risuai-explained'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
+import { article as a_uncensored_llm_models } from './articles/uncensored-llm-models'
 import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
 import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison'
 import { article as a_local_vision_models_llava_ollama_2026 } from './articles/local-vision-models-llava-ollama-2026'
@@ -527,6 +528,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'sillytavern-vs-agnai-vs-risuai-roleplay':     a_sillytavern_vs_agnai_vs_risuai_roleplay,
   'metagpt-agnai-risuai-explained':              a_metagpt_agnai_risuai_explained,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
+  'uncensored-llm-models': a_uncensored_llm_models,
   'voice-assistant-local-mobile-offline':              a_voice_assistant_local_mobile_offline,
   'local-whisper-stt-comparison':                 a_local_whisper_stt_comparison_2026,
   'local-vision-models-llava-ollama-2026':             a_local_vision_models_llava_ollama_2026,

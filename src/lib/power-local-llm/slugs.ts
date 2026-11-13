@@ -66,6 +66,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'metagpt-agnai-risuai-explained':              'metagpt-agnai-risuai-explained',
   'local-llm-prompts-for-fiction-writers':       'local-llm-prompts-for-fiction-writers',
   'uncensored-local-llm-creative-writing-ethics':'uncensored-local-llm-creative-writing-ethics',
+  'uncensored-llm-models':                       'uncensored-llm-models',
   'local-llm-screenwriting-and-novel-drafting':  'local-llm-screenwriting-and-novel-drafting',
   'backyard-ai-review-local-roleplay':      'backyard-ai-review-local-roleplay-2026',
 

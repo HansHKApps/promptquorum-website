@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="t d" font-family="Inter, Arial, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <title id="t">Refusal direction in a transformer residual stream</title>
+  <desc id="d">Layers read from and write to a residual stream. Activations for refused prompts and answered prompts separate along one direction, the refusal direction.</desc>
+  <rect width="900" height="460" fill="#ffffff"/>
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">How refusal behavior shows up inside a transformer</text>
+  <rect x="40" y="200" width="420" height="44" rx="8" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="250" y="228" text-anchor="middle" font-size="15" font-weight="600" fill="#0c4a6e">Residual stream (running tally of activations)</text>
+  <g font-size="13" fill="#0f172a" text-anchor="middle">
+    <rect x="70" y="90" width="90" height="56" rx="8" fill="#f1f5f9" stroke="#475569"/><text x="115" y="123">Layer 1</text>
+    <rect x="205" y="90" width="90" height="56" rx="8" fill="#f1f5f9" stroke="#475569"/><text x="250" y="123">Layer 2</text>
+    <rect x="340" y="90" width="90" height="56" rx="8" fill="#f1f5f9" stroke="#475569"/><text x="385" y="123">Layer N</text>
+  </g>
+  <g stroke="#475569" stroke-width="2" fill="none"><path d="M115 146 V200"/><path d="M250 146 V200"/><path d="M385 146 V200"/></g>
+  <text x="250" y="290" text-anchor="middle" font-size="13" fill="#334155">Each layer reads from and writes to the stream</text>
+  <rect x="520" y="60" width="340" height="340" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="690" y="86" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">Activation space (simplified to 2 dimensions)</text>
+  <g fill="#dc2626"><circle cx="745" cy="160" r="7"/><circle cx="775" cy="195" r="7"/><circle cx="735" cy="215" r="7"/><circle cx="790" cy="150" r="7"/><circle cx="760" cy="240" r="7"/></g>
+  <g fill="#16a34a"><circle cx="595" cy="285" r="7"/><circle cx="625" cy="320" r="7"/><circle cx="585" cy="335" r="7"/><circle cx="640" cy="275" r="7"/><circle cx="610" cy="360" r="7"/></g>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker></defs>
+  <line x1="650" y1="305" x2="735" y2="200" stroke="#1d4ed8" stroke-width="4" marker-end="url(#a)"/>
+  <text x="640" y="238" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="end">refusal direction</text>
+  <g font-size="12" fill="#0f172a"><circle cx="545" cy="420" r="6" fill="#dc2626"/><text x="558" y="424">Prompts the model refuses</text><circle cx="715" cy="420" r="6" fill="#16a34a"/><text x="728" y="424">Prompts it answers</text></g>
+  <text x="450" y="448" text-anchor="middle" font-size="12" fill="#475569">Conceptual illustration after Arditi et al. (2024). Real models have many layers and thousands of dimensions.</text>
+<text x="892" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
