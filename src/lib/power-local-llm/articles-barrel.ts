@@ -232,7 +232,9 @@ import { article as a_elevenlabs_vs_local_tts_piper_xtts } from './articles/elev
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
 import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
+import { article as a_local_ai_on_android_guide } from './articles/local-ai-on-android-guide'
 import { article as a_best_local_llm_apps_iphone_2026 } from './articles/best-local-llm-apps-iphone-2026'
+import { article as a_local_ai_on_iphone_guide } from './articles/local-ai-on-iphone-guide'
 import { article as a_best_local_llm_apps_mac } from './articles/best-local-llm-apps-mac'
 import { article as a_local_llm_app_alternatives } from './articles/local-llm-app-alternatives'
 import { article as a_enclave_ai_review_2026 } from './articles/enclave-ai-review-2026'
@@ -490,7 +492,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
   'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
+  'local-ai-on-android-guide':              a_local_ai_on_android_guide,
   'best-local-llm-apps-iphone-2026':        a_best_local_llm_apps_iphone_2026,
+  'local-ai-on-iphone-guide':               a_local_ai_on_iphone_guide,
   'best-local-llm-apps-mac':                a_best_local_llm_apps_mac,
   'local-llm-app-alternatives':             a_local_llm_app_alternatives,
   'best-local-llm-creative-writing':   a_best_local_llm_creative_writing,
