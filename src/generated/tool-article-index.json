@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -72,14 +80,6 @@
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
     "totalCount": 351,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "m5-pro-max-llm-benchmarks-2026",
         "title": "M5 Pro vs M5 Max LLM Benchmarks 2026: Tokens/Sec, Memory Bandwidth, Power",
         "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
         "dateModified": "2026-11-09",
         "tier": "about"
       }
@@ -5917,6 +5917,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5956,14 +5964,6 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
         "cluster": "local-llms",
         "slug": "mobile-local-llms",
         "title": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
@@ -5999,6 +5999,14 @@
         "title": "PocketPal AI Review: Free, Open-Source On-Device Chat",
         "url": "/power-local-llm/pocketpal-ai-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6055,14 +6063,6 @@
         "title": "Layla Review: On-Device AI Companion App for Android and iOS",
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-10-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -6353,18 +6353,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6415,18 +6415,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-10-30",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -12555,6 +12555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -12615,14 +12623,6 @@
         "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
         "url": "/power-local-llm/phantasm-review",
         "dateModified": "2026-11-13",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-file-sorter-review",
-        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
-        "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-11-10",
         "tier": "mentioned"
       }
     ],
@@ -14023,6 +14023,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -14035,14 +14043,6 @@
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -14121,18 +14121,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-on-android-guide",
-        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-android-guide",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       }
     ],
@@ -14264,7 +14264,7 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
