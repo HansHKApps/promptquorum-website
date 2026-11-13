@@ -1714,6 +1714,11 @@
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
   },
+  "univocal": {
+    "cluster": "power-local-llm",
+    "urlSlug": "univocal-review",
+    "url": "/power-local-llm/univocal-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",
