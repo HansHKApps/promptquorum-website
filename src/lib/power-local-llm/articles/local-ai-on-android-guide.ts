@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Start Here: Three Apps to Install',
         content: [
           `**Short on time? Install one of these three, download a model that fits your phone's RAM, and test it once in airplane mode.** The picks come from this guide's own chapters and reviews, not from benchmarks; the rest of the guide explains each choice.`,
-          `**Other good starting points:** on a Pixel 9 or 10, try [PAIOS](/power-local-llm/paios-review), which uses Google's system model with no download; for camera questions and Gemma models, use [Google AI Edge Gallery](/power-local-llm/google-ai-edge-gallery-review); to run bigger models from your phone, connect it to Ollama or LM Studio on your own computer with [LocalMind](/power-local-llm/localmind-review).`,
+          `**Other good starting points:** on a phone where AICore supports Gemini Nano, such as a Pixel 9 or 10, try [PAIOS](/power-local-llm/paios-review), which uses Google's system model with no download; for camera questions and Gemma models, use [Google AI Edge Gallery](/power-local-llm/google-ai-edge-gallery-review); to run bigger models from your phone, connect it to Ollama or LM Studio on your own computer with [LocalMind](/power-local-llm/localmind-review).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `Beginners can start with PocketPal AI, advanced users with Maid and a larger GGUF model, and developers with the ML Kit Prompt API or LiteRT-LM; in every case the model size follows the phone's RAM.` },
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Which model should I download?** Match your RAM: 1 to 2B on 4 to 6 GB, 3 to 4B on 8 GB and 4 to 8B on 12 to 16 GB, where 7 to 8B fits only with a short context. When in doubt, pick the smaller one. See RAM Tiers below.`,
           `**How much storage do I need?** Free 3 to 6 GB for a first model, because model files are measured in gigabytes. See First Run in 15 Minutes.`,
           `**How fast will it run?** PromptQuorum did not run new speed tests for this guide. Speed is limited by memory bandwidth, so a smaller model answers faster; note how quickly words appear on your first prompt and treat that as your baseline. See the Chips chapter.`,
-          `**Which app is genuinely private?** None can be assumed private. On-device inference keeps your prompts off a vendor's inference servers, but an app can still send analytics. Check the Data safety card, the privacy policy and the permissions, and run the airplane-mode test; open-source apps such as PocketPal AI can be audited, while closed-source claims rest on trust. See Privacy and Telemetry Reality.`,
+          `**Which app is private?** None can be assumed private. On-device inference keeps your prompts off a vendor's inference servers, but an app can still send analytics. Check the Data safety card, the privacy policy and the permissions, and run the airplane-mode test; open-source apps such as PocketPal AI can be audited, while closed-source claims rest on trust. See Privacy and Telemetry Reality.`,
           `**What can I do without internet?** According to this guide's capability map, chat, camera questions, dictation, document questions and translation can work offline with suitable models after the download; image generation and large models are slow or need a server. See The Capability Map.`,
           `**What do I read next?** Follow First Run in 15 Minutes, use Summary: Phone Tier, App, Model Size as a one-table cheat sheet, and open the Decision Path if you have a specific job in mind.`,
         ],
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hier starten: Drei Apps zum Installieren',
         content: [
           `**Wenig Zeit? Installieren Sie eine dieser drei Apps, laden Sie ein Modell herunter, das zum RAM Ihres Telefons passt, und testen Sie es einmal im Flugmodus.** Die Empfehlungen stammen aus den Kapiteln und Testberichten dieses Leitfadens, nicht aus Benchmarks; der Rest des Leitfadens erklärt jede Wahl.`,
-          `**Weitere gute Einstiegspunkte:** Auf einem Pixel 9 oder 10 probieren Sie [PAIOS](/de/power-local-llm/paios-review), das das Systemmodell von Google ohne Download nutzt; für Kamerafragen und Gemma-Modelle verwenden Sie [Google AI Edge Gallery](/de/power-local-llm/google-ai-edge-gallery-review); um größere Modelle von Ihrem Telefon aus zu betreiben, verbinden Sie es mit Ollama oder LM Studio auf Ihrem eigenen Computer über [LocalMind](/de/power-local-llm/localmind-review).`,
+          `**Weitere gute Einstiegspunkte:** Auf einem Telefon, auf dem AICore Gemini Nano unterstÃ¼tzt, etwa einem Pixel 9 oder 10, probieren Sie [PAIOS](/de/power-local-llm/paios-review), das das Systemmodell von Google ohne Download nutzt; für Kamerafragen und Gemma-Modelle verwenden Sie [Google AI Edge Gallery](/de/power-local-llm/google-ai-edge-gallery-review); um größere Modelle von Ihrem Telefon aus zu betreiben, verbinden Sie es mit Ollama oder LM Studio auf Ihrem eigenen Computer über [LocalMind](/de/power-local-llm/localmind-review).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `Einsteiger können mit PocketPal AI beginnen, Fortgeschrittene mit Maid und einem größeren GGUF-Modell, Entwickler mit der ML Kit Prompt API oder LiteRT-LM; in jedem Fall richtet sich die Modellgröße nach dem RAM des Telefons.` },
@@ -1071,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Welches Modell soll ich herunterladen?** Richten Sie sich nach Ihrem RAM: 1 bis 2B bei 4 bis 6 GB, 3 bis 4B bei 8 GB und 4 bis 8B bei 12 bis 16 GB, wobei 7 bis 8B nur mit kurzem Kontext passt. Im Zweifel nehmen Sie das kleinere. Siehe unten „RAM-Stufen“.`,
           `**Wie viel Speicherplatz brauche ich?** Halten Sie 3 bis 6 GB für ein erstes Modell frei, denn Modelldateien werden in Gigabyte gemessen. Siehe „Erster Start in 15 Minuten“.`,
           `**Wie schnell läuft es?** PromptQuorum hat für diesen Leitfaden keine neuen Geschwindigkeitstests durchgeführt. Die Geschwindigkeit wird durch die Speicherbandbreite begrenzt, deshalb antwortet ein kleineres Modell schneller; achten Sie darauf, wie schnell bei Ihrem ersten Prompt die Wörter erscheinen, und betrachten Sie das als Ihre Ausgangsbasis. Siehe das Kapitel „Chips“.`,
-          `**Welche App ist wirklich privat?** Keine App darf als privat vorausgesetzt werden. Inferenz auf dem Gerät hält Ihre Prompts von den Inferenz-Servern eines Anbieters fern, aber eine App kann dennoch Analysen senden. Prüfen Sie die Datensicherheits-Angaben (Data safety), die Datenschutzerklärung und die Berechtigungen und führen Sie den Flugmodus-Test durch; Open-Source-Apps wie PocketPal AI lassen sich prüfen, während Aussagen von Closed-Source-Apps auf Vertrauen beruhen. Siehe „Datenschutz und Telemetrie in der Realität“.`,
+          `**Welche App ist privat?** Keine App darf als privat vorausgesetzt werden. Inferenz auf dem Gerät hält Ihre Prompts von den Inferenz-Servern eines Anbieters fern, aber eine App kann dennoch Analysen senden. Prüfen Sie die Datensicherheits-Angaben (Data safety), die Datenschutzerklärung und die Berechtigungen und führen Sie den Flugmodus-Test durch; Open-Source-Apps wie PocketPal AI lassen sich prüfen, während Aussagen von Closed-Source-Apps auf Vertrauen beruhen. Siehe „Datenschutz und Telemetrie in der Realität“.`,
           `**Was geht ohne Internet?** Laut der Fähigkeitenübersicht dieses Leitfadens können Chat, Kamerafragen, Diktat, Dokumentfragen und Übersetzung nach dem Download mit geeigneten Modellen offline funktionieren; Bilderzeugung und große Modelle sind langsam oder brauchen einen Server. Siehe „Die Fähigkeitenübersicht“.`,
           `**Was lese ich als Nächstes?** Folgen Sie „Erster Start in 15 Minuten“, nutzen Sie „Übersicht: Telefonklasse, App, Modellgröße“ als Ein-Tabellen-Spickzettel und öffnen Sie den „Entscheidungspfad“, wenn Sie eine bestimmte Aufgabe im Sinn haben.`,
         ],
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Par où commencer : trois applications à installer',
         content: [
           `**Peu de temps ? Installez l'une de ces trois applications, téléchargez un modèle adapté à la RAM de votre téléphone et testez-le une fois en mode avion.** Ces choix viennent des chapitres et des analyses de ce guide, pas de benchmarks ; le reste du guide explique chaque choix.`,
-          `**Autres bons points de départ :** sur un Pixel 9 ou 10, essayez [PAIOS](/fr/power-local-llm/paios-review), qui utilise le modèle système de Google sans téléchargement ; pour les questions sur l'appareil photo et les modèles Gemma, utilisez [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) ; pour exécuter de plus gros modèles depuis votre téléphone, connectez-le à Ollama ou LM Studio sur votre propre ordinateur avec [LocalMind](/fr/power-local-llm/localmind-review).`,
+          `**Autres bons points de départ :** sur un tÃ©lÃ©phone oÃ¹ AICore prend en charge Gemini Nano, comme un Pixel 9 ou 10, essayez [PAIOS](/fr/power-local-llm/paios-review), qui utilise le modèle système de Google sans téléchargement ; pour les questions sur l'appareil photo et les modèles Gemma, utilisez [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) ; pour exécuter de plus gros modèles depuis votre téléphone, connectez-le à Ollama ou LM Studio sur votre propre ordinateur avec [LocalMind](/fr/power-local-llm/localmind-review).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `Les débutants peuvent commencer avec PocketPal AI, les utilisateurs avancés avec Maid et un modèle GGUF plus grand, les développeurs avec la ML Kit Prompt API ou LiteRT-LM ; dans tous les cas, la taille du modèle suit la RAM du téléphone.` },
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Quel modèle télécharger ?** Suivez votre RAM : 1 à 2B avec 4 à 6 GB, 3 à 4B avec 8 GB et 4 à 8B avec 12 à 16 GB, où 7 à 8B ne tient qu'avec un contexte court. En cas de doute, prenez le plus petit. Voir « Paliers de RAM » plus bas.`,
           `**De quel espace de stockage ai-je besoin ?** Libérez 3 à 6 GB pour un premier modèle, car les fichiers de modèle se mesurent en gigaoctets. Voir « Premier essai en 15 minutes ».`,
           `**Quelle sera la vitesse ?** PromptQuorum n'a pas réalisé de nouveaux tests de vitesse pour ce guide. La vitesse est limitée par la bande passante mémoire, donc un modèle plus petit répond plus vite ; notez la rapidité d'apparition des mots lors de votre premier prompt et prenez-la comme référence. Voir le chapitre « Puces ».`,
-          `**Quelle application est vraiment privée ?** Aucune ne peut être présumée privée. L'inférence sur l'appareil garde vos prompts hors des serveurs d'inférence d'un éditeur, mais une application peut quand même envoyer des données d'analyse. Vérifiez la fiche Sécurité des données (Data safety), la politique de confidentialité et les autorisations, et faites le test en mode avion ; les applications open source comme PocketPal AI peuvent être auditées, alors que les affirmations des applications closed source reposent sur la confiance. Voir « Confidentialité et télémétrie : la réalité ».`,
+          `**Quelle application est privée ?** Aucune ne peut être présumée privée. L'inférence sur l'appareil garde vos prompts hors des serveurs d'inférence d'un éditeur, mais une application peut quand même envoyer des données d'analyse. Vérifiez la fiche Sécurité des données (Data safety), la politique de confidentialité et les autorisations, et faites le test en mode avion ; les applications open source comme PocketPal AI peuvent être auditées, alors que les affirmations des applications closed source reposent sur la confiance. Voir « Confidentialité et télémétrie : la réalité ».`,
           `**Que puis-je faire sans internet ?** D'après la carte des capacités de ce guide, le chat, les questions sur l'appareil photo, la dictée, les questions sur des documents et la traduction peuvent fonctionner hors ligne avec des modèles adaptés, après le téléchargement ; la génération d'images et les gros modèles sont lents ou nécessitent un serveur. Voir « La carte des capacités ».`,
           `**Que lire ensuite ?** Suivez « Premier essai en 15 minutes », utilisez « Récapitulatif : niveau de téléphone, application, taille de modèle » comme aide-mémoire en un seul tableau, et ouvrez le « Parcours de décision » si vous avez une tâche précise en tête.`,
         ],
@@ -2863,7 +2863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ここから始める：インストールする3つのアプリ',
         content: [
           `**時間がない方へ：次の3つのうち1つをインストールし、スマホのRAMに合うモデルをダウンロードして、機内モードで一度試してください。** この3つは、このガイドの各章とレビューに基づく選定で、ベンチマークに基づくものではありません。各選択の理由はガイドの残りの部分で説明します。`,
-          `**ほかにもおすすめの出発点があります：** Pixel 9または10では、ダウンロード不要でGoogleのシステムモデルを使う[PAIOS](/ja/power-local-llm/paios-review)を試せます。カメラへの質問やGemmaモデルには[Google AI Edge Gallery](/ja/power-local-llm/google-ai-edge-gallery-review)を使います。より大きなモデルをスマホから動かすには、[LocalMind](/ja/power-local-llm/localmind-review)で自分のパソコン上のOllamaまたはLM Studioに接続します。`,
+          `**ほかにもおすすめの出発点があります：** AICoreがGemini Nanoに対応している端末（Pixel 9や10など）では、ダウンロード不要でGoogleのシステムモデルを使う[PAIOS](/ja/power-local-llm/paios-review)を試せます。カメラへの質問やGemmaモデルには[Google AI Edge Gallery](/ja/power-local-llm/google-ai-edge-gallery-review)を使います。より大きなモデルをスマホから動かすには、[LocalMind](/ja/power-local-llm/localmind-review)で自分のパソコン上のOllamaまたはLM Studioに接続します。`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `初心者はPocketPal AI、上級者はMaidと大きめのGGUFモデル、開発者はML Kit Prompt APIまたはLiteRT-LMから始められます。いずれの場合も、モデルサイズはスマホのRAMに合わせます。` },
@@ -2891,7 +2891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**どのモデルをダウンロードすればよいですか？** RAMに合わせます。4〜6 GBなら1〜2B、8 GBなら3〜4B、12〜16 GBなら4〜8Bで、7〜8Bは短いコンテキストでのみ収まります。迷ったら小さいほうを選んでください。下の「RAMの区分」を参照してください。`,
           `**ストレージはどれくらい必要ですか？** 最初のモデル用に3〜6 GBの空きを確保してください。モデルファイルはギガバイト単位だからです。「15分で最初の実行」を参照してください。`,
           `**どれくらいの速さで動きますか？** PromptQuorumは、このガイドのために新しい速度テストを実施していません。速度はメモリ帯域幅で制限されるため、小さいモデルほど速く応答します。最初のプロンプトで言葉が表示される速さを控えておき、それを基準にしてください。「チップ」の章を参照してください。`,
-          `**本当にプライベートなアプリはどれですか？** プライベートだと決めつけられるアプリはありません。オンデバイス推論はプロンプトをベンダーの推論サーバーに送りませんが、アプリが分析データを送信する可能性は残ります。Data safetyの表示、プライバシーポリシー、権限を確認し、機内モードのテストを行ってください。PocketPal AIのようなオープンソースのアプリは監査できますが、クローズドソースの主張は信頼に頼ることになります。「プライバシーとテレメトリーの実情」を参照してください。`,
+          `**プライベートなアプリはどれですか？** プライベートだと決めつけられるアプリはありません。オンデバイス推論はプロンプトをベンダーの推論サーバーに送りませんが、アプリが分析データを送信する可能性は残ります。Data safetyの表示、プライバシーポリシー、権限を確認し、機内モードのテストを行ってください。PocketPal AIのようなオープンソースのアプリは監査できますが、クローズドソースの主張は信頼に頼ることになります。「プライバシーとテレメトリーの実情」を参照してください。`,
           `**インターネットなしで何ができますか？** このガイドの機能マップによると、チャット、カメラへの質問、音声入力、ドキュメントへの質問、翻訳は、ダウンロード後に適したモデルを使えばオフラインで動作する場合があります。画像生成と大きなモデルは遅いか、サーバーが必要です。「機能マップ」を参照してください。`,
           `**次に何を読めばよいですか？** 「15分で最初の実行」に従い、「まとめ：スマホの区分、アプリ、モデルサイズ」を1表のチートシートとして使い、特定の用途がある場合は「判断の道筋」を開いてください。`,
         ],
@@ -3773,7 +3773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '从这里开始：先装这三款应用',
         content: [
           `**时间不多？从下面三款中装一款，下载一个与您手机内存相匹配的模型，并在飞行模式下测试一次。** 这些推荐来自本指南的各章节和评测，而非基准测试；指南的其余部分会解释每个选择。`,
-          `**其他不错的起点：** 在 Pixel 9 或 10 上，可以试试 [PAIOS](/zh/power-local-llm/paios-review)，它使用 Google 的系统模型，无需下载；想用摄像头提问或使用 Gemma 模型，可用 [Google AI Edge Gallery](/zh/power-local-llm/google-ai-edge-gallery-review)；想从手机运行更大的模型，可通过 [LocalMind](/zh/power-local-llm/localmind-review) 连接到您自己电脑上的 Ollama 或 LM Studio。`,
+          `**其他不错的起点：** 在 AICore 支持 Gemini Nano 的手机上（例如 Pixel 9 或 10），可以试试 [PAIOS](/zh/power-local-llm/paios-review)，它使用 Google 的系统模型，无需下载；想用摄像头提问或使用 Gemma 模型，可用 [Google AI Edge Gallery](/zh/power-local-llm/google-ai-edge-gallery-review)；想从手机运行更大的模型，可通过 [LocalMind](/zh/power-local-llm/localmind-review) 连接到您自己电脑上的 Ollama 或 LM Studio。`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `新手可以从 PocketPal AI 开始，进阶用户可以用 Maid 搭配更大的 GGUF 模型，开发者可以用 ML Kit Prompt API 或 LiteRT-LM；无论哪种情况，模型大小都取决于手机的内存。` },
@@ -3801,7 +3801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**该下载哪个模型？** 按内存选择：4 至 6 GB 选 1 至 2B，8 GB 选 3 至 4B，12 至 16 GB 选 4 至 8B，其中 7 至 8B 只有在上下文较短时才装得下。拿不准时，选小的那个。参见下文“内存档位”。`,
           `**需要多少存储空间？** 为首个模型留出 3 至 6 GB 的可用空间，因为模型文件以 GB 计。参见“15分钟上手”。`,
           `**运行速度如何？** PromptQuorum 没有为本指南进行新的速度测试。速度受内存带宽限制，因此模型越小回答越快；请留意首次提问时文字出现的快慢，并以此作为您的基准。参见“芯片”一章。`,
-          `**哪款应用真正私密？** 不能默认任何一款是私密的。设备端推理会让您的提示词不经过厂商的推理服务器，但应用仍可能发送分析数据。请查看 Data safety 卡片、隐私政策和权限，并做飞行模式测试；PocketPal AI 这类开源应用可以审计，而闭源应用的说法则依赖信任。参见“隐私与遥测的实际情况”。`,
+          `**哪款应用是私密的？** 不能默认任何一款是私密的。设备端推理会让您的提示词不经过厂商的推理服务器，但应用仍可能发送分析数据。请查看 Data safety 卡片、隐私政策和权限，并做飞行模式测试；PocketPal AI 这类开源应用可以审计，而闭源应用的说法则依赖信任。参见“隐私与遥测的实际情况”。`,
           `**没有网络能做什么？** 根据本指南的能力地图，聊天、摄像头提问、听写、文档提问和翻译在下载后配合合适的模型可以离线工作；图像生成和大模型则很慢，或需要服务器。参见“能力地图”。`,
           `**接下来读什么？** 按“15分钟上手”操作，把“汇总：手机档位、应用、模型大小”当作一页表格速查，如果您有具体的用途，再打开“决策路径”。`,
         ],
@@ -4683,7 +4683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Empieza aquí: tres apps para instalar',
         content: [
           `**¿Poco tiempo? Instala una de estas tres apps, descarga un modelo que quepa en la RAM de tu teléfono y pruébalo una vez en modo avión.** Las recomendaciones salen de los capítulos y las reseñas de esta guía, no de benchmarks; el resto de la guía explica cada elección.`,
-          `**Otros buenos puntos de partida:** en un Pixel 9 o 10, prueba [PAIOS](/es/power-local-llm/paios-review), que usa el modelo del sistema de Google sin descarga; para preguntas con la cámara y modelos Gemma, usa [Google AI Edge Gallery](/es/power-local-llm/google-ai-edge-gallery-review); para ejecutar modelos más grandes desde tu teléfono, conéctalo a Ollama o LM Studio en tu propio equipo con [LocalMind](/es/power-local-llm/localmind-review).`,
+          `**Otros buenos puntos de partida:** en un telÃ©fono donde AICore es compatible con Gemini Nano, como un Pixel 9 o 10, prueba [PAIOS](/es/power-local-llm/paios-review), que usa el modelo del sistema de Google sin descarga; para preguntas con la cámara y modelos Gemma, usa [Google AI Edge Gallery](/es/power-local-llm/google-ai-edge-gallery-review); para ejecutar modelos más grandes desde tu teléfono, conéctalo a Ollama o LM Studio en tu propio equipo con [LocalMind](/es/power-local-llm/localmind-review).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `Los principiantes pueden empezar con PocketPal AI, los usuarios avanzados con Maid y un modelo GGUF más grande, y los desarrolladores con la ML Kit Prompt API o LiteRT-LM; en todos los casos el tamaño del modelo depende de la RAM del teléfono.` },
@@ -4711,7 +4711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**¿Qué modelo debo descargar?** Ajústate a tu RAM: 1 a 2B con 4 a 6 GB, 3 a 4B con 8 GB y 4 a 8B con 12 a 16 GB, donde 7 a 8B solo cabe con un contexto corto. Ante la duda, elige el más pequeño. Consulta «Niveles de RAM» más abajo.`,
           `**¿Cuánto almacenamiento necesito?** Deja libres de 3 a 6 GB para un primer modelo, porque los archivos de modelo se miden en gigabytes. Consulta «Primera ejecución en 15 minutos».`,
           `**¿Qué tan rápido va a funcionar?** PromptQuorum no hizo pruebas de velocidad nuevas para esta guía. La velocidad está limitada por el ancho de banda de memoria, así que un modelo más pequeño responde más rápido; fíjate en la rapidez con que aparecen las palabras en tu primer prompt y tómala como referencia. Consulta el capítulo «Chips».`,
-          `**¿Qué app es realmente privada?** No se puede dar por hecho que ninguna lo sea. La inferencia en el dispositivo mantiene tus prompts fuera de los servidores de inferencia de un proveedor, pero una app aún puede enviar analíticas. Revisa la tarjeta de seguridad de los datos (Data safety), la política de privacidad y los permisos, y haz la prueba en modo avión; las apps de código abierto como PocketPal AI se pueden auditar, mientras que las afirmaciones de las de código cerrado se basan en la confianza. Consulta «Privacidad y realidad de la telemetría».`,
+          `**¿Qué app es privada?** No se puede dar por hecho que ninguna lo sea. La inferencia en el dispositivo mantiene tus prompts fuera de los servidores de inferencia de un proveedor, pero una app aún puede enviar analíticas. Revisa la tarjeta de seguridad de los datos (Data safety), la política de privacidad y los permisos, y haz la prueba en modo avión; las apps de código abierto como PocketPal AI se pueden auditar, mientras que las afirmaciones de las de código cerrado se basan en la confianza. Consulta «Privacidad y realidad de la telemetría».`,
           `**¿Qué puedo hacer sin internet?** Según el mapa de capacidades de esta guía, el chat, las preguntas con la cámara, el dictado, las preguntas sobre documentos y la traducción pueden funcionar sin conexión con modelos adecuados tras la descarga; la generación de imágenes y los modelos grandes son lentos o necesitan un servidor. Consulta «El mapa de capacidades».`,
           `**¿Qué leo a continuación?** Sigue «Primera ejecución en 15 minutos», usa «Resumen: nivel de teléfono, app, tamaño de modelo» como chuleta en una sola tabla y abre la «Ruta de decisión» si tienes una tarea concreta en mente.`,
         ],
@@ -5593,7 +5593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comece aqui: três apps para instalar',
         content: [
           `**Pouco tempo? Instale um destes três apps, baixe um modelo que caiba na RAM do seu celular e teste-o uma vez no modo avião.** As indicações vêm dos capítulos e das análises deste guia, não de benchmarks; o restante do guia explica cada escolha.`,
-          `**Outros bons pontos de partida:** em um Pixel 9 ou 10, experimente o [PAIOS](/pt/power-local-llm/paios-review), que usa o modelo do sistema do Google sem download; para perguntas com a câmera e modelos Gemma, use o [Google AI Edge Gallery](/pt/power-local-llm/google-ai-edge-gallery-review); para rodar modelos maiores a partir do seu celular, conecte-o ao Ollama ou ao LM Studio no seu próprio computador com o [LocalMind](/pt/power-local-llm/localmind-review).`,
+          `**Outros bons pontos de partida:** em um celular em que o AICore oferece suporte ao Gemini Nano, como um Pixel 9 ou 10, experimente o [PAIOS](/pt/power-local-llm/paios-review), que usa o modelo do sistema do Google sem download; para perguntas com a câmera e modelos Gemma, use o [Google AI Edge Gallery](/pt/power-local-llm/google-ai-edge-gallery-review); para rodar modelos maiores a partir do seu celular, conecte-o ao Ollama ou ao LM Studio no seu próprio computador com o [LocalMind](/pt/power-local-llm/localmind-review).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `Iniciantes podem começar com o PocketPal AI, usuários avançados com o Maid e um modelo GGUF maior, e desenvolvedores com a ML Kit Prompt API ou o LiteRT-LM; em todos os casos o tamanho do modelo segue a RAM do celular.` },
@@ -5621,7 +5621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Qual modelo devo baixar?** Siga a sua RAM: 1 a 2B com 4 a 6 GB, 3 a 4B com 8 GB e 4 a 8B com 12 a 16 GB, em que 7 a 8B só cabe com contexto curto. Na dúvida, escolha o menor. Veja “Faixas de RAM” mais abaixo.`,
           `**Quanto armazenamento eu preciso?** Deixe livres de 3 a 6 GB para um primeiro modelo, porque os arquivos de modelo são medidos em gigabytes. Veja “Primeira execução em 15 minutos”.`,
           `**Qual será a velocidade?** A PromptQuorum não executou novos testes de velocidade para este guia. A velocidade é limitada pela largura de banda da memória, então um modelo menor responde mais rápido; observe a rapidez com que as palavras aparecem no seu primeiro prompt e use isso como referência. Veja o capítulo “Chips”.`,
-          `**Qual app é realmente privado?** Nenhum pode ser presumido como privado. A inferência no dispositivo mantém seus prompts fora dos servidores de inferência de um fornecedor, mas um app ainda pode enviar dados de análise. Confira o cartão de segurança dos dados (Data safety), a política de privacidade e as permissões, e faça o teste no modo avião; apps de código aberto como o PocketPal AI podem ser auditados, enquanto as afirmações dos de código fechado dependem de confiança. Veja “Privacidade e a realidade da telemetria”.`,
+          `**Qual app é privado?** Nenhum pode ser presumido como privado. A inferência no dispositivo mantém seus prompts fora dos servidores de inferência de um fornecedor, mas um app ainda pode enviar dados de análise. Confira o cartão de segurança dos dados (Data safety), a política de privacidade e as permissões, e faça o teste no modo avião; apps de código aberto como o PocketPal AI podem ser auditados, enquanto as afirmações dos de código fechado dependem de confiança. Veja “Privacidade e a realidade da telemetria”.`,
           `**O que posso fazer sem internet?** Segundo o mapa de capacidades deste guia, chat, perguntas com a câmera, ditado, perguntas sobre documentos e tradução podem funcionar offline com modelos adequados depois do download; a geração de imagens e os modelos grandes são lentos ou precisam de um servidor. Veja “O mapa de capacidades”.`,
           `**O que leio em seguida?** Siga “Primeira execução em 15 minutos”, use “Resumo: faixa de celular, app, tamanho de modelo” como guia rápido em uma única tabela e abra o “Caminho de decisão” se você tiver uma tarefa específica em mente.`,
         ],
@@ -6503,7 +6503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ابدأ من هنا: ثلاثة تطبيقات للتثبيت',
         content: [
           `**الوقت ضيق؟ ثبّت واحداً من هذه التطبيقات الثلاثة، ونزّل نموذجاً يناسب ذاكرة RAM في هاتفك، واختبره مرة واحدة في وضع الطيران.** جاءت هذه الترشيحات من فصول هذا الدليل ومراجعاته، لا من اختبارات الأداء المرجعية؛ ويشرح بقية الدليل كل اختيار.`,
-          `**نقاط انطلاق جيدة أخرى:** على هاتف Pixel 9 أو 10، جرّب [PAIOS](/ar/power-local-llm/paios-review) الذي يستخدم نموذج النظام من Google دون تنزيل؛ ولأسئلة الكاميرا ونماذج Gemma استخدم [Google AI Edge Gallery](/ar/power-local-llm/google-ai-edge-gallery-review)؛ ولتشغيل نماذج أكبر من هاتفك، صِله بـ Ollama أو LM Studio على حاسوبك الخاص عبر [LocalMind](/ar/power-local-llm/localmind-review).`,
+          `**نقاط انطلاق جيدة أخرى:** على هاتف يدعم فيه AICore نموذج Gemini Nano، مثل Pixel 9 أو 10، جرّب [PAIOS](/ar/power-local-llm/paios-review) الذي يستخدم نموذج النظام من Google دون تنزيل؛ ولأسئلة الكاميرا ونماذج Gemma استخدم [Google AI Edge Gallery](/ar/power-local-llm/google-ai-edge-gallery-review)؛ ولتشغيل نماذج أكبر من هاتفك، صِله بـ Ollama أو LM Studio على حاسوبك الخاص عبر [LocalMind](/ar/power-local-llm/localmind-review).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `يمكن للمبتدئين البدء بـ PocketPal AI، وللمتقدمين بـ Maid مع نموذج GGUF أكبر، وللمطورين بـ ML Kit Prompt API أو LiteRT-LM؛ وفي كل الحالات يتبع حجم النموذج ذاكرة RAM في الهاتف.` },
@@ -6531,7 +6531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**أي نموذج أنزّل؟** اختر بحسب ذاكرة RAM: 1 إلى 2B مع 4 إلى 6 GB، و3 إلى 4B مع 8 GB، و4 إلى 8B مع 12 إلى 16 GB، حيث لا يتسع 7 إلى 8B إلا مع سياق قصير. وعند الشك اختر الأصغر. انظر «فئات الذاكرة» أدناه.`,
           `**كم أحتاج من مساحة التخزين؟** وفّر 3 إلى 6 GB من المساحة الحرة لنموذج أول، لأن ملفات النماذج تُقاس بالغيغابايت. انظر «أول تشغيل في 15 دقيقة».`,
           `**ما سرعة التشغيل؟** لم تُجرِ PromptQuorum اختبارات سرعة جديدة لهذا الدليل. تتحدد السرعة بعرض نطاق الذاكرة، لذا يجيب النموذج الأصغر أسرع؛ لاحظ سرعة ظهور الكلمات عند أول prompt لك واعتبرها مرجعك. انظر فصل «الشرائح».`,
-          `**أي تطبيق خاص حقاً؟** لا يمكن افتراض الخصوصية في أي منها. يُبقي الاستدلال على الجهاز الـ prompts الخاصة بك بعيداً عن خوادم الاستدلال لدى المورّد، لكن التطبيق قد يظل يرسل بيانات تحليلية. راجع بطاقة أمان البيانات (Data safety) وسياسة الخصوصية والأذونات، وأجرِ اختبار وضع الطيران؛ والتطبيقات مفتوحة المصدر مثل PocketPal AI يمكن تدقيقها، بينما تقوم ادعاءات التطبيقات مغلقة المصدر على الثقة. انظر «واقع الخصوصية والقياس عن بُعد».`,
+          `**أي تطبيق خاص؟** لا يمكن افتراض الخصوصية في أي منها. يُبقي الاستدلال على الجهاز الـ prompts الخاصة بك بعيداً عن خوادم الاستدلال لدى المورّد، لكن التطبيق قد يظل يرسل بيانات تحليلية. راجع بطاقة أمان البيانات (Data safety) وسياسة الخصوصية والأذونات، وأجرِ اختبار وضع الطيران؛ والتطبيقات مفتوحة المصدر مثل PocketPal AI يمكن تدقيقها، بينما تقوم ادعاءات التطبيقات مغلقة المصدر على الثقة. انظر «واقع الخصوصية والقياس عن بُعد».`,
           `**ماذا أستطيع أن أفعل دون إنترنت؟** وفق خريطة القدرات في هذا الدليل، قد تعمل المحادثة وأسئلة الكاميرا والإملاء والأسئلة عن المستندات والترجمة دون اتصال مع نماذج مناسبة بعد التنزيل؛ أما توليد الصور والنماذج الكبيرة فبطيئة أو تحتاج إلى خادم. انظر «خريطة القدرات».`,
           `**ماذا أقرأ بعد ذلك؟** اتبع «أول تشغيل في 15 دقيقة»، واستخدم «ملخص: فئة الهاتف والتطبيق وحجم النموذج» كجدول مرجعي واحد، وافتح «مسار القرار» إذا كانت لديك مهمة محددة.`,
         ],
@@ -7413,7 +7413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '여기서 시작: 설치할 앱 세 가지',
         content: [
           `**시간이 부족하다면 이 세 가지 중 하나를 설치하고, 스마트폰 RAM에 맞는 모델을 내려받은 뒤, 비행기 모드에서 한 번 테스트하십시오.** 이 추천은 벤치마크가 아니라 이 가이드의 각 장과 리뷰에서 나온 것이며, 각 선택의 이유는 가이드의 나머지 부분에서 설명합니다.`,
-          `**다른 좋은 시작점:** Pixel 9 또는 10에서는 다운로드 없이 Google의 시스템 모델을 사용하는 [PAIOS](/ko/power-local-llm/paios-review)를 사용해 보십시오. 카메라 질문과 Gemma 모델에는 [Google AI Edge Gallery](/ko/power-local-llm/google-ai-edge-gallery-review)를 사용하십시오. 더 큰 모델을 스마트폰에서 실행하려면 [LocalMind](/ko/power-local-llm/localmind-review)로 자신의 컴퓨터에 있는 Ollama 또는 LM Studio에 연결하십시오.`,
+          `**다른 좋은 시작점:** AICore가 Gemini Nano를 지원하는 휴대폰(예: Pixel 9 또는 10)에서는 다운로드 없이 Google의 시스템 모델을 사용하는 [PAIOS](/ko/power-local-llm/paios-review)를 사용해 보십시오. 카메라 질문과 Gemma 모델에는 [Google AI Edge Gallery](/ko/power-local-llm/google-ai-edge-gallery-review)를 사용하십시오. 더 큰 모델을 스마트폰에서 실행하려면 [LocalMind](/ko/power-local-llm/localmind-review)로 자신의 컴퓨터에 있는 Ollama 또는 LM Studio에 연결하십시오.`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `초보자는 PocketPal AI로, 고급 사용자는 Maid와 더 큰 GGUF 모델로, 개발자는 ML Kit Prompt API 또는 LiteRT-LM으로 시작할 수 있으며, 어느 경우든 모델 크기는 스마트폰의 RAM에 맞춥니다.` },
@@ -7441,7 +7441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**어떤 모델을 내려받아야 합니까?** RAM에 맞추십시오. 4~6 GB이면 1~2B, 8 GB이면 3~4B, 12~16 GB이면 4~8B이며, 7~8B는 짧은 컨텍스트에서만 들어갑니다. 확신이 없으면 더 작은 모델을 고르십시오. 아래의 'RAM 구간'을 참고하십시오.`,
           `**저장 공간은 얼마나 필요합니까?** 첫 모델을 위해 3~6 GB의 여유 공간을 확보하십시오. 모델 파일은 기가바이트 단위이기 때문입니다. '15분 만에 첫 실행'을 참고하십시오.`,
           `**얼마나 빠르게 실행됩니까?** PromptQuorum은 이 가이드를 위해 새로운 속도 테스트를 실행하지 않았습니다. 속도는 메모리 대역폭에 제한되므로 작은 모델일수록 더 빨리 답합니다. 첫 prompt에서 단어가 나타나는 속도를 기록해 두고 이를 기준으로 삼으십시오. '칩' 장을 참고하십시오.`,
-          `**어떤 앱이 정말 프라이빗합니까?** 프라이빗하다고 가정할 수 있는 앱은 없습니다. 온디바이스 추론은 prompt가 공급업체의 추론 서버로 가지 않게 하지만, 앱이 분석 데이터를 보낼 수는 있습니다. Data safety 카드, 개인정보 처리방침, 권한을 확인하고 비행기 모드 테스트를 하십시오. PocketPal AI 같은 오픈 소스 앱은 감사할 수 있지만, 클로즈드 소스의 주장은 신뢰에 의존합니다. '개인정보와 원격 측정의 현실'을 참고하십시오.`,
+          `**어떤 앱이 프라이빗합니까?** 프라이빗하다고 가정할 수 있는 앱은 없습니다. 온디바이스 추론은 prompt가 공급업체의 추론 서버로 가지 않게 하지만, 앱이 분석 데이터를 보낼 수는 있습니다. Data safety 카드, 개인정보 처리방침, 권한을 확인하고 비행기 모드 테스트를 하십시오. PocketPal AI 같은 오픈 소스 앱은 감사할 수 있지만, 클로즈드 소스의 주장은 신뢰에 의존합니다. '개인정보와 원격 측정의 현실'을 참고하십시오.`,
           `**인터넷 없이 무엇을 할 수 있습니까?** 이 가이드의 기능 지도에 따르면, 채팅, 카메라 질문, 받아쓰기, 문서 질문, 번역은 다운로드 후 적합한 모델과 함께 오프라인에서 작동할 수 있습니다. 이미지 생성과 큰 모델은 느리거나 서버가 필요합니다. '기능 지도'를 참고하십시오.`,
           `**다음에 무엇을 읽어야 합니까?** '15분 만에 첫 실행'을 따르고, '요약: 스마트폰 등급, 앱, 모델 크기'를 표 한 장짜리 치트 시트로 활용하며, 특정 용도가 있다면 '선택 경로'를 여십시오.`,
         ],
