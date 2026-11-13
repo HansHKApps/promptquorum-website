@@ -21466,6 +21466,87 @@
   },
   {
     "lang": "en",
+    "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+    "excerpt": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover mapped to chat, voice, vision, documents and more.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Lokale KI auf Android 2026: Was möglich ist, was nicht, und die Apps, die wir behandeln",
+    "excerpt": "Lokale KI auf Android 2026: was offline läuft, was nicht, RAM- und Chip-Grenzen sowie die behandelten Apps nach Aufgabe, von Chat bis Dokumente.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "IA locale sur Android en 2026 : ce qui est possible, ce qui ne l'est pas et les applications que nous couvrons",
+    "excerpt": "IA locale sur Android en 2026 : ce qui marche hors ligne, limites de RAM et de puce, et nos applications classées par usage : chat, voix, vision, docs.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "2026年のAndroidローカルAI：できること、できないこと、対応アプリ",
+    "excerpt": "2026年のAndroidローカルAIを解説。オフラインで動くこと、動かないこと、RAMとチップの限界、チャットや音声など用途別の対応アプリをまとめました。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "2026年安卓本地AI：能做什么、不能做什么，以及我们收录的应用",
+    "excerpt": "2026年安卓本地AI指南：哪些任务能离线运行、哪些不能，内存与芯片限制，以及我们收录的应用按聊天、语音、视觉、文档等任务的分类，另含开发者路径。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "IA local en Android en 2026: qué es posible, qué no y las apps que cubrimos",
+    "excerpt": "IA local en Android en 2026: qué funciona sin conexión, qué no, límites de RAM y chip, y las apps que cubrimos según chat, voz, visión y documentos.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "IA local no Android em 2026: o que é possível, o que não é e os apps que cobrimos",
+    "excerpt": "IA local no Android em 2026: o que roda offline, o que não roda, limites de RAM e chip, e os apps que cobrimos para chat, voz, visão, documentos e mais.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "الذكاء الاصطناعي المحلي على Android في 2026: ما الممكن وما غير الممكن والتطبيقات التي نغطيها",
+    "excerpt": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، من الدردشة إلى الصوت.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 Android 로컬 AI: 가능한 것, 불가능한 것, 그리고 다루는 앱",
+    "excerpt": "2026년 Android 로컬 AI: 오프라인으로 되는 것과 안 되는 것, RAM과 칩의 한계, 우리가 다루는 앱을 용도별로 정리했습니다.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/local-ai-on-android-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
     "excerpt": "Six ways to run LLMs on iPhone in 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat. Cost, privacy and RAM guide per iPhone.",
     "publishDate": "2026-05-08",
@@ -21543,6 +21624,87 @@
     "publishDate": "2026-05-08",
     "dateModified": "2026-11-13",
     "url": "/ko/power-local-llm/best-local-llm-apps-iphone-2026",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+    "excerpt": "What local AI on iPhone can and cannot do in 2026: chip and RAM limits, Apple Intelligence, App Store rules, and the iPhone apps we cover by use case.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Lokale KI auf dem iPhone 2026: Was möglich ist, was nicht und welche iPhone-Apps wir behandeln",
+    "excerpt": "Was lokale KI auf dem iPhone 2026 kann und was nicht: Chip- und RAM-Grenzen, Apple Intelligence, App-Store-Regeln und iPhone-Apps nach Einsatzzweck.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "IA locale sur iPhone en 2026 : ce qui est possible, ce qui ne l'est pas, et les applications iPhone que nous couvrons",
+    "excerpt": "Ce que l'IA locale sur iPhone peut et ne peut pas faire en 2026 : limites de puce et de RAM, Apple Intelligence, règles App Store et apps par usage.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "2026年のiPhoneローカルAI：できること、できないこと、当サイトが扱うiPhoneアプリ",
+    "excerpt": "iPhoneのローカルAIでできること・できないことを2026年版で解説。チップとRAMの限界、Apple Intelligence、App Storeの規則、用途別のiPhoneアプリを紹介します。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "iPhone本地AI 2026：能做什么、不能做什么，以及我们收录的iPhone应用",
+    "excerpt": "2026年iPhone本地AI能做什么、不能做什么：芯片与内存限制、Apple Intelligence、App Store规则，以及按用途整理的我们收录的iPhone应用。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "IA local en iPhone en 2026: qué es posible, qué no y las apps de iPhone que cubrimos",
+    "excerpt": "Qué puede y qué no puede hacer la IA local en iPhone en 2026: límites de chip y RAM, Apple Intelligence, reglas de la App Store y apps según el uso.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "IA local no iPhone em 2026: o que é possível, o que não é e os apps de iPhone que cobrimos",
+    "excerpt": "O que a IA local no iPhone faz e não faz em 2026: limites de chip e RAM, Apple Intelligence, regras da App Store e os apps de iPhone por caso de uso.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "الذكاء الاصطناعي المحلي على iPhone في 2026: ما الممكن وما غير الممكن وتطبيقات iPhone التي نغطيها",
+    "excerpt": "ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله وما لا يستطيعه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store والتطبيقات حسب الاستخدام.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/local-ai-on-iphone-guide",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 iPhone 로컬 AI: 가능한 것, 불가능한 것, 그리고 이 가이드가 다루는 iPhone 앱",
+    "excerpt": "2026년 iPhone 로컬 AI로 되는 것과 안 되는 것: 칩·RAM 한계, Apple Intelligence, App Store 규정, 용도별 iPhone 앱 정리.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/local-ai-on-iphone-guide",
     "cluster": "power-local-llm"
   },
   {

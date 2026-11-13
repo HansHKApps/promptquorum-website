@@ -6368,6 +6368,24 @@
         }
       ]
     },
+    "local-ai-on-android-guide": {
+      "dateModified": "2026-11-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-13",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "best-local-llm-apps-iphone-2026": {
       "dateModified": "2026-11-13",
       "lastFactChecked": null,
@@ -6406,6 +6424,24 @@
           "title": "iOS integration of iPhone local LLM apps: which support Shortcuts, Siri, open source and App Store install"
         }
       ]
+    },
+    "local-ai-on-iphone-guide": {
+      "dateModified": "2026-11-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-13",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     },
     "best-local-llm-apps-mac": {
       "dateModified": "2026-11-13",
