@@ -1714,6 +1714,11 @@
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
   },
+  "dayflow": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dayflow-review",
+    "url": "/power-local-llm/dayflow-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",
