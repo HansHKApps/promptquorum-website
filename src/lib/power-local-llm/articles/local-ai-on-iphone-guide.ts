@@ -1865,11 +1865,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kein nachgeladener Code, der die App verändert (Richtlinie 2.5.2).** Apples Text (englisches Original, hier übersetzt): Apps „dürfen keinen Code herunterladen, installieren oder ausführen, der Features oder Funktionen der App einführt oder verändert“. Lokale KI-Apps bleiben innerhalb dieser Regel, indem sie die Engine in der App mitliefern und Modellgewichte herunterladen, die Daten sind. Das ist unsere Lesart, keine Aussage von Apple.',
           '**Kein Ollama-Server auf dem Telefon.** Ollama bietet keine iPhone-App an, und die App-Store-Sandbox lässt keinen praktikablen Weg, einen Ollama-Server oder einen Docker-Container auszuführen. Es gibt einige Shell-Apps in einer Sandbox, aber sie bieten keinen Server für lokale Modelle.',
           '**Nur öffentliche APIs (Richtlinie 2.5.1).** Apps dürfen nur öffentliche APIs verwenden, weshalb Foundation Models, Core ML, Metal und MLX die verfügbaren Wege sind und privater Zugriff auf die Neural Engine nicht.',
-          '**Energie und Wärme (Richtlinie 2.4.2).** Apple sagt, Apps „sollten den Akku nicht schnell entleeren, keine übermäßige Wärme erzeugen und Geräteressourcen nicht unnötig belasten“. Dauerhaftes Erzeugen stellt diese Zeile auf die Probe, weshalb Apps lange Läufe drosseln oder beenden.',
+          '**Energie und Wärme (Richtlinie 2.4.2).** Apple sagt (übersetzt), Apps „sollten den Akku nicht schnell entleeren, keine übermäßige Wärme erzeugen und Geräteressourcen nicht unnötig belasten“. Dauerhaftes Erzeugen stellt diese Zeile auf die Probe, weshalb Apps lange Läufe drosseln oder beenden.',
           '**Hintergrundnutzung ist begrenzt (Richtlinie 2.5.4).** Multitasking-Apps dürfen Hintergrunddienste nur für vorgesehene Zwecke wie Audiowiedergabe, Standort, Abschluss von Aufgaben und lokale Mitteilungen nutzen. Ein Modell kann nicht unbegrenzt weiter erzeugen oder als Agent handeln, sobald Sie die App verlassen; [Reins](/de/power-local-llm/reins-review) merkt an, dass Erzeugung im Hintergrund iOS 26 voraussetzt.',
           '**Speichergrenzen.** iOS begrenzt, wie viel RAM eine App im Vordergrund nutzen darf. Apple veröffentlicht ein Entitlement für ein erhöhtes Speicherlimit (com.apple.developer.kernel.increased-memory-limit), das Entwickler beantragen können; die genaue Zuteilung nennen wir nicht. Sie können nicht sehen, ob eine App es hat, testen Sie ein Modell daher mit dem eigenen Benchmark der App, bevor Sie sich darauf verlassen.',
           '**JIT und Kompilierung zur Laufzeit.** Desktop-Engines kompilieren Code oft zur Laufzeit; iOS-Apps liefern stattdessen vorab kompilierte Engines aus. Das ist allgemeines Plattformverhalten, von mehreren Engine-Projekten vermerkt, und ein Grund, warum iPhone-Engines den Desktop-Engines bei den Funktionen hinterherhinken.',
-          '**Datenweitergabe (Richtlinien 5.1.1 und 5.1.2).** Apps müssen eine Datenschutzerklärung verlinken, erklären, welche Daten erhoben werden, vor der Weitergabe personenbezogener Daten an Dritte „auch an Drittanbieter-KI“ die Erlaubnis einholen und dürfen Daten nicht ohne Einwilligung zweckentfremden. Die Datenschutz-Labels im App Store werden vom Entwickler ausgefüllt, worauf das Datenschutzkapitel zurückkommt.',
+          '**Datenweitergabe (Richtlinien 5.1.1 und 5.1.2).** Apps müssen eine Datenschutzerklärung verlinken, erklären, welche Daten erhoben werden, vor der Weitergabe personenbezogener Daten an Dritte „auch an Drittanbieter-KI“ (übersetzt) die Erlaubnis einholen und dürfen Daten nicht ohne Einwilligung zweckentfremden. Die Datenschutz-Labels im App Store werden vom Entwickler ausgefüllt, worauf das Datenschutzkapitel zurückkommt.',
           '**Sideloading und alternative Marktplätze.** In der EU gibt es alternative App-Marktplätze nach dem Digital Markets Act, aber jeder Entwickler entscheidet, wo er veröffentlicht. Keine der Apps in diesem Leitfaden braucht einen solchen Marktplatz; [LLM Farm](/de/power-local-llm/llm-farm-review) ist die Ausnahme, die derzeit aus dem Quellcode in Xcode gebaut werden muss.',
           '**TestFlight-Betas.** Mehrere Hersteller bieten TestFlight-Builds an (zum Beispiel [Aiko](/de/power-local-llm/aiko-review) für eine kostenlose Testversion und [fullmoon](/de/power-local-llm/fullmoon-review) für neuere Builds). TestFlight-Builds sind zeitlich begrenzt und unfertig; nutzen Sie sie zum Testen, nicht für Daten, die Sie nicht verlieren dürfen.',
         ],
@@ -2628,7 +2628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'IA locale sur iPhone en 2026 : ce qui est possible, ce qui ne l\'est pas, et les applications iPhone que nous couvrons',
     seoTitle: 'IA locale sur iPhone en 2026 : possibilités et limites',
     intro:
-      'Un iPhone récent peut exécuter un modèle de langage utile hors ligne une fois le modèle téléchargé, mais seulement des modèles de petite taille : environ 1 à 4 milliards de paramètres avec 6 à 8 GB de RAM. Ce guide décrit ce que l\'IA locale sur iPhone peut faire, ce qui n\'est possible qu\'en partie et ce qui est tout simplement impossible, explique Apple Intelligence, le framework Foundation Models et les règles de l\'App Store, et associe les applications iPhone que nous couvrons dans le répertoire PromptQuorum à l\'usage qui leur correspond. Les informations sur les applications proviennent des tests de PromptQuorum, fondés sur des sources publiques sauf mention contraire d\'un test pratique dans l\'article concerné ; ce guide n\'a re-testé aucune application.',
+      'Un iPhone récent peut exécuter un modèle de langage utile hors ligne une fois le modèle téléchargé, mais seulement des modèles de petite taille : environ 1 à 4 milliards de paramètres avec 6 à 8 GB de RAM. Ce guide décrit ce que l\'IA locale sur iPhone peut faire, ce qui n\'est possible qu\'en partie et ce qui est tout simplement impossible, explique Apple Intelligence, le framework Foundation Models et les règles de l\'App Store, et associe les applications iPhone que nous couvrons dans le répertoire PromptQuorum à l\'usage qui leur correspond. Les informations sur les applications proviennent des analyses de PromptQuorum, fondés sur des sources publiques sauf mention contraire d\'un test pratique dans l\'article concerné ; ce guide n\'a re-testé aucune application.',
     metaDescription:
       'Ce que l\'IA locale sur iPhone peut et ne peut pas faire en 2026 : limites de puce et de RAM, Apple Intelligence, règles App Store et apps par usage.',
     heroImage: '/images/local-ai-on-iphone-guide-hero-fr.webp',
@@ -2830,7 +2830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La RAM, et non le nom de la puce, détermine la taille du modèle.** Apple ne publie pas la RAM des iPhone ; les chiffres de ce guide sont des caractéristiques largement rapportées. Un iPhone de 4 GB est en dessous du seuil pratique, 6 GB permettent des modèles de 1-2B, 8 GB des modèles de 3-4B, 12 GB offrent une marge supplémentaire.',
           '**Apple Intelligence et le framework Foundation Models forment une seconde voie, distincte.** Le modèle embarqué d\'Apple est déjà sur le téléphone (iPhone 15 Pro et plus récents), ne demande aucun téléchargement et peut être utilisé par des applications tierces. Ce n\'est pas une application de conversation générale à lui seul, et des limites de langue et de région s\'appliquent.',
           '**L\'App Store impose des limites strictes.** Pas de Docker et pas d\'Ollama sur le téléphone ; les applications ne peuvent pas télécharger de code qui modifie leurs fonctionnalités (directive Apple 2.5.2), si bien que chaque moteur est livré dans l\'application et que seuls les fichiers de modèle sont téléchargés. C\'est pourquoi l\'IA locale sur iPhone consiste à installer une application, pas à monter une pile logicielle.',
-          '**La plupart des besoins d\'un propriétaire d\'iPhone ont une application testée dans notre répertoire :** conversation, questions sur l\'appareil photo, dictée et transcription, dialogue avec des documents, traduction, génération d\'images, recherche de photos, notes, questions de santé, jeu de rôle, contrôle de la maison connectée et accès distant à un serveur domestique. Ce guide associe la plupart des applications iPhone de notre répertoire à la capacité qui leur correspond.',
+          '**La plupart des besoins d\'un propriétaire d\'iPhone ont une application analysée dans notre répertoire :** conversation, questions sur l\'appareil photo, dictée et transcription, dialogue avec des documents, traduction, génération d\'images, recherche de photos, notes, questions de santé, jeu de rôle, contrôle de la maison connectée et accès distant à un serveur domestique. Ce guide associe la plupart des applications iPhone de notre répertoire à la capacité qui leur correspond.',
           '**Plusieurs choses sont impossibles ou seulement partiellement possibles :** les modèles de 30B et plus, le raisonnement de qualité « frontière », les agents permanents en arrière-plan, le remplacement de Siri par votre propre modèle, l\'affinage (fine-tuning) sur le téléphone, et une garantie de confidentialité fondée sur la seule étiquette de l\'App Store.',
           '**« Zéro télémétrie » se vérifie, il ne se croit pas sur parole.** Plusieurs applications qui affirment garder la conversation sur l\'appareil envoient tout de même des rapports de plantage, des événements d\'usage ou des requêtes web optionnelles ; le chapitre sur la confidentialité montre comment vérifier avec le mode Avion et le Rapport de confidentialité des apps.',
           '**Commencez petit :** installez une application, téléchargez un modèle de 1 à 2 GB en Wi-Fi, passez en mode Avion et posez une question. Si cela fonctionne, vous avez vérifié tout le parcours hors ligne en moins de 15 minutes.',
@@ -2845,15 +2845,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Niveaux de RAM utilisés dans ce guide (rapportés, non publiés par Apple) :** 4 GB (iPhone 12, 13, SE), 6 GB (iPhone 13 Pro, 14, 14 Pro, 15), 8 GB (iPhone 15 Pro, série 16, 16e, 17), 12 GB (iPhone 17 Pro et Pro Max).',
           '**Tailles de modèle qui tiennent :** environ 1.1 GB pour un modèle de 1.7B en 4 bits, environ 2.5-3.7 GB pour des modèles de 3-4B ; les vitesses indicatives viennent de notre comparatif iPhone et ne sont pas de nouvelles mesures.',
           '**Moteurs présents dans les applications iPhone :** llama.cpp (GGUF), Apple MLX, MLC LLM, Google LiteRT-LM, ExecuTorch, Core ML, Apple Foundation Models ; quelques applications en combinent plusieurs.',
-          '**Applications citées dans ce guide :** les applications iOS et iPadOS de notre répertoire qui ont un test PromptQuorum, ainsi que des applications iPhone compagnons pour des outils auto-hébergés.',
-          '**Ce que PromptQuorum n\'a pas fait :** ce guide n\'a re-testé aucune application. Les informations proviennent de nos tests, des fiches de store, des sites des éditeurs et de la documentation d\'Apple, et chaque test précise ce qui a été essayé.',
+          '**Applications citées dans ce guide :** les applications iOS et iPadOS de notre répertoire qui ont une analyse PromptQuorum, ainsi que des applications iPhone compagnons pour des outils auto-hébergés.',
+          '**Ce que PromptQuorum n\'a pas fait :** ce guide n\'a re-testé aucune application. Les informations proviennent de nos analyses, des fiches de store, des sites des éditeurs et de la documentation d\'Apple, et chaque analyse précise ce qui a été essayé.',
         ],
       },
       whatIsPossible: {
         id: 'capability-map',
         title: 'Carte des capacités : ce que l\'IA locale sur iPhone sait faire',
         content:
-          '**L\'IA locale sur iPhone couvre la plupart des tâches de langage courantes et plusieurs tâches multimédias, mais pas tout ce que font les assistants cloud.** Le tableau classe chaque capacité en Fonctionne, En partie ou Pas encore, et le chapitre suivant nomme les applications. « Fonctionne » signifie qu\'une application iPhone testée le fait avec le modèle sur le téléphone ; « En partie » signifie que cela fonctionne avec des limites de taille, de vitesse, de précision ou de matériel ; « Pas encore » signifie qu\'aucune application iPhone testée ne le fait sur l\'appareil.',
+          '**L\'IA locale sur iPhone couvre la plupart des tâches de langage courantes et plusieurs tâches multimédias, mais pas tout ce que font les assistants cloud.** Le tableau classe chaque capacité en Fonctionne, En partie ou Pas encore, et le chapitre suivant nomme les applications. « Fonctionne » signifie qu\'une application iPhone analysée le fait avec le modèle sur le téléphone ; « En partie » signifie que cela fonctionne avec des limites de taille, de vitesse, de précision ou de matériel ; « Pas encore » signifie qu\'aucune application iPhone analysée ne le fait sur l\'appareil.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2956,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Capacité': 'Agents autonomes permanents',
             'Sur iPhone': 'Pas encore',
             'Configuration type': 'iOS limite le travail en arrière-plan',
-            'Chapitre': 'Impossible',
+            'Chapitre': 'Pas possible',
           },
           {
             'Capacité': 'Exécuter des modèles de 30B et plus',
@@ -3026,7 +3026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Applications llama.cpp (fichiers GGUF) :** [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review), [Pocket AI](/fr/power-local-llm/pocket-ai-review) et [LLM Farm](/fr/power-local-llm/llm-farm-review) utilisent Metal sur le GPU. Elles acceptent n\'importe quel fichier GGUF, donc des modèles de Hugging Face peuvent fonctionner.',
           '**Applications Apple MLX :** [Locally AI](/fr/power-local-llm/locally-ai-review), [fullmoon](/fr/power-local-llm/fullmoon-review) et [MLXHub](/fr/power-local-llm/mlxhub-review) utilisent le framework de tableaux MLX d\'Apple, conçu pour la mémoire unifiée du silicium Apple.',
-          '**Applications multiformats :** [Noema](/fr/power-local-llm/noema-review) prend en charge GGUF, MLX, ExecuTorch, Core ML et Apple Foundation Models dans une seule application, ce qui explique que son usage du matériel varie selon le format du modèle (déclaration de l\'éditeur dans le test).',
+          '**Applications multiformats :** [Noema](/fr/power-local-llm/noema-review) prend en charge GGUF, MLX, ExecuTorch, Core ML et Apple Foundation Models dans une seule application, ce qui explique que son usage du matériel varie selon le format du modèle (déclaration de l\'éditeur dans l\'analyse).',
           '**Applications à modèles compilés :** [MLC Chat](/fr/power-local-llm/mlc-chat-review) exécute des modèles compilés par la chaîne d\'outils MLC LLM ; [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) utilise l\'environnement d\'exécution LiteRT-LM de Google.',
           '**Le modèle propre à Apple :** Apple Intelligence exécute le modèle d\'Apple via les frameworks système. Des applications comme [Compass - Local AI](/fr/power-local-llm/compass-local-ai-review) et [Pajdo](/fr/power-local-llm/pajdo-review) l\'appellent au lieu de livrer un modèle.',
           '**Conséquence pratique :** deux applications exécutant un modèle de même taille sur le même iPhone peuvent différer en vitesse, en mémoire utilisée et en chaleur. Lancez la même requête dans deux applications avant de supprimer un modèle déjà téléchargé.',
@@ -3036,7 +3036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tier-app-model',
         title: 'Niveau de téléphone, application et taille de modèle en un coup d\'œil',
         content:
-          '**Choisissez d\'abord selon le niveau de RAM, puis selon le besoin.** Le tableau donne un point de départ tiré de nos tests et de notre comparatif ; ce n\'est pas un benchmark. Les modèles évoluent vite, consultez donc [Meilleurs modèles mobiles : Phi-4 Mini, Gemma et SmolLM](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) pour les choix actuels de petits modèles.',
+          '**Choisissez d\'abord selon le niveau de RAM, puis selon le besoin.** Le tableau donne un point de départ tiré de nos analyses et de notre comparatif ; ce n\'est pas un benchmark. Les modèles évoluent vite, consultez donc [Meilleurs modèles mobiles : Phi-4 Mini, Gemma et SmolLM](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) pour les choix actuels de petits modèles.',
         columns: ['Niveau de téléphone', 'Pour commencer', 'Taille de modèle', 'Remarque'],
         rows: [
           {
@@ -3240,7 +3240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'chat-assistants',
         title: 'Assistants de conversation : les principales applications sur l\'appareil',
         content:
-          '**Pour une conversation générale sur iPhone, commencez par l\'une des cinq applications que compare notre comparatif iPhone, puis regardez les applications plus récentes ci-dessous.** Chaque ligne indique ce que fait l\'application et sa limite franche. Les détails proviennent des tests PromptQuorum liés, des fiches de store et des pages des éditeurs ; sauf si un test indique avoir essayé l\'application, considérez la vitesse et la qualité comme non mesurées. Pour des choix classés et des vitesses indicatives, voir [Meilleures applications d\'IA locale pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026), et pour toute la catégorie de la conversation, voir [Assistants de conversation comparés](/fr/power-local-llm/local-llm-chat-assistants-compared).',
+          '**Pour une conversation générale sur iPhone, commencez par l\'une des cinq applications que compare notre comparatif iPhone, puis regardez les applications plus récentes ci-dessous.** Chaque ligne indique ce que fait l\'application et sa limite franche. Les détails proviennent des analyses PromptQuorum liées, des fiches de store et des pages des éditeurs ; sauf si une analyse indique avoir essayé l\'application, considérez la vitesse et la qualité comme non mesurées. Pour des choix classés et des vitesses indicatives, voir [Meilleures applications d\'IA locale pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026), et pour toute la catégorie de la conversation, voir [Assistants de conversation comparés](/fr/power-local-llm/local-llm-chat-assistants-compared).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3250,7 +3250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'plain-terms',
             text:
-              'Choisissez une application de conversation, téléchargez un modèle adapté à votre iPhone, et gardez les autres applications de ce guide pour des usages particuliers comme les documents, la voix ou un serveur domestique. Les prix proviennent des tests liés et des pages de store et peuvent changer ; vérifiez le store avant d\'acheter.',
+              'Choisissez une application de conversation, téléchargez un modèle adapté à votre iPhone, et gardez les autres applications de ce guide pour des usages particuliers comme les documents, la voix ou un serveur domestique. Les prix proviennent des analyses liées et des pages de store et peuvent changer ; vérifiez le store avant d\'acheter.',
           },
         ],
         items: [
@@ -3261,7 +3261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Noema](/fr/power-local-llm/noema-review) : gratuit, exécute GGUF, MLX, ExecuTorch, Core ML et Apple Foundation Models dans une seule application, avec dialogue avec des documents sur l\'appareil. Limite : code fermé, aucun minimum de RAM publié, iOS ou iPadOS 18 ou plus récent.',
           '[Off Grid AI](/fr/power-local-llm/off-grid-ai-review) : application gratuite et open source (MIT) avec conversation GGUF, modèles d\'image Stable Diffusion et reconnaissance vocale Whisper sur l\'appareil, sur iOS, Android, macOS et Windows. Limite : une application qui fait beaucoup de choses demande plus de stockage et plus de réglages.',
           '[Pocket AI](/fr/power-local-llm/pocket-ai-review) : gratuit, llama.cpp avec Metal, 28 modèles des familles Qwen, Gemma, Llama, Mistral, Phi et DeepSeek (selon le développeur), iPhone 12 ou plus récent. Limite : la saisie vocale Whisper sur l\'appareil exige le déverrouillage Pro payant.',
-          '[KernelAI](/fr/power-local-llm/kernelai-review) : gratuit, 53 modèles ouverts téléchargeables de 112 MB à 3.11 GB, avec documents, vision et Raccourcis selon la fiche. Limite : code fermé, et notre test repose sur des sources publiques, pas sur un test pratique.',
+          '[KernelAI](/fr/power-local-llm/kernelai-review) : gratuit, 53 modèles ouverts téléchargeables de 112 MB à 3.11 GB, avec documents, vision et Raccourcis selon la fiche. Limite : code fermé, et notre analyse repose sur des sources publiques, pas sur un test pratique.',
           '[On Device AI](/fr/power-local-llm/on-device-ai-review) : plus de 200 modèles GGUF et MLX téléchargeables, plus transcription, import de documents et de flux RSS, synthèse vocale sur l\'appareil et points d\'accroche d\'automatisation. Limite : une longue liste de fonctions dans une application à code fermé ; lisez sa section sur la confidentialité.',
           '[Enclave AI](/fr/power-local-llm/enclave-ai-review) : gratuit avec achats intégrés, hors ligne sur iPhone, iPad et Mac selon sa fiche, sans compte, avec interaction avec des documents et Raccourcis selon notre comparatif. Limite : code fermé et offres payantes.',
         ],
@@ -3275,21 +3275,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cloak: Local AI](/fr/power-local-llm/cloak-local-ai-review) : payant une fois ($1.99 sur le store américain), télécharge un modèle recommandé, ajoute Notes vocales et un Récap hebdomadaire construit à partir de Photos, Localisation et Notes vocales sur iPhone. Limite : pas de sélecteur de modèle et le nom du modèle n\'est pas publié.',
           '[Compass - Local AI](/fr/power-local-llm/compass-local-ai-review) : gratuit, répond avec Apple Intelligence sur l\'appareil et lit les captures d\'écran par OCR sur l\'appareil ; exige iOS ou iPadOS 26. Limite : la recherche web est optionnelle et envoie votre requête à DuckDuckGo ou Brave lorsqu\'elle est activée.',
           '[AI on Device](/fr/power-local-llm/ai-on-device-review) : $4.99 une fois, un modèle de 3B quantifié sur 2 bits, exige iOS 26 et un appareil compatible Apple Intelligence. Limite : aucune mise à jour depuis le 13 octobre 2025, considérez-la donc comme peu active.',
-          '[Haplo AI](/fr/power-local-llm/haplo-ai-review) : télécharge des modèles ouverts comme Qwen et Phi pour la conversation, l\'entrée d\'images et la génération d\'images, sans compte. Limite : application payante ; notre test repose sur des sources publiques.',
+          '[Haplo AI](/fr/power-local-llm/haplo-ai-review) : télécharge des modèles ouverts comme Qwen et Phi pour la conversation, l\'entrée d\'images et la génération d\'images, sans compte. Limite : application payante ; notre analyse repose sur des sources publiques.',
           '[Oscilla](/fr/power-local-llm/oscilla-review) : gratuit, plus de 40 modèles ouverts, voix en temps réel, mémoire intégrée, recherche web et analyse de fichiers et d\'images ; étiquette « Data Not Collected » d\'Apple. Limite : iOS 26 ou plus récent, code fermé, et aucune mise à jour depuis le 21 mai 2026.',
           '[Frankly AI](/fr/power-local-llm/frankly-ai-review) : modèles téléchargeables sur l\'appareil avec personnages orientés tâches et sans compte ; limite quotidienne gratuite, Pro débloque le reste. Limite : plafond d\'usage dans l\'offre gratuite.',
-          '[LLM Studio Go](/fr/power-local-llm/llm-studio-go-review) : gratuit et financé par la publicité, conversation, voix, images, musique et parole avec des modèles GGUF et MLX, iOS ou iPadOS 18. Limite : publicités, et d\'après le test elle n\'a aucun rapport avec LM Studio malgré son nom.',
+          '[LLM Studio Go](/fr/power-local-llm/llm-studio-go-review) : gratuit et financé par la publicité, conversation, voix, images, musique et parole avec des modèles GGUF et MLX, iOS ou iPadOS 18. Limite : publicités, et d\'après l\'analyse elle n\'a aucun rapport avec LM Studio malgré son nom.',
           '[Local AI Chat - pocket](/fr/power-local-llm/local-ai-chat-pocket-review) : conversation hors ligne freemium avec génération d\'images et Raccourcis selon son slogan, iOS ou iPadOS 18.6 ou plus récent. Limite : aucune mise à jour depuis le 27 mai 2026 et achats intégrés de type abonnement.',
           '[Loci AI](/fr/power-local-llm/loci-ai-review-offline-local-ai) : gratuit sur iPhone, iPad, Android, Mac et Windows, choisit automatiquement un modèle adapté au matériel. Limite : les affirmations de l\'éditeur sur la puissance des modèles ne sont pas vérifiées par PromptQuorum.',
           '[Ensu](/fr/power-local-llm/ensu-review) : gratuit, open source (AGPL), d\'Ente Labs, avec entrée d\'images et dictée vocale locale. Limite : l\'éditeur indique lui-même qu\'elle n\'est pas encore aussi capable que ChatGPT ou Claude Code, et la version est encore 0.x.',
           '[MemoryAI](/fr/power-local-llm/memoryai-review) : conversation hors ligne gratuite avec questions-réponses sur documents, une mémoire modifiable et un Mode enfant verrouillé par code PIN ; iOS 16.4+ et 4 GB+ de RAM. Limite : sa politique de confidentialité mentionne des événements d\'usage et des rapports de plantage ; code fermé.',
           '[Secret AI](/fr/power-local-llm/secret-ai-review) : conversation hors ligne avec personnages, Skills et outils MCP sur des modèles GGUF, MNN et MLX. Limite : selon sa politique de confidentialité, les appels d\'outils MCP et les serveurs distants optionnels peuvent envoyer des données hors de l\'appareil, et la politique est antérieure à ces fonctions.',
-          '[LocalMindAI](/fr/power-local-llm/localmindai-review) : conversation, mémoire, reconnaissance vocale et lecture de documents sur iPhone et iPad, avec le modèle d\'Apple ou des modèles téléchargés ; iOS 26. Limite : vieille de quelques jours lors du test, et notre test repose sur des sources publiques.',
+          '[LocalMindAI](/fr/power-local-llm/localmindai-review) : conversation, mémoire, reconnaissance vocale et lecture de documents sur iPhone et iPad, avec le modèle d\'Apple ou des modèles téléchargés ; iOS 26. Limite : vieille de quelques jours lors de l\'analyse, et notre analyse repose sur des sources publiques.',
           '[Solair AI](/fr/power-local-llm/solair-ai-review) : assistant local d\'abord avec un repli cloud optionnel utilisant votre propre clé ; iOS 26. Limite : le repli est dans le cloud, vérifiez donc quel mode répond.',
           '[Liquid Apollo](/fr/power-local-llm/liquid-apollo-review) : gratuit, exécute hors ligne les modèles Liquid AI LFM2 (350M à 2.6B), avec un mode OpenRouter optionnel et des backends personnalisés ; iOS 18. Limite : pas uniquement local ; le mode OpenRouter exige votre propre clé et Internet.',
-          '[Kai 9000](/fr/power-local-llm/kai-9000-review) : assistant open source avec mémoire persistante et outils. Limite : d\'après son test, il envoie les messages à un service cloud par défaut ; il ne fonctionne en local qu\'après le téléchargement d\'un modèle sur l\'appareil.',
+          '[Kai 9000](/fr/power-local-llm/kai-9000-review) : assistant open source avec mémoire persistante et outils. Limite : d\'après son analyse, il envoie les messages à un service cloud par défaut ; il ne fonctionne en local qu\'après le téléchargement d\'un modèle sur l\'appareil.',
           '[CompactifAI APP](/fr/power-local-llm/compactifai-app-review) : application gratuite de Multiverse Computing qui propose des modèles compressés. Limite : le texte actuel du store ne décrit que des modèles accessibles par API, ce qui s\'exécute sur le téléphone n\'est donc pas vérifié.',
-          '[Atomic Chat](/fr/power-local-llm/atomic-chat-review) : application gratuite et open source (Apache 2.0) pour macOS, Windows, Linux, iOS et Android avec des modèles GGUF, MLX et ONNX et une API locale compatible OpenAI. Limite : c\'est un projet multiplateforme, lisez donc le test pour savoir ce qu\'inclut la version iPhone.',
+          '[Atomic Chat](/fr/power-local-llm/atomic-chat-review) : application gratuite et open source (Apache 2.0) pour macOS, Windows, Linux, iOS et Android avec des modèles GGUF, MLX et ONNX et une API locale compatible OpenAI. Limite : c\'est un projet multiplateforme, lisez donc l\'analyse pour savoir ce qu\'inclut la version iPhone.',
           '[LLM Hub](/fr/power-local-llm/llm-hub-review) : suite Android et iPhone avec un agent compatible MCP, génération d\'images et de musique, traduction, Whisper et conversation vocale, plus une offre Premium payante. Limite : sa licence est PolyForm Noncommercial, pas une licence open source au sens usuel.',
           '[Llamatik](/fr/power-local-llm/llamatik-review) : gratuit, MIT, un chatbot hors ligne que sa propre fiche qualifie de vitrine expérimentale du SDK Kotlin du développeur. Limite : sa politique de confidentialité et son étiquette de store mentionnent l\'analytique et les rapports de plantage Firebase.',
           '[Layla](/fr/power-local-llm/layla-review) : $19.99 une fois sur Android et iOS, modèles GGUF avec compagnons pilotés par personnage, voix et génération d\'images. Limite : d\'abord pensée pour Android, et un mode Layla Cloud optionnel existe.',
@@ -3299,12 +3299,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'chat-quiet-apps',
         title: 'Applications peu actives, obsolètes ou absentes de l\'App Store',
         content:
-          '**Une application sans mise à jour depuis plus de trois mois peut ne plus être maintenue ; vérifiez avant de vous y fier.** Les dates ci-dessous proviennent des fiches du répertoire PromptQuorum et de chaque test. Une application peu active peut encore fonctionner, mais vous n\'avez ni correctifs, ni nouveaux modèles, ni indice sur un éventuel retour de l\'éditeur.',
+          '**Une application sans mise à jour depuis plus de trois mois peut ne plus être maintenue ; vérifiez avant de vous y fier.** Les dates ci-dessous proviennent des fiches du répertoire PromptQuorum et de chaque analyse. Une application peu active peut encore fonctionner, mais vous n\'avez ni correctifs, ni nouveaux modèles, ni indice sur un éventuel retour de l\'éditeur.',
         items: [
-          '[MLC Chat](/fr/power-local-llm/mlc-chat-review) : application de référence accélérée par Metal du projet MLC LLM. Aucune mise à jour sur l\'App Store depuis le 27 septembre 2024, d\'après notre test. Le moteur qui la sous-tend, [MLC LLM](/fr/power-local-llm/mlc-llm-explained), est toujours actif.',
+          '[MLC Chat](/fr/power-local-llm/mlc-chat-review) : application de référence accélérée par Metal du projet MLC LLM. Aucune mise à jour sur l\'App Store depuis le 27 septembre 2024, d\'après notre analyse. Le moteur qui la sous-tend, [MLC LLM](/fr/power-local-llm/mlc-llm-explained), est toujours actif.',
           '[LLM Farm](/fr/power-local-llm/llm-farm-review) : dernière version 1.4.3 en janvier 2025 et dernier envoi de code le 30 janvier 2026. Non installable depuis l\'App Store ni TestFlight (son README indique une indisponibilité temporaire) ; compilez depuis les sources dans Xcode si vous avez besoin de ses contrôles d\'échantillonnage.',
           '[fullmoon](/fr/power-local-llm/fullmoon-review) : gratuit, MIT, exécute de petits modèles sur Apple MLX, sans version depuis le 28 janvier 2025 et sans modification du code depuis le 5 mai 2025.',
-          '[Maid](/fr/power-local-llm/maid-review) : application de conversation open source d\'abord pensée pour Android ; sa version iOS était à installer en sideload et notre test date les versions iOS jusqu\'à la 2.0.7 en avril 2025, ce n\'est donc pas une option App Store.',
+          '[Maid](/fr/power-local-llm/maid-review) : application de conversation open source d\'abord pensée pour Android ; sa version iOS était à installer en sideload et notre analyse date les versions iOS jusqu\'à la 2.0.7 en avril 2025, ce n\'est donc pas une option App Store.',
           '[Aiko](/fr/power-local-llm/aiko-review) : toujours vendue et utile pour la transcription, mais sa dernière mise à jour date du 27 juin 2026, soit plus de trois mois.',
           'Autres applications signalées comme peu actives dans ce guide : [Atomic Bot](/fr/power-local-llm/atomic-bot-review) (26 mai 2026), [Chapper](/fr/power-local-llm/chapper-review) (6 août 2026), [Enchanted](/fr/power-local-llm/enchanted-review) (7 juillet 2026), [AI CutoutWerk](/fr/power-local-llm/ai-cutoutwerk-review) (16 février 2026) et [pcAI Photo Retouch](/fr/power-local-llm/pcai-photo-retouch-review) (20 février 2026).',
         ],
@@ -3325,7 +3325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) : Ask Image et Audio Scribe avec les modèles Gemma 4. Limite : modèles LiteRT-LM uniquement ; Google rapporte des chiffres de mémoire du fournisseur, pas des mesures de PromptQuorum.',
           '[Compass - Local AI](/fr/power-local-llm/compass-local-ai-review) : lit les captures d\'écran jointes par OCR sur l\'appareil et répond avec Apple Intelligence. Limite : l\'OCR lit du texte, il ne décrit pas une scène ; exige iOS ou iPadOS 26.',
           '[Oscilla](/fr/power-local-llm/oscilla-review) : analyse de fichiers et d\'images avec des modèles capables de vision comme MiniCPM-V d\'après sa fiche. Limite : iOS 26 ou plus récent et aucune mise à jour depuis le 21 mai 2026.',
-          '[Haplo AI](/fr/power-local-llm/haplo-ai-review) : entrée d\'images et génération d\'images dans une seule application. Limite : notre test repose sur des sources publiques, la qualité des modèles n\'est donc pas mesurée.',
+          '[Haplo AI](/fr/power-local-llm/haplo-ai-review) : entrée d\'images et génération d\'images dans une seule application. Limite : notre analyse repose sur des sources publiques, la qualité des modèles n\'est donc pas mesurée.',
           '[Ensu](/fr/power-local-llm/ensu-review) : entrée d\'images avec des modèles téléchargés, gratuit et open source. Limite : version 0.x ; l\'éditeur indique qu\'elle n\'est pas encore au niveau des grands outils cloud.',
           '[KernelAI](/fr/power-local-llm/kernelai-review) : cite la vision parmi ses fonctions avec 53 modèles téléchargeables. Limite : les modèles qui acceptent des images varient selon le modèle.',
           '[MemoryAI](/fr/power-local-llm/memoryai-review) : compréhension d\'images avec des modèles de vision après un téléchargement de modèle. Limite : vous devez choisir vous-même un modèle capable de vision.',
@@ -3345,16 +3345,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La reconnaissance vocale fait partie des tâches sur l\'appareil les plus établies ; les éditeurs indiquent que des modèles de classe Whisper tournent sur les téléphones récents, et plusieurs applications se paient une seule fois au lieu d\'être facturées à la minute.** La synthèse vocale et les assistants mains libres sont plus inégaux. Pour construire vous-même une chaîne complète, voir [Créer un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline), pour la catégorie voir [Applications voix et audio comparées](/fr/power-local-llm/local-llm-voice-audio-compared) et pour comparer les moteurs voir [Comparatif des STT Whisper locaux](/fr/power-local-llm/local-whisper-stt-comparison).',
         items: [
-          '[Whisper Notes](/fr/power-local-llm/whisper-notes-review) : $7.99 une fois, exécute Whisper, Parakeet et SenseVoice sur iPhone, iPad et Mac à silicium Apple, avec étiquettes d\'interlocuteurs ; la politique de confidentialité indique que l\'audio et les transcriptions ne quittent jamais l\'appareil. Limite : code fermé ; le test repose sur des sources publiques, pas sur un test pratique.',
+          '[Whisper Notes](/fr/power-local-llm/whisper-notes-review) : $7.99 une fois, exécute Whisper, Parakeet et SenseVoice sur iPhone, iPad et Mac à silicium Apple, avec étiquettes d\'interlocuteurs ; la politique de confidentialité indique que l\'audio et les transcriptions ne quittent jamais l\'appareil. Limite : code fermé ; l\'analyse repose sur des sources publiques, pas sur un test pratique.',
           '[Aiko](/fr/power-local-llm/aiko-review) : transcription Whisper sur l\'appareil pour Mac, iPhone et Vision Pro, 100 langues, prise en charge de Raccourcis, un seul achat pour toutes les plateformes. Limite : dernière mise à jour le 27 juin 2026, donc peu active.',
           '[Lyonesse](/fr/power-local-llm/lyonesse-review) : transcription hors ligne, notes de réunion et dialogue avec des documents pour iPhone, iPad et Mac ; son application Apple Watch enregistre seule et transfère à l\'iPhone, qui effectue la transcription. Limite : les affirmations de l\'éditeur sur le traitement ne sont pas vérifiées de façon indépendante.',
           '[OpenWhispr](/fr/power-local-llm/openwhispr-review) : dictée et notes de réunion sous licence MIT avec des modèles Whisper ou Parakeet locaux ou un fournisseur cloud de votre choix. Limite : que votre voix reste sur l\'appareil dépend du modèle que vous choisissez.',
-          '[AquaVoice](/fr/power-local-llm/aquavoice-review) : dictée vocale qui saisit le texte dans l\'application active. Limite : d\'après le test, c\'est un service cloud, cité ici pour que vous ne le confondiez pas avec une dictée locale.',
+          '[AquaVoice](/fr/power-local-llm/aquavoice-review) : dictée vocale qui saisit le texte dans l\'application active. Limite : d\'après l\'analyse, c\'est un service cloud, cité ici pour que vous ne le confondiez pas avec une dictée locale.',
           '[Ensu](/fr/power-local-llm/ensu-review) et [MemoryAI](/fr/power-local-llm/memoryai-review) : dictée vocale locale (Ensu) et voix mains libres avec saisie vocale sur l\'appareil et lecture à voix haute (MemoryAI) au sein d\'une application de conversation. Limite : la qualité vocale suit celle du petit modèle de conversation qui se trouve derrière.',
           '[Oscilla](/fr/power-local-llm/oscilla-review), [LLM Studio Go](/fr/power-local-llm/llm-studio-go-review) et [Pocket AI](/fr/power-local-llm/pocket-ai-review) : respectivement voix en temps réel, conversation vocale avec parole, et saisie Whisper sur l\'appareil (Pro payant). Limite : la voix ajoute de la charge mémoire et batterie au modèle de conversation.',
           '[Castmates](/fr/power-local-llm/castmates-review) : appels vocaux avec des personnages qui, selon l\'éditeur, s\'exécutent sur le téléphone. Limite : code fermé, l\'affirmation repose donc sur le développeur.',
           '[Cloak: Local AI](/fr/power-local-llm/cloak-local-ai-review) : transforme les Notes vocales en notes ou en conversations. Limite : un seul modèle fixe.',
-          '[Home Assistant Assist](/fr/power-local-llm/home-assistant-assist-review) : l\'assistant vocal de Home Assistant, local avec Whisper, Piper et Wyoming d\'après son test ; pas une application iPhone autonome. Limite : exige un serveur Home Assistant et un agent LLM optionnel en partie expérimental.',
+          '[Home Assistant Assist](/fr/power-local-llm/home-assistant-assist-review) : l\'assistant vocal de Home Assistant, local avec Whisper, Piper et Wyoming d\'après son analyse ; pas une application iPhone autonome. Limite : exige un serveur Home Assistant et un agent LLM optionnel en partie expérimental.',
           '[Murmur](/fr/power-local-llm/murmur-review) : compose sur l\'appareil de la musique instrumentale pour des photos, des vidéos et des jeux, avec un déverrouillage Pro unique. Limite : pas de voix chantée.',
         ],
         callouts: [
@@ -3373,13 +3373,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Private Mind](/fr/power-local-llm/private-mind-review) : conversation open source (MIT) de Software Mansion qui répond à des questions sur vos fichiers PDF et texte avec une recherche sur l\'appareil et des citations de sources, via React Native ExecuTorch. Limite : la version 1.3.0 a ajouté une option Web facultative qui récupère des pages ; elle est donc hors ligne par défaut mais pas hors ligne quand cette fonction est activée.',
           '[MemoryAI](/fr/power-local-llm/memoryai-review) : questions-réponses sur documents et une Agent Memory modifiable. Limite : code fermé et des événements d\'usage quittent le téléphone.',
-          '[LocalMindAI](/fr/power-local-llm/localmindai-review) : lit vos documents sur l\'appareil avec le modèle d\'Apple ou un modèle téléchargé. Limite : iOS 26 et très récente lors du test.',
+          '[LocalMindAI](/fr/power-local-llm/localmindai-review) : lit vos documents sur l\'appareil avec le modèle d\'Apple ou un modèle téléchargé. Limite : iOS 26 et très récente lors de l\'analyse.',
           '[Noema](/fr/power-local-llm/noema-review) : dialogue avec des documents sur l\'appareil dans ses cinq formats de modèle. Limite : code fermé ; aucun chiffre de RAM publié.',
           '[Lyonesse](/fr/power-local-llm/lyonesse-review) : dialogue avec vos propres documents à côté des transcriptions. Limite : l\'Apple Watch et les fonctions de réunion sont au centre.',
           '[Arbiter](/fr/power-local-llm/arbiter-local-ai-chat-review) : garde les documents importés sur l\'appareil pour des résumés sur un iPhone 13 Pro ou plus récent (environ 6 GB de RAM ou plus), et peut joindre LM Studio, Ollama ou le compagnon Arbiter for Mac pour un modèle plus grand. Limite : les réponses d\'un modèle plus grand quittent le téléphone pour votre ordinateur.',
           '[KernelAI](/fr/power-local-llm/kernelai-review) et [Enclave AI](/fr/power-local-llm/enclave-ai-review) : toutes deux citent des fonctions documentaires dans une application de conversation générale. Limite : vérifiez dans l\'application les limites de taille et de format des fichiers avant de vous y fier.',
           '[Reins](/fr/power-local-llm/reins-review) : pièces jointes PDF, CSV et texte envoyées à un modèle sur votre propre serveur. Limite : le traitement se fait sur le serveur, pas sur le téléphone.',
-          '[AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review) : Android propose un mode autonome sur l\'appareil et un appairage avec AnythingLLM Desktop ; notre test indique que l\'application iOS n\'est pas encore sortie. Limite : tant qu\'iOS n\'est pas disponible, utilisez un navigateur sur votre propre serveur AnythingLLM.',
+          '[AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review) : Android propose un mode autonome sur l\'appareil et un appairage avec AnythingLLM Desktop ; notre analyse indique que l\'application iOS n\'est pas encore sortie. Limite : tant qu\'iOS n\'est pas disponible, utilisez un navigateur sur votre propre serveur AnythingLLM.',
         ],
       },
       translation: {
@@ -3425,14 +3425,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ente Photos](/fr/power-local-llm/ente-photos-review) : sauvegarde de photos open source qui, selon Ente, est chiffrée de bout en bout ; la reconnaissance faciale et la recherche magique en langage naturel s\'exécutent sur votre appareil et restent désactivées tant que vous ne les activez pas. Limite : les photos sont stockées chiffrées dans le cloud d\'Ente, et la première indexation consomme de la batterie.',
           '[Immich](/fr/power-local-llm/immich-review) : sauvegarde de photos et de vidéos auto-hébergée avec des applications iPhone et Android ; la recherche intelligente et la reconnaissance faciale s\'exécutent dans un conteneur d\'apprentissage automatique que vous hébergez, installé avec Docker. Limite : exige un serveur, la base de données ne contient que des métadonnées, les fichiers demandent donc une sauvegarde distincte, et il n\'y a aucune fonction de conversation ou de LLM.',
           '[Mylio Photos](/fr/power-local-llm/mylio-photos-review) : photothèque de photos, vidéos et documents avec recherche SmartTag, reconnaissance des visages et du texte qui, selon Mylio, s\'exécutent sur vos propres appareils ; téléchargement gratuit, formules par abonnement. Limite : Mylio n\'indique pas où s\'exécute le chatbot d\'aide intégré.',
-          'Des galeries web auto-hébergées que vous ouvrez dans le navigateur de l\'iPhone ou une application compagnon, comme [Test de PhotoPrism](/fr/power-local-llm/photoprism-review), [Test de Photoview](/fr/power-local-llm/photoview-review) et [Test de Home Gallery](/fr/power-local-llm/home-gallery-review), sont testées séparément ; lisez chaque test pour savoir ce qui s\'exécute où.',
+          'Des galeries web auto-hébergées que vous ouvrez dans le navigateur de l\'iPhone ou une application compagnon, comme [Test de PhotoPrism](/fr/power-local-llm/photoprism-review), [Test de Photoview](/fr/power-local-llm/photoview-review) et [Test de Home Gallery](/fr/power-local-llm/home-gallery-review), sont analysées séparément ; lisez chaque analyse pour savoir ce qui s\'exécute où.',
         ],
       },
       notes: {
         id: 'notes-knowledge',
         title: 'Notes, bases de connaissances et favoris',
         content:
-          '**La plupart des outils de notes et de favoris placent l\'IA sur un serveur ou un fournisseur de modèles de votre choix, et l\'application iPhone sert à capturer et à lire.** Cela peut rester entièrement privé si le serveur est le vôtre et le modèle local, mais ce n\'est pas de l\'inférence sur l\'appareil. Chaque test indique ce qui s\'exécute où.',
+          '**La plupart des outils de notes et de favoris placent l\'IA sur un serveur ou un fournisseur de modèles de votre choix, et l\'application iPhone sert à capturer et à lire.** Cela peut rester entièrement privé si le serveur est le vôtre et le modèle local, mais ce n\'est pas de l\'inférence sur l\'appareil. Chaque analyse indique ce qui s\'exécute où.',
         items: [
           '[Hillnote](/fr/power-local-llm/hillnote-review) : espace de notes Markdown local d\'abord pour Mac, Windows, iPhone et Android, avec IA sur l\'appareil via Ollama et Apple Intelligence, plus modèles cloud et synchronisation optionnels. Limite : Ollama s\'exécute sur un ordinateur, pas sur le téléphone, et les modèles cloud sont optionnels mais pas locaux.',
           '[Logseq](/fr/power-local-llm/logseq-review) : outil de plan open source, local d\'abord ; la version à base de données 2.0.2 est une bêta dont le README avertit qu\'une perte de données est possible. Limite : l\'IA passe par un serveur MCP optionnel, pas par un modèle intégré.',
@@ -3446,7 +3446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'health-wellness',
         title: 'Santé et bien-être : questions',
         content:
-          '**Une application iPhone testée répond à des questions sur vos données Apple Health avec Apple Intelligence sur l\'appareil, et c\'est la seule application de santé de notre sélection iPhone.** Les données de santé sont des données personnelles sensibles, et un petit modèle de langage n\'est pas un médecin.',
+          '**Une application iPhone analysée répond à des questions sur vos données Apple Health avec Apple Intelligence sur l\'appareil, et c\'est la seule application de santé de notre sélection iPhone.** Les données de santé sont des données personnelles sensibles, et un petit modèle de langage n\'est pas un médecin.',
         items: [
           '[Pajdo](/fr/power-local-llm/pajdo-review) : application gratuite pour iPhone, iPad et Apple Watch qui transforme les données Apple Health en l\'une de huit humeurs et, d\'après son site web, répond à vos questions sur ces données avec Apple Intelligence sur l\'appareil. L\'offre gratuite inclut 5 questions par semaine ; Pro lève la limite et ajoute la planification d\'entraînements et un rapport de consultation médicale. Limite : code fermé, iOS 26 ou plus récent, et l\'affirmation du traitement sur l\'appareil repose sur la parole du développeur.',
           'Les applications de conversation générales des chapitres Conversation peuvent aborder le sommeil, l\'entraînement ou la nutrition en termes généraux. Limite : elles n\'ont pas accès à vos données de santé sauf si une application en demande l\'autorisation, et les petits modèles peuvent énoncer des faits erronés avec assurance.',
@@ -3565,7 +3565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'warning',
             text:
-              'Hors de chez vous, il faut un chemin sécurisé vers le serveur. Un VPN maillé privé comme Tailscale est un choix courant, car Ollama n\'exige pas d\'authentification par défaut et ne doit pas être exposé à l\'Internet public via un port du routeur. Vérifiez dans le test et les réglages de chaque client la prise en charge de HTTPS et des clés d\'API avant de vous connecter.',
+              'Hors de chez vous, il faut un chemin sécurisé vers le serveur. Un VPN maillé privé comme Tailscale est un choix courant, car Ollama n\'exige pas d\'authentification par défaut et ne doit pas être exposé à l\'Internet public via un port du routeur. Vérifiez dans l\'analyse et les réglages de chaque client la prise en charge de HTTPS et des clés d\'API avant de vous connecter.',
           },
           {
             type: 'tip',
@@ -3597,12 +3597,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy-telemetry',
         title: 'Confidentialité et télémétrie : la réalité',
         content:
-          '**« S\'exécute sur votre appareil » et « n\'envoie rien » sont deux affirmations différentes, et seule la seconde est une garantie de confidentialité.** Les étiquettes de confidentialité de l\'App Store d\'Apple sont renseignées par le développeur : elles décrivent donc ce que le développeur dit que l\'application fait. Un modèle sur l\'appareil peut quand même se trouver dans une application qui envoie des rapports de plantage, des événements d\'usage, des recherches web optionnelles ou des téléchargements de modèles. Toutes les déclarations de confidentialité au niveau des applications citées ici proviennent de la politique de confidentialité, de l\'étiquette App Store ou de la page de l\'éditeur de chaque application, telles que résumées dans le test lié, et n\'ont pas été vérifiées par analyse réseau. Pour une liste de contrôle plus complète, voir [Liste de contrôle sécurité et confidentialité des LLM locaux](/fr/local-llms/local-llm-security-privacy-checklist).',
+          '**« S\'exécute sur votre appareil » et « n\'envoie rien » sont deux affirmations différentes, et seule la seconde est une garantie de confidentialité.** Les étiquettes de confidentialité de l\'App Store d\'Apple sont renseignées par le développeur : elles décrivent donc ce que le développeur dit que l\'application fait. Un modèle sur l\'appareil peut quand même se trouver dans une application qui envoie des rapports de plantage, des événements d\'usage, des recherches web optionnelles ou des téléchargements de modèles. Toutes les déclarations de confidentialité au niveau des applications citées ici proviennent de la politique de confidentialité, de l\'étiquette App Store ou de la page de l\'éditeur de chaque application, telles que résumées dans l\'analyse liée, et n\'ont pas été vérifiées par analyse réseau. Pour une liste de contrôle plus complète, voir [Liste de contrôle sécurité et confidentialité des LLM locaux](/fr/local-llms/local-llm-security-privacy-checklist).',
         items: [
           '**Ce que « zéro télémétrie » peut signifier :** aucun SDK d\'analyse dans l\'application. Cela ne couvre pas le téléchargement du modèle (l\'hébergeur voit votre requête), l\'App Store, la recherche web optionnelle, les serveurs distants que vous connectez, ni les sauvegardes qui incluent les données de l\'application.',
-          '**Étiquettes dans nos tests :** [Oscilla](/fr/power-local-llm/oscilla-review) porte l\'étiquette « Data Not Collected » d\'Apple ; [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) indique certains diagnostics de l\'appareil sur son étiquette ; [MemoryAI](/fr/power-local-llm/memoryai-review) et [Llamatik](/fr/power-local-llm/llamatik-review) envoient des événements d\'usage ou des analyses et des rapports de plantage sans contenu de conversation, d\'après leurs politiques.',
+          '**Étiquettes dans nos analyses :** [Oscilla](/fr/power-local-llm/oscilla-review) porte l\'étiquette « Data Not Collected » d\'Apple ; [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) indique certains diagnostics de l\'appareil sur son étiquette ; [MemoryAI](/fr/power-local-llm/memoryai-review) et [Llamatik](/fr/power-local-llm/llamatik-review) envoient des événements d\'usage ou des analyses et des rapports de plantage sans contenu de conversation, d\'après leurs politiques.',
           '**Fonctions optionnelles qui brisent le « hors ligne » :** la recherche web dans [Compass - Local AI](/fr/power-local-llm/compass-local-ai-review) (DuckDuckGo ou Brave), l\'option Web de [Private Mind](/fr/power-local-llm/private-mind-review), les outils MCP de [Secret AI](/fr/power-local-llm/secret-ai-review) et le mode OpenRouter de [Liquid Apollo](/fr/power-local-llm/liquid-apollo-review).',
-          '**Cloud par défaut :** [Kai 9000](/fr/power-local-llm/kai-9000-review) envoie les messages à un service cloud par défaut, d\'après son test, et ne fonctionne en local qu\'après le téléchargement d\'un modèle sur l\'appareil ; [Swerve](/fr/power-local-llm/swerve-ai-review) est documenté comme un service en ligne, et [HiWaifu](/fr/power-local-llm/hiwaifu-review) semble en être un (sa fiche n\'indique pas où s\'exécute le modèle) ; [AquaVoice](/fr/power-local-llm/aquavoice-review) est une dictée cloud.',
+          '**Cloud par défaut :** [Kai 9000](/fr/power-local-llm/kai-9000-review) envoie les messages à un service cloud par défaut, d\'après son analyse, et ne fonctionne en local qu\'après le téléchargement d\'un modèle sur l\'appareil ; [Swerve](/fr/power-local-llm/swerve-ai-review) est documenté comme un service en ligne, et [HiWaifu](/fr/power-local-llm/hiwaifu-review) semble en être un (sa fiche n\'indique pas où s\'exécute le modèle) ; [AquaVoice](/fr/power-local-llm/aquavoice-review) est une dictée cloud.',
           '**Dérive des politiques et des versions :** [LM Mini](/fr/power-local-llm/lm-mini-review) a, d\'après sa politique de confidentialité, une version datée d\'août 2025 qui ne décrit que sa connexion à LM Studio, et [Secret AI](/fr/power-local-llm/secret-ai-review) a une politique mise à jour pour la dernière fois en mai 2025, avant l\'ajout des outils. Comparez la date à la version de l\'application.',
           '**Vérifiez par vous-même, en trois étapes :** (1) Téléchargez le modèle en Wi-Fi, puis activez le mode Avion et testez l\'application. (2) Utilisez le téléphone normalement pendant une semaine, puis ouvrez Réglages > Confidentialité et sécurité > Rapport de confidentialité des apps, qui, selon Apple, montre comment les applications utilisent les autorisations et leur activité réseau. (3) Lisez l\'étiquette et la politique de confidentialité pour repérer l\'analytique, et préférez une application open source si vous voulez inspecter le code.',
         ],
@@ -3610,7 +3610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text:
-              'Les tests de PromptQuorum indiquent ce que disent les sources de chaque application et si nous l\'avons testée ; lorsqu\'un test indique « non testé en pratique », les déclarations de confidentialité sont celles du développeur, pas les nôtres. Ce guide n\'a effectué aucune capture réseau sur aucune application.',
+              'Les analyses de PromptQuorum indiquent ce que disent les sources de chaque application et si nous l\'avons testée ; lorsqu\'une analyse indique « non testé en pratique », les déclarations de confidentialité sont celles du développeur, pas les nôtres. Ce guide n\'a effectué aucune capture réseau sur aucune application.',
           },
         ],
       },
@@ -3647,12 +3647,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'not-possible',
         title: 'Impossible ou pas encore possible sur iPhone',
         content:
-          '**Voici les souhaits que l\'on apporte le plus souvent à l\'IA locale sur iPhone et qu\'aucune application iPhone testée ne satisfait aujourd\'hui.** Certains sont des limites strictes du matériel ou des règles de l\'App Store ; d\'autres sont des lacunes qui pourraient se combler à mesure qu\'Apple et les éditeurs d\'applications livrent de nouveaux frameworks comme Core AI.',
+          '**Voici les souhaits que l\'on apporte le plus souvent à l\'IA locale sur iPhone et qu\'aucune application iPhone analysée ne satisfait aujourd\'hui.** Certains sont des limites strictes du matériel ou des règles de l\'App Store ; d\'autres sont des lacunes qui pourraient se combler à mesure qu\'Apple et les éditeurs d\'applications livrent de nouveaux frameworks comme Core AI.',
         columns: ['Souhait', 'Statut', 'Pourquoi', 'À la place'],
         rows: [
           {
             'Souhait': 'Modèle de 30B-70B sur le téléphone',
-            'Statut': 'Impossible',
+            'Statut': 'Pas possible',
             'Pourquoi': 'Exige bien plus de RAM qu\'un iPhone',
             'À la place': 'Mode distant vers un serveur domestique',
           },
@@ -3664,19 +3664,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Souhait': 'Exécuter Ollama ou Docker sur le téléphone',
-            'Statut': 'Impossible',
+            'Statut': 'Pas possible',
             'Pourquoi': 'Pas d\'application Ollama ou Docker pour iPhone ; bac à sable',
             'À la place': 'Les exécuter sur Mac ou PC',
           },
           {
             'Souhait': 'Remplacer Siri par votre modèle',
-            'Statut': 'Impossible',
+            'Statut': 'Pas possible',
             'Pourquoi': 'Siri est contrôlé par le système',
             'À la place': 'Raccourcis qui appellent une application',
           },
           {
             'Souhait': 'Agent permanent en arrière-plan',
-            'Statut': 'Impossible',
+            'Statut': 'Pas possible',
             'Pourquoi': 'Services en arrière-plan limités (2.5.4)',
             'À la place': 'Agent sur un serveur domestique',
           },
@@ -3695,12 +3695,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Souhait': 'AnythingLLM Mobile sur iPhone',
             'Statut': 'Pas encore',
-            'Pourquoi': 'Application iOS non sortie d\'après le test',
+            'Pourquoi': 'Application iOS non sortie d\'après l\'analyse',
             'À la place': 'Navigateur vers votre serveur',
           },
           {
             'Souhait': 'Apple Intelligence sur iPhone 14',
-            'Statut': 'Impossible',
+            'Statut': 'Pas possible',
             'Pourquoi': 'Absent de la liste d\'appareils d\'Apple',
             'À la place': 'Applications de modèles tierces',
           },
@@ -3722,7 +3722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'decision-path',
         title: 'Arbre de décision : j\'ai cet iPhone et je veux ceci',
         content:
-          '**Trouvez votre ligne selon le niveau de téléphone et l\'objectif, puis ouvrez le chapitre lié.** Les choix sont des points de départ tirés de nos tests, pas des classements ; une application peu active au chapitre sur la maintenance n\'est citée que s\'il n\'existe pas de meilleure option.',
+          '**Trouvez votre ligne selon le niveau de téléphone et l\'objectif, puis ouvrez le chapitre lié.** Les choix sont des points de départ tirés de nos analyses, pas des classements ; une application peu active au chapitre sur la maintenance n\'est citée que s\'il n\'existe pas de meilleure option.',
         columns: ['Si vous avez', 'Et voulez', 'Commencez ici'],
         rows: [
           {
@@ -3820,7 +3820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chemin et contenu du Rapport de confidentialité des apps : [Assistance Apple](https://support.apple.com/en-us/102188).',
           'Moteurs : [MLX Swift](https://github.com/ml-explore/mlx-swift), [llama.cpp](https://github.com/ggml-org/llama.cpp), [ExecuTorch](https://github.com/pytorch/executorch), [documentation MLC iOS](https://llm.mlc.ai/docs/deploy/ios.html), [Core ML](https://developer.apple.com/documentation/coreml), [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM).',
           'Les chiffres de RAM des iPhone et les vitesses indicatives sont repris de [Meilleures applications d\'IA locale pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) ; Apple ne publie pas la RAM des iPhone.',
-          'Les informations par application (prix, plateforme, version, déclarations de l\'éditeur) proviennent des tests PromptQuorum liés et des fiches du répertoire ; les dates de dernière mise à jour des applications signalées comme peu actives proviennent des fiches.',
+          'Les informations par application (prix, plateforme, version, déclarations de l\'éditeur) proviennent des analyses PromptQuorum liées et des fiches du répertoire ; les dates de dernière mise à jour des applications signalées comme peu actives proviennent des fiches.',
         ],
       },
       faq: {
@@ -3830,7 +3830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Un iPhone peut-il exécuter de l\'IA entièrement hors ligne ?',
             a:
-              'Oui, d\'après leurs fiches et leurs tests. Après un téléchargement de modèle unique en Wi-Fi, des applications comme PocketPal AI, Private LLM et Locally AI répondent sans connexion. Apple Intelligence exécute aussi un modèle sur l\'appareil, mais il peut recourir à Private Cloud Compute pour des requêtes plus lourdes ; il n\'est donc pas garanti hors ligne. Testez toute application en mode Avion.',
+              'Oui, d\'après leurs fiches et leurs analyses. Après un téléchargement de modèle unique en Wi-Fi, des applications comme PocketPal AI, Private LLM et Locally AI répondent sans connexion. Apple Intelligence exécute aussi un modèle sur l\'appareil, mais il peut recourir à Private Cloud Compute pour des requêtes plus lourdes ; il n\'est donc pas garanti hors ligne. Testez toute application en mode Avion.',
           },
           {
             q: 'De quel iPhone ai-je besoin pour l\'IA locale ?',
@@ -3840,7 +3840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'L\'IA locale sur iPhone est-elle vraiment privée ?',
             a:
-              'La conversation peut rester sur l\'appareil, mais la confidentialité dépend de l\'application. Les étiquettes sont déclarées par le développeur, et plusieurs applications testées envoient des rapports de plantage, des événements d\'usage ou des requêtes web optionnelles. Vérifiez avec le mode Avion et Réglages > Confidentialité et sécurité > Rapport de confidentialité des apps.',
+              'La conversation peut rester sur l\'appareil, mais la confidentialité dépend de l\'application. Les étiquettes sont déclarées par le développeur, et plusieurs applications analysées envoient des rapports de plantage, des événements d\'usage ou des requêtes web optionnelles. Vérifiez avec le mode Avion et Réglages > Confidentialité et sécurité > Rapport de confidentialité des apps.',
           },
           {
             q: 'Puis-je exécuter Ollama sur mon iPhone ?',
@@ -3870,7 +3870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Puis-je dialoguer hors ligne avec mes PDF sur iPhone ?',
             a:
-              'Oui pour quelques fichiers, d\'après leurs fiches et leurs tests, avec des applications comme Private Mind, MemoryAI, Noema ou LocalMindAI. Les petits modèles ont des fenêtres de contexte courtes, si bien que de longs documents peuvent être résumés de façon incomplète. Pour de grandes bibliothèques, utilisez un serveur domestique.',
+              'Oui pour quelques fichiers, d\'après leurs fiches et leurs analyses, avec des applications comme Private Mind, MemoryAI, Noema ou LocalMindAI. Les petits modèles ont des fenêtres de contexte courtes, si bien que de longs documents peuvent être résumés de façon incomplète. Pour de grandes bibliothèques, utilisez un serveur domestique.',
           },
           {
             q: 'Puis-je utiliser mon serveur domestique depuis l\'extérieur ?',
@@ -3880,7 +3880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Un iPhone peut-il générer des images hors ligne ?',
             a:
-              'Oui, d\'après leurs fiches et leurs tests, avec des applications comme Draw Things, Genva et Haplo AI, après le téléchargement de modèles de plusieurs gigaoctets. La génération est plus lente que sur un GPU de bureau et fait chauffer le téléphone ; Draw Things propose aussi un mode cloud optionnel.',
+              'Oui, d\'après leurs fiches et leurs analyses, avec des applications comme Draw Things, Genva et Haplo AI, après le téléchargement de modèles de plusieurs gigaoctets. La génération est plus lente que sur un GPU de bureau et fait chauffer le téléphone ; Draw Things propose aussi un mode cloud optionnel.',
           },
           {
             q: 'Les applications de jeu de rôle et de compagnie sont-elles sûres pour les adolescents ?',
@@ -4481,7 +4481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**バックグラウンドでの利用は制限される（ガイドライン2.5.4）。** マルチタスクのアプリがバックグラウンドサービスを使えるのは、音声再生、位置情報、タスク完了、ローカル通知といった本来の目的に限られます。アプリを離れたあと、モデルが生成を続けたり、エージェントとして無期限に動いたりすることはできません。[Reins](/ja/power-local-llm/reins-review)は、バックグラウンド生成にはiOS 26が必要だと記しています。',
           '**メモリの制限。** iOSは、フォアグラウンドのアプリが使えるRAMの量に上限を設けています。Appleは、開発者が申請できる増加メモリ上限のエンタイトルメント（com.apple.developer.kernel.increased-memory-limit）を公開しており、当サイトでは正確な許容量は記載しません。アプリがそれを持っているかどうかは外から分からないため、頼る前に、アプリ自身のベンチマークでモデルを試してください。',
           '**JITとランタイムコンパイル。** デスクトップのエンジンは実行時にコードをコンパイルすることが多いのに対し、iOSアプリは事前コンパイル済みのエンジンを同梱します。これはプラットフォームの一般的な挙動で、複数のエンジンプロジェクトが指摘しており、iPhoneのエンジンの機能がデスクトップに及ばない理由の1つです。',
-          '**データ共有（ガイドライン5.1.1と5.1.2）。** アプリは、プライバシーポリシーをリンクし、収集するデータを説明し、個人データを「サードパーティのAIを含む」第三者と共有する前に許可を得なければならず、同意なく目的外にデータを使うことはできません。App Storeのプライバシーラベルは開発者が記入するもので、これについてはプライバシーの章で改めて触れます。',
+          '**データ共有（ガイドライン5.1.1と5.1.2）。** アプリは、プライバシーポリシーをリンクし、収集するデータを説明し、個人データを「サードパーティのAIを含む」（英語原文の訳）第三者と共有する前に許可を得なければならず、同意なく目的外にデータを使うことはできません。App Storeのプライバシーラベルは開発者が記入するもので、これについてはプライバシーの章で改めて触れます。',
           '**サイドローディングと代替マーケットプレイス。** EUでは、デジタル市場法に基づく代替アプリマーケットプレイスがありますが、どこで公開するかは各開発者が決めます。このガイドのアプリで、代替マーケットプレイスを必要とするものはありません。例外は[LLM Farm](/ja/power-local-llm/llm-farm-review)で、現状ではXcodeでソースからビルドする必要があります。',
           '**TestFlightベータ。** 複数の開発元がTestFlightビルドを提供しています（たとえば、無料トライアル用の[Aiko](/ja/power-local-llm/aiko-review)や、新しいビルド用の[fullmoon](/ja/power-local-llm/fullmoon-review)）。TestFlightビルドは期限付きで未完成です。テスト用に使い、失えないデータには使わないでください。',
         ],
@@ -4782,7 +4782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'warning',
             text:
-              '安全上の注意を、分かりやすく説明します。第一に年齢：これらのアプリの多くは、App Storeで18歳以上の区分、または成人向けモードを持ち、オンデバイスモデルには、頼れるサーバー側のフィルタがありません。第二にプライバシー：クラウドのロールプレイアプリは会話をサービスに送信し、ローカルのアプリでも分析情報を送ることがあります。第三に感情的な依存：コンパニオンチャットは個人的なものに感じられますが、それは設計上の特徴であり、人間関係ではありません。第四に実データ：住所、健康に関する詳細、他人のプライベートな情報は、ロールプレイのチャットに絶対に入力しないでください。お子さまのiPhoneには、アプリ自身の設定に頼るのではなく、Appleのスクリーンタイムのコンテンツ制限とアプリの年齢制限を使ってください。',
+              '安全上の注意を、分かりやすく説明します。第一に年齢：これらのアプリのいくつかは、App Storeで18歳以上の区分、または成人向けモードを持ち、オンデバイスモデルには、頼れるサーバー側のフィルタがありません。第二にプライバシー：クラウドのロールプレイアプリは会話をサービスに送信し、ローカルのアプリでも分析情報を送ることがあります。第三に感情的な依存：コンパニオンチャットは個人的なものに感じられますが、それは設計上の特徴であり、人間関係ではありません。第四に実データ：住所、健康に関する詳細、他人のプライベートな情報は、ロールプレイのチャットに絶対に入力しないでください。お子さまのiPhoneには、アプリ自身の設定に頼るのではなく、Appleのスクリーンタイムのコンテンツ制限とアプリの年齢制限を使ってください。',
           },
         ],
       },
@@ -4924,7 +4924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'battery-thermal-memory',
         title: 'バッテリー、発熱、メモリの制限',
         content:
-          '**テキストの生成中はチップが働き続けるため、モデルの実行中は目立つ発熱とバッテリー消費が起こります。たまに使う程度なら負担は小さいです。** PromptQuorumは、どのiPhoneでも消費電力やバッテリー使用量を測定しておらず、引用できる公開数値も見つかっていません。',
+          '**テキストの生成中はチップが働き続けるため、目立つ発熱とバッテリー消費が予想されます。たまに使う程度なら負担は小さいです。** PromptQuorumは、どのiPhoneでも消費電力やバッテリー使用量を測定しておらず、引用できる公開数値も見つかっていません。',
         items: [
           '**発熱：** 生成を続けると、iOSがクロック速度を下げることがあり、1秒あたりのトークン数が落ちます。タイミングは、機種、ケース、充電状況、室温によって変わり、当サイトでは測定していません。',
           '**ガイドライン2.4.2：** Appleは、アプリがバッテリーを急速に消耗させたり、過度の熱を発生させたりしてはならないと開発者に伝えているため、行儀のよいアプリは、長さに上限を設けたり、長い実行を一時停止したりします。',
@@ -5342,7 +5342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**决定模型大小的是内存，而不是芯片名称。** Apple不公布iPhone的内存；本指南中的数字是广泛流传的规格。4 GB的iPhone低于实际可用的下限，6 GB意味着1-2B模型，8 GB意味着3-4B，12 GB则有更多余量。',
           '**Apple Intelligence与Foundation Models框架是另一条独立的路线。** Apple自家的设备端模型已经内置在手机里（iPhone 15 Pro及更新机型），无需下载，第三方应用也可以调用。它本身并不是通用聊天应用，而且有语言和地区限制。',
           '**App Store设有硬性限制。** 手机上不能用Docker，也不能运行Ollama；应用不得下载会改变其功能的代码（Apple准则2.5.2），所以每个引擎都打包在应用内，只有模型文件需要下载。这就是为什么iPhone本地AI意味着安装一个应用，而不是搭建一套技术栈。',
-          '**iPhone用户想要的大部分功能，在我们的目录里都有已评测的应用：** 聊天、相机提问、听写与转录、文档对话、翻译、图像生成、照片搜索、笔记、健康问题、角色扮演、智能家居控制，以及远程访问家中服务器。本指南把我们目录中的大多数iPhone应用与其适合的能力对应了起来。',
+          '**iPhone用户想要的大部分功能，在我们的目录里都有已点评的应用：** 聊天、相机提问、听写与转录、文档对话、翻译、图像生成、照片搜索、笔记、健康问题、角色扮演、智能家居控制，以及远程访问家中服务器。本指南把我们目录中的大多数iPhone应用与其适合的能力对应了起来。',
           '**有几件事做不到，或只能部分做到：** 30B以上的模型、前沿水平的推理、常驻的后台智能体、用自己的模型取代Siri、在手机上微调，以及仅凭App Store标签就能保证隐私。',
           '**“零遥测”需要核实，而不是轻信。** 一些声称把聊天保留在设备上的应用，仍会发送崩溃报告、使用事件或可选的网络请求；隐私一章介绍了如何用飞行模式和App隐私报告来验证。',
           '**从小处开始：** 安装一个应用，在Wi-Fi下下载一个1-2 GB的模型，切换到飞行模式再提一个问题。如果可行，你就在15分钟内验证了整条离线链路。',
@@ -5365,7 +5365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'capability-map',
         title: '能力图谱：iPhone本地AI能做什么',
         content:
-          '**iPhone本地AI能覆盖大多数日常语言任务和若干媒体任务，但并非云端助手能做的一切。** 下表把每项能力归入“可用”“部分可用”或“暂不可用”，后面的章节会点名对应的应用。“可用”指某款已评测的iPhone应用在手机上用设备端模型完成该任务；“部分可用”指能做到，但在大小、速度、准确度或硬件上有限制；“暂不可用”指没有已评测的iPhone应用能在设备上完成。',
+          '**iPhone本地AI能覆盖大多数日常语言任务和若干媒体任务，但并非云端助手能做的一切。** 下表把每项能力归入“可用”“部分可用”或“暂不可用”，后面的章节会点名对应的应用。“可用”指某款已点评的iPhone应用在手机上用设备端模型完成该任务；“部分可用”指能做到，但在大小、速度、准确度或硬件上有限制；“暂不可用”指没有已点评的iPhone应用能在设备上完成。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -5538,11 +5538,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**不得下载会改变应用的代码（准则2.5.2）。** Apple的原文大意是：应用“不得下载、安装或执行会引入或更改应用功能的代码”。本地AI应用把引擎打包在应用内、只下载属于数据的模型权重，从而遵守这条规则。这是我们的解读，不是Apple的声明。',
           '**手机上没有Ollama服务器。** Ollama没有提供iPhone应用，而App Store的沙盒也让人几乎没有可行的办法去运行Ollama服务器或Docker容器。存在一些沙盒化的shell应用，但它们无法提供本地模型服务器。',
           '**只能使用公开API（准则2.5.1）。** 应用只能使用公开API，这就是为什么Foundation Models、Core ML、Metal和MLX是可用的路径，而私有的Neural Engine访问则不可用。',
-          '**功耗与发热（准则2.4.2）。** Apple表示应用“不应快速耗电、产生过多热量或对设备资源造成不必要的负担”。持续生成正好考验这条线，这也是应用会降速或中止长时间运行的原因。',
+          '**功耗与发热（准则2.4.2）。** Apple表示（译文）应用“不应快速耗电、产生过多热量或对设备资源造成不必要的负担”。持续生成正好考验这条线，这也是应用会降速或中止长时间运行的原因。',
           '**后台使用受限（准则2.5.4）。** 多任务应用只能出于音频播放、位置、任务完成和本地通知等预期用途使用后台服务。一旦你离开应用，模型就无法无限期地继续生成或充当智能体；[Reins](/zh/power-local-llm/reins-review)指出后台生成需要iOS 26。',
           '**内存限制。** iOS会限制前台应用可使用的内存量。Apple发布了开发者可申请的增加内存限制权限（com.apple.developer.kernel.increased-memory-limit）；我们没有给出确切的额度。你无法看出某个应用是否拥有该权限，因此在依赖某个模型之前，请先用应用自带的基准测试试一试。',
           '**JIT与运行时编译。** 桌面引擎常常在运行时编译代码；iOS应用则改为提前编译好引擎再发布。这是一般的平台行为，若干引擎项目都提到过，也是iPhone引擎在功能上落后于桌面引擎的原因之一。',
-          '**数据共享（准则5.1.1和5.1.2）。** 应用必须链接隐私政策、说明收集了哪些数据，并在与第三方共享个人数据（“包括与第三方AI共享”）之前获得许可，且未经同意不得挪作他用。App Store的隐私标签由开发者填写，隐私一章会再谈到这一点。',
+          '**数据共享（准则5.1.1和5.1.2）。** 应用必须链接隐私政策、说明收集了哪些数据，并在与第三方共享个人数据（“包括与第三方AI共享”，译文）之前获得许可，且未经同意不得挪作他用。App Store的隐私标签由开发者填写，隐私一章会再谈到这一点。',
           '**侧载与替代应用市场。** 在欧盟，依据《数字市场法》存在替代应用市场，但每位开发者自行决定在哪里发布。本指南中没有应用需要它；[LLM Farm](/zh/power-local-llm/llm-farm-review)是例外，目前必须在Xcode中从源码构建。',
           '**TestFlight测试版。** 一些开发者提供TestFlight版本（例如提供免费试用的[Aiko](/zh/power-local-llm/aiko-review)和提供较新构建的[fullmoon](/zh/power-local-llm/fullmoon-review)）。TestFlight版本有时间限制且尚未完成；请用于测试，而不要用于你不能丢失的数据。',
         ],
@@ -5781,7 +5781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'health-wellness',
         title: '健康与身心状态问题',
         content:
-          '**有一款已评测的iPhone应用用设备上的Apple Intelligence回答关于你的Apple健康数据的问题，它也是我们的iPhone应用中唯一的健康类应用。** 健康数据是敏感的个人数据，而小型语言模型不是临床医生。',
+          '**有一款已点评的iPhone应用用设备上的Apple Intelligence回答关于你的Apple健康数据的问题，它也是我们的iPhone应用中唯一的健康类应用。** 健康数据是敏感的个人数据，而小型语言模型不是临床医生。',
         items: [
           '[Pajdo](/zh/power-local-llm/pajdo-review)：免费的iPhone、iPad和Apple Watch应用，把Apple健康数据转化为八种心情之一，并据其网站称，用设备上的Apple Intelligence回答你关于这些数据的问题。免费方案每周包含5个问题；Pro取消限制，并增加锻炼计划和就诊报告。局限：闭源，需要iOS 26或更新版本，设备端运行的说法依赖开发者的一面之词。',
           '聊天章节中的通用聊天应用可以笼统地讨论睡眠、训练或营养。局限：除非应用请求权限，否则它们无法访问你的健康数据，而且小模型可能言之凿凿地给出错误事实。',
@@ -5905,7 +5905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'battery-thermal-memory',
         title: '电池、发热与内存限制',
         content:
-          '**生成文字会让芯片持续忙碌，所以模型运行时会有明显的发热和耗电；偶尔使用的代价很小。** PromptQuorum没有测量过任何iPhone的功耗或电池使用情况，我们也没有找到可以引用的已发布数据。',
+          '**生成文字会让芯片持续忙碌，所以模型运行时请预期会有明显的发热和耗电；偶尔使用的代价很小。** PromptQuorum没有测量过任何iPhone的功耗或电池使用情况，我们也没有找到可以引用的已发布数据。',
         items: [
           '**发热：** 持续生成可能让iOS降低时钟频率，每秒token数随之下降。具体情况因手机、保护壳、充电和室温而异，我们没有测量过。',
           '**准则2.4.2：** Apple要求开发者的应用不应快速耗电或产生过多热量，因此表现良好的应用会限制生成长度或暂停长时间运行。',
@@ -5934,7 +5934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'not-possible',
         title: 'iPhone上做不到或暂时做不到的事',
         content:
-          '**这些是人们最常对iPhone本地AI提出、而目前没有已评测的iPhone应用能够实现的愿望。** 有些是硬件或App Store规则的硬性限制；另一些则是随着Apple和应用开发者推出Core AI等新框架，可能会逐步补上的空白。',
+          '**这些是人们最常对iPhone本地AI提出、而目前没有已点评的iPhone应用能够实现的愿望。** 有些是硬件或App Store规则的硬性限制；另一些则是随着Apple和应用开发者推出Core AI等新框架，可能会逐步补上的空白。',
         columns: ['愿望', '状态', '原因', '替代方案'],
         rows: [
           { '愿望': '在手机上运行30B-70B模型', '状态': '不可行', '原因': '需要的内存远超iPhone所有', '替代方案': '远程模式连接家中服务器' },
@@ -6016,7 +6016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'iPhone上的本地AI真的私密吗？',
             a:
-              '聊天可以保留在设备上，但隐私取决于具体应用。标签由开发者自行声明，而且好几款已评测的应用会发送崩溃报告、使用事件或可选的网络请求。请用飞行模式和设置 > 隐私与安全性 > App隐私报告来验证。',
+              '聊天可以保留在设备上，但隐私取决于具体应用。标签由开发者自行声明，而且好几款已点评的应用会发送崩溃报告、使用事件或可选的网络请求。请用飞行模式和设置 > 隐私与安全性 > App隐私报告来验证。',
           },
           {
             q: '我能在iPhone上运行Ollama吗？',
@@ -6312,7 +6312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La RAM, no el nombre del chip, fija el tamaño del modelo.** Apple no publica la RAM de los iPhone; las cifras de esta guía son especificaciones ampliamente difundidas. Un iPhone de 4 GB está por debajo del mínimo práctico, 6 GB significa modelos de 1-2B, 8 GB significa 3-4B y 12 GB añade margen.',
           '**Apple Intelligence y el framework Foundation Models son una segunda vía, independiente.** El modelo propio de Apple ya está en el teléfono (iPhone 15 Pro y posteriores), no requiere descarga y pueden usarlo apps de terceros. Por sí solo no es una app de chat general, y se aplican límites de idioma y región.',
           '**La App Store impone límites estrictos.** No hay Docker ni se puede ejecutar Ollama en el teléfono; las apps no pueden descargar código que cambie sus funciones (guía 2.5.2 de Apple), así que cada motor se incluye dentro de la app y solo se descargan los archivos del modelo. Por eso la IA local en iPhone consiste en instalar una app, no en montar un stack.',
-          '**Casi todo lo que quiere el propietario de un iPhone tiene una app reseñada en nuestro directorio:** chat, preguntas con la cámara, dictado y transcripción, chat con documentos, traducción, generación de imágenes, búsqueda de fotos, notas, preguntas de salud, roleplay, control del hogar inteligente y acceso remoto a un servidor doméstico. Esta guía enlaza la mayoría de las apps de iPhone de nuestro directorio con la capacidad para la que sirven.',
+          '**Gran parte de lo que quiere el propietario de un iPhone tiene una app reseñada en nuestro directorio:** chat, preguntas con la cámara, dictado y transcripción, chat con documentos, traducción, generación de imágenes, búsqueda de fotos, notas, preguntas de salud, roleplay, control del hogar inteligente y acceso remoto a un servidor doméstico. Esta guía enlaza la mayoría de las apps de iPhone de nuestro directorio con la capacidad para la que sirven.',
           '**Varias cosas no son posibles o solo lo son en parte:** modelos de 30B o más, razonamiento de calidad frontier, agentes siempre activos en segundo plano, sustituir a Siri por un modelo propio, el ajuste fino (fine-tuning) en el teléfono y una garantía de privacidad basada solo en una etiqueta de la App Store.',
           '**"Cero telemetría" hay que comprobarlo, no darlo por bueno.** Varias apps que dicen mantener el chat en el dispositivo siguen enviando informes de fallos, eventos de uso o solicitudes web opcionales; el capítulo de privacidad muestra cómo verificarlo con el modo avión y el Informe de privacidad de apps.',
           '**Empieza poco a poco:** instala una app, descarga un modelo de 1-2 GB con Wi-Fi, activa el modo avión y haz una pregunta. Si funciona, has verificado toda la ruta sin conexión en menos de 15 minutos.',
@@ -6438,7 +6438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Capacidad': 'Agentes autónomos siempre activos',
             'En iPhone': 'Aún no',
             'Configuración típica': 'iOS limita el trabajo en segundo plano',
-            'Capítulo': 'Imposible',
+            'Capítulo': 'No es posible',
           },
           {
             'Capacidad': 'Ejecutar modelos de 30B o más',
@@ -6653,11 +6653,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sin código descargado que cambie la app (guía 2.5.2).** Texto de Apple (traducido): las apps "no pueden descargar, instalar ni ejecutar código que introduzca o cambie funciones o funcionalidad de la app". Las apps de IA local respetan esta regla incluyendo el motor en la app y descargando pesos de modelo, que son datos. Es nuestra lectura, no una declaración de Apple.',
           '**Sin servidor Ollama en el teléfono.** Ollama no ofrece una app para iPhone, y el sandbox de la App Store no deja una vía práctica para ejecutar un servidor Ollama ni un contenedor Docker. Existen algunas apps de shell en sandbox, pero no te dan un servidor de modelos locales.',
           '**Solo APIs públicas (guía 2.5.1).** Las apps solo pueden usar APIs públicas, por lo que Foundation Models, Core ML, Metal y MLX son las vías disponibles y el acceso privado al Neural Engine no lo es.',
-          '**Energía y calor (guía 2.4.2).** Apple dice que las apps "no deben agotar rápidamente la batería, generar calor excesivo ni someter a los recursos del dispositivo a un esfuerzo innecesario". La generación sostenida pone a prueba esa línea, por eso las apps limitan o detienen las ejecuciones largas.',
+          '**Energía y calor (guía 2.4.2).** Apple dice (traducido) que las apps "no deben agotar rápidamente la batería, generar calor excesivo ni someter a los recursos del dispositivo a un esfuerzo innecesario". La generación sostenida pone a prueba esa línea, por eso las apps limitan o detienen las ejecuciones largas.',
           '**El uso en segundo plano es limitado (guía 2.5.4).** Las apps multitarea solo pueden usar servicios en segundo plano para los fines previstos, como reproducción de audio, ubicación, finalización de tareas y notificaciones locales. Un modelo no puede seguir generando ni actuar como agente indefinidamente cuando sales de la app; [Reins](/es/power-local-llm/reins-review) indica que la generación en segundo plano requiere iOS 26.',
           '**Límites de memoria.** iOS limita cuánta RAM puede usar una app en primer plano. Apple publica un permiso (entitlement) de límite de memoria ampliado (com.apple.developer.kernel.increased-memory-limit) que los desarrolladores pueden solicitar; no indicamos la cantidad exacta que permite. No puedes ver si una app lo tiene, así que prueba un modelo con el benchmark de la propia app antes de depender de él.',
           '**JIT y compilación en tiempo de ejecución.** Los motores de escritorio suelen compilar código en tiempo de ejecución; las apps de iOS incluyen motores compilados de antemano. Es un comportamiento general de la plataforma, señalado por varios proyectos de motores, y una de las razones por las que los motores de iPhone van por detrás de los de escritorio en funciones.',
-          '**Uso compartido de datos (guías 5.1.1 y 5.1.2).** Las apps deben enlazar una política de privacidad, explicar qué datos recopilan, obtener permiso antes de compartir datos personales con terceros "incluida la IA de terceros" y no pueden reutilizar los datos sin consentimiento. Las etiquetas de privacidad de la App Store las rellena el desarrollador, algo a lo que vuelve el capítulo de privacidad.',
+          '**Uso compartido de datos (guías 5.1.1 y 5.1.2).** Las apps deben enlazar una política de privacidad, explicar qué datos recopilan, obtener permiso antes de compartir datos personales con terceros "incluida la IA de terceros" (traducido) y no pueden reutilizar los datos sin consentimiento. Las etiquetas de privacidad de la App Store las rellena el desarrollador, algo a lo que vuelve el capítulo de privacidad.',
           '**Sideloading y tiendas alternativas.** En la UE existen tiendas de apps alternativas bajo la Ley de Mercados Digitales, pero cada desarrollador decide dónde publicar. Ninguna de las apps de esta guía necesita una; [LLM Farm](/es/power-local-llm/llm-farm-review) es la excepción, que actualmente hay que compilar desde el código fuente en Xcode.',
           '**Betas en TestFlight.** Varios desarrolladores ofrecen compilaciones en TestFlight (por ejemplo [Aiko](/es/power-local-llm/aiko-review) para una prueba gratuita y [fullmoon](/es/power-local-llm/fullmoon-review) para compilaciones más recientes). Las compilaciones de TestFlight tienen duración limitada y están sin terminar; úsalas para probar, no para datos que no puedas perder.',
         ],
@@ -7134,7 +7134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Deseo': 'Modelo de 30B-70B en el teléfono',
-            'Estado': 'Imposible',
+            'Estado': 'No es posible',
             'Por qué': 'Necesita mucha más RAM de la que tiene un iPhone',
             'En su lugar': 'Modo remoto a un servidor doméstico',
           },
@@ -7146,19 +7146,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Deseo': 'Ejecutar Ollama o Docker en el teléfono',
-            'Estado': 'Imposible',
+            'Estado': 'No es posible',
             'Por qué': 'No hay app de Ollama ni Docker para iPhone; límites del sandbox',
             'En su lugar': 'Ejecútalos en un Mac o PC',
           },
           {
             'Deseo': 'Sustituir a Siri por tu modelo',
-            'Estado': 'Imposible',
+            'Estado': 'No es posible',
             'Por qué': 'Siri la controla el sistema',
             'En su lugar': 'Atajos que llaman a una app',
           },
           {
             'Deseo': 'Agente siempre activo en segundo plano',
-            'Estado': 'Imposible',
+            'Estado': 'No es posible',
             'Por qué': 'Servicios en segundo plano limitados (2.5.4)',
             'En su lugar': 'Agente en un servidor doméstico',
           },
@@ -7182,7 +7182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Deseo': 'Apple Intelligence en el iPhone 14',
-            'Estado': 'Imposible',
+            'Estado': 'No es posible',
             'Por qué': 'No está en la lista de dispositivos de Apple',
             'En su lugar': 'Apps de modelos de terceros',
           },
@@ -7618,7 +7618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A RAM, e não o nome do chip, define o tamanho do modelo.** A Apple não divulga a RAM dos iPhones; os números deste guia são especificações amplamente relatadas. Um iPhone de 4 GB está abaixo do piso prático, 6 GB significam modelos de 1-2B, 8 GB significam 3-4B, 12 GB dão mais folga.',
           '**O Apple Intelligence e o framework Foundation Models são um segundo caminho, separado.** O modelo próprio da Apple no dispositivo já está no celular (iPhone 15 Pro e mais novos), não exige download e pode ser usado por apps de terceiros. Ele não é um app de chat geral por si só, e valem limites de idioma e de região.',
           '**A App Store impõe limites rígidos.** Não há Docker nem como rodar o Ollama no celular; os apps não podem baixar código que altere seus recursos (diretriz 2.5.2 da Apple), então todo motor vem dentro do app e só os arquivos de modelo são baixados. Por isso, IA local no iPhone significa instalar um app, não montar uma pilha.',
-          '**Quase tudo o que o dono de um iPhone quer tem um app analisado no nosso diretório:** chat, perguntas pela câmera, ditado e transcrição, chat com documentos, tradução, geração de imagens, busca de fotos, notas, perguntas sobre saúde, roleplay, controle da casa inteligente e acesso remoto a um servidor doméstico. Este guia liga a maioria dos apps de iPhone do nosso diretório à capacidade em que cada um se encaixa.',
+          '**A maior parte do que o dono de um iPhone quer tem um app analisado no nosso diretório:** chat, perguntas pela câmera, ditado e transcrição, chat com documentos, tradução, geração de imagens, busca de fotos, notas, perguntas sobre saúde, roleplay, controle da casa inteligente e acesso remoto a um servidor doméstico. Este guia liga a maioria dos apps de iPhone do nosso diretório à capacidade em que cada um se encaixa.',
           '**Várias coisas não são possíveis ou só são possíveis em parte:** modelos de 30B+, raciocínio de qualidade de ponta, agentes sempre ativos em segundo plano, substituir a Siri pelo seu próprio modelo, fazer fine-tuning no celular e uma garantia de privacidade apenas por um rótulo da App Store.',
           '**"Zero telemetria" precisa ser verificado, não aceito na confiança.** Vários apps que dizem manter o chat no dispositivo ainda enviam relatórios de falhas, eventos de uso ou requisições opcionais à web; o capítulo de privacidade mostra como verificar com o Modo Avião e o Relatório de Privacidade dos Apps.',
           '**Comece pequeno:** instale um app, baixe um modelo de 1-2 GB no Wi-Fi, ative o Modo Avião e faça uma pergunta. Se funcionar, você verificou todo o caminho offline em menos de 15 minutos.',
@@ -7956,14 +7956,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A App Store explica a maior parte das diferenças entre a IA local no iPhone e no desktop.** As Diretrizes de Revisão de Apps da Apple valem para todo app, e quatro delas importam aqui: apps autocontidos, consumo de energia, serviços em segundo plano e compartilhamento de dados. Este capítulo cita o texto das regras e dá a nossa leitura; não é aconselhamento jurídico e a Apple pode mudar as regras.',
         items: [
-          '**Nada de código baixado que altere o app (diretriz 2.5.2).** Texto da Apple: os apps "não podem baixar, instalar nem executar código que introduza ou altere recursos ou funcionalidades do app". Os apps de IA local respeitam essa regra trazendo o motor dentro do app e baixando os pesos dos modelos, que são dados. Essa é a nossa leitura, não uma declaração da Apple.',
+          '**Nada de código baixado que altere o app (diretriz 2.5.2).** Texto da Apple (tradução livre do inglês): os apps "não podem baixar, instalar nem executar código que introduza ou altere recursos ou funcionalidades do app". Os apps de IA local respeitam essa regra trazendo o motor dentro do app e baixando os pesos dos modelos, que são dados. Essa é a nossa leitura, não uma declaração da Apple.',
           '**Sem servidor Ollama no celular.** O Ollama não oferece app para iPhone, e o sandbox da App Store não deixa nenhum meio prático de executar um servidor Ollama ou um contêiner Docker. Existem alguns apps de shell em sandbox, mas eles não dão um servidor de modelos locais.',
           '**Somente APIs públicas (diretriz 2.5.1).** Os apps só podem usar APIs públicas, e é por isso que Foundation Models, Core ML, Metal e MLX são os caminhos disponíveis e o acesso privado ao Neural Engine não é.',
-          '**Energia e calor (diretriz 2.4.2).** A Apple diz que os apps "não devem drenar a bateria rapidamente, gerar calor excessivo nem sobrecarregar desnecessariamente os recursos do dispositivo". A geração prolongada testa esse limite, e é por isso que os apps reduzem a velocidade ou interrompem execuções longas.',
+          '**Energia e calor (diretriz 2.4.2).** A Apple diz (tradução livre) que os apps "não devem drenar a bateria rapidamente, gerar calor excessivo nem sobrecarregar desnecessariamente os recursos do dispositivo". A geração prolongada testa esse limite, e é por isso que os apps reduzem a velocidade ou interrompem execuções longas.',
           '**O uso em segundo plano é limitado (diretriz 2.5.4).** Apps com multitarefa só podem usar serviços em segundo plano para fins previstos, como reprodução de áudio, localização, conclusão de tarefas e notificações locais. Um modelo não consegue continuar gerando nem agir como agente indefinidamente depois que você sai do app; o [Reins](/pt/power-local-llm/reins-review) observa que a geração em segundo plano exige o iOS 26.',
           '**Limites de memória.** O iOS limita a RAM que um app em primeiro plano pode usar. A Apple publica um entitlement de limite de memória ampliado (com.apple.developer.kernel.increased-memory-limit) que os desenvolvedores podem solicitar; não informamos o valor exato permitido. Você não consegue ver se um app o tem, então teste um modelo com o benchmark do próprio app antes de confiar nele.',
           '**JIT e compilação em tempo de execução.** Os motores de desktop costumam compilar código em tempo de execução; os apps de iOS trazem motores compilados com antecedência. Esse é um comportamento geral da plataforma, citado por vários projetos de motores, e uma das razões pelas quais os motores de iPhone ficam atrás dos de desktop em recursos.',
-          '**Compartilhamento de dados (diretrizes 5.1.1 e 5.1.2).** Os apps devem vincular uma política de privacidade, explicar quais dados coletam, obter permissão antes de compartilhar dados pessoais com terceiros "inclusive com IA de terceiros" e não podem reutilizar dados sem consentimento. Os rótulos de privacidade da App Store são preenchidos pelo desenvolvedor, ponto a que o capítulo de privacidade volta.',
+          '**Compartilhamento de dados (diretrizes 5.1.1 e 5.1.2).** Os apps devem vincular uma política de privacidade, explicar quais dados coletam, obter permissão antes de compartilhar dados pessoais com terceiros "inclusive com IA de terceiros" (tradução livre) e não podem reutilizar dados sem consentimento. Os rótulos de privacidade da App Store são preenchidos pelo desenvolvedor, ponto a que o capítulo de privacidade volta.',
           '**Sideloading e lojas alternativas.** Na UE, existem lojas de apps alternativas sob a Lei dos Mercados Digitais, mas cada desenvolvedor decide onde publicar. Nenhum dos apps deste guia precisa de uma; o [LLM Farm](/pt/power-local-llm/llm-farm-review) é a exceção que atualmente precisa ser compilado a partir do código-fonte no Xcode.',
           '**Betas no TestFlight.** Vários desenvolvedores oferecem versões no TestFlight (por exemplo o [Aiko](/pt/power-local-llm/aiko-review) para um teste gratuito e o [fullmoon](/pt/power-local-llm/fullmoon-review) para versões mais novas). As versões do TestFlight têm prazo e são inacabadas; use-as para testes, não para dados que você não pode perder.',
         ],
@@ -8623,7 +8623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'De qual iPhone preciso para IA local?',
             a:
-              'De um iPhone com 6 GB de RAM ou mais para modelos pequenos de 1-2B e 8 GB ou mais para modelos de 3-4B. A Apple não divulga a RAM, então use as faixas relatadas neste guia. Para o Apple Intelligence você precisa de um iPhone 15 Pro ou mais novo, da lista de dispositivos da Apple.',
+              'Um iPhone com 6 GB de RAM ou mais para modelos pequenos de 1-2B e 8 GB ou mais para modelos de 3-4B. A Apple não divulga a RAM, então use as faixas relatadas neste guia. Para o Apple Intelligence você precisa de um iPhone 15 Pro ou mais novo, da lista de dispositivos da Apple.',
           },
           {
             q: 'A IA local no iPhone é realmente privada?',
