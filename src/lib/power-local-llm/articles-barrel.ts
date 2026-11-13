@@ -63,6 +63,9 @@ import { article as a_photoview_review } from './articles/photoview-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
 import { article as a_aiko_review } from './articles/aiko-review'
 import { article as a_amical_review } from './articles/amical-review'
+import { article as a_argos_translate_review } from './articles/argos-translate-review'
+import { article as a_linguister_review } from './articles/linguister-review'
+import { article as a_dayflow_review } from './articles/dayflow-review'
 import { article as a_stratosort_review } from './articles/stratosort-review'
 import { article as a_sprich_review } from './articles/sprich-review'
 import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-flow-review'
@@ -108,6 +111,7 @@ import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_fullmoon_review } from './articles/fullmoon-review'
 import { article as a_reins_review } from './articles/reins-review'
+import { article as a_phantasm_review } from './articles/phantasm-review'
 import { article as a_openvoiceos_review } from './articles/openvoiceos-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
 import { article as a_trilium_notes_review } from './articles/trilium-notes-review'
@@ -770,6 +774,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'whisper-notes-review':                          a_whisper_notes_review,
   'aiko-review':                                   a_aiko_review,
   'amical-review':                                 a_amical_review,
+  'argos-translate-review':                        a_argos_translate_review,
+  'linguister-review':                             a_linguister_review,
+  'dayflow-review':                                a_dayflow_review,
   'stratosort-review':                             a_stratosort_review,
   'sprich-review':                                 a_sprich_review,
   'weesper-neon-flow-review':                      a_weesper_neon_flow_review,
@@ -815,6 +822,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'murmur-review':                                 a_murmur_review,
   'fullmoon-review':                               a_fullmoon_review,
   'reins-review':                                  a_reins_review,
+  'phantasm-review':                               a_phantasm_review,
   'openvoiceos-review':                            a_openvoiceos_review,
   'hillnote-review':                               a_hillnote_review,
   'trilium-notes-review':                          a_trilium_notes_review,

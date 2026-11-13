@@ -165,6 +165,9 @@ import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_aiko } from './apps/aiko'
 import { app as app_amical } from './apps/amical'
+import { app as app_argos_translate } from './apps/argos-translate'
+import { app as app_linguister } from './apps/linguister'
+import { app as app_dayflow } from './apps/dayflow'
 import { app as app_stratosort } from './apps/stratosort'
 import { app as app_sprich } from './apps/sprich'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
@@ -282,6 +285,7 @@ import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
+import { app as app_phantasm } from './apps/phantasm'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
 import { app as app_trilium_notes } from './apps/trilium-notes'
@@ -579,6 +583,7 @@ export const localAiApps: ToolRecord[] = [
   app_murmur,
   app_fullmoon,
   app_reins,
+  app_phantasm,
   app_openvoiceos,
   app_hillnote,
   app_trilium_notes,
@@ -713,6 +718,9 @@ export const localAiApps: ToolRecord[] = [
   app_whisper_notes,
   app_aiko,
   app_amical,
+  app_argos_translate,
+  app_linguister,
+  app_dayflow,
   app_stratosort,
   app_sprich,
   app_weesper_neon_flow,

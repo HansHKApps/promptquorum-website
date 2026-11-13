@@ -1044,6 +1044,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "phantasm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "phantasm-review",
+    "url": "/power-local-llm/phantasm-review"
+  },
   "openvoiceos": {
     "cluster": "power-local-llm",
     "urlSlug": "openvoiceos-review",
@@ -1713,6 +1718,21 @@
     "cluster": "power-local-llm",
     "urlSlug": "amical-review",
     "url": "/power-local-llm/amical-review"
+  },
+  "argos-translate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "argos-translate-review",
+    "url": "/power-local-llm/argos-translate-review"
+  },
+  "linguister": {
+    "cluster": "power-local-llm",
+    "urlSlug": "linguister-review",
+    "url": "/power-local-llm/linguister-review"
+  },
+  "dayflow": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dayflow-review",
+    "url": "/power-local-llm/dayflow-review"
   },
   "stratosort": {
     "cluster": "power-local-llm",
