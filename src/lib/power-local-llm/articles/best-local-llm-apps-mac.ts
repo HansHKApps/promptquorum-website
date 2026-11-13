@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -70,6 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI: Browser Chat Interface', anchor: '#openwebui' },
       { label: 'oMLX: MLX Inference Server for Apple Silicon', anchor: '#omlx' },
       { label: 'Chatbox: Lightweight Client', anchor: '#chatbox' },
+      { label: 'Loci: Offline Assistant With a Mac Agent Interface', anchor: '#loci' },
       { label: 'How Much Mac Memory Do You Need?', anchor: '#memory' },
       { label: 'Common Mistakes', anchor: '#common-mistakes' },
       { label: 'Sources', anchor: '#sources' },
@@ -95,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Apps compared:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox.',
+          '**Apps compared:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox, Loci.',
           '**Latest upstream releases (checked 2026-10-31):** LM Studio 0.4.28 (31 Oct 2026) · Ollama v0.40.13 (28 Oct) · Jan v0.8.8 (28 Oct) · Open WebUI v0.12.5 (29 Oct) · oMLX v0.7.3rc1 (27 Oct) · AnythingLLM v1.19.0 (26 Oct) · Msty Studio 3.0.0 Beta 15 (7 Oct) · Chatbox v1.23.5 (24 Sep 2026). None is more than 3 months old, so no stale warning applies.',
           '**Apple Silicon only:** LM Studio and oMLX. Intel Macs still run Ollama (CPU-only) and AnythingLLM.',
           '**Fully local by design:** LM Studio, Ollama, Jan, oMLX. **Can also use cloud providers:** Msty, Chatbox, Open WebUI, AnythingLLM.',
@@ -122,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Mac App Comparison Table',
         content:
-          '**The eight apps differ on three things: how you use them (window, terminal or browser), whether they can reach cloud models, and which Macs they support.** Versions and license terms were read from official project pages on 2026-10-31.',
+          '**The eight apps differ on three things: how you use them (window, terminal or browser), whether they can reach cloud models, and which Macs they support.** Versions and license terms were read from official project pages on 2026-10-31. Loci is listed last as a newer addition; its agent and speed claims come from the maker and were not tested by PromptQuorum.',
         columns: ['App', 'Cost / license', 'Mac requirement', 'Interface', 'Best for'],
         rows: [
           { 'App': '[LM Studio](https://lmstudio.ai)', 'Cost / license': 'Free (closed source)', 'Mac requirement': 'Apple Silicon, macOS 14+', 'Interface': 'Desktop app', 'Best for': 'Easiest first install' },
@@ -133,6 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Open WebUI](https://openwebui.com)', 'Cost / license': 'Free (custom BSD-based)', 'Mac requirement': 'Any Mac via browser', 'Interface': 'Browser (Docker/pip)', 'Best for': 'Browser chat UI' },
           { 'App': '[oMLX](https://omlx.ai)', 'Cost / license': 'Free (Apache-2.0)', 'Mac requirement': 'Apple Silicon, macOS 15+', 'Interface': 'Mac app, server', 'Best for': 'MLX inference' },
           { 'App': '[Chatbox](https://chatboxai.app)', 'Cost / license': 'Free (GPL-3.0)', 'Mac requirement': 'macOS app (see chatboxai.app)', 'Interface': 'Desktop app, web', 'Best for': 'Lightweight client' },
+          { 'App': '[Loci](https://askloci.ai)', 'Cost / license': 'Free (closed source)', 'Mac requirement': 'macOS 26.2+ (Mac App Store)', 'Interface': 'Desktop app, MCP/API', 'Best for': 'Offline assistant' },
         ],
         note:
           'Mac requirements come from each project\'s own documentation. Where a project does not publish one, the table says so instead of guessing.',
@@ -233,6 +235,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best for:** a light client that connects to an Ollama or LM Studio server.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci: Offline Assistant With a Mac Agent Interface',
+        content:
+          '**Loci is a free offline AI assistant for iPhone, Android, Mac and Windows, with a Mac app that can also offer local models to coding agents.** Full review: [Loci review](/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**What it is:** a closed-source app from Loci AI, Inc. that runs models on the device and is free according to the maker. On Mac it uses Apple\'s built-in model or downloadable open models, and it is available on the Mac App Store and as a direct download from [askloci.ai](https://askloci.ai).',
+          '**Latest release (checked 13 Nov 2026):** Mac App Store v2.1.4, 10 Nov 2026; iOS v1.3.42, 10 Nov 2026 ([source](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**Mac requirement:** macOS 26.2 or later per the Mac App Store listing. The [Loci agents page](https://askloci.ai/agents) lists Apple silicon and 8 GB of memory for the coding-agent interface; Intel Macs get the App Store build without it.',
+          '**Maker-stated, not tested:** Michael Waldman, Founder & CEO of Loci AI, Inc., told PromptQuorum that Loci has its own inference engine (up to 7× faster than llama.cpp on certain models), an agent harness and connections to messaging apps. PromptQuorum has not tested these claims or measured speed on a Mac.',
+          '**Best for:** an easy offline assistant that also runs on your phone, and Mac users who want to try letting a coding agent use a local model.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'How Much Mac Memory Do You Need?',
@@ -267,6 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com) (latest release v0.12.5, 29 Oct 2026; [release notes](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai) (latest release v0.7.3rc1, 27 Oct 2026; [release notes](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app) (latest release v1.23.5, 24 Sep 2026; [release notes](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai) (Mac App Store v2.1.4, 10 Nov 2026, macOS 26.2+: [listing](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318); coding-agent interface: [agents page](https://askloci.ai/agents)).',
           'LM Studio system requirements — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements) (Apple Silicon, macOS 14).',
           'Ollama macOS documentation — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) (macOS 14+, M-series or x86 CPU-only) and the [Homebrew formula](https://formulae.brew.sh/formula/ollama).',
           'Jan README — [github.com/janhq/jan](https://github.com/janhq/jan) (macOS 13.6+, RAM guide).',
@@ -335,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -395,6 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI: Chat-Oberfläche im Browser', anchor: '#openwebui' },
       { label: 'oMLX: MLX-Inferenzserver für Apple Silicon', anchor: '#omlx' },
       { label: 'Chatbox: schlanker Client', anchor: '#chatbox' },
+      { label: 'Loci: Offline-Assistent mit Agenten-Schnittstelle für den Mac', anchor: '#loci' },
       { label: 'Wie viel Arbeitsspeicher braucht Ihr Mac?', anchor: '#memory' },
       { label: 'Häufige Fehler', anchor: '#common-mistakes' },
       { label: 'Quellen', anchor: '#sources' },
@@ -420,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Kurzfakten',
         items: [
-          '**Verglichene Apps:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox.',
+          '**Verglichene Apps:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox, Loci.',
           '**Aktuelle Upstream-Releases (geprüft am 31. Okt. 2026):** LM Studio 0.4.28 (31. Okt. 2026) · Ollama v0.40.13 (28. Okt.) · Jan v0.8.8 (28. Okt.) · Open WebUI v0.12.5 (29. Okt.) · oMLX v0.7.3rc1 (27. Okt.) · AnythingLLM v1.19.0 (26. Okt.) · Msty Studio 3.0.0 Beta 15 (7. Okt.) · Chatbox v1.23.5 (24. Sept. 2026). Keine App ist älter als 3 Monate, daher gilt keine Veraltet-Warnung.',
           '**Nur Apple Silicon:** LM Studio und oMLX. Intel-Macs führen weiterhin Ollama (nur CPU) und AnythingLLM aus.',
           '**Von Grund auf lokal:** LM Studio, Ollama, Jan, oMLX. **Können auch Cloud-Anbieter nutzen:** Msty, Chatbox, Open WebUI, AnythingLLM.',
@@ -447,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Vergleichstabelle der Mac-Apps',
         content:
-          '**Die acht Apps unterscheiden sich in drei Punkten: wie Sie sie bedienen (Fenster, Terminal oder Browser), ob sie Cloud-Modelle erreichen können und welche Macs sie unterstützen.** Versionen und Lizenzbedingungen wurden am 31. Okt. 2026 von den offiziellen Projektseiten gelesen.',
+          '**Die acht Apps unterscheiden sich in drei Punkten: wie Sie sie bedienen (Fenster, Terminal oder Browser), ob sie Cloud-Modelle erreichen können und welche Macs sie unterstützen.** Versionen und Lizenzbedingungen wurden am 31. Okt. 2026 von den offiziellen Projektseiten gelesen. Loci steht als neuere Ergänzung zuletzt; die Angaben zu Agenten und Geschwindigkeit stammen vom Hersteller und wurden von PromptQuorum nicht getestet.',
         columns: ['App', 'Kosten / Lizenz', 'Mac-Voraussetzung', 'Oberfläche', 'Am besten für'],
         rows: [
           { 'App': '[LM Studio](https://lmstudio.ai)', 'Kosten / Lizenz': 'Kostenlos (Closed Source)', 'Mac-Voraussetzung': 'Apple Silicon, macOS 14+', 'Oberfläche': 'Desktop-App', 'Am besten für': 'Einfachste Erstinstallation' },
@@ -458,6 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Open WebUI](https://openwebui.com)', 'Kosten / Lizenz': 'Kostenlos (BSD-basiert, angepasst)', 'Mac-Voraussetzung': 'Jeder Mac über den Browser', 'Oberfläche': 'Browser (Docker/pip)', 'Am besten für': 'Chat-Oberfläche im Browser' },
           { 'App': '[oMLX](https://omlx.ai)', 'Kosten / Lizenz': 'Kostenlos (Apache-2.0)', 'Mac-Voraussetzung': 'Apple Silicon, macOS 15+', 'Oberfläche': 'Mac-App, Server', 'Am besten für': 'MLX-Inferenz' },
           { 'App': '[Chatbox](https://chatboxai.app)', 'Kosten / Lizenz': 'Kostenlos (GPL-3.0)', 'Mac-Voraussetzung': 'macOS-App (siehe chatboxai.app)', 'Oberfläche': 'Desktop-App, Web', 'Am besten für': 'Schlanker Client' },
+          { 'App': '[Loci](https://askloci.ai)', 'Kosten / Lizenz': 'Kostenlos (Closed Source)', 'Mac-Voraussetzung': 'macOS 26.2+ (Mac App Store)', 'Oberfläche': 'Desktop-App, MCP/API', 'Am besten für': 'Offline-Assistent' },
         ],
         note:
           'Die Mac-Voraussetzungen stammen aus der Dokumentation des jeweiligen Projekts. Wo ein Projekt keine nennt, steht das in der Tabelle, statt zu raten.',
@@ -558,6 +576,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Am besten für:** einen schlanken Client, der sich mit einem Ollama- oder LM-Studio-Server verbindet.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci: Offline-Assistent mit Agenten-Schnittstelle für den Mac',
+        content:
+          '**Loci ist ein kostenloser Offline-KI-Assistent für iPhone, Android, Mac und Windows; die Mac-App kann lokale Modelle auch für Coding-Agenten bereitstellen.** Vollständiger Test: [Loci-Review](/de/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**Was es ist:** eine Closed-Source-App von Loci AI, Inc., die Modelle auf dem Gerät ausführt und laut Hersteller kostenlos ist. Auf dem Mac nutzt sie das integrierte Apple-Modell oder herunterladbare offene Modelle; sie ist im Mac App Store und als direkter Download auf [askloci.ai](https://askloci.ai) erhältlich.',
+          '**Aktuelle Version (geprüft am 13 Nov. 2026):** Mac App Store v2.1.4, 10 Nov. 2026; iOS v1.3.42, 10 Nov. 2026 ([Quelle](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**Mac-Voraussetzung:** macOS 26.2 oder neuer laut Mac-App-Store-Eintrag. Die [Loci-Agentenseite](https://askloci.ai/agents) nennt für die Schnittstelle zu Coding-Agenten Apple Silicon und 8 GB Arbeitsspeicher; Intel-Macs erhalten die App-Store-Version ohne sie.',
+          '**Herstellerangabe, nicht getestet:** Michael Waldman, Founder & CEO von Loci AI, Inc., teilte PromptQuorum mit, dass Loci eine eigene Inferenz-Engine (auf bestimmten Modellen bis zu 7× schneller als llama.cpp), ein Agenten-Framework und Anbindungen an Messaging-Apps hat. PromptQuorum hat diese Angaben nicht getestet und auf dem Mac keine Geschwindigkeit gemessen.',
+          '**Am besten für:** einen einfachen Offline-Assistenten, der auch auf dem Smartphone läuft, und Mac-Nutzer, die ausprobieren möchten, einen Coding-Agenten ein lokales Modell nutzen zu lassen.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'Wie viel Arbeitsspeicher braucht Ihr Mac?',
@@ -592,6 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com) (aktuelle Version v0.12.5, 29 Okt. 2026; [Release Notes](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai) (aktuelle Version v0.7.3rc1, 27 Okt. 2026; [Release Notes](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app) (aktuelle Version v1.23.5, 24 Sept. 2026; [Release Notes](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai) (Mac App Store v2.1.4, 10 Nov. 2026, macOS 26.2+: [Eintrag](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318); Schnittstelle für Coding-Agenten: [Agentenseite](https://askloci.ai/agents)).',
           'Systemanforderungen von LM Studio — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements) (Apple Silicon, macOS 14).',
           'Ollama-macOS-Dokumentation — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) (macOS 14+, M-Chip oder x86 nur CPU) und die [Homebrew-Formel](https://formulae.brew.sh/formula/ollama).',
           'Jan-README — [github.com/janhq/jan](https://github.com/janhq/jan) (macOS 13.6+, RAM-Richtwerte).',
@@ -660,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -720,6 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI：ブラウザのチャットUI', anchor: '#openwebui' },
       { label: 'oMLX：Apple Silicon向けMLX推論サーバー', anchor: '#omlx' },
       { label: 'Chatbox：軽量クライアント', anchor: '#chatbox' },
+      { label: 'Loci：Mac向けエージェント連携を備えたオフラインアシスタント', anchor: '#loci' },
       { label: 'Macのメモリはどれだけ必要？', anchor: '#memory' },
       { label: 'よくある間違い', anchor: '#common-mistakes' },
       { label: '参考資料', anchor: '#sources' },
@@ -745,7 +778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**比較したアプリ：** LM Studio、Ollama、Jan、Msty、AnythingLLM、Open WebUI、oMLX、Chatbox。',
+          '**比較したアプリ：** LM Studio、Ollama、Jan、Msty、AnythingLLM、Open WebUI、oMLX、Chatbox、Loci。',
           '**最新の上流リリース（2026年10月31日確認）：** LM Studio 0.4.28（2026年10月31日）・Ollama v0.40.13（10月28日）・Jan v0.8.8（10月28日）・Open WebUI v0.12.5（10月29日）・oMLX v0.7.3rc1（10月27日）・AnythingLLM v1.19.0（10月26日）・Msty Studio 3.0.0 Beta 15（10月7日）・Chatbox v1.23.5（2026年9月24日）。3か月を超えて更新のないアプリはなく、更新停止の警告は不要です。',
           '**Apple Silicon専用：** LM StudioとoMLX。Intel MacではOllama（CPUのみ）とAnythingLLMが動作します。',
           '**設計上ローカルで完結：** LM Studio、Ollama、Jan、oMLX。**クラウドも利用可能：** Msty、Chatbox、Open WebUI、AnythingLLM。',
@@ -772,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Macアプリ比較表',
         content:
-          '**8つのアプリは3点で異なります。操作方法（ウィンドウ、ターミナル、ブラウザ）、クラウドモデルに接続できるか、対応するMacです。** バージョンとライセンス条件は2026年10月31日に公式プロジェクトページで確認しました。',
+          '**8つのアプリは3点で異なります。操作方法（ウィンドウ、ターミナル、ブラウザ）、クラウドモデルに接続できるか、対応するMacです。** バージョンとライセンス条件は2026年10月31日に公式プロジェクトページで確認しました。 Lociは新たに加えたアプリとして最後に掲載しています。エージェントや速度に関する記述は開発元の主張であり、PromptQuorumは検証していません。',
         columns: ['アプリ', '費用・ライセンス', 'Macの要件', 'インターフェース', '向いている用途'],
         rows: [
           { 'アプリ': '[LM Studio](https://lmstudio.ai)', '費用・ライセンス': '無料（クローズドソース）', 'Macの要件': 'Apple Silicon、macOS 14以降', 'インターフェース': 'デスクトップアプリ', '向いている用途': '最初のインストール' },
@@ -783,6 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'アプリ': '[Open WebUI](https://openwebui.com)', '費用・ライセンス': '無料（BSD系の独自）', 'Macの要件': 'ブラウザなら全Mac', 'インターフェース': 'ブラウザ（Docker/pip）', '向いている用途': 'ブラウザのチャットUI' },
           { 'アプリ': '[oMLX](https://omlx.ai)', '費用・ライセンス': '無料（Apache-2.0）', 'Macの要件': 'Apple Silicon、macOS 15以降', 'インターフェース': 'Macアプリ、サーバー', '向いている用途': 'MLX推論' },
           { 'アプリ': '[Chatbox](https://chatboxai.app)', '費用・ライセンス': '無料（GPL-3.0）', 'Macの要件': 'macOSアプリ（chatboxai.app）', 'インターフェース': 'デスクトップ、Web', '向いている用途': '軽量クライアント' },
+          { 'アプリ': '[Loci](https://askloci.ai)', '費用・ライセンス': '無料（クローズドソース）', 'Macの要件': 'macOS 26.2以降（Mac App Store）', 'インターフェース': 'デスクトップ、MCP/API', '向いている用途': 'オフラインアシスタント' },
         ],
         note:
           'Macの要件は各プロジェクト自身のドキュメントによります。公開されていない場合は推測せず、その旨を表に記しています。',
@@ -883,6 +917,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**向いている用途：** OllamaやLM Studioのサーバーにつなぐ軽量クライアント。',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci：Mac向けエージェント連携を備えたオフラインアシスタント',
+        content:
+          '**Lociは、iPhone、Android、Mac、Windows向けの無料オフラインAIアシスタントです。Mac版はローカルモデルをコーディングエージェントにも提供できます。** 詳細レビュー：[Lociレビュー](/ja/power-local-llm/loci-ai-review-offline-local-ai)。',
+        items: [
+          '**概要：** Loci AI, Inc.のクローズドソースアプリで、モデルを端末上で実行し、開発元によれば無料です。MacではAppleの組み込みモデルまたはダウンロード可能なオープンモデルを使い、Mac App Storeと[askloci.ai](https://askloci.ai)からの直接ダウンロードで入手できます。',
+          '**最新リリース（2026年11月13日確認）：** Mac App Store v2.1.4（2026年11月10日）、iOS v1.3.42（2026年11月10日）（[出典](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)）。',
+          '**Macの要件：** Mac App Storeの掲載情報ではmacOS 26.2以降です。[Lociのエージェントページ](https://askloci.ai/agents)には、コーディングエージェント用インターフェースの要件としてApple siliconと8 GBのメモリが記載されており、IntelのMacではこれを除いたApp Store版を入手できます。',
+          '**開発元の主張（未検証）：** Loci AI, Inc.の創業者兼CEOであるMichael Waldman氏は、Lociが独自の推論エンジン（特定のモデルでllama.cppの最大7倍高速）、エージェントハーネス、メッセージングアプリとの連携を備えているとPromptQuorumに伝えました。PromptQuorumはこれらを検証しておらず、Macでの速度も測定していません。',
+          '**向いている用途：** スマートフォンでも使える手軽なオフラインアシスタント、そしてコーディングエージェントにローカルモデルを使わせてみたいMacユーザー。',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'Macのメモリはどれだけ必要？',
@@ -917,6 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com)（最新リリースv0.12.5、2026年10月29日、[リリースノート](https://github.com/open-webui/open-webui/releases)）。',
           'oMLX — [omlx.ai](https://omlx.ai)（最新リリースv0.7.3rc1、2026年10月27日、[リリースノート](https://github.com/jundot/omlx/releases)）。',
           'Chatbox — [chatboxai.app](https://chatboxai.app)（最新リリースv1.23.5、2026年9月24日、[リリースノート](https://github.com/chatboxai/chatbox/releases)）。',
+          'Loci — [askloci.ai](https://askloci.ai)（Mac App Store v2.1.4、2026年11月10日、macOS 26.2以降：[掲載ページ](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)、コーディングエージェント用インターフェース：[エージェントページ](https://askloci.ai/agents)）。',
           'LM Studioのシステム要件 — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements)（Apple Silicon、macOS 14）。',
           'OllamaのmacOSドキュメント — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx)（macOS 14以降、MシリーズまたはIntelはCPUのみ）と[Homebrewのformula](https://formulae.brew.sh/formula/ollama)。',
           'Jan README — [github.com/janhq/jan](https://github.com/janhq/jan)（macOS 13.6以降、RAMの目安）。',
@@ -985,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1045,6 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI : interface de chat dans le navigateur', anchor: '#openwebui' },
       { label: 'oMLX : serveur d’inférence MLX pour Apple Silicon', anchor: '#omlx' },
       { label: 'Chatbox : client léger', anchor: '#chatbox' },
+      { label: 'Loci : assistant hors ligne avec interface d’agents sur Mac', anchor: '#loci' },
       { label: 'De quelle mémoire votre Mac a-t-il besoin ?', anchor: '#memory' },
       { label: 'Erreurs courantes', anchor: '#common-mistakes' },
       { label: 'Sources', anchor: '#sources' },
@@ -1070,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Apps comparées :** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox.',
+          '**Apps comparées :** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox, Loci.',
           '**Dernières versions amont (vérifiées le 31 oct. 2026) :** LM Studio 0.4.28 (31 oct. 2026) · Ollama v0.40.13 (28 oct.) · Jan v0.8.8 (28 oct.) · Open WebUI v0.12.5 (29 oct.) · oMLX v0.7.3rc1 (27 oct.) · AnythingLLM v1.19.0 (26 oct.) · Msty Studio 3.0.0 Beta 15 (7 oct.) · Chatbox v1.23.5 (24 sept. 2026). Aucune n’a plus de 3 mois, donc aucun avertissement d’inactivité ne s’applique.',
           '**Apple Silicon uniquement :** LM Studio et oMLX. Les Mac Intel exécutent encore Ollama (CPU seul) et AnythingLLM.',
           '**Locales par conception :** LM Studio, Ollama, Jan, oMLX. **Peuvent aussi utiliser le cloud :** Msty, Chatbox, Open WebUI, AnythingLLM.',
@@ -1097,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tableau comparatif des apps Mac',
         content:
-          '**Les huit apps diffèrent sur trois points : la façon de les utiliser (fenêtre, terminal ou navigateur), la possibilité d’accéder à des modèles cloud et les Mac pris en charge.** Les versions et les conditions de licence ont été lues sur les pages officielles des projets le 31 oct. 2026.',
+          '**Les huit apps diffèrent sur trois points : la façon de les utiliser (fenêtre, terminal ou navigateur), la possibilité d’accéder à des modèles cloud et les Mac pris en charge.** Les versions et les conditions de licence ont été lues sur les pages officielles des projets le 31 oct. 2026. Loci figure en dernier comme ajout récent ; ses affirmations sur les agents et la vitesse viennent de l’éditeur et n’ont pas été testées par PromptQuorum.',
         columns: ['App', 'Coût / licence', 'Configuration Mac', 'Interface', 'Idéal pour'],
         rows: [
           { 'App': '[LM Studio](https://lmstudio.ai)', 'Coût / licence': 'Gratuit (code fermé)', 'Configuration Mac': 'Apple Silicon, macOS 14+', 'Interface': 'App de bureau', 'Idéal pour': 'Première installation' },
@@ -1108,6 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Open WebUI](https://openwebui.com)', 'Coût / licence': 'Gratuit (BSD modifiée)', 'Configuration Mac': 'Tout Mac via navigateur', 'Interface': 'Navigateur (Docker/pip)', 'Idéal pour': 'Interface de chat web' },
           { 'App': '[oMLX](https://omlx.ai)', 'Coût / licence': 'Gratuit (Apache-2.0)', 'Configuration Mac': 'Apple Silicon, macOS 15+', 'Interface': 'App Mac, serveur', 'Idéal pour': 'Inférence MLX' },
           { 'App': '[Chatbox](https://chatboxai.app)', 'Coût / licence': 'Gratuit (GPL-3.0)', 'Configuration Mac': 'App macOS (voir chatboxai.app)', 'Interface': 'App de bureau, web', 'Idéal pour': 'Client léger' },
+          { 'App': '[Loci](https://askloci.ai)', 'Coût / licence': 'Gratuit (code fermé)', 'Configuration Mac': 'macOS 26.2+ (Mac App Store)', 'Interface': 'App de bureau, MCP/API', 'Idéal pour': 'Assistant hors ligne' },
         ],
         note:
           'La configuration Mac requise provient de la documentation de chaque projet. Quand un projet n’en publie pas, le tableau le dit au lieu de deviner.',
@@ -1208,6 +1258,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Idéal pour :** un client léger relié à un serveur Ollama ou LM Studio.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci : assistant hors ligne avec interface d’agents sur Mac',
+        content:
+          '**Loci est un assistant IA hors ligne gratuit pour iPhone, Android, Mac et Windows ; son app Mac peut aussi proposer des modèles locaux aux agents de code.** Test complet : [test de Loci](/fr/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**Ce que c’est :** une app à code fermé de Loci AI, Inc. qui exécute les modèles sur l’appareil et qui est gratuite selon l’éditeur. Sur Mac, elle utilise le modèle intégré d’Apple ou des modèles ouverts à télécharger ; elle est disponible sur le Mac App Store et en téléchargement direct sur [askloci.ai](https://askloci.ai).',
+          '**Dernière version (vérifiée le 13 nov. 2026) :** Mac App Store v2.1.4, 10 nov. 2026 ; iOS v1.3.42, 10 nov. 2026 ([source](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**Configuration Mac :** macOS 26.2 ou version ultérieure selon la fiche du Mac App Store. La [page agents de Loci](https://askloci.ai/agents) indique Apple silicon et 8 Go de mémoire pour l’interface avec les agents de code ; les Mac Intel reçoivent la version App Store sans cette interface.',
+          '**Déclaré par l’éditeur, non testé :** Michael Waldman, fondateur et PDG de Loci AI, Inc., a indiqué à PromptQuorum que Loci dispose de son propre moteur d’inférence (jusqu’à 7× plus rapide que llama.cpp sur certains modèles), d’un harnais d’agents et de connexions à des messageries. PromptQuorum n’a pas testé ces affirmations ni mesuré la vitesse sur Mac.',
+          '**Idéal pour :** un assistant hors ligne simple qui fonctionne aussi sur téléphone, et les utilisateurs de Mac qui veulent essayer de laisser un agent de code utiliser un modèle local.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'De quelle mémoire votre Mac a-t-il besoin ?',
@@ -1242,6 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com) (dernière version v0.12.5, 29 oct. 2026 ; [notes de version](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai) (dernière version v0.7.3rc1, 27 oct. 2026 ; [notes de version](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app) (dernière version v1.23.5, 24 sept. 2026 ; [notes de version](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai) (Mac App Store v2.1.4, 10 nov. 2026, macOS 26.2+ : [fiche](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318) ; interface pour agents de code : [page agents](https://askloci.ai/agents)).',
           'Exigences système de LM Studio — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements) (Apple Silicon, macOS 14).',
           'Documentation macOS d’Ollama — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) (macOS 14+, puce M ou x86 CPU seul) et la [formule Homebrew](https://formulae.brew.sh/formula/ollama).',
           'README de Jan — [github.com/janhq/jan](https://github.com/janhq/jan) (macOS 13.6+, repères de RAM).',
@@ -1310,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1370,6 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI：浏览器聊天界面', anchor: '#openwebui' },
       { label: 'oMLX：面向Apple Silicon的MLX推理服务器', anchor: '#omlx' },
       { label: 'Chatbox：轻量客户端', anchor: '#chatbox' },
+      { label: 'Loci：带Mac代理接口的离线助手', anchor: '#loci' },
       { label: '你的Mac需要多少内存？', anchor: '#memory' },
       { label: '常见错误', anchor: '#common-mistakes' },
       { label: '来源', anchor: '#sources' },
@@ -1395,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '快速事实',
         items: [
-          '**对比的应用：** LM Studio、Ollama、Jan、Msty、AnythingLLM、Open WebUI、oMLX、Chatbox。',
+          '**对比的应用：** LM Studio、Ollama、Jan、Msty、AnythingLLM、Open WebUI、oMLX、Chatbox、Loci。',
           '**最新上游版本（2026年10月31日核对）：** LM Studio 0.4.28（2026年10月31日）· Ollama v0.40.13（10月28日）· Jan v0.8.8（10月28日）· Open WebUI v0.12.5（10月29日）· oMLX v0.7.3rc1（10月27日）· AnythingLLM v1.19.0（10月26日）· Msty Studio 3.0.0 Beta 15（10月7日）· Chatbox v1.23.5（2026年9月24日）。没有应用超过3个月未更新，因此无需显示停更警告。',
           '**仅限Apple Silicon：** LM Studio和oMLX。Intel Mac仍可运行Ollama（仅CPU）和AnythingLLM。',
           '**设计上完全本地：** LM Studio、Ollama、Jan、oMLX。**也能使用云服务商：** Msty、Chatbox、Open WebUI、AnythingLLM。',
@@ -1422,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Mac应用对比表',
         content:
-          '**这八款应用在三个方面不同：使用方式（窗口、终端还是浏览器）、能否连接云端模型，以及支持哪些Mac。** 版本和许可证条款于2026年10月31日取自各项目官方页面。',
+          '**这八款应用在三个方面不同：使用方式（窗口、终端还是浏览器）、能否连接云端模型，以及支持哪些Mac。** 版本和许可证条款于2026年10月31日取自各项目官方页面。 Loci作为新增应用列在最后；其代理和速度方面的说法来自开发者，PromptQuorum未做测试。',
         columns: ['应用', '费用/许可证', 'Mac要求', '界面', '最适合'],
         rows: [
           { '应用': '[LM Studio](https://lmstudio.ai)', '费用/许可证': '免费（闭源）', 'Mac要求': 'Apple Silicon，macOS 14+', '界面': '桌面应用', '最适合': '最容易的首次安装' },
@@ -1433,6 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '应用': '[Open WebUI](https://openwebui.com)', '费用/许可证': '免费（修改版BSD）', 'Mac要求': '浏览器即可，任何Mac', '界面': '浏览器（Docker/pip）', '最适合': '浏览器聊天界面' },
           { '应用': '[oMLX](https://omlx.ai)', '费用/许可证': '免费（Apache-2.0）', 'Mac要求': 'Apple Silicon，macOS 15+', '界面': 'Mac应用、服务器', '最适合': 'MLX推理' },
           { '应用': '[Chatbox](https://chatboxai.app)', '费用/许可证': '免费（GPL-3.0）', 'Mac要求': 'macOS应用（见chatboxai.app）', '界面': '桌面应用、网页', '最适合': '轻量客户端' },
+          { '应用': '[Loci](https://askloci.ai)', '费用/许可证': '免费（闭源）', 'Mac要求': 'macOS 26.2+（Mac App Store）', '界面': '桌面应用、MCP/API', '最适合': '离线助手' },
         ],
         note:
           'Mac要求来自各项目自己的文档。项目未公布要求时，表中如实注明，不作猜测。',
@@ -1533,6 +1599,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最适合：** 连接Ollama或LM Studio服务器的轻量客户端。',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci：带Mac代理接口的离线助手',
+        content:
+          '**Loci是适用于iPhone、Android、Mac和Windows的免费离线AI助手，其Mac应用还能把本地模型提供给编程代理使用。** 完整评测：[Loci评测](/zh/power-local-llm/loci-ai-review-offline-local-ai)。',
+        items: [
+          '**简介：** Loci AI, Inc.的闭源应用，在设备上运行模型，据开发者称免费。在Mac上使用Apple内置模型或可下载的开放模型，可通过Mac App Store获取，也可从[askloci.ai](https://askloci.ai)直接下载。',
+          '**最新版本（2026年11月13日核对）：** Mac App Store v2.1.4，2026年11月10日；iOS v1.3.42，2026年11月10日（[来源](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)）。',
+          '**Mac要求：** 按Mac App Store页面，需要macOS 26.2或更高版本。[Loci代理页面](https://askloci.ai/agents)列出编程代理接口需要Apple silicon和8 GB内存；Intel Mac可获得不含该接口的App Store版本。',
+          '**开发者声明，未经测试：** Loci AI, Inc.创始人兼CEO Michael Waldman告诉PromptQuorum，Loci拥有自己的推理引擎（在某些模型上最高比llama.cpp快7倍）、代理框架以及与消息应用的连接。PromptQuorum未测试这些说法，也未测量Mac上的速度。',
+          '**最适合：** 想要一个在手机上也能用的简单离线助手的用户，以及想试试让编程代理使用本地模型的Mac用户。',
+        ],
+      },
       memory: {
         id: 'memory',
         title: '你的Mac需要多少内存？',
@@ -1567,6 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI——[openwebui.com](https://openwebui.com)（最新版本v0.12.5，2026年10月29日；[发布说明](https://github.com/open-webui/open-webui/releases)）。',
           'oMLX——[omlx.ai](https://omlx.ai)（最新版本v0.7.3rc1，2026年10月27日；[发布说明](https://github.com/jundot/omlx/releases)）。',
           'Chatbox——[chatboxai.app](https://chatboxai.app)（最新版本v1.23.5，2026年9月24日；[发布说明](https://github.com/chatboxai/chatbox/releases)）。',
+          'Loci——[askloci.ai](https://askloci.ai)（Mac App Store v2.1.4，2026年11月10日，macOS 26.2+：[页面](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)；编程代理接口：[代理页面](https://askloci.ai/agents)）。',
           'LM Studio系统要求——[lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements)（Apple Silicon，macOS 14）。',
           'Ollama的macOS文档——[github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx)（macOS 14及以上，M系列芯片或x86仅CPU）及[Homebrew formula](https://formulae.brew.sh/formula/ollama)。',
           'Jan README——[github.com/janhq/jan](https://github.com/janhq/jan)（macOS 13.6及以上，内存参考）。',
@@ -1635,7 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1695,6 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI: interfaz de chat en el navegador', anchor: '#openwebui' },
       { label: 'oMLX: servidor de inferencia MLX para Apple Silicon', anchor: '#omlx' },
       { label: 'Chatbox: cliente ligero', anchor: '#chatbox' },
+      { label: 'Loci: asistente sin conexión con interfaz de agentes en Mac', anchor: '#loci' },
       { label: '¿Cuánta memoria necesita tu Mac?', anchor: '#memory' },
       { label: 'Errores comunes', anchor: '#common-mistakes' },
       { label: 'Fuentes', anchor: '#sources' },
@@ -1720,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Apps comparadas:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox.',
+          '**Apps comparadas:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox, Loci.',
           '**Últimas versiones originales (comprobadas el 31 oct 2026):** LM Studio 0.4.28 (31 oct 2026) · Ollama v0.40.13 (28 oct) · Jan v0.8.8 (28 oct) · Open WebUI v0.12.5 (29 oct) · oMLX v0.7.3rc1 (27 oct) · AnythingLLM v1.19.0 (26 oct) · Msty Studio 3.0.0 Beta 15 (7 oct) · Chatbox v1.23.5 (24 sep 2026). Ninguna tiene más de 3 meses, así que no se aplica ningún aviso de abandono.',
           '**Solo Apple Silicon:** LM Studio y oMLX. Los Mac Intel siguen ejecutando Ollama (solo CPU) y AnythingLLM.',
           '**Locales por diseño:** LM Studio, Ollama, Jan, oMLX. **También pueden usar la nube:** Msty, Chatbox, Open WebUI, AnythingLLM.',
@@ -1747,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tabla comparativa de apps para Mac',
         content:
-          '**Las ocho apps se diferencian en tres cosas: cómo se usan (ventana, terminal o navegador), si pueden llegar a modelos en la nube y qué Mac admiten.** Las versiones y las condiciones de licencia se leyeron en las páginas oficiales de cada proyecto el 31 oct 2026.',
+          '**Las ocho apps se diferencian en tres cosas: cómo se usan (ventana, terminal o navegador), si pueden llegar a modelos en la nube y qué Mac admiten.** Las versiones y las condiciones de licencia se leyeron en las páginas oficiales de cada proyecto el 31 oct 2026. Loci aparece al final como incorporación reciente; sus afirmaciones sobre agentes y velocidad provienen del fabricante y PromptQuorum no las ha probado.',
         columns: ['App', 'Coste / licencia', 'Requisito de Mac', 'Interfaz', 'Mejor para'],
         rows: [
           { 'App': '[LM Studio](https://lmstudio.ai)', 'Coste / licencia': 'Gratis (código cerrado)', 'Requisito de Mac': 'Apple Silicon, macOS 14+', 'Interfaz': 'App de escritorio', 'Mejor para': 'Primera instalación fácil' },
@@ -1758,6 +1839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Open WebUI](https://openwebui.com)', 'Coste / licencia': 'Gratis (BSD modificada)', 'Requisito de Mac': 'Cualquier Mac con navegador', 'Interfaz': 'Navegador (Docker/pip)', 'Mejor para': 'Chat en el navegador' },
           { 'App': '[oMLX](https://omlx.ai)', 'Coste / licencia': 'Gratis (Apache-2.0)', 'Requisito de Mac': 'Apple Silicon, macOS 15+', 'Interfaz': 'App Mac, servidor', 'Mejor para': 'Inferencia MLX' },
           { 'App': '[Chatbox](https://chatboxai.app)', 'Coste / licencia': 'Gratis (GPL-3.0)', 'Requisito de Mac': 'App macOS (ver chatboxai.app)', 'Interfaz': 'App de escritorio, web', 'Mejor para': 'Cliente ligero' },
+          { 'App': '[Loci](https://askloci.ai)', 'Coste / licencia': 'Gratis (código cerrado)', 'Requisito de Mac': 'macOS 26.2+ (Mac App Store)', 'Interfaz': 'App de escritorio, MCP/API', 'Mejor para': 'Asistente sin conexión' },
         ],
         note:
           'Los requisitos de Mac proceden de la documentación de cada proyecto. Cuando un proyecto no publica ninguno, la tabla lo dice en lugar de adivinar.',
@@ -1858,6 +1940,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor para:** un cliente ligero que se conecta a un servidor de Ollama o LM Studio.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci: asistente sin conexión con interfaz de agentes en Mac',
+        content:
+          '**Loci es un asistente de IA gratuito y sin conexión para iPhone, Android, Mac y Windows; su app para Mac también puede ofrecer modelos locales a agentes de programación.** Análisis completo: [reseña de Loci](/es/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**Qué es:** una app de código cerrado de Loci AI, Inc. que ejecuta los modelos en el dispositivo y es gratuita según el fabricante. En Mac usa el modelo integrado de Apple o modelos abiertos descargables; está disponible en el Mac App Store y como descarga directa en [askloci.ai](https://askloci.ai).',
+          '**Última versión (comprobada el 13 nov 2026):** Mac App Store v2.1.4, 10 nov 2026; iOS v1.3.42, 10 nov 2026 ([fuente](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**Requisito de Mac:** macOS 26.2 o posterior según la ficha del Mac App Store. La [página de agentes de Loci](https://askloci.ai/agents) indica Apple silicon y 8 GB de memoria para la interfaz con agentes de programación; los Mac Intel reciben la versión de App Store sin ella.',
+          '**Declarado por el fabricante, sin probar:** Michael Waldman, fundador y CEO de Loci AI, Inc., dijo a PromptQuorum que Loci tiene su propio motor de inferencia (hasta 7× más rápido que llama.cpp en ciertos modelos), un arnés de agentes y conexiones con apps de mensajería. PromptQuorum no ha probado estas afirmaciones ni ha medido la velocidad en un Mac.',
+          '**Mejor para:** un asistente sin conexión sencillo que también funciona en el móvil, y usuarios de Mac que quieran probar a dejar que un agente de programación use un modelo local.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: '¿Cuánta memoria necesita tu Mac?',
@@ -1892,6 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com) (última versión v0.12.5, 29 oct 2026; [notas de la versión](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai) (última versión v0.7.3rc1, 27 oct 2026; [notas de la versión](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app) (última versión v1.23.5, 24 sep 2026; [notas de la versión](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai) (Mac App Store v2.1.4, 10 nov 2026, macOS 26.2+: [ficha](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318); interfaz para agentes de programación: [página de agentes](https://askloci.ai/agents)).',
           'Requisitos del sistema de LM Studio — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements) (Apple Silicon, macOS 14).',
           'Documentación de Ollama para macOS — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) (macOS 14+, chip M o x86 solo CPU) y la [fórmula de Homebrew](https://formulae.brew.sh/formula/ollama).',
           'README de Jan — [github.com/janhq/jan](https://github.com/janhq/jan) (macOS 13.6+, guía de RAM).',
@@ -1960,7 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2020,6 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI: 브라우저 채팅 인터페이스', anchor: '#openwebui' },
       { label: 'oMLX: Apple Silicon용 MLX 추론 서버', anchor: '#omlx' },
       { label: 'Chatbox: 가벼운 클라이언트', anchor: '#chatbox' },
+      { label: 'Loci: Mac 에이전트 인터페이스를 갖춘 오프라인 어시스턴트', anchor: '#loci' },
       { label: 'Mac에는 메모리가 얼마나 필요합니까?', anchor: '#memory' },
       { label: '흔한 실수', anchor: '#common-mistakes' },
       { label: '출처', anchor: '#sources' },
@@ -2045,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**비교한 앱:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox.',
+          '**비교한 앱:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox, Loci.',
           '**최신 업스트림 릴리스(2026년 10월 31일 확인):** LM Studio 0.4.28(2026년 10월 31일) · Ollama v0.40.13(10월 28일) · Jan v0.8.8(10월 28일) · Open WebUI v0.12.5(10월 29일) · oMLX v0.7.3rc1(10월 27일) · AnythingLLM v1.19.0(10월 26일) · Msty Studio 3.0.0 Beta 15(10월 7일) · Chatbox v1.23.5(2026년 9월 24일). 3개월 넘게 업데이트가 없는 앱은 없으므로 업데이트 중단 경고는 해당되지 않습니다.',
           '**Apple Silicon 전용:** LM Studio와 oMLX. Intel Mac에서는 Ollama(CPU만)와 AnythingLLM을 실행할 수 있습니다.',
           '**설계상 로컬 전용:** LM Studio, Ollama, Jan, oMLX. **클라우드도 사용 가능:** Msty, Chatbox, Open WebUI, AnythingLLM.',
@@ -2072,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Mac 앱 비교표',
         content:
-          '**여덟 앱은 세 가지에서 다릅니다. 사용 방식(창, 터미널, 브라우저), 클라우드 모델에 연결할 수 있는지, 지원하는 Mac입니다.** 버전과 라이선스 조건은 2026년 10월 31일에 각 프로젝트의 공식 페이지에서 확인했습니다.',
+          '**여덟 앱은 세 가지에서 다릅니다. 사용 방식(창, 터미널, 브라우저), 클라우드 모델에 연결할 수 있는지, 지원하는 Mac입니다.** 버전과 라이선스 조건은 2026년 10월 31일에 각 프로젝트의 공식 페이지에서 확인했습니다. Loci는 새로 추가된 앱으로 맨 마지막에 있습니다. 에이전트와 속도에 관한 내용은 개발사의 주장이며 PromptQuorum이 테스트하지 않았습니다.',
         columns: ['앱', '비용·라이선스', 'Mac 요구 사항', '인터페이스', '추천 용도'],
         rows: [
           { '앱': '[LM Studio](https://lmstudio.ai)', '비용·라이선스': '무료(비공개 소스)', 'Mac 요구 사항': 'Apple Silicon, macOS 14+', '인터페이스': '데스크톱 앱', '추천 용도': '쉬운 첫 설치' },
@@ -2083,6 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': '[Open WebUI](https://openwebui.com)', '비용·라이선스': '무료(수정된 BSD 계열)', 'Mac 요구 사항': '브라우저가 있는 모든 Mac', '인터페이스': '브라우저(Docker/pip)', '추천 용도': '브라우저 채팅 UI' },
           { '앱': '[oMLX](https://omlx.ai)', '비용·라이선스': '무료(Apache-2.0)', 'Mac 요구 사항': 'Apple Silicon, macOS 15+', '인터페이스': 'Mac 앱, 서버', '추천 용도': 'MLX 추론' },
           { '앱': '[Chatbox](https://chatboxai.app)', '비용·라이선스': '무료(GPL-3.0)', 'Mac 요구 사항': 'macOS 앱(chatboxai.app)', '인터페이스': '데스크톱 앱, 웹', '추천 용도': '가벼운 클라이언트' },
+          { '앱': '[Loci](https://askloci.ai)', '비용·라이선스': '무료(클로즈드 소스)', 'Mac 요구 사항': 'macOS 26.2+(Mac App Store)', '인터페이스': '데스크톱 앱, MCP/API', '추천 용도': '오프라인 어시스턴트' },
         ],
         note:
           'Mac 요구 사항은 각 프로젝트의 자체 문서에 따랐습니다. 프로젝트가 공개하지 않은 경우 추측하지 않고 표에 그렇게 표기했습니다.',
@@ -2183,6 +2281,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**추천 대상:** Ollama나 LM Studio 서버에 연결하는 가벼운 클라이언트.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci: Mac 에이전트 인터페이스를 갖춘 오프라인 어시스턴트',
+        content:
+          '**Loci는 iPhone, Android, Mac, Windows용 무료 오프라인 AI 어시스턴트이며, Mac 앱은 로컬 모델을 코딩 에이전트에도 제공할 수 있습니다.** 전체 리뷰: [Loci 리뷰](/ko/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**개요:** Loci AI, Inc.의 클로즈드 소스 앱으로, 모델을 기기에서 실행하며 개발사에 따르면 무료입니다. Mac에서는 Apple 내장 모델 또는 내려받을 수 있는 오픈 모델을 사용하며, Mac App Store와 [askloci.ai](https://askloci.ai)의 직접 다운로드로 받을 수 있습니다.',
+          '**최신 릴리스(2026년 11월 13일 확인):** Mac App Store v2.1.4, 2026년 11월 10일, iOS v1.3.42, 2026년 11월 10일([출처](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**Mac 요구 사항:** Mac App Store 목록 기준 macOS 26.2 이상입니다. [Loci 에이전트 페이지](https://askloci.ai/agents)는 코딩 에이전트 인터페이스에 Apple silicon과 8 GB 메모리가 필요하다고 안내하며, Intel Mac에서는 이 인터페이스가 없는 App Store 버전을 받게 됩니다.',
+          '**개발사 주장, 테스트하지 않음:** Loci AI, Inc.의 창업자 겸 CEO인 Michael Waldman은 Loci에 자체 추론 엔진(특정 모델에서 llama.cpp보다 최대 7배 빠름), 에이전트 하네스, 메시징 앱 연결 기능이 있다고 PromptQuorum에 전했습니다. PromptQuorum은 이 주장들을 테스트하지 않았고 Mac에서 속도를 측정하지도 않았습니다.',
+          '**추천 대상:** 휴대폰에서도 쓸 수 있는 간편한 오프라인 어시스턴트가 필요한 사용자, 그리고 코딩 에이전트가 로컬 모델을 쓰도록 시험해 보려는 Mac 사용자.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'Mac에는 메모리가 얼마나 필요합니까?',
@@ -2217,6 +2328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com)(최신 릴리스 v0.12.5, 2026년 10월 29일, [릴리스 노트](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai)(최신 릴리스 v0.7.3rc1, 2026년 10월 27일, [릴리스 노트](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app)(최신 릴리스 v1.23.5, 2026년 9월 24일, [릴리스 노트](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai)(Mac App Store v2.1.4, 2026년 11월 10일, macOS 26.2+: [목록](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318), 코딩 에이전트 인터페이스: [에이전트 페이지](https://askloci.ai/agents)).',
           'LM Studio 시스템 요구 사항 — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements)(Apple Silicon, macOS 14).',
           'Ollama macOS 문서 — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx)(macOS 14 이상, M 칩 또는 x86은 CPU만)와 [Homebrew formula](https://formulae.brew.sh/formula/ollama).',
           'Jan README — [github.com/janhq/jan](https://github.com/janhq/jan)(macOS 13.6 이상, RAM 안내).',
@@ -2285,7 +2397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2345,6 +2457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI: interface de chat no navegador', anchor: '#openwebui' },
       { label: 'oMLX: servidor de inferência MLX para Apple Silicon', anchor: '#omlx' },
       { label: 'Chatbox: cliente leve', anchor: '#chatbox' },
+      { label: 'Loci: assistente offline com interface de agentes no Mac', anchor: '#loci' },
       { label: 'De quanta memória seu Mac precisa?', anchor: '#memory' },
       { label: 'Erros comuns', anchor: '#common-mistakes' },
       { label: 'Fontes', anchor: '#sources' },
@@ -2370,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Fatos rápidos',
         items: [
-          '**Apps comparados:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox.',
+          '**Apps comparados:** LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox, Loci.',
           '**Últimas versões originais (verificadas em 31 out. 2026):** LM Studio 0.4.28 (31 out. 2026) · Ollama v0.40.13 (28 out.) · Jan v0.8.8 (28 out.) · Open WebUI v0.12.5 (29 out.) · oMLX v0.7.3rc1 (27 out.) · AnythingLLM v1.19.0 (26 out.) · Msty Studio 3.0.0 Beta 15 (7 out.) · Chatbox v1.23.5 (24 set. 2026). Nenhum tem mais de 3 meses, então nenhum aviso de abandono se aplica.',
           '**Somente Apple Silicon:** LM Studio e oMLX. Macs Intel ainda executam Ollama (só CPU) e AnythingLLM.',
           '**Locais por design:** LM Studio, Ollama, Jan, oMLX. **Também podem usar a nuvem:** Msty, Chatbox, Open WebUI, AnythingLLM.',
@@ -2397,7 +2510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tabela comparativa de apps para Mac',
         content:
-          '**Os oito apps diferem em três pontos: como você os usa (janela, terminal ou navegador), se alcançam modelos na nuvem e quais Macs suportam.** Versões e termos de licença foram lidos nas páginas oficiais dos projetos em 31 out. 2026.',
+          '**Os oito apps diferem em três pontos: como você os usa (janela, terminal ou navegador), se alcançam modelos na nuvem e quais Macs suportam.** Versões e termos de licença foram lidos nas páginas oficiais dos projetos em 31 out. 2026. O Loci aparece por último como acréscimo recente; as afirmações sobre agentes e velocidade vêm do fabricante e não foram testadas pelo PromptQuorum.',
         columns: ['App', 'Custo / licença', 'Requisito de Mac', 'Interface', 'Melhor para'],
         rows: [
           { 'App': '[LM Studio](https://lmstudio.ai)', 'Custo / licença': 'Grátis (código fechado)', 'Requisito de Mac': 'Apple Silicon, macOS 14+', 'Interface': 'App de desktop', 'Melhor para': 'Primeira instalação fácil' },
@@ -2408,6 +2521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Open WebUI](https://openwebui.com)', 'Custo / licença': 'Grátis (BSD modificada)', 'Requisito de Mac': 'Qualquer Mac com navegador', 'Interface': 'Navegador (Docker/pip)', 'Melhor para': 'Chat no navegador' },
           { 'App': '[oMLX](https://omlx.ai)', 'Custo / licença': 'Grátis (Apache-2.0)', 'Requisito de Mac': 'Apple Silicon, macOS 15+', 'Interface': 'App Mac, servidor', 'Melhor para': 'Inferência MLX' },
           { 'App': '[Chatbox](https://chatboxai.app)', 'Custo / licença': 'Grátis (GPL-3.0)', 'Requisito de Mac': 'App macOS (ver chatboxai.app)', 'Interface': 'App de desktop, web', 'Melhor para': 'Cliente leve' },
+          { 'App': '[Loci](https://askloci.ai)', 'Custo / licença': 'Grátis (código fechado)', 'Requisito de Mac': 'macOS 26.2+ (Mac App Store)', 'Interface': 'App desktop, MCP/API', 'Melhor para': 'Assistente offline' },
         ],
         note:
           'Os requisitos de Mac vêm da documentação de cada projeto. Quando um projeto não publica nenhum, a tabela diz isso em vez de adivinhar.',
@@ -2508,6 +2622,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor para:** um cliente leve que se conecta a um servidor Ollama ou LM Studio.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci: assistente offline com interface de agentes no Mac',
+        content:
+          '**O Loci é um assistente de IA offline e gratuito para iPhone, Android, Mac e Windows; o app para Mac também pode oferecer modelos locais a agentes de programação.** Análise completa: [análise do Loci](/pt/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**O que é:** um app de código fechado da Loci AI, Inc. que executa os modelos no próprio dispositivo e é gratuito segundo o fabricante. No Mac usa o modelo integrado da Apple ou modelos abertos para baixar; está disponível na Mac App Store e como download direto em [askloci.ai](https://askloci.ai).',
+          '**Última versão (verificada em 13 nov. 2026):** Mac App Store v2.1.4, 10 nov. 2026; iOS v1.3.42, 10 nov. 2026 ([fonte](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**Requisito de Mac:** macOS 26.2 ou posterior segundo a página da Mac App Store. A [página de agentes do Loci](https://askloci.ai/agents) lista Apple silicon e 8 GB de memória para a interface com agentes de programação; Macs Intel recebem a versão da App Store sem ela.',
+          '**Declarado pelo fabricante, não testado:** Michael Waldman, fundador e CEO da Loci AI, Inc., disse ao PromptQuorum que o Loci tem seu próprio mecanismo de inferência (até 7× mais rápido que o llama.cpp em certos modelos), um harness de agentes e conexões com apps de mensagens. O PromptQuorum não testou essas afirmações nem mediu a velocidade em um Mac.',
+          '**Melhor para:** um assistente offline simples que também roda no celular, e usuários de Mac que querem experimentar deixar um agente de programação usar um modelo local.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'De quanta memória seu Mac precisa?',
@@ -2542,6 +2669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com) (última versão v0.12.5, 29 out. 2026; [notas da versão](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai) (última versão v0.7.3rc1, 27 out. 2026; [notas da versão](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app) (última versão v1.23.5, 24 set. 2026; [notas da versão](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai) (Mac App Store v2.1.4, 10 nov. 2026, macOS 26.2+: [página](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318); interface para agentes de programação: [página de agentes](https://askloci.ai/agents)).',
           'Requisitos de sistema do LM Studio — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements) (Apple Silicon, macOS 14).',
           'Documentação do Ollama para macOS — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) (macOS 14+, chip M ou x86 só CPU) e a [fórmula do Homebrew](https://formulae.brew.sh/formula/ollama).',
           'README do Jan — [github.com/janhq/jan](https://github.com/janhq/jan) (macOS 13.6+, referência de RAM).',
@@ -2610,7 +2738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-11-06',
+    dateModified: '2026-11-13',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2670,6 +2798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Open WebUI: واجهة دردشة في المتصفح', anchor: '#openwebui' },
       { label: 'oMLX: خادم استدلال MLX لـ Apple Silicon', anchor: '#omlx' },
       { label: 'Chatbox: عميل خفيف', anchor: '#chatbox' },
+      { label: 'Loci: مساعد يعمل دون اتصال مع واجهة وكلاء على Mac', anchor: '#loci' },
       { label: 'كم ذاكرة يحتاج جهاز Mac؟', anchor: '#memory' },
       { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
       { label: 'المصادر', anchor: '#sources' },
@@ -2695,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**التطبيقات المقارَنة:** LM Studio وOllama وJan وMsty وAnythingLLM وOpen WebUI وoMLX وChatbox.',
+          '**التطبيقات المقارَنة:** LM Studio وOllama وJan وMsty وAnythingLLM وOpen WebUI وoMLX وChatbox وLoci.',
           '**أحدث الإصدارات من المصدر (روجعت في 31 أكتوبر 2026):** LM Studio 0.4.28 (31 أكتوبر 2026) · Ollama v0.40.13 (28 أكتوبر) · Jan v0.8.8 (28 أكتوبر) · Open WebUI v0.12.5 (29 أكتوبر) · oMLX v0.7.3rc1 (27 أكتوبر) · AnythingLLM v1.19.0 (26 أكتوبر) · Msty Studio 3.0.0 Beta 15 (7 أكتوبر) · Chatbox v1.23.5 (24 سبتمبر 2026). لا يتجاوز عمر أي منها 3 أشهر، لذا لا ينطبق تحذير التوقف عن التحديث.',
           '**لـ Apple Silicon فقط:** LM Studio وoMLX. أجهزة Intel ما زالت تشغّل Ollama (بالمعالج المركزي فقط) وAnythingLLM.',
           '**محلية بالتصميم:** LM Studio وOllama وJan وoMLX. **يمكنها أيضاً استخدام السحابة:** Msty وChatbox وOpen WebUI وAnythingLLM.',
@@ -2722,7 +2851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'جدول مقارنة تطبيقات Mac',
         content:
-          '**تختلف التطبيقات الثمانية في ثلاثة أمور: طريقة الاستخدام (نافذة أو طرفية أو متصفح)، وإمكانية الوصول إلى نماذج سحابية، وأجهزة Mac المدعومة.** قُرئت الإصدارات وشروط الترخيص من صفحات المشاريع الرسمية في 31 أكتوبر 2026.',
+          '**تختلف التطبيقات الثمانية في ثلاثة أمور: طريقة الاستخدام (نافذة أو طرفية أو متصفح)، وإمكانية الوصول إلى نماذج سحابية، وأجهزة Mac المدعومة.** قُرئت الإصدارات وشروط الترخيص من صفحات المشاريع الرسمية في 31 أكتوبر 2026. يأتي Loci في الأخير كإضافة حديثة؛ وما يُذكر عن الوكلاء والسرعة صادر عن المطوّر ولم يختبره PromptQuorum.',
         columns: ['التطبيق', 'التكلفة / الترخيص', 'متطلبات Mac', 'الواجهة', 'الأنسب لـ'],
         rows: [
           { 'التطبيق': '[LM Studio](https://lmstudio.ai)', 'التكلفة / الترخيص': 'مجاني (مغلق المصدر)', 'متطلبات Mac': 'Apple Silicon، macOS 14+', 'الواجهة': 'تطبيق سطح مكتب', 'الأنسب لـ': 'أسهل تثبيت أول' },
@@ -2733,6 +2862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التطبيق': '[Open WebUI](https://openwebui.com)', 'التكلفة / الترخيص': 'مجاني (BSD معدّل)', 'متطلبات Mac': 'أي Mac عبر المتصفح', 'الواجهة': 'المتصفح (Docker/pip)', 'الأنسب لـ': 'واجهة دردشة في المتصفح' },
           { 'التطبيق': '[oMLX](https://omlx.ai)', 'التكلفة / الترخيص': 'مجاني (Apache-2.0)', 'متطلبات Mac': 'Apple Silicon، macOS 15+', 'الواجهة': 'تطبيق Mac، خادم', 'الأنسب لـ': 'استدلال MLX' },
           { 'التطبيق': '[Chatbox](https://chatboxai.app)', 'التكلفة / الترخيص': 'مجاني (GPL-3.0)', 'متطلبات Mac': 'تطبيق macOS (chatboxai.app)', 'الواجهة': 'سطح مكتب، ويب', 'الأنسب لـ': 'عميل خفيف' },
+          { 'التطبيق': '[Loci](https://askloci.ai)', 'التكلفة / الترخيص': 'مجاني (مغلق المصدر)', 'متطلبات Mac': 'macOS 26.2+ (Mac App Store)', 'الواجهة': 'تطبيق مكتبي، MCP/API', 'الأنسب لـ': 'مساعد دون اتصال' },
         ],
         note:
           'متطلبات Mac مأخوذة من وثائق كل مشروع. وحيث لا ينشر المشروع متطلباً، يذكر الجدول ذلك بدل التخمين.',
@@ -2833,6 +2963,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأنسب لـ:** عميل خفيف يتصل بخادم Ollama أو LM Studio.',
         ],
       },
+      loci: {
+        id: 'loci',
+        title: 'Loci: مساعد يعمل دون اتصال مع واجهة وكلاء على Mac',
+        content:
+          '**Loci مساعد ذكاء اصطناعي مجاني يعمل دون اتصال على iPhone وAndroid وMac وWindows، ويمكن لتطبيقه على Mac أن يتيح النماذج المحلية لوكلاء البرمجة أيضاً.** المراجعة الكاملة: [مراجعة Loci](/ar/power-local-llm/loci-ai-review-offline-local-ai).',
+        items: [
+          '**ما هو:** تطبيق مغلق المصدر من Loci AI, Inc. يشغّل النماذج على الجهاز وهو مجاني بحسب المطوّر. على Mac يستخدم نموذج Apple المدمج أو نماذج مفتوحة قابلة للتنزيل، ويتوفر في Mac App Store وكتنزيل مباشر من [askloci.ai](https://askloci.ai).',
+          '**أحدث إصدار (روجع في 13 نوفمبر 2026):** Mac App Store v2.1.4، 10 نوفمبر 2026؛ iOS v1.3.42، 10 نوفمبر 2026 ([المصدر](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)).',
+          '**متطلبات Mac:** macOS 26.2 أو أحدث بحسب صفحة Mac App Store. تذكر [صفحة وكلاء Loci](https://askloci.ai/agents) أن واجهة وكلاء البرمجة تتطلب Apple silicon وذاكرة 8 GB؛ وتحصل أجهزة Mac بمعالج Intel على نسخة App Store بدونها.',
+          '**بحسب المطوّر ولم يُختبر:** أخبر Michael Waldman، المؤسس والرئيس التنفيذي لشركة Loci AI, Inc.، PromptQuorum بأن لدى Loci محرك استدلال خاصاً (أسرع بما يصل إلى 7 أضعاف من llama.cpp في بعض النماذج) وإطار عمل للوكلاء واتصالات بتطبيقات المراسلة. لم يختبر PromptQuorum هذه الادعاءات ولم يقِس السرعة على Mac.',
+          '**الأنسب لـ:** مساعد بسيط يعمل دون اتصال ويعمل أيضاً على الهاتف، ومستخدمي Mac الذين يريدون تجربة جعل وكيل برمجة يستخدم نموذجاً محلياً.',
+        ],
+      },
       memory: {
         id: 'memory',
         title: 'كم ذاكرة يحتاج جهاز Mac؟',
@@ -2867,6 +3010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open WebUI — [openwebui.com](https://openwebui.com) (أحدث إصدار v0.12.5، 29 أكتوبر 2026؛ [ملاحظات الإصدار](https://github.com/open-webui/open-webui/releases)).',
           'oMLX — [omlx.ai](https://omlx.ai) (أحدث إصدار v0.7.3rc1، 27 أكتوبر 2026؛ [ملاحظات الإصدار](https://github.com/jundot/omlx/releases)).',
           'Chatbox — [chatboxai.app](https://chatboxai.app) (أحدث إصدار v1.23.5، 24 سبتمبر 2026؛ [ملاحظات الإصدار](https://github.com/chatboxai/chatbox/releases)).',
+          'Loci — [askloci.ai](https://askloci.ai) (Mac App Store v2.1.4، 10 نوفمبر 2026، macOS 26.2+: [الصفحة](https://apps.apple.com/us/app/private-local-ai-loci/id6768186318)؛ واجهة وكلاء البرمجة: [صفحة الوكلاء](https://askloci.ai/agents)).',
           'متطلبات نظام LM Studio — [lmstudio.ai/docs/app/system-requirements](https://lmstudio.ai/docs/app/system-requirements) (Apple Silicon، macOS 14).',
           'وثائق Ollama لنظام macOS — [github.com/ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) (macOS 14+، شريحة M أو x86 بالمعالج المركزي فقط) و[صيغة Homebrew](https://formulae.brew.sh/formula/ollama).',
           'README الخاص بـ Jan — [github.com/janhq/jan](https://github.com/janhq/jan) (macOS 13.6+، إرشادات RAM).',

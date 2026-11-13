@@ -12,6 +12,12 @@ export const copy: AskCopy = {
   powerSwitchTitle: "إعدادات موجَّهة مع تقرير كامل",
   logoLabel: 'فتح Ask Hans',
   logoTitle: 'Ask Hans — انقر للفتح',
+  // Button wording experiment (askhans-cta-v1): A brand-led, B function-led, C benefit-led. Label + subtitle per variant.
+  ctaVariants: {
+    A: { label: 'تحدّث مع Ask Hans', sub: 'مساعد ذكاء اصطناعي تفاعلي' },
+    B: { label: 'ابدأ محادثة مع الذكاء الاصطناعي', sub: 'اطرح أسئلتك واستكشف خياراتك' },
+    C: { label: 'احصل على توصيتك الشخصية في الذكاء الاصطناعي', sub: 'اعثر على أدوات الذكاء الاصطناعي المحلية المناسبة لاحتياجاتك' },
+  },
 
   welcomeTitle: 'أهلًا بكم في Ask Hans، دليلكم التفاعلي للذكاء الاصطناعي المحلي.',
   welcomeBody:

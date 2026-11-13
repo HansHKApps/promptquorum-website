@@ -4,6 +4,9 @@
 
 import {
   AppWindow,
+  BarChart3,
+  Search,
+  ShieldCheck,
   ArrowLeft,
   ArrowLeftRight,
   ArrowRight,
@@ -54,6 +57,9 @@ import {
 
 export const ASK_HANS_ICONS: Record<string, LucideIcon> = {
   AppWindow,
+  BarChart3,
+  Search,
+  ShieldCheck,
   ArrowLeft,
   ArrowLeftRight,
   ArrowRight,

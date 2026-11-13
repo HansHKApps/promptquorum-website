@@ -76,6 +76,7 @@ export const llmThemes: LLMTheme[] = [
       'framework-desktop-local-ai-workstation',
       'hp-z2-mini-g1a-local-ai-workstation',
       'gmktec-evo-x2-local-ai-workstation',
+      'gmktec-evo-x5-pro-local-ai-workstation',
       'minisforum-ms-s1-max-local-ai-workstation',
     ],
     externalKeys: [

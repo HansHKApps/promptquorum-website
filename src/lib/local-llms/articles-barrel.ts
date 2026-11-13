@@ -178,6 +178,7 @@ import { article as a_amd_ryzen_ai_halo_local_ai_workstation } from "./articles/
 import { article as a_framework_desktop_local_ai_workstation } from "./articles/framework-desktop-local-ai-workstation";
 import { article as a_hp_z2_mini_g1a_local_ai_workstation } from "./articles/hp-z2-mini-g1a-local-ai-workstation";
 import { article as a_gmktec_evo_x2_local_ai_workstation } from "./articles/gmktec-evo-x2-local-ai-workstation";
+import { article as a_gmktec_evo_x5_pro_local_ai_workstation } from "./articles/gmktec-evo-x5-pro-local-ai-workstation";
 import { article as a_minisforum_ms_s1_max_local_ai_workstation } from "./articles/minisforum-ms-s1-max-local-ai-workstation";
 
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
@@ -350,5 +351,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "framework-desktop-local-ai-workstation": a_framework_desktop_local_ai_workstation,
   "hp-z2-mini-g1a-local-ai-workstation": a_hp_z2_mini_g1a_local_ai_workstation,
   "gmktec-evo-x2-local-ai-workstation": a_gmktec_evo_x2_local_ai_workstation,
+  "gmktec-evo-x5-pro-local-ai-workstation": a_gmktec_evo_x5_pro_local_ai_workstation,
   "minisforum-ms-s1-max-local-ai-workstation": a_minisforum_ms_s1_max_local_ai_workstation,
 };
