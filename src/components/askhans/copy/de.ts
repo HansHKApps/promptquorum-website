@@ -12,6 +12,12 @@ export const copy: AskCopy = {
   powerSwitchTitle: "Geführte Setups mit ausführlichem Bericht",
   logoLabel: 'Ask Hans öffnen',
   logoTitle: 'Ask Hans — zum Öffnen klicken',
+  // Button wording experiment (askhans-cta-v1): A brand-led, B function-led, C benefit-led. Label + subtitle per variant.
+  ctaVariants: {
+    A: { label: 'Mit Ask Hans chatten', sub: 'Interaktiver KI-Assistent' },
+    B: { label: 'KI-Gespräch starten', sub: 'Stellen Sie Fragen und entdecken Sie Ihre Möglichkeiten' },
+    C: { label: 'Persönliche KI-Empfehlung erhalten', sub: 'Finden Sie die passenden lokalen KI-Tools für Ihre Anforderungen' },
+  },
 
   welcomeTitle: 'Willkommen bei Ask Hans, Ihrem interaktiven Guide für lokale KI.',
   welcomeBody:

@@ -37,6 +37,8 @@ export interface AskCopy {
   powerSwitchTitle: string
   logoLabel: string
   logoTitle: string
+  /** Button wording experiment (askhans-cta-v1): label + subtitle of variant A (brand-led), B (function-led), C (benefit-led). */
+  ctaVariants: Record<'A' | 'B' | 'C', { label: string; sub: string }>
 
   welcomeAria: string
   welcomeTitle: string
