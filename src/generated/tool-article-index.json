@@ -112,6 +112,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
@@ -157,14 +165,6 @@
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
         "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
         "tier": "about"
       }
     ],
@@ -885,6 +885,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -922,14 +930,6 @@
         "url": "/local-llms/what-are-local-llms",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
     "totalCount": 173,
@@ -942,7 +942,7 @@
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -1001,6 +1001,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
@@ -1054,14 +1062,6 @@
         "url": "/power-local-llm/lm-mini-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -1075,6 +1075,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -1139,14 +1147,6 @@
         "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       }
     ],
@@ -2795,6 +2795,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -2855,14 +2863,6 @@
         "title": "Kilo Code Review: The Open-Source Coding Agent Now Owned by Anaconda",
         "url": "/power-local-llm/kilo-code-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       }
     ],
@@ -3149,18 +3149,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "goose-review",
-        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
-        "url": "/power-local-llm/goose-review",
-        "dateModified": "2026-10-30",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "slug": "goose-review",
+        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
+        "url": "/power-local-llm/goose-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -8127,6 +8127,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -8167,14 +8175,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "coil-review",
         "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
         "url": "/power-local-llm/coil-review",
@@ -8205,18 +8205,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -8352,7 +8352,7 @@
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-11-11",
         "tier": "mentioned"
       }
     ],
@@ -8393,18 +8393,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -8427,6 +8427,14 @@
         "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
         "url": "/power-local-llm/opencode-review",
         "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -8459,14 +8467,6 @@
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -8675,6 +8675,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -8687,14 +8695,6 @@
         "title": "NVIDIA Project G-Assist Review: On-Device RTX AI Assistant, Requirements, and Setup",
         "url": "/power-local-llm/nvidia-g-assist-review",
         "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
         "tier": "mentioned"
       }
     ],
