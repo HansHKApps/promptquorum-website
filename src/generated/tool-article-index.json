@@ -6,7 +6,7 @@
         "slug": "ollama-review",
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -129,6 +129,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -156,14 +164,6 @@
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "what-are-local-llms",
-        "title": "What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware",
-        "url": "/local-llms/what-are-local-llms",
         "dateModified": "2026-11-09",
         "tier": "about"
       }
@@ -917,6 +917,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -936,14 +944,6 @@
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-limitations",
-        "title": "Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)",
-        "url": "/local-llms/local-llm-limitations",
         "dateModified": "2026-11-09",
         "tier": "about"
       }
@@ -4993,6 +4993,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phone-harness-review",
         "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
         "url": "/power-local-llm/phone-harness-review",
@@ -5006,17 +5014,9 @@
         "url": "/power-local-llm/picoclaw-review",
         "dateModified": "2026-11-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kai-9000-review",
-        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
-        "url": "/power-local-llm/kai-9000-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "Hermes Agent": {
@@ -5052,6 +5052,14 @@
         "url": "/power-local-llm/atomic-bot-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -5094,7 +5102,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Msty Go": {
@@ -8615,6 +8623,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -8643,14 +8659,6 @@
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-review",
-        "title": "Ollama Review: The One-Command Local LLM Runtime",
-        "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -12595,6 +12603,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-review",
+        "title": "Ollama Review: The One-Command Local LLM Runtime",
+        "url": "/power-local-llm/ollama-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phantasm-review",
         "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
         "url": "/power-local-llm/phantasm-review",
@@ -12606,14 +12622,6 @@
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-11-10",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sprich-review",
-        "title": "Sprich Review: German-Made Mac Dictation App for Apple Silicon",
-        "url": "/power-local-llm/sprich-review",
         "dateModified": "2026-11-10",
         "tier": "mentioned"
       }
