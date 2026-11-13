@@ -219,6 +219,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'amical':                                  'amical',
   'argos-translate':                         'argos-translate',
   'linguister':                              'linguister',
+  'dayflow':                                 'dayflow',
   'stratosort':                              'stratosort',
   'sprich':                                  'sprich',
   'weesper-neon-flow':                       'weesper-neon-flow',

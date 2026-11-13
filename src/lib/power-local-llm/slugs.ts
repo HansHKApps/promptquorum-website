@@ -427,6 +427,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'amical-review':                          'amical-review',
   'argos-translate-review':                 'argos-translate-review',
   'linguister-review':                      'linguister-review',
+  'dayflow-review':                         'dayflow-review',
   'stratosort-review':                      'stratosort-review',
   'sprich-review':                          'sprich-review',
   'weesper-neon-flow-review':               'weesper-neon-flow-review',

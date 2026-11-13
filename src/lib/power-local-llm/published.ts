@@ -750,6 +750,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'amical-review',
   'argos-translate-review',
   'linguister-review',
+  'dayflow-review',
   'stratosort-review',
   'sprich-review',
   'weesper-neon-flow-review',
