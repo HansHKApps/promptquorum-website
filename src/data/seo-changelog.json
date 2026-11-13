@@ -25719,5 +25719,1405 @@
     "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "1aab8a19-f617-44df-95f7-68f01f3f03b2",
+    "slug": "/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.706Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark: Specs and Price",
+        "new": "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark: Specs and Price"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fdc5873c-b434-4a5e-b645-91e503ac52a7",
+    "slug": "/fr/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.736Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark : specs et prix",
+        "new": "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark : specs et prix"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9b393e50-698b-45a2-9798-f564facf32e6",
+    "slug": "/ja/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.767Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark: 仕様と価格を比較",
+        "new": "GMKtec EVO-X5 Pro対DGX Spark：仕様"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b5c9ac17-faa7-4ad9-8624-5da9983b0b30",
+    "slug": "/pt/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.797Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark: specs e preço",
+        "new": "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark: specs e preço"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3ec21db2-f63d-4c95-9714-7343f43dac16",
+    "slug": "/zh/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.827Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro对比DGX Spark：规格与价格",
+        "new": "GMKtec EVO-X5 Pro对比DGX Spark：规格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "44c91b70-00a1-426a-a549-0ff102987dd0",
+    "slug": "/ar/power-local-llm/amical-review",
+    "date": "2026-11-13T17:52:32.857Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Amical: تطبيق إملاء مجاني ومفتوح المصدر لأجهزة Mac",
+        "new": "مراجعة Amical: إملاء مجاني مفتوح المصدر لـ Mac وWindows"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f43182f0-b294-43b0-bce4-b7a25d71a12e",
+    "slug": "/power-local-llm/amical-review",
+    "date": "2026-11-13T17:52:32.886Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Amical Review: Free Open-Source Dictation App",
+        "new": "Amical Review: Free Open-Source Dictation for Mac, Windows"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1007e566-a500-4912-9d8e-89d3878d9e9e",
+    "slug": "/de/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:32.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Argos Translate Rezension: kostenlose, MIT-lizenzierte Offline-Übersetzung für Python und Kommandozeile, Installation mit pip. Wartungshinweis. Nicht getestet.",
+        "new": "Argos Translate Rezension: kostenlose Offline-Übersetzung (MIT) für Python und Kommandozeile, per pip installiert. Wartungshinweis. Nicht getestet."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6088a738-57fe-4615-b0b0-b3d96f7e2af4",
+    "slug": "/es/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:32.946Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Argos Translate: traducción sin conexión gratuita con licencia MIT para Python y la línea de comandos, instalada con pip. Aviso de mantenimiento. Sin probar.",
+        "new": "Reseña de Argos Translate: traducción sin conexión gratuita (licencia MIT) para Python y la terminal, con pip. Aviso de mantenimiento. Sin probar."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "da5ff789-462e-40ec-b103-8ee530018831",
+    "slug": "/fr/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:32.977Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test d’Argos Translate : traduction hors ligne gratuite sous licence MIT pour Python et la ligne de commande, installée avec pip. Avertissement de maintenance. Non testé.",
+        "new": "Test d’Argos Translate : traduction hors ligne gratuite (MIT) pour Python et la ligne de commande, via pip. Avertissement de maintenance. Non testé."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "68260474-d7c0-4a53-866e-d3d65434ef8e",
+    "slug": "/ja/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:33.006Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Argos Translateレビュー：無料のオフライン翻訳ツール",
+        "new": "Argos Translateレビュー：無料オフライン翻訳ツール"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1939e81f-95ff-4bc5-8cfb-f13acf46081e",
+    "slug": "/zh/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:33.036Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Argos Translate评测：适用于Python和命令行的免费MIT许可离线翻译，用pip安装。含维护警告。未经测试。",
+        "new": "Argos Translate评测：适用于Python和命令行的免费MIT许可离线翻译库，用pip安装。含维护警告，PromptQuorum未做测试。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): zh meta under 70-char minimum; now also says PromptQuorum did not test",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f1c7d969-1b3d-422c-af98-58883a8a7937",
+    "slug": "/ar/power-local-llm/cocoindex-review",
+    "date": "2026-11-13T17:52:33.067Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لأنظمة RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر عمليًا.",
+        "new": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لـ RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "20c69b7c-36bc-4210-9170-2a1b45f3bac0",
+    "slug": "/ja/power-local-llm/compactifai-app-review",
+    "date": "2026-11-13T17:52:33.096Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "CompactifAI APPレビュー:オフラインとクラウドのAI",
+        "new": "CompactifAI APPレビュー:オフラインとクラウドAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "57894b81-99f1-4e17-815f-fa90187c3752",
+    "slug": "/ar/power-local-llm/compass-local-ai-review",
+    "date": "2026-11-13T17:52:33.126Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Compass - Local AI: دردشة ذكاء اصطناعي على iPhone",
+        "new": "مراجعة Compass - Local AI: دردشة ذكاء اصطناعي لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9cf6113a-7a0d-4027-9697-1821d1a70150",
+    "slug": "/zh/power-local-llm/compass-local-ai-review",
+    "date": "2026-11-13T17:52:33.155Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Compass - Local AI 评测:设备端 AI 聊天应用",
+        "new": "Compass - Local AI 评测:设备端 AI 聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "83c74df8-4c3c-4d24-aa0e-f0321d15153e",
+    "slug": "/ar/power-local-llm/evershelf-review",
+    "date": "2026-11-13T17:52:33.185Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة EverShelf: مخزن طعام ذاتي الاستضافة بذكاء اختياري",
+        "new": "مراجعة EverShelf: مخزن طعام مستضاف ذاتيًا بذكاء اختياري"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d6d85c72-e3b3-4230-b95b-31969e9633a4",
+    "slug": "/ar/power-local-llm/frankly-ai-review",
+    "date": "2026-11-13T17:52:33.214Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Frankly AI: دردشة ذكاء اصطناعي على iPhone بلا حساب",
+        "new": "مراجعة Frankly AI: دردشة ذكاء اصطناعي iPhone بلا حساب"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Frankly AI: تطبيق دردشة مجاني لـ iPhone بنماذج محلية قابلة للتنزيل وشخصيات متعددة. ما تؤكده صفحة المتجر وصفحة المنتج وسياسة الخصوصية وما لا تؤكده.",
+        "new": "مراجعة Frankly AI: تطبيق دردشة مجاني لـ iPhone بنماذج محلية قابلة للتنزيل وشخصيات. ما تؤكده صفحة المتجر وصفحة المنتج وسياسة الخصوصية وما لا تؤكده."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fd65a5ac-eab2-475e-b4ea-ea3dfc9eb8f4",
+    "slug": "/ar/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.245Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ يناير 2025، فتحقق قبل الاعتماد.",
+        "new": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ بداية 2025، فتحقق قبل الاعتماد."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "91a9e503-1ba3-4430-851a-ba31fe9438af",
+    "slug": "/de/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.275Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Januar 2025 kein Release – vorher prüfen.",
+        "new": "fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Anfang 2025 kein Release – vorher prüfen."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2f5e3961-6a76-4d39-a071-e10eb08b1fe8",
+    "slug": "/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.313Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since January 2025, so check before relying on it.",
+        "new": "fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since early 2025, so check before relying on it."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "86290d1b-0beb-437c-90fc-fc4837b2023f",
+    "slug": "/es/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.344Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde enero de 2025: compruébalo antes.",
+        "new": "Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde inicios de 2025: compruébalo antes."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a096910a-526a-4940-adcd-e5c106176897",
+    "slug": "/fr/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.374Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis janvier 2025 : vérifiez avant usage.",
+        "new": "Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis début 2025 : vérifiez avant usage."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "491250a1-17f3-4a4a-b8e5-5940aef00777",
+    "slug": "/ja/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.404Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年1月以降リリースなし、利用前に確認を。",
+        "new": "fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年初頭以降リリースなし、利用前に確認を。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "224ceb83-832c-48fc-9633-ee29db46cecd",
+    "slug": "/ko/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.434Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 1월 이후 릴리스가 없으니 사용 전 확인하십시오.",
+        "new": "fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 초 이후 릴리스가 없으니 사용 전 확인하십시오."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f01fc919-cbd6-440f-83a1-22a6a2b6b595",
+    "slug": "/pt/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.465Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde janeiro de 2025: confira antes de usar.",
+        "new": "Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde o início de 2025: confira antes de usar."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8c5caed8-bf0f-47f3-939a-0dbe7e33eade",
+    "slug": "/zh/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.495Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年 1 月后无新版本，使用前请先确认。",
+        "new": "fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年初以来无新版本，使用前请先确认。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "28391cd4-ae73-4bf0-9a2c-56e1b05a7d68",
+    "slug": "/ar/power-local-llm/genva-review",
+    "date": "2026-11-13T17:52:33.527Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Genva: تطبيق مجاني لـ iPhone وiPad يولّد الصور على الجهاز بعد تنزيل النموذج مرة واحدة. الميزات والأسعار وملصق الخصوصية والادعاءات غير المتحقق منها.",
+        "new": "مراجعة Genva: تطبيق مجاني لـ iPhone وiPad يولّد الصور على الجهاز بعد تنزيل النموذج مرة واحدة. الميزات والأسعار وملصق الخصوصية وما لم يُتحقق منه."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e77c0b92-842e-4d48-919e-d47a28dbc8b7",
+    "slug": "/ar/power-local-llm/haplo-ai-review",
+    "date": "2026-11-13T17:52:33.559Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Haplo AI: دردشة ذكاء اصطناعي دون إنترنت لـ iPhone",
+        "new": "مراجعة Haplo AI: دردشة ذكاء اصطناعي دون اتصال لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f387f8e3-8cb0-46ee-a9f6-c03a3f5a19ea",
+    "slug": "/ja/power-local-llm/haplo-ai-review",
+    "date": "2026-11-13T17:52:33.592Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Haplo AIレビュー：iPhone・Macのオフラインチャット",
+        "new": "Haplo AIレビュー：iPhone・Mac向けオフラインAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "79db75c1-fff8-4649-9442-321713b5d816",
+    "slug": "/zh/power-local-llm/haplo-ai-review",
+    "date": "2026-11-13T17:52:33.626Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Haplo AI 评测：iPhone 与 Mac 离线 AI 聊天",
+        "new": "Haplo AI 评测：iPhone 与 Mac 离线聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bdbf2874-c019-4e72-8fa2-4a31fc1df91e",
+    "slug": "/ar/power-local-llm/iimagine-desktop-review",
+    "date": "2026-11-13T17:52:33.659Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة IIMAGINE Desktop: تطبيق سطح مكتب مفتوح المصدر (MIT) بمحرك محلي مدمج ودردشة مع المستندات وصوت وواجهة API على localhost. الإصدار 0.1.2؛ لم يُختبر.",
+        "new": "مراجعة IIMAGINE Desktop: تطبيق سطح مكتب مفتوح المصدر (MIT) بمحرك محلي ودردشة مع المستندات وصوت وواجهة API على localhost. الإصدار 0.1.2؛ لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9214f1a1-4519-42ea-b05c-1b569995f947",
+    "slug": "/pt/power-local-llm/iimagine-desktop-review",
+    "date": "2026-11-13T17:52:33.692Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do IIMAGINE Desktop: chat com IA local",
+        "new": "Análise do IIMAGINE Desktop: chat com IA local (MIT)"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "adee0f42-d41d-43b0-82d1-4d647329a0a1",
+    "slug": "/ar/power-local-llm/kernelai-review",
+    "date": "2026-11-13T17:52:33.725Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة KernelAI: دردشة ذكاء اصطناعي بلا إنترنت لـ iPhone",
+        "new": "مراجعة KernelAI: دردشة ذكاء اصطناعي دون اتصال لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2c6496bf-962b-4739-af8a-83758ea48118",
+    "slug": "/zh/power-local-llm/kernelai-review",
+    "date": "2026-11-13T17:52:33.757Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KernelAI 评测：iPhone/Android 免费离线 AI 聊天",
+        "new": "KernelAI 评测：iPhone/安卓离线 AI 聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "32b65315-ffa4-4b06-937f-63de5c0e3796",
+    "slug": "/ar/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.789Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Kruvo: زميل ذكاء اصطناعي لنظامي Windows وmacOS يعمل في مجلدك بمفتاح API الخاص بك أو Ollama ويسأل قبل التنفيذ. السعر والمتطلبات والنقاط المفتوحة.",
+        "new": "مراجعة Kruvo: زميل ذكاء اصطناعي لنظامي Windows وmacOS يعمل في مجلدك بمفتاح API أو Ollama ويسأل قبل التنفيذ. السعر والمتطلبات والنقاط المفتوحة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "84d228dd-89ef-47fc-8492-f73145a1f2c4",
+    "slug": "/de/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.821Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Kruvo-Rezension: KI-Kollege für Windows und macOS, der in Ihrem Ordner mit eigenem API-Schlüssel oder Ollama arbeitet und vorher fragt. Preis, Bedarf, offene Punkte.",
+        "new": "Kruvo-Rezension: KI-Kollege für Windows und macOS, arbeitet im Ordner mit eigenem API-Schlüssel oder Ollama und fragt vorher. Preis, Bedarf, offene Punkte."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6a760886-ce2e-473f-af4d-ab75ccf3b90f",
+    "slug": "/es/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.855Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de Kruvo: compañero de IA de escritorio Windows y Mac",
+        "new": "Reseña de Kruvo: compañero de IA para Windows y Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Kruvo: compañero de IA para Windows y macOS que trabaja en tu carpeta con tu clave API u Ollama y pregunta antes de actuar. Precio, requisitos, dudas.",
+        "new": "Reseña de Kruvo: compañero de IA para Windows y macOS que trabaja en tu carpeta con tu clave API u Ollama y pregunta antes. Precio, requisitos, dudas."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e987cdca-6987-4e10-9239-fb0aa88760e5",
+    "slug": "/fr/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.888Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Kruvo : collègue IA pour Windows et macOS qui travaille dans votre dossier avec votre clé API ou Ollama et demande avant d’agir. Prix, besoins, points ouverts.",
+        "new": "Test de Kruvo : collègue IA pour Windows et macOS qui travaille dans votre dossier avec votre clé API ou Ollama, demande avant d’agir. Prix, besoins."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b6c2f173-fce5-4a4c-8e4e-d9df8f57c94e",
+    "slug": "/pt/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.921Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Kruvo: colega de IA para Windows e macOS que trabalha na sua pasta com sua chave de API ou Ollama e pergunta antes de agir. Preço, requisitos, pontos em aberto.",
+        "new": "Análise do Kruvo: colega de IA para Windows e macOS que trabalha na sua pasta com chave de API ou Ollama e pergunta antes. Preço, requisitos, dúvidas."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a266f226-02c5-43f7-9249-8fb7f6d8fbdb",
+    "slug": "/ar/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:33.954Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة LastBrowser: متصفح ذكاء اصطناعي مع Sidekick وOllama",
+        "new": "مراجعة LastBrowser: متصفح ذكاء اصطناعي يدعم Ollama"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "166ff862-edef-4c56-ac88-2dbf984d853c",
+    "slug": "/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:33.986Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LastBrowser review: a free Windows browser (Linux preview) with a built-in Sidekick AI sidebar that works with local Ollama models. Licence, privacy, risks.",
+        "new": "LastBrowser review: a free Windows browser (Linux preview) with a built-in Sidekick AI sidebar for local Ollama models. Licence, privacy, risks."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9a344899-9be4-4331-85d5-8e19929e7ab6",
+    "slug": "/ja/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:34.019Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LastBrowserレビュー：Ollama対応Sidekick搭載のAIブラウザ",
+        "new": "LastBrowserレビュー：Ollama対応のAIブラウザ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d96d1fc0-37e6-4256-a759-b968f222c706",
+    "slug": "/zh/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:34.051Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LastBrowser 评测：带 Ollama 助手的 AI 浏览器",
+        "new": "LastBrowser 评测：支持Ollama的AI浏览器"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "88d75f71-578c-4399-b30c-e12e43eebac7",
+    "slug": "/ja/power-local-llm/llm-vision-review",
+    "date": "2026-11-13T17:52:34.084Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Visionレビュー：Home Assistantのカメラ解析",
+        "new": "LLM Visionレビュー：Home Assistant連携"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "67737b8b-ef57-41c2-b314-181331511490",
+    "slug": "/zh/power-local-llm/llm-vision-review",
+    "date": "2026-11-13T17:52:34.115Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Vision 评测：Home Assistant 摄像头分析",
+        "new": "LLM Vision评测：Home Assistant摄像头分析"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b32d9576-850e-4959-a7fd-3f6338e71771",
+    "slug": "/ar/power-local-llm/local-ai-on-android-guide",
+    "date": "2026-11-13T17:52:34.146Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "الذكاء الاصطناعي المحلي على Android 2026: ما يعمل وما لا",
+        "new": "ذكاء اصطناعي محلي على Android 2026: ما يعمل وما لا"
+      },
+      {
+        "field": "metaDescription",
+        "old": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، من الدردشة إلى الصوت.",
+        "new": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، كالدردشة والصوت."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3c872542-b1a6-4a84-8e9e-077c27389537",
+    "slug": "/power-local-llm/local-ai-on-android-guide",
+    "date": "2026-11-13T17:52:34.177Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover mapped to chat, voice, vision, documents and more.",
+        "new": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover by chat, voice, vision, documents and more."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a0d3000f-155a-4760-930f-6d38bf1b6d2b",
+    "slug": "/ar/power-local-llm/local-ai-on-iphone-guide",
+    "date": "2026-11-13T17:52:34.209Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "الذكاء الاصطناعي المحلي على iPhone 2026: ما يعمل وما يتعذر",
+        "new": "ذكاء اصطناعي محلي على iPhone 2026: ما يعمل وما لا يعمل"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله وما لا يستطيعه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store والتطبيقات حسب الاستخدام.",
+        "new": "ما يمكن للذكاء الاصطناعي المحلي على iPhone فعله وما لا يمكنه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store وتطبيقات حسب الاستخدام."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e4472a6c-d924-4d0c-b0ab-12137f826979",
+    "slug": "/ar/power-local-llm/local-operator-review",
+    "date": "2026-11-13T17:52:34.240Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والإصدار والتثبيت؛ دون اختبار.",
+        "new": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والتثبيت؛ دون اختبار."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e117100c-0f6d-4e10-969b-1abccdc586d7",
+    "slug": "/ja/power-local-llm/local-operator-review",
+    "date": "2026-11-13T17:52:34.270Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local Operatorレビュー：無料のデスクトップAIエージェント",
+        "new": "Local Operatorレビュー：無料AIエージェントアプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2a3ceeae-da2a-404a-a080-0cd1701d67d5",
+    "slug": "/ar/power-local-llm/lyonesse-review",
+    "date": "2026-11-13T17:52:34.302Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Lyonesse: تفريغ صوتي بالذكاء الاصطناعي على Mac",
+        "new": "مراجعة Lyonesse: تفريغ صوتي دون اتصال على iPhone وMac"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ed3744e8-c598-4b0e-8dcf-84fea5cc69c3",
+    "slug": "/ja/power-local-llm/lyonesse-review",
+    "date": "2026-11-13T17:52:34.333Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lyonesseレビュー：iPhone・Mac向けオフラインAI文字起こし",
+        "new": "Lyonesseレビュー：オフラインAI文字起こしアプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0ab8f4fc-4a2a-4736-af06-93fd7adbc21f",
+    "slug": "/zh/power-local-llm/lyonesse-review",
+    "date": "2026-11-13T17:52:34.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lyonesse 评测：iPhone 和 Mac 离线 AI 转录应用",
+        "new": "Lyonesse 评测：iPhone/Mac 离线 AI 转录"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0bc60a69-1b51-4b24-91fc-702ad3384cf3",
+    "slug": "/ar/power-local-llm/meetini-review",
+    "date": "2026-11-13T17:52:34.396Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Meetini: تطبيق Mac مدفوع للتسميات التوضيحية المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.",
+        "new": "مراجعة Meetini: تطبيق Mac مدفوع للتسميات المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8cca517e-71b2-40ee-8820-3970b7f65e51",
+    "slug": "/power-local-llm/meetini-review",
+    "date": "2026-11-13T17:52:34.427Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Meetini review: paid Mac app for live captions, meeting notes and interview prep. The maker says captions run locally; its privacy notice says audio goes to OpenAI.",
+        "new": "Meetini review: paid Mac app for live captions, meeting notes, interview prep. Maker says captions run locally; privacy notice says audio goes to OpenAI."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "13b2d3de-878b-4de1-8cef-4a513172d2e9",
+    "slug": "/ja/power-local-llm/murmur-review",
+    "date": "2026-11-13T17:52:34.459Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Murmurレビュー：iPhone上で作曲するオンデバイスAI音楽アプリ",
+        "new": "Murmurレビュー：iPhoneで作曲するオンデバイスAI音楽"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1568b131-bb9d-4f5f-abbf-758411624968",
+    "slug": "/ar/power-local-llm/nekoni-review",
+    "date": "2026-11-13T17:52:34.490Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Nekoni: وكيل ذكاء اصطناعي مستضاف ذاتيًا لـ iPhone",
+        "new": "مراجعة Nekoni: وكيل AI مستضاف ذاتيًا لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "14930569-394c-456a-9c19-4b24ca49380e",
+    "slug": "/ja/power-local-llm/openvoiceos-review",
+    "date": "2026-11-13T17:52:34.520Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open Voice OS レビュー：オープンソース音声アシスタント",
+        "new": "Open Voice OSレビュー：OSS音声アシスタント"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b239f953-7dc2-45c7-9c7d-beb2732a3041",
+    "slug": "/ar/power-local-llm/pajdo-review",
+    "date": "2026-11-13T17:52:34.552Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة باستخدام Apple Intelligence على الجهاز. الأسعار والخصوصية.",
+        "new": "مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة عبر Apple Intelligence على الجهاز. الأسعار والخصوصية."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "664ea2a9-a828-429b-af8b-9e8b1666e0c5",
+    "slug": "/ja/power-local-llm/pajdo-review",
+    "date": "2026-11-13T17:52:34.581Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pajdoレビュー：iPhone上で動くApple Healthアプリ",
+        "new": "Pajdoレビュー：iPhoneのApple Healthアプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9feb2423-d9e1-427d-8b78-0a5a44b2d478",
+    "slug": "/zh/power-local-llm/pajdo-review",
+    "date": "2026-11-13T17:52:34.611Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pajdo 评测：iPhone 上的 Apple Health 助手",
+        "new": "Pajdo 评测：Apple Health 数据助手"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d4cc6514-b348-4122-b42a-a1e9bca53fa0",
+    "slug": "/ar/power-local-llm/phantasm-review",
+    "date": "2026-11-13T17:52:34.641Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Phantasm: دردشة بالذكاء الاصطناعي لخادمك على iPhone",
+        "new": "مراجعة Phantasm: دردشة ذكاء اصطناعي لخادمك على iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bd097b52-dac3-49f7-8c02-73efa7e3ad4a",
+    "slug": "/ja/power-local-llm/phantasm-review",
+    "date": "2026-11-13T17:52:34.671Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phantasmレビュー：iPhone向けセルフホストAIチャット",
+        "new": "Phantasmレビュー：iPhone用セルフホストAIチャット"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d2d72094-cb30-4372-9940-3f4e9a8c427a",
+    "slug": "/ar/power-local-llm/ramen-review",
+    "date": "2026-11-13T17:52:34.701Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة RAMen: ذاكرة جلسات الذكاء الاصطناعي المحلي وسرعته",
+        "new": "مراجعة RAMen: ذاكرة جلسات محلية وتسريع المحادثات"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3c25f34f-a1f2-4545-a680-ce1252ccf0f4",
+    "slug": "/ja/power-local-llm/sablate-review",
+    "date": "2026-11-13T17:52:34.730Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Sablate レビュー：Windows・Mac向け字幕生成アプリ",
+        "new": "Sablateレビュー：Windows・Mac向け字幕生成アプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fc0809dc-4f13-42b3-b6a1-8e937e6ea8ab",
+    "slug": "/ar/power-local-llm/speechbrain-review",
+    "date": "2026-11-13T17:52:34.761Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية وأسئلة مفتوحة.",
+        "new": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c43c549f-e98d-43da-a1db-27ec237c61de",
+    "slug": "/power-local-llm/speechbrain-review",
+    "date": "2026-11-13T17:52:34.792Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SpeechBrain Review: Open-Source Speech Toolkit",
+        "new": "SpeechBrain Review: Open-Source PyTorch Speech Toolkit"
+      },
+      {
+        "field": "metaDescription",
+        "old": "SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy and open questions.",
+        "new": "SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy, open points."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b619640e-2eb0-4516-b3b9-b380991150f3",
+    "slug": "/zh/power-local-llm/speechbrain-review",
+    "date": "2026-11-13T17:52:34.822Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SpeechBrain 评测：免费开源的 PyTorch 语音工具包",
+        "new": "SpeechBrain评测：免费开源PyTorch语音工具包"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2484f0db-f940-4bac-9c3b-50b9504409af",
+    "slug": "/ar/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.852Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط. الاختبار العملي مرتبط.",
+        "new": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c5bb688b-65cc-465f-b9ae-297eed5c70da",
+    "slug": "/de/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.883Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 europäische Sprachen, Oberfläche nur Deutsch. Praxistest verlinkt.",
+        "new": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 Sprachen, Oberfläche nur Deutsch."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "38cbfa9d-2ac1-410a-8678-bc434e626f4e",
+    "slug": "/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.914Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet on the Mac, about 25 European languages, German interface only. Hands-on test linked.",
+        "new": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet runs on the Mac, about 25 languages, German-only interface."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4b189b4a-f6f5-4cc3-8b86-9eeee74b4fec",
+    "slug": "/es/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.946Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán. Prueba práctica enlazada.",
+        "new": "Reseña de Sprich: dictado alemán para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "feac040c-62e7-4dab-8602-a399cbcadf6b",
+    "slug": "/fr/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.978Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand. Test pratique lié.",
+        "new": "Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5dd46ebb-2520-4162-9eba-068296e6e719",
+    "slug": "/ko/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:35.010Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어만 제공. 직접 테스트 링크 있음.",
+        "new": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어 전용."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2baad253-1c5e-41ef-a8ef-470a2cfa40cf",
+    "slug": "/pt/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:35.043Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Sprich: app de ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão. Teste prático vinculado.",
+        "new": "Análise do Sprich: ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "93eac896-d54d-4a4a-83fc-4da171bdeb7e",
+    "slug": "/zh/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:35.076Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接实测文章。",
+        "new": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接动手测试文章。"
+      },
+      {
+        "field": "twitterDescription",
+        "old": "Sprich评测：德国制造的Mac听写应用，有免费套餐和一次性买断的Lifetime。语言、隐私、价格与替代方案。已链接实测文章。",
+        "new": "Sprich评测：德国制造的Mac听写应用，有免费套餐和一次性买断的Lifetime。语言、隐私、价格与替代方案。已链接动手测试文章。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fe1cec0a-bd83-447e-aaac-a20fe1aa1ec9",
+    "slug": "/ar/power-local-llm/stratosort-review",
+    "date": "2026-11-13T17:52:35.108Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية تعمل دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر.",
+        "new": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0a90350d-e0d8-49a1-9501-55d3024bfddf",
+    "slug": "/power-local-llm/stratosort-review",
+    "date": "2026-11-13T17:52:35.141Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "StratoSort Review: Local AI File Organizer",
+        "new": "StratoSort Review: Local AI File Organizer for Desktop"
+      },
+      {
+        "field": "metaDescription",
+        "old": "StratoSort review: desktop AI file organizer for Mac, Windows and Linux with local llama.cpp models that work offline after install. Licence, privacy, limits. Not tested.",
+        "new": "StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, privacy, limits. Not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9fb258b4-1cba-4f74-b110-64d4d4931742",
+    "slug": "/zh/power-local-llm/stratosort-review",
+    "date": "2026-11-13T17:52:35.174Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "StratoSort评测：Mac、Windows、Linux本地AI文件整理",
+        "new": "StratoSort评测：跨平台本地AI文件整理应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7823d259-543d-406e-a72e-b4f6b2914ea6",
+    "slug": "/ja/power-local-llm/tecadrisebot-review",
+    "date": "2026-11-13T17:52:35.206Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "TecAdRiseBotレビュー：Windows向けCursorエージェント",
+        "new": "TecAdRiseBotレビュー：Cursor連携アプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9a93bbf6-8b7c-41d2-ba54-346e6b6775f5",
+    "slug": "/zh/power-local-llm/tecadrisebot-review",
+    "date": "2026-11-13T17:52:35.238Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "TecAdRiseBot 评测：Cursor 驱动的智能体桌面应用",
+        "new": "TecAdRiseBot评测：Cursor驱动的智能体桌面应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f209c727-7e42-4446-98e0-ceb7c273d711",
+    "slug": "/ar/power-local-llm/univocal-review",
+    "date": "2026-11-13T17:52:35.268Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. سعره $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. لم يُختبر.",
+        "new": "مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fd541535-ab42-4ef6-a673-0138f8712e25",
+    "slug": "/power-local-llm/univocal-review",
+    "date": "2026-11-13T17:52:35.300Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Univocal review: a Mac app for read-aloud and dictation that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Not tested.",
+        "new": "Univocal review: Mac read-aloud and dictation app that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d2e510c3-30e0-4b79-a1ba-b703444ddd8f",
+    "slug": "/ar/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.333Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا أو 99 EUR لمرة واحدة. لم يُختبر.",
+        "new": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "62f99a54-90d0-45e2-a2dd-a8196051d95e",
+    "slug": "/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weesper Neon Flow Review: Offline Dictation App",
+        "new": "Weesper Neon Flow Review: Offline Whisper Dictation App"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "10aa632a-3eb6-477f-9372-3430e04a76ae",
+    "slug": "/fr/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.395Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois. Non testée.",
+        "new": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois ou 99 € une fois. Non testée."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "79bf9c0d-4979-4c14-8d9d-a830689a13dc",
+    "slug": "/ja/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.427Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weesper Neon Flow レビュー：オフライン音声入力アプリ",
+        "new": "Weesper Neon Flowレビュー：音声入力アプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5d9ea803-f6cc-4d51-8533-12675cd7688e",
+    "slug": "/ko/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.458Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Neon Flow 리뷰: 개발사에 따르면 컴퓨터에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR 또는 99 EUR 일회성. 직접 테스트하지 않았습니다.",
+        "new": "Weesper Neon Flow 리뷰: 개발사에 따르면 PC에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR. 직접 테스트하지 않았습니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "380bb87d-b536-4321-bd24-bf67e5d11178",
+    "slug": "/zh/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.490Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weesper Neon Flow评测：Mac和Windows离线听写应用",
+        "new": "Weesper Neon Flow评测：离线听写应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "39700be4-f041-4482-bdc2-1aa548e01d48",
+    "slug": "/zh/power-local-llm/zeno-review",
+    "date": "2026-11-13T17:52:35.521Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Zeno 评测：Mac 免费私有 AI 工作区，内置 35B 模型",
+        "new": "Zeno评测：Mac免费私有AI工作区，内置35B模型"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
   }
 ]

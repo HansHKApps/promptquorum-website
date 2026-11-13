@@ -1161,7 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pajdo-review-hero-ja.webp',
     title: 'Pajdoレビュー：iPhone上で答えるApple Healthコンパニオン',
-    seoTitle: 'Pajdoレビュー：iPhone上で動くApple Healthアプリ',
+    seoTitle: 'Pajdoレビュー：iPhoneのApple Healthアプリ',
     intro:
       'Pajdo: Health & Fitness Buddyは、Apple Healthのデータを読み取り、端末上のApple Intelligenceでそのデータに関する質問に答える、iPhone・iPad・Apple Watch向けのアプリです。App Storeでは販売元名Josip Markovicで掲載されており、[Castmates](/ja/power-local-llm/castmates-review)や[Lyonesse](/ja/power-local-llm/lyonesse-review)と同じ開発者です。初回リリースは2026年10月13日です。本レビューは、2026年10月26日に確認したApp Storeの掲載情報、公式サイト、プライバシーポリシーに基づいています。',
     metaDescription:
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Pajdo: Health & Fitness Buddy تطبيق لأجهزة iPhone وiPad وApple Watch يقرأ بيانات Apple Health ويجيب عن الأسئلة المتعلقة بها باستخدام Apple Intelligence على الجهاز. وهو مدرج في App Store باسم البائع Josip Markovic، أي المطوّر نفسه الذي يقف وراء [Castmates](/ar/power-local-llm/castmates-review) و[Lyonesse](/ar/power-local-llm/lyonesse-review)، وصدر لأول مرة في 13 أكتوبر 2026. تعكس هذه المراجعة صفحة App Store والموقع وسياسة الخصوصية كما جرى التحقق منها في 26 أكتوبر 2026.',
     metaDescription:
-      'مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة باستخدام Apple Intelligence على الجهاز. الأسعار والخصوصية.',
+      'مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة عبر Apple Intelligence على الجهاز. الأسعار والخصوصية.',
     twitterDescription:
       'مراجعة Pajdo: رفيق مجاني ومغلق المصدر لبيانات Apple Health على iPhone وApple Watch، يقول مطوّره إن إجابات الذكاء الاصطناعي تعمل على الجهاز. الأسعار والخصوصية وما لا تؤكده المصادر.',
     audience:
@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pajdo-review-hero-zh.webp',
     title: 'Pajdo 评测：在 iPhone 上回答问题的 Apple Health 助手',
-    seoTitle: 'Pajdo 评测：iPhone 上的 Apple Health 助手',
+    seoTitle: 'Pajdo 评测：Apple Health 数据助手',
     intro:
       'Pajdo: Health & Fitness Buddy 是一款适用于 iPhone、iPad 和 Apple Watch 的应用，它读取 Apple Health 数据，并用设备上的 Apple Intelligence 回答与这些数据有关的问题。它在 App Store 中以卖家名称 Josip Markovic 上架，与 [Castmates](/zh/power-local-llm/castmates-review) 和 [Lyonesse](/zh/power-local-llm/lyonesse-review) 出自同一位开发者，于 2026 年 10 月 13 日首次发布。本评测基于 2026 年 10 月 26 日核对的 App Store 页面、官网和隐私政策。',
     metaDescription:

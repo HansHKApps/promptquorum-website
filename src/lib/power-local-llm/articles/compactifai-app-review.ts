@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Mobile & Edge LLMs',
       heroImage: '/images/compactifai-app-review-hero-ja.webp',
       title: 'CompactifAI APPレビュー:オフラインとクラウドのモデルに対応する無料チャットアプリ',
-      seoTitle: 'CompactifAI APPレビュー:オフラインとクラウドのAI',
+      seoTitle: 'CompactifAI APPレビュー:オフラインとクラウドAI',
       intro: 'CompactifAI APPは、スペインに拠点を置き圧縮AIモデルに注力するMultiverse Computingが提供する、iPhone・iPad・Android向けの無料チャットアプリです。開発元によれば、圧縮モデルをインターネットなしで端末上で実行することも、同社のクラウドAPI経由でより大きなモデルを使うこともできます。本レビューは、2026年10月24日に確認したストアの掲載情報、開発元のウェブサイト、公式発表をもとにしています。',
       metaDescription: 'CompactifAI APPレビュー:オフラインとクラウドのモデルに対応した無料のiPhone・Androidチャットアプリ。端末上で動く範囲と未検証の点を解説します。',
       twitterDescription: 'CompactifAI APPレビュー:端末上の圧縮モデルと開発元のクラウドAPIを組み合わせる、無料でソース非公開のチャットアプリ。情報源が確認していること、現在のストア説明に載っていないこと、未検証の点を解説します。',

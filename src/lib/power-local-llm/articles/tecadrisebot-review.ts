@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/tecadrisebot-review-hero-ja.webp',
     title: 'TecAdRiseBotレビュー：Cursorのクラウドモデルで動く無料のWindowsエージェントアプリ',
-    seoTitle: 'TecAdRiseBotレビュー：Windows向けCursorエージェント',
+    seoTitle: 'TecAdRiseBotレビュー：Cursor連携アプリ',
     intro:
       'TecAdRiseBotは、複数の名前付きAIエージェントを動かすための、無料でMITライセンスのWindowsデスクトップアプリです。各エージェントは、専用のモデル、メモリ、MCPサーバー、スキル、スケジュールを持ちます。ElectronとCursor TypeScript SDKで作られており、開発元はポーランドで登録されている企業TecAdRise、リポジトリの作成日は2026年9月19日です。本レビューは、2026年10月28日に確認した製品ページ、GitHubリポジトリ、Cursor SDKのドキュメントに基づいています。',
     metaDescription:
@@ -2110,7 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/tecadrisebot-review-hero-zh.webp',
     title: 'TecAdRiseBot 评测：基于 Cursor 云端模型的免费 Windows 智能体桌面应用',
-    seoTitle: 'TecAdRiseBot 评测：Cursor 驱动的智能体桌面应用',
+    seoTitle: 'TecAdRiseBot评测：Cursor驱动的智能体桌面应用',
     intro:
       'TecAdRiseBot 是一款免费、采用 MIT 许可证的 Windows 桌面应用，可同时运行多个有名字的 AI 智能体，每个智能体都有自己的模型、记忆、MCP 服务器、技能和计划任务。它基于 Electron 和 Cursor TypeScript SDK 构建，开发方是一家在波兰注册的公司 TecAdRise，代码仓库创建于 2026 年 9 月 19 日。本评测基于 2026 年 10 月 28 日核对的产品页面、GitHub 仓库和 Cursor SDK 文档。',
     metaDescription:

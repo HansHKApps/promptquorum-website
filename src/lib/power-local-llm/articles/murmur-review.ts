@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/murmur-review-hero-ja.webp',
     title: 'Murmurレビュー：iPhoneで動くオンデバイスAI作曲アプリ',
-    seoTitle: 'Murmurレビュー：iPhone上で作曲するオンデバイスAI音楽アプリ',
+    seoTitle: 'Murmurレビュー：iPhoneで作曲するオンデバイスAI音楽',
     intro:
       'Murmurは、独立系開発者の[Konstantin Tabakov](https://murmurapps.com)によるiPhoneアプリです。写真・動画・ゲーム向けに、インストゥルメンタル音楽を作曲します。開発者によれば、初回にモデルを一度ダウンロードした後は、すべての曲をiPhone上で生成します。ダウンロードは無料で、Proは買い切りで解放できます。このレビューは、2026年10月24日に確認したApp Storeの掲載情報、開発者の公式サイト、プライバシーポリシーに基づきます。PromptQuorumは実機でのテストを行っていません。',
     metaDescription:

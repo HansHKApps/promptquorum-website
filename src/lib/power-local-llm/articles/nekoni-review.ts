@@ -1431,7 +1431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nekoni-review-hero-ar.webp',
     title: 'مراجعة Nekoni: وكيل ذكاء اصطناعي مستضاف ذاتيًا تصل إليه من iPhone',
-    seoTitle: 'مراجعة Nekoni: وكيل ذكاء اصطناعي مستضاف ذاتيًا لـ iPhone',
+    seoTitle: 'مراجعة Nekoni: وكيل AI مستضاف ذاتيًا لـ iPhone',
     intro:
       'Nekoni وكيل ذكاء اصطناعي مستضاف ذاتيًا بترخيص MIT: تشغّله على جهاز Mac أو Linux الخاص بك مع Ollama، ثم تتحدث معه من تطبيق iPhone أو من المتصفح عبر اتصال WebRTC مباشر. تستند هذه المراجعة إلى موقع المشروع ومستودعه على GitHub وصفحته في App Store، وقد روجعت في 24 أكتوبر 2026؛ ولم يجرّبه PromptQuorum عمليًا.',
     metaDescription:

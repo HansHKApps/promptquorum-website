@@ -9218,11 +9218,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     designSkin: 'hub',
     title: 'الذكاء الاصطناعي المحلي على iPhone في 2026: ما الممكن وما غير الممكن وتطبيقات iPhone التي نغطيها',
-    seoTitle: 'الذكاء الاصطناعي المحلي على iPhone 2026: ما يعمل وما يتعذر',
+    seoTitle: 'ذكاء اصطناعي محلي على iPhone 2026: ما يعمل وما لا يعمل',
     intro:
       'يستطيع هاتف iPhone حديث تشغيل نموذج لغوي مفيد دون اتصال بالإنترنت بعد تنزيل النموذج، لكن النماذج الصغيرة فقط: نحو 1-4 مليارات معامل على ذاكرة RAM بسعة 6-8 غيغابايت. يوضّح هذا الدليل ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله، وما هو ممكن جزئياً، وما هو غير ممكن إطلاقاً، ويشرح Apple Intelligence وإطار Foundation Models وقواعد App Store، ويربط تطبيقات iPhone التي نغطيها في دليل PromptQuorum بالمهمة التي تناسبها. تستند معلومات التطبيقات إلى مراجعات PromptQuorum المبنية على مصادر عامة ما لم تذكر المراجعة أنها اختُبرت عملياً؛ ولم يُعِد هذا الدليل اختبار أي تطبيق.',
     metaDescription:
-      'ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله وما لا يستطيعه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store والتطبيقات حسب الاستخدام.',
+      'ما يمكن للذكاء الاصطناعي المحلي على iPhone فعله وما لا يمكنه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store وتطبيقات حسب الاستخدام.',
     heroImage: '/images/local-ai-on-iphone-guide-hero-ar.webp',
     twitterDescription:
       'الذكاء الاصطناعي المحلي على iPhone في 2026: خريطة القدرات ومستويات RAM وApple Intelligence وحدود App Store وقائمة غير الممكن وتطبيقات iPhone التي نغطيها حسب الاستخدام.',
