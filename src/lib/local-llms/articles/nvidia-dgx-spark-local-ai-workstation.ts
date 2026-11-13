@@ -17,11 +17,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-en.webp',
     title: 'NVIDIA DGX Spark for Local AI: Specs, Price and Verdict',
-    seoTitle: 'NVIDIA DGX Spark for Local AI: Specs, Price, Verdict',
+    seoTitle: 'NVIDIA DGX Spark Price, Specs and Verdict for Local AI',
     intro:
       'The NVIDIA DGX Spark is a 1.2 kg desktop computer built around the GB10 Grace Blackwell Superchip, with 128 GB of unified memory and a 200 Gbps ConnectX-7 network adapter for linking boxes. It targets developers who want CUDA and NVIDIA\'s AI software stack on a desk. Its price has risen since launch, so the price table below names a source for each line.',
     metaDescription:
-      'NVIDIA DGX Spark for local AI: verified GB10 specs, 128 GB and 64 GB US prices with sources, what independent tests show, and who should skip it.',
+      'NVIDIA DGX Spark price: $4,699 Founders Edition, up from $3,999 at launch. Sourced US prices, GB10 specs, independent tests, who should skip it.',
     twitterDescription:
       'NVIDIA DGX Spark for local AI: verified GB10 specs, sourced US prices, independent test results and who it suits. Based on vendor data and third-party reports.',
     readTime: '8 min read',
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-ja.webp',
     title: 'ローカルAI向けNVIDIA DGX Spark: 仕様・価格・評価',
-    seoTitle: 'NVIDIA DGX Spark ローカルAI: 仕様・価格・評価',
+    seoTitle: 'NVIDIA DGX Spark ローカルAI：仕様・価格',
     intro:
       'NVIDIA DGX Sparkは、GB10 Grace Blackwell Superchipを中核とする重さ1.2kgのデスクトップコンピュータで、128GBのユニファイドメモリと、複数台を接続するための200Gbps ConnectX-7ネットワークアダプタを備えています。机の上でCUDAとNVIDIAのAIソフトウェアスタックを使いたい開発者向けの製品です。発売後に価格が上昇しているため、下の価格表では各行に情報源を明記しています。',
     metaDescription:
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-ar.webp',
     title: 'NVIDIA DGX Spark للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
-    seoTitle: 'NVIDIA DGX Spark للذكاء الاصطناعي المحلي: المواصفات والسعر',
+    seoTitle: 'NVIDIA DGX Spark للذكاء الاصطناعي: المواصفات والسعر',
     intro:
       'NVIDIA DGX Spark حاسوب مكتبي بوزن 1.2 كغ مبني حول شريحة GB10 Grace Blackwell Superchip، بذاكرة موحدة سعتها 128 GB ومحوّل شبكة ConnectX-7 بسرعة 200 Gbps لربط الأجهزة ببعضها. يستهدف المطورين الذين يريدون CUDA وحزمة برمجيات NVIDIA للذكاء الاصطناعي على مكتبهم. وقد ارتفع سعره منذ الإطلاق، لذلك يذكر جدول الأسعار أدناه مصدرًا لكل سطر.',
     metaDescription:

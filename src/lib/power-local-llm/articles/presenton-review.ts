@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/presenton-review-hero-zh.webp',
     title: 'Presenton 评测：开源 AI 演示文稿生成器',
-    seoTitle: 'Presenton 评测：开源 AI 演示文稿生成器，可导出 PPTX',
+    seoTitle: 'Presenton 评测：开源 AI 演示文稿生成器（PPTX）',
     intro: 'Presenton 是 Presenton Inc. 推出的开源 AI 演示文稿生成器，可根据提示词或文档生成可编辑的 PPTX 和 PDF 幻灯片，使用你自行配置的本地或云端模型。桌面版和 Docker 版以 Apache 2.0 许可证免费使用，而托管的云端版本按幻灯片额度收费。本评测基于官网、README、隐私政策和 GitHub 发布页，核查日期为 2026年10月24日；PromptQuorum 未对该应用进行测试。',
     metaDescription: 'Presenton 评测：适用于桌面和 Docker 的开源 AI 演示文稿生成器，可生成可编辑的 PPTX 和 PDF，支持本地或云端模型，采用 Apache 2.0 许可证；未经实测。',
     twitterDescription: 'Presenton 评测：面向桌面和 Docker 的开源 AI 幻灯片生成器。可编辑的 PPTX 与 PDF，模型自选，以及来源已证实和未证实的内容。',

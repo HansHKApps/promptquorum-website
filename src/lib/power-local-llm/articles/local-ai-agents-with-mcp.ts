@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Model Context Protocol (MCP) is the missing layer between a local Ollama model and the rest of your machine. With one config file and a tool-calling model, the same agent can query a Postgres database, read and write files in a sandboxed directory, drive a headless browser, and open GitHub pull requests — the model and the servers run on your laptop, and only the browser and GitHub servers touch the network. Ollama does not speak MCP itself, so this guide uses a client (Goose) to bridge the two, with install steps and config that match the current Goose docs, servers that are still maintained, and a security model that does not assume you trust the model.',
     metaDescription:
-      'How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub with Goose. Working config, maintained servers, safe permissions.',
+      'How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub via Goose. Working config, maintained servers, safe permissions.',
     twitterDescription:
       'Ollama does not speak MCP — a client does. Working Goose config, the maintained servers to install (and the archived ones to avoid), and a security model that does not trust the model.',
     current_models_mentioned: [

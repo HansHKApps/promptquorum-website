@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ja.webp',
     title: 'ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価',
-    seoTitle: 'AMD Ryzen AI Halo ローカルAI: 仕様・価格・評価',
+    seoTitle: 'AMD Ryzen AI Halo ローカルAI：仕様と価格',
     intro:
       'AMD Ryzen AI Haloは、大規模言語モデルをローカルで動かすためにAMD自身が提供する開発者向けmini PCです。Ryzen AI Max+ 395を搭載した128GB版と、Ryzen AI Max+ PRO 495を搭載した192GB版の2種類があり、米国ではどちらもMicro Center経由で販売されています。このページでは、ベンダーの仕様、確認できた価格、独立したレビュアーの測定結果をまとめました。購入前に、ご自身の用途に合うかどうかを判断する材料としてお使いください。',
     metaDescription:

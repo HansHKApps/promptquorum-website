@@ -2628,7 +2628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/openwhispr-review-hero-zh.webp',
     title: 'OpenWhispr 评测：开源语音听写与会议笔记应用',
-    seoTitle: 'OpenWhispr 评测：支持本地与云端的开源语音听写和会议笔记',
+    seoTitle: 'OpenWhispr 评测：本地或云端的开源听写与会议笔记',
     intro: 'OpenWhispr 是开源语音转文字应用，支持 macOS、Windows、Linux、iPhone 和 iPad：按下快捷键说话，文字会粘贴到光标所在处，还可选用会议转写和笔记。你可以在本机运行的语音模型和云端处理之间选择，这个选择决定了你的语音去向。本评测基于官网、隐私政策、文档和 GitHub 仓库（2026年10月24日查阅）；PromptQuorum 没有实际测试过这款应用。',
     metaDescription: 'OpenWhispr 评测：MIT 许可的听写与会议笔记应用，支持 Mac、Windows、Linux 和 iPhone，可选本地或云端语音转文字。未经实测，来源已核对。',
     twitterDescription: 'OpenWhispr 评测：支持本地或云端语音模型的开源听写与会议笔记应用。来源对套餐、隐私和安装包能确认什么、不能确认什么。',

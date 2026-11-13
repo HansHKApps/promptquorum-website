@@ -24168,5 +24168,791 @@
       "t14": "2026-11-27",
       "t28": "2026-12-11"
     }
+  },
+  {
+    "id": "fc09fec5-59d1-4279-9b00-5f1de0f5e420",
+    "slug": "/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.096Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AMD Ryzen AI Halo ローカルAI: 仕様・価格・評価",
+        "new": "AMD Ryzen AI Halo ローカルAI：仕様と価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9e947cae-7d96-4386-b0f8-3c4d8f9d4bdb",
+    "slug": "/ja/local-llms/framework-desktop-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.132Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Framework Desktop ローカルAI: 仕様・価格・評価",
+        "new": "Framework Desktop ローカルAI：仕様と価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ff56763d-5406-4ea6-af2a-c54e0b2023a7",
+    "slug": "/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.162Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "محطات عمل الذكاء الاصطناعي المحلي: Strix Halo أم DGX Spark",
+        "new": "محطة عمل ذكاء اصطناعي محلي: Strix Halo أم DGX Spark"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.",
+        "new": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "367a7f01-9f5c-4281-a5e4-5515b5acddb1",
+    "slug": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.192Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, tested speed, sourced prices.",
+        "new": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, reported speed, sourced prices."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "32b6ab63-77af-4151-be51-f0cb6eaccb7f",
+    "slug": "/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.221Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad medida y precios.",
+        "new": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad indicada y precios."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4e5c3d24-ecba-47d4-9314-1c03a6c1cb1c",
+    "slug": "/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.251Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse mesurée, prix sourcés.",
+        "new": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse publiée, prix sourcés."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "907282e3-0b62-42c9-bba8-b61a306a60d9",
+    "slug": "/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.282Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルAIワークステーション Strix Halo vs Spark",
+        "new": "ローカルAI：Strix Halo vs DGX Spark"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・実測速度・出典付き価格で整理。",
+        "new": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・公表速度・出典付き価格で整理。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published plus CJK title length fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b40f20d5-013f-459b-98c0-9742bfc73f1a",
+    "slug": "/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.319Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 실측 속도, 출처 표기 가격.",
+        "new": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 공개된 속도, 출처 표기 가격."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3e762149-cdf6-446e-9447-1e34512a091c",
+    "slug": "/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.349Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade medida e preços.",
+        "new": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade divulgada e preços."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bee45abe-7db8-4f66-a5ab-0651f79157c0",
+    "slug": "/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.379Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地AI工作站：Strix Halo对比DGX Spark选购指南",
+        "new": "本地AI工作站：Strix Halo对比DGX Spark指南"
+      },
+      {
+        "field": "metaDescription",
+        "old": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、实测速度和有来源的价格全面比较。",
+        "new": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、公布速度和有来源的价格全面比较。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published plus CJK title length fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "32c2fe72-6de6-46e1-8a8b-92f7502d8702",
+    "slug": "/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.409Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Minisforum MS-S1 MAXのローカルAI向け仕様と価格",
+        "new": "Minisforum MS-S1 MAX ローカルAI仕様・価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "60558ab5-5fbf-43ae-85af-974e5ddd6c1c",
+    "slug": "/ar/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.439Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NVIDIA DGX Spark للذكاء الاصطناعي المحلي: المواصفات والسعر",
+        "new": "NVIDIA DGX Spark للذكاء الاصطناعي: المواصفات والسعر"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f56334b1-b25e-4983-8c53-166222d294b4",
+    "slug": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.469Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NVIDIA DGX Spark for Local AI: Specs, Price, Verdict",
+        "new": "NVIDIA DGX Spark Price, Specs and Verdict for Local AI"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NVIDIA DGX Spark for local AI: verified GB10 specs, 128 GB and 64 GB US prices with sources, what independent tests show, and who should skip it.",
+        "new": "NVIDIA DGX Spark price: $4,699 Founders Edition, up from $3,999 at launch. Sourced US prices, GB10 specs, independent tests, who should skip it."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'dgx spark price' 970 impr pos 8.45, 1 click; title+meta now lead with price and carry the sourced $4,699 Founders Edition figure",
+    "queries": [
+      "dgx spark price",
+      "nvidia dgx spark",
+      "dgx spark",
+      "nvidia dgx price",
+      "dgx spark nvidia price"
+    ],
+    "baseline": {
+      "position": 8.45,
+      "impressions": 970,
+      "clicks": 1,
+      "ctr": 0.0010309278350515464,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8d4f6f21-4225-4890-ba25-b9a8e294b0da",
+    "slug": "/ja/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.499Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NVIDIA DGX Spark ローカルAI: 仕様・価格・評価",
+        "new": "NVIDIA DGX Spark ローカルAI：仕様・価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "df715b19-472e-46ec-ab3f-1e4fc0761a31",
+    "slug": "/zh/power-local-llm/aiko-review",
+    "date": "2026-11-13T17:29:08.528Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Aiko评测：Mac和iPhone上设备端运行的Whisper转录应用",
+        "new": "Aiko评测：Mac和iPhone设备端Whisper转录"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5d894c2c-09c2-47b0-971d-58e58e1a2a84",
+    "slug": "/ja/power-local-llm/best-local-llm-apps-mac",
+    "date": "2026-11-13T17:29:08.559Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mac向けローカルLLMアプリ2026年版：8本を比較",
+        "new": "Mac向けローカルLLMおすすめアプリ2026：8本比較"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、向く用途を整理。",
+        "new": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、おすすめの用途を整理。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (ja): dominant intent word おすすめ added to title and meta",
+    "queries": [
+      "mac ローカルllm おすすめ",
+      "mac llm",
+      "mac ローカルai おすすめ",
+      "apple local llm"
+    ],
+    "baseline": {
+      "position": 5.7,
+      "impressions": 49,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "316b64dd-accf-4b8d-98db-50619e8e1414",
+    "slug": "/power-local-llm/ecc-review",
+    "date": "2026-11-13T17:29:08.588Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ECC is an MIT-licensed toolkit of agents, skills and hooks for Claude Code and Codex, plus a paid GitHub App. Setup, data flow and pricing explained.",
+        "new": "ECC (ecc-universal) is an MIT-licensed toolkit of agents, skills and hooks for Claude Code and Codex, plus a paid GitHub App. Setup, data flow, pricing."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'ecc universal' 115 impr pos 8.2 was absent from title/meta; meta now names ecc-universal (stated in body)",
+    "queries": [
+      "ecc universal",
+      "ecc github",
+      "ecc review"
+    ],
+    "baseline": {
+      "position": 7.5,
+      "impressions": 167,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "caa5dd27-ca85-4b9e-8b40-0af034d04ec8",
+    "slug": "/ja/power-local-llm/ecc-review",
+    "date": "2026-11-13T17:29:08.618Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ECCレビュー：Claude Code・Codex向けツールキット",
+        "new": "ECCレビュー：Claude Code・Codex向けツール"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3de28cfa-f033-4553-b549-cdd465dc225a",
+    "slug": "/zh/power-local-llm/ecc-review",
+    "date": "2026-11-13T17:29:08.647Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ECC 评测：Claude Code 和 Codex 智能体工具包",
+        "new": "ECC 评测：Claude Code、Codex 智能体工具包"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "70f397af-0223-41c0-80e7-6b1446334f54",
+    "slug": "/ar/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.677Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Excire Foto: برنامج لإدارة الصور على Windows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا.",
+        "new": "مراجعة Excire Foto: مدير صور لـWindows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e7c25241-7398-4b5e-a28c-e1b46ab73fa8",
+    "slug": "/es/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.706Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Excire Foto: gestor de fotos para Windows y Mac cuya búsqueda con IA y reconocimiento de texto se ejecutan en local, según su fabricante. Pago único.",
+        "new": "Reseña de Excire Foto: gestor de fotos para Windows y Mac con búsqueda con IA y reconocimiento de texto en local, según su fabricante. Pago único."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1b87bfbd-e3b2-45e6-9e5b-7e309dc0479b",
+    "slug": "/fr/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.736Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test d’Excire Foto : gestionnaire de photos pour Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique.",
+        "new": "Test d’Excire Foto : gestionnaire de photos Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3433fa0e-5d17-4e71-bce7-a9696d4ccb2f",
+    "slug": "/ja/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.766Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Excire Fotoレビュー：ローカルAI写真管理ソフト（Win/Mac）",
+        "new": "Excire Fotoレビュー：ローカルAI写真管理ソフト"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "542121fd-e1b7-4fce-9e17-488c04984dad",
+    "slug": "/pt/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.796Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Excire Foto: gerenciador de fotos para Windows e Mac cuja busca por IA e reconhecimento de texto rodam localmente, segundo o fabricante. Compra única.",
+        "new": "Análise do Excire Foto: gerenciador de fotos para Windows e Mac com busca por IA e reconhecimento de texto locais, segundo o fabricante. Compra única."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "97699475-af45-43e6-8ec3-07d44fade01d",
+    "slug": "/zh/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.826Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Excire Foto 评测：本地 AI 照片管理软件（Win/Mac）",
+        "new": "Excire Foto 评测：本地 AI 照片管理软件"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5e81e0e6-d807-4d49-b880-47bbcab82ff3",
+    "slug": "/zh/power-local-llm/handy-review",
+    "date": "2026-11-13T17:29:08.856Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Handy 评测：免费开源的离线语音转文字桌面听写应用，支持三大系统",
+        "new": "Handy 评测：免费开源离线语音转文字，支持三大系统"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d555b0c4-95d1-47b9-b56c-deb44c785323",
+    "slug": "/ja/power-local-llm/home-assistant-assist-review",
+    "date": "2026-11-13T17:29:08.885Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Home Assistant Assist レビュー：ローカル音声とLLM",
+        "new": "Home Assistant Assistレビュー：ローカル音声"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "912ade6a-4f79-4eeb-abc9-d3eb4a09676d",
+    "slug": "/zh/power-local-llm/home-assistant-assist-review",
+    "date": "2026-11-13T17:29:08.916Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Home Assistant Assist 评测：本地语音与 LLM",
+        "new": "Home Assistant Assist 评测：本地语音"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d967e263-d857-4891-ae94-17fd4624f81c",
+    "slug": "/power-local-llm/immich-review",
+    "date": "2026-11-13T17:29:08.948Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your own server. Setup and privacy.",
+        "new": "Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your server. Setup, privacy."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e0267470-8750-4dbb-91b9-80da923b9843",
+    "slug": "/ar/power-local-llm/llama-app-review",
+    "date": "2026-11-13T17:29:08.979Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة تطبيق Llama: تطبيق مجاني ومفتوح المصدر من فريق llama.cpp وHugging Face لنظامي Mac وWindows 11، مع اقتراح النماذج وواجهة API محلية وتدفق البيانات.",
+        "new": "مراجعة تطبيق Llama: تطبيق مجاني ومفتوح المصدر من فريق llama.cpp وHugging Face لنظامي Mac وWindows 11، مع اقتراح النماذج وAPI محلية وتدفق البيانات."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0c4623b9-0fad-4385-afcc-f99e16df6a24",
+    "slug": "/zh/power-local-llm/llama-app-review",
+    "date": "2026-11-13T17:29:09.009Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Llama 应用评测：适用于 Mac 和 Windows 的桌面版",
+        "new": "Llama 应用评测：Mac 和 Windows 桌面版"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d914a345-e5a7-4e42-b0f8-e122622d0aa3",
+    "slug": "/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-13T17:29:09.040Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub with Goose. Working config, maintained servers, safe permissions.",
+        "new": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub via Goose. Working config, maintained servers, safe permissions."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "df1caa45-92c1-4dc4-b1d7-a3beb51e4d09",
+    "slug": "/de/power-local-llm/local-llm-app-alternatives",
+    "date": "2026-11-13T17:29:09.070Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokale LLM-App-Alternativen 2026: 14 Apps im Vergleich",
+        "new": "LM Studio & Ollama Alternativen 2026: 14 lokale LLM-Apps"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (de): searchers type '[tool] alternative', title had no tool name; pos 4-11 with 0 clicks",
+    "queries": [
+      "lm studio alternative",
+      "lmstudio alternative",
+      "ollama alternative",
+      "ollama alternativen",
+      "anythingllm alternative"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 93,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "84533523-b81d-489d-9a8c-ae4b763ab3a1",
+    "slug": "/es/power-local-llm/local-llm-app-alternatives",
+    "date": "2026-11-13T17:29:09.099Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Alternativas a apps de LLM local 2026: 14 comparadas",
+        "new": "Alternativas a Ollama y LM Studio 2026: 14 apps de LLM"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (es): searchers type 'alternativas a [tool]', title had no tool name",
+    "queries": [
+      "alternativas a ollama",
+      "alternativas ollama",
+      "alternativa a ollama",
+      "ollama alternativas"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 43,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "531d929f-7657-4a02-a512-bf023085005d",
+    "slug": "/fr/power-local-llm/local-llm-app-alternatives",
+    "date": "2026-11-13T17:29:09.129Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Alternatives aux apps LLM locales 2026 : 14 comparées",
+        "new": "Alternatives à LM Studio et Ollama 2026 : 14 apps LLM"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (fr): searchers type '[tool] alternative', title had no tool name",
+    "queries": [
+      "ollama alternative",
+      "lm studio alternative",
+      "lmstudio alternative",
+      "anythingllm alternative"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 59,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7105b296-da06-4d72-996e-20eda0bcda0f",
+    "slug": "/zh/power-local-llm/openwhispr-review",
+    "date": "2026-11-13T17:29:09.160Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenWhispr 评测：支持本地与云端的开源语音听写和会议笔记",
+        "new": "OpenWhispr 评测：本地或云端的开源听写与会议笔记"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d6f4c26e-c961-453e-816e-951e55939b8d",
+    "slug": "/zh/power-local-llm/presenton-review",
+    "date": "2026-11-13T17:29:09.189Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Presenton 评测：开源 AI 演示文稿生成器，可导出 PPTX",
+        "new": "Presenton 评测：开源 AI 演示文稿生成器（PPTX）"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4a18e061-248d-4fe6-a91f-23bfa54a7b4a",
+    "slug": "/ja/power-local-llm/searxng-review",
+    "date": "2026-11-13T17:29:09.220Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "SearXNGのレビュー。Open WebUIなどのローカルLLMフロントエンドがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジン。AGPL-3.0、Docker構成。未検証。",
+        "new": "SearXNGとは、Open WebUIなどのローカルLLMがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジンです。AGPL-3.0、Docker構成のレビュー。未検証。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (ja): 'searxng とは' 35 impr pos 2.7, 0 clicks; meta now answers the what-is-it intent (body already has the section)",
+    "queries": [
+      "searxng とは",
+      "searxngとは",
+      "searxng 読み方",
+      "searx / searxng",
+      "searxng instances",
+      "ローカルllm 検索エンジン"
+    ],
+    "baseline": {
+      "position": 2.7,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d840b5cf-b54b-4738-a606-f3758c999c9e",
+    "slug": "/power-local-llm/subtitle-edit-review",
+    "date": "2026-11-13T17:29:09.250Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper-family transcription and local-LLM or cloud auto-translate; read, not tested.",
+        "new": "Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper speech-to-text and auto-translate via local LLM or cloud; read, not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: whisper/speech-to-text query cluster; meta now carries 'speech-to-text' wording (still read, not tested)",
+    "queries": [
+      "subtitle edit whisper",
+      "subtitle edit + whisper",
+      "subtitle edit best speech to text engine",
+      "subtitle edit auto translate",
+      "subtitle edit review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 152,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1be31556-a27b-4fc6-948f-e5c7b7c6a4c8",
+    "slug": "/ja/power-local-llm/subtitle-edit-review",
+    "date": "2026-11-13T17:29:09.281Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Subtitle Editレビュー：ローカルWhisperと自動翻訳",
+        "new": "Subtitle Editレビュー：文字起こしと自動翻訳"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (ja): title uses searchers' words 文字起こし and 自動翻訳; also fixes CJK over-length",
+    "queries": [
+      "subtitle edit 文字起こし",
+      "subtitle edit 自動翻訳",
+      "subtitle edit whisper"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 37,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "89a3b74b-8c71-4d7e-9709-1d0e2630270d",
+    "slug": "/zh/power-local-llm/subtitle-edit-review",
+    "date": "2026-11-13T17:29:09.311Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Subtitle Edit 评测：本地 Whisper 与自动翻译",
+        "new": "Subtitle Edit 评测：本地Whisper与自动翻译"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5cf937a0-9a16-44be-8645-0bec5a530af4",
+    "slug": "/ar/power-local-llm/trilium-notes-review",
+    "date": "2026-11-13T17:29:09.341Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Trilium Notes: ملاحظات مجانية وذكاء اصطناعي اختياري",
+        "new": "مراجعة Trilium Notes: ملاحظات مجانية وذكاء اصطناعي"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Trilium Notes: ملاحظات هرمية مجانية بترخيص AGPL-3.0 لأجهزة Mac وWindows وLinux وخادمك، مع ذكاء اصطناعي اختياري عبر Ollama أو LM Studio أو السحابة.",
+        "new": "مراجعة Trilium Notes: ملاحظات مجانية بترخيص AGPL-3.0 لأجهزة Mac وWindows وLinux وخادمك، مع ذكاء اصطناعي اختياري عبر Ollama أو LM Studio أو السحابة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2cedeea1-6eda-4de1-afb4-6e8d57b0c2a5",
+    "slug": "/ja/power-local-llm/trilium-notes-review",
+    "date": "2026-11-13T17:29:09.371Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Trilium Notesレビュー：無料のセルフホスト対応ノートとAI",
+        "new": "Trilium Notesレビュー：セルフホスト型ノートとAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": null
   }
 ]

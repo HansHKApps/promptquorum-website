@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Immich is a free, open-source photo and video backup server with iPhone and Android apps, and its smart search and face recognition run on a machine-learning container on your own hardware. It is not a chat or LLM app: the AI is CLIP-style image search and face grouping. This review reflects its documentation, GitHub releases, store listings and privacy policy as checked on 26 October 2026.',
     metaDescription:
-      'Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your own server. Setup and privacy.',
+      'Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your server. Setup, privacy.',
     twitterDescription:
       'Immich review: a self-hosted, AGPL-licensed photo library whose smart search and face recognition run on your server. Docker setup, requirements, outbound requests and what we could not verify.',
     audience:

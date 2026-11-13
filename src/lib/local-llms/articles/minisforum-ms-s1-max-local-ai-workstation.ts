@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/minisforum-ms-s1-max-local-ai-workstation-hero-ja.webp',
     title: 'ローカルAI向けMinisforum MS-S1 MAX: 仕様・価格・総評',
-    seoTitle: 'Minisforum MS-S1 MAXのローカルAI向け仕様と価格',
+    seoTitle: 'Minisforum MS-S1 MAX ローカルAI仕様・価格',
     intro:
       'Minisforum MS-S1 MAXは、AMD Ryzen AI Max+ 395、128GBのはんだ付けLPDDR5x-8000、デュアル10GbE、x4速度で動作するPCIe x16スロットを備えた、重さ2.8kgのデスクトップです。Ryzen AI Max+ PRO 495を搭載した192GBの派生モデルMS-S1 MAX-P495も、同じ米国ストアに掲載されています。このページはベンダーの仕様と第三者のレポートに基づいており、PromptQuorumはこのマシンをテストしていません。',
     metaDescription:

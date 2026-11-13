@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Subtitle Edit is a free, open-source subtitle editor for Windows, macOS and Linux from [Nikse](https://www.nikse.dk/subtitleedit) and a group of contributors. Besides editing and converting subtitle files, it can transcribe a video with Whisper-family engines and translate subtitles with local or cloud models, which is the part this review covers. It is based on the project\'s GitHub page, release notes and documentation, checked on 24 October 2026; PromptQuorum has not tested the app hands-on.',
     metaDescription:
-      'Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper-family transcription and local-LLM or cloud auto-translate; read, not tested.',
+      'Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper speech-to-text and auto-translate via local LLM or cloud; read, not tested.',
     twitterDescription:
       'Subtitle Edit review: transcribe with local Whisper engines and translate with Ollama, LM Studio or cloud APIs. Free and MIT-licensed; what the docs confirm and what we could not check.',
     audience:
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/subtitle-edit-review-hero-ja.webp',
     title: 'Subtitle Editレビュー：ローカルWhisper文字起こしと自動翻訳',
-    seoTitle: 'Subtitle Editレビュー：ローカルWhisperと自動翻訳',
+    seoTitle: 'Subtitle Editレビュー：文字起こしと自動翻訳',
     intro:
       'Subtitle Editは、[Nikse](https://www.nikse.dk/subtitleedit)と複数の貢献者が開発する、Windows・macOS・Linux対応の無料オープンソース字幕エディタです。字幕ファイルの編集や変換に加え、Whisper系エンジンで動画を文字起こしし、ローカルまたはクラウドのモデルで字幕を翻訳できます。本レビューはこの部分を扱い、プロジェクトのGitHubページ、リリースノート、ドキュメントを2026年10月24日に確認した内容に基づきます。PromptQuorumはアプリを実際には試していません。',
     metaDescription:
@@ -2004,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/subtitle-edit-review-hero-zh.webp',
     title: 'Subtitle Edit 评测：本地 Whisper 转写与自动翻译',
-    seoTitle: 'Subtitle Edit 评测：本地 Whisper 与自动翻译',
+    seoTitle: 'Subtitle Edit 评测：本地Whisper与自动翻译',
     intro:
       'Subtitle Edit 是由 [Nikse](https://www.nikse.dk/subtitleedit) 和一批贡献者开发的免费开源字幕编辑器，支持 Windows、macOS 和 Linux。除了编辑和转换字幕文件，它还能用 Whisper 系列引擎为视频转写，并用本地或云端模型翻译字幕，本评测关注的正是这部分。内容基于 2026年10月24日核对的项目 GitHub 页面、发布说明和文档；PromptQuorum 未上手实测该应用。',
     metaDescription:
