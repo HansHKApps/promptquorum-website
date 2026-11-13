@@ -76,6 +76,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'Start Here: Three Apps to Install',
+        anchor: '#start-here',
+      },
+      {
+        label: 'Six Quick Answers Before You Install',
+        anchor: '#quick-answers',
+      },
+      {
         label: 'Quick Facts',
         anchor: '#quick-facts',
       },
@@ -222,6 +230,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Several things are not possible or only partly possible:** 30B+ models, frontier-quality reasoning, always-on background agents, replacing Siri with your own model, fine-tuning on the phone, and a guarantee of privacy from an App Store label alone.',
           '**"Zero telemetry" needs checking, not trusting.** Several apps that say they keep chat on the device still send crash reports, usage events or optional web requests; the privacy chapter shows how to verify with Airplane Mode and the App Privacy Report.',
           '**Start small:** install one app, download one 1-2 GB model on Wi-Fi, switch to Airplane Mode and ask a question. If that works, you have verified the whole offline path in under 15 minutes.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'Start Here: Three Apps to Install',
+        content: [
+          '**Short on time? Install one of these three, download a model that fits your iPhone\'s RAM, and test it once in Airplane Mode.** The picks come from this guide\'s own chapters and reviews, not from benchmarks; the rest of the guide explains each choice.',
+          '**Other good starting points:** on a 12 GB iPhone, try [Noema](/power-local-llm/noema-review) or [Google AI Edge Gallery](/power-local-llm/google-ai-edge-gallery-review) with a Gemma 4 model; on a 4 GB iPhone, use [Reins](/power-local-llm/reins-review) or [Enchanted](/power-local-llm/enchanted-review) with a home server, because that tier is below the practical floor for on-device chat.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Beginners can start with PocketPal AI, advanced users with Locally AI and Apple\'s own model, and developers with the Foundation Models framework or MLX Swift; in every case the model size follows the iPhone\'s RAM.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'One app, one model sized to your RAM, one Airplane Mode test.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['Your level', 'Install or use', 'First model', 'Why this pick'],
+        rows: [
+          {
+            'Your level': 'Beginner',
+            'Install or use': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'First model': '1-2B on 6 GB; 3-4B on 8 GB',
+            'Why this pick': 'Free and open source, and the first-run walkthrough in this guide uses it.',
+          },
+          {
+            'Your level': 'Advanced',
+            'Install or use': '[Locally AI](/power-local-llm/locally-ai-review)',
+            'First model': '3-4B on 8 GB, or Apple\'s own model with no download',
+            'Why this pick': 'Suits Siri and Shortcuts use on an 8 GB iPhone, and can use Apple\'s on-device model on Apple Intelligence iPhones.',
+          },
+          {
+            'Your level': 'Developer',
+            'Install or use': 'Foundation Models framework or MLX Swift',
+            'First model': 'Apple\'s on-device model, or your own model',
+            'Why this pick': 'Foundation Models is Apple\'s native Swift API and needs Apple Intelligence hardware; MLX Swift runs your own model. The Developer Paths chapter covers the rest.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'Six Quick Answers Before You Install',
+        content:
+          '**These are the six questions readers ask first; each answer points to the chapter that explains it.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RAM picks the model size, 3-5 GB of free storage holds a first model, and an Airplane Mode test shows whether the app works offline.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'RAM picks the model, storage holds it, and Airplane Mode proves it.',
+          },
+        ],
+        items: [
+          '**Which model should I download?** Match your RAM: 1-2B on 6 GB, 3-4B on 8 GB, more headroom on 12 GB, where 7-8B models stay slow. A 4 GB iPhone is below the practical floor. See Phone Tier, App and Model Size at a Glance.',
+          '**How much storage do I need?** Free 3-5 GB first, because a model file is 1-4 GB; install one app at a time, since duplicate model files use storage fast. See Your First Local Model in 15 Minutes.',
+          '**How fast will it run?** PromptQuorum has not measured speed on any iPhone for this guide, and the indicative speeds in our iPhone roundup are not new measurements. A smaller model answers faster; note the speed on your first test questions, and check the app\'s settings for a tokens-per-second figure if it shows one.',
+          '**Which app is genuinely private?** None can be assumed private from its App Store label alone, because "runs on your device" and "sends nothing" are different claims. Read the privacy label and policy, run the Airplane Mode test, and later check Settings > Privacy & Security > App Privacy Report; open-source apps such as PocketPal AI can be inspected. See Privacy and Telemetry Reality.',
+          '**What can I do without internet?** According to this guide\'s capability map, a recent iPhone can handle chat, camera questions, dictation and transcription, document chat and translation offline once the model is downloaded; 30B+ models, frontier-quality reasoning and always-on background agents are not possible. See Capability Map.',
+          '**What do I read next?** Follow Your First Local Model in 15 Minutes, then use the Decision Path if you have a specific job in mind.',
         ],
       },
       quickFacts: {
@@ -1382,6 +1454,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'Hier starten: drei Apps zum Installieren',
+        anchor: '#start-here',
+      },
+      {
+        label: 'Sechs Kurzantworten vor der Installation',
+        anchor: '#quick-answers',
+      },
+      {
         label: 'Kurzübersicht',
         anchor: '#quick-facts',
       },
@@ -1528,6 +1608,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Einiges ist nicht oder nur teilweise möglich:** Modelle ab 30B, Schlussfolgern in Frontier-Qualität, dauerhaft aktive Hintergrund-Agenten, Siri durch ein eigenes Modell zu ersetzen, Fine-Tuning auf dem Telefon und eine Datenschutzgarantie allein durch ein App-Store-Label.',
           '**„Zero Telemetry“ muss man prüfen, nicht glauben.** Mehrere Apps, die angeben, den Chat auf dem Gerät zu halten, senden dennoch Absturzberichte, Nutzungsereignisse oder optionale Webanfragen; das Datenschutzkapitel zeigt, wie Sie das mit dem Flugmodus und dem App-Datenschutzbericht überprüfen.',
           '**Fangen Sie klein an:** Installieren Sie eine App, laden Sie ein 1–2 GB großes Modell per WLAN herunter, schalten Sie den Flugmodus ein und stellen Sie eine Frage. Wenn das klappt, haben Sie den gesamten Offline-Weg in weniger als 15 Minuten überprüft.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'Hier starten: drei Apps zum Installieren',
+        content: [
+          '**Wenig Zeit? Installieren Sie eine dieser drei Apps, laden Sie ein Modell herunter, das zum RAM Ihres iPhones passt, und testen Sie es einmal im Flugmodus.** Die Empfehlungen stammen aus den Kapiteln und Reviews dieses Leitfadens, nicht aus Benchmarks; der Rest des Leitfadens erklärt jede Wahl.',
+          '**Weitere gute Einstiegspunkte:** Auf einem iPhone mit 12 GB probieren Sie [Noema](/de/power-local-llm/noema-review) oder [Google AI Edge Gallery](/de/power-local-llm/google-ai-edge-gallery-review) mit einem Gemma-4-Modell; auf einem iPhone mit 4 GB nutzen Sie [Reins](/de/power-local-llm/reins-review) oder [Enchanted](/de/power-local-llm/enchanted-review) mit einem Heimserver, denn diese Stufe liegt unter der praktischen Untergrenze für Chat auf dem Gerät.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Einsteiger können mit PocketPal AI beginnen, Fortgeschrittene mit Locally AI und Apples eigenem Modell, Entwickler mit dem Foundation-Models-Framework oder MLX Swift; in jedem Fall richtet sich die Modellgröße nach dem RAM des iPhones.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Eine App, ein zum RAM passendes Modell, ein Test im Flugmodus.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['Ihr Niveau', 'Installieren oder nutzen', 'Erstes Modell', 'Warum diese Wahl'],
+        rows: [
+          {
+            'Ihr Niveau': 'Einsteiger',
+            'Installieren oder nutzen': '[PocketPal AI](/de/power-local-llm/pocketpal-ai-review)',
+            'Erstes Modell': '1–2B bei 6 GB; 3–4B bei 8 GB',
+            'Warum diese Wahl': 'Kostenlos und Open Source; die Anleitung zum ersten Start in diesem Leitfaden nutzt diese App.',
+          },
+          {
+            'Ihr Niveau': 'Fortgeschritten',
+            'Installieren oder nutzen': '[Locally AI](/de/power-local-llm/locally-ai-review)',
+            'Erstes Modell': '3–4B bei 8 GB oder Apples eigenes Modell ohne Download',
+            'Warum diese Wahl': 'Passt zu Siri und Kurzbefehlen auf einem iPhone mit 8 GB und kann auf iPhones mit Apple Intelligence Apples On-Device-Modell nutzen.',
+          },
+          {
+            'Ihr Niveau': 'Entwickler',
+            'Installieren oder nutzen': 'Foundation-Models-Framework oder MLX Swift',
+            'Erstes Modell': 'Apples On-Device-Modell oder ein eigenes Modell',
+            'Warum diese Wahl': 'Foundation Models ist Apples native Swift-API und setzt Apple-Intelligence-Hardware voraus; MLX Swift führt ein eigenes Modell aus. Das Kapitel „Entwicklerwege“ behandelt den Rest.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'Sechs Kurzantworten vor der Installation',
+        content:
+          '**Das sind die sechs Fragen, die Leser zuerst stellen; jede Antwort verweist auf das Kapitel, das sie erklärt.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Der RAM bestimmt die Modellgröße, 3–5 GB freier Speicher fassen ein erstes Modell, und ein Flugmodus-Test zeigt, ob die App offline funktioniert.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Der RAM wählt das Modell, der Speicher hält es, der Flugmodus beweist es.',
+          },
+        ],
+        items: [
+          '**Welches Modell soll ich herunterladen?** Richten Sie sich nach dem RAM: 1–2B bei 6 GB, 3–4B bei 8 GB, mehr Spielraum bei 12 GB, wo Modelle mit 7–8B langsam bleiben. Ein iPhone mit 4 GB liegt unter der praktischen Untergrenze. Siehe „Telefonstufe, App und Modellgröße auf einen Blick“.',
+          '**Wie viel Speicherplatz brauche ich?** Schaffen Sie zuerst 3–5 GB frei, denn eine Modelldatei ist 1–4 GB groß; installieren Sie eine App nach der anderen, da doppelte Modelldateien schnell Speicher belegen. Siehe „Ihr erstes lokales Modell in 15 Minuten“.',
+          '**Wie schnell läuft es?** PromptQuorum hat für diesen Leitfaden auf keinem iPhone die Geschwindigkeit gemessen, und die Richtwerte in unserer iPhone-Übersicht sind keine neuen Messungen. Ein kleineres Modell antwortet schneller; notieren Sie die Geschwindigkeit bei Ihren ersten Testfragen und prüfen Sie in den App-Einstellungen, ob ein Wert in Tokens pro Sekunde angezeigt wird.',
+          '**Welche App ist wirklich privat?** Keine kann allein aufgrund ihres App-Store-Labels als privat angenommen werden, denn „läuft auf Ihrem Gerät“ und „sendet nichts“ sind unterschiedliche Aussagen. Lesen Sie das Datenschutzlabel und die Richtlinie, machen Sie den Flugmodus-Test und prüfen Sie später unter Einstellungen > Datenschutz & Sicherheit > App-Datenschutzbericht; Open-Source-Apps wie PocketPal AI lassen sich einsehen. Siehe „Datenschutz und Telemetrie in der Praxis“.',
+          '**Was geht ohne Internet?** Laut der Fähigkeitenübersicht dieses Leitfadens kann ein aktuelles iPhone Chat, Fragen zur Kamera, Diktat und Transkription, Dokumenten-Chat und Übersetzung offline bewältigen, sobald das Modell heruntergeladen ist; Modelle ab 30B, Schlussfolgern in Frontier-Qualität und dauerhaft aktive Hintergrund-Agenten sind nicht möglich. Siehe „Fähigkeitenübersicht“.',
+          '**Was lese ich als Nächstes?** Folgen Sie „Ihr erstes lokales Modell in 15 Minuten“ und nutzen Sie dann die „Entscheidungshilfe“, wenn Sie eine konkrete Aufgabe im Sinn haben.',
         ],
       },
       quickFacts: {
@@ -2688,6 +2832,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'Par où commencer : trois applications à installer',
+        anchor: '#start-here',
+      },
+      {
+        label: 'Six réponses rapides avant d\'installer',
+        anchor: '#quick-answers',
+      },
+      {
         label: 'Faits rapides',
         anchor: '#quick-facts',
       },
@@ -2834,6 +2986,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Plusieurs choses sont impossibles ou seulement partiellement possibles :** les modèles de 30B et plus, le raisonnement de qualité « frontière », les agents permanents en arrière-plan, le remplacement de Siri par votre propre modèle, l\'affinage (fine-tuning) sur le téléphone, et une garantie de confidentialité fondée sur la seule étiquette de l\'App Store.',
           '**« Zéro télémétrie » se vérifie, il ne se croit pas sur parole.** Plusieurs applications qui affirment garder la conversation sur l\'appareil envoient tout de même des rapports de plantage, des événements d\'usage ou des requêtes web optionnelles ; le chapitre sur la confidentialité montre comment vérifier avec le mode Avion et le Rapport de confidentialité des apps.',
           '**Commencez petit :** installez une application, téléchargez un modèle de 1 à 2 GB en Wi-Fi, passez en mode Avion et posez une question. Si cela fonctionne, vous avez vérifié tout le parcours hors ligne en moins de 15 minutes.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'Par où commencer : trois applications à installer',
+        content: [
+          '**Peu de temps ? Installez l\'une de ces trois applications, téléchargez un modèle adapté à la RAM de votre iPhone et testez-le une fois en mode Avion.** Ces choix viennent des chapitres et des analyses de ce guide, pas de benchmarks ; le reste du guide explique chaque choix.',
+          '**Autres bons points de départ :** sur un iPhone de 12 GB, essayez [Noema](/fr/power-local-llm/noema-review) ou [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review) avec un modèle Gemma 4 ; sur un iPhone de 4 GB, utilisez [Reins](/fr/power-local-llm/reins-review) ou [Enchanted](/fr/power-local-llm/enchanted-review) avec un serveur domestique, car ce niveau est en dessous du seuil pratique pour une conversation sur l\'appareil.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Les débutants peuvent commencer avec PocketPal AI, les utilisateurs avancés avec Locally AI et le modèle d\'Apple, les développeurs avec le framework Foundation Models ou MLX Swift ; dans tous les cas, la taille du modèle suit la RAM de l\'iPhone.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Une application, un modèle adapté à votre RAM, un test en mode Avion.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['Votre niveau', 'À installer ou utiliser', 'Premier modèle', 'Pourquoi ce choix'],
+        rows: [
+          {
+            'Votre niveau': 'Débutant',
+            'À installer ou utiliser': '[PocketPal AI](/fr/power-local-llm/pocketpal-ai-review)',
+            'Premier modèle': '1-2B avec 6 GB ; 3-4B avec 8 GB',
+            'Pourquoi ce choix': 'Gratuite et open source ; le pas-à-pas du premier lancement de ce guide l\'utilise.',
+          },
+          {
+            'Votre niveau': 'Avancé',
+            'À installer ou utiliser': '[Locally AI](/fr/power-local-llm/locally-ai-review)',
+            'Premier modèle': '3-4B avec 8 GB, ou le modèle d\'Apple sans téléchargement',
+            'Pourquoi ce choix': 'Convient à Siri et aux Raccourcis sur un iPhone de 8 GB, et peut utiliser le modèle embarqué d\'Apple sur les iPhone compatibles Apple Intelligence.',
+          },
+          {
+            'Votre niveau': 'Développeur',
+            'À installer ou utiliser': 'Framework Foundation Models ou MLX Swift',
+            'Premier modèle': 'Le modèle embarqué d\'Apple, ou votre propre modèle',
+            'Pourquoi ce choix': 'Foundation Models est l\'API Swift native d\'Apple et exige un matériel compatible Apple Intelligence ; MLX Swift exécute votre propre modèle. Le chapitre « Pistes pour les développeurs » couvre le reste.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'Six réponses rapides avant d\'installer',
+        content:
+          '**Voici les six questions que les lecteurs posent en premier ; chaque réponse renvoie au chapitre qui l\'explique.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La RAM détermine la taille du modèle, 3 à 5 GB de stockage libre accueillent un premier modèle, et un test en mode Avion montre si l\'application fonctionne hors ligne.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'La RAM choisit le modèle, le stockage le garde, le mode Avion le prouve.',
+          },
+        ],
+        items: [
+          '**Quel modèle télécharger ?** Suivez votre RAM : 1-2B avec 6 GB, 3-4B avec 8 GB, plus de marge avec 12 GB, où les modèles de 7-8B restent lents. Un iPhone de 4 GB est en dessous du seuil pratique. Voir « Niveau de téléphone, application et taille de modèle en un coup d\'œil ».',
+          '**De quel stockage ai-je besoin ?** Libérez d\'abord 3 à 5 GB, car un fichier de modèle pèse 1 à 4 GB ; installez une application à la fois, car les fichiers de modèle en double consomment vite le stockage. Voir « Votre premier modèle local en 15 minutes ».',
+          '**Quelle vitesse attendre ?** PromptQuorum n\'a mesuré la vitesse sur aucun iPhone pour ce guide, et les vitesses indicatives de notre comparatif iPhone ne sont pas de nouvelles mesures. Un modèle plus petit répond plus vite ; notez la vitesse sur vos premières questions de test et consultez les réglages de l\'application pour un chiffre en tokens par seconde si elle en affiche un.',
+          '**Quelle application est vraiment privée ?** Aucune ne peut être présumée privée d\'après la seule étiquette de l\'App Store, car « fonctionne sur votre appareil » et « n\'envoie rien » sont deux affirmations différentes. Lisez l\'étiquette de confidentialité et la politique, faites le test en mode Avion, puis consultez Réglages > Confidentialité et sécurité > Rapport de confidentialité des apps ; les applications open source comme PocketPal AI peuvent être inspectées. Voir « Confidentialité et télémétrie : la réalité ».',
+          '**Que puis-je faire sans internet ?** Selon la carte des capacités de ce guide, un iPhone récent peut gérer la conversation, les questions sur l\'appareil photo, la dictée et la transcription, le dialogue avec des documents et la traduction hors ligne une fois le modèle téléchargé ; les modèles de 30B et plus, le raisonnement de qualité « frontière » et les agents permanents en arrière-plan ne sont pas possibles. Voir « Carte des capacités ».',
+          '**Que lire ensuite ?** Suivez « Votre premier modèle local en 15 minutes », puis utilisez l\'« Arbre de décision » si vous avez une tâche précise en tête.',
         ],
       },
       quickFacts: {
@@ -3994,6 +4210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'まずここから：インストールする3つのアプリ',
+        anchor: '#start-here',
+      },
+      {
+        label: 'インストール前の6つの簡単な答え',
+        anchor: '#quick-answers',
+      },
+      {
         label: '重要な事実',
         anchor: '#quick-facts',
       },
@@ -4140,6 +4364,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**不可能な、または一部しか可能でないことがいくつかあります。** 30B以上のモデル、最先端クラスの推論、常時稼働のバックグラウンドエージェント、自作モデルによるSiriの置き換え、スマホ上でのファインチューニング、そしてApp Storeのラベルだけでプライバシーを保証することです。',
           '**「テレメトリーなし」は、信じるのではなく確認が必要です。** チャットを端末内に留めると謳うアプリでも、クラッシュレポート、利用イベント、任意のWebリクエストを送るものがいくつかあります。プライバシーの章では、機内モードとApp Privacy Reportで確認する方法を示します。',
           '**まずは小さく始めましょう。** アプリを1つ入れ、Wi-Fiで1〜2 GBのモデルを1つダウンロードし、機内モードに切り替えて質問してみてください。それが動けば、オフラインの経路全体を15分足らずで確認できたことになります。',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'まずここから：インストールする3つのアプリ',
+        content: [
+          '**時間がない方は、この3つのうち1つを入れ、お使いのiPhoneのRAMに合うモデルをダウンロードして、機内モードで一度試してください。** この選定は、ベンチマークではなく、このガイドの各章とレビューに基づいています。ほかの部分で、それぞれの選択理由を説明します。',
+          '**ほかのおすすめの出発点：** RAM 12 GBのiPhoneでは、[Noema](/ja/power-local-llm/noema-review)か[Google AI Edge Gallery](/ja/power-local-llm/google-ai-edge-gallery-review)でGemma 4モデルを試してください。RAM 4 GBのiPhoneでは、そのティアは端末上のチャットの実用下限を下回るため、[Reins](/ja/power-local-llm/reins-review)か[Enchanted](/ja/power-local-llm/enchanted-review)を自宅サーバーと組み合わせて使います。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '初心者はPocketPal AI、上級者はLocally AIとAppleの純正モデル、開発者はFoundation ModelsフレームワークかMLX Swiftから始められます。いずれの場合も、モデルサイズはiPhoneのRAMで決まります。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'アプリ1つ、RAMに合うモデル1つ、機内モードでのテスト1回。',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['あなたのレベル', '入れる・使うもの', '最初のモデル', 'この選択の理由'],
+        rows: [
+          {
+            'あなたのレベル': '初心者',
+            '入れる・使うもの': '[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)',
+            '最初のモデル': '6 GBなら1〜2B、8 GBなら3〜4B',
+            'この選択の理由': '無料のオープンソースで、このガイドの初回起動の手順もこのアプリを使っています。',
+          },
+          {
+            'あなたのレベル': '上級者',
+            '入れる・使うもの': '[Locally AI](/ja/power-local-llm/locally-ai-review)',
+            '最初のモデル': '8 GBなら3〜4B、またはダウンロード不要のAppleの純正モデル',
+            'この選択の理由': 'RAM 8 GBのiPhoneでのSiriやショートカットの利用に向き、Apple Intelligence対応のiPhoneではAppleのオンデバイスモデルも使えます。',
+          },
+          {
+            'あなたのレベル': '開発者',
+            '入れる・使うもの': 'Foundation ModelsフレームワークまたはMLX Swift',
+            '最初のモデル': 'Appleのオンデバイスモデル、または自分のモデル',
+            'この選択の理由': 'Foundation ModelsはAppleネイティブのSwift APIで、Apple Intelligence対応ハードウェアが必要です。MLX Swiftは自分のモデルを動かします。残りは「開発者向けの道筋」の章で扱います。',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'インストール前の6つの簡単な答え',
+        content:
+          '**読者が最初に尋ねる6つの質問です。各答えは、それを説明する章を示しています。**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RAMがモデルサイズを決め、空き容量3〜5 GBで最初のモデルを保存でき、機内モードのテストでアプリがオフラインで動くかどうかが分かります。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'RAMがモデルを決め、ストレージが保存し、機内モードが証明します。',
+          },
+        ],
+        items: [
+          '**どのモデルをダウンロードすべきですか？** RAMに合わせます。6 GBなら1〜2B、8 GBなら3〜4B、12 GBならさらに余裕があり、7〜8Bモデルは遅いままです。RAM 4 GBのiPhoneは実用の下限を下回ります。「機種ティア、アプリ、モデルサイズの早見表」を参照してください。',
+          '**ストレージはどれくらい必要ですか？** モデルファイルは1〜4 GBなので、まず3〜5 GBを空けてください。モデルファイルが重複するとストレージをすぐに使うため、アプリは1つずつ入れます。「15分で最初のローカルモデルを動かす」を参照してください。',
+          '**どれくらいの速さで動きますか？** PromptQuorumはこのガイドのために、どのiPhoneでも速度を測定していません。また、当サイトのiPhoneまとめ記事にある目安の速度は、新たな測定値ではありません。モデルが小さいほど応答は速くなります。最初のテストの質問で速度を記録し、アプリの設定に1秒あたりのトークン数が表示されるなら確認してください。',
+          '**本当にプライベートなアプリはどれですか？** App Storeのラベルだけで、プライベートだと見なせるアプリはありません。「端末上で動く」と「何も送信しない」は別の主張だからです。プライバシーラベルとポリシーを読み、機内モードのテストを行い、後で設定 > プライバシーとセキュリティ > App Privacy Reportを確認してください。PocketPal AIのようなオープンソースのアプリは、中身を検証できます。「プライバシーとテレメトリーの実態」を参照してください。',
+          '**インターネットなしで何ができますか？** このガイドの機能マップによると、最近のiPhoneは、モデルをダウンロードしたあとなら、チャット、カメラへの質問、音声入力と文字起こし、ドキュメントとのチャット、翻訳をオフラインでこなせます。30B以上のモデル、最先端クラスの推論、常時稼働のバックグラウンドエージェントは不可能です。「機能マップ」を参照してください。',
+          '**次に何を読めばよいですか？** 「15分で最初のローカルモデルを動かす」を読み、特定の目的があれば「選び方」を使ってください。',
         ],
       },
       quickFacts: {
@@ -5296,6 +5584,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '从这里开始：先装这三款应用', anchor: '#start-here' },
+      { label: '安装前的六个快速解答', anchor: '#quick-answers' },
       { label: '快速事实', anchor: '#quick-facts' },
       { label: '能力图谱：iPhone本地AI能做什么', anchor: '#capability-map' },
       { label: '芯片与内存的现实：哪款iPhone能运行哪种模型', anchor: '#iphone-hardware' },
@@ -5346,6 +5636,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**有几件事做不到，或只能部分做到：** 30B以上的模型、前沿水平的推理、常驻的后台智能体、用自己的模型取代Siri、在手机上微调，以及仅凭App Store标签就能保证隐私。',
           '**“零遥测”需要核实，而不是轻信。** 一些声称把聊天保留在设备上的应用，仍会发送崩溃报告、使用事件或可选的网络请求；隐私一章介绍了如何用飞行模式和App隐私报告来验证。',
           '**从小处开始：** 安装一个应用，在Wi-Fi下下载一个1-2 GB的模型，切换到飞行模式再提一个问题。如果可行，你就在15分钟内验证了整条离线链路。',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: '从这里开始：先装这三款应用',
+        content: [
+          '**时间紧？从这三款中装一款，下载一个与你iPhone内存相符的模型，并在飞行模式下测试一次。** 这些推荐来自本指南的各章和评测，而非基准测试；指南的其余部分会解释每个选择。',
+          '**其他不错的起点：** 12 GB的iPhone可以试试[Noema](/zh/power-local-llm/noema-review)或[Google AI Edge Gallery](/zh/power-local-llm/google-ai-edge-gallery-review)搭配Gemma 4模型；4 GB的iPhone请使用[Reins](/zh/power-local-llm/reins-review)或[Enchanted](/zh/power-local-llm/enchanted-review)连接家中服务器，因为这一档低于设备端聊天的实际下限。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '新手可以从PocketPal AI开始，进阶用户用Locally AI和Apple自带的模型，开发者用Foundation Models框架或MLX Swift；无论哪种情况，模型大小都取决于iPhone的内存。',
+          },
+          {
+            type: 'plain-terms',
+            text: '一款应用，一个与内存相符的模型，一次飞行模式测试。',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['你的水平', '安装或使用', '第一个模型', '为何这样选'],
+        rows: [
+          {
+            '你的水平': '新手',
+            '安装或使用': '[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)',
+            '第一个模型': '6 GB选1-2B；8 GB选3-4B',
+            '为何这样选': '免费且开源，本指南的首次运行演示就用它。',
+          },
+          {
+            '你的水平': '进阶',
+            '安装或使用': '[Locally AI](/zh/power-local-llm/locally-ai-review)',
+            '第一个模型': '8 GB选3-4B，或Apple自带模型（无需下载）',
+            '为何这样选': '适合在8 GB的iPhone上配合Siri和Shortcuts使用，在支持Apple Intelligence的iPhone上还能使用Apple的设备端模型。',
+          },
+          {
+            '你的水平': '开发者',
+            '安装或使用': 'Foundation Models框架或MLX Swift',
+            '第一个模型': 'Apple的设备端模型，或你自己的模型',
+            '为何这样选': 'Foundation Models是Apple原生的Swift API，需要支持Apple Intelligence的硬件；MLX Swift运行你自己的模型。其余内容见“开发者路径”一章。',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: '安装前的六个快速解答',
+        content:
+          '**这是读者最先问的六个问题；每个解答都指向解释它的章节。**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '内存决定模型大小，3-5 GB的可用存储能放下第一个模型，飞行模式测试能看出应用是否可离线使用。',
+          },
+          {
+            type: 'plain-terms',
+            text: '内存定模型，存储放模型，飞行模式来验证。',
+          },
+        ],
+        items: [
+          '**该下载哪个模型？** 按内存来选：6 GB选1-2B，8 GB选3-4B，12 GB余量更大，但7-8B模型依然很慢。4 GB的iPhone低于实际下限。参见“手机档位、应用与模型大小一览”。',
+          '**需要多少存储空间？** 先腾出3-5 GB，因为一个模型文件有1-4 GB；一次只装一款应用，因为重复的模型文件会很快占满存储。参见“15分钟跑起你的第一个本地模型”。',
+          '**运行速度如何？** PromptQuorum没有为本指南在任何iPhone上测过速度，我们iPhone汇总文章中的参考速度也不是新的测量结果。模型越小，响应越快；请在最初几个测试问题上记下速度，并查看应用设置里是否显示每秒token数。',
+          '**哪款应用真正私密？** 不能仅凭App Store标签就认定某款应用私密，因为“在你的设备上运行”和“什么都不发送”是两种不同的说法。请阅读隐私标签和政策，做一次飞行模式测试，之后再查看设置 > 隐私与安全性 > App隐私报告；像PocketPal AI这样的开源应用可供检查。参见“隐私与遥测的真实情况”。',
+          '**没有网络能做什么？** 根据本指南的能力图谱，较新的iPhone在模型下载完成后，可以离线处理聊天、相机提问、听写与转录、文档聊天和翻译；30B以上的模型、前沿水平的推理和常驻的后台智能体则做不到。参见“能力图谱”。',
+          '**接下来读什么？** 先看“15分钟跑起你的第一个本地模型”，如果有具体任务，再用“决策路径”。',
         ],
       },
       quickFacts: {
@@ -6170,6 +6524,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'Empieza aquí: tres apps para instalar',
+        anchor: '#start-here',
+      },
+      {
+        label: 'Seis respuestas rápidas antes de instalar',
+        anchor: '#quick-answers',
+      },
+      {
         label: 'Datos rápidos',
         anchor: '#quick-facts',
       },
@@ -6316,6 +6678,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Varias cosas no son posibles o solo lo son en parte:** modelos de 30B o más, razonamiento de calidad frontier, agentes siempre activos en segundo plano, sustituir a Siri por un modelo propio, el ajuste fino (fine-tuning) en el teléfono y una garantía de privacidad basada solo en una etiqueta de la App Store.',
           '**"Cero telemetría" hay que comprobarlo, no darlo por bueno.** Varias apps que dicen mantener el chat en el dispositivo siguen enviando informes de fallos, eventos de uso o solicitudes web opcionales; el capítulo de privacidad muestra cómo verificarlo con el modo avión y el Informe de privacidad de apps.',
           '**Empieza poco a poco:** instala una app, descarga un modelo de 1-2 GB con Wi-Fi, activa el modo avión y haz una pregunta. Si funciona, has verificado toda la ruta sin conexión en menos de 15 minutos.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'Empieza aquí: tres apps para instalar',
+        content: [
+          '**¿Tienes poco tiempo? Instala una de estas tres, descarga un modelo que quepa en la RAM de tu iPhone y pruébalo una vez en modo avión.** Las recomendaciones salen de los capítulos y las reseñas de esta guía, no de benchmarks; el resto de la guía explica cada elección.',
+          '**Otros buenos puntos de partida:** en un iPhone de 12 GB, prueba [Noema](/es/power-local-llm/noema-review) o [Google AI Edge Gallery](/es/power-local-llm/google-ai-edge-gallery-review) con un modelo Gemma 4; en un iPhone de 4 GB, usa [Reins](/es/power-local-llm/reins-review) o [Enchanted](/es/power-local-llm/enchanted-review) con un servidor doméstico, porque ese nivel está por debajo del mínimo práctico para chatear en el dispositivo.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Los principiantes pueden empezar con PocketPal AI, los usuarios avanzados con Locally AI y el modelo propio de Apple, y los desarrolladores con el framework Foundation Models o MLX Swift; en todos los casos, el tamaño del modelo depende de la RAM del iPhone.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Una app, un modelo acorde con tu RAM, una prueba en modo avión.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['Tu nivel', 'Instalar o usar', 'Primer modelo', 'Por qué esta opción'],
+        rows: [
+          {
+            'Tu nivel': 'Principiante',
+            'Instalar o usar': '[PocketPal AI](/es/power-local-llm/pocketpal-ai-review)',
+            'Primer modelo': '1-2B con 6 GB; 3-4B con 8 GB',
+            'Por qué esta opción': 'Gratuita y de código abierto, y el recorrido del primer arranque de esta guía la usa.',
+          },
+          {
+            'Tu nivel': 'Avanzado',
+            'Instalar o usar': '[Locally AI](/es/power-local-llm/locally-ai-review)',
+            'Primer modelo': '3-4B con 8 GB, o el modelo propio de Apple sin descarga',
+            'Por qué esta opción': 'Encaja con Siri y Atajos en un iPhone de 8 GB y puede usar el modelo integrado de Apple en los iPhone con Apple Intelligence.',
+          },
+          {
+            'Tu nivel': 'Desarrollador',
+            'Instalar o usar': 'Framework Foundation Models o MLX Swift',
+            'Primer modelo': 'El modelo integrado de Apple, o tu propio modelo',
+            'Por qué esta opción': 'Foundation Models es la API nativa de Swift de Apple y necesita hardware compatible con Apple Intelligence; MLX Swift ejecuta tu propio modelo. El capítulo "Rutas para desarrolladores" cubre el resto.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'Seis respuestas rápidas antes de instalar',
+        content:
+          '**Estas son las seis preguntas que los lectores hacen primero; cada respuesta remite al capítulo que la explica.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La RAM decide el tamaño del modelo, 3-5 GB de almacenamiento libre alojan un primer modelo y una prueba en modo avión muestra si la app funciona sin conexión.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'La RAM elige el modelo, el almacenamiento lo guarda y el modo avión lo demuestra.',
+          },
+        ],
+        items: [
+          '**¿Qué modelo debo descargar?** Ajústate a tu RAM: 1-2B con 6 GB, 3-4B con 8 GB, más margen con 12 GB, donde los modelos de 7-8B siguen siendo lentos. Un iPhone de 4 GB está por debajo del mínimo práctico. Consulta "Nivel de teléfono, app y tamaño de modelo de un vistazo".',
+          '**¿Cuánto almacenamiento necesito?** Libera primero 3-5 GB, porque un archivo de modelo pesa 1-4 GB; instala una app a la vez, ya que los archivos de modelo duplicados consumen almacenamiento rápido. Consulta "Tu primer modelo local en 15 minutos".',
+          '**¿Qué tan rápido funcionará?** PromptQuorum no ha medido la velocidad en ningún iPhone para esta guía, y las velocidades orientativas de nuestra comparativa de iPhone no son mediciones nuevas. Un modelo más pequeño responde más rápido; anota la velocidad en tus primeras preguntas de prueba y revisa los ajustes de la app por si muestra una cifra de tokens por segundo.',
+          '**¿Qué app es realmente privada?** Ninguna puede darse por privada solo por su etiqueta de la App Store, porque "se ejecuta en tu dispositivo" y "no envía nada" son afirmaciones distintas. Lee la etiqueta de privacidad y la política, haz la prueba del modo avión y comprueba después Ajustes > Privacidad y seguridad > Informe de privacidad de apps; las apps de código abierto como PocketPal AI se pueden inspeccionar. Consulta "Privacidad y telemetría en la práctica".',
+          '**¿Qué puedo hacer sin internet?** Según el mapa de capacidades de esta guía, un iPhone reciente puede encargarse sin conexión del chat, las preguntas sobre la cámara, el dictado y la transcripción, el chat con documentos y la traducción una vez descargado el modelo; los modelos de 30B o más, el razonamiento de calidad frontier y los agentes siempre activos en segundo plano no son posibles. Consulta "Mapa de capacidades".',
+          '**¿Qué leo después?** Sigue "Tu primer modelo local en 15 minutos" y luego usa la "Ruta de decisión" si tienes una tarea concreta en mente.',
         ],
       },
       quickFacts: {
@@ -7476,6 +7902,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'Comece aqui: três apps para instalar',
+        anchor: '#start-here',
+      },
+      {
+        label: 'Seis respostas rápidas antes de instalar',
+        anchor: '#quick-answers',
+      },
+      {
         label: 'Fatos rápidos',
         anchor: '#quick-facts',
       },
@@ -7622,6 +8056,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Várias coisas não são possíveis ou só são possíveis em parte:** modelos de 30B+, raciocínio de qualidade de ponta, agentes sempre ativos em segundo plano, substituir a Siri pelo seu próprio modelo, fazer fine-tuning no celular e uma garantia de privacidade apenas por um rótulo da App Store.',
           '**"Zero telemetria" precisa ser verificado, não aceito na confiança.** Vários apps que dizem manter o chat no dispositivo ainda enviam relatórios de falhas, eventos de uso ou requisições opcionais à web; o capítulo de privacidade mostra como verificar com o Modo Avião e o Relatório de Privacidade dos Apps.',
           '**Comece pequeno:** instale um app, baixe um modelo de 1-2 GB no Wi-Fi, ative o Modo Avião e faça uma pergunta. Se funcionar, você verificou todo o caminho offline em menos de 15 minutos.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'Comece aqui: três apps para instalar',
+        content: [
+          '**Está com pouco tempo? Instale um destes três, baixe um modelo que caiba na RAM do seu iPhone e teste uma vez no Modo Avião.** As indicações vêm dos capítulos e das análises deste guia, não de benchmarks; o resto do guia explica cada escolha.',
+          '**Outros bons pontos de partida:** em um iPhone de 12 GB, experimente o [Noema](/pt/power-local-llm/noema-review) ou o [Google AI Edge Gallery](/pt/power-local-llm/google-ai-edge-gallery-review) com um modelo Gemma 4; em um iPhone de 4 GB, use o [Reins](/pt/power-local-llm/reins-review) ou o [Enchanted](/pt/power-local-llm/enchanted-review) com um servidor doméstico, porque essa faixa está abaixo do piso prático para chat no dispositivo.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Iniciantes podem começar com o PocketPal AI, usuários avançados com o Locally AI e o modelo próprio da Apple, e desenvolvedores com o framework Foundation Models ou o MLX Swift; em todos os casos, o tamanho do modelo acompanha a RAM do iPhone.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Um app, um modelo do tamanho da sua RAM, um teste no Modo Avião.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['Seu nível', 'Instalar ou usar', 'Primeiro modelo', 'Por que esta escolha'],
+        rows: [
+          {
+            'Seu nível': 'Iniciante',
+            'Instalar ou usar': '[PocketPal AI](/pt/power-local-llm/pocketpal-ai-review)',
+            'Primeiro modelo': '1-2B com 6 GB; 3-4B com 8 GB',
+            'Por que esta escolha': 'Gratuito e de código aberto, e o passo a passo da primeira execução neste guia usa esse app.',
+          },
+          {
+            'Seu nível': 'Avançado',
+            'Instalar ou usar': '[Locally AI](/pt/power-local-llm/locally-ai-review)',
+            'Primeiro modelo': '3-4B com 8 GB, ou o modelo próprio da Apple sem download',
+            'Por que esta escolha': 'Combina com Siri e Atalhos em um iPhone de 8 GB e pode usar o modelo integrado da Apple em iPhones com Apple Intelligence.',
+          },
+          {
+            'Seu nível': 'Desenvolvedor',
+            'Instalar ou usar': 'Framework Foundation Models ou MLX Swift',
+            'Primeiro modelo': 'O modelo integrado da Apple, ou o seu próprio modelo',
+            'Por que esta escolha': 'O Foundation Models é a API nativa em Swift da Apple e exige hardware compatível com Apple Intelligence; o MLX Swift executa o seu próprio modelo. O capítulo "Caminhos para desenvolvedores" cobre o restante.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'Seis respostas rápidas antes de instalar',
+        content:
+          '**Estas são as seis perguntas que os leitores fazem primeiro; cada resposta aponta para o capítulo que a explica.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A RAM define o tamanho do modelo, 3-5 GB de armazenamento livre comportam um primeiro modelo e um teste no Modo Avião mostra se o app funciona offline.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'A RAM escolhe o modelo, o armazenamento o guarda e o Modo Avião comprova.',
+          },
+        ],
+        items: [
+          '**Qual modelo devo baixar?** Siga a sua RAM: 1-2B com 6 GB, 3-4B com 8 GB, mais folga com 12 GB, onde modelos de 7-8B continuam lentos. Um iPhone de 4 GB está abaixo do piso prático. Veja "Faixa do celular, app e tamanho do modelo num relance".',
+          '**De quanto armazenamento preciso?** Libere primeiro 3-5 GB, pois um arquivo de modelo tem 1-4 GB; instale um app por vez, já que arquivos de modelo duplicados consomem armazenamento rápido. Veja "Seu primeiro modelo local em 15 minutos".',
+          '**Qual será a velocidade?** A PromptQuorum não mediu a velocidade em nenhum iPhone para este guia, e as velocidades indicativas do nosso comparativo de iPhone não são medições novas. Um modelo menor responde mais rápido; anote a velocidade nas suas primeiras perguntas de teste e veja nos ajustes do app se ele mostra um valor em tokens por segundo.',
+          '**Qual app é realmente privado?** Nenhum pode ser presumido privado apenas pelo rótulo da App Store, porque "roda no seu dispositivo" e "não envia nada" são afirmações diferentes. Leia o rótulo de privacidade e a política, faça o teste no Modo Avião e depois confira Ajustes > Privacidade e Segurança > Relatório de Privacidade dos Apps; apps de código aberto como o PocketPal AI podem ser inspecionados. Veja "Privacidade e telemetria na prática".',
+          '**O que dá para fazer sem internet?** Segundo o mapa de capacidades deste guia, um iPhone recente consegue lidar offline com chat, perguntas sobre a câmera, ditado e transcrição, chat com documentos e tradução depois que o modelo é baixado; modelos de 30B+, raciocínio de qualidade de ponta e agentes sempre ativos em segundo plano não são possíveis. Veja "Mapa de capacidades".',
+          '**O que leio em seguida?** Siga "Seu primeiro modelo local em 15 minutos" e depois use o "Caminho de decisão" se tiver uma tarefa específica em mente.',
         ],
       },
       quickFacts: {
@@ -8782,6 +9280,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: 'ابدأ من هنا: ثلاثة تطبيقات للتثبيت',
+        anchor: '#start-here',
+      },
+      {
+        label: 'ست إجابات سريعة قبل التثبيت',
+        anchor: '#quick-answers',
+      },
+      {
         label: 'حقائق سريعة',
         anchor: '#quick-facts',
       },
@@ -8928,6 +9434,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**عدة أمور غير ممكنة أو ممكنة جزئياً فقط:** نماذج 30B فأكثر، والاستدلال بمستوى النماذج الحدودية، والوكلاء الدائمو العمل في الخلفية، واستبدال Siri بنموذجك الخاص، والضبط الدقيق على الهاتف، وضمان الخصوصية من ملصق App Store وحده.',
           '**عبارة "بلا قياس عن بُعد" تحتاج إلى تحقق لا إلى ثقة.** عدة تطبيقات تقول إنها تُبقي الدردشة على الجهاز ما زالت ترسل تقارير الأعطال أو أحداث الاستخدام أو طلبات ويب اختيارية؛ ويبيّن فصل الخصوصية كيف تتحقق بوضع الطيران وتقرير خصوصية التطبيقات.',
           '**ابدأ صغيراً:** ثبّت تطبيقاً واحداً ونزّل نموذجاً واحداً بحجم 1-2 غيغابايت عبر Wi-Fi، ثم فعّل وضع الطيران واطرح سؤالاً. إن نجح ذلك فقد تحققت من مسار العمل دون اتصال كاملاً في أقل من 15 دقيقة.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: 'ابدأ من هنا: ثلاثة تطبيقات للتثبيت',
+        content: [
+          '**الوقت ضيق؟ ثبّت أحد هذه التطبيقات الثلاثة، ونزّل نموذجاً يناسب ذاكرة RAM في iPhone لديك، واختبره مرة واحدة في وضع الطيران.** الترشيحات مأخوذة من فصول هذا الدليل ومراجعاته، لا من اختبارات الأداء؛ ويشرح بقية الدليل كل اختيار.',
+          '**نقاط انطلاق جيدة أخرى:** على iPhone بذاكرة 12 غيغابايت جرّب [Noema](/ar/power-local-llm/noema-review) أو [Google AI Edge Gallery](/ar/power-local-llm/google-ai-edge-gallery-review) مع نموذج Gemma 4؛ وعلى iPhone بذاكرة 4 غيغابايت استخدم [Reins](/ar/power-local-llm/reins-review) أو [Enchanted](/ar/power-local-llm/enchanted-review) مع خادم منزلي، لأن هذه الفئة أدنى من الحد العملي للدردشة على الجهاز.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'يمكن للمبتدئين البدء بـ PocketPal AI، وللمتقدمين بـ Locally AI ونموذج Apple نفسه، وللمطوّرين بإطار Foundation Models أو MLX Swift؛ وفي كل الحالات يتبع حجم النموذج ذاكرة RAM في iPhone.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'تطبيق واحد، ونموذج واحد بحجم يناسب ذاكرتك، واختبار واحد في وضع الطيران.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['مستواك', 'التثبيت أو الاستخدام', 'النموذج الأول', 'سبب هذا الاختيار'],
+        rows: [
+          {
+            'مستواك': 'مبتدئ',
+            'التثبيت أو الاستخدام': '[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review)',
+            'النموذج الأول': '1-2B مع 6 غيغابايت؛ 3-4B مع 8 غيغابايت',
+            'سبب هذا الاختيار': 'مجاني ومفتوح المصدر، ومرشد التشغيل الأول في هذا الدليل يستخدمه.',
+          },
+          {
+            'مستواك': 'متقدم',
+            'التثبيت أو الاستخدام': '[Locally AI](/ar/power-local-llm/locally-ai-review)',
+            'النموذج الأول': '3-4B مع 8 غيغابايت، أو نموذج Apple نفسه دون تنزيل',
+            'سبب هذا الاختيار': 'يناسب استخدام Siri وShortcuts على iPhone بذاكرة 8 غيغابايت، ويمكنه استخدام نموذج Apple على الجهاز في أجهزة iPhone التي تدعم Apple Intelligence.',
+          },
+          {
+            'مستواك': 'مطوّر',
+            'التثبيت أو الاستخدام': 'إطار Foundation Models أو MLX Swift',
+            'النموذج الأول': 'نموذج Apple على الجهاز، أو نموذجك الخاص',
+            'سبب هذا الاختيار': 'Foundation Models هو واجهة Swift الأصلية من Apple ويحتاج إلى عتاد يدعم Apple Intelligence؛ أما MLX Swift فيشغّل نموذجك الخاص. ويتناول فصل "مسارات المطوّرين" بقية الأمور.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: 'ست إجابات سريعة قبل التثبيت',
+        content:
+          '**هذه هي الأسئلة الستة التي يطرحها القرّاء أولاً؛ وكل إجابة تشير إلى الفصل الذي يشرحها.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'تحدد ذاكرة RAM حجم النموذج، وتتسع 3-5 غيغابايت من المساحة الحرة لنموذج أول، ويكشف اختبار وضع الطيران ما إذا كان التطبيق يعمل دون اتصال.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'RAM تحدد النموذج، والتخزين يحفظه، ووضع الطيران يثبت ذلك.',
+          },
+        ],
+        items: [
+          '**أي نموذج أنزّل؟** اتبع ذاكرة RAM: 1-2B مع 6 غيغابايت، و3-4B مع 8 غيغابايت، ومجال أوسع مع 12 غيغابايت حيث تبقى نماذج 7-8B بطيئة. وiPhone بذاكرة 4 غيغابايت أدنى من الحد العملي. انظر "فئة الهاتف والتطبيق وحجم النموذج في لمحة".',
+          '**كم أحتاج من مساحة التخزين؟** وفّر أولاً 3-5 غيغابايت، فملف النموذج يبلغ 1-4 غيغابايت؛ وثبّت تطبيقاً واحداً في كل مرة، لأن ملفات النماذج المكررة تستهلك التخزين بسرعة. انظر "نموذجك المحلي الأول في 15 دقيقة".',
+          '**ما سرعة التشغيل؟** لم تقِس PromptQuorum السرعة على أي iPhone لإعداد هذا الدليل، والسرعات الإرشادية في ملخصنا لتطبيقات iPhone ليست قياسات جديدة. النموذج الأصغر يجيب أسرع؛ دوّن السرعة في أسئلة الاختبار الأولى، وتحقق من إعدادات التطبيق إن كان يعرض رقماً لعدد الرموز في الثانية.',
+          '**أي تطبيق خاص فعلاً؟** لا يمكن افتراض أن أي تطبيق خاص بالاعتماد على ملصق App Store وحده، لأن "يعمل على جهازك" و"لا يرسل شيئاً" ادعاءان مختلفان. اقرأ ملصق الخصوصية والسياسة، وأجرِ اختبار وضع الطيران، ثم افحص لاحقاً الإعدادات > الخصوصية والأمان > تقرير خصوصية التطبيقات (App Privacy Report)؛ ويمكن فحص التطبيقات المفتوحة المصدر مثل PocketPal AI. انظر "واقع الخصوصية والقياس عن بُعد".',
+          '**ماذا أستطيع أن أفعل دون إنترنت؟** وفق خريطة القدرات في هذا الدليل، يستطيع iPhone حديث التعامل مع الدردشة وأسئلة الكاميرا والإملاء والتفريغ النصي والدردشة مع المستندات والترجمة دون اتصال بعد تنزيل النموذج؛ أما نماذج 30B فأكثر والاستدلال بمستوى النماذج الحدودية والوكلاء الدائمو العمل في الخلفية فغير ممكنة. انظر "خريطة القدرات".',
+          '**ماذا أقرأ بعد ذلك؟** تابع "نموذجك المحلي الأول في 15 دقيقة" ثم استخدم "مسار القرار" إن كانت لديك مهمة محددة.',
         ],
       },
       quickFacts: {
@@ -10088,6 +10658,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#key-takeaways',
       },
       {
+        label: '여기서 시작: 설치할 앱 세 가지',
+        anchor: '#start-here',
+      },
+      {
+        label: '설치 전에 알아 둘 빠른 답변 여섯 가지',
+        anchor: '#quick-answers',
+      },
+      {
         label: '빠른 사실',
         anchor: '#quick-facts',
       },
@@ -10234,6 +10812,70 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**불가능하거나 일부만 가능한 것도 여럿 있습니다.** 30B 이상 모델, 최첨단 수준의 추론, 상시 실행 백그라운드 에이전트, 직접 만든 모델로 Siri 대체, 휴대폰에서의 파인튜닝, App Store 라벨만으로 프라이버시를 보장받는 것입니다.',
           '**"텔레메트리 없음"은 믿을 것이 아니라 확인할 것입니다.** 채팅을 기기에 둔다고 밝힌 여러 앱도 충돌 보고서, 사용 이벤트, 선택적 웹 요청을 보냅니다. 프라이버시 장에서 에어플레인 모드와 앱 개인정보 보호 리포트로 확인하는 방법을 보여 줍니다.',
           '**작게 시작하십시오.** 앱 하나를 설치하고, Wi-Fi에서 1-2 GB 모델 하나를 내려받은 뒤, 에어플레인 모드로 전환하고 질문해 보십시오. 작동하면 15분 안에 오프라인 경로 전체를 확인한 것입니다.',
+        ],
+      },
+      startHere: {
+        id: 'start-here',
+        title: '여기서 시작: 설치할 앱 세 가지',
+        content: [
+          '**시간이 없다면 이 세 가지 중 하나를 설치하고, iPhone의 RAM에 맞는 모델을 내려받은 뒤 에어플레인 모드에서 한 번 테스트하십시오.** 이 추천은 벤치마크가 아니라 이 가이드의 각 장과 리뷰에서 나온 것이며, 나머지 부분에서 각 선택의 이유를 설명합니다.',
+          '**그 밖의 좋은 출발점:** RAM 12 GB iPhone에서는 [Noema](/ko/power-local-llm/noema-review) 또는 [Google AI Edge Gallery](/ko/power-local-llm/google-ai-edge-gallery-review)에 Gemma 4 모델을 써 보십시오. RAM 4 GB iPhone에서는 그 등급이 기기 내 채팅의 실용 하한에 못 미치므로 [Reins](/ko/power-local-llm/reins-review) 또는 [Enchanted](/ko/power-local-llm/enchanted-review)를 집 서버와 함께 사용하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '입문자는 PocketPal AI로, 고급 사용자는 Locally AI와 Apple 자체 모델로, 개발자는 Foundation Models 프레임워크나 MLX Swift로 시작할 수 있으며, 어느 경우든 모델 크기는 iPhone의 RAM에 따라 정해집니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '앱 하나, RAM에 맞는 모델 하나, 에어플레인 모드 테스트 한 번.',
+          },
+        ],
+        itemHeadings: true,
+        columns: ['내 수준', '설치 또는 사용할 것', '첫 모델', '이 선택의 이유'],
+        rows: [
+          {
+            '내 수준': '입문자',
+            '설치 또는 사용할 것': '[PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)',
+            '첫 모델': 'RAM 6 GB는 1-2B, 8 GB는 3-4B',
+            '이 선택의 이유': '무료 오픈소스이며, 이 가이드의 첫 실행 안내도 이 앱을 사용합니다.',
+          },
+          {
+            '내 수준': '고급 사용자',
+            '설치 또는 사용할 것': '[Locally AI](/ko/power-local-llm/locally-ai-review)',
+            '첫 모델': 'RAM 8 GB는 3-4B, 또는 내려받기 없는 Apple 자체 모델',
+            '이 선택의 이유': 'RAM 8 GB iPhone에서 Siri와 단축어를 쓰기에 알맞고, Apple Intelligence 지원 iPhone에서는 Apple의 온디바이스 모델도 사용할 수 있습니다.',
+          },
+          {
+            '내 수준': '개발자',
+            '설치 또는 사용할 것': 'Foundation Models 프레임워크 또는 MLX Swift',
+            '첫 모델': 'Apple의 온디바이스 모델 또는 직접 준비한 모델',
+            '이 선택의 이유': 'Foundation Models는 Apple의 네이티브 Swift API이며 Apple Intelligence 지원 하드웨어가 필요합니다. MLX Swift는 직접 준비한 모델을 실행합니다. 나머지는 "개발자 경로" 장에서 다룹니다.',
+          },
+        ],
+      },
+      quickAnswers: {
+        id: 'quick-answers',
+        title: '설치 전에 알아 둘 빠른 답변 여섯 가지',
+        content:
+          '**독자가 가장 먼저 묻는 여섯 가지 질문입니다. 각 답변은 그것을 설명하는 장을 가리킵니다.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RAM이 모델 크기를 정하고, 3-5 GB의 여유 저장 공간이 첫 모델을 담으며, 에어플레인 모드 테스트로 앱이 오프라인에서 작동하는지 확인할 수 있습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'RAM이 모델을 정하고, 저장 공간이 담으며, 에어플레인 모드가 증명합니다.',
+          },
+        ],
+        items: [
+          '**어떤 모델을 내려받아야 합니까?** RAM에 맞추십시오. 6 GB는 1-2B, 8 GB는 3-4B, 12 GB는 여유가 더 있지만 7-8B 모델은 여전히 느립니다. RAM 4 GB iPhone은 실용 하한에 못 미칩니다. "폰 등급, 앱, 모델 크기 한눈에 보기"를 참고하십시오.',
+          '**저장 공간은 얼마나 필요합니까?** 먼저 3-5 GB를 비우십시오. 모델 파일 하나가 1-4 GB이기 때문입니다. 중복된 모델 파일은 저장 공간을 빠르게 차지하므로 앱은 한 번에 하나씩 설치하십시오. "15분 만에 첫 로컬 모델 실행하기"를 참고하십시오.',
+          '**얼마나 빠르게 실행됩니까?** PromptQuorum은 이 가이드를 위해 어떤 iPhone에서도 속도를 측정하지 않았으며, 당사 iPhone 모음 글의 참고용 속도는 새로 측정한 값이 아닙니다. 작은 모델일수록 응답이 빠릅니다. 처음 테스트 질문에서 속도를 기록하고, 앱 설정에 초당 토큰 수가 표시되는지 확인하십시오.',
+          '**어떤 앱이 정말 프라이빗합니까?** App Store 라벨만으로 프라이빗하다고 가정할 수 있는 앱은 없습니다. "기기에서 실행됨"과 "아무것도 전송하지 않음"은 서로 다른 주장이기 때문입니다. 개인정보 라벨과 정책을 읽고, 에어플레인 모드 테스트를 한 뒤, 나중에 설정 > 개인정보 보호 및 보안 > 앱 개인정보 보호 리포트를 확인하십시오. PocketPal AI 같은 오픈소스 앱은 직접 검사할 수 있습니다. "프라이버시와 텔레메트리의 현실"를 참고하십시오.',
+          '**인터넷 없이 무엇을 할 수 있습니까?** 이 가이드의 기능 지도에 따르면, 최근 iPhone은 모델을 내려받은 뒤에는 채팅, 카메라 질문, 받아쓰기와 전사, 문서 채팅, 번역을 오프라인으로 처리할 수 있습니다. 30B 이상 모델, 최첨단 수준의 추론, 상시 실행 백그라운드 에이전트는 불가능합니다. "기능 지도"를 참고하십시오.',
+          '**다음에는 무엇을 읽어야 합니까?** "15분 만에 첫 로컬 모델 실행하기"를 따라 해 본 뒤, 하고 싶은 구체적인 작업이 있으면 "선택 가이드"를 이용하십시오.',
         ],
       },
       quickFacts: {
