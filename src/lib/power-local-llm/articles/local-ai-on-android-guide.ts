@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'android-vs-iphone',
         title: 'Là où Android offre plus de liberté que l\'iPhone',
         content: [
-          '**Android est la plateforme la plus ouverte pour l\'IA locale, au sens où les applications peuvent charger leurs propres modèles et moteurs : vous pouvez installer des applications hors du store, exécuter un environnement Linux et transformer le téléphone en serveur.** Le coût est la fragmentation. Une recette qui marche sur un Galaxy haut de gamme peut échouer sur un téléphone d\'entrée de gamme d\'une autre marque, et nous n\'avons trouvé aucune liste de compatibilité unique et neutre vis-à-vis des fabricants.',
+          '**Android est une plateforme plus ouverte que l\'iPhone pour l\'IA locale, au sens où les applications peuvent charger leurs propres modèles et moteurs : vous pouvez installer des applications hors du store, exécuter un environnement Linux et transformer le téléphone en serveur.** Le coût est la fragmentation. Une recette qui marche sur un Galaxy haut de gamme peut échouer sur un téléphone d\'entrée de gamme d\'une autre marque, et nous n\'avons trouvé aucune liste de compatibilité unique et neutre vis-à-vis des fabricants.',
           'Pour le côté Apple de chaque comparaison ci-dessous, lisez [IA locale sur iPhone](/fr/power-local-llm/local-ai-on-iphone-guide). Pour les deux grands écosystèmes côte à côte, voir [IA embarquée Galaxy vs iPhone](/fr/local-llms/galaxy-vs-iphone-on-device-ai-2026).',
         ],
         snippetBlocks: [
@@ -3844,7 +3844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `[Ensu](/zh/power-local-llm/ensu-review)：聊天中接受图像输入。局限：图像支持取决于您选择的模型。`,
         ],
         callouts: [
-          { type: 'warning', text: `凡是看错会造成后果的场合，如药品标签、法律文本、安全标志，请不要使用设备端视觉模型。小型视觉模型会读错文字和数字，而且没有经过验证的准确率数字可以依靠。` },
+          { type: 'warning', text: `凡是看错会造成后果的场合，如药品标签、法律文本、安全标志，请不要使用设备端视觉模型。小型视觉模型可能会读错文字和数字，而且没有经过验证的准确率数字可以依靠。` },
         ],
       },
       voice: {
@@ -4317,7 +4317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: `安卓允许在后台运行本地AI吗？`, a: `只能部分允许。安卓限制后台进程，品牌电池管理器还会增加各自的限制，而 Google 的 Gemini Nano API 只能在前台工作。请把应用从电池优化中豁免，并在较长的回答期间保持屏幕常亮；把常驻助手放到家用服务器上。` },
           { q: `手机能运行700亿参数的模型吗？`, a: `现实中不行。在 4-bit 下，仅权重就需要几十 GB，而手机通常总共只有 8 至 16 GB。请在电脑上运行此类模型，并通过 LocalMind 或 AnythingLLM Mobile 之类的应用把手机当作客户端。` },
           { q: `如何在安卓上用本地AI离线翻译文本？`, a: `使用带翻译功能的应用，例如 LLM Hub，或用 Google AI Edge Gallery 的 Audio Scribe 处理录音。小模型处理常见语言对还算不错，但在小语种和法律措辞上会吃力，所以请测试您的语言对，并核实重要文本。` },
-          { q: `对文档或标签使用设备端视觉模型安全吗？`, a: `用于高风险的阅读并不安全。小型视觉模型会读错文字和数字，而且对于这些应用所运行的模型，我们没有找到独立的准确率数字。可以用它了解大意，然后对照原件核实。` },
+          { q: `对文档或标签使用设备端视觉模型安全吗？`, a: `用于高风险的阅读并不安全。小型视觉模型可能会读错文字和数字，而且对于这些应用所运行的模型，我们没有找到独立的准确率数字。可以用它了解大意，然后对照原件核实。` },
           { q: `iPhone 上有什么不同？`, a: `两者都很强，但取舍不同。iPhone 只有一个厂商、设备型号更少，所以结果往往更可预测。安卓让您有更大的空间从应用商店之外安装应用，并使用 Termux，而 Termux 是一款安卓应用。苹果对从 App Store 之外安装应用的规定因地区而异，并且会随时间变化，所以请查看 Apple 针对您所在国家或地区的最新政策。我们的姊妹篇指南《iPhone 上的本地AI》涵盖苹果一侧，而《Galaxy 与 iPhone 设备端AI对比》则对比了这两个生态。` },
         ],
       },
@@ -4481,9 +4481,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datos rápidos',
         items: [
           '**Tamaños de modelo prácticos:** de 1 a 2 mil millones de parámetros con 4 a 6 GB de RAM; de 3 a 4 mil millones con 8 GB; de 7 a 8 mil millones con cuantización de pocos bits en 12 a 16 GB. Son reglas generales basadas en aritmética del tamaño de archivo, no resultados de benchmarks.',
-          '**Gemini Nano mediante ML Kit GenAI:** la Prompt API admite texto y hasta 10 imágenes, con una entrada de menos de unos 4,000 tokens, y solo funciona mientras la app que la llama está en primer plano ([Google](https://developers.google.com/ml-kit/genai)).',
+          '**Gemini Nano mediante ML Kit GenAI:** la Prompt API admite texto y hasta 10 imágenes, con una entrada de menos de unos 4000 tokens, y solo funciona mientras la app que la llama está en primer plano ([Google](https://developers.google.com/ml-kit/genai)).',
           '**Gemma 4 E2B y E4B:** Google los presenta como la base de Gemini Nano 4 y afirma que E2B es hasta 3 veces más rápido que E4B; la AICore Developer Preview se abrió el 2 de abril de 2026 ([Android Developers Blog](https://developer.android.com/blog/posts/announcing-gemma-4-in-the-ai-core-developer-preview)).',
-          '**Rutas para la NPU:** LiteRT tiene aceleradores para NPU de Qualcomm y MediaTek; Google informa de Gemma 3n E2B con más de 1,600 tokens/seg de prefill y 28 tokens/seg de decodificación en una NPU Dimensity 9500 (Vivo X300 Pro, cifras de Google, contexto de 4K).',
+          '**Rutas para la NPU:** LiteRT tiene aceleradores para NPU de Qualcomm y MediaTek; Google informa de Gemma 3n E2B con más de 1600 tokens/seg de prefill y 28 tokens/seg de decodificación en una NPU Dimensity 9500 (Vivo X300 Pro, cifras de Google, contexto de 4K).',
           '**TPU del Pixel para desarrolladores:** el Tensor SDK llegó a beta el 19 de mayo de 2026 y lista Pixel 10, 10 Pro, 10 Pro XL y 10 Pro Fold.',
           '**Versiones de Android:** Google AI Edge Gallery requiere Android 12 o posterior; la documentación de NPU de LiteRT exige el nivel de API 31 o posterior; AppFunctions requiere Android 16 o posterior.',
           '**Termux:** instálalo desde F-Droid o GitHub; los responsables de Termux marcan la versión de Google Play como experimental, y mezclar orígenes rompe las actualizaciones.',
@@ -4570,7 +4570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los chips insignia actuales incluyen una NPU, pero una app de chat instalada fuera de la tienda rara vez llega a usarla.** Las rutas para la NPU que existen las publican los fabricantes de chips y Google, y requieren modelos preparados para ese chip. Las apps basadas en compilaciones genéricas de llama.cpp se ejecutan sobre todo en la CPU, a veces en la GPU.',
           '**Snapdragon.** GenieX de Qualcomm es compatible con Android en el Snapdragon 8 Elite y el 8 Elite Gen 5, ejecuta modelos GGUF mediante llama.cpp con un backend Hexagon y recomienda la cuantización Q4_0 para la ruta de la NPU; la página no indica un estado de lanzamiento. El acelerador de Qualcomm de LiteRT de Google informa de FastVLM-0.5B en la NPU del Snapdragon 8 Elite Gen 5 con 0.12 segundos hasta el primer token y más de 100 tokens por segundo de decodificación (Xiaomi 17 Pro Max, cifras de Google). Hoy son rutas para desarrolladores, no botones en una app de chat.',
           '**Google Tensor.** El Pixel 9 ejecuta Gemini Nano mediante AICore y ML Kit; el Pixel 10 con Tensor G5 figura como compatible con Gemini Nano 4. Para tus propios modelos, el Tensor SDK de Google llegó a beta el 19 de mayo de 2026 para la familia Pixel 10 y ejecuta modelos en la TPU mediante LiteRT. Si una app de chat de terceros ya lo usa es algo que conviene comprobar app por app.',
-          '**MediaTek Dimensity.** Google y MediaTek publicaron un acelerador LiteRT NeuroPilot con modelos precompilados (Qwen3 0.6B, Gemma 3 270M, Gemma 3 1B, Gemma 3n E2B, EmbeddingGemma 300M). El chip de referencia es el Dimensity 9500 en un Vivo X300 Pro, donde Google informa de Gemma 3n E2B con más de 1,600 tokens por segundo de prefill y 28 tokens por segundo de decodificación con un contexto de 4K. La conversión de un modelo Gemma personalizado para la NPU de MediaTek figuraba como "pronto".',
+          '**MediaTek Dimensity.** Google y MediaTek publicaron un acelerador LiteRT NeuroPilot con modelos precompilados (Qwen3 0.6B, Gemma 3 270M, Gemma 3 1B, Gemma 3n E2B, EmbeddingGemma 300M). El chip de referencia es el Dimensity 9500 en un Vivo X300 Pro, donde Google informa de Gemma 3n E2B con más de 1600 tokens por segundo de prefill y 28 tokens por segundo de decodificación con un contexto de 4K. La conversión de un modelo Gemma personalizado para la NPU de MediaTek figuraba como "pronto".',
           '**Samsung Exynos.** En nuestro artículo sobre el Galaxy S26, el S26 y el S26+ usan el Exynos 2600 en Europa, Corea y la mayoría de los demás mercados, y un Snapdragon en EE. UU., China y Japón, mientras que el S26 Ultra usa el Snapdragon 8 Elite Gen 5 en todas partes. No encontramos documentación primaria de una ruta abierta para la NPU en apps de modelos de lenguaje de terceros en Exynos, así que supón CPU o GPU para las apps instaladas fuera de la tienda. La generación de imágenes EdgeFusion de Samsung en la NPU del Exynos 2600 es un pipeline de Samsung y Nota AI, no algo que herede una app genérica.',
         ],
         snippetBlocks: [
@@ -4616,7 +4616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'android-vs-iphone',
         title: 'Dónde Android te da más margen que iPhone',
         content: [
-          '**Android es la plataforma más abierta para la IA local en el sentido de que las apps pueden cargar sus propios modelos y motores: puedes instalar apps fuera de la tienda, ejecutar un userland de Linux y convertir el teléfono en un servidor.** El coste es la fragmentación. Una receta que funciona en un Galaxy de gama alta puede fallar en un teléfono de gama media de otra marca, y no encontramos ninguna lista de compatibilidad neutral respecto a los fabricantes.',
+          '**Android es una plataforma más abierta que iPhone para la IA local, en el sentido de que las apps pueden cargar sus propios modelos y motores: puedes instalar apps fuera de la tienda, ejecutar un userland de Linux y convertir el teléfono en un servidor.** El coste es la fragmentación. Una receta que funciona en un Galaxy de gama alta puede fallar en un teléfono de gama media de otra marca, y no encontramos ninguna lista de compatibilidad neutral respecto a los fabricantes.',
           'Para el lado de Apple de cada comparación siguiente, lee [IA local en iPhone](/es/power-local-llm/local-ai-on-iphone-guide). Para los dos grandes ecosistemas lado a lado, consulta [IA en el dispositivo: Galaxy vs iPhone](/es/local-llms/galaxy-vs-iphone-on-device-ai-2026).',
         ],
         snippetBlocks: [
@@ -4753,7 +4753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Documentos, PDF y RAG',
         content: [
           `**Las preguntas sobre documentos funcionan en Android dividiendo un archivo en fragmentos, encontrando los relevantes y pasando solo esos a un modelo pequeño.** Esto es la generación aumentada por recuperación (RAG). Es mejor que pegar un PDF entero en un modelo pequeño, cuya ventana de contexto es demasiado corta para él.`,
-          `La Prompt API de Gemini Nano limita la entrada a menos de unos 4,000 tokens, que son aproximadamente 3,000 palabras en inglés, así que las preguntas sobre documentos a nivel de sistema también necesitan fragmentación. Para el método en profundidad, lee [RAG local sobre tus PDF, paso a paso](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) y [Mejores herramientas de RAG local](/es/local-llms/best-local-rag-tools).`,
+          `La Prompt API de Gemini Nano limita la entrada a menos de unos 4000 tokens, que son aproximadamente 3000 palabras en inglés, así que las preguntas sobre documentos a nivel de sistema también necesitan fragmentación. Para el método en profundidad, lee [RAG local sobre tus PDF, paso a paso](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) y [Mejores herramientas de RAG local](/es/local-llms/best-local-rag-tools).`,
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: `Apps de Android como AnythingLLM Mobile, Private Mind, LM Playground y Honey LLM responden preguntas sobre tus archivos en el teléfono recuperando fragmentos relevantes para un modelo pequeño.` },
@@ -4911,7 +4911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         columns: ['Ruta', 'Ideal para', 'Límite principal'],
         rows: [
-          { 'Ruta': 'ML Kit GenAI y Gemini Nano (AICore)', 'Ideal para': 'Resúmenes, reescritura, descripción de imágenes y una Prompt API sobre un modelo del sistema que se actualiza por ti. Incluye las API AgentRunner y Embedding. La entrada de la Prompt API se mantiene por debajo de unos 4,000 tokens.', 'Límite principal': 'Solo uso en primer plano; cuotas por app; solo teléfonos compatibles; no es compatible con un bootloader desbloqueado (Prompt API).' },
+          { 'Ruta': 'ML Kit GenAI y Gemini Nano (AICore)', 'Ideal para': 'Resúmenes, reescritura, descripción de imágenes y una Prompt API sobre un modelo del sistema que se actualiza por ti. Incluye las API AgentRunner y Embedding. La entrada de la Prompt API se mantiene por debajo de unos 4000 tokens.', 'Límite principal': 'Solo uso en primer plano; cuotas por app; solo teléfonos compatibles; no es compatible con un bootloader desbloqueado (Prompt API).' },
           { 'Ruta': 'AICore Developer Preview con Gemma 4', 'Ideal para': 'Probar Gemma 4 E2B y E4B mediante la Prompt API de ML Kit; el código escrito ahora está pensado para trasladarse a dispositivos con Gemini Nano 4.', 'Límite principal': 'Una vista previa; Google dijo que aún se estaban añadiendo las llamadas a herramientas, la salida estructurada, los prompts de sistema y el modo de razonamiento.' },
           { 'Ruta': 'LiteRT y LiteRT-LM', 'Ideal para': 'Tu propia app con las familias Gemma, Llama, Phi-4 o Qwen, aceleración por GPU y NPU, entrada de visión y audio, llamadas a funciones.', 'Límite principal': 'La NPU necesita modelos compilados por chip; Swift y JavaScript son vistas previas tempranas.' },
           { 'Ruta': 'Qualcomm AI Hub y GenieX', 'Ideal para': 'Snapdragon 8 Elite y 8 Elite Gen 5, GGUF mediante llama.cpp con un backend Hexagon o paquetes precompilados de AI Hub mediante AI Engine Direct.', 'Límite principal': 'Solo Snapdragon; el runtime de Android rechaza los ajustes no predeterminados de capas de GPU y de contexto en la ruta de AI Hub.' },
@@ -5028,7 +5028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Límite': 'Calidad de un modelo de frontera sin conexión', 'Por qué': 'Los modelos de teléfono tienen de 1 a 8 mil millones de parámetros; los modelos insignia en la nube son mucho mayores. Los modelos pequeños son más débiles en razonamiento difícil y respuestas largas y exactas.', 'Qué hacer en su lugar': 'Usa lo local para tareas privadas, simples o sin conexión; usa un servidor o la nube para las difíciles.' },
           { 'Límite': 'Modelos de 70 mil millones de parámetros', 'Por qué': 'A 4 bits, solo los pesos necesitan decenas de gigabytes; la mayoría de los teléfonos tienen de 8 a 16 GB en total.', 'Qué hacer en su lugar': 'Ejecútalos en un ordenador y usa el modo remoto.' },
-          { 'Límite': 'Documentos muy largos de una vez', 'Por qué': 'Las ventanas de contexto son pequeñas y la memoria crece con el contexto; la Prompt API de Gemini Nano se mantiene por debajo de unos 4,000 tokens.', 'Qué hacer en su lugar': 'Fragmenta con RAG; indexa en un servidor.' },
+          { 'Límite': 'Documentos muy largos de una vez', 'Por qué': 'Las ventanas de contexto son pequeñas y la memoria crece con el contexto; la Prompt API de Gemini Nano se mantiene por debajo de unos 4000 tokens.', 'Qué hacer en su lugar': 'Fragmenta con RAG; indexa en un servidor.' },
           { 'Límite': 'Respuestas rápidas para salidas largas', 'Por qué': 'La velocidad está limitada por el ancho de banda de memoria, y el calor frena las ejecuciones sostenidas.', 'Qué hacer en su lugar': 'Elige un modelo más pequeño; pide respuestas cortas.' },
           { 'Límite': 'Un asistente permanente en segundo plano fiable', 'Por qué': 'Android restringe el trabajo en segundo plano y los gestores de batería de las marcas cierran apps; el modelo del sistema de Google solo funciona en primer plano.', 'Qué hacer en su lugar': 'Pon el asistente en un servidor doméstico; usa el teléfono como cliente.' },
           { 'Límite': 'Velocidad de NPU con cualquier modelo instalado fuera de la tienda', 'Por qué': 'Las rutas de la NPU necesitan modelos compilados por chip; solo se admiten algunas operaciones y el resto recurre a CPU o GPU.', 'Qué hacer en su lugar': 'Usa modelos preparados para LiteRT, GenieX o NeuroPilot, o acepta la velocidad de CPU y GPU.' },
@@ -5486,7 +5486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'android-vs-iphone',
         title: 'Onde o Android dá mais liberdade do que o iPhone',
         content: [
-          '**O Android é a plataforma mais aberta para IA local no sentido de que os apps podem carregar seus próprios modelos e motores: você pode instalar apps fora da loja, executar um userland Linux e transformar o celular em um servidor.** O custo é a fragmentação. Uma receita que funciona em um topo de linha Galaxy pode falhar em um celular intermediário de outra marca, e não encontramos nenhuma lista de compatibilidade neutra entre fabricantes.',
+          '**O Android é uma plataforma mais aberta do que o iPhone para IA local, no sentido de que os apps podem carregar seus próprios modelos e motores: você pode instalar apps fora da loja, executar um userland Linux e transformar o celular em um servidor.** O custo é a fragmentação. Uma receita que funciona em um topo de linha Galaxy pode falhar em um celular intermediário de outra marca, e não encontramos nenhuma lista de compatibilidade neutra entre fabricantes.',
           'Para o lado da Apple em cada comparação abaixo, leia [IA local no iPhone](/pt/power-local-llm/local-ai-on-iphone-guide). Para os dois grandes ecossistemas lado a lado, veja [IA no dispositivo: Galaxy vs iPhone](/pt/local-llms/galaxy-vs-iphone-on-device-ai-2026).',
         ],
         snippetBlocks: [
@@ -6356,7 +6356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'android-vs-iphone',
         title: 'أين يمنحك Android مجالاً أوسع من iPhone',
         content: [
-          '**Android هو المنصة الأكثر انفتاحاً للذكاء الاصطناعي المحلي بمعنى أن التطبيقات تستطيع تحميل نماذجها ومحركاتها الخاصة: يمكنك تثبيت التطبيقات من خارج المتجر، وتشغيل بيئة مستخدم Linux، وتحويل الهاتف إلى خادم.** الثمن هو التشرذم. قد تفشل وصفة تعمل على هاتف Galaxy رائد على هاتف متوسط الفئة من علامة أخرى، ولا توجد قائمة توافق محايدة بين الشركات فيما وجدنا.',
+          '**يُعدّ Android منصة أكثر انفتاحاً من iPhone للذكاء الاصطناعي المحلي بمعنى أن التطبيقات تستطيع تحميل نماذجها ومحركاتها الخاصة: يمكنك تثبيت التطبيقات من خارج المتجر، وتشغيل بيئة مستخدم Linux، وتحويل الهاتف إلى خادم.** الثمن هو التشرذم. قد تفشل وصفة تعمل على هاتف Galaxy رائد على هاتف متوسط الفئة من علامة أخرى، ولا توجد قائمة توافق محايدة بين الشركات فيما وجدنا.',
           'لمقابل Apple في كل مقارنة أدناه، اقرأ [الذكاء الاصطناعي المحلي على iPhone](/ar/power-local-llm/local-ai-on-iphone-guide). وللمنظومتين الكبيرتين جنباً إلى جنب، راجع [الذكاء الاصطناعي على الجهاز: Galaxy مقابل iPhone](/ar/local-llms/galaxy-vs-iphone-on-device-ai-2026).',
         ],
         snippetBlocks: [
