@@ -406,6 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[SillyTavern review](/local-llms/sillytavern-review) — free download, install steps per OS and system requirements for the deepest of the three frontends.',
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay) — free desktop app with a built-in Character Hub and Fimbulvetr 10.7B; the low-friction alternative to the frontends covered in this article.',
           '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) — the model side; head-to-head comparison of the picks recommended in this guide.',
           '[Uncensored Local LLMs for Creative Writing: Ethics, Legality & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — when uncensored derivatives (Hermes 3, Dolphin 3.0) are the right pick and where the legal lines are.',
@@ -820,6 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[SillyTavern-Rezension](/de/local-llms/sillytavern-review) — kostenloser Download, Installation pro System und Systemanforderungen des am tiefsten konfigurierbaren der drei Frontends.',
           '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay) — kostenlose Desktop-App mit integriertem Character Hub und Fimbulvetr 10.7B; die unkomplizierte Alternative zu den in diesem Artikel behandelten Frontends.',
           '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) — die Modellseite; Kopf-an-Kopf-Vergleich der in diesem Leitfaden empfohlenen Modelle.',
           '[Unzensierte lokale LLMs für kreatives Schreiben: Ethik, Legalität & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — wann unzensierte Derivate (Hermes 3, Dolphin 3,0) die richtige Wahl sind und wo die rechtlichen Grenzen liegen.',
@@ -1235,6 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
+          '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — descarga gratuita, pasos de instalación por sistema y requisitos del más configurable de los tres frontends.',
           '[Análisis de Backyard AI: chat de personajes IA y roleplay local](/es/power-local-llm/backyard-ai-review-local-roleplay) — app de escritorio gratuita con Character Hub integrado y Fimbulvetr 10.7B; la alternativa de baja fricción a los frontends cubiertos en este artículo.',
           '[Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) — la parte del modelo; comparativa directa de las opciones recomendadas en esta guía.',
           '[LLM locales sin censura para escritura creativa: ética, legalidad y mejores prácticas](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — cuándo los derivados sin censura (Hermes 3, Dolphin 3.0) son la opción correcta y dónde están los límites legales.',
@@ -1662,6 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 세 프론트엔드 중 설정 폭이 가장 넓은 SillyTavern의 무료 다운로드, OS별 설치 단계, 시스템 요구사항.',
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay) — 내장 Character Hub와 Fimbulvetr 10.7B를 갖춘 무료 데스크톱 앱으로, 이 글에서 다루는 프런트엔드에 대한 손쉬운 대안입니다.',
           '[2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing) — 모델 측면; 이 가이드에서 권장된 옵션들의 직접 비교.',
           '[창의적 글쓰기를 위한 무검열 로컬 LLM: 윤리·법적 측면·모범 사례](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 무검열 파생 모델(Hermes 3, Dolphin 3.0)이 올바른 선택인 경우와 법적 경계.',
@@ -2086,6 +2090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
+          '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — download gratuito, passos de instalação por sistema e requisitos do frontend mais configurável dos três.',
           '[Análise do Backyard AI: chat de personagens IA e roleplay local](/pt/power-local-llm/backyard-ai-review-local-roleplay) — app de desktop gratuito com Character Hub integrado e Fimbulvetr 10.7B; a alternativa sem fricção aos frontends abordados neste artigo.',
           '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) — a parte do modelo; comparativo direto das opções recomendadas neste guia.',
           '[LLMs locais sem censura para escrita criativa: ética, legalidade e melhores práticas](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quando os derivados sem censura (Hermes 3, Dolphin 3.0) são a escolha certa e onde estão os limites legais.',
@@ -2503,6 +2508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
+          '[Test de SillyTavern](/fr/local-llms/sillytavern-review) — téléchargement gratuit, étapes d\'installation par système et prérequis du frontend le plus configurable des trois.',
           '[Avis sur Backyard AI : chat de personnages IA et roleplay local](/fr/power-local-llm/backyard-ai-review-local-roleplay) — application de bureau gratuite avec Character Hub intégré et Fimbulvetr 10.7B ; l\'alternative sans friction aux frontends traités dans cet article.',
           '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) — le volet modèles ; comparaison directe des choix recommandés dans ce guide.',
           '[LLM locaux non censurés pour l\'écriture créative : éthique, légalité & bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quand les dérivés non censurés (Hermes 3, Dolphin 3.0) sont le bon choix et où se situent les lignes légales.',
@@ -2922,6 +2928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連情報',
         items: [
+          '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 3つの中で最も設定の自由度が高いフロントエンドの無料ダウンロード、OS別の導入手順、動作要件。',
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay) — Character HubとFimbulvetr 10.7Bを内蔵した無料デスクトップアプリ。本記事で扱うフロントエンドに対する手軽な代替アプリ。',
           '[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing) — モデル側；このガイドで推奨された選択肢の直接比較。',
           '[クリエイティブライティング向け無検閲ローカルLLM：倫理、法律、ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 無検閲派生モデル（Hermes 3、Dolphin 3.0）が適切な選択肢となる場合と法律上の境界線。',
@@ -3341,6 +3348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[SillyTavern 评测](/zh/local-llms/sillytavern-review) — 三者中可配置性最强的前端:免费下载、各系统安装步骤与系统要求。',
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay) ——内置Character Hub和Fimbulvetr 10.7B的免费桌面应用;是本文所述前端之外低门槛的替代方案。',
           '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing) — 模型侧；本指南推荐选择的直接对比。',
           '[创意写作无审查本地LLM：伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 无审查派生版本（Hermes 3、Dolphin 3.0）何时是正确选择以及法律边界在哪里。',
@@ -3617,6 +3625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
+          '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — التنزيل المجاني وخطوات التثبيت لكل نظام ومتطلبات الواجهة الأكثر قابلية للضبط بين الثلاث.',
           '[مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً](/ar/power-local-llm/backyard-ai-review-local-roleplay) — تطبيق سطح مكتب مجاني مع Character Hub مدمج وFimbulvetr 10.7B؛ البديل السلس للواجهات التي يغطيها هذا المقال.',
           '[أفضل LLM محلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) — الجانب النموذجي؛ مقارنة مباشرة للاختيارات الموصى بها في هذا الدليل.',
           '[نماذج LLM المحلية بدون قيود للكتابة الإبداعية: الأخلاق والقانونية وأفضل الممارسات](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics) — متى تكون النسخ المشتقة (Hermes 3 وDolphin 3.0) الخيار الصحيح والحدود القانونية.',
