@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Click the download arrow. Progress shows in the Downloads tab.',
           ],
           image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
-          imageCaption: 'RAM-based quantization guide for LM Studio: 8 GB RAM fits Q4_K_M (~4.5 GB, ~1% quality loss); 16 GB RAM fits Q5_K_M or Q6_K (~5.7-6.5 GB, near-lossless) with headroom for 8K+ token context.',
+          imageCaption: 'RAM-based quantization guide for LM Studio: 8 GB RAM fits Q4_K_M (~4.5 GB, small quality loss that varies by model); 16 GB RAM fits Q5_K_M or Q6_K (~5.7-6.5 GB, near-lossless) with headroom for 8K+ token context.',
         },
         firstChat: {
           id: 'start-chatting',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Can I use LM Studio on Linux?', a: 'Yes. Download the .AppImage file from lmstudio.ai. Make it executable: chmod +x LM-Studio-*.AppImage and run it. No system installation is needed -- it runs as a portable app.' },
             { q: 'Is LM Studio free?', a: 'LM Studio is free for personal and work use since July 2025. It is developed by Element Labs, Inc.; only the separate Enterprise/Teams tier is paid. All downloaded models are free depending on their individual licenses.' },
             { q: 'How do I enable GPU acceleration in LM Studio?', a: 'On NVIDIA: ensure CUDA drivers are installed. On AMD: ROCm is required. On Apple Silicon: Metal is used automatically. Go to Settings → GPU in LM Studio to verify GPU is detected and layers are offloaded.' },
-            { q: 'What is the difference between Q4_K_M and Q5_K_M in LM Studio?', a: 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with ~1% quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.' },
+            { q: 'What is the difference between Q4_K_M and Q5_K_M in LM Studio?', a: 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with a small, model-dependent quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.' },
           ],
         },
         nextSteps: {
@@ -365,7 +365,7 @@ schema: {
             'name': 'What is the difference between Q4_K_M and Q5_K_M in LM Studio?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with ~1% quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.',
+              'text': 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with a small, model-dependent quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.',
             },
           },
         ]
@@ -447,7 +447,7 @@ schema: {
           content: [
             '**LM Studio es una aplicación de escritorio para ejecutar LLMs locales.** Proporciona un navegador gráfico de modelos, una interfaz de chat integrada y un servidor de API local, todo en una sola app. Internamente usa llama.cpp para la inferencia, el mismo motor que impulsa [Ollama](/es/local-llms/how-to-install-ollama).',
             'La diferencia clave con Ollama es que LM Studio es completamente visual. Exploras y descargas modelos desde la interfaz de la app, inicias chats con un clic y ajustas la configuración con controles deslizantes en lugar de archivos de configuración.',
-            'LM Studio es gratuito para uso personal y laboral desde julio de 2025. Lo desarrolla Element Labs, Inc. A partir de 2026, admite aceleración NVIDIA CUDA, AMD ROCm y Apple Metal.',
+            'Según el fabricante (lmstudio.ai/blog/free-for-work), LM Studio es gratuito para uso personal y laboral desde julio de 2025. Lo desarrolla Element Labs, Inc. A partir de 2026, admite aceleración NVIDIA CUDA, AMD ROCm y Apple Metal.',
           ],
         },
         requirements: {
@@ -486,7 +486,7 @@ schema: {
             'Haz clic en la flecha de descarga. El progreso se muestra en la pestaña Downloads.',
           ],
           image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
-          imageCaption: 'Guía de cuantización según la RAM en LM Studio: 8 GB de RAM admite Q4_K_M (~4,5 GB, ~1% de pérdida de calidad); 16 GB de RAM admite Q5_K_M o Q6_K (~5,7-6,5 GB, casi sin pérdida) con margen para contexto de 8K+ tokens.',
+          imageCaption: 'Guía de cuantización según la RAM en LM Studio: 8 GB de RAM admite Q4_K_M (~4,5 GB, pequeña pérdida de calidad según el modelo); 16 GB de RAM admite Q5_K_M o Q6_K (~5,7-6,5 GB, casi sin pérdida) con margen para contexto de 8K+ tokens.',
         },
         firstChat: {
           id: 'start-chatting',
@@ -542,8 +542,8 @@ schema: {
           id: 'troubleshooting',
           title: 'Solución de problemas comunes en LM Studio',
           faqs: [
-            { q: '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?', a: 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 22.04 o equivalente; se recomienda Ubuntu 24.04.' },
-            { q: '¿Dónde está el .exe de LM Studio para Windows?', a: 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\\\LM-Studio y no pide permisos de administrador.' },
+            { q: '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?', a: 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 20.04 o posterior; se recomienda Ubuntu 22.04.' },
+            { q: '¿Dónde está el .exe de LM Studio para Windows?', a: 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\LM-Studio.' },
             { q: '¿Cómo instalo LM Studio en Mac?', a: 'Descarga el archivo .dmg desde lmstudio.ai, ábrelo y arrastra LM Studio a la carpeta Aplicaciones. La primera vez que lo abras, macOS mostrará un aviso de seguridad: apruébalo en Preferencias del Sistema → Privacidad y Seguridad. Se requiere macOS 14.0 o posterior.' },
             { q: '¿Se llama LM Studio o LLM Studio?', a: 'El nombre correcto es LM Studio, sin la segunda L. "LLM Studio", "LMStudio" y "LM Estudio" son variantes que mucha gente escribe al buscarlo, pero el producto y su web oficial son LM Studio ([lmstudio.ai](https://lmstudio.ai)). Si buscas el instalador con otro nombre puede que no llegues a la descarga oficial, así que conviene comprobar el dominio antes de descargar nada.' },
             { q: 'LM Studio muestra "Not enough memory to load model"', a: 'El modelo requiere más RAM de la disponible. Cierra otras aplicaciones para liberar memoria o selecciona una cuantización menor (Q3_K_S en lugar de Q4_K_M). Como regla general: multiplica el tamaño del archivo del modelo por 1.2 para estimar la RAM necesaria. Un archivo de 4.5 GB necesita ~5.4 GB de RAM libre.' },
@@ -557,7 +557,7 @@ schema: {
             { q: '¿LM Studio incluye una API compatible con OpenAI?', a: 'Sí. Activa la pestaña Local Server en LM Studio para iniciar una API compatible con OpenAI en http://localhost:1234. Cualquier app con el SDK de OpenAI puede conectarse usando esta URL como base_url.' },
             { q: '¿En qué se diferencia LM Studio de Ollama?', a: 'LM Studio prioriza la interfaz gráfica: explora modelos, gestiona ajustes y chatea desde una interfaz visual. Ollama prioriza la línea de comandos: configuración más rápida para desarrolladores, pero requiere comandos de terminal. Ambos usan llama.cpp internamente.' },
             { q: '¿Puedo usar LM Studio en Linux?', a: 'Sí. Descarga el archivo .AppImage desde lmstudio.ai. Hazlo ejecutable: chmod +x LM-Studio-*.AppImage y ejecútalo. No se necesita instalación en el sistema -- funciona como app portátil.' },
-            { q: '¿LM Studio es gratuito?', a: 'LM Studio es gratuito para uso personal y laboral desde julio de 2025. Lo desarrolla Element Labs, Inc.; solo el nivel Enterprise/Teams, aparte, es de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.' },
+            { q: '¿LM Studio es gratuito?', a: 'Según el fabricante (lmstudio.ai/blog/free-for-work), LM Studio es gratuito para uso personal y laboral desde julio de 2025. Lo desarrolla Element Labs, Inc.; solo el nivel Enterprise/Teams, aparte, es de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.' },
             { q: '¿Cómo activo la aceleración GPU en LM Studio?', a: 'En NVIDIA: asegúrate de tener los drivers CUDA instalados. En AMD: se requiere ROCm. En Apple Silicon: Metal se usa automáticamente. Ve a Configuración → GPU en LM Studio para verificar que la GPU está detectada y que las capas se están descargando.' },
             { q: '¿Cuál es la diferencia entre Q4_K_M y Q5_K_M en LM Studio?', a: 'Q4_K_M usa cuantización de 4 bits (~4.5 GB para 7B) con una pérdida de calidad de ~1%. Q5_K_M usa 5 bits (~5.7 GB) con pérdida mínima. Usa Q4_K_M para 8 GB de RAM; Q5_K_M o Q6_K para sistemas con 16 GB de RAM.' },
           ],
@@ -627,7 +627,7 @@ schema: {
             'name': '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 22.04 o equivalente; se recomienda Ubuntu 24.04.',
+              'text': 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 20.04 o posterior; se recomienda Ubuntu 22.04.',
             },
           },
           {
@@ -635,7 +635,7 @@ schema: {
             'name': '¿Dónde está el .exe de LM Studio para Windows?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\\\LM-Studio y no pide permisos de administrador.',
+              'text': 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\LM-Studio.',
             },
           },
           {
@@ -747,7 +747,7 @@ schema: {
             'name': '¿LM Studio es gratuito?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LM Studio es gratuito para uso personal y laboral desde julio de 2025. Lo desarrolla Element Labs, Inc.; solo el nivel Enterprise/Teams, aparte, es de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.',
+              'text': 'Según el fabricante (lmstudio.ai/blog/free-for-work), LM Studio es gratuito para uso personal y laboral desde julio de 2025. Lo desarrolla Element Labs, Inc.; solo el nivel Enterprise/Teams, aparte, es de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.',
             },
           },
           {
@@ -993,7 +993,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ar/local-llms/how-to-install-lm-studio',
-        'headline': 'تثبيت LM Studio: إعداد الواجهة الرسومية لـ macOS و Windows و Linux',
+        'headline': 'تثبيت ⁨LM Studio⁩: إعداد الواجهة الرسومية لـ ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
         'description': 'ثبّت LM Studio على macOS أو Windows أو Linux: نزّل نموذجًا وابدأ المحادثة خلال 5 دقائق. دون طرفية. دليل للمبتدئين 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-11-14',
@@ -2507,7 +2507,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'LM Studioのインストール：macOS、Windows、Linuxのためのデスクトップアプリセットアップガイド',
+        'headline': 'LM Studio のインストール方法：macOS・Windows・Linux 向けデスクトップアプリ設定ガイド',
         'description': 'LM Studioのステップバイステップインストールおよびはじめてのモデルセットアップ。チャットUIおよびOpenAI互換ローカルサーバーを備えたGUI駆動ローカルLLMランナー。',
         'url': 'https://www.promptquorum.com/ja/local-llms/how-to-install-lm-studio',
         'datePublished': '2026-04-04',
