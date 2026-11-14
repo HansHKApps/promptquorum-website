@@ -235,6 +235,7 @@ https://www.promptquorum.com/local-llms/what-are-local-llms
 https://www.promptquorum.com/local-llms/why-enterprises-use-local-llms
 https://www.promptquorum.com/local-llms/xinference-llama-qwen-chatglm-mistral
 https://www.promptquorum.com/mcp-stats
+https://www.promptquorum.com/partners
 https://www.promptquorum.com/power-local-llm
 https://www.promptquorum.com/power-local-llm/acdsee-photo-studio-ultimate-review
 https://www.promptquorum.com/power-local-llm/agent-zero-review
