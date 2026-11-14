@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'fit',
         title: '向いている人と見送るべき人',
         content:
-          '**DGX Sparkは、CUDAやNVIDIAのAIソフトウェア、70Bパラメータまでのファインチューニング、2台クラスタを必要とし、Linuxで作業できる開発者に向いています。** Windowsや1GBあたりの最安価格、汎用PCを求める人には不向きです。メモリ容量別にGPU、Mac、他のミニPCと比べるには、[ローカルLLMのハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)をご覧ください。',
+          '**DGX Sparkは、CUDAやNVIDIAのAIソフトウェア、70Bパラメータまでのファインチューニング、2台クラスタを必要とし、Linuxで作業できる開発者に向いています。** Windowsや1GBあたりの最安価格、汎用PCを求める人には、あまり向きません。メモリ容量別にGPU、Mac、他のミニPCと比べるには、[ローカルLLMのハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)をご覧ください。',
         items: [
           'ワークフローがCUDAやNVIDIAのAIソフトウェアに依存しており、Linuxで作業できるなら選んでください。',
           '大きなモデルのために、200Gbpsポートで2台を接続する予定があるなら選んでください。',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '同じクラスの代替機',
         items: [
-          '[Ryzen AI Halo](/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation): AMD自身の128GB開発者向けプラットフォーム。Windows 11 ProまたはLinuxに対応しますが、10GbEポートは1つで、StorageReviewのサービングテストでは低速でした。',
+          '[Ryzen AI Halo](/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation): AMD自身の128GB開発者向けプラットフォーム。Windows 11 ProまたはLinuxに対応しますが、10GbEポートは1つで、StorageReviewのサービングテストではDGX Sparkより低速でした。',
           '[Framework Desktop](/ja/local-llms/framework-desktop-local-ai-workstation): FrameworkとPhoronixによると、4.5Lの筐体で192GB構成を予約受付中。バッチの状況は同ページに記載しています。',
           '[Minisforum MS-S1 MAX](/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation): Minisforumストアによると、128GBでデュアル10GbEとPCIe x16スロットを備えます（レビューによれば電気的にはx4）。',
           '[ローカルAIワークステーション: Strix Halo vs. DGX Spark](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): このクラスの全機種を比較したカテゴリページ。',

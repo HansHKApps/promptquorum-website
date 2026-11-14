@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'Open LM Studio\'s built-in model search, browse or search Hugging Face models directly from the app, and download one sized for your hardware. Once the download finishes, open a new chat and start talking to the model — the entire workflow happens inside the GUI with no command-line step at any point.',
           },
           {
-            title: 'Chat with your own documents fully offline',
+            title: 'Chat with your own documents offline (per the vendor\'s documentation)',
             content: 'Start a new chat, attach a PDF or text document using the built-in "Chat with Documents" feature, and ask questions about its content. Per LM Studio\'s own documentation, this runs entirely offline once the document is loaded — no cloud upload or internet connection is needed for the query itself.',
           },
           {
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'Öffnen Sie LM Studios integrierte Modellsuche, durchsuchen Sie Hugging-Face-Modelle direkt aus der App heraus und laden Sie ein für Ihre Hardware passend dimensioniertes Modell herunter. Nach Abschluss des Downloads öffnen Sie einen neuen Chat und beginnen zu chatten — der gesamte Workflow findet innerhalb der GUI statt, ohne jemals einen Kommandozeilen-Schritt.',
           },
           {
-            title: 'Vollständig offline mit eigenen Dokumenten chatten',
+            title: 'Mit eigenen Dokumenten offline chatten (laut Herstellerdokumentation)',
             content: 'Starten Sie einen neuen Chat, hängen Sie über die integrierte "Chat with Documents"-Funktion ein PDF oder Textdokument an und stellen Sie Fragen zu dessen Inhalt. Laut LM Studios eigener Dokumentation läuft dies vollständig offline, sobald das Dokument geladen ist — kein Cloud-Upload oder Internetverbindung für die Abfrage selbst nötig.',
           },
           {
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'Ouvrez la recherche de modèles intégrée de LM Studio, parcourez ou recherchez des modèles Hugging Face directement depuis l\'application, et téléchargez-en un dimensionné pour votre matériel. Une fois le téléchargement terminé, ouvrez un nouveau chat et commencez à discuter avec le modèle — l\'ensemble du flux de travail se déroule à l\'intérieur de l\'interface graphique, sans aucune étape en ligne de commande.',
           },
           {
-            title: 'Discuter avec vos propres documents entièrement hors ligne',
+            title: 'Discuter avec vos propres documents hors ligne (selon la documentation du fournisseur)',
             content: 'Démarrez un nouveau chat, attachez un PDF ou un document texte via la fonctionnalité intégrée « Chat with Documents », et posez des questions sur son contenu. Selon la propre documentation de LM Studio, cela fonctionne entièrement hors ligne une fois le document chargé — aucun téléversement dans le cloud ni connexion internet n\'est nécessaire pour la requête elle-même.',
           },
           {
@@ -1151,7 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'Abra la búsqueda de modelos integrada de LM Studio, explore o busque modelos de Hugging Face directamente desde la aplicación, y descargue uno adecuado para su hardware. Una vez completada la descarga, abra un nuevo chat y comience a hablar con el modelo — todo el flujo de trabajo ocurre dentro de la GUI sin ningún paso de línea de comandos.',
           },
           {
-            title: 'Chatear con sus propios documentos completamente sin conexión',
+            title: 'Chatear con tus propios documentos sin conexión (según la documentación del proveedor)',
             content: 'Inicie un nuevo chat, adjunte un PDF o documento de texto mediante la función integrada "Chat with Documents", y haga preguntas sobre su contenido. Según la propia documentación de LM Studio, esto funciona completamente sin conexión una vez cargado el documento — no se necesita subida a la nube ni conexión a internet para la consulta en sí.',
           },
           {
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'Abra a busca de modelos integrada do LM Studio, navegue ou busque modelos do Hugging Face diretamente do aplicativo, e baixe um adequado ao seu hardware. Após a conclusão do download, abra um novo chat e comece a conversar com o modelo — todo o fluxo de trabalho acontece dentro da GUI, sem nenhuma etapa de linha de comando.',
           },
           {
-            title: 'Conversar com seus próprios documentos inteiramente offline',
+            title: 'Conversar com seus próprios documentos offline (segundo a documentação do fabricante)',
             content: 'Inicie um novo chat, anexe um PDF ou documento de texto usando o recurso integrado "Chat with Documents", e faça perguntas sobre seu conteúdo. Segundo a própria documentação do LM Studio, isso funciona inteiramente offline depois que o documento é carregado — nenhum upload para a nuvem ou conexão com a internet é necessário para a consulta em si.',
           },
           {
@@ -1805,7 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'LM Studioの組み込みモデル検索を開き、アプリから直接Hugging Faceのモデルを閲覧または検索し、自分のハードウェアに合ったサイズのモデルをダウンロードします。ダウンロードが完了したら新しいチャットを開き、モデルと話し始めます——ワークフロー全体がGUI内で完結し、コマンドラインの手順は一切ありません。',
           },
           {
-            title: '自分のドキュメントと完全にオフラインでチャットする',
+            title: '自分のドキュメントとオフラインでチャットする（ベンダーのドキュメントによる）',
             content: '新しいチャットを開始し、組み込みの「Chat with Documents」機能を使ってPDFやテキストドキュメントを添付し、その内容について質問します。LM Studio自身のドキュメントによれば、ドキュメントが読み込まれた後は完全にオフラインで動作します——照会自体にクラウドへのアップロードやインターネット接続は不要です。',
           },
           {
@@ -2132,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: '打开LM Studio内置的模型搜索，直接从应用中浏览或搜索Hugging Face模型，并下载一个适合您硬件的模型。下载完成后，打开一个新聊天并开始与模型对话——整个工作流都在GUI内完成，没有任何命令行步骤。',
           },
           {
-            title: '完全离线地与自己的文档聊天',
+            title: '离线与自己的文档聊天（据厂商文档）',
             content: '开始一个新聊天，使用内置的"Chat with Documents"功能附加一份PDF或文本文档，并就其内容提问。根据LM Studio自己的文档，文档加载后这一过程完全离线运行——查询本身无需上传到云端或联网。',
           },
           {
@@ -2459,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'LM Studio의 내장 모델 검색을 열고, 앱에서 직접 Hugging Face 모델을 탐색하거나 검색한 다음, 자신의 하드웨어에 맞는 크기의 모델을 다운로드합니다. 다운로드가 완료되면 새 채팅을 열고 모델과 대화를 시작합니다 — 전체 워크플로는 명령줄 단계 없이 GUI 안에서 이루어집니다.',
           },
           {
-            title: '자신의 문서와 완전히 오프라인으로 채팅하기',
+            title: '자신의 문서와 오프라인으로 채팅하기(공급업체 문서 기준)',
             content: '새 채팅을 시작하고, 내장된 "Chat with Documents" 기능을 사용하여 PDF나 텍스트 문서를 첨부한 다음, 그 내용에 대해 질문합니다. LM Studio 자체 문서에 따르면, 문서가 로드된 후에는 완전히 오프라인으로 작동합니다 — 질의 자체에는 클라우드 업로드나 인터넷 연결이 필요하지 않습니다.',
           },
           {
@@ -2786,7 +2786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             content: 'افتح بحث النماذج المدمج في LM Studio، وتصفّح أو ابحث عن نماذج Hugging Face مباشرةً من داخل التطبيق، ثم نزّل نموذجًا يناسب حجمه عتادك. بعد اكتمال التنزيل، افتح محادثة جديدة وابدأ الدردشة مع النموذج — يحدث سير العمل بأكمله داخل الواجهة الرسومية دون أي خطوة في سطر الأوامر.',
           },
           {
-            title: 'الدردشة مع مستنداتك الخاصة دون اتصال بالإنترنت بالكامل',
+            title: 'الدردشة مع مستنداتك دون اتصال بالإنترنت (وفق وثائق الجهة المطورة)',
             content: 'ابدأ محادثة جديدة، وأرفق ملف PDF أو مستندًا نصيًا باستخدام ميزة "Chat with Documents" المدمجة، واطرح أسئلة حول محتواه. وفقًا لوثائق LM Studio نفسها، يعمل هذا دون اتصال بالإنترنت بالكامل بمجرد تحميل المستند — لا حاجة إلى رفع البيانات إلى السحابة أو اتصال بالإنترنت للاستعلام نفسه.',
           },
           {
