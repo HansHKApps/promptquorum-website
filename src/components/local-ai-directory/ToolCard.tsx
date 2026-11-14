@@ -25,6 +25,7 @@ import { handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
+import { HqFlag } from './HqFlag'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 import { platformLabel } from './platformLabels'
@@ -204,7 +205,10 @@ export function ToolCard({
             {app.name.charAt(0).toUpperCase()}
           </span>
           <div className="min-w-0 flex-1">
-            <h3 className="text-base font-bold text-text-primary leading-snug truncate" title={app.name}>{app.name}</h3>
+            <div className="flex items-center gap-1.5 min-w-0">
+              <h3 className="text-base font-bold text-text-primary leading-snug truncate" title={app.name}>{app.name}</h3>
+              <HqFlag app={app} lang={lang} />
+            </div>
             <span className={`inline-block mt-1 rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${accent.chip}`}>
               {categoryLabel}
             </span>

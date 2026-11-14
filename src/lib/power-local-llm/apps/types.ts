@@ -173,6 +173,16 @@ export interface ToolRecord {
   installOn?: OSKey[]
   installEvidence?: string
   tagline: Partial<Record<Language, string>>
+  // Country of the company/maintainer HQ behind the app, as an UPPERCASE ISO 3166-1 alpha-2 code ("US", "DE").
+  // Set ONLY when it is clear from a primary source (company imprint/about page, registered address, the
+  // maintainer's own statement); the source URL goes in `hqCountrySource`. Never guess it from the domain
+  // TLD, the founder's name or the language of the site. Unclear (no company, anonymous or spread-out
+  // community project) = leave both unset: no flag is shown. Unset means "not clear/not researched", never
+  // "no country". Rendered as a small flag next to the name (components/local-ai-directory/HqFlag.tsx);
+  // `public/flags/<code>.svg` must exist (add with `npm run add-flag -- <code>`), enforced by
+  // validate-local-ai-apps. Owner rule 2026-11-14: new apps get it at intake; old tiles are cleaned up later.
+  hqCountry?: string
+  hqCountrySource?: string // URL the country was read from
   founder?: ToolRecordFounder
   // ISO 8601 date the founder/maintainer reviewed THIS entry's technical specs and
   // description for accuracy. Distinct from `founder` (a founder-authored quote) —
