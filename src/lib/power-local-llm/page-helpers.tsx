@@ -906,6 +906,7 @@ const HUB_THEMES: Array<{
       'lm-studio-review',
       'sidekick-review',
       'lastbrowser-review',
+      'browseros-review',
     ],
   },
   {

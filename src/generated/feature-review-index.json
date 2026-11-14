@@ -209,6 +209,11 @@
     "urlSlug": "lastbrowser-review",
     "url": "/power-local-llm/lastbrowser-review"
   },
+  "browseros": {
+    "cluster": "power-local-llm",
+    "urlSlug": "browseros-review",
+    "url": "/power-local-llm/browseros-review"
+  },
   "chatbox": {
     "cluster": "local-llms",
     "urlSlug": "chatbox-review",

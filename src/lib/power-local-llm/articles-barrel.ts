@@ -456,6 +456,7 @@ import { article as a_surf_review } from './articles/surf-review'
 import { article as a_claude_code_local_review } from './articles/claude-code-local-review'
 import { article as a_sidekick_review } from './articles/sidekick-review'
 import { article as a_lastbrowser_review } from './articles/lastbrowser-review'
+import { article as a_browseros_review } from './articles/browseros-review'
 import { article as a_lucebox_review } from './articles/lucebox-review'
 import { article as a_little_coder_review } from './articles/little-coder-review'
 import { article as a_translate_books_with_llms_review } from './articles/translate-books-with-llms-review'
@@ -970,6 +971,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'claude-code-local-review':                            a_claude_code_local_review,
   'sidekick-review':                                     a_sidekick_review,
   'lastbrowser-review':                                  a_lastbrowser_review,
+  'browseros-review':                                    a_browseros_review,
   'lucebox-review':                                      a_lucebox_review,
   'little-coder-review':                                 a_little_coder_review,
   'translate-books-with-llms-review':                    a_translate_books_with_llms_review,
