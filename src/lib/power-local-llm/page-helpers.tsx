@@ -1191,6 +1191,7 @@ const HUB_THEMES: Array<{
       'wechat-local-llm-integration-2026',
       'khoj-ai-second-brain-review',
       'dayflow-review',
+      'ai-notebook-review',
       'obsidian-logseq-ai-plugins',
       'second-me-review',
       'cognira-review',
