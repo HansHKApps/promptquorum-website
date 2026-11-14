@@ -11,6 +11,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-notebook-review",
+        "title": "AI Notebook Review: Free Open-Source NotebookLM Alternative",
+        "url": "/power-local-llm/ai-notebook-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -30,14 +46,6 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dayflow-review",
-        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
-        "url": "/power-local-llm/dayflow-review",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -67,22 +75,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-11-10",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-09",
+        "slug": "uncensored-llm-models",
+        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+        "url": "/power-local-llm/uncensored-llm-models",
+        "dateModified": "2026-11-13",
         "tier": "about"
       }
     ],
-    "totalCount": 351,
+    "totalCount": 353,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 189,
+    "totalCount": 190,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 104,
+    "totalCount": 105,
     "capped": true
   },
   "LocalAI": {
@@ -722,7 +722,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Llamafile": {
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -888,14 +896,6 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dayflow-review",
-        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
-        "url": "/power-local-llm/dayflow-review",
         "dateModified": "2026-11-13",
         "tier": "about"
       },
@@ -925,30 +925,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "uncensored-llm-models",
+        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+        "url": "/power-local-llm/uncensored-llm-models",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
         "dateModified": "2026-11-11",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-11-10",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
-    "totalCount": 175,
+    "totalCount": 177,
     "capped": true
   },
   "Atomic Chat": {
@@ -1260,7 +1260,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 45,
+    "totalCount": 46,
     "capped": true
   },
   "Msty": {
@@ -1330,23 +1330,23 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-llm-models",
+        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+        "url": "/power-local-llm/uncensored-llm-models",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "odysseus-review",
-        "title": "Odysseus Review: The Self-Hosted AI Workspace",
-        "url": "/power-local-llm/odysseus-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Cherry Studio": {
@@ -1722,7 +1722,7 @@
         "slug": "uncensored-local-llm-creative-writing-ethics",
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -2192,7 +2192,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 60,
+    "totalCount": 62,
     "capped": true
   },
   "LibreChat": {
@@ -2316,6 +2316,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-llm-models",
+        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+        "url": "/power-local-llm/uncensored-llm-models",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
@@ -2354,17 +2362,9 @@
         "url": "/power-local-llm/exllamav2-explained",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "twinny-review",
-        "title": "Twinny Review: Archived by Its Maker, Still Open Source",
-        "url": "/power-local-llm/twinny-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "SillyTavern": {
@@ -2375,6 +2375,14 @@
         "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
         "url": "/local-llms/sillytavern-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -2399,14 +2407,6 @@
         "title": "Castmates Review: Offline AI Character Chat for iPhone",
         "url": "/power-local-llm/castmates-review",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
         "tier": "about"
       },
       {
@@ -2450,7 +2450,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "LobeHub": {
@@ -2898,7 +2898,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 46,
+    "totalCount": 47,
     "capped": true
   },
   "Atlarix": {
@@ -3372,15 +3372,15 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-09",
+        "cluster": "power-local-llm",
+        "slug": "uncensored-llm-models",
+        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+        "url": "/power-local-llm/uncensored-llm-models",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 39,
     "capped": true
   },
   "ShellGPT": {
@@ -8096,7 +8096,7 @@
         "slug": "uncensored-local-llm-creative-writing-ethics",
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -8243,10 +8243,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-11-06",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -9213,14 +9213,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "spiritbox-ultimate-review",
-        "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
-        "url": "/power-local-llm/spiritbox-ultimate-review",
-        "dateModified": "2026-10-16",
+        "slug": "uncensored-llm-models",
+        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
+        "url": "/power-local-llm/uncensored-llm-models",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Docker Model Runner": {
@@ -12555,6 +12555,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-notebook-review",
+        "title": "AI Notebook Review: Free Open-Source NotebookLM Alternative",
+        "url": "/power-local-llm/ai-notebook-review",
+        "dateModified": "2026-11-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dayflow-review",
+        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
+        "url": "/power-local-llm/dayflow-review",
+        "dateModified": "2026-11-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -12574,14 +12590,6 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dayflow-review",
-        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
-        "url": "/power-local-llm/dayflow-review",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
@@ -12616,17 +12624,9 @@
         "url": "/power-local-llm/ollama-review",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "phantasm-review",
-        "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
-        "url": "/power-local-llm/phantasm-review",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 257,
+    "totalCount": 258,
     "capped": true
   },
   "Qdrant": {
@@ -14468,11 +14468,33 @@
         "slug": "dayflow-review",
         "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
         "url": "/power-local-llm/dayflow-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-14",
         "tier": "about"
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "AI Notebook": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-notebook-review",
+        "title": "AI Notebook Review: Free Open-Source NotebookLM Alternative",
+        "url": "/power-local-llm/ai-notebook-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "surf-review",
+        "title": "Surf Review: Deta's Open-Source AI Notebook",
+        "url": "/power-local-llm/surf-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
     "capped": false
   },
   "Univocal": {

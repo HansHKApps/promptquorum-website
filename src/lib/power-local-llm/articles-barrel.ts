@@ -66,6 +66,7 @@ import { article as a_amical_review } from './articles/amical-review'
 import { article as a_argos_translate_review } from './articles/argos-translate-review'
 import { article as a_linguister_review } from './articles/linguister-review'
 import { article as a_dayflow_review } from './articles/dayflow-review'
+import { article as a_ai_notebook_review } from './articles/ai-notebook-review'
 import { article as a_univocal_review } from './articles/univocal-review'
 import { article as a_stratosort_review } from './articles/stratosort-review'
 import { article as a_sprich_review } from './articles/sprich-review'
@@ -784,6 +785,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'argos-translate-review':                        a_argos_translate_review,
   'linguister-review':                             a_linguister_review,
   'dayflow-review':                                a_dayflow_review,
+  'ai-notebook-review':                            a_ai_notebook_review,
   'univocal-review':                               a_univocal_review,
   'stratosort-review':                             a_stratosort_review,
   'sprich-review':                                 a_sprich_review,

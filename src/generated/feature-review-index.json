@@ -1734,6 +1734,11 @@
     "urlSlug": "dayflow-review",
     "url": "/power-local-llm/dayflow-review"
   },
+  "ai-notebook": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ai-notebook-review",
+    "url": "/power-local-llm/ai-notebook-review"
+  },
   "univocal": {
     "cluster": "power-local-llm",
     "urlSlug": "univocal-review",

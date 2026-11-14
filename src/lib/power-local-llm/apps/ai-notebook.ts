@@ -48,6 +48,12 @@ export const app: ToolRecord = {
   },
   // Comparison attributes (personal-assistants segment): taken from the README on 2026-11-14; a missing key = not stated, never false.
   compare: { localLlm: true, multiFormat: true, desktopApp: true },
+  reviewSlug: 'ai-notebook-review',
+  pqReview: {
+    date: '2026-11-14',
+    version: '0.15.0',
+    versionSourceUrl: 'https://github.com/lukoplt/AI-notebook/releases/latest',
+  },
   verdict: 'Best for Mac or Windows users who want a free, open-source, NotebookLM-style notebook over their own files and are willing to run Ollama to keep it offline; limited by its early 0.x stage, unsigned installers, no OCR for scanned PDFs, and privacy and answer-quality claims PromptQuorum did not test.',
   lastVerifiedDate: '2026-11-14',
   lastUpstreamUpdate: '2026-10-14', // GitHub: release v0.15.0 (2026-10-12) and last push to main (2026-10-14T18:11:26Z); read 2026-11-14
