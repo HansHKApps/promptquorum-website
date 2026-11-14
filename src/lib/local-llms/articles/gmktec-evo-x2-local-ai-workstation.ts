@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -16,14 +16,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-en.webp',
-    title: 'GMKtec EVO-X2 for Local AI: Specs, Price and Verdict',
-    seoTitle: 'GMKtec EVO-X2 for Local AI: Specs, Price and Verdict',
+    title: 'GMKtec EVO-X2 Specs and Price: 128 GB at $3,499.99',
+    seoTitle: 'GMKtec EVO-X2 Specs and Price: 128 GB at $3,499.99',
     intro:
-      'The GMKtec EVO-X2 is a mini PC built around the AMD Ryzen AI Max+ 395 with up to 128 GB of soldered LPDDR5X-8000, launched in April 2025 according to Notebookcheck. GMKtec\'s own store and third-party reports disagree widely on its US price, so this page lists each figure with its source instead of picking one. PromptQuorum has not tested this machine; the page rests on the vendor specification and third-party reports.',
+      'The GMKtec EVO-X2 is a mini PC with an AMD Ryzen AI Max+ 395 and up to 128 GB of soldered LPDDR5X-8000. On GMKtec\'s US store on 2026-11-14 the 64 GB / 1 TB model costs $2,199.99 and the 128 GB models cost $3,499.99 (1 TB) or $3,649.99 (2 TB), each shown against a higher regular price. PromptQuorum has not tested this machine; the page rests on the vendor specification and third-party reports.',
     metaDescription:
-      'GMKtec EVO-X2 with Ryzen AI Max+ 395 and 128 GB: verified specs, conflicting US prices with sources, third-party findings and who should skip it.',
+      'GMKtec EVO-X2 with Ryzen AI Max+ 395: $2,199.99 for 64 GB, $3,499.99 to $3,649.99 for 128 GB on GMKtec\'s US store, plus full specs and alternatives.',
     twitterDescription:
-      'GMKtec EVO-X2 for local AI: Ryzen AI Max+ 395, up to 128 GB, verified specs and conflicting US prices with sources. Spec-and-evidence page, not a hands-on test.',
+      'GMKtec EVO-X2 for local AI: Ryzen AI Max+ 395, 64 GB at $2,199.99 and 128 GB at $3,499.99 to $3,649.99 on GMKtec\'s US store, with specs. Not a hands-on test.',
     readTime: '8 min read',
     educationalLevel: 'Intermediate',
     audience: 'Buyers weighing a GMKtec EVO-X2 against other 128 GB Ryzen AI Max+ 395 local AI workstations',
@@ -36,16 +36,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec evo x2 price',
     ],
     leadAnswerBlock:
-      '**The GMKtec EVO-X2 is a compact Ryzen AI Max+ 395 mini PC with up to 128 GB of unified memory for people who want a 100B-class local model box without a workstation vendor\'s support.** The decisive caveat is price: GMKtec\'s own page and Amazon-based reports differ by well over $1,000 for similar 128 GB configurations, so check the live listing before ordering.',
+      '**The GMKtec EVO-X2 is a Ryzen AI Max+ 395 mini PC that GMKtec\'s US store lists at $2,199.99 with 64 GB and $3,499.99 to $3,649.99 with 128 GB (read 2026-11-14).** Memory is soldered, so choose the size at purchase; it suits buyers who want a 100B-class local model box without a workstation vendor\'s support.',
     quickAnswerTop: {
       en: {
         question: 'Is the GMKtec EVO-X2 a good local AI workstation?',
         answer:
-          'It uses the same Ryzen AI Max+ 395 and 128 GB memory option as other Strix Halo boxes, so it competes on price, cooling and support rather than raw capability. No independent source we could read measured its LLM speed, and its US price is reported inconsistently, so verify the live price first.',
+          'It uses the same Ryzen AI Max+ 395 and 128 GB memory option as other Strix Halo boxes, so it competes on price, cooling and support rather than raw capability. GMKtec\'s US store lists it from $2,199.99 (64 GB) to $3,649.99 (128 GB / 2 TB); no independent source we could read measured its LLM speed.',
         bullets: [
           'Chip: Ryzen AI Max+ 395, Radeon 8060S, LPDDR5X-8000 (GMKtec)',
           'Memory: 64 GB or 128 GB, soldered and not upgradeable',
-          'US price: $2,199.99 sale on GMKtec\'s page (sold out) versus about $3,649 reported elsewhere',
+          'US price (GMKtec store, 2026-11-14): $2,199.99 for 64 GB, $3,499.99 to $3,649.99 for 128 GB',
           'Not hands-on tested by PromptQuorum',
         ],
         updatedDate: '2026-11',
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Sources', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'The GMKtec EVO-X2 is a mini PC with an AMD Ryzen AI Max+ 395 and up to 128 GB of unified memory whose US price is reported inconsistently across sources.' },
+      { type: 'one-sentence', content: 'The GMKtec EVO-X2 is a mini PC with an AMD Ryzen AI Max+ 395 and up to 128 GB of unified memory, listed at $2,199.99 to $3,649.99 on GMKtec\'s US store.' },
       { type: 'plain-terms', content: 'This page rests on GMKtec\'s specification and on third-party reports; PromptQuorum has not tested the machine. Unified memory means the processor and graphics share one pool of RAM, so large models can load even though the speed they run at depends on memory bandwidth and software.' },
     ],
     sections: {
@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Platform: Ryzen AI Max+ 395 with Radeon 8060S and soldered LPDDR5X-8000 in 64 GB or 128 GB, the same chip as other Strix Halo mini PCs.',
-          'Price: GMKtec\'s own page and a July 2026 Notebookcheck report on Amazon disagree for 128 GB / 2 TB; the price table lists both with sources.',
+          'Price: GMKtec\'s US store lists $2,199.99 (64 GB / 1 TB), $3,499.99 (128 GB / 1 TB) and $3,649.99 (128 GB / 2 TB) on 2026-11-14; Notebookcheck\'s July 2026 Amazon figure of $3,649 is close to the last one.',
           'Evidence gap: the independent reviews we could read cover the 64 GB unit, and the only EVO-X2 versus DGX Spark comparison was run by GMKtec itself.',
           'Trade-offs: a single 2.5G Ethernet port and USB4 rather than a fast cluster fabric, and an external 230 W power adapter.',
           'Maintenance: Notebookcheck\'s review criticised limited fan control and more complicated maintenance.',
@@ -116,16 +116,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Price and Availability',
         itemHeadings: true,
         content:
-          '**US prices for the same 128 GB machine conflict by more than $1,000 across sources, so none of the figures below should be treated as the current price.** Memory costs have moved prices repeatedly in 2026; open the live listing before ordering.',
+          '**GMKtec\'s US store lists the EVO-X2 at $2,199.99 for 64 GB and $3,499.99 to $3,649.99 for 128 GB, each shown as a discount from a higher regular price.** The figures were read from the store\'s product data on 2026-11-14, and all US variants were flagged as available then. Prices change often, so check the live listing before ordering.',
         columns: ['Configuration', 'US price', 'Source and date', 'Status'],
         rows: [
-          { 'Configuration': '128 GB / 2 TB', 'US price': '$2,199.99 sale ($2,599.99 regular)', 'Source and date': '[GMKtec product page](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), read 2026-10-31', 'Status': 'Shown on the page; all variants marked sold out or unavailable' },
-          { 'Configuration': '128 GB / 2 TB', 'US price': '$3,649', 'Source and date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Amazon listing at time of writing, per Notebookcheck' },
-          { 'Configuration': '128 GB / 1 TB', 'US price': '$150 below the 2 TB model (no figure given)', 'Source and date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Newer lower-storage variant' },
-          { 'Configuration': '64 GB', 'US price': '$1,500 less than 128 GB', 'Source and date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Price gap stated, no absolute price' },
+          { 'Configuration': '64 GB / 1 TB', 'US price': '$2,199.99 sale ($2,599.99 regular)', 'Source and date': '[GMKtec US store](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), read 2026-11-14', 'Status': 'Flagged available by the store' },
+          { 'Configuration': '128 GB / 1 TB', 'US price': '$3,499.99 sale ($3,999.99 regular)', 'Source and date': '[GMKtec US store](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), read 2026-11-14', 'Status': 'Flagged available by the store' },
+          { 'Configuration': '128 GB / 2 TB', 'US price': '$3,649.99 sale ($3,999.99 regular)', 'Source and date': '[GMKtec US store](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), read 2026-11-14', 'Status': 'Flagged available; a Z.AI plan bundle is $3,699.99' },
+          { 'Configuration': '128 GB / 2 TB (Amazon)', 'US price': '$3,649', 'Source and date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Amazon listing at time of writing, per Notebookcheck' },
           { 'Configuration': '128 GB (launch, China)', 'US price': 'CNY 14,999 (about $2,060)', 'Source and date': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html), 2025-04-07', 'Status': 'Historic China pre-order price, not a US price' },
         ],
-        note: 'We do not know why GMKtec\'s page and the Amazon-based report differ; the page may show a promotional price that is not currently orderable. Notebookcheck\'s coupon code is not repeated here because it may have expired.',
+        note: 'We read GMKtec\'s public product data rather than the rendered page, and \'available\' is the store\'s own flag, not a stock guarantee. The $2,199.99 sale price applies to the 64 GB model, not to a 128 GB configuration. We found no verified euro price; the EU store variants list the same USD amounts in the data, so only USD is shown.',
       },
       evidence: {
         id: 'evidence',
@@ -139,6 +139,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Who It Suits and Who Should Skip It',
+        content:
+          '**The EVO-X2 fits buyers who want a 128 GB Ryzen AI Max+ 395 box at consumer-brand prices and accept limited vendor support; it does not fit teams that need 192 GB, a business sales channel or multi-box clustering.** To judge whether 64 GB or 128 GB is enough for your models, use the [local LLM hardware guide](/local-llms/local-llm-hardware-guide).',
         items: [
           '**Suits:** buyers who want the Ryzen AI Max+ 395 and 128 GB in a small Windows or Ubuntu box and will buy only after the live price checks out.',
           '**Suits:** users who accept consumer-brand support and a 1+2 year warranty in exchange for a lower possible price.',
@@ -162,6 +164,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          {
+            q: 'How much does the GMKtec EVO-X2 cost?',
+            a: 'On GMKtec\'s US store, read on 2026-11-14, the 64 GB / 1 TB model costs $2,199.99, the 128 GB / 1 TB model $3,499.99 and the 128 GB / 2 TB model $3,649.99, each shown against a higher regular price. Prices change often, so check the live listing before ordering.',
+          },
           {
             q: 'Can I upgrade the memory later?',
             a: 'No. GMKtec lists the LPDDR5X as onboard and non-upgradeable, so choose 64 GB or 128 GB at purchase. Storage can be expanded through the two M.2 slots.',
@@ -188,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Specifications, memory and storage variants, ports, warranty, $2,199.99 sale price and sold-out status.' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Specifications, memory and storage variants, ports, warranty and the US prices read on 2026-11-14.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: '128 GB / 1 TB variant, $3,649 Amazon price, $1,500 gap to 64 GB, 96 GB GPU allocation.' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: 'April 2025 launch, CNY 14,999 price, early specification.' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: 'Review of the 64 GB unit: verdict, cooling and maintenance comments.' },
@@ -200,10 +206,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'GMKtec EVO-X2 for Local AI: Specs, Price and Verdict',
-      'description': 'GMKtec EVO-X2 with Ryzen AI Max+ 395 and 128 GB: verified specs, conflicting US prices with sources, third-party findings and who should skip it.',
+      'headline': 'GMKtec EVO-X2 Specs and Price: 128 GB at $3,499.99',
+      'description': 'GMKtec EVO-X2 with Ryzen AI Max+ 395: $2,199.99 for 64 GB, $3,499.99 to $3,649.99 for 128 GB on GMKtec\'s US store, plus full specs and alternatives.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -216,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'en',
       'url': 'https://www.promptquorum.com/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'The GMKtec EVO-X2 is a mini PC with an AMD Ryzen AI Max+ 395 and up to 128 GB of unified memory whose US price is reported inconsistently across sellers.',
+      'articleBody': 'The GMKtec EVO-X2 is a mini PC with an AMD Ryzen AI Max+ 395 and up to 128 GB of unified memory, listed at $2,199.99 to $3,649.99 on GMKtec\'s US store.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Buyers weighing a GMKtec EVO-X2 against other 128 GB Ryzen AI Max+ 395 local AI workstations' },
@@ -225,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -235,14 +241,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-de.webp',
-    title: 'GMKtec EVO-X2 für lokale KI: Specs, Preis und Fazit',
-    seoTitle: 'GMKtec EVO-X2 für lokale KI: Specs, Preis und Fazit',
+    title: 'GMKtec EVO-X2: Preis und Specs, 128 GB ab 3.499,99 $',
+    seoTitle: 'GMKtec EVO-X2: Preis und Specs, 128 GB ab 3.499,99 $',
     intro:
-      'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB aufgelötetem LPDDR5X-8000, der laut Notebookcheck im April 2025 vorgestellt wurde. Der eigene Shop von GMKtec und Berichte Dritter weichen beim US-Preis stark voneinander ab; diese Seite nennt deshalb jeden Wert mit Quelle, statt einen auszuwählen. PromptQuorum hat dieses Gerät nicht getestet; die Seite stützt sich auf die Herstellerangaben und Berichte Dritter.',
+      'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB aufgelötetem LPDDR5X-8000. Im US-Shop von GMKtec kostete am 2026-11-14 das Modell mit 64 GB / 1 TB 2.199,99 $, die Modelle mit 128 GB kosteten 3.499,99 $ (1 TB) oder 3.649,99 $ (2 TB), jeweils neben einem höheren regulären Preis angezeigt. PromptQuorum hat dieses Gerät nicht getestet; die Seite stützt sich auf die Herstellerangaben und Berichte Dritter.',
     metaDescription:
-      'GMKtec EVO-X2 mit Ryzen AI Max+ 395 und 128 GB: geprüfte Specs, widersprüchliche US-Preise mit Quellen, Befunde Dritter und für wen er nichts ist.',
+      'GMKtec EVO-X2 mit Ryzen AI Max+ 395: 2.199,99 $ für 64 GB, 3.499,99 bis 3.649,99 $ für 128 GB im US-Shop von GMKtec, dazu alle Specs und Alternativen.',
     twitterDescription:
-      'GMKtec EVO-X2 für lokale KI: Ryzen AI Max+ 395, bis zu 128 GB, geprüfte Specs und widersprüchliche US-Preise mit Quellen. Seite mit Spezifikationen und Belegen, kein Praxistest.',
+      'GMKtec EVO-X2 für lokale KI: Ryzen AI Max+ 395, 64 GB für 2.199,99 $ und 128 GB für 3.499,99 bis 3.649,99 $ im US-Shop von GMKtec, mit Specs. Kein Praxistest.',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die einen GMKtec EVO-X2 mit anderen lokalen KI-Workstations mit 128 GB und Ryzen AI Max+ 395 vergleichen',
@@ -255,16 +261,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec evo x2 preis',
     ],
     leadAnswerBlock:
-      '**Der GMKtec EVO-X2 ist ein kompakter Mini-PC mit Ryzen AI Max+ 395 und bis zu 128 GB Unified Memory für alle, die ein Gerät für lokale Modelle der 100B-Klasse ohne den Support eines Workstation-Herstellers wollen.** Der entscheidende Vorbehalt ist der Preis: Die Seite von GMKtec und Berichte, die sich auf Amazon stützen, weichen bei ähnlichen Konfigurationen mit 128 GB um deutlich mehr als 1.000 $ voneinander ab; prüfen Sie daher vor der Bestellung das aktuelle Angebot.',
+      '**Der GMKtec EVO-X2 ist ein Mini-PC mit Ryzen AI Max+ 395, den der US-Shop von GMKtec mit 64 GB für 2.199,99 $ und mit 128 GB für 3.499,99 bis 3.649,99 $ führt (gelesen am 2026-11-14).** Der Speicher ist aufgelötet, wählen Sie die Größe also beim Kauf; das Gerät passt zu Käufern, die ein Gerät für lokale Modelle der 100B-Klasse ohne den Support eines Workstation-Herstellers wollen.',
     quickAnswerTop: {
       de: {
         question: 'Ist der GMKtec EVO-X2 eine gute lokale KI-Workstation?',
         answer:
-          'Er nutzt denselben Ryzen AI Max+ 395 und dieselbe Speicheroption mit 128 GB wie andere Strix-Halo-Geräte und konkurriert deshalb über Preis, Kühlung und Support, nicht über die reine Leistungsfähigkeit. Keine unabhängige Quelle, die wir lesen konnten, hat seine LLM-Geschwindigkeit gemessen, und sein US-Preis wird uneinheitlich gemeldet; prüfen Sie daher zuerst den aktuellen Preis.',
+          'Er nutzt denselben Ryzen AI Max+ 395 und dieselbe Speicheroption mit 128 GB wie andere Strix-Halo-Geräte und konkurriert deshalb über Preis, Kühlung und Support, nicht über die reine Leistungsfähigkeit. Der US-Shop von GMKtec führt ihn von 2.199,99 $ (64 GB) bis 3.649,99 $ (128 GB / 2 TB); keine unabhängige Quelle, die wir lesen konnten, hat seine LLM-Geschwindigkeit gemessen.',
         bullets: [
           'Chip: Ryzen AI Max+ 395, Radeon 8060S, LPDDR5X-8000 (GMKtec)',
           'Speicher: 64 GB oder 128 GB, aufgelötet und nicht erweiterbar',
-          'US-Preis: 2.199,99 $ im Angebot auf der Seite von GMKtec (ausverkauft) gegenüber etwa 3.649 $ laut anderen Berichten',
+          'US-Preis (GMKtec-Shop, 2026-11-14): 2.199,99 $ für 64 GB, 3.499,99 bis 3.649,99 $ für 128 GB',
           'Von PromptQuorum nicht praktisch getestet',
         ],
         updatedDate: '2026-11',
@@ -282,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quellen', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB Unified Memory, dessen US-Preis in den Quellen uneinheitlich gemeldet wird.' },
+      { type: 'one-sentence', content: 'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB Unified Memory, im US-Shop von GMKtec für 2.199,99 bis 3.649,99 $ gelistet.' },
       { type: 'plain-terms', content: 'Diese Seite stützt sich auf die Spezifikation von GMKtec und auf Berichte Dritter; PromptQuorum hat das Gerät nicht getestet. Unified Memory bedeutet, dass Prozessor und Grafikeinheit sich einen RAM-Pool teilen; große Modelle lassen sich so laden, während die Geschwindigkeit, mit der sie laufen, von Speicherbandbreite und Software abhängt.' },
     ],
     sections: {
@@ -292,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Plattform: Ryzen AI Max+ 395 mit Radeon 8060S und aufgelötetem LPDDR5X-8000 mit 64 GB oder 128 GB, derselbe Chip wie in anderen Strix-Halo-Mini-PCs.',
-          'Preis: Die eigene Seite von GMKtec und ein Bericht von Notebookcheck vom Juli 2026 zu Amazon widersprechen sich bei 128 GB / 2 TB; die Preistabelle nennt beide mit Quellen.',
+          'Preis: Der US-Shop von GMKtec führte am 2026-11-14 2.199,99 $ (64 GB / 1 TB), 3.499,99 $ (128 GB / 1 TB) und 3.649,99 $ (128 GB / 2 TB); der Amazon-Wert von 3.649 $ aus dem Notebookcheck-Bericht vom Juli 2026 liegt nahe am letzten.',
           'Beleglücke: Die unabhängigen Tests, die wir lesen konnten, betreffen das Gerät mit 64 GB, und der einzige Vergleich zwischen EVO-X2 und DGX Spark stammt von GMKtec selbst.',
           'Kompromisse: ein einziger 2.5G-Ethernet-Anschluss und USB4 statt einer schnellen Cluster-Verbindung sowie ein externes 230-W-Netzteil.',
           'Wartung: Der Test von Notebookcheck kritisierte die begrenzte Lüftersteuerung und die aufwendigere Wartung.',
@@ -335,16 +341,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preis und Verfügbarkeit',
         itemHeadings: true,
         content:
-          '**Die US-Preise für dasselbe Gerät mit 128 GB widersprechen sich zwischen den Quellen um mehr als 1.000 $, daher sollte keiner der Werte unten als aktueller Preis gelten.** Die Speicherkosten haben die Preise 2026 mehrfach bewegt; öffnen Sie vor der Bestellung das aktuelle Angebot.',
+          '**Der US-Shop von GMKtec führt den EVO-X2 mit 64 GB für 2.199,99 $ und mit 128 GB für 3.499,99 bis 3.649,99 $, jeweils als Rabatt auf einen höheren regulären Preis.** Die Werte wurden am 2026-11-14 aus den Produktdaten des Shops gelesen; alle US-Varianten waren dort als verfügbar markiert. Die Preise ändern sich oft, öffnen Sie daher vor der Bestellung das aktuelle Angebot.',
         columns: ['Konfiguration', 'US-Preis', 'Quelle und Datum', 'Status'],
         rows: [
-          { 'Konfiguration': '128 GB / 2 TB', 'US-Preis': '2.199,99 $ im Angebot (2.599,99 $ regulär)', 'Quelle und Datum': '[Produktseite von GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), gelesen am 2026-10-31', 'Status': 'Auf der Seite angezeigt; alle Varianten als ausverkauft oder nicht verfügbar markiert' },
-          { 'Konfiguration': '128 GB / 2 TB', 'US-Preis': '3.649 $', 'Quelle und Datum': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Amazon-Angebot zum Zeitpunkt des Berichts, laut Notebookcheck' },
-          { 'Konfiguration': '128 GB / 1 TB', 'US-Preis': '150 $ unter dem Modell mit 2 TB (keine Summe genannt)', 'Quelle und Datum': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Neuere Variante mit weniger Massenspeicher' },
-          { 'Konfiguration': '64 GB', 'US-Preis': '1.500 $ weniger als mit 128 GB', 'Quelle und Datum': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Preisabstand genannt, kein absoluter Preis' },
+          { 'Konfiguration': '64 GB / 1 TB', 'US-Preis': '2.199,99 $ im Angebot (2.599,99 $ regulär)', 'Quelle und Datum': '[US-Shop von GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), gelesen am 2026-11-14', 'Status': 'Vom Shop als verfügbar markiert' },
+          { 'Konfiguration': '128 GB / 1 TB', 'US-Preis': '3.499,99 $ im Angebot (3.999,99 $ regulär)', 'Quelle und Datum': '[US-Shop von GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), gelesen am 2026-11-14', 'Status': 'Vom Shop als verfügbar markiert' },
+          { 'Konfiguration': '128 GB / 2 TB', 'US-Preis': '3.649,99 $ im Angebot (3.999,99 $ regulär)', 'Quelle und Datum': '[US-Shop von GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), gelesen am 2026-11-14', 'Status': 'Verfügbar markiert; Bundle mit Z.AI-Tarif: 3.699,99 $' },
+          { 'Konfiguration': '128 GB / 2 TB (Amazon)', 'US-Preis': '3.649 $', 'Quelle und Datum': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Amazon-Angebot zum Zeitpunkt des Berichts, laut Notebookcheck' },
           { 'Konfiguration': '128 GB (Marktstart, China)', 'US-Preis': '14.999 CNY (etwa 2.060 $)', 'Quelle und Datum': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html), 2025-04-07', 'Status': 'Früherer Vorbestellpreis in China, kein US-Preis' },
         ],
-        note: 'Wir wissen nicht, warum die Seite von GMKtec und der Bericht zu Amazon voneinander abweichen; die Seite zeigt womöglich einen Aktionspreis, der derzeit nicht bestellbar ist. Den Gutscheincode von Notebookcheck geben wir hier nicht wieder, weil er abgelaufen sein kann.',
+        note: 'Wir haben die öffentlichen Produktdaten von GMKtec gelesen, nicht die gerenderte Seite, und „verfügbar“ ist die Markierung des Shops, keine Bestandsgarantie. Der Angebotspreis von 2.199,99 $ gilt für das Modell mit 64 GB, nicht für eine Konfiguration mit 128 GB. Einen geprüften Euro-Preis haben wir nicht gefunden; die EU-Varianten nennen in den Daten dieselben USD-Beträge, daher zeigen wir nur USD.',
       },
       evidence: {
         id: 'evidence',
@@ -358,6 +364,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Für wen er passt und für wen nicht',
+        content:
+          '**Der EVO-X2 passt zu Käufern, die einen Ryzen AI Max+ 395 mit 128 GB zu Preisen einer Verbrauchermarke wollen und begrenzten Herstellersupport akzeptieren; für Teams, die 192 GB, einen Geschäftskunden-Vertriebskanal oder ein Cluster aus mehreren Geräten brauchen, passt er nicht.** Ob 64 GB oder 128 GB für Ihre Modelle reichen, beurteilen Sie mit dem [Hardware-Ratgeber für lokale LLMs](/de/local-llms/local-llm-hardware-guide).',
         items: [
           '**Passt:** Käufer, die den Ryzen AI Max+ 395 und 128 GB in einem kleinen Windows- oder Ubuntu-Gerät wollen und erst kaufen, wenn der aktuelle Preis stimmt.',
           '**Passt:** Nutzer, die Support einer Verbrauchermarke und 1+2 Jahre Garantie gegen einen möglicherweise niedrigeren Preis in Kauf nehmen.',
@@ -381,6 +389,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+          {
+            q: 'Was kostet der GMKtec EVO-X2?',
+            a: 'Im US-Shop von GMKtec kostete am 2026-11-14 das Modell mit 64 GB / 1 TB 2.199,99 $, das mit 128 GB / 1 TB 3.499,99 $ und das mit 128 GB / 2 TB 3.649,99 $, jeweils neben einem höheren regulären Preis angezeigt. Die Preise ändern sich oft; prüfen Sie vor der Bestellung das aktuelle Angebot.',
+          },
           {
             q: 'Kann ich den Speicher später erweitern?',
             a: 'Nein. GMKtec führt das LPDDR5X als aufgelötet und nicht erweiterbar; wählen Sie beim Kauf also 64 GB oder 128 GB. Der Massenspeicher lässt sich über die zwei M.2-Steckplätze erweitern.',
@@ -407,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Spezifikationen, Varianten bei Speicher und Massenspeicher, Anschlüsse, Garantie, Angebotspreis von 2.199,99 $ und Status ausverkauft.' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Spezifikationen, Varianten bei Speicher und Massenspeicher, Anschlüsse, Garantie und die am 2026-11-14 gelesenen US-Preise.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: 'Variante mit 128 GB / 1 TB, Amazon-Preis von 3.649 $, Abstand von 1.500 $ zu 64 GB, GPU-Zuweisung von 96 GB.' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: 'Markteinführung im April 2025, Preis von 14.999 CNY, frühe Spezifikation.' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: 'Test des Geräts mit 64 GB: Urteil sowie Anmerkungen zu Kühlung und Wartung.' },
@@ -419,10 +431,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'GMKtec EVO-X2 für lokale KI: Specs, Preis und Fazit',
-      'description': 'GMKtec EVO-X2 mit Ryzen AI Max+ 395 und 128 GB: geprüfte Specs, widersprüchliche US-Preise mit Quellen, Befunde Dritter und für wen er nichts ist.',
+      'headline': 'GMKtec EVO-X2: Preis und Specs, 128 GB ab 3.499,99 $',
+      'description': 'GMKtec EVO-X2 mit Ryzen AI Max+ 395: 2.199,99 $ für 64 GB, 3.499,99 bis 3.649,99 $ für 128 GB im US-Shop von GMKtec, dazu alle Specs und Alternativen.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -435,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'de',
       'url': 'https://www.promptquorum.com/de/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB Unified Memory, dessen US-Preis in den Quellen uneinheitlich gemeldet wird.',
+      'articleBody': 'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB Unified Memory, im US-Shop von GMKtec für 2.199,99 bis 3.649,99 $ gelistet.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Käufer, die einen GMKtec EVO-X2 mit anderen lokalen KI-Workstations mit 128 GB und Ryzen AI Max+ 395 vergleichen' },
@@ -444,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -454,14 +466,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-fr.webp',
-    title: "GMKtec EVO-X2 pour l'IA locale : fiche technique, prix et verdict",
-    seoTitle: "GMKtec EVO-X2 pour l'IA locale : specs, prix, verdict",
+    title: 'GMKtec EVO-X2 : prix et specs, 128 Go à $3,499.99',
+    seoTitle: 'GMKtec EVO-X2 : prix et specs, 128 Go à $3,499.99',
     intro:
-      "Le GMKtec EVO-X2 est un mini-PC construit autour de l'AMD Ryzen AI Max+ 395 avec jusqu'à 128 Go de LPDDR5X-8000 soudée, lancé en avril 2025 selon Notebookcheck. La boutique de GMKtec et les rapports de tiers divergent fortement sur son prix américain : cette page liste donc chaque chiffre avec sa source au lieu d'en choisir un. PromptQuorum n'a pas testé cette machine ; la page s'appuie sur les spécifications du constructeur et sur des rapports de tiers.",
+      'Le GMKtec EVO-X2 est un mini-PC avec AMD Ryzen AI Max+ 395 et jusqu\'à 128 Go de LPDDR5X-8000 soudée. Sur la boutique US de GMKtec, le 2026-11-14, le modèle 64 Go / 1 To coûtait $2,199.99 et les modèles 128 Go $3,499.99 (1 To) ou $3,649.99 (2 To), chacun affiché face à un prix normal plus élevé. PromptQuorum n\'a pas testé cette machine ; la page repose sur la fiche du fabricant et des rapports de tiers.',
     metaDescription:
-      "GMKtec EVO-X2 avec Ryzen AI Max+ 395 et 128 Go : specs vérifiées, prix US contradictoires avec sources, constats de tiers et pour qui l'éviter.",
+      'GMKtec EVO-X2 avec Ryzen AI Max+ 395 : $2,199.99 en 64 Go, $3,499.99 à $3,649.99 en 128 Go sur la boutique US de GMKtec, avec specs et alternatives.',
     twitterDescription:
-      "GMKtec EVO-X2 pour l'IA locale : Ryzen AI Max+ 395, jusqu'à 128 Go, specs vérifiées et prix US contradictoires avec sources. Page de spécifications et de preuves, pas un test pratique.",
+      'GMKtec EVO-X2 pour l\'IA locale : Ryzen AI Max+ 395, 64 Go à $2,199.99 et 128 Go à $3,499.99–$3,649.99 sur la boutique US de GMKtec, avec specs. Pas un test pratique.',
     readTime: '8 min de lecture',
     educationalLevel: 'Intermediate',
     audience: "Acheteurs qui comparent un GMKtec EVO-X2 à d'autres stations IA locales Ryzen AI Max+ 395 de 128 Go",
@@ -474,16 +486,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'prix gmktec evo x2',
     ],
     leadAnswerBlock:
-      "**Le GMKtec EVO-X2 est un mini-PC compact Ryzen AI Max+ 395 avec jusqu'à 128 Go de mémoire unifiée, pour ceux qui veulent une machine pour modèles locaux de classe 100B sans le support d'un constructeur de stations de travail.** La réserve décisive est le prix : la page de GMKtec et les rapports fondés sur Amazon diffèrent de bien plus de $1,000 pour des configurations 128 Go similaires ; vérifiez donc l'annonce en direct avant de commander.",
+      '**Le GMKtec EVO-X2 est un mini-PC Ryzen AI Max+ 395 que la boutique US de GMKtec affiche à $2,199.99 en 64 Go et à $3,499.99–$3,649.99 en 128 Go (relevé le 2026-11-14).** La mémoire est soudée : choisissez la taille à l\'achat ; il convient à ceux qui veulent une machine pour modèles locaux de classe 100B sans le support d\'un constructeur de stations de travail.',
     quickAnswerTop: {
       fr: {
         question: 'Le GMKtec EVO-X2 est-il une bonne station de travail IA locale ?',
         answer:
-          "Il utilise le même Ryzen AI Max+ 395 et la même option de 128 Go de mémoire que d'autres machines Strix Halo : il se distingue donc par le prix, le refroidissement et le support plutôt que par ses capacités brutes. Aucune source indépendante que nous avons pu lire n'a mesuré sa vitesse en LLM, et son prix américain est signalé de façon incohérente : vérifiez d'abord le prix en direct.",
+          'Il utilise le même Ryzen AI Max+ 395 et la même option de 128 Go de mémoire que les autres machines Strix Halo ; il se distingue donc par le prix, le refroidissement et le support, pas par la capacité brute. La boutique US de GMKtec l\'affiche de $2,199.99 (64 Go) à $3,649.99 (128 Go / 2 To) ; aucune source indépendante que nous avons pu lire n\'a mesuré sa vitesse LLM.',
         bullets: [
           'Puce : Ryzen AI Max+ 395, Radeon 8060S, LPDDR5X-8000 (GMKtec)',
           'Mémoire : 64 Go ou 128 Go, soudée et non évolutive',
-          "Prix US : $2,199.99 en promotion sur la page de GMKtec (épuisé) contre environ $3,649 signalés ailleurs",
+          'Prix US (boutique GMKtec, 2026-11-14) : $2,199.99 en 64 Go, $3,499.99 à $3,649.99 en 128 Go',
           "Non testé en pratique par PromptQuorum",
         ],
         updatedDate: '2026-11',
@@ -501,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Sources', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "Le GMKtec EVO-X2 est un mini-PC avec un AMD Ryzen AI Max+ 395 et jusqu'à 128 Go de mémoire unifiée, dont le prix américain est signalé de façon incohérente selon les sources." },
+      { type: 'one-sentence', content: 'Le GMKtec EVO-X2 est un mini-PC avec AMD Ryzen AI Max+ 395 et jusqu\'à 128 Go de mémoire unifiée, affiché de $2,199.99 à $3,649.99 sur la boutique US de GMKtec.' },
       { type: 'plain-terms', content: "Cette page s'appuie sur les spécifications de GMKtec et sur des rapports de tiers ; PromptQuorum n'a pas testé la machine. La mémoire unifiée signifie que le processeur et le graphique partagent un même pool de RAM : de grands modèles peuvent donc se charger, même si leur vitesse d'exécution dépend de la bande passante mémoire et du logiciel." },
     ],
     sections: {
@@ -511,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           "Plateforme : Ryzen AI Max+ 395 avec Radeon 8060S et LPDDR5X-8000 soudée en 64 Go ou 128 Go, la même puce que d'autres mini-PC Strix Halo.",
-          "Prix : la page de GMKtec et un rapport de Notebookcheck de juillet 2026 sur Amazon divergent pour le 128 Go / 2 To ; le tableau des prix cite les deux avec leurs sources.",
+          'Prix : la boutique US de GMKtec affichait le 2026-11-14 $2,199.99 (64 Go / 1 To), $3,499.99 (128 Go / 1 To) et $3,649.99 (128 Go / 2 To) ; le chiffre Amazon de $3,649 du rapport Notebookcheck de juillet 2026 est proche du dernier.',
           "Lacune de preuves : les tests indépendants que nous avons pu lire portent sur l'exemplaire de 64 Go, et la seule comparaison EVO-X2 contre DGX Spark a été menée par GMKtec lui-même.",
           "Compromis : un seul port Ethernet 2.5G et de l'USB4 plutôt qu'un réseau rapide de clustering, et un adaptateur secteur externe de 230 W.",
           "Maintenance : le test de Notebookcheck critique le contrôle limité des ventilateurs et une maintenance plus compliquée.",
@@ -554,16 +566,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Prix et disponibilité',
         itemHeadings: true,
         content:
-          "**Les prix américains de la même machine 128 Go se contredisent de plus de $1,000 selon les sources : aucun des chiffres ci-dessous ne doit être considéré comme le prix actuel.** Le coût de la mémoire a fait bouger les prix à plusieurs reprises en 2026 ; ouvrez l'annonce en direct avant de commander.",
+          '**La boutique US de GMKtec affiche l\'EVO-X2 à $2,199.99 en 64 Go et à $3,499.99–$3,649.99 en 128 Go, chaque prix étant présenté comme une remise sur un prix normal plus élevé.** Les chiffres ont été relevés dans les données produit de la boutique le 2026-11-14 ; toutes les variantes US y étaient signalées comme disponibles. Les prix changent souvent : ouvrez l\'annonce en direct avant de commander.',
         columns: ['Configuration', 'Prix US relevé', 'Source et date', 'Statut'],
         rows: [
-          { 'Configuration': '128 Go / 2 To', 'Prix US relevé': '$2,199.99 en promotion ($2,599.99 normal)', 'Source et date': '[Page produit GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), consultée le 2026-10-31', 'Statut': 'Affiché sur la page ; toutes les variantes indiquées épuisées ou indisponibles' },
-          { 'Configuration': '128 Go / 2 To', 'Prix US relevé': '$3,649', 'Source et date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Statut': "Annonce Amazon au moment de la rédaction, selon Notebookcheck" },
-          { 'Configuration': '128 Go / 1 To', 'Prix US relevé': '$150 de moins que le modèle 2 To (aucun chiffre donné)', 'Source et date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Statut': 'Variante plus récente à stockage réduit' },
-          { 'Configuration': '64 Go', 'Prix US relevé': '$1,500 de moins que le 128 Go', 'Source et date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Statut': 'Écart de prix indiqué, pas de prix absolu' },
+          { 'Configuration': '64 Go / 1 To', 'Prix US relevé': '$2,199.99 en promotion ($2,599.99 normal)', 'Source et date': '[Boutique US de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), relevé le 2026-11-14', 'Statut': 'Signalée disponible par la boutique' },
+          { 'Configuration': '128 Go / 1 To', 'Prix US relevé': '$3,499.99 en promotion ($3,999.99 normal)', 'Source et date': '[Boutique US de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), relevé le 2026-11-14', 'Statut': 'Signalée disponible par la boutique' },
+          { 'Configuration': '128 Go / 2 To', 'Prix US relevé': '$3,649.99 en promotion ($3,999.99 normal)', 'Source et date': '[Boutique US de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), relevé le 2026-11-14', 'Statut': 'Signalée disponible ; pack avec forfait Z.AI : $3,699.99' },
+          { 'Configuration': '128 Go / 2 To (Amazon)', 'Prix US relevé': '$3,649', 'Source et date': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Statut': 'Annonce Amazon au moment de la rédaction, selon Notebookcheck' },
           { 'Configuration': '128 Go (lancement, Chine)', 'Prix US relevé': 'CNY 14,999 (environ $2,060)', 'Source et date': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html), 2025-04-07', 'Statut': 'Ancien prix de précommande en Chine, pas un prix américain' },
         ],
-        note: "Nous ignorons pourquoi la page de GMKtec et le rapport fondé sur Amazon diffèrent ; la page peut afficher un prix promotionnel qui n'est pas commandable actuellement. Le code promo de Notebookcheck n'est pas repris ici car il a pu expirer.",
+        note: 'Nous avons lu les données produit publiques de GMKtec et non la page rendue ; « disponible » est l\'indicateur de la boutique, pas une garantie de stock. Le prix promotionnel de $2,199.99 concerne le modèle 64 Go, pas une configuration 128 Go. Nous n\'avons trouvé aucun prix en euros vérifié ; les variantes UE affichent les mêmes montants en USD dans les données, nous n\'indiquons donc que l\'USD.',
       },
       evidence: {
         id: 'evidence',
@@ -577,6 +589,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: "À qui il convient et qui devrait l'éviter",
+        content:
+          '**L\'EVO-X2 convient à ceux qui veulent un Ryzen AI Max+ 395 avec 128 Go au prix d\'une marque grand public et acceptent un support limité ; il ne convient pas aux équipes qui ont besoin de 192 Go, d\'un canal de vente professionnel ou d\'un cluster de plusieurs machines.** Pour juger si 64 Go ou 128 Go suffisent pour vos modèles, consultez le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide).',
         items: [
           "**Convient :** aux acheteurs qui veulent le Ryzen AI Max+ 395 et 128 Go dans un petit boîtier Windows ou Ubuntu, et n'achèteront qu'une fois le prix en direct confirmé.",
           "**Convient :** aux utilisateurs qui acceptent le support d'une marque grand public et une garantie de 1+2 ans en échange d'un prix potentiellement plus bas.",
@@ -600,6 +614,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
+          {
+            q: 'Combien coûte le GMKtec EVO-X2 ?',
+            a: 'Sur la boutique US de GMKtec, le 2026-11-14, le modèle 64 Go / 1 To coûtait $2,199.99, le 128 Go / 1 To $3,499.99 et le 128 Go / 2 To $3,649.99, chacun affiché face à un prix normal plus élevé. Les prix changent souvent : ouvrez l\'annonce en direct avant de commander.',
+          },
           {
             q: 'Puis-je augmenter la mémoire plus tard ?',
             a: "Non. GMKtec indique que la LPDDR5X est embarquée et non évolutive : choisissez donc 64 Go ou 128 Go à l'achat. Le stockage peut être étendu via les deux emplacements M.2.",
@@ -626,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: "Spécifications, variantes de mémoire et de stockage, ports, garantie, prix promotionnel de $2,199.99 et statut épuisé." },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Spécifications, variantes de mémoire et de stockage, ports, garantie et prix US relevés le 2026-11-14.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: "Variante 128 Go / 1 To, prix Amazon de $3,649, écart de $1,500 avec le 64 Go, allocation de 96 Go au GPU." },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: "Lancement d'avril 2025, prix de CNY 14,999, spécifications initiales." },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: "Test de l'exemplaire 64 Go : verdict, remarques sur le refroidissement et la maintenance." },
@@ -638,10 +656,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': "GMKtec EVO-X2 pour l'IA locale : fiche technique, prix et verdict",
-      'description': "GMKtec EVO-X2 avec Ryzen AI Max+ 395 et 128 Go : specs vérifiées, prix US contradictoires avec sources, constats de tiers et pour qui l'éviter.",
+      'headline': 'GMKtec EVO-X2 : prix et specs, 128 Go à $3,499.99',
+      'description': 'GMKtec EVO-X2 avec Ryzen AI Max+ 395 : $2,199.99 en 64 Go, $3,499.99 à $3,649.99 en 128 Go sur la boutique US de GMKtec, avec specs et alternatives.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -654,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'fr',
       'url': 'https://www.promptquorum.com/fr/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': "Le GMKtec EVO-X2 est un mini-PC avec un AMD Ryzen AI Max+ 395 et jusqu'à 128 Go de mémoire unifiée, dont le prix américain est signalé de façon incohérente selon les vendeurs.",
+      'articleBody': 'Le GMKtec EVO-X2 est un mini-PC avec AMD Ryzen AI Max+ 395 et jusqu\'à 128 Go de mémoire unifiée, affiché de $2,199.99 à $3,649.99 sur la boutique US de GMKtec.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': "Acheteurs qui comparent un GMKtec EVO-X2 à d'autres stations IA locales Ryzen AI Max+ 395 de 128 Go" },
@@ -663,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -673,14 +691,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-ja.webp',
-    title: 'ローカルAI向けGMKtec EVO-X2: 仕様・価格・総評',
-    seoTitle: 'GMKtec EVO-X2のローカルAI向け仕様・価格・総評',
+    title: 'GMKtec EVO-X2の価格と仕様｜128GB版を比較',
+    seoTitle: 'GMKtec EVO-X2の価格と仕様｜128GB版を比較',
     intro:
-      'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのはんだ付けLPDDR5X-8000を搭載したmini PCで、Notebookcheckによると2025年4月に発売されました。GMKtec自身のストアと第三者のレポートとでは米国価格が大きく食い違っているため、このページでは1つに絞らず、各数値を情報源とともに掲載します。PromptQuorumはこのマシンをテストしておらず、ページはベンダーの仕様と第三者のレポートに基づいています。',
+      'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのはんだ付けLPDDR5X-8000を搭載したミニPCです。GMKtec米国ストアでは2026-11-14時点で、64GB / 1TBモデルが$2,199.99、128GBモデルが$3,499.99（1TB）または$3,649.99（2TB）で、いずれも高めの通常価格と並べて表示されていました。PromptQuorumはこのマシンをテストしておらず、本ページはメーカー仕様と第三者の報告に基づいています。',
     metaDescription:
-      'Ryzen AI Max+ 395と128GBを搭載したGMKtec EVO-X2。確認済みの仕様、情報源つきで食い違う米国価格、第三者の検証結果、見送るべき人を解説します。',
+      'GMKtec EVO-X2（Ryzen AI Max+ 395）の価格は64GBが$2,199.99、128GBが$3,499.99〜$3,649.99（GMKtec米国ストア）。仕様と代替機も整理します。',
     twitterDescription:
-      'ローカルAI向けGMKtec EVO-X2: Ryzen AI Max+ 395、最大128GB、確認済みの仕様と、情報源つきで食い違う米国価格。実機テストではなく、仕様と根拠をまとめたページです。',
+      'ローカルAI向けGMKtec EVO-X2: Ryzen AI Max+ 395、64GBは$2,199.99、128GBは$3,499.99〜$3,649.99（GMKtec米国ストア）。仕様付き。実機テストではありません。',
     readTime: '8分で読める',
     educationalLevel: 'Intermediate',
     audience: 'GMKtec EVO-X2を、他の128GB Ryzen AI Max+ 395搭載ローカルAIワークステーションと比較している購入者',
@@ -693,16 +711,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec evo x2 価格',
     ],
     leadAnswerBlock:
-      '**GMKtec EVO-X2は、最大128GBのユニファイドメモリを備えたコンパクトなRyzen AI Max+ 395搭載mini PCで、ワークステーションベンダーのサポートがなくても100B級ローカルモデル用のマシンが欲しい人向けです。** 最大の注意点は価格です。GMKtec自身のページとAmazonベースのレポートでは、似た128GB構成で$1,000を大きく超える開きがあるため、注文前に最新の掲載価格を確認してください。',
+      '**GMKtec EVO-X2はRyzen AI Max+ 395搭載のミニPCで、GMKtec米国ストアでは64GBが$2,199.99、128GBが$3,499.99〜$3,649.99で掲載されています（2026-11-14確認）。** メモリははんだ付けのため、購入時に容量を選びます。ワークステーションメーカーのサポートなしで、100Bクラスのローカルモデル用マシンがほしい人向けです。',
     quickAnswerTop: {
       ja: {
         question: 'GMKtec EVO-X2はローカルAIワークステーションとして優れていますか？',
         answer:
-          '他のStrix Halo機と同じRyzen AI Max+ 395と128GBのメモリ構成を使うため、競争するのは性能そのものではなく、価格、冷却、サポートです。読むことができた独立した情報源には、LLMの速度を測定したものがなく、米国価格の報告も一貫していません。まず最新の価格を確認してください。',
+          '他のStrix Haloマシンと同じRyzen AI Max+ 395と128GBのメモリ構成を使うため、素の性能ではなく価格・冷却・サポートで競います。GMKtec米国ストアの掲載価格は$2,199.99（64GB）から$3,649.99（128GB / 2TB）までです。確認できた範囲では、LLM速度を独立に測定した情報源はありません。',
         bullets: [
           'チップ: Ryzen AI Max+ 395、Radeon 8060S、LPDDR5X-8000（GMKtec）',
           'メモリ: 64GBまたは128GB、はんだ付けで増設不可',
-          '米国価格: GMKtecのページでは$2,199.99のセール価格（売り切れ）、他では約$3,649と報告',
+          '米国価格（GMKtecストア、2026-11-14）：64GBは$2,199.99、128GBは$3,499.99〜$3,649.99',
           'PromptQuorumによる実機テストは未実施',
         ],
         updatedDate: '2026-11',
@@ -720,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '情報源', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのユニファイドメモリを搭載したmini PCで、米国価格は情報源によって報告が一貫していません。' },
+      { type: 'one-sentence', content: 'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのユニファイドメモリを搭載したミニPCで、GMKtec米国ストアでは$2,199.99〜$3,649.99で掲載されています。' },
       { type: 'plain-terms', content: 'このページはGMKtecの仕様と第三者のレポートに基づいており、PromptQuorumはこのマシンをテストしていません。ユニファイドメモリとは、プロセッサとグラフィックスが1つのRAMプールを共有する仕組みで、大きなモデルでも読み込めますが、動作速度はメモリ帯域幅とソフトウェアで決まります。' },
     ],
     sections: {
@@ -730,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'プラットフォーム: Ryzen AI Max+ 395、Radeon 8060S、はんだ付けのLPDDR5X-8000（64GBまたは128GB）。他のStrix Halo搭載mini PCと同じチップです。',
-          '価格: 128GB / 2TBについて、GMKtec自身のページと、AmazonについてのNotebookcheckの2026年7月のレポートが食い違っています。価格表に両方を情報源つきで掲載しています。',
+          '価格：GMKtec米国ストアは2026-11-14時点で$2,199.99（64GB / 1TB）、$3,499.99（128GB / 1TB）、$3,649.99（128GB / 2TB）を掲載。Notebookcheckの2026年7月の報告にあるAmazon価格$3,649は最後の価格に近い値です。',
           '根拠の不足: 読むことができた独立したレビューは64GB機を対象としており、EVO-X2とDGX Sparkの唯一の比較はGMKtec自身が実施したものです。',
           'トレードオフ: 2.5Gイーサネットポート1基とUSB4のみで高速なクラスタ用ファブリックはなく、電源は外付けの230Wアダプタです。',
           'メンテナンス: Notebookcheckのレビューは、ファン制御の限定的な範囲と、より複雑なメンテナンスを批判しています。',
@@ -773,16 +791,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '価格と入手性',
         itemHeadings: true,
         content:
-          '**同じ128GBマシンの米国価格が情報源間で$1,000以上食い違っているため、以下のどの数値も現在の価格とみなすべきではありません。** 2026年はメモリコストで価格が繰り返し動いています。注文前に最新の掲載ページを開いてください。',
+          '**GMKtec米国ストアでは、EVO-X2が64GBで$2,199.99、128GBで$3,499.99〜$3,649.99で掲載されており、いずれも高めの通常価格からの割引として表示されています。** 数値は2026-11-14にストアの製品データから確認したもので、その時点で米国の全構成が購入可能と表示されていました。価格は頻繁に変わるため、注文前に最新の掲載ページを確認してください。',
         columns: ['構成', '米国価格', '情報源と日付', '状況'],
         rows: [
-          { '構成': '128GB / 2TB', '米国価格': '$2,199.99（セール）/ $2,599.99（通常）', '情報源と日付': '[GMKtecの製品ページ](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)、2026-10-31確認', '状況': 'ページに表示。ただし全構成が売り切れまたは購入不可の表示' },
-          { '構成': '128GB / 2TB', '米国価格': '$3,649', '情報源と日付': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)、2026-07-18', '状況': 'Notebookcheckによると、執筆時点のAmazon掲載価格' },
-          { '構成': '128GB / 1TB', '米国価格': '2TBモデルより$150安い（金額の記載なし）', '情報源と日付': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)、2026-07-18', '状況': '新しいストレージ少なめの構成' },
-          { '構成': '64GB', '米国価格': '128GBより$1,500安い', '情報源と日付': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)、2026-07-18', '状況': '価格差のみ記載、絶対価格なし' },
+          { '構成': '64GB / 1TB', '米国価格': '$2,199.99（セール）/ $2,599.99（通常）', '情報源と日付': '[GMKtec米国ストア](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)、2026-11-14確認', '状況': 'ストアが購入可能と表示' },
+          { '構成': '128GB / 1TB', '米国価格': '$3,499.99（セール）/ $3,999.99（通常）', '情報源と日付': '[GMKtec米国ストア](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)、2026-11-14確認', '状況': 'ストアが購入可能と表示' },
+          { '構成': '128GB / 2TB', '米国価格': '$3,649.99（セール）/ $3,999.99（通常）', '情報源と日付': '[GMKtec米国ストア](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)、2026-11-14確認', '状況': '購入可能と表示。Z.AIプラン付きは$3,699.99' },
+          { '構成': '128GB / 2TB（Amazon）', '米国価格': '$3,649', '情報源と日付': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)、2026-07-18', '状況': 'Notebookcheckによると、執筆時点のAmazon掲載価格' },
           { '構成': '128GB（発売時、中国）', '米国価格': 'CNY 14,999（約$2,060）', '情報源と日付': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html)、2025-04-07', '状況': '過去の中国での予約価格で、米国価格ではない' },
         ],
-        note: 'GMKtecのページとAmazonベースのレポートで価格が異なる理由は分かりません。ページが、現在は注文できないプロモーション価格を表示している可能性があります。Notebookcheckのクーポンコードは、期限切れの可能性があるため、ここには再掲していません。',
+        note: '確認したのはレンダリング後のページではなくGMKtecの公開製品データで、「購入可能」はストア自身のフラグであり在庫保証ではありません。$2,199.99のセール価格は64GBモデルのもので、128GB構成のものではありません。検証済みのユーロ価格は見つからず、EU向け構成もデータ上は同じUSD金額のため、USDのみ掲載しています。',
       },
       evidence: {
         id: 'evidence',
@@ -796,6 +814,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '向いている人と見送るべき人',
+        content:
+          '**EVO-X2が向くのは、消費者向けブランドの価格で128GBのRyzen AI Max+ 395がほしく、限定的なサポートを受け入れられる人です。192GB、法人向け販売窓口、複数台のクラスタが必要なチームには向きません。** 64GBと128GBのどちらで足りるかは、[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)で判断してください。',
         items: [
           '**向く:** 小型のWindowsまたはUbuntuマシンでRyzen AI Max+ 395と128GBを使いたく、最新の価格を確認できてから購入する人。',
           '**向く:** より低い価格が見込める代わりに、コンシューマーブランドのサポートと1+2年の保証を受け入れられるユーザー。',
@@ -819,6 +839,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          {
+            q: 'GMKtec EVO-X2の価格はいくらですか？',
+            a: 'GMKtec米国ストアでは2026-11-14時点で、64GB / 1TBモデルが$2,199.99、128GB / 1TBモデルが$3,499.99、128GB / 2TBモデルが$3,649.99で、いずれも高めの通常価格と並べて表示されていました。価格は頻繁に変わるため、注文前に最新の掲載ページを確認してください。',
+          },
           {
             q: '後からメモリを増設できますか？',
             a: 'できません。GMKtecはLPDDR5Xをオンボードで増設不可と記載しているため、購入時に64GBか128GBを選びます。ストレージは2つのM.2スロットで拡張できます。',
@@ -845,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: '仕様、メモリとストレージの構成、ポート、保証、$2,199.99のセール価格と売り切れの状況。' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: '仕様、メモリとストレージの構成、ポート、保証、2026-11-14に確認した米国価格。' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: '128GB / 1TB構成、Amazon価格$3,649、64GBとの$1,500の差、96GBのGPU割り当て。' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: '2025年4月の発売、CNY 14,999の価格、初期の仕様。' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: '64GB機のレビュー: 評価、冷却とメンテナンスに関するコメント。' },
@@ -857,10 +881,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ローカルAI向けGMKtec EVO-X2: 仕様・価格・総評',
-      'description': 'Ryzen AI Max+ 395と128GBを搭載したGMKtec EVO-X2。確認済みの仕様、情報源つきで食い違う米国価格、第三者の検証結果、見送るべき人を解説します。',
+      'headline': 'GMKtec EVO-X2の価格と仕様｜128GB版を比較',
+      'description': 'GMKtec EVO-X2（Ryzen AI Max+ 395）の価格は64GBが$2,199.99、128GBが$3,499.99〜$3,649.99（GMKtec米国ストア）。仕様と代替機も整理します。',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -872,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ja',
       'url': 'https://www.promptquorum.com/ja/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのユニファイドメモリを搭載したmini PCで、米国価格は販売元によって報告が一貫していません。',
+      'articleBody': 'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのユニファイドメモリを搭載したミニPCで、GMKtec米国ストアでは$2,199.99〜$3,649.99で掲載されています。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'GMKtec EVO-X2を、他の128GB Ryzen AI Max+ 395搭載ローカルAIワークステーションと比較している購入者' },
@@ -881,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -891,14 +915,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-zh.webp',
-    title: '用于本地AI的GMKtec EVO-X2：规格、价格与结论',
-    seoTitle: 'GMKtec EVO-X2本地AI评测：规格、价格与结论',
+    title: 'GMKtec EVO-X2价格与规格｜128GB版详解',
+    seoTitle: 'GMKtec EVO-X2价格与规格｜128GB版详解',
     intro:
-      'GMKtec EVO-X2是一款围绕AMD Ryzen AI Max+ 395打造的迷你主机，最高配备128 GB焊接式LPDDR5X-8000内存，据Notebookcheck报道于2025年4月发布。GMKtec自家商店与第三方报道对其美国价格的说法相差很大，因此本页逐一列出每个数字及其来源，而不是择一采用。PromptQuorum没有测试过这台机器；本页依据厂商规格和第三方报道撰写。',
+      'GMKtec EVO-X2是一款搭载AMD Ryzen AI Max+ 395和最高128 GB板载LPDDR5X-8000的迷你主机。2026-11-14，GMKtec美国官网上64 GB / 1 TB机型售价$2,199.99，128 GB机型售价$3,499.99（1 TB）或$3,649.99（2 TB），均与更高的正常价并列显示。PromptQuorum没有测试过这台机器，本页依据厂商规格和第三方报道。',
     metaDescription:
-      'GMKtec EVO-X2搭载Ryzen AI Max+ 395与128 GB内存：已核实的规格、互相矛盾的美国价格及来源、第三方评测发现，以及哪些人应跳过它。',
+      'GMKtec EVO-X2搭载Ryzen AI Max+ 395：美国官网64GB版$2,199.99，128GB版$3,499.99至$3,649.99，附完整规格与同类替代机型。',
     twitterDescription:
-      '用于本地AI的GMKtec EVO-X2：Ryzen AI Max+ 395、最高128 GB、已核实的规格，以及互相矛盾的美国价格及来源。这是规格与证据页面，不是实机测试。',
+      '用于本地AI的GMKtec EVO-X2：Ryzen AI Max+ 395，美国官网64GB版$2,199.99，128GB版$3,499.99至$3,649.99，含规格。不是实机测试。',
     readTime: '阅读约8分钟',
     educationalLevel: 'Intermediate',
     audience: '正在把GMKtec EVO-X2与其他128 GB Ryzen AI Max+ 395本地AI工作站进行比较的买家',
@@ -911,16 +935,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec evo x2 价格',
     ],
     leadAnswerBlock:
-      '**GMKtec EVO-X2是一款紧凑的Ryzen AI Max+ 395迷你主机，最高128 GB统一内存，适合想要百B级本地模型主机、又不需要工作站厂商售后支持的用户。** 最关键的问题是价格：对于相近的128 GB配置，GMKtec自家页面与基于Amazon的报道相差远超$1,000，因此下单前请先查看实时报价。',
+      '**GMKtec EVO-X2是一款Ryzen AI Max+ 395迷你主机，GMKtec美国官网标价：64 GB版$2,199.99，128 GB版$3,499.99至$3,649.99（2026-11-14查看）。** 内存为板载焊接，需在购买时选定容量；适合想要一台100B级本地模型主机、又不需要工作站厂商支持的买家。',
     quickAnswerTop: {
       zh: {
         question: 'GMKtec EVO-X2是一台好的本地AI工作站吗？',
         answer:
-          '它与其他Strix Halo机器使用同样的Ryzen AI Max+ 395和128 GB内存选项，因此比拼的是价格、散热和售后，而不是原始能力。我们能读到的独立来源中没有人测过它的大模型速度，而且它的美国价格报道前后不一，所以请先核实实时价格。',
+          '它与其他Strix Halo机器使用相同的Ryzen AI Max+ 395和128 GB内存选项，因此比拼的是价格、散热和支持，而不是原始能力。GMKtec美国官网标价从$2,199.99（64 GB）到$3,649.99（128 GB / 2 TB）；我们读到的独立来源中，没有测过它的LLM速度。',
         bullets: [
           '芯片：Ryzen AI Max+ 395、Radeon 8060S、LPDDR5X-8000（GMKtec）',
           '内存：64 GB或128 GB，焊接式，不可升级',
-          '美国价格：GMKtec页面特价$2,199.99（已售罄），他处报道约$3,649',
+          '美国价格（GMKtec官网，2026-11-14）：64 GB为$2,199.99，128 GB为$3,499.99至$3,649.99',
           'PromptQuorum未做实机测试',
         ],
         updatedDate: '2026-11',
@@ -938,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '来源', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'GMKtec EVO-X2是一款搭载AMD Ryzen AI Max+ 395、最高128 GB统一内存的迷你主机，各来源对其美国价格的报道并不一致。' },
+      { type: 'one-sentence', content: 'GMKtec EVO-X2是一款搭载AMD Ryzen AI Max+ 395和最高128 GB统一内存的迷你主机，GMKtec美国官网标价$2,199.99至$3,649.99。' },
       { type: 'plain-terms', content: '本页依据GMKtec的规格和第三方报道撰写；PromptQuorum没有测试过这台机器。统一内存是指处理器和显卡共用同一大块内存，因此大模型可以加载，但运行速度取决于内存带宽和软件。' },
     ],
     sections: {
@@ -948,7 +972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '平台：Ryzen AI Max+ 395搭配Radeon 8060S和焊接式LPDDR5X-8000（64 GB或128 GB），与其他Strix Halo迷你主机是同一颗芯片。',
-          '价格：对于128 GB / 2 TB，GMKtec自家页面与Notebookcheck在2026年7月关于Amazon的报道互相矛盾；价格表同时列出两者及其来源。',
+          '价格：GMKtec美国官网在2026-11-14标价$2,199.99（64 GB / 1 TB）、$3,499.99（128 GB / 1 TB）和$3,649.99（128 GB / 2 TB）；Notebookcheck 2026年7月报道中的Amazon价格$3,649与最后一项接近。',
           '证据缺口：我们能读到的独立评测针对的是64 GB机型，而唯一一项EVO-X2对比DGX Spark的测试是GMKtec自己做的。',
           '取舍：只有一个2.5G以太网口和USB4，没有高速集群互联，并使用外置230 W电源适配器。',
           '维护：Notebookcheck的评测批评了有限的风扇控制和更复杂的维护。',
@@ -991,16 +1015,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '价格与供货',
         itemHeadings: true,
         content:
-          '**同一台128 GB机器的美国价格在各来源之间相差超过$1,000，因此下面任何一个数字都不应被当作当前价格。** 2026年内存成本使价格多次波动；下单前请先打开实时页面。',
+          '**GMKtec美国官网给出的EVO-X2价格：64 GB版$2,199.99，128 GB版$3,499.99至$3,649.99，均显示为较高正常价的折扣价。** 这些数字于2026-11-14读取自官网的产品数据，当时所有美国变体均标为可购买。价格变动频繁，下单前请先打开实时页面。',
         columns: ['配置', '美国价格', '来源与日期', '状态'],
         rows: [
-          { '配置': '128 GB / 2 TB', '美国价格': '特价$2,199.99（正常价$2,599.99）', '来源与日期': '[GMKtec产品页面](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)，2026-10-31查看', '状态': '页面所示价格；所有变体均标为售罄或不可购买' },
-          { '配置': '128 GB / 2 TB', '美国价格': '$3,649', '来源与日期': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)，2026-07-18', '状态': '据Notebookcheck，为撰文时的Amazon列表价' },
-          { '配置': '128 GB / 1 TB', '美国价格': '比2 TB机型低$150（未给出具体价格）', '来源与日期': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)，2026-07-18', '状态': '较新的低存储容量变体' },
-          { '配置': '64 GB', '美国价格': '比128 GB低$1,500', '来源与日期': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)，2026-07-18', '状态': '只给出价差，没有绝对价格' },
+          { '配置': '64 GB / 1 TB', '美国价格': '特价$2,199.99（正常价$2,599.99）', '来源与日期': '[GMKtec美国官网](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)，2026-11-14查看', '状态': '官网标为可购买' },
+          { '配置': '128 GB / 1 TB', '美国价格': '特价$3,499.99（正常价$3,999.99）', '来源与日期': '[GMKtec美国官网](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)，2026-11-14查看', '状态': '官网标为可购买' },
+          { '配置': '128 GB / 2 TB', '美国价格': '特价$3,649.99（正常价$3,999.99）', '来源与日期': '[GMKtec美国官网](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)，2026-11-14查看', '状态': '标为可购买；含Z.AI套餐版$3,699.99' },
+          { '配置': '128 GB / 2 TB（Amazon）', '美国价格': '$3,649', '来源与日期': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)，2026-07-18', '状态': '据Notebookcheck，为撰文时的Amazon列表价' },
           { '配置': '128 GB（发布时，中国）', '美国价格': 'CNY 14,999（约$2,060）', '来源与日期': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html)，2025-04-07', '状态': '历史上的中国预订价，不是美国价格' },
         ],
-        note: '我们不清楚GMKtec页面与基于Amazon的报道为何不一致；该页面显示的可能是目前无法下单的促销价。Notebookcheck的优惠码在此不再重复，因为它可能已经过期。',
+        note: '我们读取的是GMKtec公开的产品数据，而非渲染后的页面；“可购买”是官网自己的标记，不是库存保证。$2,199.99的特价对应64 GB机型，而不是128 GB配置。我们没有找到经核实的欧元价格；欧盟版本在数据中显示相同的美元金额，因此只列出美元。',
       },
       evidence: {
         id: 'evidence',
@@ -1014,6 +1038,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '适合谁，谁应跳过',
+        content:
+          '**EVO-X2适合想以消费品牌价格买到128 GB Ryzen AI Max+ 395主机、并接受有限厂商支持的买家；不适合需要192 GB、企业销售渠道或多机集群的团队。** 想判断64 GB还是128 GB够用，可参考[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
         items: [
           '**适合：** 想在小巧的Windows或Ubuntu主机里获得Ryzen AI Max+ 395和128 GB内存、并且只在核实实时价格后才购买的买家。',
           '**适合：** 愿意接受消费级品牌的售后和1+2年保修、以换取可能更低价格的用户。',
@@ -1037,6 +1063,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          {
+            q: 'GMKtec EVO-X2多少钱？',
+            a: '2026-11-14，GMKtec美国官网上64 GB / 1 TB机型售价$2,199.99，128 GB / 1 TB机型$3,499.99，128 GB / 2 TB机型$3,649.99，均与更高的正常价并列显示。价格变动频繁，下单前请先打开实时页面。',
+          },
           {
             q: '以后可以升级内存吗？',
             a: '不可以。GMKtec把LPDDR5X列为板载且不可升级，所以请在购买时选择64 GB或128 GB。存储可以通过两个M.2插槽扩展。',
@@ -1063,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: '规格、内存和存储变体、接口、保修、$2,199.99特价及售罄状态。' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: '规格、内存与存储变体、接口、保修，以及2026-11-14读取的美国价格。' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: '128 GB / 1 TB变体、$3,649的Amazon价格、与64 GB相差$1,500、96 GB的GPU分配。' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: '2025年4月发布、CNY 14,999的价格、早期规格。' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: '64 GB机型评测：结论、散热和维护方面的评论。' },
@@ -1075,10 +1105,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '用于本地AI的GMKtec EVO-X2：规格、价格与结论',
-      'description': 'GMKtec EVO-X2搭载Ryzen AI Max+ 395与128 GB内存：已核实的规格、互相矛盾的美国价格及来源、第三方评测发现，以及哪些人应跳过它。',
+      'headline': 'GMKtec EVO-X2价格与规格｜128GB版详解',
+      'description': 'GMKtec EVO-X2搭载Ryzen AI Max+ 395：美国官网64GB版$2,199.99，128GB版$3,499.99至$3,649.99，附完整规格与同类替代机型。',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1090,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'zh',
       'url': 'https://www.promptquorum.com/zh/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'GMKtec EVO-X2是一款搭载AMD Ryzen AI Max+ 395、最高128 GB统一内存的迷你主机，各卖家对其美国价格的报道并不一致。',
+      'articleBody': 'GMKtec EVO-X2是一款搭载AMD Ryzen AI Max+ 395和最高128 GB统一内存的迷你主机，GMKtec美国官网标价$2,199.99至$3,649.99。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': '正在把GMKtec EVO-X2与其他128 GB Ryzen AI Max+ 395本地AI工作站进行比较的买家' },
@@ -1099,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1109,14 +1139,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-es.webp',
-    title: 'GMKtec EVO-X2 para IA local: especificaciones, precio y veredicto',
-    seoTitle: 'GMKtec EVO-X2 para IA local: especificaciones y precio',
+    title: 'GMKtec EVO-X2: precio y specs, 128 GB a $3,499.99',
+    seoTitle: 'GMKtec EVO-X2: precio y specs, 128 GB a $3,499.99',
     intro:
-      'El GMKtec EVO-X2 es un mini PC basado en el AMD Ryzen AI Max+ 395 con hasta 128 GB de LPDDR5X-8000 soldada, lanzado en abril de 2025 según Notebookcheck. La tienda de GMKtec y los informes de terceros discrepan mucho sobre su precio en EE. UU., así que esta página enumera cada cifra con su fuente en lugar de elegir una. PromptQuorum no ha probado este equipo; la página se basa en la especificación del fabricante y en informes de terceros.',
+      'El GMKtec EVO-X2 es un mini PC con AMD Ryzen AI Max+ 395 y hasta 128 GB de LPDDR5X-8000 soldada. En la tienda de EE. UU. de GMKtec, el 2026-11-14, el modelo de 64 GB / 1 TB costaba $2,199.99 y los de 128 GB costaban $3,499.99 (1 TB) o $3,649.99 (2 TB), cada uno mostrado junto a un precio normal más alto. PromptQuorum no ha probado esta máquina; la página se apoya en la especificación del fabricante y en informes de terceros.',
     metaDescription:
-      'GMKtec EVO-X2 con Ryzen AI Max+ 395 y 128 GB: especificaciones verificadas, precios de EE. UU. contradictorios con fuentes y hallazgos de terceros.',
+      'GMKtec EVO-X2 con Ryzen AI Max+ 395: $2,199.99 con 64 GB y de $3,499.99 a $3,649.99 con 128 GB en la tienda de EE. UU. de GMKtec, más specs y alternativas.',
     twitterDescription:
-      'GMKtec EVO-X2 para IA local: Ryzen AI Max+ 395, hasta 128 GB, especificaciones verificadas y precios de EE. UU. contradictorios con fuentes. Página de especificaciones y evidencia, no una prueba práctica.',
+      'GMKtec EVO-X2 para IA local: Ryzen AI Max+ 395, 64 GB a $2,199.99 y 128 GB de $3,499.99 a $3,649.99 en la tienda de EE. UU. de GMKtec, con specs. No es una prueba práctica.',
     readTime: '8 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores que comparan un GMKtec EVO-X2 con otras estaciones de IA local de 128 GB con Ryzen AI Max+ 395',
@@ -1129,16 +1159,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'precio gmktec evo x2',
     ],
     leadAnswerBlock:
-      '**El GMKtec EVO-X2 es un mini PC compacto con Ryzen AI Max+ 395 y hasta 128 GB de memoria unificada, para quienes quieren una caja de modelos locales de clase 100B sin el soporte de un fabricante de estaciones de trabajo.** La gran pega es el precio: la página de GMKtec y los informes basados en Amazon difieren en bastante más de $1,000 para configuraciones similares de 128 GB, así que comprueba el anuncio en vivo antes de pedir.',
+      '**El GMKtec EVO-X2 es un mini PC con Ryzen AI Max+ 395 que la tienda de EE. UU. de GMKtec lista a $2,199.99 con 64 GB y de $3,499.99 a $3,649.99 con 128 GB (consultado el 2026-11-14).** La memoria va soldada, así que elige el tamaño al comprar; encaja con quien quiere una máquina para modelos locales de clase 100B sin el soporte de un fabricante de estaciones de trabajo.',
     quickAnswerTop: {
       es: {
         question: '¿Es el GMKtec EVO-X2 una buena estación de trabajo de IA local?',
         answer:
-          'Usa el mismo Ryzen AI Max+ 395 y la misma opción de 128 GB de memoria que otras cajas Strix Halo, así que compite en precio, refrigeración y soporte, no en capacidad bruta. Ninguna fuente independiente que pudimos leer midió su velocidad con LLM, y su precio en EE. UU. se informa de forma incoherente, así que verifica primero el precio en vivo.',
+          'Usa el mismo Ryzen AI Max+ 395 y la misma opción de 128 GB de memoria que otras máquinas Strix Halo, así que compite en precio, refrigeración y soporte, no en capacidad bruta. La tienda de EE. UU. de GMKtec lo lista desde $2,199.99 (64 GB) hasta $3,649.99 (128 GB / 2 TB); ninguna fuente independiente que pudimos leer midió su velocidad con LLM.',
         bullets: [
           'Chip: Ryzen AI Max+ 395, Radeon 8060S, LPDDR5X-8000 (GMKtec)',
           'Memoria: 64 GB o 128 GB, soldada y no ampliable',
-          'Precio en EE. UU.: $2,199.99 en oferta en la página de GMKtec (agotado) frente a unos $3,649 informados en otros sitios',
+          'Precio en EE. UU. (tienda GMKtec, 2026-11-14): $2,199.99 con 64 GB, de $3,499.99 a $3,649.99 con 128 GB',
           'No probado en la práctica por PromptQuorum',
         ],
         updatedDate: '2026-11',
@@ -1156,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fuentes', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'El GMKtec EVO-X2 es un mini PC con AMD Ryzen AI Max+ 395 y hasta 128 GB de memoria unificada cuyo precio en EE. UU. se informa de forma incoherente según la fuente.' },
+      { type: 'one-sentence', content: 'El GMKtec EVO-X2 es un mini PC con AMD Ryzen AI Max+ 395 y hasta 128 GB de memoria unificada, listado de $2,199.99 a $3,649.99 en la tienda de EE. UU. de GMKtec.' },
       { type: 'plain-terms', content: 'Esta página se basa en la especificación de GMKtec y en informes de terceros; PromptQuorum no ha probado el equipo. Memoria unificada significa que el procesador y los gráficos comparten un único conjunto de RAM, de modo que pueden cargarse modelos grandes aunque la velocidad a la que se ejecuten dependa del ancho de banda de memoria y del software.' },
     ],
     sections: {
@@ -1166,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Plataforma: Ryzen AI Max+ 395 con Radeon 8060S y LPDDR5X-8000 soldada de 64 GB o 128 GB, el mismo chip que otros mini PC Strix Halo.',
-          'Precio: la página de GMKtec y un informe de Notebookcheck de julio de 2026 sobre Amazon discrepan para 128 GB / 2 TB; la tabla de precios enumera ambos con sus fuentes.',
+          'Precio: la tienda de EE. UU. de GMKtec listaba el 2026-11-14 $2,199.99 (64 GB / 1 TB), $3,499.99 (128 GB / 1 TB) y $3,649.99 (128 GB / 2 TB); la cifra de Amazon de $3,649 del informe de Notebookcheck de julio de 2026 se acerca a la última.',
           'Laguna de evidencia: las reseñas independientes que pudimos leer cubren la unidad de 64 GB, y la única comparación del EVO-X2 con la DGX Spark la realizó la propia GMKtec.',
           'Contrapartidas: un único puerto Ethernet de 2.5G y USB4 en lugar de una red rápida para clusters, y un adaptador de corriente externo de 230 W.',
           'Mantenimiento: la reseña de Notebookcheck criticó el control limitado de los ventiladores y un mantenimiento más complicado.',
@@ -1209,16 +1239,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Precio y disponibilidad',
         itemHeadings: true,
         content:
-          '**Los precios en EE. UU. de la misma máquina de 128 GB se contradicen en más de $1,000 según la fuente, así que ninguna de las cifras de abajo debe tomarse como el precio actual.** Los costes de la memoria han movido los precios repetidamente en 2026; abre el anuncio en vivo antes de pedir.',
+          '**La tienda de EE. UU. de GMKtec lista el EVO-X2 a $2,199.99 con 64 GB y de $3,499.99 a $3,649.99 con 128 GB, cada uno mostrado como descuento sobre un precio normal más alto.** Las cifras se leyeron en los datos de producto de la tienda el 2026-11-14 y todas las variantes de EE. UU. figuraban entonces como disponibles. Los precios cambian a menudo; abre el anuncio en vivo antes de pedir.',
         columns: ['Configuración', 'Precio EE. UU.', 'Fuente y fecha', 'Estado'],
         rows: [
-          { 'Configuración': '128 GB / 2 TB', 'Precio EE. UU.': '$2,199.99 en oferta ($2,599.99 normal)', 'Fuente y fecha': '[Página de producto de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), consultada el 2026-10-31', 'Estado': 'Mostrado en la página; todas las variantes figuran como agotadas o no disponibles' },
-          { 'Configuración': '128 GB / 2 TB', 'Precio EE. UU.': '$3,649', 'Fuente y fecha': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Estado': 'Anuncio de Amazon en el momento de redactar, según Notebookcheck' },
-          { 'Configuración': '128 GB / 1 TB', 'Precio EE. UU.': '$150 menos que el modelo de 2 TB (sin cifra indicada)', 'Fuente y fecha': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Estado': 'Variante más reciente con menos almacenamiento' },
-          { 'Configuración': '64 GB', 'Precio EE. UU.': '$1,500 menos que 128 GB', 'Fuente y fecha': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Estado': 'Se indica la diferencia de precio, sin precio absoluto' },
+          { 'Configuración': '64 GB / 1 TB', 'Precio EE. UU.': '$2,199.99 en oferta ($2,599.99 normal)', 'Fuente y fecha': '[Tienda de EE. UU. de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), consultada el 2026-11-14', 'Estado': 'Marcada como disponible por la tienda' },
+          { 'Configuración': '128 GB / 1 TB', 'Precio EE. UU.': '$3,499.99 en oferta ($3,999.99 normal)', 'Fuente y fecha': '[Tienda de EE. UU. de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), consultada el 2026-11-14', 'Estado': 'Marcada como disponible por la tienda' },
+          { 'Configuración': '128 GB / 2 TB', 'Precio EE. UU.': '$3,649.99 en oferta ($3,999.99 normal)', 'Fuente y fecha': '[Tienda de EE. UU. de GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), consultada el 2026-11-14', 'Estado': 'Marcada disponible; pack con plan Z.AI: $3,699.99' },
+          { 'Configuración': '128 GB / 2 TB (Amazon)', 'Precio EE. UU.': '$3,649', 'Fuente y fecha': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Estado': 'Anuncio de Amazon en el momento de redactar, según Notebookcheck' },
           { 'Configuración': '128 GB (lanzamiento, China)', 'Precio EE. UU.': 'CNY 14,999 (unos $2,060)', 'Fuente y fecha': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html), 2025-04-07', 'Estado': 'Precio histórico de reserva en China, no un precio de EE. UU.' },
         ],
-        note: 'No sabemos por qué la página de GMKtec y el informe basado en Amazon difieren; la página puede mostrar un precio promocional que ahora mismo no se puede pedir. No repetimos aquí el código de cupón de Notebookcheck porque puede haber caducado.',
+        note: 'Leímos los datos de producto públicos de GMKtec y no la página renderizada; «disponible» es la marca de la propia tienda, no una garantía de existencias. El precio de oferta de $2,199.99 corresponde al modelo de 64 GB, no a una configuración de 128 GB. No encontramos un precio en euros verificado; las variantes de la UE muestran en los datos los mismos importes en USD, por eso solo indicamos USD.',
       },
       evidence: {
         id: 'evidence',
@@ -1232,6 +1262,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'A quién le conviene y a quién no',
+        content:
+          '**El EVO-X2 encaja con quien quiere un Ryzen AI Max+ 395 con 128 GB a precio de marca de consumo y acepta un soporte limitado; no encaja con equipos que necesitan 192 GB, un canal de ventas empresarial o un clúster de varias máquinas.** Para valorar si 64 GB o 128 GB bastan para tus modelos, usa la [guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide).',
         items: [
           '**Conviene:** a compradores que quieren el Ryzen AI Max+ 395 y 128 GB en una caja pequeña con Windows o Ubuntu y que solo comprarán cuando el precio en vivo sea razonable.',
           '**Conviene:** a usuarios que aceptan el soporte de una marca de consumo y una garantía de 1+2 años a cambio de un posible precio más bajo.',
@@ -1255,6 +1287,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+          {
+            q: '¿Cuánto cuesta el GMKtec EVO-X2?',
+            a: 'En la tienda de EE. UU. de GMKtec, el 2026-11-14, el modelo de 64 GB / 1 TB costaba $2,199.99, el de 128 GB / 1 TB $3,499.99 y el de 128 GB / 2 TB $3,649.99, cada uno mostrado junto a un precio normal más alto. Los precios cambian a menudo; abre el anuncio en vivo antes de pedir.',
+          },
           {
             q: '¿Puedo ampliar la memoria más adelante?',
             a: 'No. GMKtec indica que la LPDDR5X es integrada y no ampliable, así que elige 64 GB o 128 GB al comprar. El almacenamiento sí puede ampliarse con las dos ranuras M.2.',
@@ -1281,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Especificaciones, variantes de memoria y almacenamiento, puertos, garantía, precio de oferta de $2,199.99 y estado de agotado.' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Especificaciones, variantes de memoria y almacenamiento, puertos, garantía y los precios de EE. UU. leídos el 2026-11-14.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: 'Variante de 128 GB / 1 TB, precio de $3,649 en Amazon, diferencia de $1,500 con el modelo de 64 GB, asignación de 96 GB a la GPU.' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: 'Lanzamiento de abril de 2025, precio de CNY 14,999, especificación inicial.' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: 'Reseña de la unidad de 64 GB: veredicto, comentarios sobre refrigeración y mantenimiento.' },
@@ -1293,10 +1329,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'GMKtec EVO-X2 para IA local: especificaciones, precio y veredicto',
-      'description': 'GMKtec EVO-X2 con Ryzen AI Max+ 395 y 128 GB: especificaciones verificadas, precios de EE. UU. contradictorios con fuentes y hallazgos de terceros.',
+      'headline': 'GMKtec EVO-X2: precio y specs, 128 GB a $3,499.99',
+      'description': 'GMKtec EVO-X2 con Ryzen AI Max+ 395: $2,199.99 con 64 GB y de $3,499.99 a $3,649.99 con 128 GB en la tienda de EE. UU. de GMKtec, más specs y alternativas.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1309,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'es',
       'url': 'https://www.promptquorum.com/es/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'El GMKtec EVO-X2 es un mini PC con AMD Ryzen AI Max+ 395 y hasta 128 GB de memoria unificada cuyo precio en EE. UU. se informa de forma incoherente según el vendedor.',
+      'articleBody': 'El GMKtec EVO-X2 es un mini PC con AMD Ryzen AI Max+ 395 y hasta 128 GB de memoria unificada, listado de $2,199.99 a $3,649.99 en la tienda de EE. UU. de GMKtec.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Compradores que comparan un GMKtec EVO-X2 con otras estaciones de IA local de 128 GB con Ryzen AI Max+ 395' },
@@ -1318,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1328,14 +1364,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-pt.webp',
-    title: 'GMKtec EVO-X2 para IA local: especificações, preço e veredito',
-    seoTitle: 'GMKtec EVO-X2 para IA local: specs, preço e veredito',
+    title: 'GMKtec EVO-X2: preço e specs, 128 GB a $3,499.99',
+    seoTitle: 'GMKtec EVO-X2: preço e specs, 128 GB a $3,499.99',
     intro:
-      'O GMKtec EVO-X2 é um mini PC construído em torno do AMD Ryzen AI Max+ 395 com até 128 GB de LPDDR5X-8000 soldada, lançado em abril de 2025, segundo a Notebookcheck. A loja da própria GMKtec e relatos de terceiros divergem muito sobre o preço nos EUA, por isso esta página lista cada valor com a sua fonte em vez de escolher um. A PromptQuorum não testou esta máquina; a página se baseia na especificação do fabricante e em relatos de terceiros.',
+      'O GMKtec EVO-X2 é um mini PC com AMD Ryzen AI Max+ 395 e até 128 GB de LPDDR5X-8000 soldada. Na loja dos EUA da GMKtec, em 2026-11-14, o modelo de 64 GB / 1 TB custava $2,199.99 e os de 128 GB custavam $3,499.99 (1 TB) ou $3,649.99 (2 TB), cada um exibido ao lado de um preço regular mais alto. A PromptQuorum não testou esta máquina; a página se baseia na especificação do fabricante e em relatos de terceiros.',
     metaDescription:
-      'GMKtec EVO-X2 com Ryzen AI Max+ 395 e 128 GB: specs verificadas, preços dos EUA conflitantes com fontes, achados de terceiros e quem deve evitar.',
+      'GMKtec EVO-X2 com Ryzen AI Max+ 395: $2,199.99 com 64 GB e de $3,499.99 a $3,649.99 com 128 GB na loja dos EUA da GMKtec, com specs e alternativas.',
     twitterDescription:
-      'GMKtec EVO-X2 para IA local: Ryzen AI Max+ 395, até 128 GB, specs verificadas e preços dos EUA conflitantes com fontes. Página de especificações e evidências, não um teste prático.',
+      'GMKtec EVO-X2 para IA local: Ryzen AI Max+ 395, 64 GB a $2,199.99 e 128 GB de $3,499.99 a $3,649.99 na loja dos EUA da GMKtec, com specs. Não é um teste prático.',
     readTime: '8 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores que comparam um GMKtec EVO-X2 com outras workstations de IA local de 128 GB com Ryzen AI Max+ 395',
@@ -1348,16 +1384,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec evo x2 preço',
     ],
     leadAnswerBlock:
-      '**O GMKtec EVO-X2 é um mini PC compacto com Ryzen AI Max+ 395 e até 128 GB de memória unificada, para quem quer uma caixa para modelos locais da classe de 100B sem o suporte de um fabricante de workstations.** A ressalva decisiva é o preço: a página da própria GMKtec e relatos baseados na Amazon diferem em bem mais de $1,000 para configurações semelhantes de 128 GB, então confira o anúncio ao vivo antes de pedir.',
+      '**O GMKtec EVO-X2 é um mini PC com Ryzen AI Max+ 395 que a loja dos EUA da GMKtec lista a $2,199.99 com 64 GB e de $3,499.99 a $3,649.99 com 128 GB (lido em 2026-11-14).** A memória é soldada, então escolha o tamanho na compra; ele serve para quem quer uma máquina para modelos locais da classe 100B sem o suporte de um fabricante de workstations.',
     quickAnswerTop: {
       pt: {
         question: 'O GMKtec EVO-X2 é uma boa workstation de IA local?',
         answer:
-          'Ele usa o mesmo Ryzen AI Max+ 395 e a mesma opção de 128 GB de memória de outras caixas Strix Halo, então compete em preço, refrigeração e suporte, e não em capacidade bruta. Nenhuma fonte independente que pudemos ler mediu a velocidade dele com LLMs, e o preço nos EUA é reportado de forma inconsistente, então verifique primeiro o preço ao vivo.',
+          'Ele usa o mesmo Ryzen AI Max+ 395 e a mesma opção de 128 GB de memória de outras máquinas Strix Halo, então compete em preço, refrigeração e suporte, não em capacidade bruta. A loja dos EUA da GMKtec o lista de $2,199.99 (64 GB) a $3,649.99 (128 GB / 2 TB); nenhuma fonte independente que pudemos ler mediu sua velocidade com LLMs.',
         bullets: [
           'Chip: Ryzen AI Max+ 395, Radeon 8060S, LPDDR5X-8000 (GMKtec)',
           'Memória: 64 GB ou 128 GB, soldada e não atualizável',
-          'Preço nos EUA: $2,199.99 em promoção na página da GMKtec (esgotado) contra cerca de $3,649 reportados em outros lugares',
+          'Preço nos EUA (loja GMKtec, 2026-11-14): $2,199.99 com 64 GB, de $3,499.99 a $3,649.99 com 128 GB',
           'Não testado na prática pela PromptQuorum',
         ],
         updatedDate: '2026-11',
@@ -1375,7 +1411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fontes', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'O GMKtec EVO-X2 é um mini PC com AMD Ryzen AI Max+ 395 e até 128 GB de memória unificada, cujo preço nos EUA é reportado de forma inconsistente entre as fontes.' },
+      { type: 'one-sentence', content: 'O GMKtec EVO-X2 é um mini PC com AMD Ryzen AI Max+ 395 e até 128 GB de memória unificada, listado de $2,199.99 a $3,649.99 na loja dos EUA da GMKtec.' },
       { type: 'plain-terms', content: 'Esta página se baseia na especificação da GMKtec e em relatos de terceiros; a PromptQuorum não testou a máquina. Memória unificada significa que o processador e a parte gráfica compartilham um único bloco de RAM, então modelos grandes podem ser carregados, embora a velocidade com que rodam dependa da largura de banda da memória e do software.' },
     ],
     sections: {
@@ -1385,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Plataforma: Ryzen AI Max+ 395 com Radeon 8060S e LPDDR5X-8000 soldada em 64 GB ou 128 GB, o mesmo chip de outros mini PCs Strix Halo.',
-          'Preço: a página da própria GMKtec e um relatório da Notebookcheck de julho de 2026 sobre a Amazon divergem para 128 GB / 2 TB; a tabela de preços lista os dois com fontes.',
+          'Preço: a loja dos EUA da GMKtec listava em 2026-11-14 $2,199.99 (64 GB / 1 TB), $3,499.99 (128 GB / 1 TB) e $3,649.99 (128 GB / 2 TB); o valor da Amazon de $3,649 no relato da Notebookcheck de julho de 2026 fica perto do último.',
           'Lacuna de evidência: as análises independentes que pudemos ler cobrem a unidade de 64 GB, e a única comparação do EVO-X2 com o DGX Spark foi feita pela própria GMKtec.',
           'Compromissos: uma única porta Ethernet 2.5G e USB4 em vez de uma malha rápida para cluster, e um adaptador de energia externo de 230 W.',
           'Manutenção: a análise da Notebookcheck criticou o controle limitado das ventoinhas e a manutenção mais complicada.',
@@ -1428,16 +1464,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preço e disponibilidade',
         itemHeadings: true,
         content:
-          '**Os preços nos EUA da mesma máquina de 128 GB divergem em mais de $1,000 entre as fontes, então nenhum dos valores abaixo deve ser tratado como o preço atual.** Os custos de memória mexeram nos preços repetidas vezes em 2026; abra o anúncio ao vivo antes de pedir. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          '**A loja dos EUA da GMKtec lista o EVO-X2 a $2,199.99 com 64 GB e de $3,499.99 a $3,649.99 com 128 GB, cada um exibido como desconto sobre um preço regular mais alto.** Os valores foram lidos nos dados de produto da loja em 2026-11-14, e todas as variantes dos EUA estavam marcadas como disponíveis. Os preços mudam com frequência; abra o anúncio ao vivo antes de pedir. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
         rows: [
-          { 'Configuração': '128 GB / 2 TB', 'Preço nos EUA': '$2,199.99 em promoção ($2,599.99 regular)', 'Fonte e data': '[Página do produto da GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), lida em 2026-10-31', 'Status': 'Exibido na página; todas as variantes marcadas como esgotadas ou indisponíveis' },
-          { 'Configuração': '128 GB / 2 TB', 'Preço nos EUA': '$3,649', 'Fonte e data': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Anúncio da Amazon na hora da redação, segundo a Notebookcheck' },
-          { 'Configuração': '128 GB / 1 TB', 'Preço nos EUA': '$150 abaixo do modelo de 2 TB (sem valor informado)', 'Fonte e data': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Variante nova com menos armazenamento' },
-          { 'Configuração': '64 GB', 'Preço nos EUA': '$1,500 a menos que o de 128 GB', 'Fonte e data': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Diferença de preço informada, sem preço absoluto' },
+          { 'Configuração': '64 GB / 1 TB', 'Preço nos EUA': '$2,199.99 em promoção ($2,599.99 regular)', 'Fonte e data': '[Loja dos EUA da GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), lida em 2026-11-14', 'Status': 'Marcada como disponível pela loja' },
+          { 'Configuração': '128 GB / 1 TB', 'Preço nos EUA': '$3,499.99 em promoção ($3,999.99 regular)', 'Fonte e data': '[Loja dos EUA da GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), lida em 2026-11-14', 'Status': 'Marcada como disponível pela loja' },
+          { 'Configuração': '128 GB / 2 TB', 'Preço nos EUA': '$3,649.99 em promoção ($3,999.99 regular)', 'Fonte e data': '[Loja dos EUA da GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), lida em 2026-11-14', 'Status': 'Marcada disponível; pacote com plano Z.AI: $3,699.99' },
+          { 'Configuração': '128 GB / 2 TB (Amazon)', 'Preço nos EUA': '$3,649', 'Fonte e data': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', 'Status': 'Anúncio da Amazon na hora da redação, segundo a Notebookcheck' },
           { 'Configuração': '128 GB (lançamento, China)', 'Preço nos EUA': 'CNY 14,999 (cerca de $2,060)', 'Fonte e data': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html), 2025-04-07', 'Status': 'Preço histórico de pré-venda na China, não um preço dos EUA' },
         ],
-        note: 'Não sabemos por que a página da GMKtec e o relato baseado na Amazon diferem; a página pode mostrar um preço promocional que não está disponível para pedido no momento. O código de cupom da Notebookcheck não é repetido aqui porque pode ter expirado.',
+        note: 'Lemos os dados de produto públicos da GMKtec e não a página renderizada; "disponível" é a marcação da própria loja, não uma garantia de estoque. O preço promocional de $2,199.99 vale para o modelo de 64 GB, não para uma configuração de 128 GB. Não encontramos um preço em euros verificado; as variantes da UE mostram nos dados os mesmos valores em USD, por isso indicamos apenas USD.',
       },
       evidence: {
         id: 'evidence',
@@ -1451,6 +1487,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Para quem serve e quem deve evitar',
+        content:
+          '**O EVO-X2 serve para quem quer um Ryzen AI Max+ 395 com 128 GB a preço de marca de consumo e aceita suporte limitado; não serve para equipes que precisam de 192 GB, de um canal de vendas empresarial ou de um cluster com várias máquinas.** Para avaliar se 64 GB ou 128 GB bastam para os seus modelos, use o [guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide).',
         items: [
           '**Serve:** compradores que querem o Ryzen AI Max+ 395 e 128 GB em uma caixa pequena com Windows ou Ubuntu e só vão comprar depois que o preço ao vivo se confirmar.',
           '**Serve:** usuários que aceitam o suporte de uma marca de consumo e uma garantia de 1+2 anos em troca de um possível preço menor.',
@@ -1474,6 +1512,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
+          {
+            q: 'Quanto custa o GMKtec EVO-X2?',
+            a: 'Na loja dos EUA da GMKtec, em 2026-11-14, o modelo de 64 GB / 1 TB custava $2,199.99, o de 128 GB / 1 TB $3,499.99 e o de 128 GB / 2 TB $3,649.99, cada um exibido ao lado de um preço regular mais alto. Os preços mudam com frequência; abra o anúncio ao vivo antes de pedir.',
+          },
           {
             q: 'Posso ampliar a memória depois?',
             a: 'Não. A GMKtec lista a LPDDR5X como onboard e não atualizável, então escolha 64 GB ou 128 GB na compra. O armazenamento pode ser expandido pelos dois slots M.2.',
@@ -1500,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Especificações, variantes de memória e armazenamento, portas, garantia, preço promocional de $2,199.99 e status de esgotado.' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'Especificações, variantes de memória e armazenamento, portas, garantia e os preços dos EUA lidos em 2026-11-14.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: 'Variante de 128 GB / 1 TB, preço de $3,649 na Amazon, diferença de $1,500 para 64 GB, alocação de 96 GB para a GPU.' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: 'Lançamento de abril de 2025, preço de CNY 14,999, especificação inicial.' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: 'Análise da unidade de 64 GB: veredito, comentários sobre refrigeração e manutenção.' },
@@ -1512,10 +1554,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'GMKtec EVO-X2 para IA local: especificações, preço e veredito',
-      'description': 'GMKtec EVO-X2 com Ryzen AI Max+ 395 e 128 GB: specs verificadas, preços dos EUA conflitantes com fontes, achados de terceiros e quem deve evitar.',
+      'headline': 'GMKtec EVO-X2: preço e specs, 128 GB a $3,499.99',
+      'description': 'GMKtec EVO-X2 com Ryzen AI Max+ 395: $2,199.99 com 64 GB e de $3,499.99 a $3,649.99 com 128 GB na loja dos EUA da GMKtec, com specs e alternativas.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1528,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'pt-BR',
       'url': 'https://www.promptquorum.com/pt/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'O GMKtec EVO-X2 é um mini PC com AMD Ryzen AI Max+ 395 e até 128 GB de memória unificada, cujo preço nos EUA é reportado de forma inconsistente entre os vendedores.',
+      'articleBody': 'O GMKtec EVO-X2 é um mini PC com AMD Ryzen AI Max+ 395 e até 128 GB de memória unificada, listado de $2,199.99 a $3,649.99 na loja dos EUA da GMKtec.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Compradores que comparam um GMKtec EVO-X2 com outras workstations de IA local de 128 GB com Ryzen AI Max+ 395' },
@@ -1537,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1547,14 +1589,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-ar.webp',
-    title: 'GMKtec EVO-X2 للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم',
-    seoTitle: 'GMKtec EVO-X2 للذكاء الاصطناعي المحلي: المواصفات والسعر',
+    title: 'GMKtec EVO-X2: السعر والمواصفات، 128 GB بـ$3,499.99',
+    seoTitle: 'GMKtec EVO-X2: السعر والمواصفات، 128 GB بـ$3,499.99',
     intro:
-      'جهاز GMKtec EVO-X2 كمبيوتر مصغر مبني على AMD Ryzen AI Max+ 395 بذاكرة LPDDR5X-8000 ملحومة تصل إلى 128 GB، أُطلق في أبريل 2025 بحسب Notebookcheck. يتباين متجر GMKtec نفسه والتقارير الخارجية تباينًا واسعًا في سعره الأمريكي، لذلك تعرض هذه الصفحة كل رقم مع مصدره بدل اختيار رقم واحد. لم تختبر PromptQuorum هذا الجهاز؛ وتستند الصفحة إلى مواصفات المصنّع وتقارير أطراف ثالثة.',
+      'GMKtec EVO-X2 جهاز ميني PC بمعالج AMD Ryzen AI Max+ 395 وذاكرة LPDDR5X-8000 ملحومة حتى 128 GB. في متجر GMKtec الأمريكي بتاريخ 2026-11-14 كان طراز 64 GB / 1 TB بسعر $2,199.99 وطرازا 128 GB بسعر $3,499.99 (1 TB) أو $3,649.99 (2 TB)، وكلٌّ منها معروض إلى جانب سعر عادي أعلى. لم تختبر PromptQuorum هذا الجهاز؛ تعتمد الصفحة على مواصفات الشركة المصنّعة وتقارير الأطراف الثالثة.',
     metaDescription:
-      'GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB: مواصفات موثقة وأسعار أمريكية متعارضة مع مصادرها ونتائج الأطراف الثالثة ولمن لا يناسب هذا الجهاز.',
+      'GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395: سعر 64 GB هو $2,199.99 و128 GB من $3,499.99 إلى $3,649.99 في متجر GMKtec الأمريكي، مع المواصفات والبدائل.',
     twitterDescription:
-      'GMKtec EVO-X2 للذكاء الاصطناعي المحلي: Ryzen AI Max+ 395 وذاكرة حتى 128 GB ومواصفات موثقة وأسعار أمريكية متعارضة مع مصادرها. صفحة مواصفات وأدلة، وليست اختبارًا عمليًا.',
+      'GMKtec EVO-X2 للذكاء الاصطناعي المحلي: Ryzen AI Max+ 395، سعر 64 GB هو $2,199.99 و128 GB من $3,499.99 إلى $3,649.99 في المتجر الأمريكي، مع المواصفات. ليست اختبارًا عمليًا.',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المشترون الذين يوازنون بين GMKtec EVO-X2 ومحطات عمل أخرى للذكاء الاصطناعي المحلي بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB',
@@ -1567,16 +1609,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'سعر gmktec evo x2',
     ],
     leadAnswerBlock:
-      '**جهاز GMKtec EVO-X2 كمبيوتر مصغر مدمج بمعالج Ryzen AI Max+ 395 وذاكرة موحدة تصل إلى 128 GB، لمن يريد جهازًا لنماذج من فئة 100B دون دعم شركة محطات عمل.** أبرز تحفظ عليه هو السعر: تختلف صفحة GMKtec نفسها وتقارير مبنية على Amazon بأكثر من $1,000 لإعدادات 128 GB متشابهة، لذا تحقق من القائمة الحية قبل الطلب.',
+      '**GMKtec EVO-X2 جهاز ميني PC بمعالج Ryzen AI Max+ 395 يدرجه متجر GMKtec الأمريكي بسعر $2,199.99 مع 64 GB وبين $3,499.99 و$3,649.99 مع 128 GB (قُرئ في 2026-11-14).** الذاكرة ملحومة، لذا اختر السعة عند الشراء؛ ويناسب من يريد جهازًا للنماذج المحلية من فئة 100B دون دعم شركة مصنّعة لمحطات العمل.',
     quickAnswerTop: {
       ar: {
         question: 'هل GMKtec EVO-X2 محطة عمل جيدة للذكاء الاصطناعي المحلي؟',
         answer:
-          'يستخدم شريحة Ryzen AI Max+ 395 وخيار ذاكرة 128 GB نفسيهما الموجودين في أجهزة Strix Halo الأخرى، فينافس في السعر والتبريد والدعم لا في القدرة الخام. لم يقس أي مصدر مستقل استطعنا قراءته سرعة LLM عليه، وسعره الأمريكي مُبلَّغ عنه بشكل غير متسق، لذا تحقق من السعر الحي أولًا.',
+          'يستخدم المعالج Ryzen AI Max+ 395 نفسه وخيار الذاكرة 128 GB نفسه كما في أجهزة Strix Halo الأخرى، لذا ينافس بالسعر والتبريد والدعم لا بالقدرة الخام. يدرجه متجر GMKtec الأمريكي من $2,199.99 (64 GB) إلى $3,649.99 (128 GB / 2 TB)؛ ولم يقس أي مصدر مستقل استطعنا قراءته سرعته مع LLM.',
         bullets: [
           'الشريحة: Ryzen AI Max+ 395 ورقاقة Radeon 8060S وذاكرة LPDDR5X-8000 (GMKtec)',
           'الذاكرة: 64 GB أو 128 GB، ملحومة وغير قابلة للترقية',
-          'السعر الأمريكي: $2,199.99 تخفيض على صفحة GMKtec (نفدت الكمية) مقابل نحو $3,649 في مصادر أخرى',
+          'السعر الأمريكي (متجر GMKtec، 2026-11-14): $2,199.99 لـ 64 GB ومن $3,499.99 إلى $3,649.99 لـ 128 GB',
           'لم تختبره PromptQuorum عمليًا',
         ],
         updatedDate: '2026-11',
@@ -1594,7 +1636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'المصادر', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'جهاز GMKtec EVO-X2 كمبيوتر مصغر بمعالج AMD Ryzen AI Max+ 395 وذاكرة موحدة تصل إلى 128 GB، يُبلَّغ عن سعره الأمريكي بشكل غير متسق بين المصادر.' },
+      { type: 'one-sentence', content: 'GMKtec EVO-X2 جهاز ميني PC بمعالج AMD Ryzen AI Max+ 395 وذاكرة موحدة حتى 128 GB، مدرج في متجر GMKtec الأمريكي بين $2,199.99 و$3,649.99.' },
       { type: 'plain-terms', content: 'تستند هذه الصفحة إلى مواصفات GMKtec وتقارير أطراف ثالثة؛ ولم تختبر PromptQuorum الجهاز. الذاكرة الموحدة تعني أن المعالج ورقاقة الرسومات يتشاركان مجموعة واحدة من الذاكرة، فيمكن تحميل نماذج كبيرة، بينما تعتمد سرعة تشغيلها على عرض نطاق الذاكرة والبرمجيات.' },
     ],
     sections: {
@@ -1604,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'المنصة: Ryzen AI Max+ 395 مع Radeon 8060S وذاكرة LPDDR5X-8000 ملحومة بسعة 64 GB أو 128 GB، وهي الشريحة نفسها في أجهزة Strix Halo المصغرة الأخرى.',
-          'السعر: تختلف صفحة GMKtec نفسها وتقرير Notebookcheck من يوليو 2026 عن Amazon لطراز 128 GB / 2 TB؛ ويذكر جدول الأسعار الاثنين مع مصدريهما.',
+          'السعر: أدرج متجر GMKtec الأمريكي في 2026-11-14 الأسعار $2,199.99 (64 GB / 1 TB) و$3,499.99 (128 GB / 1 TB) و$3,649.99 (128 GB / 2 TB)؛ ورقم Amazon البالغ $3,649 في تقرير Notebookcheck لشهر يوليو 2026 قريب من الأخير.',
           'فجوة الأدلة: المراجعات المستقلة التي استطعنا قراءتها تخص وحدة 64 GB، والمقارنة الوحيدة بين EVO-X2 وDGX Spark أجرتها GMKtec نفسها.',
           'المفاضلات: منفذ Ethernet واحد بسرعة 2.5G وUSB4 بدل نسيج عنقودي سريع، ومحوّل طاقة خارجي بقدرة 230 W.',
           'الصيانة: انتقدت مراجعة Notebookcheck محدودية التحكم بالمروحة وتعقيد الصيانة.',
@@ -1647,16 +1689,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'السعر والتوفر',
         itemHeadings: true,
         content:
-          '**تتعارض الأسعار الأمريكية للجهاز نفسه بذاكرة 128 GB بأكثر من $1,000 بين المصادر، لذا لا ينبغي اعتبار أي رقم أدناه السعر الحالي.** حرّكت تكاليف الذاكرة الأسعار مرارًا في 2026؛ افتح القائمة الحية قبل الطلب.',
+          '**يدرج متجر GMKtec الأمريكي جهاز EVO-X2 بسعر $2,199.99 مع 64 GB وبين $3,499.99 و$3,649.99 مع 128 GB، وكلٌّ منها معروض كخصم من سعر عادي أعلى.** قُرئت الأرقام من بيانات المنتج في المتجر بتاريخ 2026-11-14، وكانت جميع النسخ الأمريكية معلَّمة متوفرة حينها. تتغير الأسعار كثيرًا، لذا افتح القائمة الحية قبل الطلب.',
         columns: ['الإعداد', 'السعر الأمريكي', 'المصدر والتاريخ', 'الحالة'],
         rows: [
-          { 'الإعداد': '128 GB / 2 TB', 'السعر الأمريكي': '$2,199.99 تخفيض ($2,599.99 عادي)', 'المصدر والتاريخ': '[صفحة منتج GMKtec](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)، قُرئت في 2026-10-31', 'الحالة': 'ظاهر على الصفحة؛ جميع النسخ معلَّمة نافدة أو غير متوفرة' },
-          { 'الإعداد': '128 GB / 2 TB', 'السعر الأمريكي': '$3,649', 'المصدر والتاريخ': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)، 2026-07-18', 'الحالة': 'قائمة Amazon وقت الكتابة، بحسب Notebookcheck' },
-          { 'الإعداد': '128 GB / 1 TB', 'السعر الأمريكي': 'أقل بـ$150 من طراز 2 TB (دون ذكر رقم)', 'المصدر والتاريخ': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)، 2026-07-18', 'الحالة': 'نسخة أحدث بتخزين أقل' },
-          { 'الإعداد': '64 GB', 'السعر الأمريكي': 'أقل بـ$1,500 من طراز 128 GB', 'المصدر والتاريخ': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)، 2026-07-18', 'الحالة': 'ذُكر فرق السعر دون سعر مطلق' },
+          { 'الإعداد': '64 GB / 1 TB', 'السعر الأمريكي': '$2,199.99 تخفيض ($2,599.99 عادي)', 'المصدر والتاريخ': '[متجر GMKtec الأمريكي](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)، قُرئ في 2026-11-14', 'الحالة': 'معلَّم متوفرًا من المتجر' },
+          { 'الإعداد': '128 GB / 1 TB', 'السعر الأمريكي': '$3,499.99 تخفيض ($3,999.99 عادي)', 'المصدر والتاريخ': '[متجر GMKtec الأمريكي](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)، قُرئ في 2026-11-14', 'الحالة': 'معلَّم متوفرًا من المتجر' },
+          { 'الإعداد': '128 GB / 2 TB', 'السعر الأمريكي': '$3,649.99 تخفيض ($3,999.99 عادي)', 'المصدر والتاريخ': '[متجر GMKtec الأمريكي](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc)، قُرئ في 2026-11-14', 'الحالة': 'معلَّم متوفرًا؛ حزمة خطة Z.AI: $3,699.99' },
+          { 'الإعداد': '128 GB / 2 TB (Amazon)', 'السعر الأمريكي': '$3,649', 'المصدر والتاريخ': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html)، 2026-07-18', 'الحالة': 'قائمة Amazon وقت الكتابة، بحسب Notebookcheck' },
           { 'الإعداد': '128 GB (الإطلاق، الصين)', 'السعر الأمريكي': 'CNY 14,999 (نحو $2,060)', 'المصدر والتاريخ': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html)، 2025-04-07', 'الحالة': 'سعر طلب مسبق تاريخي في الصين، وليس سعرًا أمريكيًا' },
         ],
-        note: 'لا نعرف سبب اختلاف صفحة GMKtec عن التقرير المبني على Amazon؛ فقد تعرض الصفحة سعرًا ترويجيًا لا يمكن طلبه حاليًا. لم نكرر رمز القسيمة الذي ذكرته Notebookcheck لأنه قد يكون انتهى.',
+        note: 'قرأنا بيانات المنتج العامة لدى GMKtec وليس الصفحة المعروضة، و«متوفر» هو علامة المتجر نفسه وليس ضمانًا للمخزون. سعر التخفيض $2,199.99 ينطبق على طراز 64 GB وليس على إعداد 128 GB. لم نجد سعرًا موثقًا باليورو؛ وتعرض نسخ الاتحاد الأوروبي في البيانات المبالغ نفسها بالدولار، لذا نعرض الدولار فقط.',
       },
       evidence: {
         id: 'evidence',
@@ -1670,6 +1712,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'لمن يناسب ولمن لا يناسب',
+        content:
+          '**يناسب EVO-X2 من يريد جهاز Ryzen AI Max+ 395 بذاكرة 128 GB بسعر علامة استهلاكية ويقبل دعمًا محدودًا؛ ولا يناسب الفرق التي تحتاج إلى 192 GB أو قناة مبيعات للشركات أو عنقودًا من عدة أجهزة.** لتقدير ما إذا كان 64 GB أو 128 GB يكفي لنماذجك، استخدم [دليل عتاد LLM المحلية](/ar/local-llms/local-llm-hardware-guide).',
         items: [
           '**يناسب:** من يريد Ryzen AI Max+ 395 وذاكرة 128 GB في صندوق صغير بنظام Windows أو Ubuntu ولن يشتري إلا بعد التحقق من السعر الحي.',
           '**يناسب:** المستخدمين الذين يقبلون دعم علامة استهلاكية وضمان 1+2 سنة مقابل سعر قد يكون أقل.',
@@ -1693,6 +1737,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          {
+            q: 'كم يبلغ سعر GMKtec EVO-X2؟',
+            a: 'في متجر GMKtec الأمريكي بتاريخ 2026-11-14 كان طراز 64 GB / 1 TB بسعر $2,199.99 وطراز 128 GB / 1 TB بسعر $3,499.99 وطراز 128 GB / 2 TB بسعر $3,649.99، وكلٌّ منها معروض إلى جانب سعر عادي أعلى. تتغير الأسعار كثيرًا، لذا افتح القائمة الحية قبل الطلب.',
+          },
           {
             q: 'هل أستطيع ترقية الذاكرة لاحقًا؟',
             a: 'لا. تذكر GMKtec أن LPDDR5X على اللوحة وغير قابلة للترقية، فاختر 64 GB أو 128 GB عند الشراء. أما التخزين فيمكن توسيعه عبر فتحتَي M.2.',
@@ -1719,7 +1767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'المواصفات ونسخ الذاكرة والتخزين والمنافذ والضمان وسعر التخفيض $2,199.99 وحالة نفاد الكمية.' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: 'المواصفات ونسخ الذاكرة والتخزين والمنافذ والضمان والأسعار الأمريكية المقروءة في 2026-11-14.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: 'نسخة 128 GB / 1 TB وسعر Amazon البالغ $3,649 والفارق البالغ $1,500 عن 64 GB وتخصيص 96 GB للرسومات.' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: 'إطلاق أبريل 2025 وسعر CNY 14,999 والمواصفات المبكرة.' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: 'مراجعة وحدة 64 GB: الحكم وملاحظات التبريد والصيانة.' },
@@ -1731,10 +1779,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'GMKtec EVO-X2 للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم',
-      'description': 'GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB: مواصفات موثقة وأسعار أمريكية متعارضة مع مصادرها ونتائج الأطراف الثالثة ولمن لا يناسب هذا الجهاز.',
+      'headline': 'GMKtec EVO-X2: السعر والمواصفات، 128 GB بـ$3,499.99',
+      'description': 'GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395: سعر 64 GB هو $2,199.99 و128 GB من $3,499.99 إلى $3,649.99 في متجر GMKtec الأمريكي، مع المواصفات والبدائل.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1746,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ar',
       'url': 'https://www.promptquorum.com/ar/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'جهاز GMKtec EVO-X2 كمبيوتر مصغر بمعالج AMD Ryzen AI Max+ 395 وذاكرة موحدة تصل إلى 128 GB، يُبلَّغ عن سعره الأمريكي بشكل غير متسق بين البائعين.',
+      'articleBody': 'GMKtec EVO-X2 جهاز ميني PC بمعالج AMD Ryzen AI Max+ 395 وذاكرة موحدة حتى 128 GB، مدرج في متجر GMKtec الأمريكي بين $2,199.99 و$3,649.99.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'المشترون الذين يوازنون بين GMKtec EVO-X2 ومحطات عمل أخرى للذكاء الاصطناعي المحلي بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB' },
@@ -1755,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1765,14 +1813,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-ko.webp',
-    title: '로컬 AI용 GMKtec EVO-X2: 사양, 가격, 평가',
-    seoTitle: '로컬 AI용 GMKtec EVO-X2: 사양, 가격, 평가',
+    title: 'GMKtec EVO-X2 가격·사양: 128GB $3,499.99',
+    seoTitle: 'GMKtec EVO-X2 가격·사양: 128GB $3,499.99',
     intro:
-      'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB의 납땜형 LPDDR5X-8000을 탑재한 미니 PC로, Notebookcheck에 따르면 2025년 4월에 출시되었습니다. GMKtec 자체 스토어와 제3자 보고서는 미국 가격에 대해 크게 엇갈리므로, 이 페이지는 하나를 고르지 않고 각 수치를 출처와 함께 나열합니다. PromptQuorum은 이 기기를 테스트하지 않았으며, 이 페이지는 벤더 사양과 제3자 보고서를 바탕으로 합니다.',
+      'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB 온보드 LPDDR5X-8000을 탑재한 미니 PC입니다. GMKtec 미국 스토어에서 2026-11-14에 64GB / 1TB 모델은 $2,199.99, 128GB 모델은 $3,499.99(1TB) 또는 $3,649.99(2TB)였으며, 모두 더 높은 정가와 함께 표시되었습니다. PromptQuorum은 이 기기를 직접 테스트하지 않았으며, 이 페이지는 제조사 사양과 제3자 보도에 근거합니다.',
     metaDescription:
-      'Ryzen AI Max+ 395와 128GB를 탑재한 GMKtec EVO-X2: 확인된 사양, 출처별로 엇갈리는 미국 가격, 제3자 평가, 비추천 대상.',
+      'GMKtec EVO-X2(Ryzen AI Max+ 395) 가격: 미국 스토어 64GB $2,199.99, 128GB $3,499.99~$3,649.99. 전체 사양과 대안을 정리했습니다.',
     twitterDescription:
-      '로컬 AI용 GMKtec EVO-X2: Ryzen AI Max+ 395, 최대 128GB, 확인된 사양과 출처별로 엇갈리는 미국 가격. 직접 테스트가 아닌 사양 및 근거 정리 페이지입니다.',
+      '로컬 AI용 GMKtec EVO-X2: Ryzen AI Max+ 395, 미국 스토어 64GB $2,199.99, 128GB $3,499.99~$3,649.99, 사양 포함. 직접 테스트가 아닙니다.',
     readTime: '8분 읽기',
     educationalLevel: 'Intermediate',
     audience: 'GMKtec EVO-X2를 다른 128GB Ryzen AI Max+ 395 로컬 AI 워크스테이션과 비교하는 구매자',
@@ -1785,16 +1833,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec evo x2 가격',
     ],
     leadAnswerBlock:
-      '**GMKtec EVO-X2는 최대 128GB의 통합 메모리를 갖춘 소형 Ryzen AI Max+ 395 미니 PC로, 워크스테이션 벤더의 지원 없이도 100B급 로컬 모델 기기를 원하는 사용자를 위한 제품입니다.** 결정적인 단서는 가격입니다. 비슷한 128GB 구성에 대해 GMKtec 자체 페이지와 Amazon 기반 보고서의 가격이 $1,000 넘게 차이가 나므로, 주문 전에 실시간 목록을 확인하십시오.',
+      '**GMKtec EVO-X2는 Ryzen AI Max+ 395 미니 PC이며, GMKtec 미국 스토어는 64GB를 $2,199.99, 128GB를 $3,499.99~$3,649.99에 게시합니다(2026-11-14 확인).** 메모리가 납땜되어 있으므로 구매 시 용량을 선택해야 하며, 워크스테이션 제조사의 지원 없이 100B급 로컬 모델용 기기를 원하는 구매자에게 적합합니다.',
     quickAnswerTop: {
       ko: {
         question: 'GMKtec EVO-X2는 로컬 AI 워크스테이션으로 적합합니까?',
         answer:
-          '다른 Strix Halo 기기와 같은 Ryzen AI Max+ 395와 128GB 메모리 옵션을 사용하므로, 순수 성능이 아니라 가격, 냉각, 지원에서 경쟁합니다. 저희가 읽을 수 있는 독립 출처 중 LLM 속도를 측정한 곳은 없었고 미국 가격도 일관되지 않게 보고되므로, 먼저 실시간 가격을 확인하십시오.',
+          '다른 Strix Halo 기기와 같은 Ryzen AI Max+ 395 및 128GB 메모리 옵션을 사용하므로, 원시 성능이 아니라 가격, 쿨링, 지원으로 경쟁합니다. GMKtec 미국 스토어는 $2,199.99(64GB)에서 $3,649.99(128GB / 2TB)까지 게시합니다. 확인할 수 있었던 독립 출처 중 LLM 속도를 측정한 곳은 없습니다.',
         bullets: [
           '칩: Ryzen AI Max+ 395, Radeon 8060S, LPDDR5X-8000 (GMKtec)',
           '메모리: 64GB 또는 128GB, 납땜형이며 업그레이드 불가',
-          '미국 가격: GMKtec 페이지의 할인가 $2,199.99(품절) 대 다른 곳에서 보고된 약 $3,649',
+          '미국 가격(GMKtec 스토어, 2026-11-14): 64GB $2,199.99, 128GB $3,499.99~$3,649.99',
           'PromptQuorum의 직접 테스트 없음',
         ],
         updatedDate: '2026-11',
@@ -1812,7 +1860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '출처', anchor: 'sources' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB의 통합 메모리를 갖춘 미니 PC이며, 미국 가격은 출처마다 일관되지 않게 보고됩니다.' },
+      { type: 'one-sentence', content: 'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB 통합 메모리를 탑재한 미니 PC로, GMKtec 미국 스토어에서 $2,199.99~$3,649.99에 게시되어 있습니다.' },
       { type: 'plain-terms', content: '이 페이지는 GMKtec 사양과 제3자 보고서를 바탕으로 하며, PromptQuorum은 이 기기를 테스트하지 않았습니다. 통합 메모리란 프로세서와 그래픽이 하나의 RAM 풀을 공유한다는 뜻으로, 대형 모델도 불러올 수 있지만 실행 속도는 메모리 대역폭과 소프트웨어에 좌우됩니다.' },
     ],
     sections: {
@@ -1822,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '플랫폼: Radeon 8060S와 64GB 또는 128GB 납땜형 LPDDR5X-8000을 갖춘 Ryzen AI Max+ 395로, 다른 Strix Halo 미니 PC와 같은 칩입니다.',
-          '가격: 128GB / 2TB에 대해 GMKtec 자체 페이지와 Amazon을 다룬 2026년 7월 Notebookcheck 보고서가 엇갈립니다. 가격표에 둘 다 출처와 함께 나열했습니다.',
+          '가격: GMKtec 미국 스토어는 2026-11-14에 $2,199.99(64GB / 1TB), $3,499.99(128GB / 1TB), $3,649.99(128GB / 2TB)를 게시했으며, Notebookcheck 2026년 7월 보도의 Amazon 가격 $3,649는 마지막 가격에 가깝습니다.',
           '근거 부족: 저희가 읽을 수 있는 독립 리뷰는 64GB 기기를 다루며, EVO-X2 대 DGX Spark 비교는 GMKtec이 직접 진행한 것뿐입니다.',
           '트레이드오프: 고속 클러스터 패브릭이 아닌 2.5G 이더넷 포트 1개와 USB4, 그리고 외장 230 W 전원 어댑터.',
           '유지 보수: Notebookcheck 리뷰는 제한적인 팬 제어와 더 복잡한 유지 보수를 비판했습니다.',
@@ -1865,16 +1913,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '가격과 구매 가능 여부',
         itemHeadings: true,
         content:
-          '**같은 128GB 기기의 미국 가격이 출처에 따라 $1,000 넘게 상충하므로, 아래 수치 중 어느 것도 현재 가격으로 간주해서는 안 됩니다.** 2026년에는 메모리 비용으로 가격이 여러 차례 움직였으므로, 주문 전에 실시간 목록을 확인하십시오.',
+          '**GMKtec 미국 스토어는 EVO-X2를 64GB $2,199.99, 128GB $3,499.99~$3,649.99에 게시하며, 모두 더 높은 정가 대비 할인가로 표시됩니다.** 수치는 2026-11-14에 스토어의 제품 데이터에서 읽었고, 당시 모든 미국 변종이 구매 가능으로 표시되어 있었습니다. 가격은 자주 바뀌므로 주문 전에 실시간 목록을 확인하십시오.',
         columns: ['구성', '미국 가격', '출처 및 날짜', '상태'],
         rows: [
-          { '구성': '128GB / 2TB', '미국 가격': '$2,199.99 할인가 (정가 $2,599.99)', '출처 및 날짜': '[GMKtec 제품 페이지](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), 2026-10-31 확인', '상태': '페이지에 표시됨, 모든 변종이 품절 또는 구매 불가로 표시' },
-          { '구성': '128GB / 2TB', '미국 가격': '$3,649', '출처 및 날짜': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', '상태': 'Notebookcheck에 따르면 작성 시점의 Amazon 목록' },
-          { '구성': '128GB / 1TB', '미국 가격': '2TB 모델보다 $150 저렴 (구체적 금액 없음)', '출처 및 날짜': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', '상태': '저장 용량이 더 작은 신규 변종' },
-          { '구성': '64GB', '미국 가격': '128GB보다 $1,500 저렴', '출처 및 날짜': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', '상태': '가격 차이만 명시, 절대 가격 없음' },
+          { '구성': '64GB / 1TB', '미국 가격': '$2,199.99 할인가 (정가 $2,599.99)', '출처 및 날짜': '[GMKtec 미국 스토어](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), 2026-11-14 확인', '상태': '스토어가 구매 가능으로 표시' },
+          { '구성': '128GB / 1TB', '미국 가격': '$3,499.99 할인가 (정가 $3,999.99)', '출처 및 날짜': '[GMKtec 미국 스토어](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), 2026-11-14 확인', '상태': '스토어가 구매 가능으로 표시' },
+          { '구성': '128GB / 2TB', '미국 가격': '$3,649.99 할인가 (정가 $3,999.99)', '출처 및 날짜': '[GMKtec 미국 스토어](https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc), 2026-11-14 확인', '상태': '구매 가능 표시, Z.AI 플랜 번들 $3,699.99' },
+          { '구성': '128GB / 2TB (Amazon)', '미국 가격': '$3,649', '출처 및 날짜': '[Notebookcheck](https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html), 2026-07-18', '상태': 'Notebookcheck에 따르면 작성 시점의 Amazon 목록' },
           { '구성': '128GB (출시, 중국)', '미국 가격': 'CNY 14,999 (약 $2,060)', '출처 및 날짜': '[Notebookcheck](https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html), 2025-04-07', '상태': '과거 중국 사전 주문 가격이며 미국 가격이 아님' },
         ],
-        note: 'GMKtec 페이지와 Amazon 기반 보고서의 가격이 왜 다른지는 알 수 없습니다. 해당 페이지가 현재 주문할 수 없는 프로모션 가격을 표시하고 있을 수 있습니다. Notebookcheck의 쿠폰 코드는 만료되었을 수 있어 여기에 반복하지 않았습니다.',
+        note: '렌더링된 페이지가 아니라 GMKtec의 공개 제품 데이터를 읽었으며, \'구매 가능\'은 스토어 자체의 표시일 뿐 재고 보장이 아닙니다. $2,199.99 할인가는 64GB 모델의 가격이며 128GB 구성의 가격이 아닙니다. 검증된 유로 가격은 찾지 못했고, EU 변종도 데이터상 같은 USD 금액을 표시하므로 USD만 표기합니다.',
       },
       evidence: {
         id: 'evidence',
@@ -1888,6 +1936,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '적합한 사용자와 피해야 할 사용자',
+        content:
+          '**EVO-X2는 소비자 브랜드 가격으로 128GB Ryzen AI Max+ 395 기기를 원하고 제한적인 제조사 지원을 감수할 수 있는 구매자에게 맞으며, 192GB, 기업용 판매 채널, 다중 기기 클러스터가 필요한 팀에는 맞지 않습니다.** 64GB와 128GB 중 무엇이 충분한지는 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)로 판단하십시오.',
         items: [
           '**적합:** Ryzen AI Max+ 395와 128GB를 작은 Windows 또는 Ubuntu 기기로 원하며, 실시간 가격을 확인한 뒤에만 구매할 사용자입니다.',
           '**적합:** 더 낮을 수 있는 가격의 대가로 소비자 브랜드 수준의 지원과 1+2년 보증을 받아들이는 사용자입니다.',
@@ -1911,6 +1961,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          {
+            q: 'GMKtec EVO-X2 가격은 얼마입니까?',
+            a: 'GMKtec 미국 스토어에서 2026-11-14에 64GB / 1TB 모델은 $2,199.99, 128GB / 1TB 모델은 $3,499.99, 128GB / 2TB 모델은 $3,649.99였으며, 모두 더 높은 정가와 함께 표시되었습니다. 가격은 자주 바뀌므로 주문 전에 실시간 목록을 확인하십시오.',
+          },
           {
             q: '나중에 메모리를 업그레이드할 수 있습니까?',
             a: '아니요. GMKtec은 LPDDR5X를 온보드이며 업그레이드 불가로 안내하므로, 구매 시 64GB 또는 128GB를 선택해야 합니다. 저장 장치는 M.2 슬롯 2개로 확장할 수 있습니다.',
@@ -1937,7 +1991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: '사양, 메모리 및 저장 장치 변종, 포트, 보증, $2,199.99 할인가와 품절 상태.' },
+          { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Official Product Page', description: '사양, 메모리 및 저장 장치 변종, 포트, 보증, 2026-11-14에 확인한 미국 가격.' },
           { url: 'https://www.notebookcheck.net/GMKtec-releases-cheaper-AMD-Strix-Halo-desktop-with-128-GB-RAM-and-96-GB-VRAM.1345433.0.html', title: 'Notebookcheck: GMKtec releases cheaper Strix Halo desktop', description: '128GB / 1TB 변종, Amazon 가격 $3,649, 64GB와의 $1,500 차이, 96GB GPU 할당.' },
           { url: 'https://www.notebookcheck.net/Strix-Halo-GMKtec-EVO-X2-mini-PC-launches-with-a-hefty-price-tag.994291.0.html', title: 'Notebookcheck: EVO-X2 launches with a hefty price tag', description: '2025년 4월 출시, CNY 14,999 가격, 초기 사양.' },
           { url: 'https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html', title: 'Notebookcheck: GMKtec EVO-X2 review', description: '64GB 기기 리뷰: 평가, 냉각 및 유지 보수 관련 의견.' },
@@ -1949,10 +2003,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '로컬 AI용 GMKtec EVO-X2: 사양, 가격, 평가',
-      'description': 'Ryzen AI Max+ 395와 128GB를 탑재한 GMKtec EVO-X2: 확인된 사양, 출처별로 엇갈리는 미국 가격, 제3자 평가, 비추천 대상.',
+      'headline': 'GMKtec EVO-X2 가격·사양: 128GB $3,499.99',
+      'description': 'GMKtec EVO-X2(Ryzen AI Max+ 395) 가격: 미국 스토어 64GB $2,199.99, 128GB $3,499.99~$3,649.99. 전체 사양과 대안을 정리했습니다.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1964,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ko',
       'url': 'https://www.promptquorum.com/ko/local-llms/gmktec-evo-x2-local-ai-workstation',
-      'articleBody': 'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB의 통합 메모리를 갖춘 미니 PC이며, 미국 가격은 판매처마다 일관되지 않게 보고됩니다.',
+      'articleBody': 'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB 통합 메모리를 탑재한 미니 PC로, GMKtec 미국 스토어에서 $2,199.99~$3,649.99에 게시되어 있습니다.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'GMKtec EVO-X2를 다른 128GB Ryzen AI Max+ 395 로컬 AI 워크스테이션과 비교하는 구매자' },
