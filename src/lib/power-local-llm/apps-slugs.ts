@@ -222,6 +222,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'linguister':                              'linguister',
   'dayflow':                                 'dayflow',
   'ai-notebook':                             'ai-notebook',
+  'obscura':                                 'obscura',
   'univocal':                                'univocal',
   'stratosort':                              'stratosort',
   'sprich':                                  'sprich',

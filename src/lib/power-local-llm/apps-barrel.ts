@@ -170,6 +170,7 @@ import { app as app_argos_translate } from './apps/argos-translate'
 import { app as app_linguister } from './apps/linguister'
 import { app as app_dayflow } from './apps/dayflow'
 import { app as app_ai_notebook } from './apps/ai-notebook'
+import { app as app_obscura } from './apps/obscura'
 import { app as app_univocal } from './apps/univocal'
 import { app as app_stratosort } from './apps/stratosort'
 import { app as app_sprich } from './apps/sprich'
@@ -726,6 +727,7 @@ export const localAiApps: ToolRecord[] = [
   app_linguister,
   app_dayflow,
   app_ai_notebook,
+  app_obscura,
   app_univocal,
   app_stratosort,
   app_sprich,
