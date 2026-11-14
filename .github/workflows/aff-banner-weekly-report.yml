@@ -52,7 +52,7 @@ jobs:
 
       - name: Install dependencies (jiti only is needed, scripts are skipped)
         if: steps.window.outputs.skip != 'true'
-        run: npm install --ignore-scripts --no-audit --no-fund --no-package-lock
+        run: npm ci --ignore-scripts
 
       - name: Check the report logic still passes its tests
         if: steps.window.outputs.skip != 'true'
