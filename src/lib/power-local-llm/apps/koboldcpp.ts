@@ -39,10 +39,10 @@ export const app: ToolRecord = {
     ko: '내장 인터페이스가 포함된 llama.cpp 경량 래퍼',
   },
   reviewSlug: 'koboldcpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-11-02', version: 'v1.124.2', versionSourceUrl: 'https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2' },
+  pqReview: { date: '2026-11-14', version: 'v1.124.2', versionSourceUrl: 'https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-11-02 (README re-read for v1.124.2; unchanged); a missing key = not stated there, never false.
   compare: { dockerDeploy: true, mcp: true, fileChat: true, openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true, cpuInference: true },
   lastVerifiedDate: '2026-11-02',
-  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release v1.124.2 on 2026-10-31; repo pushed_at 2026-11-02, whichever is newer), read 2026-11-02
+  lastUpstreamUpdate: '2026-11-13', // GitHub API (latest release v1.124.2 on 2026-10-31; repo pushed_at 2026-11-13, whichever is newer), read 2026-11-14
   lastUpstreamUpdateSource: 'https://github.com/LostRuins/koboldcpp',
 }
