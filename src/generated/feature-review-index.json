@@ -1749,6 +1749,11 @@
     "urlSlug": "univocal-review",
     "url": "/power-local-llm/univocal-review"
   },
+  "openmausbot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openmausbot-review",
+    "url": "/power-local-llm/openmausbot-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",

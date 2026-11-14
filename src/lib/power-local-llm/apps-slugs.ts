@@ -224,6 +224,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'ai-notebook':                             'ai-notebook',
   'obscura':                                 'obscura',
   'univocal':                                'univocal',
+  'openmausbot':                             'openmausbot',
   'stratosort':                              'stratosort',
   'sprich':                                  'sprich',
   'weesper-neon-flow':                       'weesper-neon-flow',

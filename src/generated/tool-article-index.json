@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 354,
+    "totalCount": 355,
     "capped": true
   },
   "llama.cpp": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 178,
+    "totalCount": 179,
     "capped": true
   },
   "Atomic Chat": {
@@ -12585,6 +12585,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openmausbot-review",
+        "title": "OpenMausBot Review: Is This Open-Source Grok Bot Local AI?",
+        "url": "/power-local-llm/openmausbot-review",
+        "dateModified": "2026-11-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -12630,17 +12638,9 @@
         "url": "/power-local-llm/local-llm-voice-audio-compared",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-review",
-        "title": "Ollama Review: The One-Command Local LLM Runtime",
-        "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 258,
+    "totalCount": 259,
     "capped": true
   },
   "Qdrant": {
@@ -14531,6 +14531,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "OpenMausBot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openmausbot-review",
+        "title": "OpenMausBot Review: Is This Open-Source Grok Bot Local AI?",
+        "url": "/power-local-llm/openmausbot-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "StratoSort": {

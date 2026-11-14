@@ -172,6 +172,7 @@ import { app as app_dayflow } from './apps/dayflow'
 import { app as app_ai_notebook } from './apps/ai-notebook'
 import { app as app_obscura } from './apps/obscura'
 import { app as app_univocal } from './apps/univocal'
+import { app as app_openmausbot } from './apps/openmausbot'
 import { app as app_stratosort } from './apps/stratosort'
 import { app as app_sprich } from './apps/sprich'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
@@ -729,6 +730,7 @@ export const localAiApps: ToolRecord[] = [
   app_ai_notebook,
   app_obscura,
   app_univocal,
+  app_openmausbot,
   app_stratosort,
   app_sprich,
   app_weesper_neon_flow,
