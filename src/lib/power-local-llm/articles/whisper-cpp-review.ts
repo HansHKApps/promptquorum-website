@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Whisper.cpp Review (2026): Local Speech-to-Text in Pure C/C++',
+      headline: 'Whisper.cpp Review: Local Speech-to-Text in Pure C/C++',
       description:
         'Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. History, install steps, real CLI commands, license, and when to use faster-whisper instead.',
       url: 'https://www.promptquorum.com/power-local-llm/whisper-cpp-review',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Whisper.cpp-Rezension (2026): Lokale Spracherkennung in reinem C/C++',
+      headline: 'Whisper.cpp-Rezension: Lokale Spracherkennung in reinem C/C++',
       description:
         'Whisper.cpp-Rezension: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.',
       url: 'https://www.promptquorum.com/de/power-local-llm/whisper-cpp-review',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Whisper.cpp : avis (2026) — reconnaissance vocale locale en C/C++ pur',
+      headline: 'Whisper.cpp: avis — reconnaissance vocale locale en C/C++ pur',
       description:
         'Avis whisper.cpp : le port C/C++ sous licence MIT d\'OpenAI Whisper pour la reconnaissance vocale locale. Histoire, installation, vraies commandes, licence, et quand préférer faster-whisper.',
       url: 'https://www.promptquorum.com/fr/power-local-llm/whisper-cpp-review',
@@ -1552,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Whisper.cpp: análisis (2026) — reconocimiento de voz local en C/C++ puro',
+      headline: 'Whisper.cpp: análisis — reconocimiento de voz local en C/C++ puro',
       description:
         'Análisis de whisper.cpp: el port en C/C++ con licencia MIT de OpenAI Whisper para reconocimiento de voz local. Historia, instalación, comandos reales, licencia y cuándo usar faster-whisper.',
       url: 'https://www.promptquorum.com/es/power-local-llm/whisper-cpp-review',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'whisper.cppレビュー(2026):純粋なC/C++によるローカル音声認識',
+      headline: 'whisper.cppレビュー:純粋なC/C++によるローカル音声認識',
       description:
         'whisper.cppレビュー:OpenAI WhisperのMITライセンスC/C++移植版によるローカル音声認識。歴史、インストール手順、実際のCLIコマンド、ライセンス、faster-whisperを選ぶべき場面を解説。',
       url: 'https://www.promptquorum.com/ja/power-local-llm/whisper-cpp-review',
@@ -2341,7 +2341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Whisper.cpp: análise (2026) — reconhecimento de voz local em C/C++ puro',
+      headline: 'Whisper.cpp: análise — reconhecimento de voz local em C/C++ puro',
       description:
         'Análise do whisper.cpp: o port em C/C++ com licença MIT do OpenAI Whisper para reconhecimento de voz local. História, instalação, comandos reais, licença e quando usar o faster-whisper.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/whisper-cpp-review',
@@ -2735,7 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'مراجعة whisper.cpp (2026): تحويل الكلام إلى نص محليًا بلغة C/C++ خالصة',
+      headline: 'مراجعة whisper.cpp: تحويل الكلام إلى نص محليًا بلغة C/C++ خالصة',
       description:
         'مراجعة whisper.cpp: نسخة C/C++ من OpenAI Whisper برخصة MIT لتحويل الكلام إلى نص محليًا. التاريخ، خطوات التثبيت، أوامر CLI حقيقية، الرخصة، ومتى تختار faster-whisper بدلًا منه.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/whisper-cpp-review',
@@ -3129,7 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'whisper.cpp评测(2026):纯C/C++本地语音识别',
+      headline: 'whisper.cpp评测:纯C/C++本地语音识别',
       description:
         'whisper.cpp评测:采用MIT许可证的OpenAI Whisper C/C++移植版,用于本地语音识别。历史、安装步骤、真实CLI命令、许可证,以及何时应选择faster-whisper。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/whisper-cpp-review',
@@ -3524,7 +3524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'whisper.cpp 리뷰(2026): 순수 C/C++로 구현한 로컬 음성 인식',
+      headline: 'whisper.cpp 리뷰: 순수 C/C++로 구현한 로컬 음성 인식',
       description:
         'whisper.cpp 리뷰: OpenAI Whisper를 MIT 라이선스로 C/C++ 포팅한 로컬 음성 인식 도구. 역사, 설치 단계, 실제 CLI 명령어, 라이선스, faster-whisper를 선택해야 할 때를 정리했습니다.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/whisper-cpp-review',
