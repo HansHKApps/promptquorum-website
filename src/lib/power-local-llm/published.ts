@@ -757,6 +757,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'dayflow-review',
   'ai-notebook-review',
   'univocal-review',
+  'openmausbot-review',
   'local-ai-on-android-guide',
   'local-ai-on-iphone-guide',
   'stratosort-review',

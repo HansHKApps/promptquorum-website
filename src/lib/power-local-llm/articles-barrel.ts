@@ -68,6 +68,7 @@ import { article as a_linguister_review } from './articles/linguister-review'
 import { article as a_dayflow_review } from './articles/dayflow-review'
 import { article as a_ai_notebook_review } from './articles/ai-notebook-review'
 import { article as a_univocal_review } from './articles/univocal-review'
+import { article as a_openmausbot_review } from './articles/openmausbot-review'
 import { article as a_stratosort_review } from './articles/stratosort-review'
 import { article as a_sprich_review } from './articles/sprich-review'
 import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-flow-review'
@@ -788,6 +789,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'dayflow-review':                                a_dayflow_review,
   'ai-notebook-review':                            a_ai_notebook_review,
   'univocal-review':                               a_univocal_review,
+  'openmausbot-review':                            a_openmausbot_review,
   'stratosort-review':                             a_stratosort_review,
   'sprich-review':                                 a_sprich_review,
   'weesper-neon-flow-review':                      a_weesper_neon_flow_review,
