@@ -26,8 +26,9 @@ export function ToolAffiliateLink({ tool, lang, label }: ToolAffiliateLinkProps)
       href={affiliate.url}
       target="_blank"
       rel="sponsored nofollow noopener noreferrer"
-      onClick={() =>
+      onClick={(e) =>
         trackAffiliateClick({
+          placement: e.currentTarget.dataset.placement,
           url: affiliate.url,
           productName: tool.name,
           productCategory: 'software-directory',

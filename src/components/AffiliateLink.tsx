@@ -25,6 +25,8 @@ interface AffiliateLinkProps {
   variant?: 'inline' | 'button'
   /** Render the disclosed product-link marker beside the link. Default true. */
   showMarker?: boolean
+  /** Where the link sits, for analytics: top-box, table, inline, footer. Default "inline". */
+  placement?: string
 }
 
 const ShoppingBagIcon = () => (
@@ -63,6 +65,7 @@ export function AffiliateLink({
   label,
   variant = 'inline',
   showMarker = true,
+  placement,
 }: AffiliateLinkProps) {
   // Resolve from the central catalog when a productKey is supplied; explicit
   // props always win if both are passed.
@@ -78,8 +81,9 @@ export function AffiliateLink({
     )
   }
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     trackAffiliateClick({
+      placement: e.currentTarget.dataset.placement,
       url: resolvedUrl,
       productName: resolvedName,
       productCategory: resolvedCategory,
@@ -99,6 +103,7 @@ export function AffiliateLink({
           target="_blank"
           rel="nofollow noopener noreferrer"
           onClick={handleClick}
+          data-placement={placement}
           className="affiliate-link inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white no-underline hover:bg-primary/90"
         >
           <ShoppingBagIcon />
@@ -119,6 +124,7 @@ export function AffiliateLink({
       target="_blank"
       rel="nofollow noopener noreferrer"
       onClick={handleClick}
+      data-placement={placement}
       className="affiliate-link inline-flex items-center gap-1 font-medium text-primary hover:underline"
     >
       <ShoppingBagIcon />
