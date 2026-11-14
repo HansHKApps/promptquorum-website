@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "browseros-review",
+        "title": "BrowserOS Review: Open-Source AI Browser With Local Ollama and LM Studio Support",
+        "url": "/power-local-llm/browseros-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dayflow-review",
         "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
         "url": "/power-local-llm/dayflow-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/phantasm-review",
         "dateModified": "2026-11-13",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-llm-models",
-        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
-        "url": "/power-local-llm/uncensored-llm-models",
-        "dateModified": "2026-11-13",
-        "tier": "about"
       }
     ],
-    "totalCount": 353,
+    "totalCount": 354,
     "capped": true
   },
   "llama.cpp": {
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "browseros-review",
+        "title": "BrowserOS Review: Open-Source AI Browser With Local Ollama and LM Studio Support",
+        "url": "/power-local-llm/browseros-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dayflow-review",
         "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
         "url": "/power-local-llm/dayflow-review",
@@ -938,17 +946,9 @@
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-11-13",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-11-11",
-        "tier": "about"
       }
     ],
-    "totalCount": 177,
+    "totalCount": 178,
     "capped": true
   },
   "Atomic Chat": {
@@ -2661,6 +2661,20 @@
         "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
         "url": "/power-local-llm/lastbrowser-review",
         "dateModified": "2026-11-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "BrowserOS": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "browseros-review",
+        "title": "BrowserOS Review: Open-Source AI Browser With Local Ollama and LM Studio Support",
+        "url": "/power-local-llm/browseros-review",
+        "dateModified": "2026-11-14",
         "tier": "about"
       }
     ],

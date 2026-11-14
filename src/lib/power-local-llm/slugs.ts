@@ -552,6 +552,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'claude-code-local-review':                 'claude-code-local-review',
   'sidekick-review':                          'sidekick-review',
   'lastbrowser-review':                       'lastbrowser-review',
+  'browseros-review':                         'browseros-review',
   'lucebox-review':                           'lucebox-review',
   'little-coder-review':                      'little-coder-review',
   'translate-books-with-llms-review':         'translate-books-with-llms-review',

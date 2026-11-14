@@ -550,6 +550,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'claude-code-local-review',
   'sidekick-review',
   'lastbrowser-review',
+  'browseros-review',
   'lucebox-review',
   'little-coder-review',
   'translate-books-with-llms-review',

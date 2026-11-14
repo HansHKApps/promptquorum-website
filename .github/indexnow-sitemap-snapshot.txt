@@ -680,6 +680,7 @@ https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-llm-models
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
+https://www.promptquorum.com/power-local-llm/univocal-hands-on-test
 https://www.promptquorum.com/power-local-llm/univocal-review
 https://www.promptquorum.com/power-local-llm/unsloth-hands-on-test
 https://www.promptquorum.com/power-local-llm/unsloth-review
