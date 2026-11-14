@@ -62,6 +62,20 @@ Also set (only once verified — unset means "not yet checked", never "none"):
 - `url` = the official website when one exists; the repo goes in `storeLinks.github` (and store
   listings in `storeLinks.appStore`/`googlePlay`, site in `storeLinks.web` — same host as `url`).
   A `github.com/...` `url` is only right when there is no separate website.
+- `hqCountry` (uppercase ISO alpha-2, e.g. `'DE'`) + `hqCountrySource` (URL) — the country of the
+  company/maintainer HQ, shown as a small flag next to the app name on the tile, drawer and table row
+  (owner rule 2026-11-14, new apps only; the existing tiles are cleaned up later). Decide it like this:
+  1. **Clear** = a primary source states it (company imprint/about/jobs/terms page, registered address,
+     the maintainer's own statement). Set both fields. Never infer it from the domain TLD, the
+     founder's name, the site language or an aggregator (Crunchbase-type sites) alone.
+  2. **Not clear** (hobby/community project, anonymous or spread-out team, conflicting sources) →
+     **ask the owner** which country to use (AskUserQuestion, with "no flag" as an option). Set the
+     fields only from his answer, and note in `hqCountrySource` or a comment that it is the owner's
+     decision. If he cannot be asked (unattended run), leave both unset and list the app in the report.
+  3. If the flag file is missing, run `npm run add-flag -- <code>` (adds `public/flags/<code>.svg` from
+     the MIT-licensed `flag-icons` set). `npm run validate-local-ai-apps` enforces code format, source
+     URL and flag file.
+  Report per app: country, source URL, or "no flag (not clear)".
 
 Register in:
 - `src/lib/power-local-llm/apps-slugs.ts`

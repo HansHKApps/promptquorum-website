@@ -23,6 +23,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'serve'],
   url: 'lmstudio.ai',
+  hqCountry: 'US', // "LM Studio is built by Element Labs in New York, USA" — checked 2026-11-14 (first tile with the HQ flag)
+  hqCountrySource: 'https://lmstudio.ai/jobs.html',
   tagline: {
     en: 'Most polished GUI, built-in HuggingFace model browser, server mode',
     de: 'Ausgereifteste GUI, integrierter HuggingFace-Modell-Browser, Server-Modus',

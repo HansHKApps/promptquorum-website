@@ -75,6 +75,7 @@
     "check:power-mode": "bun scripts/check-power-mode.ts",
     "check:mcp": "node scripts/generate-askhans-corpus.mjs && bun scripts/check-mcp-tools.ts && bun scripts/check-mcp-start.ts",
     "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs",
+    "add-flag": "node scripts/add-flag.mjs",
     "validate-app-versions": "node scripts/validate-app-versions.mjs",
     "validate-category-compare": "node scripts/validate-category-compare.mjs",
     "validate-platform-roundups": "node scripts/validate-platform-roundups.mjs",

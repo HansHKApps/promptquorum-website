@@ -317,6 +317,11 @@ const DIR_UI = {
 
   // --- ToolCard ---
   cardLocalityLocal: { en: '100% local', de: '100 % lokal', fr: '100 % local', ja: '100%ローカル', zh: '100%本地', es: '100 % local', pt: '100% local', ar: 'محلي 100٪', ko: '100% 로컬' },
+  hqCountryTooltip: {
+    en: 'Company HQ: {country}', de: 'Firmensitz: {country}', fr: "Siège de l'entreprise : {country}",
+    ja: '本社所在地：{country}', zh: '公司总部：{country}', es: 'Sede de la empresa: {country}',
+    pt: 'Sede da empresa: {country}', ar: 'مقر الشركة: {country}', ko: '회사 본사: {country}',
+  },
   founderReviewedBadge: { en: 'Founder-reviewed', de: 'Vom Gründer geprüft', fr: 'Vérifié par le fondateur', ja: '創業者が確認済み', zh: '创始人已审核', es: 'Revisado por el fundador', pt: 'Revisado pelo fundador', ar: 'راجعه المؤسس', ko: '창립자 검토 완료' },
   founderReviewedTooltip: {
     en: "The founder reviewed this entry's technical specs and description for accuracy",
