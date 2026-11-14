@@ -576,6 +576,7 @@ https://www.promptquorum.com/power-local-llm/openclient-review
 https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
+https://www.promptquorum.com/power-local-llm/openmausbot-review
 https://www.promptquorum.com/power-local-llm/openmontage-review
 https://www.promptquorum.com/power-local-llm/openrag-review
 https://www.promptquorum.com/power-local-llm/openvoiceos-review
