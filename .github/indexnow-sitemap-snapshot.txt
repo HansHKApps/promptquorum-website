@@ -244,6 +244,7 @@ https://www.promptquorum.com/power-local-llm/agnai-review
 https://www.promptquorum.com/power-local-llm/ai-cutoutwerk-review
 https://www.promptquorum.com/power-local-llm/ai-file-sorter-review
 https://www.promptquorum.com/power-local-llm/ai-generated-content-ip-risk
+https://www.promptquorum.com/power-local-llm/ai-notebook-review
 https://www.promptquorum.com/power-local-llm/ai-on-device-review
 https://www.promptquorum.com/power-local-llm/ai-tool-licenses-explained
 https://www.promptquorum.com/power-local-llm/aichat-review
@@ -313,6 +314,7 @@ https://www.promptquorum.com/power-local-llm/bobe-hands-on-test
 https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/boltai-review
+https://www.promptquorum.com/power-local-llm/browseros-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/buzz-captions-review
 https://www.promptquorum.com/power-local-llm/caelum-hands-on-test
