@@ -4329,7 +4329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '이 새로운 미니 PC들의 실측 벤치마크 데이터는 아직 부족합니다. 아래는 Ryzen AI Max+ 395 참조 벤치마크 기반 추정치입니다. 실제 성능은 쿨링, OS, 모델 정밀도에 따라 다릅니다.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR/GMKtec 약 45~55 tok/s(추정, 동일 칩).',
-          'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 18~22 tok/s(추정). GMKtec EVO-X2 128GB 모델: 동일 칩이며 독립적인 속도 테스트를 찾지 못했습니다. 64GB 모델은 70B를 편하게 쓰기에는 작습니다.',
+          'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 18~22 tok/s(추정). GMKtec EVO-X2의 128GB 모델: 동일 칩이며 독립적인 속도 테스트를 찾지 못했습니다. 64GB 모델은 70B를 편하게 쓰기에는 작습니다.',
           'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR/GMKtec 약 35~40 tok/s(추정, 동일 칩).',
           '참고: 이 추정치는 iGPU + NPU 가속 기반입니다. CPU 단독 추론은 3~5배 느립니다.',
         ],
