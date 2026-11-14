@@ -1707,9 +1707,9 @@ print(response.choices[0].message.content)`,
           title: 'Welche häufigen Fehler gibt es bei der Installation von LM Studio?',
           items: [
             '**Nicht genügend System-RAM für das in den LM Studio-Einstellungen ausgewählte Modell zuweisen.** Überprüfen Sie die Modell-Dateigröße und multiplizieren Sie mit 1,2 -- das ist der erforderliche Mindest-RAM. Ein 4,5-GB Q4_K_M 7B-Modell benötigt ~5,4 GB freien RAM.',
-            '**Ein vorquantisiertes Modell verwenden, das immer noch zu groß für Ihren GPU-VRAM ist.** Wenn ein Modell den VRAM übersteigt, fällt LM Studio auf CPU-Inferenz zurück, die 5-10× langsamer ist. Überprüfen Sie die Dateigröße vs. Ihren GPU-VRAM, bevor Sie herunterladen.',
-            '**Erwarten Sie sofortige Antworten von großen Modellen auf CPU-only Systemen.** Ein 7B-Modell auf CPU erzeugt 8-20 Token/Sekunde -- eine 200-Token-Antwort dauert 10-25 Sekunden. Das ist normal. Verwenden Sie ein 3B-Modell für schnellere Antworten auf CPU-only Maschinen.',
-            '**GPU-Ebenen auf 0 bei einer NVIDIA-Maschine setzen:** LM Studio sollte CUDA automatisch erkennen, setzt aber nach einer Neuinstallation manchmal GPU-Ebenen auf 0 zurück. Öffnen Sie das Modellbedienfeld → GPU-Ebenen → auf Maximum ziehen. Auf einer RTX 4070 (12 GB VRAM) bewegt das die Geschwindigkeit von 8 Token/Sekunde (CPU) auf 80+ Token/Sekunde (GPU) -- ein 10x Unterschied.',
+            '**Ein vorquantisiertes Modell verwenden, das immer noch zu groß für Ihren GPU-VRAM ist.** Wenn ein Modell den VRAM übersteigt, fällt LM Studio auf CPU-Inferenz zurück, die je nach System ein Vielfaches langsamer sein kann. Überprüfen Sie die Dateigröße vs. Ihren GPU-VRAM, bevor Sie herunterladen.',
+            '**Erwarten Sie sofortige Antworten von großen Modellen auf CPU-only Systemen.** Ein 7B-Modell antwortet auf der CPU je nach System spürbar langsamer als auf einer GPU, oft erst nach mehreren Sekunden. Das ist normal. Verwenden Sie ein 3B-Modell für schnellere Antworten auf CPU-only Maschinen.',
+            '**GPU-Ebenen auf 0 bei einer NVIDIA-Maschine setzen:** LM Studio sollte CUDA automatisch erkennen, setzt aber nach einer Neuinstallation manchmal GPU-Ebenen auf 0 zurück. Öffnen Sie das Modellbedienfeld → GPU-Ebenen → auf Maximum ziehen. Der Geschwindigkeitsunterschied zwischen CPU- und GPU-Inferenz kann je nach Modell, Quantisierung und Hardware sehr groß ausfallen (oft ein Vielfaches); die genauen Werte hängen stark von Ihrem System ab.',
             '**FP16-Modelle herunterladen, wenn Q4_K_M verfügbar ist:** FP16-Modelle sind zweimal so groß wie Q4_K_M mit vernachlässigbarem Qualitätsgewinn für Chat-Aufgaben. Ein 7B-Modell in FP16 ist ~14 GB; das gleiche Modell bei Q4_K_M ist ~4,5 GB. Laden Sie immer Q4_K_M als Standard herunter, es sei denn, Sie haben einen spezifischen Grund für höhere Präzision.',
           ],
         },
@@ -1748,7 +1748,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Ist LM Studio kostenlos?',
-              a: 'Ja. LM Studio ist kostenlos für die private Nutzung ohne Funktionsbegrenzungen. Seit Juli 2025 ist LM Studio auch für die berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe (siehe lmstudio.ai/blog/free-for-work). Die kostenlose Version hat keine Nutzungsgrenzen, Modellbeschränkungen oder Wasserzeichen.'
+              a: 'Ja. Nach Angaben des Herstellers (lmstudio.ai/blog/free-for-work) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe. Die Bedingungen können sich ändern – prüfen Sie die aktuellen Nutzungsbedingungen auf lmstudio.ai.'
             },
             {
               q: 'Was ist der Unterschied zwischen LM Studio und Ollama?',
@@ -1776,7 +1776,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
-              a: 'Ja -- kostenlos für private Nutzung, keine IT-Kenntnisse für die Installation erforderlich, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio ist der einfachste Weg für mittlere Unternehmen ohne IT-Personal zu AI-gestützten Workflows, bei dem sich der Datenschutz leichter umsetzen lässt. Die GUI erfordert kein Terminal-Wissen.'
+              a: 'Ja -- kostenlos für private Nutzung, keine IT-Kenntnisse für die Installation erforderlich, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio kann für mittlere Unternehmen ohne IT-Personal ein niedrigschwelliger Einstieg in KI-gestützte Workflows sein; die lokale Verarbeitung kann zudem die Umsetzung des Datenschutzes erleichtern. Die GUI erfordert kein Terminal-Wissen.'
             },
           ],
         },
@@ -1846,7 +1846,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Ist LM Studio kostenlos?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. LM Studio ist kostenlos für die private Nutzung ohne Funktionsbegrenzungen. Seit Juli 2025 ist LM Studio auch für die berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe (siehe lmstudio.ai/blog/free-for-work). Die kostenlose Version hat keine Nutzungsgrenzen, Modellbeschränkungen oder Wasserzeichen.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Nach Angaben des Herstellers (lmstudio.ai/blog/free-for-work) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe. Die Bedingungen können sich ändern – prüfen Sie die aktuellen Nutzungsbedingungen auf lmstudio.ai.' }
           },
           {
             '@type': 'Question',
@@ -1876,12 +1876,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
-            acceptedAnswer: { '@type': 'Answer', text: 'LM Studio verarbeitet alle Daten lokal auf Ihrem Gerät. Es gibt keinen externen API-Anbieter als Auftragsverarbeiter gemäß Artikel 28 DSGVO, da die Inferenzdaten bei lokaler Nutzung das Gerät nicht verlassen (Modell-Downloads und Update-Prüfungen laufen weiterhin über das Internet). Ollama und LM Studio binden standardmäßig nur an localhost -- keine externe Zugänglichkeit.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'LM Studio verarbeitet alle Daten lokal auf Ihrem Gerät. Es gibt keinen externen API-Anbieter als Auftragsverarbeiter gemäß Artikel 28 DSGVO, da die Inferenzdaten bei lokaler Nutzung das Gerät nicht verlassen (Modell-Downloads und Update-Prüfungen laufen weiterhin über das Internet). Ollama und LM Studio binden standardmäßig nur an localhost -- keine externe Zugänglichkeit. Das kann die Umsetzung der DSGVO unterstützen; ob Ihr Gesamtaufbau konform ist, hängt von Rechtsgrundlage und technischen und organisatorischen Maßnahmen ab (keine Rechtsberatung).' }
           },
           {
             '@type': 'Question',
             name: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja -- kostenlos für private Nutzung, keine IT-Kenntnisse für die Installation erforderlich, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio ist der einfachste Weg für mittlere Unternehmen ohne IT-Personal zu AI-gestützten Workflows, bei dem sich der Datenschutz leichter umsetzen lässt.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja -- kostenlos für private Nutzung, keine IT-Kenntnisse für die Installation erforderlich, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio kann für mittlere Unternehmen ohne IT-Personal ein niedrigschwelliger Einstieg in KI-gestützte Workflows sein; die lokale Verarbeitung kann zudem die Umsetzung des Datenschutzes erleichtern.' }
           },
         ]
       },
@@ -2106,9 +2106,9 @@ schema: {
           title: 'Quelles sont les erreurs courantes lors de l\'installation de LM Studio ?',
           items: [
             '**Ne pas allouer suffisamment de RAM système pour le modèle que vous avez sélectionné.** Vérifiez la taille du fichier modèle et multipliez par 1,2 -- c\'est la RAM libre minimale requise. Un modèle 7B Q4_K_M de 4,5 GB nécessite ~5,4 GB de RAM libres.',
-            '**Utiliser un modèle pré-quantifié qui est encore trop volumineux pour la VRAM GPU.** Si un modèle dépasse la VRAM, LM Studio bascule vers l\'inférence CPU, 5-10× plus lente. Vérifiez la taille du fichier par rapport à la VRAM GPU avant le téléchargement.',
-            '**S\'attendre à des réponses instantanées de grands modèles sur des systèmes CPU uniquement.** Un modèle 7B sur CPU produit 8-20 tokens/sec -- une réponse de 200 tokens prend 10-25 secondes. C\'est normal. Utilisez un modèle 3B pour des réponses plus rapides sur les machines CPU uniquement.',
-            '**Définir Couches GPU à 0 sur une machine NVIDIA** : LM Studio doit auto-détecter CUDA mais définit parfois par défaut 0 couches GPU après une installation fraîche. Ouvrez le panneau modèle → Couches GPU → glissez au maximum. Sur une RTX 4070 (12 GB VRAM), les couches max sur un modèle 7B passent de 8 tok/sec (CPU) à 80+ tok/sec (GPU) -- une différence de 10×.',
+            '**Utiliser un modèle pré-quantifié qui est encore trop volumineux pour la VRAM GPU.** Si un modèle dépasse la VRAM, LM Studio bascule vers l\'inférence CPU, souvent bien plus lente. Vérifiez la taille du fichier par rapport à la VRAM GPU avant le téléchargement.',
+            '**S\'attendre à des réponses instantanées de grands modèles sur des systèmes CPU uniquement.** Un modèle 7B sur CPU répond, selon le système, nettement plus lentement que sur GPU, souvent après plusieurs secondes. C\'est normal. Utilisez un modèle 3B pour des réponses plus rapides sur les machines CPU uniquement.',
+            '**Définir Couches GPU à 0 sur une machine NVIDIA** : LM Studio doit auto-détecter CUDA mais définit parfois par défaut 0 couches GPU après une installation fraîche. Ouvrez le panneau modèle → Couches GPU → glissez au maximum. L\'écart de vitesse entre l\'inférence CPU et GPU peut être très important selon le modèle, la quantification et le matériel (souvent un multiple) ; les valeurs exactes dépendent fortement de votre système.',
             '**Télécharger des modèles FP16 quand Q4_K_M est disponible** : Les modèles FP16 sont deux fois plus volumineux que Q4_K_M sans gain de qualité appréciable pour les tâches de chat. Un modèle 7B en FP16 est ~14 GB ; le même modèle à Q4_K_M est ~4,5 GB. Téléchargez toujours Q4_K_M par défaut sauf si vous avez une raison spécifique d\'utiliser une précision supérieure.',
           ],
         },
@@ -2147,7 +2147,7 @@ schema: {
             },
             {
               q: 'LM Studio est-il gratuit ?',
-              a: 'Oui. LM Studio est gratuit pour un usage personnel sans limitations de fonctionnalités. Depuis juillet 2025, LM Studio est aussi gratuit pour un usage professionnel ; seul le niveau Enterprise/Teams, distinct, est payant (voir lmstudio.ai/blog/free-for-work). Le niveau personnel n\'a pas de limites d\'utilisation, de restrictions de modèles ou de filigranes.',
+              a: 'Oui. Selon l\'éditeur (lmstudio.ai/blog/free-for-work), LM Studio est gratuit depuis juillet 2025 pour un usage personnel et professionnel ; seul le niveau Enterprise/Teams, distinct, est payant. Les conditions peuvent évoluer : consultez les conditions d\'utilisation actuelles sur lmstudio.ai.',
             },
             {
               q: 'Quelle est la différence entre LM Studio et Ollama ?',
@@ -2230,7 +2230,7 @@ schema: {
           { '@type': 'Question', name: 'Le modèle génère très lentement (moins de 5 tokens/seconde)', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit -- si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.' } },
           { '@type': 'Question', name: 'Je ne peux pas trouver un modèle spécifique dans la recherche LM Studio', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio recherche Hugging Face pour les fichiers GGUF. Si un modèle n\'apparaît pas, essayez de rechercher directement par le nom du référentiel Hugging Face (par exemple « bartowski/Llama-3.1-8B-Instruct-GGUF »). Certains modèles plus récents peuvent ne pas être indexés.' } },
           { '@type': 'Question', name: 'Le serveur local retourne des erreurs « model not found »', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle doit être chargé dans l\'onglet Serveur Local avant que le serveur puisse répondre. Ouvrez l\'onglet Serveur Local, sélectionnez un modèle dans la liste déroulante et cliquez sur Démarrer le serveur. Le nom du modèle dans les requêtes API peut être n\'importe quelle chaîne -- LM Studio utilise le modèle actuellement chargé.' } },
-          { '@type': 'Question', name: 'LM Studio est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. LM Studio est gratuit pour un usage personnel sans limitations de fonctionnalités. Depuis juillet 2025, LM Studio est aussi gratuit pour un usage professionnel ; seul le niveau Enterprise/Teams, distinct, est payant (voir lmstudio.ai/blog/free-for-work). Le niveau personnel n\'a pas de limites d\'utilisation, de restrictions de modèles ou de filigranes.' } },
+          { '@type': 'Question', name: 'LM Studio est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Selon l\'éditeur (lmstudio.ai/blog/free-for-work), LM Studio est gratuit depuis juillet 2025 pour un usage personnel et professionnel ; seul le niveau Enterprise/Teams, distinct, est payant. Les conditions peuvent évoluer : consultez les conditions d\'utilisation actuelles sur lmstudio.ai.' } },
           { '@type': 'Question', name: 'Quelle est la différence entre LM Studio et Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio est une application desktop graphique -- vous parcourez et téléchargez des modèles via une interface visuelle, lancez des discussions en un clic et ajustez les paramètres avec des curseurs. Ollama est un outil en ligne de commande et service d\'arrière-plan -- plus rapide à configurer avec une seule commande, meilleur pour l\'automatisation et le scripting. Les deux utilisent le même moteur d\'inférence llama.cpp.' } },
           { '@type': 'Question', name: 'Quels modèles fonctionnent avec LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'N\'importe quel modèle au format GGUF de Hugging Face. Les choix populaires incluent Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini et Gemma 4 E2B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.' } },
           { '@type': 'Question', name: 'LM Studio utilise-t-il mon GPU automatiquement ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui sur Apple Silicon -- l\'accélération Metal est activée par défaut. Sur Windows et Linux avec GPU NVIDIA, LM Studio détecte CUDA automatiquement si les pilotes sont installés. Vérifiez le paramètre Couches GPU dans le panneau modèle -- s\'il affiche 0 couche sur GPU, votre GPU n\'est pas utilisé.' } },
@@ -2459,9 +2459,9 @@ schema: {
           title: 'LM Studioをインストールするときの一般的な間違いは何ですか？',
           items: [
             '**選択したモデルに十分なシステムRAMを割り当てていない。** モデルファイルサイズをチェックして1.2を掛ける--これは必要な最小空きRAM。4.5GB Q4_K_M 7Bモデルは～5.4GB空きRAMが必要。',
-            '**GPU VRAMにはまだ大きすぎる事前量子化モデルを使用している。** モデルがVRAMを超える場合、LM StudioはCPU推論にフォールバック--5～10倍低速。ダウンロード前にファイルサイズとGPU VRAMを確認。',
-            '**CPU専用システムから大規模モデルからの即座の応答を期待している。** 7Bモデルは秒あたり8～20トークンを生成--200トークン応答は10～25秒かかる。これは正常。CPU専用マシンで高速応答を見つけるためには3Bモデルを使用。',
-            '**NVIDIAマシンのGPU Layersを0に設定している：** LM StudioはCUDAを自動検出すべきだが、新規インストール後に時々デフォルト0 GPUレイヤーになる。モデルパネルを開く→GPU Layers→最大値にドラッグ。RTX 4070（12GB VRAM）では、7Bモデルで最大レイヤーは8 tok/sec（CPU）から80+ tok/sec（GPU）に移動--10倍の違い。',
+            '**GPU VRAMにはまだ大きすぎる事前量子化モデルを使用している。** モデルがVRAMを超える場合、LM StudioはCPU推論にフォールバックし、ハードウェアによっては大幅に遅くなる場合があります。ダウンロード前にファイルサイズとGPU VRAMを確認。',
+            '**CPU専用システムから大規模モデルからの即座の応答を期待している。** 7Bモデルは、ハードウェアによっては秒あたり数トークンから数十トークン程度しか生成できず、200トークンの応答に数秒からそれ以上かかる場合があります。これは正常です。CPU専用マシンで高速応答を見つけるためには3Bモデルを使用。',
+            '**NVIDIAマシンのGPU Layersを0に設定している：** LM StudioはCUDAを自動検出すべきだが、新規インストール後に時々デフォルト0 GPUレイヤーになる。モデルパネルを開く→GPU Layers→最大値にドラッグ。CPU推論とGPU推論の速度差は、モデル・量子化・ハードウェアによって大きく変わり、数倍以上になることもあります。正確な値はお使いの環境に大きく左右されます。',
             '**FP16モデルが利用可能であるときQ4_K_Mをダウンロードしている。** FP16モデルはチャットタスク用のQ4_K_Mより2倍大きく、品質面の向上はわずか。7BモデルのFP16は～14GB；同じモデルはQ4_K_Mでは約4.5GB。より高い精度を使用する特定の理由がない限り、常にデフォルトとしてQ4_K_Mをダウンロード。',
           ],
         },
@@ -2486,7 +2486,7 @@ schema: {
             { q: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', a: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック--0が表示される場合、GPUは使用されていない。macOSでは、LM StudioはApple SiliconのMetalを自動的に有効。Windows/Linuxの場合、NVIDIAドライバーが最新であることを確認し、GPU Layersを最大値に増やす。' },
             { q: 'LM Studio検索で特定のモデルが見つからない', a: 'LM StudioはGGUFファイルをHugging Faceで検索している。モデルが表示されない場合は、Hugging Faceリポジトリ名を直接検索。新しいモデルの一部はまだインデックス化されていない可能性。' },
             { q: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', a: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択し、サーバーの開始をクリック。APIリクエストのモデル名は任意の文字列にできる。' },
-            { q: 'LM Studioは無料ですか？', a: 'はい。LM Studioは個人使用のための機能制限なし無料。2025年7月以降は業務利用も無料で、有料なのは別枠のEnterprise/Teamsのみ。個人層には使用量の上限、モデル制限、透かしはない。' },
+            { q: 'LM Studioは無料ですか？', a: 'はい。提供元の説明（lmstudio.ai/blog/free-for-work）によれば、2025年7月以降は個人利用・業務利用ともに無料で、有料なのは別枠のEnterprise/Teamsのみです。条件は変更される場合があるため、最新の利用規約をlmstudio.aiでご確認ください。' },
             { q: 'LM StudioとOllamaの違いは何ですか？', a: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始、スライダーで設定を調整。Ollamaはコマンドラインツールおよびバックグラウンドサービス--1つのコマンドで設定するのが高速。' },
             { q: 'LM Studioはどのモデルで動作しますか？', a: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini、およびGemma 4 E2Bが含まれる。Discover tabでモデル名で検索。LM Studioはダウンロード前に各量子化レベルのファイルサイズを表示。' },
             { q: 'LM StudioはGPUを自動的に使用していますか？', a: 'Apple Siliconでははい--Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、ドライバーがインストールされている場合、LM StudioはCUDAを自動検出。モデルパネルのGPU Layers設定をチェック--GPU上に0レイヤーが表示される場合、GPUは使用されていない。' },
@@ -2537,7 +2537,7 @@ schema: {
           { '@type': 'Question', name: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', acceptedAnswer: { '@type': 'Answer', text: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック--0が表示される場合、GPUは使用されていない。' } },
           { '@type': 'Question', name: 'LM Studio検索で特定のモデルが見つからない', acceptedAnswer: { '@type': 'Answer', text: 'LM StudioはGGUFファイルをHugging Faceで検索している。モデルが表示されない場合は、Hugging Faceリポジトリ名を直接検索。' } },
           { '@type': 'Question', name: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', acceptedAnswer: { '@type': 'Answer', text: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択。' } },
-          { '@type': 'Question', name: 'LM Studioは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。LM Studioは個人使用のための機能制限なし無料。2025年7月以降は業務利用も無料で、有料なのは別枠のEnterprise/Teamsのみ。' } },
+          { '@type': 'Question', name: 'LM Studioは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。提供元の説明（lmstudio.ai/blog/free-for-work）によれば、2025年7月以降は個人利用・業務利用ともに無料で、有料なのは別枠のEnterprise/Teamsのみです。条件は変更される場合があるため、最新の利用規約をlmstudio.aiでご確認ください。' } },
           { '@type': 'Question', name: 'LM StudioとOllamaの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始。Ollamaはコマンドラインツール。' } },
           { '@type': 'Question', name: 'LM Studioはどのモデルで動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini、およびGemma 4 E2Bが含まれる。' } },
           { '@type': 'Question', name: 'LM StudioはGPUを自動的に使用していますか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconでははい--Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、LM StudioはCUDAを自動検出。' } },
@@ -2757,8 +2757,8 @@ schema: {
           title: '对隐私敏感的用例 LM Studio',
           content: [
             '**中国（数据安全法）**：LM Studio 可通过 Hugging Face 搜索找到 Qwen3 模型 - 在模型浏览器中搜索"qwen2.5"以查找所有可用大小。推理在本地运行，无外部 API 调用；是否满足中国数据安全法（数据安全法）对具体用途的要求，需要自行核实（不构成法律建议）。',
-            '**亚太地区（数据跨境）**：LM Studio 在本地运行所有推理，符合 MLAI（多边人工智能）框架和地区数据驻留要求。对于在亚太地区处理敏感数据的企业，LM Studio 消除了数据跨越国界的风险。',
-            '**企业部署**：LM Studio 在本地运行推理，推理数据不会发送到外部服务器，这有助于金融、医疗和法律等行业满足数据保护方面的要求。是否合规取决于机构自身的整体安排，需要自行评估（不构成法律建议）。',
+            '**亚太地区（数据跨境）**：LM Studio 在本地运行推理时，输入与输出内容不会为推理而发送到外部服务器（模型下载和更新检查仍需联网），因此在推理这一环节不涉及向境外传输数据的问题。各地的数据跨境和数据本地化要求能否满足，取决于企业自身的法律依据、技术与组织措施以及所在地法规，需要自行评估（不构成法律建议）。',
+            '**企业部署**：LM Studio 在本地运行推理，推理内容不会为推理而发送到外部服务器（模型下载和更新检查仍需联网），这有助于金融、医疗和法律等行业满足数据保护方面的要求。是否合规取决于机构自身的整体安排，需要自行评估（不构成法律建议）。',
           ],
         },
         commonMistakes: {
@@ -2766,9 +2766,9 @@ schema: {
           title: '安装 LM Studio 时常见的错误是什么',
           items: [
             '**未为所选模型分配足够的系统 RAM。** 检查模型文件大小并乘以 1.2 - 这是所需的最小可用 RAM。4.5GB Q4_K_M 7B 模型需要约 5.4GB 可用 RAM。',
-            '**使用预量化模型仍然对您的 GPU VRAM 来说太大。** 如果模型超过 VRAM，LM Studio 会回退到 CPU 推理，速度快 5-10 倍。在下载前检查文件大小与您的 GPU VRAM。',
-            '**期望来自 CPU 专用系统上大型模型的即时响应。** 7B 模型在 CPU 上生成 8-20 令牌/秒 - 200 令牌响应需要 10-25 秒。这是正常的。对于仅 CPU 机器上的更快响应，使用 3B 模型。',
-            '**在 NVIDIA 机器上设置 GPU 层为 0：** LM Studio 应自动检测 CUDA，但在新安装后有时默认为 0 GPU 层。打开模型面板 → GPU 层 → 拖到最大。在 RTX 4070（12GB VRAM）上，7B 模型的最大层从 8 tok/sec（CPU）移动到 80+ tok/sec（GPU）- 10 倍差异。',
+            '**使用预量化模型仍然对您的 GPU VRAM 来说太大。** 如果模型超过 VRAM，LM Studio 会回退到 CPU 推理，速度可能会慢很多。在下载前检查文件大小与您的 GPU VRAM。',
+            '**期望来自 CPU 专用系统上大型模型的即时响应。** 7B 模型在纯 CPU 上的生成速度取决于硬件，往往只有每秒几个到几十个令牌 - 200 令牌的响应可能需要数秒甚至更久。这是正常的。对于仅 CPU 机器上的更快响应，使用 3B 模型。',
+            '**在 NVIDIA 机器上设置 GPU 层为 0：** LM Studio 应自动检测 CUDA，但在新安装后有时默认为 0 GPU 层。打开模型面板 → GPU 层 → 拖到最大。CPU 推理与 GPU 推理的速度差异会因模型、量化方式和硬件而有很大不同（往往是数倍以上），具体数值取决于您的系统。',
             '**当 Q4_K_M 可用时下载 FP16 模型。** FP16 模型对于聊天任务比 Q4_K_M 大两倍，质量收益可忽略不计。7B 模型的 FP16 约为 14GB；同一模型在 Q4_K_M 约为 4.5GB。除非您有特定理由使用更高精度，否则始终默认下载 Q4_K_M。',
           ],
         },
@@ -2793,7 +2793,7 @@ schema: {
             { q: '模型生成非常缓慢（每秒 5 个令牌以下）', a: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。在 macOS 上，LM Studio 自动为 Apple Silicon 启用 Metal。' },
             { q: '我在 LM Studio 搜索中找不到特定模型', a: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按 Hugging Face 存储库名称搜索。某些较新的模型可能尚未建立索引。' },
             { q: '本地服务器返回"找不到模型"错误', a: '必须在本地服务器选项卡中加载模型，服务器才能响应。打开本地服务器选项卡，从下拉菜单中选择一个模型，然后单击启动服务器。' },
-            { q: 'LM Studio 免费吗？', a: '是的。LM Studio 可供个人使用免费，没有功能限制。自2025年7月起工作用途同样免费，仅单独的 Enterprise/Teams 层级收费。个人级别没有使用上限、模型限制或水印。' },
+            { q: 'LM Studio 免费吗？', a: '是的。据开发商说明（lmstudio.ai/blog/free-for-work），自2025年7月起个人和工作用途均可免费使用，仅单独的 Enterprise/Teams 层级收费。条款可能变更，请以 lmstudio.ai 上的最新使用条款为准。' },
             { q: 'LM Studio 和 Ollama 之间有什么区别？', a: 'LM Studio 是图形桌面应用 - 您通过可视界面浏览和下载模型、通过一次单击启动聊天、用滑块调整设置。Ollama 是命令行工具和后台服务 - 用单个命令设置更快。' },
             { q: 'LM Studio 可以使用哪些模型？', a: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini 和 Gemma 4 E2B。在 Discover 选项卡中按模型名称搜索。' },
             { q: 'LM Studio 自动使用我的 GPU 吗？', a: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，如果驱动程序已安装，LM Studio 会自动检测 CUDA。' },
@@ -2844,7 +2844,7 @@ schema: {
           { '@type': 'Question', name: '模型生成非常缓慢（每秒 5 个令牌以下）', acceptedAnswer: { '@type': 'Answer', text: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。' } },
           { '@type': 'Question', name: '我在 LM Studio 搜索中找不到特定模型', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按名称搜索。' } },
           { '@type': 'Question', name: '本地服务器返回"找不到模型"错误', acceptedAnswer: { '@type': 'Answer', text: '必须在本地服务器选项卡中加载模型，服务器才能响应。' } },
-          { '@type': 'Question', name: 'LM Studio 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。LM Studio 可供个人使用免费，没有功能限制。自2025年7月起工作用途同样免费，仅单独的 Enterprise/Teams 层级收费。' } },
+          { '@type': 'Question', name: 'LM Studio 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。据开发商说明（lmstudio.ai/blog/free-for-work），自2025年7月起个人和工作用途均可免费使用，仅单独的 Enterprise/Teams 层级收费。条款可能变更，请以 lmstudio.ai 上的最新使用条款为准。' } },
           { '@type': 'Question', name: 'LM Studio 和 Ollama 之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 是图形桌面应用。Ollama 是命令行工具和后台服务。两者使用相同的 llama.cpp 推理引擎。' } },
           { '@type': 'Question', name: 'LM Studio 可以使用哪些模型？', acceptedAnswer: { '@type': 'Answer', text: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.1 8B、Qwen3 8B、Mistral Small。' } },
           { '@type': 'Question', name: 'LM Studio 自动使用我的 GPU 吗？', acceptedAnswer: { '@type': 'Answer', text: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，LM Studio 自动检测 CUDA。' } },
