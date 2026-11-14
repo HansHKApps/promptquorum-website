@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/local-llms/nvidia-dgx-spark-local-ai-workstation): measured faster than the Halo in StorageReview\'s vLLM test and offers a 200G fabric for linking boxes, but caps memory at 128 GB.',
           '[Framework Desktop](/local-llms/framework-desktop-local-ai-workstation): the same Ryzen AI Max+ family in a modular case, with a 192 GB PRO 495 option on pre-order.',
-          '[GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation): a third-party Ryzen AI Max+ 395 box whose US price is reported inconsistently; see its page.',
+          '[GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation): a third-party Ryzen AI Max+ 395 box listed at $3,499.99 for 128 GB / 1 TB on the GMKtec US store (vendor-reported); see its page.',
           '[Minisforum MS-S1 MAX](/local-llms/minisforum-ms-s1-max-local-ai-workstation): the same 395 chip with dual 10GbE and an internal PCIe slot (x4 electrically), per Minisforum and reviews.',
           '[Local AI Workstations: Strix Halo vs. DGX Spark](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): the category comparison with all machines and prices side by side.',
         ],
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation): im vLLM-Test von StorageReview schneller gemessen als der Halo und mit einer 200G-Fabric zum Koppeln mehrerer Geräte, begrenzt den Speicher aber auf 128 GB.',
           '[Framework Desktop](/de/local-llms/framework-desktop-local-ai-workstation): dieselbe Ryzen-AI-Max+-Familie in einem modularen Gehäuse, mit einer Option PRO 495 mit 192 GB auf Vorbestellung.',
-          '[GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation): eine Ryzen-AI-Max+-395-Box eines Drittanbieters, deren US-Preis uneinheitlich gemeldet wird; siehe die zugehörige Seite.',
+          '[GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation): eine Ryzen-AI-Max+-395-Box eines Drittanbieters, im US-Shop von GMKtec mit 128 GB / 1 TB für 3.499,99 $ gelistet (Herstellerangabe); siehe die zugehörige Seite.',
           '[Minisforum MS-S1 MAX](/de/local-llms/minisforum-ms-s1-max-local-ai-workstation): derselbe 395-Chip mit zwei 10GbE-Anschlüssen und einem internen PCIe-Steckplatz (elektrisch x4), laut Minisforum und Tests.',
           '[Lokale KI-Workstations: Strix Halo vs. DGX Spark](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): der Kategorievergleich mit allen Geräten und Preisen nebeneinander.',
         ],
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[DGX Spark](/fr/local-llms/nvidia-dgx-spark-local-ai-workstation) : mesuré plus rapide que le Halo dans le test vLLM de StorageReview et doté d'une interconnexion 200G pour relier plusieurs machines, mais plafonné à 128 Go de mémoire.",
           "[Framework Desktop](/fr/local-llms/framework-desktop-local-ai-workstation) : la même famille Ryzen AI Max+ dans un boîtier modulaire, avec une option PRO 495 de 192 Go en précommande.",
-          "[GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) : une machine Ryzen AI Max+ 395 d'un constructeur tiers dont le prix américain est rapporté de façon incohérente ; voir sa page.",
+          "[GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) : une machine Ryzen AI Max+ 395 d'un constructeur tiers, affichée à 3 499,99 $ US (128 Go / 1 To) sur la boutique américaine de GMKtec (prix annoncé par le constructeur) ; voir sa page.",
           "[Minisforum MS-S1 MAX](/fr/local-llms/minisforum-ms-s1-max-local-ai-workstation) : la même puce 395 avec double 10GbE et un emplacement PCIe interne (x4 électriquement), selon Minisforum et les tests.",
           "[Stations de travail IA locales : AMD Strix Halo contre NVIDIA DGX Spark](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark) : le comparatif de catégorie avec toutes les machines et leurs prix côte à côte.",
         ],
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/ja/local-llms/nvidia-dgx-spark-local-ai-workstation): StorageReviewのvLLMテストでHaloより高速で、機器接続用の200Gファブリックを備えますが、メモリは128GBが上限です。',
           '[Framework Desktop](/ja/local-llms/framework-desktop-local-ai-workstation): 同じRyzen AI Max+ファミリーをモジュール式の筐体で提供し、192GBのPRO 495構成を予約受付中です。',
-          '[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation): サードパーティのRyzen AI Max+ 395搭載機で、米国価格の報道に食い違いがあります。同ページを参照してください。',
+          '[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation): サードパーティのRyzen AI Max+ 395搭載機で、GMKtec米国ストアでは128GB/1TBモデルが$3,499.99と掲載されています（メーカー公表値）。詳細は同ページを参照してください。',
           '[Minisforum MS-S1 MAX](/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation): 同じ395チップに、デュアル10GbEと内部PCIeスロット（電気的にはx4）を備えます（Minisforumとレビューによる）。',
           '[ローカルAIワークステーション: Strix Halo vs. DGX Spark](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): 全機種と価格を並べて比較したカテゴリページ。',
         ],
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/zh/local-llms/nvidia-dgx-spark-local-ai-workstation)：在StorageReview的vLLM测试中测得比Halo更快，并提供用于连接多台机器的200G互联，但内存上限为128 GB。',
           '[Framework Desktop](/zh/local-llms/framework-desktop-local-ai-workstation)：同一Ryzen AI Max+系列，采用模块化机箱，提供192 GB PRO 495预订选项。',
-          '[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)：第三方的Ryzen AI Max+ 395机器，其美国价格的报道前后不一；详见其页面。',
+          '[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)：第三方的Ryzen AI Max+ 395机器，GMKtec美国官网128 GB / 1 TB版标价$3,499.99（厂商公布）；详见其页面。',
           '[Minisforum MS-S1 MAX](/zh/local-llms/minisforum-ms-s1-max-local-ai-workstation)：同一颗395芯片，配双10GbE和内部PCIe插槽（电气上为x4），依据Minisforum和评测。',
           '[本地AI工作站：Strix Halo对比DGX Spark](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)：并排比较所有机器和价格的分类对比。',
         ],
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/es/local-llms/nvidia-dgx-spark-local-ai-workstation): medida más rápida que el Halo en la prueba de vLLM de StorageReview y con una red de 200G para enlazar equipos, pero limita la memoria a 128 GB.',
           '[Framework Desktop](/es/local-llms/framework-desktop-local-ai-workstation): la misma familia Ryzen AI Max+ en una caja modular, con una opción de 192 GB con PRO 495 en reserva.',
-          '[GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation): un equipo Ryzen AI Max+ 395 de un tercero cuyo precio en EE. UU. se informa de forma inconsistente; consulta su página.',
+          '[GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation): un equipo Ryzen AI Max+ 395 de un tercero, listado a $3,499.99 (128 GB / 1 TB) en la tienda de GMKtec en EE. UU. (dato del fabricante); consulta su página.',
           '[Minisforum MS-S1 MAX](/es/local-llms/minisforum-ms-s1-max-local-ai-workstation): el mismo chip 395 con doble 10GbE y una ranura PCIe interna (x4 eléctricamente), según Minisforum y las reseñas.',
           '[Estaciones de trabajo de IA local: Strix Halo vs. DGX Spark](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): la comparativa de categoría con todas las máquinas y precios lado a lado.',
         ],
@@ -1485,7 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/pt/local-llms/nvidia-dgx-spark-local-ai-workstation): medido mais rápido que o Halo no teste de vLLM da StorageReview e com malha de 200G para ligar caixas, mas limita a memória em 128 GB.',
           '[Framework Desktop](/pt/local-llms/framework-desktop-local-ai-workstation): a mesma família Ryzen AI Max+ em um gabinete modular, com uma opção PRO 495 de 192 GB em pré-encomenda.',
-          '[GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation): uma caixa Ryzen AI Max+ 395 de terceiros cujo preço nos EUA é reportado de forma inconsistente; veja a página dela.',
+          '[GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation): uma caixa Ryzen AI Max+ 395 de terceiros, listada a US$ 3.499,99 (128 GB / 1 TB) na loja da GMKtec nos EUA (dado do fabricante); veja a página dela.',
           '[Minisforum MS-S1 MAX](/pt/local-llms/minisforum-ms-s1-max-local-ai-workstation): o mesmo chip 395 com 10GbE duplo e um slot PCIe interno (x4 eletricamente), segundo a Minisforum e análises.',
           '[Workstations de IA local: Strix Halo vs. DGX Spark](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): a comparação da categoria com todas as máquinas e preços lado a lado.',
         ],
@@ -1707,7 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/ar/local-llms/nvidia-dgx-spark-local-ai-workstation): قيس أسرع من Halo في اختبار vLLM من StorageReview ويوفر نسيج 200G لربط الأجهزة، لكنه يحدّ الذاكرة عند 128 GB.',
           '[Framework Desktop](/ar/local-llms/framework-desktop-local-ai-workstation): عائلة Ryzen AI Max+ نفسها في هيكل معياري، مع خيار PRO 495 بذاكرة 192 GB بالطلب المسبق.',
-          '[GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation): جهاز Ryzen AI Max+ 395 من طرف ثالث يُبلَّغ عن سعره الأمريكي بشكل متضارب؛ راجع صفحته.',
+          '[GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation): جهاز Ryzen AI Max+ 395 من طرف ثالث، مدرج بسعر $3,499.99 (128 GB / 1 TB) في متجر GMKtec الأمريكي (بحسب الشركة المصنّعة)؛ راجع صفحته.',
           '[Minisforum MS-S1 MAX](/ar/local-llms/minisforum-ms-s1-max-local-ai-workstation): الشريحة 395 نفسها مع منفذَي 10GbE وفتحة PCIe داخلية (x4 كهربائيًا)، بحسب Minisforum والمراجعات.',
           '[محطات عمل الذكاء الاصطناعي المحلي: Strix Halo مقابل DGX Spark](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): المقارنة الشاملة للفئة مع جميع الأجهزة وأسعارها جنبًا إلى جنب.',
         ],
@@ -1928,7 +1928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/ko/local-llms/nvidia-dgx-spark-local-ai-workstation): StorageReview의 vLLM 테스트에서 Halo보다 빠른 것으로 측정되었고 기기 연결용 200G 패브릭을 제공하지만, 메모리는 128GB가 상한입니다.',
           '[Framework Desktop](/ko/local-llms/framework-desktop-local-ai-workstation): 모듈식 케이스에 같은 Ryzen AI Max+ 계열을 탑재했으며, 192GB PRO 495 옵션을 사전 주문으로 제공합니다.',
-          '[GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation): 미국 가격이 일관되지 않게 보도되는 서드파티 Ryzen AI Max+ 395 기기이며, 해당 페이지를 참고하십시오.',
+          '[GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation): 서드파티 Ryzen AI Max+ 395 기기로, GMKtec 미국 스토어에서 128GB/1TB 모델이 $3,499.99로 표시되어 있습니다(제조사 표기). 해당 페이지를 참고하십시오.',
           '[Minisforum MS-S1 MAX](/ko/local-llms/minisforum-ms-s1-max-local-ai-workstation): Minisforum과 리뷰에 따르면 같은 395 칩에 듀얼 10GbE와 내부 PCIe 슬롯(전기적으로 x4)을 갖추었습니다.',
           '[로컬 AI 워크스테이션: Strix Halo 대 DGX Spark](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): 모든 기기와 가격을 나란히 비교한 범주 비교 글입니다.',
         ],
