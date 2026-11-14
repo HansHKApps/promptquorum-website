@@ -126,7 +126,7 @@
       ]
     },
     "how-to-install-ollama": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -153,7 +153,7 @@
       ]
     },
     "how-to-install-lm-studio": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -175,7 +175,7 @@
         },
         {
           "url": "/images/how-to-install-lm-studio-ram-quantization-guide-en.svg",
-          "title": "RAM-based quantization guide for LM Studio: 8 GB RAM fits Q4_K_M (~4.5 GB, ~1% quality loss); 16 GB RAM fits Q5_K_M or Q6_K (~5.7-6.5 GB, near-lossless) with headroom for 8K+ token context."
+          "title": "RAM-based quantization guide for LM Studio: 8 GB RAM fits Q4_K_M (~4.5 GB, small quality loss that varies by model); 16 GB RAM fits Q5_K_M or Q6_K (~5.7-6.5 GB, near-lossless) with headroom for 8K+ token context."
         }
       ]
     },
@@ -884,7 +884,7 @@
       "images": []
     },
     "open-webui-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -1010,7 +1010,7 @@
       "images": []
     },
     "sillytavern-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -1292,7 +1292,7 @@
       "images": []
     },
     "local-llm-hardware-guide": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-14",
       "lastFactChecked": "2026-11-02",
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2279,7 +2279,7 @@
       ]
     },
     "best-amd-mini-pc-local-llm-2026": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2297,15 +2297,15 @@
       "images": [
         {
           "url": "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.webp",
-          "title": "Price, RAM, NPU power, and performance across all four mini PC models. Minisforum offers the best balance, Beelink maximum memory, GMKtec the entry point."
+          "title": "Price, RAM, NPU power, and performance across all four mini PC models. Minisforum offers the best balance and the lowest listed price, Beelink maximum memory at a lower price than GMKtec's 128GB model."
         },
         {
           "url": "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-en.webp",
-          "title": "Tokens/sec across 8B, 32B, and 70B models. Minisforum/Beelink/AOOSTAR achieve identical performance due to shared Ryzen AI Max+ 395 silicon. GMKtec EVO-X2 is 10–15% slower due to Ryzen AI Max 385."
+          "title": "Tokens/sec across 8B, 32B, and 70B models. All four machines share the Ryzen AI Max+ 395 silicon, so the estimates are the same; these are estimates, not measurements, and the GMKtec EVO-X2 has no independent speed test."
         },
         {
           "url": "/images/best-amd-mini-pc-decision-tree-en.svg",
-          "title": "Decision tree: Match your priorities to the right mini PC. Budget-first buyers start with GMKtec. Power users and researchers prefer Beelink. Minisforum best overall."
+          "title": "Decision tree: Match your priorities to the right mini PC. Budget-first buyers start with Minisforum. Power users and researchers prefer Beelink. Minisforum best overall."
         },
         {
           "url": "/images/best-amd-mini-pc-amd-vs-apple-en.svg",
@@ -4063,7 +4063,7 @@
       "images": []
     },
     "nvidia-dgx-spark-local-ai-workstation": {
-      "dateModified": "2026-10-31",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-10-31",
       "hasSections": true,
@@ -4081,7 +4081,7 @@
       "images": []
     },
     "amd-ryzen-ai-halo-local-ai-workstation": {
-      "dateModified": "2026-10-31",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-10-31",
       "hasSections": true,
@@ -4135,7 +4135,7 @@
       "images": []
     },
     "gmktec-evo-x2-local-ai-workstation": {
-      "dateModified": "2026-10-31",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-10-31",
       "hasSections": true,
@@ -9673,7 +9673,7 @@
       "images": []
     },
     "whisper-cpp-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -10375,7 +10375,7 @@
       "images": []
     },
     "lm-studio-review": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -10393,7 +10393,7 @@
       "images": []
     },
     "llama-cpp-explained": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -10429,7 +10429,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -13579,7 +13579,7 @@
       "images": []
     },
     "risuai-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -14047,7 +14047,7 @@
       "images": []
     },
     "stable-diffusion-forge-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-14",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
