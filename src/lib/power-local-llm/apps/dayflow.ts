@@ -1,7 +1,7 @@
 // Local AI App Directory — Dayflow: open-source automatic work journal / time tracker for Mac that can run its screen analysis with local models (layer: desktop, personal assistants + local search over your own activity)
 // Added 2026-11-13 at the owner's request. Facts verified 2026-11-13 against dayflow.so (home, /pricing, /privacy) and the GitHub API/README of
-// JerryZLiu/Dayflow (MIT licence, 7,436 stars, homepage dayflow.so). Latest release v2.9.0 (not a pre-release) published 2026-11-10T11:29:37Z with asset
-// Dayflow.dmg; newest default-branch push 2026-11-10T11:29:42Z. The release body is empty (no written notes). So the 3-month stale warning is OFF.
+// JerryZLiu/Dayflow (MIT licence, 7,436 stars, homepage dayflow.so). Latest release v2.9.3 (not a pre-release) published 2026-11-13T11:45:17Z with asset
+// Dayflow.dmg; newest default-branch push 2026-11-13T11:45:18Z. The release body is empty (no written notes). So the 3-month stale warning is OFF.
 // Locality: README "can run entirely with local AI", "If you choose local models, analysis stays on your machine"; privacy page lists three modes — Local
 // processing ("Screenshots never leave your machine"), Bring your own AI provider (screenshots go to the provider you configure) and Dayflow cloud (opt-in, Pro).
 // The privacy page marks both "Local processing" and "Bring your own AI provider" as DEFAULT, so no single default is stated. Capture, recordings and the
@@ -35,7 +35,7 @@ export const app: ToolRecord = {
     web: 'https://www.dayflow.so',
   },
   installEffort: 'installer',
-  installEvidence: 'GitHub Releases v2.9.0 (2026-11-10) checked 2026-11-13: asset Dayflow.dmg (README: open the DMG, drag to Applications, grant Screen & System Audio Recording permission); README also lists `brew install --cask dayflow` and a build from source in Xcode',
+  installEvidence: 'GitHub Releases v2.9.3 (2026-11-13) checked 2026-11-14: asset Dayflow.dmg (README: open the DMG, drag to Applications, grant Screen & System Audio Recording permission); README also lists `brew install --cask dayflow` and a build from source in Xcode',
   tagline: {
     en: 'Free, MIT-licensed Mac app that turns low-frequency screenshots into a timeline of your workday and can run the analysis on your own Mac through Ollama or LM Studio',
     de: 'Kostenlose Mac-App unter MIT-Lizenz, die seltene Bildschirmfotos in eine Zeitleiste Ihres Arbeitstags verwandelt und die Analyse über Ollama oder LM Studio auf Ihrem eigenen Mac ausführen kann',
@@ -52,11 +52,11 @@ export const app: ToolRecord = {
   reviewSlug: 'dayflow-review',
   pqReview: {
     date: '2026-11-13',
-    version: '2.9.0',
+    version: '2.9.3',
     versionSourceUrl: 'https://github.com/JerryZLiu/Dayflow/releases/latest',
   },
   verdict: 'Best for Mac users who want an automatic, open-source work journal and are willing to run Ollama or LM Studio to keep screen analysis on their own machine; limited by macOS 14+ only, a separate local-model setup, cloud analysis paths that send screenshots to a provider, and privacy and accuracy claims PromptQuorum did not test.',
-  lastVerifiedDate: '2026-11-13',
-  lastUpstreamUpdate: '2026-11-10', // GitHub: release v2.9.0 (2026-11-10T11:29:37Z) and last push to main (2026-11-10T11:29:42Z); read 2026-11-13
+  lastVerifiedDate: '2026-11-14',
+  lastUpstreamUpdate: '2026-11-13', // GitHub: release v2.9.3 (2026-11-13T11:45:17Z) and last push to main (2026-11-13T11:45:18Z); read 2026-11-14
   lastUpstreamUpdateSource: 'https://github.com/JerryZLiu/Dayflow',
 }
