@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         installLinux: {
           id: 'install-on-linux',
           title: 'How Do You Install Ollama on Linux?',
-          content: 'A single command installs Ollama on any Linux distribution:',
+          content: 'A single command installs Ollama on any Linux distribution. Piping a script into `sh` runs it with your user\'s privileges, so you can download and read `install.sh` first if you prefer:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Can I run Ollama without a GPU?', a: 'Yes. Ollama runs on CPU with no GPU. Inference is slower (2-5 tokens/sec vs 30-60 on GPU) but functional. Use small models like llama3.2:3b or phi3.5 on CPU-only systems.' },
             { q: 'How do I pull a new model with Ollama?', a: 'Run: ollama pull modelname. For example: ollama pull mistral or ollama pull qwen2.5:7b. Models are stored in ~/.ollama/models. List downloaded models with ollama list.' },
             { q: 'What port does Ollama use?', a: 'Ollama serves its API on port 11434 by default. Access it at http://localhost:11434. Change the port with the OLLAMA_HOST environment variable: OLLAMA_HOST=0.0.0.0:11435.' },
-            { q: 'Is Ollama API compatible with the OpenAI API?', a: 'Yes. Ollama supports the OpenAI chat completions endpoint at /v1/chat/completions. Any app built for OpenAI can use Ollama by setting base_url to http://localhost:11434/v1.' },
+            { q: 'Is Ollama API compatible with the OpenAI API?', a: 'Yes. Ollama supports the OpenAI chat completions endpoint at /v1/chat/completions. Most apps built on the OpenAI SDK work after you set base_url to http://localhost:11434/v1, but compatibility is partial, so test the features you rely on.' },
             { q: 'How do I see which models are installed in Ollama?', a: 'Run: ollama list. This shows all downloaded models, their sizes, and quantization levels. Remove a model with ollama rm modelname.' },
             { q: 'How do I update Ollama to the latest version?', a: 'macOS/Windows: re-download the installer from ollama.com -- it overwrites the old version. Linux: re-run curl -fsSL https://ollama.com/install.sh | sh to update in place.' },
           ],
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
+        'headline': 'Download & Install Ollama on macOS, Windows & Linux',
         'description': 'Download Ollama free from ollama.com and install it on macOS, Windows or Linux with one command each, then pick the model that fits your GPU VRAM.',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -375,7 +375,7 @@ schema: {
             'name': 'Is Ollama API compatible with the OpenAI API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Ollama supports the OpenAI chat completions endpoint at /v1/chat/completions. Any app built for OpenAI can use Ollama by setting base_url to http://localhost:11434/v1.',
+              'text': 'Yes. Ollama supports the OpenAI chat completions endpoint at /v1/chat/completions. Most apps built on the OpenAI SDK work after you set base_url to http://localhost:11434/v1, but compatibility is partial, so test the features you rely on.',
             },
           },
           {
@@ -632,7 +632,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Instalar Ollama: Configuración en 2 Minutos para macOS, Windows y Linux',
+        'headline': 'Descargar e instalar Ollama en macOS, Windows y Linux',
         'description': 'Descarga Ollama gratis desde ollama.com e instálalo en macOS, Windows o Linux con un comando; luego elige el modelo que cabe en la VRAM de tu GPU.',
         'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -1034,7 +1034,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'تثبيت Ollama: إعداد في دقيقتين لـ macOS و Windows و Linux',
+        'headline': 'تنزيل وتثبيت ⁨Ollama⁩ على ⁨macOS⁩ و⁨Windows⁩ و⁨Linux⁩',
         'description': 'نزّل ⁨Ollama⁩ مجانًا من ⁨ollama.com⁩ وثبّته على ⁨macOS⁩ أو ⁨Windows⁩ أو ⁨Linux⁩ بأمر واحد لكل نظام، ثم اختر النموذج الذي يناسب ⁨VRAM⁩ في بطاقتك.',
         'url': 'https://www.promptquorum.com/ar/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -1444,7 +1444,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Instalar Ollama: Configuração em 2 Minutos para macOS, Windows e Linux',
+        headline: 'Baixar e instalar o Ollama no macOS, Windows e Linux',
         description: 'Baixe o Ollama de graça em ollama.com e instale no macOS, Windows ou Linux com um comando por sistema; depois escolha o modelo que cabe na VRAM da sua GPU.',
         url: 'https://www.promptquorum.com/pt/local-llms/how-to-install-ollama',
         inLanguage: 'pt-BR',
@@ -1910,7 +1910,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama installieren 2026 - Vollständige Anleitung',
+        'headline': 'Ollama herunterladen und installieren: macOS, Windows, Linux',
         'description': 'Ollama kostenlos von ollama.com laden und unter macOS, Windows oder Linux mit je einem Befehl installieren; dann das Modell passend zum GPU-VRAM wählen.',
         'url': 'https://www.promptquorum.com/de/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -2243,7 +2243,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Installer Ollama 2026 - Guide complet',
+        'headline': 'Télécharger et installer Ollama sur macOS, Windows et Linux',
         'description': 'Téléchargez Ollama sur ollama.com, installez-le sous macOS, Windows ou Linux en une commande, puis choisissez le modèle adapté à la VRAM de votre GPU.',
         'url': 'https://www.promptquorum.com/fr/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -2718,7 +2718,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': '2026 年に Ollama をインストール - 完全ガイド',
+        'headline': 'Ollama のダウンロードとインストール：macOS・Windows・Linux',
         'description': 'Ollamaはollama.comから無料でダウンロードでき、macOS・Windows・Linuxそれぞれ1コマンドでインストールできます。GPUのVRAMに合うモデルの選び方も紹介。',
         'url': 'https://www.promptquorum.com/ja/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -3081,7 +3081,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': '2026 年安装 Ollama - 完整指南',
+        'headline': '下载并安装 Ollama：macOS、Windows 和 Linux 指南',
         'description': 'Ollama可从ollama.com免费下载，macOS、Windows、Linux各用一条命令即可安装；再按GPU显存选择合适的模型，附官方下载链接。',
         'url': 'https://www.promptquorum.com/zh/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
@@ -3372,7 +3372,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama 설치: macOS, Windows & Linux 2분 설치 가이드',
+        'headline': 'Ollama 다운로드 및 설치: macOS, Windows, Linux',
         'description': 'Ollama는 ollama.com에서 무료로 다운로드하며 macOS, Windows, Linux 모두 명령어 한 줄로 설치할 수 있습니다. GPU VRAM에 맞는 모델 선택법도 안내합니다.',
         'url': 'https://www.promptquorum.com/ko/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
