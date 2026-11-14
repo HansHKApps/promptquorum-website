@@ -18,6 +18,9 @@ export const GSC_DEFAULT_SITE_URL = 'https://www.promptquorum.com/'
 /** How many days back to look; the newest date that has data wins (GSC lags ~2 days). */
 export const GSC_LOOKBACK_DAYS = 5
 export const GSC_REVALIDATE_SECONDS = 6 * 60 * 60 // 6 h
+/** Country list under the counters: how many countries, over how many days. */
+export const GSC_COUNTRY_LIMIT = 20
+export const GSC_COUNTRY_DAYS = 28
 
 /**
  * Message under the numbers. First tier whose `minViews` is <= the 24 h page views wins

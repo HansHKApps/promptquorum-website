@@ -3,7 +3,8 @@ import type { Language } from '@/lib/blog/blogContent'
 import { PARTNERS_EMAIL, partnersContent } from '@/lib/partners/content'
 import { MESSAGE_TIERS } from '@/lib/partners/stats-config'
 import { getUmamiStat } from '@/lib/partners/umami'
-import { getGscStat } from '@/lib/partners/gsc'
+import { getGscCountries, getGscStat } from '@/lib/partners/gsc'
+import { alpha3ToAlpha2, hasFlag } from '@/lib/partners/countries'
 
 const SITE = 'https://www.promptquorum.com'
 const LINK = 'text-purple-600 hover:underline'
@@ -73,12 +74,27 @@ export async function PartnersPage({ lang }: { lang: Language }) {
   const dir = lang === 'ar' ? 'rtl' : 'ltr'
   const numLocale = INTL_LOCALE[lang]
 
-  const [umami, gsc] = await Promise.all([getUmamiStat(), getGscStat()])
+  const [umami, gsc, countries] = await Promise.all([getUmamiStat(), getGscStat(), getGscCountries()])
 
   const tier = [...MESSAGE_TIERS].sort((a, b) => b.minViews - a.minViews).find(t => (umami?.pageviews ?? 0) >= t.minViews)
   const message = c.stats.messages[tier?.key ?? 'neutral']
   // A counter whose API failed is hidden silently (never shown as 0); no data at all hides the section.
   const hasData = Boolean(umami || gsc)
+
+  // Country list: names come from the browser/Node locale data, flags from /public/flags.
+  const regionNames = new Intl.DisplayNames([INTL_LOCALE[lang]], { type: 'region' })
+  const pct = new Intl.NumberFormat(INTL_LOCALE[lang], { style: 'percent', maximumFractionDigits: 1 })
+  const countryRows = (countries?.rows ?? []).map(r => {
+    const code2 = alpha3ToAlpha2(r.code3)
+    let name = r.code3.toUpperCase()
+    try {
+      if (code2) name = regionNames.of(code2.toUpperCase()) ?? name
+    } catch {
+      /* keep the code */
+    }
+    return { ...r, code2, name, flag: code2 && hasFlag(code2) ? code2 : null }
+  })
+  const maxClicks = Math.max(1, ...countryRows.map(r => r.clicks))
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -149,6 +165,36 @@ export async function PartnersPage({ lang }: { lang: Language }) {
                 )}
               </div>
               <p className="mt-4">{message}</p>
+
+              {countries && countryRows.length > 0 && (
+                <div className="mt-8">
+                  <h3 className="text-sm font-semibold text-gray-900">{c.stats.countries.heading}</h3>
+                  <ol className="mt-3 space-y-1.5">
+                    {countryRows.map(r => (
+                      <li key={r.code3} className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-x-3">
+                        {r.flag ? (
+                          <img src={`/flags/${r.flag}.svg`} width={24} height={18} alt="" loading="lazy" className="h-[18px] w-6 rounded-[2px] border border-gray-200 object-cover" />
+                        ) : (
+                          <span aria-hidden="true" className="h-[18px] w-6" />
+                        )}
+                        <span className="relative min-w-0">
+                          <span aria-hidden="true" className="absolute inset-y-0 start-0 rounded-sm bg-purple-100" style={{ width: `${Math.max(2, (r.clicks / maxClicks) * 100)}%` }} />
+                          <span className="relative block truncate px-2 py-0.5">{r.name}</span>
+                        </span>
+                        <span className="tabular-nums text-xs text-gray-600" dir="ltr">
+                          {r.clicks.toLocaleString(numLocale)} · {pct.format(r.clicks / countries.total)}
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                  <p className="mt-3 text-xs text-gray-500">
+                    {c.stats.countries.note
+                      .replace('{n}', String(countryRows.length))
+                      .replace('{from}', formatDay(countries.from, lang))
+                      .replace('{to}', formatDay(countries.to, lang))}
+                  </p>
+                </div>
+              )}
               <p className="mt-3 text-xs text-gray-500">
                 {c.stats.source}. {c.stats.gscNote}
               </p>
