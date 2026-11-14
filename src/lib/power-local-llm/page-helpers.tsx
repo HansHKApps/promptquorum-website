@@ -1042,6 +1042,7 @@ const HUB_THEMES: Array<{
       'msty-go-review',
       'zeno-review',
       'multica-review',
+      'openmausbot-review',
       'metagpt-review',
       'nvidia-g-assist-review',
       'odysseus-review',
