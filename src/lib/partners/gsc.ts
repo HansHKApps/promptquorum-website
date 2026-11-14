@@ -41,6 +41,18 @@ export function getGscLastError(): string | null {
   return lastError
 }
 
+/**
+ * Tolerates a key pasted into an env var with its line breaks lost or escaped: quotes, literal \\n,
+ * spaces instead of newlines. Rebuilds a clean PEM from the base64 body.
+ */
+export function normalizePrivateKey(raw: string): string {
+  const k = raw.trim().replace(/^["']|["']$/g, '').replace(/\\n/g, '\n')
+  const m = k.match(/-----BEGIN ([A-Z ]*PRIVATE KEY)-----([\s\S]*?)-----END \1-----/)
+  if (!m) return k
+  const body = m[2].replace(/[^A-Za-z0-9+/=]/g, '')
+  return `-----BEGIN ${m[1]}-----\n${(body.match(/.{1,64}/g) ?? []).join('\n')}\n-----END ${m[1]}-----\n`
+}
+
 const b64url = (b: Buffer | string) => Buffer.from(b).toString('base64url')
 const isoDay = (d: Date) => d.toISOString().slice(0, 10)
 const fresh = (at: number) => Date.now() - at < GSC_REVALIDATE_SECONDS * 1000
@@ -59,7 +71,13 @@ async function getAccessToken(email: string, privateKey: string): Promise<string
       exp: now + 3600,
     }),
   )
-  const sig = createSign('RSA-SHA256').update(`${header}.${claim}`).sign(privateKey)
+  let sig: Buffer
+  try {
+    sig = createSign('RSA-SHA256').update(`${header}.${claim}`).sign(privateKey)
+  } catch {
+    lastError = 'key-format'
+    return null
+  }
   const res = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -86,7 +104,8 @@ async function getAccessToken(email: string, privateKey: string): Promise<string
 /** One Search Analytics query (default dataState = final; no extrapolation). Null on any failure. */
 async function queryGsc(body: Record<string, unknown>): Promise<GscRow[] | null> {
   const email = process.env.GSC_CLIENT_EMAIL
-  const key = process.env.GSC_PRIVATE_KEY?.replace(/\\n/g, '\n')
+  const rawKey = process.env.GSC_PRIVATE_KEY
+  const key = rawKey ? normalizePrivateKey(rawKey) : undefined
   if (!email || !key) {
     lastError = 'no-credentials'
     return null
