@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -17,12 +17,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-en.webp',
-    title: 'AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict',
-    seoTitle: 'AMD Ryzen AI Halo for Local AI: Specs, Price, Verdict',
+    title: 'AMD Ryzen AI Halo Price and Specs for Local AI',
+    seoTitle: 'AMD Ryzen AI Halo Price and Specs: $3,999 and $7,299',
     intro:
       'The AMD Ryzen AI Halo is AMD\'s own developer mini PC for running large language models locally. It comes in two versions: a 128 GB model with the Ryzen AI Max+ 395 and a 192 GB model with the Ryzen AI Max+ PRO 495. Both are sold in the US through Micro Center. This page collects the vendor specifications, the prices we could source and what independent reviewers measured, so you can decide whether it fits your workload before buying.',
     metaDescription:
-      'AMD Ryzen AI Halo specs for local AI: 128 GB Ryzen AI Max+ 395 and 192 GB PRO 495 versions, sourced US prices and what independent reviews found.',
+      'AMD Ryzen AI Halo price: $3,999 for 128 GB (Ryzen AI Max+ 395), $7,299.99 for 192 GB (PRO 495), both at Micro Center. Specs and review results.',
     twitterDescription:
       'AMD Ryzen AI Halo for local LLMs: 128 GB and 192 GB versions, sourced US prices, and what StorageReview, HotHardware and LTT Labs found.',
     readTime: '8 min read',
@@ -55,8 +55,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Key Takeaways', anchor: 'tldr' },
       { label: 'What the AMD Ryzen AI Halo Is', anchor: 'overview' },
-      { label: 'Specifications', anchor: 'specs' },
-      { label: 'Price and Availability', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo Specs', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo Price and Availability', anchor: 'pricing' },
       { label: 'What Independent Reports Show', anchor: 'evidence' },
       { label: 'Who It Suits and Who Should Skip It', anchor: 'fit' },
       { label: 'Alternatives in the Same Class', anchor: 'alternatives' },
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Specifications',
+        title: 'AMD Ryzen AI Halo Specs',
         columns: ['Spec', 'Detail'],
         rows: [
           { 'Spec': 'Processor (128 GB version)', 'Detail': 'Ryzen AI Max+ 395, 16 cores / 32 threads, Zen 5, up to 5.1 GHz boost' },
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Price and Availability',
+        title: 'AMD Ryzen AI Halo Price and Availability',
         content:
           '**The 128 GB version costs $3,999 and the 192 GB version $7,299.99, both US prices at Micro Center.** DRAM shortages have moved prices in this class repeatedly, so check the retailer page before ordering.',
         columns: ['Configuration', 'US price', 'Source and date', 'Status'],
@@ -138,6 +138,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Who It Suits and Who Should Skip It',
+        content:
+          '**The Ryzen AI Halo suits developers who want a preconfigured AMD box with 128 GB or 192 GB of memory and a choice of Windows or Linux (Windows on the 128 GB version).** It suits buyers less who need the highest serving throughput, CUDA or a fast fabric for clustering. To compare it with GPUs, Macs and other mini PCs by memory tier, see the [local LLM hardware guide](/local-llms/local-llm-hardware-guide).',
         items: [
           '**Suits:** developers who want a preconfigured AMD box with Windows or Linux; compare it with the [category guide](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark) first.',
           '**Suits:** buyers who want AMD\'s own 128 GB box; HotHardware\'s author called it the least expensive 128 GB compact AI workstation, while other vendors list different prices (see the [GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation) and [HP Z2 Mini G1a](/local-llms/hp-z2-mini-g1a-local-ai-workstation) pages).',
@@ -201,10 +203,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict',
-      'description': 'AMD Ryzen AI Halo specs for local AI: 128 GB Ryzen AI Max+ 395 and 192 GB PRO 495 versions, sourced US prices and what independent reviews found.',
+      'headline': 'AMD Ryzen AI Halo Price and Specs for Local AI',
+      'description': 'AMD Ryzen AI Halo price: $3,999 for 128 GB (Ryzen AI Max+ 395), $7,299.99 for 192 GB (PRO 495), both at Micro Center. Specs and review results.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -226,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -237,12 +239,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-de.webp',
-    title: 'AMD Ryzen AI Halo für lokale KI: Spezifikationen, Preis und Fazit',
-    seoTitle: 'AMD Ryzen AI Halo für lokale KI: Specs, Preis, Fazit',
+    title: 'AMD Ryzen AI Halo Preis und Spezifikationen für lokale KI',
+    seoTitle: 'AMD Ryzen AI Halo Preis und Specs: 3.999 und 7.299 $',
     intro:
       'Der AMD Ryzen AI Halo ist AMDs eigener Entwickler-Mini-PC, um große Sprachmodelle lokal auszuführen. Er erscheint in zwei Versionen: einem Modell mit 128 GB und dem Ryzen AI Max+ 395 sowie einem Modell mit 192 GB und dem Ryzen AI Max+ PRO 495. Beide werden in den USA über Micro Center verkauft. Diese Seite fasst die Herstellerangaben, die Preise, die wir belegen konnten, und die Messwerte unabhängiger Tester zusammen, damit Sie vor dem Kauf entscheiden können, ob das Gerät zu Ihrer Aufgabe passt.',
     metaDescription:
-      'AMD Ryzen AI Halo für lokale KI: Versionen mit 128 GB (Ryzen AI Max+ 395) und 192 GB (PRO 495), belegte US-Preise und was unabhängige Tests ergaben.',
+      'AMD Ryzen AI Halo Preis: 3.999 $ für 128 GB (Ryzen AI Max+ 395), 7.299,99 $ für 192 GB (PRO 495), beides bei Micro Center. Specs und Testergebnisse.',
     twitterDescription:
       'AMD Ryzen AI Halo für lokale LLMs: Versionen mit 128 GB und 192 GB, belegte US-Preise und die Ergebnisse von StorageReview, HotHardware und LTT Labs.',
     readTime: '8 Min. Lesezeit',
@@ -275,8 +277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Zusammenfassung', anchor: 'tldr' },
       { label: 'Was der AMD Ryzen AI Halo ist', anchor: 'overview' },
-      { label: 'Spezifikationen', anchor: 'specs' },
-      { label: 'Preis und Verfügbarkeit', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo Spezifikationen', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo Preis und Verfügbarkeit', anchor: 'pricing' },
       { label: 'Was unabhängige Berichte zeigen', anchor: 'evidence' },
       { label: 'Für wen er geeignet ist und wer verzichten sollte', anchor: 'fit' },
       { label: 'Alternativen in derselben Klasse', anchor: 'alternatives' },
@@ -311,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Spezifikationen',
+        title: 'AMD Ryzen AI Halo Spezifikationen',
         columns: ['Spezifikation', 'Detail'],
         rows: [
           { 'Spezifikation': 'Prozessor (Version mit 128 GB)', 'Detail': 'Ryzen AI Max+ 395, 16 Kerne / 32 Threads, Zen 5, Boost bis 5,1 GHz' },
@@ -334,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Preis und Verfügbarkeit',
+        title: 'AMD Ryzen AI Halo Preis und Verfügbarkeit',
         content:
           '**Die Version mit 128 GB kostet 3.999 $ und die Version mit 192 GB 7.299,99 $, jeweils US-Preise bei Micro Center.** Engpässe bei DRAM haben die Preise in dieser Klasse wiederholt verschoben, prüfen Sie daher die Händlerseite vor der Bestellung.',
         columns: ['Konfiguration', 'US-Preis (gesehen)', 'Quelle und Datum', 'Status'],
@@ -358,6 +360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Für wen er geeignet ist und wer verzichten sollte',
+        content:
+          '**Der Ryzen AI Halo eignet sich für Entwickler, die einen vorkonfigurierten AMD-Rechner mit 128 GB oder 192 GB Speicher und die Wahl zwischen Windows und Linux wünschen (Windows bei der 128-GB-Version).** Weniger geeignet ist er für alle, die den höchsten Serving-Durchsatz, CUDA oder einen schnellen Anschluss zum Koppeln mehrerer Geräte brauchen. Wie er sich nach Speicherstufe gegen Grafikkarten, Macs und andere Mini-PCs schlägt, zeigt der [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide).',
         items: [
           '**Geeignet für:** Entwickler, die eine vorkonfigurierte AMD-Box mit Windows oder Linux wollen; vergleichen Sie ihn zuerst mit dem [Kategorievergleich](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
           '**Geeignet für:** Käufer, die AMDs eigene Box mit 128 GB wollen; der Autor von HotHardware nannte sie die günstigste kompakte KI-Workstation mit 128 GB, während andere Anbieter abweichende Preise nennen (siehe die Seiten zum [GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation) und zum [HP Z2 Mini G1a](/de/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
@@ -421,10 +425,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo für lokale KI: Spezifikationen, Preis und Fazit',
-      'description': 'AMD Ryzen AI Halo für lokale KI: Versionen mit 128 GB (Ryzen AI Max+ 395) und 192 GB (PRO 495), belegte US-Preise und was unabhängige Tests ergaben.',
+      'headline': 'AMD Ryzen AI Halo Preis und Spezifikationen für lokale KI',
+      'description': 'AMD Ryzen AI Halo Preis: 3.999 $ für 128 GB (Ryzen AI Max+ 395), 7.299,99 $ für 192 GB (PRO 495), beides bei Micro Center. Specs und Testergebnisse.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -446,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -457,12 +461,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-fr.webp',
-    title: "AMD Ryzen AI Halo pour l'IA locale : caractéristiques, prix et verdict",
-    seoTitle: "AMD Ryzen AI Halo pour l'IA locale : specs, prix, verdict",
+    title: 'AMD Ryzen AI Halo : prix et caractéristiques pour l\'IA locale',
+    seoTitle: 'AMD Ryzen AI Halo prix et specs : $3,999 et $7,299',
     intro:
       "L'AMD Ryzen AI Halo est le mini-PC développeur d'AMD pour exécuter localement de grands modèles de langage. Il existe en deux versions : un modèle de 128 Go avec le Ryzen AI Max+ 395 et un modèle de 192 Go avec le Ryzen AI Max+ PRO 495. Les deux sont vendus aux États-Unis par Micro Center. Cette page réunit les spécifications du constructeur, les prix que nous avons pu sourcer et ce que des testeurs indépendants ont mesuré, pour que vous puissiez décider avant l'achat s'il convient à votre charge de travail.",
     metaDescription:
-      "AMD Ryzen AI Halo pour l'IA locale : versions 128 Go (Ryzen AI Max+ 395) et 192 Go (PRO 495), prix US sourcés et ce qu'ont constaté les tests indépendants.",
+      'AMD Ryzen AI Halo : prix de $3,999 pour 128 Go (Ryzen AI Max+ 395), $7,299.99 pour 192 Go (PRO 495), chez Micro Center. Specs et résultats des tests.',
     twitterDescription:
       "AMD Ryzen AI Halo pour les LLM locaux : versions 128 Go et 192 Go, prix US sourcés, et ce qu'ont constaté StorageReview, HotHardware et LTT Labs.",
     readTime: '8 min de lecture',
@@ -495,8 +499,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Points clés', anchor: 'tldr' },
       { label: "Ce qu'est l'AMD Ryzen AI Halo", anchor: 'overview' },
-      { label: 'Caractéristiques techniques', anchor: 'specs' },
-      { label: 'Prix et disponibilité', anchor: 'pricing' },
+      { label: 'Caractéristiques techniques de l\'AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'Prix de l\'AMD Ryzen AI Halo et disponibilité', anchor: 'pricing' },
       { label: 'Ce que montrent les tests indépendants', anchor: 'evidence' },
       { label: "À qui il convient, et qui devrait s'abstenir", anchor: 'fit' },
       { label: 'Alternatives de la même classe', anchor: 'alternatives' },
@@ -531,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Caractéristiques techniques',
+        title: 'Caractéristiques techniques de l\'AMD Ryzen AI Halo',
         columns: ['Caractéristique', 'Détail'],
         rows: [
           { 'Caractéristique': 'Processeur (version 128 Go)', 'Détail': 'Ryzen AI Max+ 395, 16 cœurs / 32 threads, Zen 5, boost jusqu\'à 5.1 GHz' },
@@ -554,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Prix et disponibilité',
+        title: 'Prix de l\'AMD Ryzen AI Halo et disponibilité',
         content:
           "**La version 128 Go coûte $3,999 et la version 192 Go $7,299.99, deux prix américains chez Micro Center.** Les pénuries de DRAM ont fait bouger les prix de cette classe à plusieurs reprises : consultez la page du revendeur avant de commander.",
         columns: ['Configuration', 'Prix US relevé', 'Source et date', 'Statut'],
@@ -578,6 +582,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: "À qui il convient, et qui devrait s'abstenir",
+        content:
+          '**L\'AMD Ryzen AI Halo convient aux développeurs qui veulent une machine AMD préconfigurée avec 128 Go ou 192 Go de mémoire et le choix entre Windows et Linux (Windows sur la version 128 Go).** Il convient moins à ceux qui ont besoin du meilleur débit de service, de CUDA ou d\'un port rapide pour relier plusieurs machines. Pour le comparer aux cartes graphiques, aux Mac et aux autres mini-PC selon la mémoire, consultez le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide).',
         items: [
           "**Convient :** aux développeurs qui veulent une machine AMD préconfigurée sous Windows ou Linux ; comparez-la d'abord avec le [guide de la catégorie](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).",
           "**Convient :** aux acheteurs qui veulent la machine de 128 Go d'AMD elle-même ; l'auteur de HotHardware l'a qualifiée de station IA compacte de 128 Go la moins chère, alors que d'autres constructeurs affichent des prix différents (voir les pages [GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) et [HP Z2 Mini G1a](/fr/local-llms/hp-z2-mini-g1a-local-ai-workstation)).",
@@ -641,10 +647,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': "AMD Ryzen AI Halo pour l'IA locale : caractéristiques, prix et verdict",
-      'description': "AMD Ryzen AI Halo pour l'IA locale : versions 128 Go (Ryzen AI Max+ 395) et 192 Go (PRO 495), prix US sourcés et ce qu'ont constaté les tests indépendants.",
+      'headline': 'AMD Ryzen AI Halo : prix et caractéristiques pour l\'IA locale',
+      'description': 'AMD Ryzen AI Halo : prix de $3,999 pour 128 Go (Ryzen AI Max+ 395), $7,299.99 pour 192 Go (PRO 495), chez Micro Center. Specs et résultats des tests.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -666,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -677,12 +683,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ja.webp',
-    title: 'ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価',
-    seoTitle: 'AMD Ryzen AI Halo ローカルAI：仕様と価格',
+    title: 'ローカルAI向けAMD Ryzen AI Haloの価格と仕様',
+    seoTitle: 'AMD Ryzen AI Halo 価格・仕様：$3,999〜',
     intro:
       'AMD Ryzen AI Haloは、大規模言語モデルをローカルで動かすためにAMD自身が提供する開発者向けmini PCです。Ryzen AI Max+ 395を搭載した128GB版と、Ryzen AI Max+ PRO 495を搭載した192GB版の2種類があり、米国ではどちらもMicro Center経由で販売されています。このページでは、ベンダーの仕様、確認できた価格、独立したレビュアーの測定結果をまとめました。購入前に、ご自身の用途に合うかどうかを判断する材料としてお使いください。',
     metaDescription:
-      'ローカルAI向けAMD Ryzen AI Haloの仕様を解説。128GB版（395）と192GB版（PRO 495）、出典付き米国価格、独立レビューの結果を整理しました。',
+      'AMD Ryzen AI Haloの価格は128GB版が$3,999、192GB版（PRO 495）が$7,299.99で、いずれも米Micro Center。仕様とレビュー結果を整理しました。',
     twitterDescription:
       'ローカルLLM向けAMD Ryzen AI Halo: 128GB版と192GB版、出典付きの米国価格、StorageReview・HotHardware・LTT Labsの検証結果。',
     readTime: '8分で読める',
@@ -715,8 +721,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '重要ポイント', anchor: 'tldr' },
       { label: 'AMD Ryzen AI Haloとは', anchor: 'overview' },
-      { label: '仕様', anchor: 'specs' },
-      { label: '価格と入手性', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Haloの仕様', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Haloの価格と入手性', anchor: 'pricing' },
       { label: '独立した報道が示すこと', anchor: 'evidence' },
       { label: '向いている人と見送るべき人', anchor: 'fit' },
       { label: '同じクラスの代替機', anchor: 'alternatives' },
@@ -751,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: '仕様',
+        title: 'AMD Ryzen AI Haloの仕様',
         columns: ['項目', '詳細'],
         rows: [
           { '項目': 'プロセッサ（128GB版）', '詳細': 'Ryzen AI Max+ 395、16コア/32スレッド、Zen 5、ブースト最大5.1 GHz' },
@@ -774,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: '価格と入手性',
+        title: 'AMD Ryzen AI Haloの価格と入手性',
         content:
           '**128GB版は$3,999、192GB版は$7,299.99で、いずれもMicro Centerの米国価格です。** DRAM不足によりこのクラスの価格は繰り返し変動しているため、注文前に小売店のページを確認してください。',
         columns: ['構成', '米国価格', '情報源と日付', '状況'],
@@ -798,6 +804,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '向いている人と見送るべき人',
+        content:
+          '**Ryzen AI Haloは、128GBまたは192GBのメモリを備えた設定済みのAMD機で、WindowsかLinuxを選びたい開発者に向いています（Windowsは128GB版）。** 最高のサービング性能やCUDA、複数台を高速に接続する手段が必要な人には不向きです。メモリ容量別にGPU、Mac、他のミニPCと比べるには、[ローカルLLMのハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)をご覧ください。',
         items: [
           '**向いている人:** WindowsまたはLinuxが構成済みのAMD製マシンが欲しい開発者。まず[カテゴリガイド](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)と比較してください。',
           '**向いている人:** AMD自身の128GB機が欲しい購入者。HotHardwareの筆者は、128GBのコンパクトなAIワークステーションとして最も安いと評しましたが、他のベンダーは異なる価格を掲載しています（[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation)と[HP Z2 Mini G1a](/ja/local-llms/hp-z2-mini-g1a-local-ai-workstation)のページを参照）。',
@@ -861,10 +869,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価',
-      'description': 'ローカルAI向けAMD Ryzen AI Haloの仕様を解説。128GB版（395）と192GB版（PRO 495）、出典付き米国価格、独立レビューの結果を整理しました。',
+      'headline': 'ローカルAI向けAMD Ryzen AI Haloの価格と仕様',
+      'description': 'AMD Ryzen AI Haloの価格は128GB版が$3,999、192GB版（PRO 495）が$7,299.99で、いずれも米Micro Center。仕様とレビュー結果を整理しました。',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -885,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -896,12 +904,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-zh.webp',
-    title: '用于本地AI的AMD Ryzen AI Halo：规格、价格与结论',
-    seoTitle: 'AMD Ryzen AI Halo本地AI：规格、价格与结论',
+    title: '本地AI用AMD Ryzen AI Halo的价格与规格',
+    seoTitle: 'AMD Ryzen AI Halo价格与规格：$3,999起',
     intro:
       'AMD Ryzen AI Halo是AMD自己推出的开发者迷你主机，用于在本地运行大语言模型。它有两个版本：搭载Ryzen AI Max+ 395的128 GB机型，以及搭载Ryzen AI Max+ PRO 495的192 GB机型。两者在美国都通过Micro Center销售。本页汇总了厂商规格、我们能找到来源的价格以及独立评测者的测量结果，方便你在购买前判断它是否适合你的工作负载。',
     metaDescription:
-      'AMD Ryzen AI Halo本地AI规格：128 GB的Ryzen AI Max+ 395与192 GB的PRO 495两个版本、有来源的美国价格，以及独立评测的发现。',
+      'AMD Ryzen AI Halo价格：128 GB版$3,999，192 GB版（PRO 495）$7,299.99，均在美国Micro Center销售。含规格与独立评测结果。',
     twitterDescription:
       '用于本地LLM的AMD Ryzen AI Halo：128 GB和192 GB两个版本、有来源的美国价格，以及StorageReview、HotHardware和LTT Labs的发现。',
     readTime: '阅读约8分钟',
@@ -934,8 +942,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '核心要点', anchor: 'tldr' },
       { label: 'AMD Ryzen AI Halo是什么', anchor: 'overview' },
-      { label: '规格', anchor: 'specs' },
-      { label: '价格与供货', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo规格', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo价格与供货', anchor: 'pricing' },
       { label: '独立报道显示了什么', anchor: 'evidence' },
       { label: '适合谁，谁该跳过', anchor: 'fit' },
       { label: '同级别的替代品', anchor: 'alternatives' },
@@ -970,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: '规格',
+        title: 'AMD Ryzen AI Halo规格',
         columns: ['规格', '详情'],
         rows: [
           { '规格': '处理器（128 GB版本）', '详情': 'Ryzen AI Max+ 395，16核 / 32线程，Zen 5，加速最高5.1 GHz' },
@@ -993,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: '价格与供货',
+        title: 'AMD Ryzen AI Halo价格与供货',
         content:
           '**128 GB版本售价$3,999，192 GB版本售价$7,299.99，均为Micro Center的美国价格。** DRAM短缺已多次推动这一类别的价格变动，因此下单前请查看零售商页面。',
         columns: ['配置', '美国价格', '来源与日期', '状态'],
@@ -1017,6 +1025,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '适合谁，谁该跳过',
+        content:
+          '**Ryzen AI Halo适合想要预配置AMD整机（128 GB或192 GB内存）、并可选择Windows或Linux的开发者（Windows用于128 GB版）。** 如果你需要最高的服务吞吐量、CUDA，或用于多机互联的高速端口，它就不太合适。想按内存档位对比显卡、Mac和其他迷你主机，请参阅[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
         items: [
           '**适合：** 想要一台预配置、支持Windows或Linux的AMD机器的开发者；请先与[分类指南](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)对比。',
           '**适合：** 想要AMD自家128 GB机器的买家；HotHardware的作者称它是最便宜的128 GB紧凑型AI工作站，而其他厂商列出的价格不同（见[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)和[HP Z2 Mini G1a](/zh/local-llms/hp-z2-mini-g1a-local-ai-workstation)页面）。',
@@ -1080,10 +1090,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '用于本地AI的AMD Ryzen AI Halo：规格、价格与结论',
-      'description': 'AMD Ryzen AI Halo本地AI规格：128 GB的Ryzen AI Max+ 395与192 GB的PRO 495两个版本、有来源的美国价格，以及独立评测的发现。',
+      'headline': '本地AI用AMD Ryzen AI Halo的价格与规格',
+      'description': 'AMD Ryzen AI Halo价格：128 GB版$3,999，192 GB版（PRO 495）$7,299.99，均在美国Micro Center销售。含规格与独立评测结果。',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1104,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1115,12 +1125,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-es.webp',
-    title: 'AMD Ryzen AI Halo para IA local: especificaciones, precio y veredicto',
-    seoTitle: 'AMD Ryzen AI Halo para IA local: specs, precio, veredicto',
+    title: 'AMD Ryzen AI Halo: precio y especificaciones para IA local',
+    seoTitle: 'AMD Ryzen AI Halo precio y specs: $3,999 y $7,299',
     intro:
       'El AMD Ryzen AI Halo es el mini PC de desarrollo propio de AMD para ejecutar modelos de lenguaje grandes en local. Viene en dos versiones: un modelo de 128 GB con el Ryzen AI Max+ 395 y un modelo de 192 GB con el Ryzen AI Max+ PRO 495. Ambos se venden en EE. UU. a través de Micro Center. Esta página reúne las especificaciones del fabricante, los precios que pudimos documentar y lo que midieron revisores independientes, para que puedas decidir antes de comprar si encaja con tu carga de trabajo.',
     metaDescription:
-      'Specs del AMD Ryzen AI Halo para IA local: versiones de 128 GB (Max+ 395) y 192 GB (PRO 495), precios en EE. UU. con fuentes y qué hallaron las reseñas.',
+      'AMD Ryzen AI Halo precio: $3,999 con 128 GB (Ryzen AI Max+ 395), $7,299.99 con 192 GB (PRO 495), ambos en Micro Center. Specs y resultados de pruebas.',
     twitterDescription:
       'AMD Ryzen AI Halo para LLM locales: versiones de 128 GB y 192 GB, precios en EE. UU. con fuentes y lo que encontraron StorageReview, HotHardware y LTT Labs.',
     readTime: '8 min de lectura',
@@ -1153,8 +1163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Puntos clave', anchor: 'tldr' },
       { label: 'Qué es el AMD Ryzen AI Halo', anchor: 'overview' },
-      { label: 'Especificaciones', anchor: 'specs' },
-      { label: 'Precio y disponibilidad', anchor: 'pricing' },
+      { label: 'Especificaciones del AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'Precio del AMD Ryzen AI Halo y disponibilidad', anchor: 'pricing' },
       { label: 'Qué muestran los informes independientes', anchor: 'evidence' },
       { label: 'Para quién es y quién debe descartarlo', anchor: 'fit' },
       { label: 'Alternativas de la misma clase', anchor: 'alternatives' },
@@ -1189,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Especificaciones',
+        title: 'Especificaciones del AMD Ryzen AI Halo',
         columns: ['Especificación', 'Detalle'],
         rows: [
           { 'Especificación': 'Procesador (versión de 128 GB)', 'Detalle': 'Ryzen AI Max+ 395, 16 núcleos / 32 hilos, Zen 5, hasta 5.1 GHz en boost' },
@@ -1212,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Precio y disponibilidad',
+        title: 'Precio del AMD Ryzen AI Halo y disponibilidad',
         content:
           '**La versión de 128 GB cuesta $3,999 y la de 192 GB $7,299.99, ambos precios en EE. UU. en Micro Center.** La escasez de DRAM ha movido los precios de esta clase en repetidas ocasiones, así que consulta la página del minorista antes de pedir.',
         columns: ['Configuración', 'Precio en EE. UU.', 'Fuente y fecha', 'Estado'],
@@ -1236,6 +1246,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Para quién es y quién debe descartarlo',
+        content:
+          '**El Ryzen AI Halo encaja con desarrolladores que quieren un equipo AMD preconfigurado con 128 GB o 192 GB de memoria y la opción de Windows o Linux (Windows en la versión de 128 GB).** Encaja menos con quien necesita el mayor rendimiento de servicio, CUDA o un puerto rápido para enlazar equipos. Para compararlo por nivel de memoria con GPU, Mac y otros mini PC, consulta la [guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide).',
         items: [
           '**Encaja con:** desarrolladores que quieren un equipo AMD preconfigurado con Windows o Linux; compáralo antes con la [guía de la categoría](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
           '**Encaja con:** compradores que quieren el equipo de 128 GB del propio AMD; el autor de HotHardware lo calificó como la estación de trabajo de IA compacta de 128 GB más barata, mientras que otros fabricantes indican precios distintos (consulta las páginas del [GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation) y del [HP Z2 Mini G1a](/es/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
@@ -1299,10 +1311,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo para IA local: especificaciones, precio y veredicto',
-      'description': 'Specs del AMD Ryzen AI Halo para IA local: versiones de 128 GB (Max+ 395) y 192 GB (PRO 495), precios en EE. UU. con fuentes y qué hallaron las reseñas.',
+      'headline': 'AMD Ryzen AI Halo: precio y especificaciones para IA local',
+      'description': 'AMD Ryzen AI Halo precio: $3,999 con 128 GB (Ryzen AI Max+ 395), $7,299.99 con 192 GB (PRO 495), ambos en Micro Center. Specs y resultados de pruebas.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1324,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1335,12 +1347,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-pt.webp',
-    title: 'AMD Ryzen AI Halo para IA local: especificações, preço e veredito',
-    seoTitle: 'AMD Ryzen AI Halo para IA local: specs, preço, veredito',
+    title: 'AMD Ryzen AI Halo: preço e especificações para IA local',
+    seoTitle: 'AMD Ryzen AI Halo preço e specs: $3,999 e $7,299',
     intro:
       'O AMD Ryzen AI Halo é o mini PC para desenvolvedores da própria AMD, feito para rodar modelos de linguagem grandes localmente. Ele vem em duas versões: um modelo de 128 GB com o Ryzen AI Max+ 395 e um modelo de 192 GB com o Ryzen AI Max+ PRO 495. Ambos são vendidos nos EUA pela Micro Center. Esta página reúne as especificações do fabricante, os preços que conseguimos levantar com fonte e o que revisores independentes mediram, para que você decida se ele atende à sua carga de trabalho antes de comprar.',
     metaDescription:
-      'Specs do AMD Ryzen AI Halo para IA local: versões de 128 GB (395) e 192 GB (PRO 495), preços nos EUA com fonte e o que mostram as análises independentes.',
+      'AMD Ryzen AI Halo preço: $3,999 com 128 GB (Ryzen AI Max+ 395), $7,299.99 com 192 GB (PRO 495), ambos na Micro Center. Specs e resultados de análises.',
     twitterDescription:
       'AMD Ryzen AI Halo para LLMs locais: versões de 128 GB e 192 GB, preços nos EUA com fonte e o que StorageReview, HotHardware e LTT Labs encontraram.',
     readTime: '8 min de leitura',
@@ -1373,8 +1385,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Pontos principais', anchor: 'tldr' },
       { label: 'O que é o AMD Ryzen AI Halo', anchor: 'overview' },
-      { label: 'Especificações', anchor: 'specs' },
-      { label: 'Preço e disponibilidade', anchor: 'pricing' },
+      { label: 'Especificações do AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'Preço do AMD Ryzen AI Halo e disponibilidade', anchor: 'pricing' },
       { label: 'O que mostram os relatos independentes', anchor: 'evidence' },
       { label: 'Para quem serve e quem deve evitar', anchor: 'fit' },
       { label: 'Alternativas na mesma classe', anchor: 'alternatives' },
@@ -1409,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Especificações',
+        title: 'Especificações do AMD Ryzen AI Halo',
         columns: ['Especificação', 'Detalhe'],
         rows: [
           { 'Especificação': 'Processador (versão de 128 GB)', 'Detalhe': 'Ryzen AI Max+ 395, 16 núcleos / 32 threads, Zen 5, boost de até 5.1 GHz' },
@@ -1432,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Preço e disponibilidade',
+        title: 'Preço do AMD Ryzen AI Halo e disponibilidade',
         content:
           '**A versão de 128 GB custa $3,999 e a de 192 GB custa $7,299.99, ambos preços dos EUA na Micro Center.** A escassez de DRAM mexeu repetidamente nos preços desta classe, então confira a página do varejista antes de encomendar. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
@@ -1456,6 +1468,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Para quem serve e quem deve evitar',
+        content:
+          '**O AMD Ryzen AI Halo serve para desenvolvedores que querem uma máquina AMD pré-configurada com 128 GB ou 192 GB de memória e a opção de Windows ou Linux (Windows na versão de 128 GB).** Serve menos para quem precisa do maior desempenho de serving, de CUDA ou de uma porta rápida para ligar caixas entre si. Para compará-lo por nível de memória com GPUs, Macs e outros mini PCs, veja o [guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide).',
         items: [
           '**Serve a:** desenvolvedores que querem uma caixa AMD pré-configurada com Windows ou Linux; compare-a primeiro com o [guia da categoria](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
           '**Serve a:** compradores que querem a caixa de 128 GB da própria AMD; o autor da HotHardware a chamou de a workstation de IA compacta de 128 GB mais barata, enquanto outros fabricantes listam preços diferentes (veja as páginas do [GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation) e do [HP Z2 Mini G1a](/pt/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
@@ -1519,10 +1533,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo para IA local: especificações, preço e veredito',
-      'description': 'Specs do AMD Ryzen AI Halo para IA local: versões de 128 GB (395) e 192 GB (PRO 495), preços nos EUA com fonte e o que mostram as análises independentes.',
+      'headline': 'AMD Ryzen AI Halo: preço e especificações para IA local',
+      'description': 'AMD Ryzen AI Halo preço: $3,999 com 128 GB (Ryzen AI Max+ 395), $7,299.99 com 192 GB (PRO 495), ambos na Micro Center. Specs e resultados de análises.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1544,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1555,12 +1569,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ar.webp',
-    title: 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
-    seoTitle: 'AMD Ryzen AI Halo للذكاء الاصطناعي: المواصفات والسعر',
+    title: 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: السعر والمواصفات',
+    seoTitle: 'سعر AMD Ryzen AI Halo ومواصفاته: $3,999 و$7,299',
     intro:
       'AMD Ryzen AI Halo هو كمبيوتر مصغر للمطورين تصنعه AMD نفسها لتشغيل نماذج اللغة الكبيرة محليًا. يأتي بنسختين: طراز 128 GB بشريحة Ryzen AI Max+ 395، وطراز 192 GB بشريحة Ryzen AI Max+ PRO 495. وتُباع النسختان في الولايات المتحدة عبر Micro Center. تجمع هذه الصفحة مواصفات المصنّع والأسعار التي استطعنا توثيقها وما قاسه المراجعون المستقلون، لتقرر قبل الشراء إن كان يناسب عملك.',
     metaDescription:
-      'مواصفات AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: نسخة 128 GB بشريحة 395 ونسخة 192 GB بشريحة PRO 495، وأسعار أمريكية موثقة ونتائج المراجعات المستقلة.',
+      'سعر AMD Ryzen AI Halo: $3,999 لنسخة 128 GB بشريحة 395، و$7,299.99 لنسخة 192 GB بشريحة PRO 495، في Micro Center. المواصفات ونتائج المراجعات.',
     twitterDescription:
       'AMD Ryzen AI Halo لنماذج اللغة المحلية: نسختا 128 GB و192 GB، وأسعار أمريكية موثقة، وما وجدته StorageReview وHotHardware وLTT Labs.',
     readTime: '8 دقائق للقراءة',
@@ -1593,8 +1607,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'النقاط الرئيسية', anchor: 'tldr' },
       { label: 'ما هو AMD Ryzen AI Halo', anchor: 'overview' },
-      { label: 'المواصفات', anchor: 'specs' },
-      { label: 'السعر والتوفر', anchor: 'pricing' },
+      { label: 'مواصفات AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'سعر AMD Ryzen AI Halo وتوفره', anchor: 'pricing' },
       { label: 'ما الذي تُظهره التقارير المستقلة', anchor: 'evidence' },
       { label: 'لمن يناسب ولمن لا يناسب', anchor: 'fit' },
       { label: 'بدائل من الفئة نفسها', anchor: 'alternatives' },
@@ -1629,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'المواصفات',
+        title: 'مواصفات AMD Ryzen AI Halo',
         columns: ['المواصفة', 'التفاصيل'],
         rows: [
           { 'المواصفة': 'المعالج (نسخة 128 GB)', 'التفاصيل': 'Ryzen AI Max+ 395، 16 نواة / 32 مسارًا، Zen 5، تسارع حتى 5.1 GHz' },
@@ -1652,7 +1666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'السعر والتوفر',
+        title: 'سعر AMD Ryzen AI Halo وتوفره',
         content:
           '**تبلغ تكلفة نسخة 128 GB $3,999 ونسخة 192 GB $7,299.99، وكلاهما سعر أمريكي في Micro Center.** غيّرت نقائص DRAM الأسعار في هذه الفئة مرارًا، لذا تحقق من صفحة المتجر قبل الطلب.',
         columns: ['الإعداد', 'السعر الأمريكي', 'المصدر والتاريخ', 'الحالة'],
@@ -1676,6 +1690,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'لمن يناسب ولمن لا يناسب',
+        content:
+          '**يناسب Ryzen AI Halo المطورين الذين يريدون جهاز AMD جاهز الإعداد بذاكرة 128 GB أو 192 GB مع خيار ويندوز أو لينكس (ويندوز في نسخة 128 GB).** ويناسب أقل من يحتاج أعلى إنتاجية للخدمة أو CUDA أو منفذًا سريعًا لربط الأجهزة. لمقارنته بوحدات GPU وأجهزة Mac والحواسيب المصغرة الأخرى حسب حجم الذاكرة، راجع [دليل عتاد النماذج المحلية](/ar/local-llms/local-llm-hardware-guide).',
         items: [
           '**يناسب:** المطورين الذين يريدون جهاز AMD مُعدًّا مسبقًا يعمل بويندوز أو لينكس؛ قارنه أولًا بـ[الدليل الشامل للفئة](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
           '**يناسب:** من يريد جهاز AMD نفسها بذاكرة 128 GB؛ فقد وصفه كاتب HotHardware بأنه أرخص محطة عمل مدمجة للذكاء الاصطناعي بذاكرة 128 GB، بينما تعرض شركات أخرى أسعارًا مختلفة (راجع صفحتَي [GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation) و[HP Z2 Mini G1a](/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
@@ -1739,10 +1755,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
-      'description': 'مواصفات AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: نسخة 128 GB بشريحة 395 ونسخة 192 GB بشريحة PRO 495، وأسعار أمريكية موثقة ونتائج المراجعات المستقلة.',
+      'headline': 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: السعر والمواصفات',
+      'description': 'سعر AMD Ryzen AI Halo: $3,999 لنسخة 128 GB بشريحة 395، و$7,299.99 لنسخة 192 GB بشريحة PRO 495، في Micro Center. المواصفات ونتائج المراجعات.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1763,7 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1774,12 +1790,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ko.webp',
-    title: '로컬 AI용 AMD Ryzen AI Halo: 사양, 가격, 평가',
-    seoTitle: '로컬 AI용 AMD Ryzen AI Halo 사양·가격',
+    title: '로컬 AI용 AMD Ryzen AI Halo 가격과 사양',
+    seoTitle: 'AMD Ryzen AI Halo 가격·사양: $3,999~',
     intro:
       'AMD Ryzen AI Halo는 대규모 언어 모델을 로컬에서 실행하기 위해 AMD가 직접 내놓은 개발자용 미니 PC입니다. Ryzen AI Max+ 395를 탑재한 128GB 모델과 Ryzen AI Max+ PRO 495를 탑재한 192GB 모델, 두 가지 버전이 있습니다. 둘 다 미국에서는 Micro Center를 통해 판매됩니다. 이 페이지는 벤더 사양, 저희가 출처를 확인한 가격, 독립 리뷰어의 측정 결과를 모아 두었으므로, 구매 전에 사용 목적에 맞는지 판단하실 수 있습니다.',
     metaDescription:
-      '로컬 AI용 AMD Ryzen AI Halo 사양: Ryzen AI Max+ 395 128GB와 PRO 495 192GB 버전, 출처 표기 미국 가격, 독립 리뷰 결과.',
+      'AMD Ryzen AI Halo 가격: 128GB 모델 $3,999, 192GB 모델(PRO 495) $7,299.99이며 모두 미국 Micro Center 판매. 사양과 리뷰 결과를 정리했습니다.',
     twitterDescription:
       '로컬 LLM용 AMD Ryzen AI Halo: 128GB와 192GB 버전, 출처 표기 미국 가격, StorageReview, HotHardware, LTT Labs의 확인 결과.',
     readTime: '8분 읽기',
@@ -1812,8 +1828,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '핵심 내용', anchor: 'tldr' },
       { label: 'AMD Ryzen AI Halo란', anchor: 'overview' },
-      { label: '사양', anchor: 'specs' },
-      { label: '가격 및 구매 가능 여부', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo 사양', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo 가격 및 구매 가능 여부', anchor: 'pricing' },
       { label: '독립 보고서가 보여 주는 것', anchor: 'evidence' },
       { label: '적합한 경우와 피해야 할 경우', anchor: 'fit' },
       { label: '같은 범주의 대안', anchor: 'alternatives' },
@@ -1848,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: '사양',
+        title: 'AMD Ryzen AI Halo 사양',
         columns: ['사양', '세부 내용'],
         rows: [
           { '사양': '프로세서(128GB 버전)', '세부 내용': 'Ryzen AI Max+ 395, 16코어 / 32스레드, Zen 5, 최대 5.1 GHz 부스트' },
@@ -1871,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: '가격 및 구매 가능 여부',
+        title: 'AMD Ryzen AI Halo 가격 및 구매 가능 여부',
         content:
           '**128GB 버전은 $3,999, 192GB 버전은 $7,299.99이며, 둘 다 Micro Center의 미국 가격입니다.** DRAM 부족으로 이 범주의 가격이 거듭 변동했으므로, 주문 전에 리테일러 페이지를 확인하십시오.',
         columns: ['구성', '미국 가격', '출처 및 날짜', '상태'],
@@ -1895,6 +1911,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '적합한 경우와 피해야 할 경우',
+        content:
+          '**Ryzen AI Halo는 128GB 또는 192GB 메모리의 사전 구성된 AMD 장비를 원하고 Windows 또는 Linux를 선택하려는 개발자에게 적합합니다(Windows는 128GB 모델).** 최고 서빙 처리량, CUDA, 여러 대를 연결할 고속 포트가 필요한 분에게는 덜 적합합니다. 메모리 구간별로 GPU, Mac, 다른 미니 PC와 비교하려면 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참고하세요.',
         items: [
           '**적합:** Windows 또는 Linux가 설치된 사전 구성형 AMD 기기를 원하는 개발자. 먼저 [범주 가이드](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)와 비교하십시오.',
           '**적합:** AMD 자체 128GB 기기를 원하는 구매자. HotHardware의 필자는 가장 저렴한 128GB 소형 AI 워크스테이션이라고 평가했지만, 다른 벤더는 다른 가격을 제시합니다([GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation) 및 [HP Z2 Mini G1a](/ko/local-llms/hp-z2-mini-g1a-local-ai-workstation) 페이지 참조).',
@@ -1958,10 +1976,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '로컬 AI용 AMD Ryzen AI Halo: 사양, 가격, 평가',
-      'description': '로컬 AI용 AMD Ryzen AI Halo 사양: Ryzen AI Max+ 395 128GB와 PRO 495 192GB 버전, 출처 표기 미국 가격, 독립 리뷰 결과.',
+      'headline': '로컬 AI용 AMD Ryzen AI Halo 가격과 사양',
+      'description': 'AMD Ryzen AI Halo 가격: 128GB 모델 $3,999, 192GB 모델(PRO 495) $7,299.99이며 모두 미국 Micro Center 판매. 사양과 리뷰 결과를 정리했습니다.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
