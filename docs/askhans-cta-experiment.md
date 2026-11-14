@@ -21,7 +21,7 @@ Copy: `src/components/askhans/copy/*.ts` → `ctaVariants` (9 locales, the exist
 Every event carries: experiment id, variant, language, device (mobile/desktop), page category.
 | Event | Fires when | Consent |
 |---|---|---|
-| `ask_hans_button_impression` | the button has been ≥50% visible for ≥1 s, once per button per page view (client navigation = new page view). Rendered-but-unseen buttons do not count; the hidden twin of the header pill (mobile/desktop) never intersects. | none (anonymous counter, like Umami) |
+| `ask_hans_button_impression` | **No longer sent (removed 2026-11-14).** Historical counter only. | n/a |
 | `ask_hans_button_click` | click on an experiment button. Carries `via` (header / floating / about / page). | none |
 | `ask_hans_opened` | the window really opens (closed → open). `via` = the experiment button that asked for it, else `other` (⌘K, promo slots). | none |
 | `ask_hans_first_question` / `_second_question` / `_three_questions` | a question received a non-empty answer (empty or failed requests never count), 1st / 2nd / 3rd successful question of a conversation. Each fires once per conversation. | "Yes" |
