@@ -406,6 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[RisuAI review](/power-local-llm/risuai-review) — download links, install steps per system and requirements for the browser-first frontend.',
           '[SillyTavern review](/local-llms/sillytavern-review) — free download, install steps per OS and system requirements for the deepest of the three frontends.',
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay) — free desktop app with a built-in Character Hub and Fimbulvetr 10.7B; the low-friction alternative to the frontends covered in this article.',
           '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) — the model side; head-to-head comparison of the picks recommended in this guide.',
@@ -821,6 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[RisuAI-Rezension](/de/power-local-llm/risuai-review) — Download-Links, Installation pro System und Anforderungen des Frontends, das zuerst im Browser läuft.',
           '[SillyTavern-Rezension](/de/local-llms/sillytavern-review) — kostenloser Download, Installation pro System und Systemanforderungen des am tiefsten konfigurierbaren der drei Frontends.',
           '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay) — kostenlose Desktop-App mit integriertem Character Hub und Fimbulvetr 10.7B; die unkomplizierte Alternative zu den in diesem Artikel behandelten Frontends.',
           '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) — die Modellseite; Kopf-an-Kopf-Vergleich der in diesem Leitfaden empfohlenen Modelle.',
@@ -1237,6 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
+          '[Reseña de RisuAI](/es/power-local-llm/risuai-review) — enlaces de descarga, pasos de instalación por sistema y requisitos del frontend que funciona primero en el navegador.',
           '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — descarga gratuita, pasos de instalación por sistema y requisitos del más configurable de los tres frontends.',
           '[Análisis de Backyard AI: chat de personajes IA y roleplay local](/es/power-local-llm/backyard-ai-review-local-roleplay) — app de escritorio gratuita con Character Hub integrado y Fimbulvetr 10.7B; la alternativa de baja fricción a los frontends cubiertos en este artículo.',
           '[Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) — la parte del modelo; comparativa directa de las opciones recomendadas en esta guía.',
@@ -1665,6 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[RisuAI 리뷰](/ko/power-local-llm/risuai-review) — 브라우저 우선 프론트엔드의 다운로드 링크, OS별 설치 단계, 시스템 요구사항.',
           '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 세 프론트엔드 중 설정 폭이 가장 넓은 SillyTavern의 무료 다운로드, OS별 설치 단계, 시스템 요구사항.',
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay) — 내장 Character Hub와 Fimbulvetr 10.7B를 갖춘 무료 데스크톱 앱으로, 이 글에서 다루는 프런트엔드에 대한 손쉬운 대안입니다.',
           '[2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing) — 모델 측면; 이 가이드에서 권장된 옵션들의 직접 비교.',
@@ -2090,6 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
+          '[Análise do RisuAI](/pt/power-local-llm/risuai-review) — links de download, passos de instalação por sistema e requisitos do frontend pensado primeiro para o navegador.',
           '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — download gratuito, passos de instalação por sistema e requisitos do frontend mais configurável dos três.',
           '[Análise do Backyard AI: chat de personagens IA e roleplay local](/pt/power-local-llm/backyard-ai-review-local-roleplay) — app de desktop gratuito com Character Hub integrado e Fimbulvetr 10.7B; a alternativa sem fricção aos frontends abordados neste artigo.',
           '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) — a parte do modelo; comparativo direto das opções recomendadas neste guia.',
@@ -2508,6 +2513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
+          '[Test de RisuAI](/fr/power-local-llm/risuai-review) — liens de téléchargement, étapes d\'installation par système et prérequis du frontend pensé d\'abord pour le navigateur.',
           '[Test de SillyTavern](/fr/local-llms/sillytavern-review) — téléchargement gratuit, étapes d\'installation par système et prérequis du frontend le plus configurable des trois.',
           '[Avis sur Backyard AI : chat de personnages IA et roleplay local](/fr/power-local-llm/backyard-ai-review-local-roleplay) — application de bureau gratuite avec Character Hub intégré et Fimbulvetr 10.7B ; l\'alternative sans friction aux frontends traités dans cet article.',
           '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) — le volet modèles ; comparaison directe des choix recommandés dans ce guide.',
@@ -2928,6 +2934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連情報',
         items: [
+          '[RisuAIレビュー](/ja/power-local-llm/risuai-review) — ブラウザ中心のフロントエンドのダウンロードリンク、OS別の導入手順、動作要件。',
           '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 3つの中で最も設定の自由度が高いフロントエンドの無料ダウンロード、OS別の導入手順、動作要件。',
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay) — Character HubとFimbulvetr 10.7Bを内蔵した無料デスクトップアプリ。本記事で扱うフロントエンドに対する手軽な代替アプリ。',
           '[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing) — モデル側；このガイドで推奨された選択肢の直接比較。',
@@ -3348,6 +3355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[RisuAI 评测](/zh/power-local-llm/risuai-review) — 以浏览器优先的前端:下载链接、各系统安装步骤与系统要求。',
           '[SillyTavern 评测](/zh/local-llms/sillytavern-review) — 三者中可配置性最强的前端:免费下载、各系统安装步骤与系统要求。',
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay) ——内置Character Hub和Fimbulvetr 10.7B的免费桌面应用;是本文所述前端之外低门槛的替代方案。',
           '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing) — 模型侧；本指南推荐选择的直接对比。',
@@ -3625,6 +3633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
+          '[مراجعة RisuAI](/ar/power-local-llm/risuai-review) — روابط التنزيل وخطوات التثبيت لكل نظام ومتطلبات الواجهة التي تعمل أولاً في المتصفح.',
           '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — التنزيل المجاني وخطوات التثبيت لكل نظام ومتطلبات الواجهة الأكثر قابلية للضبط بين الثلاث.',
           '[مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً](/ar/power-local-llm/backyard-ai-review-local-roleplay) — تطبيق سطح مكتب مجاني مع Character Hub مدمج وFimbulvetr 10.7B؛ البديل السلس للواجهات التي يغطيها هذا المقال.',
           '[أفضل LLM محلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) — الجانب النموذجي؛ مقارنة مباشرة للاختيارات الموصى بها في هذا الدليل.',
