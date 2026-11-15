@@ -2795,7 +2795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'プライバシー スマートホーム機器',
     ],
     leadAnswerBlock:
-      '**まずアーキテクチャを選び、その後カテゴリーごとに購入しましょう：ハブには Home Assistant Green（約¥33,000〜38,000相当、$199/€179を基準とした推定値）、Zigbee/Thread コーディネーターには[Home Assistant Connect ZBT-2](/ja/smart-home/best-zigbee-thread-dongles-2027)（約¥7,500〜8,500相当、日本での正式販売は未確認）のような機器、Zigbee のセンサーとプラグ、そしてクラウドサブスクの代わりに[Frigate](/ja/smart-home/local-ai-security-camera)と組み合わせるローカル RTSP カメラを。** PromptQuorum のおすすめは、現在の仕様と価格（最終更新時点で確認）に基づくものであり、すべての製品を実機でハンズオンテストしたものではありません：本格的な構築にはローカルファーストまたはハイブリッドを、セットアップの手軽さがコストやプライバシーより重要な場合にのみクラウドファーストを選んでください。→ [Home Assistant Green の現在価格を確認](https://www.home-assistant.io/green/)',
+      '**まずアーキテクチャを選び、その後カテゴリーごとに購入しましょう：ハブには Home Assistant Green（$199/€179を基準とした推定）、Zigbee/Thread コーディネーターには[Home Assistant Connect ZBT-2](/ja/smart-home/best-zigbee-thread-dongles-2027)（日本での正式販売は未確認）のような機器、Zigbee のセンサーとプラグ、そしてクラウドサブスクの代わりに[Frigate](/ja/smart-home/local-ai-security-camera)と組み合わせるローカル RTSP カメラを。** PromptQuorum のおすすめは、現在の仕様と価格（最終更新時点で確認）に基づくものであり、すべての製品を実機でハンズオンテストしたものではありません：本格的な構築にはローカルファーストまたはハイブリッドを、セットアップの手軽さがコストやプライバシーより重要な場合にのみクラウドファーストを選んでください。→ [Home Assistant Green の現在価格を確認](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       ja: {
         question: '2026年に買うべき最適なスマートホーム機器は？',
