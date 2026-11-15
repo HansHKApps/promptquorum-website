@@ -1426,7 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preço do NVIDIA DGX Spark e disponibilidade',
         itemHeadings: true,
         content:
-          '**Os preços nos EUA subiram desde o lançamento por causa da oferta de memória e variam conforme o vendedor, então confira o anúncio ao vivo.** Todos os valores são em dólares americanos, da fonte indicada.',
+          '**Os preços nos EUA subiram desde o lançamento por causa da oferta de memória e variam conforme o vendedor, então confira o anúncio ao vivo.** Todos os valores são em dólares americanos, da fonte indicada. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
         rows: [
           { 'Configuração': 'Preço de lançamento, 128 GB', 'Preço nos EUA': '$3,999', 'Fonte e data': 'Fórum de desenvolvedores da NVIDIA, 2026-02-25', 'Status': 'Substituído pelo preço abaixo' },
