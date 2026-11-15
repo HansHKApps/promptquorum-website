@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo mini pc',
     ],
     leadAnswerBlock:
-      '**The Minisforum MS-S1 MAX is a Ryzen AI Max+ 395 workstation with 128 GB of memory, dual 10GbE and an internal expansion slot, aimed at lab and homelab buyers who want dual 10GbE and an internal PCIe slot.** The decisive caveat is price: the US store lists it at $3,919 on sale against $4,899 regular, and we found no independent local-LLM speed test for it.',
+      '**The Minisforum MS-S1 MAX is a Ryzen AI Max+ 395 workstation with 128 GB memory, dual 10GbE and an internal expansion slot, for lab and homelab buyers. Its caveat is price: $3,919 on sale against $4,899 regular in the US store (read 2026-10-31); we found no independent local-LLM speed test.**',
     quickAnswerTop: {
       en: {
         question: 'Is the Minisforum MS-S1 MAX a good local AI workstation?',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB LPDDR5x-8000 (192 GB on the P495), soldered and not upgradeable',
           'Dual 10GbE, two USB4 v2 ports and a 2U rack-mount option',
-          'US store: $3,919 sale / $4,899 regular for 128 GB / 2 TB',
+          'US store, read 2026-10-31: $3,919 sale / $4,899 regular for 128 GB / 2 TB',
           'No independent LLM throughput test found',
         ],
         updatedDate: '2026-11',
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo mini pc',
     ],
     leadAnswerBlock:
-      '**Der Minisforum MS-S1 MAX ist eine Workstation mit Ryzen AI Max+ 395, 128 GB Speicher, zwei 10GbE-Anschlüssen und einem internen Erweiterungssteckplatz für Labor- und Homelab-Käufer, die zwei 10GbE-Anschlüsse und einen internen PCIe-Steckplatz wollen.** Der entscheidende Vorbehalt ist der Preis: Der US-Shop führt ihn mit 3.919 $ im Angebot gegenüber 4.899 $ regulär, und einen unabhängigen Geschwindigkeitstest für lokale LLMs haben wir nicht gefunden.',
+      '**Der Minisforum MS-S1 MAX ist eine Workstation mit Ryzen AI Max+ 395, 128 GB Speicher, zwei 10GbE-Anschlüssen und internem Erweiterungssteckplatz für Labor- und Homelab-Käufer. Vorbehalt ist der Preis: 3.919 $ im Angebot statt 4.899 $ im US-Shop (gelesen am 2026-10-31); einen unabhängigen LLM-Geschwindigkeitstest haben wir nicht gefunden.**',
     quickAnswerTop: {
       de: {
         question: 'Ist der Minisforum MS-S1 MAX eine gute lokale KI-Workstation?',
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB LPDDR5x-8000 (192 GB beim P495), aufgelötet und nicht erweiterbar',
           'Zwei 10GbE-Anschlüsse, zwei USB4-v2-Anschlüsse und eine 2U-Rackmontage-Option',
-          'US-Shop: 3.919 $ im Angebot / 4.899 $ regulär für 128 GB / 2 TB',
+          'US-Shop, gelesen am 2026-10-31: 3.919 $ im Angebot / 4.899 $ regulär für 128 GB / 2 TB',
           'Kein unabhängiger Test des LLM-Durchsatzes gefunden',
         ],
         updatedDate: '2026-11',
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mini pc strix halo',
     ],
     leadAnswerBlock:
-      "**Le Minisforum MS-S1 MAX est une station Ryzen AI Max+ 395 avec 128 Go de mémoire, un double 10GbE et un emplacement d'extension interne, destinée aux acheteurs de laboratoire et de homelab qui veulent un double 10GbE et un emplacement PCIe interne.** La réserve décisive est le prix : la boutique américaine l'affiche à $3,919 en promotion contre $4,899 au prix normal, et nous n'avons trouvé aucun test indépendant de sa vitesse en LLM local.",
+      "**Le Minisforum MS-S1 MAX est une station Ryzen AI Max+ 395 avec 128 Go, double 10GbE et un emplacement d'extension interne, pour laboratoires et homelabs. Réserve : le prix, $3,919 en promotion contre $4,899 en boutique US au 2026-10-31, et aucun test indépendant de vitesse en LLM local trouvé.**",
     quickAnswerTop: {
       fr: {
         question: 'Le Minisforum MS-S1 MAX est-il une bonne station de travail IA locale ?',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 Go de LPDDR5x-8000 (192 Go sur la P495), soudée et non évolutive',
           'Double 10GbE, deux ports USB4 v2 et une option de montage en rack 2U',
-          'Boutique US : $3,919 en promotion / $4,899 au prix normal pour 128 Go / 2 To',
+          'Boutique US, consultée le 2026-10-31 : $3,919 en promotion / $4,899 au prix normal pour 128 Go / 2 To',
           "Aucun test indépendant de débit en LLM trouvé",
         ],
         updatedDate: '2026-11',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo mini pc',
     ],
     leadAnswerBlock:
-      '**Minisforum MS-S1 MAXは、128GBのメモリ、デュアル10GbE、内部拡張スロットを備えたRyzen AI Max+ 395搭載ワークステーションで、デュアル10GbEと内部PCIeスロットが欲しいラボやホームラボの購入者向けです。** 最大の注意点は価格です。米国ストアの掲載は、通常$4,899のところセールで$3,919で、独立したローカルLLM速度テストは見つかりませんでした。',
+      '**Minisforum MS-S1 MAXは、128GBのメモリ、デュアル10GbE、内部拡張スロットを備えたRyzen AI Max+ 395搭載ワークステーションで、デュアル10GbEと内部PCIeスロットが欲しいラボやホームラボの購入者向けです。** 最大の注意点は価格です。米国ストアの掲載（2026-10-31確認）は、通常$4,899のところセールで$3,919で、独立したローカルLLM速度テストは見つかりませんでした。',
     quickAnswerTop: {
       ja: {
         question: 'Minisforum MS-S1 MAXはローカルAIワークステーションとして優れていますか？',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128GB LPDDR5x-8000（P495は192GB）。はんだ付けで増設不可',
           'デュアル10GbE、USB4 v2ポート2基、2Uラックマウントのオプション',
-          '米国ストア: 128GB / 2TBでセール$3,919 / 通常$4,899',
+          '米国ストア（2026-10-31確認）: 128GB / 2TBでセール$3,919 / 通常$4,899',
           '独立したLLMスループットテストは見つからず',
         ],
         updatedDate: '2026-11',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo 迷你主机',
     ],
     leadAnswerBlock:
-      '**Minisforum MS-S1 MAX是一款Ryzen AI Max+ 395工作站，配128 GB内存、双10GbE和内部扩展插槽，面向需要双10GbE和内部PCIe插槽的实验室与家庭实验室买家。** 最关键的问题是价格：美国商店标价特价$3,919、正常价$4,899，而且我们没有找到针对它的独立本地大模型速度测试。',
+      '**Minisforum MS-S1 MAX是一款Ryzen AI Max+ 395工作站，配128 GB内存、双10GbE和内部扩展插槽，面向需要双10GbE和内部PCIe插槽的实验室与家庭实验室买家。** 最关键的问题是价格：美国商店（2026-10-31查看）标价特价$3,919、正常价$4,899，而且我们没有找到针对它的独立本地大模型速度测试。',
     quickAnswerTop: {
       zh: {
         question: 'Minisforum MS-S1 MAX是一台好的本地AI工作站吗？',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB LPDDR5x-8000（P495为192 GB），焊接式，不可升级',
           '双10GbE、两个USB4 v2接口，并可选2U机架安装',
-          '美国商店：128 GB / 2 TB特价$3,919 / 正常价$4,899',
+          '美国商店（2026-10-31查看）：128 GB / 2 TB特价$3,919 / 正常价$4,899',
           '未找到独立的大模型吞吐量测试',
         ],
         updatedDate: '2026-11',
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mini pc strix halo',
     ],
     leadAnswerBlock:
-      '**El Minisforum MS-S1 MAX es una estación de trabajo con Ryzen AI Max+ 395, 128 GB de memoria, doble 10GbE y una ranura de expansión interna, pensada para compradores de laboratorio y homelab que quieren doble 10GbE y una ranura PCIe interna.** La gran pega es el precio: la tienda de EE. UU. lo lista a $3,919 en oferta frente a $4,899 de precio normal, y no encontramos ninguna prueba independiente de velocidad con LLM locales.',
+      '**El Minisforum MS-S1 MAX es una workstation con Ryzen AI Max+ 395, 128 GB, doble 10GbE y ranura de expansión interna, para laboratorios y homelabs. La pega es el precio: $3,919 en oferta frente a $4,899 (tienda EE. UU., 2026-10-31), y no encontramos pruebas independientes de velocidad con LLM locales.**',
     quickAnswerTop: {
       es: {
         question: '¿Es el Minisforum MS-S1 MAX una buena estación de trabajo de IA local?',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB de LPDDR5x-8000 (192 GB en el P495), soldada y no ampliable',
           'Doble 10GbE, dos puertos USB4 v2 y una opción de montaje en rack 2U',
-          'Tienda de EE. UU.: $3,919 en oferta / $4,899 normal por 128 GB / 2 TB',
+          'Tienda de EE. UU., consultada el 2026-10-31: $3,919 en oferta / $4,899 normal por 128 GB / 2 TB',
           'No se encontró ninguna prueba independiente de rendimiento con LLM',
         ],
         updatedDate: '2026-11',
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mini pc strix halo',
     ],
     leadAnswerBlock:
-      '**O Minisforum MS-S1 MAX é uma workstation com Ryzen AI Max+ 395, 128 GB de memória, 10GbE duplo e um slot de expansão interno, voltada a compradores de laboratório e homelab que querem 10GbE duplo e um slot PCIe interno.** A ressalva decisiva é o preço: a loja dos EUA o lista a $3,919 em promoção contra $4,899 regular, e não encontramos nenhum teste independente de velocidade de LLM local para ele.',
+      '**O Minisforum MS-S1 MAX é uma workstation com Ryzen AI Max+ 395, 128 GB, 10GbE duplo e slot de expansão interno, para laboratórios e homelabs. A ressalva é o preço: $3,919 em promoção contra $4,899 na loja dos EUA (2026-10-31), e não encontramos teste independente de velocidade de LLM local.**',
     quickAnswerTop: {
       pt: {
         question: 'O Minisforum MS-S1 MAX é uma boa workstation de IA local?',
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB de LPDDR5x-8000 (192 GB no P495), soldada e não atualizável',
           '10GbE duplo, duas portas USB4 v2 e uma opção de montagem em rack 2U',
-          'Loja dos EUA: $3,919 em promoção / $4,899 regular para 128 GB / 2 TB',
+          'Loja dos EUA, lida em 2026-10-31: $3,919 em promoção / $4,899 regular para 128 GB / 2 TB',
           'Nenhum teste independente de throughput de LLM encontrado',
         ],
         updatedDate: '2026-11',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Preço e disponibilidade',
         content:
-          '**O modelo de 128 GB / 2 TB está listado a $3,919 em promoção contra um preço regular de $4,899.** A escassez de DRAM mexeu nos preços desta classe repetidas vezes, e o preço promocional aqui é uma promoção da loja, então confira a página ao vivo antes de pedir. Todos os preços são em dólares americanos, da fonte indicada, lidos em 2026-10-31. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          '**O modelo de 128 GB / 2 TB está listado a $3,919 em promoção contra um preço regular de $4,899.** A escassez de DRAM mexeu nos preços desta classe repetidas vezes, e o preço promocional aqui é uma promoção da loja, então confira a página ao vivo antes de pedir. Todos os preços são em dólares americanos, da fonte indicada, lidos em 2026-10-31.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
         rows: [
           { 'Configuração': '128 GB / 2 TB (Ryzen AI Max+ 395)', 'Preço nos EUA': '$3,919 promoção / $4,899 regular', 'Fonte e data': 'Loja dos EUA da Minisforum, lida em 2026-10-31', 'Status': 'Estimativa de envio: início de novembro' },
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'كمبيوتر مصغر strix halo',
     ],
     leadAnswerBlock:
-      '**جهاز Minisforum MS-S1 MAX محطة عمل بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB ومنفذَي 10GbE وفتحة توسعة داخلية، موجهة لمشتري المختبرات والمختبرات المنزلية (homelab) الذين يريدون منفذَي 10GbE وفتحة PCIe داخلية.** أبرز تحفظ عليه هو السعر: يعرضه المتجر الأمريكي بسعر $3,919 بعد التخفيض مقابل $4,899 للسعر العادي، ولم نجد اختبارًا مستقلًا لسرعة LLM المحلية عليه.',
+      '**جهاز Minisforum MS-S1 MAX محطة عمل بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB ومنفذَي 10GbE وفتحة توسعة داخلية، لمشتري المختبرات والمختبرات المنزلية (homelab). التحفظ الأبرز هو السعر: $3,919 بعد التخفيض مقابل $4,899 للسعر العادي في المتجر الأمريكي (قُرئ في 2026-10-31)، ولم نجد اختبارًا مستقلًا لسرعة LLM المحلية.**',
     quickAnswerTop: {
       ar: {
         question: 'هل Minisforum MS-S1 MAX محطة عمل جيدة للذكاء الاصطناعي المحلي؟',
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB من LPDDR5x-8000 (192 GB في P495)، ملحومة وغير قابلة للترقية',
           'منفذا 10GbE ومنفذا USB4 v2 وخيار تركيب في رف 2U',
-          'المتجر الأمريكي: $3,919 تخفيض / $4,899 عادي لطراز 128 GB / 2 TB',
+          'المتجر الأمريكي (قُرئ في 2026-10-31): $3,919 تخفيض / $4,899 عادي لطراز 128 GB / 2 TB',
           'لم نجد اختبار إنتاجية LLM مستقلًا',
         ],
         updatedDate: '2026-11',
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo 미니 pc',
     ],
     leadAnswerBlock:
-      '**Minisforum MS-S1 MAX는 128GB 메모리, 듀얼 10GbE, 내부 확장 슬롯을 갖춘 Ryzen AI Max+ 395 워크스테이션으로, 듀얼 10GbE와 내부 PCIe 슬롯을 원하는 연구실 및 홈랩 구매자를 위한 제품입니다.** 결정적인 단서는 가격입니다. 미국 스토어에서는 정가 $4,899 대비 할인가 $3,919로 등재되어 있으며, 이 기기에 대한 독립적인 로컬 LLM 속도 테스트는 찾지 못했습니다.',
+      '**Minisforum MS-S1 MAX는 128GB 메모리, 듀얼 10GbE, 내부 확장 슬롯을 갖춘 Ryzen AI Max+ 395 워크스테이션으로, 듀얼 10GbE와 내부 PCIe 슬롯을 원하는 연구실 및 홈랩 구매자를 위한 제품입니다.** 결정적인 단서는 가격입니다. 미국 스토어(2026-10-31 확인)에서는 정가 $4,899 대비 할인가 $3,919로 등재되어 있으며, 이 기기에 대한 독립적인 로컬 LLM 속도 테스트는 찾지 못했습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Minisforum MS-S1 MAX는 로컬 AI 워크스테이션으로 적합합니까?',
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128GB LPDDR5x-8000(P495는 192GB), 납땜형이며 업그레이드 불가',
           '듀얼 10GbE, USB4 v2 포트 2개, 2U 랙 마운트 옵션',
-          '미국 스토어: 128GB / 2TB 기준 할인가 $3,919 / 정가 $4,899',
+          '미국 스토어(2026-10-31 확인): 128GB / 2TB 기준 할인가 $3,919 / 정가 $4,899',
           '독립적인 LLM 처리량 테스트 없음',
         ],
         updatedDate: '2026-11',
