@@ -4,7 +4,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 
-export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways", "colVisualBuilder", "colLocalLlm", "colAgents", "colMultiVector", "colDockerDeploy", "colMultiFormat", "colCitations", "colEmbeddedMode", "colHybridSearch", "colMetadataFilter", "colClustered", "colManagedCloud", "colNoteApp", "colSemanticSearch", "colChatNotes", "colWebSearch", "colPrivateDocs", "segRag", "segDocChat", "segVector", "segNotes", "segSearch", "colBuiltInEngine", "colOllama", "colCustomEndpoint", "colMcp", "colFileChat", "colVoice", "colOffline", "colImportModels", "colModelDownloads", "colVisionInput", "colMultiUser", "colMemory", "colToolUse", "colCharacterCards", "colLorebooks", "colGroupChats", "colLocalBackends", "segDesktop", "segMobile", "segWebSelf", "segAssistants", "segRoleplay", "colVscode", "colJetbrains", "colAgentMode", "colAutocomplete", "colMultiAgent", "colToolCalling", "colCodeExecution", "colWebBrowsing", "colSandbox", "segCoding", "segAgentFw", "segAutonomous", "segWorkflow", "colLoraQlora", "colWebUi", "colMultiGpu", "colExportGguf", "colTracing", "colEvaluations", "colPromptManagement", "colOpenTelemetry", "segFineTune", "segObservability"] as const
+export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways", "colVisualBuilder", "colLocalLlm", "colAgents", "colMultiVector", "colDockerDeploy", "colMultiFormat", "colCitations", "colEmbeddedMode", "colHybridSearch", "colMetadataFilter", "colClustered", "colManagedCloud", "colNoteApp", "colSemanticSearch", "colChatNotes", "colWebSearch", "colPrivateDocs", "segRag", "segDocChat", "segVector", "segNotes", "segSearch", "colBuiltInEngine", "colOllama", "colCustomEndpoint", "colMcp", "colFileChat", "colVoice", "colOffline", "colImportModels", "colModelDownloads", "colVisionInput", "colMultiUser", "colMemory", "colToolUse", "colCharacterCards", "colLorebooks", "colGroupChats", "colLocalBackends", "segDesktop", "segMobile", "segWebSelf", "segAssistants", "segRoleplay", "colVscode", "colJetbrains", "colAgentMode", "colAutocomplete", "colMultiAgent", "colToolCalling", "colCodeExecution", "colWebBrowsing", "colSandbox", "segCoding", "segAgentFw", "segAutonomous", "segWorkflow", "colLoraQlora", "colWebUi", "colMultiGpu", "colExportGguf", "colTracing", "colEvaluations", "colPromptManagement", "colOpenTelemetry", "segFineTune", "segObservability", "colInputFormats", "colOutputFormats", "colTableExtraction", "colBoundingBoxes", "colLanguageBindings", "segDocParsing"] as const
 export type CompareUiKey = (typeof COMPARE_UI_KEYS)[number]
 export type CompareStrings = Record<CompareUiKey, string>
 
@@ -150,7 +150,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "Prompt management",
     "colOpenTelemetry": "OpenTelemetry support",
     "segFineTune": "Fine-tuning",
-    "segObservability": "Observability & evaluation"
+    "segObservability": "Observability & evaluation",
+    "colInputFormats": "Input formats",
+    "colOutputFormats": "Output formats",
+    "colTableExtraction": "Table extraction",
+    "colBoundingBoxes": "Bounding boxes / coordinates",
+    "colLanguageBindings": "Language bindings",
+    "segDocParsing": "Document parsing & OCR"
   },
   "de": {
     "tool": "Werkzeug",
@@ -293,7 +299,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "Prompt-Verwaltung",
     "colOpenTelemetry": "OpenTelemetry-Unterstützung",
     "segFineTune": "Fine-Tuning",
-    "segObservability": "Observability & Evaluierung"
+    "segObservability": "Observability & Evaluierung",
+    "colInputFormats": "Eingabeformate",
+    "colOutputFormats": "Ausgabeformate",
+    "colTableExtraction": "Tabellenextraktion",
+    "colBoundingBoxes": "Begrenzungsrahmen / Koordinaten",
+    "colLanguageBindings": "Sprachanbindungen",
+    "segDocParsing": "Dokumentenanalyse & OCR"
   },
   "fr": {
     "tool": "Outil",
@@ -436,7 +448,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "Gestion des prompts",
     "colOpenTelemetry": "Prise en charge d'OpenTelemetry",
     "segFineTune": "Fine-tuning",
-    "segObservability": "Observabilité et évaluation"
+    "segObservability": "Observabilité et évaluation",
+    "colInputFormats": "Formats d'entrée",
+    "colOutputFormats": "Formats de sortie",
+    "colTableExtraction": "Extraction de tableaux",
+    "colBoundingBoxes": "Cadres de délimitation / coordonnées",
+    "colLanguageBindings": "Liaisons de langage",
+    "segDocParsing": "Analyse de documents et OCR"
   },
   "es": {
     "tool": "Herramienta",
@@ -579,7 +597,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "Gestión de prompts",
     "colOpenTelemetry": "Compatibilidad con OpenTelemetry",
     "segFineTune": "Fine-tuning",
-    "segObservability": "Observabilidad y evaluación"
+    "segObservability": "Observabilidad y evaluación",
+    "colInputFormats": "Formatos de entrada",
+    "colOutputFormats": "Formatos de salida",
+    "colTableExtraction": "Extracción de tablas",
+    "colBoundingBoxes": "Cuadros delimitadores / coordenadas",
+    "colLanguageBindings": "Bindings de lenguaje",
+    "segDocParsing": "Análisis de documentos y OCR"
   },
   "ja": {
     "tool": "ツール",
@@ -722,7 +746,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "プロンプト管理",
     "colOpenTelemetry": "OpenTelemetryサポート",
     "segFineTune": "ファインチューニング",
-    "segObservability": "オブザーバビリティ・評価"
+    "segObservability": "オブザーバビリティ・評価",
+    "colInputFormats": "入力形式",
+    "colOutputFormats": "出力形式",
+    "colTableExtraction": "表の抽出",
+    "colBoundingBoxes": "バウンディングボックス / 座標",
+    "colLanguageBindings": "言語バインディング",
+    "segDocParsing": "ドキュメント解析・OCR"
   },
   "zh": {
     "tool": "工具",
@@ -865,7 +895,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "提示词管理",
     "colOpenTelemetry": "支持 OpenTelemetry",
     "segFineTune": "微调",
-    "segObservability": "可观测性与评估"
+    "segObservability": "可观测性与评估",
+    "colInputFormats": "输入格式",
+    "colOutputFormats": "输出格式",
+    "colTableExtraction": "表格提取",
+    "colBoundingBoxes": "边界框 / 坐标",
+    "colLanguageBindings": "语言绑定",
+    "segDocParsing": "文档解析与 OCR"
   },
   "pt": {
     "tool": "Ferramenta",
@@ -1008,7 +1044,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "Gerenciamento de prompts",
     "colOpenTelemetry": "Suporte a OpenTelemetry",
     "segFineTune": "Fine-tuning",
-    "segObservability": "Observabilidade e avaliação"
+    "segObservability": "Observabilidade e avaliação",
+    "colInputFormats": "Formatos de entrada",
+    "colOutputFormats": "Formatos de saída",
+    "colTableExtraction": "Extração de tabelas",
+    "colBoundingBoxes": "Caixas delimitadoras / coordenadas",
+    "colLanguageBindings": "Bindings de linguagem",
+    "segDocParsing": "Análise de documentos e OCR"
   },
   "ar": {
     "tool": "الأداة",
@@ -1151,7 +1193,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "إدارة الموجّهات",
     "colOpenTelemetry": "دعم OpenTelemetry",
     "segFineTune": "الضبط الدقيق",
-    "segObservability": "قابلية المراقبة والتقييم"
+    "segObservability": "قابلية المراقبة والتقييم",
+    "colInputFormats": "صيغ الإدخال",
+    "colOutputFormats": "صيغ الإخراج",
+    "colTableExtraction": "استخراج الجداول",
+    "colBoundingBoxes": "مربعات الإحاطة / الإحداثيات",
+    "colLanguageBindings": "ربط اللغات",
+    "segDocParsing": "تحليل المستندات و OCR"
   },
   "ko": {
     "tool": "도구",
@@ -1294,7 +1342,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colPromptManagement": "프롬프트 관리",
     "colOpenTelemetry": "OpenTelemetry 지원",
     "segFineTune": "파인튜닝",
-    "segObservability": "관측성 및 평가"
+    "segObservability": "관측성 및 평가",
+    "colInputFormats": "입력 형식",
+    "colOutputFormats": "출력 형식",
+    "colTableExtraction": "표 추출",
+    "colBoundingBoxes": "경계 상자 / 좌표",
+    "colLanguageBindings": "언어 바인딩",
+    "segDocParsing": "문서 파싱 및 OCR"
   }
 }
 

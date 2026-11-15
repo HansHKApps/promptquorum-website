@@ -6,6 +6,16 @@
 // Local by default (Rust core, CPU-only, runs in-process / CLI / Docker); URL ingestion needs the network and
 // LLM/embedding features can use a local (Ollama, LM Studio, vLLM) or hosted provider. xberg.io also sells
 // Xberg Pro / Enterprise / Platform (no public prices) — the MIT library is the free part.
+// compare, document-parsing segment (added 2026-11-15; localLlm/ollama/mcp are the older agent-framework attributes, verified 2026-10-30).
+// Read 2026-11-15 from the RAW README https://raw.githubusercontent.com/xberg-io/xberg/main/README.md, exact quotes:
+//   inputFormats  <- "PDFs, Office, images, HTML, email, e-books, scientific publications" (README says 107 formats; the count is not typed here).
+//   outputFormats <- "Plain text, Markdown, Djot, HTML, JSON tree, or Docling DocTags".
+//   ocr true      <- "OCR on demand | Tesseract, PaddleOCR, Candle, or VLM backends".
+//   tableExtraction true <- "get back clean text, tables, metadata, and structured data".
+//   languageBindings 15  <- "15 language bindings".
+//   mcp true      <- "MCP server" (Runs anywhere row).
+//   boundingBoxes OMITTED on purpose: docs.xberg.io/llms-full.txt (Element-Based Output) says coordinates are "Only populated for **text elements**
+//   when `pdf_options.hierarchy` is enabled with `include_bbox=True`. Table and image elements do not carry coordinates." = qualified, not a plain yes.
 
 import type { ToolRecord } from './types'
 
@@ -46,7 +56,7 @@ export const app: ToolRecord = {
   reviewSlug: 'xberg-review', // dedicated PromptQuorum review - added 2026-10-30
   pqReview: { date: '2026-10-30', version: 'v1.3.10', versionSourceUrl: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10' },
   mcpSupport: true, // built-in MCP server per README and docs.xberg.io, verified 2026-10-30
-  compare: { localLlm: true, ollama: true, mcp: true },
+  compare: { localLlm: true, ollama: true, mcp: true, inputFormats: 'PDF, Office, images, HTML, email, e-books', outputFormats: ['Text', 'Markdown', 'Djot', 'HTML', 'JSON', 'DocTags'], ocr: true, tableExtraction: true, languageBindings: 15 }, // document-parsing values verified 2026-11-15 against the raw README, see header
   lastVerifiedDate: '2026-10-30',
   lastUpstreamUpdate: '2026-10-30', // GitHub API: latest release v1.3.10 on 2026-10-13; last commit 2026-10-30 (whichever is newer), read 2026-10-30
   lastUpstreamUpdateSource: 'https://github.com/xberg-io/xberg',

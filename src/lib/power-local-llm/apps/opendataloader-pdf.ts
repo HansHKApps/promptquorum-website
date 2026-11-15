@@ -24,8 +24,17 @@
 // Office, National Police Agency cyber bureau).
 // BENCHMARKS: homepage/README claim "#1 in benchmarks" (self-published, opendataloader-bench; the #1 claim holds only for hybrid mode).
 // Never presented as a PromptQuorum measurement.
-// compare/verdict: omitted on purpose. There is no comparison segment for ocr-document-parsing (compare-schema.ts) and the tile is not placed in
-// rag-frameworks, so no category comparison attributes apply. Stars: GitHub API 2026-11-15 (see `stars`); never typed into article text (starsFor).
+// compare (added 2026-11-15, segment 'document-parsing' in compare-schema.ts), every value read 2026-11-15 from the RAW README
+// https://raw.githubusercontent.com/opendataloader-project/opendataloader-pdf/main/README.md, exact quotes:
+//   inputFormats 'PDF'   <- "Extract Markdown, JSON (with bounding boxes), and HTML from any PDF." and the capability row "Process Word/Excel/PPT | No".
+//   outputFormats        <- output table rows "| **JSON** |", "| **Markdown** |", "| **HTML** |", "| **Text** | Plain text extraction |" (annotated PDF and
+//                           tagged PDF exist too but are visual-debug / accessibility outputs, left out of the table).
+//   tableExtraction true <- "| Table extraction (simple borders) | Yes | Free |" (complex/borderless tables need hybrid mode, covered in the review).
+//   boundingBoxes true   <- "| Bounding boxes for every element | Yes | Free |".
+//   languageBindings 3   <- header "sdk: Python, Node.js, Java" and "Python, Node.js, Java SDKs".
+//   ocr OMITTED on purpose: "| OCR for scanned PDFs | Yes | Free (Hybrid) |" = qualified (hybrid backend only), stays in the review, not the table.
+//   mcp OMITTED: the README names no MCP server or integration (the review says so too).
+// verdict: omitted (the review carries the verdict). Stars: GitHub API 2026-11-15 (see `stars`); never typed into article text (starsFor).
 
 import type { ToolRecord } from './types'
 
@@ -71,6 +80,7 @@ export const app: ToolRecord = {
     version: '2.5.22',
     versionSourceUrl: 'https://github.com/opendataloader-project/opendataloader-pdf/releases/tag/v2.5.22',
   },
+  compare: { inputFormats: 'PDF', outputFormats: ['JSON', 'Markdown', 'HTML', 'Text'], tableExtraction: true, boundingBoxes: true, languageBindings: 3 }, // verified 2026-11-15 against the raw README, see header
   lastVerifiedDate: '2026-11-15',
   lastUpstreamUpdate: '2026-11-14', // GitHub API: pushed_at 2026-11-14T21:11Z (latest release v2.5.22 on 2026-11-12), read 2026-11-15
   lastUpstreamUpdateSource: 'https://github.com/opendataloader-project/opendataloader-pdf',
