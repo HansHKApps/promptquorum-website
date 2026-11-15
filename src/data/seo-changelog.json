@@ -28088,5 +28088,90 @@
       "period": "90d to 2026-11-15"
     },
     "deployedAt": null
+  },
+  {
+    "id": "5299a006-b5b3-41f3-be82-93d60a61a13a",
+    "slug": "/local-llms/run-qwen-locally-guide-2026",
+    "date": "2026-11-15T10:14:50.704Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Run Qwen 3 Locally 2026: 16 GB VRAM, Under 10 Min",
+        "new": "Run Qwen 3.6 & 3.8 Locally 2026: Ollama + LM Studio"
+      }
+    ],
+    "reason": "Full refresh: Qwen3.8/3.6 current tags, honest 16 GB VRAM answer, title aligned to top queries",
+    "queries": [
+      "how to run qwen 3.6 locally",
+      "qwen 3.6 local",
+      "can i run qwen 3.6 locally",
+      "how to run qwen 3.6 27b locally",
+      "how to install qwen 3.6 on ollama",
+      "local llm qwen"
+    ],
+    "baseline": {
+      "position": 12.38,
+      "impressions": 3408,
+      "clicks": 17,
+      "ctr": 0.004988262910798122,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e3c84297-79e5-473f-bd7a-dc6b9dffb2e0",
+    "slug": "/ko/local-llms/run-qwen-locally-guide-2026",
+    "date": "2026-11-15T10:14:50.910Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026 Qwen 3 로컬 실행: Ollama & LM Studio 설정 가이드",
+        "new": "Qwen 3.6·3.8 로컬 설치 2026: Ollama 사양"
+      }
+    ],
+    "reason": "Full refresh; KO title adapted to qwen 로컬 설치 / 사양 queries",
+    "queries": [
+      "qwen 로컬",
+      "qwen 로컬 llm",
+      "qwen 로컬 설치",
+      "qwen 설치",
+      "ollama qwen 설치",
+      "qwen 사양"
+    ],
+    "baseline": {
+      "position": 4.78,
+      "impressions": 1595,
+      "clicks": 70,
+      "ctr": 0.0438871473354232,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "80d97b32-af30-4e9c-9e7e-e6cb36cbc826",
+    "slug": "/de/local-llms/run-qwen-locally-guide-2026",
+    "date": "2026-11-15T10:14:51.007Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 lokal ausführen 2026: 16 GB VRAM, unter 10 Min",
+        "new": "Qwen lokal installieren 2026: Qwen 3.6 & 3.8 mit Ollama"
+      }
+    ],
+    "reason": "Full refresh; DE title adapted to qwen lokal installieren",
+    "queries": [
+      "qwen lokal installieren",
+      "qwen lokal",
+      "qwen installieren",
+      "lm studio qwen 3.6"
+    ],
+    "baseline": {
+      "position": 4.3,
+      "impressions": 2387,
+      "clicks": 28,
+      "ctr": 0.011730205278592375,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": null
   }
 ]
