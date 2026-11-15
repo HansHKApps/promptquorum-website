@@ -4788,7 +4788,7 @@ schema: {
           items: [
             '**8 Go de VRAM (RTX 5060 Ti (variante 8 Go), RTX 4060, Intel B580) :** Llama 3.1 8B Q4_K_M (4,7 Go, ~70 tok/s) -- recommandé. Qwen3 8B (5 Go, meilleur multilingue + codage). Phi-4 Mini 3.8B (2,3 Go, le plus rapide). Gemma 3 4B (~3 Go, petit modèle Google de génération actuelle, multimodal). Évitez les modèles 13B+.',
             '**12 Go de VRAM (RTX 4070 Ti, RTX 5070, Intel B770) :** Llama 3.1 8B (4,7 Go, rapide avec de la marge). Qwen3 14B Q4_K_M (8,5 Go, meilleur raisonnement à budget serre). Qwen3 8B (5 Go, meilleur multilingue + codage). DeepSeek-R1 8B (5 Go, raisonnement solide). Évitez les modèles 30B+ et MoE comme Llama 4 Scout (~55 Go en Q4).',
-            '**16 Go de VRAM (RTX 4080, RTX 5070 Ti, RTX 5080) :** Mistral Small 3.1 24B Q4_K_M (14 Go, meilleure qualité du palier). Devstral Small 24B Q4_K_M (~16 Go) pour le codage agentique. Qwen3 14B (9 Go, rapide avec marge de contexte). Llama 3.3 70B en Q2_K (17 Go, possible mais qualité dégradée).',
+            '**16 Go de VRAM (RTX 4080, RTX 5070 Ti, RTX 5080) :** Mistral Small 3.1 24B Q4_K_M (14 Go, bonne qualité pour ce palier). Devstral Small 24B Q4_K_M (~16 Go) pour le codage agentique. Qwen3 14B (9 Go, rapide avec marge de contexte). Llama 3.3 70B en Q2_K (17 Go, possible mais qualité dégradée).',
             '**24 Go de VRAM (RTX 5090, RTX 4090, Tesla L40) :** Qwen 3.6 27B Q4_K_M (~16 Go, 77,2 % SWE-bench Verified (valeur communiquée par le développeur), bon modèle de codage dense). DeepSeek-R1 32B Q4_K_M (~19 Go, raisonnement solide). Qwen3 32B Q5_K_M (~21 Go). Llama 3.3 70B nécessite 2x GPU de 24 Go en Q4_K_M. Plus récent : Qwen3.8 27B (téléchargement de 18 Go via Ollama, contexte de 256K).',
             '**32 Go de VRAM (RTX 5090) :** Llama 3.3 70B Q4_K_M (40 Go -- nécessite un déport CPU minimal pour les dernières couches). Qwen3 32B (19 Go, tient entièrement avec 13 Go de réserve). Pour le codage agentique, la gamme Kimi K2 (MoE, 1T total / 32B actifs, MIT modifie) est le choix poids lourd -- Kimi K2.7 Code (juin 2026) est le plus récent, K2.6 étant la version générale précédente ; les deux nécessitent quantification et déport important à ce palier. La RTX 5090 est le premier GPU grand public unique qui accueille un 70B dense avec un déport minimal.',
             '**48+ Go de VRAM (RTX 6000 Ada, A100, DGX Spark) :** Llama 3.3 70B Q4_K_M (40 Go, tient entièrement). Llama 4 Scout (17B actifs / 109B total MoE, ~55 Go en Q4 -- meilleur choix long contexte 10M tokens / multimodal). Llama 4 Maverick (17B actifs, 400B total, MoE). Llama 3.3 70B Q8_0 (70 Go -- nécessite une A100 de 80 Go). Le NVIDIA DGX Spark (128 Go unifiés) accueille tout modèle à poids ouverts jusqu\'au 70B en Q8_0 inclus avec 58 Go de réserve -- mais pas les tout derniers modèles MoE de pointe : GLM-5.3 (~750B au total) nécessite bien plus de 128 Go même en quantification agressive 2 bits, bien au-delà du DGX Spark ou d\'un seul Mac Studio 128 Go.',
@@ -4804,7 +4804,7 @@ schema: {
           id: 'models-16gb',
           title: 'Meilleurs LLM locaux pour 16 Go de VRAM',
           content: [
-            '**Le meilleur LLM local pour un GPU de 16 Go de VRAM en 2026 est Mistral Small 3.1 24B en Q4_K_M : il utilise ~13 Go, tourne à 55 tok/sec et fait partie des modèles généralistes les plus performants qui tiennent avec de la marge de contexte.** Les cartes de 16 Go (NVIDIA RTX 5080, RTX 5070 Ti, RTX 4080 d\'occasion ou une RTX 4090 de portable) plafonnent aux modèles 14-24B — un modèle 70B nécessite ~40 Go et ne tient pas.',
+            '**Un bon LLM local pour un GPU de 16 Go de VRAM en 2026 est Mistral Small 3.1 24B en Q4_K_M : il utilise ~13 Go, tourne à 55 tok/sec et fait partie des modèles généralistes les plus performants qui tiennent avec de la marge de contexte.** Les cartes de 16 Go (NVIDIA RTX 5080, RTX 5070 Ti, RTX 4080 d\'occasion ou une RTX 4090 de portable) plafonnent aux modèles 14-24B — un modèle 70B nécessite ~40 Go et ne tient pas.',
             'Pour le codage agentique, Devstral Small 24B Q4_K_M tient à ~16 Go ; pour le raisonnement, DeepSeek-R1 14B Q8_0 est le choix. Le Mistral Small 4 plus récent (mars 2026) est un modèle unique qui intègre raisonnement, vision et codage et est le successeur naturel comme défaut de la classe 16 Go. Le tableau ci-dessous montre ce qui tient et ce qui ne tient pas — les lignes « Ne tient PAS » sont l\'erreur la plus courante des propriétaires de 16 Go.',
           ],
           rows: [
@@ -4931,7 +4931,7 @@ schema: {
           ],
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-fr.svg',
-          imageCaption: 'Trois configurations : $1500 entrée de gamme (RTX 4070 Ti, i7 13700, 16 Go) pour modèles 7-13B, $2500 solide (RTX 4080, i7 14700K, 32 Go) pour 13-30B, $6,500+ haut de gamme (2× RTX 4090, Ryzen 9, 128 Go) pour tout modèle. Le milieu de gamme offre le meilleur rapport qualité-prix.',
+          imageCaption: 'Trois configurations : $1500 entrée de gamme (RTX 4070 Ti, i7 13700, 16 Go) pour modèles 7-13B, $2500 solide (RTX 4080, i7 14700K, 32 Go) pour 13-30B, $6,500+ haut de gamme (2× RTX 4090, Ryzen 9, 128 Go) pour tout modèle. La configuration intermédiaire est un compromis équilibré.',
           imageAlt: 'Trois configurations de matériel pour LLM local : du PC d\'entrée avec GPU 16 Go à la station à deux GPU',
         },
         cantAffordHardware: {
@@ -5080,7 +5080,7 @@ schema: {
             { q: 'Quelle est la règle de mémoire pour un modèle 7B en quantification Q4 ?', a: 'Un modèle 7B en quantification Q4_K_M nécessite environ 4-5 Go de VRAM (ou de RAM système pour l\'inférence CPU seul) -- soit environ 0,6 Go par milliard de paramètres à 4 bits. Cela s\'échelonné linéairement : un modèle 14B nécessite ~9 Go, un modèle 32B nécessite ~19 Go, et un modèle 70B nécessite ~40 Go, tous en Q4_K_M.' },
             { q: 'Quel matériel faut-il pour faire tourner GLM-5.3 en local ?', a: 'GLM-5.3 (Z.ai ; chiffres rapportés, non vérifiés par PromptQuorum) est un modèle MoE de ~750B de paramètres. Même le GGUF dynamique le plus agressif en 2 bits nécessite bien plus de 128 Go de VRAM/RAM combinées -- trop grand pour une seule RTX 5090 (32 Go), un DGX Spark de 128 Go ou un Mac Studio de 128 Go. Les chemins locaux réalistes sont un rig 4x RTX 3090/4090 avec 192 Go+ de RAM système, ou un Mac Studio 512 Go (M5 Ultra), les deux via un déport hybride CPU/GPU, à faible vitesse non vérifiée par PromptQuorum. Pour la plupart des utilisateurs, GLM-5.3 est de facto réservé au cloud.' },
             { q: 'Plus de RAM aide-t-il les LLM locaux au-delà de la VRAM ?', a: 'La RAM système prend en charge l\'OS et le multitache mais n\'augmente pas la capacité du modèle au-delà de la VRAM du GPU (pour l\'inférence accélérée par GPU). Avec un GPU, 16 Go de RAM système suffisent. Sans GPU, 32 Go+ de RAM aident, mais la vitesse d\'inférence sera 5-10x plus lente que sur GPU.' },
-            { q: 'Peut-on faire tourner un modèle de 30B paramètres sur une RTX 5080 vs un Mac Mini M4 Pro ?', a: 'RTX 5080 (16 Go de VRAM) : 30B nécessite environ 19 Go en Q4_K_M, il ne tient donc pas entièrement et demande un déchargement partiel vers le CPU (bien plus lent) ou une quantification plus basse ; un modèle 24B (~14 Go en Q4_K_M) tient à environ 80-120 tokens/sec. Mac Mini M4 Pro (48 Go unifiés) : 30B tourne en Q4_K_M (~19 Go) dans les ~40 Go restants après macOS, à 20-30 tokens/sec ; le Q8 (28 Go) tient aussi, avec environ 12 Go de marge pour le contexte. La RTX 5080 est 4-6x plus rapide mais moins portable ; le Mac est économe en énergie mais plus lent. Les vitesses sont des valeurs approximatives qui varient selon la configuration et ne sont pas des mesures de PromptQuorum.' },
+            { q: 'Peut-on faire tourner un modèle de 30B paramètres sur une RTX 5080 vs un Mac Mini M4 Pro ?', a: 'RTX 5080 (16 Go de VRAM) : 30B nécessite environ 19 Go en Q4_K_M, il ne tient donc pas entièrement et demande un déchargement partiel vers le CPU (bien plus lent) ou une quantification plus basse ; un modèle 24B (~14 Go en Q4_K_M) tient à environ 80-120 tokens/sec. Mac Mini M4 Pro (48 Go unifiés) : 30B tourne en Q4_K_M (~19 Go) dans les ~40 Go restants après macOS, à 20-30 tokens/sec ; le Q8 (28 Go) tient aussi, mais laisse peu de marge pour le contexte. La RTX 5080 est 4-6x plus rapide mais moins portable ; le Mac est économe en énergie mais plus lent. Les vitesses sont des valeurs approximatives qui varient selon la configuration et ne sont pas des mesures de PromptQuorum.' },
             { q: 'Quels sont les besoins matériels pour faire tourner un LLM de codage local en 2026 ?', a: 'Pour de bonnes performances en codage : RTX 4080+ (16 Go de VRAM) avec DeepSeek-Coder 33B Q4 ou Mistral Small 3.1 24B Q4 pour la génération de code. Minimum : RTX 4070 Ti (12 Go) avec Mistral Small 3.1 24B Q4. CPU : 8+ cœurs. RAM : 16 Go de RAM système. SSD de 500 Go.' },
             { q: 'Une RTX 3060 12 Go vaut-elle encore le coup pour les LLM locaux en 2026 ?', a: 'La RTX 3060 (12 Go) est datée (architecture 2021). Elle gère les modèles 7B-13B en Q4 mais produit 40-60 tokens/sec. Une carte d\'occasion coûte ~$285 ; une RTX 5070 neuve (~$880) ou RTX 5060 Ti 16 Go (~$800) tourne 2-3x plus vite. La RTX 3060 ne vaut le coup qu\'en GPU secondaire pour les configurations multi-cartes. Les vitesses sont des valeurs approximatives qui varient selon la configuration et ne sont pas des mesures de PromptQuorum.' },
             { q: 'De combien de VRAM avez-vous besoin pour les modèles 7B, 14B et 32B ?', a: 'Modèles 7-8B : environ 4,7-5 Go en Q4_K_M, 5,7 Go en Q5_K_M, 16 Go en FP16. Modèles 14B : environ 9 Go en Q4_K_M et environ 28 Go en FP16. Modèles 30-32B : environ 19 Go en Q4_K_M, 22 Go en Q5_K_M, 64 Go en FP16. Ajoutez 25 à 100 % aux poids pour le cache KV, selon la longueur du contexte. Q4_K_M est le niveau de quantification recommandé pour la plupart des matériels.' },
@@ -5322,7 +5322,7 @@ schema: {
             'name': 'Peut-on faire tourner un modèle de 30B paramètres sur une RTX 5080 vs un Mac Mini M4 Pro ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 5080 (16 Go de VRAM) : 30B nécessite environ 19 Go en Q4_K_M, il ne tient donc pas entièrement et demande un déchargement partiel vers le CPU (bien plus lent) ou une quantification plus basse ; un modèle 24B (~14 Go en Q4_K_M) tient à environ 80-120 tokens/sec. Mac Mini M4 Pro (48 Go unifiés) : 30B tourne en Q4_K_M (~19 Go) dans les ~40 Go restants après macOS, à 20-30 tokens/sec ; le Q8 (28 Go) tient aussi, avec environ 12 Go de marge pour le contexte. La RTX 5080 est 4-6x plus rapide mais moins portable ; le Mac est économe en énergie mais plus lent. Les vitesses sont des valeurs approximatives qui varient selon la configuration et ne sont pas des mesures de PromptQuorum.',
+              'text': 'RTX 5080 (16 Go de VRAM) : 30B nécessite environ 19 Go en Q4_K_M, il ne tient donc pas entièrement et demande un déchargement partiel vers le CPU (bien plus lent) ou une quantification plus basse ; un modèle 24B (~14 Go en Q4_K_M) tient à environ 80-120 tokens/sec. Mac Mini M4 Pro (48 Go unifiés) : 30B tourne en Q4_K_M (~19 Go) dans les ~40 Go restants après macOS, à 20-30 tokens/sec ; le Q8 (28 Go) tient aussi, mais laisse peu de marge pour le contexte. La RTX 5080 est 4-6x plus rapide mais moins portable ; le Mac est économe en énergie mais plus lent. Les vitesses sont des valeurs approximatives qui varient selon la configuration et ne sont pas des mesures de PromptQuorum.',
             },
           },
           {
@@ -5690,7 +5690,7 @@ schema: {
           items: [
             '**8 GB VRAM（RTX 5060 Ti（8 GBモデル）、RTX 4060、Intel B580）：** Llama 3.1 8B Q4_K_M（4.7 GB、約70 tok/s） — 推奨。Qwen3 8B（5 GB、多言語＋コーディング最良）。Phi-4 Mini 3.8B（2.3 GB、最速）。Gemma 3 4B（約3 GB、現行世代のGoogle小型モデル、マルチモーダル）。13B以上のモデルは避けましょう。',
             '**12 GB VRAM（RTX 4070 Ti、RTX 5070、Intel B770）：** Llama 3.1 8B（4.7 GB、余裕をもって高速）。Qwen3 14B Q4_K_M（8.5 GB、予算内でより良い推論）。Qwen3 8B（5 GB、多言語＋コーディング最良）。DeepSeek-R1 8B（5 GB、推論に強い）。30B以上やLlama 4 Scout（Q4で約55 GB）のようなMoEモデルは避けましょう。',
-            '**16 GB VRAM（RTX 4080、RTX 5070 Ti、RTX 5080）：** Mistral Small 3.1 24B Q4_K_M（14 GB、ティア最良の品質）。エージェント型コーディング向けのDevstral Small 24B Q4_K_M（約16 GB）。Qwen3 14B（9 GB、コンテキストの余裕をもって高速）。Q2_KでのLlama 3.3 70B（17 GB、可能だが品質低下）。',
+            '**16 GB VRAM（RTX 4080、RTX 5070 Ti、RTX 5080）：** Mistral Small 3.1 24B Q4_K_M（14 GB、このティアで高品質）。エージェント型コーディング向けのDevstral Small 24B Q4_K_M（約16 GB）。Qwen3 14B（9 GB、コンテキストの余裕をもって高速）。Q2_KでのLlama 3.3 70B（17 GB、可能だが品質低下）。',
             '**24 GB VRAM（RTX 5090、RTX 4090、Tesla L40）：** Qwen 3.6 27B Q4_K_M（約16 GB、77.2% SWE-bench Verified（開発元の報告値）、有力な密結合コーディングモデル）。DeepSeek-R1 32B Q4_K_M（約19 GB、推論に強い）。Qwen3 32B Q5_K_M（約21 GB）。Llama 3.3 70BはQ4_K_Mで2× 24 GB GPUを必要とします。 より新しい選択肢：Qwen3.8 27B（Ollama経由で18 GBのダウンロード、256Kコンテキスト）。',
             '**32 GB VRAM（RTX 5090）：** Llama 3.3 70B Q4_K_M（40 GB — 最後のレイヤーに最小限のCPUオフロードが必要）。Qwen3 32B（19 GB、13 GBの余裕をもって完全に収まる）。エージェント型コーディングには、Kimi K2系列（MoE、1T合計／32Bアクティブ、Modified MIT）がヘビー級の選択肢です — Kimi K2.7 Code（2026年6月）が最新で、K2.6が以前の汎用リリースです。どちらもこのティアでは量子化と大量のオフロードが必要です。RTX 5090は、最小限のオフロードで密結合の70Bを収める初の単一コンシューマーGPUです。',
             '**48 GB以上 VRAM（RTX 6000 Ada、A100、DGX Spark）：** Llama 3.3 70B Q4_K_M（40 GB、完全に収まる）。Llama 4 Scout（17Bアクティブ／109B合計 MoE、Q4で約55 GB — 最良のロングコンテキスト10Mトークン／マルチモーダルの選択肢）。Llama 4 Maverick（17Bアクティブ、400B合計、MoE）。Llama 3.3 70B Q8_0（70 GB — 80 GB A100が必要）。NVIDIA DGX Spark（128 GBユニファイド）は、Q8_0での70Bまでのすべてのオープンウェイトモデルを58 GBの余裕をもって収めます — ただし最新のフロンティア級MoEモデルは別です：GLM-5.3（合計~750B）は積極的な2ビット量子化でも128 GB超を必要とし、DGX Sparkや単一の128 GB Mac Studioを大きく超えます。',
@@ -5706,7 +5706,7 @@ schema: {
           id: 'models-16gb',
           title: '16 GB VRAM向けベストローカルLLM',
           content: [
-            '**2026年に16 GB VRAM GPU向けの最良のローカルLLMはMistral Small 3.1 24BのQ4_K_Mです：約13 GBを使用し、55 tok/secで動作し、コンテキストの余裕をもって収まる最も強力な汎用モデルの一つです。** 16 GBカード（NVIDIA RTX 5080、RTX 5070 Ti、中古のRTX 4080、またはRTX 4090ラップトップ）は14〜24Bモデルが上限です — 70Bモデルは約40 GBを必要とし、収まりません。',
+            '**2026年に16 GB VRAM GPU向けの有力なローカルLLMはMistral Small 3.1 24BのQ4_K_Mです：約13 GBを使用し、55 tok/secで動作し、コンテキストの余裕をもって収まる最も強力な汎用モデルの一つです。** 16 GBカード（NVIDIA RTX 5080、RTX 5070 Ti、中古のRTX 4080、またはRTX 4090ラップトップ）は14〜24Bモデルが上限です — 70Bモデルは約40 GBを必要とし、収まりません。',
             'エージェント型コーディングには、Devstral Small 24B Q4_K_Mが約16 GBで収まります。推論には、DeepSeek-R1 14B Q8_0が選択肢です。新しいMistral Small 4（2026年3月）は、推論・ビジョン・コーディングを統合した単一モデルで、16 GBクラスのデフォルトとして自然な後継です。下記の表は何が収まり何が収まらないかを示します — 「収まらない」行は16 GBオーナーが最もよく犯す間違いです。',
           ],
           rows: [
@@ -5833,7 +5833,7 @@ schema: {
           ],
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-ja.svg',
-          imageCaption: '3つの構成：$1500のエントリーレベル（RTX 4070 Ti、i7 13700、16GB）は7〜13Bモデル向け、$2500のしっかりした構成（RTX 4080、i7 14700K、32GB）は13〜30B向け、$6,500+のハイエンド（2× RTX 4090、Ryzen 9、128GB）は任意のモデル向け。中間レベルが最良の価値を提供します。',
+          imageCaption: '3つの構成：$1500のエントリーレベル（RTX 4070 Ti、i7 13700、16GB）は7〜13Bモデル向け、$2500のしっかりした構成（RTX 4080、i7 14700K、32GB）は13〜30B向け、$6,500+のハイエンド（2× RTX 4090、Ryzen 9、128GB）は任意のモデル向け。中間レベルはバランスの取れた選択肢です。',
           imageAlt: 'ローカルLLMハードウェアの3構成：16GB GPUのエントリーPCからデュアルGPUワークステーションまで',
         },
         cantAffordHardware: {
@@ -5981,7 +5981,7 @@ schema: {
             { q: 'Q4量子化の7Bモデルにおけるメモリの目安は何ですか？', a: 'Q4_K_M量子化の7Bモデルは約4〜5 GBのVRAM（CPUのみの推論の場合はシステムRAM）を必要とします — 4ビット精度でパラメータ10億あたりおよそ0.6 GBです。これは線形にスケールします：14Bモデルは約9 GB、32Bモデルは約19 GB、70Bモデルは約40 GBを必要とします（すべてQ4_K_Mの場合）。' },
             { q: 'GLM-5.3をローカルで実行するにはどのようなハードウェアが必要ですか？', a: 'GLM-5.3（Z.ai。報じられた数値で、PromptQuorumは未検証）は~750Bパラメータのmixture-of-expertsモデルです。最も積極的な2ビットのダイナミックGGUFでも128 GB超の合計VRAM/RAMが必要で、単一のRTX 5090（32 GB）、128 GBのDGX Spark、128 GBのMac Studioのいずれにも大きすぎます。現実的なローカル構成は、192 GB以上のシステムRAMを搭載した4× RTX 3090/4090構成、または512 GBのMac Studio（M5 Ultra）で、いずれもCPU/GPUハイブリッドオフロード経由となり、速度は低く、PromptQuorumでは未検証です。ほとんどのユーザーにとって、GLM-5.3は事実上クラウド専用です。' },
             { q: 'VRAMを超えて、より多くのRAMはローカルLLMに役立ちますか？', a: 'システムRAMはOSとマルチタスクをサポートしますが、GPU VRAMを超えてモデル容量を増やすことはありません（GPUアクセラレーション推論の場合）。GPUがあれば、16 GBシステムRAMで十分です。GPUがなければ、32 GB以上のRAMが役立ちますが、推論速度はGPUベースより5〜10倍遅くなります。' },
-            { q: 'RTX 5080とMac Mini M4 Proで30Bパラメータモデルを実行できますか？', a: 'RTX 5080（16 GB VRAM）：30BはQ4_K_Mで約19 GBが必要なため完全には収まらず、CPUへの部分オフロード（大幅に低速）かより低い量子化が必要です。24Bモデル（Q4_K_Mで約14 GB）なら約80〜120トークン/秒で収まります。Mac Mini M4 Pro（48 GBユニファイド）：30BはQ4_K_M（約19 GB）で、macOS分を除いた約40 GBの範囲内に収まり、20〜30トークン/秒で動作します。Q8（28 GB）も収まり、コンテキスト用に約12 GBの余裕が残ります。RTX 5080は4〜6倍高速ですが携帯性が低く、Macはエネルギー効率が良いものの低速です。 速度は環境によって変わる概算値で、PromptQuorumの実測ではありません。' },
+            { q: 'RTX 5080とMac Mini M4 Proで30Bパラメータモデルを実行できますか？', a: 'RTX 5080（16 GB VRAM）：30BはQ4_K_Mで約19 GBが必要なため完全には収まらず、CPUへの部分オフロード（大幅に低速）かより低い量子化が必要です。24Bモデル（Q4_K_Mで約14 GB）なら約80〜120トークン/秒で収まります。Mac Mini M4 Pro（48 GBユニファイド）：30BはQ4_K_M（約19 GB）で、macOS分を除いた約40 GBの範囲内に収まり、20〜30トークン/秒で動作します。Q8（28 GB）も収まりますが、コンテキスト用の余裕はほとんど残りません。RTX 5080は4〜6倍高速ですが携帯性が低く、Macはエネルギー効率が良いものの低速です。 速度は環境によって変わる概算値で、PromptQuorumの実測ではありません。' },
             { q: '2026年にローカルコーディングLLMを実行するためのハードウェア要件は何ですか？', a: '良いコーディング性能のために：RTX 4080以上（16 GB VRAM）でDeepSeek-Coder 33B Q4またはMistral Small 3.1 24B Q4でコード生成。最小：RTX 4070 Ti（12 GB）でMistral Small 3.1 24B Q4。CPU：8コア以上。RAM：16 GBシステムRAM。500 GB SSD。' },
             { q: 'RTX 3060 12GBは2026年もローカルLLMに値しますか？', a: 'RTX 3060（12 GB）は古い（2021年アーキテクチャ）です。7B〜13BモデルをQ4で扱いますが40〜60トークン/秒を生み出します。中古は約$285、新品のRTX 5070（約$880）またはRTX 5060 Ti 16 GB（約$800）は2〜3倍高速です。RTX 3060はマルチカード構成のセカンダリGPUとしてのみ保持する価値があります。 速度は環境によって変わる概算値で、PromptQuorumの実測ではありません。' },
             { q: '7B、14B、32BモデルにはどれだけのVRAMが必要ですか？', a: '7〜8Bモデル：Q4_K_Mで約4.7〜5 GB、Q5_K_Mで5.7 GB、FP16で16 GB。14Bモデル：Q4_K_Mで約9 GB、FP16で約28 GB。30〜32Bモデル：Q4_K_Mで約19 GB、Q5_K_Mで22 GB、FP16で64 GB。コンテキスト長に応じて、重みに加えてKVキャッシュ用に25〜100%を上乗せしてください。Q4_K_Mは、ほとんどのハードウェアに推奨される量子化レベルです。' },
@@ -6223,7 +6223,7 @@ schema: {
             'name': 'RTX 5080とMac Mini M4 Proで30Bパラメータモデルを実行できますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 5080（16 GB VRAM）：30BはQ4_K_Mで約19 GBが必要なため完全には収まらず、CPUへの部分オフロード（大幅に低速）かより低い量子化が必要です。24Bモデル（Q4_K_Mで約14 GB）なら約80〜120トークン/秒で収まります。Mac Mini M4 Pro（48 GBユニファイド）：30BはQ4_K_M（約19 GB）で、macOS分を除いた約40 GBの範囲内に収まり、20〜30トークン/秒で動作します。Q8（28 GB）も収まり、コンテキスト用に約12 GBの余裕が残ります。RTX 5080は4〜6倍高速ですが携帯性が低く、Macはエネルギー効率が良いものの低速です。 速度は環境によって変わる概算値で、PromptQuorumの実測ではありません。',
+              'text': 'RTX 5080（16 GB VRAM）：30BはQ4_K_Mで約19 GBが必要なため完全には収まらず、CPUへの部分オフロード（大幅に低速）かより低い量子化が必要です。24Bモデル（Q4_K_Mで約14 GB）なら約80〜120トークン/秒で収まります。Mac Mini M4 Pro（48 GBユニファイド）：30BはQ4_K_M（約19 GB）で、macOS分を除いた約40 GBの範囲内に収まり、20〜30トークン/秒で動作します。Q8（28 GB）も収まりますが、コンテキスト用の余裕はほとんど残りません。RTX 5080は4〜6倍高速ですが携帯性が低く、Macはエネルギー効率が良いものの低速です。 速度は環境によって変わる概算値で、PromptQuorumの実測ではありません。',
             },
           },
           {
@@ -6294,7 +6294,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Mainstream (~$880)', 'description': 'RTX 5070、12 GB VRAM。7〜14Bモデルを約90トークン/秒で実行。価格対性能に優れています。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mid (~$979)', 'description': 'RTX 5070 Ti、16 GB VRAM。14〜32Bモデルを約110トークン/秒で実行。堅実な性能。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'High (~$1,450)', 'description': 'RTX 5080、16 GB VRAM。14〜32Bモデルを約130トークン/秒で実行。推奨。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Top (~$4,300–5,000+ street)', 'description': 'RTX 5090、32 GB VRAM。軽いオフロードで70BをQ4_K_Mで実行。約200トークン/秒。悪化するメモリ不足により価格は$1,999のMSRPの2倍以上のままです。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Top (~$4,300–5,000+ street)', 'description': 'RTX 5090、32 GB VRAM。軽いオフロードで70BをQ4_K_Mで実行。約200トークン/秒。悪化するメモリ不足により価格は$1,999のMSRPを大きく上回る水準のままです。' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Server ($7,000+)', 'description': 'RTX 6000 Ada / A100、48〜80 GB VRAM。マルチユーザー、24時間365日運用。エンタープライズグレード。' },
           { '@type': 'ListItem', 'position': 7, 'name': 'Desktop AI ($6,950)', 'description': 'NVIDIA DGX Spark、128 GBユニファイドメモリ。大規模MoEモデルを保持。密結合の70Bは約273 GB/sの帯域幅のため約3トークン/秒でのみ動作。' },
         ],
@@ -6589,7 +6589,7 @@ schema: {
           items: [
             '**8 GB 显存（RTX 5060 Ti（8 GB 版）、RTX 4060、Intel B580）：** Llama 3.1 8B Q4_K_M（4.7 GB，~70 tok/s）——推荐。Qwen3 8B（5 GB，最佳多语言+编程）。Phi-4 Mini 3.8B（2.3 GB，最快）。Gemma 3 4B（~3 GB，当前世代 Google 小模型，多模态）。避免 13B+ 模型。',
             '**12 GB 显存（RTX 4070 Ti、RTX 5070、Intel B770）：** Llama 3.1 8B（4.7 GB，快速且有余量）。Qwen3 14B Q4_K_M（8.5 GB，预算内更好的推理）。Qwen3 8B（5 GB，最佳多语言+编程）。DeepSeek-R1 8B（5 GB，推理出色）。避免 30B+ 和 MoE 模型，如 Llama 4 Scout（Q4 下 ~55 GB）。',
-            '**16 GB 显存（RTX 4080、RTX 5070 Ti、RTX 5080）：** Mistral Small 3.1 24B Q4_K_M（14 GB，该档位最佳质量）。用于智能体编程的 Devstral Small 24B Q4_K_M（~16 GB）。Qwen3 14B（9 GB，快速且有上下文余量）。Q2_K 下的 Llama 3.3 70B（17 GB，可行但质量下降）。',
+            '**16 GB 显存（RTX 4080、RTX 5070 Ti、RTX 5080）：** Mistral Small 3.1 24B Q4_K_M（14 GB，该档位质量较好）。用于智能体编程的 Devstral Small 24B Q4_K_M（~16 GB）。Qwen3 14B（9 GB，快速且有上下文余量）。Q2_K 下的 Llama 3.3 70B（17 GB，可行但质量下降）。',
             '**24 GB 显存（RTX 5090、RTX 4090、Tesla L40）：** Qwen 3.6 27B Q4_K_M（~16 GB，77.2% SWE-bench Verified（开发方报告值），出色的稠密编程模型）。DeepSeek-R1 32B Q4_K_M（~19 GB，推理出色）。Qwen3 32B Q5_K_M（~21 GB）。Llama 3.3 70B 在 Q4_K_M 下需要 2× 24 GB GPU。 更新的选择：Qwen3.8 27B（通过 Ollama 下载 18 GB，256K 上下文）。',
             '**32 GB 显存（RTX 5090）：** Llama 3.3 70B Q4_K_M（40 GB——最后几层需要少量 CPU 卸载）。Qwen3 32B（19 GB，完整装入并剩余 13 GB）。对于智能体编程，Kimi K2 系列（MoE，1T 总 / 32B 激活，Modified MIT）是重量级选择——Kimi K2.7 Code（2026年6月）是最新版本，K2.6 是此前的通用版本；两者在该档位都需要量化和大量卸载。RTX 5090 是首张能以最少卸载装入稠密 70B 的单消费级 GPU。',
             '**48+ GB 显存（RTX 6000 Ada、A100、DGX Spark）：** Llama 3.3 70B Q4_K_M（40 GB，完整装入）。Llama 4 Scout（17B 激活 / 109B 总 MoE，Q4 下 ~55 GB——最佳长上下文 10M-token / 多模态选择）。Llama 4 Maverick（17B 激活，400B 总，MoE）。Llama 3.3 70B Q8_0（70 GB——需要 80 GB A100）。NVIDIA DGX Spark（128 GB 统一内存）可装入每一个开放权重模型，直至并包括 Q8_0 下的 70B，并剩余 58 GB——但装不下最新的前沿 MoE 模型：GLM-5.3（~750B 总参数）即使采用激进的 2-bit 量化也需要远超 128 GB，远超 DGX Spark 或单台 128 GB Mac Studio 的容量。',
@@ -6605,7 +6605,7 @@ schema: {
           id: 'models-16gb',
           title: '16 GB显存的最佳本地LLM',
           content: [
-            '**2026年 16 GB 显存 GPU 的最佳本地LLM是 Q4_K_M 下的 Mistral Small 3.1 24B：它使用约 13 GB，以 55 tok/sec 运行，是装入后仍有上下文余量的最强通用模型之一。** 16 GB 卡（NVIDIA RTX 5080、RTX 5070 Ti、二手 RTX 4080 或 RTX 4090 笔记本）上限为 14-24B 模型——70B 模型需要约 40 GB，无法装入。',
+            '**2026年 16 GB 显存 GPU 的有力本地LLM之一是 Q4_K_M 下的 Mistral Small 3.1 24B：它使用约 13 GB，以 55 tok/sec 运行，是装入后仍有上下文余量的最强通用模型之一。** 16 GB 卡（NVIDIA RTX 5080、RTX 5070 Ti、二手 RTX 4080 或 RTX 4090 笔记本）上限为 14-24B 模型——70B 模型需要约 40 GB，无法装入。',
             '对于智能体编程，Devstral Small 24B Q4_K_M 可在约 16 GB 下装入；对于推理，DeepSeek-R1 14B Q8_0 是首选。更新的 Mistral Small 4（2026年3月）是将推理、视觉和编程融为一体的单一模型，是 16 GB 级默认的自然后继者。下表显示什么能装入、什么不能——"无法装入"行是 16 GB 用户最常犯的错误。',
           ],
           rows: [
@@ -6732,7 +6732,7 @@ schema: {
           ],
           columns: ['预算', 'GPU', 'CPU', '内存', '模型', '成本'],
           image: '/images/budget-builds-zh.svg',
-          imageCaption: '三种配置方案：$1500 入门级（RTX 4070 Ti，i7 13700，16GB）用于 7-13B 模型，$2500 稳健配置（RTX 4080，i7 14700K，32GB）用于 13-30B，$6,500+ 高端（2× RTX 4090，Ryzen 9，128GB）用于任意模型。中端提供最佳性价比。',
+          imageCaption: '三种配置方案：$1500 入门级（RTX 4070 Ti，i7 13700，16GB）用于 7-13B 模型，$2500 稳健配置（RTX 4080，i7 14700K，32GB）用于 13-30B，$6,500+ 高端（2× RTX 4090，Ryzen 9，128GB）用于任意模型。中端配置是均衡之选。',
           imageAlt: '本地LLM硬件的三种配置：从16GB GPU入门主机到双GPU高端工作站',
         },
         cantAffordHardware: {
@@ -6880,7 +6880,7 @@ schema: {
             { q: '7B模型在Q4量化下的内存经验法则是什么？', a: 'Q4_K_M 量化下的 7B 模型大约需要 4-5 GB 显存（纯CPU推理则为系统内存）——在4位精度下大约每十亿参数 0.6 GB。这个规律呈线性扩展：14B 模型需要约 9 GB，32B 模型需要约 19 GB，70B 模型需要约 40 GB，均以 Q4_K_M 计算。' },
             { q: '运行 GLM-5.3 本地需要什么硬件？', a: 'GLM-5.3（Z.ai；以下为外界报道的数据，未经 PromptQuorum 核实）是一个 ~750B 参数的 MoE 模型。即使是最激进的 2-bit 动态 GGUF 也需要远超 128 GB 的显存/内存总和——对单张 RTX 5090（32 GB）、128 GB 的 DGX Spark 或 128 GB 的 Mac Studio 而言都太大。现实的本地方案是 4× RTX 3090/4090 配 192 GB+ 系统内存的主机，或 512 GB 的 Mac Studio（M5 Ultra），两者都依赖 CPU/GPU 混合卸载，速度较慢，且未经 PromptQuorum 核实。对大多数用户而言，GLM-5.3 实际上只能靠云端运行。' },
             { q: '除显存外更多内存对本地LLM有帮助吗？', a: '系统内存支持操作系统和多任务，但不会增加超出 GPU 显存的模型容量（对于 GPU 加速推理）。有 GPU 时，16 GB 系统内存就足够。无 GPU 时，32+ GB 内存有帮助，但推理速度会比基于 GPU 的慢 5-10 倍。' },
-            { q: '你能在 RTX 5080 vs Mac Mini M4 Pro 上运行 30B 参数模型吗？', a: 'RTX 5080（16 GB 显存）：30B 在 Q4_K_M 下约需 19 GB，无法完整装入，需要部分卸载到 CPU（明显更慢）或使用更低的量化；24B 模型（Q4_K_M 下约 14 GB）可装入，速度约 80-120 tokens/sec。Mac Mini M4 Pro（48 GB 统一）：30B 在 Q4_K_M（约 19 GB）下可装入扣除 macOS 后剩余的约 40 GB，以 20-30 tokens/sec 运行；Q8（28 GB）也能装入，为上下文留出约 12 GB 余量。RTX 5080 快 4-6 倍但便携性较差；Mac 节能但更慢。 速度为近似值，会因配置而异，并非 PromptQuorum 实测。' },
+            { q: '你能在 RTX 5080 vs Mac Mini M4 Pro 上运行 30B 参数模型吗？', a: 'RTX 5080（16 GB 显存）：30B 在 Q4_K_M 下约需 19 GB，无法完整装入，需要部分卸载到 CPU（明显更慢）或使用更低的量化；24B 模型（Q4_K_M 下约 14 GB）可装入，速度约 80-120 tokens/sec。Mac Mini M4 Pro（48 GB 统一）：30B 在 Q4_K_M（约 19 GB）下可装入扣除 macOS 后剩余的约 40 GB，以 20-30 tokens/sec 运行；Q8（28 GB）也能装入，但为上下文留下的余量很小。RTX 5080 快 4-6 倍但便携性较差；Mac 节能但更慢。 速度为近似值，会因配置而异，并非 PromptQuorum 实测。' },
             { q: '2026 年运行本地编程LLM的硬件要求是什么？', a: '要获得良好的编程性能：RTX 4080+（16 GB 显存）配 DeepSeek-Coder 33B Q4 或 Mistral Small 3.1 24B Q4 用于代码生成。最低：RTX 4070 Ti（12 GB）配 Mistral Small 3.1 24B Q4。CPU：8+ 核。内存：16 GB 系统内存。500 GB SSD。' },
             { q: '2026 年 RTX 3060 12GB 对本地LLM还值得吗？', a: 'RTX 3060（12 GB）已过时（2021 架构）。它在 Q4 下处理 7B-13B 模型，但产出 40-60 tokens/sec。二手约 $285；全新 RTX 5070（~$880）或 RTX 5060 Ti 16 GB（~$800）快 2-3 倍。RTX 3060 仅在多卡配置中作为辅助 GPU 时才值得保留。 速度为近似值，会因配置而异，并非 PromptQuorum 实测。' },
             { q: '7B、14B 和 32B 模型需要多少显存？', a: '7-8B 模型：Q4_K_M 下约 4.7-5 GB，Q5_K_M 下 5.7 GB，FP16 下 16 GB。14B 模型：Q4_K_M 下约 9 GB，FP16 下约 28 GB。30-32B 模型：Q4_K_M 下约 19 GB，Q5_K_M 下 22 GB，FP16 下 64 GB。KV 缓存需要在权重之外按上下文长度额外预留 25-100%。Q4_K_M 是大多数硬件推荐的量化级别。' },
@@ -7122,7 +7122,7 @@ schema: {
             'name': '你能在 RTX 5080 vs Mac Mini M4 Pro 上运行 30B 参数模型吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 5080（16 GB 显存）：30B 在 Q4_K_M 下约需 19 GB，无法完整装入，需要部分卸载到 CPU（明显更慢）或使用更低的量化；24B 模型（Q4_K_M 下约 14 GB）可装入，速度约 80-120 tokens/sec。Mac Mini M4 Pro（48 GB 统一）：30B 在 Q4_K_M（约 19 GB）下可装入扣除 macOS 后剩余的约 40 GB，以 20-30 tokens/sec 运行；Q8（28 GB）也能装入，为上下文留出约 12 GB 余量。RTX 5080 快 4-6 倍但便携性较差；Mac 节能但更慢。 速度为近似值，会因配置而异，并非 PromptQuorum 实测。',
+              'text': 'RTX 5080（16 GB 显存）：30B 在 Q4_K_M 下约需 19 GB，无法完整装入，需要部分卸载到 CPU（明显更慢）或使用更低的量化；24B 模型（Q4_K_M 下约 14 GB）可装入，速度约 80-120 tokens/sec。Mac Mini M4 Pro（48 GB 统一）：30B 在 Q4_K_M（约 19 GB）下可装入扣除 macOS 后剩余的约 40 GB，以 20-30 tokens/sec 运行；Q8（28 GB）也能装入，但为上下文留下的余量很小。RTX 5080 快 4-6 倍但便携性较差；Mac 节能但更慢。 速度为近似值，会因配置而异，并非 PromptQuorum 实测。',
             },
           },
           {
@@ -7489,7 +7489,7 @@ schema: {
           items: [
             '**8GB VRAM(RTX 5060 Ti(8GB 모델), RTX 4060, Intel B580):** Llama 3.1 8B Q4_K_M(4.7GB, ~70 tok/s) -- 권장. Qwen3 8B(5GB, 최고 다국어 + 코딩). Phi-4 Mini 3.8B(2.3GB, 가장 빠름). Gemma 3 4B(~3GB, 현세대 Google 소형 모델, 멀티모달). 13B+ 모델은 피하십시오.',
             '**12GB VRAM(RTX 4070 Ti, RTX 5070, Intel B770):** Llama 3.1 8B(4.7GB, 여유 있는 빠른 실행). Qwen3 14B Q4_K_M(8.5GB, 예산 내 더 나은 추론). Qwen3 8B(5GB, 최고 다국어 + 코딩). DeepSeek-R1 8B(5GB, 강력한 추론). 30B+ 및 Llama 4 Scout 같은 MoE 모델(Q4에서 ~55GB)은 피하십시오.',
-            '**16GB VRAM(RTX 4080, RTX 5070 Ti, RTX 5080):** Mistral Small 3.1 24B Q4_K_M(14GB, 티어 내 최고 품질). 에이전트 코딩에는 Devstral Small 24B Q4_K_M(~16GB). Qwen3 14B(9GB, 컨텍스트 여유와 빠른 실행). Llama 3.3 70B @ Q2_K(17GB, 가능하지만 품질 저하).',
+            '**16GB VRAM(RTX 4080, RTX 5070 Ti, RTX 5080):** Mistral Small 3.1 24B Q4_K_M(14GB, 이 티어에서 품질이 우수). 에이전트 코딩에는 Devstral Small 24B Q4_K_M(~16GB). Qwen3 14B(9GB, 컨텍스트 여유와 빠른 실행). Llama 3.3 70B @ Q2_K(17GB, 가능하지만 품질 저하).',
             '**24GB VRAM(RTX 5090, RTX 4090, Tesla L40):** Qwen 3.6 27B Q4_K_M(~16GB, SWE-bench Verified 77.2%(개발사 보고), 우수한 밀집 코딩 모델). DeepSeek-R1 32B Q4_K_M(~19GB, 강력한 추론). Qwen3 32B Q5_K_M(~21GB). Llama 3.3 70B는 Q4_K_M에서 2× 24GB GPU가 필요합니다. 더 최신: Qwen3.8 27B(Ollama 다운로드 18GB, 256K 컨텍스트).',
             '**32GB VRAM(RTX 5090):** Llama 3.3 70B Q4_K_M(40GB -- 마지막 레이어에서 최소한의 CPU 오프로드 필요). Qwen3 32B(19GB, 13GB 여유로 완전히 수용). 에이전트 코딩에는 Kimi K2 계열(MoE, 총 1T / 활성 32B, Modified MIT)이 헤비급 선택입니다 -- Kimi K2.7 Code(2026년 6월)가 최신이며 K2.6이 이전 일반 릴리스입니다. 둘 다 이 티어에서는 양자화와 대량 오프로드가 필요합니다. RTX 5090은 최소한의 오프로드로 밀집 70B를 담는 최초의 단일 소비자용 GPU입니다.',
             '**48GB+ VRAM(RTX 6000 Ada, A100, DGX Spark):** Llama 3.3 70B Q4_K_M(40GB, 완전히 수용). Llama 4 Scout(17B 활성 / 109B 총 MoE, Q4에서 ~55GB -- 최고의 장문 컨텍스트 10M 토큰 / 멀티모달 선택). Llama 4 Maverick(17B 활성, 총 400B, MoE). Llama 3.3 70B Q8_0(70GB -- 80GB A100 필요). NVIDIA DGX Spark(128GB 통합)는 Q8_0에서 70B까지 포함한 모든 오픈 가중치 모델을 58GB 여유로 수용합니다 -- 그러나 가장 최신 프론티어 MoE 모델은 예외입니다: GLM-5.3(총 ~750B)는 공격적인 2비트 양자화에서도 128GB 초과가 필요하여 DGX Spark나 단일 128GB Mac Studio로도 수용할 수 없습니다.',
@@ -7506,7 +7506,7 @@ schema: {
           title: '16GB VRAM에서 가장 잘 실행되는 로컬 LLM은?',
           content: [
             '**16GB VRAM GPU(NVIDIA RTX 4080, RTX 5080, 또는 RTX 4090 노트북)에서 실용적인 상한선은 14~24B 모델입니다.** Q4_K_M의 Mistral Small 3.1 24B가 전체적으로 가장 유력한 선택지 중 하나입니다: 13GB VRAM 사용, 55 tok/sec 실행(대략적인 수치이며 PromptQuorum의 실측이 아닙니다).',
-            'Devstral Small 24B Q4_K_M은 ~16GB에서 실행되며 에이전트 코딩 워크플로우에 최적화되어 있습니다. 아래 표는 어떤 모델이 맞는지, 맞지 않는지 보여줍니다. "맞지 않음" 행은 의도적으로 포함되었습니다 — 이것이 16GB 소유자들이 가장 자주 저지르는 실수입니다.',
+            'Devstral Small 24B Q4_K_M은 ~16GB에서 실행되며 에이전트 코딩에 쓰이는 모델입니다. 아래 표는 어떤 모델이 맞는지, 맞지 않는지 보여줍니다. "맞지 않음" 행은 의도적으로 포함되었습니다 — 이것이 16GB 소유자들이 가장 자주 저지르는 실수입니다.',
           ],
           rows: [
             { '모델': 'Mistral Small 3.1 24B', '양자화': 'Q4_K_M', 'VRAM 사용': '~13GB', '속도(RTX 4080)': '55 tok/sec', '최적 용도': '일반 채팅', '16GB 적합?': '✅ 예' },
@@ -7632,7 +7632,7 @@ schema: {
           ],
           columns: ['예산', 'GPU', 'CPU', 'RAM', '모델', '평가'],
           image: '/images/budget-builds-en.svg',
-          imageCaption: '세 가지 빌드 구성: $1500 입문형(RTX 4070 Ti, i7 13700, 16GB) — 7~13B 모델, $2500 탄탄한 빌드(RTX 4080, i7 14700K, 32GB) — 13~30B, $6,500+ 고급형(2× RTX 4090, Ryzen 9, 128GB) — 모든 모델. 중급 빌드가 최고의 가성비.',
+          imageCaption: '세 가지 빌드 구성: $1500 입문형(RTX 4070 Ti, i7 13700, 16GB) — 7~13B 모델, $2500 탄탄한 빌드(RTX 4080, i7 14700K, 32GB) — 13~30B, $6,500+ 고급형(2× RTX 4090, Ryzen 9, 128GB) — 모든 모델. 중급 빌드는 균형 잡힌 선택입니다.',
           imageAlt: '로컬 LLM 하드웨어 구성 3가지: 16GB GPU 입문용 PC부터 듀얼 GPU 워크스테이션까지',
         },
         cantAffordHardware: {
@@ -7680,7 +7680,7 @@ schema: {
           id: 'mac-hardware',
           title: 'Mac 하드웨어로 로컬 LLM을 실행할 수 있습니까?',
           content: [
-            '**Apple Silicon(M 시리즈)은 CPU와 GPU 간에 공유되는 통합 메모리를 사용하여 로컬 LLM을 효율적으로 실행합니다.** 2025년 10월 이후 출시된 M5는 로컬 추론에 있어 상당한 업그레이드를 제공합니다. Apple은 M4 대비 LLM 프롬프트 처리가 4배 빠르다고 주장합니다.',
+            '**Apple Silicon(M 시리즈)은 CPU와 GPU 간에 공유되는 통합 메모리를 사용하여 로컬 LLM을 효율적으로 실행합니다.** Apple은 M5 Pro/Max에서 M4 세대 대비 LLM 프롬프트 처리(첫 토큰까지의 시간)가 최대 4배 빠르다고 밝히고 있으나, 토큰 생성 속도의 향상 폭은 이보다 작습니다.',
             '128GB 통합 메모리를 갖춘 M5 Max는 노트북 또는 Mac Studio에서 Q4_K_M 기준 70B 모델을 약 12~15 tok/sec로 편안하게 실행합니다(근사치이며 PromptQuorum의 실측이 아닙니다). 다중 GPU 데스크톱보다는 느립니다. 64GB 통합 메모리를 갖춘 M5 Pro는 KV 캐시와 멀티태스킹을 위한 넉넉한 여유 공간으로 32B 모델을 처리합니다. 다만 M5 Max조차 2비트에서도 128GB 초과가 필요한 GLM-5.3에는 여전히 크게 못 미칩니다 -- 이 영역에서는 속도보다 Apple의 통합 메모리 상한선이 더 중요한 제약입니다.',
             '**Apple은 2026년 8월 25일 Mac mini와 Mac Studio 라인업을 새로 선보였으며, 2026년 9월 22일부터 출하됩니다.** Mac mini는 이제 M6($899부터(16GB), 통합 메모리 최대 32GB, 최대 170GB/s)와 M5 Pro($1,699부터, 최대 64GB, 307GB/s) 구성으로 제공됩니다. Mac Studio는 M5 Max($2,499부터, 최대 128GB)와 M5 Ultra(96GB 기준 $5,499부터, 최상위 구성에서는 256GB 또는 512GB까지 — 512GB 모델은 2026년 10월 28일부터 주문할 수 있으며 $22,299부터 시작)로 상위 등급이 확장되었습니다. 기존의 M4 Mac mini($599부터)와 M4 Pro Mac mini(최대 $2,299, 최대 64GB), 그리고 이전 Mac Studio M4 Max/M3 Ultra는 이제 이전 세대 제품입니다.',
             '저희가 확인한 최초의 M5 Ultra 독립 측정 결과(BGR, 2026년 9월 21일, 256GB 모델, LM Studio에서 4비트 Qwen 3.8 27B)는 약 55 tok/s로, M3 Ultra의 약 40 tok/s보다 높았습니다. M6에 대해서는 독립적인 추론 수치를 찾지 못했으며, Apple도 제3자가 검증한 자체 수치를 공개하지 않았습니다. 처음으로 단일 Mac이 이론적으로 GLM-5.3(~750B MoE, 2비트에서 128GB 초과)를 통합 메모리에 담을 수 있게 되었습니다: 최상위 구성인 512GB Mac Studio M5 Ultra는 이 요구량을 여유롭게 상회합니다. 실제 벤치마크가 나오기 전까지는 4× RTX 3090/4090 구성이 GLM-5.3급 모델을 위한 더 검증된 로컬 경로로 남아 있습니다.',
@@ -7831,7 +7831,7 @@ schema: {
             },
             {
               q: 'RTX 5080과 Mac Mini M4 Pro에서 30B 파라미터 모델을 실행할 수 있습니까?',
-              a: 'RTX 5080(16GB VRAM): 30B는 Q4_K_M에서 약 19GB가 필요해 완전히 들어가지 않으며, CPU로의 부분 오프로드(훨씬 느림)나 더 낮은 양자화가 필요합니다. 24B 모델(Q4_K_M에서 약 14GB)은 초당 약 80~120 토큰으로 들어갑니다. Mac Mini M4 Pro(통합 48GB): 30B는 Q4_K_M(약 19GB)으로 macOS 제외 후 남는 약 40GB 안에서 실행되며 초당 20~30 토큰을 냅니다. Q8(28GB)도 들어가며 컨텍스트용으로 약 12GB가 남습니다. RTX 5080이 4~6배 빠르지만 휴대성은 떨어지고, Mac은 에너지 효율이 좋지만 더 느립니다. 속도는 환경에 따라 달라지는 대략적인 수치이며 PromptQuorum의 실측이 아닙니다.',
+              a: 'RTX 5080(16GB VRAM): 30B는 Q4_K_M에서 약 19GB가 필요해 완전히 들어가지 않으며, CPU로의 부분 오프로드(훨씬 느림)나 더 낮은 양자화가 필요합니다. 24B 모델(Q4_K_M에서 약 14GB)은 초당 약 80~120 토큰으로 들어갑니다. Mac Mini M4 Pro(통합 48GB): 30B는 Q4_K_M(약 19GB)으로 macOS 제외 후 남는 약 40GB 안에서 실행되며 초당 20~30 토큰을 냅니다. Q8(28GB)도 들어가지만 컨텍스트용 여유는 많지 않습니다. RTX 5080이 4~6배 빠르지만 휴대성은 떨어지고, Mac은 에너지 효율이 좋지만 더 느립니다. 속도는 환경에 따라 달라지는 대략적인 수치이며 PromptQuorum의 실측이 아닙니다.',
             },
             {
               q: '2026년에 로컬 코딩 LLM을 실행하기 위한 하드웨어 요구 사항은 무엇입니까?',
@@ -7932,7 +7932,7 @@ schema: {
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '예산형(~$800)', 'description': '16GB VRAM의 RTX 5060 Ti. 7~13B 모델을 ~60 tok/sec로 실행.' },
-          { '@type': 'ListItem', 'position': 2, 'name': '메인스트림(~$880)', 'description': '12GB VRAM의 RTX 5070. 7~14B 모델을 ~90 tok/sec로 실행. 최고의 가격 대비 성능.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '메인스트림(~$880)', 'description': '12GB VRAM의 RTX 5070. 7~14B 모델을 ~90 tok/sec로 실행. 가격 대비 성능이 뛰어난 선택.' },
           { '@type': 'ListItem', 'position': 3, 'name': '중급(~$979)', 'description': '16GB VRAM의 RTX 5070 Ti. 14~32B 모델을 ~110 tok/sec로 실행. 안정적인 성능.' },
           { '@type': 'ListItem', 'position': 4, 'name': '고급(~$1,450)', 'description': '16GB VRAM의 RTX 5080. 14~32B 모델을 ~130 tok/sec로 실행. 추천.' },
           { '@type': 'ListItem', 'position': 5, 'name': '최상급(~$4,300~5,000+ 실거래가)', 'description': '32GB VRAM의 RTX 5090. 경량 오프로드로 Q4_K_M에서 70B를 실행. ~200 tok/sec. 공급 부족 심화로 가격이 MSRP $1,999를 크게 웃도는 수준으로 유지되고 있습니다.' },
@@ -8110,7 +8110,7 @@ schema: {
             'name': 'RTX 5080과 Mac Mini M4 Pro에서 30B 파라미터 모델을 실행할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 5080(16GB VRAM): 30B는 Q4_K_M에서 약 19GB가 필요해 완전히 들어가지 않으며, CPU로의 부분 오프로드(훨씬 느림)나 더 낮은 양자화가 필요합니다. 24B 모델(Q4_K_M에서 약 14GB)은 초당 약 80~120 토큰으로 들어갑니다. Mac Mini M4 Pro(통합 48GB): 30B는 Q4_K_M(약 19GB)으로 macOS 제외 후 남는 약 40GB 안에서 실행되며 초당 20~30 토큰을 냅니다. Q8(28GB)도 들어가며 컨텍스트용으로 약 12GB가 남습니다. RTX 5080이 4~6배 빠르지만 휴대성은 떨어지고, Mac은 에너지 효율이 좋지만 더 느립니다. 속도는 환경에 따라 달라지는 대략적인 수치이며 PromptQuorum의 실측이 아닙니다.',
+              'text': 'RTX 5080(16GB VRAM): 30B는 Q4_K_M에서 약 19GB가 필요해 완전히 들어가지 않으며, CPU로의 부분 오프로드(훨씬 느림)나 더 낮은 양자화가 필요합니다. 24B 모델(Q4_K_M에서 약 14GB)은 초당 약 80~120 토큰으로 들어갑니다. Mac Mini M4 Pro(통합 48GB): 30B는 Q4_K_M(약 19GB)으로 macOS 제외 후 남는 약 40GB 안에서 실행되며 초당 20~30 토큰을 냅니다. Q8(28GB)도 들어가지만 컨텍스트용 여유는 많지 않습니다. RTX 5080이 4~6배 빠르지만 휴대성은 떨어지고, Mac은 에너지 효율이 좋지만 더 느립니다. 속도는 환경에 따라 달라지는 대략적인 수치이며 PromptQuorum의 실측이 아닙니다.',
             },
           },
           {
