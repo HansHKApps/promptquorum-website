@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/how-to-install-lm-studio-overview-hero-en.webp',
       dateModified: '2026-11-14',
       seoTitle: 'Install LM Studio: Download, Setup and Models per GPU',
-      intro: 'LM Studio is a desktop application that lets you browse, download, and run local LLMs through a graphical interface -- no terminal commands required. It runs on macOS, Windows, and Linux, and includes a built-in chat UI and an OpenAI-compatible local server. LM Studio supports any GGUF-quantized model from Hugging Face.',
+      intro: 'LM Studio is a desktop application that lets you browse, download, and run local LLMs through a graphical interface -- no terminal commands required. It runs on macOS, Windows, and Linux, and includes a built-in chat UI and an OpenAI-compatible local server. LM Studio supports many GGUF-quantized models from Hugging Face; models with an unsupported architecture may not load.',
       metaDescription: 'Install LM Studio on macOS, Windows or Linux: official download link, one install step per OS and which models fit 8, 12, 16 and 24 GB VRAM.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio is a desktop application that lets you browse, download, and run local LLMs through a graphical interface -- no terminal commands required. It runs on macOS, Windows, and Linux, and includes a built-in chat UI and an OpenAI-compatible local server.**',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio is a free desktop application for macOS, Windows, and Linux that lets you browse, download, and chat with any GGUF-quantized model from Hugging Face through a graphical interface, with no terminal commands required and a built-in OpenAI-compatible local server.' },
+            { type: 'one-sentence', text: 'LM Studio is a desktop application for macOS, Windows, and Linux that lets you browse, download, and chat with many GGUF-quantized models from Hugging Face (models with an unsupported architecture may not load) through a graphical interface, with no terminal commands required and a built-in OpenAI-compatible local server. According to the vendor, use is free, but the terms can change.' },
             { type: 'plain-terms', text: "If you don't want to use a command line, LM Studio is the point-and-click way to run AI models on your own computer. Download the app, search for a model by name inside it, click download, and start chatting -- the whole thing takes under 5 minutes and includes a built-in server so other apps can talk to it too." },
           ],
           items: [
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         quickInstall: {
           id: 'download-install-quick',
           title: 'Download LM Studio and Install It: One Step per OS',
-          content: '**Download LM Studio free from the official [LM Studio download page](https://lmstudio.ai/download), then follow the one install step for your system below.** It needs Apple Silicon with macOS 14.0 or newer, a Windows x64 (AVX2) or ARM64 PC, or Ubuntu 20.04 or newer, and 16 GB of RAM is recommended (see the [requirements table](#system-requirements)).',
+          content: '**Download LM Studio from the official [LM Studio download page](https://lmstudio.ai/download), then follow the one install step for your system below.** It needs Apple Silicon with macOS 14.0 or newer, a Windows x64 (AVX2) or ARM64 PC, or Ubuntu 20.04 or newer, and 16 GB of RAM is recommended (see the [requirements table](#system-requirements)). According to the vendor ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), use is free, but the terms can change.',
           items: [
           '**macOS:** open the downloaded .dmg file and drag LM Studio into the Applications folder.',
           '**Windows:** run the downloaded installer and follow the prompts.',
@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'LM Studio vs Ollama: Which Should You Use?',
           rows: [
             { 'Factor': 'Interface', 'LM Studio': 'Graphical desktop app', 'Ollama': 'Terminal + API' },
-            { 'Factor': 'Model source', 'LM Studio': 'Hugging Face (any GGUF model)', 'Ollama': 'Ollama library (curated)' },
+            { 'Factor': 'Model source', 'LM Studio': 'Hugging Face (many GGUF models)', 'Ollama': 'Ollama library (curated)' },
             { 'Factor': 'API port', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'Factor': 'Model management', 'LM Studio': 'GUI browser with file size info', 'Ollama': 'CLI commands (ollama pull, list, rm)' },
             { 'Factor': 'Automation', 'LM Studio': 'GUI-first; local API and lms CLI available', 'Ollama': 'CLI-first (scripting, Docker, CI)' },
@@ -378,7 +378,7 @@ schema: {
       title: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-es.webp',
       seoTitle: 'Instalar LM Studio: descarga, pasos y modelos según tu GPU',
-      intro: 'LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI. LM Studio admite cualquier modelo GGUF cuantizado de Hugging Face.',
+      intro: 'LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI. LM Studio admite muchos modelos GGUF cuantizados de Hugging Face; los de arquitectura no compatible pueden no cargarse.',
       metaDescription: 'Instala LM Studio en macOS, Windows o Linux: descarga oficial, un paso por sistema y qué modelos caben en 8, 12, 16 y 24 GB de VRAM de tu GPU.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI.**',
@@ -404,7 +404,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio es una aplicación de escritorio gratuita para macOS, Windows y Linux que te permite explorar, descargar y chatear con cualquier modelo GGUF cuantizado de Hugging Face a través de una interfaz gráfica, sin comandos de terminal y con un servidor local compatible con OpenAI integrado.' },
+            { type: 'one-sentence', text: 'LM Studio es una aplicación de escritorio para macOS, Windows y Linux que te permite explorar, descargar y chatear con muchos modelos GGUF cuantizados de Hugging Face (los de arquitectura no compatible pueden no cargarse) a través de una interfaz gráfica, sin comandos de terminal y con un servidor local compatible con OpenAI integrado. Según el fabricante, el uso es gratuito, pero las condiciones pueden cambiar.' },
             { type: 'plain-terms', text: 'Si no quieres usar la línea de comandos, LM Studio es la forma de apuntar y hacer clic para ejecutar modelos de IA en tu propio ordenador. Descarga la app, busca un modelo por nombre dentro de ella, haz clic en descargar y empieza a chatear -- todo el proceso lleva menos de 5 minutos e incluye un servidor integrado para que otras apps también puedan usarlo.' },
           ],
           items: [
@@ -418,7 +418,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'Descargar LM Studio e instalarlo: un paso por sistema',
-          content: '**Descarga LM Studio gratis desde la [página de descarga oficial](https://lmstudio.ai/download) y sigue el paso de instalación de tu sistema.** Necesita un Mac con Apple Silicon y macOS 14.0 o posterior, un PC con Windows x64 (AVX2) o ARM64, o Ubuntu 20.04 o posterior, y se recomiendan 16 GB de RAM (consulta la [tabla de requisitos](#system-requirements)).',
+          content: '**Descarga LM Studio desde la [página de descarga oficial](https://lmstudio.ai/download) y sigue el paso de instalación de tu sistema.** Necesita un Mac con Apple Silicon y macOS 14.0 o posterior, un PC con Windows x64 (AVX2) o ARM64, o Ubuntu 20.04 o posterior, y se recomiendan 16 GB de RAM (consulta la [tabla de requisitos](#system-requirements)). Según el fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), el uso es gratuito, pero las condiciones pueden cambiar.',
           items: [
           '**macOS:** abre el archivo .dmg descargado y arrastra LM Studio a la carpeta Aplicaciones.',
           '**Windows:** ejecuta el instalador descargado y sigue las indicaciones.',
@@ -530,7 +530,7 @@ schema: {
           title: 'LM Studio vs Ollama: ¿cuál debes usar?',
           rows: [
             { 'Factor': 'Interfaz', 'LM Studio': 'Aplicación de escritorio gráfica', 'Ollama': 'Terminal + API' },
-            { 'Factor': 'Fuente de modelos', 'LM Studio': 'Hugging Face (cualquier modelo GGUF)', 'Ollama': 'Biblioteca de Ollama (curada)' },
+            { 'Factor': 'Fuente de modelos', 'LM Studio': 'Hugging Face (muchos modelos GGUF)', 'Ollama': 'Biblioteca de Ollama (curada)' },
             { 'Factor': 'Puerto de API', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'Factor': 'Gestión de modelos', 'LM Studio': 'Navegador GUI con info de tamaño de archivo', 'Ollama': 'Comandos CLI (ollama pull, list, rm)' },
             { 'Factor': 'Automatización', 'LM Studio': 'Orientada a GUI; API local y CLI lms disponibles', 'Ollama': 'Orientado a CLI (scripting, Docker, CI)' },
@@ -776,7 +776,7 @@ schema: {
       title: 'تثبيت ⁨LM Studio⁩: إعداد الواجهة الرسومية لـ ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-ar.webp',
       seoTitle: 'تثبيت LM Studio: التنزيل والإعداد والنماذج حسب GPU',
-      intro: 'LM Studio تطبيق سطح مكتب يتيح لك استكشاف نماذج LLM المحلية وتنزيلها وتشغيلها عبر واجهة رسومية، دون الحاجة إلى أوامر في الطرفية. يعمل على macOS و Windows و Linux، ويتضمن واجهة محادثة مدمجة وخادمًا محليًا متوافقًا مع OpenAI. يدعم LM Studio أي نموذج GGUF مُكمّم من Hugging Face.',
+      intro: 'LM Studio تطبيق سطح مكتب يتيح لك استكشاف نماذج LLM المحلية وتنزيلها وتشغيلها عبر واجهة رسومية، دون الحاجة إلى أوامر في الطرفية. يعمل على macOS و Windows و Linux، ويتضمن واجهة محادثة مدمجة وخادمًا محليًا متوافقًا مع OpenAI. يدعم LM Studio كثيرًا من نماذج GGUF المُكمّمة من Hugging Face، وقد لا تُحمَّل النماذج ذات البنية غير المدعومة.',
       metaDescription: 'ثبّت LM Studio على Windows أو macOS أو Linux: رابط التنزيل الرسمي وخطوة لكل نظام والنماذج المناسبة لذاكرة VRAM بسعة 8 و12 و16 و24 GB.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio تطبيق سطح مكتب يتيح لك استكشاف نماذج LLM المحلية وتنزيلها وتشغيلها عبر واجهة رسومية، دون الحاجة إلى أوامر في الطرفية. يعمل على macOS و Windows و Linux، ويتضمن واجهة محادثة مدمجة وخادمًا محليًا متوافقًا مع OpenAI.**',
@@ -802,7 +802,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio هو تطبيق سطح مكتب مجاني لـ macOS وWindows وLinux يتيح لك تصفح وتنزيل والدردشة مع أي نموذج GGUF مُكمَّم من Hugging Face عبر واجهة رسومية، دون أوامر طرفية ومع خادم محلي متوافق مع OpenAI مدمج.' },
+            { type: 'one-sentence', text: 'LM Studio هو تطبيق سطح مكتب لـ macOS وWindows وLinux يتيح لك تصفح وتنزيل والدردشة مع كثير من نماذج GGUF المُكمَّمة من Hugging Face (وقد لا تُحمَّل النماذج ذات البنية غير المدعومة) عبر واجهة رسومية، دون أوامر طرفية ومع خادم محلي متوافق مع OpenAI مدمج. بحسب الجهة المطوِّرة، الاستخدام مجاني، لكن الشروط قد تتغير.' },
             { type: 'plain-terms', text: 'إذا كنت لا تريد استخدام سطر الأوامر، فإن LM Studio هو الطريقة السهلة لتشغيل نماذج الذكاء الاصطناعي على جهازك الخاص بنقرات فقط. نزّل التطبيق، ابحث عن نموذج بالاسم داخله، انقر على تنزيل، وابدأ الدردشة -- تستغرق العملية بأكملها أقل من 5 دقائق وتتضمن خادماً مدمجاً لتتمكن تطبيقات أخرى من استخدامه أيضاً.' },
           ],
           items: [
@@ -816,7 +816,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'تنزيل LM Studio وتثبيته: خطوة لكل نظام',
-          content: '**نزّل LM Studio مجانًا من [صفحة التنزيل الرسمية](https://lmstudio.ai/download) ثم اتبع خطوة التثبيت الخاصة بنظامك.** يحتاج إلى Apple Silicon مع macOS 14.0 أو أحدث، أو حاسوب Windows بمعالج x64 (مع AVX2) أو ARM64، أو Ubuntu 20.04 أو أحدث، ويوصى بذاكرة RAM بسعة 16 GB (راجع [جدول المتطلبات](#system-requirements)).',
+          content: '**نزّل LM Studio من [صفحة التنزيل الرسمية](https://lmstudio.ai/download) ثم اتبع خطوة التثبيت الخاصة بنظامك.** يحتاج إلى Apple Silicon مع macOS 14.0 أو أحدث، أو حاسوب Windows بمعالج x64 (مع AVX2) أو ARM64، أو Ubuntu 20.04 أو أحدث، ويوصى بذاكرة RAM بسعة 16 GB (راجع [جدول المتطلبات](#system-requirements)). بحسب الجهة المطوِّرة ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work))، الاستخدام مجاني، لكن الشروط قد تتغير.',
           items: [
           '**macOS:** افتح ملف .dmg الذي نزّلته واسحب LM Studio إلى مجلد Applications.',
           '**Windows:** شغّل ملف التثبيت الذي نزّلته واتبع التعليمات.',
@@ -928,7 +928,7 @@ schema: {
           title: 'LM Studio مقابل Ollama: أيهما تستخدم؟',
           rows: [
             { 'العامل': 'الواجهة', 'LM Studio': 'تطبيق سطح مكتب رسومي', 'Ollama': 'طرفية + API' },
-            { 'العامل': 'مصدر النماذج', 'LM Studio': 'Hugging Face (أي نموذج GGUF)', 'Ollama': 'مكتبة Ollama (منتقاة)' },
+            { 'العامل': 'مصدر النماذج', 'LM Studio': 'Hugging Face (كثير من نماذج GGUF)', 'Ollama': 'مكتبة Ollama (منتقاة)' },
             { 'العامل': 'منفذ API', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'العامل': 'إدارة النماذج', 'LM Studio': 'متصفح GUI بمعلومات حجم الملف', 'Ollama': 'أوامر CLI (ollama pull, list, rm)' },
             { 'العامل': 'الأتمتة', 'LM Studio': 'موجّه للواجهة الرسومية؛ API محلي وأداة lms متاحان', 'Ollama': 'موجّه لسطر الأوامر (برمجة نصية، Docker، CI)' },
@@ -1138,7 +1138,7 @@ schema: {
       title: 'Instalar LM Studio: configuração de interface gráfica para macOS, Windows e Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-pt.webp',
       seoTitle: 'Instalar o LM Studio: download, passos e modelos por GPU',
-      intro: 'LM Studio é um aplicativo de desktop que permite explorar, baixar e executar LLMs locais por meio de uma interface gráfica, sem necessidade de comandos no terminal. Funciona no macOS, Windows e Linux, e inclui uma interface de chat integrada e um servidor local compatível com OpenAI. O LM Studio suporta qualquer modelo GGUF quantizado do Hugging Face.',
+      intro: 'LM Studio é um aplicativo de desktop que permite explorar, baixar e executar LLMs locais por meio de uma interface gráfica, sem necessidade de comandos no terminal. Funciona no macOS, Windows e Linux, e inclui uma interface de chat integrada e um servidor local compatível com OpenAI. O LM Studio suporta muitos modelos GGUF quantizados do Hugging Face; modelos com arquitetura não compatível podem não carregar.',
       metaDescription: 'Instale o LM Studio no Windows, macOS ou Linux: download oficial, um passo por sistema e quais modelos cabem em 8, 12, 16 e 24 GB de VRAM, sem terminal.',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
@@ -1167,7 +1167,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'O LM Studio é um aplicativo de desktop para macOS, Windows e Linux que permite explorar, baixar e conversar com qualquer modelo GGUF quantizado do Hugging Face por meio de uma interface gráfica, sem comandos de terminal e com um servidor local compatível com OpenAI integrado. Segundo o fabricante, o uso é gratuito, mas as condições podem mudar.' },
+            { type: 'one-sentence', text: 'O LM Studio é um aplicativo de desktop para macOS, Windows e Linux que permite explorar, baixar e conversar com muitos modelos GGUF quantizados do Hugging Face (modelos com arquitetura não compatível podem não carregar) por meio de uma interface gráfica, sem comandos de terminal e com um servidor local compatível com OpenAI integrado. Segundo o fabricante, o uso é gratuito, mas as condições podem mudar.' },
             { type: 'plain-terms', text: 'Se você não quer usar a linha de comando, o LM Studio é a forma de apontar e clicar para rodar modelos de IA no seu próprio computador. Baixe o app, procure um modelo pelo nome dentro dele, clique em baixar e comece a conversar -- todo o processo leva menos de 5 minutos e inclui um servidor integrado para que outros apps também possam usá-lo.' },
           ],
           items: [
@@ -1291,7 +1291,7 @@ schema: {
           title: 'LM Studio ou Ollama: qual usar?',
           rows: [
             { 'Fator': 'Interface', 'LM Studio': 'App de desktop gráfico', 'Ollama': 'Terminal + API' },
-            { 'Fator': 'Fonte de modelos', 'LM Studio': 'Hugging Face (qualquer GGUF)', 'Ollama': 'Biblioteca Ollama (curada)' },
+            { 'Fator': 'Fonte de modelos', 'LM Studio': 'Hugging Face (muitos GGUF)', 'Ollama': 'Biblioteca Ollama (curada)' },
             { 'Fator': 'Porta da API', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'Fator': 'Gerenciamento', 'LM Studio': 'Navegador GUI c/ tamanho', 'Ollama': 'Comandos CLI (pull, list, rm)' },
             { 'Fator': 'Automação', 'LM Studio': 'Focado em GUI; API local e CLI lms disponíveis', 'Ollama': 'Focado em CLI (scripts, Docker, CI)' },
@@ -1343,8 +1343,8 @@ schema: {
           id: 'faq',
           title: 'Perguntas frequentes sobre LM Studio',
           faqs: [
-            { q: 'O LM Studio é gratuito?', a: 'Sim. Segundo o fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), o LM Studio é gratuito para uso pessoal e profissional desde julho de 2025. Só o nível Enterprise/Teams, separado, é pago. Ele é desenvolvido pela Element Labs, Inc. As condições podem mudar; confira os termos atuais em [lmstudio.ai](https://lmstudio.ai).' },
-            { q: 'LM Studio ou Ollama — qual devo usar?', a: 'LM Studio para iniciantes que preferem GUI. Ollama para usuários avançados que preferem linha de comando e integração com API. Os aplicativos têm uso gratuito (o LM Studio, segundo o fabricante, para uso pessoal e profissional; o Ollama sob licença MIT), mas existem planos pagos separados e as condições podem mudar. Ambos executam muitos modelos de peso aberto em comum; o Ollama usa sobretudo a sua própria biblioteca, enquanto o LM Studio carrega muitos modelos GGUF do Hugging Face.' },
+            { q: 'O LM Studio é gratuito?', a: 'Sim. Segundo o fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), o LM Studio é gratuito para uso pessoal e profissional desde julho de 2025. Só o nível Enterprise/Teams, separado, é pago. Ele é desenvolvido pela Element Labs, Inc. As condições podem mudar; confira os termos atuais em [lmstudio.ai](https://lmstudio.ai). Os modelos que você baixa têm licenças próprias, que podem limitar usos como o comercial.' },
+            { q: 'LM Studio ou Ollama — qual devo usar?', a: 'LM Studio para iniciantes que preferem GUI. Ollama para usuários avançados que preferem linha de comando e integração com API. Os aplicativos têm uso gratuito (o LM Studio, segundo o fabricante, para uso pessoal e profissional; o Ollama, de código aberto sob a licença MIT, conforme o [repositório oficial](https://github.com/ollama/ollama)), mas existem planos pagos separados e as condições podem mudar. Ambos executam muitos modelos de peso aberto em comum; o Ollama usa sobretudo a sua própria biblioteca, enquanto o LM Studio carrega muitos modelos GGUF do Hugging Face.' },
             { q: 'Posso usar o LM Studio em português?', a: 'Confira nas configurações do LM Studio se o idioma da interface está disponível em português na sua versão. Independentemente disso, você pode conversar com os modelos em qualquer idioma, incluindo português. Escolha modelos multilíngues como Aya 8B ou Qwen para melhor suporte ao PT-BR.' },
             { q: 'Quais são os requisitos mínimos do LM Studio?', a: 'Apple Silicon com macOS 14.0 ou mais recente, Windows x64 (AVX2) ou ARM64, ou Ubuntu 20.04 ou mais recente; recomendam-se 16 GB de RAM (com 8 GB, só modelos pequenos). GPU não é obrigatória -- Macs com Apple Silicon e GPUs NVIDIA/AMD são suportados para aceleração.' },
             { q: 'Qual quantização usar no LM Studio com 8 GB de RAM?', a: 'Q4_K_M é a quantização recomendada para sistemas com 8 GB de RAM. Ela oferece o melhor equilíbrio entre qualidade do modelo e uso de memória para modelos 7B (~4,5 GB de arquivo).' },
@@ -1428,7 +1428,7 @@ schema: {
             'name': 'O LM Studio é gratuito?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim. Segundo o fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), o LM Studio é gratuito para uso pessoal e profissional desde julho de 2025. Só o nível Enterprise/Teams, separado, é pago. Ele é desenvolvido pela Element Labs, Inc. As condições podem mudar; confira os termos atuais em [lmstudio.ai](https://lmstudio.ai).',
+              'text': 'Sim. Segundo o fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), o LM Studio é gratuito para uso pessoal e profissional desde julho de 2025. Só o nível Enterprise/Teams, separado, é pago. Ele é desenvolvido pela Element Labs, Inc. As condições podem mudar; confira os termos atuais em [lmstudio.ai](https://lmstudio.ai). Os modelos que você baixa têm licenças próprias, que podem limitar usos como o comercial.',
             },
           },
           {
@@ -1436,7 +1436,7 @@ schema: {
             'name': 'LM Studio ou Ollama — qual devo usar?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LM Studio para iniciantes que preferem GUI. Ollama para usuários avançados que preferem linha de comando e integração com API. Os aplicativos têm uso gratuito (o LM Studio, segundo o fabricante, para uso pessoal e profissional; o Ollama sob licença MIT), mas existem planos pagos separados e as condições podem mudar. Ambos executam muitos modelos de peso aberto em comum; o Ollama usa sobretudo a sua própria biblioteca, enquanto o LM Studio carrega muitos modelos GGUF do Hugging Face.',
+              'text': 'LM Studio para iniciantes que preferem GUI. Ollama para usuários avançados que preferem linha de comando e integração com API. Os aplicativos têm uso gratuito (o LM Studio, segundo o fabricante, para uso pessoal e profissional; o Ollama, de código aberto sob a licença MIT, conforme o [repositório oficial](https://github.com/ollama/ollama)), mas existem planos pagos separados e as condições podem mudar. Ambos executam muitos modelos de peso aberto em comum; o Ollama usa sobretudo a sua própria biblioteca, enquanto o LM Studio carrega muitos modelos GGUF do Hugging Face.',
             },
           },
           {
@@ -1496,7 +1496,7 @@ schema: {
       title: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-de.webp',
       seoTitle: 'LM Studio installieren: Download, Setup und Modelle je GPU',
-      intro: 'LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs ohne Terminalbefehle. Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie die App, suchen Sie nach einem Modell nach Name, klicken Sie auf „Download", und beginnen Sie zu chatten -- der gesamte Vorgang dauert weniger als 5 Minuten. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist die Nutzung kostenlos; die Bedingungen können sich ändern. LM Studio läuft auf macOS (Apple Silicon), Windows und Linux (AppImage) und unterstützt alle GGUF-quantisierten Modelle aus der umfangreichen Hugging Face-Modellbibliothek. Es enthält eine integrierte Chat-Benutzeroberfläche, einen OpenAI-kompatiblen lokalen Server auf localhost:1234 und automatische GPU-Beschleunigung für Apple Metal, NVIDIA CUDA und AMD ROCm.',
+      intro: 'LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs ohne Terminalbefehle. Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie die App, suchen Sie nach einem Modell nach Name, klicken Sie auf „Download", und beginnen Sie zu chatten -- der gesamte Vorgang dauert weniger als 5 Minuten. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist die Nutzung kostenlos; die Bedingungen können sich ändern. LM Studio läuft auf macOS (Apple Silicon), Windows und Linux (AppImage) und unterstützt viele GGUF-quantisierte Modelle aus der umfangreichen Hugging Face-Modellbibliothek (Modelle mit nicht unterstützter Architektur lassen sich ggf. nicht laden). Es enthält eine integrierte Chat-Benutzeroberfläche, einen OpenAI-kompatiblen lokalen Server auf localhost:1234 und automatische GPU-Beschleunigung für Apple Metal, NVIDIA CUDA und AMD ROCm.',
       metaDescription: 'LM Studio installieren auf Windows, Mac und Linux: offizieller Download, ein Schritt pro System und welche Modelle in 8, 12, 16 und 24 GB VRAM passen.',
       leadAnswerBlock: '**LM Studio ist eine Desktop-Anwendung, mit der Sie lokale LLMs über eine grafische Oberfläche durchsuchen, herunterladen und ausführen, ganz ohne Terminalbefehle. Es läuft unter macOS, Windows und Linux und enthält eine integrierte Chat-Oberfläche sowie einen OpenAI-kompatiblen lokalen Server.**',
       publishDate: '2026-04-04',
@@ -1527,7 +1527,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio ist eine Desktop-Anwendung für macOS, Windows und Linux, mit der Sie jedes GGUF-quantisierte Modell von Hugging Face über eine grafische Oberfläche durchsuchen, herunterladen und nutzen können -- ganz ohne Terminalbefehle und mit integriertem OpenAI-kompatiblem lokalem Server. Nach Angaben des Herstellers ist die Nutzung kostenlos, die Bedingungen können sich ändern.' },
+            { type: 'one-sentence', text: 'LM Studio ist eine Desktop-Anwendung für macOS, Windows und Linux, mit der Sie viele GGUF-quantisierte Modelle von Hugging Face über eine grafische Oberfläche durchsuchen, herunterladen und nutzen können (Modelle mit nicht unterstützter Architektur lassen sich ggf. nicht laden) -- ganz ohne Terminalbefehle und mit integriertem OpenAI-kompatiblem lokalem Server. Nach Angaben des Herstellers ist die Nutzung kostenlos, die Bedingungen können sich ändern.' },
             { type: 'plain-terms', text: 'Wer keine Kommandozeile nutzen möchte, findet in LM Studio den Weg per Mausklick, um KI-Modelle auf dem eigenen Computer auszuführen. App herunterladen, ein Modell nach Namen darin suchen, auf Herunterladen klicken und loschatten -- der gesamte Vorgang dauert unter 5 Minuten und bringt einen integrierten Server mit, damit auch andere Apps darauf zugreifen können.' },
           ],
           title: 'Zusammenfassung',
@@ -1665,7 +1665,7 @@ print(response.choices[0].message.content)`,
           columns: ['Faktor', 'LM Studio', 'Ollama'],
           rows: [
             { 'Faktor': 'Oberfläche', 'LM Studio': 'GUI-Desktop-App', 'Ollama': 'Terminal + API' },
-            { 'Faktor': 'Modellquelle', 'LM Studio': 'Hugging Face (beliebiges GGUF-Modell)', 'Ollama': 'Ollama-Bibliothek (kuratiert)' },
+            { 'Faktor': 'Modellquelle', 'LM Studio': 'Hugging Face (viele GGUF-Modelle)', 'Ollama': 'Ollama-Bibliothek (kuratiert)' },
             { 'Faktor': 'API-Port', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'Faktor': 'Modellverwaltung', 'LM Studio': 'GUI-Browser mit Dateigröße', 'Ollama': 'CLI-Befehle (ollama pull, list, rm)' },
             { 'Faktor': 'Automatisierung', 'LM Studio': 'GUI-fokussiert; lokale API und lms-CLI verfügbar', 'Ollama': 'CLI-fokussiert (Scripting, Docker, CI)' },
@@ -1690,7 +1690,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Der lokale Server gibt „model not found"-Fehler zurück',
-              a: 'Ein Modell muss auf der Registerkarte „Local Server" geladen werden, bevor der Server antworten kann. Öffnen Sie die Registerkarte „Local Server", wählen Sie ein Modell aus dem Dropdown aus und klicken Sie auf „Start Server". Der Modellname in API-Anfragen kann beliebig sein -- LM Studio verwendet whichever Modell gerade geladen ist.'
+              a: 'Ein Modell muss auf der Registerkarte „Local Server" geladen werden, bevor der Server antworten kann. Öffnen Sie die Registerkarte „Local Server", wählen Sie ein Modell aus dem Dropdown aus und klicken Sie auf „Start Server". Der Modellname in API-Anfragen kann beliebig sein -- LM Studio verwendet das gerade geladene Modell.'
             },
           ],
         },
@@ -1749,7 +1749,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Ist LM Studio kostenlos?',
-              a: 'Ja. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe. Die Bedingungen können sich ändern – prüfen Sie die aktuellen Nutzungsbedingungen auf [lmstudio.ai](https://lmstudio.ai).'
+              a: 'Ja. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe. Die Bedingungen können sich ändern – prüfen Sie die aktuellen Nutzungsbedingungen auf [lmstudio.ai](https://lmstudio.ai). Für heruntergeladene Modelle gelten jeweils eigene Lizenzen, die z. B. die kommerzielle Nutzung einschränken können.'
             },
             {
               q: 'Was ist der Unterschied zwischen LM Studio und Ollama?',
@@ -1757,7 +1757,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Welche Modelle funktionieren mit LM Studio?',
-              a: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini und Gemma 4 E2B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.'
+              a: 'Viele GGUF-Format-Modelle von Hugging Face; Modelle mit nicht unterstützter Architektur lassen sich ggf. nicht laden. Die integrierte Suche greift auf den Hugging Face-Modell-Hub zu. Beliebte Optionen sind Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini und Gemma 4 E2B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.'
             },
             {
               q: 'Verwendet LM Studio meine GPU automatisch?',
@@ -1773,7 +1773,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
-              a: 'Die Inferenz läuft lokal auf Ihrem Gerät; Eingabe- und Ausgabedaten werden dafür nicht an externe Server übertragen (Modell-Downloads und Update-Prüfungen laufen weiterhin über das Internet). Bei rein lokaler Inferenz entfällt für diese Ebene ein externer Auftragsverarbeiter nach Artikel 28 DSGVO. Ollama und LM Studio nehmen in der Standardeinstellung nur Verbindungen vom eigenen Rechner an; wer den Server im Netzwerk freigibt, muss ihn selbst absichern. Das kann die Umsetzung der DSGVO unterstützen; ob Ihr Gesamtaufbau konform ist, hängt von Rechtsgrundlage und technischen und organisatorischen Maßnahmen ab (keine Rechtsberatung).'
+              a: 'Die Inferenz läuft lokal auf Ihrem Gerät; Eingabe- und Ausgabedaten werden dafür nicht an externe Server übertragen (Modell-Downloads und Update-Prüfungen laufen weiterhin über das Internet). Bei rein lokaler Inferenz entfällt für diese Ebene ein externer Auftragsverarbeiter nach Artikel 28 DSGVO. Laut ihrer Dokumentation lauschen Ollama und LM Studio standardmäßig nur auf dem eigenen Rechner ([Ollama-FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md)); wer den Server im Netzwerk freigibt, muss ihn selbst absichern. Das kann die Umsetzung der DSGVO unterstützen; ob Ihr Gesamtaufbau konform ist, hängt von Rechtsgrundlage und technischen und organisatorischen Maßnahmen ab (keine Rechtsberatung).'
             },
             {
               q: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
@@ -1847,7 +1847,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Ist LM Studio kostenlos?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe. Die Bedingungen können sich ändern – prüfen Sie die aktuellen Nutzungsbedingungen auf [lmstudio.ai](https://lmstudio.ai).' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; kostenpflichtig ist nur die separate Enterprise/Teams-Stufe. Die Bedingungen können sich ändern – prüfen Sie die aktuellen Nutzungsbedingungen auf [lmstudio.ai](https://lmstudio.ai). Für heruntergeladene Modelle gelten jeweils eigene Lizenzen, die z. B. die kommerzielle Nutzung einschränken können.' }
           },
           {
             '@type': 'Question',
@@ -1857,7 +1857,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Welche Modelle funktionieren mit LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini und Gemma 4 E2B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Viele GGUF-Format-Modelle von Hugging Face; Modelle mit nicht unterstützter Architektur lassen sich ggf. nicht laden. Die integrierte Suche greift auf den Hugging Face-Modell-Hub zu. Beliebte Optionen sind Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini und Gemma 4 E2B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.' }
           },
           {
             '@type': 'Question',
@@ -1877,7 +1877,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Die Inferenz läuft lokal auf Ihrem Gerät; Eingabe- und Ausgabedaten werden dafür nicht an externe Server übertragen (Modell-Downloads und Update-Prüfungen laufen weiterhin über das Internet). Bei rein lokaler Inferenz entfällt für diese Ebene ein externer Auftragsverarbeiter nach Artikel 28 DSGVO. Ollama und LM Studio nehmen in der Standardeinstellung nur Verbindungen vom eigenen Rechner an; wer den Server im Netzwerk freigibt, muss ihn selbst absichern. Das kann die Umsetzung der DSGVO unterstützen; ob Ihr Gesamtaufbau konform ist, hängt von Rechtsgrundlage und technischen und organisatorischen Maßnahmen ab (keine Rechtsberatung).' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Die Inferenz läuft lokal auf Ihrem Gerät; Eingabe- und Ausgabedaten werden dafür nicht an externe Server übertragen (Modell-Downloads und Update-Prüfungen laufen weiterhin über das Internet). Bei rein lokaler Inferenz entfällt für diese Ebene ein externer Auftragsverarbeiter nach Artikel 28 DSGVO. Laut ihrer Dokumentation lauschen Ollama und LM Studio standardmäßig nur auf dem eigenen Rechner ([Ollama-FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md)); wer den Server im Netzwerk freigibt, muss ihn selbst absichern. Das kann die Umsetzung der DSGVO unterstützen; ob Ihr Gesamtaufbau konform ist, hängt von Rechtsgrundlage und technischen und organisatorischen Maßnahmen ab (keine Rechtsberatung).' }
           },
           {
             '@type': 'Question',
@@ -1893,7 +1893,7 @@ schema: {
         numberOfItems: 6,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Oberfläche', description: 'LM Studio: GUI-Desktop-App. Ollama: Terminal + API.' },
-          { '@type': 'ListItem', position: 2, name: 'Modellquelle', description: 'LM Studio: Hugging Face (beliebiges GGUF-Modell). Ollama: Ollama-Bibliothek (kuratiert).' },
+          { '@type': 'ListItem', position: 2, name: 'Modellquelle', description: 'LM Studio: Hugging Face (viele GGUF-Modelle). Ollama: Ollama-Bibliothek (kuratiert).' },
           { '@type': 'ListItem', position: 3, name: 'API-Port', description: 'LM Studio: localhost:1234. Ollama: localhost:11434.' },
           { '@type': 'ListItem', position: 4, name: 'Modellverwaltung', description: 'LM Studio: GUI-Browser mit Dateigröße. Ollama: CLI-Befehle (ollama pull, list, rm).' },
           { '@type': 'ListItem', position: 5, name: 'Automatisierung', description: 'LM Studio: GUI-fokussiert; lokale API und lms-CLI verfügbar. Ollama: CLI-fokussiert (Scripting, Docker, CI).' },
@@ -1907,7 +1907,7 @@ schema: {
       title: 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-fr.webp',
       seoTitle: 'Installer LM Studio : téléchargement et modèles par GPU',
-      intro: 'LM Studio est une application desktop pour exécuter des LLM locaux sans commandes terminal. Téléchargez l\'installeur depuis lmstudio.ai, ouvrez l\'application, recherchez un modèle par nom, cliquez sur télécharger et commencez à discuter -- tout le processus prend moins de 5 minutes. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), son usage est gratuit ; les conditions peuvent évoluer. LM Studio fonctionne sur macOS (Apple Silicon), Windows et Linux (AppImage), et supporte n\'importe quel modèle quantifié GGUF de la vaste bibliothèque de modèles de Hugging Face. Il inclut une interface de chat intégrée, un serveur local compatible OpenAI sur localhost:1234, et l\'accélération GPU automatique pour Apple Metal, NVIDIA CUDA et AMD ROCm.',
+      intro: 'LM Studio est une application desktop pour exécuter des LLM locaux sans commandes terminal. Téléchargez l\'installeur depuis lmstudio.ai, ouvrez l\'application, recherchez un modèle par nom, cliquez sur télécharger et commencez à discuter -- tout le processus prend moins de 5 minutes. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), son usage est gratuit ; les conditions peuvent évoluer. LM Studio fonctionne sur macOS (Apple Silicon), Windows et Linux (AppImage), et supporte de nombreux modèles quantifiés GGUF de la vaste bibliothèque de modèles de Hugging Face (un modèle d\'architecture non prise en charge peut ne pas se charger). Il inclut une interface de chat intégrée, un serveur local compatible OpenAI sur localhost:1234, et l\'accélération GPU automatique pour Apple Metal, NVIDIA CUDA et AMD ROCm.',
       metaDescription: 'Installez LM Studio sur macOS, Windows ou Linux : lien officiel, une étape par système et les modèles adaptés à 8, 12, 16 et 24 GB de VRAM, sans terminal.',
       leadAnswerBlock: '**LM Studio est une application de bureau qui permet de parcourir, télécharger et exécuter des LLM locaux via une interface graphique, sans aucune commande terminal. Elle fonctionne sur macOS, Windows et Linux, et inclut une interface de chat intégrée et un serveur local compatible OpenAI.**',
       publishDate: '2026-04-04',
@@ -1938,7 +1938,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: "LM Studio est une application de bureau pour macOS, Windows et Linux qui permet de parcourir, télécharger et discuter avec n'importe quel modèle GGUF quantifié de Hugging Face via une interface graphique, sans commande terminal, avec un serveur local compatible OpenAI intégré. Selon l'éditeur, l'usage est gratuit, mais les conditions peuvent évoluer." },
+            { type: 'one-sentence', text: "LM Studio est une application de bureau pour macOS, Windows et Linux qui permet de parcourir, télécharger et discuter avec de nombreux modèles GGUF quantifiés de Hugging Face (un modèle d'architecture non prise en charge peut ne pas se charger) via une interface graphique, sans commande terminal, avec un serveur local compatible OpenAI intégré. Selon l'éditeur, l'usage est gratuit, mais les conditions peuvent évoluer." },
             { type: 'plain-terms', text: "Pour ceux qui ne veulent pas utiliser la ligne de commande, LM Studio permet de faire tourner des modèles d'IA sur son ordinateur en quelques clics. Téléchargez l'appli, cherchez un modèle par son nom, cliquez sur télécharger et commencez à discuter -- le tout en moins de 5 minutes, avec un serveur intégré pour que d'autres applications puissent aussi s'y connecter." },
           ],
           title: 'Points clés',
@@ -2064,7 +2064,7 @@ schema: {
           title: 'Lequel choisir : LM Studio ou Ollama ?',
           rows: [
             { 'Facteur': 'Interface', 'LM Studio': 'Application desktop graphique', 'Ollama': 'Terminal + API' },
-            { 'Facteur': 'Source de modèles', 'LM Studio': 'Hugging Face (tout modèle GGUF)', 'Ollama': 'Bibliothèque Ollama (sélectionnée)' },
+            { 'Facteur': 'Source de modèles', 'LM Studio': 'Hugging Face (de nombreux modèles GGUF)', 'Ollama': 'Bibliothèque Ollama (sélectionnée)' },
             { 'Facteur': 'Port API', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'Facteur': 'Gestion des modèles', 'LM Studio': 'Navigateur GUI avec info taille fichier', 'Ollama': 'Commandes CLI (ollama pull, list, rm)' },
             { 'Facteur': 'Automatisation', 'LM Studio': 'Orientée GUI ; API locale et CLI lms disponibles', 'Ollama': 'Orientée CLI (scripting, Docker, CI)' },
@@ -2149,7 +2149,7 @@ schema: {
             },
             {
               q: 'LM Studio est-il gratuit ?',
-              a: 'Oui. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), LM Studio est gratuit depuis juillet 2025 pour un usage personnel et professionnel ; seul le niveau Enterprise/Teams, distinct, est payant. Les conditions peuvent évoluer : consultez les conditions d\'utilisation actuelles sur [lmstudio.ai](https://lmstudio.ai).',
+              a: 'Oui. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), LM Studio est gratuit depuis juillet 2025 pour un usage personnel et professionnel ; seul le niveau Enterprise/Teams, distinct, est payant. Les conditions peuvent évoluer : consultez les conditions d\'utilisation actuelles sur [lmstudio.ai](https://lmstudio.ai). Les modèles téléchargés sont soumis à leurs propres licences, qui peuvent limiter certains usages (par exemple commerciaux).',
             },
             {
               q: 'Quelle est la différence entre LM Studio et Ollama ?',
@@ -2157,7 +2157,7 @@ schema: {
             },
             {
               q: 'Quels modèles fonctionnent avec LM Studio ?',
-              a: 'N\'importe quel modèle au format GGUF de Hugging Face. La recherche intégrée couvre l\'intégralité du hub de modèles Hugging Face. Les choix populaires incluent Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini et Gemma 4 E2B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.',
+              a: 'De nombreux modèles au format GGUF de Hugging Face (un modèle d\'architecture non prise en charge peut ne pas se charger). La recherche intégrée interroge le hub de modèles Hugging Face. Les choix populaires incluent Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini et Gemma 4 E2B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.',
             },
             {
               q: 'LM Studio utilise-t-il mon GPU automatiquement ?',
@@ -2232,9 +2232,9 @@ schema: {
           { '@type': 'Question', name: 'Le modèle génère très lentement (moins de 5 tokens/seconde)', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit -- si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.' } },
           { '@type': 'Question', name: 'Je ne peux pas trouver un modèle spécifique dans la recherche LM Studio', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio recherche Hugging Face pour les fichiers GGUF. Si un modèle n\'apparaît pas, essayez de rechercher directement par le nom du référentiel Hugging Face (par exemple « bartowski/Llama-3.1-8B-Instruct-GGUF »). Certains modèles plus récents peuvent ne pas être indexés.' } },
           { '@type': 'Question', name: 'Le serveur local retourne des erreurs « model not found »', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle doit être chargé dans l\'onglet Serveur Local avant que le serveur puisse répondre. Ouvrez l\'onglet Serveur Local, sélectionnez un modèle dans la liste déroulante et cliquez sur Démarrer le serveur. Le nom du modèle dans les requêtes API peut être n\'importe quelle chaîne -- LM Studio utilise le modèle actuellement chargé.' } },
-          { '@type': 'Question', name: 'LM Studio est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), LM Studio est gratuit depuis juillet 2025 pour un usage personnel et professionnel ; seul le niveau Enterprise/Teams, distinct, est payant. Les conditions peuvent évoluer : consultez les conditions d\'utilisation actuelles sur [lmstudio.ai](https://lmstudio.ai).' } },
+          { '@type': 'Question', name: 'LM Studio est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), LM Studio est gratuit depuis juillet 2025 pour un usage personnel et professionnel ; seul le niveau Enterprise/Teams, distinct, est payant. Les conditions peuvent évoluer : consultez les conditions d\'utilisation actuelles sur [lmstudio.ai](https://lmstudio.ai). Les modèles téléchargés sont soumis à leurs propres licences, qui peuvent limiter certains usages (par exemple commerciaux).' } },
           { '@type': 'Question', name: 'Quelle est la différence entre LM Studio et Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio est une application desktop graphique -- vous parcourez et téléchargez des modèles via une interface visuelle, lancez des discussions en un clic et ajustez les paramètres avec des curseurs. Ollama est un outil en ligne de commande et service d\'arrière-plan -- plus rapide à configurer avec une seule commande, meilleur pour l\'automatisation et le scripting. LM Studio exécute les modèles GGUF avec llama.cpp (et MLX sur Apple Silicon) ; Ollama prend aussi en charge llama.cpp comme backend.' } },
-          { '@type': 'Question', name: 'Quels modèles fonctionnent avec LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'N\'importe quel modèle au format GGUF de Hugging Face. Les choix populaires incluent Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini et Gemma 4 E2B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.' } },
+          { '@type': 'Question', name: 'Quels modèles fonctionnent avec LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'De nombreux modèles au format GGUF de Hugging Face (un modèle d\'architecture non prise en charge peut ne pas se charger). Les choix populaires incluent Llama 3.1 8B, Qwen3 8B, Mistral Small, Phi-4 Mini et Gemma 4 E2B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.' } },
           { '@type': 'Question', name: 'LM Studio utilise-t-il mon GPU automatiquement ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui sur Apple Silicon -- l\'accélération Metal est activée par défaut. Sur Windows et Linux avec GPU NVIDIA, LM Studio détecte CUDA automatiquement si les pilotes sont installés. Vérifiez le paramètre Couches GPU dans le panneau modèle -- s\'il affiche 0 couche sur GPU, votre GPU n\'est pas utilisé.' } },
           { '@type': 'Question', name: 'Où LM Studio stocke-t-il les modèles téléchargés ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS : ~/Library/Application Support/LM Studio/Models/lmstudio-community/. Sur Windows : %USERPROFILE%\\.cache\\lm-studio\\models\\. Sur Linux : ~/.cache/lm-studio/models/. Vous pouvez modifier l\'emplacement du stockage dans LM Studio Paramètres → Général → Répertoire de stockage des modèles.' } },
           { '@type': 'Question', name: 'Puis-je utiliser LM Studio avec VS Code ou Cursor ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Lancez le serveur local de LM Studio sur localhost:1234, puis configurez votre extension IDE pour utiliser http://localhost:1234/v1 comme URL de base API avec n\'importe quelle chaîne comme clé API. Les extensions VS Code qui supportent les APIs compatibles OpenAI (Continue, alternatives GitHub Copilot) peuvent généralement être utilisées avec LM Studio ; testez les fonctionnalités dont vous avez besoin.' } }
@@ -2247,7 +2247,7 @@ schema: {
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Interface', 'description': 'LM Studio : application desktop graphique. Ollama : terminal plus API.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Source de modèles', 'description': 'LM Studio : tout GGUF sur Hugging Face. Ollama : bibliothèque sélectionnée de modèles.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Source de modèles', 'description': 'LM Studio : de nombreux GGUF sur Hugging Face. Ollama : bibliothèque sélectionnée de modèles.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Port API', 'description': 'LM Studio : localhost:1234. Ollama : localhost:11434.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Gestion des modèles', 'description': 'LM Studio : navigateur GUI avec tailles. Ollama : commandes CLI.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Automatisation', 'description': 'LM Studio : orientée GUI, avec API locale et CLI lms. Ollama : orientée CLI, avec scripting et Docker.' },
@@ -2261,7 +2261,7 @@ schema: {
       title: 'LM Studio のインストール方法：macOS・Windows・Linux 向けデスクトップアプリ設定ガイド',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-ja.webp',
       seoTitle: 'LM Studioのインストール方法とGPU別モデルの目安',
-      intro: 'LM Studioは、ターミナルコマンドなしでローカルLLMを実行できるデスクトップアプリケーションです。lmstudio.aiからインストーラーをダウンロードしてアプリを開き、モデルを名前で検索してダウンロードボタンをクリックしてチャットを開始します--プロセス全体が5分以内に完了します。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば利用は無料ですが、条件は変更される場合があります。LM StudioはmacOS（Apple Silicon）、Windows、およびLinux（AppImage）で動作し、Hugging Faceの大規模なモデルライブラリから任意のGGUF量子化モデルをサポートしています。組み込みのチャットUI、localhost:1234上のOpenAI互換ローカルサーバー、およびApple Metal、NVIDIA CUDA、AMD ROCmの自動GPU加速が含まれています。',
+      intro: 'LM Studioは、ターミナルコマンドなしでローカルLLMを実行できるデスクトップアプリケーションです。lmstudio.aiからインストーラーをダウンロードしてアプリを開き、モデルを名前で検索してダウンロードボタンをクリックしてチャットを開始します--プロセス全体が5分以内に完了します。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば利用は無料ですが、条件は変更される場合があります。LM StudioはmacOS（Apple Silicon）、Windows、およびLinux（AppImage）で動作し、Hugging Faceの大規模なモデルライブラリから多くのGGUF量子化モデルをサポートしています（未対応のアーキテクチャのモデルは読み込めない場合があります）。組み込みのチャットUI、localhost:1234上のOpenAI互換ローカルサーバー、およびApple Metal、NVIDIA CUDA、AMD ROCmの自動GPU加速が含まれています。',
       metaDescription: 'LM StudioをWindows・Mac・Linuxに入れる手順。公式ダウンロード、OS別のインストール手順、VRAM 8・12・16・24GBで動くモデルの目安を紹介します。',
       leadAnswerBlock: '**LM Studioは、ターミナルコマンドなしで、グラフィカルインターフェースからローカルLLMを閲覧・ダウンロード・実行できるデスクトップアプリです。macOS、Windows、Linuxで動作し、組み込みのチャットUIとOpenAI互換のローカルサーバーを備えています。**',
       publishDate: '2026-04-04',
@@ -2292,7 +2292,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studioは、macOS、Windows、Linux向けのデスクトップアプリで、グラフィカルインターフェースを通じてHugging Faceの任意のGGUF量子化モデルを閲覧・ダウンロード・チャットでき、ターミナルコマンドは不要で、OpenAI互換のローカルサーバーも内蔵しています。提供元によれば利用は無料ですが、条件は変更される場合があります。' },
+            { type: 'one-sentence', text: 'LM Studioは、macOS、Windows、Linux向けのデスクトップアプリで、グラフィカルインターフェースを通じてHugging Faceの多くのGGUF量子化モデルを閲覧・ダウンロード・チャットでき（未対応のアーキテクチャのモデルは読み込めない場合があります）、ターミナルコマンドは不要で、OpenAI互換のローカルサーバーも内蔵しています。提供元によれば利用は無料ですが、条件は変更される場合があります。' },
             { type: 'plain-terms', text: 'コマンドラインを使いたくない人にとって、LM StudioはクリックだけでAIモデルを自分のコンピューターで実行できる方法です。アプリをダウンロードし、その中で名前でモデルを検索し、ダウンロードをクリックしてチャットを始めるだけです -- 全体で5分もかからず、他のアプリからも使えるサーバーが内蔵されています。' },
           ],
           title: '重要ポイント',
@@ -2418,7 +2418,7 @@ schema: {
           title: 'LM StudioまたはOllamaを選択する方法',
           rows: [
             { '要素': 'インターフェース', 'LM Studio': 'グラフィカルデスクトップアプリ', 'Ollama': 'ターミナル + API' },
-            { '要素': 'モデルソース', 'LM Studio': 'Hugging Face（任意のGGUFモデル）', 'Ollama': 'Ollama Library（キュレーション）' },
+            { '要素': 'モデルソース', 'LM Studio': 'Hugging Face（多くのGGUFモデル）', 'Ollama': 'Ollama Library（キュレーション）' },
             { '要素': 'APIポート', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { '要素': 'モデル管理', 'LM Studio': 'ファイルサイズ情報を含むGUI Browser', 'Ollama': 'CLIコマンド（ollama pull、list、rm）' },
             { '要素': '自動化', 'LM Studio': 'GUI中心（ローカルAPIとlms CLIも利用可）', 'Ollama': 'CLI中心（スクリプティング、Docker、CI）' },
@@ -2454,7 +2454,7 @@ schema: {
           content: [
             '**日本**：組織がAI推論の実行場所を文書化する必要がある場合、LM Studioは固定パスにモデルキャッシュを保持するため、推論をデバイス、モデルファイル、バージョンに紐づけて記録しやすくなります。法令やガイドラインへの適合が自動的に保証されるわけではありません。これは法的助言ではありません。',
             '**東アジア地域**：LM StudioではHugging Face検索を通じてQwen3モデルを探せます--モデルブラウザで「qwen3」を検索すると、利用可能なサイズが見つかります。',
-            '**データセキュリティ**：LM Studioの推論はローカルで実行され、推論自体に外部API呼び出しはありません。データセキュリティ法（数据安全法）など各地域のデータ処理要件を満たすかどうかは、利用目的ごとに確認が必要です（法的助言ではありません）。',
+            '**データセキュリティ**：LM Studioの推論はローカルで実行され、推論自体に外部API呼び出しはありません（モデルのダウンロードやアップデート確認にはインターネット接続が必要です）。データセキュリティ法（数据安全法）など各地域のデータ処理要件を満たすかどうかは、利用目的ごとに確認が必要です（法的助言ではありません）。',
           ],
         },
         commonMistakes: {
@@ -2489,9 +2489,9 @@ schema: {
             { q: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', a: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック--0が表示される場合、GPUは使用されていない。macOSでは、LM StudioはApple SiliconのMetalを自動的に有効。Windows/Linuxの場合、NVIDIAドライバーが最新であることを確認し、GPU Layersを最大値に増やす。' },
             { q: 'LM Studio検索で特定のモデルが見つからない', a: 'LM StudioはGGUFファイルをHugging Faceで検索している。モデルが表示されない場合は、Hugging Faceリポジトリ名を直接検索。新しいモデルの一部はまだインデックス化されていない可能性。' },
             { q: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', a: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択し、サーバーの開始をクリック。APIリクエストのモデル名は任意の文字列にできる。' },
-            { q: 'LM Studioは無料ですか？', a: 'はい。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば、2025年7月以降は個人利用・業務利用ともに無料で、有料なのは別枠のEnterprise/Teamsのみです。条件は変更される場合があるため、最新の利用規約を[lmstudio.ai](https://lmstudio.ai)でご確認ください。' },
+            { q: 'LM Studioは無料ですか？', a: 'はい。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば、2025年7月以降は個人利用・業務利用ともに無料で、有料なのは別枠のEnterprise/Teamsのみです。条件は変更される場合があるため、最新の利用規約を[lmstudio.ai](https://lmstudio.ai)でご確認ください。ダウンロードしたモデルには、それぞれ個別のライセンスが適用され、商用利用などが制限される場合があります。' },
             { q: 'LM StudioとOllamaの違いは何ですか？', a: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始、スライダーで設定を調整。Ollamaはコマンドラインツールおよびバックグラウンドサービス--1つのコマンドで設定するのが高速。' },
-            { q: 'LM Studioはどのモデルで動作しますか？', a: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini、およびGemma 4 E2Bが含まれる。Discover tabでモデル名で検索。LM Studioはダウンロード前に各量子化レベルのファイルサイズを表示。' },
+            { q: 'LM Studioはどのモデルで動作しますか？', a: 'Hugging Faceの多くのGGUF形式モデルに対応しています（未対応のアーキテクチャのモデルは読み込めない場合があります）。人気のある選択肢には、Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini、およびGemma 4 E2Bが含まれる。Discover tabでモデル名で検索。LM Studioはダウンロード前に各量子化レベルのファイルサイズを表示。' },
             { q: 'LM StudioはGPUを自動的に使用していますか？', a: 'Apple Siliconでははい--Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、ドライバーがインストールされている場合、LM StudioはCUDAを自動検出。モデルパネルのGPU Layers設定をチェック--GPU上に0レイヤーが表示される場合、GPUは使用されていない。' },
             { q: 'LM Studioはダウンロードモデルをどこに保存していますか？', a: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。LM Studio Settings→General→Model Storage Directoryでストレージロケーションを変更。' },
             { q: 'VS CodeやCursorでLM Studioを使用できますか？', a: 'はい。localhost:1234でLM Studio localサーバーを起動し、IDE拡張を設定してhttp://localhost:1234/v1をAPI基本URLとして使用し、API キーとして任意の文字列を使用。OpenAI互換APIをサポートするVS Code拡張は通常LM Studioで利用できますが、必要な機能は事前にテストしてください。' },
@@ -2540,9 +2540,9 @@ schema: {
           { '@type': 'Question', name: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', acceptedAnswer: { '@type': 'Answer', text: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック--0が表示される場合、GPUは使用されていない。' } },
           { '@type': 'Question', name: 'LM Studio検索で特定のモデルが見つからない', acceptedAnswer: { '@type': 'Answer', text: 'LM StudioはGGUFファイルをHugging Faceで検索している。モデルが表示されない場合は、Hugging Faceリポジトリ名を直接検索。' } },
           { '@type': 'Question', name: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', acceptedAnswer: { '@type': 'Answer', text: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択。' } },
-          { '@type': 'Question', name: 'LM Studioは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば、2025年7月以降は個人利用・業務利用ともに無料で、有料なのは別枠のEnterprise/Teamsのみです。条件は変更される場合があるため、最新の利用規約を[lmstudio.ai](https://lmstudio.ai)でご確認ください。' } },
+          { '@type': 'Question', name: 'LM Studioは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば、2025年7月以降は個人利用・業務利用ともに無料で、有料なのは別枠のEnterprise/Teamsのみです。条件は変更される場合があるため、最新の利用規約を[lmstudio.ai](https://lmstudio.ai)でご確認ください。ダウンロードしたモデルには、それぞれ個別のライセンスが適用され、商用利用などが制限される場合があります。' } },
           { '@type': 'Question', name: 'LM StudioとOllamaの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始。Ollamaはコマンドラインツール。' } },
-          { '@type': 'Question', name: 'LM Studioはどのモデルで動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini、およびGemma 4 E2Bが含まれる。' } },
+          { '@type': 'Question', name: 'LM Studioはどのモデルで動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Hugging Faceの多くのGGUF形式モデルに対応しています（未対応のアーキテクチャのモデルは読み込めない場合があります）。人気のある選択肢には、Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini、およびGemma 4 E2Bが含まれる。' } },
           { '@type': 'Question', name: 'LM StudioはGPUを自動的に使用していますか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconでははい--Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、LM StudioはCUDAを自動検出。' } },
           { '@type': 'Question', name: 'LM Studioはダウンロードモデルをどこに保存していますか？', acceptedAnswer: { '@type': 'Answer', text: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。' } },
           { '@type': 'Question', name: 'VS CodeやCursorでLM Studioを使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。localhost:1234でLM Studio localサーバーを起動し、IDE拡張を設定してhttp://localhost:1234/v1をAPI基本URLとして使用。' } }
@@ -2555,7 +2555,7 @@ schema: {
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'インターフェース', 'description': 'LM Studio：グラフィカルなデスクトップアプリ。Ollama：ターミナルとAPI。' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'モデルの入手元', 'description': 'LM Studio：Hugging Face上の任意のGGUFモデル。Ollama：Ollama公式ライブラリ（キュレーション済み）。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'モデルの入手元', 'description': 'LM Studio：Hugging Face上の多くのGGUFモデル。Ollama：Ollama公式ライブラリ（キュレーション済み）。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'APIポート', 'description': 'LM Studio：localhost:1234。Ollama：localhost:11434。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'モデル管理', 'description': 'LM Studio：ファイルサイズを表示するGUIブラウザ。Ollama：CLIコマンド。' },
           { '@type': 'ListItem', 'position': 5, 'name': '自動化', 'description': 'LM Studio：GUI中心で、ローカルAPIとlms CLIも利用可能。Ollama：CLI中心で、スクリプティングとDockerに対応。' },
@@ -2569,7 +2569,7 @@ schema: {
       title: '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-zh.webp',
       seoTitle: 'LM Studio下载安装教程与各显卡适合的模型',
-      intro: 'LM Studio 是一个桌面应用程序，可以不需要终端命令就运行本地 LLM。从 lmstudio.ai 下载安装程序，打开应用，按名称搜索模型，单击下载，然后开始聊天 - 整个过程在 5 分钟内完成。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），个人和工作使用均免费，但条款可能变更。LM Studio 在 macOS（Apple Silicon）、Windows 和 Linux（AppImage）上运行，支持 Hugging Face 庞大模型库中的任何 GGUF 量化模型。它包括内置聊天 UI、localhost:1234 上的 OpenAI 兼容本地服务器，以及 Apple Metal、NVIDIA CUDA 和 AMD ROCm 的自动 GPU 加速。',
+      intro: 'LM Studio 是一个桌面应用程序，可以不需要终端命令就运行本地 LLM。从 lmstudio.ai 下载安装程序，打开应用，按名称搜索模型，单击下载，然后开始聊天 - 整个过程在 5 分钟内完成。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），个人和工作使用均免费，但条款可能变更。LM Studio 在 macOS（Apple Silicon）、Windows 和 Linux（AppImage）上运行，支持 Hugging Face 庞大模型库中的众多 GGUF 量化模型（架构不受支持的模型可能无法加载）。它包括内置聊天 UI、localhost:1234 上的 OpenAI 兼容本地服务器，以及 Apple Metal、NVIDIA CUDA 和 AMD ROCm 的自动 GPU 加速。',
       metaDescription: '在Windows、macOS或Linux上安装LM Studio：官方下载链接、各系统安装步骤，以及8、12、16、24 GB显存分别适合哪些模型。',
       leadAnswerBlock: '**LM Studio是一款桌面应用，可通过图形界面浏览、下载并运行本地LLM，无需终端命令。它支持macOS、Windows和Linux，内置聊天界面和兼容OpenAI的本地服务器。**',
       publishDate: '2026-04-04',
@@ -2600,7 +2600,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio是一款适用于macOS、Windows和Linux的桌面应用，可通过图形界面浏览、下载并与Hugging Face上任何GGUF量化模型对话，无需终端命令，并内置兼容OpenAI的本地服务器。据开发商说明，使用免费，但条款可能变更。' },
+            { type: 'one-sentence', text: 'LM Studio是一款适用于macOS、Windows和Linux的桌面应用，可通过图形界面浏览、下载并与Hugging Face上众多GGUF量化模型对话（架构不受支持的模型可能无法加载），无需终端命令，并内置兼容OpenAI的本地服务器。据开发商说明，使用免费，但条款可能变更。' },
             { type: 'plain-terms', text: '如果你不想使用命令行，LM Studio是点点鼠标就能在自己电脑上运行AI模型的方式。下载应用，在其中按名称搜索模型，点击下载，然后开始对话——整个过程不到5分钟，还内置了一个服务器，方便其他应用也能连接使用。' },
           ],
           title: '核心要点',
@@ -2726,7 +2726,7 @@ schema: {
           title: '应该使用 LM Studio 还是 Ollama',
           rows: [
             { '因素': '界面', 'LM Studio': '图形桌面应用', 'Ollama': '终端 + API' },
-            { '因素': '模型源', 'LM Studio': 'Hugging Face（任何 GGUF 模型）', 'Ollama': 'Ollama 库（精选）' },
+            { '因素': '模型源', 'LM Studio': 'Hugging Face（众多 GGUF 模型）', 'Ollama': 'Ollama 库（精选）' },
             { '因素': 'API 端口', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { '因素': '模型管理', 'LM Studio': '带文件大小信息的 GUI 浏览器', 'Ollama': 'CLI 命令（ollama pull、list、rm）' },
             { '因素': '自动化', 'LM Studio': '以 GUI 为中心（另有本地 API 和 lms CLI）', 'Ollama': '以 CLI 为中心（脚本、Docker、CI）' },
@@ -2797,9 +2797,9 @@ schema: {
             { q: '模型生成非常缓慢（每秒 5 个令牌以下）', a: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。在 macOS 上，LM Studio 自动为 Apple Silicon 启用 Metal。' },
             { q: '我在 LM Studio 搜索中找不到特定模型', a: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按 Hugging Face 存储库名称搜索。某些较新的模型可能尚未建立索引。' },
             { q: '本地服务器返回"找不到模型"错误', a: '必须在本地服务器选项卡中加载模型，服务器才能响应。打开本地服务器选项卡，从下拉菜单中选择一个模型，然后单击启动服务器。' },
-            { q: 'LM Studio 免费吗？', a: '是的。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），自2025年7月起个人和工作用途均可免费使用，仅单独的 Enterprise/Teams 层级收费。条款可能变更，请以 [lmstudio.ai](https://lmstudio.ai) 上的最新使用条款为准。' },
+            { q: 'LM Studio 免费吗？', a: '是的。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），自2025年7月起个人和工作用途均可免费使用，仅单独的 Enterprise/Teams 层级收费。条款可能变更，请以 [lmstudio.ai](https://lmstudio.ai) 上的最新使用条款为准。您下载的模型适用各自的许可证，可能限制商业使用等用途。' },
             { q: 'LM Studio 和 Ollama 之间有什么区别？', a: 'LM Studio 是图形桌面应用 - 您通过可视界面浏览和下载模型、通过一次单击启动聊天、用滑块调整设置。Ollama 是命令行工具和后台服务 - 用单个命令设置更快。' },
-            { q: 'LM Studio 可以使用哪些模型？', a: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini 和 Gemma 4 E2B。在 Discover 选项卡中按模型名称搜索。' },
+            { q: 'LM Studio 可以使用哪些模型？', a: '支持 Hugging Face 上众多 GGUF 格式模型（架构不受支持的模型可能无法加载）。热门选择包括 Llama 3.1 8B、Qwen3 8B、Mistral Small、Phi-4 Mini 和 Gemma 4 E2B。在 Discover 选项卡中按模型名称搜索。' },
             { q: 'LM Studio 自动使用我的 GPU 吗？', a: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，如果驱动程序已安装，LM Studio 会自动检测 CUDA。' },
             { q: 'LM Studio 在哪里存储下载的模型？', a: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。' },
             { q: '我可以在 VS Code 或 Cursor 中使用 LM Studio 吗？', a: '可以。在 localhost:1234 启动 LM Studio 本地服务器，然后配置您的 IDE 扩展以使用 http://localhost:1234/v1 作为 API 基本 URL。' },
@@ -2848,9 +2848,9 @@ schema: {
           { '@type': 'Question', name: '模型生成非常缓慢（每秒 5 个令牌以下）', acceptedAnswer: { '@type': 'Answer', text: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。' } },
           { '@type': 'Question', name: '我在 LM Studio 搜索中找不到特定模型', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按名称搜索。' } },
           { '@type': 'Question', name: '本地服务器返回"找不到模型"错误', acceptedAnswer: { '@type': 'Answer', text: '必须在本地服务器选项卡中加载模型，服务器才能响应。' } },
-          { '@type': 'Question', name: 'LM Studio 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），自2025年7月起个人和工作用途均可免费使用，仅单独的 Enterprise/Teams 层级收费。条款可能变更，请以 [lmstudio.ai](https://lmstudio.ai) 上的最新使用条款为准。' } },
+          { '@type': 'Question', name: 'LM Studio 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），自2025年7月起个人和工作用途均可免费使用，仅单独的 Enterprise/Teams 层级收费。条款可能变更，请以 [lmstudio.ai](https://lmstudio.ai) 上的最新使用条款为准。您下载的模型适用各自的许可证，可能限制商业使用等用途。' } },
           { '@type': 'Question', name: 'LM Studio 和 Ollama 之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 是图形桌面应用。Ollama 是命令行工具和后台服务。LM Studio 使用 llama.cpp 运行 GGUF 模型（Apple Silicon 上还可使用 MLX）；Ollama 也支持将 llama.cpp 作为后端。' } },
-          { '@type': 'Question', name: 'LM Studio 可以使用哪些模型？', acceptedAnswer: { '@type': 'Answer', text: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.1 8B、Qwen3 8B、Mistral Small。' } },
+          { '@type': 'Question', name: 'LM Studio 可以使用哪些模型？', acceptedAnswer: { '@type': 'Answer', text: '支持 Hugging Face 上众多 GGUF 格式模型（架构不受支持的模型可能无法加载）。热门选择包括 Llama 3.1 8B、Qwen3 8B、Mistral Small。' } },
           { '@type': 'Question', name: 'LM Studio 自动使用我的 GPU 吗？', acceptedAnswer: { '@type': 'Answer', text: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，LM Studio 自动检测 CUDA。' } },
           { '@type': 'Question', name: 'LM Studio 在哪里存储下载的模型？', acceptedAnswer: { '@type': 'Answer', text: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows 和 Linux 有类似位置。' } },
           { '@type': 'Question', name: '我可以在 VS Code 或 Cursor 中使用 LM Studio 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。在 localhost:1234 启动 LM Studio 本地服务器，然后配置您的 IDE 扩展以使用兼容的 API 端点。' } }
@@ -2863,7 +2863,7 @@ schema: {
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '界面', 'description': 'LM Studio：图形桌面应用。Ollama：终端加 API。' },
-          { '@type': 'ListItem', 'position': 2, 'name': '模型来源', 'description': 'LM Studio：Hugging Face 上的任意 GGUF 模型。Ollama：Ollama 官方模型库（经过精选）。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '模型来源', 'description': 'LM Studio：Hugging Face 上的众多 GGUF 模型。Ollama：Ollama 官方模型库（经过精选）。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'API 端口', 'description': 'LM Studio：localhost:1234。Ollama：localhost:11434。' },
           { '@type': 'ListItem', 'position': 4, 'name': '模型管理', 'description': 'LM Studio：显示文件大小的 GUI 浏览器。Ollama：CLI 命令。' },
           { '@type': 'ListItem', 'position': 5, 'name': '自动化', 'description': 'LM Studio：以 GUI 为中心，另有本地 API 和 lms CLI。Ollama：以 CLI 为中心，支持脚本和 Docker。' },
@@ -2878,7 +2878,7 @@ schema: {
       title: 'LM Studio 설치: macOS, Windows 및 Linux GUI 설정 가이드',
     heroImage: '/images/how-to-install-lm-studio-overview-hero-ko.webp',
       seoTitle: 'LM Studio 설치 방법과 GPU별 모델 추천 가이드',
-      intro: 'LM Studio는 터미널 명령어 없이 그래픽 인터페이스를 통해 로컬 LLM을 탐색하고, 다운로드하고, 실행할 수 있는 데스크톱 애플리케이션입니다. macOS, Windows, Linux에서 작동하며, 내장 채팅 UI와 OpenAI 호환 로컬 서버를 포함합니다. LM Studio는 Hugging Face의 모든 GGUF 양자화 모델을 지원합니다.',
+      intro: 'LM Studio는 터미널 명령어 없이 그래픽 인터페이스를 통해 로컬 LLM을 탐색하고, 다운로드하고, 실행할 수 있는 데스크톱 애플리케이션입니다. macOS, Windows, Linux에서 작동하며, 내장 채팅 UI와 OpenAI 호환 로컬 서버를 포함합니다. LM Studio는 Hugging Face의 많은 GGUF 양자화 모델을 지원하며, 지원되지 않는 아키텍처의 모델은 로드되지 않을 수 있습니다.',
       metaDescription: 'Windows, macOS, Linux에 LM Studio를 설치하는 방법입니다. 공식 다운로드 링크, OS별 설치 단계, VRAM 8·12·16·24GB별 모델을 안내합니다.',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
@@ -2905,7 +2905,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio는 macOS, Windows, Linux용 무료 데스크톱 애플리케이션으로, 그래픽 인터페이스를 통해 Hugging Face의 모든 GGUF 양자화 모델을 탐색, 다운로드, 대화할 수 있으며 터미널 명령어가 필요 없고 OpenAI 호환 로컬 서버가 내장되어 있습니다.' },
+            { type: 'one-sentence', text: 'LM Studio는 macOS, Windows, Linux용 데스크톱 애플리케이션으로, 그래픽 인터페이스를 통해 Hugging Face의 많은 GGUF 양자화 모델을 탐색, 다운로드, 대화할 수 있으며(지원되지 않는 아키텍처의 모델은 로드되지 않을 수 있습니다) 터미널 명령어가 필요 없고 OpenAI 호환 로컬 서버가 내장되어 있습니다. 개발사 안내에 따르면 사용은 무료이지만 약관은 변경될 수 있습니다.' },
             { type: 'plain-terms', text: '명령줄을 사용하고 싶지 않다면, LM Studio는 클릭만으로 자신의 컴퓨터에서 AI 모델을 실행하는 방법입니다. 앱을 다운로드하고, 그 안에서 이름으로 모델을 검색하고, 다운로드를 클릭한 뒤 대화를 시작하면 됩니다 -- 전체 과정이 5분도 걸리지 않으며, 다른 앱도 사용할 수 있는 서버가 내장되어 있습니다.' },
           ],
           items: [
@@ -2919,7 +2919,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'LM Studio 다운로드와 설치: OS별 한 단계',
-          content: '**LM Studio는 [공식 다운로드 페이지](https://lmstudio.ai/download)에서 무료로 받은 뒤, 사용 중인 OS의 설치 단계를 따르면 됩니다.** macOS 14.0 이상의 Apple Silicon, Windows x64(AVX2) 또는 ARM64 PC, Ubuntu 20.04 이상이 필요하며 RAM 16GB를 권장합니다([요구 사항 표](#system-requirements) 참고).',
+          content: '**LM Studio는 [공식 다운로드 페이지](https://lmstudio.ai/download)에서 받은 뒤, 사용 중인 OS의 설치 단계를 따르면 됩니다.** macOS 14.0 이상의 Apple Silicon, Windows x64(AVX2) 또는 ARM64 PC, Ubuntu 20.04 이상이 필요하며 RAM 16GB를 권장합니다([요구 사항 표](#system-requirements) 참고). 개발사 안내([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work))에 따르면 사용은 무료이지만 약관은 변경될 수 있습니다.',
           items: [
           '**macOS:** 내려받은 .dmg 파일을 열고 LM Studio를 Applications 폴더로 끌어다 놓습니다.',
           '**Windows:** 내려받은 설치 프로그램을 실행하고 안내에 따릅니다.',
@@ -3031,7 +3031,7 @@ schema: {
           title: 'LM Studio vs Ollama: 어느 것을 사용해야 합니까?',
           rows: [
             { 'Factor': '인터페이스', 'LM Studio': '그래픽 데스크톱 앱', 'Ollama': '터미널 + API' },
-            { 'Factor': '모델 소스', 'LM Studio': 'Hugging Face (모든 GGUF 모델)', 'Ollama': 'Ollama 라이브러리 (큐레이션됨)' },
+            { 'Factor': '모델 소스', 'LM Studio': 'Hugging Face (많은 GGUF 모델)', 'Ollama': 'Ollama 라이브러리 (큐레이션됨)' },
             { 'Factor': 'API 포트', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
             { 'Factor': '모델 관리', 'LM Studio': '파일 크기 정보 포함 GUI 브라우저', 'Ollama': 'CLI 명령어 (ollama pull, list, rm)' },
             { 'Factor': '자동화', 'LM Studio': 'GUI 중심 (로컬 API와 lms CLI 제공)', 'Ollama': 'CLI 중심 (스크립팅, Docker, CI)' },
