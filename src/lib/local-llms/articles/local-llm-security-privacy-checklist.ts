@@ -24,50 +24,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickAnswerTop: {
         en: {
           question: 'What are the 5 non-negotiable security steps for a local LLM?',
-          answer: 'The 5 non-negotiable security steps for a local LLM: (1) no internet access for the model process, (2) model files verified via SHA-256 before loading, (3) API endpoints bound to localhost only and the tool on a patched version (Ollama 0.17.1 or later), (4) prompt logs stored encrypted or disabled entirely, (5) no third-party plugins without source review.',
+          answer: 'The 5 non-negotiable security steps for a local LLM: (1) no internet access for the model process, (2) model files verified via SHA-256 before loading, (3) API endpoints bound to localhost only and the tool kept current (Ollama 0.17.1 or later fixes CVE-2026-7482), (4) prompt logs stored encrypted or disabled entirely, (5) no third-party plugins without source review.',
           bullets: [
             'No internet access for the model process',
             'Model files verified via SHA-256 before loading',
-            'API endpoints bound to localhost only, tool on a patched version (Ollama 0.17.1 or later)',
+            'API endpoints bound to localhost only, and the tool kept current (Ollama 0.17.1 or later fixes CVE-2026-7482; no fix for the two Windows updater flaws had been confirmed at disclosure)',
             'Prompt logs stored encrypted or disabled entirely',
             'No third-party plugins without source review',
           ],
           updatedDate: '2026-11-15',
         },
-      },
-      comparisonTable: {
-        columns: [
-          'Setup',
-          'Modellgröße',
-          'Geschwindigkeit',
-          'Erfahrung',
-        ],
-        rows: [
-          {
-            Setup: '8 GB RAM CPU',
-            'Modellgröße': '3B–7B',
-            Geschwindigkeit: '10–25 Token/Sek.',
-            Erfahrung: 'Brauchbar für Chat, Zusammenfassung, einfaches Coding',
-          },
-          {
-            Setup: '16 GB RAM CPU',
-            'Modellgröße': '7B–13B',
-            Geschwindigkeit: '5–15 Token/Sek.',
-            Erfahrung: 'Allgemeine Nutzung, keine Multitasking-Einschränkungen',
-          },
-          {
-            Setup: 'Apple Silicon (M2–M4)',
-            'Modellgröße': '7B–13B',
-            Geschwindigkeit: '30–80 Token/Sek.',
-            Erfahrung: 'Schnellste Consumer-Option, beste Akkulaufzeit',
-          },
-          {
-            Setup: 'GPU-Laptop (RTX 4060, 8 GB VRAM)',
-            'Modellgröße': '7B–13B',
-            Geschwindigkeit: '60–90 Token/Sek.',
-            Erfahrung: 'Am schnellsten, aber hohe Wärme und Stromverbrauch',
-          },
-        ],
       },
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '8 min read',
@@ -122,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What are the key takeaways?',
           isTldr: true,
           items: [
-            'The 5 non-negotiable steps: (1) no internet access for the model process, (2) model files verified via SHA-256 before loading, (3) API endpoints bound to localhost only and the tool on a patched version, (4) prompt logs stored encrypted or disabled entirely, (5) no third-party plugins without source review.',
+            'The 5 non-negotiable steps: (1) no internet access for the model process, (2) model files verified via SHA-256 before loading, (3) API endpoints bound to localhost only and the tool kept current, (4) prompt logs stored encrypted or disabled entirely, (5) no third-party plugins without source review.',
             'Are LM Studio, Ollama, Jan and GPT4All safe? Yes for prompt privacy: none of them sends chat prompts to a model provider when you run a local model. Safe use also needs current versions, a closed API port and trusted model files.',
             'Local inference keeps prompt data off third-party servers. The remaining risks are: telemetry from the inference tool, model files from untrusted sources, unpatched versions, and the Ollama API being exposed on the network.',
             'Update Ollama to 0.17.1 or later: CVE-2026-7482 ("Bleeding Llama", rated critical) let an unauthenticated attacker read process memory from an exposed Ollama API.',
@@ -224,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Verify model checksums for sensitive use',
-              whyItMatters: 'Ensures downloaded model files have not been tampered with.',
+              whyItMatters: 'Helps detect corruption or tampering of downloaded model files.',
             },
             {
               title: 'Disable telemetry in your inference tool',
@@ -264,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'For air-gapped or regulated environments: document approved model versions',
-              whyItMatters: 'Ensures compliance with regulatory requirements for data handling and infrastructure isolation.',
+              whyItMatters: 'Creates an audit trail of approved model versions that supports your data-handling and isolation documentation; it does not by itself establish regulatory compliance.',
             },
           ],
           image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-en.webp',
@@ -277,8 +243,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Model weights are large binary files.** A malformed GGUF file can exploit bugs in the parser that loads it: CVE-2026-7482 was a heap out-of-bounds read in Ollama\'s GGUF loader, fixed in Ollama 0.17.1.',
           ],
           items: [
-            '**Hugging Face** (huggingface.co): the primary source for open models. Each file has a verified SHA256 hash. Stick to models from well-known publishers (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-            '**Ollama library** ([ollama.com/library](https://ollama.com/library)): Ollama verifies model hashes before storing them. Pull from the official library or from publishers you trust.',
+            '**Hugging Face** (huggingface.co): the primary source for open models. Each file page shows a SHA256 hash you can compare against. Stick to models from well-known publishers (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+            '**Ollama library** ([ollama.com/library](https://ollama.com/library)): Pull from the official library or from publishers you trust.',
             '**LM Studio model browser**: searches Hugging Face directly. The same trust rules apply -- check the publisher account.',
             '**Avoid**: anonymous file sharing sites, Discord file drops, and any source that does not provide a verifiable hash.',
           ],
@@ -335,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Is it safe to use a local LLM with HIPAA-covered data?',
-              a: 'Local inference removes the third-party data processor risk that cloud APIs create. However, HIPAA compliance requires more than private inference -- you need full-disk encryption, access controls, audit logging, and a Business Associate Agreement if any software vendor could access PHI. Using Ollama with FileVault enabled and telemetry disabled is a reasonable starting point, but formal HIPAA compliance requires a full risk assessment.',
+              a: 'Local inference removes the cloud provider\'s processor relationship for the inference step. However, HIPAA compliance requires more than private inference -- under the HIPAA Security Rule you will typically need a risk analysis, access controls, audit logging and a Business Associate Agreement if any software vendor could access PHI; encryption is an "addressable" safeguard rather than an explicit mandate. Using Ollama with FileVault enabled and telemetry disabled can be a starting point, but formal HIPAA compliance requires a full risk assessment. This is general information, not legal advice.',
             },
             {
               q: 'Does Ollama send my prompts anywhere?',
@@ -343,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Is using a local LLM more private than using the OpenAI API?',
-              a: 'Yes, for prompt privacy. With a local LLM, your prompts never leave your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. OpenAI\'s API Terms of Service state that API input/output is not used to train models by default, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.',
+              a: 'Yes, for prompt privacy. When a local model runs, the inference itself does not send your prompts off your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. According to [OpenAI\'s API data controls documentation](https://developers.openai.com/api/docs/guides/your-data), data sent to the API is not used to train or improve OpenAI models unless you opt in, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.',
             },
             {
               q: 'How do I verify that a downloaded model file is safe?',
@@ -355,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can I use a local LLM for GDPR-regulated data?',
-              a: 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) sends no unexpected network traffic, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
+              a: 'Local inference can reduce GDPR exposure because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) sends no unexpected network traffic, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
             },
             {
               q: 'Is LM Studio safe to use?',
@@ -374,8 +340,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'By default, Ollama binds to localhost (127.0.0.1:11434) and is not accessible from other devices. If you previously set OLLAMA_HOST=0.0.0.0 to allow network access, revert it: `export OLLAMA_HOST=127.0.0.1:11434`. Verify isolation by attempting to connect from another device on your network -- it should fail.',
             },
             {
-              q: 'Which local LLM tool is best for maximum privacy?',
-              a: 'Based on their published defaults, Jan AI is the most restrictive of the four: fully open source (Apache 2.0 licence) with analytics that are opt-in and chosen at first launch. Ollama is next: open source, binds to localhost by default, and cloud features can be disabled with `OLLAMA_NO_CLOUD=1`. LM Studio has no telemetry per its privacy policy, but update checks and model search send anonymized data.',
+              q: 'How do the four tools differ in their published privacy defaults?',
+              a: 'Per their own documentation: LM Studio states it has no telemetry, with update checks and model search sending anonymized data; Ollama states it does not see local prompts and binds to localhost by default; Jan makes analytics opt-in at first launch; GPT4All makes telemetry and Datalake sharing opt-in. This compares disclosed defaults, not overall security; verify with a firewall.',
             },
           ],
         },
@@ -410,10 +376,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What are the regional compliance considerations?',
           content: '**Local LLM inference reduces data residency risk, but full regulatory compliance requires additional controls per region.** This section is general information, not legal advice; confirm requirements with a qualified lawyer or data protection officer.',
           items: [
-            '**EU / GDPR (2018):** Local inference can remove the Article 28 data processor relationship with a model provider for the inference step. You must still verify LM Studio network traffic with a firewall, enable disk encryption, and document your data processing setup for any DPIA. Perform a legitimate interest assessment before processing personal data.',
-            '**United States / HIPAA:** HIPAA requires safeguards for PHI: full-disk encryption (the "encryption safe harbor"), access controls, and audit logging. Ollama with FileVault enabled and telemetry disabled is a reasonable HIPAA starting point. Formal compliance requires a full risk assessment.',
-            '**Japan / APPI (2022):** The Act on the Protection of Personal Information requires personal data protection during processing. Local inference on an air-gapped machine can help meet data localisation requirements. Disable Ollama update checks and verify LM Studio network traffic with a firewall as part of your APPI assessment.',
-            '**China / PIPL (2021):** Running a local LLM for internal use generally does not require CAC registration; confirm with legal counsel. If you deploy a local LLM as a public-facing service in China, CAC algorithm registration is required.',
+            '**EU / GDPR (2018):** Local inference can remove the Article 28 data processor relationship with a model provider for the inference step. You must still verify LM Studio network traffic with a firewall, enable disk encryption, and document your data processing setup for any DPIA. Choose and document a lawful basis (for example legitimate interest, backed by an assessment) before processing personal data.',
+            '**United States / HIPAA:** The HIPAA Security Rule requires a risk analysis and safeguards for PHI, including access controls and audit controls; encryption is an "addressable" specification and a common measure, not an explicit mandate. Ollama with FileVault enabled and telemetry disabled can be a starting point; formal compliance requires a full risk assessment.',
+            '**Japan / APPI (2022):** The Act on the Protection of Personal Information requires personal data protection during processing. Local inference on an air-gapped machine can reduce cross-border transfer exposure. Verify LM Studio network traffic with a firewall as part of your APPI assessment.',
+            '**China / PIPL (2021):** Whether a locally run LLM for internal use triggers filing or registration duties under Chinese generative-AI, algorithm or PIPL rules depends on the use case; confirm with Chinese legal counsel. Public-facing generative AI services in China can be subject to filing and security-assessment requirements.',
           ],
         },
         relatedReading: {
@@ -500,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Is it safe to use a local LLM with HIPAA-covered data?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Local inference removes the third-party data processor risk that cloud APIs create. However, HIPAA compliance requires more than private inference -- you need full-disk encryption, access controls, audit logging, and a Business Associate Agreement if any software vendor could access PHI. Using Ollama with FileVault enabled and telemetry disabled is a reasonable starting point, but formal HIPAA compliance requires a full risk assessment.',
+              text: 'Local inference removes the cloud provider\'s processor relationship for the inference step. However, HIPAA compliance requires more than private inference -- under the HIPAA Security Rule you will typically need a risk analysis, access controls, audit logging and a Business Associate Agreement if any software vendor could access PHI; encryption is an "addressable" safeguard rather than an explicit mandate. Using Ollama with FileVault enabled and telemetry disabled can be a starting point, but formal HIPAA compliance requires a full risk assessment. This is general information, not legal advice.',
             },
           },
           {
@@ -516,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Is using a local LLM more private than using the OpenAI API?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes, for prompt privacy. With a local LLM, your prompts never leave your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. OpenAI\'s API Terms of Service state that API input/output is not used to train models by default, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.',
+              text: 'Yes, for prompt privacy. When a local model runs, the inference itself does not send your prompts off your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. According to [OpenAI\'s API data controls documentation](https://developers.openai.com/api/docs/guides/your-data), data sent to the API is not used to train or improve OpenAI models unless you opt in, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.',
             },
           },
           {
@@ -540,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Can I use a local LLM for GDPR-regulated data?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) sends no unexpected network traffic, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
+              text: 'Local inference can reduce GDPR exposure because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) sends no unexpected network traffic, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
             },
           },
           {
@@ -577,10 +543,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Which local LLM tool is best for maximum privacy?',
+            name: 'How do the four tools differ in their published privacy defaults?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Based on their published defaults, Jan AI is the most restrictive of the four: fully open source (Apache 2.0 licence) with analytics that are opt-in and chosen at first launch. Ollama is next: open source, binds to localhost by default, and cloud features can be disabled with `OLLAMA_NO_CLOUD=1`. LM Studio has no telemetry per its privacy policy, but update checks and model search send anonymized data.',
+              text: 'Per their own documentation: LM Studio states it has no telemetry, with update checks and model search sending anonymized data; Ollama states it does not see local prompts and binds to localhost by default; Jan makes analytics opt-in at first launch; GPT4All makes telemetry and Datalake sharing opt-in. This compares disclosed defaults, not overall security; verify with a firewall.',
             },
           },
         ],
@@ -754,7 +720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Verifica los checksums del modelo para uso sensible',
-            whyItMatters: 'Garantiza que los archivos de modelo descargados no hayan sido manipulados.',
+            whyItMatters: 'Ayuda a detectar corrupción o manipulación de los archivos de modelo descargados.',
           },
           {
             title: 'Deshabilita la telemetría en tu herramienta de inferencia',
@@ -794,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Para entornos air-gapped o regulados: documenta las versiones de modelo aprobadas',
-            whyItMatters: 'Garantiza el cumplimiento de los requisitos regulatorios para el manejo de datos y el aislamiento de infraestructura.',
+            whyItMatters: 'Crea un registro de las versiones de modelo aprobadas y respalda tu documentación sobre manejo de datos y aislamiento; por sí solo no acredita el cumplimiento normativo.',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-es.webp',
@@ -807,8 +773,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los pesos del modelo son archivos binarios grandes.** Un archivo GGUF mal formado puede aprovechar errores en el parser que lo carga: CVE-2026-7482 fue una lectura fuera de límites en el heap del cargador GGUF de Ollama, corregida en Ollama 0.17.1.',
         ],
         items: [
-          '**Hugging Face** (huggingface.co): la fuente principal para modelos abiertos. Cada archivo tiene un hash SHA256 verificado. Limítate a modelos de publicadores reconocidos (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Biblioteca de Ollama** ([ollama.com/library](https://ollama.com/library)): Ollama verifica los hashes de los modelos antes de almacenarlos. Descarga desde la biblioteca oficial o desde publicadores en los que confíes.',
+          '**Hugging Face** (huggingface.co): la fuente principal para modelos abiertos. La página de cada archivo muestra un hash SHA256 con el que puedes comparar. Limítate a modelos de publicadores reconocidos (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+          '**Biblioteca de Ollama** ([ollama.com/library](https://ollama.com/library)): Descarga desde la biblioteca oficial o desde publicadores en los que confíes.',
           '**Navegador de modelos de LM Studio**: busca directamente en Hugging Face. Se aplican las mismas reglas de confianza -- verifica la cuenta del publicador.',
           '**Evita**: sitios de intercambio de archivos anónimos, archivos compartidos en Discord y cualquier fuente que no proporcione un hash verificable.',
         ],
@@ -865,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es seguro usar un LLM local con datos cubiertos por HIPAA?',
-            a: 'La inferencia local elimina el riesgo del procesador de datos de terceros que crean las APIs en la nube. Sin embargo, el cumplimiento de HIPAA requiere más que inferencia privada -- necesitas cifrado de disco completo, controles de acceso, registro de auditoría y un Acuerdo de Socio Comercial si algún proveedor de software pudiera acceder a PHI. Usar Ollama con FileVault habilitado y telemetría deshabilitada es un punto de partida razonable, pero el cumplimiento formal de HIPAA requiere una evaluación de riesgos completa.',
+            a: 'La inferencia local elimina la relación de encargado con un proveedor de nube en el paso de inferencia. Sin embargo, el cumplimiento de HIPAA requiere más que inferencia privada -- según la Regla de Seguridad de HIPAA normalmente necesitarás un análisis de riesgos, controles de acceso, registro de auditoría y un Acuerdo de Socio Comercial si algún proveedor de software pudiera acceder a PHI; el cifrado es una salvaguarda "addressable" y no una obligación expresa. Usar Ollama con FileVault habilitado y telemetría deshabilitada puede ser un punto de partida, pero el cumplimiento formal de HIPAA requiere una evaluación de riesgos completa. Esto es información general, no asesoramiento legal.',
           },
           {
             q: '¿Ollama envía mis prompts a algún lugar?',
@@ -873,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es usar un LLM local más privado que usar la API de OpenAI?',
-            a: 'Sí, en cuanto a privacidad de prompts. Con un LLM local, tus prompts nunca salen de tu máquina. La API de OpenAI envía los prompts a los servidores de OpenAI para su procesamiento. Los Términos de Servicio de la API de OpenAI indican que la entrada/salida de la API no se usa para entrenar modelos por defecto, pero los datos sí transitan por su infraestructura. Para datos sensibles o regulados (médicos, legales, financieros), la inferencia local es la opción más conservadora.',
+            a: 'Sí, en cuanto a privacidad de prompts. Cuando se ejecuta un modelo local, la inferencia en sí no envía tus prompts fuera de tu máquina. La API de OpenAI envía los prompts a los servidores de OpenAI para su procesamiento. Según la [documentación de controles de datos de la API de OpenAI](https://developers.openai.com/api/docs/guides/your-data), los datos enviados a la API no se usan para entrenar ni mejorar los modelos de OpenAI salvo que lo aceptes expresamente, pero los datos sí transitan por su infraestructura. Para datos sensibles o regulados (médicos, legales, financieros), la inferencia local es la opción más conservadora.',
           },
           {
             q: '¿Cómo verifico que un archivo de modelo descargado es seguro?',
@@ -885,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar un LLM local para datos regulados por GDPR?',
-            a: 'La inferencia local reduce significativamente el riesgo de GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) no envíe tráfico de red inesperado, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.',
+            a: 'La inferencia local puede reducir la exposición al GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) no envíe tráfico de red inesperado, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.',
           },
           {
             q: '¿Es seguro usar LM Studio?',
@@ -904,8 +870,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Por defecto, Ollama se enlaza a localhost (127.0.0.1:11434) y no es accesible desde otros dispositivos. Si anteriormente configuraste OLLAMA_HOST=0.0.0.0 para permitir acceso en red, reviértelo: `export OLLAMA_HOST=127.0.0.1:11434`. Verifica el aislamiento intentando conectarte desde otro dispositivo en tu red -- debería fallar.',
           },
           {
-            q: '¿Qué herramienta de LLM local es mejor para máxima privacidad?',
-            a: 'Según sus valores por defecto publicados, Jan AI es la más restrictiva de las cuatro: código abierto completo (licencia Apache 2.0) con analítica opt-in que se elige en el primer inicio. Ollama es la siguiente: código abierto, se enlaza a localhost por defecto y las funciones en la nube se pueden desactivar con `OLLAMA_NO_CLOUD=1`. LM Studio no tiene telemetría según su política de privacidad, pero las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados.',
+            q: '¿En qué se diferencian las cuatro herramientas según sus valores por defecto publicados?',
+            a: 'Según su documentación: LM Studio indica que no incluye telemetría (las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados); Ollama afirma no ver los prompts locales y se enlaza por defecto a localhost; en Jan la analítica es opt-in; en GPT4All la telemetría y el uso compartido con el Datalake son opt-in. Es una comparación de valores declarados, no de seguridad global; verifica con un firewall.',
           },
         ],
       },
@@ -940,10 +906,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuáles son las consideraciones de cumplimiento regional?',
         content: '**La inferencia local de LLMs reduce el riesgo de residencia de datos, pero el cumplimiento regulatorio completo requiere controles adicionales por región.** Esta sección es información general y no constituye asesoramiento legal; confirma los requisitos con un abogado o un delegado de protección de datos.',
         items: [
-          '**UE / GDPR (2018):** La inferencia local puede eliminar la relación de encargado del tratamiento del Artículo 28 con un proveedor de modelos en el paso de inferencia. Aún debes verificar con un firewall el tráfico de red de LM Studio, habilitar el cifrado de disco y documentar tu configuración de procesamiento de datos para cualquier DPIA. Realiza una evaluación de interés legítimo antes de procesar datos personales.',
-          '**Estados Unidos / HIPAA:** HIPAA requiere salvaguardas para PHI: cifrado de disco completo (el "puerto seguro de cifrado"), controles de acceso y registro de auditoría. Ollama con FileVault habilitado y telemetría deshabilitada es un punto de partida razonable para HIPAA. El cumplimiento formal requiere una evaluación de riesgos completa.',
-          '**Japón / APPI (2022):** La Ley de Protección de Información Personal requiere protección de datos personales durante el procesamiento. La inferencia local en una máquina con air-gap puede ayudar a cumplir los requisitos de localización de datos. Deshabilita las verificaciones de actualización de Ollama y verifica con un firewall el tráfico de red de LM Studio como parte de tu evaluación de APPI.',
-          '**China / PIPL (2021):** Ejecutar un LLM local para uso interno por lo general no requiere registro en la CAC; confírmalo con asesoría legal. Si implementas un LLM local como servicio público en China, se requiere el registro de algoritmos de la CAC.',
+          '**UE / GDPR (2018):** La inferencia local puede eliminar la relación de encargado del tratamiento del Artículo 28 con un proveedor de modelos en el paso de inferencia. Aún debes verificar con un firewall el tráfico de red de LM Studio, habilitar el cifrado de disco y documentar tu configuración de procesamiento de datos para cualquier DPIA. Determina y documenta una base jurídica (por ejemplo, el interés legítimo, respaldado por una evaluación) antes de procesar datos personales.',
+          '**Estados Unidos / HIPAA:** la Regla de Seguridad de HIPAA exige un análisis de riesgos y salvaguardas para la PHI, entre ellas controles de acceso y de auditoría; el cifrado es una especificación "addressable" y una medida habitual, no una obligación expresa. Ollama con FileVault habilitado y telemetría deshabilitada puede ser un punto de partida; el cumplimiento formal requiere una evaluación de riesgos completa.',
+          '**Japón / APPI (2022):** La Ley de Protección de Información Personal requiere protección de datos personales durante el procesamiento. La inferencia local en una máquina con air-gap puede reducir la exposición a transferencias transfronterizas. Verifica con un firewall el tráfico de red de LM Studio como parte de tu evaluación de APPI.',
+          '**China / PIPL (2021):** que un LLM local de uso interno genere obligaciones de registro o presentación según las normas chinas de IA generativa, algoritmos o PIPL depende del caso de uso; confírmalo con asesoría legal en China. Los servicios públicos de IA generativa en China pueden estar sujetos a requisitos de presentación y evaluación de seguridad.',
         ],
       },
       relatedReading: {
@@ -1030,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Es seguro usar un LLM local con datos cubiertos por HIPAA?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'La inferencia local elimina el riesgo del procesador de datos de terceros que crean las APIs en la nube. Sin embargo, el cumplimiento de HIPAA requiere más que inferencia privada -- necesitas cifrado de disco completo, controles de acceso, registro de auditoría y un Acuerdo de Socio Comercial si algún proveedor de software pudiera acceder a PHI. Usar Ollama con FileVault habilitado y telemetría deshabilitada es un punto de partida razonable, pero el cumplimiento formal de HIPAA requiere una evaluación de riesgos completa.',
+            text: 'La inferencia local elimina la relación de encargado con un proveedor de nube en el paso de inferencia. Sin embargo, el cumplimiento de HIPAA requiere más que inferencia privada -- según la Regla de Seguridad de HIPAA normalmente necesitarás un análisis de riesgos, controles de acceso, registro de auditoría y un Acuerdo de Socio Comercial si algún proveedor de software pudiera acceder a PHI; el cifrado es una salvaguarda "addressable" y no una obligación expresa. Usar Ollama con FileVault habilitado y telemetría deshabilitada puede ser un punto de partida, pero el cumplimiento formal de HIPAA requiere una evaluación de riesgos completa. Esto es información general, no asesoramiento legal.',
           },
         },
         {
@@ -1046,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Es usar un LLM local más privado que usar la API de OpenAI?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí, en cuanto a privacidad de prompts. Con un LLM local, tus prompts nunca salen de tu máquina. La API de OpenAI envía los prompts a los servidores de OpenAI para su procesamiento. Los Términos de Servicio de la API de OpenAI indican que la entrada/salida de la API no se usa para entrenar modelos por defecto, pero los datos sí transitan por su infraestructura. Para datos sensibles o regulados (médicos, legales, financieros), la inferencia local es la opción más conservadora.',
+            text: 'Sí, en cuanto a privacidad de prompts. Cuando se ejecuta un modelo local, la inferencia en sí no envía tus prompts fuera de tu máquina. La API de OpenAI envía los prompts a los servidores de OpenAI para su procesamiento. Según la [documentación de controles de datos de la API de OpenAI](https://developers.openai.com/api/docs/guides/your-data), los datos enviados a la API no se usan para entrenar ni mejorar los modelos de OpenAI salvo que lo aceptes expresamente, pero los datos sí transitan por su infraestructura. Para datos sensibles o regulados (médicos, legales, financieros), la inferencia local es la opción más conservadora.',
           },
         },
         {
@@ -1070,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Puedo usar un LLM local para datos regulados por GDPR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'La inferencia local reduce significativamente el riesgo de GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) no envíe tráfico de red inesperado, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.',
+            text: 'La inferencia local puede reducir la exposición al GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) no envíe tráfico de red inesperado, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.',
           },
         },
         {
@@ -1107,10 +1073,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          name: '¿Qué herramienta de LLM local es mejor para máxima privacidad?',
+          name: '¿En qué se diferencian las cuatro herramientas según sus valores por defecto publicados?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Según sus valores por defecto publicados, Jan AI es la más restrictiva de las cuatro: código abierto completo (licencia Apache 2.0) con analítica opt-in que se elige en el primer inicio. Ollama es la siguiente: código abierto, se enlaza a localhost por defecto y las funciones en la nube se pueden desactivar con `OLLAMA_NO_CLOUD=1`. LM Studio no tiene telemetría según su política de privacidad, pero las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados.',
+            text: 'Según su documentación: LM Studio indica que no incluye telemetría (las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados); Ollama afirma no ver los prompts locales y se enlaza por defecto a localhost; en Jan la analítica es opt-in; en GPT4All la telemetría y el uso compartido con el Datalake son opt-in. Es una comparación de valores declarados, no de seguridad global; verifica con un firewall.',
           },
         },
       ],
@@ -1284,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'تحقق من checksums النموذج للاستخدام الحساس',
-            whyItMatters: 'يضمن عدم العبث بملفات النماذج المُنزَّلة.',
+            whyItMatters: 'يساعد على اكتشاف تلف ملفات النماذج المُنزَّلة أو العبث بها.',
           },
           {
             title: 'عطّل القياس عن بُعد في أداة الاستدلال',
@@ -1324,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'للبيئات المعزولة أو الخاضعة للتنظيم: وثّق إصدارات النماذج المعتمدة',
-            whyItMatters: 'يضمن الامتثال للمتطلبات التنظيمية لمعالجة البيانات وعزل البنية التحتية.',
+            whyItMatters: 'يوفّر سجلًا بإصدارات النماذج المعتمدة ويدعم توثيق معالجة البيانات وعزل البنية التحتية؛ لكنه لا يثبت وحده الامتثال التنظيمي.',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-ar.webp',
@@ -1337,8 +1303,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أوزان النموذج ملفات ثنائية كبيرة.** قد يستغل ملف GGUF مشوَّه أخطاء في المحلّل (parser) الذي يحمّله: كانت CVE-2026-7482 قراءة خارج الحدود في الكومة داخل محمِّل GGUF في Ollama، وأُصلحت في Ollama 0.17.1.',
         ],
         items: [
-          '**Hugging Face** (huggingface.co): المصدر الرئيسي للنماذج المفتوحة. لكل ملف تجزئة SHA256 مُتحقق منها. التزم بنماذج الناشرين المعروفين (Meta، Google، Microsoft، Mistral AI، Qwen/Alibaba).',
-          '**مكتبة Ollama** ([ollama.com/library](https://ollama.com/library)): يتحقق Ollama من تجزئات النماذج قبل تخزينها. نزّل من المكتبة الرسمية أو من ناشرين تثق بهم.',
+          '**Hugging Face** (huggingface.co): المصدر الرئيسي للنماذج المفتوحة. تعرض صفحة كل ملف تجزئة SHA256 يمكنك المقارنة بها. التزم بنماذج الناشرين المعروفين (Meta، Google، Microsoft، Mistral AI، Qwen/Alibaba).',
+          '**مكتبة Ollama** ([ollama.com/library](https://ollama.com/library)): نزّل من المكتبة الرسمية أو من ناشرين تثق بهم.',
           '**متصفح نماذج LM Studio**: يبحث مباشرة في Hugging Face. تنطبق قواعد الثقة نفسها — تحقق من حساب الناشر.',
           '**تجنّب**: مواقع تبادل الملفات المجهولة، والملفات المشتركة على Discord، وأي مصدر لا يوفّر تجزئة قابلة للتحقق.',
         ],
@@ -1395,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل من الآمن استخدام نموذج LLM محلي مع بيانات مشمولة بـHIPAA؟',
-            a: 'يلغي الاستدلال المحلي خطر معالج البيانات الطرف الثالث الذي تُنشئه واجهات API السحابية. ومع ذلك، يتطلب الامتثال لـHIPAA أكثر من الاستدلال الخاص — تحتاج إلى تشفير قرص كامل وضوابط وصول وتسجيل تدقيق واتفاقية شريك أعمال إذا كان أي مزوّد برمجيات قد يصل إلى PHI. استخدام Ollama مع FileVault مُفعّلًا والقياس عن بُعد مُعطّلًا نقطة انطلاق معقولة، لكن الامتثال الرسمي لـHIPAA يتطلب تقييم مخاطر كاملًا.',
+            a: 'يُلغي الاستدلال المحلي علاقة معالج البيانات مع مزوّد السحابة في خطوة الاستدلال. ومع ذلك، يتطلب الامتثال لـHIPAA أكثر من الاستدلال الخاص — بموجب قاعدة الأمان في HIPAA ستحتاج عادةً إلى تحليل مخاطر وضوابط وصول وتسجيل تدقيق واتفاقية شريك أعمال إذا كان أي مزوّد برمجيات قد يصل إلى PHI؛ والتشفير مواصفة "addressable" وليس إلزامًا صريحًا. استخدام Ollama مع FileVault مُفعّلًا والقياس عن بُعد مُعطّلًا يمكن أن يكون نقطة انطلاق، لكن الامتثال الرسمي لـHIPAA يتطلب تقييم مخاطر كاملًا. هذه معلومات عامة وليست استشارة قانونية.',
           },
           {
             q: 'هل يُرسل Ollama مطالباتي إلى أي مكان؟',
@@ -1403,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل استخدام نموذج LLM محلي أكثر خصوصية من استخدام واجهة API الخاصة بـOpenAI؟',
-            a: 'نعم، من حيث خصوصية المطالبات. مع نموذج LLM محلي، لا تغادر مطالباتك جهازك أبدًا. تُرسل واجهة API الخاصة بـOpenAI المطالبات إلى خوادم OpenAI للمعالجة. تشير شروط خدمة واجهة API الخاصة بـOpenAI إلى أن مدخلات/مخرجات API لا تُستخدم لتدريب النماذج افتراضيًا، لكن البيانات تمر فعلاً عبر بنيتها التحتية. للبيانات الحساسة أو الخاضعة للتنظيم (طبية، قانونية، مالية)، الاستدلال المحلي هو الخيار الأكثر تحفظًا.',
+            a: 'نعم، من حيث خصوصية المطالبات. عند تشغيل نموذج محلي لا ترسل عملية الاستدلال نفسها مطالباتك خارج جهازك. تُرسل واجهة API الخاصة بـOpenAI المطالبات إلى خوادم OpenAI للمعالجة. وبحسب [وثائق ضوابط البيانات في واجهة API الخاصة بـOpenAI](https://developers.openai.com/api/docs/guides/your-data)، لا تُستخدم البيانات المرسلة إلى API لتدريب نماذج OpenAI أو تحسينها ما لم تختر المشاركة، لكن البيانات تمر فعلاً عبر بنيتها التحتية. للبيانات الحساسة أو الخاضعة للتنظيم (طبية، قانونية، مالية)، الاستدلال المحلي هو الخيار الأكثر تحفظًا.',
           },
           {
             q: 'كيف أتحقق من أن ملف نموذج مُنزَّل آمن؟',
@@ -1415,7 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام نموذج LLM محلي لبيانات خاضعة لـGDPR؟',
-            a: 'يقلّل الاستدلال المحلي خطر GDPR بشكل كبير لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لا ترسل حركة شبكة غير متوقعة، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.',
+            a: 'قد يقلّل الاستدلال المحلي من التعرض لمخاطر GDPR لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لا ترسل حركة شبكة غير متوقعة، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.',
           },
           {
             q: 'هل LM Studio آمن للاستخدام؟',
@@ -1434,8 +1400,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'افتراضيًا، يرتبط Ollama بـlocalhost (127.0.0.1:11434) وهو غير قابل للوصول من أجهزة أخرى. إذا سبق أن ضبطت OLLAMA_HOST=0.0.0.0 للسماح بالوصول الشبكي، أعِده: `export OLLAMA_HOST=127.0.0.1:11434`. تحقق من العزل بمحاولة الاتصال من جهاز آخر على شبكتك — يجب أن يفشل.',
           },
           {
-            q: 'ما أداة LLM المحلية الأفضل لأقصى خصوصية؟',
-            a: 'بحسب إعداداتها الافتراضية المنشورة، تُعد Jan AI الأكثر تقييدًا بين الأدوات الأربع: مفتوحة المصدر بالكامل (رخصة Apache 2.0) مع تحليلات اختيارية تُحدَّد عند أول تشغيل. يأتي Ollama بعدها: مفتوح المصدر، يرتبط بـlocalhost افتراضيًا، ويمكن تعطيل ميزات السحابة بـ`OLLAMA_NO_CLOUD=1`. لا يتضمن LM Studio قياسًا عن بُعد وفق سياسة الخصوصية، لكن فحوصات التحديث والبحث عن النماذج ترسل بيانات مجهولة الهوية.',
+            q: 'كيف تختلف الأدوات الأربع في إعداداتها الافتراضية المنشورة للخصوصية؟',
+            a: 'بحسب وثائق كل أداة: يذكر LM Studio أنه لا يتضمن قياسًا عن بُعد (وترسل فحوصات التحديث والبحث عن النماذج بيانات مجهولة الهوية)؛ ويذكر Ollama أنه لا يرى المطالبات المحلية ويرتبط افتراضيًا بـlocalhost؛ وفي Jan التحليلات اختيارية؛ وفي GPT4All القياس عن بُعد ومشاركة Datalake اختياريان. هذه مقارنة لإعدادات معلنة لا للأمان الشامل؛ تحقق بجدار حماية.',
           },
         ],
       },
@@ -1470,10 +1436,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هي اعتبارات الامتثال الإقليمية؟',
         content: '**يقلّل الاستدلال المحلي لنماذج LLM خطر إقامة البيانات، لكن الامتثال التنظيمي الكامل يتطلب ضوابط إضافية لكل منطقة.** هذا القسم معلومات عامة وليس استشارة قانونية؛ تأكد من المتطلبات مع محامٍ أو مسؤول حماية البيانات.',
         items: [
-          '**دول الخليج / السعودية PDPL (2023):** يقلّل الاستدلال المحلي خطر نقل البيانات عبر الحدود بموجب نظام حماية البيانات الشخصية السعودي. فعّل تشفير القرص الكامل ووثّق معالجة البيانات. في الإمارات، يدعم التشغيل داخل المؤسسة متطلبات سيادة البيانات؛ تُتيح النماذج العربية السيادية مثل Jais وALLaM وFalcon استدلالًا محليًا بالكامل دون الاعتماد على مزودين أجانب.',
-          '**الاتحاد الأوروبي / GDPR (2018):** قد يُلغي الاستدلال المحلي علاقة معالج البيانات في المادة 28 مع مزوّد النموذج في خطوة الاستدلال. لا يزال يجب التحقق من حركة شبكة LM Studio بجدار حماية وتفعيل تشفير القرص وتوثيق إعداد معالجة البيانات لأي DPIA. أجرِ تقييم مصلحة مشروعة قبل معالجة البيانات الشخصية.',
-          '**اليابان / APPI (2022):** يتطلب قانون حماية المعلومات الشخصية حماية البيانات الشخصية أثناء المعالجة. قد يساعد الاستدلال المحلي على جهاز معزول عن الشبكة في تلبية متطلبات توطين البيانات. عطّل فحوصات تحديث Ollama وتحقق من حركة شبكة LM Studio ضمن تقييمك لـAPPI.',
-          '**الصين / PIPL (2021):** تشغيل نموذج LLM محلي للاستخدام الداخلي لا يتطلب عادةً تسجيلًا لدى CAC؛ تأكد من ذلك مع مستشار قانوني. إذا نشرت نموذج LLM محلي كخدمة عامة في الصين، يُطلب تسجيل الخوارزميات لدى CAC.',
+          '**دول الخليج / السعودية PDPL (2023):** قد يقلّل الاستدلال المحلي خطر نقل البيانات عبر الحدود بموجب نظام حماية البيانات الشخصية السعودي. فعّل تشفير القرص الكامل ووثّق معالجة البيانات. في الإمارات، قد يساعد التشغيل داخل المؤسسة في معالجة اعتبارات سيادة البيانات؛ ويمكن لنماذج عربية مثل Jais وALLaM وFalcon أن تعمل محليًا دون الاعتماد على مزوّد أجنبي.',
+          '**الاتحاد الأوروبي / GDPR (2018):** قد يُلغي الاستدلال المحلي علاقة معالج البيانات في المادة 28 مع مزوّد النموذج في خطوة الاستدلال. لا يزال يجب التحقق من حركة شبكة LM Studio بجدار حماية وتفعيل تشفير القرص وتوثيق إعداد معالجة البيانات لأي DPIA. حدّد ووثّق أساسًا قانونيًا (مثل المصلحة المشروعة المدعومة بتقييم) قبل معالجة البيانات الشخصية.',
+          '**اليابان / APPI (2022):** يتطلب قانون حماية المعلومات الشخصية حماية البيانات الشخصية أثناء المعالجة. قد يقلّل الاستدلال المحلي على جهاز معزول عن الشبكة من التعرض لنقل البيانات عبر الحدود. تحقق من حركة شبكة LM Studio ضمن تقييمك لـAPPI.',
+          '**الصين / PIPL (2021):** يعتمد ما إذا كان تشغيل نموذج LLM محلي للاستخدام الداخلي يستوجب التسجيل أو الإيداع وفق أنظمة الذكاء الاصطناعي التوليدي أو الخوارزميات أو PIPL الصينية على حالة الاستخدام؛ تأكد من ذلك مع مستشار قانوني في الصين. وقد تخضع خدمات الذكاء الاصطناعي التوليدي المقدَّمة للعموم في الصين لمتطلبات الإيداع والتقييم الأمني.',
         ],
       },
       relatedReading: {
@@ -1560,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل من الآمن استخدام نموذج LLM محلي مع بيانات مشمولة بـHIPAA؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'يلغي الاستدلال المحلي خطر معالج البيانات الطرف الثالث الذي تُنشئه واجهات API السحابية. ومع ذلك، يتطلب الامتثال لـHIPAA أكثر من الاستدلال الخاص — تحتاج إلى تشفير قرص كامل وضوابط وصول وتسجيل تدقيق واتفاقية شريك أعمال إذا كان أي مزوّد برمجيات قد يصل إلى PHI. استخدام Ollama مع FileVault مُفعّلًا والقياس عن بُعد مُعطّلًا نقطة انطلاق معقولة، لكن الامتثال الرسمي لـHIPAA يتطلب تقييم مخاطر كاملًا.',
+            text: 'يُلغي الاستدلال المحلي علاقة معالج البيانات مع مزوّد السحابة في خطوة الاستدلال. ومع ذلك، يتطلب الامتثال لـHIPAA أكثر من الاستدلال الخاص — بموجب قاعدة الأمان في HIPAA ستحتاج عادةً إلى تحليل مخاطر وضوابط وصول وتسجيل تدقيق واتفاقية شريك أعمال إذا كان أي مزوّد برمجيات قد يصل إلى PHI؛ والتشفير مواصفة "addressable" وليس إلزامًا صريحًا. استخدام Ollama مع FileVault مُفعّلًا والقياس عن بُعد مُعطّلًا يمكن أن يكون نقطة انطلاق، لكن الامتثال الرسمي لـHIPAA يتطلب تقييم مخاطر كاملًا. هذه معلومات عامة وليست استشارة قانونية.',
           },
         },
         {
@@ -1576,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل استخدام نموذج LLM محلي أكثر خصوصية من استخدام واجهة API الخاصة بـOpenAI؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'نعم، من حيث خصوصية المطالبات. مع نموذج LLM محلي، لا تغادر مطالباتك جهازك أبدًا. تُرسل واجهة API الخاصة بـOpenAI المطالبات إلى خوادم OpenAI للمعالجة. تشير شروط خدمة واجهة API الخاصة بـOpenAI إلى أن مدخلات/مخرجات API لا تُستخدم لتدريب النماذج افتراضيًا، لكن البيانات تمر فعلاً عبر بنيتها التحتية. للبيانات الحساسة أو الخاضعة للتنظيم (طبية، قانونية، مالية)، الاستدلال المحلي هو الخيار الأكثر تحفظًا.',
+            text: 'نعم، من حيث خصوصية المطالبات. عند تشغيل نموذج محلي لا ترسل عملية الاستدلال نفسها مطالباتك خارج جهازك. تُرسل واجهة API الخاصة بـOpenAI المطالبات إلى خوادم OpenAI للمعالجة. وبحسب [وثائق ضوابط البيانات في واجهة API الخاصة بـOpenAI](https://developers.openai.com/api/docs/guides/your-data)، لا تُستخدم البيانات المرسلة إلى API لتدريب نماذج OpenAI أو تحسينها ما لم تختر المشاركة، لكن البيانات تمر فعلاً عبر بنيتها التحتية. للبيانات الحساسة أو الخاضعة للتنظيم (طبية، قانونية، مالية)، الاستدلال المحلي هو الخيار الأكثر تحفظًا.',
           },
         },
         {
@@ -1600,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل يمكنني استخدام نموذج LLM محلي لبيانات خاضعة لـGDPR؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'يقلّل الاستدلال المحلي خطر GDPR بشكل كبير لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لا ترسل حركة شبكة غير متوقعة، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.',
+            text: 'قد يقلّل الاستدلال المحلي من التعرض لمخاطر GDPR لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لا ترسل حركة شبكة غير متوقعة، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.',
           },
         },
         {
@@ -1637,10 +1603,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          name: 'ما أداة LLM المحلية الأفضل لأقصى خصوصية؟',
+          name: 'كيف تختلف الأدوات الأربع في إعداداتها الافتراضية المنشورة للخصوصية؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'بحسب إعداداتها الافتراضية المنشورة، تُعد Jan AI الأكثر تقييدًا بين الأدوات الأربع: مفتوحة المصدر بالكامل (رخصة Apache 2.0) مع تحليلات اختيارية تُحدَّد عند أول تشغيل. يأتي Ollama بعدها: مفتوح المصدر، يرتبط بـlocalhost افتراضيًا، ويمكن تعطيل ميزات السحابة بـ`OLLAMA_NO_CLOUD=1`. لا يتضمن LM Studio قياسًا عن بُعد وفق سياسة الخصوصية، لكن فحوصات التحديث والبحث عن النماذج ترسل بيانات مجهولة الهوية.',
+            text: 'بحسب وثائق كل أداة: يذكر LM Studio أنه لا يتضمن قياسًا عن بُعد (وترسل فحوصات التحديث والبحث عن النماذج بيانات مجهولة الهوية)؛ ويذكر Ollama أنه لا يرى المطالبات المحلية ويرتبط افتراضيًا بـlocalhost؛ وفي Jan التحليلات اختيارية؛ وفي GPT4All القياس عن بُعد ومشاركة Datalake اختياريان. هذه مقارنة لإعدادات معلنة لا للأمان الشامل؛ تحقق بجدار حماية.',
           },
         },
       ],
@@ -1748,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Verifique o que o LM Studio envia: segundo a política de privacidade, ele não tem telemetria, mas as verificações de atualização e a busca de modelos enviam dados anonimizados. Recuse a telemetria do GPT4All na primeira execução (ela é opt-in) e bloqueie o tráfego de saída depois de baixar os modelos.',
           'Baixe pesos de modelos apenas do Hugging Face (huggingface.co) ou da biblioteca oficial do Ollama. Verifique os checksums SHA256 em implantações sensíveis.',
           'Para dados regulados (HIPAA, LGPD, sigilo profissional): habilite a criptografia de disco completo, use uma máquina air-gapped e audite todas as extensões instaladas.',
-          'LGPD e ANPD: a inferência local elimina a necessidade de acordos de processamento de dados com provedores de nuvem.',
+          'LGPD e ANPD: a inferência local pode dispensar o compartilhamento de dados de prompt com provedores de nuvem na etapa de inferência; os demais deveres da LGPD continuam aplicáveis.',
         ],
         title: 'Quais são os pontos principais?',
       },
@@ -1845,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Verifique os checksums do modelo para uso sensível',
-            whyItMatters: 'Garante que os arquivos de modelo baixados não foram adulterados.',
+            whyItMatters: 'Ajuda a detectar corrupção ou adulteração dos arquivos de modelo baixados.',
           },
           {
             title: 'Desative a telemetria na sua ferramenta de inferência',
@@ -1885,7 +1851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Para ambientes air-gapped ou regulados: documente as versões de modelo aprovadas',
-            whyItMatters: 'Garante conformidade com requisitos regulatórios de tratamento de dados e isolamento de infraestrutura.',
+            whyItMatters: 'Cria um registro das versões de modelo aprovadas e apoia a documentação de tratamento de dados e isolamento de infraestrutura; por si só, não comprova conformidade regulatória.',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-pt.webp',
@@ -1895,9 +1861,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'lgpd',
         title: 'Conformidade com LGPD e ANPD no Brasil',
         content: [
-          '**A Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018)** e as diretrizes da Autoridade Nacional de Proteção de Dados (ANPD) exigem controles adequados para dados pessoais sensíveis. A inferência de LLM local mantém todos os dados de prompt na sua infraestrutura.',
-          'Requisitos de conformidade para implantações de LLM local no Brasil: (1) registre quais dados são processados pelos modelos de IA, (2) implemente controles de acesso (autenticação por token para APIs), (3) criptografe dados em repouso (criptografia de disco completo), (4) documente medidas de segurança para auditorias da ANPD.',
-          'Setores financeiros e de saúde no Brasil também estão sujeitos às regulamentações do Banco Central e da ANVISA — a inferência local satisfaz os requisitos de residência de dados por padrão.',
+          '**A Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018)** e as diretrizes da Autoridade Nacional de Proteção de Dados (ANPD) tratam da proteção de dados pessoais, inclusive dados sensíveis. A inferência de LLM local mantém todos os dados de prompt na sua infraestrutura.',
+          'Medidas que costumam ser adotadas para apoiar a documentação de segurança em implantações de LLM local: (1) registrar quais dados são tratados pelos modelos, (2) controlar o acesso (por exemplo, autenticação por token nas APIs), (3) criptografar dados em repouso, (4) documentar as medidas de segurança. Elas não são uma lista oficial de exigências da LGPD; confirme com um advogado ou encarregado.',
+          'Setores financeiros e de saúde no Brasil também estão sujeitos a normas setoriais (por exemplo, do Banco Central e da ANVISA); a inferência local pode reduzir a transferência de dados a terceiros, mas não cumpre esses requisitos por si só. Confirme com um advogado. Esta seção traz informações gerais e não constitui aconselhamento jurídico.',
         ],
       },
       modelProvenance: {
@@ -1907,8 +1873,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pesos de modelos são arquivos binários grandes.** Um arquivo GGUF malformado pode explorar falhas no parser que o carrega: o CVE-2026-7482 foi uma leitura fora dos limites do heap (heap out-of-bounds read) no carregador de GGUF do Ollama, corrigida na versão 0.17.1.',
         ],
         items: [
-          '**Hugging Face** (huggingface.co): a principal fonte de modelos abertos. Cada arquivo tem um hash SHA256 verificável. Fique com modelos de publicadores conhecidos (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Biblioteca do Ollama** ([ollama.com/library](https://ollama.com/library)): o Ollama verifica os hashes dos modelos antes de armazená-los. Baixe da biblioteca oficial ou de publicadores em que você confia.',
+          '**Hugging Face** (huggingface.co): a principal fonte de modelos abertos. A página de cada arquivo mostra um hash SHA256 para comparação. Fique com modelos de publicadores conhecidos (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+          '**Biblioteca do Ollama** ([ollama.com/library](https://ollama.com/library)): Baixe da biblioteca oficial ou de publicadores em que você confia.',
           '**Navegador de modelos do LM Studio**: busca diretamente no Hugging Face. Valem as mesmas regras de confiança -- confira a conta do publicador.',
           '**Evite**: sites anônimos de compartilhamento de arquivos, arquivos soltos no Discord e qualquer fonte que não forneça um hash verificável.',
         ],
@@ -1965,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'É seguro usar um LLM local com dados cobertos pela HIPAA?',
-            a: 'A inferência local elimina o risco do processador de dados terceirizado que as APIs em nuvem criam. No entanto, a conformidade com a HIPAA exige mais do que inferência privada -- você precisa de criptografia de disco completo, controles de acesso, registro de auditoria e um Acordo de Associado Comercial (BAA) caso algum fornecedor de software possa acessar PHI. Usar o Ollama com o FileVault habilitado e a telemetria desativada é um ponto de partida razoável, mas a conformidade formal com a HIPAA exige uma avaliação de risco completa.',
+            a: 'A inferência local elimina a relação de operador com um provedor de nuvem na etapa de inferência. No entanto, a conformidade com a HIPAA exige mais do que inferência privada -- pela Security Rule da HIPAA, você normalmente precisará de análise de risco, controles de acesso, registro de auditoria e um Acordo de Associado Comercial (BAA) caso algum fornecedor de software possa acessar PHI; a criptografia é uma salvaguarda "addressable" e não uma obrigação expressa. Usar o Ollama com o FileVault habilitado e a telemetria desativada pode ser um ponto de partida, mas a conformidade formal com a HIPAA exige uma avaliação de risco completa. Isto é informação geral, não aconselhamento jurídico.',
           },
           {
             q: 'O Ollama envia meus prompts para algum lugar?',
@@ -1973,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Usar um LLM local é mais privado do que usar a API da OpenAI?',
-            a: 'Sim, em termos de privacidade dos prompts. Com um LLM local, seus prompts nunca saem da sua máquina. A API da OpenAI envia os prompts para os servidores da OpenAI para processamento. Os Termos de Serviço da API da OpenAI afirmam que a entrada/saída da API não é usada para treinar modelos por padrão, mas os dados transitam pela infraestrutura deles. Para dados sensíveis ou regulados (médicos, jurídicos, financeiros), a inferência local é a escolha mais conservadora.',
+            a: 'Sim, em termos de privacidade dos prompts. Quando um modelo local roda, a inferência em si não envia seus prompts para fora da sua máquina. A API da OpenAI envia os prompts para os servidores da OpenAI para processamento. Segundo a [documentação de controles de dados da API da OpenAI](https://developers.openai.com/api/docs/guides/your-data), os dados enviados à API não são usados para treinar ou melhorar os modelos da OpenAI, a menos que você aceite expressamente, mas os dados transitam pela infraestrutura deles. Para dados sensíveis ou regulados (médicos, jurídicos, financeiros), a inferência local é a escolha mais conservadora.',
           },
           {
             q: 'Como verifico se um arquivo de modelo baixado é seguro?',
@@ -1985,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar um LLM local para dados regulados pela LGPD?',
-            a: 'A inferência local reduz significativamente o risco de conformidade com a LGPD porque os dados não saem da sua infraestrutura. No entanto, você ainda deve verificar se a ferramenta de inferência (Ollama, LM Studio) não envia tráfego de rede inesperado, se a criptografia de disco está habilitada e se os controles de acesso estão em vigor. Para requisitos de relatório de impacto à proteção de dados, documente sua configuração de tratamento de dados e confirme que nenhum dado pessoal transita por servidores de terceiros.',
+            a: 'A inferência local pode reduzir a exposição a riscos da LGPD porque os dados não saem da sua infraestrutura. No entanto, você ainda deve verificar se a ferramenta de inferência (Ollama, LM Studio) não envia tráfego de rede inesperado, se a criptografia de disco está habilitada e se os controles de acesso estão em vigor. Para requisitos de relatório de impacto à proteção de dados, documente sua configuração de tratamento de dados e confirme que nenhum dado pessoal transita por servidores de terceiros.',
           },
           {
             q: 'O LM Studio é seguro de usar?',
@@ -2004,8 +1970,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Por padrão, o Ollama escuta no localhost (127.0.0.1:11434) e não fica acessível a outros dispositivos. Se você definiu antes OLLAMA_HOST=0.0.0.0 para permitir acesso pela rede, reverta: `export OLLAMA_HOST=127.0.0.1:11434`. Verifique o isolamento tentando se conectar a partir de outro dispositivo da sua rede -- a conexão deve falhar.',
           },
           {
-            q: 'Qual ferramenta de LLM local é a melhor para máxima privacidade?',
-            a: 'Com base nos padrões publicados, o Jan AI é o mais restritivo entre as quatro: totalmente de código aberto (licença Apache 2.0), com analytics opt-in escolhido na primeira execução. O Ollama vem em seguida: código aberto, escuta no localhost por padrão e os recursos de nuvem podem ser desativados com `OLLAMA_NO_CLOUD=1`. O LM Studio não tem telemetria segundo sua política de privacidade, mas as verificações de atualização e a busca de modelos enviam dados anonimizados.',
+            q: 'Como as quatro ferramentas diferem nos padrões de privacidade publicados?',
+            a: 'Segundo a documentação de cada uma: o LM Studio afirma não ter telemetria (verificações de atualização e busca de modelos enviam dados anonimizados); o Ollama afirma não ver prompts locais e escuta no localhost por padrão; no Jan o analytics é opt-in; no GPT4All a telemetria e o compartilhamento no Datalake são opt-in. É uma comparação de padrões declarados, não de segurança geral; verifique com um firewall.',
           },
         ],
       },
@@ -2041,10 +2007,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**A inferência de LLM local reduz o risco de residência de dados, mas a conformidade regulatória completa exige controles adicionais conforme a região.** Esta seção traz informações gerais e não constitui aconselhamento jurídico; confirme os requisitos com um advogado ou encarregado de proteção de dados.',
         items: [
           '**Brasil / LGPD (Lei nº 13.709/2018):** a inferência local mantém os dados dos prompts na sua infraestrutura, sem envio a um provedor de nuvem. Você ainda deve verificar o tráfego de rede do LM Studio com um firewall, habilitar a criptografia de disco, controlar o acesso e documentar o tratamento de dados para eventuais auditorias ou solicitações da ANPD (Autoridade Nacional de Proteção de Dados).',
-          '**União Europeia / GDPR (2018):** a inferência local pode eliminar a relação de operador do Artigo 28 com um provedor de modelo na etapa de inferência. Você ainda deve verificar o tráfego de rede do LM Studio com um firewall, habilitar a criptografia de disco e documentar sua configuração de tratamento de dados para qualquer DPIA. Faça uma avaliação de legítimo interesse antes de tratar dados pessoais.',
-          '**Estados Unidos / HIPAA:** a HIPAA exige salvaguardas para PHI: criptografia de disco completo (o "porto seguro da criptografia"), controles de acesso e registro de auditoria. O Ollama com FileVault habilitado e telemetria desativada é um ponto de partida razoável para a HIPAA. A conformidade formal exige uma avaliação de risco completa.',
-          '**Japão / APPI (2022):** a Lei de Proteção de Informações Pessoais exige a proteção de dados pessoais durante o tratamento. A inferência local em uma máquina air-gapped pode ajudar a atender aos requisitos de localização de dados. Desative as verificações de atualização do Ollama e verifique o tráfego de rede do LM Studio com um firewall como parte da sua avaliação da APPI.',
-          '**China / PIPL (2021):** executar um LLM local para uso interno em geral não exige registro na CAC; confirme com assessoria jurídica. Se você implantar um LLM local como serviço voltado ao público na China, o registro de algoritmo na CAC é obrigatório.',
+          '**União Europeia / GDPR (2018):** a inferência local pode eliminar a relação de operador do Artigo 28 com um provedor de modelo na etapa de inferência. Você ainda deve verificar o tráfego de rede do LM Studio com um firewall, habilitar a criptografia de disco e documentar sua configuração de tratamento de dados para qualquer DPIA. Defina e documente uma base legal (por exemplo, o legítimo interesse, apoiado por uma avaliação) antes de tratar dados pessoais.',
+          '**Estados Unidos / HIPAA:** a Security Rule da HIPAA exige análise de risco e salvaguardas para PHI, incluindo controles de acesso e de auditoria; a criptografia é uma especificação "addressable" e uma medida comum, não uma obrigação expressa. O Ollama com FileVault habilitado e telemetria desativada pode ser um ponto de partida; a conformidade formal exige uma avaliação de risco completa.',
+          '**Japão / APPI (2022):** a Lei de Proteção de Informações Pessoais exige a proteção de dados pessoais durante o tratamento. A inferência local em uma máquina air-gapped pode reduzir a exposição a transferências internacionais de dados. Verifique o tráfego de rede do LM Studio com um firewall como parte da sua avaliação da APPI.',
+          '**China / PIPL (2021):** se um LLM local para uso interno gera deveres de registro ou arquivamento segundo as normas chinesas de IA generativa, algoritmos ou a PIPL depende do caso de uso; confirme com assessoria jurídica na China. Serviços públicos de IA generativa na China podem estar sujeitos a exigências de registro e avaliação de segurança.',
         ],
       },
       relatedReading: {
@@ -2231,7 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Überprüfen Sie Modell-Prüfsummen für sensible Anwendungen',
-            whyItMatters: 'Stellt sicher, dass heruntergeladene Modelldateien nicht manipuliert wurden.',
+            whyItMatters: 'Hilft, Beschädigung oder Manipulation heruntergeladener Modelldateien zu erkennen.',
           },
           {
             title: 'Deaktivieren Sie Telemetrie in Ihrem Inferenz-Tool',
@@ -2271,7 +2237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Für isolierte oder regulierte Umgebungen: Dokumentieren Sie genehmigte Modellversionen',
-            whyItMatters: 'Stellt sicher, dass regulatorische Anforderungen für Datenbehandlung und Infrastruktur-Isolation erfüllt werden.',
+            whyItMatters: 'Schafft einen Nachweis über freigegebene Modellversionen und unterstützt Ihre Dokumentation zu Datenverarbeitung und Isolation; eine regulatorische Konformität ergibt sich daraus allein nicht.',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-de.webp',
@@ -2280,10 +2246,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zusammenfassung: {
         title: 'Was sind die Kernpunkte für DSGVO-Compliance?',
         items: [
-          '**Lokal verarbeitete Daten** -- da Prompts Ihren Computer nicht verlassen, fungiert die lokale Maschine als Datenverarbeiter, nicht Ollama oder LM Studio. Dennoch müssen Sie überprüfen, ob Telemetrie deaktiviert ist.',
-          '**BSI C5-Anforderungen** -- für Bundesbehörden-Daten: Vollverschlüsselung (AES-256), Zugriffskontrolle, Audit-Logging und Netzwerk-Isolation. Alle 12 Schritte dieser Checkliste adressieren diese Punkte.',
-          '**Datenschutz-Folgenabschätzung erforderlich** -- wenn Sie personenbezogene Daten verarbeiten (DSGVO Art. 35), dokumentieren Sie, dass Sie Ollama nutzen, Netzwerk-Isolation aktiviert ist und kein Cloud-Speicher verwendet wird.',
+          '**Lokal verarbeitete Daten** -- da Prompts Ihren Computer nicht verlassen, entfällt für den Inferenzschritt die Weitergabe an einen externen Modellanbieter. Verantwortlich im Sinne der DSGVO bleiben Sie bzw. Ihre Organisation; prüfen Sie zusätzlich, ob Telemetrie deaktiviert ist.',
+          '**BSI C5** -- ein Kriterienkatalog des BSI für Cloud-Dienste, kein Prüfsiegel für lokale Software. Die technischen Schritte dieser Checkliste (Verschlüsselung, Zugriffskontrolle, Protokollierung, Netzwerkisolation) können Ihre Nachweise unterstützen; ob Anforderungen erfüllt sind, bewerten Sie mit Ihrer IT-Compliance.',
+          '**Datenschutz-Folgenabschätzung** -- eine DSFA (Art. 35 DSGVO) ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko für die Betroffenen mit sich bringt; prüfen Sie das für Ihren Fall und dokumentieren Sie Ihr Setup (Ollama, Netzwerkisolation, kein Cloud-Speicher).',
         ],
+        content: 'Allgemeine Informationen, keine Rechtsberatung; klären Sie Anforderungen mit Rechtsberatung oder Ihrem Datenschutzbeauftragten.',
       },
       modelProvenance: {
         id: 'model-provenance',
@@ -2292,8 +2259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modellgewichte sind große Binärdateien.** Eine fehlerhaft aufgebaute GGUF-Datei kann Fehler im Parser ausnutzen, der sie lädt: CVE-2026-7482 war ein Heap-Out-of-Bounds-Read im GGUF-Loader von Ollama, behoben in Ollama 0.17.1.',
         ],
         items: [
-          '**Hugging Face** (huggingface.co): die primäre Quelle für offene Modelle. Jede Datei hat einen verifizierten SHA256-Hash. Halten Sie sich an Modelle von bekannten Verlegern (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Ollama-Bibliothek** ([ollama.com/library](https://ollama.com/library)): Ollama verifiziert Modell-Hashes vor dem Speichern. Laden Sie aus der offiziellen Bibliothek oder von Verlegern, denen Sie vertrauen.',
+          '**Hugging Face** (huggingface.co): die primäre Quelle für offene Modelle. Die Seite jeder Datei zeigt einen SHA256-Hash zum Abgleich. Halten Sie sich an Modelle von bekannten Verlegern (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+          '**Ollama-Bibliothek** ([ollama.com/library](https://ollama.com/library)): Laden Sie aus der offiziellen Bibliothek oder von Verlegern, denen Sie vertrauen.',
           '**LM Studio-Modellbrowser**: durchsucht Hugging Face direkt. Die gleichen Vertrauensregeln gelten -- überprüfen Sie das Verleger-Konto.',
           '**Vermeiden Sie**: anonyme Datei-Freigabe-Seiten, Discord-Datei-Drops und jede Quelle, die keinen verifizierbaren Hash bereitstellt.',
         ],
@@ -2350,7 +2317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist es sicher, ein lokales LLM mit HIPAA-geschützten Daten zu verwenden?',
-            a: 'Lokale Inferenz eliminiert das Risiko der Datenverarbeitung durch Dritte, das Cloud-APIs schaffen. HIPAA-Compliance erfordert jedoch mehr als private Inferenz -- Sie benötigen Vollverschlüsselung, Zugriffskontrolle, Audit-Logging und eine Datenverarbeitungsvereinbarung, falls ein Softwareanbieter auf geschützte Gesundheitsinformationen zugreifen könnte. Die Verwendung von Ollama mit aktiviertem FileVault und deaktivierter Telemetrie ist ein angemessener Startpunkt, aber formale HIPAA-Compliance erfordert eine vollständige Risikobewertung.',
+            a: 'Lokale Inferenz entfernt für den Inferenzschritt die Auftragsverarbeitung durch einen Cloud-Anbieter. HIPAA-Compliance erfordert jedoch mehr als private Inferenz -- nach der HIPAA-Sicherheitsregel benötigen Sie in der Regel eine Risikoanalyse, Zugriffskontrolle, Audit-Logging und eine Business-Associate-Vereinbarung (BAA), falls ein Softwareanbieter auf geschützte Gesundheitsinformationen zugreifen könnte; Verschlüsselung ist eine „addressable“ Schutzmaßnahme und keine ausdrückliche Pflicht. Ollama mit aktiviertem FileVault und deaktivierter Telemetrie kann ein Ausgangspunkt sein, aber formale HIPAA-Compliance erfordert eine vollständige Risikobewertung. Dies sind allgemeine Informationen, keine Rechtsberatung.',
           },
           {
             q: 'Sendet Ollama meine Prompts irgendwohin?',
@@ -2358,7 +2325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist ein lokales LLM privater als die Nutzung der OpenAI-API?',
-            a: 'Ja, was die Vertraulichkeit der Prompts betrifft. Bei einem lokalen LLM verlassen Ihre Prompts Ihren Rechner nie. Die OpenAI-API sendet Prompts zur Verarbeitung an die Server von OpenAI. Laut den API-Nutzungsbedingungen von OpenAI werden API-Ein- und -Ausgaben standardmäßig nicht zum Training von Modellen verwendet, die Daten durchlaufen aber dennoch deren Infrastruktur. Für sensible oder regulierte Daten (medizinisch, rechtlich, finanziell) ist lokale Inferenz die vorsichtigere Wahl.',
+            a: 'Ja, was die Vertraulichkeit der Prompts betrifft. Wenn ein lokales Modell läuft, sendet die Inferenz selbst Ihre Prompts nicht von Ihrem Rechner weg. Die OpenAI-API sendet Prompts zur Verarbeitung an die Server von OpenAI. Laut der [Dokumentation zu den API-Datenkontrollen von OpenAI](https://developers.openai.com/api/docs/guides/your-data) werden an die API gesendete Daten nicht zum Training oder zur Verbesserung von OpenAI-Modellen verwendet, sofern Sie nicht ausdrücklich zustimmen; die Daten durchlaufen aber dennoch deren Infrastruktur. Für sensible oder regulierte Daten (medizinisch, rechtlich, finanziell) ist lokale Inferenz die vorsichtigere Wahl.',
           },
           {
             q: 'Wie überprüfe ich, ob eine heruntergeladene Modelldatei sicher ist?',
@@ -2370,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich ein lokales LLM für DSGVO-regulierte Daten verwenden?',
-            a: 'Lokale Inferenz reduziert das DSGVO-Risiko erheblich, da Daten Ihre Infrastruktur nicht verlassen. Sie müssen jedoch immer noch überprüfen, dass das Inferenz-Tool (Ollama, LM Studio) keinen unerwarteten Netzwerkverkehr sendet, dass Festplattenverschlüsselung aktiviert ist und dass Zugriffskontrolle vorhanden ist. Für Artikel-35-DPIA-Anforderungen dokumentieren Sie Ihr Datenverarbeitungs-Setup und bestätigen Sie, dass keine personenbezogenen Daten Drittanbieter-Server durchlaufen.',
+            a: 'Lokale Inferenz kann die DSGVO-Exposition verringern, da Daten Ihre Infrastruktur nicht verlassen. Sie müssen jedoch immer noch überprüfen, dass das Inferenz-Tool (Ollama, LM Studio) keinen unerwarteten Netzwerkverkehr sendet, dass Festplattenverschlüsselung aktiviert ist und dass Zugriffskontrolle vorhanden ist. Für Artikel-35-DPIA-Anforderungen dokumentieren Sie Ihr Datenverarbeitungs-Setup und bestätigen Sie, dass keine personenbezogenen Daten Drittanbieter-Server durchlaufen.',
           },
           {
             q: 'Ist LM Studio sicher? Wie steht es um den Datenschutz?',
@@ -2389,12 +2356,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Standardmäßig bindet sich Ollama an localhost (127.0.0.1:11434) und ist von anderen Geräten nicht erreichbar. Falls Sie zuvor OLLAMA_HOST=0.0.0.0 gesetzt haben, um Netzwerkzugriff zu erlauben, machen Sie das rückgängig: `export OLLAMA_HOST=127.0.0.1:11434`. Prüfen Sie die Isolation, indem Sie versuchen, von einem anderen Gerät in Ihrem Netzwerk eine Verbindung herzustellen -- sie sollte scheitern.',
           },
           {
-            q: 'Welches lokale LLM-Tool ist am sichersten und schützt die Privatsphäre am besten?',
-            a: 'Nach den veröffentlichten Voreinstellungen ist Jan AI das restriktivste der vier Tools: vollständig Open Source (Apache-2.0-Lizenz), mit Analytics, die Opt-in sind und beim ersten Start gewählt werden. Ollama folgt danach: Open Source, standardmäßig an localhost gebunden, und Cloud-Funktionen lassen sich mit `OLLAMA_NO_CLOUD=1` abschalten. LM Studio hat laut Datenschutzerklärung keine Telemetrie, aber Update-Prüfungen und Modellsuche senden anonymisierte Daten.',
+            q: 'Wie unterscheiden sich die vier Tools bei den veröffentlichten Datenschutz-Voreinstellungen?',
+            a: 'Nach der jeweiligen Dokumentation: LM Studio gibt an, keine Telemetrie zu enthalten (Update-Prüfungen und Modellsuche senden anonymisierte Daten); Ollama sieht lokale Prompts nach eigener Angabe nicht und bindet sich standardmäßig an localhost; bei Jan sind Analytics Opt-in; bei GPT4All sind Telemetrie und Datalake-Teilen Opt-in. Das vergleicht angegebene Voreinstellungen, keine Gesamtsicherheit; prüfen Sie per Firewall.',
           },
           {
-            q: 'Kann ich Ollama in einem Unternehmen mit BSI C5-Anforderungen einsetzen?',
-            a: 'Ja, mit korrekter Konfiguration. Aktivieren Sie Vollverschlüsselung (AES-256) für die Systemfestplatte, deaktivieren Sie alle Telemetrie, blockieren Sie ausgehende Verbindungen mit einer Firewall und isolieren Sie das Gerät vom Internet. Dokumentieren Sie diese Konfiguration in Ihrer Datenschutz-Folgenabschätzung. Siehe Punkt 12 der Checkliste für air-gapped Umgebungen.',
+            q: 'Reicht Ollama allein für BSI-C5-Anforderungen aus?',
+            a: 'Nein. BSI C5 ist ein Kriterienkatalog des BSI für Cloud-Dienste; eine Konformität ergibt sich nicht aus einer einzelnen Software oder Konfiguration. Die technischen Schritte dieser Checkliste (Verschlüsselung, Zugriffskontrolle, Protokollierung, Netzwerkisolation) können Ihre Nachweise unterstützen. Ob Anforderungen erfüllt sind, bewerten Sie mit Ihrer IT-Compliance. Dies ist keine Rechtsberatung.',
           },
           {
             q: 'Wie überprüfe ich, was LM Studio ins Netz sendet?',
@@ -2436,10 +2403,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was sind die regionalen Compliance-Überlegungen?',
         content: '**Lokale LLM-Inferenz reduziert Datenresidenz-Risiken, aber vollständige behördliche Compliance erfordert zusätzliche regionale Kontrollen.** Dieser Abschnitt enthält allgemeine Informationen und ist keine Rechtsberatung; klären Sie die Anforderungen mit einer Rechtsanwältin, einem Rechtsanwalt oder Ihrem Datenschutzbeauftragten.',
         items: [
-          '**EU / DSGVO (2018):** Lokale Inferenz kann die Auftragsverarbeitung nach Artikel 28 mit einem Modellanbieter für den Inferenzschritt entfallen lassen. Sie müssen dennoch den Netzwerkverkehr von LM Studio per Firewall prüfen, Festplattenverschlüsselung aktivieren und Ihr Datenverarbeitungs-Setup für jede DPIA dokumentieren. Führen Sie eine Interessenabwägung vor der Verarbeitung personenbezogener Daten durch.',
-          '**Vereinigte Staaten / HIPAA:** HIPAA verlangt Schutzmaßnahmen für PHI: Vollverschlüsselung der Festplatte (das "Verschlüsselungs-Safe Harbor"), Zugriffskontrolle und Audit-Logging. Ollama mit aktiviertem FileVault und deaktivierter Telemetrie ist ein angemessener HIPAA-Ausgangspunkt. Formale Compliance erfordert eine vollständige Risikobewertung.',
-          '**Japan / APPI (2022):** Das Gesetz zum Schutz personenbezogener Informationen verlangt den Schutz personenbezogener Daten während der Verarbeitung. Lokale Inferenz auf einem isolierten oder offline-Gerät kann helfen, Datenlokalisierungsanforderungen zu erfüllen. Deaktivieren Sie Ollama-Updates und prüfen Sie den Netzwerkverkehr von LM Studio per Firewall im Rahmen Ihrer APPI-Prüfung.',
-          '**China / PIPL (2021):** Das Betreiben eines lokalen LLM für interne Nutzung erfordert in der Regel keine CAC-Registrierung; klären Sie dies mit Rechtsberatung. Falls Sie ein lokales LLM als öffentlich zugänglichen Service in China bereitstellen, ist eine CAC-Algorithmus-Registrierung erforderlich.',
+          '**EU / DSGVO (2018):** Lokale Inferenz kann die Auftragsverarbeitung nach Artikel 28 mit einem Modellanbieter für den Inferenzschritt entfallen lassen. Sie müssen dennoch den Netzwerkverkehr von LM Studio per Firewall prüfen, Festplattenverschlüsselung aktivieren und Ihr Datenverarbeitungs-Setup für jede DPIA dokumentieren. Bestimmen und dokumentieren Sie vor der Verarbeitung personenbezogener Daten eine Rechtsgrundlage (z. B. berechtigtes Interesse, gestützt auf eine Interessenabwägung).',
+          '**Vereinigte Staaten / HIPAA:** Die HIPAA-Sicherheitsregel verlangt eine Risikoanalyse und Schutzmaßnahmen für PHI, darunter Zugriffs- und Audit-Kontrollen; Verschlüsselung gilt als „addressable“ und ist eine übliche Maßnahme, keine ausdrückliche Pflicht. Ollama mit aktiviertem FileVault und deaktivierter Telemetrie kann ein Ausgangspunkt sein; formale Compliance erfordert eine vollständige Risikobewertung.',
+          '**Japan / APPI (2022):** Das Gesetz zum Schutz personenbezogener Informationen verlangt den Schutz personenbezogener Daten während der Verarbeitung. Lokale Inferenz auf einem isolierten oder offline-Gerät kann die Exposition gegenüber grenzüberschreitenden Datenübermittlungen verringern. Prüfen Sie den Netzwerkverkehr von LM Studio per Firewall im Rahmen Ihrer APPI-Prüfung.',
+          '**China / PIPL (2021):** Ob für ein lokal betriebenes LLM zur internen Nutzung Melde- oder Registrierungspflichten nach chinesischen KI-, Algorithmen- oder PIPL-Vorschriften bestehen, hängt vom Einsatzzweck ab; klären Sie das mit chinesischer Rechtsberatung. Öffentlich zugängliche generative KI-Dienste in China können Anmelde- und Sicherheitsprüfungspflichten unterliegen.',
         ],
       },
       relatedReading: {
@@ -2651,7 +2618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Vérifiez les empreintes des modèles pour les usages sensibles',
-            whyItMatters: 'Garantit que les fichiers de modèles téléchargés n\'ont pas été modifiés.',
+            whyItMatters: 'Aide à détecter une corruption ou une altération des fichiers de modèle téléchargés.',
           },
           {
             title: 'Désactivez la télémétrie dans votre outil d\'inférence',
@@ -2691,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Environnements isolés ou réglementés : documentez les versions de modèles approuvées',
-            whyItMatters: 'Assure la conformité aux exigences réglementaires de traitement des données et d\'isolation de l\'infrastructure.',
+            whyItMatters: 'Constitue une trace des versions de modèles approuvées et appuie votre documentation sur le traitement des données et l\'isolation de l\'infrastructure ; cela ne suffit pas, à lui seul, à établir la conformité réglementaire.',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-fr.webp',
@@ -2704,8 +2671,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les poids de modèles sont de gros fichiers binaires.** Un fichier GGUF malformé peut exploiter des bogues de l\'analyseur qui le charge : CVE-2026-7482 était une lecture hors limites du tas dans le chargeur GGUF d\'Ollama, corrigée dans Ollama 0.17.1.',
         ],
         items: [
-          '**Hugging Face** (huggingface.co) : source primaire. Hash SHA256 vérifié. Préférez éditeurs établis (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Bibliothèque Ollama** ([ollama.com/library](https://ollama.com/library)) : Ollama vérifie les hashs des modèles avant de les stocker. Téléchargez depuis la bibliothèque officielle ou auprès d\'éditeurs de confiance.',
+          '**Hugging Face** (huggingface.co) : source primaire. Hash SHA256 affiché pour comparaison. Préférez éditeurs établis (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+          '**Bibliothèque Ollama** ([ollama.com/library](https://ollama.com/library)) : Téléchargez depuis la bibliothèque officielle ou auprès d\'éditeurs de confiance.',
           '**LM Studio browser** : recherche Hugging Face directement. Mêmes règles -- vérifiez compte éditeur.',
           '**Évitez** : partage anon, Discord drops, sources sans hash vérifiable.',
         ],
@@ -2762,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Est-il sûr d\'utiliser un LLM local avec des données couvertes par HIPAA ?',
-            a: 'L\'inférence locale supprime le risque lié au sous-traitant tiers que créent les API cloud. Toutefois, la conformité HIPAA exige plus qu\'une inférence privée -- il faut un chiffrement complet du disque, des contrôles d\'accès, une journalisation d\'audit et un Business Associate Agreement si un éditeur de logiciel pouvait accéder aux informations de santé protégées. Utiliser Ollama avec FileVault activé et la télémétrie désactivée est un point de départ raisonnable, mais une conformité HIPAA formelle exige une évaluation complète des risques.',
+            a: 'L\'inférence locale supprime, pour l\'étape d\'inférence, la relation de sous-traitance avec un fournisseur cloud. Toutefois, la conformité HIPAA exige plus qu\'une inférence privée -- selon la Security Rule de HIPAA, il faut en général une analyse de risques, des contrôles d\'accès, une journalisation d\'audit et un Business Associate Agreement si un éditeur de logiciel pouvait accéder aux informations de santé protégées ; le chiffrement est une garantie « addressable » et non une obligation expresse. Utiliser Ollama avec FileVault activé et la télémétrie désactivée peut servir de point de départ, mais une conformité HIPAA formelle exige une évaluation complète des risques. Ces informations sont générales et ne constituent pas un conseil juridique.',
           },
           {
             q: 'Ollama envoie-t-il mes invites quelque part ?',
@@ -2770,7 +2737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Un LLM local est-il plus confidentiel que l\'API d\'OpenAI ?',
-            a: 'Oui, pour la confidentialité des invites. Avec un LLM local, vos invites ne quittent jamais votre machine. L\'API d\'OpenAI envoie les invites aux serveurs d\'OpenAI pour traitement. Les conditions d\'utilisation de l\'API d\'OpenAI indiquent que les entrées et sorties de l\'API ne servent pas à entraîner les modèles par défaut, mais les données transitent tout de même par leur infrastructure. Pour des données sensibles ou réglementées (médicales, juridiques, financières), l\'inférence locale est le choix le plus prudent.',
+            a: 'Oui, pour la confidentialité des invites. Quand un modèle local s\'exécute, l\'inférence elle-même n\'envoie pas vos invites hors de votre machine. L\'API d\'OpenAI envoie les invites aux serveurs d\'OpenAI pour traitement. Selon la [documentation d\'OpenAI sur les contrôles de données de l\'API](https://developers.openai.com/api/docs/guides/your-data), les données envoyées à l\'API ne servent pas à entraîner ni à améliorer les modèles d\'OpenAI sauf si vous y consentez expressément, mais elles transitent tout de même par leur infrastructure. Pour des données sensibles ou réglementées (médicales, juridiques, financières), l\'inférence locale est le choix le plus prudent.',
           },
           {
             q: 'Comment vérifier qu\'un fichier de modèle téléchargé est sûr ?',
@@ -2782,7 +2749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je utiliser un LLM local pour des données soumises au RGPD ?',
-            a: 'L\'inférence locale réduit nettement le risque RGPD, car les données ne quittent pas votre infrastructure. Vous devez néanmoins vérifier que l\'outil d\'inférence (Ollama, LM Studio) n\'envoie aucun trafic réseau inattendu, que le chiffrement du disque est activé et que des contrôles d\'accès sont en place. Pour l\'analyse d\'impact (AIPD) de l\'article 35, documentez votre configuration de traitement et confirmez qu\'aucune donnée personnelle ne transite par des serveurs tiers.',
+            a: 'L\'inférence locale peut réduire l\'exposition au RGPD, car les données ne quittent pas votre infrastructure. Vous devez néanmoins vérifier que l\'outil d\'inférence (Ollama, LM Studio) n\'envoie aucun trafic réseau inattendu, que le chiffrement du disque est activé et que des contrôles d\'accès sont en place. Pour l\'analyse d\'impact (AIPD) de l\'article 35, documentez votre configuration de traitement et confirmez qu\'aucune donnée personnelle ne transite par des serveurs tiers.',
           },
           {
             q: 'LM Studio est-il sûr à utiliser ?',
@@ -2801,8 +2768,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Par défaut, Ollama se lie à localhost (127.0.0.1:11434) et n\'est pas accessible depuis d\'autres appareils. Si vous avez défini OLLAMA_HOST=0.0.0.0 pour autoriser l\'accès réseau, annulez-le : `export OLLAMA_HOST=127.0.0.1:11434`. Vérifiez l\'isolation en tentant de vous connecter depuis un autre appareil de votre réseau -- la connexion doit échouer.',
           },
           {
-            q: 'Quel outil de LLM local est le meilleur pour une confidentialité maximale ?',
-            a: 'D\'après leurs réglages par défaut publiés, Jan AI est le plus restrictif des quatre : entièrement open source (licence Apache 2.0), avec des analytics en opt-in, choisis au premier lancement. Ollama vient ensuite : open source, lié à localhost par défaut, et les fonctions cloud se désactivent avec `OLLAMA_NO_CLOUD=1`. LM Studio n\'a aucune télémétrie selon sa politique de confidentialité, mais les vérifications de mise à jour et la recherche de modèles envoient des données anonymisées.',
+            q: 'En quoi les quatre outils diffèrent-ils selon leurs réglages de confidentialité publiés ?',
+            a: 'Selon leur documentation : LM Studio indique ne pas inclure de télémétrie (les vérifications de mise à jour et la recherche de modèles envoient des données anonymisées) ; Ollama indique ne pas voir les invites locales et se lie à localhost par défaut ; chez Jan, les analytics sont en opt-in ; chez GPT4All, la télémétrie et le partage Datalake sont en opt-in. Il s\'agit d\'une comparaison de réglages déclarés, pas de la sécurité globale ; vérifiez avec un pare-feu.',
           },
         ],
       },
@@ -2837,10 +2804,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quelles sont les considérations de conformité régionales ?',
         content: '**L\'inférence locale réduit le risque lié à la résidence des données, mais une conformité réglementaire complète exige des contrôles supplémentaires selon la région.** Cette section fournit des informations générales et ne constitue pas un conseil juridique ; vérifiez les exigences auprès d\'un avocat ou d\'un délégué à la protection des données.',
         items: [
-          '**UE / RGPD (2018) :** l\'inférence locale peut supprimer la relation de sous-traitance de l\'article 28 avec un fournisseur de modèle pour l\'étape d\'inférence. Vous devez néanmoins vérifier le trafic réseau de LM Studio avec un pare-feu, activer le chiffrement du disque et documenter votre configuration de traitement pour toute AIPD. Réalisez une évaluation de l\'intérêt légitime avant de traiter des données personnelles.',
-          '**États-Unis / HIPAA :** HIPAA exige des garanties pour les informations de santé protégées : chiffrement complet du disque (le « safe harbor » du chiffrement), contrôles d\'accès et journalisation d\'audit. Ollama avec FileVault activé et la télémétrie désactivée est un point de départ raisonnable pour HIPAA. Une conformité formelle exige une évaluation complète des risques.',
-          '**Japon / APPI (2022) :** la loi sur la protection des informations personnelles exige la protection des données personnelles pendant leur traitement. L\'inférence locale sur une machine isolée du réseau peut aider à répondre aux exigences de localisation des données. Désactivez les vérifications de mise à jour d\'Ollama et vérifiez le trafic réseau de LM Studio avec un pare-feu dans le cadre de votre évaluation APPI.',
-          '**Chine / PIPL (2021) :** exploiter un LLM local pour un usage interne ne nécessite en général pas d\'enregistrement auprès de la CAC ; vérifiez-le auprès d\'un conseil juridique. Si vous déployez un LLM local comme service public en Chine, l\'enregistrement de l\'algorithme auprès de la CAC est requis.',
+          '**UE / RGPD (2018) :** l\'inférence locale peut supprimer la relation de sous-traitance de l\'article 28 avec un fournisseur de modèle pour l\'étape d\'inférence. Vous devez néanmoins vérifier le trafic réseau de LM Studio avec un pare-feu, activer le chiffrement du disque et documenter votre configuration de traitement pour toute AIPD. Déterminez et documentez une base juridique (par exemple l\'intérêt légitime, appuyé par une évaluation) avant de traiter des données personnelles.',
+          '**États-Unis / HIPAA :** la Security Rule de HIPAA exige une analyse de risques et des garanties pour les PHI, dont des contrôles d\'accès et d\'audit ; le chiffrement est une spécification « addressable » et une mesure courante, non une obligation expresse. Ollama avec FileVault activé et la télémétrie désactivée peut servir de point de départ ; une conformité formelle exige une évaluation complète des risques.',
+          '**Japon / APPI (2022) :** la loi sur la protection des informations personnelles exige la protection des données personnelles pendant leur traitement. L\'inférence locale sur une machine isolée du réseau peut réduire l\'exposition aux transferts transfrontaliers de données. Vérifiez le trafic réseau de LM Studio avec un pare-feu dans le cadre de votre évaluation APPI.',
+          '**Chine / PIPL (2021) :** la question de savoir si un LLM local à usage interne déclenche des obligations d\'enregistrement ou de dépôt au titre des règles chinoises sur l\'IA générative, les algorithmes ou la PIPL dépend du cas d\'usage ; vérifiez-le auprès d\'un conseil juridique en Chine. Les services publics d\'IA générative en Chine peuvent être soumis à des obligations de dépôt et d\'évaluation de sécurité.',
         ],
       },
       relatedReading: {
@@ -3052,7 +3019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'センシティブ用途ではモデルチェックサムを確認',
-            whyItMatters: 'ダウンロードされたモデルファイルが改ざんされていないことを保証します。',
+            whyItMatters: 'ダウンロードしたモデルファイルの破損や改ざんの検出に役立ちます。',
           },
           {
             title: '推論ツールのテレメトリを無効化',
@@ -3092,7 +3059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'ネットワーク分離環境：承認されたモデルバージョンを文書化',
-            whyItMatters: 'データ処理および基盤構造分離の規制要件への準拠を確保します。',
+            whyItMatters: '承認済みモデルバージョンの記録を残し、データ処理と基盤分離に関する文書化を支えます。これだけで規制要件への準拠が成立するわけではありません。',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-ja.webp',
@@ -3100,12 +3067,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       jikkoTips: {
         title: '注意点と実践的なセキュリティ設定のおすすめ',
-        content: '以下の実装を行うことで、セキュリティをさらに強化できます：',
+        content: '以下の実装を行うことで、セキュリティをさらに強化できます。これは一般的な情報であり、法的助言ではありません：',
         items: [
           '**ファイアウォール設定の確認**：マシンの既存ファイアウォール設定を確認し、Ollamaがlocalhostのみにバインドされていることを検証してください。',
           '**定期的なセキュリティ監査**：月に1回は、インストール済みツール、アクティブな接続、システムログを確認してください。',
           '**バックアップとリカバリー計画**：暗号化されたモデルファイルとチャットログの定期バックアップを別の暗号化ドライブに保存してください。',
-          '**アップデート管理**：自動更新を可能な限り手動に変更し、各更新前に変更ログを確認してください。',
+          '**アップデート管理**：OllamaとLM Studioは最新の安定版に保ち、更新前に変更ログを確認してください。Windows版Ollamaのアップデーターに関する脆弱性情報（上記セクション）も確認してください。',
           '**ネットワークモニタリング**：Wiresharkのようなツールを定期的に使用して、予期しないネットワーク接続がないことを確認してください。',
         ],
       },
@@ -3116,8 +3083,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**モデルウェイトは大きなバイナリファイルです。** 不正な形式のGGUFファイルは、それを読み込むパーサーのバグを悪用できます。CVE-2026-7482は、OllamaのGGUFローダーにおけるヒープ領域外読み取りで、Ollama 0.17.1で修正されました。',
         ],
         items: [
-          '**Hugging Face**（huggingface.co）：オープンモデルの主要ソース。各ファイルは検証されたSHA256ハッシュを持ちます。Meta、Google、Microsoft、Mistral AI、Qwen/Alibabaなどの著名なパブリッシャーのモデルに固執してください。',
-          '**Ollamaライブラリ**（[ollama.com/library](https://ollama.com/library)）：Ollamaは保存前にモデルのハッシュを検証します。公式ライブラリ、または信頼できる公開元からプルしてください。',
+          '**Hugging Face**（huggingface.co）：オープンモデルの主要ソース。各ファイルのページにはSHA256ハッシュが表示され、照合に使えます。Meta、Google、Microsoft、Mistral AI、Qwen/Alibabaなどの著名なパブリッシャーのモデルに固執してください。',
+          '**Ollamaライブラリ**（[ollama.com/library](https://ollama.com/library)）：公式ライブラリ、または信頼できる公開元からプルしてください。',
           '**LM Studioモデルブラウザ**：Hugging Faceを直接検索します。同じ信頼ルールが適用されます。パブリッシャーアカウントを確認してください。',
           '**回避**：匿名ファイル共有サイト、Discordファイルドロップ、検証可能なハッシュを提供していないソース。',
         ],
@@ -3174,7 +3141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'HIPAA対象データでローカルLLMを使用しても安全ですか？',
-            a: 'ローカル推論はクラウドAPIが引き起こすサードパーティデータプロセッサーリスクを排除します。ただし、HIPAA準拠には、プライベート推論以上のものが必要です。完全なディスク暗号化、アクセス制御、監査ログ、およびソフトウェアベンダーがPHI（保護された健康情報）にアクセスする可能性がある場合の業務提携契約が必要です。FileVaultを有効にしてテレメトリを無効にしたOllamaの使用は合理的な出発点ですが、正式なHIPAA準拠には完全なリスク評価が必要です。',
+            a: 'ローカル推論により、推論の段階ではクラウド事業者との処理委託関係が生じません。ただし、HIPAAへの対応にはプライベート推論以上のものが必要です。HIPAAセキュリティ規則の下では、通常、リスク分析、アクセス制御、監査ログ、そしてソフトウェアベンダーがPHI（保護された健康情報）にアクセスし得る場合の業務提携契約（BAA）が必要です。暗号化は「addressable（対応可能）」な保護措置であり、明示的な義務ではありません。FileVaultを有効にしテレメトリを無効にしたOllamaは出発点になり得ますが、正式なHIPAA準拠には完全なリスク評価が必要です。これは一般的な情報であり、法的助言ではありません。',
           },
           {
             q: 'Ollamaはプロンプトをどこか別の場所に送信しますか？',
@@ -3182,7 +3149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルLLMはOpenAI APIを使うより本当にプライベートですか？',
-            a: 'はい、プロンプトのプライバシーについてはそうです。ローカルLLMでは、プロンプトがマシンの外に出ることはありません。OpenAI APIは処理のためにプロンプトをOpenAIのサーバーに送信します。OpenAIのAPI利用規約では、APIの入出力はデフォルトでモデルの学習に使われないとされていますが、データは同社のインフラを経由します。機密データや規制対象データ（医療、法務、金融）には、ローカル推論がより保守的な選択です。',
+            a: 'はい、プロンプトのプライバシーについてはそうです。ローカルモデルの実行中、推論そのものがプロンプトをマシンの外へ送信することはありません。OpenAI APIは処理のためにプロンプトをOpenAIのサーバーに送信します。[OpenAIのAPIデータ管理に関するドキュメント](https://developers.openai.com/api/docs/guides/your-data)によると、APIに送信されたデータは、明示的に同意しない限りOpenAIのモデルの学習や改善に使われませんが、データは同社のインフラを経由します。機密データや規制対象データ（医療、法務、金融）には、ローカル推論がより保守的な選択です。',
           },
           {
             q: 'ダウンロードしたモデルファイルが安全かどうかをどう確認しますか？',
@@ -3194,7 +3161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'GDPR規制対象のデータにローカルLLMを使えますか？',
-            a: 'ローカル推論は、データが自社のインフラの外に出ないため、GDPRリスクを大幅に下げます。ただし、推論ツール（Ollama、LM Studio）が想定外のネットワーク通信を行っていないこと、ディスク暗号化が有効であること、アクセス制御が整っていることは確認する必要があります。第35条のDPIA要件に対応するため、データ処理の構成を文書化し、個人データがサードパーティのサーバーを経由しないことを確認してください。',
+            a: 'ローカル推論は、データが自社のインフラの外に出ないため、GDPR上のリスクを下げられる場合があります。ただし、推論ツール（Ollama、LM Studio）が想定外のネットワーク通信を行っていないこと、ディスク暗号化が有効であること、アクセス制御が整っていることは確認する必要があります。第35条のDPIA要件に対応するため、データ処理の構成を文書化し、個人データがサードパーティのサーバーを経由しないことを確認してください。',
           },
           {
             q: 'LM Studioは安全に使えますか？',
@@ -3213,8 +3180,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'デフォルトでは、Ollamaはlocalhost（127.0.0.1:11434）にバインドされ、他のデバイスからはアクセスできません。以前にネットワークアクセスを許可するためOLLAMA_HOST=0.0.0.0を設定していた場合は、元に戻してください：`export OLLAMA_HOST=127.0.0.1:11434`。ネットワーク上の別のデバイスから接続を試みて、分離を確認します。接続は失敗するはずです。',
           },
           {
-            q: '最大限のプライバシーを求めるなら、どのローカルLLMツールが最適ですか？',
-            a: '公開されているデフォルト設定を基にすると、4つの中で最も制限が厳しいのはJan AIです。完全なオープンソース（Apache 2.0ライセンス）で、アナリティクスはオプトインで初回起動時に選択します。次がOllamaです。オープンソースで、デフォルトでlocalhostにバインドされ、クラウド機能は`OLLAMA_NO_CLOUD=1`で無効にできます。LM Studioはプライバシーポリシー上テレメトリはありませんが、更新確認とモデル検索は匿名化データを送信します。',
+            q: '4つのツールは、公開されているプライバシーのデフォルト設定でどう違いますか？',
+            a: '各ツールの公式ドキュメントによると、LM Studioはテレメトリを含まないとしています（更新確認とモデル検索は匿名化データを送信）。Ollamaはローカルのプロンプトを見ないとし、デフォルトでlocalhostにバインドされます。Janのアナリティクスはオプトイン、GPT4Allのテレメトリとデータレイク共有もオプトインです。これは公開されたデフォルト設定の比較であり、総合的な安全性の順位ではありません。ファイアウォールで確認してください。',
           },
         ],
       },
@@ -3248,10 +3215,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '地域別コンプライアンスの考慮事項',
         content: '**ローカルLLM推論はデータレジデンシーリスクを削減しますが、完全な規制コンプライアンスには地域ごとに追加のコントロールが必要です。** この項目は一般的な情報であり、法的助言ではありません。要件は弁護士またはデータ保護責任者に確認してください。',
         items: [
-          '**EU / GDPR（2018）：** ローカル推論により、推論の段階ではモデルプロバイダーとのArticle 28データプロセッサー関係が不要になる場合があります。LM Studioの通信をファイアウォールで確認し、ディスク暗号化を有効にし、すべてのDPIA用にデータ処理セットアップを文書化する必要があります。個人データを処理する前に正当な利益評価を実施してください。',
-          '**アメリカ合衆国 / HIPAA：** HIPAAはPHIの保護を要求します：フルディスク暗号化（「暗号化安全港」）、アクセスコントロール、監査ログ。FileVaultを有効にしてテレメトリを無効にしたOllamaはHIPAA対応の合理的な出発点です。正式なコンプライアンスには完全なリスク評価が必要です。',
-          '**日本 / APPI（2022）：** 個人情報保護法は処理中の個人データ保護を要求します。ネットワーク分離されたマシン上のローカル推論はデータローカライゼーション要件への対応に役立つ場合があります。APPIの評価の一環としてOllamaアップデートチェックを無効にし、LM Studioの通信をファイアウォールで確認してください。',
-          '**中国 / PIPL（2021）：** 内部用にローカルLLMを実行する場合、通常はCAC登録は不要です。必ず法務の専門家に確認してください。中国でローカルLLMを公開向けサービスとしてデプロイする場合、CACアルゴリズム登録が必要です。',
+          '**EU / GDPR（2018）：** ローカル推論により、推論の段階ではモデルプロバイダーとのArticle 28データプロセッサー関係が不要になる場合があります。LM Studioの通信をファイアウォールで確認し、ディスク暗号化を有効にし、すべてのDPIA用にデータ処理セットアップを文書化する必要があります。個人データを処理する前に、法的根拠（例：正当な利益。評価で裏付けること）を定めて文書化してください。',
+          '**アメリカ合衆国 / HIPAA：** HIPAAセキュリティ規則はPHIについてリスク分析と保護措置（アクセス制御や監査制御を含む）を求めています。暗号化は「addressable（対応可能）」な仕様であり、一般的な対策ではあっても明示的な義務ではありません。FileVaultを有効にしテレメトリを無効にしたOllamaは出発点になり得ますが、正式な準拠には完全なリスク評価が必要です。',
+          '**日本 / APPI（2022）：** 個人情報保護法は処理中の個人データ保護を要求します。ネットワーク分離されたマシン上のローカル推論は国外への個人データ移転のリスクを減らせる場合があります。APPIの評価の一環として、LM Studioの通信をファイアウォールで確認してください。',
+          '**中国 / PIPL（2021）：** 社内利用のローカルLLMに、中国の生成AI・アルゴリズム・PIPL関連規則に基づく登録や届出義務が生じるかは用途によります。中国の法律専門家に確認してください。中国で一般向けの生成AIサービスを提供する場合は、届出や安全評価の要件が適用されることがあります。',
         ],
       },
       relatedReading: {
@@ -3458,7 +3425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '对敏感用途验证模型校验和',
-            whyItMatters: '确保下载的模型文件未被篡改。',
+            whyItMatters: '有助于发现下载的模型文件是否损坏或被篡改。',
           },
           {
             title: '禁用推理工具中的遥测',
@@ -3498,7 +3465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '网络隔离环境：文档化批准的模型版本',
-            whyItMatters: '确保数据处理和基础设施隔离的监管要求合规。',
+            whyItMatters: '留存已批准模型版本的记录，有助于完善数据处理与基础设施隔离的文档；仅凭这一点并不足以证明符合监管要求。',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-zh.webp',
@@ -3506,10 +3473,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       shijianBuildao: {
         title: '实用建议：数据安全合规部署',
-        content: '中国企业和政府机构需要满足《数据安全法》（DSL）和《个人信息保护法》（PIPL）。以下建议可帮助您实现合规：',
+        content: '中国企业和政府机构需要关注《数据安全法》（DSL）和《个人信息保护法》（PIPL）。以下技术措施可作为合规工作的参考，但不构成合规保证或法律意见：',
         items: [
-          '**本地数据处理**：使用Ollama确保所有数据处理都在您的机器上本地进行，避免传输到美国云服务器（符合数据本地化要求）。',
-          '**中文模型选择**：使用Qwen 3或本地化模型，这些模型由中国企业提供，您对代码和数据处理流程有完全控制。',
+          '**本地数据处理**：使用Ollama可使推理数据留在您的机器上，避免传输到境外云服务器，从而减少跨境传输环节；是否满足数据本地化等要求，请由法务或数据保护负责人评估。',
+          '**开源权重模型选择**：如选用Qwen等开源权重模型，请先查阅其许可证条款，并在本地验证其行为；是否适合您的合规场景请自行评估。',
           '**审计和合规记录**：为每个Ollama部署维护部署日期、模型版本和访问日志的文档。',
           '**网络隔离部署**：对于包含商业秘密或个人数据的工作，使用本指南第12点----完全网络隔离的机器。',
           '**加密和密钥管理**：启用AES-256磁盘加密，并将加密密钥存储在与模型分离的安全位置。',
@@ -3522,8 +3489,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**模型权重是大型二进制文件。** 格式错误的GGUF文件可能利用加载它的解析器中的漏洞：CVE-2026-7482就是Ollama的GGUF加载器中的堆越界读取，已在Ollama 0.17.1中修复。',
         ],
         items: [
-          '**Hugging Face**（huggingface.co）：开源模型的主要来源。每个文件都有经验证的SHA256哈希。坚持来自知名发布者的模型（Meta、Google、Microsoft、Mistral AI、Qwen/阿里巴巴）。',
-          '**Ollama库**（[ollama.com/library](https://ollama.com/library)）：Ollama在存储前验证模型哈希。请从官方库或您信任的发布者处拉取。',
+          '**Hugging Face**（huggingface.co）：开源模型的主要来源。每个文件页面都会显示可用于比对的SHA256哈希。坚持来自知名发布者的模型（Meta、Google、Microsoft、Mistral AI、Qwen/阿里巴巴）。',
+          '**Ollama库**（[ollama.com/library](https://ollama.com/library)）：请从官方库或您信任的发布者处拉取。',
           '**LM Studio模型浏览器**：直接搜索Hugging Face。相同的信任规则适用----检查发布者账户。',
           '**避免**：匿名文件共享网站、Discord文件下载和任何不提供可验证哈希的来源。',
         ],
@@ -3580,7 +3547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '使用本地LLM处理HIPAA数据安全吗？',
-            a: '本地推理消除了云API创建的第三方数据处理器风险。但是，HIPAA合规需要的不仅仅是私密推理――您需要完全磁盘加密、访问控制、审计日志，以及如果任何软件供应商可能访问PHI，则需要业务关联协议。使用启用FileVault和禁用遥测的Ollama是一个合理的起点，但正式的HIPAA合规需要完整的风险评估。',
+            a: '本地推理在推理环节免除了与云服务商之间的处理者关系。但是，HIPAA合规需要的不仅仅是私密推理——根据HIPAA安全规则，您通常需要风险分析、访问控制、审计日志，以及在任何软件供应商可能访问PHI时的业务关联协议；加密属于“addressable（可酌情实施）”的保护措施，而非明文强制要求。启用FileVault并禁用遥测的Ollama可以作为起点，但正式的HIPAA合规需要完整的风险评估。以上为一般性信息，不构成法律建议。',
           },
           {
             q: 'Ollama是否将我的提示发送到任何地方？',
@@ -3588,7 +3555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '使用本地LLM比使用OpenAI API更隐私吗？',
-            a: '是的，就提示隐私而言。使用本地LLM，您的提示永远不会离开您的机器。OpenAI API将提示发送到OpenAI的服务器进行处理。OpenAI的API服务条款规定，API输入/输出默认不用于训练模型，但数据确实通过他们的基础设施传输。对于敏感或受管制数据（医疗、法律、财务），本地推理是更谨慎的选择。',
+            a: '是的，就提示隐私而言。本地模型运行时，推理本身不会把您的提示发送到机器之外。OpenAI API会将提示发送到OpenAI的服务器进行处理。根据[OpenAI的API数据控制文档](https://developers.openai.com/api/docs/guides/your-data)，发送到API的数据除非您明确选择加入，否则不会用于训练或改进OpenAI模型，但数据确实通过他们的基础设施传输。对于敏感或受管制数据（医疗、法律、财务），本地推理是更谨慎的选择。',
           },
           {
             q: '我如何验证下载的模型文件是否安全？',
@@ -3600,7 +3567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以将本地LLM用于GDPR规制的数据吗？',
-            a: '本地推理大幅降低了GDPR风险，因为数据不会离开您的基础设施。但是，您仍然必须验证推理工具（Ollama、LM Studio）不会发送意外的网络流量，已启用磁盘加密，并且访问控制已就位。对于Article 35 DPIA要求，记录您的数据处理设置并确认没有个人数据通过第三方服务器传输。',
+            a: '本地推理可降低GDPR风险，因为数据不会离开您的基础设施。但是，您仍然必须验证推理工具（Ollama、LM Studio）不会发送意外的网络流量，已启用磁盘加密，并且访问控制已就位。对于Article 35 DPIA要求，记录您的数据处理设置并确认没有个人数据通过第三方服务器传输。',
           },
           {
             q: 'LM Studio使用安全吗？',
@@ -3619,8 +3586,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '默认情况下，Ollama绑定到localhost（127.0.0.1:11434），其他设备无法访问。如果您之前为允许网络访问而设置了OLLAMA_HOST=0.0.0.0，请还原：`export OLLAMA_HOST=127.0.0.1:11434`。通过尝试从网络中的另一台设备连接来验证隔离效果，连接应当失败。',
           },
           {
-            q: '哪个本地LLM工具的隐私保护最强？',
-            a: '根据已公布的默认设置，四款工具中Jan AI最为严格：完全开源（Apache 2.0许可证），分析功能为选择性加入，并在首次启动时选择。Ollama其次：开源，默认绑定到localhost，云功能可用`OLLAMA_NO_CLOUD=1`禁用。LM Studio按其隐私政策不含遥测，但更新检查和模型搜索会发送匿名化数据。',
+            q: '四款工具在已公布的隐私默认设置上有何不同？',
+            a: '根据各自文档：LM Studio称不含遥测（更新检查和模型搜索会发送匿名化数据）；Ollama称看不到本地提示，并默认绑定到localhost；Jan的分析功能为选择性加入；GPT4All的遥测和Datalake共享也为选择性加入。这是对已公布默认设置的比较，并非整体安全性排名；请用防火墙验证。',
           },
         ],
       },
@@ -3654,10 +3621,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '地区合规性考虑',
         content: '**本地LLM推理降低了数据驻留风险，但完全的监管合规性需要按地区增加控制。** 本节为一般性信息，不构成法律建议；请向律师或数据保护负责人确认具体要求。',
         items: [
-          '**欧盟 / GDPR（2018）：** 在推理环节，本地推理可免除与模型提供商之间的Article 28数据处理者关系。您仍然必须用防火墙验证LM Studio的网络流量、启用磁盘加密，并为任何DPIA记录数据处理设置。在处理个人数据之前执行正当利益评估。',
-          '**美国 / HIPAA：** HIPAA要求PHI保护：完整磁盘加密（"加密安全港"）、访问控制和审计日志。启用FileVault和禁用遥测的Ollama是HIPAA相关要求的合理起点。正式合规需要完整风险评估。',
-          '**日本 / APPI（2022）：** 个人信息保护法要求在处理期间保护个人数据。网络隔离机器上的本地推理有助于满足数据本地化要求。禁用Ollama更新检查并用防火墙验证LM Studio的网络流量，作为APPI评估的一部分。',
-          '**中国 / PIPL（2021）：** 在中国运行本地LLM供内部使用通常不需要CAC注册，请与法律顾问确认。如果您在中国部署本地LLM作为公开服务，则需要CAC算法注册。',
+          '**欧盟 / GDPR（2018）：** 在推理环节，本地推理可免除与模型提供商之间的Article 28数据处理者关系。您仍然必须用防火墙验证LM Studio的网络流量、启用磁盘加密，并为任何DPIA记录数据处理设置。在处理个人数据之前确定并记录法律依据（例如以评估为支撑的正当利益）。',
+          '**美国 / HIPAA：** HIPAA安全规则要求对PHI进行风险分析并采取保护措施，包括访问控制和审计控制；加密属于“addressable（可酌情实施）”规范，是常见措施而非明文强制要求。启用FileVault并禁用遥测的Ollama可以作为起点；正式合规需要完整的风险评估。',
+          '**日本 / APPI（2022）：** 个人信息保护法要求在处理期间保护个人数据。网络隔离机器上的本地推理可减少数据跨境传输的风险。请用防火墙验证LM Studio的网络流量，作为APPI评估的一部分。',
+          '**中国 / PIPL（2021）：** 在中国境内将本地LLM用于内部用途，是否触发生成式人工智能、算法或PIPL相关规则下的备案或登记义务，取决于具体用途，请向中国律师确认。面向公众提供生成式AI服务可能需要履行备案和安全评估要求。',
         ],
       },
       relatedReading: {
@@ -3895,7 +3862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '민감한 사용의 경우 모델 체크섬을 검증하십시오',
-            whyItMatters: '다운로드한 모델 파일이 변조되지 않았음을 확인합니다.',
+            whyItMatters: '다운로드한 모델 파일의 손상이나 변조를 감지하는 데 도움이 됩니다.',
           },
           {
             title: '추론 도구에서 텔레메트리를 비활성화하십시오',
@@ -3935,7 +3902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '에어갭 또는 규제 환경의 경우: 승인된 모델 버전을 문서화하십시오',
-            whyItMatters: '데이터 처리 및 인프라 격리에 대한 규제 요구사항 준수를 보장합니다.',
+            whyItMatters: '승인된 모델 버전을 기록으로 남겨 데이터 처리 및 인프라 격리 문서화를 뒷받침합니다. 이것만으로 규제 요구사항 준수가 성립하는 것은 아닙니다.',
           },
         ],
         image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-ko.webp',
@@ -3948,8 +3915,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**모델 가중치는 대용량 바이너리 파일입니다.** 잘못된 형식의 GGUF 파일은 이를 로드하는 파서의 버그를 악용할 수 있습니다. CVE-2026-7482는 Ollama의 GGUF 로더에서 발생한 힙 범위 밖 읽기 취약점이며 Ollama 0.17.1에서 수정되었습니다.',
         ],
         items: [
-          '**Hugging Face**(huggingface.co): 오픈 모델의 주요 출처입니다. 각 파일에는 검증된 SHA256 해시가 있습니다. 잘 알려진 게시자(Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba)의 모델만 사용하십시오.',
-          '**Ollama 라이브러리**([ollama.com/library](https://ollama.com/library)): Ollama는 모델을 저장하기 전에 해시를 검증합니다. 공식 라이브러리 또는 신뢰할 수 있는 게시자에게서 가져오십시오.',
+          '**Hugging Face**(huggingface.co): 오픈 모델의 주요 출처입니다. 각 파일 페이지에는 비교에 사용할 수 있는 SHA256 해시가 표시됩니다. 잘 알려진 게시자(Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba)의 모델만 사용하십시오.',
+          '**Ollama 라이브러리**([ollama.com/library](https://ollama.com/library)): 공식 라이브러리 또는 신뢰할 수 있는 게시자에게서 가져오십시오.',
           '**LM Studio 모델 브라우저**: Hugging Face를 직접 검색합니다. 동일한 신뢰 규칙이 적용됩니다. 게시자 계정을 확인하십시오.',
           '**피해야 할 것**: 익명 파일 공유 사이트, Discord 파일 전송, 검증 가능한 해시를 제공하지 않는 출처.',
         ],
@@ -4006,7 +3973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'HIPAA 적용 데이터에 로컬 LLM을 사용하는 것이 안전합니까?',
-            a: '로컬 추론은 클라우드 API가 생성하는 서드파티 데이터 처리자 위험을 제거합니다. 그러나 HIPAA 준수는 비공개 추론 이상을 요구합니다. 전체 디스크 암호화, 접근 제어, 감사 로깅, 그리고 소프트웨어 공급업체가 PHI에 접근할 수 있는 경우 Business Associate Agreement가 필요합니다. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama 사용은 합리적인 시작점이지만, 공식 HIPAA 준수에는 완전한 위험 평가가 필요합니다.',
+            a: '로컬 추론은 추론 단계에서 클라우드 제공업체와의 처리자 관계를 없앱니다. 그러나 HIPAA 준수는 비공개 추론 이상을 요구합니다. HIPAA 보안 규칙에 따라 일반적으로 위험 분석, 접근 제어, 감사 로깅, 그리고 소프트웨어 공급업체가 PHI에 접근할 수 있는 경우 Business Associate Agreement가 필요합니다. 암호화는 "addressable(선택적 이행)" 보호 조치이며 명시적 의무가 아닙니다. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama 사용은 출발점이 될 수 있지만, 공식 HIPAA 준수에는 완전한 위험 평가가 필요합니다. 이는 일반 정보이며 법률 자문이 아닙니다.',
           },
           {
             q: 'Ollama가 내 프롬프트를 어딘가로 전송합니까?',
@@ -4014,7 +3981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 LLM을 사용하는 것이 OpenAI API를 사용하는 것보다 더 비공개입니까?',
-            a: '네, 프롬프트 개인정보 보호 측면에서 그렇습니다. 로컬 LLM을 사용하면 프롬프트가 장치를 벗어나지 않습니다. OpenAI API는 처리를 위해 프롬프트를 OpenAI 서버로 전송합니다. OpenAI의 API 서비스 약관은 기본적으로 API 입력/출력이 모델 훈련에 사용되지 않는다고 명시하지만, 데이터는 그들의 인프라를 통과합니다. 민감하거나 규제된 데이터(의료, 법률, 금융)의 경우 로컬 추론이 더 보수적인 선택입니다.',
+            a: '네, 프롬프트 개인정보 보호 측면에서 그렇습니다. 로컬 모델이 실행될 때 추론 자체는 프롬프트를 장치 밖으로 전송하지 않습니다. OpenAI API는 처리를 위해 프롬프트를 OpenAI 서버로 전송합니다. [OpenAI의 API 데이터 제어 문서](https://developers.openai.com/api/docs/guides/your-data)에 따르면 API로 전송된 데이터는 명시적으로 동의하지 않는 한 OpenAI 모델의 학습이나 개선에 사용되지 않지만, 데이터는 그들의 인프라를 통과합니다. 민감하거나 규제된 데이터(의료, 법률, 금융)의 경우 로컬 추론이 더 보수적인 선택입니다.',
           },
           {
             q: '다운로드한 모델 파일이 안전한지 어떻게 확인합니까?',
@@ -4026,7 +3993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'GDPR 규제 데이터에 로컬 LLM을 사용할 수 있습니까?',
-            a: '로컬 추론은 데이터가 인프라를 벗어나지 않기 때문에 GDPR 위험을 크게 줄입니다. 그러나 추론 도구(Ollama, LM Studio)에 예상치 못한 네트워크 트래픽을 보내지 않는지, 디스크 암호화가 활성화되어 있는지, 그리고 접근 제어가 마련되어 있는지 여전히 확인해야 합니다. 제35조 DPIA 요구사항을 위해 데이터 처리 설정을 문서화하고 개인 데이터가 서드파티 서버를 통과하지 않음을 확인하십시오.',
+            a: '로컬 추론은 데이터가 인프라를 벗어나지 않기 때문에 GDPR 위험을 줄일 수 있습니다. 그러나 추론 도구(Ollama, LM Studio)에 예상치 못한 네트워크 트래픽을 보내지 않는지, 디스크 암호화가 활성화되어 있는지, 그리고 접근 제어가 마련되어 있는지 여전히 확인해야 합니다. 제35조 DPIA 요구사항을 위해 데이터 처리 설정을 문서화하고 개인 데이터가 서드파티 서버를 통과하지 않음을 확인하십시오.',
           },
           {
             q: 'LM Studio는 안전하게 사용할 수 있습니까?',
@@ -4045,8 +4012,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '기본적으로 Ollama는 localhost(127.0.0.1:11434)에 바인딩되며 다른 장치에서 접근할 수 없습니다. 네트워크 접근을 허용하려고 이전에 OLLAMA_HOST=0.0.0.0을 설정했다면 되돌리십시오: `export OLLAMA_HOST=127.0.0.1:11434`. 네트워크의 다른 장치에서 연결을 시도하여 격리를 확인하십시오. 연결이 실패해야 합니다.',
           },
           {
-            q: '최대한의 개인정보 보호를 위해 가장 좋은 로컬 LLM 도구는 무엇입니까?',
-            a: '공개된 기본 설정을 기준으로 네 가지 중 가장 제한적인 도구는 Jan AI입니다. 완전한 오픈 소스(Apache 2.0 라이선스)이며 분석은 옵트인으로, 첫 실행 시 선택합니다. 그다음은 Ollama입니다. 오픈 소스이고, 기본적으로 localhost에 바인딩되며, 클라우드 기능은 `OLLAMA_NO_CLOUD=1`로 끌 수 있습니다. LM Studio는 개인정보 처리방침상 텔레메트리가 없지만, 업데이트 확인과 모델 검색은 익명화된 데이터를 전송합니다.',
+            q: '네 가지 도구는 공개된 개인정보 기본 설정에서 어떻게 다릅니까?',
+            a: '각 도구의 문서에 따르면 LM Studio는 텔레메트리가 없다고 밝힙니다(업데이트 확인과 모델 검색은 익명화된 데이터를 전송). Ollama는 로컬 프롬프트를 볼 수 없다고 하며 기본적으로 localhost에 바인딩됩니다. Jan의 분석은 옵트인이고 GPT4All의 텔레메트리와 Datalake 공유도 옵트인입니다. 공개된 기본 설정의 비교일 뿐 전체 보안 순위가 아닙니다. 방화벽으로 확인하십시오.',
           },
         ],
       },
@@ -4081,10 +4048,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '지역별 규정 준수 고려사항은 무엇입니까?',
         content: '**로컬 LLM 추론은 데이터 거주 위험을 줄이지만, 완전한 규제 준수에는 지역별 추가 제어가 필요합니다.** 이 항목은 일반 정보이며 법률 자문이 아닙니다. 요건은 변호사 또는 개인정보 보호책임자에게 확인하십시오.',
         items: [
-          '**EU / GDPR (2018):** 로컬 추론은 추론 단계에서 모델 제공자와의 제28조 데이터 처리자 관계를 없앨 수 있습니다. LM Studio 네트워크 트래픽을 방화벽으로 확인하고, 디스크 암호화를 활성화하며, 모든 DPIA를 위해 데이터 처리 설정을 문서화해야 합니다. 개인 데이터를 처리하기 전에 정당한 이익 평가를 수행하십시오.',
-          '**미국 / HIPAA:** HIPAA는 PHI에 대한 안전장치를 요구합니다: 전체 디스크 암호화("암호화 안전 항구"), 접근 제어, 감사 로깅. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama 사용은 합리적인 HIPAA 시작점입니다. 공식 준수에는 완전한 위험 평가가 필요합니다.',
-          '**일본 / APPI (2022):** 개인정보 보호법은 처리 중 개인 데이터 보호를 요구합니다. 에어갭 장치의 로컬 추론은 데이터 현지화 요건을 충족하는 데 도움이 될 수 있습니다. APPI 평가의 일환으로 Ollama 업데이트 확인을 비활성화하고 LM Studio 네트워크 트래픽을 방화벽으로 확인하십시오.',
-          '**중국 / PIPL (2021):** 내부 사용을 위한 로컬 LLM 실행은 일반적으로 CAC 등록이 필요하지 않습니다. 법률 전문가에게 확인하십시오. 중국에서 공개 서비스로 로컬 LLM을 배포하는 경우 CAC 알고리즘 등록이 필요합니다.',
+          '**EU / GDPR (2018):** 로컬 추론은 추론 단계에서 모델 제공자와의 제28조 데이터 처리자 관계를 없앨 수 있습니다. LM Studio 네트워크 트래픽을 방화벽으로 확인하고, 디스크 암호화를 활성화하며, 모든 DPIA를 위해 데이터 처리 설정을 문서화해야 합니다. 개인 데이터를 처리하기 전에 법적 근거(예: 평가를 뒷받침으로 한 정당한 이익)를 정하고 문서화하십시오.',
+          '**미국 / HIPAA:** HIPAA 보안 규칙은 PHI에 대한 위험 분석과 보호 조치(접근 제어, 감사 제어 포함)를 요구합니다. 암호화는 \'addressable(선택적 이행)\' 사양으로, 일반적인 조치이지만 명시적 의무는 아닙니다. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama는 출발점이 될 수 있으나, 공식 준수에는 완전한 위험 평가가 필요합니다.',
+          '**일본 / APPI (2022):** 개인정보 보호법은 처리 중 개인 데이터 보호를 요구합니다. 에어갭 장치의 로컬 추론은 국외 이전 위험을 줄일 수 있습니다. APPI 평가의 일환으로 LM Studio 네트워크 트래픽을 방화벽으로 확인하십시오.',
+          '**중국 / PIPL (2021):** 내부용 로컬 LLM 실행이 중국의 생성형 AI·알고리즘·PIPL 관련 규정에 따른 등록 또는 신고 의무를 발생시키는지는 사용 사례에 따라 다릅니다. 중국 법률 전문가에게 확인하십시오. 중국에서 공개 서비스로 제공하는 생성형 AI는 신고 및 보안 평가 요건이 적용될 수 있습니다.',
         ],
       },
       relatedReading: {
