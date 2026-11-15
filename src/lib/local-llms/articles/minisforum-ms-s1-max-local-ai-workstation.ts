@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Preço e disponibilidade',
         content:
-          '**O modelo de 128 GB / 2 TB está listado a $3,919 em promoção contra um preço regular de $4,899.** A escassez de DRAM mexeu nos preços desta classe repetidas vezes, e o preço promocional aqui é uma promoção da loja, então confira a página ao vivo antes de pedir. Todos os preços são em dólares americanos, da fonte indicada, lidos em 2026-10-31.',
+          '**O modelo de 128 GB / 2 TB está listado a $3,919 em promoção contra um preço regular de $4,899.** A escassez de DRAM mexeu nos preços desta classe repetidas vezes, e o preço promocional aqui é uma promoção da loja, então confira a página ao vivo antes de pedir. Todos os preços são em dólares americanos, da fonte indicada, lidos em 2026-10-31. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
         rows: [
           { 'Configuração': '128 GB / 2 TB (Ryzen AI Max+ 395)', 'Preço nos EUA': '$3,919 promoção / $4,899 regular', 'Fonte e data': 'Loja dos EUA da Minisforum, lida em 2026-10-31', 'Status': 'Estimativa de envio: início de novembro' },
