@@ -2871,7 +2871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点まとめ',
         isTldr: true,
         items: [
-          'まずアーキテクチャを選ぶ：ローカルファースト（Home Assistant＋Zigbee/Z-Wave/Matter）、クラウドファースト（Alexa/Google/ベンダーハブ）、またはハイブリッド',
+          'まずアーキテクチャを選ぶ：ローカルファースト、クラウドファースト、またはハイブリッド',
           'ハブ：最も手軽なローカルセットアップには Home Assistant Green（約¥33,000〜38,000相当）；ローカル AI も欲しいならミニPC',
           'Zigbee/Thread：[Home Assistant Connect ZBT-2](/ja/smart-home/best-zigbee-thread-dongles-2027)（約¥7,500〜8,500相当）または SONOFF ZBDongle-E（約¥3,000〜4,500相当、予算重視）',
           'カメラ：ローカル RTSP カメラ＋[Frigate](/ja/smart-home/local-ai-security-camera)ならサブスクを避け、基本機能では映像を家に保てる',
