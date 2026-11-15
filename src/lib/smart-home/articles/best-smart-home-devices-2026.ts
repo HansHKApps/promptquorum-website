@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung',
         isTldr: true,
         items: [
-          'Legen Sie zuerst Ihre Architektur fest: local-first (Home Assistant + Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google/Hersteller-Hubs) oder hybrid',
+          'Erst die Architektur wählen: local-first (Home Assistant, Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google) oder hybrid',
           'Hub: Home Assistant Green (179 €) für die einfachste lokale Einrichtung; ein Mini-PC, wenn Sie auch lokale KI wollen',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/de/smart-home/best-zigbee-thread-dongles-2027) (45 €) oder SONOFF ZBDongle-E (ca. 20–25 €, Budget)',
           'Kameras: lokale RTSP-Kameras + [Frigate](/de/smart-home/local-ai-security-camera) vermeiden Abonnements und können Aufnahmen für die Kernfunktionen zu Hause halten',
