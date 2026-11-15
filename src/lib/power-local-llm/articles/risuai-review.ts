@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RisuAI Android',
       'RisuAI Docker',
     ],
-    leadAnswerBlock: '**RisuAI is a free, open-source (GPL-3.0) roleplay and character-chat client, available as a hosted web app at [risuai.net](https://risuai.net), a Tauri desktop app and a self-hostable server.** It is a frontend, not a model, so you connect a backend of your choice. To start, open [risuai.net](https://risuai.net) in a browser (no install) or download the desktop installer for Windows, macOS or Linux from [GitHub Releases](https://github.com/kwaroran/RisuAI/releases); requirements are in the table below.',
+    leadAnswerBlock: '**RisuAI is a free, open-source (GPL-3.0) roleplay and character-chat client, available as a hosted web app at [risuai.net](https://risuai.net), a Tauri desktop app and a self-hostable server.** It is a frontend, not a model: connect any backend. Open in a browser (no install) or use desktop installers from [GitHub Releases](https://github.com/kwaroran/RisuAI/releases).',
     quickAnswerTop: {
       en: {
         question: 'What is RisuAI and how much does it cost?',
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAI and [SillyTavern](/local-llms/sillytavern-review) are two of the most commonly compared open-source roleplay frontends**, since both are free, connect to a backend you choose, and center on Lorebook-style memory systems. The clearest differences are license terms and how much each project leans toward mobile use.',
+        content: '**RisuAI and [SillyTavern](/local-llms/sillytavern-review) are both free, open-source roleplay frontends that readers often compare**, since both are free, connect to a backend you choose, and center on Lorebook-style memory systems. The clearest differences are license terms and how much each project leans toward mobile use.',
         itemHeadings: true,
         columns: ['Aspect', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -354,11 +354,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RisuAI Lorebook',
       'quelloffener Rollenspiel-Chat-Client',
     ],
-    leadAnswerBlock: '**RisuAI ist ein kostenloser, quelloffener (GPL-3.0) Rollenspiel- und Charakter-Chat-Client, verfügbar als gehostete Web-App auf [risuai.net](https://risuai.net), als Tauri-Desktop-App und als selbst hostbarer Server.** Es ist ein Frontend und kein Modell, deshalb verbinden Sie ein Backend Ihrer Wahl. Zum Start öffnen Sie [risuai.net](https://risuai.net) im Browser (ohne Installation) oder laden den Desktop-Installer für Windows, macOS oder Linux von [GitHub Releases](https://github.com/kwaroran/RisuAI/releases) herunter; die Anforderungen stehen in der Tabelle weiter unten.',
+    leadAnswerBlock: '**RisuAI ist ein kostenloser, quelloffener (GPL-3.0) Rollenspiel- und Charakter-Chat-Client, verfügbar als gehostete Web-App auf [risuai.net](https://risuai.net), als Tauri-Desktop-App und als selbst hostbarer Server.** Es ist ein Frontend, kein Modell; verbinden Sie ein beliebiges Backend. Öffnen Sie es im Browser (ohne Installation) oder nutzen Sie Desktop-Installer von [GitHub Releases](https://github.com/kwaroran/RisuAI/releases).',
     quickAnswerTop: {
       de: {
         question: 'Was ist RisuAI und wie viel kostet es?',
-        answer: 'RisuAI ist ein kostenloser, quelloffener (GPL-3.0) Chat-Client für KI-Rollenspiel und charaktergetriebenes Erzählen. Es kostet nichts und erfordert für die lokale, selbst gehostete Nutzung kein Konto. Es verbindet sich mit einem von Ihnen gewählten Modell-Backend — einer kostenpflichtigen gehosteten API, einem kostenlosen selbst gehosteten Inferenz-Server oder OpenRouter — sodass jegliche Kosten über die App hinaus vollständig von Ihrer Backend-Wahl abhängen.',
+        answer: 'RisuAI ist ein kostenloser, quelloffener (GPL-3.0) Chat-Client für KI-Rollenspiel und charaktergetriebenes Erzählen. Die App selbst hat keinen Kaufpreis und erfordert für die lokale, selbst gehostete Nutzung kein Konto. Es verbindet sich mit einem von Ihnen gewählten Modell-Backend — einer kostenpflichtigen gehosteten API, einem kostenlosen selbst gehosteten Inferenz-Server oder OpenRouter — sodass jegliche Kosten über die App hinaus vollständig von Ihrer Backend-Wahl abhängen.',
         bullets: [
           'Kostenlos, quelloffen, GPL-3.0-lizenziert laut den Lizenzmetadaten des Repositorys',
           'Verfügbar als gehostete Web-App ([risuai.net](https://risuai.net)), Tauri-Desktop-App für Windows/Mac/Linux sowie selbst gehosteter Docker- oder Node.js-Server',
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RisuAI Lorebook',
       'client de chat de jeu de rôle open source',
     ],
-    leadAnswerBlock: '**RisuAI est un client de chat de jeu de rôle et de personnages gratuit et open source (GPL-3.0), disponible en application web hébergée sur [risuai.net](https://risuai.net), en application de bureau Tauri et en serveur auto-hébergeable.** C\'est un frontend, pas un modèle : vous connectez le backend de votre choix. Pour commencer, ouvrez [risuai.net](https://risuai.net) dans le navigateur (sans installation) ou téléchargez l\'installateur de bureau pour Windows, macOS ou Linux depuis [GitHub Releases](https://github.com/kwaroran/RisuAI/releases) ; la configuration requise figure dans le tableau plus bas.',
+    leadAnswerBlock: '**RisuAI est un client de roleplay et de chat de personnages gratuit, open source (GPL-3.0), disponible en app web sur [risuai.net](https://risuai.net), app de bureau Tauri ou serveur auto-hébergeable.** C\'est un frontend, pas un modèle : connectez votre backend. Ouvrez-le dans le navigateur ou téléchargez l\'installateur sur [GitHub Releases](https://github.com/kwaroran/RisuAI/releases).',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que RisuAI et combien coûte-t-il ?',
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RisuAI Lorebook',
       'cliente de chat de rol de código abierto',
     ],
-    leadAnswerBlock: '**RisuAI es un cliente de chat de rol y personajes gratuito y de código abierto (GPL-3.0), disponible como app web alojada en [risuai.net](https://risuai.net), como app de escritorio Tauri y como servidor autoalojable.** Es un frontend, no un modelo, así que conectas el backend que prefieras. Para empezar, abre [risuai.net](https://risuai.net) en el navegador (sin instalar nada) o descarga el instalador de escritorio para Windows, macOS o Linux desde [GitHub Releases](https://github.com/kwaroran/RisuAI/releases); los requisitos están en la tabla de más abajo.',
+    leadAnswerBlock: '**RisuAI es un cliente de roleplay y chat de personajes gratuito y open source (GPL-3.0), disponible como app web en [risuai.net](https://risuai.net), app de escritorio Tauri o servidor autoalojable.** Es un frontend, no un modelo: conecta tu backend. Ábrelo en el navegador o descarga el instalador desde [GitHub Releases](https://github.com/kwaroran/RisuAI/releases).',
     quickAnswerTop: {
       es: {
         question: '¿Qué es RisuAI y cuánto cuesta?',
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RisuAI Lorebook',
       'cliente de chat de roleplay open source',
     ],
-    leadAnswerBlock: '**O RisuAI é um cliente de chat de roleplay e personagens gratuito e open source (GPL-3.0), disponível como app web hospedado em [risuai.net](https://risuai.net), como app desktop Tauri e como servidor auto-hospedável.** Ele é um frontend, não um modelo, então você conecta o backend de sua escolha. Para começar, abra [risuai.net](https://risuai.net) no navegador (sem instalar nada) ou baixe o instalador desktop para Windows, macOS ou Linux em [GitHub Releases](https://github.com/kwaroran/RisuAI/releases); os requisitos estão na tabela abaixo.',
+    leadAnswerBlock: '**O RisuAI é um cliente de roleplay e chat de personagens gratuito e open source (GPL-3.0), disponível como app web em [risuai.net](https://risuai.net), app desktop Tauri ou servidor auto-hospedável.** É um frontend, não um modelo: conecte seu backend. Abra no navegador ou baixe o instalador no [GitHub Releases](https://github.com/kwaroran/RisuAI/releases).',
     quickAnswerTop: {
       pt: {
         question: 'O que é o RisuAI e quanto custa?',
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'RisuAIとは何ですか、費用はいくらですか?',
-        answer: 'RisuAIは、AIロールプレイとキャラクター主導の物語作りのための無料かつオープンソース(GPL-3.0)のチャットクライアントです。購入費用はかからず、ローカルでセルフホストして使う場合はアカウントも不要です。選択したモデルバックエンド——有料のホスト型API、無料のセルフホスト型推論サーバー、またはOpenRouター——に接続するため、アプリ自体を超える費用は選んだバックエンドに完全に依存します。',
+        answer: 'RisuAIは、AIロールプレイとキャラクター主導の物語作りのための無料かつオープンソース(GPL-3.0)のチャットクライアントです。購入費用はかからず、ローカルでセルフホストして使う場合はアカウントも不要です。選択したモデルバックエンド——有料のホスト型API、無料のセルフホスト型推論サーバー、またはOpenRouter——に接続するため、アプリ自体を超える費用は選んだバックエンドに完全に依存します。',
         bullets: [
           'リポジトリのライセンスメタデータによれば無料・オープンソース・GPL-3.0ライセンス',
           'ホスト型ウェブアプリ([risuai.net](https://risuai.net))、Windows/Mac/Linux向けTauriデスクトップアプリ、セルフホスト型のDockerまたはNode.jsサーバーとして利用可能',
@@ -2250,7 +2250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RisuAI Lorebook',
       'عميل دردشة لعب أدوار مفتوح المصدر',
     ],
-    leadAnswerBlock: '**RisuAI عميل دردشة مجاني ومفتوح المصدر (GPL-3.0) للعب الأدوار ودردشة الشخصيات، متاح كتطبيق ويب مستضاف على [risuai.net](https://risuai.net) وكتطبيق سطح مكتب Tauri وكخادم يمكن استضافته ذاتياً.** هو واجهة أمامية وليس نموذجاً، لذا تربطه بواجهة خلفية من اختيارك. للبدء افتح [risuai.net](https://risuai.net) في المتصفح (بلا تثبيت) أو نزّل مثبّت سطح المكتب لنظام Windows أو macOS أو Linux من [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)؛ والمتطلبات في الجدول أدناه.',
+    leadAnswerBlock: '**RisuAI عميل دردشة مجاني ومفتوح المصدر (GPL-3.0) للعب الأدوار ودردشة الشخصيات، متاح كتطبيق ويب مستضاف على [risuai.net](https://risuai.net) وكتطبيق سطح مكتب Tauri وكخادم يمكن استضافته ذاتياً.** هو واجهة أمامية لا نموذج، فاربطه بأي واجهة خلفية. جرّبه في المتصفح (بلا تثبيت) أو نزّل مثبّت سطح المكتب من [GitHub Releases](https://github.com/kwaroran/RisuAI/releases).',
     quickAnswerTop: {
       ar: {
         question: 'ما هو RisuAI وكم تكلفته؟',
