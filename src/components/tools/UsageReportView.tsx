@@ -5,6 +5,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import { toOutputLocale } from '@/lib/i18n/constants'
+import { languageName } from '@/lib/i18n/language-name'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
@@ -291,7 +292,7 @@ export function UsageReportView({ lang, report, kind }: { lang: Language; report
           label={(k) => CATEGORY_SUB_LABEL[k as CategorySubKey]?.[lang] ?? k}
           lang={lang}
         />
-        <BreakdownTable heading={tAsk('langsHeading', lang)} firstCol={tAsk('langsHeading', lang)} rows={report.langs} label={(k) => ((SITE_LANGS as readonly string[]).includes(k) ? k.toUpperCase() : `${k.toUpperCase()} · ${tAsk('langNotOnSite', lang)}`)} mono lang={lang} />
+        <BreakdownTable heading={tAsk('langsHeading', lang)} firstCol={tAsk('langsHeading', lang)} rows={report.langs} label={(k) => ((SITE_LANGS as readonly string[]).includes(k) ? languageName(k, lang) : `${languageName(k, lang)} · ${tAsk('langNotOnSite', lang)}`)} lang={lang} />
       </div>
       <p className="mt-4 max-w-[720px] text-xs leading-relaxed text-text-secondary">
         {mcp && report.breakdownSince ? `${tAsk('since', lang)} ${formatDisplayDate(report.breakdownSince, lang)}. ` : ''}
