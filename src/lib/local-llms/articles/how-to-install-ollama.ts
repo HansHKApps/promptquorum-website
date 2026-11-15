@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Download Ollama free from ollama.com and install it on macOS, Windows or Linux with one command each, then pick the model that fits your GPU VRAM.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-en.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**Download Ollama free from [ollama.com/download](https://ollama.com/download) and install it in under 2 minutes on macOS, Windows or Linux, with one command per system listed below. Then one ollama run command downloads and runs any model, with no Python setup and no GPU required to start.**',
+      leadAnswerBlock: '**Download Ollama from [ollama.com/download](https://ollama.com/download) and install it in under 2 minutes on macOS, Windows or Linux, with one command per system listed below. Then one ollama run command downloads and runs models that fit your hardware, with no Python setup and no GPU required to start.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -41,11 +41,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux via a downloadable installer or one curl command, and one `ollama run <model>` command afterward downloads and runs any model from its library with no Python environment or GPU required.' },
+            { type: 'one-sentence', text: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux via a downloadable installer or one curl command, and one `ollama run <model>` command afterward downloads and runs models from its library that fit your hardware, with no Python environment or GPU required.' },
             { type: 'plain-terms', text: "Ollama is a simple way to run AI models on your own computer. Download it (or run one install command on Linux), then type a single command like `ollama run llama3.2` and it downloads the model and starts a chat -- no coding, no configuration files, and it works fine on a laptop without a graphics card." },
           ],
           items: [
-            '**Official download:** [ollama.com/download](https://ollama.com/download) (free). macOS: `brew install ollama`; Windows: `irm https://ollama.com/install.ps1 | iex`; Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
+            '**Official download:** [ollama.com/download](https://ollama.com/download) (the app is free and open-source under the MIT licence; cloud models may need sign-in and paid plans, and each model has its own licence). macOS: `brew install ollama`; Windows: `irm https://ollama.com/install.ps1 | iex`; Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
             'macOS: download the .dmg from ollama.com or run `brew install ollama` -- then `ollama run llama3.2` to start chatting.',
             'Windows: download the installer from ollama.com/download. Ollama runs as a background service in the system tray.',
             'Linux: one curl command installs everything -- `curl -fsSL https://ollama.com/install.sh | sh`.',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         downloadOllama: {
           id: 'download-ollama',
           title: 'Where Do You Download Ollama?',
-          content: 'Download Ollama free from the official site, [ollama.com/download](https://ollama.com/download). Signing in is only needed for Ollama\'s cloud models, not for local ones. Requirements: macOS 14 (Sonoma) or newer, Windows 10 22H2 or newer, or Linux (x86-64 or ARM64). Pick your system:',
+          content: 'Download Ollama from the official site, [ollama.com/download](https://ollama.com/download). The app is free and open-source under the MIT licence ([source and licence](https://github.com/ollama/ollama)); signing in is only needed for Ollama\'s cloud models, which can have paid plans, not for local ones. Each model has its own licence. Requirements: macOS 14 (Sonoma) or newer, Windows 10 22H2 or newer, or Linux (x86-64 or ARM64). The Windows one-liner `irm … | iex` runs the downloaded script with your user\'s privileges, so you can download and read `install.ps1` first if you prefer. Pick your system:',
           rows: [
             { 'System': 'macOS', 'Installer file': 'Ollama.dmg', 'Command line': 'brew install ollama' },
             { 'System': 'Windows', 'Installer file': 'OllamaSetup.exe', 'Command line': 'irm https://ollama.com/install.ps1 | iex' },
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         whatIsOllama: {
           title: 'What Is Ollama and Why Use It?',
           content: [
-            '**Ollama is an open-source inference engine that runs large language models locally.** It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
+            '**Ollama is an open-source inference engine that runs large language models locally.** It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no manual CUDA installation is required (an NVIDIA GPU still needs a current NVIDIA driver).',
             'Ollama maintains a curated model library ([ollama.com/library](https://ollama.com/library)) with one-command downloads for Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3, and other models. A model is downloaded once and cached on disk -- subsequent runs skip the download and load straight from disk, though Ollama unloads an idle model from memory after its keep-alive window (5 minutes by default), so a cold reload still takes as long as loading the model fresh.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What is the minimum RAM required for Ollama?', a: 'Minimum 4GB RAM for a 3B model, 8GB for a 7B model at Q4 quantization. No GPU is required -- Ollama falls back to CPU inference automatically.' },
             { q: 'Can I run Ollama without a GPU?', a: 'Yes. Ollama runs on CPU with no GPU. Inference is noticeably slower than on a GPU, and speed depends on the model size and your hardware, but it is functional. Use small models like llama3.2:3b or phi3.5 on CPU-only systems.' },
             { q: 'How do I pull a new model with Ollama?', a: 'Run: ollama pull modelname. For example: ollama pull mistral or ollama pull qwen2.5:7b. Models are stored in ~/.ollama/models. List downloaded models with ollama list.' },
-            { q: 'What port does Ollama use?', a: 'Ollama serves its API on port 11434 by default. Access it at http://localhost:11434. Change the port with the OLLAMA_HOST environment variable: OLLAMA_HOST=0.0.0.0:11435.' },
+            { q: 'What port does Ollama use?', a: 'Ollama serves its API on port 11434 by default. Access it at http://localhost:11434. Change the port with the OLLAMA_HOST environment variable, for example OLLAMA_HOST=127.0.0.1:11435. Binding to 0.0.0.0 makes the API, which has no authentication, reachable from every device on your network; only do that behind a firewall or reverse proxy.' },
             { q: 'Is Ollama API compatible with the OpenAI API?', a: 'Yes. Ollama supports the OpenAI chat completions endpoint at /v1/chat/completions. Most apps built on the OpenAI SDK work after you set base_url to http://localhost:11434/v1, but compatibility is partial, so test the features you rely on.' },
             { q: 'How do I see which models are installed in Ollama?', a: 'Run: ollama list. This shows all downloaded models, their sizes, and quantization levels. Remove a model with ollama rm modelname.' },
             { q: 'How do I update Ollama to the latest version?', a: 'macOS/Windows: Ollama downloads updates automatically; restart it from the menu bar or tray icon to apply the update, or install the latest version from ollama.com. Linux: re-run curl -fsSL https://ollama.com/install.sh | sh to update in place.' },
@@ -367,7 +367,7 @@ schema: {
             'name': 'What port does Ollama use?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ollama serves its API on port 11434 by default. Access it at http://localhost:11434. Change the port with the OLLAMA_HOST environment variable: OLLAMA_HOST=0.0.0.0:11435.',
+              'text': 'Ollama serves its API on port 11434 by default. Access it at http://localhost:11434. Change the port with the OLLAMA_HOST environment variable, for example OLLAMA_HOST=127.0.0.1:11435. Binding to 0.0.0.0 makes the API, which has no authentication, reachable from every device on your network; only do that behind a firewall or reverse proxy.',
             },
           },
           {
@@ -408,7 +408,7 @@ schema: {
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
-      leadAnswerBlock: '**Descarga Ollama gratis desde [ollama.com/download](https://ollama.com/download) e instálalo en menos de 2 minutos en macOS, Windows o Linux, con un comando por sistema más abajo. Después, un solo comando ollama run descarga y ejecuta cualquier modelo, sin Python y sin necesidad de GPU para empezar.**',
+      leadAnswerBlock: '**Descarga Ollama desde [ollama.com/download](https://ollama.com/download) e instálalo en menos de 2 minutos en macOS, Windows o Linux, con un comando por sistema más abajo. Después, un solo comando ollama run descarga y ejecuta modelos que quepan en tu hardware, sin Python y sin necesidad de GPU para empezar.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '8 min de lectura',
       educationalLevel: 'Beginner',
@@ -430,11 +430,11 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Ollama se instala en menos de 2 minutos en macOS, Windows y Linux mediante un instalador descargable o un único comando curl, y después un comando `ollama run <modelo>` descarga y ejecuta cualquier modelo de su biblioteca sin necesidad de entorno Python ni GPU.' },
+            { type: 'one-sentence', text: 'Ollama se instala en menos de 2 minutos en macOS, Windows y Linux mediante un instalador descargable o un único comando curl, y después un comando `ollama run <modelo>` descarga y ejecuta modelos de su biblioteca que quepan en tu hardware, sin necesidad de entorno Python ni GPU.' },
             { type: 'plain-terms', text: 'Ollama es una forma sencilla de ejecutar modelos de IA en tu propio ordenador. Descárgalo (o ejecuta un solo comando de instalación en Linux), luego escribe un comando como `ollama run llama3.2` y descargará el modelo e iniciará un chat -- sin programar, sin archivos de configuración, y funciona bien en un portátil sin tarjeta gráfica.' },
           ],
           items: [
-            '**Descarga oficial:** [ollama.com/download](https://ollama.com/download) (gratis). macOS: `brew install ollama`; Windows: `irm https://ollama.com/install.ps1 | iex`; Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
+            '**Descarga oficial:** [ollama.com/download](https://ollama.com/download) (la aplicación es gratuita y de código abierto bajo licencia MIT; los modelos en la nube pueden requerir inicio de sesión y planes de pago, y cada modelo tiene su propia licencia). macOS: `brew install ollama`; Windows: `irm https://ollama.com/install.ps1 | iex`; Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
             'macOS: descarga el .dmg desde ollama.com o ejecuta `brew install ollama` -- luego `ollama run llama3.2` para empezar a chatear.',
             'Windows: descarga el instalador desde ollama.com/download. Ollama se ejecuta como servicio en segundo plano en la bandeja del sistema.',
             'Linux: un solo comando curl lo instala todo -- `curl -fsSL https://ollama.com/install.sh | sh`.',
@@ -446,7 +446,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: '¿Dónde se descarga Ollama?',
-          content: 'Descarga Ollama gratis desde el sitio oficial, [ollama.com/download](https://ollama.com/download). Iniciar sesión solo es necesario para los modelos en la nube de Ollama, no para los locales. Requisitos: macOS 14 (Sonoma) o posterior, Windows 10 22H2 o posterior, o Linux (x86-64 o ARM64). Elige tu sistema:',
+          content: 'Descarga Ollama desde el sitio oficial, [ollama.com/download](https://ollama.com/download). La aplicación es gratuita y de código abierto bajo licencia MIT ([repositorio oficial](https://github.com/ollama/ollama)); iniciar sesión solo es necesario para los modelos en la nube de Ollama, que pueden tener planes de pago, no para los locales. Cada modelo tiene su propia licencia. Requisitos: macOS 14 (Sonoma) o posterior, Windows 10 22H2 o posterior, o Linux (x86-64 o ARM64). El comando de Windows `irm … | iex` ejecuta el script descargado con tus privilegios de usuario; si prefieres, puedes descargar y leer `install.ps1` antes. Elige tu sistema:',
           rows: [
             { 'Sistema': 'macOS', 'Archivo instalador': 'Ollama.dmg', 'Línea de comandos': 'brew install ollama' },
             { 'Sistema': 'Windows', 'Archivo instalador': 'OllamaSetup.exe', 'Línea de comandos': 'irm https://ollama.com/install.ps1 | iex' },
@@ -466,7 +466,7 @@ schema: {
         whatIsOllama: {
           title: '¿Qué es Ollama y por qué usarlo?',
           content: [
-            '**Ollama es un motor de inferencia de código abierto que ejecuta grandes modelos de lenguaje de forma local.** Integra la gestión de modelos, el backend de inferencia llama.cpp y una API REST compatible con OpenAI en una sola aplicación ligera. Sin Python, sin entorno conda y sin configuración de CUDA.',
+            '**Ollama es un motor de inferencia de código abierto que ejecuta grandes modelos de lenguaje de forma local.** Integra la gestión de modelos, el backend de inferencia llama.cpp y una API REST compatible con OpenAI en una sola aplicación ligera. Sin Python, sin entorno conda y sin instalar CUDA a mano (una GPU NVIDIA sí necesita un controlador actualizado).',
             'Ollama mantiene una biblioteca de modelos curada ([ollama.com/library](https://ollama.com/library)) con descargas en un solo comando para Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 y otros modelos. Un modelo se descarga una vez y se almacena en caché en disco -- las ejecuciones posteriores cargan el modelo desde el disco sin volver a descargarlo (un modelo inactivo se descarga de la memoria tras el tiempo de keep-alive, 5 minutos por defecto).',
             'Para ver alternativas a Ollama, consulta [Instaladores de LLM local con un clic](/es/local-llms/local-llm-one-click-installers). Para comparar Ollama con LM Studio, consulta [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio).',
           ],
@@ -506,7 +506,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: '¿Cómo se instala Ollama en Linux?',
-          content: 'Un solo comando instala Ollama en cualquier distribución de Linux, incluidas Ubuntu, Debian y Fedora:',
+          content: 'Un solo comando instala Ollama en cualquier distribución de Linux, incluidas Ubuntu, Debian y Fedora. Canalizar un script a `sh` lo ejecuta con tus privilegios de usuario, así que puedes descargar y leer `install.sh` antes si lo prefieres:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -585,7 +585,7 @@ schema: {
             { q: '¿Cuánta RAM mínima necesita Ollama?', a: 'Mínimo 4 GB de RAM para un modelo 3B, 8 GB para un modelo 7B con cuantización Q4. No se requiere GPU -- Ollama cambia automáticamente a inferencia por CPU.' },
             { q: '¿Puedo ejecutar Ollama sin GPU?', a: 'Sí. Ollama funciona en CPU sin GPU. La inferencia es bastante más lenta que con GPU, y la velocidad depende del tamaño del modelo y de tu hardware, pero es funcional. Usa modelos pequeños como llama3.2:3b o phi3.5 en sistemas sin GPU.' },
             { q: '¿Cómo descargo un nuevo modelo con Ollama?', a: 'Ejecuta: ollama pull nombremodelo. Por ejemplo: ollama pull mistral o ollama pull qwen2.5:7b. Los modelos se almacenan en ~/.ollama/models. Lista los modelos descargados con ollama list.' },
-            { q: '¿Qué puerto usa Ollama?', a: 'Ollama sirve su API en el puerto 11434 por defecto. Accede a ella en http://localhost:11434. Cambia el puerto con la variable de entorno OLLAMA_HOST: OLLAMA_HOST=0.0.0.0:11435.' },
+            { q: '¿Qué puerto usa Ollama?', a: 'Ollama sirve su API en el puerto 11434 por defecto. Accede a ella en http://localhost:11434. Cambia el puerto con la variable de entorno OLLAMA_HOST, por ejemplo OLLAMA_HOST=127.0.0.1:11435. Usar 0.0.0.0 hace que la API, que no tiene autenticación, sea accesible desde todos los dispositivos de tu red; hazlo solo detrás de un cortafuegos o un proxy inverso.' },
             { q: '¿La API de Ollama es compatible con la API de OpenAI?', a: 'Sí. Ollama admite el endpoint de chat completions de OpenAI en /v1/chat/completions. Muchas apps creadas para OpenAI funcionan con Ollama al establecer base_url en http://localhost:11434/v1, pero la compatibilidad es parcial: prueba las funciones que necesitas.' },
             { q: '¿Cómo veo qué modelos están instalados en Ollama?', a: 'Ejecuta: ollama list. Esto muestra todos los modelos descargados, sus tamaños y niveles de cuantización. Elimina un modelo con ollama rm nombremodelo.' },
             { q: '¿Cómo actualizo Ollama a la última versión?', a: 'macOS/Windows: Ollama descarga las actualizaciones automáticamente; reinícialo desde el icono de la barra de menús o de la bandeja para aplicarlas, o instala la última versión desde ollama.com. Linux: vuelve a ejecutar curl -fsSL https://ollama.com/install.sh | sh para actualizar en el mismo lugar.' },
@@ -755,7 +755,7 @@ schema: {
             'name': '¿Qué puerto usa Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ollama sirve su API en el puerto 11434 por defecto. Accede a ella en http://localhost:11434. Cambia el puerto con la variable de entorno OLLAMA_HOST: OLLAMA_HOST=0.0.0.0:11435.',
+              'text': 'Ollama sirve su API en el puerto 11434 por defecto. Accede a ella en http://localhost:11434. Cambia el puerto con la variable de entorno OLLAMA_HOST, por ejemplo OLLAMA_HOST=127.0.0.1:11435. Usar 0.0.0.0 hace que la API, que no tiene autenticación, sea accesible desde todos los dispositivos de tu red; hazlo solo detrás de un cortafuegos o un proxy inverso.',
             },
           },
           {
@@ -812,7 +812,7 @@ schema: {
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ar.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
-      leadAnswerBlock: '**نزّل Ollama مجانًا من [ollama.com/download](https://ollama.com/download) وثبّته في أقل من دقيقتين على macOS أو Windows أو Linux، مع أمر واحد لكل نظام موضّح أدناه. بعدها يقوم أمر ollama run واحد بتنزيل أي نموذج وتشغيله، دون إعداد Python ودون حاجة إلى GPU للبدء.**',
+      leadAnswerBlock: '**نزّل Ollama من [ollama.com/download](https://ollama.com/download) وثبّته في أقل من دقيقتين على macOS أو Windows أو Linux، مع أمر واحد لكل نظام موضّح أدناه. بعدها يقوم أمر ollama run واحد بتنزيل نماذج تناسب جهازك وتشغيلها، دون إعداد Python ودون حاجة إلى GPU للبدء.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
       readTime: '8 دقائق للقراءة',
       educationalLevel: 'Beginner',
@@ -834,11 +834,11 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'يتم تثبيت Ollama في أقل من دقيقتين على macOS وWindows وLinux عبر برنامج تثبيت قابل للتنزيل أو أمر curl واحد، ثم يقوم أمر `ollama run <model>` بتنزيل وتشغيل أي نموذج من مكتبته دون الحاجة إلى بيئة Python أو GPU.' },
+            { type: 'one-sentence', text: 'يتم تثبيت Ollama في أقل من دقيقتين على macOS وWindows وLinux عبر برنامج تثبيت قابل للتنزيل أو أمر curl واحد، ثم يقوم أمر `ollama run <model>` بتنزيل وتشغيل النماذج التي تناسب جهازك من مكتبته دون الحاجة إلى بيئة Python أو GPU.' },
             { type: 'plain-terms', text: 'يُعد Ollama طريقة بسيطة لتشغيل نماذج الذكاء الاصطناعي على جهازك الخاص. نزّله (أو شغّل أمر تثبيت واحد على Linux)، ثم اكتب أمراً واحداً مثل `ollama run llama3.2` وسيقوم بتنزيل النموذج وبدء محادثة -- بلا برمجة، وبلا ملفات إعداد، ويعمل جيداً على حاسوب محمول بلا بطاقة رسومات.' },
           ],
           items: [
-            '**التنزيل الرسمي:** [ollama.com/download](https://ollama.com/download) (مجاني). macOS: `brew install ollama`؛ Windows: `irm https://ollama.com/install.ps1 | iex`؛ Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
+            '**التنزيل الرسمي:** [ollama.com/download](https://ollama.com/download) (التطبيق مجاني ومفتوح المصدر بترخيص MIT؛ وقد تتطلب النماذج السحابية تسجيل الدخول وخططًا مدفوعة، ولكل نموذج ترخيصه الخاص). macOS: `brew install ollama`؛ Windows: `irm https://ollama.com/install.ps1 | iex`؛ Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
             'macOS: نزّل ملف .dmg من ollama.com أو شغّل `brew install ollama` -- ثم `ollama run llama3.2` لبدء المحادثة.',
             'Windows: نزّل المثبّت من ollama.com/download. يعمل Ollama كخدمة في الخلفية في علبة النظام.',
             'Linux: أمر curl واحد يثبّت كل شيء -- `curl -fsSL https://ollama.com/install.sh | sh`.',
@@ -850,7 +850,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: 'أين يمكن تنزيل ⁨Ollama⁩؟',
-          content: 'نزّل ⁨Ollama⁩ مجانًا من الموقع الرسمي: [ollama.com/download](https://ollama.com/download). تسجيل الدخول مطلوب فقط للنماذج السحابية في ⁨Ollama⁩، وليس للنماذج المحلية. المتطلبات: ⁨macOS⁩ 14 (⁨Sonoma⁩) أو أحدث، أو ⁨Windows⁩ 10 22H2 أو أحدث، أو ⁨Linux⁩ (⁨x86-64⁩ أو ⁨ARM64⁩). اختر نظامك:',
+          content: 'نزّل ⁨Ollama⁩ من الموقع الرسمي: [ollama.com/download](https://ollama.com/download). التطبيق مجاني ومفتوح المصدر بترخيص MIT ([المستودع الرسمي](https://github.com/ollama/ollama))؛ وتسجيل الدخول مطلوب فقط للنماذج السحابية في ⁨Ollama⁩، وقد تكون لها خطط مدفوعة، وليس للنماذج المحلية. ولكل نموذج ترخيصه الخاص. المتطلبات: ⁨macOS⁩ 14 (⁨Sonoma⁩) أو أحدث، أو ⁨Windows⁩ 10 22H2 أو أحدث، أو ⁨Linux⁩ (⁨x86-64⁩ أو ⁨ARM64⁩). أمر Windows ‎`irm … | iex` يشغّل السكربت المنزَّل بصلاحيات مستخدمك؛ ويمكنك تنزيل `install.ps1` وقراءته أولًا إن شئت. اختر نظامك:',
           rows: [
             { 'النظام': 'macOS', 'ملف المثبّت': 'Ollama.dmg', 'سطر الأوامر': 'brew install ollama' },
             { 'النظام': 'Windows', 'ملف المثبّت': 'OllamaSetup.exe', 'سطر الأوامر': 'irm https://ollama.com/install.ps1 | iex' },
@@ -870,7 +870,7 @@ schema: {
         whatIsOllama: {
           title: 'ما هو Ollama ولماذا تستخدمه؟',
           content: [
-            '**Ollama محرك استدلال مفتوح المصدر يشغّل نماذج اللغة الكبيرة محليًا.** يدمج إدارة النماذج وخلفية الاستدلال llama.cpp وواجهة REST API متوافقة مع OpenAI في تطبيق واحد خفيف. دون Python ودون بيئة conda ودون إعداد CUDA.',
+            '**Ollama محرك استدلال مفتوح المصدر يشغّل نماذج اللغة الكبيرة محليًا.** يدمج إدارة النماذج وخلفية الاستدلال llama.cpp وواجهة REST API متوافقة مع OpenAI في تطبيق واحد خفيف. دون Python ودون بيئة conda ودون تثبيت CUDA يدويًا (لكن بطاقة NVIDIA تحتاج إلى تعريف محدّث).',
             'يحافظ Ollama على مكتبة نماذج منتقاة ([ollama.com/library](https://ollama.com/library)) بتنزيلات بأمر واحد لـ Meta Llama 3.3 و Microsoft Phi-4-mini و Google Gemma 4 و Mistral و Qwen3 ونماذج أخرى. يُنزَّل النموذج مرة واحدة ويُخزَّن مؤقتًا على القرص -- وتُحمَّل التشغيلات اللاحقة من القرص دون إعادة التنزيل (يُفرَّغ النموذج الخامل من الذاكرة بعد مهلة الإبقاء، وهي 5 دقائق افتراضيًا).',
             'للاطلاع على بدائل Ollama، راجع [مثبّتات LLM المحلية بنقرة واحدة](/ar/local-llms/local-llm-one-click-installers). ولمقارنة Ollama بـ LM Studio، راجع [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio).',
           ],
@@ -910,7 +910,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: 'كيف يُثبَّت Ollama على Linux؟',
-          content: 'أمر واحد يثبّت Ollama على أي توزيعة Linux:',
+          content: 'أمر واحد يثبّت Ollama على أي توزيعة Linux. تمرير سكربت إلى `sh` يشغّله بصلاحيات مستخدمك، لذا يمكنك تنزيل `install.sh` وقراءته أولًا إن شئت:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -989,7 +989,7 @@ schema: {
             { q: 'كم تحتاج Ollama من RAM كحد أدنى؟', a: 'الحد الأدنى 4 GB من RAM لنموذج 3B، و8 GB لنموذج 7B بتكميم Q4. لا حاجة إلى GPU -- ينتقل Ollama تلقائيًا إلى الاستدلال عبر CPU.' },
             { q: 'هل يمكنني تشغيل Ollama دون GPU؟', a: 'نعم. يعمل Ollama على CPU دون GPU. يكون الاستدلال أبطأ بوضوح مما هو على GPU، وتعتمد السرعة على حجم النموذج وعلى جهازك، لكنه عملي. استخدم نماذج صغيرة مثل llama3.2:3b أو phi3.5 على الأنظمة بلا GPU.' },
             { q: 'كيف أنزّل نموذجًا جديدًا بـ Ollama؟', a: 'شغّل: ollama pull اسم-النموذج. مثلًا: ollama pull mistral أو ollama pull qwen2.5:7b. تُخزَّن النماذج في ~/.ollama/models. اعرض النماذج المنزَّلة بـ ollama list.' },
-            { q: 'أي منفذ يستخدم Ollama؟', a: 'يقدّم Ollama واجهة API على المنفذ 11434 افتراضيًا. ادخل إليها على http://localhost:11434. غيّر المنفذ بمتغير البيئة OLLAMA_HOST: OLLAMA_HOST=0.0.0.0:11435.' },
+            { q: 'أي منفذ يستخدم Ollama؟', a: 'يقدّم Ollama واجهة API على المنفذ 11434 افتراضيًا. ادخل إليها على http://localhost:11434. غيّر المنفذ بمتغير البيئة OLLAMA_HOST، مثلًا OLLAMA_HOST=127.0.0.1:11435. ربط Ollama بالعنوان 0.0.0.0 يجعل واجهة API، التي لا تتضمن مصادقة، متاحة لكل الأجهزة في شبكتك؛ لا تفعل ذلك إلا خلف جدار ناري أو وكيل عكسي.' },
             { q: 'هل API الخاص بـ Ollama متوافق مع API الخاص بـ OpenAI؟', a: 'نعم. يدعم Ollama نقطة chat completions الخاصة بـ OpenAI على /v1/chat/completions. ويمكن لكثير من التطبيقات المبنية لـ OpenAI العمل مع Ollama بضبط base_url على http://localhost:11434/v1، لكن التوافق جزئي، لذا اختبر الميزات التي تعتمد عليها.' },
             { q: 'كيف أرى أي النماذج مثبّتة في Ollama؟', a: 'شغّل: ollama list. يعرض هذا كل النماذج المنزَّلة وأحجامها ومستويات التكميم. احذف نموذجًا بـ ollama rm اسم-النموذج.' },
             { q: 'كيف أحدّث Ollama إلى أحدث إصدار؟', a: 'macOS/Windows: ينزّل Ollama التحديثات تلقائيًا؛ أعد تشغيله من أيقونة شريط القوائم أو علبة النظام لتطبيق التحديث، أو ثبّت أحدث إصدار من ollama.com. Linux: أعد تشغيل curl -fsSL https://ollama.com/install.sh | sh للتحديث في المكان نفسه.' },
@@ -1157,7 +1157,7 @@ schema: {
             'name': 'أي منفذ يستخدم Ollama؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'يقدّم Ollama واجهة API على المنفذ 11434 افتراضيًا. ادخل إليها على http://localhost:11434. غيّر المنفذ بمتغير البيئة OLLAMA_HOST: OLLAMA_HOST=0.0.0.0:11435.',
+              'text': 'يقدّم Ollama واجهة API على المنفذ 11434 افتراضيًا. ادخل إليها على http://localhost:11434. غيّر المنفذ بمتغير البيئة OLLAMA_HOST، مثلًا OLLAMA_HOST=127.0.0.1:11435. ربط Ollama بالعنوان 0.0.0.0 يجعل واجهة API، التي لا تتضمن مصادقة، متاحة لكل الأجهزة في شبكتك؛ لا تفعل ذلك إلا خلف جدار ناري أو وكيل عكسي.',
             },
           },
           {
@@ -1198,7 +1198,7 @@ schema: {
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-pt.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
-      leadAnswerBlock: '**Baixe o Ollama de graça em [ollama.com/download](https://ollama.com/download) e instale em menos de 2 minutos no macOS, Windows ou Linux, com um comando por sistema logo abaixo. Depois, um único comando ollama run baixa e executa qualquer modelo, sem Python e sem precisar de GPU para começar.**',
+      leadAnswerBlock: '**Baixe o Ollama de graça em [ollama.com/download](https://ollama.com/download) e instale em menos de 2 minutos no macOS, Windows ou Linux, com um comando por sistema logo abaixo. Depois, um único comando ollama run baixa e executa modelos compatíveis com seu hardware, sem Python e sem precisar de GPU para começar.**',
       audience: 'Iniciantes executando o primeiro LLM local em hardware de consumo',
       readTime: '8 min de leitura',
       educationalLevel: 'Beginner',
@@ -1227,7 +1227,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'O Ollama é instalado em menos de 2 minutos no macOS, Windows e Linux por meio de um instalador para download ou um único comando curl, e depois um comando `ollama run <modelo>` baixa e executa qualquer modelo da sua biblioteca sem exigir ambiente Python ou GPU.' },
+            { type: 'one-sentence', text: 'O Ollama é instalado em menos de 2 minutos no macOS, Windows e Linux por meio de um instalador para download ou um único comando curl, e depois um comando `ollama run <modelo>` baixa e executa modelos da sua biblioteca compatíveis com o seu hardware, sem exigir ambiente Python ou GPU.' },
             { type: 'plain-terms', text: 'O Ollama é uma forma simples de rodar modelos de IA no seu próprio computador. Baixe-o (ou rode um único comando de instalação no Linux), depois digite um comando como `ollama run llama3.2` e ele baixará o modelo e iniciará um chat -- sem programação, sem arquivos de configuração, e funciona bem em um notebook sem placa de vídeo.' },
           ],
           items: [
@@ -1243,7 +1243,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: 'Onde baixar o Ollama?',
-          content: 'Baixe o Ollama gratuitamente no site oficial, [ollama.com/download](https://ollama.com/download). O login só é necessário para os modelos em nuvem do Ollama, não para os locais. Requisitos: macOS 14 (Sonoma) ou mais recente, Windows 10 22H2 ou mais recente, ou Linux (x86-64 ou ARM64). Escolha o seu sistema:',
+          content: 'Baixe o Ollama gratuitamente no site oficial, [ollama.com/download](https://ollama.com/download). O login só é necessário para os modelos em nuvem do Ollama, não para os locais. Requisitos: macOS 14 (Sonoma) ou mais recente, Windows 10 22H2 ou mais recente, ou Linux (x86-64 ou ARM64). O comando do Windows `irm … | iex` executa o script baixado com as permissões do seu usuário; se preferir, você pode baixar e ler o `install.ps1` antes. Escolha o seu sistema:',
           rows: [
             { 'Sistema': 'macOS', 'Arquivo instalador': 'Ollama.dmg', 'Linha de comando': 'brew install ollama' },
             { 'Sistema': 'Windows', 'Arquivo instalador': 'OllamaSetup.exe', 'Linha de comando': 'irm https://ollama.com/install.ps1 | iex' },
@@ -1264,7 +1264,7 @@ schema: {
           id: 'what-is-ollama',
           title: 'O que é o Ollama e por que usá-lo?',
           content: [
-            '**O Ollama é um motor de inferência open-source que executa modelos de linguagem grandes localmente.** Ele reúne gerenciamento de modelos, o backend de inferência llama.cpp e uma API REST compatível com OpenAI em um único aplicativo leve. Sem Python, sem ambiente conda e sem configuração de CUDA.',
+            '**O Ollama é um motor de inferência open-source que executa modelos de linguagem grandes localmente.** Ele reúne gerenciamento de modelos, o backend de inferência llama.cpp e uma API REST compatível com OpenAI em um único aplicativo leve. Sem Python, sem ambiente conda e sem instalar o CUDA manualmente (uma GPU NVIDIA ainda precisa de um driver atualizado).',
             'O Ollama mantém uma biblioteca de modelos selecionada ([ollama.com/library](https://ollama.com/library)) com downloads em um único comando para Meta Llama 3.3, Microsoft Phi-4, Google Gemma, Mistral, Qwen3 e outros modelos. Um modelo é baixado uma vez e fica em cache no disco -- as execuções seguintes carregam o modelo do disco, sem baixar de novo (um modelo inativo é descarregado da memória após o período de keep-alive, 5 minutos por padrão).',
             'Para alternativas ao Ollama, veja [Instaladores de LLM local com um clique](/pt/local-llms/local-llm-one-click-installers). Para comparar o Ollama com o LM Studio, veja [Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio).',
           ],
@@ -1296,6 +1296,7 @@ schema: {
         installOnLinux: {
           id: 'install-on-linux',
           title: 'Como instalar o Ollama no Linux',
+          content: 'Um único comando instala o Ollama em qualquer distribuição Linux. Enviar um script para o `sh` o executa com as permissões do seu usuário, então você pode baixar e ler o `install.sh` antes, se preferir:',
           codeBlock: '# Script de instalação oficial\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Verificar instalação\nollama --version\n\n# Executar o primeiro modelo\nollama run llama3.2',
           codeLanguage: 'bash',
         },
@@ -1612,7 +1613,7 @@ schema: {
       seoTitle: 'Ollama herunterladen & installieren: Modell zur GPU',
       intro: 'Ollama kostenlos von [ollama.com/download](https://ollama.com/download) herunterladen und in unter 2 Minuten unter macOS, Windows oder Linux installieren; je ein Befehl pro System steht unten. Danach lädt und startet ein einziger Befehl (ollama run) jedes Modell, ohne Python-Setup und ohne GPU für den Einstieg. Welches Modell zur Grafikkarte passt, zeigt die GPU-Tabelle weiter unten.',
       metaDescription: 'Ollama kostenlos von ollama.com laden und unter macOS, Windows oder Linux mit je einem Befehl installieren; dann das Modell passend zum GPU-VRAM wählen.',
-      leadAnswerBlock: '**Laden Sie Ollama kostenlos von [ollama.com/download](https://ollama.com/download) herunter und installieren Sie es in unter 2 Minuten unter macOS, Windows oder Linux, mit je einem Befehl pro System weiter unten. Danach lädt und startet ein einziger Befehl (ollama run) jedes Modell, ohne Python-Setup und ohne GPU für den Einstieg.**',
+      leadAnswerBlock: '**Laden Sie Ollama kostenlos von [ollama.com/download](https://ollama.com/download) herunter und installieren Sie es in unter 2 Minuten unter macOS, Windows oder Linux, mit je einem Befehl pro System weiter unten. Danach lädt und startet ein einziger Befehl (ollama run) zur Hardware passende Modelle, ohne Python-Setup und ohne GPU für den Einstieg.**',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-de.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
@@ -1644,7 +1645,7 @@ schema: {
           title: 'Zusammenfassung',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Ollama installiert sich in unter 2 Minuten auf macOS, Windows und Linux über einen herunterladbaren Installer oder einen einzigen curl-Befehl, und danach lädt ein `ollama run <Modell>`-Befehl jedes Modell aus der Bibliothek herunter und startet es -- ohne Python-Umgebung oder GPU.' },
+            { type: 'one-sentence', text: 'Ollama installiert sich in unter 2 Minuten auf macOS, Windows und Linux über einen herunterladbaren Installer oder einen einzigen curl-Befehl, und danach lädt ein `ollama run <Modell>`-Befehl zur Hardware passende Modelle aus der Bibliothek herunter und startet sie -- ohne Python-Umgebung oder GPU.' },
             { type: 'plain-terms', text: 'Mit Ollama lassen sich KI-Modelle auf dem eigenen Computer einfach ausführen. Herunterladen (oder unter Linux einen einzigen Installationsbefehl ausführen), dann einen Befehl wie `ollama run llama3.2` eingeben -- das Modell wird heruntergeladen und ein Chat gestartet, ganz ohne Programmierung oder Konfigurationsdateien, und es funktioniert auch auf einem Laptop ohne Grafikkarte.' },
           ],
           items: [
@@ -1659,7 +1660,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: 'Wo kann man Ollama herunterladen?',
-          content: 'Laden Sie Ollama kostenlos von der offiziellen Website herunter: [ollama.com/download](https://ollama.com/download). Eine Anmeldung ist nur für die Cloud-Modelle von Ollama nötig, nicht für lokale Modelle. Voraussetzungen: macOS 14 (Sonoma) oder neuer, Windows 10 22H2 oder neuer oder Linux (x86-64 oder ARM64). Wählen Sie Ihr System:',
+          content: 'Laden Sie Ollama kostenlos von der offiziellen Website herunter: [ollama.com/download](https://ollama.com/download). Eine Anmeldung ist nur für die Cloud-Modelle von Ollama nötig, nicht für lokale Modelle. Voraussetzungen: macOS 14 (Sonoma) oder neuer, Windows 10 22H2 oder neuer oder Linux (x86-64 oder ARM64). Der Windows-Einzeiler `irm … | iex` führt das heruntergeladene Skript mit Ihren Benutzerrechten aus; Sie können `install.ps1` vorher herunterladen und lesen. Wählen Sie Ihr System:',
           rows: [
             { 'System': 'macOS', 'Installationsdatei': 'Ollama.dmg', 'Befehlszeile': 'brew install ollama' },
             { 'System': 'Windows', 'Installationsdatei': 'OllamaSetup.exe', 'Befehlszeile': 'irm https://ollama.com/install.ps1 | iex' },
@@ -1680,7 +1681,7 @@ schema: {
           id: 'what-is-ollama',
           title: 'Was ist Ollama und warum sollte ich es nutzen?',
           content: [
-            '**Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt.** Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-ähnliche REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
+            '**Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt.** Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-ähnliche REST-API in einer einzigen leichten Anwendung. Kein Python, keine Conda-Umgebung und keine manuelle CUDA-Installation erforderlich (eine NVIDIA-GPU benötigt weiterhin einen aktuellen Treiber).',
             'Ollama betreut eine kuratierte Modellbibliothek ([ollama.com/library](https://ollama.com/library)) mit Ein-Befehl-Downloads für Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 und weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert -- nachfolgende Ausführungen laden das Modell von der Festplatte, ohne erneut herunterzuladen (ein inaktives Modell wird nach dem Keep-Alive-Zeitraum, standardmäßig 5 Minuten, aus dem Arbeitsspeicher entladen).',
             'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/de/local-llms/local-llm-one-click-installers). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/de/local-llms/how-to-install-lm-studio).',
           ],
@@ -1722,7 +1723,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: 'Wie installiert man Ollama auf Linux?',
-          content: 'Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution:',
+          content: 'Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution. Wird ein Skript per Pipe an `sh` übergeben, läuft es mit Ihren Benutzerrechten; Sie können `install.sh` vorher herunterladen und lesen:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -1976,7 +1977,7 @@ schema: {
       seoTitle: 'Installer Ollama : commandes par OS et modèle selon GPU',
       intro: 'Téléchargez Ollama gratuitement sur [ollama.com/download](https://ollama.com/download) et installez-le en moins de 2 minutes sous macOS, Windows ou Linux, avec une commande par système indiquée ci-dessous. Ensuite, une seule commande ollama run télécharge et lance n\'importe quel modèle, sans Python et sans GPU pour commencer. Le tableau GPU plus bas indique quel modèle correspond à votre carte graphique.',
       metaDescription: 'Téléchargez Ollama sur ollama.com, installez-le sous macOS, Windows ou Linux en une commande, puis choisissez le modèle adapté à la VRAM de votre GPU.',
-      leadAnswerBlock: '**Téléchargez Ollama gratuitement sur [ollama.com/download](https://ollama.com/download) et installez-le en moins de 2 minutes sous macOS, Windows ou Linux, avec une commande par système indiquée ci-dessous. Ensuite, une seule commande ollama run télécharge et lance n\'importe quel modèle, sans Python et sans GPU pour commencer.**',
+      leadAnswerBlock: '**Téléchargez Ollama gratuitement sur [ollama.com/download](https://ollama.com/download) et installez-le en moins de 2 minutes sous macOS, Windows ou Linux, avec une commande par système indiquée ci-dessous. Ensuite, une seule commande ollama run télécharge et lance les modèles adaptés à votre matériel, sans Python et sans GPU pour commencer.**',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-fr.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
@@ -2008,7 +2009,7 @@ schema: {
           title: 'Résumé',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: "Ollama s'installe en moins de 2 minutes sur macOS, Windows et Linux via un installateur téléchargeable ou une seule commande curl, puis une commande `ollama run <modèle>` télécharge et exécute n'importe quel modèle de sa bibliothèque sans environnement Python ni GPU." },
+            { type: 'one-sentence', text: "Ollama s'installe en moins de 2 minutes sur macOS, Windows et Linux via un installateur téléchargeable ou une seule commande curl, puis une commande `ollama run <modèle>` télécharge et exécute les modèles de sa bibliothèque adaptés à votre matériel, sans environnement Python ni GPU." },
             { type: 'plain-terms', text: "Ollama est un moyen simple d'exécuter des modèles d'IA sur son propre ordinateur. Téléchargez-le (ou exécutez une seule commande d'installation sous Linux), puis tapez une commande comme `ollama run llama3.2` : le modèle est téléchargé et un chat démarre -- sans programmation, sans fichier de configuration, et cela fonctionne même sur un portable sans carte graphique." },
           ],
           items: [
@@ -2023,7 +2024,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: 'Où télécharger Ollama ?',
-          content: 'Téléchargez Ollama gratuitement sur le site officiel, [ollama.com/download](https://ollama.com/download). La connexion à un compte n\'est nécessaire que pour les modèles cloud d\'Ollama, pas pour les modèles locaux. Prérequis : macOS 14 (Sonoma) ou plus récent, Windows 10 22H2 ou plus récent, ou Linux (x86-64 ou ARM64). Choisissez votre système :',
+          content: 'Téléchargez Ollama gratuitement sur le site officiel, [ollama.com/download](https://ollama.com/download). La connexion à un compte n\'est nécessaire que pour les modèles cloud d\'Ollama, pas pour les modèles locaux. Prérequis : macOS 14 (Sonoma) ou plus récent, Windows 10 22H2 ou plus récent, ou Linux (x86-64 ou ARM64). La commande Windows `irm … | iex` exécute le script téléchargé avec vos droits d\'utilisateur ; vous pouvez d\'abord télécharger et lire `install.ps1`. Choisissez votre système :',
           rows: [
             { 'Système': 'macOS', 'Fichier d\'installation': 'Ollama.dmg', 'Ligne de commande': 'brew install ollama' },
             { 'Système': 'Windows', 'Fichier d\'installation': 'OllamaSetup.exe', 'Ligne de commande': 'irm https://ollama.com/install.ps1 | iex' },
@@ -2044,7 +2045,7 @@ schema: {
           id: 'what-is-ollama',
           title: 'Qu\'est-ce qu\'Ollama et pourquoi l\'utiliser ?',
           content: [
-            '**Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement.** Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST de style OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
+            '**Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement.** Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST de style OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune installation manuelle de CUDA requise (un GPU NVIDIA nécessite toujours un pilote à jour).',
             'Ollama maintient une bibliothèque de modèles triée sur le volet ([ollama.com/library](https://ollama.com/library)) avec des téléchargements en une seule commande pour Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 et d\'autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque -- les exécutions ultérieures chargent le modèle depuis le disque sans le retélécharger (un modèle inactif est déchargé de la mémoire après le délai de keep-alive, 5 minutes par défaut).',
             'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/fr/local-llms/local-llm-one-click-installers). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/fr/local-llms/how-to-install-lm-studio).',
           ],
@@ -2086,7 +2087,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: 'Comment installer Ollama sur Linux ?',
-          content: 'Une seule commande installe Ollama sur toute distribution Linux :',
+          content: 'Une seule commande installe Ollama sur toute distribution Linux. Rediriger un script vers `sh` l\'exécute avec vos droits d\'utilisateur ; vous pouvez d\'abord télécharger et lire `install.sh` :',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -2235,7 +2236,7 @@ schema: {
             { q: 'Comment mettent à jour Ollama vers la dernière version ?', a: 'Sous macOS et Windows, Ollama télécharge les mises à jour automatiquement ; redémarrez-le depuis l\'icône de la barre de menus ou de la zone de notification pour les appliquer, ou installez la dernière version depuis ollama.com. Sous Linux, réexécutez le script d\'installation : curl -fsSL https://ollama.com/install.sh | sh' },
             { q: 'Puis-je utiliser Ollama via le SDK OpenAI sans modifications de code ?', a: 'Oui. Définissez base_url sur http://localhost:11434/v1 dans le SDK OpenAI et transmettez n\'importe quelle chaîne comme clé API. Ollama expose une API de style OpenAI compatible avec de nombreuses bibliothèques clientes OpenAI ; une compatibilité complète n\'est pas garantie, testez donc les fonctionnalités dont vous dépendez.' },
             { q: 'Pourquoi mon inférence Ollama est-elle lente (moins de 5 tokens/sec) ?', a: 'Le modèle s\'exécute probablement sur CPU au lieu du GPU. Vérifiez avec ollama ps que le modèle est chargé. Si l\'utilisation du GPU est 0%, vérifiez que vos drivers GPU sont installés et à jour. Sur NVIDIA : nvidia-smi devrait afficher votre GPU. Sur AMD : rocm-smi. Sur Mac : l\'accélération GPU Metal est automatique sur Apple Silicon.' },
-            { q: 'Ollama peut-il exécuter plusieurs modèles simultanément ?', a: 'Oui. Ollama peut garder plusieurs modèles chargés en même temps tant qu\'ils tiennent en mémoire ; la limite se règle avec la variable d\'environnement OLLAMA_MAX_LOADED_MODELS (voir la FAQ d\'Ollama). Si la mémoire manque, les nouvelles requêtes attendent qu\'un modèle inactif soit déchargé. Plusieurs modèles demandent donc davantage de RAM.' },
+            { q: 'Ollama peut-il exécuter plusieurs modèles simultanément ?', a: 'Oui. Ollama peut garder plusieurs modèles chargés en même temps tant qu\'ils tiennent en mémoire ; la limite se règle avec la variable d\'environnement OLLAMA_MAX_LOADED_MODELS (voir la [FAQ d\'Ollama](https://github.com/ollama/ollama/blob/main/docs/faq.md)). Si la mémoire manque, les nouvelles requêtes attendent qu\'un modèle inactif soit déchargé. Plusieurs modèles demandent donc davantage de RAM.' },
             { q: 'Quelle est la différence entre ollama pull et ollama run ?', a: 'ollama pull télécharge un modèle depuis la bibliothèque Ollama sans le charger en mémoire. ollama run télécharge le modèle (s\'il n\'est pas en cache) et démarre immédiatement une session de chat. Pour utiliser un modèle via l\'API sans l\'interface de chat, pull d\'abord puis interrogez l\'API.' },
             { q: 'Un LLM local avec Ollama est-il conforme au RGPD ?', a: 'Pas automatiquement. Un LLM local traite les données localement, mais la conformité au RGPD nécessite en outre : chiffrement du disque, contrôle d\'accès, registre de traitement et éventuellement contrats de traitement. Le traitement local avec Ollama est une étape importante, mais pas une preuve complète de conformité au RGPD. Consultez votre délégué à la protection des données (DPO) pour la conformité.' },
             { q: 'Puis-je utiliser Ollama en production dans une PME française ?', a: 'Oui, c\'est techniquement possible. Ollama s\'exécute localement et peut servir au traitement interne de documents, à la revue de code ou à l\'analyse de données. Important : liez Ollama à localhost (valeur par défaut), activez le chiffrement du disque pour les données sensibles et vérifiez vos exigences de conformité, en particulier pour les données clients. Ceci n\'est pas un conseil juridique.' },
@@ -2373,7 +2374,7 @@ schema: {
             'name': 'Ollama peut-il exécuter plusieurs modèles simultanément ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Ollama peut garder plusieurs modèles chargés en même temps tant qu\'ils tiennent en mémoire ; la limite se règle avec la variable d\'environnement OLLAMA_MAX_LOADED_MODELS (voir la FAQ d\'Ollama). Si la mémoire manque, les nouvelles requêtes attendent qu\'un modèle inactif soit déchargé. Plusieurs modèles demandent donc davantage de RAM.',
+              'text': 'Oui. Ollama peut garder plusieurs modèles chargés en même temps tant qu\'ils tiennent en mémoire ; la limite se règle avec la variable d\'environnement OLLAMA_MAX_LOADED_MODELS (voir la [FAQ d\'Ollama](https://github.com/ollama/ollama/blob/main/docs/faq.md)). Si la mémoire manque, les nouvelles requêtes attendent qu\'un modèle inactif soit déchargé. Plusieurs modèles demandent donc davantage de RAM.',
             },
           },
           {
@@ -2422,7 +2423,7 @@ schema: {
       seoTitle: 'Ollamaのダウンロード・インストールとGPU別モデル',
       intro: 'Ollamaは[ollama.com/download](https://ollama.com/download)から無料でダウンロードでき、macOS・Windows・Linuxのいずれでも2分以内にインストールできます。システムごとのコマンドは下記のとおりです。その後はollama runの1コマンドで任意のモデルをダウンロードして実行でき、Pythonの準備もGPUも不要です。お使いのグラフィックスカードに合うモデルは、下のGPU別の表で確認できます。',
       metaDescription: 'Ollamaはollama.comから無料でダウンロードでき、macOS・Windows・Linuxそれぞれ1コマンドでインストールできます。GPUのVRAMに合うモデルの選び方も紹介。',
-      leadAnswerBlock: '**Ollamaは[ollama.com/download](https://ollama.com/download)から無料でダウンロードでき、macOS・Windows・Linuxのいずれでも2分以内にインストールできます（システムごとのコマンドは下記のとおりです）。その後はollama runの1コマンドで任意のモデルをダウンロードして実行でき、Pythonの設定も、始めるためのGPUも不要です。**',
+      leadAnswerBlock: '**Ollamaは[ollama.com/download](https://ollama.com/download)から無料でダウンロードでき、macOS・Windows・Linuxのいずれでも2分以内にインストールできます（システムごとのコマンドは下記のとおりです）。その後はollama runの1コマンドで、お使いのハードウェアに収まるモデルをダウンロードして実行でき、Pythonの設定も、始めるためのGPUも不要です。**',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ja.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
@@ -2454,7 +2455,7 @@ schema: {
           title: '重要ポイント',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Ollamaは、macOS、Windows、Linuxでダウンロード可能なインストーラーまたは1つのcurlコマンドを使って2分以内にインストールでき、その後は`ollama run <モデル>`コマンド1つでライブラリの任意のモデルをダウンロードして実行でき、Python環境もGPUも不要です。' },
+            { type: 'one-sentence', text: 'Ollamaは、macOS、Windows、Linuxでダウンロード可能なインストーラーまたは1つのcurlコマンドを使って2分以内にインストールでき、その後は`ollama run <モデル>`コマンド1つでライブラリのうちお使いのハードウェアに収まるモデルをダウンロードして実行でき、Python環境もGPUも不要です。' },
             { type: 'plain-terms', text: 'Ollamaは自分のコンピューターでAIモデルを手軽に実行できるツールです。ダウンロードするか（Linuxでは1つのインストールコマンドを実行）、`ollama run llama3.2`のようなコマンドを入力するだけで、モデルがダウンロードされチャットが始まります -- プログラミング不要、設定ファイル不要で、グラフィックカードのないノートパソコンでも問題なく動作します。' },
           ],
           items: [
@@ -2469,7 +2470,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: 'Ollama はどこからダウンロードできますか？',
-          content: 'Ollama は公式サイト [ollama.com/download](https://ollama.com/download) から無料でダウンロードできます。サインインが必要なのは Ollama のクラウドモデルを使う場合だけで、ローカルモデルには不要です。動作環境：macOS 14（Sonoma）以降、Windows 10 22H2 以降、または Linux（x86-64 / ARM64）。お使いの環境を選んでください：',
+          content: 'Ollama は公式サイト [ollama.com/download](https://ollama.com/download) から無料でダウンロードできます。サインインが必要なのは Ollama のクラウドモデルを使う場合だけで、ローカルモデルには不要です。動作環境：macOS 14（Sonoma）以降、Windows 10 22H2 以降、または Linux（x86-64 / ARM64）。Windows用のワンライナー`irm … | iex`は、ダウンロードしたスクリプトを現在のユーザー権限で実行します。先に`install.ps1`をダウンロードして内容を確認することもできます。お使いの環境を選んでください：',
           rows: [
             { 'システム': 'macOS', 'インストーラー': 'Ollama.dmg', 'コマンドライン': 'brew install ollama' },
             { 'システム': 'Windows', 'インストーラー': 'OllamaSetup.exe', 'コマンドライン': 'irm https://ollama.com/install.ps1 | iex' },
@@ -2490,7 +2491,7 @@ schema: {
           id: 'what-is-ollama',
           title: 'Ollama とは何か、そしてなぜ使用するのか？',
           content: [
-            '**Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。** モデル管理、llama.cpp 推論バックエンド、OpenAI 形式の REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
+            '**Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。** モデル管理、llama.cpp 推論バックエンド、OpenAI 形式の REST API を単一の軽量アプリケーションに結合します。Python も conda 環境も、CUDA の手動インストールも不要です（NVIDIA GPU には最新のドライバーが必要です）。',
             'Ollama は Meta Llama 3.3、Microsoft Phi-4-mini、Google Gemma 4、Mistral、Qwen3、およびその他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（[ollama.com/library](https://ollama.com/library)）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行はディスクから読み込むため再ダウンロードは不要です（アイドル状態のモデルはキープアライブ期間（既定 5 分）後にメモリから解放されます）。',
             'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/ja/local-llms/local-llm-one-click-installers) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/ja/local-llms/how-to-install-lm-studio) を参照してください。',
           ],
@@ -2532,7 +2533,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: 'Ollama を Linux にインストールするにはどうすればよいですか？',
-          content: '1 つのコマンドで任意の Linux ディストリビューションに Ollama をインストール:',
+          content: '1 つのコマンドで任意の Linux ディストリビューションに Ollama をインストールできます。スクリプトを`sh`にパイプすると現在のユーザー権限で実行されるため、先に`install.sh`をダウンロードして内容を確認することもできます：',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -2701,7 +2702,7 @@ schema: {
             },
             {
               q: 'Ollama は複数のモデルを同時に実行できますか？',
-              a: 'はい。メモリに収まる限り、Ollama は複数のモデルを同時にロードしたままにできます。上限は環境変数 OLLAMA_MAX_LOADED_MODELS で設定します（Ollama の FAQ を参照）。メモリが足りない場合は、アイドル状態のモデルが解放されるまで新しいリクエストが待機します。複数のモデルを使うほど、必要な RAM も増えます。',
+              a: 'はい。メモリに収まる限り、Ollama は複数のモデルを同時にロードしたままにできます。上限は環境変数 OLLAMA_MAX_LOADED_MODELS で設定します（[Ollama の FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md) を参照）。メモリが足りない場合は、アイドル状態のモデルが解放されるまで新しいリクエストが待機します。複数のモデルを使うほど、必要な RAM も増えます。',
             },
             {
               q: 'ollama pull と ollama run の違いは？',
@@ -2762,7 +2763,7 @@ schema: {
           { '@type': 'Question', name: 'Ollama を最新バージョンに更新するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'macOS と Windows では、Ollama が更新を自動でダウンロードします。メニューバーまたはタスクトレイのアイコンから再起動すると適用されます。ollama.com から最新版をインストールすることもできます。Linux ではインストール スクリプトを再実行: curl -fsSL https://ollama.com/install.sh | sh' } },
           { '@type': 'Question', name: 'コード変更なしで OpenAI SDK 経由で Ollama を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。OpenAI SDK で base_url を http://localhost:11434/v1 に設定し、任意の文字列を API キーとして渡す。Ollama は OpenAI 形式の API を公開しており、多くの OpenAI クライアントライブラリで利用できますが、完全な互換性は保証されません。必要な機能は事前にテストしてください。' } },
           { '@type': 'Question', name: 'Ollama 推論が遅い（5 トークン/秒未満）のはなぜですか？', acceptedAnswer: { '@type': 'Answer', text: 'モデルは GPU ではなく CPU で実行可能。ollama ps でモデルが読み込まれていることを確認。GPU 使用率が 0% の場合、GPU ドライバーがインストール・最新化されていることを確認。NVIDIA では nvidia-smi が GPU を表示すべき。AMD では rocm-smi。Mac では Metal GPU 加速が Apple Silicon で自動。' } },
-          { '@type': 'Question', name: 'Ollama は複数のモデルを同時に実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。メモリに収まる限り、Ollama は複数のモデルを同時にロードしたままにできます。上限は環境変数 OLLAMA_MAX_LOADED_MODELS で設定します（Ollama の FAQ を参照）。メモリが足りない場合は、アイドル状態のモデルが解放されるまで新しいリクエストが待機します。複数のモデルを使うほど、必要な RAM も増えます。' } },
+          { '@type': 'Question', name: 'Ollama は複数のモデルを同時に実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。メモリに収まる限り、Ollama は複数のモデルを同時にロードしたままにできます。上限は環境変数 OLLAMA_MAX_LOADED_MODELS で設定します（[Ollama の FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md) を参照）。メモリが足りない場合は、アイドル状態のモデルが解放されるまで新しいリクエストが待機します。複数のモデルを使うほど、必要な RAM も増えます。' } },
           { '@type': 'Question', name: 'ollama pull と ollama run の違いは？', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull は Ollama ライブラリからモデルをダウンロード、メモリに読み込まず。ollama run はモデルをダウンロード（キャッシュされていない場合）し、即座にチャット セッション開始。API 経由でチャット インターフェースなしにモデルを使用するには、最初に pull してから API をクエリ。' } }
         ]
       },
@@ -2786,7 +2787,7 @@ schema: {
       seoTitle: 'Ollama 下载与安装指南：三系统命令及 GPU 选型',
       intro: 'Ollama可从[ollama.com/download](https://ollama.com/download)免费下载，在macOS、Windows或Linux上2分钟内即可装好，每个系统各用一条命令（见下文）。之后只需一条ollama run命令即可下载并运行任意模型，无需配置Python，入门也不需要GPU。想知道哪个模型适合你的显卡，请看下文的GPU对照表。',
       metaDescription: 'Ollama可从ollama.com免费下载，macOS、Windows、Linux各用一条命令即可安装；再按GPU显存选择合适的模型，附官方下载链接。',
-      leadAnswerBlock: '**Ollama可从[ollama.com/download](https://ollama.com/download)免费下载，在macOS、Windows或Linux上2分钟内即可装好，每个系统各用一条命令（见下文）。之后只需一条ollama run命令即可下载并运行任意模型，无需配置Python，入门也不需要GPU。**',
+      leadAnswerBlock: '**Ollama可从[ollama.com/download](https://ollama.com/download)免费下载，在macOS、Windows或Linux上2分钟内即可装好，每个系统各用一条命令（见下文）。之后只需一条ollama run命令即可下载并运行适合你硬件的模型，无需配置Python，入门也不需要GPU。**',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-zh.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
@@ -2818,7 +2819,7 @@ schema: {
           title: '核心要点',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Ollama可在macOS、Windows和Linux上通过可下载安装程序或一条curl命令在2分钟内完成安装，之后一条`ollama run <模型>`命令即可下载并运行库中的任何模型，无需Python环境或GPU。' },
+            { type: 'one-sentence', text: 'Ollama可在macOS、Windows和Linux上通过可下载安装程序或一条curl命令在2分钟内完成安装，之后一条`ollama run <模型>`命令即可下载并运行库中适合你硬件的模型，无需Python环境或GPU。' },
             { type: 'plain-terms', text: 'Ollama是在自己电脑上运行AI模型的一种简单方式。下载它（在Linux上只需运行一条安装命令），然后输入类似`ollama run llama3.2`的命令，它就会下载模型并开始对话——无需编程、无需配置文件，即使笔记本电脑没有独立显卡也能正常运行。' },
           ],
           items: [
@@ -2833,7 +2834,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: '在哪里下载 Ollama？',
-          content: '请从官方网站 [ollama.com/download](https://ollama.com/download) 免费下载 Ollama。只有使用 Ollama 云端模型时才需要登录，本地模型无需登录。系统要求：macOS 14（Sonoma）或更高版本、Windows 10 22H2 或更高版本，或 Linux（x86-64 / ARM64）。请选择你的系统：',
+          content: '请从官方网站 [ollama.com/download](https://ollama.com/download) 免费下载 Ollama。只有使用 Ollama 云端模型时才需要登录，本地模型无需登录。系统要求：macOS 14（Sonoma）或更高版本、Windows 10 22H2 或更高版本，或 Linux（x86-64 / ARM64）。Windows 一行命令 `irm … | iex` 会以您当前用户的权限运行下载的脚本；您可以先下载并阅读 `install.ps1`。请选择你的系统：',
           rows: [
             { '系统': 'macOS', '安装文件': 'Ollama.dmg', '命令行': 'brew install ollama' },
             { '系统': 'Windows', '安装文件': 'OllamaSetup.exe', '命令行': 'irm https://ollama.com/install.ps1 | iex' },
@@ -2854,7 +2855,7 @@ schema: {
           id: 'what-is-ollama',
           title: '什么是 Ollama，为什么使用它？',
           content: [
-            '**Ollama 是一个开源推理引擎，在本地运行大型语言模型。** 它将模型管理、llama.cpp 推理后端和 OpenAI 风格的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
+            '**Ollama 是一个开源推理引擎，在本地运行大型语言模型。** 它将模型管理、llama.cpp 推理后端和 OpenAI 风格的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境，也无需手动安装 CUDA（NVIDIA GPU 仍需较新的驱动程序）。',
             'Ollama 维护一个精选的模型库（[ollama.com/library](https://ollama.com/library)），提供 Meta Llama 3.3、Microsoft Phi-4-mini、Google Gemma 4、Mistral、Qwen3 等模型的一键下载。模型下载一次并缓存在磁盘上 -- 后续运行直接从磁盘加载，无需重新下载（空闲模型会在保活时间（默认 5 分钟）后从内存卸载）。',
             '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/zh/local-llms/local-llm-one-click-installers)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio)。',
           ],
@@ -2896,7 +2897,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: '如何在 Linux 上安装 Ollama？',
-          content: '一个命令在任何 Linux 发行版上安装 Ollama：',
+          content: '一个命令在任何 Linux 发行版上安装 Ollama。将脚本通过管道交给 `sh` 会以您当前用户的权限运行，因此您可以先下载并阅读 `install.sh`：',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -3065,7 +3066,7 @@ schema: {
             },
             {
               q: 'Ollama 可以同时运行多个模型吗？',
-              a: '可以。只要内存足够，Ollama 可以同时保持多个模型处于加载状态；上限由环境变量 OLLAMA_MAX_LOADED_MODELS 控制（参见 Ollama 官方 FAQ）。内存不足时，新请求会等待空闲模型被卸载。同时加载的模型越多，需要的 RAM 也越多。',
+              a: '可以。只要内存足够，Ollama 可以同时保持多个模型处于加载状态；上限由环境变量 OLLAMA_MAX_LOADED_MODELS 控制（参见 [Ollama 官方 FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md)）。内存不足时，新请求会等待空闲模型被卸载。同时加载的模型越多，需要的 RAM 也越多。',
             },
             {
               q: 'ollama pull 和 ollama run 之间有什么区别？',
@@ -3126,7 +3127,7 @@ schema: {
           { '@type': 'Question', name: '如何将 Ollama 更新到最新版本？', acceptedAnswer: { '@type': 'Answer', text: '在 macOS 和 Windows 上，Ollama 会自动下载更新；通过菜单栏或系统托盘图标重启即可应用，也可以从 ollama.com 安装最新版本。在 Linux 上，重新运行安装脚本：curl -fsSL https://ollama.com/install.sh | sh' } },
           { '@type': 'Question', name: '我可以在不修改代码的情况下通过 OpenAI SDK 使用 Ollama 吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。在 OpenAI SDK 中将 base_url 设置为 http://localhost:11434/v1 并传递任何字符串作为 API 密钥。Ollama 提供 OpenAI 风格的 API，可与许多 OpenAI 客户端库配合使用，但不保证完全兼容，请先测试您依赖的功能。' } },
           { '@type': 'Question', name: '为什么我的 Ollama 推理很慢（5 tokens/秒以下）？', acceptedAnswer: { '@type': 'Answer', text: '该模型可能在 CPU 而非 GPU 上运行。使用 ollama ps 验证模型已加载。如果 GPU 利用率为 0%，检查 GPU 驱动程序是否已安装且最新。在 NVIDIA 上：nvidia-smi 应显示您的 GPU。在 AMD 上：rocm-smi。在 Mac 上：Apple Silicon 上自动使用 Metal GPU 加速。' } },
-          { '@type': 'Question', name: 'Ollama 可以同时运行多个模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。只要内存足够，Ollama 可以同时保持多个模型处于加载状态；上限由环境变量 OLLAMA_MAX_LOADED_MODELS 控制（参见 Ollama 官方 FAQ）。内存不足时，新请求会等待空闲模型被卸载。同时加载的模型越多，需要的 RAM 也越多。' } },
+          { '@type': 'Question', name: 'Ollama 可以同时运行多个模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。只要内存足够，Ollama 可以同时保持多个模型处于加载状态；上限由环境变量 OLLAMA_MAX_LOADED_MODELS 控制（参见 [Ollama 官方 FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md)）。内存不足时，新请求会等待空闲模型被卸载。同时加载的模型越多，需要的 RAM 也越多。' } },
           { '@type': 'Question', name: 'ollama pull 和 ollama run 之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull 从 Ollama 库下载模型而不将其加载到内存。ollama run 下载模型（如果未缓存）并立即启动聊天会话。要通过 API 使用模型而不使用聊天界面，首先 pull，然后查询 API。' } }
         ]
       },
@@ -3154,7 +3155,7 @@ schema: {
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ko.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
-      leadAnswerBlock: '**Ollama는 [ollama.com/download](https://ollama.com/download)에서 무료로 다운로드할 수 있으며, macOS, Windows, Linux 어디서든 2분 안에 설치됩니다. 시스템별 명령어는 아래에 있습니다. 설치 후에는 ollama run 명령어 한 줄로 어떤 모델이든 다운로드해 실행할 수 있고, Python 설정도 GPU도 필요 없습니다.**',
+      leadAnswerBlock: '**Ollama는 [ollama.com/download](https://ollama.com/download)에서 다운로드할 수 있으며, macOS, Windows, Linux 어디서든 2분 안에 설치됩니다. 시스템별 명령어는 아래에 있습니다. 설치 후에는 ollama run 명령어 한 줄로 하드웨어에 맞는 모델을 다운로드해 실행할 수 있고, Python 설정도 GPU도 필요 없습니다.**',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '8분 읽기',
       educationalLevel: 'Beginner',
@@ -3176,11 +3177,11 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Ollama는 다운로드 가능한 설치 프로그램이나 하나의 curl 명령어를 통해 macOS, Windows, Linux에서 2분 이내에 설치되며, 이후 `ollama run <모델>` 명령어 하나로 라이브러리의 어떤 모델이든 다운로드하고 실행할 수 있어 Python 환경이나 GPU가 필요 없습니다.' },
+            { type: 'one-sentence', text: 'Ollama는 다운로드 가능한 설치 프로그램이나 하나의 curl 명령어를 통해 macOS, Windows, Linux에서 2분 이내에 설치되며, 이후 `ollama run <모델>` 명령어 하나로 라이브러리에서 하드웨어에 맞는 모델을 다운로드하고 실행할 수 있어 Python 환경이나 GPU가 필요 없습니다.' },
             { type: 'plain-terms', text: 'Ollama는 자신의 컴퓨터에서 AI 모델을 간단하게 실행할 수 있는 방법입니다. 다운로드하거나(Linux에서는 설치 명령어 하나만 실행) `ollama run llama3.2`와 같은 명령어를 입력하면 모델을 다운로드하고 채팅을 시작합니다 -- 코딩도, 설정 파일도 필요 없으며, 그래픽 카드가 없는 노트북에서도 잘 작동합니다.' },
           ],
           items: [
-            '**공식 다운로드:** [ollama.com/download](https://ollama.com/download) (무료). macOS: `brew install ollama`, Windows: `irm https://ollama.com/install.ps1 | iex`, Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
+            '**공식 다운로드:** [ollama.com/download](https://ollama.com/download) (앱은 MIT 라이선스의 무료 오픈 소스이며, 클라우드 모델은 로그인과 유료 플랜이 필요할 수 있고 모델마다 고유한 라이선스가 있습니다). macOS: `brew install ollama`, Windows: `irm https://ollama.com/install.ps1 | iex`, Linux: `curl -fsSL https://ollama.com/install.sh | sh`.',
             'macOS: ollama.com에서 .dmg를 다운로드하거나 `brew install ollama`를 실행한 후 -- `ollama run llama3.2`로 대화를 시작하십시오.',
             'Windows: ollama.com/download에서 설치 프로그램을 다운로드하십시오. Ollama는 시스템 트레이에서 백그라운드 서비스로 실행됩니다.',
             'Linux: 명령어 하나로 모든 것을 설치합니다 -- `curl -fsSL https://ollama.com/install.sh | sh`.',
@@ -3192,7 +3193,7 @@ schema: {
         downloadOllama: {
           id: 'download-ollama',
           title: 'Ollama는 어디서 다운로드하나요?',
-          content: '공식 사이트 [ollama.com/download](https://ollama.com/download)에서 Ollama를 무료로 다운로드하세요. 로그인은 Ollama 클라우드 모델을 쓸 때만 필요하며 로컬 모델에는 필요하지 않습니다. 요구 사항: macOS 14(Sonoma) 이상, Windows 10 22H2 이상 또는 Linux(x86-64 / ARM64). 사용하는 시스템을 선택하세요:',
+          content: '공식 사이트 [ollama.com/download](https://ollama.com/download)에서 Ollama를 다운로드하세요. 앱은 MIT 라이선스의 무료 오픈 소스입니다([공식 저장소](https://github.com/ollama/ollama)). 로그인은 Ollama 클라우드 모델(유료 플랜이 있을 수 있음)을 쓸 때만 필요하며 로컬 모델에는 필요하지 않습니다. 모델마다 고유한 라이선스가 있습니다. 요구 사항: macOS 14(Sonoma) 이상, Windows 10 22H2 이상 또는 Linux(x86-64 / ARM64). Windows용 한 줄 명령 `irm … | iex`는 내려받은 스크립트를 현재 사용자 권한으로 실행하므로, 원하면 먼저 `install.ps1`을 내려받아 내용을 확인하십시오. 사용하는 시스템을 선택하세요:',
           rows: [
             { '시스템': 'macOS', '설치 파일': 'Ollama.dmg', '명령줄': 'brew install ollama' },
             { '시스템': 'Windows', '설치 파일': 'OllamaSetup.exe', '명령줄': 'irm https://ollama.com/install.ps1 | iex' },
@@ -3212,7 +3213,7 @@ schema: {
         whatIsOllama: {
           title: 'Ollama란 무엇이며 왜 사용합니까?',
           content: [
-            '**Ollama는 대형 언어 모델을 로컬에서 실행하는 오픈 소스 추론 엔진입니다.** 모델 관리, llama.cpp 추론 백엔드, OpenAI 호환 REST API를 단일 경량 애플리케이션으로 패키징합니다. Python, conda 환경, CUDA 설정이 필요하지 않습니다.',
+            '**Ollama는 대형 언어 모델을 로컬에서 실행하는 오픈 소스 추론 엔진입니다.** 모델 관리, llama.cpp 추론 백엔드, OpenAI 호환 REST API를 단일 경량 애플리케이션으로 패키징합니다. Python, conda 환경, CUDA 수동 설치가 필요하지 않습니다(NVIDIA GPU에는 최신 드라이버가 필요합니다).',
             'Ollama는 Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 및 기타 모델을 원클릭으로 다운로드할 수 있는 큐레이션된 모델 라이브러리([ollama.com/library](https://ollama.com/library))를 유지 관리합니다. 모델은 한 번 다운로드되어 디스크에 캐시됩니다 -- 이후 실행은 다시 다운로드하지 않고 디스크에서 불러옵니다(유휴 모델은 keep-alive 시간(기본 5분) 후 메모리에서 해제됩니다).',
             'Ollama의 대안은 [로컬 LLM 원클릭 설치 프로그램](/ko/local-llms/local-llm-one-click-installers)을 참조하십시오. Ollama와 LM Studio의 비교는 [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)을 참조하십시오.',
           ],
@@ -3252,7 +3253,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: 'Linux에서 Ollama를 어떻게 설치합니까?',
-          content: '단일 명령어로 모든 Linux 배포판에 Ollama를 설치합니다:',
+          content: '단일 명령어로 모든 Linux 배포판에 Ollama를 설치합니다. 스크립트를 `sh`로 파이프하면 현재 사용자 권한으로 실행되므로, 원하면 먼저 `install.sh`를 내려받아 내용을 확인하십시오:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -3331,7 +3332,7 @@ schema: {
             { q: 'Ollama에 필요한 최소 RAM은 얼마입니까?', a: '3B 모델에는 최소 4GB RAM, 7B 모델(Q4 양자화 기준)에는 8GB RAM이 필요합니다. GPU는 필요하지 않습니다 -- Ollama는 자동으로 CPU 추론으로 전환됩니다.' },
             { q: 'GPU 없이 Ollama를 실행할 수 있습니까?', a: '예. Ollama는 GPU 없이 CPU에서 실행됩니다. 추론 속도는 GPU보다 눈에 띄게 느리고 모델 크기와 하드웨어에 따라 달라지지만 사용 가능합니다. CPU 전용 시스템에서는 llama3.2:3b 또는 phi3.5 같은 소형 모델을 사용하세요.' },
             { q: 'Ollama로 새 모델을 어떻게 다운로드합니까?', a: '다음을 실행하세요: ollama pull 모델이름. 예: ollama pull mistral 또는 ollama pull qwen2.5:7b. 모델은 ~/.ollama/models에 저장됩니다. ollama list로 다운로드된 모델을 확인하세요.' },
-            { q: 'Ollama는 어떤 포트를 사용합니까?', a: 'Ollama는 기본적으로 포트 11434에서 API를 제공합니다. http://localhost:11434에서 접근할 수 있습니다. OLLAMA_HOST 환경 변수로 포트를 변경할 수 있습니다: OLLAMA_HOST=0.0.0.0:11435.' },
+            { q: 'Ollama는 어떤 포트를 사용합니까?', a: 'Ollama는 기본적으로 포트 11434에서 API를 제공합니다. http://localhost:11434에서 접근할 수 있습니다. OLLAMA_HOST 환경 변수로 포트를 변경할 수 있습니다. 예: OLLAMA_HOST=127.0.0.1:11435. 0.0.0.0으로 바인딩하면 인증이 없는 API가 같은 네트워크의 모든 기기에 노출되므로, 방화벽이나 리버스 프록시 뒤에서만 사용하십시오.' },
             { q: 'Ollama API는 OpenAI API와 호환됩니까?', a: '예. Ollama는 /v1/chat/completions에서 OpenAI 채팅 완성 엔드포인트를 지원합니다. OpenAI용으로 만들어진 많은 앱은 base_url을 http://localhost:11434/v1로 설정하면 Ollama와 함께 작동하지만, 호환성은 부분적이므로 필요한 기능을 먼저 테스트하십시오.' },
             { q: 'Ollama에 설치된 모델을 어떻게 확인합니까?', a: '다음을 실행하세요: ollama list. 다운로드된 모든 모델, 크기, 양자화 수준을 보여줍니다. ollama rm 모델이름으로 모델을 제거하세요.' },
             { q: 'Ollama를 최신 버전으로 어떻게 업데이트합니까?', a: 'macOS/Windows: Ollama가 업데이트를 자동으로 다운로드하며, 메뉴 막대나 트레이 아이콘에서 재시작하면 적용됩니다. ollama.com에서 최신 버전을 설치해도 됩니다. Linux: curl -fsSL https://ollama.com/install.sh | sh를 다시 실행하여 현재 위치에서 업데이트합니다.' },
@@ -3499,7 +3500,7 @@ schema: {
             'name': 'Ollama는 어떤 포트를 사용합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ollama는 기본적으로 포트 11434에서 API를 제공합니다. http://localhost:11434에서 접근할 수 있습니다. OLLAMA_HOST 환경 변수로 포트를 변경할 수 있습니다: OLLAMA_HOST=0.0.0.0:11435.',
+              'text': 'Ollama는 기본적으로 포트 11434에서 API를 제공합니다. http://localhost:11434에서 접근할 수 있습니다. OLLAMA_HOST 환경 변수로 포트를 변경할 수 있습니다. 예: OLLAMA_HOST=127.0.0.1:11435. 0.0.0.0으로 바인딩하면 인증이 없는 API가 같은 네트워크의 모든 기기에 노출되므로, 방화벽이나 리버스 프록시 뒤에서만 사용하십시오.',
             },
           },
           {
