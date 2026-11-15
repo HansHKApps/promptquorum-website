@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'SillyTavern ist die Oberfläche, nicht das Gehirn — es ist die App, mit der Sie mit einem Charakter sprechen, aber ein separates Modell (das lokal oder über eine kostenpflichtige API läuft) schreibt tatsächlich die Antworten des Charakters.' },
         ],
         items: [
-          `SillyTavern ([github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)) ist ein kostenloses, quelloffenes (AGPL 3.0) Chat-Frontend mit über ${st.de('sillytavern', 'bare')} GitHub-Stars und mehr als 300 Mitwirkenden.`,
+          `[SillyTavern](https://github.com/SillyTavern/SillyTavern): kostenloses, quelloffenes (AGPL 3.0) Chat-Frontend mit über ${st.de('sillytavern', 'bare')} GitHub-Stars und mehr als 300 Mitwirkenden.`,
           'Es begann im Februar 2023 als Fork von TavernAI, erstellt vom Entwickler Cohee, wobei RossAscends kurz darauf als Kern-Co-Maintainer dazustieß.',
           'Es verbindet sich mit lokalen Backends (KoboldCpp, text-generation-webui, Ollama, LM Studio) oder Cloud-APIs (OpenAI, Claude, OpenRouter) — es generiert selbst keinen Text.',
           'Zu den Kernfunktionen gehören Character Cards (V1/V2/V3-Spezifikation), World Info/Lorebooks, Group Chats mit mehreren Charakteren und Vector Storage für Langzeitgedächtnis.',
