@@ -1813,8 +1813,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x2-local-ai-workstation-hero-ko.webp',
-    title: 'GMKtec EVO-X2 가격·사양: 128GB 게시 $3,499.99',
-    seoTitle: 'GMKtec EVO-X2 가격·사양: 128GB 게시 $3,499.99',
+    title: 'GMKtec EVO-X2 가격: 128GB 게시 $3,499.99',
+    seoTitle: 'GMKtec EVO-X2 가격: 128GB 게시 $3,499.99',
     intro:
       'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB 온보드 LPDDR5X-8000을 탑재한 미니 PC입니다. GMKtec 미국 스토어에서 2026-11-14에 64GB / 1TB 모델은 $2,199.99, 128GB 모델은 $3,499.99(1TB) 또는 $3,649.99(2TB)였으며, 모두 더 높은 정가와 함께 표시되었습니다. PromptQuorum은 이 기기를 직접 테스트하지 않았으며, 이 페이지는 제조사 사양과 제3자 보도에 근거합니다.',
     metaDescription:
@@ -2003,7 +2003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'GMKtec EVO-X2 가격·사양: 128GB 게시 $3,499.99',
+      'headline': 'GMKtec EVO-X2 가격: 128GB 게시 $3,499.99',
       'description': 'GMKtec EVO-X2(Ryzen AI Max+ 395) 가격: 미국 스토어 64GB $2,199.99, 128GB $3,499.99~$3,649.99. 전체 사양과 대안을 정리했습니다.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
