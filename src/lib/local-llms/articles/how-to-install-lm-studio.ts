@@ -1167,7 +1167,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'O LM Studio é um aplicativo de desktop gratuito para macOS, Windows e Linux que permite explorar, baixar e conversar com qualquer modelo GGUF quantizado do Hugging Face por meio de uma interface gráfica, sem comandos de terminal e com um servidor local compatível com OpenAI integrado.' },
+            { type: 'one-sentence', text: 'O LM Studio é um aplicativo de desktop para macOS, Windows e Linux que permite explorar, baixar e conversar com qualquer modelo GGUF quantizado do Hugging Face por meio de uma interface gráfica, sem comandos de terminal e com um servidor local compatível com OpenAI integrado. Segundo o fabricante, o uso é gratuito, mas as condições podem mudar.' },
             { type: 'plain-terms', text: 'Se você não quer usar a linha de comando, o LM Studio é a forma de apontar e clicar para rodar modelos de IA no seu próprio computador. Baixe o app, procure um modelo pelo nome dentro dele, clique em baixar e comece a conversar -- todo o processo leva menos de 5 minutos e inclui um servidor integrado para que outros apps também possam usá-lo.' },
           ],
           items: [
@@ -1181,7 +1181,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'Baixar o LM Studio e instalar: um passo por sistema',
-          content: '**Baixe o LM Studio de graça na [página de download oficial](https://lmstudio.ai/download) e siga o passo de instalação do seu sistema.** Ele exige um Mac com Apple Silicon e macOS 14.0 ou mais recente, um PC com Windows x64 (AVX2) ou ARM64, ou Ubuntu 20.04 ou mais recente, e recomenda-se 16 GB de RAM (veja a [tabela de requisitos](#system-requirements)).',
+          content: '**Baixe o LM Studio na [página de download oficial](https://lmstudio.ai/download) e siga o passo de instalação do seu sistema.** Ele exige um Mac com Apple Silicon e macOS 14.0 ou mais recente, um PC com Windows x64 (AVX2) ou ARM64, ou Ubuntu 20.04 ou mais recente, e recomenda-se 16 GB de RAM (veja a [tabela de requisitos](#system-requirements)). Segundo o fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), o uso é gratuito, mas as condições podem mudar.',
           items: [
           '**macOS:** abra o arquivo .dmg baixado e arraste o LM Studio para a pasta Aplicativos.',
           '**Windows:** execute o instalador baixado e siga as instruções.',
@@ -1208,7 +1208,7 @@ schema: {
           id: 'what-is-lm-studio',
           title: 'O que é o LM Studio?',
           content: [
-            '**LM Studio é um aplicativo de desktop gratuito que facilita o download e execução de LLMs locais sem linha de comando.**',
+            '**LM Studio é um aplicativo de desktop que facilita o download e a execução de LLMs locais sem linha de comando. Segundo o fabricante ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), o uso é gratuito, mas as condições podem mudar.**',
             'Funcionalidades principais: interface de chat integrada, biblioteca de modelos do Hugging Face, servidor local compatível com OpenAI (porta 1234), suporte a múltiplas plataformas (macOS, Windows, Linux).',
           ],
         },
@@ -1496,8 +1496,9 @@ schema: {
       title: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-de.webp',
       seoTitle: 'LM Studio installieren: Download, Setup und Modelle je GPU',
-      intro: 'LM Studio ist eine kostenlose Desktop-Anwendung zum Ausführen lokaler LLMs ohne Terminalbefehle. Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie die App, suchen Sie nach einem Modell nach Name, klicken Sie auf „Download", und beginnen Sie zu chatten -- der gesamte Vorgang dauert weniger als 5 Minuten. LM Studio läuft auf macOS (Apple Silicon), Windows und Linux (AppImage) und unterstützt alle GGUF-quantisierten Modelle aus der umfangreichen Hugging Face-Modellbibliothek. Es enthält eine integrierte Chat-Benutzeroberfläche, einen OpenAI-kompatiblen lokalen Server auf localhost:1234 und automatische GPU-Beschleunigung für Apple Metal, NVIDIA CUDA und AMD ROCm.',
+      intro: 'LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs ohne Terminalbefehle. Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie die App, suchen Sie nach einem Modell nach Name, klicken Sie auf „Download", und beginnen Sie zu chatten -- der gesamte Vorgang dauert weniger als 5 Minuten. Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist die Nutzung kostenlos; die Bedingungen können sich ändern. LM Studio läuft auf macOS (Apple Silicon), Windows und Linux (AppImage) und unterstützt alle GGUF-quantisierten Modelle aus der umfangreichen Hugging Face-Modellbibliothek. Es enthält eine integrierte Chat-Benutzeroberfläche, einen OpenAI-kompatiblen lokalen Server auf localhost:1234 und automatische GPU-Beschleunigung für Apple Metal, NVIDIA CUDA und AMD ROCm.',
       metaDescription: 'LM Studio installieren auf Windows, Mac und Linux: offizieller Download, ein Schritt pro System und welche Modelle in 8, 12, 16 und 24 GB VRAM passen.',
+      leadAnswerBlock: '**LM Studio ist eine Desktop-Anwendung, mit der Sie lokale LLMs über eine grafische Oberfläche durchsuchen, herunterladen und ausführen, ganz ohne Terminalbefehle. Es läuft unter macOS, Windows und Linux und enthält eine integrierte Chat-Oberfläche sowie einen OpenAI-kompatiblen lokalen Server.**',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
       readTime: '7 Min. Lesezeit',
@@ -1526,7 +1527,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio ist eine kostenlose Desktop-Anwendung für macOS, Windows und Linux, mit der Sie jedes GGUF-quantisierte Modell von Hugging Face über eine grafische Oberfläche durchsuchen, herunterladen und nutzen können -- ganz ohne Terminalbefehle und mit integriertem OpenAI-kompatiblem lokalem Server.' },
+            { type: 'one-sentence', text: 'LM Studio ist eine Desktop-Anwendung für macOS, Windows und Linux, mit der Sie jedes GGUF-quantisierte Modell von Hugging Face über eine grafische Oberfläche durchsuchen, herunterladen und nutzen können -- ganz ohne Terminalbefehle und mit integriertem OpenAI-kompatiblem lokalem Server. Nach Angaben des Herstellers ist die Nutzung kostenlos, die Bedingungen können sich ändern.' },
             { type: 'plain-terms', text: 'Wer keine Kommandozeile nutzen möchte, findet in LM Studio den Weg per Mausklick, um KI-Modelle auf dem eigenen Computer auszuführen. App herunterladen, ein Modell nach Namen darin suchen, auf Herunterladen klicken und loschatten -- der gesamte Vorgang dauert unter 5 Minuten und bringt einen integrierten Server mit, damit auch andere Apps darauf zugreifen können.' },
           ],
           title: 'Zusammenfassung',
@@ -1541,7 +1542,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'LM Studio herunterladen und installieren: ein Schritt pro System',
-          content: '**Laden Sie LM Studio kostenlos von der offiziellen [LM-Studio-Download-Seite](https://lmstudio.ai/download) herunter und führen Sie den Installationsschritt für Ihr System aus.** Voraussetzung sind Apple Silicon mit macOS 14.0 oder neuer, ein Windows-PC mit x64 (AVX2) oder ARM64 oder Ubuntu 20.04 oder neuer; empfohlen sind 16 GB RAM (siehe [Anforderungstabelle](#system-requirements)).',
+          content: '**Laden Sie LM Studio von der offiziellen [LM-Studio-Download-Seite](https://lmstudio.ai/download) herunter und führen Sie den Installationsschritt für Ihr System aus.** Voraussetzung sind Apple Silicon mit macOS 14.0 oder neuer, ein Windows-PC mit x64 (AVX2) oder ARM64 oder Ubuntu 20.04 oder neuer; empfohlen sind 16 GB RAM (siehe [Anforderungstabelle](#system-requirements)). Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist die Nutzung kostenlos; die Bedingungen können sich ändern.',
           items: [
           '**macOS:** Öffnen Sie die heruntergeladene .dmg-Datei und ziehen Sie LM Studio in den Ordner „Programme“.',
           '**Windows:** Starten Sie das heruntergeladene Installationsprogramm und folgen Sie den Anweisungen.',
@@ -1570,7 +1571,7 @@ schema: {
           content: [
             '**LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs.** Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server -- alles in einer App. Unter der Haube führt es GGUF-Modelle mit llama.cpp aus (auf Apple Silicon auch mit MLX), einer Open-Source-Engine, die auch [Ollama](/de/local-llms/how-to-install-ollama) als Backend unterstützt.',
             'Der Hauptunterschied zu Ollama ist, dass LM Studio völlig GUI-gesteuert ist. Sie durchsuchen und laden Modelle über die App-Oberfläche herunter, starten Chats mit einem Klick und verwalten Modelleinstellungen mit Schiebereglern anstelle von Konfigurationsdateien.',
-            'LM Studio ist seit Juli 2025 für die private und berufliche Nutzung kostenlos. Es wird von Element Labs, Inc. entwickelt. Ab 2026 unterstützt es NVIDIA CUDA-, AMD ROCm- und Apple Metal-Beschleunigung.',
+            'Nach Angaben des Herstellers ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)) ist LM Studio seit Juli 2025 für die private und berufliche Nutzung kostenlos; die Bedingungen können sich ändern. Es wird von Element Labs, Inc. entwickelt. Ab 2026 unterstützt es NVIDIA CUDA-, AMD ROCm- und Apple Metal-Beschleunigung.',
           ],
         },
         requirements: {
@@ -1776,7 +1777,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
-              a: 'Ja -- kostenlos für private und berufliche Nutzung, für die Installation sind in der Regel keine IT-Kenntnisse nötig, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio kann für mittlere Unternehmen ohne IT-Personal ein niedrigschwelliger Einstieg in KI-gestützte Workflows sein; die lokale Verarbeitung kann zudem die Umsetzung des Datenschutzes erleichtern. Die GUI erfordert kein Terminal-Wissen.'
+              a: 'Ja -- nach Angaben des Herstellers kostenlos für private und berufliche Nutzung (die Bedingungen können sich ändern), für die Installation sind in der Regel keine IT-Kenntnisse nötig, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio kann für mittlere Unternehmen ohne IT-Personal ein niedrigschwelliger Einstieg in KI-gestützte Workflows sein; die lokale Verarbeitung kann zudem die Umsetzung des Datenschutzes erleichtern. Die GUI erfordert kein Terminal-Wissen.'
             },
           ],
         },
@@ -1881,7 +1882,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja -- kostenlos für private und berufliche Nutzung, für die Installation sind in der Regel keine IT-Kenntnisse nötig, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio kann für mittlere Unternehmen ohne IT-Personal ein niedrigschwelliger Einstieg in KI-gestützte Workflows sein; die lokale Verarbeitung kann zudem die Umsetzung des Datenschutzes erleichtern.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja -- nach Angaben des Herstellers kostenlos für private und berufliche Nutzung (die Bedingungen können sich ändern), für die Installation sind in der Regel keine IT-Kenntnisse nötig, die lokale Verarbeitung kann die Umsetzung der DSGVO erleichtern (die Konformität hängt von Ihrem Gesamtaufbau ab). LM Studio kann für mittlere Unternehmen ohne IT-Personal ein niedrigschwelliger Einstieg in KI-gestützte Workflows sein; die lokale Verarbeitung kann zudem die Umsetzung des Datenschutzes erleichtern.' }
           },
         ]
       },
@@ -1906,8 +1907,9 @@ schema: {
       title: 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-fr.webp',
       seoTitle: 'Installer LM Studio : téléchargement et modèles par GPU',
-      intro: 'LM Studio est une application desktop gratuite pour exécuter des LLM locaux sans commandes terminal. Téléchargez l\'installeur depuis lmstudio.ai, ouvrez l\'application, recherchez un modèle par nom, cliquez sur télécharger et commencez à discuter -- tout le processus prend moins de 5 minutes. LM Studio fonctionne sur macOS (Apple Silicon), Windows et Linux (AppImage), et supporte n\'importe quel modèle quantifié GGUF de la vaste bibliothèque de modèles de Hugging Face. Il inclut une interface de chat intégrée, un serveur local compatible OpenAI sur localhost:1234, et l\'accélération GPU automatique pour Apple Metal, NVIDIA CUDA et AMD ROCm.',
+      intro: 'LM Studio est une application desktop pour exécuter des LLM locaux sans commandes terminal. Téléchargez l\'installeur depuis lmstudio.ai, ouvrez l\'application, recherchez un modèle par nom, cliquez sur télécharger et commencez à discuter -- tout le processus prend moins de 5 minutes. Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), son usage est gratuit ; les conditions peuvent évoluer. LM Studio fonctionne sur macOS (Apple Silicon), Windows et Linux (AppImage), et supporte n\'importe quel modèle quantifié GGUF de la vaste bibliothèque de modèles de Hugging Face. Il inclut une interface de chat intégrée, un serveur local compatible OpenAI sur localhost:1234, et l\'accélération GPU automatique pour Apple Metal, NVIDIA CUDA et AMD ROCm.',
       metaDescription: 'Installez LM Studio sur macOS, Windows ou Linux : lien officiel, une étape par système et les modèles adaptés à 8, 12, 16 et 24 GB de VRAM, sans terminal.',
+      leadAnswerBlock: '**LM Studio est une application de bureau qui permet de parcourir, télécharger et exécuter des LLM locaux via une interface graphique, sans aucune commande terminal. Elle fonctionne sur macOS, Windows et Linux, et inclut une interface de chat intégrée et un serveur local compatible OpenAI.**',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
       readTime: '7 min de lecture',
@@ -1936,7 +1938,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: "LM Studio est une application de bureau gratuite pour macOS, Windows et Linux qui permet de parcourir, télécharger et discuter avec n'importe quel modèle GGUF quantifié de Hugging Face via une interface graphique, sans commande terminal, avec un serveur local compatible OpenAI intégré." },
+            { type: 'one-sentence', text: "LM Studio est une application de bureau pour macOS, Windows et Linux qui permet de parcourir, télécharger et discuter avec n'importe quel modèle GGUF quantifié de Hugging Face via une interface graphique, sans commande terminal, avec un serveur local compatible OpenAI intégré. Selon l'éditeur, l'usage est gratuit, mais les conditions peuvent évoluer." },
             { type: 'plain-terms', text: "Pour ceux qui ne veulent pas utiliser la ligne de commande, LM Studio permet de faire tourner des modèles d'IA sur son ordinateur en quelques clics. Téléchargez l'appli, cherchez un modèle par son nom, cliquez sur télécharger et commencez à discuter -- le tout en moins de 5 minutes, avec un serveur intégré pour que d'autres applications puissent aussi s'y connecter." },
           ],
           title: 'Points clés',
@@ -1951,7 +1953,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'Télécharger et installer LM Studio : une étape par système',
-          content: '**Téléchargez LM Studio gratuitement sur la [page de téléchargement officielle](https://lmstudio.ai/download), puis suivez l\'étape d\'installation de votre système.** Il faut un Mac Apple Silicon avec macOS 14.0 ou plus récent, un PC Windows x64 (AVX2) ou ARM64, ou Ubuntu 20.04 ou plus récent, avec 16 GB de RAM recommandés (voir le [tableau des prérequis](#system-requirements)).',
+          content: '**Téléchargez LM Studio depuis la [page de téléchargement officielle](https://lmstudio.ai/download), puis suivez l\'étape d\'installation de votre système.** Il faut un Mac Apple Silicon avec macOS 14.0 ou plus récent, un PC Windows x64 (AVX2) ou ARM64, ou Ubuntu 20.04 ou plus récent, avec 16 GB de RAM recommandés (voir le [tableau des prérequis](#system-requirements)). Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), l\'usage est gratuit ; les conditions peuvent évoluer.',
           items: [
           '**macOS :** ouvrez le fichier .dmg téléchargé et glissez LM Studio dans le dossier Applications.',
           '**Windows :** lancez l\'installeur téléchargé et suivez les instructions.',
@@ -1980,7 +1982,7 @@ schema: {
           content: [
             '**LM Studio est une application desktop pour exécuter des LLM locaux.** Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local -- tout dans une seule application. Sous le capot, elle exécute les modèles GGUF avec llama.cpp (et avec MLX sur Apple Silicon), un moteur open source que [Ollama](/fr/local-llms/how-to-install-ollama) prend aussi en charge comme backend.',
             'La différence clé par rapport à Ollama est que LM Studio est entièrement piloté par l\'interface graphique. Vous parcourez et téléchargez des modèles via l\'interface de l\'application, lancez des discussions en un clic et gérez les paramètres du modèle avec des curseurs plutôt que des fichiers de configuration.',
-            'LM Studio est gratuit pour un usage personnel et professionnel depuis juillet 2025. Elle est développée par Element Labs, Inc. En 2026, elle supporte l\'accélération NVIDIA CUDA, AMD ROCm et Apple Metal.',
+            'Selon l\'éditeur ([lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)), LM Studio est gratuit pour un usage personnel et professionnel depuis juillet 2025 ; les conditions peuvent évoluer. Elle est développée par Element Labs, Inc. En 2026, elle supporte l\'accélération NVIDIA CUDA, AMD ROCm et Apple Metal.',
           ],
         },
         requirements: {
@@ -2259,8 +2261,9 @@ schema: {
       title: 'LM Studio のインストール方法：macOS・Windows・Linux 向けデスクトップアプリ設定ガイド',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-ja.webp',
       seoTitle: 'LM Studioのインストール方法とGPU別モデルの目安',
-      intro: 'LM Studioは、ターミナルコマンドなしでローカルLLMを実行できる無料のデスクトップアプリケーションです。lmstudio.aiからインストーラーをダウンロードしてアプリを開き、モデルを名前で検索してダウンロードボタンをクリックしてチャットを開始します--プロセス全体が5分以内に完了します。LM StudioはmacOS（Apple Silicon）、Windows、およびLinux（AppImage）で動作し、Hugging Faceの大規模なモデルライブラリから任意のGGUF量子化モデルをサポートしています。組み込みのチャットUI、localhost:1234上のOpenAI互換ローカルサーバー、およびApple Metal、NVIDIA CUDA、AMD ROCmの自動GPU加速が含まれています。',
+      intro: 'LM Studioは、ターミナルコマンドなしでローカルLLMを実行できるデスクトップアプリケーションです。lmstudio.aiからインストーラーをダウンロードしてアプリを開き、モデルを名前で検索してダウンロードボタンをクリックしてチャットを開始します--プロセス全体が5分以内に完了します。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば利用は無料ですが、条件は変更される場合があります。LM StudioはmacOS（Apple Silicon）、Windows、およびLinux（AppImage）で動作し、Hugging Faceの大規模なモデルライブラリから任意のGGUF量子化モデルをサポートしています。組み込みのチャットUI、localhost:1234上のOpenAI互換ローカルサーバー、およびApple Metal、NVIDIA CUDA、AMD ROCmの自動GPU加速が含まれています。',
       metaDescription: 'LM StudioをWindows・Mac・Linuxに入れる手順。公式ダウンロード、OS別のインストール手順、VRAM 8・12・16・24GBで動くモデルの目安を紹介します。',
+      leadAnswerBlock: '**LM Studioは、ターミナルコマンドなしで、グラフィカルインターフェースからローカルLLMを閲覧・ダウンロード・実行できるデスクトップアプリです。macOS、Windows、Linuxで動作し、組み込みのチャットUIとOpenAI互換のローカルサーバーを備えています。**',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
       readTime: '7分で読める',
@@ -2289,7 +2292,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studioは、macOS、Windows、Linux向けの無料デスクトップアプリで、グラフィカルインターフェースを通じてHugging Faceの任意のGGUF量子化モデルを閲覧・ダウンロード・チャットでき、ターミナルコマンドは不要で、OpenAI互換のローカルサーバーも内蔵しています。' },
+            { type: 'one-sentence', text: 'LM Studioは、macOS、Windows、Linux向けのデスクトップアプリで、グラフィカルインターフェースを通じてHugging Faceの任意のGGUF量子化モデルを閲覧・ダウンロード・チャットでき、ターミナルコマンドは不要で、OpenAI互換のローカルサーバーも内蔵しています。提供元によれば利用は無料ですが、条件は変更される場合があります。' },
             { type: 'plain-terms', text: 'コマンドラインを使いたくない人にとって、LM StudioはクリックだけでAIモデルを自分のコンピューターで実行できる方法です。アプリをダウンロードし、その中で名前でモデルを検索し、ダウンロードをクリックしてチャットを始めるだけです -- 全体で5分もかからず、他のアプリからも使えるサーバーが内蔵されています。' },
           ],
           title: '重要ポイント',
@@ -2304,7 +2307,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'LM Studioのダウンロードとインストール：OS別に1ステップ',
-          content: '**LM Studioは[公式ダウンロードページ](https://lmstudio.ai/download)から無料で入手し、お使いのOSの手順に従ってインストールします。** 対応環境はmacOS 14.0以降のApple Silicon、Windowsのx64（AVX2）またはARM64、Ubuntu 20.04以降で、RAMは16GBが推奨です（[要件表](#system-requirements)を参照）。',
+          content: '**LM Studioは[公式ダウンロードページ](https://lmstudio.ai/download)から入手し、お使いのOSの手順に従ってインストールします。** 対応環境はmacOS 14.0以降のApple Silicon、Windowsのx64（AVX2）またはARM64、Ubuntu 20.04以降で、RAMは16GBが推奨です（[要件表](#system-requirements)を参照）。提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば利用は無料ですが、条件は変更される場合があります。',
           items: [
           '**macOS：** ダウンロードした.dmgファイルを開き、LM Studioを「アプリケーション」フォルダにドラッグします。',
           '**Windows：** ダウンロードしたインストーラーを実行し、画面の指示に従います。',
@@ -2333,7 +2336,7 @@ schema: {
           content: [
             '**LM Studioはローカルの大規模言語モデル（LLM）を実行するためのデスクトップアプリケーション。** グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー--すべて1つのアプリケーションに含まれている。内部では、GGUFモデルをllama.cpp（Apple SiliconではMLXも）で実行します。llama.cppは、[Ollama](/ja/local-llms/how-to-install-ollama)もバックエンドとして対応しているオープンソースのエンジンです。',
             'Ollamaとの主な違いは、LM StudioがGUIによって完全に駆動されていること。アプリケーションインターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャットを開始、構成ファイルではなくスライダーでモデル設定を管理。',
-            'LM Studioは2025年7月から個人利用・業務利用ともに無料です。開発元はElement Labs, Inc.です。2026年現在、NVIDIA CUDA、AMD ROCm、およびApple Metal加速をサポート。',
+            '提供元の説明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)）によれば、LM Studioは2025年7月から個人利用・業務利用ともに無料です（条件は変更される場合があります）。開発元はElement Labs, Inc.です。2026年現在、NVIDIA CUDA、AMD ROCm、およびApple Metal加速をサポート。',
           ],
         },
         requirements: {
@@ -2566,8 +2569,9 @@ schema: {
       title: '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-zh.webp',
       seoTitle: 'LM Studio下载安装教程与各显卡适合的模型',
-      intro: 'LM Studio 是一个免费的桌面应用程序，可以不需要终端命令就运行本地 LLM。从 lmstudio.ai 下载安装程序，打开应用，按名称搜索模型，单击下载，然后开始聊天 - 整个过程在 5 分钟内完成。LM Studio 在 macOS（Apple Silicon）、Windows 和 Linux（AppImage）上运行，支持 Hugging Face 庞大模型库中的任何 GGUF 量化模型。它包括内置聊天 UI、localhost:1234 上的 OpenAI 兼容本地服务器，以及 Apple Metal、NVIDIA CUDA 和 AMD ROCm 的自动 GPU 加速。',
+      intro: 'LM Studio 是一个桌面应用程序，可以不需要终端命令就运行本地 LLM。从 lmstudio.ai 下载安装程序，打开应用，按名称搜索模型，单击下载，然后开始聊天 - 整个过程在 5 分钟内完成。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），个人和工作使用均免费，但条款可能变更。LM Studio 在 macOS（Apple Silicon）、Windows 和 Linux（AppImage）上运行，支持 Hugging Face 庞大模型库中的任何 GGUF 量化模型。它包括内置聊天 UI、localhost:1234 上的 OpenAI 兼容本地服务器，以及 Apple Metal、NVIDIA CUDA 和 AMD ROCm 的自动 GPU 加速。',
       metaDescription: '在Windows、macOS或Linux上安装LM Studio：官方下载链接、各系统安装步骤，以及8、12、16、24 GB显存分别适合哪些模型。',
+      leadAnswerBlock: '**LM Studio是一款桌面应用，可通过图形界面浏览、下载并运行本地LLM，无需终端命令。它支持macOS、Windows和Linux，内置聊天界面和兼容OpenAI的本地服务器。**',
       publishDate: '2026-04-04',
       dateModified: '2026-11-14',
       readTime: '阅读约7分钟',
@@ -2596,7 +2600,7 @@ schema: {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'LM Studio是一款适用于macOS、Windows和Linux的免费桌面应用，可通过图形界面浏览、下载并与Hugging Face上任何GGUF量化模型对话，无需终端命令，并内置兼容OpenAI的本地服务器。' },
+            { type: 'one-sentence', text: 'LM Studio是一款适用于macOS、Windows和Linux的桌面应用，可通过图形界面浏览、下载并与Hugging Face上任何GGUF量化模型对话，无需终端命令，并内置兼容OpenAI的本地服务器。据开发商说明，使用免费，但条款可能变更。' },
             { type: 'plain-terms', text: '如果你不想使用命令行，LM Studio是点点鼠标就能在自己电脑上运行AI模型的方式。下载应用，在其中按名称搜索模型，点击下载，然后开始对话——整个过程不到5分钟，还内置了一个服务器，方便其他应用也能连接使用。' },
           ],
           title: '核心要点',
@@ -2611,7 +2615,7 @@ schema: {
         quickInstall: {
           id: 'download-install-quick',
           title: 'LM Studio下载与安装：每个系统一步',
-          content: '**从[官方下载页面](https://lmstudio.ai/download)免费下载LM Studio，然后按你的系统执行对应的安装步骤。** 需要macOS 14.0或更高版本的Apple Silicon、Windows x64（支持AVX2）或ARM64电脑，或Ubuntu 20.04及以上，建议16 GB内存（见[要求表](#system-requirements)）。',
+          content: '**从[官方下载页面](https://lmstudio.ai/download)下载LM Studio，然后按你的系统执行对应的安装步骤。** 需要macOS 14.0或更高版本的Apple Silicon、Windows x64（支持AVX2）或ARM64电脑，或Ubuntu 20.04及以上，建议16 GB内存（见[要求表](#system-requirements)）。据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），个人和工作使用均免费，但条款可能变更。',
           items: [
           '**macOS：** 打开下载的.dmg文件，把LM Studio拖入“应用程序”文件夹。',
           '**Windows：** 运行下载的安装程序并按提示操作。',
@@ -2640,7 +2644,7 @@ schema: {
           content: [
             '**LM Studio 是运行本地 LLM 的桌面应用程序。** 它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp（在 Apple Silicon 上还可使用 MLX）运行 GGUF 模型；llama.cpp 是一个开源引擎，[Ollama](/zh/local-llms/how-to-install-ollama) 同样支持将其作为后端。',
             'LM Studio 与 Ollama 的主要区别是它完全由 GUI 驱动。您通过应用界面浏览和下载模型、通过一次单击启动聊天，并使用滑块而不是配置文件管理模型设置。',
-            'LM Studio 自 2025 年 7 月起个人和工作使用均免费，由 Element Labs, Inc. 开发。它支持 NVIDIA CUDA、AMD ROCm 和 Apple Metal 加速。',
+            '据开发商说明（[lmstudio.ai/blog/free-for-work](https://lmstudio.ai/blog/free-for-work)），LM Studio 自 2025 年 7 月起个人和工作使用均免费，但条款可能变更；由 Element Labs, Inc. 开发。它支持 NVIDIA CUDA、AMD ROCm 和 Apple Metal 加速。',
           ],
         },
         requirements: {
