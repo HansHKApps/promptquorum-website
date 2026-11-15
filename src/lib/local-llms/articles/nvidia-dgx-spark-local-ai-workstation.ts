@@ -17,13 +17,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-en.webp',
     title: 'NVIDIA DGX Spark Price and Specs for Local AI',
-    seoTitle: 'NVIDIA DGX Spark Price and Specs: $4,699 to $6,950',
+    seoTitle: 'NVIDIA DGX Spark Price, Specs and Who Should Buy It',
     intro:
       'The NVIDIA DGX Spark is a 1.2 kg desktop computer built around the GB10 Grace Blackwell Superchip, with 128 GB of unified memory and a 200 Gbps ConnectX-7 network adapter for linking boxes. It targets developers who want CUDA and NVIDIA\'s AI software stack on a desk. Its price has risen since launch, so the price table below names a source for each line.',
     metaDescription:
-      'NVIDIA DGX Spark price: $4,699 list, $6,950 reported for 128 GB, $4,999 for 64 GB. Specs: GB10, 273 GB/s, 1.2 kg. Who it suits and who should skip it.',
+      'NVIDIA DGX Spark price: $4,699 list (2026-02-25), $6,950 reported for 128 GB (2026-10-03), $4,999 for 64 GB. Specs: GB10, 273 GB/s, 1.2 kg. Who it suits.',
     twitterDescription:
-      'NVIDIA DGX Spark for local AI: verified GB10 specs, sourced US prices, independent test results and who it suits. Based on vendor data and third-party reports.',
+      'NVIDIA DGX Spark for local AI: sourced GB10 specs and US prices, independent test results and who it suits. Based on vendor data and third-party reports.',
     readTime: '8 min read',
     educationalLevel: 'Intermediate',
     audience: 'Buyers and developers considering the NVIDIA DGX Spark (GB10) as a local AI workstation',
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**The NVIDIA DGX Spark Founders Edition was listed at $4,699 in February 2026, a 128 GB unit was reported at $6,950 on 2026-10-03, and the 64 GB OEM model starts at $4,999.** It is a GB10 desktop with 128 GB (or, via partners, 64 GB) of unified memory for developers who need CUDA, fine-tuning or two-box clustering, and it runs only NVIDIA\'s Linux-based DGX OS.',
+      '**The NVIDIA DGX Spark Founders Edition was listed at $4,699 in February 2026, a 128 GB unit was reported at $6,950 on 2026-10-03, and the 64 GB OEM model starts at $4,999. It is a GB10 desktop for CUDA, fine-tuning or two-box clustering; NVIDIA lists DGX OS (Linux) only.**',
     quickAnswerTop: {
       en: {
         question: 'Is the NVIDIA DGX Spark worth buying for local AI?',
@@ -44,9 +44,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'It suits developers who need CUDA, NVIDIA\'s software stack or two-box clustering, and who can run Linux. It is less suited to buyers who want Windows or a low price per gigabyte of memory. Prices have risen since launch, so compare current listings first.',
         bullets: [
           'Hardware: GB10, 20 Arm cores, 128 GB unified memory at 273 GB/s',
-          'Price: Founders Edition $4,699; 64 GB OEM models from $4,999',
-          'StorageReview vLLM test: Spark ahead of the Ryzen AI Halo in all 18 cases',
-          'Runs DGX OS (Ubuntu-based) only; no Windows',
+          'Price: Founders Edition $4,699 (NVIDIA, 2026-02-25); 64 GB OEM models from $4,999 (NVIDIA, 2026-10-02)',
+          'StorageReview vLLM test (2026-07-06): Spark ahead of the Ryzen AI Halo in all 18 scenarios; HotHardware found them roughly on par',
+          'NVIDIA lists DGX OS (Ubuntu-based) as the operating system; no Windows listed',
         ],
         updatedDate: '2026-11',
       },
@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Price: the Founders Edition MSRP was raised by NVIDIA, and other sellers differ; the price table names a source and date per line.',
           'Speed: in StorageReview\'s vLLM serving test the Spark beat the AMD Ryzen AI Halo in all 18 scenarios.',
           'Clustering: two 200 Gbps ConnectX-7 ports link boxes; NVIDIA states 700B parameters across four systems.',
-          'Software: DGX OS (Ubuntu-based) only. Buyers who need Windows should look at the alternatives below.',
+          'Software: NVIDIA lists DGX OS (Ubuntu-based) as the operating system. Buyers who need Windows should look at the alternatives below.',
         ],
       },
       overview: {
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Choose it if your workflow depends on CUDA or NVIDIA\'s AI software, and you can work in Linux.',
           'Choose it if you plan to link two boxes over the 200 Gbps ports for larger models.',
           'Choose it for fine-tuning experiments; NVIDIA states support up to 70B parameters.',
-          'Skip it if you need Windows or more than 128 GB; several alternatives below list Windows, and three list 192 GB models.',
+          'Skip it if you need Windows or more than 128 GB; the Ryzen AI Halo lists Windows 11 Pro, and the Framework Desktop offers a 192 GB configuration on pre-order.',
           'Skip it if price per gigabyte of memory decides the purchase; the sourced price table shows how far it has moved.',
         ],
       },
@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark Price and Specs for Local AI',
-      'description': 'NVIDIA DGX Spark price: $4,699 list, $6,950 reported for 128 GB, $4,999 for 64 GB. Specs: GB10, 273 GB/s, 1.2 kg. Who it suits and who should skip it.',
+      'description': 'NVIDIA DGX Spark price: $4,699 list (2026-02-25), $6,950 reported for 128 GB (2026-10-03), $4,999 for 64 GB. Specs: GB10, 273 GB/s, 1.2 kg. Who it suits.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'en',
       'url': 'https://www.promptquorum.com/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'The NVIDIA DGX Spark Founders Edition was listed at $4,699 in February 2026, a 128 GB unit was reported at $6,950 on 2026-10-03, and the 64 GB OEM model starts at $4,999. It is a GB10 desktop with 128 GB (or, via partners, 64 GB) of unified memory for developers who need CUDA, fine-tuning or two-box clustering, and it runs only NVIDIA\'s Linux-based DGX OS.',
+      'articleBody': 'The NVIDIA DGX Spark Founders Edition was listed at $4,699 in February 2026, a 128 GB unit was reported at $6,950 on 2026-10-03, and the 64 GB OEM model starts at $4,999. It is a GB10 desktop for CUDA, fine-tuning or two-box clustering; NVIDIA lists DGX OS (Linux) only.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Buyers and developers considering the NVIDIA DGX Spark (GB10) as a local AI workstation' },
@@ -236,13 +236,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-de.webp',
     title: 'NVIDIA DGX Spark Preis und Spezifikationen für lokale KI',
-    seoTitle: 'NVIDIA DGX Spark Preis und Specs: 4.699 bis 6.950 $',
+    seoTitle: 'NVIDIA DGX Spark: Preis, Specs und für wen sie sich lohnt',
     intro:
       'Die NVIDIA DGX Spark ist ein 1,2 kg schwerer Desktop-Computer auf Basis des GB10 Grace Blackwell Superchip, mit 128 GB Unified Memory und einem ConnectX-7-Netzwerkadapter (200 Gbit/s) zum Koppeln mehrerer Geräte. Sie richtet sich an Entwickler, die CUDA und NVIDIAs KI-Software-Stack auf dem Schreibtisch nutzen wollen. Der Preis ist seit dem Marktstart gestiegen, daher nennt die Preistabelle unten für jede Zeile eine Quelle.',
     metaDescription:
-      'NVIDIA DGX Spark Preis: 4.699 $ Listenpreis, 6.950 $ für 128 GB gemeldet, 64 GB ab 4.999 $. Specs: GB10, 273 GB/s, 1,2 kg. Für wen sie sich eignet.',
+      'NVIDIA DGX Spark Preis: 4.699 $ Listenpreis (2026-02-25), 6.950 $ für 128 GB gemeldet (2026-10-03), 64 GB ab 4.999 $. Specs: GB10, 273 GB/s.',
     twitterDescription:
-      'NVIDIA DGX Spark für lokale KI: geprüfte GB10-Daten, belegte US-Preise, Ergebnisse unabhängiger Tests und für wen sie geeignet ist. Auf Basis von Herstellerangaben und Berichten Dritter.',
+      'NVIDIA DGX Spark für lokale KI: belegte GB10-Daten und US-Preise, Ergebnisse unabhängiger Tests und für wen sie geeignet ist. Auf Basis von Herstellerangaben und Berichten Dritter.',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer und Entwickler, die die NVIDIA DGX Spark (GB10) als lokale KI-Workstation in Betracht ziehen',
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**Die Founders Edition der NVIDIA DGX Spark war im Februar 2026 mit 4.699 $ gelistet, ein Gerät mit 128 GB wurde am 2026-10-03 mit 6.950 $ gemeldet, und das 64-GB-OEM-Modell beginnt bei 4.999 $.** Sie ist ein GB10-Desktop mit 128 GB (über Partner auch 64 GB) einheitlichem Speicher für Entwickler, die CUDA, Fine-Tuning oder das Koppeln zweier Geräte brauchen, und läuft ausschließlich mit NVIDIAs Linux-basiertem DGX OS.',
+      '**Die Founders Edition der NVIDIA DGX Spark war im Februar 2026 mit 4.699 $ gelistet, ein 128-GB-Gerät wurde am 2026-10-03 mit 6.950 $ gemeldet, das 64-GB-OEM-Modell beginnt bei 4.999 $. Der GB10-Desktop zielt auf CUDA, Fine-Tuning und das Koppeln zweier Geräte; als Betriebssystem nennt NVIDIA nur DGX OS (Linux).**',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich die NVIDIA DGX Spark für lokale KI?',
@@ -263,9 +263,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sie eignet sich für Entwickler, die CUDA, NVIDIAs Software-Stack oder das Koppeln zweier Geräte brauchen und mit Linux arbeiten können. Weniger geeignet ist sie für Käufer, die Windows oder einen niedrigen Preis pro Gigabyte Speicher wollen. Die Preise sind seit dem Marktstart gestiegen, vergleichen Sie daher zuerst aktuelle Angebote.',
         bullets: [
           'Hardware: GB10, 20 Arm-Kerne, 128 GB Unified Memory mit 273 GB/s',
-          'Preis: Founders Edition 4.699 $; OEM-Modelle mit 64 GB ab 4.999 $',
-          'vLLM-Test von StorageReview: Spark in allen 18 Fällen vor dem Ryzen AI Halo',
-          'Läuft nur mit DGX OS (Ubuntu-basiert); kein Windows',
+          'Preis: Founders Edition 4.699 $ (NVIDIA, 2026-02-25); OEM-Modelle mit 64 GB ab 4.999 $ (NVIDIA, 2026-10-02)',
+          'vLLM-Test von StorageReview (2026-07-06): Spark in allen 18 Szenarien vor dem Ryzen AI Halo; HotHardware sah beide ungefähr gleichauf',
+          'NVIDIA nennt DGX OS (Ubuntu-basiert) als Betriebssystem; Windows wird nicht aufgeführt',
         ],
         updatedDate: '2026-11',
       },
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preis: NVIDIA hat die UVP der Founders Edition angehoben, andere Anbieter weichen ab; die Preistabelle nennt pro Zeile Quelle und Datum.',
           'Tempo: In StorageReviews vLLM-Serving-Test schlug die Spark den AMD Ryzen AI Halo in allen 18 Szenarien.',
           'Clustering: Zwei ConnectX-7-Anschlüsse mit je 200 Gbit/s koppeln Geräte; NVIDIA gibt 700B Parameter über vier Systeme an.',
-          'Software: nur DGX OS (Ubuntu-basiert). Käufer, die Windows brauchen, sollten sich die Alternativen unten ansehen.',
+          'Software: NVIDIA nennt DGX OS (Ubuntu-basiert) als Betriebssystem. Käufer, die Windows brauchen, sollten sich die Alternativen unten ansehen.',
         ],
       },
       overview: {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wählen Sie sie, wenn Ihr Workflow von CUDA oder NVIDIAs KI-Software abhängt und Sie unter Linux arbeiten können.',
           'Wählen Sie sie, wenn Sie zwei Geräte über die 200-Gbit/s-Anschlüsse für größere Modelle koppeln wollen.',
           'Wählen Sie sie für Fine-Tuning-Experimente; NVIDIA gibt Unterstützung bis 70B Parameter an.',
-          'Verzichten Sie, wenn Sie Windows oder mehr als 128 GB brauchen; mehrere Alternativen unten nennen Windows, drei davon Modelle mit 192 GB.',
+          'Verzichten Sie, wenn Sie Windows oder mehr als 128 GB brauchen; der Ryzen AI Halo nennt Windows 11 Pro, und der Framework Desktop bietet eine Konfiguration mit 192 GB auf Vorbestellung.',
           'Verzichten Sie, wenn der Preis pro Gigabyte Speicher die Kaufentscheidung bestimmt; die belegte Preistabelle zeigt, wie weit er sich verschoben hat.',
         ],
       },
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark Preis und Spezifikationen für lokale KI',
-      'description': 'NVIDIA DGX Spark Preis: 4.699 $ Listenpreis, 6.950 $ für 128 GB gemeldet, 64 GB ab 4.999 $. Specs: GB10, 273 GB/s, 1,2 kg. Für wen sie sich eignet.',
+      'description': 'NVIDIA DGX Spark Preis: 4.699 $ Listenpreis (2026-02-25), 6.950 $ für 128 GB gemeldet (2026-10-03), 64 GB ab 4.999 $. Specs: GB10, 273 GB/s.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'de',
       'url': 'https://www.promptquorum.com/de/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'Die Founders Edition der NVIDIA DGX Spark war im Februar 2026 mit 4.699 $ gelistet, ein Gerät mit 128 GB wurde am 2026-10-03 mit 6.950 $ gemeldet, und das 64-GB-OEM-Modell beginnt bei 4.999 $. Sie ist ein GB10-Desktop mit 128 GB (über Partner auch 64 GB) einheitlichem Speicher für Entwickler, die CUDA, Fine-Tuning oder das Koppeln zweier Geräte brauchen, und läuft ausschließlich mit NVIDIAs Linux-basiertem DGX OS.',
+      'articleBody': 'Die Founders Edition der NVIDIA DGX Spark war im Februar 2026 mit 4.699 $ gelistet, ein 128-GB-Gerät wurde am 2026-10-03 mit 6.950 $ gemeldet, das 64-GB-OEM-Modell beginnt bei 4.999 $. Der GB10-Desktop zielt auf CUDA, Fine-Tuning und das Koppeln zweier Geräte; als Betriebssystem nennt NVIDIA nur DGX OS (Linux).',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Käufer und Entwickler, die die NVIDIA DGX Spark (GB10) als lokale KI-Workstation in Betracht ziehen' },
@@ -455,13 +455,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-fr.webp',
     title: 'NVIDIA DGX Spark : prix et caractéristiques pour l\'IA locale',
-    seoTitle: 'NVIDIA DGX Spark prix et specs : de $4,699 à $6,950',
+    seoTitle: 'NVIDIA DGX Spark : prix, specs et à qui elle s\'adresse',
     intro:
       "Le NVIDIA DGX Spark est un ordinateur de bureau de 1.2 kg construit autour du GB10 Grace Blackwell Superchip, avec 128 Go de mémoire unifiée et un adaptateur réseau ConnectX-7 de 200 Gbit/s pour relier plusieurs machines. Il s'adresse aux développeurs qui veulent CUDA et la pile logicielle IA de NVIDIA sur leur bureau. Son prix a augmenté depuis le lancement : le tableau des prix ci-dessous indique donc une source pour chaque ligne.",
     metaDescription:
-      'NVIDIA DGX Spark : prix de liste $4,699, $6,950 signalé pour 128 Go, 64 Go dès $4,999. Specs GB10, 273 Go/s, 1,2 kg. À qui elle convient, ou non.',
+      'NVIDIA DGX Spark : prix de liste $4,699 (2026-02-25), $6,950 signalé pour 128 Go (2026-10-03), 64 Go dès $4,999. Specs GB10, 273 Go/s, 1,2 kg.',
     twitterDescription:
-      "NVIDIA DGX Spark pour l'IA locale : specs GB10 vérifiées, prix US sourcés, résultats de tests indépendants et public visé. Fondé sur les données du constructeur et des rapports tiers.",
+      "NVIDIA DGX Spark pour l'IA locale : specs GB10 et prix US sourcés, résultats de tests indépendants et public visé. Fondé sur les données du constructeur et des rapports tiers.",
     readTime: '8 min de lecture',
     educationalLevel: 'Intermediate',
     audience: "Acheteurs et développeurs qui envisagent le NVIDIA DGX Spark (GB10) comme station de travail IA locale",
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**La Founders Edition du NVIDIA DGX Spark était listée à $4,699 en février 2026, une machine de 128 Go a été signalée à $6,950 le 2026-10-03, et le modèle OEM de 64 Go démarre à $4,999.** C\'est une machine GB10 de 128 Go (ou, via des partenaires, de 64 Go) de mémoire unifiée pour les développeurs qui ont besoin de CUDA, du fine-tuning ou d\'un clustering de deux machines, et elle ne fonctionne que sous DGX OS, le système Linux de NVIDIA.',
+      '**La Founders Edition du NVIDIA DGX Spark était listée à $4,699 en février 2026, un modèle 128 Go signalé à $6,950 le 2026-10-03 et le modèle OEM 64 Go dès $4,999. Machine GB10 pour CUDA, fine-tuning ou clustering de deux machines ; NVIDIA n\'indique que DGX OS (Linux).**',
     quickAnswerTop: {
       fr: {
         question: "Le NVIDIA DGX Spark vaut-il l'achat pour l'IA locale ?",
@@ -482,9 +482,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Il convient aux développeurs qui ont besoin de CUDA, de la pile logicielle de NVIDIA ou d'un clustering de deux machines, et qui peuvent travailler sous Linux. Il convient moins à ceux qui veulent Windows ou un faible prix par gigaoctet de mémoire. Les prix ont augmenté depuis le lancement : comparez d'abord les annonces actuelles.",
         bullets: [
           'Matériel : GB10, 20 cœurs Arm, 128 Go de mémoire unifiée à 273 Go/s',
-          'Prix : Founders Edition $4,699 ; modèles OEM de 64 Go à partir de $4,999',
-          'Test vLLM de StorageReview : le Spark devant le Ryzen AI Halo dans les 18 cas',
-          'DGX OS (basé sur Ubuntu) uniquement ; pas de Windows',
+          'Prix : Founders Edition $4,699 (NVIDIA, 2026-02-25) ; modèles OEM de 64 Go à partir de $4,999 (NVIDIA, 2026-10-02)',
+          'Test vLLM de StorageReview (2026-07-06) : le Spark devant le Ryzen AI Halo dans les 18 scénarios ; HotHardware les juge à peu près équivalents',
+          "NVIDIA indique DGX OS (basé sur Ubuntu) comme système d'exploitation ; Windows n'est pas mentionné",
         ],
         updatedDate: '2026-11',
       },
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Prix : le prix public conseillé de la Founders Edition a été relevé par NVIDIA, et les autres vendeurs diffèrent ; le tableau des prix indique une source et une date par ligne.",
           "Vitesse : dans le test de service vLLM de StorageReview, le Spark a devancé l'AMD Ryzen AI Halo dans les 18 scénarios.",
           "Clustering : deux ports ConnectX-7 de 200 Gbit/s relient les machines ; NVIDIA indique 700B de paramètres sur quatre systèmes.",
-          "Logiciel : DGX OS (basé sur Ubuntu) uniquement. Les acheteurs qui ont besoin de Windows peuvent regarder les alternatives ci-dessous.",
+          "Logiciel : NVIDIA indique DGX OS (basé sur Ubuntu) comme système d'exploitation. Les acheteurs qui ont besoin de Windows peuvent regarder les alternatives ci-dessous.",
         ],
       },
       overview: {
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Choisissez-le si votre flux de travail dépend de CUDA ou du logiciel IA de NVIDIA, et si vous pouvez travailler sous Linux.",
           "Choisissez-le si vous comptez relier deux machines par les ports de 200 Gbit/s pour des modèles plus grands.",
           "Choisissez-le pour des expériences de fine-tuning ; NVIDIA indique une prise en charge jusqu'à 70B de paramètres.",
-          "Évitez-le si vous avez besoin de Windows ou de plus de 128 Go ; plusieurs alternatives ci-dessous indiquent Windows, et trois proposent des modèles de 192 Go.",
+          "Évitez-le si vous avez besoin de Windows ou de plus de 128 Go ; le Ryzen AI Halo indique Windows 11 Pro, et le Framework Desktop propose une configuration de 192 Go en précommande.",
           "Évitez-le si le prix par gigaoctet de mémoire décide de l'achat ; le tableau des prix sourcés montre de combien il a bougé.",
         ],
       },
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark : prix et caractéristiques pour l\'IA locale',
-      'description': 'NVIDIA DGX Spark : prix de liste $4,699, $6,950 signalé pour 128 Go, 64 Go dès $4,999. Specs GB10, 273 Go/s, 1,2 kg. À qui elle convient, ou non.',
+      'description': 'NVIDIA DGX Spark : prix de liste $4,699 (2026-02-25), $6,950 signalé pour 128 Go (2026-10-03), 64 Go dès $4,999. Specs GB10, 273 Go/s, 1,2 kg.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'fr',
       'url': 'https://www.promptquorum.com/fr/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'La Founders Edition du NVIDIA DGX Spark était listée à $4,699 en février 2026, une machine de 128 Go a été signalée à $6,950 le 2026-10-03, et le modèle OEM de 64 Go démarre à $4,999. C\'est une machine GB10 de 128 Go (ou, via des partenaires, de 64 Go) de mémoire unifiée pour les développeurs qui ont besoin de CUDA, du fine-tuning ou d\'un clustering de deux machines, et elle ne fonctionne que sous DGX OS, le système Linux de NVIDIA.',
+      'articleBody': 'La Founders Edition du NVIDIA DGX Spark était listée à $4,699 en février 2026, un modèle 128 Go signalé à $6,950 le 2026-10-03 et le modèle OEM 64 Go dès $4,999. Machine GB10 pour CUDA, fine-tuning ou clustering de deux machines ; NVIDIA n\'indique que DGX OS (Linux).',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': "Acheteurs et développeurs qui envisagent le NVIDIA DGX Spark (GB10) comme station de travail IA locale" },
@@ -674,11 +674,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-ja.webp',
     title: 'ローカルAI向けNVIDIA DGX Sparkの価格と仕様',
-    seoTitle: 'NVIDIA DGX Spark 価格と仕様：$4,699〜',
+    seoTitle: 'NVIDIA DGX Spark 価格・仕様と向いている人',
     intro:
       'NVIDIA DGX Sparkは、GB10 Grace Blackwell Superchipを中核とする重さ1.2kgのデスクトップコンピュータで、128GBのユニファイドメモリと、複数台を接続するための200Gbps ConnectX-7ネットワークアダプタを備えています。机の上でCUDAとNVIDIAのAIソフトウェアスタックを使いたい開発者向けの製品です。発売後に価格が上昇しているため、下の価格表では各行に情報源を明記しています。',
     metaDescription:
-      'NVIDIA DGX Sparkの価格：Founders Editionは$4,699、128GB版は$6,950と報道、64GB版は$4,999から。GB10の仕様と向いている人を整理しました。',
+      'NVIDIA DGX Sparkの価格：Founders Editionは$4,699（2026-02-25）、128GB版は$6,950と報道（2026-10-03）、64GB版は$4,999から。',
     twitterDescription:
       'ローカルAI向けNVIDIA DGX Spark: GB10の仕様、出典付きの米国価格、独立テストの結果、向いている人。ベンダー情報とサードパーティの報道に基づきます。',
     readTime: '8分で読める',
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**NVIDIA DGX SparkのFounders Editionは2026年2月時点で$4,699、128GB版は2026-10-03に$6,950と報じられ、64GB版のOEMモデルは$4,999からです。** CUDA、ファインチューニング、2台クラスタリングが必要な開発者向けの、統合メモリ128GB（パートナー経由では64GB）のGB10デスクトップで、動作するのはNVIDIAのLinuxベースのDGX OSのみです。',
+      '**NVIDIA DGX SparkのFounders Editionは2026年2月時点で$4,699、128GB版は2026-10-03に$6,950と報じられ、64GB版のOEMモデルは$4,999からです。** CUDA、ファインチューニング、2台クラスタリングが必要な開発者向けの、統合メモリ128GB（パートナー経由では64GB）のGB10デスクトップで、NVIDIAがOSとして挙げているのはLinuxベースのDGX OSのみです。',
     quickAnswerTop: {
       ja: {
         question: 'ローカルAI向けにNVIDIA DGX Sparkを買う価値はありますか？',
@@ -701,9 +701,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'CUDAやNVIDIAのソフトウェアスタック、2台クラスタリングが必要で、Linuxを使える開発者に向いています。Windowsを使いたい人や、メモリ容量あたりの価格を重視する人にはあまり向きません。発売後に価格が上昇しているため、まず最新の掲載価格を比較してください。',
         bullets: [
           'ハードウェア: GB10、Arm 20コア、273GB/sの128GBユニファイドメモリ',
-          '価格: Founders Editionは$4,699、OEMの64GB版は$4,999から',
-          'StorageReviewのvLLMテスト: 18ケースすべてでSparkがRyzen AI Haloを上回る',
-          'DGX OS（Ubuntuベース）のみ対応。Windowsは非対応',
+          '価格: Founders Editionは$4,699（NVIDIA、2026-02-25）、OEMの64GB版は$4,999から（NVIDIA、2026-10-02）',
+          'StorageReviewのvLLMテスト（2026-07-06）: 18シナリオすべてでSparkがRyzen AI Haloを上回る。HotHardwareはほぼ同等と評価',
+          'NVIDIAはOSとしてDGX OS（Ubuntuベース）を挙げており、Windowsの記載はなし',
         ],
         updatedDate: '2026-11',
       },
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '価格: Founders EditionのMSRPはNVIDIAによって引き上げられ、他の販売店では価格が異なります。価格表には行ごとに情報源と日付を記載しています。',
           '速度: StorageReviewのvLLMサービングテストでは、18シナリオすべてでSparkがAMD Ryzen AI Haloを上回りました。',
           'クラスタリング: 200GbpsのConnectX-7ポート2つで機器を接続できます。NVIDIAは4台で700Bパラメータに対応すると述べています。',
-          'ソフトウェア: DGX OS（Ubuntuベース）のみ。Windowsが必要な人は、下の代替機を検討してください。',
+          'ソフトウェア: NVIDIAはOSとしてDGX OS（Ubuntuベース）を挙げています。Windowsが必要な人は、下の代替機を検討してください。',
         ],
       },
       overview: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ワークフローがCUDAやNVIDIAのAIソフトウェアに依存しており、Linuxで作業できるなら選んでください。',
           '大きなモデルのために、200Gbpsポートで2台を接続する予定があるなら選んでください。',
           'ファインチューニングの実験にも向いています。NVIDIAは最大70Bパラメータまで対応すると述べています。',
-          'Windowsが必要な場合や、128GBを超えるメモリが必要な場合は見送ってください。下の代替機にはWindows対応のものがあり、3機種は192GB版を提供しています。',
+          'Windowsが必要な場合や、128GBを超えるメモリが必要な場合は見送ってください。Ryzen AI HaloはWindows 11 Proに対応し、Framework Desktopは192GB構成を予約受付中です。',
           'メモリ容量あたりの価格が購入の決め手なら見送ってください。出典付きの価格表を見れば、どれだけ上昇したかがわかります。',
         ],
       },
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けNVIDIA DGX Sparkの価格と仕様',
-      'description': 'NVIDIA DGX Sparkの価格：Founders Editionは$4,699、128GB版は$6,950と報道、64GB版は$4,999から。GB10の仕様と向いている人を整理しました。',
+      'description': 'NVIDIA DGX Sparkの価格：Founders Editionは$4,699（2026-02-25）、128GB版は$6,950と報道（2026-10-03）、64GB版は$4,999から。',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ja',
       'url': 'https://www.promptquorum.com/ja/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'NVIDIA DGX SparkのFounders Editionは2026年2月時点で$4,699、128GB版は2026-10-03に$6,950と報じられ、64GB版のOEMモデルは$4,999からです。 CUDA、ファインチューニング、2台クラスタリングが必要な開発者向けの、統合メモリ128GB（パートナー経由では64GB）のGB10デスクトップで、動作するのはNVIDIAのLinuxベースのDGX OSのみです。',
+      'articleBody': 'NVIDIA DGX SparkのFounders Editionは2026年2月時点で$4,699、128GB版は2026-10-03に$6,950と報じられ、64GB版のOEMモデルは$4,999からです。 CUDA、ファインチューニング、2台クラスタリングが必要な開発者向けの、統合メモリ128GB（パートナー経由では64GB）のGB10デスクトップで、NVIDIAがOSとして挙げているのはLinuxベースのDGX OSのみです。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'ローカルAIワークステーションとしてNVIDIA DGX Spark（GB10）を検討している購入者と開発者' },
@@ -892,13 +892,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-zh.webp',
     title: '用于本地AI的NVIDIA DGX Spark价格与规格',
-    seoTitle: 'NVIDIA DGX Spark价格与规格：$4,699起',
+    seoTitle: 'NVIDIA DGX Spark价格、规格及适合人群',
     intro:
       'NVIDIA DGX Spark是一台重1.2 kg的桌面电脑，搭载GB10 Grace Blackwell Superchip，配有128 GB统一内存和一块200 Gbps的ConnectX-7网络适配器，可用于多台机器互联。它面向希望在桌面上使用CUDA和NVIDIA AI软件栈的开发者。自发布以来其价格已经上涨，因此下方价格表为每一行都标注了来源。',
     metaDescription:
-      'NVIDIA DGX Spark价格：Founders Edition标价$4,699，128 GB版据报道$6,950，64 GB版$4,999起。含GB10规格及适合与不适合的人群。',
+      'NVIDIA DGX Spark价格：Founders Edition标价$4,699（2026-02-25），128 GB版据报道$6,950（2026-10-03），64 GB版$4,999起。含GB10规格。',
     twitterDescription:
-      'NVIDIA DGX Spark本地AI指南：已核实的GB10规格、有来源的美国价格、独立测试结果以及适合人群。基于厂商数据和第三方报道。',
+      'NVIDIA DGX Spark本地AI指南：有来源的GB10规格和美国价格、独立测试结果以及适合人群。基于厂商数据和第三方报道。',
     readTime: '阅读约8分钟',
     educationalLevel: 'Intermediate',
     audience: '正在考虑将NVIDIA DGX Spark (GB10) 用作本地AI工作站的买家和开发者',
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark 对比 ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**NVIDIA DGX Spark Founders Edition在2026年2月的标价为$4,699，128 GB机型于2026-10-03据报道为$6,950，64 GB的OEM机型起价$4,999。** 它是一台GB10桌面机，配备128 GB（经合作伙伴为64 GB）统一内存，面向需要CUDA、微调或双机互联的开发者，且只运行NVIDIA基于Linux的DGX OS。',
+      '**NVIDIA DGX Spark Founders Edition在2026年2月的标价为$4,699，128 GB机型于2026-10-03据报道为$6,950，64 GB的OEM机型起价$4,999。** 它是一台GB10桌面机，配备128 GB（经合作伙伴为64 GB）统一内存，面向需要CUDA、微调或双机互联的开发者，且NVIDIA列出的操作系统仅有基于Linux的DGX OS。',
     quickAnswerTop: {
       zh: {
         question: 'NVIDIA DGX Spark值得买来做本地AI吗？',
@@ -919,9 +919,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '它适合需要CUDA、NVIDIA软件栈或双机互联、且能使用Linux的开发者。对于想用Windows或在意每GB内存价格的买家，它就不那么合适。自发布以来价格已经上涨，请先对比当前报价。',
         bullets: [
           '硬件：GB10，20个Arm核心，128 GB统一内存，273 GB/s',
-          '价格：Founders Edition $4,699；64 GB OEM机型$4,999起',
-          'StorageReview的vLLM测试：Spark在全部18个场景中领先Ryzen AI Halo',
-          '仅运行DGX OS（基于Ubuntu）；不支持Windows',
+          '价格：Founders Edition $4,699（NVIDIA，2026-02-25）；64 GB OEM机型$4,999起（NVIDIA，2026-10-02）',
+          'StorageReview的vLLM测试（2026-07-06）：Spark在全部18个场景中领先Ryzen AI Halo；HotHardware则认为两者大致相当',
+          'NVIDIA将DGX OS（基于Ubuntu）列为操作系统，未列出Windows',
         ],
         updatedDate: '2026-11',
       },
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '价格：Founders Edition的建议零售价已被NVIDIA上调，其他卖家的价格各不相同；价格表为每一行标注了来源和日期。',
           '速度：在StorageReview的vLLM服务测试中，Spark在全部18个场景中领先AMD Ryzen AI Halo。',
           '互联：两个200 Gbps的ConnectX-7端口可连接多台机器；NVIDIA声明四台系统可支持700B参数。',
-          '软件：仅支持DGX OS（基于Ubuntu）。需要Windows的买家应查看下方的替代品。',
+          '软件：NVIDIA将DGX OS（基于Ubuntu）列为操作系统。需要Windows的买家应查看下方的替代品。',
         ],
       },
       overview: {
@@ -1017,7 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '如果你的工作流依赖CUDA或NVIDIA的AI软件，并且能在Linux下工作，就选它。',
           '如果你打算通过200 Gbps端口连接两台机器来运行更大的模型，就选它。',
           '如果要做微调实验，就选它；NVIDIA声明支持最高70B参数。',
-          '如果你需要Windows或超过128 GB的内存，就跳过它；下方有几款替代品列出了Windows，其中三款列出了192 GB机型。',
+          '如果你需要Windows或超过128 GB的内存，就跳过它；Ryzen AI Halo可选Windows 11 Pro，Framework Desktop则提供可预订的192 GB配置。',
           '如果每GB内存的价格是决定购买的因素，就跳过它；有来源的价格表显示了价格上涨的幅度。',
         ],
       },
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '用于本地AI的NVIDIA DGX Spark价格与规格',
-      'description': 'NVIDIA DGX Spark价格：Founders Edition标价$4,699，128 GB版据报道$6,950，64 GB版$4,999起。含GB10规格及适合与不适合的人群。',
+      'description': 'NVIDIA DGX Spark价格：Founders Edition标价$4,699（2026-02-25），128 GB版据报道$6,950（2026-10-03），64 GB版$4,999起。含GB10规格。',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'zh',
       'url': 'https://www.promptquorum.com/zh/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'NVIDIA DGX Spark Founders Edition在2026年2月的标价为$4,699，128 GB机型于2026-10-03据报道为$6,950，64 GB的OEM机型起价$4,999。 它是一台GB10桌面机，配备128 GB（经合作伙伴为64 GB）统一内存，面向需要CUDA、微调或双机互联的开发者，且只运行NVIDIA基于Linux的DGX OS。',
+      'articleBody': 'NVIDIA DGX Spark Founders Edition在2026年2月的标价为$4,699，128 GB机型于2026-10-03据报道为$6,950，64 GB的OEM机型起价$4,999。 它是一台GB10桌面机，配备128 GB（经合作伙伴为64 GB）统一内存，面向需要CUDA、微调或双机互联的开发者，且NVIDIA列出的操作系统仅有基于Linux的DGX OS。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': '正在考虑将NVIDIA DGX Spark (GB10) 用作本地AI工作站的买家和开发者' },
@@ -1110,13 +1110,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-es.webp',
     title: 'NVIDIA DGX Spark: precio y especificaciones para IA local',
-    seoTitle: 'NVIDIA DGX Spark precio y specs: de $4,699 a $6,950',
+    seoTitle: 'NVIDIA DGX Spark: precio, specs y para quién es ideal',
     intro:
       'La NVIDIA DGX Spark es un ordenador de sobremesa de 1.2 kg construido en torno al GB10 Grace Blackwell Superchip, con 128 GB de memoria unificada y un adaptador de red ConnectX-7 de 200 Gbps para enlazar equipos. Está dirigida a desarrolladores que quieren CUDA y el software de IA de NVIDIA en su escritorio. Su precio ha subido desde el lanzamiento, así que la tabla de precios de abajo cita una fuente para cada línea.',
     metaDescription:
-      'NVIDIA DGX Spark precio: $4,699 de lista, $6,950 informado para 128 GB y 64 GB desde $4,999. Specs del GB10, 273 GB/s, 1.2 kg. Para quién es.',
+      'NVIDIA DGX Spark precio: $4,699 de lista (2026-02-25), $6,950 informado para 128 GB (2026-10-03) y 64 GB desde $4,999. Specs del GB10, 273 GB/s.',
     twitterDescription:
-      'NVIDIA DGX Spark para IA local: specs verificadas del GB10, precios en EE. UU. con fuentes, resultados de pruebas independientes y para quién es. Basado en datos del fabricante e informes de terceros.',
+      'NVIDIA DGX Spark para IA local: specs del GB10 y precios en EE. UU. con fuentes, resultados de pruebas independientes y para quién es. Basado en datos del fabricante e informes de terceros.',
     readTime: '8 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores y desarrolladores que consideran la NVIDIA DGX Spark (GB10) como estación de trabajo de IA local',
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**La Founders Edition de la NVIDIA DGX Spark figuraba a $4,699 en febrero de 2026, se informó de una unidad de 128 GB a $6,950 el 2026-10-03, y el modelo OEM de 64 GB parte de $4,999.** Es un equipo de sobremesa GB10 con 128 GB (o 64 GB, a través de socios) de memoria unificada para desarrolladores que necesitan CUDA, fine-tuning o clustering de dos cajas, y solo ejecuta DGX OS, el sistema Linux de NVIDIA.',
+      '**La Founders Edition de la NVIDIA DGX Spark figuraba a $4,699 en febrero de 2026, una de 128 GB se informó a $6,950 el 2026-10-03 y la OEM de 64 GB desde $4,999. GB10 para CUDA, fine-tuning o clustering de dos cajas; NVIDIA solo indica DGX OS (Linux).**',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena comprar la NVIDIA DGX Spark para IA local?',
@@ -1137,9 +1137,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Encaja con desarrolladores que necesitan CUDA, el software de NVIDIA o clustering de dos cajas, y que pueden usar Linux. Encaja peor con quienes quieren Windows o un precio bajo por gigabyte de memoria. Los precios han subido desde el lanzamiento, así que compara primero los anuncios actuales.',
         bullets: [
           'Hardware: GB10, 20 núcleos Arm, 128 GB de memoria unificada a 273 GB/s',
-          'Precio: Founders Edition $4,699; modelos OEM de 64 GB desde $4,999',
-          'Prueba de vLLM de StorageReview: la Spark supera al Ryzen AI Halo en los 18 casos',
-          'Solo ejecuta DGX OS (basado en Ubuntu); sin Windows',
+          'Precio: Founders Edition $4,699 (NVIDIA, 2026-02-25); modelos OEM de 64 GB desde $4,999 (NVIDIA, 2026-10-02)',
+          'Prueba de vLLM de StorageReview (2026-07-06): la Spark por delante del Ryzen AI Halo en los 18 escenarios; HotHardware los ve más o menos equivalentes',
+          'NVIDIA indica DGX OS (basado en Ubuntu) como sistema operativo; no menciona Windows',
         ],
         updatedDate: '2026-11',
       },
@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Precio: NVIDIA subió el MSRP de la Founders Edition y otros vendedores difieren; la tabla de precios cita una fuente y una fecha por línea.',
           'Velocidad: en la prueba de servicio con vLLM de StorageReview, la Spark superó al AMD Ryzen AI Halo en los 18 escenarios.',
           'Clustering: dos puertos ConnectX-7 de 200 Gbps enlazan equipos; NVIDIA indica 700B parámetros con cuatro sistemas.',
-          'Software: solo DGX OS (basado en Ubuntu). Quien necesite Windows debería mirar las alternativas de abajo.',
+          'Software: NVIDIA indica DGX OS (basado en Ubuntu) como sistema operativo. Quien necesite Windows debería mirar las alternativas de abajo.',
         ],
       },
       overview: {
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Elígela si tu flujo de trabajo depende de CUDA o del software de IA de NVIDIA y puedes trabajar en Linux.',
           'Elígela si piensas enlazar dos cajas con los puertos de 200 Gbps para modelos más grandes.',
           'Elígela para experimentos de fine-tuning; NVIDIA indica compatibilidad hasta 70B parámetros.',
-          'Descártala si necesitas Windows o más de 128 GB; varias alternativas de abajo incluyen Windows y tres ofrecen modelos de 192 GB.',
+          'Descártala si necesitas Windows o más de 128 GB; la Ryzen AI Halo incluye Windows 11 Pro y la Framework Desktop ofrece una configuración de 192 GB en reserva.',
           'Descártala si el precio por gigabyte de memoria decide la compra; la tabla de precios con fuentes muestra cuánto se ha movido.',
         ],
       },
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark: precio y especificaciones para IA local',
-      'description': 'NVIDIA DGX Spark precio: $4,699 de lista, $6,950 informado para 128 GB y 64 GB desde $4,999. Specs del GB10, 273 GB/s, 1.2 kg. Para quién es.',
+      'description': 'NVIDIA DGX Spark precio: $4,699 de lista (2026-02-25), $6,950 informado para 128 GB (2026-10-03) y 64 GB desde $4,999. Specs del GB10, 273 GB/s.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'es',
       'url': 'https://www.promptquorum.com/es/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'La Founders Edition de la NVIDIA DGX Spark figuraba a $4,699 en febrero de 2026, se informó de una unidad de 128 GB a $6,950 el 2026-10-03, y el modelo OEM de 64 GB parte de $4,999. Es un equipo de sobremesa GB10 con 128 GB (o 64 GB, a través de socios) de memoria unificada para desarrolladores que necesitan CUDA, fine-tuning o clustering de dos cajas, y solo ejecuta DGX OS, el sistema Linux de NVIDIA.',
+      'articleBody': 'La Founders Edition de la NVIDIA DGX Spark figuraba a $4,699 en febrero de 2026, una de 128 GB se informó a $6,950 el 2026-10-03 y la OEM de 64 GB desde $4,999. GB10 para CUDA, fine-tuning o clustering de dos cajas; NVIDIA solo indica DGX OS (Linux).',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Compradores y desarrolladores que consideran la NVIDIA DGX Spark (GB10) como estación de trabajo de IA local' },
@@ -1329,13 +1329,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-pt.webp',
     title: 'NVIDIA DGX Spark: preço e especificações para IA local',
-    seoTitle: 'NVIDIA DGX Spark preço e specs: de $4,699 a $6,950',
+    seoTitle: 'NVIDIA DGX Spark: preço, specs e para quem serve',
     intro:
       'O NVIDIA DGX Spark é um computador de mesa de 1.2 kg construído em torno do GB10 Grace Blackwell Superchip, com 128 GB de memória unificada e um adaptador de rede ConnectX-7 de 200 Gbps para ligar caixas entre si. Ele se destina a desenvolvedores que querem CUDA e a pilha de software de IA da NVIDIA em cima da mesa. O preço subiu desde o lançamento, por isso a tabela de preços abaixo indica a fonte de cada linha.',
     metaDescription:
-      'NVIDIA DGX Spark preço: $4,699 de lista, $6,950 reportado para 128 GB e 64 GB a partir de $4,999. Specs do GB10, 273 GB/s, 1.2 kg. Para quem serve.',
+      'NVIDIA DGX Spark preço: $4,699 de lista (2026-02-25), $6,950 reportado para 128 GB (2026-10-03) e 64 GB a partir de $4,999. Specs do GB10, 273 GB/s.',
     twitterDescription:
-      'NVIDIA DGX Spark para IA local: specs verificadas do GB10, preços nos EUA com fonte, resultados de testes independentes e para quem serve. Baseado em dados do fabricante e relatos de terceiros.',
+      'NVIDIA DGX Spark para IA local: specs do GB10 e preços nos EUA com fonte, resultados de testes independentes e para quem serve. Baseado em dados do fabricante e relatos de terceiros.',
     readTime: '8 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores e desenvolvedores que avaliam o NVIDIA DGX Spark (GB10) como workstation de IA local',
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**A Founders Edition do NVIDIA DGX Spark estava listada a $4,699 em fevereiro de 2026, uma unidade de 128 GB foi reportada a $6,950 em 2026-10-03, e o modelo OEM de 64 GB começa em $4,999.** É um desktop GB10 com 128 GB (ou, via parceiros, 64 GB) de memória unificada para desenvolvedores que precisam de CUDA, fine-tuning ou clustering de duas caixas, e roda apenas o DGX OS, baseado em Linux, da NVIDIA.',
+      '**A Founders Edition do NVIDIA DGX Spark estava listada a $4,699 em fevereiro de 2026, uma de 128 GB foi reportada a $6,950 em 2026-10-03 e a OEM de 64 GB desde $4,999. Desktop GB10 para CUDA, fine-tuning ou clustering de duas caixas; a NVIDIA lista só DGX OS (Linux).**',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena comprar o NVIDIA DGX Spark para IA local?',
@@ -1356,9 +1356,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ele serve a desenvolvedores que precisam de CUDA, da pilha de software da NVIDIA ou de clustering de duas caixas e que conseguem usar Linux. Serve menos a quem quer Windows ou um preço baixo por gigabyte de memória. Os preços subiram desde o lançamento, então compare os anúncios atuais primeiro.',
         bullets: [
           'Hardware: GB10, 20 núcleos Arm, 128 GB de memória unificada a 273 GB/s',
-          'Preço: Founders Edition $4,699; modelos OEM de 64 GB a partir de $4,999',
-          'Teste de vLLM da StorageReview: Spark à frente do Ryzen AI Halo em todos os 18 casos',
-          'Roda apenas o DGX OS (baseado em Ubuntu); sem Windows',
+          'Preço: Founders Edition $4,699 (NVIDIA, 2026-02-25); modelos OEM de 64 GB a partir de $4,999 (NVIDIA, 2026-10-02)',
+          'Teste de vLLM da StorageReview (2026-07-06): Spark à frente do Ryzen AI Halo nos 18 cenários; a HotHardware os vê como aproximadamente equivalentes',
+          'A NVIDIA lista o DGX OS (baseado em Ubuntu) como sistema operacional; Windows não consta',
         ],
         updatedDate: '2026-11',
       },
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preço: o MSRP da Founders Edition foi elevado pela NVIDIA e outros vendedores divergem; a tabela de preços indica fonte e data por linha.',
           'Velocidade: no teste de serving com vLLM da StorageReview, o Spark superou o AMD Ryzen AI Halo nos 18 cenários.',
           'Clustering: duas portas ConnectX-7 de 200 Gbps ligam caixas entre si; a NVIDIA indica 700B parâmetros com quatro sistemas.',
-          'Software: apenas o DGX OS (baseado em Ubuntu). Quem precisa de Windows deve olhar as alternativas abaixo.',
+          'Software: a NVIDIA lista o DGX OS (baseado em Ubuntu) como sistema operacional. Quem precisa de Windows deve olhar as alternativas abaixo.',
         ],
       },
       overview: {
@@ -1426,7 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preço do NVIDIA DGX Spark e disponibilidade',
         itemHeadings: true,
         content:
-          '**Os preços nos EUA subiram desde o lançamento por causa da oferta de memória e variam conforme o vendedor, então confira o anúncio ao vivo.** Todos os valores são em dólares americanos, da fonte indicada. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          '**Os preços nos EUA subiram desde o lançamento por causa da oferta de memória e variam conforme o vendedor, então confira o anúncio ao vivo.** Todos os valores são em dólares americanos, da fonte indicada.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
         rows: [
           { 'Configuração': 'Preço de lançamento, 128 GB', 'Preço nos EUA': '$3,999', 'Fonte e data': 'Fórum de desenvolvedores da NVIDIA, 2026-02-25', 'Status': 'Substituído pelo preço abaixo' },
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Escolha-o se o seu fluxo de trabalho depende de CUDA ou do software de IA da NVIDIA e você consegue trabalhar em Linux.',
           'Escolha-o se pretende ligar duas caixas pelas portas de 200 Gbps para rodar modelos maiores.',
           'Escolha-o para experimentos de fine-tuning; a NVIDIA indica suporte até 70B parâmetros.',
-          'Evite-o se precisa de Windows ou de mais de 128 GB; várias alternativas abaixo listam Windows e três listam modelos de 192 GB.',
+          'Evite-o se precisa de Windows ou de mais de 128 GB; o Ryzen AI Halo lista Windows 11 Pro e o Framework Desktop oferece uma configuração de 192 GB em pré-encomenda.',
           'Evite-o se o preço por gigabyte de memória decide a compra; a tabela de preços com fontes mostra o quanto ele subiu.',
         ],
       },
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark: preço e especificações para IA local',
-      'description': 'NVIDIA DGX Spark preço: $4,699 de lista, $6,950 reportado para 128 GB e 64 GB a partir de $4,999. Specs do GB10, 273 GB/s, 1.2 kg. Para quem serve.',
+      'description': 'NVIDIA DGX Spark preço: $4,699 de lista (2026-02-25), $6,950 reportado para 128 GB (2026-10-03) e 64 GB a partir de $4,999. Specs do GB10, 273 GB/s.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'pt-BR',
       'url': 'https://www.promptquorum.com/pt/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'A Founders Edition do NVIDIA DGX Spark estava listada a $4,699 em fevereiro de 2026, uma unidade de 128 GB foi reportada a $6,950 em 2026-10-03, e o modelo OEM de 64 GB começa em $4,999. É um desktop GB10 com 128 GB (ou, via parceiros, 64 GB) de memória unificada para desenvolvedores que precisam de CUDA, fine-tuning ou clustering de duas caixas, e roda apenas o DGX OS, baseado em Linux, da NVIDIA.',
+      'articleBody': 'A Founders Edition do NVIDIA DGX Spark estava listada a $4,699 em fevereiro de 2026, uma de 128 GB foi reportada a $6,950 em 2026-10-03 e a OEM de 64 GB desde $4,999. Desktop GB10 para CUDA, fine-tuning ou clustering de duas caixas; a NVIDIA lista só DGX OS (Linux).',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Compradores e desenvolvedores que avaliam o NVIDIA DGX Spark (GB10) como workstation de IA local' },
@@ -1548,13 +1548,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-ar.webp',
     title: 'سعر NVIDIA DGX Spark ومواصفاته للذكاء الاصطناعي المحلي',
-    seoTitle: 'سعر NVIDIA DGX Spark ومواصفاته: من $4,699 إلى $6,950',
+    seoTitle: 'سعر NVIDIA DGX Spark ومواصفاته ولمن تناسب',
     intro:
       'NVIDIA DGX Spark حاسوب مكتبي بوزن 1.2 كغ مبني حول شريحة GB10 Grace Blackwell Superchip، بذاكرة موحدة سعتها 128 GB ومحوّل شبكة ConnectX-7 بسرعة 200 Gbps لربط الأجهزة ببعضها. يستهدف المطورين الذين يريدون CUDA وحزمة برمجيات NVIDIA للذكاء الاصطناعي على مكتبهم. وقد ارتفع سعره منذ الإطلاق، لذلك يذكر جدول الأسعار أدناه مصدرًا لكل سطر.',
     metaDescription:
-      'سعر NVIDIA DGX Spark: $4,699 لنسخة Founders Edition، وأُفيد بـ$6,950 لطراز 128 GB، و$4,999 لطراز 64 GB. مواصفات GB10 ولمن يناسب.',
+      'سعر NVIDIA DGX Spark: $4,699 لنسخة Founders Edition (2026-02-25)، وأُفيد بـ$6,950 لطراز 128 GB (2026-10-03)، و$4,999 لطراز 64 GB. مواصفات GB10.',
     twitterDescription:
-      'NVIDIA DGX Spark للذكاء الاصطناعي المحلي: مواصفات GB10 الموثقة وأسعار أمريكية بمصادرها ونتائج اختبارات مستقلة ولمن يناسب. مبني على بيانات المصنّع وتقارير أطراف ثالثة.',
+      'NVIDIA DGX Spark للذكاء الاصطناعي المحلي: مواصفات GB10 وأسعار أمريكية بمصادرها ونتائج اختبارات مستقلة ولمن يناسب. مبني على بيانات المصنّع وتقارير أطراف ثالثة.',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المشترون والمطورون الذين يفكرون في NVIDIA DGX Spark (GB10) كمحطة عمل للذكاء الاصطناعي المحلي',
@@ -1567,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark مقابل ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**أُدرجت نسخة Founders Edition من NVIDIA DGX Spark بسعر $4,699 في فبراير 2026، وأُفيد بسعر $6,950 لطراز 128 GB في 2026-10-03، ويبدأ طراز OEM بذاكرة 64 GB من $4,999.** وهو حاسوب مكتبي بشريحة GB10 وذاكرة موحّدة 128 GB (أو 64 GB عبر الشركاء)، موجّه للمطورين الذين يحتاجون CUDA أو الضبط الدقيق (fine-tuning) أو ربط جهازين، ولا يعمل إلا بنظام DGX OS من NVIDIA القائم على لينكس.',
+      '**أُدرجت نسخة Founders Edition من NVIDIA DGX Spark بسعر $4,699 في فبراير 2026، وأُفيد بسعر $6,950 لطراز 128 GB في 2026-10-03، ويبدأ طراز OEM (64 GB) من $4,999. حاسوب GB10 لـ CUDA أو الضبط الدقيق أو ربط جهازين، ولا تذكر NVIDIA سوى نظام DGX OS القائم على لينكس.**',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق NVIDIA DGX Spark الشراء للذكاء الاصطناعي المحلي؟',
@@ -1575,9 +1575,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يناسب المطورين الذين يحتاجون CUDA وحزمة برمجيات NVIDIA أو ربط جهازين، ويستطيعون العمل على لينكس. وهو أقل ملاءمة لمن يريد ويندوز أو سعرًا منخفضًا لكل غيغابايت من الذاكرة. ارتفعت الأسعار منذ الإطلاق، لذا قارن العروض الحالية أولًا.',
         bullets: [
           'العتاد: GB10، و20 نواة Arm، وذاكرة موحدة 128 GB بسرعة 273 GB/s',
-          'السعر: Founders Edition بسعر $4,699؛ وطرازات OEM بذاكرة 64 GB تبدأ من $4,999',
-          'اختبار vLLM من StorageReview: Spark متقدم على Ryzen AI Halo في جميع الحالات الـ18',
-          'يعمل بنظام DGX OS (القائم على Ubuntu) فقط؛ بلا ويندوز',
+          'السعر: Founders Edition بسعر $4,699 (NVIDIA، 2026-02-25)؛ وطرازات OEM بذاكرة 64 GB تبدأ من $4,999 (NVIDIA، 2026-10-02)',
+          'اختبار vLLM من StorageReview (2026-07-06): Spark متقدم على Ryzen AI Halo في السيناريوهات الـ18 جميعها؛ بينما تراهما HotHardware متقاربين تقريبًا',
+          'تذكر NVIDIA نظام DGX OS (القائم على Ubuntu) كنظام تشغيل؛ ولا تذكر ويندوز',
         ],
         updatedDate: '2026-11',
       },
@@ -1607,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السعر: رفعت NVIDIA سعر Founders Edition الموصى به (MSRP)، وتختلف الأسعار لدى البائعين الآخرين؛ ويذكر جدول الأسعار مصدرًا وتاريخًا لكل سطر.',
           'السرعة: في اختبار خدمة vLLM من StorageReview تفوّق Spark على AMD Ryzen AI Halo في جميع السيناريوهات الـ18.',
           'الربط: يربط منفذا ConnectX-7 بسرعة 200 Gbps الأجهزة ببعضها؛ وتذكر NVIDIA نماذج بحجم 700B معامل عبر أربعة أنظمة.',
-          'البرمجيات: نظام DGX OS (القائم على Ubuntu) فقط. على من يحتاج ويندوز أن ينظر في البدائل أدناه.',
+          'البرمجيات: تذكر NVIDIA نظام DGX OS (القائم على Ubuntu) كنظام تشغيل. على من يحتاج ويندوز أن ينظر في البدائل أدناه.',
         ],
       },
       overview: {
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'اختره إذا كان عملك يعتمد على CUDA أو برمجيات NVIDIA للذكاء الاصطناعي، وتستطيع العمل على لينكس.',
           'اختره إذا كنت تخطط لربط جهازين عبر منفذَي 200 Gbps لتشغيل نماذج أكبر.',
           'اختره لتجارب الضبط الدقيق (fine-tuning)؛ إذ تذكر NVIDIA دعمًا حتى 70B معامل.',
-          'تجاوزه إذا كنت تحتاج ويندوز أو أكثر من 128 GB؛ فعدة بدائل أدناه تدعم ويندوز، وثلاثة منها تذكر طرازات بذاكرة 192 GB.',
+          'تجاوزه إذا كنت تحتاج ويندوز أو أكثر من 128 GB؛ فـRyzen AI Halo يدعم ويندوز 11 Pro، ويقدّم Framework Desktop إعدادًا بذاكرة 192 GB بالطلب المسبق.',
           'تجاوزه إذا كان سعر الغيغابايت من الذاكرة هو ما يحسم الشراء؛ فجدول الأسعار الموثق يُظهر مدى ارتفاعه.',
         ],
       },
@@ -1732,7 +1732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'سعر NVIDIA DGX Spark ومواصفاته للذكاء الاصطناعي المحلي',
-      'description': 'سعر NVIDIA DGX Spark: $4,699 لنسخة Founders Edition، وأُفيد بـ$6,950 لطراز 128 GB، و$4,999 لطراز 64 GB. مواصفات GB10 ولمن يناسب.',
+      'description': 'سعر NVIDIA DGX Spark: $4,699 لنسخة Founders Edition (2026-02-25)، وأُفيد بـ$6,950 لطراز 128 GB (2026-10-03)، و$4,999 لطراز 64 GB. مواصفات GB10.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ar',
       'url': 'https://www.promptquorum.com/ar/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'أُدرجت نسخة Founders Edition من NVIDIA DGX Spark بسعر $4,699 في فبراير 2026، وأُفيد بسعر $6,950 لطراز 128 GB في 2026-10-03، ويبدأ طراز OEM بذاكرة 64 GB من $4,999. وهو حاسوب مكتبي بشريحة GB10 وذاكرة موحّدة 128 GB (أو 64 GB عبر الشركاء)، موجّه للمطورين الذين يحتاجون CUDA أو الضبط الدقيق (fine-tuning) أو ربط جهازين، ولا يعمل إلا بنظام DGX OS من NVIDIA القائم على لينكس.',
+      'articleBody': 'أُدرجت نسخة Founders Edition من NVIDIA DGX Spark بسعر $4,699 في فبراير 2026، وأُفيد بسعر $6,950 لطراز 128 GB في 2026-10-03، ويبدأ طراز OEM (64 GB) من $4,999. حاسوب GB10 لـ CUDA أو الضبط الدقيق أو ربط جهازين، ولا تذكر NVIDIA سوى نظام DGX OS القائم على لينكس.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'المشترون والمطورون الذين يفكرون في NVIDIA DGX Spark (GB10) كمحطة عمل للذكاء الاصطناعي المحلي' },
@@ -1766,13 +1766,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/nvidia-dgx-spark-local-ai-workstation-hero-ko.webp',
     title: '로컬 AI용 NVIDIA DGX Spark 가격과 사양',
-    seoTitle: 'NVIDIA DGX Spark 가격·사양: $4,699~$6,950',
+    seoTitle: 'NVIDIA DGX Spark 가격·사양과 적합한 사용자',
     intro:
       'NVIDIA DGX Spark는 GB10 Grace Blackwell Superchip을 중심으로 만든 1.2kg의 데스크톱 컴퓨터로, 128GB 통합 메모리와 기기 간 연결용 200Gbps ConnectX-7 네트워크 어댑터를 갖추었습니다. 책상 위에서 CUDA와 NVIDIA의 AI 소프트웨어 스택을 쓰고자 하는 개발자를 대상으로 합니다. 출시 이후 가격이 올랐으므로, 아래 가격표에는 각 항목마다 출처를 표기했습니다.',
     metaDescription:
-      'NVIDIA DGX Spark 가격: Founders Edition $4,699, 128GB 모델 $6,950 보도, 64GB 모델 $4,999부터. GB10 사양과 적합한 사용자를 정리했습니다.',
+      'NVIDIA DGX Spark 가격: Founders Edition $4,699(2026-02-25), 128GB $6,950 보도(2026-10-03), 64GB $4,999부터. GB10 사양.',
     twitterDescription:
-      '로컬 AI용 NVIDIA DGX Spark: 검증된 GB10 사양, 출처 표기 미국 가격, 독립 테스트 결과, 적합한 사용자. 벤더 자료와 제3자 보고서를 바탕으로 합니다.',
+      '로컬 AI용 NVIDIA DGX Spark: 출처 표기 GB10 사양과 미국 가격, 독립 테스트 결과, 적합한 사용자. 벤더 자료와 제3자 보고서를 바탕으로 합니다.',
     readTime: '8분 읽기',
     educationalLevel: 'Intermediate',
     audience: 'NVIDIA DGX Spark(GB10)를 로컬 AI 워크스테이션으로 고려하는 구매자와 개발자',
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dgx spark vs ryzen ai halo',
     ],
     leadAnswerBlock:
-      '**NVIDIA DGX Spark Founders Edition은 2026년 2월 $4,699로 표기되었고, 128GB 모델은 2026-10-03에 $6,950로 보도되었으며, 64GB OEM 모델은 $4,999부터 시작합니다.** CUDA, 파인튜닝, 2대 클러스터링이 필요한 개발자를 위한 통합 메모리 128GB(파트너 모델은 64GB) GB10 데스크톱이며, NVIDIA의 Linux 기반 DGX OS만 실행합니다.',
+      '**NVIDIA DGX Spark Founders Edition은 2026년 2월 $4,699로 표기되었고, 128GB 모델은 2026-10-03에 $6,950로 보도되었으며, 64GB OEM 모델은 $4,999부터 시작합니다.** CUDA, 파인튜닝, 2대 클러스터링이 필요한 개발자를 위한 통합 메모리 128GB(파트너 모델은 64GB) GB10 데스크톱이며, NVIDIA가 명시한 운영체제는 Linux 기반 DGX OS뿐입니다.',
     quickAnswerTop: {
       ko: {
         question: 'NVIDIA DGX Spark는 로컬 AI용으로 구매할 만합니까?',
@@ -1793,9 +1793,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'CUDA, NVIDIA의 소프트웨어 스택 또는 2대 클러스터링이 필요하고 Linux를 사용할 수 있는 개발자에게 적합합니다. Windows를 원하거나 기가바이트당 낮은 가격을 중시하는 구매자에게는 덜 적합합니다. 출시 이후 가격이 올랐으므로 먼저 현재 판매 가격을 비교하십시오.',
         bullets: [
           '하드웨어: GB10, Arm 코어 20개, 273 GB/s의 128GB 통합 메모리',
-          '가격: Founders Edition $4,699, 64GB OEM 모델은 $4,999부터',
-          'StorageReview vLLM 테스트: 18개 사례 모두 Spark가 Ryzen AI Halo보다 우세',
-          'DGX OS(Ubuntu 기반)만 실행하며 Windows 미지원',
+          '가격: Founders Edition $4,699(NVIDIA, 2026-02-25), 64GB OEM 모델은 $4,999부터(NVIDIA, 2026-10-02)',
+          'StorageReview vLLM 테스트(2026-07-06): 18개 시나리오 모두 Spark가 우세, HotHardware는 두 기기가 대체로 비슷하다고 평가',
+          'NVIDIA는 운영체제로 DGX OS(Ubuntu 기반)를 명시하며 Windows는 명시하지 않음',
         ],
         updatedDate: '2026-11',
       },
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '가격: NVIDIA가 Founders Edition 권장 소비자 가격을 인상했고 다른 판매처의 가격은 서로 다르므로, 가격표에 항목별 출처와 날짜를 표기했습니다.',
           '속도: StorageReview의 vLLM 서빙 테스트에서 Spark는 18개 시나리오 모두에서 AMD Ryzen AI Halo를 앞섰습니다.',
           '클러스터링: 200Gbps ConnectX-7 포트 두 개로 기기를 연결하며, NVIDIA는 시스템 네 대로 700B 파라미터를 지원한다고 밝히고 있습니다.',
-          '소프트웨어: DGX OS(Ubuntu 기반)만 지원합니다. Windows가 필요한 구매자는 아래 대안을 확인하십시오.',
+          '소프트웨어: NVIDIA는 운영체제로 DGX OS(Ubuntu 기반)를 명시합니다. Windows가 필요한 구매자는 아래 대안을 확인하십시오.',
         ],
       },
       overview: {
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '작업 흐름이 CUDA나 NVIDIA의 AI 소프트웨어에 의존하고 Linux에서 작업할 수 있다면 선택하십시오.',
           '더 큰 모델을 위해 200Gbps 포트로 두 대를 연결할 계획이라면 선택하십시오.',
           '파인튜닝 실험에는 선택하십시오. NVIDIA는 최대 70B 파라미터까지 지원한다고 밝히고 있습니다.',
-          'Windows가 필요하거나 128GB를 넘는 메모리가 필요하다면 피하십시오. 아래 대안 중 여러 기기가 Windows를 제공하고, 세 기기는 192GB 모델을 제공합니다.',
+          'Windows가 필요하거나 128GB를 넘는 메모리가 필요하다면 피하십시오. Ryzen AI Halo는 Windows 11 Pro를 지원하고, Framework Desktop은 192GB 구성을 사전 주문으로 제공합니다.',
           '기가바이트당 가격이 구매를 좌우한다면 피하십시오. 출처가 표기된 가격표에서 가격이 얼마나 움직였는지 확인할 수 있습니다.',
         ],
       },
@@ -1950,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '로컬 AI용 NVIDIA DGX Spark 가격과 사양',
-      'description': 'NVIDIA DGX Spark 가격: Founders Edition $4,699, 128GB 모델 $6,950 보도, 64GB 모델 $4,999부터. GB10 사양과 적합한 사용자를 정리했습니다.',
+      'description': 'NVIDIA DGX Spark 가격: Founders Edition $4,699(2026-02-25), 128GB $6,950 보도(2026-10-03), 64GB $4,999부터. GB10 사양.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-11-14',
       'author': {
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ko',
       'url': 'https://www.promptquorum.com/ko/local-llms/nvidia-dgx-spark-local-ai-workstation',
-      'articleBody': 'NVIDIA DGX Spark Founders Edition은 2026년 2월 $4,699로 표기되었고, 128GB 모델은 2026-10-03에 $6,950로 보도되었으며, 64GB OEM 모델은 $4,999부터 시작합니다. CUDA, 파인튜닝, 2대 클러스터링이 필요한 개발자를 위한 통합 메모리 128GB(파트너 모델은 64GB) GB10 데스크톱이며, NVIDIA의 Linux 기반 DGX OS만 실행합니다.',
+      'articleBody': 'NVIDIA DGX Spark Founders Edition은 2026년 2월 $4,699로 표기되었고, 128GB 모델은 2026-10-03에 $6,950로 보도되었으며, 64GB OEM 모델은 $4,999부터 시작합니다. CUDA, 파인튜닝, 2대 클러스터링이 필요한 개발자를 위한 통합 메모리 128GB(파트너 모델은 64GB) GB10 데스크톱이며, NVIDIA가 명시한 운영체제는 Linux 기반 DGX OS뿐입니다.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'NVIDIA DGX Spark(GB10)를 로컬 AI 워크스테이션으로 고려하는 구매자와 개발자' },
