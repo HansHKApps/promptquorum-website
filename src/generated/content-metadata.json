@@ -1330,7 +1330,7 @@
         },
         {
           "url": "/images/budget-builds-en.svg",
-          "title": "Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7-13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13-30B, $6,500+ high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value."
+          "title": "Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7-13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13-30B, $6,500+ high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. The mid-level build is a balanced option."
         },
         {
           "url": "/images/llamacpp-speed-flags-en.svg",

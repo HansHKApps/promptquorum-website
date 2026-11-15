@@ -19199,7 +19199,7 @@
   {
     "lang": "en",
     "title": "NVIDIA DGX Spark Price and Specs for Local AI",
-    "excerpt": "NVIDIA DGX Spark price: $4,699 list, $6,950 reported for 128 GB, $4,999 for 64 GB. Specs: GB10, 273 GB/s, 1.2 kg. Who it suits and who should skip it.",
+    "excerpt": "NVIDIA DGX Spark price: $4,699 list (2026-02-25), $6,950 reported for 128 GB (2026-10-03), $4,999 for 64 GB. Specs: GB10, 273 GB/s, 1.2 kg. Who it suits.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19208,7 +19208,7 @@
   {
     "lang": "de",
     "title": "NVIDIA DGX Spark Preis und Spezifikationen für lokale KI",
-    "excerpt": "NVIDIA DGX Spark Preis: 4.699 $ Listenpreis, 6.950 $ für 128 GB gemeldet, 64 GB ab 4.999 $. Specs: GB10, 273 GB/s, 1,2 kg. Für wen sie sich eignet.",
+    "excerpt": "NVIDIA DGX Spark Preis: 4.699 $ Listenpreis (2026-02-25), 6.950 $ für 128 GB gemeldet (2026-10-03), 64 GB ab 4.999 $. Specs: GB10, 273 GB/s.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/de/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19217,7 +19217,7 @@
   {
     "lang": "fr",
     "title": "NVIDIA DGX Spark : prix et caractéristiques pour l'IA locale",
-    "excerpt": "NVIDIA DGX Spark : prix de liste $4,699, $6,950 signalé pour 128 Go, 64 Go dès $4,999. Specs GB10, 273 Go/s, 1,2 kg. À qui elle convient, ou non.",
+    "excerpt": "NVIDIA DGX Spark : prix de liste $4,699 (2026-02-25), $6,950 signalé pour 128 Go (2026-10-03), 64 Go dès $4,999. Specs GB10, 273 Go/s, 1,2 kg.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/fr/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19226,7 +19226,7 @@
   {
     "lang": "ja",
     "title": "ローカルAI向けNVIDIA DGX Sparkの価格と仕様",
-    "excerpt": "NVIDIA DGX Sparkの価格：Founders Editionは$4,699、128GB版は$6,950と報道、64GB版は$4,999から。GB10の仕様と向いている人を整理しました。",
+    "excerpt": "NVIDIA DGX Sparkの価格：Founders Editionは$4,699（2026-02-25）、128GB版は$6,950と報道（2026-10-03）、64GB版は$4,999から。",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/ja/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19235,7 +19235,7 @@
   {
     "lang": "zh",
     "title": "用于本地AI的NVIDIA DGX Spark价格与规格",
-    "excerpt": "NVIDIA DGX Spark价格：Founders Edition标价$4,699，128 GB版据报道$6,950，64 GB版$4,999起。含GB10规格及适合与不适合的人群。",
+    "excerpt": "NVIDIA DGX Spark价格：Founders Edition标价$4,699（2026-02-25），128 GB版据报道$6,950（2026-10-03），64 GB版$4,999起。含GB10规格。",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/zh/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19244,7 +19244,7 @@
   {
     "lang": "es",
     "title": "NVIDIA DGX Spark: precio y especificaciones para IA local",
-    "excerpt": "NVIDIA DGX Spark precio: $4,699 de lista, $6,950 informado para 128 GB y 64 GB desde $4,999. Specs del GB10, 273 GB/s, 1.2 kg. Para quién es.",
+    "excerpt": "NVIDIA DGX Spark precio: $4,699 de lista (2026-02-25), $6,950 informado para 128 GB (2026-10-03) y 64 GB desde $4,999. Specs del GB10, 273 GB/s.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/es/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19253,7 +19253,7 @@
   {
     "lang": "pt",
     "title": "NVIDIA DGX Spark: preço e especificações para IA local",
-    "excerpt": "NVIDIA DGX Spark preço: $4,699 de lista, $6,950 reportado para 128 GB e 64 GB a partir de $4,999. Specs do GB10, 273 GB/s, 1.2 kg. Para quem serve.",
+    "excerpt": "NVIDIA DGX Spark preço: $4,699 de lista (2026-02-25), $6,950 reportado para 128 GB (2026-10-03) e 64 GB a partir de $4,999. Specs do GB10, 273 GB/s.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/pt/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19262,7 +19262,7 @@
   {
     "lang": "ar",
     "title": "سعر NVIDIA DGX Spark ومواصفاته للذكاء الاصطناعي المحلي",
-    "excerpt": "سعر NVIDIA DGX Spark: $4,699 لنسخة Founders Edition، وأُفيد بـ$6,950 لطراز 128 GB، و$4,999 لطراز 64 GB. مواصفات GB10 ولمن يناسب.",
+    "excerpt": "سعر NVIDIA DGX Spark: $4,699 لنسخة Founders Edition (2026-02-25)، وأُفيد بـ$6,950 لطراز 128 GB (2026-10-03)، و$4,999 لطراز 64 GB. مواصفات GB10.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/ar/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19271,7 +19271,7 @@
   {
     "lang": "ko",
     "title": "로컬 AI용 NVIDIA DGX Spark 가격과 사양",
-    "excerpt": "NVIDIA DGX Spark 가격: Founders Edition $4,699, 128GB 모델 $6,950 보도, 64GB 모델 $4,999부터. GB10 사양과 적합한 사용자를 정리했습니다.",
+    "excerpt": "NVIDIA DGX Spark 가격: Founders Edition $4,699(2026-02-25), 128GB $6,950 보도(2026-10-03), 64GB $4,999부터. GB10 사양.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
     "url": "/ko/local-llms/nvidia-dgx-spark-local-ai-workstation",
@@ -19522,7 +19522,7 @@
   },
   {
     "lang": "en",
-    "title": "GMKtec EVO-X2 Specs and Price: 128 GB at $3,499.99",
+    "title": "GMKtec EVO-X2 Specs and Price: 128 GB Listed at $3,499.99",
     "excerpt": "GMKtec EVO-X2 with Ryzen AI Max+ 395: $2,199.99 for 64 GB, $3,499.99 to $3,649.99 for 128 GB on GMKtec's US store, plus full specs and alternatives.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
@@ -19531,7 +19531,7 @@
   },
   {
     "lang": "de",
-    "title": "GMKtec EVO-X2: Preis und Specs, 128 GB ab 3.499,99 $",
+    "title": "GMKtec EVO-X2: Preis, Specs, 128 GB gelistet 3.499,99 $",
     "excerpt": "GMKtec EVO-X2 mit Ryzen AI Max+ 395: 2.199,99 $ für 64 GB, 3.499,99 bis 3.649,99 $ für 128 GB im US-Shop von GMKtec, dazu alle Specs und Alternativen.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
@@ -19540,7 +19540,7 @@
   },
   {
     "lang": "fr",
-    "title": "GMKtec EVO-X2 : prix et specs, 128 Go à $3,499.99",
+    "title": "GMKtec EVO-X2 : prix et specs, 128 Go affiché $3,499.99",
     "excerpt": "GMKtec EVO-X2 avec Ryzen AI Max+ 395 : $2,199.99 en 64 Go, $3,499.99 à $3,649.99 en 128 Go sur la boutique US de GMKtec, avec specs et alternatives.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
@@ -19567,7 +19567,7 @@
   },
   {
     "lang": "es",
-    "title": "GMKtec EVO-X2: precio y specs, 128 GB a $3,499.99",
+    "title": "GMKtec EVO-X2: precio y specs, 128 GB listado a $3,499.99",
     "excerpt": "GMKtec EVO-X2 con Ryzen AI Max+ 395: $2,199.99 con 64 GB y de $3,499.99 a $3,649.99 con 128 GB en la tienda de EE. UU. de GMKtec, más specs y alternativas.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
@@ -19576,7 +19576,7 @@
   },
   {
     "lang": "pt",
-    "title": "GMKtec EVO-X2: preço e specs, 128 GB a $3,499.99",
+    "title": "GMKtec EVO-X2: preço e specs, 128 GB listado a $3,499.99",
     "excerpt": "GMKtec EVO-X2 com Ryzen AI Max+ 395: $2,199.99 com 64 GB e de $3,499.99 a $3,649.99 com 128 GB na loja dos EUA da GMKtec, com specs e alternativas.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
@@ -19585,7 +19585,7 @@
   },
   {
     "lang": "ar",
-    "title": "GMKtec EVO-X2: السعر والمواصفات، 128 GB بـ$3,499.99",
+    "title": "GMKtec EVO-X2: السعر والمواصفات، 128 GB مدرج $3,499.99",
     "excerpt": "GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395: سعر 64 GB هو $2,199.99 و128 GB من $3,499.99 إلى $3,649.99 في متجر GMKtec الأمريكي، مع المواصفات والبدائل.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
@@ -19594,7 +19594,7 @@
   },
   {
     "lang": "ko",
-    "title": "GMKtec EVO-X2 가격·사양: 128GB $3,499.99",
+    "title": "GMKtec EVO-X2 가격: 128GB 게시 $3,499.99",
     "excerpt": "GMKtec EVO-X2(Ryzen AI Max+ 395) 가격: 미국 스토어 64GB $2,199.99, 128GB $3,499.99~$3,649.99. 전체 사양과 대안을 정리했습니다.",
     "publishDate": "2026-10-31",
     "dateModified": "2026-11-14",
