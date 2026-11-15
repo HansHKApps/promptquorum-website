@@ -27843,5 +27843,92 @@
       "t14": "2026-11-27",
       "t28": "2026-12-11"
     }
+  },
+  {
+    "id": "a989807f-745b-4bc5-8c4b-447fb813f480",
+    "slug": "/local-llms/local-llm-security-privacy-checklist",
+    "date": "2026-11-15T07:13:37.003Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Security 2026: 12-Point Checklist (Under 10 Min)",
+        "new": "Local LLM Security Checklist 2026: Is LM Studio Safe?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Secure your local LLM in under 10 minutes: 12-point checklist to disable telemetry, verify checksums, isolate port 11434, encrypt disk. GDPR and HIPAA ready.",
+        "new": "Is LM Studio safe? Is Ollama? 12-step local LLM security checklist: what each tool sends, the Ollama CVE-2026-7482 fix, telemetry and port 11434."
+      }
+    ],
+    "reason": "CTR 1.01% at pos 4.4 (10.6k impr): lead with the 'is LM Studio safe' / 'does LM Studio collect data' intent, add Ollama CVE-2026-7482 and tool-safety sections",
+    "queries": [
+      "is lm studio safe",
+      "does lm studio collect data",
+      "lm studio privacy",
+      "is ollama safe",
+      "local llm security",
+      "are local llms safe"
+    ],
+    "baseline": {
+      "position": 4.41,
+      "impressions": 10017,
+      "clicks": 100,
+      "ctr": 0.009983028850953379,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8d05966d-e4ec-4ec1-a557-f29156232431",
+    "slug": "/ja/local-llms/local-llm-security-privacy-checklist",
+    "date": "2026-11-15T07:13:37.108Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "(previous ja meta)",
+        "new": "LM StudioやOllamaは安全？ローカルLLMのセキュリティリスクと対策を12項目で解説"
+      }
+    ],
+    "reason": "ja adapted to GSC wording (ローカルLLM セキュリティ/安全性/リスク/対策)",
+    "queries": [
+      "ローカルllm セキュリティ",
+      "ローカル llm セキュリティ リスク",
+      "ローカルllm 安全性",
+      "ローカル llm セキュリティ 対策"
+    ],
+    "baseline": {
+      "position": 11.07,
+      "impressions": 718,
+      "clicks": 11,
+      "ctr": 0.01532033426183844,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4f84a3bb-f65d-4088-825d-e47b0a5f9df6",
+    "slug": "/de/local-llms/local-llm-security-privacy-checklist",
+    "date": "2026-11-15T07:13:37.210Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Lokales LLM in 10 Minuten absichern: 12-Punkte-Checkliste für Telemetrie, Checksummen, Port 11434 und Festplattenverschlüsselung. DSGVO und HIPAA.",
+        "new": "see de block metaDescription"
+      }
+    ],
+    "reason": "de adapted to GSC wording (LLM Sicherheit, lokal betreiben, sicher)",
+    "queries": [
+      "llm sicherheit",
+      "welches llm ist am sichersten",
+      "llm lokal betreiben"
+    ],
+    "baseline": {
+      "position": 6.7,
+      "impressions": 945,
+      "clicks": 16,
+      "ctr": 0.016931216931216932,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": null
   }
 ]
