@@ -46,6 +46,15 @@ export function getGscLastError(): string | null {
  * spaces instead of newlines. Rebuilds a clean PEM from the base64 body.
  */
 export function normalizePrivateKey(raw: string): string {
+  // The whole downloaded key file (JSON) may be pasted as the value: use its private_key field.
+  if (raw.trim().startsWith('{')) {
+    try {
+      const parsed = JSON.parse(raw) as { private_key?: string }
+      if (typeof parsed.private_key === 'string') raw = parsed.private_key
+    } catch {
+      /* fall through to the PEM repair below */
+    }
+  }
   const k = raw.trim().replace(/^["']|["']$/g, '').replace(/\\n/g, '\n')
   const m = k.match(/-----BEGIN ([A-Z ]*PRIVATE KEY)-----([\s\S]*?)-----END \1-----/)
   if (!m) return k

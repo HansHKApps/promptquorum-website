@@ -335,7 +335,7 @@
       ]
     },
     "local-llm-security-privacy-checklist": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-11-15",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -354,10 +354,6 @@
         {
           "url": "/images/local-llm-security-privacy-checklist-checklist-overview-hero-en.webp",
           "title": "Verify every item before working with sensitive or regulated data."
-        },
-        {
-          "url": "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-en.webp",
-          "title": "Ollama and Jan AI collect nothing by default; LM Studio has no telemetry per its policy; GPT4All telemetry is opt-in."
         }
       ]
     },
@@ -1470,7 +1466,7 @@
       ]
     },
     "best-gpus-for-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-15",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1485,16 +1481,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/best-gpus-for-local-llms-tier-speed-en.svg",
-          "title": "GPU speed by tier for 7B model inference: RTX 4070 Ti hits 80 tok/sec at $600 for the best price-to-performance, while the RTX 5090 tops out at 160 tok/sec for $1,999."
-        },
-        {
-          "url": "/images/best-gpus-for-local-llms-vram-fit-en.svg",
-          "title": "VRAM-to-model fit chart: a single 24 GB RTX 4090 handles dense 32-34B models at Q5, but Llama 3.3 70B needs 48 GB combined across two GPUs."
-        }
-      ]
+      "images": []
     },
     "run-70b-models-24gb-vram": {
       "dateModified": "2026-08-31",
@@ -3257,7 +3244,7 @@
       ]
     },
     "run-qwen-locally-guide-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-15",
       "lastFactChecked": null,
       "publishDate": "2026-05-16",
       "hasSections": true,
@@ -3275,11 +3262,11 @@
       "images": [
         {
           "url": "/images/run-qwen-locally-guide-2026-model-sizes-hero-en.webp",
-          "title": "Qwen 3 model sizes by VRAM and speed: 27B Q4_K_M needs 16 GB VRAM at ~35 tokens/sec, 14B needs 9 GB at ~60 tokens/sec, 7B needs 5 GB at ~80 tokens/sec, and 72B needs 42 GB."
+          "title": "Qwen model sizes for local use, with the Ollama download size of each build."
         },
         {
           "url": "/images/run-qwen-locally-guide-2026-setup-steps-hero-en.webp",
-          "title": "Five-step Ollama setup for Qwen 3.6 27B: install Ollama, pull qwen3.6:27b, fix num_ctx to 32768 in the Modelfile, build and run the model, then test the localhost:11434/v1 API endpoint — under 10 minutes total."
+          "title": "Five-step Ollama setup for Qwen: install, pull, set the context length, build and check, test the API."
         }
       ]
     },
