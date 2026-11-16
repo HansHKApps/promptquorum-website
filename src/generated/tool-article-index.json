@@ -11,6 +11,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "run-qwen-locally-guide-2026",
+        "title": "How to Run Qwen 3.6 and Qwen 3.8 Locally in 2026: Ollama and LM Studio Setup Guide",
+        "url": "/local-llms/run-qwen-locally-guide-2026",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-amd-mini-pc-local-llm-2026",
         "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
         "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/ai-notebook-review",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "browseros-review",
-        "title": "BrowserOS Review: Open-Source AI Browser With Local Ollama and LM Studio Support",
-        "url": "/power-local-llm/browseros-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dayflow-review",
-        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
-        "url": "/power-local-llm/dayflow-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 355,
+    "totalCount": 357,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-gpus-for-local-llms",
+        "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
+        "url": "/local-llms/best-gpus-for-local-llms",
+        "dateModified": "2026-11-15",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-11-13",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-android-guide",
-        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-android-guide",
-        "dateModified": "2026-11-13",
-        "tier": "about"
       }
     ],
-    "totalCount": 190,
+    "totalCount": 192,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 105,
+    "totalCount": 106,
     "capped": true
   },
   "LocalAI": {
@@ -877,6 +877,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "run-qwen-locally-guide-2026",
+        "title": "How to Run Qwen 3.6 and Qwen 3.8 Locally in 2026: Ollama and LM Studio Setup Guide",
+        "url": "/local-llms/run-qwen-locally-guide-2026",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "how-to-install-lm-studio",
         "title": "Install LM Studio: GUI Setup for macOS, Windows & Linux",
         "url": "/local-llms/how-to-install-lm-studio",
@@ -928,22 +944,6 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-android-guide",
-        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-android-guide",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
       }
@@ -1016,6 +1016,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "lm-studio-review",
         "title": "LM Studio Review: The GUI-First Local AI Desktop App",
@@ -1078,14 +1086,6 @@
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-10-28",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -1099,6 +1099,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
         "tier": "about"
       },
       {
@@ -1163,14 +1171,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "jan-review",
-        "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
-        "url": "/power-local-llm/jan-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       }
     ],
@@ -4292,7 +4292,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 42,
     "capped": true
   },
   "CrewAI": {
@@ -10074,9 +10074,25 @@
         "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "opendataloader-pdf-review",
+        "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
+        "url": "/power-local-llm/opendataloader-pdf-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Blinko": {
@@ -14647,6 +14663,198 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "OpenDataLoader PDF": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "opendataloader-pdf-review",
+        "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
+        "url": "/power-local-llm/opendataloader-pdf-review",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "marker-review",
+        "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
+        "url": "/power-local-llm/marker-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mineru-review",
+        "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
+        "url": "/power-local-llm/mineru-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 4,
+    "capped": false
+  },
+  "Docling": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openrag-review",
+        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
+        "url": "/power-local-llm/openrag-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "marker-review",
+        "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
+        "url": "/power-local-llm/marker-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mineru-review",
+        "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
+        "url": "/power-local-llm/mineru-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "opendataloader-pdf-review",
+        "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
+        "url": "/power-local-llm/opendataloader-pdf-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "xberg-review",
+        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
+        "url": "/power-local-llm/xberg-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "surfsense-review",
+        "title": "SurfSense Review: Open-Source Desktop NotebookLM Alternative",
+        "url": "/power-local-llm/surfsense-review",
+        "dateModified": "2026-10-21",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 8,
+    "capped": false
+  },
+  "Marker": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "marker-review",
+        "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
+        "url": "/power-local-llm/marker-review",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mineru-review",
+        "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
+        "url": "/power-local-llm/mineru-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-business-workflows-eu-compliance",
+        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
+        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
+        "dateModified": "2026-11-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-prompts-for-fiction-writers",
+        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
+        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
+        "dateModified": "2026-11-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 6,
+    "capped": false
+  },
+  "MinerU": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "mineru-review",
+        "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
+        "url": "/power-local-llm/mineru-review",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "marker-review",
+        "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
+        "url": "/power-local-llm/marker-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "AnyLLM": {
