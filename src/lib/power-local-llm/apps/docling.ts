@@ -1,24 +1,24 @@
 // Local AI App Directory — Docling (layer: document parsing / extraction library for RAG and LLM pipelines)
-// Added 2026-11-15. Facts read 2026-11-15 from github.com/DS4SD/docling (README, LICENSE, GitHub API repo + releases/latest)
-// and ds4sd.github.io/docling (documentation). Not tested hands-on.
-// WHAT: open-source document parser by IBM Research; PDF, DOCX, PPTX, XLSX, HTML, EPUB, images (PNG/JPEG/TIFF), LaTeX and more in,
+// Added 2026-11-15. Facts read 2026-11-15 from github.com/docling-project/docling (README, LICENSE, GitHub API repo + releases/latest; org moved from DS4SD, re-verified 2026-11-16)
+// and docling-project.github.io/docling (documentation). Not tested hands-on.
+// WHAT: open-source document parser started by IBM Research Zurich, hosted by the LF AI & Data Foundation; PDF, DOCX, PPTX, XLSX, HTML, EPUB, images (PNG/JPEG/TIFF), LaTeX and more in,
 // Markdown / JSON (with bounding boxes) / HTML / DocLang / DocTags / WebVTT out; library + CLI + REST API server.
-// MCP: README "Connect to any agent using the MCP server" — MCP server is included.
-// MAKER: GitHub org DS4SD = IBM Research; IBM Corp maintains the project. IBM Corp privacy policy at ibm.com/privacy names New York/USA.
+// MCP: README "Connect to any agent using the MCP server" — MCP is the separate docling-mcp package (uvx --from=docling-mcp docling-mcp-server), docs https://docling-project.github.io/docling/usage/mcp/.
+// MAKER: repo github.com/docling-project/docling, a project hosted by the LF AI & Data Foundation; started by the AI for knowledge team at IBM Research Zurich (re-verified 2026-11-16).
 // LICENSE: MIT (GitHub API spdx_id + LICENSE file, 2026-11-15).
 // PRICE = free: fully open-source, no paid tier.
 // LOCALITY = local: no cloud required; models downloaded from Hugging Face on first run, cached locally thereafter.
 // HARDWARE: no RAM or VRAM figure published in README; GPU optional for layout model but not required; not stated clearly.
 // PLATFORMS: Python 3.10+, x86_64 and arm64, README 2026-11-15; mac/linux/win via PyPI.
 // RELEASES: v2.150.1 published 2026-11-14 (GitHub Releases API); repo pushed 2026-11-15.
-// HQ FLAG: hqCountry 'US' (IBM Corp, maintainer org DS4SD = IBM Research; IBM Corp privacy policy at ibm.com/privacy names New York/USA),
-// hqCountrySource 'https://www.ibm.com/privacy'.
+// HQ FLAG: none (removed 2026-11-16). The project sits under docling-project / LF AI & Data Foundation; ibm.com/privacy is not a valid basis for a project HQ country.
+// Leave hqCountry / hqCountrySource unset unless a primary source states a clear HQ country.
 // compare (added 2026-11-15, segment 'document-parsing' in compare-schema.ts), every value read 2026-11-15 from README:
 //   inputFormats  'PDF, DOCX, PPTX, XLSX, HTML, EPUB, images'
 //   outputFormats 'Markdown', 'JSON', 'HTML', 'DocLang', 'DocTags'
 //   ocr true       <- README: "Extensive OCR support for scanned PDFs and images"
 //   tableExtraction true <- README: "table structure" understanding
-//   boundingBoxes true   <- DoclingDocument JSON carries bbox per element, ds4sd.github.io/docling
+//   boundingBoxes true   <- DoclingDocument JSON carries bbox per element, docling-project.github.io/docling
 //   languageBindings 1   <- Python only (also CLI and API server but not language bindings)
 //   mcp true       <- README: "Connect to any agent using the MCP server"
 // verdict: omitted (the review carries the verdict). Stars: GitHub API 2026-11-15 (see `stars`); never typed into article text (starsFor).
@@ -37,38 +37,36 @@ export const app: ToolRecord = {
   license: 'MIT', // GitHub API spdx_id + LICENSE file, 2026-11-15
   price: 'free', // fully open-source, no paid tier
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // no RAM/VRAM figure published; GPU optional for layout model, not stated clearly
-  stars: 70611, // github.com/DS4SD/docling, GitHub API 2026-11-15
+  stars: 70611, // github.com/docling-project/docling, GitHub API 2026-11-15
   addedDate: '2026-11-15',
   status: 'listed',
   uses: ['build', 'docs'],
-  url: 'ds4sd.github.io/docling',
+  url: 'docling-project.github.io/docling',
   storeLinks: {
-    web: 'https://ds4sd.github.io/docling',
-    github: 'https://github.com/DS4SD/docling',
+    web: 'https://docling-project.github.io/docling',
+    github: 'https://github.com/docling-project/docling',
   },
   installEffort: 'one-command',
   installEvidence: 'README (read 2026-11-15): pip install docling, Python 3.10+; no Java dependency; models downloaded from Hugging Face on first run, cached locally thereafter. GitHub Releases v2.150.1 ships only source/wheel via PyPI, no GUI installer.',
-  hqCountry: 'US', // IBM Corp, DS4SD = IBM Research; IBM Corp privacy policy at ibm.com/privacy names New York/USA, 2026-11-15
-  hqCountrySource: 'https://www.ibm.com/privacy',
   tagline: {
-    en: 'Open-source document parser by IBM Research that converts PDF, DOCX, PPTX and more into structured Markdown, JSON and HTML with bounding boxes and OCR; runs fully locally with an MCP server for agent use',
-    de: 'Von IBM Research entwickelter Open-Source-Dokumenten-Parser, der PDF, DOCX, PPTX und weitere Formate in strukturiertes Markdown, JSON und HTML mit Begrenzungsrahmen und OCR umwandelt; läuft vollständig lokal mit einem MCP-Server',
-    fr: 'Analyseur de documents open source d\u2019IBM Research qui convertit PDF, DOCX, PPTX et d\u2019autres formats en Markdown structuré, JSON et HTML avec cadres de délimitation et OCR ; fonctionne entièrement en local avec un serveur MCP',
-    ja: 'IBM Researchによるオープンソースのドキュメントパーサー。PDF、DOCX、PPTXなどを構造化されたMarkdown・JSON・HTMLにバウンディングボックス付きで変換。OCR対応・MCPサーバー搭載でフルローカル動作',
-    zh: 'IBM Research 开发的开源文档解析器，可将 PDF、DOCX、PPTX 等转换为带边界框的结构化 Markdown、JSON 和 HTML，支持 OCR，完全本地运行，内置 MCP 服务器',
-    es: 'Analizador de documentos de código abierto de IBM Research que convierte PDF, DOCX, PPTX y otros formatos en Markdown estructurado, JSON y HTML con cuadros delimitadores y OCR; funciona totalmente en local con servidor MCP',
-    pt: 'Analisador de documentos de código aberto da IBM Research que converte PDF, DOCX, PPTX e mais em Markdown estruturado, JSON e HTML com caixas delimitadoras e OCR; roda totalmente local com servidor MCP',
-    ar: 'محلّل مستندات مفتوح المصدر من IBM Research يحوّل PDF وDOCX وPPTX وغيرها إلى Markdown منظم وJSON وHTML مع مربعات إحاطة وOCR؛ يعمل محليًا بالكامل مع خادم MCP',
-    ko: 'IBM Research의 오픈소스 문서 파서로, PDF·DOCX·PPTX 등을 경계 상자 포함 구조화 Markdown·JSON·HTML로 변환하며 OCR 지원, MCP 서버 탑재로 완전 로컬 실행',
+    en: 'Open-source document parser started by IBM Research and hosted by the LF AI & Data Foundation that converts PDF, DOCX, PPTX and more into structured Markdown, JSON and HTML with bounding boxes and OCR; parses on your machine, with MCP via the separate docling-mcp package',
+    de: 'Von IBM Research gestarteter, von der LF AI & Data Foundation gehosteter Open-Source-Dokumenten-Parser, der PDF, DOCX, PPTX und weitere Formate in strukturiertes Markdown, JSON und HTML mit Begrenzungsrahmen und OCR umwandelt; verarbeitet lokal, MCP über das separate Paket docling-mcp',
+    fr: 'Analyseur de documents open source lancé par IBM Research et hébergé par la LF AI & Data Foundation, qui convertit PDF, DOCX, PPTX et d\u2019autres formats en Markdown structuré, JSON et HTML avec cadres de délimitation et OCR ; traite les documents en local, MCP via le paquet séparé docling-mcp',
+    ja: 'IBM Research が開始し LF AI & Data Foundation がホストするオープンソースのドキュメントパーサー。PDF、DOCX、PPTXなどを構造化されたMarkdown・JSON・HTMLにバウンディングボックス付きで変換。OCR対応、ローカルで処理、MCPは別パッケージ docling-mcp で提供',
+    zh: 'IBM Research 发起、LF AI & Data Foundation 托管的开源文档解析器，可将 PDF、DOCX、PPTX 等转换为带边界框的结构化 Markdown、JSON 和 HTML，支持 OCR，在本机处理文档，MCP 通过独立软件包 docling-mcp 提供',
+    es: 'Analizador de documentos de código abierto iniciado por IBM Research y alojado por la LF AI & Data Foundation, que convierte PDF, DOCX, PPTX y otros formatos en Markdown estructurado, JSON y HTML con cuadros delimitadores y OCR; procesa en local, MCP mediante el paquete aparte docling-mcp',
+    pt: 'Analisador de documentos de código aberto iniciado pela IBM Research e hospedado pela LF AI & Data Foundation, que converte PDF, DOCX, PPTX e mais em Markdown estruturado, JSON e HTML com caixas delimitadoras e OCR; processa localmente, MCP pelo pacote separado docling-mcp',
+    ar: 'محلّل مستندات مفتوح المصدر بدأته IBM Research وتستضيفه LF AI & Data Foundation، يحوّل PDF وDOCX وPPTX وغيرها إلى Markdown منظم وJSON وHTML مع مربعات إحاطة وOCR؛ يعالج المستندات محليًا، وMCP عبر الحزمة المنفصلة docling-mcp',
+    ko: 'IBM Research가 시작하고 LF AI & Data Foundation이 호스팅하는 오픈소스 문서 파서로, PDF·DOCX·PPTX 등을 경계 상자 포함 구조화 Markdown·JSON·HTML로 변환하며 OCR 지원, 로컬에서 처리하며 MCP는 별도 패키지 docling-mcp로 제공',
   },
   reviewSlug: 'docling-review',
   pqReview: {
     date: '2026-11-15',
     version: 'v2.150.1',
-    versionSourceUrl: 'https://github.com/DS4SD/docling/releases/tag/v2.150.1',
+    versionSourceUrl: 'https://github.com/docling-project/docling/releases/tag/v2.150.1',
   },
-  compare: { inputFormats: 'PDF, DOCX, PPTX, XLSX, HTML, EPUB, images', outputFormats: ['Markdown', 'JSON', 'HTML', 'DocLang', 'DocTags'], ocr: true, tableExtraction: true, boundingBoxes: true, languageBindings: 1, mcp: true }, // verified 2026-11-15 from README and ds4sd.github.io/docling, see header
+  compare: { inputFormats: 'PDF, DOCX, PPTX, XLSX, HTML, EPUB, images', outputFormats: ['Markdown', 'JSON', 'HTML', 'DocLang', 'DocTags'], ocr: true, tableExtraction: true, boundingBoxes: true, languageBindings: 1, mcp: true }, // verified 2026-11-15 from README and docling-project.github.io/docling, see header
   lastVerifiedDate: '2026-11-15',
   lastUpstreamUpdate: '2026-11-15', // GitHub API: pushed_at 2026-11-15 (latest release v2.150.1 on 2026-11-14), read 2026-11-15
-  lastUpstreamUpdateSource: 'https://github.com/DS4SD/docling',
+  lastUpstreamUpdateSource: 'https://github.com/docling-project/docling',
 }
