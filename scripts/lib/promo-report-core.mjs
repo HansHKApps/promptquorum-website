@@ -23,6 +23,22 @@ export const USAGE_EVENT = {
   mcp: null,
 }
 
+/**
+ * Event name = `<target>_promo_<kind>` with a snake_case target (ask_hans_promo_view, power_mode_promo_open,
+ * directory_promo_click, mcp_promo_landing, ...). Same rule as promoEventName() in src/lib/tracking/promo.ts.
+ * The old names (promo_view / promo_click / promo_open) are retired: the report does not read them.
+ */
+export function promoEventName(target, kind) {
+  return `${target.replace('-', '_')}_promo_${kind}`
+}
+
+/** Landing events are keyed by their `placement` prop value ("P1"), not by page (the landing page is /directory or /mcp-stats). */
+export function landingsFor(w, target, placement = null) {
+  const m = w?.events?.[promoEventName(target, 'landing')]
+  if (!m) return null
+  return placement ? (m[placement] ?? 0) : Object.values(m).reduce((a, n) => a + n, 0)
+}
+
 /** Sum a {path: n} map per group path. */
 export function sumByGroup(map = {}) {
   const out = {}
@@ -43,9 +59,9 @@ const div = (a, b) => (b > 0 ? a / b : null)
 export function groupMetrics(w, gp, target) {
   const g = (name) => sumByGroup(w.events?.[name])[gp] ?? 0
   const pv = sumByGroup(w.pageviews)[gp] ?? 0
-  const views = g('promo_view')
-  const clicks = g('promo_click')
-  const opens = g('promo_open')
+  const views = g(promoEventName(target, 'view'))
+  const clicks = g(promoEventName(target, 'click'))
+  const opens = g(promoEventName(target, 'open'))
   const ue = USAGE_EVENT[target]
   const usage = ue ? g(ue) : null
   return {
@@ -142,6 +158,10 @@ export function analyse({ groups, pilot, baseline, opts }) {
     const pv = sum((r) => r.m.pv), views = sum((r) => r.m.views), clicks = sum((r) => r.m.clicks), opens = sum((r) => r.m.opens)
     const ue = USAGE_EVENT[c.target]
     const usage = ue ? sum((r) => r.m.usage) : null
+    // Click-to-landing (Directory and MCP only: those links leave the page and carry ?via=). Landings are counted on
+    // /directory and /mcp-stats and keyed by placement, so one cell = target + placement (MCP pooled over placements).
+    const hasLanding = c.target === 'directory' || c.target === 'mcp'
+    const landings = hasLanding ? landingsFor(pilot, c.target, c.target === 'mcp' ? null : c.rows[0].placement) : null
     // matched pairs with a control (hubs have none)
     const paired = c.rows.filter((r) => r.control)
     const pairsFor = (w) => paired.map((r) => {
@@ -173,7 +193,8 @@ export function analyse({ groups, pilot, baseline, opts }) {
     }
     out.push({
       key: c.key, target: c.target, groups: c.rows.length, pairs: paired.length,
-      pv, views, clicks, opens, usage,
+      pv, views, clicks, opens, usage, landings,
+      landingRate: landings == null ? null : div(landings, clicks),
       reach: div(views, pv), ctr: div(clicks, views),
       openRate: c.target === 'ask-hans' || c.target === 'power-mode' ? div(opens, clicks) : null,
       usagePerClick: usage == null ? null : div(usage, clicks),
@@ -202,7 +223,7 @@ export function analyse({ groups, pilot, baseline, opts }) {
 export function localeTable(groups, pilot, minViews = 100) {
   const acc = {}
   for (const g of groups) {
-    const v = sumGroupByLocale(pilot.events?.promo_view, g.path), c = sumGroupByLocale(pilot.events?.promo_click, g.path)
+    const v = sumGroupByLocale(pilot.events?.[promoEventName(g.target, 'view')], g.path), c = sumGroupByLocale(pilot.events?.[promoEventName(g.target, 'click')], g.path)
     for (const l of ['en', ...LOCALES]) {
       acc[l] ??= { views: 0, clicks: 0 }
       acc[l].views += v[l] ?? 0

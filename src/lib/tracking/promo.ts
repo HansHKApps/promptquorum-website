@@ -2,7 +2,14 @@
 // Every event carries the same props so target x placement x variant x cluster x locale x device can be sliced.
 import type { PromoPlacement, PromoTarget, PromoVariant } from '@/lib/promo/types'
 
-export type PromoEvent = 'promo_view' | 'promo_click'
+/** What happened in the slot; the event name is `<target>_promo_<kind>` (see promoEventName). */
+export type PromoEvent = 'view' | 'click'
+export type PromoEventKind = PromoEvent | 'open'
+
+/** `<target>_promo_<kind>` with a snake_case target: ask_hans_promo_view, power_mode_promo_open, directory_promo_click, ... */
+export function promoEventName(target: PromoTarget, kind: PromoEventKind | 'landing'): string {
+  return `${target.replace('-', '_')}_promo_${kind}`
+}
 
 export interface PromoContext {
   target: PromoTarget
@@ -41,7 +48,7 @@ export function promoSource(target: PromoTarget, placement: PromoPlacement): str
 export function trackPromo(event: PromoEvent, ctx: PromoContext): void {
   try {
     const page = window.location.pathname
-    window.umami?.track(event, {
+    window.umami?.track(promoEventName(ctx.target, event), {
       target: ctx.target,
       placement: ctx.placement,
       variant: ctx.variant,
@@ -65,14 +72,39 @@ export function trackPromoOpen(source: string): void {
     const m = /^promo_(ask_hans|power_mode)_(p[1-5])$/.exec(source)
     if (!m) return
     const page = window.location.pathname
-    window.umami?.track('promo_open', {
-      target: m[1].replace('_', '-'),
+    const target = m[1].replace('_', '-') as PromoTarget
+    window.umami?.track(promoEventName(target, 'open'), {
+      target,
       placement: m[2].toUpperCase(),
       source,
       cluster: clusterFromPath(page),
       locale: localeFromPath(page),
       page,
       device: deviceKind(),
+    })
+  } catch {
+    // analytics must never block the visitor
+  }
+}
+
+const LANDING_VIA = /^promo_(directory|mcp)_(p[1-5])$/
+
+/**
+ * Arrival from a Directory / MCP promo slot: fires `directory_promo_landing` / `mcp_promo_landing` once per page view
+ * when the URL carries `via=promo_<target>_<placement>`. Umami's path metric drops the query string, so the click
+ * alone cannot be matched to an arrival. Props: target, placement, locale, page.
+ */
+export function trackPromoLanding(): void {
+  try {
+    const m = LANDING_VIA.exec(new URLSearchParams(window.location.search).get('via') ?? '')
+    if (!m) return
+    const target = m[1] as PromoTarget
+    const page = window.location.pathname
+    window.umami?.track(promoEventName(target, 'landing'), {
+      target,
+      placement: m[2].toUpperCase(),
+      locale: localeFromPath(page),
+      page,
     })
   } catch {
     // analytics must never block the visitor

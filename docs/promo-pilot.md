@@ -16,9 +16,10 @@ Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Ru
 
 | Event | When | Props |
 |---|---|---|
-| `promo_view` | once per page view when >= 50% of the slot is visible for >= 1 s | `target`, `placement`, `variant`, `cluster`, `locale`, `page`, `device` |
-| `promo_click` | CTA click, all four targets | same |
-| `promo_open` | Ask Hans / Power Mode window actually opened by a slot (not when already open); counted for every visitor, whatever their Ask Hans consent choice | `target`, `placement`, `source`, `cluster`, `locale`, `page`, `device` |
+| `<target>_promo_view` | once per page view when >= 50% of the slot is visible for >= 1 s. `<target>` = `ask_hans`, `power_mode`, `directory`, `mcp` (e.g. `ask_hans_promo_view`) | `target`, `placement`, `variant`, `cluster`, `locale`, `page`, `device` |
+| `<target>_promo_click` | CTA click, all four targets (e.g. `mcp_promo_click`) | same |
+| `ask_hans_promo_open`, `power_mode_promo_open` | Ask Hans / Power Mode window actually opened by a slot (not when already open); counted for every visitor, whatever their Ask Hans consent choice | `target`, `placement`, `source`, `cluster`, `locale`, `page`, `device` |
+| `directory_promo_landing`, `mcp_promo_landing` | arrival on `/directory` or `/mcp-stats` (all locales) with `via=promo_<target>_<placement>` in the URL, once per page view. Needed because Umami's path metric drops the query string | `target`, `placement`, `locale`, `page` (the landing page, not the page that held the slot) |
 | `ask_hans_question` (existing) | a question was submitted in Ask Hans | `source_page` |
 | `power_report_started` | a Power Mode report was started | `process` (fixed id), `source_page`, `locale` |
 | `power_report_completed` | a report finished and was shown | same |
@@ -29,19 +30,23 @@ Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Ru
 **Downstream**
 | Target | Where to read it |
 |---|---|
-| Ask Hans / Power Mode (in place) | **Primary:** Umami `promo_open`. **Secondary:** Redis daily counters of the Ask Hans event route (CONSENT-ONLY, so they undercount: a first-time visitor who opens the tool from a banner sees the consent step first and is not counted; the ~17/day baseline may or may not share this filter, so compare lift with care): `askhans:day:<date>` field `open_src:promo_<target>_<placement>` (e.g. `open_src:promo_ask_hans_p2`, `open_src:promo_power_mode_p1`) next to `total_opens`. Then questions (`q:*`) and Power Mode reports (`power:*`, `total_power`). The counters are per day, not per session: "open-to-use" is read as promo opens vs. questions/reports on the same days (an estimate, not a per-session join; no visitor ID is stored for opens). |
-| Directory / MCP (links) | Link carries `?via=promo_<target>_<placement>` (e.g. `via=promo_directory_p3`). In Umami filter pageviews by URL query `via`. Umami normally records the landing URL with its query string (not yet verified on this proxy setup). |
+| Ask Hans / Power Mode (in place) | **Primary:** Umami `ask_hans_promo_open` / `power_mode_promo_open`. **Secondary:** Redis daily counters of the Ask Hans event route (CONSENT-ONLY, so they undercount: a first-time visitor who opens the tool from a banner sees the consent step first and is not counted; the ~17/day baseline may or may not share this filter, so compare lift with care): `askhans:day:<date>` field `open_src:promo_<target>_<placement>` (e.g. `open_src:promo_ask_hans_p2`, `open_src:promo_power_mode_p1`) next to `total_opens`. Then questions (`q:*`) and Power Mode reports (`power:*`, `total_power`). The counters are per day, not per session: "open-to-use" is read as promo opens vs. questions/reports on the same days (an estimate, not a per-session join; no visitor ID is stored for opens). |
+| Directory / MCP (links) | Link carries `?via=promo_<target>_<placement>` (e.g. `via=promo_directory_p3`). Umami's path metric does not show the query string, so arrival is measured with the `directory_promo_landing` / `mcp_promo_landing` events (values of the `placement` prop); click-to-landing = landing / click of the same target and placement (MCP pooled over placements). |
 | MCP server hits | Server-side hits on `/api/mcp` and `/mcp.json`: NOT verified as accessible. Check Vercel runtime logs before relying on it. |
+
+## Event renaming (retired names)
+The events were renamed to `<target>_promo_<view|click|open>` (snake_case target). The old names `promo_view`, `promo_click`, `promo_open` are retired: nothing emits them and the report reads only the new names, with no compatibility code. **The measurement window restarts on the deploy date of the rename**; earlier Umami data under the old names is not merged into the report. Props and `via=promo_<target>_<placement>` URLs are unchanged. The Redis `promo_shown` and `open_src:*` keys keep their names.
 
 ## Metrics (computed by `scripts/promo-pilot-report.mjs`, per page group = an English path plus its 8 locale versions)
 | Metric | Definition |
 |---|---|
-| Reach | `promo_view` / page views of the treatment pages |
-| CTR | `promo_click` / `promo_view` |
-| Open rate | `promo_open` / `promo_click` (Ask Hans, Power Mode) |
+| Reach | `<target>_promo_view` / page views of the treatment pages |
+| CTR | `<target>_promo_click` / `<target>_promo_view` |
+| Open rate | `<target>_promo_open` / `<target>_promo_click` (Ask Hans, Power Mode) |
+| Click-to-landing | `<target>_promo_landing` / `<target>_promo_click` (Directory, MCP) |
 | Usage per click, usage per view | usage events on the treatment pages / clicks, / slot views. Usage = `ask_hans_question` (Ask Hans), `power_report_started` (Power Mode), `directory_app_view` (Directory). MCP has no usage event on the site (it happens in the visitor's own AI): MCP is judged on reach and CTR only. |
 | **Headline: incremental adoption** | usage events per 1,000 page views on treatment pages minus the matched control pages, in the pilot window, and the same difference over the 28 days before launch, and their difference (before/after). 95% intervals by bootstrap over matched page-group pairs (the cluster is the pair). Intervals are refused with fewer than 3 pairs. |
-| Ask Hans lift | `promo_open` per day vs. the ~17/day baseline (state the window; the Redis counters behind that baseline are consent-only) |
+| Ask Hans lift | `ask_hans_promo_open` per day vs. the ~17/day baseline (state the window; the Redis counters behind that baseline are consent-only) |
 | Page health, SEO health | not in the script: engagement / Core Web Vitals, and Search Console clicks and impressions pilot vs. control (28 days before vs. after). Check before scaling a winner. |
 
 Report by locale only where a cell has >= 100 slot views; the rest is pooled and flagged.
