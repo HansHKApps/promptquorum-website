@@ -41,6 +41,7 @@ import { PageTracker } from '@/components/PageTracker'
 import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
 import { OutboundUtmTagger } from '@/components/OutboundUtmTagger'
 import { AdblockCheck } from '@/components/AdblockCheck'
+import { PromoLanding } from '@/components/promo/PromoLanding'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { ClarityLoader } from '@/components/ClarityLoader'
 import { ConsentEnforcer } from '@/components/ConsentEnforcer'
@@ -254,6 +255,7 @@ export default function RootLayout({
           <ClarityRouteTracker />
           <OutboundUtmTagger />
           <AdblockCheck />
+          <PromoLanding />
           <OneSignalInit />
           <main id="main">{children}</main>
           <AiDiscussBar />
