@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['mineru review', 'mineru pdf parser', 'mineru install', 'mineru vs docling', 'mineru latex output'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.en('mineru')} GitHub stars) converts PDF, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, HTML, LaTeX, DOCX and EPUB for RAG pipelines; it parses locally by default, includes GPU acceleration and cross-page table merging, and is free below its licence thresholds (see Licence and Price).** It is a Python library and CLI (the README describes no desktop installer); install with \`pip install mineru\`.`,
+    leadAnswerBlock: `**MinerU (${st.en('mineru')} GitHub stars) converts PDF, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, HTML, LaTeX, DOCX and EPUB for RAG; it parses locally by default, offers GPU acceleration and cross-page table merging, and is free below its licence thresholds (see Licence and Price).** It is a Python library and CLI (the README describes no desktop installer); install with \`pip install mineru\`.`,
     quickAnswerTop: {
       en: {
         question: 'Is MinerU the right document parser for my RAG pipeline?',
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'MinerU is a Python library by OpenDataLab, licensed under the MinerU Open Source License (Apache 2.0 plus additional terms), that converts PDF, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, HTML, LaTeX, DOCX and EPUB for RAG pipelines, with GPU acceleration, cross-page table merging and block-level bounding boxes.' },
-          { type: 'plain-terms', text: 'You give it a document file; it reads structure, text, tables and figures — merging tables that span pages — and writes Markdown or LaTeX that an LLM or RAG system can consume. By default, parsing runs on your machine and documents are not uploaded; remote parsing needs explicit configuration.' },
+          { type: 'plain-terms', text: 'You give it a document file; it reads structure, text, tables and figures — merging tables that span pages — and writes Markdown or LaTeX that an LLM or RAG system can consume. Per the README, parsing runs on your machine by default and documents are not uploaded; remote parsing needs explicit configuration.' },
         ],
         items: [
           `MinerU Open Source License (Apache 2.0 plus terms); ${st.en('mineru')} GitHub stars; maintained by OpenDataLab.`,
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Data Flow',
         items: [
-          'By default, parsing runs on your machine and documents are not uploaded; remote parsing needs explicit configuration.',
+          'Per the README, parsing runs on your machine by default and documents are not uploaded; remote parsing needs explicit configuration.',
           'A remote/cloud mode exists but requires explicit configuration — it is not the default.',
           'Setting up local parsing may require model downloads (the README lists roughly 0.8–3 GB depending on tier), so the first setup needs a network connection. The README states that the Doclib component includes usage and diagnostic telemetry, initially enabled and excluding document contents, extracted text, file names and search queries; disable it with `mineru telemetry disable` or MINERU_TELEMETRY_DISABLED=1 in the Doclib server environment.',
           'The OpenDataLab GitHub organisation lists its location as China (GitHub profile). The hosted service at [mineru.net](https://mineru.net) links a privacy policy and user agreement in its footer; read them before sending confidential documents to any remote mode. Local parsing does not upload documents.',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How do I install MinerU?', a: 'Run `pip install mineru` in a Python 3.11–3.14 environment. A virtual environment is recommended. The README does not describe a desktop installer.' },
           { q: 'Can MinerU handle scanned PDFs?', a: 'Yes. MinerU includes model-based OCR for scanned PDFs and image-only documents.' },
           { q: 'What output formats does MinerU produce?', a: 'Markdown (default), HTML, LaTeX, DOCX and EPUB (among the export targets listed in the README; the README says each CLI/API exposes a subset).' },
-          { q: 'Does MinerU have an MCP server?', a: 'MinerU has an "agent skill" system but no explicit MCP protocol as of v4.2.2. For MCP integration, consider Docling.' },
+          { q: 'Does MinerU have an MCP server?', a: 'The README describes no MCP server as of v4.2.2. For MCP integration, consider Docling\'s separate docling-mcp package.' },
           { q: 'Who maintains MinerU?', a: 'OpenDataLab maintains the GitHub repository.' },
           { q: 'Does MinerU extract tables?', a: 'Yes. MinerU performs cross-page table merging — tables that span multiple pages are detected and reconstructed as single tables in output.' },
           { q: 'What version is current?', a: 'v4.2.2, released 2026-11-13 (GitHub Releases). PromptQuorum verified this on 2026-11-15.' },
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['mineru rezension', 'mineru pdf parser', 'mineru install', 'mineru latex ausgabe'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.de('mineru')} GitHub-Sterne) wandelt PDF, DOCX, PPTX, XLSX, HTML, EPUB und Bilder in Markdown, HTML, LaTeX, DOCX und EPUB um; standardmäßig lokal, kostenlos unter der MinerU Open Source License (Apache 2.0 mit Zusatzbedingungen), mit GPU-Beschleunigung und seitenübergreifender Tabellenzusammenführung.** MinerU ist eine Python-Bibliothek und CLI (im README ist kein Desktop-Installer beschrieben); Installation: \`pip install mineru\`.`,
+    leadAnswerBlock: `**MinerU (${st.de('mineru')} GitHub-Sterne) wandelt PDF, DOCX, PPTX, XLSX, HTML, EPUB und Bilder in Markdown, HTML, LaTeX, DOCX und EPUB um; standardmäßig lokal, unterhalb der Lizenzschwellen kostenlos (MinerU Open Source License), mit GPU-Beschleunigung und seitenübergreifender Tabellenzusammenführung.** MinerU ist eine Python-Bibliothek und CLI (im README ist kein Desktop-Installer beschrieben); Installation: \`pip install mineru\`.`,
     quickAnswerTop: {
       de: {
         question: 'Ist MinerU der richtige Parser für meine RAG-Pipeline?',
@@ -254,10 +254,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Welche Ausgabeformate unterstützt MinerU?', a: 'Markdown (Standard), HTML, LaTeX, DOCX und EPUB (unter den im README aufgeführten Exportzielen; laut README bietet jede CLI/API nur einen Teil davon).' },
           { q: 'Hat MinerU einen MCP-Server?', a: 'Das README beschreibt für v4.2.2 keinen MCP-Server. Für MCP-Integration eignet sich Docling (separates Paket docling-mcp).' },
           { q: 'Wer entwickelt MinerU?', a: 'OpenDataLab pflegt das GitHub-Repository.' },
-          { q: 'Ist MinerU DSGVO-konform nutzbar?', a: 'Ob Ihr Einsatz DSGVO-konform ist, hängt von Rechtsgrundlage, technisch-organisatorischen Maßnahmen und ggf. einer Datenschutz-Folgenabschätzung ab. Im lokalen Modus werden Dokumente nicht an externe Dienste hochgeladen, was die Prüfung eines Drittlandtransfers für diesen Schritt vereinfacht. Dies ist keine Rechtsberatung; sprechen Sie mit Ihrem Datenschutzbeauftragten.' },
+          { q: 'Ist MinerU DSGVO-konform nutzbar?', a: 'Ob Ihr Einsatz DSGVO-konform ist, hängt von Rechtsgrundlage, technisch-organisatorischen Maßnahmen und ggf. einer Datenschutz-Folgenabschätzung ab. Laut README werden Dokumente im lokalen Standardmodus nicht hochgeladen (Modell-Downloads und die Doclib-Telemetrie ohne Dokumentinhalte bleiben davon unberührt), was die Prüfung eines Drittlandtransfers für diesen Schritt vereinfachen kann. Dies ist keine Rechtsberatung; sprechen Sie mit Ihrem Datenschutzbeauftragten.' },
           { q: 'Welche Version ist aktuell?', a: 'v4.2.2, veröffentlicht am 13. November 2026 (GitHub Releases). PromptQuorum hat dies am 15. November 2026 geprüft.' },
           { q: 'Führt MinerU seitenübergreifende Tabellen zusammen?', a: 'Ja. Tabellen, die sich über mehrere PDF-Seiten erstrecken, werden erkannt und als eine einzige Tabelle in der Ausgabe zusammengeführt.' },
-          { q: 'Eignet sich MinerU für Mittelstandsunternehmen?', a: 'Der lokale Modus verarbeitet Dokumente auf der eigenen Hardware. Python 3.11–3.14 muss in der IT-Infrastruktur vorhanden sein; Eine GPU ist optional; sie kann die Verarbeitung großer Dokumentenmengen beschleunigen (laut README etwa 2–3× CPU-Geschwindigkeit bei repräsentativen Inferenz-Workloads).' },
+          { q: 'Eignet sich MinerU für Mittelstandsunternehmen?', a: 'Der lokale Modus verarbeitet Dokumente auf der eigenen Hardware. Python 3.11–3.14 muss in der IT-Infrastruktur vorhanden sein; eine GPU ist optional; sie kann die Verarbeitung großer Dokumentenmengen beschleunigen (laut README etwa 2–3× CPU-Geschwindigkeit bei repräsentativen Inferenz-Workloads).' },
         ],
       },
       sources: { id: 'sources', title: 'Quellen', items: ['[github.com/opendatalab/MinerU](https://github.com/opendatalab/MinerU) — README und Release-Verlauf, gelesen 2026-11-15.', '[opendatalab.com](https://opendatalab.com) — Projektwebsite, gelesen 2026-11-15.'] },
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['avis mineru', 'mineru pdf parser', 'mineru install', 'mineru latex sortie'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.fr('mineru')} étoiles GitHub) convertit PDF, DOCX, PPTX, XLSX, HTML, EPUB et images en Markdown, HTML, LaTeX, DOCX et EPUB\u00a0; fonctionne en local par défaut, gratuit sous la MinerU Open Source License (Apache 2.0 avec conditions supplémentaires), avec accélération GPU et fusion de tableaux inter-pages.** Installation\u00a0: \`pip install mineru\`.`,
+    leadAnswerBlock: `**MinerU (${st.fr('mineru')} étoiles GitHub) convertit PDF, DOCX, PPTX, XLSX, HTML, EPUB et images en Markdown, HTML, LaTeX, DOCX et EPUB\u00a0; fonctionne en local par défaut, gratuit sous les seuils de la MinerU Open Source License (Apache 2.0 avec conditions supplémentaires), avec accélération GPU et fusion de tableaux inter-pages.** Installation\u00a0: \`pip install mineru\`.`,
     quickAnswerTop: {
       fr: {
         question: 'MinerU est-il le bon analyseur pour mon pipeline RAG\u00a0?',
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['reseña mineru', 'mineru pdf parser', 'mineru instalar', 'mineru salida latex'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.es('mineru')} estrellas en GitHub) convierte PDF, DOCX, PPTX, XLSX, HTML, EPUB e imágenes a Markdown, HTML, LaTeX, DOCX y EPUB; funciona en local por defecto, es gratuito bajo la MinerU Open Source License (Apache 2.0 con condiciones adicionales) y ofrece GPU y fusión de tablas inter-página.** Instálalo con \`pip install mineru\` (Python 3.11–3.14).`,
+    leadAnswerBlock: `**MinerU (${st.es('mineru')} estrellas en GitHub) convierte PDF, DOCX, PPTX, XLSX, HTML, EPUB e imágenes a Markdown, HTML, LaTeX, DOCX y EPUB; funciona en local por defecto, es gratuito por debajo de los umbrales de su licencia y ofrece GPU y fusión de tablas inter-página.** Instálalo con \`pip install mineru\` (Python 3.11–3.14).`,
     quickAnswerTop: {
       es: {
         question: '¿Es MinerU el analizador adecuado para mi pipeline RAG?',
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'note', text: 'PromptQuorum no ha probado MinerU en condiciones reales. Toda la información proviene de github.com/opendatalab/MinerU y opendatalab.com, consultados el 15 de noviembre de 2026.' }],
       },
-      features: { id: 'features', title: 'Funcionalidades', items: ['**Formatos de entrada:** PDF, DOCX, PPTX, XLSX, HTML, EPUB e imágenes.', '**Formatos de salida:** Markdown, HTML, LaTeX, DOCX y EPUB.', '**OCR:** modelo para PDFs escaneados e imágenes.', '**Fusión de tablas inter-página:** las tablas que abarcan varias páginas se reconstruyen como una sola.', '**Cajas delimitadoras:** coordenadas a nivel de bloque para citas precisas.', '**GPU auto-detectada:** NVIDIA, AMD, Intel, Apple Silicon; ~2–3× la velocidad de la CPU en cargas de inferencia representativas, según el README.', '**Local por defecto:** los documentos no se suben por defecto; el análisis remoto requiere configuración explícita.'] },
+      features: { id: 'features', title: 'Funcionalidades', items: ['**Formatos de entrada:** PDF, DOCX, PPTX, XLSX, HTML, EPUB e imágenes.', '**Formatos de salida:** Markdown, HTML, LaTeX, DOCX y EPUB (entre los destinos de exportación citados en el README; según el README, cada CLI/API solo ofrece un subconjunto).', '**OCR:** modelo para PDFs escaneados e imágenes.', '**Fusión de tablas inter-página:** las tablas que abarcan varias páginas se reconstruyen como una sola.', '**Cajas delimitadoras:** coordenadas a nivel de bloque para citas precisas.', '**GPU auto-detectada:** NVIDIA, AMD, Intel, Apple Silicon; ~2–3× la velocidad de la CPU en cargas de inferencia representativas, según el README.', '**Local por defecto:** los documentos no se suben por defecto; el análisis remoto requiere configuración explícita.'] },
       'get-it': { id: 'get-it', title: 'Instalar MinerU', note: 'Requiere Python 3.11–3.14. MinerU es una biblioteca Python y CLI. El proyecto también enlaza una versión web alojada (mineru.net); el README no describe un instalador de escritorio. Se recomienda entorno virtual.', items: ['**Instalación:** `pip install mineru`', '**Código fuente:** [github.com/opendatalab/MinerU](https://github.com/opendatalab/MinerU) (MinerU Open Source License).'] },
       privacy: { id: 'privacy', title: 'Flujo de datos', items: ['Por defecto, el análisis se ejecuta en tu máquina y los documentos no se suben; el análisis remoto requiere configuración explícita. La configuración del análisis local puede requerir descargas de modelos (el README indica aproximadamente 0,8–3 GB según el nivel), por lo que la primera configuración necesita conexión de red.', 'El modo cloud/remoto requiere configuración explícita, no es el predeterminado.', 'Según el README, el componente Doclib incluye telemetría de uso y diagnóstico (activada al inicio, sin contenido de documentos, texto extraído, nombres de archivo ni consultas de búsqueda); desactívala con `mineru telemetry disable` o MINERU_TELEMETRY_DISABLED=1 en el entorno del servidor Doclib.', 'La organización de GitHub OpenDataLab indica China como ubicación (perfil de GitHub). El servicio alojado en [mineru.net](https://mineru.net) enlaza en su pie de página una política de privacidad y un acuerdo de usuario; léelos antes de enviar documentos confidenciales a cualquier modo remoto. El análisis local no sube documentos.'] },
       pricing: { id: 'pricing', title: 'Licencia y precio', items: ['**Licencia:** MinerU Open Source License, basada en Apache 2.0 con condiciones adicionales (no es la Apache-2.0 estándar). El uso comercial está permitido sin licencia aparte salvo que tú y tus afiliadas superen 100 millones de usuarios activos mensuales o 20 millones de USD de ingresos mensuales totales; los servicios en línea construidos sobre MinerU deben indicar claramente que usan MinerU; si no se cumple, la licencia termina automáticamente. Lee [LICENSE.md](https://github.com/opendatalab/MinerU/blob/master/LICENSE.md) antes de usarlo comercialmente.', '**Precio:** la biblioteca se puede descargar y ejecutar en local de forma gratuita; el servicio alojado en mineru.net y su API remota no se evaluaron en cuanto a precios ni límites de uso.', 'Los umbrales anteriores proceden de LICENSE.md, que no menciona los pesos de modelos. Los modelos descargados durante la instalación pueden tener sus propias licencias; compruébalas antes de un despliegue comercial.'] },
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿MinerU necesita GPU?', a: 'No. Funciona en CPU. La GPU se detecta automáticamente en NVIDIA, AMD, Intel y Apple Silicon; el README indica aproximadamente 2–3× la velocidad de la CPU en cargas de inferencia representativas, y la velocidad real depende de tu hardware y del tipo de documento.' },
           { q: '¿Cómo instalo MinerU?', a: '`pip install mineru` en un entorno Python 3.11–3.14.' },
           { q: '¿MinerU procesa PDFs escaneados?', a: 'Sí. Incluye OCR basada en modelo para documentos escaneados y PDFs imagen.' },
-          { q: '¿Qué formatos produce MinerU?', a: 'Markdown, HTML, LaTeX, DOCX y EPUB.' },
+          { q: '¿Qué formatos produce MinerU?', a: 'Markdown, HTML, LaTeX, DOCX y EPUB (entre los destinos de exportación citados en el README; según el README, cada CLI/API solo ofrece un subconjunto).' },
           { q: '¿MinerU tiene servidor MCP?', a: 'El README no describe un servidor MCP para v4.2.2. Para MCP, considera Docling (paquete independiente docling-mcp).' },
           { q: '¿Quién mantiene MinerU?', a: 'OpenDataLab mantiene el repositorio de GitHub.' },
           { q: '¿MinerU fusiona tablas inter-página?', a: 'Sí. Las tablas que abarcan varias páginas se reconstruyen como una sola en la salida.' },
@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['avaliação mineru', 'mineru pdf parser', 'mineru instalar', 'mineru saída latex'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.pt('mineru')} estrelas no GitHub) converte PDF, DOCX, PPTX, XLSX, HTML, EPUB e imagens para Markdown, HTML, LaTeX, DOCX e EPUB; funciona localmente por padrão, é gratuito sob a MinerU Open Source License (Apache 2.0 com condições adicionais) e oferece GPU e fusão de tabelas entre páginas.** Instale com \`pip install mineru\` (Python 3.11–3.14).`,
+    leadAnswerBlock: `**MinerU (${st.pt('mineru')} estrelas no GitHub) converte PDF, DOCX, PPTX, XLSX, HTML, EPUB e imagens para Markdown, HTML, LaTeX, DOCX e EPUB; funciona localmente por padrão, é gratuito abaixo dos limites da licença e oferece GPU e fusão de tabelas entre páginas.** Instale com \`pip install mineru\` (Python 3.11–3.14).`,
     quickAnswerTop: {
       pt: {
         question: 'MinerU é o analisador certo para meu pipeline RAG?',
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'note', text: 'O PromptQuorum não testou o MinerU. Todas as informações provêm de github.com/opendatalab/MinerU e opendatalab.com, consultados em 15/11/2026.' }],
       },
-      features: { id: 'features', title: 'Funcionalidades', items: ['**Formatos de entrada:** PDF, DOCX, PPTX, XLSX, HTML, EPUB e imagens.', '**Formatos de saída:** Markdown, HTML, LaTeX, DOCX e EPUB.', '**OCR:** modelo para PDFs digitalizados e imagens.', '**Fusão de tabelas entre páginas:** tabelas que abrangem várias páginas são reconstruídas como uma só.', '**Caixas delimitadoras:** coordenadas em nível de bloco para citações.', '**GPU auto-detectada:** NVIDIA, AMD, Intel, Apple Silicon; ~2–3× a velocidade da CPU em cargas de inferência representativas, segundo o README.', '**Local por padrão:** os documentos não são enviados por padrão; a análise remota requer configuração explícita.'] },
+      features: { id: 'features', title: 'Funcionalidades', items: ['**Formatos de entrada:** PDF, DOCX, PPTX, XLSX, HTML, EPUB e imagens.', '**Formatos de saída:** Markdown, HTML, LaTeX, DOCX e EPUB (entre os destinos de exportação citados no README; segundo o README, cada CLI/API oferece apenas um subconjunto).', '**OCR:** modelo para PDFs digitalizados e imagens.', '**Fusão de tabelas entre páginas:** tabelas que abrangem várias páginas são reconstruídas como uma só.', '**Caixas delimitadoras:** coordenadas em nível de bloco para citações.', '**GPU auto-detectada:** NVIDIA, AMD, Intel, Apple Silicon; ~2–3× a velocidade da CPU em cargas de inferência representativas, segundo o README.', '**Local por padrão:** os documentos não são enviados por padrão; a análise remota requer configuração explícita.'] },
       'get-it': { id: 'get-it', title: 'Instalar MinerU', note: 'Requer Python 3.11–3.14. MinerU é uma biblioteca Python e CLI. O projeto também aponta uma versão web hospedada (mineru.net); o README não descreve um instalador de desktop. Ambiente virtual recomendado.', items: ['**Instalação:** `pip install mineru`', '**Código-fonte:** [github.com/opendatalab/MinerU](https://github.com/opendatalab/MinerU) (MinerU Open Source License).'] },
       privacy: { id: 'privacy', title: 'Fluxo de dados', items: ['Por padrão, a análise roda na sua máquina e os documentos não são enviados; a análise remota requer configuração explícita. A configuração da análise local pode exigir download de modelos (o README indica cerca de 0,8–3 GB conforme o nível), então a primeira configuração precisa de conexão de rede.', 'O modo cloud/remoto requer configuração explícita, não é padrão.', 'Segundo o README, o componente Doclib inclui telemetria de uso e diagnóstico (ativada inicialmente, sem conteúdo de documentos, texto extraído, nomes de arquivo nem consultas de busca); desative-a com `mineru telemetry disable` ou MINERU_TELEMETRY_DISABLED=1 no ambiente do servidor Doclib.', 'A organização do GitHub OpenDataLab indica a China como localização (perfil do GitHub). O serviço hospedado em [mineru.net](https://mineru.net) linka no rodapé uma política de privacidade e um acordo do usuário; leia-os antes de enviar documentos confidenciais a qualquer modo remoto. A análise local não envia documentos.'] },
       pricing: { id: 'pricing', title: 'Licença e preço', items: ['**Licença:** MinerU Open Source License, baseada em Apache 2.0 com condições adicionais (não é a Apache-2.0 padrão). O uso comercial é permitido sem licença separada, a menos que você e suas afiliadas ultrapassem 100 milhões de usuários ativos mensais ou US$ 20 milhões de receita mensal total; serviços online construídos sobre o MinerU devem indicar claramente que usam o MinerU; em caso de descumprimento, a licença termina automaticamente. Leia o [LICENSE.md](https://github.com/opendatalab/MinerU/blob/master/LICENSE.md) antes do uso comercial.', '**Preço:** a biblioteca é gratuita para baixar e executar localmente; o serviço hospedado em mineru.net e sua API remota não foram avaliados quanto a preços ou limites de uso.', 'Os limites acima vêm do LICENSE.md, que não menciona pesos de modelos. Modelos baixados na instalação podem ter licenças próprias; verifique-as antes de uma implantação comercial.'] },
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'MinerU precisa de GPU?', a: 'Não. Funciona em CPU. A GPU é detectada automaticamente em NVIDIA, AMD, Intel e Apple Silicon; o README indica aproximadamente 2–3× a velocidade da CPU em cargas de inferência representativas, e a velocidade real depende do seu hardware e do tipo de documento.' },
           { q: 'Como instalo o MinerU?', a: '`pip install mineru` em um ambiente Python 3.11–3.14.' },
           { q: 'MinerU processa PDFs digitalizados?', a: 'Sim. Inclui OCR baseado em modelo para documentos digitalizados e PDFs imagem.' },
-          { q: 'Que formatos o MinerU produz?', a: 'Markdown, HTML, LaTeX, DOCX e EPUB.' },
+          { q: 'Que formatos o MinerU produz?', a: 'Markdown, HTML, LaTeX, DOCX e EPUB (entre os destinos de exportação citados no README; segundo o README, cada CLI/API oferece apenas um subconjunto).' },
           { q: 'MinerU tem servidor MCP?', a: 'O README não descreve um servidor MCP para a v4.2.2. Para MCP, considere o Docling (pacote separado docling-mcp).' },
           { q: 'Quem mantém o MinerU?', a: 'OpenDataLab mantém o repositório do GitHub.' },
           { q: 'MinerU funde tabelas entre páginas?', a: 'Sim. Tabelas que abrangem várias páginas são detectadas e reconstruídas como uma única tabela na saída.' },
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['مراجعة mineru', 'mineru pdf parser', 'تثبيت mineru', 'mineru latex'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.ar('mineru')} نجمة على GitHub) يحوّل PDF وDOCX وPPTX وXLSX وHTML وEPUB والصور إلى Markdown وHTML وLaTeX وDOCX وEPUB؛ يعمل محليًا افتراضيًا وهو مجاني بموجب MinerU Open Source License (Apache 2.0 مع شروط إضافية)، مع تسريع GPU ودمج الجداول عبر الصفحات.** التثبيت: \`pip install mineru\` (Python 3.11–3.14).`,
+    leadAnswerBlock: `**MinerU (${st.ar('mineru')} نجمة على GitHub) يحوّل PDF وDOCX وPPTX وXLSX وHTML وEPUB والصور إلى Markdown وHTML وLaTeX وDOCX وEPUB؛ يعمل محليًا افتراضيًا ومجاني دون عتبات MinerU Open Source License (Apache 2.0 مع شروط إضافية)، مع تسريع GPU ودمج الجداول عبر الصفحات.** التثبيت: \`pip install mineru\` (Python 3.11–3.14).`,
     quickAnswerTop: {
       ar: {
         question: 'هل MinerU هو المحلل المناسب لمساري RAG؟',
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يحتاج MinerU إلى GPU؟', a: 'لا. يعمل على CPU. يُكتشف GPU تلقائيًا على NVIDIA وAMD وIntel وApple Silicon؛ ويذكر README نحو 2–3× سرعة CPU في أحمال استدلال تمثيلية، وتعتمد السرعة الفعلية على عتادك ونوع المستند.' },
           { q: 'كيف أثبّت MinerU؟', a: '`pip install mineru` في بيئة Python 3.11–3.14.' },
           { q: 'هل يعالج MinerU الـ PDF الممسوحة ضوئيًا؟', a: 'نعم. يتضمن OCR مبنيًا على نموذج للمستندات الممسوحة وPDF المبنية على صور.' },
-          { q: 'ما صيغ الإخراج التي يدعمها MinerU؟', a: 'Markdown وHTML وLaTeX وDOCX وEPUB.' },
+          { q: 'ما صيغ الإخراج التي يدعمها MinerU؟', a: 'Markdown وHTML وLaTeX وDOCX وEPUB (من بين أهداف التصدير المذكورة في README؛ ويذكر README أن كل CLI/API يتيح مجموعة فرعية منها).' },
           { q: 'هل يوجد خادم MCP في MinerU؟', a: 'لا يصف README خادم MCP للإصدار v4.2.2. للتكامل مع MCP فكِّر في Docling (حزمة docling-mcp المنفصلة).' },
           { q: 'من يصون MinerU؟', a: 'OpenDataLab يصون مستودع GitHub.' },
           { q: 'هل يدمج MinerU الجداول عبر الصفحات؟', a: 'نعم. الجداول الممتدة عبر صفحات متعددة تُكشف وتُدمج في جدول واحد في المخرجات.' },
