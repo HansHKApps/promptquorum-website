@@ -230,6 +230,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'weesper-neon-flow':                       'weesper-neon-flow',
   'sablate':                                 'sablate',
   'cocoindex':                               'cocoindex',
+  'opendataloader-pdf':                      'opendataloader-pdf',
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',

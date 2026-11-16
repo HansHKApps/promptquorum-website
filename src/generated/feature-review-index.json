@@ -1779,6 +1779,26 @@
     "urlSlug": "cocoindex-review",
     "url": "/power-local-llm/cocoindex-review"
   },
+  "opendataloader-pdf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "opendataloader-pdf-review",
+    "url": "/power-local-llm/opendataloader-pdf-review"
+  },
+  "docling": {
+    "cluster": "power-local-llm",
+    "urlSlug": "docling-review",
+    "url": "/power-local-llm/docling-review"
+  },
+  "marker": {
+    "cluster": "power-local-llm",
+    "urlSlug": "marker-review",
+    "url": "/power-local-llm/marker-review"
+  },
+  "mineru": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mineru-review",
+    "url": "/power-local-llm/mineru-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",

@@ -175,7 +175,10 @@ export interface ToolRecord {
   tagline: Partial<Record<Language, string>>
   // Country of the company/maintainer HQ behind the app, as an UPPERCASE ISO 3166-1 alpha-2 code ("US", "DE").
   // Set ONLY when it is clear from a primary source (company imprint/about page, registered address, the
-  // maintainer's own statement); the source URL goes in `hqCountrySource`. Never guess it from the domain
+  // maintainer's own statement); the source URL goes in `hqCountrySource`. ALWAYS read the privacy policy and
+  // the impressum/imprint first (owner rule 2026-11-15): any country they mention (address, registered office,
+  // governing law, national dispute/regulator bodies users are referred to) is the country to use.
+  // Never guess it from the domain
   // TLD, the founder's name or the language of the site. Unclear (no company, anonymous or spread-out
   // community project) = leave both unset: no flag is shown. Unset means "not clear/not researched", never
   // "no country". Rendered as a small flag next to the name (components/local-ai-directory/HqFlag.tsx);

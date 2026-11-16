@@ -50,7 +50,24 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
   // Groups added in taxonomy v2 (2026-11-01). Their tools are still compared inside the segments below, because a
   // segment selects tools by category key (subs), not by group; they get segments of their own once a pilot defines attributes.
   'agents-automation': [],
-  'documents-research': [],
+  // Documents & Research — OCR & document parsing has a segment (2026-11-15, OpenDataLoader PDF + Docling + Marker + MinerU + Unstructured + Nutrient + Xberg).
+  // Document chat, notes and search tools in this group are compared in the knowledge-retrieval segments (they select tools by category key, not by group).
+  'documents-research': [
+    {
+      key: 'document-parsing',
+      label: 'Document parsing & OCR',
+      subs: ['ocr-document-parsing'],
+      attributes: [
+        { key: 'inputFormats', label: 'Input formats', kind: 'text', hint: 'File types the project says it reads' },
+        { key: 'outputFormats', label: 'Output formats', kind: 'list', hint: 'Formats the project says it can write' },
+        { key: 'ocr', label: 'Reads text in images (OCR)', kind: 'boolean' },
+        { key: 'tableExtraction', label: 'Table extraction', kind: 'boolean' },
+        { key: 'boundingBoxes', label: 'Bounding boxes / coordinates', kind: 'boolean' },
+        { key: 'languageBindings', label: 'Language bindings', kind: 'number', hint: 'Count of programming languages with an official SDK or binding' },
+        { key: 'mcp', label: 'MCP support', kind: 'boolean' },
+      ],
+    },
+  ],
   'photos-cameras-home': [],
   'llmops-security': [],
   'hardware-edge': [],
@@ -389,7 +406,7 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'industry-domain': null,
   // v2 groups point at the existing guide whose segments already compare their tools.
   'agents-automation': 'local-llm-code-development-compared',
-  'documents-research': 'local-llm-knowledge-retrieval-compared',
+  'documents-research': null,
   'photos-cameras-home': 'local-llm-images-video-compared',
   'llmops-security': 'local-llm-train-operate-compared',
   'hardware-edge': null,
