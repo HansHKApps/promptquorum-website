@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'OpenDataLoader PDFレビュー：RAG向けオープンソースPDFパーサー',
     seoTitle: 'OpenDataLoader PDFレビュー：PDFパーサー',
     intro: 'OpenDataLoader PDFは、PDFファイルをRAGやLLMパイプライン向けの構造化データに変換するオープンソースのパーサーで、アクセシビリティ向けのPDF自動タグ付けにも対応しています。ライブラリとコマンドラインツールであり、デスクトップアプリでもホスト型サービスでもありません。本レビューは[opendataloader.org](https://opendataloader.org)、[GitHubリポジトリ](https://github.com/opendataloader-project/opendataloader-pdf)、PyPIを2026年11月15日に確認した内容に基づいています。PromptQuorumはインストールも実行もしていません。',
-    metaDescription: 'OpenDataLoader PDFのレビュー。JSON、Markdownを出力するApache 2.0のPDFパーサー。Java 11以上が必要。READMEではデフォルトモードはローカル動作。ベンチマークは提供元の数値。',
+    metaDescription: 'OpenDataLoader PDFのレビュー。Apache 2.0のPDFパーサー。Java 11以上が必要。READMEではデフォルトモードはローカル動作。ベンチマークは提供元の数値。',
     twitterDescription: 'OpenDataLoader PDFレビュー：RAG向けのオープンソースPDFパーサー。ローカルで動く部分、ハイブリッドモードで変わる点、Javaが必要な理由、情報源が確認していない点。',
     audience: 'PDFを対象にRAGやLLMのパイプラインを構築していて、OpenDataLoader PDFの出力内容、動作に必要なもの、実際どこまでローカルなのか、どの主張が提供元自身のものなのかを知りたい開発者。',
     readTime: '7分で読める',
