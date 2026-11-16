@@ -1,9 +1,9 @@
 // The promo-slot pilot: which pages carry which slot, and which pages are the matched controls.
 // Pages are keyed by their English path; the same entry applies to all 8 locale versions (/de/..., /fr/..., ...).
-// 97 page groups: 92 article groups + the 5 hubs (P5). Article groups per target: Directory 30, Ask Hans 12, Power Mode 30, MCP 20,
-// each balanced over P1-P4 within its target (MCP 5/5/5/5, Power Mode 8/8/7/7, Ask Hans 3/3/3/3, Directory 8/7/7/8).
+// 96 page groups: 91 article groups + the 5 hubs (P5). Article groups per target: Directory 30, Ask Hans 12, Power Mode 30, MCP 19,
+// each balanced over P1-P4 within its target (MCP 4/5/5/5, Power Mode 8/8/7/7, Ask Hans 3/3/3/3, Directory 8/7/7/8).
 // History: started with 25 (20 articles + 5 hubs), tripled the article groups to 65 (source: GSC, 28 days to 2026-11-07), then
-// 2026-11-16 expanded MCP (6 -> 20) and Power Mode (12 -> 30) by GSC clicks (28 days to 2026-11-16). Ask Hans stays at its 12
+// 2026-11-16 expanded MCP (6 -> 19, three creative-writing pages excluded afterwards) and Power Mode (12 -> 30) by GSC clicks (28 days to 2026-11-16). Ask Hans stays at its 12
 // prompt-engineering pages (owner decision 2026-11-16: no other cluster; lower goal; 8-week window; judged pooled over placements).
 // Every new group has a matched control. The pilot flag is not touched here.
 // Off by default: the pilot only runs when NEXT_PUBLIC_PROMO_PILOT === 'true' (and Ask Hans slots also need Ask Hans on).
@@ -15,6 +15,10 @@ import type { PromoPlacement, PromoTarget } from './types'
  */
 export const PILOT_EXCLUDED: readonly string[] = [
   '/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+  // creative-writing siblings of the uncensored article (owner review 2026-11-16); no replacement pages were added
+  '/power-local-llm/local-llm-screenwriting-and-novel-drafting', // was an MCP P1 slot page
+  '/power-local-llm/best-local-llm-creative-writing', // was the control of the screenwriting page
+  '/power-local-llm/local-llm-prompts-for-fiction-writers', // was the control of best-local-llm-apps-mac
 ]
 
 export interface PilotEntry {
@@ -90,9 +94,8 @@ export const PILOT_GROUPS: Readonly<Record<string, PilotEntry>> = {
   [PE + 'build-a-prompt-library']: { placement: 'P3', target: 'ask-hans' },
   [PE + 'how-llms-actually-work']: { placement: 'P4', target: 'ask-hans' },
   [PE + 'ai-hallucinations-why-ai-makes-things-up']: { placement: 'P4', target: 'ask-hans' },
-  // third wave (MCP 6 -> 20 groups, Power Mode 12 -> 30; ranked by GSC clicks, 28 days to 2026-11-16)
+  // third wave (MCP 6 -> 19 groups after three exclusions, Power Mode 12 -> 30; ranked by GSC clicks, 28 days to 2026-11-16)
   // power-local-llm / MCP
-  [PL + 'local-llm-screenwriting-and-novel-drafting']: { placement: 'P1', target: 'mcp' },
   [PL + 'exo-review']: { placement: 'P1', target: 'mcp' },
   [PL + 'local-ai-agents-with-mcp']: { placement: 'P1', target: 'mcp' },
   [PL + 'best-local-coding-models-2026']: { placement: 'P1', target: 'mcp' },
@@ -197,11 +200,10 @@ export const PILOT_CONTROLS: Readonly<Record<string, string>> = {
   [PE + 'how-llms-actually-work']: PE + 'best-prompt-testing-evaluation-tools',
   [PE + 'ai-hallucinations-why-ai-makes-things-up']: PE + 'persona-prompting',
   // third wave controls (each paired with the adjacent page in the same GSC click ranking)
-  [PL + 'local-llm-screenwriting-and-novel-drafting']: PL + 'best-local-llm-creative-writing',
   [PL + 'exo-review']: PL + 'subtitle-edit-review',
   [PL + 'local-ai-agents-with-mcp']: PL + 'atomic-chat-review',
   [PL + 'best-local-coding-models-2026']: PL + 'sillytavern-vs-agnai-vs-risuai-roleplay',
-  [PL + 'best-local-llm-apps-mac']: PL + 'local-llm-prompts-for-fiction-writers',
+  [PL + 'best-local-llm-apps-mac']: PL + 'xtts-v2-review', // replaces local-llm-prompts-for-fiction-writers (excluded): matched on impressions (6,229 vs 6,282), not on clicks (58 vs 197)
   [PL + 'build-local-voice-assistant-2026']: PL + 'local-llm-app-alternatives',
   [PL + 'open-llm-vtuber-review']: PL + 'best-local-tts-raspberry-pi',
   [PL + 'best-nas-storage-local-ai-models-2026']: PL + 'local-rag-on-your-pdfs-step-by-step',
