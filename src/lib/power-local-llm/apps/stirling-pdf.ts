@@ -35,6 +35,14 @@ export const app: ToolRecord = {
   installOn: ['win', 'mac', 'linux'],
   tagline: {
     en: 'Open-core PDF toolkit that edits, converts, OCRs, redacts and batch-processes PDFs on the desktop, on a self-hosted server or through an API.',
+    de: "Open-Core-PDF-Toolkit, das PDFs auf dem Desktop, auf einem selbst gehosteten Server oder per API bearbeitet, konvertiert, per OCR erkennt, schwärzt und stapelweise verarbeitet.",
+    fr: "Boîte à outils PDF open-core qui modifie, convertit, passe à l'OCR, caviarde et traite par lots des PDF sur poste, sur un serveur auto-hébergé ou via une API.",
+    ja: "デスクトップ、セルフホストサーバー、APIで、PDFの編集、変換、OCR、墨消し、一括処理ができるオープンコアのPDFツールキットです。",
+    zh: "开放核心 PDF 工具包，可在桌面、自托管服务器或通过 API 编辑、转换、OCR、涂黑脱敏并批量处理 PDF。",
+    es: "Kit de herramientas PDF open-core que edita, convierte, aplica OCR, censura y procesa PDF por lotes en el escritorio, en un servidor autoalojado o mediante una API.",
+    pt: "Kit de ferramentas PDF open-core que edita, converte, aplica OCR, oculta dados sensíveis (redação) e processa PDFs em lote no desktop, em um servidor próprio ou via API.",
+    ar: "مجموعة أدوات PDF مفتوحة النواة (open-core) تحرّر ملفات PDF وتحوّلها وتطبّق عليها OCR وتحجب بياناتها وتعالجها دفعة واحدة على سطح المكتب أو على خادم مستضاف ذاتياً أو عبر API.",
+    ko: "데스크톱, 셀프 호스팅 서버, API에서 PDF를 편집·변환·OCR·가림 처리·일괄 처리하는 오픈코어 PDF 툴킷입니다.",
   },
   hqCountry: 'US', // package value; source says "U.S. company" (see hqCountrySource), package also lists HQ as unverified (mailbox address only)
   hqCountrySource: 'https://www.stirling.com/legal/privacy-policy',
