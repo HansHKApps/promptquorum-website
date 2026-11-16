@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Ist MinerU der richtige Parser für meine RAG-Pipeline?',
         answer: 'MinerU eignet sich, wenn Sie Markdown und LaTeX mit seitenübergreifender Tabellenzusammenführung benötigen. Es läuft lokal, unterstützt GPU-Beschleunigung und ist unterhalb der Lizenzschwellen kostenlos (MinerU Open Source License, Apache 2.0 mit Zusatzbedingungen). Für MCP-Unterstützung bietet Docling das separate Paket docling-mcp; für einen MCP-Server können Sie Docling in Betracht ziehen.',
         bullets: [
-          'MinerU Open Source License (Apache 2.0 mit Zusatzbedingungen): ab 100 Mio. monatlich aktiven Nutzern oder 20 Mio. USD Monatsumsatz ist eine separate Lizenz nötig.',
+          'MinerU Open Source License (Apache 2.0 mit Zusatzbedingungen): bei Überschreiten von 100 Mio. monatlich aktiven Nutzern oder 20 Mio. USD Gesamtmonatsumsatz ist eine separate Lizenz nötig.',
           'Konvertiert PDF, DOCX, PPTX, XLSX, HTML, EPUB und Bilder mit einer pip-Installation.',
           'Ausgabe: Markdown, HTML, LaTeX, DOCX und EPUB.',
           'Seitenübergreifende Tabellenzusammenführung und Positionsangaben auf Blockebene für Zitate (README).',
@@ -703,11 +703,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['مراجعة mineru', 'mineru pdf parser', 'تثبيت mineru', 'mineru latex'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**MinerU (${st.ar('mineru')} نجمة على GitHub) يحوّل PDF وDOCX وPPTX وXLSX وHTML وEPUB والصور إلى Markdown وHTML وLaTeX وDOCX وEPUB؛ يعمل محليًا افتراضيًا ومجاني دون عتبات MinerU Open Source License (Apache 2.0 مع شروط إضافية)، مع تسريع GPU ودمج الجداول عبر الصفحات.** التثبيت: \`pip install mineru\` (Python 3.11–3.14).`,
+    leadAnswerBlock: `**MinerU (${st.ar('mineru')} نجمة على GitHub) يحوّل PDF وDOCX وPPTX وXLSX وHTML وEPUB والصور إلى Markdown وHTML وLaTeX وDOCX وEPUB؛ يعمل محليًا افتراضيًا ومجاني ما دام استخدامك ضمن عتبات MinerU Open Source License (Apache 2.0 مع شروط إضافية)، مع تسريع GPU ودمج الجداول عبر الصفحات.** التثبيت: \`pip install mineru\` (Python 3.11–3.14).`,
     quickAnswerTop: {
       ar: {
         question: 'هل MinerU هو المحلل المناسب لمساري RAG؟',
-        answer: 'MinerU مناسب إذا احتجت إلى Markdown وLaTeX مع دمج الجداول عبر الصفحات. يعمل محليًا، يدعم GPU، ومجاني دون عتبات الترخيص (MinerU Open Source License، أي Apache 2.0 مع شروط إضافية). يوفّر Docling دعم MCP عبر حزمة منفصلة هي docling-mcp؛ لاستخدام MCP فكِّر في Docling.',
+        answer: 'MinerU مناسب إذا احتجت إلى Markdown وLaTeX مع دمج الجداول عبر الصفحات. يعمل محليًا، يدعم GPU، ومجاني ما دام استخدامك ضمن عتبات الترخيص (MinerU Open Source License، أي Apache 2.0 مع شروط إضافية). يوفّر Docling دعم MCP عبر حزمة منفصلة هي docling-mcp؛ لاستخدام MCP فكِّر في Docling.',
         bullets: [
           'MinerU Open Source License (Apache 2.0 مع شروط إضافية): يلزم ترخيص تجاري منفصل عند تجاوز 100 مليون مستخدم نشط شهريًا أو 20 مليون دولار أمريكي من الإيرادات الشهرية.',
           'يحوّل PDF وDOCX وPPTX وXLSX وHTML وEPUB والصور بأمر pip واحد.',

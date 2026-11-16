@@ -952,6 +952,7 @@ const HUB_THEMES: Array<{
       'marker-review',
       'docling-review',
       'opendataloader-pdf-review',
+      'mineru-review',
     ],
   },
   {

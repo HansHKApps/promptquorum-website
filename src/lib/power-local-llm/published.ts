@@ -776,6 +776,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'marker-review',
   'docling-review',
   'opendataloader-pdf-review',
+  'mineru-review',
 
 ])
 
