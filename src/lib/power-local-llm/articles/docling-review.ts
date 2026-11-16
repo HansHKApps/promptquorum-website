@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Docling Review: Open-Source Document Parser for RAG',
     intro: 'Docling is an open-source document parsing library, started by IBM Research Zurich and hosted by the LF AI & Data Foundation, that converts PDFs, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, JSON and other structured formats for RAG and LLM pipelines. An MCP server is available as the separate docling-mcp package for use with AI assistants. This review is based on the [Docling GitHub repository](https://github.com/docling-project/docling) and [docling-project.github.io/docling](https://docling-project.github.io/docling), checked on 15 November 2026; PromptQuorum has not installed or run it.',
     metaDescription: 'Docling review: PDF parser with MIT-licensed code, OCR, table extraction, bounding boxes and an MCP option. pip install docling, Python 3.10+.',
-    twitterDescription: 'Docling review: open-source document parser for RAG, started by IBM Research. MIT licence, OCR, table extraction, optional MCP server — facts from the official README.',
+    twitterDescription: 'Docling review: open-source document parser for RAG, started by IBM Research. MIT-licensed code, OCR, table extraction, optional MCP server — facts from the official README.',
     audience: 'Developers building RAG or LLM pipelines who want to know what Docling outputs, how to install it and what the MCP server enables.',
     readTime: '6 min read',
     educationalLevel: 'Intermediate',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['docling review', 'docling pdf parser', 'docling install', 'docling mcp server', 'ibm docling rag'],
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    leadAnswerBlock: `**Docling (${st.en('docling')} GitHub stars) converts PDF, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, JSON and HTML for RAG pipelines; document parsing runs on your machine by default (model weights are downloaded from Hugging Face on first use), an optional docling-mcp package adds MCP, and the code is MIT-licensed.** It is a Python library and CLI for Python 3.10 or newer, not a desktop app; install with \`pip install docling\`.`,
+    leadAnswerBlock: `**Docling (${st.en('docling')} GitHub stars) converts PDF, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, JSON and HTML for RAG; parsing runs on your machine by default (model weights are downloaded from Hugging Face on first use), an optional docling-mcp package adds MCP, and the code is MIT-licensed.** It is a Python library and CLI for Python 3.10 or newer, not a desktop app; install with \`pip install docling\`.`,
     quickAnswerTop: {
       en: {
         question: 'Is Docling the right document parser for my RAG pipeline?',
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Docling is an open-source Python library, started by IBM Research Zurich and hosted by the LF AI & Data Foundation, that converts PDF, DOCX, PPTX, XLSX, HTML, EPUB and images into Markdown, JSON and HTML for RAG and LLM pipelines and parses documents on your own machine; an MCP server is available as the separate docling-mcp package.' },
-          { type: 'plain-terms', text: 'You give it a document file; it reads the structure — headings, tables, text blocks, figures — and writes the content to a format that an LLM or RAG system can use. Your files are not uploaded and no API key is needed; model weights are downloaded from Hugging Face on first use.' },
+          { type: 'plain-terms', text: 'You give it a document file; it reads the structure — headings, tables, text blocks, figures — and writes the content to a format that an LLM or RAG system can use. Your files are not uploaded and no API key is needed for the default local setup; model weights are downloaded from Hugging Face on first use.' },
         ],
         items: [
           `MIT licence for the code; ${st.en('docling')} GitHub stars; started by IBM Research Zurich, hosted by the LF AI & Data Foundation.`,
@@ -123,10 +123,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `[Marker](/power-local-llm/marker-review) (${st.en('marker')} GitHub stars, code Apache 2.0, model weights under a modified AI Pubs Open RAIL-M licence with commercial limits, freemium) — PDF-to-Markdown with Surya OCR; also handles DOCX, PPTX; local or Datalab hosted API.`,
           `[MinerU](/power-local-llm/mineru-review) (${st.en('mineru')} GitHub stars, MinerU Open Source License (Apache 2.0 plus additional conditions), free) — multi-format parser with cross-page table merging; LaTeX output available.`,
-          `[Unstructured](/power-local-llm/unstructured-review) (${st.en('unstructured')} GitHub stars, Apache-2.0, freemium) — wide input support including email and plain text; outputs JSON elements.`,
-          `[OpenDataLoader PDF](/power-local-llm/opendataloader-pdf-review) (${st.en('opendataloader-pdf')} GitHub stars, Apache-2.0, freemium) — PDF-only parser with Python, Node.js and Java SDKs; bounding boxes.`,
+          `[Unstructured](/power-local-llm/unstructured-review) (${st.en('unstructured')} GitHub stars, Apache-2.0) — wide input support including email and plain text; outputs JSON elements.`,
+          `[OpenDataLoader PDF](/power-local-llm/opendataloader-pdf-review) (${st.en('opendataloader-pdf')} GitHub stars, Apache-2.0) — PDF-only parser with Python, Node.js and Java SDKs; bounding boxes.`,
           '[Nutrient](/power-local-llm/nutrient-review) — commercial multi-platform SDK; language bindings and platforms as listed on its review page; produces PDF and data output.',
-          '[Xberg](/power-local-llm/xberg-review) — wide input range including email and e-books; 15 language bindings; MCP server.',
+          '[Xberg](/power-local-llm/xberg-review) — wide input range including email and e-books; many language bindings (see its review page); MCP server.',
           'See all tools in the [document parsing comparison table](/power-local-llm/local-pdf-parsers-compared).',
         ],
       },
@@ -281,8 +281,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `[Marker](/de/power-local-llm/marker-review) (${st.de('marker')} GitHub-Sterne, Code Apache 2.0, Modellgewichte unter modifizierter AI-Pubs-Open-RAIL-M-Lizenz mit kommerziellen Einschränkungen, Freemium) — PDF-zu-Markdown mit Surya-OCR; auch DOCX, PPTX; lokal oder Datalab-API.`,
           `[MinerU](/de/power-local-llm/mineru-review) (${st.de('mineru')} GitHub-Sterne, MinerU Open Source License (Apache 2.0 plus zusätzliche Bedingungen), kostenlos) — Multi-Format-Parser mit LaTeX-Ausgabe.`,
-          `[Unstructured](/de/power-local-llm/unstructured-review) (${st.de('unstructured')} GitHub-Sterne, Apache-2.0, Freemium) — breite Eingabeunterstützung inkl. E-Mail.`,
-          `[OpenDataLoader PDF](/de/power-local-llm/opendataloader-pdf-review) (${st.de('opendataloader-pdf')} GitHub-Sterne, Apache-2.0, Freemium) — reiner PDF-Parser mit Python-, Node.js- und Java-SDKs.`,
+          `[Unstructured](/de/power-local-llm/unstructured-review) (${st.de('unstructured')} GitHub-Sterne, Apache-2.0) — breite Eingabeunterstützung inkl. E-Mail.`,
+          `[OpenDataLoader PDF](/de/power-local-llm/opendataloader-pdf-review) (${st.de('opendataloader-pdf')} GitHub-Sterne, Apache-2.0) — reiner PDF-Parser mit Python-, Node.js- und Java-SDKs.`,
           '[Vollständige Vergleichstabelle: Lokale PDF-Parser](/de/power-local-llm/local-pdf-parsers-compared)',
         ],
       },
