@@ -60,6 +60,7 @@ ok(analyse({ groups, pilot: oldNames, baseline: null, opts: { reps: 50 } }).cell
 const mcp = a1.cells.find((c) => c.key === 'mcp')
 ok(mcp && mcp.incr === null && mcp.usage === null, 'MCP has no usage event: judged on reach/CTR only, pooled over placements')
 ok(a1.cells.some((c) => c.key === 'power-mode') && !a1.cells.some((c) => c.key.startsWith('power-mode /')), 'Power Mode is pooled over placements')
+ok(a1.cells.some((c) => c.key === 'ask-hans') && !a1.cells.some((c) => /^ask-hans \/ P[1-4]$/.test(c.key)), 'Ask Hans is pooled over placements P1-P4 (hubs P5 stay separate)')
 const hub = a1.cells.find((c) => c.key === 'ask-hans / P5')
 ok(hub && hub.pairs === 0 && hub.incr?.note, 'hub cell has no matched pairs, no interval')
 ok(dir.eligible === true && typeof dir.verdict === 'string', `eligible cell gets a verdict (${dir.verdict})`)

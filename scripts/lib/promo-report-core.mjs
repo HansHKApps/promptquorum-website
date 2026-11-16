@@ -133,7 +133,8 @@ export function median(xs) {
  * groups: [{path, placement, target, control|null}]
  */
 export function cellKey(g) {
-  return g.target === 'mcp' || g.target === 'power-mode' ? g.target : `${g.target} / ${g.placement}`
+  // Ask Hans, MCP and Power Mode are judged pooled over placements (owner decision 2026-11-16 for Ask Hans); hubs (P5) stay their own cell.
+  return g.placement !== 'P5' && (g.target === 'mcp' || g.target === 'power-mode' || g.target === 'ask-hans') ? g.target : `${g.target} / ${g.placement}`
 }
 
 /**

@@ -9,7 +9,8 @@
 //                       "baseline":{...same shape...}}   (events keyed by their `page` / `source_page` prop; *_promo_landing keyed by their `placement` prop)
 //   --umami             read the counts from the Umami Cloud API. Needs env UMAMI_API_KEY (+ optional UMAMI_WEBSITE_ID,
 //                       UMAMI_API_URL). UNVERIFIED against the live API: no API key was available when this was written.
-// Options: --launch YYYY-MM-DD (default 2026-11-07) --end YYYY-MM-DD (default today, capped at launch+21d)
+// Options: --launch YYYY-MM-DD (the DEPLOY date of the renamed events: the window restarts there; default 2026-11-07 is the old launch)
+//          --end YYYY-MM-DD (default today, capped at launch+56d: Ask Hans runs 8 weeks, MCP / Power Mode / Directory are read at 4 weeks = --end launch+28d)
 //          --baseline-days 28  --min-views 1000  --min-clicks 20  --out report.md  --json out.json  --reps 2000
 import fs from 'node:fs'
 import path from 'node:path'
@@ -25,7 +26,7 @@ const addDays = (d, n) => new Date(d.getTime() + n * 86400000)
 
 const launch = String(arg('launch', '2026-11-07'))
 const today = iso(new Date())
-const endCap = iso(addDays(day(launch), 21))
+const endCap = iso(addDays(day(launch), 56))
 const end = String(arg('end', today < endCap ? today : endCap))
 const baseDays = Number(arg('baseline-days', 28))
 const baseStart = iso(addDays(day(launch), -baseDays)), baseEnd = iso(addDays(day(launch), -1))

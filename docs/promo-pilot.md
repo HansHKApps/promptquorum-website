@@ -5,11 +5,11 @@ Owner: Hans. Brief: `handoffs/promo-slots-pilot-brief-2026-11-07.md` (v3). Confi
 ## Switches
 | Switch | Effect |
 |---|---|
-| `NEXT_PUBLIC_PROMO_PILOT=true` | Pilot slots render on the 25 groups (all 9 locales). Unset/false: nothing renders anywhere. |
+| `NEXT_PUBLIC_PROMO_PILOT=true` | Pilot slots render on the pilot groups (97 since 2026-11-16, all 9 locales). Unset/false: nothing renders anywhere. |
 | `NEXT_PUBLIC_ASK_HANS_ENABLED=true` | Needed for the Ask Hans / Power Mode slots (they hide without it). |
 | `PROMO_PROVIDER` in `src/lib/promo/config.ts` | `house` today; `ad-tag` renders an empty reserved box (`data-ad-slot`) for a third-party tag later. |
 
-Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Run length: 21 days (brief). Deploy stays on demand.
+Both env vars are build-time (`NEXT_PUBLIC_*`): changing them needs a deploy. Run length: 4 weeks from the deploy date for MCP, Power Mode and Directory; **8 weeks for Ask Hans** (owner decision 2026-11-16: fewer slot views available, lower goal). The window restarts on the deploy date of the expansion and the event rename. Deploy stays on demand.
 
 ## What is measured
 **Umami events** (all anonymous and cookieless like the rest of the site's Umami setup; no personal data, no free text, no new cookies, no new browser storage):
@@ -51,14 +51,19 @@ The events were renamed to `<target>_promo_<view|click|open>` (snake_case target
 
 Report by locale only where a cell has >= 100 slot views; the rest is pooled and flagged.
 
-**Winner rule** (configurable: `--min-views 1000 --min-clicks 20`): a cell needs at least that many slot views and clicks. MCP and Power Mode are judged pooled over placements; Ask Hans and Directory by placement. A cell is a WINNER if its CTR is above the median of the eligible cells AND its incremental-adoption interval is above 0. Otherwise it is "eligible, not a winner", "CTR above median but adoption not proven", or "insufficient data". (ASSUMPTION: derived from the brief's decision rule plus the v4 task text; the v4 doc itself could not be read.)
+**Winner rule** (configurable: `--min-views 1000 --min-clicks 20`): a cell needs at least that many slot views and clicks. MCP, Power Mode and Ask Hans are judged pooled over placements (Ask Hans since 2026-11-16); Directory by placement; hubs (P5) are their own cells and read as before/after. A cell is a WINNER if its CTR is above the median of the eligible cells AND its incremental-adoption interval is above 0. Otherwise it is "eligible, not a winner", "CTR above median but adoption not proven", or "insufficient data". (ASSUMPTION: derived from the brief's decision rule plus the v4 task text; the v4 doc itself could not be read.)
 
 ## Getting the report
 - **Weekly, automatic:** `.github/workflows/promo-pilot-weekly-report.yml` runs every Friday 06:17 UTC until 2026-12-05 and posts the report as a comment on the issue "Promo pilot weekly report" (plus job summary and artifact). It FAILS on purpose without the secret `UMAMI_API_KEY` (Umami Cloud > Settings > API keys, then GitHub > Settings > Secrets > Actions). The Umami API calls are unverified (no key was available): if a request fails, the log names the endpoint.
 - **By hand:** `UMAMI_API_KEY=... npm run promo:report -- --umami --out report.md`, or from an export: `npm run promo:report -- --input counts.json` (shape in the script header). Tests on synthetic data with a planted effect: `npm run test:promo-report`.
 
-## Controls
-60 matched article groups without a slot: `PILOT_CONTROLS` in `src/lib/promo/pilot.ts` (paired by cluster and impressions). The pilot has 65 groups: 60 articles (15 per placement P1-P4) + the 5 hubs. It started at 25 groups and was tripled on request (hubs cannot be tripled, there are only 5).
+## Page groups and controls (expanded 2026-11-16)
+`src/lib/promo/pilot.ts`: **97 groups = 92 article groups + the 5 hubs**. Article groups per target: Directory 30 (P1-P4 = 8/7/7/8), Ask Hans 12 (3 per placement), Power Mode 30 (8/8/7/7), MCP 20 (5 per placement). Placements are balanced **within each target**, not across the whole pilot.
+- **Expansion rule (2026-11-16):** MCP 6 -> 20 groups (power-local-llm) and Power Mode 12 -> 30 (local-llms), chosen by Search Console clicks (28 days to 2026-11-16, summed over the 9 locales), highest first, among pages not already in the pilot or used as a control. Placements were assigned to the new groups greedily so that each placement carries similar total clicks.
+- **Ask Hans stays at its 12 prompt-engineering pages** (not moved to other clusters). The whole prompt-engineering cluster has about 1,300 organic clicks in 28 days, so the goal of about 3,000 slot views per cell is out of reach for Ask Hans: the plan is 8 weeks, judged pooled over placements.
+- **Excluded:** `/power-local-llm/uncensored-local-llm-creative-writing-ethics` (about 44% of all power-local-llm clicks) is neither a slot page nor a control (`PILOT_EXCLUDED`, checked by `npm run test:promo-pilot`).
+- **Controls:** every article group has a matched control without a slot (`PILOT_CONTROLS`, 92 distinct pages). New controls are the adjacent page in the same GSC click ranking (cluster-matched, similar traffic; treated and control alternate between the higher and the lower page of each pair). Controls of the first two waves were paired by cluster and impressions.
+- **Known caveat:** three of the new MCP pages are creative-writing pages (siblings of the excluded uncensored article); MCP slots there are read like any other, but topic and target are confounded (see Known limits).
 **The 5 hubs have no matched control** (they are all the non-excluded hubs). Default until Hans decides otherwise: compare each hub with its own 28 days before launch, and read hub results as before/after, not pilot/control.
 
 ## Decision rule (fixed before launch)
@@ -66,7 +71,8 @@ Scale a placement or target if its CTR is clearly above the pilot median and pag
 
 ## Known limits
 - **Confounded cells.** The brief's cluster/target table ties targets to clusters: Ask Hans runs only on prompt-engineering pages, MCP only on power-local-llm pages, Power Mode only on local-llms pages. Per placement that leaves MCP 1-2 groups and Ask Hans 3. Placement can be judged cleanly only for Directory; for the other targets, product effect and topic effect cannot be separated. Compare within cluster x target x placement and pool thin cells.
-- The second wave of 40 groups reaches deeper into the GSC list; the prompt-engineering pool is thin (some pages ~500 impressions per 28 days), so many locale cells will be below the 100-view rule.
+- The later waves reach deeper into the GSC list: the third-wave MCP and Power Mode pages have about 35-330 organic clicks per 28 days each, and the prompt-engineering pool is thin (some pages ~500 impressions per 28 days), so many locale cells will be below the 100-view rule. Slot views per cell of about 3,000 in 4 weeks are not expected for MCP and Ask Hans; read the winner rule's thresholds (>= 1,000 views, >= 20 clicks per cell) against the real counts.
+- **Not built:** the guard comparing ad revenue and bounce rate on treated pages against controls (needs ad-revenue and bounce data, not available without a Umami key / ad-network export). Until it exists, check page health by hand before scaling.
 - Automated checks against the live site can trip Vercel's bot protection ("Security Checkpoint", 403). Do not poll the site in loops; use the Vercel API for deploy status.
 - MCP banners link to `/mcp-stats` (the MCP server page). The copy-paste setup panel lives on `/directory#mcp-connect-heading`, which `/mcp-stats` links to with a Connect button.
 - P2 is placed by section count (after section `round(0.4 n)`), not by text length.
