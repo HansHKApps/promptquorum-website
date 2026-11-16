@@ -1,12 +1,12 @@
 // Local AI App Directory — Marker (layer: document parsing / PDF-to-Markdown conversion library)
-// Added 2026-11-15. Facts read 2026-11-15 from github.com/VikParuchuri/marker (README, LICENSE, GitHub API repo + releases/latest)
+// Added 2026-11-15. Facts read 2026-11-15 from github.com/datalab-to/marker (README, LICENSE, GitHub API repo + releases/latest)
 // and datalab.to. Not tested hands-on.
 // WHAT: open-source PDF-to-Markdown converter; PDF, PPTX, DOCX, XLSX, HTML, EPUB, images in,
 // Markdown / JSON / HTML / chunks out; uses Surya VLM for OCR; library + CLI.
-// MAKER: Vik Paruchuri (VikParuchuri on GitHub); datalab.to is the associated hosted API service.
-// LICENSE: Apache-2.0 (GitHub API spdx_id + LICENSE file, 2026-11-15).
-// PRICE = freemium: local is free and open-source; datalab.to hosted API offers 5000 free pages/month.
-// LOCALITY = hybrid: runs fully locally AND has a hosted API at datalab.to.
+// MAKER: Datalab (datalab.to), which also runs the hosted API service. The repo moved from VikParuchuri/marker to github.com/datalab-to/marker.
+// LICENSE: the CODE is Apache-2.0 (GitHub API spdx_id + LICENSE file). The MODEL WEIGHTS use a modified AI Pubs Open RAIL-M licence (MODEL_LICENSE): free for research and personal use and for organisations with no more than USD 5M gross revenue in the prior year AND no more than USD 5M total funding raised; above either threshold commercial use needs a Datalab licence (datalab.to/pricing); it also bars use in products/services that compete with Datalab. Never describe Marker as free for commercial use. Verified 2026-11-16. The `license` field below stays the short code licence for the validator.
+// PRICE = freemium: local use is free within the weights-licence terms above; the datalab.to hosted API has a monthly free allowance (README cites about 5,000 convert pages; pricing page: $20/month on a work email, $10 on a personal one), see datalab.to/pricing.
+// LOCALITY = hybrid: processes documents locally by default AND has a hosted API at datalab.to; the optional --use_llm mode can send content to the configured LLM provider.
 // HARDWARE: GPU optional; Surya VLM can use GPU or CPU; no RAM/VRAM figure published.
 // PLATFORMS: Python 3.10+, PyTorch required; mac/linux/win via PyPI.
 // RELEASES: v2.2.0 published 2026-11-12 (GitHub Releases API); repo pushed 2026-11-14.
@@ -30,24 +30,24 @@ export const app: ToolRecord = {
   name: 'Marker',
   categories: ['ocr-document-parsing'],
   interfaces: ['library', 'cli'], // pip install marker-pdf installs the Python library and CLI, README 2026-11-15
-  locality: 'hybrid', // runs fully locally AND has hosted API at datalab.to (5000 free pages/month)
+  locality: 'hybrid', // local by default AND has hosted API at datalab.to (monthly free allowance); optional --use_llm can send content to the configured LLM provider
   platforms: ['linux', 'mac', 'win'], // Python 3.10+, PyTorch required; PyPI; README 2026-11-15
   worksWith: [],
   engine: 'library',
-  license: 'Apache-2.0', // GitHub API spdx_id + LICENSE file, 2026-11-15
-  price: 'freemium', // local is free; datalab.to hosted offers 5000 free pages/month
+  license: 'Apache-2.0', // CODE licence only (GitHub API spdx_id); model weights use a modified AI Pubs Open RAIL-M licence with USD 5M revenue/funding thresholds, see header
+  price: 'freemium', // local use free within weights-licence terms; datalab.to hosted API has a monthly free allowance
   hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // GPU optional; Surya VLM can use GPU or CPU; no RAM/VRAM figure published
-  stars: 40925, // github.com/VikParuchuri/marker, GitHub API 2026-11-15
+  stars: 40925, // github.com/datalab-to/marker, GitHub API 2026-11-15
   addedDate: '2026-11-15',
   status: 'listed',
   uses: ['build', 'docs'],
   url: 'datalab.to',
   storeLinks: {
     web: 'https://datalab.to',
-    github: 'https://github.com/VikParuchuri/marker',
+    github: 'https://github.com/datalab-to/marker',
   },
   installEffort: 'one-command',
-  installEvidence: 'README (read 2026-11-15): pip install marker-pdf; Python 3.10+; PyTorch required. No GUI installer. Hosted API available at datalab.to (5000 free pages/month).',
+  installEvidence: 'README (read 2026-11-15): pip install marker-pdf; Python 3.10+; PyTorch required. No GUI installer. README: marker-pdf[full] adds non-PDF formats; Surya spawns a local inference server on first use (Docker with vllm + NVIDIA Container Toolkit on NVIDIA GPUs, or llama.cpp llama-server on CPU/Apple Silicon). Hosted API at datalab.to has a monthly free allowance.',
   // hqCountry not set: Datalab described as "applied document intelligence R&D lab, Manhattan NY" per datalab.to,
   // but no primary-source privacy policy URL with governing law or national authorities confirmed; left unset per owner rule 2026-11-15
   tagline: {
@@ -65,10 +65,10 @@ export const app: ToolRecord = {
   pqReview: {
     date: '2026-11-15',
     version: 'v2.2.0',
-    versionSourceUrl: 'https://github.com/VikParuchuri/marker/releases/tag/v2.2.0',
+    versionSourceUrl: 'https://github.com/datalab-to/marker/releases/tag/v2.2.0',
   },
   compare: { inputFormats: 'PDF, PPTX, DOCX, XLSX, HTML, EPUB, images', outputFormats: ['Markdown', 'JSON', 'HTML', 'chunks'], ocr: true, tableExtraction: true, boundingBoxes: true, languageBindings: 1 }, // verified 2026-11-15 from README, see header
   lastVerifiedDate: '2026-11-15',
   lastUpstreamUpdate: '2026-11-14', // GitHub API: pushed_at 2026-11-14 (latest release v2.2.0 on 2026-11-12), read 2026-11-15
-  lastUpstreamUpdateSource: 'https://github.com/VikParuchuri/marker',
+  lastUpstreamUpdateSource: 'https://github.com/datalab-to/marker',
 }
