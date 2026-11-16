@@ -10,6 +10,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "run-qwen-locally-guide-2026",
+        "title": "How to Run Qwen 3.6 and Qwen 3.8 Locally in 2026: Ollama and LM Studio Setup Guide",
+        "url": "/local-llms/run-qwen-locally-guide-2026",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "ai-notebook-review",
         "title": "AI Notebook Review: Free Open-Source NotebookLM Alternative",
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/local-ai-on-android-guide",
         "dateModified": "2026-11-13",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "phantasm-review",
-        "title": "Phantasm Review: Self-Hosted AI Chat App for iPhone",
-        "url": "/power-local-llm/phantasm-review",
-        "dateModified": "2026-11-13",
-        "tier": "about"
       }
     ],
-    "totalCount": 355,
+    "totalCount": 356,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-gpus-for-local-llms",
+        "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
+        "url": "/local-llms/best-gpus-for-local-llms",
+        "dateModified": "2026-11-15",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-11-09",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "m5-pro-max-llm-benchmarks-2026",
-        "title": "M5 Pro vs M5 Max LLM Benchmarks 2026: Tokens/Sec, Memory Bandwidth, Power",
-        "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
-        "dateModified": "2026-11-09",
-        "tier": "about"
       }
     ],
-    "totalCount": 190,
+    "totalCount": 191,
     "capped": true
   },
   "vLLM": {
@@ -876,6 +876,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "run-qwen-locally-guide-2026",
+        "title": "How to Run Qwen 3.6 and Qwen 3.8 Locally in 2026: Ollama and LM Studio Setup Guide",
+        "url": "/local-llms/run-qwen-locally-guide-2026",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "browseros-review",
         "title": "BrowserOS Review: Open-Source AI Browser With Local Ollama and LM Studio Support",
@@ -928,22 +944,6 @@
         "slug": "ollama-review",
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-llm-models",
-        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
-        "url": "/power-local-llm/uncensored-llm-models",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-11-13",
         "tier": "about"
       }
@@ -1016,6 +1016,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
@@ -1078,14 +1086,6 @@
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-mini-review",
-        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
-        "url": "/power-local-llm/lm-mini-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -1099,6 +1099,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
         "tier": "about"
       },
       {
@@ -1163,14 +1171,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "jan-review",
-        "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
-        "url": "/power-local-llm/jan-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       }
     ],
@@ -4292,7 +4292,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 42,
     "capped": true
   },
   "CrewAI": {
@@ -10074,9 +10074,17 @@
         "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-10-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "opendataloader-pdf-review",
+        "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
+        "url": "/power-local-llm/opendataloader-pdf-review",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Blinko": {
@@ -14643,6 +14651,20 @@
         "title": "CocoIndex Review: Incremental Data Framework for RAG and AI Agents",
         "url": "/power-local-llm/cocoindex-review",
         "dateModified": "2026-11-08",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "OpenDataLoader PDF": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "opendataloader-pdf-review",
+        "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
+        "url": "/power-local-llm/opendataloader-pdf-review",
+        "dateModified": "2026-11-15",
         "tier": "about"
       }
     ],

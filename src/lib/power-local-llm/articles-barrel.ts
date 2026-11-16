@@ -75,6 +75,9 @@ import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-f
 import { article as a_sablate_review } from './articles/sablate-review'
 import { article as a_cocoindex_review } from './articles/cocoindex-review'
 import { article as a_opendataloader_pdf_review } from './articles/opendataloader-pdf-review'
+import { article as a_docling_review } from './articles/docling-review'
+import { article as a_marker_review } from './articles/marker-review'
+import { article as a_mineru_review } from './articles/mineru-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -797,6 +800,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'sablate-review':                                a_sablate_review,
   'cocoindex-review':                              a_cocoindex_review,
   'opendataloader-pdf-review':                     a_opendataloader_pdf_review,
+  'docling-review':                                a_docling_review,
+  'marker-review':                                 a_marker_review,
+  'mineru-review':                                 a_mineru_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,

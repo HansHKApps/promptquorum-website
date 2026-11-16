@@ -1779,6 +1779,11 @@
     "urlSlug": "cocoindex-review",
     "url": "/power-local-llm/cocoindex-review"
   },
+  "opendataloader-pdf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "opendataloader-pdf-review",
+    "url": "/power-local-llm/opendataloader-pdf-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",
