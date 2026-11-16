@@ -14563,6 +14563,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Stirling PDF": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "stirling-pdf-review",
+        "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
+        "url": "/power-local-llm/stirling-pdf-review",
+        "dateModified": "2026-11-16",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "StratoSort": {
     "articles": [
       {

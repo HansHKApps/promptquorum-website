@@ -1754,6 +1754,11 @@
     "urlSlug": "openmausbot-review",
     "url": "/power-local-llm/openmausbot-review"
   },
+  "stirling-pdf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "stirling-pdf-review",
+    "url": "/power-local-llm/stirling-pdf-review"
+  },
   "stratosort": {
     "cluster": "power-local-llm",
     "urlSlug": "stratosort-review",
