@@ -4,7 +4,7 @@
 // WHAT: source-available document parser by OpenDataLab; PDF, DOCX, PPTX, XLSX, images, EPUB, HTML/MHTML, RTF, OFD,
 // ODT/ODS/ODP, CSV/TSV in; Markdown / HTML / LaTeX / DOCX / EPUB / PDF out; cross-page table merging, bounding boxes, OCR.
 // MCP: MinerU has an "agent skill" system but no explicit MCP protocol; mcp omitted from compare.
-// MAKER: OpenDataLab (Shanghai AI Lab). No primary-source privacy policy with country confirmed at time of review — hqCountry left unset.
+// MAKER: OpenDataLab (the org's contact domain is pjlab.org.cn; the affiliation with Shanghai AI Laboratory is unconfirmed). No primary-source privacy policy with country confirmed at time of review — hqCountry left unset.
 // LICENSE: MinerU Open Source License (LICENSE.md, re-read 2026-11-16): "licensed under Apache License 2.0 and subject to the additional terms below".
 // Separate commercial licence required if you and your affiliates exceed 100 million MAU or USD 20 million total monthly revenue;
 // online services built on MinerU must clearly indicate MinerU is used; non-compliance terminates the licence. Not plain Apache-2.0.
@@ -13,7 +13,7 @@
 // HARDWARE: no RAM/VRAM figure in README; GPU auto-detected (Intel/AMD/NVIDIA/Apple Silicon), ~2–3× CPU speed; GPU optional.
 // PLATFORMS: Python 3.11–3.14, x86_64 and arm64; mac/linux/win via PyPI; README 2026-11-15.
 // RELEASES: tag 'mineru-4.2.2-released' → version v4.2.2, published 2026-11-13; repo pushed 2026-11-13.
-// HQ FLAG: hqCountry unset — maintainer org opendatalab = Shanghai AI Lab (China = CN), but no primary-source privacy policy URL
+// HQ FLAG: hqCountry unset — maintainer org opendatalab (the org's contact domain is pjlab.org.cn; the affiliation with Shanghai AI Laboratory is unconfirmed), but no primary-source privacy policy URL
 // confirmed with country statement at time of review; left unset per owner rule 2026-11-15.
 // compare (added 2026-11-15, segment 'document-parsing' in compare-schema.ts), every value read 2026-11-15 from README:
 //   inputFormats  'PDF, DOCX, PPTX, XLSX, HTML, EPUB, images'
