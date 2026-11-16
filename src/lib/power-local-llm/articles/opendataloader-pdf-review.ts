@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Does OpenDataLoader PDF send my PDFs to a cloud service?',
-        answer: 'Not in its default mode: the README says it processes files "100% locally" with no API calls and no data transmission. Hybrid mode, which adds OCR and better table handling, uses a separate backend that you can point at a remote address, and then your pages go wherever you point it.',
+        answer: 'Not in its default mode: the README says it processes files "100% locally" with no API calls and no data transmission. These are the maker\'s statements; PromptQuorum has not inspected network traffic or the code, and telemetry is not documented. Hybrid mode, which adds OCR and better table handling, uses a separate backend that you can point at a remote address, and then your pages go wherever you point it.',
         bullets: [
           'Input: PDF files only; Word, Excel and PowerPoint files are not processed.',
           'Output: Markdown, JSON with bounding boxes and heading levels, HTML, or an annotated PDF.',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Sendet OpenDataLoader PDF meine PDFs an einen Cloud-Dienst?',
-        answer: 'Im Standardmodus nicht: Laut README verarbeitet es Dateien „100 % lokal“, ohne API-Aufrufe und ohne Datenübertragung. Der Hybridmodus, der OCR und eine bessere Tabellenverarbeitung ergänzt, nutzt ein separates Backend, das Sie auf eine entfernte Adresse richten können; dann gehen Ihre Seiten dorthin, wohin Sie es richten.',
+        answer: 'Im Standardmodus nicht: Laut README verarbeitet es Dateien „100 % lokal“, ohne API-Aufrufe und ohne Datenübertragung. Das sind Herstellerangaben; PromptQuorum hat weder Netzwerkverkehr noch Code geprüft, und Telemetrie ist nicht dokumentiert. Der Hybridmodus, der OCR und eine bessere Tabellenverarbeitung ergänzt, nutzt ein separates Backend, das Sie auf eine entfernte Adresse richten können; dann gehen Ihre Seiten dorthin, wohin Sie es richten.',
         bullets: [
           'Eingabe: nur PDF-Dateien; Word-, Excel- und PowerPoint-Dateien werden nicht verarbeitet.',
           'Ausgabe: Markdown, JSON mit Bounding-Boxen und Überschriftenebenen, HTML oder eine annotierte PDF.',
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'OpenDataLoader PDF envoie-t-il mes PDF vers un service cloud ?',
-        answer: 'Pas dans son mode par défaut : le README indique qu’il traite les fichiers « 100 % en local », sans appel d’API ni transmission de données. Le mode hybride, qui ajoute l’OCR et un meilleur traitement des tableaux, utilise un serveur distinct que vous pouvez pointer vers une adresse distante ; vos pages partent alors là où vous le dirigez.',
+        answer: 'Pas dans son mode par défaut : le README indique qu’il traite les fichiers « 100 % en local », sans appel d’API ni transmission de données. Ce sont des déclarations de l’éditeur ; PromptQuorum n’a inspecté ni le trafic réseau ni le code, et la télémétrie n’est pas documentée. Le mode hybride, qui ajoute l’OCR et un meilleur traitement des tableaux, utilise un serveur distinct que vous pouvez pointer vers une adresse distante ; vos pages partent alors là où vous le dirigez.',
         bullets: [
           'Entrée : fichiers PDF uniquement ; les fichiers Word, Excel et PowerPoint ne sont pas traités.',
           'Sortie : Markdown, JSON avec zones englobantes et niveaux de titre, HTML ou PDF annoté.',
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Option: 'Mode hybride',
-            "Comment l'obtenir": '`pip install "opendataloader-pdf[hybrid]"` ; 1er modèle : plusieurs minutes (README)',
+            "Comment l’obtenir": '`pip install "opendataloader-pdf[hybrid]"` ; 1er modèle : plusieurs minutes (README)',
           },
           {
             Option: 'Archive CLI',
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'OpenDataLoader PDFは、PDFをクラウドサービスに送信しますか？',
-        answer: 'デフォルトモードでは送信しません。READMEは、APIコールもデータ送信もなく「100% locally」で処理すると述べています。OCRと表処理を強化するハイブリッドモードは別のバックエンドを使い、そのアドレスはリモートに向けられるため、その場合はページが指定した先に送られます。',
+        answer: 'デフォルトモードでは送信しません。READMEは、APIコールもデータ送信もなく「100% locally」で処理すると述べています。これは提供元の説明です。PromptQuorumはネットワーク通信もコードも検査しておらず、テレメトリについての記載もありません。OCRと表処理を強化するハイブリッドモードは別のバックエンドを使い、そのアドレスはリモートに向けられるため、その場合はページが指定した先に送られます。',
         bullets: [
           '入力：PDFファイルのみ。Word、Excel、PowerPointのファイルは処理されません。',
           '出力：Markdown、バウンディングボックスと見出しレベル付きのJSON、HTML、または注釈付きPDF。',
@@ -1445,7 +1445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'OpenDataLoader PDF 会把我的 PDF 发送到云服务吗？',
-        answer: '默认模式下不会：README 称它“100% locally”处理文件，没有 API 调用，也没有数据传输。增加 OCR 和更好表格处理的混合模式使用一个单独的后端，该后端可以指向远程地址，此时页面会被发送到你所指定的地方。',
+        answer: '默认模式下不会：README 称它“100% locally”处理文件，没有 API 调用，也没有数据传输。这些是开发方的说法；PromptQuorum 没有检查过网络流量或代码，遥测情况也没有文档说明。增加 OCR 和更好表格处理的混合模式使用一个单独的后端，该后端可以指向远程地址，此时页面会被发送到你所指定的地方。',
         bullets: [
           '输入：仅限 PDF 文件；不处理 Word、Excel 和 PowerPoint 文件。',
           '输出：Markdown、带边界框和标题层级的 JSON、HTML，或带注释的 PDF。',
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿OpenDataLoader PDF envía mis PDF a un servicio en la nube?',
-        answer: 'No en su modo predeterminado: el README dice que procesa los archivos "100% en local", sin llamadas a la API ni transmisión de datos. El modo híbrido, que añade OCR y un mejor manejo de tablas, usa un backend aparte al que puedes apuntar a una dirección remota; en ese caso tus páginas van adonde lo indiques.',
+        answer: 'No en su modo predeterminado: el README dice que procesa los archivos "100% en local", sin llamadas a la API ni transmisión de datos. Son afirmaciones del fabricante; PromptQuorum no ha inspeccionado el tráfico de red ni el código, y la telemetría no está documentada. El modo híbrido, que añade OCR y un mejor manejo de tablas, usa un backend aparte al que puedes apuntar a una dirección remota; en ese caso tus páginas van adonde lo indiques.',
         bullets: [
           'Entrada: solo archivos PDF; los archivos de Word, Excel y PowerPoint no se procesan.',
           'Salida: Markdown, JSON con cuadros delimitadores y niveles de encabezado, HTML o un PDF anotado.',
@@ -1897,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Flujo de datos local e híbrido',
         content: [
-          '**En su modo predeterminado el parser se ejecuta en tu equipo: el README dice "100% en local" y "sin llamadas a la API, sin transmisión de datos", y la página de inicio dice "sin claves de API, sin nube".** No hace falta GPU y no se publica ninguna cifra de RAM.',
+          '**En su modo predeterminado el parser se ejecuta en tu equipo: el README dice "100% locally" y "No API calls, no data transmission", y la página de inicio dice "No API keys, no cloud".** No hace falta GPU y no se publica ninguna cifra de RAM.',
           'El modo híbrido añade OCR, tratamiento de fórmulas y gráficos y mayor precisión en las tablas enviando las páginas difíciles a un backend de IA. De forma predeterminada ese backend es un servidor local en 127.0.0.1 y las descripciones de imágenes usan un modelo local SmolVLM-256M, pero la opción `--hybrid-url` acepta cualquier dirección. Si apuntas a un servidor remoto, tus páginas se envían allí y la frase "sin nube" ya no describe tu configuración.',
         ],
         callouts: [
@@ -1927,13 +1927,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'Benchmarks: las afirmaciones del fabricante',
         content: [
-          '**La afirmación "n.º 1 en benchmarks" de la página de inicio y del README procede de opendataloader-bench, el benchmark del propio proyecto, y vale solo para el modo híbrido.** El método se describe en la [página del benchmark](https://opendataloader.org/docs/benchmark); PromptQuorum no ha reproducido ninguna cifra.',
+          '**La afirmación "#1 in benchmarks" de la página de inicio y del README procede de opendataloader-bench, el benchmark del propio proyecto, y vale solo para el modo híbrido.** El método se describe en la [página del benchmark](https://opendataloader.org/docs/benchmark); PromptQuorum no ha reproducido ninguna cifra.',
         ],
         items: [
           'Puntuación global: 0.907 en modo híbrido frente a 0.831 sin él.',
           'Precisión en tablas (TEDS): 0.928 en modo híbrido frente a 0.489 sin él.',
           'Detección de encabezados: Docling 0.824, híbrido 0.821, no híbrido 0.739, así que la afirmación no se cumple en todas las categorías.',
-          'Velocidad por página: Nutrient 0.008 segundos, OpenDataLoader en local 0.015, híbrido 0.463; las preguntas frecuentes del README también dicen "más de 60 páginas por segundo".',
+          'Velocidad por página: Nutrient 0.008 segundos, OpenDataLoader en local 0.015, híbrido 0.463; las preguntas frecuentes del README también dicen "60+ pages per second".',
         ],
       },
       pricing: {
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O OpenDataLoader PDF envia meus PDFs para um serviço na nuvem?',
-        answer: 'Não no modo padrão: o README diz que ele processa os arquivos "100% localmente", sem chamadas de API e sem transmissão de dados. O modo híbrido, que acrescenta OCR e um tratamento melhor de tabelas, usa um backend separado que você pode apontar para um endereço remoto; nesse caso, suas páginas vão para onde você apontar.',
+        answer: 'Não no modo padrão: o README diz que ele processa os arquivos "100% localmente", sem chamadas de API e sem transmissão de dados. São afirmações do fabricante; o PromptQuorum não inspecionou o tráfego de rede nem o código, e a telemetria não está documentada. O modo híbrido, que acrescenta OCR e um tratamento melhor de tabelas, usa um backend separado que você pode apontar para um endereço remoto; nesse caso, suas páginas vão para onde você apontar.',
         bullets: [
           'Entrada: apenas arquivos PDF; arquivos do Word, Excel e PowerPoint não são processados.',
           'Saída: Markdown, JSON com caixas delimitadoras e níveis de título, HTML ou um PDF anotado.',
@@ -2293,7 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Fluxo de dados local e híbrido',
         content: [
-          '**No modo padrão, o parser roda na sua máquina: o README diz "100% localmente", "sem chamadas de API, sem transmissão de dados", e a página inicial diz "sem chaves de API, sem nuvem".** Não é necessária GPU, e nenhum valor de RAM é divulgado.',
+          '**No modo padrão, o parser roda na sua máquina: o README diz "100% locally", "No API calls, no data transmission", e a página inicial diz "No API keys, no cloud".** Não é necessária GPU, e nenhum valor de RAM é divulgado.',
           'O modo híbrido acrescenta OCR, tratamento de fórmulas e gráficos e maior precisão em tabelas, enviando as páginas difíceis para um backend de IA. Por padrão, esse backend é um servidor local em 127.0.0.1 e as descrições de imagens usam um modelo local SmolVLM-256M, mas a opção `--hybrid-url` aceita qualquer endereço. Se você apontar para um servidor remoto, suas páginas são enviadas para lá e a frase "sem nuvem" deixa de descrever a sua configuração.',
         ],
         callouts: [
@@ -2323,13 +2323,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'Benchmarks: as afirmações do fabricante',
         content: [
-          '**A afirmação "#1 em benchmarks" da página inicial e do README vem do opendataloader-bench, o benchmark do próprio projeto, e vale apenas para o modo híbrido.** O método é descrito na [página do benchmark](https://opendataloader.org/docs/benchmark); o PromptQuorum não reproduziu nenhum número.',
+          '**A afirmação "#1 in benchmarks" da página inicial e do README vem do opendataloader-bench, o benchmark do próprio projeto, e vale apenas para o modo híbrido.** O método é descrito na [página do benchmark](https://opendataloader.org/docs/benchmark); o PromptQuorum não reproduziu nenhum número.',
         ],
         items: [
           'Pontuação geral: 0.907 no modo híbrido contra 0.831 sem ele.',
           'Precisão em tabelas (TEDS): 0.928 no modo híbrido contra 0.489 sem ele.',
           'Detecção de títulos: Docling 0.824, híbrido 0.821, não híbrido 0.739, então a afirmação não vale para todas as categorias.',
-          'Velocidade por página: Nutrient 0.008 segundo, OpenDataLoader local 0.015, híbrido 0.463; o FAQ do README também diz "mais de 60 páginas por segundo".',
+          'Velocidade por página: Nutrient 0.008 segundo, OpenDataLoader local 0.015, híbrido 0.463; o FAQ do README também diz "60+ pages per second".',
         ],
       },
       pricing: {
@@ -2535,7 +2535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل يرسل OpenDataLoader PDF ملفات PDF الخاصة بي إلى خدمة سحابية؟',
-        answer: 'ليس في وضعه الافتراضي: يقول README إنه يعالج الملفات "100% محليًا" دون استدعاءات API ودون نقل بيانات. أما الوضع الهجين، الذي يضيف OCR ومعالجة أفضل للجداول، فيستخدم خلفية منفصلة يمكنك توجيهها إلى عنوان بعيد، وعندها تذهب صفحاتك إلى حيث توجّهها.',
+        answer: 'ليس في وضعه الافتراضي: يقول README إنه يعالج الملفات "100% محليًا" دون استدعاءات API ودون نقل بيانات. هذه تصريحات الجهة المطوِّرة؛ ولم تفحص PromptQuorum حركة الشبكة ولا الشيفرة، كما أن القياس عن بُعد غير موثّق. أما الوضع الهجين، الذي يضيف OCR ومعالجة أفضل للجداول، فيستخدم خلفية منفصلة يمكنك توجيهها إلى عنوان بعيد، وعندها تذهب صفحاتك إلى حيث توجّهها.',
         bullets: [
           'المدخلات: ملفات PDF فقط؛ ولا تُعالَج ملفات Word وExcel وPowerPoint.',
           'المخرجات: Markdown، أو JSON مع مربعات الإحاطة ومستويات العناوين، أو HTML، أو ملف PDF موضَّح بتعليقات.',
@@ -2620,7 +2620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'تدفق البيانات المحلي والهجين',
         content: [
-          '**في وضعه الافتراضي يعمل المحلّل على جهازك: يقول README "100% محليًا" و"لا استدعاءات API ولا نقل بيانات"، وتقول الصفحة الرئيسية "لا مفاتيح API ولا سحابة".** لا يلزم GPU، ولا يُنشر رقم لـ RAM.',
+          '**في وضعه الافتراضي يعمل المحلّل على جهازك: يقول README "100% locally" و"No API calls, no data transmission"، وتقول الصفحة الرئيسية "No API keys, no cloud".** لا يلزم GPU، ولا يُنشر رقم لـ RAM.',
           'يضيف الوضع الهجين OCR ومعالجة المعادلات والمخططات ودقة أفضل للجداول بإرسال الصفحات الصعبة إلى خلفية ذكاء اصطناعي. وهذه الخلفية افتراضيًا خادم محلي على 127.0.0.1، ووصف الصور يستخدم نموذج SmolVLM-256M محليًا، لكن الخيار `--hybrid-url` يقبل أي عنوان. وإذا وجّهته إلى خادم بعيد فستُرسل صفحاتك إليه، ولن تصف عبارة "لا سحابة" إعدادك.',
         ],
         callouts: [
@@ -2650,13 +2650,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'القياسات: ادعاءات المطوّر',
         content: [
-          '**ادعاء "#1 في القياسات" على الصفحة الرئيسية وفي README مصدره opendataloader-bench الخاص بالمشروع نفسه، وينطبق على الوضع الهجين فقط.** وتُوصف المنهجية في [صفحة القياس](https://opendataloader.org/docs/benchmark)؛ ولم تعِد PromptQuorum إنتاج أي رقم.',
+          '**ادعاء "#1 in benchmarks" على الصفحة الرئيسية وفي README مصدره opendataloader-bench الخاص بالمشروع نفسه، وينطبق على الوضع الهجين فقط.** وتُوصف المنهجية في [صفحة القياس](https://opendataloader.org/docs/benchmark)؛ ولم تعِد PromptQuorum إنتاج أي رقم.',
         ],
         items: [
           'الدرجة الإجمالية: 0.907 في الوضع الهجين مقابل 0.831 بدونه.',
           'دقة الجداول (TEDS): 0.928 في الوضع الهجين مقابل 0.489 بدونه.',
           'اكتشاف العناوين: Docling 0.824، والوضع الهجين 0.821، وغير الهجين 0.739، فالادعاء لا يصح في كل فئة.',
-          'السرعة لكل صفحة: Nutrient 0.008 ثانية، وOpenDataLoader محليًا 0.015، والوضع الهجين 0.463؛ ويقول قسم الأسئلة الشائعة في README أيضًا "أكثر من 60 صفحة في الثانية".',
+          'السرعة لكل صفحة: Nutrient 0.008 ثانية، وOpenDataLoader محليًا 0.015، والوضع الهجين 0.463؛ ويقول قسم الأسئلة الشائعة في README أيضًا "60+ pages per second".',
         ],
       },
       pricing: {
@@ -2833,7 +2833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'OpenDataLoader PDF는 내 PDF를 클라우드 서비스로 보냅니까?',
-        answer: '기본 모드에서는 보내지 않습니다. README는 API 호출과 데이터 전송 없이 "100% locally" 처리한다고 밝힙니다. OCR과 표 처리를 강화하는 하이브리드 모드는 별도의 백엔드를 사용하며, 이 백엔드는 원격 주소로 지정할 수 있어 그 경우 페이지가 지정한 곳으로 전송됩니다.',
+        answer: '기본 모드에서는 보내지 않습니다. README는 API 호출과 데이터 전송 없이 "100% locally" 처리한다고 밝힙니다. 이는 개발 측의 설명이며, PromptQuorum은 네트워크 트래픽이나 코드를 검사하지 않았고 텔레메트리는 문서화되어 있지 않습니다. OCR과 표 처리를 강화하는 하이브리드 모드는 별도의 백엔드를 사용하며, 이 백엔드는 원격 주소로 지정할 수 있어 그 경우 페이지가 지정한 곳으로 전송됩니다.',
         bullets: [
           '입력: PDF 파일만 해당하며, Word, Excel, PowerPoint 파일은 처리되지 않습니다.',
           '출력: Markdown, 경계 상자와 제목 수준이 포함된 JSON, HTML 또는 주석이 달린 PDF.',
