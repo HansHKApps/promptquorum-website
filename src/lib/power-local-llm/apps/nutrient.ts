@@ -58,12 +58,6 @@ export const app: ToolRecord = {
     ar: 'SDK PDF تجاري متعدد المنصات للعرض والتحرير والتوقيع وOCR واستخراج البيانات؛ يدعم iOS وAndroid وWeb (WebAssembly) و.NET وJava وPython وNode.js ونشر Document Engine الذاتي',
     ko: 'iOS·Android·Web(WebAssembly)·.NET·Java·Python·Node.js 및 자체 호스팅 Document Engine을 지원하는 상용 멀티플랫폼 PDF SDK; 보기·편집·서명·OCR·데이터 추출 기능 제공',
   },
-  reviewSlug: 'nutrient-review',
-  pqReview: {
-    date: '2026-11-15',
-    version: 'Document Engine 1.x', // exact current version not publicly listed; verified as active product nutrient.io/sdk 2026-11-15
-    versionSourceUrl: 'https://www.nutrient.io/sdk/',
-  },
   compare: { inputFormats: 'PDF, DOCX, images', outputFormats: ['PDF', 'Data'], ocr: true, languageBindings: 8 }, // verified 2026-11-15 from nutrient.io/sdk; tableExtraction and boundingBoxes not stated, see header
   lastVerifiedDate: '2026-11-15',
 }

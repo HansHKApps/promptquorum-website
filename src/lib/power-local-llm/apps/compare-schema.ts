@@ -406,7 +406,7 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'industry-domain': null,
   // v2 groups point at the existing guide whose segments already compare their tools.
   'agents-automation': 'local-llm-code-development-compared',
-  'documents-research': 'local-pdf-parsers-compared',
+  'documents-research': null,
   'photos-cameras-home': 'local-llm-images-video-compared',
   'llmops-security': 'local-llm-train-operate-compared',
   'hardware-edge': null,

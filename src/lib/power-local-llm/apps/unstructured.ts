@@ -60,12 +60,6 @@ export const app: ToolRecord = {
     ar: 'مكتبة ETL مفتوحة المصدر تُقسّم PDF وDOCX وHTML والبريد الإلكتروني والصور إلى عناصر JSON منظمة مع OCR واستخراج الجداول؛ تعمل محليًا مجانًا مع API سحابي اختياري مدفوع',
     ko: 'PDF·DOCX·HTML·이메일·이미지를 구조화 JSON 요소로 분할하는 오픈소스 ETL 라이브러리; OCR 및 표 추출 지원, 로컬 무료 실행, 선택적 유료 클라우드 API 제공',
   },
-  reviewSlug: 'unstructured-review',
-  pqReview: {
-    date: '2026-11-15',
-    version: '0.27.37',
-    versionSourceUrl: 'https://github.com/Unstructured-IO/unstructured/releases/tag/0.27.37',
-  },
   compare: { inputFormats: 'PDF, DOCX, PPTX, HTML, emails, images +more', outputFormats: ['JSON', 'Text'], ocr: true, tableExtraction: true, boundingBoxes: false, languageBindings: 1 }, // verified 2026-11-15 from README, see header
   lastVerifiedDate: '2026-11-15',
   lastUpstreamUpdate: '2026-11-14', // GitHub API: pushed_at 2026-11-14 (latest release 0.27.37 on 2026-11-06), read 2026-11-15
