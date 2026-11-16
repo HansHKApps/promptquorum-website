@@ -298,26 +298,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "faq": {
         "id": "faq",
         "title": "FAQ",
-        "items": [
+        "faqs": [
           {
-            "question": "Is Stirling PDF free?",
-            "answer": "The site says it is free for individual use, and the project is open-core. Paid Server Plan and Enterprise offerings exist, but no prices appear in the fetched pages."
+            "q": "Is Stirling PDF free?",
+            "a": "The site says it is free for individual use, and the project is open-core. Paid Server Plan and Enterprise offerings exist, but no prices appear in the fetched pages."
           },
           {
-            "question": "Is it really open source?",
-            "answer": "The LICENSE is MIT, but it states that some directories (app/proprietary, app/saas and engine/, the last clause truncated) have separate licenses. The README calls the project open-core."
+            "q": "Is it really open source?",
+            "a": "The LICENSE is MIT, but it states that some directories (app/proprietary, app/saas and engine/, the last clause truncated) have separate licenses. The README calls the project open-core."
           },
           {
-            "question": "How do I install it quickly?",
-            "answer": "Run the Docker command from the README, then open http://localhost:8080. The download page offers a Windows .exe, a native Mac app and a Linux .jar. The GitHub v3.3.0 release also ships .msi, setup .exe, .dmg, .deb, .rpm and .AppImage files."
+            "q": "How do I install it quickly?",
+            "a": "Run the Docker command from the README, then open http://localhost:8080. The download page offers a Windows .exe, a native Mac app and a Linux .jar. The GitHub v3.3.0 release also ships .msi, setup .exe, .dmg, .deb, .rpm and .AppImage files."
           },
           {
-            "question": "Do my files leave my machine?",
-            "answer": "The maker says the editor runs on your machine or server and documents are not sent to external services. This is a maker claim. How the AI features handle data is not documented in the sources."
+            "q": "Do my files leave my machine?",
+            "a": "The maker says the editor runs on your machine or server and documents are not sent to external services. This is a maker claim. How the AI features handle data is not documented in the sources."
           },
           {
-            "question": "Which platforms are supported?",
-            "answer": "Windows, macOS and Linux desktop apps, plus Docker, Kubernetes (Helm) and a manual .jar server setup. The browser UI is served by the self-hosted server."
+            "q": "Which platforms are supported?",
+            "a": "Windows, macOS and Linux desktop apps, plus Docker, Kubernetes (Helm) and a manual .jar server setup. The browser UI is served by the self-hosted server."
           }
         ]
       },
@@ -333,46 +333,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "Sources",
         "items": [
-          {
-            "label": "Stirling PDF website",
-            "url": "https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "Download page",
-            "url": "https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "Pricing page",
-            "url": "https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "GitHub repository and README",
-            "url": "https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "GitHub release v3.3.0",
-            "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "LICENSE",
-            "url": "https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "Privacy policy",
-            "url": "https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "Pocket-lint review",
-            "url": "https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "Contabo: BentoPDF vs Stirling PDF",
-            "url": "https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          },
-          {
-            "label": "XDA Developers: replaced Stirling PDF",
-            "url": "https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review"
-          }
+          "[Stirling PDF website](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[Download page](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[Pricing page](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[GitHub repository and README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[GitHub release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[Privacy policy](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[Pocket-lint review](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
+          "[XDA Developers: replaced Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
         ]
       },
       "relatedReading": {
