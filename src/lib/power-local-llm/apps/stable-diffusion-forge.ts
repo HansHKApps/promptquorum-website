@@ -40,6 +40,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { extensions: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
-  lastUpstreamUpdate: '2025-07-31', // GitHub API (last push, py3.12 branch 2025-07-31; main last commit 2025-06-26; latest release 2024-02-05), re-read 2026-11-02
+  lastUpstreamUpdate: '2025-07-31', // GitHub API (last push, py3.12 branch 2025-07-31; main last commit 2025-06-26; latest release 2024-02-05), re-read 2026-11-14
   lastUpstreamUpdateSource: 'https://github.com/lllyasviel/stable-diffusion-webui-forge',
 }

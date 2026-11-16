@@ -28221,5 +28221,543 @@
       "t14": "2026-11-29",
       "t28": "2026-12-13"
     }
+  },
+  {
+    "id": "13229b82-a3a0-4126-b760-5ae7f785e525",
+    "slug": "local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "date": "2026-11-14T13:37:04.180Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,h2",
+        "old": "AMD Ryzen AI Halo for Local AI: Specs, Price, Verdict",
+        "new": "AMD Ryzen AI Halo Price and Specs: $3,999 and $7,299"
+      }
+    ],
+    "queries": [
+      "amd ryzen ai halo price",
+      "amd ryzen ai halo",
+      "ryzen ai halo"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 328,
+      "clicks": 5,
+      "ctr": 0.01524390243902439,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "06d84d14-4646-43c8-b09d-ef1e7996d797",
+    "slug": "local-llms/gmktec-evo-x2-local-ai-workstation",
+    "date": "2026-11-14T13:37:04.274Z",
+    "fields": [
+      {
+        "field": "title+metaDescription",
+        "old": "GMKtec EVO-X2 for Local AI: Specs, Price and Verdict",
+        "new": "GMKtec EVO-X2 Specs and Price: 128 GB at ,499.99"
+      }
+    ],
+    "queries": [
+      "gmktec evo-x2",
+      "gmktec",
+      "evo-x2",
+      "gmktec evo x2 128gb"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 2795,
+      "clicks": 16,
+      "ctr": 0.005724508050089445,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d869c2e7-6450-45df-a638-d9b33e47b385",
+    "slug": "local-llms/how-to-install-lm-studio",
+    "date": "2026-11-14T13:37:04.369Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription",
+        "old": "Install LM Studio: GUI Setup for macOS, Windows & Linux",
+        "new": "Install LM Studio: Download, Setup and Models per GPU"
+      }
+    ],
+    "queries": [
+      "lm studio",
+      "lm studio download",
+      "install lm studio",
+      "descargar lm studio"
+    ],
+    "baseline": {
+      "position": 7.8,
+      "impressions": 3983,
+      "clicks": 10,
+      "ctr": 0.0025106703489831783,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "544de778-349c-4889-bb29-b58ad6e2c332",
+    "slug": "local-llms/how-to-install-ollama",
+    "date": "2026-11-14T13:37:04.463Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Download Ollama from ollama.com and install it on macOS, Windows or Linux: installer files, brew install ollama, the Linux curl command, and fixes.",
+        "new": "Download Ollama free from ollama.com and install it on macOS, Windows or Linux with one command each, then pick the model that fits your GPU VRAM."
+      }
+    ],
+    "queries": [
+      "ollama download",
+      "ollama install"
+    ],
+    "baseline": {
+      "position": 3.9,
+      "impressions": 16531,
+      "clicks": 18,
+      "ctr": 0.0010888633476498699,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "66bbd92e-bb81-45bc-b2f4-cb3f65a159a1",
+    "slug": "local-llms/how-to-install-ollama",
+    "date": "2026-11-14T13:37:04.557Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Download & Install Ollama on macOS, Windows & Linux",
+        "new": "Download & Install Ollama: Which Model Fits Your GPU"
+      }
+    ],
+    "queries": [
+      "ollama download",
+      "ollama install",
+      "irm https://ollama.com/install.ps1",
+      "iex",
+      "brew install ollama"
+    ],
+    "baseline": {
+      "position": 3.9,
+      "impressions": 16531,
+      "clicks": 18,
+      "ctr": 0.0010888633476498699,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "43740662-25cb-423a-adb2-2bc808bd0737",
+    "slug": "local-llms/local-llm-hardware-guide",
+    "date": "2026-11-14T13:37:04.652Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best hardware for local LLMs in 2026: VRAM needed from 8 GB to 70B models, best GPU and Mac per budget, RTX 50-series prices and CPU-only limits.",
+        "new": "Local AI models are limited by VRAM: 8 GB runs 7B, 12 GB 14B, 16 GB 24B, 24 GB 32B, 70B needs ~40 GB. Table by model size plus 12, 16 and 24 GB limits."
+      }
+    ],
+    "queries": [
+      "local ai model hardware limitations"
+    ],
+    "baseline": {
+      "position": 8.39,
+      "impressions": 5132,
+      "clicks": 8,
+      "ctr": 0.001558846453624318,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "34ed534d-4cca-4103-81c7-58585f3bb8a0",
+    "slug": "local-llms/local-llm-hardware-guide",
+    "date": "2026-11-14T13:37:04.746Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Hardware Requirements 2026: Best GPU, VRAM, Mac",
+        "new": "Local AI Model Hardware Limitations: VRAM by Model Size"
+      }
+    ],
+    "queries": [
+      "local ai model hardware limitations",
+      "local llm hardware",
+      "best hardware for local llm",
+      "run llm locally hardware requirements"
+    ],
+    "baseline": {
+      "position": 6.4,
+      "impressions": 50364,
+      "clicks": 298,
+      "ctr": 0.00591692478754666,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ed0d37a5-c924-4c3a-a5a8-f09f4ce87805",
+    "slug": "local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-14T13:37:04.841Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,h2",
+        "old": "NVIDIA DGX Spark Price, Specs and Verdict for Local AI",
+        "new": "NVIDIA DGX Spark Price and Specs: $4,699 to $6,950"
+      }
+    ],
+    "queries": [
+      "dgx spark price",
+      "nvidia dgx spark price",
+      "nvidia spark price",
+      "dgx spark"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 970,
+      "clicks": 1,
+      "ctr": 0.0010309278350515464,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "be1e7937-9661-4843-81d9-ef07278704aa",
+    "slug": "local-llms/open-webui-review",
+    "date": "2026-11-14T13:37:04.937Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI is a free, self-hosted ChatGPT-style interface for Ollama and OpenAI-compatible APIs. Custom license, branding clause, safety, Docker setup.",
+        "new": "Open WebUI (also written OpenWebUI or Open Web UI): free self-hosted chat UI for Ollama. Docker install, Ollama connection steps, alternatives and license."
+      }
+    ],
+    "queries": [
+      "open webui",
+      "openwebui",
+      "open web ui"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 8697,
+      "clicks": 15,
+      "ctr": 0.0017247326664367024,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "91aa6481-1f2e-4f87-8a61-7f312f3317a8",
+    "slug": "local-llms/open-webui-review",
+    "date": "2026-11-14T13:37:05.032Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "What Is Open WebUI? 2026 Review: License, Safety, Setup",
+        "new": "Open WebUI Review: Install, Ollama Setup, Alternatives"
+      }
+    ],
+    "queries": [
+      "open webui",
+      "openwebui",
+      "open web ui"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 8697,
+      "clicks": 15,
+      "ctr": 0.0017247326664367024,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e249baca-8e2b-4049-a858-836a3b4a04aa",
+    "slug": "local-llms/sillytavern-review",
+    "date": "2026-11-14T13:37:05.128Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "SillyTavern is a free, open-source frontend for AI character roleplay with lorebooks, group chats, and vector memory. History, install links, pricing, honest limits, and alternatives.",
+        "new": "SillyTavern is a free AI roleplay frontend that runs on any PC with Node.js 20+. Official download, install steps per OS and a requirements table."
+      }
+    ],
+    "queries": [
+      "sillytavern",
+      "sillytavern review",
+      "how good is silly tavern",
+      "does sillytavern cost money"
+    ],
+    "baseline": {
+      "position": 9.97,
+      "impressions": 1194,
+      "clicks": 6,
+      "ctr": 0.005025125628140704,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "64358aa0-7d0d-4e6d-83e6-4af7610d4602",
+    "slug": "local-llms/sillytavern-review",
+    "date": "2026-11-14T13:37:05.225Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SillyTavern 2026: Character Roleplay Frontend Review",
+        "new": "SillyTavern: Free Download, Requirements and Review"
+      }
+    ],
+    "queries": [
+      "sillytavern",
+      "sillytavern review",
+      "how good is silly tavern",
+      "does sillytavern cost money"
+    ],
+    "baseline": {
+      "position": 9.97,
+      "impressions": 1194,
+      "clicks": 6,
+      "ctr": 0.005025125628140704,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "56d0b667-9f6c-43d0-baf5-bc8a3fbdd7cd",
+    "slug": "power-local-llm/koboldcpp-review",
+    "date": "2026-11-14T13:37:05.320Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp (also written Kobold CPP) is a free, single-file local LLM app on llama.cpp. Get the Windows, Linux or macOS build and pick CUDA, Vulkan or ROCm.",
+        "new": "KoboldCpp (also Kobold CPP, koboldcpp.exe) is a free one-file local LLM app. Download links, system requirements and which GGUF models fit 4-48 GB VRAM."
+      }
+    ],
+    "queries": [
+      "koboldcpp",
+      "kobold cpp",
+      "koboldccp",
+      "koboldcpp.exe"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 8102,
+      "clicks": 9,
+      "ctr": 0.001110836830412244,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f73cdf1d-1c72-493b-93c7-27600107a0a8",
+    "slug": "power-local-llm/koboldcpp-review",
+    "date": "2026-11-14T13:37:05.414Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp Review: Download, Setup and GPU Support",
+        "new": "KoboldCpp: Download, System Requirements, Models per VRAM"
+      }
+    ],
+    "queries": [
+      "koboldcpp",
+      "kobold cpp",
+      "koboldccp",
+      "koboldcpp.exe"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 8102,
+      "clicks": 9,
+      "ctr": 0.001110836830412244,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "00513b3d-1d3e-4a5f-bdd8-6e5897ff61f6",
+    "slug": "power-local-llm/llama-cpp-explained",
+    "date": "2026-11-14T13:37:05.508Z",
+    "fields": [
+      {
+        "field": "title+metaDescription",
+        "old": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "new": "llama.cpp: What It Is, How to Install, First Command"
+      }
+    ],
+    "queries": [
+      "llama.cpp",
+      "does ollama use llama.cpp",
+      "is llama.cpp free",
+      "llama-server"
+    ],
+    "baseline": {
+      "position": 7.2,
+      "impressions": 8893,
+      "clicks": 26,
+      "ctr": 0.00292364781288654,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "98bc7db9-8c8a-4674-9bcc-199a7926df77",
+    "slug": "power-local-llm/lm-studio-review",
+    "date": "2026-11-14T13:37:05.602Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription",
+        "old": "LM Studio Review 2026: Free to Use, Not Open Source",
+        "new": "LM Studio: System Requirements and Models per VRAM"
+      }
+    ],
+    "queries": [
+      "lm studio",
+      "lmstudio",
+      "is lm studio open source"
+    ],
+    "baseline": {
+      "position": 5.4,
+      "impressions": 42730,
+      "clicks": 64,
+      "ctr": 0.0014977767376550433,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "66616d89-ae40-4351-90f2-143f43f60e5c",
+    "slug": "power-local-llm/risuai-review",
+    "date": "2026-11-14T13:37:05.698Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Free, open-source (GPL-3.0) roleplay chat client: web app, desktop, Docker. Verified install steps, Android status, pricing and SillyTavern comparison.",
+        "new": "RisuAI is a free roleplay chat client that runs in a browser with no install. Desktop installers, Docker, Node.js 22.13+ and a requirements table."
+      }
+    ],
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "risu ai 모바일",
+      "risu ai 무료"
+    ],
+    "baseline": {
+      "position": 7.59,
+      "impressions": 5029,
+      "clicks": 16,
+      "ctr": 0.0031815470272419963,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "36b31f47-9532-4bf6-bc69-a24ad4d6ebe0",
+    "slug": "power-local-llm/risuai-review",
+    "date": "2026-11-14T13:37:05.791Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI Review: Roleplay Client, Install & Pricing",
+        "new": "RisuAI Download and Requirements: Free Roleplay Client"
+      }
+    ],
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "risu ai 모바일",
+      "risu ai 무료"
+    ],
+    "baseline": {
+      "position": 7.59,
+      "impressions": 5029,
+      "clicks": 16,
+      "ctr": 0.0031815470272419963,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7a786b44-f67c-498e-b3bb-948c3ec97d0a",
+    "slug": "power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-14T13:37:05.887Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Review: Status and Setup",
+        "new": "Stable Diffusion WebUI Forge: Install & VRAM by GPU"
+      }
+    ],
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "stable diffusion forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.35,
+      "impressions": 10596,
+      "clicks": 53,
+      "ctr": 0.005001887504718762,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5d9d7fa0-bc2a-4c5e-9bc1-2dc52aa80048",
+    "slug": "power-local-llm/whisper-cpp-review",
+    "date": "2026-11-14T13:37:05.983Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp Review: MIT, Install & CLI for Local STT",
+        "new": "whisper.cpp Review: Install, Model Sizes & RAM Needs"
+      }
+    ],
+    "queries": [
+      "whisper.cpp",
+      "whisper cpp",
+      "whisper-cpp"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 12564,
+      "clicks": 62,
+      "ctr": 0.004934734161095192,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "26ee14f9-f109-4480-890e-bfa905fb277c",
+    "slug": "smart-home/best-smart-home-devices-2026",
+    "date": "2026-11-14T13:37:12.894Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription",
+        "old": "Best Smart Home Devices 2026: Local-First Buyer Guide",
+        "new": "Best Motion Sensor 2026 & Smart Home Devices: Local Picks"
+      }
+    ],
+    "queries": [
+      "best motion sensor 2026",
+      "best motion sensor under $200",
+      "best motion sensor 2025"
+    ],
+    "baseline": {
+      "position": 2.6,
+      "impressions": 2182,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": null
   }
 ]

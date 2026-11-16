@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo mini pc',
     ],
     leadAnswerBlock:
-      '**The Minisforum MS-S1 MAX is a Ryzen AI Max+ 395 workstation with 128 GB of memory, dual 10GbE and an internal expansion slot, aimed at lab and homelab buyers who want dual 10GbE and an internal PCIe slot.** The decisive caveat is price: the US store lists it at $3,919 on sale against $4,899 regular, and we found no independent local-LLM speed test for it.',
+      '**The Minisforum MS-S1 MAX is a Ryzen AI Max+ 395 workstation with 128 GB memory, dual 10GbE and an internal expansion slot, for lab and homelab buyers. Its caveat is price: $3,919 on sale against $4,899 regular in the US store (read 2026-10-31); we found no independent local-LLM speed test.**',
     quickAnswerTop: {
       en: {
         question: 'Is the Minisforum MS-S1 MAX a good local AI workstation?',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB LPDDR5x-8000 (192 GB on the P495), soldered and not upgradeable',
           'Dual 10GbE, two USB4 v2 ports and a 2U rack-mount option',
-          'US store: $3,919 sale / $4,899 regular for 128 GB / 2 TB',
+          'US store, read 2026-10-31: $3,919 sale / $4,899 regular for 128 GB / 2 TB',
           'No independent LLM throughput test found',
         ],
         updatedDate: '2026-11',
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/local-llms/nvidia-dgx-spark-local-ai-workstation): NVIDIA GB10 with CUDA and 200 Gbps ConnectX-7 networking, but capped at 128 GB.',
           '[Ryzen AI Halo](/local-llms/amd-ryzen-ai-halo-local-ai-workstation): AMD\'s own Ryzen AI Max+ 395 box with a single 10GbE port and an independent comparison against the Spark.',
           '[Framework Desktop](/local-llms/framework-desktop-local-ai-workstation): a 4.5 L modular case with a 192 GB PRO 495 option on pre-order; Framework\'s store pages show batch 3 shipping in December.',
-          '[GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation): the same 395 processor and 128 GB; its US price is reported inconsistently across sources.',
+          '[GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation): the same 395 processor and 128 GB; GMKtec\'s US store lists $2,199.99 for 64 GB and $3,499.99 to $3,649.99 for 128 GB.',
           '[Local AI Workstations: Strix Halo vs. DGX Spark](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): the full category comparison with a price table across all machines.',
         ],
       },
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo mini pc',
     ],
     leadAnswerBlock:
-      '**Der Minisforum MS-S1 MAX ist eine Workstation mit Ryzen AI Max+ 395, 128 GB Speicher, zwei 10GbE-Anschlüssen und einem internen Erweiterungssteckplatz für Labor- und Homelab-Käufer, die zwei 10GbE-Anschlüsse und einen internen PCIe-Steckplatz wollen.** Der entscheidende Vorbehalt ist der Preis: Der US-Shop führt ihn mit 3.919 $ im Angebot gegenüber 4.899 $ regulär, und einen unabhängigen Geschwindigkeitstest für lokale LLMs haben wir nicht gefunden.',
+      '**Der Minisforum MS-S1 MAX ist eine Workstation mit Ryzen AI Max+ 395, 128 GB Speicher, zwei 10GbE-Anschlüssen und internem Erweiterungssteckplatz für Labor- und Homelab-Käufer. Vorbehalt ist der Preis: 3.919 $ im Angebot statt 4.899 $ im US-Shop (gelesen am 2026-10-31); einen unabhängigen LLM-Geschwindigkeitstest haben wir nicht gefunden.**',
     quickAnswerTop: {
       de: {
         question: 'Ist der Minisforum MS-S1 MAX eine gute lokale KI-Workstation?',
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB LPDDR5x-8000 (192 GB beim P495), aufgelötet und nicht erweiterbar',
           'Zwei 10GbE-Anschlüsse, zwei USB4-v2-Anschlüsse und eine 2U-Rackmontage-Option',
-          'US-Shop: 3.919 $ im Angebot / 4.899 $ regulär für 128 GB / 2 TB',
+          'US-Shop, gelesen am 2026-10-31: 3.919 $ im Angebot / 4.899 $ regulär für 128 GB / 2 TB',
           'Kein unabhängiger Test des LLM-Durchsatzes gefunden',
         ],
         updatedDate: '2026-11',
@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation): NVIDIA GB10 mit CUDA und 200-Gbit/s-ConnectX-7-Netzwerk, aber auf 128 GB begrenzt.',
           '[Ryzen AI Halo](/de/local-llms/amd-ryzen-ai-halo-local-ai-workstation): das eigene Gerät von AMD mit Ryzen AI Max+ 395, einem einzelnen 10GbE-Anschluss und einem unabhängigen Vergleich mit der Spark.',
           '[Framework Desktop](/de/local-llms/framework-desktop-local-ai-workstation): ein modulares 4,5-l-Gehäuse mit einer Option mit 192 GB und PRO 495 auf Vorbestellung; die Shop-Seiten von Framework zeigen Charge 3 mit Versand im Dezember.',
-          '[GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation): derselbe 395-Prozessor und 128 GB; sein US-Preis wird in den Quellen uneinheitlich gemeldet.',
+          '[GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation): derselbe 395-Prozessor und 128 GB; der US-Shop von GMKtec führt 64 GB für 2.199,99 $ und 128 GB für 3.499,99 bis 3.649,99 $.',
           '[Lokale KI-Workstations: Strix Halo vs. DGX Spark](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): der vollständige Kategorievergleich mit einer Preistabelle für alle Geräte.',
         ],
       },
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mini pc strix halo',
     ],
     leadAnswerBlock:
-      "**Le Minisforum MS-S1 MAX est une station Ryzen AI Max+ 395 avec 128 Go de mémoire, un double 10GbE et un emplacement d'extension interne, destinée aux acheteurs de laboratoire et de homelab qui veulent un double 10GbE et un emplacement PCIe interne.** La réserve décisive est le prix : la boutique américaine l'affiche à $3,919 en promotion contre $4,899 au prix normal, et nous n'avons trouvé aucun test indépendant de sa vitesse en LLM local.",
+      "**Le Minisforum MS-S1 MAX est une station Ryzen AI Max+ 395 avec 128 Go, double 10GbE et un emplacement d'extension interne, pour laboratoires et homelabs. Réserve : le prix, $3,919 en promotion contre $4,899 en boutique US au 2026-10-31, et aucun test indépendant de vitesse en LLM local trouvé.**",
     quickAnswerTop: {
       fr: {
         question: 'Le Minisforum MS-S1 MAX est-il une bonne station de travail IA locale ?',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 Go de LPDDR5x-8000 (192 Go sur la P495), soudée et non évolutive',
           'Double 10GbE, deux ports USB4 v2 et une option de montage en rack 2U',
-          'Boutique US : $3,919 en promotion / $4,899 au prix normal pour 128 Go / 2 To',
+          'Boutique US, consultée le 2026-10-31 : $3,919 en promotion / $4,899 au prix normal pour 128 Go / 2 To',
           "Aucun test indépendant de débit en LLM trouvé",
         ],
         updatedDate: '2026-11',
@@ -594,7 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[DGX Spark](/fr/local-llms/nvidia-dgx-spark-local-ai-workstation) : NVIDIA GB10 avec CUDA et réseau ConnectX-7 200 Gbps, mais plafonné à 128 Go.",
           "[Ryzen AI Halo](/fr/local-llms/amd-ryzen-ai-halo-local-ai-workstation) : la machine Ryzen AI Max+ 395 d'AMD lui-même, avec un seul port 10GbE et une comparaison indépendante avec le Spark.",
           "[Framework Desktop](/fr/local-llms/framework-desktop-local-ai-workstation) : un boîtier modulaire de 4.5 L avec une option PRO 495 de 192 Go en précommande ; les pages de la boutique Framework indiquent une expédition du lot 3 en décembre.",
-          "[GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) : même processeur 395 et 128 Go ; son prix américain est signalé de façon incohérente selon les sources.",
+          "[GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) : même processeur 395 et 128 Go ; la boutique US de GMKtec l'affiche à $2,199.99 en 64 Go et à $3,499.99–$3,649.99 en 128 Go.",
           "[Stations de travail IA locales : AMD Strix Halo contre NVIDIA DGX Spark](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark) : le comparatif complet de la catégorie, avec un tableau des prix de toutes les machines.",
         ],
       },
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo mini pc',
     ],
     leadAnswerBlock:
-      '**Minisforum MS-S1 MAXは、128GBのメモリ、デュアル10GbE、内部拡張スロットを備えたRyzen AI Max+ 395搭載ワークステーションで、デュアル10GbEと内部PCIeスロットが欲しいラボやホームラボの購入者向けです。** 最大の注意点は価格です。米国ストアの掲載は、通常$4,899のところセールで$3,919で、独立したローカルLLM速度テストは見つかりませんでした。',
+      '**Minisforum MS-S1 MAXは、128GBのメモリ、デュアル10GbE、内部拡張スロットを備えたRyzen AI Max+ 395搭載ワークステーションで、デュアル10GbEと内部PCIeスロットが欲しいラボやホームラボの購入者向けです。** 最大の注意点は価格です。米国ストアの掲載（2026-10-31確認）は、通常$4,899のところセールで$3,919で、独立したローカルLLM速度テストは見つかりませんでした。',
     quickAnswerTop: {
       ja: {
         question: 'Minisforum MS-S1 MAXはローカルAIワークステーションとして優れていますか？',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128GB LPDDR5x-8000（P495は192GB）。はんだ付けで増設不可',
           'デュアル10GbE、USB4 v2ポート2基、2Uラックマウントのオプション',
-          '米国ストア: 128GB / 2TBでセール$3,919 / 通常$4,899',
+          '米国ストア（2026-10-31確認）: 128GB / 2TBでセール$3,919 / 通常$4,899',
           '独立したLLMスループットテストは見つからず',
         ],
         updatedDate: '2026-11',
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/ja/local-llms/nvidia-dgx-spark-local-ai-workstation): CUDAと200Gbps ConnectX-7ネットワークを備えたNVIDIA GB10搭載機。ただしメモリは128GBまで。',
           '[Ryzen AI Halo](/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation): 10GbEポート1基を備えた、AMD自身のRyzen AI Max+ 395搭載機。Sparkとの独立した比較あり。',
           '[Framework Desktop](/ja/local-llms/framework-desktop-local-ai-workstation): 4.5Lのモジュール式ケースで、192GBのPRO 495オプションを予約受付中。Frameworkのストアページでは、バッチ3は12月出荷と表示されています。',
-          '[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation): 同じ395プロセッサと128GB。米国価格は情報源によって報告が一貫していません。',
+          '[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation): 同じ395プロセッサと128GB。GMKtec米国ストアでは64GBが$2,199.99、128GBが$3,499.99〜$3,649.99です。',
           '[ローカルAIワークステーション: Strix Halo vs. DGX Spark](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): 全機種の価格表を含む、カテゴリ全体の比較。',
         ],
       },
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo 迷你主机',
     ],
     leadAnswerBlock:
-      '**Minisforum MS-S1 MAX是一款Ryzen AI Max+ 395工作站，配128 GB内存、双10GbE和内部扩展插槽，面向需要双10GbE和内部PCIe插槽的实验室与家庭实验室买家。** 最关键的问题是价格：美国商店标价特价$3,919、正常价$4,899，而且我们没有找到针对它的独立本地大模型速度测试。',
+      '**Minisforum MS-S1 MAX是一款Ryzen AI Max+ 395工作站，配128 GB内存、双10GbE和内部扩展插槽，面向需要双10GbE和内部PCIe插槽的实验室与家庭实验室买家。** 最关键的问题是价格：美国商店（2026-10-31查看）标价特价$3,919、正常价$4,899，而且我们没有找到针对它的独立本地大模型速度测试。',
     quickAnswerTop: {
       zh: {
         question: 'Minisforum MS-S1 MAX是一台好的本地AI工作站吗？',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB LPDDR5x-8000（P495为192 GB），焊接式，不可升级',
           '双10GbE、两个USB4 v2接口，并可选2U机架安装',
-          '美国商店：128 GB / 2 TB特价$3,919 / 正常价$4,899',
+          '美国商店（2026-10-31查看）：128 GB / 2 TB特价$3,919 / 正常价$4,899',
           '未找到独立的大模型吞吐量测试',
         ],
         updatedDate: '2026-11',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/zh/local-llms/nvidia-dgx-spark-local-ai-workstation)：NVIDIA GB10，支持CUDA和200 Gbps ConnectX-7网络，但内存上限为128 GB。',
           '[Ryzen AI Halo](/zh/local-llms/amd-ryzen-ai-halo-local-ai-workstation)：AMD自家的Ryzen AI Max+ 395整机，只有一个10GbE口，并有一项对比Spark的独立测试。',
           '[Framework Desktop](/zh/local-llms/framework-desktop-local-ai-workstation)：4.5升的模块化机箱，提供可预订的192 GB PRO 495选项；Framework商店页面显示第3批在12月发货。',
-          '[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)：同样的395处理器和128 GB内存；各来源对其美国价格的报道并不一致。',
+          '[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)：同样的395处理器和128 GB内存；GMKtec美国官网标价64 GB版$2,199.99，128 GB版$3,499.99至$3,649.99。',
           '[本地AI工作站：Strix Halo对比DGX Spark](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)：完整的品类对比，含所有机器的价格表。',
         ],
       },
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mini pc strix halo',
     ],
     leadAnswerBlock:
-      '**El Minisforum MS-S1 MAX es una estación de trabajo con Ryzen AI Max+ 395, 128 GB de memoria, doble 10GbE y una ranura de expansión interna, pensada para compradores de laboratorio y homelab que quieren doble 10GbE y una ranura PCIe interna.** La gran pega es el precio: la tienda de EE. UU. lo lista a $3,919 en oferta frente a $4,899 de precio normal, y no encontramos ninguna prueba independiente de velocidad con LLM locales.',
+      '**El Minisforum MS-S1 MAX es una workstation con Ryzen AI Max+ 395, 128 GB, doble 10GbE y ranura de expansión interna, para laboratorios y homelabs. La pega es el precio: $3,919 en oferta frente a $4,899 (tienda EE. UU., 2026-10-31), y no encontramos pruebas independientes de velocidad con LLM locales.**',
     quickAnswerTop: {
       es: {
         question: '¿Es el Minisforum MS-S1 MAX una buena estación de trabajo de IA local?',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB de LPDDR5x-8000 (192 GB en el P495), soldada y no ampliable',
           'Doble 10GbE, dos puertos USB4 v2 y una opción de montaje en rack 2U',
-          'Tienda de EE. UU.: $3,919 en oferta / $4,899 normal por 128 GB / 2 TB',
+          'Tienda de EE. UU., consultada el 2026-10-31: $3,919 en oferta / $4,899 normal por 128 GB / 2 TB',
           'No se encontró ninguna prueba independiente de rendimiento con LLM',
         ],
         updatedDate: '2026-11',
@@ -1252,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/es/local-llms/nvidia-dgx-spark-local-ai-workstation): NVIDIA GB10 con CUDA y red ConnectX-7 de 200 Gbps, pero limitada a 128 GB.',
           '[Ryzen AI Halo](/es/local-llms/amd-ryzen-ai-halo-local-ai-workstation): la propia caja Ryzen AI Max+ 395 de AMD, con un único puerto 10GbE y una comparación independiente con la Spark.',
           '[Framework Desktop](/es/local-llms/framework-desktop-local-ai-workstation): una caja modular de 4.5 L con una opción PRO 495 de 192 GB en reserva; las páginas de la tienda de Framework muestran el lote 3 con envío en diciembre.',
-          '[GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation): el mismo procesador 395 y 128 GB; su precio en EE. UU. se informa de forma incoherente según la fuente.',
+          '[GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation): el mismo procesador 395 y 128 GB; la tienda de EE. UU. de GMKtec lo lista a $2,199.99 con 64 GB y de $3,499.99 a $3,649.99 con 128 GB.',
           '[Estaciones de trabajo de IA local: Strix Halo vs. DGX Spark](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): la comparación completa de la categoría con una tabla de precios de todas las máquinas.',
         ],
       },
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mini pc strix halo',
     ],
     leadAnswerBlock:
-      '**O Minisforum MS-S1 MAX é uma workstation com Ryzen AI Max+ 395, 128 GB de memória, 10GbE duplo e um slot de expansão interno, voltada a compradores de laboratório e homelab que querem 10GbE duplo e um slot PCIe interno.** A ressalva decisiva é o preço: a loja dos EUA o lista a $3,919 em promoção contra $4,899 regular, e não encontramos nenhum teste independente de velocidade de LLM local para ele.',
+      '**O Minisforum MS-S1 MAX é uma workstation com Ryzen AI Max+ 395, 128 GB, 10GbE duplo e slot de expansão interno, para laboratórios e homelabs. A ressalva é o preço: $3,919 em promoção contra $4,899 na loja dos EUA (2026-10-31), e não encontramos teste independente de velocidade de LLM local.**',
     quickAnswerTop: {
       pt: {
         question: 'O Minisforum MS-S1 MAX é uma boa workstation de IA local?',
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB de LPDDR5x-8000 (192 GB no P495), soldada e não atualizável',
           '10GbE duplo, duas portas USB4 v2 e uma opção de montagem em rack 2U',
-          'Loja dos EUA: $3,919 em promoção / $4,899 regular para 128 GB / 2 TB',
+          'Loja dos EUA, lida em 2026-10-31: $3,919 em promoção / $4,899 regular para 128 GB / 2 TB',
           'Nenhum teste independente de throughput de LLM encontrado',
         ],
         updatedDate: '2026-11',
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/pt/local-llms/nvidia-dgx-spark-local-ai-workstation): NVIDIA GB10 com CUDA e rede ConnectX-7 de 200 Gbps, mas limitado a 128 GB.',
           '[Ryzen AI Halo](/pt/local-llms/amd-ryzen-ai-halo-local-ai-workstation): a caixa com Ryzen AI Max+ 395 da própria AMD, com uma única porta 10GbE e uma comparação independente com o Spark.',
           '[Framework Desktop](/pt/local-llms/framework-desktop-local-ai-workstation): um gabinete modular de 4.5 L com opção PRO 495 de 192 GB em pré-encomenda; as páginas da loja da Framework mostram o lote 3 com envio em dezembro.',
-          '[GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation): o mesmo processador 395 e 128 GB; o preço nos EUA é reportado de forma inconsistente entre as fontes.',
+          '[GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation): o mesmo processador 395 e 128 GB; a loja dos EUA da GMKtec o lista a $2,199.99 com 64 GB e de $3,499.99 a $3,649.99 com 128 GB.',
           '[Workstations de IA local: Strix Halo vs. DGX Spark](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): a comparação completa da categoria, com uma tabela de preços de todas as máquinas.',
         ],
       },
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'كمبيوتر مصغر strix halo',
     ],
     leadAnswerBlock:
-      '**جهاز Minisforum MS-S1 MAX محطة عمل بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB ومنفذَي 10GbE وفتحة توسعة داخلية، موجهة لمشتري المختبرات والمختبرات المنزلية (homelab) الذين يريدون منفذَي 10GbE وفتحة PCIe داخلية.** أبرز تحفظ عليه هو السعر: يعرضه المتجر الأمريكي بسعر $3,919 بعد التخفيض مقابل $4,899 للسعر العادي، ولم نجد اختبارًا مستقلًا لسرعة LLM المحلية عليه.',
+      '**جهاز Minisforum MS-S1 MAX محطة عمل بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB ومنفذَي 10GbE وفتحة توسعة داخلية، لمشتري المختبرات والمختبرات المنزلية (homelab). التحفظ الأبرز هو السعر: $3,919 بعد التخفيض مقابل $4,899 للسعر العادي في المتجر الأمريكي (قُرئ في 2026-10-31)، ولم نجد اختبارًا مستقلًا لسرعة LLM المحلية.**',
     quickAnswerTop: {
       ar: {
         question: 'هل Minisforum MS-S1 MAX محطة عمل جيدة للذكاء الاصطناعي المحلي؟',
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128 GB من LPDDR5x-8000 (192 GB في P495)، ملحومة وغير قابلة للترقية',
           'منفذا 10GbE ومنفذا USB4 v2 وخيار تركيب في رف 2U',
-          'المتجر الأمريكي: $3,919 تخفيض / $4,899 عادي لطراز 128 GB / 2 TB',
+          'المتجر الأمريكي (قُرئ في 2026-10-31): $3,919 تخفيض / $4,899 عادي لطراز 128 GB / 2 TB',
           'لم نجد اختبار إنتاجية LLM مستقلًا',
         ],
         updatedDate: '2026-11',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/ar/local-llms/nvidia-dgx-spark-local-ai-workstation): شريحة NVIDIA GB10 مع CUDA وشبكة ConnectX-7 بسرعة 200 Gbps، لكن بحد أقصى 128 GB.',
           '[Ryzen AI Halo](/ar/local-llms/amd-ryzen-ai-halo-local-ai-workstation): جهاز AMD الخاص بمعالج Ryzen AI Max+ 395 ومنفذ 10GbE واحد ومقارنة مستقلة مع Spark.',
           '[Framework Desktop](/ar/local-llms/framework-desktop-local-ai-workstation): هيكل معياري بسعة 4.5 L مع خيار PRO 495 بذاكرة 192 GB بالطلب المسبق؛ وتُظهر صفحات متجر Framework شحن الدفعة 3 في ديسمبر.',
-          '[GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation): معالج 395 نفسه وذاكرة 128 GB؛ ويُبلَّغ عن سعره الأمريكي بشكل غير متسق بين المصادر.',
+          '[GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation): معالج 395 نفسه وذاكرة 128 GB؛ ويدرجه متجر GMKtec الأمريكي بسعر $2,199.99 مع 64 GB وبين $3,499.99 و$3,649.99 مع 128 GB.',
           '[محطات عمل الذكاء الاصطناعي المحلي: Strix Halo مقابل DGX Spark](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): المقارنة الكاملة للفئة مع جدول أسعار لجميع الأجهزة.',
         ],
       },
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'strix halo 미니 pc',
     ],
     leadAnswerBlock:
-      '**Minisforum MS-S1 MAX는 128GB 메모리, 듀얼 10GbE, 내부 확장 슬롯을 갖춘 Ryzen AI Max+ 395 워크스테이션으로, 듀얼 10GbE와 내부 PCIe 슬롯을 원하는 연구실 및 홈랩 구매자를 위한 제품입니다.** 결정적인 단서는 가격입니다. 미국 스토어에서는 정가 $4,899 대비 할인가 $3,919로 등재되어 있으며, 이 기기에 대한 독립적인 로컬 LLM 속도 테스트는 찾지 못했습니다.',
+      '**Minisforum MS-S1 MAX는 128GB 메모리, 듀얼 10GbE, 내부 확장 슬롯을 갖춘 Ryzen AI Max+ 395 워크스테이션으로, 듀얼 10GbE와 내부 PCIe 슬롯을 원하는 연구실 및 홈랩 구매자를 위한 제품입니다.** 결정적인 단서는 가격입니다. 미국 스토어(2026-10-31 확인)에서는 정가 $4,899 대비 할인가 $3,919로 등재되어 있으며, 이 기기에 대한 독립적인 로컬 LLM 속도 테스트는 찾지 못했습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Minisforum MS-S1 MAX는 로컬 AI 워크스테이션으로 적합합니까?',
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '128GB LPDDR5x-8000(P495는 192GB), 납땜형이며 업그레이드 불가',
           '듀얼 10GbE, USB4 v2 포트 2개, 2U 랙 마운트 옵션',
-          '미국 스토어: 128GB / 2TB 기준 할인가 $3,919 / 정가 $4,899',
+          '미국 스토어(2026-10-31 확인): 128GB / 2TB 기준 할인가 $3,919 / 정가 $4,899',
           '독립적인 LLM 처리량 테스트 없음',
         ],
         updatedDate: '2026-11',
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DGX Spark](/ko/local-llms/nvidia-dgx-spark-local-ai-workstation): CUDA와 200 Gbps ConnectX-7 네트워킹을 갖춘 NVIDIA GB10이지만 128GB가 상한입니다.',
           '[Ryzen AI Halo](/ko/local-llms/amd-ryzen-ai-halo-local-ai-workstation): 10GbE 포트 1개를 갖춘 AMD 자체 Ryzen AI Max+ 395 기기이며 Spark와의 독립 비교 자료가 있습니다.',
           '[Framework Desktop](/ko/local-llms/framework-desktop-local-ai-workstation): 사전 주문으로 192GB PRO 495 옵션을 제공하는 4.5 L 모듈식 케이스이며, Framework 스토어 페이지에는 3차 배치가 12월에 출하되는 것으로 표시됩니다.',
-          '[GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation): 같은 395 프로세서와 128GB이며, 미국 가격은 출처마다 일관되지 않게 보고됩니다.',
+          '[GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation): 같은 395 프로세서와 128GB이며, GMKtec 미국 스토어는 64GB를 $2,199.99, 128GB를 $3,499.99~$3,649.99에 게시합니다.',
           '[로컬 AI 워크스테이션: Strix Halo 대 DGX Spark](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): 전체 기기의 가격표를 포함한 범주 비교입니다.',
         ],
       },

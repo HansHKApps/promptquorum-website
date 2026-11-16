@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -17,12 +17,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-en.webp',
-    title: 'AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict',
-    seoTitle: 'AMD Ryzen AI Halo for Local AI: Specs, Price, Verdict',
+    title: 'AMD Ryzen AI Halo Price and Specs for Local AI',
+    seoTitle: 'AMD Ryzen AI Halo Price and Specs: Reported $3,999+',
     intro:
       'The AMD Ryzen AI Halo is AMD\'s own developer mini PC for running large language models locally. It comes in two versions: a 128 GB model with the Ryzen AI Max+ 395 and a 192 GB model with the Ryzen AI Max+ PRO 495. Both are sold in the US through Micro Center. This page collects the vendor specifications, the prices we could source and what independent reviewers measured, so you can decide whether it fits your workload before buying.',
     metaDescription:
-      'AMD Ryzen AI Halo specs for local AI: 128 GB Ryzen AI Max+ 395 and 192 GB PRO 495 versions, sourced US prices and what independent reviews found.',
+      'AMD Ryzen AI Halo price: reported US prices $3,999 (128 GB, Ryzen AI Max+ 395) and $7,299.99 (192 GB, PRO 495) at Micro Center. Specs, review results.',
     twitterDescription:
       'AMD Ryzen AI Halo for local LLMs: 128 GB and 192 GB versions, sourced US prices, and what StorageReview, HotHardware and LTT Labs found.',
     readTime: '8 min read',
@@ -37,15 +37,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai workstation',
     ],
     leadAnswerBlock:
-      '**The AMD Ryzen AI Halo is a $3,999 (128 GB) or $7,299.99 (192 GB) developer mini PC for running 100B-class models locally on Windows or Linux, sold in the US through Micro Center.** The decisive caveat: StorageReview\'s vLLM test found the NVIDIA DGX Spark faster in all 18 serving scenarios, and the Halo has no high-speed port for linking boxes.',
+      '**The AMD Ryzen AI Halo is a mini-PC for 100B-class local models on Windows or Linux, reported at US Micro Center for $3,999 (128 GB) and $7,299.99 (192 GB). StorageReview\'s vLLM test favored the NVIDIA DGX Spark in all 18 scenarios; the Halo has one 10GbE port, no 200G fabric.**',
     quickAnswerTop: {
       en: {
         question: 'Is the AMD Ryzen AI Halo worth buying for local AI?',
         answer:
           'It is worth considering if you want a preconfigured AMD box with Windows or Linux and 128 GB or 192 GB of memory. It is less suited to maximum serving throughput or clustering, because StorageReview measured the DGX Spark ahead in every vLLM test and the Halo has a single 10GbE port.',
         bullets: [
-          '128 GB version: Ryzen AI Max+ 395, $3,999 at Micro Center',
-          '192 GB version: Ryzen AI Max+ PRO 495, $7,299.99, in-store only',
+          '128 GB version: Ryzen AI Max+ 395, reported $3,999 at Micro Center',
+          '192 GB version: Ryzen AI Max+ PRO 495, reported $7,299.99, in-store only',
           'Runs Windows 11 Pro or an AMD Linux developer image (128 GB version)',
           'Slower than the DGX Spark in StorageReview\'s vLLM serving test',
         ],
@@ -55,8 +55,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Key Takeaways', anchor: 'tldr' },
       { label: 'What the AMD Ryzen AI Halo Is', anchor: 'overview' },
-      { label: 'Specifications', anchor: 'specs' },
-      { label: 'Price and Availability', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo Specs', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo Price and Availability', anchor: 'pricing' },
       { label: 'What Independent Reports Show', anchor: 'evidence' },
       { label: 'Who It Suits and Who Should Skip It', anchor: 'fit' },
       { label: 'Alternatives in the Same Class', anchor: 'alternatives' },
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Specifications',
+        title: 'AMD Ryzen AI Halo Specs',
         columns: ['Spec', 'Detail'],
         rows: [
           { 'Spec': 'Processor (128 GB version)', 'Detail': 'Ryzen AI Max+ 395, 16 cores / 32 threads, Zen 5, up to 5.1 GHz boost' },
@@ -114,9 +114,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Price and Availability',
+        title: 'AMD Ryzen AI Halo Price and Availability',
         content:
-          '**The 128 GB version costs $3,999 and the 192 GB version $7,299.99, both US prices at Micro Center.** DRAM shortages have moved prices in this class repeatedly, so check the retailer page before ordering.',
+          '**The 128 GB version is reported at $3,999 and the 192 GB version at $7,299.99, both US prices at Micro Center.** DRAM shortages have moved prices in this class repeatedly, so check the retailer page before ordering.',
         columns: ['Configuration', 'US price', 'Source and date', 'Status'],
         rows: [
           { 'Configuration': '128 GB, Ryzen AI Max+ 395, 2 TB, Windows 11 Pro or Linux', 'US price': '$3,999.99 (headline $3,999)', 'Source and date': 'HotHardware, 2026-06-13', 'Status': 'Pre-order with in-store pickup; ready by 2026-07-10 per HotHardware' },
@@ -128,9 +128,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: 'What Independent Reports Show',
         content: [
-          '**The one head-to-head with published numbers is StorageReview\'s Halo vs. DGX Spark test, in which the Spark won all 18 vLLM serving scenarios.** StorageReview ran vLLM online serving on Linux at batch 64 across six models. The Spark was ahead by about 1.9x to 13.4x in 16 scenarios and by about 11-12% in two decode-heavy runs (Mistral Small 3.1 24B and Llama 3.1 8B). The widest gap, 13.4x, was a Llama 3.1 8B FP4 run. StorageReview\'s conclusion still favours the Halo for Windows users, ROCm developers and single-box setups.',
+          '**The most detailed head-to-head with published numbers that we found is StorageReview\'s Halo vs. DGX Spark test, in which the Spark won all 18 vLLM serving scenarios.** StorageReview ran vLLM online serving on Linux at batch 64 across six models. The Spark was ahead by about 1.9x to 13.4x in 16 scenarios and by about 11-12% in two decode-heavy runs (Mistral Small 3.1 24B and Llama 3.1 8B). The widest gap, 13.4x, was a Llama 3.1 8B FP4 run. StorageReview\'s conclusion still favours the Halo for Windows users, ROCm developers and single-box setups.',
           'Other reviewers report a closer result. **HotHardware called the Halo roughly on par with the DGX Spark in many models, not the absolute fastest, and gave it a Recommended award.** It measured 45 dBA at 12 inches from the rear vents during a 90-minute run, idle draw of about 33-35 W and load draw of 135-145 W. Those results come from different test setups, so we cannot reconcile them.',
-          'On CPU and memory, StorageReview\'s Phoronix runs on Linux had the Halo ahead in 7-Zip decompression (+38%) and an LLVM compile (about 14% faster) while the Spark won three of four STREAM memory tests. LTT Labs, as summarised by Gigazine, found the Halo offers nothing novel in performance over other Ryzen AI Max+ 395 machines, with its software environment (AMD-verified driver sets and step-by-step AI playbooks, some with open bugs) the main differentiator. In the same summary, a Mac Studio with about 800 GB/s memory generated tokens roughly 2-3x faster than the Halo on Gemma 4 31B, and gpt-oss-20b on the NPU ran at about 20 tokens per second at up to 35 W package power.',
+          'On CPU and memory, StorageReview\'s Phoronix runs on Linux had the Halo ahead in 7-Zip decompression (+38%) and an LLVM compile (about 14% faster) while the Spark won three of four STREAM memory tests. LTT Labs, as summarised by Gigazine, found the Halo offers nothing novel in performance over other Ryzen AI Max+ 395 machines, with its software environment (AMD-verified driver sets and step-by-step AI playbooks, some reported to have open bugs) the main differentiator. In the same summary, a Mac Studio with about 800 GB/s memory generated tokens roughly 2-3x faster than the Halo on Gemma 4 31B, and gpt-oss-20b on the NPU ran at about 20 tokens per second at up to 35 W package power.',
           'We found no independent test of the 192 GB PRO 495 version. HotHardware\'s earlier review noted that version as announced without a launch date.',
         ],
         note: 'Benchmarks are third-party results on specific software versions and may change with updates. Links: StorageReview, HotHardware and Gigazine are listed under Sources. We could not open LTT Labs\' own page (HTTP 403).',
@@ -138,9 +138,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Who It Suits and Who Should Skip It',
+        content:
+          '**The Ryzen AI Halo suits developers who want a preconfigured AMD box with 128 GB or 192 GB of memory and a choice of Windows or Linux (Windows on the 128 GB version).** It suits buyers less who need the highest serving throughput, CUDA or a fast fabric for clustering. To compare it with GPUs, Macs and other mini PCs by memory tier, see the [local LLM hardware guide](/local-llms/local-llm-hardware-guide).',
         items: [
           '**Suits:** developers who want a preconfigured AMD box with Windows or Linux; compare it with the [category guide](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark) first.',
-          '**Suits:** buyers who want AMD\'s own 128 GB box; HotHardware\'s author called it the least expensive 128 GB compact AI workstation, while other vendors list different prices (see the [GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation) and [HP Z2 Mini G1a](/local-llms/hp-z2-mini-g1a-local-ai-workstation) pages).',
+          '**Suits:** buyers who want AMD\'s own 128 GB box; in its June 2026 report, HotHardware\'s author called it the least expensive compact 128 GB AI workstation; other vendors have since listed lower prices (see the [GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation) and [HP Z2 Mini G1a](/local-llms/hp-z2-mini-g1a-local-ai-workstation) pages).',
           '**Consider the 192 GB version** only if your models need more than 128 GB; it costs about $3,300 more than the 128 GB version.',
           '**Skip if** you need the highest serving throughput or CUDA; StorageReview measured the DGX Spark ahead throughout.',
           '**Skip if** you plan to cluster boxes: StorageReview notes one 10GbE port and no 200G fabric.',
@@ -153,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/local-llms/nvidia-dgx-spark-local-ai-workstation): measured faster than the Halo in StorageReview\'s vLLM test and offers a 200G fabric for linking boxes, but caps memory at 128 GB.',
           '[Framework Desktop](/local-llms/framework-desktop-local-ai-workstation): the same Ryzen AI Max+ family in a modular case, with a 192 GB PRO 495 option on pre-order.',
-          '[GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation): a third-party Ryzen AI Max+ 395 box whose US price is reported inconsistently; see its page.',
+          '[GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation): a third-party Ryzen AI Max+ 395 box listed at $3,499.99 for 128 GB / 1 TB on the GMKtec US store (vendor-reported); see its page.',
           '[Minisforum MS-S1 MAX](/local-llms/minisforum-ms-s1-max-local-ai-workstation): the same 395 chip with dual 10GbE and an internal PCIe slot (x4 electrically), per Minisforum and reviews.',
           '[Local AI Workstations: Strix Halo vs. DGX Spark](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): the category comparison with all machines and prices side by side.',
         ],
@@ -201,10 +203,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict',
-      'description': 'AMD Ryzen AI Halo specs for local AI: 128 GB Ryzen AI Max+ 395 and 192 GB PRO 495 versions, sourced US prices and what independent reviews found.',
+      'headline': 'AMD Ryzen AI Halo Price and Specs for Local AI',
+      'description': 'AMD Ryzen AI Halo price: reported US prices $3,999 (128 GB, Ryzen AI Max+ 395) and $7,299.99 (192 GB, PRO 495) at Micro Center. Specs, review results.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -217,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'en',
       'url': 'https://www.promptquorum.com/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'The AMD Ryzen AI Halo is a $3,999 (128 GB) or $7,299.99 (192 GB) developer mini PC for running 100B-class models locally, sold in the US through Micro Center. StorageReview\'s vLLM test found the NVIDIA DGX Spark faster in all 18 serving scenarios.',
+      'articleBody': 'The AMD Ryzen AI Halo is a developer mini PC for running 100B-class models locally, sold in the US through Micro Center at reported prices of $3,999 (128 GB) and $7,299.99 (192 GB). StorageReview\'s vLLM test found the NVIDIA DGX Spark faster in all 18 serving scenarios.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Buyers weighing the AMD Ryzen AI Halo against the NVIDIA DGX Spark and other 128 GB or larger local AI workstations' },
@@ -226,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -237,12 +239,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-de.webp',
-    title: 'AMD Ryzen AI Halo für lokale KI: Spezifikationen, Preis und Fazit',
-    seoTitle: 'AMD Ryzen AI Halo für lokale KI: Specs, Preis, Fazit',
+    title: 'AMD Ryzen AI Halo Preis und Spezifikationen für lokale KI',
+    seoTitle: 'AMD Ryzen AI Halo Preis und Specs: gemeldet ab 3.999 $',
     intro:
       'Der AMD Ryzen AI Halo ist AMDs eigener Entwickler-Mini-PC, um große Sprachmodelle lokal auszuführen. Er erscheint in zwei Versionen: einem Modell mit 128 GB und dem Ryzen AI Max+ 395 sowie einem Modell mit 192 GB und dem Ryzen AI Max+ PRO 495. Beide werden in den USA über Micro Center verkauft. Diese Seite fasst die Herstellerangaben, die Preise, die wir belegen konnten, und die Messwerte unabhängiger Tester zusammen, damit Sie vor dem Kauf entscheiden können, ob das Gerät zu Ihrer Aufgabe passt.',
     metaDescription:
-      'AMD Ryzen AI Halo für lokale KI: Versionen mit 128 GB (Ryzen AI Max+ 395) und 192 GB (PRO 495), belegte US-Preise und was unabhängige Tests ergaben.',
+      'AMD Ryzen AI Halo Preis: gemeldete US-Preise 3.999 $ (128 GB, Ryzen AI Max+ 395) und 7.299,99 $ (192 GB, PRO 495) bei Micro Center. Specs und Tests.',
     twitterDescription:
       'AMD Ryzen AI Halo für lokale LLMs: Versionen mit 128 GB und 192 GB, belegte US-Preise und die Ergebnisse von StorageReview, HotHardware und LTT Labs.',
     readTime: '8 Min. Lesezeit',
@@ -257,15 +259,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale ki workstation',
     ],
     leadAnswerBlock:
-      '**Der AMD Ryzen AI Halo ist ein Entwickler-Mini-PC für 3.999 $ (128 GB) bzw. 7.299,99 $ (192 GB), um Modelle der 100B-Klasse lokal unter Windows oder Linux auszuführen, in den USA über Micro Center erhältlich.** Die entscheidende Einschränkung: Im vLLM-Test von StorageReview war die NVIDIA DGX Spark in allen 18 Serving-Szenarien schneller, und der Halo hat keinen Hochgeschwindigkeitsanschluss zum Koppeln mehrerer Geräte.',
+      '**Der AMD Ryzen AI Halo ist ein Mini-PC für lokale 100B-Modelle unter Windows oder Linux; laut Berichten bei Micro Center (USA) für 3.999 $ (128 GB) bzw. 7.299,99 $ (192 GB) erhältlich. StorageReview-vLLM-Test: NVIDIA DGX Spark in allen 18 Szenarien schneller; der Halo hat nur einen 10GbE-Port, keine 200G-Fabric.**',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich der AMD Ryzen AI Halo für lokale KI?',
         answer:
           'Er ist eine Überlegung wert, wenn Sie eine vorkonfigurierte AMD-Box mit Windows oder Linux und 128 GB oder 192 GB Speicher wollen. Für maximalen Serving-Durchsatz oder Clustering ist er weniger geeignet, denn StorageReview maß die DGX Spark in jedem vLLM-Test vorn, und der Halo hat nur einen 10GbE-Anschluss.',
         bullets: [
-          'Version mit 128 GB: Ryzen AI Max+ 395, 3.999 $ bei Micro Center',
-          'Version mit 192 GB: Ryzen AI Max+ PRO 495, 7.299,99 $, nur im Laden',
+          'Version mit 128 GB: Ryzen AI Max+ 395, laut Berichten 3.999 $ bei Micro Center',
+          'Version mit 192 GB: Ryzen AI Max+ PRO 495, laut Berichten 7.299,99 $, nur im Laden',
           'Läuft mit Windows 11 Pro oder einem Linux-Entwickler-Image von AMD (Version mit 128 GB)',
           'Im vLLM-Serving-Test von StorageReview langsamer als die DGX Spark',
         ],
@@ -275,8 +277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Zusammenfassung', anchor: 'tldr' },
       { label: 'Was der AMD Ryzen AI Halo ist', anchor: 'overview' },
-      { label: 'Spezifikationen', anchor: 'specs' },
-      { label: 'Preis und Verfügbarkeit', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo Spezifikationen', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo Preis und Verfügbarkeit', anchor: 'pricing' },
       { label: 'Was unabhängige Berichte zeigen', anchor: 'evidence' },
       { label: 'Für wen er geeignet ist und wer verzichten sollte', anchor: 'fit' },
       { label: 'Alternativen in derselben Klasse', anchor: 'alternatives' },
@@ -311,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Spezifikationen',
+        title: 'AMD Ryzen AI Halo Spezifikationen',
         columns: ['Spezifikation', 'Detail'],
         rows: [
           { 'Spezifikation': 'Prozessor (Version mit 128 GB)', 'Detail': 'Ryzen AI Max+ 395, 16 Kerne / 32 Threads, Zen 5, Boost bis 5,1 GHz' },
@@ -334,9 +336,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Preis und Verfügbarkeit',
+        title: 'AMD Ryzen AI Halo Preis und Verfügbarkeit',
         content:
-          '**Die Version mit 128 GB kostet 3.999 $ und die Version mit 192 GB 7.299,99 $, jeweils US-Preise bei Micro Center.** Engpässe bei DRAM haben die Preise in dieser Klasse wiederholt verschoben, prüfen Sie daher die Händlerseite vor der Bestellung.',
+          '**Die Version mit 128 GB kostet laut Berichten 3.999 $ und die Version mit 192 GB 7.299,99 $, jeweils US-Preise bei Micro Center.** Engpässe bei DRAM haben die Preise in dieser Klasse wiederholt verschoben, prüfen Sie daher die Händlerseite vor der Bestellung.',
         columns: ['Konfiguration', 'US-Preis (gesehen)', 'Quelle und Datum', 'Status'],
         rows: [
           { 'Konfiguration': '128 GB, Ryzen AI Max+ 395, 2 TB, Windows 11 Pro oder Linux', 'US-Preis (gesehen)': '3.999,99 $ (Schlagzeile 3.999 $)', 'Quelle und Datum': 'HotHardware, 2026-06-13', 'Status': 'Vorbestellung mit Abholung im Laden; laut HotHardware bis 2026-07-10 bereit' },
@@ -348,9 +350,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: 'Was unabhängige Berichte zeigen',
         content: [
-          '**Der einzige Direktvergleich mit veröffentlichten Zahlen ist der Test Halo vs. DGX Spark von StorageReview, in dem die Spark alle 18 vLLM-Serving-Szenarien gewann.** StorageReview führte vLLM-Online-Serving unter Linux bei Batch 64 mit sechs Modellen aus. In 16 Szenarien lag die Spark um etwa das 1,9- bis 13,4-Fache vorn, in zwei Decode-lastigen Läufen (Mistral Small 3.1 24B und Llama 3.1 8B) um rund 11–12 %. Der größte Abstand, das 13,4-Fache, trat bei einem Lauf mit Llama 3.1 8B in FP4 auf. Das Fazit von StorageReview spricht dennoch für den Halo bei Windows-Nutzern, ROCm-Entwicklern und Setups mit einem einzelnen Gerät.',
+          '**Der ausführlichste Direktvergleich mit veröffentlichten Zahlen, den wir gefunden haben, ist der Test Halo vs. DGX Spark von StorageReview, in dem die Spark alle 18 vLLM-Serving-Szenarien gewann.** StorageReview führte vLLM-Online-Serving unter Linux bei Batch 64 mit sechs Modellen aus. In 16 Szenarien lag die Spark um etwa das 1,9- bis 13,4-Fache vorn, in zwei Decode-lastigen Läufen (Mistral Small 3.1 24B und Llama 3.1 8B) um rund 11–12 %. Der größte Abstand, das 13,4-Fache, trat bei einem Lauf mit Llama 3.1 8B in FP4 auf. Das Fazit von StorageReview spricht dennoch für den Halo bei Windows-Nutzern, ROCm-Entwicklern und Setups mit einem einzelnen Gerät.',
           'Andere Tester berichten von einem knapperen Ergebnis. **HotHardware nannte den Halo bei vielen Modellen ungefähr gleichauf mit der DGX Spark, nicht das absolut schnellste Gerät, und vergab ihm eine Auszeichnung „Recommended“.** Gemessen wurden 45 dBA in 12 Zoll Abstand zu den hinteren Lüftungsöffnungen während eines 90-minütigen Laufs, eine Leistungsaufnahme im Leerlauf von etwa 33–35 W und unter Last von 135–145 W. Diese Ergebnisse stammen aus unterschiedlichen Testaufbauten, wir können sie daher nicht miteinander in Einklang bringen.',
-          'Bei CPU und Speicher lag der Halo in den Phoronix-Läufen von StorageReview unter Linux bei der 7-Zip-Dekompression vorn (+38 %) sowie bei einer LLVM-Kompilierung (rund 14 % schneller), während die Spark drei von vier STREAM-Speichertests gewann. LTT Labs fand laut der Zusammenfassung von Gigazine, dass der Halo bei der Leistung nichts Neues gegenüber anderen Ryzen-AI-Max+-395-Rechnern bietet; sein Unterscheidungsmerkmal sei die Softwareumgebung (von AMD geprüfte Treiberpakete und schrittweise KI-Playbooks, einige mit offenen Fehlern). In derselben Zusammenfassung erzeugte ein Mac Studio mit etwa 800 GB/s Speicherbandbreite bei Gemma 4 31B Token ungefähr 2- bis 3-mal schneller als der Halo, und gpt-oss-20b lief auf der NPU mit etwa 20 Token pro Sekunde bei bis zu 35 W Package-Leistung.',
+          'Bei CPU und Speicher lag der Halo in den Phoronix-Läufen von StorageReview unter Linux bei der 7-Zip-Dekompression vorn (+38 %) sowie bei einer LLVM-Kompilierung (rund 14 % schneller), während die Spark drei von vier STREAM-Speichertests gewann. LTT Labs fand laut der Zusammenfassung von Gigazine, dass der Halo bei der Leistung nichts Neues gegenüber anderen Ryzen-AI-Max+-395-Rechnern bietet; sein Unterscheidungsmerkmal sei die Softwareumgebung (von AMD geprüfte Treiberpakete und schrittweise KI-Playbooks, einige laut Bericht mit offenen Fehlern). In derselben Zusammenfassung erzeugte ein Mac Studio mit etwa 800 GB/s Speicherbandbreite bei Gemma 4 31B Token ungefähr 2- bis 3-mal schneller als der Halo, und gpt-oss-20b lief auf der NPU mit etwa 20 Token pro Sekunde bei bis zu 35 W Package-Leistung.',
           'Einen unabhängigen Test der Version mit 192 GB und PRO 495 haben wir nicht gefunden. Der frühere Test von HotHardware vermerkte diese Version als angekündigt, ohne Starttermin.',
         ],
         note: 'Benchmarks sind Ergebnisse Dritter mit bestimmten Softwareversionen und können sich durch Updates ändern. Links: StorageReview, HotHardware und Gigazine stehen unter Quellen. Die eigene Seite von LTT Labs ließ sich nicht öffnen (HTTP 403).',
@@ -358,9 +360,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Für wen er geeignet ist und wer verzichten sollte',
+        content:
+          '**Der Ryzen AI Halo eignet sich für Entwickler, die einen vorkonfigurierten AMD-Rechner mit 128 GB oder 192 GB Speicher und die Wahl zwischen Windows und Linux wünschen (Windows bei der 128-GB-Version).** Weniger geeignet ist er für alle, die den höchsten Serving-Durchsatz, CUDA oder einen schnellen Anschluss zum Koppeln mehrerer Geräte brauchen. Wie er sich nach Speicherstufe gegen Grafikkarten, Macs und andere Mini-PCs schlägt, zeigt der [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide).',
         items: [
           '**Geeignet für:** Entwickler, die eine vorkonfigurierte AMD-Box mit Windows oder Linux wollen; vergleichen Sie ihn zuerst mit dem [Kategorievergleich](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
-          '**Geeignet für:** Käufer, die AMDs eigene Box mit 128 GB wollen; der Autor von HotHardware nannte sie die günstigste kompakte KI-Workstation mit 128 GB, während andere Anbieter abweichende Preise nennen (siehe die Seiten zum [GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation) und zum [HP Z2 Mini G1a](/de/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
+          '**Geeignet für:** Käufer, die AMDs eigene Box mit 128 GB wollen; in seinem Bericht vom Juni 2026 nannte der Autor von HotHardware sie die günstigste kompakte KI-Workstation mit 128 GB; andere Anbieter listen inzwischen niedrigere Preise (siehe die Seiten zum [GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation) und zum [HP Z2 Mini G1a](/de/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
           '**Die Version mit 192 GB** kommt nur infrage, wenn Ihre Modelle mehr als 128 GB brauchen; sie kostet rund 3.300 $ mehr als die Version mit 128 GB.',
           '**Verzichten Sie, wenn** Sie den höchsten Serving-Durchsatz oder CUDA brauchen; StorageReview maß die DGX Spark durchgehend vorn.',
           '**Verzichten Sie, wenn** Sie mehrere Geräte koppeln wollen: StorageReview vermerkt einen 10GbE-Port und keine 200G-Fabric.',
@@ -373,7 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation): im vLLM-Test von StorageReview schneller gemessen als der Halo und mit einer 200G-Fabric zum Koppeln mehrerer Geräte, begrenzt den Speicher aber auf 128 GB.',
           '[Framework Desktop](/de/local-llms/framework-desktop-local-ai-workstation): dieselbe Ryzen-AI-Max+-Familie in einem modularen Gehäuse, mit einer Option PRO 495 mit 192 GB auf Vorbestellung.',
-          '[GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation): eine Ryzen-AI-Max+-395-Box eines Drittanbieters, deren US-Preis uneinheitlich gemeldet wird; siehe die zugehörige Seite.',
+          '[GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation): eine Ryzen-AI-Max+-395-Box eines Drittanbieters, im US-Shop von GMKtec mit 128 GB / 1 TB für 3.499,99 $ gelistet (Herstellerangabe); siehe die zugehörige Seite.',
           '[Minisforum MS-S1 MAX](/de/local-llms/minisforum-ms-s1-max-local-ai-workstation): derselbe 395-Chip mit zwei 10GbE-Anschlüssen und einem internen PCIe-Steckplatz (elektrisch x4), laut Minisforum und Tests.',
           '[Lokale KI-Workstations: Strix Halo vs. DGX Spark](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): der Kategorievergleich mit allen Geräten und Preisen nebeneinander.',
         ],
@@ -421,10 +425,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo für lokale KI: Spezifikationen, Preis und Fazit',
-      'description': 'AMD Ryzen AI Halo für lokale KI: Versionen mit 128 GB (Ryzen AI Max+ 395) und 192 GB (PRO 495), belegte US-Preise und was unabhängige Tests ergaben.',
+      'headline': 'AMD Ryzen AI Halo Preis und Spezifikationen für lokale KI',
+      'description': 'AMD Ryzen AI Halo Preis: gemeldete US-Preise 3.999 $ (128 GB, Ryzen AI Max+ 395) und 7.299,99 $ (192 GB, PRO 495) bei Micro Center. Specs und Tests.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -437,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'de',
       'url': 'https://www.promptquorum.com/de/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'Der AMD Ryzen AI Halo ist ein Entwickler-Mini-PC für 3.999 $ (128 GB) bzw. 7.299,99 $ (192 GB), um Modelle der 100B-Klasse lokal auszuführen, in den USA über Micro Center erhältlich. Im vLLM-Test von StorageReview war die NVIDIA DGX Spark in allen 18 Serving-Szenarien schneller.',
+      'articleBody': 'Der AMD Ryzen AI Halo ist ein Entwickler-Mini-PC, um Modelle der 100B-Klasse lokal auszuführen, in den USA über Micro Center erhältlich; gemeldete Preise: 3.999 $ (128 GB) bzw. 7.299,99 $ (192 GB). Im vLLM-Test von StorageReview war die NVIDIA DGX Spark in allen 18 Serving-Szenarien schneller.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Käufer, die den AMD Ryzen AI Halo mit der NVIDIA DGX Spark und anderen lokalen KI-Workstations mit 128 GB oder mehr vergleichen' },
@@ -446,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -457,12 +461,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-fr.webp',
-    title: "AMD Ryzen AI Halo pour l'IA locale : caractéristiques, prix et verdict",
-    seoTitle: "AMD Ryzen AI Halo pour l'IA locale : specs, prix, verdict",
+    title: 'AMD Ryzen AI Halo : prix et caractéristiques pour l\'IA locale',
+    seoTitle: 'AMD Ryzen AI Halo prix et specs : $3,999 (rapporté)',
     intro:
       "L'AMD Ryzen AI Halo est le mini-PC développeur d'AMD pour exécuter localement de grands modèles de langage. Il existe en deux versions : un modèle de 128 Go avec le Ryzen AI Max+ 395 et un modèle de 192 Go avec le Ryzen AI Max+ PRO 495. Les deux sont vendus aux États-Unis par Micro Center. Cette page réunit les spécifications du constructeur, les prix que nous avons pu sourcer et ce que des testeurs indépendants ont mesuré, pour que vous puissiez décider avant l'achat s'il convient à votre charge de travail.",
     metaDescription:
-      "AMD Ryzen AI Halo pour l'IA locale : versions 128 Go (Ryzen AI Max+ 395) et 192 Go (PRO 495), prix US sourcés et ce qu'ont constaté les tests indépendants.",
+      'AMD Ryzen AI Halo : prix US rapportés $3,999 (128 Go, Ryzen AI Max+ 395) et $7,299.99 (192 Go, PRO 495) chez Micro Center. Specs et résultats des tests.',
     twitterDescription:
       "AMD Ryzen AI Halo pour les LLM locaux : versions 128 Go et 192 Go, prix US sourcés, et ce qu'ont constaté StorageReview, HotHardware et LTT Labs.",
     readTime: '8 min de lecture',
@@ -477,15 +481,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'station de travail ia locale',
     ],
     leadAnswerBlock:
-      "**L'AMD Ryzen AI Halo est un mini-PC développeur à $3,999 (128 Go) ou $7,299.99 (192 Go) pour exécuter localement des modèles de classe 100B sous Windows ou Linux, vendu aux États-Unis par Micro Center.** La réserve décisive : le test vLLM de StorageReview a donné le NVIDIA DGX Spark plus rapide dans les 18 scénarios de service, et le Halo n'a aucun port haut débit pour relier plusieurs machines.",
+      "**L'AMD Ryzen AI Halo est un mini-PC pour modèles locaux 100B sous Windows ou Linux, rapporté chez Micro Center (États-Unis) à $3,999 (128 Go) ou $7,299.99 (192 Go). Test vLLM de StorageReview : NVIDIA DGX Spark plus rapide dans les 18 scénarios ; port 10GbE unique, aucune interconnexion 200G.**",
     quickAnswerTop: {
       fr: {
         question: "L'AMD Ryzen AI Halo vaut-il l'achat pour l'IA locale ?",
         answer:
           "Il mérite considération si vous voulez une machine AMD préconfigurée sous Windows ou Linux avec 128 Go ou 192 Go de mémoire. Il convient moins si vous visez le débit de service maximal ou le clustering, car StorageReview a mesuré le DGX Spark devant dans chaque test vLLM et le Halo n'a qu'un seul port 10GbE.",
         bullets: [
-          'Version 128 Go : Ryzen AI Max+ 395, $3,999 chez Micro Center',
-          'Version 192 Go : Ryzen AI Max+ PRO 495, $7,299.99, en magasin uniquement',
+          'Version 128 Go : Ryzen AI Max+ 395, $3,999 rapporté chez Micro Center',
+          'Version 192 Go : Ryzen AI Max+ PRO 495, $7,299.99 rapporté, en magasin uniquement',
           "Windows 11 Pro ou image Linux développeur d'AMD (version 128 Go)",
           "Plus lent que le DGX Spark dans le test de service vLLM de StorageReview",
         ],
@@ -495,8 +499,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Points clés', anchor: 'tldr' },
       { label: "Ce qu'est l'AMD Ryzen AI Halo", anchor: 'overview' },
-      { label: 'Caractéristiques techniques', anchor: 'specs' },
-      { label: 'Prix et disponibilité', anchor: 'pricing' },
+      { label: 'Caractéristiques techniques de l\'AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'Prix de l\'AMD Ryzen AI Halo et disponibilité', anchor: 'pricing' },
       { label: 'Ce que montrent les tests indépendants', anchor: 'evidence' },
       { label: "À qui il convient, et qui devrait s'abstenir", anchor: 'fit' },
       { label: 'Alternatives de la même classe', anchor: 'alternatives' },
@@ -531,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Caractéristiques techniques',
+        title: 'Caractéristiques techniques de l\'AMD Ryzen AI Halo',
         columns: ['Caractéristique', 'Détail'],
         rows: [
           { 'Caractéristique': 'Processeur (version 128 Go)', 'Détail': 'Ryzen AI Max+ 395, 16 cœurs / 32 threads, Zen 5, boost jusqu\'à 5.1 GHz' },
@@ -554,9 +558,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Prix et disponibilité',
+        title: 'Prix de l\'AMD Ryzen AI Halo et disponibilité',
         content:
-          "**La version 128 Go coûte $3,999 et la version 192 Go $7,299.99, deux prix américains chez Micro Center.** Les pénuries de DRAM ont fait bouger les prix de cette classe à plusieurs reprises : consultez la page du revendeur avant de commander.",
+          "**La version 128 Go est rapportée à $3,999 et la version 192 Go à $7,299.99, deux prix américains chez Micro Center.** Les pénuries de DRAM ont fait bouger les prix de cette classe à plusieurs reprises : consultez la page du revendeur avant de commander.",
         columns: ['Configuration', 'Prix US relevé', 'Source et date', 'Statut'],
         rows: [
           { 'Configuration': '128 Go, Ryzen AI Max+ 395, 2 To, Windows 11 Pro ou Linux', 'Prix US relevé': '$3,999.99 (titre : $3,999)', 'Source et date': 'HotHardware, 2026-06-13', 'Statut': 'Précommande avec retrait en magasin ; prêt au 2026-07-10 selon HotHardware' },
@@ -568,9 +572,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: 'Ce que montrent les tests indépendants',
         content: [
-          "**Le seul duel direct avec des chiffres publiés est le test Halo contre DGX Spark de StorageReview, où le Spark a gagné les 18 scénarios de service vLLM.** StorageReview a exécuté du service en ligne vLLM sous Linux avec un lot de 64 sur six modèles. Le Spark était devant d'environ 1.9x à 13.4x dans 16 scénarios et d'environ 11-12 % dans deux exécutions à décodage dominant (Mistral Small 3.1 24B et Llama 3.1 8B). L'écart le plus large, 13.4x, concernait une exécution de Llama 3.1 8B en FP4. La conclusion de StorageReview favorise tout de même le Halo pour les utilisateurs de Windows, les développeurs ROCm et les configurations à une seule machine.",
+          "**Le duel direct le plus détaillé avec des chiffres publiés que nous ayons trouvé est le test Halo contre DGX Spark de StorageReview, où le Spark a gagné les 18 scénarios de service vLLM.** StorageReview a exécuté du service en ligne vLLM sous Linux avec un lot de 64 sur six modèles. Le Spark était devant d'environ 1.9x à 13.4x dans 16 scénarios et d'environ 11-12 % dans deux exécutions à décodage dominant (Mistral Small 3.1 24B et Llama 3.1 8B). L'écart le plus large, 13.4x, concernait une exécution de Llama 3.1 8B en FP4. La conclusion de StorageReview favorise tout de même le Halo pour les utilisateurs de Windows, les développeurs ROCm et les configurations à une seule machine.",
           "D'autres testeurs rapportent un résultat plus serré. **HotHardware a qualifié le Halo d'à peu près équivalent au DGX Spark sur de nombreux modèles, sans être le plus rapide en absolu, et lui a décerné un prix Recommended.** Il a mesuré 45 dBA à 12 pouces des grilles arrière pendant une exécution de 90 minutes, une consommation au repos d'environ 33-35 W et en charge de 135-145 W. Ces résultats proviennent de configurations de test différentes : nous ne pouvons pas les réconcilier.",
-          "Côté CPU et mémoire, les exécutions Phoronix de StorageReview sous Linux donnaient le Halo devant en décompression 7-Zip (+38 %) et en compilation LLVM (environ 14 % plus rapide), tandis que le Spark a gagné trois des quatre tests de mémoire STREAM. LTT Labs, selon le résumé de Gigazine, a constaté que le Halo n'apporte rien de nouveau en performance par rapport aux autres machines Ryzen AI Max+ 395, son environnement logiciel (jeux de pilotes vérifiés par AMD et guides IA pas à pas, certains avec des bogues ouverts) étant le principal élément distinctif. Dans le même résumé, un Mac Studio avec environ 800 Go/s de bande passante mémoire générait des tokens environ 2 à 3 fois plus vite que le Halo sur Gemma 4 31B, et gpt-oss-20b sur le NPU tournait à environ 20 tokens par seconde pour une puissance de package allant jusqu'à 35 W.",
+          "Côté CPU et mémoire, les exécutions Phoronix de StorageReview sous Linux donnaient le Halo devant en décompression 7-Zip (+38 %) et en compilation LLVM (environ 14 % plus rapide), tandis que le Spark a gagné trois des quatre tests de mémoire STREAM. LTT Labs, selon le résumé de Gigazine, a constaté que le Halo n'apporte rien de nouveau en performance par rapport aux autres machines Ryzen AI Max+ 395, son environnement logiciel (jeux de pilotes vérifiés par AMD et guides IA pas à pas, certains, selon le résumé, avec des bogues ouverts) étant le principal élément distinctif. Dans le même résumé, un Mac Studio avec environ 800 Go/s de bande passante mémoire générait des tokens environ 2 à 3 fois plus vite que le Halo sur Gemma 4 31B, et gpt-oss-20b sur le NPU tournait à environ 20 tokens par seconde pour une puissance de package allant jusqu'à 35 W.",
           "Nous n'avons trouvé aucun test indépendant de la version 192 Go PRO 495. Le test antérieur de HotHardware mentionnait cette version comme annoncée sans date de lancement.",
         ],
         note: "Les benchmarks sont des résultats tiers sur des versions logicielles précises et peuvent changer avec les mises à jour. Liens : StorageReview, HotHardware et Gigazine figurent sous Sources. Nous n'avons pas pu ouvrir la page de LTT Labs (HTTP 403).",
@@ -578,9 +582,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: "À qui il convient, et qui devrait s'abstenir",
+        content:
+          '**L\'AMD Ryzen AI Halo convient aux développeurs qui veulent une machine AMD préconfigurée avec 128 Go ou 192 Go de mémoire et le choix entre Windows et Linux (Windows sur la version 128 Go).** Il convient moins à ceux qui ont besoin du meilleur débit de service, de CUDA ou d\'un port rapide pour relier plusieurs machines. Pour le comparer aux cartes graphiques, aux Mac et aux autres mini-PC selon la mémoire, consultez le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide).',
         items: [
           "**Convient :** aux développeurs qui veulent une machine AMD préconfigurée sous Windows ou Linux ; comparez-la d'abord avec le [guide de la catégorie](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).",
-          "**Convient :** aux acheteurs qui veulent la machine de 128 Go d'AMD elle-même ; l'auteur de HotHardware l'a qualifiée de station IA compacte de 128 Go la moins chère, alors que d'autres constructeurs affichent des prix différents (voir les pages [GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) et [HP Z2 Mini G1a](/fr/local-llms/hp-z2-mini-g1a-local-ai-workstation)).",
+          "**Convient :** aux acheteurs qui veulent la machine de 128 Go d'AMD elle-même ; dans son article de juin 2026, l'auteur de HotHardware l'a qualifiée de station IA compacte de 128 Go la moins chère ; d'autres constructeurs affichent depuis des prix plus bas (voir les pages [GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) et [HP Z2 Mini G1a](/fr/local-llms/hp-z2-mini-g1a-local-ai-workstation)).",
           "**Envisagez la version 192 Go** seulement si vos modèles ont besoin de plus de 128 Go ; elle coûte environ $3,300 de plus que la version 128 Go.",
           "**À éviter si** vous avez besoin du meilleur débit de service ou de CUDA ; StorageReview a mesuré le DGX Spark devant partout.",
           "**À éviter si** vous prévoyez de relier plusieurs machines : StorageReview note un seul port 10GbE et aucune interconnexion 200G.",
@@ -593,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[DGX Spark](/fr/local-llms/nvidia-dgx-spark-local-ai-workstation) : mesuré plus rapide que le Halo dans le test vLLM de StorageReview et doté d'une interconnexion 200G pour relier plusieurs machines, mais plafonné à 128 Go de mémoire.",
           "[Framework Desktop](/fr/local-llms/framework-desktop-local-ai-workstation) : la même famille Ryzen AI Max+ dans un boîtier modulaire, avec une option PRO 495 de 192 Go en précommande.",
-          "[GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) : une machine Ryzen AI Max+ 395 d'un constructeur tiers dont le prix américain est rapporté de façon incohérente ; voir sa page.",
+          "[GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) : une machine Ryzen AI Max+ 395 d'un constructeur tiers, affichée à 3 499,99 $ US (128 Go / 1 To) sur la boutique américaine de GMKtec (prix annoncé par le constructeur) ; voir sa page.",
           "[Minisforum MS-S1 MAX](/fr/local-llms/minisforum-ms-s1-max-local-ai-workstation) : la même puce 395 avec double 10GbE et un emplacement PCIe interne (x4 électriquement), selon Minisforum et les tests.",
           "[Stations de travail IA locales : AMD Strix Halo contre NVIDIA DGX Spark](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark) : le comparatif de catégorie avec toutes les machines et leurs prix côte à côte.",
         ],
@@ -641,10 +647,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': "AMD Ryzen AI Halo pour l'IA locale : caractéristiques, prix et verdict",
-      'description': "AMD Ryzen AI Halo pour l'IA locale : versions 128 Go (Ryzen AI Max+ 395) et 192 Go (PRO 495), prix US sourcés et ce qu'ont constaté les tests indépendants.",
+      'headline': 'AMD Ryzen AI Halo : prix et caractéristiques pour l\'IA locale',
+      'description': 'AMD Ryzen AI Halo : prix US rapportés $3,999 (128 Go, Ryzen AI Max+ 395) et $7,299.99 (192 Go, PRO 495) chez Micro Center. Specs et résultats des tests.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -657,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'fr',
       'url': 'https://www.promptquorum.com/fr/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': "L'AMD Ryzen AI Halo est un mini-PC développeur à $3,999 (128 Go) ou $7,299.99 (192 Go) pour exécuter localement des modèles de classe 100B, vendu aux États-Unis par Micro Center. Le test vLLM de StorageReview a donné le NVIDIA DGX Spark plus rapide dans les 18 scénarios de service.",
+      'articleBody': "L'AMD Ryzen AI Halo est un mini-PC développeur pour exécuter localement des modèles de classe 100B, vendu aux États-Unis par Micro Center à des prix rapportés de $3,999 (128 Go) et $7,299.99 (192 Go). Le test vLLM de StorageReview a donné le NVIDIA DGX Spark plus rapide dans les 18 scénarios de service.",
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': "Acheteurs qui comparent l'AMD Ryzen AI Halo au NVIDIA DGX Spark et à d'autres stations IA locales de 128 Go ou plus" },
@@ -666,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -677,12 +683,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ja.webp',
-    title: 'ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価',
-    seoTitle: 'AMD Ryzen AI Halo ローカルAI：仕様と価格',
+    title: 'ローカルAI向けAMD Ryzen AI Haloの価格と仕様',
+    seoTitle: 'AMD Ryzen AI Halo価格仕様：報道$3,999〜',
     intro:
       'AMD Ryzen AI Haloは、大規模言語モデルをローカルで動かすためにAMD自身が提供する開発者向けmini PCです。Ryzen AI Max+ 395を搭載した128GB版と、Ryzen AI Max+ PRO 495を搭載した192GB版の2種類があり、米国ではどちらもMicro Center経由で販売されています。このページでは、ベンダーの仕様、確認できた価格、独立したレビュアーの測定結果をまとめました。購入前に、ご自身の用途に合うかどうかを判断する材料としてお使いください。',
     metaDescription:
-      'ローカルAI向けAMD Ryzen AI Haloの仕様を解説。128GB版（395）と192GB版（PRO 495）、出典付き米国価格、独立レビューの結果を整理しました。',
+      'AMD Ryzen AI Haloの価格：報じられた米国価格は128GB版が$3,999、192GB版（PRO 495）が$7,299.99で、いずれもMicro Center。仕様とレビュー結果を整理しました。',
     twitterDescription:
       'ローカルLLM向けAMD Ryzen AI Halo: 128GB版と192GB版、出典付きの米国価格、StorageReview・HotHardware・LTT Labsの検証結果。',
     readTime: '8分で読める',
@@ -697,15 +703,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルai ワークステーション',
     ],
     leadAnswerBlock:
-      '**AMD Ryzen AI Haloは、100B級のモデルをWindowsまたはLinuxでローカル実行するための開発者向けmini PCで、価格は128GB版が$3,999、192GB版が$7,299.99、米国ではMicro Center経由で販売されています。** 決め手となる注意点は、StorageReviewのvLLMテストでは、サービング18シナリオすべてでNVIDIA DGX Sparkのほうが高速で、Haloには機器を接続する高速ポートがないことです。',
+      '**AMD Ryzen AI Haloは、100B級のモデルをWindowsまたはLinuxでローカル実行するための開発者向けmini PCで、報じられた価格は128GB版が$3,999、192GB版が$7,299.99で、米国ではMicro Center経由で販売されています。** 決め手となる注意点は、StorageReviewのvLLMテストでは、サービング18シナリオすべてでNVIDIA DGX Sparkのほうが高速で、StorageReviewによればHaloは10GbEポートが1つだけで、機器を接続する200Gファブリックがないことです。',
     quickAnswerTop: {
       ja: {
         question: 'ローカルAI向けにAMD Ryzen AI Haloを買う価値はありますか？',
         answer:
           'WindowsまたはLinuxが構成済みで、128GBまたは192GBのメモリを備えたAMD製のマシンが欲しいなら、検討する価値があります。最大のサービングスループットやクラスタリングには向きません。StorageReviewの測定ではvLLMの全テストでDGX Sparkが上回り、Haloの10GbEポートは1つだけだからです。',
         bullets: [
-          '128GB版: Ryzen AI Max+ 395、Micro Centerで$3,999',
-          '192GB版: Ryzen AI Max+ PRO 495、$7,299.99、店頭販売のみ',
+          '128GB版: Ryzen AI Max+ 395、Micro Centerで$3,999（報道）',
+          '192GB版: Ryzen AI Max+ PRO 495、$7,299.99（報道）、店頭販売のみ',
           'Windows 11 ProまたはAMDのLinux開発者向けイメージで動作（128GB版）',
           'StorageReviewのvLLMサービングテストでは、DGX Sparkより低速',
         ],
@@ -715,8 +721,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '重要ポイント', anchor: 'tldr' },
       { label: 'AMD Ryzen AI Haloとは', anchor: 'overview' },
-      { label: '仕様', anchor: 'specs' },
-      { label: '価格と入手性', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Haloの仕様', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Haloの価格と入手性', anchor: 'pricing' },
       { label: '独立した報道が示すこと', anchor: 'evidence' },
       { label: '向いている人と見送るべき人', anchor: 'fit' },
       { label: '同じクラスの代替機', anchor: 'alternatives' },
@@ -751,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: '仕様',
+        title: 'AMD Ryzen AI Haloの仕様',
         columns: ['項目', '詳細'],
         rows: [
           { '項目': 'プロセッサ（128GB版）', '詳細': 'Ryzen AI Max+ 395、16コア/32スレッド、Zen 5、ブースト最大5.1 GHz' },
@@ -774,9 +780,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: '価格と入手性',
+        title: 'AMD Ryzen AI Haloの価格と入手性',
         content:
-          '**128GB版は$3,999、192GB版は$7,299.99で、いずれもMicro Centerの米国価格です。** DRAM不足によりこのクラスの価格は繰り返し変動しているため、注文前に小売店のページを確認してください。',
+          '**報じられた価格は、128GB版が$3,999、192GB版が$7,299.99で、いずれもMicro Centerの米国価格です。** DRAM不足によりこのクラスの価格は繰り返し変動しているため、注文前に小売店のページを確認してください。',
         columns: ['構成', '米国価格', '情報源と日付', '状況'],
         rows: [
           { '構成': '128GB、Ryzen AI Max+ 395、2TB、Windows 11 ProまたはLinux', '米国価格': '$3,999.99（見出しは$3,999）', '情報源と日付': 'HotHardware、2026-06-13', '状況': '店頭受け取りの予約。HotHardwareによると2026-07-10までに用意' },
@@ -788,9 +794,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: '独立した報道が示すこと',
         content: [
-          '**数値が公開されている直接比較は、StorageReviewによるHaloとDGX Sparkのテストのみで、vLLMサービングの18シナリオすべてでSparkが勝ちました。** StorageReviewは、Linux上でバッチ64のvLLMオンラインサービングを6つのモデルで実行しました。Sparkは16シナリオで約1.9倍〜13.4倍、デコード中心の2つの実行（Mistral Small 3.1 24BとLlama 3.1 8B）では約11〜12%の差をつけました。最大の差の13.4倍は、Llama 3.1 8B FP4の実行です。それでもStorageReviewの結論は、Windowsユーザー、ROCm開発者、1台構成ではHaloを推しています。',
+          '**数値が公開されている直接比較として私たちが確認できた中で最も詳細なのは、StorageReviewによるHaloとDGX Sparkのテストで、vLLMサービングの18シナリオすべてでSparkが勝ちました。** StorageReviewは、Linux上でバッチ64のvLLMオンラインサービングを6つのモデルで実行しました。Sparkは16シナリオで約1.9倍〜13.4倍、デコード中心の2つの実行（Mistral Small 3.1 24BとLlama 3.1 8B）では約11〜12%の差をつけました。最大の差の13.4倍は、Llama 3.1 8B FP4の実行です。それでもStorageReviewの結論は、Windowsユーザー、ROCm開発者、1台構成ではHaloを推しています。',
           '他のレビュアーはより接近した結果を報告しています。**HotHardwareは、Haloは多くのモデルでDGX Sparkとほぼ同等で、絶対的な最速ではないとし、Recommended賞を与えました。** 背面の排気口から12インチの位置で、90分間の実行中に45 dBA、アイドル時の消費電力は約33〜35W、負荷時は135〜145Wを測定しています。これらはテスト条件が異なる結果であり、両者を調停することはできません。',
-          'CPUとメモリについては、StorageReviewによるLinux上のPhoronixの実行で、Haloは7-Zipの展開（+38%）とLLVMのコンパイル（約14%高速）で上回り、STREAMのメモリテスト4件のうち3件はSparkが勝ちました。Gigazineの要約によるLTT Labsの検証では、HaloはほかのRyzen AI Max+ 395搭載機と比べて性能面で目新しい点はなく、主な差別化要素はソフトウェア環境（AMD検証済みのドライバセットと、一部に未解決のバグがある手順付きのAIプレイブック）だとされています。同じ要約では、約800GB/sのメモリを持つMac StudioがGemma 4 31Bでトークンを生成する速度はHaloの約2〜3倍で、NPU上のgpt-oss-20bはパッケージ電力最大35Wで毎秒約20トークンでした。',
+          'CPUとメモリについては、StorageReviewによるLinux上のPhoronixの実行で、Haloは7-Zipの展開（+38%）とLLVMのコンパイル（約14%高速）で上回り、STREAMのメモリテスト4件のうち3件はSparkが勝ちました。Gigazineの要約によるLTT Labsの検証では、HaloはほかのRyzen AI Max+ 395搭載機と比べて性能面で目新しい点はなく、主な差別化要素はソフトウェア環境（AMD検証済みのドライバセットと、一部に未解決のバグがあると報じられた手順付きのAIプレイブック）だとされています。同じ要約では、約800GB/sのメモリを持つMac StudioがGemma 4 31Bでトークンを生成する速度はHaloの約2〜3倍で、NPU上のgpt-oss-20bはパッケージ電力最大35Wで毎秒約20トークンでした。',
           '192GBのPRO 495版については、独立したテストは見つかりませんでした。HotHardwareの以前のレビューは、このバージョンについて発売日未定で発表されたと記していました。',
         ],
         note: 'ベンチマークは特定のソフトウェアバージョンでのサードパーティの結果で、アップデートで変わる可能性があります。リンク: StorageReview、HotHardware、Gigazineは情報源に掲載しています。LTT Labs自身のページは開けませんでした（HTTP 403）。',
@@ -798,9 +804,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '向いている人と見送るべき人',
+        content:
+          '**Ryzen AI Haloは、128GBまたは192GBのメモリを備えた設定済みのAMD機で、WindowsかLinuxを選びたい開発者に向いています（Windowsは128GB版）。** 最高のサービング性能やCUDA、複数台を高速に接続する手段が必要な人には不向きです。メモリ容量別にGPU、Mac、他のミニPCと比べるには、[ローカルLLMのハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)をご覧ください。',
         items: [
           '**向いている人:** WindowsまたはLinuxが構成済みのAMD製マシンが欲しい開発者。まず[カテゴリガイド](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)と比較してください。',
-          '**向いている人:** AMD自身の128GB機が欲しい購入者。HotHardwareの筆者は、128GBのコンパクトなAIワークステーションとして最も安いと評しましたが、他のベンダーは異なる価格を掲載しています（[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation)と[HP Z2 Mini G1a](/ja/local-llms/hp-z2-mini-g1a-local-ai-workstation)のページを参照）。',
+          '**向いている人:** AMD自身の128GB機が欲しい購入者。HotHardwareの筆者は2026年6月の記事の時点で、128GBのコンパクトなAIワークステーションとして最も安いと評しましたが、その後は他のベンダーがより低い価格を掲載しています（[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation)と[HP Z2 Mini G1a](/ja/local-llms/hp-z2-mini-g1a-local-ai-workstation)のページを参照）。',
           '**192GB版を検討するのは**、使うモデルが128GBを超える場合のみにしてください。128GB版より約$3,300高くなります。',
           '**見送るべき人:** 最高のサービングスループットやCUDAが必要な場合。StorageReviewは全面的にDGX Sparkが上回ると測定しました。',
           '**見送るべき人:** 複数台でクラスタを組む予定がある場合。StorageReviewは、10GbEポートが1つで200Gファブリックがないと指摘しています。',
@@ -813,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/ja/local-llms/nvidia-dgx-spark-local-ai-workstation): StorageReviewのvLLMテストでHaloより高速で、機器接続用の200Gファブリックを備えますが、メモリは128GBが上限です。',
           '[Framework Desktop](/ja/local-llms/framework-desktop-local-ai-workstation): 同じRyzen AI Max+ファミリーをモジュール式の筐体で提供し、192GBのPRO 495構成を予約受付中です。',
-          '[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation): サードパーティのRyzen AI Max+ 395搭載機で、米国価格の報道に食い違いがあります。同ページを参照してください。',
+          '[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation): サードパーティのRyzen AI Max+ 395搭載機で、GMKtec米国ストアでは128GB/1TBモデルが$3,499.99と掲載されています（メーカー公表値）。詳細は同ページを参照してください。',
           '[Minisforum MS-S1 MAX](/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation): 同じ395チップに、デュアル10GbEと内部PCIeスロット（電気的にはx4）を備えます（Minisforumとレビューによる）。',
           '[ローカルAIワークステーション: Strix Halo vs. DGX Spark](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): 全機種と価格を並べて比較したカテゴリページ。',
         ],
@@ -861,10 +869,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価',
-      'description': 'ローカルAI向けAMD Ryzen AI Haloの仕様を解説。128GB版（395）と192GB版（PRO 495）、出典付き米国価格、独立レビューの結果を整理しました。',
+      'headline': 'ローカルAI向けAMD Ryzen AI Haloの価格と仕様',
+      'description': 'AMD Ryzen AI Haloの価格：報じられた米国価格は128GB版が$3,999、192GB版（PRO 495）が$7,299.99で、いずれもMicro Center。仕様とレビュー結果を整理しました。',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -876,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ja',
       'url': 'https://www.promptquorum.com/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'AMD Ryzen AI Haloは、100B級のモデルをローカル実行するための$3,999（128GB）または$7,299.99（192GB）の開発者向けmini PCで、米国ではMicro Center経由で販売されています。StorageReviewのvLLMテストでは、サービング18シナリオすべてでNVIDIA DGX Sparkのほうが高速でした。',
+      'articleBody': 'AMD Ryzen AI Haloは、100B級のモデルをローカル実行するための開発者向けmini PCで、米国ではMicro Center経由で販売されており、報じられた価格は$3,999（128GB）、$7,299.99（192GB）です。StorageReviewのvLLMテストでは、サービング18シナリオすべてでNVIDIA DGX Sparkのほうが高速でした。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'AMD Ryzen AI HaloをNVIDIA DGX Sparkや、128GB以上の他のローカルAIワークステーションと比較している購入者' },
@@ -885,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -896,12 +904,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-zh.webp',
-    title: '用于本地AI的AMD Ryzen AI Halo：规格、价格与结论',
-    seoTitle: 'AMD Ryzen AI Halo本地AI：规格、价格与结论',
+    title: '本地AI用AMD Ryzen AI Halo的价格与规格',
+    seoTitle: 'AMD Ryzen AI Halo价格与规格：据报$3,999起',
     intro:
       'AMD Ryzen AI Halo是AMD自己推出的开发者迷你主机，用于在本地运行大语言模型。它有两个版本：搭载Ryzen AI Max+ 395的128 GB机型，以及搭载Ryzen AI Max+ PRO 495的192 GB机型。两者在美国都通过Micro Center销售。本页汇总了厂商规格、我们能找到来源的价格以及独立评测者的测量结果，方便你在购买前判断它是否适合你的工作负载。',
     metaDescription:
-      'AMD Ryzen AI Halo本地AI规格：128 GB的Ryzen AI Max+ 395与192 GB的PRO 495两个版本、有来源的美国价格，以及独立评测的发现。',
+      'AMD Ryzen AI Halo价格：据报道，美国Micro Center售价为128 GB版$3,999、192 GB版（PRO 495）$7,299.99。含规格与独立评测结果。',
     twitterDescription:
       '用于本地LLM的AMD Ryzen AI Halo：128 GB和192 GB两个版本、有来源的美国价格，以及StorageReview、HotHardware和LTT Labs的发现。',
     readTime: '阅读约8分钟',
@@ -916,15 +924,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地ai工作站',
     ],
     leadAnswerBlock:
-      '**AMD Ryzen AI Halo是一台售价$3,999（128 GB）或$7,299.99（192 GB）的开发者迷你主机，可在Windows或Linux上本地运行百B级模型，在美国通过Micro Center销售。** 关键的注意事项是：StorageReview的vLLM测试发现NVIDIA DGX Spark在全部18个服务场景中更快，而且Halo没有用于连接多台机器的高速端口。',
+      '**AMD Ryzen AI Halo是一台据报售价$3,999（128 GB）或$7,299.99（192 GB）的开发者迷你主机，可在Windows或Linux上本地运行百B级模型，在美国通过Micro Center销售。** 关键的注意事项是：StorageReview的vLLM测试发现NVIDIA DGX Spark在全部18个服务场景中更快，而且据StorageReview指出，Halo只有一个10GbE端口，没有用于连接多台机器的200G互联。',
     quickAnswerTop: {
       zh: {
         question: 'AMD Ryzen AI Halo值得买来做本地AI吗？',
         answer:
           '如果你想要一台预配置的AMD机器，支持Windows或Linux，并有128 GB或192 GB内存，它值得考虑。如果追求最高的服务吞吐量或多机互联，它就不那么合适，因为StorageReview测得DGX Spark在每一项vLLM测试中都领先，而且Halo只有一个10GbE端口。',
         bullets: [
-          '128 GB版本：Ryzen AI Max+ 395，Micro Center售价$3,999',
-          '192 GB版本：Ryzen AI Max+ PRO 495，$7,299.99，仅限实体店',
+          '128 GB版本：Ryzen AI Max+ 395，Micro Center据报售价$3,999',
+          '192 GB版本：Ryzen AI Max+ PRO 495，据报$7,299.99，仅限实体店',
           '运行Windows 11 Pro或AMD Linux开发者镜像（128 GB版本）',
           '在StorageReview的vLLM服务测试中比DGX Spark慢',
         ],
@@ -934,8 +942,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '核心要点', anchor: 'tldr' },
       { label: 'AMD Ryzen AI Halo是什么', anchor: 'overview' },
-      { label: '规格', anchor: 'specs' },
-      { label: '价格与供货', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo规格', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo价格与供货', anchor: 'pricing' },
       { label: '独立报道显示了什么', anchor: 'evidence' },
       { label: '适合谁，谁该跳过', anchor: 'fit' },
       { label: '同级别的替代品', anchor: 'alternatives' },
@@ -970,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: '规格',
+        title: 'AMD Ryzen AI Halo规格',
         columns: ['规格', '详情'],
         rows: [
           { '规格': '处理器（128 GB版本）', '详情': 'Ryzen AI Max+ 395，16核 / 32线程，Zen 5，加速最高5.1 GHz' },
@@ -993,9 +1001,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: '价格与供货',
+        title: 'AMD Ryzen AI Halo价格与供货',
         content:
-          '**128 GB版本售价$3,999，192 GB版本售价$7,299.99，均为Micro Center的美国价格。** DRAM短缺已多次推动这一类别的价格变动，因此下单前请查看零售商页面。',
+          '**据报道，128 GB版本售价$3,999，192 GB版本售价$7,299.99，均为Micro Center的美国价格。** DRAM短缺已多次推动这一类别的价格变动，因此下单前请查看零售商页面。',
         columns: ['配置', '美国价格', '来源与日期', '状态'],
         rows: [
           { '配置': '128 GB，Ryzen AI Max+ 395，2 TB，Windows 11 Pro或Linux', '美国价格': '$3,999.99（标题价$3,999）', '来源与日期': 'HotHardware，2026-06-13', '状态': '预订，门店自提；据HotHardware，2026-07-10前备货' },
@@ -1007,9 +1015,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: '独立报道显示了什么',
         content: [
-          '**唯一有公开数据的正面对比，是StorageReview的Halo对DGX Spark测试，其中Spark赢下了全部18个vLLM服务场景。** StorageReview在Linux上以批量64对六个模型运行vLLM在线服务。Spark在16个场景中领先约1.9倍至13.4倍，在两个解码密集型运行（Mistral Small 3.1 24B和Llama 3.1 8B）中领先约11-12%。差距最大的13.4倍出现在一次Llama 3.1 8B FP4运行中。StorageReview的结论仍然偏向于Windows用户、ROCm开发者和单机部署的Halo。',
+          '**在我们找到的资料中，公开数据最详细的正面对比是StorageReview的Halo对DGX Spark测试，其中Spark赢下了全部18个vLLM服务场景。** StorageReview在Linux上以批量64对六个模型运行vLLM在线服务。Spark在16个场景中领先约1.9倍至13.4倍，在两个解码密集型运行（Mistral Small 3.1 24B和Llama 3.1 8B）中领先约11-12%。差距最大的13.4倍出现在一次Llama 3.1 8B FP4运行中。StorageReview的结论仍然偏向于Windows用户、ROCm开发者和单机部署的Halo。',
           '其他评测者报告的结果更接近。**HotHardware称Halo在许多模型上与DGX Spark大致相当，并非绝对最快，并授予其推荐奖。** 它测得在90分钟运行期间，距后排风口12英寸处为45 dBA，空闲功耗约33-35 W，负载功耗135-145 W。这些结果来自不同的测试设置，因此我们无法将其统一。',
-          '在CPU和内存方面，StorageReview在Linux上的Phoronix测试中，Halo在7-Zip解压（+38%）和LLVM编译（约快14%）上领先，而Spark赢下了四项STREAM内存测试中的三项。据Gigazine的总结，LTT Labs发现Halo在性能上与其他Ryzen AI Max+ 395机器相比并无新意，其软件环境（AMD验证的驱动集和分步AI实战手册，其中一些仍有未解决的缺陷）是主要差异点。同一总结称，内存带宽约800 GB/s的Mac Studio在Gemma 4 31B上生成token的速度大约是Halo的2-3倍，而gpt-oss-20b在NPU上以最高35 W的封装功耗运行，速度约为每秒20个token。',
+          '在CPU和内存方面，StorageReview在Linux上的Phoronix测试中，Halo在7-Zip解压（+38%）和LLVM编译（约快14%）上领先，而Spark赢下了四项STREAM内存测试中的三项。据Gigazine的总结，LTT Labs发现Halo在性能上与其他Ryzen AI Max+ 395机器相比并无新意，其软件环境（AMD验证的驱动集和分步AI实战手册，据称其中一些仍有未解决的缺陷）是主要差异点。同一总结称，内存带宽约800 GB/s的Mac Studio在Gemma 4 31B上生成token的速度大约是Halo的2-3倍，而gpt-oss-20b在NPU上以最高35 W的封装功耗运行，速度约为每秒20个token。',
           '我们没有找到对192 GB PRO 495版本的独立测试。HotHardware较早的评测提到该版本已发布但未公布上市日期。',
         ],
         note: '基准测试为第三方在特定软件版本上的结果，可能随更新而改变。链接：StorageReview、HotHardware和Gigazine列在“来源”下。我们无法打开LTT Labs自己的页面（HTTP 403）。',
@@ -1017,9 +1025,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '适合谁，谁该跳过',
+        content:
+          '**Ryzen AI Halo适合想要预配置AMD整机（128 GB或192 GB内存）、并可选择Windows或Linux的开发者（Windows用于128 GB版）。** 如果你需要最高的服务吞吐量、CUDA，或用于多机互联的高速端口，它就不太合适。想按内存档位对比显卡、Mac和其他迷你主机，请参阅[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
         items: [
           '**适合：** 想要一台预配置、支持Windows或Linux的AMD机器的开发者；请先与[分类指南](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)对比。',
-          '**适合：** 想要AMD自家128 GB机器的买家；HotHardware的作者称它是最便宜的128 GB紧凑型AI工作站，而其他厂商列出的价格不同（见[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)和[HP Z2 Mini G1a](/zh/local-llms/hp-z2-mini-g1a-local-ai-workstation)页面）。',
+          '**适合：** 想要AMD自家128 GB机器的买家；HotHardware的作者在2026年6月的报道发表时称它是最便宜的128 GB紧凑型AI工作站；此后其他厂商已列出更低的价格（见[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)和[HP Z2 Mini G1a](/zh/local-llms/hp-z2-mini-g1a-local-ai-workstation)页面）。',
           '**考虑192 GB版本：** 仅当你的模型需要超过128 GB时；它比128 GB版本贵约$3,300。',
           '**跳过：** 如果你需要最高的服务吞吐量或CUDA；StorageReview测得DGX Spark全程领先。',
           '**跳过：** 如果你打算组建多机集群：StorageReview指出它只有一个10GbE端口，没有200G互联。',
@@ -1032,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/zh/local-llms/nvidia-dgx-spark-local-ai-workstation)：在StorageReview的vLLM测试中测得比Halo更快，并提供用于连接多台机器的200G互联，但内存上限为128 GB。',
           '[Framework Desktop](/zh/local-llms/framework-desktop-local-ai-workstation)：同一Ryzen AI Max+系列，采用模块化机箱，提供192 GB PRO 495预订选项。',
-          '[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)：第三方的Ryzen AI Max+ 395机器，其美国价格的报道前后不一；详见其页面。',
+          '[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)：第三方的Ryzen AI Max+ 395机器，GMKtec美国官网128 GB / 1 TB版标价$3,499.99（厂商公布）；详见其页面。',
           '[Minisforum MS-S1 MAX](/zh/local-llms/minisforum-ms-s1-max-local-ai-workstation)：同一颗395芯片，配双10GbE和内部PCIe插槽（电气上为x4），依据Minisforum和评测。',
           '[本地AI工作站：Strix Halo对比DGX Spark](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)：并排比较所有机器和价格的分类对比。',
         ],
@@ -1080,10 +1090,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '用于本地AI的AMD Ryzen AI Halo：规格、价格与结论',
-      'description': 'AMD Ryzen AI Halo本地AI规格：128 GB的Ryzen AI Max+ 395与192 GB的PRO 495两个版本、有来源的美国价格，以及独立评测的发现。',
+      'headline': '本地AI用AMD Ryzen AI Halo的价格与规格',
+      'description': 'AMD Ryzen AI Halo价格：据报道，美国Micro Center售价为128 GB版$3,999、192 GB版（PRO 495）$7,299.99。含规格与独立评测结果。',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1095,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'zh',
       'url': 'https://www.promptquorum.com/zh/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'AMD Ryzen AI Halo是一台售价$3,999（128 GB）或$7,299.99（192 GB）的开发者迷你主机，可在本地运行百B级模型，在美国通过Micro Center销售。StorageReview的vLLM测试发现NVIDIA DGX Spark在全部18个服务场景中更快。',
+      'articleBody': 'AMD Ryzen AI Halo是一台开发者迷你主机，可在本地运行百B级模型，在美国通过Micro Center销售，据报价格为$3,999（128 GB）或$7,299.99（192 GB）。StorageReview的vLLM测试发现NVIDIA DGX Spark在全部18个服务场景中更快。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': '正在比较AMD Ryzen AI Halo与NVIDIA DGX Spark及其他128 GB或更大本地AI工作站的买家' },
@@ -1104,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1115,12 +1125,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-es.webp',
-    title: 'AMD Ryzen AI Halo para IA local: especificaciones, precio y veredicto',
-    seoTitle: 'AMD Ryzen AI Halo para IA local: specs, precio, veredicto',
+    title: 'AMD Ryzen AI Halo: precio y especificaciones para IA local',
+    seoTitle: 'AMD Ryzen AI Halo precio y specs: $3,999 informado',
     intro:
       'El AMD Ryzen AI Halo es el mini PC de desarrollo propio de AMD para ejecutar modelos de lenguaje grandes en local. Viene en dos versiones: un modelo de 128 GB con el Ryzen AI Max+ 395 y un modelo de 192 GB con el Ryzen AI Max+ PRO 495. Ambos se venden en EE. UU. a través de Micro Center. Esta página reúne las especificaciones del fabricante, los precios que pudimos documentar y lo que midieron revisores independientes, para que puedas decidir antes de comprar si encaja con tu carga de trabajo.',
     metaDescription:
-      'Specs del AMD Ryzen AI Halo para IA local: versiones de 128 GB (Max+ 395) y 192 GB (PRO 495), precios en EE. UU. con fuentes y qué hallaron las reseñas.',
+      'AMD Ryzen AI Halo precio: precios en EE. UU. informados de $3,999 (128 GB, Ryzen AI Max+ 395) y $7,299.99 (192 GB, PRO 495) en Micro Center. Specs.',
     twitterDescription:
       'AMD Ryzen AI Halo para LLM locales: versiones de 128 GB y 192 GB, precios en EE. UU. con fuentes y lo que encontraron StorageReview, HotHardware y LTT Labs.',
     readTime: '8 min de lectura',
@@ -1135,15 +1145,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'estación de trabajo ia local',
     ],
     leadAnswerBlock:
-      '**El AMD Ryzen AI Halo es un mini PC de desarrollo de $3,999 (128 GB) o $7,299.99 (192 GB) para ejecutar en local modelos de clase 100B con Windows o Linux, que se vende en EE. UU. a través de Micro Center.** La salvedad decisiva: la prueba de vLLM de StorageReview encontró a la NVIDIA DGX Spark más rápida en los 18 escenarios de servicio, y el Halo no tiene un puerto de alta velocidad para enlazar equipos.',
+      '**El AMD Ryzen AI Halo es un mini PC para modelos 100B locales con Windows o Linux; en Micro Center (EE. UU.), $3,999 (128 GB) o $7,299.99 (192 GB) según informes. Según StorageReview (vLLM), la DGX Spark de NVIDIA ganó los 18 escenarios; el Halo: un puerto 10GbE, sin 200G.**',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena comprar el AMD Ryzen AI Halo para IA local?',
         answer:
           'Merece consideración si quieres un equipo AMD preconfigurado con Windows o Linux y 128 GB o 192 GB de memoria. Encaja peor si buscas el máximo rendimiento de servicio o clustering, porque StorageReview midió la DGX Spark por delante en todas las pruebas de vLLM y el Halo tiene un único puerto 10GbE.',
         bullets: [
-          'Versión de 128 GB: Ryzen AI Max+ 395, $3,999 en Micro Center',
-          'Versión de 192 GB: Ryzen AI Max+ PRO 495, $7,299.99, solo en tienda física',
+          'Versión de 128 GB: Ryzen AI Max+ 395, $3,999 informado en Micro Center',
+          'Versión de 192 GB: Ryzen AI Max+ PRO 495, $7,299.99 informado, solo en tienda física',
           'Ejecuta Windows 11 Pro o una imagen Linux de desarrollo de AMD (versión de 128 GB)',
           'Más lento que la DGX Spark en la prueba de servicio con vLLM de StorageReview',
         ],
@@ -1153,8 +1163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Puntos clave', anchor: 'tldr' },
       { label: 'Qué es el AMD Ryzen AI Halo', anchor: 'overview' },
-      { label: 'Especificaciones', anchor: 'specs' },
-      { label: 'Precio y disponibilidad', anchor: 'pricing' },
+      { label: 'Especificaciones del AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'Precio del AMD Ryzen AI Halo y disponibilidad', anchor: 'pricing' },
       { label: 'Qué muestran los informes independientes', anchor: 'evidence' },
       { label: 'Para quién es y quién debe descartarlo', anchor: 'fit' },
       { label: 'Alternativas de la misma clase', anchor: 'alternatives' },
@@ -1189,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Especificaciones',
+        title: 'Especificaciones del AMD Ryzen AI Halo',
         columns: ['Especificación', 'Detalle'],
         rows: [
           { 'Especificación': 'Procesador (versión de 128 GB)', 'Detalle': 'Ryzen AI Max+ 395, 16 núcleos / 32 hilos, Zen 5, hasta 5.1 GHz en boost' },
@@ -1212,9 +1222,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Precio y disponibilidad',
+        title: 'Precio del AMD Ryzen AI Halo y disponibilidad',
         content:
-          '**La versión de 128 GB cuesta $3,999 y la de 192 GB $7,299.99, ambos precios en EE. UU. en Micro Center.** La escasez de DRAM ha movido los precios de esta clase en repetidas ocasiones, así que consulta la página del minorista antes de pedir.',
+          '**Según los informes, la versión de 128 GB cuesta $3,999 y la de 192 GB $7,299.99, ambos precios en EE. UU. en Micro Center.** La escasez de DRAM ha movido los precios de esta clase en repetidas ocasiones, así que consulta la página del minorista antes de pedir.',
         columns: ['Configuración', 'Precio en EE. UU.', 'Fuente y fecha', 'Estado'],
         rows: [
           { 'Configuración': '128 GB, Ryzen AI Max+ 395, 2 TB, Windows 11 Pro o Linux', 'Precio en EE. UU.': '$3,999.99 (titular $3,999)', 'Fuente y fecha': 'HotHardware, 2026-06-13', 'Estado': 'Reserva con recogida en tienda; listo para el 2026-07-10 según HotHardware' },
@@ -1226,9 +1236,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: 'Qué muestran los informes independientes',
         content: [
-          '**El único cara a cara con cifras publicadas es la prueba Halo vs. DGX Spark de StorageReview, en la que la Spark ganó los 18 escenarios de servicio con vLLM.** StorageReview ejecutó servicio en línea con vLLM en Linux con batch 64 y seis modelos. La Spark fue más rápida entre aproximadamente 1.9x y 13.4x en 16 escenarios y en torno a un 11-12% en dos ejecuciones centradas en la decodificación (Mistral Small 3.1 24B y Llama 3.1 8B). La mayor diferencia, 13.4x, fue en una ejecución de Llama 3.1 8B en FP4. La conclusión de StorageReview sigue favoreciendo al Halo para usuarios de Windows, desarrolladores de ROCm y configuraciones de una sola caja.',
+          '**El cara a cara con cifras publicadas más detallado que encontramos es la prueba Halo vs. DGX Spark de StorageReview, en la que la Spark ganó los 18 escenarios de servicio con vLLM.** StorageReview ejecutó servicio en línea con vLLM en Linux con batch 64 y seis modelos. La Spark fue más rápida entre aproximadamente 1.9x y 13.4x en 16 escenarios y en torno a un 11-12% en dos ejecuciones centradas en la decodificación (Mistral Small 3.1 24B y Llama 3.1 8B). La mayor diferencia, 13.4x, fue en una ejecución de Llama 3.1 8B en FP4. La conclusión de StorageReview sigue favoreciendo al Halo para usuarios de Windows, desarrolladores de ROCm y configuraciones de una sola caja.',
           'Otros revisores informan de un resultado más ajustado. **HotHardware calificó el Halo como más o menos equivalente a la DGX Spark en muchos modelos, aunque no el más rápido en términos absolutos, y le otorgó un premio Recommended.** Midió 45 dBA a 12 pulgadas de las rejillas traseras durante una ejecución de 90 minutos, un consumo en reposo de unos 33-35 W y de 135-145 W bajo carga. Esos resultados proceden de configuraciones de prueba distintas, así que no podemos conciliarlos.',
-          'En CPU y memoria, las ejecuciones de Phoronix en Linux de StorageReview dieron ventaja al Halo en la descompresión con 7-Zip (+38%) y en una compilación de LLVM (aproximadamente un 14% más rápido), mientras que la Spark ganó tres de las cuatro pruebas de memoria STREAM. LTT Labs, según el resumen de Gigazine, concluyó que el Halo no aporta nada novedoso en rendimiento frente a otros equipos con Ryzen AI Max+ 395, y que su entorno de software (conjuntos de drivers verificados por AMD y guías de IA paso a paso, algunos con errores abiertos) es el principal elemento diferenciador. En el mismo resumen, un Mac Studio con unos 800 GB/s de memoria generó tokens aproximadamente 2-3 veces más rápido que el Halo con Gemma 4 31B, y gpt-oss-20b en la NPU funcionó a unos 20 tokens por segundo con hasta 35 W de potencia del paquete.',
+          'En CPU y memoria, las ejecuciones de Phoronix en Linux de StorageReview dieron ventaja al Halo en la descompresión con 7-Zip (+38%) y en una compilación de LLVM (aproximadamente un 14% más rápido), mientras que la Spark ganó tres de las cuatro pruebas de memoria STREAM. LTT Labs, según el resumen de Gigazine, concluyó que el Halo no aporta nada novedoso en rendimiento frente a otros equipos con Ryzen AI Max+ 395, y que su entorno de software (conjuntos de drivers verificados por AMD y guías de IA paso a paso, algunos, según se informa, con errores abiertos) es el principal elemento diferenciador. En el mismo resumen, un Mac Studio con unos 800 GB/s de memoria generó tokens aproximadamente 2-3 veces más rápido que el Halo con Gemma 4 31B, y gpt-oss-20b en la NPU funcionó a unos 20 tokens por segundo con hasta 35 W de potencia del paquete.',
           'No encontramos ninguna prueba independiente de la versión de 192 GB con PRO 495. La reseña anterior de HotHardware mencionaba esa versión como anunciada, sin fecha de lanzamiento.',
         ],
         note: 'Los benchmarks son resultados de terceros con versiones de software concretas y pueden cambiar con las actualizaciones. Enlaces: StorageReview, HotHardware y Gigazine figuran en Fuentes. No pudimos abrir la propia página de LTT Labs (HTTP 403).',
@@ -1236,9 +1246,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Para quién es y quién debe descartarlo',
+        content:
+          '**El Ryzen AI Halo encaja con desarrolladores que quieren un equipo AMD preconfigurado con 128 GB o 192 GB de memoria y la opción de Windows o Linux (Windows en la versión de 128 GB).** Encaja menos con quien necesita el mayor rendimiento de servicio, CUDA o un puerto rápido para enlazar equipos. Para compararlo por nivel de memoria con GPU, Mac y otros mini PC, consulta la [guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide).',
         items: [
           '**Encaja con:** desarrolladores que quieren un equipo AMD preconfigurado con Windows o Linux; compáralo antes con la [guía de la categoría](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
-          '**Encaja con:** compradores que quieren el equipo de 128 GB del propio AMD; el autor de HotHardware lo calificó como la estación de trabajo de IA compacta de 128 GB más barata, mientras que otros fabricantes indican precios distintos (consulta las páginas del [GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation) y del [HP Z2 Mini G1a](/es/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
+          '**Encaja con:** compradores que quieren el equipo de 128 GB del propio AMD; en su informe de junio de 2026, el autor de HotHardware lo calificó como la estación de trabajo de IA compacta de 128 GB más barata; desde entonces otros fabricantes han listado precios más bajos (consulta las páginas del [GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation) y del [HP Z2 Mini G1a](/es/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
           '**Considera la versión de 192 GB** solo si tus modelos necesitan más de 128 GB; cuesta unos $3,300 más que la versión de 128 GB.',
           '**Descártalo si** necesitas el máximo rendimiento de servicio o CUDA; StorageReview midió la DGX Spark por delante en todo momento.',
           '**Descártalo si** piensas hacer clustering de equipos: StorageReview señala un puerto 10GbE y ninguna red de 200G.',
@@ -1251,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/es/local-llms/nvidia-dgx-spark-local-ai-workstation): medida más rápida que el Halo en la prueba de vLLM de StorageReview y con una red de 200G para enlazar equipos, pero limita la memoria a 128 GB.',
           '[Framework Desktop](/es/local-llms/framework-desktop-local-ai-workstation): la misma familia Ryzen AI Max+ en una caja modular, con una opción de 192 GB con PRO 495 en reserva.',
-          '[GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation): un equipo Ryzen AI Max+ 395 de un tercero cuyo precio en EE. UU. se informa de forma inconsistente; consulta su página.',
+          '[GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation): un equipo Ryzen AI Max+ 395 de un tercero, listado a $3,499.99 (128 GB / 1 TB) en la tienda de GMKtec en EE. UU. (dato del fabricante); consulta su página.',
           '[Minisforum MS-S1 MAX](/es/local-llms/minisforum-ms-s1-max-local-ai-workstation): el mismo chip 395 con doble 10GbE y una ranura PCIe interna (x4 eléctricamente), según Minisforum y las reseñas.',
           '[Estaciones de trabajo de IA local: Strix Halo vs. DGX Spark](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): la comparativa de categoría con todas las máquinas y precios lado a lado.',
         ],
@@ -1299,10 +1311,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo para IA local: especificaciones, precio y veredicto',
-      'description': 'Specs del AMD Ryzen AI Halo para IA local: versiones de 128 GB (Max+ 395) y 192 GB (PRO 495), precios en EE. UU. con fuentes y qué hallaron las reseñas.',
+      'headline': 'AMD Ryzen AI Halo: precio y especificaciones para IA local',
+      'description': 'AMD Ryzen AI Halo precio: precios en EE. UU. informados de $3,999 (128 GB, Ryzen AI Max+ 395) y $7,299.99 (192 GB, PRO 495) en Micro Center. Specs.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1315,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'es',
       'url': 'https://www.promptquorum.com/es/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'El AMD Ryzen AI Halo es un mini PC de desarrollo de $3,999 (128 GB) o $7,299.99 (192 GB) para ejecutar en local modelos de clase 100B, que se vende en EE. UU. a través de Micro Center. La prueba de vLLM de StorageReview encontró a la NVIDIA DGX Spark más rápida en los 18 escenarios de servicio.',
+      'articleBody': 'El AMD Ryzen AI Halo es un mini PC de desarrollo para ejecutar en local modelos de clase 100B, que se vende en EE. UU. a través de Micro Center a precios informados de $3,999 (128 GB) y $7,299.99 (192 GB). La prueba de vLLM de StorageReview encontró a la NVIDIA DGX Spark más rápida en los 18 escenarios de servicio.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Compradores que comparan el AMD Ryzen AI Halo con la NVIDIA DGX Spark y otras estaciones de trabajo de IA local de 128 GB o más' },
@@ -1324,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1335,12 +1347,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-pt.webp',
-    title: 'AMD Ryzen AI Halo para IA local: especificações, preço e veredito',
-    seoTitle: 'AMD Ryzen AI Halo para IA local: specs, preço, veredito',
+    title: 'AMD Ryzen AI Halo: preço e especificações para IA local',
+    seoTitle: 'AMD Ryzen AI Halo preço e specs: $3,999 reportado',
     intro:
       'O AMD Ryzen AI Halo é o mini PC para desenvolvedores da própria AMD, feito para rodar modelos de linguagem grandes localmente. Ele vem em duas versões: um modelo de 128 GB com o Ryzen AI Max+ 395 e um modelo de 192 GB com o Ryzen AI Max+ PRO 495. Ambos são vendidos nos EUA pela Micro Center. Esta página reúne as especificações do fabricante, os preços que conseguimos levantar com fonte e o que revisores independentes mediram, para que você decida se ele atende à sua carga de trabalho antes de comprar.',
     metaDescription:
-      'Specs do AMD Ryzen AI Halo para IA local: versões de 128 GB (395) e 192 GB (PRO 495), preços nos EUA com fonte e o que mostram as análises independentes.',
+      'AMD Ryzen AI Halo preço: preços nos EUA reportados de $3,999 (128 GB, Ryzen AI Max+ 395) e $7,299.99 (192 GB, PRO 495) na Micro Center. Specs e análises.',
     twitterDescription:
       'AMD Ryzen AI Halo para LLMs locais: versões de 128 GB e 192 GB, preços nos EUA com fonte e o que StorageReview, HotHardware e LTT Labs encontraram.',
     readTime: '8 min de leitura',
@@ -1355,15 +1367,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'workstation de ia local',
     ],
     leadAnswerBlock:
-      '**O AMD Ryzen AI Halo é um mini PC para desenvolvedores de $3,999 (128 GB) ou $7,299.99 (192 GB), feito para rodar modelos da classe de 100B localmente em Windows ou Linux e vendido nos EUA pela Micro Center.** A ressalva decisiva: o teste de vLLM da StorageReview encontrou o NVIDIA DGX Spark mais rápido nos 18 cenários de serving, e o Halo não tem porta de alta velocidade para ligar caixas entre si.',
+      '**O AMD Ryzen AI Halo é um mini PC para modelos locais 100B em Windows ou Linux, vendido na Micro Center (EUA); preços reportados: $3,999 (128 GB) e $7,299.99 (192 GB). No vLLM da StorageReview, o NVIDIA DGX Spark venceu os 18 cenários; o Halo: uma porta 10GbE, sem 200G.**',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena comprar o AMD Ryzen AI Halo para IA local?',
         answer:
           'Vale considerá-lo se você quer uma caixa AMD pré-configurada, com Windows ou Linux e 128 GB ou 192 GB de memória. Serve menos para throughput máximo de serving ou para clustering, porque a StorageReview mediu o DGX Spark à frente em todos os testes de vLLM e o Halo tem uma única porta 10GbE.',
         bullets: [
-          'Versão de 128 GB: Ryzen AI Max+ 395, $3,999 na Micro Center',
-          'Versão de 192 GB: Ryzen AI Max+ PRO 495, $7,299.99, apenas em lojas físicas',
+          'Versão de 128 GB: Ryzen AI Max+ 395, $3,999 reportado na Micro Center',
+          'Versão de 192 GB: Ryzen AI Max+ PRO 495, $7,299.99 reportado, apenas em lojas físicas',
           'Roda Windows 11 Pro ou uma imagem Linux para desenvolvedores da AMD (versão de 128 GB)',
           'Mais lento que o DGX Spark no teste de serving com vLLM da StorageReview',
         ],
@@ -1373,8 +1385,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Pontos principais', anchor: 'tldr' },
       { label: 'O que é o AMD Ryzen AI Halo', anchor: 'overview' },
-      { label: 'Especificações', anchor: 'specs' },
-      { label: 'Preço e disponibilidade', anchor: 'pricing' },
+      { label: 'Especificações do AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'Preço do AMD Ryzen AI Halo e disponibilidade', anchor: 'pricing' },
       { label: 'O que mostram os relatos independentes', anchor: 'evidence' },
       { label: 'Para quem serve e quem deve evitar', anchor: 'fit' },
       { label: 'Alternativas na mesma classe', anchor: 'alternatives' },
@@ -1409,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'Especificações',
+        title: 'Especificações do AMD Ryzen AI Halo',
         columns: ['Especificação', 'Detalhe'],
         rows: [
           { 'Especificação': 'Processador (versão de 128 GB)', 'Detalhe': 'Ryzen AI Max+ 395, 16 núcleos / 32 threads, Zen 5, boost de até 5.1 GHz' },
@@ -1432,9 +1444,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'Preço e disponibilidade',
+        title: 'Preço do AMD Ryzen AI Halo e disponibilidade',
         content:
-          '**A versão de 128 GB custa $3,999 e a de 192 GB custa $7,299.99, ambos preços dos EUA na Micro Center.** A escassez de DRAM mexeu repetidamente nos preços desta classe, então confira a página do varejista antes de encomendar. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          '**Segundo relatos, a versão de 128 GB custa $3,999 e a de 192 GB custa $7,299.99, ambos preços dos EUA na Micro Center.** A escassez de DRAM mexeu repetidamente nos preços desta classe, então confira a página do varejista antes de encomendar. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Configuração', 'Preço nos EUA', 'Fonte e data', 'Status'],
         rows: [
           { 'Configuração': '128 GB, Ryzen AI Max+ 395, 2 TB, Windows 11 Pro ou Linux', 'Preço nos EUA': '$3,999.99 (manchete $3,999)', 'Fonte e data': 'HotHardware, 2026-06-13', 'Status': 'Pré-encomenda com retirada na loja; pronto até 2026-07-10 segundo a HotHardware' },
@@ -1446,9 +1458,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: 'O que mostram os relatos independentes',
         content: [
-          '**O único confronto direto com números publicados é o teste Halo vs. DGX Spark da StorageReview, no qual o Spark venceu os 18 cenários de serving com vLLM.** A StorageReview rodou serving online com vLLM no Linux, em batch 64, com seis modelos. O Spark ficou à frente por cerca de 1.9x a 13.4x em 16 cenários e por cerca de 11-12% em duas execuções com carga predominante de decode (Mistral Small 3.1 24B e Llama 3.1 8B). A maior diferença, 13.4x, foi em uma execução do Llama 3.1 8B em FP4. A conclusão da StorageReview ainda favorece o Halo para usuários de Windows, desenvolvedores de ROCm e configurações de caixa única.',
+          '**O confronto direto com números publicados mais detalhado que encontramos é o teste Halo vs. DGX Spark da StorageReview, no qual o Spark venceu os 18 cenários de serving com vLLM.** A StorageReview rodou serving online com vLLM no Linux, em batch 64, com seis modelos. O Spark ficou à frente por cerca de 1.9x a 13.4x em 16 cenários e por cerca de 11-12% em duas execuções com carga predominante de decode (Mistral Small 3.1 24B e Llama 3.1 8B). A maior diferença, 13.4x, foi em uma execução do Llama 3.1 8B em FP4. A conclusão da StorageReview ainda favorece o Halo para usuários de Windows, desenvolvedores de ROCm e configurações de caixa única.',
           'Outros revisores relatam um resultado mais próximo. **A HotHardware chamou o Halo de aproximadamente equivalente ao DGX Spark em muitos modelos, não o mais rápido de todos, e lhe deu um prêmio Recommended.** Ela mediu 45 dBA a 12 polegadas das saídas de ar traseiras durante uma execução de 90 minutos, consumo em repouso de cerca de 33-35 W e em carga de 135-145 W. Esses resultados vêm de configurações de teste diferentes, então não conseguimos conciliá-los.',
-          'Em CPU e memória, as execuções do Phoronix da StorageReview no Linux deixaram o Halo à frente na descompressão do 7-Zip (+38%) e em uma compilação do LLVM (cerca de 14% mais rápido), enquanto o Spark venceu três dos quatro testes de memória STREAM. A LTT Labs, segundo o resumo da Gigazine, concluiu que o Halo não oferece nada de novo em desempenho em relação a outras máquinas Ryzen AI Max+ 395, sendo seu ambiente de software (conjuntos de drivers verificados pela AMD e playbooks de IA passo a passo, alguns com bugs abertos) o principal diferencial. No mesmo resumo, um Mac Studio com cerca de 800 GB/s de memória gerou tokens aproximadamente 2-3x mais rápido que o Halo no Gemma 4 31B, e o gpt-oss-20b na NPU rodou a cerca de 20 tokens por segundo, com até 35 W de potência do pacote.',
+          'Em CPU e memória, as execuções do Phoronix da StorageReview no Linux deixaram o Halo à frente na descompressão do 7-Zip (+38%) e em uma compilação do LLVM (cerca de 14% mais rápido), enquanto o Spark venceu três dos quatro testes de memória STREAM. A LTT Labs, segundo o resumo da Gigazine, concluiu que o Halo não oferece nada de novo em desempenho em relação a outras máquinas Ryzen AI Max+ 395, sendo seu ambiente de software (conjuntos de drivers verificados pela AMD e playbooks de IA passo a passo, alguns, segundo o relato, com bugs abertos) o principal diferencial. No mesmo resumo, um Mac Studio com cerca de 800 GB/s de memória gerou tokens aproximadamente 2-3x mais rápido que o Halo no Gemma 4 31B, e o gpt-oss-20b na NPU rodou a cerca de 20 tokens por segundo, com até 35 W de potência do pacote.',
           'Não encontramos nenhum teste independente da versão de 192 GB PRO 495. A análise anterior da HotHardware registrou essa versão como anunciada, sem data de lançamento.',
         ],
         note: 'Os benchmarks são resultados de terceiros em versões específicas de software e podem mudar com atualizações. Links: StorageReview, HotHardware e Gigazine estão listados em Fontes. Não conseguimos abrir a própria página da LTT Labs (HTTP 403).',
@@ -1456,9 +1468,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'Para quem serve e quem deve evitar',
+        content:
+          '**O AMD Ryzen AI Halo serve para desenvolvedores que querem uma máquina AMD pré-configurada com 128 GB ou 192 GB de memória e a opção de Windows ou Linux (Windows na versão de 128 GB).** Serve menos para quem precisa do maior desempenho de serving, de CUDA ou de uma porta rápida para ligar caixas entre si. Para compará-lo por nível de memória com GPUs, Macs e outros mini PCs, veja o [guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide).',
         items: [
           '**Serve a:** desenvolvedores que querem uma caixa AMD pré-configurada com Windows ou Linux; compare-a primeiro com o [guia da categoria](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
-          '**Serve a:** compradores que querem a caixa de 128 GB da própria AMD; o autor da HotHardware a chamou de a workstation de IA compacta de 128 GB mais barata, enquanto outros fabricantes listam preços diferentes (veja as páginas do [GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation) e do [HP Z2 Mini G1a](/pt/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
+          '**Serve a:** compradores que querem a caixa de 128 GB da própria AMD; na época do relato de junho de 2026, o autor da HotHardware a chamou de a workstation de IA compacta de 128 GB mais barata; desde então, outros fabricantes listaram preços menores (veja as páginas do [GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation) e do [HP Z2 Mini G1a](/pt/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
           '**Considere a versão de 192 GB** apenas se os seus modelos precisarem de mais de 128 GB; ela custa cerca de $3,300 a mais que a versão de 128 GB.',
           '**Evite se** precisa do maior throughput de serving ou de CUDA; a StorageReview mediu o DGX Spark à frente em todos os testes.',
           '**Evite se** pretende fazer cluster de caixas: a StorageReview observa uma porta 10GbE e nenhuma malha de 200G.',
@@ -1471,7 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/pt/local-llms/nvidia-dgx-spark-local-ai-workstation): medido mais rápido que o Halo no teste de vLLM da StorageReview e com malha de 200G para ligar caixas, mas limita a memória em 128 GB.',
           '[Framework Desktop](/pt/local-llms/framework-desktop-local-ai-workstation): a mesma família Ryzen AI Max+ em um gabinete modular, com uma opção PRO 495 de 192 GB em pré-encomenda.',
-          '[GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation): uma caixa Ryzen AI Max+ 395 de terceiros cujo preço nos EUA é reportado de forma inconsistente; veja a página dela.',
+          '[GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation): uma caixa Ryzen AI Max+ 395 de terceiros, listada a US$ 3.499,99 (128 GB / 1 TB) na loja da GMKtec nos EUA (dado do fabricante); veja a página dela.',
           '[Minisforum MS-S1 MAX](/pt/local-llms/minisforum-ms-s1-max-local-ai-workstation): o mesmo chip 395 com 10GbE duplo e um slot PCIe interno (x4 eletricamente), segundo a Minisforum e análises.',
           '[Workstations de IA local: Strix Halo vs. DGX Spark](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): a comparação da categoria com todas as máquinas e preços lado a lado.',
         ],
@@ -1519,10 +1533,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo para IA local: especificações, preço e veredito',
-      'description': 'Specs do AMD Ryzen AI Halo para IA local: versões de 128 GB (395) e 192 GB (PRO 495), preços nos EUA com fonte e o que mostram as análises independentes.',
+      'headline': 'AMD Ryzen AI Halo: preço e especificações para IA local',
+      'description': 'AMD Ryzen AI Halo preço: preços nos EUA reportados de $3,999 (128 GB, Ryzen AI Max+ 395) e $7,299.99 (192 GB, PRO 495) na Micro Center. Specs e análises.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1535,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'pt-BR',
       'url': 'https://www.promptquorum.com/pt/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'O AMD Ryzen AI Halo é um mini PC para desenvolvedores de $3,999 (128 GB) ou $7,299.99 (192 GB), feito para rodar modelos da classe de 100B localmente e vendido nos EUA pela Micro Center. O teste de vLLM da StorageReview encontrou o NVIDIA DGX Spark mais rápido nos 18 cenários de serving.',
+      'articleBody': 'O AMD Ryzen AI Halo é um mini PC para desenvolvedores, feito para rodar modelos da classe de 100B localmente e vendido nos EUA pela Micro Center a preços reportados de $3,999 (128 GB) e $7,299.99 (192 GB). O teste de vLLM da StorageReview encontrou o NVIDIA DGX Spark mais rápido nos 18 cenários de serving.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'Compradores que comparam o AMD Ryzen AI Halo com o NVIDIA DGX Spark e outras workstations de IA local de 128 GB ou mais' },
@@ -1544,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1555,12 +1569,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ar.webp',
-    title: 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
-    seoTitle: 'AMD Ryzen AI Halo للذكاء الاصطناعي: المواصفات والسعر',
+    title: 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: السعر والمواصفات',
+    seoTitle: 'سعر AMD Ryzen AI Halo ومواصفاته: $3,999 بحسب التقارير',
     intro:
       'AMD Ryzen AI Halo هو كمبيوتر مصغر للمطورين تصنعه AMD نفسها لتشغيل نماذج اللغة الكبيرة محليًا. يأتي بنسختين: طراز 128 GB بشريحة Ryzen AI Max+ 395، وطراز 192 GB بشريحة Ryzen AI Max+ PRO 495. وتُباع النسختان في الولايات المتحدة عبر Micro Center. تجمع هذه الصفحة مواصفات المصنّع والأسعار التي استطعنا توثيقها وما قاسه المراجعون المستقلون، لتقرر قبل الشراء إن كان يناسب عملك.',
     metaDescription:
-      'مواصفات AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: نسخة 128 GB بشريحة 395 ونسخة 192 GB بشريحة PRO 495، وأسعار أمريكية موثقة ونتائج المراجعات المستقلة.',
+      'سعر AMD Ryzen AI Halo: بحسب التقارير $3,999 لنسخة 128 GB بشريحة 395، و$7,299.99 لنسخة 192 GB بشريحة PRO 495، في Micro Center. المواصفات والمراجعات.',
     twitterDescription:
       'AMD Ryzen AI Halo لنماذج اللغة المحلية: نسختا 128 GB و192 GB، وأسعار أمريكية موثقة، وما وجدته StorageReview وHotHardware وLTT Labs.',
     readTime: '8 دقائق للقراءة',
@@ -1575,15 +1589,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'محطة عمل ذكاء اصطناعي محلي',
     ],
     leadAnswerBlock:
-      '**AMD Ryzen AI Halo كمبيوتر مصغر للمطورين بسعر $3,999 (128 GB) أو $7,299.99 (192 GB) لتشغيل نماذج من فئة 100B محليًا على ويندوز أو لينكس، ويُباع في الولايات المتحدة عبر Micro Center.** التحفظ الحاسم: وجد اختبار vLLM من StorageReview أن NVIDIA DGX Spark أسرع في جميع سيناريوهات الخدمة الـ18، وأن Halo لا يملك منفذًا عالي السرعة لربط الأجهزة.',
+      '**AMD Ryzen AI Halo كمبيوتر مصغر لنماذج 100B محليًا على ويندوز أو لينكس، يُباع في الولايات المتحدة عبر Micro Center بسعر $3,999 (128 GB) أو $7,299.99 (192 GB) بحسب التقارير. في اختبار vLLM من StorageReview تفوّق NVIDIA DGX Spark في السيناريوهات الـ18؛ وللـHalo منفذ 10GbE واحد ولا نسيج 200G.**',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق AMD Ryzen AI Halo الشراء للذكاء الاصطناعي المحلي؟',
         answer:
           'يستحق النظر إذا كنت تريد جهاز AMD مُعدًّا مسبقًا يعمل بويندوز أو لينكس بذاكرة 128 GB أو 192 GB. وهو أقل ملاءمة لأعلى إنتاجية في الخدمة أو للربط بين الأجهزة، لأن StorageReview قاست تقدم DGX Spark في كل اختبارات vLLM، ولأن Halo يملك منفذ 10GbE واحدًا فقط.',
         bullets: [
-          'نسخة 128 GB: Ryzen AI Max+ 395، بسعر $3,999 في Micro Center',
-          'نسخة 192 GB: Ryzen AI Max+ PRO 495، بسعر $7,299.99، في المتاجر فقط',
+          'نسخة 128 GB: Ryzen AI Max+ 395، بسعر $3,999 بحسب التقارير في Micro Center',
+          'نسخة 192 GB: Ryzen AI Max+ PRO 495، بسعر $7,299.99 بحسب التقارير، في المتاجر فقط',
           'يعمل بويندوز 11 Pro أو صورة لينكس للمطورين من AMD (نسخة 128 GB)',
           'أبطأ من DGX Spark في اختبار خدمة vLLM من StorageReview',
         ],
@@ -1593,8 +1607,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'النقاط الرئيسية', anchor: 'tldr' },
       { label: 'ما هو AMD Ryzen AI Halo', anchor: 'overview' },
-      { label: 'المواصفات', anchor: 'specs' },
-      { label: 'السعر والتوفر', anchor: 'pricing' },
+      { label: 'مواصفات AMD Ryzen AI Halo', anchor: 'specs' },
+      { label: 'سعر AMD Ryzen AI Halo وتوفره', anchor: 'pricing' },
       { label: 'ما الذي تُظهره التقارير المستقلة', anchor: 'evidence' },
       { label: 'لمن يناسب ولمن لا يناسب', anchor: 'fit' },
       { label: 'بدائل من الفئة نفسها', anchor: 'alternatives' },
@@ -1629,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: 'المواصفات',
+        title: 'مواصفات AMD Ryzen AI Halo',
         columns: ['المواصفة', 'التفاصيل'],
         rows: [
           { 'المواصفة': 'المعالج (نسخة 128 GB)', 'التفاصيل': 'Ryzen AI Max+ 395، 16 نواة / 32 مسارًا، Zen 5، تسارع حتى 5.1 GHz' },
@@ -1652,9 +1666,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: 'السعر والتوفر',
+        title: 'سعر AMD Ryzen AI Halo وتوفره',
         content:
-          '**تبلغ تكلفة نسخة 128 GB $3,999 ونسخة 192 GB $7,299.99، وكلاهما سعر أمريكي في Micro Center.** غيّرت نقائص DRAM الأسعار في هذه الفئة مرارًا، لذا تحقق من صفحة المتجر قبل الطلب.',
+          '**تبلغ تكلفة نسخة 128 GB بحسب التقارير $3,999 ونسخة 192 GB $7,299.99، وكلاهما سعر أمريكي في Micro Center.** غيّرت نقائص DRAM الأسعار في هذه الفئة مرارًا، لذا تحقق من صفحة المتجر قبل الطلب.',
         columns: ['الإعداد', 'السعر الأمريكي', 'المصدر والتاريخ', 'الحالة'],
         rows: [
           { 'الإعداد': '128 GB، Ryzen AI Max+ 395، 2 TB، ويندوز 11 Pro أو لينكس', 'السعر الأمريكي': '$3,999.99 (العنوان الرئيسي $3,999)', 'المصدر والتاريخ': 'HotHardware، 2026-06-13', 'الحالة': 'طلب مسبق مع الاستلام من المتجر؛ جاهز بحلول 2026-07-10 بحسب HotHardware' },
@@ -1666,9 +1680,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: 'ما الذي تُظهره التقارير المستقلة',
         content: [
-          '**المواجهة المباشرة الوحيدة بأرقام منشورة هي اختبار StorageReview لـHalo مقابل DGX Spark، الذي فاز فيه Spark بجميع سيناريوهات خدمة vLLM الـ18.** شغّلت StorageReview خدمة vLLM عبر الإنترنت على لينكس بدفعة 64 عبر ستة نماذج. تقدّم Spark بنحو 1.9x إلى 13.4x في 16 سيناريو، وبنحو 11-12% في تشغيلين يعتمدان على فك الترميز (decode) (Mistral Small 3.1 24B وLlama 3.1 8B). وكانت أوسع فجوة، 13.4x، في تشغيل Llama 3.1 8B بدقة FP4. ومع ذلك يميل استنتاج StorageReview لصالح Halo لمستخدمي ويندوز ومطوري ROCm والإعدادات ذات الجهاز الواحد.',
+          '**المواجهة المباشرة الأكثر تفصيلًا بأرقام منشورة التي وجدناها هي اختبار StorageReview لـHalo مقابل DGX Spark، الذي فاز فيه Spark بجميع سيناريوهات خدمة vLLM الـ18.** شغّلت StorageReview خدمة vLLM عبر الإنترنت على لينكس بدفعة 64 عبر ستة نماذج. تقدّم Spark بنحو 1.9x إلى 13.4x في 16 سيناريو، وبنحو 11-12% في تشغيلين يعتمدان على فك الترميز (decode) (Mistral Small 3.1 24B وLlama 3.1 8B). وكانت أوسع فجوة، 13.4x، في تشغيل Llama 3.1 8B بدقة FP4. ومع ذلك يميل استنتاج StorageReview لصالح Halo لمستخدمي ويندوز ومطوري ROCm والإعدادات ذات الجهاز الواحد.',
           'ويذكر مراجعون آخرون نتيجة أقرب. **وصفت HotHardware جهاز Halo بأنه متقارب تقريبًا مع DGX Spark في كثير من النماذج، وليس الأسرع مطلقًا، ومنحته جائزة Recommended.** وقاست مستوى ضجيج 45 dBA على بعد 12 بوصة من فتحات التهوية الخلفية خلال تشغيل لمدة 90 دقيقة، واستهلاكًا في الخمول يبلغ نحو 33-35 W وتحت الحمل 135-145 W. تأتي هذه النتائج من إعدادات اختبار مختلفة، لذا لا نستطيع التوفيق بينها.',
-          'على صعيد المعالج والذاكرة، تقدّم Halo في تشغيلات Phoronix على لينكس التي أجرتها StorageReview في فك ضغط 7-Zip (+38%) وفي تجميع LLVM (أسرع بنحو 14%)، بينما فاز Spark في ثلاثة من أربعة اختبارات ذاكرة STREAM. أما LTT Labs، بحسب ملخص Gigazine، فوجدت أن Halo لا يقدم جديدًا في الأداء مقارنة بأجهزة Ryzen AI Max+ 395 الأخرى، وأن بيئته البرمجية (مجموعات برامج تشغيل تتحقق منها AMD وأدلة ذكاء اصطناعي خطوة بخطوة، بعضها فيه أخطاء مفتوحة) هي الفارق الرئيسي. وفي الملخص نفسه، ولّد Mac Studio بذاكرة بنحو 800 GB/s توكنات أسرع بنحو 2-3 مرات تقريبًا من Halo على Gemma 4 31B، وعمل gpt-oss-20b على NPU بنحو 20 توكن في الثانية وبطاقة حزمة تصل إلى 35 W.',
+          'على صعيد المعالج والذاكرة، تقدّم Halo في تشغيلات Phoronix على لينكس التي أجرتها StorageReview في فك ضغط 7-Zip (+38%) وفي تجميع LLVM (أسرع بنحو 14%)، بينما فاز Spark في ثلاثة من أربعة اختبارات ذاكرة STREAM. أما LTT Labs، بحسب ملخص Gigazine، فوجدت أن Halo لا يقدم جديدًا في الأداء مقارنة بأجهزة Ryzen AI Max+ 395 الأخرى، وأن بيئته البرمجية (مجموعات برامج تشغيل تتحقق منها AMD وأدلة ذكاء اصطناعي خطوة بخطوة، بعضها، بحسب التقارير، فيه أخطاء مفتوحة) هي الفارق الرئيسي. وفي الملخص نفسه، ولّد Mac Studio بذاكرة بنحو 800 GB/s توكنات أسرع بنحو 2-3 مرات تقريبًا من Halo على Gemma 4 31B، وعمل gpt-oss-20b على NPU بنحو 20 توكن في الثانية وبطاقة حزمة تصل إلى 35 W.',
           'لم نجد أي اختبار مستقل لنسخة 192 GB بشريحة PRO 495. وكانت مراجعة HotHardware السابقة قد ذكرت تلك النسخة على أنها معلنة بلا موعد إطلاق.',
         ],
         note: 'الاختبارات نتائج أطراف ثالثة على إصدارات برمجية محددة، وقد تتغير مع التحديثات. الروابط: StorageReview وHotHardware وGigazine مدرجة ضمن المصادر. لم نستطع فتح صفحة LTT Labs نفسها (HTTP 403).',
@@ -1676,9 +1690,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: 'لمن يناسب ولمن لا يناسب',
+        content:
+          '**يناسب Ryzen AI Halo المطورين الذين يريدون جهاز AMD جاهز الإعداد بذاكرة 128 GB أو 192 GB مع خيار ويندوز أو لينكس (ويندوز في نسخة 128 GB).** ويناسب أقل من يحتاج أعلى إنتاجية للخدمة أو CUDA أو منفذًا سريعًا لربط الأجهزة. لمقارنته بوحدات GPU وأجهزة Mac والحواسيب المصغرة الأخرى حسب حجم الذاكرة، راجع [دليل عتاد النماذج المحلية](/ar/local-llms/local-llm-hardware-guide).',
         items: [
           '**يناسب:** المطورين الذين يريدون جهاز AMD مُعدًّا مسبقًا يعمل بويندوز أو لينكس؛ قارنه أولًا بـ[الدليل الشامل للفئة](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
-          '**يناسب:** من يريد جهاز AMD نفسها بذاكرة 128 GB؛ فقد وصفه كاتب HotHardware بأنه أرخص محطة عمل مدمجة للذكاء الاصطناعي بذاكرة 128 GB، بينما تعرض شركات أخرى أسعارًا مختلفة (راجع صفحتَي [GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation) و[HP Z2 Mini G1a](/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
+          '**يناسب:** من يريد جهاز AMD نفسها بذاكرة 128 GB؛ فقد وصفه كاتب HotHardware وقت تقريره في يونيو 2026 بأنه أرخص محطة عمل مدمجة للذكاء الاصطناعي بذاكرة 128 GB؛ ومنذ ذلك الحين أدرجت شركات أخرى أسعارًا أقل (راجع صفحتَي [GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation) و[HP Z2 Mini G1a](/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation)).',
           '**فكّر في نسخة 192 GB** فقط إذا كانت نماذجك تحتاج أكثر من 128 GB؛ فهي تكلّف نحو $3,300 أكثر من نسخة 128 GB.',
           '**تجاوزه إذا** كنت تحتاج أعلى إنتاجية في الخدمة أو CUDA؛ فقد قاست StorageReview تقدم DGX Spark في كل الاختبارات.',
           '**تجاوزه إذا** كنت تخطط لربط عدة أجهزة: تشير StorageReview إلى منفذ 10GbE واحد وغياب نسيج 200G.',
@@ -1691,7 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/ar/local-llms/nvidia-dgx-spark-local-ai-workstation): قيس أسرع من Halo في اختبار vLLM من StorageReview ويوفر نسيج 200G لربط الأجهزة، لكنه يحدّ الذاكرة عند 128 GB.',
           '[Framework Desktop](/ar/local-llms/framework-desktop-local-ai-workstation): عائلة Ryzen AI Max+ نفسها في هيكل معياري، مع خيار PRO 495 بذاكرة 192 GB بالطلب المسبق.',
-          '[GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation): جهاز Ryzen AI Max+ 395 من طرف ثالث يُبلَّغ عن سعره الأمريكي بشكل متضارب؛ راجع صفحته.',
+          '[GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation): جهاز Ryzen AI Max+ 395 من طرف ثالث، مدرج بسعر $3,499.99 (128 GB / 1 TB) في متجر GMKtec الأمريكي (بحسب الشركة المصنّعة)؛ راجع صفحته.',
           '[Minisforum MS-S1 MAX](/ar/local-llms/minisforum-ms-s1-max-local-ai-workstation): الشريحة 395 نفسها مع منفذَي 10GbE وفتحة PCIe داخلية (x4 كهربائيًا)، بحسب Minisforum والمراجعات.',
           '[محطات عمل الذكاء الاصطناعي المحلي: Strix Halo مقابل DGX Spark](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): المقارنة الشاملة للفئة مع جميع الأجهزة وأسعارها جنبًا إلى جنب.',
         ],
@@ -1739,10 +1755,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
-      'description': 'مواصفات AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: نسخة 128 GB بشريحة 395 ونسخة 192 GB بشريحة PRO 495، وأسعار أمريكية موثقة ونتائج المراجعات المستقلة.',
+      'headline': 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: السعر والمواصفات',
+      'description': 'سعر AMD Ryzen AI Halo: بحسب التقارير $3,999 لنسخة 128 GB بشريحة 395، و$7,299.99 لنسخة 192 GB بشريحة PRO 495، في Micro Center. المواصفات والمراجعات.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1754,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ar',
       'url': 'https://www.promptquorum.com/ar/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'AMD Ryzen AI Halo كمبيوتر مصغر للمطورين بسعر $3,999 (128 GB) أو $7,299.99 (192 GB) لتشغيل نماذج من فئة 100B محليًا، ويُباع في الولايات المتحدة عبر Micro Center. وجد اختبار vLLM من StorageReview أن NVIDIA DGX Spark أسرع في جميع سيناريوهات الخدمة الـ18.',
+      'articleBody': 'AMD Ryzen AI Halo كمبيوتر مصغر للمطورين لتشغيل نماذج من فئة 100B محليًا، ويُباع في الولايات المتحدة عبر Micro Center بأسعار تبلغ بحسب التقارير $3,999 (128 GB) و$7,299.99 (192 GB). وجد اختبار vLLM من StorageReview أن NVIDIA DGX Spark أسرع في جميع سيناريوهات الخدمة الـ18.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'المشترون الذين يوازنون بين AMD Ryzen AI Halo وNVIDIA DGX Spark ومحطات عمل الذكاء الاصطناعي المحلي الأخرى بذاكرة 128 GB أو أكبر' },
@@ -1763,7 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1774,12 +1790,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/amd-ryzen-ai-halo-local-ai-workstation-hero-ko.webp',
-    title: '로컬 AI용 AMD Ryzen AI Halo: 사양, 가격, 평가',
-    seoTitle: '로컬 AI용 AMD Ryzen AI Halo 사양·가격',
+    title: '로컬 AI용 AMD Ryzen AI Halo 가격과 사양',
+    seoTitle: 'AMD Ryzen AI Halo 가격·사양: 보도 $3,999~',
     intro:
       'AMD Ryzen AI Halo는 대규모 언어 모델을 로컬에서 실행하기 위해 AMD가 직접 내놓은 개발자용 미니 PC입니다. Ryzen AI Max+ 395를 탑재한 128GB 모델과 Ryzen AI Max+ PRO 495를 탑재한 192GB 모델, 두 가지 버전이 있습니다. 둘 다 미국에서는 Micro Center를 통해 판매됩니다. 이 페이지는 벤더 사양, 저희가 출처를 확인한 가격, 독립 리뷰어의 측정 결과를 모아 두었으므로, 구매 전에 사용 목적에 맞는지 판단하실 수 있습니다.',
     metaDescription:
-      '로컬 AI용 AMD Ryzen AI Halo 사양: Ryzen AI Max+ 395 128GB와 PRO 495 192GB 버전, 출처 표기 미국 가격, 독립 리뷰 결과.',
+      'AMD Ryzen AI Halo 가격: 보도된 미국 가격은 128GB $3,999, 192GB(PRO 495) $7,299.99, 모두 Micro Center 판매. 사양과 리뷰 결과.',
     twitterDescription:
       '로컬 LLM용 AMD Ryzen AI Halo: 128GB와 192GB 버전, 출처 표기 미국 가격, StorageReview, HotHardware, LTT Labs의 확인 결과.',
     readTime: '8분 읽기',
@@ -1794,15 +1810,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 ai 워크스테이션',
     ],
     leadAnswerBlock:
-      '**AMD Ryzen AI Halo는 Windows 또는 Linux에서 100B급 모델을 로컬로 실행하는 $3,999(128GB) 또는 $7,299.99(192GB)의 개발자용 미니 PC이며, 미국에서는 Micro Center를 통해 판매됩니다.** 결정적인 유의점은 StorageReview의 vLLM 테스트에서 NVIDIA DGX Spark가 서빙 시나리오 18개 모두에서 더 빨랐고, Halo에는 기기 연결용 고속 포트가 없다는 점입니다.',
+      '**AMD Ryzen AI Halo는 Windows 또는 Linux에서 100B급 모델을 로컬로 실행하는 개발자용 미니 PC이며, 보도된 가격은 128GB $3,999, 192GB $7,299.99로 미국에서는 Micro Center를 통해 판매됩니다.** 결정적인 유의점은 StorageReview의 vLLM 테스트에서 NVIDIA DGX Spark가 서빙 시나리오 18개 모두에서 더 빨랐고, StorageReview에 따르면 Halo에는 10GbE 포트가 하나뿐이고 기기 연결용 200G 패브릭이 없다는 점입니다.',
     quickAnswerTop: {
       ko: {
         question: 'AMD Ryzen AI Halo는 로컬 AI용으로 구매할 만합니까?',
         answer:
           'Windows 또는 Linux가 설치된 사전 구성형 AMD 기기에 128GB 또는 192GB 메모리를 원한다면 고려할 만합니다. 최대 서빙 처리량이나 클러스터링에는 덜 적합합니다. StorageReview가 모든 vLLM 테스트에서 DGX Spark가 앞선다고 측정했고, Halo에는 10GbE 포트가 하나뿐이기 때문입니다.',
         bullets: [
-          '128GB 버전: Ryzen AI Max+ 395, Micro Center $3,999',
-          '192GB 버전: Ryzen AI Max+ PRO 495, $7,299.99, 매장 판매만',
+          '128GB 버전: Ryzen AI Max+ 395, Micro Center 보도 $3,999',
+          '192GB 버전: Ryzen AI Max+ PRO 495, $7,299.99(보도), 매장 판매만',
           'Windows 11 Pro 또는 AMD Linux 개발자 이미지 실행(128GB 버전)',
           'StorageReview의 vLLM 서빙 테스트에서 DGX Spark보다 느림',
         ],
@@ -1812,8 +1828,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '핵심 내용', anchor: 'tldr' },
       { label: 'AMD Ryzen AI Halo란', anchor: 'overview' },
-      { label: '사양', anchor: 'specs' },
-      { label: '가격 및 구매 가능 여부', anchor: 'pricing' },
+      { label: 'AMD Ryzen AI Halo 사양', anchor: 'specs' },
+      { label: 'AMD Ryzen AI Halo 가격 및 구매 가능 여부', anchor: 'pricing' },
       { label: '독립 보고서가 보여 주는 것', anchor: 'evidence' },
       { label: '적합한 경우와 피해야 할 경우', anchor: 'fit' },
       { label: '같은 범주의 대안', anchor: 'alternatives' },
@@ -1848,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specs: {
         id: 'specs',
         itemHeadings: true,
-        title: '사양',
+        title: 'AMD Ryzen AI Halo 사양',
         columns: ['사양', '세부 내용'],
         rows: [
           { '사양': '프로세서(128GB 버전)', '세부 내용': 'Ryzen AI Max+ 395, 16코어 / 32스레드, Zen 5, 최대 5.1 GHz 부스트' },
@@ -1871,9 +1887,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pricing: {
         id: 'pricing',
         itemHeadings: true,
-        title: '가격 및 구매 가능 여부',
+        title: 'AMD Ryzen AI Halo 가격 및 구매 가능 여부',
         content:
-          '**128GB 버전은 $3,999, 192GB 버전은 $7,299.99이며, 둘 다 Micro Center의 미국 가격입니다.** DRAM 부족으로 이 범주의 가격이 거듭 변동했으므로, 주문 전에 리테일러 페이지를 확인하십시오.',
+          '**보도에 따르면 128GB 버전은 $3,999, 192GB 버전은 $7,299.99이며, 둘 다 Micro Center의 미국 가격입니다.** DRAM 부족으로 이 범주의 가격이 거듭 변동했으므로, 주문 전에 리테일러 페이지를 확인하십시오.',
         columns: ['구성', '미국 가격', '출처 및 날짜', '상태'],
         rows: [
           { '구성': '128GB, Ryzen AI Max+ 395, 2TB, Windows 11 Pro 또는 Linux', '미국 가격': '$3,999.99(헤드라인 $3,999)', '출처 및 날짜': 'HotHardware, 2026-06-13', '상태': '매장 수령 사전 주문, HotHardware에 따르면 2026-07-10까지 준비' },
@@ -1885,9 +1901,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'evidence',
         title: '독립 보고서가 보여 주는 것',
         content: [
-          '**수치가 공개된 유일한 직접 비교는 StorageReview의 Halo 대 DGX Spark 테스트이며, 여기서 Spark는 vLLM 서빙 시나리오 18개를 모두 이겼습니다.** StorageReview는 Linux에서 배치 64로 여섯 개 모델에 대해 vLLM 온라인 서빙을 실행했습니다. Spark는 16개 시나리오에서 약 1.9배~13.4배 앞섰고, 디코드 중심의 두 실행(Mistral Small 3.1 24B와 Llama 3.1 8B)에서는 약 11~12% 앞섰습니다. 가장 큰 격차인 13.4배는 Llama 3.1 8B FP4 실행에서 나왔습니다. 그럼에도 StorageReview의 결론은 Windows 사용자, ROCm 개발자, 단일 기기 구성에는 Halo를 선호합니다.',
+          '**저희가 찾은 수치 공개 직접 비교 중 가장 상세한 것은 StorageReview의 Halo 대 DGX Spark 테스트이며, 여기서 Spark는 vLLM 서빙 시나리오 18개를 모두 이겼습니다.** StorageReview는 Linux에서 배치 64로 여섯 개 모델에 대해 vLLM 온라인 서빙을 실행했습니다. Spark는 16개 시나리오에서 약 1.9배~13.4배 앞섰고, 디코드 중심의 두 실행(Mistral Small 3.1 24B와 Llama 3.1 8B)에서는 약 11~12% 앞섰습니다. 가장 큰 격차인 13.4배는 Llama 3.1 8B FP4 실행에서 나왔습니다. 그럼에도 StorageReview의 결론은 Windows 사용자, ROCm 개발자, 단일 기기 구성에는 Halo를 선호합니다.',
           '다른 리뷰어들은 더 근접한 결과를 보고합니다. **HotHardware는 Halo가 여러 모델에서 DGX Spark와 대체로 비슷하며 절대적으로 가장 빠르지는 않다고 평가했고, Recommended 상을 수여했습니다.** 90분 실행 중 후면 통풍구에서 12인치 떨어진 지점에서 45 dBA, 유휴 소비 전력 약 33~35W, 부하 시 135~145W를 측정했습니다. 이 결과들은 서로 다른 테스트 환경에서 나온 것이므로 저희는 이를 조정할 수 없습니다.',
-          'CPU와 메모리의 경우, StorageReview의 Linux Phoronix 실행에서 Halo는 7-Zip 압축 해제(+38%)와 LLVM 컴파일(약 14% 빠름)에서 앞섰고, Spark는 STREAM 메모리 테스트 네 개 중 세 개에서 이겼습니다. Gigazine이 요약한 LTT Labs는 Halo가 다른 Ryzen AI Max+ 395 기기와 비교해 성능 면에서 새로운 점이 없으며, 소프트웨어 환경(AMD가 검증한 드라이버 세트와 단계별 AI 플레이북, 일부는 미해결 버그 있음)이 주된 차별점이라고 밝혔습니다. 같은 요약에서 약 800 GB/s 메모리를 갖춘 Mac Studio는 Gemma 4 31B에서 Halo보다 대략 2~3배 빠르게 토큰을 생성했고, NPU에서 gpt-oss-20b는 최대 35W 패키지 전력에서 초당 약 20토큰으로 실행되었습니다.',
+          'CPU와 메모리의 경우, StorageReview의 Linux Phoronix 실행에서 Halo는 7-Zip 압축 해제(+38%)와 LLVM 컴파일(약 14% 빠름)에서 앞섰고, Spark는 STREAM 메모리 테스트 네 개 중 세 개에서 이겼습니다. Gigazine이 요약한 LTT Labs는 Halo가 다른 Ryzen AI Max+ 395 기기와 비교해 성능 면에서 새로운 점이 없으며, 소프트웨어 환경(AMD가 검증한 드라이버 세트와 단계별 AI 플레이북, 일부는 보도에 따르면 미해결 버그 있음)이 주된 차별점이라고 밝혔습니다. 같은 요약에서 약 800 GB/s 메모리를 갖춘 Mac Studio는 Gemma 4 31B에서 Halo보다 대략 2~3배 빠르게 토큰을 생성했고, NPU에서 gpt-oss-20b는 최대 35W 패키지 전력에서 초당 약 20토큰으로 실행되었습니다.',
           '192GB PRO 495 버전에 대한 독립 테스트는 찾지 못했습니다. HotHardware의 앞선 리뷰는 이 버전이 출시일 없이 발표되었다고 언급했습니다.',
         ],
         note: '벤치마크는 특정 소프트웨어 버전에서의 제3자 결과이며 업데이트에 따라 달라질 수 있습니다. 링크: StorageReview, HotHardware, Gigazine은 출처 항목에 있습니다. LTT Labs의 자체 페이지는 열 수 없었습니다(HTTP 403).',
@@ -1895,9 +1911,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fit: {
         id: 'fit',
         title: '적합한 경우와 피해야 할 경우',
+        content:
+          '**Ryzen AI Halo는 128GB 또는 192GB 메모리의 사전 구성된 AMD 장비를 원하고 Windows 또는 Linux를 선택하려는 개발자에게 적합합니다(Windows는 128GB 모델).** 최고 서빙 처리량, CUDA, 여러 대를 연결할 고속 포트가 필요한 분에게는 덜 적합합니다. 메모리 구간별로 GPU, Mac, 다른 미니 PC와 비교하려면 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참고하세요.',
         items: [
           '**적합:** Windows 또는 Linux가 설치된 사전 구성형 AMD 기기를 원하는 개발자. 먼저 [범주 가이드](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)와 비교하십시오.',
-          '**적합:** AMD 자체 128GB 기기를 원하는 구매자. HotHardware의 필자는 가장 저렴한 128GB 소형 AI 워크스테이션이라고 평가했지만, 다른 벤더는 다른 가격을 제시합니다([GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation) 및 [HP Z2 Mini G1a](/ko/local-llms/hp-z2-mini-g1a-local-ai-workstation) 페이지 참조).',
+          '**적합:** AMD 자체 128GB 기기를 원하는 구매자. HotHardware의 필자는 2026년 6월 보도 시점에 가장 저렴한 128GB 소형 AI 워크스테이션이라고 평가했지만, 이후 다른 벤더가 더 낮은 가격을 제시하고 있습니다([GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation) 및 [HP Z2 Mini G1a](/ko/local-llms/hp-z2-mini-g1a-local-ai-workstation) 페이지 참조).',
           '**192GB 버전은** 모델이 128GB 이상을 필요로 할 때만 고려하십시오. 128GB 버전보다 약 $3,300 더 비쌉니다.',
           '**피해야 할 경우:** 최고의 서빙 처리량이나 CUDA가 필요한 경우. StorageReview는 DGX Spark가 전반적으로 앞선다고 측정했습니다.',
           '**피해야 할 경우:** 여러 기기를 클러스터링할 계획인 경우. StorageReview는 10GbE 포트가 하나뿐이고 200G 패브릭이 없다고 언급합니다.',
@@ -1910,7 +1928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DGX Spark](/ko/local-llms/nvidia-dgx-spark-local-ai-workstation): StorageReview의 vLLM 테스트에서 Halo보다 빠른 것으로 측정되었고 기기 연결용 200G 패브릭을 제공하지만, 메모리는 128GB가 상한입니다.',
           '[Framework Desktop](/ko/local-llms/framework-desktop-local-ai-workstation): 모듈식 케이스에 같은 Ryzen AI Max+ 계열을 탑재했으며, 192GB PRO 495 옵션을 사전 주문으로 제공합니다.',
-          '[GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation): 미국 가격이 일관되지 않게 보도되는 서드파티 Ryzen AI Max+ 395 기기이며, 해당 페이지를 참고하십시오.',
+          '[GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation): 서드파티 Ryzen AI Max+ 395 기기로, GMKtec 미국 스토어에서 128GB/1TB 모델이 $3,499.99로 표시되어 있습니다(제조사 표기). 해당 페이지를 참고하십시오.',
           '[Minisforum MS-S1 MAX](/ko/local-llms/minisforum-ms-s1-max-local-ai-workstation): Minisforum과 리뷰에 따르면 같은 395 칩에 듀얼 10GbE와 내부 PCIe 슬롯(전기적으로 x4)을 갖추었습니다.',
           '[로컬 AI 워크스테이션: Strix Halo 대 DGX Spark](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark): 모든 기기와 가격을 나란히 비교한 범주 비교 글입니다.',
         ],
@@ -1958,10 +1976,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '로컬 AI용 AMD Ryzen AI Halo: 사양, 가격, 평가',
-      'description': '로컬 AI용 AMD Ryzen AI Halo 사양: Ryzen AI Max+ 395 128GB와 PRO 495 192GB 버전, 출처 표기 미국 가격, 독립 리뷰 결과.',
+      'headline': '로컬 AI용 AMD Ryzen AI Halo 가격과 사양',
+      'description': 'AMD Ryzen AI Halo 가격: 보도된 미국 가격은 128GB $3,999, 192GB(PRO 495) $7,299.99, 모두 Micro Center 판매. 사양과 리뷰 결과.',
       'datePublished': '2026-10-31',
-      'dateModified': '2026-10-31',
+      'dateModified': '2026-11-14',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1973,7 +1991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'ko',
       'url': 'https://www.promptquorum.com/ko/local-llms/amd-ryzen-ai-halo-local-ai-workstation',
-      'articleBody': 'AMD Ryzen AI Halo는 미국에서 Micro Center를 통해 판매되는, 100B급 모델을 로컬로 실행하기 위한 $3,999(128GB) 또는 $7,299.99(192GB)의 개발자용 미니 PC입니다. StorageReview의 vLLM 테스트에서 NVIDIA DGX Spark가 서빙 시나리오 18개 모두에서 더 빨랐습니다.',
+      'articleBody': 'AMD Ryzen AI Halo는 미국에서 Micro Center를 통해 판매되는, 100B급 모델을 로컬로 실행하기 위한 개발자용 미니 PC이며, 보도된 가격은 $3,999(128GB), $7,299.99(192GB)입니다. StorageReview의 vLLM 테스트에서 NVIDIA DGX Spark가 서빙 시나리오 18개 모두에서 더 빨랐습니다.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
       'audience': { '@type': 'Audience', 'audienceType': 'AMD Ryzen AI Halo를 NVIDIA DGX Spark 및 다른 128GB 이상 로컬 AI 워크스테이션과 비교하는 구매자' },
