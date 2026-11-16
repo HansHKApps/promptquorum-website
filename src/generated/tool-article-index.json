@@ -12584,6 +12584,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "stirling-pdf-review",
+        "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
+        "url": "/power-local-llm/stirling-pdf-review",
+        "dateModified": "2026-11-16",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "how-to-install-ollama",
         "title": "Download & Install Ollama on macOS, Windows & Linux",
@@ -12646,17 +12654,9 @@
         "url": "/power-local-llm/risuai-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stable-diffusion-forge-review",
-        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
-        "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 259,
+    "totalCount": 260,
     "capped": true
   },
   "Qdrant": {
