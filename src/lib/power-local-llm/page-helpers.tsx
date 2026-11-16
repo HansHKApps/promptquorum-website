@@ -949,6 +949,9 @@ const HUB_THEMES: Array<{
       'return-editor-review',
       'surfsense-review',
       'openrag-review',
+      'marker-review',
+      'docling-review',
+      'opendataloader-pdf-review',
     ],
   },
   {
