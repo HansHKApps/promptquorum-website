@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'OpenDataLoader PDF Review: Open-Source PDF Parser for RAG',
     seoTitle: 'OpenDataLoader PDF Review: Open-Source PDF Parser',
     intro: 'OpenDataLoader PDF is an open-source parser that turns PDF files into structured data for RAG and LLM pipelines, and it can also auto-tag PDFs for accessibility. It is a library and command-line tool, not a desktop app and not a hosted service. This review is based on [opendataloader.org](https://opendataloader.org), the [GitHub repository](https://github.com/opendataloader-project/opendataloader-pdf) and PyPI, checked on 15 November 2026; PromptQuorum has not installed or run it.',
-    metaDescription: 'OpenDataLoader PDF review: Apache 2.0 PDF parser for RAG with JSON, Markdown and bounding boxes. Needs Java 11+, runs locally. Benchmarks are the vendor\'s.',
+    metaDescription: 'OpenDataLoader PDF review: Apache 2.0 PDF parser for RAG. Needs Java 11+; default mode runs locally per the README. Benchmarks are the vendor\'s.',
     twitterDescription: 'OpenDataLoader PDF review: an open-source PDF parser for RAG. What runs locally, what hybrid mode changes, what needs Java, and what the sources leave open.',
     audience: 'Developers who build RAG or LLM pipelines over PDFs and want to know what OpenDataLoader PDF outputs, what it needs to run, how local it really is and which claims are the vendor\'s own.',
     readTime: '7 min read',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is OpenDataLoader PDF?',
         content: [
           '**OpenDataLoader PDF turns PDFs into AI-ready data: Markdown for chunking, JSON with bounding boxes for source citations, HTML, or an annotated PDF.** It reads headings, tables, lists and reading order, and the JSON keeps heading levels, fonts and the position of each element. It ships as a library with Python, Node.js and Java SDKs and a command-line tool.',
-          'The maker is the GitHub organisation opendataloader-project, and the site footer reads "© 2026 OpenDataLoader". The homepage says the accessibility work was developed with Hancom and Dual Lab, the veraPDF developers; it does not say that Hancom makes the parser. The sources do not name which legal entity maintains the project. A separate enterprise product, Hancom Data Loader, is listed as "Coming Soon" and is not part of the open-source core.',
+          'The maker is the GitHub organisation opendataloader-project, and the site footer reads "© 2026 OpenDataLoader". The homepage says the accessibility work was developed with Hancom and with Dual Lab, which the homepage describes as a veraPDF developer; it does not say that Hancom makes the parser. The sources do not name which legal entity maintains the project. A separate enterprise product, Hancom Data Loader, is listed as "Coming Soon" and is not part of the open-source core.',
         ],
       },
       getIt: {
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'OpenDataLoader-PDF-Rezension: quelloffener PDF-Parser für RAG',
     seoTitle: 'OpenDataLoader-PDF-Rezension: Quelloffener PDF-Parser',
     intro: 'OpenDataLoader PDF ist ein quelloffener Parser, der PDF-Dateien in strukturierte Daten für RAG- und LLM-Pipelines umwandelt und PDFs außerdem automatisch für die Barrierefreiheit auszeichnen kann. Es ist eine Bibliothek und ein Kommandozeilenwerkzeug, keine Desktop-App und kein gehosteter Dienst. Diese Rezension stützt sich auf [opendataloader.org](https://opendataloader.org), das [GitHub-Repository](https://github.com/opendataloader-project/opendataloader-pdf) und PyPI, geprüft am 15. November 2026; PromptQuorum hat das Tool weder installiert noch ausgeführt.',
-    metaDescription: 'OpenDataLoader-PDF-Rezension: PDF-Parser (Apache 2.0) für RAG mit JSON, Markdown, Bounding-Boxen. Braucht Java 11+, läuft lokal. Benchmarks vom Hersteller.',
+    metaDescription: 'OpenDataLoader-PDF-Rezension: PDF-Parser (Apache 2.0) für RAG. Braucht Java 11+; Standardmodus laut README lokal. Benchmarks vom Hersteller.',
     twitterDescription: 'OpenDataLoader-PDF-Rezension: ein quelloffener PDF-Parser für RAG. Was lokal läuft, was der Hybridmodus ändert, was Java braucht und was die Quellen offenlassen.',
     audience: 'Entwickler, die RAG- oder LLM-Pipelines über PDFs bauen und wissen möchten, was OpenDataLoader PDF ausgibt, was es zum Laufen braucht, wie lokal es tatsächlich ist und welche Aussagen vom Hersteller selbst stammen.',
     readTime: '7 Min. Lesezeit',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist OpenDataLoader PDF?',
         content: [
           '**OpenDataLoader PDF wandelt PDFs in KI-taugliche Daten um: Markdown zum Aufteilen in Chunks, JSON mit Bounding-Boxen für Quellenangaben, HTML oder eine annotierte PDF.** Es liest Überschriften, Tabellen, Listen und Lesereihenfolge, und das JSON enthält Überschriftenebenen, Schriftarten und die Position jedes Elements. Es wird als Bibliothek mit Python-, Node.js- und Java-SDKs sowie als Kommandozeilenwerkzeug ausgeliefert.',
-          'Hersteller ist die GitHub-Organisation opendataloader-project, und die Fußzeile der Website lautet „© 2026 OpenDataLoader“. Laut Startseite wurde die Barrierefreiheitsfunktion gemeinsam mit Hancom und Dual Lab, den Entwicklern von veraPDF, entwickelt; dass Hancom den Parser herstellt, steht dort nicht. Die Quellen nennen nicht, welche juristische Person das Projekt betreibt. Ein separates Enterprise-Produkt, Hancom Data Loader, ist als „Coming Soon“ aufgeführt und nicht Teil des quelloffenen Kerns.',
+          'Hersteller ist die GitHub-Organisation opendataloader-project, und die Fußzeile der Website lautet „© 2026 OpenDataLoader“. Laut Startseite wurde die Barrierefreiheitsfunktion gemeinsam mit Hancom und mit Dual Lab entwickelt, das die Startseite als Entwickler von veraPDF bezeichnet; dass Hancom den Parser herstellt, steht dort nicht. Die Quellen nennen nicht, welche juristische Person das Projekt betreibt. Ein separates Enterprise-Produkt, Hancom Data Loader, ist als „Coming Soon“ aufgeführt und nicht Teil des quelloffenen Kerns.',
         ],
       },
       getIt: {
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test d’OpenDataLoader PDF : parseur PDF open source pour RAG',
     seoTitle: 'Test d’OpenDataLoader PDF : parseur PDF open source',
     intro: 'OpenDataLoader PDF est un parseur open source qui transforme des fichiers PDF en données structurées pour les pipelines RAG et LLM, et qui peut aussi baliser automatiquement les PDF pour l’accessibilité. C’est une bibliothèque et un outil en ligne de commande, pas une application de bureau ni un service hébergé. Ce test s’appuie sur [opendataloader.org](https://opendataloader.org), le [dépôt GitHub](https://github.com/opendataloader-project/opendataloader-pdf) et PyPI, consultés le 15 novembre 2026 ; PromptQuorum ne l’a ni installé ni exécuté.',
-    metaDescription: 'Test d’OpenDataLoader PDF : parseur Apache 2.0 pour RAG, JSON, Markdown et zones englobantes. Java 11+ requis, exécution locale. Benchmarks de l’éditeur.',
+    metaDescription: 'Test d’OpenDataLoader PDF : parseur Apache 2.0 pour RAG, sortie JSON. Java 11+ requis ; mode par défaut local selon le README. Benchmarks de l’éditeur.',
     twitterDescription: 'Test d’OpenDataLoader PDF : un parseur PDF open source pour RAG. Ce qui tourne en local, ce que change le mode hybride, ce qui exige Java et ce que les sources laissent ouvert.',
     audience: 'Développeurs qui construisent des pipelines RAG ou LLM sur des PDF et veulent savoir ce que produit OpenDataLoader PDF, ce qu’il faut pour l’exécuter, à quel point il est réellement local et quelles affirmations viennent de l’éditeur lui-même.',
     readTime: '7 min de lecture',
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qu’est-ce qu’OpenDataLoader PDF ?',
         content: [
           '**OpenDataLoader PDF transforme des PDF en données prêtes pour l’IA : du Markdown pour le découpage en segments, du JSON avec zones englobantes pour citer les sources, du HTML ou un PDF annoté.** Il lit les titres, les tableaux, les listes et l’ordre de lecture, et le JSON conserve les niveaux de titre, les polices et la position de chaque élément. Il est livré sous forme de bibliothèque avec des SDK Python, Node.js et Java, et d’outil en ligne de commande.',
-          'L’éditeur est l’organisation GitHub opendataloader-project, et le pied de page du site indique « © 2026 OpenDataLoader ». La page d’accueil précise que le travail sur l’accessibilité a été mené avec Hancom et Dual Lab, les développeurs de veraPDF ; elle ne dit pas que Hancom édite le parseur. Les sources ne nomment pas l’entité juridique qui maintient le projet. Un produit entreprise distinct, Hancom Data Loader, est annoncé comme « Coming Soon » et ne fait pas partie du noyau open source.',
+          'L’éditeur est l’organisation GitHub opendataloader-project, et le pied de page du site indique « © 2026 OpenDataLoader ». La page d’accueil précise que le travail sur l’accessibilité a été mené avec Hancom et avec Dual Lab, que la page décrit comme un développeur de veraPDF ; elle ne dit pas que Hancom édite le parseur. Les sources ne nomment pas l’entité juridique qui maintient le projet. Un produit entreprise distinct, Hancom Data Loader, est annoncé comme « Coming Soon » et ne fait pas partie du noyau open source.',
         ],
       },
       getIt: {
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'OpenDataLoader PDFレビュー：RAG向けオープンソースPDFパーサー',
     seoTitle: 'OpenDataLoader PDFレビュー：PDFパーサー',
     intro: 'OpenDataLoader PDFは、PDFファイルをRAGやLLMパイプライン向けの構造化データに変換するオープンソースのパーサーで、アクセシビリティ向けのPDF自動タグ付けにも対応しています。ライブラリとコマンドラインツールであり、デスクトップアプリでもホスト型サービスでもありません。本レビューは[opendataloader.org](https://opendataloader.org)、[GitHubリポジトリ](https://github.com/opendataloader-project/opendataloader-pdf)、PyPIを2026年11月15日に確認した内容に基づいています。PromptQuorumはインストールも実行もしていません。',
-    metaDescription: 'OpenDataLoader PDFのレビュー。JSON、Markdown、バウンディングボックスを出力するApache 2.0のPDFパーサー。Java 11以上が必要でローカル動作。ベンチマークは提供元の数値。',
+    metaDescription: 'OpenDataLoader PDFのレビュー。JSON、Markdownを出力するApache 2.0のPDFパーサー。Java 11以上が必要。READMEではデフォルトモードはローカル動作。ベンチマークは提供元の数値。',
     twitterDescription: 'OpenDataLoader PDFレビュー：RAG向けのオープンソースPDFパーサー。ローカルで動く部分、ハイブリッドモードで変わる点、Javaが必要な理由、情報源が確認していない点。',
     audience: 'PDFを対象にRAGやLLMのパイプラインを構築していて、OpenDataLoader PDFの出力内容、動作に必要なもの、実際どこまでローカルなのか、どの主張が提供元自身のものなのかを知りたい開発者。',
     readTime: '7分で読める',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'OpenDataLoader PDFとは',
         content: [
           '**OpenDataLoader PDFは、PDFをAI向けのデータに変換します。チャンク分割用のMarkdown、出典表示用のバウンディングボックス付きJSON、HTML、または注釈付きPDFです。** 見出し、表、リスト、読み取り順序を認識し、JSONには見出しレベル、フォント、各要素の位置が保持されます。Python、Node.js、JavaのSDKとコマンドラインツールを備えたライブラリとして提供されています。',
-          '開発元はGitHub組織のopendataloader-projectで、サイトのフッターには「© 2026 OpenDataLoader」とあります。ホームページによると、アクセシビリティ関連の作業はveraPDFの開発者であるHancomとDual Labとともに進められたものですが、Hancomがパーサーを作っているとは書かれていません。どの法人がプロジェクトを保守しているかは、情報源に記載がありません。別のエンタープライズ製品Hancom Data Loaderは「Coming Soon」と表示されており、オープンソースの中核には含まれません。',
+          '開発元はGitHub組織のopendataloader-projectで、サイトのフッターには「© 2026 OpenDataLoader」とあります。ホームページによると、アクセシビリティ関連の作業はHancomおよびDual Labとともに進められたもの（ホームページはDual LabをveraPDFの開発者の一つと説明しています）ですが、Hancomがパーサーを作っているとは書かれていません。どの法人がプロジェクトを保守しているかは、情報源に記載がありません。別のエンタープライズ製品Hancom Data Loaderは「Coming Soon」と表示されており、オープンソースの中核には含まれません。',
         ],
       },
       getIt: {
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'OpenDataLoader PDF 评测：面向 RAG 的开源 PDF 解析器',
     seoTitle: 'OpenDataLoader PDF 评测：PDF 解析器',
     intro: 'OpenDataLoader PDF 是一个开源解析器，可把 PDF 文件转换为供 RAG 和 LLM 管道使用的结构化数据，还能为 PDF 自动添加无障碍标签。它是一个库和命令行工具，不是桌面应用，也不是托管服务。本评测依据 [opendataloader.org](https://opendataloader.org)、[GitHub 仓库](https://github.com/opendataloader-project/opendataloader-pdf)和 PyPI，核查日期为 2026 年 11 月 15 日；PromptQuorum 没有安装或运行过它。',
-    metaDescription: 'OpenDataLoader PDF 评测：Apache 2.0 开源 PDF 解析器，输出 JSON、Markdown 和边界框，需要 Java 11 及以上，本地运行。基准测试数据来自开发方。',
+    metaDescription: 'OpenDataLoader PDF 评测：Apache 2.0 开源 PDF 解析器，输出 JSON 和 Markdown。需要 Java 11 及以上；据 README，默认模式本地运行。基准测试数据来自开发方。',
     twitterDescription: 'OpenDataLoader PDF 评测：面向 RAG 的开源 PDF 解析器。哪些部分在本地运行，混合模式带来什么变化，为何需要 Java，资料又留下了哪些未知。',
     audience: '为 PDF 构建 RAG 或 LLM 管道，并想了解 OpenDataLoader PDF 输出什么、运行需要什么、实际有多少环节在本地完成，以及哪些说法出自开发方自己的开发者。',
     readTime: '阅读约7分钟',
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'OpenDataLoader PDF 是什么？',
         content: [
           '**OpenDataLoader PDF 把 PDF 转换为面向 AI 的数据：用于分块的 Markdown、用于标注来源的带边界框 JSON、HTML，或带注释的 PDF。** 它能识别标题、表格、列表和阅读顺序，JSON 中保留标题层级、字体以及每个元素的位置。它以库的形式提供，带有 Python、Node.js 和 Java SDK 以及一个命令行工具。',
-          '开发方是 GitHub 组织 opendataloader-project，网站页脚写着“© 2026 OpenDataLoader”。主页称无障碍方面的工作是与 veraPDF 的开发者 Hancom 和 Dual Lab 一起完成的；它并没有说解析器由 Hancom 制作。资料没有说明由哪个法律实体维护该项目。另一款企业产品 Hancom Data Loader 标注为“Coming Soon”，不属于开源核心。',
+          '开发方是 GitHub 组织 opendataloader-project，网站页脚写着“© 2026 OpenDataLoader”。主页称无障碍方面的工作是与 Hancom 以及 Dual Lab（主页称其为 veraPDF 的开发者之一）一起完成的；它并没有说解析器由 Hancom 制作。资料没有说明由哪个法律实体维护该项目。另一款企业产品 Hancom Data Loader 标注为“Coming Soon”，不属于开源核心。',
         ],
       },
       getIt: {
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de OpenDataLoader PDF: parser de PDF de código abierto para RAG',
     seoTitle: 'Reseña de OpenDataLoader PDF: parser de PDF abierto',
     intro: 'OpenDataLoader PDF es un parser de código abierto que convierte archivos PDF en datos estructurados para pipelines de RAG y de LLM, y que también puede etiquetar PDF de forma automática para la accesibilidad. Es una biblioteca y una herramienta de línea de comandos, no una app de escritorio ni un servicio alojado. Esta reseña se basa en [opendataloader.org](https://opendataloader.org), el [repositorio de GitHub](https://github.com/opendataloader-project/opendataloader-pdf) y PyPI, consultados el 15 de noviembre de 2026; PromptQuorum no lo ha instalado ni ejecutado.',
-    metaDescription: 'Reseña de OpenDataLoader PDF: parser Apache 2.0 para RAG con JSON, Markdown y HTML. Requiere Java 11+ y funciona en local. Benchmarks del fabricante.',
+    metaDescription: 'Reseña de OpenDataLoader PDF: parser Apache 2.0 para RAG. Requiere Java 11+; según el README, el modo predeterminado es local. Benchmarks del fabricante.',
     twitterDescription: 'Reseña de OpenDataLoader PDF: un parser de PDF de código abierto para RAG. Qué se ejecuta en local, qué cambia el modo híbrido, qué requiere Java y qué dejan abierto las fuentes.',
     audience: 'Desarrolladores que crean pipelines de RAG o de LLM sobre PDF y quieren saber qué genera OpenDataLoader PDF, qué necesita para funcionar, cuán local es en realidad y qué afirmaciones son del propio fabricante.',
     readTime: '7 min de lectura',
@@ -1844,7 +1844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es OpenDataLoader PDF?',
         content: [
           '**OpenDataLoader PDF convierte PDF en datos listos para la IA: Markdown para dividir en fragmentos, JSON con cuadros delimitadores para citar fuentes, HTML o un PDF anotado.** Lee encabezados, tablas, listas y orden de lectura, y el JSON conserva los niveles de encabezado, las fuentes tipográficas y la posición de cada elemento. Se distribuye como biblioteca con SDK para Python, Node.js y Java y como herramienta de línea de comandos.',
-          'El fabricante es la organización de GitHub opendataloader-project, y el pie del sitio dice "© 2026 OpenDataLoader". La página de inicio afirma que el trabajo de accesibilidad se desarrolló con Hancom y Dual Lab, los desarrolladores de veraPDF; no dice que Hancom fabrique el parser. Las fuentes no indican qué entidad jurídica mantiene el proyecto. Un producto empresarial aparte, Hancom Data Loader, figura como "Coming Soon" y no forma parte del núcleo de código abierto.',
+          'El fabricante es la organización de GitHub opendataloader-project, y el pie del sitio dice "© 2026 OpenDataLoader". La página de inicio afirma que el trabajo de accesibilidad se desarrolló con Hancom y con Dual Lab, que la página describe como desarrolladora de veraPDF; no dice que Hancom fabrique el parser. Las fuentes no indican qué entidad jurídica mantiene el proyecto. Un producto empresarial aparte, Hancom Data Loader, figura como "Coming Soon" y no forma parte del núcleo de código abierto.',
         ],
       },
       getIt: {
@@ -2118,7 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do OpenDataLoader PDF: parser de PDF de código aberto para RAG',
     seoTitle: 'Análise do OpenDataLoader PDF: parser de PDF aberto',
     intro: 'O OpenDataLoader PDF é um parser de código aberto que transforma arquivos PDF em dados estruturados para pipelines de RAG e de LLM, e que também pode etiquetar PDFs automaticamente para acessibilidade. É uma biblioteca e uma ferramenta de linha de comando, não um aplicativo de desktop nem um serviço hospedado. Esta análise se baseia no [opendataloader.org](https://opendataloader.org), no [repositório do GitHub](https://github.com/opendataloader-project/opendataloader-pdf) e no PyPI, consultados em 15 de novembro de 2026; o PromptQuorum não o instalou nem o executou.',
-    metaDescription: 'Análise do OpenDataLoader PDF: parser Apache 2.0 para RAG com JSON, Markdown e caixas delimitadoras. Exige Java 11+ e roda local. Benchmarks do fabricante.',
+    metaDescription: 'Análise do OpenDataLoader PDF: parser Apache 2.0 para RAG com JSON. Exige Java 11+; segundo o README, o modo padrão é local. Benchmarks do fabricante.',
     twitterDescription: 'Análise do OpenDataLoader PDF: um parser de PDF de código aberto para RAG. O que roda localmente, o que o modo híbrido muda, o que exige Java e o que as fontes deixam em aberto.',
     audience: 'Desenvolvedores que criam pipelines de RAG ou de LLM sobre PDFs e querem saber o que o OpenDataLoader PDF gera, o que ele precisa para rodar, o quanto ele é realmente local e quais afirmações são do próprio fabricante.',
     readTime: '7 min de leitura',
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o OpenDataLoader PDF?',
         content: [
           '**O OpenDataLoader PDF transforma PDFs em dados prontos para IA: Markdown para dividir em trechos, JSON com caixas delimitadoras para citar fontes, HTML ou um PDF anotado.** Ele lê títulos, tabelas, listas e ordem de leitura, e o JSON mantém os níveis de título, as fontes tipográficas e a posição de cada elemento. É distribuído como biblioteca, com SDKs para Python, Node.js e Java, e como ferramenta de linha de comando.',
-          'O fabricante é a organização do GitHub opendataloader-project, e o rodapé do site diz "© 2026 OpenDataLoader". A página inicial diz que o trabalho de acessibilidade foi desenvolvido com a Hancom e a Dual Lab, as desenvolvedoras do veraPDF; ela não diz que a Hancom fabrica o parser. As fontes não informam qual entidade jurídica mantém o projeto. Um produto empresarial separado, o Hancom Data Loader, aparece como "Coming Soon" e não faz parte do núcleo de código aberto.',
+          'O fabricante é a organização do GitHub opendataloader-project, e o rodapé do site diz "© 2026 OpenDataLoader". A página inicial diz que o trabalho de acessibilidade foi desenvolvido com a Hancom e com a Dual Lab, que a página descreve como desenvolvedora do veraPDF; ela não diz que a Hancom fabrica o parser. As fontes não informam qual entidade jurídica mantém o projeto. Um produto empresarial separado, o Hancom Data Loader, aparece como "Coming Soon" e não faz parte do núcleo de código aberto.',
         ],
       },
       getIt: {
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة OpenDataLoader PDF: محلّل PDF مفتوح المصدر لـ RAG',
     seoTitle: 'مراجعة OpenDataLoader PDF: محلّل PDF مفتوح المصدر',
     intro: 'OpenDataLoader PDF محلّل مفتوح المصدر يحوّل ملفات PDF إلى بيانات منظمة لخطوط RAG وLLM، ويستطيع أيضًا وسم ملفات PDF تلقائيًا لإمكانية الوصول. وهو مكتبة وأداة سطر أوامر، وليس تطبيق سطح مكتب ولا خدمة مستضافة. تستند هذه المراجعة إلى [opendataloader.org](https://opendataloader.org) و[مستودع GitHub](https://github.com/opendataloader-project/opendataloader-pdf) وPyPI، وقد روجعت في 15 نوفمبر 2026؛ ولم تثبّت PromptQuorum البرنامج ولم تشغّله.',
-    metaDescription: 'مراجعة OpenDataLoader PDF: محلّل PDF بترخيص Apache 2.0 لـ RAG بمخرجات JSON وMarkdown ومربعات إحاطة. يحتاج Java 11+ ويعمل محليًا. القياسات من المطوّر.',
+    metaDescription: 'مراجعة OpenDataLoader PDF: محلّل PDF بترخيص Apache 2.0 لـ RAG. يحتاج Java 11+؛ وفق README يعمل الوضع الافتراضي محليًا. القياسات من المطوّر.',
     twitterDescription: 'مراجعة OpenDataLoader PDF: محلّل PDF مفتوح المصدر لـ RAG. ما يعمل محليًا، وما يغيّره الوضع الهجين، وما يحتاج إلى Java، وما تتركه المصادر مفتوحًا.',
     audience: 'مطورون يبنون خطوط RAG أو LLM فوق ملفات PDF ويريدون معرفة ما يخرجه OpenDataLoader PDF، وما يحتاجه للعمل، ومدى محليته فعلًا، وأي الادعاءات من المشروع نفسه.',
     readTime: '7 دقائق للقراءة',
@@ -2594,7 +2594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو OpenDataLoader PDF؟',
         content: [
           '**يحوّل OpenDataLoader PDF ملفات PDF إلى بيانات جاهزة للذكاء الاصطناعي: Markdown للتقسيم، وJSON مع مربعات إحاطة للاستشهاد بالمصادر، وHTML، أو ملف PDF موضَّح بتعليقات.** يقرأ العناوين والجداول والقوائم وترتيب القراءة، ويحتفظ JSON بمستويات العناوين والخطوط وموضع كل عنصر. ويأتي كمكتبة مع حزم SDK لـ Python وNode.js وJava وأداة سطر أوامر.',
-          'الجهة المطوِّرة هي منظمة GitHub باسم opendataloader-project، ويرد في تذييل الموقع "© 2026 OpenDataLoader". وتقول الصفحة الرئيسية إن عمل إمكانية الوصول طُوّر مع Hancom وDual Lab، مطوّري veraPDF؛ ولا تقول إن Hancom هي التي تصنع المحلّل. ولا تسمّي المصادر الكيان القانوني الذي يصون المشروع. أما المنتج المؤسسي المنفصل Hancom Data Loader فمدرج بعبارة "قريبًا" وليس جزءًا من النواة مفتوحة المصدر.',
+          'الجهة المطوِّرة هي منظمة GitHub باسم opendataloader-project، ويرد في تذييل الموقع "© 2026 OpenDataLoader". وتقول الصفحة الرئيسية إن عمل إمكانية الوصول طُوّر مع Hancom ومع Dual Lab التي تصفها الصفحة الرئيسية بأنها من مطوّري veraPDF؛ ولا تقول إن Hancom هي التي تصنع المحلّل. ولا تسمّي المصادر الكيان القانوني الذي يصون المشروع. أما المنتج المؤسسي المنفصل Hancom Data Loader فمدرج بعبارة "قريبًا" وليس جزءًا من النواة مفتوحة المصدر.',
         ],
       },
       getIt: {
@@ -2812,7 +2812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'OpenDataLoader PDF 리뷰: RAG를 위한 오픈소스 PDF 파서',
     seoTitle: 'OpenDataLoader PDF 리뷰: 오픈소스 PDF 파서',
     intro: 'OpenDataLoader PDF는 PDF 파일을 RAG와 LLM 파이프라인용 구조화 데이터로 변환하는 오픈소스 파서이며, 접근성을 위한 PDF 자동 태깅도 지원합니다. 라이브러리이자 명령줄 도구이며, 데스크톱 앱도 호스팅 서비스도 아닙니다. 이 리뷰는 [opendataloader.org](https://opendataloader.org), [GitHub 저장소](https://github.com/opendataloader-project/opendataloader-pdf), PyPI를 2026년 11월 15일에 확인한 내용에 기반하며, PromptQuorum은 설치하거나 실행하지 않았습니다.',
-    metaDescription: 'OpenDataLoader PDF 리뷰: JSON, Markdown, 경계 상자를 출력하는 Apache 2.0 PDF 파서. Java 11 이상 필요, 로컬 실행. 벤치마크는 개발 측 수치입니다.',
+    metaDescription: 'OpenDataLoader PDF 리뷰: JSON 출력 Apache 2.0 PDF 파서. Java 11 이상 필요, README 기준 기본 모드는 로컬 실행. 벤치마크는 개발 측 수치입니다.',
     twitterDescription: 'OpenDataLoader PDF 리뷰: RAG를 위한 오픈소스 PDF 파서. 로컬에서 실행되는 범위, 하이브리드 모드가 바꾸는 점, Java가 필요한 이유, 출처가 남겨 둔 내용.',
     audience: 'PDF를 대상으로 RAG나 LLM 파이프라인을 구축하면서, OpenDataLoader PDF가 무엇을 출력하는지, 실행에 무엇이 필요한지, 실제로 얼마나 로컬에서 처리되는지, 어떤 주장이 개발 측 자체 주장인지 알고 싶은 개발자.',
     readTime: '7분 읽기',
@@ -2892,7 +2892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'OpenDataLoader PDF란?',
         content: [
           '**OpenDataLoader PDF는 PDF를 AI에 쓸 수 있는 데이터로 변환합니다. 청킹용 Markdown, 출처 표시용 경계 상자 포함 JSON, HTML, 또는 주석이 달린 PDF입니다.** 제목, 표, 목록, 읽기 순서를 인식하며, JSON에는 제목 수준, 글꼴, 각 요소의 위치가 유지됩니다. Python, Node.js, Java SDK와 명령줄 도구를 갖춘 라이브러리로 제공됩니다.',
-          '개발 주체는 GitHub 조직 opendataloader-project이며, 사이트 하단에는 "© 2026 OpenDataLoader"라고 적혀 있습니다. 홈페이지는 접근성 관련 작업이 veraPDF 개발자인 Hancom과 Dual Lab과 함께 개발되었다고 하지만, 파서를 Hancom이 만든다고는 하지 않습니다. 어느 법인이 프로젝트를 유지 관리하는지는 출처에 나와 있지 않습니다. 별도의 엔터프라이즈 제품 Hancom Data Loader는 "Coming Soon"으로 표시되어 있으며 오픈소스 핵심에는 포함되지 않습니다.',
+          '개발 주체는 GitHub 조직 opendataloader-project이며, 사이트 하단에는 "© 2026 OpenDataLoader"라고 적혀 있습니다. 홈페이지는 접근성 관련 작업이 Hancom, 그리고 홈페이지가 veraPDF 개발자 중 하나로 설명하는 Dual Lab과 함께 개발되었다고 하지만, 파서를 Hancom이 만든다고는 하지 않습니다. 어느 법인이 프로젝트를 유지 관리하는지는 출처에 나와 있지 않습니다. 별도의 엔터프라이즈 제품 Hancom Data Loader는 "Coming Soon"으로 표시되어 있으며 오픈소스 핵심에는 포함되지 않습니다.',
         ],
       },
       getIt: {
