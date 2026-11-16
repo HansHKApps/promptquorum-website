@@ -434,6 +434,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ai-notebook-review':                     'ai-notebook-review',
   'univocal-review':                        'univocal-review',
   'openmausbot-review':                     'openmausbot-review',
+  'stirling-pdf-review':                    'stirling-pdf-review',
   'stratosort-review':                      'stratosort-review',
   'sprich-review':                          'sprich-review',
   'weesper-neon-flow-review':               'weesper-neon-flow-review',
