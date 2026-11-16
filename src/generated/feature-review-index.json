@@ -1089,6 +1089,11 @@
     "urlSlug": "scrypted-review",
     "url": "/power-local-llm/scrypted-review"
   },
+  "screenpipe": {
+    "cluster": "power-local-llm",
+    "urlSlug": "screenpipe-review",
+    "url": "/power-local-llm/screenpipe-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

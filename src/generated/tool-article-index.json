@@ -10789,6 +10789,28 @@
     "totalCount": 2,
     "capped": false
   },
+  "Screenpipe": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "screenpipe-review",
+        "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
+        "url": "/power-local-llm/screenpipe-review",
+        "dateModified": "2026-11-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "perfect-memory-review",
+        "title": "Perfect Memory AI Review: Searchable Screen and Meeting Memory",
+        "url": "/power-local-llm/perfect-memory-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -12585,6 +12607,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "screenpipe-review",
+        "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
+        "url": "/power-local-llm/screenpipe-review",
+        "dateModified": "2026-11-16",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "stirling-pdf-review",
         "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
         "url": "/power-local-llm/stirling-pdf-review",
@@ -12646,17 +12676,9 @@
         "url": "/power-local-llm/openmausbot-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "risuai-review",
-        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
-        "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 260,
+    "totalCount": 261,
     "capped": true
   },
   "Qdrant": {

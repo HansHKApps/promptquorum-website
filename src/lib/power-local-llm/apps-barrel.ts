@@ -303,6 +303,7 @@ import { app as app_ramen } from './apps/ramen'
 import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
+import { app as app_screenpipe } from './apps/screenpipe'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -602,6 +603,7 @@ export const localAiApps: ToolRecord[] = [
   app_llm_vision,
   app_picoclaw,
   app_scrypted,
+  app_screenpipe,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,
