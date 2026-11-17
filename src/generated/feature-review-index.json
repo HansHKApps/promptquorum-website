@@ -1094,6 +1094,11 @@
     "urlSlug": "screenpipe-review",
     "url": "/power-local-llm/screenpipe-review"
   },
+  "halo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "halo-review",
+    "url": "/power-local-llm/halo-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 357,
+    "totalCount": 358,
     "capped": true
   },
   "llama.cpp": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 179,
+    "totalCount": 180,
     "capped": true
   },
   "Atomic Chat": {
@@ -5438,7 +5438,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -10448,7 +10448,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -10810,6 +10810,92 @@
     ],
     "totalCount": 2,
     "capped": false
+  },
+  "Halo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "halo-review",
+        "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
+        "url": "/power-local-llm/halo-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "amd-ryzen-ai-halo-local-ai-workstation",
+        "title": "AMD Ryzen AI Halo Price and Specs for Local AI",
+        "url": "/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "gmktec-evo-x2-local-ai-workstation",
+        "title": "GMKtec EVO-X2 Specs and Price: 128 GB Listed at $3,499.99",
+        "url": "/local-llms/gmktec-evo-x2-local-ai-workstation",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nvidia-dgx-spark-local-ai-workstation",
+        "title": "NVIDIA DGX Spark Price and Specs for Local AI",
+        "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "gmktec-evo-x5-pro-local-ai-workstation",
+        "title": "GMKtec EVO-X5 Pro vs DGX Spark: Specs, Price and Verdict",
+        "url": "/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "framework-desktop-local-ai-workstation",
+        "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/framework-desktop-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "hp-z2-mini-g1a-local-ai-workstation",
+        "title": "HP Z2 Mini G1a for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-ai-workstations-strix-halo-vs-dgx-spark",
+        "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
+        "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "minisforum-ms-s1-max-local-ai-workstation",
+        "title": "Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 17,
+    "capped": true
   },
   "Lyonesse": {
     "articles": [
@@ -12607,6 +12693,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "halo-review",
+        "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
+        "url": "/power-local-llm/halo-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "screenpipe-review",
         "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
         "url": "/power-local-llm/screenpipe-review",
@@ -12668,17 +12762,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openmausbot-review",
-        "title": "OpenMausBot Review: Is This Open-Source Grok Bot Local AI?",
-        "url": "/power-local-llm/openmausbot-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 261,
+    "totalCount": 262,
     "capped": true
   },
   "Qdrant": {
@@ -14556,7 +14642,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "about"
       },
       {
