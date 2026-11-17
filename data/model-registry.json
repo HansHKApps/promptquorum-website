@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09",
+  "last_updated": "2026-11-15",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -52,11 +52,11 @@
       "model": "Claude Fable 5.1",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Claude Fable 5.2",
       "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
-      "verified_date": "2026-09-14",
-      "notes": "'For demanding reasoning and long-horizon agentic work' per Anthropic's own comparison table; recommended when evals on Opus 5 at higher effort still fall short. 1M-token context, reliable knowledge cutoff Jun 2026, retirement not sooner than 2027-09-01. Supersedes Claude Fable 5. Anthropic's own pricing footnote also references a 'Claude Mythos 5.1' (2.5% cache-read discount tier, mirroring the Fable 5.1 rate) -- not independently verified via a dedicated model page this cycle; left untracked as a separate entry until confirmed, do not cite it as a distinct current model yet."
+      "verified_date": "2026-11-15",
+      "notes": "Superseded by Claude Fable 5.2 per Anthropic's own models overview page (2026-11-15 fetch). Still available; pricing $10/$50 MTok. 1M-token context, reliable knowledge cutoff Jun 2026. Supersedes Claude Fable 5. Claude Mythos 5.1 (same tier, limited availability) now also confirmed as a separate registry entry."
     },
     {
       "company": "Anthropic",
@@ -185,10 +185,10 @@
       "type": "closed",
       "release_date": null,
       "status": "superseded",
-      "superseded_by": null,
-      "source_url": "https://openai.com",
-      "verified_date": "2026-11-09",
-      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). No confirmed same-named 'Terra' successor found this cycle (OpenAI's site is bot-blocked from this session; unverified third-party mentions of a 'GPT-6.1 Terra' exist but are not confirmed from an official source) -- left unresolved rather than guessed. Needs a real OpenAI-source check."
+      "superseded_by": "GPT-6.1 Terra",
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-11-15",
+      "notes": "Successor resolved 2026-11-15: AWS Bedrock's model-cards page now lists GPT-6.1 Terra as a distinct model card (confirmed as official primary-source listing). Prior cycles had blocked on OpenAI's website being bot-blocked; Bedrock's cards page (a co-primary source for this family per SKILL.md) confirms GPT-6.1 Terra's existence."
     },
     {
       "company": "OpenAI",
@@ -1360,11 +1360,11 @@
       "model": "Kimi K3",
       "type": "closed",
       "release_date": "2026-07-22",
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Kimi K3.1 Pro",
       "source_url": "https://platform.kimi.ai",
-      "verified_date": "2026-11-09",
-      "notes": "STATUS CHANGED 2026-11-09 from superseded to current: no Moonshot page read (K3 and K3.1 Pro forum posts, GitHub README, Hugging Face org page) says K3 is replaced, deprecated or retired; both models are listed, K3.1 Pro (2026-10-23) is 'the first model in our new K3.1 series' and is newer and more capable. Release date = Moonshot forum announcement post of 2026-07-22 (page extraction, not verbatim). 2.8T total / 104B active, 1M context, API id kimi-k3, 'Kimi K3 License' per the README. TYPE CONFLICT, unresolved: this entry says closed, but Moonshot's GitHub README for Kimi K3 states the weights are released under the Kimi K3 License and a moonshotai/Kimi-K3 repo exists on Hugging Face. Treat as weights-available under a custom license until the owner decides the type label. Earlier note: 'Kimi's most capable flagship model to date' per Moonshot's own platform page, 1M-token context, positioned for software engineering / knowledge work / deep reasoning. Supersedes Kimi K2.6 as the general-purpose flagship. Kimi K2.7 Code (coding-specialist) remains a separate current entry, not superseded by K3. CORRECTION (2026-08-27, same-cycle re-check): confirmed via huggingface.co/moonshotai/Kimi-K3 that K3 ships under a proprietary \"Kimi K3 License\", not open-weight -- unlike K2.6/K2.7 Code. It is NOT a valid local/Ollama substitute for K2.6. Do not treat K2.6 as stale in any local-LLM/Ollama context; K3 supersedes it only as the closed hosted-API flagship."
+      "verified_date": "2026-11-15",
+      "notes": "STATUS CHANGED 2026-11-15 to superseded: platform.kimi.ai (2026-11-15 fetch) explicitly describes K3 as 'Kimi's previous-generation flagship' — 2.8T total / 104B active, 1M context, priced at $3/$15 MTok. K3.1 Pro is now the current API flagship. K2.6 (open-weight) remains unaffected as the local/Ollama pick. TYPE CONFLICT, unresolved: Moonshot's GitHub README for Kimi K3 states weights released under the Kimi K3 License and a moonshotai/Kimi-K3 repo exists on Hugging Face — not purely closed, but proprietary custom license, not Apache/MIT. Release date = Moonshot forum announcement 2026-07-22."
     },
     {
       "company": "Alibaba / Qwen",
@@ -3945,6 +3945,186 @@
       "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
       "verified_date": "2026-11-09",
       "notes": "Generation-level entry added 2026-11-09 so mentions of 'Llama 3.3' (with or without a size) match at a version boundary instead of falling through to the older 'Llama 3' entry. STATUS MIRRORS the existing size entries (Llama 3.3 70B), which the registry records as current; it was NOT re-verified against Meta's pages this cycle. Llama 4 (2025-04-05) is newer, but no page checked here says it replaces this generation. Sizes that Meta never released under this name (e.g. a '33B' or '34B' Llama 3.3) are not covered by this entry."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Fable 5.2",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-15",
+      "notes": "Anthropic's current top model per the official models overview page (2026-11-15 fetch): 'For demanding reasoning and long-horizon agentic work.' API id: claude-fable-5-2. Pricing: $8/MTok input, $40/MTok output. 1M-token context, 128K max output, knowledge cutoff Jun 2026, retirement no sooner than 2027-11-09. Supersedes Claude Fable 5.1. Claude Mythos 5.2 (same pricing, limited availability) is a companion entry added the same cycle."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Mythos 5.2",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-15",
+      "notes": "Limited-availability companion to Claude Fable 5.2, same pricing tier ($8/$40 MTok), confirmed in Anthropic's 'All models' table and in AWS Bedrock's model-cards list (2026-11-15 fetches). Available only to organizations verified through Anthropic's verification programs (e.g. Cyber Verification Program). Do not cite as generally available."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Mythos 5.1",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Claude Mythos 5.2",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-15",
+      "notes": "Limited-availability companion to Claude Fable 5.1 ($10/$50 MTok tier), confirmed in Anthropic's 'All models' table and AWS Bedrock (2026-11-15 fetches). Referenced in the former Claude Fable 5.1 registry entry's notes as an unconfirmed pricing footnote; now confirmed as a distinct model page. Superseded by Claude Mythos 5.2."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Mythos 5",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Claude Mythos 5.1",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-15",
+      "notes": "Limited-availability companion to Claude Fable 5 ($10/$50 MTok tier), confirmed in Anthropic's 'All models' table and AWS Bedrock (2026-11-15 fetches). Superseded by Claude Mythos 5.1."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 4 Carbon",
+      "type": "closed",
+      "release_date": "2026-11",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/gemini/",
+      "verified_date": "2026-11-15",
+      "notes": "Announced November 2026 on Google DeepMind's own Gemini model page (2026-11-15 fetch). Positioned for 'general knowledge work, agentic coding, long-context processing.' No exact release date or pricing given on the page. Distinct from Gemini 4 Argon (the frontier/Pro tier) and Gemini 4 Hydrogen (complex workflows); Carbon appears to be a mid-tier general-purpose variant. No prior-generation model explicitly stated as its predecessor on the page."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 4 Hydrogen",
+      "type": "closed",
+      "release_date": "2026-11",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/gemini/",
+      "verified_date": "2026-11-15",
+      "notes": "Announced November 2026 on Google DeepMind's own Gemini model page (2026-11-15 fetch). Positioned for 'complex workflow performance, agentic coding, terminal benchmarks.' No exact release date or pricing given on the page. Distinct from Gemini 4 Argon (frontier) and Gemini 4 Carbon (general purpose). No prior-generation model explicitly stated as predecessor."
+    },
+    {
+      "company": "xAI",
+      "family": "Grok",
+      "model": "Grok 4.3",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.x.ai/developers/models",
+      "verified_date": "2026-11-15",
+      "notes": "Listed on xAI's official developer models page (2026-11-15 fetch) alongside Grok 4.7, 4.6, 4.5. 1M-token context window (vs 500k for 4.5/4.6/4.7), $1.25-$2.50/$2.50-$5.00 MTok pricing (cheaper than 4.7's $2-$4/$6-$12). Also confirmed on AWS Bedrock's model-cards list. Appears to be a cost-optimised / long-context tier running alongside the more capable 4.7 rather than a strict generational predecessor. Status set to current as xAI's own page lists it without a deprecation notice."
+    },
+    {
+      "company": "xAI",
+      "family": "Grok",
+      "model": "Grok 4.20",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.x.ai/developers/models",
+      "verified_date": "2026-11-15",
+      "notes": "Listed on xAI's official developer models page (2026-11-15 fetch): available in reasoning and non-reasoning variants plus a Multi-Agent variant. 1M-token context, $1.25-$2.50/$2.50-$5.00 MTok pricing (same tier as Grok 4.3). No deprecation notice; listed as current. Covers 'Grok 4.20', 'Grok 4.20 Multi-Agent' and reasoning/non-reasoning variant names via prefix match."
+    },
+    {
+      "company": "xAI",
+      "family": "Grok",
+      "model": "Grok Build 0.1",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.x.ai/developers/models",
+      "verified_date": "2026-11-15",
+      "notes": "Listed on xAI's official developer models page (2026-11-15 fetch). 256k-token context, $1.00-$2.00/$2.00-$4.00 MTok pricing (cheapest xAI tier). Purpose/specialisation not stated on the page beyond the 'Build' branding. No prior entry in this registry."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6.1 Terra",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-11-15",
+      "notes": "Confirmed on AWS Bedrock's model-cards page (2026-11-15 fetch) as a distinct GPT-6.1-tier model, resolving the previously unresolved GPT-5.6 Terra → superseded_by relationship. Listed alongside GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol, and GPT-6 Luna. No pricing or context-window data found from an official OpenAI source this cycle; Bedrock's listing is treated as a co-primary source per SKILL.md."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6 Sol",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-11-15",
+      "notes": "Confirmed on AWS Bedrock's model-cards page (2026-11-15 fetch) as a distinct model from GPT-6.1 Sol (which is already in this registry). Both GPT-6 Sol and GPT-6.1 Sol are listed; they appear to be separate releases in OpenAI's GPT-6 family. No OpenAI-direct source available this cycle (site bot-blocked). Relationship to GPT-6.1 Sol not stated; do not treat as an alias."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-Coder-480B-A35B",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-11-15",
+      "notes": "Confirmed on AWS Bedrock's model-cards page (2026-11-15 fetch) as 'Qwen3 Coder 480B A35B Instruct'. 480B total / ~35B active MoE, coding-specialist. Largest Qwen3-Coder variant; the existing registry entries cover Qwen3-Coder-30B-A3B and Qwen3-Coder-Next (80B-A3B). License and official Qwen release blog not independently verified this cycle from qwen.ai (blocked); Bedrock listing is a co-primary source. Exact-name entry so the validator resolves the hyphenated form."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek V4 Flash",
+      "type": "open-weight",
+      "release_date": "2026-04-24",
+      "status": "superseded",
+      "superseded_by": "DeepSeek V4.1 Flash",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "verified_date": "2026-11-15",
+      "notes": "Space-separated alias of 'DeepSeek V4-Flash' (hyphenated entry). Same model — normalization does not unify hyphen vs space, so both spellings are registered. Superseded by DeepSeek V4.1 Flash (the -1017 snapshot that now serves the deepseek-flash API alias)."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "claude-sonnet-4-6",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Claude Sonnet 5",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-15",
+      "notes": "Kebab-case API-identifier alias for Claude Sonnet 4.6. Appears in prompt-chaining.ts current_models_mentioned fields as a literal API id string. The parent model (Claude Sonnet 4.6, superseded → Claude Sonnet 5) is already in the registry under its display name; normalization does not convert kebab-case to title-case, so this alias entry is needed to prevent UNKNOWN_MODEL flags."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Devstral 2 123B",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-11-15",
+      "notes": "Confirmed on AWS Bedrock's model-cards page (2026-11-15 fetch) as the larger Devstral 2 variant. The existing registry entry 'Devstral Small 2 24B' is the small open-weight sibling (24B); this 123B is the flagship Devstral 2 at the full scale. License (the 24B is Apache 2.0 per its registry entry) and exact specs not independently verified against mistral.ai this cycle. Covers 'Devstral 2 123B' and 'Devstral 2' site mentions that do not resolve to the 24B variant."
     }
   ],
   "sources": [
