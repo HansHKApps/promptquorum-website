@@ -184,6 +184,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   de: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-de.webp',
     readTime: '6 Min. Lesezeit',
@@ -316,6 +320,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-fr.webp',
     readTime: '6 min de lecture',
@@ -377,6 +385,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-ja.webp',
     readTime: '6分で読めます',
@@ -422,6 +434,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-zh.webp',
     readTime: '6分钟阅读',
@@ -452,6 +468,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-es.webp',
     readTime: '6 min de lectura',
@@ -482,6 +502,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   pt: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-pt.webp',
     readTime: '6 min de leitura',
@@ -506,6 +530,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ar: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-ar.webp',
     readTime: '6 دقائق قراءة',
@@ -536,6 +564,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ko: {
     designSkin: 'hub',
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-11-15',
+    dateModified: '2026-11-15',
+    next_refresh_due: '2027-05-15',
     theme: 'RAG & Document Chat',
     heroImage: '/images/docling-review-hero-ko.webp',
     readTime: '6분 읽기',

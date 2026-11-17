@@ -537,6 +537,26 @@ function renderInlineLinksNoBold(
   lang: Language = 'en',
   slug = ''
 ) {
+  // Split backtick code spans FIRST so brackets inside code (`pkg[extra]`)
+  // are never cut by the markdown-link split below.
+  const codeSegments = text.split(/(`[^`]+`)/g)
+  return codeSegments.map((cs, ci) => {
+    if (cs.startsWith('`') && cs.endsWith('`') && cs.length > 2) {
+      return (
+        <code key={ci} className="bg-gray-100 text-text-primary px-1 py-0.5 rounded text-sm font-mono break-all">
+          {cs.slice(1, -1)}
+        </code>
+      )
+    }
+    return <Fragment key={ci}>{renderLinksOutsideCode(cs, lang, slug)}</Fragment>
+  })
+}
+
+function renderLinksOutsideCode(
+  text: string,
+  lang: Language = 'en',
+  slug = ''
+) {
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
     // Handle markdown links: [text](url)
@@ -571,25 +591,6 @@ function renderInlineLinksNoBold(
         <Link key={i} href={finalUrl} rel={finalUrl.startsWith('/author/') ? 'author' : undefined} className="text-primary font-medium hover:underline">
           {label}
         </Link>
-      )
-    }
-
-    // Handle backtick code spans — render as <code>, no URL auto-linking inside
-    if (part.includes('`')) {
-      const codeParts = part.split(/(`[^`]+`)/g)
-      return (
-        <span key={i}>
-          {codeParts.map((cp, j) => {
-            if (cp.startsWith('`') && cp.endsWith('`') && cp.length > 2) {
-              return (
-                <code key={j} className="bg-gray-100 text-text-primary px-1 py-0.5 rounded text-sm font-mono break-all">
-                  {cp.slice(1, -1)}
-                </code>
-              )
-            }
-            return renderUrlsAndBold(cp, j, slug)
-          })}
-        </span>
       )
     }
 
