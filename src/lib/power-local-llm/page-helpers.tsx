@@ -1061,6 +1061,7 @@ const HUB_THEMES: Array<{
       'localmcp-review',
       'self-hosted-ai-starter-kit-review',
       'local-deep-research-review',
+      'open-science-desktop-review',
       'agentic-inbox-review',
       'dreamserver-review',
       'intentkit-review',

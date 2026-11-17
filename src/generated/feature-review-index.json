@@ -1094,6 +1094,11 @@
     "urlSlug": "screenpipe-review",
     "url": "/power-local-llm/screenpipe-review"
   },
+  "open-science-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-science-desktop-review",
+    "url": "/power-local-llm/open-science-desktop-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

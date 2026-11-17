@@ -616,6 +616,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'picoclaw-review':                          'picoclaw-review',
   'scrypted-review':                          'scrypted-review',
   'screenpipe-review':                        'screenpipe-review',
+  'open-science-desktop-review':              'open-science-desktop-review',
   'lyonesse-review':                          'lyonesse-review',
   'open-llm-vtuber-review':                   'open-llm-vtuber-review',
   'presenton-review':                         'presenton-review',
