@@ -1099,6 +1099,11 @@
     "urlSlug": "cozyclay-review",
     "url": "/power-local-llm/cozyclay-review"
   },
+  "papersgpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "papersgpt-review",
+    "url": "/power-local-llm/papersgpt-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

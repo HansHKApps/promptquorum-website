@@ -7861,7 +7861,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
     "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Best per task?",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7870,7 +7870,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich",
     "excerpt": "Qwen3.8-27B gewinnt beim Coding: 61,7 SWE-bench Pro, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/de/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7879,7 +7879,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026",
     "excerpt": "Qwen3.8-27B gagne au codage : 61,7 SWE-bench Pro, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/fr/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7888,7 +7888,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較",
     "excerpt": "Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/ja/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7897,7 +7897,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比",
     "excerpt": "Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/zh/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7906,7 +7906,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026",
     "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/es/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7915,7 +7915,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026",
     "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/pt/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7924,7 +7924,7 @@
     "title": "⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩",
     "excerpt": "⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7 SWE-bench Pro⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/ar/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7933,7 +7933,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026",
     "excerpt": "Qwen3.8-27B 61.7 SWE-bench Pro(24GB), Llama 4 Scout 10M 컨텍스트, Mistral 79% MMLU. 작업별 비교.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/ko/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -8101,82 +8101,82 @@
   },
   {
     "lang": "en",
-    "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content",
-    "excerpt": "4 top local LLMs for creative writing: Llama 3.3 70B (best prose), Mistral 24B (best 16GB), fine-tunes (specialized voices). Find the right fit.",
+    "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
+    "excerpt": "Best local LLMs for creative writing and poetry in 2026: Gemma 4 31B and Qwen3.8-27B on 24 GB, plus picks for 8, 12, 16 and 48 GB with Ollama tags.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Beste lokale LLMs für kreatives Schreiben 2026: Fiktion, Poesie und Long-Form-Content",
-    "excerpt": "Die besten lokalen LLMs für kreatives Schreiben 2026: unzensierte Modelle und Top-Modelle für Belletristik, Rollenspiele und Storytelling.",
+    "title": "Beste lokale LLMs für kreatives Schreiben 2026: Fiktion, Poesie und Langtexte nach VRAM",
+    "excerpt": "Beste lokale LLMs für kreatives Schreiben, Geschichten und Poesie 2026: Gemma 4 31B und Qwen3.8-27B für 24 GB, dazu Empfehlungen für 8, 12, 16 und 48 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/de/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Meilleurs LLMs locaux pour écriture créative 2026: fiction, poésie et contenu long format",
-    "excerpt": "Top 5 LLMs locaux fiction, poésie, long format 2026. Llama 3.3 70B prose, Mistral 24B 16GB, fine-tunes roleplay. Évalués cohérence narrative. Gratuit.",
+    "title": "Meilleurs LLM locaux pour l'écriture créative en 2026 : fiction, poésie et textes longs selon votre VRAM",
+    "excerpt": "Meilleurs LLM locaux pour l'écriture créative, histoires et poésie en 2026 : Gemma 4 31B et Qwen3.8-27B pour 24 Go, plus des choix pour 8 à 48 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/fr/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "2026年最高の創作文章向けローカルLLM: フィクション、詩、長編コンテンツのトップ5モデル",
-    "excerpt": "2026年の創作文章向けトップ5ローカルLLM。Llama 3.3 70B最高の散文、Mistral 24B16GB最適、ロールプレイ特化ファインチューン。物語の一貫性で評価。完全ローカル、4月 2026.",
+    "title": "2026年版 創作・小説向けローカルLLMのおすすめ: フィクション、詩、長編をVRAM別に紹介",
+    "excerpt": "2026年の創作・小説・詩向けローカルLLMを紹介。24 GBなら Gemma 4 31B と Qwen3.8-27B、8・12・16・48 GB向けの候補とOllamaタグもまとめました。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ja/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "2026年最佳创意写作本地LLM：小说、诗歌和长篇内容排名",
-    "excerpt": "2026年创意写作top 5本地LLM排名。Llama 3.3 70B最佳散文、Mistral 24B 16GB最优、角色扮演微调。按叙事连贯性评分。完全本地、免费beta、。",
+    "title": "2026年创意写作本地LLM推荐：小说、诗歌与长篇内容，按显存选择",
+    "excerpt": "2026年创意写作、小说与诗歌本地LLM推荐：24 GB显存选Gemma 4 31B或Qwen3.8-27B，另附8、12、16、48 GB档位推荐与Ollama标签。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/zh/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Mejores LLM locales para escritura creativa en 2026: ficción, poesía y contenido de formato largo",
-    "excerpt": "4 mejores LLM locales para escritura creativa: Llama 3.3 70B (mejor prosa), Mistral 24B (mejor en 16 GB) y fine-tunes para voces especializadas.",
+    "title": "Mejores LLM locales para escritura creativa en 2026: ficción, poesía y textos largos según tu VRAM",
+    "excerpt": "Mejores LLM locales para escritura creativa, relatos y poesía en 2026: Gemma 4 31B y Qwen3.8-27B con 24 GB, más opciones para 8, 12, 16 y 48 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/es/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e conteúdo de formato longo",
-    "excerpt": "4 melhores LLMs locais para escrita criativa: Llama 3.3 70B (melhor prosa), Mistral 24B (melhor em 16 GB) e fine-tunes para vozes especializadas.",
+    "title": "Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e textos longos por VRAM",
+    "excerpt": "Melhores LLMs locais para escrita criativa, contos e poesia em 2026: Gemma 4 31B e Qwen3.8-27B com 24 GB, mais opções para 8, 12, 16 e 48 GB com tags.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/pt/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "أفضل نماذج ⁨LLM⁩ المحلية للكتابة الإبداعية في ⁨2026⁩: الروايات والشعر والمحتوى الطويل",
-    "excerpt": "⁨Llama 3.3 70B⁩ يقدّم أفضل جودة نثر محلياً. ⁨Mistral Small 3.1 24B⁩ الأمثل بـ ⁨16 GB RAM⁩. نماذج كـ ⁨Fimbulvetr⁩ متخصصة في الروايات وتقمّص الأدوار.",
+    "title": "أفضل نماذج LLM المحلية للكتابة الإبداعية في 2026: الخيال والشعر والنصوص الطويلة حسب VRAM",
+    "excerpt": "أفضل نماذج LLM المحلية للكتابة الإبداعية والقصص والشعر في 2026: Gemma 4 31B وQwen3.8-27B لذاكرة 24 GB، مع اختيارات لـ 8 و12 و16 و48 GB ووسوم Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ar/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 시, 장편 콘텐츠",
-    "excerpt": "창작 글쓰기를 위한 상위 4개 로컬 LLM: Llama 3.3 70B(최고의 산문), Mistral 24B(16GB 최적), 파인튜닝 모델(특화된 문체). 적합한 모델을 찾아보십시오.",
+    "title": "2026년 창작 글쓰기용 로컬 LLM 추천: 소설, 시, 장편을 VRAM별로 정리",
+    "excerpt": "2026년 창작 글쓰기, 소설, 시에 맞는 로컬 LLM 추천. 24 GB는 Gemma 4 31B와 Qwen3.8-27B, 8·12·16·48 GB 구간 추천과 Ollama 태그를 정리했습니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ko/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -22762,8 +22762,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 372 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 372 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 373 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 373 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/directory",
@@ -22771,8 +22771,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 372 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 372 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 373 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 373 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/de/directory",
@@ -22780,8 +22780,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 372 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 372 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 373 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 373 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/fr/directory",
@@ -22789,8 +22789,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす372のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを372件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす373のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを373件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/ja/directory",
@@ -22798,8 +22798,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：372款软件，在本地运行AI（2026）",
-    "excerpt": "对比372款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：373款软件，在本地运行AI（2026）",
+    "excerpt": "对比373款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/zh/directory",
@@ -22807,8 +22807,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 372 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 372 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 373 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 373 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/es/directory",
@@ -22816,8 +22816,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 372 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 372 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 373 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 373 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/pt/directory",
@@ -22825,8 +22825,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 372 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 372 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 373 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 373 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/ar/directory",
@@ -22834,8 +22834,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 372개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 372개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 373개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 373개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-16",
     "url": "/ko/directory",
@@ -34589,7 +34589,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 75 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 76 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34598,7 +34598,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "75 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "76 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34607,7 +34607,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 75 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 76 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34616,7 +34616,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール75種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール76種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34625,7 +34625,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比75款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比76款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34634,7 +34634,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 75 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 76 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34643,7 +34643,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 75 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 76 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34652,7 +34652,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 75 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 76 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34661,7 +34661,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 75개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 76개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -46824,6 +46824,87 @@
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-17",
     "url": "/ko/power-local-llm/cozyclay-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+    "excerpt": "PapersGPT is an AGPL-3.0 Zotero plugin for PDF chat, whole-library search and paper tracking with cloud or local models, plus MCP. Install, privacy, limits.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "PapersGPT-Rezension: Zotero-KI-Plugin für PDF-Chat, Bibliothekssuche und MCP",
+    "excerpt": "PapersGPT ist ein AGPL-3.0-Zotero-Plugin für PDF-Chat, Bibliothekssuche und Paper-Tracking mit Cloud- oder lokalen Modellen, plus MCP. Installation, Datenschutz.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/de/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de PapersGPT : plugin IA pour Zotero, chat PDF, recherche dans la bibliothèque et MCP",
+    "excerpt": "PapersGPT est un plugin Zotero AGPL-3.0 pour discuter avec des PDF, chercher dans la bibliothèque et suivre les articles, en cloud ou en local, avec MCP. Installation, confidentialité.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/fr/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "PapersGPTレビュー：PDFチャット、ライブラリ検索、MCP対応のZotero用AIプラグイン",
+    "excerpt": "PapersGPTはPDFチャット、ライブラリ全体検索、論文追跡ができるAGPL-3.0のZoteroプラグイン。クラウド／ローカルモデルとMCPに対応。導入方法とプライバシーを解説。",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ja/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "PapersGPT 评测：支持 PDF 对话、文献库搜索与 MCP 的 Zotero AI 插件",
+    "excerpt": "PapersGPT 是 AGPL-3.0 的 Zotero 插件，支持 PDF 对话、整库搜索和论文追踪，可用云端或本地模型并支持 MCP。安装、隐私与限制。",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/zh/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de PapersGPT: plugin de IA para Zotero con chat de PDF, búsqueda en la biblioteca y MCP",
+    "excerpt": "PapersGPT es un plugin AGPL-3.0 de Zotero para chatear con PDF, buscar en la biblioteca y seguir artículos con modelos en la nube o locales, con MCP. Instalación y privacidad.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/es/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do PapersGPT: plugin de IA para Zotero com chat de PDF, busca na biblioteca e MCP",
+    "excerpt": "O PapersGPT é um plugin AGPL-3.0 do Zotero para conversar com PDFs, pesquisar na biblioteca e acompanhar artigos com modelos na nuvem ou locais, com MCP. Instalação e privacidade.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/pt/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة PapersGPT: إضافة ذكاء اصطناعي لـ Zotero للدردشة مع PDF والبحث في المكتبة وMCP",
+    "excerpt": "PapersGPT إضافة AGPL-3.0 لـ Zotero للدردشة مع PDF والبحث في المكتبة وتتبّع الأوراق بنماذج سحابية أو محلية، مع MCP. التثبيت والخصوصية والقيود.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ar/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "PapersGPT 리뷰: PDF 채팅, 라이브러리 검색, MCP를 지원하는 Zotero AI 플러그인",
+    "excerpt": "PapersGPT는 PDF 채팅, 라이브러리 전체 검색, 논문 추적을 제공하는 AGPL-3.0 Zotero 플러그인입니다. 클라우드·로컬 모델과 MCP 지원, 설치와 개인정보를 정리했습니다.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ko/power-local-llm/papersgpt-review",
     "cluster": "power-local-llm"
   },
   {
