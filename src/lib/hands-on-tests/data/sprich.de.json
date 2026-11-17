@@ -15,10 +15,10 @@
   },
   "title": "Sprich auf einem M4 Pro Mac mit 24 GB: Lokales Diktieren, das in jede App tippt",
   "page_title": "Sprich-Test",
-  "dek": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein trotz schlechtem Raumklang aufgenommenes und auf zwei Sprecher aufgeteiltes Meeting, eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
+  "dek": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein aufgenommenes und zwei Sprechern zugeordnetes Meeting (Genauigkeit nicht bewertet; den Raumklang nennt der Tester schlecht), eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
   "seo": {
     "title": "Sprich im Praxistest: Lokales Diktieren auf dem M4 Pro Mac",
-    "description": "Praxistest von Sprich (M4 Pro, 24 GB): Diktat in Word, WhatsApp und Telegram sowie ein 6-Minuten-Meeting mit zwei Sprechern. Russisch scheiterte."
+    "description": "Praxistest von Sprich (M4 Pro, 24 GB): Diktat in Word, WhatsApp und Telegram sowie ein 6-Minuten-Meeting mit zwei Sprechern."
   },
   "faq": [
     [
@@ -28,7 +28,7 @@
     ],
     [
       "Welche Sprachen hat Sprich im Test verstanden?",
-      "Englisch und Deutsch funktionierten. Ein französischer Satz wurde diktiert und sein Text steht in den Notizen, die Genauigkeit wurde aber nicht beurteilt. Ein russischer Test scheiterte: Die Ausgabe war unleserlich. Die damals eingestellte Diktiersprache ist nicht erfasst.",
+      "Englisch und Deutsch funktionierten. Ein französischer Satz wurde diktiert und sein Text steht in den Notizen, die Genauigkeit wurde aber nicht beurteilt. Ein russischer Test lieferte eine unleserliche Ausgabe. Die damals eingestellte Diktiersprache ist nicht erfasst.",
       "observed"
     ],
     [
@@ -53,7 +53,7 @@
     ],
     [
       "Funktioniert der Meeting-Modus von Sprich?",
-      "In einem kurzen Test ja. Am 13. November nahm der Tester ein 6-minütiges Meeting mit zwei Personen auf. Der Raumklang war sehr schlecht, trotzdem transkribierte Sprich es und ordnete zwei Sprecher zu. Danach bietet die App die Formate Zusammenfassung, Protokoll, Follow-up-E-Mail und Arztbrief an. Die Genauigkeit wurde nicht bewertet, und welches Format erzeugt wurde, ist nicht erfasst.",
+      "Ein kurzer Test, kein Qualitätsurteil. Am 13. November nahm der Tester ein 6-minütiges Meeting mit zwei Personen in einem Raum auf, dessen Klang er als sehr schlecht bezeichnet; Sprich erzeugte dennoch ein Transkript mit zwei zugeordneten Sprechern. Danach bietet die App die Formate Zusammenfassung, Protokoll, Follow-up-E-Mail und Arztbrief an. Die Genauigkeit wurde nicht bewertet, und welches Format erzeugt wurde, ist nicht erfasst.",
       "observed"
     ]
   ],
@@ -118,20 +118,20 @@
       "observed"
     ],
     [
-      "Genutzte KI-Hilfe",
-      "Claude entwarf diesen Bericht aus den Word-Notizen des Testers und 15 Screenshots sowie das Kapitel zum Meeting-Modus aus der Nachricht des Testers vom 13. November und 2 weiteren Screenshots. Die diktierten Teile der Notizen stammen offenbar von Sprich selbst (Annahme: Die Verlaufseinträge stimmen mit dem Text der Notizen überein), sodass manche Ungenauigkeiten in den Notizen Ausgaben der App sein können.",
+      "Grundlage dieses Berichts",
+      "Dieser Bericht beruht auf den Word-Notizen des Testers und 15 Screenshots sowie, beim Kapitel zum Meeting-Modus, auf der Nachricht des Testers vom 13. November und 2 weiteren Screenshots. Die diktierten Teile der Notizen stammen offenbar von Sprich selbst (Annahme: Die Verlaufseinträge stimmen mit dem Text der Notizen überein), sodass manche Ungenauigkeiten in den Notizen Ausgaben der App sein können.",
       "assumption"
     ],
     [
       "Disclosure",
-      "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+      "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
       "observed"
     ]
   ],
-  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Sprich wurde am 9.11.2026, am selben Tag wie dieser Test, ins Verzeichnis aufgenommen. Der Entwickler antwortete dem Tester nach dem Test; das Datum ist nicht genannt, und ob er diese Notizen hatte, ist nicht erfasst. Sprich erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
   "verdict": {
-    "general": "Eine sorgfältig gebaute, auf Deutsch ausgerichtete Diktier-App für Macs mit Apple Silicon. In dieser Sitzung funktionierte das Diktieren in Word, WhatsApp und Telegram auf Englisch und Deutsch; Russisch nicht. In einer zweiten Sitzung am 13. November wurde ein 6-minütiges Meeting mit zwei Personen aufgenommen und transkribiert, wobei die Sprecher trotz sehr schlechtem Raumklang unterschieden wurden; der Tester sagt, die Meeting-Funktion funktioniere gut. Dateitranskription, Textumformulierung, Offline-Betrieb, die Datenschutzangaben und die Deinstallation wurden nicht getestet.",
-    "fit": "Der Tester ist beeindruckt, gibt fünf von fünf Punkten und hat die App einem Kontakt empfohlen. Er hält sie für so schnell wie sein Cloud-Diktierwerkzeug, auch wenn nichts gestoppt wurde. Ob er sie weiter nutzen wird, geht aus seinen Notizen nicht hervor. Er findet es außerdem richtig toll, dass die Meeting-Notizen lokal laufen."
+    "general": "Eine sorgfältig gebaute, auf Deutsch ausgerichtete Diktier-App für Macs mit Apple Silicon. In dieser Sitzung funktionierte das Diktieren in Word, WhatsApp und Telegram auf Englisch und Deutsch; Russisch wurde in einem Test nicht erkannt. In einer zweiten Sitzung am 13. November wurde ein 6-minütiges Meeting mit zwei Personen aufgenommen und transkribiert, wobei zwei Sprecher zugeordnet wurden (Genauigkeit nicht bewertet), in einem Raum, dessen Klang der Tester als sehr schlecht bezeichnet; der Tester sagt, die Meeting-Funktion funktioniere gut. Dateitranskription, Textumformulierung, Offline-Betrieb, die Datenschutzangaben und die Deinstallation wurden nicht getestet.",
+    "fit": "Der Tester ist beeindruckt, gibt fünf von fünf Punkten und hat die App einem Kontakt empfohlen. Er hält sie für so schnell wie sein Cloud-Diktierwerkzeug, auch wenn nichts gestoppt wurde. Ob er sie weiter nutzen wird, geht aus seinen Notizen nicht hervor. Er findet es außerdem richtig toll, dass die Meeting-Notizen lokal laufen, wie die App angibt; PromptQuorum hat das nicht getestet."
   },
   "scores": [
     [
@@ -147,7 +147,7 @@
     [
       "Kernfunktion",
       4,
-      "Das Diktieren funktionierte in drei Apps auf Englisch und Deutsch; Russisch scheiterte."
+      "Das Diktieren funktionierte in drei Apps auf Englisch und Deutsch; Russisch wurde in einem Test nicht erkannt, und die Einstellung der Diktiersprache wurde nicht erfasst."
     ],
     [
       "Führung und Nachbessern",
@@ -183,7 +183,7 @@
     ],
     [
       "observed",
-      "Das Diktieren funktionierte in Microsoft Word, WhatsApp und Telegram, auf Englisch und Deutsch. Ein russischer Test scheiterte. Ein Produktname erschien im Verlauf als „Sprich Ae“."
+      "Das Diktieren funktionierte in Microsoft Word, WhatsApp und Telegram, auf Englisch und Deutsch. Ein russischer Test wurde nicht erkannt; die Einstellung der Diktiersprache wurde nicht erfasst. Ein Produktname erschien im Verlauf als „Sprich Ae“."
     ],
     [
       "tester-error",
@@ -199,7 +199,7 @@
     ],
     [
       "observed",
-      "In einer zweiten Sitzung am 13. November nahm der Tester ein 6-minütiges Meeting mit zwei Personen auf. Der Raumklang war sehr schlecht; Sprich transkribierte es trotzdem und ordnete zwei Sprecher zu. Ein Folgedialog bietet Zusammenfassung, Protokoll, Follow-up-E-Mail und Arztbrief an. Der Tester sagt, die Meeting-Funktion funktioniere gut."
+      "In einer zweiten Sitzung am 13. November nahm der Tester ein 6-minütiges Meeting mit zwei Personen auf. Den Raumklang beschreibt der Tester als sehr schlecht; Sprich transkribierte es trotzdem und ordnete zwei Sprecher zu. Ein Folgedialog bietet Zusammenfassung, Protokoll, Follow-up-E-Mail und Arztbrief an. Der Tester sagt, die Meeting-Funktion funktioniere gut."
     ],
     [
       "observed",
@@ -391,7 +391,7 @@
       "items": [
         [
           "observed",
-          "Am 13. November 2026 nahm der Tester ein Meeting über den Tab „Meetings“ auf. Die Kopfzeile des gespeicherten Meetings lautet „Meeting vom 13. November“, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (Äußerungen). Welche App-Version er nutzte, ist nicht erfasst.",
+          "Am 13. November 2026 nahm der Tester ein Meeting über den Tab „Meetings“ auf. Die Kopfzeile des gespeicherten Meetings lautet „Meeting vom 13. November“, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (Äußerungen). Welche App-Version er nutzte, ist nicht erfasst. Die andere teilnehmende Person stimmte der Aufnahme und der Veröffentlichung des Auszugs zu.",
           "sprich-meeting-transcript-two-speakers"
         ],
         [
@@ -421,7 +421,7 @@
         ],
         [
           "tester-view",
-          "Der Tester findet es richtig toll, dass dies lokal läuft.",
+          "Der Tester findet es richtig toll, dass dies lokal läuft, wie die App angibt; PromptQuorum hat das nicht getestet.",
           null
         ],
         [
@@ -447,7 +447,7 @@
         ],
         [
           "tester-view",
-          "Aus seinen 30 Jahren in der Beratung schätzt er es, Meeting-Notizen selbst zu schreiben. Danach nahm er mit der App ein Meeting in einem Raum auf und findet es richtig toll, dass es lokal läuft.",
+          "Aus seinen 30 Jahren in der Beratung schätzt er es, Meeting-Notizen selbst zu schreiben. Danach nahm er mit der App ein Meeting in einem Raum auf und findet es richtig toll, dass es lokal läuft, wie die App angibt; PromptQuorum hat das nicht getestet.",
           null
         ]
       ]
@@ -499,7 +499,7 @@
     [
       "Das Diktat ist auf Deutsch optimiert; Parakeet versteht etwa 25 europäische Sprachen.",
       "Nachricht des Entwicklers",
-      "Englisch und Deutsch funktionierten, Russisch scheiterte; Dateitranskription nicht ausprobiert.",
+      "Englisch und Deutsch funktionierten; Russisch wurde in einem Test nicht erkannt; Dateitranskription nicht ausprobiert.",
       "vendor-claim"
     ],
     [
@@ -602,9 +602,9 @@
     [
       "Russische Wörter",
       "Nicht erfasst",
-      "Unleserlich, nicht erkannt",
+      "Unleserliche Ausgabe in einem Test; Diktiersprache nicht erfasst",
       "Nicht erfasst",
-      "Fail",
+      "Not completed",
       []
     ],
     [
@@ -630,7 +630,7 @@
       "Meetings",
       "6 min, 2 Personen, 28 Wortmeldungen; Raumklang sehr schlecht (Tester); Transkript mit zwei Sprechern erzeugt",
       "12:24 (13. Nov.)",
-      "Pass",
+      "Partial",
       [
         "sprich-meeting-transcript-two-speakers"
       ]
@@ -985,7 +985,7 @@
     "not_fits": [
       [
         "assumption",
-        "Alle, die heute Russisch oder eine nicht deutsche Oberfläche brauchen, oder einen Intel-Mac (das Verzeichnis nennt nur Apple Silicon)."
+        "Alle, die heute Russisch (ein Test, Diktiersprache nicht erfasst, wurde nicht erkannt) oder eine nicht deutsche Oberfläche brauchen, oder einen Intel-Mac (das Verzeichnis nennt nur Apple Silicon)."
       ]
     ],
     "retest": "Neutest bei einer neuen Hauptversion, einer veröffentlichten englischen Oberfläche oder einer bestätigten Sprachliste. Abdecken: App- und macOS-Version erfassen; die Verzögerung stoppen; Russisch mit eingestellter Sprache; Dateitranskription; längere Meetings, bei denen jedes Auswertungsformat erzeugt und gestoppt wird; das Umformulierungsmenü; Offline-Nutzung bei untersuchtem Netzwerkverkehr; Arbeitsspeicherbedarf im Betrieb; Deinstallation."
@@ -1009,8 +1009,8 @@
       "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
     },
     "measured": {
-      "label": "Gemessen",
-      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+      "label": "Aus der App abgelesen",
+      "meaning": "Ein Wert, den die App in einem Dialog, Zähler oder Werkzeug anzeigte, mit angegebener Zahl. PromptQuorum hat ihn nicht gemessen."
     },
     "tester-estimate": {
       "label": "Tester-Schätzung",
@@ -1086,7 +1086,7 @@
       "file": "sprich-setup-two-models-download-3-3-gb.webp",
       "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
       "alt": "Setup-Schritt 2 von 5: Zwei Modelle werden einmalig heruntergeladen, Sprich Transcribe v3 mit etwa 480 MB und Sprich Turbo v3 mit etwa 2,8 GB, zusammen etwa 3,3 GB.",
-      "caption": "Modellschritt des Setups. Die Größen sind die eigenen Angaben der App (gemessen); „funktioniert vollständig offline“ ist eine Herstellerangabe.",
+      "caption": "Modellschritt des Setups. Die Größen sind die eigenen Angaben der App (aus der App abgelesen); „funktioniert vollständig offline“ ist eine Herstellerangabe.",
       "role": "moment",
       "width": 1386,
       "height": 1306,
@@ -1128,7 +1128,7 @@
       "file": "sprich-setup-final-step-models-still-loading.webp",
       "path": "images/sprich-setup-final-step-models-still-loading.webp",
       "alt": "Setup-Schritt 5 von 5, „Fast geschafft“: Download der Spracherkennung bei 72 Prozent und der Textverbesserung bei 12 Prozent, Schritte 1 bis 4 abgehakt.",
-      "caption": "Modelle werden am Ende des Setups noch heruntergeladen. Uhrzeit nicht erfasst. Gemessen.",
+      "caption": "Modelle werden am Ende des Setups noch heruntergeladen. Uhrzeit nicht erfasst. Aus der App abgelesen.",
       "role": "moment",
       "width": 1376,
       "height": 1174,
