@@ -54,6 +54,8 @@ export const app: ToolRecord = {
     version: '3.0.5',
     versionSourceUrl: 'https://github.com/openkursar/hello-halo/releases/tag/v3.0.5',
   },
+  hqCountry: 'CN',
+  hqCountrySource: 'Owner statement 2026-11-17 (no privacy policy or imprint on hello-halo.cc; no company or address found in public sources)',
   lastVerifiedDate: '2026-11-17',
   lastUpstreamUpdate: '2026-11-15', // GitHub API: last commit on the default branch 2026-11-15T15:32Z (pushed_at 2026-11-17); latest release v3.0.5 published 2026-11-01
   lastUpstreamUpdateSource: 'https://github.com/openkursar/hello-halo (last commit 2026-11-15; latest release v3.0.5, 2026-11-01)',
