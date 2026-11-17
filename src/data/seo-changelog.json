@@ -28843,5 +28843,90 @@
       "t14": "2026-11-30",
       "t28": "2026-12-14"
     }
+  },
+  {
+    "id": "a9857700-1612-43e8-9458-05eb61dc5716",
+    "slug": "/local-llms/best-local-llms-for-creative-writing",
+    "date": "2026-11-15T16:37:00.598Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local LLMs for Creative Writing 2026",
+        "new": "Best Local LLMs for Creative Writing 2026: Picks by VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "4 top local LLMs for creative writing: Llama 3.3 70B (best prose), Mistral 24B (best 16GB), fine-tunes (specialized voices). Find the right fit.",
+        "new": "Best local LLMs for creative writing and poetry in 2026: Gemma 4 31B and Qwen3.8-27B on 24 GB, plus picks for 8, 12, 16 and 48 GB with Ollama tags."
+      }
+    ],
+    "reason": "Page refresh: top pick changed from Llama 3.3 70B to Gemma 4 31B / Qwen3.8-27B; title/meta rewritten to target-query vocabulary (pos 4.4, CTR 1.9%)",
+    "queries": [
+      "best llm for creative writing",
+      "best local llm for creative writing",
+      "best local llm for writing",
+      "best open source models for poetry",
+      "best local model for creative writing",
+      "local llm for writing",
+      "best local llm for story writing"
+    ],
+    "baseline": {
+      "position": 4.43,
+      "impressions": 7776,
+      "clicks": 145,
+      "ctr": 0.018647119341563784,
+      "period": "28d 2026-10-19 to 2026-11-15"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e85c3096-6398-4163-8d72-0b5901272a82",
+    "slug": "/ja/local-llms/best-local-llms-for-creative-writing",
+    "date": "2026-11-15T16:37:00.705Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年の創作文章向けベストローカルLLM",
+        "new": "創作向けローカルLLM 2026年版: VRAM別おすすめ"
+      }
+    ],
+    "reason": "Page refresh; ja title/meta adapted to ja queries",
+    "queries": [
+      "ローカルllm 小説 おすすめ",
+      "ローカルllm 創作"
+    ],
+    "baseline": {
+      "position": 6.38,
+      "impressions": 625,
+      "clicks": 53,
+      "ctr": 0.0848,
+      "period": "28d 2026-10-19 to 2026-11-15"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "18a60dba-a955-4630-95f5-05fa5b1f2738",
+    "slug": "/ko/local-llms/best-local-llms-for-creative-writing",
+    "date": "2026-11-15T16:37:00.814Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "창작 글쓰기를 위한 최고의 로컬 LLM 2026",
+        "new": "창작 글쓰기 로컬 LLM 2026: VRAM별 추천"
+      }
+    ],
+    "reason": "Page refresh; ko H2/FAQ adapted to ko queries (순위, 로컬 AI 소설)",
+    "queries": [
+      "로컬 ai 소설",
+      "로컬 llm 순위"
+    ],
+    "baseline": {
+      "position": 5.78,
+      "impressions": 448,
+      "clicks": 20,
+      "ctr": 0.044642857142857144,
+      "period": "28d 2026-10-19 to 2026-11-15"
+    },
+    "deployedAt": null
   }
 ]
