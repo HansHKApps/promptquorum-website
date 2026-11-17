@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 357,
+    "totalCount": 358,
     "capped": true
   },
   "llama.cpp": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 179,
+    "totalCount": 180,
     "capped": true
   },
   "Atomic Chat": {
@@ -5438,7 +5438,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -5543,6 +5543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "yovoice-review",
+        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
+        "url": "/power-local-llm/yovoice-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-tts-mac",
         "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
         "url": "/power-local-llm/best-local-tts-mac",
@@ -5604,17 +5612,9 @@
         "url": "/power-local-llm/styletts-2-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "coqui-tts-review",
-        "title": "Coqui TTS Review: The Community-Maintained Voice-Cloning Toolkit",
-        "url": "/power-local-llm/coqui-tts-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Bark": {
@@ -10448,7 +10448,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -10809,6 +10809,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "YoVoice": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "yovoice-review",
+        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
+        "url": "/power-local-llm/yovoice-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Lyonesse": {
@@ -12607,6 +12621,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "yovoice-review",
+        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
+        "url": "/power-local-llm/yovoice-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "screenpipe-review",
         "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
         "url": "/power-local-llm/screenpipe-review",
@@ -12668,17 +12690,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openmausbot-review",
-        "title": "OpenMausBot Review: Is This Open-Source Grok Bot Local AI?",
-        "url": "/power-local-llm/openmausbot-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 261,
+    "totalCount": 262,
     "capped": true
   },
   "Qdrant": {
@@ -14556,7 +14570,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "about"
       },
       {

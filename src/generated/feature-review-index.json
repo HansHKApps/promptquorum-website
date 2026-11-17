@@ -1094,6 +1094,11 @@
     "urlSlug": "screenpipe-review",
     "url": "/power-local-llm/screenpipe-review"
   },
+  "yovoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "yovoice-review",
+    "url": "/power-local-llm/yovoice-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

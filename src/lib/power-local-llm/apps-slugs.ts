@@ -306,6 +306,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'kai-9000':                                'kai-9000',
   'scrypted':                                'scrypted',
   'screenpipe':                              'screenpipe',
+  'yovoice':                                 'yovoice',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
