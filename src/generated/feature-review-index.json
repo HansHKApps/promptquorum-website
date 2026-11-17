@@ -1049,6 +1049,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "conduit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "conduit-review",
+    "url": "/power-local-llm/conduit-review"
+  },
   "phantasm": {
     "cluster": "power-local-llm",
     "urlSlug": "phantasm-review",

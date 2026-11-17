@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -94,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: System-Integrated On-Device AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
       { label: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)', anchor: '#reins' },
+      { label: 'Conduit: Client for Open WebUI and Your Own Endpoints (Not Benchmarked)', anchor: '#conduit' },
       { label: 'Phantasm: Chat Client for Your Ollama, vLLM or llama.cpp Server (Not Benchmarked)', anchor: '#phantasm' },
       { label: 'fullmoon: Free Open-Source Chat on Apple MLX (No Release Since Early 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: Paid-Once Offline Chat (Not Benchmarked)', anchor: '#cloak-local-ai' },
@@ -441,6 +442,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: Client for Open WebUI and Your Own Endpoints (Not Benchmarked)',
+        content:
+          '**Conduit is an iPhone and Android client for your own Open WebUI server that also connects directly to OpenAI-compatible endpoints, Ollama, OpenRouter and Hermes agents.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (beta), direct OpenAI-compatible endpoints, Ollama, OpenRouter and Hermes agents; only on iPhone, Apple\'s on-device model (iOS 26) runs on the phone itself.',
+          '**Features:** Streaming chat, file and image attachments, voice input and a voice-call mode, home-screen widgets and a share sheet.',
+          '**Requirements and price:** iOS 16.0+ (Apple\'s on-device model needs iOS 26). Paid on the App Store ($3.99 on the US storefront); the website says the app is free, and the sources do not explain the difference.',
+          '**Privacy and licence:** The privacy policy says no backend of the developer receives your content; an optional push relay carries only encrypted notifications. GPL-3.0 source code.',
+          '**Install path:** App Store. The App Store lists version 4.3.1, released on 11 November 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the App Store listing, the developer\'s website, privacy policy and GitHub repository; we have not timed Conduit on our test phones. Full notes: [Conduit review](/power-local-llm/conduit-review).',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm: Chat Client for Your Ollama, vLLM or llama.cpp Server (Not Benchmarked)',
@@ -667,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -752,6 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: Systemintegrierte On-Device-KI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
       { label: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)', anchor: '#reins' },
+      { label: 'Conduit: Client für Open WebUI und eigene Endpunkte (nicht gemessen)', anchor: '#conduit' },
       { label: 'Phantasm: Chat-Client für Ihren Ollama-, vLLM- oder llama.cpp-Server (nicht gemessen)', anchor: '#phantasm' },
       { label: 'fullmoon: kostenloser Open-Source-Chat auf Apple MLX (kein Release seit Anfang 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: Offline-Chat im Einmalkauf (nicht gemessen)', anchor: '#cloak-local-ai' },
@@ -1099,6 +1120,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: Client für Open WebUI und eigene Endpunkte (nicht gemessen)',
+        content:
+          '**Conduit ist ein iPhone- und Android-Client für Ihren eigenen Open-WebUI-Server, der sich auch direkt mit OpenAI-kompatiblen Endpunkten, Ollama, OpenRouter und Hermes-Agenten verbindet.** Er wurde nach dem Hauptvergleich ergänzt, steht deshalb nicht in der Vergleichstabelle und war nicht Teil unseres Tests.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (Beta), direkte OpenAI-kompatible Endpunkte, Ollama, OpenRouter und Hermes-Agenten; nur auf dem iPhone läuft Apples On-Device-Modell (iOS 26) auf dem Telefon selbst.',
+          '**Funktionen:** Streaming-Chat, Datei- und Bildanhänge, Spracheingabe und Sprachanruf-Modus, Widgets auf dem Startbildschirm und ein Teilen-Menü.',
+          '**Anforderungen und Preis:** iOS 16.0 oder neuer (Apples On-Device-Modell braucht iOS 26). Im App Store kostenpflichtig (3,99 € im deutschen Store); die Website nennt die App kostenlos, und die Quellen erklären den Unterschied nicht.',
+          '**Datenschutz und Lizenz:** Laut Datenschutzerklärung erhält kein Backend des Entwicklers Ihre Inhalte; ein optionales Push-Relay leitet nur verschlüsselte Benachrichtigungen weiter. Quellcode unter GPL-3.0.',
+          '**Installationsweg:** App Store. Der App Store nennt Version 4.3.1, veröffentlicht am 11. November 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem App-Store-Eintrag sowie der Website, der Datenschutzerklärung und dem GitHub-Repository des Entwicklers; wir haben Conduit nicht auf unseren Testtelefonen gemessen. Alle Details: [Conduit-Rezension](/de/power-local-llm/conduit-review).',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm: Chat-Client für Ihren Ollama-, vLLM- oder llama.cpp-Server (nicht gemessen)',
@@ -1333,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1418,6 +1458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence：システム統合型オンデバイスAI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
       { label: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)', anchor: '#reins' },
+      { label: 'Conduit：Open WebUIと自前エンドポイント向けクライアント（未計測）', anchor: '#conduit' },
       { label: 'Phantasm:自分のOllama・vLLM・llama.cppサーバー向けチャットクライアント(未計測)', anchor: '#phantasm' },
       { label: 'fullmoon：Apple MLX上で動く無料オープンソースのチャット（2025年初頭以降リリースなし）', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI:買い切りのオフラインチャット(未計測)', anchor: '#cloak-local-ai' },
@@ -1765,6 +1806,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit：Open WebUIと自前エンドポイント向けクライアント（未計測）',
+        content:
+          '**Conduitは、自分のOpen WebUIサーバー向けのiPhone・Androidクライアントで、OpenAI互換エンドポイント、Ollama、OpenRouter、Hermesエージェントにも直接接続できます。**メインの比較のあとに追加したため、比較表には含まれず、当方のテスト対象でもありません。',
+        items: [
+          '**接続先：**Open WebUI、LibreChat（ベータ）、OpenAI互換エンドポイントへの直接接続、Ollama、OpenRouter、Hermesエージェント。スマートフォン上で動くのは、iPhoneのAppleオンデバイスモデル（iOS 26）だけです。',
+          '**機能：**ストリーミングチャット、ファイルと画像の添付、音声入力と音声通話モード、ホーム画面ウィジェット、共有シート。',
+          '**動作要件と価格：**iOS 16.0以降（AppleのオンデバイスモデルにはiOS 26が必要）。App Storeでは有料（日本のApp Storeで¥600）で、公式サイトは無料としており、この違いは情報源では説明されていません。',
+          '**プライバシーとライセンス：**プライバシーポリシーは、開発者のバックエンドがコンテンツを受け取ることはないとしており、任意のプッシュリレーは暗号化済みの通知だけを中継します。ソースコードはGPL-3.0です。',
+          '**入手経路：**App Store。App Storeにはバージョン4.3.1（2026年11月11日公開）と表示されています。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記の内容は、App Storeの掲載情報、開発者の公式サイト、プライバシーポリシー、GitHubリポジトリに基づきます。当方のテスト用スマートフォンでConduitの速度は計測していません。詳細：[Conduitレビュー](/ja/power-local-llm/conduit-review)。',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm:自分のOllama・vLLM・llama.cppサーバー向けチャットクライアント(未計測)',
@@ -1991,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2076,6 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence : IA on-device intégrée au système', anchor: '#apple-intelligence' },
       { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
       { label: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)', anchor: '#reins' },
+      { label: 'Conduit : client pour Open WebUI et vos propres serveurs (non mesuré)', anchor: '#conduit' },
       { label: 'Phantasm : client de chat pour votre serveur Ollama, vLLM ou llama.cpp (non mesuré)', anchor: '#phantasm' },
       { label: 'fullmoon : chat gratuit et open source sur Apple MLX (aucune version depuis début 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI : chat hors ligne à achat unique (non mesuré)', anchor: '#cloak-local-ai' },
@@ -2423,6 +2484,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit : client pour Open WebUI et vos propres serveurs (non mesuré)',
+        content:
+          '**Conduit est un client iPhone et Android pour votre propre serveur Open WebUI, qui se connecte aussi directement à des points d’accès compatibles OpenAI, Ollama, OpenRouter et des agents Hermes.** Il a été ajouté après le comparatif principal ; il ne figure donc pas dans le tableau comparatif et n’a pas fait partie de nos tests.',
+        items: [
+          '**Serveurs :** Open WebUI, LibreChat (bêta), points d’accès directs compatibles OpenAI, Ollama, OpenRouter et agents Hermes ; seul l’iPhone exécute le modèle sur l’appareil d’Apple (iOS 26) sur le téléphone lui-même.',
+          '**Fonctions :** Chat en streaming, pièces jointes fichiers et images, saisie vocale et mode appel vocal, widgets sur l’écran d’accueil et feuille de partage.',
+          '**Configuration et prix :** iOS 16.0 ou ultérieur (le modèle sur l’appareil d’Apple exige iOS 26). Payant sur l’App Store (3,99 € sur le store français) ; le site dit que l’appli est gratuite, et les sources n’expliquent pas l’écart.',
+          '**Confidentialité et licence :** La politique de confidentialité indique qu’aucun serveur du développeur ne reçoit vos contenus ; un relais push facultatif ne transporte que des notifications chiffrées. Code source sous GPL-3.0.',
+          '**Voie d’installation :** App Store. L’App Store indique la version 4.3.1, publiée le 11 novembre 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent de la fiche de l’App Store, du site web, de la politique de confidentialité et du dépôt GitHub du développeur ; nous n’avons pas mesuré Conduit sur nos téléphones de test. Notes complètes : [test de Conduit](/fr/power-local-llm/conduit-review).',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm : client de chat pour votre serveur Ollama, vLLM ou llama.cpp (non mesuré)',
@@ -2649,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2734,6 +2814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence：系统级内置AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
       { label: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)', anchor: '#reins' },
+      { label: 'Conduit：面向 Open WebUI 和自有接口的客户端（未测速）', anchor: '#conduit' },
       { label: 'Phantasm:面向自建 Ollama、vLLM 或 llama.cpp 服务器的聊天客户端(未实测)', anchor: '#phantasm' },
       { label: 'fullmoon：基于 Apple MLX 的免费开源聊天应用（2025 年初以来无新版本）', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI：一次性付费的离线聊天（未实测）', anchor: '#cloak-local-ai' },
@@ -3081,6 +3162,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit：面向 Open WebUI 和自有接口的客户端（未测速）',
+        content:
+          '**Conduit 是面向自建 Open WebUI 服务器的 iPhone 和 Android 客户端，也可直接连接兼容 OpenAI 的接口、Ollama、OpenRouter 和 Hermes 智能体。**它是在主体对比之后加入的，因此不在对比表中，也未参与我们的测试。',
+        items: [
+          '**后端：**Open WebUI、LibreChat（测试版）、直连兼容 OpenAI 的接口、Ollama、OpenRouter 和 Hermes 智能体；只有 iPhone 上的 Apple 设备端模型（iOS 26）在手机本机运行。',
+          '**功能：**流式聊天、文件和图片附件、语音输入和语音通话模式、主屏幕小组件和分享菜单。',
+          '**要求与价格：**iOS 16.0 或更高（Apple 设备端模型需要 iOS 26）。App Store 中为付费下载（美国区 $3.99）；官网称该应用免费，资料没有解释这一差异。',
+          '**隐私与许可：**隐私政策称开发者没有任何后端接收你的内容；可选的推送中继只转发加密通知。源代码为 GPL-3.0。',
+          '**安装途径：**App Store。App Store 显示 4.3.1 版，发布于 2026 年 11 月 11 日。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自 App Store 页面、开发者官网、隐私政策和 GitHub 仓库；我们没有在测试手机上测速 Conduit。完整说明：[Conduit 评测](/zh/power-local-llm/conduit-review)。',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm:面向自建 Ollama、vLLM 或 llama.cpp 服务器的聊天客户端(未实测)',
@@ -3307,7 +3407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3392,6 +3492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: IA en dispositivo integrada en el sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
       { label: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)', anchor: '#reins' },
+      { label: 'Conduit: cliente para Open WebUI y tus propios endpoints (sin medir)', anchor: '#conduit' },
       { label: 'Phantasm: cliente de chat para tu servidor Ollama, vLLM o llama.cpp (sin medir)', anchor: '#phantasm' },
       { label: 'fullmoon: chat gratuito y de código abierto sobre Apple MLX (sin versiones desde principios de 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: chat sin conexión de pago único (sin medir)', anchor: '#cloak-local-ai' },
@@ -3739,6 +3840,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: cliente para Open WebUI y tus propios endpoints (sin medir)',
+        content:
+          '**Conduit es un cliente para iPhone y Android de tu propio servidor Open WebUI que también se conecta directamente a endpoints compatibles con OpenAI, Ollama, OpenRouter y agentes Hermes.** Se añadió después de la comparativa principal, así que no figura en la tabla comparativa ni formó parte de nuestras pruebas.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (beta), endpoints directos compatibles con OpenAI, Ollama, OpenRouter y agentes Hermes; solo en iPhone, el modelo en el dispositivo de Apple (iOS 26) se ejecuta en el propio teléfono.',
+          '**Funciones:** Chat con streaming, archivos e imágenes adjuntos, entrada de voz y modo de llamada de voz, widgets en la pantalla de inicio y menú de compartir.',
+          '**Requisitos y precio:** iOS 16.0 o posterior (el modelo en el dispositivo de Apple requiere iOS 26). De pago en la App Store (3,99 € en la tienda de España); el sitio web dice que la app es gratis, y las fuentes no explican la diferencia.',
+          '**Privacidad y licencia:** La política de privacidad dice que ningún backend del desarrollador recibe tu contenido; un relé push opcional solo transporta notificaciones cifradas. Código fuente bajo GPL-3.0.',
+          '**Vía de instalación:** App Store. La App Store indica la versión 4.3.1, publicada el 11 de noviembre de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden de la ficha de la App Store y del sitio web, la política de privacidad y el repositorio de GitHub del desarrollador; no hemos medido Conduit en nuestros teléfonos de prueba. Notas completas: [reseña de Conduit](/es/power-local-llm/conduit-review).',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm: cliente de chat para tu servidor Ollama, vLLM o llama.cpp (sin medir)',
@@ -3965,7 +4085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4050,6 +4170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: 시스템 내장 기기 내 AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
       { label: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)', anchor: '#reins' },
+      { label: 'Conduit: Open WebUI와 자체 엔드포인트용 클라이언트(미측정)', anchor: '#conduit' },
       { label: 'Phantasm: 직접 운영하는 Ollama·vLLM·llama.cpp 서버용 채팅 클라이언트(미측정)', anchor: '#phantasm' },
       { label: 'fullmoon: Apple MLX 기반 무료 오픈소스 채팅 앱(2025년 초 이후 릴리스 없음)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: 1회 구매형 오프라인 채팅(미측정)', anchor: '#cloak-local-ai' },
@@ -4399,6 +4520,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: Open WebUI와 자체 엔드포인트용 클라이언트(미측정)',
+        content:
+          '**Conduit은 직접 운영하는 Open WebUI 서버용 iPhone·Android 클라이언트로, OpenAI 호환 엔드포인트, Ollama, OpenRouter, Hermes 에이전트에도 직접 연결합니다.** 주요 비교 이후에 추가되어 비교표에 없으며 저희 테스트 대상도 아니었습니다.',
+        items: [
+          '**백엔드:** Open WebUI, LibreChat(베타), OpenAI 호환 엔드포인트 직접 연결, Ollama, OpenRouter, Hermes 에이전트. 휴대폰 자체에서 실행되는 것은 iPhone의 Apple 기기 내 모델(iOS 26)뿐입니다.',
+          '**기능:** 스트리밍 채팅, 파일·이미지 첨부, 음성 입력과 음성 통화 모드, 홈 화면 위젯, 공유 시트.',
+          '**요구 사항과 가격:** iOS 16.0 이상(Apple 기기 내 모델은 iOS 26 필요). App Store에서는 유료(한국 App Store ₩6,600)이며 웹사이트는 무료라고 하는데, 출처는 이 차이를 설명하지 않습니다.',
+          '**개인정보와 라이선스:** 개인정보 처리방침은 개발자의 백엔드가 콘텐츠를 받지 않으며 선택형 푸시 릴레이는 암호화된 알림만 전달한다고 밝힙니다. 소스 코드는 GPL-3.0입니다.',
+          '**설치 경로:** App Store. App Store에는 2026년 11월 11일에 출시된 버전 4.3.1이 표시됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 App Store 등록 정보, 개발자 웹사이트, 개인정보 처리방침, GitHub 저장소에서 가져온 것이며, 저희 테스트 휴대폰에서 Conduit의 속도를 측정하지는 않았습니다. 자세한 내용: [Conduit 리뷰](/ko/power-local-llm/conduit-review).',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm: 직접 운영하는 Ollama·vLLM·llama.cpp 서버용 채팅 클라이언트(미측정)',
@@ -4628,7 +4768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4713,6 +4853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: IA no aparelho integrada ao sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
       { label: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)', anchor: '#reins' },
+      { label: 'Conduit: cliente para Open WebUI e seus próprios endpoints (não medido)', anchor: '#conduit' },
       { label: 'Phantasm: cliente de chat para o seu servidor Ollama, vLLM ou llama.cpp (não medido)', anchor: '#phantasm' },
       { label: 'fullmoon: chat gratuito e de código aberto sobre Apple MLX (sem versões desde o início de 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: chat offline de pagamento único (não medido)', anchor: '#cloak-local-ai' },
@@ -5060,6 +5201,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: cliente para Open WebUI e seus próprios endpoints (não medido)',
+        content:
+          '**O Conduit é um cliente para iPhone e Android do seu próprio servidor Open WebUI que também se conecta diretamente a endpoints compatíveis com OpenAI, Ollama, OpenRouter e agentes Hermes.** Foi adicionado depois do comparativo principal, por isso não está na tabela comparativa nem fez parte dos nossos testes.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (beta), endpoints diretos compatíveis com OpenAI, Ollama, OpenRouter e agentes Hermes; só no iPhone o modelo no aparelho da Apple (iOS 26) roda no próprio celular.',
+          '**Recursos:** Chat com streaming, anexos de arquivos e imagens, entrada por voz e modo de chamada de voz, widgets na tela inicial e menu de compartilhamento.',
+          '**Requisitos e preço:** iOS 16.0 ou superior (o modelo no aparelho da Apple exige iOS 26). Pago na App Store (R$ 24,90 na loja do Brasil); o site diz que o app é grátis, e as fontes não explicam a diferença.',
+          '**Privacidade e licença:** A política de privacidade diz que nenhum backend do desenvolvedor recebe o seu conteúdo; um relé push opcional só transporta notificações criptografadas. Código-fonte sob GPL-3.0.',
+          '**Caminho de instalação:** App Store. A App Store indica a versão 4.3.1, lançada em 11 de novembro de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm da página da App Store e do site, da política de privacidade e do repositório do GitHub do desenvolvedor; não medimos o Conduit em nossos celulares de teste. Notas completas: [análise do Conduit](/pt/power-local-llm/conduit-review).',
+          },
+        ],
+      },
       phantasm: {
         id: 'phantasm',
         title: 'Phantasm: cliente de chat para o seu servidor Ollama, vLLM ou llama.cpp (não medido)',
@@ -5286,7 +5446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -5371,6 +5531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Apple Intelligence: ذكاء اصطناعي على الجهاز مدمج في النظام', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
       { label: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)', anchor: '#reins' },
+      { label: 'Conduit: عميل لـ Open WebUI ونقاط النهاية الخاصة بك (لم يُقَس)', anchor: '#conduit' },
       { label: 'Phantasm: عميل دردشة لخادم Ollama أو vLLM أو llama.cpp الخاص بك (لم يُقَس)', anchor: '#phantasm' },
       { label: 'fullmoon: دردشة مجانية مفتوحة المصدر على Apple MLX (بلا إصدارات منذ مطلع 2025)', anchor: '#fullmoon' },
       { label: 'Cloak: Local AI: دردشة دون اتصال بشراء لمرة واحدة (لم يُقَس)', anchor: '#cloak-local-ai' },
@@ -5715,6 +5876,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'مصدر هذه التفاصيل صفحة App Store وموقع المطوّر وسياساته؛ ولم نقِس أداء Reins على هواتف الاختبار لدينا. التفاصيل الكاملة: [مراجعة Reins](/ar/power-local-llm/reins-review).',
+          },
+        ],
+      },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: عميل لـ Open WebUI ونقاط النهاية الخاصة بك (لم يُقَس)',
+        content:
+          '**Conduit عميل لـ iPhone وAndroid لخادم Open WebUI الخاص بك، ويتصل أيضًا مباشرة بنقاط نهاية متوافقة مع OpenAI وبـ Ollama وOpenRouter ووكلاء Hermes.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن جزءًا من اختباراتنا.',
+        items: [
+          '**الخوادم:** Open WebUI وLibreChat (تجريبي) ونقاط نهاية مباشرة متوافقة مع OpenAI وOllama وOpenRouter ووكلاء Hermes؛ وعلى iPhone فقط يعمل نموذج Apple على الجهاز (iOS 26) على الهاتف نفسه.',
+          '**الميزات:** دردشة ببث مباشر، ومرفقات الملفات والصور، وإدخال صوتي ووضع مكالمة صوتية، وأدوات على الشاشة الرئيسية، وقائمة مشاركة.',
+          '**المتطلبات والسعر:** iOS 16.0 أو أحدث (نموذج Apple على الجهاز يتطلب iOS 26). مدفوع في App Store (3.99 دولارًا في المتجر الأمريكي)؛ ويقول الموقع إن التطبيق مجاني، ولا تشرح المصادر هذا الفرق.',
+          '**الخصوصية والترخيص:** تقول سياسة الخصوصية إن أي خادم للمطوّر لا يستقبل محتواك؛ ولا ينقل مرحّل الإشعارات الاختياري سوى إشعارات مشفّرة. الشيفرة المصدرية بترخيص GPL-3.0.',
+          '**طريقة التثبيت:** App Store. يذكر App Store الإصدار 4.3.1 الذي صدر في 11 نوفمبر 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'التفاصيل أعلاه مصدرها صفحة App Store وموقع المطوّر وسياسة الخصوصية ومستودع GitHub؛ ولم نقِس أداء Conduit على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Conduit](/ar/power-local-llm/conduit-review).',
           },
         ],
       },
