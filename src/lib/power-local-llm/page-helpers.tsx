@@ -948,6 +948,7 @@ const HUB_THEMES: Array<{
       'longmemory-review',
       'return-editor-review',
       'surfsense-review',
+      'papersgpt-review',
       'openrag-review',
       'marker-review',
       'docling-review',

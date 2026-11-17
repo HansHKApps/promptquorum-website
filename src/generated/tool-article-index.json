@@ -10,10 +10,34 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-creative-writing",
+        "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
+        "url": "/local-llms/best-local-llms-for-creative-writing",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "local-llm-security-privacy-checklist",
         "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
         "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-vs-llama-vs-mistral",
+        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
+        "url": "/local-llms/qwen-vs-llama-vs-mistral",
         "dateModified": "2026-11-15",
         "tier": "about"
       },
@@ -56,33 +80,9 @@
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "sillytavern-review",
-        "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
-        "url": "/local-llms/sillytavern-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-notebook-review",
-        "title": "AI Notebook Review: Free Open-Source NotebookLM Alternative",
-        "url": "/power-local-llm/ai-notebook-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 357,
+    "totalCount": 358,
     "capped": true
   },
   "llama.cpp": {
@@ -2450,7 +2450,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "LobeHub": {
@@ -4999,6 +4999,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-iphone-guide",
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
@@ -5020,17 +5028,9 @@
         "url": "/power-local-llm/phone-harness-review",
         "dateModified": "2026-11-08",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "picoclaw-review",
-        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
-        "url": "/power-local-llm/picoclaw-review",
-        "dateModified": "2026-11-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Hermes Agent": {
@@ -10825,6 +10825,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "PapersGPT": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -12629,6 +12643,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "screenpipe-review",
         "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
         "url": "/power-local-llm/screenpipe-review",
@@ -12682,17 +12704,9 @@
         "url": "/power-local-llm/dayflow-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-review",
-        "title": "LM Studio Review: The GUI-First Local AI Desktop App",
-        "url": "/power-local-llm/lm-studio-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 262,
+    "totalCount": 263,
     "capped": true
   },
   "Qdrant": {
