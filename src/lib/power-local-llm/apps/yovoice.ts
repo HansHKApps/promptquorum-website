@@ -65,6 +65,8 @@ export const app: ToolRecord = {
     versionSourceUrl: 'https://github.com/leemysw/yovoice/releases/tag/v0.8.0',
   },
   verdict: 'Best for people who want speech, voice cloning and AI music in one free local studio with a CLI and MCP server for agents, and who accept downloading large model files; limited by a two-month-old, single-maintainer project, no privacy policy page, several model weights that are non-commercial, an Apple-silicon-only Mac build, and quality, speed and privacy claims PromptQuorum could not test.',
+  hqCountry: 'SG',
+  hqCountrySource: 'https://yovoice.leemysw.com/en/community/terms/', // governing law named as Singapore; maker's personal site also carries a Guangdong ICP filing, so the flag rests on the terms only
   lastVerifiedDate: '2026-11-17',
   lastUpstreamUpdate: '2026-11-17', // GitHub API: latest commit on main 2026-11-17T17:19Z; latest release v0.8.0 published 2026-11-15
   lastUpstreamUpdateSource: 'https://github.com/leemysw/yovoice/commits/main (last commit 2026-11-17; latest release 2026-11-15)',
