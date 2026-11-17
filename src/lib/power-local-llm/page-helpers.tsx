@@ -1220,6 +1220,7 @@ const HUB_THEMES: Array<{
       'argos-translate-review',
       'linguister-review',
       'presenton-review',
+      'screenpipe-review',
     ],
   },
   {
