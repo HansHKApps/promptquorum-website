@@ -1136,6 +1136,7 @@ const HUB_THEMES: Array<{
       'caelum-review',
       'lm-mini-review',
       'reins-review',
+      'conduit-review',
       'phantasm-review',
       'compass-local-ai-review',
       'cloak-local-ai-review',
