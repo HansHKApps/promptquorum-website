@@ -92,6 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Mobile LM Server: Local API Server on Your Phone (Not Benchmarked)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: Simple Offline Chat with Built-in Models (Not Benchmarked)', anchor: '#on-device-llm' },
       { label: 'Conduit: Client for Open WebUI and Your Own Endpoints (Not Benchmarked)', anchor: '#conduit' },
+      { label: 'Skales: Agent App for Desktop and Phone (Not Benchmarked)', anchor: '#skales' },
       { label: 'Android Fragmentation: Storage, RAM, and Background Limits', anchor: '#android-fragmentation' },
       { label: 'Android Share Sheet Integration', anchor: '#share-sheet' },
       { label: 'Sideload and Termux Paths', anchor: '#sideload-paths' },
@@ -540,6 +541,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales: Agent App for Desktop and Phone (Not Benchmarked)',
+        content:
+          '**Skales is a proprietary AI agent app for Windows, Mac, Linux, Android and iPhone; its mobile app is available on Google Play.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**What it does:** The maker describes an agent that plans and carries out multi-step tasks with tools and memory, using a model you choose. The phone app runs on its own or pairs with the desktop by QR code over an end-to-end encrypted relay, and the mobile page says it can also run a model on the device. We did not verify any of this.',
+          '**Models:** For the Skales app as a whole, the maker names a free trial model, your own provider keys, Skales Local, Ollama and LM Studio; which of these the phone app supports was not checked.',
+          '**Requirements and price:** Android 10+ per the maker. Skales is free for private use, education and businesses of up to two people; the Google Play listing renders only with JavaScript and was not read, so its price, version and download count are unverified.',
+          '**Privacy and licence:** The privacy notice describes Skales as installed programs, not a cloud service, with API keys held in the operating system\'s secure storage on Android and iOS. The licence is proprietary and the source code is not published, so these claims cannot be audited independently.',
+          '**Install path:** Google Play. The desktop version 12.9.65 was released on 10 November 2026; the phone app\'s own version was not checked.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the developer\'s website, privacy notice, licence and GitHub repository; we have not opened Skales on our test phones. Full notes: [Skales review](/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android Fragmentation: Storage, RAM, and Background Limits',
@@ -819,6 +839,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server: lokaler API-Server auf dem Telefon (nicht gemessen)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: einfacher Offline-Chat mit integrierten Modellen (nicht gemessen)', anchor: '#on-device-llm' },
       { label: 'Conduit: Client für Open WebUI und eigene Endpunkte (nicht gemessen)', anchor: '#conduit' },
+      { label: 'Skales: Agenten-App für Desktop und Smartphone (nicht gemessen)', anchor: '#skales' },
       { label: 'Android-Fragmentierung: Speicher, RAM und Hintergrundlimits', anchor: '#android-fragmentation' },
       { label: 'Android Share Sheet Integration', anchor: '#share-sheet' },
       { label: 'Sideload- und Termux-Wege', anchor: '#sideload-paths' },
@@ -1266,6 +1287,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales: Agenten-App für Desktop und Smartphone (nicht gemessen)',
+        content:
+          '**Skales ist eine proprietäre KI-Agenten-App für Windows, Mac, Linux, Android und iPhone; die Mobil-App gibt es bei Google Play.** Sie wurde nach dem Hauptvergleich ergänzt, steht deshalb nicht in der Vergleichstabelle und war nicht Teil unseres Tests.',
+        items: [
+          '**Funktionen:** Laut Hersteller ein Agent, der mehrstufige Aufgaben mit Werkzeugen und Gedächtnis plant und ausführt, mit einem Modell Ihrer Wahl. Die Handy-App läuft allein oder koppelt sich per QR-Code über ein Ende-zu-Ende-verschlüsseltes Relay mit dem Desktop; laut Mobilseite kann sie auch ein Modell auf dem Gerät ausführen. Das haben wir nicht überprüft.',
+          '**Modelle:** Für die Skales-App insgesamt nennt der Hersteller ein kostenloses Testmodell, eigene Anbieter-Schlüssel, Skales Local, Ollama und LM Studio; welche davon die Handy-App unterstützt, haben wir nicht geprüft.',
+          '**Anforderungen und Preis:** Android 10 oder neuer laut Hersteller. Skales ist für private Nutzung, Bildung und Unternehmen mit bis zu zwei Personen kostenlos; der Google-Play-Eintrag wird nur mit JavaScript dargestellt und wurde nicht gelesen, daher sind Preis, Version und Downloadzahl nicht geprüft.',
+          '**Datenschutz und Lizenz:** Die Datenschutzerklärung beschreibt Skales als installierte Programme, nicht als Cloud-Dienst; API-Schlüssel liegen unter Android und iOS im sicheren Speicher des Betriebssystems. Die Lizenz ist proprietär und der Quellcode nicht veröffentlicht, daher lassen sich diese Angaben nicht unabhängig prüfen.',
+          '**Installationsweg:** Google Play. Die Desktop-Version 12.9.65 erschien am 10. November 2026; die Version der Handy-App haben wir nicht geprüft.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus der Website, der Datenschutzerklärung, der Lizenz und dem GitHub-Repository des Entwicklers; wir haben Skales nicht auf unseren Testtelefonen geöffnet. Alle Details: [Skales-Rezension](/de/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android-Fragmentierung: Speicher, RAM und Hintergrundlimits',
@@ -1568,6 +1608,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server : serveur API local sur votre téléphone (non mesuré)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM : chat hors ligne simple avec modèles intégrés (non mesuré)', anchor: '#on-device-llm' },
       { label: 'Conduit : client pour Open WebUI et vos propres serveurs (non mesuré)', anchor: '#conduit' },
+      { label: 'Skales : appli d’agent pour ordinateur et téléphone (non mesuré)', anchor: '#skales' },
       { label: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan', anchor: '#android-fragmentation' },
       { label: 'Intégration feuille de partage Android', anchor: '#share-sheet' },
       { label: 'Chemins de sideload et Termux : L\'avantage Android', anchor: '#sideload-paths' },
@@ -2015,6 +2056,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales : appli d’agent pour ordinateur et téléphone (non mesuré)',
+        content:
+          '**Skales est une appli d’agent IA propriétaire pour Windows, Mac, Linux, Android et iPhone ; son appli mobile est disponible sur Google Play.** Elle a été ajoutée après le comparatif principal ; elle ne figure donc pas dans le tableau comparatif et n’a pas fait partie de nos tests.',
+        items: [
+          '**Fonctions :** Selon l’éditeur, un agent qui planifie et exécute des tâches en plusieurs étapes avec des outils et une mémoire, avec le modèle de votre choix. L’appli mobile fonctionne seule ou s’associe au poste de travail par QR code via un relais chiffré de bout en bout ; la page mobile dit qu’elle peut aussi exécuter un modèle sur l’appareil. Nous n’avons rien vérifié de cela.',
+          '**Modèles :** Pour l’appli Skales dans son ensemble, l’éditeur cite un modèle d’essai gratuit, vos propres clés de fournisseur, Skales Local, Ollama et LM Studio ; nous n’avons pas vérifié lesquels l’appli mobile prend en charge.',
+          '**Configuration et prix :** Android 10 ou ultérieur selon l’éditeur. Skales est gratuit pour un usage privé, l’éducation et les entreprises de deux personnes au plus ; la fiche Google Play ne s’affiche qu’avec JavaScript et n’a pas été lue, donc son prix, sa version et son nombre de téléchargements ne sont pas vérifiés.',
+          '**Confidentialité et licence :** L’avis de confidentialité décrit Skales comme des programmes installés, et non comme un service cloud ; les clés d’API sont conservées dans le stockage sécurisé du système sur Android et iOS. La licence est propriétaire et le code source n’est pas publié ; ces affirmations ne peuvent donc pas être auditées de façon indépendante.',
+          '**Voie d’installation :** Google Play. La version de bureau 12.9.65 a été publiée le 10 novembre 2026 ; nous n’avons pas vérifié la version propre à l’appli mobile.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent du site web, de l’avis de confidentialité, de la licence et du dépôt GitHub du développeur ; nous n’avons pas ouvert Skales sur nos téléphones de test. Notes complètes : [test de Skales](/fr/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan',
@@ -2298,6 +2358,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server:スマホで動くローカルAPIサーバー(未計測)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM:内蔵モデルで使えるシンプルなオフラインチャット(未計測)', anchor: '#on-device-llm' },
       { label: 'Conduit：Open WebUIと自前エンドポイント向けクライアント（未計測）', anchor: '#conduit' },
+      { label: 'Skales：デスクトップとスマートフォン向けエージェントアプリ（未計測）', anchor: '#skales' },
       { label: 'Android の断片化：ストレージ、RAM、バックグラウンド制限', anchor: '#android-fragmentation' },
       { label: 'Android シェアシート統合', anchor: '#share-sheet' },
       { label: 'サイドロードと Termux パス：Android の利点', anchor: '#sideload-paths' },
@@ -2745,6 +2806,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales：デスクトップとスマートフォン向けエージェントアプリ（未計測）',
+        content:
+          '**Skalesは、Windows、Mac、Linux、Android、iPhone向けのプロプライエタリなAIエージェントアプリで、モバイルアプリはGoogle Playで入手できます。**メインの比較のあとに追加したため、比較表には含まれず、当方のテスト対象でもありません。',
+        items: [
+          '**機能：**開発元の説明では、選んだモデルを使い、ツールとメモリで複数ステップのタスクを計画・実行するエージェントです。スマートフォンアプリは単独で動くか、QRコードでエンドツーエンド暗号化リレー経由でデスクトップとペアリングでき、モバイルページによれば端末上でモデルを動かすこともできます。これらは確認していません。',
+          '**モデル：**Skalesアプリ全体について、開発元は無料の試用モデル、自分のプロバイダーキー、Skales Local、Ollama、LM Studioを挙げています。スマートフォンアプリがどれに対応するかは確認していません。',
+          '**動作要件と価格：**開発元によるとAndroid 10以降。Skalesは個人利用、教育、2人までの事業者なら無料です。Google Playの掲載ページはJavaScriptがないと表示されず読めていないため、価格、バージョン、ダウンロード数は未確認です。',
+          '**プライバシーとライセンス：**プライバシー通知は、Skalesをクラウドサービスではなくインストール型のプログラムと説明し、APIキーはAndroidとiOSではOSの安全なストレージに保管されるとしています。ライセンスはプロプライエタリでソースコードは公開されていないため、これらの記述を独立して検証することはできません。',
+          '**入手経路：**Google Play。デスクトップ版12.9.65は2026年11月10日公開です。スマートフォンアプリ自体のバージョンは確認していません。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記の内容は、開発者の公式サイト、プライバシー通知、ライセンス、GitHubリポジトリに基づきます。当方のテスト用スマートフォンでSkalesは開いていません。詳細：[Skalesレビュー](/ja/power-local-llm/skales-review)。',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android の断片化：ストレージ、RAM、バックグラウンド制限',
@@ -3044,6 +3124,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server:手机上的本地 API 服务器(未实测)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM:内置模型的简单离线聊天(未实测)', anchor: '#on-device-llm' },
       { label: 'Conduit：面向 Open WebUI 和自有接口的客户端（未测速）', anchor: '#conduit' },
+      { label: 'Skales：面向桌面和手机的智能体应用（未测速）', anchor: '#skales' },
       { label: '安卓碎片化：存储、RAM 与后台限制', anchor: '#android-fragmentation' },
       { label: '安卓分享菜单集成', anchor: '#share-sheet' },
       { label: '侧载与 Termux 路径', anchor: '#sideload-paths' },
@@ -3492,6 +3573,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales：面向桌面和手机的智能体应用（未测速）',
+        content:
+          '**Skales 是一款专有的 AI 智能体应用，支持 Windows、Mac、Linux、Android 和 iPhone；其手机应用可在 Google Play 获取。**它是在主体对比之后加入的，因此不在对比表中，也未参与我们的测试。',
+        items: [
+          '**功能：**据开发者介绍，这是一个用你选择的模型、借助工具和记忆来规划并执行多步任务的智能体。手机应用可独立运行，也可通过二维码经端到端加密的中继与桌面端配对；移动端页面称它还能在设备上运行模型。以上我们均未验证。',
+          '**模型：**就 Skales 应用整体而言，开发者列出了免费试用模型、你自己的服务商密钥、Skales Local、Ollama 和 LM Studio；手机应用支持其中哪些，我们没有核实。',
+          '**要求与价格：**据开发者称需要 Android 10 或更高。Skales 对个人使用、教育和不超过两人的企业免费；Google Play 页面只有启用 JavaScript 才能显示，我们没有读取，因此价格、版本和下载量均未核实。',
+          '**隐私与许可：**隐私声明把 Skales 描述为安装在本机的程序，而非云服务；在 Android 和 iOS 上，API 密钥保存在操作系统的安全存储中。许可为专有，源代码未公开，因此这些说法无法被独立审计。',
+          '**安装途径：**Google Play。桌面版 12.9.65 发布于 2026 年 11 月 10 日；手机应用自身的版本我们没有核实。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自开发者官网、隐私声明、许可文本和 GitHub 仓库；我们没有在测试手机上打开过 Skales。完整说明：[Skales 评测](/zh/power-local-llm/skales-review)。',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: '安卓碎片化：存储、RAM 与后台限制',
@@ -3771,6 +3871,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server: servidor API local en tu teléfono (sin medir)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: chat sin conexión sencillo con modelos integrados (sin medir)', anchor: '#on-device-llm' },
       { label: 'Conduit: cliente para Open WebUI y tus propios endpoints (sin medir)', anchor: '#conduit' },
+      { label: 'Skales: app de agente para escritorio y móvil (sin medir)', anchor: '#skales' },
       { label: 'Fragmentación Android: almacenamiento, RAM y límites en segundo plano', anchor: '#android-fragmentation' },
       { label: 'Integración con el panel compartir de Android', anchor: '#share-sheet' },
       { label: 'Rutas de sideload y Termux', anchor: '#sideload-paths' },
@@ -4218,6 +4319,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales: app de agente para escritorio y móvil (sin medir)',
+        content:
+          '**Skales es una app de agente de IA propietaria para Windows, Mac, Linux, Android y iPhone; su app móvil está disponible en Google Play.** Se añadió después de la comparativa principal, así que no figura en la tabla comparativa ni formó parte de nuestras pruebas.',
+        items: [
+          '**Qué hace:** Según el desarrollador, un agente que planifica y ejecuta tareas de varios pasos con herramientas y memoria, usando el modelo que elijas. La app del móvil funciona sola o se empareja con el escritorio mediante código QR a través de un relé cifrado de extremo a extremo, y la página móvil dice que también puede ejecutar un modelo en el dispositivo. No hemos verificado nada de esto.',
+          '**Modelos:** Para la app Skales en conjunto, el desarrollador menciona un modelo de prueba gratuito, tus propias claves de proveedor, Skales Local, Ollama y LM Studio; no comprobamos cuáles admite la app móvil.',
+          '**Requisitos y precio:** Android 10 o posterior según el desarrollador. Skales es gratis para uso privado, educación y empresas de hasta dos personas; la ficha de Google Play solo se muestra con JavaScript y no se leyó, así que su precio, versión y número de descargas no están verificados.',
+          '**Privacidad y licencia:** El aviso de privacidad describe Skales como programas instalados, no como un servicio en la nube; las claves de API se guardan en el almacenamiento seguro del sistema operativo en Android e iOS. La licencia es propietaria y el código fuente no está publicado, por lo que estas afirmaciones no se pueden auditar de forma independiente.',
+          '**Vía de instalación:** Google Play. La versión de escritorio 12.9.65 se publicó el 10 de noviembre de 2026; no comprobamos la versión propia de la app móvil.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden del sitio web, el aviso de privacidad, la licencia y el repositorio de GitHub del desarrollador; no hemos abierto Skales en nuestros teléfonos de prueba. Notas completas: [reseña de Skales](/es/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Fragmentación Android: almacenamiento, RAM y límites en segundo plano',
@@ -4497,6 +4617,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server: servidor de API local no seu celular (não medido)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: chat offline simples com modelos integrados (não medido)', anchor: '#on-device-llm' },
       { label: 'Conduit: cliente para Open WebUI e seus próprios endpoints (não medido)', anchor: '#conduit' },
+      { label: 'Skales: app de agente para desktop e celular (não medido)', anchor: '#skales' },
       { label: 'Fragmentação do Android: armazenamento, RAM e limites em segundo plano', anchor: '#android-fragmentation' },
       { label: 'Integração com o painel de compartilhamento do Android', anchor: '#share-sheet' },
       { label: 'Caminhos de sideload e Termux', anchor: '#sideload-paths' },
@@ -4944,6 +5065,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales: app de agente para desktop e celular (não medido)',
+        content:
+          '**O Skales é um app de agente de IA proprietário para Windows, Mac, Linux, Android e iPhone; o app para celular está disponível no Google Play.** Foi adicionado depois do comparativo principal, por isso não está na tabela comparativa nem fez parte dos nossos testes.',
+        items: [
+          '**O que faz:** Segundo o desenvolvedor, um agente que planeja e executa tarefas de várias etapas com ferramentas e memória, usando o modelo que você escolher. O app do celular funciona sozinho ou se emparelha com o desktop por QR code por meio de um relé criptografado de ponta a ponta, e a página mobile diz que ele também pode rodar um modelo no aparelho. Não verificamos nada disso.',
+          '**Modelos:** Para o app Skales como um todo, o desenvolvedor cita um modelo de teste gratuito, suas próprias chaves de provedor, Skales Local, Ollama e LM Studio; não verificamos quais deles o app do celular suporta.',
+          '**Requisitos e preço:** Android 10 ou superior segundo o desenvolvedor. O Skales é gratuito para uso privado, educação e empresas de até duas pessoas; a página do Google Play só é exibida com JavaScript e não foi lida, então preço, versão e número de downloads não estão verificados.',
+          '**Privacidade e licença:** O aviso de privacidade descreve o Skales como programas instalados, não como um serviço em nuvem; as chaves de API ficam no armazenamento seguro do sistema operacional no Android e no iOS. A licença é proprietária e o código-fonte não é publicado, então essas afirmações não podem ser auditadas de forma independente.',
+          '**Caminho de instalação:** Google Play. A versão para desktop 12.9.65 foi lançada em 10 de novembro de 2026; não verificamos a versão própria do app do celular.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm do site, do aviso de privacidade, da licença e do repositório do GitHub do desenvolvedor; não abrimos o Skales em nossos celulares de teste. Notas completas: [análise do Skales](/pt/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Fragmentação do Android: armazenamento, RAM e limites em segundo plano',
@@ -5223,6 +5363,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server: خادم API محلي على هاتفك (لم يُقَس)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: دردشة بسيطة دون اتصال بنماذج مدمجة (لم يُقَس)', anchor: '#on-device-llm' },
       { label: 'Conduit: عميل لـ Open WebUI ونقاط النهاية الخاصة بك (لم يُقَس)', anchor: '#conduit' },
+      { label: 'Skales: تطبيق وكيل لسطح المكتب والهاتف (لم يُقَس)', anchor: '#skales' },
       { label: 'تشرذم Android: التخزين والذاكرة وحدود الخلفية', anchor: '#android-fragmentation' },
       { label: 'التكامل مع قائمة المشاركة في Android', anchor: '#share-sheet' },
       { label: 'مسارات التحميل الجانبي وTermux', anchor: '#sideload-paths' },
@@ -5670,6 +5811,25 @@ snippetBlocks: [
           },
         ],
       },
+      skales: {
+        id: 'skales',
+        title: 'Skales: تطبيق وكيل لسطح المكتب والهاتف (لم يُقَس)',
+        content:
+          '**Skales تطبيق وكيل ذكاء اصطناعي مغلق المصدر لأنظمة Windows وMac وLinux وAndroid وiPhone، وتطبيقه للهاتف متاح على Google Play.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن جزءًا من اختباراتنا.',
+        items: [
+          '**ما يفعله:** يصفه المطوّر بأنه وكيل يخطط لمهام متعددة الخطوات وينفذها بالأدوات والذاكرة باستخدام نموذج تختاره. يعمل تطبيق الهاتف بمفرده أو يقترن بسطح المكتب برمز QR عبر مرحّل مشفّر من طرف إلى طرف، وتقول صفحة الجوال إنه يستطيع أيضًا تشغيل نموذج على الجهاز. لم نتحقق من أي من ذلك.',
+          '**النماذج:** بالنسبة إلى تطبيق Skales ككل، يذكر المطوّر نموذجًا تجريبيًا مجانيًا ومفاتيح المزوّد الخاصة بك وSkales Local وOllama وLM Studio؛ ولم نتحقق مما يدعمه تطبيق الهاتف منها.',
+          '**المتطلبات والسعر:** Android 10 أو أحدث بحسب المطوّر. Skales مجاني للاستخدام الخاص والتعليم والشركات حتى شخصين؛ وصفحة Google Play لا تُعرض إلا مع JavaScript ولم تُقرأ، لذا لم يُتحقق من السعر والإصدار وعدد التنزيلات.',
+          '**الخصوصية والترخيص:** يصف إشعار الخصوصية Skales بأنه برامج مثبّتة وليس خدمة سحابية، وتُحفظ مفاتيح API في التخزين الآمن لنظام التشغيل على Android وiOS. الترخيص مغلق المصدر والشيفرة المصدرية غير منشورة، لذلك لا يمكن تدقيق هذه الادعاءات بصورة مستقلة.',
+          '**طريقة التثبيت:** Google Play. صدر إصدار سطح المكتب 12.9.65 في 10 نوفمبر 2026؛ ولم نتحقق من إصدار تطبيق الهاتف نفسه.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'التفاصيل أعلاه مصدرها موقع المطوّر وإشعار الخصوصية والترخيص ومستودع GitHub؛ ولم نفتح Skales على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Skales](/ar/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'تشرذم Android: التخزين والذاكرة وحدود الخلفية',
@@ -5949,6 +6109,7 @@ snippetBlocks: [
       { label: 'Mobile LM Server: 휴대폰에서 돌리는 로컬 API 서버(미측정)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: 내장 모델로 쓰는 간단한 오프라인 채팅(미측정)', anchor: '#on-device-llm' },
       { label: 'Conduit: Open WebUI와 자체 엔드포인트용 클라이언트(미측정)', anchor: '#conduit' },
+      { label: 'Skales: 데스크톱·휴대폰용 에이전트 앱(미측정)', anchor: '#skales' },
       { label: 'Android 파편화: 스토리지, RAM, 백그라운드 제한', anchor: '#android-fragmentation' },
       { label: 'Android 공유 패널 통합', anchor: '#share-sheet' },
       { label: '사이드로드 및 Termux 경로', anchor: '#sideload-paths' },
@@ -6397,6 +6558,25 @@ snippetBlocks: [
           {
             type: 'tip',
             text: '위 내용은 Play 등록 정보, 개발자 웹사이트, 개인정보 처리방침, GitHub 저장소에서 가져온 것이며, 저희 테스트 휴대폰에서 Conduit을 열어 보지는 않았습니다. 자세한 내용: [Conduit 리뷰](/ko/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: 데스크톱·휴대폰용 에이전트 앱(미측정)',
+        content:
+          '**Skales는 Windows, Mac, Linux, Android, iPhone용 독점 AI 에이전트 앱이며, 모바일 앱은 Google Play에서 받을 수 있습니다.** 주요 비교 이후에 추가되어 비교표에 없으며 저희 테스트 대상도 아니었습니다.',
+        items: [
+          '**기능:** 개발사 설명에 따르면 사용자가 고른 모델로 도구와 메모리를 활용해 여러 단계의 작업을 계획하고 실행하는 에이전트입니다. 휴대폰 앱은 단독으로 동작하거나 QR 코드로 종단간 암호화 릴레이를 거쳐 데스크톱과 연결되며, 모바일 페이지는 기기에서 모델도 실행할 수 있다고 설명합니다. 이 내용은 확인하지 않았습니다.',
+          '**모델:** Skales 앱 전체 기준으로 개발사는 무료 체험 모델, 자신의 제공업체 키, Skales Local, Ollama, LM Studio를 언급합니다. 휴대폰 앱이 이 중 무엇을 지원하는지는 확인하지 않았습니다.',
+          '**요구 사항과 가격:** 개발사에 따르면 Android 10 이상. Skales는 개인 사용, 교육, 2인 이하 사업체에는 무료입니다. Google Play 등록 정보는 JavaScript가 있어야 표시되어 읽지 못했으므로 가격, 버전, 다운로드 수는 확인되지 않았습니다.',
+          '**개인정보와 라이선스:** 개인정보 처리 안내는 Skales를 클라우드 서비스가 아닌 설치형 프로그램으로 설명하며, Android와 iOS에서는 API 키를 운영체제의 보안 저장소에 보관한다고 밝힙니다. 라이선스는 독점이고 소스 코드는 공개되지 않아 이 설명들을 독립적으로 검증할 수 없습니다.',
+          '**설치 경로:** Google Play. 데스크톱 버전 12.9.65는 2026년 11월 10일에 출시되었으며, 휴대폰 앱 자체의 버전은 확인하지 않았습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 개발자 웹사이트, 개인정보 처리 안내, 라이선스, GitHub 저장소에서 가져온 것이며, 저희 테스트 휴대폰에서 Skales를 열어 보지는 않았습니다. 자세한 내용: [Skales 리뷰](/ko/power-local-llm/skales-review).',
           },
         ],
       },
