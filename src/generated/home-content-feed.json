@@ -42122,81 +42122,81 @@
   {
     "lang": "en",
     "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
-    "excerpt": "StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, privacy, limits. Not tested.",
+    "excerpt": "StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, limits. Hands-on test linked.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "StratoSort Rezension: Lokaler KI-Dateiorganizer für Mac, Windows und Linux",
-    "excerpt": "StratoSort Rezension: KI-Dateiorganizer für Mac, Windows, Linux mit lokalen llama.cpp-Modellen, offline nach Installation. Lizenz, Grenzen. Nicht getestet.",
+    "excerpt": "StratoSort Rezension: KI-Dateiorganizer für Mac, Windows, Linux mit lokalen llama.cpp-Modellen, offline nach Installation. Lizenz, Grenzen. Praxistest verlinkt.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/de/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Test de StratoSort : organiseur de fichiers IA local pour Mac, Windows et Linux",
-    "excerpt": "Test de StratoSort : organiseur de fichiers IA pour Mac, Windows, Linux, modèles llama.cpp locaux, hors ligne après installation. Limites. Non testé.",
+    "excerpt": "Test de StratoSort : organiseur de fichiers IA pour Mac, Windows, Linux, modèles llama.cpp locaux, hors ligne après installation. Limites. Test pratique lié.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/fr/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "StratoSort レビュー：Mac・Windows・Linux向けのローカルAIファイル整理アプリ",
-    "excerpt": "StratoSortのレビュー：Mac・Windows・Linux向けのAIファイル整理アプリ。PC上でllama.cppを実行し、導入後はオフライン対応。ライセンスと制限を解説。実機検証なし。",
+    "excerpt": "StratoSortのレビュー：Mac・Windows・Linux向けのAIファイル整理アプリ。PC上でllama.cppを実行し、導入後はオフライン対応。ライセンスと制限を解説。実機テストへのリンクあり。",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/ja/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "StratoSort评测：适用于Mac、Windows和Linux的本地AI文件整理工具",
-    "excerpt": "StratoSort评测：适用于Mac、Windows和Linux的AI文件整理应用，本地运行llama.cpp模型，安装后可离线使用。许可、隐私与限制，未经实测。",
+    "excerpt": "StratoSort评测：适用于Mac、Windows和Linux的AI文件整理应用，本地运行llama.cpp模型，安装后可离线使用。许可、隐私与限制，已链接实测文章。",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/zh/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Reseña de StratoSort: organizador de archivos con IA local para Mac, Windows y Linux",
-    "excerpt": "Reseña de StratoSort: organizador de archivos con IA para Mac, Windows y Linux con modelos llama.cpp locales, sin conexión tras instalar. No probada.",
+    "excerpt": "Reseña de StratoSort: organizador de archivos con IA para Mac, Windows y Linux con modelos llama.cpp locales, sin conexión tras instalar. Prueba práctica enlazada.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/es/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Análise do StratoSort: organizador de arquivos com IA local para Mac, Windows e Linux",
-    "excerpt": "Análise do StratoSort: organizador de arquivos com IA para Mac, Windows e Linux, com modelos llama.cpp locais que funcionam offline. Não testado.",
+    "excerpt": "Análise do StratoSort: organizador de arquivos com IA para Mac, Windows e Linux, com modelos llama.cpp locais que funcionam offline. Teste prático vinculado.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/pt/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي المحلي لأجهزة Mac وWindows وLinux",
-    "excerpt": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر.",
+    "excerpt": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. مع رابط الاختبار العملي.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/ar/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "StratoSort 리뷰: Mac·Windows·Linux용 로컬 AI 파일 정리 앱",
-    "excerpt": "StratoSort 리뷰: llama.cpp 로컬 모델로 파일을 정리하는 Mac·Windows·Linux용 AI 앱. 설치 후 오프라인 작동. 라이선스, 한계. 테스트 안 함.",
+    "excerpt": "StratoSort 리뷰: llama.cpp 로컬 모델로 파일을 정리하는 Mac·Windows·Linux용 AI 앱. 설치 후 오프라인 작동. 라이선스, 한계. 직접 테스트 링크.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-10",
+    "dateModified": "2026-11-17",
     "url": "/ko/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -78252,6 +78252,87 @@
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/zh/power-local-llm/sprich-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦StratoSort⁩ على جهاز ⁦Mac⁩ بمعالج ⁦M4 Pro⁩ وذاكرة ⁦24 GB⁩: تشغيل تجريبي قبل نقل أي ملف، ومطابقة متفاوتة، وربط بتطبيق ذكاء اصطناعي محلي آخر عبر ⁦MCP⁩",
+    "excerpt": "جلسة ثانية بعد أن لم تنجح محاولة المختبِر الأولى: إعداد موجَّه، وتشغيل تجريبي، ومراجعة كل ملف على حدة، وتشغيل فرز كامل، وجدول بيانات قُرئ منه ⁦300⁩ حرف فقط، واستعلام فهرس المستندات من تطبيق ذكاء اصطناعي محلي ثانٍ عبر ⁦MCP⁩.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ar/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "StratoSort auf einem M4 Pro Mac mit 24 GB: ein Probelauf, bevor eine Datei verschoben wurde, gemischte Zuordnung und eine MCP-Anbindung an eine zweite lokale KI-App",
+    "excerpt": "Eine zweite Sitzung, nachdem der erste Versuch des Testers nicht geklappt hatte: geführtes Setup, ein Probelauf, Prüfung pro Datei und ein vollständiger Sortierlauf, eine Tabelle, die als 300 Zeichen gelesen wurde, und der Dokumentenindex, der über MCP aus einer zweiten lokalen KI-App abgefragt wurde.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/de/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "StratoSort en un Mac M4 Pro de 24 GB: una simulación antes de mover ningún archivo, coincidencias dispares y un enlace con otra app de IA local por MCP",
+    "excerpt": "Una segunda sesión después de que el primer intento del evaluador no saliera bien: configuración guiada, una simulación, revisión archivo por archivo y una ejecución completa de ordenación, una hoja de cálculo leída como 300 caracteres y el índice de documentos consultado desde una segunda app de IA local por MCP.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/es/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "StratoSort sur un Mac M4 Pro de 24 GB : un test à blanc avant tout déplacement de fichier, un tri mitigé et un lien avec une autre appli d’IA locale via MCP",
+    "excerpt": "Une seconde session après une première tentative qui n’avait pas abouti : configuration guidée, test à blanc, vérification fichier par fichier et tri complet, un tableur lu sur 300 caractères, et l’index des documents interrogé depuis une seconde appli d’IA locale via MCP.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/fr/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのM4 Pro MacでのStratoSort：ファイルを動かす前のドライラン、混在した振り分け、MCP経由での別のローカルAIアプリとの連携",
+    "excerpt": "テスターの最初の試行がうまくいかなかったあとの2回目のセッション：ガイド付きセットアップ、ドライラン、ファイルごとの確認と全体の振り分け、300文字として読まれたスプレッドシート、そして2つ目のローカルAIアプリからMCP経由で照会したドキュメントインデックス。",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ja/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "StratoSort on an M4 Pro Mac with 24 GB: A Dry Run Before Any File Moved, Mixed Matching, and a Link to Another Local AI App over MCP",
+    "excerpt": "A second session after the tester's first attempt did not work out: guided setup, a dry run, per-file review and a full sorting run, a spreadsheet read as 300 characters, and the document index queried from a second local AI app over MCP.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB M4 Pro Mac에서 StratoSort 직접 사용: 파일을 옮기기 전의 시험 실행, 엇갈린 매칭, 그리고 MCP로 다른 로컬 AI 앱과의 연결",
+    "excerpt": "테스터의 첫 시도가 잘 풀리지 않은 뒤 진행한 두 번째 세션입니다. 안내형 설정, 시험 실행, 파일별 검토와 전체 정리 실행, 300자로 읽힌 스프레드시트, 그리고 MCP로 두 번째 로컬 AI 앱에서 조회한 문서 색인을 다룹니다.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ko/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "StratoSort em um Mac M4 Pro com 24 GB: uma simulação antes de qualquer arquivo ser movido, classificação mista e uma conexão com outro app de IA local via MCP",
+    "excerpt": "Uma segunda sessão depois que a primeira tentativa do testador não deu certo: configuração guiada, uma simulação, revisão arquivo a arquivo e uma classificação completa, uma planilha lida como 300 caracteres e o índice de documentos consultado de um segundo app de IA local via MCP.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/pt/power-local-llm/stratosort-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB 内存 M4 Pro Mac 上的 StratoSort：移动文件之前的试运行、参差不齐的匹配，以及通过 MCP 连接另一款本地 AI 应用",
+    "excerpt": "测试者第一次尝试没有成功之后的第二次测试：引导式设置、试运行、逐个文件审核和完整的整理运行，一份被读成 300 个字符的电子表格，以及从另一款本地 AI 应用通过 MCP 查询文档索引。",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/zh/power-local-llm/stratosort-hands-on-test",
     "cluster": "power-local-llm"
   },
   {
