@@ -5438,7 +5438,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -10448,7 +10448,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -10809,6 +10809,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "CozyClay": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "cozyclay-review",
+        "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
+        "url": "/power-local-llm/cozyclay-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Lyonesse": {
@@ -12607,6 +12621,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cozyclay-review",
+        "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
+        "url": "/power-local-llm/cozyclay-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "screenpipe-review",
         "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
         "url": "/power-local-llm/screenpipe-review",
@@ -12668,17 +12690,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openmausbot-review",
-        "title": "OpenMausBot Review: Is This Open-Source Grok Bot Local AI?",
-        "url": "/power-local-llm/openmausbot-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 261,
+    "totalCount": 262,
     "capped": true
   },
   "Qdrant": {
@@ -14556,7 +14570,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "about"
       },
       {
