@@ -2,7 +2,7 @@
 // Slug: stratosort-review
 // Companion to: ai-file-sorter-review, hyperlink-nexa-review, anythingllm-review
 // Facts verified 2026-11-10 against stratosort.com (home, privacy, docs, config, network transparency) and GitHub iLevyTate/StratoSortStack (API, LICENSE, Releases v5.1.2 of 2026-11-01).
-// Not hands-on tested. Stale-project warning is OFF (last push 2026-11-10).
+// One first-hand session (hands-on test, 2026-11-17); not a full evaluation. Stale-project warning is OFF (last push 2026-11-10).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -12,14 +12,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-en.webp',
     title: 'StratoSort Review: Local AI File Organizer for Mac, Windows and Linux',
     seoTitle: 'StratoSort Review: Local AI File Organizer for Desktop',
     intro: "StratoSort is a desktop app that sorts files by what is inside them and doubles as a private search, chat and knowledge-graph tool over your documents, using language models that run on your own computer through llama.cpp. Per its documentation, it moves files only after you approve. This review covers what the maker's website, documentation and GitHub repository say, where the local path ends, how the licence limits commercial use, and how StratoSort compares with similar tools in the directory.",
-    metaDescription: 'StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, privacy, limits. Not tested.',
+    metaDescription: 'StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, limits. Hands-on test linked.',
     twitterDescription: 'StratoSort review: local AI that renames, sorts and searches your files on Mac, Windows and Linux. Free for personal use. Privacy, licence, limits and alternatives.',
     audience: 'People with cluttered document, scan, image and audio folders who want AI-suggested names and folders without uploading files to a cloud service — covers install, models, privacy, licence, limits and alternatives.',
     readTime: '8 min read',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: "**StratoSort is a desktop AI file organizer for Mac, Windows and Linux whose language models run on your own computer through llama.cpp and, per its documentation, work without internet once installed.** It is free for personal and other noncommercial use under the PolyForm Noncommercial licence; commercial use needs a paid licence. The newest release is version 5.1.2 from 1 November 2026. This review rests on the maker's website, documentation and GitHub repository, not on hands-on testing.",
+    leadAnswerBlock: "**StratoSort is a desktop AI file organizer for Mac, Windows and Linux whose language models run on your own computer through llama.cpp and, per its documentation, work without internet once installed.** It is free for personal and other noncommercial use under the PolyForm Noncommercial licence; commercial use needs a paid licence. The newest release is version 5.1.2 from 1 November 2026. This review rests on the maker's website, documentation and GitHub repository; the one first-hand session is in the linked hands-on test.",
     quickAnswerTop: {
       en: {
         question: 'Is StratoSort a local AI file organizer?',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Maker: Kennedy Applied Sciences, Inc., with the code public on GitHub under iLevyTate.',
           'Maintenance: version 5.1.2 was released on 1 November 2026 and the repository was updated on 10 November 2026, so the project is actively developed.',
           'Knowledge OS: the maker says the search, chat and graph side is about half of what the app does, and that search matches exact terms such as invoice numbers as well as meaning.',
-          'Gaps: no hands-on testing here, a young public project, and models that need a large first download.',
+          'Gaps: one first-hand session so far (see the hands-on test), a young public project, and models that need a large first download.',
         ],
       },
       getItStratosort: {
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSort is a file organizer that reads content, not just file names.** It looks inside documents, spreadsheets, images, scans, audio and video, suggests a name and a folder, and moves files into "Smart Folders" that you describe in plain language.',
           'The repository is named StratoSortStack and describes itself as the successor of the original StratoSort; the website and this review use the name StratoSort. Beyond sorting, the app has a search, chat and graph side that the maker calls Knowledge OS and describes as about half of what it does, plus an opt-in local MCP server.',
-          'This review draws on the website, documentation, privacy policy and GitHub repository. It involved no hands-on testing, so how well the app names and sorts files, and how fast it runs, is not rated here.',
+          'This review draws on the website, documentation, privacy policy and GitHub repository. PromptQuorum also ran one first-hand session on a 24 GB M4 Pro Mac (see Related Reading): a dry run, a per-file review and a file move worked, but matching was mixed. It was a first session, not a full evaluation, so naming and sorting accuracy and speed are still not rated here.',
         ],
       },
       howToGetStarted: {
@@ -386,6 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AI File Sorter Review](/power-local-llm/ai-file-sorter-review) — an open-source app that proposes folders and file names.',
           '[Hyperlink (Nexa AI) Review](/power-local-llm/hyperlink-nexa-review) — local file search and chat for Mac and Windows.',
           '[AnythingLLM Review](/power-local-llm/anythingllm-review) — a document-chat workspace with local or cloud models.',
+          '[StratoSort Hands-on Test](/power-local-llm/stratosort-hands-on-test) — a second session on a 24 GB M4 Pro Mac: a dry run before any file moved, mixed matching, and a link to another local AI app over MCP; every statement is labelled by how it is known.',
           '[The Complete Local LLM Software Directory](/directory) — a broader directory of local AI tools across platforms.',
         ],
       },
@@ -395,14 +396,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-de.webp',
     title: 'StratoSort Rezension: Lokaler KI-Dateiorganizer für Mac, Windows und Linux',
     seoTitle: 'StratoSort Rezension: Lokaler KI-Dateiorganizer-App',
     intro: 'StratoSort ist eine Desktop-App, die Dateien nach ihrem Inhalt sortiert und zugleich als private Such-, Chat- und Wissensgraph-Anwendung für Ihre Dokumente dient. Dafür nutzt sie Sprachmodelle, die über llama.cpp auf Ihrem eigenen Computer laufen. Laut Dokumentation verschiebt sie Dateien erst nach Ihrer Freigabe. Diese Rezension fasst zusammen, was Website, Dokumentation und GitHub-Repository des Herstellers sagen, wo der lokale Weg endet, wie die Lizenz die kommerzielle Nutzung einschränkt und wie StratoSort im Vergleich zu ähnlichen Werkzeugen im Verzeichnis abschneidet.',
-    metaDescription: 'StratoSort Rezension: KI-Dateiorganizer für Mac, Windows, Linux mit lokalen llama.cpp-Modellen, offline nach Installation. Lizenz, Grenzen. Nicht getestet.',
+    metaDescription: 'StratoSort Rezension: KI-Dateiorganizer für Mac, Windows, Linux mit lokalen llama.cpp-Modellen, offline nach Installation. Lizenz, Grenzen. Praxistest verlinkt.',
     twitterDescription: 'StratoSort Rezension: lokale KI, die Ihre Dateien auf Mac, Windows und Linux umbenennt, sortiert und durchsucht. Kostenlos für private Nutzung. Datenschutz, Lizenz, Grenzen und Alternativen.',
     audience: 'Menschen mit unaufgeräumten Ordnern voller Dokumente, Scans, Bilder und Audiodateien, die sich von KI Namen und Ordner vorschlagen lassen möchten, ohne Dateien an einen Cloud-Dienst hochzuladen — behandelt Installation, Modelle, Datenschutz, Lizenz, Grenzen und Alternativen.',
     readTime: '8 Min. Lesezeit',
@@ -424,7 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**StratoSort ist ein KI-Dateiorganizer für Mac, Windows und Linux, dessen Sprachmodelle über llama.cpp auf Ihrem eigenen Computer laufen und laut Dokumentation nach der Installation ohne Internet funktionieren.** Die App ist für private und andere nichtkommerzielle Nutzung unter der PolyForm-Noncommercial-Lizenz kostenlos; für kommerzielle Nutzung ist eine kostenpflichtige Lizenz nötig. Die neueste Version ist 5.1.2 vom 1. November 2026. Diese Rezension stützt sich auf Website, Dokumentation und GitHub-Repository des Herstellers, nicht auf einen eigenen Praxistest.',
+    leadAnswerBlock: '**StratoSort ist ein KI-Dateiorganizer für Mac, Windows und Linux, dessen Sprachmodelle über llama.cpp auf Ihrem eigenen Computer laufen und laut Dokumentation nach der Installation ohne Internet funktionieren.** Die App ist für private und andere nichtkommerzielle Nutzung unter der PolyForm-Noncommercial-Lizenz kostenlos; für kommerzielle Nutzung ist eine kostenpflichtige Lizenz nötig. Die neueste Version ist 5.1.2 vom 1. November 2026. Diese Rezension stützt sich auf Website, Dokumentation und GitHub-Repository des Herstellers; die einzige Sitzung aus erster Hand steht im verlinkten Praxistest.',
     quickAnswerTop: {
       de: {
         question: 'Ist StratoSort ein lokaler KI-Dateiorganizer?',
@@ -477,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hersteller: Kennedy Applied Sciences, Inc., mit öffentlichem Code auf GitHub unter iLevyTate.',
           'Pflege: Version 5.1.2 erschien am 1. November 2026 und das Repository wurde am 10. November 2026 aktualisiert, das Projekt wird also aktiv entwickelt.',
           'Knowledge OS: Laut Hersteller macht die Seite aus Suche, Chat und Graph etwa die Hälfte dessen aus, was die App leistet, und die Suche findet sowohl exakte Begriffe wie Rechnungsnummern als auch inhaltlich passende Treffer.',
-          'Lücken: kein eigener Praxistest hier, ein junges öffentliches Projekt und Modelle, die einen großen ersten Download erfordern.',
+          'Lücken: bisher nur eine Sitzung aus erster Hand (siehe Praxistest), ein junges öffentliches Projekt und Modelle, die einen großen ersten Download erfordern.',
         ],
       },
       getItStratosort: {
@@ -549,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSort ist ein Dateiorganizer, der Inhalte liest, nicht nur Dateinamen.** Die App schaut in Dokumente, Tabellen, Bilder, Scans, Audio und Video, schlägt einen Namen und einen Ordner vor und verschiebt Dateien in „Smart Folders“, die Sie in einfacher Sprache beschreiben.',
           'Das Repository heißt StratoSortStack und bezeichnet sich als Nachfolger des ursprünglichen StratoSort; Website und diese Rezension verwenden den Namen StratoSort. Über das Sortieren hinaus hat die App eine Seite für Suche, Chat und Graph, die der Hersteller Knowledge OS nennt und als etwa die Hälfte dessen beschreibt, was sie leistet, sowie einen optionalen lokalen MCP-Server.',
-          'Diese Rezension stützt sich auf Website, Dokumentation, Datenschutzerklärung und GitHub-Repository. Einen Praxistest gab es nicht; wie gut die App Dateien benennt und sortiert und wie schnell sie läuft, wird hier daher nicht bewertet.',
+          'Diese Rezension stützt sich auf Website, Dokumentation, Datenschutzerklärung und GitHub-Repository. PromptQuorum hat außerdem eine Sitzung aus erster Hand auf einem M4-Pro-Mac mit 24 GB durchgeführt (siehe Weiterführende Artikel): Probelauf, Prüfung pro Datei und eine Verschiebung funktionierten, die Zuordnung war aber gemischt. Das war eine erste Sitzung, keine vollständige Bewertung; wie gut die App Dateien benennt und sortiert und wie schnell sie läuft, wird hier daher weiterhin nicht bewertet.',
         ],
       },
       howToGetStarted: {
@@ -769,6 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AI File Sorter Rezension](/de/power-local-llm/ai-file-sorter-review) — eine Open-Source-App, die Ordner und Dateinamen vorschlägt.',
           '[Hyperlink (Nexa AI) Rezension](/de/power-local-llm/hyperlink-nexa-review) — lokale Dateisuche und Chat für Mac und Windows.',
           '[AnythingLLM Rezension](/de/power-local-llm/anythingllm-review) — ein Arbeitsbereich für Dokument-Chat mit lokalen oder Cloud-Modellen.',
+          '[StratoSort Praxistest](/de/power-local-llm/stratosort-hands-on-test) — eine zweite Sitzung auf einem M4-Pro-Mac mit 24 GB: ein Probelauf, bevor eine Datei verschoben wurde, gemischte Zuordnung und eine MCP-Verbindung zu einer anderen lokalen KI-App; jede Aussage ist danach gekennzeichnet, woher sie stammt.',
           '[Das vollständige Local LLM Software Directory](/de/directory) — ein breiteres Verzeichnis lokaler KI-Werkzeuge über Plattformen hinweg.',
         ],
       },
@@ -778,14 +780,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-fr.webp',
     title: 'Test de StratoSort : organiseur de fichiers IA local pour Mac, Windows et Linux',
     seoTitle: 'Test de StratoSort : organiseur de fichiers IA local',
     intro: "StratoSort est une application de bureau qui trie les fichiers d'après leur contenu et sert aussi d'outil privé de recherche, de chat et de graphe de connaissances sur vos documents, grâce à des modèles de langage exécutés sur votre propre ordinateur via llama.cpp. Selon sa documentation, elle ne déplace les fichiers qu'après votre accord. Ce test résume ce que disent le site de l'éditeur, sa documentation et son dépôt GitHub, le point où s'arrête le traitement local, la façon dont la licence limite l'usage commercial, et comment StratoSort se compare aux outils similaires du répertoire.",
-    metaDescription: "Test de StratoSort : organiseur de fichiers IA pour Mac, Windows, Linux, modèles llama.cpp locaux, hors ligne après installation. Limites. Non testé.",
+    metaDescription: "Test de StratoSort : organiseur de fichiers IA pour Mac, Windows, Linux, modèles llama.cpp locaux, hors ligne après installation. Limites. Test pratique lié.",
     twitterDescription: "Test de StratoSort : une IA locale qui renomme, trie et recherche vos fichiers sur Mac, Windows et Linux. Gratuite à usage personnel. Confidentialité, licence, limites et alternatives.",
     audience: "Personnes dont les dossiers de documents, de scans, d'images et d'audio sont en désordre et qui veulent des noms et des dossiers suggérés par l'IA sans envoyer leurs fichiers à un service cloud — couvre l'installation, les modèles, la confidentialité, la licence, les limites et les alternatives.",
     readTime: '8 min de lecture',
@@ -807,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: "**StratoSort est un organiseur de fichiers IA de bureau pour Mac, Windows et Linux dont les modèles de langage s'exécutent sur votre propre ordinateur via llama.cpp et, selon sa documentation, fonctionnent sans Internet une fois installés.** Il est gratuit pour un usage personnel et tout autre usage non commercial sous la licence PolyForm Noncommercial ; l'usage commercial exige une licence payante. La version la plus récente est la 5.1.2, du 1er novembre 2026. Ce test s'appuie sur le site de l'éditeur, sa documentation et son dépôt GitHub, pas sur un essai pratique.",
+    leadAnswerBlock: "**StratoSort est un organiseur de fichiers IA de bureau pour Mac, Windows et Linux dont les modèles de langage s'exécutent sur votre propre ordinateur via llama.cpp et, selon sa documentation, fonctionnent sans Internet une fois installés.** Il est gratuit pour un usage personnel et tout autre usage non commercial sous la licence PolyForm Noncommercial ; l'usage commercial exige une licence payante. La version la plus récente est la 5.1.2, du 1er novembre 2026. Ce test s'appuie sur le site de l'éditeur, sa documentation et son dépôt GitHub ; l'unique session de première main figure dans le test pratique lié.",
     quickAnswerTop: {
       fr: {
         question: 'StratoSort est-il un organiseur de fichiers IA local ?',
@@ -860,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Éditeur : Kennedy Applied Sciences, Inc., avec le code public sur GitHub sous iLevyTate.",
           "Maintenance : la version 5.1.2 est sortie le 1er novembre 2026 et le dépôt a été mis à jour le 10 novembre 2026, le projet est donc développé activement.",
           "Knowledge OS : selon l'éditeur, la partie recherche, chat et graphe représente environ la moitié de ce que fait l'application, et la recherche retrouve les termes exacts, comme les numéros de facture, aussi bien que le sens.",
-          "Lacunes : aucun essai pratique ici, un projet public récent et des modèles qui exigent un gros premier téléchargement.",
+          "Lacunes : une seule session de première main pour l'instant (voir le test pratique), un projet public récent et des modèles qui exigent un gros premier téléchargement.",
         ],
       },
       getItStratosort: {
@@ -932,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**StratoSort est un organiseur de fichiers qui lit le contenu, pas seulement les noms de fichiers.** Il examine les documents, tableurs, images, scans, fichiers audio et vidéo, propose un nom et un dossier, et range les fichiers dans des « Smart Folders » que vous décrivez en langage courant.",
           "Le dépôt s'appelle StratoSortStack et se présente comme le successeur du StratoSort d'origine ; le site et ce test utilisent le nom StratoSort. Au-delà du tri, l'application a une partie recherche, chat et graphe que l'éditeur appelle Knowledge OS et décrit comme environ la moitié de ce qu'elle fait, ainsi qu'un serveur MCP local optionnel.",
-          "Ce test s'appuie sur le site, la documentation, la politique de confidentialité et le dépôt GitHub. Il n'a donné lieu à aucun essai pratique : la qualité des noms et du tri, ainsi que la vitesse, ne sont donc pas évaluées ici.",
+          "Ce test s'appuie sur le site, la documentation, la politique de confidentialité et le dépôt GitHub. PromptQuorum a aussi mené une session de première main sur un Mac M4 Pro de 24 Go (voir Lectures associées) : un essai à blanc, une revue fichier par fichier et un déplacement ont fonctionné, mais le classement était inégal. Il s'agit d'une première session, pas d'une évaluation complète : la qualité des noms et du tri, ainsi que la vitesse, ne sont donc toujours pas évaluées ici.",
         ],
       },
       howToGetStarted: {
@@ -1152,6 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Test d'AI File Sorter](/fr/power-local-llm/ai-file-sorter-review) — une application open source qui propose des dossiers et des noms de fichiers.",
           '[Test de Hyperlink (Nexa AI)](/fr/power-local-llm/hyperlink-nexa-review) — recherche et chat sur les fichiers locaux pour Mac et Windows.',
           "[Test d'AnythingLLM](/fr/power-local-llm/anythingllm-review) — un espace de chat avec des documents, avec modèles locaux ou cloud.",
+          "[Test pratique de StratoSort](/fr/power-local-llm/stratosort-hands-on-test) — une deuxième session sur un Mac M4 Pro de 24 Go : un essai à blanc avant tout déplacement de fichier, un classement inégal et une liaison MCP avec une autre application d'IA locale ; chaque affirmation est étiquetée selon la façon dont on la connaît.",
           "[Le répertoire complet des logiciels de LLM locaux](/fr/directory) — un répertoire plus large des outils d'IA locale, toutes plateformes.",
         ],
       },
@@ -1161,14 +1164,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-ja.webp',
     title: 'StratoSort レビュー：Mac・Windows・Linux向けのローカルAIファイル整理アプリ',
     seoTitle: 'StratoSort レビュー：ローカルAIファイル整理アプリ',
     intro: 'StratoSortは、ファイルの中身で整理するデスクトップアプリで、ドキュメントを対象にしたプライベートな検索、チャット、ナレッジグラフのツールとしても使えます。使う言語モデルは、llama.cppを通じてお使いのコンピューター上で動作します。ドキュメントによると、ファイルの移動は承認したあとにだけ行われます。このレビューでは、開発元の公式サイト、ドキュメント、GitHubリポジトリが示している点、ローカル処理が終わる境界、ライセンスによる商用利用の制限、ディレクトリ内の類似ツールとの比較をまとめます。',
-    metaDescription: 'StratoSortのレビュー：Mac・Windows・Linux向けのAIファイル整理アプリ。PC上でllama.cppを実行し、導入後はオフライン対応。ライセンスと制限を解説。実機検証なし。',
+    metaDescription: 'StratoSortのレビュー：Mac・Windows・Linux向けのAIファイル整理アプリ。PC上でllama.cppを実行し、導入後はオフライン対応。ライセンスと制限を解説。実機テストへのリンクあり。',
     twitterDescription: 'StratoSortのレビュー：Mac・Windows・Linuxでファイルの名前変更、整理、検索を行うローカルAI。個人利用は無料。プライバシー、ライセンス、制限、代替ツールを解説します。',
     audience: 'ドキュメント、スキャン、画像、音声のフォルダーが散らかっていて、ファイルをクラウドにアップロードせずにAIで名前とフォルダーを提案してほしい方向け。インストール、モデル、プライバシー、ライセンス、制限、代替ツールを扱います。',
     readTime: '8分で読める',
@@ -1190,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**StratoSortは、Mac・Windows・Linux向けのデスクトップAIファイル整理アプリで、言語モデルはllama.cppを通じてお使いのコンピューター上で動作します。ドキュメントによると、インストール後はインターネットなしで動作します。** 個人利用などの非商用利用はPolyForm Noncommercialライセンスのもとで無料で、商用利用には有料ライセンスが必要です。最新リリースは2026年11月1日のバージョン5.1.2です。このレビューは、開発元の公式サイト、ドキュメント、GitHubリポジトリに基づいており、実機での検証は行っていません。',
+    leadAnswerBlock: '**StratoSortは、Mac・Windows・Linux向けのデスクトップAIファイル整理アプリで、言語モデルはllama.cppを通じてお使いのコンピューター上で動作します。ドキュメントによると、インストール後はインターネットなしで動作します。** 個人利用などの非商用利用はPolyForm Noncommercialライセンスのもとで無料で、商用利用には有料ライセンスが必要です。最新リリースは2026年11月1日のバージョン5.1.2です。このレビューは、開発元の公式サイト、ドキュメント、GitHubリポジトリに基づいています。1回だけの実機セッションは、リンク先の実機テストにあります。',
     quickAnswerTop: {
       ja: {
         question: 'StratoSortはローカルで動くAIファイル整理アプリですか？',
@@ -1243,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '開発元：Kennedy Applied Sciences, Inc.で、コードはGitHubのiLevyTateで公開されています。',
           'メンテナンス：バージョン5.1.2が2026年11月1日にリリースされ、リポジトリは2026年11月10日に更新されており、プロジェクトは活発に開発されています。',
           'Knowledge OS：開発元によると、検索、チャット、グラフの部分がアプリの機能のおよそ半分を占めており、検索は意味だけでなく、請求書番号のような完全一致の語句にも対応します。',
-          '不足点：ここでは実機検証をしていないこと、公開されて日が浅いプロジェクトであること、初回に大容量のモデルのダウンロードが必要なことです。',
+          '不足点：第一手の検証はこれまで1回のセッションのみ（実機テスト参照）であること、公開されて日が浅いプロジェクトであること、初回に大容量のモデルのダウンロードが必要なことです。',
         ],
       },
       getItStratosort: {
@@ -1321,7 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSortは、ファイル名だけでなく中身を読み取るファイル整理アプリです。** ドキュメント、スプレッドシート、画像、スキャン、音声、動画の中を調べて名前とフォルダーを提案し、普通の言葉で説明した「Smart Folders」にファイルを移動します。',
           'リポジトリの名前はStratoSortStackで、元のStratoSortの後継と説明されています。公式サイトとこのレビューではStratoSortという名前を使います。整理のほかに、検索、チャット、グラフの部分があり、開発元はこれをKnowledge OSと呼んで、アプリの機能のおよそ半分を占めると説明しています。さらに、オプトインで有効にするローカルMCPサーバーも備えています。',
-          'このレビューは、公式サイト、ドキュメント、プライバシーポリシー、GitHubリポジトリに基づいています。実機での検証は行っていないため、名前の付け方や整理の精度、速度は評価していません。',
+          'このレビューは、公式サイト、ドキュメント、プライバシーポリシー、GitHubリポジトリに基づいています。PromptQuorumは24 GBのM4 Pro Macで1回だけ実機セッションも行いました（関連記事を参照）。ドライラン、ファイルごとの確認、ファイルの移動は動作しましたが、振り分けは一定ではありませんでした。これは最初の確認であり、完全な評価ではないため、名前の付け方や整理の精度、速度は引き続き評価していません。',
         ],
       },
       howToGetStarted: {
@@ -1551,6 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AI File Sorterレビュー](/ja/power-local-llm/ai-file-sorter-review) — フォルダーとファイル名を提案するオープンソースアプリ。',
           '[Hyperlink (Nexa AI)レビュー](/ja/power-local-llm/hyperlink-nexa-review) — Mac・Windows向けのローカルファイル検索とチャット。',
           '[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review) — ローカルまたはクラウドのモデルを使えるドキュメントチャット用ワークスペース。',
+          '[StratoSort実機テスト](/ja/power-local-llm/stratosort-hands-on-test) — 24 GBのM4 ProのMacでの2回目のセッション：ファイルを動かす前のドライラン、まちまちだった振り分け結果、MCPを介した別のローカルAIアプリとの接続。各記述には根拠の種類を示すラベルが付いています。',
           '[Local LLM Software Directory全体](/ja/directory) — プラットフォームを横断してローカルAIツールを集めた、より広いディレクトリ。',
         ],
       },
@@ -1560,14 +1564,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-zh.webp',
     title: 'StratoSort评测：适用于Mac、Windows和Linux的本地AI文件整理工具',
     seoTitle: 'StratoSort评测：跨平台本地AI文件整理应用',
     intro: 'StratoSort是一款桌面应用，按文件内容整理文件，同时可作为针对你文档的私密搜索、问答和知识图谱工具，所用的语言模型通过llama.cpp在你自己的电脑上运行。据其文档称，只有在你批准后才会移动文件。本评测梳理其官网、文档和GitHub仓库记载的内容、本地运行的界线、许可证如何限制商业使用，以及它与目录中同类工具的对比。',
-    metaDescription: 'StratoSort评测：适用于Mac、Windows和Linux的AI文件整理应用，本地运行llama.cpp模型，安装后可离线使用。许可、隐私与限制，未经实测。',
+    metaDescription: 'StratoSort评测：适用于Mac、Windows和Linux的AI文件整理应用，本地运行llama.cpp模型，安装后可离线使用。许可、隐私与限制，已链接实测文章。',
     twitterDescription: 'StratoSort评测：在Mac、Windows和Linux上本地重命名、整理和搜索文件的AI工具。个人使用免费。隐私、许可、限制与替代方案。',
     audience: '文档、扫描件、图片和音频文件夹杂乱、希望由AI建议文件名和文件夹、又不想把文件上传到云服务的用户——涵盖安装、模型、隐私、许可、限制和替代方案。',
     readTime: '阅读约8分钟',
@@ -1589,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**StratoSort是一款适用于Mac、Windows和Linux的桌面AI文件整理工具，其语言模型通过llama.cpp在你自己的电脑上运行，据其文档称，安装后无需联网即可使用。** 个人及其他非商业用途在PolyForm Noncommercial许可证下免费；商业使用需要付费许可。最新版本为2026年11月1日发布的5.1.2。本评测依据开发者公开的官网、文档和GitHub仓库，并非实际上手测试。',
+    leadAnswerBlock: '**StratoSort是一款适用于Mac、Windows和Linux的桌面AI文件整理工具，其语言模型通过llama.cpp在你自己的电脑上运行，据其文档称，安装后无需联网即可使用。** 个人及其他非商业用途在PolyForm Noncommercial许可证下免费；商业使用需要付费许可。最新版本为2026年11月1日发布的5.1.2。本评测依据开发者公开的官网、文档和GitHub仓库；唯一的第一手测试见所链接的实测文章。',
     quickAnswerTop: {
       zh: {
         question: 'StratoSort是本地AI文件整理工具吗？',
@@ -1642,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '开发者：Kennedy Applied Sciences, Inc.，代码公开在GitHub的iLevyTate账号下。',
           '维护状态：版本5.1.2于2026年11月1日发布，仓库于2026年11月10日更新，说明项目仍在积极开发。',
           'Knowledge OS：开发者称，搜索、问答和图谱部分约占应用功能的一半，搜索既能匹配发票号等确切字词，也能按含义匹配。',
-          '不足：这里没有上手测试，公开项目还很年轻，模型首次下载体积大。',
+          '不足：目前只有一次第一手测试（见实测文章），公开项目还很年轻，模型首次下载体积大。',
         ],
       },
       getItStratosort: {
@@ -1714,7 +1718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSort是一款读取内容、而不只是文件名的文件整理工具。** 它查看文档、电子表格、图片、扫描件、音频和视频的内部，建议名称和文件夹，并把文件移入你用日常语言描述的“Smart Folders”。',
           '仓库名为StratoSortStack，并自称是原版StratoSort的继任者；官网和本评测使用StratoSort这个名称。除整理之外，应用还有一个搜索、问答和图谱部分，开发者称之为Knowledge OS，并称其约占应用功能的一半，另外还有一个可选的本地MCP服务器。',
-          '本评测依据官网、文档、隐私政策和GitHub仓库，没有进行实际上手测试，因此这里不对应用命名和整理文件的效果以及运行速度做评级。',
+          '本评测依据官网、文档、隐私政策和GitHub仓库，PromptQuorum 另在一台24 GB的M4 Pro Mac上进行了一次第一手测试（见相关阅读）：试运行、逐个文件审核和一次文件移动均可用，但匹配结果参差不齐。那只是初步试用，而非完整评估，因此这里仍不对应用命名和整理文件的效果以及运行速度做评级。',
         ],
       },
       howToGetStarted: {
@@ -1934,6 +1938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AI File Sorter评测](/zh/power-local-llm/ai-file-sorter-review) — 一款提议文件夹和文件名的开源应用。',
           '[Hyperlink (Nexa AI)评测](/zh/power-local-llm/hyperlink-nexa-review) — 适用于Mac和Windows的本地文件搜索和问答。',
           '[AnythingLLM评测](/zh/power-local-llm/anythingllm-review) — 可搭配本地或云端模型的文档问答工作区。',
+          '[StratoSort 实测](/zh/power-local-llm/stratosort-hands-on-test) — 在24 GB的M4 Pro Mac上的第二次测试：移动任何文件之前的试运行、参差不齐的匹配结果，以及通过MCP连接另一款本地AI应用；每条陈述都标注了其依据类型。',
           '[完整的Local LLM Software Directory](/zh/directory) — 涵盖多个平台的本地AI工具的更广泛目录。',
         ],
       },
@@ -1943,14 +1948,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-es.webp',
     title: 'Reseña de StratoSort: organizador de archivos con IA local para Mac, Windows y Linux',
     seoTitle: 'Reseña de StratoSort: organizador de archivos con IA local',
     intro: 'StratoSort es una app de escritorio que ordena los archivos según lo que contienen y que sirve además como herramienta privada de búsqueda, chat y grafo de conocimiento sobre tus documentos, con modelos de lenguaje que se ejecutan en tu propio ordenador mediante llama.cpp. Según su documentación, solo mueve los archivos después de que lo apruebes. Esta reseña resume lo que dicen la web, la documentación y el repositorio de GitHub del fabricante, dónde termina la ruta local, cómo limita la licencia el uso comercial y cómo se compara StratoSort con herramientas similares del directorio.',
-    metaDescription: 'Reseña de StratoSort: organizador de archivos con IA para Mac, Windows y Linux con modelos llama.cpp locales, sin conexión tras instalar. No probada.',
+    metaDescription: 'Reseña de StratoSort: organizador de archivos con IA para Mac, Windows y Linux con modelos llama.cpp locales, sin conexión tras instalar. Prueba práctica enlazada.',
     twitterDescription: 'Reseña de StratoSort: IA local que renombra, ordena y busca tus archivos en Mac, Windows y Linux. Gratis para uso personal. Privacidad, licencia, límites y alternativas.',
     audience: 'Personas con carpetas desordenadas de documentos, escaneos, imágenes y audio que quieren nombres y carpetas sugeridos por IA sin subir archivos a un servicio en la nube — cubre instalación, modelos, privacidad, licencia, límites y alternativas.',
     readTime: '8 min de lectura',
@@ -1972,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**StratoSort es un organizador de archivos con IA para Mac, Windows y Linux cuyos modelos de lenguaje se ejecutan en tu propio ordenador mediante llama.cpp y que, según su documentación, funciona sin internet una vez instalado.** Es gratis para uso personal y otros usos no comerciales con la licencia PolyForm Noncommercial; el uso comercial requiere una licencia de pago. La versión más reciente es la 5.1.2, del 1 de noviembre de 2026. Esta reseña se basa en la web, la documentación y el repositorio de GitHub del fabricante, no en una prueba práctica.',
+    leadAnswerBlock: '**StratoSort es un organizador de archivos con IA para Mac, Windows y Linux cuyos modelos de lenguaje se ejecutan en tu propio ordenador mediante llama.cpp y que, según su documentación, funciona sin internet una vez instalado.** Es gratis para uso personal y otros usos no comerciales con la licencia PolyForm Noncommercial; el uso comercial requiere una licencia de pago. La versión más reciente es la 5.1.2, del 1 de noviembre de 2026. Esta reseña se basa en la web, la documentación y el repositorio de GitHub del fabricante; la única sesión de primera mano está en la prueba práctica enlazada.',
     quickAnswerTop: {
       es: {
         question: '¿Es StratoSort un organizador de archivos con IA local?',
@@ -2025,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fabricante: Kennedy Applied Sciences, Inc., con el código público en GitHub bajo iLevyTate.',
           'Mantenimiento: la versión 5.1.2 salió el 1 de noviembre de 2026 y el repositorio se actualizó el 10 de noviembre de 2026, así que el proyecto se desarrolla de forma activa.',
           'Knowledge OS: el desarrollador dice que la parte de búsqueda, chat y grafo supone cerca de la mitad de lo que hace la app, y que la búsqueda encuentra términos exactos, como números de factura, además de coincidencias por significado.',
-          'Carencias: aquí no hubo prueba práctica, es un proyecto público joven y los modelos requieren una primera descarga grande.',
+          'Carencias: hasta ahora solo una sesión de primera mano (ver la prueba práctica), es un proyecto público joven y los modelos requieren una primera descarga grande.',
         ],
       },
       getItStratosort: {
@@ -2097,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSort es un organizador de archivos que lee el contenido, no solo los nombres.** Mira dentro de documentos, hojas de cálculo, imágenes, escaneos, audio y vídeo, sugiere un nombre y una carpeta, y mueve los archivos a «Smart Folders» que describes en lenguaje natural.',
           'El repositorio se llama StratoSortStack y se describe como el sucesor del StratoSort original; la web y esta reseña usan el nombre StratoSort. Además de ordenar, la app tiene una parte de búsqueda, chat y grafo que el desarrollador llama Knowledge OS y describe como cerca de la mitad de lo que hace, y un servidor MCP local opcional.',
-          'Esta reseña se basa en la web, la documentación, la política de privacidad y el repositorio de GitHub. No hubo prueba práctica, así que aquí no se valoran lo bien que la app nombra y ordena los archivos ni lo rápido que funciona.',
+          'Esta reseña se basa en la web, la documentación, la política de privacidad y el repositorio de GitHub. PromptQuorum también hizo una sesión de primera mano en un Mac M4 Pro de 24 GB (ver Lecturas relacionadas): una simulación, la revisión archivo por archivo y un movimiento funcionaron, pero la clasificación fue irregular. Fue una primera sesión, no una evaluación completa, así que aquí siguen sin valorarse lo bien que la app nombra y ordena los archivos ni lo rápido que funciona.',
         ],
       },
       howToGetStarted: {
@@ -2317,6 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de AI File Sorter](/es/power-local-llm/ai-file-sorter-review) — una app de código abierto que propone carpetas y nombres de archivo.',
           '[Reseña de Hyperlink (Nexa AI)](/es/power-local-llm/hyperlink-nexa-review) — búsqueda y chat de archivos locales para Mac y Windows.',
           '[Reseña de AnythingLLM](/es/power-local-llm/anythingllm-review) — un espacio de chat con documentos con modelos locales o en la nube.',
+          '[Prueba práctica de StratoSort](/es/power-local-llm/stratosort-hands-on-test) — una segunda sesión en un Mac M4 Pro de 24 GB: una simulación antes de mover ningún archivo, una clasificación irregular y un enlace con otra app de IA local mediante MCP; cada afirmación lleva una etiqueta que indica cómo se sabe.',
           '[El Local LLM Software Directory completo](/es/directory) — un directorio más amplio de herramientas de IA local para todas las plataformas.',
         ],
       },
@@ -2326,14 +2332,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-pt.webp',
     title: 'Análise do StratoSort: organizador de arquivos com IA local para Mac, Windows e Linux',
     seoTitle: 'Análise do StratoSort: organizador de arquivos com IA',
     intro: 'O StratoSort é um app de desktop que organiza arquivos pelo que há dentro deles e funciona também como uma ferramenta privada de busca, chat e grafo de conhecimento sobre os seus documentos, usando modelos de linguagem que rodam no seu próprio computador por meio do llama.cpp. Segundo a documentação, ele só move arquivos depois que você aprova. Esta análise resume o que o site, a documentação e o repositório do GitHub do fabricante dizem, onde termina o caminho local, como a licença limita o uso comercial e como o StratoSort se compara a ferramentas semelhantes do diretório.',
-    metaDescription: 'Análise do StratoSort: organizador de arquivos com IA para Mac, Windows e Linux, com modelos llama.cpp locais que funcionam offline. Não testado.',
+    metaDescription: 'Análise do StratoSort: organizador de arquivos com IA para Mac, Windows e Linux, com modelos llama.cpp locais que funcionam offline. Teste prático vinculado.',
     twitterDescription: 'Análise do StratoSort: IA local que renomeia, organiza e pesquisa seus arquivos no Mac, Windows e Linux. Grátis para uso pessoal. Privacidade, licença, limites e alternativas.',
     audience: 'Pessoas com pastas bagunçadas de documentos, digitalizações, imagens e áudios que querem nomes e pastas sugeridos por IA sem enviar arquivos a um serviço na nuvem — cobre instalação, modelos, privacidade, licença, limites e alternativas.',
     readTime: '8 min de leitura',
@@ -2355,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**O StratoSort é um organizador de arquivos com IA para Mac, Windows e Linux cujos modelos de linguagem rodam no seu próprio computador por meio do llama.cpp e, segundo a documentação, funcionam sem internet depois de instalados.** Ele é gratuito para uso pessoal e outros usos não comerciais sob a licença PolyForm Noncommercial; o uso comercial exige uma licença paga. A versão mais recente é a 5.1.2, de 1 de novembro de 2026. Esta análise se baseia no site, na documentação e no repositório do GitHub do fabricante, não em um teste prático.',
+    leadAnswerBlock: '**O StratoSort é um organizador de arquivos com IA para Mac, Windows e Linux cujos modelos de linguagem rodam no seu próprio computador por meio do llama.cpp e, segundo a documentação, funcionam sem internet depois de instalados.** Ele é gratuito para uso pessoal e outros usos não comerciais sob a licença PolyForm Noncommercial; o uso comercial exige uma licença paga. A versão mais recente é a 5.1.2, de 1 de novembro de 2026. Esta análise se baseia no site, na documentação e no repositório do GitHub do fabricante; a única sessão em primeira mão está no teste prático vinculado.',
     quickAnswerTop: {
       pt: {
         question: 'O StratoSort é um organizador de arquivos com IA local?',
@@ -2408,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fabricante: Kennedy Applied Sciences, Inc., com o código público no GitHub sob iLevyTate.',
           'Manutenção: a versão 5.1.2 foi lançada em 1 de novembro de 2026 e o repositório foi atualizado em 10 de novembro de 2026, então o projeto recebe desenvolvimento ativo.',
           'Knowledge OS: o fabricante diz que o lado de busca, chat e grafo corresponde a cerca de metade do que o app faz e que a busca encontra termos exatos, como números de fatura, além do significado.',
-          'Lacunas: sem teste prático aqui, um projeto público ainda jovem e modelos que exigem um primeiro download grande.',
+          'Lacunas: até agora só uma sessão em primeira mão (veja o teste prático), um projeto público ainda jovem e modelos que exigem um primeiro download grande.',
         ],
       },
       getItStratosort: {
@@ -2480,7 +2486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O StratoSort é um organizador de arquivos que lê o conteúdo, não apenas os nomes.** Ele olha dentro de documentos, planilhas, imagens, digitalizações, áudio e vídeo, sugere um nome e uma pasta e move os arquivos para "Smart Folders" que você descreve em linguagem simples.',
           'O repositório se chama StratoSortStack e se descreve como o sucessor do StratoSort original; o site e esta análise usam o nome StratoSort. Além de organizar, o app tem um lado de busca, chat e grafo que o fabricante chama de Knowledge OS e descreve como cerca de metade do que ele faz, além de um servidor MCP local, opcional.',
-          'Esta análise se baseia no site, na documentação, na política de privacidade e no repositório do GitHub. Não houve teste prático, então a qualidade com que o app nomeia e organiza arquivos e a sua velocidade não são avaliadas aqui.',
+          'Esta análise se baseia no site, na documentação, na política de privacidade e no repositório do GitHub. A PromptQuorum também fez uma sessão em primeira mão em um Mac M4 Pro de 24 GB (veja Leitura relacionada): uma simulação, a revisão arquivo por arquivo e uma movimentação funcionaram, mas a classificação foi irregular. Foi uma primeira sessão, não uma avaliação completa, então a qualidade com que o app nomeia e organiza arquivos e a sua velocidade continuam sem ser avaliadas aqui.',
         ],
       },
       howToGetStarted: {
@@ -2700,6 +2706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do AI File Sorter](/pt/power-local-llm/ai-file-sorter-review) — um app de código aberto que propõe pastas e nomes de arquivos.',
           '[Análise do Hyperlink (Nexa AI)](/pt/power-local-llm/hyperlink-nexa-review) — busca e chat com arquivos locais para Mac e Windows.',
           '[Análise do AnythingLLM](/pt/power-local-llm/anythingllm-review) — um espaço de trabalho de chat com documentos, com modelos locais ou na nuvem.',
+          '[Teste prático do StratoSort](/pt/power-local-llm/stratosort-hands-on-test) — uma segunda sessão em um Mac M4 Pro de 24 GB: uma simulação antes de qualquer arquivo ser movido, uma classificação irregular e uma conexão com outro app de IA local via MCP; cada afirmação traz uma etiqueta que indica como ela é conhecida.',
           '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de IA local em várias plataformas.',
         ],
       },
@@ -2709,14 +2716,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-ar.webp',
     title: 'مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي المحلي لأجهزة Mac وWindows وLinux',
     seoTitle: 'مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي المحلي',
     intro: 'StratoSort تطبيق مكتبي يرتّب الملفات بحسب ما بداخلها، ويعمل أيضًا أداةً خاصة للبحث والمحادثة والرسم المعرفي فوق مستنداتك، مستخدمًا نماذج لغوية تعمل على حاسوبك عبر llama.cpp. ولا ينقل الملفات بحسب وثائقه إلا بعد موافقتك. تلخّص هذه المراجعة ما يذكره موقع المطوّر ووثائقه ومستودع GitHub، وأين ينتهي المسار المحلي، وكيف تقيّد الرخصة الاستخدام التجاري، وكيف يقارن StratoSort بالأدوات المشابهة في الدليل.',
-    metaDescription: 'مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر.',
+    metaDescription: 'مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. مع رابط الاختبار العملي.',
     twitterDescription: 'مراجعة StratoSort: ذكاء اصطناعي محلي يعيد تسمية ملفاتك ويرتبها ويبحث فيها على Mac وWindows وLinux. مجاني للاستخدام الشخصي. الخصوصية والرخصة والحدود والبدائل.',
     audience: 'أصحاب مجلدات المستندات والمسوحات الضوئية والصور والتسجيلات الصوتية المبعثرة الذين يريدون أسماءً ومجلدات يقترحها الذكاء الاصطناعي دون رفع الملفات إلى خدمة سحابية — يغطي التثبيت والنماذج والخصوصية والرخصة والحدود والبدائل.',
     readTime: '8 دقائق للقراءة',
@@ -2738,7 +2745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**StratoSort منظّم ملفات بالذكاء الاصطناعي لأجهزة Mac وWindows وLinux تعمل نماذجه اللغوية على حاسوبك عبر llama.cpp، وتعمل بحسب وثائقه دون إنترنت بعد التثبيت.** وهو مجاني للاستخدام الشخصي وغير التجاري الآخر برخصة PolyForm Noncommercial؛ أما الاستخدام التجاري فيتطلب رخصة مدفوعة. وأحدث إصدار هو 5.1.2 الصادر في 1 نوفمبر 2026. تعتمد هذه المراجعة على موقع المطوّر ووثائقه ومستودع GitHub، وليس على اختبار عملي.',
+    leadAnswerBlock: '**StratoSort منظّم ملفات بالذكاء الاصطناعي لأجهزة Mac وWindows وLinux تعمل نماذجه اللغوية على حاسوبك عبر llama.cpp، وتعمل بحسب وثائقه دون إنترنت بعد التثبيت.** وهو مجاني للاستخدام الشخصي وغير التجاري الآخر برخصة PolyForm Noncommercial؛ أما الاستخدام التجاري فيتطلب رخصة مدفوعة. وأحدث إصدار هو 5.1.2 الصادر في 1 نوفمبر 2026. تعتمد هذه المراجعة على موقع المطوّر ووثائقه ومستودع GitHub؛ والجلسة الوحيدة من الخبرة المباشرة موجودة في الاختبار العملي المرتبط.',
     quickAnswerTop: {
       ar: {
         question: 'هل StratoSort منظّم ملفات بالذكاء الاصطناعي المحلي؟',
@@ -2791,7 +2798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المطوّر: Kennedy Applied Sciences, Inc.، والشيفرة عامة على GitHub تحت الحساب iLevyTate.',
           'الصيانة: صدر الإصدار 5.1.2 في 1 نوفمبر 2026 وحُدّث المستودع في 10 نوفمبر 2026، فالمشروع يُطوَّر بنشاط.',
           'Knowledge OS: يقول المطوّر إن جانب البحث والمحادثة والرسم يمثّل نحو نصف ما يفعله التطبيق، وإن البحث يطابق المصطلحات الدقيقة مثل أرقام الفواتير كما يطابق المعنى.',
-          'الثغرات: لا اختبار عملي هنا، ومشروع عام حديث، ونماذج تتطلب تنزيلًا أول كبيرًا.',
+          'الثغرات: جلسة واحدة فقط من الخبرة المباشرة حتى الآن (انظر الاختبار العملي)، ومشروع عام حديث، ونماذج تتطلب تنزيلًا أول كبيرًا.',
         ],
       },
       getItStratosort: {
@@ -2869,7 +2876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSort منظّم ملفات يقرأ المحتوى، لا أسماء الملفات فقط.** ينظر داخل المستندات وجداول البيانات والصور والمسوحات الضوئية والصوت والفيديو، ويقترح اسمًا ومجلدًا، وينقل الملفات إلى "مجلدات ذكية" (Smart Folders) تصفها بلغة عادية.',
           'اسم المستودع StratoSortStack ويصف نفسه بأنه خليفة StratoSort الأصلي؛ ويستخدم الموقع وهذه المراجعة الاسم StratoSort. وإلى جانب الترتيب، للتطبيق جانب للبحث والمحادثة والرسم يسمّيه المطوّر Knowledge OS ويصفه بأنه نحو نصف ما يفعله، إضافةً إلى خادم MCP محلي اختياري.',
-          'تعتمد هذه المراجعة على الموقع والوثائق وسياسة الخصوصية ومستودع GitHub. ولم يجرِ أي اختبار عملي، لذلك لا نقيّم هنا جودة تسمية التطبيق للملفات وترتيبه لها ولا سرعة عمله.',
+          'تعتمد هذه المراجعة على الموقع والوثائق وسياسة الخصوصية ومستودع GitHub. وأجرت PromptQuorum أيضًا جلسة واحدة من الخبرة المباشرة على جهاز Mac M4 Pro بذاكرة 24 GB (انظر قراءات ذات صلة): نجح التشغيل التجريبي والمراجعة لكل ملف ونقل الملفات، لكن المطابقة كانت متفاوتة. وكانت جلسة أولى لا تقييمًا كاملًا، لذلك ما زلنا لا نقيّم هنا جودة تسمية التطبيق للملفات وترتيبه لها ولا سرعة عمله.',
         ],
       },
       howToGetStarted: {
@@ -3099,6 +3106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة AI File Sorter](/ar/power-local-llm/ai-file-sorter-review) — تطبيق مفتوح المصدر يقترح مجلدات وأسماء ملفات.',
           '[مراجعة Hyperlink (Nexa AI)](/ar/power-local-llm/hyperlink-nexa-review) — بحث ومحادثة مع الملفات المحلية لأجهزة Mac وWindows.',
           '[مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review) — مساحة عمل لمحادثة المستندات بنماذج محلية أو سحابية.',
+          '[اختبار StratoSort العملي](/ar/power-local-llm/stratosort-hands-on-test) — جلسة ثانية على جهاز Mac M4 Pro بذاكرة 24 GB: تشغيل تجريبي قبل نقل أي ملف، ومطابقة متفاوتة، وربط بتطبيق ذكاء اصطناعي محلي آخر عبر MCP؛ وكل عبارة موسومة بكيفية معرفتها.',
           '[دليل Local LLM Software Directory الكامل](/ar/directory) — دليل أوسع لأدوات الذكاء الاصطناعي المحلي عبر المنصات.',
         ],
       },
@@ -3108,14 +3116,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-10',
-    dateModified: '2026-11-10',
+    dateModified: '2026-11-17',
     next_refresh_due: '2027-05-10',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/stratosort-review-hero-ko.webp',
     title: 'StratoSort 리뷰: Mac·Windows·Linux용 로컬 AI 파일 정리 앱',
     seoTitle: 'StratoSort 리뷰: 로컬 AI 파일 정리 앱',
     intro: 'StratoSort는 파일 안의 내용을 기준으로 파일을 정리하고, 문서에 대한 비공개 검색, 대화, 지식 그래프 도구로도 쓰이는 데스크톱 앱이며, 언어 모델은 llama.cpp를 통해 사용자의 컴퓨터에서 실행됩니다. 문서에 따르면 사용자가 승인한 뒤에만 파일을 옮깁니다. 이 리뷰는 개발사의 웹사이트, 문서, GitHub 저장소가 밝히는 내용, 로컬 방식이 끝나는 지점, 라이선스가 상업적 사용을 제한하는 방식, 그리고 디렉터리의 비슷한 도구와의 비교를 정리합니다.',
-    metaDescription: 'StratoSort 리뷰: llama.cpp 로컬 모델로 파일을 정리하는 Mac·Windows·Linux용 AI 앱. 설치 후 오프라인 작동. 라이선스, 한계. 테스트 안 함.',
+    metaDescription: 'StratoSort 리뷰: llama.cpp 로컬 모델로 파일을 정리하는 Mac·Windows·Linux용 AI 앱. 설치 후 오프라인 작동. 라이선스, 한계. 직접 테스트 링크.',
     twitterDescription: 'StratoSort 리뷰: Mac·Windows·Linux에서 파일 이름 변경, 분류, 검색을 하는 로컬 AI. 개인용 무료. 개인정보 보호, 라이선스, 한계, 대안을 정리했습니다.',
     audience: '문서, 스캔, 이미지, 오디오 폴더가 어수선하여 파일을 클라우드 서비스에 올리지 않고 AI가 제안하는 이름과 폴더를 쓰려는 사용자를 위한 글입니다. 설치, 모델, 개인정보 보호, 라이선스, 한계, 대안을 다룹니다.',
     readTime: '8분 읽기',
@@ -3137,7 +3145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Windows PC',
       'Linux PC',
     ],
-    leadAnswerBlock: '**StratoSort는 Mac, Windows, Linux용 데스크톱 AI 파일 정리 앱이며, 언어 모델이 llama.cpp를 통해 사용자의 컴퓨터에서 실행되고 문서에 따르면 설치 후에는 인터넷 없이 작동합니다.** 개인용 및 기타 비상업적 용도로는 PolyForm Noncommercial 라이선스에 따라 무료이고, 상업적 사용에는 유료 라이선스가 필요합니다. 최신 릴리스는 2026년 11월 1일의 버전 5.1.2입니다. 이 리뷰는 개발사의 웹사이트, 문서, GitHub 저장소에 근거하며 직접 사용해 본 테스트는 아닙니다.',
+    leadAnswerBlock: '**StratoSort는 Mac, Windows, Linux용 데스크톱 AI 파일 정리 앱이며, 언어 모델이 llama.cpp를 통해 사용자의 컴퓨터에서 실행되고 문서에 따르면 설치 후에는 인터넷 없이 작동합니다.** 개인용 및 기타 비상업적 용도로는 PolyForm Noncommercial 라이선스에 따라 무료이고, 상업적 사용에는 유료 라이선스가 필요합니다. 최신 릴리스는 2026년 11월 1일의 버전 5.1.2입니다. 이 리뷰는 개발사의 웹사이트, 문서, GitHub 저장소에 근거하며, 직접 사용해 본 유일한 세션은 링크된 직접 테스트에 있습니다.',
     quickAnswerTop: {
       ko: {
         question: 'StratoSort는 로컬 AI 파일 정리 앱입니까?',
@@ -3190,7 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개발사: Kennedy Applied Sciences, Inc.이며, 코드는 iLevyTate 계정 아래 GitHub에 공개되어 있습니다.',
           '유지보수: 버전 5.1.2가 2026년 11월 1일에 출시되었고 저장소는 2026년 11월 10일에 업데이트되어 프로젝트가 활발히 개발되고 있습니다.',
           'Knowledge OS: 개발사에 따르면 검색, 대화, 그래프 쪽이 앱이 하는 일의 약 절반이며, 검색은 의미뿐 아니라 청구서 번호 같은 정확한 용어도 찾아냅니다.',
-          '공백: 여기서는 직접 테스트하지 않았고, 공개된 지 얼마 되지 않은 프로젝트이며, 모델은 처음에 용량이 큰 다운로드가 필요합니다.',
+          '공백: 지금까지 직접 해 본 세션은 한 번뿐이고(직접 테스트 참조), 공개된 지 얼마 되지 않은 프로젝트이며, 모델은 처음에 용량이 큰 다운로드가 필요합니다.',
         ],
       },
       getItStratosort: {
@@ -3262,7 +3270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**StratoSort는 파일 이름만이 아니라 내용을 읽는 파일 정리 앱입니다.** 문서, 스프레드시트, 이미지, 스캔, 오디오, 동영상 안을 살펴 이름과 폴더를 제안하고, 사용자가 일상적인 말로 설명한 "Smart Folders"로 파일을 옮깁니다.',
           '저장소 이름은 StratoSortStack이며 원래 StratoSort의 후속 버전이라고 스스로 소개합니다. 웹사이트와 이 리뷰는 StratoSort라는 이름을 씁니다. 정리 외에도 개발사가 Knowledge OS라고 부르며 앱이 하는 일의 약 절반이라고 설명하는 검색, 대화, 그래프 쪽이 있고, 선택형 로컬 MCP 서버도 제공합니다.',
-          '이 리뷰는 웹사이트, 문서, 개인정보 처리방침, GitHub 저장소에 근거합니다. 직접 사용해 본 테스트는 하지 않았으므로 앱이 파일 이름을 짓고 분류하는 정확도와 실행 속도는 여기서 평가하지 않습니다.',
+          '이 리뷰는 웹사이트, 문서, 개인정보 처리방침, GitHub 저장소에 근거합니다. PromptQuorum은 24 GB M4 Pro Mac에서 직접 사용해 본 세션도 한 번 진행했습니다(관련 글 참조). 드라이런, 파일별 검토, 파일 이동은 작동했지만 분류 결과는 들쭉날쭉했습니다. 이는 첫 세션일 뿐 완전한 평가가 아니므로, 앱이 파일 이름을 짓고 분류하는 정확도와 실행 속도는 여전히 여기서 평가하지 않습니다.',
         ],
       },
       howToGetStarted: {
@@ -3482,6 +3490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AI File Sorter 리뷰](/ko/power-local-llm/ai-file-sorter-review) — 폴더와 파일 이름을 제안하는 오픈 소스 앱.',
           '[Hyperlink (Nexa AI) 리뷰](/ko/power-local-llm/hyperlink-nexa-review) — Mac과 Windows용 로컬 파일 검색 및 대화 앱.',
           '[AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) — 로컬 또는 클라우드 모델을 쓰는 문서 대화 작업 공간.',
+          '[StratoSort 직접 테스트](/ko/power-local-llm/stratosort-hands-on-test) — 24 GB M4 Pro Mac에서 진행한 두 번째 세션: 파일을 옮기기 전의 드라이런, 들쭉날쭉한 분류 결과, MCP로 다른 로컬 AI 앱과 연결; 모든 진술에는 어떻게 알게 되었는지를 나타내는 라벨이 붙어 있습니다.',
           '[전체 Local LLM Software Directory](/ko/directory) — 여러 플랫폼의 로컬 AI 도구를 모은 더 넓은 디렉터리.',
         ],
       },
