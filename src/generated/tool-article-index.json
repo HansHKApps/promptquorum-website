@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 357,
+    "totalCount": 358,
     "capped": true
   },
   "llama.cpp": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 106,
+    "totalCount": 107,
     "capped": true
   },
   "LocalAI": {
@@ -722,7 +722,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "Llamafile": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 179,
+    "totalCount": 180,
     "capped": true
   },
   "Atomic Chat": {
@@ -4999,6 +4999,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "skales-review",
+        "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
+        "url": "/power-local-llm/skales-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-iphone-guide",
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
@@ -5020,17 +5028,9 @@
         "url": "/power-local-llm/phone-harness-review",
         "dateModified": "2026-11-08",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "picoclaw-review",
-        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
-        "url": "/power-local-llm/picoclaw-review",
-        "dateModified": "2026-11-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Hermes Agent": {
@@ -5066,6 +5066,14 @@
         "url": "/power-local-llm/atomic-bot-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "skales-review",
+        "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
+        "url": "/power-local-llm/skales-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -5106,18 +5114,10 @@
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "strata-review",
-        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
-        "url": "/power-local-llm/strata-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Msty Go": {
     "articles": [
@@ -5438,7 +5438,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -7218,7 +7218,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -10448,7 +10448,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "mentioned"
       }
     ],
@@ -10809,6 +10809,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Skales": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "skales-review",
+        "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
+        "url": "/power-local-llm/skales-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Lyonesse": {
@@ -12607,6 +12621,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "skales-review",
+        "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
+        "url": "/power-local-llm/skales-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "screenpipe-review",
         "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
         "url": "/power-local-llm/screenpipe-review",
@@ -12668,17 +12690,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openmausbot-review",
-        "title": "OpenMausBot Review: Is This Open-Source Grok Bot Local AI?",
-        "url": "/power-local-llm/openmausbot-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 261,
+    "totalCount": 262,
     "capped": true
   },
   "Qdrant": {
@@ -14556,7 +14570,7 @@
         "slug": "univocal-review",
         "title": "Univocal Review: Read-Aloud and Dictation on Your Mac",
         "url": "/power-local-llm/univocal-review",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-16",
         "tier": "about"
       },
       {
