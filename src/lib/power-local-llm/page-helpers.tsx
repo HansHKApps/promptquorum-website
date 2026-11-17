@@ -1338,6 +1338,7 @@ const HUB_THEMES: Array<{
       'radiant-canvas',
       'ai-cutoutwerk-review',
       'openmontage-review',
+      'cozyclay-review',
     ],
   },
   {
