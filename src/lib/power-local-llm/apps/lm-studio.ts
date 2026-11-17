@@ -39,7 +39,7 @@ export const app: ToolRecord = {
   reviewSlug: 'lm-studio-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true, builtInEngine: true, voice: true },
-  lastVerifiedDate: '2026-10-23',
-  lastUpstreamUpdate: '2026-10-13', // LM Studio 0.4.26, official changelog, re-read 2026-10-23
+  lastVerifiedDate: '2026-11-14',
+  lastUpstreamUpdate: '2026-10-31', // LM Studio 0.4.28, official changelog, re-read 2026-11-14
   lastUpstreamUpdateSource: 'https://lmstudio.ai/changelog/lmstudio',
 }

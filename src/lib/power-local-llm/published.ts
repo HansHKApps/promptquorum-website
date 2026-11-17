@@ -625,6 +625,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // fullmoon review (Mobile & Edge LLMs, free MIT offline chat app for iPhone/iPad/Mac, stale since 2025) — 2026-10-30
   'fullmoon-review',
   'reins-review',
+  'conduit-review',
   'phantasm-review',
   'hillnote-review',
   'trilium-notes-review',
@@ -634,6 +635,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'picoclaw-review',
   // Scrypted review (Voice, Speech & Multimodal, camera/NVR platform with optional local LLM summaries) — 2026-11-01
   'scrypted-review',
+  'screenpipe-review',
+  'skales-review',
   // Lyonesse review (Voice, Speech & Multimodal, iPhone/iPad/Mac transcription) — 2026-10-26
   'lyonesse-review',
   'open-llm-vtuber-review',
@@ -757,6 +760,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'dayflow-review',
   'ai-notebook-review',
   'univocal-review',
+  'openmausbot-review',
+  'stirling-pdf-review',
   'local-ai-on-android-guide',
   'local-ai-on-iphone-guide',
   'stratosort-review',
@@ -770,6 +775,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Parrot review (Voice, Speech & Multimodal) — 2026-10-18
   'parrot-review',
   'xberg-review',
+
+  // PDF parser reviews — 2026-11-16
+  'marker-review',
+  'docling-review',
+  'opendataloader-pdf-review',
+  'mineru-review',
+
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

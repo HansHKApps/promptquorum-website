@@ -43,6 +43,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'About',
     privacy: 'Privacy Policy',
     impressum: 'Impressum',
+    partners: 'Partners & Advertising',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Set as preferred source in Google',
   },
@@ -52,6 +53,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'Über uns',
     privacy: 'Datenschutzerklärung',
     impressum: 'Impressum',
+    partners: 'Partner & Werbung',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Als bevorzugte Quelle in Google festlegen',
   },
@@ -61,6 +63,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'À propos',
     privacy: 'Politique de confidentialité',
     impressum: 'Mentions légales',
+    partners: 'Partenaires et publicité',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Définir comme source préférée dans Google',
   },
@@ -70,6 +73,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'について',
     privacy: 'プライバシーポリシー',
     impressum: '法務',
+    partners: 'パートナー・広告',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Google で優先ソースに設定',
   },
@@ -79,6 +83,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: '关于',
     privacy: '隐私政策',
     impressum: '法律声明',
+    partners: '合作与广告',
     contact: 'hello@promptquorum.com',
     preferredSource: '在 Google 中设为优先来源',
   },
@@ -88,6 +93,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'Acerca de',
     privacy: 'Política de privacidad',
     impressum: 'Aviso legal',
+    partners: 'Socios y publicidad',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Establecer como fuente preferida en Google',
   },
@@ -97,6 +103,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'Sobre',
     privacy: 'Política de Privacidade',
     impressum: 'Aviso Legal',
+    partners: 'Parceiros e publicidade',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Definir como fonte preferida no Google',
   },
@@ -106,6 +113,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: 'حول',
     privacy: 'سياسة الخصوصية',
     impressum: 'الإشعار القانوني',
+    partners: 'الشركاء والإعلان',
     contact: 'hello@promptquorum.com',
     preferredSource: 'تعيين كمصدر مفضل في Google',
   },
@@ -115,6 +123,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     about: '소개',
     privacy: '개인 정보 처리 방침',
     impressum: '법적 고지',
+    partners: '파트너 및 광고',
     contact: 'hello@promptquorum.com',
     preferredSource: 'Google에서 선호 소스로 설정',
   },
@@ -222,6 +231,8 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
             <a href={`${langPrefix}/privacy`} className="hover:text-primary transition-colors">{t.privacy}</a>
             <span aria-hidden="true">•</span>
             <a href="/impressum" className="hover:text-primary transition-colors">{t.impressum}</a>
+            <span aria-hidden="true">•</span>
+            <a href={`${langPrefix}/partners`} className="hover:text-primary transition-colors">{t.partners}</a>
             <span aria-hidden="true">•</span>
             <CookieSettingsLink lang={effectiveLang} />
             <span aria-hidden="true">•</span>

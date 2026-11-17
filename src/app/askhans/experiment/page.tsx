@@ -1,12 +1,12 @@
 // Internal dashboard for the Ask Hans button-wording experiment (askhans-cta-v1). English only, noindex, not linked.
-// Access: /askhans/experiment?key=<ASK_HANS_EXPERIMENT_KEY>. Without the right key (or with the key unset) the page is a 404.
+// Access: /askhans/experiment?key=<ASK_HANS_EXPERIMENT_KEY>&pageviews=<N> (N = Umami pageviews from the start date to today). Without the right key (or with the key unset) the page is a 404.
 // Only aggregated counters are shown; there is nothing visitor-level to expose (see src/app/api/ask/exp/route.ts).
 
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { timingSafeEqual } from 'crypto'
 import { getExperimentReport, type SubgroupRow, type VariantStats } from '@/lib/askhans/experiment/stats'
-import { CTA_MIN_CONVERSIONS_PER_VARIANT, CTA_MIN_DAYS, CTA_MIN_EXPOSED_PER_VARIANT, CTA_VARIANTS, CTA_EXPERIMENT_ENABLED, ctaWinner } from '@/lib/askhans/experiment/config'
+import { CTA_MIN_CLICKS_PER_VARIANT, CTA_MIN_DAYS, CTA_MIN_EXPOSED_PER_VARIANT, CTA_MIN_SUBGROUP_CLICKS, CTA_VARIANTS, CTA_EXPERIMENT_ENABLED, ctaWinner } from '@/lib/askhans/experiment/config'
 import { ASK_COPY } from '@/components/askhans/copy'
 
 export const dynamic = 'force-dynamic'
@@ -28,36 +28,34 @@ const ratio = (a: number, b: number) => (b > 0 ? a / b : NaN)
 const n0 = (x: number) => x.toLocaleString('en-US')
 const f = (x: number, d = 2) => (Number.isFinite(x) ? x.toFixed(d) : '–')
 
-export default async function ExperimentPage({ searchParams }: { searchParams: Promise<{ key?: string }> }) {
-  const { key } = await searchParams
+export default async function ExperimentPage({ searchParams }: { searchParams: Promise<{ key?: string; pageviews?: string }> }) {
+  const { key, pageviews } = await searchParams
   if (!authorised(key)) notFound()
-  const r = await getExperimentReport()
+  const pv = Number(pageviews)
+  const r = await getExperimentReport({ pageLoads: pageviews && Number.isFinite(pv) && pv > 0 ? Math.round(pv) : null })
   const V = r.variants
   const best = [...r.posterior].sort((a, b) => b.rate - a.rate)[0]
 
   type Row = [string, (v: VariantStats) => string]
   const rows: Row[] = [
-    ['Exposures (= button impressions)', (v) => n0(v.exposedSessions)],
-    ['Button impressions (events)', (v) => n0(v.impressions)],
-    ['Button clicks', (v) => n0(v.clicks)],
-    ['Click-through rate (clicks / impressions)', (v) => pct(ratio(v.clicks, v.impressions))],
+    ['Exposure (tracked page loads with the button / 3)', (v) => (v.exposed > 0 ? n0(v.exposed) : 'enter ?pageviews=N')],
+    ['PRIMARY: button clicks', (v) => n0(v.clicks)],
+    ['PRIMARY: click-through rate (clicks / exposure)', (v) => pct(ratio(v.clicks, v.exposed), 3)],
     ['Successful openings (all)', (v) => n0(v.opened)],
     ['Successful openings via an experiment button', (v) => n0(v.openedViaButton)],
-    ['Opening rate (via button / clicks)', (v) => pct(ratio(v.openedViaButton, v.clicks))],
-    ['First questions (events, consented)', (v) => n0(v.firstQuestions)],
-    ['First questions (consented)', (v) => n0(v.firstQuestionSessions)],
-    ['PRIMARY: conversion (first questions / impressions)', (v) => pct(ratio(v.firstQuestionSessions, v.exposedSessions), 3)],
+    ['Per click: opened via button / clicks', (v) => pct(ratio(v.openedViaButton, v.clicks))],
+    ['First questions (consented)', (v) => n0(v.firstQuestions)],
+    ['Per click: first question / clicks', (v) => pct(ratio(v.firstQuestions, v.clicks))],
+    ['Conversations completed (click-through from an answer)', (v) => n0(v.completed)],
+    ['Per click: conversation completed / clicks', (v) => pct(ratio(v.completed, v.clicks))],
     ['Second questions', (v) => n0(v.secondQuestions)],
     ['Second-question rate (second / first)', (v) => pct(ratio(v.secondQuestions, v.firstQuestions))],
     ['Three-question conversations', (v) => n0(v.threeQuestions)],
     ['Three-question rate (three / first)', (v) => pct(ratio(v.threeQuestions, v.firstQuestions))],
     ['Avg questions per conversation', (v) => f(ratio(v.questions, v.convs))],
     ['Avg active time per Ask Hans visit (seconds)', (v) => f(ratio(v.seconds, v.sessionsWithQuestions), 0)],
-    ['Conversations completed (click-through from an answer)', (v) => n0(v.completed)],
     ['Return visits (visitors who said Yes)', (v) => n0(v.returnVisits)],
     ['Power Mode used', (v) => n0(v.powerMode)],
-    ['Conversations per 1,000 impressions', (v) => f(ratio(v.firstQuestions, v.exposedSessions) * 1000)],
-    ['Conversations per 1,000 button impressions', (v) => f(ratio(v.firstQuestions, v.impressions) * 1000)],
     ['Consent share (Yes / answered)', (v) => pct(ratio(v.consentYes, v.consentYes + v.consentNo), 1)],
   ]
 
@@ -74,7 +72,7 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
       <section className="mb-6 rounded-xl border border-border p-4" aria-label="Verdict">
         <h2 className="mb-2 text-lg font-bold">{leaderText}</h2>
         <p className="mb-2 text-text-secondary">
-          Highest observed rate so far: variant {best.variant} at {pct(best.rate, 3)}. This is a description of the data, not a result, unless the verdict above says &quot;leader&quot;.
+          Highest observed click-through rate so far: variant {best.variant} at {pct(best.rate, 3)}. This is a description of the data, not a result, unless the verdict above says &quot;leader&quot;.
         </p>
         {r.verdict.reasons.length > 0 && (
           <ul className="list-disc space-y-1 ps-5 text-text-secondary">
@@ -84,7 +82,10 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
           </ul>
         )}
         <p className="mt-2 text-text-secondary">
-          Rule for naming a leader: at least {CTA_MIN_DAYS} days, {n0(CTA_MIN_EXPOSED_PER_VARIANT)} impressions and {CTA_MIN_CONVERSIONS_PER_VARIANT} first questions per variant, probability of being best of 95% or more, median lift of 10% or more over the runner-up, and a 95% interval that excludes zero.
+          Exposure input: {r.pageLoads != null ? `${n0(r.pageLoads)} tracked page loads (you entered ?pageviews=)` : 'missing. Add &pageviews=N to the URL: Umami pageviews from the start date to today.'} Each variant gets one third.
+        </p>
+        <p className="mt-2 text-text-secondary">
+          Rule for naming a leader on click-through: at least {CTA_MIN_DAYS} days, {n0(CTA_MIN_EXPOSED_PER_VARIANT)} exposures (page loads / 3) and {CTA_MIN_CLICKS_PER_VARIANT} button clicks per variant, probability of being best of 95% or more, median lift of 10% or more over the runner-up, and a 95% interval that excludes zero.
         </p>
       </section>
 
@@ -120,7 +121,7 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
           <thead>
             <tr className="border-b border-border">
               <th className="py-2 pe-3 text-start font-semibold">Variant</th>
-              <th className="px-3 py-2 text-end font-semibold">Sample (n / successes)</th>
+              <th className="px-3 py-2 text-end font-semibold">Exposure / clicks</th>
               <th className="px-3 py-2 text-end font-semibold">Rate</th>
               <th className="px-3 py-2 text-end font-semibold">95% credible interval</th>
               <th className="px-3 py-2 text-end font-semibold">P(best)</th>
@@ -154,12 +155,12 @@ export default async function ExperimentPage({ searchParams }: { searchParams: P
       <section className="mt-8 text-text-secondary" aria-label="Limitations">
         <h2 className="mb-2 text-lg font-bold text-text-primary">How to read this (limitations)</h2>
         <ul className="list-disc space-y-1 ps-5">
-          <li>The variant is held in memory only (nothing is written to browser storage), so every full page load draws again and no visitor or session can be linked. A visitor who reloads counts as new impressions, and a reload between button and first question can split the two across variants (adds noise, not bias).</li>
-          <li>All numbers are exact event counters. Automated browsers and visitors sending Do-Not-Track / Global Privacy Control are not counted.</li>
-          <li>Impressions, clicks and openings are counted for everybody (anonymous counters); first/second/third question, completion, return visits and Power Mode only for visitors who said Yes in the consent step. Absolute rates are therefore understated by the consent share (last row of the table); the comparison between variants holds when that share is about equal.</li>
+          <li>The variant is held in memory only (nothing is written to browser storage), so every full page load draws again and no visitor or session can be linked. A visitor who reloads counts as a new page load, and a reload between button and first question can split the two across variants (adds noise, not bias).</li>
+          <li>Clicks, openings and the funnel are exact event counters; automated browsers and visitors sending Do-Not-Track / Global Privacy Control are not counted there. <strong>Exposure is not a counter:</strong> it is Umami pageviews / 3, which still include DNT/GPC visitors that the experiment never tracks (if Umami counts them), so exposure is slightly overstated. The overstatement is the same for all three variants, so the comparison holds; absolute click-through rates are understated. The page-load total is typed in, not fetched (no Umami API key).</li>
+          <li>Clicks and openings are counted for everybody (anonymous counters); first/second/third question, completion, return visits and Power Mode only for visitors who said Yes in the consent step. Absolute rates are therefore understated by the consent share (last row of the table); the comparison between variants holds when that share is about equal.</li>
           <li>The header pill opens the search box first; the assistant opens when the question is sent. The click-to-opening rate therefore includes people who closed the box.</li>
           <li>Phones show an icon only in the header: there the wording appears as tooltip/accessible name, and visibly only on the floating pill (after a chat was closed), About and /askhans.</li>
-          <li>Subgroup rows below {500} impressions per variant are greyed out and must not be interpreted.</li>
+          <li>Subgroups show clicks and first questions per click only (page loads per subgroup are not available). Rows with fewer than {CTA_MIN_SUBGROUP_CLICKS} clicks in any variant are greyed out and must not be interpreted.</li>
           <li>There is no unchanged &quot;Ask Hans&quot; control arm: all three variants replace the previous wording.</li>
         </ul>
       </section>
@@ -171,7 +172,7 @@ function Breakdown({ title, rows }: { title: string; rows: SubgroupRow[] }) {
   if (rows.length === 0) return null
   return (
     <section className="mb-6 overflow-x-auto" aria-label={title}>
-      <h2 className="mb-2 text-lg font-bold">{title} (impressions → first questions, events)</h2>
+      <h2 className="mb-2 text-lg font-bold">{title} (clicks → first questions)</h2>
       <table className="w-full min-w-[640px] border-collapse">
         <thead>
           <tr className="border-b border-border">
@@ -189,7 +190,7 @@ function Breakdown({ title, rows }: { title: string; rows: SubgroupRow[] }) {
                 const c = row.perVariant[v]
                 return (
                   <td key={v} className="px-3 py-1.5 text-end tabular-nums">
-                    {n0(c.impressions)} → {n0(c.firstQuestions)} ({pct(ratio(c.firstQuestions, c.impressions))})
+                    {n0(c.clicks)} → {n0(c.firstQuestions)} ({pct(ratio(c.firstQuestions, c.clicks))})
                   </td>
                 )
               })}

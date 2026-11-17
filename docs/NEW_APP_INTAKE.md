@@ -65,7 +65,13 @@ Also set (only once verified — unset means "not yet checked", never "none"):
 - `hqCountry` (uppercase ISO alpha-2, e.g. `'DE'`) + `hqCountrySource` (URL) — the country of the
   company/maintainer HQ, shown as a small flag next to the app name on the tile, drawer and table row
   (owner rule 2026-11-14, new apps only; the existing tiles are cleaned up later). Decide it like this:
-  1. **Clear** = a primary source states it (company imprint/about/jobs/terms page, registered address,
+  0. **Always open the privacy policy AND the impressum/imprint first (owner rule 2026-11-15).** Read both
+     (plus terms, about and contact pages) for any country: a company address or registered office, the
+     governing law, or the national authorities / dispute bodies the policy tells users to contact (e.g. a
+     policy that refers users to the Korean KOPICO/KISA means Korea). If a country is mentioned, use that
+     country and put that page's URL in `hqCountrySource`; no need to ask. Policies that load only with
+     JavaScript still count — read the rendered text or the owner's pasted copy.
+  1. **Clear** = a primary source states it (company imprint/about/jobs/terms/privacy page, registered address,
      the maintainer's own statement). Set both fields. Never infer it from the domain TLD, the
      founder's name, the site language or an aggregator (Crunchbase-type sites) alone.
   2. **Not clear** (hobby/community project, anonymous or spread-out team, conflicting sources) →

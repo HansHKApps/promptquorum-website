@@ -12,12 +12,16 @@
 // "nofollow sponsored", and (2) swap AFFILIATE_DISCLOSURE for
 // AFFILIATE_DISCLOSURE_COMMISSION below.
 
+import { localeAndCluster } from '@/lib/tracking/umami-events'
+
 export interface AffiliateClickParams {
   url: string
   productName: string
   productCategory: string
   priceRange?: string
   lang: string
+  /** data-placement of the clicked link (top-box, table, inline, footer); defaults to "inline". */
+  placement?: string
 }
 
 // Bare hostnames (no leading "www.") of known retailers / vendors. Used by
@@ -78,6 +82,13 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
     price_range: p.priceRange ?? 'n/a',
     source_page: typeof window !== 'undefined' ? window.location.pathname : '',
     language: p.lang,
+    // Added 2026-11-14 on the SAME single event (additive; the keys above are unchanged so existing
+    // reports keep working). partner = link host, product = link text (max 80 chars).
+    partner: affiliateDestinationDomain(p.url),
+    product: p.productName.slice(0, 80),
+    placement: p.placement || 'inline',
+    page: typeof window !== 'undefined' ? window.location.pathname : '',
+    ...localeAndCluster(typeof window !== 'undefined' ? window.location.pathname : '/'),
   }
 
   try {

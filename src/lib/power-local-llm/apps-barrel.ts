@@ -172,11 +172,17 @@ import { app as app_dayflow } from './apps/dayflow'
 import { app as app_ai_notebook } from './apps/ai-notebook'
 import { app as app_obscura } from './apps/obscura'
 import { app as app_univocal } from './apps/univocal'
+import { app as app_openmausbot } from './apps/openmausbot'
+import { app as app_stirling_pdf } from './apps/stirling-pdf'
 import { app as app_stratosort } from './apps/stratosort'
 import { app as app_sprich } from './apps/sprich'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
 import { app as app_sablate } from './apps/sablate'
 import { app as app_cocoindex } from './apps/cocoindex'
+import { app as app_opendataloader_pdf } from './apps/opendataloader-pdf'
+import { app as app_docling } from './apps/docling'
+import { app as app_marker } from './apps/marker'
+import { app as app_mineru } from './apps/mineru'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
@@ -289,6 +295,7 @@ import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
+import { app as app_conduit } from './apps/conduit'
 import { app as app_phantasm } from './apps/phantasm'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
@@ -297,6 +304,8 @@ import { app as app_ramen } from './apps/ramen'
 import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
+import { app as app_screenpipe } from './apps/screenpipe'
+import { app as app_skales } from './apps/skales'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -588,6 +597,7 @@ export const localAiApps: ToolRecord[] = [
   app_murmur,
   app_fullmoon,
   app_reins,
+  app_conduit,
   app_phantasm,
   app_openvoiceos,
   app_hillnote,
@@ -596,6 +606,8 @@ export const localAiApps: ToolRecord[] = [
   app_llm_vision,
   app_picoclaw,
   app_scrypted,
+  app_screenpipe,
+  app_skales,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,
@@ -729,11 +741,17 @@ export const localAiApps: ToolRecord[] = [
   app_ai_notebook,
   app_obscura,
   app_univocal,
+  app_openmausbot,
+  app_stirling_pdf,
   app_stratosort,
   app_sprich,
   app_weesper_neon_flow,
   app_sablate,
   app_cocoindex,
+  app_opendataloader_pdf,
+  app_docling,
+  app_marker,
+  app_mineru,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,

@@ -8,8 +8,8 @@
 // - Inline only: no overlay, popup or interstitial. Not dismissible (clean pilot data).
 // - Reserved height per variant and breakpoint, so the slot causes no layout shift.
 // - Colors come from theme tokens (CSS variables); no hex values. Graphics are inline SVG without text.
-// - promo_view fires once per page view when >=50% of the slot is visible for >=1 s (not on render).
-// - promo_click fires on the CTA for all four targets. Link targets carry `via=promo_<target>_<placement>`.
+// - <target>_promo_view fires once per page view when >=50% of the slot is visible for >=1 s (not on render).
+// - <target>_promo_click fires on the CTA for all four targets. Link targets carry `via=promo_<target>_<placement>`.
 
 import { useEffect, useRef } from 'react'
 import { useLang } from '@/hooks/useLang'
@@ -60,7 +60,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
         if (entry.isIntersecting && entry.intersectionRatio >= PROMO_VIEW_THRESHOLD) {
           timer ??= setTimeout(() => {
             done = true
-            trackPromo('promo_view', ctxRef.current)
+            trackPromo('view', ctxRef.current)
             io.disconnect()
           }, PROMO_VIEW_MIN_MS)
         } else if (timer) {
@@ -88,7 +88,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
   const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${promoSource(target, placement)}` : undefined
   const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg transition-transform hover:bg-white/95 motion-safe:hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
   const click = (e: React.MouseEvent<HTMLElement>) => {
-    trackPromo('promo_click', ctx)
+    trackPromo('click', ctx)
     // Ask Hans / Power Mode open in place (real <button>, focus returns to it on close); the others are links.
     if (!href && (target === 'ask-hans' || target === 'power-mode')) openAskHansFromPromo(target, placement, e.currentTarget)
   }
