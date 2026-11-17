@@ -11001,6 +11001,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "CozyClay": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "cozyclay-review",
+        "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
+        "url": "/power-local-llm/cozyclay-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -12821,6 +12835,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cozyclay-review",
+        "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
+        "url": "/power-local-llm/cozyclay-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "halo-review",
         "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
         "url": "/power-local-llm/halo-review",
@@ -12858,17 +12880,9 @@
         "url": "/power-local-llm/screenpipe-review",
         "dateModified": "2026-11-16",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stirling-pdf-review",
-        "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
-        "url": "/power-local-llm/stirling-pdf-review",
-        "dateModified": "2026-11-16",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 266,
+    "totalCount": 267,
     "capped": true
   },
   "Qdrant": {
