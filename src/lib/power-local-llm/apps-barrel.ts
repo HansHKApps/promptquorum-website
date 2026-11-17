@@ -183,6 +183,7 @@ import { app as app_opendataloader_pdf } from './apps/opendataloader-pdf'
 import { app as app_docling } from './apps/docling'
 import { app as app_marker } from './apps/marker'
 import { app as app_mineru } from './apps/mineru'
+import { app as app_unstructured } from './apps/unstructured'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
@@ -750,6 +751,7 @@ export const localAiApps: ToolRecord[] = [
   app_docling,
   app_marker,
   app_mineru,
+  app_unstructured,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,

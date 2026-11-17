@@ -444,6 +444,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'docling-review':                         'docling-review',
   'marker-review':                          'marker-review',
   'mineru-review':                          'mineru-review',
+  'unstructured-review':                    'unstructured-review',
   'transcriptionsuite-review':              'transcriptionsuite-review',
   'parrot-review':                          'parrot-review',
   'anyllm-review':                           'anyllm-review',

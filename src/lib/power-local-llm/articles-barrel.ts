@@ -79,6 +79,7 @@ import { article as a_opendataloader_pdf_review } from './articles/opendataloade
 import { article as a_docling_review } from './articles/docling-review'
 import { article as a_marker_review } from './articles/marker-review'
 import { article as a_mineru_review } from './articles/mineru-review'
+import { article as a_unstructured_review } from './articles/unstructured-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -807,6 +808,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'docling-review':                                a_docling_review,
   'marker-review':                                 a_marker_review,
   'mineru-review':                                 a_mineru_review,
+  'unstructured-review':                           a_unstructured_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
