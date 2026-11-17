@@ -15,10 +15,10 @@
   },
   "title": "Sprich em um Mac M4 Pro com 24 GB: ditado local que digita em qualquer app",
   "page_title": "Teste do Sprich",
-  "dek": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada em dois falantes apesar do som ruim da sala, interface somente em alemão e vários recursos extras sem ser testados.",
+  "dek": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada com dois falantes atribuídos (precisão não avaliada; o testador considera o som da sala ruim), interface somente em alemão e vários recursos extras sem ser testados.",
   "seo": {
     "title": "Teste prático do Sprich: ditado local em um Mac M4 Pro",
-    "description": "Teste prático do Sprich em um Mac M4 Pro de 24 GB: ditado no Word, WhatsApp e Telegram e uma reunião de 6 minutos com dois falantes. O russo falhou."
+    "description": "Teste prático do Sprich em um Mac M4 Pro de 24 GB: ditado no Word, WhatsApp e Telegram e uma reunião de 6 minutos com dois falantes."
   },
   "faq": [
     [
@@ -28,7 +28,7 @@
     ],
     [
       "Quais idiomas o Sprich reconheceu no teste?",
-      "Inglês e alemão funcionaram. Uma frase em francês foi ditada e o texto está nas anotações, mas a precisão não foi avaliada. Um teste em russo falhou: a saída ficou truncada e sem sentido. O idioma de ditado configurado naquele momento não foi registrado.",
+      "Inglês e alemão funcionaram. Uma frase em francês foi ditada e o texto está nas anotações, mas a precisão não foi avaliada. Um teste em russo produziu uma saída truncada e sem sentido. O idioma de ditado configurado naquele momento não foi registrado.",
       "observed"
     ],
     [
@@ -53,7 +53,7 @@
     ],
     [
       "O modo de reunião do Sprich funciona?",
-      "Em um teste curto, sim. Em 13 de novembro o testador gravou uma reunião de 6 minutos com duas pessoas. O som da sala estava muito ruim, mas o Sprich transcreveu mesmo assim e atribuiu a fala a dois falantes. Depois ele oferece os formatos resumo, ata, e-mail de follow-up e carta médica. A precisão não foi avaliada e não se sabe qual formato foi gerado.",
+      "Um teste curto, sem veredito sobre a qualidade. Em 13 de novembro o testador gravou uma reunião de 6 minutos com duas pessoas, numa sala cujo som ele considera muito ruim; o Sprich mesmo assim produziu uma transcrição com dois falantes atribuídos. Depois ele oferece os formatos resumo, ata, e-mail de follow-up e carta médica. A precisão não foi avaliada e não se sabe qual formato foi gerado.",
       "observed"
     ]
   ],
@@ -118,20 +118,20 @@
       "observed"
     ],
     [
-      "Ajuda de IA usada",
-      "O Claude redigiu este relatório a partir das anotações do testador em Word e de 15 capturas de tela, e o capítulo sobre o modo de reunião a partir da mensagem do testador de 13 de novembro e de 2 capturas de tela adicionais. As partes ditadas das anotações parecem vir do próprio Sprich (suposição: as entradas do histórico coincidem com o texto das anotações), então alguns deslizes nas anotações podem ser saída do app.",
+      "Base deste relatório",
+      "Este relatório se baseia nas anotações do testador em Word e em 15 capturas de tela, e o capítulo sobre o modo de reunião na mensagem do testador de 13 de novembro e de 2 capturas de tela adicionais. As partes ditadas das anotações parecem vir do próprio Sprich (suposição: as entradas do histórico coincidem com o texto das anotações), então alguns deslizes nas anotações podem ser saída do app.",
       "assumption"
     ],
     [
       "Transparência",
-      "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
+      "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
       "observed"
     ]
   ],
-  "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste, com uma análise escrita por IA. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
+  "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Sprich foi adicionado ao diretório em 2026-11-09, no mesmo dia deste teste. O desenvolvedor respondeu ao testador depois do teste; a data não é informada, e não se sabe se ele tinha estas anotações. O Sprich recebe cliques do site. Nenhum pagamento ou patrocínio consta nas anotações.",
   "verdict": {
-    "general": "Um app de ditado cuidadosamente construído, com prioridade para o alemão, para Macs com Apple Silicon. Nesta sessão o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão; o russo não. Em uma segunda sessão, em 13 de novembro, uma reunião de 6 minutos com duas pessoas foi gravada e transcrita, com os falantes diferenciados, apesar do som muito ruim da sala; o testador diz que a função de reunião funciona bem. Transcrição de arquivos, reescrita de texto, operação offline, as alegações de privacidade e a desinstalação não foram testados.",
-    "fit": "O testador ficou impressionado, deu nota cinco de cinco e o recomendou a um contato. Ele o considera tão rápido quanto sua ferramenta de ditado na nuvem, embora nada tenha sido cronometrado. Se ele continuará usando não consta nas anotações. Ele também acha realmente ótimo que as anotações de reunião rodem localmente."
+    "general": "Um app de ditado cuidadosamente construído, com prioridade para o alemão, para Macs com Apple Silicon. Nesta sessão o ditado funcionou no Word, no WhatsApp e no Telegram em inglês e alemão; o russo não foi reconhecido em um teste. Em uma segunda sessão, em 13 de novembro, uma reunião de 6 minutos com duas pessoas foi gravada e transcrita, com dois falantes atribuídos (precisão não avaliada), em uma sala que o testador considera muito ruim em termos de som; o testador diz que a função de reunião funciona bem. Transcrição de arquivos, reescrita de texto, operação offline, as alegações de privacidade e a desinstalação não foram testados.",
+    "fit": "O testador ficou impressionado, deu nota cinco de cinco e o recomendou a um contato. Ele o considera tão rápido quanto sua ferramenta de ditado na nuvem, embora nada tenha sido cronometrado. Se ele continuará usando não consta nas anotações. Ele também acha realmente ótimo que as anotações de reunião rodem localmente, conforme o app informa; o PromptQuorum não testou isso."
   },
   "scores": [
     [
@@ -147,7 +147,7 @@
     [
       "Função principal",
       4,
-      "O ditado funcionou em três apps em inglês e alemão; o russo falhou."
+      "O ditado funcionou em três apps em inglês e alemão; o russo não foi reconhecido em um teste, e a configuração do idioma de ditado não foi registrada."
     ],
     [
       "Orientação e iteração",
@@ -183,7 +183,7 @@
     ],
     [
       "observed",
-      "O ditado funcionou no Microsoft Word, no WhatsApp e no Telegram, em inglês e alemão. Um teste em russo falhou. O nome de um produto apareceu como “Sprich Ae” no histórico."
+      "O ditado funcionou no Microsoft Word, no WhatsApp e no Telegram, em inglês e alemão. Um teste em russo não foi reconhecido; a configuração do idioma de ditado não foi registrada. O nome de um produto apareceu como “Sprich Ae” no histórico."
     ],
     [
       "tester-error",
@@ -199,7 +199,7 @@
     ],
     [
       "observed",
-      "Em uma segunda sessão, em 13 de novembro, o testador gravou uma reunião de 6 minutos com duas pessoas. O som da sala estava muito ruim; o Sprich ainda assim a transcreveu e atribuiu dois falantes. Uma caixa de diálogo posterior oferece Zusammenfassung, Protokoll, Follow-up-E-Mail e Arztbrief. O testador diz que a função de reunião funciona bem."
+      "Em uma segunda sessão, em 13 de novembro, o testador gravou uma reunião de 6 minutos com duas pessoas. O testador descreve o som da sala como muito ruim; o Sprich ainda assim a transcreveu e atribuiu dois falantes. Uma caixa de diálogo posterior oferece Zusammenfassung, Protokoll, Follow-up-E-Mail e Arztbrief. O testador diz que a função de reunião funciona bem."
     ],
     [
       "observed",
@@ -391,7 +391,7 @@
       "items": [
         [
           "observed",
-          "Em 13 de novembro de 2026 o testador gravou uma reunião com a aba Reuniões. O cabeçalho da reunião salva diz “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (falas). A versão do app usada não foi registrada.",
+          "Em 13 de novembro de 2026 o testador gravou uma reunião com a aba Reuniões. O cabeçalho da reunião salva diz “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (falas). A versão do app usada não foi registrada. O outro participante consentiu com a gravação e com a publicação do trecho.",
           "sprich-meeting-transcript-two-speakers"
         ],
         [
@@ -421,7 +421,7 @@
         ],
         [
           "tester-view",
-          "O testador acha realmente ótimo que isso rode localmente.",
+          "O testador acha realmente ótimo que isso rode localmente, conforme o app informa; o PromptQuorum não testou isso.",
           null
         ],
         [
@@ -447,7 +447,7 @@
         ],
         [
           "tester-view",
-          "Com seus 30 anos em consultoria, ele valoriza escrever ele mesmo as atas de reunião. Depois ele gravou uma reunião em uma sala com o app e acha realmente ótimo que ela rode localmente.",
+          "Com seus 30 anos em consultoria, ele valoriza escrever ele mesmo as atas de reunião. Depois ele gravou uma reunião em uma sala com o app e acha realmente ótimo que ela rode localmente, conforme o app informa; o PromptQuorum não testou isso.",
           null
         ]
       ]
@@ -499,7 +499,7 @@
     [
       "O ditado é otimizado para o alemão; o Parakeet entende cerca de 25 idiomas europeus.",
       "Mensagem do desenvolvedor",
-      "Inglês e alemão funcionaram, o russo falhou; transcrição de arquivos não testada.",
+      "Inglês e alemão funcionaram; o russo não foi reconhecido em um teste; transcrição de arquivos não testada.",
       "vendor-claim"
     ],
     [
@@ -602,9 +602,9 @@
     [
       "Palavras em russo",
       "Não registrado",
-      "Truncadas, não reconhecidas",
+      "Saída truncada em um teste; configuração de idioma do ditado não registrada",
       "Não registrado",
-      "Fail",
+      "Not completed",
       []
     ],
     [
@@ -630,7 +630,7 @@
       "Reuniões",
       "6 min, 2 pessoas, 28 falas; som da sala muito ruim (testador); transcrição com dois falantes gerada",
       "12:24 (13 nov.)",
-      "Pass",
+      "Partial",
       [
         "sprich-meeting-transcript-two-speakers"
       ]
@@ -985,7 +985,7 @@
     "not_fits": [
       [
         "assumption",
-        "Quem precisa hoje de russo ou de uma interface que não seja em alemão, ou de um Mac Intel (o diretório lista somente Apple Silicon)."
+        "Quem precisa hoje de russo (em um teste, com a configuração de idioma do ditado não registrada, não foi reconhecido) ou de uma interface que não seja em alemão, ou de um Mac Intel (o diretório lista somente Apple Silicon)."
       ]
     ],
     "retest": "Refazer o teste numa nova versão principal, quando houver uma interface em inglês publicada ou uma lista de idiomas confirmada. Cobrir: registrar as versões do app e do macOS; cronometrar o atraso; russo com o idioma definido; transcrição de arquivos; reuniões mais longas com cada formato de avaliação gerado e cronometrado; o menu de reescrita; uso offline com o tráfego inspecionado; memória em uso; desinstalação."
@@ -1009,8 +1009,8 @@
       "meaning": "Visto em primeira mão no app, em uma captura de tela ou nas anotações do testador."
     },
     "measured": {
-      "label": "Medido",
-      "meaning": "Um valor lido em uma caixa de diálogo, contador ou ferramenta, com o número informado."
+      "label": "Lido no app",
+      "meaning": "Um valor que o app exibiu em uma caixa de diálogo, contador ou ferramenta, com o número informado. O PromptQuorum não o mediu."
     },
     "tester-estimate": {
       "label": "Estimativa do testador",
@@ -1086,7 +1086,7 @@
       "file": "sprich-setup-two-models-download-3-3-gb.webp",
       "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
       "alt": "Etapa 2 de 5 da configuração: dois modelos são baixados uma única vez, Sprich Transcribe v3 com cerca de 480 MB e Sprich Turbo v3 com cerca de 2.8 GB, somando cerca de 3.3 GB.",
-      "caption": "Etapa dos modelos na configuração. Os tamanhos são os do próprio app (medido); “funciona totalmente offline” é uma alegação do fabricante.",
+      "caption": "Etapa dos modelos na configuração. Os tamanhos são os do próprio app (lido no app); “funciona totalmente offline” é uma alegação do fabricante.",
       "role": "moment",
       "width": 1386,
       "height": 1306,
@@ -1128,7 +1128,7 @@
       "file": "sprich-setup-final-step-models-still-loading.webp",
       "path": "images/sprich-setup-final-step-models-still-loading.webp",
       "alt": "Etapa 5 de 5 da configuração, “Fast geschafft”: download do reconhecimento de fala em 72 por cento e do aprimoramento de texto em 12 por cento, com as etapas 1 a 4 marcadas.",
-      "caption": "Modelos ainda sendo baixados no fim da configuração. Horário não registrado. Medido.",
+      "caption": "Modelos ainda sendo baixados no fim da configuração. Horário não registrado. Lido no app.",
       "role": "moment",
       "width": 1376,
       "height": 1174,
