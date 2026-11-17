@@ -26,6 +26,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llms-for-creative-writing",
         "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
@@ -72,17 +80,9 @@
         "url": "/local-llms/how-to-install-lm-studio",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-to-install-ollama",
-        "title": "Download & Install Ollama on macOS, Windows & Linux",
-        "url": "/local-llms/how-to-install-ollama",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 361,
+    "totalCount": 362,
     "capped": true
   },
   "llama.cpp": {
@@ -4999,6 +4999,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "skales-review",
         "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
         "url": "/power-local-llm/skales-review",
@@ -5020,17 +5028,9 @@
         "url": "/power-local-llm/ollama-review",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "phone-harness-review",
-        "title": "Phone Harness Review: Let a Coding Agent Use Your iPhone or Android Phone",
-        "url": "/power-local-llm/phone-harness-review",
-        "dateModified": "2026-11-08",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Hermes Agent": {
@@ -11015,6 +11015,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "PapersGPT": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -12859,6 +12873,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "papersgpt-review",
+        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
+        "url": "/power-local-llm/papersgpt-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "skales-review",
         "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
         "url": "/power-local-llm/skales-review",
@@ -12872,17 +12894,9 @@
         "url": "/power-local-llm/yovoice-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "screenpipe-review",
-        "title": "Screenpipe Review: Local Screen and Audio Memory for You and Your AI Agents",
-        "url": "/power-local-llm/screenpipe-review",
-        "dateModified": "2026-11-16",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 267,
+    "totalCount": 268,
     "capped": true
   },
   "Qdrant": {
