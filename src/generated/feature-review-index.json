@@ -1094,6 +1094,11 @@
     "urlSlug": "screenpipe-review",
     "url": "/power-local-llm/screenpipe-review"
   },
+  "cozyclay": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cozyclay-review",
+    "url": "/power-local-llm/cozyclay-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
