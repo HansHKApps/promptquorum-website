@@ -634,6 +634,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'picoclaw-review',
   // Scrypted review (Voice, Speech & Multimodal, camera/NVR platform with optional local LLM summaries) — 2026-11-01
   'scrypted-review',
+  'screenpipe-review',
   // Lyonesse review (Voice, Speech & Multimodal, iPhone/iPad/Mac transcription) — 2026-10-26
   'lyonesse-review',
   'open-llm-vtuber-review',
@@ -758,6 +759,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'ai-notebook-review',
   'univocal-review',
   'openmausbot-review',
+  'stirling-pdf-review',
   'local-ai-on-android-guide',
   'local-ai-on-iphone-guide',
   'stratosort-review',
@@ -771,6 +773,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Parrot review (Voice, Speech & Multimodal) — 2026-10-18
   'parrot-review',
   'xberg-review',
+
+  // PDF parser reviews — 2026-11-16
+  'marker-review',
+  'docling-review',
+  'opendataloader-pdf-review',
+  'mineru-review',
+
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

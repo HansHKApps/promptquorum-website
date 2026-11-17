@@ -17,8 +17,8 @@ export const app: ToolRecord = {
   license: 'GPL 3.0',
   reviewSlug: 'risuai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per risuai-review.ts (research already done for the dedicated review) + github.com/kwaroran/RisuAI: RisuAI is a frontend only, it does not run a model itself — it connects to a backend you choose. Self-hosting from source requires Node.js 20.19+ or 22.12+; no RAM/GPU minimum is documented for the client itself. Verified 2026-09-13
-  stars: 1766,
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per risuai-review.ts (research already done for the dedicated review) + github.com/kwaroran/RisuAI: RisuAI is a frontend only, it does not run a model itself — it connects to a backend you choose. Self-hosting from source requires Node.js 22.13+ (README + package.json engines, verified 2026-11-14); no RAM/GPU minimum is documented for the client itself
+  stars: 1850,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'phone'],
@@ -43,6 +43,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { lorebooks: true, groupChats: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-31', // GitHub API (latest release v2026.10.292 on 2026-10-30, last push 2026-10-31), read 2026-11-02
+  lastUpstreamUpdate: '2026-11-14', // GitHub API (latest release v2026.10.295 on 2026-11-09, last push 2026-11-14), read 2026-11-14
   lastUpstreamUpdateSource: 'https://github.com/kwaroran/Risuai',
 }

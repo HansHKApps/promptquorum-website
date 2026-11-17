@@ -21,26 +21,34 @@ export function ctaWinner(): CtaVariant | null {
   return w === 'A' || w === 'B' || w === 'C' ? w : null
 }
 
-/** Minimum evidence before the dashboard may call a leader (documented in docs/askhans-cta-experiment.md). */
+/**
+ * Minimum evidence before the dashboard may call a leader (documented in docs/askhans-cta-experiment.md).
+ * EXPOSURE per variant = tracked page loads on pages with the button (Umami pageviews, entered on the dashboard) / 3:
+ * assignment is uniform (variant.ts) and no impression event is sent any more (quota). The scarce quantity is clicks,
+ * so the guard that really binds is CTA_MIN_CLICKS_PER_VARIANT.
+ */
 export const CTA_MIN_DAYS = 14
 export const CTA_MIN_EXPOSED_PER_VARIANT = 3000
-export const CTA_MIN_CONVERSIONS_PER_VARIANT = 30
+/** Primary KPI is clicks per exposure, so each variant needs this many button clicks before a leader can be named. */
+export const CTA_MIN_CLICKS_PER_VARIANT = 100
+/** Number of variants a tracked page load is split across (uniform assignment). */
+export const CTA_VARIANT_COUNT = CTA_VARIANTS.length
 export const CTA_WIN_PROBABILITY = 0.95
 /** Relative improvement over the runner-up that counts as practically meaningful. */
 export const CTA_PRACTICAL_LIFT = 0.1
-/** Subgroup rows with fewer exposures per variant are shown greyed out and never interpreted. */
-export const CTA_MIN_SUBGROUP_IMPRESSIONS = 500
+/** Subgroup rows with fewer button clicks in any variant are shown greyed out and never interpreted. */
+export const CTA_MIN_SUBGROUP_CLICKS = 20
 
 /** Where a button sits. Sent as `via` on click/opened, so openings can be attributed to the experiment buttons. */
 export const CTA_PLACEMENTS = ['header', 'floating', 'about', 'page'] as const
 export type CtaPlacement = (typeof CTA_PLACEMENTS)[number]
 
 /**
- * Funnel events. `consent: false` ones are anonymous counters sent like Umami (cookieless, no visitor ID); the others
+ * Funnel events (there is deliberately NO impression event: removed 2026-11-14 for the Umami event quota; exposure comes
+ * from page loads, see CTA_MIN_EXPOSED_PER_VARIANT). `consent: false` ones are anonymous counters sent like Umami (cookieless, no visitor ID); the others
  * follow the existing Ask Hans rule and are sent only after the visitor said "Yes" in the consent step.
  */
 export const CTA_EVENTS = {
-  ask_hans_button_impression: { consent: false },
   ask_hans_button_click: { consent: false },
   ask_hans_opened: { consent: false },
   ask_hans_first_question: { consent: true },

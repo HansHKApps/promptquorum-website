@@ -359,6 +359,7 @@ https://www.promptquorum.com/power-local-llm/diffusionbee-review
 https://www.promptquorum.com/power-local-llm/dify-ai-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies
 https://www.promptquorum.com/power-local-llm/docker-model-runner-review
+https://www.promptquorum.com/power-local-llm/docling-review
 https://www.promptquorum.com/power-local-llm/dograh-review
 https://www.promptquorum.com/power-local-llm/draw-things-hands-on-test
 https://www.promptquorum.com/power-local-llm/draw-things-review
@@ -526,6 +527,7 @@ https://www.promptquorum.com/power-local-llm/lucebox-review
 https://www.promptquorum.com/power-local-llm/lyonesse-review
 https://www.promptquorum.com/power-local-llm/macwhisper-review
 https://www.promptquorum.com/power-local-llm/maid-review
+https://www.promptquorum.com/power-local-llm/marker-review
 https://www.promptquorum.com/power-local-llm/maxkb-review
 https://www.promptquorum.com/power-local-llm/meetily-review
 https://www.promptquorum.com/power-local-llm/meetini-review
@@ -534,6 +536,7 @@ https://www.promptquorum.com/power-local-llm/metagpt-agnai-risuai-explained
 https://www.promptquorum.com/power-local-llm/metagpt-review
 https://www.promptquorum.com/power-local-llm/microsoft-agent-framework-review
 https://www.promptquorum.com/power-local-llm/milvus-review
+https://www.promptquorum.com/power-local-llm/mineru-review
 https://www.promptquorum.com/power-local-llm/mission-control-review
 https://www.promptquorum.com/power-local-llm/mlc-chat-review
 https://www.promptquorum.com/power-local-llm/mlc-llm-explained
@@ -575,6 +578,7 @@ https://www.promptquorum.com/power-local-llm/openai-edge-tts-review
 https://www.promptquorum.com/power-local-llm/openclaw-review
 https://www.promptquorum.com/power-local-llm/openclient-review
 https://www.promptquorum.com/power-local-llm/opencode-review
+https://www.promptquorum.com/power-local-llm/opendataloader-pdf-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
 https://www.promptquorum.com/power-local-llm/openmausbot-review
@@ -656,6 +660,7 @@ https://www.promptquorum.com/power-local-llm/sprich-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-forge-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-review
 https://www.promptquorum.com/power-local-llm/stableswarmui-review
+https://www.promptquorum.com/power-local-llm/stirling-pdf-review
 https://www.promptquorum.com/power-local-llm/strata-review
 https://www.promptquorum.com/power-local-llm/stratosort-review
 https://www.promptquorum.com/power-local-llm/styletts-2-review

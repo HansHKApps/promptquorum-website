@@ -949,6 +949,11 @@ const HUB_THEMES: Array<{
       'return-editor-review',
       'surfsense-review',
       'openrag-review',
+      'marker-review',
+      'docling-review',
+      'opendataloader-pdf-review',
+      'mineru-review',
+      'stirling-pdf-review',
     ],
   },
   {
@@ -1215,6 +1220,7 @@ const HUB_THEMES: Array<{
       'argos-translate-review',
       'linguister-review',
       'presenton-review',
+      'screenpipe-review',
     ],
   },
   {
