@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 359,
+    "totalCount": 361,
     "capped": true
   },
   "llama.cpp": {
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -938,17 +946,9 @@
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-11-13",
-        "tier": "about"
       }
     ],
-    "totalCount": 181,
+    "totalCount": 183,
     "capped": true
   },
   "Atomic Chat": {
@@ -5543,6 +5543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "yovoice-review",
+        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
+        "url": "/power-local-llm/yovoice-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-tts-mac",
         "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
         "url": "/power-local-llm/best-local-tts-mac",
@@ -5604,17 +5612,9 @@
         "url": "/power-local-llm/styletts-2-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "coqui-tts-review",
-        "title": "Coqui TTS Review: The Community-Maintained Voice-Cloning Toolkit",
-        "url": "/power-local-llm/coqui-tts-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Bark": {
@@ -8677,6 +8677,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "open-science-desktop-review",
+        "title": "Open Science Desktop Review: Free AI Research Workbench for Your Own Files",
+        "url": "/power-local-llm/open-science-desktop-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lucebox-review",
         "title": "Lucebox Review: Hand-Tuned Inference Engine and the Company Behind It",
         "url": "/power-local-llm/lucebox-review",
@@ -8698,17 +8706,9 @@
         "url": "/power-local-llm/tolaria-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "zeno-review",
-        "title": "Zeno Review: Free Private AI Workspace for Mac",
-        "url": "/power-local-llm/zeno-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "MaxKB": {
@@ -10331,6 +10331,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "argos-translate-review",
         "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
         "url": "/power-local-llm/argos-translate-review",
@@ -10376,25 +10392,9 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-11-07",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "facet-review",
-        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
-        "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "swerve-ai-review",
-        "title": "Swerve Review: AI Story and Character Chat for iPhone",
-        "url": "/power-local-llm/swerve-ai-review",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 24,
     "capped": true
   },
   "FluidVoice": {
@@ -10864,6 +10864,136 @@
         "slug": "skales-review",
         "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
         "url": "/power-local-llm/skales-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
+  "Halo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "halo-review",
+        "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
+        "url": "/power-local-llm/halo-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "amd-ryzen-ai-halo-local-ai-workstation",
+        "title": "AMD Ryzen AI Halo Price and Specs for Local AI",
+        "url": "/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "gmktec-evo-x2-local-ai-workstation",
+        "title": "GMKtec EVO-X2 Specs and Price: 128 GB Listed at $3,499.99",
+        "url": "/local-llms/gmktec-evo-x2-local-ai-workstation",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nvidia-dgx-spark-local-ai-workstation",
+        "title": "NVIDIA DGX Spark Price and Specs for Local AI",
+        "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "gmktec-evo-x5-pro-local-ai-workstation",
+        "title": "GMKtec EVO-X5 Pro vs DGX Spark: Specs, Price and Verdict",
+        "url": "/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "framework-desktop-local-ai-workstation",
+        "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/framework-desktop-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "hp-z2-mini-g1a-local-ai-workstation",
+        "title": "HP Z2 Mini G1a for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-ai-workstations-strix-halo-vs-dgx-spark",
+        "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
+        "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "minisforum-ms-s1-max-local-ai-workstation",
+        "title": "Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 17,
+    "capped": true
+  },
+  "YoVoice": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "yovoice-review",
+        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
+        "url": "/power-local-llm/yovoice-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Open Science Desktop": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-science-desktop-review",
+        "title": "Open Science Desktop Review: Free AI Research Workbench for Your Own Files",
+        "url": "/power-local-llm/open-science-desktop-review",
         "dateModified": "2026-11-17",
         "tier": "about"
       }
@@ -12691,9 +12821,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "halo-review",
+        "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
+        "url": "/power-local-llm/halo-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-science-desktop-review",
+        "title": "Open Science Desktop Review: Free AI Research Workbench for Your Own Files",
+        "url": "/power-local-llm/open-science-desktop-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "skales-review",
         "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
         "url": "/power-local-llm/skales-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "yovoice-review",
+        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
+        "url": "/power-local-llm/yovoice-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
@@ -12712,33 +12866,9 @@
         "url": "/power-local-llm/stirling-pdf-review",
         "dateModified": "2026-11-16",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-to-install-ollama",
-        "title": "Download & Install Ollama on macOS, Windows & Linux",
-        "url": "/local-llms/how-to-install-ollama",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "sillytavern-review",
-        "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
-        "url": "/local-llms/sillytavern-review",
-        "dateModified": "2026-11-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 263,
+    "totalCount": 266,
     "capped": true
   },
   "Qdrant": {

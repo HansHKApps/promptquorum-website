@@ -1104,6 +1104,21 @@
     "urlSlug": "skales-review",
     "url": "/power-local-llm/skales-review"
   },
+  "halo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "halo-review",
+    "url": "/power-local-llm/halo-review"
+  },
+  "yovoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "yovoice-review",
+    "url": "/power-local-llm/yovoice-review"
+  },
+  "open-science-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-science-desktop-review",
+    "url": "/power-local-llm/open-science-desktop-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
