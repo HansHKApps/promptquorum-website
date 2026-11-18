@@ -18,6 +18,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-pc-build-1000",
+        "title": "Local LLM PC Build Under $1,000 With a Used GPU (2026)",
+        "url": "/local-llms/local-llm-pc-build-1000",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "multi-gpu-local-llms",
+        "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
+        "url": "/local-llms/multi-gpu-local-llms",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "memex-review",
         "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
@@ -42,6 +58,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "rtx-3090-local-llm-buy-or-rent",
+        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
+        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llms-for-creative-writing",
         "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
@@ -54,30 +78,6 @@
         "slug": "qwen-vs-llama-vs-mistral",
         "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
         "url": "/local-llms/qwen-vs-llama-vs-mistral",
-        "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "papersgpt-review",
-        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
-        "url": "/power-local-llm/papersgpt-review",
         "dateModified": "2026-11-17",
         "tier": "about"
       }
@@ -93,6 +93,22 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-pc-build-1000",
+        "title": "Local LLM PC Build Under $1,000 With a Used GPU (2026)",
+        "url": "/local-llms/local-llm-pc-build-1000",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -150,22 +166,6 @@
         "url": "/local-llms/rtx-5090-vs-rtx-4090-local-llm",
         "dateModified": "2026-11-15",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-gpu-buying-guide-local-llm-2026",
-        "title": "Best Graphics Card for Local LLMs: GPU Buying Guide 2026",
-        "url": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
-        "dateModified": "2026-11-15",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
     "totalCount": 196,
@@ -179,6 +179,14 @@
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "multi-gpu-local-llms",
+        "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
+        "url": "/local-llms/multi-gpu-local-llms",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -242,14 +250,6 @@
         "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tensorrt-llm-explained",
-        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
-        "url": "/power-local-llm/tensorrt-llm-explained",
         "dateModified": "2026-11-07",
         "tier": "about"
       }
@@ -876,6 +876,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-pc-build-1000",
+        "title": "Local LLM PC Build Under $1,000 With a Used GPU (2026)",
+        "url": "/local-llms/local-llm-pc-build-1000",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rtx-3090-local-llm-buy-or-rent",
+        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
+        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
@@ -928,22 +944,6 @@
         "slug": "sillytavern-review",
         "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
         "url": "/local-llms/sillytavern-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "browseros-review",
-        "title": "BrowserOS Review: Open-Source AI Browser With Local Ollama and LM Studio Support",
-        "url": "/power-local-llm/browseros-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dayflow-review",
-        "title": "Dayflow Review: Open-Source Mac Work Journal with Local AI",
-        "url": "/power-local-llm/dayflow-review",
         "dateModified": "2026-11-14",
         "tier": "about"
       }
@@ -1330,19 +1330,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "uncensored-llm-models",
         "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
         "url": "/power-local-llm/uncensored-llm-models",
         "dateModified": "2026-11-13",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
     ],
@@ -2316,6 +2316,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
@@ -2329,14 +2337,6 @@
         "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
         "url": "/power-local-llm/uncensored-llm-models",
         "dateModified": "2026-11-13",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -7492,7 +7492,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -8653,6 +8653,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nativ-review",
         "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
         "url": "/power-local-llm/nativ-review",
@@ -8714,17 +8722,9 @@
         "url": "/power-local-llm/open-science-desktop-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lucebox-review",
-        "title": "Lucebox Review: Hand-Tuned Inference Engine and the Company Behind It",
-        "url": "/power-local-llm/lucebox-review",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "MaxKB": {
@@ -9764,7 +9764,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
     ],
@@ -11072,9 +11072,17 @@
         "url": "/power-local-llm/cozyclay-review",
         "dateModified": "2026-11-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "PapersGPT": {
@@ -12115,6 +12123,20 @@
     "totalCount": 3,
     "capped": false
   },
+  "FableCut": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "FunClip": {
     "articles": [
       {
@@ -12124,6 +12146,14 @@
         "url": "/power-local-llm/funclip-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -12142,7 +12172,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "IntentKit": {
@@ -13023,6 +13053,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
@@ -13042,6 +13080,14 @@
         "slug": "memex-review",
         "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
         "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rtx-3090-local-llm-buy-or-rent",
+        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
+        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
@@ -13068,25 +13114,9 @@
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "conduit-review",
-        "title": "Conduit Review: Mobile Client for Open WebUI and Your Own Models",
-        "url": "/power-local-llm/conduit-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 275,
+    "totalCount": 276,
     "capped": true
   },
   "Qdrant": {
@@ -13772,9 +13802,17 @@
         "url": "/power-local-llm/openmontage-review",
         "dateModified": "2026-10-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Private Mind": {
@@ -15339,6 +15377,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mineru-review",
         "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
         "url": "/power-local-llm/mineru-review",
@@ -15378,7 +15424,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "MinerU": {

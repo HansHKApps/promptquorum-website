@@ -1319,6 +1319,11 @@
     "urlSlug": "farfalle-review",
     "url": "/power-local-llm/farfalle-review"
   },
+  "fablecut": {
+    "cluster": "power-local-llm",
+    "urlSlug": "fablecut-review",
+    "url": "/power-local-llm/fablecut-review"
+  },
   "funclip": {
     "cluster": "power-local-llm",
     "urlSlug": "funclip-review",

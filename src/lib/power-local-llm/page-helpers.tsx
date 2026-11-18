@@ -1348,6 +1348,7 @@ const HUB_THEMES: Array<{
       'ai-cutoutwerk-review',
       'openmontage-review',
       'cozyclay-review',
+      'fablecut-review',
     ],
   },
   {
