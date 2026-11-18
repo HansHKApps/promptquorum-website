@@ -683,6 +683,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'alpaca-review':                            'alpaca-review',
   'kition-review':                            'kition-review',
   'pooled-review':                            'pooled-review',
+  'askimo-review':                            'askimo-review',
   'reactive-resume-review':                   'reactive-resume-review',
   'next-ai-draw-io-review':                   'next-ai-draw-io-review',
 }

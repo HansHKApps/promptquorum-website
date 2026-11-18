@@ -812,6 +812,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'alpaca-review',
   'kition-review',
   'pooled-review',
+  'askimo-review',
   'reactive-resume-review',
   'next-ai-draw-io-review',
   'ultimate-vocal-remover-review',
