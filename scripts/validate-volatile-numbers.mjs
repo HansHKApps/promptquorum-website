@@ -34,7 +34,7 @@ const args = process.argv.slice(2)
 const list = args.includes('--list')
 const updateBaseline = args.includes('--update-baseline')
 
-const STAR_WORDS = /stars?\b|Sterne|étoiles|estrellas|estrelas|スター|星|نجمة|نجوم|스타/i
+const STAR_WORDS = /\bstars?\b|Sterne|étoiles|estrellas|estrelas|スター|星|نجمة|نجوم|스타/i
 // 1,000-style grouped numbers, "140k", "15万", "150 mil" — followed or preceded by a star word nearby.
 const NUMBER = /(?<![\d.,])(\d{1,3}(?:[.,   ]\d{3})+|\d{2,3}k|\d{1,3}万|\d{2,3} mil)\+?/g
 const HAS_PLACEHOLDER = /\$\{st\.|starsFor\(|appStars\(/
