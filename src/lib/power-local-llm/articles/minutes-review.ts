@@ -22,9 +22,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents',
     seoTitle: 'Minutes Review: Free Conversation Memory for AI Agents',
     intro:
-      'Minutes 0.34.0 is a free, MIT-licensed app that records and transcribes meetings, voice memos and dictation and keeps each one as a Markdown file. According to its README, capture, transcription and storage run on your own computer, and Claude Code, Codex, Cursor or any other MCP client can search those files and name the file an answer came from. This review is based on the official website and the GitHub repository with its install guide and release notes, checked on 18 November 2026. PromptQuorum has not tested the app hands-on.',
+      'Minutes 0.34.0 is a free, MIT-licensed app that records and transcribes meetings, voice memos and dictation and keeps each one as a Markdown file. The app itself is free; a cloud assistant you connect has its own sign-in or key. According to its README, capture, transcription and storage run on your own computer, and Claude Code, Codex, Cursor or any other MCP client can search those files and name the file an answer came from. This review is based on the official website and the GitHub repository with its install guide and release notes, checked on 18 November 2026. PromptQuorum has not tested the app hands-on.',
     metaDescription:
-      'Minutes is a free MIT app that records meetings, voice memos and dictation as Markdown files that MCP clients can search. What is confirmed.',
+      'Minutes is a free MIT app that records meetings, voice memos and dictation as Markdown files that MCP clients can search. Per its docs; not tested.',
     twitterDescription:
       'Minutes: a free open-source app that records and transcribes meetings, voice memos and dictation as Markdown files for Claude, Codex and other MCP clients. What is confirmed.',
     audience:
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'open-source meeting transcription Mac',
       'dictation app that saves Markdown',
       'AI agent memory from meetings',
-      'open-source Granola alternative',
+      'open-source meeting notetaker for Mac',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -301,11 +301,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/minutes-review-hero-de.webp',
     title: 'Minutes-Rezension: Kostenloses Open-Source-Gedächtnis für Meetings, Sprachmemos und Diktate für KI-Agenten',
-    seoTitle: 'Minutes-Rezension: Kostenloses Gesprächsgedächtnis für KI-Agenten',
+    seoTitle: 'Minutes-Rezension: Kostenloses Gedächtnis für KI-Agenten',
     intro:
-      'Minutes 0.34.0 ist eine kostenlose, MIT-lizenzierte App, die Meetings, Sprachmemos und Diktate aufnimmt, transkribiert und jeweils als Markdown-Datei ablegt. Laut README laufen Aufnahme, Transkription und Speicherung auf Ihrem eigenen Rechner, und Claude Code, Codex, Cursor oder jeder andere MCP-Client kann diese Dateien durchsuchen und die Datei nennen, aus der eine Antwort stammt. Diese Rezension stützt sich auf die offizielle Website und das GitHub-Repository mit Installationsanleitung und Release-Hinweisen, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
+      'Minutes 0.34.0 ist eine kostenlose, MIT-lizenzierte App, die Meetings, Sprachmemos und Diktate aufnimmt, transkribiert und jeweils als Markdown-Datei ablegt. Die App selbst ist kostenlos; ein verbundener Cloud-Assistent hat eigene Anmeldung oder eigenen Schlüssel. Laut README laufen Aufnahme, Transkription und Speicherung auf Ihrem eigenen Rechner, und Claude Code, Codex, Cursor oder jeder andere MCP-Client kann diese Dateien durchsuchen und die Datei nennen, aus der eine Antwort stammt. Diese Rezension stützt sich auf die offizielle Website und das GitHub-Repository mit Installationsanleitung und Release-Hinweisen, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'Minutes ist eine kostenlose MIT-App, die Meetings, Sprachmemos und Diktate als Markdown-Dateien ablegt, die MCP-Clients durchsuchen können. Was belegt ist.',
+      'Minutes ist eine kostenlose MIT-App, die Meetings, Sprachmemos und Diktate als Markdown-Dateien ablegt, die MCP-Clients durchsuchen. Laut Doku, ungetestet.',
     twitterDescription:
       'Minutes: kostenlose Open-Source-App, die Meetings, Sprachmemos und Diktate aufnimmt, transkribiert und als Markdown-Dateien für Claude, Codex und andere MCP-Clients ablegt. Was belegt ist.',
     audience:
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Open-Source-Meeting-Transkription Mac',
       'Diktier-App, die Markdown speichert',
       'KI-Agenten-Gedächtnis aus Meetings',
-      'quelloffene Granola-Alternative',
+      'quelloffener Meeting-Notizen-Assistent für Mac',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -581,12 +581,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/minutes-review-hero-fr.webp',
-    title: 'Test de Minutes : mémoire open source et gratuite pour réunions, mémos vocaux et dictée destinée aux agents IA',
-    seoTitle: 'Test de Minutes : mémoire gratuite des conversations',
+    title: 'Avis sur Minutes : mémoire open source et gratuite pour réunions, mémos vocaux et dictée destinée aux agents IA',
+    seoTitle: 'Avis sur Minutes : mémoire gratuite des conversations',
     intro:
-      'Minutes 0.34.0 est une application gratuite sous licence MIT qui enregistre et transcrit réunions, mémos vocaux et dictées, puis conserve chacun dans un fichier Markdown. D\'après son README, l\'enregistrement, la transcription et le stockage se font sur votre propre ordinateur, et Claude Code, Codex, Cursor ou tout autre client MCP peut parcourir ces fichiers et indiquer le fichier d\'où vient une réponse. Ce test s\'appuie sur le site officiel et sur le dépôt GitHub, avec son guide d\'installation et ses notes de version, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
+      'Minutes 0.34.0 est une application gratuite sous licence MIT qui enregistre et transcrit réunions, mémos vocaux et dictées, puis conserve chacun dans un fichier Markdown. L\'application elle-même est gratuite ; un assistant cloud connecté a sa propre connexion ou sa propre clé. D\'après son README, l\'enregistrement, la transcription et le stockage se font sur votre propre ordinateur, et Claude Code, Codex, Cursor ou tout autre client MCP peut parcourir ces fichiers et indiquer le fichier d\'où vient une réponse. Ce test s\'appuie sur le site officiel et sur le dépôt GitHub, avec son guide d\'installation et ses notes de version, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
-      'Minutes est une application MIT gratuite qui enregistre réunions, mémos vocaux et dictées en fichiers Markdown, interrogeables par les clients MCP. Ce qui est confirmé.',
+      'Minutes : appli MIT gratuite qui enregistre réunions, mémos vocaux et dictées en fichiers Markdown, interrogeables via MCP. Selon sa doc ; non testée.',
     twitterDescription:
       'Minutes : application open source gratuite qui enregistre et transcrit réunions, mémos vocaux et dictées en fichiers Markdown pour Claude, Codex et d\'autres clients MCP. Ce qui est confirmé.',
     audience:
@@ -594,14 +594,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Test de Minutes',
+    primaryTerm: 'Avis sur Minutes',
     targetKeywords: [
-      'test de Minutes',
+      'avis sur Minutes',
       'notes de réunion locales avec MCP',
       'transcription de réunions open source Mac',
       'application de dictée qui enregistre en Markdown',
       'mémoire d\'agent IA issue des réunions',
-      'alternative open source à Granola',
+      'outil open source de notes de réunion pour Mac',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -845,10 +845,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pour aller plus loin',
         items: [
           '[Outils vocaux et audio locaux comparés](/fr/power-local-llm/local-llm-voice-audio-compared) — synthèse vocale, reconnaissance vocale et agents vocaux côte à côte.',
-          '[Test d\'Anarlog](/fr/power-local-llm/anarlog-review) — un bloc-notes de réunion open source sans robot.',
-          '[Test de Meetily](/fr/power-local-llm/meetily-review) — un outil de notes de réunion open source pour Mac et Windows.',
-          '[Test de Screenpipe](/fr/power-local-llm/screenpipe-review) — une couche de mémoire issue de la capture d\'écran et d\'audio.',
-          '[Test d\'Amical](/fr/power-local-llm/amical-review) — dictée open source gratuite pour Mac et Windows.',
+          '[Avis sur Anarlog](/fr/power-local-llm/anarlog-review) — un bloc-notes de réunion open source sans robot.',
+          '[Avis sur Meetily](/fr/power-local-llm/meetily-review) — un outil de notes de réunion open source pour Mac et Windows.',
+          '[Avis sur Screenpipe](/fr/power-local-llm/screenpipe-review) — une couche de mémoire issue de la capture d\'écran et d\'audio.',
+          '[Avis sur Amical](/fr/power-local-llm/amical-review) — dictée open source gratuite pour Mac et Windows.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
       },
@@ -865,9 +865,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Minutes: memoria gratuita y de código abierto para reuniones, notas de voz y dictado destinada a agentes de IA',
     seoTitle: 'Reseña de Minutes: memoria gratuita de conversaciones',
     intro:
-      'Minutes 0.34.0 es una aplicación gratuita con licencia MIT que graba y transcribe reuniones, notas de voz y dictados, y guarda cada uno como un archivo Markdown. Según su README, la grabación, la transcripción y el almacenamiento se ejecutan en tu propio equipo, y Claude Code, Codex, Cursor o cualquier otro cliente MCP puede buscar en esos archivos e indicar el archivo del que procede una respuesta. Esta reseña se basa en el sitio web oficial y en el repositorio de GitHub, con su guía de instalación y sus notas de versión, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
+      'Minutes 0.34.0 es una aplicación gratuita con licencia MIT que graba y transcribe reuniones, notas de voz y dictados, y guarda cada uno como un archivo Markdown. La app en sí es gratuita; un asistente en la nube que conectes tiene su propio inicio de sesión o clave. Según su README, la grabación, la transcripción y el almacenamiento se ejecutan en tu propio equipo, y Claude Code, Codex, Cursor o cualquier otro cliente MCP puede buscar en esos archivos e indicar el archivo del que procede una respuesta. Esta reseña se basa en el sitio web oficial y en el repositorio de GitHub, con su guía de instalación y sus notas de versión, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
     metaDescription:
-      'Minutes es una app MIT gratuita que graba reuniones, notas de voz y dictados como archivos Markdown en los que los clientes MCP pueden buscar. Lo que está confirmado.',
+      'Minutes es una app MIT gratuita que guarda reuniones, notas de voz y dictados como Markdown consultable por MCP. Según su documentación; sin probar.',
     twitterDescription:
       'Minutes: app gratuita de código abierto que graba y transcribe reuniones, notas de voz y dictados como archivos Markdown para Claude, Codex y otros clientes MCP. Lo que está confirmado.',
     audience:
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'transcripción de reuniones de código abierto Mac',
       'app de dictado que guarda en Markdown',
       'memoria de agentes de IA a partir de reuniones',
-      'alternativa de código abierto a Granola',
+      'app de código abierto para notas de reuniones en Mac',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -1146,9 +1146,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do Minutes: memória gratuita e de código aberto para reuniões, memos de voz e ditado voltada a agentes de IA',
     seoTitle: 'Análise do Minutes: memória gratuita de conversas',
     intro:
-      'O Minutes 0.34.0 é um aplicativo gratuito com licença MIT que grava e transcreve reuniões, memos de voz e ditados e guarda cada um como um arquivo Markdown. Segundo o README, a gravação, a transcrição e o armazenamento rodam no seu próprio computador, e o Claude Code, o Codex, o Cursor ou qualquer outro cliente MCP pode pesquisar esses arquivos e indicar o arquivo de onde veio uma resposta. Esta análise se baseia no site oficial e no repositório do GitHub, com o guia de instalação e as notas de versão, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
+      'O Minutes 0.34.0 é um aplicativo gratuito com licença MIT que grava e transcreve reuniões, memos de voz e ditados e guarda cada um como um arquivo Markdown. O app em si é gratuito; um assistente na nuvem que você conecta tem login ou chave próprios. Segundo o README, a gravação, a transcrição e o armazenamento rodam no seu próprio computador, e o Claude Code, o Codex, o Cursor ou qualquer outro cliente MCP pode pesquisar esses arquivos e indicar o arquivo de onde veio uma resposta. Esta análise se baseia no site oficial e no repositório do GitHub, com o guia de instalação e as notas de versão, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
     metaDescription:
-      'O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados como arquivos Markdown que clientes MCP podem pesquisar. O que está confirmado.',
+      'O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados como arquivos Markdown que clientes MCP podem pesquisar. Conforme a documentação; sem testes.',
     twitterDescription:
       'Minutes: app gratuito e de código aberto que grava e transcreve reuniões, memos de voz e ditados como arquivos Markdown para Claude, Codex e outros clientes MCP. O que está confirmado.',
     audience:
@@ -1163,7 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'transcrição de reuniões de código aberto Mac',
       'app de ditado que salva em Markdown',
       'memória de agentes de IA a partir de reuniões',
-      'alternativa de código aberto ao Granola',
+      'app de código aberto para anotar reuniões no Mac',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -1427,11 +1427,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Minutesレビュー：会議・ボイスメモ・音声入力をAIエージェント向けの記憶にする無料オープンソースアプリ',
     seoTitle: 'Minutesレビュー：AIエージェント向け無料の会話メモリ',
     intro:
-      'Minutes 0.34.0は、会議・ボイスメモ・音声入力を録音して文字起こしし、1件ずつMarkdownファイルとして保存する、MITライセンスの無料アプリです。READMEによると、録音・文字起こし・保存は自分のパソコン上で行われ、Claude Code、Codex、Cursorなどの任意のMCPクライアントがそのファイルを検索し、回答の元になったファイルを示せます。このレビューは公式サイトと、インストールガイドやリリースノートを含むGitHubリポジトリに基づき、2026年11月18日に確認しました。PromptQuorumは実機での検証を行っていません。',
+      'Minutes 0.34.0は、会議・ボイスメモ・音声入力を録音して文字起こしし、1件ずつMarkdownファイルとして保存する、MITライセンスの無料アプリです（アプリ自体が無料で、接続するクラウドアシスタントには独自のサインインまたはキーが必要です）。READMEによると、録音・文字起こし・保存は自分のパソコン上で行われ、Claude Code、Codex、Cursorなどの任意のMCPクライアントがそのファイルを検索し、回答の元になったファイルを示せます。このレビューは公式サイトと、インストールガイドやリリースノートを含むGitHubリポジトリに基づき、2026年11月18日に確認しました。PromptQuorumは実機での検証を行っていません。',
     metaDescription:
-      'Minutesは会議・ボイスメモ・音声入力をMarkdownファイルとして保存し、MCPクライアントから検索できる無料のMITアプリです。確認できた内容を整理しました。',
+      'Minutesは会議・ボイスメモ・音声入力をMarkdownファイルとして保存し、MCPクライアントから検索できる無料のMITアプリです。公式情報に基づく紹介で、未検証です。',
     twitterDescription:
-      'Minutes：会議・ボイスメモ・音声入力を録音・文字起こししてMarkdownで保存し、Claude、Codexなどから検索できる無料のオープンソースアプリ。確認できた内容。',
+      'Minutes：会議・ボイスメモ・音声入力を録音・文字起こししてMarkdownで保存し、Claude、Codexなどから検索できる無料のオープンソースアプリ。公式情報に基づく紹介、未検証。',
     audience:
       '会議・ボイスメモ・音声入力を記録し、Claude Code、Codex、Cursorなどのアシスタントに検索させたい人、ホスト型のメモサービスより単純なMarkdownファイルを好む人、会議の文脈をローカルに持ちたい開発者',
     readTime: '7分で読める',
@@ -1444,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'オープンソース会議文字起こし Mac',
       'Markdownで保存する音声入力アプリ',
       '会議からのAIエージェントメモリ',
-      'オープンソースのGranola代替',
+      'Mac向けオープンソース議事録アプリ',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -1705,27 +1705,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/minutes-review-hero-zh.webp',
-    title: 'Minutes 评测：把会议、语音备忘和听写变成 AI 智能体记忆的免费开源应用',
-    seoTitle: 'Minutes 评测：面向 AI 智能体的免费对话记忆',
+    title: 'Minutes 解读：把会议、语音备忘和听写变成 AI 智能体记忆的免费开源应用',
+    seoTitle: 'Minutes 解读：面向 AI 智能体的免费对话记忆',
     intro:
-      'Minutes 0.34.0 是一款采用 MIT 许可证的免费应用，可录制并转写会议、语音备忘和听写内容，并把每一条保存为 Markdown 文件。根据其 README，录音、转写和存储都在你自己的电脑上进行，Claude Code、Codex、Cursor 或任何其他 MCP 客户端都可以检索这些文件，并指出答案来自哪个文件。本评测基于官方网站以及 GitHub 仓库（含安装指南和版本说明），核查日期为 2026 年 11 月 18 日。PromptQuorum 没有亲自试用这款应用。',
+      'Minutes 0.34.0 是一款采用 MIT 许可证的免费应用，可录制并转写会议、语音备忘和听写内容，并把每一条保存为 Markdown 文件。应用本身免费；你连接的云端助手有各自的登录或密钥。根据其 README，录音、转写和存储都在你自己的电脑上进行，Claude Code、Codex、Cursor 或任何其他 MCP 客户端都可以检索这些文件，并指出答案来自哪个文件。本解读基于官方网站以及 GitHub 仓库（含安装指南和版本说明），核查日期为 2026 年 11 月 18 日。PromptQuorum 没有亲自试用这款应用。',
     metaDescription:
-      'Minutes 是免费的 MIT 应用，把会议、语音备忘和听写保存为 Markdown 文件，MCP 客户端可检索。已确认的内容。',
+      'Minutes 是免费的 MIT 开源应用，把会议、语音备忘和听写保存为 Markdown 文件，供 Claude、Codex 等 MCP 客户端检索。内容来自官方来源，未经实测。',
     twitterDescription:
-      'Minutes：免费开源应用，录制并转写会议、语音备忘和听写，保存为 Markdown 文件，供 Claude、Codex 等 MCP 客户端检索。已确认的内容。',
+      'Minutes：免费开源应用，录制并转写会议、语音备忘和听写，保存为 Markdown 文件，供 Claude、Codex 等 MCP 客户端检索。内容来自官方来源，未经实测。',
     audience:
       '录制会议、语音备忘或听写内容，并希望 Claude Code、Codex、Cursor 等助手帮忙检索的人；更喜欢简单 Markdown 文件而不是托管式笔记服务的用户；需要本地会议上下文来源的开发者',
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Minutes 评测',
+    primaryTerm: 'Minutes 解读',
     targetKeywords: [
-      'Minutes 评测',
+      'Minutes 解读',
       '支持 MCP 的本地会议纪要',
       '开源会议转写 Mac',
       '保存为 Markdown 的听写应用',
       '来自会议的 AI 智能体记忆',
-      '开源 Granola 替代品',
+      'Mac 开源会议纪要应用',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -1892,7 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '未核实：在安装指南描述了更新源的同时，“没有遥测、不向开发者服务器发送网络请求”的说法；PromptQuorum 没有检查网络流量。',
           '未核实：Windows 安装程序是否有代码签名，以及某个语音模型需要多少内存。',
           '未核实：开发者关于同意处理和敏感会议受限存储的说法。',
-          '未核实：谁在运营这个项目、位于哪个国家、有多少人在使用。没有找到公司地址、运营者信息页面或条款页面，PromptQuorum 也没有查找独立评测。',
+          '未核实：谁在运营这个项目、位于哪个国家、有多少人在使用。没有找到公司地址、运营者信息页面或条款页面，PromptQuorum 也没有查找独立评价。',
         ],
       },
       vsAlternatives: {
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Minutes 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**Minutes 与会议纪要工具、听写应用和智能体记忆工具有所重叠；PromptQuorum 没有亲自对它们做对比。** 下列工具已收录在目录中，根据各自的评测来描述。',
+          '**Minutes 与会议纪要工具、听写应用和智能体记忆工具有所重叠；PromptQuorum 没有亲自对它们做对比。** 下列工具已收录在目录中，根据各自的解读来描述。',
         ],
         columns: ['工具', '来源所述'],
         rows: [
@@ -1969,10 +1969,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地语音与音频工具对比](/zh/power-local-llm/local-llm-voice-audio-compared) — 文字转语音、语音转文字和语音智能体并列比较。',
-          '[Anarlog 评测](/zh/power-local-llm/anarlog-review) — 无机器人的开源会议笔记本。',
-          '[Meetily 评测](/zh/power-local-llm/meetily-review) — 适用于 Mac 和 Windows 的开源会议纪要工具。',
-          '[Screenpipe 评测](/zh/power-local-llm/screenpipe-review) — 由屏幕和音频采集构建的记忆层。',
-          '[Amical 评测](/zh/power-local-llm/amical-review) — 适用于 Mac 和 Windows 的免费开源听写应用。',
+          '[Anarlog 解读](/zh/power-local-llm/anarlog-review) — 无机器人的开源会议笔记本。',
+          '[Meetily 解读](/zh/power-local-llm/meetily-review) — 适用于 Mac 和 Windows 的开源会议纪要工具。',
+          '[Screenpipe 解读](/zh/power-local-llm/screenpipe-review) — 由屏幕和音频采集构建的记忆层。',
+          '[Amical 解读](/zh/power-local-llm/amical-review) — 适用于 Mac 和 Windows 的免费开源听写应用。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
       },
@@ -1989,11 +1989,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Minutes 리뷰: 회의·음성 메모·받아쓰기를 AI 에이전트 기억으로 만드는 무료 오픈소스 앱',
     seoTitle: 'Minutes 리뷰: AI 에이전트용 무료 대화 메모리',
     intro:
-      'Minutes 0.34.0은 회의, 음성 메모, 받아쓰기를 녹음하고 전사해 하나씩 Markdown 파일로 보관하는 MIT 라이선스의 무료 앱입니다. README에 따르면 녹음, 전사, 저장은 사용자의 컴퓨터에서 이루어지며, Claude Code, Codex, Cursor 등 모든 MCP 클라이언트가 그 파일을 검색하고 답변의 출처 파일을 알려 줄 수 있습니다. 이 리뷰는 공식 웹사이트와 설치 가이드, 릴리스 노트가 있는 GitHub 저장소를 바탕으로 하며 2026년 11월 18일에 확인했습니다. PromptQuorum은 앱을 직접 사용해 검증하지 않았습니다.',
+      'Minutes 0.34.0은 회의, 음성 메모, 받아쓰기를 녹음하고 전사해 하나씩 Markdown 파일로 보관하는 MIT 라이선스의 무료 앱입니다. 앱 자체는 무료이며, 연결하는 클라우드 어시스턴트에는 자체 로그인이나 키가 필요합니다. README에 따르면 녹음, 전사, 저장은 사용자의 컴퓨터에서 이루어지며, Claude Code, Codex, Cursor 등 모든 MCP 클라이언트가 그 파일을 검색하고 답변의 출처 파일을 알려 줄 수 있습니다. 이 리뷰는 공식 웹사이트와 설치 가이드, 릴리스 노트가 있는 GitHub 저장소를 바탕으로 하며 2026년 11월 18일에 확인했습니다. PromptQuorum은 앱을 직접 사용해 검증하지 않았습니다.',
     metaDescription:
-      'Minutes는 회의, 음성 메모, 받아쓰기를 Markdown 파일로 저장해 MCP 클라이언트가 검색하게 하는 무료 MIT 앱입니다. 확인된 내용입니다.',
+      'Minutes는 회의, 음성 메모, 받아쓰기를 Markdown 파일로 저장해 MCP 클라이언트가 검색하게 하는 무료 MIT 앱입니다. 공식 자료 기준이며 직접 검증하지 않았습니다.',
     twitterDescription:
-      'Minutes: 회의, 음성 메모, 받아쓰기를 녹음·전사해 Markdown 파일로 저장하고 Claude, Codex 등이 검색하게 하는 무료 오픈소스 앱. 확인된 내용.',
+      'Minutes: 회의, 음성 메모, 받아쓰기를 녹음·전사해 Markdown 파일로 저장하고 Claude, Codex 등이 검색하게 하는 무료 오픈소스 앱. 공식 자료 기준, 직접 검증하지 않음.',
     audience:
       '회의, 음성 메모, 받아쓰기를 기록하고 Claude Code, Codex, Cursor 같은 어시스턴트가 검색하게 하려는 사람, 호스팅형 노트 서비스보다 단순한 Markdown 파일을 선호하는 사용자, 회의 맥락을 로컬에 두려는 개발자',
     readTime: '7분 읽기',
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '오픈소스 회의 전사 Mac',
       'Markdown으로 저장하는 받아쓰기 앱',
       '회의에서 만드는 AI 에이전트 메모리',
-      '오픈소스 Granola 대안',
+      'Mac용 오픈소스 회의록 앱',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
@@ -2268,11 +2268,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/minutes-review-hero-ar.webp',
     title: 'مراجعة Minutes: ذاكرة مجانية مفتوحة المصدر للاجتماعات والمذكرات الصوتية والإملاء لوكلاء الذكاء الاصطناعي',
-    seoTitle: 'مراجعة Minutes: ذاكرة مجانية للمحادثات',
+    seoTitle: 'مراجعة Minutes: ذاكرة مجانية لمحادثات الوكلاء',
     intro:
-      'Minutes 0.34.0 تطبيق مجاني برخصة MIT يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها نصيًا ويحفظ كلًا منها في ملف Markdown. وفق ملف README، يجري التسجيل والنسخ النصي والتخزين على حاسوبك، ويمكن لـ Claude Code أو Codex أو Cursor أو أي عميل MCP آخر البحث في هذه الملفات وذكر الملف الذي جاءت منه الإجابة. تعتمد هذه المراجعة على الموقع الرسمي ومستودع GitHub مع دليل التثبيت وملاحظات الإصدار، وقد جرى الاطلاع عليها في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
+      'Minutes 0.34.0 تطبيق مجاني برخصة MIT يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها نصيًا ويحفظ كلًا منها في ملف Markdown. التطبيق نفسه مجاني، أما المساعد السحابي الذي تربطه فله تسجيل دخول أو مفتاح خاص به. وفق ملف README، يجري التسجيل والنسخ النصي والتخزين على حاسوبك، ويمكن لـ Claude Code أو Codex أو Cursor أو أي عميل MCP آخر البحث في هذه الملفات وذكر الملف الذي جاءت منه الإجابة. تعتمد هذه المراجعة على الموقع الرسمي ومستودع GitHub مع دليل التثبيت وملاحظات الإصدار، وقد جرى الاطلاع عليها في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
-      'Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP. ما تأكد منه.',
+      'Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP. بحسب وثائقه، دون اختبار.',
     twitterDescription:
       'Minutes: تطبيق مجاني مفتوح المصدر يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها كملفات Markdown لـ Claude وCodex وعملاء MCP الآخرين. ما تأكد منه.',
     audience:
@@ -2287,7 +2287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'نسخ نصي مفتوح المصدر للاجتماعات على Mac',
       'تطبيق إملاء يحفظ بصيغة Markdown',
       'ذاكرة وكلاء الذكاء الاصطناعي من الاجتماعات',
-      'بديل مفتوح المصدر لـ Granola',
+      'تطبيق مفتوح المصدر لتدوين الاجتماعات على Mac',
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
