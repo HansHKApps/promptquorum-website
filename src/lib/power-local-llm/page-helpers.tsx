@@ -1242,6 +1242,7 @@ const HUB_THEMES: Array<{
       'screenpipe-review',
       'reactive-resume-review',
       'labelme-review',
+      'next-ai-draw-io-review',
     ],
   },
   {

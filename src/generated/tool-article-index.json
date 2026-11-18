@@ -75,14 +75,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "oleafly-review",
-        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
-        "url": "/power-local-llm/oleafly-review",
+        "slug": "next-ai-draw-io-review",
+        "title": "Next AI Draw.io Review: Chat-Driven draw.io Diagrams on the Web, Desktop and MCP",
+        "url": "/power-local-llm/next-ai-draw-io-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
     ],
-    "totalCount": 376,
+    "totalCount": 377,
     "capped": true
   },
   "llama.cpp": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 108,
+    "totalCount": 109,
     "capped": true
   },
   "LocalAI": {
@@ -574,23 +574,23 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "next-ai-draw-io-review",
+        "title": "Next AI Draw.io Review: Chat-Driven draw.io Diagrams on the Web, Desktop and MCP",
+        "url": "/power-local-llm/next-ai-draw-io-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "soc2-iso27001-self-hosted-llm-compliance",
-        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
-        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "ExLlamaV2": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 187,
+    "totalCount": 188,
     "capped": true
   },
   "Atomic Chat": {
@@ -12509,6 +12509,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Next AI Draw.io": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "next-ai-draw-io-review",
+        "title": "Next AI Draw.io Review: Chat-Driven draw.io Diagrams on the Web, Desktop and MCP",
+        "url": "/power-local-llm/next-ai-draw-io-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "FunClip": {
     "articles": [
       {
@@ -12757,6 +12771,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "next-ai-draw-io-review",
+        "title": "Next AI Draw.io Review: Chat-Driven draw.io Diagrams on the Web, Desktop and MCP",
+        "url": "/power-local-llm/next-ai-draw-io-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openrag-review",
         "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
         "url": "/power-local-llm/openrag-review",
@@ -12788,7 +12810,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "little-coder": {

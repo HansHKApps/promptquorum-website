@@ -367,6 +367,7 @@ import { app as app_alpaca } from './apps/alpaca'
 import { app as app_kition } from './apps/kition'
 import { app as app_pooled } from './apps/pooled'
 import { app as app_reactive_resume } from './apps/reactive-resume'
+import { app as app_next_ai_draw_io } from './apps/next-ai-draw-io'
 import { app as app_funclip } from './apps/funclip'
 import { app as app_intentkit } from './apps/intentkit'
 import { app as app_izwi } from './apps/izwi'
@@ -693,6 +694,7 @@ export const localAiApps: ToolRecord[] = [
   app_kition,
   app_pooled,
   app_reactive_resume,
+  app_next_ai_draw_io,
   app_funclip,
   app_intentkit,
   app_izwi,

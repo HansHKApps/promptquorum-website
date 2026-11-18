@@ -1394,6 +1394,11 @@
     "urlSlug": "reactive-resume-review",
     "url": "/power-local-llm/reactive-resume-review"
   },
+  "next-ai-draw-io": {
+    "cluster": "power-local-llm",
+    "urlSlug": "next-ai-draw-io-review",
+    "url": "/power-local-llm/next-ai-draw-io-review"
+  },
   "funclip": {
     "cluster": "power-local-llm",
     "urlSlug": "funclip-review",
