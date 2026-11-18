@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can Newelle run commands on my computer?',
-            a: 'Yes, per the README it can execute commands the AI suggests. In the Flathub build this happens inside the sandbox unless you grant access to the Flatpak host, which the README says lowers security.',
+            a: 'Yes, per the README it can execute commands the AI suggests. The README says the Flathub version is limited to its own data folder unless you grant home-folder or Flatpak-host access, which it says lowers security. The GitHub manifest lists host access while the Flathub metadata does not, and PromptQuorum did not check which applies.',
           },
           {
             q: 'Can I add my own tools or extensions?',
@@ -249,8 +249,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           '**Newelle is worth a look if you use Linux and want a free, open-source assistant that works with several providers and local models and adds voice, document chat and tools.**',
-          'On paper it covers a lot, and development is active: version 1.6.1 on 2 November 2026 and a commit on 6 November 2026. The Flathub listing shows a sandboxed build without home-folder access, which is a point in its favour, though PromptQuorum did not check what each build grants.',
-          'The trade-offs are real: no privacy policy, company or imprint was found, the macOS build is a beta, and PromptQuorum has not tested anything. Start with a small local model, keep the default sandbox and check that voice, documents and tools work for your use before relying on them.',
+          'On paper it covers a lot, and development is active: version 1.6.1 on 2 November 2026 and a commit on 6 November 2026. The Flathub listing shows a sandboxed build without home-folder access, while the GitHub manifest lists host access; PromptQuorum did not check what each build grants.',
+          'The trade-offs are real: no privacy policy, company or imprint was found, the macOS build is a beta, and PromptQuorum has not tested anything. Start with a small local model, check in your Flatpak permissions (for example with Flatseal) what your installed build actually grants, and confirm that voice, documents and tools work for your use before relying on them.',
         ],
       },
       sources: {
@@ -293,9 +293,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Newelle 1.6.1 ist ein kostenloser, GPL-3.0-lizenzierter Chat-Assistent für den Linux-Desktop, der sich mit Cloud-KI-Anbietern (die separat abrechnen) verbindet oder lokale Modelle über Llama.cpp oder Ollama ausführt. Laut README bietet er Spracheingabe und -ausgabe, Chat mit eigenen Dokumenten, MCP-Werkzeuge, Langzeitgedächtnis, Websuche und die Ausführung von Terminalbefehlen und wird über Flathub installiert. Diese Rezension stützt sich auf die offizielle Website, das GitHub-Repository mit Release-Hinweisen und den Flathub-Eintrag, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'Newelle ist ein kostenloser GPL-3.0-KI-Assistent für Linux mit lokalen Modellen, Sprache, Dokumenten-Chat und MCP, installiert über Flathub. Was belegt ist und was nicht.',
+      'Newelle: kostenloser GPL-3.0-KI-Assistent für Linux mit lokalen Modellen, Sprache, Dokumenten-Chat und MCP, per Flathub. Was belegt ist, was nicht.',
     twitterDescription:
-      'Newelle: kostenloser KI-Assistent für Linux mit lokalen Modellen, Sprache, Dokumenten-Chat und MCP-Werkzeugen. GPL-3.0, Flathub-Installation, macOS-Build noch Beta. Was belegt ist.',
+      'Newelle: kostenloser KI-Assistent für Linux mit lokalen Modellen, Sprache, Dokumenten-Chat und MCP-Werkzeugen. GPL-3.0, Flathub-Installation. Was belegt ist.',
     audience:
       'Linux-Desktop-Nutzer, die einen kostenlosen Open-Source-KI-Assistenten mit lokalen Modellen und Sprachfunktionen wollen, Personen, die mit eigenen Dokumenten chatten möchten, und alle, die ein von einer Community entwickeltes Projekt einschätzen wollen',
     readTime: '7 Min. Lesezeit',
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann Newelle Befehle auf meinem Rechner ausführen?',
-            a: 'Ja, laut README kann es Befehle ausführen, die die KI vorschlägt. Im Flathub-Build geschieht das innerhalb der Sandbox, sofern Sie keinen Zugriff auf den Flatpak-Host erlauben, was laut README die Sicherheit senkt.',
+            a: 'Ja, laut README kann es Befehle ausführen, die die KI vorschlägt. Laut README ist die Flathub-Version auf ihren eigenen Datenordner beschränkt, solange Sie keinen Zugriff auf Home-Ordner oder Flatpak-Host erlauben; das senke die Sicherheit. Das Manifest im GitHub-Repository nennt Host-Zugriff, die Flathub-Metadaten nicht; PromptQuorum hat nicht geprüft, was gilt.',
           },
           {
             q: 'Kann ich eigene Werkzeuge oder Erweiterungen hinzufügen?',
@@ -518,8 +518,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           '**Newelle lohnt einen Blick, wenn Sie Linux nutzen und einen kostenlosen, quelloffenen Assistenten wollen, der mit mehreren Anbietern und lokalen Modellen arbeitet und Sprache, Dokumenten-Chat und Werkzeuge ergänzt.**',
-          'Auf dem Papier deckt es viel ab, und die Entwicklung ist aktiv: Version 1.6.1 am 2. November 2026 und ein Commit am 6. November 2026. Der Flathub-Eintrag zeigt ein Build in der Sandbox ohne Zugriff auf den Home-Ordner, was für die App spricht, auch wenn PromptQuorum nicht geprüft hat, welche Rechte jedes Build tatsächlich erhält.',
-          'Die Nachteile sind real: Es wurden keine Datenschutzerklärung, kein Unternehmen und kein Impressum gefunden, das macOS-Build ist eine Beta, und PromptQuorum hat nichts getestet. Beginnen Sie mit einem kleinen lokalen Modell, behalten Sie die Standard-Sandbox bei und prüfen Sie, ob Sprache, Dokumente und Werkzeuge für Ihren Einsatz funktionieren, bevor Sie sich darauf verlassen.',
+          'Auf dem Papier deckt es viel ab, und die Entwicklung ist aktiv: Version 1.6.1 am 2. November 2026 und ein Commit am 6. November 2026. Der Flathub-Eintrag zeigt ein Build in der Sandbox ohne Zugriff auf den Home-Ordner, während das GitHub-Manifest Host-Zugriff nennt; PromptQuorum hat nicht geprüft, welche Rechte jedes Build tatsächlich erhält.',
+          'Die Nachteile sind real: Es wurden keine Datenschutzerklärung, kein Unternehmen und kein Impressum gefunden, das macOS-Build ist eine Beta, und PromptQuorum hat nichts getestet. Beginnen Sie mit einem kleinen lokalen Modell, prüfen Sie in den Flatpak-Berechtigungen, etwa mit Flatseal, was Ihr installiertes Build tatsächlich erhält, und stellen Sie sicher, dass Sprache, Dokumente und Werkzeuge für Ihren Einsatz funktionieren, bevor Sie sich darauf verlassen.',
         ],
       },
       sources: {
@@ -557,22 +557,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/newelle-review-hero-fr.webp',
-    title: 'Test de Newelle : assistant IA open source gratuit pour Linux avec modèles locaux',
-    seoTitle: 'Test de Newelle : assistant IA gratuit pour Linux',
+    title: 'Avis sur Newelle : assistant IA open source gratuit pour Linux avec modèles locaux',
+    seoTitle: 'Avis sur Newelle : assistant IA gratuit pour Linux',
     intro:
       'Newelle 1.6.1 est un assistant de discussion gratuit, sous licence GPL-3.0, pour le bureau Linux ; il se connecte à des fournisseurs d\'IA dans le cloud (facturés séparément) ou exécute des modèles locaux via Llama.cpp ou Ollama. Selon son README, il ajoute la saisie et la sortie vocales, la discussion avec vos propres documents, des outils MCP, une mémoire à long terme, la recherche web et l\'exécution de commandes de terminal, et il s\'installe depuis Flathub. Ce test s\'appuie sur le site officiel, le dépôt GitHub avec ses notes de version et la fiche Flathub, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
-      'Newelle est un assistant IA gratuit sous GPL-3.0 pour Linux : modèles locaux, voix, discussion avec documents et MCP, installé via Flathub. Ce qui est confirmé, ce qui ne l\'est pas.',
+      'Newelle : assistant IA gratuit sous GPL-3.0 pour Linux, modèles locaux, voix, documents et MCP, via Flathub. Ce qui est confirmé et ce qui ne l\'est pas.',
     twitterDescription:
-      'Newelle : assistant IA gratuit pour Linux avec modèles locaux, voix, discussion avec documents et outils MCP. GPL-3.0, installation via Flathub, version macOS encore bêta. Ce qui est confirmé.',
+      'Newelle : assistant IA gratuit pour Linux avec modèles locaux, voix, discussion avec documents et outils MCP. GPL-3.0, via Flathub. Ce qui est confirmé.',
     audience:
       'Utilisateurs du bureau Linux qui veulent un assistant IA gratuit et open source avec modèles locaux et fonctions vocales, personnes qui souhaitent discuter avec leurs propres documents, et toute personne qui évalue un projet développé par une communauté',
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test Newelle',
+    primaryTerm: 'avis Newelle',
     targetKeywords: [
-      'test Newelle',
+      'avis Newelle',
       'assistant IA Linux',
       'Newelle Flatpak',
       'assistant IA open source Linux',
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Newelle peut-il exécuter des commandes sur mon ordinateur ?',
-            a: 'Oui, selon le README, il peut exécuter les commandes que l\'IA propose. Dans la version Flathub, cela se passe dans le bac à sable, sauf si vous accordez l\'accès à l\'hôte Flatpak, ce qui réduit la sécurité d\'après le README.',
+            a: 'Oui, selon le README, il peut exécuter les commandes que l\'IA propose. Selon le README, la version Flathub est limitée à son dossier de données tant que vous n\'accordez pas l\'accès au dossier personnel ou à l\'hôte Flatpak, ce qui réduirait la sécurité. Le manifeste GitHub indique un accès à l\'hôte, alors que les métadonnées Flathub n\'en indiquent pas ; PromptQuorum n\'a pas vérifié lequel s\'applique.',
           },
           {
             q: 'Puis-je ajouter mes propres outils ou extensions ?',
@@ -787,8 +787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           '**Newelle mérite un coup d\'œil si vous utilisez Linux et voulez un assistant gratuit et open source qui fonctionne avec plusieurs fournisseurs et des modèles locaux, et qui ajoute voix, discussion avec documents et outils.**',
-          'Sur le papier, il couvre beaucoup de choses et le développement est actif : version 1.6.1 le 2 novembre 2026 et un commit le 6 novembre 2026. La fiche Flathub indique une version en bac à sable sans accès au dossier personnel, ce qui plaide en sa faveur, même si PromptQuorum n\'a pas vérifié ce que chaque version accorde.',
-          'Les compromis sont réels : aucune politique de confidentialité, entreprise ou mention légale n\'a été trouvée, la version macOS est une bêta, et PromptQuorum n\'a rien testé. Commencez par un petit modèle local, gardez le bac à sable par défaut et vérifiez que la voix, les documents et les outils conviennent à votre usage avant de vous y fier.',
+          'Sur le papier, il couvre beaucoup de choses et le développement est actif : version 1.6.1 le 2 novembre 2026 et un commit le 6 novembre 2026. La fiche Flathub indique une version en bac à sable sans accès au dossier personnel, tandis que le manifeste GitHub indique un accès à l\'hôte ; PromptQuorum n\'a pas vérifié ce que chaque version accorde.',
+          'Les compromis sont réels : aucune politique de confidentialité, entreprise ou mention légale n\'a été trouvée, la version macOS est une bêta, et PromptQuorum n\'a rien testé. Commencez par un petit modèle local, vérifiez dans les permissions Flatpak, par exemple avec Flatseal, ce que votre version installée accorde réellement, puis assurez-vous que la voix, les documents et les outils conviennent à votre usage avant de vous y fier.',
         ],
       },
       sources: {
@@ -809,10 +809,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test de LM Studio](/fr/power-local-llm/lm-studio-review) — une application de bureau avec navigateur de modèles intégré et mode serveur.',
-          '[Test de Jan](/fr/power-local-llm/jan-review) — une application de discussion de bureau open source, pensée pour le hors ligne.',
-          '[Test de GPT4All](/fr/power-local-llm/gpt4all-review) — une application de discussion locale adaptée aux débutants, avec un bon support du CPU seul.',
-          '[Test d\'AnythingLLM](/fr/power-local-llm/anythingllm-review) — discussion avec documents et base vectorielle intégrée.',
+          '[Avis sur LM Studio](/fr/power-local-llm/lm-studio-review) — une application de bureau avec navigateur de modèles intégré et mode serveur.',
+          '[Avis sur Jan](/fr/power-local-llm/jan-review) — une application de discussion de bureau open source, pensée pour le hors ligne.',
+          '[Avis sur GPT4All](/fr/power-local-llm/gpt4all-review) — une application de discussion locale adaptée aux débutants, avec un bon support du CPU seul.',
+          '[Avis sur AnythingLLM](/fr/power-local-llm/anythingllm-review) — discussion avec documents et base vectorielle intégrée.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
       },
@@ -831,9 +831,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Newelle 1.6.1 es un asistente de chat gratuito, con licencia GPL-3.0, para el escritorio Linux que se conecta a proveedores de IA en la nube (que cobran aparte) o ejecuta modelos locales con Llama.cpp u Ollama. Según su README, añade entrada y salida de voz, chat con tus propios documentos, herramientas MCP, memoria a largo plazo, búsqueda web y ejecución de comandos de terminal, y se instala desde Flathub. Esta reseña se basa en el sitio web oficial, el repositorio de GitHub con sus notas de versión y la ficha de Flathub, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
     metaDescription:
-      'Newelle es un asistente de IA gratuito con GPL-3.0 para Linux: modelos locales, voz, chat con documentos y MCP, instalado desde Flathub. Qué está confirmado y qué no.',
+      'Newelle: asistente de IA gratuito GPL-3.0 para Linux con modelos locales, voz, chat con documentos y MCP, vía Flathub. Qué está confirmado y qué no.',
     twitterDescription:
-      'Newelle: asistente de IA gratuito para Linux con modelos locales, voz, chat con documentos y herramientas MCP. GPL-3.0, se instala desde Flathub, versión macOS aún en beta. Lo confirmado.',
+      'Newelle: asistente de IA gratuito para Linux con modelos locales, voz, chat con documentos y herramientas MCP. GPL-3.0, desde Flathub. Lo confirmado.',
     audience:
       'Usuarios del escritorio Linux que quieren un asistente de IA gratuito y de código abierto con modelos locales y funciones de voz, personas que quieren chatear con sus propios documentos y quienes evalúan un proyecto desarrollado por una comunidad',
     readTime: '7 min de lectura',
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede Newelle ejecutar comandos en mi equipo?',
-            a: 'Sí, según el README puede ejecutar los comandos que sugiere la IA. En la versión de Flathub esto ocurre dentro del entorno aislado, salvo que concedas acceso al host de Flatpak, lo que según el README reduce la seguridad.',
+            a: 'Sí, según el README puede ejecutar los comandos que sugiere la IA. Según el README, la versión de Flathub está limitada a su carpeta de datos mientras no concedas acceso a la carpeta personal o al host de Flatpak, lo que reduciría la seguridad. El manifiesto de GitHub indica acceso al host y los metadatos de Flathub no; PromptQuorum no comprobó cuál se aplica.',
           },
           {
             q: '¿Puedo añadir mis propias herramientas o extensiones?',
@@ -1056,8 +1056,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           '**Newelle merece una mirada si usas Linux y quieres un asistente gratuito y de código abierto que funcione con varios proveedores y modelos locales y añada voz, chat con documentos y herramientas.**',
-          'Sobre el papel cubre mucho y el desarrollo está activo: versión 1.6.1 el 2 de noviembre de 2026 y un commit el 6 de noviembre de 2026. La ficha de Flathub muestra una versión aislada sin acceso a la carpeta personal, lo que juega a su favor, aunque PromptQuorum no comprobó qué permisos concede cada versión.',
-          'Las contrapartidas son reales: no se encontró política de privacidad, empresa ni aviso legal, la versión de macOS es una beta y PromptQuorum no ha probado nada. Empieza con un modelo local pequeño, mantén el entorno aislado por defecto y comprueba que la voz, los documentos y las herramientas funcionan para tu uso antes de depender de ellos.',
+          'Sobre el papel cubre mucho y el desarrollo está activo: versión 1.6.1 el 2 de noviembre de 2026 y un commit el 6 de noviembre de 2026. La ficha de Flathub muestra una versión aislada sin acceso a la carpeta personal, mientras que el manifiesto de GitHub indica acceso al host; PromptQuorum no comprobó qué permisos concede cada versión.',
+          'Las contrapartidas son reales: no se encontró política de privacidad, empresa ni aviso legal, la versión de macOS es una beta y PromptQuorum no ha probado nada. Empieza con un modelo local pequeño, comprueba en los permisos de Flatpak, por ejemplo con Flatseal, qué concede realmente tu versión instalada y verifica que la voz, los documentos y las herramientas funcionan para tu uso antes de depender de ellos.',
         ],
       },
       sources: {
@@ -1100,9 +1100,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Newelle 1.6.1 é um assistente de chat gratuito, com licença GPL-3.0, para o desktop Linux que se conecta a provedores de IA na nuvem (que cobram à parte) ou executa modelos locais com Llama.cpp ou Ollama. Segundo o README, ele acrescenta entrada e saída de voz, chat com seus próprios documentos, ferramentas MCP, memória de longo prazo, busca na web e execução de comandos de terminal, e é instalado pelo Flathub. Esta análise se baseia no site oficial, no repositório do GitHub com suas notas de versão e na página do Flathub, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
     metaDescription:
-      'O Newelle é um assistente de IA gratuito com GPL-3.0 para Linux: modelos locais, voz, chat com documentos e MCP, instalado pelo Flathub. O que está confirmado e o que não está.',
+      'Newelle: assistente de IA gratuito GPL-3.0 para Linux com modelos locais, voz, chat com documentos e MCP, pelo Flathub. O que está confirmado.',
     twitterDescription:
-      'Newelle: assistente de IA gratuito para Linux com modelos locais, voz, chat com documentos e ferramentas MCP. GPL-3.0, instalação pelo Flathub, versão para macOS ainda em beta. O que está confirmado.',
+      'Newelle: assistente de IA gratuito para Linux com modelos locais, voz, chat com documentos e ferramentas MCP. GPL-3.0, pelo Flathub. O que está confirmado.',
     audience:
       'Usuários do desktop Linux que querem um assistente de IA gratuito e de código aberto com modelos locais e recursos de voz, pessoas que querem conversar com seus próprios documentos e quem avalia um projeto desenvolvido por uma comunidade',
     readTime: '7 min de leitura',
@@ -1304,7 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Newelle pode executar comandos no meu computador?',
-            a: 'Sim, segundo o README ele pode executar os comandos que a IA sugere. Na versão do Flathub isso acontece dentro da sandbox, a menos que você conceda acesso ao host do Flatpak, o que, segundo o README, reduz a segurança.',
+            a: 'Sim, segundo o README ele pode executar os comandos que a IA sugere. Segundo o README, a versão do Flathub fica restrita à sua pasta de dados enquanto você não conceder acesso à pasta pessoal ou ao host do Flatpak, o que reduziria a segurança. O manifesto do GitHub lista acesso ao host e os metadados do Flathub não; a PromptQuorum não verificou qual vale.',
           },
           {
             q: 'Posso adicionar minhas próprias ferramentas ou extensões?',
@@ -1325,8 +1325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           '**O Newelle vale uma olhada se você usa Linux e quer um assistente gratuito e de código aberto que funcione com vários provedores e modelos locais e acrescente voz, chat com documentos e ferramentas.**',
-          'No papel, ele cobre muita coisa e o desenvolvimento está ativo: versão 1.6.1 em 2 de novembro de 2026 e um commit em 6 de novembro de 2026. A página do Flathub mostra uma versão em sandbox sem acesso à pasta pessoal, o que conta a favor, embora a PromptQuorum não tenha verificado o que cada versão concede.',
-          'As contrapartidas são reais: não foram encontradas política de privacidade, empresa nem aviso legal, a versão para macOS é uma beta e a PromptQuorum não testou nada. Comece com um modelo local pequeno, mantenha a sandbox padrão e confira se voz, documentos e ferramentas funcionam para o seu uso antes de depender deles.',
+          'No papel, ele cobre muita coisa e o desenvolvimento está ativo: versão 1.6.1 em 2 de novembro de 2026 e um commit em 6 de novembro de 2026. A página do Flathub mostra uma versão em sandbox sem acesso à pasta pessoal, enquanto o manifesto do GitHub lista acesso ao host; a PromptQuorum não verificou o que cada versão concede.',
+          'As contrapartidas são reais: não foram encontradas política de privacidade, empresa nem aviso legal, a versão para macOS é uma beta e a PromptQuorum não testou nada. Comece com um modelo local pequeno, confira nas permissões do Flatpak, por exemplo com o Flatseal, o que a sua versão instalada realmente concede, e verifique se voz, documentos e ferramentas funcionam para o seu uso antes de depender deles.',
         ],
       },
       sources: {
@@ -1573,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Newelleは自分のコンピューターでコマンドを実行できますか？',
-            a: 'はい。READMEによると、AIが提案したコマンドを実行できます。Flathub版では、Flatpakのホストへのアクセスを許可しない限りサンドボックス内で実行され、READMEはホストへのアクセスがセキュリティを下げると述べています。',
+            a: 'はい。READMEによると、AIが提案したコマンドを実行できます。READMEによると、Flathub版はホームフォルダーやFlatpakホストへのアクセスを許可しない限り専用のデータフォルダーに制限され、ホストへのアクセスはセキュリティを下げるとされています。GitHubのマニフェストにはホストへのアクセスが記載されていますがFlathubのメタデータにはなく、どちらが実際に適用されるかはPromptQuorumでは確認していません。',
           },
           {
             q: '自分のツールや拡張機能を追加できますか？',
@@ -1594,8 +1594,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '総評',
         content: [
           '**Linuxを使っていて、複数のプロバイダーとローカルモデルで動き、音声、文書チャット、ツールを加えた無料のオープンソースアシスタントを探しているなら、Newelleは試す価値があります。**',
-          '機能は幅広く、開発も活発です。バージョン1.6.1は2026年11月2日、コミットは2026年11月6日にあります。Flathubの掲載情報ではホームフォルダーへのアクセスがないサンドボックス版であることが示されており、これは評価できる点ですが、各ビルドが実際に何を許可するかはPromptQuorumでは確認していません。',
-          '一方で、プライバシーポリシー、運営会社、運営者情報は見つからず、macOS版はベータで、PromptQuorumは何も試していません。まず小さなローカルモデルから始め、既定のサンドボックスを維持し、音声、文書、ツールが自分の用途で動くかを確認してから頼ってください。',
+          '機能は幅広く、開発も活発です。バージョン1.6.1は2026年11月2日、コミットは2026年11月6日にあります。Flathubの掲載情報ではホームフォルダーへのアクセスがないサンドボックス版であることが示されており、一方、GitHubのマニフェストにはホストへのアクセスが記載されており、各ビルドが実際に何を許可するかはPromptQuorumでは確認していません。',
+          '一方で、プライバシーポリシー、運営会社、運営者情報は見つからず、macOS版はベータで、PromptQuorumは何も試していません。まず小さなローカルモデルから始め、Flatsealなどでインストール済みビルドが実際に何を許可しているかをFlatpakの権限で確認し、音声、文書、ツールが自分の用途で動くかを確かめてから頼ってください。',
         ],
       },
       sources: {
@@ -1633,10 +1633,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/newelle-review-hero-zh.webp',
-    title: 'Newelle 评测：支持本地模型的免费开源 Linux AI 助手',
-    seoTitle: 'Newelle 评测：免费的 Linux AI 助手',
+    title: 'Newelle 点评：支持本地模型的免费开源 Linux AI 助手',
+    seoTitle: 'Newelle 点评：免费的 Linux AI 助手',
     intro:
-      'Newelle 1.6.1 是一款面向 Linux 桌面的免费聊天助手，采用 GPL-3.0 许可，可连接云端 AI 服务商（由服务商另行计费），也可通过 Llama.cpp 或 Ollama 运行本地模型。根据其 README，它提供语音输入与输出、与自己的文档对话、MCP 工具、长期记忆、网页搜索和终端命令执行，并通过 Flathub 安装。本评测基于官方网站、GitHub 仓库及其发布说明和 Flathub 页面，核查日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
+      'Newelle 1.6.1 是一款面向 Linux 桌面的免费聊天助手，采用 GPL-3.0 许可，可连接云端 AI 服务商（由服务商另行计费），也可通过 Llama.cpp 或 Ollama 运行本地模型。根据其 README，它提供语音输入与输出、与自己的文档对话、MCP 工具、长期记忆、网页搜索和终端命令执行，并通过 Flathub 安装。本点评基于官方网站、GitHub 仓库及其发布说明和 Flathub 页面，核查日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
     metaDescription:
       'Newelle 是免费的 GPL-3.0 Linux AI 助手，支持本地模型、语音、文档对话和 MCP，通过 Flathub 安装。已确认与未确认的内容。',
     twitterDescription:
@@ -1646,9 +1646,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Newelle 评测',
+    primaryTerm: 'Newelle 点评',
     targetKeywords: [
-      'Newelle 评测',
+      'Newelle 点评',
       'Linux AI 助手',
       'Newelle Flatpak',
       '开源 AI 助手 Linux',
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '未核实：目前支持哪些 AI 服务商和本地模型。PromptQuorum 没有逐页查看文档。',
           '未核实：macOS 测试版是否经过签名或公证，以及它与 Linux 版有何不同。',
           '未核实：Flathub 版本和仓库清单文件各自授予什么权限，以及使用云端服务商时对话数据如何处理。',
-          '未核实：谁在运营该项目、位于哪个国家、有多少人在使用。没有找到公司、法律声明或隐私政策，PromptQuorum 也没有查找独立评测。',
+          '未核实：谁在运营该项目、位于哪个国家、有多少人在使用。没有找到公司、法律声明或隐私政策，PromptQuorum 也没有查找独立点评。',
           '未核实：网站所列的 Whisper 听写、Kokoro 语音和混合文档搜索等功能是否如描述那样工作。',
         ],
       },
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Newelle 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**Newelle 与其他支持本地和云端模型的桌面聊天应用竞争；PromptQuorum 没有实际与它们对比过。** 下列工具均在目录中，依据各自的评测进行描述。',
+          '**Newelle 与其他支持本地和云端模型的桌面聊天应用竞争；PromptQuorum 没有实际与它们对比过。** 下列工具均在目录中，依据各自的点评进行描述。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
@@ -1842,7 +1842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Newelle 能在我的电脑上执行命令吗？',
-            a: '可以，根据 README，它能执行 AI 建议的命令。在 Flathub 版本中，除非你授予对 Flatpak 宿主的访问权限，否则命令在沙盒内执行；README 称授予该权限会降低安全性。',
+            a: '可以，根据 README，它能执行 AI 建议的命令。根据 README，除非授予主目录或 Flatpak 宿主访问权限，Flathub 版本被限制在自己的数据目录内；README 称授予宿主访问权限会降低安全性。GitHub 清单文件列出了宿主访问权限，而 Flathub 元数据没有；PromptQuorum 没有核实实际适用哪一种。',
           },
           {
             q: '我可以添加自己的工具或扩展吗？',
@@ -1863,8 +1863,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '**如果你使用 Linux，想要一款能对接多家服务商和本地模型、并提供语音、文档对话和工具的免费开源助手，Newelle 值得一试。**',
-          '从纸面上看，它功能覆盖很广，开发也很活跃：1.6.1 版发布于 2026 年 11 月 2 日，最近一次提交在 2026 年 11 月 6 日。Flathub 页面显示它是没有主目录访问权限的沙盒版本，这是一个加分项，不过 PromptQuorum 没有检查各个构建实际授予了哪些权限。',
-          '代价也很实在：没有找到隐私政策、公司或法律声明，macOS 版本仍是测试版，PromptQuorum 也没有测试过任何功能。建议先从小型本地模型开始，保留默认沙盒，并在依赖它之前确认语音、文档和工具是否满足你的使用需求。',
+          '从纸面上看，它功能覆盖很广，开发也很活跃：1.6.1 版发布于 2026 年 11 月 2 日，最近一次提交在 2026 年 11 月 6 日。Flathub 页面显示它是没有主目录访问权限的沙盒版本，而 GitHub 清单文件列出了宿主访问权限；PromptQuorum 没有检查各个构建实际授予了哪些权限。',
+          '代价也很实在：没有找到隐私政策、公司或法律声明，macOS 版本仍是测试版，PromptQuorum 也没有测试过任何功能。建议先从小型本地模型开始，请在 Flatpak 权限中（例如用 Flatseal）确认已安装的构建实际授予了什么，并在依赖它之前确认语音、文档和工具是否满足你的使用需求。',
         ],
       },
       sources: {
@@ -1885,10 +1885,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[LM Studio 评测](/zh/power-local-llm/lm-studio-review) — 内置模型浏览器和服务器模式的桌面应用。',
-          '[Jan 评测](/zh/power-local-llm/jan-review) — 以离线为先的开源桌面聊天应用。',
-          '[GPT4All 评测](/zh/power-local-llm/gpt4all-review) — 对新手友好、对纯 CPU 支持良好的本地聊天应用。',
-          '[AnythingLLM 评测](/zh/power-local-llm/anythingllm-review) — 内置向量库的文档对话工具。',
+          '[LM Studio 点评](/zh/power-local-llm/lm-studio-review) — 内置模型浏览器和服务器模式的桌面应用。',
+          '[Jan 点评](/zh/power-local-llm/jan-review) — 以离线为先的开源桌面聊天应用。',
+          '[GPT4All 点评](/zh/power-local-llm/gpt4all-review) — 对新手友好、对纯 CPU 支持良好的本地聊天应用。',
+          '[AnythingLLM 点评](/zh/power-local-llm/anythingllm-review) — 内置向量库的文档对话工具。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
       },
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Newelle이 내 컴퓨터에서 명령을 실행할 수 있습니까?',
-            a: '네, README에 따르면 AI가 제안한 명령을 실행할 수 있습니다. Flathub 빌드에서는 Flatpak 호스트 접근을 허용하지 않는 한 샌드박스 안에서 실행되며, README는 호스트 접근이 보안을 낮춘다고 설명합니다.',
+            a: '네, README에 따르면 AI가 제안한 명령을 실행할 수 있습니다. README에 따르면 홈 폴더나 Flatpak 호스트 접근을 허용하지 않는 한 Flathub 버전은 자체 데이터 폴더로 제한되며, README는 호스트 접근이 보안을 낮춘다고 설명합니다. GitHub 매니페스트에는 호스트 접근이 나와 있지만 Flathub 메타데이터에는 없으며, 실제로 어느 쪽이 적용되는지는 PromptQuorum이 확인하지 않았습니다.',
           },
           {
             q: '직접 만든 도구나 확장 기능을 추가할 수 있습니까?',
@@ -2132,8 +2132,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           '**Linux를 쓰면서 여러 제공업체와 로컬 모델에 쓸 수 있고 음성, 문서 채팅, 도구까지 더한 무료 오픈소스 어시스턴트를 원한다면 Newelle을 살펴볼 만합니다.**',
-          '문서상으로는 폭넓은 기능을 갖추었고 개발도 활발합니다. 1.6.1 버전은 2026년 11월 2일, 커밋은 2026년 11월 6일에 있었습니다. Flathub 페이지는 홈 폴더 접근이 없는 샌드박스 빌드를 보여 주며, 이는 장점이지만, 각 빌드가 실제로 어떤 권한을 부여하는지는 PromptQuorum이 확인하지 않았습니다.',
-          '단점도 분명합니다. 개인정보 처리방침, 회사, 법적 고지를 찾지 못했고, macOS 버전은 베타이며, PromptQuorum은 아무것도 테스트하지 않았습니다. 작은 로컬 모델로 시작하고 기본 샌드박스를 유지하며, 음성, 문서, 도구가 내 용도에 맞게 동작하는지 확인한 뒤에 의존하십시오.',
+          '문서상으로는 폭넓은 기능을 갖추었고 개발도 활발합니다. 1.6.1 버전은 2026년 11월 2일, 커밋은 2026년 11월 6일에 있었습니다. Flathub 페이지는 홈 폴더 접근이 없는 샌드박스 빌드를 보여 주며, 반면 GitHub 매니페스트에는 호스트 접근이 나와 있으며, 각 빌드가 실제로 어떤 권한을 부여하는지는 PromptQuorum이 확인하지 않았습니다.',
+          '단점도 분명합니다. 개인정보 처리방침, 회사, 법적 고지를 찾지 못했고, macOS 버전은 베타이며, PromptQuorum은 아무것도 테스트하지 않았습니다. 작은 로컬 모델로 시작하고 Flatseal 같은 도구로 설치된 빌드가 실제로 무엇을 허용하는지 Flatpak 권한에서 확인하고, 음성, 문서, 도구가 내 용도에 맞게 동작하는지 확인한 뒤에 의존하십시오.',
         ],
       },
       sources: {
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'يُثبَّت من Flathub بأمر واحد أو عبر مركز البرامج؛ وتُظهر صفحة Flathub وصولًا إلى الشبكة لكن دون وصول إلى المجلد الرئيسي.',
-          'تعمل النماذج المحلية عبر Llama.cpp أو Ollama؛ لا يُنشر حد أدنى للذاكرة، لكن منزّل النماذج يقدّر ما إذا كان النموذج يناسب جهازك، بحسب ملاحظات الإصدار 1.6.0.',
+          'تعمل النماذج المحلية عبر Llama.cpp أو Ollama؛ لا يُنشر حد أدنى للذاكرة، لكن منزّل النماذج يقدّر ما إذا كان النموذج سيتسع، بحسب ملاحظات الإصدار 1.6.0.',
           'أضاف الإصدار 1.6.0 مساحات عمل ووكلاء فرعيين وذاكرة طويلة الأمد جديدة وتتبعًا للاستخدام وخادم MCP يوفّر أدوات Newelle الخاصة لأطراف ثالثة.',
           'توجد نسخة macOS لكنها موسومة بأنها تجريبية، لذا فإن Linux هو الهدف الرئيسي.',
           'لم تختبر PromptQuorum التطبيق، لذا فإن السرعة وجودة الإجابات ودقة الصوت غير موثّقة.',
@@ -2286,7 +2286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المتطلبات',
         content: [
           '**يحتاج Newelle إلى سطح مكتب Linux مع إعداد Flatpak وFlathub؛ وتعتمد متطلبات العتاد على استخدامك مزودين سحابيين أو نماذج محلية.**',
-          'القائمة مأخوذة من README وصفحة Flathub. لا يُنشر حد أدنى للذاكرة أو لوحدة GPU للنماذج المحلية؛ وبحسب ملاحظات الإصدار 1.6.0 يقدّر منزّل النماذج ما إذا كان النموذج يناسب جهازك. لم تقِس PromptQuorum استهلاك الذاكرة ولا السرعة.',
+          'القائمة مأخوذة من README وصفحة Flathub. لا يُنشر حد أدنى للذاكرة أو لوحدة GPU للنماذج المحلية؛ وبحسب ملاحظات الإصدار 1.6.0 يقدّر منزّل النماذج ما إذا كان النموذج سيتسع. لم تقِس PromptQuorum استهلاك الذاكرة ولا السرعة.',
         ],
         columns: ['البند', 'القيمة المعلنة'],
         rows: [
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستطيع Newelle تنفيذ أوامر على حاسوبي؟',
-            a: 'نعم، بحسب README يستطيع تنفيذ الأوامر التي يقترحها الذكاء الاصطناعي. وفي نسخة Flathub يحدث ذلك داخل البيئة المعزولة ما لم تمنح وصولًا إلى مضيف Flatpak، وهو ما يقلل الأمان بحسب README.',
+            a: 'نعم، بحسب README يستطيع تنفيذ الأوامر التي يقترحها الذكاء الاصطناعي. بحسب README تقتصر نسخة Flathub على مجلد بياناتها ما لم تمنح وصولًا إلى المجلد الرئيسي أو إلى مضيف Flatpak، وهو ما يقلل الأمان بحسب README. يذكر manifest في GitHub وصولًا إلى المضيف بينما لا تُظهره بيانات Flathub، ولم تتحقق PromptQuorum أيهما ينطبق.',
           },
           {
             q: 'هل يمكنني إضافة أدواتي أو إضافاتي الخاصة؟',
@@ -2401,8 +2401,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           '**يستحق Newelle نظرة إذا كنت تستخدم Linux وتريد مساعدًا مجانيًا ومفتوح المصدر يعمل مع عدة مزودين ونماذج محلية ويضيف الصوت والدردشة مع المستندات والأدوات.**',
-          'على الورق يغطي الكثير، والتطوير نشط: الإصدار 1.6.1 في 2 نوفمبر 2026 وcommit في 6 نوفمبر 2026. وتُظهر صفحة Flathub بناءً معزولًا دون وصول إلى المجلد الرئيسي، وهذه نقطة لصالحه، مع أن PromptQuorum لم تتحقق مما يمنحه كل بناء.',
-          'المقايضات حقيقية: لم تُوجد سياسة خصوصية ولا شركة ولا بيانات قانونية، ونسخة macOS تجريبية، ولم تختبر PromptQuorum شيئًا. ابدأ بنموذج محلي صغير، وأبقِ البيئة المعزولة الافتراضية، وتحقق من أن الصوت والمستندات والأدوات تعمل لاستخدامك قبل الاعتماد عليها.',
+          'على الورق يغطي الكثير، والتطوير نشط: الإصدار 1.6.1 في 2 نوفمبر 2026 وcommit في 6 نوفمبر 2026. وتُظهر صفحة Flathub بناءً معزولًا دون وصول إلى المجلد الرئيسي، بينما يذكر manifest في GitHub وصولًا إلى المضيف؛ ولم تتحقق PromptQuorum مما يمنحه كل بناء.',
+          'المقايضات حقيقية: لم تُوجد سياسة خصوصية ولا شركة ولا بيانات قانونية، ونسخة macOS تجريبية، ولم تختبر PromptQuorum شيئًا. ابدأ بنموذج محلي صغير، وتحقق من أذونات Flatpak، مثلًا عبر Flatseal، مما يمنحه البناء المثبّت لديك فعليًا، وتحقق من أن الصوت والمستندات والأدوات تعمل لاستخدامك قبل الاعتماد عليها.',
         ],
       },
       sources: {
