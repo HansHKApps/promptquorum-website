@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Video creators who want the same blocking, timing and camera on every take of an AI video model.',
           'Developers and agent users who want an assistant to edit a 3D scene through MCP or a terminal interface.',
-          'People who want free, open-source previs that runs in a browser tab without a GPU.',
+          'People who want free, open-source previs that, per the README, runs in a browser tab without a GPU.',
         ],
       },
       whoShouldNotUse: {
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Videoschaffende, die bei jedem Take eines KI-Videomodells dieselbe Anordnung, dasselbe Timing und dieselbe Kamera wollen.',
           'Entwickler und Agenten-Nutzer, die einen Assistenten per MCP oder Terminal-Schnittstelle eine 3D-Szene bearbeiten lassen möchten.',
-          'Menschen, die kostenlose Open-Source-Previs wollen, die ohne GPU in einem Browser-Tab läuft.',
+          'Menschen, die kostenlose Open-Source-Previs wollen, die laut README ohne GPU in einem Browser-Tab läuft.',
         ],
       },
       whoShouldNotUse: {
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Creadores de vídeo que quieren el mismo bloqueo, ritmo y cámara en cada toma de un modelo de vídeo con IA.',
           'Desarrolladores y usuarios de agentes que quieren que un asistente edite una escena 3D mediante MCP o una interfaz de terminal.',
-          'Quienes quieren previs gratuita y de código abierto que funcione en una pestaña del navegador sin GPU.',
+          'Quienes quieren previs gratuita y de código abierto que, según el README, funcione en una pestaña del navegador sin GPU.',
         ],
       },
       whoShouldNotUse: {
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Les créateurs vidéo qui veulent la même mise en place, le même rythme et la même caméra à chaque prise d\'un modèle vidéo IA.',
           'Les développeurs et utilisateurs d\'agents qui veulent qu\'un assistant modifie une scène 3D via MCP ou une interface en terminal.',
-          'Ceux qui veulent un outil de previs gratuit et open source qui fonctionne dans un onglet de navigateur sans GPU.',
+          'Ceux qui veulent un outil de previs gratuit et open source qui, selon le README, fonctionne dans un onglet de navigateur sans GPU.',
         ],
       },
       whoShouldNotUse: {
@@ -1305,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'AI動画モデルのどのテイクでも、同じ配置、タイミング、カメラにしたい動画クリエイター。',
           'アシスタントにMCPやターミナルインターフェース経由で3Dシーンを編集させたい開発者やエージェント利用者。',
-          'GPUなしでブラウザのタブで動く、無料のオープンソースのプリビズを求める人。',
+          'READMEによればGPUなしでブラウザのタブで動く、無料のオープンソースのプリビズを求める人。',
         ],
       },
       whoShouldNotUse: {
@@ -1384,18 +1384,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         items: [
-          '[CozyClay公式サイト](https://cozyclay.org) — ワークフロー、書き出し一覧、導入方法、MCPスニペット、動作要件, 2026年11月17日確認.',
-          '[CozyClayのプライバシーページ](https://cozyclay.org/privacy/) — 統計、オプトアウト、収集しないもの、ホスト型デモ, 2026年11月17日確認.',
-          '[プリビズソフトの比較](https://cozyclay.org/previs-software/) — 開発者によるプリビズツールの比較と明記された制限, 2026年11月17日確認.',
-          '[CozyClayのGitHubリポジトリ](https://github.com/HaD0Yun/CozyClay) — リポジトリ、ライセンス、作成日、最終プッシュ, 2026年11月17日確認.',
-          '[README](https://github.com/HaD0Yun/CozyClay#readme) — クイックスタート、機能、エージェント連携、MCP設定, 2026年11月17日確認.',
-          '[LICENSING.md](https://github.com/HaD0Yun/CozyClay/blob/main/LICENSING.md) — AGPL-3.0-or-laterと、以前のGPL-3.0-or-laterの経緯, 2026年11月17日確認.',
-          '[統計とプライバシーの開示](https://github.com/HaD0Yun/CozyClay/blob/main/docs/privacy.md) — 収集イベントの全一覧, 2026年11月17日確認.',
-          '[MCPのREADME](https://github.com/HaD0Yun/CozyClay/blob/main/mcp/README.md) — エディターあり・なしのMCPモード, 2026年11月17日確認.',
-          '[リリースv3.2.2](https://github.com/HaD0Yun/CozyClay/releases/tag/v3.2.2) — 最新リリースとその日付, 2026年11月17日確認.',
-          '[Windowsインストーラーのリリース](https://github.com/HaD0Yun/CozyClay/releases/tag/windows-installer) — CozyClay-Setup.exeとコード署名なしの注記, 2026年11月17日確認.',
-          '[macOS版リリース](https://github.com/HaD0Yun/cozyclay-releases/releases/tag/macos-1.0.3) — CozyClay.dmg, 2026年11月17日確認.',
-          '[npmパッケージ](https://www.npmjs.com/package/cozyclay) — 最新の公開バージョン, 2026年11月17日確認.',
+          '[CozyClay公式サイト](https://cozyclay.org) — ワークフロー、書き出し一覧、導入方法、MCPスニペット、動作要件、2026年11月17日確認。',
+          '[CozyClayのプライバシーページ](https://cozyclay.org/privacy/) — 統計、オプトアウト、収集しないもの、ホスト型デモ、2026年11月17日確認。',
+          '[プリビズソフトの比較](https://cozyclay.org/previs-software/) — 開発者によるプリビズツールの比較と明記された制限、2026年11月17日確認。',
+          '[CozyClayのGitHubリポジトリ](https://github.com/HaD0Yun/CozyClay) — リポジトリ、ライセンス、作成日、最終プッシュ、2026年11月17日確認。',
+          '[README](https://github.com/HaD0Yun/CozyClay#readme) — クイックスタート、機能、エージェント連携、MCP設定、2026年11月17日確認。',
+          '[LICENSING.md](https://github.com/HaD0Yun/CozyClay/blob/main/LICENSING.md) — AGPL-3.0-or-laterと、以前のGPL-3.0-or-laterの経緯、2026年11月17日確認。',
+          '[統計とプライバシーの開示](https://github.com/HaD0Yun/CozyClay/blob/main/docs/privacy.md) — 収集イベントの全一覧、2026年11月17日確認。',
+          '[MCPのREADME](https://github.com/HaD0Yun/CozyClay/blob/main/mcp/README.md) — エディターあり・なしのMCPモード、2026年11月17日確認。',
+          '[リリースv3.2.2](https://github.com/HaD0Yun/CozyClay/releases/tag/v3.2.2) — 最新リリースとその日付、2026年11月17日確認。',
+          '[Windowsインストーラーのリリース](https://github.com/HaD0Yun/CozyClay/releases/tag/windows-installer) — CozyClay-Setup.exeとコード署名なしの注記、2026年11月17日確認。',
+          '[macOS版リリース](https://github.com/HaD0Yun/cozyclay-releases/releases/tag/macos-1.0.3) — CozyClay.dmg、2026年11月17日確認。',
+          '[npmパッケージ](https://www.npmjs.com/package/cozyclay) — 最新の公開バージョン、2026年11月17日確認。',
         ],
       },
       relatedReading: {
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Criadores de vídeo que querem o mesmo bloqueio, tempo e câmera em cada take de um modelo de vídeo com IA.',
           'Desenvolvedores e usuários de agentes que querem que um assistente edite uma cena 3D por MCP ou por uma interface de terminal.',
-          'Quem quer previs gratuita e de código aberto que rode em uma aba do navegador sem GPU.',
+          'Quem quer previs gratuita e de código aberto que, segundo o README, rode em uma aba do navegador sem GPU.',
         ],
       },
       whoShouldNotUse: {
@@ -1865,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '希望 AI 视频模型每次生成都保持相同场面调度、节奏和镜头的视频创作者。',
           '希望让助手通过 MCP 或终端接口编辑 3D 场景的开发者和智能体用户。',
-          '想要无需 GPU、在浏览器标签页中运行的免费开源预演工具的人。',
+          '想要免费开源、据 README 无需 GPU 即可在浏览器标签页中运行的预演工具的人。',
         ],
       },
       whoShouldNotUse: {
@@ -1944,18 +1944,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         items: [
-          '[CozyClay 网站](https://cozyclay.org) — 工作流程、导出列表、安装方式、MCP 片段和系统要求, 核查于 2026年11月17日.',
-          '[CozyClay 隐私页面](https://cozyclay.org/privacy/) — 统计、退出方式、不收集的内容、托管演示, 核查于 2026年11月17日.',
-          '[预演软件对比](https://cozyclay.org/previs-software/) — 开发者对预演工具的对比及其所述局限, 核查于 2026年11月17日.',
-          '[CozyClay GitHub 仓库](https://github.com/HaD0Yun/CozyClay) — 仓库、许可证、创建日期和最近推送, 核查于 2026年11月17日.',
-          '[README](https://github.com/HaD0Yun/CozyClay#readme) — 快速开始、功能、智能体接入和 MCP 配置, 核查于 2026年11月17日.',
-          '[LICENSING.md](https://github.com/HaD0Yun/CozyClay/blob/main/LICENSING.md) — AGPL-3.0-or-later 以及此前 GPL-3.0-or-later 的历史, 核查于 2026年11月17日.',
-          '[统计与隐私披露](https://github.com/HaD0Yun/CozyClay/blob/main/docs/privacy.md) — 所收集事件的完整列表, 核查于 2026年11月17日.',
-          '[MCP README](https://github.com/HaD0Yun/CozyClay/blob/main/mcp/README.md) — 有编辑器和无编辑器两种 MCP 模式, 核查于 2026年11月17日.',
-          '[发布版 v3.2.2](https://github.com/HaD0Yun/CozyClay/releases/tag/v3.2.2) — 最新版本及其日期, 核查于 2026年11月17日.',
-          '[Windows 安装包发布页](https://github.com/HaD0Yun/CozyClay/releases/tag/windows-installer) — CozyClay-Setup.exe 及未签名说明, 核查于 2026年11月17日.',
-          '[macOS 发布页](https://github.com/HaD0Yun/cozyclay-releases/releases/tag/macos-1.0.3) — CozyClay.dmg, 核查于 2026年11月17日.',
-          '[npm 包](https://www.npmjs.com/package/cozyclay) — 最新发布版本, 核查于 2026年11月17日.',
+          '[CozyClay 网站](https://cozyclay.org) — 工作流程、导出列表、安装方式、MCP 片段和系统要求，核查于 2026年11月17日。',
+          '[CozyClay 隐私页面](https://cozyclay.org/privacy/) — 统计、退出方式、不收集的内容、托管演示，核查于 2026年11月17日。',
+          '[预演软件对比](https://cozyclay.org/previs-software/) — 开发者对预演工具的对比及其所述局限，核查于 2026年11月17日。',
+          '[CozyClay GitHub 仓库](https://github.com/HaD0Yun/CozyClay) — 仓库、许可证、创建日期和最近推送，核查于 2026年11月17日。',
+          '[README](https://github.com/HaD0Yun/CozyClay#readme) — 快速开始、功能、智能体接入和 MCP 配置，核查于 2026年11月17日。',
+          '[LICENSING.md](https://github.com/HaD0Yun/CozyClay/blob/main/LICENSING.md) — AGPL-3.0-or-later 以及此前 GPL-3.0-or-later 的历史，核查于 2026年11月17日。',
+          '[统计与隐私披露](https://github.com/HaD0Yun/CozyClay/blob/main/docs/privacy.md) — 所收集事件的完整列表，核查于 2026年11月17日。',
+          '[MCP README](https://github.com/HaD0Yun/CozyClay/blob/main/mcp/README.md) — 有编辑器和无编辑器两种 MCP 模式，核查于 2026年11月17日。',
+          '[发布版 v3.2.2](https://github.com/HaD0Yun/CozyClay/releases/tag/v3.2.2) — 最新版本及其日期，核查于 2026年11月17日。',
+          '[Windows 安装包发布页](https://github.com/HaD0Yun/CozyClay/releases/tag/windows-installer) — CozyClay-Setup.exe 及未签名说明，核查于 2026年11月17日。',
+          '[macOS 发布页](https://github.com/HaD0Yun/cozyclay-releases/releases/tag/macos-1.0.3) — CozyClay.dmg，核查于 2026年11月17日。',
+          '[npm 包](https://www.npmjs.com/package/cozyclay) — 最新发布版本，核查于 2026年11月17日。',
         ],
       },
       relatedReading: {
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'صنّاع الفيديو الذين يريدون الترتيب والتوقيت والكاميرا نفسها في كل محاولة لنموذج فيديو بالذكاء الاصطناعي.',
           'المطوّرون ومستخدمو الوكلاء الذين يريدون أن يعدّل مساعد مشهدًا ثلاثي الأبعاد عبر MCP أو واجهة طرفية.',
-          'من يريد معاينة مسبقة مجانية ومفتوحة المصدر تعمل في تبويب المتصفح دون GPU.',
+          'من يريد معاينة مسبقة مجانية ومفتوحة المصدر تعمل، بحسب README، في تبويب المتصفح دون GPU.',
         ],
       },
       whoShouldNotUse: {
@@ -2224,18 +2224,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[موقع CozyClay](https://cozyclay.org) — سير العمل وقائمة التصدير وخيارات التثبيت ومقتطف MCP والمتطلبات, جرى التحقق في 17 نوفمبر 2026.',
-          '[صفحة خصوصية CozyClay](https://cozyclay.org/privacy/) — الإحصاءات والانسحاب وما لا يُجمع والعرض التجريبي المستضاف, جرى التحقق في 17 نوفمبر 2026.',
-          '[مقارنة برامج المعاينة المسبقة](https://cozyclay.org/previs-software/) — مقارنة المطوّر لأدوات المعاينة المسبقة والحدود التي ذكرها, جرى التحقق في 17 نوفمبر 2026.',
-          '[مستودع CozyClay على GitHub](https://github.com/HaD0Yun/CozyClay) — المستودع والترخيص وتاريخ الإنشاء وآخر دفع, جرى التحقق في 17 نوفمبر 2026.',
-          '[README](https://github.com/HaD0Yun/CozyClay#readme) — البدء السريع والميزات ومنافذ الوكيل وإعداد MCP, جرى التحقق في 17 نوفمبر 2026.',
-          '[LICENSING.md](https://github.com/HaD0Yun/CozyClay/blob/main/LICENSING.md) — AGPL-3.0-or-later وتاريخ GPL-3.0-or-later السابق, جرى التحقق في 17 نوفمبر 2026.',
-          '[الإفصاح عن الإحصاءات والخصوصية](https://github.com/HaD0Yun/CozyClay/blob/main/docs/privacy.md) — القائمة الكاملة للأحداث المجمّعة, جرى التحقق في 17 نوفمبر 2026.',
-          '[README الخاص بـ MCP](https://github.com/HaD0Yun/CozyClay/blob/main/mcp/README.md) — وضعا MCP مع المحرّر ودونه, جرى التحقق في 17 نوفمبر 2026.',
-          '[الإصدار v3.2.2](https://github.com/HaD0Yun/CozyClay/releases/tag/v3.2.2) — أحدث إصدار وتاريخه, جرى التحقق في 17 نوفمبر 2026.',
-          '[إصدار مثبّت Windows](https://github.com/HaD0Yun/CozyClay/releases/tag/windows-installer) — CozyClay-Setup.exe وملاحظة عدم التوقيع الرقمي, جرى التحقق في 17 نوفمبر 2026.',
-          '[إصدار macOS](https://github.com/HaD0Yun/cozyclay-releases/releases/tag/macos-1.0.3) — CozyClay.dmg, جرى التحقق في 17 نوفمبر 2026.',
-          '[حزمة npm](https://www.npmjs.com/package/cozyclay) — آخر إصدار منشور, جرى التحقق في 17 نوفمبر 2026.',
+          '[موقع CozyClay](https://cozyclay.org) — سير العمل وقائمة التصدير وخيارات التثبيت ومقتطف MCP والمتطلبات، جرى التحقق في 17 نوفمبر 2026.',
+          '[صفحة خصوصية CozyClay](https://cozyclay.org/privacy/) — الإحصاءات والانسحاب وما لا يُجمع والعرض التجريبي المستضاف، جرى التحقق في 17 نوفمبر 2026.',
+          '[مقارنة برامج المعاينة المسبقة](https://cozyclay.org/previs-software/) — مقارنة المطوّر لأدوات المعاينة المسبقة والحدود التي ذكرها، جرى التحقق في 17 نوفمبر 2026.',
+          '[مستودع CozyClay على GitHub](https://github.com/HaD0Yun/CozyClay) — المستودع والترخيص وتاريخ الإنشاء وآخر دفع، جرى التحقق في 17 نوفمبر 2026.',
+          '[README](https://github.com/HaD0Yun/CozyClay#readme) — البدء السريع والميزات ومنافذ الوكيل وإعداد MCP، جرى التحقق في 17 نوفمبر 2026.',
+          '[LICENSING.md](https://github.com/HaD0Yun/CozyClay/blob/main/LICENSING.md) — AGPL-3.0-or-later وتاريخ GPL-3.0-or-later السابق، جرى التحقق في 17 نوفمبر 2026.',
+          '[الإفصاح عن الإحصاءات والخصوصية](https://github.com/HaD0Yun/CozyClay/blob/main/docs/privacy.md) — القائمة الكاملة للأحداث المجمّعة، جرى التحقق في 17 نوفمبر 2026.',
+          '[README الخاص بـ MCP](https://github.com/HaD0Yun/CozyClay/blob/main/mcp/README.md) — وضعا MCP مع المحرّر ودونه، جرى التحقق في 17 نوفمبر 2026.',
+          '[الإصدار v3.2.2](https://github.com/HaD0Yun/CozyClay/releases/tag/v3.2.2) — أحدث إصدار وتاريخه، جرى التحقق في 17 نوفمبر 2026.',
+          '[إصدار مثبّت Windows](https://github.com/HaD0Yun/CozyClay/releases/tag/windows-installer) — CozyClay-Setup.exe وملاحظة عدم التوقيع الرقمي، جرى التحقق في 17 نوفمبر 2026.',
+          '[إصدار macOS](https://github.com/HaD0Yun/cozyclay-releases/releases/tag/macos-1.0.3) — CozyClay.dmg، جرى التحقق في 17 نوفمبر 2026.',
+          '[حزمة npm](https://www.npmjs.com/package/cozyclay) — آخر إصدار منشور، جرى التحقق في 17 نوفمبر 2026.',
         ],
       },
       relatedReading: {
@@ -2425,7 +2425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'AI 영상 모델의 모든 테이크에서 같은 배치, 타이밍, 카메라를 원하는 영상 제작자.',
           'MCP나 터미널 인터페이스로 어시스턴트가 3D 장면을 편집하게 하고 싶은 개발자와 에이전트 사용자.',
-          'GPU 없이 브라우저 탭에서 실행되는 무료 오픈소스 프리비즈를 원하는 분.',
+          'README에 따르면 GPU 없이 브라우저 탭에서 실행되는 무료 오픈소스 프리비즈를 원하는 분.',
         ],
       },
       whoShouldNotUse: {
