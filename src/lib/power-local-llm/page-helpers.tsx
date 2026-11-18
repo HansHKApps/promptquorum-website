@@ -878,6 +878,7 @@ const HUB_THEMES: Array<{
       'best-workstation-build-local-ai-2026',
       'locally-uncensored-review',
       'arbiter-local-ai-chat-review',
+      'aqbot-review',
       'atomic-chat-review',
       'bobe-review',
       'boltai-review',
