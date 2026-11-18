@@ -1302,6 +1302,7 @@ const HUB_THEMES: Array<{
       'aiko-review',
       'rescript-review',
       'minutes-review',
+      'sokuji-review',
       'amical-review',
       'univocal-review',
       'sprich-review',

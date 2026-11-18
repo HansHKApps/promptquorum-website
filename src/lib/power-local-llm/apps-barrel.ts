@@ -320,6 +320,7 @@ import { app as app_newelle } from './apps/newelle'
 import { app as app_oleafly } from './apps/oleafly'
 import { app as app_rescript } from './apps/rescript'
 import { app as app_minutes } from './apps/minutes'
+import { app as app_sokuji } from './apps/sokuji'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -638,6 +639,7 @@ export const localAiApps: ToolRecord[] = [
   app_oleafly,
   app_rescript,
   app_minutes,
+  app_sokuji,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,
