@@ -15,12 +15,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-en.webp',
     title: 'CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server',
-    seoTitle: 'CozyClay Review: Free Previs Studio for AI Video, MCP',
+    seoTitle: 'CozyClay Review: Free Browser Previs for AI Video, MCP',
     intro:
       'CozyClay is a free, open-source 3D previs studio that runs in a browser tab. You block a scene, pose characters, set the camera and cuts, and export the shot as a first frame, a reference clip and a prompt for an AI video model. This review is based on the maker\'s website, the GitHub repository, its release pages and its privacy page, checked on 17 November 2026. PromptQuorum has not tested the app hands-on.',
     metaDescription:
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Price: free; license AGPL-3.0-or-later.',
           'Exports a first frame, greybox clip, camera data and prompt, plus mp4, depth and normal passes, a contact sheet and an OTIO cut list.',
           'An MCP server and an agent panel let assistants edit the scene live.',
-          'Anonymous usage analytics are on by default and can be turned off.',
+          'Usage analytics, which the maker describes as anonymous, are on by default and can be turned off.',
         ],
         updatedDate: '2026-11',
       },
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free and open source under AGPL-3.0-or-later; the maker\'s site lists no paid plan.',
           'Runs in a Chromium browser. macOS gets a .dmg, Windows an .exe installer, and every platform can run npx cozyclay with Node.js 22.19 or newer.',
           'An MCP server (npx -y cozyclay mcp) lets Claude Desktop, Claude Code, Cursor and other MCP clients edit the scene.',
-          'Anonymous usage analytics are on by default; opt out with cclay telemetry off or DO_NOT_TRACK=1.',
+          'Usage analytics, which the maker describes as anonymous, are on by default; opt out with cclay telemetry off or DO_NOT_TRACK=1.',
           'PromptQuorum has not tested the app. The project is young (repository created in July 2026) and the maker\'s own page says to expect rough edges.',
         ],
         callouts: [
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacy and Data Flow',
         content: [
-          '**CozyClay collects anonymous usage analytics by default, says it never collects project content or prompt text, and lets you switch the analytics off.**',
+          '**CozyClay collects usage analytics by default that it describes as anonymous, says it never collects project content or prompt text, and lets you switch the analytics off.**',
           'According to the privacy page (effective 25 October 2026), the website uses PostHog (US Cloud) and Cloudflare Web Analytics, with no cookies and no session recording. The npm package stores one random installation identifier in a local state file and sends bucketed events such as first launch, session length and action counts. Prompt text, asset and file names, project content and local paths are not collected, according to the page.',
           'You can opt out with cclay telemetry off, the COZYCLAY_TELEMETRY=0 environment variable, DO_NOT_TRACK=1 or the toggle in the studio top bar. Source checkouts, forks, development servers, CI and tests send nothing, per the maker.',
           'Agent and model features send your requests to the provider you connect, under that provider\'s terms. The privacy page also describes a hosted motion demo with Google sign-in that stores prompts and results for up to 30 days; it says that demo is not open to the public right now. The privacy page and the README name no company, address or governing law.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What data does CozyClay collect?',
-            a: 'It collects anonymous, bucketed usage analytics by default through PostHog, with a random installation identifier, and says it never collects prompt text, file names or project content. You can opt out with cclay telemetry off or DO_NOT_TRACK=1.',
+            a: 'By default it collects bucketed usage analytics through PostHog, which the maker describes as anonymous, with a random installation identifier, and says it never collects prompt text, file names or project content. You can opt out with cclay telemetry off or DO_NOT_TRACK=1.',
           },
         ],
       },
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**CozyClay is worth a look if you use AI video models and want to fix staging and camera before paying for a generation.**',
           'On paper it covers a lot for a free tool: a 3D stage, a motion compiler with QA checks, shots and camera rails, export packs for video models, an agent panel, an MCP server and installers for macOS and Windows. Development is active, with release 3.2.2 on 7 November 2026 and a commit on 15 November 2026.',
-          'The trade-offs are real. The project is young, runs in Chromium browsers only, produces flat clay-style output and relies on an external video model for the final result. Anonymous analytics are on by default, and the company or country behind it is not stated. PromptQuorum has not tested the app, so try it on a small scene and check the export in your video model before relying on it.',
+          'The trade-offs are real. According to the maker, the project is young, runs in Chromium browsers only and produces flat clay-style output on purpose; it also relies on an external video model for the final result. Usage analytics, described by the maker as anonymous, are on by default, and the company or country behind it is not stated. PromptQuorum has not tested the app, so try it on a small scene and check the export in your video model before relying on it.',
         ],
       },
       sources: {
@@ -295,12 +295,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-de.webp',
     title: 'CozyClay-Rezension: kostenloses Previs-Studio im Browser für KI-Video, mit MCP-Server',
-    seoTitle: 'CozyClay-Rezension: Previs-Studio für KI-Video, MCP',
+    seoTitle: 'CozyClay-Rezension: Previs im Browser für KI-Video, MCP',
     intro:
       'CozyClay ist ein kostenloses Open-Source-3D-Previs-Studio, das in einem Browser-Tab läuft. Sie blocken eine Szene, posieren Figuren, setzen Kamera und Schnitte und exportieren den Shot als erstes Bild, Referenzclip und Prompt für ein KI-Videomodell. Diese Rezension stützt sich auf die Website des Entwicklers, das GitHub-Repository, die Release-Seiten und die Datenschutzseite, geprüft am 17. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preis: kostenlos; Lizenz AGPL-3.0-or-later.',
           'Exportiert erstes Bild, Greybox-Clip, Kameradaten und Prompt sowie mp4, Tiefen- und Normalenpässe, Kontaktbogen und eine OTIO-Schnittliste.',
           'MCP-Server und Agenten-Panel lassen Assistenten die Szene live bearbeiten.',
-          'Anonyme Nutzungsstatistik ist standardmäßig an und lässt sich abschalten.',
+          'Nutzungsstatistik, die der Entwickler als anonym beschreibt, ist standardmäßig an und lässt sich abschalten.',
         ],
         updatedDate: '2026-11',
       },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos und Open Source unter AGPL-3.0-or-later; auf der Website des Entwicklers ist kein kostenpflichtiger Tarif aufgeführt.',
           'Läuft in einem Chromium-Browser. Für macOS gibt es eine .dmg, für Windows einen .exe-Installer, und auf jeder Plattform funktioniert npx cozyclay mit Node.js 22.19 oder neuer.',
           'Ein MCP-Server (npx -y cozyclay mcp) lässt Claude Desktop, Claude Code, Cursor und andere MCP-Clients die Szene bearbeiten.',
-          'Anonyme Nutzungsstatistik ist standardmäßig an; Abschalten mit cclay telemetry off oder DO_NOT_TRACK=1.',
+          'Nutzungsstatistik, die der Entwickler als anonym beschreibt, ist standardmäßig an; Abschalten mit cclay telemetry off oder DO_NOT_TRACK=1.',
           'PromptQuorum hat die App nicht getestet. Das Projekt ist jung (Repository im Juli 2026 angelegt), und die Seite des Entwicklers selbst weist auf Ecken und Kanten hin.',
         ],
         callouts: [
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Datenschutz und Datenfluss',
         content: [
-          '**CozyClay erhebt standardmäßig anonyme Nutzungsstatistiken, erhebt nach eigener Aussage nie Projektinhalte oder Prompt-Texte und lässt die Statistik abschalten.**',
+          '**CozyClay erhebt standardmäßig Nutzungsstatistiken, die nach Angabe des Entwicklers anonym sind, erhebt nach eigener Aussage nie Projektinhalte oder Prompt-Texte und lässt die Statistik abschalten.**',
           'Laut Datenschutzseite (gültig ab 25. Oktober 2026) nutzt die Website PostHog (US Cloud) und Cloudflare Web Analytics, ohne Cookies und ohne Sitzungsaufzeichnung. Das npm-Paket speichert eine zufällige Installationskennung in einer lokalen Statusdatei und sendet gebündelte Ereignisse wie ersten Start, Sitzungsdauer und Aktionszahlen. Prompt-Texte, Asset- und Dateinamen, Projektinhalte und lokale Pfade werden laut Seite nicht erfasst.',
           'Sie können mit cclay telemetry off, der Umgebungsvariable COZYCLAY_TELEMETRY=0, DO_NOT_TRACK=1 oder dem Schalter in der oberen Leiste des Studios widersprechen. Quellcode-Checkouts, Forks, Entwicklungsserver, CI und Tests senden laut Entwickler nichts.',
           'Agenten- und Modellfunktionen senden Ihre Anfragen an den Anbieter, den Sie verbinden, nach dessen Bedingungen. Die Datenschutzseite beschreibt außerdem eine gehostete Bewegungs-Demo mit Google-Anmeldung, die Prompts und Ergebnisse bis zu 30 Tage speichert; laut Seite ist diese Demo derzeit nicht öffentlich zugänglich. Datenschutzseite und README nennen weder Firma noch Adresse noch anwendbares Recht.',
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Daten erhebt CozyClay?',
-            a: 'Standardmäßig anonyme, gebündelte Nutzungsstatistiken über PostHog mit einer zufälligen Installationskennung; nach eigener Aussage nie Prompt-Texte, Dateinamen oder Projektinhalte. Sie können mit cclay telemetry off oder DO_NOT_TRACK=1 widersprechen.',
+            a: 'Standardmäßig gebündelte Nutzungsstatistiken über PostHog, die der Entwickler als anonym beschreibt, mit einer zufälligen Installationskennung; nach eigener Aussage nie Prompt-Texte, Dateinamen oder Projektinhalte. Sie können mit cclay telemetry off oder DO_NOT_TRACK=1 widersprechen.',
           },
         ],
       },
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**CozyClay ist einen Blick wert, wenn Sie KI-Videomodelle nutzen und Inszenierung und Kamera festlegen möchten, bevor Sie für eine Generierung zahlen.**',
           'Auf dem Papier deckt es für ein kostenloses Werkzeug viel ab: eine 3D-Bühne, einen Bewegungs-Compiler mit QA-Prüfungen, Shots und Kameraschienen, Exportpakete für Videomodelle, ein Agenten-Panel, einen MCP-Server und Installer für macOS und Windows. Die Entwicklung ist aktiv, mit Version 3.2.2 am 7. November 2026 und einem Commit am 15. November 2026.',
-          'Die Kompromisse sind real. Das Projekt ist jung, läuft nur in Chromium-Browsern, liefert flache Clay-Ausgabe und braucht für das Endergebnis ein externes Videomodell. Anonyme Statistik ist standardmäßig an, und Firma oder Land dahinter sind nicht angegeben. PromptQuorum hat die App nicht getestet; probieren Sie sie an einer kleinen Szene aus und prüfen Sie den Export in Ihrem Videomodell, bevor Sie sich darauf verlassen.',
+          'Die Kompromisse sind real. Laut Entwickler ist das Projekt jung, läuft nur in Chromium-Browsern und liefert absichtlich flache Clay-Ausgabe; für das Endergebnis braucht es zudem ein externes Videomodell. Statistik, die der Entwickler als anonym beschreibt, ist standardmäßig an, und Firma oder Land dahinter sind nicht angegeben. PromptQuorum hat die App nicht getestet; probieren Sie sie an einer kleinen Szene aus und prüfen Sie den Export in Ihrem Videomodell, bevor Sie sich darauf verlassen.',
         ],
       },
       sources: {
@@ -575,12 +575,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-es.webp',
     title: 'Reseña de CozyClay: estudio de previs gratuito en el navegador para vídeo con IA, con servidor MCP',
-    seoTitle: 'Reseña de CozyClay: previs para vídeo con IA y MCP',
+    seoTitle: 'Reseña de CozyClay: previs en navegador para vídeo IA, MCP',
     intro:
       'CozyClay es un estudio de previs 3D gratuito y de código abierto que funciona en una pestaña del navegador. Bloqueas una escena, posas personajes, ajustas la cámara y los cortes, y exportas el plano como primer fotograma, clip de referencia y prompt para un modelo de vídeo con IA. Esta reseña se basa en el sitio del desarrollador, el repositorio de GitHub, sus páginas de versiones y su página de privacidad, consultados el 17 de noviembre de 2026. PromptQuorum no ha probado la app en la práctica.',
     metaDescription:
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Precio: gratis; licencia AGPL-3.0-or-later.',
           'Exporta un primer fotograma, un clip greybox, datos de cámara y prompt, además de mp4, pases de profundidad y de normales, una hoja de contactos y una lista de cortes OTIO.',
           'Un servidor MCP y un panel de agente permiten que asistentes editen la escena en vivo.',
-          'Las estadísticas de uso anónimas vienen activadas de forma predeterminada y se pueden desactivar.',
+          'Las estadísticas de uso, que el desarrollador describe como anónimas, vienen activadas de forma predeterminada y se pueden desactivar.',
         ],
         updatedDate: '2026-11',
       },
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratis y de código abierto bajo AGPL-3.0-or-later; el sitio del desarrollador no lista ningún plan de pago.',
           'Funciona en un navegador Chromium. macOS tiene un .dmg, Windows un instalador .exe, y todas las plataformas pueden ejecutar npx cozyclay con Node.js 22.19 o posterior.',
           'Un servidor MCP (npx -y cozyclay mcp) permite que Claude Desktop, Claude Code, Cursor y otros clientes MCP editen la escena.',
-          'Las estadísticas de uso anónimas vienen activadas de forma predeterminada; se desactivan con cclay telemetry off o DO_NOT_TRACK=1.',
+          'Las estadísticas de uso, que el desarrollador describe como anónimas, vienen activadas de forma predeterminada; se desactivan con cclay telemetry off o DO_NOT_TRACK=1.',
           'PromptQuorum no ha probado la app. El proyecto es joven (repositorio creado en julio de 2026) y la propia página del desarrollador avisa de que hay aristas.',
         ],
         callouts: [
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacidad y flujo de datos',
         content: [
-          '**CozyClay recoge estadísticas de uso anónimas de forma predeterminada, afirma que nunca recoge el contenido de los proyectos ni el texto de los prompts, y permite desactivar las estadísticas.**',
+          '**CozyClay recoge de forma predeterminada estadísticas de uso que describe como anónimas, afirma que nunca recoge el contenido de los proyectos ni el texto de los prompts, y permite desactivar las estadísticas.**',
           'Según la página de privacidad (en vigor desde el 25 de octubre de 2026), el sitio usa PostHog (US Cloud) y Cloudflare Web Analytics, sin cookies ni grabación de sesiones. El paquete npm guarda un identificador de instalación aleatorio en un archivo de estado local y envía eventos agrupados como el primer inicio, la duración de la sesión y el número de acciones. Según la página, no se recogen el texto de los prompts, los nombres de activos y archivos, el contenido de los proyectos ni las rutas locales.',
           'Puedes desactivarlas con cclay telemetry off, la variable de entorno COZYCLAY_TELEMETRY=0, DO_NOT_TRACK=1 o el interruptor de la barra superior del estudio. Las copias del código fuente, los forks, los servidores de desarrollo, la CI y las pruebas no envían nada, según el desarrollador.',
           'Las funciones de agente y de modelo envían tus peticiones al proveedor que conectes, según los términos de ese proveedor. La página de privacidad describe además una demo de movimiento alojada con inicio de sesión de Google que guarda prompts y resultados hasta 30 días; indica que esa demo no está abierta al público por ahora. La página de privacidad y el README no nombran empresa, dirección ni legislación aplicable.',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué datos recoge CozyClay?',
-            a: 'De forma predeterminada, estadísticas de uso anónimas y agrupadas mediante PostHog, con un identificador de instalación aleatorio; afirma que nunca recoge texto de prompts, nombres de archivos ni contenido de proyectos. Puedes desactivarlas con cclay telemetry off o DO_NOT_TRACK=1.',
+            a: 'De forma predeterminada, estadísticas de uso agrupadas mediante PostHog que el desarrollador describe como anónimas, con un identificador de instalación aleatorio; afirma que nunca recoge texto de prompts, nombres de archivos ni contenido de proyectos. Puedes desactivarlas con cclay telemetry off o DO_NOT_TRACK=1.',
           },
         ],
       },
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**CozyClay merece un vistazo si usas modelos de vídeo con IA y quieres fijar la puesta en escena y la cámara antes de pagar una generación.**',
           'Sobre el papel cubre mucho para una herramienta gratuita: un escenario 3D, un compilador de movimiento con comprobaciones de QA, planos y raíles de cámara, paquetes de exportación para modelos de vídeo, un panel de agente, un servidor MCP e instaladores para macOS y Windows. El desarrollo es activo, con la versión 3.2.2 el 7 de noviembre de 2026 y un commit el 15 de noviembre de 2026.',
-          'Las contrapartidas son reales. El proyecto es joven, solo funciona en navegadores Chromium, produce una salida plana tipo arcilla y depende de un modelo de vídeo externo para el resultado final. Las estadísticas anónimas vienen activadas de forma predeterminada, y no se indica la empresa ni el país detrás del proyecto. PromptQuorum no ha probado la app: pruébala con una escena pequeña y revisa la exportación en tu modelo de vídeo antes de depender de ella.',
+          'Las contrapartidas son reales. Según el desarrollador, el proyecto es joven, solo funciona en navegadores Chromium y produce una salida plana tipo arcilla a propósito; además depende de un modelo de vídeo externo para el resultado final. Las estadísticas, que el desarrollador describe como anónimas, vienen activadas de forma predeterminada, y no se indica la empresa ni el país detrás del proyecto. PromptQuorum no ha probado la app: pruébala con una escena pequeña y revisa la exportación en tu modelo de vídeo antes de depender de ella.',
         ],
       },
       sources: {
@@ -855,14 +855,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-fr.webp',
-    title: 'Test de CozyClay : studio de previs gratuit dans le navigateur pour la vidéo IA, avec serveur MCP',
-    seoTitle: 'Test CozyClay : studio de previs pour vidéo IA, MCP',
+    title: 'Avis sur CozyClay : studio de previs gratuit dans le navigateur pour la vidéo IA, avec serveur MCP',
+    seoTitle: 'Avis CozyClay : previs gratuit pour vidéo IA, MCP',
     intro:
-      'CozyClay est un studio de previs 3D gratuit et open source qui fonctionne dans un onglet de navigateur. Vous bloquez une scène, placez les personnages, réglez la caméra et les coupes, puis exportez le plan sous forme d\'image de départ, de clip de référence et de prompt pour un modèle vidéo IA. Ce test s\'appuie sur le site de l\'éditeur, le dépôt GitHub, ses pages de versions et sa page de confidentialité, consultés le 17 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
+      'CozyClay est un studio de previs 3D gratuit et open source qui fonctionne dans un onglet de navigateur. Vous bloquez une scène, placez les personnages, réglez la caméra et les coupes, puis exportez le plan sous forme d\'image de départ, de clip de référence et de prompt pour un modèle vidéo IA. Cet avis s\'appuie sur le site de l\'éditeur, le dépôt GitHub, ses pages de versions et sa page de confidentialité, consultés le 17 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
       'CozyClay est un studio de previs 3D gratuit et open source pour navigateur qui exporte des plans vers des modèles vidéo IA, avec serveur MCP.',
     twitterDescription:
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: false,
     primaryTerm: 'CozyClay',
     targetKeywords: [
-      'test CozyClay',
+      'avis CozyClay',
       'CozyClay MCP',
       'logiciel de previs gratuit',
       'previs 3D navigateur',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Prix : gratuit ; licence AGPL-3.0-or-later.',
           'Exporte une image de départ, un clip greybox, les données de caméra et le prompt, ainsi que mp4, passes de profondeur et de normales, une planche contact et une liste de coupes OTIO.',
           'Un serveur MCP et un panneau d\'agent permettent à des assistants de modifier la scène en direct.',
-          'Les statistiques d\'usage anonymes sont activées par défaut et peuvent être désactivées.',
+          'Les statistiques d\'usage, que l\'éditeur décrit comme anonymes, sont activées par défaut et peuvent être désactivées.',
         ],
         updatedDate: '2026-11',
       },
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuit et open source sous AGPL-3.0-or-later ; le site de l\'éditeur ne mentionne aucune offre payante.',
           'Fonctionne dans un navigateur Chromium. macOS dispose d\'un .dmg, Windows d\'un installateur .exe, et toutes les plateformes peuvent lancer npx cozyclay avec Node.js 22.19 ou plus récent.',
           'Un serveur MCP (npx -y cozyclay mcp) permet à Claude Desktop, Claude Code, Cursor et d\'autres clients MCP de modifier la scène.',
-          'Les statistiques d\'usage anonymes sont activées par défaut ; désactivation avec cclay telemetry off ou DO_NOT_TRACK=1.',
+          'Les statistiques d\'usage, que l\'éditeur décrit comme anonymes, sont activées par défaut ; désactivation avec cclay telemetry off ou DO_NOT_TRACK=1.',
           'PromptQuorum n\'a pas testé l\'application. Le projet est récent (dépôt créé en juillet 2026) et la page de l\'éditeur annonce elle-même des aspérités.',
         ],
         callouts: [
@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Confidentialité et flux de données',
         content: [
-          '**CozyClay collecte par défaut des statistiques d\'usage anonymes, affirme ne jamais collecter le contenu des projets ni le texte des prompts, et permet de désactiver ces statistiques.**',
+          '**CozyClay collecte par défaut des statistiques d\'usage que l\'éditeur décrit comme anonymes, affirme ne jamais collecter le contenu des projets ni le texte des prompts, et permet de désactiver ces statistiques.**',
           'Selon la page de confidentialité (en vigueur depuis le 25 octobre 2026), le site utilise PostHog (US Cloud) et Cloudflare Web Analytics, sans cookies ni enregistrement de session. Le paquet npm stocke un identifiant d\'installation aléatoire dans un fichier d\'état local et envoie des événements regroupés comme le premier lancement, la durée de session et le nombre d\'actions. Le texte des prompts, les noms d\'actifs et de fichiers, le contenu des projets et les chemins locaux ne sont pas collectés, selon la page.',
           'Vous pouvez refuser avec cclay telemetry off, la variable d\'environnement COZYCLAY_TELEMETRY=0, DO_NOT_TRACK=1 ou l\'interrupteur de la barre supérieure du studio. Les copies du code source, les forks, les serveurs de développement, la CI et les tests n\'envoient rien, selon l\'éditeur.',
           'Les fonctions d\'agent et de modèle envoient vos requêtes au fournisseur que vous connectez, selon ses conditions. La page de confidentialité décrit aussi une démo de mouvement hébergée avec connexion Google, qui conserve prompts et résultats jusqu\'à 30 jours ; elle indique que cette démo n\'est pas ouverte au public pour le moment. La page de confidentialité et le README ne nomment ni société, ni adresse, ni droit applicable.',
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Non vérifié : quels modèles vidéo suivent bien les plans exportés. Le site de l\'éditeur montre des exemples Seedance 2.5 et indique que les exports sont conçus pour Seedance, Kling et Veo ; aucun test indépendant n\'a été trouvé.',
           'Non vérifié : l\'existence d\'un installateur Linux et la version que lancent les installateurs. Les notes de version Windows indiquent que l\'installateur démarre toujours la dernière version de CozyClay.',
           'Non vérifié : la société ou le pays derrière le projet. Les sources ne nomment que l\'éditeur, Doyun, et l\'organisation NomaDamas.',
-          'Non vérifié : tests indépendants ou chiffres d\'utilisateurs. Aucun n\'a été trouvé, et la page de comparaison de l\'éditeur n\'a pas été considérée comme indépendante.',
+          'Non vérifié : avis indépendants ou chiffres d\'utilisateurs. Aucun n\'a été trouvé, et la page de comparaison de l\'éditeur n\'a pas été considérée comme indépendante.',
           'Non vérifié : la stabilité. Le dépôt a été créé en juillet 2026, et la page de l\'éditeur annonce des aspérités et un journal des modifications qui évolue vite.',
         ],
       },
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelles données CozyClay collecte-t-il ?',
-            a: 'Par défaut, des statistiques d\'usage anonymes et regroupées via PostHog, avec un identifiant d\'installation aléatoire ; l\'éditeur affirme ne jamais collecter de texte de prompt, de noms de fichiers ni de contenu de projet. Vous pouvez refuser avec cclay telemetry off ou DO_NOT_TRACK=1.',
+            a: 'Par défaut, des statistiques d\'usage regroupées via PostHog, que l\'éditeur décrit comme anonymes, avec un identifiant d\'installation aléatoire ; l\'éditeur affirme ne jamais collecter de texte de prompt, de noms de fichiers ni de contenu de projet. Vous pouvez refuser avec cclay telemetry off ou DO_NOT_TRACK=1.',
           },
         ],
       },
@@ -1097,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**CozyClay mérite un coup d\'œil si vous utilisez des modèles vidéo IA et voulez fixer la mise en scène et la caméra avant de payer une génération.**',
           'Sur le papier, il couvre beaucoup pour un outil gratuit : une scène 3D, un compilateur de mouvement avec contrôles qualité, des plans et des rails de caméra, des packs d\'export pour modèles vidéo, un panneau d\'agent, un serveur MCP et des installateurs macOS et Windows. Le développement est actif, avec la version 3.2.2 le 7 novembre 2026 et un commit le 15 novembre 2026.',
-          'Les compromis sont réels. Le projet est récent, ne fonctionne que dans les navigateurs Chromium, produit une sortie plate de type argile et dépend d\'un modèle vidéo externe pour le résultat final. Les statistiques anonymes sont activées par défaut, et la société ou le pays derrière le projet n\'est pas indiqué. PromptQuorum n\'a pas testé l\'application : essayez-la sur une petite scène et vérifiez l\'export dans votre modèle vidéo avant de vous y fier.',
+          'Les compromis sont réels. Selon l\'éditeur, le projet est récent, ne fonctionne que dans les navigateurs Chromium et produit volontairement une sortie plate de type argile ; il dépend aussi d\'un modèle vidéo externe pour le résultat final. Les statistiques, que l\'éditeur décrit comme anonymes, sont activées par défaut, et la société ou le pays derrière le projet n\'est pas indiqué. PromptQuorum n\'a pas testé l\'application : essayez-la sur une petite scène et vérifiez l\'export dans votre modèle vidéo avant de vous y fier.',
         ],
       },
       sources: {
@@ -1122,9 +1122,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test d\'OpenMontage](/fr/power-local-llm/openmontage-review) — production vidéo agentique open source : votre assistant de code IA fait la recherche, le script, la génération et le rendu de vidéos finies.',
-          '[Test de web-search-mcp](/fr/power-local-llm/web-search-mcp-review) — recherche web pour LLM locaux via un serveur MCP hébergé en local.',
-          '[Test de LocalMCP](/fr/power-local-llm/localmcp-review) — app du Mac App Store qui exécute un serveur MCP local pour que votre client IA cherche dans Mail, Calendrier, Contacts, Rappels et Notes.',
+          '[Avis sur OpenMontage](/fr/power-local-llm/openmontage-review) — production vidéo agentique open source : votre assistant de code IA fait la recherche, le script, la génération et le rendu de vidéos finies.',
+          '[Avis sur web-search-mcp](/fr/power-local-llm/web-search-mcp-review) — recherche web pour LLM locaux via un serveur MCP hébergé en local.',
+          '[Avis sur LocalMCP](/fr/power-local-llm/localmcp-review) — app du Mac App Store qui exécute un serveur MCP local pour que votre client IA cherche dans Mail, Calendrier, Contacts, Rappels et Notes.',
           '[Outils image et vidéo comparés](/fr/power-local-llm/local-llm-images-video-compared) — la comparaison de catégorie pour les outils image et vidéo.',
           '[Répertoire des logiciels de LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-ja.webp',
@@ -1174,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '料金：無料。ライセンスはAGPL-3.0-or-later。',
           '最初のフレーム、グレーボックスクリップ、カメラデータ、プロンプトに加え、mp4、深度・法線パス、コンタクトシート、OTIOカットリストを書き出せます。',
           'MCPサーバーとエージェントパネルで、アシスタントがシーンをライブで編集できます。',
-          '匿名の利用統計は既定でオンですが、オフにできます。',
+          '開発者が匿名と説明する利用統計は既定でオンですが、オフにできます。',
         ],
         updatedDate: '2026-11',
       },
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AGPL-3.0-or-laterの無料オープンソース。開発者のサイトに有料プランの記載はありません。',
           'Chromiumブラウザで動作。macOSは.dmg、Windowsは.exeインストーラーがあり、どのプラットフォームでもNode.js 22.19以降でnpx cozyclayを実行できます。',
           'MCPサーバー（npx -y cozyclay mcp）により、Claude Desktop、Claude Code、Cursorなどの各種MCPクライアントがシーンを編集できます。',
-          '匿名の利用統計は既定でオン。cclay telemetry offまたはDO_NOT_TRACK=1でオフにできます。',
+          '開発者が匿名と説明する利用統計は既定でオン。cclay telemetry offまたはDO_NOT_TRACK=1でオフにできます。',
           'PromptQuorumはこのアプリを試していません。プロジェクトは新しく（リポジトリは2026年7月作成）、開発者自身のページも粗い部分があると述べています。',
         ],
         callouts: [
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'プライバシーとデータの流れ',
         content: [
-          '**CozyClayは既定で匿名の利用統計を収集し、プロジェクトの内容やプロンプトのテキストは収集しないとしており、統計はオフにできます。**',
+          '**CozyClayは既定で（開発者が匿名と説明する）利用統計を収集し、プロジェクトの内容やプロンプトのテキストは収集しないとしており、統計はオフにできます。**',
           'プライバシーページ（2026年10月25日施行）によれば、サイトはPostHog（US Cloud）とCloudflare Web Analyticsを使い、Cookieもセッション録画も使いません。npmパッケージはランダムなインストール識別子をローカルの状態ファイルに保存し、初回起動、セッション時間、操作回数などの区分化されたイベントを送ります。同ページによれば、プロンプトのテキスト、アセット名やファイル名、プロジェクトの内容、ローカルパスは収集されません。',
           'cclay telemetry off、環境変数COZYCLAY_TELEMETRY=0、DO_NOT_TRACK=1、またはスタジオ上部バーのスイッチでオプトアウトできます。開発者によれば、ソースのチェックアウト、フォーク、開発サーバー、CI、テストは何も送信しません。',
           'エージェントとモデルの機能は、接続したプロバイダーの利用条件のもとで、リクエストをそのプロバイダーに送ります。プライバシーページには、Googleサインインを使い、プロンプトと結果を最長30日間保存するホスト型のモーションデモの説明もありますが、同ページはこのデモが現在は一般公開されていないとしています。プライバシーページとREADMEには、会社名、住所、準拠法の記載はありません。',
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'CozyClayは無料ですか？',
-            a: 'はい。CozyClayはAGPL-3.0-or-laterの無料オープンソースで、開発者のサイトには価格0と記載があり、有料プランはありません。ショットを渡すAI動画モデルは別で、生成ごとに料金がかかる場合があり、エージェントパネルにはモデルプロバイダーのアカウントまたはキーが必要です。',
+            a: 'はい。CozyClayはAGPL-3.0-or-laterの無料オープンソースで、開発者のサイトでは価格が0で、有料プランも記載されていません。ショットを渡すAI動画モデルは別で、生成ごとに料金がかかる場合があり、エージェントパネルにはモデルプロバイダーのアカウントまたはキーが必要です。',
           },
           {
             q: 'CozyClayは動画自体を生成しますか？',
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'CozyClayはどんなデータを収集しますか？',
-            a: '既定ではPostHog経由で、ランダムなインストール識別子を使った匿名の区分化された利用統計を収集します。プロンプトのテキスト、ファイル名、プロジェクトの内容は収集しないとしています。cclay telemetry offまたはDO_NOT_TRACK=1でオプトアウトできます。',
+            a: '既定ではPostHog経由で、ランダムなインストール識別子を使った、開発者が匿名と説明する区分化された利用統計を収集します。プロンプトのテキスト、ファイル名、プロジェクトの内容は収集しないとしています。cclay telemetry offまたはDO_NOT_TRACK=1でオプトアウトできます。',
           },
         ],
       },
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**AI動画モデルを使っていて、生成にお金を払う前に演出とカメラを固めたいなら、CozyClayは試す価値があります。**',
           '無料のツールとしては資料上かなり多くをカバーしています。3Dステージ、QA検査付きのモーションコンパイラ、ショットとカメラレール、動画モデル向けの書き出しパック、エージェントパネル、MCPサーバー、macOSとWindows用インストーラーです。開発は活発で、2026年11月7日にバージョン3.2.2、2026年11月15日にコミットがありました。',
-          'トレードオフは現実的です。プロジェクトは新しく、Chromiumブラウザでしか動かず、出力はフラットなクレイ調で、最終結果には外部の動画モデルが必要です。匿名の統計は既定でオンで、背後にある会社や国も示されていません。PromptQuorumはアプリを試していないため、小さなシーンで試し、動画モデルで書き出しを確認してから頼るようにしてください。',
+          'トレードオフは現実的です。開発者によれば、プロジェクトは新しく、Chromiumブラウザでしか動かず、出力は意図的にフラットなクレイ調です。最終結果には外部の動画モデルも必要です。開発者が匿名と説明する統計は既定でオンで、背後にある会社や国も示されていません。PromptQuorumはアプリを試していないため、小さなシーンで試し、動画モデルで書き出しを確認してから頼るようにしてください。',
         ],
       },
       sources: {
@@ -1415,12 +1415,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-pt.webp',
     title: 'Análise do CozyClay: estúdio de previs gratuito no navegador para vídeo com IA, com servidor MCP',
-    seoTitle: 'Análise do CozyClay: previs para vídeo com IA e MCP',
+    seoTitle: 'Análise do CozyClay: previs no navegador, vídeo IA, MCP',
     intro:
       'O CozyClay é um estúdio de previs 3D gratuito e de código aberto que roda em uma aba do navegador. Você bloqueia uma cena, posiciona personagens, ajusta a câmera e os cortes e exporta o plano como primeiro quadro, clipe de referência e prompt para um modelo de vídeo com IA. Esta análise se baseia no site do desenvolvedor, no repositório do GitHub, nas páginas de versões e na página de privacidade, consultados em 17 de novembro de 2026. A PromptQuorum não testou o app na prática.',
     metaDescription:
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preço: gratuito; licença AGPL-3.0-or-later.',
           'Exporta primeiro quadro, clipe greybox, dados de câmera e prompt, além de mp4, passes de profundidade e de normais, folha de contatos e lista de cortes OTIO.',
           'Um servidor MCP e um painel de agente permitem que assistentes editem a cena ao vivo.',
-          'As estatísticas de uso anônimas vêm ativadas por padrão e podem ser desativadas.',
+          'As estatísticas de uso, que o desenvolvedor descreve como anônimas, vêm ativadas por padrão e podem ser desativadas.',
         ],
         updatedDate: '2026-11',
       },
@@ -1493,7 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito e de código aberto sob AGPL-3.0-or-later; o site do desenvolvedor não lista nenhum plano pago.',
           'Roda em um navegador Chromium. O macOS tem um .dmg, o Windows um instalador .exe, e todas as plataformas podem executar npx cozyclay com Node.js 22.19 ou mais recente.',
           'Um servidor MCP (npx -y cozyclay mcp) permite que Claude Desktop, Claude Code, Cursor e outros clientes MCP editem a cena.',
-          'As estatísticas de uso anônimas vêm ativadas por padrão; para desativar, use cclay telemetry off ou DO_NOT_TRACK=1.',
+          'As estatísticas de uso, que o desenvolvedor descreve como anônimas, vêm ativadas por padrão; para desativar, use cclay telemetry off ou DO_NOT_TRACK=1.',
           'A PromptQuorum não testou o app. O projeto é jovem (repositório criado em julho de 2026) e a própria página do desenvolvedor avisa que há arestas.',
         ],
         callouts: [
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacidade e fluxo de dados',
         content: [
-          '**O CozyClay coleta estatísticas de uso anônimas por padrão, afirma que nunca coleta conteúdo de projetos nem texto de prompts e permite desativar as estatísticas.**',
+          '**O CozyClay coleta por padrão estatísticas de uso que descreve como anônimas, afirma que nunca coleta conteúdo de projetos nem texto de prompts e permite desativar as estatísticas.**',
           'Segundo a página de privacidade (em vigor desde 25 de outubro de 2026), o site usa PostHog (US Cloud) e Cloudflare Web Analytics, sem cookies e sem gravação de sessão. O pacote npm guarda um identificador de instalação aleatório em um arquivo de estado local e envia eventos agrupados, como primeira inicialização, duração da sessão e número de ações. Segundo a página, não são coletados texto de prompts, nomes de ativos e arquivos, conteúdo de projetos nem caminhos locais.',
           'Você pode desativar com cclay telemetry off, a variável de ambiente COZYCLAY_TELEMETRY=0, DO_NOT_TRACK=1 ou o botão na barra superior do estúdio. Cópias do código-fonte, forks, servidores de desenvolvimento, CI e testes não enviam nada, segundo o desenvolvedor.',
           'Os recursos de agente e de modelo enviam suas solicitações ao provedor que você conectar, sob os termos desse provedor. A página de privacidade também descreve uma demo de movimento hospedada com login do Google que guarda prompts e resultados por até 30 dias; diz que essa demo não está aberta ao público no momento. A página de privacidade e o README não citam empresa, endereço nem legislação aplicável.',
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Que dados o CozyClay coleta?',
-            a: 'Por padrão, estatísticas de uso anônimas e agrupadas via PostHog, com um identificador de instalação aleatório; afirma que nunca coleta texto de prompts, nomes de arquivos nem conteúdo de projetos. Você pode desativar com cclay telemetry off ou DO_NOT_TRACK=1.',
+            a: 'Por padrão, estatísticas de uso agrupadas via PostHog que o desenvolvedor descreve como anônimas, com um identificador de instalação aleatório; afirma que nunca coleta texto de prompts, nomes de arquivos nem conteúdo de projetos. Você pode desativar com cclay telemetry off ou DO_NOT_TRACK=1.',
           },
         ],
       },
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O CozyClay vale uma olhada se você usa modelos de vídeo com IA e quer definir encenação e câmera antes de pagar por uma geração.**',
           'No papel, ele cobre muito para uma ferramenta gratuita: um palco 3D, um compilador de movimento com verificações de QA, planos e trilhos de câmera, pacotes de exportação para modelos de vídeo, um painel de agente, um servidor MCP e instaladores para macOS e Windows. O desenvolvimento é ativo, com a versão 3.2.2 em 7 de novembro de 2026 e um commit em 15 de novembro de 2026.',
-          'As contrapartidas são reais. O projeto é jovem, só roda em navegadores Chromium, produz uma saída plana estilo argila e depende de um modelo de vídeo externo para o resultado final. As estatísticas anônimas vêm ativadas por padrão, e a empresa ou o país por trás dele não é informado. A PromptQuorum não testou o app: experimente com uma cena pequena e confira a exportação no seu modelo de vídeo antes de depender dela.',
+          'As contrapartidas são reais. Segundo o desenvolvedor, o projeto é jovem, só roda em navegadores Chromium e produz de propósito uma saída plana estilo argila; além disso, depende de um modelo de vídeo externo para o resultado final. As estatísticas, que o desenvolvedor descreve como anônimas, vêm ativadas por padrão, e a empresa ou o país por trás dele não é informado. A PromptQuorum não testou o app: experimente com uma cena pequena e confira a exportação no seu modelo de vídeo antes de depender dela.',
         ],
       },
       sources: {
@@ -1695,16 +1695,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-zh.webp',
-    title: 'CozyClay 评测：面向 AI 视频的免费浏览器预演工作室，附带 MCP 服务器',
-    seoTitle: 'CozyClay 评测：AI 视频预演工作室与 MCP',
+    title: 'CozyClay 解读：面向 AI 视频的免费浏览器预演工作室，附带 MCP 服务器',
+    seoTitle: 'CozyClay 解读：AI 视频预演工作室与 MCP',
     intro:
-      'CozyClay 是一款在浏览器标签页中运行的免费开源 3D 预演（previs）工作室。你可以布置场景、摆放角色姿势、设置镜头和剪辑点，再把镜头导出为首帧、参考片段和面向 AI 视频模型的提示词。本评测基于开发者网站、GitHub 仓库、发布页面和隐私页面，核查于 2026年11月17日。PromptQuorum 没有亲自上手测试这款应用。',
+      'CozyClay 是一款在浏览器标签页中运行的免费开源 3D 预演（previs）工作室。你可以布置场景、摆放角色姿势、设置镜头和剪辑点，再把镜头导出为首帧、参考片段和面向 AI 视频模型的提示词。本解读基于开发者网站、GitHub 仓库、发布页面和隐私页面，核查于 2026年11月17日。PromptQuorum 没有亲自上手测试这款应用。',
     metaDescription:
-      'CozyClay 是在浏览器中运行的免费开源 3D 预演工作室，可把镜头导出给 AI 视频模型，并提供 MCP 服务器。安装方式、隐私与局限。',
+      'CozyClay 是在浏览器中运行的免费开源 3D 预演工作室，可把镜头导出给 AI 视频模型，并提供 MCP 服务器。安装方式、隐私与局限，基于开发者公开资料。',
     twitterDescription:
       'CozyClay 在浏览器中用 3D 布置场景，并为 AI 视频模型导出镜头。免费、AGPL，附带面向 Claude 和 Cursor 的 MCP 服务器。',
     audience:
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: false,
     primaryTerm: 'CozyClay',
     targetKeywords: [
-      'CozyClay 评测',
+      'CozyClay 解读',
       'CozyClay MCP',
       '免费预演软件',
       '浏览器 3D 预演',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '价格：免费；许可证 AGPL-3.0-or-later。',
           '可导出首帧、灰模片段、镜头数据和提示词，以及 mp4、深度与法线通道、联系表和 OTIO 剪辑列表。',
           'MCP 服务器和智能体面板让助手实时编辑场景。',
-          '匿名使用统计默认开启，可以关闭。',
+          '开发者称为匿名的使用统计默认开启，可以关闭。',
         ],
         updatedDate: '2026-11',
       },
@@ -1773,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '免费开源，采用 AGPL-3.0-or-later；开发者网站未列出付费方案。',
           '在 Chromium 浏览器中运行。macOS 有 .dmg，Windows 有 .exe 安装包，所有平台都可在 Node.js 22.19 或更高版本下运行 npx cozyclay。',
           'MCP 服务器（npx -y cozyclay mcp）让 Claude Desktop、Claude Code、Cursor 等 MCP 客户端编辑场景。',
-          '匿名使用统计默认开启；可用 cclay telemetry off 或 DO_NOT_TRACK=1 关闭。',
+          '开发者称为匿名的使用统计默认开启；可用 cclay telemetry off 或 DO_NOT_TRACK=1 关闭。',
           'PromptQuorum 没有测试过这款应用。项目较新（仓库创建于 2026年7月），开发者自己的页面也提醒会有不够完善之处。',
         ],
         callouts: [
@@ -1850,7 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '隐私与数据流向',
         content: [
-          '**CozyClay 默认收集匿名使用统计，称从不收集项目内容或提示词文本，并允许关闭统计。**',
+          '**CozyClay 默认收集开发者称为匿名的使用统计，称从不收集项目内容或提示词文本，并允许关闭统计。**',
           '据隐私页面（2026年10月25日起生效），网站使用 PostHog（US Cloud）和 Cloudflare Web Analytics，没有 Cookie，也没有会话录制。npm 包会在本地状态文件中保存一个随机安装标识符，并发送分桶事件，如首次启动、会话时长和操作次数。据该页面，不收集提示词文本、素材名和文件名、项目内容及本地路径。',
           '你可以用 cclay telemetry off、环境变量 COZYCLAY_TELEMETRY=0、DO_NOT_TRACK=1 或工作室顶栏的开关选择退出。据开发者称，源码检出、分叉、开发服务器、CI 和测试不会发送任何数据。',
           '智能体和模型功能会按你所连接提供商的条款，把请求发送给该提供商。隐私页面还介绍了一个使用 Google 登录、会保存提示词和结果最长 30 天的托管动作演示；页面称该演示目前不对公众开放。隐私页面和 README 都没有给出公司、地址或适用法律。',
@@ -1927,7 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'CozyClay 收集哪些数据？',
-            a: '默认通过 PostHog 收集匿名、分桶的使用统计，并使用随机安装标识符；称从不收集提示词文本、文件名或项目内容。可用 cclay telemetry off 或 DO_NOT_TRACK=1 选择退出。',
+            a: '默认通过 PostHog 收集分桶的使用统计（开发者称其为匿名），并使用随机安装标识符；称从不收集提示词文本、文件名或项目内容。可用 cclay telemetry off 或 DO_NOT_TRACK=1 选择退出。',
           },
         ],
       },
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**如果你使用 AI 视频模型，并想在为生成付费之前先敲定场面调度和镜头，CozyClay 值得一看。**',
           '就资料而言，作为免费工具它涵盖很多：3D 舞台、带 QA 检查的动作编译器、镜头与摄影轨、面向视频模型的导出包、智能体面板、MCP 服务器，以及 macOS 和 Windows 安装包。开发活跃，3.2.2 版发布于 2026年11月7日，并在 2026年11月15日有提交。',
-          '代价也很实际。项目较新，只能在 Chromium 浏览器中运行，输出是平面的黏土风格，最终结果依赖外部视频模型。匿名统计默认开启，背后的公司或国家也没有说明。PromptQuorum 没有测试过这款应用，请先用小场景试用，并在你的视频模型中检查导出效果，再决定是否依赖它。',
+          '代价也很实际。据开发者称，项目较新，只能在 Chromium 浏览器中运行，输出有意采用平面的黏土风格；最终结果还依赖外部视频模型。开发者称为匿名的统计默认开启，背后的公司或国家也没有说明。PromptQuorum 没有测试过这款应用，请先用小场景试用，并在你的视频模型中检查导出效果，再决定是否依赖它。',
         ],
       },
       sources: {
@@ -1962,9 +1962,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[OpenMontage 评测](/zh/power-local-llm/openmontage-review) — 开源的智能体式视频制作：你的 AI 编程助手负责调研、写脚本、生成并渲染成片。',
-          '[web-search-mcp 评测](/zh/power-local-llm/web-search-mcp-review) — 通过本地托管的 MCP 服务器，为本地 LLM 提供网页搜索能力。',
-          '[LocalMCP 评测](/zh/power-local-llm/localmcp-review) — 运行本地 MCP 服务器的 Mac App Store 应用，让你的 AI 客户端搜索邮件、日历、通讯录、提醒事项和备忘录。',
+          '[OpenMontage 解读](/zh/power-local-llm/openmontage-review) — 开源的智能体式视频制作：你的 AI 编程助手负责调研、写脚本、生成并渲染成片。',
+          '[web-search-mcp 解读](/zh/power-local-llm/web-search-mcp-review) — 通过本地托管的 MCP 服务器，为本地 LLM 提供网页搜索能力。',
+          '[LocalMCP 解读](/zh/power-local-llm/localmcp-review) — 运行本地 MCP 服务器的 Mac App Store 应用，让你的 AI 客户端搜索邮件、日历、通讯录、提醒事项和备忘录。',
           '[图像与视频工具对比](/zh/power-local-llm/local-llm-images-video-compared) — 图像与视频工具的类别对比。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-ar.webp',
@@ -2014,7 +2014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السعر: مجاني؛ الترخيص AGPL-3.0-or-later.',
           'يصدّر إطارًا أول ومقطع greybox وبيانات الكاميرا وprompt، إضافة إلى mp4 وممرّات العمق والمتجهات العمودية وورقة اتصال وقائمة قطع OTIO.',
           'خادم MCP ولوحة وكيل يتيحان للمساعدين تعديل المشهد مباشرة.',
-          'إحصاءات الاستخدام المجهولة مفعّلة افتراضيًا ويمكن إيقافها.',
+          'إحصاءات الاستخدام التي يصفها المطوّر بأنها مجهولة مفعّلة افتراضيًا ويمكن إيقافها.',
         ],
         updatedDate: '2026-11',
       },
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مجاني ومفتوح المصدر بترخيص AGPL-3.0-or-later؛ ولا يذكر موقع المطوّر أي خطة مدفوعة.',
           'يعمل في متصفح Chromium. يتوفر ملف .dmg لنظام macOS ومثبّت .exe لنظام Windows، ويمكن تشغيل npx cozyclay على كل المنصات مع Node.js 22.19 أو أحدث.',
           'يتيح خادم MCP (npx -y cozyclay mcp) لـ Claude Desktop وClaude Code وCursor وغيرها من عملاء MCP تعديل المشهد.',
-          'إحصاءات الاستخدام المجهولة مفعّلة افتراضيًا؛ ويمكن إيقافها بالأمر cclay telemetry off أو DO_NOT_TRACK=1.',
+          'إحصاءات الاستخدام التي يصفها المطوّر بأنها مجهولة مفعّلة افتراضيًا؛ ويمكن إيقافها بالأمر cclay telemetry off أو DO_NOT_TRACK=1.',
           'لم تختبر PromptQuorum التطبيق. المشروع حديث (أُنشئ المستودع في يوليو 2026) وصفحة المطوّر نفسها تنبّه إلى وجود جوانب غير مصقولة.',
         ],
         callouts: [
@@ -2079,7 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تحصل عليه',
         content: [
           '**يمكنك استخدام CozyClay في المتصفح، أو تثبيته من تنزيل لنظام macOS أو Windows، أو تشغيله بأمر npx واحد.**',
-          'يقدّم موقع المطوّر CozyClay.dmg لنظام macOS (macOS 12 أو أحدث) وCozyClay-Setup.exe لنظام Windows. يقوم أول تشغيل بتنزيل CozyClay وقد يستغرق بضع دقائق. مثبّت Windows غير موقّع رقميًا، لذلك يعرض Windows رسالة «Windows protected your PC»؛ اختر More info ثم Run anyway. يُفتح الاستوديو في المتصفح على عنوان محلي (127.0.0.1:5180/app/ عند استخدام npx). شغّل أي مثبّت فقط إذا كنت تثق بمصدر التنزيل؛ ولم تفحص PromptQuorum الملف ولم تشغّله.',
+          'يقدّم موقع المطوّر CozyClay.dmg لنظام macOS (macOS 12 أو أحدث) وCozyClay-Setup.exe لنظام Windows. يقوم أول تشغيل بتنزيل CozyClay وقد يستغرق بضع دقائق. مثبّت Windows غير موقّع رقميًا، لذلك يعرض Windows رسالة «قام Windows بحماية جهاز الكمبيوتر»؛ اختر «مزيد من المعلومات» ثم «تشغيل على أي حال». يُفتح الاستوديو في المتصفح على عنوان محلي (127.0.0.1:5180/app/ عند استخدام npx). شغّل أي مثبّت فقط إذا كنت تثق بمصدر التنزيل؛ ولم تفحص PromptQuorum الملف ولم تشغّله.',
         ],
         columns: ['المنصة', 'كيفية الحصول عليه'],
         rows: [
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'الخصوصية وتدفق البيانات',
         content: [
-          '**يجمع CozyClay إحصاءات استخدام مجهولة افتراضيًا، ويقول إنه لا يجمع أبدًا محتوى المشاريع ولا نصوص الـ prompt، ويتيح إيقاف الإحصاءات.**',
+          '**يجمع CozyClay افتراضيًا إحصاءات استخدام يصفها بأنها مجهولة، ويقول إنه لا يجمع أبدًا محتوى المشاريع ولا نصوص الـ prompt، ويتيح إيقاف الإحصاءات.**',
           'بحسب صفحة الخصوصية (سارية منذ 25 أكتوبر 2026) يستخدم الموقع PostHog (US Cloud) وCloudflare Web Analytics، دون ملفات تعريف ارتباط ودون تسجيل جلسات. تحفظ حزمة npm معرّف تثبيت عشوائيًا في ملف حالة محلي وترسل أحداثًا مجمّعة في فئات مثل أول تشغيل ومدة الجلسة وعدد الإجراءات. وبحسب الصفحة لا تُجمع نصوص الـ prompt ولا أسماء الأصول والملفات ولا محتوى المشاريع ولا المسارات المحلية.',
           'يمكنك الانسحاب عبر cclay telemetry off أو متغير البيئة COZYCLAY_TELEMETRY=0 أو DO_NOT_TRACK=1 أو مفتاح التبديل في الشريط العلوي للاستوديو. ولا ترسل نسخ الشيفرة المصدرية والتفريعات (forks) وخوادم التطوير وCI والاختبارات أي شيء، بحسب المطوّر.',
           'ترسل ميزات الوكيل والنماذج طلباتك إلى المزوّد الذي تربطه، وفق شروط ذلك المزوّد. وتصف صفحة الخصوصية أيضًا عرضًا تجريبيًا مستضافًا للحركة بتسجيل دخول Google يخزّن الـ prompt والنتائج حتى 30 يومًا؛ وتقول إن هذا العرض غير متاح للجمهور حاليًا. ولا تذكر صفحة الخصوصية ولا README شركة أو عنوانًا أو قانونًا واجب التطبيق.',
@@ -2207,7 +2207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما البيانات التي يجمعها CozyClay؟',
-            a: 'يجمع افتراضيًا إحصاءات استخدام مجهولة ومجمّعة في فئات عبر PostHog مع معرّف تثبيت عشوائي، ويقول إنه لا يجمع أبدًا نصوص الـ prompt ولا أسماء الملفات ولا محتوى المشاريع. يمكنك الانسحاب عبر cclay telemetry off أو DO_NOT_TRACK=1.',
+            a: 'يجمع افتراضيًا إحصاءات استخدام مجمّعة في فئات عبر PostHog يصفها المطوّر بأنها مجهولة، مع معرّف تثبيت عشوائي، ويقول إنه لا يجمع أبدًا نصوص الـ prompt ولا أسماء الملفات ولا محتوى المشاريع. يمكنك الانسحاب عبر cclay telemetry off أو DO_NOT_TRACK=1.',
           },
         ],
       },
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يستحق CozyClay نظرة إذا كنت تستخدم نماذج فيديو بالذكاء الاصطناعي وتريد تثبيت الإخراج والكاميرا قبل أن تدفع مقابل أي توليد.**',
           'على الورق يغطي الكثير لأداة مجانية: مسرحًا ثلاثي الأبعاد ومترجم حركة بفحوص جودة ولقطات وسكك كاميرا وحزم تصدير لنماذج الفيديو ولوحة وكيل وخادم MCP ومثبّتات لنظامي macOS وWindows. التطوير نشط، مع الإصدار 3.2.2 في 7 نوفمبر 2026 والتزام في 15 نوفمبر 2026.',
-          'المقايضات حقيقية. المشروع حديث، ويعمل فقط في متصفحات Chromium، وينتج مخرجات مسطّحة بنمط الطين، ويعتمد على نموذج فيديو خارجي للنتيجة النهائية. الإحصاءات المجهولة مفعّلة افتراضيًا، والشركة أو البلد وراءه غير مذكورين. لم تختبر PromptQuorum التطبيق، فجرّبه على مشهد صغير وتحقق من التصدير في نموذج الفيديو الخاص بك قبل الاعتماد عليه.',
+          'المقايضات حقيقية. بحسب المطوّر، المشروع حديث، ويعمل فقط في متصفحات Chromium، وينتج عمدًا مخرجات مسطّحة بنمط الطين؛ كما يعتمد على نموذج فيديو خارجي للنتيجة النهائية. الإحصاءات التي يصفها المطوّر بأنها مجهولة مفعّلة افتراضيًا، والشركة أو البلد وراءه غير مذكورين. لم تختبر PromptQuorum التطبيق، فجرّبه على مشهد صغير وتحقق من التصدير في نموذج الفيديو الخاص بك قبل الاعتماد عليه.',
         ],
       },
       sources: {
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Image & Video Generation',
     heroImage: '/images/cozyclay-review-hero-ko.webp',
@@ -2294,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '가격: 무료, 라이선스는 AGPL-3.0-or-later입니다.',
           '첫 프레임, 그레이박스 클립, 카메라 데이터, 프롬프트와 함께 mp4, 깊이·노멀 패스, 컨택트 시트, OTIO 컷 리스트를 내보냅니다.',
           'MCP 서버와 에이전트 패널로 어시스턴트가 장면을 실시간으로 편집할 수 있습니다.',
-          '익명 사용 통계는 기본으로 켜져 있으며 끌 수 있습니다.',
+          '개발자가 익명이라고 설명하는 사용 통계는 기본으로 켜져 있으며 끌 수 있습니다.',
         ],
         updatedDate: '2026-11',
       },
@@ -2333,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AGPL-3.0-or-later 무료 오픈소스이며, 개발자 사이트에는 유료 요금제가 나와 있지 않습니다.',
           'Chromium 브라우저에서 실행됩니다. macOS는 .dmg, Windows는 .exe 설치 프로그램이 있고, 모든 플랫폼에서 Node.js 22.19 이상으로 npx cozyclay를 실행할 수 있습니다.',
           'MCP 서버(npx -y cozyclay mcp)로 Claude Desktop, Claude Code, Cursor 등 MCP 클라이언트가 장면을 편집할 수 있습니다.',
-          '익명 사용 통계는 기본으로 켜져 있으며 cclay telemetry off 또는 DO_NOT_TRACK=1로 끌 수 있습니다.',
+          '개발자가 익명이라고 설명하는 사용 통계는 기본으로 켜져 있으며 cclay telemetry off 또는 DO_NOT_TRACK=1로 끌 수 있습니다.',
           'PromptQuorum은 이 앱을 테스트하지 않았습니다. 프로젝트는 새롭고(저장소는 2026년 7월 생성) 개발자 페이지도 거친 부분이 있을 수 있다고 안내합니다.',
         ],
         callouts: [
@@ -2410,7 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '개인정보 보호와 데이터 흐름',
         content: [
-          '**CozyClay는 기본으로 익명 사용 통계를 수집하고, 프로젝트 내용이나 프롬프트 텍스트는 수집하지 않는다고 밝히며, 통계를 끌 수 있게 합니다.**',
+          '**CozyClay는 기본으로 개발자가 익명이라고 설명하는 사용 통계를 수집하고, 프로젝트 내용이나 프롬프트 텍스트는 수집하지 않는다고 밝히며, 통계를 끌 수 있게 합니다.**',
           '개인정보 페이지(2026년 10월 25일 시행)에 따르면 웹사이트는 PostHog(US Cloud)와 Cloudflare Web Analytics를 사용하며 쿠키와 세션 녹화는 없습니다. npm 패키지는 무작위 설치 식별자를 로컬 상태 파일에 저장하고 첫 실행, 세션 길이, 동작 횟수 같은 구간화된 이벤트를 전송합니다. 해당 페이지에 따르면 프롬프트 텍스트, 에셋 이름과 파일 이름, 프로젝트 내용, 로컬 경로는 수집하지 않습니다.',
           'cclay telemetry off, 환경 변수 COZYCLAY_TELEMETRY=0, DO_NOT_TRACK=1 또는 스튜디오 상단 바의 토글로 수집을 거부할 수 있습니다. 개발자에 따르면 소스 체크아웃, 포크, 개발 서버, CI, 테스트는 아무것도 전송하지 않습니다.',
           '에이전트와 모델 기능은 연결한 제공자의 약관에 따라 요청을 그 제공자에게 보냅니다. 개인정보 페이지에는 Google 로그인을 사용하며 프롬프트와 결과를 최대 30일 보관하는 호스팅 모션 데모도 설명되어 있으나, 이 데모는 현재 일반에 공개되어 있지 않다고 밝힙니다. 개인정보 페이지와 README에는 회사, 주소, 준거법이 나와 있지 않습니다.',
@@ -2471,7 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'CozyClay는 무료입니까?',
-            a: '예. CozyClay는 AGPL-3.0-or-later 무료 오픈소스이며 개발자 사이트에는 가격 0으로 표시되고 유료 요금제는 없습니다. 샷을 넘기는 AI 영상 모델은 별개이며 생성마다 요금이 부과될 수 있고, 에이전트 패널에는 모델 제공자의 계정이나 키가 필요합니다.',
+            a: '예. CozyClay는 AGPL-3.0-or-later 무료 오픈소스이며 개발자 사이트에는 가격이 0으로 표시되고 유료 요금제도 나와 있지 않습니다. 샷을 넘기는 AI 영상 모델은 별개이며 생성마다 요금이 부과될 수 있고, 에이전트 패널에는 모델 제공자의 계정이나 키가 필요합니다.',
           },
           {
             q: 'CozyClay가 영상을 직접 생성합니까?',
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'CozyClay는 어떤 데이터를 수집합니까?',
-            a: '기본으로 PostHog를 통해 무작위 설치 식별자와 함께 익명의 구간화된 사용 통계를 수집하며, 프롬프트 텍스트, 파일 이름, 프로젝트 내용은 수집하지 않는다고 밝힙니다. cclay telemetry off 또는 DO_NOT_TRACK=1로 거부할 수 있습니다.',
+            a: '기본으로 PostHog를 통해 무작위 설치 식별자와 함께 개발자가 익명이라고 설명하는 구간화된 사용 통계를 수집하며, 프롬프트 텍스트, 파일 이름, 프로젝트 내용은 수집하지 않는다고 밝힙니다. cclay telemetry off 또는 DO_NOT_TRACK=1로 거부할 수 있습니다.',
           },
         ],
       },
@@ -2497,7 +2497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**AI 영상 모델을 쓰면서 생성에 비용을 내기 전에 연출과 카메라를 확정하고 싶다면 CozyClay는 살펴볼 만합니다.**',
           '무료 도구치고 자료상 많은 것을 갖추고 있습니다. 3D 스테이지, QA 검사가 있는 모션 컴파일러, 샷과 카메라 레일, 영상 모델용 내보내기 팩, 에이전트 패널, MCP 서버, macOS와 Windows 설치 프로그램입니다. 개발은 활발하여 2026년 11월 7일에 3.2.2 버전, 2026년 11월 15일에 커밋이 있었습니다.',
-          '절충점도 분명합니다. 프로젝트가 새롭고, Chromium 브라우저에서만 실행되며, 출력이 평면 클레이 스타일이고, 최종 결과는 외부 영상 모델에 의존합니다. 익명 통계는 기본으로 켜져 있고 뒤에 있는 회사나 국가는 밝혀져 있지 않습니다. PromptQuorum은 앱을 테스트하지 않았으므로, 작은 장면으로 먼저 시도하고 영상 모델에서 내보내기 결과를 확인한 뒤에 의존하시기 바랍니다.',
+          '절충점도 분명합니다. 개발자에 따르면 프로젝트가 새롭고, Chromium 브라우저에서만 실행되며, 출력은 의도적으로 평면 클레이 스타일입니다. 최종 결과는 외부 영상 모델에도 의존합니다. 개발자가 익명이라고 설명하는 통계는 기본으로 켜져 있고 뒤에 있는 회사나 국가는 밝혀져 있지 않습니다. PromptQuorum은 앱을 테스트하지 않았으므로, 작은 장면으로 먼저 시도하고 영상 모델에서 내보내기 결과를 확인한 뒤에 의존하시기 바랍니다.',
         ],
       },
       sources: {
