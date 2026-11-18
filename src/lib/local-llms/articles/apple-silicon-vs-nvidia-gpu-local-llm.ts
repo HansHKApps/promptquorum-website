@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU local LLM',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'local AI platform comparison', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090', 'M5 Max vs RTX 5090'],
-    leadAnswerBlock: '**Crossover threshold: ~24GB model size. RTX 4090 (1,008 GB/s) is faster on 8B–24B models. M5 Max (128GB unified memory) is one of few single-machine consumer options for 70B models (higher-VRAM and unified-memory alternatives exist). Apple\'s August 25, 2026 refresh added a $899 entry-level M6 Mac mini (32GB max) and raised the Mac Studio M5 Ultra ceiling to 512GB unified memory (top configuration, announced by Apple as coming in late October 2026; check Apple\'s site for availability). Estimated 3-year TCO (see table): Mac Mini M5 Pro $1,804 vs RTX 4090 desktop $4,682. Estimated power: Mac Mini $35/year vs RTX 4090 $394/year at 24/7.**',
+    leadAnswerBlock: '**Crossover threshold: ~24GB model size. RTX 4090 (1,008 GB/s) is faster on 8B–24B models. M5 Max (128GB unified memory) is one of few single-machine consumer options for 70B models (higher-VRAM and unified-memory alternatives exist). Apple\'s August 25, 2026 refresh added a $899 entry-level M6 Mac mini (32GB max) and raised the Mac Studio M5 Ultra ceiling to 512GB unified memory (top configuration, announced by Apple for late October 2026; check Apple\'s site for current availability). Estimated 3-year TCO (see table): Mac Mini M5 Pro $1,804 vs RTX 4090 desktop $4,682. Estimated power: Mac Mini $35/year vs RTX 4090 $394/year at 24/7.**',
     ctaText: 'Choosing between Mac and NVIDIA for local AI? Compare your local Llama or Mistral output (running on either platform) against GPT-4, Claude, Gemini, and 22 other models with PromptQuorum — validate that your hardware investment delivers cloud-quality results for your specific tasks before committing $900–5,500 in hardware.',
     quickAnswerTop: {
       en: {
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Setup time: Ollama on Mac = 5 minutes. CUDA + drivers + framework on Linux/Windows = 30–60 minutes.',
           'Hybrid setup works well: Mac for daily inference (portable, silent, 70B capable), NVIDIA desktop for fine-tuning (CUDA ecosystem). Total: $6,000 for both.',
           'Apple refreshed the Mac mini and Mac Studio lineup on August 25, 2026: entry-level M6 Mac mini ($899, 32GB max, 170GB/s), M5 Pro Mac mini ($1,699, 64GB max, 307GB/s, Thunderbolt 5), M5 Max Mac Studio ($2,499, 128GB max), and M5 Ultra Mac Studio ($5,499, 96GB base) — all shipping September 22, 2026.',
-          'M5 Ultra now officially scales to 512GB unified memory in its top Mac Studio configuration, coming in late October 2026 according to Apple (check Apple\'s site for current availability and pricing). Its memory capacity leaves room for very large models, but PromptQuorum has not tested it.',
+          'M5 Ultra now officially scales to 512GB unified memory in its top Mac Studio configuration, announced by Apple for late October 2026 (check Apple\'s site for current availability and pricing). Its memory capacity leaves room for very large models, but PromptQuorum has not tested it.',
           'Scope: this guide covers Apple Silicon vs NVIDIA GPUs only. If you are also evaluating CPU-only inference as a third option, see [GPU vs CPU vs Apple Silicon for Local LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
         ],
       },
@@ -97,13 +97,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model Size': '70B Q8 (~74 GB)', 'RTX 4090 (24GB VRAM)': '✗ Does not fit', 'M5 Max (128GB Unified)': '✓ Fits' },
           { 'Model Size': 'Llama 405B Q3 (~200 GB)', 'RTX 4090 (24GB VRAM)': '✗ Does not fit', 'M5 Max (128GB Unified)': '✗ Does not fit (needs M5 Ultra)' },
         ],
-        note: 'For models above 24GB, Apple Silicon is one of few single-machine consumer options, avoiding a dual-GPU rig. Apple\'s August 25, 2026 refresh raised the ceiling further: the Mac Studio M5 Ultra has a 512GB unified memory configuration that Apple lists as coming in late October 2026 (check Apple\'s site for availability), which leaves substantial headroom for large open-weight models.',
+        note: 'For models above 24GB, Apple Silicon is one of few single-machine consumer options, avoiding a dual-GPU rig. Apple\'s August 25, 2026 refresh raised the ceiling further: the Mac Studio M5 Ultra has a 512GB unified memory configuration that Apple announced for late October 2026 (check Apple\'s site for current availability), which leaves substantial headroom for large open-weight models.',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: 'Head-to-Head Benchmarks: Tokens/Second',
-        content: 'Figures are indicative ranges; PromptQuorum has not independently benchmarked this hardware. Reported tok/s is generation speed. The RTX 4090 cell in the Llama 3.1 8B Q4 row is the community figure for Llama 2 7B Q4_0 (a different model) from the [llama.cpp benchmark thread #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); all other cells are indicative estimates, not measured by PromptQuorum. Note: these figures predate Apple\'s August 25, 2026 Mac mini/Mac Studio hardware and pricing refresh (new units ship September 22, 2026). Independent tok/s benchmarks for the refreshed units are not yet available; only Apple\'s own relative performance claims exist for the new configurations, and none are included in this table.',
+        content: 'Figures are indicative ranges; PromptQuorum has not independently benchmarked this hardware. Reported tok/s is generation speed. The RTX 4090 cell in the Llama 3.1 8B Q4 row is the community figure for Llama 2 7B Q4_0 (a different model) from the [llama.cpp benchmark thread #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); all other cells are indicative estimates from memory bandwidth and model size, not from a published benchmark; PromptQuorum has not measured them. Note: these figures predate Apple\'s August 25, 2026 Mac mini/Mac Studio hardware and pricing refresh (new units ship September 22, 2026). Independent tok/s benchmarks for the refreshed units are not yet available; only Apple\'s own relative performance claims exist for the new configurations, and none are included in this table.',
         tableFormat: true,
         columns: ['Model', 'M5 Pro 64GB', 'M5 Max 128GB', 'RTX 4070 12GB', 'RTX 4090 24GB'],
         rows: [
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Config': 'Dual RTX 3090 (48GB total)', 'Hardware': '$3,850', 'Annual Electricity': '$437', '3-Year Power': '$1,311', '3-Year Total': '$5,161' },
           { 'Config': 'Mac Studio M5 Ultra 96GB', 'Hardware': '$5,499', 'Annual Electricity': '$75', '3-Year Power': '$225', '3-Year Total': '$5,724' },
         ],
-        note: 'Prices reflect Apple\'s August 25, 2026 Mac mini/Mac Studio refresh (units ship September 22, 2026), which lowered the Mac Studio M5 Max starting price to $2,499 and added a new entry-level Mac Mini M6 at $899. The [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (updated 2026-10-15) lists new RTX 4090 cards at $2,000–3,000 and used listings at roughly $2,575–3,010, so used cards are currently not cheaper than new ones; the $3,500 used here is a representative estimate for a complete desktop (GPU at about $2,600 plus about $900 for the rest of the system, our own estimate). The dual RTX 3090 row is like-for-like: two used cards at roughly $1,400–1,550 each (same tracker, 2026-10-15), about $2,950 at the midpoint, plus the same ~$900 own-estimate system, about $3,850 in total. At these figures the dual-3090 build costs more over three years than the single RTX 4090 desktop and the Mac Studio M5 Max. Mac Mini M6/M5 Pro are the cheapest 3-year options for running 8B–32B models. A 512GB Mac Studio M5 Ultra top configuration is listed by Apple as coming in late October 2026; it is not included in this table (see Apple\'s configurator for pricing). M6/M5 Pro annual electricity figures are carried over from the prior Mac mini generation pending independent measurement of the new chips.',
+        note: 'Prices reflect Apple\'s August 25, 2026 Mac mini/Mac Studio refresh (units ship September 22, 2026), which lowered the Mac Studio M5 Max starting price to $2,499 and added a new entry-level Mac Mini M6 at $899. The [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (updated 2026-10-15) lists new RTX 4090 cards at $2,000–3,000 and used listings at roughly $2,575–3,010, so used cards are currently not cheaper than new ones; the $3,500 used here is a representative estimate for a complete desktop (GPU at about $2,600 plus about $900 for the rest of the system, our own estimate). The dual RTX 3090 row is like-for-like: two used cards at roughly $1,400–1,550 each (same tracker, 2026-10-15), about $2,950 at the midpoint, plus the same ~$900 own-estimate system, about $3,850 in total. At these figures the dual-3090 build costs more over three years than the single RTX 4090 desktop and the Mac Studio M5 Max. Mac Mini M6/M5 Pro are the cheapest 3-year options for running 8B–32B models. A 512GB Mac Studio M5 Ultra top configuration was announced by Apple for late October 2026 (check Apple\'s site for current availability); it is not included in this table (see Apple\'s configurator for pricing). M6/M5 Pro annual electricity figures are carried over from the prior Mac mini generation pending independent measurement of the new chips.',
       },
 
       powerDetails: {
@@ -159,11 +159,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The decisive scenario. Llama 3.3 70B requires 42GB at Q4 quantization. RTX 4090 has 24GB VRAM — cannot fit. M5 Max 128GB runs it comfortably with room for context window and other applications.',
           'One NVIDIA workaround is dual RTX 3090 (two used cards at about $2,800–3,100, cards only) or an RTX A6000 (check the current vendor price) — the dual-3090 route alone costs more than a Mac Mini M5 Pro and draws roughly 8× the power of the Mac Studio M5 Max ($437 vs $55 per year at the table\'s rates).',
           '**2. Always-On Silent AI Server**',
-          'Mac Mini at 18–35W under load is near-silent. A desktop with RTX 4090 at 250–450W has 3+ fans averaging 50–70 dB. A noisy GPU rig in a home office is unworkable; Mac Mini runs silently in a closet.',
+          'Mac Mini at 18–35W under load is near-silent. Many RTX 4090 desktops (250–450W) are audible under load (noise depends on the card and the case). A loud GPU rig can be impractical in a home office; a Mac Mini is near-silent in comparison.',
           'Power cost differential: $35/year (Mac Mini) vs $394/year (RTX 4090) at 24/7 operation. Over 5 years: $1,795 saved on electricity alone.',
           'Apple\'s August 25, 2026 refresh added an even cheaper entry point for this use case: the M6 Mac mini at $899 (32GB max unified memory), for users who do not need the M5 Pro\'s 64GB ceiling.',
           '**3. Portable AI Workstation (MacBook Pro M5 Pro)**',
-          'MacBook Pro M5 Pro with 64GB unified memory runs 32B models at 18–22 tok/s while traveling. We are not aware of an NVIDIA laptop with equivalent memory at a comparable price. Discrete laptop GPUs cap at 16GB VRAM, limiting model size to 13B maximum.',
+          'MacBook Pro M5 Pro with 64GB unified memory runs 32B models at 18–22 tok/s while traveling. We are not aware of an NVIDIA laptop with equivalent memory at a comparable price. Most discrete laptop GPUs top out at 16GB VRAM (check the specific laptop\'s spec), which limits typical model size to around 13B.',
           '**4. Multi-Model Stacks (Voice + Vision + LLM Simultaneously)**',
           'A voice assistant pipeline needs Whisper STT (3GB) + LLM (8GB) + TTS (1GB) = 12GB minimum. RTX 4090 24GB handles this tightly. M5 Pro 64GB handles this PLUS a vision model (LLaVA 6GB) PLUS RAG embeddings — all loaded simultaneously with instant switching.',
           '**5. EU Power Costs and Sustainability Constraints**',
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Should I wait for M5 Ultra?',
-            a: 'M5 Ultra is now official. Apple\'s August 25, 2026 refresh puts the Mac Studio M5 Ultra at $5,499 (96GB unified memory), scaling up to a 512GB top configuration that Apple lists as coming in late October 2026 (check Apple\'s site for current availability and pricing). If you need the most memory: that 512GB tier is the highest-memory Mac option Apple has announced. If you need hardware now: Mac Studio M5 Max 128GB (from $2,499, ships September 22, 2026) is the current best value for large models.',
+            a: 'M5 Ultra is now official. Apple\'s August 25, 2026 refresh puts the Mac Studio M5 Ultra at $5,499 (96GB unified memory), scaling up to a 512GB top configuration that Apple announced for late October 2026 (check Apple\'s site for current availability and pricing). If you need the most memory: that 512GB tier is the highest-memory Mac option Apple has announced. If you need hardware now: Mac Studio M5 Max 128GB (from $2,499, ships September 22, 2026) is the current best value for large models.',
           },
           {
             q: 'Can I do multi-GPU on Mac?',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does RTX 5090 change this comparison?',
-            a: 'RTX 5090 (32GB VRAM, already released; check current availability and pricing) raises the NVIDIA capability ceiling but does not change the unified memory advantage. 70B models still will not fit in 32GB at Q4 quantization (needs ~42GB). M5 Max 128GB and M5 Ultra (now up to 512GB in its top Mac Studio configuration, which Apple lists as coming in late October 2026) remain among the few single-machine options for large-model inference.',
+            a: 'RTX 5090 (32GB VRAM, already released; check current availability and pricing) raises the NVIDIA capability ceiling but does not change the unified memory advantage. 70B models still will not fit in 32GB at Q4 quantization (needs ~42GB). M5 Max 128GB and M5 Ultra (now up to 512GB in its top Mac Studio configuration, which Apple announced for late October 2026; check Apple\'s site for current availability) remain among the few single-machine options for large-model inference.',
           },
           {
             q: 'Can I share VRAM across multiple Macs?',
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU LLM local',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'comparación plataforma IA local', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**Punto de cruce: ~24 GB de tamaño de modelo. RTX 4090 (1.008 GB/s) es más rápido en modelos 8B–24B. M5 Max (128 GB de memoria unificada) es una de las pocas opciones consumer en un solo equipo para modelos 70B (existen alternativas con más VRAM o memoria unificada). La actualización de Apple del 25 de agosto de 2026 añadió un Mac mini M6 de entrada por $899 (32 GB máx.) y elevó el techo del Mac Studio M5 Ultra a 512 GB de memoria unificada (configuración tope, anunciada por Apple como disponible a finales de octubre de 2026; consulta la web de Apple para ver la disponibilidad). TCO estimado a 3 años (ver tabla): Mac Mini M5 Pro $1.804 vs RTX 4090 desktop $4.682. Consumo estimado: Mac Mini $35/año vs RTX 4090 $394/año en operación 24/7. Los precios pueden variar según tu país.**',
+    leadAnswerBlock: '**Punto de cruce: ~24 GB de tamaño de modelo. RTX 4090 (1.008 GB/s) es más rápido en modelos 8B–24B. M5 Max (128 GB de memoria unificada) es una de las pocas opciones consumer en un solo equipo para modelos 70B (existen alternativas con más VRAM o memoria unificada). La actualización de Apple del 25 de agosto de 2026 añadió un Mac mini M6 de entrada por $899 (32 GB máx.) y elevó el techo del Mac Studio M5 Ultra a 512 GB de memoria unificada (configuración tope, anunciada por Apple para finales de octubre de 2026; consulta la web de Apple para ver la disponibilidad actual). TCO estimado a 3 años (ver tabla): Mac Mini M5 Pro $1.804 vs RTX 4090 desktop $4.682. Consumo estimado: Mac Mini $35/año vs RTX 4090 $394/año en operación 24/7. Los precios pueden variar según tu país.**',
     ctaText: '¿Eligiendo entre Mac y NVIDIA para IA local? Compara tu output local de Llama o Mistral (ejecutándose en cualquiera de las dos plataformas) contra GPT-4, Claude, Gemini y otros 22 modelos con PromptQuorum — valida que tu inversión en hardware entrega resultados de calidad cloud para tus tareas específicas antes de comprometer $900–5.500 en hardware.',
     quickAnswerTop: {
       en: {
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tiempo de configuración: Ollama en Mac = 5 minutos. CUDA + drivers + framework en Linux/Windows = 30–60 minutos.',
           'El setup híbrido funciona bien: Mac para inferencia diaria (portátil, silencioso, capaz de 70B), desktop NVIDIA para fine-tuning (ecosistema CUDA). Total: $6.000 para ambos.',
           'Apple renovó la línea Mac mini y Mac Studio el 25 de agosto de 2026: Mac mini M6 de entrada ($899, 32 GB máx., 170 GB/s), Mac mini M5 Pro ($1.699, 64 GB máx., 307 GB/s, Thunderbolt 5), Mac Studio M5 Max ($2.499, 128 GB máx.) y Mac Studio M5 Ultra ($5.499, 96 GB base) — todos disponibles el 22 de septiembre de 2026.',
-          'M5 Ultra ahora escala oficialmente hasta 512 GB de memoria unificada en su configuración tope de Mac Studio, que Apple indica como disponible a finales de octubre de 2026 (consulta la web de Apple para ver disponibilidad y precio). Su capacidad de memoria deja margen para modelos muy grandes, pero PromptQuorum no la ha probado.',
+          'M5 Ultra ahora escala oficialmente hasta 512 GB de memoria unificada en su configuración tope de Mac Studio, que Apple anunció para finales de octubre de 2026 (consulta la web de Apple para ver la disponibilidad actual y el precio). Su capacidad de memoria deja margen para modelos muy grandes, pero PromptQuorum no la ha probado.',
           'Alcance: esta guía cubre solo Apple Silicon vs NVIDIA GPU. Si también evalúas inferencia CPU-only como tercera opción, consulta [GPU vs CPU vs Apple Silicon para LLMs locales](/es/local-llms/gpu-vs-cpu-vs-apple-silicon).',
         ],
       },
@@ -408,13 +408,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tamaño del modelo': '70B Q8 (~74 GB)', 'RTX 4090 (24 GB VRAM)': '✗ No cabe', 'M5 Max (128 GB Unificada)': '✓ Cabe' },
           { 'Tamaño del modelo': 'Llama 405B Q3 (~200 GB)', 'RTX 4090 (24 GB VRAM)': '✗ No cabe', 'M5 Max (128 GB Unificada)': '✗ No cabe (requiere M5 Ultra)' },
         ],
-        note: 'Para modelos de más de 24 GB, Apple Silicon es una de las pocas opciones consumer en un solo equipo, sin un rig dual-GPU. La actualización de Apple del 25 de agosto de 2026 elevó aún más el techo: el Mac Studio M5 Ultra tiene una configuración de 512 GB de memoria unificada que Apple indica como disponible a finales de octubre de 2026 (consulta la web de Apple para ver la disponibilidad), con un margen considerable para modelos abiertos grandes.',
+        note: 'Para modelos de más de 24 GB, Apple Silicon es una de las pocas opciones consumer en un solo equipo, sin un rig dual-GPU. La actualización de Apple del 25 de agosto de 2026 elevó aún más el techo: el Mac Studio M5 Ultra tiene una configuración de 512 GB de memoria unificada que Apple anunció para finales de octubre de 2026 (consulta la web de Apple para ver la disponibilidad actual), con un margen considerable para modelos abiertos grandes.',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks cara a cara: tokens por segundo',
-        content: 'Las cifras son rangos orientativos; PromptQuorum no ha realizado benchmarks independientes de este hardware. Los tok/s reportados corresponden a velocidad de generación. La celda de RTX 4090 en la fila Llama 3.1 8B Q4 es la cifra de la comunidad para Llama 2 7B Q4_0 (un modelo distinto) del [hilo de benchmarks de llama.cpp #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); todas las demás celdas son estimaciones orientativas, no medidas por PromptQuorum. Nota: estas cifras son anteriores a la actualización de hardware y precios del Mac mini/Mac Studio de Apple del 25 de agosto de 2026 (unidades disponibles el 22 de septiembre de 2026). Aún no existen benchmarks independientes de tok/s para las unidades renovadas; solo existen afirmaciones de rendimiento de la propia Apple para las nuevas configuraciones, y ninguna se incluye en esta tabla.',
+        content: 'Las cifras son rangos orientativos; PromptQuorum no ha realizado benchmarks independientes de este hardware. Los tok/s reportados corresponden a velocidad de generación. La celda de RTX 4090 en la fila Llama 3.1 8B Q4 es la cifra de la comunidad para Llama 2 7B Q4_0 (un modelo distinto) del [hilo de benchmarks de llama.cpp #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); todas las demás celdas son estimaciones orientativas a partir del ancho de banda de memoria y del tamaño del modelo, no de un benchmark publicado; PromptQuorum no las ha medido. Nota: estas cifras son anteriores a la actualización de hardware y precios del Mac mini/Mac Studio de Apple del 25 de agosto de 2026 (unidades disponibles el 22 de septiembre de 2026). Aún no existen benchmarks independientes de tok/s para las unidades renovadas; solo existen afirmaciones de rendimiento de la propia Apple para las nuevas configuraciones, y ninguna se incluye en esta tabla.',
         tableFormat: true,
         columns: ['Modelo', 'M5 Pro 64 GB', 'M5 Max 128 GB', 'RTX 4070 12 GB', 'RTX 4090 24 GB'],
         rows: [
@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuración': 'Dual RTX 3090 (48 GB total)', 'Hardware': '$3.850', 'Electricidad anual': '$437', 'Electricidad 3 años': '$1.311', 'Total 3 años': '$5.161' },
           { 'Configuración': 'Mac Studio M5 Ultra 96 GB', 'Hardware': '$5.499', 'Electricidad anual': '$75', 'Electricidad 3 años': '$225', 'Total 3 años': '$5.724' },
         ],
-        note: 'Precios según la actualización del Mac mini/Mac Studio de Apple del 25 de agosto de 2026 (unidades disponibles el 22 de septiembre de 2026), que bajó el precio inicial del Mac Studio M5 Max a $2.499 y añadió un nuevo Mac Mini M6 de entrada a $899. El [tracker de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (actualizado el 2026-10-15) lista RTX 4090 nuevas a $2.000–3.000 y anuncios de usadas a unos $2.575–3.010, así que las usadas hoy no son más baratas que las nuevas; los $3.500 usados aquí son una estimación representativa de un desktop completo (GPU de unos $2.600 más unos $900 para el resto del sistema, estimación propia). La fila de dual RTX 3090 es comparable: dos tarjetas usadas de unos $1.400–1.550 cada una (mismo tracker, 2026-10-15), unos $2.950 en el punto medio, más los mismos ~$900 de sistema (estimación propia), unos $3.850 en total. Con estas cifras la configuración dual 3090 cuesta más en tres años que el desktop con una RTX 4090 y que el Mac Studio M5 Max. Apple indica una configuración tope de Mac Studio M5 Ultra de 512 GB como disponible a finales de octubre de 2026; no se incluye en esta tabla (consulta el configurador de Apple para ver el precio).',
+        note: 'Precios según la actualización del Mac mini/Mac Studio de Apple del 25 de agosto de 2026 (unidades disponibles el 22 de septiembre de 2026), que bajó el precio inicial del Mac Studio M5 Max a $2.499 y añadió un nuevo Mac Mini M6 de entrada a $899. El [tracker de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (actualizado el 2026-10-15) lista RTX 4090 nuevas a $2.000–3.000 y anuncios de usadas a unos $2.575–3.010, así que las usadas hoy no son más baratas que las nuevas; los $3.500 usados aquí son una estimación representativa de un desktop completo (GPU de unos $2.600 más unos $900 para el resto del sistema, estimación propia). La fila de dual RTX 3090 es comparable: dos tarjetas usadas de unos $1.400–1.550 cada una (mismo tracker, 2026-10-15), unos $2.950 en el punto medio, más los mismos ~$900 de sistema (estimación propia), unos $3.850 en total. Con estas cifras la configuración dual 3090 cuesta más en tres años que el desktop con una RTX 4090 y que el Mac Studio M5 Max. Apple anunció una configuración tope de Mac Studio M5 Ultra de 512 GB para finales de octubre de 2026 (consulta la web de Apple para ver la disponibilidad actual); no se incluye en esta tabla (consulta el configurador de Apple para ver el precio). Las cifras de electricidad anual del M6/M5 Pro proceden de la generación anterior del Mac mini, a la espera de mediciones independientes de los nuevos chips.',
       },
 
       powerDetails: {
@@ -470,11 +470,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El escenario decisivo. Llama 3.3 70B requiere 42 GB en cuantización Q4. RTX 4090 tiene 24 GB de VRAM — no cabe. M5 Max 128 GB lo ejecuta cómodamente con espacio para la ventana de contexto y otras aplicaciones.',
           'Una alternativa con NVIDIA es dual RTX 3090 (dos tarjetas usadas por unos $2.800–3.100, solo las tarjetas) o una RTX A6000 (consulta el precio actual del proveedor) — solo la ruta dual 3090 ya cuesta más que el Mac Mini M5 Pro y consume unas 8 veces la energía del Mac Studio M5 Max ($437 vs $55 al año con las tarifas de la tabla).',
           '**2. Servidor de IA siempre activo y silencioso**',
-          'Mac Mini a 18–35 W bajo carga es casi silencioso. Un desktop con RTX 4090 a 250–450 W tiene 3 o más ventiladores con un promedio de 50–70 dB. Un rig GPU ruidoso en una oficina en casa es inviable; Mac Mini funciona silenciosamente en un armario.',
+          'Mac Mini a 18–35 W bajo carga es casi silencioso. Muchos desktops con RTX 4090 (250–450 W) son audibles bajo carga (el ruido depende de la tarjeta y de la caja). Un rig GPU ruidoso puede ser poco práctico en una oficina en casa; un Mac Mini es casi silencioso en comparación.',
           'Diferencia en costo de electricidad: $35/año (Mac Mini) vs $394/año (RTX 4090) en operación 24/7. En 5 años: $1.795 ahorrados solo en electricidad.',
           'La actualización de Apple del 25 de agosto de 2026 añadió una entrada aún más económica para este caso de uso: el Mac mini M6 a $899 (32 GB máx. de memoria unificada), para quienes no necesitan el techo de 64 GB del M5 Pro.',
           '**3. Estación de trabajo IA portátil (MacBook Pro M5 Pro)**',
-          'MacBook Pro M5 Pro con 64 GB de memoria unificada ejecuta modelos 32B a 18–22 tok/s mientras viajas. No tenemos constancia de un laptop NVIDIA equivalente con esa memoria a un precio comparable. Las GPU de laptop discretas tienen un tope de 16 GB de VRAM, limitando el tamaño del modelo a 13B como máximo.',
+          'MacBook Pro M5 Pro con 64 GB de memoria unificada ejecuta modelos 32B a 18–22 tok/s mientras viajas. No tenemos constancia de un laptop NVIDIA equivalente con esa memoria a un precio comparable. La mayoría de las GPU de laptop discretas llegan como máximo a 16 GB de VRAM (consulta la ficha del laptop concreto), lo que limita el tamaño típico del modelo a unos 13B.',
           '**4. Stacks multi-modelo (Voz + Visión + LLM simultáneamente)**',
           'Un pipeline de asistente de voz necesita Whisper STT (3 GB) + LLM (8 GB) + TTS (1 GB) = 12 GB mínimo. RTX 4090 24 GB lo maneja justo. M5 Pro 64 GB lo maneja MÁS un modelo de visión (LLaVA 6 GB) MÁS embeddings RAG — todos cargados simultáneamente con cambio instantáneo.',
           '**5. Costos de electricidad en Europa y restricciones de sostenibilidad**',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Debería esperar al M5 Ultra?',
-            a: 'El M5 Ultra ya es oficial. La actualización de Apple del 25 de agosto de 2026 sitúa el Mac Studio M5 Ultra en $5.499 (96 GB de memoria unificada base), escalando hasta una configuración tope de 512 GB que Apple indica como disponible a finales de octubre de 2026 (consulta la web de Apple para ver disponibilidad y precio). Si necesitas la máxima memoria: esa variante de 512 GB es el Mac con más memoria que Apple ha anunciado. Si necesitas hardware ahora: Mac Studio M5 Max 128 GB (desde $2.499, disponible el 22 de septiembre de 2026) es la mejor relación calidad-precio actual para modelos grandes.',
+            a: 'El M5 Ultra ya es oficial. La actualización de Apple del 25 de agosto de 2026 sitúa el Mac Studio M5 Ultra en $5.499 (96 GB de memoria unificada base), escalando hasta una configuración tope de 512 GB que Apple anunció para finales de octubre de 2026 (consulta la web de Apple para ver la disponibilidad actual y el precio). Si necesitas la máxima memoria: esa variante de 512 GB es el Mac con más memoria que Apple ha anunciado. Si necesitas hardware ahora: Mac Studio M5 Max 128 GB (desde $2.499, disponible el 22 de septiembre de 2026) es la mejor relación calidad-precio actual para modelos grandes.',
           },
           {
             q: '¿Puedo usar multi-GPU en un Mac?',
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cambia RTX 5090 esta comparación?',
-            a: 'RTX 5090 (32 GB de VRAM, ya lanzada; consulta la disponibilidad y el precio actuales) eleva el techo de capacidad de NVIDIA pero no cambia la ventaja de la memoria unificada. Los modelos 70B aún no cabrán en 32 GB con cuantización Q4 (necesitan ~42 GB). M5 Max 128 GB y M5 Ultra (ahora hasta 512 GB en su configuración tope de Mac Studio, que Apple indica como disponible a finales de octubre de 2026) siguen siendo de las pocas opciones en un solo equipo para inferencia de modelos grandes.',
+            a: 'RTX 5090 (32 GB de VRAM, ya lanzada; consulta la disponibilidad y el precio actuales) eleva el techo de capacidad de NVIDIA pero no cambia la ventaja de la memoria unificada. Los modelos 70B aún no cabrán en 32 GB con cuantización Q4 (necesitan ~42 GB). M5 Max 128 GB y M5 Ultra (ahora hasta 512 GB en su configuración tope de Mac Studio, que Apple anunció para finales de octubre de 2026; consulta la web de Apple para ver la disponibilidad actual) siguen siendo de las pocas opciones en un solo equipo para inferencia de modelos grandes.',
           },
           {
             q: '¿Puedo compartir VRAM entre varios Macs?',
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon مقابل GPU من NVIDIA LLM محلي',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'comparación plataforma IA local', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**نقطة التقاطع: نحو 24 GB من حجم النموذج. RTX 4090 (1,008 GB/s) أسرع في نماذج 8B–24B. وM5 Max (128 GB من الذاكرة الموحدة) هو أحد الخيارات الاستهلاكية القليلة على جهاز واحد لنماذج 70B (توجد بدائل بذاكرة VRAM أو ذاكرة موحدة أكبر). أضاف تحديث Apple في 25 أغسطس 2026 جهاز Mac mini M6 دخوليًا بسعر 899 دولارًا (32 GB كحد أقصى)، ورفع سقف Mac Studio M5 Ultra إلى 512 GB من الذاكرة الموحدة (أعلى تهيئة، أعلنت Apple أنها ستتوفر أواخر أكتوبر 2026؛ راجع موقع Apple لمعرفة التوفر). إجمالي تكلفة الملكية التقديري لـ 3 سنوات (انظر الجدول): Mac Mini M5 Pro 1,804 دولار مقابل RTX 4090 مكتبي 4,682 دولار. الاستهلاك التقديري: Mac Mini 35 دولارًا سنويًا مقابل RTX 4090 394 دولارًا سنويًا في التشغيل على مدار الساعة. قد تتفاوت الأسعار حسب بلدك.**',
+    leadAnswerBlock: '**نقطة التقاطع: نحو 24 GB من حجم النموذج. RTX 4090 (1,008 GB/s) أسرع في نماذج 8B–24B. وM5 Max (128 GB من الذاكرة الموحدة) هو أحد الخيارات الاستهلاكية القليلة على جهاز واحد لنماذج 70B (توجد بدائل بذاكرة VRAM أو ذاكرة موحدة أكبر). أضاف تحديث Apple في 25 أغسطس 2026 جهاز Mac mini M6 دخوليًا بسعر 899 دولارًا (32 GB كحد أقصى)، ورفع سقف Mac Studio M5 Ultra إلى 512 GB من الذاكرة الموحدة (أعلى تهيئة، أعلنت Apple عنها لأواخر أكتوبر 2026؛ راجع موقع Apple لمعرفة التوفر الحالي). إجمالي تكلفة الملكية التقديري لـ 3 سنوات (انظر الجدول): Mac Mini M5 Pro 1,804 دولار مقابل RTX 4090 مكتبي 4,682 دولار. الاستهلاك التقديري: Mac Mini 35 دولارًا سنويًا مقابل RTX 4090 394 دولارًا سنويًا في التشغيل على مدار الساعة. قد تتفاوت الأسعار حسب بلدك.**',
     ctaText: 'تختار بين Mac وNVIDIA للذكاء الاصطناعي المحلي؟ قارن مُخرجك المحلي لـ Llama أو Mistral (المُشغَّل على أي من المنصتين) مع GPT-4 وClaude وGemini و22 نموذجًا آخر عبر PromptQuorum — تحقق من أن استثمارك في العتاد يقدّم نتائج بجودة سحابية لمهامك المحددة قبل أن تلتزم بـ 900–5,500 دولار على العتاد.',
     quickAnswerTop: {
       ar: {
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'وقت الإعداد: Ollama على Mac = 5 دقائق. CUDA + برامج تشغيل + إطار على Linux/Windows = 30–60 دقيقة.',
           'التهيئة الهجينة تعمل جيدًا: Mac للاستدلال اليومي (محمول، صامت، قادر على 70B)، ومكتبي NVIDIA للضبط الدقيق (منظومة CUDA). الإجمالي: 6,000 دولار لكليهما.',
           'جدّدت Apple تشكيلة Mac mini وMac Studio في 25 أغسطس 2026: Mac mini M6 دخولي (899 دولارًا، 32 GB كحد أقصى، 170 GB/s)، وMac mini M5 Pro (1,699 دولارًا، 64 GB كحد أقصى، 307 GB/s، Thunderbolt 5)، وMac Studio M5 Max (2,499 دولارًا، 128 GB كحد أقصى)، وMac Studio M5 Ultra (5,499 دولارًا، 96 GB أساسية) — جميعها متوفرة في 22 سبتمبر 2026.',
-          'بات M5 Ultra يصل رسميًا إلى 512 GB من الذاكرة الموحدة في أعلى تهيئة لـ Mac Studio، أعلنت Apple أنها ستتوفر أواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر والسعر). تترك سعة ذاكرتها مجالًا للنماذج الكبيرة جدًا، لكن PromptQuorum لم تختبرها.',
+          'بات M5 Ultra يصل رسميًا إلى 512 GB من الذاكرة الموحدة في أعلى تهيئة لـ Mac Studio، أعلنت Apple عنها لأواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر الحالي والسعر). تترك سعة ذاكرتها مجالًا للنماذج الكبيرة جدًا، لكن PromptQuorum لم تختبرها.',
           'النطاق: يغطي هذا الدليل فقط Apple Silicon مقابل GPU من NVIDIA. إن كنت تقيّم أيضًا الاستدلال على المعالج فقط كخيار ثالث، راجع [GPU مقابل CPU مقابل Apple Silicon لنماذج LLM المحلية](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon).',
         ],
       },
@@ -716,13 +716,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'حجم النموذج': '70B Q8 (نحو 74 GB)', 'RTX 4090 (24 GB VRAM)': '✗ لا يتسع', 'M5 Max (128 GB موحدة)': '✓ يتسع' },
           { 'حجم النموذج': 'Llama 405B Q3 (نحو 200 GB)', 'RTX 4090 (24 GB VRAM)': '✗ لا يتسع', 'M5 Max (128 GB موحدة)': '✗ لا يتسع (يتطلب M5 Ultra)' },
         ],
-        note: 'للنماذج التي تتجاوز 24 GB، يُعد Apple Silicon أحد الخيارات الاستهلاكية القليلة على جهاز واحد، دون تهيئة كرتي رسوميات. رفع تحديث Apple في 25 أغسطس 2026 هذا السقف أكثر: لدى Mac Studio M5 Ultra تهيئة بـ 512 GB من الذاكرة الموحدة تُدرجها Apple على أنها ستتوفر أواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر)، ما يترك مجالًا واسعًا للنماذج الكبيرة مفتوحة الأوزان.',
+        note: 'للنماذج التي تتجاوز 24 GB، يُعد Apple Silicon أحد الخيارات الاستهلاكية القليلة على جهاز واحد، دون تهيئة كرتي رسوميات. رفع تحديث Apple في 25 أغسطس 2026 هذا السقف أكثر: لدى Mac Studio M5 Ultra تهيئة بـ 512 GB من الذاكرة الموحدة أعلنت عنها Apple لأواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر الحالي)، ما يترك مجالًا واسعًا للنماذج الكبيرة مفتوحة الأوزان.',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: 'اختبارات مرجعية وجهًا لوجه: tokens في الثانية',
-        content: 'الأرقام نطاقات إرشادية؛ لم تُجرِ PromptQuorum اختبارات مرجعية مستقلة لهذا العتاد. tok/s المُبلَّغ عنها تقابل سرعة التوليد. خلية RTX 4090 في صف Llama 3.1 8B Q4 هي رقم المجتمع لنموذج Llama 2 7B Q4_0 (نموذج مختلف) من [سلسلة اختبارات llama.cpp رقم #15013](https://github.com/ggml-org/llama.cpp/discussions/15013)؛ وكل الخلايا الأخرى تقديرات إرشادية لم تقِسها PromptQuorum. ملاحظة: تسبق هذه الأرقام تحديث Apple لعتاد وأسعار Mac mini/Mac Studio في 25 أغسطس 2026 (الأجهزة الجديدة تتوفر في 22 سبتمبر 2026). لا تتوفر بعد اختبارات مرجعية مستقلة لـ tok/s للأجهزة المُحدَّثة؛ توجد فقط تصريحات أداء من Apple نفسها للتهيئات الجديدة، ولم يُدرَج أي منها في هذا الجدول.',
+        content: 'الأرقام نطاقات إرشادية؛ لم تُجرِ PromptQuorum اختبارات مرجعية مستقلة لهذا العتاد. tok/s المُبلَّغ عنها تقابل سرعة التوليد. خلية RTX 4090 في صف Llama 3.1 8B Q4 هي رقم المجتمع لنموذج Llama 2 7B Q4_0 (نموذج مختلف) من [سلسلة اختبارات llama.cpp رقم #15013](https://github.com/ggml-org/llama.cpp/discussions/15013)؛ وكل الخلايا الأخرى تقديرات إرشادية مبنية على عرض نطاق الذاكرة وحجم النموذج، وليست من اختبار مرجعي منشور؛ لم تقِسها PromptQuorum. ملاحظة: تسبق هذه الأرقام تحديث Apple لعتاد وأسعار Mac mini/Mac Studio في 25 أغسطس 2026 (الأجهزة الجديدة تتوفر في 22 سبتمبر 2026). لا تتوفر بعد اختبارات مرجعية مستقلة لـ tok/s للأجهزة المُحدَّثة؛ توجد فقط تصريحات أداء من Apple نفسها للتهيئات الجديدة، ولم يُدرَج أي منها في هذا الجدول.',
         tableFormat: true,
         columns: ['النموذج', 'M5 Pro 64 GB', 'M5 Max 128 GB', 'RTX 4070 12 GB', 'RTX 4090 24 GB'],
         rows: [
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التهيئة': 'كرتا RTX 3090 (48 GB إجمالًا)', 'العتاد': '3,850 دولار', 'كهرباء سنوية': '437 دولارًا', 'كهرباء 3 سنوات': '1,311 دولار', 'الإجمالي لـ 3 سنوات': '5,161 دولار' },
           { 'التهيئة': 'Mac Studio M5 Ultra 96 GB', 'العتاد': '5,499 دولار', 'كهرباء سنوية': '75 دولارًا', 'كهرباء 3 سنوات': '225 دولارًا', 'الإجمالي لـ 3 سنوات': '5,724 دولار' },
         ],
-        note: 'الأسعار وفق تحديث Apple لعتاد Mac mini/Mac Studio في 25 أغسطس 2026 (الأجهزة تتوفر في 22 سبتمبر 2026)، والذي خفّض سعر بداية Mac Studio M5 Max إلى 2,499 دولارًا وأضاف Mac Mini M6 دخوليًا بسعر 899 دولارًا. يُدرج [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (محدَّث في 2026-10-15) بطاقات RTX 4090 الجديدة بين 2,000–3,000 دولار والمعروضة مستعملة بنحو 2,575–3,010 دولار، أي أن المستعملة حاليًا ليست أرخص من الجديدة؛ والمبلغ 3,500 دولار المستخدم هنا تقدير تمثيلي لحاسوب مكتبي كامل (البطاقة بنحو 2,600 دولار ونحو 900 دولار لبقية النظام، تقديرنا الخاص). وصف كرتي RTX 3090 في الجدول مقارَن بالأساس نفسه: بطاقتان مستعملتان بنحو 1,400–1,550 دولار للواحدة (المتتبع نفسه، 2026-10-15)، أي نحو 2,950 دولار عند نقطة المنتصف، مضافًا إليها النظام نفسه بنحو 900 دولار (تقدير خاص)، فيصبح المجموع نحو 3,850 دولار. وعند هذه الأرقام تكلّف تهيئة كرتي 3090 على مدى ثلاث سنوات أكثر من مكتبي RTX 4090 الواحد ومن Mac Studio M5 Max. تُدرج Apple أعلى تهيئة لـ Mac Studio M5 Ultra بسعة 512 GB على أنها ستتوفر أواخر أكتوبر 2026؛ لم تُدرَج في هذا الجدول (راجع أداة التهيئة لدى Apple لمعرفة السعر).',
+        note: 'الأسعار وفق تحديث Apple لعتاد Mac mini/Mac Studio في 25 أغسطس 2026 (الأجهزة تتوفر في 22 سبتمبر 2026)، والذي خفّض سعر بداية Mac Studio M5 Max إلى 2,499 دولارًا وأضاف Mac Mini M6 دخوليًا بسعر 899 دولارًا. يُدرج [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (محدَّث في 2026-10-15) بطاقات RTX 4090 الجديدة بين 2,000–3,000 دولار والمعروضة مستعملة بنحو 2,575–3,010 دولار، أي أن المستعملة حاليًا ليست أرخص من الجديدة؛ والمبلغ 3,500 دولار المستخدم هنا تقدير تمثيلي لحاسوب مكتبي كامل (البطاقة بنحو 2,600 دولار ونحو 900 دولار لبقية النظام، تقديرنا الخاص). وصف كرتي RTX 3090 في الجدول مقارَن بالأساس نفسه: بطاقتان مستعملتان بنحو 1,400–1,550 دولار للواحدة (المتتبع نفسه، 2026-10-15)، أي نحو 2,950 دولار عند نقطة المنتصف، مضافًا إليها النظام نفسه بنحو 900 دولار (تقدير خاص)، فيصبح المجموع نحو 3,850 دولار. وعند هذه الأرقام تكلّف تهيئة كرتي 3090 على مدى ثلاث سنوات أكثر من مكتبي RTX 4090 الواحد ومن Mac Studio M5 Max. أعلنت Apple عن أعلى تهيئة لـ Mac Studio M5 Ultra بسعة 512 GB لأواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر الحالي)؛ لم تُدرَج في هذا الجدول (راجع أداة التهيئة لدى Apple لمعرفة السعر). أرقام الكهرباء السنوية لـ M6/M5 Pro منقولة من الجيل السابق من Mac mini إلى حين توفر قياسات مستقلة للشرائح الجديدة.',
       },
 
       powerDetails: {
@@ -778,11 +778,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السيناريو الحاسم. يتطلب Llama 3.3 70B سعة 42 GB بتكميم Q4. تملك RTX 4090 سعة 24 GB من VRAM — لا يتسع. ويشغّله M5 Max 128 GB بأريحية مع مساحة لنافذة السياق وتطبيقات أخرى.',
           'أحد البدائل مع NVIDIA هو كرتا RTX 3090 (بطاقتان مستعملتان بنحو 2,800–3,100 دولار، البطاقتان فقط) أو RTX A6000 (راجع السعر الحالي لدى البائع) — ومسار كرتي 3090 وحده يكلف أكثر من Mac Mini M5 Pro ويستهلك نحو 8 أضعاف طاقة Mac Studio M5 Max (437 دولارًا مقابل 55 دولارًا سنويًا بأسعار الجدول).',
           '**2. خادم ذكاء اصطناعي دائم التشغيل وصامت**',
-          'Mac Mini عند 18–35 واط تحت الحمل شبه صامت. أما مكتبي بـ RTX 4090 عند 250–450 واط فله 3 مراوح أو أكثر بمتوسط 50–70 ديسيبل. تهيئة GPU صاخبة في مكتب منزلي غير عملية؛ بينما يعمل Mac Mini بصمت في خزانة.',
+          'Mac Mini عند 18–35 واط تحت الحمل شبه صامت. أما كثير من أجهزة سطح المكتب بـ RTX 4090 (250–450 واط) فتكون مسموعة تحت الحمل (يعتمد الضجيج على البطاقة والهيكل). قد تكون تهيئة GPU صاخبة غير عملية في مكتب منزلي؛ أما Mac Mini فهو شبه صامت بالمقارنة.',
           'الفرق في تكلفة الكهرباء: 35 دولارًا سنويًا (Mac Mini) مقابل 394 دولارًا سنويًا (RTX 4090) في التشغيل على مدار الساعة. خلال 5 سنوات: 1,795 دولارًا مُوفَّرة على الكهرباء وحدها.',
           'أضاف تحديث Apple في 25 أغسطس 2026 نقطة دخول أرخص لهذا الاستخدام: Mac mini M6 بسعر 899 دولارًا (32 GB كحد أقصى)، لمن لا يحتاجون سقف الـ 64 GB في M5 Pro.',
           '**3. محطة عمل ذكاء اصطناعي محمولة (MacBook Pro M5 Pro)**',
-          'يشغّل MacBook Pro M5 Pro بذاكرة موحدة 64 GB نماذج 32B بسرعة 18–22 tok/s أثناء سفرك. لا نعلم بوجود لابتوب NVIDIA مكافئ بتلك الذاكرة بسعر مماثل. تتوقف كروت رسوميات اللابتوب المنفصلة عند 16 GB من VRAM، محدّدةً حجم النموذج إلى 13B كحد أقصى.',
+          'يشغّل MacBook Pro M5 Pro بذاكرة موحدة 64 GB نماذج 32B بسرعة 18–22 tok/s أثناء سفرك. لا نعلم بوجود لابتوب NVIDIA مكافئ بتلك الذاكرة بسعر مماثل. تتوقف معظم كروت رسوميات اللابتوب المنفصلة عند 16 GB من VRAM (راجع مواصفات اللابتوب المحدد)، ما يحدّ حجم النموذج المعتاد بنحو 13B.',
           '**4. حزم متعددة النماذج (صوت + رؤية + LLM في آن واحد)**',
           'يحتاج خط أنابيب مساعد صوتي إلى Whisper STT (3 GB) + LLM (8 GB) + TTS (1 GB) = 12 GB كحد أدنى. تتعامل RTX 4090 24 GB معه بهامش ضيق. ويتعامل M5 Pro 64 GB معه إضافةً إلى نموذج رؤية (LLaVA 6 GB) إضافةً إلى تضمينات RAG — جميعها محمَّلة في آن واحد مع تبديل فوري.',
           '**5. تكاليف الكهرباء في أوروبا وقيود الاستدامة**',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل ينبغي أن أنتظر M5 Ultra؟',
-            a: 'بات M5 Ultra رسميًا الآن. يضع تحديث Apple في 25 أغسطس 2026 جهاز Mac Studio M5 Ultra بسعر 5,499 دولارًا (96 GB من الذاكرة الموحدة الأساسية)، ويصل إلى تهيئة تصل 512 GB تُدرجها Apple على أنها ستتوفر أواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر والسعر). إن كنت تحتاج أكبر قدر من الذاكرة: فإن تهيئة الـ 512 GB هي أعلى ذاكرة في أجهزة Mac أعلنتها Apple. وإن احتجت عتادًا الآن: فإن Mac Studio M5 Max بذاكرة 128 GB (من 2,499 دولارًا، يتوفر في 22 سبتمبر 2026) هو أفضل قيمة حالية للنماذج الكبيرة.',
+            a: 'بات M5 Ultra رسميًا الآن. يضع تحديث Apple في 25 أغسطس 2026 جهاز Mac Studio M5 Ultra بسعر 5,499 دولارًا (96 GB من الذاكرة الموحدة الأساسية)، ويصل إلى تهيئة تصل 512 GB أعلنت عنها Apple لأواخر أكتوبر 2026 (راجع موقع Apple لمعرفة التوفر الحالي والسعر). إن كنت تحتاج أكبر قدر من الذاكرة: فإن تهيئة الـ 512 GB هي أعلى ذاكرة في أجهزة Mac أعلنتها Apple. وإن احتجت عتادًا الآن: فإن Mac Studio M5 Max بذاكرة 128 GB (من 2,499 دولارًا، يتوفر في 22 سبتمبر 2026) هو أفضل قيمة حالية للنماذج الكبيرة.',
           },
           {
             q: 'هل يمكنني استخدام كرتي رسوميات في جهاز Mac؟',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تغيّر RTX 5090 هذه المقارنة؟',
-            a: 'ترفع RTX 5090 (32 GB من VRAM، صدرت بالفعل؛ راجع التوفر والسعر الحاليين) سقف سعة NVIDIA لكنها لا تغيّر ميزة الذاكرة الموحدة. لن تتسع نماذج 70B بعد في 32 GB بتكميم Q4 (تحتاج نحو 42 GB). ويبقى M5 Max 128 GB وM5 Ultra (الذي يصل الآن إلى 512 GB في أعلى تهيئة لـ Mac Studio، تُدرجها Apple على أنها ستتوفر أواخر أكتوبر 2026) من الخيارات القليلة على جهاز واحد لاستدلال النماذج الكبيرة.',
+            a: 'ترفع RTX 5090 (32 GB من VRAM، صدرت بالفعل؛ راجع التوفر والسعر الحاليين) سقف سعة NVIDIA لكنها لا تغيّر ميزة الذاكرة الموحدة. لن تتسع نماذج 70B بعد في 32 GB بتكميم Q4 (تحتاج نحو 42 GB). ويبقى M5 Max 128 GB وM5 Ultra (الذي يصل الآن إلى 512 GB في أعلى تهيئة لـ Mac Studio، أعلنت عنها Apple لأواخر أكتوبر 2026؛ راجع موقع Apple لمعرفة التوفر الحالي) من الخيارات القليلة على جهاز واحد لاستدلال النماذج الكبيرة.',
           },
           {
             q: 'هل يمكنني مشاركة VRAM بين عدة أجهزة Mac؟',
@@ -955,7 +955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs GPU NVIDIA LLM local',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'comparação plataforma IA local', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**Ponto de cruzamento: ~24 GB de tamanho de modelo. RTX 4090 (1.008 GB/s) é mais rápida em modelos 8B-24B. M5 Max (128 GB de memória unificada) é uma das poucas opções de consumo em uma única máquina para modelos 70B (existem alternativas com mais VRAM ou memória unificada). A atualização da Apple de 25 de agosto de 2026 trouxe um Mac mini M6 de entrada por US$ 899 (32 GB máx.) e elevou o teto do Mac Studio M5 Ultra para 512 GB de memória unificada (configuração top, anunciada pela Apple como disponível no fim de outubro de 2026; confira o site da Apple para a disponibilidade). TCO estimado de 3 anos (veja a tabela): Mac Mini M5 Pro US$ 1.804 vs RTX 4090 desktop US$ 4.682. Consumo estimado: Mac Mini US$ 35/ano vs RTX 4090 US$ 394/ano em operação 24/7.**',
+    leadAnswerBlock: '**Ponto de cruzamento: ~24 GB de tamanho de modelo. RTX 4090 (1.008 GB/s) é mais rápida em modelos 8B-24B. M5 Max (128 GB de memória unificada) é uma das poucas opções de consumo em uma única máquina para modelos 70B (existem alternativas com mais VRAM ou memória unificada). A atualização da Apple de 25 de agosto de 2026 trouxe um Mac mini M6 de entrada por US$ 899 (32 GB máx.) e elevou o teto do Mac Studio M5 Ultra para 512 GB de memória unificada (configuração top, anunciada pela Apple para o fim de outubro de 2026; confira o site da Apple para a disponibilidade atual). TCO estimado de 3 anos (veja a tabela): Mac Mini M5 Pro US$ 1.804 vs RTX 4090 desktop US$ 4.682. Consumo estimado: Mac Mini US$ 35/ano vs RTX 4090 US$ 394/ano em operação 24/7.**',
     ctaText: 'Escolhendo entre Mac e NVIDIA para IA local? Compare a saída local do seu Llama ou Mistral com GPT-4, Claude, Gemini e outros 22 modelos com o PromptQuorum -- valide que seu investimento em hardware entrega resultados de qualidade de nuvem para suas tarefas específicas.',
     quickAnswerTop: {
       en: {
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tempo de configuração: Ollama no Mac = 5 minutos. CUDA + drivers + framework no Linux/Windows = 30-60 minutos.',
           'Setup híbrido funciona bem: Mac para inferência diária (portátil, silencioso, capaz de 70B), desktop NVIDIA para fine-tuning (ecossistema CUDA). Total: US$ 6.000 para ambos.',
           'A Apple renovou a linha Mac mini e Mac Studio em 25 de agosto de 2026: Mac mini M6 de entrada (US$ 899, 32 GB máx., 170 GB/s), Mac mini M5 Pro (US$ 1.699, 64 GB máx., 307 GB/s, Thunderbolt 5), Mac Studio M5 Max (US$ 2.499, 128 GB máx.) e Mac Studio M5 Ultra (US$ 5.499, 96 GB base) -- todos disponíveis em 22 de setembro de 2026.',
-          'O M5 Ultra agora chega oficialmente a 512 GB de memória unificada na configuração top do Mac Studio, que a Apple indica como disponível no fim de outubro de 2026 (confira o site da Apple para disponibilidade e preço). A capacidade de memória deixa espaço para modelos muito grandes, mas a PromptQuorum não a testou.',
+          'O M5 Ultra agora chega oficialmente a 512 GB de memória unificada na configuração top do Mac Studio, que a Apple anunciou para o fim de outubro de 2026 (confira o site da Apple para a disponibilidade atual e o preço). A capacidade de memória deixa espaço para modelos muito grandes, mas a PromptQuorum não a testou.',
         ],
       },
       vram: {
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks frente a frente: M5 Max vs RTX 4090',
-        content: 'Os valores são faixas indicativas; a PromptQuorum não realizou benchmarks independentes deste hardware. O tok/s reportado é a velocidade de geração. A célula da RTX 4090 na linha Llama 3.1 8B Q4 é o valor da comunidade para Llama 2 7B Q4_0 (um modelo diferente), do [thread de benchmarks do llama.cpp #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); as demais células são estimativas indicativas, não medidas pela PromptQuorum.',
+        content: 'Os valores são faixas indicativas; a PromptQuorum não realizou benchmarks independentes deste hardware. O tok/s reportado é a velocidade de geração. A célula da RTX 4090 na linha Llama 3.1 8B Q4 é o valor da comunidade para Llama 2 7B Q4_0 (um modelo diferente), do [thread de benchmarks do llama.cpp #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); as demais células são estimativas indicativas a partir da largura de banda de memória e do tamanho do modelo, não de um benchmark publicado; a PromptQuorum não as mediu.',
         columns: ['Modelo', 'RTX 4090', 'M5 Max 128 GB', 'Vencedor'],
         rows: [
           { 'Modelo': 'Llama 3.1 8B Q4', 'RTX 4090': '~186 tok/s (Llama 2 7B Q4_0, #15013)', 'M5 Max 128 GB': '100-120 tok/s (estimado)', 'Vencedor': 'NVIDIA (em modelos que cabem na VRAM)' },
@@ -1054,16 +1054,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item de custo': 'TCO total (3 anos)', 'Mac Mini M5 Pro 64 GB': 'US$ 1.804', 'RTX 4090 Desktop': 'US$ 4.682' },
           { 'Item de custo': 'Eletricidade anual (24/7)', 'Mac Mini M5 Pro 64 GB': 'US$ 35', 'RTX 4090 Desktop': 'US$ 394' },
         ],
-        note: 'A eletricidade a US$ 0,15/kWh (tarifa média dos EUA). Mac Mini: ~30 W de consumo; RTX 4090 desktop: ~350 W. Tarifas brasileiras (~R$ 0,75/kWh) aumentam o custo da RTX 4090 para cerca de R$ 2.300/ano (cálculo próprio: 350 W × 24 h × 365 dias ≈ 3.066 kWh × R$ 0,75). O [tracker da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (atualizado em 2026-10-15) lista RTX 4090 novas a US$ 2.000–3.000 e anúncios de usadas a cerca de US$ 2.575–3.010, ou seja, as usadas hoje não saem mais baratas que as novas; os US$ 3.500 usados aqui são uma estimativa representativa de um desktop completo (GPU a cerca de US$ 2.600 mais cerca de US$ 900 para o restante do sistema, estimativa própria). Preço do Mac Mini M5 Pro atualizado após a renovação da Apple de 25 de agosto de 2026; a linha ganhou também um Mac mini M6 de entrada (US$ 899, 32 GB) e um Mac Studio M5 Max com preço inicial de US$ 2.499 (128 GB máx.), não mostrados nesta tabela de duas colunas. Todos os valores são estimativas baseadas nessas premissas, não medições da PromptQuorum.',
+        note: 'A eletricidade a US$ 0,15/kWh (tarifa média dos EUA). Mac Mini M5 Pro: ~18 W de consumo médio; RTX 4090 desktop: ~250 W (média em carga mista). Tarifas brasileiras (~R$ 0,75/kWh) aumentam o custo da RTX 4090 para cerca de R$ 1.640/ano (cálculo próprio: 250 W × 24 h × 365 dias ≈ 2.190 kWh × R$ 0,75). O [tracker da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (atualizado em 2026-10-15) lista RTX 4090 novas a US$ 2.000–3.000 e anúncios de usadas a cerca de US$ 2.575–3.010, ou seja, as usadas hoje não saem mais baratas que as novas; os US$ 3.500 usados aqui são uma estimativa representativa de um desktop completo (GPU a cerca de US$ 2.600 mais cerca de US$ 900 para o restante do sistema, estimativa própria). Preço do Mac Mini M5 Pro atualizado após a renovação da Apple de 25 de agosto de 2026; a linha ganhou também um Mac mini M6 de entrada (US$ 899, 32 GB) e um Mac Studio M5 Max com preço inicial de US$ 2.499 (128 GB máx.), não mostrados nesta tabela de duas colunas. Todos os valores são estimativas baseadas nessas premissas, não medições da PromptQuorum. Os valores anuais de eletricidade do M6/M5 Pro vêm da geração anterior do Mac mini, até que haja medições independentes dos novos chips.',
       },
       'apple-wins': {
         id: 'apple-wins',
         title: 'Quando o Apple Silicon vence',
         items: [
           '**Modelos 70B+:** uma das poucas opções de consumo que rodam em uma única máquina, sem dual-GPU. M5 Max 128 GB: Llama 3.3 70B Q4 a 15-20 tok/s.',
-          '**Eficiência energética:** US$ 35/ano vs US$ 394/ano. Para uso 24/7, o Mac recupera a diferença de hardware (US$ 1.801) em cerca de 5 anos, com economia de US$ 359/ano em eletricidade.',
+          '**Eficiência energética:** US$ 35/ano vs US$ 394/ano. Para uso 24/7, o Mac Mini M5 Pro já custa US$ 1.801 menos na compra e economiza cerca de US$ 359/ano em eletricidade (US$ 35 vs US$ 394).',
           '**Simplicidade:** Ollama no Mac = 5 minutos. Sem drivers CUDA, sem conflitos de versão, sem reinicializações para atualizações.',
-          '**Silêncio:** Mac Mini é silencioso mesmo sob carga. Desktop com RTX 4090 pode atingir 70+ dB.',
+          '**Silêncio:** Mac Mini é silencioso mesmo sob carga. Muitos desktops com RTX 4090 são audíveis sob carga (o ruído depende da placa e do gabinete); o Mac Mini é quase silencioso em comparação.',
           '**Portabilidade:** MacBook Pro M5 Max roda modelos 70B em bateria. Poucas GPUs discretas de laptop conseguem isso.',
           '**Uso simultâneo de memória:** 128 GB disponíveis para LLM + SO + outras apps simultâneo. VRAM de 24 GB é apenas para o LLM.',
           '**LGPD:** Rodar a inferência localmente pode reduzir a exposição de dados a terceiros; a conformidade com a LGPD depende de base legal, medidas técnicas e organizacionais e avaliação jurídica. Informação geral, não aconselhamento jurídico.',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'O M5 Max é mais lento que o RTX 4090?', a: 'Em modelos que cabem na VRAM de 24 GB: sim, RTX 4090 tende a ser mais rápida. Em modelos 70B+: M5 Max vence -- RTX 4090 não os comporta por completo em 24 GB de VRAM (offload parcial para a CPU é possível, mas bem mais lento).' },
           { q: 'Vale a pena o custo extra de um Mac para LLMs locais?', a: 'Para usuários de modelos 70B: sim -- é uma das poucas opções de consumo em uma única máquina. Para usuários de modelos 8B-24B: RTX 4090 oferece mais velocidade pelo dinheiro.' },
-          { q: 'Posso usar MLX no mesmo Mac que uso para trabalho diário?', a: 'Sim. O Mac Mini M5 Pro roda inferência LLM em segundo plano enquanto você trabalha. A inferência usa ~30-60 W e raramente impacta outros aplicativos.' },
+          { q: 'Posso usar MLX no mesmo Mac que uso para trabalho diário?', a: 'Sim. O Mac Mini M5 Pro roda inferência LLM em segundo plano enquanto você trabalha. A inferência usa ~18-35 W e raramente impacta outros aplicativos.' },
           { q: 'A NVIDIA vai lançar uma GPU de consumo com mais de 24 GB de VRAM?', a: 'RTX 5090 (2025) tem 32 GB de VRAM -- suficiente para alguns modelos 70B Q3. Mas para 70B Q4 (42 GB) ou Q8 (70 GB), você ainda precisaria de dual-GPU ou Apple Silicon.' },
           { q: 'Rodar LLMs localmente ajuda com a LGPD no Brasil?', a: 'Rodar a inferência localmente pode reduzir a exposição de dados a terceiros; a conformidade com a LGPD depende de base legal, medidas técnicas e organizacionais e avaliação jurídica. Os dados de prompt, contexto e saída permanecem na máquina durante a inferência (o aplicativo ainda pode acessar a rede, salvo configuração em contrário). Informação geral, não aconselhamento jurídico.' },
         ],
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU lokale LLM',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX Benchmark', 'lokale KI Plattform-Vergleich', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**Wendepunkt: ~24 GB Modellgröße. RTX 4090 (1.008 GB/s) ist schneller auf 8B–24B-Modellen. M5 Max (128 GB Unified Memory) ist eine der wenigen Consumer-Optionen in einem einzelnen Rechner für 70B-Modelle (es gibt Alternativen mit mehr VRAM oder Unified Memory). Apples Auffrischung vom 25. August 2026 brachte ein Einstiegsmodell Mac mini M6 für $899 (32 GB max.) und hob die Obergrenze des Mac Studio M5 Ultra auf 512 GB Unified Memory (Top-Konfiguration, von Apple für Ende Oktober 2026 angekündigt; Verfügbarkeit bitte auf der Apple-Website prüfen). Geschätzte 3-Jahres-TCO (siehe Tabelle): Mac Mini M5 Pro $1.804 vs RTX 4090-Desktop $4.682. Geschätzte Stromkosten: Mac Mini $35/Jahr vs RTX 4090 $394/Jahr bei 24/7-Betrieb. Alle Preise sind US-Preise; in Deutschland sind sie vermutlich höher.**',
+    leadAnswerBlock: '**Wendepunkt: ~24 GB Modellgröße. RTX 4090 (1.008 GB/s) ist schneller auf 8B–24B-Modellen. M5 Max (128 GB Unified Memory) ist eine der wenigen Consumer-Optionen in einem einzelnen Rechner für 70B-Modelle (es gibt Alternativen mit mehr VRAM oder Unified Memory). Apples Auffrischung vom 25. August 2026 brachte ein Einstiegsmodell Mac mini M6 für $899 (32 GB max.) und hob die Obergrenze des Mac Studio M5 Ultra auf 512 GB Unified Memory (Top-Konfiguration, von Apple für Ende Oktober 2026 angekündigt; aktuelle Verfügbarkeit bitte auf der Apple-Website prüfen). Geschätzte 3-Jahres-TCO (siehe Tabelle): Mac Mini M5 Pro $1.804 vs RTX 4090-Desktop $4.682. Geschätzte Stromkosten: Mac Mini $35/Jahr vs RTX 4090 $394/Jahr bei 24/7-Betrieb. Alle Preise sind US-Preise; in Deutschland sind sie vermutlich höher.**',
     ctaText: 'Wählen Sie zwischen Mac und NVIDIA für lokale KI? Vergleichen Sie Ihre lokale Llama oder Mistral (auf beiden Plattformen) mit GPT-4, Claude, Gemini und 22 anderen Modellen mit PromptQuorum — validieren Sie, dass Ihre Hardware-Investition Cloud-Qualität für Ihre spezifischen Aufgaben liefert, bevor Sie ca. $900–5.500 in Hardware investieren (US-Preise, in Deutschland vermutlich höher).',
     quickAnswerTop: {
       en: {
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Einrichtungszeit: Ollama auf Mac = 5 Minuten. CUDA + Treiber + Framework auf Linux/Windows = 30–60 Minuten.',
           'Hybrid-Setup funktioniert gut: Mac für tägliche Inferenz (tragbar, lautlos, 70B-fähig), NVIDIA-Desktop zum Fine-Tuning (CUDA-Ökosystem). Gesamt: $6.000 für beides.',
           'Apple hat die Mac mini- und Mac Studio-Reihe am 25. August 2026 aufgefrischt (US-Preise): Einstiegs-Mac-mini M6 ($899, 32 GB max., 170 GB/s), Mac mini M5 Pro ($1.699, 64 GB max., 307 GB/s, Thunderbolt 5), Mac Studio M5 Max ($2.499, 128 GB max.) und Mac Studio M5 Ultra ($5.499, 96 GB Basis) — alle verfügbar ab 22. September 2026.',
-          'M5 Ultra skaliert nun offiziell bis zu 512 GB Unified Memory in der Top-Konfiguration des Mac Studio, von Apple für Ende Oktober 2026 angekündigt (Verfügbarkeit und Preis bitte auf der Apple-Website prüfen). Die Speicherkapazität lässt Raum für sehr große Modelle, wurde von PromptQuorum aber nicht getestet.',
+          'M5 Ultra skaliert nun offiziell bis zu 512 GB Unified Memory in der Top-Konfiguration des Mac Studio, von Apple für Ende Oktober 2026 angekündigt (aktuelle Verfügbarkeit und Preis bitte auf der Apple-Website prüfen). Die Speicherkapazität lässt Raum für sehr große Modelle, wurde von PromptQuorum aber nicht getestet.',
         ],
       },
 
@@ -1236,13 +1236,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modellgröße': '70B Q8 (~74 GB)', 'RTX 4090 (24 GB VRAM)': '✗ Passt nicht', 'M5 Max (128 GB Unified)': '✓ Passt' },
           { 'Modellgröße': 'Llama 405B Q3 (~200 GB)', 'RTX 4090 (24 GB VRAM)': '✗ Passt nicht', 'M5 Max (128 GB Unified)': '✗ Passt nicht (benötigt M5 Ultra)' },
         ],
-        note: 'Für Modelle über 24 GB ist Apple Silicon eine der wenigen Consumer-Optionen in einem einzelnen Rechner, ohne Dual-GPU-Rig. Apples Auffrischung vom 25. August 2026 hob diese Obergrenze weiter an: Der Mac Studio M5 Ultra hat eine Konfiguration mit 512 GB Unified Memory, die Apple für Ende Oktober 2026 angekündigt hat (Verfügbarkeit bitte auf der Apple-Website prüfen) — erheblicher Spielraum für große Open-Weight-Modelle.',
+        note: 'Für Modelle über 24 GB ist Apple Silicon eine der wenigen Consumer-Optionen in einem einzelnen Rechner, ohne Dual-GPU-Rig. Apples Auffrischung vom 25. August 2026 hob diese Obergrenze weiter an: Der Mac Studio M5 Ultra hat eine Konfiguration mit 512 GB Unified Memory, die Apple für Ende Oktober 2026 angekündigt hat (aktuelle Verfügbarkeit bitte auf der Apple-Website prüfen) — erheblicher Spielraum für große Open-Weight-Modelle.',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: 'Direkte Benchmark-Vergleiche: Tokens/Sekunde',
-        content: 'Die Werte sind Richtwerte; PromptQuorum hat diese Hardware nicht unabhängig gebenchmarkt. Berichtete tok/s ist Generierungsgeschwindigkeit. Die RTX-4090-Zelle in der Zeile Llama 3.1 8B Q4 ist der Community-Wert für Llama 2 7B Q4_0 (ein anderes Modell) aus dem [llama.cpp-Benchmark-Thread #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); alle anderen Zellen sind Richtwerte, nicht von PromptQuorum gemessen. Hinweis: Diese Werte stammen von vor Apples Hardware- und Preis-Auffrischung des Mac mini/Mac Studio vom 25. August 2026 (neue Geräte verfügbar ab 22. September 2026). Unabhängige tok/s-Benchmarks für die aufgefrischten Geräte liegen noch nicht vor; es existieren nur Apples eigene Leistungsangaben zu den neuen Konfigurationen, die in dieser Tabelle nicht enthalten sind.',
+        content: 'Die Werte sind Richtwerte; PromptQuorum hat diese Hardware nicht unabhängig gebenchmarkt. Berichtete tok/s ist Generierungsgeschwindigkeit. Die RTX-4090-Zelle in der Zeile Llama 3.1 8B Q4 ist der Community-Wert für Llama 2 7B Q4_0 (ein anderes Modell) aus dem [llama.cpp-Benchmark-Thread #15013](https://github.com/ggml-org/llama.cpp/discussions/15013); alle anderen Zellen sind Richtwerte, abgeschätzt aus Speicherbandbreite und Modellgröße, nicht aus einem veröffentlichten Benchmark; PromptQuorum hat sie nicht gemessen. Hinweis: Diese Werte stammen von vor Apples Hardware- und Preis-Auffrischung des Mac mini/Mac Studio vom 25. August 2026 (neue Geräte verfügbar ab 22. September 2026). Unabhängige tok/s-Benchmarks für die aufgefrischten Geräte liegen noch nicht vor; es existieren nur Apples eigene Leistungsangaben zu den neuen Konfigurationen, die in dieser Tabelle nicht enthalten sind.',
         tableFormat: true,
         columns: ['Modell', 'M5 Pro 64 GB', 'M5 Max 128 GB', 'RTX 4070 12 GB', 'RTX 4090 24 GB'],
         rows: [
@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Konfiguration': 'Dual RTX 3090 (48 GB gesamt)', 'Hardware': '$3.850', 'Jährlicher Strom': '$437', '3-Jahre Strom': '$1.311', '3-Jahre Gesamt': '$5.161' },
           { 'Konfiguration': 'Mac Studio M5 Ultra 96 GB', 'Hardware': '$5.499', 'Jährlicher Strom': '$75', '3-Jahre Strom': '$225', '3-Jahre Gesamt': '$5.724' },
         ],
-        note: 'Preise gemäß Apples Mac-mini/Mac-Studio-Auffrischung vom 25. August 2026 (Geräte verfügbar ab 22. September 2026), die den Einstiegspreis des Mac Studio M5 Max auf $2.499 senkte und einen neuen Einstiegs-Mac-mini M6 für $899 brachte. Alle Preise sind US-Preise; in Deutschland sind sie vermutlich höher. Der [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Stand 2026-10-15) listet neue RTX 4090 mit $2.000–3.000 und gebrauchte Angebote mit etwa $2.575–3.010, gebrauchte Karten sind derzeit also nicht günstiger als neue; die hier verwendeten $3.500 sind eine repräsentative Schätzung für einen kompletten Desktop (GPU etwa $2.600 plus etwa $900 für den Rest des Systems, eigene Schätzung). Die Zeile Dual RTX 3090 ist vergleichbar aufgebaut: zwei gebrauchte Karten für je etwa $1.400–1.550 (derselbe Tracker, 2026-10-15), etwa $2.950 im Mittel, plus dasselbe System von etwa $900 (eigene Schätzung), zusammen etwa $3.850. Bei diesen Werten kostet der Dual-3090-Aufbau über drei Jahre mehr als der Desktop mit einer RTX 4090 und mehr als der Mac Studio M5 Max. Eine 512-GB-Top-Konfiguration des Mac Studio M5 Ultra hat Apple für Ende Oktober 2026 angekündigt; sie ist hier nicht aufgeführt (Preis bitte im Apple-Konfigurator prüfen).',
+        note: 'Preise gemäß Apples Mac-mini/Mac-Studio-Auffrischung vom 25. August 2026 (Geräte verfügbar ab 22. September 2026), die den Einstiegspreis des Mac Studio M5 Max auf $2.499 senkte und einen neuen Einstiegs-Mac-mini M6 für $899 brachte. Alle Preise sind US-Preise; in Deutschland sind sie vermutlich höher. Der [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Stand 2026-10-15) listet neue RTX 4090 mit $2.000–3.000 und gebrauchte Angebote mit etwa $2.575–3.010, gebrauchte Karten sind derzeit also nicht günstiger als neue; die hier verwendeten $3.500 sind eine repräsentative Schätzung für einen kompletten Desktop (GPU etwa $2.600 plus etwa $900 für den Rest des Systems, eigene Schätzung). Die Zeile Dual RTX 3090 ist vergleichbar aufgebaut: zwei gebrauchte Karten für je etwa $1.400–1.550 (derselbe Tracker, 2026-10-15), etwa $2.950 im Mittel, plus dasselbe System von etwa $900 (eigene Schätzung), zusammen etwa $3.850. Bei diesen Werten kostet der Dual-3090-Aufbau über drei Jahre mehr als der Desktop mit einer RTX 4090 und mehr als der Mac Studio M5 Max. Eine 512-GB-Top-Konfiguration des Mac Studio M5 Ultra hat Apple für Ende Oktober 2026 angekündigt (aktuelle Verfügbarkeit bitte auf der Apple-Website prüfen); sie ist hier nicht aufgeführt (Preis bitte im Apple-Konfigurator prüfen). Die jährlichen Stromkosten für M6/M5 Pro stammen von der vorherigen Mac-mini-Generation, bis unabhängige Messungen der neuen Chips vorliegen.',
       },
 
       powerDetails: {
@@ -1298,11 +1298,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das entscheidende Szenario. Llama 3.3 70B benötigt 42 GB bei Q4-Quantisierung. RTX 4090 hat 24 GB VRAM — kann nicht passen. M5 Max 128 GB führt es komfortabel mit Platz für Kontext-Fenster und andere Anwendungen aus.',
           'Ein NVIDIA-Workaround sind Dual RTX 3090 (zwei gebrauchte Karten für etwa $2.800–3.100, nur die Karten) oder eine RTX A6000 (aktuellen Händlerpreis prüfen) — allein die Dual-3090-Lösung kostet mehr als ein Mac Mini M5 Pro und verbraucht etwa das 8-Fache des Stroms eines Mac Studio M5 Max ($437 vs. $55 pro Jahr bei den Tabellensätzen).',
           '**2. Always-On Silent AI Server**',
-          'Mac Mini bei 18–35 W unter Last ist nahezu lautlos. Ein Desktop mit RTX 4090 bei 250–450 W hat 3+ Lüfter mit durchschnittlich 50–70 dB. Ein lauter GPU-Rig in einem Homeoffice ist unbrauchbar; Mac Mini läuft lautlos im Schrank.',
+          'Mac Mini bei 18–35 W unter Last ist nahezu lautlos. Viele RTX-4090-Desktops (250–450 W) sind unter Last hörbar (die Lautstärke hängt von Karte und Gehäuse ab). Ein lauter GPU-Rig kann im Homeoffice unpraktisch sein; ein Mac Mini ist im Vergleich nahezu lautlos.',
           'Stromkostendifferenz: $35/Jahr (Mac Mini) vs $394/Jahr (RTX 4090) bei 24/7-Betrieb. Über 5 Jahre: $1.795 allein bei den Stromkosten gespart.',
           'Apples Auffrischung vom 25. August 2026 brachte einen noch günstigeren Einstieg für diesen Anwendungsfall: den Mac mini M6 für $899 (32 GB max. Unified Memory), für alle, die nicht die 64-GB-Obergrenze des M5 Pro benötigen.',
           '**3. Tragbare KI-Workstation (MacBook Pro M5 Pro)**',
-          'MacBook Pro M5 Pro mit 64 GB Unified Memory führt 32B-Modelle bei 18–22 tok/s während des Reisens aus. Uns ist kein äquivalenter NVIDIA-Laptop mit vergleichbarem Speicher zu einem vergleichbaren Preis bekannt. Diskrete Laptop-GPUs sind auf 16 GB VRAM begrenzt, was die Modellgröße auf 13B Maximum begrenzt.',
+          'MacBook Pro M5 Pro mit 64 GB Unified Memory führt 32B-Modelle bei 18–22 tok/s während des Reisens aus. Uns ist kein äquivalenter NVIDIA-Laptop mit vergleichbarem Speicher zu einem vergleichbaren Preis bekannt. Die meisten diskreten Laptop-GPUs erreichen höchstens 16 GB VRAM (bitte die Spezifikation des jeweiligen Laptops prüfen), was die typische Modellgröße auf etwa 13B begrenzt.',
           '**4. Multi-Modell-Stacks (Voice + Vision + LLM gleichzeitig)**',
           'Eine Voice-Assistant-Pipeline benötigt Whisper STT (3 GB) + LLM (8 GB) + TTS (1 GB) = 12 GB Minimum. RTX 4090 24 GB verwaltet dies eng. M5 Pro 64 GB verwaltet dies PLUS ein Vision-Modell (LLaVA 6 GB) PLUS RAG-Embeddings — alles gleichzeitig geladen mit sofortigem Wechsel.',
           '**5. EU-Stromkosten und Nachhaltigkeits-Einschränkungen**',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Sollte ich auf M5 Ultra warten?',
-            a: 'M5 Ultra ist jetzt offiziell. Apples Auffrischung vom 25. August 2026 setzt den Mac Studio M5 Ultra bei $5.499 (96 GB Unified Memory als Basis) an, skalierbar bis zu einer Top-Konfiguration mit 512 GB, die Apple für Ende Oktober 2026 angekündigt hat (Verfügbarkeit und Preis bitte auf der Apple-Website prüfen). Wenn Sie möglichst viel Speicher benötigen: Die 512-GB-Variante ist die Mac-Konfiguration mit dem meisten Speicher, die Apple angekündigt hat. Wenn Sie Hardware jetzt benötigen: Mac Studio M5 Max 128 GB (ab $2.499, verfügbar ab 22. September 2026) ist aktuell die beste Option für große Modelle.',
+            a: 'M5 Ultra ist jetzt offiziell. Apples Auffrischung vom 25. August 2026 setzt den Mac Studio M5 Ultra bei $5.499 (96 GB Unified Memory als Basis) an, skalierbar bis zu einer Top-Konfiguration mit 512 GB, die Apple für Ende Oktober 2026 angekündigt hat (aktuelle Verfügbarkeit und Preis bitte auf der Apple-Website prüfen). Wenn Sie möglichst viel Speicher benötigen: Die 512-GB-Variante ist die Mac-Konfiguration mit dem meisten Speicher, die Apple angekündigt hat. Wenn Sie Hardware jetzt benötigen: Mac Studio M5 Max 128 GB (ab $2.499, verfügbar ab 22. September 2026) ist aktuell die beste Option für große Modelle.',
           },
           {
             q: 'Kann ich Multi-GPU auf Mac machen?',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ändert RTX 5090 diesen Vergleich?',
-            a: 'RTX 5090 (32 GB VRAM, bereits erschienen; aktuelle Verfügbarkeit und Preis bitte prüfen) hebt die NVIDIA-Fähigkeitsdecke, ändert aber nicht den Unified-Memory-Vorteil. 70B-Modelle passen immer noch nicht in 32 GB bei Q4-Quantisierung (benötigt ~42 GB). M5 Max 128 GB und M5 Ultra (jetzt bis zu 512 GB in der Top-Konfiguration des Mac Studio, von Apple für Ende Oktober 2026 angekündigt) bleiben unter den wenigen Optionen in einem einzelnen Rechner für große Modell-Inferenz.',
+            a: 'RTX 5090 (32 GB VRAM, bereits erschienen; aktuelle Verfügbarkeit und Preis bitte prüfen) hebt die NVIDIA-Fähigkeitsdecke, ändert aber nicht den Unified-Memory-Vorteil. 70B-Modelle passen immer noch nicht in 32 GB bei Q4-Quantisierung (benötigt ~42 GB). M5 Max 128 GB und M5 Ultra (jetzt bis zu 512 GB in der Top-Konfiguration des Mac Studio, von Apple für Ende Oktober 2026 angekündigt; aktuelle Verfügbarkeit bitte auf der Apple-Website prüfen) bleiben unter den wenigen Optionen in einem einzelnen Rechner für große Modell-Inferenz.',
           },
           {
             q: 'Kann ich VRAM über mehrere Macs teilen?',
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU LLM local',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'comparaison plateforme IA locale', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**Point de basculement : ~24 GB de taille de modèle. RTX 4090 (1 008 GB/s) est plus rapide sur les modèles 8B–24B. M5 Max (128 GB de mémoire unifiée) est l\'une des rares options grand public sur une seule machine pour les modèles 70B (il existe des alternatives avec plus de VRAM ou de mémoire unifiée). La mise à jour Apple du 25 août 2026 a ajouté un Mac mini M6 d\'entrée à $899 (32 GB max.) et relevé le plafond du Mac Studio M5 Ultra à 512 GB de mémoire unifiée (configuration maximale, annoncée par Apple pour fin octobre 2026 ; vérifiez la disponibilité sur le site d\'Apple). TCO estimé sur 3 ans (voir tableau) : Mac Mini M5 Pro $1 804 vs RTX 4090 desktop $4 682. Coûts énergétiques estimés : Mac Mini $35/an vs RTX 4090 $394/an en fonctionnement 24/7. Tous les prix sont des prix américains ; en France, ils sont probablement plus élevés.**',
+    leadAnswerBlock: '**Point de basculement : ~24 GB de taille de modèle. RTX 4090 (1 008 GB/s) est plus rapide sur les modèles 8B–24B. M5 Max (128 GB de mémoire unifiée) est l\'une des rares options grand public sur une seule machine pour les modèles 70B (il existe des alternatives avec plus de VRAM ou de mémoire unifiée). La mise à jour Apple du 25 août 2026 a ajouté un Mac mini M6 d\'entrée à $899 (32 GB max.) et relevé le plafond du Mac Studio M5 Ultra à 512 GB de mémoire unifiée (configuration maximale, annoncée par Apple pour fin octobre 2026 ; vérifiez la disponibilité actuelle sur le site d\'Apple). TCO estimé sur 3 ans (voir tableau) : Mac Mini M5 Pro $1 804 vs RTX 4090 desktop $4 682. Coûts énergétiques estimés : Mac Mini $35/an vs RTX 4090 $394/an en fonctionnement 24/7. Tous les prix sont des prix américains ; en France, ils sont probablement plus élevés.**',
     ctaText: 'Vous hésitez entre Mac et NVIDIA pour l\'IA locale ? Comparez votre Llama ou Mistral local (s\'exécutant sur les deux plateformes) avec GPT-4, Claude, Gemini et 22 autres modèles avec PromptQuorum — validez que votre investissement matériel fournit une qualité cloud pour vos tâches spécifiques avant de vous engager dans $900–5 500 de matériel (prix américains ; en France, probablement plus élevés).',
     quickAnswerTop: {
       en: {
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Temps de configuration : Ollama sur Mac = 5 minutes. CUDA + pilotes + framework sur Linux/Windows = 30–60 minutes.',
           'Configuration hybride : Mac pour l\'inférence quotidienne (portable, silencieux, capable 70B), NVIDIA desktop pour le fine-tuning (écosystème CUDA). Total : $6 000 pour les deux.',
           'Apple a renouvelé la gamme Mac mini et Mac Studio le 25 août 2026 (prix américains) : Mac mini M6 d\'entrée ($899, 32 GB max., 170 GB/s), Mac mini M5 Pro ($1 699, 64 GB max., 307 GB/s, Thunderbolt 5), Mac Studio M5 Max ($2 499, 128 GB max.) et Mac Studio M5 Ultra ($5 499, 96 GB de base) — tous disponibles à partir du 22 septembre 2026.',
-          'M5 Ultra atteint désormais officiellement 512 GB de mémoire unifiée dans la configuration maximale du Mac Studio, annoncée par Apple pour fin octobre 2026 (vérifiez la disponibilité et le prix sur le site d\'Apple). Sa capacité mémoire laisse de la marge pour de très grands modèles, mais PromptQuorum ne l\'a pas testée.',
+          'M5 Ultra atteint désormais officiellement 512 GB de mémoire unifiée dans la configuration maximale du Mac Studio, annoncée par Apple pour fin octobre 2026 (vérifiez la disponibilité actuelle et le prix sur le site d\'Apple). Sa capacité mémoire laisse de la marge pour de très grands modèles, mais PromptQuorum ne l\'a pas testée.',
         ],
       },
 
@@ -1556,13 +1556,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Taille du modèle': '70B Q8 (~74 GB)', 'RTX 4090 (24 GB VRAM)': '✗ Ne tient pas', 'M5 Max (128 GB Unifiée)': '✓ Tient' },
           { 'Taille du modèle': 'Llama 405B Q3 (~200 GB)', 'RTX 4090 (24 GB VRAM)': '✗ Ne tient pas', 'M5 Max (128 GB Unifiée)': '✗ Ne tient pas (besoin M5 Ultra)' },
         ],
-        note: 'Pour les modèles au-delà de 24 GB, Apple Silicon est l\'une des rares options grand public sur une seule machine, sans rig dual-GPU. La mise à jour Apple du 25 août 2026 a relevé ce plafond davantage : le Mac Studio M5 Ultra dispose d\'une configuration à 512 GB de mémoire unifiée qu\'Apple annonce pour fin octobre 2026 (vérifiez la disponibilité sur le site d\'Apple), ce qui laisse une marge importante pour les grands modèles à poids ouverts.',
+        note: 'Pour les modèles au-delà de 24 GB, Apple Silicon est l\'une des rares options grand public sur une seule machine, sans rig dual-GPU. La mise à jour Apple du 25 août 2026 a relevé ce plafond davantage : le Mac Studio M5 Ultra dispose d\'une configuration à 512 GB de mémoire unifiée qu\'Apple annonce pour fin octobre 2026 (vérifiez la disponibilité actuelle sur le site d\'Apple), ce qui laisse une marge importante pour les grands modèles à poids ouverts.',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: 'Comparaisons d\'évaluation directes : tokens/seconde',
-        content: 'Les valeurs sont des fourchettes indicatives ; PromptQuorum n\'a pas réalisé de benchmarks indépendants sur ce matériel. Le tok/s indiqué correspond à la vitesse de génération. La cellule RTX 4090 de la ligne Llama 3.1 8B Q4 reprend le chiffre de la communauté pour Llama 2 7B Q4_0 (un autre modèle), issu du [fil de benchmarks llama.cpp #15013](https://github.com/ggml-org/llama.cpp/discussions/15013) ; toutes les autres cellules sont des estimations indicatives, non mesurées par PromptQuorum. Remarque : ces chiffres datent d\'avant la mise à jour matérielle et tarifaire du Mac mini/Mac Studio d\'Apple du 25 août 2026 (nouveaux appareils disponibles à partir du 22 septembre 2026). Aucun benchmark indépendant de tok/s n\'existe encore pour les appareils renouvelés ; seules les déclarations de performance d\'Apple existent pour les nouvelles configurations, et aucune n\'est incluse dans ce tableau.',
+        content: 'Les valeurs sont des fourchettes indicatives ; PromptQuorum n\'a pas réalisé de benchmarks indépendants sur ce matériel. Le tok/s indiqué correspond à la vitesse de génération. La cellule RTX 4090 de la ligne Llama 3.1 8B Q4 reprend le chiffre de la communauté pour Llama 2 7B Q4_0 (un autre modèle), issu du [fil de benchmarks llama.cpp #15013](https://github.com/ggml-org/llama.cpp/discussions/15013) ; toutes les autres cellules sont des estimations indicatives, déduites de la bande passante mémoire et de la taille du modèle, et non d\'un benchmark publié ; PromptQuorum ne les a pas mesurées. Remarque : ces chiffres datent d\'avant la mise à jour matérielle et tarifaire du Mac mini/Mac Studio d\'Apple du 25 août 2026 (nouveaux appareils disponibles à partir du 22 septembre 2026). Aucun benchmark indépendant de tok/s n\'existe encore pour les appareils renouvelés ; seules les déclarations de performance d\'Apple existent pour les nouvelles configurations, et aucune n\'est incluse dans ce tableau.',
         tableFormat: true,
         columns: ['Modèle', 'M5 Pro 64 GB', 'M5 Max 128 GB', 'RTX 4070 12 GB', 'RTX 4090 24 GB'],
         rows: [
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuration': 'Dual RTX 3090 (48 GB total)', 'Matériel': '$3 850', 'Électricité annuelle': '$437', 'Électricité 3 ans': '$1 311', 'Total 3 ans': '$5 161' },
           { 'Configuration': 'Mac Studio M5 Ultra 96 GB', 'Matériel': '$5 499', 'Électricité annuelle': '$75', 'Électricité 3 ans': '$225', 'Total 3 ans': '$5 724' },
         ],
-        note: 'Prix selon la mise à jour Mac mini/Mac Studio d\'Apple du 25 août 2026 (appareils disponibles à partir du 22 septembre 2026), qui a fait baisser le prix de départ du Mac Studio M5 Max à $2 499 et ajouté un nouveau Mac mini M6 d\'entrée à $899. Tous les prix sont des prix américains ; en France, ils sont probablement plus élevés. Le [tracker InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (mis à jour le 2026-10-15) indique des RTX 4090 neuves à $2 000–3 000 et des annonces d\'occasion à environ $2 575–3 010 : l\'occasion n\'est donc actuellement pas moins chère que le neuf ; les $3 500 retenus ici sont une estimation représentative d\'un desktop complet (GPU à environ $2 600 plus environ $900 pour le reste du système, estimation propre). La ligne dual RTX 3090 est établie sur la même base : deux cartes d\'occasion à environ $1 400–1 550 pièce (même tracker, 2026-10-15), soit environ $2 950 au point médian, plus les mêmes ~$900 de système (estimation propre), environ $3 850 au total. À ces chiffres, la configuration dual 3090 coûte sur trois ans plus que le desktop à une seule RTX 4090 et que le Mac Studio M5 Max. Apple a annoncé une configuration maximale de Mac Studio M5 Ultra à 512 GB pour fin octobre 2026 ; elle n\'est pas incluse dans ce tableau (voir le configurateur d\'Apple pour le prix).',
+        note: 'Prix selon la mise à jour Mac mini/Mac Studio d\'Apple du 25 août 2026 (appareils disponibles à partir du 22 septembre 2026), qui a fait baisser le prix de départ du Mac Studio M5 Max à $2 499 et ajouté un nouveau Mac mini M6 d\'entrée à $899. Tous les prix sont des prix américains ; en France, ils sont probablement plus élevés. Le [tracker InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (mis à jour le 2026-10-15) indique des RTX 4090 neuves à $2 000–3 000 et des annonces d\'occasion à environ $2 575–3 010 : l\'occasion n\'est donc actuellement pas moins chère que le neuf ; les $3 500 retenus ici sont une estimation représentative d\'un desktop complet (GPU à environ $2 600 plus environ $900 pour le reste du système, estimation propre). La ligne dual RTX 3090 est établie sur la même base : deux cartes d\'occasion à environ $1 400–1 550 pièce (même tracker, 2026-10-15), soit environ $2 950 au point médian, plus les mêmes ~$900 de système (estimation propre), environ $3 850 au total. À ces chiffres, la configuration dual 3090 coûte sur trois ans plus que le desktop à une seule RTX 4090 et que le Mac Studio M5 Max. Apple a annoncé une configuration maximale de Mac Studio M5 Ultra à 512 GB pour fin octobre 2026 (vérifiez la disponibilité actuelle sur le site d\'Apple) ; elle n\'est pas incluse dans ce tableau (voir le configurateur d\'Apple pour le prix). Les coûts annuels d\'électricité des M6/M5 Pro sont repris de la génération précédente de Mac mini, dans l\'attente de mesures indépendantes des nouvelles puces.',
       },
 
       powerDetails: {
@@ -1618,11 +1618,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le scénario décisif. Llama 3.3 70B nécessite 42 GB à quantification Q4. RTX 4090 a 24 GB VRAM — ne tient pas. M5 Max 128 GB l\'exécute confortablement avec place pour fenêtre de contexte et autres applications.',
           'Une solution NVIDIA est dual RTX 3090 (deux cartes d\'occasion pour environ $2 800–3 100, cartes seules) ou une RTX A6000 (vérifiez le prix actuel chez le revendeur) — la seule option dual 3090 coûte déjà plus qu\'un Mac Mini M5 Pro et consomme environ 8 fois l\'énergie d\'un Mac Studio M5 Max ($437 contre $55 par an aux tarifs du tableau).',
           '**2. Serveur IA toujours actif et silencieux**',
-          'Mac Mini à 18–35 W sous charge est quasi silencieux. Un desktop avec RTX 4090 à 250–450 W a 3+ ventilateurs moyennant 50–70 dB. Un rig GPU bruyant dans un home office ne fonctionne pas ; Mac Mini tourne silencieusement dans un placard.',
+          'Mac Mini à 18–35 W sous charge est quasi silencieux. De nombreux desktops RTX 4090 (250–450 W) sont audibles sous charge (le bruit dépend de la carte et du boîtier). Un rig GPU bruyant peut être peu pratique dans un home office ; un Mac Mini est quasi silencieux en comparaison.',
           'Différentiel coûts énergétiques : $35/an (Mac Mini) vs $394/an (RTX 4090) en fonctionnement 24/7. Sur 5 ans : $1 795 économisés rien qu\'en électricité.',
           'La mise à jour Apple du 25 août 2026 a ajouté un point d\'entrée encore moins cher pour ce cas d\'usage : le Mac mini M6 à $899 (32 GB max. de mémoire unifiée), pour ceux qui n\'ont pas besoin du plafond de 64 GB du M5 Pro.',
           '**3. Poste de travail IA portable (MacBook Pro M5 Pro)**',
-          'MacBook Pro M5 Pro avec 64 GB mémoire unifiée exécute modèles 32B à 18–22 tok/s en voyageant. À notre connaissance, aucun laptop NVIDIA équivalent n\'existe à un prix comparable. Les GPU discrets laptop plafonnent à 16 GB VRAM, limitant taille modèle à 13B maximum.',
+          'MacBook Pro M5 Pro avec 64 GB mémoire unifiée exécute modèles 32B à 18–22 tok/s en voyageant. À notre connaissance, aucun laptop NVIDIA équivalent n\'existe à un prix comparable. La plupart des GPU discrets de laptop plafonnent à 16 GB de VRAM (vérifiez la fiche du laptop concerné), ce qui limite la taille de modèle typique à environ 13B.',
           '**4. Stacks multi-modèles (Voice + Vision + LLM simultanément)**',
           'Un pipeline assistant vocal nécessite Whisper STT (3 GB) + LLM (8 GB) + TTS (1 GB) = 12 GB minimum. RTX 4090 24 GB gère cela serré. M5 Pro 64 GB gère cela PLUS un modèle vision (LLaVA 6 GB) PLUS embeddings RAG — tous chargés simultanément avec basculement instantané.',
           '**5. Coûts électricité EU et contraintes durabilité**',
@@ -1709,7 +1709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Dois-je attendre M5 Ultra ?',
-            a: 'M5 Ultra est désormais officiel. La mise à jour Apple du 25 août 2026 positionne le Mac Studio M5 Ultra à $5 499 (96 GB de mémoire unifiée de base), évolutif jusqu\'à une configuration maximale de 512 GB qu\'Apple annonce pour fin octobre 2026 (vérifiez la disponibilité et le prix sur le site d\'Apple). Si vous avez besoin du maximum de mémoire : cette variante 512 GB est la configuration Mac offrant le plus de mémoire annoncée par Apple. Si vous avez besoin de matériel maintenant : le Mac Studio M5 Max 128 GB (à partir de $2 499, disponible dès le 22 septembre 2026) est actuellement la meilleure option pour les gros modèles.',
+            a: 'M5 Ultra est désormais officiel. La mise à jour Apple du 25 août 2026 positionne le Mac Studio M5 Ultra à $5 499 (96 GB de mémoire unifiée de base), évolutif jusqu\'à une configuration maximale de 512 GB qu\'Apple annonce pour fin octobre 2026 (vérifiez la disponibilité actuelle et le prix sur le site d\'Apple). Si vous avez besoin du maximum de mémoire : cette variante 512 GB est la configuration Mac offrant le plus de mémoire annoncée par Apple. Si vous avez besoin de matériel maintenant : le Mac Studio M5 Max 128 GB (à partir de $2 499, disponible dès le 22 septembre 2026) est actuellement la meilleure option pour les gros modèles.',
           },
           {
             q: 'Peux-je faire multi-GPU sur Mac ?',
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 5090 change-t-il cette comparaison ?',
-            a: 'RTX 5090 (32 GB VRAM, déjà commercialisée ; vérifiez disponibilité et prix actuels) élève plafond capacité NVIDIA mais ne change pas avantage mémoire unifiée. Modèles 70B ne tiennent toujours pas en 32 GB à quantification Q4 (besoin ~42 GB). M5 Max 128 GB et M5 Ultra (désormais jusqu\'à 512 GB dans sa configuration maximale de Mac Studio, annoncée par Apple pour fin octobre 2026) restent parmi les rares options sur une seule machine pour l\'inférence de grands modèles.',
+            a: 'RTX 5090 (32 GB VRAM, déjà commercialisée ; vérifiez disponibilité et prix actuels) élève plafond capacité NVIDIA mais ne change pas avantage mémoire unifiée. Modèles 70B ne tiennent toujours pas en 32 GB à quantification Q4 (besoin ~42 GB). M5 Max 128 GB et M5 Ultra (désormais jusqu\'à 512 GB dans sa configuration maximale de Mac Studio, annoncée par Apple pour fin octobre 2026 ; vérifiez la disponibilité actuelle sur le site d\'Apple) restent parmi les rares options sur une seule machine pour l\'inférence de grands modèles.',
           },
           {
             q: 'Peux-je partager VRAM sur Macs multiples ?',
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU ローカルLLM',
     targetKeywords: ['MacとGPU LLM', 'M5とRTXベンチマーク', 'ローカルAIプラットフォーム比較', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**分岐点：約24GB モデルサイズ。RTX 4090（1,008 GB/s）は8B–24Bモデルで高速。M5 Max（128GB Unified Memory）は70Bモデル向けに単一マシンで使える数少ないコンシューマオプションの一つ（VRAMやUnified Memoryがより大きい代替もあります）。Appleは2026年8月25日の刷新で、エントリー向けMac mini M6（$899、最大32GB）を追加し、Mac Studio M5 Ultraの上限を512GB Unified Memory（最上位構成、Appleは2026年10月下旬提供開始と発表。提供状況はAppleのサイトで確認してください）まで引き上げました。3年TCO（推定、表参照）：Mac Mini M5 Pro $1,804 vs RTX 4090デスクトップ $4,682。消費電力（推定）：Mac Mini $35/年 vs RTX 4090 $394/年（24/7運用）。価格はすべて米国価格で、日本では高くなる可能性があります。**',
+    leadAnswerBlock: '**分岐点：約24GB モデルサイズ。RTX 4090（1,008 GB/s）は8B–24Bモデルで高速。M5 Max（128GB Unified Memory）は70Bモデル向けに単一マシンで使える数少ないコンシューマオプションの一つ（VRAMやUnified Memoryがより大きい代替もあります）。Appleは2026年8月25日の刷新で、エントリー向けMac mini M6（$899、最大32GB）を追加し、Mac Studio M5 Ultraの上限を512GB Unified Memory（最上位構成、Appleは2026年10月下旬提供開始と発表。現在の提供状況はAppleのサイトで確認してください）まで引き上げました。3年TCO（推定、表参照）：Mac Mini M5 Pro $1,804 vs RTX 4090デスクトップ $4,682。消費電力（推定）：Mac Mini $35/年 vs RTX 4090 $394/年（24/7運用）。価格はすべて米国価格で、日本では高くなる可能性があります。**',
     ctaText: 'ローカルAIでMacかNVIDIAで迷っていますか？PromptQuorumで両プラットフォームで実行するローカルLlamaやMistralをGPT-4、Claude、Geminiおよび22他のモデルと比較します。ハードウェア投資が特定タスクでクラウドレベルの結果を提供することを検証してから、約$900–5,500（米国価格、日本では高くなる可能性があります）のハードウェア投資を確定してください。',
     quickAnswerTop: {
       en: {
@@ -1865,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'セットアップ時間：Ollama on Mac = 5分。CUDA + ドライバ + framework on Linux/Windows = 30–60分。',
           'ハイブリッドセットアップ：日々の推論用Mac（ポータブル、無音、70B対応）、Fine-tuning用NVIDIAデスクトップ（CUDAエコシステム）。合計：両用で$6,000。',
           'Appleは2026年8月25日にMac miniとMac Studioラインナップを刷新（米国価格）：エントリーMac mini M6（$899、最大32GB、170GB/s）、Mac mini M5 Pro（$1,699、最大64GB、307GB/s、Thunderbolt 5）、Mac Studio M5 Max（$2,499、最大128GB）、Mac Studio M5 Ultra（$5,499、96GBベース）— すべて2026年9月22日提供開始。',
-          'M5 Ultraは、Mac Studioの最上位構成で正式に512GB Unified Memoryまで対応するようになりました。Appleは2026年10月下旬提供開始と発表しています（提供状況と価格はAppleのサイトで確認してください）。メモリ容量は非常に大きなモデルにも余裕がありますが、PromptQuorumは検証していません。',
+          'M5 Ultraは、Mac Studioの最上位構成で正式に512GB Unified Memoryまで対応するようになりました。Appleは2026年10月下旬提供開始と発表しています（現在の提供状況と価格はAppleのサイトで確認してください）。メモリ容量は非常に大きなモデルにも余裕がありますが、PromptQuorumは検証していません。',
         ],
       },
 
@@ -1887,13 +1887,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデルサイズ': '70B Q8（~74 GB）', 'RTX 4090（24GB VRAM）': '✗ 適合しません', 'M5 Max（128GB Unified）': '✓ 適合' },
           { 'モデルサイズ': 'Llama 405B Q3（~200 GB）', 'RTX 4090（24GB VRAM）': '✗ 適合しません', 'M5 Max（128GB Unified）': '✗ 適合しません（M5 Ultra必要）' },
         ],
-        note: '24GB以上のモデルでは、Apple SiliconはDual-GPU rigなしで使える数少ないコンシューマオプションの一つ。Appleの2026年8月25日刷新でこの上限はさらに拡大：Mac Studio M5 Ultraには512GB Unified Memory構成があり、Appleは2026年10月下旬提供開始と発表しています（提供状況はAppleのサイトで確認してください）。大規模なオープンウェイトモデルにも十分な余裕があります。',
+        note: '24GB以上のモデルでは、Apple SiliconはDual-GPU rigなしで使える数少ないコンシューマオプションの一つ。Appleの2026年8月25日刷新でこの上限はさらに拡大：Mac Studio M5 Ultraには512GB Unified Memory構成があり、Appleは2026年10月下旬提供開始と発表しています（現在の提供状況はAppleのサイトで確認してください）。大規模なオープンウェイトモデルにも十分な余裕があります。',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: 'ベンチマーク比較：トークン/秒',
-        content: '数値は目安の範囲であり、PromptQuorumはこのハードウェアの独立したベンチマークを行っていません。報告 tok/s は生成速度です。Llama 3.1 8B Q4行のRTX 4090セルは、[llama.cppベンチマークスレッド#15013](https://github.com/ggml-org/llama.cpp/discussions/15013)に掲載されたLlama 2 7B Q4_0（別モデル）のコミュニティ値です。その他のセルは目安の推定値で、PromptQuorumによる測定ではありません。注：これらの数値はApple の2026年8月25日Mac mini/Mac Studioハードウェア・価格刷新（新モデルは2026年9月22日提供開始）以前のものです。刷新後モデルの独立したtok/sベンチマークはまだ存在せず、新構成についてはAppleの自社発表の性能値のみが存在しますが、本表には含めていません。',
+        content: '数値は目安の範囲であり、PromptQuorumはこのハードウェアの独立したベンチマークを行っていません。報告 tok/s は生成速度です。Llama 3.1 8B Q4行のRTX 4090セルは、[llama.cppベンチマークスレッド#15013](https://github.com/ggml-org/llama.cpp/discussions/15013)に掲載されたLlama 2 7B Q4_0（別モデル）のコミュニティ値です。その他のセルはメモリ帯域幅とモデルサイズから見積もった目安の推定値で、公開されたベンチマークに基づくものではなく、PromptQuorumは測定していません。注：これらの数値はApple の2026年8月25日Mac mini/Mac Studioハードウェア・価格刷新（新モデルは2026年9月22日提供開始）以前のものです。刷新後モデルの独立したtok/sベンチマークはまだ存在せず、新構成についてはAppleの自社発表の性能値のみが存在しますが、本表には含めていません。',
         tableFormat: true,
         columns: ['モデル', 'M5 Pro 64GB', 'M5 Max 128GB', 'RTX 4070 12GB', 'RTX 4090 24GB'],
         rows: [
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '構成': 'Dual RTX 3090（48GB合計）', 'ハードウェア': '$3,850', '年間電力': '$437', '3年電力': '$1,311', '3年合計': '$5,161' },
           { '構成': 'Mac Studio M5 Ultra 96GB', 'ハードウェア': '$5,499', '年間電力': '$75', '3年電力': '$225', '3年合計': '$5,724' },
         ],
-        note: '価格はAppleの2026年8月25日Mac mini/Mac Studio刷新（新モデルは2026年9月22日提供開始）に基づき、Mac Studio M5 Maxの開始価格を$2,499に引き下げ、新たにエントリーモデルのMac mini M6を$899で追加しました。価格はすべて米国価格で、日本では高くなる可能性があります。[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（2026-10-15更新）では、新品のRTX 4090が$2,000–3,000、中古の出品が約$2,575–3,010で、現在は中古が新品より安いとは言えません。ここで使う$3,500はデスクトップ一式の代表的な推定値です（GPU約$2,600にシステムの残り約$900、当社の独自推定）。Dual RTX 3090の行は同じ基準にそろえています。中古カード2枚が1枚あたり約$1,400–1,550（同じトラッカー、2026-10-15）で中間値は約$2,950、これに同じ約$900のシステム（独自推定）を加えて合計約$3,850です。この数値では、3年間でDual 3090構成はRTX 4090デスクトップ1台やMac Studio M5 Maxより高くなります。Mac Studio M5 Ultraの512GB最上位構成はAppleが2026年10月下旬提供開始と発表しており、本表には含めていません（価格はAppleのコンフィギュレータで確認してください）。',
+        note: '価格はAppleの2026年8月25日Mac mini/Mac Studio刷新（新モデルは2026年9月22日提供開始）に基づき、Mac Studio M5 Maxの開始価格を$2,499に引き下げ、新たにエントリーモデルのMac mini M6を$899で追加しました。価格はすべて米国価格で、日本では高くなる可能性があります。[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（2026-10-15更新）では、新品のRTX 4090が$2,000–3,000、中古の出品が約$2,575–3,010で、現在は中古が新品より安いとは言えません。ここで使う$3,500はデスクトップ一式の代表的な推定値です（GPU約$2,600にシステムの残り約$900、当社の独自推定）。Dual RTX 3090の行は同じ基準にそろえています。中古カード2枚が1枚あたり約$1,400–1,550（同じトラッカー、2026-10-15）で中間値は約$2,950、これに同じ約$900のシステム（独自推定）を加えて合計約$3,850です。この数値では、3年間でDual 3090構成はRTX 4090デスクトップ1台やMac Studio M5 Maxより高くなります。Mac Studio M5 Ultraの512GB最上位構成はAppleが2026年10月下旬提供開始と発表しており（現在の提供状況はAppleのサイトで確認してください）、本表には含めていません（価格はAppleのコンフィギュレータで確認してください）。M6/M5 Proの年間電力コストは、新チップの独立した測定が得られるまで、前世代のMac miniの数値を引き継いでいます。',
       },
 
       powerDetails: {
@@ -1949,11 +1949,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '決定的なシナリオ。Llama 3.3 70BはQ4量子化で42GBが必要。RTX 4090は24GB VRAM — 適合しません。M5 Max 128GBはコンテキストウィンドウと他のアプリケーションスペース付きで快適に実行。',
           'NVIDIAの回避策の一つはDual RTX 3090（中古カード2枚で約$2,800–3,100、カードのみ）またはRTX A6000（現在の販売店価格を確認してください）— Dual RTX 3090だけでもMac Mini M5 Proより高く、Mac Studio M5 Maxの約8倍の電力を消費します（表の料金で年$437対$55）。',
           '**2. 常時オン無音AIサーバー**',
-          'Mac Mini 18–35W 負荷下はほぼ無音。RTX 4090付きデスクトップ 250–450Wは3+ファン平均50–70 dB。ホームオフィスのうるさいGPU rigは機能しません；Mac Miniはクローゼット内で無音実行。',
+          'Mac Mini 18–35W 負荷下はほぼ無音。RTX 4090搭載デスクトップ（250–450W）の多くは負荷時に音が聞こえます（騒音はカードとケース次第）。うるさいGPU rigはホームオフィスでは実用的でない場合があり、Mac Miniは比較してほぼ無音です。',
           '電力コスト差分：$35/年（Mac Mini）vs $394/年（RTX 4090） 24/7運用時。5年間：電力だけで$1,795節約。',
           'Appleの2026年8月25日刷新で、この用途向けにさらに安価な選択肢が加わりました：M5 Proの64GB上限が不要なユーザー向けのMac mini M6（$899、最大32GB Unified Memory）。',
           '**3. ポータブル AI ワークステーション（MacBook Pro M5 Pro）**',
-          'MacBook Pro M5 Pro 64GB Unified Memory 旅行中18–22 tok/sで32Bモデル実行。同等メモリで価格も近いNVIDIA laptopは当社では把握していません。ディスクリート laptop GPUは16GB VRAM上限、モデルサイズを13B最大に制限。',
+          'MacBook Pro M5 Pro 64GB Unified Memory 旅行中18–22 tok/sで32Bモデル実行。同等メモリで価格も近いNVIDIA laptopは当社では把握していません。ほとんどのディスクリートlaptop GPUは16GB VRAMが上限です（個別のlaptopの仕様を確認してください）。そのため一般的なモデルサイズは13B前後に制限されます。',
           '**4. マルチモデルスタック（Voice + Vision + LLM同時）**',
           'Voice assistantパイプラインはWhisper STT（3GB）+ LLM（8GB）+ TTS（1GB）= 12GB 最小が必要。RTX 4090 24GBはこれを処理がタイト。M5 Pro 64GBはこれをPLUS vision モデル（LLaVA 6GB）PLUS RAG embeddings — すべてシミュルタニアスロード即座切り替え付きで処理。',
           '**5. EU電力コストと持続可能性制約**',
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'M5 Ultra待つべき？',
-            a: 'M5 Ultraはすでに正式発表されています。Appleの2026年8月25日刷新でMac Studio M5 Ultraは$5,499（96GB Unified Memoryベース）となり、Appleが2026年10月下旬提供開始と発表している512GB最上位構成まで拡張可能です（提供状況と価格はAppleのサイトで確認してください）。最大のメモリが必要なら：512GB構成はAppleが発表したMacで最もメモリの多い構成です。今すぐハードウェアが必要なら：Mac Studio M5 Max 128GB（$2,499から、2026年9月22日提供開始）が大モデル向けの現行最良の選択肢です。',
+            a: 'M5 Ultraはすでに正式発表されています。Appleの2026年8月25日刷新でMac Studio M5 Ultraは$5,499（96GB Unified Memoryベース）となり、Appleが2026年10月下旬提供開始と発表している512GB最上位構成まで拡張可能です（現在の提供状況と価格はAppleのサイトで確認してください）。最大のメモリが必要なら：512GB構成はAppleが発表したMacで最もメモリの多い構成です。今すぐハードウェアが必要なら：Mac Studio M5 Max 128GB（$2,499から、2026年9月22日提供開始）が大モデル向けの現行最良の選択肢です。',
           },
           {
             q: 'Macで マルチGPUできる？',
@@ -2064,7 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 5090はこの比較変える？',
-            a: 'RTX 5090（32GB VRAM、すでに発売済み。現在の入手性と価格は要確認）はNVIDIA能力天井上げますが Unified Memory利点変わりません。70Bモデルは32GBはQ4量子化で適合しません（~42GB必要）。M5 Max 128GBと M5 Ultra（Mac Studio最上位構成で現在は512GBまで、Appleは2026年10月下旬提供開始と発表）は大モデル推論で単一マシンの数少ない選択肢に残ります。',
+            a: 'RTX 5090（32GB VRAM、すでに発売済み。現在の入手性と価格は要確認）はNVIDIA能力天井上げますが Unified Memory利点変わりません。70Bモデルは32GBはQ4量子化で適合しません（~42GB必要）。M5 Max 128GBと M5 Ultra（Mac Studio最上位構成で現在は512GBまで、Appleは2026年10月下旬提供開始と発表。現在の提供状況はAppleのサイトで確認してください）は大モデル推論で単一マシンの数少ない選択肢に残ります。',
           },
           {
             q: 'Macs複数でVRAM共有できる？',
@@ -2113,7 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU 本地大模型',
     targetKeywords: ['Mac对GPU大模型', 'M5对RTX基准', '本地AI平台对比', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**转折点：约24GB模型大小。RTX 4090（1,008 GB/s）在8B–24B模型上更快。M5 Max（128GB统一内存）是70B模型少数能在单台机器上运行的消费级选项之一（也存在显存或统一内存更大的替代方案）。苹果2026年8月25日的更新新增了入门级M6 Mac mini（$899起，最高32GB），并将Mac Studio M5 Ultra的统一内存上限提升到512GB（顶配，苹果宣布2026年10月下旬上市，请查看苹果官网确认供货情况）。预估3年TCO（见表）：Mac Mini M5 Pro约$1,804对RTX 4090桌面约$4,682。预估功耗：Mac Mini约$35/年对RTX 4090约$394/年（24/7运行）。**',
+    leadAnswerBlock: '**转折点：约24GB模型大小。RTX 4090（1,008 GB/s）在8B–24B模型上更快。M5 Max（128GB统一内存）是70B模型少数能在单台机器上运行的消费级选项之一（也存在显存或统一内存更大的替代方案）。苹果2026年8月25日的更新新增了入门级M6 Mac mini（$899起，最高32GB），并将Mac Studio M5 Ultra的统一内存上限提升到512GB（顶配，苹果宣布2026年10月下旬上市，请查看苹果官网确认当前供货情况）。预估3年TCO（见表）：Mac Mini M5 Pro约$1,804对RTX 4090桌面约$4,682。预估功耗：Mac Mini约$35/年对RTX 4090约$394/年（24/7运行）。**',
     ctaText: '在本地AI上选择Mac还是NVIDIA困扰？使用PromptQuorum将你在两个平台上运行的本地Llama或Mistral与GPT-4、Claude、Gemini和22个其他模型比较。在投入$900–5,500硬件之前，验证你的硬件投资为你特定任务提供云质量结果。',
     quickAnswerTop: {
       en: {
@@ -2207,7 +2207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '设置时间：Mac上Ollama = 5分钟。Linux/Windows上CUDA +驱动+框架 = 30–60分钟。',
           '混合设置效果好：日常推理用Mac（便携、安静、70B能力），fine-tuning用NVIDIA桌面（CUDA生态）。合计：约$6,000两者。',
           '苹果在2026年8月25日更新了Mac mini和Mac Studio产品线：入门级M6 Mac mini（$899起，最高32GB、170GB/s）、M5 Pro Mac mini（$1,699起，最高64GB、307GB/s、雷雳5）、M5 Max Mac Studio（$2,499起，最高128GB）、M5 Ultra Mac Studio（$5,499起，96GB基础版）— 全部于2026年9月22日上市。',
-          'M5 Ultra现已正式支持Mac Studio顶配512GB统一内存，苹果宣布2026年10月下旬上市（供货情况和价格请查看苹果官网）。其内存容量可为超大模型留出空间，但PromptQuorum未对其进行测试。',
+          'M5 Ultra现已正式支持Mac Studio顶配512GB统一内存，苹果宣布2026年10月下旬上市（当前供货情况和价格请查看苹果官网）。其内存容量可为超大模型留出空间，但PromptQuorum未对其进行测试。',
         ],
       },
 
@@ -2229,13 +2229,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型大小': '70B Q8（~74 GB）', 'RTX 4090（24GB VRAM）': '✗ 不适合', 'M5 Max（128GB统一）': '✓ 适合' },
           { '模型大小': 'Llama 405B Q3（~200 GB）', 'RTX 4090（24GB VRAM）': '✗ 不适合', 'M5 Max（128GB统一）': '✗ 不适合（需M5 Ultra）' },
         ],
-        note: '对于超24GB的模型，Apple Silicon是无需双GPU设备、能在单台机器上运行的少数消费级选项之一。苹果2026年8月25日的更新进一步提高了这一上限：Mac Studio M5 Ultra提供512GB统一内存配置，苹果宣布2026年10月下旬上市（供货情况请查看苹果官网），为大型开放权重模型留出了充足空间。',
+        note: '对于超24GB的模型，Apple Silicon是无需双GPU设备、能在单台机器上运行的少数消费级选项之一。苹果2026年8月25日的更新进一步提高了这一上限：Mac Studio M5 Ultra提供512GB统一内存配置，苹果宣布2026年10月下旬上市（当前供货情况请查看苹果官网），为大型开放权重模型留出了充足空间。',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: '基准对比：tokens/秒',
-        content: '数值为参考范围；PromptQuorum未对该硬件进行独立基准测试。报告的tok/s是生成速度。Llama 3.1 8B Q4行的RTX 4090单元格是[llama.cpp基准测试帖#15013](https://github.com/ggml-org/llama.cpp/discussions/15013)中Llama 2 7B Q4_0（不同模型）的社区数据；其他单元格均为参考估计，非PromptQuorum实测。说明：以下数据早于苹果2026年8月25日的Mac mini/Mac Studio硬件与定价更新（新机型2026年9月22日上市）。新机型目前尚无独立tok/s基准测试；仅有苹果自家发布的性能声明，本表未纳入这些数据。',
+        content: '数值为参考范围；PromptQuorum未对该硬件进行独立基准测试。报告的tok/s是生成速度。Llama 3.1 8B Q4行的RTX 4090单元格是[llama.cpp基准测试帖#15013](https://github.com/ggml-org/llama.cpp/discussions/15013)中Llama 2 7B Q4_0（不同模型）的社区数据；其他单元格均为根据内存带宽和模型大小推算的参考估计，并非来自已发布的基准测试，PromptQuorum未对其进行测量。说明：以下数据早于苹果2026年8月25日的Mac mini/Mac Studio硬件与定价更新（新机型2026年9月22日上市）。新机型目前尚无独立tok/s基准测试；仅有苹果自家发布的性能声明，本表未纳入这些数据。',
         tableFormat: true,
         columns: ['模型', 'M5 Pro 64GB', 'M5 Max 128GB', 'RTX 4070 12GB', 'RTX 4090 24GB'],
         rows: [
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '配置': 'Dual RTX 3090（48GB合计）', '硬件': '$3,850', '年电力': '$437', '3年电力': '$1,311', '3年总计': '$5,161' },
           { '配置': 'Mac Studio M5 Ultra 96GB', '硬件': '$5,499', '年电力': '$75', '3年电力': '$225', '3年总计': '$5,724' },
         ],
-        note: '价格反映苹果2026年8月25日Mac mini/Mac Studio更新（机型2026年9月22日上市），该更新将Mac Studio M5 Max起售价降至$2,499，并新增入门级M6 Mac mini（$899）。[InsiderLLM追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（更新于2026-10-15）显示RTX 4090全新$2,000–3,000、二手挂牌约$2,575–3,010，即二手目前并不比全新便宜；此处使用的$3,500是整机桌面的代表性估算（显卡约$2,600加其余系统约$900，为我们自己的估算）。双RTX 3090一行为同口径：两张二手卡每张约$1,400–1,550（同一追踪，2026-10-15），中间值约$2,950，加上同样约$900的系统（自行估算），合计约$3,850。按这些数字，双3090配置三年总成本高于单RTX 4090桌面和Mac Studio M5 Max。苹果宣布Mac Studio M5 Ultra的512GB顶配将于2026年10月下旬上市，未列入本表（价格请参见苹果配置页面）。',
+        note: '价格反映苹果2026年8月25日Mac mini/Mac Studio更新（机型2026年9月22日上市），该更新将Mac Studio M5 Max起售价降至$2,499，并新增入门级M6 Mac mini（$899）。[InsiderLLM追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（更新于2026-10-15）显示RTX 4090全新$2,000–3,000、二手挂牌约$2,575–3,010，即二手目前并不比全新便宜；此处使用的$3,500是整机桌面的代表性估算（显卡约$2,600加其余系统约$900，为我们自己的估算）。双RTX 3090一行为同口径：两张二手卡每张约$1,400–1,550（同一追踪，2026-10-15），中间值约$2,950，加上同样约$900的系统（自行估算），合计约$3,850。按这些数字，双3090配置三年总成本高于单RTX 4090桌面和Mac Studio M5 Max。苹果宣布Mac Studio M5 Ultra的512GB顶配将于2026年10月下旬上市（当前供货情况请查看苹果官网），未列入本表（价格请参见苹果配置页面）。M6/M5 Pro的年电力成本沿用上一代Mac mini的数值，有待对新芯片进行独立测量。',
       },
 
       powerDetails: {
@@ -2291,11 +2291,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '决定性场景。Llama 3.3 70B Q4量子化需42GB。RTX 4090有24GB VRAM — 不适合。M5 Max 128GB舒适运行，为上下文窗口和其他应用留有空间。',
           'NVIDIA的变通方案之一是双RTX 3090（两张二手卡约$2,800–3,100，仅含显卡）或RTX A6000（请查看当前供应商价格）— 仅双3090方案的成本就超过Mac Mini M5 Pro，且耗电约为Mac Studio M5 Max的8倍（按表中费率每年$437对$55）。',
           '**2. 常时开启安静AI服务器**',
-          'Mac Mini负载18–35W接近无声。RTX 4090桌面250–450W有3+风扇平均50–70 dB。嘈杂GPU rig在家办公不可行；Mac Mini在壁橱内无音运行。',
+          'Mac Mini负载18–35W接近无声。许多RTX 4090桌面（250–450W）在负载下可听见噪音（噪音取决于显卡和机箱）。嘈杂的GPU rig在家庭办公室里可能不实用，相比之下Mac Mini几乎无声。',
           '电力成本差分：约$35/年（Mac Mini）对$394/年（RTX 4090）24/7运行。超5年：仅电力就节省$1,795。',
           '苹果2026年8月25日的更新为该场景提供了更便宜的入门选择：M6 Mac mini（$899，最高32GB统一内存），适合不需要M5 Pro 64GB上限的用户。',
           '**3. 便携AI工作站（MacBook Pro M5 Pro）**',
-          'MacBook Pro M5 Pro 64GB统一内存在旅行中18–22 tok/s运行32B模型。据我们所知，没有价格相当且内存相当的NVIDIA笔记本。离散笔记本GPU限16GB VRAM，将模型大小限制到13B最多。',
+          'MacBook Pro M5 Pro 64GB统一内存在旅行中18–22 tok/s运行32B模型。据我们所知，没有价格相当且内存相当的NVIDIA笔记本。大多数独立笔记本GPU最高为16GB VRAM（请查看具体笔记本的规格），因此常见模型大小限制在约13B。',
           '**4. 多模型堆栈（Voice + Vision + LLM同时）**',
           '语音助手管道需Whisper STT（3GB）+ LLM（8GB）+ TTS（1GB）= 12GB最少。RTX 4090 24GB处理很紧。M5 Pro 64GB处理这个加vision模型（LLaVA 6GB）加RAG embeddings — 全部同时加载即时切换。',
           '**5. EU电力成本和可持续性限制**',
@@ -2382,7 +2382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '应该等M5 Ultra吗？',
-            a: 'M5 Ultra现已正式发布。苹果2026年8月25日的更新将Mac Studio M5 Ultra定价为$5,499（96GB统一内存基础版），最高可扩展至苹果宣布2026年10月下旬上市的512GB顶配（供货情况和价格请查看苹果官网）。如果需要最大内存：512GB版本是苹果已宣布的内存最大的Mac配置。如果现在需要硬件：Mac Studio M5 Max 128GB（$2,499起，2026年9月22日上市）是大模型的当前最佳选择。',
+            a: 'M5 Ultra现已正式发布。苹果2026年8月25日的更新将Mac Studio M5 Ultra定价为$5,499（96GB统一内存基础版），最高可扩展至苹果宣布2026年10月下旬上市的512GB顶配（当前供货情况和价格请查看苹果官网）。如果需要最大内存：512GB版本是苹果已宣布的内存最大的Mac配置。如果现在需要硬件：Mac Studio M5 Max 128GB（$2,499起，2026年9月22日上市）是大模型的当前最佳选择。',
           },
           {
             q: '能在Mac上做多GPU吗？',
@@ -2406,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 5090改变这个对比吗？',
-            a: 'RTX 5090（32GB VRAM、已发布；请查看当前供货与价格）升高NVIDIA能力天花板但未改统一内存优势。70B模型不适合32GB Q4量子化（需~42GB）。M5 Max 128GB和M5 Ultra（Mac Studio顶配现已达512GB，苹果宣布2026年10月下旬上市）对大模型推理仍是少数单机选项之一。',
+            a: 'RTX 5090（32GB VRAM、已发布；请查看当前供货与价格）升高NVIDIA能力天花板但未改统一内存优势。70B模型不适合32GB Q4量子化（需~42GB）。M5 Max 128GB和M5 Ultra（Mac Studio顶配现已达512GB，苹果宣布2026年10月下旬上市；当前供货情况请查看苹果官网）对大模型推理仍是少数单机选项之一。',
           },
           {
             q: '能在多Macs间共享VRAM吗？',
@@ -2455,7 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU 로컬 LLM',
     targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX 벤치마크', '로컬 AI 플랫폼 비교', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
-    leadAnswerBlock: '**분기점: 모델 크기 약 24GB. RTX 4090(1,008 GB/s)은 8B–24B 모델에서 더 빠릅니다. M5 Max(128GB 통합 메모리)는 70B 모델을 단일 머신에서 실행할 수 있는 몇 안 되는 소비자 옵션 중 하나입니다(VRAM이나 통합 메모리가 더 큰 대안도 있습니다). Apple의 2026년 8월 25일 업데이트로 보급형 Mac mini M6($899부터, 최대 32GB)가 추가되었고, Mac Studio M5 Ultra의 통합 메모리 상한이 512GB(최상위 구성, Apple이 2026년 10월 하순 출시 예정으로 발표했으며 제공 여부는 Apple 웹사이트에서 확인하십시오)로 상향되었습니다. 추정 3년 TCO(표 참조): Mac Mini M5 Pro $1,804 대 RTX 4090 데스크탑 $4,682. 추정 전력: Mac Mini $35/년 대 RTX 4090 $394/년(24/7 가동 기준).**',
+    leadAnswerBlock: '**분기점: 모델 크기 약 24GB. RTX 4090(1,008 GB/s)은 8B–24B 모델에서 더 빠릅니다. M5 Max(128GB 통합 메모리)는 70B 모델을 단일 머신에서 실행할 수 있는 몇 안 되는 소비자 옵션 중 하나입니다(VRAM이나 통합 메모리가 더 큰 대안도 있습니다). Apple의 2026년 8월 25일 업데이트로 보급형 Mac mini M6($899부터, 최대 32GB)가 추가되었고, Mac Studio M5 Ultra의 통합 메모리 상한이 512GB(최상위 구성, Apple이 2026년 10월 하순 출시 예정으로 발표했으며 현재 제공 여부는 Apple 웹사이트에서 확인하십시오)로 상향되었습니다. 추정 3년 TCO(표 참조): Mac Mini M5 Pro $1,804 대 RTX 4090 데스크탑 $4,682. 추정 전력: Mac Mini $35/년 대 RTX 4090 $394/년(24/7 가동 기준).**',
     ctaText: '로컬 AI를 위해 Mac과 NVIDIA 중에서 고민 중이십니까? PromptQuorum으로 두 플랫폼 중 하나에서 실행 중인 Llama 또는 Mistral 로컬 출력을 GPT-4, Claude, Gemini 등 22개 모델과 비교하십시오. $900–5,500의 하드웨어 투자를 결정하기 전에 해당 하드웨어가 귀하의 특정 작업에서 클라우드 수준의 결과를 제공하는지 검증하십시오.',
     quickAnswerTop: {
       en: {
@@ -2517,7 +2517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설정 시간: Mac에서 Ollama = 5분. Linux/Windows에서 CUDA + 드라이버 + 프레임워크 = 30–60분.',
           '하이브리드 설정이 효과적입니다: 일상적인 추론에는 Mac(휴대 가능, 무소음, 70B 지원), 파인튜닝에는 NVIDIA 데스크탑(CUDA 에코시스템). 총 비용: 두 기기 합산 $6,000.',
           'Apple은 2026년 8월 25일 Mac mini 및 Mac Studio 라인업을 새로 개편했습니다: 보급형 Mac mini M6($899부터, 최대 32GB, 170GB/s), Mac mini M5 Pro($1,699부터, 최대 64GB, 307GB/s, Thunderbolt 5), Mac Studio M5 Max($2,499부터, 최대 128GB), Mac Studio M5 Ultra($5,499부터, 96GB 기본) — 모두 2026년 9월 22일 출시됩니다.',
-          'M5 Ultra는 이제 Mac Studio 최상위 구성에서 공식적으로 512GB 통합 메모리까지 확장되며, Apple이 2026년 10월 하순 출시 예정으로 발표했습니다(제공 여부와 가격은 Apple 웹사이트에서 확인하십시오). 메모리 용량은 매우 큰 모델에도 여유가 있지만 PromptQuorum은 테스트하지 않았습니다.',
+          'M5 Ultra는 이제 Mac Studio 최상위 구성에서 공식적으로 512GB 통합 메모리까지 확장되며, Apple이 2026년 10월 하순 출시 예정으로 발표했습니다(현재 제공 여부와 가격은 Apple 웹사이트에서 확인하십시오). 메모리 용량은 매우 큰 모델에도 여유가 있지만 PromptQuorum은 테스트하지 않았습니다.',
           '범위: 이 가이드는 Apple Silicon과 NVIDIA GPU만을 다룹니다. CPU 전용 추론을 세 번째 옵션으로 평가하고 계신다면 [로컬 LLM용 GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)을 참조하십시오.',
         ],
       },
@@ -2540,13 +2540,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델 크기': '70B Q8 (~74 GB)', 'RTX 4090 (24GB VRAM)': '✗ 적재 불가', 'M5 Max (128GB 통합)': '✓ 적재 가능' },
           { '모델 크기': 'Llama 405B Q3 (~200 GB)', 'RTX 4090 (24GB VRAM)': '✗ 적재 불가', 'M5 Max (128GB 통합)': '✗ 적재 불가 (M5 Ultra 필요)' },
         ],
-        note: '24GB를 초과하는 모델의 경우, Apple Silicon은 이중 GPU 시스템 없이 단일 머신에서 사용할 수 있는 몇 안 되는 소비자 옵션 중 하나입니다. Apple의 2026년 8월 25일 업데이트로 이 상한이 한층 더 높아졌습니다: Mac Studio M5 Ultra에는 512GB 통합 메모리 구성이 있으며 Apple이 2026년 10월 하순 출시 예정으로 발표했습니다(제공 여부는 Apple 웹사이트에서 확인하십시오). 대형 오픈 웨이트 모델에도 상당한 여유가 있습니다.',
+        note: '24GB를 초과하는 모델의 경우, Apple Silicon은 이중 GPU 시스템 없이 단일 머신에서 사용할 수 있는 몇 안 되는 소비자 옵션 중 하나입니다. Apple의 2026년 8월 25일 업데이트로 이 상한이 한층 더 높아졌습니다: Mac Studio M5 Ultra에는 512GB 통합 메모리 구성이 있으며 Apple이 2026년 10월 하순 출시 예정으로 발표했습니다(현재 제공 여부는 Apple 웹사이트에서 확인하십시오). 대형 오픈 웨이트 모델에도 상당한 여유가 있습니다.',
       },
 
       benchmarks: {
         id: 'benchmarks',
         title: '직접 벤치마크 비교: 초당 토큰 수',
-        content: '수치는 참고용 범위이며, PromptQuorum은 이 하드웨어를 독립적으로 벤치마크하지 않았습니다. 보고된 tok/s는 생성 속도입니다. Llama 3.1 8B Q4 행의 RTX 4090 셀은 [llama.cpp 벤치마크 스레드 #15013](https://github.com/ggml-org/llama.cpp/discussions/15013)에 올라온 Llama 2 7B Q4_0(다른 모델)의 커뮤니티 수치이며, 나머지 셀은 모두 참고용 추정치로 PromptQuorum이 측정한 값이 아닙니다. 참고: 이 수치는 Apple의 2026년 8월 25일 Mac mini/Mac Studio 하드웨어 및 가격 업데이트(신모델은 2026년 9월 22일 출시) 이전 데이터입니다. 새로 출시되는 모델에 대한 독립적인 tok/s 벤치마크는 아직 존재하지 않으며, 새로운 구성에 대해서는 Apple 자체의 성능 발표만 있을 뿐 본 표에는 포함되어 있지 않습니다.',
+        content: '수치는 참고용 범위이며, PromptQuorum은 이 하드웨어를 독립적으로 벤치마크하지 않았습니다. 보고된 tok/s는 생성 속도입니다. Llama 3.1 8B Q4 행의 RTX 4090 셀은 [llama.cpp 벤치마크 스레드 #15013](https://github.com/ggml-org/llama.cpp/discussions/15013)에 올라온 Llama 2 7B Q4_0(다른 모델)의 커뮤니티 수치이며, 나머지 셀은 모두 메모리 대역폭과 모델 크기로 추정한 참고용 수치로, 공개된 벤치마크에서 가져온 값이 아니며 PromptQuorum이 측정하지 않았습니다. 참고: 이 수치는 Apple의 2026년 8월 25일 Mac mini/Mac Studio 하드웨어 및 가격 업데이트(신모델은 2026년 9월 22일 출시) 이전 데이터입니다. 새로 출시되는 모델에 대한 독립적인 tok/s 벤치마크는 아직 존재하지 않으며, 새로운 구성에 대해서는 Apple 자체의 성능 발표만 있을 뿐 본 표에는 포함되어 있지 않습니다.',
         tableFormat: true,
         columns: ['모델', 'M5 Pro 64GB', 'M5 Max 128GB', 'RTX 4070 12GB', 'RTX 4090 24GB'],
         rows: [
@@ -2575,7 +2575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '구성': 'Dual RTX 3090 (48GB 합계)', '하드웨어': '$3,850', '연간 전기료': '$437', '3년 전기료': '$1,311', '3년 합계': '$5,161' },
           { '구성': 'Mac Studio M5 Ultra 96GB', '하드웨어': '$5,499', '연간 전기료': '$75', '3년 전기료': '$225', '3년 합계': '$5,724' },
         ],
-        note: '가격은 Apple의 2026년 8월 25일 Mac mini/Mac Studio 업데이트(신모델은 2026년 9월 22일 출시)를 반영하며, 이 업데이트로 Mac Studio M5 Max의 시작 가격이 $2,499로 낮아졌고 새로운 보급형 Mac Mini M6가 $899에 추가되었습니다. [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(2026-10-15 업데이트)에는 RTX 4090 신품이 $2,000–3,000, 중고 매물이 약 $2,575–3,010로 나와 있어, 현재 중고가 신품보다 저렴하지 않습니다. 여기에 사용한 $3,500은 완제품 데스크탑의 대표 추정치입니다(GPU 약 $2,600에 나머지 시스템 약 $900, 자체 추정). Dual RTX 3090 행은 같은 기준으로 맞췄습니다. 장당 약 $1,400–1,550인 중고 카드 2장(같은 트래커, 2026-10-15), 중간값 약 $2,950에 동일한 약 $900 시스템(자체 추정)을 더해 총 약 $3,850입니다. 이 수치에서는 3년 기준 dual 3090 구성이 RTX 4090 단일 데스크탑과 Mac Studio M5 Max보다 비쌉니다. Apple은 Mac Studio M5 Ultra의 512GB 최상위 구성을 2026년 10월 하순 출시 예정으로 발표했으며, 본 표에는 포함하지 않았습니다(가격은 Apple 구성 페이지에서 확인하십시오).',
+        note: '가격은 Apple의 2026년 8월 25일 Mac mini/Mac Studio 업데이트(신모델은 2026년 9월 22일 출시)를 반영하며, 이 업데이트로 Mac Studio M5 Max의 시작 가격이 $2,499로 낮아졌고 새로운 보급형 Mac Mini M6가 $899에 추가되었습니다. [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(2026-10-15 업데이트)에는 RTX 4090 신품이 $2,000–3,000, 중고 매물이 약 $2,575–3,010로 나와 있어, 현재 중고가 신품보다 저렴하지 않습니다. 여기에 사용한 $3,500은 완제품 데스크탑의 대표 추정치입니다(GPU 약 $2,600에 나머지 시스템 약 $900, 자체 추정). Dual RTX 3090 행은 같은 기준으로 맞췄습니다. 장당 약 $1,400–1,550인 중고 카드 2장(같은 트래커, 2026-10-15), 중간값 약 $2,950에 동일한 약 $900 시스템(자체 추정)을 더해 총 약 $3,850입니다. 이 수치에서는 3년 기준 dual 3090 구성이 RTX 4090 단일 데스크탑과 Mac Studio M5 Max보다 비쌉니다. Apple은 Mac Studio M5 Ultra의 512GB 최상위 구성을 2026년 10월 하순 출시 예정으로 발표했으며(현재 제공 여부는 Apple 웹사이트에서 확인하십시오), 본 표에는 포함하지 않았습니다(가격은 Apple 구성 페이지에서 확인하십시오). M6/M5 Pro의 연간 전기료는 새 칩에 대한 독립적인 측정이 나올 때까지 이전 세대 Mac mini의 수치를 그대로 사용했습니다.',
       },
 
       powerDetails: {
@@ -2602,11 +2602,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '결정적인 시나리오입니다. Llama 3.3 70B는 Q4 양자화 기준으로 42GB가 필요합니다. RTX 4090은 24GB VRAM을 가지고 있어 적재할 수 없습니다. M5 Max 128GB는 컨텍스트 창과 다른 애플리케이션을 위한 여유 공간을 남기면서 여유 있게 실행합니다.',
           'NVIDIA 우회 방법 중 하나는 Dual RTX 3090(중고 카드 2장 약 $2,800–3,100, 카드만 해당) 또는 RTX A6000(현재 판매처 가격을 확인하십시오)이지만, Dual 3090 구성만으로도 Mac Mini M5 Pro보다 비용이 더 들고 Mac Studio M5 Max의 약 8배 전력을 소비합니다(표의 요금 기준 연 $437 대 $55).',
           '**2. 상시 가동 무소음 AI 서버**',
-          '부하 시 18–35W로 동작하는 Mac Mini는 거의 무소음입니다. RTX 4090이 장착된 데스크탑은 250–450W에서 3개 이상의 팬이 평균 50–70 dB의 소음을 냅니다. 홈 오피스에서 시끄러운 GPU 리그는 실용적이지 않으며, Mac Mini는 수납장 안에서도 조용하게 동작합니다.',
+          '부하 시 18–35W로 동작하는 Mac Mini는 거의 무소음입니다. RTX 4090이 장착된 데스크탑 다수(250–450W)는 부하 시 소음이 들립니다(소음은 카드와 케이스에 따라 다릅니다). 시끄러운 GPU 리그는 홈 오피스에서 실용적이지 않을 수 있으며, Mac Mini는 비교하면 거의 무소음입니다.',
           '전기 비용 차이: $35/년(Mac Mini) 대 $394/년(RTX 4090) 24/7 가동 기준. 5년간: 전기료만으로 $1,795 절약.',
           'Apple의 2026년 8월 25일 업데이트로 이 용도에 더 저렴한 진입점이 추가되었습니다: M5 Pro의 64GB 상한이 필요하지 않은 사용자를 위한 Mac mini M6($899, 최대 32GB 통합 메모리).',
           '**3. 휴대용 AI 워크스테이션 (MacBook Pro M5 Pro)**',
-          'MacBook Pro M5 Pro(64GB 통합 메모리)는 이동 중에도 32B 모델을 18–22 tok/s로 실행합니다. 동일한 메모리와 비슷한 가격을 가진 NVIDIA 노트북은 당사가 아는 한 없습니다. 개별 노트북 GPU는 VRAM이 최대 16GB로 제한되어 모델 크기를 최대 13B로 제약합니다.',
+          'MacBook Pro M5 Pro(64GB 통합 메모리)는 이동 중에도 32B 모델을 18–22 tok/s로 실행합니다. 동일한 메모리와 비슷한 가격을 가진 NVIDIA 노트북은 당사가 아는 한 없습니다. 대부분의 개별 노트북 GPU는 VRAM이 최대 16GB 수준이므로(개별 노트북의 사양을 확인하십시오) 일반적인 모델 크기는 약 13B로 제한됩니다.',
           '**4. 다중 모델 스택 (음성 + 비전 + LLM 동시 실행)**',
           '음성 어시스턴트 파이프라인은 Whisper STT(3GB) + LLM(8GB) + TTS(1GB) = 최소 12GB가 필요합니다. RTX 4090 24GB는 이를 겨우 처리합니다. M5 Pro 64GB는 이에 더해 비전 모델(LLaVA 6GB)과 RAG 임베딩까지 — 모두 동시에 로드한 채 즉각 전환하며 처리합니다.',
           '**5. EU 전력 비용 및 지속가능성 제약**',
@@ -2693,7 +2693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'M5 Ultra를 기다려야 할까요?',
-            a: 'M5 Ultra는 이제 공식 출시되었습니다. Apple의 2026년 8월 25일 업데이트로 Mac Studio M5 Ultra는 $5,499(96GB 통합 메모리 기본)로 책정되었으며, Apple이 2026년 10월 하순 출시 예정으로 발표한 512GB 최상위 구성까지 확장됩니다(제공 여부와 가격은 Apple 웹사이트에서 확인하십시오). 최대 메모리가 필요하다면 512GB 구성이 Apple이 발표한 Mac 중 메모리가 가장 큰 구성입니다. 지금 당장 하드웨어가 필요하다면 Mac Studio M5 Max 128GB($2,499부터, 2026년 9월 22일 출시)가 대형 모델을 위한 현재 최선의 선택입니다.',
+            a: 'M5 Ultra는 이제 공식 출시되었습니다. Apple의 2026년 8월 25일 업데이트로 Mac Studio M5 Ultra는 $5,499(96GB 통합 메모리 기본)로 책정되었으며, Apple이 2026년 10월 하순 출시 예정으로 발표한 512GB 최상위 구성까지 확장됩니다(현재 제공 여부와 가격은 Apple 웹사이트에서 확인하십시오). 최대 메모리가 필요하다면 512GB 구성이 Apple이 발표한 Mac 중 메모리가 가장 큰 구성입니다. 지금 당장 하드웨어가 필요하다면 Mac Studio M5 Max 128GB($2,499부터, 2026년 9월 22일 출시)가 대형 모델을 위한 현재 최선의 선택입니다.',
           },
           {
             q: 'Mac에서 멀티 GPU를 사용할 수 있습니까?',
@@ -2717,7 +2717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 5090이 이 비교를 바꿉니까?',
-            a: 'RTX 5090(32GB VRAM, 이미 출시됨; 현재 재고와 가격은 확인 필요)은 NVIDIA 성능 상한을 높이지만 통합 메모리 이점을 변경하지는 않습니다. 70B 모델은 Q4 양자화에서 여전히 32GB에 맞지 않습니다(약 42GB 필요). M5 Max 128GB와 M5 Ultra(Mac Studio 최상위 구성 기준 이제 최대 512GB, Apple이 2026년 10월 하순 출시 예정으로 발표)는 대형 모델 추론에서 단일 머신으로 쓸 수 있는 몇 안 되는 옵션으로 남습니다.',
+            a: 'RTX 5090(32GB VRAM, 이미 출시됨; 현재 재고와 가격은 확인 필요)은 NVIDIA 성능 상한을 높이지만 통합 메모리 이점을 변경하지는 않습니다. 70B 모델은 Q4 양자화에서 여전히 32GB에 맞지 않습니다(약 42GB 필요). M5 Max 128GB와 M5 Ultra(Mac Studio 최상위 구성 기준 이제 최대 512GB, Apple이 2026년 10월 하순 출시 예정으로 발표했으며 현재 제공 여부는 Apple 웹사이트에서 확인하십시오)는 대형 모델 추론에서 단일 머신으로 쓸 수 있는 몇 안 되는 옵션으로 남습니다.',
           },
           {
             q: '여러 Mac 간에 VRAM을 공유할 수 있습니까?',
