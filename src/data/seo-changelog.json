@@ -28954,6 +28954,10 @@
     ],
     "reason": "geo-meta-optimizer (no GSC data - data-free): JA title over budget 24-32 chars (35 -> 33 -> 31)",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   }
 ]
