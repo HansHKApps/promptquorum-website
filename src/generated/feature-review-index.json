@@ -2023,5 +2023,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "oriveo-review",
     "url": "/power-local-llm/oriveo-review"
+  },
+  "open-paper": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-paper-review",
+    "url": "/power-local-llm/open-paper-review"
   }
 }

@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 381,
+    "totalCount": 382,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 197,
+    "totalCount": 198,
     "capped": true
   },
   "vLLM": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 190,
+    "totalCount": 191,
     "capped": true
   },
   "Atomic Chat": {
@@ -3661,6 +3661,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "open-paper-review",
+        "title": "Open Paper Review: AI Workspace for Reading Research Papers",
+        "url": "/power-local-llm/open-paper-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -3722,17 +3730,9 @@
         "url": "/power-local-llm/sidekick-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "surf-review",
-        "title": "Surf Review: Deta's Open-Source AI Notebook",
-        "url": "/power-local-llm/surf-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "Dify": {
@@ -10252,9 +10252,17 @@
         "url": "/power-local-llm/surfsense-review",
         "dateModified": "2026-10-21",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-paper-review",
+        "title": "Open Paper Review: AI Workspace for Reading Research Papers",
+        "url": "/power-local-llm/open-paper-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Strata": {
@@ -11310,9 +11318,17 @@
         "url": "/power-local-llm/kition-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-paper-review",
+        "title": "Open Paper Review: AI Workspace for Reading Research Papers",
+        "url": "/power-local-llm/open-paper-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "SoloMD": {
@@ -16212,6 +16228,20 @@
         "slug": "oriveo-review",
         "title": "Oriveo Review: Bring-Your-Own-Key Multi-Model AI Chat",
         "url": "/power-local-llm/oriveo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Open Paper": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-paper-review",
+        "title": "Open Paper Review: AI Workspace for Reading Research Papers",
+        "url": "/power-local-llm/open-paper-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
