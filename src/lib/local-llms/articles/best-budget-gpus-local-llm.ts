@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Best budget GPU for local LLMs 2026: RTX 3060 12GB ($320–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-en.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**RTX 3060 12GB (about $320–350 used) is our pick for the most balanced used budget GPU for local LLMs in 2026 (VRAM, speed and price, based on the prices and estimates below): it runs Qwen3 14B at an estimated 9–12 tok/sec and Qwen3 8B at an estimated 16–20 tok/sec at Q4. The RTX 5060 Ti 16GB (about $620 new, roughly 44% over MSRP; lowest asking price per BuySellRAM, 2026-10-11) is the new-card pick.**',
       quickAnswerTop: {
         question: 'What is the best budget GPU for local LLMs in 2026?',
@@ -185,7 +185,7 @@ rows: [
           items: [
             'Buying a 4GB RTX 2060 and expecting smooth 7B inference--you\'ll hit out-of-memory errors constantly.',
             'Pairing a $300 GPU with a $30 PSU (power supply)--voltage sag kills stability. A 650 W 80+ Gold unit is a common starting point for a $300 GPU build; check your parts\' combined draw and the card maker\'s guidance (not electrical-safety advice).',
-            'Assuming DDR5 RAM and i9 CPU speed up LLM inference--they don\'t. GPU VRAM bandwidth is one of the main bottlenecks for inference speed.',
+            'Assuming DDR5 RAM and an i9 CPU speed up LLM inference; they usually do little for GPU-only inference. GPU VRAM bandwidth is one of the main bottlenecks for inference speed.',
             'Assuming Llama 4 Scout fits 12 GB. Scout is a 17B-active / 109B-total MoE that needs ~55 GB at Q4 (it only squeezes into 24 GB at 1.78-bit, ~20 tok/s). On a 12 GB RTX 3060, run dense models instead: Qwen3 14B (~9 GB), Qwen3 8B, or Gemma 4 12B.',
             'Buying a 16 GB card just for 13B models. A 12 GB RTX 3060 already runs Qwen3 14B at Q4. Step up to 16 GB only if you specifically need gpt-oss:20b (16 GB), dense 20B+ models, or more context headroom.',
           ],
@@ -271,7 +271,7 @@ schema: {
         'description': 'What local LLMs can you run on RTX 3060 12GB or 6GB? See best models for coding, chat, and reasoning in 2026 with real VRAM limits and performance tips.',
         'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -449,7 +449,7 @@ schema: {
       metaDescription: 'Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($320–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-es.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**La RTX 3060 12GB (unos $320–350 usada) es nuestra elección de GPU económica de segunda mano más equilibrada para LLMs locales en 2026 (VRAM, velocidad y precio, según los precios y estimaciones de esta guía). La RTX 5060 Ti 16GB (unos $620, 44 % sobre el PVP; precio mínimo pedido según BuySellRAM, 2026-10-11) es la opción nueva.**',
       nextStep: {
         text: '¿Ya tienes tu GPU? Ahora elige el software adecuado para ejecutar modelos en ella.',
@@ -577,7 +577,7 @@ rows: [
           items: [
             'Comprar una RTX 2060 de 4GB esperando una inferencia fluida de 7B — obtendrás errores de memoria constantemente.',
             'Combinar una GPU de $300 con una fuente de alimentación de $30 — la caída de voltaje arruina la estabilidad. Una fuente de 650 W 80+ Gold es un punto de partida habitual para una GPU de $300; comprueba el consumo combinado de tus componentes y las indicaciones del fabricante de la tarjeta (no es un consejo de seguridad eléctrica).',
-            'Asumir que la RAM DDR5 y la CPU i9 aceleran la inferencia de LLMs — no lo hacen. El ancho de banda de la VRAM de la GPU es uno de los principales cuellos de botella para la velocidad de inferencia.',
+            'Asumir que la RAM DDR5 y la CPU i9 aceleran la inferencia de LLMs; normalmente aportan poco en inferencia solo con GPU. El ancho de banda de la VRAM de la GPU es uno de los principales cuellos de botella para la velocidad de inferencia.',
             'Asumir que Llama 4 Scout cabe en 12 GB. Scout es un MoE de 17B activos / 109B totales que necesita ~55 GB en Q4 (solo entra en 24 GB con un cuant extremo de 1.78-bit, ~20 tok/s). En una RTX 3060 de 12 GB, ejecuta modelos densos en su lugar: Qwen3 14B (~9 GB), Qwen3 8B o Gemma 4 12B.',
             'Comprar una tarjeta de 16 GB solo para modelos 13B. Una RTX 3060 de 12 GB ya ejecuta Qwen3 14B en Q4. Pasa a 16 GB solo si necesitas específicamente gpt-oss:20b (16 GB), modelos densos de 20B+ o más margen de contexto.',
           ],
@@ -653,7 +653,7 @@ rows: [
         'description': '¿Qué LLMs locales puedes ejecutar en RTX 3060 12GB o 6GB? Consulta los mejores modelos para código, chat y razonamiento en 2026 con límites reales de VRAM y consejos de rendimiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -821,7 +821,7 @@ rows: [
       metaDescription: 'أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (320–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-ar.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**تُعد RTX 3060 12GB (نحو 320–350 دولار مستعملة) في رأينا أكثر GPU اقتصادية مستعملة توازناً لنماذج LLM المحلية في 2026 (VRAM والسرعة والسعر، بناءً على الأسعار والتقديرات في هذا الدليل): تشغّل Qwen3 14B بسرعة تقديرية 9–12 tok/ث وQwen3 8B بسرعة تقديرية 16–20 tok/ث بتكميم Q4. أما RTX 5060 Ti 16GB (نحو 620 دولار جديدة، أي نحو 44% فوق السعر الرسمي; أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) فهي خيار البطاقة الجديدة.**',
       nextStep: {
         text: 'هل لديك GPU بالفعل؟ الآن اختر البرنامج المناسب لتشغيل النماذج عليها.',
@@ -885,7 +885,7 @@ rows: [
             '**النسخة بسعة 6GB محدودة جداً.** نماذج 3B فقط تتسع بأريحية. تحتاج نماذج 7B بصيغة Q4 إلى ~7GB — أكثر من المتاح. يعمل التفريغ إلى CPU لكنه يقلل السرعة بنسبة 50–70%. السرعات في هذا القسم تقديرات تقريبية وليست قياسات من عندنا.',
           ],
           items: [
-            '**Phi-4 Mini 3.8B (Q4):** ~3GB VRAM، 20–25 tok/ث. أفضل استدلال في هذا الحجم. قوي للرياضيات والمنطق.',
+            '**Phi-4 Mini 3.8B (Q4):** ~3GB VRAM، 20–25 tok/ث. استدلال جيد بالنسبة لحجمه (في تقييمنا). قوي للرياضيات والمنطق.',
             '**Llama 3.2 3B (Q4):** ~2.5GB VRAM، 25–35 tok/ث. الخيار الأسرع. جيد للمحادثة البسيطة والأسئلة والأجوبة.',
             '**Gemma 2 2B (Q4):** ~1.7GB VRAM، 35–45 tok/ث. النموذج الأخف. جيد لاختبار الإعدادات.',
             '**7B مع التفريغ:** ممكن لكنه بطيء. Llama 7B مع تفريغ إلى CPU = ~5–8 tok/ث. صالح فقط للعمل الدفعي غير التفاعلي.',
@@ -948,7 +948,7 @@ rows: [
           items: [
             'شراء RTX 2060 بسعة 4GB توقعاً لاستدلال سلس لـ 7B — ستحصل على أخطاء ذاكرة باستمرار.',
             'دمج GPU بـ 300 دولار مع مصدر طاقة بـ 30 دولاراً — يفسد انخفاض الجهد الاستقرار. مصدر طاقة بقدرة 650 واط وشهادة 80+ Gold نقطة انطلاق شائعة لبناء بـ GPU بسعر 300 دولار؛ تحقق من الاستهلاك المجمّع لمكوّناتك ومن إرشادات الشركة المصنّعة للبطاقة (وليس نصيحة للسلامة الكهربائية).',
-            'افتراض أن ذاكرة DDR5 ومعالج i9 يسرّعان استدلال LLM — لا يفعلان ذلك. عرض نطاق VRAM في GPU هو أحد الاختناقات الرئيسية لسرعة الاستدلال.',
+            'افتراض أن ذاكرة DDR5 ومعالج i9 يسرّعان استدلال LLM؛ وهما عادةً لا يضيفان الكثير عند الاستدلال على GPU فقط. عرض نطاق VRAM في GPU هو أحد الاختناقات الرئيسية لسرعة الاستدلال.',
             'افتراض أن Llama 4 Scout يتسع في 12 GB. Scout هو MoE بـ 17B نشطة / 109B إجمالاً يحتاج ~55 GB بصيغة Q4 (يدخل فقط في 24 GB بتكميم متطرف 1.78 بت، ~20 tok/ث). على RTX 3060 بسعة 12 GB، شغّل نماذج كثيفة بدلاً من ذلك: Qwen3 14B (~9 GB)، Qwen3 8B أو Gemma 4 12B.',
             'شراء بطاقة 16 GB فقط لنماذج 13B. تشغّل RTX 3060 بسعة 12 GB بالفعل Qwen3 14B بصيغة Q4. انتقل إلى 16 GB فقط إذا كنت تحتاج تحديداً gpt-oss:20b (16 GB)، أو نماذج كثيفة 20B+ أو هامش سياق أكبر.',
           ],
@@ -1024,7 +1024,7 @@ rows: [
         'description': 'أي نماذج LLM محلية يمكنك تشغيلها على RTX 3060 12GB أو 6GB؟ راجع أفضل النماذج للبرمجة والمحادثة والاستدلال في 2026 بحدود VRAM حقيقية ونصائح للأداء.',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1192,7 +1192,7 @@ rows: [
       metaDescription: 'Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 320–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-pt.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**A RTX 3060 12 GB (US$ 320–350 usada) é, na nossa avaliação, a GPU econômica usada mais equilibrada para LLMs locais (VRAM, velocidade e preço, com base nos preços e estimativas deste guia); a RTX 5060 Ti 16 GB (~US$ 620, 44% acima do MSRP; menor preço pedido segundo a BuySellRAM, 2026-10-11) é a opção nova.**',
       quickAnswerTop: {
         question: 'Qual é a melhor GPU econômica para LLMs locais em 2026?',
@@ -1339,7 +1339,7 @@ rows: [
           items: [
             'Comprar uma RTX 2060 de 4 GB esperando inferência fluida de 7B -- você vai enfrentar erros de memória constantemente.',
             'Combinar uma GPU de US$ 300 com uma fonte de US$ 30 -- a queda de tensão mata a estabilidade. Uma fonte de 650 W 80+ Gold é um ponto de partida comum para uma GPU de US$ 300; confira o consumo combinado das suas peças e as orientações do fabricante da placa (não é aconselhamento de segurança elétrica).',
-            'Assumir que RAM DDR5 e CPU i9 aceleram a inferência de LLMs -- não aceleram. A largura de banda da VRAM da GPU é um dos principais gargalos para a velocidade de inferência.',
+            'Assumir que RAM DDR5 e CPU i9 aceleram a inferência de LLMs; geralmente ajudam pouco na inferência somente com GPU. A largura de banda da VRAM da GPU é um dos principais gargalos para a velocidade de inferência.',
             'Assumir que o Llama 4 Scout cabe em 12 GB. O Scout é um MoE de 17B ativos / 109B no total que precisa de ~55 GB em Q4 (só cabe em 24 GB com quantização extrema de 1,78 bit, ~20 tok/s). Numa RTX 3060 de 12 GB, rode modelos densos: Qwen3 14B (~9 GB), Qwen3 8B ou Gemma 4 12B.',
             'Comprar uma placa de 16 GB só para modelos 13B. Uma RTX 3060 de 12 GB já roda o Qwen3 14B em Q4. Suba para 16 GB só se você precisar especificamente do gpt-oss:20b (16 GB), modelos densos de 20B+ ou mais margem de contexto.',
           ],
@@ -1381,8 +1381,8 @@ rows: [
             { q: 'Qual é a melhor GPU NVIDIA econômica para inferência de LLM local?', a: 'RTX 4060 Ti (8 GB, cerca de US$ 420 nova ou US$ 350 usada) para modelos 7B, ou RTX 4070 Super (12 GB, cerca de US$ 700 nova ou US$ 620 usada) para modelos 13B (menores preços pedidos segundo a BuySellRAM, 2026-10-11). Usada: estima-se que a RTX 3060 12GB (US$ 320–350) rode modelos 7-13B em Q4. Na nossa avaliação, a RTX 3060 12GB usada é uma opção equilibrada, e a RX 6700 XT tem o menor preço por GB se você aceitar o compromisso com o ROCm; a RTX 5060 Ti 16GB (cerca de US$ 620; menor preço pedido segundo a BuySellRAM, 2026-10-11) é a nossa escolha para uma placa nova.' },
             { q: 'Como a AMD 6800 XT se compara à RTX 4070 para inferência de IA?', a: 'A AMD RX 6800 XT tem 16 GB de VRAM contra 12 GB da RTX 4070, mas pode ficar atrás na velocidade de inferência de LLM (a diferença depende do modelo, do backend e da configuração). Na nossa avaliação, a configuração do driver ROCm para llama.cpp tem sido, em geral, mais complexa que CUDA. Para trabalho puro com LLM, a RTX 4070 provavelmente é mais fácil; se você também joga, a VRAM extra da 6800 XT pode oferecer melhor custo-benefício, na nossa opinião. Não medimos nenhuma das duas placas, então use isto como orientação geral.' },
             { q: 'Qual é a GPU com melhor preço por GB de VRAM para LLMs locais em 2026?', a: 'RX 6700 XT usada (12 GB, US$ 175–315) = US$ 15-26 por GB. RTX 3060 usada (12 GB, ~US$ 320–350) = US$ 27-29 por GB. RTX 3090 usada (24 GB, cerca de US$ 1.400-1.550) = US$ 58-65 por GB. RTX 4070 Super nova (12 GB, ~US$ 700, menor preço pedido segundo a BuySellRAM, 2026-10-11) = cerca de US$ 58 por GB. Melhor valor na nossa avaliação: RX 6700 XT se você aceitar o ROCm; caso contrário, RTX 3060 12GB usada. Observe que o preço da RTX 3090 usada está agora bem acima dos níveis antigos, então ela deixou de ser a pechincha de capacidade que era. O preço da RTX 3090 vem de listagens vendidas observadas no eBay EUA ([rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15).' },
-            { q: 'A RTX 3060 12 GB funciona bem para conteúdo em português?', a: 'Sim. A GPU apenas executa o modelo -- a qualidade do idioma depende do modelo escolhido. Qwen3 8B ou Qwen3 14B (ambos com excelente suporte em português) rodam bem na RTX 3060 12 GB.' },
-            { q: 'Onde comprar uma RTX 3060 12 GB usada no Brasil?', a: 'Mercado Livre, OLX e grupos de Facebook são as melhores fontes para GPUs usadas no Brasil. Nos EUA, uma RTX 3060 12 GB usada custa cerca de US$ 320–350; no Brasil, espere pagar bem mais por causa de impostos de importação e frete, e mais caro que há um ano. Verifique a procedência e teste antes de comprar.' },
+            { q: 'A RTX 3060 12 GB funciona bem para conteúdo em português?', a: 'Sim. A GPU apenas executa o modelo -- a qualidade do idioma depende do modelo escolhido. Qwen3 8B e Qwen3 14B têm suporte multilíngue que inclui o português (confira o model card) e rodam na RTX 3060 12 GB.' },
+            { q: 'Onde comprar uma RTX 3060 12 GB usada no Brasil?', a: 'Mercado Livre, OLX e grupos de Facebook são fontes comuns de GPUs usadas no Brasil; confira os preços atuais, que podem incluir impostos de importação e frete. Nos EUA, uma RTX 3060 12 GB usada custa cerca de US$ 320–350; no Brasil, espere pagar bem mais por causa de impostos de importação e frete. Verifique a procedência e teste antes de comprar.' },
             { q: 'Posso usar uma AMD RX 6700 ou 6800 XT em vez da NVIDIA para LLMs locais?', a: 'Sim, mas, na nossa avaliação, o suporte de driver ROCm da AMD para ONNX Runtime tem sido geralmente menos maduro que o CUDA da NVIDIA, e varia conforme a versão. Espere mais atrito na configuração. A NVIDIA/CUDA costuma ser a opção mais simples para builds econômicas.' },
           ],
         },
@@ -1427,7 +1427,7 @@ rows: [
         'url': 'https://www.promptquorum.com/pt/local-llms/best-budget-gpus-local-llm',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1566,7 +1566,7 @@ rows: [
             'name': 'A RTX 3060 12 GB funciona bem para conteúdo em português?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim. A GPU apenas executa o modelo -- a qualidade do idioma depende do modelo escolhido. Qwen3 8B ou Qwen3 14B (ambos com excelente suporte em português) rodam bem na RTX 3060 12 GB.',
+              'text': 'Sim. A GPU apenas executa o modelo -- a qualidade do idioma depende do modelo escolhido. Qwen3 8B e Qwen3 14B têm suporte multilíngue que inclui o português (confira o model card) e rodam na RTX 3060 12 GB.',
             },
           },
           {
@@ -1574,7 +1574,7 @@ rows: [
             'name': 'Onde comprar uma RTX 3060 12 GB usada no Brasil?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mercado Livre, OLX e grupos de Facebook são as melhores fontes para GPUs usadas no Brasil. Nos EUA, uma RTX 3060 12 GB usada custa cerca de US$ 320–350; no Brasil, espere pagar bem mais por causa de impostos de importação e frete, e mais caro que há um ano. Verifique a procedência e teste antes de comprar.',
+              'text': 'Mercado Livre, OLX e grupos de Facebook são fontes comuns de GPUs usadas no Brasil; confira os preços atuais, que podem incluir impostos de importação e frete. Nos EUA, uma RTX 3060 12 GB usada custa cerca de US$ 320–350; no Brasil, espere pagar bem mais por causa de impostos de importação e frete. Verifique a procedência e teste antes de comprar.',
             },
           },
           {
@@ -1617,7 +1617,7 @@ rows: [
       metaDescription: 'Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (320–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-de.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**Die RTX 3060 12GB (ca. 320–350 $ gebraucht) ist in unserer Einschätzung die ausgewogenste gebrauchte Budget-GPU für lokale LLMs 2026 (VRAM, Geschwindigkeit und Preis, auf Basis der Preise und Schätzwerte in diesem Leitfaden). Die RTX 5060 Ti 16GB (ca. 620 $ neu, rund 44 % über UVP; niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) ist die Neukauf-Option.**',
       nextStep: { text: 'GPU besorgt? Wählen Sie jetzt die passende Software, um Modelle darauf auszuführen.', label: 'Beste lokale LLM-Frontends 2026 →', href: '/de/local-llms/best-local-llm-frontends' },
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Consumer-Hardware betreiben',
@@ -1697,7 +1697,7 @@ rows: [
         'mistakes': { title: 'Häufige Budget-GPU-Fehler', items: [
           'Eine 4-GB-RTX-2060 kaufen und reibungslose 7B-Inferenz erwarten — Sie werden ständig auf Out-of-Memory-Fehler stoßen.',
           'Eine GPU für 300 $ mit einem Netzteil für 30 $ kombinieren — Spannungseinbrüche killen die Stabilität. Ein 650-W-Netzteil mit 80+ Gold ist ein üblicher Ausgangspunkt für einen Aufbau mit einer 300-$-GPU; prüfen Sie die Gesamtaufnahme Ihrer Komponenten und die Angaben des Kartenherstellers (keine Beratung zur elektrischen Sicherheit).',
-          'Annehmen, dass DDR5-RAM und eine i9-CPU die LLM-Inferenz beschleunigen — tun sie nicht. Die VRAM-Bandbreite der GPU ist einer der wichtigsten Flaschenhälse für die Inferenzgeschwindigkeit.',
+          'Annehmen, dass DDR5-RAM und eine i9-CPU die LLM-Inferenz beschleunigen; bei reiner GPU-Inferenz bringen sie meist wenig. Die VRAM-Bandbreite der GPU ist einer der wichtigsten Flaschenhälse für die Inferenzgeschwindigkeit.',
           'Annehmen, dass Llama 4 Scout in 12 GB passt. Scout ist ein MoE mit 17B aktiven / 109B Gesamt-Parametern, das bei Q4 ca. 55 GB benötigt (es quetscht sich nur bei 1,78-Bit in 24 GB, ca. 20 Tok/s). Auf einer 12-GB-RTX-3060 betreiben Sie stattdessen dichte Modelle: Qwen3 14B (ca. 9 GB), Qwen3 8B oder Gemma 4 12B.',
           'Eine 16-GB-Karte nur für 13B-Modelle kaufen. Eine 12-GB-RTX-3060 betreibt Qwen3 14B bereits bei Q4. Steigen Sie nur auf 16 GB um, wenn Sie speziell gpt-oss:20b (16 GB), dichte 20B+-Modelle oder mehr Kontext-Spielraum benötigen.',
         ] },
@@ -1756,7 +1756,7 @@ rows: [
           'Compliance-Frameworks erfordern auditierbare Workflows. Etablieren Sie Governance-Standards für KI-Prompt-Qualität und -Review: [Prompt-Governance in der Produktion](https://www.promptquorum.com/de/prompt-engineering/prompt-governance-in-production) behandelt Richtlinien, Versionskontrolle und Freigabeprozesse.',
         ] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'RTX 3060 Leitfaden für lokale LLMs 2026: Welche Modelle laufen', 'description': 'Welche lokalen LLMs können Sie auf der RTX 3060 12GB oder 6GB betreiben? Sehen Sie die besten Modelle für Coding, Chat und Reasoning 2026 mit echten VRAM-Grenzen und Performance-Tipps.', 'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-15', 'inLanguage': 'de', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'RTX 3060 Leitfaden für lokale LLMs 2026: Welche Modelle laufen', 'description': 'Welche lokalen LLMs können Sie auf der RTX 3060 12GB oder 6GB betreiben? Sehen Sie die besten Modelle für Coding, Chat und Reasoning 2026 mit echten VRAM-Grenzen und Performance-Tipps.', 'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-18', 'inLanguage': 'de', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', 'mainEntity': [
           {
             '@type': 'Question',
@@ -1909,7 +1909,7 @@ rows: [
       metaDescription: 'Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (320–350 $ d\'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-fr.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**La RTX 3060 12GB (320–350 $ d\'occasion) est, selon notre évaluation, le GPU économique d\'occasion le plus équilibré pour LLM locaux (VRAM, vitesse et prix, d\'après les prix et estimations de ce guide). La RTX 5060 Ti 16GB (env. 620 $, 44 % au-dessus du prix conseillé; prix demandé le plus bas selon BuySellRAM, 2026-10-11) est le choix neuf.**',
       nextStep: { text: 'Votre GPU est prêt ? Choisissez maintenant le bon logiciel pour exécuter vos modèles.', label: 'Meilleures interfaces pour LLM locaux 2026 →', href: '/fr/local-llms/best-local-llm-frontends' },
       audience: 'Débutants exécutant leur premier LLM local sur du matériel grand public',
@@ -1989,7 +1989,7 @@ rows: [
         'mistakes': { title: 'Erreurs courantes avec les GPU économiques', items: [
           'Acheter une RTX 2060 4GB en s\'attendant à une inférence 7B fluide — vous rencontrerez constamment des erreurs de mémoire insuffisante.',
           'Associer un GPU à 300 $ à une alimentation à 30 $ — la chute de tension tue la stabilité. Une alimentation 650 W 80+ Gold est un point de départ courant pour une configuration avec un GPU à 300 $ ; vérifiez la consommation cumulée de vos composants et les recommandations du fabricant de la carte (ce n\'est pas un conseil de sécurité électrique).',
-          'Croire que de la RAM DDR5 et un CPU i9 accélèrent l\'inférence LLM — ce n\'est pas le cas. La bande passante de la VRAM du GPU est l\'un des principaux goulots d\'étranglement pour la vitesse d\'inférence.',
+          'Croire que de la RAM DDR5 et un CPU i9 accélèrent l\'inférence LLM ; ils apportent généralement peu en inférence 100 % GPU. La bande passante de la VRAM du GPU est l\'un des principaux goulots d\'étranglement pour la vitesse d\'inférence.',
           'Croire que Llama 4 Scout tient dans 12 GB. Scout est un MoE 17B actifs / 109B au total qui réclame ~55 GB en Q4 (il ne se glisse dans 24 GB qu\'en 1.78 bit, ~20 tok/s). Sur une RTX 3060 12 GB, faites plutôt tourner des modèles denses : Qwen3 14B (~9 GB), Qwen3 8B ou Gemma 4 12B.',
           'Acheter une carte 16 GB juste pour les modèles 13B. Une RTX 3060 12 GB fait déjà tourner Qwen3 14B en Q4. Passez au 16 GB uniquement si vous avez spécifiquement besoin de gpt-oss:20b (16 GB), de modèles denses 20B+ ou de plus de marge de contexte.',
         ] },
@@ -2048,7 +2048,7 @@ rows: [
           'Les cadres de conformité exigent des flux de travail auditables. Établissez des normes de gouvernance pour la qualité et la revue des prompts IA : [gouvernance des prompts en production](https://www.promptquorum.com/fr/prompt-engineering/prompt-governance-in-production) couvre les politiques, le contrôle de version et les processus d\'approbation.',
         ] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Guide RTX 3060 pour LLM locaux 2026 : quels modèles pouvez-vous exécuter', 'description': 'Quels LLM locaux pouvez-vous faire tourner sur une RTX 3060 12GB ou 6GB ? Découvrez les meilleurs modèles pour le code, le chat et le raisonnement en 2026, avec limites de VRAM réelles et conseils de performance.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-15', 'inLanguage': 'fr', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Guide RTX 3060 pour LLM locaux 2026 : quels modèles pouvez-vous exécuter', 'description': 'Quels LLM locaux pouvez-vous faire tourner sur une RTX 3060 12GB ou 6GB ? Découvrez les meilleurs modèles pour le code, le chat et le raisonnement en 2026, avec limites de VRAM réelles et conseils de performance.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-18', 'inLanguage': 'fr', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', 'mainEntity': [
           {
             '@type': 'Question',
@@ -2213,7 +2213,7 @@ rows: [
         updatedDate: '2026-11-15',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**RTX 3060 12GB（中古約$320–350）は、本ガイドの価格と推定値に基づく当サイトの評価で、2026年のローカルLLM向けに最もバランスの取れた中古バジェットGPU（VRAM、速度、価格）で、Q4でQwen3 14Bを推定9–12トークン/秒、Qwen3 8Bを推定16–20トークン/秒で実行します。RTX 5060 Ti 16GB（新品約$620、希望小売価格を約44%上回る；最低提示価格、BuySellRAM調べ、2026-10-11）が新品の選択肢です。**',
       readTime: '7分で読める',
       educationalLevel: 'Intermediate',
@@ -2244,7 +2244,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '$32
         'vram-7b': { title: '7Bモデルに必要なVRAMは？', content: ['Q4（4ビット）で量子化された7Bモデルは**6～8GB VRAM**を必要とし、Q5（5ビット）は**8～10GB**、Q8（8ビット）は**14～16GB**を必要とします。', '実際には：**8GBは最低限**で、Q4で7Bモデルでの快適な推論とバッチ処理用のスペースがあります。', '6GBカード（RTX 2060）は技術的に機能しますがアグレッシブな最適化が必要で、より高いバッチに余裕がありません。', 'GPUコストは経済性の一面であり、トークンコストはもう一面です。ローカル推論はAPIのトークン課金を排除しますが、プロンプト長は依然としてレイテンシとスループットに影響します。トークン、価格体系、最適化戦略を含むコスト全体像については、[トークン、コスト、制限：AIプロンプティングの経済学](https://www.promptquorum.com/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)をご覧ください。'] },
         'best-by-use-case': { id: 'best-by-use-case', title: 'RTX 3060でのユースケース別最適モデル', content: ['**パラメータ数ではなく、実際のニーズに基づいてモデルを選択してください：**', 'バジェットハードウェアは小さなモデルを実行しますが、巧みなプロンプティングが品質差を縮めます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/ja/prompt-engineering)では、Chain-of-Thoughtや構造化出力など、小さなモデルの実力を引き出すテクニックを解説しています。RTX 3060 12 GB の VRAM に収まる具体的なワークロードのひとつが、プルリクエストの自動レビューです。まさに同じハードウェア上で Qwen3 8B を PR にぶつける GitHub Actions のパターンは、[CI/CD でのローカル LLM コードレビュー](/ja/power-local-llm/local-llm-code-review-ci-cd)で解説しています。'], items: ['**チャット / Q&A：** `ollama run qwen3:14b` — 稠密14B、~9GB VRAM、12GBで最良品質。軽量オプションは `ollama run qwen3:8b`（~7GB）。', '**コーディング：** `ollama run qwen3:8b` — 万能で強力なコーディング。~7GB VRAM。16–20トークン/秒。', '**推論 / 数学：** `ollama run deepseek-r1:7b` — Chain-of-Thought。10–12トークン/秒。', '**ライティング / クリエイティブ：** `ollama run mistral:7b` — 良好な指示従行（当社評価）。18トークン/秒。', '**ビジョン / 画像：** `ollama run gemma4:12b` — マルチモーダル。11–14トークン/秒。~8 GB VRAM。軽量な選択肢は `ollama run gemma4:e4b`（~6.6 GB）。', '**プライバシー / オフライン：** 上記すべて。推論は標準でローカルで実行され、追加したツールが外部へ送信しない限りプロンプトはお使いのPC内にとどまります。モデルのダウンロード後はインターネット不要ですが、ランタイムの更新・テレメトリ設定を確認してください。', '**ホームオートメーション / 常時稼働AI：** `ollama run phi4-mini` — Phi-4 Mini（3.8B、~3 GB VRAM）は専用GPUなしのミニPCでHome Assistantの音声クエリを処理します。[ローカルスマートホームAIの最適ハードウェア →](/smart-home/best-hardware-for-local-smart-home)をご覧ください。'] },
         'used-vs-new': { title: '中古 vs 新品：どこで買う？', items: ['**中古（新品より150～300ドル安い）**：eBay、Facebook Marketplace、Craigslist、地元のコンピュータ修理店。死んだカードまたは不良VRAMのリスクが高い。確約する前に常にテストしてください。', '**新品（300～800ドル、在庫があれば）**：Newegg、Amazon、Best Buy、Microcenter。保証付き。価格は安定していません。2026年に新品の実売価格は上昇し、品切れになる型番もあります。リスク回避買い手に最適。', '**マイニングカード（暗号、超安い）**：極端なリスク。VRAM劣化のリスクが指摘されています。その場で完全にベンチテストできる場合のみ購入してください。'] },
-        'mistakes': { title: 'よくあるバジェットGPUの間違い', items: ['4GB RTX 2060を購入してスムーズな7B推論を期待する。常にメモリ不足エラーが発生します。', '300ドルのGPUを30ドルのPSU（電源）と組み合わせます。電圧サグは安定性を殺します。650W・80+ Gold認定の電源は、$300のGPU構成で一般的な出発点です。パーツの合計消費電力とカードメーカーの指示を確認してください（電気安全に関する助言ではありません）。', 'DDR5 RAMとi9 CPUがLLM推論を高速化すると想定する。それらは高速化しません。GPU VRAMバンド幅は推論速度に影響する主なボトルネックの一つです。'] },
+        'mistakes': { title: 'よくあるバジェットGPUの間違い', items: ['4GB RTX 2060を購入してスムーズな7B推論を期待する。常にメモリ不足エラーが発生します。', '300ドルのGPUを30ドルのPSU（電源）と組み合わせます。電圧サグは安定性を殺します。650W・80+ Gold認定の電源は、$300のGPU構成で一般的な出発点です。パーツの合計消費電力とカードメーカーの指示を確認してください（電気安全に関する助言ではありません）。', 'DDR5 RAMとi9 CPUがLLM推論を高速化すると想定する。GPUのみの推論では、通常あまり効果はありません。GPU VRAMバンド幅は推論速度に影響する主なボトルネックの一つです。'] },
         'nextSteps': {
           id: 'next-steps',
           title: '次のステップ',
@@ -2274,7 +2274,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '$32
         'relatedReading': { title: '関連資料', items: ['[ローカルLLMに必要なVRAMはいくらか](/ja/local-llms/how-much-vram-local-llm)', '[コンシューマーハードウェアの70Bモデル](/ja/local-llms/70b-models-consumer-hardware)', '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)', '[ローカルLLM用の中古GPU](/ja/local-llms/used-gpus-for-local-llms)', '[ローカルLLM向けの最高のGPU](/ja/local-llms/best-gpus-for-local-llms)', '[VRAM計算機](/ja/local-llms/how-much-vram-local-llm)', '[Mac Mini M5ローカルAIサーバーとして](/ja/local-llms/mac-mini-m5-local-ai-server)', '[ローカルLLM向けApple Silicon M5](/ja/local-llms/apple-silicon-m5-local-llm) — M5 Pro/Max完全ガイド：ベンチマーク、Mac構成、メモリ層、ローカル推論用Mac購入ガイド', '[ローカルLLM向けApple Silicon対NVIDIA GPU](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026)', '[Apple Silicon向けベストモデル2026](/ja/local-llms/best-models-apple-silicon-2026)', '秋葉原の販売店、メルカリ・Yahoo!オークションの中古市場を含む日本のGPU価格については、<a href="/ja/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">日本でコスパ最強のローカルLLM用GPUガイド</a>をご覧ください。', 'UAE（アラブ首長国連邦)・湾岸地域のGPU価格については、Sharaf DG、noon.com、Amazon.aeなどの販売店や中古市場dubizzleを含め、<a href="/ja/prompt-bites/best-gpu-local-llm-uae-price" class="text-primary hover:underline">UAEでコスパ最強のローカルLLM用GPUガイド</a>をご覧ください。'] },
         'sources': { title: 'ソース', items: ['[BuySellRAM コンシューマーGPU市場アップデート](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)：RTX 5060 Ti 16GB、RTX 4060 Ti 8GB、RTX 4070 Superの価格およびRTX 3060 12GBの照合に用いた最低提示価格（新品・中古）（情報源の日付：2026-10-11）', 'TechPowerUp GPUデータベース：RTX 3060 / RTX 4060 Ti / RTX 4070 Super仕様と電力消費', 'NVIDIA CUDA能力マトリックス：推論ワークロード用GPU メモリバンド幅と理論的スループット', 'Ollama モデル要件：Llama 3.1 8B、Ministral 3 8B、Qwen量子化レベルVRAM推奨', '[InsiderLLM GPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)：RTX 3090の価格に用いたeBay米国の落札実績の観測値（情報源の更新日：2026-10-15）'] },
       },
-      itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'url': 'https://www.promptquorum.com/ja/local-llms/best-budget-gpus-local-llm', 'inLanguage': 'ja', name: 'ローカルLLM向けの最高のバジェットGPU', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB（中古約$320–350）は7B～13Bモデルの総合的なバジェット選択肢として有力です。' }, { '@type': 'ListItem', position: 2, name: 'RTX 4060 Ti 8GB（新品約$420、BuySellRAM調べ、2026-10-11）は新しいテクノロジーと優れた効率を提供しますがVRAMは少なくなります。' }, { '@type': 'ListItem', position: 3, name: 'ローカルLLM用に2GBまたは4GBカードの購入は避けてください。快適な推論のための最小限のVRAMは8GBです。' }, { '@type': 'ListItem', position: 4, name: 'RTX A2000やRTX A4000などの中古企業GPUはかつて割安でしたが、最後の推定では中古およそ$440–850（以前の推定値で、今回の更新では再確認していません）で、もはやバジェット枠ではありません。' }, { '@type': 'ListItem', position: 5, name: '目安として、ボトルネック回避のためGPUに300～400ドル、残りのシステム（CPU、RAM、SSD）に400～500ドルを予算化します。' }, { '@type': 'ListItem', position: 6, name: 'バジェットGPUではDDR5 RAMとハイエンドCPUを避けてください。これらはLLM速度を向上させません。' }], regionalContext: { title: '地域のプライバシー法はローカルLLM向けGPUの選択にどう影響しますか？', content: ['**EU GDPR：ローカル推論はデータ移転リスクを減らし得ます — 既定ではクラウド呼び出しなし。** RTX 3060でQwen3やGemma 4を実行すると推論をデバイス内にとどめられ、プライバシー・バイ・デザイン（GDPR第25条）と技術的安全管理（第32条）の取り組みを支援しますが、それだけで運用が適合したことにはなりません。適合は構成全体に依存するため、データ保護責任者または弁護士にご確認ください。これは一般的な情報であり、法的助言ではありません。', '**日本のAPPIとアジア太平洋地域：ローカルGPU推論は、プロンプトデータを海外のサーバーへ送らずに済ませられます。** 改正個人情報保護法（APPI）では、個人データを外国の第三者に提供する場合、原則として本人の同意または同等の保護措置が必要です。中古のRTX 3060（約$320–350）でOllamaをローカル実行すればプロンプトを端末内にとどめられますが、構成がAPPIに適合するかはワークフロー全体に依存するため、弁護士にご確認ください。これは一般的な情報であり、法的助言ではありません。', '**米国および世界の中小企業：バジェットGPU構成はAPIコストとベンダーロックインを減らします。** 小規模事業者では、RTX 3060（中古$320–350）は、トークン量や電気代次第で、GPT-4o APIの利用と比べて数か月で元が取れる可能性があります。トークン単位の料金はかかりませんが、電力と維持費は無料ではありません。'] } },
+      itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'url': 'https://www.promptquorum.com/ja/local-llms/best-budget-gpus-local-llm', 'inLanguage': 'ja', name: 'ローカルLLM向けの最高のバジェットGPU', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB（中古約$320–350）は7B～13Bモデルの総合的なバジェット選択肢として有力です。' }, { '@type': 'ListItem', position: 2, name: 'RTX 4060 Ti 8GB（新品約$420、BuySellRAM調べ、2026-10-11）は7Bで3060より高速と推定されますが、VRAMは8GBです。' }, { '@type': 'ListItem', position: 3, name: 'ローカルLLM用に2GBまたは4GBカードの購入は避けてください。快適な推論のための最小限のVRAMは8GBです。' }, { '@type': 'ListItem', position: 4, name: 'RTX A2000やRTX A4000などの中古企業GPUはかつて割安でしたが、最後の推定では中古およそ$440–850（以前の推定値で、今回の更新では再確認していません）で、もはやバジェット枠ではありません。' }, { '@type': 'ListItem', position: 5, name: '目安として、ボトルネック回避のためGPUに300～400ドル、残りのシステム（CPU、RAM、SSD）に400～500ドルを予算化します。' }, { '@type': 'ListItem', position: 6, name: 'バジェットGPUでは、DDR5 RAMやハイエンドCPUはGPU推論の速度向上にほとんど寄与しない場合があります。' }], regionalContext: { title: '地域のプライバシー法はローカルLLM向けGPUの選択にどう影響しますか？', content: ['**EU GDPR：ローカル推論はデータ移転リスクを減らし得ます — 既定ではクラウド呼び出しなし。** RTX 3060でQwen3やGemma 4を実行すると推論をデバイス内にとどめられ、プライバシー・バイ・デザイン（GDPR第25条）と技術的安全管理（第32条）の取り組みを支援しますが、それだけで運用が適合したことにはなりません。適合は構成全体に依存するため、データ保護責任者または弁護士にご確認ください。これは一般的な情報であり、法的助言ではありません。', '**日本のAPPIとアジア太平洋地域：ローカルGPU推論は、プロンプトデータを海外のサーバーへ送らずに済ませられます。** 改正個人情報保護法（APPI）では、個人データを外国の第三者に提供する場合、原則として本人の同意または同等の保護措置が必要です。中古のRTX 3060（約$320–350）でOllamaをローカル実行すればプロンプトを端末内にとどめられますが、構成がAPPIに適合するかはワークフロー全体に依存するため、弁護士にご確認ください。これは一般的な情報であり、法的助言ではありません。', '**米国および世界の中小企業：バジェットGPU構成はAPIコストとベンダーロックインを減らします。** 小規模事業者では、RTX 3060（中古$320–350）は、トークン量や電気代次第で、GPT-4o APIの利用と比べて数か月で元が取れる可能性があります。トークン単位の料金はかかりませんが、電力と維持費は無料ではありません。'] } },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -2410,7 +2410,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '$32
         'description': 'RTX 3060 12GBまたは6GBでどのローカルLLMを実行できますか？2026年のコーディング、チャット、推論に最適なモデルを、実際のVRAM制限とパフォーマンスのヒントとともに紹介します。',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'inLanguage': 'ja',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -2469,7 +2469,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '$32
         updatedDate: '2026-11-15',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-18',
       leadAnswerBlock: '**RTX 3060 12GB（二手约$320–350）是我们根据本指南的价格与估算评选的2026年本地LLM最均衡的二手预算GPU（显存、速度与价格），在Q4下运行Qwen3 14B估计可达9–12令牌/秒，Qwen3 8B估计可达16–20令牌/秒。RTX 5060 Ti 16GB（全新约$620，约高出建议零售价44%；最低挂牌价，来源BuySellRAM，2026-10-11）是全新显卡之选。**',
       readTime: '阅读约7分钟',
       educationalLevel: 'Intermediate',
@@ -2592,7 +2592,7 @@ rows: [
           items: [
             '购买4GB RTX 2060并期望顺利的7B推理----您会不断遇到内存不足错误。',
             '将300美元的GPU与30美元PSU（电源）配对----电压降会导致稳定性问题。650W、80+ Gold认证的电源是搭配$300 GPU的常见起点；请核对所用部件的总功耗和显卡厂商的指引（不属于电气安全建议）。',
-            '假设DDR5 RAM和i9 CPU会加快LLM推理----它们不会。GPU VRAM带宽是影响推理速度的主要瓶颈之一。',
+            '假设DDR5 RAM和i9 CPU会加快LLM推理；在纯GPU推理中它们通常帮助有限。GPU VRAM带宽是影响推理速度的主要瓶颈之一。',
           ],
         },
         'nextSteps': {
@@ -2659,12 +2659,12 @@ rows: [
         'url': 'https://www.promptquorum.com/zh/local-llms/best-budget-gpus-local-llm',
         name: '本地LLM的最佳预算GPU',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB（二手320–350美元）是7B-13B模型的最佳整体预算选择。' },
-          { '@type': 'ListItem', position: 2, name: 'RTX 4060 Ti 8GB（全新约$420，来源BuySellRAM，2026-10-11）提供更新的技术和更好的效率，但VRAM较少。' },
+          { '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB（二手320–350美元）据我们评估，是7B-13B模型较为均衡的二手预算选择之一（基于本页价格与估算）。' },
+          { '@type': 'ListItem', position: 2, name: 'RTX 4060 Ti 8GB（全新约$420，来源BuySellRAM，2026-10-11）7B速度估计快于3060，但VRAM仅8GB。' },
           { '@type': 'ListItem', position: 3, name: '不建议为本地LLM购买2GB或4GB显卡----舒适推理的最小VRAM是8GB。' },
           { '@type': 'ListItem', position: 4, name: '二手企业显卡（RTX A2000、RTX A4000）此前估算约为440-850美元（本次更新中未重新核实），不再属于预算之选。' },
           { '@type': 'ListItem', position: 5, name: '为避免瓶颈，作为参考，为GPU预算300-400美元，为其余系统（CPU、RAM、SSD）预算400-500美元。' },
-          { '@type': 'ListItem', position: 6, name: '在预算GPU中避免使用DDR5 RAM和高端CPU----它们不会提高LLM速度。' },
+          { '@type': 'ListItem', position: 6, name: '在预算GPU方案中，DDR5 RAM和高端CPU通常对GPU推理速度帮助有限。' },
         ],
         regionalContext: {
           id: 'regional-context',
@@ -2811,7 +2811,7 @@ rows: [
         'description': 'RTX 3060 12GB或6GB可以运行哪些本地LLM？查看2026年编程、聊天和推理的最佳模型，附真实显存限制和性能提示。',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'inLanguage': 'zh',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -2984,7 +2984,7 @@ rows: [
           items: [
             '4GB RTX 2060을 구매하고 원활한 7B 추론을 기대하는 경우 — 메모리 부족 오류가 계속 발생합니다.',
             '$300 GPU에 $30짜리 전원 공급 장치(PSU) 조합 — 전압 저하가 안정성을 해칩니다. 650W 80+ Gold 인증 전원 공급 장치는 $300 GPU 구성에서 흔한 출발점입니다. 부품의 합산 소비 전력과 카드 제조사의 지침을 확인하십시오(전기 안전에 관한 조언이 아닙니다).',
-            'DDR5 RAM과 i9 CPU 속도가 LLM 추론을 빠르게 한다고 가정하는 경우 — 그렇지 않습니다. 추론 속도에서 가장 중요한 병목 중 하나는 GPU VRAM 대역폭입니다.',
+            'DDR5 RAM과 i9 CPU가 LLM 추론을 빠르게 한다고 가정하는 경우 — GPU 전용 추론에서는 보통 도움이 크지 않습니다. 추론 속도에서 가장 중요한 병목 중 하나는 GPU VRAM 대역폭입니다.',
             'Llama 4 Scout가 12GB에 맞다고 가정하는 경우. Scout는 활성 파라미터 17B / 총 109B의 MoE로 Q4에서 약 55GB가 필요합니다(24GB에서 1.78비트로만 실행 가능, ~초당 20토큰). RTX 3060 12GB에서는 밀집형 모델을 실행하십시오: Qwen3 14B (~9GB), Qwen3 8B, 또는 Gemma 4 12B.',
             '13B 모델만을 위해 16GB 카드를 구매하는 경우. RTX 3060 12GB는 이미 Qwen3 14B를 Q4로 실행합니다. gpt-oss:20b (16GB), 밀집형 20B+ 모델, 또는 더 많은 컨텍스트 여유 공간이 구체적으로 필요한 경우에만 16GB로 업그레이드하십시오.',
           ],
@@ -3054,7 +3054,7 @@ rows: [
         'description': 'RTX 3060 12GB 또는 6GB에서 어떤 로컬 LLM을 실행할 수 있습니까? 실제 VRAM 한계 및 성능 팁과 함께 2026년 코딩, 채팅, 추론에 최적인 모델을 확인하십시오.',
         'url': 'https://www.promptquorum.com/ko/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-18',
         'inLanguage': 'ko',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
