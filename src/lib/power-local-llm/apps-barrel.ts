@@ -369,6 +369,7 @@ import { app as app_lexora } from './apps/lexora'
 import { app as app_alpaca } from './apps/alpaca'
 import { app as app_kition } from './apps/kition'
 import { app as app_pooled } from './apps/pooled'
+import { app as app_askimo } from './apps/askimo'
 import { app as app_reactive_resume } from './apps/reactive-resume'
 import { app as app_next_ai_draw_io } from './apps/next-ai-draw-io'
 import { app as app_funclip } from './apps/funclip'
@@ -700,6 +701,7 @@ export const localAiApps: ToolRecord[] = [
   app_alpaca,
   app_kition,
   app_pooled,
+  app_askimo,
   app_reactive_resume,
   app_next_ai_draw_io,
   app_funclip,

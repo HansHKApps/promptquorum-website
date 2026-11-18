@@ -817,6 +817,7 @@ const HUB_THEMES: Array<{
       'enterprise-rag-vector-database-deployment-guide',
       'exo-review',
       'pooled-review',
+      'askimo-review',
       'local-llm-run-serve-compared',
       'local-llm-train-operate-compared',
       'amd-gaia-review',
