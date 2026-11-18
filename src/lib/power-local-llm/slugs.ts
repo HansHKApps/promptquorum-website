@@ -631,6 +631,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'newelle-review':                           'newelle-review',
   'oleafly-review':                           'oleafly-review',
   'rescript-review':                          'rescript-review',
+  'minutes-review':                           'minutes-review',
   'lyonesse-review':                          'lyonesse-review',
   'open-llm-vtuber-review':                   'open-llm-vtuber-review',
   'presenton-review':                         'presenton-review',

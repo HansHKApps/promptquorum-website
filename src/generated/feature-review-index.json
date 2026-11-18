@@ -1159,6 +1159,11 @@
     "urlSlug": "rescript-review",
     "url": "/power-local-llm/rescript-review"
   },
+  "minutes": {
+    "cluster": "power-local-llm",
+    "urlSlug": "minutes-review",
+    "url": "/power-local-llm/minutes-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
