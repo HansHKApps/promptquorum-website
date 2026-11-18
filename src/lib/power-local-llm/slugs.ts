@@ -684,6 +684,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'kition-review':                            'kition-review',
   'pooled-review':                            'pooled-review',
   'askimo-review':                            'askimo-review',
+  'myagents-review':                          'myagents-review',
   'reactive-resume-review':                   'reactive-resume-review',
   'next-ai-draw-io-review':                   'next-ai-draw-io-review',
   'oriveo-review':                            'oriveo-review',

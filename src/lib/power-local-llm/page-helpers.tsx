@@ -1043,6 +1043,7 @@ const HUB_THEMES: Array<{
       'superagi-review',
       'leon-ai-review',
       'agent-zero-review',
+      'myagents-review',
       'taskweaver-review',
       'dspy-review',
       'camel-review',
