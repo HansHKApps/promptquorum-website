@@ -1129,6 +1129,11 @@
     "urlSlug": "openwork-review",
     "url": "/power-local-llm/openwork-review"
   },
+  "airi": {
+    "cluster": "power-local-llm",
+    "urlSlug": "airi-review",
+    "url": "/power-local-llm/airi-review"
+  },
   "skales": {
     "cluster": "power-local-llm",
     "urlSlug": "skales-review",

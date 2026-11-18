@@ -644,6 +644,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'open-generative-ai-review',
   'labelme-review',
   'openwork-review',
+  'airi-review',
   'skales-review',
   'halo-review',
   'yovoice-review',

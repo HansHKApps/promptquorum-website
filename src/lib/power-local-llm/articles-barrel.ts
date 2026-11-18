@@ -135,6 +135,7 @@ import { article as a_dyad_review } from './articles/dyad-review'
 import { article as a_open_generative_ai_review } from './articles/open-generative-ai-review'
 import { article as a_labelme_review } from './articles/labelme-review'
 import { article as a_openwork_review } from './articles/openwork-review'
+import { article as a_airi_review } from './articles/airi-review'
 import { article as a_skales_review } from './articles/skales-review'
 import { article as a_halo_review } from './articles/halo-review'
 import { article as a_yovoice_review } from './articles/yovoice-review'
@@ -893,6 +894,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'open-generative-ai-review':                     a_open_generative_ai_review,
   'labelme-review':                                a_labelme_review,
   'openwork-review':                               a_openwork_review,
+  'airi-review':                                   a_airi_review,
   'skales-review':                                 a_skales_review,
   'halo-review':                                   a_halo_review,
   'yovoice-review':                                a_yovoice_review,
