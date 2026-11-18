@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io is a free Apache-2.0 app that turns a chat prompt into an editable draw.io diagram, in a browser, on Windows, macOS and Linux, or through an MCP server for AI coding agents.** It has no model of its own, so diagram quality depends on the provider and model you connect. The maker\'s site has no privacy policy, so check where your diagram data goes before using it on confidential work.',
+      '**Next AI Draw.io is a free Apache-2.0 app that turns a chat prompt into an editable draw.io diagram, in a browser, on Windows, macOS and Linux, or through an MCP server for AI coding agents.** It has no model of its own, so diagram quality depends on the provider and model you connect. No privacy policy was found on the maker\'s site (checked 18 November 2026), so check where your diagram data goes before using it on confidential work.',
     quickAnswerTop: {
       en: {
         question: 'What is Next AI Draw.io and who is it for?',
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The app is free under Apache-2.0. The demo site has a daily usage limit that your own API key lifts, and the model provider bills you separately.',
           'The latest release is v0.5.1 and the repository had a commit on 14 November 2026, so no stale-project warning applies.',
           'The maker says the task needs strong models, and small models tend to produce broken diagrams.',
-          'PromptQuorum has not tested the app, and no privacy policy, terms or imprint were found.',
+          'PromptQuorum has not tested the app, and no privacy policy, terms or imprint were found (checked 18 November 2026).',
         ],
         callouts: [
           {
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Platform': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', 'How to get it': 'One docker run command, then open localhost:3000' },
           { 'Platform': '[MCP server](https://next-ai-drawio.jiang.jp/en/mcp)', 'How to get it': 'Add the npm package to your agent\'s MCP settings' },
         ],
-        note: 'No separate privacy policy page exists. The site says the key you enter is kept in your browser and never stored on the server.',
+        note: 'No separate privacy policy page was found (checked 18 November 2026). The site says the key you enter is kept in your browser and never stored on the server.',
       },
       requirements: {
         id: 'requirements',
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Your request and the current diagram go to the AI model you pick, so the data path depends on that provider.**',
           'The docs say the app sends your request and the current diagram to the selected model, and that the API key you enter is kept in your browser and never stored on the server. If the model runs on your own machine, for example through Ollama, the request goes to that local server instead of a cloud provider; PromptQuorum has not checked whether anything else leaves the machine.',
           'For self-hosters, the repository\'s env.example describes optional Langfuse tracing and says that with it set up the editor also sends the names of what users do. The README also describes an admin panel with observability and quota settings.',
-          'The site and repository have no privacy policy, terms or imprint, so what the hosted demo logs is not documented.',
+          'No privacy policy, terms or imprint were found on the site or in the repository (checked 18 November 2026), so what the hosted demo logs is not documented.',
         ],
       },
       whoShouldUse: {
@@ -198,11 +198,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Limit: the README says the task needs strong models, and that small models tend to produce broken diagrams.',
           'Limit: x-cmd says output needs human review, citing misaligned connectors, duplicated nodes and inconsistent styles.',
           'Limit: the hosted demo has a daily usage limit, so regular use needs your own API key or self-hosting.',
-          'Unverified: what the hosted demo or desktop app logs or sends beyond the diagram and request. No privacy policy, terms or imprint exist.',
-          'Unverified: the maker\'s location. The GitHub profile names a city, but no policy or imprint states a country, so the directory shows no HQ flag.',
+          'Unverified: what the hosted demo or desktop app logs or sends beyond the diagram and request. No privacy policy, terms or imprint were found (checked 18 November 2026).',
+          'Unverified: the maker\'s location. The GitHub profile names a city, but no policy or imprint seen on 18 November 2026 states a country, so the directory shows no HQ flag.',
           'Unverified: any link between this project and the company behind draw.io. The README only says the app ships its own copy of draw.io.',
           'Unverified: diagram quality, speed and cost per model. PromptQuorum has not tested the app, and the maker\'s own measurements were not reviewed.',
-          'Unverified: whether the desktop installers are code-signed. No source states it.',
+          'Unverified: whether the desktop installers are code-signed. No source read on 18 November 2026 states it.',
         ],
       },
       vsAlternatives: {
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Next AI Draw.io is worth a look if you draw technical diagrams regularly and are comfortable choosing and paying for your own AI model.**',
           'On paper it covers a lot: a normal draw.io canvas, version history that undoes AI changes, 25 providers including local ones, desktop installers, Docker, and an MCP server. It is free under Apache-2.0, and development is active, with a release on 31 October 2026 and a commit on 14 November 2026.',
-          'The trade-offs are real. Quality depends on the model you connect, the demo is rate-limited, and no privacy policy exists, so the data path is only as clear as your chosen provider. PromptQuorum has not tested the app. Try a small, non-confidential diagram first, and use a strong model or your own server for anything that matters.',
+          'The trade-offs are real. Quality depends on the model you connect, the demo is rate-limited, and no privacy policy was found (checked 18 November 2026), so the data path is only as clear as your chosen provider. PromptQuorum has not tested the app. Try a small, non-confidential diagram first, and use a strong model or your own server for anything that matters.',
         ],
       },
       sources: {
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io ist eine kostenlose Apache-2.0-App, die aus einem Chat-Prompt ein bearbeitbares draw.io-Diagramm macht, im Browser, unter Windows, macOS und Linux oder über einen MCP-Server für KI-Coding-Agenten.** Sie hat kein eigenes Modell, die Diagrammqualität hängt also von Anbieter und Modell ab, die Sie anbinden. Auf der Seite des Entwicklers gibt es keine Datenschutzerklärung; prüfen Sie daher, wohin Ihre Diagrammdaten gehen, bevor Sie die App für vertrauliche Arbeit nutzen.',
+      '**Next AI Draw.io ist eine kostenlose Apache-2.0-App, die aus einem Chat-Prompt ein bearbeitbares draw.io-Diagramm macht, im Browser, unter Windows, macOS und Linux oder über einen MCP-Server für KI-Coding-Agenten.** Sie hat kein eigenes Modell, die Diagrammqualität hängt also von Anbieter und Modell ab, die Sie anbinden. Auf der Seite des Entwicklers wurde keine Datenschutzerklärung gefunden (geprüft am 18. November 2026); prüfen Sie daher, wohin Ihre Diagrammdaten gehen, bevor Sie die App für vertrauliche Arbeit nutzen.',
     quickAnswerTop: {
       de: {
         question: 'Was ist Next AI Draw.io, und für wen ist es gedacht?',
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die App ist unter Apache-2.0 kostenlos. Die Demo-Seite hat ein tägliches Nutzungslimit, das Ihr eigener API-Schlüssel aufhebt, und der Modellanbieter stellt Ihnen separat etwas in Rechnung.',
           'Die neueste Version ist v0.5.1, und das Repository hatte am 14. November 2026 einen Commit, daher gilt keine Warnung vor einem veralteten Projekt.',
           'Der Entwickler sagt, die Aufgabe brauche starke Modelle, und kleine Modelle erzeugen oft fehlerhafte Diagramme.',
-          'PromptQuorum hat die App nicht getestet, und es wurden weder Datenschutzerklärung noch Nutzungsbedingungen oder Impressum gefunden.',
+          'PromptQuorum hat die App nicht getestet, und es wurden weder Datenschutzerklärung noch Nutzungsbedingungen oder Impressum gefunden (geprüft am 18. November 2026).',
         ],
         callouts: [
           {
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plattform': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', 'So bekommen Sie sie': 'Ein docker-run-Befehl, dann localhost:3000 öffnen' },
           { 'Plattform': '[MCP-Server](https://next-ai-drawio.jiang.jp/en/mcp)', 'So bekommen Sie sie': 'npm-Paket in den MCP-Einstellungen des Agenten ergänzen' },
         ],
-        note: 'Eine eigene Seite mit einer Datenschutzerklärung gibt es nicht. Die Seite sagt, der eingegebene Schlüssel bleibe in Ihrem Browser und werde nie auf dem Server gespeichert.',
+        note: 'Eine eigene Seite mit einer Datenschutzerklärung wurde nicht gefunden (geprüft am 18. November 2026). Die Seite sagt, der eingegebene Schlüssel bleibe in Ihrem Browser und werde nie auf dem Server gespeichert.',
       },
       requirements: {
         id: 'requirements',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ihre Anfrage und das aktuelle Diagramm gehen an das KI-Modell, das Sie wählen; der Datenweg hängt also von diesem Anbieter ab.**',
           'Laut Dokumentation sendet die App Ihre Anfrage und das aktuelle Diagramm an das gewählte Modell, und der eingegebene API-Schlüssel bleibe in Ihrem Browser und werde nie auf dem Server gespeichert. Läuft das Modell auf Ihrem eigenen Rechner, etwa über Ollama, geht die Anfrage an diesen lokalen Server statt an einen Cloud-Anbieter; PromptQuorum hat nicht geprüft, ob darüber hinaus etwas den Rechner verlässt.',
           'Für Selbst-Hoster beschreibt die env.example des Repositorys optionales Langfuse-Tracing und sagt, dass der Editor damit auch die Namen der Nutzeraktionen sendet. Das README beschreibt außerdem ein Admin-Panel mit Observability- und Kontingenteinstellungen.',
-          'Auf der Seite und im Repository gibt es weder Datenschutzerklärung noch Nutzungsbedingungen oder Impressum, was die gehostete Demo protokolliert, ist daher nicht dokumentiert.',
+          'Auf der Seite und im Repository wurden weder Datenschutzerklärung noch Nutzungsbedingungen oder Impressum gefunden (geprüft am 18. November 2026), was die gehostete Demo protokolliert, ist daher nicht dokumentiert.',
         ],
       },
       whoShouldUse: {
@@ -472,11 +472,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Grenze: Laut README braucht die Aufgabe starke Modelle, und kleine Modelle erzeugen oft fehlerhafte Diagramme.',
           'Grenze: x-cmd sagt, die Ausgabe müsse von Menschen geprüft werden, und nennt versetzte Verbindungslinien, doppelte Knoten und uneinheitliche Stile.',
           'Grenze: Die gehostete Demo hat ein tägliches Nutzungslimit, für regelmäßige Nutzung brauchen Sie also einen eigenen API-Schlüssel oder Self-Hosting.',
-          'Nicht überprüft: was die gehostete Demo oder die Desktop-App über Diagramm und Anfrage hinaus protokolliert oder sendet. Es gibt weder Datenschutzerklärung noch Nutzungsbedingungen oder Impressum.',
-          'Nicht überprüft: der Standort des Entwicklers. Das GitHub-Profil nennt eine Stadt, aber keine Richtlinie und kein Impressum nennt ein Land, daher zeigt das Verzeichnis keine Länderflagge.',
+          'Nicht überprüft: was die gehostete Demo oder die Desktop-App über Diagramm und Anfrage hinaus protokolliert oder sendet. Es wurden weder Datenschutzerklärung noch Nutzungsbedingungen oder Impressum gefunden (geprüft am 18. November 2026).',
+          'Nicht überprüft: der Standort des Entwicklers. Das GitHub-Profil nennt eine Stadt, aber keine am 18. November 2026 geprüfte Richtlinie und kein Impressum nennt ein Land, daher zeigt das Verzeichnis keine Länderflagge.',
           'Nicht überprüft: jede Verbindung zwischen diesem Projekt und dem Unternehmen hinter draw.io. Das README sagt nur, die App bringe eine eigene Kopie von draw.io mit.',
           'Nicht überprüft: Diagrammqualität, Geschwindigkeit und Kosten je Modell. PromptQuorum hat die App nicht getestet, und die eigenen Messungen des Entwicklers wurden nicht geprüft.',
-          'Nicht überprüft: ob die Desktop-Installationsprogramme code-signiert sind. Keine Quelle sagt dazu etwas.',
+          'Nicht überprüft: ob die Desktop-Installationsprogramme code-signiert sind. In den am 18. November 2026 gelesenen Quellen steht dazu nichts.',
         ],
       },
       vsAlternatives: {
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Next AI Draw.io lohnt einen Blick, wenn Sie regelmäßig technische Diagramme zeichnen und Ihr eigenes KI-Modell auswählen und bezahlen möchten.**',
           'Auf dem Papier deckt die App viel ab: eine normale draw.io-Fläche, eine Versionshistorie, die KI-Änderungen rückgängig macht, 25 Anbieter einschließlich lokaler, Installationsprogramme für den Desktop, Docker und einen MCP-Server. Sie ist unter Apache-2.0 kostenlos, und die Entwicklung ist aktiv, mit einem Release am 31. Oktober 2026 und einem Commit am 14. November 2026.',
-          'Die Kompromisse sind real. Die Qualität hängt vom angebundenen Modell ab, die Demo ist begrenzt, und es gibt keine Datenschutzerklärung, der Datenweg ist also nur so klar wie Ihr gewählter Anbieter. PromptQuorum hat die App nicht getestet. Probieren Sie zuerst ein kleines, nicht vertrauliches Diagramm aus, und nutzen Sie für wichtige Arbeit ein starkes Modell oder Ihren eigenen Server.',
+          'Die Kompromisse sind real. Die Qualität hängt vom angebundenen Modell ab, die Demo ist begrenzt, und eine Datenschutzerklärung wurde nicht gefunden (geprüft am 18. November 2026), der Datenweg ist also nur so klar wie Ihr gewählter Anbieter. PromptQuorum hat die App nicht getestet. Probieren Sie zuerst ein kleines, nicht vertrauliches Diagramm aus, und nutzen Sie für wichtige Arbeit ein starkes Modell oder Ihren eigenen Server.',
         ],
       },
       sources: {
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io es una app gratuita con licencia Apache-2.0 que convierte un prompt de chat en un diagrama editable de draw.io, en un navegador, en Windows, macOS y Linux o mediante un servidor MCP para agentes de programación con IA.** No tiene modelo propio, así que la calidad del diagrama depende del proveedor y del modelo que conectes. El sitio del desarrollador no tiene política de privacidad, así que comprueba adónde van los datos de tu diagrama antes de usarla en trabajo confidencial.',
+      '**Next AI Draw.io es una app gratuita con licencia Apache-2.0 que convierte un prompt de chat en un diagrama editable de draw.io, en un navegador, en Windows, macOS y Linux o mediante un servidor MCP para agentes de programación con IA.** No tiene modelo propio, así que la calidad del diagrama depende del proveedor y del modelo que conectes. No se encontró ninguna política de privacidad en el sitio del desarrollador (comprobado el 18 de noviembre de 2026), así que comprueba adónde van los datos de tu diagrama antes de usarla en trabajo confidencial.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Next AI Draw.io y para quién es?',
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La app es gratuita con Apache-2.0. El sitio de la demo tiene un límite de uso diario que se levanta con tu propia clave de API, y el proveedor del modelo te cobra aparte.',
           'La última versión es la v0.5.1 y el repositorio tuvo un commit el 14 de noviembre de 2026, así que no aplica ninguna advertencia de proyecto abandonado.',
           'El desarrollador dice que la tarea necesita modelos potentes y que los modelos pequeños tienden a producir diagramas rotos.',
-          'PromptQuorum no ha probado la app y no se encontró política de privacidad, términos ni aviso legal.',
+          'PromptQuorum no ha probado la app y no se encontró política de privacidad, términos ni aviso legal (comprobado el 18 de noviembre de 2026).',
         ],
         callouts: [
           {
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', 'Cómo conseguirla': 'Un comando docker run y abre localhost:3000' },
           { 'Plataforma': '[Servidor MCP](https://next-ai-drawio.jiang.jp/en/mcp)', 'Cómo conseguirla': 'Añade el paquete de npm a la configuración MCP de tu agente' },
         ],
-        note: 'No existe una página de política de privacidad. El sitio dice que la clave que introduces se guarda en tu navegador y nunca se almacena en el servidor.',
+        note: 'No se encontró una página de política de privacidad (comprobado el 18 de noviembre de 2026). El sitio dice que la clave que introduces se guarda en tu navegador y nunca se almacena en el servidor.',
       },
       requirements: {
         id: 'requirements',
@@ -721,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tu petición y el diagrama actual van al modelo de IA que elijas, así que el recorrido de los datos depende de ese proveedor.**',
           'La documentación dice que la app envía tu petición y el diagrama actual al modelo seleccionado, y que la clave de API que introduces se guarda en tu navegador y nunca se almacena en el servidor. Si el modelo se ejecuta en tu propio equipo, por ejemplo mediante Ollama, la petición va a ese servidor local en lugar de a un proveedor en la nube; PromptQuorum no ha comprobado si algo más sale del equipo.',
           'Para quienes la autoaloja, el env.example del repositorio describe un rastreo opcional con Langfuse y dice que, si está configurado, el editor también envía los nombres de lo que hacen los usuarios. El README describe además un panel de administración con ajustes de observabilidad y cuotas.',
-          'El sitio y el repositorio no tienen política de privacidad, términos ni aviso legal, así que no está documentado qué registra la demo alojada.',
+          'No se encontraron política de privacidad, términos ni aviso legal en el sitio ni en el repositorio (comprobado el 18 de noviembre de 2026), así que no está documentado qué registra la demo alojada.',
         ],
       },
       whoShouldUse: {
@@ -746,11 +746,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Límite: según el README, la tarea necesita modelos potentes y los modelos pequeños tienden a producir diagramas rotos.',
           'Límite: x-cmd dice que el resultado necesita revisión humana y menciona conectores desalineados, nodos duplicados y estilos incoherentes.',
           'Límite: la demo alojada tiene un límite de uso diario, así que el uso habitual requiere tu propia clave de API o autoalojar la app.',
-          'Sin verificar: qué registra o envía la demo alojada o la app de escritorio además del diagrama y la petición. No existen política de privacidad, términos ni aviso legal.',
-          'Sin verificar: la ubicación del desarrollador. El perfil de GitHub menciona una ciudad, pero ninguna política ni aviso legal indica un país, por eso el directorio no muestra bandera de sede.',
+          'Sin verificar: qué registra o envía la demo alojada o la app de escritorio además del diagrama y la petición. No se encontraron política de privacidad, términos ni aviso legal (comprobado el 18 de noviembre de 2026).',
+          'Sin verificar: la ubicación del desarrollador. El perfil de GitHub menciona una ciudad, pero ninguna política ni aviso legal revisados el 18 de noviembre de 2026 indica un país, por eso el directorio no muestra bandera de sede.',
           'Sin verificar: cualquier vínculo entre este proyecto y la empresa detrás de draw.io. El README solo dice que la app incluye su propia copia de draw.io.',
           'Sin verificar: calidad de los diagramas, velocidad y coste por modelo. PromptQuorum no ha probado la app y no se revisaron las mediciones propias del desarrollador.',
-          'Sin verificar: si los instaladores de escritorio están firmados. Ninguna fuente lo indica.',
+          'Sin verificar: si los instaladores de escritorio están firmados. Ninguna fuente leída el 18 de noviembre de 2026 lo indica.',
         ],
       },
       vsAlternatives: {
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Next AI Draw.io merece una mirada si dibujas diagramas técnicos con regularidad y te sientes cómodo eligiendo y pagando tu propio modelo de IA.**',
           'Sobre el papel cubre mucho: un lienzo normal de draw.io, un historial de versiones que deshace los cambios de la IA, 25 proveedores incluidos los locales, instaladores de escritorio, Docker y un servidor MCP. Es gratuita con Apache-2.0 y el desarrollo está activo, con una versión el 31 de octubre de 2026 y un commit el 14 de noviembre de 2026.',
-          'Las contrapartidas son reales. La calidad depende del modelo que conectes, la demo tiene límites y no existe política de privacidad, así que el recorrido de los datos es tan claro como el proveedor que elijas. PromptQuorum no ha probado la app. Prueba primero un diagrama pequeño y no confidencial, y usa un modelo potente o tu propio servidor para lo que importe.',
+          'Las contrapartidas son reales. La calidad depende del modelo que conectes, la demo tiene límites y no se encontró política de privacidad (comprobado el 18 de noviembre de 2026), así que el recorrido de los datos es tan claro como el proveedor que elijas. PromptQuorum no ha probado la app. Prueba primero un diagrama pequeño y no confidencial, y usa un modelo potente o tu propio servidor para lo que importe.',
         ],
       },
       sources: {
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io est une application gratuite sous licence Apache-2.0 qui transforme un prompt de chat en diagramme draw.io modifiable, dans un navigateur, sous Windows, macOS et Linux ou via un serveur MCP pour agents de programmation IA.** Elle n\'a pas de modèle propre : la qualité du diagramme dépend du fournisseur et du modèle que vous connectez. Le site du développeur n\'a pas de politique de confidentialité ; vérifiez où vont les données de votre diagramme avant de l\'utiliser pour un travail confidentiel.',
+      '**Next AI Draw.io est une application gratuite sous licence Apache-2.0 qui transforme un prompt de chat en diagramme draw.io modifiable, dans un navigateur, sous Windows, macOS et Linux ou via un serveur MCP pour agents de programmation IA.** Elle n\'a pas de modèle propre : la qualité du diagramme dépend du fournisseur et du modèle que vous connectez. Aucune politique de confidentialité n\'a été trouvée sur le site du développeur (vérifié le 18 novembre 2026) ; vérifiez où vont les données de votre diagramme avant de l\'utiliser pour un travail confidentiel.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Next AI Draw.io et à qui s\'adresse-t-il ?',
@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'application est gratuite sous Apache-2.0. Le site de démo a une limite d\'usage quotidienne que votre propre clé d\'API lève, et le fournisseur du modèle vous facture séparément.',
           'La dernière version est la v0.5.1 et le dépôt a reçu un commit le 14 novembre 2026, donc aucun avertissement de projet abandonné ne s\'applique.',
           'Le développeur indique que la tâche demande des modèles puissants et que les petits modèles produisent souvent des diagrammes défectueux.',
-          'PromptQuorum n\'a pas testé l\'application, et aucune politique de confidentialité, aucune condition d\'utilisation ni aucune mention légale n\'a été trouvée.',
+          'PromptQuorum n\'a pas testé l\'application, et aucune politique de confidentialité, aucune condition d\'utilisation ni aucune mention légale n\'a été trouvée (vérifié le 18 novembre 2026).',
         ],
         callouts: [
           {
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plateforme': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', 'Comment l\'obtenir': 'Une commande docker run, puis ouvrir localhost:3000' },
           { 'Plateforme': '[Serveur MCP](https://next-ai-drawio.jiang.jp/en/mcp)', 'Comment l\'obtenir': 'Ajouter le paquet npm aux réglages MCP de votre agent' },
         ],
-        note: 'Il n\'existe pas de page de politique de confidentialité. Le site indique que la clé saisie reste dans votre navigateur et n\'est jamais stockée sur le serveur.',
+        note: 'Aucune page de politique de confidentialité n\'a été trouvée (vérifié le 18 novembre 2026). Le site indique que la clé saisie reste dans votre navigateur et n\'est jamais stockée sur le serveur.',
       },
       requirements: {
         id: 'requirements',
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Votre demande et le diagramme actuel vont au modèle d\'IA que vous choisissez : le trajet des données dépend donc de ce fournisseur.**',
           'La documentation indique que l\'application envoie votre demande et le diagramme actuel au modèle sélectionné, et que la clé d\'API saisie reste dans votre navigateur sans jamais être stockée sur le serveur. Si le modèle tourne sur votre propre machine, par exemple via Ollama, la demande va à ce serveur local plutôt qu\'à un fournisseur cloud ; PromptQuorum n\'a pas vérifié si autre chose quitte la machine.',
           'Pour l\'auto-hébergement, le fichier env.example du dépôt décrit un traçage Langfuse facultatif et précise qu\'une fois configuré, l\'éditeur envoie aussi les noms des actions des utilisateurs. Le README décrit en outre un panneau d\'administration avec des réglages d\'observabilité et de quotas.',
-          'Le site et le dépôt n\'ont ni politique de confidentialité, ni conditions d\'utilisation, ni mentions légales : ce que la démo hébergée enregistre n\'est donc pas documenté.',
+          'Ni politique de confidentialité, ni conditions d\'utilisation, ni mentions légales n\'ont été trouvées sur le site ou dans le dépôt (vérifié le 18 novembre 2026) : ce que la démo hébergée enregistre n\'est donc pas documenté.',
         ],
       },
       whoShouldUse: {
@@ -1020,11 +1020,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Limite : selon le README, la tâche demande des modèles puissants, et les petits modèles produisent souvent des diagrammes défectueux.',
           'Limite : x-cmd indique que le résultat doit être relu par un humain et cite des connecteurs mal alignés, des nœuds en double et des styles incohérents.',
           'Limite : la démo hébergée a une limite d\'usage quotidienne ; un usage régulier demande donc votre propre clé d\'API ou l\'auto-hébergement.',
-          'Non vérifié : ce que la démo hébergée ou l\'application de bureau enregistre ou envoie en plus du diagramme et de la demande. Il n\'existe ni politique de confidentialité, ni conditions, ni mentions légales.',
-          'Non vérifié : la localisation du développeur. Le profil GitHub cite une ville, mais aucune politique ni mention légale n\'indique de pays ; l\'annuaire n\'affiche donc pas de drapeau de siège.',
+          'Non vérifié : ce que la démo hébergée ou l\'application de bureau enregistre ou envoie en plus du diagramme et de la demande. Ni politique de confidentialité, ni conditions, ni mentions légales n\'ont été trouvées (vérifié le 18 novembre 2026).',
+          'Non vérifié : la localisation du développeur. Le profil GitHub cite une ville, mais aucune politique ni mention légale consultée le 18 novembre 2026 n\'indique de pays ; l\'annuaire n\'affiche donc pas de drapeau de siège.',
           'Non vérifié : tout lien entre ce projet et l\'entreprise derrière draw.io. Le README dit seulement que l\'application embarque sa propre copie de draw.io.',
           'Non vérifié : qualité des diagrammes, vitesse et coût selon le modèle. PromptQuorum n\'a pas testé l\'application, et les mesures du développeur n\'ont pas été examinées.',
-          'Non vérifié : si les installateurs de bureau sont signés. Aucune source ne l\'indique.',
+          'Non vérifié : si les installateurs de bureau sont signés. Aucune source consultée le 18 novembre 2026 ne l\'indique.',
         ],
       },
       vsAlternatives: {
@@ -1074,7 +1074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Next AI Draw.io mérite un coup d\'œil si vous dessinez régulièrement des diagrammes techniques et acceptez de choisir et de payer votre propre modèle d\'IA.**',
           'Sur le papier, il couvre beaucoup : un canevas draw.io ordinaire, un historique de versions qui annule les modifications de l\'IA, 25 fournisseurs dont des locaux, des installateurs de bureau, Docker et un serveur MCP. Il est gratuit sous Apache-2.0, et le développement est actif, avec une version le 31 octobre 2026 et un commit le 14 novembre 2026.',
-          'Les compromis sont réels. La qualité dépend du modèle connecté, la démo est limitée et il n\'existe pas de politique de confidentialité : le trajet des données n\'est aussi clair que le fournisseur que vous choisissez. PromptQuorum n\'a pas testé l\'application. Essayez d\'abord un petit diagramme non confidentiel, et utilisez un modèle puissant ou votre propre serveur pour ce qui compte.',
+          'Les compromis sont réels. La qualité dépend du modèle connecté, la démo est limitée et aucune politique de confidentialité n\'a été trouvée (vérifié le 18 novembre 2026) : le trajet des données n\'est pas plus clair que le fournisseur que vous choisissez. PromptQuorum n\'a pas testé l\'application. Essayez d\'abord un petit diagramme non confidentiel, et utilisez un modèle puissant ou votre propre serveur pour ce qui compte.',
         ],
       },
       sources: {
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.ioは、チャットのプロンプトを編集可能なdraw.ioの図に変えるApache-2.0の無料アプリで、ブラウザ、Windows・macOS・Linux、またはAIコーディングエージェント向けのMCPサーバー経由で使えます。** 独自のモデルは持たないため、図の品質は接続するプロバイダーとモデルによって決まります。開発者のサイトにはプライバシーポリシーがないため、機密性の高い作業で使う前に、図のデータがどこへ送られるかを確認してください。',
+      '**Next AI Draw.ioは、チャットのプロンプトを編集可能なdraw.ioの図に変えるApache-2.0の無料アプリで、ブラウザ、Windows・macOS・Linux、またはAIコーディングエージェント向けのMCPサーバー経由で使えます。** 独自のモデルは持たないため、図の品質は接続するプロバイダーとモデルによって決まります。開発者のサイトではプライバシーポリシーが見つかりませんでした（2026年11月18日確認）。そのため、機密性の高い作業で使う前に、図のデータがどこへ送られるかを確認してください。',
     quickAnswerTop: {
       ja: {
         question: 'Next AI Draw.ioとは何で、誰に向いていますか？',
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'アプリはApache-2.0で無料です。デモサイトには1日の利用上限があり、自分のAPIキーで解除できます。モデルプロバイダーの料金は別にかかります。',
           '最新リリースはv0.5.1で、リポジトリには2026年11月14日にコミットがあるため、放置プロジェクトの警告は該当しません。',
           '開発者は、この作業には高性能なモデルが必要で、小さなモデルは壊れた図を出しやすいと述べています。',
-          'PromptQuorumはこのアプリを試しておらず、プライバシーポリシー、利用規約、法的表示のいずれも見つかりませんでした。',
+          'PromptQuorumはこのアプリを試しておらず、プライバシーポリシー、利用規約、法的表示のいずれも見つかりませんでした（2026年11月18日確認）。',
         ],
         callouts: [
           {
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラットフォーム': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', '入手方法': 'docker runを1回実行し、localhost:3000を開く' },
           { 'プラットフォーム': '[MCPサーバー](https://next-ai-drawio.jiang.jp/en/mcp)', '入手方法': 'npmパッケージをエージェントのMCP設定に追加' },
         ],
-        note: 'プライバシーポリシーの専用ページはありません。サイトは、入力したキーはブラウザに保存され、サーバーには保存されないと述べています。',
+        note: 'プライバシーポリシーの専用ページは見つかりませんでした（2026年11月18日確認）。サイトは、入力したキーはブラウザに保存され、サーバーには保存されないと述べています。',
       },
       requirements: {
         id: 'requirements',
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**リクエストと現在の図は、選んだAIモデルに送られるため、データの経路はそのプロバイダー次第です。**',
           'ドキュメントによると、アプリはリクエストと現在の図を選択したモデルに送り、入力したAPIキーはブラウザに保存されてサーバーには保存されません。モデルが自分のマシン上で動いている場合（たとえばOllama経由）は、リクエストはクラウドプロバイダーではなくそのローカルサーバーに送られます。それ以外に何かがマシンの外へ出ていないかは、PromptQuorumは確認していません。',
           'セルフホストする場合、リポジトリのenv.exampleには、任意のLangfuseトレーシングが記載されており、設定するとエディタがユーザー操作の名前も送信するとあります。READMEには、オブザーバビリティとクォータの設定を持つ管理パネルも記載されています。',
-          'サイトにもリポジトリにも、プライバシーポリシー、利用規約、法的表示がないため、ホスト版デモが何を記録するかは文書化されていません。',
+          'サイトにもリポジトリにも、プライバシーポリシー、利用規約、法的表示は見つかりませんでした（2026年11月18日確認）。そのため、ホスト版デモが何を記録するかは文書化されていません。',
         ],
       },
       whoShouldUse: {
@@ -1294,11 +1294,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '制限：READMEによると、この作業には高性能なモデルが必要で、小さなモデルは壊れた図を出しやすいとされています。',
           '制限：x-cmdは、出力には人の確認が必要で、コネクタのずれ、ノードの重複、スタイルの不統一があると指摘しています。',
           '制限：ホスト版デモには1日の利用上限があるため、日常的に使うには自分のAPIキーかセルフホストが必要です。',
-          '未確認：ホスト版デモやデスクトップアプリが、図とリクエスト以外に何を記録・送信するか。プライバシーポリシー、利用規約、法的表示はありません。',
-          '未確認：開発者の所在地。GitHubプロフィールには都市名がありますが、ポリシーや法的表示に国名の記載がないため、ディレクトリには本拠地の国旗を表示していません。',
+          '未確認：ホスト版デモやデスクトップアプリが、図とリクエスト以外に何を記録・送信するか。プライバシーポリシー、利用規約、法的表示は見つかりませんでした（2026年11月18日確認）。',
+          '未確認：開発者の所在地。GitHubプロフィールには都市名がありますが、2026年11月18日時点で確認したポリシーや法的表示に国名の記載がないため、ディレクトリには本拠地の国旗を表示していません。',
           '未確認：このプロジェクトとdraw.ioを提供する企業との関係。READMEは、アプリがdraw.ioのコピーを同梱していると述べているだけです。',
           '未確認：モデルごとの図の品質、速度、コスト。PromptQuorumはアプリを試しておらず、開発者自身の測定も確認していません。',
-          '未確認：デスクトップ用インストーラーにコード署名があるかどうか。情報源に記載はありません。',
+          '未確認：デスクトップ用インストーラーにコード署名があるかどうか。2026年11月18日に確認した情報源に記載はありません。',
         ],
       },
       vsAlternatives: {
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Next AI Draw.ioは、技術的な図を定期的に描き、自分でAIモデルを選んで費用を負担することに抵抗がない人なら、試す価値があります。**',
           '仕様上は幅広くカバーしています。通常のdraw.ioキャンバス、AIの変更を取り消せるバージョン履歴、ローカルを含む25のプロバイダー、デスクトップ用インストーラー、Docker、MCPサーバーです。Apache-2.0で無料、開発も活発で、2026年10月31日にリリース、2026年11月14日にコミットがあります。',
-          'トレードオフは現実的です。品質は接続するモデルに左右され、デモには上限があり、プライバシーポリシーもないため、データの経路は選んだプロバイダー並みにしか分かりません。PromptQuorumはこのアプリを試していません。まずは小さく機密性のない図で試し、重要な作業には高性能なモデルか自前のサーバーを使ってください。',
+          'トレードオフは現実的です。品質は接続するモデルに左右され、デモには上限があり、プライバシーポリシーも見つからなかったため（2026年11月18日確認）、データの経路は選んだプロバイダー並みにしか分かりません。PromptQuorumはこのアプリを試していません。まずは小さく機密性のない図で試し、重要な作業には高性能なモデルか自前のサーバーを使ってください。',
         ],
       },
       sources: {
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O Next AI Draw.io é um app gratuito com licença Apache-2.0 que transforma um prompt de chat em um diagrama editável do draw.io, no navegador, no Windows, macOS e Linux ou por meio de um servidor MCP para agentes de programação com IA.** Ele não tem modelo próprio, então a qualidade do diagrama depende do provedor e do modelo que você conectar. O site do desenvolvedor não tem política de privacidade; confira para onde vão os dados do seu diagrama antes de usá-lo em trabalho confidencial.',
+      '**O Next AI Draw.io é um app gratuito com licença Apache-2.0 que transforma um prompt de chat em um diagrama editável do draw.io, no navegador, no Windows, macOS e Linux ou por meio de um servidor MCP para agentes de programação com IA.** Ele não tem modelo próprio, então a qualidade do diagrama depende do provedor e do modelo que você conectar. Não foi encontrada política de privacidade no site do desenvolvedor (verificado em 18 de novembro de 2026); confira para onde vão os dados do seu diagrama antes de usá-lo em trabalho confidencial.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Next AI Draw.io e para quem ele serve?',
@@ -1463,7 +1463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O app é gratuito sob Apache-2.0. O site da demo tem um limite diário de uso que sua própria chave de API remove, e o provedor do modelo cobra você à parte.',
           'A versão mais recente é a v0.5.1 e o repositório teve um commit em 14 de novembro de 2026, então nenhum aviso de projeto abandonado se aplica.',
           'O desenvolvedor diz que a tarefa exige modelos fortes e que modelos pequenos tendem a produzir diagramas quebrados.',
-          'A PromptQuorum não testou o app, e não foram encontrados política de privacidade, termos nem aviso legal.',
+          'A PromptQuorum não testou o app, e não foram encontrados política de privacidade, termos nem aviso legal (verificado em 18 de novembro de 2026).',
         ],
         callouts: [
           {
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', 'Como obter': 'Um comando docker run, depois abra localhost:3000' },
           { 'Plataforma': '[Servidor MCP](https://next-ai-drawio.jiang.jp/en/mcp)', 'Como obter': 'Adicione o pacote npm às configurações MCP do agente' },
         ],
-        note: 'Não existe uma página de política de privacidade. O site diz que a chave que você digita fica no navegador e nunca é armazenada no servidor.',
+        note: 'Não foi encontrada uma página de política de privacidade (verificado em 18 de novembro de 2026). O site diz que a chave que você digita fica no navegador e nunca é armazenada no servidor.',
       },
       requirements: {
         id: 'requirements',
@@ -1543,7 +1543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sua solicitação e o diagrama atual vão para o modelo de IA que você escolher, então o caminho dos dados depende desse provedor.**',
           'A documentação diz que o app envia sua solicitação e o diagrama atual ao modelo selecionado, e que a chave de API digitada fica no navegador e nunca é armazenada no servidor. Se o modelo roda na sua própria máquina, por exemplo via Ollama, a solicitação vai para esse servidor local em vez de um provedor na nuvem; a PromptQuorum não verificou se mais alguma coisa sai da máquina.',
           'Para quem auto-hospeda, o env.example do repositório descreve um rastreamento opcional com Langfuse e diz que, com ele configurado, o editor também envia os nomes das ações dos usuários. O README descreve ainda um painel de administração com configurações de observabilidade e cotas.',
-          'O site e o repositório não têm política de privacidade, termos nem aviso legal, então o que a demo hospedada registra não está documentado.',
+          'Não foram encontrados política de privacidade, termos nem aviso legal no site nem no repositório (verificado em 18 de novembro de 2026), então o que a demo hospedada registra não está documentado.',
         ],
       },
       whoShouldUse: {
@@ -1568,11 +1568,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Limite: segundo o README, a tarefa exige modelos fortes, e modelos pequenos tendem a produzir diagramas quebrados.',
           'Limite: o x-cmd diz que o resultado precisa de revisão humana e cita conectores desalinhados, nós duplicados e estilos inconsistentes.',
           'Limite: a demo hospedada tem um limite diário de uso, então o uso regular exige sua própria chave de API ou auto-hospedagem.',
-          'Não verificado: o que a demo hospedada ou o app de desktop registra ou envia além do diagrama e da solicitação. Não existem política de privacidade, termos nem aviso legal.',
-          'Não verificado: a localização do desenvolvedor. O perfil do GitHub cita uma cidade, mas nenhuma política ou aviso legal informa um país, por isso o diretório não mostra bandeira de sede.',
+          'Não verificado: o que a demo hospedada ou o app de desktop registra ou envia além do diagrama e da solicitação. Não foram encontrados política de privacidade, termos nem aviso legal (verificado em 18 de novembro de 2026).',
+          'Não verificado: a localização do desenvolvedor. O perfil do GitHub cita uma cidade, mas nenhuma política ou aviso legal verificados em 18 de novembro de 2026 informa um país, por isso o diretório não mostra bandeira de sede.',
           'Não verificado: qualquer vínculo entre este projeto e a empresa por trás do draw.io. O README só diz que o app inclui a própria cópia do draw.io.',
           'Não verificado: qualidade dos diagramas, velocidade e custo por modelo. A PromptQuorum não testou o app, e as medições do próprio desenvolvedor não foram revisadas.',
-          'Não verificado: se os instaladores de desktop têm assinatura de código. Nenhuma fonte informa isso.',
+          'Não verificado: se os instaladores de desktop têm assinatura de código. Nenhuma fonte lida em 18 de novembro de 2026 informa isso.',
         ],
       },
       vsAlternatives: {
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O Next AI Draw.io vale uma olhada se você desenha diagramas técnicos com regularidade e se sente à vontade para escolher e pagar o seu próprio modelo de IA.**',
           'No papel, ele cobre muita coisa: uma tela comum do draw.io, um histórico de versões que desfaz as alterações da IA, 25 provedores incluindo locais, instaladores de desktop, Docker e um servidor MCP. É gratuito sob Apache-2.0 e o desenvolvimento está ativo, com uma versão em 31 de outubro de 2026 e um commit em 14 de novembro de 2026.',
-          'As contrapartidas são reais. A qualidade depende do modelo conectado, a demo tem limite e não existe política de privacidade, então o caminho dos dados é tão claro quanto o provedor que você escolher. A PromptQuorum não testou o app. Experimente primeiro um diagrama pequeno e não confidencial, e use um modelo forte ou seu próprio servidor para o que importa.',
+          'As contrapartidas são reais. A qualidade depende do modelo conectado, a demo tem limite e não foi encontrada política de privacidade (verificado em 18 de novembro de 2026), então o caminho dos dados é tão claro quanto o provedor que você escolher. A PromptQuorum não testou o app. Experimente primeiro um diagrama pequeno e não confidencial, e use um modelo forte ou seu próprio servidor para o que importa.',
         ],
       },
       sources: {
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io 是一款采用 Apache-2.0 许可证的免费应用，可把聊天提示变成可编辑的 draw.io 图表，可在浏览器、Windows、macOS 和 Linux 上使用，也可通过 MCP 服务器接入 AI 编程智能体。** 它没有自带模型，图表质量取决于您接入的提供商和模型。开发者的网站没有隐私政策，处理机密工作前请先确认图表数据会发送到哪里。',
+      '**Next AI Draw.io 是一款采用 Apache-2.0 许可证的免费应用，可把聊天提示变成可编辑的 draw.io 图表，可在浏览器、Windows、macOS 和 Linux 上使用，也可通过 MCP 服务器接入 AI 编程智能体。** 它没有自带模型，图表质量取决于您接入的提供商和模型。在开发者的网站上未找到隐私政策（2026 年 11 月 18 日核查），处理机密工作前请先确认图表数据会发送到哪里。',
     quickAnswerTop: {
       zh: {
         question: 'Next AI Draw.io 是什么，适合谁用？',
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '应用本身在 Apache-2.0 下免费。演示站每天有使用限额，填入您自己的 API 密钥即可解除，模型提供商另行向您计费。',
           '最新发布版本是 v0.5.1，仓库在 2026 年 11 月 14 日有过提交，因此不适用项目停更警告。',
           '开发者表示，这项任务需要能力较强的模型，小模型往往会生成损坏的图表。',
-          'PromptQuorum 没有测试过这款应用，也没有找到隐私政策、服务条款或法律声明。',
+          'PromptQuorum 没有测试过这款应用，也没有找到隐私政策、服务条款或法律声明（2026 年 11 月 18 日核查）。',
         ],
         callouts: [
           {
@@ -1773,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '平台': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', '获取方式': '运行一条 docker run 命令，再打开 localhost:3000' },
           { '平台': '[MCP 服务器](https://next-ai-drawio.jiang.jp/en/mcp)', '获取方式': '把 npm 包添加到智能体的 MCP 设置中' },
         ],
-        note: '没有单独的隐私政策页面。网站称，您输入的密钥保存在浏览器中，不会存储在服务器上。',
+        note: '未找到单独的隐私政策页面（2026 年 11 月 18 日核查）。网站称，您输入的密钥保存在浏览器中，不会存储在服务器上。',
       },
       requirements: {
         id: 'requirements',
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**您的请求和当前图表会发送给您选择的 AI 模型，因此数据流向取决于该提供商。**',
           '文档称，应用会把您的请求和当前图表发送给所选模型，您输入的 API 密钥保存在浏览器中，不会存储在服务器上。如果模型运行在您自己的机器上（例如通过 Ollama），请求会发送到该本地服务器，而不是云端提供商；PromptQuorum 没有核实是否还有其他数据离开这台机器。',
           '对于自托管用户，仓库的 env.example 描述了可选的 Langfuse 追踪，并说明启用后编辑器还会发送用户操作的名称。README 还描述了带有可观测性和配额设置的管理面板。',
-          '网站和仓库都没有隐私政策、服务条款或法律声明，因此托管演示站会记录什么并无文档说明。',
+          '在网站和仓库中均未找到隐私政策、服务条款或法律声明（2026 年 11 月 18 日核查），因此托管演示站会记录什么并无文档说明。',
         ],
       },
       whoShouldUse: {
@@ -1842,11 +1842,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '局限：README 称这项任务需要能力较强的模型，小模型往往会生成损坏的图表。',
           '局限：x-cmd 指出输出需要人工检查，并提到连接线错位、节点重复和样式不一致。',
           '局限：托管演示站每天有使用限额，因此经常使用需要自己的 API 密钥或自托管。',
-          '未核实：托管演示站或桌面应用除图表和请求之外还会记录或发送什么。没有隐私政策、服务条款或法律声明。',
-          '未核实：开发者所在地。GitHub 个人资料写有一个城市，但没有任何政策或法律声明说明所在国家，因此目录不显示总部国旗。',
+          '未核实：托管演示站或桌面应用除图表和请求之外还会记录或发送什么。未找到隐私政策、服务条款或法律声明（2026 年 11 月 18 日核查）。',
+          '未核实：开发者所在地。GitHub 个人资料写有一个城市，但在 2026 年 11 月 18 日查阅的政策或法律声明中均未说明所在国家，因此目录不显示总部国旗。',
           '未核实：本项目与 draw.io 背后公司之间是否有任何关联。README 只说应用自带 draw.io 的副本。',
           '未核实：各模型下的图表质量、速度和成本。PromptQuorum 没有测试过这款应用，也没有查看开发者自己的测量数据。',
-          '未核实：桌面安装包是否经过代码签名。没有来源提及。',
+          '未核实：桌面安装包是否经过代码签名。在 2026 年 11 月 18 日查阅的来源中均未提及。',
         ],
       },
       vsAlternatives: {
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**如果您经常绘制技术图表，并且乐于自己选择和付费使用 AI 模型，Next AI Draw.io 值得一试。**',
           '从纸面上看，它覆盖面很广：普通的 draw.io 画布、可撤销 AI 修改的版本历史、包括本地模型在内的 25 个提供商、桌面安装包、Docker 和 MCP 服务器。它在 Apache-2.0 下免费，开发活跃，2026 年 10 月 31 日有发布，2026 年 11 月 14 日有提交。',
-          '代价也是真实的。质量取决于您接入的模型，演示站有限额，且没有隐私政策，数据流向只能和您选择的提供商一样清楚。PromptQuorum 没有测试过这款应用。请先用一张小的、不含机密的图表试用，重要工作请使用能力较强的模型或自己的服务器。',
+          '代价也是真实的。质量取决于您接入的模型，演示站有限额，且未找到隐私政策（2026 年 11 月 18 日核查），数据流向只能和您选择的提供商一样清楚。PromptQuorum 没有测试过这款应用。请先用一张小的、不含机密的图表试用，重要工作请使用能力较强的模型或自己的服务器。',
         ],
       },
       sources: {
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io تطبيق مجاني بترخيص Apache-2.0 يحوّل طلبًا في محادثة إلى مخطط draw.io قابل للتعديل، في المتصفح أو على Windows وmacOS وLinux أو عبر خادم MCP لوكلاء البرمجة بالذكاء الاصطناعي.** ليس له نموذج خاص، لذا تعتمد جودة المخطط على المزوّد والنموذج اللذين تربطهما. لا توجد سياسة خصوصية على موقع المطوّر، فتحقّق من وجهة بيانات مخططك قبل استخدامه في عمل سري.',
+      '**Next AI Draw.io تطبيق مجاني بترخيص Apache-2.0 يحوّل طلبًا في محادثة إلى مخطط draw.io قابل للتعديل، في المتصفح أو على Windows وmacOS وLinux أو عبر خادم MCP لوكلاء البرمجة بالذكاء الاصطناعي.** ليس له نموذج خاص، لذا تعتمد جودة المخطط على المزوّد والنموذج اللذين تربطهما. لم نعثر على سياسة خصوصية في موقع المطوّر (تم الفحص في 18 نوفمبر 2026)، فتحقّق من وجهة بيانات مخططك قبل استخدامه في عمل سري.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Next AI Draw.io ولمن يناسب؟',
@@ -2011,7 +2011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التطبيق مجاني بترخيص Apache-2.0. للموقع التجريبي حد يومي للاستخدام يرفعه مفتاح API الخاص بك، ويحاسبك مزوّد النموذج على حدة.',
           'أحدث إصدار هو v0.5.1 وسُجّل في المستودع commit بتاريخ 14 نوفمبر 2026، فلا ينطبق تحذير المشروع المتوقف.',
           'يقول المطوّر إن المهمة تحتاج نماذج قوية، وإن النماذج الصغيرة تميل إلى إنتاج مخططات معطوبة.',
-          'لم تختبر PromptQuorum التطبيق، ولم يُعثر على سياسة خصوصية أو شروط استخدام أو بيانات قانونية.',
+          'لم تختبر PromptQuorum التطبيق، ولم يُعثر على سياسة خصوصية أو شروط استخدام أو بيانات قانونية (تم الفحص في 18 نوفمبر 2026).',
         ],
         callouts: [
           {
@@ -2047,7 +2047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المنصة': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', 'كيفية الحصول عليه': 'أمر docker run واحد ثم افتح localhost:3000' },
           { 'المنصة': '[خادم MCP](https://next-ai-drawio.jiang.jp/en/mcp)', 'كيفية الحصول عليه': 'أضف حزمة npm إلى إعدادات MCP للوكيل' },
         ],
-        note: 'لا توجد صفحة مستقلة لسياسة الخصوصية. يقول الموقع إن المفتاح الذي تدخله يُحفظ في متصفحك ولا يُخزَّن على الخادم أبدًا.',
+        note: 'لم نعثر على صفحة مستقلة لسياسة الخصوصية (تم الفحص في 18 نوفمبر 2026). يقول الموقع إن المفتاح الذي تدخله يُحفظ في متصفحك ولا يُخزَّن على الخادم أبدًا.',
       },
       requirements: {
         id: 'requirements',
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**يذهب طلبك والمخطط الحالي إلى نموذج الذكاء الاصطناعي الذي تختاره، فيعتمد مسار البيانات على ذلك المزوّد.**',
           'تقول الوثائق إن التطبيق يرسل طلبك والمخطط الحالي إلى النموذج المحدد، وإن مفتاح API الذي تدخله يُحفظ في متصفحك ولا يُخزَّن على الخادم أبدًا. إذا كان النموذج يعمل على جهازك، مثلًا عبر Ollama، يذهب الطلب إلى ذلك الخادم المحلي بدل مزوّد سحابي؛ ولم تتحقق PromptQuorum مما إذا كان أي شيء آخر يغادر الجهاز.',
           'لمن يستضيفون التطبيق ذاتيًا، يصف ملف env.example في المستودع تتبعًا اختياريًا عبر Langfuse ويقول إنه عند إعداده يرسل المحرر أيضًا أسماء ما يفعله المستخدمون. ويصف README كذلك لوحة إدارة بإعدادات للمراقبة والحصص.',
-          'لا توجد على الموقع أو في المستودع سياسة خصوصية ولا شروط استخدام ولا بيانات قانونية، لذا فما يسجّله العرض التجريبي المستضاف غير موثّق.',
+          'لم نعثر على سياسة خصوصية ولا شروط استخدام ولا بيانات قانونية على الموقع أو في المستودع (تم الفحص في 18 نوفمبر 2026)، لذا فما يسجّله العرض التجريبي المستضاف غير موثّق.',
         ],
       },
       whoShouldUse: {
@@ -2116,11 +2116,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'قيد: يقول README إن المهمة تحتاج نماذج قوية، وإن النماذج الصغيرة تميل إلى إنتاج مخططات معطوبة.',
           'قيد: يقول x-cmd إن المخرجات تحتاج مراجعة بشرية، ويذكر موصّلات غير محاذاة وعقدًا مكررة وأنماطًا غير متسقة.',
           'قيد: للعرض التجريبي المستضاف حد يومي للاستخدام، لذا يتطلب الاستخدام المنتظم مفتاح API خاصًا بك أو استضافة ذاتية.',
-          'لم يُتحقق منه: ما يسجّله العرض التجريبي المستضاف أو تطبيق سطح المكتب أو يرسله بخلاف المخطط والطلب. لا توجد سياسة خصوصية ولا شروط استخدام ولا بيانات قانونية.',
-          'لم يُتحقق منه: موقع المطوّر. يذكر ملفه الشخصي على GitHub مدينة، لكن لا توجد سياسة أو بيانات قانونية تذكر دولة، لذا لا يعرض الدليل علم مقر الشركة.',
+          'لم يُتحقق منه: ما يسجّله العرض التجريبي المستضاف أو تطبيق سطح المكتب أو يرسله بخلاف المخطط والطلب. لم نعثر على سياسة خصوصية ولا شروط استخدام ولا بيانات قانونية (تم الفحص في 18 نوفمبر 2026).',
+          'لم يُتحقق منه: موقع المطوّر. يذكر ملفه الشخصي على GitHub مدينة، لكن لا سياسة ولا بيانات قانونية جرى الاطلاع عليها في 18 نوفمبر 2026 تذكر دولة، لذا لا يعرض الدليل علم مقر الشركة.',
           'لم يُتحقق منه: أي صلة بين هذا المشروع والشركة التي تقف وراء draw.io. يقول README فقط إن التطبيق يضم نسخته الخاصة من draw.io.',
           'لم يُتحقق منه: جودة المخططات والسرعة والتكلفة لكل نموذج. لم تختبر PromptQuorum التطبيق، ولم تُراجَع قياسات المطوّر نفسه.',
-          'لم يُتحقق منه: هل مثبّتات سطح المكتب موقّعة رقميًا. لا يذكر أي مصدر ذلك.',
+          'لم يُتحقق منه: هل مثبّتات سطح المكتب موقّعة رقميًا. لا يذكر أي مصدر جرت قراءته في 18 نوفمبر 2026 ذلك.',
         ],
       },
       vsAlternatives: {
@@ -2170,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يستحق Next AI Draw.io نظرة إن كنت ترسم مخططات تقنية بانتظام وتحب أن تختار نموذج الذكاء الاصطناعي بنفسك وتدفع تكلفته.**',
           'على الورق يغطي الكثير: لوحة draw.io عادية، وسجل إصدارات يتراجع عن تغييرات الذكاء الاصطناعي، و25 مزوّدًا منها محلية، ومثبّتات لسطح المكتب، وDocker، وخادم MCP. وهو مجاني بترخيص Apache-2.0 والتطوير نشط، مع إصدار في 31 أكتوبر 2026 وcommit في 14 نوفمبر 2026.',
-          'المقايضات حقيقية. تعتمد الجودة على النموذج الذي تربطه، والعرض التجريبي محدود، ولا توجد سياسة خصوصية، فمسار البيانات لا يكون أوضح من المزوّد الذي تختاره. لم تختبر PromptQuorum التطبيق. جرّب أولًا مخططًا صغيرًا غير سري، واستخدم نموذجًا قويًا أو خادمك الخاص لما يهمك.',
+          'المقايضات حقيقية. تعتمد الجودة على النموذج الذي تربطه، والعرض التجريبي محدود، ولم نعثر على سياسة خصوصية (تم الفحص في 18 نوفمبر 2026)، فمسار البيانات لا يكون أوضح من المزوّد الذي تختاره. لم تختبر PromptQuorum التطبيق. جرّب أولًا مخططًا صغيرًا غير سري، واستخدم نموذجًا قويًا أو خادمك الخاص لما يهمك.',
         ],
       },
       sources: {
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Next AI Draw.io는 채팅 프롬프트를 편집 가능한 draw.io 다이어그램으로 바꿔 주는 Apache-2.0 라이선스의 무료 앱으로, 브라우저, Windows·macOS·Linux, 또는 AI 코딩 에이전트용 MCP 서버로 사용할 수 있습니다.** 자체 모델이 없어서 다이어그램 품질은 연결하는 제공업체와 모델에 달려 있습니다. 개발자 사이트에는 개인정보 처리방침이 없으므로, 기밀 작업에 쓰기 전에 다이어그램 데이터가 어디로 가는지 확인하십시오.',
+      '**Next AI Draw.io는 채팅 프롬프트를 편집 가능한 draw.io 다이어그램으로 바꿔 주는 Apache-2.0 라이선스의 무료 앱으로, 브라우저, Windows·macOS·Linux, 또는 AI 코딩 에이전트용 MCP 서버로 사용할 수 있습니다.** 자체 모델이 없어서 다이어그램 품질은 연결하는 제공업체와 모델에 달려 있습니다. 개발자 사이트에서 개인정보 처리방침을 찾지 못했으므로(2026년 11월 18일 확인), 기밀 작업에 쓰기 전에 다이어그램 데이터가 어디로 가는지 확인하십시오.',
     quickAnswerTop: {
       ko: {
         question: 'Next AI Draw.io는 무엇이고 누구에게 맞습니까?',
@@ -2285,7 +2285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '앱은 Apache-2.0으로 무료입니다. 데모 사이트에는 일일 사용 한도가 있으며 자신의 API 키로 풀 수 있고, 모델 제공업체의 요금은 별도입니다.',
           '최신 릴리스는 v0.5.1이며 저장소에 2026년 11월 14일 커밋이 있으므로, 방치된 프로젝트 경고는 해당하지 않습니다.',
           '개발자는 이 작업에 성능이 높은 모델이 필요하며 작은 모델은 망가진 다이어그램을 내놓기 쉽다고 밝히고 있습니다.',
-          'PromptQuorum은 이 앱을 테스트하지 않았으며, 개인정보 처리방침, 이용 약관, 법적 고지는 찾지 못했습니다.',
+          'PromptQuorum은 이 앱을 테스트하지 않았으며, 개인정보 처리방침, 이용 약관, 법적 고지는 찾지 못했습니다(2026년 11월 18일 확인).',
         ],
         callouts: [
           {
@@ -2321,7 +2321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플랫폼': '[Docker](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md)', '받는 방법': 'docker run 명령 한 번 후 localhost:3000 열기' },
           { '플랫폼': '[MCP 서버](https://next-ai-drawio.jiang.jp/en/mcp)', '받는 방법': 'npm 패키지를 에이전트의 MCP 설정에 추가' },
         ],
-        note: '개인정보 처리방침 전용 페이지는 없습니다. 사이트는 입력한 키가 브라우저에 보관되고 서버에는 저장되지 않는다고 밝힙니다.',
+        note: '개인정보 처리방침 전용 페이지를 찾지 못했습니다(2026년 11월 18일 확인). 사이트는 입력한 키가 브라우저에 보관되고 서버에는 저장되지 않는다고 밝힙니다.',
       },
       requirements: {
         id: 'requirements',
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**요청과 현재 다이어그램은 선택한 AI 모델로 전송되므로 데이터 경로는 그 제공업체에 따라 달라집니다.**',
           '문서에 따르면 앱은 요청과 현재 다이어그램을 선택한 모델로 보내며, 입력한 API 키는 브라우저에 보관되고 서버에는 저장되지 않습니다. 모델이 사용자의 컴퓨터에서 실행된다면(예: Ollama 경유) 요청은 클라우드 제공업체가 아니라 그 로컬 서버로 갑니다. 그 밖에 다른 것이 컴퓨터 밖으로 나가는지는 PromptQuorum이 확인하지 않았습니다.',
           '셀프 호스팅하는 경우, 저장소의 env.example에는 선택 사항인 Langfuse 트레이싱이 나와 있으며, 이를 설정하면 편집기가 사용자 동작의 이름도 전송한다고 되어 있습니다. README에는 관측성과 할당량 설정이 있는 관리 패널도 설명되어 있습니다.',
-          '사이트와 저장소에는 개인정보 처리방침, 이용 약관, 법적 고지가 없으므로 호스팅 데모가 무엇을 기록하는지는 문서화되어 있지 않습니다.',
+          '사이트와 저장소에서 개인정보 처리방침, 이용 약관, 법적 고지를 찾지 못했으므로(2026년 11월 18일 확인) 호스팅 데모가 무엇을 기록하는지는 문서화되어 있지 않습니다.',
         ],
       },
       whoShouldUse: {
@@ -2390,11 +2390,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '제한: README는 이 작업에 성능이 높은 모델이 필요하고 작은 모델은 망가진 다이어그램을 내놓기 쉽다고 밝힙니다.',
           '제한: x-cmd는 출력에 사람의 검토가 필요하다며 어긋난 커넥터, 중복된 노드, 일관되지 않은 스타일을 언급합니다.',
           '제한: 호스팅 데모에는 일일 사용 한도가 있어서, 꾸준히 쓰려면 자신의 API 키나 셀프 호스팅이 필요합니다.',
-          '미확인: 호스팅 데모나 데스크톱 앱이 다이어그램과 요청 외에 무엇을 기록하거나 전송하는지. 개인정보 처리방침, 이용 약관, 법적 고지가 없습니다.',
-          '미확인: 개발자의 소재지. GitHub 프로필에는 도시 이름이 있지만 어떤 정책이나 법적 고지에도 국가가 명시되어 있지 않아, 디렉터리에는 본사 국기를 표시하지 않았습니다.',
+          '미확인: 호스팅 데모나 데스크톱 앱이 다이어그램과 요청 외에 무엇을 기록하거나 전송하는지. 개인정보 처리방침, 이용 약관, 법적 고지를 찾지 못했습니다(2026년 11월 18일 확인).',
+          '미확인: 개발자의 소재지. GitHub 프로필에는 도시 이름이 있지만 2026년 11월 18일에 확인한 어떤 정책이나 법적 고지에도 국가가 명시되어 있지 않아, 디렉터리에는 본사 국기를 표시하지 않았습니다.',
           '미확인: 이 프로젝트와 draw.io를 만든 회사 사이의 관계. README는 앱에 draw.io 사본이 들어 있다고만 밝힙니다.',
           '미확인: 모델별 다이어그램 품질, 속도, 비용. PromptQuorum은 앱을 테스트하지 않았고 개발자 자체 측정은 검토하지 않았습니다.',
-          '미확인: 데스크톱 설치 파일에 코드 서명이 되어 있는지. 어떤 출처에도 언급이 없습니다.',
+          '미확인: 데스크톱 설치 파일에 코드 서명이 되어 있는지. 2026년 11월 18일에 확인한 어떤 출처에도 언급이 없습니다.',
         ],
       },
       vsAlternatives: {
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Next AI Draw.io는 기술 다이어그램을 정기적으로 그리고, 자신이 AI 모델을 고르고 비용을 부담하는 데 거부감이 없다면 살펴볼 만합니다.**',
           '스펙상으로는 폭넓게 갖추고 있습니다. 일반 draw.io 캔버스, AI의 변경을 되돌리는 버전 기록, 로컬을 포함한 25개 제공업체, 데스크톱 설치 파일, Docker, MCP 서버입니다. Apache-2.0으로 무료이고 개발도 활발하여 2026년 10월 31일에 릴리스, 2026년 11월 14일에 커밋이 있습니다.',
-          '절충점도 분명합니다. 품질은 연결한 모델에 달려 있고, 데모에는 한도가 있으며, 개인정보 처리방침이 없어서 데이터 경로는 선택한 제공업체만큼만 명확합니다. PromptQuorum은 이 앱을 테스트하지 않았습니다. 먼저 작고 기밀이 아닌 다이어그램으로 시험해 보고, 중요한 작업에는 성능이 높은 모델이나 자체 서버를 사용하십시오.',
+          '절충점도 분명합니다. 품질은 연결한 모델에 달려 있고, 데모에는 한도가 있으며, 개인정보 처리방침을 찾지 못해서(2026년 11월 18일 확인) 데이터 경로는 선택한 제공업체만큼만 명확합니다. PromptQuorum은 이 앱을 테스트하지 않았습니다. 먼저 작고 기밀이 아닌 다이어그램으로 시험해 보고, 중요한 작업에는 성능이 높은 모델이나 자체 서버를 사용하십시오.',
         ],
       },
       sources: {
