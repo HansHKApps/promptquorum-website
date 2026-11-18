@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does it work offline?',
-            a: 'According to the maker, capture, transcription and storage run on your computer, so recording and transcribing do not need a cloud service. Setup downloads speech models, updates download software, and a cloud assistant or summarizer needs a connection.',
+            a: 'According to the maker, capture, transcription and storage run on your computer; on that description, recording and transcribing would not need a cloud service. Setup downloads speech models, updates download software, and a cloud assistant or summarizer needs a connection.',
           },
           {
             q: 'How often does Minutes update?',
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funktioniert es offline?',
-            a: 'Laut Hersteller laufen Aufnahme, Transkription und Speicherung auf Ihrem Rechner, Aufnehmen und Transkribieren brauchen also keinen Cloud-Dienst. Die Einrichtung lädt Sprachmodelle herunter, Updates laden Software herunter, und ein Cloud-Assistent oder Zusammenfasser braucht eine Verbindung.',
+            a: 'Laut Hersteller laufen Aufnahme, Transkription und Speicherung auf Ihrem Rechner; nach dieser Beschreibung bräuchten Aufnehmen und Transkribieren keinen Cloud-Dienst. Die Einrichtung lädt Sprachmodelle herunter, Updates laden Software herunter, und ein Cloud-Assistent oder Zusammenfasser braucht eine Verbindung.',
           },
           {
             q: 'Wie oft wird Minutes aktualisiert?',
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Fonctionne-t-il hors ligne ?',
-            a: 'Selon l\'éditeur, l\'enregistrement, la transcription et le stockage se font sur votre ordinateur : enregistrer et transcrire ne demandent donc aucun service cloud. L\'installation télécharge des modèles vocaux, les mises à jour téléchargent des logiciels, et un assistant ou un outil de résumé dans le cloud demande une connexion.',
+            a: 'Selon l\'éditeur, l\'enregistrement, la transcription et le stockage se font sur votre ordinateur ; d\'après cette description, enregistrer et transcrire ne demanderaient aucun service cloud. L\'installation télécharge des modèles vocaux, les mises à jour téléchargent des logiciels, et un assistant ou un outil de résumé dans le cloud demande une connexion.',
           },
           {
             q: 'À quelle fréquence Minutes est-il mis à jour ?',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Funciona sin conexión?',
-            a: 'Según el desarrollador, la grabación, la transcripción y el almacenamiento se ejecutan en tu equipo, así que grabar y transcribir no requieren un servicio en la nube. La configuración descarga modelos de voz, las actualizaciones descargan software, y un asistente o resumidor en la nube necesita conexión.',
+            a: 'Según el desarrollador, la grabación, la transcripción y el almacenamiento se ejecutan en tu equipo; según esa descripción, grabar y transcribir no requerirían un servicio en la nube. La configuración descarga modelos de voz, las actualizaciones descargan software, y un asistente o resumidor en la nube necesita conexión.',
           },
           {
             q: '¿Con qué frecuencia se actualiza Minutes?',
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funciona offline?',
-            a: 'Segundo o desenvolvedor, a gravação, a transcrição e o armazenamento rodam no seu computador, então gravar e transcrever não exigem um serviço na nuvem. A configuração baixa modelos de voz, as atualizações baixam software, e um assistente ou resumidor na nuvem precisa de conexão.',
+            a: 'Segundo o desenvolvedor, a gravação, a transcrição e o armazenamento rodam no seu computador; por essa descrição, gravar e transcrever não exigiriam um serviço na nuvem. A configuração baixa modelos de voz, as atualizações baixam software, e um assistente ou resumidor na nuvem precisa de conexão.',
           },
           {
             q: 'Com que frequência o Minutes é atualizado?',
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'オフラインで動きますか？',
-            a: '開発元によると、録音・文字起こし・保存はパソコン上で動くため、録音と文字起こしにクラウドサービスは不要です。セットアップでは音声モデルを、更新ではソフトウェアをダウンロードし、クラウドのアシスタントや要約ツールには接続が必要です。',
+            a: '開発元によると、録音・文字起こし・保存はパソコン上で動くとされ、その説明どおりなら録音と文字起こしにクラウドサービスは不要なはずです。セットアップでは音声モデルを、更新ではソフトウェアをダウンロードし、クラウドのアシスタントや要約ツールには接続が必要です。',
           },
           {
             q: 'Minutesはどのくらいの頻度で更新されますか？',
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '可以离线使用吗？',
-            a: '据开发者称，录音、转写和存储都在你的电脑上进行，因此录制和转写不需要云服务。初次设置会下载语音模型，更新会下载软件，云端助手或摘要工具则需要联网。',
+            a: '据开发者称，录音、转写和存储都在你的电脑上进行；按这一说法，录制和转写应当不需要云服务。初次设置会下载语音模型，更新会下载软件，云端助手或摘要工具则需要联网。',
           },
           {
             q: 'Minutes 更新频率如何？',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '오프라인에서도 작동합니까?',
-            a: '개발사에 따르면 녹음, 전사, 저장이 컴퓨터에서 실행되므로 녹음과 전사에는 클라우드 서비스가 필요하지 않습니다. 설정 때는 음성 모델을, 업데이트 때는 소프트웨어를 내려받으며, 클라우드 어시스턴트나 요약 도구에는 연결이 필요합니다.',
+            a: '개발사에 따르면 녹음, 전사, 저장이 컴퓨터에서 실행됩니다. 그 설명대로라면 녹음과 전사에는 클라우드 서비스가 필요하지 않을 것입니다. 설정 때는 음성 모델을, 업데이트 때는 소프트웨어를 내려받으며, 클라우드 어시스턴트나 요약 도구에는 연결이 필요합니다.',
           },
           {
             q: 'Minutes는 얼마나 자주 업데이트됩니까?',
@@ -2268,11 +2268,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/minutes-review-hero-ar.webp',
     title: 'مراجعة Minutes: ذاكرة مجانية مفتوحة المصدر للاجتماعات والمذكرات الصوتية والإملاء لوكلاء الذكاء الاصطناعي',
-    seoTitle: 'مراجعة Minutes: ذاكرة مجانية لمحادثات الوكلاء',
+    seoTitle: 'مراجعة Minutes: ذاكرة محادثات مجانية للذكاء الاصطناعي',
     intro:
       'Minutes 0.34.0 تطبيق مجاني برخصة MIT يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها نصيًا ويحفظ كلًا منها في ملف Markdown. التطبيق نفسه مجاني، أما المساعد السحابي الذي تربطه فله تسجيل دخول أو مفتاح خاص به. وفق ملف README، يجري التسجيل والنسخ النصي والتخزين على حاسوبك، ويمكن لـ Claude Code أو Codex أو Cursor أو أي عميل MCP آخر البحث في هذه الملفات وذكر الملف الذي جاءت منه الإجابة. تعتمد هذه المراجعة على الموقع الرسمي ومستودع GitHub مع دليل التثبيت وملاحظات الإصدار، وقد جرى الاطلاع عليها في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
-      'Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP. بحسب وثائقه، دون اختبار.',
+      'Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP عبر الخادم. بحسب وثائقه، دون اختبار.',
     twitterDescription:
       'Minutes: تطبيق مجاني مفتوح المصدر يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها كملفات Markdown لـ Claude وCodex وعملاء MCP الآخرين. بحسب وثائقه، دون اختبار.',
     audience:
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يعمل دون اتصال بالإنترنت؟',
-            a: 'وفق المطوّر، يجري التسجيل والنسخ النصي والتخزين على حاسوبك، فلا يحتاج التسجيل والنسخ إلى خدمة سحابية. ينزّل الإعداد نماذج الصوت، وتنزّل التحديثات برمجيات، ويحتاج المساعد السحابي أو أداة التلخيص السحابية إلى اتصال.',
+            a: 'وفق المطوّر، يجري التسجيل والنسخ النصي والتخزين على حاسوبك؛ وبحسب هذا الوصف لا يحتاج التسجيل والنسخ إلى خدمة سحابية. ينزّل الإعداد نماذج الصوت، وتنزّل التحديثات برمجيات، ويحتاج المساعد السحابي أو أداة التلخيص السحابية إلى اتصال.',
           },
           {
             q: 'كم مرة يُحدَّث Minutes؟',
