@@ -1239,6 +1239,7 @@ const HUB_THEMES: Array<{
       'linguister-review',
       'presenton-review',
       'screenpipe-review',
+      'reactive-resume-review',
     ],
   },
   {
