@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Minutes is a free MIT app that records meetings, voice memos and dictation as Markdown files that MCP clients can search. Per its docs; not tested.',
     twitterDescription:
-      'Minutes: a free open-source app that records and transcribes meetings, voice memos and dictation as Markdown files for Claude, Codex and other MCP clients. What is confirmed.',
+      'Minutes: a free open-source app that records and transcribes meetings, voice memos and dictation as Markdown files for Claude, Codex and other MCP clients. Per its docs; not tested.',
     audience:
       'People who record meetings, voice memos or dictation and want an assistant such as Claude Code, Codex or Cursor to search them, users who prefer plain Markdown files over a hosted notetaker, and developers who want a local source of meeting context',
     readTime: '7 min read',
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Minutes ist eine kostenlose MIT-App, die Meetings, Sprachmemos und Diktate als Markdown-Dateien ablegt, die MCP-Clients durchsuchen. Laut Doku, ungetestet.',
     twitterDescription:
-      'Minutes: kostenlose Open-Source-App, die Meetings, Sprachmemos und Diktate aufnimmt, transkribiert und als Markdown-Dateien für Claude, Codex und andere MCP-Clients ablegt. Was belegt ist.',
+      'Minutes: kostenlose Open-Source-App, die Meetings, Sprachmemos und Diktate aufnimmt, transkribiert und als Markdown-Dateien für Claude, Codex und andere MCP-Clients ablegt. Laut Doku, ungetestet.',
     audience:
       'Menschen, die Meetings, Sprachmemos oder Diktate aufnehmen und möchten, dass ein Assistent wie Claude Code, Codex oder Cursor sie durchsucht, Nutzer, die einfache Markdown-Dateien einem gehosteten Notizdienst vorziehen, und Entwickler, die eine lokale Quelle für Meeting-Kontext suchen',
     readTime: '7 Min. Lesezeit',
@@ -584,11 +584,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Avis sur Minutes : mémoire open source et gratuite pour réunions, mémos vocaux et dictée destinée aux agents IA',
     seoTitle: 'Avis sur Minutes : mémoire gratuite des conversations',
     intro:
-      'Minutes 0.34.0 est une application gratuite sous licence MIT qui enregistre et transcrit réunions, mémos vocaux et dictées, puis conserve chacun dans un fichier Markdown. L\'application elle-même est gratuite ; un assistant cloud connecté a sa propre connexion ou sa propre clé. D\'après son README, l\'enregistrement, la transcription et le stockage se font sur votre propre ordinateur, et Claude Code, Codex, Cursor ou tout autre client MCP peut parcourir ces fichiers et indiquer le fichier d\'où vient une réponse. Ce test s\'appuie sur le site officiel et sur le dépôt GitHub, avec son guide d\'installation et ses notes de version, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
+      'Minutes 0.34.0 est une application gratuite sous licence MIT qui enregistre et transcrit réunions, mémos vocaux et dictées, puis conserve chacun dans un fichier Markdown. L\'application elle-même est gratuite ; un assistant cloud connecté a sa propre connexion ou sa propre clé. D\'après son README, l\'enregistrement, la transcription et le stockage se font sur votre propre ordinateur, et Claude Code, Codex, Cursor ou tout autre client MCP peut parcourir ces fichiers et indiquer le fichier d\'où vient une réponse. Cet avis s\'appuie sur le site officiel et sur le dépôt GitHub, avec son guide d\'installation et ses notes de version, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
       'Minutes : appli MIT gratuite qui enregistre réunions, mémos vocaux et dictées en fichiers Markdown, interrogeables via MCP. Selon sa doc ; non testée.',
     twitterDescription:
-      'Minutes : application open source gratuite qui enregistre et transcrit réunions, mémos vocaux et dictées en fichiers Markdown pour Claude, Codex et d\'autres clients MCP. Ce qui est confirmé.',
+      'Minutes : application open source gratuite qui enregistre et transcrit réunions, mémos vocaux et dictées en fichiers Markdown pour Claude, Codex et d\'autres clients MCP. Selon sa doc ; non testée.',
     audience:
       'Personnes qui enregistrent des réunions, des mémos vocaux ou des dictées et veulent qu\'un assistant comme Claude Code, Codex ou Cursor les parcoure, utilisateurs qui préfèrent de simples fichiers Markdown à un outil de notes hébergé, et développeurs qui cherchent une source locale de contexte de réunion',
     readTime: '7 min de lecture',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Minutes es una app MIT gratuita que guarda reuniones, notas de voz y dictados como Markdown consultable por MCP. Según su documentación; sin probar.',
     twitterDescription:
-      'Minutes: app gratuita de código abierto que graba y transcribe reuniones, notas de voz y dictados como archivos Markdown para Claude, Codex y otros clientes MCP. Lo que está confirmado.',
+      'Minutes: app gratuita de código abierto que graba y transcribe reuniones, notas de voz y dictados como archivos Markdown para Claude, Codex y otros clientes MCP. Según su documentación; sin probar.',
     audience:
       'Personas que graban reuniones, notas de voz o dictados y quieren que un asistente como Claude Code, Codex o Cursor busque en ellos, usuarios que prefieren archivos Markdown simples a un servicio de notas alojado y desarrolladores que buscan una fuente local de contexto de reuniones',
     readTime: '7 min de lectura',
@@ -1148,9 +1148,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Minutes 0.34.0 é um aplicativo gratuito com licença MIT que grava e transcreve reuniões, memos de voz e ditados e guarda cada um como um arquivo Markdown. O app em si é gratuito; um assistente na nuvem que você conecta tem login ou chave próprios. Segundo o README, a gravação, a transcrição e o armazenamento rodam no seu próprio computador, e o Claude Code, o Codex, o Cursor ou qualquer outro cliente MCP pode pesquisar esses arquivos e indicar o arquivo de onde veio uma resposta. Esta análise se baseia no site oficial e no repositório do GitHub, com o guia de instalação e as notas de versão, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
     metaDescription:
-      'O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados como arquivos Markdown que clientes MCP podem pesquisar. Conforme a documentação; sem testes.',
+      'O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados em Markdown pesquisável por MCP. Conforme a documentação; sem testes.',
     twitterDescription:
-      'Minutes: app gratuito e de código aberto que grava e transcreve reuniões, memos de voz e ditados como arquivos Markdown para Claude, Codex e outros clientes MCP. O que está confirmado.',
+      'Minutes: app gratuito e de código aberto que grava e transcreve reuniões, memos de voz e ditados como arquivos Markdown para Claude, Codex e outros clientes MCP. Conforme a documentação; sem testes.',
     audience:
       'Pessoas que gravam reuniões, memos de voz ou ditados e querem que um assistente como Claude Code, Codex ou Cursor pesquise neles, usuários que preferem arquivos Markdown simples a um serviço de anotações hospedado e desenvolvedores que buscam uma fonte local de contexto de reuniões',
     readTime: '7 min de leitura',
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP. بحسب وثائقه، دون اختبار.',
     twitterDescription:
-      'Minutes: تطبيق مجاني مفتوح المصدر يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها كملفات Markdown لـ Claude وCodex وعملاء MCP الآخرين. ما تأكد منه.',
+      'Minutes: تطبيق مجاني مفتوح المصدر يسجّل الاجتماعات والمذكرات الصوتية والإملاء وينسخها كملفات Markdown لـ Claude وCodex وعملاء MCP الآخرين. بحسب وثائقه، دون اختبار.',
     audience:
       'من يسجّلون الاجتماعات أو المذكرات الصوتية أو الإملاء ويريدون أن يبحث فيها مساعد مثل Claude Code أو Codex أو Cursor، ومن يفضّلون ملفات Markdown البسيطة على خدمة ملاحظات مستضافة، والمطورون الذين يبحثون عن مصدر محلي لسياق الاجتماعات',
     readTime: '7 دقائق للقراءة',
