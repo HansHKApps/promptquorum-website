@@ -253,6 +253,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How often does Minutes update?',
             a: 'GitHub lists version 0.33.0 on 9 November 2026, 0.33.1 on 11 November, 0.33.2 on 12 November and 0.34.0 on 17 November, with commits on the main branch as recently as 17 November 2026.',
           },
+          {
+            q: 'Is Minutes free and open source?',
+            a: 'According to the README, Minutes is free and MIT-licensed, with no paid tier for anything in the repository. A cloud assistant you connect is billed by its own provider under that provider’s terms. PromptQuorum did not check this beyond the README and the repository licence.',
+          },
+          {
+            q: 'Which platforms does Minutes run on?',
+            a: 'According to the install guide, the desktop app is an Apple Silicon DMG for macOS and a setup EXE for Windows. Intel Macs build from source, and on Linux the prebuilt release is a command-line binary without a desktop app. PromptQuorum did not run the installers.',
+          },
+          {
+            q: 'Where does Minutes store my recordings and notes?',
+            a: 'According to the README, each conversation is saved as a Markdown file with front matter (title, date, duration, decisions and action items) in a folder you own, so Obsidian, Logseq, grep or any Markdown tool can open it. The security page says the files are written with owner-only permissions. PromptQuorum did not inspect the folder.',
+          },
+          {
+            q: 'Does Minutes transcribe on my computer or in the cloud?',
+            a: 'According to the maker, transcription runs on your computer with whisper.cpp, the signed Mac desktop app also bundles a Parakeet speech plugin, and speaker labels come from on-device diarization models. Setup downloads the speech models. PromptQuorum did not test accuracy or measure speed.',
+          },
+          {
+            q: 'Can I use a local model instead of a cloud assistant?',
+            a: 'The maker says summaries are optional and that a local model, or skipping summaries, keeps the workflow on your device. If you connect a cloud assistant, the transcript context you authorize goes to that provider under its terms. PromptQuorum did not test local-model setups.',
+          },
+          {
+            q: 'How much memory does Minutes need?',
+            a: 'The README and install guide publish no memory or GPU minimum, and the speech model you choose changes how much your computer has to do. They name macOS 15 for the desktop app, glibc 2.39 or newer for the prebuilt Linux binary and Node.js 22 as recommended for the MCP server. PromptQuorum did not measure memory use.',
+          },
         ],
       },
       verdict: {
@@ -533,6 +557,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Wie oft wird Minutes aktualisiert?',
             a: 'GitHub listet Version 0.33.0 vom 9. November 2026, 0.33.1 vom 11. November, 0.33.2 vom 12. November und 0.34.0 vom 17. November, mit Commits auf dem Hauptzweig bis zum 17. November 2026.',
+          },
+          {
+            q: 'Ist Minutes kostenlos und Open Source?',
+            a: 'Laut README ist Minutes kostenlos und MIT-lizenziert, ohne Bezahlstufe für irgendetwas im Repository. Ein Cloud-Assistent, den Sie anbinden, wird von seinem eigenen Anbieter nach dessen Bedingungen abgerechnet. PromptQuorum hat dies nur anhand der README und der Repository-Lizenz geprüft.',
+          },
+          {
+            q: 'Auf welchen Plattformen läuft Minutes?',
+            a: 'Laut Installationsanleitung ist die Desktop-App ein DMG für Apple Silicon unter macOS und eine Setup-EXE für Windows. Intel-Macs bauen aus dem Quellcode, und unter Linux ist das vorgefertigte Release eine Kommandozeilen-Binärdatei ohne Desktop-App. PromptQuorum hat die Installer nicht ausgeführt.',
+          },
+          {
+            q: 'Wo speichert Minutes meine Aufnahmen und Notizen?',
+            a: 'Laut README wird jede Unterhaltung als Markdown-Datei mit Front Matter (Titel, Datum, Dauer, Entscheidungen und Aufgaben) in einem Ordner gespeichert, der Ihnen gehört, sodass Obsidian, Logseq, grep oder jedes Markdown-Werkzeug sie öffnen kann. Die Sicherheitsseite sagt, dass die Dateien mit Berechtigungen nur für den Besitzer geschrieben werden. PromptQuorum hat den Ordner nicht untersucht.',
+          },
+          {
+            q: 'Transkribiert Minutes auf meinem Rechner oder in der Cloud?',
+            a: 'Laut Hersteller läuft die Transkription mit whisper.cpp auf Ihrem Rechner, die signierte Mac-Desktop-App bringt außerdem ein Parakeet-Sprach-Plugin mit, und die Sprecherlabels stammen aus Diarisierungsmodellen auf dem Gerät. Die Einrichtung lädt die Sprachmodelle herunter. PromptQuorum hat weder die Genauigkeit getestet noch die Geschwindigkeit gemessen.',
+          },
+          {
+            q: 'Kann ich ein lokales Modell statt eines Cloud-Assistenten verwenden?',
+            a: 'Laut Hersteller sind Zusammenfassungen optional, und ein lokales Modell oder der Verzicht auf Zusammenfassungen hält den Ablauf auf Ihrem Gerät. Wenn Sie einen Cloud-Assistenten anbinden, geht der von Ihnen freigegebene Transkriptkontext nach dessen Bedingungen an diesen Anbieter. PromptQuorum hat keine Einrichtung mit lokalem Modell getestet.',
+          },
+          {
+            q: 'Wie viel Arbeitsspeicher braucht Minutes?',
+            a: 'README und Installationsanleitung nennen weder Arbeitsspeicher noch GPU als Minimum, und das gewählte Sprachmodell bestimmt, wie stark Ihr Rechner belastet wird. Genannt werden macOS 15 für die Desktop-App, glibc 2.39 oder neuer für die vorgefertigte Linux-Binärdatei und Node.js 22 als empfohlene Version für den MCP-Server. PromptQuorum hat die Speicherauslastung nicht gemessen.',
           },
         ],
       },
@@ -815,6 +863,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'À quelle fréquence Minutes est-il mis à jour ?',
             a: 'GitHub liste la version 0.33.0 du 9 novembre 2026, la 0.33.1 du 11 novembre, la 0.33.2 du 12 novembre et la 0.34.0 du 17 novembre, avec des commits sur la branche principale jusqu\'au 17 novembre 2026.',
           },
+          {
+            q: 'Minutes est-il gratuit et open source ?',
+            a: 'Selon le README, Minutes est gratuit et sous licence MIT, sans offre payante pour quoi que ce soit dans le dépôt. Un assistant cloud que vous connectez est facturé par son propre fournisseur selon les conditions de ce dernier. PromptQuorum ne l’a vérifié qu’à partir du README et de la licence du dépôt.',
+          },
+          {
+            q: 'Sur quelles plateformes Minutes fonctionne-t-il ?',
+            a: 'Selon le guide d’installation, l’application de bureau est un DMG pour Apple Silicon sous macOS et un installateur EXE pour Windows. Les Mac Intel se compilent depuis les sources, et sous Linux la version précompilée est un binaire en ligne de commande sans application de bureau. PromptQuorum n’a pas exécuté les installateurs.',
+          },
+          {
+            q: 'Où Minutes stocke-t-il mes enregistrements et mes notes ?',
+            a: 'Selon le README, chaque conversation est enregistrée sous forme de fichier Markdown avec un en-tête (titre, date, durée, décisions et actions à mener) dans un dossier qui vous appartient, que Obsidian, Logseq, grep ou tout outil Markdown peut ouvrir. La page de sécurité indique que les fichiers sont écrits avec des droits réservés au propriétaire. PromptQuorum n’a pas inspecté le dossier.',
+          },
+          {
+            q: 'Minutes transcrit-il sur mon ordinateur ou dans le cloud ?',
+            a: 'Selon le fabricant, la transcription s’exécute sur votre ordinateur avec whisper.cpp, l’application Mac signée embarque aussi un plugin vocal Parakeet, et les étiquettes de locuteurs proviennent de modèles de diarisation locaux. L’installation télécharge les modèles vocaux. PromptQuorum n’a pas testé la précision ni mesuré la vitesse.',
+          },
+          {
+            q: 'Puis-je utiliser un modèle local plutôt qu’un assistant cloud ?',
+            a: 'Le fabricant indique que les résumés sont facultatifs et qu’un modèle local, ou l’absence de résumés, garde le flux de travail sur votre appareil. Si vous connectez un assistant cloud, le contexte de transcription que vous autorisez est envoyé à ce fournisseur selon ses conditions. PromptQuorum n’a pas testé de configuration avec modèle local.',
+          },
+          {
+            q: 'De quelle quantité de mémoire Minutes a-t-il besoin ?',
+            a: 'Le README et le guide d’installation ne publient aucun minimum de mémoire ni de GPU, et le modèle vocal choisi change la charge pour votre ordinateur. Ils citent macOS 15 pour l’application de bureau, glibc 2.39 ou plus récent pour le binaire Linux précompilé et Node.js 22 comme version recommandée pour le serveur MCP. PromptQuorum n’a pas mesuré l’utilisation de la mémoire.',
+          },
         ],
       },
       verdict: {
@@ -1095,6 +1167,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Con qué frecuencia se actualiza Minutes?',
             a: 'GitHub lista la versión 0.33.0 del 9 de noviembre de 2026, la 0.33.1 del 11 de noviembre, la 0.33.2 del 12 de noviembre y la 0.34.0 del 17 de noviembre, con commits en la rama principal hasta el 17 de noviembre de 2026.',
+          },
+          {
+            q: '¿Minutes es gratis y de código abierto?',
+            a: 'Según el README, Minutes es gratuito y tiene licencia MIT, sin nivel de pago para nada del repositorio. Un asistente en la nube que conectes lo factura su propio proveedor según sus condiciones. PromptQuorum solo lo comprobó con el README y la licencia del repositorio.',
+          },
+          {
+            q: '¿En qué plataformas funciona Minutes?',
+            a: 'Según la guía de instalación, la aplicación de escritorio es un DMG para Apple Silicon en macOS y un instalador EXE para Windows. Los Mac con Intel se compilan desde el código fuente, y en Linux la versión precompilada es un binario de línea de comandos sin aplicación de escritorio. PromptQuorum no ejecutó los instaladores.',
+          },
+          {
+            q: '¿Dónde guarda Minutes mis grabaciones y notas?',
+            a: 'Según el README, cada conversación se guarda como un archivo Markdown con front matter (título, fecha, duración, decisiones y tareas) en una carpeta que es tuya, por lo que Obsidian, Logseq, grep o cualquier herramienta de Markdown puede abrirlo. La página de seguridad dice que los archivos se escriben con permisos solo para el propietario. PromptQuorum no inspeccionó la carpeta.',
+          },
+          {
+            q: '¿Minutes transcribe en mi equipo o en la nube?',
+            a: 'Según el fabricante, la transcripción se ejecuta en tu equipo con whisper.cpp, la aplicación firmada para Mac incluye además un plugin de voz Parakeet, y las etiquetas de hablante salen de modelos de diarización en el dispositivo. La configuración inicial descarga los modelos de voz. PromptQuorum no probó la precisión ni midió la velocidad.',
+          },
+          {
+            q: '¿Puedo usar un modelo local en lugar de un asistente en la nube?',
+            a: 'El fabricante dice que los resúmenes son opcionales y que un modelo local, o prescindir de los resúmenes, mantiene el flujo de trabajo en tu dispositivo. Si conectas un asistente en la nube, el contexto de transcripción que autorices va a ese proveedor según sus condiciones. PromptQuorum no probó configuraciones con modelo local.',
+          },
+          {
+            q: '¿Cuánta memoria necesita Minutes?',
+            a: 'El README y la guía de instalación no publican un mínimo de memoria ni de GPU, y el modelo de voz que elijas cambia cuánto trabajo recae en tu equipo. Mencionan macOS 15 para la aplicación de escritorio, glibc 2.39 o posterior para el binario de Linux precompilado y Node.js 22 como versión recomendada para el servidor MCP. PromptQuorum no midió el uso de memoria.',
           },
         ],
       },
@@ -1377,6 +1473,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Com que frequência o Minutes é atualizado?',
             a: 'O GitHub lista a versão 0.33.0 de 9 de novembro de 2026, a 0.33.1 de 11 de novembro, a 0.33.2 de 12 de novembro e a 0.34.0 de 17 de novembro, com commits na branch principal até 17 de novembro de 2026.',
           },
+          {
+            q: 'O Minutes é grátis e de código aberto?',
+            a: 'Segundo o README, o Minutes é gratuito e tem licença MIT, sem plano pago para nada no repositório. Um assistente em nuvem que você conecta é cobrado pelo próprio provedor, conforme os termos dele. A PromptQuorum só conferiu isso pelo README e pela licença do repositório.',
+          },
+          {
+            q: 'Em quais plataformas o Minutes funciona?',
+            a: 'Segundo o guia de instalação, o aplicativo de desktop é um DMG para Apple Silicon no macOS e um instalador EXE para Windows. Macs com Intel compilam a partir do código-fonte, e no Linux a versão pré-compilada é um binário de linha de comando, sem aplicativo de desktop. A PromptQuorum não executou os instaladores.',
+          },
+          {
+            q: 'Onde o Minutes guarda minhas gravações e anotações?',
+            a: 'Segundo o README, cada conversa é salva como um arquivo Markdown com front matter (título, data, duração, decisões e tarefas) em uma pasta que é sua, e Obsidian, Logseq, grep ou qualquer ferramenta de Markdown consegue abri-lo. A página de segurança diz que os arquivos são gravados com permissões só para o proprietário. A PromptQuorum não inspecionou a pasta.',
+          },
+          {
+            q: 'O Minutes transcreve no meu computador ou na nuvem?',
+            a: 'Segundo o fabricante, a transcrição roda no seu computador com o whisper.cpp, o aplicativo assinado para Mac também traz um plugin de voz Parakeet, e os rótulos de falante vêm de modelos de diarização no dispositivo. A configuração inicial baixa os modelos de voz. A PromptQuorum não testou a precisão nem mediu a velocidade.',
+          },
+          {
+            q: 'Posso usar um modelo local em vez de um assistente em nuvem?',
+            a: 'O fabricante diz que os resumos são opcionais e que um modelo local, ou dispensar os resumos, mantém o fluxo de trabalho no seu dispositivo. Se você conectar um assistente em nuvem, o contexto da transcrição que você autorizar vai para esse provedor, conforme os termos dele. A PromptQuorum não testou configurações com modelo local.',
+          },
+          {
+            q: 'Quanta memória o Minutes precisa?',
+            a: 'O README e o guia de instalação não publicam um mínimo de memória nem de GPU, e o modelo de voz escolhido muda o esforço do seu computador. Eles citam macOS 15 para o aplicativo de desktop, glibc 2.39 ou mais recente para o binário Linux pré-compilado e Node.js 22 como versão recomendada para o servidor MCP. A PromptQuorum não mediu o uso de memória.',
+          },
         ],
       },
       verdict: {
@@ -1657,6 +1777,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Minutesはどのくらいの頻度で更新されますか？',
             a: 'GitHubには、2026年11月9日のバージョン0.33.0、11月11日の0.33.1、11月12日の0.33.2、11月17日の0.34.0が載っており、メインブランチへのコミットは2026年11月17日まであります。',
+          },
+          {
+            q: 'Minutesは無料でオープンソースですか？',
+            a: 'READMEによると、Minutesは無料でMITライセンスであり、リポジトリ内のものに有料プランはありません。接続するクラウドアシスタントは、そのプロバイダーが自社の規約に基づいて課金します。PromptQuorumはREADMEとリポジトリのライセンスの範囲でしか確認していません。',
+          },
+          {
+            q: 'Minutesはどのプラットフォームで動きますか？',
+            a: 'インストールガイドによると、デスクトップアプリはmacOS向けのApple Silicon用DMGと、Windows向けのセットアップEXEです。Intel Macはソースからビルドし、Linuxの配布版はデスクトップアプリのないコマンドラインのバイナリです。PromptQuorumはインストーラーを実行していません。',
+          },
+          {
+            q: 'Minutesは録音やメモをどこに保存しますか？',
+            a: 'READMEによると、各会話はフロントマター（タイトル、日付、長さ、決定事項、アクションアイテム）付きのMarkdownファイルとして、ユーザー自身のフォルダーに保存され、Obsidian、Logseq、grepなどのMarkdownツールで開けます。セキュリティページによると、ファイルは所有者のみの権限で書き込まれます。PromptQuorumはフォルダーの中身を確認していません。',
+          },
+          {
+            q: 'Minutesの文字起こしはパソコン上ですか、クラウドですか？',
+            a: 'メーカーによると、文字起こしはwhisper.cppでパソコン上で動作し、署名済みのMacデスクトップアプリはParakeet音声プラグインも同梱し、話者ラベルはデバイス上の話者分離モデルによります。セットアップ時に音声モデルがダウンロードされます。PromptQuorumは精度のテストも速度の測定も行っていません。',
+          },
+          {
+            q: 'クラウドアシスタントの代わりにローカルモデルを使えますか？',
+            a: 'メーカーによると、要約は任意で、ローカルモデルを使うか要約を省けば、ワークフローをデバイス上にとどめられます。クラウドアシスタントを接続した場合、許可した文字起こしのコンテキストが、そのプロバイダーの規約に基づいて送られます。PromptQuorumはローカルモデルの構成をテストしていません。',
+          },
+          {
+            q: 'Minutesにはどのくらいのメモリが必要ですか？',
+            a: 'READMEとインストールガイドには、メモリやGPUの最小要件は載っておらず、選ぶ音声モデルによってパソコンの負荷は変わります。記載があるのは、デスクトップアプリ向けのmacOS 15、配布版Linuxバイナリ向けのglibc 2.39以降、MCPサーバー向けの推奨Node.js 22です。PromptQuorumはメモリ使用量を測定していません。',
           },
         ],
       },
@@ -1939,6 +2083,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Minutes 更新频率如何？',
             a: 'GitHub 列出 2026 年 11 月 9 日的 0.33.0、11 月 11 日的 0.33.1、11 月 12 日的 0.33.2 和 11 月 17 日的 0.34.0，主分支最近一次提交在 2026 年 11 月 17 日。',
           },
+          {
+            q: 'Minutes 免费且开源吗？',
+            a: '据 README，Minutes 免费并采用 MIT 许可证，仓库中的内容没有付费层级。你接入的云端助手由其自身的提供方按其条款计费。PromptQuorum 仅根据 README 和仓库许可证进行了核对。',
+          },
+          {
+            q: 'Minutes 可在哪些平台上运行？',
+            a: '据安装指南，桌面应用在 macOS 上是 Apple Silicon 版 DMG，在 Windows 上是安装程序 EXE。Intel Mac 需从源码构建，Linux 上的预编译版本是没有桌面应用的命令行二进制文件。PromptQuorum 没有运行这些安装程序。',
+          },
+          {
+            q: 'Minutes 把我的录音和笔记存放在哪里？',
+            a: '据 README，每次对话都会保存为带 front matter（标题、日期、时长、决定和待办事项）的 Markdown 文件，存放在你自己的文件夹中，Obsidian、Logseq、grep 或任何 Markdown 工具都能打开。安全页面称这些文件以仅所有者可访问的权限写入。PromptQuorum 没有检查该文件夹。',
+          },
+          {
+            q: 'Minutes 在我的电脑上转写，还是在云端转写？',
+            a: '据厂商称，转写通过 whisper.cpp 在你的电脑上运行，已签名的 Mac 桌面应用还内置 Parakeet 语音插件，说话人标签来自设备端的说话人分离模型。初次设置时会下载语音模型。PromptQuorum 没有测试准确率，也没有测量速度。',
+          },
+          {
+            q: '我可以用本地模型代替云端助手吗？',
+            a: '厂商称摘要是可选的，使用本地模型或不生成摘要，可让工作流留在你的设备上。如果你接入云端助手，你授权的转写上下文会按该提供方的条款发送给它。PromptQuorum 没有测试本地模型配置。',
+          },
+          {
+            q: 'Minutes 需要多少内存？',
+            a: 'README 和安装指南没有公布内存或 GPU 的最低要求，所选语音模型会改变电脑的负载。文档提到的有：桌面应用需要 macOS 15，预编译 Linux 二进制文件需要 glibc 2.39 或更新版本，MCP 服务器推荐使用 Node.js 22。PromptQuorum 没有测量内存占用。',
+          },
         ],
       },
       verdict: {
@@ -2220,6 +2388,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Minutes는 얼마나 자주 업데이트됩니까?',
             a: 'GitHub에는 2026년 11월 9일의 0.33.0, 11월 11일의 0.33.1, 11월 12일의 0.33.2, 11월 17일의 0.34.0이 올라와 있으며, 메인 브랜치 커밋은 2026년 11월 17일까지 있습니다.',
           },
+          {
+            q: 'Minutes는 무료이고 오픈소스입니까?',
+            a: 'README에 따르면 Minutes는 무료이며 MIT 라이선스이고, 저장소의 어떤 부분에도 유료 등급이 없습니다. 연결하는 클라우드 어시스턴트는 해당 제공업체가 자체 약관에 따라 요금을 청구합니다. PromptQuorum은 README와 저장소 라이선스 범위에서만 확인했습니다.',
+          },
+          {
+            q: 'Minutes는 어떤 플랫폼에서 실행되나요?',
+            a: '설치 가이드에 따르면 데스크톱 앱은 macOS용 Apple Silicon DMG와 Windows용 설치 EXE입니다. Intel Mac은 소스에서 빌드해야 하며, Linux의 사전 빌드 배포판은 데스크톱 앱 없는 명령줄 바이너리입니다. PromptQuorum은 설치 프로그램을 실행하지 않았습니다.',
+          },
+          {
+            q: 'Minutes는 녹음과 메모를 어디에 저장합니까?',
+            a: 'README에 따르면 각 대화는 프런트매터(제목, 날짜, 길이, 결정 사항, 실행 항목)가 포함된 Markdown 파일로 사용자 소유의 폴더에 저장되며, Obsidian, Logseq, grep 또는 모든 Markdown 도구로 열 수 있습니다. 보안 페이지에 따르면 파일은 소유자 전용 권한으로 기록됩니다. PromptQuorum은 해당 폴더를 점검하지 않았습니다.',
+          },
+          {
+            q: 'Minutes는 내 컴퓨터에서 전사합니까, 클라우드에서 전사합니까?',
+            a: '제조사에 따르면 전사는 whisper.cpp로 내 컴퓨터에서 실행되고, 서명된 Mac 데스크톱 앱에는 Parakeet 음성 플러그인도 포함되며, 화자 라벨은 기기 내 화자 분리 모델에서 나옵니다. 설정 시 음성 모델을 내려받습니다. PromptQuorum은 정확도를 테스트하거나 속도를 측정하지 않았습니다.',
+          },
+          {
+            q: '클라우드 어시스턴트 대신 로컬 모델을 쓸 수 있습니까?',
+            a: '제조사에 따르면 요약은 선택 사항이며, 로컬 모델을 쓰거나 요약을 생략하면 작업 흐름이 기기 안에 머뭅니다. 클라우드 어시스턴트를 연결하면 허용한 전사 컨텍스트가 해당 제공업체의 약관에 따라 그쪽으로 전달됩니다. PromptQuorum은 로컬 모델 구성을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Minutes에는 메모리가 얼마나 필요합니까?',
+            a: 'README와 설치 가이드는 메모리나 GPU 최소 사양을 공개하지 않으며, 선택한 음성 모델에 따라 컴퓨터의 부담이 달라집니다. 문서에 언급된 것은 데스크톱 앱용 macOS 15, 사전 빌드 Linux 바이너리용 glibc 2.39 이상, MCP 서버용 권장 Node.js 22입니다. PromptQuorum은 메모리 사용량을 측정하지 않았습니다.',
+          },
         ],
       },
       verdict: {
@@ -2500,6 +2692,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث Minutes؟',
             a: 'يعرض GitHub الإصدار 0.33.0 في 9 نوفمبر 2026، و0.33.1 في 11 نوفمبر، و0.33.2 في 12 نوفمبر، و0.34.0 في 17 نوفمبر، مع إيداعات في الفرع الرئيسي حتى 17 نوفمبر 2026.',
+          },
+          {
+            q: 'هل Minutes مجاني ومفتوح المصدر؟',
+            a: 'بحسب README، تطبيق Minutes مجاني ومرخّص بترخيص MIT، ولا توجد فئة مدفوعة لأي شيء في المستودع. أما المساعد السحابي الذي تربطه فيحاسبك عليه مزوّده بموجب شروطه. لم تتحقق PromptQuorum من ذلك إلا من README وترخيص المستودع.',
+          },
+          {
+            q: 'على أي منصات يعمل Minutes؟',
+            a: 'بحسب دليل التثبيت، تطبيق سطح المكتب هو ملف DMG لأجهزة Apple Silicon على macOS وملف EXE للتثبيت على Windows. أما أجهزة Mac بمعالج Intel فتُبنى من الشيفرة المصدرية، وعلى Linux الإصدار الجاهز ملف ثنائي لسطر الأوامر دون تطبيق سطح مكتب. لم تشغّل PromptQuorum برامج التثبيت.',
+          },
+          {
+            q: 'أين يخزّن Minutes تسجيلاتي وملاحظاتي؟',
+            a: 'بحسب README، تُحفظ كل محادثة في ملف Markdown مع front matter (العنوان والتاريخ والمدة والقرارات والمهام) داخل مجلد تملكه، ويمكن لـ Obsidian وLogseq وgrep وأي أداة Markdown فتحه. وتذكر صفحة الأمان أن الملفات تُكتب بأذونات للمالك فقط. لم تفحص PromptQuorum المجلد.',
+          },
+          {
+            q: 'هل ينسخ Minutes الكلام نصيًا على حاسوبي أم في السحابة؟',
+            a: 'بحسب الشركة المصنِّعة، يعمل النسخ النصي على حاسوبك عبر whisper.cpp، ويضم تطبيق Mac الموقَّع أيضًا مكوّن Parakeet الصوتي، وتأتي تسميات المتحدثين من نماذج فصل المتحدثين على الجهاز. وينزّل الإعداد الأولي نماذج الكلام. لم تختبر PromptQuorum الدقة ولم تقس السرعة.',
+          },
+          {
+            q: 'هل يمكنني استخدام نموذج محلي بدل المساعد السحابي؟',
+            a: 'تقول الشركة المصنِّعة إن الملخصات اختيارية، وإن استخدام نموذج محلي أو الاستغناء عن الملخصات يُبقي سير العمل على جهازك. وإذا ربطت مساعدًا سحابيًا فإن سياق النص الذي تأذن به يُرسل إلى ذلك المزوّد بموجب شروطه. لم تختبر PromptQuorum إعدادات النماذج المحلية.',
+          },
+          {
+            q: 'كم من الذاكرة يحتاج Minutes؟',
+            a: 'لا ينشر README ودليل التثبيت حدًا أدنى للذاكرة أو لوحدة GPU، ونموذج الكلام الذي تختاره يغيّر مقدار الحمل على حاسوبك. وهما يذكران macOS 15 لتطبيق سطح المكتب، وglibc 2.39 أو أحدث للملف الثنائي الجاهز على Linux، وNode.js 22 إصدارًا موصى به لخادم MCP. لم تقس PromptQuorum استهلاك الذاكرة.',
           },
         ],
       },

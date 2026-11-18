@@ -30,6 +30,9 @@ const L = {
   ko: { hl: ['Markdown으로 회의 저장', 'MCP 클라이언트가 검색', '무료, MIT 라이선스'], price: '가격', priceV: '무료', lic: '라이선스', licV: 'MIT', plat: '실행 환경', platV: 'Mac, Windows, Linux CLI', footer: 'PromptQuorum 가이드' },
 }
 
+// Arabic poster title: shortened/NBSP-joined so the RTL wrap in /api/hero-image does not leave an orphan word (fixopen-d, 2026-11-18).
+const AR_TITLE = 'مراجعة Minutes: ذاكرة مجانية للاجتماعات والإملاء لوكلاء الذكاء الاصطناعي'
+
 let generated = 0
 const failures = []
 const only = process.env.LANGS ? process.env.LANGS.split(',') : null
@@ -38,7 +41,7 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    title: lang === 'ar' ? AR_TITLE : stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },

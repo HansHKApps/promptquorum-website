@@ -250,6 +250,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Which platforms does Rescript run on?',
             a: 'According to the maker, in a browser (Chromium-based recommended) and as desktop apps for macOS (Apple Silicon and Intel), Windows and Linux. The v1.2.5 release lists a DMG, a setup EXE, an AppImage and a DEB package.',
           },
+          {
+            q: 'Is Rescript open source?',
+            a: 'The maker calls the project open source, but the licence is PolyForm Noncommercial 1.0.0, which bars commercial use, so PromptQuorum describes it as source-available. The code is public on GitHub and free for noncommercial use; commercial use needs a paid licence.',
+          },
+          {
+            q: 'Does Rescript work without an internet connection?',
+            a: 'According to the maker, the Whisper and speaker models are downloaded once from Hugging Face and then cached, and after that the editor works without a network connection. The desktop apps check GitHub Releases for updates. PromptQuorum did not test offline use.',
+          },
+          {
+            q: 'Which formats can Rescript export?',
+            a: 'According to the maker: MP4 or WebM video up to 4K; M4A, MP3 or WAV audio; transcripts as TXT, Markdown, DOCX or PDF; captions as SRT, VTT or JSON; and timelines for DaVinci Resolve, Premiere, Final Cut, Pro Tools, Logic, Reaper, Samplitude or Blender. PromptQuorum did not check export fidelity.',
+          },
+          {
+            q: 'Can Rescript remove filler words and silences?',
+            a: 'According to the website, one click removes "um", "uh" and similar fillers, and another removes silences of 0.3 seconds or more across the whole file. PromptQuorum did not test how accurately it detects them.',
+          },
+          {
+            q: 'Does Rescript label who is speaking?',
+            a: 'According to the maker, automatic speaker labels group the transcript by who is talking, and speakers can be renamed; the README lists pyannote-segmentation-3.0 for this. PromptQuorum did not test the labels.',
+          },
+          {
+            q: 'What does Rescript’s telemetry collect, and can I turn it off?',
+            a: 'The README says anonymous usage stats and crash reports are on by default and can be turned off in Settings under Privacy. According to the privacy page, telemetry carries a random install ID, one of four event names and coarse properties such as the app version, the operating system family and the model or export format; IP addresses are not recorded, and crash reports go to Sentry with media file names removed. PromptQuorum did not inspect network traffic.',
+          },
         ],
       },
       verdict: {
@@ -524,6 +548,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Auf welchen Plattformen läuft Rescript?',
             a: 'Laut Hersteller im Browser (Chromium-basiert empfohlen) und als Desktop-App für macOS (Apple Silicon und Intel), Windows und Linux. Die Version 1.2.5 listet ein DMG, eine Setup-EXE, ein AppImage und ein DEB-Paket.',
+          },
+          {
+            q: 'Ist Rescript Open Source?',
+            a: 'Der Hersteller nennt das Projekt Open Source, doch die Lizenz ist PolyForm Noncommercial 1.0.0, die kommerzielle Nutzung ausschließt; PromptQuorum beschreibt es daher als Quellcode-einsehbar (source-available). Der Code ist auf GitHub öffentlich und für nicht kommerzielle Nutzung kostenlos; kommerzielle Nutzung braucht eine kostenpflichtige Lizenz.',
+          },
+          {
+            q: 'Funktioniert Rescript ohne Internetverbindung?',
+            a: 'Laut Hersteller werden die Whisper- und Sprechermodelle einmal von Hugging Face heruntergeladen und dann zwischengespeichert; danach funktioniert der Editor ohne Netzwerkverbindung. Die Desktop-Apps prüfen GitHub Releases auf Updates. PromptQuorum hat die Offline-Nutzung nicht getestet.',
+          },
+          {
+            q: 'Welche Formate kann Rescript exportieren?',
+            a: 'Laut Hersteller: MP4- oder WebM-Video bis 4K; Audio als M4A, MP3 oder WAV; Transkripte als TXT, Markdown, DOCX oder PDF; Untertitel als SRT, VTT oder JSON; und Zeitleisten für DaVinci Resolve, Premiere, Final Cut, Pro Tools, Logic, Reaper, Samplitude oder Blender. PromptQuorum hat die Exportqualität nicht geprüft.',
+          },
+          {
+            q: 'Kann Rescript Füllwörter und Pausen entfernen?',
+            a: 'Laut Website entfernt ein Klick „um“, „uh“ und ähnliche Füllwörter, ein weiterer entfernt Pausen ab 0,3 Sekunden in der ganzen Datei. PromptQuorum hat nicht getestet, wie genau sie erkannt werden.',
+          },
+          {
+            q: 'Kennzeichnet Rescript, wer spricht?',
+            a: 'Laut Hersteller gruppieren automatische Sprecherlabels das Transkript danach, wer spricht, und Sprecher lassen sich umbenennen; die README nennt dafür pyannote-segmentation-3.0. PromptQuorum hat die Labels nicht getestet.',
+          },
+          {
+            q: 'Was erfasst die Telemetrie von Rescript, und kann ich sie abschalten?',
+            a: 'Laut README sind anonyme Nutzungsstatistiken und Absturzberichte standardmäßig aktiv und lassen sich in den Einstellungen unter „Privacy“ abschalten. Laut Datenschutzseite enthält die Telemetrie eine zufällige Installations-ID, einen von vier Ereignisnamen und grobe Angaben wie App-Version, Betriebssystemfamilie und verwendetes Modell oder Exportformat; IP-Adressen werden nicht erfasst, und Absturzberichte gehen ohne Mediendateinamen an Sentry. PromptQuorum hat den Netzwerkverkehr nicht geprüft.',
           },
         ],
       },
@@ -800,6 +848,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sur quelles plateformes Rescript fonctionne-t-il ?',
             a: 'Selon le fabricant, dans un navigateur (basé sur Chromium recommandé) et en application de bureau pour macOS (Apple Silicon et Intel), Windows et Linux. La version 1.2.5 propose un DMG, un EXE d’installation, un AppImage et un paquet DEB.',
           },
+          {
+            q: 'Rescript est-il open source ?',
+            a: 'Le fabricant qualifie le projet d’open source, mais la licence est PolyForm Noncommercial 1.0.0, qui interdit l’usage commercial ; PromptQuorum le décrit donc comme à code source disponible. Le code est public sur GitHub et gratuit pour un usage non commercial ; l’usage commercial exige une licence payante.',
+          },
+          {
+            q: 'Rescript fonctionne-t-il sans connexion Internet ?',
+            a: 'Selon le fabricant, les modèles Whisper et de locuteurs sont téléchargés une fois depuis Hugging Face puis mis en cache, et l’éditeur fonctionne ensuite sans connexion réseau. Les applications de bureau vérifient les mises à jour sur GitHub Releases. PromptQuorum n’a pas testé l’usage hors ligne.',
+          },
+          {
+            q: 'Quels formats Rescript peut-il exporter ?',
+            a: 'Selon le fabricant : vidéo MP4 ou WebM jusqu’en 4K ; audio M4A, MP3 ou WAV ; transcriptions en TXT, Markdown, DOCX ou PDF ; sous-titres en SRT, VTT ou JSON ; et timelines pour DaVinci Resolve, Premiere, Final Cut, Pro Tools, Logic, Reaper, Samplitude ou Blender. PromptQuorum n’a pas vérifié la fidélité de l’export.',
+          },
+          {
+            q: 'Rescript peut-il supprimer les mots parasites et les silences ?',
+            a: 'Selon le site, un clic retire « um », « uh » et les mots parasites similaires, et un autre retire les silences de 0,3 seconde ou plus dans tout le fichier. PromptQuorum n’a pas testé la précision de leur détection.',
+          },
+          {
+            q: 'Rescript indique-t-il qui parle ?',
+            a: 'Selon le fabricant, des étiquettes de locuteurs automatiques regroupent la transcription selon la personne qui parle, et les locuteurs peuvent être renommés ; le README cite pyannote-segmentation-3.0 pour cela. PromptQuorum n’a pas testé les étiquettes.',
+          },
+          {
+            q: 'Que collecte la télémétrie de Rescript, et puis-je la désactiver ?',
+            a: 'Le README indique que les statistiques d’usage anonymes et les rapports de plantage sont actifs par défaut et se désactivent dans les réglages, sous « Privacy ». Selon la page de confidentialité, la télémétrie comprend un identifiant d’installation aléatoire, l’un de quatre noms d’événements et des propriétés générales comme la version de l’application, la famille du système d’exploitation et le modèle ou le format d’export utilisé ; les adresses IP ne sont pas enregistrées, et les rapports de plantage vont à Sentry sans les noms de fichiers multimédias. PromptQuorum n’a pas inspecté le trafic réseau.',
+          },
         ],
       },
       verdict: {
@@ -1074,6 +1146,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿En qué plataformas funciona Rescript?',
             a: 'Según el fabricante, en un navegador (se recomienda uno basado en Chromium) y como aplicación de escritorio para macOS (Apple Silicon e Intel), Windows y Linux. La versión 1.2.5 lista un DMG, un EXE de instalación, un AppImage y un paquete DEB.',
+          },
+          {
+            q: '¿Rescript es de código abierto?',
+            a: 'El fabricante llama al proyecto de código abierto, pero la licencia es PolyForm Noncommercial 1.0.0, que prohíbe el uso comercial, así que PromptQuorum lo describe como de código fuente disponible. El código es público en GitHub y gratuito para uso no comercial; el uso comercial requiere una licencia de pago.',
+          },
+          {
+            q: '¿Rescript funciona sin conexión a internet?',
+            a: 'Según el fabricante, los modelos de Whisper y de hablantes se descargan una vez desde Hugging Face y luego se guardan en caché, y después el editor funciona sin conexión de red. Las aplicaciones de escritorio comprueban las actualizaciones en GitHub Releases. PromptQuorum no probó el uso sin conexión.',
+          },
+          {
+            q: '¿Qué formatos puede exportar Rescript?',
+            a: 'Según el fabricante: vídeo MP4 o WebM de hasta 4K; audio M4A, MP3 o WAV; transcripciones en TXT, Markdown, DOCX o PDF; subtítulos en SRT, VTT o JSON; y líneas de tiempo para DaVinci Resolve, Premiere, Final Cut, Pro Tools, Logic, Reaper, Samplitude o Blender. PromptQuorum no comprobó la fidelidad de la exportación.',
+          },
+          {
+            q: '¿Puede Rescript quitar muletillas y silencios?',
+            a: 'Según el sitio web, un clic quita "um", "uh" y muletillas parecidas, y otro quita los silencios de 0,3 segundos o más en todo el archivo. PromptQuorum no probó con qué precisión los detecta.',
+          },
+          {
+            q: '¿Rescript etiqueta quién está hablando?',
+            a: 'Según el fabricante, las etiquetas automáticas de hablante agrupan la transcripción según quién habla, y los hablantes se pueden renombrar; el README menciona pyannote-segmentation-3.0 para ello. PromptQuorum no probó las etiquetas.',
+          },
+          {
+            q: '¿Qué recopila la telemetría de Rescript y puedo desactivarla?',
+            a: 'El README dice que las estadísticas de uso anónimas y los informes de fallos están activados por defecto y se pueden desactivar en los ajustes, en «Privacy». Según la página de privacidad, la telemetría incluye un identificador de instalación aleatorio, uno de cuatro nombres de evento y propiedades generales como la versión de la aplicación, la familia del sistema operativo y el modelo o formato de exportación usado; no se registran las direcciones IP, y los informes de fallos van a Sentry sin los nombres de los archivos multimedia. PromptQuorum no inspeccionó el tráfico de red.',
           },
         ],
       },
@@ -1350,6 +1446,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Em quais plataformas o Rescript funciona?',
             a: 'Segundo o fabricante, em um navegador (recomenda-se um baseado em Chromium) e como aplicativo de desktop para macOS (Apple Silicon e Intel), Windows e Linux. A versão 1.2.5 lista um DMG, um EXE de instalação, um AppImage e um pacote DEB.',
           },
+          {
+            q: 'O Rescript é de código aberto?',
+            a: 'O fabricante chama o projeto de código aberto, mas a licença é a PolyForm Noncommercial 1.0.0, que proíbe o uso comercial, então a PromptQuorum o descreve como de código-fonte disponível. O código é público no GitHub e gratuito para uso não comercial; o uso comercial exige uma licença paga.',
+          },
+          {
+            q: 'O Rescript funciona sem conexão com a internet?',
+            a: 'Segundo o fabricante, os modelos do Whisper e de falantes são baixados uma vez do Hugging Face e depois ficam em cache, e a partir daí o editor funciona sem conexão de rede. Os aplicativos de desktop verificam atualizações no GitHub Releases. A PromptQuorum não testou o uso offline.',
+          },
+          {
+            q: 'Quais formatos o Rescript pode exportar?',
+            a: 'Segundo o fabricante: vídeo MP4 ou WebM de até 4K; áudio M4A, MP3 ou WAV; transcrições em TXT, Markdown, DOCX ou PDF; legendas em SRT, VTT ou JSON; e linhas do tempo para DaVinci Resolve, Premiere, Final Cut, Pro Tools, Logic, Reaper, Samplitude ou Blender. A PromptQuorum não verificou a fidelidade da exportação.',
+          },
+          {
+            q: 'O Rescript consegue remover vícios de linguagem e silêncios?',
+            a: 'Segundo o site, um clique remove "um", "uh" e vícios parecidos, e outro remove silêncios de 0,3 segundo ou mais no arquivo inteiro. A PromptQuorum não testou a precisão com que eles são detectados.',
+          },
+          {
+            q: 'O Rescript identifica quem está falando?',
+            a: 'Segundo o fabricante, rótulos automáticos de falante agrupam a transcrição por quem está falando, e os falantes podem ser renomeados; o README cita o pyannote-segmentation-3.0 para isso. A PromptQuorum não testou os rótulos.',
+          },
+          {
+            q: 'O que a telemetria do Rescript coleta, e posso desligá-la?',
+            a: 'O README diz que estatísticas de uso anônimas e relatórios de falhas vêm ativados por padrão e podem ser desligados nas configurações, em «Privacy». Segundo a página de privacidade, a telemetria inclui um ID de instalação aleatório, um de quatro nomes de evento e propriedades gerais como a versão do aplicativo, a família do sistema operacional e o modelo ou formato de exportação usado; endereços IP não são registrados, e os relatórios de falhas vão para o Sentry sem os nomes dos arquivos de mídia. A PromptQuorum não inspecionou o tráfego de rede.',
+          },
         ],
       },
       verdict: {
@@ -1624,6 +1744,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Rescriptはどのプラットフォームで動きますか？',
             a: 'メーカーによると、ブラウザ（Chromiumベース推奨）と、macOS（Apple SiliconおよびIntel）・Windows・Linux向けのデスクトップアプリで動作します。v1.2.5のリリースにはDMG、セットアップEXE、AppImage、DEBパッケージが掲載されています。',
+          },
+          {
+            q: 'Rescriptはオープンソースですか？',
+            a: 'メーカーはオープンソースと呼んでいますが、ライセンスは商用利用を禁じるPolyForm Noncommercial 1.0.0であるため、PromptQuorumはソース公開型と表現しています。コードはGitHubで公開され、非商用利用は無料です。商用利用には有償ライセンスが必要です。',
+          },
+          {
+            q: 'Rescriptはインターネット接続なしで動きますか？',
+            a: 'メーカーによると、Whisperと話者のモデルはHugging Faceから一度だけダウンロードされてキャッシュされ、その後はネットワーク接続なしでエディターが動作します。デスクトップアプリはGitHub Releasesで更新を確認します。PromptQuorumはオフライン利用をテストしていません。',
+          },
+          {
+            q: 'Rescriptはどんな形式で書き出せますか？',
+            a: 'メーカーによると、最大4KのMP4またはWebM動画、M4A・MP3・WAV音声、TXT・Markdown・DOCX・PDFの文字起こし、SRT・VTT・JSONの字幕、そしてDaVinci Resolve、Premiere、Final Cut、Pro Tools、Logic、Reaper、Samplitude、Blender向けのタイムラインです。PromptQuorumは書き出しの忠実度を確認していません。',
+          },
+          {
+            q: 'Rescriptはフィラーや無音を除去できますか？',
+            a: 'ウェブサイトによると、ワンクリックで「um」「uh」などのフィラーを除去し、別のワンクリックでファイル全体の0.3秒以上の無音を除去します。PromptQuorumは検出の精度をテストしていません。',
+          },
+          {
+            q: 'Rescriptは誰が話しているかを区別しますか？',
+            a: 'メーカーによると、自動の話者ラベルが文字起こしを話者ごとにまとめ、話者名は変更できます。READMEにはこのためにpyannote-segmentation-3.0が挙げられています。PromptQuorumはラベルをテストしていません。',
+          },
+          {
+            q: 'Rescriptのテレメトリーは何を収集し、無効にできますか？',
+            a: 'READMEによると、匿名の利用統計とクラッシュレポートは初期状態で有効で、設定の「Privacy」で無効にできます。プライバシーページによると、テレメトリーにはランダムなインストールID、4種類のイベント名のいずれか、アプリのバージョン、OSの種類、使用したモデルや書き出し形式といった大まかな情報が含まれます。IPアドレスは記録されず、クラッシュレポートはメディアのファイル名を除いてSentryに送られます。PromptQuorumはネットワーク通信を調べていません。',
           },
         ],
       },
@@ -1900,6 +2044,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Rescript 可在哪些平台上运行？',
             a: '据厂商称，可在浏览器中运行（推荐基于 Chromium 的浏览器），也有适用于 macOS（Apple Silicon 和 Intel）、Windows 和 Linux 的桌面应用。v1.2.5 版本列出了 DMG、安装 EXE、AppImage 和 DEB 包。',
           },
+          {
+            q: 'Rescript 是开源的吗？',
+            a: '厂商称该项目是开源的，但其许可证是禁止商业使用的 PolyForm Noncommercial 1.0.0，因此 PromptQuorum 将其描述为源码可见（source-available）。代码在 GitHub 上公开，非商业使用免费；商业使用需要付费许可。',
+          },
+          {
+            q: 'Rescript 可以离线使用吗？',
+            a: '据厂商称，Whisper 和说话人模型会从 Hugging Face 下载一次并缓存，此后编辑器无需网络连接即可使用。桌面应用会通过 GitHub Releases 检查更新。PromptQuorum 没有测试离线使用。',
+          },
+          {
+            q: 'Rescript 可以导出哪些格式？',
+            a: '据厂商称：最高 4K 的 MP4 或 WebM 视频；M4A、MP3 或 WAV 音频；TXT、Markdown、DOCX 或 PDF 转写文本；SRT、VTT 或 JSON 字幕；以及供 DaVinci Resolve、Premiere、Final Cut、Pro Tools、Logic、Reaper、Samplitude 或 Blender 使用的时间线。PromptQuorum 没有检查导出的保真度。',
+          },
+          {
+            q: 'Rescript 能去除口头禅和静音吗？',
+            a: '据网站介绍，一键可去除 "um"、"uh" 等口头禅，另一键可去除整个文件中 0.3 秒以上的静音。PromptQuorum 没有测试其检测的准确程度。',
+          },
+          {
+            q: 'Rescript 会标注谁在说话吗？',
+            a: '据厂商称，自动说话人标签会按说话者对转写文本分组，说话人可以重命名；README 为此列出了 pyannote-segmentation-3.0。PromptQuorum 没有测试这些标签。',
+          },
+          {
+            q: 'Rescript 的遥测会收集什么？可以关闭吗？',
+            a: 'README 称匿名使用统计和崩溃报告默认开启，可在设置的“Privacy”中关闭。据隐私页面，遥测包含一个随机安装 ID、四种事件名称之一，以及应用版本、操作系统类别、所用模型或导出格式等粗略属性；不记录 IP 地址，崩溃报告会去掉媒体文件名后发送到 Sentry。PromptQuorum 没有检查网络流量。',
+          },
         ],
       },
       verdict: {
@@ -2175,6 +2343,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Rescript는 어떤 플랫폼에서 실행되나요?',
             a: '제조사에 따르면 브라우저(Chromium 기반 권장)와 macOS(Apple Silicon 및 Intel), Windows, Linux용 데스크톱 앱에서 실행됩니다. v1.2.5 릴리스에는 DMG, 설치용 EXE, AppImage, DEB 패키지가 올라와 있습니다.',
           },
+          {
+            q: 'Rescript는 오픈소스입니까?',
+            a: '제조사는 이 프로젝트를 오픈소스라고 부르지만, 라이선스는 상업적 이용을 금지하는 PolyForm Noncommercial 1.0.0이므로 PromptQuorum은 이를 소스 공개형(source-available)으로 설명합니다. 코드는 GitHub에 공개되어 있으며 비상업적 이용은 무료이고, 상업적 이용에는 유료 라이선스가 필요합니다.',
+          },
+          {
+            q: 'Rescript는 인터넷 연결 없이 작동합니까?',
+            a: '제조사에 따르면 Whisper와 화자 모델은 Hugging Face에서 한 번 내려받아 캐시된 뒤, 그다음부터는 네트워크 연결 없이 편집기가 작동합니다. 데스크톱 앱은 GitHub Releases에서 업데이트를 확인합니다. PromptQuorum은 오프라인 사용을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Rescript는 어떤 형식으로 내보낼 수 있습니까?',
+            a: '제조사에 따르면 최대 4K의 MP4 또는 WebM 영상, M4A·MP3·WAV 오디오, TXT·Markdown·DOCX·PDF 전사 텍스트, SRT·VTT·JSON 자막, 그리고 DaVinci Resolve, Premiere, Final Cut, Pro Tools, Logic, Reaper, Samplitude, Blender용 타임라인입니다. PromptQuorum은 내보내기 충실도를 확인하지 않았습니다.',
+          },
+          {
+            q: 'Rescript는 군말과 무음을 제거할 수 있습니까?',
+            a: '웹사이트에 따르면 한 번의 클릭으로 "um", "uh" 같은 군말을 제거하고, 다른 한 번의 클릭으로 파일 전체의 0.3초 이상 무음을 제거합니다. PromptQuorum은 검출 정확도를 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Rescript는 누가 말하는지 구분합니까?',
+            a: '제조사에 따르면 자동 화자 라벨이 전사 텍스트를 말하는 사람별로 묶어 주며 화자 이름은 바꿀 수 있습니다. README에는 이를 위해 pyannote-segmentation-3.0이 명시되어 있습니다. PromptQuorum은 라벨을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Rescript의 원격 측정은 무엇을 수집하며 끌 수 있습니까?',
+            a: 'README에 따르면 익명 사용 통계와 충돌 보고서는 기본적으로 켜져 있으며 설정의 "Privacy"에서 끌 수 있습니다. 개인정보 페이지에 따르면 원격 측정에는 무작위 설치 ID, 네 가지 이벤트 이름 중 하나, 앱 버전·운영체제 계열·사용한 모델이나 내보내기 형식 같은 대략적인 속성이 포함되며, IP 주소는 기록되지 않고 충돌 보고서는 미디어 파일 이름이 제거된 채 Sentry로 전송됩니다. PromptQuorum은 네트워크 트래픽을 점검하지 않았습니다.',
+          },
         ],
       },
       verdict: {
@@ -2449,6 +2641,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'على أي منصات يعمل Rescript؟',
             a: 'بحسب الشركة المصنِّعة، يعمل في المتصفح (يُنصح بمتصفح مبني على Chromium) وكتطبيق سطح مكتب لنظام macOS (Apple Silicon وIntel) وWindows وLinux. يسرد إصدار v1.2.5 ملف DMG وملف EXE للتثبيت وAppImage وحزمة DEB.',
+          },
+          {
+            q: 'هل Rescript مفتوح المصدر؟',
+            a: 'تصف الشركة المصنِّعة المشروع بأنه مفتوح المصدر، لكن ترخيصه PolyForm Noncommercial 1.0.0 الذي يمنع الاستخدام التجاري، ولذلك تصفه PromptQuorum بأنه متاح المصدر (source-available). الشيفرة علنية على GitHub والاستخدام غير التجاري مجاني، أما الاستخدام التجاري فيتطلب ترخيصًا مدفوعًا.',
+          },
+          {
+            q: 'هل يعمل Rescript دون اتصال بالإنترنت؟',
+            a: 'بحسب الشركة المصنِّعة، تُنزَّل نماذج Whisper والمتحدثين مرة واحدة من Hugging Face ثم تُخزَّن مؤقتًا، وبعد ذلك يعمل المحرر دون اتصال بالشبكة. وتفحص تطبيقات سطح المكتب التحديثات عبر GitHub Releases. لم تختبر PromptQuorum الاستخدام دون اتصال.',
+          },
+          {
+            q: 'ما الصيغ التي يستطيع Rescript تصديرها؟',
+            a: 'بحسب الشركة المصنِّعة: فيديو MP4 أو WebM بدقة تصل إلى 4K؛ وصوت M4A أو MP3 أو WAV؛ ونصوص مفرَّغة بصيغة TXT أو Markdown أو DOCX أو PDF؛ وترجمات بصيغة SRT أو VTT أو JSON؛ وخطوط زمنية لبرامج DaVinci Resolve وPremiere وFinal Cut وPro Tools وLogic وReaper وSamplitude وBlender. لم تتحقق PromptQuorum من دقة التصدير.',
+          },
+          {
+            q: 'هل يستطيع Rescript إزالة كلمات الحشو والصمت؟',
+            a: 'بحسب الموقع، نقرة واحدة تزيل "um" و"uh" وكلمات الحشو المشابهة، وأخرى تزيل الصمت الذي يبلغ 0.3 ثانية أو أكثر في الملف كله. لم تختبر PromptQuorum مدى دقة اكتشافها.',
+          },
+          {
+            q: 'هل يحدد Rescript من يتحدث؟',
+            a: 'بحسب الشركة المصنِّعة، تجمّع تسميات المتحدثين التلقائية النص المفرَّغ بحسب من يتحدث، ويمكن إعادة تسمية المتحدثين؛ ويذكر README النموذج pyannote-segmentation-3.0 لهذا الغرض. لم تختبر PromptQuorum هذه التسميات.',
+          },
+          {
+            q: 'ما الذي يجمعه القياس عن بُعد في Rescript، وهل يمكنني إيقافه؟',
+            a: 'يذكر README أن إحصاءات الاستخدام المجهولة وتقارير الأعطال مفعّلة افتراضيًا ويمكن إيقافها من الإعدادات ضمن «Privacy». وبحسب صفحة الخصوصية، يتضمن القياس عن بُعد معرّف تثبيت عشوائيًا وأحد أربعة أسماء أحداث وخصائص عامة مثل إصدار التطبيق وعائلة نظام التشغيل والنموذج أو صيغة التصدير المستخدمة؛ ولا تُسجَّل عناوين IP، وتُرسل تقارير الأعطال إلى Sentry بعد حذف أسماء ملفات الوسائط. لم تفحص PromptQuorum حركة الشبكة.',
           },
         ],
       },
