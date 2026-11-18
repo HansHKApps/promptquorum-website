@@ -909,6 +909,7 @@ const HUB_THEMES: Array<{
       'sidekick-review',
       'lastbrowser-review',
       'browseros-review',
+      'alpaca-review',
     ],
   },
   {

@@ -322,6 +322,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'fablecut':                               'fablecut',
   'rescript':                               'rescript',
   'lexora':                                 'lexora',
+  'alpaca':                                 'alpaca',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
