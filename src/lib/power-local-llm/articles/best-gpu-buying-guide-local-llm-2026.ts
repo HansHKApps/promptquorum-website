@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB (~$2,000+ new / ~$2,575-3,010 used):** 24 GB VRAM, 450 W, about 186 tok/s on Llama 2 7B Q4_0 (developer-reported). Runs 33B models comfortably. New RTX 4090 stock is thin and the new-price floor may be stale — listings range up to ~$3,800.',
           '**RTX 5090 32 GB (~$4,500-4,921 new / ~$5,880-6,350 used, $1,999 MSRP):** 32 GB GDDR7 VRAM, 575 W, about 290 tok/s on Llama 2 7B Q4_0 (developer-reported). The 32 GB capacity is the headline — it is the only card in this guide with 32 GB, though a 70B model at Q4 is about 43 GB per Ollama and so still requires aggressive quantization or partial CPU offload. Asking prices rose about 64% between August and October, and used listings sit above new.',
           '**Why buy this tier:** you need 33B or 70B models, you run batch inference, or you want a card that will not need replacing for years.',
-          '**Why skip this tier:** for 7B-14B models it is overkill — the high tier delivers instant responses on those sizes for less than half the price and power draw.',
+          '**Why skip this tier:** for 7B-14B models it is overkill — the high tier delivers instant responses on those sizes for roughly $900-1,200 instead of $2,000+, at 285-320 W instead of 450-575 W.',
         ],
         callouts: [
           {
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB (~2.000 $+ neu / ~2.575-3.010 $ gebraucht):** 24 GB VRAM, 450 W, etwa 186 Token/s bei Llama 2 7B Q4_0 (Entwicklerwert). Führt 33B-Modelle bequem aus. Neue RTX 4090 sind kaum noch lieferbar, und der Neupreis-Boden kann veraltet sein — Angebote reichen bis ~3.800 $.',
           '**RTX 5090 32 GB (~4.500-4.921 $ neu / ~5.880-6.350 $ gebraucht, UVP 1.999 $):** 32 GB GDDR7-VRAM, 575 W, etwa 290 Token/s bei Llama 2 7B Q4_0 (Entwicklerwert). Die 32 GB Kapazität sind das Hauptargument — es ist die einzige Karte in diesem Ratgeber mit 32 GB, doch ein 70B-Modell bei Q4 sind laut Ollama rund 43 GB und erfordert daher weiterhin aggressive Quantisierung oder teilweises CPU-Offloading. Die Angebotspreise stiegen zwischen August und Oktober um rund 64 %, und Gebrauchtangebote liegen über den Neupreisen.',
           '**Warum diese Klasse kaufen:** Sie brauchen 33B- oder 70B-Modelle, Sie betreiben Batch-Inferenz oder Sie wollen eine Karte, die jahrelang nicht ersetzt werden muss.',
-          '**Warum diese Klasse überspringen:** Für 7B–14B-Modelle ist sie überdimensioniert — die Oberklasse liefert sofortige Antworten bei diesen Größen für weniger als die Hälfte des Preises und der Leistungsaufnahme.',
+          '**Warum diese Klasse überspringen:** Für 7B–14B-Modelle ist sie überdimensioniert — die Oberklasse liefert bei diesen Größen sofortige Antworten für rund 900-1.200 $ statt 2.000 $+ und bei 285-320 W statt 450-575 W.',
         ],
         callouts: [
           {
@@ -1666,7 +1666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 Go (env. 2 000 $+ neuf / env. 2 575-3 010 $ d\'occasion) :** 24 Go de VRAM, 450 W, environ 186 tok/s en Llama 2 7B Q4_0 (valeur rapportée par des développeurs). Exécute confortablement les modèles 33B. Le stock neuf de RTX 4090 est mince et le plancher de prix du neuf peut être périmé — les annonces montent jusqu\'à env. 3 800 $.',
           '**RTX 5090 32 Go (env. 4 500-4 921 $ neuf / env. 5 880-6 350 $ d\'occasion, tarif de lancement 1 999 $) :** 32 Go de VRAM GDDR7, 575 W, environ 290 tok/s en Llama 2 7B Q4_0 (valeur rapportée par des développeurs). La capacité de 32 Go est l\'argument central — c\'est la seule carte de ce guide avec 32 Go, mais un modèle 70B en Q4 pèse environ 43 Go selon Ollama et nécessite donc toujours une quantification agressive ou un déchargement partiel sur le CPU. Les prix demandés ont augmenté d\'environ 64 % entre août et octobre, et les annonces d\'occasion se situent au-dessus du neuf.',
           '**Pourquoi acheter cette gamme :** vous avez besoin de modèles 33B ou 70B, vous faites de l\'inférence par lots, ou vous voulez une carte qui n\'aura pas besoin d\'être remplacée avant des années.',
-          '**Pourquoi éviter cette gamme :** pour les modèles 7B-14B, elle est surdimensionnée — le haut de gamme délivre des réponses instantanées sur ces tailles pour moins de la moitié du prix et de la consommation.',
+          '**Pourquoi éviter cette gamme :** pour les modèles 7B-14B, elle est surdimensionnée — le haut de gamme délivre des réponses instantanées sur ces tailles pour environ 900-1 200 $ au lieu de 2 000 $ et plus, avec 285-320 W au lieu de 450-575 W.',
         ],
         callouts: [
           {
@@ -2297,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB（新品で約$2,000以上 / 中古で約$2,575-3,010）：** 24 GB VRAM、450 W、Llama 2 7B Q4_0で約186 tok/s（開発者報告値）。33Bモデルを余裕をもって動かします。新品のRTX 4090は在庫が薄く、新品の最低価格は古い可能性があります — 出品は最大約$3,800まで幅があります。',
           '**RTX 5090 32 GB（新品で約$4,500-4,921 / 中古で約$5,880-6,350、メーカー希望小売価格$1,999）：** 32 GB GDDR7 VRAM、575 W、Llama 2 7B Q4_0で約290 tok/s（開発者報告値）。32 GBの容量が目玉です — 本ガイドで唯一の32 GBカードですが、Q4の70BはOllamaによると約43 GBのため、積極的な量子化かCPUへの部分オフロードが依然として必要です。掲示価格は8月から10月にかけて約64%上昇し、中古の出品は新品を上回っています。',
           '**この帯を買う理由：** 33Bや70Bモデルが必要、バッチ推論を行う、または何年も買い替え不要のカードがほしい。',
-          '**この帯を避ける理由：** 7B～14Bモデルには過剰です — 上位帯はそれらのサイズで、価格と消費電力の半分以下で瞬時の応答を提供します。',
+          '**この帯を避ける理由：** 7B～14Bモデルには過剰です — 上位帯はそれらのサイズで、価格は約$900～1,200（$2,000以上と比較）、消費電力は285～320 W（450～575 Wと比較）で瞬時の応答を提供します。',
         ],
         callouts: [
           {
@@ -2928,7 +2928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB（全新约 $2,000 起 / 二手约 $2,575-3,010）：** 24 GB 显存，450 W，Llama 2 7B Q4_0 下约 186 tok/s（开发者报告）。轻松运行 33B 模型。全新 RTX 4090 货源稀少，全新最低价可能已过时——挂牌价最高可达约 $3,800。',
           '**RTX 5090 32 GB（全新约 $4,500-4,921 / 二手约 $5,880-6,350，建议零售价 $1,999）：** 32 GB GDDR7 显存，575 W，Llama 2 7B Q4_0 下约 290 tok/s（开发者报告）。32 GB 容量是亮点——它是本指南中唯一的 32 GB 显卡，但 70B 模型以 Q4 运行据 Ollama 约为 43 GB，因此仍需要激进量化或部分 CPU 卸载。8 月到 10 月间挂牌价上涨约 64%，二手挂牌价高于全新。',
           '**为何买这一档：** 你需要 33B 或 70B 模型、你做批量推理，或你想要一款多年无需更换的显卡。',
-          '**为何跳过这一档：** 对 7B-14B 模型而言它过剩——高端档以不到一半的价格和功耗就能在这些规模上提供即时响应。',
+          '**为何跳过这一档：** 对 7B-14B 模型而言它过剩——高端档在这些规模上约 $900-1,200（对比 $2,000 以上）、285-320 W（对比 450-575 W）就能提供即时响应。',
         ],
         callouts: [
           {
@@ -3571,7 +3571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB (~$2.000+ nueva / ~$2.575-3.010 de segunda mano):** 24 GB de VRAM, 450 W, unos 186 tok/s en Llama 2 7B Q4_0 (dato reportado por desarrolladores). Ejecuta modelos de 33B cómodamente. El stock nuevo de la RTX 4090 es escaso y el precio mínimo de las nuevas puede estar desactualizado — los listados llegan hasta ~$3.800.',
           '**RTX 5090 32 GB (~$4.500-4.921 nueva / ~$5.880-6.350 de segunda mano, $1.999 de precio de lista):** 32 GB de VRAM GDDR7, 575 W, unos 290 tok/s en Llama 2 7B Q4_0 (dato reportado por desarrolladores). Los 32 GB de capacidad son el argumento central — es la única tarjeta de esta guía con 32 GB, aunque un modelo de 70B en Q4 ocupa unos 43 GB según Ollama y por eso sigue requiriendo cuantización agresiva o descarga parcial a la CPU. Los precios de venta subieron cerca de un 64 % entre agosto y octubre, y los listados de segunda mano quedan por encima de los de nuevas.',
           '**Por qué comprar en este rango:** necesitas modelos de 33B o 70B, ejecutas inferencia en lotes, o quieres una tarjeta que no necesite reemplazarse en años.',
-          '**Por qué saltarse este rango:** para modelos de 7B-14B es excesivo — el rango alto ofrece respuestas instantáneas en esos tamaños por menos de la mitad del precio y el consumo energético.',
+          '**Por qué saltarse este rango:** para modelos de 7B-14B es excesivo — el rango alto ofrece respuestas instantáneas en esos tamaños por unos $900-1.200 en lugar de $2.000 o más, con 285-320 W en lugar de 450-575 W.',
         ],
         callouts: [
           {
@@ -3818,7 +3818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Diez GPUs comparadas para LLMs locales en cuatro presupuestos: de la RTX 3060 a la RTX 5090. VRAM, tokens/s, consumo energético y precios 2026 — con el tamaño de modelo que corre cada rango.',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'es',
-      datePublished: '2026-05-24',
+      datePublished: '2026-05-22',
       dateModified: '2026-11-15',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -4215,7 +4215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB (~$2.000+ nova / ~$2.575-3.010 usada):** 24 GB de VRAM, 450 W, cerca de 186 tok/s em Llama 2 7B Q4_0 (dado relatado por desenvolvedores). Executa modelos 33B confortavelmente. O estoque novo da RTX 4090 é escasso e o piso de preço novo pode estar desatualizado — os anúncios chegam a ~$3.800.',
           '**RTX 5090 32 GB (~$4.500-4.921 nova / ~$5.880-6.350 usada, preço de lista $1.999):** 32 GB de VRAM GDDR7, 575 W, cerca de 290 tok/s em Llama 2 7B Q4_0 (dado relatado por desenvolvedores). A capacidade de 32 GB é o argumento central — é a única placa deste guia com 32 GB, embora um modelo 70B em Q4 tenha cerca de 43 GB segundo a Ollama e por isso ainda exija quantização agressiva ou descarga parcial para a CPU. Os preços pedidos subiram cerca de 64% entre agosto e outubro, e os anúncios de usadas ficam acima dos de novas.',
           '**Por que comprar nesta faixa:** você precisa de modelos 33B ou 70B, executa inferência em lote, ou quer uma placa que não precise ser substituída por anos.',
-          '**Por que pular esta faixa:** para modelos 7B–14B é exagero — a faixa alta entrega respostas instantâneas nesses tamanhos por menos da metade do preço e do consumo de energia.',
+          '**Por que pular esta faixa:** para modelos 7B–14B é exagero — a faixa alta entrega respostas instantâneas nesses tamanhos por cerca de $900-1.200 em vez de $2.000 ou mais, com 285-320 W em vez de 450-575 W.',
         ],
         callouts: [
           {
@@ -4859,7 +4859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24GB (نحو 2000 دولاراً+ جديدة / نحو 2575-3010 دولار مستعملة):** 24 جيجابايت VRAM و450 واط ونحو 186 رمز/ثانية على Llama 2 7B Q4_0 (مُبلَّغ من مطوّرين). تُشغّل نماذج 33B براحة. المخزون الجديد من RTX 4090 شحيح وقد يكون أدنى سعر جديد مسجّلاً قديماً — تمتد العروض حتى نحو 3800 دولار.',
           '**RTX 5090 32GB (نحو 4500-4921 دولاراً جديدة / نحو 5880-6350 دولاراً مستعملة، سعر القائمة 1999 دولاراً):** 32 جيجابايت GDDR7 VRAM و575 واط ونحو 290 رمز/ثانية على Llama 2 7B Q4_0 (مُبلَّغ من مطوّرين). السعة 32 جيجابايت هي العنوان — هي البطاقة الوحيدة في هذا الدليل بذاكرة 32 جيجابايت، مع أن نموذج 70B بـQ4 نحو 43 جيجابايت وفق Ollama ولذا يظل يتطلب تكمية عدوانية أو نقلاً جزئياً إلى المعالج. ارتفعت أسعار العرض نحو 64% بين أغسطس وأكتوبر، وتقع عروض المستعملة فوق الجديدة.',
           '**لماذا تشتري هذه الفئة:** تحتاج نماذج 33B أو 70B، أو تُشغّل استدلالاً دفعياً، أو تريد بطاقة لا تحتاج استبدالاً لسنوات.',
-          '**لماذا تتجاوز هذه الفئة:** لنماذج 7B–14B هي مبالغة — فالفئة العالية تقدم استجابات فورية لهذه الأحجام بأقل من نصف السعر واستهلاك الطاقة.',
+          '**لماذا تتجاوز هذه الفئة:** لنماذج 7B–14B هي مبالغة — فالفئة العالية تقدم استجابات فورية لهذه الأحجام بنحو 900-1,200 دولار بدلاً من 2,000 دولار فأكثر، وبقدرة 285-320 واط بدلاً من 450-575 واط.',
         ],
         callouts: [
           {
@@ -5504,7 +5504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4090 24 GB (신품 ~$2,000 이상 / 중고 ~$2,575-3,010):** VRAM 24 GB, 450 W, Llama 2 7B Q4_0에서 약 186 토큰/초(개발자 보고). 33B 모델을 편안하게 실행합니다. 신품 RTX 4090 재고는 얇고 신품 최저가는 오래된 값일 수 있으며, 목록 가격은 최대 ~$3,800까지 분포합니다.',
           '**RTX 5090 32 GB (신품 ~$4,500-4,921 / 중고 ~$5,880-6,350, 출시 가격 $1,999):** VRAM 32 GB GDDR7, 575 W, Llama 2 7B Q4_0에서 약 290 토큰/초(개발자 보고). 32 GB 용량이 핵심 논거입니다 — 이 가이드에서 유일한 32 GB 카드이지만, Q4의 70B 모델은 Ollama 기준 약 43 GB이므로 여전히 공격적인 양자화나 CPU로의 부분 오프로드가 필요합니다. 호가는 8월과 10월 사이에 약 64% 올랐으며, 중고 목록이 신품 가격을 상회합니다.',
           '**이 등급을 선택하는 이유:** 33B 또는 70B 모델이 필요하거나, 배치 추론을 실행하거나, 몇 년간 교체 없이 사용할 카드를 원합니다.',
-          '**이 등급을 건너뛰는 이유:** 7B-14B 모델에는 과도합니다 — 고급형은 해당 크기에서 즉각적인 응답을 제공하며 절반 미만의 가격과 전력 소비로 이용할 수 있습니다.',
+          '**이 등급을 건너뛰는 이유:** 7B-14B 모델에는 과도합니다 — 고급형은 해당 크기에서 약 $900-1,200(대비 $2,000 이상), 285-320 W(대비 450-575 W)로 즉각적인 응답을 제공합니다.',
         ],
         callouts: [
           {
@@ -5761,9 +5761,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '로컬 LLM용 최고의 그래픽카드: 2026년 GPU 구매 가이드', item: '[www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026](https://www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 LLM용 최고의 그래픽카드: 2026년 GPU 구매 가이드', item: 'https://www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026' },
       ],
     },
   },
