@@ -1085,6 +1085,7 @@ const HUB_THEMES: Array<{
       'nekoni-review',
       'lexora-review',
       'kition-review',
+      'openwork-review',
     ],
   },
   {
@@ -1109,6 +1110,7 @@ const HUB_THEMES: Array<{
       'hiwaifu-review',
       'open-llm-vtuber-review',
       'asiden-review',
+      'airi-review',
     ],
   },
   {
@@ -1243,6 +1245,7 @@ const HUB_THEMES: Array<{
       'reactive-resume-review',
       'labelme-review',
       'next-ai-draw-io-review',
+      'inbox-zero-review',
     ],
   },
   {
@@ -1317,6 +1320,7 @@ const HUB_THEMES: Array<{
       'meetini-review',
       'lyonesse-review',
       'willow-inference-server-review',
+      'ultimate-vocal-remover-review',
     ],
   },
   {
