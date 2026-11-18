@@ -38,7 +38,8 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    // ar: dedicated short poster title (the article title's ':' after a Latin brand name renders as a detached colon and wraps badly)
+    title: lang === 'ar' ? 'مراجعة محرر Oleafly للأبحاث' : stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },

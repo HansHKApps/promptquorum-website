@@ -242,6 +242,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How often does Newelle update?',
             a: 'GitHub lists releases 1.4.5 on 19 June, 1.5.0 on 19 August, 1.6.0 on 15 October and 1.6.1 on 2 November 2026. Flathub installs update through the software centre.',
           },
+          {
+            q: 'Is Newelle free to use?',
+            a: 'According to the README and the website, yes: Newelle is open source under GPL-3.0 and free to use. Cloud AI providers that you connect bill separately under their own terms, and local models are downloaded on top of the app. PromptQuorum did not check the pricing of individual providers.',
+          },
+          {
+            q: 'Can Newelle run models locally?',
+            a: 'Yes, per the README: it can download local models and run them with Llama.cpp or Ollama. No minimum memory or GPU is published; the 1.6.0 release notes say the model downloader estimates whether a model fits. PromptQuorum did not run a local model through it.',
+          },
+          {
+            q: 'Where do my prompts go?',
+            a: 'It depends on the model you choose. A cloud provider receives your prompts on its servers, while a local model runs on your own computer. The README says the maintainers cannot guarantee the privacy of your chat data. PromptQuorum found no privacy-policy page and did not inspect network traffic.',
+          },
+          {
+            q: 'How do I install Newelle?',
+            a: 'On Linux, the project names Flathub as the recommended route: flatpak install flathub io.github.qwersyk.Newelle, or a software centre with Flathub enabled. The GitHub releases list no downloadable files. The README also describes a source build with install.sh or GNOME Builder. PromptQuorum did not run the installer.',
+          },
+          {
+            q: 'Does Newelle support voice?',
+            a: 'According to the README, yes: hands-free chat with many speech-to-text and text-to-speech models, wake-word support and a real-time call mode. The website names Whisper dictation and Kokoro speech synthesis. The voice pill is still experimental, and PromptQuorum has not checked voice accuracy.',
+          },
+          {
+            q: 'Can I chat with my own documents?',
+            a: 'Per the README, yes: Newelle can chat with your own documents, and it can read a website when you use a # prefix. The website adds hybrid vector-and-keyword document search. These are maker statements, and PromptQuorum has not checked search quality.',
+          },
+          {
+            q: 'Does Newelle support MCP?',
+            a: 'Yes, per the README: MCP servers are added by pasting their JSON. It also lists skills from Claude and Codex, and the 1.6.0 notes add an MCP server of Newelle\'s own tools for third parties. PromptQuorum did not test any MCP server.',
+          },
+          {
+            q: 'Who develops Newelle, and is it still maintained?',
+            a: 'Flathub lists the developer as Qwersyk, and the GitHub repository was created in June 2023. The latest release, 1.6.1, appeared on 2 November 2026 and the last commit on the master branch was on 6 November 2026. PromptQuorum found no company, imprint or privacy policy, so it cannot say which country the project is based in.',
+          },
         ],
       },
       verdict: {
@@ -510,6 +542,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Wie oft wird Newelle aktualisiert?',
             a: 'GitHub listet die Releases 1.4.5 am 19. Juni, 1.5.0 am 19. August, 1.6.0 am 15. Oktober und 1.6.1 am 2. November 2026. Flathub-Installationen werden über das Software-Center aktualisiert.',
+          },
+          {
+            q: 'Ist Newelle kostenlos nutzbar?',
+            a: 'Laut README und Website ja: Newelle ist quelloffen unter GPL-3.0 und kostenlos nutzbar. Cloud-KI-Anbieter, die Sie anbinden, rechnen separat nach ihren eigenen Bedingungen ab, und lokale Modelle werden zusätzlich zur App heruntergeladen. PromptQuorum hat die Preise einzelner Anbieter nicht geprüft.',
+          },
+          {
+            q: 'Kann Newelle Modelle lokal ausführen?',
+            a: 'Ja, laut README: Es kann lokale Modelle herunterladen und mit Llama.cpp oder Ollama ausführen. Ein Mindestbedarf an Arbeitsspeicher oder GPU ist nicht angegeben; laut den Release-Hinweisen zu 1.6.0 schätzt der Modell-Downloader, ob ein Modell passt. PromptQuorum hat kein lokales Modell damit betrieben.',
+          },
+          {
+            q: 'Wohin gehen meine Prompts?',
+            a: 'Das hängt vom gewählten Modell ab. Ein Cloud-Anbieter erhält Ihre Prompts auf seinen Servern, ein lokales Modell läuft auf Ihrem eigenen Rechner. Laut README können die Maintainer die Vertraulichkeit Ihrer Chatdaten nicht garantieren. PromptQuorum fand keine Datenschutzerklärung und hat den Netzwerkverkehr nicht untersucht.',
+          },
+          {
+            q: 'Wie installiere ich Newelle?',
+            a: 'Unter Linux nennt das Projekt Flathub als empfohlenen Weg: flatpak install flathub io.github.qwersyk.Newelle oder ein Software-Center mit aktiviertem Flathub. Die GitHub-Releases enthalten keine herunterladbaren Dateien. Laut README ist auch ein Build aus dem Quellcode mit install.sh oder GNOME Builder möglich. PromptQuorum hat den Installer nicht ausgeführt.',
+          },
+          {
+            q: 'Unterstützt Newelle Spracheingabe und -ausgabe?',
+            a: 'Laut README ja: freihändiger Chat mit vielen Speech-to-Text- und Text-to-Speech-Modellen, Wake-Word-Unterstützung und ein Echtzeit-Anrufmodus. Die Website nennt Whisper-Diktat und Kokoro-Sprachsynthese. Die Sprach-Pille ist noch experimentell, und PromptQuorum hat die Genauigkeit der Spracherkennung nicht geprüft.',
+          },
+          {
+            q: 'Kann ich mit meinen eigenen Dokumenten chatten?',
+            a: 'Laut README ja: Newelle kann mit Ihren eigenen Dokumenten chatten und mit dem Präfix # eine Website lesen. Die Website nennt zusätzlich eine hybride Dokumentensuche aus Vektor- und Stichwortsuche. Das sind Angaben des Entwicklers; PromptQuorum hat die Suchqualität nicht geprüft.',
+          },
+          {
+            q: 'Unterstützt Newelle MCP?',
+            a: 'Ja, laut README: MCP-Server werden durch Einfügen ihres JSON hinzugefügt. Außerdem nennt es Skills von Claude und Codex, und die Hinweise zu 1.6.0 ergänzen einen MCP-Server mit Newelles eigenen Werkzeugen für Dritte. PromptQuorum hat keinen MCP-Server getestet.',
+          },
+          {
+            q: 'Wer entwickelt Newelle, und wird es noch gepflegt?',
+            a: 'Flathub nennt als Entwickler Qwersyk, das GitHub-Repository entstand im Juni 2023. Das neueste Release 1.6.1 erschien am 2. November 2026, der letzte Commit im Master-Branch stammt vom 6. November 2026. PromptQuorum fand weder Firma noch Impressum noch Datenschutzerklärung und kann daher nicht sagen, in welchem Land das Projekt angesiedelt ist.',
           },
         ],
       },
@@ -780,6 +844,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'À quelle fréquence Newelle est-il mis à jour ?',
             a: 'GitHub liste les versions 1.4.5 le 19 juin, 1.5.0 le 19 août, 1.6.0 le 15 octobre et 1.6.1 le 2 novembre 2026. Les installations Flathub se mettent à jour via la logithèque.',
           },
+          {
+            q: 'Newelle est-il gratuit ?',
+            a: 'Selon le README et le site, oui : Newelle est open source sous GPL-3.0 et gratuit à utiliser. Les fournisseurs d\'IA cloud que vous connectez facturent séparément selon leurs propres conditions, et les modèles locaux se téléchargent en plus de l\'application. PromptQuorum n\'a pas vérifié les tarifs de chaque fournisseur.',
+          },
+          {
+            q: 'Newelle peut-il exécuter des modèles en local ?',
+            a: 'Oui, selon le README : il peut télécharger des modèles locaux et les exécuter avec Llama.cpp ou Ollama. Aucun minimum de mémoire ou de GPU n\'est publié ; selon les notes de la version 1.6.0, le téléchargeur de modèles estime si un modèle convient. PromptQuorum n\'a pas fait tourner de modèle local avec lui.',
+          },
+          {
+            q: 'Où vont mes requêtes ?',
+            a: 'Cela dépend du modèle choisi. Un fournisseur cloud reçoit vos requêtes sur ses serveurs, tandis qu\'un modèle local tourne sur votre propre ordinateur. Selon le README, les mainteneurs ne peuvent pas garantir la confidentialité de vos données de discussion. PromptQuorum n\'a trouvé aucune page de politique de confidentialité et n\'a pas inspecté le trafic réseau.',
+          },
+          {
+            q: 'Comment installer Newelle ?',
+            a: 'Sous Linux, le projet indique Flathub comme voie recommandée : flatpak install flathub io.github.qwersyk.Newelle, ou une logithèque avec Flathub activé. Les versions GitHub ne proposent aucun fichier à télécharger. Le README décrit aussi une compilation depuis les sources avec install.sh ou GNOME Builder. PromptQuorum n\'a pas exécuté l\'installation.',
+          },
+          {
+            q: 'Newelle prend-il en charge la voix ?',
+            a: 'Selon le README, oui : discussion mains libres avec de nombreux modèles de reconnaissance et de synthèse vocales, prise en charge d\'un mot d\'activation et mode d\'appel en temps réel. Le site cite la dictée Whisper et la synthèse vocale Kokoro. La pastille vocale reste expérimentale, et PromptQuorum n\'a pas vérifié la précision de la voix.',
+          },
+          {
+            q: 'Puis-je discuter avec mes propres documents ?',
+            a: 'Selon le README, oui : Newelle peut discuter avec vos propres documents et lire un site web avec le préfixe #. Le site ajoute une recherche hybride vectorielle et par mots-clés dans les documents. Ce sont des déclarations du développeur, et PromptQuorum n\'a pas vérifié la qualité de la recherche.',
+          },
+          {
+            q: 'Newelle prend-il en charge MCP ?',
+            a: 'Oui, selon le README : les serveurs MCP s\'ajoutent en collant leur JSON. Il mentionne aussi des compétences de Claude et de Codex, et les notes de la version 1.6.0 ajoutent un serveur MCP des outils propres à Newelle pour des tiers. PromptQuorum n\'a testé aucun serveur MCP.',
+          },
+          {
+            q: 'Qui développe Newelle, et le projet est-il toujours maintenu ?',
+            a: 'Flathub indique le développeur Qwersyk, et le dépôt GitHub a été créé en juin 2023. La dernière version, 1.6.1, est sortie le 2 novembre 2026 et le dernier commit sur la branche master date du 6 novembre 2026. PromptQuorum n\'a trouvé ni société, ni mentions légales, ni politique de confidentialité et ne peut donc pas dire dans quel pays le projet est basé.',
+          },
         ],
       },
       verdict: {
@@ -1048,6 +1144,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Con qué frecuencia se actualiza Newelle?',
             a: 'GitHub lista las versiones 1.4.5 el 19 de junio, 1.5.0 el 19 de agosto, 1.6.0 el 15 de octubre y 1.6.1 el 2 de noviembre de 2026. Las instalaciones de Flathub se actualizan desde el centro de software.',
+          },
+          {
+            q: '¿Es Newelle gratuito?',
+            a: 'Según el README y el sitio web, sí: Newelle es de código abierto con licencia GPL-3.0 y de uso gratuito. Los proveedores de IA en la nube que conectes facturan aparte según sus propias condiciones, y los modelos locales se descargan además de la aplicación. PromptQuorum no comprobó los precios de cada proveedor.',
+          },
+          {
+            q: '¿Puede Newelle ejecutar modelos en local?',
+            a: 'Sí, según el README: puede descargar modelos locales y ejecutarlos con Llama.cpp u Ollama. No se publica un mínimo de memoria ni de GPU; según las notas de la versión 1.6.0, el descargador de modelos estima si un modelo cabe. PromptQuorum no ejecutó ningún modelo local con ella.',
+          },
+          {
+            q: '¿Adónde van mis prompts?',
+            a: 'Depende del modelo que elijas. Un proveedor en la nube recibe tus prompts en sus servidores, mientras que un modelo local se ejecuta en tu propio equipo. Según el README, los mantenedores no pueden garantizar la privacidad de tus datos de chat. PromptQuorum no encontró ninguna página de política de privacidad y no inspeccionó el tráfico de red.',
+          },
+          {
+            q: '¿Cómo instalo Newelle?',
+            a: 'En Linux, el proyecto señala Flathub como vía recomendada: flatpak install flathub io.github.qwersyk.Newelle, o un centro de software con Flathub activado. Las versiones de GitHub no incluyen archivos descargables. El README también describe una compilación desde el código fuente con install.sh o GNOME Builder. PromptQuorum no ejecutó el instalador.',
+          },
+          {
+            q: '¿Admite Newelle la voz?',
+            a: 'Según el README, sí: chat con manos libres con muchos modelos de voz a texto y de texto a voz, compatibilidad con palabra de activación y un modo de llamada en tiempo real. El sitio web menciona el dictado con Whisper y la síntesis de voz Kokoro. La píldora de voz sigue siendo experimental, y PromptQuorum no comprobó la precisión de la voz.',
+          },
+          {
+            q: '¿Puedo chatear con mis propios documentos?',
+            a: 'Según el README, sí: Newelle puede chatear con tus propios documentos y leer un sitio web con el prefijo #. El sitio añade una búsqueda híbrida vectorial y por palabras clave en los documentos. Son afirmaciones del desarrollador, y PromptQuorum no comprobó la calidad de la búsqueda.',
+          },
+          {
+            q: '¿Admite Newelle MCP?',
+            a: 'Sí, según el README: los servidores MCP se añaden pegando su JSON. También menciona habilidades de Claude y Codex, y las notas de la versión 1.6.0 añaden un servidor MCP con las herramientas propias de Newelle para terceros. PromptQuorum no probó ningún servidor MCP.',
+          },
+          {
+            q: '¿Quién desarrolla Newelle y sigue manteniéndose?',
+            a: 'Flathub indica como desarrollador a Qwersyk, y el repositorio de GitHub se creó en junio de 2023. La última versión, la 1.6.1, apareció el 2 de noviembre de 2026 y el último commit de la rama master fue el 6 de noviembre de 2026. PromptQuorum no encontró empresa, aviso legal ni política de privacidad, por lo que no puede decir en qué país tiene su sede el proyecto.',
           },
         ],
       },
@@ -1318,6 +1446,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Com que frequência o Newelle é atualizado?',
             a: 'O GitHub lista as versões 1.4.5 em 19 de junho, 1.5.0 em 19 de agosto, 1.6.0 em 15 de outubro e 1.6.1 em 2 de novembro de 2026. As instalações pelo Flathub são atualizadas pela central de programas.',
           },
+          {
+            q: 'O Newelle é gratuito?',
+            a: 'Segundo o README e o site, sim: o Newelle é de código aberto sob a GPL-3.0 e de uso gratuito. Os provedores de IA na nuvem que você conectar cobram à parte, conforme os próprios termos, e os modelos locais são baixados além do aplicativo. A PromptQuorum não verificou os preços de cada provedor.',
+          },
+          {
+            q: 'O Newelle pode executar modelos localmente?',
+            a: 'Sim, segundo o README: ele pode baixar modelos locais e executá-los com Llama.cpp ou Ollama. Não há mínimo de memória ou de GPU publicado; segundo as notas da versão 1.6.0, o baixador de modelos estima se um modelo cabe. A PromptQuorum não executou nenhum modelo local com ele.',
+          },
+          {
+            q: 'Para onde vão os meus prompts?',
+            a: 'Depende do modelo escolhido. Um provedor na nuvem recebe seus prompts nos servidores dele, enquanto um modelo local roda no seu próprio computador. Segundo o README, os mantenedores não podem garantir a privacidade dos seus dados de chat. A PromptQuorum não encontrou página de política de privacidade e não inspecionou o tráfego de rede.',
+          },
+          {
+            q: 'Como instalo o Newelle?',
+            a: 'No Linux, o projeto indica o Flathub como caminho recomendado: flatpak install flathub io.github.qwersyk.Newelle, ou uma central de programas com o Flathub ativado. As versões do GitHub não trazem arquivos para baixar. O README também descreve uma compilação a partir do código-fonte com install.sh ou GNOME Builder. A PromptQuorum não executou o instalador.',
+          },
+          {
+            q: 'O Newelle oferece suporte a voz?',
+            a: 'Segundo o README, sim: chat com as mãos livres com vários modelos de fala para texto e de texto para fala, suporte a palavra de ativação e um modo de chamada em tempo real. O site cita o ditado com Whisper e a síntese de voz Kokoro. A pílula de voz ainda é experimental, e a PromptQuorum não verificou a precisão da voz.',
+          },
+          {
+            q: 'Posso conversar com os meus próprios documentos?',
+            a: 'Segundo o README, sim: o Newelle pode conversar com os seus próprios documentos e ler um site com o prefixo #. O site acrescenta uma busca híbrida vetorial e por palavras-chave nos documentos. São afirmações do desenvolvedor, e a PromptQuorum não verificou a qualidade da busca.',
+          },
+          {
+            q: 'O Newelle oferece suporte a MCP?',
+            a: 'Sim, segundo o README: servidores MCP são adicionados colando o JSON deles. Ele também cita habilidades do Claude e do Codex, e as notas da versão 1.6.0 acrescentam um servidor MCP com as ferramentas do próprio Newelle para terceiros. A PromptQuorum não testou nenhum servidor MCP.',
+          },
+          {
+            q: 'Quem desenvolve o Newelle e ele ainda é mantido?',
+            a: 'O Flathub lista o desenvolvedor Qwersyk, e o repositório do GitHub foi criado em junho de 2023. A versão mais recente, a 1.6.1, saiu em 2 de novembro de 2026 e o último commit na branch master foi em 6 de novembro de 2026. A PromptQuorum não encontrou empresa, aviso legal nem política de privacidade, então não pode dizer em que país o projeto está sediado.',
+          },
         ],
       },
       verdict: {
@@ -1586,6 +1746,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Newelleはどのくらいの頻度で更新されますか？',
             a: 'GitHubには、1.4.5が2026年6月19日、1.5.0が8月19日、1.6.0が10月15日、1.6.1が11月2日のリリースとして載っています。Flathubでインストールした場合は、ソフトウェアセンターで更新されます。',
+          },
+          {
+            q: 'Newelleは無料で使えますか？',
+            a: 'READMEとウェブサイトによると、はい。NewelleはGPL-3.0のオープンソースで、無料で使えます。接続するクラウドAIプロバイダーは各社の条件で別途課金され、ローカルモデルはアプリとは別にダウンロードします。各プロバイダーの料金はPromptQuorumでは確認していません。',
+          },
+          {
+            q: 'Newelleはモデルをローカルで実行できますか？',
+            a: 'はい。READMEによると、ローカルモデルをダウンロードしてLlama.cppまたはOllamaで実行できます。メモリやGPUの最小要件は公表されておらず、1.6.0のリリースノートでは、モデルのダウンローダーが動作可能かどうかを見積もるとされています。ローカルモデルでの動作はPromptQuorumでは試していません。',
+          },
+          {
+            q: '入力したプロンプトはどこに送られますか？',
+            a: '選ぶモデルによって異なります。クラウドプロバイダーではそのサーバーにプロンプトが送られ、ローカルモデルでは自分のコンピューター上で動きます。READMEによると、メンテナーはチャットデータのプライバシーを保証できないとされています。PromptQuorumはプライバシーポリシーのページを見つけられず、ネットワーク通信も調べていません。',
+          },
+          {
+            q: 'Newelleはどうやってインストールしますか？',
+            a: 'Linuxでは、プロジェクトがFlathubを推奨の方法としています。flatpak install flathub io.github.qwersyk.Newelle を実行するか、Flathubを有効にしたソフトウェアセンターを使います。GitHubのリリースにはダウンロード用ファイルがありません。READMEには、install.shまたはGNOME Builderによるソースからのビルドも記載されています。インストーラーはPromptQuorumでは実行していません。',
+          },
+          {
+            q: 'Newelleは音声に対応していますか？',
+            a: 'READMEによると、はい。多くの音声認識・音声合成モデルによるハンズフリーのチャット、ウェイクワード対応、リアルタイムの通話モードがあります。ウェブサイトにはWhisperによる音声入力とKokoroによる音声合成が挙げられています。音声ピルはまだ実験的で、音声の精度はPromptQuorumでは確認していません。',
+          },
+          {
+            q: '自分の文書とチャットできますか？',
+            a: 'READMEによると、はい。Newelleは自分の文書とチャットでき、#のプレフィックスでウェブサイトを読み込めます。ウェブサイトには、ベクトル検索とキーワード検索を組み合わせた文書検索も挙げられています。これらは開発者の説明であり、検索の品質はPromptQuorumでは確認していません。',
+          },
+          {
+            q: 'NewelleはMCPに対応していますか？',
+            a: 'はい。READMEによると、MCPサーバーはJSONを貼り付けて追加します。ClaudeやCodexのスキルにも触れており、1.6.0のリリースノートでは第三者向けにNewelle自身のツールを提供するMCPサーバーが加わったとされています。MCPサーバーはPromptQuorumでは試していません。',
+          },
+          {
+            q: 'Newelleは誰が開発していて、今も保守されていますか？',
+            a: 'FlathubにはQwersykが開発者として載っており、GitHubのリポジトリは2023年6月に作成されました。最新リリースの1.6.1は2026年11月2日に公開され、masterブランチの最後のコミットは2026年11月6日です。PromptQuorumは会社、運営者情報、プライバシーポリシーを見つけられなかったため、プロジェクトの拠点がどの国かは分かりません。',
           },
         ],
       },
@@ -1856,6 +2048,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Newelle 多久更新一次？',
             a: 'GitHub 列出的发布有：1.4.5（2026 年 6 月 19 日）、1.5.0（8 月 19 日）、1.6.0（10 月 15 日）和 1.6.1（11 月 2 日）。通过 Flathub 安装的版本由软件中心更新。',
           },
+          {
+            q: 'Newelle 可以免费使用吗？',
+            a: '根据 README 和官网，可以：Newelle 以 GPL-3.0 开源，可免费使用。你连接的云端 AI 服务商会按各自条款另行收费，本地模型则需在应用之外另行下载。PromptQuorum 没有核实各服务商的具体价格。',
+          },
+          {
+            q: 'Newelle 可以在本地运行模型吗？',
+            a: '可以，根据 README：它可以下载本地模型，并通过 Llama.cpp 或 Ollama 运行。官方没有公布最低内存或 GPU 要求；1.6.0 的发布说明称，模型下载器会估算某个模型是否适合运行。PromptQuorum 没有用它运行过本地模型。',
+          },
+          {
+            q: '我的提示词会发送到哪里？',
+            a: '取决于你选择的模型。使用云端服务商时，提示词会发送到其服务器；使用本地模型时，则在你自己的电脑上运行。README 称维护者无法保证你的聊天数据隐私。PromptQuorum 没有找到隐私政策页面，也没有检查网络流量。',
+          },
+          {
+            q: '如何安装 Newelle？',
+            a: '在 Linux 上，项目把 Flathub 列为推荐方式：执行 flatpak install flathub io.github.qwersyk.Newelle，或使用已启用 Flathub 的软件中心。GitHub 发布页没有可下载的文件。README 还介绍了用 install.sh 或 GNOME Builder 从源码构建。PromptQuorum 没有运行安装程序。',
+          },
+          {
+            q: 'Newelle 支持语音吗？',
+            a: '根据 README，支持：可以用多种语音转文字和文字转语音模型进行免提聊天，支持唤醒词，还有实时通话模式。官网提到 Whisper 听写和 Kokoro 语音合成。语音胶囊仍属实验性功能，PromptQuorum 没有核实语音的准确度。',
+          },
+          {
+            q: '我可以和自己的文档对话吗？',
+            a: '根据 README，可以：Newelle 可以与你自己的文档对话，并可用 # 前缀读取网站内容。官网还提到向量与关键词结合的混合文档搜索。以上均为开发者的说法，PromptQuorum 没有核实搜索质量。',
+          },
+          {
+            q: 'Newelle 支持 MCP 吗？',
+            a: '支持，根据 README：MCP 服务器通过粘贴其 JSON 添加。README 还提到来自 Claude 和 Codex 的技能，1.6.0 的发布说明则新增了面向第三方的、包含 Newelle 自身工具的 MCP 服务器。PromptQuorum 没有测试过任何 MCP 服务器。',
+          },
+          {
+            q: 'Newelle 由谁开发，还在维护吗？',
+            a: 'Flathub 将开发者列为 Qwersyk，GitHub 仓库创建于 2023 年 6 月。最新版本 1.6.1 发布于 2026 年 11 月 2 日，master 分支的最后一次提交在 2026 年 11 月 6 日。PromptQuorum 没有找到公司、法律声明或隐私政策，因此无法说明该项目位于哪个国家。',
+          },
         ],
       },
       verdict: {
@@ -2125,6 +2349,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Newelle은 얼마나 자주 업데이트됩니까?',
             a: 'GitHub에는 1.4.5(2026년 6월 19일), 1.5.0(8월 19일), 1.6.0(10월 15일), 1.6.1(11월 2일) 릴리스가 나와 있습니다. Flathub로 설치한 경우 소프트웨어 센터에서 업데이트됩니다.',
           },
+          {
+            q: 'Newelle은 무료로 사용할 수 있습니까?',
+            a: 'README와 웹사이트에 따르면 그렇습니다. Newelle은 GPL-3.0 오픈소스이며 무료로 사용할 수 있습니다. 연결하는 클라우드 AI 제공업체는 각자의 약관에 따라 별도로 요금을 청구하며, 로컬 모델은 앱과 별도로 내려받습니다. 개별 제공업체의 요금은 PromptQuorum이 확인하지 않았습니다.',
+          },
+          {
+            q: 'Newelle로 모델을 로컬에서 실행할 수 있습니까?',
+            a: '네, README에 따르면 로컬 모델을 내려받아 Llama.cpp 또는 Ollama로 실행할 수 있습니다. 최소 메모리나 GPU 요건은 공개되어 있지 않으며, 1.6.0 릴리스 노트에 따르면 모델 다운로더가 모델이 들어맞는지 추정해 줍니다. 로컬 모델은 PromptQuorum이 실행해 보지 않았습니다.',
+          },
+          {
+            q: '제 프롬프트는 어디로 전송됩니까?',
+            a: '선택한 모델에 따라 다릅니다. 클라우드 제공업체는 자사 서버에서 프롬프트를 받고, 로컬 모델은 사용자의 컴퓨터에서 실행됩니다. README에 따르면 유지관리자는 채팅 데이터의 프라이버시를 보장할 수 없습니다. PromptQuorum은 개인정보 처리방침 페이지를 찾지 못했고 네트워크 트래픽도 점검하지 않았습니다.',
+          },
+          {
+            q: 'Newelle은 어떻게 설치합니까?',
+            a: 'Linux에서는 프로젝트가 Flathub를 권장 경로로 안내합니다. flatpak install flathub io.github.qwersyk.Newelle 명령을 쓰거나 Flathub를 활성화한 소프트웨어 센터를 이용합니다. GitHub 릴리스에는 내려받을 파일이 없습니다. README에는 install.sh 또는 GNOME Builder로 소스에서 빌드하는 방법도 나와 있습니다. 설치 프로그램은 PromptQuorum이 실행하지 않았습니다.',
+          },
+          {
+            q: 'Newelle은 음성을 지원합니까?',
+            a: 'README에 따르면 지원합니다. 여러 음성 인식·음성 합성 모델을 이용한 핸즈프리 채팅, 호출어 지원, 실시간 통화 모드가 있습니다. 웹사이트에는 Whisper 받아쓰기와 Kokoro 음성 합성이 언급되어 있습니다. 음성 알약은 아직 실험적이며, 음성 정확도는 PromptQuorum이 확인하지 않았습니다.',
+          },
+          {
+            q: '내 문서와 채팅할 수 있습니까?',
+            a: 'README에 따르면 가능합니다. Newelle은 사용자의 문서와 채팅할 수 있고, # 접두사로 웹사이트를 읽을 수 있습니다. 웹사이트에는 벡터 검색과 키워드 검색을 결합한 하이브리드 문서 검색도 언급되어 있습니다. 이는 개발자의 설명이며 검색 품질은 PromptQuorum이 확인하지 않았습니다.',
+          },
+          {
+            q: 'Newelle은 MCP를 지원합니까?',
+            a: '네, README에 따르면 MCP 서버는 JSON을 붙여 넣어 추가합니다. Claude와 Codex의 스킬도 언급되어 있으며, 1.6.0 릴리스 노트에는 제3자를 위해 Newelle 자체 도구를 제공하는 MCP 서버가 추가되었다고 나와 있습니다. MCP 서버는 PromptQuorum이 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Newelle은 누가 개발하며 아직 유지보수되고 있습니까?',
+            a: 'Flathub에는 개발자가 Qwersyk로 나와 있고, GitHub 저장소는 2023년 6월에 만들어졌습니다. 최신 릴리스 1.6.1은 2026년 11월 2일에 나왔고 master 브랜치의 마지막 커밋은 2026년 11월 6일입니다. PromptQuorum은 회사, 법적 고지, 개인정보 처리방침을 찾지 못해 프로젝트가 어느 나라에 기반을 두는지 말할 수 없습니다.',
+          },
         ],
       },
       verdict: {
@@ -2393,6 +2649,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث Newelle؟',
             a: 'يسرد GitHub الإصدار 1.4.5 في 19 يونيو، و1.5.0 في 19 أغسطس، و1.6.0 في 15 أكتوبر، و1.6.1 في 2 نوفمبر 2026. وتُحدَّث نسخ Flathub عبر مركز البرامج.',
+          },
+          {
+            q: 'هل يمكن استخدام Newelle مجانًا؟',
+            a: 'بحسب README والموقع، نعم: Newelle مفتوح المصدر بترخيص GPL-3.0 ويمكن استخدامه مجانًا. أما مزودو الذكاء الاصطناعي السحابيون الذين تربطهم به فيحاسبونك بشكل منفصل وفق شروطهم، وتُنزَّل النماذج المحلية إضافةً إلى التطبيق. لم تتحقق PromptQuorum من أسعار كل مزود.',
+          },
+          {
+            q: 'هل يستطيع Newelle تشغيل النماذج محليًا؟',
+            a: 'نعم، بحسب README: يمكنه تنزيل نماذج محلية وتشغيلها عبر Llama.cpp أو Ollama. لا يُنشر حد أدنى للذاكرة أو لوحدة GPU؛ وبحسب ملاحظات الإصدار 1.6.0 يقدّر أداة تنزيل النماذج ما إذا كان النموذج مناسبًا. لم تشغّل PromptQuorum أي نموذج محلي من خلاله.',
+          },
+          {
+            q: 'إلى أين تذهب مطالباتي؟',
+            a: 'يعتمد ذلك على النموذج الذي تختاره. يتلقى المزود السحابي مطالباتك على خوادمه، بينما يعمل النموذج المحلي على حاسوبك. بحسب README لا يستطيع القائمون على الصيانة ضمان خصوصية بيانات محادثاتك. لم تجد PromptQuorum صفحة لسياسة الخصوصية ولم تفحص حركة الشبكة.',
+          },
+          {
+            q: 'كيف أثبّت Newelle؟',
+            a: 'على Linux يذكر المشروع Flathub بوصفه الطريق الموصى به: flatpak install flathub io.github.qwersyk.Newelle، أو مركز برامج مفعّل فيه Flathub. لا تضم إصدارات GitHub ملفات قابلة للتنزيل. ويصف README أيضًا البناء من الشيفرة المصدرية عبر install.sh أو GNOME Builder. لم تشغّل PromptQuorum المثبّت.',
+          },
+          {
+            q: 'هل يدعم Newelle الصوت؟',
+            a: 'بحسب README، نعم: محادثة بلا استخدام اليدين مع نماذج متعددة لتحويل الكلام إلى نص والنص إلى كلام، ودعم كلمة التنبيه، ووضع مكالمة في الوقت الفعلي. ويذكر الموقع الإملاء عبر Whisper وتركيب الكلام عبر Kokoro. ما زالت كبسولة الصوت تجريبية، ولم تتحقق PromptQuorum من دقة الصوت.',
+          },
+          {
+            q: 'هل يمكنني الدردشة مع مستنداتي؟',
+            a: 'بحسب README، نعم: يستطيع Newelle الدردشة مع مستنداتك وقراءة موقع ويب عند استخدام البادئة #. ويضيف الموقع بحثًا هجينًا في المستندات يجمع بين المتجهات والكلمات المفتاحية. هذه أقوال المطوّر، ولم تتحقق PromptQuorum من جودة البحث.',
+          },
+          {
+            q: 'هل يدعم Newelle بروتوكول MCP؟',
+            a: 'نعم، بحسب README: تُضاف خوادم MCP بلصق JSON الخاص بها. كما يذكر مهارات من Claude وCodex، وتضيف ملاحظات الإصدار 1.6.0 خادم MCP لأدوات Newelle نفسه موجّهًا لأطراف ثالثة. لم تختبر PromptQuorum أي خادم MCP.',
+          },
+          {
+            q: 'من يطوّر Newelle وهل ما زال يُصان؟',
+            a: 'يذكر Flathub المطوّر Qwersyk، وأُنشئ مستودع GitHub في يونيو 2023. ظهر أحدث إصدار 1.6.1 في 2 نوفمبر 2026، وكان آخر commit في فرع master في 6 نوفمبر 2026. لم تجد PromptQuorum شركة أو بيانات قانونية أو سياسة خصوصية، فلا تستطيع القول في أي بلد يقع المشروع.',
           },
         ],
       },
