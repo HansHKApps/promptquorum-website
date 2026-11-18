@@ -668,4 +668,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ecc-review':                               'ecc-review',
   'memex-review':                             'memex-review',
   'fablecut-review':                          'fablecut-review',
+  'lexora-review':                            'lexora-review',
 }

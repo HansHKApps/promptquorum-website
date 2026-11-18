@@ -797,6 +797,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'unstructured-review',
   'memex-review',
   'fablecut-review',
+  'lexora-review',
 
 ])
 
