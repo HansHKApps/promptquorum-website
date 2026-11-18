@@ -36,15 +36,36 @@ export interface AcademyCopy {
   storageBlocked: string
   loading: string
 
-  // Quick check (Phase 1 placeholder)
+  // Quick check
   diagnosticTitle: string
-  diagnosticComing: string
-  summarySubject: string
-  summaryTime: string
-  summaryLevel: string
-  summaryTests: string
-  summaryLanguage: string
+  diagnosticIntro: string
+  /** "Question 2 of 6" */
+  questionOf: (i: number, n: number) => string
+  notSure: string
+  preparingQuestions: string
+  preparingProgramme: string
   changeSetup: string
+
+  // Errors (shown with a retry button)
+  errorGeneric: string
+  errorRate: string
+  errorUnsupported: string
+  errorUnavailable: string
+  retry: string
+
+  // Programme overview
+  programmeTitle: string
+  objectivesTitle: string
+  lessonsTitle: string
+  recapBadge: string
+  testPlanNone: string
+  testPlanFinal: (finalQuestions: number) => string
+  testPlanPerLesson: (lessonQuestions: number, finalQuestions: number) => string
+  /** receives the formatted duration, e.g. "1 h" or "90 min" */
+  totalTime: (duration: string) => string
+  startLesson: string
+  lessonsComing: string
+  startOver: string
 
   // Privacy strip
   privacyNote: string

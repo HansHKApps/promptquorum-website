@@ -5,7 +5,7 @@
 import { z } from 'zod'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_STORAGE_KEY, ACADEMY_SUBJECT_MAX_CHARS } from './config'
-import { LEVELS, TEST_MODES, type AcademyLang, type AcademyState, type SetupDraft } from './types'
+import { ACADEMY_VIEWS, LEVELS, TEST_MODES, type AcademyLang, type AcademyState, type SetupDraft } from './types'
 
 export const ACADEMY_STATE_VERSION = 1 as const
 
@@ -25,7 +25,25 @@ const draftSchema = z.object({
   updatedAt: z.string(),
 })
 
-const viewSchema = z.enum(['setup', 'diagnostic'])
+const viewSchema = z.enum(ACADEMY_VIEWS)
+
+const questionSchema = z.object({
+  id: z.string(),
+  topic: z.string(),
+  kind: z.enum(['diagnostic', 'lesson', 'final']),
+  prompt: z.string(),
+  options: z.tuple([z.string(), z.string(), z.string()]),
+  correctIndex: z.union([z.literal(0), z.literal(1), z.literal(2)]),
+  explanationCorrect: z.string(),
+  explanationWrong: z.array(z.string().optional().nullable()).length(3),
+})
+
+const quickCheckSchema = z.object({
+  forSubject: z.string(),
+  subjectTitle: z.string(),
+  questions: z.array(questionSchema),
+  answers: z.record(z.string(), z.number().int()),
+})
 
 export function emptyAcademyState(): AcademyState {
   return { version: ACADEMY_STATE_VERSION, view: 'setup' }
@@ -38,15 +56,21 @@ export function emptyAcademyState(): AcademyState {
  */
 export function migrateAcademyState(raw: unknown): AcademyState {
   if (!raw || typeof raw !== 'object') return emptyAcademyState()
-  const r = raw as { version?: unknown; view?: unknown; draft?: unknown; programme?: unknown }
+  const r = raw as { version?: unknown; view?: unknown; draft?: unknown; quickCheck?: unknown; programme?: unknown }
   if (r.version !== ACADEMY_STATE_VERSION) return emptyAcademyState()
   const state = emptyAcademyState()
   const draft = draftSchema.safeParse(r.draft)
   if (draft.success) state.draft = draft.data
+  const quickCheck = quickCheckSchema.safeParse(r.quickCheck)
+  if (quickCheck.success) state.quickCheck = quickCheck.data as AcademyState['quickCheck']
+  const programme = r.programme as AcademyState['programme'] | undefined
+  if (programme && typeof programme === 'object' && Array.isArray(programme.lessons) && Array.isArray(programme.objectives)) state.programme = programme
+  // A screen needs the data it shows; otherwise fall back to setup.
   const view = viewSchema.safeParse(r.view)
-  // A screen past setup needs a valid draft to show.
-  if (view.success && (view.data === 'setup' || state.draft)) state.view = view.data
-  if (r.programme && typeof r.programme === 'object') state.programme = r.programme as AcademyState['programme']
+  if (view.success) {
+    const ok = view.data === 'setup' || (view.data === 'diagnostic' && state.draft) || (view.data === 'programme' && state.programme)
+    if (ok) state.view = view.data
+  }
   return state
 }
 

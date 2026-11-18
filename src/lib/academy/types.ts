@@ -47,6 +47,9 @@ export interface Lesson {
   topic: string
   estimatedMinutes: number
   objectiveIds: number[]
+  /** true when the quick check showed the learner already knows this topic: a short recap only */
+  recap?: boolean
+  /** empty until the lesson is generated on first open (Phase 3) */
   sections: { heading: string; body: string }[]
   furtherReading: { title: string; url: string; source: 'promptquorum' | 'external' }[]
   quiz?: Question[]
@@ -60,9 +63,11 @@ export interface Programme {
   availableMinutes: number
   selfLevel: Level
   testMode: TestMode
-  diagnostic: { questions: Question[]; answers: Record<string, string>; gaps: string[]; estimatedLevel: Level }
+  /** answers: question id -> chosen option index (-1 = "not sure") */
+  diagnostic: { questions: Question[]; answers: Record<string, number>; gaps: string[]; estimatedLevel: Level }
   objectives: string[]
   lessons: Lesson[]
+  testPlan: { finalQuestions: number; lessonQuizQuestions: number; testMinutes: number }
   finalTest?: Question[]
   progress: {
     currentLesson: number
@@ -77,13 +82,25 @@ export interface Programme {
 }
 
 /** Screens of the Academy tool. They are views inside /academy, not separate URLs (like the Ask Hans window). */
-export type AcademyView = 'setup' | 'diagnostic'
+export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme'] as const
+export type AcademyView = (typeof ACADEMY_VIEWS)[number]
+
+/** The quick check in progress (before a programme exists). */
+export interface QuickCheck {
+  /** the draft it was generated for; a changed setup throws it away */
+  forSubject: string
+  subjectTitle: string
+  questions: Question[]
+  /** question id -> chosen option index, -1 = "not sure" */
+  answers: Record<string, number>
+}
 
 /** Root object stored under ACADEMY_STORAGE_KEY. */
 export interface AcademyState {
   version: 1
   view: AcademyView
   draft?: SetupDraft
+  quickCheck?: QuickCheck
   programme?: Programme
 }
 

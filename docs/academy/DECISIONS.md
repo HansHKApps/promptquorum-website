@@ -39,6 +39,34 @@ Supersedes SPEC 2 #9 and #10, SPEC 4.1 and SPEC 12, plus the 2026-11-17 MCP-key 
 2. **Free-text feedback comments may be stored server-side.** SPEC 8a stands as written: max 500 characters, "no personal data" notice. This differs from Ask Hans, which accepts no free text. The privacy policy needs an Academy section before launch (SPEC 14).
 3. **Unmerged-branch rule (SPEC 17) applies to Academy work only.** Hans left it to Claude: at most one open Academy branch at a time. Website branches from other, unrelated sessions do not count.
 
+## Phase 2 choices (Claude, 2026-11-18, open to change)
+
+**Model and generation**
+- **Model:** `claude-haiku-5-5`, the same default as Ask Hans, overridable with `ACADEMY_MODEL`.
+- **Structured outputs:** generation uses `messages.parse` with `zodOutputFormat` at effort `medium`.
+- **Checks and retry:** the business rules are checked in code. If a check fails, the request is repeated once with the problems appended. If the programme still breaks a rule, the second answer is clamped (SPEC 7.3); no third call is made.
+- **Answer position:** the model always puts the correct answer first; code moves it with `crypto.randomInt`. The unit test checks for a uniform spread over 3,000 draws.
+
+**Quick check**
+- **Size:** 5 questions up to 30 minutes, 6 up to 90, 8 above. An "I'm not sure" option counts as wrong.
+- **No pass/fail**, and no verification pass (SPEC 7.4): quick-check answers are never scored. The verification pass starts with lesson and final tests in Phase 4.
+- **Subject scope:** the model decides `subjectSupported`. Allowed: AI, software, computer hardware, smart home, home energy / balcony solar and closely related technology. Anything else gets a friendly "choose a subject from these areas", with no retry button.
+- **Privacy:** only the per-topic summary (estimated level, gap topics, known topics) is sent to `/api/academy/programme`, never the individual answers.
+
+**Programme time budget**
+- **Test time:** 0.75 minutes per question, capped at half the available time, so a 15-minute programme with tests still has reading time.
+- **Reading time:** total time minus test time, ±20% (SPEC 7.3).
+- **Grounding:** the programme prompt gets the titles and descriptions of up to 8 matching PromptQuorum pages (in-process `searchPromptquorum`, in the programme language).
+
+**Abuse and cost controls**
+- **Rate limits:** 10 quick checks and 10 programmes per IP hash per hour (Upstash, prefix `rl:academy:*`). In production it fails closed, like `/api/ask`.
+- **Not yet built:** the global daily spend ceiling and bot protection (Phase 7).
+- **Logging:** token usage per call goes to `console.log('[academy] generation', …)` without learner text.
+
+**Phase 2 acceptance run (`npm run academy:regression`)**
+- 20 subjects in 9 languages, including one out-of-scope subject.
+- Not run yet: no API key on the development machine. It runs wherever `ANTHROPIC_API_KEY` is set.
+
 ## Implementation choices (Claude, open to change)
 
 - **App UI in all 9 languages.** The page language picks the UI copy, as with Ask Hans. The programme language is a separate choice on the setup screen, preset to the page language.
