@@ -4,8 +4,9 @@
 // AUTO_SEND_MS the rating (plus the page language) goes to /api/ask/feedback (aggregate counter + owner
 // notification). No second "send" button. For 1–3 stars a pop-up asks what could be better and offers
 // an email to the site owner, prefilled with the details (rating, language, page, last question/answer),
-// which are also copied to the clipboard. Shown once per conversation after the first answer; the parent
-// re-mounts it per conversation (key).
+// which are also copied to the clipboard. Shown on the conversation's 1st-use milestone, then every 10th
+// use thereafter (localStorage counter in AskHansRoot/storage.ts, not consent-gated); the parent re-mounts
+// it per conversation (key).
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useAskCopy, useAskLang, ASK_HANS_CONTACT_EMAIL } from './copy'

@@ -145,3 +145,29 @@ export function clearUsage(): void {
     // ignore
   }
 }
+
+interface UseCounterRecord {
+  count: number
+}
+
+function bumpUseCounter(key: string): number {
+  const existing = read<UseCounterRecord>(localStorage, key)
+  const count = (existing && typeof existing.count === 'number' ? existing.count : 0) + 1
+  write(localStorage, key, { count })
+  return count
+}
+
+/** Show on use #1, then every 10th use (10, 20, 30, ...). */
+function isMilestoneUse(count: number): boolean {
+  return count === 1 || count % 10 === 0
+}
+
+/** Call once per conversation, at its first successful answer. Not consent-gated. Returns whether this use should show the overview strip. */
+export function bumpOverviewUse(): boolean {
+  return isMilestoneUse(bumpUseCounter(ASK_HANS_STORAGE.overviewShownCount))
+}
+
+/** Call once per conversation, at its first successful answer. Not consent-gated. Returns whether this use should show the feedback bar. */
+export function bumpRatingUse(): boolean {
+  return isMilestoneUse(bumpUseCounter(ASK_HANS_STORAGE.ratingShownCount))
+}
