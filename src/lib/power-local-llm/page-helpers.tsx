@@ -816,6 +816,7 @@ const HUB_THEMES: Array<{
       'lemonade-review',
       'enterprise-rag-vector-database-deployment-guide',
       'exo-review',
+      'pooled-review',
       'local-llm-run-serve-compared',
       'local-llm-train-operate-compared',
       'amd-gaia-review',

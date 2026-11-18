@@ -1349,6 +1349,11 @@
     "urlSlug": "kition-review",
     "url": "/power-local-llm/kition-review"
   },
+  "pooled": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pooled-review",
+    "url": "/power-local-llm/pooled-review"
+  },
   "funclip": {
     "cluster": "power-local-llm",
     "urlSlug": "funclip-review",
