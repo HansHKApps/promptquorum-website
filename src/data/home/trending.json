@@ -2,6 +2,32 @@
   "_comment": "Dated batches from Hans's manual GSC 'Performance on Search' exports. Each batch is one export snapshot (GSC's own trailing-28-day window, not a calendar week). Top 20 by clicks (batches before 2026-10-04 hold the top 10, English URLs only). A page may carry an optional `lang`; its `url` is then already locale-prefixed and its title is written in that language. Append a new batch object to the front of `batches` for each new export — do not overwrite prior batches, per the site's dated-stacked-history rule.",
   "batches": [
     {
+      "batchDate": "2026-11-18",
+      "label": "Snapshot as of November 18, 2026 (last 28 days)",
+      "pages": [
+        { "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "Uncensored Local LLMs for Creative Writing", "clicks": 9369, "impressions": 146821 },
+        { "url": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "無検閲ローカルLLMと創作活動", "lang": "ja", "clicks": 2527, "impressions": 26318 },
+        { "url": "/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "无审查本地LLM与创意写作", "lang": "zh", "clicks": 1577, "impressions": 8532 },
+        { "url": "/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "창의적 글쓰기를 위한 무검열 로컬 LLM", "lang": "ko", "clicks": 963, "impressions": 9428 },
+        { "url": "/ko/local-llms", "title": "로컬 LLM 순위·추천: VRAM 등급별 비교", "lang": "ko", "clicks": 907, "impressions": 9587 },
+        { "url": "/power-local-llm/locally-uncensored-review", "title": "Locally Uncensored Review", "clicks": 776, "impressions": 54680 },
+        { "url": "/power-local-llm/best-local-llm-apps-android-2026", "title": "Best Local LLM Apps for Android", "clicks": 611, "impressions": 25631 },
+        { "url": "/local-llms/small-local-llm-models", "title": "Small Local LLM Models", "clicks": 515, "impressions": 26027 },
+        { "url": "/local-llms/best-cpu-only-llm", "title": "Best CPU-Only LLM", "clicks": 503, "impressions": 21794 },
+        { "url": "/de/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "Uncensored Local LLMs für kreatives Schreiben", "lang": "de", "clicks": 494, "impressions": 4965 },
+        { "url": "/ja/power-local-llm/best-local-llm-apps-iphone-2026", "title": "iPhoneで使えるLocal LLMアプリ比較", "lang": "ja", "clicks": 480, "impressions": 4124 },
+        { "url": "/local-llms/fastest-local-llms-low-end-pcs", "title": "Fastest Local LLMs for Low-End PCs", "clicks": 477, "impressions": 39369 },
+        { "url": "/de/local-llms", "title": "Beste lokale LLMs im Vergleich", "lang": "de", "clicks": 464, "impressions": 13620 },
+        { "url": "/ko/local-llms/what-are-local-llms", "title": "로컬 AI와 로컬 LLM이란?", "lang": "ko", "clicks": 441, "impressions": 20507 },
+        { "url": "/local-llms/best-amd-mini-pc-local-llm-2026", "title": "Best AMD Mini PC for Local LLMs", "clicks": 353, "impressions": 14891 },
+        { "url": "/local-llms/local-llm-hardware-guide", "title": "Local LLM Hardware Guide", "clicks": 340, "impressions": 54529 },
+        { "url": "/local-llms/apple-silicon-m5-local-llm", "title": "Apple Silicon M5 for Local LLMs", "clicks": 335, "impressions": 47675 },
+        { "url": "/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "LLM locaux non censurés pour l'écriture créative", "lang": "fr", "clicks": 333, "impressions": 3572 },
+        { "url": "/smart-home/best-mini-pc-home-assistant-local-ai", "title": "Best Mini PCs for Home Assistant AI", "clicks": 313, "impressions": 11810 },
+        { "url": "/ja/power-local-llm/strata-review", "title": "Strataレビュー", "lang": "ja", "clicks": 311, "impressions": 15604 }
+      ]
+    },
+    {
       "batchDate": "2026-10-04",
       "label": "Snapshot as of October 4, 2026 (last 28 days)",
       "pages": [
