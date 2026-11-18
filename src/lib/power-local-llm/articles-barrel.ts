@@ -140,6 +140,7 @@ import { article as a_papersgpt_review } from './articles/papersgpt-review'
 import { article as a_solomd_review } from './articles/solomd-review'
 import { article as a_nativ_review } from './articles/nativ-review'
 import { article as a_newelle_review } from './articles/newelle-review'
+import { article as a_oleafly_review } from './articles/oleafly-review'
 import { article as a_lyonesse_review } from './articles/lyonesse-review'
 import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
@@ -882,6 +883,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'solomd-review':                                a_solomd_review,
   'nativ-review':                                 a_nativ_review,
   'newelle-review':                               a_newelle_review,
+  'oleafly-review':                               a_oleafly_review,
   'lyonesse-review':                               a_lyonesse_review,
   'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,

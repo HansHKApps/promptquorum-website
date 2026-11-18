@@ -34,6 +34,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "oleafly-review",
+        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
+        "url": "/power-local-llm/oleafly-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llms-for-creative-writing",
         "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/papersgpt-review",
         "dateModified": "2026-11-17",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
-        "url": "/power-local-llm/solomd-review",
-        "dateModified": "2026-11-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 369,
+    "totalCount": 370,
     "capped": true
   },
   "llama.cpp": {
@@ -8701,6 +8701,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "oleafly-review",
+        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
+        "url": "/power-local-llm/oleafly-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-science-desktop-review",
         "title": "Open Science Desktop Review: Free AI Research Workbench for Your Own Files",
         "url": "/power-local-llm/open-science-desktop-review",
@@ -8714,17 +8722,9 @@
         "url": "/power-local-llm/lucebox-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ramen-review",
-        "title": "RAMen Review: Local Session Memory for llama.cpp, With a Free Plan",
-        "url": "/power-local-llm/ramen-review",
-        "dateModified": "2026-11-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "MaxKB": {
@@ -11198,6 +11198,20 @@
         "slug": "newelle-review",
         "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
         "url": "/power-local-llm/newelle-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Oleafly": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "oleafly-review",
+        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
+        "url": "/power-local-llm/oleafly-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
