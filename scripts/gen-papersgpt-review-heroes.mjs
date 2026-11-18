@@ -26,9 +26,13 @@ const L = {
   ja: { hl: ['ZoteroでPDFとチャット', '全体検索とローカルモデル', 'MCPサーバー付き'], price: '価格', priceV: 'フリーミアム', lic: 'ライセンス', licV: 'AGPL-3.0', plat: '動作環境', platV: 'Zotero 7-10', footer: 'PromptQuorumガイド' },
   zh: { hl: ['Zotero 内 PDF 对话', '整库搜索与本地模型', '附带 MCP 服务器'], price: '价格', priceV: '免费增值', lic: '许可证', licV: 'AGPL-3.0', plat: '运行于', platV: 'Zotero 7-10', footer: 'PromptQuorum 指南' },
   pt: { hl: ['Converse com PDFs no Zotero', 'Busca global, modelos locais', 'Servidor MCP para Claude e Cursor'], price: 'Preço', priceV: 'Freemium', lic: 'Licença', licV: 'AGPL-3.0', plat: 'Funciona no', platV: 'Zotero 7-10', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['دردشة مع PDF داخل Zotero', 'بحث شامل ونماذج محلية', 'خادم MCP لـ Claude وCursor'], price: 'السعر', priceV: 'مجاني جزئيًا', lic: 'الترخيص', licV: 'AGPL-3.0', plat: 'يعمل في', platV: 'Zotero 7-10', footer: 'دليل PromptQuorum' },
+  ar: { hl: ['دردشة مع PDF والبحث في المكتبة', 'نماذج سحابية أو محلية', 'خادم MCP لـ Claude و Cursor'], price: 'السعر', priceV: 'مجاني جزئيًا', lic: 'الترخيص', licV: 'AGPL-3.0', plat: 'يعمل في', platV: 'Zotero 7-10', footer: 'دليل PromptQuorum' },
   ko: { hl: ['Zotero PDF 대화', '전체 검색과 로컬 모델', 'MCP 서버 포함'], price: '가격', priceV: '무료+유료', lic: '라이선스', licV: 'AGPL-3.0', plat: '실행 환경', platV: 'Zotero 7-10', footer: 'PromptQuorum 가이드' },
 }
+
+// Arabic poster: hand-set title so the 2-line wrap breaks at phrase boundaries (no dangling preposition / one-word second line),
+// and the Latin names are separated from the Arabic conjunction ("Claude و Cursor") because Satori reverses a mixed word like "وCursor".
+const HERO_TITLE = { ar: 'مراجعة PapersGPT: إضافة ذكاء اصطناعي لمكتبة Zotero للدردشة مع ملفات PDF والبحث' }
 
 let generated = 0
 const failures = []
@@ -38,7 +42,7 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    title: HERO_TITLE[lang] ?? stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },

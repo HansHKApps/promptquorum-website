@@ -249,6 +249,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'What data does CozyClay collect?',
             a: 'By default it collects bucketed usage analytics through PostHog, which the maker describes as anonymous, with a random installation identifier, and says it never collects prompt text, file names or project content. You can opt out with cclay telemetry off or DO_NOT_TRACK=1.',
           },
+          {
+            q: 'Which browsers does CozyClay support?',
+            a: 'Chromium-based browsers only, according to the maker; its comparison page says Safari and Firefox are not supported. The npx route also needs Node.js 22.19 or newer.',
+          },
+          {
+            q: 'Does CozyClay need a GPU?',
+            a: 'No, per the README: no GPU, Python or model download is needed. No RAM or disk figures are published, and PromptQuorum did not measure resource use.',
+          },
+          {
+            q: 'What can CozyClay export?',
+            a: 'Per the README, a keyframe pack (first and last frame, greybox clip, camera, prompt), mp4, depth and normal passes, a contact sheet and an OTIO cut list. A Storyboard project type produces captioned panels, an animatic and a contact sheet instead.',
+          },
+          {
+            q: 'Which model providers does the agent panel work with?',
+            a: 'According to the README, you sign in with ChatGPT or use your own key for Anthropic, OpenAI, Gemini, MiniMax, OpenRouter or CLIProxyAPI. The panel needs network access, and requests go to the provider you connect under that provider\'s terms.',
+          },
+          {
+            q: 'What license does CozyClay use?',
+            a: 'AGPL-3.0-or-later, per LICENSING.md. Modified versions offered over a network must provide their source, so ask your legal team if your organization restricts AGPL software.',
+          },
+          {
+            q: 'Has PromptQuorum tested CozyClay?',
+            a: 'No. This review rests on the maker\'s website, the GitHub repository, the release pages and the privacy page. Motion quality, export quality and how well video models follow the exported shots remain unverified.',
+          },
+          {
+            q: 'Is CozyClay actively developed?',
+            a: 'Release 3.2.2 appeared on 7 November 2026 and the repository received a commit on 15 November 2026. The repository was created in July 2026, and the maker\'s page says to expect rough edges.',
+          },
         ],
       },
       verdict: {
@@ -528,6 +556,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Welche Daten erhebt CozyClay?',
             a: 'Standardmäßig gebündelte Nutzungsstatistiken über PostHog, die der Entwickler als anonym beschreibt, mit einer zufälligen Installationskennung; nach eigener Aussage nie Prompt-Texte, Dateinamen oder Projektinhalte. Sie können mit cclay telemetry off oder DO_NOT_TRACK=1 widersprechen.',
+          },
+          {
+            q: 'Welche Browser unterstützt CozyClay?',
+            a: 'Laut Entwickler nur Chromium-basierte Browser; auf der Vergleichsseite des Entwicklers heißt es, Safari und Firefox würden nicht unterstützt. Der npx-Weg setzt außerdem Node.js 22.19 oder neuer voraus.',
+          },
+          {
+            q: 'Braucht CozyClay eine GPU?',
+            a: 'Nein, laut README sind weder GPU noch Python noch ein Modell-Download nötig. RAM- oder Speicherangaben werden nicht veröffentlicht, und PromptQuorum hat den Ressourcenbedarf nicht gemessen.',
+          },
+          {
+            q: 'Was kann CozyClay exportieren?',
+            a: 'Laut README ein Keyframe-Paket (erstes und letztes Bild, Greybox-Clip, Kamera, Prompt), mp4, Tiefen- und Normalenpässe, ein Contact Sheet und eine OTIO-Schnittliste. Ein Storyboard-Projekt erzeugt stattdessen beschriftete Panels, ein Animatic und ein Contact Sheet.',
+          },
+          {
+            q: 'Mit welchen Modellanbietern arbeitet das Agenten-Panel?',
+            a: 'Laut README melden Sie sich mit ChatGPT an oder nutzen einen eigenen Schlüssel für Anthropic, OpenAI, Gemini, MiniMax, OpenRouter oder CLIProxyAPI. Das Panel braucht Netzwerkzugang, und Anfragen gehen zu den Bedingungen des jeweiligen Anbieters an den von Ihnen verbundenen Anbieter.',
+          },
+          {
+            q: 'Welche Lizenz hat CozyClay?',
+            a: 'AGPL-3.0-or-later laut LICENSING.md. Veränderte Versionen, die über ein Netzwerk angeboten werden, müssen ihren Quellcode bereitstellen; fragen Sie Ihre Rechtsabteilung, falls Ihr Unternehmen AGPL-Software einschränkt.',
+          },
+          {
+            q: 'Hat PromptQuorum CozyClay getestet?',
+            a: 'Nein. Diese Übersicht stützt sich auf die Website des Entwicklers, das GitHub-Repository, die Release-Seiten und die Datenschutzseite. Bewegungsqualität, Exportqualität und wie gut Videomodelle den exportierten Shots folgen, sind nicht überprüft.',
+          },
+          {
+            q: 'Wird CozyClay aktiv weiterentwickelt?',
+            a: 'Version 3.2.2 erschien am 7. November 2026, und das Repository erhielt am 15. November 2026 einen Commit. Das Repository wurde im Juli 2026 angelegt, und die Seite des Entwicklers weist auf Ecken und Kanten hin.',
           },
         ],
       },
@@ -809,6 +865,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Qué datos recoge CozyClay?',
             a: 'De forma predeterminada, estadísticas de uso agrupadas mediante PostHog que el desarrollador describe como anónimas, con un identificador de instalación aleatorio; afirma que nunca recoge texto de prompts, nombres de archivos ni contenido de proyectos. Puedes desactivarlas con cclay telemetry off o DO_NOT_TRACK=1.',
           },
+          {
+            q: '¿Qué navegadores admite CozyClay?',
+            a: 'Solo navegadores basados en Chromium, según el desarrollador; su página de comparación indica que Safari y Firefox no son compatibles. La vía npx además requiere Node.js 22.19 o posterior.',
+          },
+          {
+            q: '¿CozyClay necesita GPU?',
+            a: 'No, según el README: no hacen falta GPU, Python ni descarga de modelos. No se publican cifras de RAM ni de disco, y PromptQuorum no midió el uso de recursos.',
+          },
+          {
+            q: '¿Qué puede exportar CozyClay?',
+            a: 'Según el README, un paquete de keyframes (primer y último fotograma, clip greybox, cámara, prompt), mp4, pases de profundidad y normales, una hoja de contactos y una lista de cortes OTIO. Un proyecto de tipo Storyboard genera en su lugar viñetas con leyenda, un animatic y una hoja de contactos.',
+          },
+          {
+            q: '¿Con qué proveedores de modelos funciona el panel de agente?',
+            a: 'Según el README, inicias sesión con ChatGPT o usas tu propia clave de Anthropic, OpenAI, Gemini, MiniMax, OpenRouter o CLIProxyAPI. El panel necesita conexión de red, y las solicitudes van al proveedor que conectes, bajo las condiciones de ese proveedor.',
+          },
+          {
+            q: '¿Qué licencia usa CozyClay?',
+            a: 'AGPL-3.0-or-later, según LICENSING.md. Las versiones modificadas que se ofrecen a través de una red deben ofrecer su código fuente; consulta a tu equipo legal si tu organización restringe el software AGPL.',
+          },
+          {
+            q: '¿PromptQuorum ha probado CozyClay?',
+            a: 'No. Esta reseña se basa en el sitio web del desarrollador, el repositorio de GitHub, las páginas de versiones y la página de privacidad. La calidad del movimiento, la calidad de las exportaciones y lo bien que los modelos de vídeo siguen los planos exportados no están verificados.',
+          },
+          {
+            q: '¿CozyClay se desarrolla activamente?',
+            a: 'La versión 3.2.2 salió el 7 de noviembre de 2026 y el repositorio recibió un commit el 15 de noviembre de 2026. El repositorio se creó en julio de 2026, y la página del desarrollador avisa de que puede haber asperezas.',
+          },
         ],
       },
       verdict: {
@@ -1088,6 +1172,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Quelles données CozyClay collecte-t-il ?',
             a: 'Par défaut, des statistiques d\'usage regroupées via PostHog, que l\'éditeur décrit comme anonymes, avec un identifiant d\'installation aléatoire ; l\'éditeur affirme ne jamais collecter de texte de prompt, de noms de fichiers ni de contenu de projet. Vous pouvez refuser avec cclay telemetry off ou DO_NOT_TRACK=1.',
+          },
+          {
+            q: 'Quels navigateurs CozyClay prend-il en charge ?',
+            a: 'Uniquement les navigateurs basés sur Chromium, selon le développeur ; sa page de comparaison indique que Safari et Firefox ne sont pas pris en charge. La voie npx exige aussi Node.js 22.19 ou une version plus récente.',
+          },
+          {
+            q: 'CozyClay a-t-il besoin d\'un GPU ?',
+            a: 'Non, d\'après le README : ni GPU, ni Python, ni téléchargement de modèle. Aucun chiffre de RAM ou de disque n\'est publié, et PromptQuorum n\'a pas mesuré la consommation de ressources.',
+          },
+          {
+            q: 'Que peut exporter CozyClay ?',
+            a: 'D\'après le README : un pack de keyframes (première et dernière image, clip greybox, caméra, prompt), du mp4, des passes de profondeur et de normales, une planche contact et une liste de coupes OTIO. Un projet de type Storyboard produit à la place des vignettes légendées, un animatic et une planche contact.',
+          },
+          {
+            q: 'Avec quels fournisseurs de modèles le panneau d\'agent fonctionne-t-il ?',
+            a: 'D\'après le README, vous vous connectez avec ChatGPT ou utilisez votre propre clé pour Anthropic, OpenAI, Gemini, MiniMax, OpenRouter ou CLIProxyAPI. Le panneau nécessite un accès réseau, et les requêtes partent chez le fournisseur que vous connectez, selon ses conditions.',
+          },
+          {
+            q: 'Quelle licence CozyClay utilise-t-il ?',
+            a: 'AGPL-3.0-or-later, selon LICENSING.md. Les versions modifiées proposées via un réseau doivent fournir leur code source ; demandez conseil à votre service juridique si votre organisation restreint les logiciels AGPL.',
+          },
+          {
+            q: 'PromptQuorum a-t-il testé CozyClay ?',
+            a: 'Non. Cette fiche s\'appuie sur le site du développeur, le dépôt GitHub, les pages de versions et la page de confidentialité. La qualité du mouvement, la qualité des exports et la façon dont les modèles vidéo suivent les plans exportés ne sont pas vérifiées.',
+          },
+          {
+            q: 'CozyClay est-il activement développé ?',
+            a: 'La version 3.2.2 est sortie le 7 novembre 2026 et le dépôt a reçu un commit le 15 novembre 2026. Le dépôt a été créé en juillet 2026, et la page du développeur annonce des aspérités.',
           },
         ],
       },
@@ -1369,6 +1481,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'CozyClayはどんなデータを収集しますか？',
             a: '既定ではPostHog経由で、ランダムなインストール識別子を使った、開発者が匿名と説明する区分化された利用統計を収集します。プロンプトのテキスト、ファイル名、プロジェクトの内容は収集しないとしています。cclay telemetry offまたはDO_NOT_TRACK=1でオプトアウトできます。',
           },
+          {
+            q: 'CozyClayはどのブラウザに対応していますか？',
+            a: '開発者によると、対応するのはChromiumベースのブラウザのみです。開発者の比較ページには、SafariとFirefoxは非対応と書かれています。npx経由で使う場合は、Node.js 22.19以降も必要です。',
+          },
+          {
+            q: 'CozyClayにGPUは必要ですか？',
+            a: 'READMEによると、GPU、Python、モデルのダウンロードはいずれも不要です。RAMやディスクの数値は公開されておらず、PromptQuorumはリソース使用量を測定していません。',
+          },
+          {
+            q: 'CozyClayは何をエクスポートできますか？',
+            a: 'READMEによると、キーフレームパック（最初と最後のフレーム、グレーボックスのクリップ、カメラ、プロンプト）、mp4、深度パスと法線パス、コンタクトシート、OTIOのカットリストです。Storyboardプロジェクトでは、代わりにキャプション付きパネル、アニマティック、コンタクトシートが出力されます。',
+          },
+          {
+            q: 'エージェントパネルはどのモデルプロバイダーに対応していますか？',
+            a: 'READMEによると、ChatGPTでサインインするか、Anthropic、OpenAI、Gemini、MiniMax、OpenRouter、CLIProxyAPIの自分のキーを使います。パネルにはネットワーク接続が必要で、リクエストは接続したプロバイダーに、そのプロバイダーの規約に従って送られます。',
+          },
+          {
+            q: 'CozyClayのライセンスは何ですか？',
+            a: 'LICENSING.mdによると、AGPL-3.0-or-laterです。ネットワーク経由で提供する改変版はソースコードの提供が必要です。組織でAGPLソフトウェアが制限されている場合は、法務部門に確認してください。',
+          },
+          {
+            q: 'PromptQuorumはCozyClayを試しましたか？',
+            a: 'いいえ。このレビューは、開発者のサイト、GitHubリポジトリ、リリースページ、プライバシーページに基づいています。モーションの品質、エクスポートの品質、動画モデルが書き出したショットにどこまで従うかは未確認です。',
+          },
+          {
+            q: 'CozyClayは活発に開発されていますか？',
+            a: 'バージョン3.2.2は2026年11月7日に公開され、リポジトリには2026年11月15日にコミットがありました。リポジトリは2026年7月に作成されており、開発者のページでも粗い部分があることが前提とされています。',
+          },
         ],
       },
       verdict: {
@@ -1648,6 +1788,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Que dados o CozyClay coleta?',
             a: 'Por padrão, estatísticas de uso agrupadas via PostHog que o desenvolvedor descreve como anônimas, com um identificador de instalação aleatório; afirma que nunca coleta texto de prompts, nomes de arquivos nem conteúdo de projetos. Você pode desativar com cclay telemetry off ou DO_NOT_TRACK=1.',
+          },
+          {
+            q: 'Quais navegadores o CozyClay suporta?',
+            a: 'Apenas navegadores baseados em Chromium, segundo o desenvolvedor; a página de comparação dele diz que Safari e Firefox não são suportados. O caminho via npx também exige Node.js 22.19 ou mais recente.',
+          },
+          {
+            q: 'O CozyClay precisa de GPU?',
+            a: 'Não, segundo o README: não são necessários GPU, Python nem download de modelo. Não há números de RAM ou disco publicados, e a PromptQuorum não mediu o uso de recursos.',
+          },
+          {
+            q: 'O que o CozyClay pode exportar?',
+            a: 'Segundo o README, um pacote de keyframes (primeiro e último quadro, clipe greybox, câmera, prompt), mp4, passes de profundidade e normais, uma folha de contatos e uma lista de cortes OTIO. Um projeto do tipo Storyboard gera, em vez disso, painéis com legenda, um animatic e uma folha de contatos.',
+          },
+          {
+            q: 'Com quais provedores de modelos o painel de agente funciona?',
+            a: 'Segundo o README, você entra com o ChatGPT ou usa sua própria chave da Anthropic, OpenAI, Gemini, MiniMax, OpenRouter ou CLIProxyAPI. O painel precisa de acesso à rede, e as solicitações vão para o provedor que você conectar, sob os termos dele.',
+          },
+          {
+            q: 'Qual licença o CozyClay usa?',
+            a: 'AGPL-3.0-or-later, conforme o LICENSING.md. Versões modificadas oferecidas por uma rede precisam fornecer o código-fonte; consulte seu jurídico se sua organização restringe software AGPL.',
+          },
+          {
+            q: 'A PromptQuorum testou o CozyClay?',
+            a: 'Não. Esta análise se baseia no site do desenvolvedor, no repositório do GitHub, nas páginas de versões e na página de privacidade. A qualidade do movimento, a qualidade das exportações e o quanto os modelos de vídeo seguem os planos exportados não foram verificados.',
+          },
+          {
+            q: 'O CozyClay está em desenvolvimento ativo?',
+            a: 'A versão 3.2.2 saiu em 7 de novembro de 2026 e o repositório recebeu um commit em 15 de novembro de 2026. O repositório foi criado em julho de 2026, e a página do desenvolvedor avisa que pode haver arestas.',
           },
         ],
       },
@@ -1929,6 +2097,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'CozyClay 收集哪些数据？',
             a: '默认通过 PostHog 收集分桶的使用统计（开发者称其为匿名），并使用随机安装标识符；称从不收集提示词文本、文件名或项目内容。可用 cclay telemetry off 或 DO_NOT_TRACK=1 选择退出。',
           },
+          {
+            q: 'CozyClay 支持哪些浏览器？',
+            a: '据开发者称，仅支持基于 Chromium 的浏览器；开发者的对比页面写明不支持 Safari 和 Firefox。通过 npx 运行还需要 Node.js 22.19 或更高版本。',
+          },
+          {
+            q: 'CozyClay 需要 GPU 吗？',
+            a: '不需要。据 README，无需 GPU、Python 或下载模型。内存和磁盘占用没有公布数字，PromptQuorum 也未测量资源占用。',
+          },
+          {
+            q: 'CozyClay 可以导出什么？',
+            a: '据 README，可导出关键帧包（首尾帧、greybox 片段、镜头、提示词）、mp4、深度和法线通道、联系表以及 OTIO 剪辑清单。Storyboard 项目类型则改为输出带说明的分镜面板、动态分镜和联系表。',
+          },
+          {
+            q: '智能体面板支持哪些模型提供商？',
+            a: '据 README，可使用 ChatGPT 登录，或使用你自己的 Anthropic、OpenAI、Gemini、MiniMax、OpenRouter 或 CLIProxyAPI 密钥。面板需要联网，请求会按该提供商的条款发送给你所连接的提供商。',
+          },
+          {
+            q: 'CozyClay 使用什么许可证？',
+            a: '据 LICENSING.md，为 AGPL-3.0-or-later。通过网络提供的修改版本必须提供其源代码；如果你所在的组织限制使用 AGPL 软件，请咨询法务。',
+          },
+          {
+            q: 'PromptQuorum 试用过 CozyClay 吗？',
+            a: '没有。本文依据开发者网站、GitHub 仓库、发布页面和隐私页面撰写。动作质量、导出质量以及视频模型对导出镜头的遵循程度均未经核实。',
+          },
+          {
+            q: 'CozyClay 仍在积极开发吗？',
+            a: '3.2.2 版于 2026年11月7日发布，仓库在 2026年11月15日有过一次提交。仓库创建于 2026年7月，开发者页面也提示可能存在不完善之处。',
+          },
         ],
       },
       verdict: {
@@ -2209,6 +2405,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'ما البيانات التي يجمعها CozyClay؟',
             a: 'يجمع افتراضيًا إحصاءات استخدام مجمّعة في فئات عبر PostHog يصفها المطوّر بأنها مجهولة، مع معرّف تثبيت عشوائي، ويقول إنه لا يجمع أبدًا نصوص الـ prompt ولا أسماء الملفات ولا محتوى المشاريع. يمكنك الانسحاب عبر cclay telemetry off أو DO_NOT_TRACK=1.',
           },
+          {
+            q: 'ما المتصفحات التي يدعمها CozyClay؟',
+            a: 'المتصفحات المبنية على Chromium فقط بحسب المطوّر؛ إذ تذكر صفحة المقارنة لديه أن Safari وFirefox غير مدعومين. كما يتطلب مسار npx الإصدار 22.19 أو أحدث من Node.js.',
+          },
+          {
+            q: 'هل يحتاج CozyClay إلى GPU؟',
+            a: 'لا بحسب ملف README: لا حاجة إلى GPU أو Python أو تنزيل نموذج. ولا تُنشر أرقام للذاكرة أو القرص، ولم تقس PromptQuorum استهلاك الموارد.',
+          },
+          {
+            q: 'ماذا يمكن لـ CozyClay تصديره؟',
+            a: 'بحسب README: حزمة keyframes (الإطار الأول والأخير ومقطع greybox والكاميرا والـ prompt) وملف mp4 ومسارات العمق والـ normals وورقة contact sheet وقائمة قطع OTIO. أما مشروع Storyboard فينتج بدلًا من ذلك لوحات مكتوبة وAnimatic وورقة contact sheet.',
+          },
+          {
+            q: 'مع أي مزوّدي نماذج تعمل لوحة الوكيل؟',
+            a: 'بحسب README تسجّل الدخول عبر ChatGPT أو تستخدم مفتاحك الخاص لدى Anthropic أو OpenAI أو Gemini أو MiniMax أو OpenRouter أو CLIProxyAPI. تحتاج اللوحة إلى اتصال بالشبكة، وتُرسل الطلبات إلى المزوّد الذي تربطه وفق شروطه.',
+          },
+          {
+            q: 'ما الترخيص الذي يستخدمه CozyClay؟',
+            a: 'AGPL-3.0-or-later بحسب ملف LICENSING.md. يجب أن تتيح النسخ المعدّلة المقدَّمة عبر الشبكة شفرتها المصدرية؛ استشر فريقك القانوني إذا كانت مؤسستك تقيّد برامج AGPL.',
+          },
+          {
+            q: 'هل اختبرت PromptQuorum تطبيق CozyClay؟',
+            a: 'لا. تستند هذه المراجعة إلى موقع المطوّر ومستودع GitHub وصفحات الإصدارات وصفحة الخصوصية. أما جودة الحركة وجودة التصدير ومدى اتباع نماذج الفيديو للقطات المصدَّرة فلم يُتحقق منها.',
+          },
+          {
+            q: 'هل يُطوَّر CozyClay بنشاط؟',
+            a: 'صدر الإصدار 3.2.2 في 7 نوفمبر 2026، وتلقّى المستودع تعديلًا (commit) في 15 نوفمبر 2026. أُنشئ المستودع في يوليو 2026، وتنبّه صفحة المطوّر إلى احتمال وجود جوانب غير مصقولة.',
+          },
         ],
       },
       verdict: {
@@ -2488,6 +2712,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'CozyClay는 어떤 데이터를 수집합니까?',
             a: '기본으로 PostHog를 통해 무작위 설치 식별자와 함께 개발자가 익명이라고 설명하는 구간화된 사용 통계를 수집하며, 프롬프트 텍스트, 파일 이름, 프로젝트 내용은 수집하지 않는다고 밝힙니다. cclay telemetry off 또는 DO_NOT_TRACK=1로 거부할 수 있습니다.',
+          },
+          {
+            q: 'CozyClay는 어떤 브라우저를 지원합니까?',
+            a: '개발자에 따르면 Chromium 기반 브라우저만 지원하며, 개발자의 비교 페이지에는 Safari와 Firefox가 지원되지 않는다고 적혀 있습니다. npx 방식은 Node.js 22.19 이상도 필요합니다.',
+          },
+          {
+            q: 'CozyClay에 GPU가 필요합니까?',
+            a: '아니요. README에 따르면 GPU, Python, 모델 다운로드가 필요하지 않습니다. RAM이나 디스크 수치는 공개되어 있지 않으며, PromptQuorum은 리소스 사용량을 측정하지 않았습니다.',
+          },
+          {
+            q: 'CozyClay는 무엇을 내보낼 수 있습니까?',
+            a: 'README에 따르면 키프레임 팩(첫 프레임과 마지막 프레임, 그레이박스 클립, 카메라, 프롬프트), mp4, 깊이 및 노멀 패스, 콘택트 시트, OTIO 컷 리스트입니다. Storyboard 프로젝트 유형은 대신 캡션이 붙은 패널, 애니매틱, 콘택트 시트를 만듭니다.',
+          },
+          {
+            q: '에이전트 패널은 어떤 모델 제공업체와 연동됩니까?',
+            a: 'README에 따르면 ChatGPT로 로그인하거나 Anthropic, OpenAI, Gemini, MiniMax, OpenRouter, CLIProxyAPI의 본인 키를 사용합니다. 패널은 네트워크 접속이 필요하며, 요청은 연결한 제공업체의 약관에 따라 해당 제공업체로 전송됩니다.',
+          },
+          {
+            q: 'CozyClay는 어떤 라이선스를 사용합니까?',
+            a: 'LICENSING.md에 따르면 AGPL-3.0-or-later입니다. 네트워크로 제공되는 수정본은 소스 코드를 공개해야 하므로, 조직에서 AGPL 소프트웨어를 제한한다면 법무팀에 문의하십시오.',
+          },
+          {
+            q: 'PromptQuorum은 CozyClay를 직접 사용해 보았습니까?',
+            a: '아니요. 이 리뷰는 개발자의 웹사이트, GitHub 저장소, 릴리스 페이지, 개인정보 페이지를 근거로 합니다. 모션 품질, 내보내기 품질, 영상 모델이 내보낸 샷을 얼마나 잘 따르는지는 확인되지 않았습니다.',
+          },
+          {
+            q: 'CozyClay는 활발히 개발되고 있습니까?',
+            a: '버전 3.2.2는 2026년 11월 7일에 나왔고, 저장소에는 2026년 11월 15일에 커밋이 있었습니다. 저장소는 2026년 7월에 만들어졌으며, 개발자 페이지도 다듬어지지 않은 부분이 있을 수 있다고 안내합니다.',
           },
         ],
       },

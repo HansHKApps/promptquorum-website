@@ -26,9 +26,13 @@ const L = {
   ja: { hl: ['ブラウザで動く無料3Dプリビズ', 'MCPサーバー付き', 'AGPL、GPU不要'], price: '価格', priceV: '無料', lic: 'ライセンス', licV: 'AGPL-3.0', plat: '対応プラットフォーム', platV: 'ブラウザ、macOS、Windows', footer: 'PromptQuorumガイド' },
   zh: { hl: ['浏览器中的免费3D预演', '附带 MCP 服务器', 'AGPL 开源，无需 GPU'], price: '价格', priceV: '免费', lic: '许可证', licV: 'AGPL-3.0', plat: '支持平台', platV: '浏览器、macOS、Windows', footer: 'PromptQuorum 指南' },
   pt: { hl: ['Previs 3D gratuita no navegador', 'Servidor MCP para Claude e Cursor', 'Código aberto AGPL, sem GPU'], price: 'Preço', priceV: 'Gratuito', lic: 'Licença', licV: 'AGPL-3.0', plat: 'Plataformas', platV: 'Navegador, macOS, Windows', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['معاينة ثلاثية الأبعاد مجانية في المتصفح', 'خادم MCP لـ Claude وCursor', 'مفتوح المصدر AGPL دون GPU'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'AGPL-3.0', plat: 'المنصات', platV: 'المتصفح وmacOS وWindows', footer: 'دليل PromptQuorum' },
+  ar: { hl: ['مجاني ومعاينة ثلاثية الأبعاد', 'خادم MCP لـ Claude و Cursor', 'مفتوح المصدر AGPL دون GPU'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'AGPL-3.0', plat: 'المنصات', platV: 'المتصفح وmacOS وWindows', footer: 'دليل PromptQuorum' },
   ko: { hl: ['브라우저 무료 3D 프리비즈', 'MCP 서버 포함', 'AGPL, GPU 불필요'], price: '가격', priceV: '무료', lic: '라이선스', licV: 'AGPL-3.0', plat: '플랫폼', platV: '브라우저, macOS, Windows', footer: 'PromptQuorum 가이드' },
 }
+
+// Arabic poster: hand-set title so the 2-line wrap breaks at phrase boundaries (no dangling preposition / one-word second line),
+// and the Latin names are separated from the Arabic conjunction ("Claude و Cursor") because Satori reverses a mixed word like "وCursor".
+const HERO_TITLE = { ar: 'مراجعة CozyClay: استوديو معاينة مسبقة بالمتصفح لفيديو الذكاء الاصطناعي' }
 
 let generated = 0
 const failures = []
@@ -38,7 +42,7 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    title: HERO_TITLE[lang] ?? stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },
