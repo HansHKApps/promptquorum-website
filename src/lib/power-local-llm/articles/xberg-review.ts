@@ -14,9 +14,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-en.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'Developers who need to turn PDFs, Office files, scans, audio, web pages or source code into clean text and structured data for RAG and LLM pipelines, on their own hardware or through an API',
     primaryTerm: 'Xberg',
@@ -36,13 +36,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Does Xberg run fully on my own machine?',
-        answer: 'Mostly. Extraction, OCR, layout detection and local embeddings run on the CPU without a GPU. The network is needed only for fetching URLs and for any hosted LLM or embedding provider you choose; pointing the LLM-backed extraction at a local model server keeps that step local as well.',
+        answer: 'Mostly. Extraction, OCR, layout detection and local embeddings run on the CPU without a GPU. The network is needed for fetching URLs, for downloading model weights on first use (the docs say they come from Hugging Face), and for any hosted LLM or embedding provider you choose; pointing the LLM-backed extraction at a local model server keeps that step local as well.',
         bullets: [
-          'Repository: ' + st.en('xberg') + ' GitHub stars, last updated on 30 October 2026',
-          'Current release: v1.3.10, tagged 13 October 2026, so no stale-project warning applies',
+          'Repository: ' + st.en('xberg') + ' GitHub stars, last updated on 18 November 2026',
+          'Current release: v1.4.1, tagged 16 November 2026, so no stale-project warning applies',
           'Interfaces: libraries for Python, Node.js, Rust, Go, Java and nine more languages, plus a CLI, REST API and MCP server',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What Can You Do With Xberg?', anchor: 'what-xberg-does' },
       { label: 'What Runs Locally and What Does Not', anchor: 'local-vs-network' },
       { label: 'Get Xberg: Install Commands', anchor: 'download-links' },
-      { label: 'Xberg Licence and Commercial Editions', anchor: 'xberg-pricing' },
+      { label: 'Xberg Licence and Commercial Options', anchor: 'xberg-pricing' },
       { label: 'Who Should Use Xberg?', anchor: 'who-should-use-xberg' },
       { label: 'Competitors and Alternatives', anchor: 'competitors' },
       { label: 'FAQ', anchor: 'faq' },
@@ -66,11 +66,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xberg reads almost any file you give it and hands back clean text, tables and metadata that a language model or a search index can use. You install it like a normal programming library or run it as a small server. If you want it to pull structured fields out with a language model, you can point it at a model running on your own computer.' },
         ],
         items: [
-          'The library is free under the MIT licence; the maker also sells Pro, Enterprise and a managed Platform, none with public prices',
+          'The library is free under the MIT licence; the maker\'s pricing page lists only the open-source libraries and an invitation-only Design Partner programme with pricing disclosed on application, while the documentation also describes Pro and Enterprise editions',
           'It is the rebrand of Kreuzberg, rebuilt under a new v1 line, so older Kreuzberg write-ups describe the same engine',
           'It needs a terminal or code: there is no desktop installer, and the install is one command per language',
           'Speed and accuracy rankings come from the maker\'s own benchmarks and were not reproduced by PromptQuorum',
-          'The docs do not say whether it works fully offline, whether models download at first run, or whether it sends telemetry',
+          'The docs say some model weights download from Hugging Face on first use and that air-gapped use needs allow_network set to false with a pre-filled cache; they make no statement about telemetry sent to the maker',
         ],
       },
       overview: {
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licence: MIT, per the repository\'s [LICENSE file](https://github.com/xberg-io/xberg/blob/main/LICENSE)',
           'Maker: the site shows the brand "Xberg" and the GitHub organisation xberg-io; its [imprint](https://xberg.io/imprint) gives a Berlin, Germany address and names one person as responsible for the website, but no legal entity name or registration number',
         ],
-        note: 'The README and the maker\'s [benchmarks page](https://xberg.io/benchmarks) claim the fastest and most precise open-source PDF-to-Markdown engine. Those are vendor claims, not PromptQuorum measurements. The README and docs count 107 formats, while the GitHub description says 106.',
+        note: 'The README and the maker\'s [benchmarks page](https://xberg.io/benchmarks) claim the fastest and most precise open-source PDF-to-Markdown engine. Those are vendor claims, not PromptQuorum measurements. The README and documentation count 107 formats, the homepage says 101, and the GitHub description says "100+".',
       },
       features: {
         id: 'what-xberg-does',
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'What Runs Locally and What Does Not',
-        content: '**Extraction, OCR, layout and ONNX embeddings run on your own CPU; the network is involved only where you choose a hosted provider, fetch a URL or use the maker\'s live demo.** The docs describe the engine as CPU-first with no GPU required.',
+        content: '**Per the README and docs, extraction, OCR, layout and ONNX embeddings run on your own CPU; the network is involved only where you choose a hosted provider, fetch a URL, download model weights or use the maker\'s live demo.** The docs describe the engine as CPU-first with no GPU required.',
         itemHeadings: true,
         columns: ['Step', 'Where it runs'],
         rows: [
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Platforms: prebuilt binaries cover Linux (x86_64, aarch64), Windows and Apple Silicon; Intel Macs get prebuilt packages only for the CLI and the Python wheel',
           'Browser build: the WebAssembly package runs in browsers, Deno, Cloudflare Workers and Node.js 22 or later, without the LLM and VLM features',
         ],
-        note: 'Not verified: the docs do not say whether models or OCR engines download at first run, whether the engine works fully offline, or whether it sends telemetry. Test those on an air-gapped copy before relying on them.',
+        note: 'Per the docs, some features download model weights from Hugging Face on first use (for example PaddleOCR and transcription), and setting allow_network to false with a pre-filled cache disables automatic downloads for air-gapped use. Not verified by PromptQuorum: the docs describe optional OpenTelemetry tracing but make no statement about telemetry sent to the maker. Test an air-gapped copy before relying on any of this.',
       },
       downloads: {
         id: 'download-links',
@@ -142,15 +142,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Xberg Licence and Commercial Editions',
-        content: '**The library is free under the MIT licence for personal, internal and commercial use; the maker also offers paid editions without published prices.** Details come from [xberg.io](https://xberg.io) and its [privacy policy](https://xberg.io/privacy).',
+        title: 'Xberg Licence and Commercial Options',
+        content: '**The library is free under the MIT licence for personal, internal and commercial use; the maker publishes no prices for any managed offer.** Details come from the [pricing page](https://xberg.io/pricing), the [documentation](https://docs.xberg.io) and the [privacy policy](https://xberg.io/privacy).',
         items: [
-          'Xberg Pro: a self-hosted, single-container edition; Xberg Enterprise: a distributed Kubernetes edition with governance and support',
-          'Xberg Platform: a managed backend priced by usage or self-hosting; an invitation-only design-partner programme offers 24-month locked pricing',
+          'Pricing page: two options, the free self-hosted open-source libraries and an invitation-only Design Partner programme with 24-month locked pricing, direct roadmap input and early access; pricing is disclosed in the application conversation',
+          'Editions: the documentation also describes Xberg Pro (self-hosted, single container) and Xberg Enterprise (distributed on Kubernetes, with governance and support), and the homepage calls Xberg Platform a managed backend; no price is published for any of them',
+          'Free access: the pricing page says free-tier access is available at the maker\'s discretion to non-profits, research projects and early-stage organisations, in exchange for attribution',
           'Website privacy: the policy, dated 21 May 2026, names "Xberg" as controller without naming a legal entity and says analytics run only with cookie consent',
           'The policy makes no statement about the open-source library sending data to the maker',
         ],
-        note: 'No prices are published for any paid edition, so ask the maker for a quote. The live demo is limited to one page, under 1 MB and 10 runs per IP address.',
+        note: 'No prices are published for any managed offer; the Design Partner programme discloses pricing in its application conversation. The live demo is limited to one page, under 1 MB and 10 runs per IP address.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -169,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Look elsewhere if you',
             list: [
               'Want a point-and-click app to chat with your documents',
-              'Need documented offline and telemetry guarantees today',
+              'Need a written telemetry statement from the maker today',
               'Need a vendor with a named legal entity and published enterprise pricing',
             ],
           },
@@ -204,11 +205,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'Official site with editions, comparison table and live demo notes.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: 'Official site with pricing page, product overview and live demo notes.' },
           { url: 'https://docs.xberg.io', title: 'Xberg documentation', description: 'Overview, installation guide, CLI and language references.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Xberg installation guide', description: 'Install commands, system requirements and platform support.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'xberg-io/xberg on GitHub', description: 'Source repository and README; MIT licence.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Xberg v1.3.10 release', description: 'Latest tagged release, published 13 October 2026.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Xberg v1.4.1 release', description: 'Latest tagged release, published 16 November 2026.' },
           { url: 'https://xberg.io/privacy', title: 'Xberg privacy policy', description: 'Website data collection and controller statement, dated 21 May 2026.' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'kreuzberg-lts on GitHub', description: 'Separate long-term-support repository for the former Kreuzberg line.' },
         ],
@@ -229,9 +230,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-de.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die PDFs, Office-Dateien, Scans, Audio, Webseiten oder Quellcode für RAG- und LLM-Pipelines in sauberen Text und strukturierte Daten umwandeln müssen, auf eigener Hardware oder über eine API',
     primaryTerm: 'Xberg',
@@ -251,13 +252,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Läuft Xberg komplett auf meinem eigenen Rechner?',
-        answer: 'Größtenteils. Extraktion, OCR, Layout-Erkennung und lokale Embeddings laufen auf der CPU, ohne GPU. Das Netzwerk wird nur zum Abrufen von URLs und für gehostete LLM- oder Embedding-Anbieter benötigt, die Sie selbst wählen; richten Sie die LLM-gestützte Extraktion auf einen lokalen Modellserver, bleibt auch dieser Schritt lokal.',
+        answer: 'Größtenteils. Extraktion, OCR, Layout-Erkennung und lokale Embeddings laufen auf der CPU, ohne GPU. Das Netzwerk wird zum Abrufen von URLs, für den Download von Modellgewichten bei der ersten Nutzung (laut Dokumentation von Hugging Face) und für gehostete LLM- oder Embedding-Anbieter benötigt, die Sie selbst wählen; richten Sie die LLM-gestützte Extraktion auf einen lokalen Modellserver, bleibt auch dieser Schritt lokal.',
         bullets: [
-          'Repository: ' + st.de('xberg') + ' GitHub-Sterne, zuletzt aktualisiert am 30. Oktober 2026',
-          'Aktuelles Release: v1.3.10, am 13. Oktober 2026 getaggt, daher gilt keine Warnung vor einem inaktiven Projekt',
+          'Repository: ' + st.de('xberg') + ' GitHub-Sterne, zuletzt aktualisiert am 18. November 2026',
+          'Aktuelles Release: v1.4.1, am 16. November 2026 getaggt, daher gilt keine Warnung vor einem inaktiven Projekt',
           'Schnittstellen: Bibliotheken für Python, Node.js, Rust, Go, Java und neun weitere Sprachen sowie CLI, REST-API und MCP-Server',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -266,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was lässt sich mit Xberg tun?', anchor: 'what-xberg-does' },
       { label: 'Was lokal läuft und was nicht', anchor: 'local-vs-network' },
       { label: 'Xberg beziehen: Installationsbefehle', anchor: 'download-links' },
-      { label: 'Xberg-Lizenz und kommerzielle Editionen', anchor: 'xberg-pricing' },
+      { label: 'Xberg-Lizenz und kommerzielle Optionen', anchor: 'xberg-pricing' },
       { label: 'Für wen eignet sich Xberg?', anchor: 'who-should-use-xberg' },
       { label: 'Konkurrenten und Alternativen', anchor: 'competitors' },
       { label: 'FAQ', anchor: 'faq' },
@@ -281,11 +282,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xberg liest nahezu jede Datei, die Sie ihm geben, und liefert sauberen Text, Tabellen und Metadaten zurück, die ein Sprachmodell oder ein Suchindex nutzen kann. Sie installieren es wie eine gewöhnliche Programmierbibliothek oder betreiben es als kleinen Server. Wenn Sie mit einem Sprachmodell strukturierte Felder auslesen möchten, können Sie es auf ein Modell richten, das auf Ihrem eigenen Computer läuft.' },
         ],
         items: [
-          'Die Bibliothek ist unter der MIT-Lizenz kostenlos; der Hersteller verkauft außerdem Pro, Enterprise und eine verwaltete Plattform, jeweils ohne öffentliche Preise',
+          'Die Bibliothek ist unter der MIT-Lizenz kostenlos; die Preisseite des Herstellers nennt nur die Open-Source-Bibliotheken und ein Design-Partner-Programm nur auf Einladung, dessen Preise erst auf Anfrage genannt werden, während die Dokumentation zusätzlich Pro- und Enterprise-Editionen beschreibt',
           'Es ist das Rebranding von Kreuzberg, neu aufgebaut als v1-Linie, daher beschreiben ältere Kreuzberg-Artikel dieselbe Engine',
           'Es braucht ein Terminal oder Code: Es gibt keinen Desktop-Installer, und die Installation ist ein Befehl pro Sprache',
           'Geschwindigkeits- und Genauigkeitsrankings stammen aus den eigenen Benchmarks des Herstellers und wurden von PromptQuorum nicht nachvollzogen',
-          'Die Dokumentation sagt nicht, ob es vollständig offline funktioniert, ob Modelle beim ersten Start heruntergeladen werden oder ob es Telemetrie sendet',
+          'Laut Dokumentation werden einige Modellgewichte bei der ersten Nutzung von Hugging Face geladen, und für den Betrieb ohne Netz muss allow_network auf false stehen und der Cache vorab gefüllt sein; zu Telemetrie an den Hersteller macht sie keine Aussage',
         ],
       },
       overview: {
@@ -299,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lizenz: MIT, laut [LICENSE-Datei](https://github.com/xberg-io/xberg/blob/main/LICENSE) des Repositorys',
           'Hersteller: Die Website zeigt die Marke „Xberg“ und die GitHub-Organisation xberg-io; das [Impressum](https://xberg.io/imprint) nennt eine Adresse in Berlin und eine für die Website verantwortliche Person, aber weder den Namen einer juristischen Person noch eine Registernummer',
         ],
-        note: 'Das README und die [Benchmark-Seite](https://xberg.io/benchmarks) des Herstellers behaupten, die schnellste und präziseste Open-Source-Engine für PDF-zu-Markdown zu sein. Das sind Herstellerangaben, keine Messungen von PromptQuorum. README und Dokumentation zählen 107 Formate, während die GitHub-Beschreibung 106 nennt.',
+        note: 'Das README und die [Benchmark-Seite](https://xberg.io/benchmarks) des Herstellers behaupten, die schnellste und präziseste Open-Source-Engine für PDF-zu-Markdown zu sein. Das sind Herstellerangaben, keine Messungen von PromptQuorum. README und Dokumentation zählen 107 Formate, die Startseite nennt 101 und die GitHub-Beschreibung „100+“.',
       },
       features: {
         id: 'what-xberg-does',
@@ -321,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'Was lokal läuft und was nicht',
-        content: '**Extraktion, OCR, Layout und ONNX-Embeddings laufen auf Ihrer eigenen CPU; das Netzwerk kommt nur ins Spiel, wenn Sie einen gehosteten Anbieter wählen, eine URL abrufen oder die Live-Demo des Herstellers nutzen.** Die Dokumentation beschreibt die Engine als CPU-orientiert, ohne GPU-Pflicht.',
+        content: '**Laut README und Dokumentation laufen Extraktion, OCR, Layout und ONNX-Embeddings auf Ihrer eigenen CPU; das Netzwerk kommt nur ins Spiel, wenn Sie einen gehosteten Anbieter wählen, eine URL abrufen, Modellgewichte herunterladen oder die Live-Demo des Herstellers nutzen.** Die Dokumentation beschreibt die Engine als CPU-orientiert, ohne GPU-Pflicht.',
         itemHeadings: true,
         columns: ['Schritt', 'Wo es läuft'],
         rows: [
@@ -336,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plattformen: Vorgefertigte Binärdateien gibt es für Linux (x86_64, aarch64), Windows und Apple Silicon; Intel-Macs erhalten vorgefertigte Pakete nur für die CLI und das Python-Wheel',
           'Browser-Build: Das WebAssembly-Paket läuft in Browsern, Deno, Cloudflare Workers und Node.js 22 oder neuer, ohne die LLM- und VLM-Funktionen',
         ],
-        note: 'Nicht geprüft: Die Dokumentation sagt nicht, ob Modelle oder OCR-Engines beim ersten Start heruntergeladen werden, ob die Engine vollständig offline funktioniert oder ob sie Telemetrie sendet. Testen Sie das auf einer vom Netz getrennten Kopie, bevor Sie sich darauf verlassen.',
+        note: 'Laut Dokumentation laden einige Funktionen Modellgewichte bei der ersten Nutzung von Hugging Face (zum Beispiel PaddleOCR und Transkription), und mit allow_network auf false und einem vorab gefüllten Cache werden automatische Downloads für den netzfreien Betrieb abgeschaltet. Nicht von PromptQuorum geprüft: Die Dokumentation beschreibt optionales OpenTelemetry-Tracing, trifft aber keine Aussage zu Telemetrie an den Hersteller. Testen Sie eine vom Netz getrennte Kopie, bevor Sie sich auf irgendetwas davon verlassen.',
       },
       downloads: {
         id: 'download-links',
@@ -357,15 +358,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Xberg-Lizenz und kommerzielle Editionen',
-        content: '**Die Bibliothek ist unter der MIT-Lizenz für private, interne und kommerzielle Nutzung kostenlos; der Hersteller bietet außerdem kostenpflichtige Editionen ohne veröffentlichte Preise an.** Die Angaben stammen von [xberg.io](https://xberg.io) und der zugehörigen [Datenschutzerklärung](https://xberg.io/privacy).',
+        title: 'Xberg-Lizenz und kommerzielle Optionen',
+        content: '**Die Bibliothek ist unter der MIT-Lizenz für private, interne und kommerzielle Nutzung kostenlos; für verwaltete Angebote veröffentlicht der Hersteller keine Preise.** Die Angaben stammen von der [Preisseite](https://xberg.io/pricing), der [Dokumentation](https://docs.xberg.io) und der [Datenschutzerklärung](https://xberg.io/privacy).',
         items: [
-          'Xberg Pro: eine selbst gehostete Edition in einem einzelnen Container; Xberg Enterprise: eine verteilte Kubernetes-Edition mit Governance und Support',
-          'Xberg Platform: ein verwaltetes Backend, abgerechnet nach Nutzung oder selbst gehostet; ein Design-Partner-Programm nur auf Einladung bietet 24 Monate festgeschriebene Preise',
+          'Preisseite: zwei Optionen, die kostenlosen selbst gehosteten Open-Source-Bibliotheken und ein Design-Partner-Programm nur auf Einladung mit 24 Monate festgeschriebenen Preisen, direktem Einfluss auf die Roadmap und frühem Zugang; Preise werden im Bewerbungsgespräch genannt',
+          'Editionen: Die Dokumentation beschreibt zusätzlich Xberg Pro (selbst gehostet, ein Container) und Xberg Enterprise (verteilt auf Kubernetes, mit Governance und Support), und die Startseite nennt Xberg Platform ein verwaltetes Backend; für keines davon ist ein Preis veröffentlicht',
+          'Kostenloser Zugang: Laut Preisseite ist nach Ermessen des Herstellers kostenloser Zugang für gemeinnützige Organisationen, Forschungsprojekte und junge Unternehmen möglich, im Gegenzug für eine Namensnennung',
           'Datenschutz der Website: Die Erklärung vom 21. Mai 2026 nennt „Xberg“ als Verantwortlichen, ohne eine juristische Person zu benennen, und sagt, dass Analysen nur mit Cookie-Einwilligung laufen',
           'Die Erklärung trifft keine Aussage dazu, ob die Open-Source-Bibliothek Daten an den Hersteller sendet',
         ],
-        note: 'Für keine kostenpflichtige Edition sind Preise veröffentlicht, fragen Sie daher beim Hersteller ein Angebot an. Die Live-Demo ist auf eine Seite, unter 1 MB und 10 Läufe pro IP-Adresse begrenzt.',
+        note: 'Für verwaltete Angebote sind keine Preise veröffentlicht; das Design-Partner-Programm nennt Preise im Bewerbungsgespräch. Die Live-Demo ist auf eine Seite, unter 1 MB und 10 Läufe pro IP-Adresse begrenzt.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -384,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Woanders suchen, wenn Sie',
             list: [
               'Eine Klick-und-los-App zum Chatten mit Ihren Dokumenten wollen',
-              'Dokumentierte Offline- und Telemetrie-Garantien schon heute benötigen',
+              'Schon heute eine schriftliche Aussage des Herstellers zur Telemetrie benötigen',
               'Einen Anbieter mit benannter juristischer Person und veröffentlichten Enterprise-Preisen brauchen',
             ],
           },
@@ -419,11 +421,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'Offizielle Website mit Editionen, Vergleichstabelle und Hinweisen zur Live-Demo.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: 'Offizielle Website mit Preisseite, Produktüberblick und Hinweisen zur Live-Demo.' },
           { url: 'https://docs.xberg.io', title: 'Xberg-Dokumentation', description: 'Überblick, Installationsanleitung, CLI und Sprachreferenzen.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Xberg-Installationsanleitung', description: 'Installationsbefehle, Systemanforderungen und Plattformunterstützung.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'xberg-io/xberg auf GitHub', description: 'Quell-Repository und README; MIT-Lizenz.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Xberg-Release v1.3.10', description: 'Neuestes getaggtes Release, veröffentlicht am 13. Oktober 2026.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Xberg-Release v1.4.1', description: 'Neuestes getaggtes Release, veröffentlicht am 16. November 2026.' },
           { url: 'https://xberg.io/privacy', title: 'Xberg-Datenschutzerklärung', description: 'Datenerhebung auf der Website und Angabe des Verantwortlichen, Stand 21. Mai 2026.' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'kreuzberg-lts auf GitHub', description: 'Separates Repository mit Langzeitunterstützung für die frühere Kreuzberg-Linie.' },
         ],
@@ -444,9 +446,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-es.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que necesitan convertir PDF, archivos de Office, escaneos, audio, páginas web o código fuente en texto limpio y datos estructurados para pipelines de RAG y LLM, en su propio hardware o mediante una API',
     primaryTerm: 'Xberg',
@@ -466,13 +468,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Puede Xberg funcionar por completo en mi propio equipo?',
-        answer: 'En su mayor parte. La extracción, el OCR, la detección de diseño y los embeddings locales se ejecutan en la CPU, sin GPU. La red solo hace falta para descargar URL y para cualquier proveedor alojado de LLM o de embeddings que elijas; si apuntas la extracción con LLM a un servidor de modelos local, ese paso también se queda en local.',
+        answer: 'En su mayor parte. La extracción, el OCR, la detección de diseño y los embeddings locales se ejecutan en la CPU, sin GPU. La red hace falta para descargar URL, para bajar los pesos de los modelos en el primer uso (según la documentación, desde Hugging Face) y para cualquier proveedor alojado de LLM o de embeddings que elijas; si apuntas la extracción con LLM a un servidor de modelos local, ese paso también se queda en local.',
         bullets: [
-          'Repositorio: ' + st.es('xberg') + ' estrellas en GitHub, actualizado por última vez el 30 de octubre de 2026',
-          'Versión actual: v1.3.10, etiquetada el 13 de octubre de 2026, por lo que no se aplica ninguna advertencia de proyecto inactivo',
+          'Repositorio: ' + st.es('xberg') + ' estrellas en GitHub, actualizado por última vez el 18 de noviembre de 2026',
+          'Versión actual: v1.4.1, etiquetada el 16 de noviembre de 2026, por lo que no se aplica ninguna advertencia de proyecto inactivo',
           'Interfaces: bibliotecas para Python, Node.js, Rust, Go, Java y otros nueve lenguajes, además de una CLI, una API REST y un servidor MCP',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -481,7 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '¿Qué puedes hacer con Xberg?', anchor: 'what-xberg-does' },
       { label: 'Qué se ejecuta en local y qué no', anchor: 'local-vs-network' },
       { label: 'Obtener Xberg: comandos de instalación', anchor: 'download-links' },
-      { label: 'Licencia de Xberg y ediciones comerciales', anchor: 'xberg-pricing' },
+      { label: 'Licencia de Xberg y opciones comerciales', anchor: 'xberg-pricing' },
       { label: '¿Para quién es Xberg?', anchor: 'who-should-use-xberg' },
       { label: 'Competidores y alternativas', anchor: 'competitors' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -496,11 +498,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xberg lee casi cualquier archivo que le des y devuelve texto limpio, tablas y metadatos que un modelo de lenguaje o un índice de búsqueda pueden usar. Lo instalas como una biblioteca de programación normal o lo ejecutas como un pequeño servidor. Si quieres que extraiga campos estructurados con un modelo de lenguaje, puedes apuntarlo a un modelo que se ejecute en tu propio ordenador.' },
         ],
         items: [
-          'La biblioteca es gratuita con licencia MIT; el desarrollador también vende Pro, Enterprise y una Platform gestionada, ninguna con precios públicos',
+          'La biblioteca es gratuita con licencia MIT; la página de precios del desarrollador solo muestra las bibliotecas de código abierto y un programa de socios de diseño solo por invitación cuyos precios se comunican al solicitarlo, mientras que la documentación describe además ediciones Pro y Enterprise',
           'Es el cambio de marca de Kreuzberg, reconstruido bajo una nueva línea v1, así que los artículos antiguos sobre Kreuzberg describen el mismo motor',
           'Requiere terminal o código: no hay instalador de escritorio y la instalación es un comando por lenguaje',
           'Los rankings de velocidad y precisión provienen de los benchmarks del propio desarrollador y PromptQuorum no los reprodujo',
-          'La documentación no aclara si funciona totalmente sin conexión, si descarga modelos en la primera ejecución o si envía telemetría',
+          'Según la documentación, algunos pesos de modelos se descargan de Hugging Face en el primer uso, y el uso sin red requiere allow_network en false y una caché rellenada de antemano; no dice nada sobre telemetría enviada al desarrollador',
         ],
       },
       overview: {
@@ -514,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licencia: MIT, según el [archivo LICENSE](https://github.com/xberg-io/xberg/blob/main/LICENSE) del repositorio',
           'Desarrollador: el sitio muestra la marca "Xberg" y la organización de GitHub xberg-io; su [aviso legal](https://xberg.io/imprint) indica una dirección en Berlín (Alemania) y nombra a una persona responsable del sitio, pero no el nombre de una entidad legal ni un número de registro',
         ],
-        note: 'El README y la [página de benchmarks](https://xberg.io/benchmarks) del desarrollador afirman que es el motor de código abierto de PDF a Markdown más rápido y preciso. Son afirmaciones del fabricante, no mediciones de PromptQuorum. El README y la documentación cuentan 107 formatos, mientras que la descripción de GitHub dice 106.',
+        note: 'El README y la [página de benchmarks](https://xberg.io/benchmarks) del desarrollador afirman que es el motor de código abierto de PDF a Markdown más rápido y preciso. Son afirmaciones del fabricante, no mediciones de PromptQuorum. El README y la documentación cuentan 107 formatos, la página de inicio indica 101 y la descripción de GitHub dice "100+".',
       },
       features: {
         id: 'what-xberg-does',
@@ -536,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'Qué se ejecuta en local y qué no',
-        content: '**La extracción, el OCR, el diseño y los embeddings ONNX se ejecutan en tu propia CPU; la red interviene solo si eliges un proveedor alojado, descargas una URL o usas la demo en vivo del desarrollador.** La documentación describe el motor como orientado a CPU, sin necesidad de GPU.',
+        content: '**Según el README y la documentación, la extracción, el OCR, el diseño y los embeddings ONNX se ejecutan en tu propia CPU; la red interviene solo si eliges un proveedor alojado, descargas una URL, bajas pesos de modelos o usas la demo en vivo del desarrollador.** La documentación describe el motor como orientado a CPU, sin necesidad de GPU.',
         itemHeadings: true,
         columns: ['Paso', 'Dónde se ejecuta'],
         rows: [
@@ -551,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plataformas: los binarios precompilados cubren Linux (x86_64, aarch64), Windows y Apple Silicon; los Mac con Intel solo tienen paquetes precompilados para la CLI y el wheel de Python',
           'Versión para navegador: el paquete de WebAssembly funciona en navegadores, Deno, Cloudflare Workers y Node.js 22 o posterior, sin las funciones de LLM y VLM',
         ],
-        note: 'No verificado: la documentación no aclara si los modelos o motores de OCR se descargan en la primera ejecución, si el motor funciona totalmente sin conexión o si envía telemetría. Pruébalo en una copia aislada de la red antes de depender de ello.',
+        note: 'Según la documentación, algunas funciones descargan pesos de modelos de Hugging Face en el primer uso (por ejemplo PaddleOCR y la transcripción), y con allow_network en false y una caché rellenada de antemano se desactivan las descargas automáticas para el uso sin red. PromptQuorum no lo ha verificado: la documentación describe un trazado OpenTelemetry opcional, pero no dice nada sobre telemetría enviada al desarrollador. Prueba una copia aislada de la red antes de depender de cualquiera de estos puntos.',
       },
       downloads: {
         id: 'download-links',
@@ -572,15 +574,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Licencia de Xberg y ediciones comerciales',
-        content: '**La biblioteca es gratuita con licencia MIT para uso personal, interno y comercial; el desarrollador también ofrece ediciones de pago sin precios publicados.** Los detalles proceden de [xberg.io](https://xberg.io) y de su [política de privacidad](https://xberg.io/privacy).',
+        title: 'Licencia de Xberg y opciones comerciales',
+        content: '**La biblioteca es gratuita con licencia MIT para uso personal, interno y comercial; el desarrollador no publica precios de ninguna oferta gestionada.** Los detalles proceden de la [página de precios](https://xberg.io/pricing), la [documentación](https://docs.xberg.io) y la [política de privacidad](https://xberg.io/privacy).',
         items: [
-          'Xberg Pro: una edición autoalojada de un solo contenedor; Xberg Enterprise: una edición distribuida en Kubernetes con gobernanza y soporte',
-          'Xberg Platform: un backend gestionado con precio por uso o autoalojamiento; un programa de socios de diseño solo por invitación ofrece precios bloqueados durante 24 meses',
+          'Página de precios: dos opciones, las bibliotecas de código abierto gratuitas y autoalojadas, y un programa de socios de diseño solo por invitación con precios bloqueados durante 24 meses, influencia directa en la hoja de ruta y acceso anticipado; los precios se comunican en la conversación de solicitud',
+          'Ediciones: la documentación describe además Xberg Pro (autoalojada, en un solo contenedor) y Xberg Enterprise (distribuida en Kubernetes, con gobernanza y soporte), y la página de inicio presenta Xberg Platform como un backend gestionado; no se publica ningún precio de ninguna de ellas',
+          'Acceso gratuito: según la página de precios, el desarrollador puede conceder acceso gratuito a su discreción a organizaciones sin ánimo de lucro, proyectos de investigación y organizaciones en fase inicial, a cambio de atribución',
           'Privacidad del sitio web: la política, con fecha del 21 de mayo de 2026, nombra a "Xberg" como responsable del tratamiento sin nombrar una entidad legal, y dice que la analítica solo se activa con consentimiento de cookies',
           'La política no dice nada sobre si la biblioteca de código abierto envía datos al desarrollador',
         ],
-        note: 'No se publican precios de ninguna edición de pago, así que pide un presupuesto al desarrollador. La demo en vivo se limita a una página, menos de 1 MB y 10 ejecuciones por dirección IP.',
+        note: 'No se publican precios de ninguna oferta gestionada; el programa de socios de diseño comunica los precios en la conversación de solicitud. La demo en vivo se limita a una página, menos de 1 MB y 10 ejecuciones por dirección IP.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -599,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Busca otra opción si',
             list: [
               'Quieres una aplicación de apuntar y hacer clic para chatear con tus documentos',
-              'Necesitas hoy garantías documentadas de funcionamiento sin conexión y de telemetría',
+              'Necesitas hoy una declaración escrita del desarrollador sobre telemetría',
               'Necesitas un proveedor con entidad legal identificada y precios empresariales publicados',
             ],
           },
@@ -634,11 +637,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'Sitio oficial con ediciones, tabla comparativa y notas sobre la demo en vivo.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: 'Sitio oficial con página de precios, resumen de productos y notas sobre la demo en vivo.' },
           { url: 'https://docs.xberg.io', title: 'Documentación de Xberg', description: 'Visión general, guía de instalación, CLI y referencias por lenguaje.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Guía de instalación de Xberg', description: 'Comandos de instalación, requisitos del sistema y plataformas compatibles.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'xberg-io/xberg en GitHub', description: 'Repositorio de código y README; licencia MIT.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Versión v1.3.10 de Xberg', description: 'Última versión etiquetada, publicada el 13 de octubre de 2026.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Versión v1.4.1 de Xberg', description: 'Última versión etiquetada, publicada el 16 de noviembre de 2026.' },
           { url: 'https://xberg.io/privacy', title: 'Política de privacidad de Xberg', description: 'Recogida de datos del sitio web y declaración sobre el responsable, con fecha del 21 de mayo de 2026.' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'kreuzberg-lts en GitHub', description: 'Repositorio aparte de soporte a largo plazo de la antigua línea Kreuzberg.' },
         ],
@@ -659,9 +662,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-fr.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui doivent transformer des PDF, fichiers Office, scans, fichiers audio, pages web ou du code source en texte propre et en données structurées pour des pipelines RAG et LLM, sur leur propre matériel ou via une API',
     primaryTerm: 'Xberg',
@@ -681,13 +684,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Xberg fonctionne-t-il entièrement sur ma propre machine ?',
-        answer: 'En grande partie. L\'extraction, l\'OCR, la détection de mise en page et les embeddings locaux s\'exécutent sur le CPU, sans GPU. Le réseau n\'est nécessaire que pour récupérer des URL et pour les fournisseurs LLM ou d\'embeddings hébergés que vous choisissez ; si vous pointez l\'extraction assistée par LLM vers un serveur de modèles local, cette étape reste elle aussi locale.',
+        answer: 'En grande partie. L\'extraction, l\'OCR, la détection de mise en page et les embeddings locaux s\'exécutent sur le CPU, sans GPU. Le réseau est nécessaire pour récupérer des URL, pour télécharger les poids de modèles à la première utilisation (selon la documentation, depuis Hugging Face) et pour les fournisseurs LLM ou d\'embeddings hébergés que vous choisissez ; si vous pointez l\'extraction assistée par LLM vers un serveur de modèles local, cette étape reste elle aussi locale.',
         bullets: [
-          'Dépôt : ' + st.fr('xberg') + ' étoiles GitHub, dernière mise à jour le 30 octobre 2026',
-          'Version actuelle : v1.3.10, publiée le 13 octobre 2026, donc aucun avertissement de projet inactif ne s\'applique',
+          'Dépôt : ' + st.fr('xberg') + ' étoiles GitHub, dernière mise à jour le 18 novembre 2026',
+          'Version actuelle : v1.4.1, publiée le 16 novembre 2026, donc aucun avertissement de projet inactif ne s\'applique',
           'Interfaces : bibliothèques pour Python, Node.js, Rust, Go, Java et neuf autres langages, plus une CLI, une API REST et un serveur MCP',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -696,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Que peut-on faire avec Xberg ?', anchor: 'what-xberg-does' },
       { label: 'Ce qui s\'exécute en local et ce qui ne l\'est pas', anchor: 'local-vs-network' },
       { label: 'Obtenir Xberg : commandes d\'installation', anchor: 'download-links' },
-      { label: 'Licence de Xberg et éditions commerciales', anchor: 'xberg-pricing' },
+      { label: 'Licence de Xberg et options commerciales', anchor: 'xberg-pricing' },
       { label: 'À qui s\'adresse Xberg ?', anchor: 'who-should-use-xberg' },
       { label: 'Concurrents et alternatives', anchor: 'competitors' },
       { label: 'FAQ', anchor: 'faq' },
@@ -711,11 +714,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xberg lit presque tous les fichiers que vous lui donnez et renvoie du texte propre, des tableaux et des métadonnées qu\'un modèle de langage ou un index de recherche peut exploiter. Vous l\'installez comme une bibliothèque de programmation ordinaire ou vous l\'exécutez comme un petit serveur. Si vous voulez qu\'il extraie des champs structurés avec un modèle de langage, vous pouvez le pointer vers un modèle qui tourne sur votre propre ordinateur.' },
         ],
         items: [
-          'La bibliothèque est gratuite sous licence MIT ; l\'éditeur vend aussi Pro, Enterprise et une plateforme gérée, sans tarifs publics',
+          'La bibliothèque est gratuite sous licence MIT ; la page des tarifs de l\'éditeur ne présente que les bibliothèques open source et un programme de partenaires de conception sur invitation, dont les tarifs sont communiqués sur candidature, tandis que la documentation décrit aussi des éditions Pro et Enterprise',
           'C\'est le changement de marque de Kreuzberg, reconstruit sous une nouvelle ligne v1 ; les anciens articles sur Kreuzberg décrivent donc le même moteur',
           'Il faut un terminal ou du code : il n\'existe pas d\'installateur de bureau, et l\'installation tient en une commande par langage',
           'Les classements de vitesse et de précision viennent des benchmarks de l\'éditeur et n\'ont pas été reproduits par PromptQuorum',
-          'La documentation ne dit pas s\'il fonctionne entièrement hors ligne, si des modèles sont téléchargés au premier lancement ni s\'il envoie de la télémétrie',
+          'Selon la documentation, certains poids de modèles sont téléchargés depuis Hugging Face à la première utilisation, et un usage sans réseau exige allow_network à false et un cache rempli à l\'avance ; elle ne dit rien sur une télémétrie envoyée à l\'éditeur',
         ],
       },
       overview: {
@@ -729,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licence : MIT, d\'après le [fichier LICENSE](https://github.com/xberg-io/xberg/blob/main/LICENSE) du dépôt',
           'Éditeur : le site affiche la marque « Xberg » et l\'organisation GitHub xberg-io ; ses [mentions légales](https://xberg.io/imprint) donnent une adresse à Berlin (Allemagne) et nomment une personne responsable du site, mais ni le nom d\'une entité juridique ni un numéro d\'immatriculation',
         ],
-        note: 'Le README et la [page de benchmarks](https://xberg.io/benchmarks) de l\'éditeur revendiquent le moteur open source le plus rapide et le plus précis pour convertir des PDF en Markdown. Ce sont des affirmations de l\'éditeur, pas des mesures de PromptQuorum. Le README et la documentation comptent 107 formats, tandis que la description GitHub en indique 106.',
+        note: 'Le README et la [page de benchmarks](https://xberg.io/benchmarks) de l\'éditeur revendiquent le moteur open source le plus rapide et le plus précis pour convertir des PDF en Markdown. Ce sont des affirmations de l\'éditeur, pas des mesures de PromptQuorum. Le README et la documentation comptent 107 formats, la page d\'accueil en indique 101 et la description GitHub « 100+ ».',
       },
       features: {
         id: 'what-xberg-does',
@@ -751,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'Ce qui s\'exécute en local et ce qui ne l\'est pas',
-        content: '**L\'extraction, l\'OCR, la mise en page et les embeddings ONNX s\'exécutent sur votre propre CPU ; le réseau n\'intervient que si vous choisissez un fournisseur hébergé, récupérez une URL ou utilisez la démo en ligne de l\'éditeur.** La documentation décrit le moteur comme orienté CPU, sans GPU requis.',
+        content: '**Selon le README et la documentation, l\'extraction, l\'OCR, la mise en page et les embeddings ONNX s\'exécutent sur votre propre CPU ; le réseau n\'intervient que si vous choisissez un fournisseur hébergé, récupérez une URL, téléchargez des poids de modèles ou utilisez la démo en ligne de l\'éditeur.** La documentation décrit le moteur comme orienté CPU, sans GPU requis.',
         itemHeadings: true,
         columns: ['Étape', 'Exécution'],
         rows: [
@@ -766,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plateformes : des binaires précompilés existent pour Linux (x86_64, aarch64), Windows et Apple Silicon ; les Mac Intel n\'ont de paquets précompilés que pour la CLI et la wheel Python',
           'Version navigateur : le paquet WebAssembly fonctionne dans les navigateurs, Deno, Cloudflare Workers et Node.js 22 ou plus récent, sans les fonctions LLM et VLM',
         ],
-        note: 'Non vérifié : la documentation ne dit pas si les modèles ou moteurs OCR sont téléchargés au premier lancement, si le moteur fonctionne entièrement hors ligne ni s\'il envoie de la télémétrie. Testez ces points sur une copie isolée du réseau avant de vous y fier.',
+        note: 'Selon la documentation, certaines fonctions téléchargent des poids de modèles depuis Hugging Face à la première utilisation (par exemple PaddleOCR et la transcription), et avec allow_network à false et un cache rempli à l\'avance, les téléchargements automatiques sont désactivés pour un usage sans réseau. Non vérifié par PromptQuorum : la documentation décrit un traçage OpenTelemetry optionnel, mais ne dit rien sur une télémétrie envoyée à l\'éditeur. Testez une copie isolée du réseau avant de vous fier à l\'un de ces points.',
       },
       downloads: {
         id: 'download-links',
@@ -787,15 +790,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Licence de Xberg et éditions commerciales',
-        content: '**La bibliothèque est gratuite sous licence MIT pour un usage personnel, interne et commercial ; l\'éditeur propose aussi des éditions payantes sans tarifs publiés.** Les détails proviennent de [xberg.io](https://xberg.io) et de sa [politique de confidentialité](https://xberg.io/privacy).',
+        title: 'Licence de Xberg et options commerciales',
+        content: '**La bibliothèque est gratuite sous licence MIT pour un usage personnel, interne et commercial ; l\'éditeur ne publie aucun tarif pour ses offres gérées.** Les détails proviennent de la [page des tarifs](https://xberg.io/pricing), de la [documentation](https://docs.xberg.io) et de la [politique de confidentialité](https://xberg.io/privacy).',
         items: [
-          'Xberg Pro : une édition auto-hébergée en conteneur unique ; Xberg Enterprise : une édition distribuée sur Kubernetes avec gouvernance et support',
-          'Xberg Platform : un backend géré facturé à l\'usage ou auto-hébergé ; un programme de partenaires de conception sur invitation propose des tarifs verrouillés pendant 24 mois',
+          'Page des tarifs : deux options, les bibliothèques open source gratuites et auto-hébergées, et un programme de partenaires de conception sur invitation avec des tarifs verrouillés pendant 24 mois, une influence directe sur la feuille de route et un accès anticipé ; les tarifs sont communiqués lors de l\'entretien de candidature',
+          'Éditions : la documentation décrit aussi Xberg Pro (auto-hébergée, en conteneur unique) et Xberg Enterprise (distribuée sur Kubernetes, avec gouvernance et support), et la page d\'accueil présente Xberg Platform comme un backend géré ; aucun tarif n\'est publié pour ces offres',
+          'Accès gratuit : selon la page des tarifs, un accès gratuit est possible à la discrétion de l\'éditeur pour les organisations à but non lucratif, les projets de recherche et les structures en phase de démarrage, en échange d\'une mention',
           'Confidentialité du site : la politique, datée du 21 mai 2026, désigne « Xberg » comme responsable sans nommer d\'entité juridique, et indique que les analyses ne s\'exécutent qu\'avec le consentement aux cookies',
           'La politique ne dit rien sur l\'envoi éventuel de données à l\'éditeur par la bibliothèque open source',
         ],
-        note: 'Aucun tarif n\'est publié pour les éditions payantes ; demandez donc un devis à l\'éditeur. La démo en ligne est limitée à une page, moins de 1 Mo et 10 exécutions par adresse IP.',
+        note: 'Aucun tarif n\'est publié pour les offres gérées ; le programme de partenaires de conception communique les tarifs lors de l\'entretien de candidature. La démo en ligne est limitée à une page, moins de 1 Mo et 10 exécutions par adresse IP.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -814,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Cherchez ailleurs si vous',
             list: [
               'Voulez une application clic-et-c\'est-parti pour dialoguer avec vos documents',
-              'Avez besoin dès aujourd\'hui de garanties hors ligne et de télémétrie documentées',
+              'Avez besoin dès aujourd\'hui d\'une déclaration écrite de l\'éditeur sur la télémétrie',
               'Avez besoin d\'un éditeur doté d\'une entité juridique nommée et de tarifs entreprise publiés',
             ],
           },
@@ -849,11 +853,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'Site officiel avec éditions, tableau comparatif et notes sur la démo en ligne.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: 'Site officiel avec page des tarifs, présentation des produits et notes sur la démo en ligne.' },
           { url: 'https://docs.xberg.io', title: 'Documentation de Xberg', description: 'Présentation, guide d\'installation, CLI et références par langage.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Guide d\'installation de Xberg', description: 'Commandes d\'installation, configuration requise et plateformes prises en charge.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'xberg-io/xberg sur GitHub', description: 'Dépôt source et README ; licence MIT.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Version v1.3.10 de Xberg', description: 'Dernière version étiquetée, publiée le 13 octobre 2026.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Version v1.4.1 de Xberg', description: 'Dernière version étiquetée, publiée le 16 novembre 2026.' },
           { url: 'https://xberg.io/privacy', title: 'Politique de confidentialité de Xberg', description: 'Collecte de données du site et mention du responsable, datée du 21 mai 2026.' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'kreuzberg-lts sur GitHub', description: 'Dépôt distinct à support long terme pour l\'ancienne ligne Kreuzberg.' },
         ],
@@ -874,9 +878,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-ja.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'PDF、Officeファイル、スキャン、音声、Webページ、ソースコードを、RAGやLLMパイプライン向けのクリーンなテキストと構造化データに変換したい開発者（自分のハードウェア上でもAPI経由でも利用可）',
     primaryTerm: 'Xberg',
@@ -896,13 +900,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'Xbergは自分のマシンだけで完全に動かせますか？',
-        answer: 'ほぼ可能です。抽出、OCR、レイアウト検出、ローカル埋め込みはGPUなしでCPU上で動作します。ネットワークが必要なのは、URLの取得と、自分で選んだホスト型のLLMや埋め込みプロバイダーを使う場合だけです。LLMを使う抽出をローカルのモデルサーバーに向ければ、その処理もローカルに保てます。',
+        answer: 'ほぼ可能です。抽出、OCR、レイアウト検出、ローカル埋め込みはGPUなしでCPU上で動作します。ネットワークが必要なのは、URLの取得、初回利用時のモデル重みのダウンロード（ドキュメントによるとHugging Faceから取得）、そして自分で選んだホスト型のLLMや埋め込みプロバイダーを使う場合です。LLMを使う抽出をローカルのモデルサーバーに向ければ、その処理もローカルに保てます。',
         bullets: [
-          'リポジトリ：GitHubスター' + st.ja('xberg') + '、2026年10月30日に更新',
-          '現行リリース：v1.3.10（2026年10月13日タグ付け）。更新停止の警告は該当しません',
+          'リポジトリ：GitHubスター' + st.ja('xberg') + '、2026年11月18日に更新',
+          '現行リリース：v1.4.1（2026年11月16日タグ付け）。更新停止の警告は該当しません',
           'インターフェース：Python、Node.js、Rust、Go、Java、ほか9言語のライブラリに加え、CLI、REST API、MCPサーバー',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -911,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Xbergでできること', anchor: 'what-xberg-does' },
       { label: 'ローカルで動く部分と動かない部分', anchor: 'local-vs-network' },
       { label: 'Xbergの入手方法：インストールコマンド', anchor: 'download-links' },
-      { label: 'Xbergのライセンスと商用エディション', anchor: 'xberg-pricing' },
+      { label: 'Xbergのライセンスと商用オプション', anchor: 'xberg-pricing' },
       { label: 'Xbergが向いている人', anchor: 'who-should-use-xberg' },
       { label: '競合と代替ツール', anchor: 'competitors' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -926,11 +930,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xbergは渡されたほぼあらゆるファイルを読み取り、言語モデルや検索インデックスが使えるクリーンなテキスト、表、メタデータを返します。通常のプログラミングライブラリとして導入することも、小さなサーバーとして動かすこともできます。言語モデルで構造化された項目を取り出したい場合は、自分のコンピューターで動くモデルに接続できます。' },
         ],
         items: [
-          'ライブラリはMITライセンスで無料です。開発元はPro、Enterprise、マネージドのPlatformも販売していますが、いずれも価格は公開されていません',
+          'ライブラリはMITライセンスで無料です。開発元の料金ページに載っているのはオープンソースのライブラリと、価格を申込時に伝える招待制のデザインパートナープログラムのみで、ドキュメントにはPro版とEnterprise版の説明もあります',
           'Kreuzbergをリブランドしたもので、v1系として作り直されているため、以前のKreuzbergの記事も同じエンジンを説明しています',
           'ターミナルまたはコードが必要です。デスクトップ向けインストーラーはなく、導入は言語ごとに1コマンドです',
           '速度や精度のランキングは開発元自身のベンチマークによるもので、PromptQuorumは再現していません',
-          'ドキュメントには、完全オフラインで動作するか、初回起動時にモデルをダウンロードするか、テレメトリを送信するかが記載されていません',
+          'ドキュメントによると、一部のモデル重みは初回利用時にHugging Faceからダウンロードされ、ネットワークなしで使うにはallow_networkをfalseにして事前にキャッシュを用意する必要があります。開発元へのテレメトリ送信についての記載はありません',
         ],
       },
       overview: {
@@ -944,7 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ライセンス：MIT。リポジトリの[LICENSEファイル](https://github.com/xberg-io/xberg/blob/main/LICENSE)に基づきます',
           '開発元：サイトにはブランド名「Xberg」とGitHub組織のxberg-ioが表示され、[運営者情報（Imprint）](https://xberg.io/imprint)にはドイツ・ベルリンの住所とサイト責任者1名が記載されていますが、法人名や登録番号は記載されていません',
         ],
-        note: 'READMEと開発元の[ベンチマークページ](https://xberg.io/benchmarks)は、オープンソースで最速かつ最も高精度なPDFからMarkdownへの変換エンジンだと主張しています。これらは開発元の主張であり、PromptQuorumの測定ではありません。READMEとドキュメントは107形式、GitHubの説明文は106形式としています。',
+        note: 'READMEと開発元の[ベンチマークページ](https://xberg.io/benchmarks)は、オープンソースで最速かつ最も高精度なPDFからMarkdownへの変換エンジンだと主張しています。これらは開発元の主張であり、PromptQuorumの測定ではありません。READMEとドキュメントは107形式、トップページは101形式、GitHubの説明文は「100+」としています。',
       },
       features: {
         id: 'what-xberg-does',
@@ -966,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'ローカルで動く部分と動かない部分',
-        content: '**抽出、OCR、レイアウト解析、ONNX埋め込みは自分のCPU上で動作します。ネットワークが関わるのは、ホスト型プロバイダーを選ぶ場合、URLを取得する場合、開発元のライブデモを使う場合だけです。** ドキュメントでは、CPUを前提とし、GPUは不要と説明されています。',
+        content: '**READMEとドキュメントによると、抽出、OCR、レイアウト解析、ONNX埋め込みは自分のCPU上で動作します。ネットワークが関わるのは、ホスト型プロバイダーを選ぶ場合、URLを取得する場合、モデルの重みをダウンロードする場合、開発元のライブデモを使う場合だけです。** ドキュメントでは、CPUを前提とし、GPUは不要と説明されています。',
         itemHeadings: true,
         columns: ['工程', '実行場所'],
         rows: [
@@ -981,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プラットフォーム：ビルド済みバイナリはLinux（x86_64、aarch64）、Windows、Apple Siliconに対応しています。Intel MacではCLIとPythonホイールのみビルド済みパッケージがあります',
           'ブラウザ版：WebAssemblyパッケージは、ブラウザ、Deno、Cloudflare Workers、Node.js 22以降で動作しますが、LLMとVLMの機能は含まれません',
         ],
-        note: '未確認：モデルやOCRエンジンが初回起動時にダウンロードされるか、完全オフラインで動作するか、テレメトリを送信するかは、ドキュメントに記載がありません。頼る前に、ネットワークから隔離した環境で試してください。',
+        note: 'ドキュメントによると、一部の機能は初回利用時にHugging Faceからモデルの重みをダウンロードし（例：PaddleOCRと文字起こし）、allow_networkをfalseにして事前にキャッシュを用意すると、ネットワークなしで使うための自動ダウンロードが無効になります。PromptQuorumは未確認：ドキュメントにはオプションのOpenTelemetryトレースの記載はありますが、開発元へのテレメトリ送信についての記載はありません。いずれも頼る前に、ネットワークから隔離した環境で試してください。',
       },
       downloads: {
         id: 'download-links',
@@ -1002,15 +1006,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Xbergのライセンスと商用エディション',
-        content: '**ライブラリはMITライセンスで、個人・社内・商用のいずれでも無料で利用できます。開発元は有料エディションも提供していますが、価格は公開されていません。** 詳細は[xberg.io](https://xberg.io)とその[プライバシーポリシー](https://xberg.io/privacy)に基づきます。',
+        title: 'Xbergのライセンスと商用オプション',
+        content: '**ライブラリはMITライセンスで、個人・社内・商用のいずれでも無料で利用できます。開発元はマネージド型の提供について価格を公開していません。** 詳細は[料金ページ](https://xberg.io/pricing)、[ドキュメント](https://docs.xberg.io)、[プライバシーポリシー](https://xberg.io/privacy)に基づきます。',
         items: [
-          'Xberg Pro：セルフホストの単一コンテナ版。Xberg Enterprise：ガバナンスとサポートを備えた、Kubernetes上の分散版',
-          'Xberg Platform：利用量に応じた課金またはセルフホストのマネージドバックエンド。招待制のデザインパートナープログラムでは、24か月間価格が固定されます',
+          '料金ページ：選択肢は2つで、無料でセルフホストできるオープンソースのライブラリと、24か月間の価格固定・ロードマップへの直接の意見・早期アクセスが付く招待制のデザインパートナープログラムです。価格は申込時の面談で伝えられます',
+          'エディション：ドキュメントにはXberg Pro（セルフホスト、単一コンテナ）とXberg Enterprise（Kubernetes上の分散型、ガバナンスとサポート付き）の説明もあり、トップページはXberg Platformをマネージドバックエンドと説明しています。いずれも価格は公開されていません',
+          '無料アクセス：料金ページによると、開発元の裁量で、非営利団体・研究プロジェクト・初期段階の組織に対し、帰属表示と引き換えに無料アクセスが提供される場合があります',
           'ウェブサイトのプライバシー：2026年5月21日付のポリシーは、管理者として「Xberg」を挙げていますが、法人名は記載しておらず、分析はCookie同意がある場合のみ行うとしています',
           'ポリシーには、オープンソースのライブラリが開発元にデータを送信するかどうかについての記載はありません',
         ],
-        note: '有料エディションの価格はいずれも公開されていないため、開発元に見積もりを依頼してください。ライブデモは1ページ、1 MB未満、1つのIPアドレスにつき10回までに制限されています。',
+        note: 'マネージド型の提供について価格は公開されていません。デザインパートナープログラムでは申込時の面談で価格が伝えられます。ライブデモは1ページ、1 MB未満、1つのIPアドレスにつき10回までに制限されています。',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -1029,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '他のツールを検討したほうがよいケース',
             list: [
               '文書とチャットできる、操作しやすいアプリが欲しい',
-              'オフライン動作とテレメトリについて、文書化された保証が今すぐ必要',
+              'テレメトリについて、開発元の文書による明確な説明が今すぐ必要',
               '法人名が明確で、エンタープライズ向け価格が公開されているベンダーが必要',
             ],
           },
@@ -1064,11 +1069,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'エディション、比較表、ライブデモの注意事項を掲載した公式サイト。' },
+          { url: 'https://xberg.io', title: 'Xberg', description: '料金ページ、製品概要、ライブデモの注意事項を掲載した公式サイト。' },
           { url: 'https://docs.xberg.io', title: 'Xbergドキュメント', description: '概要、インストールガイド、CLI、各言語のリファレンス。' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Xbergインストールガイド', description: 'インストールコマンド、システム要件、対応プラットフォーム。' },
           { url: 'https://github.com/xberg-io/xberg', title: 'GitHubのxberg-io/xberg', description: 'ソースリポジトリとREADME。MITライセンス。' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Xberg v1.3.10リリース', description: '最新のタグ付きリリース。2026年10月13日公開。' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Xberg v1.4.1リリース', description: '最新のタグ付きリリース。2026年11月16日公開。' },
           { url: 'https://xberg.io/privacy', title: 'Xbergのプライバシーポリシー', description: 'ウェブサイトのデータ収集と管理者に関する記載。2026年5月21日付。' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'GitHubのkreuzberg-lts', description: '旧Kreuzberg系列の、別個の長期サポート用リポジトリ。' },
         ],
@@ -1089,9 +1094,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-zh.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: '需要把PDF、Office文件、扫描件、音频、网页或源代码转换为干净文本和结构化数据，用于RAG和LLM流水线的开发者，可在自有硬件上运行，也可通过API使用',
     primaryTerm: 'Xberg',
@@ -1111,13 +1116,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'Xberg能完全运行在我自己的机器上吗？',
-        answer: '基本可以。提取、OCR、版面检测和本地嵌入都在CPU上运行，不需要GPU。只有抓取URL，以及使用你自己选择的托管LLM或嵌入服务时才需要网络；把依赖LLM的提取指向本地模型服务器，这一步也可以保持在本地。',
+        answer: '基本可以。提取、OCR、版面检测和本地嵌入都在CPU上运行，不需要GPU。抓取URL、首次使用时下载模型权重（文档称来自Hugging Face），以及使用你自己选择的托管LLM或嵌入服务时才需要网络；把依赖LLM的提取指向本地模型服务器，这一步也可以保持在本地。',
         bullets: [
-          '仓库：GitHub星标' + st.zh('xberg') + '，最近更新于2026年10月30日',
-          '当前版本：v1.3.10，标签日期为2026年10月13日，因此不触发项目停更警告',
+          '仓库：GitHub星标' + st.zh('xberg') + '，最近更新于2026年11月18日',
+          '当前版本：v1.4.1，标签日期为2026年11月16日，因此不触发项目停更警告',
           '接口：Python、Node.js、Rust、Go、Java及另外九种语言的库，另有命令行工具、REST API和MCP服务器',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1126,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Xberg能做什么？', anchor: 'what-xberg-does' },
       { label: '哪些在本地运行，哪些不在', anchor: 'local-vs-network' },
       { label: '获取Xberg：安装命令', anchor: 'download-links' },
-      { label: 'Xberg许可证与商业版本', anchor: 'xberg-pricing' },
+      { label: 'Xberg许可证与商业选项', anchor: 'xberg-pricing' },
       { label: '谁适合使用Xberg？', anchor: 'who-should-use-xberg' },
       { label: '竞品与替代方案', anchor: 'competitors' },
       { label: '常见问题', anchor: 'faq' },
@@ -1141,11 +1146,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xberg几乎能读取你交给它的任何文件，并返回语言模型或搜索索引可以直接使用的干净文本、表格和元数据。你可以像普通编程库一样安装它，也可以把它作为小型服务器运行。如果想用语言模型提取结构化字段，可以把它指向运行在你自己电脑上的模型。' },
         ],
         items: [
-          '该库采用MIT许可证，可免费使用；开发方还销售Pro、Enterprise和托管的Platform版本，均未公布价格',
+          '该库采用MIT许可证，可免费使用；开发方的定价页面只列出开源库和仅限受邀参加、价格在申请时告知的设计合作伙伴计划，而文档中还介绍了Pro和Enterprise版本',
           '它是Kreuzberg的品牌更新版，以全新的v1系列重新构建，因此早期介绍Kreuzberg的文章描述的是同一个引擎',
           '使用时需要终端或代码：没有桌面安装程序，每种语言只需一条安装命令',
           '速度和准确率排名来自开发方自己的基准测试，PromptQuorum没有复现',
-          '文档没有说明它能否完全离线运行、首次运行时是否会下载模型，也没有说明是否发送遥测数据',
+          '文档称，部分模型权重会在首次使用时从Hugging Face下载，离线使用需要把allow_network设为false并预先填充缓存；文档没有说明是否向开发方发送遥测数据',
         ],
       },
       overview: {
@@ -1159,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '许可证：MIT，依据仓库中的[LICENSE文件](https://github.com/xberg-io/xberg/blob/main/LICENSE)',
           '开发方：网站显示品牌“Xberg”和GitHub组织xberg-io；其[法律声明页](https://xberg.io/imprint)给出了德国柏林的地址并列出一位网站负责人，但没有法人实体名称或注册号',
         ],
-        note: 'README和开发方的[基准测试页面](https://xberg.io/benchmarks)声称这是最快、最精确的开源PDF转Markdown引擎。这些是厂商的说法，不是PromptQuorum的测量结果。README和文档统计为107种格式，而GitHub简介写的是106种。',
+        note: 'README和开发方的[基准测试页面](https://xberg.io/benchmarks)声称这是最快、最精确的开源PDF转Markdown引擎。这些是厂商的说法，不是PromptQuorum的测量结果。README和文档统计为107种格式，首页写的是101种，GitHub简介写的是“100+”。',
       },
       features: {
         id: 'what-xberg-does',
@@ -1181,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: '哪些在本地运行，哪些不在',
-        content: '**提取、OCR、版面分析和ONNX嵌入都在你自己的CPU上运行；只有在你选择托管服务、抓取URL或使用开发方的在线演示时才会涉及网络。** 文档称该引擎以CPU优先，不需要GPU。',
+        content: '**据README和文档，提取、OCR、版面分析和ONNX嵌入都在你自己的CPU上运行；只有在你选择托管服务、抓取URL、下载模型权重或使用开发方的在线演示时才会涉及网络。** 文档称该引擎以CPU优先，不需要GPU。',
         itemHeadings: true,
         columns: ['步骤', '运行位置'],
         rows: [
@@ -1196,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '平台：预编译二进制文件覆盖Linux（x86_64、aarch64）、Windows和Apple Silicon；Intel Mac仅有命令行工具和Python wheel的预编译包',
           '浏览器版本：WebAssembly包可在浏览器、Deno、Cloudflare Workers和Node.js 22及以上版本中运行，但不包含LLM和VLM功能',
         ],
-        note: '未核实：文档没有说明模型或OCR引擎是否在首次运行时下载、引擎能否完全离线运行，也没有说明是否发送遥测数据。在依赖这些之前，请在隔离网络的副本上测试。',
+        note: '文档称，部分功能会在首次使用时从Hugging Face下载模型权重（例如PaddleOCR和转写），将allow_network设为false并预先填充缓存即可关闭自动下载，用于离线环境。PromptQuorum未核实：文档介绍了可选的OpenTelemetry追踪，但没有说明是否向开发方发送遥测数据。在依赖其中任何一项之前，请在隔离网络的副本上测试。',
       },
       downloads: {
         id: 'download-links',
@@ -1217,15 +1222,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Xberg许可证与商业版本',
-        content: '**该库采用MIT许可证，个人、内部和商业用途均可免费使用；开发方还提供付费版本，但未公布价格。** 详情来自[xberg.io](https://xberg.io)及其[隐私政策](https://xberg.io/privacy)。',
+        title: 'Xberg许可证与商业选项',
+        content: '**该库采用MIT许可证，个人、内部和商业用途均可免费使用；开发方未公布任何托管服务的价格。** 详情来自[定价页面](https://xberg.io/pricing)、[文档](https://docs.xberg.io)和[隐私政策](https://xberg.io/privacy)。',
         items: [
-          'Xberg Pro：自托管的单容器版本；Xberg Enterprise：运行在Kubernetes上、带有治理和支持服务的分布式版本',
-          'Xberg Platform：按用量计费或自托管的托管后端；仅限受邀参加的设计合作伙伴计划提供24个月的锁定价格',
+          '定价页面：提供两种选择，即可免费自托管的开源库，以及仅限受邀参加的设计合作伙伴计划（24个月锁定价格、直接参与路线图、抢先体验）；价格在申请沟通时告知',
+          '版本：文档还介绍了Xberg Pro（自托管，单容器）和Xberg Enterprise（运行在Kubernetes上的分布式版本，带有治理和支持服务），首页将Xberg Platform称为托管后端；其中任何一项都未公布价格',
+          '免费使用：定价页面称，开发方可自行决定向非营利组织、研究项目和早期组织提供免费使用权限，条件是署名致谢',
           '网站隐私：该政策注明日期为2026年5月21日，将“Xberg”列为数据控制者，但没有写明法人实体名称，并称只有在获得Cookie同意后才会进行分析',
           '该政策没有说明开源库是否会向开发方发送数据',
         ],
-        note: '所有付费版本均未公布价格，请向开发方索取报价。在线演示限制为1页、小于1 MB，且每个IP地址最多运行10次。',
+        note: '所有托管服务均未公布价格；设计合作伙伴计划在申请沟通时告知价格。在线演示限制为1页、小于1 MB，且每个IP地址最多运行10次。',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -1244,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '更适合选择其他工具的情况',
             list: [
               '想要一个点击即用、可与文档对话的应用',
-              '现在就需要有文档记载的离线和遥测保证',
+              '现在就需要开发方提供书面的遥测说明',
               '需要有明确法人实体并公布企业定价的供应商',
             ],
           },
@@ -1279,11 +1285,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: '官方网站，包含版本、对比表和在线演示说明。' },
+          { url: 'https://xberg.io', title: 'Xberg', description: '官方网站，包含定价页面、产品概览和在线演示说明。' },
           { url: 'https://docs.xberg.io', title: 'Xberg文档', description: '概述、安装指南、命令行工具和各语言参考。' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Xberg安装指南', description: '安装命令、系统要求和平台支持。' },
           { url: 'https://github.com/xberg-io/xberg', title: 'GitHub上的xberg-io/xberg', description: '源码仓库和README；MIT许可证。' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Xberg v1.3.10发布', description: '最新的带标签版本，发布于2026年10月13日。' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Xberg v1.4.1发布', description: '最新的带标签版本，发布于2026年11月16日。' },
           { url: 'https://xberg.io/privacy', title: 'Xberg隐私政策', description: '网站数据收集与数据控制者声明，注明日期为2026年5月21日。' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'GitHub上的kreuzberg-lts', description: '前Kreuzberg系列的独立长期支持仓库。' },
         ],
@@ -1304,9 +1310,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-pt.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que precisam transformar PDFs, arquivos do Office, digitalizações, áudio, páginas da web ou código-fonte em texto limpo e dados estruturados para pipelines de RAG e LLM, no próprio hardware ou por meio de uma API',
     primaryTerm: 'Xberg',
@@ -1326,13 +1332,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O Xberg roda totalmente no meu próprio computador?',
-        answer: 'Na maior parte. Extração, OCR, detecção de layout e embeddings locais rodam na CPU, sem GPU. A rede só é necessária para buscar URLs e para qualquer provedor hospedado de LLM ou de embeddings que você escolher; se você apontar a extração com LLM para um servidor de modelos local, essa etapa também fica local.',
+        answer: 'Na maior parte. Extração, OCR, detecção de layout e embeddings locais rodam na CPU, sem GPU. A rede é necessária para buscar URLs, para baixar os pesos dos modelos no primeiro uso (segundo a documentação, do Hugging Face) e para qualquer provedor hospedado de LLM ou de embeddings que você escolher; se você apontar a extração com LLM para um servidor de modelos local, essa etapa também fica local.',
         bullets: [
-          'Repositório: ' + st.pt('xberg') + ' estrelas no GitHub, atualizado pela última vez em 30 de outubro de 2026',
-          'Versão atual: v1.3.10, marcada em 13 de outubro de 2026, portanto não se aplica nenhum aviso de projeto inativo',
+          'Repositório: ' + st.pt('xberg') + ' estrelas no GitHub, atualizado pela última vez em 18 de novembro de 2026',
+          'Versão atual: v1.4.1, marcada em 16 de novembro de 2026, portanto não se aplica nenhum aviso de projeto inativo',
           'Interfaces: bibliotecas para Python, Node.js, Rust, Go, Java e mais nove linguagens, além de uma CLI, uma API REST e um servidor MCP',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1341,7 +1347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que você pode fazer com o Xberg?', anchor: 'what-xberg-does' },
       { label: 'O que roda localmente e o que não roda', anchor: 'local-vs-network' },
       { label: 'Como obter o Xberg: comandos de instalação', anchor: 'download-links' },
-      { label: 'Licença do Xberg e edições comerciais', anchor: 'xberg-pricing' },
+      { label: 'Licença do Xberg e opções comerciais', anchor: 'xberg-pricing' },
       { label: 'Para quem é o Xberg?', anchor: 'who-should-use-xberg' },
       { label: 'Concorrentes e alternativas', anchor: 'competitors' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -1356,11 +1362,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'O Xberg lê quase qualquer arquivo que você der a ele e devolve texto limpo, tabelas e metadados que um modelo de linguagem ou um índice de busca conseguem usar. Você o instala como uma biblioteca de programação comum ou o executa como um pequeno servidor. Se quiser que ele extraia campos estruturados com um modelo de linguagem, você pode apontá-lo para um modelo rodando no seu próprio computador.' },
         ],
         items: [
-          'A biblioteca é gratuita sob a licença MIT; o desenvolvedor também vende Pro, Enterprise e uma Platform gerenciada, nenhuma com preços públicos',
+          'A biblioteca é gratuita sob a licença MIT; a página de preços do desenvolvedor lista apenas as bibliotecas de código aberto e um programa de parceiros de design apenas por convite, com preços informados na candidatura, enquanto a documentação também descreve edições Pro e Enterprise',
           'É a mudança de marca do Kreuzberg, reconstruído sob uma nova linha v1, então textos antigos sobre o Kreuzberg descrevem o mesmo mecanismo',
           'Exige terminal ou código: não há instalador de desktop e a instalação é um comando por linguagem',
           'Os rankings de velocidade e precisão vêm dos benchmarks do próprio desenvolvedor e não foram reproduzidos pelo PromptQuorum',
-          'A documentação não esclarece se ele funciona totalmente offline, se baixa modelos na primeira execução ou se envia telemetria',
+          'Segundo a documentação, alguns pesos de modelos são baixados do Hugging Face no primeiro uso, e o uso sem rede exige allow_network em false e um cache preenchido antes; ela não diz nada sobre telemetria enviada ao desenvolvedor',
         ],
       },
       overview: {
@@ -1374,7 +1380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licença: MIT, conforme o [arquivo LICENSE](https://github.com/xberg-io/xberg/blob/main/LICENSE) do repositório',
           'Desenvolvedor: o site mostra a marca "Xberg" e a organização do GitHub xberg-io; o [aviso legal](https://xberg.io/imprint) informa um endereço em Berlim (Alemanha) e nomeia uma pessoa responsável pelo site, mas não o nome de uma entidade legal nem um número de registro',
         ],
-        note: 'O README e a [página de benchmarks](https://xberg.io/benchmarks) do desenvolvedor afirmam que é o mecanismo de código aberto de PDF para Markdown mais rápido e preciso. São afirmações do fabricante, não medições do PromptQuorum. O README e a documentação contam 107 formatos, enquanto a descrição do GitHub diz 106.',
+        note: 'O README e a [página de benchmarks](https://xberg.io/benchmarks) do desenvolvedor afirmam que é o mecanismo de código aberto de PDF para Markdown mais rápido e preciso. São afirmações do fabricante, não medições do PromptQuorum. O README e a documentação contam 107 formatos, a página inicial indica 101 e a descrição do GitHub diz "100+".',
       },
       features: {
         id: 'what-xberg-does',
@@ -1396,7 +1402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'O que roda localmente e o que não roda',
-        content: '**Extração, OCR, layout e embeddings ONNX rodam na sua própria CPU; a rede entra apenas se você escolher um provedor hospedado, buscar uma URL ou usar a demonstração ao vivo do desenvolvedor.** A documentação descreve o mecanismo como voltado para CPU, sem necessidade de GPU.',
+        content: '**Segundo o README e a documentação, extração, OCR, layout e embeddings ONNX rodam na sua própria CPU; a rede entra apenas se você escolher um provedor hospedado, buscar uma URL, baixar pesos de modelos ou usar a demonstração ao vivo do desenvolvedor.** A documentação descreve o mecanismo como voltado para CPU, sem necessidade de GPU.',
         itemHeadings: true,
         columns: ['Etapa', 'Onde roda'],
         rows: [
@@ -1411,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plataformas: os binários pré-compilados cobrem Linux (x86_64, aarch64), Windows e Apple Silicon; Macs com Intel só têm pacotes pré-compilados para a CLI e o wheel do Python',
           'Versão para navegador: o pacote WebAssembly roda em navegadores, Deno, Cloudflare Workers e Node.js 22 ou posterior, sem os recursos de LLM e VLM',
         ],
-        note: 'Não verificado: a documentação não esclarece se modelos ou motores de OCR são baixados na primeira execução, se o mecanismo funciona totalmente offline ou se envia telemetria. Teste isso em uma cópia isolada da rede antes de depender disso.',
+        note: 'Segundo a documentação, algumas funções baixam pesos de modelos do Hugging Face no primeiro uso (por exemplo, PaddleOCR e transcrição), e com allow_network em false e um cache preenchido antes os downloads automáticos são desativados para o uso sem rede. Não verificado pelo PromptQuorum: a documentação descreve rastreamento OpenTelemetry opcional, mas não diz nada sobre telemetria enviada ao desenvolvedor. Teste uma cópia isolada da rede antes de depender de qualquer um desses pontos.',
       },
       downloads: {
         id: 'download-links',
@@ -1432,15 +1438,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Licença do Xberg e edições comerciais',
-        content: '**A biblioteca é gratuita sob a licença MIT para uso pessoal, interno e comercial; o desenvolvedor também oferece edições pagas sem preços publicados.** Os detalhes vêm de [xberg.io](https://xberg.io) e da sua [política de privacidade](https://xberg.io/privacy).',
+        title: 'Licença do Xberg e opções comerciais',
+        content: '**A biblioteca é gratuita sob a licença MIT para uso pessoal, interno e comercial; o desenvolvedor não publica preços de nenhuma oferta gerenciada.** Os detalhes vêm da [página de preços](https://xberg.io/pricing), da [documentação](https://docs.xberg.io) e da [política de privacidade](https://xberg.io/privacy).',
         items: [
-          'Xberg Pro: uma edição auto-hospedada de um único contêiner; Xberg Enterprise: uma edição distribuída em Kubernetes com governança e suporte',
-          'Xberg Platform: um backend gerenciado com preço por uso ou auto-hospedagem; um programa de parceiros de design apenas por convite oferece preços travados por 24 meses',
+          'Página de preços: duas opções, as bibliotecas de código aberto gratuitas e auto-hospedadas, e um programa de parceiros de design apenas por convite com preços travados por 24 meses, influência direta no roadmap e acesso antecipado; os preços são informados na conversa de candidatura',
+          'Edições: a documentação descreve também o Xberg Pro (auto-hospedado, em um único contêiner) e o Xberg Enterprise (distribuído em Kubernetes, com governança e suporte), e a página inicial chama o Xberg Platform de backend gerenciado; não há preço publicado para essas ofertas',
+          'Acesso gratuito: segundo a página de preços, o desenvolvedor pode conceder acesso gratuito, a seu critério, a organizações sem fins lucrativos, projetos de pesquisa e organizações em estágio inicial, em troca de atribuição',
           'Privacidade do site: a política, datada de 21 de maio de 2026, nomeia "Xberg" como controlador sem indicar o nome de uma entidade legal, e diz que a análise de uso só roda com consentimento de cookies',
           'A política não faz nenhuma declaração sobre a biblioteca de código aberto enviar dados ao desenvolvedor',
         ],
-        note: 'Nenhum preço é publicado para as edições pagas, então peça um orçamento ao desenvolvedor. A demonstração ao vivo é limitada a uma página, menos de 1 MB e 10 execuções por endereço IP.',
+        note: 'Nenhum preço é publicado para ofertas gerenciadas; o programa de parceiros de design informa os preços na conversa de candidatura. A demonstração ao vivo é limitada a uma página, menos de 1 MB e 10 execuções por endereço IP.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -1459,7 +1466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Procure outra opção se você',
             list: [
               'Quer um aplicativo de apontar e clicar para conversar com seus documentos',
-              'Precisa hoje de garantias documentadas de funcionamento offline e de telemetria',
+              'Precisa hoje de uma declaração escrita do desenvolvedor sobre telemetria',
               'Precisa de um fornecedor com entidade legal identificada e preços empresariais publicados',
             ],
           },
@@ -1494,11 +1501,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'Site oficial com edições, tabela comparativa e notas sobre a demonstração ao vivo.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: 'Site oficial com página de preços, visão geral dos produtos e notas sobre a demonstração ao vivo.' },
           { url: 'https://docs.xberg.io', title: 'Documentação do Xberg', description: 'Visão geral, guia de instalação, CLI e referências por linguagem.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Guia de instalação do Xberg', description: 'Comandos de instalação, requisitos do sistema e plataformas compatíveis.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'xberg-io/xberg no GitHub', description: 'Repositório de código e README; licença MIT.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Versão v1.3.10 do Xberg', description: 'Última versão marcada, publicada em 13 de outubro de 2026.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Versão v1.4.1 do Xberg', description: 'Última versão marcada, publicada em 16 de novembro de 2026.' },
           { url: 'https://xberg.io/privacy', title: 'Política de privacidade do Xberg', description: 'Coleta de dados do site e declaração sobre o controlador, datada de 21 de maio de 2026.' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'kreuzberg-lts no GitHub', description: 'Repositório separado de suporte de longo prazo da antiga linha Kreuzberg.' },
         ],
@@ -1519,9 +1526,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-ar.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يحتاجون إلى تحويل ملفات PDF وOffice والمسوحات الضوئية والصوت وصفحات الويب أو الشيفرة المصدرية إلى نص نظيف وبيانات منظمة لمسارات RAG وLLM، على عتادهم الخاص أو عبر واجهة API',
     primaryTerm: 'Xberg',
@@ -1541,13 +1548,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل يعمل Xberg بالكامل على جهازي الخاص؟',
-        answer: 'في معظمه نعم. يعمل الاستخراج وOCR وكشف التخطيط والتضمينات المحلية على المعالج (CPU) دون الحاجة إلى GPU. لا تلزم الشبكة إلا لجلب عناوين URL ولأي مزوّد LLM أو تضمينات مستضاف تختاره؛ وتوجيه الاستخراج المعتمد على LLM إلى خادم نماذج محلي يُبقي هذه الخطوة محلية أيضًا.',
+        answer: 'في معظمه نعم. يعمل الاستخراج وOCR وكشف التخطيط والتضمينات المحلية على المعالج (CPU) دون الحاجة إلى GPU. تلزم الشبكة لجلب عناوين URL ولتنزيل أوزان النماذج عند أول استخدام (بحسب الوثائق من Hugging Face) ولأي مزوّد LLM أو تضمينات مستضاف تختاره؛ وتوجيه الاستخراج المعتمد على LLM إلى خادم نماذج محلي يُبقي هذه الخطوة محلية أيضًا.',
         bullets: [
-          'المستودع: ' + st.ar('xberg') + ' نجمة على GitHub، وآخر تحديث في 30 أكتوبر 2026',
-          'الإصدار الحالي: v1.3.10 بوسم بتاريخ 13 أكتوبر 2026، لذا لا ينطبق تحذير المشروع غير النشط',
+          'المستودع: ' + st.ar('xberg') + ' نجمة على GitHub، وآخر تحديث في 18 نوفمبر 2026',
+          'الإصدار الحالي: v1.4.1 بوسم بتاريخ 16 نوفمبر 2026، لذا لا ينطبق تحذير المشروع غير النشط',
           'الواجهات: مكتبات للغات Python وNode.js وRust وGo وJava وتسع لغات أخرى، إضافةً إلى أداة CLI وواجهة REST API وخادم MCP',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1556,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ماذا يمكنك أن تفعل بـ Xberg؟', anchor: 'what-xberg-does' },
       { label: 'ما الذي يعمل محليًا وما الذي لا يعمل', anchor: 'local-vs-network' },
       { label: 'الحصول على Xberg: أوامر التثبيت', anchor: 'download-links' },
-      { label: 'ترخيص Xberg والإصدارات التجارية', anchor: 'xberg-pricing' },
+      { label: 'ترخيص Xberg والخيارات التجارية', anchor: 'xberg-pricing' },
       { label: 'لمن يناسب Xberg؟', anchor: 'who-should-use-xberg' },
       { label: 'المنافسون والبدائل', anchor: 'competitors' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
@@ -1571,11 +1578,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'يقرأ Xberg أي ملف تقريبًا تعطيه إياه ويعيد نصًا نظيفًا وجداول وبيانات وصفية يستطيع نموذج لغوي أو فهرس بحث استخدامها. تثبّته كأي مكتبة برمجية عادية أو تشغّله كخادم صغير. وإذا أردت أن يستخرج حقولًا منظمة بمساعدة نموذج لغوي، فيمكنك توجيهه إلى نموذج يعمل على حاسوبك الخاص.' },
         ],
         items: [
-          'المكتبة مجانية بترخيص MIT؛ وتبيع الجهة المطورة أيضًا إصدارات Pro وEnterprise ومنصة مُدارة، دون أسعار معلنة',
+          'المكتبة مجانية بترخيص MIT؛ وتعرض صفحة الأسعار لدى الجهة المطورة المكتبات مفتوحة المصدر فقط وبرنامج شركاء التصميم بدعوة فقط الذي تُعرَف أسعاره عند التقديم، بينما تصف الوثائق أيضًا إصدارَي Pro وEnterprise',
           'هو إعادة تسمية لـ Kreuzberg أُعيد بناؤه ضمن خط v1 جديد، لذا فإن المقالات الأقدم عن Kreuzberg تصف المحرك نفسه',
           'يحتاج إلى طرفية أو شيفرة: لا يوجد مثبّت لسطح المكتب، والتثبيت أمر واحد لكل لغة',
           'تصنيفات السرعة والدقة مصدرها اختبارات الجهة المطورة نفسها، ولم يُعِد PromptQuorum إنتاجها',
-          'لا توضح الوثائق هل يعمل بالكامل دون اتصال، وهل تُنزَّل النماذج عند أول تشغيل، وهل يرسل بيانات القياس عن بُعد',
+          'بحسب الوثائق تُنزَّل بعض أوزان النماذج من Hugging Face عند أول استخدام، ويتطلب التشغيل دون شبكة ضبط allow_network على false مع تعبئة الذاكرة المؤقتة مسبقًا؛ ولا تذكر الوثائق شيئًا عن بيانات قياس تُرسل إلى الجهة المطورة',
         ],
       },
       overview: {
@@ -1589,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الترخيص: MIT، بحسب [ملف LICENSE](https://github.com/xberg-io/xberg/blob/main/LICENSE) في المستودع',
           'الجهة المطورة: يعرض الموقع العلامة «Xberg» ومنظمة GitHub باسم xberg-io؛ وتذكر [صفحة البيانات القانونية](https://xberg.io/imprint) عنوانًا في برلين بألمانيا وتسمّي شخصًا مسؤولًا عن الموقع، لكنها لا تذكر اسم كيان قانوني ولا رقم تسجيل',
         ],
-        note: 'يدّعي ملف README و[صفحة الاختبارات](https://xberg.io/benchmarks) لدى الجهة المطورة أنه أسرع محرك مفتوح المصدر لتحويل PDF إلى Markdown وأدقه. هذه ادعاءات من الجهة المطورة وليست قياسات أجراها PromptQuorum. ويذكر README والوثائق 107 صيغ، بينما يذكر وصف GitHub 106.',
+        note: 'يدّعي ملف README و[صفحة الاختبارات](https://xberg.io/benchmarks) لدى الجهة المطورة أنه أسرع محرك مفتوح المصدر لتحويل PDF إلى Markdown وأدقه. هذه ادعاءات من الجهة المطورة وليست قياسات أجراها PromptQuorum. ويذكر README والوثائق 107 صيغ، وتذكر الصفحة الرئيسية 101، بينما يذكر وصف GitHub «100+».',
       },
       features: {
         id: 'what-xberg-does',
@@ -1611,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: 'ما الذي يعمل محليًا وما الذي لا يعمل',
-        content: '**يعمل الاستخراج وOCR وتحليل التخطيط وتضمينات ONNX على المعالج (CPU) لديك؛ ولا تتدخل الشبكة إلا حيث تختار مزوّدًا مستضافًا أو تجلب عنوان URL أو تستخدم العرض التجريبي الحي للجهة المطورة.** وتصف الوثائق المحرك بأنه يعتمد على المعالج أولًا دون الحاجة إلى GPU.',
+        content: '**بحسب README والوثائق، يعمل الاستخراج وOCR وتحليل التخطيط وتضمينات ONNX على المعالج (CPU) لديك؛ ولا تتدخل الشبكة إلا حيث تختار مزوّدًا مستضافًا أو تجلب عنوان URL أو تنزّل أوزان النماذج أو تستخدم العرض التجريبي الحي للجهة المطورة.** وتصف الوثائق المحرك بأنه يعتمد على المعالج أولًا دون الحاجة إلى GPU.',
         itemHeadings: true,
         columns: ['الخطوة', 'مكان التشغيل'],
         rows: [
@@ -1626,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المنصات: تغطي الملفات الثنائية الجاهزة Linux (x86_64 وaarch64) وWindows وApple Silicon؛ وتحصل أجهزة Mac بمعالج Intel على حزم جاهزة لأداة CLI وعجلة Python فقط',
           'نسخة المتصفح: تعمل حزمة WebAssembly في المتصفحات وDeno وCloudflare Workers وNode.js 22 أو أحدث، دون ميزات LLM وVLM',
         ],
-        note: 'لم يُتحقق منه: لا توضح الوثائق هل تُنزَّل النماذج أو محركات OCR عند أول تشغيل، وهل يعمل المحرك بالكامل دون اتصال، وهل يرسل بيانات القياس عن بُعد. اختبر ذلك على نسخة معزولة عن الشبكة قبل الاعتماد عليه.',
+        note: 'بحسب الوثائق تنزّل بعض الميزات أوزان النماذج من Hugging Face عند أول استخدام (مثل PaddleOCR والتفريغ الصوتي)، وبضبط allow_network على false مع تعبئة الذاكرة المؤقتة مسبقًا تتعطل التنزيلات التلقائية للتشغيل دون شبكة. لم يتحقق منه PromptQuorum: تصف الوثائق تتبّع OpenTelemetry اختياريًا لكنها لا تذكر شيئًا عن بيانات قياس تُرسل إلى الجهة المطورة. اختبر نسخة معزولة عن الشبكة قبل الاعتماد على أي من ذلك.',
       },
       downloads: {
         id: 'download-links',
@@ -1647,15 +1654,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'ترخيص Xberg والإصدارات التجارية',
-        content: '**المكتبة مجانية بترخيص MIT للاستخدام الشخصي والداخلي والتجاري؛ وتقدّم الجهة المطورة أيضًا إصدارات مدفوعة دون أسعار منشورة.** التفاصيل مأخوذة من [xberg.io](https://xberg.io) و[سياسة الخصوصية](https://xberg.io/privacy) فيه.',
+        title: 'ترخيص Xberg والخيارات التجارية',
+        content: '**المكتبة مجانية بترخيص MIT للاستخدام الشخصي والداخلي والتجاري؛ ولا تنشر الجهة المطورة أسعارًا لأي عرض مُدار.** التفاصيل مأخوذة من [صفحة الأسعار](https://xberg.io/pricing) و[الوثائق](https://docs.xberg.io) و[سياسة الخصوصية](https://xberg.io/privacy).',
         items: [
-          'Xberg Pro: إصدار مستضاف ذاتيًا بحاوية واحدة؛ وXberg Enterprise: إصدار موزّع على Kubernetes مع الحوكمة والدعم',
-          'Xberg Platform: واجهة خلفية مُدارة تُسعَّر بحسب الاستخدام أو بالاستضافة الذاتية؛ وبرنامج شركاء التصميم بدعوة فقط ويقدّم أسعارًا مثبّتة لمدة 24 شهرًا',
+          'صفحة الأسعار: خياران، المكتبات مفتوحة المصدر المجانية القابلة للاستضافة الذاتية، وبرنامج شركاء التصميم بدعوة فقط مع أسعار مثبّتة لمدة 24 شهرًا وتأثير مباشر في خارطة الطريق ووصول مبكر؛ وتُعرَف الأسعار خلال محادثة التقديم',
+          'الإصدارات: تصف الوثائق أيضًا Xberg Pro (مستضاف ذاتيًا بحاوية واحدة) وXberg Enterprise (موزّع على Kubernetes مع الحوكمة والدعم)، وتصف الصفحة الرئيسية Xberg Platform بأنها واجهة خلفية مُدارة؛ ولا يُنشر سعر لأي منها',
+          'وصول مجاني: تذكر صفحة الأسعار أن الوصول المجاني متاح بتقدير الجهة المطورة للمنظمات غير الربحية ومشاريع البحث والمنظمات في مراحلها الأولى مقابل الإشارة إليها',
           'خصوصية الموقع: تسمّي السياسة، المؤرخة في 21 مايو 2026، «Xberg» جهةً مسؤولة عن البيانات دون ذكر اسم كيان قانوني، وتذكر أن التحليلات لا تعمل إلا بموافقة على ملفات تعريف الارتباط',
           'لا تتضمن السياسة أي بيان عن إرسال المكتبة مفتوحة المصدر بيانات إلى الجهة المطورة',
         ],
-        note: 'لا تُنشر أسعار لأي إصدار مدفوع، لذا اطلب عرض سعر من الجهة المطورة. العرض التجريبي الحي محدود بصفحة واحدة وأقل من 1 MB و10 تشغيلات لكل عنوان IP.',
+        note: 'لا تُنشر أسعار لأي عرض مُدار؛ ويحدد برنامج شركاء التصميم الأسعار في محادثة التقديم. العرض التجريبي الحي محدود بصفحة واحدة وأقل من 1 MB و10 تشغيلات لكل عنوان IP.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -1674,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'ابحث عن خيار آخر إذا كنت',
             list: [
               'تريد تطبيقًا بالنقر للدردشة مع مستنداتك',
-              'تحتاج اليوم إلى ضمانات موثّقة بشأن العمل دون اتصال والقياس عن بُعد',
+              'تحتاج اليوم إلى بيان مكتوب من الجهة المطورة بشأن القياس عن بُعد',
               'تحتاج إلى مورّد له كيان قانوني مسمّى وأسعار مؤسسية منشورة',
             ],
           },
@@ -1709,11 +1717,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: 'الموقع الرسمي مع الإصدارات وجدول المقارنة وملاحظات العرض التجريبي الحي.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: 'الموقع الرسمي مع صفحة الأسعار ونظرة عامة على المنتجات وملاحظات العرض التجريبي الحي.' },
           { url: 'https://docs.xberg.io', title: 'وثائق Xberg', description: 'نظرة عامة ودليل التثبيت وأداة CLI ومراجع اللغات.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'دليل تثبيت Xberg', description: 'أوامر التثبيت ومتطلبات النظام والمنصات المدعومة.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'xberg-io/xberg على GitHub', description: 'مستودع الشيفرة وملف README؛ ترخيص MIT.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'إصدار Xberg v1.3.10', description: 'أحدث إصدار موسوم، نُشر في 13 أكتوبر 2026.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'إصدار Xberg v1.4.1', description: 'أحدث إصدار موسوم، نُشر في 16 نوفمبر 2026.' },
           { url: 'https://xberg.io/privacy', title: 'سياسة خصوصية Xberg', description: 'جمع بيانات الموقع وبيان الجهة المسؤولة، بتاريخ 21 مايو 2026.' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'kreuzberg-lts على GitHub', description: 'مستودع دعم طويل الأمد منفصل لخط Kreuzberg السابق.' },
         ],
@@ -1734,9 +1742,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/xberg-review-hero-ko.webp',
     theme: 'RAG & Document Chat',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-30',
+    next_refresh_due: '2027-05-18',
     publishDate: '2026-10-30',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-18',
     educationalLevel: 'Intermediate',
     audience: 'PDF, Office 파일, 스캔본, 오디오, 웹 페이지, 소스 코드를 RAG 및 LLM 파이프라인용 깨끗한 텍스트와 구조화된 데이터로 변환해야 하며, 자체 하드웨어나 API로 사용하려는 개발자',
     primaryTerm: 'Xberg',
@@ -1756,13 +1764,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'Xberg를 내 컴퓨터에서만 완전히 실행할 수 있나요?',
-        answer: '대부분 가능합니다. 추출, OCR, 레이아웃 감지, 로컬 임베딩은 GPU 없이 CPU에서 실행됩니다. 네트워크는 URL을 가져올 때와 사용자가 선택한 호스팅 LLM 또는 임베딩 제공자를 쓸 때만 필요하며, LLM 기반 추출을 로컬 모델 서버로 연결하면 그 단계도 로컬에 머뭅니다.',
+        answer: '대부분 가능합니다. 추출, OCR, 레이아웃 감지, 로컬 임베딩은 GPU 없이 CPU에서 실행됩니다. 네트워크는 URL을 가져올 때, 처음 사용할 때 모델 가중치를 내려받을 때(문서에 따르면 Hugging Face에서 받음), 그리고 사용자가 선택한 호스팅 LLM 또는 임베딩 제공자를 쓸 때 필요하며, LLM 기반 추출을 로컬 모델 서버로 연결하면 그 단계도 로컬에 머뭅니다.',
         bullets: [
-          '저장소: GitHub 스타 ' + st.ko('xberg') + '개, 2026년 10월 30일에 마지막으로 업데이트',
-          '현재 릴리스: v1.3.10 (2026년 10월 13일 태그). 중단 프로젝트 경고는 해당하지 않습니다',
+          '저장소: GitHub 스타 ' + st.ko('xberg') + '개, 2026년 11월 18일에 마지막으로 업데이트',
+          '현재 릴리스: v1.4.1 (2026년 11월 16일 태그). 중단 프로젝트 경고는 해당하지 않습니다',
           '인터페이스: Python, Node.js, Rust, Go, Java 외 9개 언어 라이브러리와 CLI, REST API, MCP 서버',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1771,7 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Xberg로 무엇을 할 수 있나요?', anchor: 'what-xberg-does' },
       { label: '로컬에서 실행되는 부분과 그렇지 않은 부분', anchor: 'local-vs-network' },
       { label: 'Xberg 받기: 설치 명령', anchor: 'download-links' },
-      { label: 'Xberg 라이선스와 상용 에디션', anchor: 'xberg-pricing' },
+      { label: 'Xberg 라이선스와 상용 옵션', anchor: 'xberg-pricing' },
       { label: 'Xberg가 적합한 사용자', anchor: 'who-should-use-xberg' },
       { label: '경쟁 제품과 대안', anchor: 'competitors' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -1786,11 +1794,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Xberg는 건네준 거의 모든 파일을 읽어 언어 모델이나 검색 색인이 쓸 수 있는 깨끗한 텍스트, 표, 메타데이터로 돌려줍니다. 일반 프로그래밍 라이브러리처럼 설치하거나 작은 서버로 실행할 수 있습니다. 언어 모델로 구조화된 필드를 뽑고 싶다면 사용자의 컴퓨터에서 실행 중인 모델로 연결할 수 있습니다.' },
         ],
         items: [
-          '라이브러리는 MIT 라이선스로 무료이며, 개발사는 Pro, Enterprise, 관리형 Platform도 판매하지만 공개 가격은 없습니다',
+          '라이브러리는 MIT 라이선스로 무료이며, 개발사의 가격 페이지에는 오픈소스 라이브러리와 신청 시 가격을 안내하는 초대 전용 디자인 파트너 프로그램만 나와 있고, 문서에는 Pro와 Enterprise 에디션에 대한 설명도 있습니다',
           'Kreuzberg를 새 v1 계열로 다시 만든 리브랜딩이므로, 이전 Kreuzberg 관련 글도 같은 엔진을 다룹니다',
           '터미널이나 코드가 필요합니다. 데스크톱 설치 프로그램은 없고, 설치는 언어별 명령 한 줄입니다',
           '속도와 정확도 순위는 개발사 자체 벤치마크에서 나온 것이며 PromptQuorum이 재현하지 않았습니다',
-          '완전한 오프라인 동작, 첫 실행 시 모델 다운로드, 텔레메트리 전송 여부는 문서에 나와 있지 않습니다',
+          '문서에 따르면 일부 모델 가중치는 처음 사용할 때 Hugging Face에서 내려받으며, 네트워크 없이 쓰려면 allow_network를 false로 두고 캐시를 미리 채워야 합니다. 개발사로 전송되는 텔레메트리에 대한 언급은 없습니다',
         ],
       },
       overview: {
@@ -1804,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '라이선스: 저장소의 [LICENSE 파일](https://github.com/xberg-io/xberg/blob/main/LICENSE)에 따라 MIT입니다',
           '개발사: 사이트에는 브랜드 「Xberg」와 GitHub 조직 xberg-io가 표시되며, [사업자 정보(Imprint)](https://xberg.io/imprint)에는 독일 베를린 주소와 웹사이트 책임자 1명이 기재되어 있으나 법인명과 등록번호는 없습니다',
         ],
-        note: 'README와 개발사의 [벤치마크 페이지](https://xberg.io/benchmarks)는 가장 빠르고 정확한 오픈소스 PDF-Markdown 변환 엔진이라고 주장합니다. 이는 개발사의 주장이며 PromptQuorum의 측정값이 아닙니다. README와 문서는 107개 형식이라고 하지만 GitHub 설명에는 106개로 되어 있습니다.',
+        note: 'README와 개발사의 [벤치마크 페이지](https://xberg.io/benchmarks)는 가장 빠르고 정확한 오픈소스 PDF-Markdown 변환 엔진이라고 주장합니다. 이는 개발사의 주장이며 PromptQuorum의 측정값이 아닙니다. README와 문서는 107개 형식, 홈페이지는 101개, GitHub 설명은 「100+」로 안내합니다.',
       },
       features: {
         id: 'what-xberg-does',
@@ -1826,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localVsNetwork: {
         id: 'local-vs-network',
         title: '로컬에서 실행되는 부분과 그렇지 않은 부분',
-        content: '**추출, OCR, 레이아웃 분석, ONNX 임베딩은 사용자의 CPU에서 실행되며, 네트워크는 호스팅 제공자를 고르거나 URL을 가져오거나 개발사의 라이브 데모를 쓸 때만 관여합니다.** 문서는 이 엔진을 GPU 없이 CPU 우선으로 동작한다고 설명합니다.',
+        content: '**README와 문서에 따르면 추출, OCR, 레이아웃 분석, ONNX 임베딩은 사용자의 CPU에서 실행되며, 네트워크는 호스팅 제공자를 고르거나 URL을 가져오거나 모델 가중치를 내려받거나 개발사의 라이브 데모를 쓸 때만 관여합니다.** 문서는 이 엔진을 GPU 없이 CPU 우선으로 동작한다고 설명합니다.',
         itemHeadings: true,
         columns: ['단계', '실행 위치'],
         rows: [
@@ -1841,7 +1849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '플랫폼: 사전 빌드 바이너리는 Linux(x86_64, aarch64), Windows, Apple Silicon을 지원하며, Intel Mac은 CLI와 Python 휠만 사전 빌드가 제공됩니다',
           '브라우저 빌드: WebAssembly 패키지는 브라우저, Deno, Cloudflare Workers, Node.js 22 이상에서 실행되며 LLM 및 VLM 기능은 빠져 있습니다',
         ],
-        note: '확인하지 못한 사항: 문서에는 첫 실행 시 모델이나 OCR 엔진을 다운로드하는지, 엔진이 완전히 오프라인으로 동작하는지, 텔레메트리를 전송하는지가 나와 있지 않습니다. 의존하기 전에 네트워크가 차단된 복사본에서 테스트하십시오.',
+        note: '문서에 따르면 일부 기능은 처음 사용할 때 Hugging Face에서 모델 가중치를 내려받으며(예: PaddleOCR, 음성 변환), allow_network를 false로 두고 캐시를 미리 채우면 네트워크 없이 쓰기 위해 자동 다운로드가 꺼집니다. PromptQuorum이 확인하지 못한 사항: 문서에는 선택형 OpenTelemetry 추적에 대한 설명은 있지만 개발사로 전송되는 텔레메트리에 대한 언급은 없습니다. 어느 것이든 의존하기 전에 네트워크가 차단된 복사본에서 테스트하십시오.',
       },
       downloads: {
         id: 'download-links',
@@ -1862,15 +1870,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'xberg-pricing',
-        title: 'Xberg 라이선스와 상용 에디션',
-        content: '**라이브러리는 개인, 내부, 상업적 용도로 MIT 라이선스에 따라 무료이며, 개발사는 가격을 공개하지 않은 유료 에디션도 제공합니다.** 세부 내용은 [xberg.io](https://xberg.io)와 그 [개인정보 처리방침](https://xberg.io/privacy)에서 가져왔습니다.',
+        title: 'Xberg 라이선스와 상용 옵션',
+        content: '**라이브러리는 개인, 내부, 상업적 용도로 MIT 라이선스에 따라 무료이며, 개발사는 관리형 제공 서비스의 가격을 공개하지 않습니다.** 세부 내용은 [가격 페이지](https://xberg.io/pricing), [문서](https://docs.xberg.io), [개인정보 처리방침](https://xberg.io/privacy)에서 가져왔습니다.',
         items: [
-          'Xberg Pro: 자체 호스팅 단일 컨테이너 에디션, Xberg Enterprise: 거버넌스와 지원을 갖춘 Kubernetes 분산 에디션',
-          'Xberg Platform: 사용량 기준 또는 자체 호스팅으로 가격이 책정되는 관리형 백엔드이며, 초대 전용 디자인 파트너 프로그램은 24개월 가격 고정을 제공합니다',
+          '가격 페이지: 선택지는 두 가지로, 무료로 자체 호스팅할 수 있는 오픈소스 라이브러리와 24개월 가격 고정·로드맵 직접 의견 제시·조기 접근을 제공하는 초대 전용 디자인 파트너 프로그램입니다. 가격은 신청 상담에서 안내됩니다',
+          '에디션: 문서에는 Xberg Pro(자체 호스팅, 단일 컨테이너)와 Xberg Enterprise(Kubernetes 분산, 거버넌스와 지원 포함)에 대한 설명도 있고, 홈페이지는 Xberg Platform을 관리형 백엔드로 설명합니다. 이 중 어느 것도 가격이 공개되어 있지 않습니다',
+          '무료 이용: 가격 페이지에 따르면 개발사의 재량으로 비영리 단체, 연구 프로젝트, 초기 단계 조직에 출처 표기를 조건으로 무료 이용이 제공될 수 있습니다',
           '웹사이트 개인정보: 2026년 5월 21일자 방침은 「Xberg」를 법인명 없이 관리자로 표기하며, 분석은 쿠키 동의가 있을 때만 실행된다고 밝힙니다',
           '방침에는 오픈소스 라이브러리가 개발사로 데이터를 전송한다는 언급이 없습니다',
         ],
-        note: '유료 에디션의 가격은 공개되어 있지 않으므로 개발사에 견적을 문의하십시오. 라이브 데모는 한 페이지, 1 MB 미만, IP 주소당 10회로 제한됩니다.',
+        note: '관리형 제공 서비스의 가격은 공개되어 있지 않으며, 디자인 파트너 프로그램은 신청 상담에서 가격을 안내합니다. 라이브 데모는 한 페이지, 1 MB 미만, IP 주소당 10회로 제한됩니다.',
       },
       whoShouldUse: {
         id: 'who-should-use-xberg',
@@ -1889,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '다음과 같다면 다른 선택지를 찾아보십시오',
             list: [
               '문서와 대화하는 클릭형 앱을 원한다',
-              '오프라인 동작과 텔레메트리에 대한 문서화된 보증이 지금 필요하다',
+              '텔레메트리에 대한 개발사의 문서화된 설명이 지금 필요하다',
               '법인이 명시되고 엔터프라이즈 가격이 공개된 공급사가 필요하다',
             ],
           },
@@ -1924,11 +1933,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://xberg.io', title: 'Xberg', description: '에디션, 비교표, 라이브 데모 안내가 있는 공식 사이트.' },
+          { url: 'https://xberg.io', title: 'Xberg', description: '가격 페이지, 제품 개요, 라이브 데모 안내가 있는 공식 사이트.' },
           { url: 'https://docs.xberg.io', title: 'Xberg 문서', description: '개요, 설치 가이드, CLI, 언어별 레퍼런스.' },
           { url: 'https://docs.xberg.io/getting-started/installation/', title: 'Xberg 설치 가이드', description: '설치 명령, 시스템 요구 사항, 지원 플랫폼.' },
           { url: 'https://github.com/xberg-io/xberg', title: 'GitHub의 xberg-io/xberg', description: '소스 저장소와 README. MIT 라이선스.' },
-          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10', title: 'Xberg v1.3.10 릴리스', description: '2026년 10월 13일에 게시된 최신 태그 릴리스.' },
+          { url: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1', title: 'Xberg v1.4.1 릴리스', description: '2026년 11월 16일에 게시된 최신 태그 릴리스.' },
           { url: 'https://xberg.io/privacy', title: 'Xberg 개인정보 처리방침', description: '웹사이트 데이터 수집과 관리자 표기 (2026년 5월 21일자).' },
           { url: 'https://github.com/kreuzberg-dev/kreuzberg-lts', title: 'GitHub의 kreuzberg-lts', description: '이전 Kreuzberg 계열을 위한 별도의 장기 지원 저장소.' },
         ],

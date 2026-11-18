@@ -2,8 +2,9 @@
 // Added 2026-11-16 from an EXTERNAL research package (app_research.py, research-2026-11-16/packages/stirling-pdf), accepted as is for a process test.
 // Package facts (maker pages, GitHub, search notes) were NOT re-verified by PromptQuorum in this run, except where noted below.
 // Package last update: 2026-11-15 (GitHub last commit); latest release 3.3.0 dated 2026-11-05. 3-month stale warning is OFF.
-// Licence: MIT with exceptions (LICENSE says app/proprietary/, app/saas/ and engine/ carry separate licences; the engine/ clause was truncated in the package).
-// Not verified in the package: price amounts/tiers, RAM/GPU/disk/Java requirements, AI model + OCR engine, telemetry in the current version, account requirement, hosted service.
+// Licence: MIT with exceptions. Raw LICENSE read 2026-11-18: app/proprietary/, app/saas/, engine/, frontend/src/editor/{proprietary,desktop,saas,cloud}/ and frontend/src/processor/ carry separate licences (the engine/ clause is complete, not truncated); everything else is MIT.
+// UPDATE 2026-11-18: price amounts/tiers VERIFIED against stirlingpdf.com/pricing (see `price` comment); the older package note that prices are unpublished was wrong.
+// Still not verified:  RAM/GPU/disk/Java requirements, AI model + OCR engine, telemetry in the current version, account requirement, hosted service.
 // Mapping notes (package -> ToolRecord): categories/platforms were free text in the package and are mapped by hand; interfaces, locality, engine, worksWith, uses and hardware were
 // not in the package and are the minimum honest values (see inline comments).
 
@@ -19,7 +20,7 @@ export const app: ToolRecord = {
   worksWith: [], // not in package
   engine: 'builtin', // not in package; ships its own processing engine
   license: 'MIT with exceptions (open-core; some directories under separate licenses)',
-  price: 'freemium', // package price.model "open-core": free for individual use per the site, paid Server Plan / Enterprise with no published prices
+  price: 'freemium', // pricing page (stirlingpdf.com/pricing), read 2026-11-18: Free $0/month (1,000 monthly credits), Team $99/month (100 users), Enterprise custom, PDF Processor 1 cent per credit
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // package: RAM, GPU, disk, Java version not stated
   stars: 96675, // package value; refresh with npm run refresh-app-stars
   addedDate: '2026-11-16',
@@ -56,7 +57,7 @@ export const app: ToolRecord = {
   //   ocr true <- "50+ PDF tools - Edit, merge, split, sign, redact, convert, OCR, compress, and more."
   //   inputFormats, outputFormats, tableExtraction, boundingBoxes, languageBindings, mcp omitted: the README states none of them (shown as "—", never "no").
   compare: { ocr: true },
-  lastVerifiedDate: '2026-11-16',
+  lastVerifiedDate: '2026-11-18',
   lastUpstreamUpdate: '2026-11-15', // package: GitHub last commit
   lastUpstreamUpdateSource: 'https://github.com/Stirling-Tools/Stirling-PDF',
 }
