@@ -247,6 +247,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Does SoloMD send my notes anywhere?',
             a: 'Not by default, per the maker: notes stay in your folder, and AI requests go to the provider or local server you pick. The privacy policy adds that website and non-Apple-store builds send anonymous usage events unless you switch them off. Sync only reaches the services you configure.',
           },
+          {
+            q: 'What format does SoloMD use for notes?',
+            a: 'Plain .md files in a folder you choose, according to the README, so other Markdown editors can open them. The maker adds wikilinks, backlinks and YAML properties on top, plus drag-and-drop import of .docx, .pdf, .xlsx and .pptx files to Markdown. PromptQuorum has not tested the import.',
+          },
+          {
+            q: 'Which export formats does SoloMD offer?',
+            a: 'According to the README, the export centre covers PDF, Word (.docx), HTML, EPUB, LaTeX, ODT, RTF, plain text and Markdown, with no separate Pandoc install. PromptQuorum has not checked the fidelity of any export.',
+          },
+          {
+            q: 'How does SoloMD sync notes between devices?',
+            a: 'Per workspace, through iCloud Drive, OneDrive, WebDAV, S3-compatible storage, Syncthing or a Git host, according to the maker, with optional end-to-end encryption on your own storage. PromptQuorum did not test sync or audit the encryption.',
+          },
+          {
+            q: 'What is AutoGit in SoloMD?',
+            a: 'The maker describes it as a snapshot committed to a local Git repository inside the workspace on every save, with a visual diff and one-click rollback. libgit2 is built in, so no system Git is needed. PromptQuorum has not tested it.',
+          },
+          {
+            q: 'Which systems does SoloMD run on?',
+            a: 'According to the README: Windows 10 or later (x64 and ARM64), macOS 10.15 or later, Linux on x64 and ARM64, iOS 15 or later and Android 7 or later. The README publishes no RAM or GPU floor, and local-model needs depend on the server you run.',
+          },
+          {
+            q: 'Who maintains SoloMD, and is it still updated?',
+            a: 'The README describes one human maintainer and says the project is written, tested and released largely by Claude Code. The repository is young, and the pages PromptQuorum read name no company or country. Check the releases page for the latest version before you rely on it.',
+          },
+          {
+            q: 'What AI features does SoloMD have besides chat?',
+            a: 'According to the README: inline rewrite and translate for a selected passage, [[wikilink]] citations in the chat panel, and offline semantic search over the vault using an on-device embedder that, the maker says, needs no model download. PromptQuorum has not tested answer quality.',
+          },
         ],
       },
       verdict: {
@@ -521,6 +549,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Sendet SoloMD meine Notizen irgendwohin?',
             a: 'Laut Entwickler standardmäßig nicht: Notizen bleiben in Ihrem Ordner, und KI-Anfragen gehen an den gewählten Anbieter oder lokalen Server. Die Datenschutzerklärung ergänzt, dass Builds von der Website und aus Nicht-Apple-Stores anonyme Nutzungsereignisse senden, sofern Sie das nicht abschalten. Sync erreicht nur die Dienste, die Sie einrichten.',
+          },
+          {
+            q: 'Welches Format nutzt SoloMD für Notizen?',
+            a: 'Laut README einfache .md-Dateien in einem von Ihnen gewählten Ordner, sodass andere Markdown-Editoren sie öffnen können. Dazu kommen laut Entwickler Wikilinks, Backlinks und YAML-Eigenschaften sowie ein Drag-and-drop-Import von .docx-, .pdf-, .xlsx- und .pptx-Dateien nach Markdown. PromptQuorum hat den Import nicht getestet.',
+          },
+          {
+            q: 'Welche Exportformate bietet SoloMD?',
+            a: 'Laut README umfasst das Export-Center PDF, Word (.docx), HTML, EPUB, LaTeX, ODT, RTF, reinen Text und Markdown, ohne separate Pandoc-Installation. PromptQuorum hat die Qualität keines Exports geprüft.',
+          },
+          {
+            q: 'Wie synchronisiert SoloMD Notizen zwischen Geräten?',
+            a: 'Laut Entwickler pro Arbeitsbereich über iCloud Drive, OneDrive, WebDAV, S3-kompatiblen Speicher, Syncthing oder einen Git-Host, optional mit Ende-zu-Ende-Verschlüsselung auf Ihrem eigenen Speicher. PromptQuorum hat die Synchronisierung nicht getestet und die Verschlüsselung nicht geprüft.',
+          },
+          {
+            q: 'Was ist AutoGit in SoloMD?',
+            a: 'Der Entwickler beschreibt es so, dass bei jedem Speichern ein Snapshot in ein lokales Git-Repository im Arbeitsbereich committet wird, mit visuellem Diff und Rollback per Klick. libgit2 ist eingebaut, ein System-Git ist nicht nötig. PromptQuorum hat die Funktion nicht getestet.',
+          },
+          {
+            q: 'Auf welchen Systemen läuft SoloMD?',
+            a: 'Laut README auf Windows 10 oder neuer (x64 und ARM64), macOS 10.15 oder neuer, Linux (x64 und ARM64), iOS 15 oder neuer und Android 7 oder neuer. Das README nennt keine RAM- oder GPU-Untergrenze; der Bedarf lokaler Modelle hängt vom Server ab, den Sie betreiben.',
+          },
+          {
+            q: 'Wer pflegt SoloMD, und wird es noch aktualisiert?',
+            a: 'Das README nennt einen menschlichen Maintainer und gibt an, dass das Projekt überwiegend von Claude Code geschrieben, getestet und veröffentlicht wird. Das Repository ist jung, und auf den von PromptQuorum gelesenen Seiten sind weder Unternehmen noch Land genannt. Prüfen Sie die Releases-Seite auf die neueste Version, bevor Sie sich darauf verlassen.',
+          },
+          {
+            q: 'Welche KI-Funktionen bietet SoloMD außer dem Chat?',
+            a: 'Laut README das Umschreiben und Übersetzen einer markierten Passage direkt im Text, [[Wikilink]]-Quellenangaben im Chat-Panel und eine Offline-Semantiksuche über den Vault mit einem Embedder auf dem Gerät, der laut Entwickler keinen Modell-Download braucht. PromptQuorum hat die Antwortqualität nicht getestet.',
           },
         ],
       },
@@ -797,6 +853,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿SoloMD envía mis notas a algún sitio?',
             a: 'Por defecto no, según el desarrollador: las notas permanecen en tu carpeta y las solicitudes de IA van al proveedor o servidor local que elijas. La política de privacidad añade que las versiones del sitio web y de tiendas que no son de Apple envían eventos de uso anónimos salvo que los desactives. La sincronización solo llega a los servicios que configures.',
           },
+          {
+            q: '¿Qué formato usa SoloMD para las notas?',
+            a: 'Según el README, archivos .md sencillos en una carpeta que tú eliges, de modo que otros editores de Markdown puedan abrirlos. El desarrollador añade wikilinks, backlinks y propiedades YAML, además de la importación por arrastrar y soltar de archivos .docx, .pdf, .xlsx y .pptx a Markdown. PromptQuorum no ha probado la importación.',
+          },
+          {
+            q: '¿Qué formatos de exportación ofrece SoloMD?',
+            a: 'Según el README, el centro de exportación abarca PDF, Word (.docx), HTML, EPUB, LaTeX, ODT, RTF, texto sin formato y Markdown, sin instalar Pandoc aparte. PromptQuorum no ha comprobado la fidelidad de ninguna exportación.',
+          },
+          {
+            q: '¿Cómo sincroniza SoloMD las notas entre dispositivos?',
+            a: 'Por espacio de trabajo, mediante iCloud Drive, OneDrive, WebDAV, almacenamiento compatible con S3, Syncthing o un servicio Git, según el desarrollador, con cifrado de extremo a extremo opcional en tu propio almacenamiento. PromptQuorum no ha probado la sincronización ni auditado el cifrado.',
+          },
+          {
+            q: '¿Qué es AutoGit en SoloMD?',
+            a: 'El desarrollador lo describe como una instantánea que se guarda en un repositorio Git local del espacio de trabajo en cada guardado, con diferencias visuales y reversión con un clic. libgit2 viene integrado, así que no hace falta Git en el sistema. PromptQuorum no ha probado la función.',
+          },
+          {
+            q: '¿En qué sistemas funciona SoloMD?',
+            a: 'Según el README: Windows 10 o posterior (x64 y ARM64), macOS 10.15 o posterior, Linux (x64 y ARM64), iOS 15 o posterior y Android 7 o posterior. El README no publica un mínimo de RAM ni de GPU; las necesidades de los modelos locales dependen del servidor que uses.',
+          },
+          {
+            q: '¿Quién mantiene SoloMD y se sigue actualizando?',
+            a: 'El README describe a un único responsable humano y afirma que el proyecto está escrito, probado y publicado en gran parte por Claude Code. El repositorio es joven y las páginas que leyó PromptQuorum no nombran ninguna empresa ni país. Consulta la página de versiones para ver la última antes de confiar en él.',
+          },
+          {
+            q: '¿Qué funciones de IA tiene SoloMD además del chat?',
+            a: 'Según el README: reescritura y traducción en línea de un fragmento seleccionado, citas con [[wikilinks]] en el panel de chat y búsqueda semántica sin conexión sobre la bóveda con un modelo de incrustación en el propio equipo que, según el desarrollador, no requiere descargar ningún modelo. PromptQuorum no ha probado la calidad de las respuestas.',
+          },
         ],
       },
       verdict: {
@@ -1071,6 +1155,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'SoloMD envoie-t-il mes notes quelque part ?',
             a: 'Pas par défaut, selon le développeur : les notes restent dans votre dossier et les requêtes d\'IA vont au fournisseur ou au serveur local que vous choisissez. La politique de confidentialité ajoute que les versions du site et des boutiques hors Apple envoient des événements d\'usage anonymes sauf désactivation. La synchronisation n\'atteint que les services que vous configurez.',
+          },
+          {
+            q: 'Quel format SoloMD utilise-t-il pour les notes ?',
+            a: 'Selon le README, de simples fichiers .md dans un dossier de votre choix, que d\'autres éditeurs Markdown peuvent ouvrir. Le développeur y ajoute les wikilinks, les rétroliens et les propriétés YAML, ainsi que l\'import par glisser-déposer de fichiers .docx, .pdf, .xlsx et .pptx vers Markdown. PromptQuorum n\'a pas testé l\'import.',
+          },
+          {
+            q: 'Quels formats d\'export SoloMD propose-t-il ?',
+            a: 'Selon le README, le centre d\'export couvre PDF, Word (.docx), HTML, EPUB, LaTeX, ODT, RTF, texte brut et Markdown, sans installation séparée de Pandoc. PromptQuorum n\'a pas vérifié la fidélité des exports.',
+          },
+          {
+            q: 'Comment SoloMD synchronise-t-il les notes entre appareils ?',
+            a: 'Par espace de travail, via iCloud Drive, OneDrive, WebDAV, un stockage compatible S3, Syncthing ou un hébergeur Git, selon le développeur, avec un chiffrement de bout en bout facultatif sur votre propre stockage. PromptQuorum n\'a pas testé la synchronisation ni audité le chiffrement.',
+          },
+          {
+            q: 'Qu\'est-ce qu\'AutoGit dans SoloMD ?',
+            a: 'Le développeur le décrit comme un instantané enregistré à chaque sauvegarde dans un dépôt Git local de l\'espace de travail, avec comparaison visuelle et retour en arrière en un clic. libgit2 est intégré, aucun Git système n\'est requis. PromptQuorum n\'a pas testé cette fonction.',
+          },
+          {
+            q: 'Sur quels systèmes SoloMD fonctionne-t-il ?',
+            a: 'Selon le README : Windows 10 ou version ultérieure (x64 et ARM64), macOS 10.15 ou ultérieur, Linux (x64 et ARM64), iOS 15 ou ultérieur et Android 7 ou ultérieur. Le README ne publie aucun minimum de RAM ou de GPU ; les besoins des modèles locaux dépendent du serveur que vous utilisez.',
+          },
+          {
+            q: 'Qui maintient SoloMD, et le projet est-il encore mis à jour ?',
+            a: 'Le README décrit un seul mainteneur humain et indique que le projet est écrit, testé et publié en grande partie par Claude Code. Le dépôt est récent, et les pages lues par PromptQuorum ne nomment ni entreprise ni pays. Consultez la page des versions pour connaître la dernière version avant de vous y fier.',
+          },
+          {
+            q: 'Quelles fonctions d\'IA SoloMD propose-t-il en dehors du chat ?',
+            a: 'Selon le README : réécriture et traduction en ligne d\'un passage sélectionné, citations en [[wikilinks]] dans le panneau de chat et recherche sémantique hors ligne dans le coffre grâce à un modèle d\'embedding intégré qui, selon le développeur, ne demande aucun téléchargement. PromptQuorum n\'a pas testé la qualité des réponses.',
           },
         ],
       },
@@ -1347,6 +1459,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'SoloMDはノートをどこかに送信しますか？',
             a: '開発者によれば、標準では送信しません。ノートはフォルダ内に残り、AIリクエストは選んだ提供元かローカルサーバーに送られます。プライバシーポリシーには、ウェブサイトとApple以外のストアのビルドが、オフにしない限り匿名の利用イベントを送ると追記されています。同期は、自分で設定したサービスにのみ届きます。',
           },
+          {
+            q: 'SoloMDはメモをどの形式で保存しますか？',
+            a: 'READMEによれば、自分で選んだフォルダ内の通常の.mdファイルで、他のMarkdownエディタでも開けます。開発者は、ウィキリンク、バックリンク、YAMLプロパティ、そして.docx、.pdf、.xlsx、.pptxファイルをドラッグ＆ドロップでMarkdownに取り込む機能も挙げています。PromptQuorumはインポートを試していません。',
+          },
+          {
+            q: 'SoloMDはどんなエクスポート形式に対応していますか？',
+            a: 'READMEによれば、エクスポートセンターはPDF、Word（.docx）、HTML、EPUB、LaTeX、ODT、RTF、プレーンテキスト、Markdownに対応し、Pandocを別途インストールする必要はありません。PromptQuorumはどの形式の出力品質も確認していません。',
+          },
+          {
+            q: 'SoloMDはデバイス間でメモをどう同期しますか？',
+            a: '開発者によれば、ワークスペースごとにiCloud Drive、OneDrive、WebDAV、S3互換ストレージ、Syncthing、またはGitホスト経由で同期でき、自分のストレージ上で任意のエンドツーエンド暗号化も使えます。PromptQuorumは同期を試しておらず、暗号化の監査もしていません。',
+          },
+          {
+            q: 'SoloMDのAutoGitとは何ですか？',
+            a: '開発者の説明では、保存のたびにワークスペース内のローカルGitリポジトリへスナップショットをコミットし、視覚的な差分表示とワンクリックのロールバックを備えています。libgit2が組み込まれており、システムのGitは不要です。PromptQuorumはこの機能を試していません。',
+          },
+          {
+            q: 'SoloMDはどのOSで動きますか？',
+            a: 'READMEによれば、Windows 10以降（x64とARM64）、macOS 10.15以降、Linux（x64とARM64）、iOS 15以降、Android 7以降です。READMEにRAMやGPUの最低要件の記載はなく、ローカルモデルの要件は使用するサーバーによって変わります。',
+          },
+          {
+            q: 'SoloMDは誰が保守していて、今も更新されていますか？',
+            a: 'READMEでは、人間のメンテナーは1人で、プロジェクトの大部分をClaude Codeが書き、テストし、リリースしていると説明されています。リポジトリは新しく、PromptQuorumが読んだページには企業名も国名もありません。頼る前に、リリースページで最新バージョンを確認してください。',
+          },
+          {
+            q: 'SoloMDにはチャット以外のAI機能がありますか？',
+            a: 'READMEによれば、選択した部分のその場での書き換えと翻訳、チャットパネルでの[[wikilink]]形式の引用、そして端末内の埋め込みモデルによるボルトのオフラインセマンティック検索があります。開発者によれば、この埋め込みモデルはモデルのダウンロードが不要です。PromptQuorumは回答品質を試していません。',
+          },
         ],
       },
       verdict: {
@@ -1621,6 +1761,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'O SoloMD envia minhas notas para algum lugar?',
             a: 'Por padrão não, segundo o desenvolvedor: as notas ficam na sua pasta e as solicitações de IA vão para o provedor ou servidor local que você escolher. A política de privacidade acrescenta que as versões do site e de lojas que não são da Apple enviam eventos de uso anônimos, a menos que você os desative. A sincronização só alcança os serviços que você configurar.',
+          },
+          {
+            q: 'Qual formato o SoloMD usa para as notas?',
+            a: 'Segundo o README, arquivos .md simples em uma pasta que você escolhe, que outros editores de Markdown conseguem abrir. O desenvolvedor acrescenta wikilinks, backlinks e propriedades YAML, além da importação por arrastar e soltar de arquivos .docx, .pdf, .xlsx e .pptx para Markdown. A PromptQuorum não testou a importação.',
+          },
+          {
+            q: 'Quais formatos de exportação o SoloMD oferece?',
+            a: 'Segundo o README, a central de exportação cobre PDF, Word (.docx), HTML, EPUB, LaTeX, ODT, RTF, texto simples e Markdown, sem instalar o Pandoc à parte. A PromptQuorum não verificou a fidelidade de nenhuma exportação.',
+          },
+          {
+            q: 'Como o SoloMD sincroniza as notas entre dispositivos?',
+            a: 'Por espaço de trabalho, via iCloud Drive, OneDrive, WebDAV, armazenamento compatível com S3, Syncthing ou um serviço Git, segundo o desenvolvedor, com criptografia de ponta a ponta opcional no seu próprio armazenamento. A PromptQuorum não testou a sincronização nem auditou a criptografia.',
+          },
+          {
+            q: 'O que é o AutoGit no SoloMD?',
+            a: 'O desenvolvedor o descreve como um instantâneo salvo a cada gravação em um repositório Git local dentro do espaço de trabalho, com diferenças visuais e reversão com um clique. O libgit2 já vem embutido, então não é preciso ter o Git no sistema. A PromptQuorum não testou o recurso.',
+          },
+          {
+            q: 'Em quais sistemas o SoloMD funciona?',
+            a: 'Segundo o README: Windows 10 ou posterior (x64 e ARM64), macOS 10.15 ou posterior, Linux (x64 e ARM64), iOS 15 ou posterior e Android 7 ou posterior. O README não publica um mínimo de RAM nem de GPU; a necessidade dos modelos locais depende do servidor que você usa.',
+          },
+          {
+            q: 'Quem mantém o SoloMD e ele ainda recebe atualizações?',
+            a: 'O README descreve um único mantenedor humano e diz que o projeto é escrito, testado e lançado em grande parte pelo Claude Code. O repositório é jovem e as páginas lidas pela PromptQuorum não citam empresa nem país. Consulte a página de versões para ver a mais recente antes de depender dele.',
+          },
+          {
+            q: 'Quais recursos de IA o SoloMD tem além do chat?',
+            a: 'Segundo o README: reescrita e tradução no próprio texto de um trecho selecionado, citações com [[wikilinks]] no painel de chat e busca semântica offline no cofre, com um modelo de embeddings no próprio dispositivo que, segundo o desenvolvedor, não exige baixar nenhum modelo. A PromptQuorum não testou a qualidade das respostas.',
           },
         ],
       },
@@ -1897,6 +2065,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'SoloMD 会把我的笔记发送到别处吗？',
             a: '据开发者称默认不会：笔记保留在你的文件夹中，AI 请求发往你选择的服务商或本地服务器。隐私政策补充说明，官网和非 Apple 商店的版本会发送匿名使用事件，除非你关闭。同步只会到达你自己配置的服务。',
           },
+          {
+            q: 'SoloMD 用什么格式保存笔记？',
+            a: '据 README，笔记是你所选文件夹中的普通 .md 文件，其他 Markdown 编辑器也能打开。开发者还提到 wikilinks、反向链接、YAML 属性，以及把 .docx、.pdf、.xlsx 和 .pptx 文件拖放导入为 Markdown。PromptQuorum 未测试导入功能。',
+          },
+          {
+            q: 'SoloMD 支持哪些导出格式？',
+            a: '据 README，导出中心支持 PDF、Word (.docx)、HTML、EPUB、LaTeX、ODT、RTF、纯文本和 Markdown，无需另行安装 Pandoc。PromptQuorum 未检查任何导出格式的还原效果。',
+          },
+          {
+            q: 'SoloMD 如何在设备之间同步笔记？',
+            a: '据开发者称，按工作区通过 iCloud Drive、OneDrive、WebDAV、S3 兼容存储、Syncthing 或 Git 托管服务同步，并可在你自己的存储上启用可选的端到端加密。PromptQuorum 未测试同步，也未审计加密。',
+          },
+          {
+            q: 'SoloMD 的 AutoGit 是什么？',
+            a: '开发者称，每次保存都会把快照提交到工作区内的本地 Git 仓库，并提供可视化差异和一键回滚。内置了 libgit2，无需系统 Git。PromptQuorum 未测试该功能。',
+          },
+          {
+            q: 'SoloMD 可以在哪些系统上运行？',
+            a: '据 README：Windows 10 或更高版本（x64 和 ARM64）、macOS 10.15 或更高版本、Linux（x64 和 ARM64）、iOS 15 或更高版本以及 Android 7 或更高版本。README 未公布内存或 GPU 的最低要求，本地模型的需求取决于你运行的服务器。',
+          },
+          {
+            q: 'SoloMD 由谁维护，还在更新吗？',
+            a: 'README 称只有一位人类维护者，并表示项目主要由 Claude Code 编写、测试和发布。该仓库较新，PromptQuorum 阅读的页面中没有提到公司或国家。依赖它之前，请先在发布页面查看最新版本。',
+          },
+          {
+            q: 'SoloMD 除了对话还有哪些 AI 功能？',
+            a: '据 README：对所选段落进行就地改写和翻译，在对话面板中以 [[wikilink]] 形式引用笔记，以及借助设备端嵌入模型对笔记库进行离线语义搜索；开发者称该嵌入模型无需下载模型。PromptQuorum 未测试回答质量。',
+          },
         ],
       },
       verdict: {
@@ -2172,6 +2368,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يرسل SoloMD ملاحظاتي إلى مكان ما؟',
             a: 'ليس افتراضيًا بحسب المطوّر: تبقى الملاحظات في مجلدك، وتذهب طلبات الذكاء الاصطناعي إلى المزوّد أو الخادم المحلي الذي تختاره. وتضيف سياسة الخصوصية أن النسخ المحمّلة من الموقع ومن متاجر غير Apple ترسل أحداث استخدام مجهولة ما لم تعطّلها. ولا تصل المزامنة إلا إلى الخدمات التي تعدّها.',
           },
+          {
+            q: 'ما الصيغة التي يستخدمها SoloMD لحفظ الملاحظات؟',
+            a: 'بحسب README، ملفات .md عادية داخل مجلد تختاره، ويمكن لمحررات Markdown الأخرى فتحها. ويضيف المطوّر الروابط الويكي (wikilinks) والروابط الخلفية وخصائص YAML واستيراد ملفات .docx و.pdf و.xlsx و.pptx إلى Markdown بالسحب والإفلات. لم تختبر PromptQuorum الاستيراد.',
+          },
+          {
+            q: 'ما صيغ التصدير التي يقدّمها SoloMD؟',
+            a: 'بحسب README يشمل مركز التصدير PDF وWord (.docx) وHTML وEPUB وLaTeX وODT وRTF والنص العادي وMarkdown دون تثبيت Pandoc منفصل. لم تتحقق PromptQuorum من دقة أي تصدير.',
+          },
+          {
+            q: 'كيف يزامن SoloMD الملاحظات بين الأجهزة؟',
+            a: 'بحسب المطوّر، لكل مساحة عمل عبر iCloud Drive أو OneDrive أو WebDAV أو تخزين متوافق مع S3 أو Syncthing أو خدمة Git، مع تشفير طرفي اختياري على تخزينك الخاص. لم تختبر PromptQuorum المزامنة ولم تدقق التشفير.',
+          },
+          {
+            q: 'ما AutoGit في SoloMD؟',
+            a: 'يصفه المطوّر بأنه لقطة تُحفظ في مستودع Git محلي داخل مساحة العمل عند كل حفظ، مع مقارنة مرئية وتراجع بنقرة واحدة. مكتبة libgit2 مدمجة فلا حاجة إلى Git في النظام. لم تختبر PromptQuorum هذه الميزة.',
+          },
+          {
+            q: 'على أي أنظمة يعمل SoloMD؟',
+            a: 'بحسب README: Windows 10 أو أحدث (x64 وARM64) وmacOS 10.15 أو أحدث وLinux (x64 وARM64) وiOS 15 أو أحدث وAndroid 7 أو أحدث. لا ينشر README حدًّا أدنى لذاكرة RAM أو وحدة GPU، وتعتمد احتياجات النماذج المحلية على الخادم الذي تشغّله.',
+          },
+          {
+            q: 'من يتولى صيانة SoloMD وهل ما زال يُحدَّث؟',
+            a: 'يصف README مشرفًا بشريًا واحدًا ويذكر أن المشروع يكتبه ويختبره ويصدره في معظمه Claude Code. المستودع حديث ولم تذكر الصفحات التي قرأتها PromptQuorum شركة ولا بلدًا. راجع صفحة الإصدارات لمعرفة أحدث نسخة قبل الاعتماد عليه.',
+          },
+          {
+            q: 'ما ميزات الذكاء الاصطناعي في SoloMD غير الدردشة؟',
+            a: 'بحسب README: إعادة صياغة وترجمة فقرة محددة في موضعها، واقتباسات بصيغة [[wikilink]] في لوحة الدردشة، وبحث دلالي دون اتصال في مجلد الملاحظات عبر نموذج تضمين على الجهاز يذكر المطوّر أنه لا يحتاج إلى تنزيل نموذج. لم تختبر PromptQuorum جودة الإجابات.',
+          },
         ],
       },
       verdict: {
@@ -2446,6 +2670,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'SoloMD가 내 노트를 어딘가로 보냅니까?',
             a: '개발자에 따르면 기본적으로는 아닙니다. 노트는 내 폴더에 남고 AI 요청은 내가 고른 서비스나 로컬 서버로 갑니다. 개인정보 처리방침은 웹사이트와 Apple 외 스토어 빌드가 끄지 않는 한 익명 사용 이벤트를 보낸다고 덧붙입니다. 동기화는 직접 설정한 서비스에만 도달합니다.',
+          },
+          {
+            q: 'SoloMD는 노트를 어떤 형식으로 저장합니까?',
+            a: 'README에 따르면 사용자가 고른 폴더의 일반 .md 파일이며, 다른 Markdown 편집기에서도 열 수 있습니다. 개발자는 위키링크, 백링크, YAML 속성, 그리고 .docx, .pdf, .xlsx, .pptx 파일을 끌어다 놓아 Markdown으로 가져오는 기능도 언급합니다. PromptQuorum은 가져오기 기능을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'SoloMD는 어떤 내보내기 형식을 제공합니까?',
+            a: 'README에 따르면 내보내기 센터는 PDF, Word(.docx), HTML, EPUB, LaTeX, ODT, RTF, 일반 텍스트, Markdown을 지원하며 Pandoc을 따로 설치할 필요가 없습니다. PromptQuorum은 어떤 내보내기 결과의 품질도 확인하지 않았습니다.',
+          },
+          {
+            q: 'SoloMD는 기기 간에 노트를 어떻게 동기화합니까?',
+            a: '개발자에 따르면 워크스페이스별로 iCloud Drive, OneDrive, WebDAV, S3 호환 스토리지, Syncthing 또는 Git 호스트를 통해 동기화하며, 본인 스토리지에서 선택적으로 종단 간 암호화를 사용할 수 있습니다. PromptQuorum은 동기화를 테스트하지 않았고 암호화를 감사하지도 않았습니다.',
+          },
+          {
+            q: 'SoloMD의 AutoGit은 무엇입니까?',
+            a: '개발자 설명에 따르면 저장할 때마다 워크스페이스 안의 로컬 Git 저장소에 스냅샷을 커밋하며, 시각적 비교와 한 번의 클릭으로 되돌리기를 제공합니다. libgit2가 내장되어 있어 시스템 Git이 필요 없습니다. PromptQuorum은 이 기능을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'SoloMD는 어떤 운영체제에서 실행됩니까?',
+            a: 'README에 따르면 Windows 10 이상(x64 및 ARM64), macOS 10.15 이상, Linux(x64 및 ARM64), iOS 15 이상, Android 7 이상입니다. README에는 RAM이나 GPU 최소 사양이 게시되어 있지 않으며, 로컬 모델의 요구 사양은 실행하는 서버에 따라 달라집니다.',
+          },
+          {
+            q: 'SoloMD는 누가 유지 관리하며 아직 업데이트됩니까?',
+            a: 'README는 사람 유지 관리자가 한 명이며 프로젝트의 상당 부분을 Claude Code가 작성, 테스트, 릴리스한다고 설명합니다. 저장소는 비교적 새롭고, PromptQuorum이 읽은 페이지에는 회사나 국가가 명시되어 있지 않습니다. 의존하기 전에 릴리스 페이지에서 최신 버전을 확인하십시오.',
+          },
+          {
+            q: 'SoloMD에는 채팅 외에 어떤 AI 기능이 있습니까?',
+            a: 'README에 따르면 선택한 문단의 제자리 다시 쓰기와 번역, 채팅 패널의 [[wikilink]] 인용, 그리고 기기 내 임베딩 모델 기반의 노트 보관함 오프라인 시맨틱 검색이 있습니다. 개발자에 따르면 이 임베딩 모델은 모델 다운로드가 필요 없습니다. PromptQuorum은 답변 품질을 테스트하지 않았습니다.',
           },
         ],
       },

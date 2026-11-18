@@ -6,7 +6,7 @@ import path from 'path'
 import sharp from 'sharp'
 import ts from 'typescript'
 
-const BASE = process.env.HERO_BASE || 'http://localhost:3437'
+const BASE = process.env.HERO_BASE || 'http://localhost:3451'
 const IMAGES_DIR = path.join(process.cwd(), 'public/images')
 const SLUG = 'nativ-review'
 const SRC = path.join(process.cwd(), `src/lib/power-local-llm/articles/${SLUG}.ts`)
@@ -26,7 +26,7 @@ const L = {
   ja: { hl: ['Mac向けローカルAI（MLX）', 'チャット、画像、音声入力', '無料のオープンソース、MIT'], price: '価格', priceV: '無料', lic: 'ライセンス', licV: 'MIT', plat: '動作環境', platV: 'Mac（Apple Silicon）', footer: 'PromptQuorumガイド' },
   zh: { hl: ['Mac 本地 AI，基于 MLX', '对话、图像和听写', '免费开源，MIT 许可'], price: '价格', priceV: '免费', lic: '许可证', licV: 'MIT', plat: '运行于', platV: 'Mac（Apple Silicon）', footer: 'PromptQuorum 指南' },
   pt: { hl: ['IA local para Mac com MLX', 'Chat, imagens e ditado', 'Grátis e de código aberto, MIT'], price: 'Preço', priceV: 'Grátis', lic: 'Licença', licV: 'MIT', plat: 'Roda em', platV: 'Mac (Apple Silicon)', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['ذكاء محلي لـ Mac بتقنية MLX', 'دردشة وصور وإملاء', 'مجاني ومفتوح المصدر، MIT'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'MIT', plat: 'يعمل على', platV: 'Mac (Apple Silicon)', footer: 'دليل PromptQuorum' },
+  ar: { heroTitle: 'مراجعة Nativ — ذكاء اصطناعي محلي ومجاني على Mac', hl: ['ذكاء محلي لـ Mac بتقنية MLX', 'دردشة وصور وإملاء', 'مجاني ومفتوح المصدر، MIT'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'MIT', plat: 'يعمل على', platV: 'Mac (Apple Silicon)', footer: 'دليل PromptQuorum' },
   ko: { hl: ['MLX 기반 Mac 로컬 AI', '채팅, 이미지, 받아쓰기', '무료 오픈소스, MIT'], price: '가격', priceV: '무료', lic: '라이선스', licV: 'MIT', plat: '실행 환경', platV: 'Mac(Apple Silicon)', footer: 'PromptQuorum 가이드' },
 }
 
@@ -38,7 +38,8 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    // ar: a shorter, hand-broken title (no colon, no orphan Latin word); the stored title wraps badly in the RTL poster layout.
+    title: t.heroTitle || stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },
