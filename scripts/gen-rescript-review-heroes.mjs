@@ -30,6 +30,9 @@ const L = {
   ko: { hl: ['단어 삭제로 영상 편집', 'Whisper 단어별 전사', '비상업적 이용 무료'], price: '가격', priceV: '무료(비상업적)', lic: '라이선스', licV: 'PolyForm NC', plat: '실행 환경', platV: 'Mac, Windows, Linux, 웹', footer: 'PromptQuorum 가이드' },
 }
 
+// Arabic poster title: shortened/NBSP-joined so the RTL wrap in /api/hero-image does not leave an orphan word (fixopen-d, 2026-11-18).
+const AR_TITLE = 'مراجعة Rescript: تحرير الفيديو بالنص'
+
 let generated = 0
 const failures = []
 const only = process.env.LANGS ? process.env.LANGS.split(',') : null
@@ -38,7 +41,7 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    title: lang === 'ar' ? AR_TITLE : stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },
