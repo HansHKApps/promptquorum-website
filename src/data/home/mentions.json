@@ -2,6 +2,106 @@
   "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR>40 filtered). Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt` -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions. Seeded 2026-09-20 from stored Ahrefs pulls: only the Hostinger row has a page URL; the other five link to the domain root and their dates are approximate (batch range 2026-08-14 to 08-31) -- replace with real page URLs and exact first-seen dates when available. `lang` is the language of the linking page (BCP-47 style, e.g. en, de, zh-TW); the Recent Mentions block shows its country flag.",
   "mentions": [
     {
+      "id": "hakky-stable-diffusion-model-guide",
+      "outlet": "Hakky Handbook",
+      "title": "Stable Diffusion背景モデルとLoRAの選び方: 用途別プロンプト例",
+      "url": "https://book.st-hakky.com/data-science/stable-diffusion-model-background-and-features-introduction-of-recommended-usage",
+      "lang": "ja",
+      "date": "2026-11-18",
+      "domainRating": 39,
+      "excerpt": "Cites PromptQuorum's Fooocus review in its references list for a Stable Diffusion background-model guide."
+    },
+    {
+      "id": "aihubmix-page-assist-browser-workflows",
+      "outlet": "AIHubMix",
+      "title": "Page Assist 实战：四种日常浏览器工作流，结合本地与云端模型",
+      "url": "https://aihubmix.com/blog/zh-CN/page-assist-in-practice-four-everyday-browser-workflows-with-local-and-cloud-models",
+      "lang": "zh",
+      "date": "2026-11-17",
+      "domainRating": 53,
+      "excerpt": "Cites PromptQuorum's Page Assist review in its references list (zh-CN)."
+    },
+    {
+      "id": "rottenwifi-old-pc-cpu-first-setup",
+      "outlet": "RottenWiFi",
+      "title": "How to Run Local AI Models on an Old PC (8GB RAM, CPU-Only Guide)",
+      "url": "https://rottenwifi.com/run-local-ai-on-an-old-pc-a-practical-cpu-first-setup-guide/",
+      "lang": "en",
+      "date": "2026-11-17",
+      "domainRating": 41,
+      "excerpt": "Cites PromptQuorum's hardware guidance multiple times in a CPU-only local AI setup guide for old PCs."
+    },
+    {
+      "id": "sesamedisk-best-hardware-vram",
+      "outlet": "Sesame Disk",
+      "title": "Best Hardware for Large AI Models",
+      "url": "https://sesamedisk.com/best-hardware-large-ai-models-vram/",
+      "lang": "en",
+      "date": "2026-11-17",
+      "domainRating": 31,
+      "excerpt": "Cites PromptQuorum's local LLM hardware guide repeatedly for VRAM and quantization figures."
+    },
+    {
+      "id": "dealotronic-pc-portable-macbook-ia-locale",
+      "outlet": "Dealotronic",
+      "title": "PC portable ou MacBook pour IA locale : comparatif complet 2026",
+      "url": "https://dealotronic.com/pc-portable-ou-macbook-pour-ia-locale/",
+      "lang": "fr",
+      "date": "2026-11-16",
+      "domainRating": 29,
+      "excerpt": "Cites PromptQuorum's local LLM laptop guide for battery-life figures (French)."
+    },
+    {
+      "id": "wikidata-promptquorum-item",
+      "outlet": "Wikidata",
+      "title": "PromptQuorum",
+      "url": "https://www.wikidata.org/wiki/Q142143164",
+      "lang": "en",
+      "date": "2026-11-13",
+      "domainRating": 90,
+      "excerpt": "Wikidata item for PromptQuorum listing promptquorum.com as the official website."
+    },
+    {
+      "id": "cnblogs-woaixingxing-local-llm-setup",
+      "outlet": "博客园 (cnblogs.com)",
+      "title": "大模型本地搭建了解",
+      "url": "https://www.cnblogs.com/woaixingxing/p/23628549",
+      "lang": "zh",
+      "date": "2026-11-13",
+      "domainRating": 88,
+      "excerpt": "Cites PromptQuorum's local vision models and quantization guides as data sources."
+    },
+    {
+      "id": "parse-gl-devstral-brand",
+      "outlet": "Parse",
+      "title": "What AI says about Devstral",
+      "url": "https://parse.gl/brands/devstral-net",
+      "lang": "en",
+      "date": "2026-11-12",
+      "domainRating": 53,
+      "excerpt": "AI-citation tracker page lists PromptQuorum's Devstral coding LLM guide as a cited source."
+    },
+    {
+      "id": "pendium-best-gpus-ai-deep-learning",
+      "outlet": "Pendium",
+      "title": "2026 Best GPUs for AI and Deep Learning",
+      "url": "https://pendium.ai/research/best-gpus-ai-deep-learning",
+      "lang": "en",
+      "date": "2026-11-11",
+      "domainRating": 48,
+      "excerpt": "Cites PromptQuorum's GPU guide for local LLMs in a GPU buying guide."
+    },
+    {
+      "id": "thebotshelf-gpu-npu-apple-silicon",
+      "outlet": "The Bot Shelf",
+      "title": "GPUs vs. NPUs vs. Apple Silicon: Which Hardware Runs Local AI Best?",
+      "url": "https://www.thebotshelf.com/hardware-gadgets/gpus-vs-npus-vs-apple-silicon-which-hardware-runs-local-ai-best",
+      "lang": "en",
+      "date": "2026-11-11",
+      "domainRating": 47,
+      "excerpt": "Cites PromptQuorum's GPU vs CPU vs Apple Silicon guide twice, including hardware bandwidth figures."
+    },
+    {
       "id": "meta-preisvergleich-minisforum-um890-pro",
       "outlet": "META Preisvergleich",
       "title": "Minisforum um890 pro META Preisvergleich",
