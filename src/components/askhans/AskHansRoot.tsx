@@ -20,7 +20,7 @@ import { Markdown } from './markdown'
 import { ASK_HANS_SHARE_EVENT, CopyButton, type ShareKind, type ShareSource } from './CopyButton'
 import { clickSection, relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
-import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, touchUsage, uid } from './storage'
+import { bumpOverviewUse, bumpRatingUse, clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, touchUsage, uid } from './storage'
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
 import { logEvent, streamAnswer } from './useAskStream'
 import { trackPromoOpen } from '@/lib/tracking/promo'
@@ -96,6 +96,9 @@ export function AskHansRoot() {
   const ctaVia = useRef<CtaPlacement | null>(null)
   /** successful answers per conversation in this use session (button-wording experiment funnel; in memory only, never stored) */
   const convQuestions = useRef(new Map<string, number>())
+  /** per-conversation show/hide decision for the overview strip / rating prompt, from the 1st/10th-use counters */
+  const [overviewShowFlags, setOverviewShowFlags] = useState<Record<string, boolean>>({})
+  const [ratingShowFlags, setRatingShowFlags] = useState<Record<string, boolean>>({})
   /** promo slot that asked for this open (`promo_<target>_<placement>`), sent once with the 'open' counter, then cleared */
   const openSource = useRef<string | null>(null)
   /** element that opened the window (promo button): gets focus back when the window closes */
@@ -296,8 +299,13 @@ export function AskHansRoot() {
             const n = (convQuestions.current.get(conv.id) ?? 0) + 1
             convQuestions.current.set(conv.id, n)
             const yes = consentValue?.value === 'yes'
-            if (n === 1) trackCta('ask_hans_first_question', yes)
-            else if (n === 2) trackCta('ask_hans_second_question', yes)
+            if (n === 1) {
+              trackCta('ask_hans_first_question', yes)
+              const showOverview = bumpOverviewUse()
+              const showRating = bumpRatingUse()
+              setOverviewShowFlags((prev) => ({ ...prev, [conv.id]: showOverview }))
+              setRatingShowFlags((prev) => ({ ...prev, [conv.id]: showRating }))
+            } else if (n === 2) trackCta('ask_hans_second_question', yes)
             else if (n === 3) trackCta('ask_hans_three_questions', yes)
           }
           if (!empty && consentValue?.value === 'yes') {
@@ -535,7 +543,7 @@ export function AskHansRoot() {
                   ))}
                 </div>
               )}
-              {!readOnly && !m.pending && !m.error && m.overview && active?.messages.find((x) => x.overview)?.id === m.id && (
+              {!readOnly && !m.pending && !m.error && m.overview && active?.messages.find((x) => x.overview)?.id === m.id && active && overviewShowFlags[active.id] && (
                 <OverviewStrip overview={m.overview} className="mt-2" />
               )}
               {m.content && !m.pending && (
@@ -713,7 +721,7 @@ export function AskHansRoot() {
                 )}
               </div>
 
-              {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && (
+              {active && ratingShowFlags[active.id] && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && (
                 <FeedbackBar
                   key={active.id}
                   lastQuestion={[...active.messages].reverse().find((m) => m.role === 'user')?.content}

@@ -88,6 +88,10 @@ export const ASK_HANS_STORAGE = {
   usageSession: 'askhans.usage.session.v1',
   /** sessionStorage: the 2-minute promo card was already shown in this visit. */
   promoShown: 'askhans.promo.v1',
+  /** localStorage, NOT consent-gated: conversations-with-a-first-answer count, for the OverviewStrip 1st/10th-use cadence. */
+  overviewShownCount: 'askhans.overviewShownCount.v1',
+  /** localStorage, NOT consent-gated: same cadence, independent counter, for the FeedbackBar star-rating prompt. */
+  ratingShownCount: 'askhans.ratingShownCount.v1',
 } as const
 
 /** window CustomEvent: open Ask Hans; detail: { question?: string } */
