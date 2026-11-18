@@ -811,6 +811,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'kition-review',
   'pooled-review',
   'reactive-resume-review',
+  'next-ai-draw-io-review',
 
 ])
 
