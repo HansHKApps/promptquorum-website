@@ -15281,6 +15281,24 @@
         "ko"
       ],
       "images": []
+    },
+    "alpaca-review": {
+      "dateModified": "2026-11-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {

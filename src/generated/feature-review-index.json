@@ -1339,6 +1339,11 @@
     "urlSlug": "lexora-review",
     "url": "/power-local-llm/lexora-review"
   },
+  "alpaca": {
+    "cluster": "power-local-llm",
+    "urlSlug": "alpaca-review",
+    "url": "/power-local-llm/alpaca-review"
+  },
   "funclip": {
     "cluster": "power-local-llm",
     "urlSlug": "funclip-review",

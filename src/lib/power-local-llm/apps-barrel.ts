@@ -356,6 +356,7 @@ import { app as app_dynamo } from './apps/dynamo'
 import { app as app_farfalle } from './apps/farfalle'
 import { app as app_fablecut } from './apps/fablecut'
 import { app as app_lexora } from './apps/lexora'
+import { app as app_alpaca } from './apps/alpaca'
 import { app as app_funclip } from './apps/funclip'
 import { app as app_intentkit } from './apps/intentkit'
 import { app as app_izwi } from './apps/izwi'
@@ -671,6 +672,7 @@ export const localAiApps: ToolRecord[] = [
   app_farfalle,
   app_fablecut,
   app_lexora,
+  app_alpaca,
   app_funclip,
   app_intentkit,
   app_izwi,

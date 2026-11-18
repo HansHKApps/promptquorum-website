@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "alpaca-review",
+        "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
+        "url": "/power-local-llm/alpaca-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "memex-review",
         "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
         "url": "/power-local-llm/memex-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
         "dateModified": "2026-11-18",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-creative-writing",
-        "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
-        "url": "/local-llms/best-local-llms-for-creative-writing",
-        "dateModified": "2026-11-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 370,
+    "totalCount": 371,
     "capped": true
   },
   "llama.cpp": {
@@ -1088,7 +1088,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 52,
+    "totalCount": 53,
     "capped": true
   },
   "GPT4All": {
@@ -1099,6 +1099,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "alpaca-review",
+        "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
+        "url": "/power-local-llm/alpaca-review",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -1164,17 +1172,9 @@
         "url": "/power-local-llm/hilbertraum-review",
         "dateModified": "2026-09-25",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "AnythingLLM": {
@@ -1339,14 +1339,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "uncensored-llm-models",
-        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
-        "url": "/power-local-llm/uncensored-llm-models",
-        "dateModified": "2026-11-13",
+        "slug": "alpaca-review",
+        "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
+        "url": "/power-local-llm/alpaca-review",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Cherry Studio": {
@@ -1524,6 +1524,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "alpaca-review",
+        "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
+        "url": "/power-local-llm/alpaca-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mac-mini-m5-local-ai-server",
         "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
@@ -1554,17 +1562,9 @@
         "url": "/power-local-llm/localmind-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tina-review",
-        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
-        "url": "/power-local-llm/tina-review",
-        "dateModified": "2026-10-04",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "h2oGPT": {
@@ -12275,6 +12275,28 @@
     "totalCount": 1,
     "capped": false
   },
+  "Alpaca": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "alpaca-review",
+        "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
+        "url": "/power-local-llm/alpaca-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "FunClip": {
     "articles": [
       {
@@ -13183,6 +13205,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "alpaca-review",
+        "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
+        "url": "/power-local-llm/alpaca-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
@@ -13244,17 +13274,9 @@
         "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 276,
+    "totalCount": 277,
     "capped": true
   },
   "Qdrant": {
