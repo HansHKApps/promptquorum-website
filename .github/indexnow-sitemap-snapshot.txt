@@ -659,6 +659,7 @@ https://www.promptquorum.com/power-local-llm/skales-review
 https://www.promptquorum.com/power-local-llm/smart-connections-review
 https://www.promptquorum.com/power-local-llm/snug-protocol-review
 https://www.promptquorum.com/power-local-llm/solair-ai-review
+https://www.promptquorum.com/power-local-llm/solomd-review
 https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
 https://www.promptquorum.com/power-local-llm/speechbrain-review
 https://www.promptquorum.com/power-local-llm/spiritbox-ultimate-review
