@@ -11375,6 +11375,20 @@
     "totalCount": 109,
     "capped": true
   },
+  "Sokuji": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "sokuji-review",
+        "title": "Sokuji Review: Live Two-Way Speech Translation for Meetings",
+        "url": "/power-local-llm/sokuji-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {

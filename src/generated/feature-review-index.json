@@ -1164,6 +1164,11 @@
     "urlSlug": "minutes-review",
     "url": "/power-local-llm/minutes-review"
   },
+  "sokuji": {
+    "cluster": "power-local-llm",
+    "urlSlug": "sokuji-review",
+    "url": "/power-local-llm/sokuji-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
