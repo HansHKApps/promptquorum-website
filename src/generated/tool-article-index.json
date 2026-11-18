@@ -4402,7 +4402,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "AutoGen": {
@@ -8435,23 +8435,23 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "myagents-review",
+        "title": "MyAgents Review: Desktop Agent Workbench and Task System",
+        "url": "/power-local-llm/myagents-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "coil-review",
         "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
         "url": "/power-local-llm/coil-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "little-coder-review",
-        "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
-        "url": "/power-local-llm/little-coder-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Zed": {
     "articles": [
@@ -12592,6 +12592,28 @@
         "slug": "askimo-review",
         "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
         "url": "/power-local-llm/askimo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "myagents-review",
+        "title": "MyAgents Review: Desktop Agent Workbench and Task System",
+        "url": "/power-local-llm/myagents-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "MyAgents": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "myagents-review",
+        "title": "MyAgents Review: Desktop Agent Workbench and Task System",
+        "url": "/power-local-llm/myagents-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }

@@ -1409,6 +1409,11 @@
     "urlSlug": "askimo-review",
     "url": "/power-local-llm/askimo-review"
   },
+  "myagents": {
+    "cluster": "power-local-llm",
+    "urlSlug": "myagents-review",
+    "url": "/power-local-llm/myagents-review"
+  },
   "reactive-resume": {
     "cluster": "power-local-llm",
     "urlSlug": "reactive-resume-review",
