@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Newelle Review: Free Open-Source AI Assistant for Linux with Local Models',
     seoTitle: 'Newelle Review: Free Open-Source AI Assistant for Linux',
     intro:
-      'Newelle 1.6.1 is a free, GPL-3.0 chat assistant for the Linux desktop that connects to cloud AI providers or runs local models through Llama.cpp or Ollama. According to its README it adds voice input and output, chat with your own documents, MCP tools, long-term memory, web search and terminal-command execution, and it installs from Flathub. This review is based on the official website, the GitHub repository and its release notes, and the Flathub listing, checked on 18 November 2026. PromptQuorum has not tested the app hands-on.',
+      'Newelle 1.6.1 is a free, GPL-3.0 chat assistant for the Linux desktop that connects to cloud AI providers (which bill separately) or runs local models through Llama.cpp or Ollama. According to its README it adds voice input and output, chat with your own documents, MCP tools, long-term memory, web search and terminal-command execution, and it installs from Flathub. This review is based on the official website, the GitHub repository and its release notes, and the Flathub listing, checked on 18 November 2026. PromptQuorum has not tested the app hands-on.',
     metaDescription:
       'Newelle is a free GPL-3.0 Linux AI assistant with local models, voice, document chat and MCP tools, installed from Flathub. What is confirmed, what is not.',
     twitterDescription:
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle is a free, open-source (GPL-3.0) AI assistant for the Linux desktop that works with cloud providers or with local models run through Llama.cpp or Ollama.** It installs from Flathub and adds voice, document chat, MCP tools and memory. PromptQuorum has not tested it, and no privacy policy, company or imprint was found.',
+      '**Newelle is a free, open-source (GPL-3.0) AI assistant for the Linux desktop that works with cloud providers (billed separately by them) or with local models run through Llama.cpp or Ollama.** It installs from Flathub and adds voice, document chat, MCP tools and memory. PromptQuorum has not tested it, and no privacy policy, company or imprint was found.',
     quickAnswerTop: {
       en: {
         question: 'What is Newelle and who is it for?',
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chat with several providers, or download local models and run them with Llama.cpp or Ollama.',
           'Voice input and output, a real-time call mode, and chat with your own documents.',
           'Extensions, skills in the style of Claude and Codex, MCP servers and scheduled tasks.',
-          'Developed since June 2023; version 1.6.1 was released on 2 November 2026.',
+          'Repository created in June 2023; version 1.6.1 was released on 2 November 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle is a free, open-source AI assistant for the Linux desktop that talks to cloud providers or local models and adds voice, document chat and tools.',
+            text: 'Newelle is a free, open-source AI assistant for the Linux desktop that talks to cloud providers (billed separately) or local models and adds voice, document chat and tools.',
           },
           {
             type: 'plain-terms',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Route': '[macOS (beta)](https://newelle.qsk.me/macos)', 'How to get it': 'Newelle.app.zip, labelled Beta' },
           { 'Route': '[Source](https://github.com/qwersyk/Newelle)', 'How to get it': 'sh install.sh (GNOME SDK) or GNOME Builder' },
         ],
-        note: 'No privacy-policy page was found on the website (the privacy address returns "404 Not Found") or in the repository. PromptQuorum did not run the installer.',
+        note: 'No privacy-policy page was found on the website or in the repository. On 18 November 2026 PromptQuorum requested [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) and [newelle.qsk.me/contact](https://newelle.qsk.me/contact); each returned "404 Not Found". The file list of the [GitHub repository](https://github.com/qwersyk/Newelle) contains no privacy, terms or legal file. PromptQuorum did not run the installer.',
       },
       requirements: {
         id: 'requirements',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           '**Newelle is worth a look if you use Linux and want a free, open-source assistant that works with several providers and local models and adds voice, document chat and tools.**',
-          'On paper it covers a lot, and development is active: version 1.6.1 on 2 November 2026 and a commit on 6 November 2026. The Flathub listing shows a sandboxed build without home-folder access, which is a point in its favour.',
+          'On paper it covers a lot, and development is active: version 1.6.1 on 2 November 2026 and a commit on 6 November 2026. The Flathub listing shows a sandboxed build without home-folder access, which is a point in its favour, though PromptQuorum did not check what each build grants.',
           'The trade-offs are real: no privacy policy, company or imprint was found, the macOS build is a beta, and PromptQuorum has not tested anything. Start with a small local model, keep the default sandbox and check that voice, documents and tools work for your use before relying on them.',
         ],
       },
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Newelle-Rezension: Kostenloser Open-Source-KI-Assistent für Linux mit lokalen Modellen',
     seoTitle: 'Newelle-Rezension: Kostenloser KI-Assistent für Linux',
     intro:
-      'Newelle 1.6.1 ist ein kostenloser, GPL-3.0-lizenzierter Chat-Assistent für den Linux-Desktop, der sich mit Cloud-KI-Anbietern verbindet oder lokale Modelle über Llama.cpp oder Ollama ausführt. Laut README bietet er Spracheingabe und -ausgabe, Chat mit eigenen Dokumenten, MCP-Werkzeuge, Langzeitgedächtnis, Websuche und die Ausführung von Terminalbefehlen und wird über Flathub installiert. Diese Rezension stützt sich auf die offizielle Website, das GitHub-Repository mit Release-Hinweisen und den Flathub-Eintrag, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
+      'Newelle 1.6.1 ist ein kostenloser, GPL-3.0-lizenzierter Chat-Assistent für den Linux-Desktop, der sich mit Cloud-KI-Anbietern (die separat abrechnen) verbindet oder lokale Modelle über Llama.cpp oder Ollama ausführt. Laut README bietet er Spracheingabe und -ausgabe, Chat mit eigenen Dokumenten, MCP-Werkzeuge, Langzeitgedächtnis, Websuche und die Ausführung von Terminalbefehlen und wird über Flathub installiert. Diese Rezension stützt sich auf die offizielle Website, das GitHub-Repository mit Release-Hinweisen und den Flathub-Eintrag, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
       'Newelle ist ein kostenloser GPL-3.0-KI-Assistent für Linux mit lokalen Modellen, Sprache, Dokumenten-Chat und MCP, installiert über Flathub. Was belegt ist und was nicht.',
     twitterDescription:
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle ist ein kostenloser, quelloffener (GPL-3.0) KI-Assistent für den Linux-Desktop, der mit Cloud-Anbietern oder mit lokalen Modellen über Llama.cpp oder Ollama arbeitet.** Er wird über Flathub installiert und ergänzt Sprache, Dokumenten-Chat, MCP-Werkzeuge und Gedächtnis. PromptQuorum hat ihn nicht getestet; eine Datenschutzerklärung, ein Unternehmen oder ein Impressum wurden nicht gefunden.',
+      '**Newelle ist ein kostenloser, quelloffener (GPL-3.0) KI-Assistent für den Linux-Desktop, der mit Cloud-Anbietern (separat abgerechnet) oder mit lokalen Modellen über Llama.cpp oder Ollama arbeitet.** Er wird über Flathub installiert und ergänzt Sprache, Dokumenten-Chat, MCP-Werkzeuge und Gedächtnis. PromptQuorum hat ihn nicht getestet; eine Datenschutzerklärung, ein Unternehmen oder ein Impressum wurden nicht gefunden.',
     quickAnswerTop: {
       de: {
         question: 'Was ist Newelle, und für wen ist es gedacht?',
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chat mit mehreren Anbietern oder mit heruntergeladenen lokalen Modellen, die über Llama.cpp oder Ollama laufen.',
           'Spracheingabe und -ausgabe, ein Echtzeit-Anrufmodus und Chat mit eigenen Dokumenten.',
           'Erweiterungen, Skills im Stil von Claude und Codex, MCP-Server und geplante Aufgaben.',
-          'Seit Juni 2023 entwickelt; Version 1.6.1 erschien am 2. November 2026.',
+          'Repository im Juni 2023 angelegt; Version 1.6.1 erschien am 2. November 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle ist ein kostenloser, quelloffener KI-Assistent für den Linux-Desktop, der mit Cloud-Anbietern oder lokalen Modellen arbeitet und Sprache, Dokumenten-Chat und Werkzeuge ergänzt.',
+            text: 'Newelle ist ein kostenloser, quelloffener KI-Assistent für den Linux-Desktop, der mit Cloud-Anbietern (separat abgerechnet) oder lokalen Modellen arbeitet und Sprache, Dokumenten-Chat und Werkzeuge ergänzt.',
           },
           {
             type: 'plain-terms',
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Weg': '[macOS (Beta)](https://newelle.qsk.me/macos)', 'So bekommen Sie sie': 'Newelle.app.zip, als Beta gekennzeichnet' },
           { 'Weg': '[Quellcode](https://github.com/qwersyk/Newelle)', 'So bekommen Sie sie': 'sh install.sh (GNOME SDK) oder GNOME Builder' },
         ],
-        note: 'Auf der Website (die Adresse für den Datenschutz liefert „404 Not Found“) und im Repository wurde keine Seite mit einer Datenschutzerklärung gefunden. PromptQuorum hat den Installer nicht ausgeführt.',
+        note: 'Auf der Website und im Repository wurde keine Seite mit einer Datenschutzerklärung gefunden. Am 18. November 2026 hat PromptQuorum [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) und [newelle.qsk.me/contact](https://newelle.qsk.me/contact) abgerufen; alle lieferten „404 Not Found“. Die Dateiliste des [GitHub-Repositorys](https://github.com/qwersyk/Newelle) enthält keine Datei zu Datenschutz, Nutzungsbedingungen oder rechtlichen Hinweisen. PromptQuorum hat den Installer nicht ausgeführt.',
       },
       requirements: {
         id: 'requirements',
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           '**Newelle lohnt einen Blick, wenn Sie Linux nutzen und einen kostenlosen, quelloffenen Assistenten wollen, der mit mehreren Anbietern und lokalen Modellen arbeitet und Sprache, Dokumenten-Chat und Werkzeuge ergänzt.**',
-          'Auf dem Papier deckt es viel ab, und die Entwicklung ist aktiv: Version 1.6.1 am 2. November 2026 und ein Commit am 6. November 2026. Der Flathub-Eintrag zeigt ein Build in der Sandbox ohne Zugriff auf den Home-Ordner, was für die App spricht.',
+          'Auf dem Papier deckt es viel ab, und die Entwicklung ist aktiv: Version 1.6.1 am 2. November 2026 und ein Commit am 6. November 2026. Der Flathub-Eintrag zeigt ein Build in der Sandbox ohne Zugriff auf den Home-Ordner, was für die App spricht, auch wenn PromptQuorum nicht geprüft hat, welche Rechte jedes Build tatsächlich erhält.',
           'Die Nachteile sind real: Es wurden keine Datenschutzerklärung, kein Unternehmen und kein Impressum gefunden, das macOS-Build ist eine Beta, und PromptQuorum hat nichts getestet. Beginnen Sie mit einem kleinen lokalen Modell, behalten Sie die Standard-Sandbox bei und prüfen Sie, ob Sprache, Dokumente und Werkzeuge für Ihren Einsatz funktionieren, bevor Sie sich darauf verlassen.',
         ],
       },
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test de Newelle : assistant IA open source gratuit pour Linux avec modèles locaux',
     seoTitle: 'Test de Newelle : assistant IA gratuit pour Linux',
     intro:
-      'Newelle 1.6.1 est un assistant de discussion gratuit, sous licence GPL-3.0, pour le bureau Linux ; il se connecte à des fournisseurs d\'IA dans le cloud ou exécute des modèles locaux via Llama.cpp ou Ollama. Selon son README, il ajoute la saisie et la sortie vocales, la discussion avec vos propres documents, des outils MCP, une mémoire à long terme, la recherche web et l\'exécution de commandes de terminal, et il s\'installe depuis Flathub. Ce test s\'appuie sur le site officiel, le dépôt GitHub avec ses notes de version et la fiche Flathub, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
+      'Newelle 1.6.1 est un assistant de discussion gratuit, sous licence GPL-3.0, pour le bureau Linux ; il se connecte à des fournisseurs d\'IA dans le cloud (facturés séparément) ou exécute des modèles locaux via Llama.cpp ou Ollama. Selon son README, il ajoute la saisie et la sortie vocales, la discussion avec vos propres documents, des outils MCP, une mémoire à long terme, la recherche web et l\'exécution de commandes de terminal, et il s\'installe depuis Flathub. Ce test s\'appuie sur le site officiel, le dépôt GitHub avec ses notes de version et la fiche Flathub, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
       'Newelle est un assistant IA gratuit sous GPL-3.0 pour Linux : modèles locaux, voix, discussion avec documents et MCP, installé via Flathub. Ce qui est confirmé, ce qui ne l\'est pas.',
     twitterDescription:
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle est un assistant IA gratuit et open source (GPL-3.0) pour le bureau Linux, qui fonctionne avec des fournisseurs cloud ou avec des modèles locaux exécutés via Llama.cpp ou Ollama.** Il s\'installe depuis Flathub et ajoute la voix, la discussion avec documents, des outils MCP et une mémoire. PromptQuorum ne l\'a pas testé, et aucune politique de confidentialité, entreprise ou mention légale n\'a été trouvée.',
+      '**Newelle est un assistant IA gratuit et open source (GPL-3.0) pour le bureau Linux, qui fonctionne avec des fournisseurs cloud (facturés séparément) ou avec des modèles locaux exécutés via Llama.cpp ou Ollama.** Il s\'installe depuis Flathub et ajoute la voix, la discussion avec documents, des outils MCP et une mémoire. PromptQuorum ne l\'a pas testé, et aucune politique de confidentialité, entreprise ou mention légale n\'a été trouvée.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Newelle et à qui s\'adresse-t-il ?',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Discussion avec plusieurs fournisseurs, ou avec des modèles locaux téléchargés et exécutés via Llama.cpp ou Ollama.',
           'Saisie et sortie vocales, un mode appel en temps réel et la discussion avec vos propres documents.',
           'Extensions, compétences dans le style de Claude et Codex, serveurs MCP et tâches planifiées.',
-          'Développé depuis juin 2023 ; la version 1.6.1 est sortie le 2 novembre 2026.',
+          'Dépôt créé en juin 2023 ; la version 1.6.1 est sortie le 2 novembre 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle est un assistant IA gratuit et open source pour le bureau Linux, qui dialogue avec des fournisseurs cloud ou des modèles locaux et ajoute voix, discussion avec documents et outils.',
+            text: 'Newelle est un assistant IA gratuit et open source pour le bureau Linux, qui dialogue avec des fournisseurs cloud (facturés séparément) ou des modèles locaux et ajoute voix, discussion avec documents et outils.',
           },
           {
             type: 'plain-terms',
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Voie': '[macOS (bêta)](https://newelle.qsk.me/macos)', 'Comment l\'obtenir': 'Newelle.app.zip, qualifié de bêta' },
           { 'Voie': '[Sources](https://github.com/qwersyk/Newelle)', 'Comment l\'obtenir': 'sh install.sh (GNOME SDK) ou GNOME Builder' },
         ],
-        note: 'Aucune page de politique de confidentialité n\'a été trouvée sur le site (l\'adresse de confidentialité renvoie « 404 Not Found ») ni dans le dépôt. PromptQuorum n\'a pas exécuté l\'installation.',
+        note: 'Aucune page de politique de confidentialité n\'a été trouvée sur le site ni dans le dépôt. Le 18 novembre 2026, PromptQuorum a appelé [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) et [newelle.qsk.me/contact](https://newelle.qsk.me/contact) ; chacune a renvoyé « 404 Not Found ». La liste des fichiers du [dépôt GitHub](https://github.com/qwersyk/Newelle) ne contient aucun fichier de confidentialité, de conditions d\'utilisation ou de mentions légales. PromptQuorum n\'a pas exécuté l\'installation.',
       },
       requirements: {
         id: 'requirements',
@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           '**Newelle mérite un coup d\'œil si vous utilisez Linux et voulez un assistant gratuit et open source qui fonctionne avec plusieurs fournisseurs et des modèles locaux, et qui ajoute voix, discussion avec documents et outils.**',
-          'Sur le papier, il couvre beaucoup de choses et le développement est actif : version 1.6.1 le 2 novembre 2026 et un commit le 6 novembre 2026. La fiche Flathub indique une version en bac à sable sans accès au dossier personnel, ce qui plaide en sa faveur.',
+          'Sur le papier, il couvre beaucoup de choses et le développement est actif : version 1.6.1 le 2 novembre 2026 et un commit le 6 novembre 2026. La fiche Flathub indique une version en bac à sable sans accès au dossier personnel, ce qui plaide en sa faveur, même si PromptQuorum n\'a pas vérifié ce que chaque version accorde.',
           'Les compromis sont réels : aucune politique de confidentialité, entreprise ou mention légale n\'a été trouvée, la version macOS est une bêta, et PromptQuorum n\'a rien testé. Commencez par un petit modèle local, gardez le bac à sable par défaut et vérifiez que la voix, les documents et les outils conviennent à votre usage avant de vous y fier.',
         ],
       },
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Newelle: asistente de IA gratuito y de código abierto para Linux con modelos locales',
     seoTitle: 'Reseña de Newelle: asistente de IA gratuito para Linux',
     intro:
-      'Newelle 1.6.1 es un asistente de chat gratuito, con licencia GPL-3.0, para el escritorio Linux que se conecta a proveedores de IA en la nube o ejecuta modelos locales con Llama.cpp u Ollama. Según su README, añade entrada y salida de voz, chat con tus propios documentos, herramientas MCP, memoria a largo plazo, búsqueda web y ejecución de comandos de terminal, y se instala desde Flathub. Esta reseña se basa en el sitio web oficial, el repositorio de GitHub con sus notas de versión y la ficha de Flathub, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
+      'Newelle 1.6.1 es un asistente de chat gratuito, con licencia GPL-3.0, para el escritorio Linux que se conecta a proveedores de IA en la nube (que cobran aparte) o ejecuta modelos locales con Llama.cpp u Ollama. Según su README, añade entrada y salida de voz, chat con tus propios documentos, herramientas MCP, memoria a largo plazo, búsqueda web y ejecución de comandos de terminal, y se instala desde Flathub. Esta reseña se basa en el sitio web oficial, el repositorio de GitHub con sus notas de versión y la ficha de Flathub, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
     metaDescription:
       'Newelle es un asistente de IA gratuito con GPL-3.0 para Linux: modelos locales, voz, chat con documentos y MCP, instalado desde Flathub. Qué está confirmado y qué no.',
     twitterDescription:
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle es un asistente de IA gratuito y de código abierto (GPL-3.0) para el escritorio Linux que funciona con proveedores en la nube o con modelos locales ejecutados con Llama.cpp u Ollama.** Se instala desde Flathub y añade voz, chat con documentos, herramientas MCP y memoria. PromptQuorum no lo ha probado y no encontró política de privacidad, empresa ni aviso legal.',
+      '**Newelle es un asistente de IA gratuito y de código abierto (GPL-3.0) para el escritorio Linux que funciona con proveedores en la nube (que cobran aparte) o con modelos locales ejecutados con Llama.cpp u Ollama.** Se instala desde Flathub y añade voz, chat con documentos, herramientas MCP y memoria. PromptQuorum no lo ha probado y no encontró política de privacidad, empresa ni aviso legal.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Newelle y para quién es?',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chat con varios proveedores o con modelos locales descargados y ejecutados con Llama.cpp u Ollama.',
           'Entrada y salida de voz, un modo de llamada en tiempo real y chat con tus propios documentos.',
           'Extensiones, skills al estilo de Claude y Codex, servidores MCP y tareas programadas.',
-          'Desarrollado desde junio de 2023; la versión 1.6.1 salió el 2 de noviembre de 2026.',
+          'Repositorio creado en junio de 2023; la versión 1.6.1 salió el 2 de noviembre de 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle es un asistente de IA gratuito y de código abierto para el escritorio Linux que habla con proveedores en la nube o con modelos locales y añade voz, chat con documentos y herramientas.',
+            text: 'Newelle es un asistente de IA gratuito y de código abierto para el escritorio Linux que habla con proveedores en la nube (que cobran aparte) o con modelos locales y añade voz, chat con documentos y herramientas.',
           },
           {
             type: 'plain-terms',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Vía': '[macOS (beta)](https://newelle.qsk.me/macos)', 'Cómo conseguirlo': 'Newelle.app.zip, marcado como beta' },
           { 'Vía': '[Código fuente](https://github.com/qwersyk/Newelle)', 'Cómo conseguirlo': 'sh install.sh (GNOME SDK) o GNOME Builder' },
         ],
-        note: 'No se encontró ninguna página de política de privacidad en el sitio web (la dirección de privacidad devuelve «404 Not Found») ni en el repositorio. PromptQuorum no ejecutó el instalador.',
+        note: 'No se encontró ninguna página de política de privacidad en el sitio web ni en el repositorio. El 18 de noviembre de 2026 PromptQuorum solicitó [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) y [newelle.qsk.me/contact](https://newelle.qsk.me/contact); todas devolvieron «404 Not Found». La lista de archivos del [repositorio de GitHub](https://github.com/qwersyk/Newelle) no contiene ningún archivo de privacidad, términos o avisos legales. PromptQuorum no ejecutó el instalador.',
       },
       requirements: {
         id: 'requirements',
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           '**Newelle merece una mirada si usas Linux y quieres un asistente gratuito y de código abierto que funcione con varios proveedores y modelos locales y añada voz, chat con documentos y herramientas.**',
-          'Sobre el papel cubre mucho y el desarrollo está activo: versión 1.6.1 el 2 de noviembre de 2026 y un commit el 6 de noviembre de 2026. La ficha de Flathub muestra una versión aislada sin acceso a la carpeta personal, lo que juega a su favor.',
+          'Sobre el papel cubre mucho y el desarrollo está activo: versión 1.6.1 el 2 de noviembre de 2026 y un commit el 6 de noviembre de 2026. La ficha de Flathub muestra una versión aislada sin acceso a la carpeta personal, lo que juega a su favor, aunque PromptQuorum no comprobó qué permisos concede cada versión.',
           'Las contrapartidas son reales: no se encontró política de privacidad, empresa ni aviso legal, la versión de macOS es una beta y PromptQuorum no ha probado nada. Empieza con un modelo local pequeño, mantén el entorno aislado por defecto y comprueba que la voz, los documentos y las herramientas funcionan para tu uso antes de depender de ellos.',
         ],
       },
@@ -1098,7 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do Newelle: assistente de IA gratuito e de código aberto para Linux com modelos locais',
     seoTitle: 'Análise do Newelle: assistente de IA gratuito para Linux',
     intro:
-      'O Newelle 1.6.1 é um assistente de chat gratuito, com licença GPL-3.0, para o desktop Linux que se conecta a provedores de IA na nuvem ou executa modelos locais com Llama.cpp ou Ollama. Segundo o README, ele acrescenta entrada e saída de voz, chat com seus próprios documentos, ferramentas MCP, memória de longo prazo, busca na web e execução de comandos de terminal, e é instalado pelo Flathub. Esta análise se baseia no site oficial, no repositório do GitHub com suas notas de versão e na página do Flathub, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
+      'O Newelle 1.6.1 é um assistente de chat gratuito, com licença GPL-3.0, para o desktop Linux que se conecta a provedores de IA na nuvem (que cobram à parte) ou executa modelos locais com Llama.cpp ou Ollama. Segundo o README, ele acrescenta entrada e saída de voz, chat com seus próprios documentos, ferramentas MCP, memória de longo prazo, busca na web e execução de comandos de terminal, e é instalado pelo Flathub. Esta análise se baseia no site oficial, no repositório do GitHub com suas notas de versão e na página do Flathub, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
     metaDescription:
       'O Newelle é um assistente de IA gratuito com GPL-3.0 para Linux: modelos locais, voz, chat com documentos e MCP, instalado pelo Flathub. O que está confirmado e o que não está.',
     twitterDescription:
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O Newelle é um assistente de IA gratuito e de código aberto (GPL-3.0) para o desktop Linux que funciona com provedores na nuvem ou com modelos locais executados com Llama.cpp ou Ollama.** Ele é instalado pelo Flathub e acrescenta voz, chat com documentos, ferramentas MCP e memória. A PromptQuorum não o testou e não encontrou política de privacidade, empresa nem aviso legal.',
+      '**O Newelle é um assistente de IA gratuito e de código aberto (GPL-3.0) para o desktop Linux que funciona com provedores na nuvem (que cobram à parte) ou com modelos locais executados com Llama.cpp ou Ollama.** Ele é instalado pelo Flathub e acrescenta voz, chat com documentos, ferramentas MCP e memória. A PromptQuorum não o testou e não encontrou política de privacidade, empresa nem aviso legal.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Newelle e para quem ele serve?',
@@ -1130,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chat com vários provedores ou com modelos locais baixados e executados com Llama.cpp ou Ollama.',
           'Entrada e saída de voz, um modo de chamada em tempo real e chat com seus próprios documentos.',
           'Extensões, skills no estilo do Claude e do Codex, servidores MCP e tarefas agendadas.',
-          'Desenvolvido desde junho de 2023; a versão 1.6.1 foi lançada em 2 de novembro de 2026.',
+          'Repositório criado em junho de 2023; a versão 1.6.1 foi lançada em 2 de novembro de 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O Newelle é um assistente de IA gratuito e de código aberto para o desktop Linux que conversa com provedores na nuvem ou com modelos locais e acrescenta voz, chat com documentos e ferramentas.',
+            text: 'O Newelle é um assistente de IA gratuito e de código aberto para o desktop Linux que conversa com provedores na nuvem (que cobram à parte) ou com modelos locais e acrescenta voz, chat com documentos e ferramentas.',
           },
           {
             type: 'plain-terms',
@@ -1203,7 +1203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Caminho': '[macOS (beta)](https://newelle.qsk.me/macos)', 'Como obter': 'Newelle.app.zip, marcado como beta' },
           { 'Caminho': '[Código-fonte](https://github.com/qwersyk/Newelle)', 'Como obter': 'sh install.sh (GNOME SDK) ou GNOME Builder' },
         ],
-        note: 'Nenhuma página de política de privacidade foi encontrada no site (o endereço de privacidade retorna "404 Not Found") nem no repositório. A PromptQuorum não executou o instalador.',
+        note: 'Nenhuma página de política de privacidade foi encontrada no site nem no repositório. Em 18 de novembro de 2026, a PromptQuorum acessou [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) e [newelle.qsk.me/contact](https://newelle.qsk.me/contact); todas retornaram "404 Not Found". A lista de arquivos do [repositório do GitHub](https://github.com/qwersyk/Newelle) não contém nenhum arquivo de privacidade, termos ou avisos legais. A PromptQuorum não executou o instalador.',
       },
       requirements: {
         id: 'requirements',
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           '**O Newelle vale uma olhada se você usa Linux e quer um assistente gratuito e de código aberto que funcione com vários provedores e modelos locais e acrescente voz, chat com documentos e ferramentas.**',
-          'No papel, ele cobre muita coisa e o desenvolvimento está ativo: versão 1.6.1 em 2 de novembro de 2026 e um commit em 6 de novembro de 2026. A página do Flathub mostra uma versão em sandbox sem acesso à pasta pessoal, o que conta a favor.',
+          'No papel, ele cobre muita coisa e o desenvolvimento está ativo: versão 1.6.1 em 2 de novembro de 2026 e um commit em 6 de novembro de 2026. A página do Flathub mostra uma versão em sandbox sem acesso à pasta pessoal, o que conta a favor, embora a PromptQuorum não tenha verificado o que cada versão concede.',
           'As contrapartidas são reais: não foram encontradas política de privacidade, empresa nem aviso legal, a versão para macOS é uma beta e a PromptQuorum não testou nada. Comece com um modelo local pequeno, mantenha a sandbox padrão e confira se voz, documentos e ferramentas funcionam para o seu uso antes de depender deles.',
         ],
       },
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Newelleレビュー：Linuxで使える無料のAIアシスタント',
     seoTitle: 'Newelleレビュー：無料のLinux向けAIアシスタント',
     intro:
-      'Newelle 1.6.1は、Linuxデスクトップ向けの無料のチャットアシスタントで、ライセンスはGPL-3.0です。クラウドのAIプロバイダーに接続するほか、Llama.cppまたはOllama経由でローカルモデルも実行できます。READMEによると、音声の入出力、自分の文書とのチャット、MCPツール、長期記憶、Web検索、ターミナルコマンドの実行に対応し、Flathubからインストールします。このレビューは、公式サイト、GitHubリポジトリとそのリリースノート、Flathubの掲載ページに基づき、2026年11月18日に確認しました。PromptQuorumはこのアプリを実際には試していません。',
+      'Newelle 1.6.1は、Linuxデスクトップ向けの無料のチャットアシスタントで、ライセンスはGPL-3.0です。クラウドのAIプロバイダー（利用料は各社に別途かかります）に接続するほか、Llama.cppまたはOllama経由でローカルモデルも実行できます。READMEによると、音声の入出力、自分の文書とのチャット、MCPツール、長期記憶、Web検索、ターミナルコマンドの実行に対応し、Flathubからインストールします。このレビューは、公式サイト、GitHubリポジトリとそのリリースノート、Flathubの掲載ページに基づき、2026年11月18日に確認しました。PromptQuorumはこのアプリを実際には試していません。',
     metaDescription:
       'NewelleはLinux向けの無料GPL-3.0のAIアシスタント。ローカルモデル、音声、文書チャット、MCPに対応し、Flathubから導入。確認できた点と未確認の点。',
     twitterDescription:
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelleは、Linuxデスクトップ向けの無料のオープンソース（GPL-3.0）AIアシスタントで、クラウドのプロバイダー、またはLlama.cppやOllamaで動かすローカルモデルのどちらでも使えます。** Flathubからインストールし、音声、文書チャット、MCPツール、記憶機能を備えます。PromptQuorumは試しておらず、プライバシーポリシー、運営会社、運営者情報は見つかりませんでした。',
+      '**Newelleは、Linuxデスクトップ向けの無料のオープンソース（GPL-3.0）AIアシスタントで、クラウドのプロバイダー（料金は各社に別途支払います）、またはLlama.cppやOllamaで動かすローカルモデルのどちらでも使えます。** Flathubからインストールし、音声、文書チャット、MCPツール、記憶機能を備えます。PromptQuorumは試しておらず、プライバシーポリシー、運営会社、運営者情報は見つかりませんでした。',
     quickAnswerTop: {
       ja: {
         question: 'Newelleとは何で、どんな人向けですか？',
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '複数のプロバイダーとチャットするか、ダウンロードしたローカルモデルをLlama.cppまたはOllamaで動かします。',
           '音声の入出力、リアルタイム通話モード、自分の文書とのチャット。',
           '拡張機能、ClaudeやCodex形式のスキル、MCPサーバー、スケジュールタスク。',
-          '2023年6月から開発され、バージョン1.6.1は2026年11月2日に公開されました。',
+          'リポジトリは2023年6月に作成され、バージョン1.6.1は2026年11月2日に公開されました。',
         ],
         updatedDate: '2026-11',
       },
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelleは、クラウドのプロバイダーやローカルモデルと対話し、音声、文書チャット、ツールを加えた、Linuxデスクトップ向けの無料のオープンソースAIアシスタントです。',
+            text: 'Newelleは、クラウドのプロバイダー（料金は別途）やローカルモデルと対話し、音声、文書チャット、ツールを加えた、Linuxデスクトップ向けの無料のオープンソースAIアシスタントです。',
           },
           {
             type: 'plain-terms',
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方法': '[macOS（ベータ）](https://newelle.qsk.me/macos)', '入手方法': 'Newelle.app.zip、ベータと表示' },
           { '方法': '[ソースコード](https://github.com/qwersyk/Newelle)', '入手方法': 'sh install.sh（GNOME SDK）またはGNOME Builder' },
         ],
-        note: 'サイトにもリポジトリにも、プライバシーポリシーのページは見つかりませんでした（プライバシー用のアドレスは「404 Not Found」を返します）。PromptQuorumはインストーラーを実行していません。',
+        note: 'サイトにもリポジトリにも、プライバシーポリシーのページは見つかりませんでした。2026年11月18日にPromptQuorumが [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) 、 [newelle.qsk.me/contact](https://newelle.qsk.me/contact) にアクセスしたところ、いずれも「404 Not Found」を返しました。[GitHubリポジトリ](https://github.com/qwersyk/Newelle)のファイル一覧にも、プライバシー、利用規約、法的情報に関するファイルはありません。PromptQuorumはインストーラーを実行していません。',
       },
       requirements: {
         id: 'requirements',
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '総評',
         content: [
           '**Linuxを使っていて、複数のプロバイダーとローカルモデルで動き、音声、文書チャット、ツールを加えた無料のオープンソースアシスタントを探しているなら、Newelleは試す価値があります。**',
-          '機能は幅広く、開発も活発です。バージョン1.6.1は2026年11月2日、コミットは2026年11月6日にあります。Flathubの掲載情報ではホームフォルダーへのアクセスがないサンドボックス版であることが示されており、これは評価できる点です。',
+          '機能は幅広く、開発も活発です。バージョン1.6.1は2026年11月2日、コミットは2026年11月6日にあります。Flathubの掲載情報ではホームフォルダーへのアクセスがないサンドボックス版であることが示されており、これは評価できる点ですが、各ビルドが実際に何を許可するかはPromptQuorumでは確認していません。',
           '一方で、プライバシーポリシー、運営会社、運営者情報は見つからず、macOS版はベータで、PromptQuorumは何も試していません。まず小さなローカルモデルから始め、既定のサンドボックスを維持し、音声、文書、ツールが自分の用途で動くかを確認してから頼ってください。',
         ],
       },
@@ -1636,7 +1636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Newelle 评测：支持本地模型的免费开源 Linux AI 助手',
     seoTitle: 'Newelle 评测：免费的 Linux AI 助手',
     intro:
-      'Newelle 1.6.1 是一款面向 Linux 桌面的免费聊天助手，采用 GPL-3.0 许可，可连接云端 AI 服务商，也可通过 Llama.cpp 或 Ollama 运行本地模型。根据其 README，它提供语音输入与输出、与自己的文档对话、MCP 工具、长期记忆、网页搜索和终端命令执行，并通过 Flathub 安装。本评测基于官方网站、GitHub 仓库及其发布说明和 Flathub 页面，核查日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
+      'Newelle 1.6.1 是一款面向 Linux 桌面的免费聊天助手，采用 GPL-3.0 许可，可连接云端 AI 服务商（由服务商另行计费），也可通过 Llama.cpp 或 Ollama 运行本地模型。根据其 README，它提供语音输入与输出、与自己的文档对话、MCP 工具、长期记忆、网页搜索和终端命令执行，并通过 Flathub 安装。本评测基于官方网站、GitHub 仓库及其发布说明和 Flathub 页面，核查日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
     metaDescription:
       'Newelle 是免费的 GPL-3.0 Linux AI 助手，支持本地模型、语音、文档对话和 MCP，通过 Flathub 安装。已确认与未确认的内容。',
     twitterDescription:
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle 是一款面向 Linux 桌面的免费开源（GPL-3.0）AI 助手，可使用云端服务商，也可使用通过 Llama.cpp 或 Ollama 运行的本地模型。** 它通过 Flathub 安装，并提供语音、文档对话、MCP 工具和记忆功能。PromptQuorum 未测试过它，也没有找到隐私政策、运营公司或法律声明。',
+      '**Newelle 是一款面向 Linux 桌面的免费开源（GPL-3.0）AI 助手，可使用云端服务商（费用由服务商另行收取），也可使用通过 Llama.cpp 或 Ollama 运行的本地模型。** 它通过 Flathub 安装，并提供语音、文档对话、MCP 工具和记忆功能。PromptQuorum 未测试过它，也没有找到隐私政策、运营公司或法律声明。',
     quickAnswerTop: {
       zh: {
         question: 'Newelle 是什么，适合谁？',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可与多家服务商对话，也可下载本地模型并通过 Llama.cpp 或 Ollama 运行。',
           '语音输入与输出、实时通话模式，以及与自己的文档对话。',
           '扩展、Claude 和 Codex 风格的技能、MCP 服务器和计划任务。',
-          '自 2023 年 6 月起开发；1.6.1 版于 2026 年 11 月 2 日发布。',
+          '仓库创建于 2023 年 6 月；1.6.1 版于 2026 年 11 月 2 日发布。',
         ],
         updatedDate: '2026-11',
       },
@@ -1696,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle 是一款面向 Linux 桌面的免费开源 AI 助手，可对接云端服务商或本地模型，并提供语音、文档对话和工具。',
+            text: 'Newelle 是一款面向 Linux 桌面的免费开源 AI 助手，可对接云端服务商（另行计费）或本地模型，并提供语音、文档对话和工具。',
           },
           {
             type: 'plain-terms',
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '途径': '[macOS（测试版）](https://newelle.qsk.me/macos)', '获取方式': 'Newelle.app.zip，标注为测试版' },
           { '途径': '[源码](https://github.com/qwersyk/Newelle)', '获取方式': 'sh install.sh（需 GNOME SDK）或 GNOME Builder' },
         ],
-        note: '在网站（隐私页面地址返回“404 Not Found”）和仓库中都没有找到隐私政策页面。PromptQuorum 没有运行安装程序。',
+        note: '在网站和仓库中都没有找到隐私政策页面。2026 年 11 月 18 日，PromptQuorum 请求了 [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) 和 [newelle.qsk.me/contact](https://newelle.qsk.me/contact)，均返回“404 Not Found”。[GitHub 仓库](https://github.com/qwersyk/Newelle)的文件列表中也没有隐私、条款或法律声明文件。PromptQuorum 没有运行安装程序。',
       },
       requirements: {
         id: 'requirements',
@@ -1750,14 +1750,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Newelle 需要已配置 Flatpak 和 Flathub 的 Linux 桌面；硬件需求取决于你使用云端服务商还是本地模型。**',
           '清单来自 README 和 Flathub 页面。本地模型的最低内存或 GPU 要求未公布；根据 1.6.0 发布说明，模型下载器会估算模型是否放得下。PromptQuorum 没有测量内存占用或速度。',
         ],
-        columns: ['项目', '官方给出的数据'],
+        columns: ['项目', '来源给出的数据'],
         rows: [
-          { '项目': '系统', '官方给出的数据': '带 Flatpak 和 Flathub 的 Linux' },
-          { '项目': '架构', '官方给出的数据': 'x86_64 和 aarch64（Flathub）' },
-          { '项目': '运行时', '官方给出的数据': 'GNOME Platform 50（Flathub）' },
-          { '项目': 'Flathub 上的大小', '官方给出的数据': '下载约 336 MB，安装后 935 MB' },
-          { '项目': '本地模型', '官方给出的数据': 'Llama.cpp 或 Ollama；未公布最低要求' },
-          { '项目': '从源码构建', '官方给出的数据': '最新 GNOME SDK 或 GNOME Builder' },
+          { '项目': '系统', '来源给出的数据': '带 Flatpak 和 Flathub 的 Linux' },
+          { '项目': '架构', '来源给出的数据': 'x86_64 和 aarch64（Flathub）' },
+          { '项目': '运行时', '来源给出的数据': 'GNOME Platform 50（Flathub）' },
+          { '项目': 'Flathub 上的大小', '来源给出的数据': '下载约 336 MB，安装后 935 MB' },
+          { '项目': '本地模型', '来源给出的数据': 'Llama.cpp 或 Ollama；未公布最低要求' },
+          { '项目': '从源码构建', '来源给出的数据': '最新 GNOME SDK 或 GNOME Builder' },
         ],
         note: '大小数据来自 2026 年 11 月 18 日的 Flathub 摘要，会随每个版本变化。本地模型需另外下载。',
       },
@@ -1863,7 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '**如果你使用 Linux，想要一款能对接多家服务商和本地模型、并提供语音、文档对话和工具的免费开源助手，Newelle 值得一试。**',
-          '从纸面上看，它功能覆盖很广，开发也很活跃：1.6.1 版发布于 2026 年 11 月 2 日，最近一次提交在 2026 年 11 月 6 日。Flathub 页面显示它是没有主目录访问权限的沙盒版本，这是一个加分项。',
+          '从纸面上看，它功能覆盖很广，开发也很活跃：1.6.1 版发布于 2026 年 11 月 2 日，最近一次提交在 2026 年 11 月 6 日。Flathub 页面显示它是没有主目录访问权限的沙盒版本，这是一个加分项，不过 PromptQuorum 没有检查各个构建实际授予了哪些权限。',
           '代价也很实在：没有找到隐私政策、公司或法律声明，macOS 版本仍是测试版，PromptQuorum 也没有测试过任何功能。建议先从小型本地模型开始，保留默认沙盒，并在依赖它之前确认语音、文档和工具是否满足你的使用需求。',
         ],
       },
@@ -1905,7 +1905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Newelle 리뷰: Linux용 무료 오픈소스 AI 앱',
     seoTitle: 'Newelle 리뷰: 무료 Linux AI 어시스턴트',
     intro:
-      'Newelle 1.6.1은 Linux 데스크톱용 무료 채팅 어시스턴트로, GPL-3.0 라이선스입니다. 클라우드 AI 제공업체에 연결하거나 Llama.cpp 또는 Ollama로 로컬 모델을 실행할 수 있습니다. README에 따르면 음성 입출력, 내 문서와의 대화, MCP 도구, 장기 기억, 웹 검색, 터미널 명령 실행을 지원하며 Flathub에서 설치합니다. 이 리뷰는 공식 웹사이트, GitHub 저장소와 릴리스 노트, Flathub 페이지를 바탕으로 2026년 11월 18일에 확인했습니다. PromptQuorum은 이 앱을 직접 사용해 보지 않았습니다.',
+      'Newelle 1.6.1은 Linux 데스크톱용 무료 채팅 어시스턴트로, GPL-3.0 라이선스입니다. 클라우드 AI 제공업체(요금은 제공업체에 별도로 냅니다)에 연결하거나 Llama.cpp 또는 Ollama로 로컬 모델을 실행할 수 있습니다. README에 따르면 음성 입출력, 내 문서와의 대화, MCP 도구, 장기 기억, 웹 검색, 터미널 명령 실행을 지원하며 Flathub에서 설치합니다. 이 리뷰는 공식 웹사이트, GitHub 저장소와 릴리스 노트, Flathub 페이지를 바탕으로 2026년 11월 18일에 확인했습니다. PromptQuorum은 이 앱을 직접 사용해 보지 않았습니다.',
     metaDescription:
       'Newelle은 로컬 모델, 음성, 문서 채팅, MCP를 지원하는 무료 GPL-3.0 Linux AI 어시스턴트로 Flathub에서 설치합니다. 확인된 점과 확인하지 못한 점.',
     twitterDescription:
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle은 Linux 데스크톱용 무료 오픈소스(GPL-3.0) AI 어시스턴트로, 클라우드 제공업체나 Llama.cpp 또는 Ollama로 실행하는 로컬 모델과 함께 사용할 수 있습니다.** Flathub에서 설치하며 음성, 문서 채팅, MCP 도구, 기억 기능을 더합니다. PromptQuorum은 직접 테스트하지 않았으며 개인정보 처리방침, 운영 회사, 법적 고지는 찾지 못했습니다.',
+      '**Newelle은 Linux 데스크톱용 무료 오픈소스(GPL-3.0) AI 어시스턴트로, 클라우드 제공업체(요금은 제공업체에 별도로 냅니다)나 Llama.cpp 또는 Ollama로 실행하는 로컬 모델과 함께 사용할 수 있습니다.** Flathub에서 설치하며 음성, 문서 채팅, MCP 도구, 기억 기능을 더합니다. PromptQuorum은 직접 테스트하지 않았으며 개인정보 처리방침, 운영 회사, 법적 고지는 찾지 못했습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Newelle은 무엇이고 누구에게 적합합니까?',
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '여러 제공업체와 채팅하거나, 내려받은 로컬 모델을 Llama.cpp 또는 Ollama로 실행합니다.',
           '음성 입출력, 실시간 통화 모드, 내 문서와의 채팅을 지원합니다.',
           '확장 기능, Claude와 Codex 방식의 스킬, MCP 서버, 예약 작업을 지원합니다.',
-          '2023년 6월부터 개발되었으며 1.6.1 버전은 2026년 11월 2일에 출시되었습니다.',
+          '저장소는 2023년 6월에 만들어졌으며 1.6.1 버전은 2026년 11월 2일에 출시되었습니다.',
         ],
         updatedDate: '2026-11',
       },
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle은 클라우드 제공업체나 로컬 모델과 대화하며 음성, 문서 채팅, 도구를 더한 Linux 데스크톱용 무료 오픈소스 AI 어시스턴트입니다.',
+            text: 'Newelle은 클라우드 제공업체(요금은 별도)나 로컬 모델과 대화하며 음성, 문서 채팅, 도구를 더한 Linux 데스크톱용 무료 오픈소스 AI 어시스턴트입니다.',
           },
           {
             type: 'plain-terms',
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '방법': '[macOS(베타)](https://newelle.qsk.me/macos)', '설치 방법': 'Newelle.app.zip, 베타로 표시' },
           { '방법': '[소스](https://github.com/qwersyk/Newelle)', '설치 방법': 'sh install.sh(GNOME SDK) 또는 GNOME Builder' },
         ],
-        note: '웹사이트(개인정보 주소는 “404 Not Found”를 반환)와 저장소 어디에서도 개인정보 처리방침 페이지를 찾지 못했습니다. PromptQuorum은 설치 프로그램을 실행하지 않았습니다.',
+        note: '웹사이트와 저장소 어디에서도 개인정보 처리방침 페이지를 찾지 못했습니다. 2026년 11월 18일에 PromptQuorum이 [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) 및 [newelle.qsk.me/contact](https://newelle.qsk.me/contact)에 요청했으며, 모두 “404 Not Found”를 반환했습니다. [GitHub 저장소](https://github.com/qwersyk/Newelle)의 파일 목록에도 개인정보, 이용약관, 법적 고지 파일은 없습니다. PromptQuorum은 설치 프로그램을 실행하지 않았습니다.',
       },
       requirements: {
         id: 'requirements',
@@ -2132,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           '**Linux를 쓰면서 여러 제공업체와 로컬 모델에 쓸 수 있고 음성, 문서 채팅, 도구까지 더한 무료 오픈소스 어시스턴트를 원한다면 Newelle을 살펴볼 만합니다.**',
-          '문서상으로는 폭넓은 기능을 갖추었고 개발도 활발합니다. 1.6.1 버전은 2026년 11월 2일, 커밋은 2026년 11월 6일에 있었습니다. Flathub 페이지는 홈 폴더 접근이 없는 샌드박스 빌드를 보여 주며, 이는 장점입니다.',
+          '문서상으로는 폭넓은 기능을 갖추었고 개발도 활발합니다. 1.6.1 버전은 2026년 11월 2일, 커밋은 2026년 11월 6일에 있었습니다. Flathub 페이지는 홈 폴더 접근이 없는 샌드박스 빌드를 보여 주며, 이는 장점이지만, 각 빌드가 실제로 어떤 권한을 부여하는지는 PromptQuorum이 확인하지 않았습니다.',
           '단점도 분명합니다. 개인정보 처리방침, 회사, 법적 고지를 찾지 못했고, macOS 버전은 베타이며, PromptQuorum은 아무것도 테스트하지 않았습니다. 작은 로컬 모델로 시작하고 기본 샌드박스를 유지하며, 음성, 문서, 도구가 내 용도에 맞게 동작하는지 확인한 뒤에 의존하십시오.',
         ],
       },
@@ -2174,7 +2174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Newelle: مساعد ذكاء اصطناعي مجاني ومفتوح المصدر لنظام Linux مع نماذج محلية',
     seoTitle: 'مراجعة Newelle: مساعد ذكاء اصطناعي مجاني لـ Linux',
     intro:
-      'Newelle 1.6.1 مساعد دردشة مجاني بترخيص GPL-3.0 لسطح مكتب Linux، يتصل بمزودي ذكاء اصطناعي سحابيين أو يشغّل نماذج محلية عبر Llama.cpp أو Ollama. وبحسب ملف README، يضيف إدخال الصوت وإخراجه، والدردشة مع مستنداتك، وأدوات MCP، وذاكرة طويلة الأمد، والبحث في الويب، وتنفيذ أوامر الطرفية، ويُثبَّت من Flathub. تستند هذه المراجعة إلى الموقع الرسمي ومستودع GitHub مع ملاحظات الإصدارات وصفحة Flathub، وتم التحقق منها في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
+      'Newelle 1.6.1 مساعد دردشة مجاني بترخيص GPL-3.0 لسطح مكتب Linux، يتصل بمزودي ذكاء اصطناعي سحابيين (يحاسبون بشكل منفصل) أو يشغّل نماذج محلية عبر Llama.cpp أو Ollama. وبحسب ملف README، يضيف إدخال الصوت وإخراجه، والدردشة مع مستنداتك، وأدوات MCP، وذاكرة طويلة الأمد، والبحث في الويب، وتنفيذ أوامر الطرفية، ويُثبَّت من Flathub. تستند هذه المراجعة إلى الموقع الرسمي ومستودع GitHub مع ملاحظات الإصدارات وصفحة Flathub، وتم التحقق منها في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
       'Newelle مساعد ذكاء اصطناعي مجاني بترخيص GPL-3.0 لـ Linux: نماذج محلية وصوت ودردشة مع المستندات وMCP، يُثبَّت من Flathub. ما تأكد وما لم يتأكد.',
     twitterDescription:
@@ -2195,7 +2195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Newelle مساعد ذكاء اصطناعي مجاني ومفتوح المصدر (GPL-3.0) لسطح مكتب Linux، يعمل مع مزودين سحابيين أو مع نماذج محلية تُشغَّل عبر Llama.cpp أو Ollama.** يُثبَّت من Flathub ويضيف الصوت والدردشة مع المستندات وأدوات MCP والذاكرة. لم تختبره PromptQuorum، ولم تجد سياسة خصوصية ولا شركة ولا بيانات قانونية.',
+      '**Newelle مساعد ذكاء اصطناعي مجاني ومفتوح المصدر (GPL-3.0) لسطح مكتب Linux، يعمل مع مزودين سحابيين (يحاسبون بشكل منفصل) أو مع نماذج محلية تُشغَّل عبر Llama.cpp أو Ollama.** يُثبَّت من Flathub ويضيف الصوت والدردشة مع المستندات وأدوات MCP والذاكرة. لم تختبره PromptQuorum، ولم تجد سياسة خصوصية ولا شركة ولا بيانات قانونية.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Newelle ولمن هو؟',
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'دردشة مع عدة مزودين، أو مع نماذج محلية منزّلة تُشغَّل عبر Llama.cpp أو Ollama.',
           'إدخال الصوت وإخراجه، ووضع مكالمة فوري، والدردشة مع مستنداتك.',
           'إضافات، ومهارات بأسلوب Claude وCodex، وخوادم MCP، ومهام مجدولة.',
-          'يُطوَّر منذ يونيو 2023؛ صدر الإصدار 1.6.1 في 2 نوفمبر 2026.',
+          'أُنشئ المستودع في يونيو 2023؛ صدر الإصدار 1.6.1 في 2 نوفمبر 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Newelle مساعد ذكاء اصطناعي مجاني ومفتوح المصدر لسطح مكتب Linux، يتحدث مع مزودين سحابيين أو نماذج محلية ويضيف الصوت والدردشة مع المستندات والأدوات.',
+            text: 'Newelle مساعد ذكاء اصطناعي مجاني ومفتوح المصدر لسطح مكتب Linux، يتحدث مع مزودين سحابيين (يحاسبون بشكل منفصل) أو نماذج محلية ويضيف الصوت والدردشة مع المستندات والأدوات.',
           },
           {
             type: 'plain-terms',
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الطريقة': '[macOS (تجريبي)](https://newelle.qsk.me/macos)', 'كيف تحصل عليه': 'Newelle.app.zip، موسوم بأنه تجريبي' },
           { 'الطريقة': '[المصدر](https://github.com/qwersyk/Newelle)', 'كيف تحصل عليه': 'sh install.sh (مع GNOME SDK) أو GNOME Builder' },
         ],
-        note: 'لم يُعثر على صفحة لسياسة الخصوصية في الموقع (عنوان الخصوصية يعيد «404 Not Found») ولا في المستودع. لم تشغّل PromptQuorum برنامج التثبيت.',
+        note: 'لم يُعثر على صفحة لسياسة الخصوصية في الموقع ولا في المستودع. في 18 نوفمبر 2026 طلبت PromptQuorum [newelle.qsk.me/privacy](https://newelle.qsk.me/privacy), [newelle.qsk.me/privacy-policy](https://newelle.qsk.me/privacy-policy), [newelle.qsk.me/terms](https://newelle.qsk.me/terms), [newelle.qsk.me/about](https://newelle.qsk.me/about), [newelle.qsk.me/imprint](https://newelle.qsk.me/imprint) و [newelle.qsk.me/contact](https://newelle.qsk.me/contact)، وأعادت جميعها «404 Not Found». ولا تحتوي قائمة ملفات [مستودع GitHub](https://github.com/qwersyk/Newelle) على ملف للخصوصية أو الشروط أو البيانات القانونية. لم تشغّل PromptQuorum برنامج التثبيت.',
       },
       requirements: {
         id: 'requirements',
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           '**يستحق Newelle نظرة إذا كنت تستخدم Linux وتريد مساعدًا مجانيًا ومفتوح المصدر يعمل مع عدة مزودين ونماذج محلية ويضيف الصوت والدردشة مع المستندات والأدوات.**',
-          'على الورق يغطي الكثير، والتطوير نشط: الإصدار 1.6.1 في 2 نوفمبر 2026 وcommit في 6 نوفمبر 2026. وتُظهر صفحة Flathub بناءً معزولًا دون وصول إلى المجلد الرئيسي، وهذه نقطة لصالحه.',
+          'على الورق يغطي الكثير، والتطوير نشط: الإصدار 1.6.1 في 2 نوفمبر 2026 وcommit في 6 نوفمبر 2026. وتُظهر صفحة Flathub بناءً معزولًا دون وصول إلى المجلد الرئيسي، وهذه نقطة لصالحه، مع أن PromptQuorum لم تتحقق مما يمنحه كل بناء.',
           'المقايضات حقيقية: لم تُوجد سياسة خصوصية ولا شركة ولا بيانات قانونية، ونسخة macOS تجريبية، ولم تختبر PromptQuorum شيئًا. ابدأ بنموذج محلي صغير، وأبقِ البيئة المعزولة الافتراضية، وتحقق من أن الصوت والمستندات والأدوات تعمل لاستخدامك قبل الاعتماد عليها.',
         ],
       },
