@@ -75,14 +75,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "rtx-3090-local-llm-buy-or-rent",
-        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
-        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+        "slug": "openwork-review",
+        "title": "OpenWork Review: Open-Source Desktop AI Agent for Your Files",
+        "url": "/power-local-llm/openwork-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
     ],
-    "totalCount": 374,
+    "totalCount": 375,
     "capped": true
   },
   "llama.cpp": {
@@ -8691,6 +8691,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openwork-review",
+        "title": "OpenWork Review: Open-Source Desktop AI Agent for Your Files",
+        "url": "/power-local-llm/openwork-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ollama-review",
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
@@ -8736,17 +8744,9 @@
         "url": "/power-local-llm/minutes-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "oleafly-review",
-        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
-        "url": "/power-local-llm/oleafly-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "MaxKB": {
@@ -11008,6 +11008,20 @@
         "slug": "labelme-review",
         "title": "Labelme Review: Image Annotation with Offline AI Models and AI Agent Access",
         "url": "/power-local-llm/labelme-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "OpenWork": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openwork-review",
+        "title": "OpenWork Review: Open-Source Desktop AI Agent for Your Files",
+        "url": "/power-local-llm/openwork-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
@@ -13437,6 +13451,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openwork-review",
+        "title": "OpenWork Review: Open-Source Desktop AI Agent for Your Files",
+        "url": "/power-local-llm/openwork-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pooled-review",
         "title": "Pooled Review: Peer-to-Peer LLM Inference in the Browser",
         "url": "/power-local-llm/pooled-review",
@@ -13450,17 +13472,9 @@
         "url": "/power-local-llm/reactive-resume-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rtx-3090-local-llm-buy-or-rent",
-        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
-        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 279,
+    "totalCount": 280,
     "capped": true
   },
   "Qdrant": {

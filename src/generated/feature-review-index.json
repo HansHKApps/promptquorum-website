@@ -1124,6 +1124,11 @@
     "urlSlug": "labelme-review",
     "url": "/power-local-llm/labelme-review"
   },
+  "openwork": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openwork-review",
+    "url": "/power-local-llm/openwork-review"
+  },
   "skales": {
     "cluster": "power-local-llm",
     "urlSlug": "skales-review",
