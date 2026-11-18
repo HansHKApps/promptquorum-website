@@ -48287,7 +48287,7 @@
   {
     "lang": "de",
     "title": "SoloMD-Rezension: Kostenlose Markdown-Notiz-App mit lokalem KI-Chat und MCP",
-    "excerpt": "SoloMD: kostenlose MIT-Markdown-Notiz-App für 5 Plattformen mit KI-Chat über den Vault, Ollama-/LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.",
+    "excerpt": "SoloMD: kostenlose MIT-Markdown-Notiz-App mit KI-Chat über den Vault, Ollama-/LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
     "url": "/de/power-local-llm/solomd-review",
@@ -48611,7 +48611,7 @@
   {
     "lang": "de",
     "title": "Rescript-Rezension: Video und Audio über das Transkript schneiden",
-    "excerpt": "Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Was belegt ist, laut Hersteller auch lokal.",
+    "excerpt": "Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Das ist belegt.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/de/power-local-llm/rescript-review",
@@ -48737,7 +48737,7 @@
   {
     "lang": "pt",
     "title": "Análise do Minutes: memória gratuita e de código aberto para reuniões, memos de voz e ditado voltada a agentes de IA",
-    "excerpt": "O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados como arquivos Markdown que clientes MCP podem pesquisar. Conforme a documentação; sem testes.",
+    "excerpt": "O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados em Markdown pesquisável por MCP. Conforme a documentação; sem testes.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/pt/power-local-llm/minutes-review",
