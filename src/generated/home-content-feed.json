@@ -12800,79 +12800,79 @@
   {
     "lang": "en",
     "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
-    "excerpt": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($290–330 used) runs Qwen3 14B at 9–12 tok/s. New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
+    "excerpt": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($320–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen",
-    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (290–330 $ gebraucht) betreibt Qwen3 14B mit 9–12 Tok/s. Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
+    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (320–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/de/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives",
-    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (290–330 $ d'occasion), Qwen3 14B à 9–12 tok/s. Neuf : RTX 5060 Ti 16GB. Tableau complet.",
+    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (320–350 $ d'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/fr/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLM向けの最高のバジェットGPU",
-    "excerpt": "RTX 3060 12GB（中古約$290–330）でローカルLLMを7種実行：Qwen3 14B（9-12トークン/秒）、Qwen3 8B（16-20トークン/秒）ほか。VRAMと速度の早見表付き。",
+    "excerpt": "RTX 3060 12GB（中古約$320–350）でローカルLLMを7種実行：Qwen3 14B（推定9-12トークン/秒）、Qwen3 8B（推定16-20トークン/秒）ほか。VRAMと速度の早見表付き。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/ja/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM的最佳预算GPU",
-    "excerpt": "RTX 3060 12GB（二手约$290–330）可跑7款本地LLM：Qwen3 14B（9-12令牌/秒）、Qwen3 8B（16-20令牌/秒）等。附VRAM与速度对照表。",
+    "excerpt": "RTX 3060 12GB（二手约$320–350）可跑7款本地LLM：Qwen3 14B（估算9-12令牌/秒）、Qwen3 8B（估算16-20令牌/秒）等。附VRAM与速度对照表。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/zh/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB",
-    "excerpt": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($290–330 usada) ejecuta Qwen3 14B a 9–12 tok/s. Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
+    "excerpt": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($320–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/es/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB",
-    "excerpt": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 290–330 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
+    "excerpt": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 320–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/pt/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩",
-    "excerpt": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (290–330$ مستعملة) تشغّل Qwen3 14B بـ 9–12 tok/ث. الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
+    "excerpt": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (320–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-18",
     "url": "/ar/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "2026 로컬 LLM 최고의 예산형 GPU: RTX 3060 12GB",
-    "excerpt": "RTX 3060 12GB: Qwen3 8B 초당 16-20토큰, 14B 초당 9-12토큰. 예산별 GPU 추천과 가격 비교 정리.",
+    "excerpt": "RTX 3060 12GB: Qwen3 8B 초당 약 16-20토큰, 14B 초당 약 9-12토큰(추정). 예산별 GPU 추천과 가격 비교 정리.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ko/local-llms/best-budget-gpus-local-llm",
@@ -12881,97 +12881,97 @@
   {
     "lang": "en",
     "title": "RTX 5090 vs RTX 4090 for Local LLM Inference",
-    "excerpt": "RTX 5090 vs RTX 4090 for local LLMs: the RTX 4090 is now discontinued (used-only). Speed, VRAM, cost-per-token, and upgrade guidance for August 2026.",
+    "excerpt": "RTX 5090 vs RTX 4090 for local LLMs: llama.cpp 7B speed, 24 GB vs 32 GB VRAM, card price per tok/s and upgrade advice at 2026 street prices.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "RTX 5090 vs RTX 4090 für lokale LLM-Inferenz",
-    "excerpt": "RTX 5090 vs RTX 4090 für lokale LLMs: die RTX 4090 ist jetzt eingestellt (nur gebraucht). Geschwindigkeit, VRAM, Kosten pro Token, Upgrade-Leitfaden August 2026.",
+    "excerpt": "RTX 5090 vs RTX 4090 für lokale LLMs: llama.cpp-7B-Tempo, 24 GB vs. 32 GB VRAM, Kartenpreis pro Token/s und Upgrade-Empfehlung zu Preisen von 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/de/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "RTX 5090 vs RTX 4090 pour l'inférence LLM locale",
-    "excerpt": "RTX 5090 vs RTX 4090 pour LLMs locaux : la RTX 4090 est désormais arrêtée (occasion uniquement). Vitesse, VRAM, coût par token, guide de mise à niveau août 2026.",
+    "excerpt": "RTX 5090 vs RTX 4090 pour LLMs locaux : vitesse sur un test llama.cpp 7B, VRAM 24 Go vs 32 Go, prix par tok/s et conseils de mise à niveau prix 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/fr/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLM推論向け RTX 5090 vs RTX 4090",
-    "excerpt": "RTX 5090 vs RTX 4090 ローカルLLM比較: RTX 4090は現在生産終了(中古のみ)。速度、VRAM、トークンあたりコスト、2026年8月のアップグレードガイド。",
+    "excerpt": "RTX 5090とRTX 4090をローカルLLM向けに比較。llama.cppの7B速度、VRAM 24GB対32GB、1 tok/sあたりのカード価格、2026年の実売価格での判断ガイド。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM推理：RTX 5090 对比 RTX 4090",
-    "excerpt": "RTX 5090对比RTX 4090本地LLM比较：RTX 4090现已停产(仅二手)。速度、VRAM、每token成本，2026年8月升级指南。",
+    "excerpt": "RTX 5090对比RTX 4090本地LLM：llama.cpp 7B速度、24GB对32GB VRAM、每tok/s显卡价格，以及按2026年市场价的升级建议。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/zh/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "RTX 5090 vs RTX 4090 para Inferencia LLM Local",
-    "excerpt": "RTX 5090 vs RTX 4090 para LLMs locales: la RTX 4090 ya está descontinuada (solo usada). Velocidad, VRAM, coste por token y guía de actualización agosto 2026.",
+    "excerpt": "RTX 5090 vs RTX 4090 para LLMs locales: velocidad en una prueba 7B de llama.cpp, VRAM de 24 GB vs 32 GB, precio por tok/s y guía de actualización en 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/es/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "RTX 5090 vs RTX 4090 para Inferência de LLM Local",
-    "excerpt": "RTX 5090 vs RTX 4090 para LLMs locais: a RTX 4090 agora está descontinuada (só usada). Velocidade, VRAM, custo por token e guia de upgrade de agosto de 2026.",
+    "excerpt": "RTX 5090 vs RTX 4090 para LLMs locais: velocidade em teste 7B do llama.cpp, VRAM de 24 GB vs 32 GB, preço por tok/s e guia de upgrade com preços de 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/pt/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩ لاستدلال ⁨LLM⁩ المحلي",
-    "excerpt": "⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩: ⁨RTX 4090⁩ متوقفة الآن (مستعملة فقط). السرعة، VRAM، التكلفة لكل ⁨token⁩، ودليل الترقية لأغسطس 2026.",
+    "excerpt": "⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩ لنماذج LLM المحلية: سرعة 7B، وVRAM بسعة 24GB مقابل 32GB، وسعر البطاقة لكل ⁨tok/s⁩، ودليل الترقية بأسعار 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ar/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "RTX 5090 vs RTX 4090: 로컬 LLM 추론에 최적인 GPU는?",
-    "excerpt": "RTX 5090 vs RTX 4090 로컬 LLM 비교: RTX 4090은 이제 단종(중고만 가능). 속도, VRAM, 토큰당 비용, 2026년 8월 업그레이드 가이드.",
+    "excerpt": "RTX 5090과 RTX 4090 로컬 LLM 비교: llama.cpp 7B 속도, VRAM 24GB 대 32GB, tok/s당 카드 가격, 2026년 실거래가 기준 업그레이드 가이드.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
-    "title": "Used GPUs for Local LLMs: Best Value Picks",
-    "excerpt": "Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test.",
+    "title": "Used GPUs for Local LLMs: Buying Guide",
+    "excerpt": "Used GPUs for local LLMs: RTX 3060, 3080, 3090 and 4090 price ranges, where to buy, mining-card risks and how to test a card before you pay.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Gebrauchte GPUs für lokale LLMs: Die besten Sparangebote",
-    "excerpt": "Beste gebrauchte GPUs für lokale LLMs: RTX 3060, 3080, 3090, 4090. Wo kaufen, Risikobewertung, Bench-Test-Anleitung.",
+    "title": "Gebrauchte GPUs für lokale LLMs: Preise, Risiken und Tests",
+    "excerpt": "Gebrauchte GPUs für lokale LLMs: Preisbereiche für RTX 3060, 3080, 3090 und 4090, wo kaufen, Risiken bei Mining-Karten und wie Sie eine Karte vor dem Kauf testen.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/de/local-llms/used-gpus-for-local-llms",
@@ -12979,8 +12979,8 @@
   },
   {
     "lang": "fr",
-    "title": "GPU utilisés pour LLMs locaux : Meilleures offres de valeur",
-    "excerpt": "Meilleures GPU utilisées pour LLMs locaux : RTX 3060, 3080, 3090, 4090. Où acheter, évaluation des risques, test de performance.",
+    "title": "GPU d'occasion pour LLMs locaux : guide d'achat",
+    "excerpt": "GPU d'occasion pour LLM locaux : fourchettes de prix des RTX 3060, 3080, 3090 et 4090, où acheter, risques des cartes de minage et comment tester avant de payer.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/fr/local-llms/used-gpus-for-local-llms",
@@ -12988,8 +12988,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM向け中古GPU：ベストバリューピック",
-    "excerpt": "ローカルLLM向け最高の中古GPU：RTX 3060、3080、3090、4090。購入方法、リスク評価、ベンチマークテスト。",
+    "title": "ローカルLLM向け中古GPU：購入ガイド",
+    "excerpt": "ローカルLLM向け中古GPU：RTX 3060、3080、3090、4090の価格帯（米国市場の目安）、購入先、マイニングカードのリスク、購入前のテスト方法を解説します。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ja/local-llms/used-gpus-for-local-llms",
@@ -12997,8 +12997,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地LLM二手GPU：最佳价值选择",
-    "excerpt": "本地LLM最佳二手GPU：RTX 3060、3080、3090、4090。购买位置、风险评估、基准测试。",
+    "title": "本地LLM二手GPU：选购指南",
+    "excerpt": "本地LLM二手GPU选购：RTX 3060、3080、3090、4090价格区间（美国市场参考）、购买渠道、矿卡风险，以及付款前如何测试显卡。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/zh/local-llms/used-gpus-for-local-llms",
@@ -13006,8 +13006,8 @@
   },
   {
     "lang": "es",
-    "title": "GPUs de segunda mano para LLMs locales: Las mejores opciones por precio",
-    "excerpt": "Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.",
+    "title": "GPUs de segunda mano para LLMs locales: Guía de compra",
+    "excerpt": "GPUs de segunda mano para LLMs locales: rangos de precio de RTX 3060, 3080, 3090 y 4090, dónde comprar, riesgos de las tarjetas de minería y cómo probarlas.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/es/local-llms/used-gpus-for-local-llms",
@@ -13015,8 +13015,8 @@
   },
   {
     "lang": "pt",
-    "title": "GPUs usadas para LLMs locais: As melhores opções por preço",
-    "excerpt": "Melhores GPUs usadas para LLMs locais: RTX 3060, 3080, 3090, 4090. Onde comprar, avaliação de riscos e como fazer benchmarks.",
+    "title": "GPUs usadas para LLMs locais: Guia de compra",
+    "excerpt": "GPUs usadas para LLMs locais: faixas de preço da RTX 3060, 3080, 3090 e 4090, onde comprar, riscos das placas de mineração e como testar antes de pagar.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/pt/local-llms/used-gpus-for-local-llms",
@@ -13024,8 +13024,8 @@
   },
   {
     "lang": "ar",
-    "title": "وحدات ⁨GPU⁩ المستعملة لنماذج ⁨LLM⁩ المحلية: أفضل الخيارات حسب السعر",
-    "excerpt": "⁨RTX 3060 12GB⁩ مستعملة بـ ⁨200-250⁩ دولارًا توفّر ⁨40%⁩ عن السعر الجديد. دليل ⁨GPU⁩ مستعملة لـ ⁨LLM⁩ المحلي: أين تشتري، اختبار ⁨VRAM⁩، مخاطر التعدين. ⁨2026⁩.",
+    "title": "وحدات ⁨GPU⁩ المستعملة لنماذج ⁨LLM⁩ المحلية: دليل الشراء",
+    "excerpt": "⁨GPU⁩ مستعملة لنماذج ⁨LLM⁩ المحلية: نطاقات أسعار ⁨RTX 3060⁩ و⁨3080⁩ و⁨3090⁩ و⁨4090⁩، وأين تشتري، ومخاطر بطاقات التعدين، وكيف تختبر البطاقة قبل الدفع.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ar/local-llms/used-gpus-for-local-llms",
@@ -13033,8 +13033,8 @@
   },
   {
     "lang": "ko",
-    "title": "중고 GPU로 로컬 LLM 구동하기: 최고의 가성비 선택",
-    "excerpt": "로컬 LLM용 최고의 중고 GPU: RTX 3060, 3080, 3090, 4090. 구매처, 리스크 평가, 벤치마크 테스트 방법.",
+    "title": "중고 GPU로 로컬 LLM 구동하기: 구매 가이드",
+    "excerpt": "로컬 LLM용 중고 GPU: RTX 3060, 3080, 3090, 4090 가격대(미국 시장 기준), 구매처, 채굴용 카드 리스크, 구매 전 테스트 방법을 정리했습니다.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ko/local-llms/used-gpus-for-local-llms",
@@ -14906,81 +14906,81 @@
   {
     "lang": "en",
     "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
-    "excerpt": "Claude Pro costs $20/month; dual RTX 4070s (~$550 used) running Llama 3.3 70B break even in about 3 years. A used RTX 4090 now costs $2,000-2,600 (discontinued). Full comparison.",
+    "excerpt": "Claude Pro costs $20/month. Local setups cost $1,700-3,700 over 5 years incl. power. Llama 3.3 70B at Q4 needs ~43 GB, so two 24 GB GPUs. Full comparison.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Lokale LLMs vs Claude Pro: Datenschutz, Kosten und Qualität",
-    "excerpt": "Lokale LLMs vs. Claude Pro 2026: Dual RTX 4070s (~500€ gebraucht) amortisieren sich in ~3 Jahren. Eine gebrauchte RTX 4090 kostet jetzt 2.100-2.800€ (eingestellt). Kosten, Datenschutz, Qualität im Vergleich.",
+    "excerpt": "Claude Pro kostet 20 $/Monat; lokal 1.700–3.700 $ in 5 Jahren inkl. Strom. Llama 3.3 70B braucht in Q4 ca. 43 GB (zwei 24-GB-GPUs). Vergleich.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/de/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "LLMs Locaux vs Claude Pro: Confidentialité, Coûts et Qualité",
-    "excerpt": "Claude Pro coûte 20€/mois; dual RTX 4070s (~550€ d'occasion) exécutant Llama 3.3 70B s'amortissent en ~3 ans. Une RTX 4090 d'occasion coûte désormais 2 100-2 800€ (arrêtée). Comparaison complète.",
+    "excerpt": "Claude Pro coûte 20 $/mois ; en local 1 700–3 700 $ sur 5 ans, électricité incluse. Llama 3.3 70B en Q4 : ~43 Go (deux GPU de 24 Go). Comparatif.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/fr/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLM vs Claude Pro: プライバシー、コスト、品質比較",
-    "excerpt": "Claude Proは月¥3,200; 中古dual RTX 4070s（約¥105,000）でLlama 3.3 70Bを実行し、約3.7年で回収。中古RTX 4090は現在¥380,000～490,000（生産終了）。完全比較。",
+    "excerpt": "Claude Proは月$20。ローカル構成は電気代込みで5年$1,700-3,700。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。コストを比較します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ja/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM vs Claude Pro: 隐私、成本与质量对比",
-    "excerpt": "Claude Pro月$20；双RTX 4070s（二手约$550）运行Llama 3.3 70B，约3年收回成本。二手RTX 4090现售$2,000-2,600（已停产）。完整比较。",
+    "excerpt": "Claude Pro 每月 $20；本地方案含电费 5 年 $1,700-3,700。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。完整对比。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/zh/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "LLMs Locales vs Claude Pro: Privacidad, Costo y Calidad",
-    "excerpt": "Claude Pro cuesta $20/mes; dos RTX 4070s (~$550 usadas) con Llama 3.3 70B se amortizan en ~3 años. Una RTX 4090 usada ahora cuesta $2,000-2,600 (descontinuada). Comparativa completa.",
+    "excerpt": "Claude Pro cuesta $20/mes; lo local, $1,700-3,700 en 5 años con luz. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB). Comparativa completa.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/es/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "LLMs Locais vs Claude Pro: Privacidade, Custo e Qualidade",
-    "excerpt": "Claude Pro custa $20/mês; duas RTX 4070s (~$550 usadas) com Llama 3.3 70B se pagam em ~3 anos. Uma RTX 4090 usada agora custa $2.000-2.600 (descontinuada). Comparação completa.",
+    "excerpt": "Claude Pro custa $20/mês; o local custa $1.700-3.700 em 5 anos com energia. Llama 3.3 70B em Q4 exige ~43 GB: duas GPUs de 24 GB. Comparação.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/pt/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "نماذج ⁨LLM⁩ المحلية مقابل ⁨Claude Pro⁩: الخصوصية والتكلفة والجودة",
-    "excerpt": "⁨Claude Pro⁩ بـ ⁨20⁩$/شهر؛ بطاقتا ⁨RTX 4070⁩ (~⁨550⁩$ مستعملة) مع ⁨Llama 3.3 70B⁩ تتعادلان خلال ⁨3⁩ سنوات تقريباً. ⁨RTX 4090⁩ مستعملة الآن ⁨2,000⁩–⁨2,600⁩$ (أُوقف إنتاجها). مقارنة كاملة.",
+    "excerpt": "سعر Claude Pro 20$/شهر؛ والإعداد المحلي 1,700–3,700$ على 5 سنوات. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB: بطاقتا GPU بسعة 24 GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ar/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM vs Claude Pro: 프라이버시, 비용, 품질 비교",
-    "excerpt": "Claude Pro는 월 $20이며, 듀얼 RTX 4070(중고 ~$550)으로 구동하는 Llama 3.3 70B는 약 3년 후 손익분기점에 도달합니다. 중고 RTX 4090은 현재 $2,000~2,600(단종). 전면 비교 분석.",
+    "excerpt": "Claude Pro는 월 $20입니다. 로컬 구성은 전기료 포함 5년 $1,700-3,700입니다. Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ko/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -15151,7 +15151,7 @@
     "title": "Local LLM vs Cloud GPU: What Is Cheaper?",
     "excerpt": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 2 November 2026, plus the formula to redo it.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15160,7 +15160,7 @@
     "title": "Lokale LLMs vs. Cloud-GPU: Was ist günstiger?",
     "excerpt": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 2. November 2026 und die Formel zum Nachrechnen.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/de/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15169,7 +15169,7 @@
     "title": "LLM local vs GPU cloud : qu'est-ce qui coûte le moins ?",
     "excerpt": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 2 novembre 2026, et la formule pour refaire le calcul.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/fr/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15178,7 +15178,7 @@
     "title": "ローカルLLMとクラウドGPU：どちらが安いか",
     "excerpt": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月2日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/ja/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15187,7 +15187,7 @@
     "title": "本地LLM与云GPU：哪个更便宜？",
     "excerpt": "LLM用本地GPU还是云GPU更省钱：用2026年11月2日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/zh/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15196,7 +15196,7 @@
     "title": "LLM local vs GPU en la nube: ¿qué sale más barato?",
     "excerpt": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 2 de noviembre de 2026 y la fórmula para repetirlo.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/es/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15205,7 +15205,7 @@
     "title": "LLM local vs GPU na nuvem: o que sai mais barato?",
     "excerpt": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 2 de novembro de 2026, e a fórmula para refazer a conta.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/pt/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15214,7 +15214,7 @@
     "title": "نموذج لغوي محلي مقابل وحدة معالجة رسومات سحابية: الأرخص؟",
     "excerpt": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 2 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/ar/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15223,7 +15223,7 @@
     "title": "로컬 LLM vs 클라우드 GPU: 무엇이 더 저렴한가",
     "excerpt": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 2일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-15",
     "url": "/ko/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -15311,81 +15311,81 @@
   {
     "lang": "en",
     "title": "GPU vs ChatGPT Plus 2026: When Buying a GPU Pays Back the Subscription",
-    "excerpt": "Used RTX 5060 Ti ($450) breaks even with ChatGPT Plus ($240/yr) in 18–24 months at 5 hrs/week. Heavy users save $5,000+ over 5 years. Full ROI tables across 7 ChatGPT tiers.",
+    "excerpt": "A new RTX 5060 Ti 16 GB (about $618) breaks even with ChatGPT Plus ($240/year) in roughly 31-32 months. Break-even tables for Plus and Pro $100.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "GPU vs ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abonnement amortisiert",
-    "excerpt": "Gebrauchte RTX 5060 Ti (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18 Monaten.",
+    "title": "GPU vs. ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abo lohnt",
+    "excerpt": "Eine neue RTX 5060 Ti 16 GB (rund 618 $) erreicht den Break-even gegenüber ChatGPT Plus (240 $/Jahr) nach 31 bis 32 Monaten. Tabellen zu Plus und Pro.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/de/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "GPU vs ChatGPT Plus 2026 : Quand l'achat d'un GPU devient rentable face à l'abonnement",
-    "excerpt": "RTX 5060 Ti d'occasion (450 €) s'amortit face à ChatGPT Plus (240 €/an) en 18–24 mois à 5 h/sem. Économies 5 000 €+ sur 5 ans. Tableaux complets pour 7 abonnements.",
+    "title": "GPU vs ChatGPT Plus 2026 : quand l'achat d'un GPU rentabilise l'abonnement",
+    "excerpt": "Une RTX 5060 Ti 16 Go (environ 618 $) rentabilise ChatGPT Plus (240 $/an) en 31 à 32 mois. Tableaux de seuil de rentabilité face à Plus et Pro 100 $.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/fr/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "GPU vs ChatGPT Plus 2026: 中古GPU（¥44万）が18ヶ月で元が取れる時代",
-    "excerpt": "中古RTX 5060 Ti (¥56,000) がChatGPT Plus (¥30,000/年) と18–24ヶ月で損益分岐点。重度利用者は5年で¥540万以上節約。7つのChatGPTティア全体でのROI表を確認できます。",
+    "title": "GPU vs ChatGPT Plus 2026: GPU購入でサブスク代は回収できるか",
+    "excerpt": "RTX 5060 Ti 16 GB(約$618)はChatGPT Plus($240/年)と約31〜32か月で損益分岐。PlusとPro $100の損益分岐表をUSDで解説します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ja/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "GPU vs ChatGPT Plus 2026: 二手GPU在18个月内收回成本的时代",
-    "excerpt": "二手RTX 5060 Ti ($450) 与ChatGPT Plus ($240/年) 在18–24个月内收回成本。每周5小时用量。重度用户5年省$5,000+。7个ChatGPT价格层级全表对比。",
+    "title": "GPU vs ChatGPT Plus 2026:买GPU何时能收回订阅成本",
+    "excerpt": "全新RTX 5060 Ti 16 GB(约$618)相对ChatGPT Plus($240/年)约31至32个月回本。附Plus与Pro $100的回本对照表(美元)。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/zh/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "GPU vs ChatGPT Plus 2026: Cuándo comprar una GPU es más rentable que la suscripción",
-    "excerpt": "RTX 5060 Ti usada ($450) iguala a ChatGPT Plus ($240/año) en 18–24 meses a 5 h/semana. Los usuarios intensivos ahorran $5,000+ en 5 años. Tablas ROI.",
+    "title": "GPU vs ChatGPT Plus 2026: cuándo comprar una GPU compensa la suscripción",
+    "excerpt": "Una RTX 5060 Ti de 16 GB (unos $618) iguala a ChatGPT Plus ($240/año) en 31-32 meses. Tablas de punto de equilibrio frente a Plus y Pro $100 en USD.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/es/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "GPU vs ChatGPT Plus 2026: Quando comprar uma GPU é mais econômico que a assinatura",
-    "excerpt": "RTX 5060 Ti usada ($450) iguala ChatGPT Plus ($240/ano) em 18–24 meses a 5 h/semana. Usuários intensivos economizam $5.000+ em 5 anos. Tabelas de ROI.",
+    "title": "GPU vs ChatGPT Plus 2026: quando comprar uma GPU compensa a assinatura",
+    "excerpt": "Uma RTX 5060 Ti de 16 GB (cerca de US$ 618) empata com o ChatGPT Plus (US$ 240/ano) em 31 a 32 meses. Tabelas de equilíbrio com Plus e Pro US$ 100.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-04-05",
+    "dateModified": "2026-11-15",
     "url": "/pt/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "⁨GPU⁩ مقابل ⁨ChatGPT Plus 2026⁩: متى يكون شراء ⁨GPU⁩ أوفر من الاشتراك",
-    "excerpt": "⁨RTX 5060 Ti⁩ مستعملة بـ ⁨450⁩$ تعادل ⁨ChatGPT Plus⁩ (⁨240⁩$/سنة) خلال ⁨18⁩–⁨24⁩ شهرًا بمعدل ⁨5⁩ ساعات أسبوعياً. المستخدمون المكثفون يوفرون ⁨5000⁩$+ في ⁨5⁩ سنوات.",
+    "title": "GPU مقابل ChatGPT Plus 2026: متى يغطي شراء GPU تكلفة الاشتراك",
+    "excerpt": "RTX 5060 Ti بسعة 16 GB (نحو $618) تتعادل مع ChatGPT Plus ($240/year) خلال 31 إلى 32 شهرًا. جداول التعادل مقابل Plus وPro $100 بالدولار.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ar/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "GPU vs ChatGPT Plus 2026: GPU 구매가 구독료를 회수하는 시점",
-    "excerpt": "중고 RTX 5060 Ti ($450)는 주 5시간 사용 기준 18~24개월 만에 ChatGPT Plus ($240/년)와 손익분기점에 도달합니다. 헤비 유저는 5년간 $5,000 이상 절약 가능합니다. 7가지 ChatGPT 요금제별 완전한 ROI 표를 확인하세요.",
+    "title": "GPU vs ChatGPT Plus 2026: GPU 구매로 구독료를 회수하는 시점",
+    "excerpt": "새 RTX 5060 Ti 16 GB(약 $618)는 ChatGPT Plus($240/년) 대비 약 31~32개월에 손익분기에 도달합니다. Plus와 Pro $100 비교표(USD).",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-15",
     "url": "/ko/local-llms/gpu-vs-ai-subscription-roi",
     "cluster": "local-llms"
   },
@@ -20171,9 +20171,9 @@
   {
     "lang": "en",
     "title": "Best Graphics Card for Local LLMs: GPU Buying Guide 2026",
-    "excerpt": "Which graphics card for local LLMs? Ten GPUs compared on VRAM, speed, power and 2026 prices, from the cheapest pick to the RTX 5090.",
+    "excerpt": "Which graphics card for local LLMs? Ten GPUs compared on VRAM, speed, power and 2026 US asking prices, from the cheapest pick to the RTX 5090.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20182,7 +20182,7 @@
     "title": "Beste Grafikkarte für lokale LLMs: GPU-Kaufberatung 2026",
     "excerpt": "Welche Grafikkarte für lokale LLMs? Zehn GPUs im Vergleich: VRAM, Tempo, Leistung, Preise 2026 – günstig bis RTX 5090 – plus GPU-Anforderungen je Modell.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/de/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20191,7 +20191,7 @@
     "title": "Meilleure carte graphique pour LLM locaux : guide GPU 2026",
     "excerpt": "Quelle carte graphique pour LLM locaux ? Dix GPU comparés : VRAM, vitesse, conso et prix 2026, du moins cher au RTX 5090, avec les besoins GPU par modèle.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20200,16 +20200,16 @@
     "title": "ローカルLLM向けグラフィックカードの選び方：GPU購入ガイド2026",
     "excerpt": "ローカルLLMに最適なグラフィックカードは？10枚のGPUをVRAM・速度・消費電力・2026年の価格で比較。最安の1枚からRTX 5090まで、モデルサイズ別のGPU要件も解説。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "本地大模型显卡推荐：显卡选购指南 2026",
-    "excerpt": "本地大模型用什么显卡？十款显卡按显存、速度、功耗和 2026 年价格对比：从入门款到 RTX 5090，并列出各模型规模的显卡要求。",
+    "excerpt": "本地大模型用什么显卡？十款显卡按显存、速度、功耗和 2026 年美国挂牌价格对比：从入门款到 RTX 5090，并列出各模型规模的显卡要求。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20218,7 +20218,7 @@
     "title": "Mejor tarjeta gráfica para LLMs locales: guía de GPUs 2026",
     "excerpt": "¿Qué tarjeta gráfica elegir para LLMs locales? Diez GPUs comparadas: VRAM, velocidad, consumo y precios 2026, más requisitos de GPU por modelo.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/es/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20227,16 +20227,16 @@
     "title": "Melhor placa de vídeo para LLMs locais: guia de GPUs 2026",
     "excerpt": "Qual placa de vídeo para LLMs locais? Dez GPUs comparadas por VRAM, velocidade, consumo e preços de 2026, da barata à RTX 5090 e requisitos por modelo.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "أفضل بطاقة رسومات لتشغيل النماذج اللغوية المحلية: دليل شراء GPU 2026",
-    "excerpt": "أي بطاقة رسومات لنماذج LLM المحلية؟ مقارنة عشر بطاقات GPU من حيث VRAM والسرعة والطاقة وأسعار 2026، من الأرخص إلى RTX 5090، مع متطلبات GPU لكل حجم نموذج.",
+    "excerpt": "أي بطاقة رسومات لنماذج LLM المحلية؟ مقارنة عشر بطاقات GPU من حيث VRAM والسرعة والطاقة وأسعار 2026، من الأرخص إلى RTX 5090، مع متطلبات GPU لكل نموذج.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -20245,7 +20245,7 @@
     "title": "로컬 LLM용 최고의 그래픽카드: 2026년 GPU 구매 가이드",
     "excerpt": "로컬 LLM용 그래픽카드 추천: GPU 10종을 VRAM, 속도, 전력, 2026년 가격으로 비교. 최저가 모델부터 RTX 5090까지, 모델 크기별 GPU 요구 사양 포함.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-15",
     "url": "/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -22762,8 +22762,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 382 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 382 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 383 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 383 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/directory",
@@ -22771,8 +22771,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 382 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 382 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 383 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 383 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/de/directory",
@@ -22780,8 +22780,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 382 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 382 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 383 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 383 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/fr/directory",
@@ -22789,8 +22789,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす382のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを382件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす383のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを383件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/ja/directory",
@@ -22798,8 +22798,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：382款软件，在本地运行AI（2026）",
-    "excerpt": "对比382款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：383款软件，在本地运行AI（2026）",
+    "excerpt": "对比383款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/zh/directory",
@@ -22807,8 +22807,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 382 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 382 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 383 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 383 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/es/directory",
@@ -22816,8 +22816,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 382 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 382 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 383 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 383 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/pt/directory",
@@ -22825,8 +22825,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 382 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 382 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 383 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 383 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/ar/directory",
@@ -22834,8 +22834,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 382개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 382개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 383개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 383개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/ko/directory",
@@ -23413,7 +23413,7 @@
     "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
     "excerpt": "Loci AI review: a free private AI app for iPhone, Android, iPad, Mac and Windows. Offline use, App Store privacy label and comparison with Private LLM.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23422,7 +23422,7 @@
     "title": "Loci AI Review (2026): Private Offline-KI für iPhone, Android, iPad, Mac und Windows",
     "excerpt": "Loci AI Review: kostenlose private KI-App für iPhone, Android, iPad, Mac und Windows. Offline-Nutzung, Datenschutzlabel, Vergleich mit Private LLM.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/de/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23431,7 +23431,7 @@
     "title": "Critique de Loci AI (2026) : IA hors ligne privée sur iPhone, Android, iPad, Mac et Windows",
     "excerpt": "Critique de Loci AI : appli d'IA privée gratuite pour iPhone, Android, iPad, Mac et Windows. Usage hors ligne, étiquette de confidentialité, comparaison.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/fr/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23440,7 +23440,7 @@
     "title": "Loci AI レビュー (2026): iPhone、Android、iPad、Mac、Windows 対応のオフラインAI",
     "excerpt": "Loci AI レビュー: iPhone・Android・iPad・Mac・Windows対応の無料プライベートAIアプリ。オフライン利用、プライバシーラベル、Private LLMとの比較。",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/ja/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23449,7 +23449,7 @@
     "title": "Loci AI 评测（2026）：iPhone、Android、iPad、Mac 和 Windows 上的离线 AI",
     "excerpt": "Loci AI 评测：iPhone、Android、iPad、Mac 和 Windows 上的免费私密 AI 应用。离线使用、隐私标签以及与 Private LLM 的比较。",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/zh/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23458,7 +23458,7 @@
     "title": "Reseña de Loci AI (2026): IA privada sin conexión para iPhone, Android, iPad, Mac y Windows",
     "excerpt": "Reseña de Loci AI: app de IA privada y gratuita para iPhone, Android, iPad, Mac y Windows. Uso sin conexión, etiqueta de privacidad y comparativa.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/es/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23467,7 +23467,7 @@
     "title": "Revisão do Loci AI (2026): IA Offline para iPhone, Android, iPad, Mac e Windows",
     "excerpt": "Revisão do Loci AI: app de IA privada e gratuito para iPhone, Android, iPad, Mac e Windows. Uso offline, rótulo de privacidade e comparação.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/pt/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23476,7 +23476,7 @@
     "title": "مراجعة Loci AI (2026): ذكاء اصطناعي خاص دون إنترنت عبر iPhone و Android و iPad و Mac و Windows",
     "excerpt": "مراجعة Loci AI: تطبيق ذكاء اصطناعي خاص ومجاني لأجهزة iPhone وAndroid وiPad وMac وWindows. الاستخدام دون إنترنت وملصق الخصوصية والمقارنة.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/ar/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23485,7 +23485,7 @@
     "title": "Loci AI 리뷰 (2026): iPhone, Android, iPad, Mac, Windows용 오프라인 AI",
     "excerpt": "Loci AI 리뷰: iPhone, Android, iPad, Mac, Windows용 무료 프라이빗 AI 앱. 오프라인 사용, 개인정보 라벨, Private LLM 비교.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-18",
     "url": "/ko/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -34589,7 +34589,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 78 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 79 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34598,7 +34598,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "78 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "79 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34607,7 +34607,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 78 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 79 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34616,7 +34616,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール78種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール79種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34625,7 +34625,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比78款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比79款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34634,7 +34634,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 78 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 79 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34643,7 +34643,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 78 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 79 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34652,7 +34652,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 78 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 79 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34661,7 +34661,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 78개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 79개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34751,7 +34751,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 138 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 139 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -34769,7 +34769,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 138 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 139 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -34778,7 +34778,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント138種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント139種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -34787,7 +34787,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比138款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比139款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -34796,7 +34796,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 138 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 139 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -34805,7 +34805,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 138 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 139 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -34814,7 +34814,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 138 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 139 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -34823,7 +34823,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 138개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 139개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -47787,6 +47787,87 @@
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/ko/power-local-llm/nativ-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
+    "excerpt": "Newelle is a free GPL-3.0 Linux AI assistant with local models, voice, document chat and MCP tools, installed from Flathub. What is confirmed, what is not.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Newelle-Rezension: Kostenloser Open-Source-KI-Assistent für Linux mit lokalen Modellen",
+    "excerpt": "Newelle ist ein kostenloser GPL-3.0-KI-Assistent für Linux mit lokalen Modellen, Sprache, Dokumenten-Chat und MCP, installiert über Flathub. Was belegt ist und was nicht.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/de/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Newelle : assistant IA open source gratuit pour Linux avec modèles locaux",
+    "excerpt": "Newelle est un assistant IA gratuit sous GPL-3.0 pour Linux : modèles locaux, voix, discussion avec documents et MCP, installé via Flathub. Ce qui est confirmé, ce qui ne l'est pas.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/fr/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Newelleレビュー：Linuxで使える無料のAIアシスタント",
+    "excerpt": "NewelleはLinux向けの無料GPL-3.0のAIアシスタント。ローカルモデル、音声、文書チャット、MCPに対応し、Flathubから導入。確認できた点と未確認の点。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ja/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Newelle 评测：支持本地模型的免费开源 Linux AI 助手",
+    "excerpt": "Newelle 是免费的 GPL-3.0 Linux AI 助手，支持本地模型、语音、文档对话和 MCP，通过 Flathub 安装。已确认与未确认的内容。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/zh/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Newelle: asistente de IA gratuito y de código abierto para Linux con modelos locales",
+    "excerpt": "Newelle es un asistente de IA gratuito con GPL-3.0 para Linux: modelos locales, voz, chat con documentos y MCP, instalado desde Flathub. Qué está confirmado y qué no.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/es/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Newelle: assistente de IA gratuito e de código aberto para Linux com modelos locais",
+    "excerpt": "O Newelle é um assistente de IA gratuito com GPL-3.0 para Linux: modelos locais, voz, chat com documentos e MCP, instalado pelo Flathub. O que está confirmado e o que não está.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/pt/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Newelle: مساعد ذكاء اصطناعي مجاني ومفتوح المصدر لنظام Linux مع نماذج محلية",
+    "excerpt": "Newelle مساعد ذكاء اصطناعي مجاني بترخيص GPL-3.0 لـ Linux: نماذج محلية وصوت ودردشة مع المستندات وMCP، يُثبَّت من Flathub. ما تأكد وما لم يتأكد.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ar/power-local-llm/newelle-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Newelle 리뷰: Linux용 무료 오픈소스 AI 앱",
+    "excerpt": "Newelle은 로컬 모델, 음성, 문서 채팅, MCP를 지원하는 무료 GPL-3.0 Linux AI 어시스턴트로 Flathub에서 설치합니다. 확인된 점과 확인하지 못한 점.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ko/power-local-llm/newelle-review",
     "cluster": "power-local-llm"
   },
   {
