@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji is an open-source (AGPL-3.0) app that translates speech live in both directions for bilingual meetings, using cloud AI providers or, according to the maker, on-device models.** It runs as a desktop app for Windows, macOS and Linux and as a Chrome and Edge extension, and it acts as a virtual microphone for Zoom, Google Meet, Microsoft Teams and other apps. The app is free; cloud use is billed by the provider or from a prepaid Kizuna AI balance. PromptQuorum has not tested the app.',
+      '**Sokuji is an open-source (AGPL-3.0) app that translates speech live in both directions for bilingual meetings, using cloud AI providers or, according to the maker, on-device models.** It runs as a desktop app for Windows, macOS and Linux and as a Chrome and Edge extension, and it acts as a virtual microphone for Zoom, Google Meet, Microsoft Teams and other apps. According to the maker, the app is free; cloud use is billed by the provider or from a prepaid Kizuna AI balance. PromptQuorum has not tested the app.',
     quickAnswerTop: {
       en: {
         question: 'What is Sokuji and who is it for?',
@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Overview',
         content: [
           '**Sokuji is a live speech translation app by Kizuna AI Lab, released as a desktop app for Windows, macOS and Linux and as a browser extension for Chrome and Edge under the AGPL-3.0 licence.**',
-          'It is developed in the open at [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). The repository was created in April 2025, version 0.50.4 appeared on 16 November 2026 and the last commit on the main branch was on 18 November 2026, so development is active and no stale-project warning applies. The terms of service name Kizuna AI Lab as the provider and are governed by the laws of Japan, with the courts of Tokyo as exclusive venue. The maker’s [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) page, a notice under Japanese law, lists Kizuna AI Lab as the operator and says its address and phone number are disclosed on request; PromptQuorum found no published company address or registration number. According to the maker, its account server is not open source.',
+          'It is developed in the open at [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). The repository was created in April 2025, version 0.50.4 appeared on 16 November 2026 and the last commit on the main branch was on 18 November 2026, so development is active and no stale-project warning applies. The terms of service name Kizuna AI Lab as the provider and are governed by the laws of Japan, with the courts of Tokyo as exclusive venue. The maker’s [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) page, which the maker presents as a notice under Japanese law, lists Kizuna AI Lab as the operator and says its address and phone number are disclosed on request; PromptQuorum found no published company address or registration number. According to the maker, its account server is not open source.',
           'According to the maker, Sokuji sits between you and your meeting app like a microphone: your speech is recognised, translated and spoken or shown as subtitles in the other language, and what the other side says comes back as subtitles or read aloud to you. A two-way mode detects which of two chosen languages is spoken and translates in both directions. The README and the maker’s documentation list OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, OpenAI-compatible endpoints, a Kizuna AI account and on-device Local Inference as ways to do this.',
           'PromptQuorum has not run the app and has not checked recognition accuracy, translation quality, latency or the speed of the on-device models.',
         ],
@@ -167,6 +167,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Audio tools: AI noise suppression, echo cancellation and a passthrough to monitor your own voice.',
           'Interface: 30 interface languages, a Simple Mode for setup and an Advanced Mode with waveform display.',
           'Meeting notes: with a Kizuna AI account the maker offers notes written from the session transcript, which passes through its server to OpenAI and is not kept, according to the privacy page.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Translating a meeting means sending other people’s speech to the provider you choose, and voice cloning processes a person’s voice. Tell participants before you use it, check your employer’s and the meeting platform’s rules, and get consent before cloning anyone’s voice. This is general information, not legal advice.',
+          },
         ],
       },
       privacy: {
@@ -232,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Does Sokuji work offline?',
-            a: 'According to the maker, yes once the on-device models are downloaded: recognition, translation and speech then run on your computer without a network. The “Online” engines, Edge TTS and Bing Translator, need the network and send text to Microsoft, and the app still makes update and statistics connections. PromptQuorum did not test this.',
+            a: 'According to the maker, yes once the on-device models are downloaded: recognition, translation and speech then run on your computer without a network. According to the privacy page, the “Online” engines, Edge TTS and Bing Translator, need the network and send text to Microsoft, and the app still makes update and statistics connections. PromptQuorum did not test this.',
           },
           {
             q: 'Is Sokuji free?',
@@ -275,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Privacy summary](https://sokuji.kizuna.ai/privacy) — where meeting content goes, checked 18 November 2026.',
           '[Privacy Policy](https://sokuji.kizuna.ai/docs/privacy) — data collected and retention, dated 14 November 2026, checked 18 November 2026.',
           '[Terms of Service](https://sokuji.kizuna.ai/docs/terms) — provider, balance, governing law and venue, checked 18 November 2026.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — operator, prepaid balance terms and system requirements, a notice under Japanese law, checked 18 November 2026.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — operator, prepaid balance terms and system requirements, presented by the maker as a notice under Japanese law, checked 18 November 2026.',
           '[GitHub repository](https://github.com/kizuna-ai-lab/sokuji) — licence, creation date and last commit, checked 18 November 2026.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — features, providers, install and privacy notes, checked 18 November 2026.',
           '[GitHub releases](https://github.com/kizuna-ai-lab/sokuji/releases) — release dates and packages for v0.50.4, checked 18 November 2026.',
@@ -308,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Sokuji 0.50.4 ist eine quelloffene Desktop-App und Erweiterung für Chrome und Edge, die Sprache für zweisprachige Meetings live in beide Richtungen übersetzt. Sie arbeitet mit Cloud-KI-Anbietern oder laut Hersteller mit Modellen für Spracherkennung, Übersetzung und Sprachausgabe, die auf Ihrem eigenen Gerät laufen. Die Lizenz ist AGPL-3.0. Diese Rezension stützt sich auf die offizielle Website, das GitHub-Repository mit seinen Releases sowie die Datenschutz- und Nutzungsbedingungen, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'Sokuji ist eine quelloffene App für Live-Sprachübersetzung in zweisprachigen Meetings, mit Cloud-Anbietern oder Modellen auf dem Gerät. Was belegt ist und was nicht.',
+      'Sokuji ist eine quelloffene App für Live-Sprachübersetzung in zweisprachigen Meetings, per Cloud oder auf dem Gerät. Was belegt ist und was nicht.',
     twitterDescription:
       'Sokuji: quelloffene App für Live-Sprachübersetzung in zweisprachigen Meetings, als Desktop-App und Erweiterung für Chrome und Edge, mit Cloud-KI-Anbietern oder Modellen auf dem Gerät. Was belegt ist.',
     audience:
@@ -327,7 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji ist eine quelloffene App (AGPL-3.0), die Sprache für zweisprachige Meetings live in beide Richtungen übersetzt, mit Cloud-KI-Anbietern oder laut Hersteller mit Modellen auf dem Gerät.** Sie läuft als Desktop-App für Windows, macOS und Linux sowie als Erweiterung für Chrome und Edge und dient als virtuelles Mikrofon für Zoom, Google Meet, Microsoft Teams und andere Apps. Die App ist kostenlos; Cloud-Nutzung wird vom Anbieter oder über ein vorausbezahltes Kizuna-AI-Guthaben abgerechnet. PromptQuorum hat die App nicht getestet.',
+      '**Sokuji ist eine quelloffene App (AGPL-3.0), die Sprache für zweisprachige Meetings live in beide Richtungen übersetzt, mit Cloud-KI-Anbietern oder laut Hersteller mit Modellen auf dem Gerät.** Sie läuft als Desktop-App für Windows, macOS und Linux sowie als Erweiterung für Chrome und Edge und dient als virtuelles Mikrofon für Zoom, Google Meet, Microsoft Teams und andere Apps. Laut Hersteller ist die App kostenlos; Cloud-Nutzung wird vom Anbieter oder über ein vorausbezahltes Kizuna-AI-Guthaben abgerechnet. PromptQuorum hat die App nicht getestet.',
     quickAnswerTop: {
       de: {
         question: 'Was ist Sokuji, und für wen ist es gedacht?',
@@ -392,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Überblick',
         content: [
           '**Sokuji ist eine App für Live-Sprachübersetzung von Kizuna AI Lab, veröffentlicht als Desktop-App für Windows, macOS und Linux sowie als Browser-Erweiterung für Chrome und Edge unter der Lizenz AGPL-3.0.**',
-          'Sie wird offen auf [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji) entwickelt. Das Repository wurde im April 2025 angelegt, Version 0.50.4 erschien am 16. November 2026 und der letzte Commit auf dem Hauptzweig stammt vom 18. November 2026; die Entwicklung ist also aktiv, und es gilt keine Warnung vor einem verwaisten Projekt. Die Nutzungsbedingungen nennen Kizuna AI Lab als Anbieter und unterliegen japanischem Recht, ausschließlicher Gerichtsstand sind die Gerichte in Tokio. Die Seite [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) des Herstellers, eine Angabe nach japanischem Recht, nennt Kizuna AI Lab als Betreiber und sagt, Anschrift und Telefonnummer würden auf Anfrage mitgeteilt; PromptQuorum hat keine veröffentlichte Firmenanschrift und keine Registernummer gefunden. Laut Hersteller ist der Konto-Server nicht quelloffen.',
+          'Sie wird offen auf [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji) entwickelt. Das Repository wurde im April 2025 angelegt, Version 0.50.4 erschien am 16. November 2026 und der letzte Commit auf dem Hauptzweig stammt vom 18. November 2026; die Entwicklung ist also aktiv, und es gilt keine Warnung vor einem verwaisten Projekt. Die Nutzungsbedingungen nennen Kizuna AI Lab als Anbieter und unterliegen japanischem Recht, ausschließlicher Gerichtsstand sind die Gerichte in Tokio. Die Seite [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) des Herstellers, die der Hersteller als Angabe nach japanischem Recht bezeichnet, nennt Kizuna AI Lab als Betreiber und sagt, Anschrift und Telefonnummer würden auf Anfrage mitgeteilt; PromptQuorum hat keine veröffentlichte Firmenanschrift und keine Registernummer gefunden. Laut Hersteller ist der Konto-Server nicht quelloffen.',
           'Laut Hersteller sitzt Sokuji wie ein Mikrofon zwischen Ihnen und Ihrer Meeting-App: Ihre Sprache wird erkannt, übersetzt und in der anderen Sprache gesprochen oder als Untertitel angezeigt, und was die Gegenseite sagt, kommt als Untertitel oder vorgelesen zu Ihnen zurück. Ein Zwei-Wege-Modus erkennt, welche von zwei gewählten Sprachen gesprochen wird, und übersetzt in beide Richtungen. README und Dokumentation des Herstellers nennen OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, OpenAI-kompatible Endpunkte, ein Kizuna-AI-Konto und die Inferenz auf dem Gerät („Local Inference“) als Möglichkeiten dafür.',
           'PromptQuorum hat die App nicht ausgeführt und weder Erkennungsgenauigkeit, Übersetzungsqualität, Latenz noch die Geschwindigkeit der Modelle auf dem Gerät geprüft.',
         ],
@@ -449,6 +455,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Audiowerkzeuge: KI-Rauschunterdrückung, Echounterdrückung und eine Durchleitung, um die eigene Stimme mitzuhören.',
           'Oberfläche: 30 Oberflächensprachen, ein einfacher Modus für die Einrichtung und ein erweiterter Modus mit Wellenformanzeige.',
           'Meeting-Notizen: Mit einem Kizuna-AI-Konto bietet der Hersteller Notizen, die aus dem Sitzungstranskript erstellt werden; der Text läuft laut Datenschutzseite über seinen Server zu OpenAI und wird nicht gespeichert.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Wer ein Meeting übersetzt, sendet die Sprache anderer Personen an den gewählten Anbieter, und beim Stimmklonen wird die Stimme einer Person verarbeitet. Informieren Sie die Teilnehmenden vorab, prüfen Sie die Regeln Ihres Arbeitgebers und der Meeting-Plattform und holen Sie die Einwilligung ein, bevor Sie die Stimme einer Person klonen. Dies sind allgemeine Informationen, keine Rechtsberatung.',
+          },
         ],
       },
       privacy: {
@@ -514,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Funktioniert Sokuji offline?',
-            a: 'Laut Hersteller ja, sobald die Modelle auf dem Gerät heruntergeladen sind: Erkennung, Übersetzung und Sprachausgabe laufen dann ohne Netzwerk auf Ihrem Rechner. Die „Online“-Engines Edge TTS und Bing Translator brauchen das Netzwerk und senden Text an Microsoft, und die App baut weiterhin Verbindungen für Updates und Statistiken auf. PromptQuorum hat das nicht getestet.',
+            a: 'Laut Hersteller ja, sobald die Modelle auf dem Gerät heruntergeladen sind: Erkennung, Übersetzung und Sprachausgabe laufen dann ohne Netzwerk auf Ihrem Rechner. Laut Datenschutzseite brauchen die „Online“-Engines Edge TTS und Bing Translator das Netzwerk und senden Text an Microsoft, und die App baut weiterhin Verbindungen für Updates und Statistiken auf. PromptQuorum hat das nicht getestet.',
           },
           {
             q: 'Ist Sokuji kostenlos?',
@@ -543,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           '**Sokuji ist einen Blick wert, wenn Sie zweisprachige Meetings führen und eine Live-Übersetzung in beide Richtungen per Desktop-App oder Browser-Erweiterung möchten, mit der Wahl zwischen Cloud-Anbietern und laut Hersteller Modellen auf dem Gerät.**',
-          'Auf dem Papier deckt es viel ab: ein virtuelles Mikrofon für jede App, Untertitel, automatische Erkennung der gesprochenen Sprache in beide Richtungen, mehrere Cloud-Anbieter, lokale Modelle und eine offene Codebasis. Die Entwicklung ist aktiv, mit vier Releases zwischen dem 10. und 16. November 2026.',
+          'Auf dem Papier deckt es viel ab: ein virtuelles Mikrofon für jede App, Untertitel, laut Hersteller die Erkennung der gesprochenen Sprache in beide Richtungen, mehrere Cloud-Anbieter, lokale Modelle und eine offene Codebasis. Die Entwicklung ist aktiv, mit vier Releases zwischen dem 10. und 16. November 2026.',
           'Die Kompromisse sind real: Der Hersteller selbst sagt, die Qualität auf dem Gerät liege hinter großen gehosteten Modellen, die aktuelle Erklärung sagt, Nutzungsstatistiken ließen sich in der App nicht abschalten, und PromptQuorum hat nichts getestet. Probieren Sie es in einem Gespräch ohne viel Gewicht aus und prüfen Sie Erkennung und Übersetzung in beiden Sprachen, bevor Sie sich darauf verlassen.',
         ],
       },
@@ -557,7 +569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Datenschutz-Zusammenfassung](https://sokuji.kizuna.ai/privacy) — wohin Meeting-Inhalte gehen, geprüft am 18. November 2026.',
           '[Datenschutzerklärung](https://sokuji.kizuna.ai/docs/privacy) — erhobene Daten und Speicherdauer, Stand 14. November 2026, geprüft am 18. November 2026.',
           '[Nutzungsbedingungen](https://sokuji.kizuna.ai/docs/terms) — Anbieter, Guthaben, anwendbares Recht und Gerichtsstand, geprüft am 18. November 2026.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — Betreiber, Bedingungen des Guthabens und Systemanforderungen, eine Angabe nach japanischem Recht, geprüft am 18. November 2026.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — Betreiber, Bedingungen des Guthabens und Systemanforderungen, vom Hersteller als Angabe nach japanischem Recht bezeichnet, geprüft am 18. November 2026.',
           '[GitHub-Repository](https://github.com/kizuna-ai-lab/sokuji) — Lizenz, Erstellungsdatum und letzter Commit, geprüft am 18. November 2026.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — Funktionen, Anbieter, Installation und Datenschutzhinweise, geprüft am 18. November 2026.',
           '[GitHub Releases](https://github.com/kizuna-ai-lab/sokuji/releases) — Release-Daten und Pakete zu v0.50.4, geprüft am 18. November 2026.',
@@ -585,22 +597,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sokuji-review-hero-fr.webp',
-    title: 'Test de Sokuji : traduction vocale en direct dans les deux sens pour vos réunions',
-    seoTitle: 'Test de Sokuji : traduction vocale en direct',
+    title: 'Avis sur Sokuji : traduction vocale en direct dans les deux sens pour vos réunions',
+    seoTitle: 'Avis sur Sokuji : traduction vocale en direct en réunion',
     intro:
-      'Sokuji 0.50.4 est une application de bureau et une extension Chrome et Edge, à code source ouvert, qui traduit la parole en direct dans les deux sens pour des réunions bilingues. Elle fonctionne avec des fournisseurs d’IA cloud ou, selon l’éditeur, avec des modèles de reconnaissance, de traduction et de synthèse vocale exécutés sur votre propre appareil. La licence est AGPL-3.0. Ce test s’appuie sur le site officiel, le dépôt GitHub et ses versions, ainsi que les pages de confidentialité et de conditions d’utilisation, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application.',
+      'Sokuji 0.50.4 est une application de bureau et une extension Chrome et Edge, à code source ouvert, qui traduit la parole en direct dans les deux sens pour des réunions bilingues. Elle fonctionne avec des fournisseurs d’IA cloud ou, selon l’éditeur, avec des modèles de reconnaissance, de traduction et de synthèse vocale exécutés sur votre propre appareil. La licence est AGPL-3.0. Cet avis s’appuie sur le site officiel, le dépôt GitHub et ses versions, ainsi que les pages de confidentialité et de conditions d’utilisation, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application.',
     metaDescription:
-      'Sokuji est une application à code source ouvert de traduction vocale en direct pour réunions bilingues, avec fournisseurs cloud ou modèles sur l’appareil. Ce qui est confirmé.',
+      'Sokuji, application open source de traduction vocale en direct pour réunions bilingues, avec cloud ou modèles sur l’appareil. Ce qui est confirmé.',
     twitterDescription:
-      'Sokuji : application à code source ouvert de traduction vocale en direct pour réunions bilingues, en application de bureau et extension Chrome et Edge, avec fournisseurs d’IA cloud ou modèles sur l’appareil. Ce qui est confirmé.',
+      'Sokuji : appli open source de traduction vocale en direct pour réunions bilingues, en application de bureau et extension Chrome et Edge. Ce qui est confirmé.',
     audience:
       'Personnes en réunion ou en appel bilingue, équipes qui veulent des sous-titres en direct dans une autre langue, et utilisateurs soucieux de leur vie privée qui veulent essayer la reconnaissance, la traduction et la synthèse vocale sur l’appareil',
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test de Sokuji',
+    primaryTerm: 'avis sur Sokuji',
     targetKeywords: [
-      'test de Sokuji',
+      'avis sur Sokuji',
       'application de traduction vocale en direct',
       'traduction de réunion en temps réel',
       'traduction vocale hors ligne',
@@ -609,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji est une application à code source ouvert (AGPL-3.0) qui traduit la parole en direct dans les deux sens pour des réunions bilingues, avec des fournisseurs d’IA cloud ou, selon l’éditeur, des modèles sur l’appareil.** Elle existe en application de bureau pour Windows, macOS et Linux et en extension Chrome et Edge, et joue le rôle de micro virtuel pour Zoom, Google Meet, Microsoft Teams et d’autres applications. L’application est gratuite ; l’usage cloud est facturé par le fournisseur ou depuis un solde Kizuna AI prépayé. PromptQuorum n’a pas testé l’application.',
+      '**Sokuji est une application à code source ouvert (AGPL-3.0) qui traduit la parole en direct dans les deux sens pour des réunions bilingues, avec des fournisseurs d’IA cloud ou, selon l’éditeur, des modèles sur l’appareil.** Elle existe en application de bureau pour Windows, macOS et Linux et en extension Chrome et Edge, et joue le rôle de micro virtuel pour Zoom, Google Meet, Microsoft Teams et d’autres applications. Selon l’éditeur, l’application est gratuite ; l’usage cloud est facturé par le fournisseur ou depuis un solde Kizuna AI prépayé. PromptQuorum n’a pas testé l’application.',
     quickAnswerTop: {
       fr: {
         question: 'Qu’est-ce que Sokuji et à qui s’adresse-t-il ?',
@@ -674,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Présentation',
         content: [
           '**Sokuji est une application de traduction vocale en direct de Kizuna AI Lab, publiée en application de bureau pour Windows, macOS et Linux et en extension de navigateur pour Chrome et Edge, sous licence AGPL-3.0.**',
-          'Elle est développée ouvertement sur [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). Le dépôt a été créé en avril 2025, la version 0.50.4 est parue le 16 novembre 2026 et le dernier commit sur la branche principale date du 18 novembre 2026 : le développement est donc actif et aucun avertissement de projet délaissé ne s’applique. Les conditions d’utilisation désignent Kizuna AI Lab comme fournisseur et sont soumises au droit japonais, avec compétence exclusive des tribunaux de Tokyo. La page [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) de l’éditeur, une mention prévue par le droit japonais, désigne Kizuna AI Lab comme exploitant et indique que l’adresse et le numéro de téléphone sont communiqués sur demande ; PromptQuorum n’a trouvé ni adresse d’entreprise publiée ni numéro d’immatriculation. Selon l’éditeur, son serveur de comptes n’est pas à code source ouvert.',
+          'Elle est développée ouvertement sur [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). Le dépôt a été créé en avril 2025, la version 0.50.4 est parue le 16 novembre 2026 et le dernier commit sur la branche principale date du 18 novembre 2026 : le développement est donc actif et aucun avertissement de projet délaissé ne s’applique. Les conditions d’utilisation désignent Kizuna AI Lab comme fournisseur et sont soumises au droit japonais, avec compétence exclusive des tribunaux de Tokyo. La page [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) de l’éditeur, que celui-ci présente comme une mention prévue par le droit japonais, désigne Kizuna AI Lab comme exploitant et indique que l’adresse et le numéro de téléphone sont communiqués sur demande ; PromptQuorum n’a trouvé ni adresse d’entreprise publiée ni numéro d’immatriculation. Selon l’éditeur, son serveur de comptes n’est pas à code source ouvert.',
           'Selon l’éditeur, Sokuji se place comme un micro entre vous et votre application de réunion : votre voix est reconnue, traduite, puis prononcée ou affichée en sous-titres dans l’autre langue, et ce que dit l’interlocuteur vous revient en sous-titres ou lu à voix haute. Un mode bidirectionnel détecte laquelle de deux langues choisies est parlée et traduit dans les deux sens. Le README et la documentation de l’éditeur citent OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, des points d’accès compatibles OpenAI, un compte Kizuna AI et l’inférence sur l’appareil (« Local Inference ») pour y parvenir.',
           'PromptQuorum n’a pas exécuté l’application et n’a vérifié ni la précision de la reconnaissance, ni la qualité de la traduction, ni la latence, ni la vitesse des modèles sur l’appareil.',
         ],
@@ -731,6 +743,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Outils audio : suppression de bruit par IA, annulation d’écho et un retour pour s’entendre soi-même.',
           'Interface : 30 langues d’interface, un mode simple pour la configuration et un mode avancé avec affichage de la forme d’onde.',
           'Notes de réunion : avec un compte Kizuna AI, l’éditeur propose des notes rédigées à partir de la transcription de la session, qui transite par son serveur vers OpenAI sans être conservée, selon la page de confidentialité.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Traduire une réunion revient à envoyer la parole d’autres personnes au fournisseur que vous choisissez, et le clonage vocal traite la voix d’une personne. Prévenez les participants avant de l’utiliser, vérifiez les règles de votre employeur et de la plateforme de réunion, et obtenez un consentement avant de cloner la voix de quiconque. Ce sont des informations générales, pas un conseil juridique.',
+          },
         ],
       },
       privacy: {
@@ -796,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Sokuji fonctionne-t-il hors ligne ?',
-            a: 'Selon l’éditeur, oui une fois les modèles sur l’appareil téléchargés : reconnaissance, traduction et voix s’exécutent alors sur votre ordinateur sans réseau. Les moteurs « Online », Edge TTS et Bing Translator, ont besoin du réseau et envoient du texte à Microsoft, et l’application établit encore des connexions pour les mises à jour et les statistiques. PromptQuorum ne l’a pas testé.',
+            a: 'Selon l’éditeur, oui une fois les modèles sur l’appareil téléchargés : reconnaissance, traduction et voix s’exécutent alors sur votre ordinateur sans réseau. Selon la page de confidentialité, les moteurs « Online », Edge TTS et Bing Translator, ont besoin du réseau et envoient du texte à Microsoft, et l’application établit encore des connexions pour les mises à jour et les statistiques. PromptQuorum ne l’a pas testé.',
           },
           {
             q: 'Sokuji est-il gratuit ?',
@@ -839,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Résumé de confidentialité](https://sokuji.kizuna.ai/privacy) — où va le contenu des réunions, consulté le 18 novembre 2026.',
           '[Politique de confidentialité](https://sokuji.kizuna.ai/docs/privacy) — données collectées et durées de conservation, datée du 14 novembre 2026, consultée le 18 novembre 2026.',
           '[Conditions d’utilisation](https://sokuji.kizuna.ai/docs/terms) — fournisseur, solde, droit applicable et juridiction, consultées le 18 novembre 2026.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — exploitant, conditions du solde prépayé et configuration requise, mention prévue par le droit japonais, consultée le 18 novembre 2026.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — exploitant, conditions du solde prépayé et configuration requise, présentée par l’éditeur comme une mention prévue par le droit japonais, consultée le 18 novembre 2026.',
           '[Dépôt GitHub](https://github.com/kizuna-ai-lab/sokuji) — licence, date de création et dernier commit, consulté le 18 novembre 2026.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — fonctionnalités, fournisseurs, installation et notes de confidentialité, consulté le 18 novembre 2026.',
           '[Versions GitHub](https://github.com/kizuna-ai-lab/sokuji/releases) — dates de publication et paquets de la v0.50.4, consultées le 18 novembre 2026.',
@@ -851,9 +869,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures associées',
         items: [
           '[Outils vocaux et audio locaux comparés](/fr/power-local-llm/local-llm-voice-audio-compared) — synthèse vocale, reconnaissance vocale et agents vocaux côte à côte.',
-          '[Test de Buzz](/fr/power-local-llm/buzz-captions-review) — transcription Whisper locale sur le bureau.',
-          '[Test de Sablate](/fr/power-local-llm/sablate-review) — sous-titres et traduction de vidéos sous Windows et Mac.',
-          '[Test de Minutes](/fr/power-local-llm/minutes-review) — notes de réunion à partir de la transcription, gratuit et à code source ouvert.',
+          '[Avis sur Buzz](/fr/power-local-llm/buzz-captions-review) — transcription Whisper locale sur le bureau.',
+          '[Avis sur Sablate](/fr/power-local-llm/sablate-review) — sous-titres et traduction de vidéos sous Windows et Mac.',
+          '[Avis sur Minutes](/fr/power-local-llm/minutes-review) — notes de réunion à partir de la transcription, gratuit et à code source ouvert.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale.',
         ],
       },
@@ -868,13 +886,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sokuji-review-hero-es.webp',
     title: 'Reseña de Sokuji: traducción de voz en directo en ambos sentidos para reuniones',
-    seoTitle: 'Reseña de Sokuji: traducción de voz en directo',
+    seoTitle: 'Reseña de Sokuji: voz traducida en directo en reuniones',
     intro:
       'Sokuji 0.50.4 es una aplicación de escritorio y una extensión para Chrome y Edge, de código abierto, que traduce la voz en directo en ambos sentidos para reuniones bilingües. Funciona con proveedores de IA en la nube o, según el desarrollador, con modelos de reconocimiento, traducción y síntesis de voz que se ejecutan en tu propio dispositivo. La licencia es AGPL-3.0. Esta reseña se basa en el sitio web oficial, el repositorio de GitHub con sus versiones y las páginas de privacidad y condiciones, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación.',
     metaDescription:
-      'Sokuji es una aplicación de código abierto de traducción de voz en directo para reuniones bilingües, con proveedores en la nube o modelos en el dispositivo. Qué está confirmado.',
+      'Sokuji es una app de código abierto de traducción de voz en directo para reuniones bilingües, en la nube o en el dispositivo. Qué está confirmado.',
     twitterDescription:
-      'Sokuji: aplicación de código abierto de traducción de voz en directo para reuniones bilingües, como app de escritorio y extensión de Chrome y Edge, con proveedores de IA en la nube o modelos en el dispositivo. Qué está confirmado.',
+      'Sokuji: app de código abierto de traducción de voz en directo para reuniones bilingües, de escritorio y extensión de Chrome y Edge. Qué está confirmado.',
     audience:
       'Personas en reuniones y llamadas bilingües, equipos que quieren subtítulos en directo en otro idioma y usuarios atentos a la privacidad que quieren probar reconocimiento, traducción y voz en el dispositivo',
     readTime: '7 min de lectura',
@@ -891,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji es una aplicación de código abierto (AGPL-3.0) que traduce la voz en directo en ambos sentidos para reuniones bilingües, con proveedores de IA en la nube o, según el desarrollador, modelos en el dispositivo.** Funciona como aplicación de escritorio para Windows, macOS y Linux y como extensión de Chrome y Edge, y actúa como micrófono virtual para Zoom, Google Meet, Microsoft Teams y otras aplicaciones. La app es gratuita; el uso en la nube lo factura el proveedor o se descuenta de un saldo prepago de Kizuna AI. PromptQuorum no ha probado la aplicación.',
+      '**Sokuji es una aplicación de código abierto (AGPL-3.0) que traduce la voz en directo en ambos sentidos para reuniones bilingües, con proveedores de IA en la nube o, según el desarrollador, modelos en el dispositivo.** Funciona como aplicación de escritorio para Windows, macOS y Linux y como extensión de Chrome y Edge, y actúa como micrófono virtual para Zoom, Google Meet, Microsoft Teams y otras aplicaciones. Según el desarrollador, la app es gratuita; el uso en la nube lo factura el proveedor o se descuenta de un saldo prepago de Kizuna AI. PromptQuorum no ha probado la aplicación.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Sokuji y para quién es?',
@@ -956,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen',
         content: [
           '**Sokuji es una aplicación de traducción de voz en directo de Kizuna AI Lab, publicada como aplicación de escritorio para Windows, macOS y Linux y como extensión de navegador para Chrome y Edge, con licencia AGPL-3.0.**',
-          'Se desarrolla en abierto en [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). El repositorio se creó en abril de 2025, la versión 0.50.4 apareció el 16 de noviembre de 2026 y el último commit de la rama principal es del 18 de noviembre de 2026, así que el desarrollo está activo y no se aplica ningún aviso de proyecto abandonado. Las condiciones de servicio nombran a Kizuna AI Lab como proveedor y se rigen por la ley de Japón, con los tribunales de Tokio como fuero exclusivo. La página [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) del desarrollador, un aviso conforme a la ley japonesa, nombra a Kizuna AI Lab como operador y dice que la dirección y el teléfono se facilitan bajo petición; PromptQuorum no encontró una dirección de empresa publicada ni un número de registro. Según el desarrollador, su servidor de cuentas no es de código abierto.',
+          'Se desarrolla en abierto en [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). El repositorio se creó en abril de 2025, la versión 0.50.4 apareció el 16 de noviembre de 2026 y el último commit de la rama principal es del 18 de noviembre de 2026, así que el desarrollo está activo y no se aplica ningún aviso de proyecto abandonado. Las condiciones de servicio nombran a Kizuna AI Lab como proveedor y se rigen por la ley de Japón, con los tribunales de Tokio como fuero exclusivo. La página [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) del desarrollador, que este presenta como un aviso conforme a la ley japonesa, nombra a Kizuna AI Lab como operador y dice que la dirección y el teléfono se facilitan bajo petición; PromptQuorum no encontró una dirección de empresa publicada ni un número de registro. Según el desarrollador, su servidor de cuentas no es de código abierto.',
           'Según el desarrollador, Sokuji se coloca como un micrófono entre tú y tu aplicación de reuniones: tu voz se reconoce, se traduce y se dice o se muestra como subtítulos en el otro idioma, y lo que dice la otra parte te llega como subtítulos o leído en voz alta. Un modo bidireccional detecta cuál de dos idiomas elegidos se habla y traduce en ambos sentidos. El README y la documentación del desarrollador citan OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, puntos de acceso compatibles con OpenAI, una cuenta de Kizuna AI y la inferencia en el dispositivo («Local Inference») como formas de lograrlo.',
           'PromptQuorum no ha ejecutado la aplicación y no ha comprobado la precisión del reconocimiento, la calidad de la traducción, la latencia ni la velocidad de los modelos en el dispositivo.',
         ],
@@ -1013,6 +1031,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Herramientas de audio: supresión de ruido con IA, cancelación de eco y un retorno para oír tu propia voz.',
           'Interfaz: 30 idiomas de interfaz, un modo sencillo para la configuración y un modo avanzado con forma de onda.',
           'Notas de reunión: con una cuenta de Kizuna AI, el desarrollador ofrece notas redactadas a partir de la transcripción de la sesión, que pasa por su servidor hacia OpenAI y no se conserva, según la página de privacidad.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Traducir una reunión significa enviar la voz de otras personas al proveedor que elijas, y la clonación de voz procesa la voz de una persona. Avisa a los participantes antes de usarlo, consulta las normas de tu empleador y de la plataforma de reuniones, y obtén consentimiento antes de clonar la voz de nadie. Esta es información general, no asesoramiento jurídico.',
+          },
         ],
       },
       privacy: {
@@ -1078,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Funciona Sokuji sin conexión?',
-            a: 'Según el desarrollador, sí una vez descargados los modelos en el dispositivo: el reconocimiento, la traducción y la voz se ejecutan entonces en tu equipo sin red. Los motores «Online», Edge TTS y Bing Translator, necesitan red y envían texto a Microsoft, y la app sigue haciendo conexiones de actualización y estadísticas. PromptQuorum no lo probó.',
+            a: 'Según el desarrollador, sí una vez descargados los modelos en el dispositivo: el reconocimiento, la traducción y la voz se ejecutan entonces en tu equipo sin red. Según la página de privacidad, los motores «Online», Edge TTS y Bing Translator, necesitan red y envían texto a Microsoft, y la app sigue haciendo conexiones de actualización y estadísticas. PromptQuorum no lo probó.',
           },
           {
             q: '¿Es gratuito Sokuji?',
@@ -1121,7 +1145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Resumen de privacidad](https://sokuji.kizuna.ai/privacy) — adónde va el contenido de las reuniones, consultado el 18 de noviembre de 2026.',
           '[Política de privacidad](https://sokuji.kizuna.ai/docs/privacy) — datos recogidos y plazos de conservación, fechada el 14 de noviembre de 2026, consultada el 18 de noviembre de 2026.',
           '[Condiciones de servicio](https://sokuji.kizuna.ai/docs/terms) — proveedor, saldo, ley aplicable y fuero, consultadas el 18 de noviembre de 2026.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — operador, condiciones del saldo prepago y requisitos del sistema, un aviso conforme a la ley japonesa, consultada el 18 de noviembre de 2026.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — operador, condiciones del saldo prepago y requisitos del sistema, presentado por el desarrollador como un aviso conforme a la ley japonesa, consultada el 18 de noviembre de 2026.',
           '[Repositorio de GitHub](https://github.com/kizuna-ai-lab/sokuji) — licencia, fecha de creación y último commit, consultado el 18 de noviembre de 2026.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — funciones, proveedores, instalación y notas de privacidad, consultado el 18 de noviembre de 2026.',
           '[Versiones de GitHub](https://github.com/kizuna-ai-lab/sokuji/releases) — fechas de publicación y paquetes de la v0.50.4, consultadas el 18 de noviembre de 2026.',
@@ -1150,13 +1174,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sokuji-review-hero-pt.webp',
     title: 'Análise do Sokuji: tradução de voz ao vivo nos dois sentidos para reuniões',
-    seoTitle: 'Análise do Sokuji: tradução de voz ao vivo',
+    seoTitle: 'Análise do Sokuji: tradução de voz ao vivo em reuniões',
     intro:
       'O Sokuji 0.50.4 é um aplicativo de desktop e uma extensão para Chrome e Edge, de código aberto, que traduz a fala ao vivo nos dois sentidos em reuniões bilíngues. Ele funciona com provedores de IA na nuvem ou, segundo o desenvolvedor, com modelos de reconhecimento, tradução e síntese de voz que rodam no seu próprio dispositivo. A licença é AGPL-3.0. Esta análise se baseia no site oficial, no repositório do GitHub com suas versões e nas páginas de privacidade e de termos, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo.',
     metaDescription:
-      'O Sokuji é um aplicativo de código aberto de tradução de voz ao vivo para reuniões bilíngues, com provedores na nuvem ou modelos no dispositivo. O que está confirmado.',
+      'O Sokuji é um app de código aberto de tradução de voz ao vivo para reuniões bilíngues, na nuvem ou no dispositivo. O que está confirmado.',
     twitterDescription:
-      'Sokuji: aplicativo de código aberto de tradução de voz ao vivo para reuniões bilíngues, como app de desktop e extensão para Chrome e Edge, com provedores de IA na nuvem ou modelos no dispositivo. O que está confirmado.',
+      'Sokuji: app de código aberto de tradução de voz ao vivo para reuniões bilíngues, para desktop e extensão do Chrome e Edge. O que está confirmado.',
     audience:
       'Pessoas em reuniões e chamadas bilíngues, equipes que querem legendas ao vivo em outro idioma e usuários atentos à privacidade que querem experimentar reconhecimento, tradução e voz no dispositivo',
     readTime: '7 min de leitura',
@@ -1173,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O Sokuji é um aplicativo de código aberto (AGPL-3.0) que traduz a fala ao vivo nos dois sentidos em reuniões bilíngues, com provedores de IA na nuvem ou, segundo o desenvolvedor, modelos no dispositivo.** Ele roda como aplicativo de desktop para Windows, macOS e Linux e como extensão para Chrome e Edge, e funciona como microfone virtual para Zoom, Google Meet, Microsoft Teams e outros aplicativos. O app é gratuito; o uso na nuvem é cobrado pelo provedor ou debitado de um saldo pré-pago da Kizuna AI. A PromptQuorum não testou o aplicativo.',
+      '**O Sokuji é um aplicativo de código aberto (AGPL-3.0) que traduz a fala ao vivo nos dois sentidos em reuniões bilíngues, com provedores de IA na nuvem ou, segundo o desenvolvedor, modelos no dispositivo.** Ele roda como aplicativo de desktop para Windows, macOS e Linux e como extensão para Chrome e Edge, e funciona como microfone virtual para Zoom, Google Meet, Microsoft Teams e outros aplicativos. Segundo o desenvolvedor, o app é gratuito; o uso na nuvem é cobrado pelo provedor ou debitado de um saldo pré-pago da Kizuna AI. A PromptQuorum não testou o aplicativo.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Sokuji e para quem ele serve?',
@@ -1238,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Visão geral',
         content: [
           '**O Sokuji é um aplicativo de tradução de voz ao vivo da Kizuna AI Lab, lançado como aplicativo de desktop para Windows, macOS e Linux e como extensão de navegador para Chrome e Edge, sob a licença AGPL-3.0.**',
-          'Ele é desenvolvido às claras em [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). O repositório foi criado em abril de 2025, a versão 0.50.4 saiu em 16 de novembro de 2026 e o último commit no ramo principal é de 18 de novembro de 2026; o desenvolvimento, portanto, está ativo e nenhum aviso de projeto abandonado se aplica. Os termos de serviço nomeiam a Kizuna AI Lab como provedora e são regidos pelas leis do Japão, com os tribunais de Tóquio como foro exclusivo. A página [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) do desenvolvedor, um aviso previsto na lei japonesa, nomeia a Kizuna AI Lab como operadora e diz que o endereço e o telefone são informados mediante solicitação; a PromptQuorum não encontrou endereço da empresa publicado nem número de registro. Segundo o desenvolvedor, o servidor de contas não é de código aberto.',
+          'Ele é desenvolvido às claras em [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). O repositório foi criado em abril de 2025, a versão 0.50.4 saiu em 16 de novembro de 2026 e o último commit no ramo principal é de 18 de novembro de 2026; o desenvolvimento, portanto, está ativo e nenhum aviso de projeto abandonado se aplica. Os termos de serviço nomeiam a Kizuna AI Lab como provedora e são regidos pelas leis do Japão, com os tribunais de Tóquio como foro exclusivo. A página [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) do desenvolvedor, que ele apresenta como um aviso previsto na lei japonesa, nomeia a Kizuna AI Lab como operadora e diz que o endereço e o telefone são informados mediante solicitação; a PromptQuorum não encontrou endereço da empresa publicado nem número de registro. Segundo o desenvolvedor, o servidor de contas não é de código aberto.',
           'Segundo o desenvolvedor, o Sokuji fica entre você e o seu aplicativo de reuniões como um microfone: a sua fala é reconhecida, traduzida e falada ou mostrada como legenda no outro idioma, e o que o outro lado diz volta para você como legenda ou lido em voz alta. Um modo bidirecional detecta qual de dois idiomas escolhidos está sendo falado e traduz nos dois sentidos. O README e a documentação do desenvolvedor citam OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, endpoints compatíveis com a OpenAI, uma conta da Kizuna AI e a inferência no dispositivo (“Local Inference”) como formas de fazer isso.',
           'A PromptQuorum não executou o aplicativo e não verificou a precisão do reconhecimento, a qualidade da tradução, a latência nem a velocidade dos modelos no dispositivo.',
         ],
@@ -1295,6 +1319,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ferramentas de áudio: supressão de ruído por IA, cancelamento de eco e um retorno para ouvir a própria voz.',
           'Interface: 30 idiomas de interface, um modo simples para a configuração e um modo avançado com forma de onda.',
           'Notas de reunião: com uma conta da Kizuna AI, o desenvolvedor oferece notas escritas a partir da transcrição da sessão, que passa pelo servidor dele até a OpenAI e não é guardada, segundo a página de privacidade.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Traduzir uma reunião significa enviar a fala de outras pessoas ao provedor que você escolher, e a clonagem de voz processa a voz de uma pessoa. Avise os participantes antes de usar, confira as regras do seu empregador e da plataforma de reuniões e obtenha consentimento antes de clonar a voz de alguém. Esta é uma informação geral, não aconselhamento jurídico.',
+          },
         ],
       },
       privacy: {
@@ -1360,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Sokuji funciona offline?',
-            a: 'Segundo o desenvolvedor, sim, depois que os modelos no dispositivo são baixados: reconhecimento, tradução e voz passam a rodar no seu computador sem rede. Os mecanismos “Online”, Edge TTS e Bing Translator, precisam de rede e enviam texto à Microsoft, e o app ainda faz conexões de atualização e de estatísticas. A PromptQuorum não testou isso.',
+            a: 'Segundo o desenvolvedor, sim, depois que os modelos no dispositivo são baixados: reconhecimento, tradução e voz passam a rodar no seu computador sem rede. Segundo a página de privacidade, os mecanismos “Online”, Edge TTS e Bing Translator, precisam de rede e enviam texto à Microsoft, e o app ainda faz conexões de atualização e de estatísticas. A PromptQuorum não testou isso.',
           },
           {
             q: 'O Sokuji é gratuito?',
@@ -1403,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Resumo de privacidade](https://sokuji.kizuna.ai/privacy) — para onde vai o conteúdo das reuniões, consultado em 18 de novembro de 2026.',
           '[Política de privacidade](https://sokuji.kizuna.ai/docs/privacy) — dados coletados e prazos de retenção, datada de 14 de novembro de 2026, consultada em 18 de novembro de 2026.',
           '[Termos de serviço](https://sokuji.kizuna.ai/docs/terms) — provedor, saldo, lei aplicável e foro, consultados em 18 de novembro de 2026.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — operadora, condições do saldo pré-pago e requisitos do sistema, um aviso previsto na lei japonesa, consultada em 18 de novembro de 2026.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — operadora, condições do saldo pré-pago e requisitos do sistema, apresentado pelo desenvolvedor como um aviso previsto na lei japonesa, consultada em 18 de novembro de 2026.',
           '[Repositório do GitHub](https://github.com/kizuna-ai-lab/sokuji) — licença, data de criação e último commit, consultado em 18 de novembro de 2026.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — recursos, provedores, instalação e notas de privacidade, consultado em 18 de novembro de 2026.',
           '[Versões do GitHub](https://github.com/kizuna-ai-lab/sokuji/releases) — datas de lançamento e pacotes da v0.50.4, consultadas em 18 de novembro de 2026.',
@@ -1455,7 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokujiは、バイリンガル会議で音声を双方向にリアルタイム翻訳するオープンソース（AGPL-3.0）のアプリで、クラウドAIプロバイダー、または開発元の説明ではオンデバイスモデルを使います。** Windows・macOS・Linux向けデスクトップアプリとChrome・Edge拡張機能があり、Zoom、Google Meet、Microsoft Teamsなどに対して仮想マイクとして働きます。アプリは無料で、クラウド利用の費用はプロバイダーへの支払い、またはKizuna AIのプリペイド残高から差し引かれます。PromptQuorumはこのアプリを試していません。',
+      '**Sokujiは、バイリンガル会議で音声を双方向にリアルタイム翻訳するオープンソース（AGPL-3.0）のアプリで、クラウドAIプロバイダー、または開発元の説明ではオンデバイスモデルを使います。** Windows・macOS・Linux向けデスクトップアプリとChrome・Edge拡張機能があり、Zoom、Google Meet、Microsoft Teamsなどに対して仮想マイクとして働きます。開発元によれば、アプリは無料で、クラウド利用の費用はプロバイダーへの支払い、またはKizuna AIのプリペイド残高から差し引かれます。PromptQuorumはこのアプリを試していません。',
     quickAnswerTop: {
       ja: {
         question: 'Sokujiとは何で、どんな人向けですか？',
@@ -1520,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '概要',
         content: [
           '**Sokujiは、Kizuna AI Labによるリアルタイム音声翻訳アプリで、Windows・macOS・Linux向けデスクトップアプリとChrome・Edge向けブラウザ拡張機能として、AGPL-3.0ライセンスで公開されています。**',
-          '開発は[github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji)で公開されています。リポジトリは2025年4月に作成され、バージョン0.50.4は2026年11月16日に登場し、メインブランチの最新コミットは2026年11月18日です。開発は活発で、放置プロジェクトの警告は当てはまりません。利用規約はKizuna AI Labを提供者とし、日本法を準拠法、東京の裁判所を専属的な管轄としています。開発元の[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce)ページ（日本法に基づく表記）には、事業者がKizuna AI Labと記載され、住所と電話番号は請求があれば開示するとされています。PromptQuorumは、公開されている会社の住所も登記番号も見つけられませんでした。開発元によれば、アカウント用サーバーはオープンソースではありません。',
+          '開発は[github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji)で公開されています。リポジトリは2025年4月に作成され、バージョン0.50.4は2026年11月16日に登場し、メインブランチの最新コミットは2026年11月18日です。開発は活発で、放置プロジェクトの警告は当てはまりません。利用規約はKizuna AI Labを提供者とし、日本法を準拠法、東京の裁判所を専属的な管轄としています。開発元の[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce)ページ（開発元は日本法に基づく表記としています）には、事業者がKizuna AI Labと記載され、住所と電話番号は請求があれば開示するとされています。PromptQuorumは、公開されている会社の住所も登記番号も見つけられませんでした。開発元によれば、アカウント用サーバーはオープンソースではありません。',
           '開発元によれば、Sokujiは自分と会議アプリの間でマイクのように働きます。自分の音声を認識して翻訳し、もう一方の言語で音声として流すか字幕として表示します。相手の発言は字幕または読み上げで返ってきます。双方向モードでは、選んだ2つの言語のどちらが話されているかを検出し、双方向に翻訳します。READMEと開発元のドキュメントには、OpenAI、Google Gemini、Palabra.ai、Doubao AST 2.0、Soniox、Qwen LiveTranslate、OpenAI互換エンドポイント、Kizuna AIアカウント、オンデバイス推論（Local Inference）が挙げられています。',
           'PromptQuorumはアプリを実行しておらず、認識精度、翻訳品質、遅延、オンデバイスモデルの速度は確認していません。',
         ],
@@ -1577,6 +1607,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '音声ツール：AIノイズ抑制、エコーキャンセル、自分の声を確認するパススルー。',
           'インターフェース：30のインターフェース言語、設定用のシンプルモード、波形表示付きの詳細モード。',
           '会議メモ：Kizuna AIアカウントでは、セッションの文字起こしからメモを作る機能があり、プライバシーページによれば、そのテキストは開発元のサーバー経由でOpenAIに送られ、保存されません。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '会議を翻訳するということは、他の参加者の音声を選んだプロバイダーに送ることを意味し、音声クローンは個人の声を処理します。使う前に参加者へ知らせ、勤務先や会議プラットフォームのルールを確認し、誰かの声をクローンする前には同意を得てください。これは一般的な情報であり、法的助言ではありません。',
+          },
         ],
       },
       privacy: {
@@ -1642,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Sokujiはオフラインで使えますか？',
-            a: '開発元によれば、オンデバイスモデルをダウンロードした後は使えます。音声認識、翻訳、音声合成がネットワークなしでパソコン上で動きます。「Online」エンジンのEdge TTSとBing Translatorはネットワークが必要で、テキストをMicrosoftに送ります。また、アプリは更新確認や統計のための通信を行います。PromptQuorumはこれを試していません。',
+            a: '開発元によれば、オンデバイスモデルをダウンロードした後は使えます。音声認識、翻訳、音声合成がネットワークなしでパソコン上で動きます。プライバシーページによれば、「Online」エンジンのEdge TTSとBing Translatorはネットワークが必要で、テキストをMicrosoftに送ります。また、アプリは更新確認や統計のための通信を行います。PromptQuorumはこれを試していません。',
           },
           {
             q: 'Sokujiは無料ですか？',
@@ -1685,7 +1721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[プライバシーの概要](https://sokuji.kizuna.ai/privacy) — 会議の内容の行き先、2026年11月18日に確認。',
           '[プライバシーポリシー](https://sokuji.kizuna.ai/docs/privacy) — 収集するデータと保存期間、2026年11月14日付、2026年11月18日に確認。',
           '[利用規約](https://sokuji.kizuna.ai/docs/terms) — 提供者、残高、準拠法と管轄、2026年11月18日に確認。',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — 事業者、プリペイド残高の条件、動作環境（日本法に基づく表記）、2026年11月18日に確認。',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — 事業者、プリペイド残高の条件、動作環境（開発元は日本法に基づく表記としています）、2026年11月18日に確認。',
           '[GitHubリポジトリ](https://github.com/kizuna-ai-lab/sokuji) — ライセンス、作成日、最新コミット、2026年11月18日に確認。',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — 機能、プロバイダー、インストール、プライバシーに関する記述、2026年11月18日に確認。',
           '[GitHubのリリース](https://github.com/kizuna-ai-lab/sokuji/releases) — v0.50.4のリリース日とパッケージ、2026年11月18日に確認。',
@@ -1713,12 +1749,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sokuji-review-hero-zh.webp',
-    title: 'Sokuji 评测：面向会议的双向实时语音翻译',
-    seoTitle: 'Sokuji 评测：会议实时语音翻译',
+    title: 'Sokuji 解读：面向会议的双向实时语音翻译（基于公开资料）',
+    seoTitle: 'Sokuji 解读：面向会议的双向实时语音翻译应用',
     intro:
-      'Sokuji 0.50.4 是一款开源的桌面应用，同时提供 Chrome 和 Edge 扩展，可在双语会议中双向实时翻译语音。它既能使用云端 AI 服务商，据开发者称也能运行在你自己设备上的语音识别、翻译和语音合成模型。许可证为 AGPL-3.0。本评测基于官方网站、GitHub 仓库及其发布版本，以及隐私和条款页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
+      'Sokuji 0.50.4 是一款开源的桌面应用，同时提供 Chrome 和 Edge 扩展，可在双语会议中双向实时翻译语音。它既能使用云端 AI 服务商，据开发者称也能运行在你自己设备上的语音识别、翻译和语音合成模型。许可证为 AGPL-3.0。本解读基于官方网站、GitHub 仓库及其发布版本，以及隐私和条款页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
     metaDescription:
-      'Sokuji 是面向双语会议的开源实时语音翻译应用，可用云端服务商或设备端模型。哪些已确认，哪些未确认。',
+      'Sokuji 是面向双语会议的开源实时语音翻译应用，可用云端服务商或设备端模型。梳理哪些信息已由官方来源确认、哪些尚未核实，并说明隐私与数据流向。',
     twitterDescription:
       'Sokuji：面向双语会议的开源实时语音翻译应用，提供桌面应用和 Chrome、Edge 扩展，可用云端 AI 服务商或设备端模型。已确认的内容汇总。',
     audience:
@@ -1726,9 +1762,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Sokuji 评测',
+    primaryTerm: 'Sokuji 解读',
     targetKeywords: [
-      'Sokuji 评测',
+      'Sokuji 解读',
       '实时语音翻译应用',
       '会议实时翻译',
       '离线语音翻译',
@@ -1737,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji 是一款开源（AGPL-3.0）应用，可在双语会议中双向实时翻译语音，使用云端 AI 服务商，据开发者称也可使用设备端模型。** 它提供 Windows、macOS 和 Linux 桌面应用以及 Chrome 和 Edge 扩展，并作为虚拟麦克风用于 Zoom、Google Meet、Microsoft Teams 等应用。应用本身免费；云端使用由服务商计费，或从预付的 Kizuna AI 余额中扣除。PromptQuorum 没有测试过这款应用。',
+      '**Sokuji 是一款开源（AGPL-3.0）应用，可在双语会议中双向实时翻译语音，使用云端 AI 服务商，据开发者称也可使用设备端模型。** 它提供 Windows、macOS 和 Linux 桌面应用以及 Chrome 和 Edge 扩展，并作为虚拟麦克风用于 Zoom、Google Meet、Microsoft Teams 等应用。据开发者称，应用本身免费；云端使用由服务商计费，或从预付的 Kizuna AI 余额中扣除。PromptQuorum 没有测试过这款应用。',
     quickAnswerTop: {
       zh: {
         question: 'Sokuji 是什么，适合谁？',
@@ -1802,7 +1838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '概览',
         content: [
           '**Sokuji 是 Kizuna AI Lab 开发的实时语音翻译应用，以 AGPL-3.0 许可证发布，提供 Windows、macOS 和 Linux 桌面应用以及 Chrome 和 Edge 浏览器扩展。**',
-          '它在 [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji) 上公开开发。仓库创建于 2025 年 4 月，0.50.4 版本于 2026 年 11 月 16 日发布，主分支最近一次提交在 2026 年 11 月 18 日，因此开发活跃，不适用“项目已停更”的警告。服务条款将 Kizuna AI Lab 列为提供方，适用日本法律，专属管辖法院为东京的法院。开发者的 [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) 页面（依据日本法律的披露）将 Kizuna AI Lab 列为运营方，并称地址和电话号码在收到请求后提供；PromptQuorum 没有找到已公布的公司地址或注册号。据开发者称，其账号服务器不是开源的。',
+          '它在 [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji) 上公开开发。仓库创建于 2025 年 4 月，0.50.4 版本于 2026 年 11 月 16 日发布，主分支最近一次提交在 2026 年 11 月 18 日，因此开发活跃，不适用“项目已停更”的警告。服务条款将 Kizuna AI Lab 列为提供方，适用日本法律，专属管辖法院为东京的法院。开发者的 [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) 页面（开发者称其为依据日本法律的披露）将 Kizuna AI Lab 列为运营方，并称地址和电话号码在收到请求后提供；PromptQuorum 没有找到已公布的公司地址或注册号。据开发者称，其账号服务器不是开源的。',
           '据开发者称，Sokuji 像麦克风一样位于你和会议应用之间：你的语音被识别、翻译，再以另一种语言说出或以字幕显示，对方说的话则以字幕或朗读的形式回到你这里。双向模式会检测所选两种语言中正在使用的是哪一种，并双向翻译。README 和开发者文档列出的实现方式有 OpenAI、Google Gemini、Palabra.ai、Doubao AST 2.0、Soniox、Qwen LiveTranslate、OpenAI 兼容端点、Kizuna AI 账号，以及设备端推理（Local Inference）。',
           'PromptQuorum 没有运行这款应用，也没有核实识别准确度、翻译质量、延迟或设备端模型的速度。',
         ],
@@ -1860,6 +1896,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '界面：30 种界面语言，用于设置的简单模式，以及带波形显示的高级模式。',
           '会议纪要：使用 Kizuna AI 账号时，开发者提供根据会话文字记录生成的纪要；据隐私页面，该文本会经其服务器转发给 OpenAI，且不会保留。',
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '翻译会议意味着把其他人的语音发送给你所选的服务商，而语音克隆会处理个人的声音。使用前请告知参会者，核对所在单位和会议平台的规定，并在克隆任何人的声音之前取得其同意。以上为一般性信息，不构成法律意见。',
+          },
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -1908,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sokuji 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**Sokuji 与转写或为语音加字幕的工具有重叠，但它是为会议中的实时翻译而设计的；PromptQuorum 没有实际将它与这些工具比较过。** 以下工具均在目录中，描述依据各自的评测。',
+          '**Sokuji 与转写或为语音加字幕的工具有重叠，但它是为会议中的实时翻译而设计的；PromptQuorum 没有实际将它与这些工具比较过。** 以下工具均在目录中，描述依据各自的解读页面。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
@@ -1924,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Sokuji 可以离线使用吗？',
-            a: '据开发者称，设备端模型下载完成后可以：语音识别、翻译和语音合成随后无需网络，在你的电脑上运行。“Online”引擎 Edge TTS 和 Bing Translator 需要网络，会把文本发送给 Microsoft，而且应用仍会建立更新和统计相关的连接。PromptQuorum 没有测试这一点。',
+            a: '据开发者称，设备端模型下载完成后可以：语音识别、翻译和语音合成随后无需网络，在你的电脑上运行。据隐私页面，“Online”引擎 Edge TTS 和 Bing Translator 需要网络，会把文本发送给 Microsoft，而且应用仍会建立更新和统计相关的连接。PromptQuorum 没有测试这一点。',
           },
           {
             q: 'Sokuji 免费吗？',
@@ -1967,7 +2009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[隐私概要](https://sokuji.kizuna.ai/privacy) — 会议内容的去向，2026 年 11 月 18 日查阅。',
           '[隐私政策](https://sokuji.kizuna.ai/docs/privacy) — 收集的数据和保存期限，日期为 2026 年 11 月 14 日，2026 年 11 月 18 日查阅。',
           '[服务条款](https://sokuji.kizuna.ai/docs/terms) — 提供方、余额、适用法律和管辖，2026 年 11 月 18 日查阅。',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — 运营方、预付余额条款和系统要求（依据日本法律的披露），2026 年 11 月 18 日查阅。',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — 运营方、预付余额条款和系统要求（开发者称其为依据日本法律的披露），2026 年 11 月 18 日查阅。',
           '[GitHub 仓库](https://github.com/kizuna-ai-lab/sokuji) — 许可证、创建日期和最近提交，2026 年 11 月 18 日查阅。',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — 功能、服务商、安装和隐私说明，2026 年 11 月 18 日查阅。',
           '[GitHub 发布页](https://github.com/kizuna-ai-lab/sokuji/releases) — v0.50.4 的发布日期和安装包，2026 年 11 月 18 日查阅。',
@@ -1979,9 +2021,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地语音与音频工具对比](/zh/power-local-llm/local-llm-voice-audio-compared) — 语音合成、语音识别和语音智能体并排对比。',
-          '[Buzz 评测](/zh/power-local-llm/buzz-captions-review) — 桌面端的本地 Whisper 转写。',
-          '[Sablate 评测](/zh/power-local-llm/sablate-review) — Windows 和 Mac 上的视频字幕与翻译。',
-          '[Minutes 评测](/zh/power-local-llm/minutes-review) — 由转写生成会议纪要，免费开源。',
+          '[Buzz 解读](/zh/power-local-llm/buzz-captions-review) — 桌面端的本地 Whisper 转写。',
+          '[Sablate 解读](/zh/power-local-llm/sablate-review) — Windows 和 Mac 上的视频字幕与翻译。',
+          '[Minutes 解读](/zh/power-local-llm/minutes-review) — 由转写生成会议纪要，免费开源。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
       },
@@ -1996,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sokuji-review-hero-ko.webp',
     title: 'Sokuji 리뷰: 회의용 양방향 음성 번역',
-    seoTitle: 'Sokuji 리뷰: 회의용 실시간 음성 번역',
+    seoTitle: 'Sokuji 리뷰: 회의용 양방향 실시간 음성 번역',
     intro:
       'Sokuji 0.50.4는 이중 언어 회의에서 음성을 양방향으로 실시간 번역하는 오픈소스 데스크톱 앱이자 Chrome·Edge 확장 프로그램입니다. 클라우드 AI 제공업체와 함께 쓸 수 있고, 개발사 설명에 따르면 음성 인식, 번역, 음성 합성 모델을 사용자 기기에서 직접 실행할 수도 있습니다. 라이선스는 AGPL-3.0입니다. 이 리뷰는 공식 웹사이트, GitHub 저장소와 릴리스, 개인정보 및 이용약관 페이지를 바탕으로 2026년 11월 18일에 확인한 내용입니다. PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription:
@@ -2019,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji는 이중 언어 회의에서 음성을 양방향으로 실시간 번역하는 오픈소스(AGPL-3.0) 앱으로, 클라우드 AI 제공업체 또는 개발사 설명에 따르면 기기 내 모델을 사용합니다.** Windows, macOS, Linux용 데스크톱 앱과 Chrome·Edge 확장 프로그램으로 제공되며, Zoom, Google Meet, Microsoft Teams 등에서 가상 마이크로 동작합니다. 앱은 무료이며, 클라우드 사용 비용은 제공업체가 청구하거나 선불 Kizuna AI 잔액에서 차감됩니다. PromptQuorum은 앱을 테스트하지 않았습니다.',
+      '**Sokuji는 이중 언어 회의에서 음성을 양방향으로 실시간 번역하는 오픈소스(AGPL-3.0) 앱으로, 클라우드 AI 제공업체 또는 개발사 설명에 따르면 기기 내 모델을 사용합니다.** Windows, macOS, Linux용 데스크톱 앱과 Chrome·Edge 확장 프로그램으로 제공되며, Zoom, Google Meet, Microsoft Teams 등에서 가상 마이크로 동작합니다. 개발사 설명에 따르면 앱은 무료이며, 클라우드 사용 비용은 제공업체가 청구하거나 선불 Kizuna AI 잔액에서 차감됩니다. PromptQuorum은 앱을 테스트하지 않았습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Sokuji는 무엇이며 누구에게 적합합니까?',
@@ -2084,7 +2126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개요',
         content: [
           '**Sokuji는 Kizuna AI Lab이 만든 실시간 음성 번역 앱으로, Windows, macOS, Linux용 데스크톱 앱과 Chrome·Edge용 브라우저 확장 프로그램으로 AGPL-3.0 라이선스에 따라 배포됩니다.**',
-          '[github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji)에서 공개적으로 개발되고 있습니다. 저장소는 2025년 4월에 만들어졌고, 버전 0.50.4는 2026년 11월 16일에 나왔으며, 메인 브랜치의 마지막 커밋은 2026년 11월 18일이므로 개발이 활발하고 방치된 프로젝트 경고는 해당되지 않습니다. 이용약관은 Kizuna AI Lab을 제공자로 명시하고 일본 법률을 준거법으로 하며, 도쿄의 법원을 전속 관할로 정하고 있습니다. 개발사의 [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) 페이지(일본 법률에 따른 고지)에는 Kizuna AI Lab이 운영자로 적혀 있고 주소와 전화번호는 요청 시 공개한다고 되어 있습니다. PromptQuorum은 공개된 회사 주소나 등록번호를 찾지 못했습니다. 개발사에 따르면 계정 서버는 오픈소스가 아닙니다.',
+          '[github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji)에서 공개적으로 개발되고 있습니다. 저장소는 2025년 4월에 만들어졌고, 버전 0.50.4는 2026년 11월 16일에 나왔으며, 메인 브랜치의 마지막 커밋은 2026년 11월 18일이므로 개발이 활발하고 방치된 프로젝트 경고는 해당되지 않습니다. 이용약관은 Kizuna AI Lab을 제공자로 명시하고 일본 법률을 준거법으로 하며, 도쿄의 법원을 전속 관할로 정하고 있습니다. 개발사의 [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) 페이지(개발사는 일본 법률에 따른 고지라고 밝힘)에는 Kizuna AI Lab이 운영자로 적혀 있고 주소와 전화번호는 요청 시 공개한다고 되어 있습니다. PromptQuorum은 공개된 회사 주소나 등록번호를 찾지 못했습니다. 개발사에 따르면 계정 서버는 오픈소스가 아닙니다.',
           '개발사에 따르면 Sokuji는 나와 회의 앱 사이에서 마이크처럼 동작합니다. 내 음성을 인식하고 번역해 다른 언어로 말하거나 자막으로 보여 주고, 상대방의 말은 자막이나 읽어 주는 음성으로 돌아옵니다. 양방향 모드는 선택한 두 언어 중 어느 쪽으로 말하는지 감지해 양방향으로 번역합니다. README와 개발사 문서에는 OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, OpenAI 호환 엔드포인트, Kizuna AI 계정, 기기 내 추론(Local Inference)이 그 방법으로 나열되어 있습니다.',
           'PromptQuorum은 앱을 실행하지 않았으며 인식 정확도, 번역 품질, 지연 시간, 기기 내 모델의 속도를 확인하지 않았습니다.',
         ],
@@ -2141,6 +2183,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '오디오 도구: AI 노이즈 억제, 에코 제거, 내 목소리를 확인하는 패스스루.',
           '인터페이스: 30개 인터페이스 언어, 설정용 간단 모드, 파형 표시가 있는 고급 모드.',
           '회의 노트: Kizuna AI 계정에서는 개발사가 세션 전사본으로 노트를 작성해 주며, 개인정보 페이지에 따르면 그 텍스트는 개발사 서버를 거쳐 OpenAI로 전달되고 저장되지 않습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '회의를 번역한다는 것은 다른 참석자의 음성을 선택한 제공업체로 보낸다는 뜻이며, 음성 복제는 개인의 목소리를 처리합니다. 사용하기 전에 참석자에게 알리고, 소속 기관과 회의 플랫폼의 규정을 확인하며, 누군가의 목소리를 복제하기 전에는 동의를 받으십시오. 이는 일반적인 정보이며 법률 자문이 아닙니다.',
+          },
         ],
       },
       privacy: {
@@ -2206,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Sokuji는 오프라인에서 작동합니까?',
-            a: '개발사에 따르면 기기 내 모델을 내려받은 뒤에는 가능합니다. 음성 인식, 번역, 음성 합성이 네트워크 없이 컴퓨터에서 실행됩니다. “Online” 엔진인 Edge TTS와 Bing Translator는 네트워크가 필요하고 텍스트를 Microsoft로 보내며, 앱은 업데이트와 통계를 위한 연결도 계속 만듭니다. PromptQuorum은 이를 테스트하지 않았습니다.',
+            a: '개발사에 따르면 기기 내 모델을 내려받은 뒤에는 가능합니다. 음성 인식, 번역, 음성 합성이 네트워크 없이 컴퓨터에서 실행됩니다. 개인정보 페이지에 따르면 “Online” 엔진인 Edge TTS와 Bing Translator는 네트워크가 필요하고 텍스트를 Microsoft로 보내며, 앱은 업데이트와 통계를 위한 연결도 계속 만듭니다. PromptQuorum은 이를 테스트하지 않았습니다.',
           },
           {
             q: 'Sokuji는 무료입니까?',
@@ -2249,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[개인정보 요약](https://sokuji.kizuna.ai/privacy) — 회의 내용이 가는 곳, 2026년 11월 18일 확인.',
           '[개인정보 처리방침](https://sokuji.kizuna.ai/docs/privacy) — 수집 데이터와 보관 기간, 2026년 11월 14일자, 2026년 11월 18일 확인.',
           '[이용약관](https://sokuji.kizuna.ai/docs/terms) — 제공자, 잔액, 준거법과 관할, 2026년 11월 18일 확인.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — 운영자, 선불 잔액 조건, 시스템 요구 사항(일본 법률에 따른 고지), 2026년 11월 18일 확인.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — 운영자, 선불 잔액 조건, 시스템 요구 사항(개발사는 일본 법률에 따른 고지라고 밝힘), 2026년 11월 18일 확인.',
           '[GitHub 저장소](https://github.com/kizuna-ai-lab/sokuji) — 라이선스, 생성일, 마지막 커밋, 2026년 11월 18일 확인.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — 기능, 제공업체, 설치, 개인정보 관련 설명, 2026년 11월 18일 확인.',
           '[GitHub 릴리스](https://github.com/kizuna-ai-lab/sokuji/releases) — v0.50.4의 릴리스 날짜와 패키지, 2026년 11월 18일 확인.',
@@ -2301,7 +2349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Sokuji تطبيق مفتوح المصدر (AGPL-3.0) يترجم الكلام فوريًا في الاتجاهين في الاجتماعات ثنائية اللغة، بمزوّدي ذكاء اصطناعي سحابيين أو، بحسب المطوّر، بنماذج على الجهاز.** يعمل كتطبيق لأنظمة Windows وmacOS وLinux وكإضافة لمتصفحي Chrome وEdge، ويؤدي دور ميكروفون افتراضي لتطبيقات Zoom وGoogle Meet وMicrosoft Teams وغيرها. التطبيق مجاني؛ أما الاستخدام السحابي فيحاسب عليه المزوّد أو يُخصم من رصيد Kizuna AI المدفوع مسبقًا. لم تختبر PromptQuorum التطبيق.',
+      '**Sokuji تطبيق مفتوح المصدر (AGPL-3.0) يترجم الكلام فوريًا في الاتجاهين في الاجتماعات ثنائية اللغة، بمزوّدي ذكاء اصطناعي سحابيين أو، بحسب المطوّر، بنماذج على الجهاز.** يعمل كتطبيق لأنظمة Windows وmacOS وLinux وكإضافة لمتصفحي Chrome وEdge، ويؤدي دور ميكروفون افتراضي لتطبيقات Zoom وGoogle Meet وMicrosoft Teams وغيرها. بحسب المطوّر، التطبيق مجاني؛ أما الاستخدام السحابي فيحاسب عليه المزوّد أو يُخصم من رصيد Kizuna AI المدفوع مسبقًا. لم تختبر PromptQuorum التطبيق.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Sokuji ولمن هو؟',
@@ -2366,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'نظرة عامة',
         content: [
           '**Sokuji تطبيق للترجمة الصوتية الفورية من Kizuna AI Lab، يصدر كتطبيق لأنظمة Windows وmacOS وLinux وكإضافة لمتصفحي Chrome وEdge بترخيص AGPL-3.0.**',
-          'يُطوَّر علنًا على [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). أُنشئ المستودع في أبريل 2025، وظهر الإصدار 0.50.4 في 16 نوفمبر 2026، وكان آخر commit في الفرع الرئيسي في 18 نوفمبر 2026، فالتطوير نشط ولا ينطبق تحذير المشروع المهجور. تسمّي شروط الخدمة Kizuna AI Lab مزوِّدًا للخدمة وتخضع لقوانين اليابان، مع اختصاص حصري لمحاكم طوكيو؛ وتسرد صفحة [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) لدى المطوّر، وهي إشعار بموجب القانون الياباني، Kizuna AI Lab بوصفها الجهة المشغِّلة وتقول إن العنوان ورقم الهاتف يُكشف عنهما عند الطلب؛ ولم تجد PromptQuorum عنوانًا منشورًا للشركة ولا رقم تسجيل. وبحسب المطوّر فإن خادم الحسابات لديه ليس مفتوح المصدر.',
+          'يُطوَّر علنًا على [github.com/kizuna-ai-lab/sokuji](https://github.com/kizuna-ai-lab/sokuji). أُنشئ المستودع في أبريل 2025، وظهر الإصدار 0.50.4 في 16 نوفمبر 2026، وكان آخر commit في الفرع الرئيسي في 18 نوفمبر 2026، فالتطوير نشط ولا ينطبق تحذير المشروع المهجور. تسمّي شروط الخدمة Kizuna AI Lab مزوِّدًا للخدمة وتخضع لقوانين اليابان، مع اختصاص حصري لمحاكم طوكيو؛ وتسرد صفحة [Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) لدى المطوّر، والتي يقدّمها المطوّر بوصفها إشعارًا بموجب القانون الياباني، Kizuna AI Lab بوصفها الجهة المشغِّلة وتقول إن العنوان ورقم الهاتف يُكشف عنهما عند الطلب؛ ولم تجد PromptQuorum عنوانًا منشورًا للشركة ولا رقم تسجيل. وبحسب المطوّر فإن خادم الحسابات لديه ليس مفتوح المصدر.',
           'بحسب المطوّر، يقف Sokuji بينك وبين تطبيق الاجتماعات كما يفعل الميكروفون: يُتعرَّف على كلامك ويُترجم ثم يُنطق أو يُعرض ترجمةً نصية باللغة الأخرى، وما يقوله الطرف الآخر يعود إليك ترجمةً نصية أو مقروءًا بصوت عالٍ. ويكتشف وضع الاتجاهين أيًّا من لغتين مختارتين يُتحدَّث بها ويترجم في الاتجاهين. وتذكر وثائق README ووثائق المطوّر كلًّا من OpenAI وGoogle Gemini وPalabra.ai وDoubao AST 2.0 وSoniox وQwen LiveTranslate ونقاط وصول متوافقة مع OpenAI وحساب Kizuna AI والاستدلال على الجهاز (Local Inference) وسائل لذلك.',
           'لم تشغّل PromptQuorum التطبيق ولم تتحقق من دقة التعرّف ولا جودة الترجمة ولا زمن الاستجابة ولا سرعة النماذج على الجهاز.',
         ],
@@ -2423,6 +2471,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أدوات الصوت: كتم الضوضاء بالذكاء الاصطناعي وإلغاء الصدى وتمرير مباشر لسماع صوتك أنت.',
           'الواجهة: 30 لغة للواجهة، ووضع بسيط للإعداد ووضع متقدم مع عرض الموجة الصوتية.',
           'ملاحظات الاجتماعات: مع حساب Kizuna AI يقدّم المطوّر ملاحظات تُكتب من نص الجلسة، ويمرّ هذا النص عبر خادمه إلى OpenAI ولا يُحتفظ به، بحسب صفحة الخصوصية.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'ترجمة اجتماع تعني إرسال كلام الآخرين إلى المزوّد الذي تختاره، كما أن استنساخ الصوت يعالج صوت شخص ما. أبلغ المشاركين قبل الاستخدام، وراجع قواعد جهة عملك ومنصة الاجتماعات، واحصل على موافقة قبل استنساخ صوت أي شخص. هذه معلومات عامة وليست استشارة قانونية.',
+          },
         ],
       },
       privacy: {
@@ -2488,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل يعمل Sokuji دون اتصال بالإنترنت؟',
-            a: 'بحسب المطوّر، نعم بعد تنزيل النماذج على الجهاز: يعمل التعرّف على الكلام والترجمة وتوليد الصوت حينها على حاسوبك دون شبكة. أما محركات «Online»، أي Edge TTS وBing Translator، فتحتاج إلى الشبكة وترسل نصًّا إلى Microsoft، ولا يزال التطبيق يجري اتصالات للتحديثات والإحصاءات. لم تختبر PromptQuorum ذلك.',
+            a: 'بحسب المطوّر، نعم بعد تنزيل النماذج على الجهاز: يعمل التعرّف على الكلام والترجمة وتوليد الصوت حينها على حاسوبك دون شبكة. وبحسب صفحة الخصوصية، فمحركات «Online»، أي Edge TTS وBing Translator، تحتاج إلى الشبكة وترسل نصًّا إلى Microsoft، ولا يزال التطبيق يجري اتصالات للتحديثات والإحصاءات. لم تختبر PromptQuorum ذلك.',
           },
           {
             q: 'هل Sokuji مجاني؟',
@@ -2531,7 +2585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ملخص الخصوصية](https://sokuji.kizuna.ai/privacy) — وجهة محتوى الاجتماعات، روجع في 18 نوفمبر 2026.',
           '[سياسة الخصوصية](https://sokuji.kizuna.ai/docs/privacy) — البيانات المجمَّعة ومدد الاحتفاظ، مؤرخة في 14 نوفمبر 2026، روجعت في 18 نوفمبر 2026.',
           '[شروط الخدمة](https://sokuji.kizuna.ai/docs/terms) — مزوِّد الخدمة والرصيد والقانون الواجب التطبيق والاختصاص، روجعت في 18 نوفمبر 2026.',
-          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — الجهة المشغِّلة وشروط الرصيد المدفوع مسبقًا ومتطلبات النظام (إشعار بموجب القانون الياباني)، روجعت في 18 نوفمبر 2026.',
+          '[Commerce Disclosure](https://sokuji.kizuna.ai/docs/commerce) — الجهة المشغِّلة وشروط الرصيد المدفوع مسبقًا ومتطلبات النظام (يقدّمه المطوّر بوصفه إشعارًا بموجب القانون الياباني)، روجعت في 18 نوفمبر 2026.',
           '[مستودع GitHub](https://github.com/kizuna-ai-lab/sokuji) — الترخيص وتاريخ الإنشاء وآخر commit، روجع في 18 نوفمبر 2026.',
           '[README](https://github.com/kizuna-ai-lab/sokuji#readme) — الميزات والمزوّدون والتثبيت وملاحظات الخصوصية، روجع في 18 نوفمبر 2026.',
           '[إصدارات GitHub](https://github.com/kizuna-ai-lab/sokuji/releases) — تواريخ الإصدار وحزم v0.50.4، روجعت في 18 نوفمبر 2026.',
