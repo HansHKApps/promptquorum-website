@@ -26,7 +26,7 @@ const L = {
   ja: { hl: ['ローカルAIチャット付きノート', 'MCPサーバーを同梱', '無料のオープンソース、5環境'], price: '価格', priceV: '無料', lic: 'ライセンス', licV: 'MIT', plat: '動作環境', platV: 'Mac、Windows、Linux、iOS、Android', footer: 'PromptQuorumガイド' },
   zh: { hl: ['带本地 AI 对话的笔记', '内置 MCP 服务器', '免费开源，支持 5 个平台'], price: '价格', priceV: '免费', lic: '许可证', licV: 'MIT', plat: '运行于', platV: 'Mac、Windows、Linux、iOS、Android', footer: 'PromptQuorum 指南' },
   pt: { hl: ['Notas Markdown com chat de IA local', 'Servidor MCP para Claude e Cursor', 'Grátis, código aberto, 5 plataformas'], price: 'Preço', priceV: 'Grátis', lic: 'Licença', licV: 'MIT', plat: 'Roda em', platV: 'Mac, Windows, Linux, iOS, Android', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['ملاحظات Markdown مع دردشة ذكاء محلية', 'خادم MCP مرفق للعملاء', 'مجاني ومفتوح المصدر، 5 منصات'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'MIT', plat: 'يعمل على', platV: 'Mac وWindows وLinux وiOS وAndroid', footer: 'دليل PromptQuorum' },
+  ar: { heroTitle: 'مراجعة SoloMD — ملاحظات Markdown مجانية بذكاء اصطناعي محلي', hl: ['ملاحظات Markdown مع دردشة ذكاء محلية', 'خادم MCP مرفق للعملاء', 'مجاني ومفتوح المصدر، 5 منصات'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'MIT', plat: 'يعمل على', platV: 'Mac وWindows وLinux وiOS وAndroid', footer: 'دليل PromptQuorum' },
   ko: { hl: ['로컬 AI 채팅 노트', 'MCP 서버 포함', '무료 오픈소스, 5개 플랫폼'], price: '가격', priceV: '무료', lic: '라이선스', licV: 'MIT', plat: '실행 환경', platV: 'Mac, Windows, Linux, iOS, Android', footer: 'PromptQuorum 가이드' },
 }
 
@@ -38,7 +38,8 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    // ar: a shorter, hand-broken title (no colon, no orphan Latin word); the stored title wraps badly in the RTL poster layout.
+    title: t.heroTitle || stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },

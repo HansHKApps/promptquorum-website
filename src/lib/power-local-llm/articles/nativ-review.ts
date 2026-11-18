@@ -242,6 +242,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Does Nativ send my chats anywhere?',
             a: 'Not by default, per the maker: chats, prompts, files and answers stay on your Mac. The app goes online to download models from Hugging Face and to check for updates, and diagnostic data is sent only if you consent at first launch. When PromptQuorum checked on 18 November 2026, the privacy policy also contained a bracketed placeholder, so read it before relying on it.',
           },
+          {
+            q: 'What can Nativ do besides chat?',
+            a: 'According to the maker, it has an Images tab that generates and edits images with compatible MLX image models, an audio extension for dictation in any app and meeting notes with a transcript and summary, and support for speech models. PromptQuorum has not tested any of them.',
+          },
+          {
+            q: 'Where do Nativ models come from?',
+            a: 'From Hugging Face, through the in-app model library, which shows memory-fit warnings for your Mac, according to the README. A Hugging Face token is optional and only needed for gated models. The terms say each model has its own licence and you are responsible for following it.',
+          },
+          {
+            q: 'Does Nativ work offline?',
+            a: 'According to the maker, chatting, dictating and generating images work without an internet connection once a model is downloaded. Model downloads, first-time build dependencies and update checks still need the network. PromptQuorum has not tested offline use.',
+          },
+          {
+            q: 'What does the Nativ local API offer?',
+            a: 'According to the README, OpenAI-compatible chat, responses, image, audio, embeddings and model endpoints plus Anthropic Messages endpoints, served on 127.0.0.1:8080 by default, with an optional API key for management routes. PromptQuorum has not tested the API.',
+          },
+          {
+            q: 'Does Nativ support MCP servers?',
+            a: 'Yes, per the maker: you can connect MCP servers and expose their tools to chat, with per-tool consent. The README also lists scheduled prompts with task kits. PromptQuorum has not tested the MCP support.',
+          },
+          {
+            q: 'Who makes Nativ, and how mature is it?',
+            a: 'The terms of use name the provider as Neywa Labs sp. z o.o. in Kraków, Poland, under Polish law. The repository is young and the version is still 0.4.x, so expect change. Check the releases page for the latest version before you rely on it.',
+          },
+          {
+            q: 'How does Nativ handle dictation audio and permissions?',
+            a: 'According to the README, raw dictation audio is deleted after five minutes, and transcripts can be exported to PDF, DOCX or TXT. Microphone, accessibility and screen-recording permissions are optional, and the FAQ says you can skip any of them. PromptQuorum has not checked this.',
+          },
         ],
       },
       verdict: {
@@ -510,6 +538,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Sendet Nativ meine Chats irgendwohin?',
             a: 'Laut Entwickler standardmäßig nicht: Chats, Prompts, Dateien und Antworten bleiben auf Ihrem Mac. Die App geht online, um Modelle von Hugging Face zu laden und nach Updates zu suchen, und Diagnosedaten werden nur gesendet, wenn Sie beim ersten Start einwilligen. Bei der Prüfung am 18. November 2026 enthielt die Datenschutzerklärung zudem einen Platzhalter in eckigen Klammern; lesen Sie sie, bevor Sie sich darauf verlassen.',
+          },
+          {
+            q: 'Was kann Nativ außer Chat?',
+            a: 'Laut Hersteller gibt es einen Bilder-Tab, der mit kompatiblen MLX-Bildmodellen Bilder erzeugt und bearbeitet, eine Audio-Erweiterung für Diktat in jeder App und Meeting-Notizen mit Transkript und Zusammenfassung sowie Unterstützung für Sprachmodelle. PromptQuorum hat nichts davon getestet.',
+          },
+          {
+            q: 'Woher stammen die Modelle in Nativ?',
+            a: 'Laut README von Hugging Face über die Modellbibliothek in der App, die Warnungen zeigt, wenn ein Modell womöglich nicht in den Speicher Ihres Macs passt. Ein Hugging-Face-Token ist optional und nur für geschützte Modelle nötig. Laut Nutzungsbedingungen hat jedes Modell eine eigene Lizenz, und Sie sind für deren Einhaltung verantwortlich.',
+          },
+          {
+            q: 'Funktioniert Nativ offline?',
+            a: 'Laut Hersteller funktionieren Chat, Diktat und Bilderzeugung ohne Internetverbindung, sobald ein Modell heruntergeladen ist. Modell-Downloads, Abhängigkeiten beim ersten Build und Update-Prüfungen brauchen weiterhin das Netz. PromptQuorum hat die Offline-Nutzung nicht getestet.',
+          },
+          {
+            q: 'Was bietet die lokale API von Nativ?',
+            a: 'Laut README OpenAI-kompatible Endpunkte für Chat, Responses, Bilder, Audio, Embeddings und Modelle sowie Anthropic-Messages-Endpunkte, standardmäßig unter 127.0.0.1:8080, mit optionalem API-Schlüssel für Verwaltungsrouten. PromptQuorum hat die API nicht getestet.',
+          },
+          {
+            q: 'Unterstützt Nativ MCP-Server?',
+            a: 'Ja, laut Hersteller: Sie können MCP-Server verbinden und deren Werkzeuge im Chat bereitstellen, mit Zustimmung pro Werkzeug. Das README nennt außerdem geplante Prompts mit Aufgabenpaketen. PromptQuorum hat die MCP-Unterstützung nicht getestet.',
+          },
+          {
+            q: 'Wer steckt hinter Nativ, und wie ausgereift ist es?',
+            a: 'Die Nutzungsbedingungen nennen als Anbieter die Neywa Labs sp. z o.o. in Krakau, Polen, nach polnischem Recht. Das Repository ist jung und die Version noch 0.4.x, rechnen Sie also mit Änderungen. Prüfen Sie die Releases-Seite auf die neueste Version, bevor Sie sich darauf verlassen.',
+          },
+          {
+            q: 'Wie geht Nativ mit Diktat-Audio und Berechtigungen um?',
+            a: 'Laut README werden rohe Diktat-Audiodaten nach fünf Minuten gelöscht, und Transkripte lassen sich als PDF, DOCX oder TXT exportieren. Berechtigungen für Mikrofon, Bedienungshilfen und Bildschirmaufnahme sind optional, und laut FAQ können Sie jede davon überspringen. PromptQuorum hat das nicht geprüft.',
           },
         ],
       },
@@ -780,6 +836,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Nativ envoie-t-il mes discussions quelque part ?',
             a: 'Pas par défaut, selon le développeur : discussions, requêtes, fichiers et réponses restent sur votre Mac. L\'app se connecte pour télécharger des modèles depuis Hugging Face et rechercher des mises à jour, et les données de diagnostic ne sont envoyées que si vous y consentez au premier lancement. Lors de la vérification du 18 novembre 2026, la politique de confidentialité contenait aussi un espace réservé entre crochets ; lisez-la avant de vous y fier.',
           },
+          {
+            q: 'Que peut faire Nativ en dehors du chat ?',
+            a: 'Selon l\'éditeur, un onglet Images génère et modifie des images avec des modèles d\'image MLX compatibles, une extension audio permet la dictée dans n\'importe quelle application et les notes de réunion avec transcription et résumé, et des modèles vocaux sont pris en charge. PromptQuorum n\'a rien testé de tout cela.',
+          },
+          {
+            q: 'D\'où viennent les modèles de Nativ ?',
+            a: 'De Hugging Face, via la bibliothèque de modèles intégrée à l\'application, qui affiche des avertissements si un modèle risque de ne pas tenir dans la mémoire de votre Mac, selon le README. Un jeton Hugging Face est facultatif et ne sert que pour les modèles à accès restreint. Les conditions d\'utilisation précisent que chaque modèle a sa propre licence et que vous devez la respecter.',
+          },
+          {
+            q: 'Nativ fonctionne-t-il hors ligne ?',
+            a: 'Selon l\'éditeur, le chat, la dictée et la génération d\'images fonctionnent sans connexion Internet une fois un modèle téléchargé. Les téléchargements de modèles, les dépendances de compilation initiales et la recherche de mises à jour nécessitent toujours le réseau. PromptQuorum n\'a pas testé l\'usage hors ligne.',
+          },
+          {
+            q: 'Que propose l\'API locale de Nativ ?',
+            a: 'Selon le README, des points d\'accès compatibles OpenAI pour le chat, les réponses, les images, l\'audio, les embeddings et les modèles, ainsi que des points d\'accès Anthropic Messages, servis par défaut sur 127.0.0.1:8080, avec une clé d\'API facultative pour les routes de gestion. PromptQuorum n\'a pas testé l\'API.',
+          },
+          {
+            q: 'Nativ prend-il en charge les serveurs MCP ?',
+            a: 'Oui, selon l\'éditeur : vous pouvez connecter des serveurs MCP et exposer leurs outils au chat, avec un consentement par outil. Le README mentionne aussi des prompts planifiés avec des kits de tâches. PromptQuorum n\'a pas testé la prise en charge de MCP.',
+          },
+          {
+            q: 'Qui édite Nativ, et le projet est-il mature ?',
+            a: 'Les conditions d\'utilisation désignent comme prestataire Neywa Labs sp. z o.o. à Cracovie, en Pologne, sous droit polonais. Le dépôt est récent et la version reste en 0.4.x : attendez-vous à des changements. Consultez la page des versions pour connaître la dernière version avant de vous y fier.',
+          },
+          {
+            q: 'Comment Nativ traite-t-il l\'audio de dictée et les autorisations ?',
+            a: 'Selon le README, l\'audio brut de dictée est supprimé après cinq minutes et les transcriptions peuvent être exportées en PDF, DOCX ou TXT. Les autorisations du microphone, de l\'accessibilité et de l\'enregistrement d\'écran sont facultatives, et la FAQ indique que vous pouvez en ignorer chacune. PromptQuorum ne l\'a pas vérifié.',
+          },
         ],
       },
       verdict: {
@@ -1048,6 +1132,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Nativ envía mis chats a algún sitio?',
             a: 'No por defecto, según el desarrollador: chats, prompts, archivos y respuestas se quedan en tu Mac. La app se conecta para descargar modelos de Hugging Face y buscar actualizaciones, y los datos de diagnóstico solo se envían si das tu consentimiento en el primer inicio. En la comprobación del 18 de noviembre de 2026, la política de privacidad también contenía un marcador de posición entre corchetes; léela antes de fiarte de ella.',
+          },
+          {
+            q: '¿Qué puede hacer Nativ además del chat?',
+            a: 'Según el proveedor, una pestaña Imágenes genera y edita imágenes con modelos de imagen MLX compatibles, una extensión de audio ofrece dictado en cualquier app y notas de reuniones con transcripción y resumen, y admite modelos de voz. PromptQuorum no ha probado nada de esto.',
+          },
+          {
+            q: '¿De dónde salen los modelos de Nativ?',
+            a: 'De Hugging Face, mediante la biblioteca de modelos de la app, que muestra avisos si un modelo puede no caber en la memoria de tu Mac, según el README. El token de Hugging Face es opcional y solo hace falta para modelos con acceso restringido. Los términos de uso indican que cada modelo tiene su propia licencia y que eres responsable de cumplirla.',
+          },
+          {
+            q: '¿Nativ funciona sin conexión?',
+            a: 'Según el proveedor, el chat, el dictado y la generación de imágenes funcionan sin conexión a internet una vez descargado un modelo. Las descargas de modelos, las dependencias de compilación iniciales y la búsqueda de actualizaciones siguen necesitando red. PromptQuorum no ha probado el uso sin conexión.',
+          },
+          {
+            q: '¿Qué ofrece la API local de Nativ?',
+            a: 'Según el README, endpoints compatibles con OpenAI para chat, respuestas, imágenes, audio, embeddings y modelos, además de endpoints de Anthropic Messages, servidos por defecto en 127.0.0.1:8080, con una clave de API opcional para las rutas de gestión. PromptQuorum no ha probado la API.',
+          },
+          {
+            q: '¿Nativ admite servidores MCP?',
+            a: 'Sí, según el proveedor: puedes conectar servidores MCP y exponer sus herramientas al chat, con consentimiento por herramienta. El README también menciona prompts programados con kits de tareas. PromptQuorum no ha probado la compatibilidad con MCP.',
+          },
+          {
+            q: '¿Quién crea Nativ y qué tan maduro es?',
+            a: 'Los términos de uso nombran como proveedor a Neywa Labs sp. z o.o. en Cracovia, Polonia, bajo derecho polaco. El repositorio es joven y la versión sigue en 0.4.x, así que espera cambios. Consulta la página de versiones para ver la última antes de confiar en él.',
+          },
+          {
+            q: '¿Cómo trata Nativ el audio del dictado y los permisos?',
+            a: 'Según el README, el audio bruto del dictado se elimina a los cinco minutos y las transcripciones se pueden exportar a PDF, DOCX o TXT. Los permisos de micrófono, accesibilidad y grabación de pantalla son opcionales, y las preguntas frecuentes indican que puedes omitir cualquiera. PromptQuorum no lo ha comprobado.',
           },
         ],
       },
@@ -1318,6 +1430,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'O Nativ envia meus chats para algum lugar?',
             a: 'Não por padrão, segundo o desenvolvedor: chats, prompts, arquivos e respostas ficam no seu Mac. O app se conecta para baixar modelos do Hugging Face e verificar atualizações, e os dados de diagnóstico só são enviados se você consentir na primeira abertura. Na verificação de 18 de novembro de 2026, a política de privacidade também continha um marcador entre colchetes; leia-a antes de confiar nela.',
           },
+          {
+            q: 'O que o Nativ faz além do chat?',
+            a: 'Segundo o provedor, uma aba Imagens gera e edita imagens com modelos de imagem MLX compatíveis, uma extensão de áudio oferece ditado em qualquer app e notas de reunião com transcrição e resumo, e há suporte a modelos de fala. A PromptQuorum não testou nada disso.',
+          },
+          {
+            q: 'De onde vêm os modelos do Nativ?',
+            a: 'Do Hugging Face, pela biblioteca de modelos do app, que mostra avisos quando um modelo pode não caber na memória do seu Mac, segundo o README. O token do Hugging Face é opcional e só é necessário para modelos com acesso restrito. Os termos de uso dizem que cada modelo tem a sua própria licença e que você é responsável por cumpri-la.',
+          },
+          {
+            q: 'O Nativ funciona offline?',
+            a: 'Segundo o provedor, chat, ditado e geração de imagens funcionam sem conexão com a internet depois que um modelo é baixado. Downloads de modelos, dependências da primeira compilação e verificação de atualizações ainda precisam de rede. A PromptQuorum não testou o uso offline.',
+          },
+          {
+            q: 'O que a API local do Nativ oferece?',
+            a: 'Segundo o README, endpoints compatíveis com a OpenAI para chat, respostas, imagens, áudio, embeddings e modelos, além de endpoints Anthropic Messages, servidos por padrão em 127.0.0.1:8080, com chave de API opcional para as rotas de gerenciamento. A PromptQuorum não testou a API.',
+          },
+          {
+            q: 'O Nativ aceita servidores MCP?',
+            a: 'Sim, segundo o provedor: você pode conectar servidores MCP e expor as ferramentas deles ao chat, com consentimento por ferramenta. O README também cita prompts agendados com kits de tarefas. A PromptQuorum não testou o suporte a MCP.',
+          },
+          {
+            q: 'Quem faz o Nativ e qual o nível de maturidade?',
+            a: 'Os termos de uso nomeiam como provedora a Neywa Labs sp. z o.o., em Cracóvia, Polônia, sob a lei polonesa. O repositório é jovem e a versão ainda é 0.4.x, então espere mudanças. Consulte a página de versões para ver a mais recente antes de depender dele.',
+          },
+          {
+            q: 'Como o Nativ trata o áudio do ditado e as permissões?',
+            a: 'Segundo o README, o áudio bruto do ditado é apagado após cinco minutos e as transcrições podem ser exportadas em PDF, DOCX ou TXT. As permissões de microfone, acessibilidade e gravação de tela são opcionais, e o FAQ diz que você pode pular qualquer uma. A PromptQuorum não verificou isso.',
+          },
         ],
       },
       verdict: {
@@ -1586,6 +1726,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Nativはチャットをどこかへ送りますか？',
             a: '開発元によると、既定では送りません。チャット、プロンプト、ファイル、回答はMac内にとどまります。アプリはHugging Faceからのモデル取得と更新確認のために接続し、診断データは初回起動時に同意した場合にだけ送られます。2026年11月18日の確認時点では、プライバシーポリシーに角括弧付きのプレースホルダーもあったため、頼る前にお読みください。',
+          },
+          {
+            q: 'Nativにはチャット以外に何ができますか？',
+            a: '提供元によれば、対応するMLX画像モデルで画像を生成・編集する画像タブ、任意のアプリでの音声入力と、文字起こしと要約付きの会議ノートを備えた音声拡張、そして音声モデルへの対応があります。PromptQuorumはこれらを試していません。',
+          },
+          {
+            q: 'Nativのモデルはどこから入手しますか？',
+            a: 'READMEによれば、アプリ内のモデルライブラリ経由でHugging Faceから入手し、Macのメモリに収まらない可能性がある場合は警告が表示されます。Hugging Faceトークンは任意で、制限付きモデルにのみ必要です。利用規約には、各モデルに固有のライセンスがあり、その遵守は利用者の責任と記載されています。',
+          },
+          {
+            q: 'Nativはオフラインで使えますか？',
+            a: '提供元によれば、モデルをダウンロードした後は、チャット、音声入力、画像生成をインターネット接続なしで使えます。モデルのダウンロード、初回のビルド依存関係、更新の確認にはネットワークが必要です。PromptQuorumはオフライン利用を試していません。',
+          },
+          {
+            q: 'NativのローカルAPIでは何ができますか？',
+            a: 'READMEによれば、チャット、レスポンス、画像、音声、埋め込み、モデルに対応するOpenAI互換エンドポイントと、Anthropic Messagesエンドポイントを、既定で127.0.0.1:8080で提供し、管理用ルートには任意のAPIキーを設定できます。PromptQuorumはAPIを試していません。',
+          },
+          {
+            q: 'NativはMCPサーバーに対応していますか？',
+            a: '提供元によれば、はい。MCPサーバーを接続してそのツールをチャットで使え、ツールごとに許可を確認します。READMEにはタスクキット付きのスケジュール実行プロンプトも記載されています。PromptQuorumはMCP対応を試していません。',
+          },
+          {
+            q: 'Nativは誰が作っていて、どの程度成熟していますか？',
+            a: '利用規約では、提供者はポーランド・クラクフのNeywa Labs sp. z o.o.で、ポーランド法が適用されると記載されています。リポジトリは新しく、バージョンもまだ0.4.xなので、変更が入る可能性があります。頼る前に、リリースページで最新バージョンを確認してください。',
+          },
+          {
+            q: 'Nativは音声入力の音声データと権限をどう扱いますか？',
+            a: 'READMEによれば、音声入力の生の音声は5分後に削除され、文字起こしはPDF、DOCX、TXTで書き出せます。マイク、アクセシビリティ、画面収録の権限は任意で、FAQによればどれもスキップできます。PromptQuorumはこれを確認していません。',
           },
         ],
       },
@@ -1856,6 +2024,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Nativ 会把我的对话发送到别处吗？',
             a: '据开发者称，默认不会：对话、提示词、文件和回答都留在你的 Mac 上。应用会联网从 Hugging Face 下载模型并检查更新，只有在你于首次启动时同意后才会发送诊断数据。2026 年 11 月 18 日核查时，隐私政策里还有方括号占位符，依赖它之前请先阅读。',
           },
+          {
+            q: 'Nativ 除了对话还能做什么？',
+            a: '据提供方称，它有可用兼容 MLX 图像模型生成和编辑图像的“图像”标签页，有支持在任意应用中听写、并提供带转写和摘要的会议笔记的音频扩展，还支持语音模型。PromptQuorum 未测试其中任何一项。',
+          },
+          {
+            q: 'Nativ 的模型从哪里来？',
+            a: '据 README，通过应用内的模型库从 Hugging Face 获取，模型库会在模型可能放不进你的 Mac 内存时给出提示。Hugging Face 令牌是可选的，仅受限模型需要。使用条款说明每个模型都有自己的许可，遵守许可由你自行负责。',
+          },
+          {
+            q: 'Nativ 可以离线使用吗？',
+            a: '据提供方称，模型下载完成后，对话、听写和图像生成无需联网。下载模型、首次构建依赖和检查更新仍需要网络。PromptQuorum 未测试离线使用。',
+          },
+          {
+            q: 'Nativ 的本地 API 提供什么？',
+            a: '据 README，提供与 OpenAI 兼容的聊天、responses、图像、音频、嵌入和模型端点，以及 Anthropic Messages 端点，默认地址为 127.0.0.1:8080，管理路由可选设置 API 密钥。PromptQuorum 未测试该 API。',
+          },
+          {
+            q: 'Nativ 支持 MCP 服务器吗？',
+            a: '据提供方称支持：可以连接 MCP 服务器并把其工具提供给对话使用，每个工具都需单独授权。README 还提到带任务套件的定时提示。PromptQuorum 未测试 MCP 支持。',
+          },
+          {
+            q: 'Nativ 由谁开发，成熟度如何？',
+            a: '使用条款将提供方列为位于波兰克拉科夫的 Neywa Labs sp. z o.o.，适用波兰法律。该仓库较新，版本仍为 0.4.x，请预期会有变化。依赖它之前，请先在发布页面查看最新版本。',
+          },
+          {
+            q: 'Nativ 如何处理听写音频和权限？',
+            a: '据 README，原始听写音频在五分钟后删除，转写内容可导出为 PDF、DOCX 或 TXT。麦克风、辅助功能和屏幕录制权限均为可选，FAQ 称你可以跳过其中任何一项。PromptQuorum 未核实这一点。',
+          },
         ],
       },
       verdict: {
@@ -2125,6 +2321,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Nativ가 내 채팅을 어딘가로 보냅니까?',
             a: '개발사에 따르면 기본적으로는 보내지 않습니다. 채팅, 프롬프트, 파일, 답변은 Mac에 남습니다. 앱은 Hugging Face에서 모델을 내려받고 업데이트를 확인하기 위해 접속하며, 진단 데이터는 첫 실행 때 동의한 경우에만 전송됩니다. 2026년 11월 18일에 확인했을 때 개인정보 처리방침에는 대괄호로 된 자리 표시자도 있었으므로 의존하기 전에 읽어 보십시오.',
           },
+          {
+            q: 'Nativ는 채팅 외에 무엇을 할 수 있습니까?',
+            a: '제공자에 따르면 호환되는 MLX 이미지 모델로 이미지를 생성하고 편집하는 이미지 탭, 모든 앱에서 쓰는 받아쓰기와 전사 및 요약이 포함된 회의 노트를 제공하는 오디오 확장, 그리고 음성 모델 지원이 있습니다. PromptQuorum은 이 중 어느 것도 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Nativ의 모델은 어디에서 옵니까?',
+            a: 'README에 따르면 앱 내 모델 라이브러리를 통해 Hugging Face에서 받으며, 모델이 Mac 메모리에 맞지 않을 수 있으면 경고를 표시합니다. Hugging Face 토큰은 선택 사항이고 접근이 제한된 모델에만 필요합니다. 이용약관에는 각 모델에 자체 라이선스가 있으며 이를 준수할 책임은 사용자에게 있다고 되어 있습니다.',
+          },
+          {
+            q: 'Nativ는 오프라인에서 작동합니까?',
+            a: '제공자에 따르면 모델을 내려받은 뒤에는 채팅, 받아쓰기, 이미지 생성을 인터넷 연결 없이 사용할 수 있습니다. 모델 다운로드, 처음 빌드할 때의 의존성, 업데이트 확인에는 여전히 네트워크가 필요합니다. PromptQuorum은 오프라인 사용을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Nativ의 로컬 API는 무엇을 제공합니까?',
+            a: 'README에 따르면 채팅, responses, 이미지, 오디오, 임베딩, 모델용 OpenAI 호환 엔드포인트와 Anthropic Messages 엔드포인트를 기본적으로 127.0.0.1:8080에서 제공하며, 관리 경로에는 선택적 API 키를 설정할 수 있습니다. PromptQuorum은 API를 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Nativ는 MCP 서버를 지원합니까?',
+            a: '제공자에 따르면 그렇습니다. MCP 서버를 연결해 그 도구를 채팅에서 사용할 수 있으며, 도구별로 동의를 받습니다. README에는 작업 키트가 포함된 예약 프롬프트도 언급되어 있습니다. PromptQuorum은 MCP 지원을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Nativ는 누가 만들며 얼마나 성숙했습니까?',
+            a: '이용약관은 제공자를 폴란드 크라쿠프의 Neywa Labs sp. z o.o.로 명시하고 폴란드 법을 적용합니다. 저장소는 비교적 새롭고 버전도 아직 0.4.x이므로 변경이 있을 수 있습니다. 의존하기 전에 릴리스 페이지에서 최신 버전을 확인하십시오.',
+          },
+          {
+            q: 'Nativ는 받아쓰기 음성과 권한을 어떻게 다룹니까?',
+            a: 'README에 따르면 받아쓰기 원본 음성은 5분 뒤에 삭제되고, 전사 내용은 PDF, DOCX, TXT로 내보낼 수 있습니다. 마이크, 손쉬운 사용, 화면 기록 권한은 선택 사항이며 FAQ에 따르면 어느 것이든 건너뛸 수 있습니다. PromptQuorum은 이를 확인하지 않았습니다.',
+          },
         ],
       },
       verdict: {
@@ -2393,6 +2617,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل يرسل Nativ محادثاتي إلى أي مكان؟',
             a: 'ليس افتراضيًا بحسب المطوّر: تبقى المحادثات والمطالبات والملفات والإجابات على جهاز Mac. يتصل التطبيق لتنزيل النماذج من Hugging Face والتحقق من التحديثات، ولا تُرسل بيانات التشخيص إلا إذا وافقت عند أول تشغيل. وعند مراجعة PromptQuorum في 18 نوفمبر 2026 كانت سياسة الخصوصية تحتوي أيضًا على عنصر نائب بين أقواس مربعة، فاقرأها قبل الاعتماد عليها.',
+          },
+          {
+            q: 'ماذا يفعل Nativ غير الدردشة؟',
+            a: 'بحسب المزوّد، يضم تبويب صور يولّد الصور ويحرّرها بنماذج صور MLX المتوافقة، وإضافة صوتية للإملاء في أي تطبيق وملاحظات اجتماعات مع نص مفرّغ وملخص، إضافة إلى دعم نماذج الكلام. لم تختبر PromptQuorum أيًّا منها.',
+          },
+          {
+            q: 'من أين تأتي نماذج Nativ؟',
+            a: 'بحسب README من Hugging Face عبر مكتبة النماذج داخل التطبيق، التي تعرض تحذيرات عندما قد لا يتسع النموذج لذاكرة جهاز Mac. رمز Hugging Face اختياري ولا يلزم إلا للنماذج المقيّدة. وتنص شروط الاستخدام على أن لكل نموذج ترخيصه الخاص وأنك مسؤول عن الالتزام به.',
+          },
+          {
+            q: 'هل يعمل Nativ دون اتصال بالإنترنت؟',
+            a: 'بحسب المزوّد، تعمل الدردشة والإملاء وتوليد الصور دون اتصال بالإنترنت بعد تنزيل النموذج. أما تنزيل النماذج واعتماديات البناء لأول مرة وفحص التحديثات فتحتاج إلى الشبكة. لم تختبر PromptQuorum الاستخدام دون اتصال.',
+          },
+          {
+            q: 'ماذا تقدّم واجهة Nativ البرمجية المحلية؟',
+            a: 'بحسب README: نقاط نهاية متوافقة مع OpenAI للدردشة والاستجابات والصور والصوت والتضمينات والنماذج، إضافة إلى نقاط نهاية Anthropic Messages، وتعمل افتراضيًا على 127.0.0.1:8080، مع مفتاح API اختياري لمسارات الإدارة. لم تختبر PromptQuorum الواجهة.',
+          },
+          {
+            q: 'هل يدعم Nativ خوادم MCP؟',
+            a: 'نعم بحسب المزوّد: يمكنك ربط خوادم MCP وإتاحة أدواتها للدردشة مع موافقة لكل أداة. ويذكر README أيضًا مطالبات مجدولة مع حزم مهام. لم تختبر PromptQuorum دعم MCP.',
+          },
+          {
+            q: 'من يصنع Nativ وما مدى نضجه؟',
+            a: 'تسمّي شروط الاستخدام المزوّد Neywa Labs sp. z o.o. في كراكوف ببولندا وتخضع للقانون البولندي. المستودع حديث والإصدار ما زال 0.4.x، فتوقّع تغييرات. راجع صفحة الإصدارات لمعرفة أحدث نسخة قبل الاعتماد عليه.',
+          },
+          {
+            q: 'كيف يتعامل Nativ مع صوت الإملاء والأذونات؟',
+            a: 'بحسب README يُحذف صوت الإملاء الخام بعد خمس دقائق، ويمكن تصدير النصوص المفرّغة بصيغة PDF أو DOCX أو TXT. أذونات الميكروفون وإمكانية الوصول وتسجيل الشاشة اختيارية، وتذكر الأسئلة الشائعة أنه يمكنك تخطي أيٍّ منها. لم تتحقق PromptQuorum من ذلك.',
           },
         ],
       },
