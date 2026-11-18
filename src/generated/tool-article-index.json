@@ -19,9 +19,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "newelle-review",
-        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
-        "url": "/power-local-llm/newelle-review",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       },
@@ -105,14 +105,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "newelle-review",
-        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
-        "url": "/power-local-llm/newelle-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -166,9 +158,17 @@
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-14",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-14",
+        "tier": "about"
       }
     ],
-    "totalCount": 196,
+    "totalCount": 195,
     "capped": true
   },
   "vLLM": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 184,
+    "totalCount": 185,
     "capped": true
   },
   "Atomic Chat": {
@@ -7132,7 +7132,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 37,
     "capped": true
   },
   "ComfyUI": {
@@ -10771,6 +10771,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -10778,7 +10786,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
+    "capped": false
+  },
+  "Memex": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Trilium Notes": {
@@ -10790,9 +10812,17 @@
         "url": "/power-local-llm/trilium-notes-review",
         "dateModified": "2026-11-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "RAMen": {
@@ -11160,20 +11190,6 @@
     ],
     "totalCount": 70,
     "capped": true
-  },
-  "Newelle": {
-    "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "newelle-review",
-        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
-        "url": "/power-local-llm/newelle-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      }
-    ],
-    "totalCount": 1,
-    "capped": false
   },
   "Lyonesse": {
     "articles": [
@@ -12979,6 +12995,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -13032,17 +13056,9 @@
         "url": "/power-local-llm/local-pdf-parsers-compared",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nutrient-review",
-        "title": "Nutrient Review: Commercial PDF SDK With a Markdown Converter",
-        "url": "/power-local-llm/nutrient-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 274,
+    "totalCount": 275,
     "capped": true
   },
   "Qdrant": {
@@ -14908,9 +14924,17 @@
         "url": "/power-local-llm/surf-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Univocal": {

@@ -59050,6 +59050,87 @@
   },
   {
     "lang": "en",
+    "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+    "excerpt": "Memex is a free, open-source AI journal app for iPhone and Android that stores entries on-device and works with your own OpenAI, Claude, Gemini, or Ollama key.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Memex Review: Quelloffenes KI-Journal für iPhone und Android",
+    "excerpt": "Memex ist eine kostenlose, quelloffene KI-Journal-App für iPhone und Android, die Einträge auf dem Gerät speichert und mit Ihrem eigenen OpenAI-, Claude-, Gemini- oder Ollama-Schlüssel arbeitet.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/de/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Memex Review : journal IA open source pour iPhone et Android",
+    "excerpt": "Memex est une application de journal IA gratuite et open source pour iPhone et Android qui stocke les entrées sur l'appareil et fonctionne avec votre propre clé OpenAI, Claude, Gemini ou Ollama.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/fr/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Memex Review：iPhoneとAndroid向けオープンソースAIジャーナル",
+    "excerpt": "Memexは、iPhoneとAndroid向けの無料・オープンソースAIジャーナルアプリ。記録はデバイス内に保存され、自分のOpenAI・Claude・Gemini・OllamaのキーでAI機能を使用。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ja/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Memex 评测：面向 iPhone 和 Android 的开源 AI 日记应用",
+    "excerpt": "Memex 是一款面向 iPhone 和 Android 的免费开源 AI 日记应用，记录保存在设备本地，并使用你自己的 OpenAI、Claude、Gemini 或 Ollama 密钥。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/zh/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Memex Review: Diario de IA de código abierto para iPhone y Android",
+    "excerpt": "Memex es una app de diario de IA gratuita y de código abierto para iPhone y Android que guarda las entradas en el dispositivo y funciona con tu propia clave de OpenAI, Claude, Gemini u Ollama.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/es/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Memex Review: diário de IA de código aberto para iPhone e Android",
+    "excerpt": "O Memex é um app de diário de IA gratuito e de código aberto para iPhone e Android que guarda os registros no aparelho e funciona com sua própria chave da OpenAI, Claude, Gemini ou Ollama.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/pt/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Memex: مذكرات ذكاء اصطناعي مفتوحة المصدر لأجهزة iPhone وAndroid",
+    "excerpt": "Memex تطبيق مذكرات ذكاء اصطناعي مجاني ومفتوح المصدر لأجهزة iPhone وAndroid يحفظ التسجيلات على الجهاز ويعمل بمفتاحك الخاص من OpenAI أو Claude أو Gemini أو Ollama.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ar/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Memex 리뷰: iPhone과 Android용 오픈소스 AI 저널 앱",
+    "excerpt": "Memex는 iPhone과 Android용 무료 오픈소스 AI 저널 앱으로, 기록을 기기 내에 저장하며 자신의 OpenAI, Claude, Gemini, Ollama 키로 작동합니다.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ko/power-local-llm/memex-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "How Much VRAM Do You Need for a Local LLM?",
     "excerpt": "4 GB runs Llama 3.2 3B Q4. 6 GB handles Llama 3.1 8B Q4_K_M. 12 GB unlocks Qwen3 14B. Formula: params × 0.6 = GB at Q4. VRAM tier guide from PromptQuorum.",
     "publishDate": "2026-05-18",

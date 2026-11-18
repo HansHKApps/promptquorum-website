@@ -276,6 +276,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'phantasm':                                'phantasm',
   'openvoiceos':                             'openvoiceos',
   'hillnote':                                'hillnote',
+  'memex':                                   'memex',
   'trilium-notes':                           'trilium-notes',
   'ramen':                                   'ramen',
   'llm-vision':                              'llm-vision',
