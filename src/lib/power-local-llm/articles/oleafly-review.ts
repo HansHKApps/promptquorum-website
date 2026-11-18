@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Oleafly 0.4.12 is a free, AGPL-3.0 desktop editor for writing research papers in LaTeX, Typst and Markdown. According to its README, it compiles on your own computer, keeps every project in a Git repository, cites from Zotero, lets coauthors edit together through a server you host, and can work with AI agents such as Claude Code and Codex or a local Ollama model. This review is based on the official website, the GitHub repository with its release notes and the Oleafly Server page, checked on 18 November 2026. PromptQuorum has not tested the app hands-on.',
     metaDescription:
-      'Oleafly is a free AGPL-3.0 desktop editor for LaTeX, Typst and Markdown papers with Git, Zotero, self-hosted collaboration and optional AI agents. What is confirmed.',
+      'Oleafly is a free AGPL-3.0 desktop editor for LaTeX, Typst and Markdown papers with Git, Zotero, self-hosted collaboration and optional AI agents.',
     twitterDescription:
       'Oleafly: a free open-source desktop editor for LaTeX, Typst and Markdown papers, with Git, Zotero, a self-hosted collaboration server and optional AI agents. Beta. What is confirmed.',
     audience:
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleafly is a free, open-source (AGPL-3.0) desktop editor for LaTeX, Typst and Markdown papers that compiles on your own computer and adds Git, Zotero, self-hosted live collaboration and optional AI agents.** It installs from GitHub release packages for macOS, Windows and Linux and is labelled beta. PromptQuorum has not tested it, and no company, imprint or terms page was found.',
+      '**Oleafly is a free, open-source (AGPL-3.0) desktop editor for LaTeX, Typst and Markdown papers that compiles on your own computer and adds Git, Zotero, self-hosted live collaboration and optional AI agents.** It installs from GitHub release packages for macOS, Windows and Linux and is labelled beta. PromptQuorum has not tested it, and on 18 November 2026 no company, imprint or terms page was found.',
     quickAnswerTop: {
       en: {
         question: 'What is Oleafly and who is it for?',
@@ -91,9 +91,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Download an installer from the GitHub releases page: DMG for macOS, MSI or EXE for Windows, AppImage, DEB or RPM for Linux.',
-          'Writing, compiling, Git and checks run on your computer; only features you switch on, such as cloud sync, hosted AI or literature search, use the network.',
+          'According to the README, writing, compiling, Git and checks run on your computer; features such as cloud sync, hosted AI or literature search use the network when you switch them on, and release builds also check for an update at start-up.',
           'Live collaboration works through an Oleafly Server that your lab or university hosts; PromptQuorum did not test it.',
-          'AI is optional and off until you connect an agent, a provider or a local Ollama model; costs of hosted providers are billed by those providers.',
+          'According to the README and the privacy page, AI is optional and stays off until you connect an agent, a provider or a local Ollama model; costs of hosted providers are billed by those providers.',
           'The project calls itself beta, and PromptQuorum has not tested it, so compile quality, collaboration behaviour and AI output are unverified.',
         ],
         callouts: [
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Oleafly 0.4.12 ist ein kostenloser, AGPL-3.0-lizenzierter Desktop-Editor zum Schreiben wissenschaftlicher Arbeiten in LaTeX, Typst und Markdown. Laut README kompiliert er auf Ihrem eigenen Rechner, hält jedes Projekt in einem Git-Repository, zitiert aus Zotero, lässt Mitautoren über einen selbst betriebenen Server gemeinsam arbeiten und kann mit KI-Agenten wie Claude Code und Codex oder mit einem lokalen Ollama-Modell zusammenarbeiten. Diese Rezension stützt sich auf die offizielle Website, das GitHub-Repository mit Release-Hinweisen und die Seite zu Oleafly Server, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'Oleafly ist ein kostenloser AGPL-3.0-Desktop-Editor für LaTeX, Typst und Markdown mit Git, Zotero, selbst gehosteter Zusammenarbeit und optionalen KI-Agenten. Was belegt ist.',
+      'Oleafly ist ein kostenloser AGPL-3.0-Editor für LaTeX, Typst und Markdown mit Git, Zotero, selbst gehosteter Zusammenarbeit und optionalen KI-Agenten.',
     twitterDescription:
       'Oleafly: kostenloser Open-Source-Desktop-Editor für LaTeX, Typst und Markdown mit Git, Zotero, selbst gehostetem Kollaborationsserver und optionalen KI-Agenten. Beta. Was belegt ist.',
     audience:
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleafly ist ein kostenloser, quelloffener (AGPL-3.0) Desktop-Editor für LaTeX-, Typst- und Markdown-Arbeiten, der auf Ihrem eigenen Rechner kompiliert und Git, Zotero, selbst gehostete Live-Zusammenarbeit und optionale KI-Agenten ergänzt.** Er wird über Release-Pakete auf GitHub für macOS, Windows und Linux installiert und ist als Beta gekennzeichnet. PromptQuorum hat ihn nicht getestet; ein Unternehmen, ein Impressum oder eine Nutzungsbedingungen-Seite wurde nicht gefunden.',
+      '**Oleafly ist ein kostenloser, quelloffener (AGPL-3.0) Desktop-Editor für LaTeX-, Typst- und Markdown-Arbeiten, der auf Ihrem eigenen Rechner kompiliert und Git, Zotero, selbst gehostete Live-Zusammenarbeit und optionale KI-Agenten ergänzt.** Er wird über Release-Pakete auf GitHub für macOS, Windows und Linux installiert und ist als Beta gekennzeichnet. PromptQuorum hat ihn nicht getestet; am 18. November 2026 wurde kein Unternehmen, kein Impressum und keine Nutzungsbedingungen-Seite gefunden.',
     quickAnswerTop: {
       de: {
         question: 'Was ist Oleafly, und für wen ist es gedacht?',
@@ -359,9 +359,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Laden Sie einen Installer von der GitHub-Releases-Seite: DMG für macOS, MSI oder EXE für Windows, AppImage, DEB oder RPM für Linux.',
-          'Schreiben, Kompilieren, Git und Prüfungen laufen auf Ihrem Rechner; nur Funktionen, die Sie einschalten, etwa Cloud-Synchronisierung, gehostete KI oder Literatursuche, nutzen das Netzwerk.',
+          'Laut README laufen Schreiben, Kompilieren, Git und Prüfungen auf Ihrem Rechner; Funktionen wie Cloud-Synchronisierung, gehostete KI oder Literatursuche nutzen das Netzwerk, wenn Sie sie einschalten, und Release-Builds suchen beim Start zusätzlich nach einem Update.',
           'Live-Zusammenarbeit läuft über einen Oleafly Server, den Ihr Labor oder Ihre Hochschule betreibt; PromptQuorum hat ihn nicht getestet.',
-          'KI ist optional und bleibt aus, bis Sie einen Agenten, einen Anbieter oder ein lokales Ollama-Modell verbinden; Kosten gehosteter Anbieter berechnen diese Anbieter selbst.',
+          'Laut README und Datenschutzseite ist KI optional und bleibt aus, bis Sie einen Agenten, einen Anbieter oder ein lokales Ollama-Modell verbinden; Kosten gehosteter Anbieter berechnen diese Anbieter selbst.',
           'Das Projekt nennt sich selbst Beta, und PromptQuorum hat es nicht getestet; Kompilierqualität, Verhalten bei der Zusammenarbeit und KI-Ergebnisse sind daher nicht überprüft.',
         ],
         callouts: [
@@ -555,12 +555,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/oleafly-review-hero-fr.webp',
-    title: 'Test d\'Oleafly : éditeur LaTeX et Typst gratuit et open source avec agents IA',
-    seoTitle: 'Test d\'Oleafly : éditeur LaTeX et Typst gratuit',
+    title: 'Avis sur Oleafly : éditeur LaTeX et Typst gratuit et open source avec agents IA',
+    seoTitle: 'Avis sur Oleafly : éditeur LaTeX et Typst gratuit et open source',
     intro:
-      'Oleafly 0.4.12 est un éditeur de bureau gratuit, sous licence AGPL-3.0, pour rédiger des travaux scientifiques en LaTeX, Typst et Markdown. D\'après son README, il compile sur votre propre ordinateur, garde chaque projet dans un dépôt Git, cite depuis Zotero, permet aux coauteurs de travailler ensemble via un serveur que vous hébergez, et peut fonctionner avec des agents IA comme Claude Code et Codex ou avec un modèle Ollama local. Ce test s\'appuie sur le site officiel, le dépôt GitHub avec ses notes de version et la page d\'Oleafly Server, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
+      'Oleafly 0.4.12 est un éditeur de bureau gratuit, sous licence AGPL-3.0, pour rédiger des travaux scientifiques en LaTeX, Typst et Markdown. D\'après son README, il compile sur votre propre ordinateur, garde chaque projet dans un dépôt Git, cite depuis Zotero, permet aux coauteurs de travailler ensemble via un serveur que vous hébergez, et peut fonctionner avec des agents IA comme Claude Code et Codex ou avec un modèle Ollama local. Cet avis s\'appuie sur le site officiel, le dépôt GitHub avec ses notes de version et la page d\'Oleafly Server, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
-      'Oleafly est un éditeur de bureau gratuit sous AGPL-3.0 pour LaTeX, Typst et Markdown, avec Git, Zotero, collaboration auto-hébergée et agents IA facultatifs. Ce qui est confirmé.',
+      'Oleafly est un éditeur de bureau gratuit (AGPL-3.0) pour LaTeX, Typst et Markdown : Git, Zotero, collaboration auto-hébergée et agents IA facultatifs.',
     twitterDescription:
       'Oleafly : éditeur de bureau gratuit et open source pour LaTeX, Typst et Markdown, avec Git, Zotero, serveur de collaboration auto-hébergé et agents IA facultatifs. Bêta. Ce qui est confirmé.',
     audience:
@@ -568,9 +568,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test Oleafly',
+    primaryTerm: 'avis Oleafly',
     targetKeywords: [
-      'test Oleafly',
+      'avis Oleafly',
       'éditeur LaTeX avec IA',
       'éditeur LaTeX open source bureau',
       'éditeur Typst',
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleafly est un éditeur de bureau gratuit et open source (AGPL-3.0) pour LaTeX, Typst et Markdown, qui compile sur votre ordinateur et ajoute Git, Zotero, la collaboration en direct auto-hébergée et des agents IA facultatifs.** Il s\'installe depuis les paquets des versions GitHub pour macOS, Windows et Linux et se présente comme une bêta. PromptQuorum ne l\'a pas testé, et aucune entreprise, mention légale ni page de conditions n\'a été trouvée.',
+      '**Oleafly est un éditeur de bureau gratuit et open source (AGPL-3.0) pour LaTeX, Typst et Markdown, qui compile sur votre ordinateur et ajoute Git, Zotero, la collaboration en direct auto-hébergée et des agents IA facultatifs.** Il s\'installe depuis les paquets des versions GitHub pour macOS, Windows et Linux et se présente comme une bêta. PromptQuorum ne l\'a pas testé, et au 18 novembre 2026 aucune entreprise, mention légale ni page de conditions n\'a été trouvée.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce qu\'Oleafly et à qui s\'adresse-t-il ?',
@@ -627,9 +627,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Téléchargez un installateur depuis la page des versions GitHub : DMG pour macOS, MSI ou EXE pour Windows, AppImage, DEB ou RPM pour Linux.',
-          'L\'écriture, la compilation, Git et les vérifications s\'exécutent sur votre ordinateur ; seules les fonctions que vous activez, comme la synchronisation cloud, l\'IA hébergée ou la recherche bibliographique, utilisent le réseau.',
+          'D\'après le README, l\'écriture, la compilation, Git et les vérifications s\'exécutent sur votre ordinateur ; des fonctions comme la synchronisation cloud, l\'IA hébergée ou la recherche bibliographique utilisent le réseau lorsque vous les activez, et les versions publiées vérifient aussi la présence d\'une mise à jour au démarrage.',
           'La collaboration en direct passe par un Oleafly Server hébergé par votre laboratoire ou votre université ; PromptQuorum ne l\'a pas testé.',
-          'L\'IA est facultative et désactivée tant que vous ne connectez pas un agent, un fournisseur ou un modèle Ollama local ; les coûts des fournisseurs hébergés sont facturés par ces fournisseurs.',
+          'D\'après le README et la page de confidentialité, l\'IA est facultative et reste désactivée tant que vous ne connectez pas un agent, un fournisseur ou un modèle Ollama local ; les coûts des fournisseurs hébergés sont facturés par ces fournisseurs.',
           'Le projet se dit lui-même en bêta et PromptQuorum ne l\'a pas testé : la qualité de compilation, le comportement de la collaboration et les résultats de l\'IA ne sont donc pas vérifiés.',
         ],
         callouts: [
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Non vérifié : qualité de compilation, rapidité de l\'éditeur, comportement de la collaboration, fiabilité de la synchronisation et qualité des modifications de l\'IA. PromptQuorum n\'a pas exécuté l\'application.',
           'Non vérifié : les affirmations « pas de télémétrie » et « ne contacte pas son éditeur » face à la vérification de mise à jour au démarrage ; PromptQuorum n\'a pas inspecté le trafic réseau.',
           'Non vérifié : si les installateurs macOS et Windows sont signés ou notarisés par le système d\'exploitation, et comment les agents IA sont configurés au-delà de ce que décrit le README.',
-          'Non vérifié : les chiffres de l\'éditeur sur les modèles et les compétences fournies, ainsi que les affirmations de sécurité de la page du serveur.',
+          'Non vérifié : les chiffres de l\'éditeur sur les modèles de documents (templates) et les compétences fournies, ainsi que les affirmations de sécurité de la page du serveur.',
           'Non vérifié : qui dirige le projet, dans quel pays il est établi et combien de personnes l\'utilisent. Aucune entreprise, mention légale ni page de conditions n\'a été trouvée, et PromptQuorum n\'a pas cherché d\'avis indépendants.',
         ],
       },
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Oleafly face aux alternatives',
         itemHeadings: true,
         content: [
-          '**Oleafly recoupe d\'autres outils de bureau pour la rédaction scientifique et la recherche assistée par IA ; PromptQuorum ne l\'a pas comparé à eux en pratique.** Les outils ci-dessous figurent dans l\'annuaire et sont décrits d\'après leurs propres tests.',
+          '**Oleafly recoupe d\'autres outils de bureau pour la rédaction scientifique et la recherche assistée par IA ; PromptQuorum ne l\'a pas comparé à eux en pratique.** Les outils ci-dessous figurent dans l\'annuaire et sont décrits d\'après leurs propres articles d\'évaluation, sans test pratique de la part de PromptQuorum.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
@@ -807,9 +807,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test d\'Open Science Desktop](/fr/power-local-llm/open-science-desktop-review) — un poste de recherche IA de bureau avec chat d\'agent et notebooks.',
-          '[Test de PapersGPT](/fr/power-local-llm/papersgpt-review) — une extension Zotero pour discuter avec votre bibliothèque d\'articles.',
-          '[Test de SoloMD](/fr/power-local-llm/solomd-review) — des notes Markdown avec chat IA sur bureau et mobile.',
+          '[Avis sur Open Science Desktop](/fr/power-local-llm/open-science-desktop-review) — un poste de recherche IA de bureau avec chat d\'agent et notebooks.',
+          '[Avis sur PapersGPT](/fr/power-local-llm/papersgpt-review) — une extension Zotero pour discuter avec votre bibliothèque d\'articles.',
+          '[Avis sur SoloMD](/fr/power-local-llm/solomd-review) — des notes Markdown avec chat IA sur bureau et mobile.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
       },
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Oleafly 0.4.12 es un editor de escritorio gratuito, con licencia AGPL-3.0, para escribir trabajos científicos en LaTeX, Typst y Markdown. Según su README, compila en tu propio equipo, guarda cada proyecto en un repositorio Git, cita desde Zotero, permite que los coautores editen juntos a través de un servidor que tú alojas y puede trabajar con agentes de IA como Claude Code y Codex o con un modelo local de Ollama. Esta reseña se basa en el sitio web oficial, el repositorio de GitHub con sus notas de versión y la página de Oleafly Server, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
     metaDescription:
-      'Oleafly es un editor de escritorio gratuito AGPL-3.0 para LaTeX, Typst y Markdown con Git, Zotero, colaboración autoalojada y agentes de IA opcionales. Qué está confirmado.',
+      'Oleafly es un editor de escritorio gratuito (AGPL-3.0) para LaTeX, Typst y Markdown con Git, Zotero, colaboración autoalojada y agentes de IA opcionales.',
     twitterDescription:
       'Oleafly: editor de escritorio gratuito y de código abierto para LaTeX, Typst y Markdown, con Git, Zotero, servidor de colaboración autoalojado y agentes de IA opcionales. Beta. Qué está confirmado.',
     audience:
@@ -847,7 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleafly es un editor de escritorio gratuito y de código abierto (AGPL-3.0) para LaTeX, Typst y Markdown que compila en tu equipo y añade Git, Zotero, colaboración en vivo autoalojada y agentes de IA opcionales.** Se instala desde los paquetes de las versiones de GitHub para macOS, Windows y Linux y se declara beta. PromptQuorum no lo ha probado y no encontró ninguna empresa, aviso legal ni página de condiciones.',
+      '**Oleafly es un editor de escritorio gratuito y de código abierto (AGPL-3.0) para LaTeX, Typst y Markdown que compila en tu equipo y añade Git, Zotero, colaboración en vivo autoalojada y agentes de IA opcionales.** Se instala desde los paquetes de las versiones de GitHub para macOS, Windows y Linux y se declara beta. PromptQuorum no lo ha probado y el 18 de noviembre de 2026 no encontró ninguna empresa, aviso legal ni página de condiciones.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Oleafly y para quién es?',
@@ -895,9 +895,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Descarga un instalador de la página de versiones de GitHub: DMG para macOS, MSI o EXE para Windows, AppImage, DEB o RPM para Linux.',
-          'Escribir, compilar, Git y las comprobaciones se ejecutan en tu equipo; solo las funciones que activas, como la sincronización en la nube, la IA alojada o la búsqueda bibliográfica, usan la red.',
+          'Según el README, escribir, compilar, Git y las comprobaciones se ejecutan en tu equipo; funciones como la sincronización en la nube, la IA alojada o la búsqueda bibliográfica usan la red cuando las activas, y las versiones publicadas también buscan una actualización al arrancar.',
           'La colaboración en vivo funciona mediante un Oleafly Server que aloja tu laboratorio o tu universidad; PromptQuorum no lo probó.',
-          'La IA es opcional y permanece desactivada hasta que conectes un agente, un proveedor o un modelo local de Ollama; los costes de los proveedores alojados los factura cada proveedor.',
+          'Según el README y la página de privacidad, la IA es opcional y permanece desactivada hasta que conectes un agente, un proveedor o un modelo local de Ollama; los costes de los proveedores alojados los factura cada proveedor.',
           'El proyecto se declara beta y PromptQuorum no lo ha probado, así que la calidad de compilación, el comportamiento de la colaboración y los resultados de la IA no están verificados.',
         ],
         callouts: [
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Oleafly 0.4.12 é um editor de desktop gratuito, com licença AGPL-3.0, para escrever trabalhos científicos em LaTeX, Typst e Markdown. Segundo o README, ele compila no seu próprio computador, mantém cada projeto em um repositório Git, cita a partir do Zotero, permite que coautores editem juntos por meio de um servidor que você hospeda e pode trabalhar com agentes de IA como Claude Code e Codex ou com um modelo local do Ollama. Esta análise se baseia no site oficial, no repositório do GitHub com as notas de versão e na página do Oleafly Server, consultados em 18 de novembro de 2026. A PromptQuorum não testou o aplicativo na prática.',
     metaDescription:
-      'O Oleafly é um editor de desktop gratuito AGPL-3.0 para LaTeX, Typst e Markdown com Git, Zotero, colaboração auto-hospedada e agentes de IA opcionais. O que está confirmado.',
+      'O Oleafly é um editor de desktop gratuito (AGPL-3.0) para LaTeX, Typst e Markdown com Git, Zotero, colaboração auto-hospedada e agentes de IA opcionais.',
     twitterDescription:
       'Oleafly: editor de desktop gratuito e de código aberto para LaTeX, Typst e Markdown, com Git, Zotero, servidor de colaboração auto-hospedado e agentes de IA opcionais. Beta. O que está confirmado.',
     audience:
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O Oleafly é um editor de desktop gratuito e de código aberto (AGPL-3.0) para LaTeX, Typst e Markdown que compila no seu computador e acrescenta Git, Zotero, colaboração ao vivo auto-hospedada e agentes de IA opcionais.** Ele é instalado a partir dos pacotes das versões do GitHub para macOS, Windows e Linux e se declara beta. A PromptQuorum não o testou e não encontrou empresa, aviso legal nem página de termos.',
+      '**O Oleafly é um editor de desktop gratuito e de código aberto (AGPL-3.0) para LaTeX, Typst e Markdown que compila no seu computador e acrescenta Git, Zotero, colaboração ao vivo auto-hospedada e agentes de IA opcionais.** Ele é instalado a partir dos pacotes das versões do GitHub para macOS, Windows e Linux e se declara beta. A PromptQuorum não o testou e, em 18 de novembro de 2026, não encontrou empresa, aviso legal nem página de termos.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Oleafly e para quem ele serve?',
@@ -1163,9 +1163,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Baixe um instalador na página de versões do GitHub: DMG para macOS, MSI ou EXE para Windows, AppImage, DEB ou RPM para Linux.',
-          'Escrever, compilar, Git e verificações rodam no seu computador; só os recursos que você ativa, como a sincronização na nuvem, a IA hospedada ou a busca bibliográfica, usam a rede.',
+          'Segundo o README, escrever, compilar, Git e verificações rodam no seu computador; recursos como a sincronização na nuvem, a IA hospedada ou a busca bibliográfica usam a rede quando você os ativa, e as versões publicadas também verificam se há atualização ao iniciar.',
           'A colaboração ao vivo funciona por um Oleafly Server hospedado pelo seu laboratório ou universidade; a PromptQuorum não o testou.',
-          'A IA é opcional e fica desligada até você conectar um agente, um provedor ou um modelo local do Ollama; os custos de provedores hospedados são cobrados por esses provedores.',
+          'Segundo o README e a página de privacidade, a IA é opcional e fica desligada até você conectar um agente, um provedor ou um modelo local do Ollama; os custos de provedores hospedados são cobrados por esses provedores.',
           'O projeto se declara beta e a PromptQuorum não o testou, então a qualidade da compilação, o comportamento da colaboração e os resultados da IA não estão verificados.',
         ],
         callouts: [
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não verificado: qualidade da compilação, velocidade do editor, comportamento da colaboração, confiabilidade da sincronização e qualidade das edições da IA. A PromptQuorum não executou o aplicativo.',
           'Não verificado: as afirmações de «sem telemetria» e «não se comunica com o fabricante» ao lado da verificação de atualização ao iniciar; a PromptQuorum não inspecionou o tráfego de rede.',
           'Não verificado: se os instaladores de macOS e Windows são assinados ou notarizados pelo sistema operacional e como os agentes de IA são configurados além do que o README descreve.',
-          'Não verificado: os números do fabricante sobre modelos e habilidades incluídas e as afirmações de segurança da página do servidor.',
+          'Não verificado: os números do fabricante sobre modelos de documento (templates) e habilidades incluídas e as afirmações de segurança da página do servidor.',
           'Não verificado: quem toca o projeto, em que país ele está sediado e quantas pessoas o usam. Não foi encontrada empresa, aviso legal nem página de termos, e a PromptQuorum não procurou análises independentes.',
         ],
       },
@@ -1383,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleaflyは、LaTeX・Typst・Markdownの論文向けの無料のオープンソース（AGPL-3.0）デスクトップエディターで、自分のパソコン上でコンパイルし、Git、Zotero、自前サーバーでのリアルタイム共同編集、任意のAIエージェントを加えます。** GitHubのリリースパッケージからmacOS、Windows、Linuxにインストールでき、ベータ版と表示されています。PromptQuorumは試しておらず、運営会社、運営者情報、利用規約のページは見つかりませんでした。',
+      '**Oleaflyは、LaTeX・Typst・Markdownの論文向けの無料のオープンソース（AGPL-3.0）デスクトップエディターで、自分のパソコン上でコンパイルし、Git、Zotero、自前サーバーでのリアルタイム共同編集、任意のAIエージェントを加えます。** GitHubのリリースパッケージからmacOS、Windows、Linuxにインストールでき、ベータ版と表示されています。PromptQuorumは試しておらず、2026年11月18日時点で運営会社、運営者情報、利用規約のページは見つかりませんでした。',
     quickAnswerTop: {
       ja: {
         question: 'Oleaflyとは何で、誰に向いていますか？',
@@ -1431,9 +1431,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'GitHubのリリースページからインストーラーを入手します。macOSはDMG、WindowsはMSIまたはEXE、LinuxはAppImage、DEB、RPMです。',
-          '執筆、コンパイル、Git、各種チェックはパソコン上で動きます。クラウド同期、ホスト型AI、文献検索など、オンにした機能だけがネットワークを使います。',
+          'READMEによると、執筆、コンパイル、Git、各種チェックはパソコン上で動きます。クラウド同期、ホスト型AI、文献検索などは、オンにするとネットワークを使い、リリースビルドは起動時にも更新を確認します。',
           'リアルタイム共同編集は、研究室や大学がホストするOleafly Server経由で行います。PromptQuorumは試していません。',
-          'AIは任意で、エージェント、プロバイダー、ローカルのOllamaモデルを接続するまでオフです。ホスト型プロバイダーの費用は各プロバイダーが請求します。',
+          'READMEとプライバシーページによると、AIは任意で、エージェント、プロバイダー、ローカルのOllamaモデルを接続するまでオフです。ホスト型プロバイダーの費用は各プロバイダーが請求します。',
           'プロジェクト自身がベータ版としており、PromptQuorumも試していないため、コンパイルの品質、共同編集の挙動、AIの出力は未検証です。',
         ],
         callouts: [
@@ -1460,13 +1460,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Oleaflyは、GitHubのリリースページにあるパッケージからインストールします。READMEが全プラットフォーム分のリンクを載せています。**',
           'リリースv0.4.12には、Apple SiliconとIntel向けのmacOS用DMG、Windows用のMSIとEXEセットアップ、x86_64とARM64向けLinux用のAppImage、DEB、RPMが並んでいます。アプリ内アップデーター用の署名ファイルも含まれ、READMEによれば、アップデーターは署名を確認してからインストールします。',
         ],
-        columns: ['方法', '入手方法'],
+        columns: ['プラットフォーム', 'パッケージ'],
         rows: [
-          { '方法': 'macOS（Apple Silicon）', '入手方法': 'DMG' },
-          { '方法': 'macOS（Intel）', '入手方法': 'DMG（x64）' },
-          { '方法': 'Windows（x86_64）', '入手方法': 'MSIまたはEXEセットアップ' },
-          { '方法': 'Linux（x86_64、ARM64）', '入手方法': 'AppImage、DEB、RPM' },
-          { '方法': '[ソース](https://github.com/Oleafly/Oleafly)', '入手方法': 'ソースからビルド（開発ガイド参照）' },
+          { 'プラットフォーム': 'macOS（Apple Silicon）', 'パッケージ': 'DMG' },
+          { 'プラットフォーム': 'macOS（Intel）', 'パッケージ': 'DMG（x64）' },
+          { 'プラットフォーム': 'Windows（x86_64）', 'パッケージ': 'MSIまたはEXEセットアップ' },
+          { 'プラットフォーム': 'Linux（x86_64、ARM64）', 'パッケージ': 'AppImage、DEB、RPM' },
+          { 'プラットフォーム': '[ソース](https://github.com/Oleafly/Oleafly)', 'パッケージ': 'ソースからビルド（開発ガイド参照）' },
         ],
         note: '[GitHubのリリースページ](https://github.com/Oleafly/Oleafly/releases/latest)からダウンロードします。PromptQuorumはインストーラーを実行しておらず、OSによる署名や公証がされているかも確認していません。確認時、サイトの利用規約、料金、概要、運営者情報、問い合わせのページは「404」でした。',
       },
@@ -1627,8 +1627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/oleafly-review-hero-zh.webp',
-    title: 'Oleafly 评测：支持 AI 智能体的免费开源 LaTeX 与 Typst 编辑器',
-    seoTitle: 'Oleafly 评测：免费的 LaTeX 与 Typst 编辑器',
+    title: 'Oleafly 解读：支持 AI 智能体的免费开源 LaTeX 与 Typst 编辑器',
+    seoTitle: 'Oleafly 解读：免费的 LaTeX 与 Typst 编辑器',
     intro:
       'Oleafly 0.4.12 是一款免费的桌面编辑器，采用 AGPL-3.0 许可，用于以 LaTeX、Typst 和 Markdown 撰写研究论文。根据其 README，它在你自己的电脑上编译，把每个项目保存在 Git 仓库中，可从 Zotero 引用文献，并让合作者通过你自己托管的服务器共同编辑，还能配合 Claude Code、Codex 等 AI 智能体或本地 Ollama 模型使用。本评测基于官方网站、带发布说明的 GitHub 仓库以及 Oleafly Server 页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
     metaDescription:
@@ -1640,9 +1640,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Oleafly 评测',
+    primaryTerm: 'Oleafly 解读',
     targetKeywords: [
-      'Oleafly 评测',
+      'Oleafly 解读',
       '带 AI 的 LaTeX 编辑器',
       '开源 LaTeX 桌面编辑器',
       'Typst 编辑器',
@@ -1651,7 +1651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleafly 是免费的开源（AGPL-3.0）桌面编辑器，面向 LaTeX、Typst 和 Markdown 论文，在你自己的电脑上编译，并提供 Git、Zotero、自托管实时协作和可选的 AI 智能体。** 它通过 GitHub 发布页的安装包安装，支持 macOS、Windows 和 Linux，并标注为测试版。PromptQuorum 没有测试过它，也没有找到运营公司、公司信息或服务条款页面。',
+      '**Oleafly 是免费的开源（AGPL-3.0）桌面编辑器，面向 LaTeX、Typst 和 Markdown 论文，在你自己的电脑上编译，并提供 Git、Zotero、自托管实时协作和可选的 AI 智能体。** 它通过 GitHub 发布页的安装包安装，支持 macOS、Windows 和 Linux，并标注为测试版。PromptQuorum 没有测试过它，2026 年 11 月 18 日也没有找到运营公司、公司信息或服务条款页面。',
     quickAnswerTop: {
       zh: {
         question: 'Oleafly 是什么，适合谁用？',
@@ -1699,9 +1699,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '从 GitHub 发布页下载安装包：macOS 为 DMG，Windows 为 MSI 或 EXE，Linux 为 AppImage、DEB 或 RPM。',
-          '写作、编译、Git 和检查都在你的电脑上运行；只有你开启的功能，例如云同步、托管 AI 或文献检索，才会使用网络。',
+          '根据 README，写作、编译、Git 和检查都在你的电脑上运行；云同步、托管 AI 或文献检索等功能在你开启后会使用网络，发布版本在启动时还会检查更新。',
           '实时协作通过你的实验室或大学托管的 Oleafly Server 进行；PromptQuorum 没有测试过。',
-          'AI 为可选，连接智能体、服务商或本地 Ollama 模型之前保持关闭；托管服务商的费用由这些服务商收取。',
+          '根据 README 和隐私页面，AI 为可选，连接智能体、服务商或本地 Ollama 模型之前保持关闭；托管服务商的费用由这些服务商收取。',
           '项目自称测试版，PromptQuorum 也没有测试过，因此编译质量、协作表现和 AI 输出均未核实。',
         ],
         callouts: [
@@ -1778,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私与数据流向',
         content: [
           '**据厂商称，文档保存在你的磁盘上，网络只用于你选择的操作；PromptQuorum 没有检查网络流量，无法确认这一点。**',
-          '隐私页面称，应用无需账号、没有遥测、不会向厂商回传，AI 功能在你添加自己的密钥之前保持关闭，文本从你的电脑直接发往你选择的服务商。README 补充说，发布版本在启动时会检查更新，并列出了其他使用网络的情形：与你的服务器共享、云同步、文献和 DOI 查询、GitHub、托管 AI 服务商、你连接的 MCP 服务器，以及可选的引擎、软件包和模板下载。',
+          '隐私页面称，应用无需账号、没有遥测、不会向厂商回传，AI 功能在你添加自己的密钥之前保持关闭，文本从你的电脑发往你选择的服务商。README 补充说，发布版本在启动时会检查更新，并列出了其他使用网络的情形：与你的服务器共享、云同步、文献和 DOI 查询、GitHub、托管 AI 服务商、你连接的 MCP 服务器，以及可选的引擎、软件包和模板下载。',
           '如果你使用托管 AI 服务商或云端智能体，你的文本会按该服务商的条款发送给它；根据 README，本地 Ollama 模型能让 AI 流量留在你的电脑上。如果你使用协作服务器，项目文件会发往你所在组织运行的服务器。',
           '代码采用 AGPL-3.0 许可并公开，因此数据流向可以审计。Oleafly Server 的安全页面由厂商撰写，并把计划中的功能单独列出；PromptQuorum 没有核实其中的安全说法及其提到的独立审查。',
         ],
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Oleafly 0.4.12는 LaTeX, Typst, Markdown으로 연구 논문을 쓰는 무료 데스크톱 편집기이며 라이선스는 AGPL-3.0입니다. README에 따르면 사용자의 컴퓨터에서 직접 컴파일하고, 모든 프로젝트를 Git 저장소로 관리하며, Zotero에서 인용할 수 있고, 직접 호스팅하는 서버를 통해 공저자와 함께 편집할 수 있습니다. Claude Code, Codex 같은 AI 에이전트나 로컬 Ollama 모델과도 함께 쓸 수 있습니다. 이 리뷰는 공식 웹사이트, 릴리스 노트가 있는 GitHub 저장소, Oleafly Server 페이지를 바탕으로 2026년 11월 18일에 확인했습니다. PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription:
-      'Oleafly는 LaTeX·Typst·Markdown용 무료 AGPL-3.0 데스크톱 편집기로 Git, Zotero, 자체 호스팅 공동 작업, 선택형 AI 에이전트를 지원합니다. 확인된 내용을 정리했습니다.',
+      'Oleafly는 LaTeX·Typst·Markdown용 무료 AGPL-3.0 편집기로 Git, Zotero, 자체 호스팅 공동 작업, 선택형 AI 에이전트를 지원합니다.',
     twitterDescription:
       'Oleafly: LaTeX·Typst·Markdown 논문용 무료 오픈소스 데스크톱 편집기. Git, Zotero, 자체 호스팅 협업 서버, 선택형 AI 에이전트 지원. 베타. 확인된 내용.',
     audience:
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Oleafly는 LaTeX·Typst·Markdown 논문용 무료 오픈소스(AGPL-3.0) 데스크톱 편집기로, 사용자의 컴퓨터에서 컴파일하고 Git, Zotero, 자체 호스팅 실시간 공동 작업, 선택형 AI 에이전트를 더합니다.** GitHub 릴리스 패키지로 macOS, Windows, Linux에 설치하며 베타로 표기되어 있습니다. PromptQuorum은 테스트하지 않았고, 운영 회사나 사업자 정보, 이용 약관 페이지는 찾지 못했습니다.',
+      '**Oleafly는 LaTeX·Typst·Markdown 논문용 무료 오픈소스(AGPL-3.0) 데스크톱 편집기로, 사용자의 컴퓨터에서 컴파일하고 Git, Zotero, 자체 호스팅 실시간 공동 작업, 선택형 AI 에이전트를 더합니다.** GitHub 릴리스 패키지로 macOS, Windows, Linux에 설치하며 베타로 표기되어 있습니다. PromptQuorum은 테스트하지 않았고, 2026년 11월 18일 기준으로 운영 회사나 사업자 정보, 이용 약관 페이지는 찾지 못했습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Oleafly는 무엇이며 누구에게 적합합니까?',
@@ -1967,9 +1967,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'GitHub 릴리스 페이지에서 설치 파일을 받습니다. macOS는 DMG, Windows는 MSI 또는 EXE, Linux는 AppImage, DEB, RPM입니다.',
-          '글쓰기, 컴파일, Git, 검사는 사용자의 컴퓨터에서 실행되며, 클라우드 동기화, 호스팅 AI, 문헌 검색처럼 직접 켠 기능만 네트워크를 사용합니다.',
+          'README에 따르면 글쓰기, 컴파일, Git, 검사는 사용자의 컴퓨터에서 실행되며, 클라우드 동기화, 호스팅 AI, 문헌 검색 같은 기능은 직접 켜면 네트워크를 사용하고, 릴리스 빌드는 시작할 때 업데이트도 확인합니다.',
           '실시간 공동 작업은 연구실이나 대학이 호스팅하는 Oleafly Server를 통해 이루어지며, PromptQuorum은 테스트하지 않았습니다.',
-          'AI는 선택 사항이며 에이전트, 제공업체, 로컬 Ollama 모델을 연결하기 전까지 꺼져 있습니다. 호스팅 제공업체의 비용은 해당 업체가 청구합니다.',
+          'README와 개인정보 페이지에 따르면 AI는 선택 사항이며 에이전트, 제공업체, 로컬 Ollama 모델을 연결하기 전까지 꺼져 있습니다. 호스팅 제공업체의 비용은 해당 업체가 청구합니다.',
           '프로젝트 스스로 베타라고 밝히고 있고 PromptQuorum도 테스트하지 않았으므로 컴파일 품질, 공동 작업 동작, AI 출력은 확인되지 않았습니다.',
         ],
         callouts: [
@@ -1996,13 +1996,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Oleafly는 GitHub 릴리스 페이지의 패키지로 설치하며, README가 모든 플랫폼에 대해 이 페이지를 링크합니다.**',
           'v0.4.12 릴리스에는 Apple Silicon과 Intel용 macOS DMG, Windows용 MSI와 EXE 설치 파일, x86_64와 ARM64용 Linux AppImage, DEB, RPM 패키지가 있습니다. 릴리스에는 앱 내 업데이터가 사용하는 서명 파일도 포함되어 있으며, README에 따르면 업데이터는 설치 전에 서명을 확인합니다.',
         ],
-        columns: ['방법', '설치 방법'],
+        columns: ['플랫폼', '패키지'],
         rows: [
-          { '방법': 'macOS(Apple Silicon)', '설치 방법': 'DMG' },
-          { '방법': 'macOS(Intel)', '설치 방법': 'DMG(x64)' },
-          { '방법': 'Windows(x86_64)', '설치 방법': 'MSI 또는 EXE 설치 파일' },
-          { '방법': 'Linux(x86_64, ARM64)', '설치 방법': 'AppImage, DEB 또는 RPM' },
-          { '방법': '[소스](https://github.com/Oleafly/Oleafly)', '설치 방법': '소스에서 빌드(개발 가이드 참조)' },
+          { '플랫폼': 'macOS(Apple Silicon)', '패키지': 'DMG' },
+          { '플랫폼': 'macOS(Intel)', '패키지': 'DMG(x64)' },
+          { '플랫폼': 'Windows(x86_64)', '패키지': 'MSI 또는 EXE 설치 파일' },
+          { '플랫폼': 'Linux(x86_64, ARM64)', '패키지': 'AppImage, DEB 또는 RPM' },
+          { '플랫폼': '[소스](https://github.com/Oleafly/Oleafly)', '패키지': '소스에서 빌드(개발 가이드 참조)' },
         ],
         note: '[GitHub 릴리스 페이지](https://github.com/Oleafly/Oleafly/releases/latest)에서 내려받습니다. PromptQuorum은 설치 파일을 실행하지 않았으며 운영체제의 코드 서명이나 공증 여부도 확인하지 않았습니다. 확인 당시 웹사이트의 이용 약관, 요금, 소개, 사업자 정보, 문의 페이지는 "404"를 반환했습니다.',
       },
@@ -2046,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 보호와 데이터 흐름',
         content: [
           '**제작사에 따르면 문서는 사용자의 디스크에 남고 네트워크는 사용자가 고른 동작에만 쓰입니다. PromptQuorum은 네트워크 트래픽을 점검하지 않았으므로 이를 확인할 수 없습니다.**',
-          '개인정보 페이지는 앱에 계정이 필요 없고 텔레메트리가 없으며 제작사로 연락하지 않는다고, 그리고 AI 기능은 사용자가 자신의 키를 추가하기 전까지 꺼져 있고 텍스트는 사용자의 기기에서 선택한 제공업체로 직접 전달된다고 밝힙니다. README는 릴리스 빌드가 시작할 때 업데이트를 확인한다고 덧붙이며, 그 밖에 네트워크를 쓰는 항목으로 서버와의 공유, 클라우드 동기화, 문헌 및 DOI 조회, GitHub, 호스팅 AI 제공업체, 연결한 MCP 서버, 엔진·패키지·템플릿의 선택적 다운로드를 나열합니다.',
+          '개인정보 페이지는 앱에 계정이 필요 없고 텔레메트리가 없으며 제작사로 연락하지 않는다고, 그리고 AI 기능은 사용자가 자신의 키를 추가하기 전까지 꺼져 있고 텍스트는 사용자의 기기에서 선택한 제공업체로 전달된다고 밝힙니다. README는 릴리스 빌드가 시작할 때 업데이트를 확인한다고 덧붙이며, 그 밖에 네트워크를 쓰는 항목으로 서버와의 공유, 클라우드 동기화, 문헌 및 DOI 조회, GitHub, 호스팅 AI 제공업체, 연결한 MCP 서버, 엔진·패키지·템플릿의 선택적 다운로드를 나열합니다.',
           '호스팅 AI 제공업체나 클라우드 에이전트를 쓰면 텍스트가 해당 업체의 약관에 따라 그쪽으로 전송됩니다. README에 따르면 로컬 Ollama 모델은 AI 트래픽을 사용자의 컴퓨터 안에 둡니다. 공동 작업 서버를 쓰면 프로젝트 파일이 소속 조직이 운영하는 서버로 전송됩니다.',
           '코드는 AGPL-3.0으로 공개되어 있으므로 데이터 흐름을 감사할 수 있습니다. Oleafly Server 보안 페이지는 제작사가 작성했고 계획 중인 기능을 따로 나열합니다. PromptQuorum은 그 보안 관련 주장과 언급된 독립 검토를 검증하지 않았습니다.',
         ],
@@ -2163,8 +2163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/oleafly-review-hero-ar.webp',
-    title: 'مراجعة Oleafly: محرر مجاني ومفتوح المصدر للأبحاث مع وكلاء ذكاء اصطناعي',
-    seoTitle: 'مراجعة Oleafly: محرر LaTeX وTypst مجاني',
+    title: 'مراجعة Oleafly: محرر LaTeX وTypst مجاني ومفتوح المصدر مع وكلاء ذكاء اصطناعي',
+    seoTitle: 'مراجعة Oleafly: محرر LaTeX وTypst مجاني ومفتوح المصدر',
     intro:
       'Oleafly 0.4.12 محرر مكتبي مجاني بترخيص AGPL-3.0 لكتابة الأبحاث العلمية بصيغ LaTeX وTypst وMarkdown. وبحسب ملف README، يجمّع المستند على جهازك، ويحفظ كل مشروع في مستودع Git، ويتيح الاقتباس من Zotero، ويمكّن المؤلفين المشاركين من التحرير معًا عبر خادم تستضيفه بنفسك، ويمكنه العمل مع وكلاء ذكاء اصطناعي مثل Claude Code وCodex أو مع نموذج Ollama محلي. تستند هذه المراجعة إلى الموقع الرسمي ومستودع GitHub مع ملاحظات الإصدار وصفحة Oleafly Server، وقد روجعت في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
@@ -2235,9 +2235,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'نزّل مثبّتًا من صفحة إصدارات GitHub: ملف DMG لنظام macOS، وMSI أو EXE لنظام Windows، وAppImage أو DEB أو RPM لنظام Linux.',
-          'الكتابة والتجميع وGit والفحوص تعمل على جهازك؛ والميزات التي تفعّلها وحدها، مثل المزامنة السحابية أو الذكاء الاصطناعي المستضاف أو البحث في الأدبيات، تستخدم الشبكة.',
+          'بحسب README، تعمل الكتابة والتجميع وGit والفحوص على جهازك؛ وتستخدم ميزات مثل المزامنة السحابية أو الذكاء الاصطناعي المستضاف أو البحث في الأدبيات الشبكة عند تفعيلها، كما تتحقق نسخ الإصدار من وجود تحديث عند بدء التشغيل.',
           'يعمل التعاون المباشر عبر Oleafly Server يستضيفه مختبرك أو جامعتك؛ ولم تختبره PromptQuorum.',
-          'الذكاء الاصطناعي اختياري ويبقى متوقفًا حتى تصل وكيلًا أو مزوّدًا أو نموذج Ollama محليًا؛ وتكاليف المزوّدين المستضافين يحاسب عليها هؤلاء المزوّدون.',
+          'بحسب README وصفحة الخصوصية، الذكاء الاصطناعي اختياري ويبقى متوقفًا حتى تصل وكيلًا أو مزوّدًا أو نموذج Ollama محليًا؛ وتكاليف المزوّدين المستضافين يحاسب عليها هؤلاء المزوّدون.',
           'يصف المشروع نفسه بأنه تجريبي ولم تختبره PromptQuorum، لذا فإن جودة التجميع وسلوك التعاون ونتائج الذكاء الاصطناعي لم يُتحقَّق منها.',
         ],
         callouts: [
