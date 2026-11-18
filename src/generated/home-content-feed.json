@@ -6886,82 +6886,82 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM PC Build for $2,000 (2026): Dual-GPU 32GB VRAM Parts List",
-    "excerpt": "$2,000 local LLM PC build: dual RTX 5060 Ti 16GB (32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. Runs 70B Q4 at 12-18 tok/s via tensor-split. Full 2026 parts list.",
+    "title": "Dual-GPU Local LLM PC Build (2026): 2x RTX 5060 Ti 16GB, About $2,400",
+    "excerpt": "Dual RTX 5060 Ti 16GB local LLM PC build: 32GB VRAM, Ryzen 7 9700X, 64GB DDR5, about $2,440. Fits 32B at Q4; 70B Q4 does not. 2026 parts list.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-18",
     "url": "/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Lokaler LLM-PC-Build für 2.000 € (2026): Dual-GPU-Teileliste mit 32GB VRAM",
-    "excerpt": "Lokaler LLM-PC-Build für 2.000 €: zwei RTX 5060 Ti 16GB (32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. Läuft mit 70B Q4 bei 12–18 Tok/s via Tensor-Split. Vollständige Teileliste 2026.",
+    "title": "Dual-GPU-PC-Build für lokale LLMs (2026): 2x RTX 5060 Ti 16GB, ca. 2.400 $",
+    "excerpt": "Lokaler LLM-PC-Build mit zwei RTX 5060 Ti 16GB: 32GB VRAM, Ryzen 7 9700X, 64GB DDR5, ca. 2.440 $. 32B Q4 passt, 70B Q4 nicht. Teileliste 2026.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/de/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Configuration PC pour LLM local à $2,000 (2026) : liste de pièces double GPU 32 Go VRAM",
-    "excerpt": "Configuration PC LLM local à $2,000 : double RTX 5060 Ti 16 Go (32 Go VRAM) + Ryzen 7 9700X + 64 Go DDR5. 70B Q4 à 12-18 tok/s via tensor-split. Liste de pièces 2026.",
+    "title": "PC pour LLM local à double GPU (2026) : 2x RTX 5060 Ti 16 Go, environ $2,400",
+    "excerpt": "PC pour LLM local avec deux RTX 5060 Ti 16 Go : 32 Go de VRAM, Ryzen 7 9700X, 64 Go DDR5, environ $2,440. Le 32B en Q4 tient, pas le 70B. Liste 2026.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/fr/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "$2,000のローカルLLM PCビルド（2026年）：デュアルGPU 32GB VRAMパーツリスト",
-    "excerpt": "$2,000のローカルLLM PCビルド：デュアルRTX 5060 Ti 16GB（32GB VRAM）+ Ryzen 7 9700X + 64GB DDR5。テンソル分割で70B Q4を12〜18 tok/sで実行。2026年版完全パーツリスト。",
+    "title": "デュアルGPUローカルLLM PCビルド（2026年）：RTX 5060 Ti 16GB×2、約$2,400",
+    "excerpt": "RTX 5060 Ti 16GB×2のローカルLLM PCビルド：VRAM 32GB、Ryzen 7 9700X、64GB DDR5、約$2,440。32BのQ4は収まり、70BのQ4は収まりません。2026年パーツリスト。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/ja/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "2026年$2,000本地LLM PC构建：双GPU 32GB显存配件清单",
-    "excerpt": "$2,000本地LLM PC构建：双RTX 5060 Ti 16GB（32GB显存）+ Ryzen 7 9700X + 64GB DDR5。通过tensor-split以12-18 tok/s运行70B Q4。2026年完整配件清单。",
+    "title": "双GPU本地LLM PC构建（2026）：2张RTX 5060 Ti 16GB，约$2,400",
+    "excerpt": "两张RTX 5060 Ti 16GB的本地LLM PC构建：32GB显存、Ryzen 7 9700X、64GB DDR5，约$2,440。32B的Q4装得下，70B的Q4装不下。2026配件清单。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/zh/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Build de PC para LLM Local por $2,000 (2026): Lista de Componentes Dual-GPU con 32GB de VRAM",
-    "excerpt": "Build de PC para LLM local por $2,000: dual RTX 5060 Ti 16GB (32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. Ejecuta 70B Q4 a 12-18 tok/s vía tensor-split. Lista completa de componentes 2026.",
+    "title": "Build de PC para LLM Local con Doble GPU (2026): 2x RTX 5060 Ti 16GB, Unos $2,400",
+    "excerpt": "Build de PC para LLM local con dos RTX 5060 Ti 16GB: 32GB de VRAM, Ryzen 7 9700X, 64GB DDR5, unos $2,440. Cabe 32B en Q4; 70B en Q4 no. Lista 2026.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/es/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Build de PC para LLM Local por $2.000 (2026): Lista de Peças Dual-GPU com 32GB de VRAM",
-    "excerpt": "Build de PC para LLM local de $2.000: 2x RTX 5060 Ti 16GB (32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. Executa 70B Q4 a 12-18 tok/s via tensor-split. Lista completa de peças 2026.",
+    "title": "Build de PC para LLM local com GPU dupla (2026): 2x RTX 5060 Ti 16GB, cerca de $2.400",
+    "excerpt": "Build de PC para LLM local com duas RTX 5060 Ti 16GB: 32GB de VRAM, Ryzen 7 9700X, 64GB DDR5, cerca de $2.440. 32B em Q4 cabe; 70B em Q4 não. Lista 2026.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/pt/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "تجميع كمبيوتر لنماذج LLM محلية بميزانية 2,000 دولار (2026): قائمة قطع بثنائي GPU وذاكرة VRAM 32GB",
-    "excerpt": "تجميع كمبيوتر LLM محلي بـ 2,000 دولار: بطاقتا RTX 5060 Ti 16GB (32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. يشغّل 70B Q4 بسرعة 12-18 tok/s عبر تقسيم tensor. قائمة قطع كاملة 2026.",
+    "title": "تجميع كمبيوتر LLM محلي بكرتي GPU (2026): بطاقتان RTX 5060 Ti 16GB بنحو 2,400 دولار",
+    "excerpt": "تجميع كمبيوتر LLM محلي ببطاقتين RTX 5060 Ti 16GB: ذاكرة 32GB وRyzen 7 9700X وDDR5 بسعة 64GB بنحو 2,440 دولار. نموذج 32B بـ Q4 يتسع و70B لا. قائمة 2026.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/ar/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "$2,000 로컬 LLM PC 빌드(2026): 듀얼 GPU 32GB VRAM 부품 목록",
-    "excerpt": "$2,000 로컬 LLM PC 빌드: 듀얼 RTX 5060 Ti 16GB(32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. 텐서 분할로 70B Q4를 초당 12~18토큰. 2026년 전체 부품 목록.",
+    "title": "듀얼 GPU 로컬 LLM PC 빌드(2026): RTX 5060 Ti 16GB 2장, 약 $2,400",
+    "excerpt": "RTX 5060 Ti 16GB 2장 로컬 LLM PC 빌드: VRAM 32GB, Ryzen 7 9700X, 64GB DDR5, 약 $2,440. 32B Q4는 들어가고 70B Q4는 들어가지 않습니다. 2026 부품 목록.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-07-18",
+    "dateModified": "2026-11-18",
     "url": "/ko/local-llms/local-llm-pc-build-2000",
     "cluster": "local-llms"
   },
@@ -22762,8 +22762,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 387 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 387 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 388 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 388 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/directory",
@@ -22771,8 +22771,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 387 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 387 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 388 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 388 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/de/directory",
@@ -22780,8 +22780,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 387 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 387 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 388 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 388 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/fr/directory",
@@ -22789,8 +22789,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす387のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを387件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす388のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを388件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/ja/directory",
@@ -22798,8 +22798,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：387款软件，在本地运行AI（2026）",
-    "excerpt": "对比387款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：388款软件，在本地运行AI（2026）",
+    "excerpt": "对比388款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/zh/directory",
@@ -22807,8 +22807,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 387 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 387 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 388 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 388 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/es/directory",
@@ -22816,8 +22816,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 387 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 387 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 388 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 388 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/pt/directory",
@@ -22825,8 +22825,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 387 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 387 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 388 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 388 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/ar/directory",
@@ -22834,8 +22834,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 387개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 387개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 388개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 388개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-18",
     "url": "/ko/directory",
@@ -34751,7 +34751,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 139 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 140 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -34769,7 +34769,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 139 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 140 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -34778,7 +34778,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント139種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント140種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -34787,7 +34787,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比139款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比140款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -34796,7 +34796,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 139 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 140 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -34805,7 +34805,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 139 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 140 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -34814,7 +34814,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 139 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 140 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -34823,7 +34823,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 139개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 140개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -34832,7 +34832,7 @@
   {
     "lang": "en",
     "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-    "excerpt": "Compare 75 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
+    "excerpt": "Compare 76 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/power-local-llm/local-llm-code-development-compared",
@@ -34841,7 +34841,7 @@
   {
     "lang": "de",
     "title": "Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich (2026): IDE-Plugins, Agent-Frameworks und autonome Agenten",
-    "excerpt": "Vergleich von 75 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
+    "excerpt": "Vergleich von 76 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/de/power-local-llm/local-llm-code-development-compared",
@@ -34850,7 +34850,7 @@
   {
     "lang": "fr",
     "title": "Assistants de code, agents et outils de workflow locaux : comparatif (2026) — plugins IDE, frameworks d'agents et agents autonomes",
-    "excerpt": "Comparez 75 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
+    "excerpt": "Comparez 76 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/fr/power-local-llm/local-llm-code-development-compared",
@@ -34859,7 +34859,7 @@
   {
     "lang": "ja",
     "title": "ローカルのコーディングアシスタント・エージェント・ワークフローツール比較(2026):IDEプラグイン、エージェントフレームワーク、自律型エージェント",
-    "excerpt": "ローカルのコーディング/エージェントツール75件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
+    "excerpt": "ローカルのコーディング/エージェントツール76件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ja/power-local-llm/local-llm-code-development-compared",
@@ -34868,7 +34868,7 @@
   {
     "lang": "zh",
     "title": "本地编程助手、智能体与工作流工具对比(2026):IDE插件、智能体框架与自主智能体",
-    "excerpt": "并排对比75款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
+    "excerpt": "并排对比76款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/zh/power-local-llm/local-llm-code-development-compared",
@@ -34877,7 +34877,7 @@
   {
     "lang": "es",
     "title": "Comparativa (2026) de asistentes de código, agentes y herramientas de flujo de trabajo locales: plugins de IDE, frameworks de agentes y agentes autónomos",
-    "excerpt": "Compara 75 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
+    "excerpt": "Compara 76 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/es/power-local-llm/local-llm-code-development-compared",
@@ -34886,7 +34886,7 @@
   {
     "lang": "pt",
     "title": "Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados (2026): plugins de IDE, frameworks de agentes e agentes autônomos",
-    "excerpt": "Compare 75 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
+    "excerpt": "Compare 76 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/pt/power-local-llm/local-llm-code-development-compared",
@@ -34895,7 +34895,7 @@
   {
     "lang": "ar",
     "title": "مقارنة مساعدات البرمجة المحلية والوكلاء وأدوات سير العمل (2026): إضافات IDE وأطر الوكلاء والوكلاء المستقلة",
-    "excerpt": "قارن 75 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
+    "excerpt": "قارن 76 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ar/power-local-llm/local-llm-code-development-compared",
@@ -34904,7 +34904,7 @@
   {
     "lang": "ko",
     "title": "로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교(2026): IDE 플러그인, 에이전트 프레임워크, 자율 에이전트",
-    "excerpt": "로컬 코딩·에이전트 도구 75개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
+    "excerpt": "로컬 코딩·에이전트 도구 76개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ko/power-local-llm/local-llm-code-development-compared",
@@ -59370,6 +59370,87 @@
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/ko/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Lexora Review: The Open-Source Desktop AI Agent",
+    "excerpt": "Lexora is a free, open-source (AGPL-3.0) desktop AI agent for Windows, macOS, and Linux that chats and carries out tasks using your own model service or local models.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Lexora Review: Der quelloffene Desktop-KI-Agent",
+    "excerpt": "Lexora ist ein kostenloser, quelloffener (AGPL-3.0) Desktop-KI-Agent für Windows, macOS und Linux, der chattet und Aufgaben mit Ihrem Modelldienst oder lokalen Modellen übernimmt.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/de/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Lexora : l'agent IA de bureau open source",
+    "excerpt": "Lexora est un agent IA de bureau gratuit et open source (AGPL-3.0) pour Windows, macOS et Linux, qui discute et exécute des tâches avec votre service de modèle ou des modèles locaux.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/fr/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Lexoraレビュー：オープンソースのデスクトップAIエージェント",
+    "excerpt": "LexoraはWindows・macOS・Linux向けの無料でオープンソース（AGPL-3.0）のデスクトップAIエージェント。自分のモデルサービスやローカルモデルでチャットとタスク実行を行える。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ja/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Lexora 评测：开源桌面 AI 智能体",
+    "excerpt": "Lexora 是一款面向 Windows、macOS 和 Linux 的免费开源（AGPL-3.0）桌面 AI 智能体，可用你自己的模型服务或本地模型聊天并完成任务。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/zh/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Lexora: el agente de IA de escritorio de código abierto",
+    "excerpt": "Lexora es un agente de IA de escritorio gratuito y de código abierto (AGPL-3.0) para Windows, macOS y Linux que conversa y realiza tareas con tu servicio de modelo o modelos locales.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/es/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Lexora: o agente de IA de desktop de código aberto",
+    "excerpt": "O Lexora é um agente de IA de desktop gratuito e de código aberto (AGPL-3.0) para Windows, macOS e Linux, que conversa e executa tarefas com seu serviço de modelo ou modelos locais.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/pt/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Lexora: وكيل الذكاء الاصطناعي المكتبي مفتوح المصدر",
+    "excerpt": "Lexora وكيل ذكاء اصطناعي مكتبي مجاني ومفتوح المصدر (AGPL-3.0) لأنظمة Windows و macOS و Linux، يتحدث وينفذ مهامًا باستخدام خدمة نموذجك أو نماذج محلية.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ar/power-local-llm/lexora-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Lexora 리뷰: 오픈소스 데스크톱 AI 에이전트",
+    "excerpt": "Lexora는 Windows, macOS, Linux용 무료 오픈소스(AGPL-3.0) 데스크톱 AI 에이전트로, 자신의 모델 서비스나 로컬 모델로 대화하고 작업을 수행할 수 있습니다.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ko/power-local-llm/lexora-review",
     "cluster": "power-local-llm"
   },
   {
