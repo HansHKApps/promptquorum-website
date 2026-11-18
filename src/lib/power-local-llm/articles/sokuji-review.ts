@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Non vérifié : si l’installateur Windows est signé et l’application macOS notariée ; ce sont des déclarations de l’éditeur.',
           'Flou : le dépôt contient encore un fichier de politique de confidentialité de l’extension daté du 3 juin 2025, qui décrit les analyses comme facultatives avec un réglage dans l’application, alors que la politique actuelle indique qu’il n’y a aucun réglage ; PromptQuorum considère la politique actuelle comme celle qui s’applique.',
           'Non vérifié : la politique de confidentialité mentionne une application mobile, mais ni la page de téléchargement ni le README n’indiquent de téléchargement mobile ; PromptQuorum traite donc Sokuji comme une application de bureau et de navigateur uniquement.',
-          'Non vérifié : les détails de l’entreprise au-delà du nom Kizuna AI Lab (selon la page Commerce Disclosure, l’adresse est communiquée sur demande ; aucun numéro d’immatriculation trouvé), le nombre d’utilisateurs et les tests indépendants ; PromptQuorum n’a pas cherché de tests indépendants.',
+          'Non vérifié : les détails de l’entreprise au-delà du nom Kizuna AI Lab (selon la page Commerce Disclosure, l’adresse est communiquée sur demande ; aucun numéro d’immatriculation trouvé), le nombre d’utilisateurs et les avis indépendants ; PromptQuorum n’a pas cherché d’avis indépendants.',
         ],
       },
       vsAlternatives: {
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sokuji face aux alternatives',
         itemHeadings: true,
         content: [
-          '**Sokuji recoupe des outils qui transcrivent ou sous-titrent la parole, mais il est conçu pour la traduction en direct en réunion ; PromptQuorum ne l’a pas comparé à eux en pratique.** Les outils ci-dessous figurent dans l’annuaire et sont décrits d’après leurs propres tests.',
+          '**Sokuji recoupe des outils qui transcrivent ou sous-titrent la parole, mais il est conçu pour la traduction en direct en réunion ; PromptQuorum ne l’a pas comparé à eux en pratique.** Les outils ci-dessous figurent dans l’annuaire et sont décrits d’après leurs propres avis.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '未核实：Windows 安装程序是否已代码签名、macOS 应用是否已公证；这些是开发者的说法。',
           '不明确：仓库中仍有一份 2025 年 6 月 3 日的扩展隐私政策文件，称分析数据需用户同意，应用内可开关，而现行政策称没有开关；PromptQuorum 以现行政策为准。',
           '未核实：隐私政策提到了移动应用，但下载页和 README 都没有列出移动端下载，因此 PromptQuorum 将 Sokuji 视为仅限桌面和浏览器。',
-          '未核实：除 Kizuna AI Lab 这一名称之外的公司信息（据 Commerce Disclosure 页面，地址在收到请求后提供；未找到注册号）、用户数量和独立评测；PromptQuorum 没有查找独立评测。',
+          '未核实：除 Kizuna AI Lab 这一名称之外的公司信息（据 Commerce Disclosure 页面，地址在收到请求后提供；未找到注册号）、用户数量和独立点评；PromptQuorum 没有查找独立点评。',
         ],
       },
       vsAlternatives: {
@@ -2498,7 +2498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'المشاركون في اجتماعات ثنائية اللغة الذين يريدون أن يسمع الطرف الآخر صوتًا مترجمًا عبر ميكروفون افتراضي، في أي تطبيق وليس في المتصفح وحده.',
-          'المستمعون إلى المحاضرات أو الحديثات أو مقاطع الفيديو الذين يريدون ترجمة نصية فورية لما يسمعونه.',
+          'المستمعون إلى المحاضرات أو الكلمات أو مقاطع الفيديو الذين يريدون ترجمة نصية فورية لما يسمعونه.',
           'المتحدثون الذين يريدون أن يقرأ جمهورهم ترجمة نصية لحديثهم هم.',
           'المستخدمون المهتمون بالخصوصية الذين يريدون، بحسب المطوّر، تجربة التعرّف على الكلام والترجمة وتوليد الصوت على جهازهم دون مفتاح.',
           'القرّاء الذين يفضّلون تطبيقًا شيفرته علنية بترخيص AGPL-3.0.',
@@ -2532,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الأداة': 'Sokuji', 'المذكور في المصادر': 'AGPL-3.0؛ سطح مكتب + متصفح؛ ترجمة فورية في الاتجاهين' },
           { 'الأداة': '[Buzz](/ar/power-local-llm/buzz-captions-review)', 'المذكور في المصادر': 'MIT؛ Mac/Windows/Linux؛ تفريغ Whisper محلي' },
-          { 'الأداة': '[Sablate](/ar/power-local-llm/sablate-review)', 'المذكور في المصادر': 'مغلق المصدر؛ Windows/Mac؛ ترجمة نصية وترجمة' },
+          { 'الأداة': '[Sablate](/ar/power-local-llm/sablate-review)', 'المذكور في المصادر': 'مغلق المصدر؛ Windows/Mac؛ ترجمات مصاحبة وترجمة' },
           { 'الأداة': '[Minutes](/ar/power-local-llm/minutes-review)', 'المذكور في المصادر': 'MIT؛ Mac/Windows؛ ملاحظات اجتماعات من التفريغ' },
         ],
       },
@@ -2598,7 +2598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[أدوات الصوت والكلام المحلية مقارنةً](/ar/power-local-llm/local-llm-voice-audio-compared) — تحويل النص إلى كلام والتعرّف على الكلام ووكلاء الصوت جنبًا إلى جنب.',
           '[مراجعة Buzz](/ar/power-local-llm/buzz-captions-review) — تفريغ Whisper محلي على سطح المكتب.',
-          '[مراجعة Sablate](/ar/power-local-llm/sablate-review) — ترجمة نصية وترجمة للفيديو على Windows وMac.',
+          '[مراجعة Sablate](/ar/power-local-llm/sablate-review) — ترجمات مصاحبة وترجمة للفيديو على Windows وMac.',
           '[مراجعة Minutes](/ar/power-local-llm/minutes-review) — ملاحظات اجتماعات من التفريغ، مجاني ومفتوح المصدر.',
           '[دليل برمجيات LLM المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية.',
         ],
