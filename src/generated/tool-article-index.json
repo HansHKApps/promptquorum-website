@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "airi-review",
+        "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
+        "url": "/power-local-llm/airi-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/oleafly-review",
         "dateModified": "2026-11-18",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openwork-review",
-        "title": "OpenWork Review: Open-Source Desktop AI Agent for Your Files",
-        "url": "/power-local-llm/openwork-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
       }
     ],
-    "totalCount": 375,
+    "totalCount": 376,
     "capped": true
   },
   "llama.cpp": {
@@ -191,6 +191,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "airi-review",
+        "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
+        "url": "/power-local-llm/airi-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -244,17 +252,9 @@
         "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
         "dateModified": "2026-11-07",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-11-07",
-        "tier": "about"
       }
     ],
-    "totalCount": 107,
+    "totalCount": 108,
     "capped": true
   },
   "LocalAI": {
@@ -11029,6 +11029,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "AIRI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "airi-review",
+        "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
+        "url": "/power-local-llm/airi-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Skales": {
     "articles": [
       {
@@ -11266,6 +11280,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "airi-review",
+        "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
+        "url": "/power-local-llm/airi-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "qwen-vs-llama-vs-mistral",
         "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
@@ -11328,17 +11350,9 @@
         "url": "/local-llms/best-mini-pcs-local-llm",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 70,
+    "totalCount": 71,
     "capped": true
   },
   "Newelle": {
