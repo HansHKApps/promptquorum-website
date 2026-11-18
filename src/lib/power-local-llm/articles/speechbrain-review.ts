@@ -20,11 +20,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/speechbrain-review-hero-en.webp',
     title: 'SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text',
-    seoTitle: 'SpeechBrain Review: Open-Source Speech Toolkit',
+    seoTitle: 'SpeechBrain Review: Open-Source PyTorch Speech Toolkit',
     intro:
       'SpeechBrain is an Apache-2.0-licensed Python toolkit, built on PyTorch, for speech recognition, speaker recognition, speech enhancement, text-to-speech and related tasks; per its README it ships over 200 training recipes and over 100 pretrained models. This review reflects the project\'s website, README and v1.1.2 release page as checked on 23 October 2026.',
     metaDescription:
-      'SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy and open questions.',
+      'SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy, open points.',
     twitterDescription:
       'SpeechBrain review: an Apache-2.0 PyTorch toolkit with 200+ training recipes and 100+ pretrained models for speech tasks. Install steps, scope, open questions.',
     audience:
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'SpeechBrain مجموعة أدوات بلغة Python برخصة Apache-2.0 مبنية على PyTorch للتعرف على الكلام والتعرف على المتحدث وتحسين الصوت وتحويل النص إلى كلام ومهام أخرى مرتبطة بها؛ ويذكر ملف README الخاص بها أنها تضم أكثر من 200 وصفة تدريب وأكثر من 100 نموذج مدرَّب مسبقًا. تعكس هذه المراجعة موقع المشروع وملف README وصفحة الإصدار v1.1.2 كما جرى التحقق منها في 23 أكتوبر 2026.',
     metaDescription:
-      'مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية وأسئلة مفتوحة.',
+      'مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية.',
     twitterDescription:
       'مراجعة SpeechBrain: أدوات PyTorch برخصة Apache-2.0 مع أكثر من 200 وصفة تدريب و100 نموذج مدرَّب مسبقًا لمهام الكلام. خطوات التثبيت والنطاق وأسئلة مفتوحة.',
     audience:
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/speechbrain-review-hero-zh.webp',
     title: 'SpeechBrain 评测：面向语音与文本的开源 PyTorch 工具包',
-    seoTitle: 'SpeechBrain 评测：免费开源的 PyTorch 语音工具包',
+    seoTitle: 'SpeechBrain评测：免费开源PyTorch语音工具包',
     intro:
       'SpeechBrain 是一个采用 Apache-2.0 许可、基于 PyTorch 的 Python 工具包，用于语音识别、说话人识别、语音增强、文本转语音等任务；据其 README 介绍，它提供 200 多个训练配方和 100 多个预训练模型。本评测依据 2026 年 10 月 23 日核对的项目网站、README 和 v1.1.2 发布页面。',
     metaDescription:

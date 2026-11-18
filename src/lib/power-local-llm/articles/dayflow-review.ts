@@ -1,7 +1,7 @@
 // Dayflow Review: open-source automatic work journal for Mac with an on-device AI option
 // Slug: dayflow-review
 // Companion to: perfect-memory-review, khoj-ai-second-brain-review, hyperlink-nexa-review, ollama-review, lm-studio-review
-// Facts verified 2026-11-13 against dayflow.so (home, pricing, privacy) and GitHub JerryZLiu/Dayflow (README, API, Releases v2.9.0 of 2026-11-10).
+// Facts verified 2026-11-14 against dayflow.so (home, pricing, privacy) and GitHub JerryZLiu/Dayflow (README, API, Releases v2.9.3 of 2026-11-13).
 // Not hands-on tested. Stale-project warning is OFF (3 days since the last update on 2026-11-13).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-en.webp',
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: "**Dayflow is a free, MIT-licensed Mac app that records your screen at low frequency and uses AI to turn it into a timeline, and its analysis can run entirely on your own Mac through Ollama or LM Studio.** Cloud analysis is a choice, not a requirement. The newest release is version 2.9.0 from 10 November 2026. This review rests on the maker's website and GitHub repository, not on hands-on testing.",
+    leadAnswerBlock: "**Dayflow is a free, MIT-licensed Mac app that records your screen at low frequency and uses AI to turn it into a timeline, and its analysis can run entirely on your own Mac through Ollama or LM Studio.** Cloud analysis is a choice, not a requirement. The newest release is version 2.9.3 from 13 November 2026. This review rests on the maker's website and GitHub repository, not on hands-on testing.",
     quickAnswerTop: {
       en: {
         question: 'Is Dayflow a local app?',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac only, macOS 14 or newer; the homepage lists a Windows version as coming.',
           'Anonymous analytics are sent to the maker unless you switch them off in settings.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Local claim: capture, recordings and the database stay on the Mac; analysis is local only if you connect Ollama or LM Studio.',
           'License and maker: MIT, open code, published by Teleport Labs Inc. per the privacy page.',
           'Price: free with a local model or your own key; managed AI is the paid Pro plan.',
-          'Maintenance: version 2.9.0 was released on 10 November 2026 and the repository was updated the same day, so the project is actively developed.',
+          'Maintenance: version 2.9.3 was released on 13 November 2026 and the repository was updated the same day, so the project is actively developed.',
           'Gaps: macOS 14 or newer only, no bundled model, and cloud paths send screenshots to a provider.',
         ],
       },
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Platform: 'Release notes',
-            'Get It': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — the 2.9.0 release has no written notes',
+            'Get It': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — the 2.9.3 release has no written notes',
           },
           {
             Platform: 'Website',
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Benefit: 'Active development',
-            'What it means in real use': 'Version 2.9.0 shipped on 10 November 2026.',
+            'What it means in real use': 'Version 2.9.3 shipped on 13 November 2026.',
             'Limitation / caveat': 'Mac only, macOS 14 or newer; Windows is only announced.',
           },
         ],
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          'Dayflow is a good fit if you use a Mac, want an automatic and open-source record of your workday, and are ready to run Ollama or LM Studio so the analysis stays on your machine. It has an MIT license, a free tier and a release on 10 November 2026.',
+          'Dayflow is a good fit if you use a Mac, want an automatic and open-source record of your workday, and are ready to run Ollama or LM Studio so the analysis stays on your machine. It has an MIT license, a free tier and a release on 13 November 2026.',
           'The caveats are scope and verifiability: Mac only, a separate local-model setup, cloud paths that send screenshots away, and privacy and accuracy claims that PromptQuorum could not check. Try the free local setup before considering Pro.',
         ],
       },
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pricing page](https://www.dayflow.so/pricing/) — Free, Pro and Enterprise plans and the data-path FAQ.',
           '[Privacy policy](https://www.dayflow.so/privacy/) — local, own-provider and cloud modes, analytics and data handling.',
           '[GitHub repository](https://github.com/JerryZLiu/Dayflow) — README, MIT license and source code.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg and the release date of version 2.9.0.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg and the release date of version 2.9.3.',
         ],
       },
       relatedReading: {
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-de.webp',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflow ist eine kostenlose, MIT-lizenzierte Mac-App, die Ihren Bildschirm in großen Abständen aufzeichnet und per KI in eine Zeitleiste verwandelt; die Analyse kann vollständig auf Ihrem eigenen Mac über Ollama oder LM Studio laufen.** Cloud-Analyse ist eine Wahlmöglichkeit, keine Pflicht. Die neueste Version ist 2.9.0 vom 10. November 2026. Diese Rezension stützt sich auf Website und GitHub-Repository des Herstellers, nicht auf eigene Tests.',
+    leadAnswerBlock: '**Dayflow ist eine kostenlose, MIT-lizenzierte Mac-App, die Ihren Bildschirm in großen Abständen aufzeichnet und per KI in eine Zeitleiste verwandelt; die Analyse kann vollständig auf Ihrem eigenen Mac über Ollama oder LM Studio laufen.** Cloud-Analyse ist eine Wahlmöglichkeit, keine Pflicht. Die neueste Version ist 2.9.3 vom 13. November 2026. Diese Rezension stützt sich auf Website und GitHub-Repository des Herstellers, nicht auf eigene Tests.',
     quickAnswerTop: {
       de: {
         question: 'Ist Dayflow eine lokale App?',
@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nur Mac mit macOS 14 oder neuer; die Startseite kündigt eine Windows-Version als kommend an.',
           'Anonyme Analysedaten gehen an den Hersteller, solange Sie sie nicht in den Einstellungen abschalten.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lokale Aussage: Aufnahme, Aufzeichnungen und Datenbank bleiben auf dem Mac; die Analyse ist nur lokal, wenn Sie Ollama oder LM Studio anbinden.',
           'Lizenz und Hersteller: MIT, offener Code, laut Datenschutzerklärung von Teleport Labs Inc. veröffentlicht.',
           'Preis: kostenlos mit lokalem Modell oder eigenem Schlüssel; verwaltete KI ist der kostenpflichtige Pro-Tarif.',
-          'Pflege: Version 2.9.0 erschien am 10. November 2026 und das Repository wurde am selben Tag aktualisiert, das Projekt wird also aktiv entwickelt.',
+          'Pflege: Version 2.9.3 erschien am 13. November 2026 und das Repository wurde am selben Tag aktualisiert, das Projekt wird also aktiv entwickelt.',
           'Lücken: nur macOS 14 oder neuer, kein mitgeliefertes Modell, und Cloud-Wege senden Bildschirmfotos an einen Anbieter.',
         ],
       },
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plattform: 'Versionshinweise',
-            'Bezugsquelle': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — zur Version 2.9.0 gibt es keine Release-Notizen',
+            'Bezugsquelle': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — zur Version 2.9.3 gibt es keine Release-Notizen',
           },
           {
             Plattform: 'Website',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Vorteil: 'Aktive Entwicklung',
-            'Was das im Alltag bedeutet': 'Version 2.9.0 erschien am 10. November 2026.',
+            'Was das im Alltag bedeutet': 'Version 2.9.3 erschien am 13. November 2026.',
             'Einschränkung / Hinweis': 'Nur Mac mit macOS 14 oder neuer; Windows ist nur angekündigt.',
           },
         ],
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content: [
-          'Dayflow passt, wenn Sie einen Mac nutzen, Ihren Arbeitstag automatisch und quelloffen festhalten möchten und bereit sind, Ollama oder LM Studio zu betreiben, damit die Analyse auf Ihrem Rechner bleibt. Es hat eine MIT-Lizenz, einen kostenlosen Tarif und ein Release vom 10. November 2026.',
+          'Dayflow passt, wenn Sie einen Mac nutzen, Ihren Arbeitstag automatisch und quelloffen festhalten möchten und bereit sind, Ollama oder LM Studio zu betreiben, damit die Analyse auf Ihrem Rechner bleibt. Es hat eine MIT-Lizenz, einen kostenlosen Tarif und ein Release vom 13. November 2026.',
           'Die Vorbehalte sind Umfang und Überprüfbarkeit: nur Mac, eine separate Einrichtung des lokalen Modells, Cloud-Wege, die Bildschirmfotos versenden, und Datenschutz- und Genauigkeitsangaben, die PromptQuorum nicht prüfen konnte. Probieren Sie die kostenlose lokale Einrichtung, bevor Sie Pro erwägen.',
         ],
       },
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Preisseite](https://www.dayflow.so/pricing/) — Tarife Free, Pro und Enterprise sowie die FAQ zum Datenweg.',
           '[Datenschutzerklärung](https://www.dayflow.so/privacy/) — lokale, eigene und Cloud-Modi, Analysedaten und Datenverarbeitung.',
           '[GitHub-Repository](https://github.com/JerryZLiu/Dayflow) — README, MIT-Lizenz und Quellcode.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg und das Veröffentlichungsdatum von Version 2.9.0.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg und das Veröffentlichungsdatum von Version 2.9.3.',
         ],
       },
       relatedReading: {
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-fr.webp',
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflow est une application Mac gratuite sous licence MIT qui enregistre votre écran à basse fréquence et le transforme en chronologie grâce à l’IA ; l’analyse peut tourner entièrement sur votre propre Mac via Ollama ou LM Studio.** L’analyse dans le cloud est un choix, pas une obligation. La version la plus récente est la 2.9.0 du 10 novembre 2026. Ce test repose sur le site et le dépôt GitHub de l’éditeur, pas sur des essais pratiques.',
+    leadAnswerBlock: '**Dayflow est une application Mac gratuite sous licence MIT qui enregistre votre écran à basse fréquence et le transforme en chronologie grâce à l’IA ; l’analyse peut tourner entièrement sur votre propre Mac via Ollama ou LM Studio.** L’analyse dans le cloud est un choix, pas une obligation. La version la plus récente est la 2.9.3 du 13 novembre 2026. Ce test repose sur le site et le dépôt GitHub de l’éditeur, pas sur des essais pratiques.',
     quickAnswerTop: {
       fr: {
         question: 'Dayflow est-elle une application locale ?',
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac uniquement, macOS 14 ou plus récent ; la page d’accueil annonce une version Windows à venir.',
           'Des statistiques anonymes sont envoyées à l’éditeur, sauf si vous les désactivez dans les réglages.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Affirmation locale : la capture, les enregistrements et la base de données restent sur le Mac ; l’analyse n’est locale que si vous connectez Ollama ou LM Studio.',
           'Licence et éditeur : MIT, code ouvert, publié par Teleport Labs Inc. selon la politique de confidentialité.',
           'Prix : gratuit avec un modèle local ou votre propre clé ; l’IA gérée correspond à l’offre payante Pro.',
-          'Maintenance : la version 2.9.0 est sortie le 10 novembre 2026 et le dépôt a été mis à jour le même jour, le projet est donc activement développé.',
+          'Maintenance : la version 2.9.3 est sortie le 13 novembre 2026 et le dépôt a été mis à jour le même jour, le projet est donc activement développé.',
           'Lacunes : macOS 14 ou plus récent uniquement, aucun modèle fourni, et les voies cloud envoient les captures à un fournisseur.',
         ],
       },
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plateforme: 'Notes de version',
-            'Où la trouver': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — la version 2.9.0 n’a pas de notes rédigées',
+            'Où la trouver': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — la version 2.9.3 n’a pas de notes rédigées',
           },
           {
             Plateforme: 'Site web',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Avantage: 'Développement actif',
-            'Ce que cela donne à l’usage': 'La version 2.9.0 est sortie le 10 novembre 2026.',
+            'Ce que cela donne à l’usage': 'La version 2.9.3 est sortie le 13 novembre 2026.',
             'Limite / réserve': 'Mac uniquement, macOS 14 ou plus récent ; Windows n’est qu’annoncé.',
           },
         ],
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          'Dayflow convient si vous utilisez un Mac, voulez un suivi automatique et open source de votre journée de travail, et êtes prêt à faire tourner Ollama ou LM Studio pour que l’analyse reste sur votre machine. Elle a une licence MIT, une offre gratuite et une version du 10 novembre 2026.',
+          'Dayflow convient si vous utilisez un Mac, voulez un suivi automatique et open source de votre journée de travail, et êtes prêt à faire tourner Ollama ou LM Studio pour que l’analyse reste sur votre machine. Elle a une licence MIT, une offre gratuite et une version du 13 novembre 2026.',
           'Les réserves tiennent à la portée et à la vérifiabilité : Mac uniquement, une configuration de modèle local à part, des voies cloud qui envoient les captures ailleurs, et des affirmations de confidentialité et de précision que PromptQuorum n’a pas pu vérifier. Essayez la configuration locale gratuite avant d’envisager Pro.',
         ],
       },
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Page des tarifs](https://www.dayflow.so/pricing/) — offres Free, Pro et Enterprise et FAQ sur le circuit des données.',
           '[Politique de confidentialité](https://www.dayflow.so/privacy/) — modes local, fournisseur personnel et cloud, statistiques et traitement des données.',
           '[Dépôt GitHub](https://github.com/JerryZLiu/Dayflow) — README, licence MIT et code source.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg et date de sortie de la version 2.9.0.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg et date de sortie de la version 2.9.3.',
         ],
       },
       relatedReading: {
@@ -1062,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-ja.webp',
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflowは、画面を低頻度で記録し、AIで時系列のタイムラインにまとめるMac向けの無料アプリ（MITライセンス）で、分析はOllamaまたはLM Studio経由で自分のMac上だけで実行できます。** クラウド分析は選択肢であり、必須ではありません。最新版は2026年11月10日公開のバージョン2.9.0です。このレビューは公式サイトとGitHubリポジトリの記載に基づいており、実機テストはしていません。',
+    leadAnswerBlock: '**Dayflowは、画面を低頻度で記録し、AIで時系列のタイムラインにまとめるMac向けの無料アプリ（MITライセンス）で、分析はOllamaまたはLM Studio経由で自分のMac上だけで実行できます。** クラウド分析は選択肢であり、必須ではありません。最新版は2026年11月13日公開のバージョン2.9.3です。このレビューは公式サイトとGitHubリポジトリの記載に基づいており、実機テストはしていません。',
     quickAnswerTop: {
       ja: {
         question: 'Dayflowはローカルで動くアプリですか？',
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac専用でmacOS 14以降。トップページではWindows版を「近日対応」としています。',
           '設定でオフにしない限り、匿名の利用分析が開発元に送られます。',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ローカルに関する記載：キャプチャ、録画、データベースはMacに残ります。分析がローカルになるのは、OllamaまたはLM Studioを接続した場合だけです。',
           'ライセンスと開発元：MIT、コードは公開。プライバシーポリシーによればTeleport Labs Inc.が公開しています。',
           '価格：ローカルモデルまたは自分のキーなら無料。マネージドAIは有料のProプランです。',
-          'メンテナンス：バージョン2.9.0は2026年11月10日に公開され、リポジトリも同日に更新されたため、活発に開発されています。',
+          'メンテナンス：バージョン2.9.3は2026年11月13日に公開され、リポジトリも同日に更新されたため、活発に開発されています。',
           '制約：macOS 14以降のみ、モデルは同梱されず、クラウド経路ではスクリーンショットがプロバイダーに送られます。',
         ],
       },
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': 'リリースノート',
-            '入手先': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — バージョン2.9.0にはリリースノートの記載がありません',
+            '入手先': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — バージョン2.9.3にはリリースノートの記載がありません',
           },
           {
             'プラットフォーム': '公式サイト',
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'メリット': '活発な開発',
-            '実際の使い勝手': 'バージョン2.9.0が2026年11月10日に公開されました。',
+            '実際の使い勝手': 'バージョン2.9.3が2026年11月13日に公開されました。',
             '制限・注意点': 'Mac専用でmacOS 14以降。Windowsは発表のみです。',
           },
         ],
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content: [
-          'Macを使っていて、仕事の一日を自動かつオープンソースで記録したく、分析を手元にとどめるためにOllamaやLM Studioを動かす用意があるなら、Dayflowは向いています。MITライセンス、無料プラン、2026年11月10日のリリースがあります。',
+          'Macを使っていて、仕事の一日を自動かつオープンソースで記録したく、分析を手元にとどめるためにOllamaやLM Studioを動かす用意があるなら、Dayflowは向いています。MITライセンス、無料プラン、2026年11月13日のリリースがあります。',
           '注意点は、対象範囲と検証のしにくさです。Mac専用であること、ローカルモデルを別途用意する必要があること、クラウド経路ではスクリーンショットが外部に送られること、そしてPromptQuorumが確認できなかったプライバシーと精度に関する記載です。Proを検討する前に、無料のローカル構成を試してください。',
         ],
       },
@@ -1391,7 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[料金ページ](https://www.dayflow.so/pricing/) — Free、Pro、Enterpriseの各プランとデータ経路に関するFAQ。',
           '[プライバシーポリシー](https://www.dayflow.so/privacy/) — ローカル、自分のプロバイダー、クラウドの各モード、利用分析、データの扱い。',
           '[GitHubリポジトリ](https://github.com/JerryZLiu/Dayflow) — README、MITライセンス、ソースコード。',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmgとバージョン2.9.0の公開日。',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmgとバージョン2.9.3の公開日。',
         ],
       },
       relatedReading: {
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-zh.webp',
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflow是一款免费的Mac应用（MIT许可证），以较低频率记录屏幕并用AI整理成时间线，分析可以通过Ollama或LM Studio完全在你自己的Mac上运行。** 云端分析是可选项，并非必需。最新版本是2026年11月10日发布的2.9.0。本评测依据官网和GitHub仓库的说明，没有做实际测试。',
+    leadAnswerBlock: '**Dayflow是一款免费的Mac应用（MIT许可证），以较低频率记录屏幕并用AI整理成时间线，分析可以通过Ollama或LM Studio完全在你自己的Mac上运行。** 云端分析是可选项，并非必需。最新版本是2026年11月13日发布的2.9.3。本评测依据官网和GitHub仓库的说明，没有做实际测试。',
     quickAnswerTop: {
       zh: {
         question: 'Dayflow是本地应用吗？',
@@ -1451,7 +1451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '仅支持Mac，需要macOS 14或更高版本；官网首页称Windows版即将推出。',
           '除非在设置中关闭，否则会向开发者发送匿名使用数据。',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -1491,7 +1491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本地说法：截取、录制内容和数据库保留在Mac上；只有连接Ollama或LM Studio时，分析才是本地的。',
           '许可与开发方：MIT许可证，代码公开；隐私政策显示发布方为Teleport Labs Inc.。',
           '价格：使用本地模型或自己的密钥时免费；托管AI是付费的Pro套餐。',
-          '维护情况：2.9.0版于2026年11月10日发布，仓库当天也有更新，项目仍在积极开发。',
+          '维护情况：2.9.3版于2026年11月13日发布，仓库当天也有更新，项目仍在积极开发。',
           '缺口：仅限macOS 14或更高版本，不附带模型，云端路径会把截图发送给服务商。',
         ],
       },
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': '发布说明',
-            '获取方式': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — 2.9.0版没有书面发布说明',
+            '获取方式': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — 2.9.3版没有书面发布说明',
           },
           {
             '平台': '官网',
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '优势': '积极开发',
-            '实际使用中的意义': '2.9.0版于2026年11月10日发布。',
+            '实际使用中的意义': '2.9.3版于2026年11月13日发布。',
             '局限 / 注意事项': '仅支持Mac，需要macOS 14或更高版本；Windows版仅为预告。',
           },
         ],
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content: [
-          '如果你用Mac，想要自动且开源的工作日记录，并愿意运行Ollama或LM Studio让分析留在本机，Dayflow就很合适。它有MIT许可证、免费套餐，以及2026年11月10日发布的版本。',
+          '如果你用Mac，想要自动且开源的工作日记录，并愿意运行Ollama或LM Studio让分析留在本机，Dayflow就很合适。它有MIT许可证、免费套餐，以及2026年11月13日发布的版本。',
           '需要留意的是适用范围和可验证性：仅限Mac，需要另行配置本地模型，云端路径会把截图发送出去，以及PromptQuorum无法核实的隐私和准确性说法。考虑Pro之前，先试试免费的本地方案。',
         ],
       },
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[价格页](https://www.dayflow.so/pricing/) — Free、Pro和Enterprise套餐以及数据路径常见问题。',
           '[隐私政策](https://www.dayflow.so/privacy/) — 本地、自带服务商和云端模式、使用数据与数据处理。',
           '[GitHub仓库](https://github.com/JerryZLiu/Dayflow) — README、MIT许可证和源代码。',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg和2.9.0版的发布日期。',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg和2.9.3版的发布日期。',
         ],
       },
       relatedReading: {
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-es.webp',
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflow es una app gratuita para Mac con licencia MIT que graba tu pantalla con poca frecuencia y usa IA para convertirla en una cronología; el análisis puede ejecutarse por completo en tu propio Mac con Ollama o LM Studio.** El análisis en la nube es una opción, no un requisito. La versión más reciente es la 2.9.0, del 10 de noviembre de 2026. Esta reseña se basa en el sitio web y el repositorio de GitHub del fabricante, no en pruebas prácticas.',
+    leadAnswerBlock: '**Dayflow es una app gratuita para Mac con licencia MIT que graba tu pantalla con poca frecuencia y usa IA para convertirla en una cronología; el análisis puede ejecutarse por completo en tu propio Mac con Ollama o LM Studio.** El análisis en la nube es una opción, no un requisito. La versión más reciente es la 2.9.3, del 13 de noviembre de 2026. Esta reseña se basa en el sitio web y el repositorio de GitHub del fabricante, no en pruebas prácticas.',
     quickAnswerTop: {
       es: {
         question: '¿Es Dayflow una app local?',
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Solo Mac con macOS 14 o posterior; la página de inicio anuncia una versión para Windows como próxima.',
           'Se envían analíticas anónimas al fabricante salvo que las desactives en los ajustes.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Afirmación local: la captura, las grabaciones y la base de datos se quedan en el Mac; el análisis solo es local si conectas Ollama o LM Studio.',
           'Licencia y fabricante: MIT, código abierto, publicado por Teleport Labs Inc. según la política de privacidad.',
           'Precio: gratis con un modelo local o tu propia clave; la IA gestionada es el plan de pago Pro.',
-          'Mantenimiento: la versión 2.9.0 salió el 10 de noviembre de 2026 y el repositorio se actualizó ese mismo día, así que el proyecto se desarrolla activamente.',
+          'Mantenimiento: la versión 2.9.3 salió el 13 de noviembre de 2026 y el repositorio se actualizó ese mismo día, así que el proyecto se desarrolla activamente.',
           'Carencias: solo macOS 14 o posterior, ningún modelo incluido, y las rutas en la nube envían las capturas a un proveedor.',
         ],
       },
@@ -1859,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plataforma: 'Notas de versión',
-            'Dónde conseguirla': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — la versión 2.9.0 no tiene notas escritas',
+            'Dónde conseguirla': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — la versión 2.9.3 no tiene notas escritas',
           },
           {
             Plataforma: 'Sitio web',
@@ -1984,7 +1984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Ventaja: 'Desarrollo activo',
-            'Qué significa en el uso real': 'La versión 2.9.0 salió el 10 de noviembre de 2026.',
+            'Qué significa en el uso real': 'La versión 2.9.3 salió el 13 de noviembre de 2026.',
             'Limitación / advertencia': 'Solo Mac con macOS 14 o posterior; Windows solo está anunciado.',
           },
         ],
@@ -2079,7 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content: [
-          'Dayflow encaja si usas un Mac, quieres un registro automático y de código abierto de tu jornada y estás dispuesto a ejecutar Ollama o LM Studio para que el análisis se quede en tu equipo. Tiene licencia MIT, un plan gratuito y una versión del 10 de noviembre de 2026.',
+          'Dayflow encaja si usas un Mac, quieres un registro automático y de código abierto de tu jornada y estás dispuesto a ejecutar Ollama o LM Studio para que el análisis se quede en tu equipo. Tiene licencia MIT, un plan gratuito y una versión del 13 de noviembre de 2026.',
           'Las reservas son el alcance y la verificabilidad: solo Mac, una configuración aparte del modelo local, rutas en la nube que envían las capturas fuera y afirmaciones de privacidad y precisión que PromptQuorum no pudo comprobar. Prueba la configuración local gratuita antes de plantearte Pro.',
         ],
       },
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Página de precios](https://www.dayflow.so/pricing/) — planes Free, Pro y Enterprise y las preguntas sobre la ruta de los datos.',
           '[Política de privacidad](https://www.dayflow.so/privacy/) — modos local, proveedor propio y nube, analíticas y tratamiento de datos.',
           '[Repositorio de GitHub](https://github.com/JerryZLiu/Dayflow) — README, licencia MIT y código fuente.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg y la fecha de publicación de la versión 2.9.0.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg y la fecha de publicación de la versión 2.9.3.',
         ],
       },
       relatedReading: {
@@ -2112,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-pt.webp',
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**O Dayflow é um app gratuito para Mac, com licença MIT, que grava a sua tela com pouca frequência e usa IA para transformá-la em uma linha do tempo; a análise pode rodar inteiramente no seu próprio Mac com Ollama ou LM Studio.** A análise na nuvem é uma escolha, não uma exigência. A versão mais recente é a 2.9.0, de 10 de novembro de 2026. Esta análise se baseia no site e no repositório do GitHub do fabricante, não em testes práticos.',
+    leadAnswerBlock: '**O Dayflow é um app gratuito para Mac, com licença MIT, que grava a sua tela com pouca frequência e usa IA para transformá-la em uma linha do tempo; a análise pode rodar inteiramente no seu próprio Mac com Ollama ou LM Studio.** A análise na nuvem é uma escolha, não uma exigência. A versão mais recente é a 2.9.3, de 13 de novembro de 2026. Esta análise se baseia no site e no repositório do GitHub do fabricante, não em testes práticos.',
     quickAnswerTop: {
       pt: {
         question: 'O Dayflow é um app local?',
@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Só Mac, com macOS 14 ou mais recente; a página inicial anuncia uma versão para Windows como futura.',
           'Análises anônimas de uso são enviadas ao fabricante, a menos que você as desative nas configurações.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Afirmação local: a captura, as gravações e o banco de dados ficam no Mac; a análise só é local se você conectar Ollama ou LM Studio.',
           'Licença e fabricante: MIT, código aberto, publicado pela Teleport Labs Inc. segundo a política de privacidade.',
           'Preço: grátis com um modelo local ou a sua própria chave; a IA gerenciada é o plano pago Pro.',
-          'Manutenção: a versão 2.9.0 saiu em 10 de novembro de 2026 e o repositório foi atualizado no mesmo dia, então o projeto está em desenvolvimento ativo.',
+          'Manutenção: a versão 2.9.3 saiu em 13 de novembro de 2026 e o repositório foi atualizado no mesmo dia, então o projeto está em desenvolvimento ativo.',
           'Lacunas: só macOS 14 ou mais recente, nenhum modelo incluído, e os caminhos na nuvem enviam as capturas a um provedor.',
         ],
       },
@@ -2209,7 +2209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plataforma: 'Notas de versão',
-            'Onde obter': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — a versão 2.9.0 não tem notas escritas',
+            'Onde obter': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — a versão 2.9.3 não tem notas escritas',
           },
           {
             Plataforma: 'Site',
@@ -2334,7 +2334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Vantagem: 'Desenvolvimento ativo',
-            'O que significa na prática': 'A versão 2.9.0 saiu em 10 de novembro de 2026.',
+            'O que significa na prática': 'A versão 2.9.3 saiu em 13 de novembro de 2026.',
             'Limitação / ressalva': 'Só Mac, com macOS 14 ou mais recente; o Windows é apenas anunciado.',
           },
         ],
@@ -2429,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content: [
-          'O Dayflow é uma boa opção se você usa um Mac, quer um registro automático e de código aberto do seu dia de trabalho e está disposto a rodar Ollama ou LM Studio para que a análise fique na sua máquina. Tem licença MIT, um plano gratuito e uma versão de 10 de novembro de 2026.',
+          'O Dayflow é uma boa opção se você usa um Mac, quer um registro automático e de código aberto do seu dia de trabalho e está disposto a rodar Ollama ou LM Studio para que a análise fique na sua máquina. Tem licença MIT, um plano gratuito e uma versão de 13 de novembro de 2026.',
           'As ressalvas são o escopo e a verificabilidade: só Mac, uma configuração à parte do modelo local, caminhos na nuvem que enviam as capturas para fora e afirmações de privacidade e de precisão que o PromptQuorum não pôde verificar. Experimente a configuração local gratuita antes de considerar o Pro.',
         ],
       },
@@ -2441,7 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Página de preços](https://www.dayflow.so/pricing/) — planos Free, Pro e Enterprise e as perguntas sobre o caminho dos dados.',
           '[Política de privacidade](https://www.dayflow.so/privacy/) — modos local, provedor próprio e nuvem, análises e tratamento de dados.',
           '[Repositório no GitHub](https://github.com/JerryZLiu/Dayflow) — README, licença MIT e código-fonte.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg e a data de lançamento da versão 2.9.0.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg e a data de lançamento da versão 2.9.3.',
         ],
       },
       relatedReading: {
@@ -2462,7 +2462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-ar.webp',
@@ -2489,7 +2489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflow تطبيق Mac مجاني بترخيص MIT يسجّل شاشتك بوتيرة منخفضة ويستخدم الذكاء الاصطناعي لتحويلها إلى جدول زمني، ويمكن تشغيل تحليله بالكامل على جهاز Mac الخاص بك عبر Ollama أو LM Studio.** التحليل السحابي خيار وليس شرطًا. أحدث إصدار هو 2.9.0 الصادر في 10 نوفمبر 2026. تستند هذه المراجعة إلى موقع الجهة المطوّرة ومستودع GitHub، لا إلى تجربة عملية.',
+    leadAnswerBlock: '**Dayflow تطبيق Mac مجاني بترخيص MIT يسجّل شاشتك بوتيرة منخفضة ويستخدم الذكاء الاصطناعي لتحويلها إلى جدول زمني، ويمكن تشغيل تحليله بالكامل على جهاز Mac الخاص بك عبر Ollama أو LM Studio.** التحليل السحابي خيار وليس شرطًا. أحدث إصدار هو 2.9.3 الصادر في 13 نوفمبر 2026. تستند هذه المراجعة إلى موقع الجهة المطوّرة ومستودع GitHub، لا إلى تجربة عملية.',
     quickAnswerTop: {
       ar: {
         question: 'هل Dayflow تطبيق محلي؟',
@@ -2501,7 +2501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لأجهزة Mac فقط بنظام macOS 14 أو أحدث؛ وتذكر الصفحة الرئيسية أن إصدار Windows قادم.',
           'تُرسل تحليلات مجهولة الهوية إلى الجهة المطوّرة ما لم توقفها من الإعدادات.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الادعاء المحلي: يبقى الالتقاط والتسجيلات وقاعدة البيانات على جهاز Mac؛ ويكون التحليل محليًا فقط إذا ربطت Ollama أو LM Studio.',
           'الترخيص والجهة المطوّرة: MIT، وشيفرة مفتوحة، ونشرتها Teleport Labs Inc. بحسب سياسة الخصوصية.',
           'السعر: مجاني مع نموذج محلي أو مفتاحك الخاص؛ والذكاء الاصطناعي المُدار هو خطة Pro المدفوعة.',
-          'الصيانة: صدر الإصدار 2.9.0 في 10 نوفمبر 2026 وحُدّث المستودع في اليوم نفسه، لذا فالمشروع قيد التطوير النشط.',
+          'الصيانة: صدر الإصدار 2.9.3 في 13 نوفمبر 2026 وحُدّث المستودع في اليوم نفسه، لذا فالمشروع قيد التطوير النشط.',
           'الثغرات: macOS 14 أو أحدث فقط، ولا يوجد نموذج مرفق، والمسارات السحابية ترسل لقطات الشاشة إلى مزوّد.',
         ],
       },
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'ملاحظات الإصدار',
-            'مصدر الحصول': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — لا توجد ملاحظات مكتوبة للإصدار 2.9.0',
+            'مصدر الحصول': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — لا توجد ملاحظات مكتوبة للإصدار 2.9.3',
           },
           {
             'المنصة': 'الموقع',
@@ -2684,7 +2684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الميزة': 'تطوير نشط',
-            'ما تعنيه في الاستخدام الفعلي': 'صدر الإصدار 2.9.0 في 10 نوفمبر 2026.',
+            'ما تعنيه في الاستخدام الفعلي': 'صدر الإصدار 2.9.3 في 13 نوفمبر 2026.',
             'القيد / تنبيه': 'لأجهزة Mac فقط بنظام macOS 14 أو أحدث؛ وWindows مُعلن عنه فقط.',
           },
         ],
@@ -2779,7 +2779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content: [
-          'يناسب Dayflow من يستخدم جهاز Mac ويريد سجلًا تلقائيًا ومفتوح المصدر ليوم عمله ومستعدًا لتشغيل Ollama أو LM Studio كي يبقى التحليل على جهازه. له ترخيص MIT وخطة مجانية وإصدار بتاريخ 10 نوفمبر 2026.',
+          'يناسب Dayflow من يستخدم جهاز Mac ويريد سجلًا تلقائيًا ومفتوح المصدر ليوم عمله ومستعدًا لتشغيل Ollama أو LM Studio كي يبقى التحليل على جهازه. له ترخيص MIT وخطة مجانية وإصدار بتاريخ 13 نوفمبر 2026.',
           'التحفظات تتعلق بالنطاق وإمكانية التحقق: لأجهزة Mac فقط، وإعداد منفصل للنموذج المحلي، ومسارات سحابية ترسل لقطات الشاشة إلى الخارج، وادعاءات خصوصية ودقة لم تستطع PromptQuorum التحقق منها. جرّب الإعداد المحلي المجاني قبل التفكير في Pro.',
         ],
       },
@@ -2791,7 +2791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[صفحة الأسعار](https://www.dayflow.so/pricing/) — خطط Free وPro وEnterprise وأسئلة مسار البيانات.',
           '[سياسة الخصوصية](https://www.dayflow.so/privacy/) — الأوضاع المحلية ومزوّدك الخاص والسحابية، والتحليلات ومعالجة البيانات.',
           '[مستودع GitHub](https://github.com/JerryZLiu/Dayflow) — README وترخيص MIT والشيفرة المصدرية.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg وتاريخ إصدار النسخة 2.9.0.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg وتاريخ إصدار النسخة 2.9.3.',
         ],
       },
       relatedReading: {
@@ -2812,7 +2812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-13',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     next_refresh_due: '2027-05-13',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/dayflow-review-hero-ko.webp',
@@ -2839,7 +2839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'macOS 14',
     ],
-    leadAnswerBlock: '**Dayflow는 화면을 드문 간격으로 기록하고 AI로 타임라인을 만드는 Mac용 무료 앱(MIT 라이선스)이며, 분석은 Ollama나 LM Studio를 통해 내 Mac에서만 실행할 수 있습니다.** 클라우드 분석은 선택 사항이며 필수가 아닙니다. 최신 버전은 2026년 11월 10일에 나온 2.9.0입니다. 이 리뷰는 공식 사이트와 GitHub 저장소의 설명에 근거하며 직접 테스트하지 않았습니다.',
+    leadAnswerBlock: '**Dayflow는 화면을 드문 간격으로 기록하고 AI로 타임라인을 만드는 Mac용 무료 앱(MIT 라이선스)이며, 분석은 Ollama나 LM Studio를 통해 내 Mac에서만 실행할 수 있습니다.** 클라우드 분석은 선택 사항이며 필수가 아닙니다. 최신 버전은 2026년 11월 13일에 나온 2.9.3입니다. 이 리뷰는 공식 사이트와 GitHub 저장소의 설명에 근거하며 직접 테스트하지 않았습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Dayflow는 로컬 앱입니까?',
@@ -2851,7 +2851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac 전용이며 macOS 14 이상이 필요합니다. 홈페이지는 Windows 버전을 출시 예정으로 안내합니다.',
           '설정에서 끄지 않는 한 익명 사용 분석 데이터가 개발사로 전송됩니다.',
         ],
-        updatedDate: '2026-11-13',
+        updatedDate: '2026-11-14',
       },
     },
     toc: [
@@ -2891,7 +2891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬 관련 설명: 캡처, 녹화 파일, 데이터베이스는 Mac에 남습니다. 분석은 Ollama나 LM Studio를 연결할 때만 로컬입니다.',
           '라이선스와 개발사: MIT, 공개 코드이며 개인정보 처리방침에 따르면 Teleport Labs Inc.가 공개했습니다.',
           '가격: 로컬 모델이나 내 키를 쓰면 무료이고, 관리형 AI는 유료 Pro 플랜입니다.',
-          '유지보수: 버전 2.9.0이 2026년 11월 10일에 출시되었고 저장소도 같은 날 업데이트되어 활발히 개발되고 있습니다.',
+          '유지보수: 버전 2.9.3이 2026년 11월 13일에 출시되었고 저장소도 같은 날 업데이트되어 활발히 개발되고 있습니다.',
           '한계: macOS 14 이상만 지원하고, 모델이 포함되어 있지 않으며, 클라우드 경로에서는 스크린샷이 제공자에게 전송됩니다.',
         ],
       },
@@ -2909,7 +2909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': '릴리스 노트',
-            '받는 곳': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — 버전 2.9.0에는 릴리스 노트가 없습니다',
+            '받는 곳': '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — 버전 2.9.3에는 릴리스 노트가 없습니다',
           },
           {
             '플랫폼': '공식 사이트',
@@ -3034,7 +3034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '장점': '활발한 개발',
-            '실제 사용에서의 의미': '버전 2.9.0이 2026년 11월 10일에 출시되었습니다.',
+            '실제 사용에서의 의미': '버전 2.9.3이 2026년 11월 13일에 출시되었습니다.',
             '한계 / 주의점': 'Mac 전용이며 macOS 14 이상이 필요합니다. Windows는 발표만 되었습니다.',
           },
         ],
@@ -3129,7 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content: [
-          'Mac을 사용하고, 업무일을 자동으로 그리고 오픈소스로 기록하고 싶으며, 분석을 내 기기에 두기 위해 Ollama나 LM Studio를 실행할 준비가 되어 있다면 Dayflow가 잘 맞습니다. MIT 라이선스, 무료 플랜, 2026년 11월 10일의 릴리스가 있습니다.',
+          'Mac을 사용하고, 업무일을 자동으로 그리고 오픈소스로 기록하고 싶으며, 분석을 내 기기에 두기 위해 Ollama나 LM Studio를 실행할 준비가 되어 있다면 Dayflow가 잘 맞습니다. MIT 라이선스, 무료 플랜, 2026년 11월 13일의 릴리스가 있습니다.',
           '주의할 점은 범위와 검증 가능성입니다. Mac 전용이고, 로컬 모델을 따로 설정해야 하며, 클라우드 경로에서는 스크린샷이 외부로 전송되고, PromptQuorum이 확인하지 못한 개인정보 보호와 정확도에 관한 주장이 있습니다. Pro를 고려하기 전에 무료 로컬 구성을 먼저 사용해 보십시오.',
         ],
       },
@@ -3141,7 +3141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[가격 페이지](https://www.dayflow.so/pricing/) — Free, Pro, Enterprise 플랜과 데이터 경로 FAQ.',
           '[개인정보 처리방침](https://www.dayflow.so/privacy/) — 로컬, 내 제공자, 클라우드 모드, 사용 분석, 데이터 처리.',
           '[GitHub 저장소](https://github.com/JerryZLiu/Dayflow) — README, MIT 라이선스, 소스 코드.',
-          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg와 버전 2.9.0의 출시일.',
+          '[GitHub Releases](https://github.com/JerryZLiu/Dayflow/releases) — Dayflow.dmg와 버전 2.9.3의 출시일.',
         ],
       },
       relatedReading: {

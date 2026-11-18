@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     designSkin: 'hub',
     title: 'Alternativen zu lokalen LLM-Apps 2026: Optionen zu LM Studio, Ollama, Open WebUI und PocketPal AI',
-    seoTitle: 'Lokale LLM-App-Alternativen 2026: 14 Apps im Vergleich',
+    seoTitle: 'LM Studio & Ollama Alternativen 2026: 14 lokale LLM-Apps',
     intro:
       'Wenn LM Studio, Ollama, Open WebUI oder PocketPal AI nicht passt, listet dieser Leitfaden die nächstliegenden Alternativen mit Kosten, Lizenz, Plattform und der jeweils aktuellen Version aus offiziellen Quellen. Er umfasst 14 Apps in vier Gruppen: Desktop-Apps, Runtimes, Browser-Oberflächen und Smartphone-Apps.',
     metaDescription:
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     designSkin: 'hub',
     title: 'Alternatives aux apps LLM locales en 2026 : options pour LM Studio, Ollama, Open WebUI et PocketPal AI',
-    seoTitle: 'Alternatives aux apps LLM locales 2026 : 14 comparées',
+    seoTitle: 'Alternatives à LM Studio et Ollama 2026 : 14 apps LLM',
     intro:
       'Si LM Studio, Ollama, Open WebUI ou PocketPal AI ne vous convient pas, ce guide présente les alternatives les plus proches de chacun, avec coût, licence, plateforme et dernière version lue à la source officielle. Il couvre 14 apps en quatre groupes : apps de bureau, runtimes, interfaces navigateur et apps mobiles.',
     metaDescription:
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     designSkin: 'hub',
     title: 'Alternativas a las apps de LLM local en 2026: opciones para LM Studio, Ollama, Open WebUI y PocketPal AI',
-    seoTitle: 'Alternativas a apps de LLM local 2026: 14 comparadas',
+    seoTitle: 'Alternativas a Ollama y LM Studio 2026: 14 apps de LLM',
     intro:
       'Si LM Studio, Ollama, Open WebUI o PocketPal AI no encaja, esta guía recoge las alternativas más cercanas a cada uno, con coste, licencia, plataforma y la última versión leída en su fuente oficial. Cubre 14 apps en cuatro grupos: apps de escritorio, runtimes, interfaces de navegador y apps de móvil.',
     metaDescription:

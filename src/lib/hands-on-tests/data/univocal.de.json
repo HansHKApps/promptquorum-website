@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-univocal-2026-11-13",
+  "hero": "univocal-first-dictation-hold-left-control",
+  "date_human": "13. November 2026",
+  "captured": "Testdatum und Endzeit nicht erfasst; der Chrome-Download erfolgte am Testtag um 11:06 Uhr; die ID und die Datumsangaben auf dieser Seite verwenden das Entwurfsdatum 2026-11-13",
+  "standard_version": "0.2",
+  "locale": "de",
+  "app": {
+    "name": "Univocal",
+    "slug": "univocal",
+    "vendor": "NarNar Labs LLC (per the licence screen)",
+    "category": "Lokales Diktieren und Vorlesen, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://univocalapp.com"
+  },
+  "title": "Univocal auf einem M4 Pro Mac mit 24 GB: Diktieren klappte in drei Sprachen, Vorlesen startete nicht",
+  "page_title": "Univocal-Test",
+  "dek": "Eine erste Sitzung mit einer Mac-App, die diktiert und vorliest: ein sorgfältiger erster Start mit Lizenzbedingungen vorab, Diktieren auf Englisch, Französisch und Deutsch, ein Weg zu einer Premium-Stimme, dem der Tester nicht folgen konnte, und eine Vorlesefunktion, die bei der Benutzung nicht startete.",
+  "seo": {
+    "title": "Univocal im Praxistest: Diktieren und Vorlesen auf dem Mac",
+    "description": "Praxistest von Univocal auf einem M4 Pro Mac mit 24 GB: Diktieren klappte auf Englisch, Französisch und Deutsch; das Vorlesen markierten Texts startete nicht."
+  },
+  "faq": [
+    [
+      "Funktioniert das Diktieren in Univocal in mehreren Sprachen?",
+      "Ja, in der Sitzung. Das Diktieren erzeugte in den Notizen des Testers englischen, französischen und deutschen Text, darunter absichtlich sehr schnell gesprochenes Deutsch. Eine Genauigkeitszählung wurde nicht gemacht, und das französische Ergebnis beurteilte der Tester nicht.",
+      "observed"
+    ],
+    [
+      "Funktionierte das Vorlesen in Univocal?",
+      "Nicht, als der Tester es auf markiertem Text benutzte: Es startete nicht, und er konnte die Taste nicht ändern. Die Tastenkombination funktionierte einmal im Setup-Schritt, und dort öffnete sich das Vorlesefenster; ob Ton zu hören war, ist nicht erfasst. Die Ursache wurde nicht eingegrenzt.",
+      "observed"
+    ],
+    [
+      "Wie groß ist der Download von Univocal?",
+      "Der Installer hat nach Ablesung des Testers etwa 6,5 MB, und das Hauptfenster zeigte beim ersten Download ein Diktiermodell mit 574 MB. Der gesamte Download beim ersten Start wurde nicht erfasst; das Verzeichnis nennt etwa 1,2 GB (Drittquelle). Der Arbeitsspeicherbedarf im Betrieb wurde nicht gemessen.",
+      "measured"
+    ],
+    [
+      "Läuft Univocal offline und bleibt das Audio auf dem Mac?",
+      "Der Setup-Text sagt, das Audio werde auf dem Mac transkribiert und nie hochgeladen, und der Text des Vorlesefensters sagt, nichts von dem, was gelesen oder gesagt wird, verlasse den Mac. Es wurde kein Netzwerkverkehr untersucht und kein Offline-Lauf ausprobiert; das ist also nicht überprüft.",
+      "vendor-claim"
+    ],
+    [
+      "Was kostet Univocal, und gibt es eine Testphase?",
+      "Die App zeigte eine 14-tägige Testphase und eine Schaltfläche „Buy“. Die Herstellerseite, auf einem Screenshot gesehen, nennt einmalig 39 $ und einen Black-Friday-Preis von 15 $ mit einem Code vom 20. bis 30. November, ohne Abo und ohne Konto. Das sind Herstellerangaben.",
+      "vendor-claim"
+    ],
+    [
+      "Kann Univocal gesprochene Aufzählungspunkte in eine Liste umwandeln?",
+      "Nicht in der Sitzung. Eine englische und eine deutsche Bitte um Aufzählungspunkte ergaben einfachen Text, und im deutschen Ergebnis wurden zwei Wörter zusammengezogen. Auf den Screenshots wird keine Aufzählungsfunktion beworben; das ist also kein Verfehlen einer Angabe.",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-13",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Univocal (NarNar Labs LLC laut Lizenzbildschirm)",
+      "observed"
+    ],
+    [
+      "Version",
+      "0.3.33 (Allgemeine Einstellungen)",
+      "measured"
+    ],
+    [
+      "Source",
+      "Mit Chrome heruntergeladen; die genaue Seite ist nicht erfasst. Das Verzeichnis nennt die Herstellerseite univocalapp.com.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans (Gründer von PromptQuorum)",
+      "observed"
+    ],
+    [
+      "Start / end",
+      "Chrome-Download am Testtag um 11:06 Uhr (der macOS-Dialog sagt „heute“). Testdatum und Endzeit sind nicht erfasst; die ID verwendet das Entwurfsdatum.",
+      null
+    ],
+    [
+      "Hardware",
+      "Apple M4 Pro, 24 GB Unified Memory („always on an M4 Pro 24GB“ in den Notizen). Frühere Tests dieser Reihe erfassten einen M3 Pro; siehe Sprich und LU.",
+      "tester-view"
+    ],
+    [
+      "System",
+      "macOS-Version nicht erfasst.",
+      null
+    ],
+    [
+      "Why tested",
+      "Der Entwickler hat den Tester kontaktiert, nachdem er den Sprich-Praxistest auf der PromptQuorum-Website gesehen hatte.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "Nicht als Ziel genannt. Die Notizen zeigen Installation, ersten Start, Diktieren in drei Sprachen, Einstellungen, Vorlesen und einen Test mit Aufzählungspunkten.",
+      null
+    ],
+    [
+      "AI help used",
+      "Claude hat diesen Bericht aus den Word-Notizen des Testers und 15 Screenshots entworfen; die diktierten Teile der Notizen stammen wahrscheinlich von Univocal selbst (Annahme).",
+      "assumption"
+    ],
+    [
+      "Disclosure",
+      "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Univocal wurde am 13.11.2026 mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen, der auf den Seiten des Herstellers beruht und nicht auf eigenem Ausprobieren; dieser Test ist der erste praktische. Der Entwickler hat den Tester kontaktiert; was er wollte, ist nicht erfasst. Der Tester nutzte die 14-tägige Testphase, und auf den Screenshots ist keine Lifetime-Lizenz zu sehen. Univocal erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+      "observed"
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Univocal wurde am 13.11.2026 mit einem KI-geschriebenen Testbericht ins Verzeichnis aufgenommen, der auf den Seiten des Herstellers beruht und nicht auf eigenem Ausprobieren; dieser Test ist der erste praktische. Der Entwickler hat den Tester kontaktiert; was er wollte, ist nicht erfasst. Der Tester nutzte die 14-tägige Testphase, und auf den Screenshots ist keine Lifetime-Lizenz zu sehen. Univocal erhält Klicks von der Website. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt. Der Tester sagt, der Entwickler stamme aus Korea und Korea sei einer der wichtigsten Märkte der Website (Meinung des Testers, hier nicht überprüft). Auf keinem Screenshot ist ein Land genannt.",
+  "verdict": {
+    "general": "Eine kompakte, ausgereifte Mac-App zum Diktieren und Vorlesen. In dieser Sitzung funktionierte das Diktieren in drei Sprachen, und der erste Start erklärte seine Schritte; das Vorlesen markierten Texts startete nicht, und die bessere deutsche Stimme, auf die die App hinwies, war nicht zu finden. Offline-Betrieb, die Datenschutzangaben, Speicherbedarf, Verzögerung, die Browser-Erweiterung, die Reiter Connections und Vocabulary sowie die Deinstallation wurden nicht getestet.",
+    "fit": "Dem Tester gefallen der Lizenzbildschirm, die Sprachauswahl und das Setup. Seine Notizen enden mit dem gescheiterten Test mit Aufzählungspunkten und ohne Entscheidung über die weitere Nutzung."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Kleine DMG, per Drag-and-drop in „Programme“; kein Konto-Bildschirm gesehen."
+    ],
+    [
+      "Einstieg und Modellauswahl",
+      3,
+      "Klare Schritte und eine Download-Schätzung; dem Stimmen-Popup konnte nicht gefolgt werden. Eine Modellauswahl für das Diktieren wird nicht angeboten."
+    ],
+    [
+      "Kernfunktion",
+      3,
+      "Das Diktieren funktionierte; das Vorlesen nicht."
+    ],
+    [
+      "Führung und Nachbessern",
+      3,
+      "Viele erklärende Texte; die Tastenkombination zum Vorlesen und die Grenzen der Formatierung blieben unklar."
+    ],
+    [
+      "Leistung",
+      null,
+      "Nicht gestoppt."
+    ],
+    [
+      "Dokumentation",
+      null,
+      "Nur App-Texte wurden gesehen."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Nicht geprüft."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Die Bewertungen sind Vorschläge des Berichtsautors, abgeleitet aus den Belegen des Testers; k. A. bedeutet nicht getestet, nicht null.",
+  "tldr": [
+    [
+      "observed",
+      "Univocal ist eine Mac-App, die in jede App diktiert und Text vorliest. Der Tester nutzte sie auf einem Apple M4 Pro mit 24 GB. Der Installer ist klein, vor dem Setup steht ein Lizenzbildschirm, und das Hauptfenster zeigte den Download eines Diktiermodells mit 574 MB."
+    ],
+    [
+      "observed",
+      "Das Diktieren funktionierte: im Setup-Feld sowie auf Englisch, Französisch und Deutsch in den Notizen des Testers, darunter absichtlich sehr schnell gesprochenes Deutsch. Es wurden weder die Genauigkeit gezählt noch die Zeit gestoppt."
+    ],
+    [
+      "observed",
+      "Das Vorlesen markierten Texts startete nicht, und der Tester konnte die Taste nicht ändern. Die Tastenkombination hatte im Setup-Schritt einmal funktioniert. Die Ursache wurde nicht eingegrenzt."
+    ],
+    [
+      "observed",
+      "Ein Popup verwies auf eine bessere deutsche Stimme in den macOS-Einstellungen. Der Tester folgte den vier Schritten und fand keine Premium-Stimmen."
+    ],
+    [
+      "observed",
+      "Gesprochene Bitten um Aufzählungspunkte auf Englisch und Deutsch ergaben keine Aufzählung. Auf den Screenshots wird keine Aufzählungsfunktion beworben."
+    ],
+    [
+      "vendor-claim",
+      "Die App sagt, das Audio werde auf diesem Mac transkribiert und nie hochgeladen. Offline-Nutzung, Netzwerkverkehr, Speicherbedarf, Verzögerung, die Browser-Erweiterung, die Reiter Connections und Vocabulary sowie die Deinstallation wurden nicht getestet."
+    ]
+  ],
+  "quotes": [
+    "Alle anderen Apps haben sich einfach geöffnet, und es war nichts da. Diese hier hat tatsächlich Lizenzbedingungen und etwas zum Durchklicken.",
+    "Das mit den Sprachen ist sehr gut gemacht: Man kann wirklich festlegen, welche Sprachen man nutzen möchte.",
+    "Bald gehen meinem Computer die Tasten für all diese Sonderfunktionen aus."
+  ],
+  "quote_note": "Notizen des Testers, leicht bearbeitet aus einem Diktat und ins Deutsche übertragen. Alle drei sind seine Urteile, keine Messungen.",
+  "moments_title": "Sechs Momente, die diesen Test geprägt haben",
+  "moments_nav": "Sechs Momente",
+  "moments": [
+    [
+      "Installer-Fenster, vertauscht",
+      "„Programme“ links, die App rechts.",
+      "univocal-dmg-window-applications-left",
+      "chapter-install"
+    ],
+    [
+      "Lizenzbedingungen vor dem Setup",
+      "Ein Bildschirm zum Durchklicken, bevor etwas eingerichtet wird.",
+      "univocal-licence-terms-before-setup",
+      "chapter-install"
+    ],
+    [
+      "Ein Download mit Zeitschätzung",
+      "Berechtigungsschritt mit 16 % und etwa 23 Minuten.",
+      "univocal-setup-permissions-download-time-estimate",
+      "chapter-install"
+    ],
+    [
+      "Eine bessere deutsche Stimme, schwer zu finden",
+      "Ein Popup mit vier Schritten, denen der Tester bis zu einer Premium-Stimme nicht folgen konnte.",
+      "univocal-better-german-voice-popup",
+      "chapter-install"
+    ],
+    [
+      "Erstes Diktat",
+      "Gedrückt halten zum Sprechen im Setup-Feld, linke Control-Taste.",
+      "univocal-first-dictation-hold-left-control",
+      "chapter-usage"
+    ],
+    [
+      "Ein leer wirkendes Tastenfeld",
+      "Einstellungen zu „Read Aloud“; das Feld zeigt „Press keys“.",
+      "univocal-read-aloud-settings-shortcut-field",
+      "chapter-usage"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Download, Installation und Setup",
+      "items": [
+        [
+          "observed",
+          "Der Entwickler hatte den Tester kontaktiert, nachdem der Sprich-Test online gegangen war. Die DMG ist klein, nach Ablesung des Testers 6,5 MB; kein Screenshot. Das Verzeichnis nennt etwa 6,3 MB für Version 0.3.33 (Drittquelle).",
+          null
+        ],
+        [
+          "observed",
+          "Das Installer-Fenster zeigt „Programme“ links und Univocal rechts, also umgekehrt zum üblichen Aufbau. Der Schritt des Ziehens ist trotzdem nötig.",
+          "univocal-dmg-window-applications-left"
+        ],
+        [
+          "observed",
+          "Beim ersten Öffnen fragte macOS „Are you sure you want to open it?“ und gab an, dass Chrome die Datei um 11:06 Uhr heruntergeladen hat und dass Apple keine schädliche Software gefunden hat. Der Status von Signierung und Notarisierung wird nicht angezeigt.",
+          "univocal-gatekeeper-open-confirmation"
+        ],
+        [
+          "observed",
+          "Vor dem Setup öffnete sich ein Lizenzfenster: Version 1.0, gültig ab 23. September 2026, zwischen dem Nutzer und NarNar Labs LLC, für die App, ihre begleitende Browser-Erweiterung und die Sprachmodelle. Schaltflächen: Quit, Agree. Käufern, die nicht zustimmen, wird eine 30-tägige Rückerstattung angeboten. Nur die ersten Zeilen wurden gelesen.",
+          "univocal-licence-terms-before-setup"
+        ],
+        [
+          "tester-view",
+          "„Alle anderen Apps haben sich einfach geöffnet, und es war nichts da. Diese hier hat tatsächlich Lizenzbedingungen und etwas zum Durchklicken.“ Nicht App für App geprüft.",
+          null
+        ],
+        [
+          "observed",
+          "Das Setup stellt Englisch (Vereinigtes Königreich) als Hauptsprache voreingestellt ein und lässt den Nutzer aus einer langen Liste Sprachen hinzufügen; die erste Sprache ist zugleich die Sprache der App-Fenster, und die Reihenfolge lässt sich per Ziehen ändern. Deutsch und Französisch wurden hinzugefügt.",
+          "univocal-languages-add-dropdown"
+        ],
+        [
+          "observed",
+          "Ein Popup sagte, eine bessere deutsche Stimme sei ein kostenloser macOS-Download, und nannte vier Schritte: „Read & Speak“, das Info-Symbol neben „System voice“, Deutsch in der linken Spalte, das Download-Symbol neben einer Enhanced- oder Premium-Stimme. Der Tester folgte den Schritten und fand keine Premium-Stimmen, obwohl er weiß, dass es solche Stimmen auf iOS gibt. Welcher Schritt scheiterte, ist nicht erfasst.",
+          "univocal-better-german-voice-popup"
+        ],
+        [
+          "measured",
+          "Das Setup verlangte zwei Berechtigungen: Accessibility (angehakt) und Microphone (Grant). Die Download-Schaltfläche zeigte „Wait for advanced voices“, 16 %, etwa 23 Min., und „Start now“ wartete auf beide Berechtigungen.",
+          "univocal-setup-permissions-download-time-estimate"
+        ],
+        [
+          "measured",
+          "Das Hauptfenster zeigte „Downloading the dictation model (574 MB)... 17%“ und eine Kachel „Dictate“ bei 39 %; die Kachel „Read aloud“ war bereit mit Option-Shift-R. Was die beiden Prozentwerte messen und wie groß der gesamte Download ist, ist nicht erfasst. Das Fenster sagt, der Download „happens once and takes a few minutes“; die Gesamtdauer wurde nicht erfasst.",
+          "univocal-setting-up-model-download-trial"
+        ],
+        [
+          "observed",
+          "Die Stimmenauswahl listet Stimmen nach Sprache mit einem Suchfeld, den Filtern All/Female/Male, einem Menü „Your languages“ und einer Wiedergabetaste pro Stimme; Stimmen von Apple tragen ein Apple-Etikett. Bei Deutsch (Deutschland) war Anna angehakt. Der Tester findet die Stimmenauswahl gut organisiert.",
+          "univocal-voice-picker-german-anna"
+        ],
+        [
+          "observed",
+          "Im Schritt „Hear it“ öffnete Option-Shift-R ein Vorlesefenster mit dem Willkommenstext, Play, Geschwindigkeit 1x, Sprache Auto (English), Stimme Emma, Textgröße und Escape zum Schließen. Ob Ton zu hören war und Wörter hervorgehoben wurden, ist nicht erfasst.",
+          "univocal-reader-window-welcome-text"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "Nutzung",
+      "items": [
+        [
+          "observed",
+          "Im Schritt „Say something“ tippte das Halten der linken Control-Taste beim Sprechen „Hello, what's going on? Does it work?“ ins Feld; beide Schritte wurden abgehakt.",
+          "univocal-first-dictation-hold-left-control"
+        ],
+        [
+          "observed",
+          "Das Diktieren erzeugte in den Notizen englischen, französischen und deutschen Text, darunter absichtlich sehr schnell gesprochenes Deutsch, was laut Tester funktionierte. Ein Sprachwechsel dazwischen ist nicht erfasst; die Diktierseite sagt „Mix your languages“ (Annahme: automatische Erkennung). Weder Zeit noch Genauigkeitszählung noch Ziel-App sind erfasst.",
+          null
+        ],
+        [
+          "observed",
+          "Diktiereinstellungen: Sprechtaste linke Control-Taste, Modus Push (gewählt) oder Toggle, „Remove fillers and false starts“ an, „Keep transcript on clipboard“ aus, „Type words as you speak“ aus, Hörleuchten an, Ladeanzeige während der Verarbeitung und eine Liste Recent dictations. Dem Tester gefällt, dass beide Modi angeboten werden.",
+          "univocal-settings-dictation-push-toggle"
+        ],
+        [
+          "measured",
+          "Allgemeine Einstellungen: Version 0.3.33, Start bei der Anmeldung an, Dock-Symbol an, Sprache Englisch, Erscheinungsbild System, automatische Update-Prüfung an. Die Reiter heißen Languages, Dictation, Read Aloud, Connections, Vocabulary, Permissions und Licence; Connections und Vocabulary wurden nicht geöffnet.",
+          "univocal-settings-general-version-0-3-33"
+        ],
+        [
+          "observed",
+          "Die Liste Languages zeigt Englisch (Vereinigtes Königreich) als Hauptsprache mit Emma, Deutsch (Deutschland) mit Wren und Französisch (Frankreich) mit Siwis, jeweils mit einer Wiedergabetaste. Der Tester findet die Namen lustig.",
+          "univocal-settings-languages-voices"
+        ],
+        [
+          "observed",
+          "Das Vorlesen startete nicht, als der Tester Text markierte und die Taste drückte, und er konnte die Taste nicht ändern. Welcher Text, welche App und welche Taste benutzt wurden, ist nicht erfasst. Die Tastenkombination funktionierte einmal im Setup-Schritt.",
+          null
+        ],
+        [
+          "observed",
+          "Einstellungen zu „Read Aloud“: Geschwindigkeit 1x, „Use a separate shortcut“ an, ein Feld Shortcut mit dem Text „Press keys...“, „Format Markdown“ an, ein Deckkraft-Regler, Hervorhebungsfarben und ein Verlauf. Ob das Feld leer war oder einen Hinweis zeigte, ist unklar (Annahme: mögliche Ursache des Fehlers).",
+          "univocal-read-aloud-settings-shortcut-field"
+        ],
+        [
+          "observed",
+          "Eine gesprochene englische Bitte, „cat, house, dog“ aufzulisten, und eine deutsche Bitte („Bitte als Bullet Points“) ergaben keine Aufzählung; im deutschen Ergebnis wurden zwei Wörter zu „Katzenhaus“ zusammengezogen. Kein Screenshot. Der Tester sagt, eine andere App, die er ausprobiert hat, habe dasselbe getan.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Der Tester hatte drei Sprach- und Modellprogramme gleichzeitig geöffnet, und der Mac funktionierte weiterhin; es wurde nichts gemessen. Er führt das darauf zurück, dass jedes ein kleines Modell nutzt.",
+          null
+        ],
+        [
+          "tester-view",
+          "„Bald gehen meinem Computer die Tasten für all diese Sonderfunktionen aus.“",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Entscheidung",
+      "items": [
+        [
+          "observed",
+          "Die Notizen enden mit dem Test mit Aufzählungspunkten und dem Hinweis zu Preis und Testphase; eine Entscheidung über die weitere Nutzung wird nicht genannt.",
+          null
+        ],
+        [
+          "observed",
+          "Die App zeigt „Trial · 14 days left“ und eine Schaltfläche „Buy“. Die Herstellerseite (Screenshot, hier nicht gezeigt) nennt einmalig 39 $, einen Black-Friday-Preis von 15 $ mit einem Code vom 20. bis 30. November, 14 Tage kostenlos, kein Abo und kein Konto. Unter den Screenshots ist kein Konto-Schritt.",
+          "univocal-setting-up-model-download-trial"
+        ],
+        [
+          "tester-view",
+          "Ihn überrascht, dass ein anderes Diktierprogramm, das er getestet hat, eine Formatierungs-Engine von mehr als 2 GB mitbrachte, während dieses hier ein Diktiermodell mit 574 MB zeigt.",
+          null
+        ],
+        [
+          "tester-view",
+          "„Das mit den Sprachen ist sehr gut gemacht: Man kann wirklich festlegen, welche Sprachen man nutzen möchte.“",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Setup-Text: Die Stimm- und Sprachmodelle werden „once and takes a few minutes“ heruntergeladen.",
+      "Hauptfenster",
+      "Ein früherer Bildschirm schätzte bei 16 % etwa 23 Minuten; Gesamtdauer nicht erfasst.",
+      "observed"
+    ],
+    [
+      "„Audio is transcribed on this Mac and never uploaded.“ Text des Vorlesefensters: Nichts, was gelesen oder gesagt wird, verlässt den Mac.",
+      "Setup- und Vorlesetext",
+      "Nicht überprüft. Es wurde kein Netzwerkverkehr untersucht und kein Offline-Lauf ausprobiert.",
+      "vendor-claim"
+    ],
+    [
+      "Vorlesefenster: „Every word you hear lights up as it is spoken.“",
+      "Vorlesefenster",
+      "Vorlesefenster gesehen; Ton und Hervorhebung nicht erfasst.",
+      "observed"
+    ],
+    [
+      "Univocal liest vor und diktiert in den gewählten Sprachen.",
+      "Schritt „Languages“",
+      "Diktieren auf Englisch, Französisch und Deutsch gesehen; Vorlesen auf Deutsch und Französisch nicht erfasst.",
+      "observed"
+    ],
+    [
+      "macOS hat eine bessere deutsche Stimme als kostenlosen Download.",
+      "Setup-Popup",
+      "Der Tester fand sie nicht.",
+      "observed"
+    ],
+    [
+      "39 $ einmalig, 14 Tage kostenlos, keine Karte, kein Konto. Black Friday, 20. bis 30. November: 15 $ mit einem Code.",
+      "Herstellerseite (Screenshot)",
+      "Test-Banner gesehen; unter den Screenshots ist kein Konto-Bildschirm.",
+      "vendor-claim"
+    ],
+    [
+      "Etwa 1,2 GB Download beim ersten Start, 32 Sprachen, DMG etwa 6,3 MB.",
+      "PromptQuorum-Verzeichniseintrag",
+      "Komponente mit 574 MB gesehen; Sprachliste lang, aber nicht gezählt; DMG mit 6,5 MB vom Tester abgelesen.",
+      "third-party"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Diktieren im Setup-Feld, linke Control-Taste gedrückt halten",
+      "Univocal-Setup",
+      "Satz im Feld getippt",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "univocal-first-dictation-hold-left-control"
+      ]
+    ],
+    [
+      "Englischer Satz („Hi, how are you? How does it work?“)",
+      "Nicht erfasst",
+      "Text in den Notizen; Ziel-App nicht erfasst",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Französische Frage",
+      "Nicht erfasst",
+      "Text in den Notizen; Genauigkeit vom Tester nicht beurteilt",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Deutsche Frage, absichtlich sehr schnell gesprochen",
+      "Nicht erfasst",
+      "Funktionierte laut Tester",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Vorlesefenster aus dem Setup-Schritt, Option-Shift-R",
+      "Univocal-Setup",
+      "Fenster öffnete sich; Ton nicht erfasst",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "univocal-reader-window-welcome-text"
+      ]
+    ],
+    [
+      "Markierten Text vorlesen",
+      "Nicht erfasst",
+      "Startete nicht",
+      "Nicht erfasst",
+      "Fail",
+      []
+    ],
+    [
+      "Die Taste zum Vorlesen ändern",
+      "Univocal-Einstellungen",
+      "Nicht gelungen",
+      "Nicht erfasst",
+      "Fail",
+      [
+        "univocal-read-aloud-settings-shortcut-field"
+      ]
+    ],
+    [
+      "Eine deutsche Premium-Stimme finden",
+      "macOS-Einstellungen",
+      "Nicht gefunden",
+      "Nicht erfasst",
+      "Fail",
+      [
+        "univocal-better-german-voice-popup"
+      ]
+    ],
+    [
+      "Aufzählungspunkte per Sprache, englische Bitte",
+      "Nicht erfasst",
+      "Keine Aufzählung",
+      "Nicht erfasst",
+      "Fail",
+      []
+    ],
+    [
+      "Aufzählungspunkte per Sprache, deutsche Bitte",
+      "Nicht erfasst",
+      "Zwei Wörter zusammengezogen, keine Aufzählung",
+      "Nicht erfasst",
+      "Fail",
+      []
+    ],
+    [
+      "Drei Sprach- und Modellprogramme gleichzeitig",
+      "Mac",
+      "Computer blieb laut Tester benutzbar",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Offline-Nutzung, Deinstallation, Connections, Vocabulary, Browser-Erweiterung",
+      "Nicht zutreffend",
+      "Nicht getestet",
+      "Nicht erfasst",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Nannte den macOS-Dialog beim ersten Öffnen eine übliche Warnung für eine App, die nicht aus dem App Store stammt und nicht bei Apple registriert ist. Der Dialog sagt, dass Apple sie geprüft und keine schädliche Software gefunden hat; ihr Signierungsstatus wird nicht angezeigt."
+    ],
+    [
+      "tester-error",
+      "Sagte, Emma sei die deutsche Stimme, die er gewählt habe. Die Screenshots zeigen Emma bei Englisch (Vereinigtes Königreich); Deutsch zeigt Anna in der Stimmenliste und Wren in der Liste Languages."
+    ],
+    [
+      "assumption",
+      "Der erste diktierte Satz der Notizen weicht von dem im Setup-Screenshot ab. Wahrscheinlich zwei getrennte Versuche; nicht bekannt."
+    ],
+    [
+      "assumption",
+      "„I like this version one zero“ wird als Lizenzversion 1.0 gelesen, nicht als App-Version 0.3.33."
+    ],
+    [
+      "tester-error",
+      "Lücken in der Aufzeichnung: Testdatum, Endzeit, macOS-Version, Gesamtdauer des Downloads, die App für die französischen und deutschen Tests, die Taste und der Text, als das Vorlesen scheiterte, ein Screenshot des Tests mit Aufzählungspunkten, was der Entwickler schrieb, wie die anderen beiden Programme hießen. Fehler der Spracherkennung wurden bereinigt: „meeting“ wird als „setting“ gelesen (die Schaltfläche des Popups heißt Open System Settings), und „Strato sort program“ ist unklar und wurde weggelassen. Die Zeile „Bien sûr !“ im französischen Austausch hat keinen erfassten Sprecher."
+    ]
+  ],
+  "findings": [
+    [
+      "UV-01",
+      "Die DMG hat nach Angabe des Testers 6,5 MB; kein Screenshot. Das Verzeichnis nennt etwa 6,3 MB für 0.3.33 (Drittquelle).",
+      "Installation",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UV-02",
+      "Das Installer-Fenster zeigt „Programme“ links und Univocal rechts, also umgekehrt zum üblichen Aufbau (Meinung des Testers). Der Schritt des Ziehens ist trotzdem nötig; der Tester merkt an, dass manche Apps ihn vermeiden.",
+      "Installation",
+      "observed",
+      "Info",
+      [
+        "univocal-dmg-window-applications-left"
+      ]
+    ],
+    [
+      "UV-03",
+      "Beim ersten Öffnen fragt macOS „Are you sure you want to open it?“ und gibt an, dass Chrome die Datei um 11:06 Uhr heruntergeladen hat und dass Apple keine schädliche Software gefunden hat. Der Status von Signierung und Notarisierung wird nicht angezeigt.",
+      "Installation",
+      "observed",
+      "Info",
+      [
+        "univocal-gatekeeper-open-confirmation"
+      ]
+    ],
+    [
+      "UV-04",
+      "Vor dem Setup öffnet sich ein Lizenzfenster: Version 1.0, gültig ab 23. September 2026, zwischen dem Nutzer und NarNar Labs LLC, für die App, ihre begleitende Browser-Erweiterung und die Sprachmodelle. Schaltflächen: Quit, Agree. Käufern, die nicht zustimmen, wird eine 30-tägige Rückerstattung angeboten. Der Tester sagt, andere getestete Apps hätten sich einfach geöffnet (Meinung des Testers; nicht App für App geprüft). Nur die ersten Zeilen wurden gelesen.",
+      "Einstieg",
+      "observed",
+      "Positive",
+      [
+        "univocal-licence-terms-before-setup"
+      ]
+    ],
+    [
+      "UV-05",
+      "Der Sprachschritt stellt Englisch (Vereinigtes Königreich) als Hauptsprache voreingestellt ein und lässt den Nutzer aus einer langen Liste Sprachen hinzufügen (von Arabisch bis Dänisch und weiter); die erste Sprache ist zugleich die Sprache der App-Fenster; die Reihenfolge lässt sich per Ziehen ändern. Deutsch und Französisch wurden hinzugefügt. Ob mehr Sprachen Arbeitsspeicher kosten, ist nicht bekannt. Das Verzeichnis nennt 32 Sprachen (Drittquelle). Teilweise verdeckter Text deutet darauf hin, dass der Download nach diesem Schritt beginnt (Annahme).",
+      "Einstieg",
+      "observed",
+      "Positive",
+      [
+        "univocal-languages-add-dropdown"
+      ]
+    ],
+    [
+      "UV-06",
+      "Ein Popup sagt, eine bessere deutsche Stimme sei ein kostenloser macOS-Download, und nennt vier Schritte: „Read & Speak“, das Info-Symbol neben „System voice“, Deutsch in der linken Spalte, das Download-Symbol neben einer Enhanced- oder Premium-Stimme. Der Tester folgte den Schritten und fand keine Premium-Stimmen, obwohl er weiß, dass es solche Stimmen auf iOS gibt. Welcher Schritt scheiterte, ist nicht erfasst; das Bedienelement „System voice“ ist auf keinem Screenshot zu sehen.",
+      "Einstieg",
+      "observed",
+      "Medium",
+      [
+        "univocal-better-german-voice-popup"
+      ]
+    ],
+    [
+      "UV-07",
+      "Das Setup verlangt zwei Berechtigungen: Accessibility (angehakt) und Microphone (Grant). Die Download-Schaltfläche zeigt „Wait for advanced voices“, 16 %, etwa 23 Min., und „Start now“ wartet auf beide Berechtigungen. Der Text sagt, das Audio werde auf diesem Mac transkribiert und nie hochgeladen (Herstellerangabe).",
+      "Einstieg",
+      "measured",
+      "Positive",
+      [
+        "univocal-setup-permissions-download-time-estimate"
+      ]
+    ],
+    [
+      "UV-08",
+      "Das Hauptfenster zeigt „Downloading the dictation model (574 MB)... 17%“ und eine Kachel „Dictate“ bei 39 %; die Kachel „Read aloud“ ist bereit mit Option-Shift-R. Was die beiden Prozentwerte messen und wie groß der gesamte Download ist, wird weder angezeigt noch erfasst. Das Verzeichnis nennt etwa 1,2 GB (Drittquelle). Der Tester sagt, der Download habe begonnen, ohne dass er danach gefragt wurde.",
+      "Einstieg",
+      "measured",
+      "Info",
+      [
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-09",
+      "Das Hauptfenster sagt, der Download „happens once and takes a few minutes“; die frühere Schaltfläche im Setup schätzte bei 16 % etwa 23 Min. Ob 23 Min. die gesamte oder die verbleibende Zeit waren, ist nicht angegeben (Annahme: verbleibende). Tatsächliche Dauer nicht erfasst.",
+      "Einstieg",
+      "measured",
+      "Low",
+      [
+        "univocal-setup-permissions-download-time-estimate",
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-10",
+      "Die Stimmenauswahl listet Stimmen nach Sprache mit einem Suchfeld, den Filtern All/Female/Male, einem Menü „Your languages“ und einer Wiedergabetaste pro Stimme; Stimmen von Apple tragen ein Apple-Etikett. Bei Deutsch (Deutschland) war Anna angehakt. Der Tester findet die Stimmenauswahl gut organisiert (Meinung des Testers).",
+      "Einstieg",
+      "observed",
+      "Positive",
+      [
+        "univocal-voice-picker-german-anna"
+      ]
+    ],
+    [
+      "UV-11",
+      "Im Schritt „Hear it“ öffnete Option-Shift-R ein Vorlesefenster mit dem Willkommenstext, Play, Geschwindigkeit 1x, Sprache Auto (English), Stimme Emma, Textgröße und Escape zum Schließen. Ob Ton zu hören war und Wörter hervorgehoben wurden, ist nicht erfasst.",
+      "Einstieg",
+      "observed",
+      "Info",
+      [
+        "univocal-reader-window-welcome-text"
+      ]
+    ],
+    [
+      "UV-12",
+      "Im Schritt „Say something“ tippte das Halten der linken Control-Taste beim Sprechen „Hello, what's going on? Does it work?“ ins Feld; beide Schritte abgehakt.",
+      "Diktieren",
+      "observed",
+      "Positive",
+      [
+        "univocal-first-dictation-hold-left-control"
+      ]
+    ],
+    [
+      "UV-13",
+      "Das Diktieren erzeugte in den Notizen englischen, französischen und deutschen Text, darunter absichtlich sehr schnell gesprochenes Deutsch, was laut Tester funktionierte. Ein Sprachwechsel dazwischen ist nicht erfasst; die Diktierseite sagt „Mix your languages“ (Annahme: automatische Erkennung). Weder Zeit noch Genauigkeitszählung noch App sind erfasst.",
+      "Diktieren",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UV-14",
+      "Diktiereinstellungen: Sprechtaste linke Control-Taste, Modus Push (gewählt) oder Toggle, „Remove fillers and false starts“ an, „Keep transcript on clipboard“ aus, „Type words as you speak“ aus, Hörleuchten an, Ladeanzeige während der Verarbeitung und eine Liste Recent dictations. Dem Tester gefällt, dass beide Modi angeboten werden (Meinung des Testers).",
+      "Diktieren",
+      "observed",
+      "Info",
+      [
+        "univocal-settings-dictation-push-toggle"
+      ]
+    ],
+    [
+      "UV-15",
+      "Allgemeine Einstellungen: Version 0.3.33, Start bei der Anmeldung an, Dock-Symbol an, Sprache Englisch, Erscheinungsbild System, automatische Update-Prüfung an, Check Now, Report Issue. Reiter: Languages, Dictation, Read Aloud, Connections, Vocabulary, Permissions, Licence; Connections und Vocabulary wurden nicht geöffnet. Das Verzeichnis nennt 0.3.33 als am 2026-11-11 veröffentlicht (Drittquelle).",
+      "Einstellungen",
+      "measured",
+      "Info",
+      [
+        "univocal-settings-general-version-0-3-33"
+      ]
+    ],
+    [
+      "UV-16",
+      "Liste Languages: Englisch (Vereinigtes Königreich) als Hauptsprache mit Emma, Deutsch (Deutschland) mit Wren, Französisch (Frankreich) mit Siwis, jeweils mit einer Wiedergabetaste. Der Tester findet die Namen lustig (Meinung des Testers). Welche Stimmen von Apple stammen, wird nicht angezeigt; nur die Stimmenauswahl kennzeichnet Stimmen mit Apple.",
+      "Einstellungen",
+      "observed",
+      "Low",
+      [
+        "univocal-settings-languages-voices",
+        "univocal-voice-picker-german-anna"
+      ]
+    ],
+    [
+      "UV-17",
+      "Das Vorlesen startete nicht, als der Tester Text markierte und die Taste drückte, und er konnte die Taste nicht ändern. Welcher Text, welche App und welche Taste benutzt wurden, ist nicht erfasst. Die Tastenkombination funktionierte einmal im Setup-Schritt. Ursache nicht eingegrenzt.",
+      "Vorlesen",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "UV-18",
+      "Einstellungen zu „Read Aloud“: Geschwindigkeit 1x, „Use a separate shortcut“ an, ein Feld Shortcut mit dem Text „Press keys...“, „Format Markdown“ an, ein Deckkraft-Regler, Hervorhebungsfarben und ein Verlauf. Ob das Feld leer war oder einen Hinweis zeigte, ist unklar (Annahme: mögliche Ursache von UV-17).",
+      "Vorlesen",
+      "observed",
+      "Low",
+      [
+        "univocal-read-aloud-settings-shortcut-field"
+      ]
+    ],
+    [
+      "UV-19",
+      "Die App zeigt „Trial · 14 days left“ und eine Schaltfläche „Buy“. Die Herstellerseite (Screenshot, hier nicht gezeigt) nennt einmalig 39 $, einen Black-Friday-Preis von 15 $ mit einem Code vom 20. bis 30. November, 14 Tage kostenlos, kein Abo und kein Konto (Herstellerangabe). Unter den Screenshots ist kein Konto-Schritt.",
+      "Testphase und Preis",
+      "observed",
+      "Info",
+      [
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-20",
+      "Eine gesprochene englische Bitte, „cat, house, dog“ aufzulisten, und eine deutsche Bitte („Bitte als Bullet Points“) ergaben keine Aufzählung; im deutschen Ergebnis wurden zwei Wörter zu „Katzenhaus“ zusammengezogen. Kein Screenshot. Der Tester sagt, eine andere App, die er ausprobiert hat, habe dasselbe getan. Auf den Screenshots wird keine Aufzählungsfunktion beworben; das ist also kein Verfehlen einer Angabe.",
+      "Formatierung",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "UV-21",
+      "Der Tester ließ drei Sprach- und Modellprogramme gleichzeitig laufen, und der Mac funktionierte weiterhin; es wurde nichts gemessen (Meinung des Testers: weil jedes ein kleines Modell nutzt).",
+      "Leistung",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "UV-22",
+      "Die Setup- und Vorlesetexte sagen, alles bleibe auf dem Mac. Es wurde kein Netzwerkverkehr untersucht und kein Offline-Lauf ausprobiert.",
+      "Vertrauen",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "UV-23",
+      "Nicht getestet oder nicht erfasst: Offline-Nutzung, Verzögerung, Speicherbedarf, Connections, Vocabulary, die Browser-Erweiterung, Tippen in Echtzeit, andere Sprachen, Vorlesen auf Deutsch oder Französisch, Deinstallation, macOS-Version.",
+      "Umfang",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf einen Erstnutzer. Vorgeschlagen, nicht gemessen. „Info“ kennzeichnet einen Befund, der weder ein Problem noch eine Stärke ist; „Positiv“ kennzeichnet etwas, das gut funktionierte.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Mac-Nutzer mit Apple Silicon, die auf Englisch, Französisch oder Deutsch diktieren und eine kleine kostenpflichtige App mit Testphase wollen (Annahme aus einer Sitzung)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Alle, die ein Vorlesen brauchen, das sofort funktioniert, oder Aufzählungsformatierung per Sprache."
+      ]
+    ],
+    "retest": "Neutest nach einem Versionswechsel oder sobald der Fehler beim Vorlesen erklärt ist. Abdecken: Vorlesen mit der Standard-Tastenkombination, eine deutsche Premium-Stimme, die Reiter Connections und Vocabulary, Offline-Nutzung bei untersuchtem Netzwerkverkehr, Verzögerung, Speicherbedarf, Deinstallation; macOS-Version und Datum erfassen."
+  },
+  "background_intro": "Nicht aus der Praxis. Der folgende Punkt stammt aus dem PromptQuorum-Verzeichniseintrag zu Sprich und wurde hier nicht überprüft.",
+  "background": [
+    [
+      "third-party",
+      "Herausgegeben von NarNar Labs LLC; proprietär, kein Quell-Repository gefunden; die Seiten des Herstellers nennen weder Gründer noch Land noch Adresse. Nur Apple-Silicon-Macs mit macOS 14 oder neuer."
+    ],
+    [
+      "third-party",
+      "Frühester Changelog-Eintrag 0.3.0 am 2026-07-29; 0.3.33 am 2026-11-11; zu den Oberflächensprachen gehören Englisch, Koreanisch, Japanisch, Chinesisch, Spanisch, Deutsch und Französisch. Quelle: PromptQuorum-Verzeichnistestbericht, geprüft am 2026-11-13."
+    ]
+  ],
+  "sources": [
+    "Hands-on-Notizen und Screenshots des Testers (Original-Word-Notizen; PDF der Rohnotizen folgt).",
+    "PromptQuorum-Verzeichniseintrag und Testbericht zu Univocal (Slug: univocal), geprüft am 2026-11-13.",
+    "Herstellerseite univocalapp.com (Herstellerangaben); der im Verzeichnis genannte Hersteller-Changelog wurde für diesen Test nicht geöffnet."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "univocal-first-dictation-hold-left-control",
+      "figure": 1,
+      "file": "univocal-first-dictation-hold-left-control.webp",
+      "path": "images/univocal-first-dictation-hold-left-control.webp",
+      "alt": "Setup-Schritt „Say something“ von Univocal: linke Control-Taste halten, sprechen, loslassen. Das Feld zeigt den getippten Satz „Hello, what's going on? Does it work?“",
+      "caption": "Erstes Diktat im Setup. Beobachtet.",
+      "role": "hero",
+      "width": 1124,
+      "height": 994,
+      "bytes": 35242,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-dmg-window-applications-left",
+      "figure": 2,
+      "file": "univocal-dmg-window-applications-left.webp",
+      "path": "images/univocal-dmg-window-applications-left.webp",
+      "alt": "Installer-Fenster mit der Verknüpfung zum Ordner „Programme“ links und dem Univocal-Symbol, zwei weißen Anführungszeichen auf Schwarz, rechts.",
+      "caption": "Installer-Fenster, vertauschte Reihenfolge. Beobachtet.",
+      "role": "moment",
+      "width": 1427,
+      "height": 625,
+      "bytes": 17744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-licence-terms-before-setup",
+      "figure": 3,
+      "file": "univocal-licence-terms-before-setup.webp",
+      "path": "images/univocal-licence-terms-before-setup.webp",
+      "alt": "Fenster „Licence Terms“ von Univocal mit dem Titel „Before you start“, Version 1.0, gültig ab 23. September 2026, mit den Schaltflächen Quit und Agree.",
+      "caption": "Lizenzbedingungen, bevor irgendetwas eingerichtet wird. Beobachtet.",
+      "role": "moment",
+      "width": 1328,
+      "height": 1392,
+      "bytes": 143158,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-setup-permissions-download-time-estimate",
+      "figure": 4,
+      "file": "univocal-setup-permissions-download-time-estimate.webp",
+      "path": "images/univocal-setup-permissions-download-time-estimate.webp",
+      "alt": "Setup-Fenster: Accessibility angehakt, Microphone mit einer Schaltfläche Grant und eine Schaltfläche „Wait for advanced voices“ mit 16 Prozent und etwa 23 Minuten.",
+      "caption": "Berechtigungsschritt mit einer Download-Schätzung. Gemessen.",
+      "role": "moment",
+      "width": 1114,
+      "height": 974,
+      "bytes": 35434,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-better-german-voice-popup",
+      "figure": 5,
+      "file": "univocal-better-german-voice-popup.webp",
+      "path": "images/univocal-better-german-voice-popup.webp",
+      "alt": "Popup „A better German voice is available“ mit vier Schritten zum Herunterladen einer Enhanced- oder Premium-Stimme in macOS und den Schaltflächen Not Now und Open System Settings.",
+      "caption": "Popup mit Hinweis auf macOS-Stimmen. Beobachtet.",
+      "role": "moment",
+      "width": 1066,
+      "height": 550,
+      "bytes": 44006,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-read-aloud-settings-shortcut-field",
+      "figure": 6,
+      "file": "univocal-read-aloud-settings-shortcut-field.webp",
+      "path": "images/univocal-read-aloud-settings-shortcut-field.webp",
+      "alt": "Einstellungen zu „Read Aloud“: Geschwindigkeit 1x, „Use a separate shortcut“ eingeschaltet, ein Feld Shortcut mit dem Text „Press keys“, „Format Markdown“ an, rosa Hervorhebungsfarbe.",
+      "caption": "Einstellungen zu „Read Aloud“. Das Tastenfeld zeigt „Press keys“. Beobachtet.",
+      "role": "moment",
+      "width": 1224,
+      "height": 944,
+      "bytes": 27010,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-gatekeeper-open-confirmation",
+      "figure": 7,
+      "file": "univocal-gatekeeper-open-confirmation.webp",
+      "path": "images/univocal-gatekeeper-open-confirmation.webp",
+      "alt": "macOS-Dialog: Univocal ist eine aus dem Internet geladene App, von Chrome um 11:06 Uhr heruntergeladen, von Apple geprüft ohne Fund; Cancel und Open.",
+      "caption": "Bestätigung beim ersten Öffnen durch macOS. Beobachtet.",
+      "role": "gallery",
+      "width": 534,
+      "height": 540,
+      "bytes": 25202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-languages-add-dropdown",
+      "figure": 8,
+      "file": "univocal-languages-add-dropdown.webp",
+      "path": "images/univocal-languages-add-dropdown.webp",
+      "alt": "Schritt „Your languages“: Englisch (Vereinigtes Königreich) als Hauptsprache und eine geöffnete Liste „Add a language“ von Arabisch bis Dänisch, mit einer Schaltfläche Next.",
+      "caption": "Sprachschritt mit geöffneter Liste. Beobachtet.",
+      "role": "gallery",
+      "width": 1114,
+      "height": 1266,
+      "bytes": 55766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-setting-up-model-download-trial",
+      "figure": 9,
+      "file": "univocal-setting-up-model-download-trial.webp",
+      "path": "images/univocal-setting-up-model-download-trial.webp",
+      "alt": "Hauptfenster „Setting up“: Diktiermodell 574 MB bei 17 Prozent, Kachel „Dictate“ bei 39 Prozent, Kachel „Read aloud“, Stimme Emma, „Trial 14 days left“, Schaltfläche Buy.",
+      "caption": "Hauptfenster während des ersten Downloads. Gemessen.",
+      "role": "gallery",
+      "width": 766,
+      "height": 812,
+      "bytes": 34156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-voice-picker-german-anna",
+      "figure": 10,
+      "file": "univocal-voice-picker-german-anna.webp",
+      "path": "images/univocal-voice-picker-german-anna.webp",
+      "alt": "Stimmenliste mit Suche und Filtern: amerikanische englische Stimmen, die britische englische Stimme Daniel und die deutsche Stimme Anna (Deutschland) angehakt.",
+      "caption": "Stimmenauswahl. Beobachtet.",
+      "role": "gallery",
+      "width": 812,
+      "height": 882,
+      "bytes": 36484,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-reader-window-welcome-text",
+      "figure": 11,
+      "file": "univocal-reader-window-welcome-text.webp",
+      "path": "images/univocal-reader-window-welcome-text.webp",
+      "alt": "Vorlesefenster mit dem Text „Welcome to Univocal“, den Bedienelementen Play, 1x, Auto (English) und Emma sowie dem Setup-Schritt „Press Escape to put the reader away“.",
+      "caption": "Vorlesefenster aus dem Schritt „Hear it“. Beobachtet.",
+      "role": "gallery",
+      "width": 1431,
+      "height": 613,
+      "bytes": 35094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-settings-general-version-0-3-33",
+      "figure": 12,
+      "file": "univocal-settings-general-version-0-3-33.webp",
+      "path": "images/univocal-settings-general-version-0-3-33.webp",
+      "alt": "Allgemeine Einstellungen: Start bei der Anmeldung und Dock-Symbol an, Sprache Englisch, Erscheinungsbild System, Version 0.3.33, automatische Update-Prüfung an, Schaltfläche Report Issue.",
+      "caption": "Allgemeine Einstellungen. Gemessen: Version 0.3.33.",
+      "role": "gallery",
+      "width": 1432,
+      "height": 974,
+      "bytes": 30982,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-settings-languages-voices",
+      "figure": 13,
+      "file": "univocal-settings-languages-voices.webp",
+      "path": "images/univocal-settings-languages-voices.webp",
+      "alt": "Spracheinstellungen: Englisch (Vereinigtes Königreich) als Hauptsprache mit der Stimme Emma, Deutsch (Deutschland) mit Wren, Französisch (Frankreich) mit Siwis, jeweils mit einer Wiedergabetaste.",
+      "caption": "Sprachen und Stimmen. Beobachtet.",
+      "role": "gallery",
+      "width": 1158,
+      "height": 638,
+      "bytes": 21024,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    },
+    {
+      "id": "univocal-settings-dictation-push-toggle",
+      "figure": 14,
+      "file": "univocal-settings-dictation-push-toggle.webp",
+      "path": "images/univocal-settings-dictation-push-toggle.webp",
+      "alt": "Diktiereinstellungen: Sprechtaste linke Control-Taste, Modus Push gewählt neben Toggle, „Remove fillers“ an, Hörleuchten an, Ladeanzeige während der Verarbeitung.",
+      "caption": "Diktiereinstellungen. Beobachtet.",
+      "role": "gallery",
+      "width": 1212,
+      "height": 1200,
+      "bytes": 32614,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Screenshot der Anwendung Univocal",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittanbieter-Software.",
+      "captured": "Testdatum nicht erfasst; genaue Uhrzeit nicht erfasst"
+    }
+  ],
+  "figure_order": [
+    "univocal-first-dictation-hold-left-control",
+    "univocal-dmg-window-applications-left",
+    "univocal-licence-terms-before-setup",
+    "univocal-setup-permissions-download-time-estimate",
+    "univocal-better-german-voice-popup",
+    "univocal-read-aloud-settings-shortcut-field",
+    "univocal-gatekeeper-open-confirmation",
+    "univocal-languages-add-dropdown",
+    "univocal-setting-up-model-download-trial",
+    "univocal-voice-picker-german-anna",
+    "univocal-reader-window-welcome-text",
+    "univocal-settings-general-version-0-3-33",
+    "univocal-settings-languages-voices",
+    "univocal-settings-dictation-push-toggle"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "13. November 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "Speicher",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Quelle",
+      "Beobachtung",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passt es in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "App",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv",
+      "Info": "Info"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
+  }
+}

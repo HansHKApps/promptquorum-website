@@ -15,6 +15,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon } from './icons'
 import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
+import { HqFlag } from './HqFlag'
 import { getListingFreshness, getAppActivity } from './staleness'
 import { platformLabel } from './platformLabels'
 
@@ -120,6 +121,7 @@ export function ToolTable({
               >
                 <td className="p-2 sm:p-3 sticky start-0 z-10 bg-white group-hover:bg-hub-violet-tint transition-colors font-medium text-text-primary whitespace-nowrap">
                   {app.name}
+                  <HqFlag app={app} lang={lang} className="ms-1.5 align-middle" />
                   {(appActivity === 'quiet' || appActivity === 'dead') && (
                     <span
                       className={`ms-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'}`}

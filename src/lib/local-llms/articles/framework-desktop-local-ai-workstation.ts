@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/framework-desktop-local-ai-workstation-hero-ja.webp',
     title: 'ローカルAI向けFramework Desktop: 仕様・価格・評価',
-    seoTitle: 'Framework Desktop ローカルAI: 仕様・価格・評価',
+    seoTitle: 'Framework Desktop ローカルAI：仕様と価格',
     intro:
       'Framework Desktopは、Framework Computerが提供する容量4.5リットルのMini-ITX PCで、CPUとGPUが共有する最大192GBのLPDDR5Xメモリをはんだ付けで搭載します。192GB版はRyzen AI Max+ PRO 495を使い、DIY Editionは$6,799から。128GBのRyzen AI Max+ 395版は$3,449です。このページは仕様と根拠をまとめたもので、PromptQuorumはこのマシンをテストしておらず、確認できた情報源には192GB版の独立したベンチマークもありませんでした。',
     metaDescription:

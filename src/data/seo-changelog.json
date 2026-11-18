@@ -24168,5 +24168,4796 @@
       "t14": "2026-11-27",
       "t28": "2026-12-11"
     }
+  },
+  {
+    "id": "fc09fec5-59d1-4279-9b00-5f1de0f5e420",
+    "slug": "/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.096Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AMD Ryzen AI Halo ローカルAI: 仕様・価格・評価",
+        "new": "AMD Ryzen AI Halo ローカルAI：仕様と価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9e947cae-7d96-4386-b0f8-3c4d8f9d4bdb",
+    "slug": "/ja/local-llms/framework-desktop-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.132Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Framework Desktop ローカルAI: 仕様・価格・評価",
+        "new": "Framework Desktop ローカルAI：仕様と価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "ff56763d-5406-4ea6-af2a-c54e0b2023a7",
+    "slug": "/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.162Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "محطات عمل الذكاء الاصطناعي المحلي: Strix Halo أم DGX Spark",
+        "new": "محطة عمل ذكاء اصطناعي محلي: Strix Halo أم DGX Spark"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.",
+        "new": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "367a7f01-9f5c-4281-a5e4-5515b5acddb1",
+    "slug": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.192Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, tested speed, sourced prices.",
+        "new": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, reported speed, sourced prices."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "32b6ab63-77af-4151-be51-f0cb6eaccb7f",
+    "slug": "/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.221Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad medida y precios.",
+        "new": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad indicada y precios."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "4e5c3d24-ecba-47d4-9314-1c03a6c1cb1c",
+    "slug": "/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.251Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse mesurée, prix sourcés.",
+        "new": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse publiée, prix sourcés."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "907282e3-0b62-42c9-bba8-b61a306a60d9",
+    "slug": "/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.282Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルAIワークステーション Strix Halo vs Spark",
+        "new": "ローカルAI：Strix Halo vs DGX Spark"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・実測速度・出典付き価格で整理。",
+        "new": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・公表速度・出典付き価格で整理。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published plus CJK title length fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b40f20d5-013f-459b-98c0-9742bfc73f1a",
+    "slug": "/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.319Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 실측 속도, 출처 표기 가격.",
+        "new": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 공개된 속도, 출처 표기 가격."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3e762149-cdf6-446e-9447-1e34512a091c",
+    "slug": "/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.349Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade medida e preços.",
+        "new": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade divulgada e preços."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "bee45abe-7db8-4f66-a5ab-0651f79157c0",
+    "slug": "/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "date": "2026-11-13T17:29:08.379Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地AI工作站：Strix Halo对比DGX Spark选购指南",
+        "new": "本地AI工作站：Strix Halo对比DGX Spark指南"
+      },
+      {
+        "field": "metaDescription",
+        "old": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、实测速度和有来源的价格全面比较。",
+        "new": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、公布速度和有来源的价格全面比较。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: meta said tested/measured speed but body attributes speeds to third-party tests; reworded to reported/published plus CJK title length fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "32c2fe72-6de6-46e1-8a8b-92f7502d8702",
+    "slug": "/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.409Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Minisforum MS-S1 MAXのローカルAI向け仕様と価格",
+        "new": "Minisforum MS-S1 MAX ローカルAI仕様・価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "60558ab5-5fbf-43ae-85af-974e5ddd6c1c",
+    "slug": "/ar/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.439Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NVIDIA DGX Spark للذكاء الاصطناعي المحلي: المواصفات والسعر",
+        "new": "NVIDIA DGX Spark للذكاء الاصطناعي: المواصفات والسعر"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f56334b1-b25e-4983-8c53-166222d294b4",
+    "slug": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.469Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NVIDIA DGX Spark for Local AI: Specs, Price, Verdict",
+        "new": "NVIDIA DGX Spark Price, Specs and Verdict for Local AI"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NVIDIA DGX Spark for local AI: verified GB10 specs, 128 GB and 64 GB US prices with sources, what independent tests show, and who should skip it.",
+        "new": "NVIDIA DGX Spark price: $4,699 Founders Edition, up from $3,999 at launch. Sourced US prices, GB10 specs, independent tests, who should skip it."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'dgx spark price' 970 impr pos 8.45, 1 click; title+meta now lead with price and carry the sourced $4,699 Founders Edition figure",
+    "queries": [
+      "dgx spark price",
+      "nvidia dgx spark",
+      "dgx spark",
+      "nvidia dgx price",
+      "dgx spark nvidia price"
+    ],
+    "baseline": {
+      "position": 8.45,
+      "impressions": 970,
+      "clicks": 1,
+      "ctr": 0.0010309278350515464,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "8d4f6f21-4225-4890-ba25-b9a8e294b0da",
+    "slug": "/ja/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-13T17:29:08.499Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NVIDIA DGX Spark ローカルAI: 仕様・価格・評価",
+        "new": "NVIDIA DGX Spark ローカルAI：仕様・価格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "df715b19-472e-46ec-ab3f-1e4fc0761a31",
+    "slug": "/zh/power-local-llm/aiko-review",
+    "date": "2026-11-13T17:29:08.528Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Aiko评测：Mac和iPhone上设备端运行的Whisper转录应用",
+        "new": "Aiko评测：Mac和iPhone设备端Whisper转录"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "5d894c2c-09c2-47b0-971d-58e58e1a2a84",
+    "slug": "/ja/power-local-llm/best-local-llm-apps-mac",
+    "date": "2026-11-13T17:29:08.559Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mac向けローカルLLMアプリ2026年版：8本を比較",
+        "new": "Mac向けローカルLLMおすすめアプリ2026：8本比較"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、向く用途を整理。",
+        "new": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、おすすめの用途を整理。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (ja): dominant intent word おすすめ added to title and meta",
+    "queries": [
+      "mac ローカルllm おすすめ",
+      "mac llm",
+      "mac ローカルai おすすめ",
+      "apple local llm"
+    ],
+    "baseline": {
+      "position": 5.7,
+      "impressions": 49,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "316b64dd-accf-4b8d-98db-50619e8e1414",
+    "slug": "/power-local-llm/ecc-review",
+    "date": "2026-11-13T17:29:08.588Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ECC is an MIT-licensed toolkit of agents, skills and hooks for Claude Code and Codex, plus a paid GitHub App. Setup, data flow and pricing explained.",
+        "new": "ECC (ecc-universal) is an MIT-licensed toolkit of agents, skills and hooks for Claude Code and Codex, plus a paid GitHub App. Setup, data flow, pricing."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'ecc universal' 115 impr pos 8.2 was absent from title/meta; meta now names ecc-universal (stated in body)",
+    "queries": [
+      "ecc universal",
+      "ecc github",
+      "ecc review"
+    ],
+    "baseline": {
+      "position": 7.5,
+      "impressions": 167,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "caa5dd27-ca85-4b9e-8b40-0af034d04ec8",
+    "slug": "/ja/power-local-llm/ecc-review",
+    "date": "2026-11-13T17:29:08.618Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ECCレビュー：Claude Code・Codex向けツールキット",
+        "new": "ECCレビュー：Claude Code・Codex向けツール"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3de28cfa-f033-4553-b549-cdd465dc225a",
+    "slug": "/zh/power-local-llm/ecc-review",
+    "date": "2026-11-13T17:29:08.647Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ECC 评测：Claude Code 和 Codex 智能体工具包",
+        "new": "ECC 评测：Claude Code、Codex 智能体工具包"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "70f397af-0223-41c0-80e7-6b1446334f54",
+    "slug": "/ar/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.677Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Excire Foto: برنامج لإدارة الصور على Windows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا.",
+        "new": "مراجعة Excire Foto: مدير صور لـWindows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e7c25241-7398-4b5e-a28c-e1b46ab73fa8",
+    "slug": "/es/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.706Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Excire Foto: gestor de fotos para Windows y Mac cuya búsqueda con IA y reconocimiento de texto se ejecutan en local, según su fabricante. Pago único.",
+        "new": "Reseña de Excire Foto: gestor de fotos para Windows y Mac con búsqueda con IA y reconocimiento de texto en local, según su fabricante. Pago único."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1b87bfbd-e3b2-45e6-9e5b-7e309dc0479b",
+    "slug": "/fr/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.736Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test d’Excire Foto : gestionnaire de photos pour Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique.",
+        "new": "Test d’Excire Foto : gestionnaire de photos Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3433fa0e-5d17-4e71-bce7-a9696d4ccb2f",
+    "slug": "/ja/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.766Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Excire Fotoレビュー：ローカルAI写真管理ソフト（Win/Mac）",
+        "new": "Excire Fotoレビュー：ローカルAI写真管理ソフト"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "542121fd-e1b7-4fce-9e17-488c04984dad",
+    "slug": "/pt/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.796Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Excire Foto: gerenciador de fotos para Windows e Mac cuja busca por IA e reconhecimento de texto rodam localmente, segundo o fabricante. Compra única.",
+        "new": "Análise do Excire Foto: gerenciador de fotos para Windows e Mac com busca por IA e reconhecimento de texto locais, segundo o fabricante. Compra única."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "97699475-af45-43e6-8ec3-07d44fade01d",
+    "slug": "/zh/power-local-llm/excire-foto-review",
+    "date": "2026-11-13T17:29:08.826Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Excire Foto 评测：本地 AI 照片管理软件（Win/Mac）",
+        "new": "Excire Foto 评测：本地 AI 照片管理软件"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "5e81e0e6-d807-4d49-b880-47bbcab82ff3",
+    "slug": "/zh/power-local-llm/handy-review",
+    "date": "2026-11-13T17:29:08.856Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Handy 评测：免费开源的离线语音转文字桌面听写应用，支持三大系统",
+        "new": "Handy 评测：免费开源离线语音转文字，支持三大系统"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d555b0c4-95d1-47b9-b56c-deb44c785323",
+    "slug": "/ja/power-local-llm/home-assistant-assist-review",
+    "date": "2026-11-13T17:29:08.885Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Home Assistant Assist レビュー：ローカル音声とLLM",
+        "new": "Home Assistant Assistレビュー：ローカル音声"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "912ade6a-4f79-4eeb-abc9-d3eb4a09676d",
+    "slug": "/zh/power-local-llm/home-assistant-assist-review",
+    "date": "2026-11-13T17:29:08.916Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Home Assistant Assist 评测：本地语音与 LLM",
+        "new": "Home Assistant Assist 评测：本地语音"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d967e263-d857-4891-ae94-17fd4624f81c",
+    "slug": "/power-local-llm/immich-review",
+    "date": "2026-11-13T17:29:08.948Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your own server. Setup and privacy.",
+        "new": "Immich review: free AGPL photo and video backup server with iPhone and Android apps, CLIP smart search and face recognition on your server. Setup, privacy."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e0267470-8750-4dbb-91b9-80da923b9843",
+    "slug": "/ar/power-local-llm/llama-app-review",
+    "date": "2026-11-13T17:29:08.979Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة تطبيق Llama: تطبيق مجاني ومفتوح المصدر من فريق llama.cpp وHugging Face لنظامي Mac وWindows 11، مع اقتراح النماذج وواجهة API محلية وتدفق البيانات.",
+        "new": "مراجعة تطبيق Llama: تطبيق مجاني ومفتوح المصدر من فريق llama.cpp وHugging Face لنظامي Mac وWindows 11، مع اقتراح النماذج وAPI محلية وتدفق البيانات."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "0c4623b9-0fad-4385-afcc-f99e16df6a24",
+    "slug": "/zh/power-local-llm/llama-app-review",
+    "date": "2026-11-13T17:29:09.009Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Llama 应用评测：适用于 Mac 和 Windows 的桌面版",
+        "new": "Llama 应用评测：Mac 和 Windows 桌面版"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d914a345-e5a7-4e42-b0f8-e122622d0aa3",
+    "slug": "/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-13T17:29:09.040Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub with Goose. Working config, maintained servers, safe permissions.",
+        "new": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub via Goose. Working config, maintained servers, safe permissions."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "df1caa45-92c1-4dc4-b1d7-a3beb51e4d09",
+    "slug": "/de/power-local-llm/local-llm-app-alternatives",
+    "date": "2026-11-13T17:29:09.070Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokale LLM-App-Alternativen 2026: 14 Apps im Vergleich",
+        "new": "LM Studio & Ollama Alternativen 2026: 14 lokale LLM-Apps"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (de): searchers type '[tool] alternative', title had no tool name; pos 4-11 with 0 clicks",
+    "queries": [
+      "lm studio alternative",
+      "lmstudio alternative",
+      "ollama alternative",
+      "ollama alternativen",
+      "anythingllm alternative"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 93,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "84533523-b81d-489d-9a8c-ae4b763ab3a1",
+    "slug": "/es/power-local-llm/local-llm-app-alternatives",
+    "date": "2026-11-13T17:29:09.099Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Alternativas a apps de LLM local 2026: 14 comparadas",
+        "new": "Alternativas a Ollama y LM Studio 2026: 14 apps de LLM"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (es): searchers type 'alternativas a [tool]', title had no tool name",
+    "queries": [
+      "alternativas a ollama",
+      "alternativas ollama",
+      "alternativa a ollama",
+      "ollama alternativas"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 43,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "531d929f-7657-4a02-a512-bf023085005d",
+    "slug": "/fr/power-local-llm/local-llm-app-alternatives",
+    "date": "2026-11-13T17:29:09.129Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Alternatives aux apps LLM locales 2026 : 14 comparées",
+        "new": "Alternatives à LM Studio et Ollama 2026 : 14 apps LLM"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (fr): searchers type '[tool] alternative', title had no tool name",
+    "queries": [
+      "ollama alternative",
+      "lm studio alternative",
+      "lmstudio alternative",
+      "anythingllm alternative"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 59,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "7105b296-da06-4d72-996e-20eda0bcda0f",
+    "slug": "/zh/power-local-llm/openwhispr-review",
+    "date": "2026-11-13T17:29:09.160Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenWhispr 评测：支持本地与云端的开源语音听写和会议笔记",
+        "new": "OpenWhispr 评测：本地或云端的开源听写与会议笔记"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d6f4c26e-c961-453e-816e-951e55939b8d",
+    "slug": "/zh/power-local-llm/presenton-review",
+    "date": "2026-11-13T17:29:09.189Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Presenton 评测：开源 AI 演示文稿生成器，可导出 PPTX",
+        "new": "Presenton 评测：开源 AI 演示文稿生成器（PPTX）"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "4a18e061-248d-4fe6-a91f-23bfa54a7b4a",
+    "slug": "/ja/power-local-llm/searxng-review",
+    "date": "2026-11-13T17:29:09.220Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "SearXNGのレビュー。Open WebUIなどのローカルLLMフロントエンドがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジン。AGPL-3.0、Docker構成。未検証。",
+        "new": "SearXNGとは、Open WebUIなどのローカルLLMがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジンです。AGPL-3.0、Docker構成のレビュー。未検証。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (ja): 'searxng とは' 35 impr pos 2.7, 0 clicks; meta now answers the what-is-it intent (body already has the section)",
+    "queries": [
+      "searxng とは",
+      "searxngとは",
+      "searxng 読み方",
+      "searx / searxng",
+      "searxng instances",
+      "ローカルllm 検索エンジン"
+    ],
+    "baseline": {
+      "position": 2.7,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d840b5cf-b54b-4738-a606-f3758c999c9e",
+    "slug": "/power-local-llm/subtitle-edit-review",
+    "date": "2026-11-13T17:29:09.250Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper-family transcription and local-LLM or cloud auto-translate; read, not tested.",
+        "new": "Subtitle Edit review: free MIT-licensed subtitle editor with local Whisper speech-to-text and auto-translate via local LLM or cloud; read, not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: whisper/speech-to-text query cluster; meta now carries 'speech-to-text' wording (still read, not tested)",
+    "queries": [
+      "subtitle edit whisper",
+      "subtitle edit + whisper",
+      "subtitle edit best speech to text engine",
+      "subtitle edit auto translate",
+      "subtitle edit review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 152,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1be31556-a27b-4fc6-948f-e5c7b7c6a4c8",
+    "slug": "/ja/power-local-llm/subtitle-edit-review",
+    "date": "2026-11-13T17:29:09.281Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Subtitle Editレビュー：ローカルWhisperと自動翻訳",
+        "new": "Subtitle Editレビュー：文字起こしと自動翻訳"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven (ja): title uses searchers' words 文字起こし and 自動翻訳; also fixes CJK over-length",
+    "queries": [
+      "subtitle edit 文字起こし",
+      "subtitle edit 自動翻訳",
+      "subtitle edit whisper"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 37,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "89a3b74b-8c71-4d7e-9709-1d0e2630270d",
+    "slug": "/zh/power-local-llm/subtitle-edit-review",
+    "date": "2026-11-13T17:29:09.311Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Subtitle Edit 评测：本地 Whisper 与自动翻译",
+        "new": "Subtitle Edit 评测：本地Whisper与自动翻译"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "5cf937a0-9a16-44be-8645-0bec5a530af4",
+    "slug": "/ar/power-local-llm/trilium-notes-review",
+    "date": "2026-11-13T17:29:09.341Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Trilium Notes: ملاحظات مجانية وذكاء اصطناعي اختياري",
+        "new": "مراجعة Trilium Notes: ملاحظات مجانية وذكاء اصطناعي"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Trilium Notes: ملاحظات هرمية مجانية بترخيص AGPL-3.0 لأجهزة Mac وWindows وLinux وخادمك، مع ذكاء اصطناعي اختياري عبر Ollama أو LM Studio أو السحابة.",
+        "new": "مراجعة Trilium Notes: ملاحظات مجانية بترخيص AGPL-3.0 لأجهزة Mac وWindows وLinux وخادمك، مع ذكاء اصطناعي اختياري عبر Ollama أو LM Studio أو السحابة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2cedeea1-6eda-4de1-afb4-6e8d57b0c2a5",
+    "slug": "/ja/power-local-llm/trilium-notes-review",
+    "date": "2026-11-13T17:29:09.371Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Trilium Notesレビュー：無料のセルフホスト対応ノートとAI",
+        "new": "Trilium Notesレビュー：セルフホスト型ノートとAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fe18d7f3-6e05-4304-b7ea-662330b83159",
+    "slug": "/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "date": "2026-11-13T17:42:46.558Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات والسعر",
+        "new": "HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2c5c5460-cf1d-4ecf-94dc-5d268d531fd5",
+    "slug": "/ar/power-local-llm/anarlog-review",
+    "date": "2026-11-13T17:42:46.592Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Anarlog: ملاحظات اجتماعات بالذكاء الاصطناعي بلا بوت",
+        "new": "مراجعة Anarlog: ملاحظات اجتماعات ذكية بلا بوت"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b18c0d1b-23e4-48ae-83eb-10991b01fae8",
+    "slug": "/ja/power-local-llm/anarlog-review",
+    "date": "2026-11-13T17:42:46.623Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Anarlogレビュー：ボット不要のAI議事メモ（旧Hyprnote）",
+        "new": "Anarlogレビュー：AI議事メモ（旧Hyprnote）"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fd9857e5-5332-4208-b13f-100eb028870a",
+    "slug": "/zh/power-local-llm/anarlog-review",
+    "date": "2026-11-13T17:42:46.654Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Anarlog 评测：无机器人的 AI 会议笔记（前身 Hyprnote）",
+        "new": "Anarlog 评测：无机器人会议笔记（原Hyprnote）"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "cfff094d-41d3-4dd9-b97f-19c4d8327103",
+    "slug": "/ar/power-local-llm/asiden-review",
+    "date": "2026-11-13T17:42:46.685Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بشخصيات 3D وLive2D ومحادثة وذاكرة محليتين وذكاء سحابي اختياري. وما لم يُتحقق منه بعد في هذه المراجعة.",
+        "new": "مراجعة Asiden: رفيق ذكاء اصطناعي لسطح مكتب Windows 11 بشخصيات 3D وLive2D ومحادثة وذاكرة محليتين وذكاء سحابي اختياري. وما لم يُتحقق منه."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f2f4c22e-847f-4491-ae96-279e3f68b2ab",
+    "slug": "/ar/power-local-llm/chaterminal-review",
+    "date": "2026-11-13T17:42:46.717Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات لم تُختبر.",
+        "new": "مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات غير مؤكدة"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b770ae0d-5007-4a3a-bb7c-5b5d52a97277",
+    "slug": "/power-local-llm/chaterminal-review",
+    "date": "2026-11-13T17:42:46.748Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads, purchases and unverified claims.",
+        "new": "Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads and unverified claims."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "cfde5293-75ee-44d2-9e01-c0ed9ed62418",
+    "slug": "/zh/power-local-llm/chaterminal-review",
+    "date": "2026-11-13T17:42:46.778Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mobile LM Server 评测：Android 本地模型与 API",
+        "new": "Mobile LM Server 评测：安卓本地模型与 API"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9932b3db-bed3-4bd1-bdc0-7eadcef4fcdc",
+    "slug": "/ar/power-local-llm/laria-review",
+    "date": "2026-11-13T17:42:46.809Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Laria: مساعد ذكاء اصطناعي لـ Android بنماذج محلية",
+        "new": "مراجعة Laria: مساعد ذكي لـ Android بنماذج محلية"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع ومغلق المصدر لـ Android، مع نماذج محلية قابلة للتنزيل ومزودين سحابيين اختياريين وأدوات للصور وهويات قابلة للتخصيص.",
+        "new": "مراجعة Laria: مساعد ذكاء اصطناعي مدفوع ومغلق المصدر لـ Android، مع نماذج محلية قابلة للتنزيل ومزودين سحابيين اختياريين وأدوات للصور وهويات مخصصة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2ab5c9f6-57a7-4da3-910a-2d6a0956e998",
+    "slug": "/ar/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.839Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة LibreDB Studio: محرّر SQL مع وكيل ذكاء اصطناعي محلي",
+        "new": "مراجعة LibreDB Studio: محرر SQL بوكيل ذكاء اصطناعي محلي"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة LibreDB Studio: محرّر SQL مجاني بترخيص MIT في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود.",
+        "new": "مراجعة LibreDB Studio: محرّر SQL مجاني (MIT) في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "8e066776-6885-4961-b8df-d0faa7eaa3b3",
+    "slug": "/de/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.869Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LibreDB-Studio-Rezension: kostenloser, MIT-lizenzierter SQL-Editor im Browser für 41 Datenbank-Engines mit optionalem KI-Agenten für lokales Ollama. Setup, Grenzen.",
+        "new": "LibreDB-Studio-Rezension: kostenloser SQL-Editor (MIT) im Browser für 41 Datenbank-Engines, optionaler KI-Agent mit lokalem Ollama. Setup, Grenzen."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "bac449cc-8399-436c-af0b-916645940da2",
+    "slug": "/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.899Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LibreDB Studio review: a free MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can run on local Ollama. Setup and limits.",
+        "new": "LibreDB Studio review: free, MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can use local Ollama. Setup, limits."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2135760e-ea66-40ac-811c-cf9ba5439cd3",
+    "slug": "/es/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.929Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de LibreDB Studio: editor SQL con agente de IA local",
+        "new": "Reseña de LibreDB Studio: editor SQL con agente IA local"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de LibreDB Studio: editor SQL gratuito con licencia MIT en el navegador para 41 motores de bases de datos, con agente de IA opcional que puede usar Ollama local.",
+        "new": "Reseña de LibreDB Studio: editor SQL gratuito (MIT) en el navegador para 41 motores de bases de datos, con agente de IA opcional que usa Ollama local."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d11d7fd1-9b32-46e6-a425-02de3a75b366",
+    "slug": "/fr/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.961Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de LibreDB Studio : éditeur SQL gratuit sous licence MIT dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local.",
+        "new": "Test de LibreDB Studio : éditeur SQL gratuit (MIT) dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "c11c2eea-2f33-4c51-9632-4c617e0352e0",
+    "slug": "/ja/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:46.991Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LibreDB Studioレビュー：ローカルAIエージェント対応SQLエディタ",
+        "new": "LibreDB Studioレビュー：AI対応SQLエディタ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a390b75b-6e92-4fc6-9eaa-c888b387d25e",
+    "slug": "/pt/power-local-llm/libredb-studio-review",
+    "date": "2026-11-13T17:42:47.022Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do LibreDB Studio: editor SQL com agente de IA local",
+        "new": "Análise do LibreDB Studio: editor SQL com agente IA local"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Análise do LibreDB Studio: editor SQL gratuito com licença MIT no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que pode usar o Ollama local.",
+        "new": "Análise do LibreDB Studio: editor SQL gratuito (MIT) no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que usa Ollama local."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a5a38375-050d-4cfc-87cb-5a1260520f74",
+    "slug": "/ar/power-local-llm/linkwarden-review",
+    "date": "2026-11-13T17:42:47.053Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Linkwarden: إشارات مرجعية ذاتية الاستضافة ووسم ذكي",
+        "new": "مراجعة Linkwarden: إشارات مرجعية ذاتية الاستضافة"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Linkwarden: مدير إشارات مرجعية ذاتي الاستضافة يؤرشف الصفحات ويصنّف الروابط بنموذج Ollama محلي أو ذكاء سحابي. إعداد Docker وسعر Cloud؛ دون تجربة.",
+        "new": "مراجعة Linkwarden: مدير إشارات مرجعية ذاتي الاستضافة يؤرشف الصفحات ويصنّف الروابط بنموذج Ollama محلي أو ذكاء سحابي. إعداد Docker وسعر Cloud؛ دون تجربة"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3f9d5980-a194-40ab-a6c7-2080e739e199",
+    "slug": "/ja/power-local-llm/linkwarden-review",
+    "date": "2026-11-13T17:42:47.082Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Linkwardenレビュー：ローカルAI対応のセルフホスト型ブックマーク",
+        "new": "Linkwardenレビュー：セルフホスト型ブックマーク管理"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "693107a7-64c8-42fa-b094-735ff5da8e82",
+    "slug": "/ar/power-local-llm/lm-mini-review",
+    "date": "2026-11-13T17:42:47.112Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة LM Mini: تطبيق دردشة مجاني لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وماذا تقول سياسة الخصوصية.",
+        "new": "مراجعة LM Mini: دردشة مجانية لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وما تقوله سياسة الخصوصية."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a0eec91b-a551-4e55-bbbb-196fe9e522f6",
+    "slug": "/zh/power-local-llm/lm-mini-review",
+    "date": "2026-11-13T17:42:47.142Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Mini 评测：设备端与家用服务器 AI 的 iPhone 应用",
+        "new": "LM Mini 评测：设备端与家用服务器 AI 应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "18d4b924-cb77-404b-a4f1-1dfd12feb503",
+    "slug": "/zh/power-local-llm/localmcp-review",
+    "date": "2026-11-13T17:42:47.171Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LocalMCP 评测：适用于 Mac 数据的本地 MCP 服务器",
+        "new": "LocalMCP 评测：Mac 数据的本地 MCP 服务器"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f0e4f2b5-0b42-4fbf-8a74-65bf582dc874",
+    "slug": "/ja/power-local-llm/on-device-ai-translator-review",
+    "date": "2026-11-13T17:42:47.201Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On-Device AI Translatorレビュー：オフライン翻訳アプリ",
+        "new": "On-Device AI Translatorレビュー"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1146b034-ae68-46fc-ae25-4ca0838fbe14",
+    "slug": "/zh/power-local-llm/on-device-ai-translator-review",
+    "date": "2026-11-13T17:42:47.231Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On-Device AI Translator 评测:iPhone 离线翻译",
+        "new": "On-Device AI Translator 评测:离线翻译"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9c35e9ab-24df-4ede-bedd-219aa7f6b362",
+    "slug": "/ar/power-local-llm/on-device-llm-review",
+    "date": "2026-11-13T17:42:47.261Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وواجهة API محلية اختيارية.",
+        "new": "مراجعة On Device LLM: تطبيق دردشة مجاني ومغلق المصدر على Android يقول إنه يشغّل نماذج مفتوحة الأوزان دون اتصال، مع استيراد GGUF وAPI محلي اختياري."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1c7d4803-3cfb-4521-b7b0-27cdaa9ce122",
+    "slug": "/ja/power-local-llm/on-device-llm-review",
+    "date": "2026-11-13T17:42:47.291Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On Device LLMレビュー:Android向け無料オフラインチャット",
+        "new": "On Device LLMレビュー:Androidオフライン"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "25307f86-42d7-4360-9505-e5bb67dd6d7d",
+    "slug": "/zh/power-local-llm/on-device-llm-review",
+    "date": "2026-11-13T17:42:47.321Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "On Device LLM 评测：免费离线 Android 聊天应用",
+        "new": "On Device LLM 评测：免费离线 Android 聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "cbffea1f-3e25-4efc-ac0e-d38a5eb94d3e",
+    "slug": "/ja/power-local-llm/openclient-review",
+    "date": "2026-11-13T17:42:47.351Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenClientレビュー:Ollama・LiteLLM向け無料チャット",
+        "new": "OpenClientレビュー:Ollama・LiteLLM対応"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "4800df8c-a6c3-41b7-b562-3e7a46c9496e",
+    "slug": "/zh/power-local-llm/openclient-review",
+    "date": "2026-11-13T17:42:47.382Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenClient 评测：Ollama 与 LiteLLM 免费聊天应用",
+        "new": "OpenClient评测：Ollama与LiteLLM聊天应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "aa3eabd1-26a3-40bf-b0a0-558f393e0920",
+    "slug": "/ar/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.411Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية والنقاط غير المؤكدة.",
+        "new": "مراجعة Phone Harness: أداة سطر أوامر مفتوحة المصدر تتيح لوكيل برمجة تشغيل iPhone أو Android. الإعداد وأسعار السحابة وسياسة الخصوصية وأسئلة مفتوحة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "0fbca9d4-628b-4e53-8cbe-714d5d25edcd",
+    "slug": "/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.442Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, cloud pricing, privacy policy and open questions.",
+        "new": "Phone Harness review: open-source CLI that lets a coding agent operate an iPhone or Android phone. Setup, MCP, cloud pricing, privacy and open questions."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'phone harness mcp' 23 impr; meta now names MCP (body covers the hosted MCP endpoint)",
+    "queries": [
+      "phone harness",
+      "phone-harness",
+      "phone harness mcp",
+      "phone harness github",
+      "mobile harness",
+      "android harness"
+    ],
+    "baseline": {
+      "position": 10.1,
+      "impressions": 220,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b2be57ba-d536-4e63-be33-a7b8f130e2c2",
+    "slug": "/ja/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.471Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phone Harness レビュー:iPhone・Android操作",
+        "new": "Phone Harnessレビュー:iPhoneとAndroid"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "169d0588-b099-45bc-897d-713845b43b31",
+    "slug": "/zh/power-local-llm/phone-harness-review",
+    "date": "2026-11-13T17:42:47.501Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phone Harness评测：让智能体操控iPhone与Android手机",
+        "new": "Phone Harness评测：智能体操控iPhone与安卓"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "4e728dab-0571-46cc-98ba-7974b48c5cfd",
+    "slug": "/zh/power-local-llm/photoprism-review",
+    "date": "2026-11-13T17:42:47.531Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PhotoPrism 评测：自托管 AI 照片库，Community 版免费",
+        "new": "PhotoPrism 评测：自托管 AI 照片库，社区版免费"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "642d8ccb-3b3c-4cf7-8f14-6ff7bfa76861",
+    "slug": "/ja/power-local-llm/picoclaw-review",
+    "date": "2026-11-13T17:42:47.560Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PicoClawレビュー：Go製の軽量オープンソースAIエージェント",
+        "new": "PicoClawレビュー：Go製オープンソースAIエージェント"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e70f230d-d306-4d88-a9dc-b8910ec54b7d",
+    "slug": "/zh/power-local-llm/picoclaw-review",
+    "date": "2026-11-13T17:42:47.589Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "PicoClaw 评测：Sipeed 用 Go 编写的免费 AI 智能体，适用于小型开发板、Android 和桌面，支持 Ollama 与 vLLM，MIT 许可证。处于早期阶段，未经实测。",
+        "new": "PicoClaw 评测：Sipeed 用 Go 编写的免费 AI 智能体，适用于小型开发板、Android 和桌面，支持 Ollama 与 vLLM，MIT 许可证。处于早期阶段，尚未验证。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + risk-gate R4: zh meta said 实测 (measured) but page did not measure; reworded to 尚未验证 (not yet verified)",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2310b1d6-4a6d-41ec-9a5d-3f6928f15f55",
+    "slug": "/ar/power-local-llm/pocketllm-lite-review",
+    "date": "2026-11-13T17:42:47.619Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة PocketLLM Lite: دردشة ذكاء اصطناعي محلية لـ Android",
+        "new": "مراجعة PocketLLM Lite: دردشة AI محلية لـ Android"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e80d67ed-b04d-4b0c-9a3f-a93d36ebe6c5",
+    "slug": "/ja/power-local-llm/pocketllm-lite-review",
+    "date": "2026-11-13T17:42:47.649Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PocketLLM Liteレビュー：AndroidのローカルAIチャット",
+        "new": "PocketLLM Liteレビュー：AndroidローカルAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "753a517b-69d0-4088-902b-62b298ecea53",
+    "slug": "/zh/power-local-llm/pocketllm-lite-review",
+    "date": "2026-11-13T17:42:47.678Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "PocketLLM Lite 评测：Android 本地 AI 聊天应用",
+        "new": "PocketLLM Lite 评测：Android 本地AI聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "5cf79fa3-6fb2-4d9b-a30a-e390001ca8c1",
+    "slug": "/ar/power-local-llm/reins-review",
+    "date": "2026-11-13T17:42:47.707Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "مراجعة Reins: تطبيق دردشة لـ iPhone مع Ollama وLM Studio",
+        "new": "مراجعة Reins: تطبيق دردشة iPhone مع Ollama وLM Studio"
+      },
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Reins: تطبيق دردشة لـ iPhone مع Ollama وLM Studio",
+        "new": "مراجعة Reins: تطبيق دردشة iPhone مع Ollama وLM Studio"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e6ad5948-f50e-4cfc-87e0-42ad8e56ddfc",
+    "slug": "/ja/power-local-llm/reins-review",
+    "date": "2026-11-13T17:42:47.737Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reinsレビュー：Ollama・LM Studio向けiPhoneチャット",
+        "new": "Reinsレビュー：Ollama対応iPhoneチャット"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "6b656415-43c0-4185-ad7e-90e1ed3e19e8",
+    "slug": "/zh/power-local-llm/reins-review",
+    "date": "2026-11-13T17:42:47.766Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reins 评测：Ollama、LM Studio 的 iPhone 客户端",
+        "new": "Reins 评测：Ollama 的 iPhone 客户端"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f7dd27bb-572d-4848-bd4f-167c5a7fd01c",
+    "slug": "/ja/power-local-llm/tolaria-review",
+    "date": "2026-11-13T17:42:47.797Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Tolariaレビュー：GitとAIに対応するMarkdownノート",
+        "new": "Tolariaレビュー：Git管理のMarkdownノートとAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "ca30631a-e8f9-4886-abaa-f591f7999eb7",
+    "slug": "/zh/power-local-llm/tolaria-review",
+    "date": "2026-11-13T17:42:47.827Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Tolaria 评测：支持 Git 与 AI 的 Markdown 笔记",
+        "new": "Tolaria 评测：Git+AI 的 Markdown 笔记"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "93602999-c3b0-446e-a123-5a9bf10e5c1f",
+    "slug": "/ar/power-local-llm/tonfotos-review",
+    "date": "2026-11-13T17:42:47.857Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة مفتوحة عن الخصوصية.",
+        "new": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة خصوصية مفتوحة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "99e228bf-2427-4b56-a909-fc93d7391921",
+    "slug": "/power-local-llm/voicebox-review",
+    "date": "2026-11-13T17:42:47.886Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Voicebox review: MIT-licensed local voice studio for Mac and Windows with voice cloning, text-to-speech, Whisper dictation and an MCP server. Not tested.",
+        "new": "Voicebox review: free MIT-licensed local voice studio for Mac and Windows. Voice cloning, TTS, Whisper dictation, requirements, privacy. Not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass: GSC-driven: 'is voicebox free' and 'system requirements' queries; meta now says free, requirements, privacy (body has Plans, Requirements, Data Flow sections); 2 targetKeywords added",
+    "queries": [
+      "voicebox github",
+      "voicebox",
+      "voicebox system requirements",
+      "is voicebox free",
+      "is voicebox legit",
+      "voicebox.sh review",
+      "voicebox review",
+      "voice studio vs voicebox"
+    ],
+    "baseline": {
+      "position": 8.3,
+      "impressions": 161,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-13"
+    },
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "71ba7d49-6734-461d-b8cf-3969b1a5eb8e",
+    "slug": "/ar/power-local-llm/xberg-review",
+    "date": "2026-11-13T17:42:47.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص.",
+        "new": "Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "240b7463-a56e-48c7-a18d-d6a3b61d1c60",
+    "slug": "/ja/power-local-llm/xberg-review",
+    "date": "2026-11-13T17:42:47.946Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Xbergレビュー：LLM・RAG向けオープンソース文書抽出エンジン",
+        "new": "Xbergレビュー：LLM向けオープンソース文書抽出エンジン"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1aab8a19-f617-44df-95f7-68f01f3f03b2",
+    "slug": "/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.706Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark: Specs and Price",
+        "new": "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark: Specs and Price"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fdc5873c-b434-4a5e-b645-91e503ac52a7",
+    "slug": "/fr/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.736Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark : specs et prix",
+        "new": "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark : specs et prix"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9b393e50-698b-45a2-9798-f564facf32e6",
+    "slug": "/ja/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.767Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark: 仕様と価格を比較",
+        "new": "GMKtec EVO-X5 Pro対DGX Spark：仕様"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b5c9ac17-faa7-4ad9-8624-5da9983b0b30",
+    "slug": "/pt/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.797Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro vs DGX Spark: specs e preço",
+        "new": "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark: specs e preço"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3ec21db2-f63d-4c95-9714-7343f43dac16",
+    "slug": "/zh/local-llms/gmktec-evo-x5-pro-local-ai-workstation",
+    "date": "2026-11-13T17:52:32.827Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GMKtec EVO-X5 Pro对比DGX Spark：规格与价格",
+        "new": "GMKtec EVO-X5 Pro对比DGX Spark：规格"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "44c91b70-00a1-426a-a549-0ff102987dd0",
+    "slug": "/ar/power-local-llm/amical-review",
+    "date": "2026-11-13T17:52:32.857Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Amical: تطبيق إملاء مجاني ومفتوح المصدر لأجهزة Mac",
+        "new": "مراجعة Amical: إملاء مجاني مفتوح المصدر لـ Mac وWindows"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f43182f0-b294-43b0-bce4-b7a25d71a12e",
+    "slug": "/power-local-llm/amical-review",
+    "date": "2026-11-13T17:52:32.886Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Amical Review: Free Open-Source Dictation App",
+        "new": "Amical Review: Free Open-Source Dictation for Mac, Windows"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1007e566-a500-4912-9d8e-89d3878d9e9e",
+    "slug": "/de/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:32.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Argos Translate Rezension: kostenlose, MIT-lizenzierte Offline-Übersetzung für Python und Kommandozeile, Installation mit pip. Wartungshinweis. Nicht getestet.",
+        "new": "Argos Translate Rezension: kostenlose Offline-Übersetzung (MIT) für Python und Kommandozeile, per pip installiert. Wartungshinweis. Nicht getestet."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "6088a738-57fe-4615-b0b0-b3d96f7e2af4",
+    "slug": "/es/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:32.946Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Argos Translate: traducción sin conexión gratuita con licencia MIT para Python y la línea de comandos, instalada con pip. Aviso de mantenimiento. Sin probar.",
+        "new": "Reseña de Argos Translate: traducción sin conexión gratuita (licencia MIT) para Python y la terminal, con pip. Aviso de mantenimiento. Sin probar."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "da5ff789-462e-40ec-b103-8ee530018831",
+    "slug": "/fr/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:32.977Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test d’Argos Translate : traduction hors ligne gratuite sous licence MIT pour Python et la ligne de commande, installée avec pip. Avertissement de maintenance. Non testé.",
+        "new": "Test d’Argos Translate : traduction hors ligne gratuite (MIT) pour Python et la ligne de commande, via pip. Avertissement de maintenance. Non testé."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "68260474-d7c0-4a53-866e-d3d65434ef8e",
+    "slug": "/ja/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:33.006Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Argos Translateレビュー：無料のオフライン翻訳ツール",
+        "new": "Argos Translateレビュー：無料オフライン翻訳ツール"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1939e81f-95ff-4bc5-8cfb-f13acf46081e",
+    "slug": "/zh/power-local-llm/argos-translate-review",
+    "date": "2026-11-13T17:52:33.036Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Argos Translate评测：适用于Python和命令行的免费MIT许可离线翻译，用pip安装。含维护警告。未经测试。",
+        "new": "Argos Translate评测：适用于Python和命令行的免费MIT许可离线翻译库，用pip安装。含维护警告，PromptQuorum未做测试。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): zh meta under 70-char minimum; now also says PromptQuorum did not test",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f1c7d969-1b3d-422c-af98-58883a8a7937",
+    "slug": "/ar/power-local-llm/cocoindex-review",
+    "date": "2026-11-13T17:52:33.067Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لأنظمة RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر عمليًا.",
+        "new": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لـ RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "20c69b7c-36bc-4210-9170-2a1b45f3bac0",
+    "slug": "/ja/power-local-llm/compactifai-app-review",
+    "date": "2026-11-13T17:52:33.096Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "CompactifAI APPレビュー:オフラインとクラウドのAI",
+        "new": "CompactifAI APPレビュー:オフラインとクラウドAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "57894b81-99f1-4e17-815f-fa90187c3752",
+    "slug": "/ar/power-local-llm/compass-local-ai-review",
+    "date": "2026-11-13T17:52:33.126Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Compass - Local AI: دردشة ذكاء اصطناعي على iPhone",
+        "new": "مراجعة Compass - Local AI: دردشة ذكاء اصطناعي لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9cf6113a-7a0d-4027-9697-1821d1a70150",
+    "slug": "/zh/power-local-llm/compass-local-ai-review",
+    "date": "2026-11-13T17:52:33.155Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Compass - Local AI 评测:设备端 AI 聊天应用",
+        "new": "Compass - Local AI 评测:设备端 AI 聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "83c74df8-4c3c-4d24-aa0e-f0321d15153e",
+    "slug": "/ar/power-local-llm/evershelf-review",
+    "date": "2026-11-13T17:52:33.185Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة EverShelf: مخزن طعام ذاتي الاستضافة بذكاء اختياري",
+        "new": "مراجعة EverShelf: مخزن طعام مستضاف ذاتيًا بذكاء اختياري"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d6d85c72-e3b3-4230-b95b-31969e9633a4",
+    "slug": "/ar/power-local-llm/frankly-ai-review",
+    "date": "2026-11-13T17:52:33.214Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Frankly AI: دردشة ذكاء اصطناعي على iPhone بلا حساب",
+        "new": "مراجعة Frankly AI: دردشة ذكاء اصطناعي iPhone بلا حساب"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Frankly AI: تطبيق دردشة مجاني لـ iPhone بنماذج محلية قابلة للتنزيل وشخصيات متعددة. ما تؤكده صفحة المتجر وصفحة المنتج وسياسة الخصوصية وما لا تؤكده.",
+        "new": "مراجعة Frankly AI: تطبيق دردشة مجاني لـ iPhone بنماذج محلية قابلة للتنزيل وشخصيات. ما تؤكده صفحة المتجر وصفحة المنتج وسياسة الخصوصية وما لا تؤكده."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fd65a5ac-eab2-475e-b4ea-ea3dfc9eb8f4",
+    "slug": "/ar/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.245Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ يناير 2025، فتحقق قبل الاعتماد.",
+        "new": "مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ بداية 2025، فتحقق قبل الاعتماد."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "91a9e503-1ba3-4430-851a-ba31fe9438af",
+    "slug": "/de/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.275Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Januar 2025 kein Release – vorher prüfen.",
+        "new": "fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Anfang 2025 kein Release – vorher prüfen."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2f5e3961-6a76-4d39-a071-e10eb08b1fe8",
+    "slug": "/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.313Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since January 2025, so check before relying on it.",
+        "new": "fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since early 2025, so check before relying on it."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "86290d1b-0beb-437c-90fc-fc4837b2023f",
+    "slug": "/es/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.344Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde enero de 2025: compruébalo antes.",
+        "new": "Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde inicios de 2025: compruébalo antes."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a096910a-526a-4940-adcd-e5c106176897",
+    "slug": "/fr/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.374Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis janvier 2025 : vérifiez avant usage.",
+        "new": "Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis début 2025 : vérifiez avant usage."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "491250a1-17f3-4a4a-b8e5-5940aef00777",
+    "slug": "/ja/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.404Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年1月以降リリースなし、利用前に確認を。",
+        "new": "fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年初頭以降リリースなし、利用前に確認を。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "224ceb83-832c-48fc-9633-ee29db46cecd",
+    "slug": "/ko/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.434Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 1월 이후 릴리스가 없으니 사용 전 확인하십시오.",
+        "new": "fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 초 이후 릴리스가 없으니 사용 전 확인하십시오."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f01fc919-cbd6-440f-83a1-22a6a2b6b595",
+    "slug": "/pt/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.465Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde janeiro de 2025: confira antes de usar.",
+        "new": "Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde o início de 2025: confira antes de usar."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "8c5caed8-bf0f-47f3-939a-0dbe7e33eade",
+    "slug": "/zh/power-local-llm/fullmoon-review",
+    "date": "2026-11-13T17:52:33.495Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年 1 月后无新版本，使用前请先确认。",
+        "new": "fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年初以来无新版本，使用前请先确认。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data) + repo month rule: meta named a month ('since January 2025'); reworded to 'since early 2025' in all locales",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "28391cd4-ae73-4bf0-9a2c-56e1b05a7d68",
+    "slug": "/ar/power-local-llm/genva-review",
+    "date": "2026-11-13T17:52:33.527Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Genva: تطبيق مجاني لـ iPhone وiPad يولّد الصور على الجهاز بعد تنزيل النموذج مرة واحدة. الميزات والأسعار وملصق الخصوصية والادعاءات غير المتحقق منها.",
+        "new": "مراجعة Genva: تطبيق مجاني لـ iPhone وiPad يولّد الصور على الجهاز بعد تنزيل النموذج مرة واحدة. الميزات والأسعار وملصق الخصوصية وما لم يُتحقق منه."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e77c0b92-842e-4d48-919e-d47a28dbc8b7",
+    "slug": "/ar/power-local-llm/haplo-ai-review",
+    "date": "2026-11-13T17:52:33.559Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Haplo AI: دردشة ذكاء اصطناعي دون إنترنت لـ iPhone",
+        "new": "مراجعة Haplo AI: دردشة ذكاء اصطناعي دون اتصال لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f387f8e3-8cb0-46ee-a9f6-c03a3f5a19ea",
+    "slug": "/ja/power-local-llm/haplo-ai-review",
+    "date": "2026-11-13T17:52:33.592Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Haplo AIレビュー：iPhone・Macのオフラインチャット",
+        "new": "Haplo AIレビュー：iPhone・Mac向けオフラインAI"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "79db75c1-fff8-4649-9442-321713b5d816",
+    "slug": "/zh/power-local-llm/haplo-ai-review",
+    "date": "2026-11-13T17:52:33.626Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Haplo AI 评测：iPhone 与 Mac 离线 AI 聊天",
+        "new": "Haplo AI 评测：iPhone 与 Mac 离线聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "bdbf2874-c019-4e72-8fa2-4a31fc1df91e",
+    "slug": "/ar/power-local-llm/iimagine-desktop-review",
+    "date": "2026-11-13T17:52:33.659Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة IIMAGINE Desktop: تطبيق سطح مكتب مفتوح المصدر (MIT) بمحرك محلي مدمج ودردشة مع المستندات وصوت وواجهة API على localhost. الإصدار 0.1.2؛ لم يُختبر.",
+        "new": "مراجعة IIMAGINE Desktop: تطبيق سطح مكتب مفتوح المصدر (MIT) بمحرك محلي ودردشة مع المستندات وصوت وواجهة API على localhost. الإصدار 0.1.2؛ لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9214f1a1-4519-42ea-b05c-1b569995f947",
+    "slug": "/pt/power-local-llm/iimagine-desktop-review",
+    "date": "2026-11-13T17:52:33.692Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do IIMAGINE Desktop: chat com IA local",
+        "new": "Análise do IIMAGINE Desktop: chat com IA local (MIT)"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "adee0f42-d41d-43b0-82d1-4d647329a0a1",
+    "slug": "/ar/power-local-llm/kernelai-review",
+    "date": "2026-11-13T17:52:33.725Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة KernelAI: دردشة ذكاء اصطناعي بلا إنترنت لـ iPhone",
+        "new": "مراجعة KernelAI: دردشة ذكاء اصطناعي دون اتصال لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2c6496bf-962b-4739-af8a-83758ea48118",
+    "slug": "/zh/power-local-llm/kernelai-review",
+    "date": "2026-11-13T17:52:33.757Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KernelAI 评测：iPhone/Android 免费离线 AI 聊天",
+        "new": "KernelAI 评测：iPhone/安卓离线 AI 聊天"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "32b65315-ffa4-4b06-937f-63de5c0e3796",
+    "slug": "/ar/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.789Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Kruvo: زميل ذكاء اصطناعي لنظامي Windows وmacOS يعمل في مجلدك بمفتاح API الخاص بك أو Ollama ويسأل قبل التنفيذ. السعر والمتطلبات والنقاط المفتوحة.",
+        "new": "مراجعة Kruvo: زميل ذكاء اصطناعي لنظامي Windows وmacOS يعمل في مجلدك بمفتاح API أو Ollama ويسأل قبل التنفيذ. السعر والمتطلبات والنقاط المفتوحة."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "84d228dd-89ef-47fc-8492-f73145a1f2c4",
+    "slug": "/de/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.821Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Kruvo-Rezension: KI-Kollege für Windows und macOS, der in Ihrem Ordner mit eigenem API-Schlüssel oder Ollama arbeitet und vorher fragt. Preis, Bedarf, offene Punkte.",
+        "new": "Kruvo-Rezension: KI-Kollege für Windows und macOS, arbeitet im Ordner mit eigenem API-Schlüssel oder Ollama und fragt vorher. Preis, Bedarf, offene Punkte."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "6a760886-ce2e-473f-af4d-ab75ccf3b90f",
+    "slug": "/es/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.855Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de Kruvo: compañero de IA de escritorio Windows y Mac",
+        "new": "Reseña de Kruvo: compañero de IA para Windows y Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Kruvo: compañero de IA para Windows y macOS que trabaja en tu carpeta con tu clave API u Ollama y pregunta antes de actuar. Precio, requisitos, dudas.",
+        "new": "Reseña de Kruvo: compañero de IA para Windows y macOS que trabaja en tu carpeta con tu clave API u Ollama y pregunta antes. Precio, requisitos, dudas."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e987cdca-6987-4e10-9239-fb0aa88760e5",
+    "slug": "/fr/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.888Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Kruvo : collègue IA pour Windows et macOS qui travaille dans votre dossier avec votre clé API ou Ollama et demande avant d’agir. Prix, besoins, points ouverts.",
+        "new": "Test de Kruvo : collègue IA pour Windows et macOS qui travaille dans votre dossier avec votre clé API ou Ollama, demande avant d’agir. Prix, besoins."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b6c2f173-fce5-4a4c-8e4e-d9df8f57c94e",
+    "slug": "/pt/power-local-llm/kruvo-review",
+    "date": "2026-11-13T17:52:33.921Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Kruvo: colega de IA para Windows e macOS que trabalha na sua pasta com sua chave de API ou Ollama e pergunta antes de agir. Preço, requisitos, pontos em aberto.",
+        "new": "Análise do Kruvo: colega de IA para Windows e macOS que trabalha na sua pasta com chave de API ou Ollama e pergunta antes. Preço, requisitos, dúvidas."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a266f226-02c5-43f7-9249-8fb7f6d8fbdb",
+    "slug": "/ar/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:33.954Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة LastBrowser: متصفح ذكاء اصطناعي مع Sidekick وOllama",
+        "new": "مراجعة LastBrowser: متصفح ذكاء اصطناعي يدعم Ollama"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "166ff862-edef-4c56-ac88-2dbf984d853c",
+    "slug": "/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:33.986Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LastBrowser review: a free Windows browser (Linux preview) with a built-in Sidekick AI sidebar that works with local Ollama models. Licence, privacy, risks.",
+        "new": "LastBrowser review: a free Windows browser (Linux preview) with a built-in Sidekick AI sidebar for local Ollama models. Licence, privacy, risks."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9a344899-9be4-4331-85d5-8e19929e7ab6",
+    "slug": "/ja/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:34.019Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LastBrowserレビュー：Ollama対応Sidekick搭載のAIブラウザ",
+        "new": "LastBrowserレビュー：Ollama対応のAIブラウザ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d96d1fc0-37e6-4256-a759-b968f222c706",
+    "slug": "/zh/power-local-llm/lastbrowser-review",
+    "date": "2026-11-13T17:52:34.051Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LastBrowser 评测：带 Ollama 助手的 AI 浏览器",
+        "new": "LastBrowser 评测：支持Ollama的AI浏览器"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "88d75f71-578c-4399-b30c-e12e43eebac7",
+    "slug": "/ja/power-local-llm/llm-vision-review",
+    "date": "2026-11-13T17:52:34.084Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Visionレビュー：Home Assistantのカメラ解析",
+        "new": "LLM Visionレビュー：Home Assistant連携"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "67737b8b-ef57-41c2-b314-181331511490",
+    "slug": "/zh/power-local-llm/llm-vision-review",
+    "date": "2026-11-13T17:52:34.115Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Vision 评测：Home Assistant 摄像头分析",
+        "new": "LLM Vision评测：Home Assistant摄像头分析"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b32d9576-850e-4959-a7fd-3f6338e71771",
+    "slug": "/ar/power-local-llm/local-ai-on-android-guide",
+    "date": "2026-11-13T17:52:34.146Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "الذكاء الاصطناعي المحلي على Android 2026: ما يعمل وما لا",
+        "new": "ذكاء اصطناعي محلي على Android 2026: ما يعمل وما لا"
+      },
+      {
+        "field": "metaDescription",
+        "old": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، من الدردشة إلى الصوت.",
+        "new": "الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، كالدردشة والصوت."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3c872542-b1a6-4a84-8e9e-077c27389537",
+    "slug": "/power-local-llm/local-ai-on-android-guide",
+    "date": "2026-11-13T17:52:34.177Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover mapped to chat, voice, vision, documents and more.",
+        "new": "Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover by chat, voice, vision, documents and more."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a0d3000f-155a-4760-930f-6d38bf1b6d2b",
+    "slug": "/ar/power-local-llm/local-ai-on-iphone-guide",
+    "date": "2026-11-13T17:52:34.209Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "الذكاء الاصطناعي المحلي على iPhone 2026: ما يعمل وما يتعذر",
+        "new": "ذكاء اصطناعي محلي على iPhone 2026: ما يعمل وما لا يعمل"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ما يستطيع الذكاء الاصطناعي المحلي على iPhone فعله وما لا يستطيعه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store والتطبيقات حسب الاستخدام.",
+        "new": "ما يمكن للذكاء الاصطناعي المحلي على iPhone فعله وما لا يمكنه في 2026: حدود الشريحة وRAM وApple Intelligence وقواعد App Store وتطبيقات حسب الاستخدام."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e4472a6c-d924-4d0c-b0ab-12137f826979",
+    "slug": "/ar/power-local-llm/local-operator-review",
+    "date": "2026-11-13T17:52:34.240Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والإصدار والتثبيت؛ دون اختبار.",
+        "new": "مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والتثبيت؛ دون اختبار."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "e117100c-0f6d-4e10-969b-1abccdc586d7",
+    "slug": "/ja/power-local-llm/local-operator-review",
+    "date": "2026-11-13T17:52:34.270Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local Operatorレビュー：無料のデスクトップAIエージェント",
+        "new": "Local Operatorレビュー：無料AIエージェントアプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2a3ceeae-da2a-404a-a080-0cd1701d67d5",
+    "slug": "/ar/power-local-llm/lyonesse-review",
+    "date": "2026-11-13T17:52:34.302Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Lyonesse: تفريغ صوتي بالذكاء الاصطناعي على Mac",
+        "new": "مراجعة Lyonesse: تفريغ صوتي دون اتصال على iPhone وMac"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "ed3744e8-c598-4b0e-8dcf-84fea5cc69c3",
+    "slug": "/ja/power-local-llm/lyonesse-review",
+    "date": "2026-11-13T17:52:34.333Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lyonesseレビュー：iPhone・Mac向けオフラインAI文字起こし",
+        "new": "Lyonesseレビュー：オフラインAI文字起こしアプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "0ab8f4fc-4a2a-4736-af06-93fd7adbc21f",
+    "slug": "/zh/power-local-llm/lyonesse-review",
+    "date": "2026-11-13T17:52:34.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lyonesse 评测：iPhone 和 Mac 离线 AI 转录应用",
+        "new": "Lyonesse 评测：iPhone/Mac 离线 AI 转录"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "0bc60a69-1b51-4b24-91fc-702ad3384cf3",
+    "slug": "/ar/power-local-llm/meetini-review",
+    "date": "2026-11-13T17:52:34.396Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Meetini: تطبيق Mac مدفوع للتسميات التوضيحية المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.",
+        "new": "مراجعة Meetini: تطبيق Mac مدفوع للتسميات المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "8cca517e-71b2-40ee-8820-3970b7f65e51",
+    "slug": "/power-local-llm/meetini-review",
+    "date": "2026-11-13T17:52:34.427Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Meetini review: paid Mac app for live captions, meeting notes and interview prep. The maker says captions run locally; its privacy notice says audio goes to OpenAI.",
+        "new": "Meetini review: paid Mac app for live captions, meeting notes, interview prep. Maker says captions run locally; privacy notice says audio goes to OpenAI."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "13b2d3de-878b-4de1-8cef-4a513172d2e9",
+    "slug": "/ja/power-local-llm/murmur-review",
+    "date": "2026-11-13T17:52:34.459Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Murmurレビュー：iPhone上で作曲するオンデバイスAI音楽アプリ",
+        "new": "Murmurレビュー：iPhoneで作曲するオンデバイスAI音楽"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "1568b131-bb9d-4f5f-abbf-758411624968",
+    "slug": "/ar/power-local-llm/nekoni-review",
+    "date": "2026-11-13T17:52:34.490Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Nekoni: وكيل ذكاء اصطناعي مستضاف ذاتيًا لـ iPhone",
+        "new": "مراجعة Nekoni: وكيل AI مستضاف ذاتيًا لـ iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "14930569-394c-456a-9c19-4b24ca49380e",
+    "slug": "/ja/power-local-llm/openvoiceos-review",
+    "date": "2026-11-13T17:52:34.520Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open Voice OS レビュー：オープンソース音声アシスタント",
+        "new": "Open Voice OSレビュー：OSS音声アシスタント"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b239f953-7dc2-45c7-9c7d-beb2732a3041",
+    "slug": "/ar/power-local-llm/pajdo-review",
+    "date": "2026-11-13T17:52:34.552Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة باستخدام Apple Intelligence على الجهاز. الأسعار والخصوصية.",
+        "new": "مراجعة Pajdo: تطبيق مجاني لأجهزة iPhone وApple Watch يشرح بيانات Apple Health ويجيب عن الأسئلة عبر Apple Intelligence على الجهاز. الأسعار والخصوصية."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "664ea2a9-a828-429b-af8b-9e8b1666e0c5",
+    "slug": "/ja/power-local-llm/pajdo-review",
+    "date": "2026-11-13T17:52:34.581Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pajdoレビュー：iPhone上で動くApple Healthアプリ",
+        "new": "Pajdoレビュー：iPhoneのApple Healthアプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9feb2423-d9e1-427d-8b78-0a5a44b2d478",
+    "slug": "/zh/power-local-llm/pajdo-review",
+    "date": "2026-11-13T17:52:34.611Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pajdo 评测：iPhone 上的 Apple Health 助手",
+        "new": "Pajdo 评测：Apple Health 数据助手"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d4cc6514-b348-4122-b42a-a1e9bca53fa0",
+    "slug": "/ar/power-local-llm/phantasm-review",
+    "date": "2026-11-13T17:52:34.641Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Phantasm: دردشة بالذكاء الاصطناعي لخادمك على iPhone",
+        "new": "مراجعة Phantasm: دردشة ذكاء اصطناعي لخادمك على iPhone"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "bd097b52-dac3-49f7-8c02-73efa7e3ad4a",
+    "slug": "/ja/power-local-llm/phantasm-review",
+    "date": "2026-11-13T17:52:34.671Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phantasmレビュー：iPhone向けセルフホストAIチャット",
+        "new": "Phantasmレビュー：iPhone用セルフホストAIチャット"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d2d72094-cb30-4372-9940-3f4e9a8c427a",
+    "slug": "/ar/power-local-llm/ramen-review",
+    "date": "2026-11-13T17:52:34.701Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة RAMen: ذاكرة جلسات الذكاء الاصطناعي المحلي وسرعته",
+        "new": "مراجعة RAMen: ذاكرة جلسات محلية وتسريع المحادثات"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "3c25f34f-a1f2-4545-a680-ce1252ccf0f4",
+    "slug": "/ja/power-local-llm/sablate-review",
+    "date": "2026-11-13T17:52:34.730Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Sablate レビュー：Windows・Mac向け字幕生成アプリ",
+        "new": "Sablateレビュー：Windows・Mac向け字幕生成アプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fc0809dc-4f13-42b3-b6a1-8e937e6ea8ab",
+    "slug": "/ar/power-local-llm/speechbrain-review",
+    "date": "2026-11-13T17:52:34.761Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية وأسئلة مفتوحة.",
+        "new": "مراجعة SpeechBrain: مجموعة أدوات PyTorch مجانية برخصة Apache-2.0 للتعرف على الكلام والمتحدث وتحويل النص إلى كلام. التثبيت والمهام والخصوصية."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "c43c549f-e98d-43da-a1db-27ec237c61de",
+    "slug": "/power-local-llm/speechbrain-review",
+    "date": "2026-11-13T17:52:34.792Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SpeechBrain Review: Open-Source Speech Toolkit",
+        "new": "SpeechBrain Review: Open-Source PyTorch Speech Toolkit"
+      },
+      {
+        "field": "metaDescription",
+        "old": "SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy and open questions.",
+        "new": "SpeechBrain review: free, Apache-2.0 PyTorch toolkit for speech recognition, speaker recognition and text-to-speech. Install, tasks, privacy, open points."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "b619640e-2eb0-4516-b3b9-b380991150f3",
+    "slug": "/zh/power-local-llm/speechbrain-review",
+    "date": "2026-11-13T17:52:34.822Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SpeechBrain 评测：免费开源的 PyTorch 语音工具包",
+        "new": "SpeechBrain评测：免费开源PyTorch语音工具包"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2484f0db-f940-4bac-9c3b-50b9504409af",
+    "slug": "/ar/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.852Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط. الاختبار العملي مرتبط.",
+        "new": "مراجعة Sprich: تطبيق إملاء ألماني لأجهزة Mac بمعالج Apple Silicon وخطة مجانية. يعمل Parakeet على الجهاز، نحو 25 لغة أوروبية، والواجهة بالألمانية فقط."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "c5bb688b-65cc-465f-b9ae-297eed5c70da",
+    "slug": "/de/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.883Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 europäische Sprachen, Oberfläche nur Deutsch. Praxistest verlinkt.",
+        "new": "Sprich Rezension: Diktier-App aus Deutschland für Apple-Silicon-Macs mit Gratis-Tarif. Parakeet auf dem Mac, rund 25 Sprachen, Oberfläche nur Deutsch."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "38cbfa9d-2ac1-410a-8678-bc434e626f4e",
+    "slug": "/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.914Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet on the Mac, about 25 European languages, German interface only. Hands-on test linked.",
+        "new": "Sprich review: German-made dictation app for Apple Silicon Macs with a free tier. Parakeet runs on the Mac, about 25 languages, German-only interface."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "4b189b4a-f6f5-4cc3-8b86-9eeee74b4fec",
+    "slug": "/es/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.946Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Sprich: app de dictado alemana para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán. Prueba práctica enlazada.",
+        "new": "Reseña de Sprich: dictado alemán para Mac con Apple Silicon y plan gratuito. Parakeet en el Mac, unos 25 idiomas europeos, interfaz solo en alemán."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "feac040c-62e7-4dab-8602-a399cbcadf6b",
+    "slug": "/fr/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:34.978Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand. Test pratique lié.",
+        "new": "Test de Sprich : dictée allemande pour Mac Apple Silicon, offre gratuite. Parakeet sur le Mac, environ 25 langues européennes, interface en allemand."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "5dd46ebb-2520-4162-9eba-068296e6e719",
+    "slug": "/ko/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:35.010Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어만 제공. 직접 테스트 링크 있음.",
+        "new": "Sprich 리뷰: 무료 요금제가 있는 Apple Silicon Mac용 독일산 받아쓰기 앱. Mac에서 Parakeet 실행, 유럽 약 25개 언어, 인터페이스는 독일어 전용."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "2baad253-1c5e-41ef-a8ef-470a2cfa40cf",
+    "slug": "/pt/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:35.043Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Sprich: app de ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão. Teste prático vinculado.",
+        "new": "Análise do Sprich: ditado alemão para Mac com Apple Silicon e plano grátis. Parakeet no Mac, cerca de 25 idiomas europeus, interface só em alemão."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "93eac896-d54d-4a4a-83fc-4da171bdeb7e",
+    "slug": "/zh/power-local-llm/sprich-review",
+    "date": "2026-11-13T17:52:35.076Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接实测文章。",
+        "new": "Sprich评测：适用于Apple Silicon Mac的德国听写应用，有免费套餐。Mac本机运行Parakeet，约25种欧洲语言，界面仅有德语。已链接动手测试文章。"
+      },
+      {
+        "field": "twitterDescription",
+        "old": "Sprich评测：德国制造的Mac听写应用，有免费套餐和一次性买断的Lifetime。语言、隐私、价格与替代方案。已链接实测文章。",
+        "new": "Sprich评测：德国制造的Mac听写应用，有免费套餐和一次性买断的Lifetime。语言、隐私、价格与替代方案。已链接动手测试文章。"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data): meta over budget; trimmed 'hands-on test linked' (twitterDescription and body keep it); zh 实测 -> 动手测试 where present",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fe1cec0a-bd83-447e-aaac-a20fe1aa1ec9",
+    "slug": "/ar/power-local-llm/stratosort-review",
+    "date": "2026-11-13T17:52:35.108Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية تعمل دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر.",
+        "new": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "0a90350d-e0d8-49a1-9501-55d3024bfddf",
+    "slug": "/power-local-llm/stratosort-review",
+    "date": "2026-11-13T17:52:35.141Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "StratoSort Review: Local AI File Organizer",
+        "new": "StratoSort Review: Local AI File Organizer for Desktop"
+      },
+      {
+        "field": "metaDescription",
+        "old": "StratoSort review: desktop AI file organizer for Mac, Windows and Linux with local llama.cpp models that work offline after install. Licence, privacy, limits. Not tested.",
+        "new": "StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, privacy, limits. Not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9fb258b4-1cba-4f74-b110-64d4d4931742",
+    "slug": "/zh/power-local-llm/stratosort-review",
+    "date": "2026-11-13T17:52:35.174Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "StratoSort评测：Mac、Windows、Linux本地AI文件整理",
+        "new": "StratoSort评测：跨平台本地AI文件整理应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "7823d259-543d-406e-a72e-b4f6b2914ea6",
+    "slug": "/ja/power-local-llm/tecadrisebot-review",
+    "date": "2026-11-13T17:52:35.206Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "TecAdRiseBotレビュー：Windows向けCursorエージェント",
+        "new": "TecAdRiseBotレビュー：Cursor連携アプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "9a93bbf6-8b7c-41d2-ba54-346e6b6775f5",
+    "slug": "/zh/power-local-llm/tecadrisebot-review",
+    "date": "2026-11-13T17:52:35.238Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "TecAdRiseBot 评测：Cursor 驱动的智能体桌面应用",
+        "new": "TecAdRiseBot评测：Cursor驱动的智能体桌面应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "f209c727-7e42-4446-98e0-ceb7c273d711",
+    "slug": "/ar/power-local-llm/univocal-review",
+    "date": "2026-11-13T17:52:35.268Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. سعره $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. لم يُختبر.",
+        "new": "مراجعة Univocal: تطبيق قراءة صوتية وإملاء لأجهزة Mac يعمل على جهازك بحسب مطوّره. $39 لمرة واحدة بعد تجربة 14 يومًا. لـ Apple silicon فقط. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "fd541535-ab42-4ef6-a673-0138f8712e25",
+    "slug": "/power-local-llm/univocal-review",
+    "date": "2026-11-13T17:52:35.300Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Univocal review: a Mac app for read-aloud and dictation that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Not tested.",
+        "new": "Univocal review: Mac read-aloud and dictation app that, per its maker, runs on your Mac. $39 once after a 14-day trial. Apple silicon only. Not tested."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "d2e510c3-30e0-4b79-a1ba-b703444ddd8f",
+    "slug": "/ar/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.333Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا أو 99 EUR لمرة واحدة. لم يُختبر.",
+        "new": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا. لم يُختبر."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "62f99a54-90d0-45e2-a2dd-a8196051d95e",
+    "slug": "/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weesper Neon Flow Review: Offline Dictation App",
+        "new": "Weesper Neon Flow Review: Offline Whisper Dictation App"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "10aa632a-3eb6-477f-9372-3430e04a76ae",
+    "slug": "/fr/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.395Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois. Non testée.",
+        "new": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois ou 99 € une fois. Non testée."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): under-minimum title/meta lengthened with searchable entity/platform words",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "79bf9c0d-4979-4c14-8d9d-a830689a13dc",
+    "slug": "/ja/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.427Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weesper Neon Flow レビュー：オフライン音声入力アプリ",
+        "new": "Weesper Neon Flowレビュー：音声入力アプリ"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "5d9ea803-f6cc-4d51-8533-12675cd7688e",
+    "slug": "/ko/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.458Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Neon Flow 리뷰: 개발사에 따르면 컴퓨터에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR 또는 99 EUR 일회성. 직접 테스트하지 않았습니다.",
+        "new": "Weesper Neon Flow 리뷰: 개발사에 따르면 PC에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR. 직접 테스트하지 않았습니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "380bb87d-b536-4321-bd24-bf67e5d11178",
+    "slug": "/zh/power-local-llm/weesper-neon-flow-review",
+    "date": "2026-11-13T17:52:35.490Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weesper Neon Flow评测：Mac和Windows离线听写应用",
+        "new": "Weesper Neon Flow评测：离线听写应用"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "39700be4-f041-4482-bdc2-1aa548e01d48",
+    "slug": "/zh/power-local-llm/zeno-review",
+    "date": "2026-11-13T17:52:35.521Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Zeno 评测：Mac 免费私有 AI 工作区，内置 35B 模型",
+        "new": "Zeno评测：Mac免费私有AI工作区，内置35B模型"
+      }
+    ],
+    "reason": "geo-meta-optimizer first pass (no query data, data-free): meta-length budget fix",
+    "baseline": null,
+    "deployedAt": "2026-11-13",
+    "measure": {
+      "t14": "2026-11-27",
+      "t28": "2026-12-11"
+    }
+  },
+  {
+    "id": "a989807f-745b-4bc5-8c4b-447fb813f480",
+    "slug": "/local-llms/local-llm-security-privacy-checklist",
+    "date": "2026-11-15T07:13:37.003Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Security 2026: 12-Point Checklist (Under 10 Min)",
+        "new": "Local LLM Security Checklist 2026: Is LM Studio Safe?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Secure your local LLM in under 10 minutes: 12-point checklist to disable telemetry, verify checksums, isolate port 11434, encrypt disk. GDPR and HIPAA ready.",
+        "new": "Is LM Studio safe? Is Ollama? 12-step local LLM security checklist: what each tool sends, the Ollama CVE-2026-7482 fix, telemetry and port 11434."
+      }
+    ],
+    "reason": "CTR 1.01% at pos 4.4 (10.6k impr): lead with the 'is LM Studio safe' / 'does LM Studio collect data' intent, add Ollama CVE-2026-7482 and tool-safety sections",
+    "queries": [
+      "is lm studio safe",
+      "does lm studio collect data",
+      "lm studio privacy",
+      "is ollama safe",
+      "local llm security",
+      "are local llms safe"
+    ],
+    "baseline": {
+      "position": 4.41,
+      "impressions": 10017,
+      "clicks": 100,
+      "ctr": 0.009983028850953379,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "8d05966d-e4ec-4ec1-a557-f29156232431",
+    "slug": "/ja/local-llms/local-llm-security-privacy-checklist",
+    "date": "2026-11-15T07:13:37.108Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "(previous ja meta)",
+        "new": "LM StudioやOllamaは安全？ローカルLLMのセキュリティリスクと対策を12項目で解説"
+      }
+    ],
+    "reason": "ja adapted to GSC wording (ローカルLLM セキュリティ/安全性/リスク/対策)",
+    "queries": [
+      "ローカルllm セキュリティ",
+      "ローカル llm セキュリティ リスク",
+      "ローカルllm 安全性",
+      "ローカル llm セキュリティ 対策"
+    ],
+    "baseline": {
+      "position": 11.07,
+      "impressions": 718,
+      "clicks": 11,
+      "ctr": 0.01532033426183844,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "4f84a3bb-f65d-4088-825d-e47b0a5f9df6",
+    "slug": "/de/local-llms/local-llm-security-privacy-checklist",
+    "date": "2026-11-15T07:13:37.210Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Lokales LLM in 10 Minuten absichern: 12-Punkte-Checkliste für Telemetrie, Checksummen, Port 11434 und Festplattenverschlüsselung. DSGVO und HIPAA.",
+        "new": "see de block metaDescription"
+      }
+    ],
+    "reason": "de adapted to GSC wording (LLM Sicherheit, lokal betreiben, sicher)",
+    "queries": [
+      "llm sicherheit",
+      "welches llm ist am sichersten",
+      "llm lokal betreiben"
+    ],
+    "baseline": {
+      "position": 6.7,
+      "impressions": 945,
+      "clicks": 16,
+      "ctr": 0.016931216931216932,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "2f0120ca-8f9c-447b-93d8-24f6969f3997",
+    "slug": "/local-llms/best-gpus-for-local-llms",
+    "date": "2026-11-15T08:00:42.870Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best GPUs for Local LLMs 2026: VRAM, Speed & Value Guide",
+        "new": "Best GPU for Local LLMs 2026: VRAM, Speed & Prices"
+      }
+    ],
+    "reason": "Page refresh: VRAM-tier structure, sourced llama.cpp benchmarks, observed prices; target query best gpu for local llm",
+    "queries": [
+      "best gpu for local llm",
+      "gpu for local llm",
+      "best consumer gpu for local llm",
+      "local llm gpu benchmark"
+    ],
+    "baseline": {
+      "position": 11.26,
+      "impressions": 5030,
+      "clicks": 18,
+      "ctr": 0.0035785288270377734,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "2fb654ae-9ee1-4015-94d8-e9c7e646c4f8",
+    "slug": "/ja/local-llms/best-gpus-for-local-llms",
+    "date": "2026-11-15T08:00:49.134Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルLLM向け最高のGPU 2026年：VRAM、速度＆価値ガイド",
+        "new": "ローカルLLM向けGPUおすすめ2026：VRAM・速度・価格"
+      }
+    ],
+    "reason": "Page refresh, JA adapted to its own queries",
+    "queries": [
+      "ローカルllm gpu おすすめ",
+      "ローカルllm gpu",
+      "ローカルai gpu おすすめ",
+      "ローカルllm グラボ おすすめ"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 1788,
+      "clicks": 56,
+      "ctr": 0.03131991051454139,
+      "period": "90d to 2026-11-15"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "13198f2b-88a7-475a-9e0b-37731aeb5b47",
+    "slug": "/de/local-llms/best-gpus-for-local-llms",
+    "date": "2026-11-15T08:00:49.229Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste GPUs für lokale LLMs 2026: VRAM, Speed & Wert",
+        "new": "Beste GPU für lokale LLMs 2026: VRAM, Tempo & Preis"
+      }
+    ],
+    "reason": "Page refresh, DE own queries",
+    "queries": [
+      "grafikkarte für llm",
+      "llm grafikkarte",
+      "beste grafikkarte für lokale ki"
+    ],
+    "baseline": {
+      "position": 5,
+      "impressions": 334,
+      "clicks": 10,
+      "ctr": 0.029940119760479042,
+      "period": "90d to 2026-11-15"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "3f672db6-0c97-4db5-bba0-ea586b4bd9b6",
+    "slug": "/fr/local-llms/best-gpus-for-local-llms",
+    "date": "2026-11-15T08:00:49.324Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Les meilleurs GPU pour LLMs locaux 2026 : Guide VRAM, vitesse et valeur",
+        "new": "Meilleur GPU pour LLM local 2026 : VRAM, vitesse, prix"
+      }
+    ],
+    "reason": "Page refresh, FR own queries",
+    "queries": [
+      "gpu llm",
+      "carte graphique pour ia local",
+      "quelle carte graphique pour ia locale"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 543,
+      "clicks": 15,
+      "ctr": 0.027624309392265192,
+      "period": "90d to 2026-11-15"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "15b04ab2-9e03-4fff-aaf5-a00090c31eca",
+    "slug": "/ko/local-llms/best-gpus-for-local-llms",
+    "date": "2026-11-15T08:00:49.420Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 로컬 LLM 최고의 GPU: VRAM, 속도 및 가성비 가이드",
+        "new": "로컬 LLM GPU 추천 2026: VRAM·속도·가격"
+      }
+    ],
+    "reason": "Page refresh, KO own queries",
+    "queries": [
+      "로컬 llm gpu",
+      "5080 로컬 llm",
+      "ai gpu 추천"
+    ],
+    "baseline": {
+      "position": 4.5,
+      "impressions": 244,
+      "clicks": 26,
+      "ctr": 0.10655737704918032,
+      "period": "90d to 2026-11-15"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "9a9987b3-9510-44e8-a167-500443650dba",
+    "slug": "/es/local-llms/best-gpus-for-local-llms",
+    "date": "2026-11-15T08:00:49.515Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejores GPUs para LLMs locales 2026: VRAM, velocidad, valor",
+        "new": "Mejor GPU para LLM local 2026: VRAM, velocidad y precio"
+      }
+    ],
+    "reason": "Page refresh, ES own queries",
+    "queries": [
+      "mejor grafica para ia local",
+      "gpu para ia local",
+      "tarjeta grafica para ia local"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 152,
+      "clicks": 2,
+      "ctr": 0.013157894736842105,
+      "period": "90d to 2026-11-15"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "5299a006-b5b3-41f3-be82-93d60a61a13a",
+    "slug": "/local-llms/run-qwen-locally-guide-2026",
+    "date": "2026-11-15T10:14:50.704Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Run Qwen 3 Locally 2026: 16 GB VRAM, Under 10 Min",
+        "new": "Run Qwen 3.6 & 3.8 Locally 2026: Ollama + LM Studio"
+      }
+    ],
+    "reason": "Full refresh: Qwen3.8/3.6 current tags, honest 16 GB VRAM answer, title aligned to top queries",
+    "queries": [
+      "how to run qwen 3.6 locally",
+      "qwen 3.6 local",
+      "can i run qwen 3.6 locally",
+      "how to run qwen 3.6 27b locally",
+      "how to install qwen 3.6 on ollama",
+      "local llm qwen"
+    ],
+    "baseline": {
+      "position": 12.38,
+      "impressions": 3408,
+      "clicks": 17,
+      "ctr": 0.004988262910798122,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "e3c84297-79e5-473f-bd7a-dc6b9dffb2e0",
+    "slug": "/ko/local-llms/run-qwen-locally-guide-2026",
+    "date": "2026-11-15T10:14:50.910Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026 Qwen 3 로컬 실행: Ollama & LM Studio 설정 가이드",
+        "new": "Qwen 3.6·3.8 로컬 설치 2026: Ollama 사양"
+      }
+    ],
+    "reason": "Full refresh; KO title adapted to qwen 로컬 설치 / 사양 queries",
+    "queries": [
+      "qwen 로컬",
+      "qwen 로컬 llm",
+      "qwen 로컬 설치",
+      "qwen 설치",
+      "ollama qwen 설치",
+      "qwen 사양"
+    ],
+    "baseline": {
+      "position": 4.78,
+      "impressions": 1595,
+      "clicks": 70,
+      "ctr": 0.0438871473354232,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "80d97b32-af30-4e9c-9e7e-e6cb36cbc826",
+    "slug": "/de/local-llms/run-qwen-locally-guide-2026",
+    "date": "2026-11-15T10:14:51.007Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 lokal ausführen 2026: 16 GB VRAM, unter 10 Min",
+        "new": "Qwen lokal installieren 2026: Qwen 3.6 & 3.8 mit Ollama"
+      }
+    ],
+    "reason": "Full refresh; DE title adapted to qwen lokal installieren",
+    "queries": [
+      "qwen lokal installieren",
+      "qwen lokal",
+      "qwen installieren",
+      "lm studio qwen 3.6"
+    ],
+    "baseline": {
+      "position": 4.3,
+      "impressions": 2387,
+      "clicks": 28,
+      "ctr": 0.011730205278592375,
+      "period": "2026-10-19 to 2026-11-15 (28d)"
+    },
+    "deployedAt": "2026-11-15",
+    "measure": {
+      "t14": "2026-11-29",
+      "t28": "2026-12-13"
+    }
+  },
+  {
+    "id": "13229b82-a3a0-4126-b760-5ae7f785e525",
+    "slug": "local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "date": "2026-11-14T13:37:04.180Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,h2",
+        "old": "AMD Ryzen AI Halo for Local AI: Specs, Price, Verdict",
+        "new": "AMD Ryzen AI Halo Price and Specs: $3,999 and $7,299"
+      }
+    ],
+    "queries": [
+      "amd ryzen ai halo price",
+      "amd ryzen ai halo",
+      "ryzen ai halo"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 328,
+      "clicks": 5,
+      "ctr": 0.01524390243902439,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "06d84d14-4646-43c8-b09d-ef1e7996d797",
+    "slug": "local-llms/gmktec-evo-x2-local-ai-workstation",
+    "date": "2026-11-14T13:37:04.274Z",
+    "fields": [
+      {
+        "field": "title+metaDescription",
+        "old": "GMKtec EVO-X2 for Local AI: Specs, Price and Verdict",
+        "new": "GMKtec EVO-X2 Specs and Price: 128 GB at ,499.99"
+      }
+    ],
+    "queries": [
+      "gmktec evo-x2",
+      "gmktec",
+      "evo-x2",
+      "gmktec evo x2 128gb"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 2795,
+      "clicks": 16,
+      "ctr": 0.005724508050089445,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "d869c2e7-6450-45df-a638-d9b33e47b385",
+    "slug": "local-llms/how-to-install-lm-studio",
+    "date": "2026-11-14T13:37:04.369Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription",
+        "old": "Install LM Studio: GUI Setup for macOS, Windows & Linux",
+        "new": "Install LM Studio: Download, Setup and Models per GPU"
+      }
+    ],
+    "queries": [
+      "lm studio",
+      "lm studio download",
+      "install lm studio",
+      "descargar lm studio"
+    ],
+    "baseline": {
+      "position": 7.8,
+      "impressions": 3983,
+      "clicks": 10,
+      "ctr": 0.0025106703489831783,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "544de778-349c-4889-bb29-b58ad6e2c332",
+    "slug": "local-llms/how-to-install-ollama",
+    "date": "2026-11-14T13:37:04.463Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Download Ollama from ollama.com and install it on macOS, Windows or Linux: installer files, brew install ollama, the Linux curl command, and fixes.",
+        "new": "Download Ollama free from ollama.com and install it on macOS, Windows or Linux with one command each, then pick the model that fits your GPU VRAM."
+      }
+    ],
+    "queries": [
+      "ollama download",
+      "ollama install"
+    ],
+    "baseline": {
+      "position": 3.9,
+      "impressions": 16531,
+      "clicks": 18,
+      "ctr": 0.0010888633476498699,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "66bbd92e-bb81-45bc-b2f4-cb3f65a159a1",
+    "slug": "local-llms/how-to-install-ollama",
+    "date": "2026-11-14T13:37:04.557Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Download & Install Ollama on macOS, Windows & Linux",
+        "new": "Download & Install Ollama: Which Model Fits Your GPU"
+      }
+    ],
+    "queries": [
+      "ollama download",
+      "ollama install",
+      "irm https://ollama.com/install.ps1",
+      "iex",
+      "brew install ollama"
+    ],
+    "baseline": {
+      "position": 3.9,
+      "impressions": 16531,
+      "clicks": 18,
+      "ctr": 0.0010888633476498699,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "43740662-25cb-423a-adb2-2bc808bd0737",
+    "slug": "local-llms/local-llm-hardware-guide",
+    "date": "2026-11-14T13:37:04.652Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best hardware for local LLMs in 2026: VRAM needed from 8 GB to 70B models, best GPU and Mac per budget, RTX 50-series prices and CPU-only limits.",
+        "new": "Local AI models are limited by VRAM: 8 GB runs 7B, 12 GB 14B, 16 GB 24B, 24 GB 32B, 70B needs ~40 GB. Table by model size plus 12, 16 and 24 GB limits."
+      }
+    ],
+    "queries": [
+      "local ai model hardware limitations"
+    ],
+    "baseline": {
+      "position": 8.39,
+      "impressions": 5132,
+      "clicks": 8,
+      "ctr": 0.001558846453624318,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "34ed534d-4cca-4103-81c7-58585f3bb8a0",
+    "slug": "local-llms/local-llm-hardware-guide",
+    "date": "2026-11-14T13:37:04.746Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Hardware Requirements 2026: Best GPU, VRAM, Mac",
+        "new": "Local AI Model Hardware Limitations: VRAM by Model Size"
+      }
+    ],
+    "queries": [
+      "local ai model hardware limitations",
+      "local llm hardware",
+      "best hardware for local llm",
+      "run llm locally hardware requirements"
+    ],
+    "baseline": {
+      "position": 6.4,
+      "impressions": 50364,
+      "clicks": 298,
+      "ctr": 0.00591692478754666,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "ed0d37a5-c924-4c3a-a5a8-f09f4ce87805",
+    "slug": "local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "date": "2026-11-14T13:37:04.841Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,h2",
+        "old": "NVIDIA DGX Spark Price, Specs and Verdict for Local AI",
+        "new": "NVIDIA DGX Spark Price and Specs: $4,699 to $6,950"
+      }
+    ],
+    "queries": [
+      "dgx spark price",
+      "nvidia dgx spark price",
+      "nvidia spark price",
+      "dgx spark"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 970,
+      "clicks": 1,
+      "ctr": 0.0010309278350515464,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "be1e7937-9661-4843-81d9-ef07278704aa",
+    "slug": "local-llms/open-webui-review",
+    "date": "2026-11-14T13:37:04.937Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI is a free, self-hosted ChatGPT-style interface for Ollama and OpenAI-compatible APIs. Custom license, branding clause, safety, Docker setup.",
+        "new": "Open WebUI (also written OpenWebUI or Open Web UI): free self-hosted chat UI for Ollama. Docker install, Ollama connection steps, alternatives and license."
+      }
+    ],
+    "queries": [
+      "open webui",
+      "openwebui",
+      "open web ui"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 8697,
+      "clicks": 15,
+      "ctr": 0.0017247326664367024,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "91aa6481-1f2e-4f87-8a61-7f312f3317a8",
+    "slug": "local-llms/open-webui-review",
+    "date": "2026-11-14T13:37:05.032Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "What Is Open WebUI? 2026 Review: License, Safety, Setup",
+        "new": "Open WebUI Review: Install, Ollama Setup, Alternatives"
+      }
+    ],
+    "queries": [
+      "open webui",
+      "openwebui",
+      "open web ui"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 8697,
+      "clicks": 15,
+      "ctr": 0.0017247326664367024,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "e249baca-8e2b-4049-a858-836a3b4a04aa",
+    "slug": "local-llms/sillytavern-review",
+    "date": "2026-11-14T13:37:05.128Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "SillyTavern is a free, open-source frontend for AI character roleplay with lorebooks, group chats, and vector memory. History, install links, pricing, honest limits, and alternatives.",
+        "new": "SillyTavern is a free AI roleplay frontend that runs on any PC with Node.js 20+. Official download, install steps per OS and a requirements table."
+      }
+    ],
+    "queries": [
+      "sillytavern",
+      "sillytavern review",
+      "how good is silly tavern",
+      "does sillytavern cost money"
+    ],
+    "baseline": {
+      "position": 9.97,
+      "impressions": 1194,
+      "clicks": 6,
+      "ctr": 0.005025125628140704,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "64358aa0-7d0d-4e6d-83e6-4af7610d4602",
+    "slug": "local-llms/sillytavern-review",
+    "date": "2026-11-14T13:37:05.225Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SillyTavern 2026: Character Roleplay Frontend Review",
+        "new": "SillyTavern: Free Download, Requirements and Review"
+      }
+    ],
+    "queries": [
+      "sillytavern",
+      "sillytavern review",
+      "how good is silly tavern",
+      "does sillytavern cost money"
+    ],
+    "baseline": {
+      "position": 9.97,
+      "impressions": 1194,
+      "clicks": 6,
+      "ctr": 0.005025125628140704,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "56d0b667-9f6c-43d0-baf5-bc8a3fbdd7cd",
+    "slug": "power-local-llm/koboldcpp-review",
+    "date": "2026-11-14T13:37:05.320Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp (also written Kobold CPP) is a free, single-file local LLM app on llama.cpp. Get the Windows, Linux or macOS build and pick CUDA, Vulkan or ROCm.",
+        "new": "KoboldCpp (also Kobold CPP, koboldcpp.exe) is a free one-file local LLM app. Download links, system requirements and which GGUF models fit 4-48 GB VRAM."
+      }
+    ],
+    "queries": [
+      "koboldcpp",
+      "kobold cpp",
+      "koboldccp",
+      "koboldcpp.exe"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 8102,
+      "clicks": 9,
+      "ctr": 0.001110836830412244,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "f73cdf1d-1c72-493b-93c7-27600107a0a8",
+    "slug": "power-local-llm/koboldcpp-review",
+    "date": "2026-11-14T13:37:05.414Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp Review: Download, Setup and GPU Support",
+        "new": "KoboldCpp: Download, System Requirements, Models per VRAM"
+      }
+    ],
+    "queries": [
+      "koboldcpp",
+      "kobold cpp",
+      "koboldccp",
+      "koboldcpp.exe"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 8102,
+      "clicks": 9,
+      "ctr": 0.001110836830412244,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "00513b3d-1d3e-4a5f-bdd8-6e5897ff61f6",
+    "slug": "power-local-llm/llama-cpp-explained",
+    "date": "2026-11-14T13:37:05.508Z",
+    "fields": [
+      {
+        "field": "title+metaDescription",
+        "old": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "new": "llama.cpp: What It Is, How to Install, First Command"
+      }
+    ],
+    "queries": [
+      "llama.cpp",
+      "does ollama use llama.cpp",
+      "is llama.cpp free",
+      "llama-server"
+    ],
+    "baseline": {
+      "position": 7.2,
+      "impressions": 8893,
+      "clicks": 26,
+      "ctr": 0.00292364781288654,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "98bc7db9-8c8a-4674-9bcc-199a7926df77",
+    "slug": "power-local-llm/lm-studio-review",
+    "date": "2026-11-14T13:37:05.602Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription",
+        "old": "LM Studio Review 2026: Free to Use, Not Open Source",
+        "new": "LM Studio: System Requirements and Models per VRAM"
+      }
+    ],
+    "queries": [
+      "lm studio",
+      "lmstudio",
+      "is lm studio open source"
+    ],
+    "baseline": {
+      "position": 5.4,
+      "impressions": 42730,
+      "clicks": 64,
+      "ctr": 0.0014977767376550433,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "66616d89-ae40-4351-90f2-143f43f60e5c",
+    "slug": "power-local-llm/risuai-review",
+    "date": "2026-11-14T13:37:05.698Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Free, open-source (GPL-3.0) roleplay chat client: web app, desktop, Docker. Verified install steps, Android status, pricing and SillyTavern comparison.",
+        "new": "RisuAI is a free roleplay chat client that runs in a browser with no install. Desktop installers, Docker, Node.js 22.13+ and a requirements table."
+      }
+    ],
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "risu ai 모바일",
+      "risu ai 무료"
+    ],
+    "baseline": {
+      "position": 7.59,
+      "impressions": 5029,
+      "clicks": 16,
+      "ctr": 0.0031815470272419963,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "36b31f47-9532-4bf6-bc69-a24ad4d6ebe0",
+    "slug": "power-local-llm/risuai-review",
+    "date": "2026-11-14T13:37:05.791Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI Review: Roleplay Client, Install & Pricing",
+        "new": "RisuAI Download and Requirements: Free Roleplay Client"
+      }
+    ],
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "risu ai 모바일",
+      "risu ai 무료"
+    ],
+    "baseline": {
+      "position": 7.59,
+      "impressions": 5029,
+      "clicks": 16,
+      "ctr": 0.0031815470272419963,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "7a786b44-f67c-498e-b3bb-948c3ec97d0a",
+    "slug": "power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-14T13:37:05.887Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Review: Status and Setup",
+        "new": "Stable Diffusion WebUI Forge: Install & VRAM by GPU"
+      }
+    ],
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "stable diffusion forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.35,
+      "impressions": 10596,
+      "clicks": 53,
+      "ctr": 0.005001887504718762,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "5d9d7fa0-bc2a-4c5e-9bc1-2dc52aa80048",
+    "slug": "power-local-llm/whisper-cpp-review",
+    "date": "2026-11-14T13:37:05.983Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp Review: MIT, Install & CLI for Local STT",
+        "new": "whisper.cpp Review: Install, Model Sizes & RAM Needs"
+      }
+    ],
+    "queries": [
+      "whisper.cpp",
+      "whisper cpp",
+      "whisper-cpp"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 12564,
+      "clicks": 62,
+      "ctr": 0.004934734161095192,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "26ee14f9-f109-4480-890e-bfa905fb277c",
+    "slug": "smart-home/best-smart-home-devices-2026",
+    "date": "2026-11-14T13:37:12.894Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription",
+        "old": "Best Smart Home Devices 2026: Local-First Buyer Guide",
+        "new": "Best Motion Sensor 2026 & Smart Home Devices: Local Picks"
+      }
+    ],
+    "queries": [
+      "best motion sensor 2026",
+      "best motion sensor under $200",
+      "best motion sensor 2025"
+    ],
+    "baseline": {
+      "position": 2.6,
+      "impressions": 2182,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-10-18..2026-11-14"
+    },
+    "deployedAt": "2026-11-16",
+    "measure": {
+      "t14": "2026-11-30",
+      "t28": "2026-12-14"
+    }
+  },
+  {
+    "id": "a9857700-1612-43e8-9458-05eb61dc5716",
+    "slug": "/local-llms/best-local-llms-for-creative-writing",
+    "date": "2026-11-15T16:37:00.598Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local LLMs for Creative Writing 2026",
+        "new": "Best Local LLMs for Creative Writing 2026: Picks by VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "4 top local LLMs for creative writing: Llama 3.3 70B (best prose), Mistral 24B (best 16GB), fine-tunes (specialized voices). Find the right fit.",
+        "new": "Best local LLMs for creative writing and poetry in 2026: Gemma 4 31B and Qwen3.8-27B on 24 GB, plus picks for 8, 12, 16 and 48 GB with Ollama tags."
+      }
+    ],
+    "reason": "Page refresh: top pick changed from Llama 3.3 70B to Gemma 4 31B / Qwen3.8-27B; title/meta rewritten to target-query vocabulary (pos 4.4, CTR 1.9%)",
+    "queries": [
+      "best llm for creative writing",
+      "best local llm for creative writing",
+      "best local llm for writing",
+      "best open source models for poetry",
+      "best local model for creative writing",
+      "local llm for writing",
+      "best local llm for story writing"
+    ],
+    "baseline": {
+      "position": 4.43,
+      "impressions": 7776,
+      "clicks": 145,
+      "ctr": 0.018647119341563784,
+      "period": "28d 2026-10-19 to 2026-11-15"
+    },
+    "deployedAt": "2026-11-17",
+    "measure": {
+      "t14": "2026-12-01",
+      "t28": "2026-12-15"
+    }
+  },
+  {
+    "id": "e85c3096-6398-4163-8d72-0b5901272a82",
+    "slug": "/ja/local-llms/best-local-llms-for-creative-writing",
+    "date": "2026-11-15T16:37:00.705Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年の創作文章向けベストローカルLLM",
+        "new": "創作向けローカルLLM 2026年版: VRAM別おすすめ"
+      }
+    ],
+    "reason": "Page refresh; ja title/meta adapted to ja queries",
+    "queries": [
+      "ローカルllm 小説 おすすめ",
+      "ローカルllm 創作"
+    ],
+    "baseline": {
+      "position": 6.38,
+      "impressions": 625,
+      "clicks": 53,
+      "ctr": 0.0848,
+      "period": "28d 2026-10-19 to 2026-11-15"
+    },
+    "deployedAt": "2026-11-17",
+    "measure": {
+      "t14": "2026-12-01",
+      "t28": "2026-12-15"
+    }
+  },
+  {
+    "id": "18a60dba-a955-4630-95f5-05fa5b1f2738",
+    "slug": "/ko/local-llms/best-local-llms-for-creative-writing",
+    "date": "2026-11-15T16:37:00.814Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "창작 글쓰기를 위한 최고의 로컬 LLM 2026",
+        "new": "창작 글쓰기 로컬 LLM 2026: VRAM별 추천"
+      }
+    ],
+    "reason": "Page refresh; ko H2/FAQ adapted to ko queries (순위, 로컬 AI 소설)",
+    "queries": [
+      "로컬 ai 소설",
+      "로컬 llm 순위"
+    ],
+    "baseline": {
+      "position": 5.78,
+      "impressions": 448,
+      "clicks": 20,
+      "ctr": 0.044642857142857144,
+      "period": "28d 2026-10-19 to 2026-11-15"
+    },
+    "deployedAt": "2026-11-17",
+    "measure": {
+      "t14": "2026-12-01",
+      "t28": "2026-12-15"
+    }
+  },
+  {
+    "id": "5295b27d-f8df-48c1-8d03-ac14aa9b1f51",
+    "slug": "/ja/power-local-llm/open-science-desktop-review",
+    "date": "2026-11-18T03:28:51.698Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open Science Desktopレビュー：AI研究ワークベンチ",
+        "new": "Open Science Desktopレビュー：AI研究環境"
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data - data-free): JA title over budget 24-32 chars (35 -> 33 -> 31)",
+    "baseline": null,
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   }
 ]

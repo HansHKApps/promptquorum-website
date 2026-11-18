@@ -1873,7 +1873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/aiko-review-hero-zh.webp',
     title: 'Aiko评测：适用于Mac和iPhone的设备端Whisper转录应用',
-    seoTitle: 'Aiko评测：Mac和iPhone上设备端运行的Whisper转录应用',
+    seoTitle: 'Aiko评测：Mac和iPhone设备端Whisper转录',
     intro: 'Aiko是Sindre Sorhus开发的付费闭源转录应用，使用OpenAI的Whisper模型，在你的Mac、iPhone、iPad或Vision Pro上把录音转成文字，采用一次性买断而非订阅。本评测梳理其官网和App Store页面记载的内容、遗漏的内容，以及它与目录中其他语音转文字工具的对比。',
     metaDescription: 'Aiko评测：适用于Mac、iPhone和Vision Pro的设备端Whisper转录应用，一次性24美元，已超过三个月未更新，未经实测。',
     twitterDescription: 'Aiko评测：一次性买断的应用，在Mac或iPhone上用Whisper转录录音。价格、隐私、限制、维护状态与替代方案。',

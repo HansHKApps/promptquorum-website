@@ -65,6 +65,24 @@ import lociAiEs from './data/loci-ai.es.json'
 import lociAiPt from './data/loci-ai.pt.json'
 import lociAiAr from './data/loci-ai.ar.json'
 import lociAiKo from './data/loci-ai.ko.json'
+import univocal from './data/univocal.json'
+import univocalDe from './data/univocal.de.json'
+import univocalFr from './data/univocal.fr.json'
+import univocalJa from './data/univocal.ja.json'
+import univocalZh from './data/univocal.zh.json'
+import univocalEs from './data/univocal.es.json'
+import univocalPt from './data/univocal.pt.json'
+import univocalAr from './data/univocal.ar.json'
+import univocalKo from './data/univocal.ko.json'
+import stratosort from './data/stratosort.json'
+import stratosortDe from './data/stratosort.de.json'
+import stratosortFr from './data/stratosort.fr.json'
+import stratosortJa from './data/stratosort.ja.json'
+import stratosortZh from './data/stratosort.zh.json'
+import stratosortEs from './data/stratosort.es.json'
+import stratosortPt from './data/stratosort.pt.json'
+import stratosortAr from './data/stratosort.ar.json'
+import stratosortKo from './data/stratosort.ko.json'
 import caelum from './data/caelum.json'
 import caelumDe from './data/caelum.de.json'
 import caelumFr from './data/caelum.fr.json'
@@ -339,6 +357,28 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: lociAiPt as unknown as HandsOnTest,
     ar: lociAiAr as unknown as HandsOnTest,
     ko: lociAiKo as unknown as HandsOnTest,
+  },
+  stratosort: {
+    en: stratosort as unknown as HandsOnTest,
+    de: stratosortDe as unknown as HandsOnTest,
+    fr: stratosortFr as unknown as HandsOnTest,
+    ja: stratosortJa as unknown as HandsOnTest,
+    zh: stratosortZh as unknown as HandsOnTest,
+    es: stratosortEs as unknown as HandsOnTest,
+    pt: stratosortPt as unknown as HandsOnTest,
+    ar: stratosortAr as unknown as HandsOnTest,
+    ko: stratosortKo as unknown as HandsOnTest,
+  },
+  univocal: {
+    en: univocal as unknown as HandsOnTest,
+    de: univocalDe as unknown as HandsOnTest,
+    fr: univocalFr as unknown as HandsOnTest,
+    ja: univocalJa as unknown as HandsOnTest,
+    zh: univocalZh as unknown as HandsOnTest,
+    es: univocalEs as unknown as HandsOnTest,
+    pt: univocalPt as unknown as HandsOnTest,
+    ar: univocalAr as unknown as HandsOnTest,
+    ko: univocalKo as unknown as HandsOnTest,
   },
   caelum: {
     en: caelum as unknown as HandsOnTest,

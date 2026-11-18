@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Meetini is a paid meeting and interview assistant for Apple Silicon Macs from [Moonveil AI Inc.](https://meetini.net) that shows live captions, keeps transcripts and notes, and offers interview preparation. The maker describes live captions and speech-to-text as running locally; its own privacy notice says live meeting audio is sent through its server to OpenAI. This review is based on the maker\'s website and an outreach email, checked on 7 November 2026; PromptQuorum has not tested the app hands-on.',
     metaDescription:
-      'Meetini review: paid Mac app for live captions, meeting notes and interview prep. The maker says captions run locally; its privacy notice says audio goes to OpenAI.',
+      'Meetini review: paid Mac app for live captions, meeting notes, interview prep. Maker says captions run locally; privacy notice says audio goes to OpenAI.',
     twitterDescription:
       'Meetini review: meeting and interview assistant for Apple Silicon Macs. Plans, data flow and where the maker\'s local claim and its privacy notice differ.',
     audience:
@@ -1536,7 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Meetini مساعد مدفوع للاجتماعات والمقابلات على أجهزة Mac بمعالج Apple Silicon من [Moonveil AI Inc.](https://meetini.net)، يعرض تسميات توضيحية مباشرة للكلام ويحفظ التفريغ النصي والملاحظات ويقدّم أدوات للتحضير للمقابلات. تصف الشركة التسميات التوضيحية المباشرة والتفريغ الصوتي بأنهما يعملان محليًا، بينما يذكر إشعار الخصوصية الخاص بها أن صوت الاجتماع المباشر يُرسل عبر خادمها إلى OpenAI. تستند هذه المراجعة إلى موقع الشركة ورسالة بريد إلكتروني منها، وقد روجعت في 7 نوفمبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
-      'مراجعة Meetini: تطبيق Mac مدفوع للتسميات التوضيحية المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.',
+      'مراجعة Meetini: تطبيق Mac مدفوع للتسميات المباشرة وملاحظات الاجتماعات والمقابلات. تقول الشركة إنه محلي، ويذكر إشعار الخصوصية إرسال الصوت إلى OpenAI.',
     twitterDescription:
       'مراجعة Meetini: مساعد اجتماعات ومقابلات لأجهزة Apple Silicon. الخطط وتدفق البيانات وموضع الاختلاف بين ادعاء الشركة المحلي وإشعار الخصوصية.',
     audience:

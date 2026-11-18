@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'LibreDB Studio is an MIT-licensed database editor at [libredb.org](https://libredb.org) that runs in the browser and is deployed next to your data with Docker, npx or a package manager. It connects to 41 database engines through one interface and adds an optional AI layer that can use a local Ollama model instead of a cloud API. This review reflects the website, its security page and the public GitHub repository, as checked on 23 October 2026; PromptQuorum did not test the software hands-on.',
     metaDescription:
-      'LibreDB Studio review: a free MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can run on local Ollama. Setup and limits.',
+      'LibreDB Studio review: free, MIT-licensed browser SQL editor for 41 database engines with an optional AI agent that can use local Ollama. Setup, limits.',
     twitterDescription:
       'LibreDB Studio review: an open-source SQL editor for 41 database engines in the browser, with an optional AI agent that can use a local Ollama model. What the sources confirm and what stays untested.',
     audience:
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'LibreDB Studio ist ein MIT-lizenzierter Datenbank-Editor unter [libredb.org](https://libredb.org), der im Browser läuft und mit Docker, npx oder einem Paketmanager direkt neben Ihren Daten betrieben wird. Er verbindet 41 Datenbank-Engines über eine einzige Oberfläche und ergänzt eine optionale KI-Schicht, die statt einer Cloud-API auch ein lokales Ollama-Modell nutzen kann. Diese Rezension gibt die Website, die Sicherheitsseite und das öffentliche GitHub-Repository wieder, wie am 23. Oktober 2026 geprüft; PromptQuorum hat die Software nicht praktisch getestet.',
     metaDescription:
-      'LibreDB-Studio-Rezension: kostenloser, MIT-lizenzierter SQL-Editor im Browser für 41 Datenbank-Engines mit optionalem KI-Agenten für lokales Ollama. Setup, Grenzen.',
+      'LibreDB-Studio-Rezension: kostenloser SQL-Editor (MIT) im Browser für 41 Datenbank-Engines, optionaler KI-Agent mit lokalem Ollama. Setup, Grenzen.',
     twitterDescription:
       'LibreDB-Studio-Rezension: quelloffener SQL-Editor im Browser für 41 Datenbank-Engines, mit optionalem KI-Agenten, der ein lokales Ollama-Modell nutzen kann. Was die Quellen bestätigen und was ungetestet bleibt.',
     audience:
@@ -619,11 +619,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Coding Assistants',
     heroImage: '/images/libredb-studio-review-hero-es.webp',
     title: 'Reseña de LibreDB Studio: editor SQL de código abierto con agente de IA local opcional',
-    seoTitle: 'Reseña de LibreDB Studio: editor SQL con agente de IA local',
+    seoTitle: 'Reseña de LibreDB Studio: editor SQL con agente IA local',
     intro:
       'LibreDB Studio es un editor de bases de datos con licencia MIT en [libredb.org](https://libredb.org) que funciona en el navegador y se despliega junto a tus datos con Docker, npx o un gestor de paquetes. Conecta 41 motores de bases de datos con una sola interfaz y añade una capa de IA opcional que puede usar un modelo Ollama local en lugar de una API en la nube. Esta reseña refleja el sitio web, su página de seguridad y el repositorio público de GitHub, consultados el 23 de octubre de 2026; PromptQuorum no probó el software en la práctica.',
     metaDescription:
-      'Reseña de LibreDB Studio: editor SQL gratuito con licencia MIT en el navegador para 41 motores de bases de datos, con agente de IA opcional que puede usar Ollama local.',
+      'Reseña de LibreDB Studio: editor SQL gratuito (MIT) en el navegador para 41 motores de bases de datos, con agente de IA opcional que usa Ollama local.',
     twitterDescription:
       'Reseña de LibreDB Studio: editor SQL de código abierto para 41 motores de bases de datos en el navegador, con agente de IA opcional que puede usar un modelo Ollama local. Qué confirman las fuentes y qué queda sin probar.',
     audience:
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'LibreDB Studio est un éditeur de bases de données sous licence MIT, disponible sur [libredb.org](https://libredb.org), qui fonctionne dans le navigateur et se déploie à côté de vos données avec Docker, npx ou un gestionnaire de paquets. Il relie 41 moteurs de bases de données par une seule interface et ajoute une couche d\'IA facultative qui peut utiliser un modèle Ollama local plutôt qu\'une API cloud. Ce test reflète le site web, sa page de sécurité et le dépôt GitHub public, consultés le 23 octobre 2026 ; PromptQuorum n\'a pas testé le logiciel en pratique.',
     metaDescription:
-      'Test de LibreDB Studio : éditeur SQL gratuit sous licence MIT dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local.',
+      'Test de LibreDB Studio : éditeur SQL gratuit (MIT) dans le navigateur pour 41 moteurs de bases de données, avec agent IA facultatif pour Ollama local.',
     twitterDescription:
       'Test de LibreDB Studio : éditeur SQL open source pour 41 moteurs de bases de données dans le navigateur, avec un agent IA facultatif utilisable avec un modèle Ollama local. Ce que confirment les sources et ce qui reste non testé.',
     audience:
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Coding Assistants',
     heroImage: '/images/libredb-studio-review-hero-ja.webp',
     title: 'LibreDB Studioレビュー：ローカルAIエージェントも使えるオープンソースSQLエディタ',
-    seoTitle: 'LibreDB Studioレビュー：ローカルAIエージェント対応SQLエディタ',
+    seoTitle: 'LibreDB Studioレビュー：AI対応SQLエディタ',
     intro:
       'LibreDB Studioは、[libredb.org](https://libredb.org)で提供されるMITライセンスのデータベースエディタです。ブラウザで動作し、Docker、npx、パッケージマネージャーでデータの隣にデプロイします。41種類のデータベースエンジンを1つの画面で扱え、クラウドAPIの代わりにローカルのOllamaモデルを使える任意のAI機能が加わります。このレビューは、2026年10月23日に確認した公式サイト、セキュリティページ、公開GitHubリポジトリの内容に基づいており、PromptQuorumはソフトウェアを実際には試していません。',
     metaDescription:
@@ -1474,11 +1474,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Coding Assistants',
     heroImage: '/images/libredb-studio-review-hero-pt.webp',
     title: 'Análise do LibreDB Studio: editor SQL de código aberto com agente de IA local opcional',
-    seoTitle: 'Análise do LibreDB Studio: editor SQL com agente de IA local',
+    seoTitle: 'Análise do LibreDB Studio: editor SQL com agente IA local',
     intro:
       'O LibreDB Studio é um editor de bancos de dados com licença MIT em [libredb.org](https://libredb.org) que roda no navegador e é implantado ao lado dos seus dados com Docker, npx ou um gerenciador de pacotes. Ele conecta 41 mecanismos de banco de dados por uma única interface e acrescenta uma camada de IA opcional que pode usar um modelo Ollama local em vez de uma API na nuvem. Esta análise reflete o site, a página de segurança e o repositório público no GitHub, consultados em 23 de outubro de 2026; a PromptQuorum não testou o software na prática.',
     metaDescription:
-      'Análise do LibreDB Studio: editor SQL gratuito com licença MIT no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que pode usar o Ollama local.',
+      'Análise do LibreDB Studio: editor SQL gratuito (MIT) no navegador para 41 mecanismos de banco de dados, com agente de IA opcional que usa Ollama local.',
     twitterDescription:
       'Análise do LibreDB Studio: editor SQL de código aberto para 41 mecanismos de banco de dados no navegador, com agente de IA opcional que pode usar um modelo Ollama local. O que as fontes confirmam e o que ficou sem teste.',
     audience:
@@ -1759,11 +1759,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Coding Assistants',
     heroImage: '/images/libredb-studio-review-hero-ar.webp',
     title: 'مراجعة LibreDB Studio: محرّر SQL مفتوح المصدر مع وكيل ذكاء اصطناعي محلي اختياري',
-    seoTitle: 'مراجعة LibreDB Studio: محرّر SQL مع وكيل ذكاء اصطناعي محلي',
+    seoTitle: 'مراجعة LibreDB Studio: محرر SQL بوكيل ذكاء اصطناعي محلي',
     intro:
       'LibreDB Studio محرّر قواعد بيانات بترخيص MIT على [libredb.org](https://libredb.org) يعمل في المتصفح ويُنشر بجوار بياناتك عبر Docker أو npx أو مدير حزم. يربط 41 محرك قواعد بيانات بواجهة واحدة ويضيف طبقة ذكاء اصطناعي اختيارية يمكنها استخدام نموذج Ollama محلي بدلاً من واجهة API سحابية. تعكس هذه المراجعة الموقع وصفحة الأمان ومستودع GitHub العام، كما جرى فحصها في 23 أكتوبر 2026؛ ولم تختبر PromptQuorum البرنامج عمليًا.',
     metaDescription:
-      'مراجعة LibreDB Studio: محرّر SQL مجاني بترخيص MIT في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود.',
+      'مراجعة LibreDB Studio: محرّر SQL مجاني (MIT) في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يعمل على Ollama محلي. التثبيت والحدود.',
     twitterDescription:
       'مراجعة LibreDB Studio: محرّر SQL مفتوح المصدر في المتصفح لـ 41 محرك قواعد بيانات، مع وكيل ذكاء اصطناعي اختياري يمكنه استخدام نموذج Ollama محلي. ما تؤكده المصادر وما بقي دون اختبار.',
     audience:

@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Mobile LM Server (Google Play package com.chaterminal.mobilellm, developer account "chaterminal") is an Android app that, according to its listing, runs GGUF and LiteRT-LM models on the phone and exposes them through OpenAI-compatible and Ollama-compatible endpoints. It contains ads and in-app purchases. This review is based on the Google Play listing and the privacy policy it links, as checked on 26 October 2026; it involved no hands-on use.',
     metaDescription:
-      'Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads, purchases and unverified claims.',
+      'Mobile LM Server review: Android app that says it runs GGUF and LiteRT-LM models offline and serves an OpenAI-compatible API. Ads and unverified claims.',
     twitterDescription:
       'Mobile LM Server review: an Android app that says it runs GGUF and LiteRT-LM models on the phone and serves an OpenAI-compatible API. What the Google Play listing and privacy policy claim, and what is unverified.',
     audience:
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Mobile LM Server (حزمة Google Play هي com.chaterminal.mobilellm وحساب المطوّر «chaterminal») تطبيق Android يشغّل، بحسب صفحته، نماذج GGUF وLiteRT-LM على الهاتف ويتيحها عبر نقاط وصول متوافقة مع OpenAI وOllama. يحتوي التطبيق على إعلانات ومشتريات داخل التطبيق. تستند هذه المراجعة إلى صفحة Google Play وسياسة الخصوصية التي تربطها، كما جرى التحقق منهما في 26 أكتوبر 2026، ولم يتضمن إعدادها أي استخدام فعلي للتطبيق.',
     metaDescription:
-      'مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات لم تُختبر.',
+      'مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM دون اتصال ويوفّر API متوافقاً مع OpenAI. إعلانات وادعاءات غير مؤكدة',
     twitterDescription:
       'مراجعة Mobile LM Server: تطبيق Android يقول مطوّره إنه يشغّل نماذج GGUF وLiteRT-LM على الهاتف ويوفّر واجهة API متوافقة مع OpenAI. ما تدّعيه صفحة Google Play وسياسة الخصوصية، وما لم يُتحقق منه.',
     audience:
@@ -1802,7 +1802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chaterminal-review-hero-zh.webp',
     title: 'Mobile LM Server 评测：支持本地模型与手机端 API 的 Android 应用',
-    seoTitle: 'Mobile LM Server 评测：Android 本地模型与 API',
+    seoTitle: 'Mobile LM Server 评测：安卓本地模型与 API',
     intro:
       'Mobile LM Server（Google Play 包名 com.chaterminal.mobilellm，开发者账号为“chaterminal”）是一款 Android 应用，根据其页面介绍，它在手机上运行 GGUF 和 LiteRT-LM 模型，并通过兼容 OpenAI 和兼容 Ollama 的端点对外提供服务。应用含有广告和应用内购买。本评测基于 Google Play 页面及其所链接的隐私政策，核实日期为 2026 年 10 月 26 日，未经实际使用。',
     metaDescription:

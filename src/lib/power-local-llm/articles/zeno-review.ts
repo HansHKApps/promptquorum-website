@@ -1781,7 +1781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/zeno-review-hero-zh.webp',
     title: 'Zeno 评测：适用于 Mac 的免费私有 AI 工作区',
-    seoTitle: 'Zeno 评测：Mac 免费私有 AI 工作区，内置 35B 模型',
+    seoTitle: 'Zeno评测：Mac免费私有AI工作区，内置35B模型',
     intro:
       'Zeno 是纽约公司 [Icosa Computing](https://icosa.co/zeno) 推出的免费 macOS 应用。它内置一个 350 亿参数的语言模型，据 Icosa 称，读取文件、编辑文档和运行智能体任务都完全在你的 Mac 上进行。Icosa 于 2026 年 8 月 19 日发布该应用。本评测依据 2026 年 10 月 24 日查阅的 Zeno 官方页面、使用条款和下载服务器；PromptQuorum 没有安装或测试过 Zeno。',
     metaDescription:

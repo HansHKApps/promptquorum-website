@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/openclient-review-hero-ja.webp',
     title: 'OpenClientレビュー:OllamaとLiteLLM向けの無料Appleチャットアプリ',
-    seoTitle: 'OpenClientレビュー:Ollama・LiteLLM向け無料チャット',
+    seoTitle: 'OpenClientレビュー:Ollama・LiteLLM対応',
     intro:
       'OpenClientは、独立開発者Arturo Carretero Calvo氏によるiPhone・iPad・Mac向けの無料オープンソースのチャットアプリです。AIモデルは内蔵しておらず、ご自身で運用するOllama、LiteLLM、またはOpenAI互換サーバーに接続し、そのサーバーが提供するモデルと会話します。このレビューは、開発者のサイトとプライバシーポリシー、GitHubリポジトリ、App Storeの掲載情報を2026年10月24日に確認した内容に基づいています。',
     metaDescription:
@@ -1800,7 +1800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/openclient-review-hero-zh.webp',
     title: 'OpenClient 评测：适用于 Ollama 和 LiteLLM 的免费 Apple 聊天应用',
-    seoTitle: 'OpenClient 评测：Ollama 与 LiteLLM 免费聊天应用',
+    seoTitle: 'OpenClient评测：Ollama与LiteLLM聊天应用',
     intro:
       'OpenClient 是独立开发者 Arturo Carretero Calvo 推出的免费开源聊天应用，支持 iPhone、iPad 和 Mac。它本身不含任何 AI 模型：你需要把它连接到自己运行的 Ollama、LiteLLM 或其他兼容 OpenAI 的服务器，再与该服务器提供的模型对话。本评测依据开发者的网站和隐私政策、GitHub 仓库以及 App Store 页面，核查日期为 2026 年 10 月 24 日。',
     metaDescription:

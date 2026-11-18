@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-operator-review-hero-ja.webp',
     title: 'Local Operatorレビュー：自分のPCでコードを実行する無料AIエージェント',
-    seoTitle: 'Local Operatorレビュー：無料のデスクトップAIエージェント',
+    seoTitle: 'Local Operatorレビュー：無料AIエージェントアプリ',
     intro:
       'Local Operatorは、[Radient Inc.](https://radienthq.com)が提供する、MITライセンスの無料デスクトップアプリです。AIエージェントがタスクを計画し、別のエージェントに計画を確認させたうえで、お使いのMac・Windows・Linux上でコードを書いて実行します。モデルにはローカルのOllamaモデル、自分のAPIキー、開発元のホスト型Radient Passを使えます。このレビューは開発元のウェブサイト、2つのGitHubリポジトリ、プライバシーポリシー（2026年10月24日確認）に基づいており、PromptQuorumはアプリを実際には試していません。',
     metaDescription:
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Local Operator تطبيق سطح مكتب مجاني برخصة MIT من [Radient Inc.](https://radienthq.com) تخطّط فيه وكلاء الذكاء الاصطناعي للمهمة، ثم يراجع وكيل منفصل الخطة، وبعدها تكتب الشيفرة وتنفّذها على حاسوبك الذي يعمل بنظام Mac أو Windows أو Linux. يمكن أن يكون النموذج نموذج Ollama محليًا أو مفاتيح API الخاصة بك أو خدمة Radient Pass المستضافة لدى الشركة. تستند هذه المراجعة إلى موقع الشركة ومستودعيها على GitHub وسياسة الخصوصية، وقد جرى التحقق منها في 24 أكتوبر 2026، ولم تجرّب PromptQuorum التطبيق عمليًا.',
     metaDescription:
-      'مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والإصدار والتثبيت؛ دون اختبار.',
+      'مراجعة Local Operator: وكيل ذكاء اصطناعي مجاني برخصة MIT لأنظمة Mac وWindows وLinux. Ollama محلي أو نماذج مستضافة، والخصوصية والتثبيت؛ دون اختبار.',
     twitterDescription:
       'مراجعة Local Operator: وكيل سطح مكتب مجاني ومفتوح المصدر ينفّذ الشيفرة على حاسوبك بنموذج محلي أو مستضاف. ما تؤكده المصادر وما لا تؤكده.',
     audience:

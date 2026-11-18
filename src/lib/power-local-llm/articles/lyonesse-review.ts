@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/lyonesse-review-hero-ja.webp',
     title: 'Lyonesseレビュー：iPhone・Mac向けオフラインAI文字起こしと会議メモ',
-    seoTitle: 'Lyonesseレビュー：iPhone・Mac向けオフラインAI文字起こし',
+    seoTitle: 'Lyonesseレビュー：オフラインAI文字起こしアプリ',
     intro:
       'Lyonesseは、録音の文字起こし、会議の要約、メモやドキュメントに関する質問への回答を行うiPhone・iPad・Mac向けのアプリです。開発者によれば、すべてアカウント不要で端末上で動作します。ダウンロードは無料で、最初の1回の録音が付属し、その後はサブスクリプションまたは買い切りで利用します。このレビューは、2026年10月26日に確認したApp Storeの掲載情報と、開発者の[公式サイト](https://lyonesse.app)、プライバシーポリシー、利用規約、2本の計測記事に基づきます。PromptQuorumは実機でのテストを行っていません。',
     metaDescription:
@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/lyonesse-review-hero-ar.webp',
     title: 'مراجعة Lyonesse: تفريغ صوتي ومحاضر اجتماعات بالذكاء الاصطناعي دون اتصال على أجهزة Apple',
-    seoTitle: 'مراجعة Lyonesse: تفريغ صوتي بالذكاء الاصطناعي على Mac',
+    seoTitle: 'مراجعة Lyonesse: تفريغ صوتي دون اتصال على iPhone وMac',
     intro:
       'Lyonesse تطبيق لأجهزة iPhone وiPad وMac يفرّغ التسجيلات صوتيًا ويلخّص الاجتماعات ويجيب عن الأسئلة حول ملاحظاتك ومستنداتك، ويقول المطوّر إن كل ذلك يعمل على الجهاز نفسه دون حساب. تنزيله مجاني مع تسجيل واحد مشمول، ثم يُباع باشتراك أو بشراء دائم لمرة واحدة. تستند هذه المراجعة إلى صفحة التطبيق في App Store و[موقع](https://lyonesse.app) المطوّر وسياسة الخصوصية والشروط ومنشورَي قياس، وقد رُوجعت في 26 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/lyonesse-review-hero-zh.webp',
     title: 'Lyonesse 评测：适用于 iPhone 和 Mac 的离线 AI 转录与会议笔记应用',
-    seoTitle: 'Lyonesse 评测：iPhone 和 Mac 离线 AI 转录应用',
+    seoTitle: 'Lyonesse 评测：iPhone/Mac 离线 AI 转录',
     intro:
       'Lyonesse 是一款适用于 iPhone、iPad 和 Mac 的应用，可转录录音、总结会议，并回答关于你的笔记和文档的问题；开发者表示这一切都在设备本机运行，无需账号。应用可免费下载并含一次录音，之后可订阅，也可一次性买断终身使用。本评测基于 2026年10月26日核对的 App Store 页面，以及开发者的[官网](https://lyonesse.app)、隐私政策、服务条款和两篇测量文章；PromptQuorum 未上手实测该应用。',
     metaDescription:

@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/openvoiceos-review-hero-ja.webp',
     title: 'Open Voice OS レビュー：LinuxとRaspberry Pi向けのオープンソース音声アシスタント',
-    seoTitle: 'Open Voice OS レビュー：オープンソース音声アシスタント',
+    seoTitle: 'Open Voice OSレビュー：OSS音声アシスタント',
     intro: 'Open Voice OS（OVOS）は、Mycroftのフォークとして始まった、[OpenVoiceOS](https://www.openvoiceos.org/)によるコミュニティ製のオープンソース音声アシスタント基盤です。Linux、Raspberry Pi、Dockerで動作し、スキルをプラグインとして追加でき、認識できない依頼はLLMに渡すこともできます。このレビューはプロジェクトのウェブサイトとGitHubのドキュメントに基づくもので、実機での検証は行っていません。',
     metaDescription: 'Open Voice OSのレビュー。LinuxとRaspberry Pi向けの、Mycroft由来のオープンソース音声アシスタント。音声・LLM・プライバシーについてドキュメントが述べる内容を整理。',
     twitterDescription: 'Open Voice OSのレビュー。Linux・Raspberry Pi・Docker向けのオープンソース音声アシスタント。ローカル音声、LLMフォールバック、ドキュメントで未確認の点。',

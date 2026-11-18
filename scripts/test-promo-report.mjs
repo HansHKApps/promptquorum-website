@@ -23,7 +23,7 @@ ok(localeOf('/ja/a') === 'ja' && localeOf('/a') === 'en', 'localeOf')
 const groups = Object.entries(PILOT_GROUPS).map(([p, e]) => ({ path: p, placement: e.placement, target: e.target, control: PILOT_CONTROLS[p] ?? null }))
 const UE = { 'ask-hans': 'ask_hans_question', 'power-mode': 'power_report_started', directory: 'directory_app_view' }
 function world(effectPer1000) {
-  const w = { pageviews: {}, events: { promo_view: {}, promo_click: {}, promo_open: {}, ask_hans_question: {}, power_report_started: {}, directory_app_view: {} } }
+  const w = { pageviews: {}, events: { ask_hans_promo_view: {}, power_mode_promo_view: {}, directory_promo_view: {}, mcp_promo_view: {}, ask_hans_promo_click: {}, power_mode_promo_click: {}, directory_promo_click: {}, mcp_promo_click: {}, ask_hans_promo_open: {}, power_mode_promo_open: {}, directory_promo_landing: { P1: 0, P2: 0, P3: 0, P4: 0, P5: 0 }, mcp_promo_landing: { P1: 0, P2: 0, P3: 0, P4: 0 }, ask_hans_question: {}, power_report_started: {}, directory_app_view: {} } }
   const add = (name, p, n) => { w.events[name][p] = (w.events[name][p] ?? 0) + n }
   for (const g of groups) {
     for (const [p, isT] of [[g.path, true], [g.control, false]]) {
@@ -32,7 +32,7 @@ function world(effectPer1000) {
       w.pageviews['/de' + p] = 4000 // a locale version
       const ue = UE[g.target]
       if (ue) add(ue, p, 20 + (isT ? effectPer1000 * 10 : 0))
-      if (isT) { add('promo_view', p, 3000); add('promo_view', '/de' + p, 1500); add('promo_click', p, 120); add('promo_click', '/de' + p, 30); add('promo_open', p, 60) }
+      if (isT) { const t = g.target.replace('-', '_'); add(`${t}_promo_view`, p, 3000); add(`${t}_promo_view`, '/de' + p, 1500); add(`${t}_promo_click`, p, 120); add(`${t}_promo_click`, '/de' + p, 30); if (t === 'ask_hans' || t === 'power_mode') add(`${t}_promo_open`, p, 60) }
     }
   }
   return w
@@ -46,15 +46,27 @@ const dir = a1.cells.find((c) => c.key === 'directory / P1')
 ok(dir && dir.incr && Math.abs(dir.incr.est - (5 - 20000 / 14000)) < 1e-6, `directory incremental per 1,000 equals the planted effect (${dir?.incr?.est.toFixed(4)} vs ${(5 - 20000 / 14000).toFixed(4)})`)
 ok(dir.incrBase && Math.abs(dir.incrBase.est) < 1e-9, 'baseline difference is ~0 when no effect before launch')
 ok(dir.did && dir.did.est > 0 && dir.did.lo > 0, `difference in differences > 0 with interval above 0 (est ${dir.did?.est.toFixed(2)} [${dir.did?.lo.toFixed(2)}, ${dir.did?.hi.toFixed(2)}])`)
+// Landing events: keyed by placement; Directory per placement cell, MCP pooled over placements
+const withLanding = JSON.parse(JSON.stringify(pilot))
+withLanding.events.directory_promo_landing.P1 = 40; withLanding.events.mcp_promo_landing.P1 = 10; withLanding.events.mcp_promo_landing.P2 = 5
+const a5 = analyse({ groups, pilot: withLanding, baseline, opts: { reps: 100 } })
+const d5 = a5.cells.find((c) => c.key === 'directory / P1'), m5 = a5.cells.find((c) => c.key === 'mcp')
+ok(d5.landings === 40 && Math.abs(d5.landingRate - 40 / d5.clicks) < 1e-9, `directory click-to-landing = landings / clicks (${d5.landingRate?.toFixed(4)})`)
+ok(m5.landings === 15 && Math.abs(m5.landingRate - 15 / m5.clicks) < 1e-9, 'MCP landings pooled over placements')
+ok(a5.cells.find((c) => c.key === 'power-mode').landings === null, 'Power Mode has no landing metric (opens in place)')
+// Retired names are not read
+const oldNames = { pageviews: pilot.pageviews, events: { promo_view: { '/local-llms/x': 9999 }, promo_click: { '/local-llms/x': 999 } } }
+ok(analyse({ groups, pilot: oldNames, baseline: null, opts: { reps: 50 } }).cells.every((c) => c.views === 0 && c.clicks === 0), 'retired promo_view / promo_click names are ignored')
 const mcp = a1.cells.find((c) => c.key === 'mcp')
 ok(mcp && mcp.incr === null && mcp.usage === null, 'MCP has no usage event: judged on reach/CTR only, pooled over placements')
 ok(a1.cells.some((c) => c.key === 'power-mode') && !a1.cells.some((c) => c.key.startsWith('power-mode /')), 'Power Mode is pooled over placements')
+ok(a1.cells.some((c) => c.key === 'ask-hans') && !a1.cells.some((c) => /^ask-hans \/ P[1-4]$/.test(c.key)), 'Ask Hans is pooled over placements P1-P4 (hubs P5 stay separate)')
 const hub = a1.cells.find((c) => c.key === 'ask-hans / P5')
 ok(hub && hub.pairs === 0 && hub.incr?.note, 'hub cell has no matched pairs, no interval')
 ok(dir.eligible === true && typeof dir.verdict === 'string', `eligible cell gets a verdict (${dir.verdict})`)
 // Winner path: make one cell clearly better (more clicks) than the median
 const boosted = JSON.parse(JSON.stringify(pilot))
-for (const g of groups) if (g.target === 'directory' && g.placement === 'P1') boosted.events.promo_click[g.path] = 900
+for (const g of groups) if (g.target === 'directory' && g.placement === 'P1') boosted.events.directory_promo_click[g.path] = 900
 const a3 = analyse({ groups, pilot: boosted, baseline, opts: { reps: 300 } })
 ok(a3.cells.find((c) => c.key === 'directory / P1').verdict.startsWith('WINNER'), 'cell with CTR above median and adoption interval above 0 is a WINNER')
 // Noise gives a real interval: vary usage per pair

@@ -9,14 +9,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'Roleplay and story-writing users who want a zero-install local LLM app with a bundled editor, and anyone comparing single-file inference engines to Ollama, LM Studio, or raw llama.cpp',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp Review: One File, No Install, Built for Roleplay',
-    seoTitle: 'KoboldCpp Review: Download, Setup and GPU Support',
+    seoTitle: 'KoboldCpp: Download, System Requirements, Models per VRAM',
     intro: 'KoboldCpp is a single executable file that runs GGUF language models with no installer, no Python environment, and no Docker — and it ships with a story-writing and roleplay-focused editor built in, rather than a plain chat box.',
-    metaDescription: 'KoboldCpp (also written Kobold CPP) is a free, single-file local LLM app on llama.cpp. Get the Windows, Linux or macOS build and pick CUDA, Vulkan or ROCm.',
+    metaDescription: 'KoboldCpp (also Kobold CPP, koboldcpp.exe) is a free one-file local LLM app. Download links, system requirements and which GGUF models fit 4-48 GB VRAM.',
     readTime: '9 min read',
     targetKeywords: [
       'KoboldCpp review',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is KoboldCpp still maintained, and what does it actually add over llama.cpp?',
-        answer: 'Yes — KoboldCpp ships frequent releases (latest: v1.124.2, released 31 October 2026; last upstream update: 2 November 2026) from its GitHub repository. It adds a bundled KoboldAI Lite web UI with story-editing and roleplay tools, a single-file zero-install distribution, and built-in image generation and speech-to-text, none of which bare llama.cpp provides on its own.',
+        answer: 'Yes — KoboldCpp ships frequent releases (latest: v1.124.2, released 31 October 2026; last upstream update: 13 November 2026) from its GitHub repository. It adds a bundled KoboldAI Lite web UI with story-editing and roleplay tools, a single-file zero-install distribution, and built-in image generation and speech-to-text, none of which bare llama.cpp provides on its own.',
         bullets: [
           'Single executable file — no installer, no Python, no Docker',
           'License: AGPL 3.0 (copyleft); built on llama.cpp (MIT) underneath',
@@ -44,10 +44,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'TL;DR', anchor: 'tldr' },
       { label: 'Get KoboldCpp', anchor: 'get-koboldcpp' },
+      { label: 'What Are KoboldCpp\'s System Requirements?', anchor: 'koboldcpp-system-requirements' },
       { label: 'What Is KoboldCpp?', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite: The Bundled Interface', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'How to Download and Run KoboldCpp', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'GPU and Hardware Support', anchor: 'koboldcpp-hardware-support' },
+      { label: 'Which Models Fit Your VRAM in KoboldCpp?', anchor: 'koboldcpp-models-per-vram' },
       { label: 'Who Should Use KoboldCpp', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp vs. Alternatives', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'Common Mistakes', anchor: 'common-mistakes' },
@@ -95,13 +97,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Windows needs only a double-click on the .exe; Linux and macOS files must be made executable (chmod +x) and started from a terminal, and macOS may block the first launch. The website points to the same GitHub Releases page for downloads. No privacy-policy page was found on koboldcpp.net on 2 November 2026.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'What Are KoboldCpp\'s System Requirements?',
+        content: '**KoboldCpp publishes no fixed minimum specification: what you need depends on the GGUF model and the context length you load.** A dedicated GPU is optional. These are the build and flag choices that matter.',
+        items: [
+          '**Windows:** `koboldcpp.exe` for NVIDIA (CUDA), `koboldcpp-nocuda.exe` (smaller download, CPU and Vulkan), or `koboldcpp-oldpc.exe` if the main build does not start on an older PC.',
+          '**Linux x64:** download `koboldcpp-linux-x64`, make it executable with `chmod +x koboldcpp-linux-x64`, then start it from a terminal. `-nocuda` and `-oldpc` variants exist.',
+          '**macOS:** `koboldcpp-mac-arm64` for Apple Silicon (M-series). Intel Macs require a build from source.',
+          '**GPU flags:** `--usecuda` (NVIDIA only) or `--usevulkan` (AMD, NVIDIA, Intel). `--gpulayers N` sets how many layers go to the GPU (default -1 = autofit, 0 = no GPU offload); `--contextsize N` sets the maximum context length.',
+          '**Memory rule of thumb:** the model weights plus the context must fit in VRAM (or in RAM for CPU runs). The table in the next section turns this into model sizes per VRAM tier.',
+        ],
+        note: 'Source: the [KoboldCpp README](https://github.com/LostRuins/koboldcpp), which states hardware needs only in these general terms.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'What Is KoboldCpp?',
         content: [
           "**KoboldCpp is a free, single-file program that runs GGUF-format language models locally, built on top of the llama.cpp inference engine and maintained by a pseudonymous developer known as LostRuins.** It descends from the original KoboldAI project's interface conventions, adapted to run on llama.cpp's backend instead of a Python-based inference stack.",
           'The project is hosted at [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) and released under the GNU Affero General Public License version 3 (AGPL 3.0) — a copyleft license, distinct from the permissive MIT license llama.cpp itself uses underneath. Releases ship frequently.',
-          'The latest release is [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), published on 31 October 2026, and the repository\'s last upstream update was on 2 November 2026. The v1.124 series adds a subset of text-to-speech models and YuE2 music generation integrated from audio.cpp. Earlier releases, including v1.123.1 (13 October 2026), are listed on the [Releases page](https://github.com/LostRuins/koboldcpp/releases). The name is often typed as Kobold CPP, kobold.cpp or koboldccp — all of these refer to the same project.',
+          'The latest release is [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), published on 31 October 2026, and the repository\'s last upstream update was on 13 November 2026. The v1.124 series adds a subset of text-to-speech models and YuE2 music generation integrated from audio.cpp. Earlier releases, including v1.123.1 (13 October 2026), are listed on the [Releases page](https://github.com/LostRuins/koboldcpp/releases). The name is often typed as Kobold CPP, kobold.cpp or koboldccp — all of these refer to the same project.',
         ],
         items: [
           'Distributed as one executable per platform — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -152,6 +167,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Older hardware — the oldpc build targets CUDA 11 and AVX1-only CPUs for machines that cannot run the modern default build',
           'CPU-only — the nocuda build runs with no GPU at all, at reduced speed relative to GPU-accelerated inference',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'Which Models Fit Your VRAM in KoboldCpp?',
+        content: '**At Q4 quantization, 8 GB of VRAM suits 7-8B models, 12 GB suits 13-14B, 16 GB suits 22B-class models and 24 GB suits 22-32B; a 70B model needs roughly 48 GB.** With `--gpulayers` KoboldCpp can offload only part of a model to the GPU, so larger models still run, but more slowly.',
+        columns: ['VRAM', 'Q4 model that fits', 'Notes'],
+        rows: [
+          { 'VRAM': '4 GB', 'Q4 model that fits': '3B-class (about 2 GB at Q4)', 'Notes': 'Small models, or offload part to RAM' },
+          { 'VRAM': '8 GB', 'Q4 model that fits': '7-8B (about 4 GB at Q4)', 'Notes': 'Common sweet spot, keeps headroom' },
+          { 'VRAM': '12 GB', 'Q4 model that fits': '13-14B (about 8 GB at Q4)', 'Notes': 'Room for a longer context' },
+          { 'VRAM': '16 GB', 'Q4 model that fits': '22B-class (about 13 GB at Q4)', 'Notes': 'Practical ceiling at this tier' },
+          { 'VRAM': '24 GB', 'Q4 model that fits': '22-32B (Q4 up to Q8)', 'Notes': '70B does not fit without quality loss' },
+          { 'VRAM': '48 GB', 'Q4 model that fits': '70B (about 42 GB at Q4)', 'Notes': 'First tier that fits 70B at Q4' },
+        ],
+        note: 'Estimates from the PromptQuorum [VRAM guide](/local-llms/how-much-vram-local-llm): Q4 weight sizes plus 1-2 GB for context. They are not KoboldCpp measurements. For GPU picks per tier, see the [Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide).',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -268,14 +298,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'Rollenspiel- und Story-Schreiber, die eine installationsfreie lokale LLM-App mit integriertem Editor suchen, sowie alle, die Single-File-Inferenz-Engines mit Ollama, LM Studio oder rohem llama.cpp vergleichen',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp-Rezension: Eine Datei, keine Installation, für Rollenspiel gebaut',
-    seoTitle: 'KoboldCpp-Rezension: Download, Setup und GPU-Support',
+    seoTitle: 'KoboldCpp Download: Systemanforderungen, Modelle pro VRAM',
     intro: 'KoboldCpp ist eine einzelne ausführbare Datei, die GGUF-Sprachmodelle ohne Installer, ohne Python-Umgebung und ohne Docker ausführt — und bringt einen auf Story-Schreiben und Rollenspiel ausgelegten Editor gleich mit, statt nur einer schlichten Chatbox.',
-    metaDescription: 'KoboldCpp (auch Kobold CPP): kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis. Build für Windows, Linux, macOS, mit CUDA, Vulkan oder ROCm.',
+    metaDescription: 'KoboldCpp (auch Kobold CPP, koboldcpp.exe): kostenlose Ein-Datei-App für lokale LLMs. Download-Links, Systemanforderungen, passende GGUF-Modelle je VRAM.',
     readTime: '9 Min. Lesezeit',
     targetKeywords: [
       'KoboldCpp Test',
@@ -289,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wird KoboldCpp noch gepflegt, und was bringt es gegenüber llama.cpp zusätzlich?',
-        answer: 'Ja — KoboldCpp veröffentlicht regelmäßig Releases (aktuell v1.124.2, veröffentlicht am 31. Oktober 2026; letztes Upstream-Update: 2. November 2026) im GitHub-Repository. Es bringt eine gebündelte KoboldAI-Lite-Weboberfläche mit Story- und Rollenspiel-Editier-Tools, eine installationsfreie Single-File-Distribution sowie eingebaute Bildgenerierung und Sprache-zu-Text mit — nichts davon bietet reines llama.cpp von sich aus.',
+        answer: 'Ja — KoboldCpp veröffentlicht regelmäßig Releases (aktuell v1.124.2, veröffentlicht am 31. Oktober 2026; letztes Upstream-Update: 13. November 2026) im GitHub-Repository. Es bringt eine gebündelte KoboldAI-Lite-Weboberfläche mit Story- und Rollenspiel-Editier-Tools, eine installationsfreie Single-File-Distribution sowie eingebaute Bildgenerierung und Sprache-zu-Text mit — nichts davon bietet reines llama.cpp von sich aus.',
         bullets: [
           'Einzelne ausführbare Datei — kein Installer, kein Python, kein Docker',
           'Lizenz: AGPL 3.0 (Copyleft); baut im Hintergrund auf llama.cpp (MIT) auf',
@@ -303,10 +333,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Zusammenfassung', anchor: 'tldr' },
       { label: 'KoboldCpp herunterladen', anchor: 'get-koboldcpp' },
+      { label: 'Welche Systemanforderungen hat KoboldCpp?', anchor: 'koboldcpp-system-requirements' },
       { label: 'Was ist KoboldCpp?', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite: Die integrierte Oberfläche', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'KoboldCpp herunterladen und starten', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'GPU- und Hardware-Unterstützung', anchor: 'koboldcpp-hardware-support' },
+      { label: 'Welche Modelle passen in Ihren VRAM bei KoboldCpp?', anchor: 'koboldcpp-models-per-vram' },
       { label: 'Für wen eignet sich KoboldCpp?', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp vs. Alternativen', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'Häufige Fehler', anchor: 'common-mistakes' },
@@ -354,13 +386,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Unter Windows genügt ein Doppelklick auf die .exe; Linux- und macOS-Dateien müssen ausführbar gemacht (chmod +x) und im Terminal gestartet werden, und macOS blockiert den ersten Start unter Umständen. Die Website verweist für Downloads auf dieselbe GitHub-Releases-Seite. Auf koboldcpp.net wurde am 2. November 2026 keine Datenschutzerklärung gefunden.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'Welche Systemanforderungen hat KoboldCpp?',
+        content: '**KoboldCpp nennt keine feste Mindestausstattung: Was Sie brauchen, hängt vom geladenen GGUF-Modell und der Kontextlänge ab.** Eine dedizierte GPU ist optional. Entscheidend sind Build und Parameter.',
+        items: [
+          '**Windows:** `koboldcpp.exe` für NVIDIA (CUDA), `koboldcpp-nocuda.exe` (kleinerer Download, CPU und Vulkan) oder `koboldcpp-oldpc.exe`, falls der Haupt-Build auf einem älteren PC nicht startet.',
+          '**Linux x64:** Laden Sie `koboldcpp-linux-x64` herunter, machen Sie die Datei mit `chmod +x koboldcpp-linux-x64` ausführbar und starten Sie sie im Terminal. Es gibt `-nocuda`- und `-oldpc`-Varianten.',
+          '**macOS:** `koboldcpp-mac-arm64` für Apple Silicon (M-Serie). Intel-Macs erfordern einen Build aus dem Quellcode.',
+          '**GPU-Parameter:** `--usecuda` (nur NVIDIA) oder `--usevulkan` (AMD, NVIDIA, Intel). `--gpulayers N` legt fest, wie viele Layer auf die GPU kommen (Standard -1 = Autofit, 0 = keine GPU-Auslagerung); `--contextsize N` setzt die maximale Kontextlänge.',
+          '**Faustregel für den Speicher:** Modellgewichte plus Kontext müssen in den VRAM passen (bei reinem CPU-Betrieb in den RAM). Die Tabelle im nächsten Abschnitt übersetzt das in Modellgrößen je VRAM-Stufe.',
+        ],
+        note: 'Quelle: die [KoboldCpp-README](https://github.com/LostRuins/koboldcpp), die Hardwareanforderungen nur in diesen allgemeinen Worten nennt.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'Was ist KoboldCpp?',
         content: [
           '**KoboldCpp ist ein kostenloses Ein-Datei-Programm, das GGUF-Sprachmodelle lokal ausführt, aufgebaut auf der llama.cpp-Inferenz-Engine und gepflegt von einem pseudonymen Entwickler namens LostRuins.** Es stammt von den Oberflächen-Konventionen des ursprünglichen KoboldAI-Projekts ab, angepasst für den Betrieb auf llama.cpps Backend statt eines Python-basierten Inferenz-Stacks.',
           'Das Projekt liegt unter [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) und steht unter der GNU Affero General Public License Version 3 (AGPL 3.0) — einer Copyleft-Lizenz, die sich von der freizügigen MIT-Lizenz unterscheidet, die llama.cpp selbst im Hintergrund verwendet. Releases erscheinen häufig.',
-          'Die aktuelle Version ist [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2) vom 31. Oktober 2026; das letzte Upstream-Update des Repositorys erfolgte am 2. November 2026. Die Serie v1.124 ergänzt eine Auswahl an Text-to-Speech-Modellen und die YuE2-Musikgenerierung, die aus audio.cpp übernommen wurden. Frühere Releases, darunter v1.123.1 (13. Oktober 2026), stehen auf der [Releases-Seite](https://github.com/LostRuins/koboldcpp/releases). Der Name wird oft als Kobold CPP, kobold.cpp oder koboldccp geschrieben — gemeint ist stets dasselbe Projekt.',
+          'Die aktuelle Version ist [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2) vom 31. Oktober 2026; das letzte Upstream-Update des Repositorys erfolgte am 13. November 2026. Die Serie v1.124 ergänzt eine Auswahl an Text-to-Speech-Modellen und die YuE2-Musikgenerierung, die aus audio.cpp übernommen wurden. Frühere Releases, darunter v1.123.1 (13. Oktober 2026), stehen auf der [Releases-Seite](https://github.com/LostRuins/koboldcpp/releases). Der Name wird oft als Kobold CPP, kobold.cpp oder koboldccp geschrieben — gemeint ist stets dasselbe Projekt.',
         ],
         items: [
           'Als eine ausführbare Datei je Plattform verteilt — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -411,6 +456,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ältere Hardware — der oldpc-Build richtet sich an CUDA 11 und reine AVX1-CPUs für Rechner, die den modernen Standard-Build nicht ausführen können',
           'Nur CPU — der nocuda-Build läuft komplett ohne GPU, mit reduzierter Geschwindigkeit gegenüber GPU-beschleunigter Inferenz',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'Welche Modelle passen in Ihren VRAM bei KoboldCpp?',
+        content: '**Bei Q4-Quantisierung passen in 8 GB VRAM 7-8B-Modelle, in 12 GB 13-14B, in 16 GB Modelle der 22B-Klasse und in 24 GB 22-32B; ein 70B-Modell braucht rund 48 GB.** Mit `--gpulayers` lagert KoboldCpp nur einen Teil des Modells auf die GPU aus, größere Modelle laufen also trotzdem, nur langsamer.',
+        columns: ['VRAM', 'Passendes Q4-Modell', 'Hinweis'],
+        rows: [
+          { 'VRAM': '4 GB', 'Passendes Q4-Modell': '3B-Klasse (ca. 2 GB bei Q4)', 'Hinweis': 'Kleine Modelle oder Teil-Auslagerung in RAM' },
+          { 'VRAM': '8 GB', 'Passendes Q4-Modell': '7-8B (ca. 4 GB bei Q4)', 'Hinweis': 'Üblicher Sweet Spot, Reserve bleibt' },
+          { 'VRAM': '12 GB', 'Passendes Q4-Modell': '13-14B (ca. 8 GB bei Q4)', 'Hinweis': 'Platz für längeren Kontext' },
+          { 'VRAM': '16 GB', 'Passendes Q4-Modell': '22B-Klasse (ca. 13 GB bei Q4)', 'Hinweis': 'Praktische Obergrenze dieser Stufe' },
+          { 'VRAM': '24 GB', 'Passendes Q4-Modell': '22-32B (Q4 bis Q8)', 'Hinweis': '70B passt nicht ohne Qualitätsverlust' },
+          { 'VRAM': '48 GB', 'Passendes Q4-Modell': '70B (ca. 42 GB bei Q4)', 'Hinweis': 'Erste Stufe, die 70B bei Q4 fasst' },
+        ],
+        note: 'Schätzwerte aus dem PromptQuorum-[VRAM-Leitfaden](/de/local-llms/how-much-vram-local-llm): Q4-Gewichtsgrößen plus 1-2 GB für den Kontext. Es sind keine KoboldCpp-Messwerte. GPU-Empfehlungen je Stufe finden Sie im [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide).',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -527,14 +587,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'Utilisateurs de jeu de rôle et d\'écriture narrative cherchant une application LLM locale sans installation avec éditeur intégré, et toute personne comparant les moteurs d\'inférence monofichiers à Ollama, LM Studio ou llama.cpp brut',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp: un seul fichier, aucune installation, pensé pour le jeu de rôle',
-    seoTitle: 'Avis KoboldCpp : téléchargement, installation et GPU',
+    seoTitle: 'KoboldCpp : téléchargement, prérequis, modèles par VRAM',
     intro: 'KoboldCpp est un exécutable unique qui fait tourner des modèles GGUF sans installateur, sans environnement Python et sans Docker — avec un éditeur d\'écriture narrative et de jeu de rôle intégré, plutôt qu\'une simple fenêtre de chat.',
-    metaDescription: 'KoboldCpp (aussi écrit Kobold CPP) : appli LLM locale gratuite en un fichier, basée sur llama.cpp. Version Windows, Linux ou macOS, CUDA, Vulkan ou ROCm.',
+    metaDescription: 'KoboldCpp (ou Kobold CPP, koboldcpp.exe) : appli LLM locale gratuite en un fichier. Téléchargement, prérequis et modèles GGUF adaptés à votre VRAM.',
     readTime: '8 min de lecture',
     targetKeywords: [
       'KoboldCpp avis',
@@ -548,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'KoboldCpp est-il toujours maintenu, et qu\'apporte-t-il vraiment de plus que llama.cpp ?',
-        answer: 'Oui — KoboldCpp publie des versions fréquentes (dernière : v1.124.2, publiée le 31 octobre 2026 ; dernière mise à jour du projet : 2 novembre 2026) sur son dépôt GitHub. Il ajoute une interface web KoboldAI Lite intégrée avec des outils d\'écriture et de jeu de rôle, une distribution monofichier sans installation, ainsi que la génération d\'images et la transcription vocale intégrées — rien de tout cela n\'existe dans llama.cpp seul.',
+        answer: 'Oui — KoboldCpp publie des versions fréquentes (dernière : v1.124.2, publiée le 31 octobre 2026 ; dernière mise à jour du projet : 13 novembre 2026) sur son dépôt GitHub. Il ajoute une interface web KoboldAI Lite intégrée avec des outils d\'écriture et de jeu de rôle, une distribution monofichier sans installation, ainsi que la génération d\'images et la transcription vocale intégrées — rien de tout cela n\'existe dans llama.cpp seul.',
         bullets: [
           'Un seul exécutable — pas d\'installateur, pas de Python, pas de Docker',
           'Licence : AGPL 3.0 (copyleft) ; construit sur llama.cpp (MIT) en arrière-plan',
@@ -562,10 +622,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Résumé', anchor: 'tldr' },
       { label: 'Télécharger KoboldCpp', anchor: 'get-koboldcpp' },
+      { label: 'Quelle configuration requise pour KoboldCpp ?', anchor: 'koboldcpp-system-requirements' },
       { label: 'Qu\'est-ce que KoboldCpp ?', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite : l\'interface intégrée', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'Télécharger et lancer KoboldCpp', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'Support GPU et matériel', anchor: 'koboldcpp-hardware-support' },
+      { label: 'Quels modèles tiennent dans votre VRAM avec KoboldCpp ?', anchor: 'koboldcpp-models-per-vram' },
       { label: 'À qui s\'adresse KoboldCpp ?', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp face aux alternatives', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'Erreurs courantes', anchor: 'common-mistakes' },
@@ -613,13 +675,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Sous Windows, un double-clic sur le .exe suffit ; les fichiers Linux et macOS doivent être rendus exécutables (chmod +x) et lancés depuis un terminal, et macOS peut bloquer le premier lancement. Le site web renvoie vers la même page Releases GitHub pour les téléchargements. Aucune page de politique de confidentialité n\'a été trouvée sur koboldcpp.net le 2 novembre 2026.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'Quelle configuration requise pour KoboldCpp ?',
+        content: '**KoboldCpp ne publie aucune configuration minimale fixe : tout dépend du modèle GGUF et de la longueur de contexte que vous chargez.** Un GPU dédié est facultatif. Voici les choix de build et d\'options qui comptent.',
+        items: [
+          '**Windows :** `koboldcpp.exe` pour NVIDIA (CUDA), `koboldcpp-nocuda.exe` (téléchargement plus léger, CPU et Vulkan) ou `koboldcpp-oldpc.exe` si la version principale ne démarre pas sur un PC ancien.',
+          '**Linux x64 :** téléchargez `koboldcpp-linux-x64`, rendez-le exécutable avec `chmod +x koboldcpp-linux-x64`, puis lancez-le depuis un terminal. Des variantes `-nocuda` et `-oldpc` existent.',
+          '**macOS :** `koboldcpp-mac-arm64` pour Apple Silicon (série M). Les Mac Intel nécessitent une compilation depuis les sources.',
+          '**Options GPU :** `--usecuda` (NVIDIA uniquement) ou `--usevulkan` (AMD, NVIDIA, Intel). `--gpulayers N` fixe le nombre de couches placées sur le GPU (défaut -1 = autofit, 0 = aucun déchargement GPU) ; `--contextsize N` fixe la longueur de contexte maximale.',
+          '**Règle pratique pour la mémoire :** les poids du modèle plus le contexte doivent tenir dans la VRAM (ou dans la RAM en mode CPU). Le tableau de la section suivante la traduit en tailles de modèles par palier de VRAM.',
+        ],
+        note: 'Source : le [README de KoboldCpp](https://github.com/LostRuins/koboldcpp), qui ne décrit les besoins matériels qu\'en termes généraux.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'Qu\'est-ce que KoboldCpp ?',
         content: [
           '**KoboldCpp est un programme gratuit en un seul fichier qui fait tourner localement des modèles de langage au format GGUF, construit sur le moteur d\'inférence llama.cpp et maintenu par un développeur pseudonyme connu sous le nom de LostRuins.** Il hérite des conventions d\'interface du projet KoboldAI original, adaptées pour fonctionner sur le backend de llama.cpp plutôt que sur une pile d\'inférence Python.',
           'Le projet est hébergé sur [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) et publié sous licence GNU Affero General Public License version 3 (AGPL 3.0) — une licence copyleft, distincte de la licence MIT permissive utilisée par llama.cpp lui-même en arrière-plan. Les versions sortent fréquemment.',
-          'La dernière version est la [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), publiée le 31 octobre 2026 ; la dernière mise à jour du dépôt date du 2 novembre 2026. La série v1.124 ajoute une sélection de modèles de synthèse vocale et la génération musicale YuE2, intégrées depuis audio.cpp. Les versions précédentes, dont la v1.123.1 (13 octobre 2026), figurent sur la [page Releases](https://github.com/LostRuins/koboldcpp/releases). Le nom est souvent écrit Kobold CPP, kobold.cpp ou koboldccp — il s\'agit toujours du même projet.',
+          'La dernière version est la [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), publiée le 31 octobre 2026 ; la dernière mise à jour du dépôt date du 13 novembre 2026. La série v1.124 ajoute une sélection de modèles de synthèse vocale et la génération musicale YuE2, intégrées depuis audio.cpp. Les versions précédentes, dont la v1.123.1 (13 octobre 2026), figurent sur la [page Releases](https://github.com/LostRuins/koboldcpp/releases). Le nom est souvent écrit Kobold CPP, kobold.cpp ou koboldccp — il s\'agit toujours du même projet.',
         ],
         items: [
           'Distribué comme un exécutable par plateforme — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -670,6 +745,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matériel ancien — le build oldpc cible CUDA 11 et les CPU AVX1 uniquement, pour les machines incapables d\'exécuter le build standard moderne',
           'CPU seul — le build nocuda fonctionne sans aucun GPU, à vitesse réduite par rapport à l\'inférence accélérée par GPU',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'Quels modèles tiennent dans votre VRAM avec KoboldCpp ?',
+        content: '**En quantification Q4, 8 Go de VRAM conviennent aux modèles 7-8B, 12 Go aux 13-14B, 16 Go à la classe 22B et 24 Go aux 22-32B ; un modèle 70B demande environ 48 Go.** Avec `--gpulayers`, KoboldCpp peut ne décharger qu\'une partie du modèle sur le GPU : les modèles plus gros fonctionnent donc quand même, mais plus lentement.',
+        columns: ['VRAM', 'Modèle Q4 adapté', 'Remarque'],
+        rows: [
+          { 'VRAM': '4 Go', 'Modèle Q4 adapté': 'Classe 3B (env. 2 Go en Q4)', 'Remarque': 'Petits modèles, ou déchargement partiel en RAM' },
+          { 'VRAM': '8 Go', 'Modèle Q4 adapté': '7-8B (env. 4 Go en Q4)', 'Remarque': 'Palier courant, garde de la marge' },
+          { 'VRAM': '12 Go', 'Modèle Q4 adapté': '13-14B (env. 8 Go en Q4)', 'Remarque': 'Place pour un contexte plus long' },
+          { 'VRAM': '16 Go', 'Modèle Q4 adapté': 'Classe 22B (env. 13 Go en Q4)', 'Remarque': 'Plafond pratique de ce palier' },
+          { 'VRAM': '24 Go', 'Modèle Q4 adapté': '22-32B (Q4 jusqu\'à Q8)', 'Remarque': 'Le 70B ne tient pas sans perte de qualité' },
+          { 'VRAM': '48 Go', 'Modèle Q4 adapté': '70B (env. 42 Go en Q4)', 'Remarque': 'Premier palier qui accueille un 70B en Q4' },
+        ],
+        note: 'Estimations issues du [guide VRAM](/fr/local-llms/how-much-vram-local-llm) de PromptQuorum : tailles de poids en Q4 plus 1 à 2 Go pour le contexte. Ce ne sont pas des mesures faites avec KoboldCpp. Pour choisir un GPU par palier, voir le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide).',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -786,14 +876,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'Usuarios de rol y escritura narrativa que buscan una app de LLM local sin instalación con editor integrado, y cualquiera que compare motores de inferencia de un solo archivo con Ollama, LM Studio o llama.cpp puro',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp: un solo archivo, sin instalación, pensado para el rol',
-    seoTitle: 'Reseña de KoboldCpp: descarga, instalación y soporte GPU',
+    seoTitle: 'KoboldCpp: descarga, requisitos y modelos según tu VRAM',
     intro: 'KoboldCpp es un único ejecutable que corre modelos GGUF sin instalador, sin entorno Python y sin Docker, e incluye un editor pensado para escritura narrativa y rol en lugar de un simple cuadro de chat.',
-    metaDescription: 'KoboldCpp (o Kobold CPP): app de LLM local gratuita de un solo archivo sobre llama.cpp. Versiones para Windows, Linux o macOS con CUDA, Vulkan o ROCm.',
+    metaDescription: 'KoboldCpp (o Kobold CPP, koboldcpp.exe): app de LLM local gratuita de un archivo. Enlaces de descarga, requisitos y qué modelos GGUF caben según tu VRAM.',
     readTime: '8 min de lectura',
     targetKeywords: [
       'KoboldCpp reseña',
@@ -807,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Sigue manteniéndose KoboldCpp, y qué aporta realmente frente a llama.cpp?',
-        answer: 'Sí — KoboldCpp publica versiones con frecuencia (última: v1.124.2, publicada el 31 de octubre de 2026; última actualización del proyecto: 2 de noviembre de 2026) en su repositorio de GitHub. Añade una interfaz web KoboldAI Lite integrada con herramientas de escritura y rol, distribución de un solo archivo sin instalación, y generación de imágenes y transcripción de voz incorporadas, nada de lo cual ofrece llama.cpp por sí solo.',
+        answer: 'Sí — KoboldCpp publica versiones con frecuencia (última: v1.124.2, publicada el 31 de octubre de 2026; última actualización del proyecto: 13 de noviembre de 2026) en su repositorio de GitHub. Añade una interfaz web KoboldAI Lite integrada con herramientas de escritura y rol, distribución de un solo archivo sin instalación, y generación de imágenes y transcripción de voz incorporadas, nada de lo cual ofrece llama.cpp por sí solo.',
         bullets: [
           'Un solo ejecutable — sin instalador, sin Python, sin Docker',
           'Licencia: AGPL 3.0 (copyleft); construido sobre llama.cpp (MIT) por debajo',
@@ -821,10 +911,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Resumen', anchor: 'tldr' },
       { label: 'Descargar KoboldCpp', anchor: 'get-koboldcpp' },
+      { label: '¿Qué requisitos de sistema tiene KoboldCpp?', anchor: 'koboldcpp-system-requirements' },
       { label: '¿Qué es KoboldCpp?', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite: la interfaz integrada', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'Cómo descargar y ejecutar KoboldCpp', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'Soporte de GPU y hardware', anchor: 'koboldcpp-hardware-support' },
+      { label: '¿Qué modelos caben en tu VRAM con KoboldCpp?', anchor: 'koboldcpp-models-per-vram' },
       { label: '¿Para quién es KoboldCpp?', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp frente a alternativas', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'Errores comunes', anchor: 'common-mistakes' },
@@ -872,13 +964,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'En Windows basta con hacer doble clic en el .exe; los archivos de Linux y macOS hay que hacerlos ejecutables (chmod +x) y abrirlos desde una terminal, y macOS puede bloquear el primer arranque. El sitio web remite a la misma página de Releases de GitHub para las descargas. No se encontró ninguna página de política de privacidad en koboldcpp.net el 2 de noviembre de 2026.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: '¿Qué requisitos de sistema tiene KoboldCpp?',
+        content: '**KoboldCpp no publica una especificación mínima fija: lo que necesitas depende del modelo GGUF y de la longitud de contexto que cargues.** Una GPU dedicada es opcional. Estas son las decisiones de build y de opciones que importan.',
+        items: [
+          '**Windows:** `koboldcpp.exe` para NVIDIA (CUDA), `koboldcpp-nocuda.exe` (descarga más pequeña, CPU y Vulkan) o `koboldcpp-oldpc.exe` si la versión principal no arranca en un PC antiguo.',
+          '**Linux x64:** descarga `koboldcpp-linux-x64`, hazlo ejecutable con `chmod +x koboldcpp-linux-x64` y ejecútalo desde una terminal. Existen variantes `-nocuda` y `-oldpc`.',
+          '**macOS:** `koboldcpp-mac-arm64` para Apple Silicon (serie M). Los Mac con Intel requieren compilar desde el código fuente.',
+          '**Opciones de GPU:** `--usecuda` (solo NVIDIA) o `--usevulkan` (AMD, NVIDIA, Intel). `--gpulayers N` fija cuántas capas van a la GPU (por defecto -1 = autoajuste, 0 = sin descarga a la GPU); `--contextsize N` fija la longitud máxima de contexto.',
+          '**Regla práctica de memoria:** los pesos del modelo más el contexto deben caber en la VRAM (o en la RAM si usas solo CPU). La tabla de la siguiente sección lo traduce en tamaños de modelo por nivel de VRAM.',
+        ],
+        note: 'Fuente: el [README de KoboldCpp](https://github.com/LostRuins/koboldcpp), que solo describe los requisitos de hardware en estos términos generales.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: '¿Qué es KoboldCpp?',
         content: [
           '**KoboldCpp es un programa gratuito de un solo archivo que ejecuta modelos de lenguaje en formato GGUF localmente, construido sobre el motor de inferencia llama.cpp y mantenido por un desarrollador seudónimo conocido como LostRuins.** Hereda las convenciones de interfaz del proyecto original KoboldAI, adaptadas para funcionar sobre el backend de llama.cpp en lugar de una pila de inferencia basada en Python.',
           'El proyecto se aloja en [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) y se publica bajo la GNU Affero General Public License versión 3 (AGPL 3.0), una licencia copyleft, distinta de la licencia MIT permisiva que usa llama.cpp por debajo. Las versiones se publican con frecuencia.',
-          'La versión más reciente es la [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), publicada el 31 de octubre de 2026; la última actualización del repositorio fue el 2 de noviembre de 2026. La serie v1.124 añade una selección de modelos de texto a voz y la generación de música con YuE2, integradas desde audio.cpp. Las anteriores, incluida la v1.123.1 (13 de octubre de 2026), están en la [página de Releases](https://github.com/LostRuins/koboldcpp/releases). El nombre suele escribirse Kobold CPP, kobold.cpp o koboldccp: todos se refieren al mismo proyecto.',
+          'La versión más reciente es la [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), publicada el 31 de octubre de 2026; la última actualización del repositorio fue el 13 de noviembre de 2026. La serie v1.124 añade una selección de modelos de texto a voz y la generación de música con YuE2, integradas desde audio.cpp. Las anteriores, incluida la v1.123.1 (13 de octubre de 2026), están en la [página de Releases](https://github.com/LostRuins/koboldcpp/releases). El nombre suele escribirse Kobold CPP, kobold.cpp o koboldccp: todos se refieren al mismo proyecto.',
         ],
         items: [
           'Se distribuye como un ejecutable por plataforma — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -929,6 +1034,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hardware antiguo — el build oldpc apunta a CUDA 11 y CPU solo con AVX1, para equipos que no pueden ejecutar el build estándar moderno',
           'Solo CPU — el build nocuda funciona sin ninguna GPU, a velocidad reducida frente a la inferencia acelerada por GPU',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: '¿Qué modelos caben en tu VRAM con KoboldCpp?',
+        content: '**Con cuantización Q4, 8 GB de VRAM sirven para modelos 7-8B, 12 GB para 13-14B, 16 GB para la clase 22B y 24 GB para 22-32B; un modelo 70B necesita unos 48 GB.** Con `--gpulayers`, KoboldCpp puede descargar solo parte del modelo a la GPU, así que los modelos más grandes también funcionan, pero más despacio.',
+        columns: ['VRAM', 'Modelo Q4 que cabe', 'Nota'],
+        rows: [
+          { 'VRAM': '4 GB', 'Modelo Q4 que cabe': 'Clase 3B (unos 2 GB en Q4)', 'Nota': 'Modelos pequeños o descarga parcial a RAM' },
+          { 'VRAM': '8 GB', 'Modelo Q4 que cabe': '7-8B (unos 4 GB en Q4)', 'Nota': 'Nivel habitual, deja margen' },
+          { 'VRAM': '12 GB', 'Modelo Q4 que cabe': '13-14B (unos 8 GB en Q4)', 'Nota': 'Espacio para más contexto' },
+          { 'VRAM': '16 GB', 'Modelo Q4 que cabe': 'Clase 22B (unos 13 GB en Q4)', 'Nota': 'Techo práctico de este nivel' },
+          { 'VRAM': '24 GB', 'Modelo Q4 que cabe': '22-32B (de Q4 a Q8)', 'Nota': 'El 70B no cabe sin perder calidad' },
+          { 'VRAM': '48 GB', 'Modelo Q4 que cabe': '70B (unos 42 GB en Q4)', 'Nota': 'Primer nivel que admite 70B en Q4' },
+        ],
+        note: 'Estimaciones de la [guía de VRAM](/es/local-llms/how-much-vram-local-llm) de PromptQuorum: tamaños de pesos en Q4 más 1-2 GB para el contexto. No son mediciones con KoboldCpp. Para elegir GPU por nivel, consulta la [guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide).',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -1045,14 +1165,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'インストール不要でエディタ内蔵のローカルLLMアプリを求めるロールプレイ・小説執筆ユーザー、およびOllama、LM Studio、素のllama.cppと単一ファイル型推論エンジンを比較したい人',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp レビュー：単一ファイル、インストール不要、ロールプレイ特化',
-    seoTitle: 'KoboldCppとは:ダウンロードとGPU対応の解説',
+    seoTitle: 'KoboldCppとは？ダウンロードと動作要件、VRAM別モデル',
     intro: 'KoboldCppはインストーラーもPython環境もDockerも不要で、GGUF形式のモデルを実行できる単一の実行ファイルです。単なるチャット画面ではなく、小説執筆・ロールプレイ向けのエディタを標準搭載しています。',
-    metaDescription: 'KoboldCpp(Kobold CPP)はllama.cppベースの無料・単一ファイル型ローカルLLMアプリ。Windows・Linux・macOS版の入手方法とCUDA・Vulkan・ROCmの選び方を解説します。',
+    metaDescription: 'KoboldCpp(koboldcpp.exe)はllama.cpp系の無料・単一ファイルLLMアプリです。ダウンロード先、動作要件、VRAM容量別に動かせるGGUFモデルの目安を解説します。',
     readTime: '9分で読める',
     targetKeywords: [
       'KoboldCpp レビュー',
@@ -1066,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'KoboldCppは今も保守されているか、llama.cppに対して具体的に何が優れているか？',
-        answer: 'はい。KoboldCppはGitHubリポジトリで頻繁にリリースを重ねています（最新はv1.124.2、2026年10月31日公開、プロジェクトの最終更新は2026年11月2日）。ストーリー編集・ロールプレイ用ツールを備えたKoboldAI Lite Web UI、インストール不要の単一ファイル配布、画像生成と音声認識の内蔵機能を追加しており、これらは素のllama.cppには存在しません。',
+        answer: 'はい。KoboldCppはGitHubリポジトリで頻繁にリリースを重ねています（最新はv1.124.2、2026年10月31日公開、プロジェクトの最終更新は2026年11月13日）。ストーリー編集・ロールプレイ用ツールを備えたKoboldAI Lite Web UI、インストール不要の単一ファイル配布、画像生成と音声認識の内蔵機能を追加しており、これらは素のllama.cppには存在しません。',
         bullets: [
           '実行ファイル1つ — インストーラー、Python、Dockerいずれも不要',
           'ライセンス：AGPL 3.0（コピーレフト）。内部ではllama.cpp（MIT）を利用',
@@ -1080,10 +1200,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '要約', anchor: 'tldr' },
       { label: 'KoboldCppの入手方法', anchor: 'get-koboldcpp' },
+      { label: 'KoboldCppの動作要件は？', anchor: 'koboldcpp-system-requirements' },
       { label: 'KoboldCppとは何か', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite：内蔵インターフェース', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'KoboldCppのダウンロードと起動方法', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'GPU・ハードウェア対応', anchor: 'koboldcpp-hardware-support' },
+      { label: 'KoboldCppでVRAM別にどのモデルが動く？', anchor: 'koboldcpp-models-per-vram' },
       { label: 'KoboldCppはどんな人向けか', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCppと代替ツールの比較', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'よくある誤解', anchor: 'common-mistakes' },
@@ -1131,13 +1253,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Windowsは.exeをダブルクリックするだけで起動できます。LinuxとmacOSのファイルは実行権限の付与(chmod +x)とターミナルからの起動が必要で、macOSでは初回起動がブロックされることがあります。公式サイトのダウンロードも同じGitHub Releasesページへ案内しています。2026年11月2日時点で、koboldcpp.netにプライバシーポリシーのページは見つかりませんでした。',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'KoboldCppの動作要件は？',
+        content: '**KoboldCppは固定の最小スペックを公開していません。必要な環境は、読み込むGGUFモデルとコンテキスト長で決まります。** 専用GPUは必須ではありません。選ぶべきビルドとオプションを整理します。',
+        items: [
+          '**Windows:** NVIDIA(CUDA)なら`koboldcpp.exe`、サイズの小さいCPU・Vulkan向けの`koboldcpp-nocuda.exe`、古いPCでメインのビルドが起動しない場合は`koboldcpp-oldpc.exe`を使います。',
+          '**Linux x64:** `koboldcpp-linux-x64`をダウンロードし、`chmod +x koboldcpp-linux-x64`で実行権限を付けてターミナルから起動します。`-nocuda`と`-oldpc`の派生版もあります。',
+          '**macOS:** Apple Silicon(Mシリーズ)向けは`koboldcpp-mac-arm64`です。Intel Macではソースからのビルドが必要です。',
+          '**GPUオプション:** `--usecuda`(NVIDIA専用)または`--usevulkan`(AMD・NVIDIA・Intel)。`--gpulayers N`でGPUに載せる層の数を指定し(既定は-1の自動調整、0でGPUオフロードなし)、`--contextsize N`で最大コンテキスト長を指定します。',
+          '**メモリの目安:** モデルの重みとコンテキストがVRAM(CPUのみの場合はRAM)に収まる必要があります。次のセクションの表で、VRAM容量ごとのモデルサイズに置き換えています。',
+        ],
+        note: '出典:[KoboldCppのREADME](https://github.com/LostRuins/koboldcpp)。ハードウェア要件についてはこの程度の一般的な記述にとどまります。',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'KoboldCppとは何か',
         content: [
           '**KoboldCppは、llama.cpp推論エンジンを基盤に構築され、LostRuinsという匿名の開発者が保守する、GGUF形式の言語モデルをローカルで実行する無料の単一ファイルプログラムである。** 元のKoboldAIプロジェクトのUI設計思想を受け継ぎつつ、Pythonベースの推論スタックではなくllama.cppのバックエンド上で動作するよう改変されている。',
           'プロジェクトは[github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp)でホストされ、GNU Affero General Public License version 3（AGPL 3.0）というコピーレフトライセンスで公開されている。これはllama.cpp自体が内部で使用している寛容なMITライセンスとは異なる。リリースは頻繁に行われている。',
-          '最新版は[v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2)（2026年10月31日公開）で、リポジトリの最終更新は2026年11月2日です。v1.124系ではaudio.cppから取り込んだ音声合成モデルの一部とYuE2による音楽生成が加わりました。v1.123.1（2026年10月13日）など過去のリリースは[Releasesページ](https://github.com/LostRuins/koboldcpp/releases)で確認できます。名前は「Kobold CPP」「kobold.cpp」「koboldccp」と表記されることもありますが、いずれも同じプロジェクトです。',
+          '最新版は[v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2)（2026年10月31日公開）で、リポジトリの最終更新は2026年11月13日です。v1.124系ではaudio.cppから取り込んだ音声合成モデルの一部とYuE2による音楽生成が加わりました。v1.123.1（2026年10月13日）など過去のリリースは[Releasesページ](https://github.com/LostRuins/koboldcpp/releases)で確認できます。名前は「Kobold CPP」「kobold.cpp」「koboldccp」と表記されることもありますが、いずれも同じプロジェクトです。',
         ],
         items: [
           'プラットフォームごとに実行ファイル1つとして配布 — koboldcpp.exe（Windows）、koboldcpp-linux-x64（Linux）、koboldcpp-mac-arm64（macOS Apple Silicon）',
@@ -1188,6 +1323,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '旧型ハードウェア — oldpcビルドはCUDA 11とAVX1のみのCPUを対象とし、最新の標準ビルドを実行できないマシン向け',
           'CPUのみ — nocudaビルドはGPUなしで動作するが、GPUアクセラレーション時より速度は低下する',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'KoboldCppでVRAM別にどのモデルが動く？',
+        content: '**Q4量子化では、VRAM 8GBなら7〜8Bモデル、12GBなら13〜14B、16GBなら22Bクラス、24GBなら22〜32Bが目安で、70Bモデルには約48GB必要です。** `--gpulayers`でモデルの一部だけをGPUに載せられるため、それより大きなモデルも動きますが、速度は落ちます。',
+        columns: ['VRAM', '収まるQ4モデル', '備考'],
+        rows: [
+          { 'VRAM': '4GB', '収まるQ4モデル': '3Bクラス(Q4で約2GB)', '備考': '小型モデル、または一部をRAMへ' },
+          { 'VRAM': '8GB', '収まるQ4モデル': '7〜8B(Q4で約4GB)', '備考': '定番の目安で余裕あり' },
+          { 'VRAM': '12GB', '収まるQ4モデル': '13〜14B(Q4で約8GB)', '備考': '長めのコンテキストも可' },
+          { 'VRAM': '16GB', '収まるQ4モデル': '22Bクラス(Q4で約13GB)', '備考': 'この容量での実用上限' },
+          { 'VRAM': '24GB', '収まるQ4モデル': '22〜32B(Q4〜Q8)', '備考': '70Bは品質を落とさず収まらない' },
+          { 'VRAM': '48GB', '収まるQ4モデル': '70B(Q4で約42GB)', '備考': '70BをQ4で収められる最小帯' },
+        ],
+        note: 'PromptQuorumの[VRAMガイド](/ja/local-llms/how-much-vram-local-llm)に基づく推定値で、Q4の重みサイズにコンテキスト用の1〜2GBを加えています。KoboldCppでの実測値ではありません。容量別のGPU選びは[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)をご覧ください。',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -1304,14 +1454,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: '希望获得零安装、内置编辑器的本地 LLM 应用的角色扮演与故事写作用户,以及正在比较 Ollama、LM Studio 或原生 llama.cpp 等单文件推理引擎的人',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp 评测:单文件、免安装,专为角色扮演打造',
-    seoTitle: 'KoboldCpp评测:下载、安装使用与GPU支持',
+    seoTitle: 'KoboldCpp下载、系统要求与各显存可用模型',
     intro: 'KoboldCpp 是一个单一可执行文件,无需安装程序、Python 环境或 Docker 即可运行 GGUF 格式模型,并内置了面向故事写作和角色扮演的编辑器,而非一个简单的聊天框。',
-    metaDescription: 'KoboldCpp(Kobold CPP)是基于llama.cpp的免费单文件本地LLM应用。介绍Windows、Linux、macOS版本的下载方式,以及CUDA、Vulkan、ROCm的选择。',
+    metaDescription: 'KoboldCpp（koboldcpp.exe）是免费的单文件本地LLM应用。介绍下载方式、系统要求，以及不同显存容量可运行的GGUF模型大小。',
     readTime: '阅读约 8 分钟',
     targetKeywords: [
       'KoboldCpp 评测',
@@ -1325,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'KoboldCpp 是否仍在维护?相比 llama.cpp 它实际增加了什么?',
-        answer: '是的——KoboldCpp 在其 GitHub 仓库上频繁发布新版本(最新版 v1.124.2,2026 年 10 月 31 日发布;项目最近更新:2026 年 11 月 2 日)。它增加了内置 KoboldAI Lite 网页界面(含故事编辑和角色扮演工具)、免安装单文件分发,以及内置的图像生成和语音转文字功能,这些都是原生 llama.cpp 所不具备的。',
+        answer: '是的——KoboldCpp 在其 GitHub 仓库上频繁发布新版本(最新版 v1.124.2,2026 年 10 月 31 日发布;项目最近更新:2026 年 11 月 13 日)。它增加了内置 KoboldAI Lite 网页界面(含故事编辑和角色扮演工具)、免安装单文件分发,以及内置的图像生成和语音转文字功能,这些都是原生 llama.cpp 所不具备的。',
         bullets: [
           '单一可执行文件——无需安装程序、Python 或 Docker',
           '许可证:AGPL 3.0(著佐权/copyleft);底层基于 llama.cpp(MIT)',
@@ -1339,10 +1489,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '摘要', anchor: 'tldr' },
       { label: '获取 KoboldCpp', anchor: 'get-koboldcpp' },
+      { label: 'KoboldCpp 的系统要求是什么？', anchor: 'koboldcpp-system-requirements' },
       { label: 'KoboldCpp 是什么', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite:内置界面', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: '如何下载并运行 KoboldCpp', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'GPU 与硬件支持', anchor: 'koboldcpp-hardware-support' },
+      { label: '在 KoboldCpp 中，不同显存能运行哪些模型？', anchor: 'koboldcpp-models-per-vram' },
       { label: '谁适合使用 KoboldCpp', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp 与替代方案对比', anchor: 'koboldcpp-vs-alternatives' },
       { label: '常见误区', anchor: 'common-mistakes' },
@@ -1390,13 +1542,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Windows 上双击 .exe 即可运行;Linux 和 macOS 的文件需要先赋予可执行权限(chmod +x)并在终端中启动,macOS 还可能拦截首次启动。官网的下载入口同样指向 GitHub Releases 页面。2026 年 11 月 2 日检查时,koboldcpp.net 上没有找到隐私政策页面。',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'KoboldCpp 的系统要求是什么？',
+        content: '**KoboldCpp 没有公布固定的最低配置：所需硬件取决于您加载的 GGUF 模型和上下文长度。** 独立 GPU 不是必需的。以下是需要选择的版本和参数。',
+        items: [
+          '**Windows：** NVIDIA（CUDA）用 `koboldcpp.exe`；体积更小、支持 CPU 和 Vulkan 的是 `koboldcpp-nocuda.exe`；旧电脑上主版本无法启动时用 `koboldcpp-oldpc.exe`。',
+          '**Linux x64：** 下载 `koboldcpp-linux-x64`，用 `chmod +x koboldcpp-linux-x64` 赋予执行权限，再在终端中启动。另有 `-nocuda` 和 `-oldpc` 变体。',
+          '**macOS：** Apple Silicon（M 系列）使用 `koboldcpp-mac-arm64`。Intel Mac 需要从源码编译。',
+          '**GPU 参数：** `--usecuda`（仅限 NVIDIA）或 `--usevulkan`（AMD、NVIDIA、Intel）。`--gpulayers N` 设置放到 GPU 上的层数（默认 -1 为自动适配，0 表示不卸载到 GPU）；`--contextsize N` 设置最大上下文长度。',
+          '**显存经验法则：** 模型权重加上下文必须能放进显存（纯 CPU 运行则放进内存）。下一节的表格把它换算成各显存档位对应的模型大小。',
+        ],
+        note: '来源：[KoboldCpp README](https://github.com/LostRuins/koboldcpp)，其对硬件要求只给出这样的一般性说明。',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'KoboldCpp 是什么',
         content: [
           '**KoboldCpp 是一款免费的单文件程序,基于 llama.cpp 推理引擎构建,在本地运行 GGUF 格式的语言模型,由化名为 LostRuins 的开发者维护。** 它继承了原始 KoboldAI 项目的界面设计理念,并改为运行在 llama.cpp 后端之上,而非基于 Python 的推理栈。',
           '该项目托管在 [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp),以 GNU Affero 通用公共许可证第 3 版(AGPL 3.0)发布——这是一种著佐权许可证,不同于 llama.cpp 自身底层使用的宽松 MIT 许可证。版本更新频繁。',
-          '最新版本为 [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2)(2026 年 10 月 31 日发布),仓库最近一次更新在 2026 年 11 月 2 日。v1.124 系列加入了从 audio.cpp 集成的部分文本转语音模型和 YuE2 音乐生成。包括 v1.123.1(2026 年 10 月 13 日)在内的历史版本见 [Releases 页面](https://github.com/LostRuins/koboldcpp/releases)。该名称常被写作 Kobold CPP、kobold.cpp 或 koboldccp,指的都是同一个项目。',
+          '最新版本为 [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2)(2026 年 10 月 31 日发布),仓库最近一次更新在 2026 年 11 月 13 日。v1.124 系列加入了从 audio.cpp 集成的部分文本转语音模型和 YuE2 音乐生成。包括 v1.123.1(2026 年 10 月 13 日)在内的历史版本见 [Releases 页面](https://github.com/LostRuins/koboldcpp/releases)。该名称常被写作 Kobold CPP、kobold.cpp 或 koboldccp,指的都是同一个项目。',
         ],
         items: [
           '按平台分发为单一可执行文件——koboldcpp.exe(Windows)、koboldcpp-linux-x64(Linux)、koboldcpp-mac-arm64(macOS Apple Silicon)',
@@ -1447,6 +1612,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '旧硬件——oldpc 构建版面向仅支持 CUDA 11 和 AVX1 的 CPU,适用于无法运行现代默认构建版的机器',
           '纯 CPU——nocuda 构建版可在完全没有 GPU 的情况下运行,速度低于 GPU 加速推理',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: '在 KoboldCpp 中，不同显存能运行哪些模型？',
+        content: '**在 Q4 量化下，8 GB 显存适合 7-8B 模型，12 GB 适合 13-14B，16 GB 适合 22B 级别，24 GB 适合 22-32B；70B 模型大约需要 48 GB。** 借助 `--gpulayers`，KoboldCpp 可以只把模型的一部分放到 GPU 上，因此更大的模型也能运行，只是速度更慢。',
+        columns: ['显存', '适合的 Q4 模型', '说明'],
+        rows: [
+          { '显存': '4 GB', '适合的 Q4 模型': '3B 级（Q4 约 2 GB）', '说明': '小模型，或部分放入内存' },
+          { '显存': '8 GB', '适合的 Q4 模型': '7-8B（Q4 约 4 GB）', '说明': '常见的合适档位，留有余量' },
+          { '显存': '12 GB', '适合的 Q4 模型': '13-14B（Q4 约 8 GB）', '说明': '可使用更长上下文' },
+          { '显存': '16 GB', '适合的 Q4 模型': '22B 级（Q4 约 13 GB）', '说明': '该档位的实际上限' },
+          { '显存': '24 GB', '适合的 Q4 模型': '22-32B（Q4 至 Q8）', '说明': '70B 无法在不损失质量下放入' },
+          { '显存': '48 GB', '适合的 Q4 模型': '70B（Q4 约 42 GB）', '说明': '能以 Q4 放下 70B 的最低档' },
+        ],
+        note: '以上为 PromptQuorum [显存指南](/zh/local-llms/how-much-vram-local-llm)中的估算值：Q4 权重大小再加 1-2 GB 上下文开销，并非 KoboldCpp 实测数据。各档位的 GPU 选择见[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -1563,14 +1743,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'Usuários de roleplay e escrita de histórias que querem um app de LLM local sem instalação e com editor embutido, e qualquer pessoa comparando motores de inferência de arquivo único com Ollama, LM Studio ou llama.cpp puro',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp: um arquivo só, sem instalação, feito para roleplay',
-    seoTitle: 'Análise do KoboldCpp: download, instalação e GPU',
+    seoTitle: 'KoboldCpp: download, requisitos e modelos por VRAM',
     intro: 'O KoboldCpp é um único executável que roda modelos GGUF sem instalador, sem ambiente Python e sem Docker — e já vem com um editor voltado para escrita de histórias e roleplay, em vez de uma simples caixa de chat.',
-    metaDescription: 'KoboldCpp (ou Kobold CPP): app de LLM local gratuito de arquivo único sobre o llama.cpp. Versões para Windows, Linux ou macOS com CUDA, Vulkan ou ROCm.',
+    metaDescription: 'KoboldCpp (ou Kobold CPP, koboldcpp.exe): app de LLM local gratuito de arquivo único. Links de download, requisitos e quais modelos GGUF cabem na sua VRAM.',
     readTime: '8 min de leitura',
     targetKeywords: [
       'KoboldCpp análise',
@@ -1584,7 +1764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O KoboldCpp ainda é mantido, e o que ele realmente acrescenta em relação ao llama.cpp?',
-        answer: 'Sim — o KoboldCpp lança versões com frequência (mais recente: v1.124.2, publicada em 31 de outubro de 2026; última atualização do projeto: 2 de novembro de 2026) no seu repositório GitHub. Ele adiciona uma interface web KoboldAI Lite embutida com ferramentas de escrita e roleplay, distribuição em arquivo único sem instalação, além de geração de imagens e transcrição de voz integradas — nada disso o llama.cpp puro oferece sozinho.',
+        answer: 'Sim — o KoboldCpp lança versões com frequência (mais recente: v1.124.2, publicada em 31 de outubro de 2026; última atualização do projeto: 13 de novembro de 2026) no seu repositório GitHub. Ele adiciona uma interface web KoboldAI Lite embutida com ferramentas de escrita e roleplay, distribuição em arquivo único sem instalação, além de geração de imagens e transcrição de voz integradas — nada disso o llama.cpp puro oferece sozinho.',
         bullets: [
           'Um único executável — sem instalador, sem Python, sem Docker',
           'Licença: AGPL 3.0 (copyleft); construído sobre o llama.cpp (MIT) por baixo',
@@ -1598,10 +1778,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Resumo', anchor: 'tldr' },
       { label: 'Baixar o KoboldCpp', anchor: 'get-koboldcpp' },
+      { label: 'Quais são os requisitos de sistema do KoboldCpp?', anchor: 'koboldcpp-system-requirements' },
       { label: 'O que é o KoboldCpp?', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite: a interface embutida', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'Como baixar e rodar o KoboldCpp', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'Suporte a GPU e hardware', anchor: 'koboldcpp-hardware-support' },
+      { label: 'Quais modelos cabem na sua VRAM com o KoboldCpp?', anchor: 'koboldcpp-models-per-vram' },
       { label: 'Para quem é o KoboldCpp?', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp vs. alternativas', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'Erros comuns', anchor: 'common-mistakes' },
@@ -1649,13 +1831,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'No Windows basta dar um duplo clique no .exe; os arquivos de Linux e macOS precisam ser tornados executáveis (chmod +x) e iniciados pelo terminal, e o macOS pode bloquear a primeira abertura. O site remete à mesma página de Releases do GitHub para os downloads. Nenhuma página de política de privacidade foi encontrada em koboldcpp.net em 2 de novembro de 2026.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'Quais são os requisitos de sistema do KoboldCpp?',
+        content: '**O KoboldCpp não publica uma especificação mínima fixa: o que você precisa depende do modelo GGUF e do tamanho de contexto que você carrega.** Uma GPU dedicada é opcional. Estas são as escolhas de build e de opções que importam.',
+        items: [
+          '**Windows:** `koboldcpp.exe` para NVIDIA (CUDA), `koboldcpp-nocuda.exe` (download menor, CPU e Vulkan) ou `koboldcpp-oldpc.exe` se a versão principal não iniciar em um PC mais antigo.',
+          '**Linux x64:** baixe `koboldcpp-linux-x64`, torne-o executável com `chmod +x koboldcpp-linux-x64` e inicie-o em um terminal. Existem variantes `-nocuda` e `-oldpc`.',
+          '**macOS:** `koboldcpp-mac-arm64` para Apple Silicon (série M). Macs com Intel exigem compilação a partir do código-fonte.',
+          '**Opções de GPU:** `--usecuda` (somente NVIDIA) ou `--usevulkan` (AMD, NVIDIA, Intel). `--gpulayers N` define quantas camadas vão para a GPU (padrão -1 = autoajuste, 0 = sem descarga para a GPU); `--contextsize N` define o tamanho máximo de contexto.',
+          '**Regra prática de memória:** os pesos do modelo mais o contexto precisam caber na VRAM (ou na RAM em execução só com CPU). A tabela da próxima seção traduz isso em tamanhos de modelo por faixa de VRAM.',
+        ],
+        note: 'Fonte: o [README do KoboldCpp](https://github.com/LostRuins/koboldcpp), que descreve os requisitos de hardware apenas nestes termos gerais.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'O que é o KoboldCpp?',
         content: [
           '**O KoboldCpp é um programa gratuito de arquivo único que roda modelos de linguagem em formato GGUF localmente, construído sobre o motor de inferência llama.cpp e mantido por um desenvolvedor pseudônimo conhecido como LostRuins.** Ele herda as convenções de interface do projeto KoboldAI original, adaptadas para rodar sobre o backend do llama.cpp em vez de uma stack de inferência baseada em Python.',
           'O projeto está hospedado em [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) e é publicado sob a GNU Affero General Public License versão 3 (AGPL 3.0) — uma licença copyleft, diferente da licença MIT permissiva que o próprio llama.cpp usa por baixo. As versões saem com frequência.',
-          'A versão mais recente é a [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), publicada em 31 de outubro de 2026; a última atualização do repositório foi em 2 de novembro de 2026. A série v1.124 adiciona uma seleção de modelos de texto para fala e a geração de música com YuE2, integradas do audio.cpp. As anteriores, incluindo a v1.123.1 (13 de outubro de 2026), estão na [página de Releases](https://github.com/LostRuins/koboldcpp/releases). O nome costuma ser escrito Kobold CPP, kobold.cpp ou koboldccp — todos se referem ao mesmo projeto.',
+          'A versão mais recente é a [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2), publicada em 31 de outubro de 2026; a última atualização do repositório foi em 13 de novembro de 2026. A série v1.124 adiciona uma seleção de modelos de texto para fala e a geração de música com YuE2, integradas do audio.cpp. As anteriores, incluindo a v1.123.1 (13 de outubro de 2026), estão na [página de Releases](https://github.com/LostRuins/koboldcpp/releases). O nome costuma ser escrito Kobold CPP, kobold.cpp ou koboldccp — todos se referem ao mesmo projeto.',
         ],
         items: [
           'Distribuído como um executável por plataforma — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -1706,6 +1901,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hardware antigo — o build oldpc é voltado para CUDA 11 e CPUs só com AVX1, para máquinas que não conseguem rodar o build padrão moderno',
           'Só CPU — o build nocuda roda sem nenhuma GPU, com velocidade reduzida em relação à inferência acelerada por GPU',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'Quais modelos cabem na sua VRAM com o KoboldCpp?',
+        content: '**Com quantização Q4, 8 GB de VRAM servem para modelos 7-8B, 12 GB para 13-14B, 16 GB para a classe 22B e 24 GB para 22-32B; um modelo 70B precisa de cerca de 48 GB.** Com `--gpulayers`, o KoboldCpp pode descarregar só parte do modelo para a GPU, então modelos maiores ainda rodam, porém mais devagar.',
+        columns: ['VRAM', 'Modelo Q4 que cabe', 'Observação'],
+        rows: [
+          { 'VRAM': '4 GB', 'Modelo Q4 que cabe': 'Classe 3B (cerca de 2 GB em Q4)', 'Observação': 'Modelos pequenos ou descarga parcial para RAM' },
+          { 'VRAM': '8 GB', 'Modelo Q4 que cabe': '7-8B (cerca de 4 GB em Q4)', 'Observação': 'Faixa comum, deixa folga' },
+          { 'VRAM': '12 GB', 'Modelo Q4 que cabe': '13-14B (cerca de 8 GB em Q4)', 'Observação': 'Espaço para mais contexto' },
+          { 'VRAM': '16 GB', 'Modelo Q4 que cabe': 'Classe 22B (cerca de 13 GB em Q4)', 'Observação': 'Teto prático desta faixa' },
+          { 'VRAM': '24 GB', 'Modelo Q4 que cabe': '22-32B (de Q4 a Q8)', 'Observação': 'O 70B não cabe sem perder qualidade' },
+          { 'VRAM': '48 GB', 'Modelo Q4 que cabe': '70B (cerca de 42 GB em Q4)', 'Observação': 'Primeira faixa que comporta 70B em Q4' },
+        ],
+        note: 'Estimativas do [guia de VRAM](/pt/local-llms/how-much-vram-local-llm) do PromptQuorum: tamanhos de pesos em Q4 mais 1-2 GB para o contexto. Não são medições feitas com o KoboldCpp. Para escolher a GPU por faixa, veja o [guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide).',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -1822,14 +2032,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: 'مستخدمو لعب الأدوار وكتابة القصص الباحثون عن تطبيق نماذج لغوية محلي بلا تثبيت مع محرر مدمج، وأي شخص يقارن محركات الاستدلال ذات الملف الواحد مع Ollama أو LM Studio أو llama.cpp الأصلي',
     primaryTerm: 'KoboldCpp',
     title: 'مراجعة KoboldCpp: ملف واحد، بلا تثبيت، مصمم للعب الأدوار',
-    seoTitle: 'مراجعة KoboldCpp: التحميل ودعم وحدات GPU',
+    seoTitle: 'KoboldCpp: التحميل ومتطلبات التشغيل ونماذج حسب VRAM',
     intro: 'KoboldCpp هو ملف تنفيذي واحد يشغّل نماذج بصيغة GGUF دون الحاجة إلى مثبّت أو بيئة Python أو Docker، ويأتي مزودًا بمحرر مخصص لكتابة القصص ولعب الأدوار بدلاً من مجرد نافذة محادثة بسيطة.',
-    metaDescription: 'KoboldCpp (ويُكتب أيضًا Kobold CPP): تطبيق نماذج لغوية محلي مجاني بملف واحد فوق llama.cpp. نسخ Windows وLinux وmacOS مع اختيار CUDA أو Vulkan أو ROCm.',
+    metaDescription: 'KoboldCpp (وkoboldcpp.exe): تطبيق مجاني بملف واحد لتشغيل نماذج LLM محليًا. روابط التحميل ومتطلبات التشغيل والنماذج المناسبة لكل حجم VRAM.',
     readTime: '٨ دقائق للقراءة',
     targetKeywords: [
       'مراجعة KoboldCpp',
@@ -1843,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل ما زال KoboldCpp يُصان، وماذا يضيف فعليًا مقارنة بـ llama.cpp؟',
-        answer: 'نعم — يصدر KoboldCpp إصدارات متكررة (الأحدث: v1.124.2، صدر في 31 أكتوبر 2026؛ آخر تحديث للمشروع: 2 نوفمبر 2026) على مستودعه في GitHub. يضيف واجهة ويب KoboldAI Lite مدمجة بأدوات تحرير قصصي ولعب أدوار، وتوزيعًا بملف واحد بلا تثبيت، وتوليد صور ونسخ صوتي مدمجَين — لا شيء من هذا يوفره llama.cpp الأصلي وحده.',
+        answer: 'نعم — يصدر KoboldCpp إصدارات متكررة (الأحدث: v1.124.2، صدر في 31 أكتوبر 2026؛ آخر تحديث للمشروع: 13 نوفمبر 2026) على مستودعه في GitHub. يضيف واجهة ويب KoboldAI Lite مدمجة بأدوات تحرير قصصي ولعب أدوار، وتوزيعًا بملف واحد بلا تثبيت، وتوليد صور ونسخ صوتي مدمجَين — لا شيء من هذا يوفره llama.cpp الأصلي وحده.',
         bullets: [
           'ملف تنفيذي واحد — بلا مثبّت وبلا Python وبلا Docker',
           'الرخصة: AGPL 3.0 (نسخة متروكة/copyleft)؛ مبني في الخلفية على llama.cpp (رخصة MIT)',
@@ -1857,10 +2067,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'الخلاصة', anchor: 'tldr' },
       { label: 'تحميل KoboldCpp', anchor: 'get-koboldcpp' },
+      { label: 'ما متطلبات تشغيل KoboldCpp؟', anchor: 'koboldcpp-system-requirements' },
       { label: 'ما هو KoboldCpp؟', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite: الواجهة المدمجة', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'كيفية تحميل وتشغيل KoboldCpp', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'دعم المعالج الرسومي والعتاد', anchor: 'koboldcpp-hardware-support' },
+      { label: 'ما النماذج التي تتسع في VRAM مع KoboldCpp؟', anchor: 'koboldcpp-models-per-vram' },
       { label: 'لمن يناسب KoboldCpp؟', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp مقابل البدائل', anchor: 'koboldcpp-vs-alternatives' },
       { label: 'أخطاء شائعة', anchor: 'common-mistakes' },
@@ -1908,13 +2120,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'في Windows يكفي النقر المزدوج على ملف .exe؛ أما ملفات Linux وmacOS فيجب جعلها قابلة للتنفيذ (chmod +x) وتشغيلها من الطرفية، وقد يحظر macOS التشغيل الأول. يحيل الموقع الرسمي إلى صفحة Releases نفسها على GitHub للتحميل. لم يُعثر على صفحة سياسة خصوصية في koboldcpp.net بتاريخ 2 نوفمبر 2026.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'ما متطلبات تشغيل KoboldCpp؟',
+        content: '**لا ينشر KoboldCpp حدًا أدنى ثابتًا للمواصفات: ما تحتاجه يعتمد على نموذج GGUF الذي تحمّله وطول السياق.** وحدة GPU مخصصة اختيارية. فيما يلي خيارات الإصدار والمعاملات المهمة.',
+        items: [
+          '**Windows:** استخدم `koboldcpp.exe` لبطاقات NVIDIA (CUDA)، أو `koboldcpp-nocuda.exe` (تنزيل أصغر ويدعم المعالج وVulkan)، أو `koboldcpp-oldpc.exe` إذا لم يعمل الإصدار الرئيسي على جهاز أقدم.',
+          '**Linux x64:** نزّل `koboldcpp-linux-x64`، واجعله قابلًا للتنفيذ بالأمر `chmod +x koboldcpp-linux-x64`، ثم شغّله من الطرفية. توجد أيضًا نسخ `-nocuda` و`-oldpc`.',
+          '**macOS:** استخدم `koboldcpp-mac-arm64` مع Apple Silicon (سلسلة M). أجهزة Mac بمعالج Intel تتطلب بناءً من الشيفرة المصدرية.',
+          '**معاملات GPU:** `--usecuda` (NVIDIA فقط) أو `--usevulkan` (AMD وNVIDIA وIntel). يحدد `--gpulayers N` عدد الطبقات المحمّلة على GPU (الافتراضي -1 = ضبط تلقائي، 0 = بدون نقل إلى GPU)، ويحدد `--contextsize N` أقصى طول للسياق.',
+          '**قاعدة تقريبية للذاكرة:** يجب أن تتسع أوزان النموذج مع السياق في VRAM (أو في RAM عند التشغيل بالمعالج فقط). يحوّل الجدول في القسم التالي ذلك إلى أحجام نماذج لكل مستوى من VRAM.',
+        ],
+        note: 'المصدر: [ملف README الخاص بـ KoboldCpp](https://github.com/LostRuins/koboldcpp)، وهو يصف متطلبات العتاد بهذه الصيغة العامة فقط.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'ما هو KoboldCpp؟',
         content: [
           '**KoboldCpp برنامج مجاني بملف واحد يشغّل نماذج لغوية بصيغة GGUF محليًا، مبني على محرك استدلال llama.cpp ويصونه مطور مجهول الهوية يُعرف باسم LostRuins.** يرث اصطلاحات واجهة مشروع KoboldAI الأصلي، مع تكييفها للعمل فوق خلفية llama.cpp بدلاً من مكدس استدلال قائم على Python.',
           'يستضاف المشروع على [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) ويُنشر بموجب رخصة GNU Affero العمومية العامة الإصدار 3 (AGPL 3.0) — وهي رخصة نسخة متروكة، تختلف عن رخصة MIT المتساهلة التي يستخدمها llama.cpp نفسه في الخلفية. تصدر الإصدارات بشكل متكرر.',
-          'أحدث إصدار هو [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2) الصادر في 31 أكتوبر 2026؛ وكان آخر تحديث للمستودع في 2 نوفمبر 2026. تضيف سلسلة v1.124 مجموعة من نماذج تحويل النص إلى كلام وتوليد الموسيقى YuE2 المدمجة من audio.cpp. وتجد الإصدارات السابقة، ومنها v1.123.1 (13 أكتوبر 2026)، في [صفحة Releases](https://github.com/LostRuins/koboldcpp/releases). يُكتب الاسم أحيانًا Kobold CPP أو kobold.cpp أو koboldccp، وكلها تشير إلى المشروع نفسه.',
+          'أحدث إصدار هو [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2) الصادر في 31 أكتوبر 2026؛ وكان آخر تحديث للمستودع في 13 نوفمبر 2026. تضيف سلسلة v1.124 مجموعة من نماذج تحويل النص إلى كلام وتوليد الموسيقى YuE2 المدمجة من audio.cpp. وتجد الإصدارات السابقة، ومنها v1.123.1 (13 أكتوبر 2026)، في [صفحة Releases](https://github.com/LostRuins/koboldcpp/releases). يُكتب الاسم أحيانًا Kobold CPP أو kobold.cpp أو koboldccp، وكلها تشير إلى المشروع نفسه.',
         ],
         items: [
           'يُوزَّع كملف تنفيذي واحد لكل منصة — koboldcpp.exe (ويندوز)، koboldcpp-linux-x64 (لينكس)، koboldcpp-mac-arm64 (ماك أو إس Apple Silicon)',
@@ -1965,6 +2190,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'العتاد القديم — نسخة oldpc موجهة لـ CUDA 11 والمعالجات المركزية التي تدعم AVX1 فقط، للأجهزة غير القادرة على تشغيل النسخة الحديثة القياسية',
           'المعالج المركزي فقط — تعمل نسخة nocuda دون أي معالج رسومي، بسرعة أقل مقارنة بالاستدلال المسرَّع بالمعالج الرسومي',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'ما النماذج التي تتسع في VRAM مع KoboldCpp؟',
+        content: '**مع تكميم Q4، تناسب 8 GB من VRAM نماذج 7-8B، و12 GB نماذج 13-14B، و16 GB فئة 22B، و24 GB نماذج 22-32B؛ أما نموذج 70B فيحتاج نحو 48 GB.** وبفضل `--gpulayers` يمكن لـ KoboldCpp نقل جزء فقط من النموذج إلى GPU، فتعمل النماذج الأكبر أيضًا ولكن ببطء أكبر.',
+        columns: ['VRAM', 'نموذج Q4 المناسب', 'ملاحظة'],
+        rows: [
+          { 'VRAM': '4 GB', 'نموذج Q4 المناسب': 'فئة 3B (نحو 2 GB بـ Q4)', 'ملاحظة': 'نماذج صغيرة أو نقل جزء إلى RAM' },
+          { 'VRAM': '8 GB', 'نموذج Q4 المناسب': '7-8B (نحو 4 GB بـ Q4)', 'ملاحظة': 'المستوى الشائع مع هامش' },
+          { 'VRAM': '12 GB', 'نموذج Q4 المناسب': '13-14B (نحو 8 GB بـ Q4)', 'ملاحظة': 'مساحة لسياق أطول' },
+          { 'VRAM': '16 GB', 'نموذج Q4 المناسب': 'فئة 22B (نحو 13 GB بـ Q4)', 'ملاحظة': 'السقف العملي لهذا المستوى' },
+          { 'VRAM': '24 GB', 'نموذج Q4 المناسب': '22-32B (من Q4 إلى Q8)', 'ملاحظة': '70B لا يتسع دون فقدان الجودة' },
+          { 'VRAM': '48 GB', 'نموذج Q4 المناسب': '70B (نحو 42 GB بـ Q4)', 'ملاحظة': 'أول مستوى يتسع لـ 70B بـ Q4' },
+        ],
+        note: 'تقديرات من [دليل VRAM](/ar/local-llms/how-much-vram-local-llm) في PromptQuorum: أحجام أوزان Q4 مع 1-2 GB للسياق، وليست قياسات من KoboldCpp. لاختيار GPU لكل مستوى راجع [دليل عتاد LLM المحلية](/ar/local-llms/local-llm-hardware-guide).',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',
@@ -2081,14 +2321,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-14',
     educationalLevel: 'Beginner',
     audience: '설치 없이 편집기가 내장된 로컬 LLM 앱을 찾는 롤플레이 및 소설 창작 사용자, 그리고 Ollama, LM Studio, 순정 llama.cpp와 단일 파일형 추론 엔진을 비교하려는 사람',
     primaryTerm: 'KoboldCpp',
     title: 'KoboldCpp 리뷰: 파일 하나, 설치 불필요, 롤플레이 특화',
-    seoTitle: 'KoboldCpp 리뷰: 다운로드·설치와 GPU 지원',
+    seoTitle: 'KoboldCpp 다운로드·요구 사양·VRAM별 모델',
     intro: 'KoboldCpp는 설치 프로그램이나 Python 환경, Docker 없이 GGUF 모델을 실행하는 단일 실행 파일이며, 단순한 채팅창이 아니라 소설 창작과 롤플레이에 특화된 편집기를 기본으로 제공합니다.',
-    metaDescription: 'KoboldCpp(Kobold CPP)는 llama.cpp 기반 무료 단일 파일 로컬 LLM 앱. Windows·Linux·macOS 다운로드와 CUDA·Vulkan·ROCm 선택을 안내합니다.',
+    metaDescription: 'KoboldCpp(koboldcpp.exe)는 무료 단일 파일 로컬 LLM 앱입니다. 다운로드 링크, 시스템 요구 사양, VRAM 용량별로 맞는 GGUF 모델 크기를 안내합니다.',
     readTime: '9분 읽기',
     targetKeywords: [
       'KoboldCpp 리뷰',
@@ -2102,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'KoboldCpp는 여전히 유지 관리되고 있으며, llama.cpp 대비 실제로 무엇을 추가로 제공합니까?',
-        answer: '그렇습니다. KoboldCpp는 GitHub 저장소에서 자주 새 버전을 출시합니다(최신 v1.124.2, 2026년 10월 31일 출시, 마지막 업스트림 업데이트 2026년 11월 2일). 스토리 편집·롤플레이 도구를 갖춘 내장 KoboldAI Lite 웹 UI, 설치가 필요 없는 단일 파일 배포, 그리고 내장된 이미지 생성과 음성 인식 기능을 추가로 제공하며, 이는 순정 llama.cpp만으로는 제공되지 않습니다.',
+        answer: '그렇습니다. KoboldCpp는 GitHub 저장소에서 자주 새 버전을 출시합니다(최신 v1.124.2, 2026년 10월 31일 출시, 마지막 업스트림 업데이트 2026년 11월 13일). 스토리 편집·롤플레이 도구를 갖춘 내장 KoboldAI Lite 웹 UI, 설치가 필요 없는 단일 파일 배포, 그리고 내장된 이미지 생성과 음성 인식 기능을 추가로 제공하며, 이는 순정 llama.cpp만으로는 제공되지 않습니다.',
         bullets: [
           '실행 파일 하나 — 설치 프로그램, Python, Docker 모두 불필요',
           '라이선스: AGPL 3.0(카피레프트); 내부적으로 llama.cpp(MIT)를 기반으로 함',
@@ -2116,10 +2356,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '요약', anchor: 'tldr' },
       { label: 'KoboldCpp 받기', anchor: 'get-koboldcpp' },
+      { label: 'KoboldCpp의 시스템 요구 사양은 무엇인가요?', anchor: 'koboldcpp-system-requirements' },
       { label: 'KoboldCpp란 무엇인가', anchor: 'what-is-koboldcpp' },
       { label: 'KoboldAI Lite: 내장 인터페이스', anchor: 'koboldcpp-koboldai-lite-interface' },
       { label: 'KoboldCpp 다운로드 및 실행 방법', anchor: 'how-to-download-run-koboldcpp' },
       { label: 'GPU 및 하드웨어 지원', anchor: 'koboldcpp-hardware-support' },
+      { label: 'KoboldCpp에서 VRAM별로 어떤 모델이 들어가나요?', anchor: 'koboldcpp-models-per-vram' },
       { label: 'KoboldCpp는 누구에게 적합한가', anchor: 'who-should-use-koboldcpp' },
       { label: 'KoboldCpp와 대안 비교', anchor: 'koboldcpp-vs-alternatives' },
       { label: '흔한 오해', anchor: 'common-mistakes' },
@@ -2167,13 +2409,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Windows에서는 .exe를 더블클릭하면 실행됩니다. Linux와 macOS 파일은 실행 권한을 부여(chmod +x)한 뒤 터미널에서 시작해야 하며, macOS는 첫 실행을 차단할 수 있습니다. 공식 웹사이트의 다운로드도 같은 GitHub Releases 페이지로 연결됩니다. 2026년 11월 2일 기준 koboldcpp.net에서 개인정보 처리방침 페이지는 찾지 못했습니다.',
       },
+      systemRequirements: {
+        id: 'koboldcpp-system-requirements',
+        title: 'KoboldCpp의 시스템 요구 사양은 무엇인가요?',
+        content: '**KoboldCpp는 고정된 최소 사양을 공개하지 않습니다. 필요한 사양은 불러오는 GGUF 모델과 컨텍스트 길이에 따라 달라집니다.** 전용 GPU는 선택 사항입니다. 선택해야 할 빌드와 옵션은 다음과 같습니다.',
+        items: [
+          '**Windows:** NVIDIA(CUDA)는 `koboldcpp.exe`, 용량이 작은 CPU·Vulkan용은 `koboldcpp-nocuda.exe`, 오래된 PC에서 기본 빌드가 실행되지 않으면 `koboldcpp-oldpc.exe`를 사용합니다.',
+          '**Linux x64:** `koboldcpp-linux-x64`를 내려받아 `chmod +x koboldcpp-linux-x64`로 실행 권한을 주고 터미널에서 실행합니다. `-nocuda`와 `-oldpc` 변형도 있습니다.',
+          '**macOS:** Apple Silicon(M 시리즈)은 `koboldcpp-mac-arm64`를 사용합니다. Intel Mac은 소스에서 직접 빌드해야 합니다.',
+          '**GPU 옵션:** `--usecuda`(NVIDIA 전용) 또는 `--usevulkan`(AMD·NVIDIA·Intel). `--gpulayers N`은 GPU에 올릴 레이어 수를 정하며(기본값 -1은 자동 맞춤, 0은 GPU 오프로드 없음), `--contextsize N`은 최대 컨텍스트 길이를 정합니다.',
+          '**메모리 경험칙:** 모델 가중치와 컨텍스트가 VRAM(CPU만 쓸 때는 RAM)에 들어가야 합니다. 다음 섹션의 표는 이를 VRAM 구간별 모델 크기로 바꾼 것입니다.',
+        ],
+        note: '출처: [KoboldCpp README](https://github.com/LostRuins/koboldcpp). 하드웨어 요건은 이 정도의 일반적인 설명만 있습니다.',
+      },
       overview: {
         id: 'what-is-koboldcpp',
         title: 'KoboldCpp란 무엇인가',
         content: [
           '**KoboldCpp는 llama.cpp 추론 엔진을 기반으로 구축되어 GGUF 형식의 언어 모델을 로컬에서 실행하는 무료 단일 파일 프로그램이며, LostRuins라는 익명 개발자가 유지 관리한다.** 원조 KoboldAI 프로젝트의 인터페이스 관례를 계승하되, Python 기반 추론 스택이 아닌 llama.cpp 백엔드 위에서 동작하도록 개조되었다.',
           '이 프로젝트는 [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp)에서 호스팅되며 GNU Affero General Public License 버전 3(AGPL 3.0) — 즉 카피레프트 라이선스로 공개된다. 이는 llama.cpp 자체가 내부에서 사용하는 관대한 MIT 라이선스와는 다르다. 버전은 자주 출시된다.',
-          '최신 버전은 [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2)(2026년 10월 31일 출시)이며, 저장소의 마지막 업데이트는 2026년 11월 2일입니다. v1.124 시리즈에는 audio.cpp에서 통합된 일부 텍스트 음성 변환 모델과 YuE2 음악 생성이 추가되었습니다. v1.123.1(2026년 10월 13일) 등 이전 릴리스는 [Releases 페이지](https://github.com/LostRuins/koboldcpp/releases)에서 볼 수 있습니다. 이름은 Kobold CPP, kobold.cpp, koboldccp 등으로도 표기되지만 모두 같은 프로젝트를 가리킵니다.',
+          '최신 버전은 [v1.124.2](https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2)(2026년 10월 31일 출시)이며, 저장소의 마지막 업데이트는 2026년 11월 13일입니다. v1.124 시리즈에는 audio.cpp에서 통합된 일부 텍스트 음성 변환 모델과 YuE2 음악 생성이 추가되었습니다. v1.123.1(2026년 10월 13일) 등 이전 릴리스는 [Releases 페이지](https://github.com/LostRuins/koboldcpp/releases)에서 볼 수 있습니다. 이름은 Kobold CPP, kobold.cpp, koboldccp 등으로도 표기되지만 모두 같은 프로젝트를 가리킵니다.',
         ],
         items: [
           '플랫폼별로 실행 파일 하나로 배포 — koboldcpp.exe(Windows), koboldcpp-linux-x64(Linux), koboldcpp-mac-arm64(macOS Apple Silicon)',
@@ -2224,6 +2479,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '구형 하드웨어 — oldpc 빌드는 최신 표준 빌드를 실행할 수 없는 기기를 위해 CUDA 11 및 AVX1 전용 CPU를 대상으로 함',
           'CPU 전용 — nocuda 빌드는 GPU 없이도 동작하지만, GPU 가속 추론 대비 속도는 낮음',
         ],
+      },
+      modelsPerVram: {
+        id: 'koboldcpp-models-per-vram',
+        title: 'KoboldCpp에서 VRAM별로 어떤 모델이 들어가나요?',
+        content: '**Q4 양자화 기준으로 VRAM 8GB는 7~8B 모델, 12GB는 13~14B, 16GB는 22B급, 24GB는 22~32B에 알맞고, 70B 모델에는 약 48GB가 필요합니다.** `--gpulayers`로 모델의 일부만 GPU에 올릴 수 있으므로 더 큰 모델도 실행되지만 속도는 느려집니다.',
+        columns: ['VRAM', '들어가는 Q4 모델', '비고'],
+        rows: [
+          { 'VRAM': '4GB', '들어가는 Q4 모델': '3B급(Q4 약 2GB)', '비고': '소형 모델 또는 일부를 RAM으로' },
+          { 'VRAM': '8GB', '들어가는 Q4 모델': '7~8B(Q4 약 4GB)', '비고': '흔한 기준 구간, 여유 확보' },
+          { 'VRAM': '12GB', '들어가는 Q4 모델': '13~14B(Q4 약 8GB)', '비고': '더 긴 컨텍스트 가능' },
+          { 'VRAM': '16GB', '들어가는 Q4 모델': '22B급(Q4 약 13GB)', '비고': '이 구간의 실용적 상한' },
+          { 'VRAM': '24GB', '들어가는 Q4 모델': '22~32B(Q4~Q8)', '비고': '70B는 품질 손실 없이는 불가' },
+          { 'VRAM': '48GB', '들어가는 Q4 모델': '70B(Q4 약 42GB)', '비고': '70B를 Q4로 담는 첫 구간' },
+        ],
+        note: 'PromptQuorum [VRAM 가이드](/ko/local-llms/how-much-vram-local-llm)의 추정치로, Q4 가중치 크기에 컨텍스트용 1~2GB를 더한 값입니다. KoboldCpp 실측값이 아닙니다. 구간별 GPU 선택은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-koboldcpp',

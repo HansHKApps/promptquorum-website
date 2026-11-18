@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'AGPL 3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/SillyTavern/SillyTavern README: "it will run on anything that can run NodeJS 20 or higher" — SillyTavern is a frontend, not a model; the README's "3000-series NVIDIA, 6GB+ VRAM" guidance applies only if you choose a local-inference backend, not to SillyTavern itself. Verified 2026-09-13
-  stars: 33000,
+  stars: 35613,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],

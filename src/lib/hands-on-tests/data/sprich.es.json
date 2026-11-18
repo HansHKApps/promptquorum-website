@@ -1,8 +1,8 @@
 {
   "id": "pq-test-sprich-2026-11-09",
   "hero": "sprich-welcome-screen-press-once-speak-press-again",
-  "date_human": "9 de noviembre de 2026",
-  "captured": "2026-11-09; 17:43 a 18:07 según el historial de la app; hora de inicio y de fin de la instalación no registradas",
+  "date_human": "9 y 13 de noviembre de 2026",
+  "captured": "2026-11-09; 17:43 a 18:07 según el historial de la app; hora de inicio y de fin de la instalación no registradas. Sesión de reunión 2026-11-13; grabación iniciada a las 12:24 según la cabecera de la app.",
   "standard_version": "0.2",
   "locale": "es",
   "app": {
@@ -15,10 +15,10 @@
   },
   "title": "Sprich en un Mac M4 Pro de 24 GB: dictado local que escribe en cualquier app",
   "page_title": "Prueba de Sprich",
-  "dek": "Una primera sesión el 9 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una interfaz solo en alemán y la mayoría de las funciones secundarias sin probar.",
+  "dek": "Dos sesiones, el 9 y el 13 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una reunión grabada y separada en dos voces (precisión no valorada; el evaluador califica de malo el sonido de la sala), una interfaz solo en alemán y varias funciones secundarias sin probar.",
   "seo": {
     "title": "Prueba de Sprich: dictado local en un Mac M4 Pro",
-    "description": "Prueba práctica de Sprich en un Mac M4 Pro de 24 GB: el dictado funcionó en Word, WhatsApp y Telegram en inglés y alemán; el ruso falló."
+    "description": "Prueba práctica de Sprich en un Mac M4 Pro de 24 GB: dictado en Word, WhatsApp y Telegram, y una reunión de 6 minutos con dos voces."
   },
   "faq": [
     [
@@ -28,7 +28,7 @@
     ],
     [
       "¿Qué idiomas manejó Sprich en la prueba?",
-      "El inglés y el alemán funcionaron. Se dictó una frase en francés y su texto figura en las notas, pero no se valoró la precisión. Una prueba en ruso falló: el resultado salió ininteligible. El idioma de dictado configurado en ese momento no está registrado.",
+      "El inglés y el alemán funcionaron. Se dictó una frase en francés y su texto figura en las notas, pero no se valoró la precisión. Una prueba en ruso produjo un resultado ininteligible. El idioma de dictado configurado en ese momento no está registrado.",
       "observed"
     ],
     [
@@ -50,6 +50,11 @@
       "¿Era rápido Sprich?",
       "Al principio el evaluador lo juzgó lento porque usó mal el modo de alternancia predeterminado (pulsar una vez, hablar, pulsar de nuevo). Tras usarlo correctamente lo encontró instantáneo y tan rápido como su herramienta de dictado en la nube. No se cronometró nada.",
       "tester-estimate"
+    ],
+    [
+      "¿Funciona el modo de reuniones de Sprich?",
+      "Una prueba breve, sin veredicto sobre la calidad. El 13 de noviembre el evaluador grabó una reunión de 6 minutos con dos personas en una sala cuyo sonido, según él, era muy malo; Sprich aun así produjo una transcripción con dos interlocutores asignados. Después ofrece los formatos resumen, acta, correo de seguimiento y carta médica. No se puntuó la exactitud y no está registrado qué formato se generó.",
+      "observed"
     ]
   ],
   "status": "Partial",
@@ -79,7 +84,7 @@
     ],
     [
       "Inicio",
-      "2026-11-09. El primer dictado del historial es a las 17:43 y la última captura a las 18:07; la hora de inicio y de fin de la instalación no están registradas.",
+      "2026-11-09. El primer dictado del historial es a las 17:43 y la última captura a las 18:07; la hora de inicio y de fin de la instalación no están registradas. Una segunda sesión el 2026-11-13 abarcó la grabación de una reunión (12:24 según la cabecera de la app).",
       "observed"
     ],
     [
@@ -104,7 +109,7 @@
     ],
     [
       "Objetivo",
-      "No se indica como meta. Las notas muestran un primer vistazo a la configuración, el dictado en tres apps, los idiomas, el historial, los ajustes y la pestaña de reuniones.",
+      "No se indica como meta. Las notas muestran un primer vistazo a la configuración, el dictado en tres apps, los idiomas, el historial, los ajustes y la pestaña de reuniones. La segunda sesión grabó una reunión.",
       null
     ],
     [
@@ -113,20 +118,20 @@
       "observed"
     ],
     [
-      "Ayuda de IA utilizada",
-      "Claude redactó este informe a partir de las notas en Word del evaluador y de 15 capturas de pantalla. Las partes dictadas de las notas parecen proceder de la propia Sprich (suposición: las entradas del historial coinciden con el texto de las notas), así que algunos errores de las notas pueden ser resultado de la app.",
+      "Base de este informe",
+      "Este informe se basa en las notas en Word del evaluador y de 15 capturas de pantalla, y el capítulo sobre el modo Meeting en el mensaje del evaluador del 13 de noviembre y de 2 capturas más. Las partes dictadas de las notas parecen proceder de la propia Sprich (suposición: las entradas del historial coinciden con el texto de las notas), así que algunos errores de las notas pueden ser resultado de la app.",
       "assumption"
     ],
     [
       "Transparencia",
-      "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba, con una reseña redactada con IA. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
+      "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
       "observed"
     ]
   ],
-  "disclosure": "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba, con una reseña redactada con IA. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
+  "disclosure": "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Sprich se añadió al directorio el 2026-11-09, el mismo día que esta prueba. El desarrollador respondió al evaluador después de la prueba; no se indica la fecha y no está registrado si tenía estas notas. Sprich recibe clics desde el sitio. Las notas no registran ningún pago ni patrocinio.",
   "verdict": {
-    "general": "Una app de dictado para Mac con Apple Silicon, cuidada y pensada primero para el alemán. En esta sesión el dictado funcionó en Word, WhatsApp y Telegram en inglés y alemán; en ruso, no. La grabación de reuniones, la transcripción de archivos, la reescritura de texto, el funcionamiento sin conexión, las afirmaciones de privacidad y la desinstalación no se probaron.",
-    "fit": "El evaluador queda impresionado, le da cinco sobre cinco y la recomendó a un contacto. La considera tan rápida como su herramienta de dictado en la nube, aunque no se cronometró nada. Sus notas no indican si seguirá usándola."
+    "general": "Una app de dictado para Mac con Apple Silicon, cuidada y pensada primero para el alemán. En esta sesión el dictado funcionó en Word, WhatsApp y Telegram en inglés y alemán; el ruso no se reconoció en una prueba. En una segunda sesión, el 13 de noviembre, se grabó y transcribió una reunión de 6 minutos con dos personas, con dos interlocutores asignados (precisión no valorada), en una sala cuyo sonido el evaluador califica de muy malo; el evaluador dice que la función de reuniones funciona bien. La transcripción de archivos, la reescritura de texto, el funcionamiento sin conexión, las afirmaciones de privacidad y la desinstalación no se probaron.",
+    "fit": "El evaluador queda impresionado, le da cinco sobre cinco y la recomendó a un contacto. La considera tan rápida como su herramienta de dictado en la nube, aunque no se cronometró nada. Sus notas no indican si seguirá usándola. También le parece realmente genial que las notas de la reunión se ejecuten en local, según indica la app; PromptQuorum no lo probó."
   },
   "scores": [
     [
@@ -142,7 +147,7 @@
     [
       "Función principal",
       4,
-      "El dictado funcionó en tres apps en inglés y alemán; el ruso falló."
+      "El dictado funcionó en tres apps en inglés y alemán; el ruso no se reconoció en una prueba y no se registró el ajuste de idioma de dictado."
     ],
     [
       "Orientación e iteración",
@@ -178,7 +183,7 @@
     ],
     [
       "observed",
-      "El dictado funcionó en Microsoft Word, WhatsApp y Telegram, en inglés y alemán. Una prueba en ruso falló. Un nombre de producto salió como \"Sprich Ae\" en el historial."
+      "El dictado funcionó en Microsoft Word, WhatsApp y Telegram, en inglés y alemán. Una prueba en ruso no se reconoció; no se registró el ajuste de idioma de dictado. Un nombre de producto salió como \"Sprich Ae\" en el historial."
     ],
     [
       "tester-error",
@@ -194,7 +199,11 @@
     ],
     [
       "observed",
-      "No se probaron la grabación de reuniones, el menú de reescritura de texto, la transcripción de archivos, el diccionario, el efecto del ajuste de tono, el uso sin conexión ni la desinstalación."
+      "En una segunda sesión, el 13 de noviembre, el evaluador grabó una reunión de 6 minutos con dos personas. El evaluador describe el sonido de la sala como muy malo; Sprich la transcribió igualmente y asignó dos interlocutores. Un cuadro de diálogo posterior ofrece Zusammenfassung, Protokoll, Follow-up-E-Mail y Arztbrief. El evaluador dice que la función de reuniones funciona bien."
+    ],
+    [
+      "observed",
+      "No se probaron el menú de reescritura de texto, la transcripción de archivos, el diccionario, el efecto del ajuste de tono, el uso sin conexión ni la desinstalación."
     ]
   ],
   "quotes": [
@@ -236,10 +245,10 @@
       "chapter-explore"
     ],
     [
-      "Reuniones, grabadas en local",
-      "Pestaña Meetings, no usada en la prueba.",
-      "sprich-meetings-tab-record-meeting-tip",
-      "chapter-explore"
+      "Modo Meeting, probado cuatro días después",
+      "Dos interlocutores y una transcripción a partir de un sonido de sala muy malo, con un menú posterior para resumen, acta, correo y carta médica.",
+      "sprich-meeting-transcript-two-speakers",
+      "chapter-meetings"
     ]
   ],
   "chapters": [
@@ -356,7 +365,7 @@
         ],
         [
           "vendor-claim",
-          "La pestaña Meetings ofrece “Meeting aufnehmen”; su consejo dice que las llamadas dan una transcripción, un resumen y tareas y que todo permanece en el Mac. El evaluador no ha grabado ninguna reunión y planea probarla con unas pocas personas en una sala.",
+          "La pestaña Meetings ofrece “Meeting aufnehmen”; su consejo dice que las llamadas dan una transcripción, un resumen y tareas y que todo permanece en el Mac. El evaluador la probó en una segunda sesión (véase el capítulo Modo Meeting).",
           "sprich-meetings-tab-record-meeting-tip"
         ],
         [
@@ -377,6 +386,52 @@
       ]
     },
     {
+      "id": "chapter-meetings",
+      "title": "Modo Meeting, probado el 13 de noviembre",
+      "items": [
+        [
+          "observed",
+          "El 13 de noviembre de 2026 el evaluador grabó una reunión con la pestaña Meetings. La cabecera de la reunión guardada dice “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (intervenciones). No está registrada qué versión de la app usó. La otra persona participante consintió la grabación y la publicación del extracto.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "tester-view",
+          "Dice que la función de reuniones funciona bien y que le permite grabar una reunión.",
+          null
+        ],
+        [
+          "tester-view",
+          "La calidad del sonido en la sala era muy mala.",
+          null
+        ],
+        [
+          "observed",
+          "Sprich la grabó y transcribió igualmente y asignó el habla a dos interlocutores, Person 1 y Person 2. Un aviso dice “Klicken zum Umbenennen” (clic para renombrar). Cada intervención tiene un interlocutor y una marca de tiempo (00:00 y 00:14 en el fragmento). El fragmento es texto en inglés con alguna redacción torpe; no está registrado si esto viene del habla o del reconocimiento. No se puntuó la exactitud del texto ni de la asignación de interlocutores.",
+          "sprich-meeting-transcript-two-speakers"
+        ],
+        [
+          "observed",
+          "Un botón “Auswertung erstellen” (crear evaluación) abre un cuadro de diálogo con cuatro formatos: Zusammenfassung (resumen: afirmaciones clave, decisiones, tareas; preseleccionado), Protokoll (acta: por temas, con acuerdos), Follow-up-E-Mail (correo de seguimiento: un mensaje listo para enviar a los participantes) y Arztbrief (carta médica: anamnesis, hallazgos, valoración, procedimiento). No está registrado qué formato generó el evaluador ni qué resultado obtuvo.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "vendor-claim",
+          "El cuadro de diálogo dice que se ejecuta en local en tu Mac y que suele tardar de 20 a 60 segundos (“Läuft lokal auf deinem Mac · meist 20–60 Sekunden”). No se cronometró nada y no se inspeccionó el tráfico de red.",
+          "sprich-meeting-auswertung-erstellen-dialog"
+        ],
+        [
+          "tester-view",
+          "Al evaluador le parece realmente genial que esto se ejecute en local, según indica la app; PromptQuorum no lo probó.",
+          null
+        ],
+        [
+          "observed",
+          "Alcance: una grabación de 6 minutos con dos personas. No se probaron o no se registraron reuniones más largas, la captura del sonido del sistema, el uso sin conexión ni la calidad de las evaluaciones generadas.",
+          null
+        ]
+      ]
+    },
+    {
       "id": "chapter-decision",
       "title": "Decisión",
       "items": [
@@ -392,7 +447,7 @@
         ],
         [
           "tester-view",
-          "Por sus 30 años en consultoría, valora redactar él mismo las actas de las reuniones y espera probar actas de reuniones en local con unas pocas personas en una sala.",
+          "Por sus 30 años en consultoría, valora redactar él mismo las actas de las reuniones. Después grabó una reunión en una sala con la app y le parece realmente genial que se ejecute en local, según indica la app; PromptQuorum no lo probó.",
           null
         ]
       ]
@@ -436,15 +491,15 @@
       "observed"
     ],
     [
-      "Reuniones: transcripción, resumen y tareas, todo en el Mac.",
-      "Consejo de la pestaña Meetings",
-      "No se probó.",
+      "Reuniones: transcripción, resumen y tareas, todo en el Mac. La evaluación se ejecuta en local, “normalmente de 20 a 60 segundos”.",
+      "Consejo de la pestaña Meetings y cuadro de diálogo de evaluación",
+      "El 13 de noviembre se grabó y transcribió una reunión de 6 minutos y se asignaron dos interlocutores. Se vio el cuadro de diálogo de evaluación; no está registrado qué formato se generó, cuánto tardó ni si se ejecutó en local.",
       "vendor-claim"
     ],
     [
       "El dictado está optimizado para el alemán; Parakeet entiende unos 25 idiomas europeos.",
       "Mensaje del desarrollador",
-      "El inglés y el alemán funcionaron, el ruso falló; la transcripción de archivos no se probó.",
+      "El inglés y el alemán funcionaron; el ruso no se reconoció en una prueba; la transcripción de archivos no se probó.",
       "vendor-claim"
     ],
     [
@@ -547,9 +602,9 @@
     [
       "Palabras en ruso",
       "No registrado",
-      "Ininteligible, no reconocido",
+      "Ininteligible en una prueba; ajuste del idioma de dictado no registrado",
       "No registrado",
-      "Fail",
+      "Not completed",
       []
     ],
     [
@@ -571,13 +626,23 @@
       ]
     ],
     [
-      "Grabación de reuniones",
-      "-",
-      "No usada",
-      "-",
-      "Not completed",
+      "Grabar una reunión en una sala",
+      "Meetings",
+      "6 min, 2 personas, 28 intervenciones; sonido de la sala muy malo (evaluador); se obtuvo una transcripción con dos interlocutores",
+      "12:24 (13 nov)",
+      "Partial",
       [
-        "sprich-meetings-tab-record-meeting-tip"
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "Abrir el cuadro de diálogo de evaluación",
+      "Meetings",
+      "Se ofrecen cuatro formatos; no está registrado cuál se generó ni su resultado",
+      "No registrado",
+      "Partial",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
       ]
     ],
     [
@@ -806,7 +871,7 @@
     ],
     [
       "SP-20",
-      "Una pestaña Meetings ofrece \"Meeting aufnehmen\"; su consejo dice que las llamadas dan una transcripción, un resumen y tareas y que todo permanece en el Mac. El evaluador no ha grabado ninguna reunión y planea probarla con unas pocas personas en una sala.",
+      "Una pestaña Meetings ofrece \"Meeting aufnehmen\"; su consejo dice que las llamadas dan una transcripción, un resumen y tareas y que todo permanece en el Mac. Este consejo es una afirmación del fabricante; la sesión de reunión del propio evaluador es SP-25 a SP-30.",
       "Funciones",
       "vendor-claim",
       "Info",
@@ -851,6 +916,62 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SP-25",
+      "El 13 de noviembre el evaluador grabó una reunión en una sala. La reunión guardada muestra \"Meeting vom 13. November\", 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen. Dice que la función de reuniones funciona bien. No se registran la versión de la app, el ajuste de idioma ni quién habló.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-26",
+      "Según el evaluador, el sonido de la sala era muy malo (tester-view). Sprich produjo igualmente una transcripción con marcas de tiempo y dos interlocutores, Person 1 y Person 2, que se pueden renombrar con un clic. El fragmento de la captura está en inglés con alguna redacción torpe; no se puntuó la exactitud del texto ni de la asignación de interlocutores.",
+      "Meetings",
+      "observed",
+      "Positive",
+      [
+        "sprich-meeting-transcript-two-speakers"
+      ]
+    ],
+    [
+      "SP-27",
+      "\"Auswertung erstellen\" abre un cuadro de diálogo con cuatro formatos: Zusammenfassung (afirmaciones clave, decisiones, tareas), Protokoll (por temas, con acuerdos), Follow-up-E-Mail (listo para enviar a los participantes) y Arztbrief (anamnesis, hallazgos, valoración, procedimiento). No se registra cuál generó el evaluador ni su resultado.",
+      "Meetings",
+      "observed",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-28",
+      "El cuadro de diálogo dice \"Läuft lokal auf deinem Mac · meist 20–60 Sekunden\" (se ejecuta en local en tu Mac, normalmente de 20 a 60 segundos). No se cronometró nada y no se inspeccionó el tráfico de red.",
+      "Trust",
+      "vendor-claim",
+      "Info",
+      [
+        "sprich-meeting-auswertung-erstellen-dialog"
+      ]
+    ],
+    [
+      "SP-29",
+      "Al evaluador le parece realmente genial que la grabación de la reunión y lo que sigue se ejecuten en local (tester-view).",
+      "Meetings",
+      "tester-view",
+      "Positive",
+      []
+    ],
+    [
+      "SP-30",
+      "Alcance de la reunión: una grabación de 6 minutos con dos personas. No probado o no registrado: qué formato de evaluación se generó y su resultado, el tiempo de evaluación, la exactitud de la transcripción y de los interlocutores, reuniones más largas, captura del sonido del sistema, uso sin conexión.",
+      "Scope",
+      "observed",
+      "Info",
+      []
     ]
   ],
   "severity_note": "La gravedad es el impacto sobre quien usa la app por primera vez. Propuesta, no medida. Info marca un hallazgo que no es ni un problema ni un punto a favor.",
@@ -864,10 +985,10 @@
     "not_fits": [
       [
         "assumption",
-        "Quien necesite hoy ruso o una interfaz que no sea en alemán, o un Mac con Intel (el directorio indica solo Apple Silicon)."
+        "Quien necesite hoy ruso (una prueba, ajuste del idioma de dictado no registrado, no se reconoció) o una interfaz que no sea en alemán, o un Mac con Intel (el directorio indica solo Apple Silicon)."
       ]
     ],
-    "retest": "Repetir la prueba con una nueva versión principal, una interfaz en inglés publicada o una lista de idiomas confirmada. Cubrir: registrar las versiones de la app y de macOS; cronometrar el retraso; ruso con el idioma configurado; transcripción de archivos; Meetings; el menú de reescritura; uso sin conexión con el tráfico inspeccionado; memoria en uso; desinstalación."
+    "retest": "Repetir la prueba con una nueva versión principal, una interfaz en inglés publicada o una lista de idiomas confirmada. Cubrir: registrar las versiones de la app y de macOS; cronometrar el retraso; ruso con el idioma configurado; transcripción de archivos; reuniones más largas con cada formato de evaluación generado y cronometrado; el menú de reescritura; uso sin conexión con el tráfico inspeccionado; memoria en uso; desinstalación."
   },
   "background_intro": "No es práctica directa. El elemento siguiente procede de la ficha de Sprich en el directorio de PromptQuorum y no se verificó aquí.",
   "background": [
@@ -878,6 +999,7 @@
   ],
   "sources": [
     "Notas y capturas de pantalla de la prueba práctica del evaluador, 9 de noviembre de 2026 (notas originales en Word; PDF de las notas originales pendiente de añadir).",
+    "Mensaje del evaluador y dos capturas de pantalla de la sesión de reunión, 13 de noviembre de 2026.",
     "Ficha y reseña de Sprich en el directorio de PromptQuorum (slug: sprich), verificada el 2026-11-09.",
     "Sitio del fabricante sprich.ai (afirmaciones del fabricante)."
   ],
@@ -887,8 +1009,8 @@
       "meaning": "Visto de primera mano en la app, en una captura o en las notas del evaluador."
     },
     "measured": {
-      "label": "Medido",
-      "meaning": "Un valor leído en un cuadro de diálogo, contador o herramienta, con la cifra indicada."
+      "label": "Leído en la app",
+      "meaning": "Un valor leído en un cuadro de diálogo, contador o herramienta, con la cifra indicada. PromptQuorum no lo midió."
     },
     "tester-estimate": {
       "label": "Estimación del evaluador",
@@ -964,7 +1086,7 @@
       "file": "sprich-setup-two-models-download-3-3-gb.webp",
       "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
       "alt": "Paso 2 de 5 de la configuración: se descargan dos modelos una sola vez, Sprich Transcribe v3 de unos 480 MB y Sprich Turbo v3 de unos 2,8 GB, unos 3,3 GB en total.",
-      "caption": "Paso de los modelos de la configuración. Los tamaños son cifras de la propia app (medido); \"works fully offline\" es una afirmación del fabricante.",
+      "caption": "Paso de los modelos de la configuración. Los tamaños son cifras de la propia app (leído en la app); \"works fully offline\" es una afirmación del fabricante.",
       "role": "moment",
       "width": 1386,
       "height": 1306,
@@ -1006,7 +1128,7 @@
       "file": "sprich-setup-final-step-models-still-loading.webp",
       "path": "images/sprich-setup-final-step-models-still-loading.webp",
       "alt": "Paso 5 de 5 de la configuración, \"Fast geschafft\": descarga del reconocimiento de voz al 72 por ciento y de la mejora del texto al 12 por ciento, con los pasos 1 a 4 marcados.",
-      "caption": "Modelos aún en descarga al final de la configuración. Hora no registrada. Medido.",
+      "caption": "Modelos aún en descarga al final de la configuración. Hora no registrada. Leído en la app.",
       "role": "moment",
       "width": 1376,
       "height": 1174,
@@ -1195,7 +1317,7 @@
       "file": "sprich-meetings-tab-record-meeting-tip.webp",
       "path": "images/sprich-meetings-tab-record-meeting-tip.webp",
       "alt": "Pestaña Meetings con cero reuniones, un consejo sobre grabar llamadas para obtener transcripción, resumen y tareas, un botón Meeting aufnehmen.",
-      "caption": "Pestaña Meetings en la primera apertura. No usada en la prueba. La afirmación del resumen en el consejo es una afirmación del fabricante.",
+      "caption": "Pestaña Meetings en la primera apertura, antes de la grabación del 13 de noviembre. La afirmación del resumen en el consejo es una afirmación del fabricante.",
       "role": "moment",
       "width": 1600,
       "height": 1050,
@@ -1230,6 +1352,48 @@
       "subject": "Captura de pantalla de la app Sprich",
       "rights": "Captura de pantalla propia del evaluador de la interfaz de un software de terceros.",
       "captured": "2026-11-09; hora exacta no registrada"
+    },
+    {
+      "id": "sprich-meeting-transcript-two-speakers",
+      "figure": 16,
+      "file": "sprich-meeting-transcript-two-speakers.webp",
+      "path": "images/sprich-meeting-transcript-two-speakers.webp",
+      "alt": "Reunión guardada \"Meeting vom 13. November\" con la cabecera Heute, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen, chips de Person 1 y Person 2 con el aviso de clic para renombrar y las primeras líneas de la transcripción con marcas de tiempo.",
+      "caption": "Reunión guardada del 13 de noviembre: 6 min, 2 personas, 28 intervenciones, interlocutores Person 1 y Person 2 con marcas de tiempo. Según el evaluador, el sonido de la sala era muy malo.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 46486,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Captura de pantalla de la app Sprich",
+      "rights": "Captura de pantalla propia del evaluador de la interfaz de un software de terceros.",
+      "captured": "2026-11-13; grabación a las 12:24 según la cabecera; hora de la captura no registrada"
+    },
+    {
+      "id": "sprich-meeting-auswertung-erstellen-dialog",
+      "figure": 17,
+      "file": "sprich-meeting-auswertung-erstellen-dialog.webp",
+      "path": "images/sprich-meeting-auswertung-erstellen-dialog.webp",
+      "alt": "Cuadro de diálogo \"Auswertung erstellen\" con cuatro opciones: Zusammenfassung (seleccionada), Protokoll, Follow-up-E-Mail y Arztbrief, y una línea al pie \"Läuft lokal auf deinem Mac, meist 20-60 Sekunden\" junto a un botón Erstellen.",
+      "caption": "Cuadro de diálogo de evaluación sobre la reunión. Cuatro formatos; la línea de procesamiento local y de 20 a 60 segundos es una afirmación del fabricante. No está registrado qué formato se generó.",
+      "role": "moment",
+      "width": 1012,
+      "height": 798,
+      "bytes": 32156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-meetings"
+      ],
+      "subject": "Captura de pantalla de la app Sprich",
+      "rights": "Captura de pantalla propia del evaluador de la interfaz de un software de terceros.",
+      "captured": "2026-11-13; grabación a las 12:24 según la cabecera; hora de la captura no registrada"
     }
   ],
   "figure_order": [
@@ -1247,11 +1411,13 @@
     "sprich-settings-recording-indicator-mic",
     "sprich-account-security-page-two-factor-off",
     "sprich-meetings-tab-record-meeting-tip",
-    "sprich-bug-report-form"
+    "sprich-bug-report-form",
+    "sprich-meeting-transcript-two-speakers",
+    "sprich-meeting-auswertung-erstellen-dialog"
   ],
   "ui": {
     "kicker": "Prueba práctica de PromptQuorum · {app} · {date}",
-    "date_line": "9 de noviembre de 2026",
+    "date_line": "9 y 13 de noviembre de 2026",
     "nav_aria": "Secciones",
     "nav": {
       "verdict": "Veredicto",

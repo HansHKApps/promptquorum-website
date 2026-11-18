@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Excire Foto es un gestor de fotos y vídeos de código cerrado para Windows y macOS cuya búsqueda con IA, búsqueda de personas, reconocimiento de texto y selección de imágenes se ejecutan en tu propio ordenador, según su fabricante alemán. Se vende como pago único y requiere una cuenta de Excire y un código de activación. Esta reseña recoge el sitio web, la tienda, la página de prueba, los artículos de soporte y la declaración de privacidad de Excire tal como se comprobaron el 28 de octubre de 2026; la versión actual es Excire Foto 2027, versión 5.0.2.',
     metaDescription:
-      'Reseña de Excire Foto: gestor de fotos para Windows y Mac cuya búsqueda con IA y reconocimiento de texto se ejecutan en local, según su fabricante. Pago único.',
+      'Reseña de Excire Foto: gestor de fotos para Windows y Mac con búsqueda con IA y reconocimiento de texto en local, según su fabricante. Pago único.',
     twitterDescription:
       'Reseña de Excire Foto: un gestor de fotos de pago único para Windows y Mac cuya búsqueda con IA y selección se ejecutan en local, según su fabricante. Requisitos, activación, privacidad y por qué lleva un aviso de proyecto desactualizado.',
     audience:
@@ -989,7 +989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Excire Foto est un gestionnaire de photos et de vidéos à code source fermé pour Windows et macOS, dont la recherche par IA, la recherche de personnes, la reconnaissance de texte et le tri des images s’exécutent sur votre propre ordinateur, selon son éditeur allemand. Il est vendu en achat unique et exige un compte Excire et un code d’activation. Ce test reflète le site web, la boutique, la page d’essai, les articles d’assistance et la déclaration de confidentialité d’Excire tels que vérifiés le 28 octobre 2026 ; la version actuelle est Excire Foto 2027, version 5.0.2.',
     metaDescription:
-      'Test d’Excire Foto : gestionnaire de photos pour Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique.',
+      'Test d’Excire Foto : gestionnaire de photos Windows et Mac dont la recherche IA et la reconnaissance de texte sont locales, selon l’éditeur. Achat unique.',
     twitterDescription:
       'Test d’Excire Foto : un gestionnaire de photos en achat unique pour Windows et Mac dont la recherche IA et le tri s’exécutent en local, selon son éditeur. Prérequis, activation, confidentialité et avertissement de projet inactif.',
     audience:
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/excire-foto-review-hero-ja.webp',
     title: 'Excire Fotoレビュー：WindowsとMac向けのローカルAI写真管理ソフト',
-    seoTitle: 'Excire Fotoレビュー：ローカルAI写真管理ソフト（Win/Mac）',
+    seoTitle: 'Excire Fotoレビュー：ローカルAI写真管理ソフト',
     intro:
       'Excire Fotoは、WindowsとmacOS向けのクローズドソースの写真・動画管理ソフトで、AI検索、人物検索、文字認識、ベストショット選別は、ドイツの開発元によると自分のコンピューター上で動作します。買い切り型で販売されており、Excireアカウントとアクティベーションコードが必要です。このレビューは、2026年10月28日に確認したExcireのウェブサイト、ショップ、試用ページ、サポート記事、プライバシーに関する声明を反映しています。現行版はExcire Foto 2027、バージョン5.0.2です。',
     metaDescription:
@@ -1609,7 +1609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Excire Foto é um gerenciador de fotos e vídeos de código fechado para Windows e macOS cuja busca com IA, busca de pessoas, reconhecimento de texto e seleção de imagens rodam no seu próprio computador, segundo o fabricante alemão. Ele é vendido como compra única e exige uma conta Excire e um código de ativação. Esta análise reflete o site, a loja, a página de teste, os artigos de suporte e a declaração de privacidade da Excire conforme verificados em 28 de outubro de 2026; a versão atual é o Excire Foto 2027, versão 5.0.2.',
     metaDescription:
-      'Análise do Excire Foto: gerenciador de fotos para Windows e Mac cuja busca por IA e reconhecimento de texto rodam localmente, segundo o fabricante. Compra única.',
+      'Análise do Excire Foto: gerenciador de fotos para Windows e Mac com busca por IA e reconhecimento de texto locais, segundo o fabricante. Compra única.',
     twitterDescription:
       'Análise do Excire Foto: um gerenciador de fotos de compra única para Windows e Mac cuja busca com IA e seleção rodam localmente, segundo o fabricante. Requisitos, ativação, privacidade e por que há um aviso de projeto desatualizado.',
     audience:
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Excire Foto برنامج مغلق المصدر لإدارة الصور والفيديو على Windows وmacOS، ويعمل بحثه بالذكاء الاصطناعي والبحث عن الأشخاص والتعرف على النص وانتقاء الصور على حاسوبك الخاص بحسب الشركة الألمانية المطوّرة. يُباع بدفعة واحدة ويتطلب حساب Excire ورمز تفعيل. تعكس هذه المراجعة موقع Excire ومتجرها وصفحة التجربة ومقالات الدعم وبيان الخصوصية كما جرى التحقق منها في 28 أكتوبر 2026؛ والإصدار الحالي هو Excire Foto 2027، الإصدار 5.0.2.',
     metaDescription:
-      'مراجعة Excire Foto: برنامج لإدارة الصور على Windows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا.',
+      'مراجعة Excire Foto: مدير صور لـWindows وMac يعمل بحثه بالذكاء الاصطناعي وتعرفه على النص محليًا بحسب الشركة. شراء مرة واحدة وتجربة 14 يومًا.',
     twitterDescription:
       'مراجعة Excire Foto: برنامج لإدارة الصور بدفعة واحدة على Windows وMac يعمل بحثه بالذكاء الاصطناعي وانتقاء الصور محليًا بحسب الشركة. المتطلبات والتفعيل والخصوصية وسبب تحذير توقف التحديثات.',
     audience:
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/excire-foto-review-hero-zh.webp',
     title: 'Excire Foto 评测：适用于 Windows 和 Mac 的本地 AI 照片管理软件',
-    seoTitle: 'Excire Foto 评测：本地 AI 照片管理软件（Win/Mac）',
+    seoTitle: 'Excire Foto 评测：本地 AI 照片管理软件',
     intro:
       'Excire Foto 是适用于 Windows 和 macOS 的闭源照片与视频管理软件，据德国开发商称，其 AI 搜索、人物搜索、文字识别和选片功能都在你自己的电脑上运行。它采用一次性购买方式，需要 Excire 账户和激活码。本评测反映了 2026 年 10 月 28 日核对的 Excire 官网、商店、试用页面、支持文章和隐私声明；当前版本为 Excire Foto 2027，版本号 5.0.2。',
     metaDescription:

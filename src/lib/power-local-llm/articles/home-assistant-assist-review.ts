@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/home-assistant-assist-review-hero-ja.webp',
     title: 'Home Assistant Assist レビュー：ローカル音声操作とLLMエージェント',
-    seoTitle: 'Home Assistant Assist レビュー：ローカル音声とLLM',
+    seoTitle: 'Home Assistant Assistレビュー：ローカル音声',
     intro:
       'Assistは、オープンソースのスマートホームソフト[Home Assistant](https://www.home-assistant.io/voice_control/)に組み込まれた音声アシスタントです。音声認識にWhisperまたはSpeech-to-Phrase、音声出力にPiperを使い、Wyomingプロトコルで接続して、すべて自分のハードウェア上で動かせます。Ollamaなどが提供するLLMへ依頼を渡すこともできます。本レビューが扱うのはこの音声・LLMパイプラインだけで、Home Assistant全体ではありません。実機での検証ではなく、プロジェクトのドキュメントに基づいています。',
     metaDescription: 'Home Assistant Assistのレビュー。WhisperとPiperでローカル動作し、OllamaのLLMエージェントも使える内蔵音声アシスタントを解説。ドキュメントに基づく内容です。',
@@ -2959,7 +2959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/home-assistant-assist-review-hero-zh.webp',
     title: 'Home Assistant Assist 评测：本地语音控制与 LLM 智能体',
-    seoTitle: 'Home Assistant Assist 评测：本地语音与 LLM',
+    seoTitle: 'Home Assistant Assist 评测：本地语音',
     intro:
       'Assist 是开源智能家居软件 [Home Assistant](https://www.home-assistant.io/voice_control/) 内置的语音助手。它可以完全运行在你自己的硬件上：用 Whisper 或 Speech-to-Phrase 做语音识别，用 Piper 做语音输出，并通过 Wyoming 协议连接；它还能把请求交给 LLM，例如由 Ollama 提供的模型。本文只评测这条语音与 LLM 流水线，不涉及 Home Assistant 的其他部分，内容依据项目文档，而非亲自动手测试。',
     metaDescription: 'Home Assistant Assist 评测：内置语音助手可借助 Whisper 与 Piper 在本地运行，也能接入 Ollama LLM 智能体。内容基于官方文档，未经实测。',

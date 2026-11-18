@@ -12,6 +12,7 @@ export const PAGES: Page[] = [
   { path: '/about/state-of-local-ai', priority: 0.7, changefreq: 'monthly', lastmod: '2026-10-25' },
   { path: '/about/state-of-local-ai/2026-q4', priority: 0.8, changefreq: 'monthly', lastmod: '2026-10-25' },
   { path: '/security', priority: 0.4, changefreq: 'monthly', lastmod: '2026-10-19' },
+  { path: '/partners', priority: 0.4, changefreq: 'monthly', lastmod: '2026-11-14' },
   { path: '/privacy', priority: 0.3, changefreq: 'monthly', lastmod: '2026-10-18' },
   { path: '/frameworks', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks/co-star', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },

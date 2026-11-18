@@ -30,6 +30,7 @@ import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { t, type DirUi } from './directory-ui-client'
+import { HqFlag } from './HqFlag'
 import { AppLink as Link } from '@/components/AppLink'
 
 function DetailRow({ label, value }: { label: string; value: ReactNode }) {
@@ -254,7 +255,10 @@ export function ToolDrawer({
           {app && (
             <div className="p-6">
               <div className="flex items-start justify-between gap-3 mb-1">
-                <Dialog.Title className="text-xl font-bold text-text-primary">{app.name}</Dialog.Title>
+                <Dialog.Title className="text-xl font-bold text-text-primary flex items-center gap-2">
+                  {app.name}
+                  <HqFlag app={app} lang={lang} />
+                </Dialog.Title>
                 <div className="flex items-center gap-1 shrink-0">
                   <button
                     type="button"

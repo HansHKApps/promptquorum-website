@@ -2103,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/localmcp-review-hero-zh.webp',
     title: 'LocalMCP 评测：为 Mac 数据而生的本地 MCP 服务器',
-    seoTitle: 'LocalMCP 评测：适用于 Mac 数据的本地 MCP 服务器',
+    seoTitle: 'LocalMCP 评测：Mac 数据的本地 MCP 服务器',
     intro:
       'LocalMCP 是一款付费的 Mac App Store 应用，运行本地 MCP 服务器，让你连接的 AI 客户端只在你批准的来源中搜索邮件、日历、通讯录、提醒事项和备忘录。本评测基于 2026 年 10 月 24 日查阅的 App Store 页面和开发者产品页；PromptQuorum 没有测试过该应用。',
     metaDescription:

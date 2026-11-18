@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// Checks the promo-slot pilot config (src/lib/promo/pilot.ts): 65 groups, P1-P4 on 15 article groups each, P5 on
-// 5 hubs, targets match the brief's cluster table, every page exists, controls are 20 distinct pages that are not
-// in the pilot. Run: npm run test:promo-pilot
+// Checks the promo-slot pilot config (src/lib/promo/pilot.ts): 96 groups (91 articles + 5 hubs), each target balanced
+// over P1-P4 (max-min <= 1), P5 on 5 hubs, targets match the cluster table, every page exists, every article group has a
+// distinct control that is not in the pilot, and excluded pages (PILOT_EXCLUDED) appear nowhere. Run: npm run test:promo-pilot
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -9,7 +9,7 @@ import { createJiti } from 'jiti'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const jiti = createJiti(import.meta.url, { tsconfigPaths: true })
-const { PILOT_GROUPS, PILOT_CONTROLS } = await jiti.import(path.join(ROOT, 'src/lib/promo/pilot.ts'))
+const { PILOT_GROUPS, PILOT_CONTROLS, PILOT_EXCLUDED } = await jiti.import(path.join(ROOT, 'src/lib/promo/pilot.ts'))
 const { PE_SLUG_TO_KEY } = await jiti.import(path.join(ROOT, 'src/lib/prompt-engineering/slugs.ts'))
 const { LLM_SLUG_TO_KEY } = await jiti.import(path.join(ROOT, 'src/lib/local-llms/slugs.ts'))
 const { POWER_LLM_SLUG_TO_KEY } = await jiti.import(path.join(ROOT, 'src/lib/power-local-llm/slugs.ts'))
@@ -18,11 +18,30 @@ const errors = []
 const fail = (m) => errors.push(m)
 
 const entries = Object.entries(PILOT_GROUPS)
-if (entries.length !== 65) fail(`expected 65 groups, got ${entries.length}`)
+if (entries.length !== 96) fail(`expected 96 groups, got ${entries.length}`)
 const byPl = {}
 for (const [, e] of entries) byPl[e.placement] = (byPl[e.placement] ?? 0) + 1
-for (const p of ['P1', 'P2', 'P3', 'P4']) if (byPl[p] !== 15) fail(`${p}: expected 15 groups, got ${byPl[p] ?? 0}`)
 if (byPl.P5 !== 5) fail(`P5: expected 5 hubs, got ${byPl.P5 ?? 0}`)
+// Balanced placements WITHIN each target (the overall P1-P4 totals differ because the targets have different sizes).
+const byTP = {}
+for (const [, e] of entries) if (e.placement !== 'P5') { byTP[e.target] ??= { P1: 0, P2: 0, P3: 0, P4: 0 }; byTP[e.target][e.placement]++ }
+const SIZES = { mcp: 19, 'power-mode': 30, 'ask-hans': 12, directory: 30 }
+for (const [t, n] of Object.entries(SIZES)) {
+  const c = byTP[t] ?? { P1: 0, P2: 0, P3: 0, P4: 0 }, v = Object.values(c)
+  if (v.reduce((a, b) => a + b, 0) !== n) fail(`${t}: expected ${n} article groups, got ${v.reduce((a, b) => a + b, 0)}`)
+  if (Math.max(...v) - Math.min(...v) > 1) fail(`${t}: placements not balanced (${JSON.stringify(c)})`)
+}
+// The exclusion list itself is pinned: removing a page from PILOT_EXCLUDED must fail this check (owner decisions 2026-11-16).
+for (const must of [
+  '/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+  '/power-local-llm/local-llm-screenwriting-and-novel-drafting',
+  '/power-local-llm/best-local-llm-creative-writing',
+  '/power-local-llm/local-llm-prompts-for-fiction-writers',
+]) if (!PILOT_EXCLUDED.includes(must)) fail(`${must} must stay in PILOT_EXCLUDED`)
+for (const x of PILOT_EXCLUDED) {
+  if (PILOT_GROUPS[x]) fail(`${x} is excluded but is a pilot page`)
+  if (Object.values(PILOT_CONTROLS).includes(x) || PILOT_CONTROLS[x]) fail(`${x} is excluded but is a control`)
+}
 
 const clusterOf = (k) => k.split('/')[1]
 // Article file for a path; URL slugs can map to differently named article keys (e.g. a -2026 suffix).
@@ -42,8 +61,8 @@ for (const [k, e] of entries) {
   mix[c][e.target] = (mix[c][e.target] ?? 0) + 1
   if (!fs.existsSync(articleFile(k))) fail(`${k}: article file not found`)
 }
-if ((mix['local-llms']?.['power-mode'] ?? 0) !== 12 || (mix['local-llms']?.directory ?? 0) !== 12) fail('local-llms should be 12 Power Mode + 12 Directory')
-if ((mix['power-local-llm']?.directory ?? 0) !== 18 || (mix['power-local-llm']?.mcp ?? 0) !== 6) fail('power-local-llm should be 18 Directory + 6 MCP')
+if ((mix['local-llms']?.['power-mode'] ?? 0) !== 30 || (mix['local-llms']?.directory ?? 0) !== 12) fail('local-llms should be 30 Power Mode + 12 Directory')
+if ((mix['power-local-llm']?.directory ?? 0) !== 18 || (mix['power-local-llm']?.mcp ?? 0) !== 19) fail('power-local-llm should be 18 Directory + 19 MCP')
 if ((mix['prompt-engineering']?.['ask-hans'] ?? 0) !== 12) fail('prompt-engineering should be 12 Ask Hans groups')
 // Each of P1-P4 mixes clusters and targets (cluster must not equal placement).
 for (const p of ['P1', 'P2', 'P3', 'P4']) {
@@ -66,4 +85,4 @@ if (errors.length) {
   console.error('promo pilot config: FAIL\n- ' + errors.join('\n- '))
   process.exit(1)
 }
-console.log(`promo pilot config: OK (${entries.length} groups, ${controls.length} controls; P1-P4 x15, P5 x5)`)
+console.log(`promo pilot config: OK (${entries.length} groups, ${controls.length} controls; ${JSON.stringify(byTP)}, P5 x5)`)

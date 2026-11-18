@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A local AI workstation is a compact one-box system with 128 GB or more of unified memory on a 256-bit bus, built to run 100B-class models that no 32–64 GB mini PC can load. In October 2026 the field has three architectures: NVIDIA GB10 (DGX Spark), AMD Strix Halo (Ryzen AI Max+ 395 and PRO 495) and, still on the sidelines, Intel Panther Lake. AMD wins on memory options, x86 compatibility and entry price; NVIDIA wins on measured throughput, CUDA and clustering. Memory prices have pushed several figures up since the summer, so the price table below names a source for each line.',
     metaDescription:
-      'Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, tested speed, sourced prices.',
+      'Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, reported speed, sourced prices.',
     twitterDescription:
       'DGX Spark vs. AMD Strix Halo: which 128–192 GB local AI workstation to buy, what independent tests show, and why this is not a mini-PC category.',
     readTime: '11 min read',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark',
-      'description': 'Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, tested speed, sourced prices.',
+      'description': 'Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, reported speed, sourced prices.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       "Une station de travail IA locale est un système compact tout-en-un doté d'au moins 128 Go de mémoire unifiée sur un bus de 256 bits, conçu pour exécuter des modèles de classe 100B qu'aucun mini-PC de 32 à 64 Go ne peut charger. En octobre 2026, le marché compte trois architectures : NVIDIA GB10 (DGX Spark), AMD Strix Halo (Ryzen AI Max+ 395 et PRO 495) et, encore en retrait, Intel Panther Lake. AMD l'emporte par les options de mémoire, la compatibilité x86 et le prix d'entrée ; NVIDIA l'emporte par le débit mesuré, CUDA et le clustering. Les prix de la mémoire ont fait monter plusieurs chiffres depuis l'été : le tableau des prix ci-dessous indique donc une source pour chaque ligne.",
     metaDescription:
-      "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse mesurée, prix sourcés.",
+      "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse publiée, prix sourcés.",
     twitterDescription:
       "DGX Spark contre AMD Strix Halo : quelle station IA locale de 128 à 192 Go acheter, ce que montrent les tests indépendants, et pourquoi ce n'est pas une catégorie de mini-PC.",
     readTime: '11 min de lecture',
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': "Stations de travail IA locales : AMD Strix Halo contre NVIDIA DGX Spark",
-      'description': "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse mesurée, prix sourcés.",
+      'description': "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse publiée, prix sourcés.",
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -1075,11 +1075,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-ai-workstations-strix-halo-vs-dgx-spark-hero-ja.webp',
     affiliateDisclosure: true,
     title: 'ローカルAIワークステーション: AMD Strix Halo vs. NVIDIA DGX Spark',
-    seoTitle: 'ローカルAIワークステーション Strix Halo vs Spark',
+    seoTitle: 'ローカルAI：Strix Halo vs DGX Spark',
     intro:
       'ローカルAIワークステーションとは、256ビットバス上に128GB以上のユニファイドメモリを搭載し、32〜64GBのmini PCでは読み込めない100B級モデルを動かせる、コンパクトな一体型システムです。2026年10月時点のアーキテクチャは3つ。NVIDIA GB10（DGX Spark）、AMD Strix Halo（Ryzen AI Max+ 395とPRO 495）、そして出遅れているIntel Panther Lakeです。メモリの選択肢、x86互換性、導入価格ではAMDが優位で、実測スループット、CUDA、クラスタリングではNVIDIAが優位です。夏以降、メモリ価格の高騰で複数の価格が上昇したため、下の価格表には各行の情報源を記載しています。',
     metaDescription:
-      'ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・実測速度・出典付き価格で整理。',
+      'ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・公表速度・出典付き価格で整理。',
     twitterDescription:
       'DGX SparkとAMD Strix Haloの比較: 128〜192GBのローカルAIワークステーションはどれを買うべきか、独立テストの結果、そしてmini PCとは別カテゴリである理由。',
     readTime: '11分で読める',
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'ローカルAIワークステーション: AMD Strix Halo vs. NVIDIA DGX Spark',
-      'description': 'ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・実測速度・出典付き価格で整理。',
+      'description': 'ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・公表速度・出典付き価格で整理。',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -1424,11 +1424,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-ai-workstations-strix-halo-vs-dgx-spark-hero-zh.webp',
     affiliateDisclosure: true,
     title: '本地AI工作站：AMD Strix Halo对比NVIDIA DGX Spark',
-    seoTitle: '本地AI工作站：Strix Halo对比DGX Spark选购指南',
+    seoTitle: '本地AI工作站：Strix Halo对比DGX Spark指南',
     intro:
       '本地AI工作站是一类紧凑的单机系统：配备128 GB或更多统一内存（256位总线），专为运行32–64 GB迷你主机无法加载的百B级模型而设计。2026年10月，这一领域有三种架构：NVIDIA GB10（DGX Spark）、AMD Strix Halo（Ryzen AI Max+ 395与PRO 495），以及仍在场外观望的Intel Panther Lake。AMD胜在内存选项、x86兼容性和入门价格；NVIDIA胜在实测吞吐量、CUDA和多机互联。自夏季以来，内存涨价推高了多项价格，因此下方价格表为每一行都标注了来源。',
     metaDescription:
-      '本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、实测速度和有来源的价格全面比较。',
+      '本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、公布速度和有来源的价格全面比较。',
     twitterDescription:
       'DGX Spark对比AMD Strix Halo：该买哪款128–192 GB本地AI工作站、独立测试结果如何，以及为什么它不属于迷你主机品类。',
     readTime: '阅读约11分钟',
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '本地AI工作站：AMD Strix Halo对比NVIDIA DGX Spark',
-      'description': '本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、实测速度和有来源的价格全面比较。',
+      'description': '本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、公布速度和有来源的价格全面比较。',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Una estación de trabajo de IA local es un sistema compacto, todo en una caja, con 128 GB o más de memoria unificada en un bus de 256 bits, pensado para ejecutar modelos de clase 100B que ningún mini PC de 32–64 GB puede cargar. En octubre de 2026 el panorama tiene tres arquitecturas: NVIDIA GB10 (DGX Spark), AMD Strix Halo (Ryzen AI Max+ 395 y PRO 495) y, todavía en segundo plano, Intel Panther Lake. AMD gana en opciones de memoria, compatibilidad x86 y precio de entrada; NVIDIA gana en rendimiento medido, CUDA y clustering. Los precios de la memoria han subido varias cifras desde el verano, así que la tabla de precios de abajo indica una fuente para cada línea.',
     metaDescription:
-      'Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad medida y precios.',
+      'Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad indicada y precios.',
     twitterDescription:
       'DGX Spark vs. AMD Strix Halo: qué estación de IA local de 128–192 GB comprar, qué muestran las pruebas independientes y por qué esta no es una categoría de mini PC.',
     readTime: '11 min de lectura',
@@ -2080,7 +2080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Estaciones de trabajo de IA local: AMD Strix Halo vs. NVIDIA DGX Spark',
-      'description': 'Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad medida y precios.',
+      'description': 'Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad indicada y precios.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -2127,7 +2127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Uma workstation de IA local é um sistema compacto, em uma única caixa, com 128 GB ou mais de memória unificada em barramento de 256 bits, feito para rodar modelos da classe de 100B que nenhum mini PC de 32 a 64 GB consegue carregar. Em outubro de 2026, o cenário tem três arquiteturas: NVIDIA GB10 (DGX Spark), AMD Strix Halo (Ryzen AI Max+ 395 e PRO 495) e, ainda na reserva, Intel Panther Lake. A AMD leva vantagem em opções de memória, compatibilidade x86 e preço de entrada; a NVIDIA leva vantagem em throughput medido, CUDA e clustering. Os preços de memória empurraram vários valores para cima desde o verão, por isso a tabela de preços abaixo traz a fonte de cada linha.',
     metaDescription:
-      'Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade medida e preços.',
+      'Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade divulgada e preços.',
     twitterDescription:
       'DGX Spark vs. AMD Strix Halo: qual workstation de IA local de 128 a 192 GB comprar, o que mostram os testes independentes e por que esta não é uma categoria de mini PC.',
     readTime: '11 min de leitura',
@@ -2430,7 +2430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Workstations de IA local: AMD Strix Halo vs. NVIDIA DGX Spark',
-      'description': 'Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade medida e preços.',
+      'description': 'Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade divulgada e preços.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -2473,11 +2473,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-ai-workstations-strix-halo-vs-dgx-spark-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'محطات عمل الذكاء الاصطناعي المحلي: AMD Strix Halo مقابل NVIDIA DGX Spark',
-    seoTitle: 'محطات عمل الذكاء الاصطناعي المحلي: Strix Halo أم DGX Spark',
+    seoTitle: 'محطة عمل ذكاء اصطناعي محلي: Strix Halo أم DGX Spark',
     intro:
       'محطة عمل الذكاء الاصطناعي المحلي هي جهاز مدمج في صندوق واحد بذاكرة موحدة بسعة 128 GB أو أكثر على ناقل بعرض 256 بت، صُمم لتشغيل نماذج من فئة 100B لا يستطيع أي كمبيوتر مصغر بذاكرة 32–64 GB تحميلها. في أكتوبر 2026 يضم المجال ثلاث بنى: NVIDIA GB10 (في DGX Spark) وAMD Strix Halo (شريحتا Ryzen AI Max+ 395 وPRO 495) وIntel Panther Lake التي ما زالت على الهامش. تتفوق AMD في خيارات الذاكرة وتوافق x86 وسعر الدخول، وتتفوق NVIDIA في الإنتاجية المقيسة وCUDA وربط الأجهزة. دفعت أسعار الذاكرة عدة أرقام إلى الأعلى منذ الصيف، لذلك يذكر جدول الأسعار أدناه مصدرًا لكل سطر.',
     metaDescription:
-      'مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.',
+      'مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.',
     twitterDescription:
       'DGX Spark مقابل AMD Strix Halo: أي محطة عمل محلية بذاكرة 128–192 GB تشتري، وما الذي تُظهره الاختبارات المستقلة، ولماذا لا تنتمي هذه الأجهزة إلى فئة الكمبيوتر المصغر.',
     readTime: '11 دقيقة للقراءة',
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'محطات عمل الذكاء الاصطناعي المحلي: AMD Strix Halo مقابل NVIDIA DGX Spark',
-      'description': 'مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.',
+      'description': 'مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {
@@ -2826,7 +2826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '로컬 AI 워크스테이션은 256비트 버스에 128GB 이상의 통합 메모리를 갖춘 소형 일체형 시스템으로, 32~64GB 미니 PC로는 불러올 수 없는 100B급 모델을 실행하기 위해 만들어졌습니다. 2026년 10월 현재 이 분야에는 세 가지 아키텍처가 있습니다. NVIDIA GB10(DGX Spark), AMD Strix Halo(Ryzen AI Max+ 395 및 PRO 495), 그리고 아직 관망 단계인 Intel Panther Lake입니다. AMD는 메모리 선택지, x86 호환성, 진입 가격에서 앞서고, NVIDIA는 실측 처리량, CUDA, 클러스터링에서 앞섭니다. 여름 이후 메모리 가격이 여러 수치를 끌어올렸으므로, 아래 가격표에는 각 항목마다 출처를 표기했습니다.',
     metaDescription:
-      '로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 실측 속도, 출처 표기 가격.',
+      '로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 공개된 속도, 출처 표기 가격.',
     twitterDescription:
       'DGX Spark 대 AMD Strix Halo: 128~192GB 로컬 AI 워크스테이션 선택 기준, 독립 테스트 결과, 그리고 이것이 미니 PC 범주가 아닌 이유.',
     readTime: '11분 읽기',
@@ -3129,7 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '로컬 AI 워크스테이션: AMD Strix Halo 대 NVIDIA DGX Spark',
-      'description': '로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 실측 속도, 출처 표기 가격.',
+      'description': '로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 공개된 속도, 출처 표기 가격.',
       'datePublished': '2026-10-31',
       'dateModified': '2026-10-31',
       'author': {

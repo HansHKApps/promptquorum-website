@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x5-pro-local-ai-workstation-hero-en.webp',
     title: 'GMKtec EVO-X5 Pro vs DGX Spark: Specs, Price and Verdict',
-    seoTitle: 'GMKtec EVO-X5 Pro vs DGX Spark: Specs and Price',
+    seoTitle: 'GMKtec EVO-X5 Pro vs NVIDIA DGX Spark: Specs and Price',
     intro:
       'The GMKtec EVO-X5 Pro is a mini PC built around the AMD Ryzen AI Max+ PRO 495 with 192 GB of soldered LPDDR5X-8533, launched by GMKtec on 2026-09-28. NVIDIA\'s DGX Spark has 128 GB and a lower list price at the cited dates, but the two machines list the same 273 GB/s memory bandwidth, so the real questions are memory size, price, software and networking. This page compares published specifications and prices; PromptQuorum has not tested either machine, and no independent LLM speed test of the EVO-X5 Pro was available to us.',
     metaDescription:
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x5-pro-local-ai-workstation-hero-fr.webp',
     title: "GMKtec EVO-X5 Pro vs DGX Spark : specs, prix et verdict",
-    seoTitle: "GMKtec EVO-X5 Pro vs DGX Spark : specs et prix",
+    seoTitle: "GMKtec EVO-X5 Pro vs NVIDIA DGX Spark : specs et prix",
     intro:
       "Le GMKtec EVO-X5 Pro est un mini-PC construit autour de l'AMD Ryzen AI Max+ PRO 495 avec 192 Go de LPDDR5X-8533 soudée, lancé par GMKtec le 2026-09-28. Le DGX Spark de NVIDIA compte 128 Go et affiche un prix catalogue plus bas aux dates citées, mais les deux machines indiquent la même bande passante mémoire de 273 GB/s : les vraies questions portent donc sur la taille de la mémoire, le prix, le logiciel et le réseau. Cette page compare des spécifications et des prix publiés ; PromptQuorum n'a testé aucune des deux machines, et nous n'avons trouvé aucun test indépendant de la vitesse en LLM de l'EVO-X5 Pro.",
     metaDescription:
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x5-pro-local-ai-workstation-hero-ja.webp',
     title: 'GMKtec EVO-X5 Pro vs DGX Spark: 仕様・価格・総評',
-    seoTitle: 'GMKtec EVO-X5 Pro vs DGX Spark: 仕様と価格を比較',
+    seoTitle: 'GMKtec EVO-X5 Pro対DGX Spark：仕様',
     intro:
       'GMKtec EVO-X5 Proは、AMD Ryzen AI Max+ PRO 495と192GBのはんだ付けLPDDR5X-8533を搭載したmini PCで、GMKtecが2026-09-28に発売を発表しました。NVIDIAのDGX Sparkは128GBで、引用した時点では定価が低いものの、両機は同じ273 GB/sのメモリ帯域幅を掲載しているため、実際の論点はメモリ容量、価格、ソフトウェア、ネットワークです。このページは公表されている仕様と価格を比較したもので、PromptQuorumはどちらのマシンもテストしておらず、EVO-X5 ProのLLM速度について、読むことができた独立したテストも見つかりませんでした。',
     metaDescription:
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x5-pro-local-ai-workstation-hero-zh.webp',
     title: 'GMKtec EVO-X5 Pro对比DGX Spark：规格、价格与结论',
-    seoTitle: 'GMKtec EVO-X5 Pro对比DGX Spark：规格与价格',
+    seoTitle: 'GMKtec EVO-X5 Pro对比DGX Spark：规格',
     intro:
       'GMKtec EVO-X5 Pro是一款围绕AMD Ryzen AI Max+ PRO 495打造的迷你主机，配备192 GB焊接式LPDDR5X-8533内存，由GMKtec于2026-09-28发布。NVIDIA的DGX Spark内存为128 GB，在所引用日期的标价更低，但两台机器列出的内存带宽同为273 GB/s，因此真正要看的是内存容量、价格、软件和网络。本页对比的是已公布的规格和价格；PromptQuorum没有测试过这两台机器，我们也没有找到针对EVO-X5 Pro的独立大模型速度测试。',
     metaDescription:
@@ -1482,7 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/gmktec-evo-x5-pro-local-ai-workstation-hero-pt.webp',
     title: 'GMKtec EVO-X5 Pro vs DGX Spark: especificações, preço e veredito',
-    seoTitle: 'GMKtec EVO-X5 Pro vs DGX Spark: specs e preço',
+    seoTitle: 'GMKtec EVO-X5 Pro vs NVIDIA DGX Spark: specs e preço',
     intro:
       'O GMKtec EVO-X5 Pro é um mini PC construído em torno do AMD Ryzen AI Max+ PRO 495 com 192 GB de LPDDR5X-8533 soldada, lançado pela GMKtec em 2026-09-28. O DGX Spark da NVIDIA tem 128 GB e um preço de tabela menor nas datas citadas, mas as duas máquinas listam a mesma largura de banda de memória de 273 GB/s, então as perguntas reais são tamanho da memória, preço, software e rede. Esta página compara especificações e preços publicados; a PromptQuorum não testou nenhuma das máquinas, e não encontramos nenhum teste independente de velocidade de LLM do EVO-X5 Pro.',
     metaDescription:

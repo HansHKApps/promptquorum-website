@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Android phones can run local AI offline in 2026: chat, camera questions, dictation, document Q&A and translation all work with models of roughly 1 to 4 billion parameters, and 7 to 8 billion on 12 to 16 GB phones. This guide maps the main capabilities, the hard limits, the chip and RAM reality, and links the Android apps in our directory to the job each does best.',
     metaDescription:
-      'Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover mapped to chat, voice, vision, documents and more.',
+      'Local AI on Android in 2026: what runs offline, what does not, RAM and chip limits, and the apps we cover by chat, voice, vision, documents and more.',
     heroImage: '/images/local-ai-on-android-guide-hero-en.webp',
     twitterDescription:
       'What local AI can and cannot do on an Android phone in 2026: capability map, RAM tiers, chip reality, the Android apps we cover by job, and an honest not-possible list.',
@@ -6389,11 +6389,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     specific_year: 2026,
     theme: 'Mobile & Edge LLMs',
     title: 'الذكاء الاصطناعي المحلي على Android في 2026: ما الممكن وما غير الممكن والتطبيقات التي نغطيها',
-    seoTitle: 'الذكاء الاصطناعي المحلي على Android 2026: ما يعمل وما لا',
+    seoTitle: 'ذكاء اصطناعي محلي على Android 2026: ما يعمل وما لا',
     intro:
       'يمكن لهواتف Android تشغيل الذكاء الاصطناعي المحلي دون اتصال في 2026: تعمل الدردشة وأسئلة الكاميرا والإملاء والأسئلة عن المستندات والترجمة بنماذج من نحو 1 إلى 4 مليارات معامل، ومن 7 إلى 8 مليارات على الهواتف بذاكرة 12 إلى 16 غيغابايت. يرسم هذا الدليل خريطة القدرات الرئيسية والحدود الصارمة وواقع الشرائح والذاكرة، ويربط تطبيقات Android في دليلنا بالمهمة التي يؤديها كل منها على أفضل وجه.',
     metaDescription:
-      'الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، من الدردشة إلى الصوت.',
+      'الذكاء الاصطناعي المحلي على Android في 2026: ما يعمل دون اتصال وما لا يعمل، وحدود الذاكرة والشرائح، والتطبيقات التي نغطيها لكل مهمة، كالدردشة والصوت.',
     heroImage: '/images/local-ai-on-android-guide-hero-ar.webp',
     twitterDescription:
       'ما يستطيعه الذكاء الاصطناعي المحلي وما لا يستطيعه على هاتف Android في 2026: خريطة القدرات وفئات الذاكرة وواقع الشرائح وتطبيقات Android التي نغطيها حسب المهمة وقائمة صريحة بما لا يمكن تنفيذه.',

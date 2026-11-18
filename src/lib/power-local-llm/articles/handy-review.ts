@@ -2636,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/handy-review-hero-zh.webp',
     title: 'Handy 评测：免费的离线语音转文字听写应用',
-    seoTitle: 'Handy 评测：免费开源的离线语音转文字桌面听写应用，支持三大系统',
+    seoTitle: 'Handy 评测：免费开源离线语音转文字，支持三大系统',
     intro: 'Handy 是由 [CJ Pais](https://github.com/cjpais) 及贡献者开发的免费开源桌面应用：按住快捷键说话，松开后，转写出的文字会粘贴到你正在使用的文本框中。项目称语音识别在你自己的电脑上运行，下载模型后可完全离线使用。本评测依据官方网站、隐私政策和 GitHub 仓库（2026 年 10 月 24 日查阅）；PromptQuorum 没有亲自试用过该应用。',
     metaDescription: 'Handy 评测：免费、采用 MIT 许可证的桌面应用，在你自己的电脑上把语音转成文字并粘贴到任意位置。支持 Windows、macOS、Linux；未实测。',
     twitterDescription: 'Handy 评测：适用于 Windows、macOS 和 Linux 的免费离线按键说话听写。来源对模型、隐私和安装包确认了什么、没有确认什么。',

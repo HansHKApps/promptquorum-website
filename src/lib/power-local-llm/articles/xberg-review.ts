@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'PDF、Officeファイル、スキャン、音声、Webページ、ソースコードを、RAGやLLMパイプライン向けのクリーンなテキストと構造化データに変換したい開発者（自分のハードウェア上でもAPI経由でも利用可）',
     primaryTerm: 'Xberg',
     title: 'Xbergレビュー：LLMとRAGパイプライン向けオープンソース文書インテリジェンス',
-    seoTitle: 'Xbergレビュー：LLM・RAG向けオープンソース文書抽出エンジン',
+    seoTitle: 'Xbergレビュー：LLM向けオープンソース文書抽出エンジン',
     intro: 'Xberg（[xberg.io](https://xberg.io)、ドキュメントは[docs.xberg.io](https://docs.xberg.io)、ソースコードは[github.com/xberg-io/xberg](https://github.com/xberg-io/xberg)）は、ファイル、Webページ、音声、コードをMarkdownなどの構造化された出力に変換する文書インテリジェンスエンジンです。抽出・OCR・レイアウト解析が自分のCPU上で動作し、LLMを使う抽出もクラウドモデルの代わりにOllama、LM Studio、vLLMと連携できるため、ローカルAIディレクトリに掲載しています。このレビューでは、Xbergでできること、ローカルで動く部分と動かない部分、導入方法、向いている人を解説します。',
     metaDescription: 'XbergはPDF・スキャン・音声・URL・コードをRAG向けのMarkdownやJSONに変換するMITライセンスのRustエンジンです。ローカル動作、導入方法、制限、ライセンスを解説します。',
     readTime: '8分で読める',
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Xberg: ذكاء المستندات مفتوح المصدر لمسارات LLM وRAG',
     seoTitle: 'مراجعة Xberg: استخراج مستندات مفتوح المصدر لنماذج LLM',
     intro: 'Xberg ([xberg.io](https://xberg.io)، والتوثيق على [docs.xberg.io](https://docs.xberg.io)، والشيفرة المصدرية على [github.com/xberg-io/xberg](https://github.com/xberg-io/xberg)) محرك لذكاء المستندات يحوّل الملفات وصفحات الويب والصوت والشيفرة إلى Markdown ومخرجات منظمة أخرى. يستحق مكانًا في دليل للذكاء الاصطناعي المحلي لأن خطوات الاستخراج وOCR وتحليل التخطيط تعمل على المعالج (CPU) لديك، ويمكن لاستخراجه المعتمد على LLM أن يتحدث مع Ollama أو LM Studio أو vLLM بدل نموذج سحابي. تتناول هذه المراجعة ما يفعله Xberg، وما يعمل محليًا وما لا يعمل، وكيفية تثبيته، ولمن يناسب.',
-    metaDescription: 'Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص.',
+    metaDescription: 'Xberg محرك Rust بترخيص MIT يحوّل ملفات PDF والمسوحات والصوت وعناوين URL والشيفرة إلى Markdown وJSON لـ RAG. الاستخدام المحلي والتثبيت والحدود والترخيص',
     readTime: '8 دقائق للقراءة',
     targetKeywords: [
       'مراجعة Xberg',

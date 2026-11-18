@@ -1,27 +1,29 @@
 // Ask Hans button experiment: read the counters and evaluate them (server only).
 //
-// Unit of analysis for the primary KPI is the EXPOSURE = one button impression (no visitor or session ID exists, the
-// variant is held in memory only):
-//   conversion = first questions / button impressions.
-// All numbers are exact event counters. A visitor who reloads is drawn again, so repeat visitors count as several impressions.
-// The first-question numerator only contains visitors who said "Yes" in the consent step (see docs/askhans-cta-experiment.md),
-// so absolute rates are understated by the consent rate; the comparison between variants is not, as long as the consent
-// rate is about equal. The dashboard shows the consent share per variant so that assumption can be checked.
+// Unit of analysis: the EXPOSURE = one tracked page load on a page with the button (no visitor or session ID exists, the
+// variant is held in memory only, and there is NO impression event any more: removed 2026-11-14 for the Umami quota).
+//   exposure per variant = Umami pageviews since the experiment start / 3   (assignment is uniform, variant.ts)
+// The page-load total is not stored here: the dashboard takes it as input (`?pageviews=N`, read from Umami for the window
+// "start date to today"). Without it no leader can be named.
+//   PRIMARY KPI  = ask_hans_button_click per variant / exposure.
+//   Then per click: opened (via button) / first_question / conversation_completed.
+// Clicks and openings are exact counters; first question and later steps only contain visitors who said "Yes" in the
+// consent step (docs/askhans-cta-experiment.md), so those rates are understated by the consent rate; the comparison between
+// variants holds when the consent share is about equal (the dashboard shows it).
 
 import { redis } from '@/lib/redis'
 import {
-  CTA_EXPERIMENT_ID, CTA_MIN_CONVERSIONS_PER_VARIANT, CTA_MIN_DAYS, CTA_MIN_EXPOSED_PER_VARIANT, CTA_MIN_SUBGROUP_IMPRESSIONS,
+  CTA_EXPERIMENT_ID, CTA_MIN_CLICKS_PER_VARIANT, CTA_MIN_DAYS, CTA_MIN_EXPOSED_PER_VARIANT, CTA_MIN_SUBGROUP_CLICKS, CTA_VARIANT_COUNT,
   CTA_PRACTICAL_LIFT, CTA_VARIANTS, CTA_WIN_PROBABILITY, CTA_CATEGORIES, CTA_DEVICES, CTA_LANGS, type CtaVariant,
 } from './config'
 
 export interface VariantStats {
   variant: CtaVariant
-  exposedSessions: number
-  impressions: number
+  /** tracked page loads with the button / 3 (0 while the page-load total is not entered) */
+  exposed: number
   clicks: number
   opened: number
   openedViaButton: number
-  firstQuestionSessions: number
   firstQuestions: number
   secondQuestions: number
   threeQuestions: number
@@ -50,7 +52,7 @@ export interface Posterior {
 
 export interface SubgroupRow {
   key: string
-  perVariant: Record<CtaVariant, { impressions: number; firstQuestions: number }>
+  perVariant: Record<CtaVariant, { clicks: number; firstQuestions: number }>
   readable: boolean
 }
 
@@ -58,6 +60,8 @@ export interface ExperimentReport {
   id: string
   since: string | null
   daysElapsed: number
+  /** tracked page loads entered on the dashboard (null = missing) */
+  pageLoads: number | null
   variants: Record<CtaVariant, VariantStats>
   posterior: Posterior[]
   verdict: { state: 'running' | 'insufficient' | 'leader'; leader: CtaVariant | null; reasons: string[] }
@@ -157,8 +161,8 @@ export function decide(
   const reasons: string[] = []
   if (days < CTA_MIN_DAYS) reasons.push(`Only ${days} of the minimum ${CTA_MIN_DAYS} days have passed.`)
   for (const p of posterior) {
-    if (p.n < CTA_MIN_EXPOSED_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.n} impressions, need ${CTA_MIN_EXPOSED_PER_VARIANT}.`)
-    if (p.k < CTA_MIN_CONVERSIONS_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.k} first-question sessions, need ${CTA_MIN_CONVERSIONS_PER_VARIANT}.`)
+    if (p.n < CTA_MIN_EXPOSED_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.n} exposures (page loads / ${CTA_VARIANT_COUNT}), need ${CTA_MIN_EXPOSED_PER_VARIANT}. Enter the Umami page-load total as ?pageviews=N.`)
+    if (p.k < CTA_MIN_CLICKS_PER_VARIANT) reasons.push(`Variant ${p.variant}: ${p.k} button clicks, need ${CTA_MIN_CLICKS_PER_VARIANT}.`)
   }
   const top = [...posterior].sort((a, b) => b.probBest - a.probBest)[0]
   if (reasons.length) return { state: days < CTA_MIN_DAYS ? 'running' : 'insufficient', leader: null, reasons }
@@ -177,17 +181,24 @@ function subgroup(h: Hash, dim: 'lang' | 'dev' | 'cat', keys: readonly string[])
       const perVariant = {} as SubgroupRow['perVariant']
       for (const v of CTA_VARIANTS) {
         perVariant[v] = {
-          impressions: num(h, `ask_hans_button_impression:${v}:${dim}:${key}`),
+          clicks: num(h, `ask_hans_button_click:${v}:${dim}:${key}`),
           firstQuestions: num(h, `ask_hans_first_question:${v}:${dim}:${key}`),
         }
       }
-      const readable = CTA_VARIANTS.every((v) => perVariant[v].impressions >= CTA_MIN_SUBGROUP_IMPRESSIONS)
+      const readable = CTA_VARIANTS.every((v) => perVariant[v].clicks >= CTA_MIN_SUBGROUP_CLICKS)
       return { key, perVariant, readable }
     })
-    .filter((r) => CTA_VARIANTS.some((v) => r.perVariant[v].impressions > 0))
+    .filter((r) => CTA_VARIANTS.some((v) => r.perVariant[v].clicks > 0))
 }
 
-export async function getExperimentReport(): Promise<ExperimentReport> {
+/** Exposure per variant from the tracked page-load total: pageLoads / 3, rounded (null or invalid = 0). */
+export function exposurePerVariant(pageLoads: number | null): number {
+  return pageLoads != null && Number.isFinite(pageLoads) && pageLoads > 0 ? Math.round(pageLoads / CTA_VARIANT_COUNT) : 0
+}
+
+export async function getExperimentReport(opts: { pageLoads?: number | null } = {}): Promise<ExperimentReport> {
+  const pageLoads = opts.pageLoads ?? null
+  const exposed = exposurePerVariant(pageLoads)
   const key = `askhans:exp:${CTA_EXPERIMENT_ID}`
   const raw = ((await redis.hgetall<Record<string, string | number>>(key)) ?? {}) as Record<string, string | number>
   const h: Hash = {}
@@ -197,16 +208,12 @@ export async function getExperimentReport(): Promise<ExperimentReport> {
 
   const variants = {} as Record<CtaVariant, VariantStats>
   for (const v of CTA_VARIANTS) {
-    const exposed = num(h, `ask_hans_button_impression:${v}`)
-    const fqU = num(h, `ask_hans_first_question:${v}`)
     variants[v] = {
       variant: v,
-      exposedSessions: exposed,
-      impressions: num(h, `ask_hans_button_impression:${v}`),
+      exposed,
       clicks: num(h, `ask_hans_button_click:${v}`),
       opened: num(h, `ask_hans_opened:${v}`),
       openedViaButton: (['header', 'floating', 'about', 'page'] as const).reduce((s, p) => s + num(h, `via:ask_hans_opened:${v}:${p}`), 0),
-      firstQuestionSessions: fqU,
       firstQuestions: num(h, `ask_hans_first_question:${v}`),
       secondQuestions: num(h, `ask_hans_second_question:${v}`),
       threeQuestions: num(h, `ask_hans_three_questions:${v}`),
@@ -222,14 +229,15 @@ export async function getExperimentReport(): Promise<ExperimentReport> {
     }
   }
   const posterior = analyse({
-    A: { k: variants.A.firstQuestionSessions, n: variants.A.exposedSessions },
-    B: { k: variants.B.firstQuestionSessions, n: variants.B.exposedSessions },
-    C: { k: variants.C.firstQuestionSessions, n: variants.C.exposedSessions },
+    A: { k: variants.A.clicks, n: exposed },
+    B: { k: variants.B.clicks, n: exposed },
+    C: { k: variants.C.clicks, n: exposed },
   })
   return {
     id: CTA_EXPERIMENT_ID,
     since,
     daysElapsed,
+    pageLoads,
     variants,
     posterior,
     verdict: decide(posterior, daysElapsed),

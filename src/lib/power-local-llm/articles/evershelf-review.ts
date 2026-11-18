@@ -1836,7 +1836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/evershelf-review-hero-ar.webp',
     title: 'مراجعة EverShelf: مدير مخزن طعام مستضاف ذاتيًا مع ذكاء اصطناعي اختياري',
-    seoTitle: 'مراجعة EverShelf: مخزن طعام ذاتي الاستضافة بذكاء اختياري',
+    seoTitle: 'مراجعة EverShelf: مخزن طعام مستضاف ذاتيًا بذكاء اختياري',
     intro:
       'EverShelf مدير مخزن طعام مجاني ومفتوح المصدر تستضيفه بنفسك، مع مسح الباركود وتتبّع تواريخ الانتهاء وقوائم التسوق؛ وميزات الذكاء الاصطناعي فيه اختيارية وتعمل عبر Gemini أو OpenAI أو خادم Llama خاص بك. وهو ليس تطبيق دردشة ولا LLM. تعكس هذه المراجعة موقعه ومستودعه على GitHub وويكيه وملفات إعداده كما جرى التحقق منها في 1 نوفمبر 2026.',
     metaDescription:

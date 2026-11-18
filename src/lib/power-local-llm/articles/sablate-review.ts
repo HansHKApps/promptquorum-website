@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/sablate-review-hero-ja.webp',
     title: 'Sablate レビュー：Windows・Mac向け字幕生成と焼き込みアプリ',
-    seoTitle: 'Sablate レビュー：Windows・Mac向け字幕生成アプリ',
+    seoTitle: 'Sablateレビュー：Windows・Mac向け字幕生成アプリ',
     intro: 'Sablateは、Windows・Mac向けのフリーミアムのクローズドソース字幕アプリです。動画を取り込むと、開発元によれば、お使いのコンピューター上でOpenAIのWhisperモデルが音声を文字起こしし、翻訳レイヤーを追加し、タイミングを編集して、スタイル付きの字幕を動画に焼き込めます。このレビューでは、開発元の公式サイト、変更履歴、プライバシーポリシーが示している点、ページ同士で食い違っている点、ディレクトリ内の他の字幕・文字起こしツールとの比較をまとめます。',
     metaDescription: 'Sablateのレビュー：Windows・Mac向け、開発元によるとお使いのPC上で動作する字幕生成・翻訳・焼き込みアプリ。無料版あり、Proは$29の買い切り。実機検証なし。',
     twitterDescription: 'Sablateのレビュー：Windows・MacでWhisper字幕を開発元によると自分のPC上で生成し、翻訳して動画に焼き込むアプリ。価格、プライバシー、制限、代替ツールを解説します。',

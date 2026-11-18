@@ -2730,7 +2730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "مراجعة CocoIndex: إطار بيانات تزايدي لـ RAG ووكلاء الذكاء الاصطناعي",
     "seoTitle": "مراجعة CocoIndex: إطار بيانات تزايدي لـ RAG والوكلاء",
     "intro": "CocoIndex إطار عمل مفتوح المصدر بلغة Python، بمحرك Rust في الأسفل، يُبقي فهارس المتجهات والجداول ورسوم المعرفة متزامنة مع بيانات المصدر المتغيرة بإعادة معالجة ما تغيّر فقط. وهو ليس تطبيق دردشة ولا بيئة تشغيل نماذج: إنه طبقة خطوط المعالجة التي تغذي نظام RAG أو وكيل ذكاء اصطناعي. وجانبه المحلي أن التضمينات والاستخراج يمكن أن تعمل عبر Ollama أو sentence-transformers على جهازك. تستند هذه المراجعة إلى [cocoindex.io](https://cocoindex.io) و[التوثيق](https://cocoindex.io/docs) و[مستودع GitHub](https://github.com/cocoindex-io/cocoindex)، وقد روجعت في 8 نوفمبر 2026؛ ولم تختبر PromptQuorum CocoIndex عمليًا.",
-    "metaDescription": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لأنظمة RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر عمليًا.",
+    "metaDescription": "مراجعة CocoIndex: إطار Python مفتوح المصدر (Apache 2.0) يعيد تضمين البيانات المتغيرة فقط لـ RAG والوكلاء، مع Ollama وتضمينات محلية. لم يُختبر.",
     "twitterDescription": "مراجعة CocoIndex: إطار خطوط بيانات تزايدي لـ RAG ووكلاء الذكاء الاصطناعي. ما يعمل محليًا مع Ollama وما يحتاج إلى شيفرة وما تتركه المصادر مفتوحًا.",
     "audience": "مطورو Python الذين يصونون خطوط RAG أو الوكلاء على ملفات متغيرة باستمرار ويريدون معرفة ما يفعله CocoIndex وما يتطلبه ومقدار ما يمكن إبقاؤه على أجهزتهم.",
     "readTime": "6 دقائق للقراءة",

@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon is a free chat app from [Mainframe Computer, Inc.](https://mainframe.inc) that runs small language models on an iPhone, iPad or Mac through Apple\'s MLX framework and says it works fully offline. Its source code is published under the MIT license on [GitHub](https://github.com/mainframecomputer/fullmoon-ios). This review is based on the maker\'s website, the App Store listing, the privacy policy and the repository, checked on 30 October 2026; PromptQuorum has not tested the app hands-on.',
     metaDescription:
-      'fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since January 2025, so check before relying on it.',
+      'fullmoon review: free, MIT-licensed offline AI chat for iPhone, iPad and Mac on Apple MLX. No release since early 2025, so check before relying on it.',
     twitterDescription:
       'fullmoon review: a free offline AI chat app for Apple devices with no release since early 2025. Models, privacy and what the sources leave unconfirmed.',
     audience:
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon ist eine kostenlose Chat-App von [Mainframe Computer, Inc.](https://mainframe.inc), die kleine Sprachmodelle über Apples MLX-Framework auf dem iPhone, iPad oder Mac ausführt und laut Hersteller vollständig offline funktioniert. Der Quellcode steht unter der MIT-Lizenz auf [GitHub](https://github.com/mainframecomputer/fullmoon-ios). Diese Rezension stützt sich auf die Website des Herstellers, den App-Store-Eintrag, die Datenschutzerklärung und das Repository, geprüft am 30. Oktober 2026; PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Januar 2025 kein Release – vorher prüfen.',
+      'fullmoon-Rezension: kostenloser Offline-KI-Chat (MIT) für iPhone, iPad und Mac mit Apple MLX. Seit Anfang 2025 kein Release – vorher prüfen.',
     twitterDescription:
       'fullmoon-Rezension: kostenlose Offline-KI-Chat-App für Apple-Geräte, seit Anfang 2025 ohne Release. Modelle, Datenschutz und was die Quellen offenlassen.',
     audience:
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon est une application de chat gratuite de [Mainframe Computer, Inc.](https://mainframe.inc) qui exécute de petits modèles de langage sur iPhone, iPad ou Mac grâce au framework MLX d’Apple et, selon l’éditeur, fonctionne entièrement hors ligne. Son code source est publié sous licence MIT sur [GitHub](https://github.com/mainframecomputer/fullmoon-ios). Ce test s’appuie sur le site de l’éditeur, la fiche App Store, la politique de confidentialité et le dépôt, consultés le 30 octobre 2026 ; PromptQuorum n’a pas testé l’application.',
     metaDescription:
-      'Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis janvier 2025 : vérifiez avant usage.',
+      'Test de fullmoon : chat IA hors ligne gratuit (MIT) pour iPhone, iPad et Mac avec Apple MLX. Aucune version depuis début 2025 : vérifiez avant usage.',
     twitterDescription:
       'Test de fullmoon : une appli de chat IA hors ligne gratuite pour appareils Apple, sans nouvelle version depuis début 2025. Modèles, confidentialité et zones d’ombre.',
     audience:
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon es una app de chat gratuita de [Mainframe Computer, Inc.](https://mainframe.inc) que ejecuta modelos de lenguaje pequeños en iPhone, iPad o Mac con el framework MLX de Apple y, según el fabricante, funciona totalmente sin conexión. Su código fuente está publicado con licencia MIT en [GitHub](https://github.com/mainframecomputer/fullmoon-ios). Esta reseña se basa en el sitio web del fabricante, la ficha de la App Store, la política de privacidad y el repositorio, consultados el 30 de octubre de 2026; PromptQuorum no ha probado la app.',
     metaDescription:
-      'Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde enero de 2025: compruébalo antes.',
+      'Reseña de fullmoon: chat de IA gratis (MIT) y sin conexión para iPhone, iPad y Mac con Apple MLX. Sin versiones desde inicios de 2025: compruébalo antes.',
     twitterDescription:
       'Reseña de fullmoon: app de chat de IA gratuita y sin conexión para dispositivos Apple, sin versiones desde principios de 2025. Modelos, privacidad y dudas abiertas.',
     audience:
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O fullmoon é um app de chat gratuito da [Mainframe Computer, Inc.](https://mainframe.inc) que executa modelos de linguagem pequenos no iPhone, iPad ou Mac com o framework MLX da Apple e, segundo o fabricante, funciona totalmente offline. O código-fonte é publicado sob licença MIT no [GitHub](https://github.com/mainframecomputer/fullmoon-ios). Esta análise se baseia no site do fabricante, na página da App Store, na política de privacidade e no repositório, consultados em 30 de outubro de 2026; o PromptQuorum não testou o app.',
     metaDescription:
-      'Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde janeiro de 2025: confira antes de usar.',
+      'Análise do fullmoon: chat de IA offline e grátis (MIT) para iPhone, iPad e Mac com Apple MLX. Sem versões desde o início de 2025: confira antes de usar.',
     twitterDescription:
       'Análise do fullmoon: app de chat de IA offline e gratuito para dispositivos Apple, sem versões desde o início de 2025. Modelos, privacidade e dúvidas em aberto.',
     audience:
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon تطبيق دردشة مجاني من [Mainframe Computer, Inc.](https://mainframe.inc) يشغّل نماذج لغوية صغيرة على iPhone أو iPad أو Mac عبر إطار MLX من Apple، ويقول مطوّره إنه يعمل دون اتصال بالكامل. شيفرته المصدرية منشورة على [GitHub](https://github.com/mainframecomputer/fullmoon-ios) بترخيص MIT. تستند هذه المراجعة إلى موقع المطوّر وصفحة App Store وسياسة الخصوصية والمستودع، وقد جرى الاطلاع عليها في 30 أكتوبر 2026؛ ولم يختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
-      'مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ يناير 2025، فتحقق قبل الاعتماد.',
+      'مراجعة fullmoon: دردشة ذكاء اصطناعي مجانية بترخيص MIT دون اتصال لـ iPhone وiPad وMac عبر Apple MLX. لا إصدارات منذ بداية 2025، فتحقق قبل الاعتماد.',
     twitterDescription:
       'مراجعة fullmoon: تطبيق دردشة ذكاء اصطناعي مجاني دون اتصال لأجهزة Apple، بلا إصدارات منذ مطلع 2025. النماذج والخصوصية وما لم تؤكده المصادر.',
     audience:
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoonは[Mainframe Computer, Inc.](https://mainframe.inc)が提供する無料のチャットアプリで、AppleのMLXフレームワークを使って小型の言語モデルをiPhone・iPad・Macで実行し、完全オフラインで動作するとしています。ソースコードは[GitHub](https://github.com/mainframecomputer/fullmoon-ios)でMITライセンスのもとに公開されています。本レビューは、提供元のWebサイト、App Storeの掲載情報、プライバシーポリシー、リポジトリを2026年10月30日に確認した内容に基づいており、PromptQuorumはアプリを実機で検証していません。',
     metaDescription:
-      'fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年1月以降リリースなし、利用前に確認を。',
+      'fullmoonレビュー：Apple MLXで動くMITライセンスの無料オフラインAIチャット（iPhone・iPad・Mac）。2025年初頭以降リリースなし、利用前に確認を。',
     twitterDescription:
       'fullmoonレビュー：Apple端末向けの無料オフラインAIチャット。2025年初頭以降リリースなし。モデル、プライバシー、未確認の点を整理。',
     audience:
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon 是 [Mainframe Computer, Inc.](https://mainframe.inc) 推出的免费聊天应用，借助苹果的 MLX 框架在 iPhone、iPad 或 Mac 上运行小型语言模型，并称可完全离线使用。源代码以 MIT 许可证发布在 [GitHub](https://github.com/mainframecomputer/fullmoon-ios)。本评测基于开发者网站、App Store 页面、隐私政策和代码仓库，核查日期为2026年10月30日；PromptQuorum 未对该应用做实际测试。',
     metaDescription:
-      'fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年 1 月后无新版本，使用前请先确认。',
+      'fullmoon 评测：基于 Apple MLX、MIT 许可的免费离线 AI 聊天应用，支持 iPhone、iPad 和 Mac。2025 年初以来无新版本，使用前请先确认。',
     twitterDescription:
       'fullmoon 评测：苹果设备上的免费离线 AI 聊天应用，2025 年初以来无新版本。涵盖模型、隐私以及来源未能证实的内容。',
     audience:
@@ -1847,7 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'fullmoon은 [Mainframe Computer, Inc.](https://mainframe.inc)가 만든 무료 채팅 앱으로, Apple의 MLX 프레임워크로 소형 언어 모델을 iPhone, iPad, Mac에서 실행하며 완전한 오프라인 동작을 내세웁니다. 소스 코드는 [GitHub](https://github.com/mainframecomputer/fullmoon-ios)에 MIT 라이선스로 공개되어 있습니다. 이 리뷰는 개발사 웹사이트, App Store 페이지, 개인정보 처리방침, 저장소를 2026년 10월 30일에 확인한 내용을 바탕으로 하며, PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription:
-      'fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 1월 이후 릴리스가 없으니 사용 전 확인하십시오.',
+      'fullmoon 리뷰: Apple MLX 기반 MIT 라이선스 무료 오프라인 AI 채팅 앱(iPhone·iPad·Mac). 2025년 초 이후 릴리스가 없으니 사용 전 확인하십시오.',
     twitterDescription:
       'fullmoon 리뷰: 2025년 초 이후 릴리스가 없는 Apple 기기용 무료 오프라인 AI 채팅 앱. 모델, 개인정보, 확인되지 않은 사항을 정리했습니다.',
     audience:

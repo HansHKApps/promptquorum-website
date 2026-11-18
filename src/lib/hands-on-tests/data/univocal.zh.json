@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-univocal-2026-11-13",
+  "hero": "univocal-first-dictation-hold-left-control",
+  "date_human": "2026年11月13日",
+  "captured": "测试日期和结束时间未记录；Chrome 下载发生在测试当天 11:06；本页的 ID 和日期使用草稿日期 2026-11-13",
+  "standard_version": "0.2",
+  "locale": "zh",
+  "app": {
+    "name": "Univocal",
+    "slug": "univocal",
+    "vendor": "NarNar Labs LLC (per the licence screen)",
+    "category": "本地听写与朗读，Mac",
+    "platform": "macOS（Apple 芯片）",
+    "pricing_url": "https://univocalapp.com"
+  },
+  "title": "24 GB 内存 M4 Pro Mac 上的 Univocal：三种语言的听写可用，朗读未能启动",
+  "page_title": "Univocal 测试",
+  "dek": "首次试用一款既能听写又能朗读的 Mac 应用：谨慎的首次运行，许可条款在前；英语、法语和德语听写；测试者无法跟着走完的高级语音路径；以及实际使用时没有启动的朗读功能。",
+  "seo": {
+    "title": "Univocal 实测：Mac 听写与朗读",
+    "description": "Univocal 在 24 GB M4 Pro Mac 上的实测：英语、法语和德语听写可用，朗读选中文字未能启动。"
+  },
+  "faq": [
+    [
+      "Univocal 的听写支持多种语言吗？",
+      "支持，在这次测试中如此。测试者的笔记里有听写生成的英语、法语和德语文字，其中包括故意说得很快的德语。没有做准确度统计，法语结果测试者也没有判断。",
+      "observed"
+    ],
+    [
+      "Univocal 的朗读可用吗？",
+      "测试者对选中的文字使用时不行：它没有启动，他也无法更改按键。该快捷键在设置步骤中用成功过一次，阅读窗口也在那里打开了；是否播放了声音未记录。原因没有查明。",
+      "observed"
+    ],
+    [
+      "Univocal 的下载有多大？",
+      "按测试者的读数，安装包约 6.5 MB；首次下载期间，主窗口显示有一个 574 MB 的听写模型。首次运行的总下载量未记录；目录列出约 1.2 GB（第三方信息）。运行时内存没有测量。",
+      "measured"
+    ],
+    [
+      "Univocal 能离线运行并把音频留在 Mac 上吗？",
+      "设置界面的文字说音频在这台 Mac 上转写、绝不上传，阅读界面的文字说读出和说出的内容都不会离开这台 Mac。没有检查网络流量，也没有试过离线运行，因此这一点未经核实。",
+      "vendor-claim"
+    ],
+    [
+      "Univocal 多少钱，有试用吗？",
+      "应用显示 14 天试用和一个 Buy 按钮。厂商网站（来自截图）写的是一次性 39 美元，以及 11 月 20 日至 30 日凭优惠码享 15 美元的黑色星期五价格，无订阅、无需账号。这些是厂商声明。",
+      "vendor-claim"
+    ],
+    [
+      "Univocal 能把口述的要点变成列表吗？",
+      "测试中不行。英语和德语的要点请求都只得到纯文字，德语结果还把两个词连在了一起。截图中没有宣传要点功能，所以这不算没有做到它所承诺的。",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-13",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Univocal（NarNar Labs LLC，据许可界面）",
+      "observed"
+    ],
+    [
+      "版本",
+      "0.3.33（通用设置）",
+      "measured"
+    ],
+    [
+      "来源",
+      "用 Chrome 下载；具体页面未记录。目录列出的厂商网站是 univocalapp.com。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans（PromptQuorum 创始人）",
+      "observed"
+    ],
+    [
+      "开始 / 结束",
+      "Chrome 下载发生在测试当天 11:06（macOS 对话框写的是“今天”）。测试日期和结束时间未记录；ID 使用草稿日期。",
+      null
+    ],
+    [
+      "硬件",
+      "Apple M4 Pro，24 GB 统一内存（笔记中写的是“always on an M4 Pro 24GB”）。本系列早先的测试记录的是 M3 Pro；见 Sprich 和 LU。",
+      "tester-view"
+    ],
+    [
+      "系统",
+      "macOS 版本未记录。",
+      null
+    ],
+    [
+      "测试原因",
+      "开发者看到 PromptQuorum 网站上的 Sprich 上手测试后联系了测试者。",
+      "tester-view"
+    ],
+    [
+      "目标",
+      "笔记中没有写明目标。笔记显示的是安装、首次运行、三种语言的听写、设置、朗读和一次要点测试。",
+      null
+    ],
+    [
+      "AI 辅助",
+      "本报告由 Claude 根据测试者的 Word 笔记和 15 张截图起草；笔记中口述的部分很可能出自 Univocal 本身（假设）。",
+      "assumption"
+    ],
+    [
+      "利益披露",
+      "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Univocal 于 2026-11-13 加入目录，附有一篇依据厂商页面、由 AI 撰写的评测，并非来自上手测试；本次测试是第一次上手测试。开发者联系了测试者；他提出了什么请求未记录。测试者使用的是 14 天试用，截图中看不到终身许可。Univocal 从本站获得点击。没有付款或赞助的记录。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Univocal 于 2026-11-13 加入目录，附有一篇依据厂商页面、由 AI 撰写的评测，并非来自上手测试；本次测试是第一次上手测试。开发者联系了测试者；他提出了什么请求未记录。测试者使用的是 14 天试用，截图中看不到终身许可。Univocal 从本站获得点击。没有付款或赞助的记录。测试者说开发者来自韩国，韩国是本网站的主要市场之一（测试者观点，此处未核实）。没有截图写明任何国家。",
+  "verdict": {
+    "general": "一款小巧、做工精致的 Mac 听写与朗读应用。在这次测试中，三种语言的听写可用，首次运行也解释了各个步骤；朗读选中的文字没有启动，应用所指的更好的德语语音也没能找到。离线运行、隐私声明、内存占用、延迟、浏览器扩展、Connections 和 Vocabulary 标签页以及卸载均未测试。",
+    "fit": "测试者喜欢许可界面、语言控制和设置流程。他的笔记以失败的要点测试结束，没有写明是否继续使用的决定。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "安装包（DMG）很小，拖到“应用程序”即可；没有看到账号界面。"
+    ],
+    [
+      "引导与模型选择",
+      3,
+      "步骤清晰，并有下载时间估计；语音弹窗没能跟着走完。不提供听写模型的选择。"
+    ],
+    [
+      "核心功能",
+      3,
+      "听写可用；朗读不可用。"
+    ],
+    [
+      "引导与迭代",
+      3,
+      "说明文字很多；朗读快捷键和格式限制仍不清楚。"
+    ],
+    [
+      "性能",
+      null,
+      "没有计时。"
+    ],
+    [
+      "文档",
+      null,
+      "只看了应用内的文字。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是报告作者根据测试者的证据提出的建议；n/a 表示未测试，不是零分。",
+  "tldr": [
+    [
+      "observed",
+      "Univocal 是一款 Mac 应用，可在任意应用中听写，也能朗读文字。测试者在 24 GB 的 Apple M4 Pro 上运行它。安装包很小，设置之前先出现许可界面，主窗口显示一个 574 MB 的听写模型正在下载。"
+    ],
+    [
+      "observed",
+      "听写可用：在设置界面的输入框中可用，在测试者笔记里的英语、法语和德语中也可用，其中包括故意说得很快的德语。没有做准确度统计或计时。"
+    ],
+    [
+      "observed",
+      "朗读选中的文字没有启动，测试者也无法更改按键。该快捷键在设置步骤中用成功过一次。原因没有查明。"
+    ],
+    [
+      "observed",
+      "一个弹窗指向 macOS 设置中更好的德语语音。测试者按四个步骤操作，没有找到高级语音。"
+    ],
+    [
+      "observed",
+      "英语和德语的口述要点请求都没有得到要点。截图中没有宣传要点功能。"
+    ],
+    [
+      "vendor-claim",
+      "应用称音频在这台 Mac 上转写、绝不上传。离线使用、网络流量、内存、延迟、浏览器扩展、Connections 和 Vocabulary 标签页以及卸载均未测试。"
+    ]
+  ],
+  "quotes": [
+    "All other apps just opened and nothing was there. This one actually has licence terms and something to click through.",
+    "It is very well done with the languages: you can really define which languages you want to use.",
+    "Soon my computer runs out of keys for all of these special functions."
+  ],
+  "quote_note": "测试者笔记，由语音口述略作整理。三句都是他的个人判断，不是测量结果。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "安装窗口，位置是反的",
+      "“应用程序”在左，应用在右。",
+      "univocal-dmg-window-applications-left",
+      "chapter-install"
+    ],
+    [
+      "设置之前先看许可条款",
+      "在设置任何内容之前，先出现一个需要点击同意的界面。",
+      "univocal-licence-terms-before-setup",
+      "chapter-install"
+    ],
+    [
+      "带时间估计的下载",
+      "权限步骤，显示 16 % 和约 23 分钟。",
+      "univocal-setup-permissions-download-time-estimate",
+      "chapter-install"
+    ],
+    [
+      "更好的德语语音，很难找到",
+      "一个有四个步骤的弹窗，测试者没能跟着走到高级语音。",
+      "univocal-better-german-voice-popup",
+      "chapter-install"
+    ],
+    [
+      "首次听写",
+      "设置界面输入框中的按住说话，Left Control。",
+      "univocal-first-dictation-hold-left-control",
+      "chapter-usage"
+    ],
+    [
+      "看起来是空的快捷键栏",
+      "朗读设置；该栏显示 Press keys。",
+      "univocal-read-aloud-settings-shortcut-field",
+      "chapter-usage"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "下载、安装与设置",
+      "items": [
+        [
+          "observed",
+          "Sprich 测试上线之后，开发者联系了测试者。DMG 很小，按测试者的读数是 6.5 MB；没有截图。目录列出的 0.3.33 版大小约为 6.3 MB（第三方信息）。",
+          null
+        ],
+        [
+          "observed",
+          "安装窗口里“应用程序”在左，Univocal 在右，与通常的布局相反。拖动这一步仍然需要。",
+          "univocal-dmg-window-applications-left"
+        ],
+        [
+          "observed",
+          "首次打开时，macOS 询问“Are you sure you want to open it?”，并说明该文件由 Chrome 在 11:06 下载，Apple 未发现恶意软件。签名和公证状态没有显示。",
+          "univocal-gatekeeper-open-confirmation"
+        ],
+        [
+          "observed",
+          "设置之前先打开了一个许可窗口：版本 1.0，自 2026年9月23日起生效，双方为用户和 NarNar Labs LLC，涵盖应用、它配套的浏览器扩展和语音模型。按钮：Quit、Agree。不同意的买家可享 30 天退款。只读了开头几行。",
+          "univocal-licence-terms-before-setup"
+        ],
+        [
+          "tester-view",
+          "“All other apps just opened and nothing was there. This one actually has licence terms and something to click through.”没有逐个应用核对。",
+          null
+        ],
+        [
+          "observed",
+          "设置默认把英语（英国）设为主语言，并允许用户从一个很长的列表中添加语言；第一种语言同时也是应用窗口的语言，顺序可以拖动调整。德语和法语已添加。",
+          "univocal-languages-add-dropdown"
+        ],
+        [
+          "observed",
+          "一个弹窗说，更好的德语语音是 macOS 的免费下载，并给出四个步骤：Read & Speak、System voice 旁的信息图标、左栏中的德语、Enhanced 或 Premium 语音旁的下载图标。测试者照着做，没有找到高级语音，尽管他知道 iOS 上有这样的语音。哪一步失败了未记录。",
+          "univocal-better-german-voice-popup"
+        ],
+        [
+          "measured",
+          "设置请求了两项权限：Accessibility（已勾选）和 Microphone（Grant）。下载按钮显示“Wait for advanced voices”、16 %、约 23 min，而“Start now”要等两项权限都完成。",
+          "univocal-setup-permissions-download-time-estimate"
+        ],
+        [
+          "measured",
+          "主窗口显示“Downloading the dictation model (574 MB)... 17%”，Dictate 卡片为 39 %；Read aloud 卡片已就绪，快捷键为 Option-Shift-R。这两个百分比衡量的是什么、总下载大小是多少，均未记录。窗口说下载“happens once and takes a few minutes”；总时间未记录。",
+          "univocal-setting-up-model-download-trial"
+        ],
+        [
+          "observed",
+          "语音选择器按语言列出语音，带搜索框、All/Female/Male 筛选、“Your languages”菜单和每个语音的播放按钮；Apple 的语音带有 Apple 标签。German (Germany) 下 Anna 被勾选。测试者觉得语音选择组织得很好。",
+          "univocal-voice-picker-german-anna"
+        ],
+        [
+          "observed",
+          "在“Hear it”步骤中，Option-Shift-R 打开了一个阅读窗口，显示欢迎文字、Play、速度 1x、语言 Auto (English)、语音 Emma、字号，以及按 Escape 关闭。是否播放了声音、是否高亮了词语，均未记录。",
+          "univocal-reader-window-welcome-text"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-usage",
+      "title": "使用",
+      "items": [
+        [
+          "observed",
+          "在“Say something”步骤中，按住 Left Control 说话，输入框里打出了“Hello, what's going on? Does it work?”；两个步骤都已勾选。",
+          "univocal-first-dictation-hold-left-control"
+        ],
+        [
+          "observed",
+          "笔记中有听写生成的英语、法语和德语文字，其中包括故意说得很快的德语，测试者说它可用。几种语言之间有没有切换未记录；听写页面写着“Mix your languages”（假设：自动检测）。时间、准确度统计和目标应用均未记录。",
+          null
+        ],
+        [
+          "observed",
+          "听写设置：语音键 Left Control，模式 Push（已选）或 Toggle，“Remove fillers and false starts”开启，“Keep transcript on clipboard”关闭，“Type words as you speak”关闭，聆听光效开启，处理时显示转圈，另有 Recent dictations 列表。测试者喜欢两种模式都提供。",
+          "univocal-settings-dictation-push-toggle"
+        ],
+        [
+          "measured",
+          "通用设置：版本 0.3.33，登录时启动开启，Dock 图标开启，语言 English，外观 System，自动检查更新开启。标签页有 Languages、Dictation、Read Aloud、Connections、Vocabulary、Permissions 和 Licence；Connections 和 Vocabulary 没有打开。",
+          "univocal-settings-general-version-0-3-33"
+        ],
+        [
+          "observed",
+          "Languages 列表显示：English (United Kingdom) 为主语言，语音 Emma；German (Germany) 语音 Wren；French (France) 语音 Siwis，每个都有播放按钮。测试者说这些名字很有趣。",
+          "univocal-settings-languages-voices"
+        ],
+        [
+          "observed",
+          "测试者选中文字并按下按键后，朗读没有启动，他也无法更改按键。所用的文字、应用和按键均未记录。该快捷键在设置步骤中用成功过一次。",
+          null
+        ],
+        [
+          "observed",
+          "朗读设置：速度 1x，“Use a separate shortcut”开启，Shortcut 栏显示“Press keys...”，“Format Markdown”开启，另有透明度滑块、高亮颜色和历史记录。该栏是空的还是显示了一个提示，并不清楚（假设：可能是失败的原因）。",
+          "univocal-read-aloud-settings-shortcut-field"
+        ],
+        [
+          "observed",
+          "口述一句英语请求，列出“cat, house, dog”，以及一句德语请求（“Bitte als Bullet Points”），都没有得到要点；德语结果把两个词连成了“Katzenhaus”。没有截图。测试者说他试过的另一款应用也是这样。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "测试者同时开着三个语音和模型程序，Mac 仍然能用；没有测量。他认为这是因为每个程序用的都是小模型。",
+          null
+        ],
+        [
+          "tester-view",
+          "“Soon my computer runs out of keys for all of these special functions.”",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "observed",
+          "笔记以要点测试以及价格和试用的说明结束；没有写明是否继续使用的决定。",
+          null
+        ],
+        [
+          "observed",
+          "应用显示“Trial · 14 days left”和一个 Buy 按钮。厂商网站（截图，此处未展示）写的是一次性 39 美元、11 月 20 日至 30 日凭优惠码享 15 美元的黑色星期五价格、14 天免费、无订阅、无需账号。截图中没有账号步骤。",
+          "univocal-setting-up-model-download-trial"
+        ],
+        [
+          "tester-view",
+          "他感到意外：他测试的另一款听写工具带有超过 2 GB 的格式化引擎，而这一款只显示一个 574 MB 的听写模型。",
+          null
+        ],
+        [
+          "tester-view",
+          "“It is very well done with the languages: you can really define which languages you want to use.”",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "设置文字：语音和语音识别模型“once and takes a few minutes”下载。",
+      "主窗口",
+      "较早的界面在 16 % 时估计约 23 分钟；总时间未记录。",
+      "observed"
+    ],
+    [
+      "“Audio is transcribed on this Mac and never uploaded.”阅读界面的文字：读出和说出的内容都不会离开这台 Mac。",
+      "设置和阅读界面的文字",
+      "未验证。没有检查网络流量，也没有试过离线运行。",
+      "vendor-claim"
+    ],
+    [
+      "阅读界面：“Every word you hear lights up as it is spoken.”",
+      "阅读窗口",
+      "看到了阅读窗口；声音和高亮未记录。",
+      "observed"
+    ],
+    [
+      "Univocal 能用所选的语言朗读和听写。",
+      "语言步骤",
+      "看到了英语、法语和德语的听写；德语和法语的朗读未记录。",
+      "observed"
+    ],
+    [
+      "macOS 有更好的德语语音，可免费下载。",
+      "设置弹窗",
+      "测试者没有找到。",
+      "observed"
+    ],
+    [
+      "一次性 39 美元，14 天免费，无需信用卡，无需账号。黑色星期五 11 月 20 日至 30 日：凭优惠码 15 美元。",
+      "厂商网站（截图）",
+      "看到了试用横幅；截图中没有账号界面。",
+      "vendor-claim"
+    ],
+    [
+      "首次运行下载约 1.2 GB，32 种语言，DMG 约 6.3 MB。",
+      "PromptQuorum 目录条目",
+      "看到了 574 MB 的组件；语言列表很长但没有数；DMG 为测试者读出的 6.5 MB。",
+      "third-party"
+    ]
+  ],
+  "usage_log": [
+    [
+      "在设置界面的输入框中听写，按住 Left Control",
+      "Univocal 设置",
+      "输入框中打出了这句话",
+      "未记录",
+      "Pass",
+      [
+        "univocal-first-dictation-hold-left-control"
+      ]
+    ],
+    [
+      "英语句子（“Hi, how are you? How does it work?”）",
+      "未记录",
+      "笔记中有这段文字；目标应用未记录",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "法语问句",
+      "未记录",
+      "笔记中有这段文字；准确度测试者未判断",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "故意说得很快的德语问句",
+      "未记录",
+      "据测试者说可用",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "从设置步骤打开阅读窗口，Option-Shift-R",
+      "Univocal 设置",
+      "窗口打开；声音未记录",
+      "未记录",
+      "Partial",
+      [
+        "univocal-reader-window-welcome-text"
+      ]
+    ],
+    [
+      "朗读选中的文字",
+      "未记录",
+      "没有启动",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "更改朗读按键",
+      "Univocal 设置",
+      "未做到",
+      "未记录",
+      "Fail",
+      [
+        "univocal-read-aloud-settings-shortcut-field"
+      ]
+    ],
+    [
+      "找到高级德语语音",
+      "macOS 设置",
+      "没有找到",
+      "未记录",
+      "Fail",
+      [
+        "univocal-better-german-voice-popup"
+      ]
+    ],
+    [
+      "用语音输入要点，英语请求",
+      "未记录",
+      "没有要点",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "用语音输入要点，德语请求",
+      "未记录",
+      "两个词连在一起，没有要点",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "同时运行三个语音和模型程序",
+      "Mac",
+      "据测试者说电脑仍然可用",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "离线使用、卸载、Connections、Vocabulary、浏览器扩展",
+      "不适用",
+      "未测试",
+      "未记录",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "他把 macOS 的首次打开对话框称为针对非 App Store、未在 Apple 注册的应用的标准警告。对话框写的是 Apple 检查过、未发现恶意软件；它的签名状态没有显示。"
+    ],
+    [
+      "tester-error",
+      "他说 Emma 是他选的德语语音。截图显示 Emma 对应的是 English (United Kingdom)；德语在语音列表中是 Anna，在 Languages 列表中是 Wren。"
+    ],
+    [
+      "assumption",
+      "笔记中第一句口述的句子与设置截图中的不同。可能是两次不同的尝试；不确定。"
+    ],
+    [
+      "assumption",
+      "“I like this version one zero”被理解为许可版本 1.0，而不是应用版本 0.3.33。"
+    ],
+    [
+      "tester-error",
+      "记录中的缺口：测试日期、结束时间、macOS 版本、总下载时间、法语和德语测试所用的应用、朗读失败时所用的按键和文字、要点测试的截图、开发者写了什么、另外两个程序叫什么。语音转文字的小错误已经规范化：“meeting”被理解为“setting”（弹窗的按钮是 Open System Settings），而“Strato sort program”不清楚，已略去。法语对话中的“Bien sûr !”这一句没有记录说话人。"
+    ]
+  ],
+  "findings": [
+    [
+      "UV-01",
+      "按测试者所述，DMG 为 6.5 MB；没有截图。目录列出 0.3.33 版约 6.3 MB（第三方信息）。",
+      "安装",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UV-02",
+      "安装窗口里“应用程序”在左，Univocal 在右，与通常的布局相反（测试者观点）。拖动这一步仍然需要；测试者指出有些应用避免了这一步。",
+      "安装",
+      "observed",
+      "Info",
+      [
+        "univocal-dmg-window-applications-left"
+      ]
+    ],
+    [
+      "UV-03",
+      "首次打开时，macOS 询问“Are you sure you want to open it?”，并说明该文件由 Chrome 在 11:06 下载，Apple 未发现恶意软件。签名和公证状态没有显示。",
+      "安装",
+      "observed",
+      "Info",
+      [
+        "univocal-gatekeeper-open-confirmation"
+      ]
+    ],
+    [
+      "UV-04",
+      "设置之前先打开了一个许可窗口：版本 1.0，自 2026年9月23日起生效，双方为用户和 NarNar Labs LLC，涵盖应用、它配套的浏览器扩展和语音模型。按钮：Quit、Agree。不同意的买家可享 30 天退款。测试者说他测试的其他应用直接就打开了（测试者观点；没有逐个应用核对）。只读了开头几行。",
+      "引导",
+      "observed",
+      "Positive",
+      [
+        "univocal-licence-terms-before-setup"
+      ]
+    ],
+    [
+      "UV-05",
+      "语言步骤默认把英语（英国）设为主语言，并允许用户从一个很长的列表中添加语言（从 Arabic 到 Danish 及更多）；第一种语言同时也是应用窗口的语言；顺序可以拖动调整。德语和法语已添加。语言增多是否占用更多内存，不得而知。目录列出 32 种语言（第三方信息）。部分被遮挡的文字显示下载在这一步之后开始（假设）。",
+      "引导",
+      "observed",
+      "Positive",
+      [
+        "univocal-languages-add-dropdown"
+      ]
+    ],
+    [
+      "UV-06",
+      "一个弹窗说，更好的德语语音是 macOS 的免费下载，并给出四个步骤：Read & Speak、System voice 旁的信息图标、左栏中的德语、Enhanced 或 Premium 语音旁的下载图标。测试者照着做，没有找到高级语音，尽管他知道 iOS 上有这样的语音。哪一步失败了未记录；任何截图中都看不到“System voice”控件。",
+      "引导",
+      "observed",
+      "Medium",
+      [
+        "univocal-better-german-voice-popup"
+      ]
+    ],
+    [
+      "UV-07",
+      "设置请求了两项权限：Accessibility（已勾选）和 Microphone（Grant）。下载按钮显示“Wait for advanced voices”、16 %、约 23 min，而“Start now”要等两项权限都完成。文字说音频在这台 Mac 上转写、绝不上传（厂商声明）。",
+      "引导",
+      "measured",
+      "Positive",
+      [
+        "univocal-setup-permissions-download-time-estimate"
+      ]
+    ],
+    [
+      "UV-08",
+      "主窗口显示“Downloading the dictation model (574 MB)... 17%”，Dictate 卡片为 39 %；Read aloud 卡片已就绪，快捷键为 Option-Shift-R。这两个百分比衡量的是什么，以及总下载大小，界面上没有显示，也没有记录。目录列出约 1.2 GB（第三方信息）。测试者说下载是在没有询问的情况下开始的。",
+      "引导",
+      "measured",
+      "Info",
+      [
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-09",
+      "主窗口说下载“happens once and takes a few minutes”；较早的设置按钮在 16 % 时估计约 23 min。这 23 min 是全部时间还是剩余时间，没有说明（假设：剩余时间）。实际用时未记录。",
+      "引导",
+      "measured",
+      "Low",
+      [
+        "univocal-setup-permissions-download-time-estimate",
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-10",
+      "语音选择器按语言列出语音，带搜索框、All/Female/Male 筛选、“Your languages”菜单和每个语音的播放按钮；Apple 的语音带有 Apple 标签。German (Germany) 下 Anna 被勾选。测试者觉得语音选择组织得很好（测试者观点）。",
+      "引导",
+      "observed",
+      "Positive",
+      [
+        "univocal-voice-picker-german-anna"
+      ]
+    ],
+    [
+      "UV-11",
+      "在“Hear it”步骤中，Option-Shift-R 打开了一个阅读窗口，显示欢迎文字、Play、速度 1x、语言 Auto (English)、语音 Emma、字号，以及按 Escape 关闭。是否播放了声音、是否高亮了词语，均未记录。",
+      "引导",
+      "observed",
+      "Info",
+      [
+        "univocal-reader-window-welcome-text"
+      ]
+    ],
+    [
+      "UV-12",
+      "在“Say something”步骤中，按住 Left Control 说话，输入框里打出了“Hello, what's going on? Does it work?”；两个步骤都已勾选。",
+      "听写",
+      "observed",
+      "Positive",
+      [
+        "univocal-first-dictation-hold-left-control"
+      ]
+    ],
+    [
+      "UV-13",
+      "笔记中有听写生成的英语、法语和德语文字，其中包括故意说得很快的德语，测试者说它可用。几种语言之间有没有切换未记录；听写页面写着“Mix your languages”（假设：自动检测）。时间、准确度统计和应用均未记录。",
+      "听写",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UV-14",
+      "听写设置：语音键 Left Control，模式 Push（已选）或 Toggle，“Remove fillers and false starts”开启，“Keep transcript on clipboard”关闭，“Type words as you speak”关闭，聆听光效开启，处理时显示转圈，另有 Recent dictations 列表。测试者喜欢两种模式都提供（测试者观点）。",
+      "听写",
+      "observed",
+      "Info",
+      [
+        "univocal-settings-dictation-push-toggle"
+      ]
+    ],
+    [
+      "UV-15",
+      "通用设置：版本 0.3.33，登录时启动开启，Dock 图标开启，语言 English，外观 System，自动检查更新开启，Check Now，Report Issue。标签页：Languages、Dictation、Read Aloud、Connections、Vocabulary、Permissions、Licence；Connections 和 Vocabulary 没有打开。目录列出 0.3.33 的发布日期为 2026-11-11（第三方信息）。",
+      "设置",
+      "measured",
+      "Info",
+      [
+        "univocal-settings-general-version-0-3-33"
+      ]
+    ],
+    [
+      "UV-16",
+      "Languages 列表：English (United Kingdom) 为主语言，语音 Emma；German (Germany) 语音 Wren；French (France) 语音 Siwis，每个都有播放按钮。测试者说这些名字很有趣（测试者观点）。哪些语音来自 Apple 没有显示；只有选择器给语音标注了 Apple。",
+      "设置",
+      "observed",
+      "Low",
+      [
+        "univocal-settings-languages-voices",
+        "univocal-voice-picker-german-anna"
+      ]
+    ],
+    [
+      "UV-17",
+      "测试者选中文字并按下按键后，朗读没有启动，他也无法更改按键。所用的文字、应用和按键均未记录。该快捷键在设置步骤中用成功过一次。原因没有查明。",
+      "朗读",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "UV-18",
+      "朗读设置：速度 1x，“Use a separate shortcut”开启，Shortcut 栏显示“Press keys...”，“Format Markdown”开启，另有透明度滑块、高亮颜色和历史记录。该栏是空的还是显示了一个提示，并不清楚（假设：可能是 UV-17 的原因）。",
+      "朗读",
+      "observed",
+      "Low",
+      [
+        "univocal-read-aloud-settings-shortcut-field"
+      ]
+    ],
+    [
+      "UV-19",
+      "应用显示“Trial · 14 days left”和一个 Buy 按钮。厂商网站（截图，此处未展示）写的是一次性 39 美元、11 月 20 日至 30 日凭优惠码享 15 美元的黑色星期五价格、14 天免费、无订阅、无需账号（厂商声明）。截图中没有账号步骤。",
+      "试用与价格",
+      "observed",
+      "Info",
+      [
+        "univocal-setting-up-model-download-trial"
+      ]
+    ],
+    [
+      "UV-20",
+      "口述一句英语请求，列出“cat, house, dog”，以及一句德语请求（“Bitte als Bullet Points”），都没有得到要点；德语结果把两个词连成了“Katzenhaus”。没有截图。测试者说他试过的另一款应用也是这样。截图中没有宣传要点功能，所以这不算没有做到它所承诺的。",
+      "格式",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "UV-21",
+      "测试者同时运行三个语音和模型程序，Mac 仍然能用；没有测量（测试者观点：因为每个程序用的都是小模型）。",
+      "性能",
+      "tester-estimate",
+      "Info",
+      []
+    ],
+    [
+      "UV-22",
+      "设置和阅读界面的文字都说一切留在这台 Mac 上。没有检查网络流量，也没有试过离线运行。",
+      "信任",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "UV-23",
+      "未测试或未记录：离线使用、延迟、内存、Connections、Vocabulary、浏览器扩展、边说边输入、其他语言、德语或法语朗读、卸载、macOS 版本。",
+      "范围",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现；Positive 表示表现良好的地方。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "使用 Apple 芯片 Mac、用英语、法语或德语听写、想要一款带试用的小型付费应用的用户（基于一次测试的假设）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "需要朗读开箱即用，或需要用语音输入要点格式的人。"
+      ]
+    ],
+    "retest": "在版本更新之后，或朗读失败的原因查明之后复测。覆盖：用默认快捷键朗读、高级德语语音、Connections 和 Vocabulary 标签页、检查流量后的离线使用、延迟、内存、卸载；记录 macOS 版本和日期。"
+  },
+  "background_intro": "第三方信息，未经核实。与测试内容分开列出。",
+  "background": [
+    [
+      "third-party",
+      "由 NarNar Labs LLC 发布；闭源，未找到源代码仓库；开发方的页面没有写明创始人、国家或地址。仅支持 macOS 14 或更高版本的 Apple 芯片 Mac。"
+    ],
+    [
+      "third-party",
+      "最早的更新日志条目是 2026-07-29 的 0.3.0；0.3.33 为 2026-11-11；界面语言包括英语、韩语、日语、中文、西班牙语、德语和法语。来源：PromptQuorum 目录评测，核查于 2026-11-13。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和截图（原始 Word 笔记；原始笔记 PDF 待补充）。",
+    "PromptQuorum 目录中 Univocal 的条目和评测（slug：univocal），核实于 2026-11-13。",
+    "厂商网站 univocalapp.com（厂商声明）；目录中列出的厂商更新日志，本次测试没有打开。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "univocal-first-dictation-hold-left-control",
+      "figure": 1,
+      "file": "univocal-first-dictation-hold-left-control.webp",
+      "path": "images/univocal-first-dictation-hold-left-control.webp",
+      "alt": "Univocal 设置步骤 Say something：按住 Left Control，说话，松开。输入框中显示打出的句子“Hello, what's going on? Does it work?”",
+      "caption": "设置中的首次听写。观察所得。",
+      "role": "hero",
+      "width": 1124,
+      "height": 994,
+      "bytes": 35242,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-usage"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-dmg-window-applications-left",
+      "figure": 2,
+      "file": "univocal-dmg-window-applications-left.webp",
+      "path": "images/univocal-dmg-window-applications-left.webp",
+      "alt": "安装窗口：左边是“应用程序”文件夹的快捷方式，右边是 Univocal 应用图标，黑底上两个白色引号。",
+      "caption": "安装窗口，顺序相反。观察所得。",
+      "role": "moment",
+      "width": 1427,
+      "height": 625,
+      "bytes": 17744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-licence-terms-before-setup",
+      "figure": 3,
+      "file": "univocal-licence-terms-before-setup.webp",
+      "path": "images/univocal-licence-terms-before-setup.webp",
+      "alt": "Univocal 许可条款窗口，标题为 Before you start，版本 1.0，自 2026年9月23日起生效，带有 Quit 和 Agree 按钮。",
+      "caption": "在设置任何内容之前先出现的许可条款。观察所得。",
+      "role": "moment",
+      "width": 1328,
+      "height": 1392,
+      "bytes": 143158,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-setup-permissions-download-time-estimate",
+      "figure": 4,
+      "file": "univocal-setup-permissions-download-time-estimate.webp",
+      "path": "images/univocal-setup-permissions-download-time-estimate.webp",
+      "alt": "设置窗口：Accessibility 已勾选，Microphone 带有 Grant 按钮，以及一个显示 16 % 和约 23 分钟的 Wait for advanced voices 按钮。",
+      "caption": "带下载时间估计的权限步骤。测量所得。",
+      "role": "moment",
+      "width": 1114,
+      "height": 974,
+      "bytes": 35434,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-better-german-voice-popup",
+      "figure": 5,
+      "file": "univocal-better-german-voice-popup.webp",
+      "path": "images/univocal-better-german-voice-popup.webp",
+      "alt": "弹窗 A better German voice is available：四个步骤说明如何在 macOS 中下载 Enhanced 或 Premium 语音，按钮为 Not Now 和 Open System Settings。",
+      "caption": "指向 macOS 语音的弹窗。观察所得。",
+      "role": "moment",
+      "width": 1066,
+      "height": 550,
+      "bytes": 44006,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-read-aloud-settings-shortcut-field",
+      "figure": 6,
+      "file": "univocal-read-aloud-settings-shortcut-field.webp",
+      "path": "images/univocal-read-aloud-settings-shortcut-field.webp",
+      "alt": "朗读设置：速度 1x，Use a separate shortcut 已开启，Shortcut 栏显示 Press keys，Format Markdown 开启，高亮颜色为粉色。",
+      "caption": "朗读设置。快捷键栏显示 Press keys。观察所得。",
+      "role": "moment",
+      "width": 1224,
+      "height": 944,
+      "bytes": 27010,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-gatekeeper-open-confirmation",
+      "figure": 7,
+      "file": "univocal-gatekeeper-open-confirmation.webp",
+      "path": "images/univocal-gatekeeper-open-confirmation.webp",
+      "alt": "macOS 对话框：Univocal 是从互联网下载的应用，由 Chrome 在 11:06 下载，Apple 已检查、未发现问题；按钮为 Cancel 和 Open。",
+      "caption": "macOS 的首次打开确认。观察所得。",
+      "role": "gallery",
+      "width": 534,
+      "height": 540,
+      "bytes": 25202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-languages-add-dropdown",
+      "figure": 8,
+      "file": "univocal-languages-add-dropdown.webp",
+      "path": "images/univocal-languages-add-dropdown.webp",
+      "alt": "Your languages 步骤：English (United Kingdom) 为主语言，Add a language 列表已展开，从 Arabic 到 Danish，带有 Next 按钮。",
+      "caption": "语言步骤，列表已展开。观察所得。",
+      "role": "gallery",
+      "width": 1114,
+      "height": 1266,
+      "bytes": 55766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-setting-up-model-download-trial",
+      "figure": 9,
+      "file": "univocal-setting-up-model-download-trial.webp",
+      "path": "images/univocal-setting-up-model-download-trial.webp",
+      "alt": "主窗口 Setting up：听写模型 574 MB，17 %，Dictate 卡片 39 %，Read aloud 卡片，语音 Emma，Trial 14 days left，Buy 按钮。",
+      "caption": "首次下载期间的主窗口。测量所得。",
+      "role": "gallery",
+      "width": 766,
+      "height": 812,
+      "bytes": 34156,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-voice-picker-german-anna",
+      "figure": 10,
+      "file": "univocal-voice-picker-german-anna.webp",
+      "path": "images/univocal-voice-picker-german-anna.webp",
+      "alt": "带搜索和筛选的语音列表：美式英语语音、英式英语的 Daniel，以及已勾选的 German (Germany) 语音 Anna。",
+      "caption": "语音选择器。观察所得。",
+      "role": "gallery",
+      "width": 812,
+      "height": 882,
+      "bytes": 36484,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-reader-window-welcome-text",
+      "figure": 11,
+      "file": "univocal-reader-window-welcome-text.webp",
+      "path": "images/univocal-reader-window-welcome-text.webp",
+      "alt": "阅读窗口，文字为 Welcome to Univocal，控件有 Play、1x、Auto (English) 和 Emma，以及设置步骤 Press Escape to put the reader away。",
+      "caption": "Hear it 步骤中的阅读窗口。观察所得。",
+      "role": "gallery",
+      "width": 1431,
+      "height": 613,
+      "bytes": 35094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-settings-general-version-0-3-33",
+      "figure": 12,
+      "file": "univocal-settings-general-version-0-3-33.webp",
+      "path": "images/univocal-settings-general-version-0-3-33.webp",
+      "alt": "通用设置：登录时启动和 Dock 图标开启，语言 English，外观 System，版本 0.3.33，自动检查更新开启，Report Issue 按钮。",
+      "caption": "通用设置。测量所得：版本 0.3.33。",
+      "role": "gallery",
+      "width": 1432,
+      "height": 974,
+      "bytes": 30982,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-settings-languages-voices",
+      "figure": 13,
+      "file": "univocal-settings-languages-voices.webp",
+      "path": "images/univocal-settings-languages-voices.webp",
+      "alt": "Languages 设置：English (United Kingdom) 为主语言，语音 Emma；German (Germany) 语音 Wren；French (France) 语音 Siwis，每个都有播放按钮。",
+      "caption": "语言与语音。观察所得。",
+      "role": "gallery",
+      "width": 1158,
+      "height": 638,
+      "bytes": 21024,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "univocal-settings-dictation-push-toggle",
+      "figure": 14,
+      "file": "univocal-settings-dictation-push-toggle.webp",
+      "path": "images/univocal-settings-dictation-push-toggle.webp",
+      "alt": "听写设置：语音键 Left Control，模式 Push 已选、旁边是 Toggle，Remove fillers 开启，聆听光效开启，处理时显示转圈。",
+      "caption": "听写设置。观察所得。",
+      "role": "gallery",
+      "width": 1212,
+      "height": 1200,
+      "bytes": 32614,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-usage"
+      ],
+      "subject": "Univocal 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    }
+  ],
+  "figure_order": [
+    "univocal-first-dictation-hold-left-control",
+    "univocal-dmg-window-applications-left",
+    "univocal-licence-terms-before-setup",
+    "univocal-setup-permissions-download-time-estimate",
+    "univocal-better-german-voice-popup",
+    "univocal-read-aloud-settings-shortcut-field",
+    "univocal-gatekeeper-open-confirmation",
+    "univocal-languages-add-dropdown",
+    "univocal-setting-up-model-download-trial",
+    "univocal-voice-picker-german-anna",
+    "univocal-reader-window-welcome-text",
+    "univocal-settings-general-version-0-3-33",
+    "univocal-settings-languages-voices",
+    "univocal-settings-dictation-push-toggle"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年11月13日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "内存",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "应用",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面",
+      "Info": "提示"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}

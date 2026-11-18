@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'SearXNGレビュー：ローカルLLM向けセルフホスト検索バックエンド',
     seoTitle: 'SearXNGレビュー：ローカルLLM向けセルフホスト検索基盤',
     intro: 'SearXNGは自分で運用する無料のオープンソース・メタ検索エンジンで、Open WebUIなどのローカルLLMフロントエンドがWeb検索のバックエンドとして呼び出せます。本レビューはその役割に限って扱います。AIアプリではなく、言語モデルは含まれていません。プロジェクトのドキュメント、GitHubリポジトリ、Docker Hubのタグ一覧に基づき、2026年10月24日に確認しました。PromptQuorumは実機での動作確認を行っていません。',
-    metaDescription: 'SearXNGのレビュー。Open WebUIなどのローカルLLMフロントエンドがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジン。AGPL-3.0、Docker構成。未検証。',
+    metaDescription: 'SearXNGとは、Open WebUIなどのローカルLLMがWeb検索に使える、プライバシー重視のセルフホスト型メタ検索エンジンです。AGPL-3.0、Docker構成のレビュー。未検証。',
     twitterDescription: 'SearXNGレビュー：ローカルLLMのWeb検索構成を支えるセルフホスト型検索バックエンド。プライバシー、導入手順、JSON設定について公式ドキュメントが確認していること。',
     audience: '自分でホストするサービスを通じてOpen WebUIなどでWeb検索を使いたいローカルLLMユーザーで、SearXNGが何を保証し何を保証しないかを知りたい方。',
     readTime: '6分で読める',

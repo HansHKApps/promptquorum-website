@@ -40,10 +40,10 @@ export const app: ToolRecord = {
   // line. This records the formal release (GitHub's own "Latest" marker),
   // matching what the article now states — not the build-numbered tag,
   // which changes too often to track as a single "version".
-  pqReview: { date: '2026-09-20', version: 'v0.4.1', versionSourceUrl: 'https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.1' },
+  pqReview: { date: '2026-11-14', version: 'v1.0.0', versionSourceUrl: 'https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true, cpuInference: true },
   lastVerifiedDate: '2026-09-20',
-  lastUpstreamUpdate: '2026-10-23', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
+  lastUpstreamUpdate: '2026-11-14', // GitHub API (latest release v1.0.0 2026-11-13; last push 2026-11-14), read 2026-11-14
   lastUpstreamUpdateSource: 'https://github.com/ggml-org/llama.cpp',
 }

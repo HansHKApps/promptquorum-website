@@ -81,6 +81,7 @@ function validateFile(absPath, errors) {
   if (badPlatforms) errors.push({ file, slug, field: 'platforms', value: badPlatforms });
 
   validateInstallEffort(content, file, slug, platformsRaw, errors);
+  validateHqCountry(content, file, slug, errors);
 }
 
 // ── installEffort (see InstallEffortKey in apps/types.ts and check 6 of the feature-app-post skill) ──
@@ -131,6 +132,32 @@ function validateInstallEffort(content, file, slug, platformsRaw, errors) {
     try { webHost = new URL(web).host.replace(/^www\./, ''); } catch { /* reported below */ }
     if (!webHost) errors.push({ file, slug, field: 'storeLinks.web', value: `not a valid URL (${web})` });
     else if (webHost !== urlHost) errors.push({ file, slug, field: 'storeLinks.web', value: `host ${webHost} differs from url ${urlHost}` });
+  }
+}
+
+// ── hqCountry (see ToolRecord.hqCountry in apps/types.ts) ──
+// Optional: unset = "not clear / not researched", never an error. Once set it must be an uppercase ISO
+// alpha-2 code, carry a source URL (no guessed flags), and have a flag file in public/flags.
+const FLAGS_DIR = path.resolve(__dirname, '..', 'public', 'flags');
+
+function validateHqCountry(content, file, slug, errors) {
+  // Match the quoted value directly: a trailing `// comment` on the line must not matter.
+  const present = /\n\s*hqCountry:/.test(content);
+  const srcPresent = /\n\s*hqCountrySource:/.test(content);
+  if (!present) {
+    if (srcPresent) errors.push({ file, slug, field: 'hqCountrySource', value: 'set without hqCountry' });
+    return;
+  }
+  const code = content.match(/\n\s*hqCountry:\s*'([A-Z]{2})'/)?.[1];
+  if (!code) {
+    errors.push({ file, slug, field: 'hqCountry', value: "must be an uppercase ISO 3166-1 alpha-2 code like 'US'" });
+    return;
+  }
+  if (!fs.existsSync(path.join(FLAGS_DIR, `${code.toLowerCase()}.svg`))) {
+    errors.push({ file, slug, field: 'hqCountry', value: `no flag file public/flags/${code.toLowerCase()}.svg — run: npm run add-flag -- ${code.toLowerCase()}` });
+  }
+  if (!/\n\s*hqCountrySource:\s*'https?:\/\/[^']+'/.test(content)) {
+    errors.push({ file, slug, field: 'hqCountrySource', value: 'missing or not an http(s) URL — a country is only set when a primary source shows it' });
   }
 }
 

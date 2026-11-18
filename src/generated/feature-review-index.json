@@ -209,6 +209,11 @@
     "urlSlug": "lastbrowser-review",
     "url": "/power-local-llm/lastbrowser-review"
   },
+  "browseros": {
+    "cluster": "power-local-llm",
+    "urlSlug": "browseros-review",
+    "url": "/power-local-llm/browseros-review"
+  },
   "chatbox": {
     "cluster": "local-llms",
     "urlSlug": "chatbox-review",
@@ -1044,6 +1049,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "conduit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "conduit-review",
+    "url": "/power-local-llm/conduit-review"
+  },
   "phantasm": {
     "cluster": "power-local-llm",
     "urlSlug": "phantasm-review",
@@ -1083,6 +1093,46 @@
     "cluster": "power-local-llm",
     "urlSlug": "scrypted-review",
     "url": "/power-local-llm/scrypted-review"
+  },
+  "screenpipe": {
+    "cluster": "power-local-llm",
+    "urlSlug": "screenpipe-review",
+    "url": "/power-local-llm/screenpipe-review"
+  },
+  "skales": {
+    "cluster": "power-local-llm",
+    "urlSlug": "skales-review",
+    "url": "/power-local-llm/skales-review"
+  },
+  "halo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "halo-review",
+    "url": "/power-local-llm/halo-review"
+  },
+  "yovoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "yovoice-review",
+    "url": "/power-local-llm/yovoice-review"
+  },
+  "open-science-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-science-desktop-review",
+    "url": "/power-local-llm/open-science-desktop-review"
+  },
+  "cozyclay": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cozyclay-review",
+    "url": "/power-local-llm/cozyclay-review"
+  },
+  "papersgpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "papersgpt-review",
+    "url": "/power-local-llm/papersgpt-review"
+  },
+  "solomd": {
+    "cluster": "power-local-llm",
+    "urlSlug": "solomd-review",
+    "url": "/power-local-llm/solomd-review"
   },
   "lyonesse": {
     "cluster": "power-local-llm",
@@ -1734,10 +1784,25 @@
     "urlSlug": "dayflow-review",
     "url": "/power-local-llm/dayflow-review"
   },
+  "ai-notebook": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ai-notebook-review",
+    "url": "/power-local-llm/ai-notebook-review"
+  },
   "univocal": {
     "cluster": "power-local-llm",
     "urlSlug": "univocal-review",
     "url": "/power-local-llm/univocal-review"
+  },
+  "openmausbot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openmausbot-review",
+    "url": "/power-local-llm/openmausbot-review"
+  },
+  "stirling-pdf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "stirling-pdf-review",
+    "url": "/power-local-llm/stirling-pdf-review"
   },
   "stratosort": {
     "cluster": "power-local-llm",
@@ -1763,6 +1828,26 @@
     "cluster": "power-local-llm",
     "urlSlug": "cocoindex-review",
     "url": "/power-local-llm/cocoindex-review"
+  },
+  "opendataloader-pdf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "opendataloader-pdf-review",
+    "url": "/power-local-llm/opendataloader-pdf-review"
+  },
+  "docling": {
+    "cluster": "power-local-llm",
+    "urlSlug": "docling-review",
+    "url": "/power-local-llm/docling-review"
+  },
+  "marker": {
+    "cluster": "power-local-llm",
+    "urlSlug": "marker-review",
+    "url": "/power-local-llm/marker-review"
+  },
+  "mineru": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mineru-review",
+    "url": "/power-local-llm/mineru-review"
   },
   "anyllm": {
     "cluster": "power-local-llm",

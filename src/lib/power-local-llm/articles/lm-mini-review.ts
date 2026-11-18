@@ -2185,7 +2185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro:
         'LM Mini تطبيق دردشة مجاني لأجهزة iPhone وiPad وMac من المطوّر Sultan Haider. وفق صفحته في App Store، يستطيع تشغيل النماذج على الجهاز، أو الاتصال بـ LM Studio أو Ollama أو Jan AI أو oMLX على حاسوبك الخاص، أو الوصول إلى ذلك الحاسوب عن بُعد. تعكس هذه المراجعة صفحة المتجر وسياسة الخصوصية لدى المطوّر، كما جرى الاطلاع عليهما في 24 أكتوبر 2026.',
       metaDescription:
-        'مراجعة LM Mini: تطبيق دردشة مجاني لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وماذا تقول سياسة الخصوصية.',
+        'مراجعة LM Mini: دردشة مجانية لـ iPhone وiPad بنماذج على الجهاز واتصال بـ LM Studio وOllama ووصول عن بُعد. أين تعمل الدردشات وما تقوله سياسة الخصوصية.',
       twitterDescription:
         'مراجعة LM Mini: تطبيق دردشة مجاني ومغلق المصدر لـ iPhone وiPad يجمع بين نماذج على الجهاز وخادم LM Studio أو Ollama الخاص بك وواجهات API سحابية اختيارية. أين تعمل محادثاتك فعلاً وما الذي لم يُتحقق منه.',
       audience:
@@ -2528,7 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Mobile & Edge LLMs',
       heroImage: '/images/lm-mini-review-hero-zh.webp',
       title: 'LM Mini 评测：支持设备端与家用服务器 AI 的 iPhone 聊天应用',
-      seoTitle: 'LM Mini 评测：设备端与家用服务器 AI 的 iPhone 应用',
+      seoTitle: 'LM Mini 评测：设备端与家用服务器 AI 应用',
       intro:
         'LM Mini 是开发者 Sultan Haider 推出的免费聊天应用，适用于 iPhone、iPad 和 Mac。根据 App Store 页面，它可以在设备上运行模型，连接你自己电脑上的 LM Studio、Ollama、Jan AI 或 oMLX，也可以远程访问那台电脑。本评测基于 2026 年 10 月 24 日查看的商店页面和开发者的隐私政策。',
       metaDescription:

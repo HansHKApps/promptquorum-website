@@ -23,6 +23,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'serve'],
   url: 'lmstudio.ai',
+  hqCountry: 'US', // "LM Studio is built by Element Labs in New York, USA" — checked 2026-11-14 (first tile with the HQ flag)
+  hqCountrySource: 'https://lmstudio.ai/jobs.html',
   tagline: {
     en: 'Most polished GUI, built-in HuggingFace model browser, server mode',
     de: 'Ausgereifteste GUI, integrierter HuggingFace-Modell-Browser, Server-Modus',
@@ -37,7 +39,7 @@ export const app: ToolRecord = {
   reviewSlug: 'lm-studio-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true, builtInEngine: true, voice: true },
-  lastVerifiedDate: '2026-10-23',
-  lastUpstreamUpdate: '2026-10-13', // LM Studio 0.4.26, official changelog, re-read 2026-10-23
+  lastVerifiedDate: '2026-11-14',
+  lastUpstreamUpdate: '2026-10-31', // LM Studio 0.4.28, official changelog, re-read 2026-11-14
   lastUpstreamUpdateSource: 'https://lmstudio.ai/changelog/lmstudio',
 }
