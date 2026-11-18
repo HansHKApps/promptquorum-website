@@ -7861,7 +7861,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
     "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Best per task?",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7870,7 +7870,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich",
     "excerpt": "Qwen3.8-27B gewinnt beim Coding: 61,7 SWE-bench Pro, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/de/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7879,7 +7879,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026",
     "excerpt": "Qwen3.8-27B gagne au codage : 61,7 SWE-bench Pro, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/fr/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7888,7 +7888,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較",
     "excerpt": "Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ja/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7897,7 +7897,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比",
     "excerpt": "Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/zh/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7906,7 +7906,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026",
     "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/es/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7915,7 +7915,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026",
     "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/pt/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7924,7 +7924,7 @@
     "title": "⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩",
     "excerpt": "⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7 SWE-bench Pro⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ar/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7933,7 +7933,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026",
     "excerpt": "Qwen3.8-27B 61.7 SWE-bench Pro(24GB), Llama 4 Scout 10M 컨텍스트, Mistral 79% MMLU. 작업별 비교.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ko/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -8104,7 +8104,7 @@
     "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
     "excerpt": "Best local LLMs for creative writing and poetry in 2026: Gemma 4 31B and Qwen3.8-27B on 24 GB, plus picks for 8, 12, 16 and 48 GB with Ollama tags.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8113,7 +8113,7 @@
     "title": "Beste lokale LLMs für kreatives Schreiben 2026: Fiktion, Poesie und Langtexte nach VRAM",
     "excerpt": "Beste lokale LLMs für kreatives Schreiben, Geschichten und Poesie 2026: Gemma 4 31B und Qwen3.8-27B für 24 GB, dazu Empfehlungen für 8, 12, 16 und 48 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/de/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8122,7 +8122,7 @@
     "title": "Meilleurs LLM locaux pour l'écriture créative en 2026 : fiction, poésie et textes longs selon votre VRAM",
     "excerpt": "Meilleurs LLM locaux pour l'écriture créative, histoires et poésie en 2026 : Gemma 4 31B et Qwen3.8-27B pour 24 Go, plus des choix pour 8 à 48 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/fr/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8131,7 +8131,7 @@
     "title": "2026年版 創作・小説向けローカルLLMのおすすめ: フィクション、詩、長編をVRAM別に紹介",
     "excerpt": "2026年の創作・小説・詩向けローカルLLMを紹介。24 GBなら Gemma 4 31B と Qwen3.8-27B、8・12・16・48 GB向けの候補とOllamaタグもまとめました。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ja/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8140,7 +8140,7 @@
     "title": "2026年创意写作本地LLM推荐：小说、诗歌与长篇内容，按显存选择",
     "excerpt": "2026年创意写作、小说与诗歌本地LLM推荐：24 GB显存选Gemma 4 31B或Qwen3.8-27B，另附8、12、16、48 GB档位推荐与Ollama标签。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/zh/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8149,7 +8149,7 @@
     "title": "Mejores LLM locales para escritura creativa en 2026: ficción, poesía y textos largos según tu VRAM",
     "excerpt": "Mejores LLM locales para escritura creativa, relatos y poesía en 2026: Gemma 4 31B y Qwen3.8-27B con 24 GB, más opciones para 8, 12, 16 y 48 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/es/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8158,7 +8158,7 @@
     "title": "Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e textos longos por VRAM",
     "excerpt": "Melhores LLMs locais para escrita criativa, contos e poesia em 2026: Gemma 4 31B e Qwen3.8-27B com 24 GB, mais opções para 8, 12, 16 e 48 GB com tags.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/pt/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8167,7 +8167,7 @@
     "title": "أفضل نماذج LLM المحلية للكتابة الإبداعية في 2026: الخيال والشعر والنصوص الطويلة حسب VRAM",
     "excerpt": "أفضل نماذج LLM المحلية للكتابة الإبداعية والقصص والشعر في 2026: Gemma 4 31B وQwen3.8-27B لذاكرة 24 GB، مع اختيارات لـ 8 و12 و16 و48 GB ووسوم Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ar/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8176,7 +8176,7 @@
     "title": "2026년 창작 글쓰기용 로컬 LLM 추천: 소설, 시, 장편을 VRAM별로 정리",
     "excerpt": "2026년 창작 글쓰기, 소설, 시에 맞는 로컬 LLM 추천. 24 GB는 Gemma 4 31B와 Qwen3.8-27B, 8·12·16·48 GB 구간 추천과 Ollama 태그를 정리했습니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ko/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -22762,8 +22762,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 378 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 378 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 379 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 379 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/directory",
@@ -22771,8 +22771,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 378 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 378 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 379 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 379 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/de/directory",
@@ -22780,8 +22780,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 378 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 378 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 379 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 379 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/fr/directory",
@@ -22789,8 +22789,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす378のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを378件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす379のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを379件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/ja/directory",
@@ -22798,8 +22798,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：378款软件，在本地运行AI（2026）",
-    "excerpt": "对比378款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：379款软件，在本地运行AI（2026）",
+    "excerpt": "对比379款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/zh/directory",
@@ -22807,8 +22807,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 378 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 378 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 379 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 379 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/es/directory",
@@ -22816,8 +22816,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 378 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 378 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 379 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 379 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/pt/directory",
@@ -22825,8 +22825,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 378 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 378 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 379 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 379 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/ar/directory",
@@ -22834,8 +22834,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 378개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 378개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 379개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 379개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-17",
     "url": "/ko/directory",
@@ -34589,7 +34589,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 77 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 78 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34598,7 +34598,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "77 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "78 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34607,7 +34607,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 77 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 78 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34616,7 +34616,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール77種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール78種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34625,7 +34625,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比77款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比78款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34634,7 +34634,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 77 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 78 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34643,7 +34643,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 77 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 78 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34652,7 +34652,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 77 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 78 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34661,7 +34661,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 77개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 78개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -47310,6 +47310,87 @@
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-17",
     "url": "/ko/power-local-llm/papersgpt-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
+    "excerpt": "SoloMD is a free MIT Markdown notes app for 5 platforms with AI chat over your vault, Ollama and LM Studio detection, and an MCP server. Install, privacy, limits.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "SoloMD-Rezension: Kostenlose Markdown-Notiz-App mit lokalem KI-Chat und MCP",
+    "excerpt": "SoloMD ist eine kostenlose MIT-Markdown-Notiz-App für 5 Plattformen mit KI-Chat über Ihren Vault, Ollama- und LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/de/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de SoloMD : application de notes Markdown gratuite avec chat IA local et MCP",
+    "excerpt": "SoloMD est une application de notes Markdown gratuite sous licence MIT pour 5 plateformes, avec chat IA sur votre coffre, détection d'Ollama et LM Studio et serveur MCP. Installation, confidentialité.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/fr/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "SoloMDレビュー：ローカルAIチャットとMCPを備えた無料のMarkdownノートアプリ",
+    "excerpt": "SoloMDはMITライセンスの無料Markdownノートアプリ。5プラットフォーム対応で、ボルトとのAIチャット、OllamaやLM Studioの検出、MCPサーバーを備えます。導入とプライバシー。",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ja/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "SoloMD 评测：带本地 AI 对话与 MCP 的免费 Markdown 笔记应用",
+    "excerpt": "SoloMD 是 MIT 许可的免费 Markdown 笔记应用，支持 5 个平台，可与笔记库对话，自动发现 Ollama 和 LM Studio，并内置 MCP 服务器。安装与隐私说明。",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/zh/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de SoloMD: app de notas en Markdown gratuita con chat de IA local y MCP",
+    "excerpt": "SoloMD es una app de notas Markdown gratuita con licencia MIT para 5 plataformas, con chat de IA sobre tu bóveda, detección de Ollama y LM Studio y servidor MCP. Instalación y privacidad.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/es/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do SoloMD: app de notas em Markdown gratuito com chat de IA local e MCP",
+    "excerpt": "O SoloMD é um app de notas Markdown gratuito com licença MIT para 5 plataformas, com chat de IA sobre o seu cofre, detecção de Ollama e LM Studio e servidor MCP. Instalação e privacidade.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/pt/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة SoloMD: تطبيق ملاحظات Markdown مجاني مع دردشة ذكاء اصطناعي محلية وخادم MCP",
+    "excerpt": "SoloMD تطبيق ملاحظات Markdown مجاني برخصة MIT لخمس منصات، مع دردشة ذكاء اصطناعي حول مجلد ملاحظاتك واكتشاف Ollama وLM Studio وخادم MCP. التثبيت والخصوصية.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ar/power-local-llm/solomd-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "SoloMD 리뷰: 로컬 AI 채팅과 MCP를 갖춘 무료 Markdown 노트 앱",
+    "excerpt": "SoloMD는 MIT 라이선스의 무료 Markdown 노트 앱으로 5개 플랫폼을 지원하며 보관함 AI 채팅, Ollama·LM Studio 감지, MCP 서버를 제공합니다. 설치와 개인정보.",
+    "publishDate": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "url": "/ko/power-local-llm/solomd-review",
     "cluster": "power-local-llm"
   },
   {
@@ -78176,7 +78257,7 @@
   {
     "lang": "ar",
     "title": "⁦Sprich⁩ على جهاز ⁦Mac⁩ بمعالج ⁦M4 Pro⁩ وذاكرة ⁦24 GB⁩: إملاء محلي يكتب في أي تطبيق",
-    "excerpt": "جلستان في ⁦9⁩ و⁦13⁩ نوفمبر ⁦2026⁩: إعداد متقن من خمس خطوات، وإملاء سريع بالإنجليزية والألمانية بعد أن استخدم المختبِر المفتاح بشكل صحيح، واجتماع سُجّل وقُسّم إلى متحدثين اثنين رغم رداءة صوت الغرفة، وواجهة بالألمانية فقط، ولم تُجرَّب عدة ميزات جانبية.",
+    "excerpt": "جلستان في ⁦9⁩ و⁦13⁩ نوفمبر ⁦2026⁩: إعداد متقن من خمس خطوات، وإملاء سريع بالإنجليزية والألمانية بعد أن استخدم المختبِر المفتاح بشكل صحيح، واجتماع سُجّل ونُسب إلى متحدثين اثنين (لم تُقيَّم الدقة؛ ويصف المختبِر صوت الغرفة بأنه رديء)، وواجهة بالألمانية فقط، ولم تُجرَّب عدة ميزات جانبية.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ar/power-local-llm/sprich-hands-on-test",
@@ -78185,7 +78266,7 @@
   {
     "lang": "de",
     "title": "Sprich auf einem M4 Pro Mac mit 24 GB: Lokales Diktieren, das in jede App tippt",
-    "excerpt": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein trotz schlechtem Raumklang aufgenommenes und auf zwei Sprecher aufgeteiltes Meeting, eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
+    "excerpt": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein aufgenommenes und zwei Sprechern zugeordnetes Meeting (Genauigkeit nicht bewertet; den Raumklang nennt der Tester schlecht), eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/de/power-local-llm/sprich-hands-on-test",
@@ -78194,7 +78275,7 @@
   {
     "lang": "es",
     "title": "Sprich en un Mac M4 Pro de 24 GB: dictado local que escribe en cualquier app",
-    "excerpt": "Dos sesiones, el 9 y el 13 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una reunión grabada y separada en dos voces pese al mal sonido de la sala, una interfaz solo en alemán y varias funciones secundarias sin probar.",
+    "excerpt": "Dos sesiones, el 9 y el 13 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una reunión grabada y separada en dos voces (precisión no valorada; el evaluador califica de malo el sonido de la sala), una interfaz solo en alemán y varias funciones secundarias sin probar.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/es/power-local-llm/sprich-hands-on-test",
@@ -78203,7 +78284,7 @@
   {
     "lang": "fr",
     "title": "Sprich sur un Mac M4 Pro de 24 GB : une dictée locale qui écrit dans n’importe quelle appli",
-    "excerpt": "Deux sessions, les 9 et 13 novembre 2026 : une configuration soignée en cinq étapes, une dictée rapide en anglais et en allemand une fois la touche bien utilisée, une réunion enregistrée et répartie entre deux intervenants malgré un son de pièce médiocre, une interface uniquement en allemand, et plusieurs fonctions annexes non essayées.",
+    "excerpt": "Deux sessions, les 9 et 13 novembre 2026 : une configuration soignée en cinq étapes, une dictée rapide en anglais et en allemand une fois la touche bien utilisée, une réunion enregistrée et répartie entre deux intervenants (précision non évaluée ; le testeur juge le son de la pièce médiocre), une interface uniquement en allemand, et plusieurs fonctions annexes non essayées.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/fr/power-local-llm/sprich-hands-on-test",
@@ -78212,7 +78293,7 @@
   {
     "lang": "ja",
     "title": "24 GBのM4 Pro MacでのSprich：あらゆるアプリに入力できるローカル音声入力",
-    "excerpt": "2回のセッション（2026年11月9日と13日）：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、室内の音がひどく悪いなか2人の話者に分けて記録された会議、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
+    "excerpt": "2回のセッション（2026年11月9日と13日）：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、2人の話者が割り当てられて記録された会議（精度は採点していません。テスターは室内の音を悪いと述べています）、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ja/power-local-llm/sprich-hands-on-test",
@@ -78221,7 +78302,7 @@
   {
     "lang": "en",
     "title": "Sprich on an M4 Pro Mac with 24 GB: Local Dictation That Types Into Any App",
-    "excerpt": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers despite poor room sound, a German-only interface, and several side features not tried.",
+    "excerpt": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers (accuracy not scored; the tester calls the room sound poor), a German-only interface, and several side features not tried.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/power-local-llm/sprich-hands-on-test",
@@ -78230,7 +78311,7 @@
   {
     "lang": "ko",
     "title": "24 GB M4 Pro Mac에서 Sprich 직접 사용: 모든 앱에 입력되는 로컬 받아쓰기",
-    "excerpt": "2026년 11월 9일과 13일의 두 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 방 안의 소리가 좋지 않았는데도 두 화자로 나뉘어 기록된 회의, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 여럿 사용해 보지 않았습니다.",
+    "excerpt": "2026년 11월 9일과 13일의 두 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 두 화자가 배정되어 기록된 회의(정확도는 평가하지 않았고, 테스터는 방 안의 소리가 좋지 않다고 말합니다), 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 여럿 사용해 보지 않았습니다.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ko/power-local-llm/sprich-hands-on-test",
@@ -78239,7 +78320,7 @@
   {
     "lang": "pt",
     "title": "Sprich em um Mac M4 Pro com 24 GB: ditado local que digita em qualquer app",
-    "excerpt": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada em dois falantes apesar do som ruim da sala, interface somente em alemão e vários recursos extras sem ser testados.",
+    "excerpt": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada com dois falantes atribuídos (precisão não avaliada; o testador considera o som da sala ruim), interface somente em alemão e vários recursos extras sem ser testados.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/pt/power-local-llm/sprich-hands-on-test",
@@ -78248,7 +78329,7 @@
   {
     "lang": "zh",
     "title": "24 GB 内存 M4 Pro Mac 上的 Sprich：能在任意应用中输入文字的本地听写",
-    "excerpt": "两次试用，2026年11月9日和13日：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；尽管房间里的声音很差，一场会议仍被录下并区分出两位说话人；界面只有德语；有几项附加功能没有试用。",
+    "excerpt": "两次试用，2026年11月9日和13日：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；一场会议被录下并分配出两位说话人（准确性未评分；测试者称房间里的声音很差）；界面只有德语；有几项附加功能没有试用。",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/zh/power-local-llm/sprich-hands-on-test",
