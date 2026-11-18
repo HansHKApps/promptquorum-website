@@ -940,6 +940,7 @@ const HUB_THEMES: Array<{
       'best-ai-marketing-software-enterprise',
       'h2ogpt-review',
       'local-llm-knowledge-retrieval-compared',
+      'local-pdf-parsers-compared',
       'milvus-review',
       'langchain-chatchat-review',
       'qdrant-review',

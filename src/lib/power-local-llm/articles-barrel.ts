@@ -193,6 +193,7 @@ import { article as a_local_llm_voice_audio_compared } from './articles/local-ll
 import { article as a_local_llm_images_video_compared } from './articles/local-llm-images-video-compared'
 import { article as a_local_llm_run_serve_compared } from './articles/local-llm-run-serve-compared'
 import { article as a_local_llm_knowledge_retrieval_compared } from './articles/local-llm-knowledge-retrieval-compared'
+import { article as a_local_pdf_parsers_compared } from './articles/local-pdf-parsers-compared'
 import { article as a_local_llm_chat_assistants_compared } from './articles/local-llm-chat-assistants-compared'
 import { article as a_local_llm_code_development_compared } from './articles/local-llm-code-development-compared'
 import { article as a_local_llm_train_operate_compared } from './articles/local-llm-train-operate-compared'
@@ -693,6 +694,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-images-video-compared':                a_local_llm_images_video_compared,
   'local-llm-run-serve-compared':                   a_local_llm_run_serve_compared,
   'local-llm-knowledge-retrieval-compared':         a_local_llm_knowledge_retrieval_compared,
+  'local-pdf-parsers-compared':                     a_local_pdf_parsers_compared,
   'local-llm-chat-assistants-compared':             a_local_llm_chat_assistants_compared,
   'local-llm-code-development-compared':            a_local_llm_code_development_compared,
   'local-llm-train-operate-compared':               a_local_llm_train_operate_compared,
