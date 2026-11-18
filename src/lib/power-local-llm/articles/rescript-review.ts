@@ -300,9 +300,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Rescript 1.2.5 ist ein Editor für Browser und Desktop, der Video oder Audio mit Whisper transkribiert, das Material beim Löschen von Wörtern schneidet und eine Zeile mit der Stimme des ursprünglichen Sprechers neu sprechen kann. Laut Website und README laufen Transkription, Bearbeitung und Export auf Ihrem eigenen Gerät, und nichts wird hochgeladen. Die Lizenz ist PolyForm Noncommercial 1.0.0, für die kommerzielle Nutzung ist daher eine kostenpflichtige Lizenz nötig. Diese Rezension beruht auf der offiziellen Website, dem GitHub-Repository mit seinen Releases sowie den Seiten zu Datenschutz, Nutzungsbedingungen und zulässiger Nutzung, geprüft am 18. November 2026. PromptQuorum hat die App nicht praktisch getestet.',
     metaDescription:
-      'Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Was belegt ist, laut Hersteller auch lokal.',
+      'Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Das ist belegt.',
     twitterDescription:
-      'Rescript: quelloffen einsehbarer Video- und Audio-Editor, der beim Löschen von Wörtern aus einem Whisper-Transkript das Material schneidet, mit Sprecherlabels und optionaler Zeilenkorrektur per Stimmklon. Was belegt ist.',
+      'Rescript: Video- und Audio-Editor mit einsehbarem Quellcode, der beim Löschen von Wörtern aus einem Whisper-Transkript das Material schneidet. Das ist belegt.',
     audience:
       'Podcaster, Interviewer und Videomacher, die sprachbasierte Aufnahmen für nicht kommerzielle Zwecke schneiden, Personen mit sensiblen Aufnahmen, die die Bearbeitung auf dem eigenen Rechner halten möchten, und Editoren, die einen textbasierten Rohschnitt wollen',
     readTime: '7 Min. Lesezeit',
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Rescript, éditeur à code source disponible, coupe vidéo et audio en supprimant des mots d’une transcription Whisper. Gratuit hors usage commercial.',
     twitterDescription:
-      'Rescript : éditeur vidéo et audio à code source disponible qui coupe les images quand vous supprimez des mots d’une transcription Whisper, avec étiquettes de locuteurs et correction de phrases à la voix clonée. Ce qui est confirmé.',
+      'Rescript : éditeur vidéo et audio à code source disponible qui coupe les images quand vous supprimez des mots d’une transcription Whisper. Ce qui est confirmé.',
     audience:
       'Podcasteurs, intervieweurs et vidéastes qui montent des enregistrements parlés pour un usage non commercial, personnes aux enregistrements sensibles qui veulent garder le montage sur leur ordinateur, et monteurs qui souhaitent un premier montage par le texte',
     readTime: '7 min de lecture',
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Rescript es un editor de código disponible que corta vídeo y audio al borrar palabras de una transcripción de Whisper. Gratis para uso no comercial.',
     twitterDescription:
-      'Rescript: editor de vídeo y audio de código disponible que corta el material al borrar palabras de una transcripción de Whisper, con etiquetas de hablantes y corrección de frases con voz clonada. Lo confirmado.',
+      'Rescript: editor de vídeo y audio de código disponible que corta el material al borrar palabras de una transcripción de Whisper. Lo confirmado.',
     audience:
       'Podcasters, entrevistadores y creadores de vídeo que cortan grabaciones habladas para uso no comercial, personas con grabaciones sensibles que quieren que la edición se quede en su equipo, y editores que quieren un primer montaje a partir del texto',
     readTime: '7 min de lectura',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'O Rescript é um editor de código disponível que corta vídeo e áudio ao apagar palavras de uma transcrição do Whisper. Grátis para uso não comercial.',
     twitterDescription:
-      'Rescript: editor de vídeo e áudio de código disponível que corta o material ao apagar palavras de uma transcrição do Whisper, com rótulos de falantes e correção de falas com voz clonada. O que está confirmado.',
+      'Rescript: editor de vídeo e áudio de código disponível que corta o material ao apagar palavras de uma transcrição do Whisper. O que está confirmado.',
     audience:
       'Podcasters, entrevistadores e criadores de vídeo que cortam gravações faladas para uso não comercial, pessoas com gravações sensíveis que querem manter a edição no próprio computador e editores que querem um primeiro corte a partir do texto',
     readTime: '7 min de leitura',
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'بحسب الشركة المصنِّعة، يعمل تفريغ Whisper مع الطوابع الزمنية لكل كلمة وتمييز المتحدثين على جهازك، في المتصفح أو في تطبيقات سطح المكتب لأنظمة macOS وWindows وLinux.',
           'احذف الكلمات لقصّ المقطع؛ نقرة واحدة تزيل "um" و"uh" والصمت الذي يبلغ 0.3 ثانية أو أكثر؛ وصدّر الفيديو أو الصوت أو النص أو الترجمات أو خطوطًا زمنية لبرامج أخرى.',
           'تعيد ميزة Regenerate نطق جملة بصوت المتحدث المستنسَخ بست لغات؛ وتشترط سياسة الاستخدام المقبول لدى الشركة المصنِّعة موافقة المتحدث.',
-          'أُنشئ المستودع في يوليو 2026؛ وصدر الإصدار 1.2.5 في 29 أكتوبر 2026، وكان آخر commit على الفرع الرئيسي في 5 نوفمبر 2026.',
+          'أُنشئ المستودع في يوليو 2026؛ وصدر الإصدار 1.2.5 في 29 أكتوبر 2026، وكان آخر تعديل على الفرع الرئيسي في 5 نوفمبر 2026.',
         ],
         updatedDate: '2026-11',
       },
@@ -2309,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'نظرة عامة',
         content: [
           '**Rescript محرر قائم على التفريغ النصي للفيديو والصوت، يصدر كتطبيق ويب وكتطبيقات لسطح المكتب على macOS وWindows وLinux بترخيص PolyForm Noncommercial 1.0.0.**',
-          'يُطوَّر علنًا على [github.com/wassgha/rescript](https://github.com/wassgha/rescript)، حيث يذكر ملف الترخيص Wassim Gharbi والمساهمين. أُنشئ المستودع في يوليو 2026؛ وظهر الإصدار 1.2.5 في 29 أكتوبر 2026، وكان آخر commit على الفرع الرئيسي في 5 نوفمبر 2026، فالتطوير نشط ولا ينطبق تحذير المشروع المتوقف. تصف الشركة المصنِّعة المشروع بأنه مفتوح المصدر؛ ولأن الترخيص يمنع الاستخدام التجاري، تصفه PromptQuorum بأنه متاح الشيفرة المصدرية. يتحدث الموقع وصفحة الخصوصية بصيغة "we" ولا يذكران اسم شركة ولا عنوانًا ولا بيانات قانونية، لكن شروط الاستخدام تخضع لقوانين ولاية كاليفورنيا في الولايات المتحدة.',
+          'يُطوَّر علنًا على [github.com/wassgha/rescript](https://github.com/wassgha/rescript)، حيث يذكر ملف الترخيص Wassim Gharbi والمساهمين. أُنشئ المستودع في يوليو 2026؛ وظهر الإصدار 1.2.5 في 29 أكتوبر 2026، وكان آخر تعديل على الفرع الرئيسي في 5 نوفمبر 2026، فالتطوير نشط ولا ينطبق تحذير المشروع المتوقف. تصف الشركة المصنِّعة المشروع بأنه مفتوح المصدر؛ ولأن الترخيص يمنع الاستخدام التجاري، تصفه PromptQuorum بأنه متاح الشيفرة المصدرية. يتحدث الموقع وصفحة الخصوصية بصيغة "we" ولا يذكران اسم شركة ولا عنوانًا ولا بيانات قانونية، لكن شروط الاستخدام تخضع لقوانين ولاية كاليفورنيا في الولايات المتحدة.',
           'بحسب الشركة المصنِّعة، تُسقط ملف فيديو أو صوت فيفرّغه Whisper على جهازك مع طوابع زمنية لكل كلمة وتمييز للمتحدثين، ويؤدي حذف الكلمات من النص المفرَّغ إلى قص المقطع المقابل. ويعرض الخط الزمني الموجة الصوتية وشريط الكلمات والمناطق المقصوصة، ويمكنك استيراد ترجمات SRT أو VTT أو JSON الخاصة بك بدل التفريغ. وتعيد ميزة Regenerate كتابة جملة محددة وتنطقها بصوت ذلك المتحدث، المستنسَخ على حاسوبك من نحو عشر ثوانٍ من صوته الموجود أصلًا في الملف.',
           'لم تشغّل PromptQuorum التطبيق ولم تتحقق من دقة التفريغ ولا من جودة القص ولا من دقة التصدير ولا من جودة الكلام المعاد توليده.',
         ],
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم مرة يُحدَّث Rescript؟',
-            a: 'يعرض GitHub الإصدار 1.2.3 في 3 أكتوبر 2026 والإصدار 1.2.4 في 5 أكتوبر 2026 والإصدار 1.2.5 في 29 أكتوبر 2026، مع commits على الفرع الرئيسي حتى 5 نوفمبر 2026. وتفحص تطبيقات سطح المكتب التحديثات عبر GitHub Releases.',
+            a: 'يعرض GitHub الإصدار 1.2.3 في 3 أكتوبر 2026 والإصدار 1.2.4 في 5 أكتوبر 2026 والإصدار 1.2.5 في 29 أكتوبر 2026، مع تعديلات على الفرع الرئيسي حتى 5 نوفمبر 2026. وتفحص تطبيقات سطح المكتب التحديثات عبر GitHub Releases.',
           },
           {
             q: 'على أي منصات يعمل Rescript؟',
@@ -2457,7 +2457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           '**يستحق Rescript نظرة إن كنت تقصّ مقابلات أو بودكاست أو مقاطع متحدث أمام الكاميرا لأغراض غير تجارية وتريد تحريرًا قائمًا على النص المفرَّغ يعمل، بحسب الشركة المصنِّعة، على حاسوبك.**',
-          'على الورق يغطي الكثير: قصّ كلمةً كلمة، وإزالة كلمات الحشو والصمت، وتمييز المتحدثين، وإعادة توليد الصوت، وتصديرًا لبرامج مونتاج أخرى. والتطوير نشط، مع ثلاثة إصدارات بين 3 و29 أكتوبر 2026 وcommit في 5 نوفمبر 2026.',
+          'على الورق يغطي الكثير: قصّ كلمةً كلمة، وإزالة كلمات الحشو والصمت، وتمييز المتحدثين، وإعادة توليد الصوت، وتصديرًا لبرامج مونتاج أخرى. والتطوير نشط، مع ثلاثة إصدارات بين 3 و29 أكتوبر 2026 وتعديل في 5 نوفمبر 2026.',
           'والمقايضات حقيقية: الاستخدام التجاري يتطلب ترخيصًا مدفوعًا دون سعر منشور، والمشروع عمره بضعة أشهر فقط، وتقول شروط الشركة المصنِّعة نفسها إن التفريغ والكلام المُصطنع يخطئان، ولم تختبر PromptQuorum شيئًا. جرّبه على نسخة من تسجيل وراجع النص المفرَّغ ومواضع القص قبل أن تعتمد عليه.',
         ],
       },
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[شروط الاستخدام](https://www.getrescript.com/terms) — الترخيص والقانون الحاكم وجهة الاتصال، مؤرخة في 8 أغسطس 2026، روجعت في 18 نوفمبر 2026.',
           '[سياسة الاستخدام المقبول](https://www.getrescript.com/acceptable-use) — قواعد الموافقة لميزة Regenerate وحدود الترخيص، روجعت في 18 نوفمبر 2026.',
           '[صفحة Regenerate](https://www.getrescript.com/regenerate-speech) — اللغات ونموذج الصوت وأحجام الحزم، روجعت في 18 نوفمبر 2026.',
-          '[مستودع GitHub](https://github.com/wassgha/rescript) — الترخيص وتاريخ الإنشاء وآخر commit، روجع في 18 نوفمبر 2026.',
+          '[مستودع GitHub](https://github.com/wassgha/rescript) — الترخيص وتاريخ الإنشاء وآخر تعديل، روجع في 18 نوفمبر 2026.',
           '[README](https://github.com/wassgha/rescript#readme) — الميزات والتقنيات والقياس عن بُعد والترخيص، روجع في 18 نوفمبر 2026.',
           '[إصدارات GitHub](https://github.com/wassgha/rescript/releases) — تواريخ الإصدارات والحزم وملاحظات v1.2.5، روجعت في 18 نوفمبر 2026.',
         ],
