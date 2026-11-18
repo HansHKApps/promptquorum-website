@@ -800,6 +800,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'fablecut-review',
   'lexora-review',
   'alpaca-review',
+  'kition-review',
 
 ])
 

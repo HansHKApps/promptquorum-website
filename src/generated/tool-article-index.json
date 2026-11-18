@@ -11068,9 +11068,17 @@
         "url": "/power-local-llm/yovoice-review",
         "dateModified": "2026-11-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "kition-review",
+        "title": "Kition Review: The Open Pro Suite for AI Agents",
+        "url": "/power-local-llm/kition-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Open Science Desktop": {
@@ -11104,9 +11112,17 @@
         "url": "/power-local-llm/fablecut-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "kition-review",
+        "title": "Kition Review: The Open Pro Suite for AI Agents",
+        "url": "/power-local-llm/kition-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "PapersGPT": {
@@ -11118,9 +11134,17 @@
         "url": "/power-local-llm/papersgpt-review",
         "dateModified": "2026-11-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "kition-review",
+        "title": "Kition Review: The Open Pro Suite for AI Agents",
+        "url": "/power-local-llm/kition-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "SoloMD": {
@@ -12256,9 +12280,17 @@
         "url": "/power-local-llm/fablecut-review",
         "dateModified": "2026-11-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "kition-review",
+        "title": "Kition Review: The Open Pro Suite for AI Agents",
+        "url": "/power-local-llm/kition-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Lexora": {
@@ -12295,6 +12327,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Kition": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "kition-review",
+        "title": "Kition Review: The Open Pro Suite for AI Agents",
+        "url": "/power-local-llm/kition-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "FunClip": {
