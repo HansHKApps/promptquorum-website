@@ -10987,6 +10987,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Open Generative AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-generative-ai-review",
+        "title": "Open Generative AI Review: Open-Source Image and Video Studio",
+        "url": "/power-local-llm/open-generative-ai-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Skales": {
     "articles": [
       {

@@ -311,6 +311,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'scrypted':                                'scrypted',
   'screenpipe':                              'screenpipe',
   'dyad':                                    'dyad',
+  'open-generative-ai':                      'open-generative-ai',
   'skales':                                  'skales',
   'halo':                                    'halo',
   'yovoice':                                 'yovoice',

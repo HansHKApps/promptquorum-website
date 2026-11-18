@@ -1114,6 +1114,11 @@
     "urlSlug": "dyad-review",
     "url": "/power-local-llm/dyad-review"
   },
+  "open-generative-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-generative-ai-review",
+    "url": "/power-local-llm/open-generative-ai-review"
+  },
   "skales": {
     "cluster": "power-local-llm",
     "urlSlug": "skales-review",
