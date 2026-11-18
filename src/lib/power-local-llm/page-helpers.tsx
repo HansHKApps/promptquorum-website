@@ -1034,6 +1034,7 @@ const HUB_THEMES: Array<{
       'letta-review',
       'open-interpreter-review',
       'openclaw-review',
+      'openhuman-review',
       'semantic-kernel-review',
       'superagi-review',
       'leon-ai-review',

@@ -638,6 +638,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Scrypted review (Voice, Speech & Multimodal, camera/NVR platform with optional local LLM summaries) — 2026-11-01
   'scrypted-review',
   'screenpipe-review',
+  'openhuman-review',
   'skales-review',
   'halo-review',
   'yovoice-review',

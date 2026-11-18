@@ -434,6 +434,11 @@
     "urlSlug": "openclaw-review",
     "url": "/power-local-llm/openclaw-review"
   },
+  "openhuman": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openhuman-review",
+    "url": "/power-local-llm/openhuman-review"
+  },
   "hermes-agent": {
     "cluster": "power-local-llm",
     "urlSlug": "hermes-agent-review",

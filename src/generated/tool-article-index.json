@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 371,
+    "totalCount": 372,
     "capped": true
   },
   "llama.cpp": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 185,
+    "totalCount": 186,
     "capped": true
   },
   "Atomic Chat": {
@@ -5040,6 +5040,20 @@
     ],
     "totalCount": 20,
     "capped": true
+  },
+  "OpenHuman": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openhuman-review",
+        "title": "OpenHuman Review: Open-Source Desktop AI Agent With Built-In Memory",
+        "url": "/power-local-llm/openhuman-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "Hermes Agent": {
     "articles": [
