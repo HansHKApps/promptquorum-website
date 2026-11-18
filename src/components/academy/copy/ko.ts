@@ -1,0 +1,68 @@
+import type { AcademyCopy } from './types'
+
+export const copy: AcademyCopy = {
+  metaTitle: 'PromptQuorum Academy: 무료 맞춤형 AI 학습',
+  metaDescription:
+    '주제, 시간, 수준을 고르십시오. PromptQuorum Academy는 PromptQuorum 가이드를 참고해 짧은 레슨을 만들고 AI 튜터, 테스트, PDF 수료증을 제공합니다.',
+  h1: 'PromptQuorum Academy',
+  intro: '로컬 AI, 프롬프트 작성 등 관련 주제를 시간과 수준에 맞춘 짧은 레슨으로 배웁니다. 무료이며 계정이 필요 없습니다.',
+  howTitle: '이용 방법',
+  steps: [
+    { name: '선택', text: '주제, 사용할 수 있는 시간, 수준을 입력합니다.' },
+    { name: '진단', text: '짧은 질문 몇 개로 이미 알고 있는 내용을 확인합니다.' },
+    { name: '맞춤화', text: '부족한 부분에 맞춘 학습 프로그램을 받습니다.' },
+    { name: '학습', text: 'PromptQuorum 가이드를 참고한 짧은 텍스트 레슨입니다.' },
+    { name: '질문', text: '읽는 동안 AI 튜터에게 질문할 수 있습니다.' },
+    { name: '테스트', text: '보기 3개 문제이며, 보기마다 해설이 있습니다.' },
+    { name: '수료증', text: '70% 이상이면 PDF 수료증을 내려받을 수 있습니다.' },
+  ],
+  disclaimer: '레슨은 AI가 작성하므로 오류가 있을 수 있습니다. 수료증은 학습 기록이며 공인된 자격이 아닙니다.',
+  hubs: {
+    'local-llms': '로컬 LLM',
+    'prompt-engineering': '프롬프트 엔지니어링',
+    'power-local-llm': '로컬 AI 앱',
+    'prompt-bites': '로컬 AI 짧은 답변',
+    'smart-home': '로컬 스마트홈',
+    'balcony-solar': '베란다 태양광',
+  },
+
+  subjectLabel: '무엇을 배우고 싶으십니까?',
+  subjectPlaceholder: '예: 노트북에서 로컬 LLM 실행하기',
+  subjectError: '주제를 입력하거나 추천 항목을 선택하십시오.',
+  suggestions: '추천 주제',
+  timeLegend: '시간이 얼마나 있으십니까?',
+  minutes: (m) => (m >= 60 && m % 60 === 0 ? `${m / 60}시간` : `${m}분`),
+  levelLegend: '수준',
+  levels: {
+    beginner: { label: '입문', hint: '이 주제가 처음입니다' },
+    some: { label: '기초 있음', hint: '기본은 알고 있습니다' },
+    experienced: { label: '숙련', hint: '깊이 배우고 싶습니다' },
+  },
+  testsLegend: '테스트',
+  tests: {
+    none: { label: '테스트 없음', hint: '학습만 합니다. 점수와 수료증이 없습니다.' },
+    final: { label: '최종 테스트만', hint: '마지막에 한 번. 수료증에 필요합니다.' },
+    per_lesson_and_final: { label: '레슨마다 + 최종 테스트', hint: '레슨마다 짧은 퀴즈, 마지막에 최종 테스트.' },
+  },
+  languageLabel: '프로그램 언어',
+  submit: '빠른 진단으로 이동',
+  restored: '이 브라우저에 저장된 지난 설정을 복원했습니다.',
+  startNew: '새로 시작',
+  storageBlocked: '이 브라우저는 저장을 허용하지 않습니다. 계속할 수 있지만 페이지를 닫으면 진행 상황이 사라집니다.',
+  loading: '불러오는 중',
+
+  diagnosticTitle: '빠른 진단',
+  diagnosticComing: '진단 질문은 아직 제공되지 않습니다. 설정은 저장되었습니다:',
+  summarySubject: '주제',
+  summaryTime: '시간',
+  summaryLevel: '수준',
+  summaryTests: '테스트',
+  summaryLanguage: '언어',
+  changeSetup: '설정 변경',
+
+  privacyNote:
+    '계정이 필요 없습니다. 진행 상황은 이 브라우저에만 저장됩니다. 레슨, 문제, 튜터 답변을 만들기 위해 주제, 답변, 튜터에게 보낸 메시지가 AI 제공업체(Anthropic)로 전송되므로 개인정보를 입력하지 마십시오. 수료증에 들어갈 이름은 이 브라우저에만 남습니다. 남용을 막기 위해 IP 주소에서 만든 단기 해시 키로 요청 횟수를 제한합니다. 피드백을 남기시면 이름이나 계정 없이 평점, 댓글, 학습한 주제를 저장합니다.',
+  deleteData: '내 데이터 삭제',
+  deleteConfirm: '이 브라우저에서 Academy 진행 상황을 삭제하시겠습니까? 되돌릴 수 없습니다.',
+  dataDeleted: '삭제되었습니다',
+}

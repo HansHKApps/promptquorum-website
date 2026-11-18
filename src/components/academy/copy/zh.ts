@@ -1,0 +1,68 @@
+import type { AcademyCopy } from './types'
+
+export const copy: AcademyCopy = {
+  metaTitle: 'PromptQuorum Academy：免费的个性化AI学习',
+  metaDescription:
+    '选择主题、可用时间和水平。PromptQuorum Academy 参考 PromptQuorum 指南生成简短课程，并提供AI辅导、测试和PDF证书。',
+  h1: 'PromptQuorum Academy',
+  intro: '用为你的时间和水平定制的短课程学习本地AI、提示词等主题。免费，无需注册账号。',
+  howTitle: '使用方式',
+  steps: [
+    { name: '选择', text: '填写主题、可用时间和你的水平。' },
+    { name: '诊断', text: '几道快速问题了解你已经掌握的内容。' },
+    { name: '定制', text: '获得一套针对你薄弱环节的学习计划。' },
+    { name: '学习', text: '参考 PromptQuorum 指南的简短文字课程。' },
+    { name: '提问', text: '阅读时随时向AI辅导提问。' },
+    { name: '测试', text: '三选一题目，每个选项都有解析。' },
+    { name: '证书', text: '达到70%即可下载PDF证书。' },
+  ],
+  disclaimer: '课程由AI撰写，可能存在错误。证书记录你的学习情况，不是经过认证的学历或资格。',
+  hubs: {
+    'local-llms': '本地LLM',
+    'prompt-engineering': '提示词工程',
+    'power-local-llm': '本地AI应用',
+    'prompt-bites': '本地AI快问快答',
+    'smart-home': '本地智能家居',
+    'balcony-solar': '阳台光伏',
+  },
+
+  subjectLabel: '你想学什么？',
+  subjectPlaceholder: '例如：在笔记本电脑上运行本地LLM',
+  subjectError: '请输入主题或选择一个建议。',
+  suggestions: '建议',
+  timeLegend: '你有多少时间？',
+  minutes: (m) => (m >= 60 && m % 60 === 0 ? `${m / 60}小时` : `${m}分钟`),
+  levelLegend: '你的水平',
+  levels: {
+    beginner: { label: '入门', hint: '第一次接触这个主题' },
+    some: { label: '有基础', hint: '了解基本概念' },
+    experienced: { label: '进阶', hint: '想深入学习' },
+  },
+  testsLegend: '测试',
+  tests: {
+    none: { label: '不测试', hint: '只学习，没有分数和证书。' },
+    final: { label: '仅期末测试', hint: '最后一次测试，获取证书必需。' },
+    per_lesson_and_final: { label: '每课测验＋期末测试', hint: '每课后一个小测验，最后是期末测试。' },
+  },
+  languageLabel: '课程语言',
+  submit: '进入快速诊断',
+  restored: '已从此浏览器恢复你上次的设置。',
+  startNew: '重新开始',
+  storageBlocked: '此浏览器不允许保存。你可以继续，但关闭页面后进度会丢失。',
+  loading: '加载中',
+
+  diagnosticTitle: '快速诊断',
+  diagnosticComing: '诊断题目暂未开放。你的设置已保存：',
+  summarySubject: '主题',
+  summaryTime: '时间',
+  summaryLevel: '水平',
+  summaryTests: '测试',
+  summaryLanguage: '语言',
+  changeSetup: '修改设置',
+
+  privacyNote:
+    '无需账号。你的进度只保存在此浏览器中。为生成课程、题目和辅导回答，你的主题、答案和发给辅导的消息会发送给我们的AI服务商（Anthropic），请勿在其中输入个人信息。证书上的姓名只保留在此浏览器中。为防止滥用，我们使用由你的IP地址生成的短期哈希密钥来限制请求次数。如果你留下反馈，我们会保存评分、评论和你学习的主题，不含姓名，也不关联账号。',
+  deleteData: '删除我的数据',
+  deleteConfirm: '要从此浏览器删除你的 Academy 进度吗？此操作无法撤销。',
+  dataDeleted: '数据已删除',
+}

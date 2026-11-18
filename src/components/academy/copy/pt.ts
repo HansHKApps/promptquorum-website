@@ -1,0 +1,69 @@
+import type { AcademyCopy } from './types'
+
+export const copy: AcademyCopy = {
+  metaTitle: 'PromptQuorum Academy: aprenda IA grátis, do seu jeito',
+  metaDescription:
+    'Escolha um tema, seu tempo e seu nível. A PromptQuorum Academy cria aulas curtas que se apoiam nos guias da PromptQuorum, com tutor de IA, testes e certificado em PDF.',
+  h1: 'PromptQuorum Academy',
+  intro: 'Aprenda IA local, prompting e temas relacionados em aulas curtas, feitas para o seu tempo e o seu nível. Grátis e sem conta.',
+  howTitle: 'Como funciona',
+  steps: [
+    { name: 'Escolher', text: 'Informe um tema, seu tempo disponível e seu nível.' },
+    { name: 'Diagnosticar', text: 'Algumas perguntas rápidas mostram o que você já sabe.' },
+    { name: 'Personalizar', text: 'Você recebe um programa montado em torno das suas lacunas.' },
+    { name: 'Aprender', text: 'Aulas curtas em texto que se apoiam nos guias da PromptQuorum.' },
+    { name: 'Perguntar', text: 'Faça perguntas ao tutor de IA enquanto lê.' },
+    { name: 'Testar', text: 'Perguntas com três respostas e uma explicação para cada uma.' },
+    { name: 'Certificar', text: 'Atinja 70% e baixe um certificado em PDF.' },
+  ],
+  disclaimer:
+    'As aulas são escritas por IA e podem conter erros. O certificado registra seu aprendizado; não é uma qualificação reconhecida oficialmente.',
+  hubs: {
+    'local-llms': 'LLMs locais',
+    'prompt-engineering': 'Prompt engineering',
+    'power-local-llm': 'Apps de IA local',
+    'prompt-bites': 'Respostas rápidas sobre IA local',
+    'smart-home': 'Casa inteligente local',
+    'balcony-solar': 'Energia solar de varanda',
+  },
+
+  subjectLabel: 'O que você quer aprender?',
+  subjectPlaceholder: 'ex.: Rodar um LLM local no meu notebook',
+  subjectError: 'Digite um tema ou escolha uma sugestão.',
+  suggestions: 'Sugestões',
+  timeLegend: 'Quanto tempo você tem?',
+  minutes: (m) => (m >= 60 && m % 60 === 0 ? `${m / 60} h` : `${m} min`),
+  levelLegend: 'Seu nível',
+  levels: {
+    beginner: { label: 'Iniciante', hint: 'Sou novo no tema' },
+    some: { label: 'Conhecimento básico', hint: 'Conheço o básico' },
+    experienced: { label: 'Avançado', hint: 'Quero me aprofundar' },
+  },
+  testsLegend: 'Testes',
+  tests: {
+    none: { label: 'Sem teste', hint: 'Só aprender. Sem nota e sem certificado.' },
+    final: { label: 'Só teste final', hint: 'Um teste no fim. Necessário para o certificado.' },
+    per_lesson_and_final: { label: 'Cada aula + teste final', hint: 'Um quiz curto após cada aula e depois o teste final.' },
+  },
+  languageLabel: 'Idioma do seu programa',
+  submit: 'Continuar para o diagnóstico',
+  restored: 'Recuperamos sua última configuração deste navegador.',
+  startNew: 'Começar de novo',
+  storageBlocked: 'Este navegador não permite salvar. Você pode continuar, mas seu progresso será perdido ao fechar a página.',
+  loading: 'Carregando',
+
+  diagnosticTitle: 'Diagnóstico rápido',
+  diagnosticComing: 'As perguntas de diagnóstico ainda não estão disponíveis. Sua configuração está salva:',
+  summarySubject: 'Tema',
+  summaryTime: 'Tempo',
+  summaryLevel: 'Nível',
+  summaryTests: 'Testes',
+  summaryLanguage: 'Idioma',
+  changeSetup: 'Alterar configuração',
+
+  privacyNote:
+    'Não precisa de conta. Seu progresso fica salvo apenas neste navegador. Para criar aulas, perguntas e respostas do tutor, seu tema, suas respostas e suas mensagens ao tutor são enviados ao nosso provedor de IA (Anthropic); não digite dados pessoais neles. O nome do seu certificado fica neste navegador. Para evitar abusos, as solicitações são limitadas com uma chave temporária em hash derivada do seu endereço IP. Se você deixar uma avaliação, guardamos a nota, o comentário e o tema estudado, sem seu nome e sem conta.',
+  deleteData: 'Apagar meus dados',
+  deleteConfirm: 'Apagar seu progresso na Academy deste navegador? Não é possível desfazer.',
+  dataDeleted: 'Dados apagados',
+}
