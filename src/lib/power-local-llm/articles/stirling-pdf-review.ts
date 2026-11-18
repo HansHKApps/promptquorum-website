@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "heroImage": "/images/stirling-pdf-review-hero-en.webp",
@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF is an open-core PDF toolkit that edits, converts, OCRs, redacts and batch-processes PDFs, as a desktop app, a self-hosted server or an API.",
       "bullets": [
         "License: MIT with exceptions; some directories are under separate licenses.",
-        "Price: free for individual use per the site; paid Server Plan and Enterprise offerings have no published prices.",
+        "Price: per the maker's pricing page, Free is $0 per month, Team is $99 per month for 100 users, Enterprise has custom pricing and terms, and the PDF Processor costs 1¢ per credit.",
         "Platforms: Windows, macOS, Linux, Docker, Kubernetes, manual .jar server.",
         "Not tested by PromptQuorum."
       ]
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF is a widely starred open-core PDF toolkit.** The project is actively maintained: latest release 3.3.0 (2026-11-05), last commit 2026-11-15.",
           "It runs as a desktop app on Windows, macOS and Linux, or as a self-hosted server via Docker, Kubernetes or a .jar.",
-          "The site says it is free for individual use. Paid Server Plan and Enterprise offerings exist, but no prices were found.",
+          "Per the maker's pricing page, the Free plan ('The private PDF editor for individuals') costs $0 per month and includes 1,000 monthly credits; Team costs $99 per month for 100 users; Enterprise has custom pricing and terms; the PDF Processor costs 1¢ per credit.",
           "The MIT license has exceptions: some directories fall under separate licenses.",
           "The maker says documents are not sent to external services. That is a maker claim, and the AI features' data flow is not documented in the sources.",
           "PromptQuorum has not tested the app."
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "No-code pipelines in the UI and APIs for batch processing, including OCR, classify, validate, redact, compress and route.",
           "REST API for nearly all tools, plus an MCP interface and webhooks.",
           "AI assistant that makes edits in the open file (redact, translate, summarize, convert).",
-          "SSO, auditing and flexible on-prem deployments, described as 'Enterprise-grade'.",
+          "SSO, auditing and flexible on-prem deployments, described as 'Enterprise-grade'. Per the pricing page, SSO is listed under Team; air-gapped deployment, SCIM provisioning, data residency, audit logs and uptime SLAs are listed under Enterprise.",
           "Interface in 40+ languages.",
           "Per Pocket-lint, the text editor was in an Alpha phase at the time of its review."
         ]
@@ -253,8 +253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "What We Could Not Verify",
         "items": [
           "**Several decision-relevant points are not confirmed by the sources.**",
-          "Prices: no amounts or tiers appear on the fetched pricing page, which asks visitors to book a demo. It is also unclear which features (SSO, auditing, on-prem) belong to which paid plan.",
-          "Full licensing: the LICENSE is MIT, but the clause on the engine/ directory is truncated, and app/proprietary and app/saas are under separate licenses. Anyone who needs a purely open-source license for all components should check the LICENSE first.",
+          "Prices: the maker's pricing page lists Free ($0 per month), Team ($99 per month for 100 users), Enterprise (custom) and a PDF Processor (1¢ per credit). We did not check what a credit buys, how credits are counted per tool, or the terms behind Team and Enterprise.",
+          "Full licensing: the LICENSE is MIT, but it assigns several directories (app/proprietary, app/saas, engine/, and parts of frontend/src/editor and frontend/src/processor) to separate licenses whose terms we did not read. Anyone who needs a purely open-source license for all components should check the LICENSE first.",
           "System requirements: RAM, GPU, disk and Java version are not stated.",
           "AI model and OCR engine: not named, and it is unclear whether AI features stay offline. Anyone who needs strictly offline AI should not assume it.",
           "Telemetry in the current version: only third-party statements (Contabo, a forum test) were found.",
@@ -287,11 +287,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternative": "UPDF",
-            "What the sources say": "Sells a competing PDF product and publishes a review of Stirling PDF, so that review is biased."
+            "What the sources say": "Sells a competing PDF product and publishes a review of Stirling PDF, so that review comes from a party with a commercial interest."
           },
           {
             "Alternative": "SwifDoo PDF",
-            "What the sources say": "Sells a competing PDF product and publishes a review of Stirling PDF, so that review is biased."
+            "What the sources say": "Sells a competing PDF product and publishes a review of Stirling PDF, so that review comes from a party with a commercial interest."
           }
         ]
       },
@@ -301,11 +301,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Is Stirling PDF free?",
-            "a": "The site says it is free for individual use, and the project is open-core. Paid Server Plan and Enterprise offerings exist, but no prices appear in the fetched pages."
+            "a": "Per the maker's pricing page, yes for individuals: the Free plan costs $0 per month with no card required and includes 1,000 monthly credits. Team costs $99 per month for 100 users, Enterprise has custom pricing and terms, and the PDF Processor costs 1¢ per credit. The project is open-core and the MIT license has exceptions; check the pricing page for current terms."
           },
           {
             "q": "Is it really open source?",
-            "a": "The LICENSE is MIT, but it states that some directories (app/proprietary, app/saas and engine/, the last clause truncated) have separate licenses. The README calls the project open-core."
+            "a": "The LICENSE is MIT, but it states that several directories (app/proprietary, app/saas, engine/, and parts of frontend/src/editor and frontend/src/processor) have separate licenses. The README calls the project open-core."
           },
           {
             "q": "How do I install it quickly?",
@@ -325,8 +325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Verdict",
         "content": [
-          "**Stirling PDF looks like a well-maintained, widely used option for local or self-hosted PDF work, with open questions about licensing, pricing and the AI features.** It has many installer formats, an API and active development (last commit 2026-11-15).",
-          "Before relying on it, read the LICENSE, ask the maker about paid-plan pricing and check how the AI features handle data. PromptQuorum has not tested the app, so this verdict rests on the maker's statements and public sources."
+          "**Stirling PDF looks like a well-maintained, widely used option for local or self-hosted PDF work, with open questions about licensing and the AI features.** It has many installer formats, an API and active development (last commit 2026-11-15).",
+          "Before relying on it, read the LICENSE, check the pricing page for current terms and check how the AI features handle data. PromptQuorum has not tested the app, so this verdict rests on the maker's statements and public sources."
         ]
       },
       "sources": {
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Stirling PDF im Überblick: Open-Core-PDF-Toolkit für Desktop und Self-Hosting",
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF ist ein Open-Core-PDF-Toolkit, das PDFs bearbeitet, konvertiert, per OCR erkennt, schwärzt und stapelweise verarbeitet – als Desktop-App, als selbst gehosteter Server oder als API.",
       "bullets": [
         "Lizenz: MIT mit Ausnahmen; einige Verzeichnisse stehen unter gesonderten Lizenzen.",
-        "Preis: laut Website für Privatpersonen kostenlos; für das kostenpflichtige Server Plan und die Enterprise-Angebote sind keine Preise veröffentlicht.",
+        "Preis: laut Preisseite des Herstellers kostet Free 0 US-Dollar pro Monat, Team 99 US-Dollar pro Monat für 100 Nutzer; Enterprise hat individuelle Preise und Konditionen, der PDF Processor kostet 1 US-Cent pro Credit.",
         "Plattformen: Windows, macOS, Linux, Docker, Kubernetes, manueller .jar-Server.",
         "Von PromptQuorum nicht getestet."
       ]
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF ist ein vielfach mit Sternen markiertes Open-Core-PDF-Toolkit.** Das Projekt wird aktiv gepflegt: neueste Version 3.3.0 (5. November 2026), letzter Commit am 15. November 2026.",
           "Es läuft als Desktop-App unter Windows, macOS und Linux oder als selbst gehosteter Server über Docker, Kubernetes oder eine .jar-Datei.",
-          "Laut Website ist es für Privatpersonen kostenlos. Kostenpflichtige Angebote (Server Plan und Enterprise) existieren, Preise wurden jedoch nicht gefunden.",
+          "Laut Preisseite des Herstellers kostet der Tarif Free (für Einzelpersonen gedacht) 0 US-Dollar pro Monat und enthält 1.000 Credits pro Monat; Team kostet 99 US-Dollar pro Monat für 100 Nutzer; Enterprise hat individuelle Preise und Konditionen; der PDF Processor kostet 1 US-Cent pro Credit.",
           "Die MIT-Lizenz hat Ausnahmen: Einige Verzeichnisse fallen unter gesonderte Lizenzen.",
           "Der Hersteller sagt, Dokumente würden nicht an externe Dienste gesendet. Das ist eine Herstelleraussage; der Datenfluss der KI-Funktionen ist in den Quellen nicht dokumentiert.",
           "PromptQuorum hat die App nicht getestet."
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "No-Code-Pipelines in der Oberfläche und APIs für die Stapelverarbeitung, darunter OCR, Klassifizieren, Validieren, Schwärzen, Komprimieren und Weiterleiten.",
           "REST API für nahezu alle Werkzeuge sowie eine MCP-Schnittstelle und Webhooks.",
           "KI-Assistent, der Änderungen in der geöffneten Datei vornimmt (schwärzen, übersetzen, zusammenfassen, konvertieren).",
-          "SSO, Auditing und flexible On-Premises-Bereitstellung, beschrieben als „Enterprise-grade“.",
+          "SSO, Auditing und flexible On-Premises-Bereitstellung, beschrieben als „Enterprise-grade“. Laut Preisseite ist SSO im Tarif Team aufgeführt; Air-Gap-Bereitstellung, SCIM-Provisionierung, Datenresidenz, Audit-Logs und Verfügbarkeits-SLAs stehen unter Enterprise.",
           "Oberfläche in mehr als 40 Sprachen.",
           "Laut Pocket-lint befand sich der Texteditor zum Zeitpunkt der Besprechung in einer Alpha-Phase."
         ]
@@ -600,8 +600,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Was wir nicht prüfen konnten",
         "items": [
           "**Mehrere entscheidungsrelevante Punkte sind durch die Quellen nicht bestätigt.**",
-          "Preise: Auf der abgerufenen Preisseite stehen weder Beträge noch Stufen; Besucher werden aufgefordert, eine Demo zu buchen. Unklar ist auch, welche Funktionen (SSO, Auditing, On-Premises) zu welchem kostenpflichtigen Tarif gehören.",
-          "Vollständige Lizenzierung: Die LICENSE ist MIT, aber die Klausel zum Verzeichnis engine/ ist abgeschnitten, und app/proprietary sowie app/saas stehen unter gesonderten Lizenzen. Wer für alle Komponenten eine rein quelloffene Lizenz benötigt, sollte zuerst die LICENSE prüfen.",
+          "Preise: Die Preisseite des Herstellers nennt Free (0 US-Dollar pro Monat), Team (99 US-Dollar pro Monat für 100 Nutzer), Enterprise (individuell) und einen PDF Processor (1 US-Cent pro Credit). Nicht geprüft wurde, was ein Credit abdeckt, wie Credits pro Werkzeug gezählt werden und welche Bedingungen hinter Team und Enterprise stehen.",
+          "Vollständige Lizenzierung: Die LICENSE ist MIT, weist aber mehrere Verzeichnisse (app/proprietary, app/saas, engine/ sowie Teile von frontend/src/editor und frontend/src/processor) gesonderten Lizenzen zu, deren Bedingungen wir nicht gelesen haben. Wer für alle Komponenten eine rein quelloffene Lizenz benötigt, sollte zuerst die LICENSE prüfen.",
           "Systemanforderungen: RAM, GPU, Speicherplatz und Java-Version sind nicht angegeben.",
           "KI-Modell und OCR-Engine: nicht benannt, und es ist unklar, ob KI-Funktionen offline bleiben. Wer ausschließlich Offline-KI benötigt, sollte das nicht voraussetzen.",
           "Telemetrie in der aktuellen Version: Es wurden nur Aussagen Dritter (Contabo, ein Forumstest) gefunden.",
@@ -634,11 +634,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternative": "UPDF",
-            "Aussage der Quellen": "Verkauft ein konkurrierendes PDF-Produkt und veröffentlicht eine Besprechung von Stirling PDF, die daher voreingenommen ist."
+            "Aussage der Quellen": "Verkauft ein konkurrierendes PDF-Produkt und veröffentlicht eine Besprechung von Stirling PDF; diese Besprechung stammt daher von einer Partei mit wirtschaftlichem Interesse."
           },
           {
             "Alternative": "SwifDoo PDF",
-            "Aussage der Quellen": "Verkauft ein konkurrierendes PDF-Produkt und veröffentlicht eine Besprechung von Stirling PDF, die daher voreingenommen ist."
+            "Aussage der Quellen": "Verkauft ein konkurrierendes PDF-Produkt und veröffentlicht eine Besprechung von Stirling PDF; diese Besprechung stammt daher von einer Partei mit wirtschaftlichem Interesse."
           }
         ]
       },
@@ -648,11 +648,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Ist Stirling PDF kostenlos?",
-            "a": "Laut Website ist es für Privatpersonen kostenlos, und das Projekt ist Open-Core. Kostenpflichtige Angebote (Server Plan und Enterprise) existieren, Preise stehen auf den abgerufenen Seiten jedoch nicht."
+            "a": "Laut Preisseite des Herstellers ja für Einzelpersonen: Der Tarif Free kostet 0 US-Dollar pro Monat, ohne Karte, und enthält 1.000 Credits pro Monat. Team kostet 99 US-Dollar pro Monat für 100 Nutzer, Enterprise hat individuelle Preise und Konditionen, der PDF Processor kostet 1 US-Cent pro Credit. Das Projekt ist Open-Core und die MIT-Lizenz hat Ausnahmen; aktuelle Konditionen stehen auf der Preisseite."
           },
           {
             "q": "Ist es wirklich Open Source?",
-            "a": "Die LICENSE ist MIT, hält aber fest, dass einige Verzeichnisse (app/proprietary, app/saas und engine/, wobei die letzte Klausel abgeschnitten ist) gesonderte Lizenzen haben. Die README bezeichnet das Projekt als Open-Core."
+            "a": "Die LICENSE ist MIT, hält aber fest, dass mehrere Verzeichnisse (app/proprietary, app/saas, engine/ sowie Teile von frontend/src/editor und frontend/src/processor) gesonderte Lizenzen haben. Die README bezeichnet das Projekt als Open-Core."
           },
           {
             "q": "Wie installiere ich es schnell?",
@@ -672,8 +672,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Fazit",
         "content": [
-          "**Stirling PDF wirkt wie eine gut gepflegte, weit verbreitete Option für lokale oder selbst gehostete PDF-Arbeit, mit offenen Fragen zu Lizenzierung, Preisen und den KI-Funktionen.** Es bietet viele Installationsformate, eine API und aktive Entwicklung (letzter Commit am 15. November 2026).",
-          "Lesen Sie vor dem Einsatz die LICENSE, fragen Sie den Hersteller nach den Preisen der kostenpflichtigen Tarife und prüfen Sie, wie die KI-Funktionen mit Daten umgehen. PromptQuorum hat die App nicht getestet; dieses Fazit beruht daher auf Herstelleraussagen und öffentlichen Quellen."
+          "**Stirling PDF wirkt wie eine gut gepflegte, weit verbreitete Option für lokale oder selbst gehostete PDF-Arbeit, mit offenen Fragen zu Lizenzierung und den KI-Funktionen.** Es bietet viele Installationsformate, eine API und aktive Entwicklung (letzter Commit am 15. November 2026).",
+          "Lesen Sie vor dem Einsatz die LICENSE, prüfen Sie auf der Preisseite die aktuellen Konditionen und prüfen Sie, wie die KI-Funktionen mit Daten umgehen. PromptQuorum hat die App nicht getestet; dieses Fazit beruht daher auf Herstelleraussagen und öffentlichen Quellen."
         ]
       },
       "sources": {
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Avis sur Stirling PDF : boîte à outils PDF open-core pour poste et auto-hébergement",
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF est une boîte à outils PDF open-core qui modifie, convertit, passe à l'OCR, caviarde et traite par lots des PDF, sous forme d'application de bureau, de serveur auto-hébergé ou d'API.",
       "bullets": [
         "Licence : MIT avec exceptions ; certains répertoires relèvent de licences distinctes.",
-        "Prix : gratuit pour un usage individuel selon le site ; les offres payantes Server Plan et Enterprise n'ont pas de prix publiés.",
+        "Prix : selon la page de tarifs de l'éditeur, Free coûte 0 $ US par mois et Team 99 $ US par mois pour 100 utilisateurs ; Enterprise a des prix et conditions sur mesure, et le PDF Processor coûte 1 cent US par crédit.",
         "Plateformes : Windows, macOS, Linux, Docker, Kubernetes, serveur .jar manuel.",
         "Non testé par PromptQuorum."
       ]
@@ -810,7 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF est une boîte à outils PDF open-core très suivie.** Le projet est activement maintenu : dernière version 3.3.0 (5 novembre 2026), dernier commit le 15 novembre 2026.",
           "Elle fonctionne comme application de bureau sous Windows, macOS et Linux, ou comme serveur auto-hébergé via Docker, Kubernetes ou un .jar.",
-          "Le site indique qu'elle est gratuite pour un usage individuel. Des offres payantes Server Plan et Enterprise existent, mais aucun prix n'a été trouvé.",
+          "Selon la page de tarifs de l'éditeur, l'offre Free (destinée aux particuliers) coûte 0 $ US par mois et inclut 1 000 crédits mensuels ; Team coûte 99 $ US par mois pour 100 utilisateurs ; Enterprise a des prix et conditions sur mesure ; le PDF Processor coûte 1 cent US par crédit.",
           "La licence MIT comporte des exceptions : certains répertoires relèvent de licences distinctes.",
           "L'éditeur affirme que les documents ne sont pas envoyés à des services externes. C'est une affirmation de l'éditeur, et le flux de données des fonctions d'IA n'est pas documenté dans les sources.",
           "PromptQuorum n'a pas testé l'application."
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Pipelines sans code dans l'interface et API pour le traitement par lots, dont OCR, classification, validation, caviardage, compression et routage.",
           "API REST pour la quasi-totalité des outils, plus une interface MCP et des webhooks.",
           "Assistant IA qui effectue des modifications dans le fichier ouvert (caviarder, traduire, résumer, convertir).",
-          "SSO, audit et déploiements sur site flexibles, décrits comme « Enterprise-grade ».",
+          "SSO, audit et déploiements sur site flexibles, décrits comme « Enterprise-grade ». Selon la page de tarifs, le SSO figure dans l'offre Team ; le déploiement isolé (air-gapped), le provisionnement SCIM, la résidence des données, les journaux d'audit et les SLA de disponibilité figurent dans Enterprise.",
           "Interface disponible dans plus de 40 langues.",
           "Selon Pocket-lint, l'éditeur de texte était en phase Alpha au moment de son test."
         ]
@@ -948,8 +948,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Ce que nous n'avons pas pu vérifier",
         "items": [
           "**Plusieurs points importants pour la décision ne sont pas confirmés par les sources.**",
-          "Prix : aucun montant ni formule n'apparaît sur la page de tarifs consultée, qui invite à réserver une démonstration. On ne sait pas non plus quelles fonctions (SSO, audit, sur site) relèvent de quelle offre payante.",
-          "Licence complète : la LICENSE est MIT, mais la clause sur le répertoire engine/ est tronquée, et app/proprietary et app/saas relèvent de licences distinctes. Quiconque a besoin d'une licence purement open source pour tous les composants doit d'abord consulter la LICENSE.",
+          "Prix : la page de tarifs de l'éditeur indique Free (0 $ US par mois), Team (99 $ US par mois pour 100 utilisateurs), Enterprise (sur mesure) et un PDF Processor (1 cent US par crédit). Nous n'avons pas vérifié ce qu'un crédit permet d'obtenir, comment les crédits sont comptés par outil ni les conditions de Team et Enterprise.",
+          "Licence complète : la LICENSE est MIT, mais elle attribue plusieurs répertoires (app/proprietary, app/saas, engine/ ainsi que des parties de frontend/src/editor et de frontend/src/processor) à des licences distinctes dont nous n'avons pas lu les conditions. Quiconque a besoin d'une licence purement open source pour tous les composants doit d'abord consulter la LICENSE.",
           "Configuration requise : RAM, GPU, disque et version de Java ne sont pas indiqués.",
           "Modèle d'IA et moteur OCR : non nommés, et on ne sait pas si les fonctions d'IA restent hors ligne. Quiconque a besoin d'une IA strictement hors ligne ne doit pas le présumer.",
           "Télémétrie dans la version actuelle : seules des déclarations de tiers (Contabo, un test sur forum) ont été trouvées.",
@@ -982,11 +982,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternative": "UPDF",
-            "Ce que disent les sources": "Vend un produit PDF concurrent et publie un avis sur Stirling PDF, cet avis est donc partial."
+            "Ce que disent les sources": "Vend un produit PDF concurrent et publie un avis sur Stirling PDF ; cet avis émane donc d'une partie ayant un intérêt commercial."
           },
           {
             "Alternative": "SwifDoo PDF",
-            "Ce que disent les sources": "Vend un produit PDF concurrent et publie un avis sur Stirling PDF, cet avis est donc partial."
+            "Ce que disent les sources": "Vend un produit PDF concurrent et publie un avis sur Stirling PDF ; cet avis émane donc d'une partie ayant un intérêt commercial."
           }
         ]
       },
@@ -996,11 +996,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Stirling PDF est-il gratuit ?",
-            "a": "Le site indique qu'il est gratuit pour un usage individuel, et le projet est open-core. Des offres payantes Server Plan et Enterprise existent, mais aucun prix n'apparaît dans les pages consultées."
+            "a": "Selon la page de tarifs de l'éditeur, oui pour les particuliers : l'offre Free coûte 0 $ US par mois, sans carte bancaire, et inclut 1 000 crédits mensuels. Team coûte 99 $ US par mois pour 100 utilisateurs, Enterprise a des prix et conditions sur mesure, et le PDF Processor coûte 1 cent US par crédit. Le projet est open-core et la licence MIT comporte des exceptions ; consultez la page de tarifs pour les conditions actuelles."
           },
           {
             "q": "Est-il vraiment open source ?",
-            "a": "La LICENSE est MIT, mais elle précise que certains répertoires (app/proprietary, app/saas et engine/, cette dernière clause étant tronquée) ont des licences distinctes. Le README qualifie le projet d'open-core."
+            "a": "La LICENSE est MIT, mais elle précise que plusieurs répertoires (app/proprietary, app/saas, engine/ ainsi que des parties de frontend/src/editor et de frontend/src/processor) ont des licences distinctes. Le README qualifie le projet d'open-core."
           },
           {
             "q": "Comment l'installer rapidement ?",
@@ -1020,8 +1020,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Verdict",
         "content": [
-          "**Stirling PDF semble être une option bien maintenue et très utilisée pour le travail PDF local ou auto-hébergé, avec des questions ouvertes sur la licence, les prix et les fonctions d'IA.** Elle propose de nombreux formats d'installation, une API et un développement actif (dernier commit le 15 novembre 2026).",
-          "Avant de vous y fier, lisez la LICENSE, interrogez l'éditeur sur le prix des offres payantes et vérifiez comment les fonctions d'IA traitent les données. PromptQuorum n'a pas testé l'application : ce verdict repose sur les déclarations de l'éditeur et sur des sources publiques."
+          "**Stirling PDF semble être une option bien maintenue et très utilisée pour le travail PDF local ou auto-hébergé, avec des questions ouvertes sur la licence et les fonctions d'IA.** Elle propose de nombreux formats d'installation, une API et un développement actif (dernier commit le 15 novembre 2026).",
+          "Avant de vous y fier, lisez la LICENSE, consultez la page de tarifs pour les conditions actuelles et vérifiez comment les fonctions d'IA traitent les données. PromptQuorum n'a pas testé l'application : ce verdict repose sur les déclarations de l'éditeur et sur des sources publiques."
         ]
       },
       "sources": {
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Stirling PDFレビュー：デスクトップとセルフホストで使えるオープンコアのPDFツールキット",
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDFは、PDFの編集、変換、OCR、墨消し、一括処理を行うオープンコアのPDFツールキットで、デスクトップアプリ、セルフホストサーバー、APIとして使えます。",
       "bullets": [
         "ライセンス：例外付きのMIT。一部のディレクトリは別のライセンスです。",
-        "価格：サイトによると個人利用は無料。有料のServer PlanとEnterpriseの価格は公開されていません。",
+        "価格：開発元の料金ページによると、Freeは月額0米ドル、Teamは100ユーザー分で月額99米ドル、Enterpriseは価格と条件がカスタム、PDF Processorは1クレジットあたり1セントです。",
         "対応環境：Windows、macOS、Linux、Docker、Kubernetes、手動の.jarサーバー。",
         "PromptQuorumによる検証は行っていません。"
       ]
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDFは、多くのスターを集めているオープンコアのPDFツールキットです。**プロジェクトは活発に保守されており、最新リリースは3.3.0（2026年11月5日）、最終コミットは2026年11月15日です。",
           "Windows、macOS、Linuxのデスクトップアプリとして、またはDocker、Kubernetes、.jarによるセルフホストサーバーとして動作します。",
-          "サイトによると個人利用は無料です。有料のServer PlanとEnterpriseがありますが、価格は見つかりませんでした。",
+          "開発元の料金ページによると、Freeプラン（個人向け）は月額0米ドルで毎月1,000クレジットが含まれ、Teamは100ユーザー分で月額99米ドル、Enterpriseは価格と条件がカスタム、PDF Processorは1クレジットあたり1セントです。",
           "MITライセンスには例外があり、一部のディレクトリは別のライセンスの対象です。",
           "開発元は、ドキュメントを外部サービスへ送信しないとしています。これは開発元の主張であり、AI機能のデータの流れは情報源に記載がありません。",
           "PromptQuorumはこのアプリを検証していません。"
@@ -1266,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "UIのノーコードパイプラインと、OCR、分類、検証、墨消し、圧縮、振り分けなどの一括処理用API。",
           "ほぼすべてのツールに対応するREST API、MCPインターフェース、Webhook。",
           "開いているファイルを編集するAIアシスタント（墨消し、翻訳、要約、変換）。",
-          "SSO、監査、柔軟なオンプレミス展開。「Enterprise-grade」と説明されています。",
+          "SSO、監査、柔軟なオンプレミス展開。「Enterprise-grade」と説明されています。料金ページでは、SSOはTeam、エアギャップ展開・SCIMプロビジョニング・データレジデンシー・監査ログ・稼働率SLAはEnterpriseに記載されています。",
           "40以上の言語に対応したインターフェース。",
           "Pocket-lintによると、同誌のレビュー時点ではテキストエディタはAlpha段階でした。"
         ]
@@ -1296,8 +1296,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "確認できなかった点",
         "items": [
           "**判断に関わる複数の点が、情報源では確認できませんでした。**",
-          "価格：取得した料金ページには金額やプランの記載がなく、デモの予約を求めています。また、SSO、監査、オンプレミスなどの機能がどの有料プランに含まれるかも不明です。",
-          "ライセンスの全容：LICENSEはMITですが、engine/ディレクトリに関する条項は途中で切れており、app/proprietaryとapp/saasは別のライセンスです。全コンポーネントで純粋なオープンソースライセンスが必要な方は、先にLICENSEをご確認ください。",
+          "価格：開発元の料金ページには、Free（月額0米ドル）、Team（100ユーザー分で月額99米ドル）、Enterprise（カスタム）、PDF Processor（1クレジットあたり1セント）が記載されています。1クレジットで何ができるか、ツールごとのクレジットの数え方、TeamとEnterpriseの条件は確認していません。",
+          "ライセンスの全容：LICENSEはMITですが、複数のディレクトリ（app/proprietary、app/saas、engine/、およびfrontend/src/editorとfrontend/src/processorの一部）は別のライセンスとされており、その条件は確認していません。全コンポーネントで純粋なオープンソースライセンスが必要な方は、先にLICENSEをご確認ください。",
           "システム要件：RAM、GPU、ディスク、Javaバージョンの記載はありません。",
           "AIモデルとOCRエンジン：名称が示されておらず、AI機能がオフラインで動くかどうかも不明です。厳密にオフラインのAIが必要な方は、動くものと決めつけないでください。",
           "現行バージョンのテレメトリ：第三者の記述（Contabo、フォーラムでの検証）のみ見つかりました。",
@@ -1330,11 +1330,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "代替ツール": "UPDF",
-            "情報源の記載": "競合するPDF製品を販売し、Stirling PDFのレビューも公開しているため、そのレビューには偏りがあります。"
+            "情報源の記載": "競合するPDF製品を販売し、Stirling PDFのレビューも公開しています。そのレビューは商業的な利害関係のある立場から書かれたものです。"
           },
           {
             "代替ツール": "SwifDoo PDF",
-            "情報源の記載": "競合するPDF製品を販売し、Stirling PDFのレビューも公開しているため、そのレビューには偏りがあります。"
+            "情報源の記載": "競合するPDF製品を販売し、Stirling PDFのレビューも公開しています。そのレビューは商業的な利害関係のある立場から書かれたものです。"
           }
         ]
       },
@@ -1344,11 +1344,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Stirling PDFは無料ですか？",
-            "a": "サイトによると個人利用は無料で、プロジェクトはオープンコアです。有料のServer PlanとEnterpriseがありますが、取得したページに価格の記載はありません。"
+            "a": "開発元の料金ページによると、個人向けは無料です。Freeプランは月額0米ドルでカード不要、毎月1,000クレジットが含まれます。Teamは100ユーザー分で月額99米ドル、Enterpriseは価格と条件がカスタム、PDF Processorは1クレジットあたり1セントです。プロジェクトはオープンコアで、MITライセンスには例外があります。最新の条件は料金ページで確認してください。"
           },
           {
             "q": "本当にオープンソースですか？",
-            "a": "LICENSEはMITですが、一部のディレクトリ（app/proprietary、app/saas、engine/。最後の条項は途中で切れています）は別のライセンスだと明記されています。READMEはこのプロジェクトをオープンコアと呼んでいます。"
+            "a": "LICENSEはMITですが、複数のディレクトリ（app/proprietary、app/saas、engine/、およびfrontend/src/editorとfrontend/src/processorの一部）は別のライセンスだと明記されています。READMEはこのプロジェクトをオープンコアと呼んでいます。"
           },
           {
             "q": "手早く導入するにはどうすればよいですか？",
@@ -1368,8 +1368,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "総評",
         "content": [
-          "**Stirling PDFは、ローカルまたはセルフホストでのPDF作業向けに、保守が行き届き広く使われている選択肢に見えますが、ライセンス、価格、AI機能については未解決の点があります。**多様なインストーラー形式、API、活発な開発（最終コミットは2026年11月15日）を備えています。",
-          "頼る前に、LICENSEを読み、有料プランの価格を開発元に確認し、AI機能のデータの扱いを調べてください。PromptQuorumはこのアプリを検証していないため、この総評は開発元の主張と公開情報に基づいています。"
+          "**Stirling PDFは、ローカルまたはセルフホストでのPDF作業向けに、保守が行き届き広く使われている選択肢に見えますが、ライセンスとAI機能については未解決の点があります。**多様なインストーラー形式、API、活発な開発（最終コミットは2026年11月15日）を備えています。",
+          "頼る前に、LICENSEを読み、料金ページで最新の条件を確認し、AI機能のデータの扱いを調べてください。PromptQuorumはこのアプリを検証していないため、この総評は開発元の主張と公開情報に基づいています。"
         ]
       },
       "sources": {
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Stirling PDF 评测：面向桌面和自托管的开放核心 PDF 工具包",
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF 是一款开放核心 PDF 工具包，可编辑、转换、OCR、涂黑脱敏并批量处理 PDF，提供桌面应用、自托管服务器和 API 三种形式。",
       "bullets": [
         "许可证：MIT 并带有例外条款，部分目录适用单独的许可证。",
-        "价格：据官网所述个人使用免费；付费的 Server Plan 和 Enterprise 方案未公布价格。",
+        "价格：据开发方定价页面，Free 为每月 0 美元，Team 为每月 99 美元（含 100 名用户），Enterprise 为定制价格与条款，PDF Processor 每积分 1 美分。",
         "平台：Windows、macOS、Linux、Docker、Kubernetes、手动部署 .jar 服务器。",
         "PromptQuorum 未测试。"
       ]
@@ -1506,7 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF 是一款获得大量星标的开放核心 PDF 工具包。** 项目维护活跃：最新版本 3.3.0（2026年11月5日），最近一次提交为 2026年11月15日。",
           "它可作为 Windows、macOS 和 Linux 上的桌面应用运行，也可通过 Docker、Kubernetes 或 .jar 作为自托管服务器运行。",
-          "官网称个人使用免费。付费的 Server Plan 和 Enterprise 方案确实存在，但未找到价格。",
+          "据开发方定价页面，Free 方案（面向个人）为每月 0 美元，每月含 1,000 积分（credits）；Team 为每月 99 美元，含 100 名用户；Enterprise 为定制价格与条款；PDF Processor 每积分 1 美分。",
           "MIT 许可证带有例外：部分目录适用单独的许可证。",
           "开发方称文档不会发送到外部服务。这是开发方的说法，且来源中未说明 AI 功能的数据流向。",
           "PromptQuorum 未测试过该应用。"
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "界面中的无代码流水线以及用于批量处理的 API，包括 OCR、分类、校验、涂黑脱敏、压缩和路由。",
           "几乎所有工具都有 REST API，另有 MCP 接口和 Webhook。",
           "AI 助手可在打开的文件中进行编辑（涂黑脱敏、翻译、摘要、转换）。",
-          "SSO、审计和灵活的本地部署，被描述为“企业级”。",
+          "SSO、审计和灵活的本地部署，被描述为“企业级”。据定价页面，SSO 列在 Team 方案下；air-gapped（物理隔离）部署、SCIM 配置、数据驻留、审计日志和正常运行时间 SLA 列在 Enterprise 方案下。",
           "界面支持 40 多种语言。",
           "据 Pocket-lint，其评测时文本编辑器仍处于 Alpha 阶段。"
         ]
@@ -1644,8 +1644,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "我们无法核实的内容",
         "items": [
           "**有几项与决策相关的要点，来源中未得到确认。**",
-          "价格：所获取的定价页面上没有金额或档位，而是请访客预约演示。同样不清楚哪些功能（SSO、审计、本地部署）属于哪个付费方案。",
-          "完整许可情况：LICENSE 为 MIT，但关于 engine/ 目录的条款被截断，app/proprietary 和 app/saas 适用单独的许可证。若需要所有组件都是纯开源许可证，请先查看 LICENSE。",
+          "价格：开发方定价页面列出 Free（每月 0 美元）、Team（每月 99 美元，含 100 名用户）、Enterprise（定制）和 PDF Processor（每积分 1 美分）。未核实一个积分能做什么、各工具如何计算积分，以及 Team 和 Enterprise 背后的条款。",
+          "完整许可情况：LICENSE 为 MIT，但其中把多个目录（app/proprietary、app/saas、engine/，以及 frontend/src/editor 和 frontend/src/processor 的部分目录）划归单独的许可证，我们未阅读这些许可证的条款。若需要所有组件都是纯开源许可证，请先查看 LICENSE。",
           "系统要求：未说明 RAM、GPU、磁盘和 Java 版本。",
           "AI 模型和 OCR 引擎：未指明名称，也不清楚 AI 功能是否保持离线。需要严格离线 AI 的用户不应想当然地认为可以。",
           "当前版本的遥测情况：只找到第三方的说法（Contabo、一次论坛测试）。",
@@ -1678,11 +1678,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "替代品": "UPDF",
-            "来源所述": "销售竞争性 PDF 产品，并发布了对 Stirling PDF 的评测，因此该评测存在偏向。"
+            "来源所述": "销售竞争性 PDF 产品，并发布了对 Stirling PDF 的评测；该评测出自与之有商业利益关系的一方。"
           },
           {
             "替代品": "SwifDoo PDF",
-            "来源所述": "销售竞争性 PDF 产品，并发布了对 Stirling PDF 的评测，因此该评测存在偏向。"
+            "来源所述": "销售竞争性 PDF 产品，并发布了对 Stirling PDF 的评测；该评测出自与之有商业利益关系的一方。"
           }
         ]
       },
@@ -1692,11 +1692,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Stirling PDF 免费吗？",
-            "a": "官网称个人使用免费，项目采用开放核心模式。付费的 Server Plan 和 Enterprise 方案确实存在，但所获取的页面上没有价格。"
+            "a": "据开发方定价页面，个人使用免费：Free 方案每月 0 美元，无需绑定银行卡，每月含 1,000 积分。Team 为每月 99 美元（含 100 名用户），Enterprise 为定制价格与条款，PDF Processor 每积分 1 美分。项目采用开放核心模式，MIT 许可证有例外；最新条款请查看定价页面。"
           },
           {
             "q": "它真的是开源的吗？",
-            "a": "LICENSE 为 MIT，但其中说明部分目录（app/proprietary、app/saas 和 engine/，最后一条条款被截断）适用单独的许可证。README 称该项目为开放核心。"
+            "a": "LICENSE 为 MIT，但其中说明多个目录（app/proprietary、app/saas、engine/，以及 frontend/src/editor 和 frontend/src/processor 的部分目录）适用单独的许可证。README 称该项目为开放核心。"
           },
           {
             "q": "如何快速安装？",
@@ -1716,8 +1716,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "结论",
         "content": [
-          "**对于本地或自托管的 PDF 处理，Stirling PDF 看起来是一个维护良好、使用广泛的选择，但在许可、定价和 AI 功能方面仍有未解问题。** 它提供多种安装格式和 API，且开发活跃（最近一次提交为 2026年11月15日）。",
-          "在依赖它之前，请阅读 LICENSE，向开发方询问付费方案的价格，并核查 AI 功能如何处理数据。PromptQuorum 未测试过该应用，因此本结论基于开发方的说法和公开来源。"
+          "**对于本地或自托管的 PDF 处理，Stirling PDF 看起来是一个维护良好、使用广泛的选择，但在许可和 AI 功能方面仍有未解问题。** 它提供多种安装格式和 API，且开发活跃（最近一次提交为 2026年11月15日）。",
+          "在依赖它之前，请阅读 LICENSE，在定价页面核对最新条款，并核查 AI 功能如何处理数据。PromptQuorum 未测试过该应用，因此本结论基于开发方的说法和公开来源。"
         ]
       },
       "sources": {
@@ -1752,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Reseña de Stirling PDF: kit de herramientas PDF open-core para escritorio y autoalojamiento",
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF es un kit de herramientas PDF open-core que edita, convierte, aplica OCR, censura y procesa PDF por lotes, como aplicación de escritorio, servidor autoalojado o API.",
       "bullets": [
         "Licencia: MIT con excepciones; algunos directorios tienen licencias independientes.",
-        "Precio: gratis para uso individual según el sitio; el Server Plan de pago y las ofertas Enterprise no tienen precios publicados.",
+        "Precio: según la página de precios del fabricante, Free cuesta 0 USD al mes y Team 99 USD al mes para 100 usuarios; Enterprise tiene precios y condiciones personalizados y el PDF Processor cuesta 1 centavo de dólar por crédito.",
         "Plataformas: Windows, macOS, Linux, Docker, Kubernetes y servidor .jar manual.",
         "No probado por PromptQuorum."
       ]
@@ -1854,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF es un kit de herramientas PDF open-core con muchas estrellas en GitHub.** El proyecto se mantiene activamente: última versión 3.3.0 (5 de noviembre de 2026), último commit el 15 de noviembre de 2026.",
           "Funciona como aplicación de escritorio en Windows, macOS y Linux, o como servidor autoalojado mediante Docker, Kubernetes o un .jar.",
-          "El sitio indica que es gratis para uso individual. Existen ofertas de pago (Server Plan y Enterprise), pero no se encontraron precios.",
+          "Según la página de precios del fabricante, el plan Free (pensado para particulares) cuesta 0 USD al mes e incluye 1000 créditos mensuales; Team cuesta 99 USD al mes para 100 usuarios; Enterprise tiene precios y condiciones personalizados; el PDF Processor cuesta 1 centavo de dólar por crédito.",
           "La licencia MIT tiene excepciones: algunos directorios están bajo licencias independientes.",
           "El fabricante afirma que los documentos no se envían a servicios externos. Es una afirmación del fabricante, y las fuentes no documentan el flujo de datos de las funciones de IA.",
           "PromptQuorum no ha probado la aplicación."
@@ -1962,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Pipelines sin código en la interfaz y API para procesamiento por lotes, incluidos OCR, clasificar, validar, censurar, comprimir y enrutar.",
           "API REST para casi todas las herramientas, además de una interfaz MCP y webhooks.",
           "Asistente de IA que realiza ediciones en el archivo abierto (censurar, traducir, resumir, convertir).",
-          "SSO, auditoría y despliegues locales flexibles, descritos como de «nivel empresarial».",
+          "SSO, auditoría y despliegues locales flexibles, descritos como de «nivel empresarial». Según la página de precios, el SSO figura en Team; el despliegue aislado (air-gapped), el aprovisionamiento SCIM, la residencia de datos, los registros de auditoría y los SLA de disponibilidad figuran en Enterprise.",
           "Interfaz en más de 40 idiomas.",
           "Según Pocket-lint, el editor de texto estaba en fase Alpha en el momento de su reseña."
         ]
@@ -1992,8 +1992,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Qué no pudimos verificar",
         "items": [
           "**Varios puntos relevantes para decidir no están confirmados por las fuentes.**",
-          "Precios: en la página de precios consultada no aparecen importes ni planes, y se invita a reservar una demo. Tampoco está claro qué funciones (SSO, auditoría, instalación local) pertenecen a cada plan de pago.",
-          "Licencia completa: el LICENSE es MIT, pero la cláusula sobre el directorio engine/ está truncada, y app/proprietary y app/saas tienen licencias independientes. Quien necesite una licencia puramente de código abierto para todos los componentes debería revisar antes el LICENSE.",
+          "Precios: la página de precios del fabricante indica Free (0 USD al mes), Team (99 USD al mes para 100 usuarios), Enterprise (personalizado) y un PDF Processor (1 centavo de dólar por crédito). No se comprobó qué ofrece un crédito, cómo se cuentan los créditos por herramienta ni las condiciones de Team y Enterprise.",
+          "Licencia completa: el LICENSE es MIT, pero asigna varios directorios (app/proprietary, app/saas, engine/ y partes de frontend/src/editor y frontend/src/processor) a licencias independientes cuyas condiciones no hemos leído. Quien necesite una licencia puramente de código abierto para todos los componentes debería revisar antes el LICENSE.",
           "Requisitos del sistema: no se indican RAM, GPU, disco ni versión de Java.",
           "Modelo de IA y motor de OCR: no se nombran, y no está claro si las funciones de IA funcionan sin conexión. Quien necesite IA estrictamente sin conexión no debería darlo por supuesto.",
           "Telemetría en la versión actual: solo se encontraron afirmaciones de terceros (Contabo, una prueba en un foro).",
@@ -2026,11 +2026,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternativa": "UPDF",
-            "Qué indican las fuentes": "Vende un producto PDF competidor y publica una reseña de Stirling PDF, por lo que esa reseña es parcial."
+            "Qué indican las fuentes": "Vende un producto PDF competidor y publica una reseña de Stirling PDF; esa reseña procede de una parte con interés comercial."
           },
           {
             "Alternativa": "SwifDoo PDF",
-            "Qué indican las fuentes": "Vende un producto PDF competidor y publica una reseña de Stirling PDF, por lo que esa reseña es parcial."
+            "Qué indican las fuentes": "Vende un producto PDF competidor y publica una reseña de Stirling PDF; esa reseña procede de una parte con interés comercial."
           }
         ]
       },
@@ -2040,11 +2040,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "¿Es gratis Stirling PDF?",
-            "a": "El sitio indica que es gratis para uso individual, y el proyecto es open-core. Existen ofertas de pago (Server Plan y Enterprise), pero no aparecen precios en las páginas consultadas."
+            "a": "Según la página de precios del fabricante, sí para particulares: el plan Free cuesta 0 USD al mes, sin tarjeta, e incluye 1000 créditos mensuales. Team cuesta 99 USD al mes para 100 usuarios, Enterprise tiene precios y condiciones personalizados y el PDF Processor cuesta 1 centavo de dólar por crédito. El proyecto es open-core y la licencia MIT tiene excepciones; consulta la página de precios para ver las condiciones actuales."
           },
           {
             "q": "¿Es realmente de código abierto?",
-            "a": "El LICENSE es MIT, pero indica que algunos directorios (app/proprietary, app/saas y engine/, con esta última cláusula truncada) tienen licencias independientes. El README describe el proyecto como open-core."
+            "a": "El LICENSE es MIT, pero indica que varios directorios (app/proprietary, app/saas, engine/ y partes de frontend/src/editor y frontend/src/processor) tienen licencias independientes. El README describe el proyecto como open-core."
           },
           {
             "q": "¿Cómo se instala rápidamente?",
@@ -2064,8 +2064,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Veredicto",
         "content": [
-          "**Stirling PDF parece una opción bien mantenida y muy utilizada para trabajar con PDF en local o autoalojado, con dudas abiertas sobre licencia, precios y funciones de IA.** Ofrece muchos formatos de instalador, una API y desarrollo activo (último commit el 15 de noviembre de 2026).",
-          "Antes de depender de ella, conviene leer el LICENSE, consultar al fabricante los precios de los planes de pago y comprobar cómo tratan los datos las funciones de IA. PromptQuorum no ha probado la aplicación, por lo que este veredicto se basa en las afirmaciones del fabricante y en fuentes públicas."
+          "**Stirling PDF parece una opción bien mantenida y muy utilizada para trabajar con PDF en local o autoalojado, con dudas abiertas sobre licencia y funciones de IA.** Ofrece muchos formatos de instalador, una API y desarrollo activo (último commit el 15 de noviembre de 2026).",
+          "Antes de depender de ella, conviene leer el LICENSE, consultar la página de precios para ver las condiciones actuales y comprobar cómo tratan los datos las funciones de IA. PromptQuorum no ha probado la aplicación, por lo que este veredicto se basa en las afirmaciones del fabricante y en fuentes públicas."
         ]
       },
       "sources": {
@@ -2100,7 +2100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Análise do Stirling PDF: kit PDF open-core para desktop e hospedagem própria",
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "O Stirling PDF é um kit de ferramentas PDF open-core que edita, converte, aplica OCR, oculta dados sensíveis (redação) e processa PDFs em lote, como aplicativo desktop, servidor próprio ou API.",
       "bullets": [
         "Licença: MIT com exceções; alguns diretórios têm licenças separadas.",
-        "Preço: gratuito para uso individual segundo o site; as ofertas pagas Server Plan e Enterprise não têm preços publicados.",
+        "Preço: segundo a página de preços do fabricante, o Free custa US$ 0 por mês e o Team US$ 99 por mês para 100 usuários; o Enterprise tem preços e condições personalizados e o PDF Processor custa US$ 0,01 por crédito.",
         "Plataformas: Windows, macOS, Linux, Docker, Kubernetes, servidor manual com .jar.",
         "Não testado pela PromptQuorum."
       ]
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**O Stirling PDF é um kit PDF open-core com muitas estrelas no GitHub.** O projeto é mantido ativamente: versão mais recente 3.3.0 (05/11/2026), último commit em 15/11/2026.",
           "Roda como aplicativo desktop no Windows, macOS e Linux, ou como servidor próprio via Docker, Kubernetes ou um .jar.",
-          "O site diz que é gratuito para uso individual. Existem as ofertas pagas Server Plan e Enterprise, mas não encontramos preços.",
+          "Segundo a página de preços do fabricante, o plano Free (voltado a pessoas físicas) custa US$ 0 por mês e inclui 1.000 créditos mensais; o Team custa US$ 99 por mês para 100 usuários; o Enterprise tem preços e condições personalizados; o PDF Processor custa US$ 0,01 por crédito.",
           "A licença MIT tem exceções: alguns diretórios estão sob licenças separadas.",
           "O fabricante diz que os documentos não são enviados a serviços externos. Isso é uma afirmação do fabricante, e o fluxo de dados dos recursos de IA não está documentado nas fontes.",
           "A PromptQuorum não testou o aplicativo."
@@ -2310,7 +2310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Pipelines no-code na interface e APIs para processamento em lote, incluindo OCR, classificar, validar, ocultar dados sensíveis, compactar e encaminhar.",
           "API REST para quase todas as ferramentas, além de uma interface MCP e webhooks.",
           "Assistente de IA que faz edições no arquivo aberto (ocultar dados sensíveis, traduzir, resumir, converter).",
-          "SSO, auditoria e implantações on-premises flexíveis, descritos como 'Enterprise-grade'.",
+          "SSO, auditoria e implantações on-premises flexíveis, descritos como 'Enterprise-grade'. Segundo a página de preços, o SSO aparece no Team; implantação isolada (air-gapped), provisionamento SCIM, residência de dados, logs de auditoria e SLAs de disponibilidade aparecem no Enterprise.",
           "Interface em mais de 40 idiomas.",
           "Segundo a Pocket-lint, o editor de texto estava em fase Alpha na época da análise."
         ]
@@ -2340,8 +2340,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "O que não pudemos verificar",
         "items": [
           "**Vários pontos relevantes para a decisão não são confirmados pelas fontes.**",
-          "Preços: nenhum valor ou plano aparece na página de preços consultada, que pede aos visitantes para agendar uma demonstração. Também não está claro quais recursos (SSO, auditoria, on-premises) pertencem a qual plano pago.",
-          "Licenciamento completo: a LICENSE é MIT, mas a cláusula sobre o diretório engine/ está truncada, e app/proprietary e app/saas estão sob licenças separadas. Quem precisa de uma licença puramente de código aberto para todos os componentes deve ler a LICENSE primeiro.",
+          "Preços: a página de preços do fabricante lista Free (US$ 0 por mês), Team (US$ 99 por mês para 100 usuários), Enterprise (personalizado) e um PDF Processor (US$ 0,01 por crédito). Não verificamos o que um crédito cobre, como os créditos são contados por ferramenta nem as condições por trás de Team e Enterprise.",
+          "Licenciamento completo: a LICENSE é MIT, mas atribui vários diretórios (app/proprietary, app/saas, engine/ e partes de frontend/src/editor e frontend/src/processor) a licenças separadas cujas condições não lemos. Quem precisa de uma licença puramente de código aberto para todos os componentes deve ler a LICENSE primeiro.",
           "Requisitos de sistema: RAM, GPU, disco e versão do Java não são informados.",
           "Modelo de IA e mecanismo de OCR: não são nomeados, e não está claro se os recursos de IA funcionam offline. Quem precisa de IA estritamente offline não deve presumir isso.",
           "Telemetria na versão atual: só encontramos declarações de terceiros (Contabo, um teste em fórum).",
@@ -2374,11 +2374,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternativa": "UPDF",
-            "O que as fontes dizem": "Vende um produto de PDF concorrente e publica uma análise do Stirling PDF, portanto essa análise é parcial."
+            "O que as fontes dizem": "Vende um produto de PDF concorrente e publica uma análise do Stirling PDF; essa análise vem de uma parte com interesse comercial."
           },
           {
             "Alternativa": "SwifDoo PDF",
-            "O que as fontes dizem": "Vende um produto de PDF concorrente e publica uma análise do Stirling PDF, portanto essa análise é parcial."
+            "O que as fontes dizem": "Vende um produto de PDF concorrente e publica uma análise do Stirling PDF; essa análise vem de uma parte com interesse comercial."
           }
         ]
       },
@@ -2388,11 +2388,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "O Stirling PDF é gratuito?",
-            "a": "O site diz que é gratuito para uso individual, e o projeto é open-core. Existem as ofertas pagas Server Plan e Enterprise, mas nenhum preço aparece nas páginas consultadas."
+            "a": "Segundo a página de preços do fabricante, sim para pessoas físicas: o plano Free custa US$ 0 por mês, sem cartão, e inclui 1.000 créditos mensais. O Team custa US$ 99 por mês para 100 usuários, o Enterprise tem preços e condições personalizados e o PDF Processor custa US$ 0,01 por crédito. O projeto é open-core e a licença MIT tem exceções; veja a página de preços para as condições atuais."
           },
           {
             "q": "É realmente código aberto?",
-            "a": "A LICENSE é MIT, mas informa que alguns diretórios (app/proprietary, app/saas e engine/, com a última cláusula truncada) têm licenças separadas. O README chama o projeto de open-core."
+            "a": "A LICENSE é MIT, mas informa que vários diretórios (app/proprietary, app/saas, engine/ e partes de frontend/src/editor e frontend/src/processor) têm licenças separadas. O README chama o projeto de open-core."
           },
           {
             "q": "Como instalo rapidamente?",
@@ -2412,8 +2412,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Veredito",
         "content": [
-          "**O Stirling PDF parece uma opção bem mantida e amplamente usada para trabalho com PDF local ou auto-hospedado, com dúvidas em aberto sobre licenciamento, preços e os recursos de IA.** Tem muitos formatos de instalador, uma API e desenvolvimento ativo (último commit em 15/11/2026).",
-          "Antes de depender dele, leia a LICENSE, pergunte ao fabricante o preço dos planos pagos e verifique como os recursos de IA tratam os dados. A PromptQuorum não testou o aplicativo, então este veredito se baseia nas declarações do fabricante e em fontes públicas."
+          "**O Stirling PDF parece uma opção bem mantida e amplamente usada para trabalho com PDF local ou auto-hospedado, com dúvidas em aberto sobre licenciamento e os recursos de IA.** Tem muitos formatos de instalador, uma API e desenvolvimento ativo (último commit em 15/11/2026).",
+          "Antes de depender dele, leia a LICENSE, confira as condições atuais na página de preços e verifique como os recursos de IA tratam os dados. A PromptQuorum não testou o aplicativo, então este veredito se baseia nas declarações do fabricante e em fontes públicas."
         ]
       },
       "sources": {
@@ -2448,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "مراجعة Stirling PDF: مجموعة أدوات PDF مفتوحة النواة لسطح المكتب والاستضافة الذاتية",
@@ -2473,7 +2473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF مجموعة أدوات PDF مفتوحة النواة تحرّر ملفات PDF وتحوّلها وتطبّق عليها OCR وتحجب بياناتها وتعالجها دفعة واحدة، كتطبيق لسطح المكتب أو كخادم مستضاف ذاتياً أو كواجهة API.",
       "bullets": [
         "الترخيص: MIT مع استثناءات؛ بعض المجلدات تخضع لتراخيص منفصلة.",
-        "السعر: مجاني للاستخدام الفردي بحسب الموقع؛ خطة Server Plan وعروض Enterprise المدفوعة بلا أسعار منشورة.",
+        "السعر: بحسب صفحة أسعار الجهة المطوِّرة، تكلفة Free هي 0 دولار أمريكي شهرياً، وTeam هي 99 دولاراً أمريكياً شهرياً لـ100 مستخدم، وEnterprise بأسعار وشروط مخصصة، وPDF Processor بسنت أمريكي واحد لكل credit.",
         "المنصات: Windows وmacOS وLinux وDocker وKubernetes وخادم .jar يدوي.",
         "لم تختبره PromptQuorum."
       ]
@@ -2550,7 +2550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF مجموعة أدوات PDF مفتوحة النواة حاصلة على عدد كبير من النجوم.** المشروع قيد الصيانة النشطة: أحدث إصدار 3.3.0 (5 نوفمبر 2026)، وآخر commit بتاريخ 15 نوفمبر 2026.",
           "يعمل كتطبيق لسطح المكتب على Windows وmacOS وLinux، أو كخادم مستضاف ذاتياً عبر Docker أو Kubernetes أو ملف .jar.",
-          "يذكر الموقع أنه مجاني للاستخدام الفردي. توجد عروض مدفوعة (Server Plan وEnterprise) لكن لم نعثر على أسعار.",
+          "بحسب صفحة أسعار الجهة المطوِّرة، تبلغ تكلفة خطة Free (الموجهة للأفراد) 0 دولار أمريكي شهرياً وتتضمن 1,000 credit شهرياً؛ وتبلغ تكلفة Team 99 دولاراً أمريكياً شهرياً لـ100 مستخدم؛ وEnterprise بأسعار وشروط مخصصة؛ وتبلغ تكلفة PDF Processor سنتاً أمريكياً واحداً لكل credit.",
           "ترخيص MIT له استثناءات: بعض المجلدات تخضع لتراخيص منفصلة.",
           "تقول الجهة المطوِّرة إن المستندات لا تُرسل إلى خدمات خارجية. هذا ادعاء من المطوِّر، كما أن تدفق بيانات ميزات الذكاء الاصطناعي غير موثّق في المصادر.",
           "لم تختبر PromptQuorum التطبيق."
@@ -2658,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "مسارات عمل بلا كتابة شيفرة في الواجهة وواجهات API للمعالجة الدفعية، تشمل OCR والتصنيف والتحقق وحجب البيانات والضغط والتوجيه.",
           "واجهة REST API لمعظم الأدوات تقريباً، إضافة إلى واجهة MCP وwebhooks.",
           "مساعد يعمل بالذكاء الاصطناعي يجري تعديلات في الملف المفتوح (حجب البيانات والترجمة والتلخيص والتحويل).",
-          "SSO والتدقيق ونشر مرن داخل البنية المحلية، موصوفة بأنها 'Enterprise-grade'.",
+          "SSO والتدقيق ونشر مرن داخل البنية المحلية، موصوفة بأنها 'Enterprise-grade'. بحسب صفحة الأسعار، يُدرَج SSO ضمن Team؛ ويُدرَج النشر المعزول (air-gapped) وSCIM وإقامة البيانات وسجلات التدقيق واتفاقيات مستوى الخدمة للتوافر ضمن Enterprise.",
           "واجهة بأكثر من 40 لغة.",
           "بحسب Pocket-lint، كان محرر النصوص في مرحلة Alpha وقت مراجعته."
         ]
@@ -2688,8 +2688,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "ما لم نتمكن من التحقق منه",
         "items": [
           "**عدة نقاط مؤثرة في القرار لا تؤكدها المصادر.**",
-          "الأسعار: لا مبالغ ولا فئات في صفحة الأسعار التي جُلبت، وهي تطلب من الزوار حجز عرض توضيحي. كما أنه غير واضح أي الميزات (SSO والتدقيق والنشر المحلي) تتبع أي خطة مدفوعة.",
-          "الترخيص الكامل: ترخيص LICENSE هو MIT، لكن البند الخاص بمجلد engine/ مقطوع، ويخضع app/proprietary وapp/saas لتراخيص منفصلة. من يحتاج إلى ترخيص مفتوح المصدر بالكامل لكل المكونات عليه مراجعة LICENSE أولاً.",
+          "الأسعار: تعرض صفحة أسعار الجهة المطوِّرة Free (0 دولار أمريكي شهرياً) وTeam (99 دولاراً أمريكياً شهرياً لـ100 مستخدم) وEnterprise (مخصص) وPDF Processor (سنت أمريكي واحد لكل credit). لم نتحقق مما يغطيه الـ credit الواحد ولا من كيفية احتسابه لكل أداة ولا من الشروط الكامنة وراء Team وEnterprise.",
+          "الترخيص الكامل: ترخيص LICENSE هو MIT، لكنه يُخضع عدة مجلدات (app/proprietary وapp/saas وengine/ وأجزاء من frontend/src/editor وfrontend/src/processor) لتراخيص منفصلة لم نقرأ شروطها. من يحتاج إلى ترخيص مفتوح المصدر بالكامل لكل المكونات عليه مراجعة LICENSE أولاً.",
           "متطلبات النظام: RAM وGPU والقرص وإصدار Java غير مذكورة.",
           "نموذج الذكاء الاصطناعي ومحرك OCR: غير مسمّيين، وغير واضح ما إذا كانت ميزات الذكاء الاصطناعي تبقى دون اتصال. من يحتاج إلى ذكاء اصطناعي دون اتصال بالكامل لا ينبغي أن يفترض ذلك.",
           "القياس عن بُعد في النسخة الحالية: لم نجد سوى أقوال أطراف ثالثة (Contabo واختبار في منتدى).",
@@ -2722,11 +2722,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "البديل": "UPDF",
-            "ما تذكره المصادر": "يبيع منتج PDF منافساً وينشر مراجعة لـ Stirling PDF، لذا فهذه المراجعة متحيزة."
+            "ما تذكره المصادر": "يبيع منتج PDF منافساً وينشر مراجعة لـ Stirling PDF؛ فهذه المراجعة صادرة عن جهة لها مصلحة تجارية."
           },
           {
             "البديل": "SwifDoo PDF",
-            "ما تذكره المصادر": "يبيع منتج PDF منافساً وينشر مراجعة لـ Stirling PDF، لذا فهذه المراجعة متحيزة."
+            "ما تذكره المصادر": "يبيع منتج PDF منافساً وينشر مراجعة لـ Stirling PDF؛ فهذه المراجعة صادرة عن جهة لها مصلحة تجارية."
           }
         ]
       },
@@ -2736,11 +2736,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "هل Stirling PDF مجاني؟",
-            "a": "يذكر الموقع أنه مجاني للاستخدام الفردي، والمشروع مفتوح النواة. توجد عروض مدفوعة (Server Plan وEnterprise) لكن لا أسعار في الصفحات التي جُلبت."
+            "a": "بحسب صفحة أسعار الجهة المطوِّرة، نعم للأفراد: خطة Free تكلف 0 دولار أمريكي شهرياً دون بطاقة وتتضمن 1,000 credit شهرياً. وتكلف Team 99 دولاراً أمريكياً شهرياً لـ100 مستخدم، وEnterprise بأسعار وشروط مخصصة، وPDF Processor سنتاً أمريكياً واحداً لكل credit. المشروع مفتوح النواة وترخيص MIT له استثناءات؛ راجع صفحة الأسعار للاطلاع على الشروط الحالية."
           },
           {
             "q": "هل هو مفتوح المصدر فعلاً؟",
-            "a": "ترخيص LICENSE هو MIT، لكنه ينص على أن بعض المجلدات (app/proprietary وapp/saas وengine/، والبند الأخير مقطوع) لها تراخيص منفصلة. ويصف README المشروع بأنه مفتوح النواة."
+            "a": "ترخيص LICENSE هو MIT، لكنه ينص على أن عدة مجلدات (app/proprietary وapp/saas وengine/ وأجزاء من frontend/src/editor وfrontend/src/processor) لها تراخيص منفصلة. ويصف README المشروع بأنه مفتوح النواة."
           },
           {
             "q": "كيف أثبّته بسرعة؟",
@@ -2760,8 +2760,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "الخلاصة",
         "content": [
-          "**يبدو Stirling PDF خياراً جيد الصيانة وواسع الاستخدام للعمل على PDF محلياً أو بالاستضافة الذاتية، مع أسئلة مفتوحة حول الترخيص والأسعار وميزات الذكاء الاصطناعي.** يوفر صيغ تثبيت كثيرة وواجهة API وتطويراً نشطاً (آخر commit بتاريخ 15 نوفمبر 2026).",
-          "قبل الاعتماد عليه، اقرأ LICENSE واسأل الجهة المطوِّرة عن أسعار الخطط المدفوعة وتحقق من كيفية تعامل ميزات الذكاء الاصطناعي مع البيانات. لم تختبر PromptQuorum التطبيق، لذا تستند هذه الخلاصة إلى أقوال الجهة المطوِّرة والمصادر العامة."
+          "**يبدو Stirling PDF خياراً جيد الصيانة وواسع الاستخدام للعمل على PDF محلياً أو بالاستضافة الذاتية، مع أسئلة مفتوحة حول الترخيص وميزات الذكاء الاصطناعي.** يوفر صيغ تثبيت كثيرة وواجهة API وتطويراً نشطاً (آخر commit بتاريخ 15 نوفمبر 2026).",
+          "قبل الاعتماد عليه، اقرأ LICENSE وراجع صفحة الأسعار للاطلاع على الشروط الحالية وتحقق من كيفية تعامل ميزات الذكاء الاصطناعي مع البيانات. لم تختبر PromptQuorum التطبيق، لذا تستند هذه الخلاصة إلى أقوال الجهة المطوِّرة والمصادر العامة."
         ]
       },
       "sources": {
@@ -2796,7 +2796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "designSkin": "hub",
     "freshness_tier": "semi_annual",
     "publishDate": "2026-11-16",
-    "dateModified": "2026-11-16",
+    "dateModified": "2026-11-18",
     "next_refresh_due": "2027-05-16",
     "theme": "RAG & Document Chat",
     "title": "Stirling PDF 리뷰: 데스크톱과 셀프 호스팅용 오픈코어 PDF 툴킷",
@@ -2821,7 +2821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "answer": "Stirling PDF는 PDF를 편집·변환·OCR·가림 처리하고 일괄 처리하는 오픈코어 PDF 툴킷이며, 데스크톱 앱, 셀프 호스팅 서버, API로 사용할 수 있습니다.",
       "bullets": [
         "라이선스: 예외가 있는 MIT. 일부 디렉터리는 별도 라이선스를 따릅니다.",
-        "가격: 사이트에 따르면 개인 사용은 무료. 유료 Server Plan과 Enterprise 상품의 가격은 공개되어 있지 않습니다.",
+        "가격: 제작사 가격 페이지에 따르면 Free는 월 0 USD, Team은 100명 기준 월 99 USD이며, Enterprise는 맞춤 가격과 조건, PDF Processor는 크레딧당 1센트입니다.",
         "플랫폼: Windows, macOS, Linux, Docker, Kubernetes, 수동 .jar 서버.",
         "PromptQuorum은 테스트하지 않았습니다."
       ]
@@ -2898,7 +2898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "**Stirling PDF는 별을 많이 받은 오픈코어 PDF 툴킷입니다.** 프로젝트는 활발히 관리되고 있으며, 최신 릴리스는 3.3.0(2026년 11월 5일), 마지막 커밋은 2026년 11월 15일입니다.",
           "Windows, macOS, Linux 데스크톱 앱으로 실행하거나, Docker, Kubernetes, .jar를 통한 셀프 호스팅 서버로 실행할 수 있습니다.",
-          "사이트에 따르면 개인 사용은 무료입니다. 유료 Server Plan과 Enterprise 상품이 있지만 가격은 찾지 못했습니다.",
+          "제작사 가격 페이지에 따르면 Free 요금제(개인용)는 월 0 USD이며 매월 1,000 크레딧이 포함됩니다. Team은 100명 기준 월 99 USD, Enterprise는 맞춤 가격과 조건, PDF Processor는 크레딧당 1센트입니다.",
           "MIT 라이선스에는 예외가 있으며, 일부 디렉터리는 별도 라이선스를 따릅니다.",
           "제작사는 문서가 외부 서비스로 전송되지 않는다고 밝힙니다. 이는 제작사의 주장이며, AI 기능의 데이터 흐름은 출처에 문서화되어 있지 않습니다.",
           "PromptQuorum은 이 앱을 테스트하지 않았습니다."
@@ -3006,7 +3006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "UI의 노코드 파이프라인과 일괄 처리용 API: OCR, 분류, 검증, 가림 처리, 압축, 라우팅 포함.",
           "거의 모든 도구를 위한 REST API와 MCP 인터페이스, 웹훅.",
           "열려 있는 파일을 직접 수정하는 AI 어시스턴트(가림 처리, 번역, 요약, 변환).",
-          "SSO, 감사 기능, 유연한 온프레미스 배포. 'Enterprise-grade'로 소개됩니다.",
+          "SSO, 감사 기능, 유연한 온프레미스 배포. 'Enterprise-grade'로 소개됩니다. 가격 페이지에는 SSO가 Team에, 에어갭(air-gapped) 배포·SCIM 프로비저닝·데이터 레지던시·감사 로그·가동률 SLA가 Enterprise에 표기되어 있습니다.",
           "40개 이상의 언어로 제공되는 인터페이스.",
           "Pocket-lint에 따르면 리뷰 당시 텍스트 편집기는 알파 단계였습니다."
         ]
@@ -3036,8 +3036,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "확인하지 못한 사항",
         "items": [
           "**의사 결정에 중요한 여러 사항이 출처로는 확인되지 않았습니다.**",
-          "가격: 가져온 가격 페이지에는 금액이나 요금제가 없고 데모 예약을 안내합니다. 어떤 기능(SSO, 감사, 온프레미스)이 어느 유료 플랜에 속하는지도 불분명합니다.",
-          "전체 라이선스: LICENSE는 MIT이지만 engine/ 디렉터리에 관한 조항이 잘려 있고, app/proprietary와 app/saas는 별도 라이선스를 따릅니다. 모든 구성 요소에 순수 오픈소스 라이선스가 필요한 경우 먼저 LICENSE를 확인하십시오.",
+          "가격: 제작사 가격 페이지에는 Free(월 0 USD), Team(100명 기준 월 99 USD), Enterprise(맞춤), PDF Processor(크레딧당 1센트)가 나와 있습니다. 크레딧 하나로 무엇을 할 수 있는지, 도구별 크레딧 계산 방식, Team과 Enterprise의 조건은 확인하지 않았습니다.",
+          "전체 라이선스: LICENSE는 MIT이지만 여러 디렉터리(app/proprietary, app/saas, engine/, frontend/src/editor와 frontend/src/processor의 일부)를 별도 라이선스에 맡기고 있으며, 그 조건은 읽어 보지 않았습니다. 모든 구성 요소에 순수 오픈소스 라이선스가 필요한 경우 먼저 LICENSE를 확인하십시오.",
           "시스템 요구 사항: RAM, GPU, 디스크, Java 버전은 명시되어 있지 않습니다.",
           "AI 모델과 OCR 엔진: 이름이 밝혀져 있지 않고, AI 기능이 오프라인으로 유지되는지도 불분명합니다. 엄격한 오프라인 AI가 필요하다면 그렇다고 가정해서는 안 됩니다.",
           "현재 버전의 텔레메트리: 제3자의 주장(Contabo, 포럼 테스트)만 찾았습니다.",
@@ -3070,11 +3070,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "대안": "UPDF",
-            "출처에 나온 내용": "경쟁 PDF 제품을 판매하며 Stirling PDF 리뷰를 게재하므로 해당 리뷰는 편향되어 있습니다."
+            "출처에 나온 내용": "경쟁 PDF 제품을 판매하며 Stirling PDF 리뷰를 게재합니다. 해당 리뷰는 상업적 이해관계가 있는 쪽에서 작성한 것입니다."
           },
           {
             "대안": "SwifDoo PDF",
-            "출처에 나온 내용": "경쟁 PDF 제품을 판매하며 Stirling PDF 리뷰를 게재하므로 해당 리뷰는 편향되어 있습니다."
+            "출처에 나온 내용": "경쟁 PDF 제품을 판매하며 Stirling PDF 리뷰를 게재합니다. 해당 리뷰는 상업적 이해관계가 있는 쪽에서 작성한 것입니다."
           }
         ]
       },
@@ -3084,11 +3084,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Stirling PDF는 무료입니까?",
-            "a": "사이트에 따르면 개인 사용은 무료이며, 프로젝트는 오픈코어입니다. 유료 Server Plan과 Enterprise 상품이 있지만 가져온 페이지에는 가격이 나와 있지 않습니다."
+            "a": "제작사 가격 페이지에 따르면 개인은 무료입니다. Free 요금제는 월 0 USD이며 카드가 필요 없고 매월 1,000 크레딧이 포함됩니다. Team은 100명 기준 월 99 USD, Enterprise는 맞춤 가격과 조건, PDF Processor는 크레딧당 1센트입니다. 프로젝트는 오픈코어이며 MIT 라이선스에는 예외가 있습니다. 최신 조건은 가격 페이지에서 확인하십시오."
           },
           {
             "q": "정말 오픈소스입니까?",
-            "a": "LICENSE는 MIT이지만, 일부 디렉터리(app/proprietary, app/saas, 마지막 조항이 잘린 engine/)는 별도 라이선스를 따른다고 명시되어 있습니다. README는 프로젝트를 오픈코어라고 부릅니다."
+            "a": "LICENSE는 MIT이지만, 여러 디렉터리(app/proprietary, app/saas, engine/, frontend/src/editor와 frontend/src/processor의 일부)는 별도 라이선스를 따른다고 명시되어 있습니다. README는 프로젝트를 오픈코어라고 부릅니다."
           },
           {
             "q": "빠르게 설치하려면 어떻게 합니까?",
@@ -3108,8 +3108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "결론",
         "content": [
-          "**Stirling PDF는 로컬 또는 셀프 호스팅 PDF 작업에 잘 관리되고 널리 쓰이는 선택지로 보이지만, 라이선스, 가격, AI 기능에는 풀리지 않은 의문이 있습니다.** 설치 파일 형식이 다양하고 API를 제공하며 개발이 활발합니다(마지막 커밋 2026년 11월 15일).",
-          "의존하기 전에 LICENSE를 읽고, 유료 플랜 가격을 제작사에 문의하고, AI 기능의 데이터 처리 방식을 확인하십시오. PromptQuorum은 이 앱을 테스트하지 않았으므로, 이 결론은 제작사의 설명과 공개 자료에 근거합니다."
+          "**Stirling PDF는 로컬 또는 셀프 호스팅 PDF 작업에 잘 관리되고 널리 쓰이는 선택지로 보이지만, 라이선스와 AI 기능에는 풀리지 않은 의문이 있습니다.** 설치 파일 형식이 다양하고 API를 제공하며 개발이 활발합니다(마지막 커밋 2026년 11월 15일).",
+          "의존하기 전에 LICENSE를 읽고, 가격 페이지에서 최신 조건을 확인하고, AI 기능의 데이터 처리 방식을 확인하십시오. PromptQuorum은 이 앱을 테스트하지 않았으므로, 이 결론은 제작사의 설명과 공개 자료에 근거합니다."
         ]
       },
       "sources": {
