@@ -28940,5 +28940,20 @@
       "t14": "2026-12-01",
       "t28": "2026-12-15"
     }
+  },
+  {
+    "id": "5295b27d-f8df-48c1-8d03-ac14aa9b1f51",
+    "slug": "/ja/power-local-llm/open-science-desktop-review",
+    "date": "2026-11-18T03:28:51.698Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open Science Desktopレビュー：AI研究ワークベンチ",
+        "new": "Open Science Desktopレビュー：AI研究環境"
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data - data-free): JA title over budget 24-32 chars (35 -> 33 -> 31)",
+    "baseline": null,
+    "deployedAt": null
   }
 ]
