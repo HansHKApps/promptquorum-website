@@ -36524,6 +36524,156 @@
     "width": 1200,
     "height": 675
   },
+  "/images/loci-chat-search-bob-after-restart.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1466,
+    "height": 616
+  },
+  "/images/loci-connections-mail-calendar-reminders.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1382,
+    "height": 1366
+  },
+  "/images/loci-context-meter-8-1k-of-64k.webp": {
+    "encodingFormat": "image/webp",
+    "width": 310,
+    "height": 84
+  },
+  "/images/loci-download-page-four-platforms.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1492,
+    "height": 874
+  },
+  "/images/loci-english-dictation-fifteen-times-five.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 229
+  },
+  "/images/loci-gemma-4-12b-download-50-percent-time-estimate.webp": {
+    "encodingFormat": "image/webp",
+    "width": 934,
+    "height": 384
+  },
+  "/images/loci-german-dictation-garbled-text.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 300
+  },
+  "/images/loci-german-dictation-works-after-language-setting.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1430,
+    "height": 573
+  },
+  "/images/loci-german-question-model-says-yes.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 1154
+  },
+  "/images/loci-image-models-unavailable-video-model-best-for-this-mac.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1430,
+    "height": 583
+  },
+  "/images/loci-install-loci-app-macos-open-prompt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 512,
+    "height": 830
+  },
+  "/images/loci-mcp-add-a-server-catalogue.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1236,
+    "height": 1126
+  },
+  "/images/loci-mcp-final-links-download-install-review.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1576,
+    "height": 962
+  },
+  "/images/loci-mcp-model-admits-hallucinated-links.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 837
+  },
+  "/images/loci-mcp-promptquorum-connected-27-tools.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1224,
+    "height": 1142
+  },
+  "/images/loci-mcp-self-check-claims-links-still-incorrect.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1600,
+    "height": 799
+  },
+  "/images/loci-memories-import-panel.webp": {
+    "encodingFormat": "image/webp",
+    "width": 830,
+    "height": 1084
+  },
+  "/images/loci-model-catalogue-chat-and-coding.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 742
+  },
+  "/images/loci-phone-linked-computers-macbook-pro-ready.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
+  "/images/loci-phone-on-device-model-refuses-question-set.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
+  "/images/loci-phone-waiting-for-unmetered-network-bonsai.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
+  "/images/loci-recommended-for-this-mac-24-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 974,
+    "height": 100
+  },
+  "/images/loci-settings-chat-and-memory-replies.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1272,
+    "height": 1034
+  },
+  "/images/loci-settings-creativity-and-context-length.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1246,
+    "height": 574
+  },
+  "/images/loci-settings-dictation-key-permission-warning.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1236,
+    "height": 984
+  },
+  "/images/loci-settings-models-and-cloud-keys.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1314,
+    "height": 1138
+  },
+  "/images/loci-settings-voice-spoken-replies.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1270,
+    "height": 1014
+  },
+  "/images/loci-setup-step1-choose-what-loci-is-best-at.webp": {
+    "encodingFormat": "image/webp",
+    "width": 906,
+    "height": 732
+  },
+  "/images/loci-setup-step2-start-chatting-in-the-meantime.webp": {
+    "encodingFormat": "image/webp",
+    "width": 894,
+    "height": 596
+  },
+  "/images/loci-welcome-your-ai-lives-here-text.webp": {
+    "encodingFormat": "image/webp",
+    "width": 805,
+    "height": 824
+  },
   "/images/logseq-copilot-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -45908,6 +46058,11 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/promptquorum-404-page-from-mcp-link.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1429,
+    "height": 530
   },
   "/images/promptquorum-local-cloud-dispatch-es.svg": {
     "encodingFormat": "image/svg+xml",

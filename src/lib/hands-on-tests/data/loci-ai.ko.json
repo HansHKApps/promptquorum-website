@@ -1,0 +1,1891 @@
+{
+  "id": "pq-test-loci-2026-11-11",
+  "hero": "loci-setup-step1-choose-what-loci-is-best-at",
+  "date_human": "2026년 11월 11일",
+  "captured": "2026-11-11; Mac 내려받기 확인 창 06:19, 마지막 휴대폰 스크린샷 11:11; 종료 시각은 기록 없음",
+  "standard_version": "0.2",
+  "locale": "ko",
+  "app": {
+    "name": "Loci",
+    "slug": "loci-ai",
+    "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
+    "category": "로컬 AI 채팅, Mac 및 Android",
+    "platform": "macOS(Apple Silicon) 및 Android",
+    "pricing_url": "https://askloci.ai"
+  },
+  "title": "24 GB M4 Pro Mac에서 Loci 직접 사용: 웹 검색, 휴대폰 연결, MCP 서버를 갖춘 로컬 채팅",
+  "page_title": "Loci 테스트",
+  "dek": "2026년 11월 11일의 첫 세션입니다. 매끄러운 설정, 웹 검색, Mac의 모델을 빌려 쓰는 Android 휴대폰이 눈에 띄었고, 테스터가 자신의 MCP 서버를 연결하자 모델이 존재하지 않는 링크를 내놓았습니다.",
+  "seo": {
+    "title": "Loci 직접 테스트: M4 Pro Mac 로컬 AI 채팅",
+    "description": "24 GB M4 Pro Mac에서 Loci를 직접 테스트했습니다. 설정, 웹 검색, 휴대폰 연결, MCP는 작동했고 독일어 받아쓰기는 설정 변경이 필요했으며 MCP 링크는 두 번 틀렸습니다."
+  },
+  "faq": [
+    [
+      "Loci는 계정이 필요한가요?",
+      "캡처한 화면에는 로그인 단계가 없었고, 업체는 계정도 광고도 구독도 없다고 밝힙니다. 가격은 그 밖에는 확인하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Loci는 로컬 모델에서 웹을 검색하나요?",
+      "예. 날씨 질문에서 “Searched the web” 단계와 출처 여섯 개가 표시되었습니다. 값이 맞는지는 확인하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Loci는 독일어 받아쓰기를 알아듣나요?",
+      "설정을 바꾼 뒤에만 가능했습니다. 기본 Language 설정에서는 독일어가 깨져 나왔고, “Automatic — multilingual”을 선택한 뒤에는 독일어 문장이 올바르게 받아써졌습니다.",
+      "observed"
+    ],
+    [
+      "Android 휴대폰이 Mac의 모델을 쓸 수 있나요?",
+      "예. 메모와 휴대폰의 Linked computers 화면에 따르면 Mac이 모델 한 개와 함께 Ready로 표시됩니다. 휴대폰의 자체 소형 모델은 단독으로 실행했을 때 어려운 질문 세트를 거부했습니다.",
+      "observed"
+    ],
+    [
+      "Loci는 MCP 서버와 함께 작동하나요?",
+      "예. 테스터가 PromptQuorum 자체 MCP 서버를 추가했고 첫 시도에 연결되어 도구 27개가 표시되었습니다. 로컬 모델은 처음에 404 페이지로 이어지는 링크를 내놓았습니다.",
+      "observed"
+    ],
+    [
+      "Loci는 개인정보를 보호하나요?",
+      "검증하지 않았습니다. 앱은 로컬 모델이 말을 Mac 밖으로 보내지 않는다고 밝히지만, 웹 검색과 MCP 도구는 설계상 데이터를 밖으로 보내며 트래픽은 점검하지 않았습니다.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-13",
+  "started": "2026-11-11",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Loci. 내려받기 페이지에는 “Download Loci”라고 표시되며, 디렉터리 리뷰(제3자)는 제작사를 Loci AI, Inc.로 기재합니다.",
+      "observed"
+    ],
+    [
+      "Version",
+      "기록 없음.",
+      null
+    ],
+    [
+      "Source",
+      "공급업체 내려받기 페이지. Chrome에 “Loci.dmg”가 저장되었습니다. 페이지 주소는 기록되어 있지 않습니다.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans(PromptQuorum 설립자)",
+      "observed"
+    ],
+    [
+      "Date, start, end",
+      "2026년 11월 11일. 메모에는 날짜가 없고, 앱의 답변 “as of Wednesday, November 11, 2026”에서 가져왔습니다. macOS 확인 창에는 내려받기가 06:19로 표시되고, 마지막 휴대폰 스크린샷에는 11:11 시각이 찍혀 있습니다. 테스터는 약 세 시간이라고 말합니다. 종료 시각은 기록 없음.",
+      "observed"
+    ],
+    [
+      "Hardware",
+      "Mac: Apple M4 Pro, 24 GB 통합 메모리. 앱에는 “Picked for its 24 GB of memory”라고 표시됩니다. 메모에는 “m 4”라고만 적혀 있으며, 테스터가 나중에 M4 Pro임을 확인했습니다. 휴대폰: Android, 제조사와 모델은 기록 없음(“my old phone”).",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS와 Android 버전은 기록 없음.",
+      null
+    ],
+    [
+      "Why tested",
+      "개발자가 먼저 연락해 테스터에게 앱을 살펴보라고 권했습니다.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "목표로 명시되어 있지 않습니다. 메모에는 설정, 채팅, 검색, 음성, 설정 화면, 휴대폰 연결, MCP 서버를 처음 살펴본 내용이 담겨 있습니다.",
+      null
+    ],
+    [
+      "Models",
+      "Mac: Gemma 4 12B, 설정 시 “Best all-round”로 선택, 양자화는 기록 없음. 휴대폰: 내려받기 카드 기준 온디바이스 Bonsai 2 4B, 크기는 화면에 없음.",
+      "observed"
+    ],
+    [
+      "이 보고서의 근거",
+      "이 보고서는 테스터의 Word 메모와 이미지 52장을 바탕으로 합니다. ChatGPT가 테스트 중에 논리 벤치마크를 작성하고 채점했습니다. 메모는 일부가 받아쓰기로 작성되었으며, 일부 오타는 Loci가 아니라 받아쓰기 도구에서 나왔을 수 있습니다.",
+      "observed"
+    ]
+  ],
+  "disclosure": "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. Loci는 그곳에 등재되어 있습니다. 개발자가 테스터에게 먼저 연락했고, 메모는 그에게 보내는 감사 인사로 끝납니다. 테스트에서 사용한 MCP 서버는 PromptQuorum 자체 서버입니다. 메모에는 결제나 후원이 기록되어 있지 않습니다.",
+  "verdict": {
+    "general": "Mac과 Android용 소비자 지향 로컬 AI 앱으로, 첫 실행이 유난히 명확합니다. 이번 세션에서는 설정, 내장 웹 검색, 영어 받아쓰기, 독일어 받아쓰기(설정 변경 후), 휴대폰과 Mac의 연결, MCP 연결이 작동했습니다. 기본 모델은 논리 문제 열 개에 올바르게 답했지만 MCP를 통해서는 두 번 정정될 때까지 존재하지 않는 링크를 내놓았고, 휴대폰의 자체 소형 모델은 어려운 질문 세트를 거부했습니다. 이메일, 캘린더, 이미지·동영상 생성, Mac 오프라인 사용, 개인정보 보호 주장, 채팅 동기화, 삭제는 테스트하지 않았습니다.",
+    "fit": "테스터는 분명히 긍정적입니다. 정말 깊은 인상을 받았다고 하며, 이 앱을 로컬 LLM 분야를 앞으로 이끌 또 하나의 알이라고 부릅니다. 계속 사용할지는 밝히지 않았고, 두세 달 뒤에 다시 리뷰할 계획입니다."
+  },
+  "scores": [
+    [
+      "설치",
+      4,
+      "설치 앱 방식이라 끌어다 놓는 단계가 없습니다. Intel Mac과 앱 버전은 기록 없음."
+    ],
+    [
+      "온보딩과 모델 선택",
+      4,
+      "크기, 시간 추정, Mac별 추천이 있으며, 오해를 부르는 안내가 하나 있습니다."
+    ],
+    [
+      "핵심 기능",
+      4,
+      "채팅, 검색, 받아쓰기, 휴대폰 연결, MCP 연결이 작동했고, 두 가지 실패는 결론에 적혀 있습니다."
+    ],
+    [
+      "안내와 반복 작업",
+      4,
+      "쉬운 말로 된 설정이 있지만 언어 설정에 대한 안내가 없고, 컨텍스트 미터는 설명이 없습니다."
+    ],
+    [
+      "성능",
+      null,
+      "시간을 재지 않았습니다. 테스터는 MCP 답변이 자신의 Grok 및 Claude 환경보다 느리다고 말합니다."
+    ],
+    [
+      "문서",
+      null,
+      "설명서나 웹사이트 가이드는 열어 보지 않았습니다."
+    ],
+    [
+      "신뢰와 개인정보 보호",
+      null,
+      "주장은 감사하지 않았습니다."
+    ],
+    [
+      "삭제",
+      null,
+      "테스트하지 않았습니다."
+    ]
+  ],
+  "scores_note": "점수는 보고서 작성자가 테스터의 근거를 바탕으로 제안한 것입니다. n/a는 0점이 아니라 테스트하지 않았다는 뜻입니다.",
+  "tldr": [
+    [
+      "observed",
+      "Loci는 Mac과 Android용 로컬 AI 채팅 앱입니다. 테스터는 24 GB의 Apple M4 Pro에서 실행했고 설정 시 Gemma 4 12B(7.12 GB)를 선택했습니다."
+    ],
+    [
+      "observed",
+      "설정 과정은 모델 크기, 내려받기 시간 추정, Mac별 추천을 보여 줍니다. 내장 웹 검색은 날씨 질문에 출처 여섯 개로 답했습니다."
+    ],
+    [
+      "observed",
+      "기본 Language 설정에서는 독일어 받아쓰기가 깨져 나왔고, “Automatic — multilingual”로 바꾼 뒤에는 작동했습니다."
+    ],
+    [
+      "observed",
+      "Android 휴대폰이 Mac에 연결되어 Mac이 Ready로 표시되었습니다. 단독으로 실행하자 휴대폰의 소형 모델은 어려운 질문 세트를 거부했습니다."
+    ],
+    [
+      "observed",
+      "PromptQuorum의 MCP 서버가 첫 시도에 도구 27개와 함께 연결되었습니다. 로컬 모델은 존재하지 않는 링크를 두 번 내놓은 뒤, 세 번째 시도에서 올바른 도구를 사용했습니다."
+    ],
+    [
+      "assumption",
+      "이메일, 캘린더, 이미지·동영상 생성, Mac 오프라인 사용, 개인정보 보호 주장, 채팅 동기화, 삭제는 테스트하지 않았으므로 이 글은 결론이 아니라 첫 인상입니다."
+    ]
+  ],
+  "quotes": [
+    "“작은 것들이 중요합니다.”",
+    "“미리 선택해 두어 누구나 쉽게 시작할 수 있지만, 선택의 폭은 정말 넓습니다. 두 세계의 장점을 모두 가졌습니다.”",
+    "“잘 작동합니다. 사용자 인터페이스가 잘 만들어졌고 부정적인 놀라움이 없습니다.”"
+  ],
+  "quote_note": "받아쓰기에서 가볍게 다듬은 테스터의 메모입니다. 셋 모두 그의 판단이며 측정값이 아닙니다.",
+  "moments_title": "이 테스트를 형성한 여섯 가지 순간",
+  "moments_nav": "여섯 가지 순간",
+  "moments": [
+    [
+      "기다리기 전에 크기와 시간",
+      "크기와 예상 시간이 표시된 내려받기 카드.",
+      "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "chapter-setup"
+    ],
+    [
+      "숨기지 않고 회색 처리",
+      "메모리가 더 필요한 모델은 Unavailable로 표시됩니다.",
+      "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "chapter-setup"
+    ],
+    [
+      "독일어를 넣었더니 엉뚱한 글이 나옴",
+      "언어 설정을 바꾸기 전의 독일어 받아쓰기.",
+      "loci-german-dictation-garbled-text",
+      "chapter-voice"
+    ],
+    [
+      "휴대폰이 Mac에 연결됨",
+      "휴대폰이 Mac을 연결된 컴퓨터로 표시합니다.",
+      "loci-phone-linked-computers-macbook-pro-ready",
+      "chapter-phone"
+    ],
+    [
+      "모델이 링크를 지어냈다고 인정함",
+      "존재하지 않는 URL에 대한 테스터의 질문에 대한 답변.",
+      "loci-mcp-model-admits-hallucinated-links",
+      "chapter-mcp"
+    ],
+    [
+      "자체 MCP 서버 연결됨",
+      "서버가 앱에 도구 목록을 표시했습니다.",
+      "loci-mcp-promptquorum-connected-27-tools",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "내려받기와 설치",
+      "items": [
+        [
+          "observed",
+          "테스터는 iPhone, Android, Mac, Windows를 제공하는 공급업체 내려받기 페이지에서 Mac 빌드를 내려받았습니다. 디스크 이미지 Loci.dmg에는 macOS가 열기 전에 검사한 설치 앱이 들어 있었습니다.",
+          "loci-install-loci-app-macos-open-prompt"
+        ],
+        [
+          "tester-view",
+          "응용 프로그램 폴더로 끌어다 놓는 단계가 필요 없다는 점이 마음에 들었다고 합니다. 그가 써 본 다른 앱에서는 이 단계를 거쳐야 했습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "첫 실행과 설정",
+      "items": [
+        [
+          "observed",
+          "환영 화면에 이어 두 단계가 나옵니다. Loci가 무엇을 가장 잘해야 하는지 고른 뒤 모델을 내려받습니다. 결국 앱이 “Best all-round”로 표시한 모델인 Gemma 4 12B를 사용하게 되었습니다.",
+          "loci-setup-step1-choose-what-loci-is-best-at"
+        ],
+        [
+          "tester-view",
+          "내려받기 카드에는 예상 시간이 표시되었는데, 그는 수 기가바이트짜리 모델을 쓰는 모든 앱의 기본 요건으로 봅니다.",
+          "loci-gemma-4-12b-download-50-percent-time-estimate"
+        ],
+        [
+          "observed",
+          "내려받는 동안 채팅을 시작해도 된다는 안내는 그가 본 것과 맞지 않았습니다. 내려받는 중에 보낸 채팅은 모델이 도착할 때까지 답이 없었습니다.",
+          "loci-setup-step2-start-chatting-in-the-meantime"
+        ],
+        [
+          "observed",
+          "그가 초기에 적어 둔 두 가지 질문, 즉 앱이 하드웨어를 확인하는지와 Ollama 같은 다른 실행기를 추가할 수 있는지는 나중에 일부만 답이 나왔습니다. 앱은 Mac에 맞춰 모델을 추천하고 회색 처리하며, Models 화면에서는 Ollama 항목을 찾지 못했습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "채팅, 웹 검색, 논리 벤치마크",
+      "items": [
+        [
+          "observed",
+          "날씨 질문에 내장 웹 검색이 사용되었고 출처가 표시되었습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "이어서 테스터는 ChatGPT가 작성한 열 문항짜리 논리 벤치마크를 기본 모델에 주었습니다. 이것은 앱이 아니라 모델을 시험하는 것이지만, 앱이 그런 맥락에서 유용하다는 점은 보여 준다고 그는 말합니다.",
+          null
+        ],
+        [
+          "third-party",
+          "ChatGPT는 답변에 100점 만점에 94점을 주었습니다. 보고서 작성자가 다시 확인한 결과 열 개의 최종 답은 모두 맞습니다.",
+          null
+        ],
+        [
+          "observed",
+          "채팅 검색은 앱을 종료했다가 다시 시작한 뒤에도 벤치마크 채팅을 다시 찾아냈습니다. 입력창 옆의 컨텍스트 미터는 8.1k / 64k로 표시됩니다.",
+          "loci-chat-search-bob-after-restart"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-voice",
+      "title": "음성과 독일어",
+      "items": [
+        [
+          "observed",
+          "영어 받아쓰기는 바로 작동했습니다.",
+          "loci-english-dictation-fifteen-times-five"
+        ],
+        [
+          "tester-error",
+          "독일어는 작동하지 않았고, 테스터는 Loci가 영어 전용이라고 적었습니다. 나중에 Language 설정을 찾았고 독일어가 작동했습니다.",
+          "loci-german-dictation-works-after-language-setting"
+        ],
+        [
+          "observed",
+          "받아쓰기 키에 권한 경고가 표시되었으나 메모에는 언급이 없습니다.",
+          "loci-settings-dictation-key-permission-warning"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-settings",
+      "title": "설정, 모델, 연결",
+      "items": [
+        [
+          "tester-view",
+          "쉬운 말로 된 설정과, 단순한 첫 선택 뒤에 있는 폭넓은 모델 카탈로그가 마음에 들었다고 합니다.",
+          "loci-model-catalogue-chat-and-coding"
+        ],
+        [
+          "observed",
+          "메모리 가져오기와 메일·캘린더 연결을 보았지만 시도하지는 않았습니다.",
+          "loci-connections-mail-calendar-reminders"
+        ],
+        [
+          "tester-view",
+          "그는 이메일 연동이 자신이 본 로컬 앱 가운데 가장 강력한 비즈니스 기능일 수 있다고 평가합니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-phone",
+      "title": "휴대폰과 Loci Link",
+      "items": [
+        [
+          "observed",
+          "Android 휴대폰에 Loci를 설치하고 Mac과 페어링했습니다. 페어링 후 휴대폰은 Mac을 모델 한 개와 함께 Ready로 표시합니다.",
+          "loci-phone-linked-computers-macbook-pro-ready"
+        ],
+        [
+          "tester-error",
+          "Mac의 채팅 목록을 확인하지 않은 채, 휴대폰 채팅이 Mac에서 보이지 않는다고 판단했습니다. 휴대폰 화면에는 읽기 전용 사본이 그곳에 저장된다고 나와 있습니다.",
+          null
+        ],
+        [
+          "third-party",
+          "이어서 연결을 통해 어려운 질문 세트를 보냈고, ChatGPT의 채점은 엇갈렸습니다.",
+          null
+        ],
+        [
+          "observed",
+          "같은 세트를 휴대폰의 자체 소형 모델로 다시 실행했는데, 모델이 거부했습니다.",
+          "loci-phone-on-device-model-refuses-question-set"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "MCP와 존재하지 않는 링크",
+      "items": [
+        [
+          "observed",
+          "PromptQuorum 자체 MCP 서버를 추가했습니다. 12개 앱을 묶어 보여 준 첫 답변에는 링크가 없었습니다.",
+          "loci-mcp-promptquorum-connected-27-tools"
+        ],
+        [
+          "observed",
+          "그다음 모델이 만든 링크는 틀렸고, 하나는 PromptQuorum의 404 페이지로 열렸습니다. 지어낸 것이냐고 묻자 모델은 링크가 hallucinated(지어낸 것)라고 답했습니다.",
+          "loci-mcp-model-admits-hallucinated-links"
+        ],
+        [
+          "observed",
+          "두 번째 세트도 실패했습니다. 모델은 자체 점검에서 링크가 여전히 틀렸다고 말한 뒤 “search apps” 도구를 실행해 세 번째 세트를 내놓았고, 테스터는 이것이 맞았다고 말합니다.",
+          "loci-mcp-final-links-download-install-review"
+        ],
+        [
+          "tester-view",
+          "테스터는 이것을 로컬 모델과 MCP의 강점으로 봅니다. 실시간 데이터를 쓸 수 있고, 지적받으면 스스로 바로잡을 수 있다는 것입니다.",
+          null
+        ],
+        [
+          "observed",
+          "이 대화 중에 평점 팝업이 나타났습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "결정",
+      "items": [
+        [
+          "observed",
+          "메모는 요약과 재테스트 계획으로 끝나며, 계속 사용할지에 대한 결론은 없습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "테스터는 정말 깊은 인상을 받았다고 말하며, 이 앱을 로컬 LLM 분야를 앞으로 이끌 또 하나의 알이라고 부릅니다. 두세 달 뒤에 다시 리뷰하고 개발자에게 채팅 동기화에 대해 물어볼 계획입니다.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“No account, no ads, completely free.”",
+      "내려받기 페이지",
+      "캡처한 화면에는 로그인 단계나 광고가 없었고, 가격은 그 밖에는 확인하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "“With a local model, your words never leave this Mac.”",
+      "앱 환영 화면",
+      "검증하지 않았습니다. 웹 검색과 MCP 호출은 설계상 데이터를 밖으로 보냅니다.",
+      "vendor-claim"
+    ],
+    [
+      "“You can start chatting in the meantime.”",
+      "설정 2단계",
+      "테스터: 채팅은 모델이 올 때까지 기다립니다.",
+      "observed"
+    ],
+    [
+      "온디바이스 모델은 Mac을 벗어나지 않으며, 클라우드 채팅은 사용자의 키로 제공업체에 바로 전달됩니다.",
+      "Models 화면",
+      "검증하지 않았습니다. 클라우드 키는 추가하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "“Automatic supports 25 European languages.”",
+      "받아쓰기 설정",
+      "설정 후 독일어는 작동했고, 다른 언어는 시도하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "“Run your computer’s more powerful models from your phone.”",
+      "휴대폰 설정",
+      "메모와 Linked computers 화면에 따르면 작동하는 것을 확인했습니다.",
+      "observed"
+    ],
+    [
+      "“Your mail never leaves this Mac.”",
+      "Connections 페이지",
+      "테스트하지 않았습니다. 연결한 계정이 없습니다.",
+      "vendor-claim"
+    ],
+    [
+      "“Nothing is uploaded.”",
+      "Memories 가져오기",
+      "시도하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "다른 앱보다 hallucination(지어낸 답변)과 충돌이 적다.",
+      "디렉터리 리뷰(제3자)",
+      "한 번의 세션으로는 테스트할 수 없습니다. 충돌은 보지 못했습니다.",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "title": "24 GB 대비 내려받기 크기",
+    "nav": "크기",
+    "rows": [
+      [
+        "Qwen3.5 4B (심층 사고)",
+        2.74,
+        "2.74 GB · 설정",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4-bit (Unavailable)",
+        4.62,
+        "4.62 GB · 이미지 모델",
+        "measured"
+      ],
+      [
+        "Gemma 4 E4B",
+        4.98,
+        "4.98 GB · 카탈로그",
+        "measured"
+      ],
+      [
+        "Nemotron 3.5 Bolt E4B (코딩)",
+        6.18,
+        "6.18 GB · 카탈로그",
+        "measured"
+      ],
+      [
+        "Gemma 4 12B (설정 시 선택)",
+        7.12,
+        "7.12 GB · 설정 내려받기",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 8-bit (Unavailable)",
+        8.57,
+        "8.57 GB · 이미지 모델",
+        "measured"
+      ],
+      [
+        "Qwen3.8 27B (코딩)",
+        10.93,
+        "10.93 GB · 설정 및 카탈로그",
+        "measured"
+      ],
+      [
+        "Wan 2.2 5B 동영상(“Best for this Mac”)",
+        16.74,
+        "16.74 GB · 동영상 모델",
+        "measured"
+      ]
+    ],
+    "note": "앱 화면에서 읽은 내려받기 크기이며, 실행 중 사용하는 메모리가 아닙니다. 앱은 모델별 메모리 요구량을 표시하지 않고 적합 여부 라벨만 보여 줍니다. 실행 시 메모리는 측정하지 않았습니다. 테스트 Mac의 통합 메모리는 24 GB입니다."
+  },
+  "usage_log": [
+    [
+      "Mac 설치 프로그램 내려받기 및 열기",
+      "Install Loci 확인 창 통과, 앱 설치됨, 설치 시간은 기록 없음",
+      "Install Loci 확인 창 통과, 앱 설치됨, 설치 시간은 기록 없음",
+      "06:19",
+      "Pass",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "Gemma 4 12B 내려받기",
+      "Gemma 4 12B",
+      "메모에 따르면 완료(“works smoothly”), 총 소요 시간은 기록 없음",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "웹 검색을 사용한 날씨 질문",
+      "Gemma 4 12B",
+      "출처 여섯 개와 함께 답변, 정확도는 확인하지 않음",
+      "기록 없음",
+      "Pass",
+      []
+    ],
+    [
+      "논리 벤치마크, 10문항",
+      "Gemma 4 12B",
+      "다시 확인한 결과 10개 중 10개의 최종 답이 정답, ChatGPT 점수 94/100",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "채팅 검색, 재시작 후 다시 검색",
+      "—",
+      "두 번 모두 채팅을 찾음",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "영어 받아쓰기: “What is fifteen times five”",
+      "Loci 받아쓰기",
+      "텍스트 정확함",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-english-dictation-fifteen-times-five"
+      ]
+    ],
+    [
+      "독일어 받아쓰기, 기본 언어 설정",
+      "Loci 받아쓰기",
+      "깨진 텍스트",
+      "기록 없음",
+      "Fail",
+      [
+        "loci-german-dictation-garbled-text"
+      ]
+    ],
+    [
+      "독일어 받아쓰기, 언어를 Automatic multilingual로 설정",
+      "Loci 받아쓰기",
+      "“Wie spät ist es momentan?” 정확함",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "답변 소리 내어 읽기",
+      "—",
+      "메모에 따르면 작동, 시간은 재지 않음",
+      "기록 없음",
+      "Pass",
+      []
+    ],
+    [
+      "Android 휴대폰을 Mac과 페어링",
+      "—",
+      "연결됨, Mac이 Ready, 1 models로 표시, 페어링 시간은 기록 없음",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "휴대폰에서 Mac을 거친 어려운 질문 세트",
+      "Mac 모델(메모: Qwen, 스크린샷: Gemma 4 12B)",
+      "답변 반환, ChatGPT 채점은 엇갈림, 시간은 재지 않음",
+      "기록 없음",
+      "Partial",
+      []
+    ],
+    [
+      "같은 세트를 휴대폰에서 온디바이스로만 실행",
+      "Bonsai 2 4B",
+      "거부",
+      "11:11",
+      "Fail",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "PromptQuorum MCP 서버 추가",
+      "—",
+      "첫 시도에 연결됨",
+      "기록 없음",
+      "Pass",
+      [
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "MCP: “Which are the video apps that you can propose?”",
+      "Gemma 4 12B",
+      "링크 없이 12개 앱을 묶은 목록, “took a while”, 시간은 재지 않음",
+      "기록 없음",
+      "Partial",
+      []
+    ],
+    [
+      "MCP: 링크 요청, 세 차례",
+      "Gemma 4 12B",
+      "두 차례 잘못된 링크, 이후 테스터에 따르면 정확함",
+      "기록 없음",
+      "Partial",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "이메일, 캘린더, 미리 알림",
+      "—",
+      "시작하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ],
+    [
+      "이미지 및 동영상 생성",
+      "—",
+      "시작하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ],
+    [
+      "Deep Research, Thinking, 메모리 가져오기",
+      "—",
+      "시작하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ],
+    [
+      "삭제",
+      "—",
+      "테스트하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "독일어 받아쓰기가 “crashed”했고 Loci가 영어로만 제한된 것 같다고 적었습니다. 스크린샷에는 충돌이 아니라 깨진 텍스트가 보이며, 원인은 Language 설정이었고 그는 나중에 직접 찾았습니다."
+    ],
+    [
+      "tester-error",
+      "앱이 “작동하는 모델만 제안한다”고 적었습니다. Unavailable 모델은 숨겨진 것이 아니라 회색으로 표시되어 있습니다. “Best for this Mac”로 표시된 16.74 GB 동영상 모델은 내려받지 않았으므로 24 GB에서 실행되는지는 테스트하지 않았습니다. 다만 그는 그런 모델이 보통 자신의 Mac을 다운시킨다고 말합니다."
+    ],
+    [
+      "tester-error",
+      "확인하지 않은 채 휴대폰 채팅이 노트북에 나타나지 않았다고 보고했습니다. 휴대폰의 Linked computers 화면에는 연결된 컴퓨터가 답한 채팅이 그곳에 읽기 전용 사본으로 저장된다고 나와 있으며, Mac의 채팅 목록은 확인하지 않았습니다."
+    ],
+    [
+      "tester-error",
+      "연결된 실행에서 Mac이 “Qwen”으로 답했다고 말했습니다. Models 스크린샷에는 Gemma 4 12B “In use”만 나열되어 있고 휴대폰 카드에는 “1 models”라고 나옵니다. 나중에 Qwen 모델이 설치되었는지는 기록되어 있지 않습니다."
+    ],
+    [
+      "tester-error",
+      "휴대폰 모델의 크기를 “one gigabyte”, 이후 “1.2 gigabyte”로 두 가지로 말했습니다. 내려받기 카드에는 “Bonsai 2 4B”라고 표시되고 크기는 나와 있지 않습니다."
+    ],
+    [
+      "assumption",
+      "테스터는 테스트에 세 시간이 걸렸다고 말합니다. Mac 내려받기 확인 창(06:19)과 마지막 휴대폰 스크린샷(11:11)은 두 시계가 같은 시간대를 표시한다면 약 4시간 52분 차이입니다(계산). 휴식 시간은 기록되어 있지 않습니다."
+    ],
+    [
+      "tester-error",
+      "기록의 공백: 앱, macOS, Android 버전, 휴대폰 모델, 종료 시각, Gemma 4 12B의 양자화, 말한 독일어 문장, 기본 언어 값, 두 번째 테스트의 질문 목록, Wi-Fi와 모바일 데이터가 실제로 꺼져 있었는지, 평점을 보냈는지, 마지막 링크를 클릭했는지, 페어링 및 내려받기 시간, Intel Mac 지원 여부."
+    ],
+    [
+      "assumption",
+      "많은 스크린샷에 다른 앱의 떠 있는 마이크 버블이 보입니다. Loci 입력창의 빨간 마이크는 음성 스크린샷에서 Loci의 받아쓰기가 녹음 중이었음을 시사하며, 메모의 받아쓰기 텍스트를 어느 도구가 만들었는지는 기록되어 있지 않습니다. 메모의 음성 인식 오타는 정리했습니다(예: “Loki”는 Loci, “four or four”는 404)."
+    ]
+  ],
+  "findings": [
+    [
+      "LO-01",
+      "공급업체 페이지에는 “Taking you to the right download for your device…”라고 표시되며 iPhone, Android, Mac, Windows 버튼이 있습니다. 테스터는 Apple Silicon에서 Mac 빌드를 실행했으며, Intel Mac에서 실행되는지는 테스트하지 않았습니다.",
+      "설치",
+      "observed",
+      "Info",
+      [
+        "loci-download-page-four-platforms"
+      ]
+    ],
+    [
+      "LO-02",
+      "내려받은 것은 디스크 이미지 Loci.dmg였습니다. 열자 “Install Loci”라는 앱에 대한 macOS 확인 창이 나타났고, Apple이 검사해 악성 코드가 발견되지 않았다고 표시되었습니다. 테스터는 응용 프로그램으로 끌어다 놓는 단계가 필요 없었고 설치가 저절로 진행되었다고 말합니다(테스터 의견). 디스크 이미지 크기와 확인 창 이후 설치 프로그램이 한 일은 기록되어 있지 않습니다.",
+      "설치",
+      "observed",
+      "Positive",
+      [
+        "loci-install-loci-app-macos-open-prompt"
+      ]
+    ],
+    [
+      "LO-03",
+      "첫 실행: 환영 화면 다음에 두 단계가 있으며, 캡처한 화면에는 로그인 단계가 없습니다. 1단계 “What should Loci be best at?”는 작업 이름이 붙은 선택지를 나열하며, 각각 모델 이름과 내려받기 크기가 있습니다. 테스터는 모델과 크기가 명시된 점이 마음에 든다고 하며, 그가 써 본 일부 앱은 그렇지 않습니다(테스터 의견).",
+      "온보딩",
+      "measured",
+      "Positive",
+      [
+        "loci-welcome-your-ai-lives-here-text",
+        "loci-setup-step1-choose-what-loci-is-best-at"
+      ]
+    ],
+    [
+      "LO-04",
+      "내려받기 카드에는 퍼센트, 지금까지 받은 GB, 전체 크기, 예상 시간이 표시되며(스크린샷에서 잘림: 50 %에서 “about 7 m…”, 49 %에서 “about 10 …”), Pause와 Choose another 버튼이 있습니다. 총 내려받기 시간은 기록 없음. 테스터는 예상 시간을 기본 필수 요건이라고 부르며, 없는 앱은 처음부터 탈락이라고 말합니다(테스터 의견).",
+      "온보딩",
+      "measured",
+      "Positive",
+      [
+        "loci-gemma-4-12b-download-50-percent-time-estimate"
+      ]
+    ],
+    [
+      "LO-05",
+      "2단계에는 “Keep Loci open while this finishes. You can start chatting in the meantime.”라고 나옵니다. 테스터는 내려받는 중에 보낸 채팅은 모델이 도착할 때까지 답이 없으므로 이 안내가 틀렸다고 말합니다. 기다리는 화면의 스크린샷은 없으며, 얼마나 기다렸는지는 기록되어 있지 않습니다.",
+      "온보딩",
+      "observed",
+      "Low",
+      [
+        "loci-setup-step2-start-chatting-in-the-meantime"
+      ]
+    ],
+    [
+      "LO-06",
+      "배너에는 “Recommended for this Mac — Picked for its 24 GB of memory”라고 표시됩니다. 이미지·동영상 목록에서 FLUX.2 klein 4B(4-bit 및 8-bit)는 “Unavailable — Needs a Mac with more memory”로 회색 처리되어 있고, Wan 2.2 5B는 “Best for this Mac”로 표시되어 있습니다. 하드웨어 확인이 있느냐는 테스터의 질문에 대한 답입니다. 더 작은 Mac에서는 시도하지 않았습니다. 디스크 막대에는 Loci 모델 7.12 GB와 여유 공간 91.29 GB가 표시됩니다. 테스터의 Locally Uncensored 테스트(24 GB Mac)에서는 FLUX.2 klein 4B 4-bit가 “Runs on this Mac”으로 표시되었으므로, 같은 모델에 대해 앱마다 라벨이 다릅니다(가정: 런타임이 다름).",
+      "모델",
+      "observed",
+      "Positive",
+      [
+        "loci-recommended-for-this-mac-24-gb",
+        "loci-image-models-unavailable-video-model-best-for-this-mac"
+      ]
+    ],
+    [
+      "LO-07",
+      "카탈로그는 용도별(일상 대화와 글쓰기, 코딩, 이미지 모델, 동영상 모델)로 나뉩니다. 카드에는 이름, 한 줄 설명, 크기, 해당하는 경우 라이선스 안내가 있습니다(TwIL-8B: “Non-commercial use only”). 크기: Qwen3.5 0.8B (MLX) 652 MB, Gemma 4 E2B (MLX Mobile) 2.43 GB, Gemma 4 E2B 3.11 GB, Gemma 4 E4B (MLX Mobile) 3.49 GB, Gemma 4 E2B (MLX) 3.58 GB, Gemma 4 E4B 4.98 GB, Spark-X2.6 4B 3.54 GB, TwIL-8B 5.35 GB, Nemotron 3.5 Bolt E4B 6.18 GB. 테스터: 미리 선택해 두어 쉽게 시작하고 이후 폭넓게 고를 수 있습니다(테스터 의견). 모델별 메모리 요구량은 표시되지 않고 적합 여부 라벨만 있습니다.",
+      "모델",
+      "measured",
+      "Positive",
+      [
+        "loci-model-catalogue-chat-and-coding"
+      ]
+    ],
+    [
+      "LO-08",
+      "Models 화면에는 Gemma 4 12B “In use”, “Browse models”, 그리고 각각 “Add key”가 있는 클라우드 모델 Anthropic, OpenAI, Google Gemini가 표시됩니다. 테스터가 물어본 Ollama나 LM Studio 항목은 이 화면에 없으며, 다른 화면에서는 찾아보지 않았습니다. 테스터가 우려하는 점은, 앱마다 자체 모델을 번들로 넣으면 모델을 다시 내려받게 되고 메모리가 불어난다는 것입니다(테스터 의견).",
+      "모델",
+      "observed",
+      "Info",
+      [
+        "loci-settings-models-and-cloud-keys"
+      ]
+    ],
+    [
+      "LO-09",
+      "날씨 질문에서 “Searched the web ✓” 단계, 날짜가 있는 답변, “Sources 6”(weather-forecast.com, accuweather.com 두 번, weather.com, weather.metoffice.gov.uk, bbc.co.uk)이 표시되었습니다. 테스터는 출처 하나, 즉 weather.com의 10일 예보 페이지를 열어 보았으며, 값이 일치했는지는 기록되어 있지 않습니다. Ollama나 LM Studio 환경에서는 오래된 데이터가 나오기 때문에 그는 내장 검색을 높이 평가합니다(테스터 의견).",
+      "검색",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LO-10",
+      "File 메뉴에는 Search Chats (⌘K), New Chat (⌘N), Switch Model (⇧⌘M), Memories…가 있습니다. “empl”과 “Bob”을 검색하자 벤치마크 채팅이 나왔고, 테스터는 앱을 종료했다가 다시 시작한 뒤에도 검색이 작동했다고 말합니다. 채팅의 자동 제목 “Online availability check”는 논리 테스트를 설명하지 않으며, 제목이 어떻게 만들어지는지는 기록되어 있지 않습니다.",
+      "채팅",
+      "observed",
+      "Info",
+      [
+        "loci-chat-search-bob-after-restart"
+      ]
+    ],
+    [
+      "LO-11",
+      "입력창 옆의 컨텍스트 미터에는 “8.1k / 64k”라고 표시됩니다. 테스터는 이를 설명하는 정보 아이콘을 원하고 컨텍스트를 비울 수 있는지 묻습니다. 미터에 툴팁이 있는지는 시도하지 않았고, 설정 페이지에는 정보 아이콘이 있습니다. 그는 64K를 큰 창이라고 부릅니다.",
+      "채팅",
+      "tester-view",
+      "Low",
+      [
+        "loci-context-meter-8-1k-of-64k"
+      ]
+    ],
+    [
+      "LO-12",
+      "ChatGPT가 작성한 논리 문제 열 개를 기본 모델(주변 스크린샷의 선택기 기준 Gemma 4 12B)에 한 번 보냈습니다. 테스터가 아니라 보고서 작성자가 다시 확인한 결과 열 개의 최종 답은 모두 맞습니다. Q2의 최종 값 1분은 문제 문구 그대로 보면 맞습니다(기계 한 대가 5분에 부품 5개를 만듭니다). 반복하거나 시간을 재거나 다른 모델과 비교하지는 않았습니다.",
+      "추론",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-13",
+      "ChatGPT는 답변에 94/100점을 주었습니다. 여덟 문항은 10/10, Q2는 8/10 “Correct, but initially confused”, Q9는 6/10 “Correct answer, flawed explanation”입니다. 쉬운 수준에서 중간 수준의 벤치마크로서는 강한 결과라고 평가하면서, 문제 열 개로는 진짜 추론과 학습된 퍼즐 패턴을 구분할 수 없다고 말하고, 어떤 모델, 파라미터 크기, 양자화를 썼는지 물었지만 메모에는 답이 없습니다. 나열된 점수의 합은 94입니다(계산). 채점자는 AI이며 문제도 직접 작성했습니다.",
+      "추론",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-14",
+      "Q2에서 답변 줄에는 “5 minutes”라고 나오고, 이어서 본문이 다시 계산하여(“Wait, let’s re-calculate”) 1분으로 끝납니다. 최종 값은 맞지만 맨 위의 답이 이와 모순됩니다.",
+      "추론",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-15",
+      "Q9: 최종 답 Bob은 맞지만 설명에 오류가 있습니다. Bob이 거짓말을 하면 Charlie의 진술이 거짓이라고 하고, 나중에 Alice가 한 말인데도 Charlie에게 “Bob is lying”을 돌립니다. ChatGPT도 같은 결함을 지적했습니다.",
+      "추론",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-16",
+      "채팅 입력창에 영어 받아쓰기가 작동했습니다. 음성 설정: “Natural Voice reads English replies. Apple voices read other languages.”, 속도 105 %, 답변 전 대기 1.2 s. Edit 메뉴에는 Start Dictation, Finish Dictation, Stop Audio, Voice Settings…가 있습니다. 선택한 텍스트의 메뉴에는 Copy, Share, Read Aloud, Regenerate가 있으며, 테스터는 소리 내어 읽기가 “really useful”하다고 평가합니다(테스터 의견). 어느 도구가 텍스트를 받아썼는지는 기록되어 있지 않습니다.",
+      "음성",
+      "observed",
+      "Positive",
+      [
+        "loci-english-dictation-fifteen-times-five",
+        "loci-settings-voice-spoken-replies"
+      ]
+    ],
+    [
+      "LO-17",
+      "기본 설정의 독일어 받아쓰기는 깨진 텍스트(“Bus East Seben Mal Einund Reisik”)를 냈으며, 말한 문장은 기록되어 있지 않습니다. 음성 모드에서 독일어를 알아듣느냐는 질문에 모델은 그렇다고 답했는데, 이는 음성 인식이 아니라 모델에 관한 답입니다. Language 설정을 “Automatic — multilingual”로 바꾼 뒤 독일어가 작동했습니다(“Wie spät ist es momentan?”). 테스터는 기본값이 영어라고 말하지만 캡처되지는 않았습니다. 이 설정에 대한 화면상의 안내는 보지 못했습니다. 설정에는 Automatic이 유럽 언어 25개를 지원한다고 나옵니다(업체 주장).",
+      "음성",
+      "observed",
+      "Medium",
+      [
+        "loci-german-dictation-garbled-text",
+        "loci-german-question-model-says-yes",
+        "loci-german-dictation-works-after-language-setting"
+      ]
+    ],
+    [
+      "LO-18",
+      "받아쓰기 설정에는 Local dictation 켜짐, 키 Fn / Globe(⌘⇧D로도 시작과 중지, Escape로 취소), 그리고 “The dictation key is not working because it needs Device Control and Data Access permission. Command Shift D is still available.”라는 메시지와 Open System Settings 버튼이 표시됩니다. 메모에는 이 내용이 언급되지 않으며, 권한을 허용했는지, 어떤 키로 받아쓰기를 시작했는지도 나와 있지 않습니다.",
+      "음성",
+      "observed",
+      "Medium",
+      [
+        "loci-settings-dictation-key-permission-warning"
+      ]
+    ],
+    [
+      "LO-19",
+      "“For tinkerers”: Focused에서 Creative까지의 Creativity 슬라이더가 0.70으로 설정되어 있고 “Recommended for Gemma 4 12B: 1.00”과 정보 아이콘이 있으며, Context length 선택기(Auto · 64K, 8K, 16K, 32K, 64K, 128K, 64K 선택됨)에도 정보 아이콘이 있습니다. 테스터는 기술 용어 대신 쉬운 말을 쓴 점과 로컬 모델에 128K 옵션이 있는 점이 마음에 듭니다(테스터 의견). 컨텍스트 길이가 메모리에 미치는 영향은 측정하지 않았습니다.",
+      "설정",
+      "observed",
+      "Positive",
+      [
+        "loci-settings-creativity-and-context-length"
+      ]
+    ],
+    [
+      "LO-20",
+      "“Chat & memory”: 답변 Length(Short, Standard, Long), 새 채팅의 Focus mode(General), Thinking, Show reply stats, “Show Deep Research in + menu”, “Precise research steps”(Experimental). 테스터는 답변을 이끄는 훌륭하고 단순한 설정이라고 평가합니다(테스터 의견). Thinking, 답변 통계, Deep Research는 사용하지 않았습니다.",
+      "설정",
+      "observed",
+      "Info",
+      [
+        "loci-settings-chat-and-memory-replies"
+      ]
+    ],
+    [
+      "LO-21",
+      "File > Memories…는 가져오기를 엽니다. 내보내기 프롬프트를 복사해 Claude, ChatGPT, Gemini에 붙여 넣은 뒤 답을 다시 붙여 넣는 방식입니다. “Each line becomes a memory saved on this Mac. Nothing is uploaded, and you choose what stays.” 스크린샷 검토에서 발견했으며, 시도하지 않았고, 테스터는 언급하지 않았습니다.",
+      "메모리",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-memories-import-panel"
+      ]
+    ],
+    [
+      "LO-22",
+      "Connections에는 Apple Mail(“Not connected”), Calendar and Reminders(“Not asked yet”), Notifications, 그리고 Gmail과 Outlook / Microsoft 365 버튼이 있습니다. 업체 문구: 메일은 Mac을 벗어나지 않고, 동기화는 Loci가 실행되는 동안 진행되며, 본문은 30일치를 내려받고, 캐시된 메일은 암호화되며, 새 연결은 읽기 전용입니다. 연결한 계정은 없습니다. 테스터는 이메일 연동이 자신이 처음 본 것이며 아마 가장 강력한 비즈니스 도구일 것이라고 말하지만 설정하지는 않았습니다(테스터 의견). 시간에 대한 독일어 질문에서 프롬프트 아래에 “Using Calendar & Reminders” 칩이 나타났으며, 권한 상태와 답변은 기록되어 있지 않습니다.",
+      "연결",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-connections-mail-calendar-reminders"
+      ]
+    ],
+    [
+      "LO-23",
+      "Mac의 “Your phone” 페이지에는 세 단계가 나옵니다. 휴대폰에 Loci 설치, 둘을 같은 Wi-Fi에 연결, 휴대폰에서 Settings > Scan QR code를 열거나 코드 입력(페어링 코드가 보이므로 스크린샷은 공개하지 않음). 이어서 휴대폰이 모델을 요청했습니다. “Waiting for an unmetered network — Bonsai 2 4B… You can use this metered connection instead.” 테스터는 두 모델 중 작은 것을 골랐습니다. 휴대폰의 제조사, 모델, Android 버전은 기록 없음.",
+      "휴대폰",
+      "observed",
+      "Info",
+      [
+        "loci-phone-waiting-for-unmetered-network-bonsai"
+      ]
+    ],
+    [
+      "LO-24",
+      "페어링 후 휴대폰의 Linked computers에는 “Hans’s MacBook Pro (2)”, “Ready”, “1 models”가 표시됩니다. 테스터는 연결이 매우 빨랐고 따로 설정할 것이 없었다고 말하며, 페어링 시간은 기록 없음. 휴대폰 설정 문구: “Loci Link: Run your computer’s more powerful models from your phone.”(업체 주장).",
+      "연결",
+      "observed",
+      "Positive",
+      [
+        "loci-phone-linked-computers-macbook-pro-ready"
+      ]
+    ],
+    [
+      "LO-25",
+      "테스터는 휴대폰 채팅을 Mac에서 보지 못했고 개발자에게 물어볼 계획이며, 설정을 놓쳤을 수도 있다고 말합니다. 휴대폰의 Linked computers 화면에는 “Chats answered by a linked computer are saved there as read-only copies”라고 나와 있으므로 사본이 있을 수 있으며, Mac의 채팅 목록은 확인하지 않았습니다.",
+      "연결",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LO-26",
+      "ChatGPT가 작성한 어려운 질문 세트를 휴대폰에서 Mac으로 보냈습니다(테스터는 Mac의 모델을 “Qwen”이라고 부릅니다). 일부만 보이는 ChatGPT의 평가표: Q1, Q7, Q9 Correct, Q2, Q5 Partial, Q3 Incorrect, Q4, Q6, Q8 Incomplete, 이후 행은 잘려 있습니다. ChatGPT의 설명: 모델은 추론 문제를 잘 인식하지만 “does not consistently solve them”, 여러 답변이 끝나지 않았고 일부는 근본적인 논리 오류를 담고 있습니다. 테스터의 메모는 연결만 평가하며, 연결은 쉽게 작동한다고 말합니다.",
+      "연결",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "LO-27",
+      "온디바이스 실행(테스터에 따르면 Wi-Fi와 모바일 데이터를 끈 상태): 같은 어려운 세트를 주자 휴대폰의 소형 모델(카드 이름 Bonsai 2 4B)이 “I cannot answer these 20 questions. They are designed to test my ability, and I am an AI assistant bound by safety guidelines, not a human exam taker…”라고 답했습니다(11:11 캡처). 상태 표시줄에는 여전히 신호 표시와 데이터 속도 표시가 있어 오프라인 상태는 확인되지 않습니다. 이 거부는 앱의 결함이 아니라 모델의 동작으로 보입니다(가정).",
+      "휴대폰",
+      "observed",
+      "Medium",
+      [
+        "loci-phone-on-device-model-refuses-question-set"
+      ]
+    ],
+    [
+      "LO-28",
+      "“Add a Server”는 서비스 24개의 카탈로그와 “Web address”(모든 MCP 서버), “Program on this Mac”을 제공합니다. 테스터는 PromptQuorum 자체 MCP 주소를 입력했으며, 양식에는 Keychain에 보관되는 선택적 액세스 토큰이 있습니다(업체 주장). 확인 문구는 “Nothing is added until you confirm. Whatever Loci sends to this server’s tools leaves your Mac.”이며 “Use in every chat” 토글이 있고 켜져 있었습니다. 서버는 첫 시도에 연결되어 도구 27개를 제공합니다. PromptQuorum이 이 로컬 LLM 분야의 유일한 MCP 서버라는 테스터의 진술은 검증하지 않았습니다(가정).",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "loci-mcp-add-a-server-catalogue",
+        "loci-mcp-promptquorum-connected-27-tools"
+      ]
+    ],
+    [
+      "LO-29",
+      "첫 질의 “Which are the video apps that you can propose?”: 도구 “promptquorum: list categories”가 실행되고 “Pondering…”이 표시된 뒤 12개 앱(이미지 생성, 동영상, 비전, 창작 도구)을 묶은 답변이 링크 없이 나왔습니다. 테스터의 서버 지침은 링크를 요구하는데도 그랬습니다. 테스터는 MCP를 쓴 Grok이나 Claude보다 느리다고 말하며 시간은 재지 않았고(테스터 추정), Mac의 팬 소리를 들었다고 합니다.",
+      "MCP",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-30",
+      "링크가 어디 있느냐고 묻자 모델은 “View Details” 링크를 내놓았고, 하나는 PromptQuorum의 404 페이지로 열렸습니다. 지어낸 것이냐고 묻자 모델은 링크가 “hallucinated”이며 “based on a pattern” 만들었다고 답했습니다. 테스터에 따르면 두 번째 세트도 실패했고, 모델은 자체 점검에서 “still incorrect”라고 말했지만 점검 단계는 보이지 않습니다. 이어서 “search apps”를 실행해 “Not verified to fit” 메모가 붙은 “Download/Install | Read the full review” 링크를 돌려주었습니다. 테스터는 이 링크가 맞았다고 말하지만 그가 클릭해 본 장면은 스크린샷에 없습니다. 앱이 URL을 검증하는지는 기록되어 있지 않습니다.",
+      "MCP",
+      "observed",
+      "Medium",
+      [
+        "promptquorum-404-page-from-mcp-link",
+        "loci-mcp-model-admits-hallucinated-links",
+        "loci-mcp-self-check-claims-links-still-incorrect",
+        "loci-mcp-final-links-download-install-review"
+      ]
+    ],
+    [
+      "LO-31",
+      "MCP 대화 중에 “Enjoying Loci? Click a star to rate it on the Mac App Store.”라는 팝업(별 다섯 개, “Not now”)이 나타났습니다. 테스터는 “deserves a five”라고 적었으며, 실제로 평점을 남겼는지는 기록되어 있지 않습니다. 그는 App Store가 아니라 웹에서 내려받아 설치했으므로, 이 팝업은 출처와 상관없이 나타납니다(가정).",
+      "피드백",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LO-32",
+      "환영 화면: “With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.” 휴대폰: “Loci processes your requests here—we don’t use data centers to answer them.” 앱 자체가 데이터를 밖으로 보내는 기능을 표시합니다. 웹 검색, 클라우드 키, MCP 도구입니다. 트래픽은 점검하지 않았고 Mac에서 오프라인 실행도 시도하지 않았습니다.",
+      "신뢰",
+      "vendor-claim",
+      "Info",
+      [
+        "loci-welcome-your-ai-lives-here-text"
+      ]
+    ],
+    [
+      "LO-33",
+      "테스트하지 않았거나 기록하지 않은 것: Gmail, Outlook, Apple Mail, Calendar와 Reminders, Deep Research와 Thinking, 사진 이해, 이미지·동영상 생성, 메모리 가져오기, 클라우드 키, Windows, iPhone, iPad, Intel Mac, Mac 오프라인 사용, 네트워크 트래픽, 채팅 동기화, 휴대폰의 배터리와 발열, 앱 및 OS 버전, 삭제. 테스터는 벤치마크가 앱이 아니라 모델을 시험한다고 적었습니다(테스터 의견).",
+      "범위",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "심각도는 처음 사용하는 사용자에게 미치는 영향입니다. 측정값이 아니라 제안입니다. Info는 문제도 장점도 아닌 발견 사항을, Positive는 잘 작동한 부분을 뜻합니다.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "간단한 로컬 채팅과 웹 검색을 원하고 나중에 휴대폰을 Mac에 연결하거나 MCP 서버를 연결할 수도 있는 Mac 및 Android 사용자(한 번의 세션에서 나온 가정)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "감사를 거친 개인정보 보호, 이메일·캘린더 연동, 또는 24 GB Mac에서의 이미지·동영상 생성이 필요한 사람. 이 가운데 어느 것도 여기서 테스트하지 않았습니다."
+      ]
+    ],
+    "retest": "테스터는 두세 달 뒤에 다시 리뷰할 계획입니다. 범위: 앱, macOS, Android 버전 기록, 내려받기 시간 측정, 초기 기본값에서의 독일어 및 다른 언어, Mac의 채팅 목록을 확인한 채팅 동기화, 트래픽을 점검한 Mac 오프라인 사용, 이메일 연동, 24 GB에서 이미지 모델 하나, Mac 모델과 클라우드 모델을 비교한 어려운 질문 세트, 클릭해 확인한 MCP 링크, 삭제."
+  },
+  "background_intro": "직접 테스트가 아닙니다. 아래 항목은 PromptQuorum 디렉터리의 Loci 항목과 AlternativeTo에서 나온 것이며, 여기서 확인하지 않았습니다.",
+  "background": [
+    [
+      "third-party",
+      "제작사는 Loci AI, Inc.로 기재되어 있으며, 무료, 구독 없음, 광고 없음, 계정 없음, iPhone(iOS 18 이상), iPad(iPadOS 18 이상), Android, Mac, Windows를 지원합니다. 출처: PromptQuorum 디렉터리의 Loci 리뷰."
+    ],
+    [
+      "third-party",
+      "AlternativeTo는 Loci를 Free 및 Proprietary로 등재하고, 로컬 모델과 오프라인 대화, 기기에 맞춘 모델 추천을 갖춘 휴대폰·컴퓨터용 무료 비공개 AI 채팅이라고 설명합니다."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 사용 메모와 스크린샷, 2026년 11월 11일(원본 Word 메모, 원본 메모 PDF는 추가 예정).",
+    "Loci의 PromptQuorum 디렉터리 항목과 리뷰(슬러그: loci-ai).",
+    "Loci의 AlternativeTo 항목(https://alternativeto.net/software/loci/about/).",
+    "공급업체 내려받기 페이지(주소는 기록 없음, 업체 주장)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 메모에서 직접 확인한 내용입니다."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 숫자를 함께 제시합니다."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 자신의 추정이며, 시간을 재거나 세지 않았습니다."
+    },
+    "vendor-claim": {
+      "label": "업체 주장",
+      "meaning": "앱, 스토어 등록 정보 또는 웹사이트가 밝힌 내용이며 검증하지 않았습니다."
+    },
+    "third-party": {
+      "label": "제3자",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 나온 내용이며 여기서는 검증하지 않았습니다."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견입니다."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분입니다."
+    }
+  },
+  "images": [
+    {
+      "id": "loci-setup-step1-choose-what-loci-is-best-at",
+      "figure": 1,
+      "file": "loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "path": "images/loci-setup-step1-choose-what-loci-is-best-at.webp",
+      "alt": "Loci 설정 2단계 중 1단계 “What should Loci be best at?”. Coding(Qwen3.8 27B, 10.93 GB)과 Deep thinking(Qwen3.5 4B, 2.74 GB) 카드가 있습니다.",
+      "caption": "설정 1단계: 작업 이름이 붙은 모델 선택지와 각각의 내려받기 크기. 측정(크기는 화면 표시 기준).",
+      "role": "hero",
+      "width": 906,
+      "height": 732,
+      "bytes": 38716,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-gemma-4-12b-download-50-percent-time-estimate",
+      "figure": 2,
+      "file": "loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "path": "images/loci-gemma-4-12b-download-50-percent-time-estimate.webp",
+      "alt": "내려받기 카드: Downloading Gemma 4 12B, 50 percent, 7.12 GB 중 3.72 GB, 예상 시간은 “about 7 m”에서 잘림, Pause 버튼 있음.",
+      "caption": "크기와 예상 시간이 표시된 내려받기 카드. 측정.",
+      "role": "moment",
+      "width": 934,
+      "height": 384,
+      "bytes": 13622,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-image-models-unavailable-video-model-best-for-this-mac",
+      "figure": 3,
+      "file": "loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "path": "images/loci-image-models-unavailable-video-model-best-for-this-mac.webp",
+      "alt": "FLUX.2 klein 4B 4-bit(4.62 GB)와 8-bit(8.57 GB)는 Unavailable로 표시되고, 동영상 모델 Wan 2.2 5B(16.74 GB)는 Best for this Mac로 표시됨. 저장 공간 막대 포함.",
+      "caption": "메모리가 더 필요한 모델은 Unavailable로 표시됩니다. 관찰.",
+      "role": "moment",
+      "width": 1430,
+      "height": 583,
+      "bytes": 23936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-german-dictation-garbled-text",
+      "figure": 4,
+      "file": "loci-german-dictation-garbled-text.webp",
+      "path": "images/loci-german-dictation-garbled-text.webp",
+      "alt": "Loci 입력창에 깨진 독일어 받아쓰기 “Bus East Seben Mal Einund Reisik”와 모델 선택기 Best all-round Gemma 4 12B가 보임.",
+      "caption": "기본 언어 설정에서의 독일어 받아쓰기. 관찰.",
+      "role": "moment",
+      "width": 1600,
+      "height": 300,
+      "bytes": 16260,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-phone-linked-computers-macbook-pro-ready",
+      "figure": 5,
+      "file": "loci-phone-linked-computers-macbook-pro-ready.webp",
+      "path": "images/loci-phone-linked-computers-macbook-pro-ready.webp",
+      "alt": "Android Linked computers 화면: MacBook Pro가 1 models와 함께 Ready로 표시되고, Link a computer 버튼과 읽기 전용 사본에 대한 안내가 있음.",
+      "caption": "Mac과 페어링한 뒤의 휴대폰. 관찰.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 28648,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-mcp-model-admits-hallucinated-links",
+      "figure": 6,
+      "file": "loci-mcp-model-admits-hallucinated-links.webp",
+      "path": "images/loci-mcp-model-admits-hallucinated-links.webp",
+      "alt": "채팅: 테스터가 URL이 실제인지 묻자 모델이 링크가 hallucinated이며 도구 데이터가 아니라 패턴으로 만들었다고 답함.",
+      "caption": "존재하지 않는 링크에 대한 모델의 답변. 관찰.",
+      "role": "moment",
+      "width": 1600,
+      "height": 837,
+      "bytes": 114334,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-mcp-promptquorum-connected-27-tools",
+      "figure": 7,
+      "file": "loci-mcp-promptquorum-connected-27-tools.webp",
+      "path": "images/loci-mcp-promptquorum-connected-27-tools.webp",
+      "alt": "PromptQuorum MCP 서버 화면: Connected, 도구 27개 제공, Search와 Get article 도구와 그 입력이 나열됨.",
+      "caption": "MCP 서버 연결됨. 관찰.",
+      "role": "moment",
+      "width": 1224,
+      "height": 1142,
+      "bytes": 91202,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-download-page-four-platforms",
+      "figure": 8,
+      "file": "loci-download-page-four-platforms.webp",
+      "path": "images/loci-download-page-four-platforms.webp",
+      "alt": "Loci 내려받기 페이지: iPhone, Android, Mac, Windows용 Get Loci, 그리고 “No account, no ads, completely free.” 문구.",
+      "caption": "공급업체 내려받기 페이지. “계정 없음, 광고 없음, 무료” 문구는 업체 주장입니다.",
+      "role": "gallery",
+      "width": 1492,
+      "height": 874,
+      "bytes": 39914,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-install-loci-app-macos-open-prompt",
+      "figure": 9,
+      "file": "loci-install-loci-app-macos-open-prompt.webp",
+      "path": "images/loci-install-loci-app-macos-open-prompt.webp",
+      "alt": "macOS 확인 창: “Install Loci”는 인터넷에서 내려받은 앱이며 디스크 이미지 Loci.dmg에 있고, Apple이 검사해 악성 코드를 찾지 못함.",
+      "caption": "설치 프로그램을 열 때의 확인 창. 관찰.",
+      "role": "gallery",
+      "width": 512,
+      "height": 830,
+      "bytes": 38498,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-welcome-your-ai-lives-here-text",
+      "figure": 10,
+      "file": "loci-welcome-your-ai-lives-here-text.webp",
+      "path": "images/loci-welcome-your-ai-lives-here-text.webp",
+      "alt": "Loci 환영 화면 문구: “Your AI lives here. With a local model, your words never leave this Mac. Loci has no ads, no subscriptions, and no account.”",
+      "caption": "환영 화면, 문구 패널만 표시(업체 아트워크는 잘라 냄). 개인정보 문구는 업체 주장입니다.",
+      "role": "gallery",
+      "width": 805,
+      "height": 824,
+      "bytes": 18886,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-setup-step2-start-chatting-in-the-meantime",
+      "figure": 11,
+      "file": "loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "path": "images/loci-setup-step2-start-chatting-in-the-meantime.webp",
+      "alt": "설정 2단계 중 2단계, Setting up Gemma 4 12B: “You can start chatting in the meantime”, 7.12 GB 중 0 percent, Pause와 Choose another 버튼.",
+      "caption": "내려받기 시작 시점의 설정 2단계. 관찰.",
+      "role": "gallery",
+      "width": 894,
+      "height": 596,
+      "bytes": 21516,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-setup"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-english-dictation-fifteen-times-five",
+      "figure": 12,
+      "file": "loci-english-dictation-fifteen-times-five.webp",
+      "path": "images/loci-english-dictation-fifteen-times-five.webp",
+      "alt": "Loci 입력창에 받아쓰기한 영어 텍스트 “What is fifteen times five”와 빨간 마이크 버튼이 보임.",
+      "caption": "영어 받아쓰기. 관찰.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 229,
+      "bytes": 13868,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-german-question-model-says-yes",
+      "figure": 13,
+      "file": "loci-german-question-model-says-yes.webp",
+      "path": "images/loci-german-question-model-says-yes.webp",
+      "alt": "채팅: 음성 모드가 독일어를 알아듣느냐고 묻자 모델이 그렇다고 답하며, 입력창에는 받아쓰기한 텍스트 “Hello Guten Morgan”이 있음.",
+      "caption": "모델의 답변은 음성 인식이 아니라 모델에 관한 것입니다. 관찰.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 1154,
+      "bytes": 44848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-german-dictation-works-after-language-setting",
+      "figure": 14,
+      "file": "loci-german-dictation-works-after-language-setting.webp",
+      "path": "images/loci-german-dictation-works-after-language-setting.webp",
+      "alt": "독일어 텍스트 “Wie spät ist es momentan?”와 입력창 아래 “Using Calendar & Reminders” 칩이 보이는 Loci 홈 화면.",
+      "caption": "언어 설정을 바꾼 뒤의 독일어 받아쓰기. 관찰.",
+      "role": "gallery",
+      "width": 1430,
+      "height": 573,
+      "bytes": 23818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-settings-dictation-key-permission-warning",
+      "figure": 15,
+      "file": "loci-settings-dictation-key-permission-warning.webp",
+      "path": "images/loci-settings-dictation-key-permission-warning.webp",
+      "alt": "Dictation in any app: Fn / Globe 키, Language Automatic multilingual, 그리고 키에 Device Control and Data Access 권한이 필요하다는 경고.",
+      "caption": "권한 경고가 표시된 받아쓰기 설정. 관찰.",
+      "role": "gallery",
+      "width": 1236,
+      "height": 984,
+      "bytes": 59964,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-voice"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-settings-voice-spoken-replies",
+      "figure": 16,
+      "file": "loci-settings-voice-spoken-replies.webp",
+      "path": "images/loci-settings-voice-spoken-replies.webp",
+      "alt": "Settings, Voice: Natural Voice reads English replies, Apple voices read other languages, 속도 105 percent, 답변 전 대기 1.2 seconds.",
+      "caption": "음성 답변 설정. 측정.",
+      "role": "gallery",
+      "width": 1270,
+      "height": 1014,
+      "bytes": 29336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-settings-creativity-and-context-length",
+      "figure": 17,
+      "file": "loci-settings-creativity-and-context-length.webp",
+      "path": "images/loci-settings-creativity-and-context-length.webp",
+      "alt": "For tinkerers: Focused에서 Creative까지의 슬라이더에서 Creativity 0.70, Gemma 4 12B 권장 1.00, Context length Auto 64K와 8K에서 128K까지의 옵션.",
+      "caption": "Creativity 및 컨텍스트 길이 설정. 측정.",
+      "role": "gallery",
+      "width": 1246,
+      "height": 574,
+      "bytes": 20566,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-settings-chat-and-memory-replies",
+      "figure": 18,
+      "file": "loci-settings-chat-and-memory-replies.webp",
+      "path": "images/loci-settings-chat-and-memory-replies.webp",
+      "alt": "Chat & memory: 답변 Length Short, Standard, Long, Focus mode General, Thinking 꺼짐, 답변 통계 꺼짐, Deep Research 켜짐, Precise research steps 꺼짐.",
+      "caption": "답변 설정. 관찰.",
+      "role": "gallery",
+      "width": 1272,
+      "height": 1034,
+      "bytes": 39132,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-settings-models-and-cloud-keys",
+      "figure": 19,
+      "file": "loci-settings-models-and-cloud-keys.webp",
+      "path": "images/loci-settings-models-and-cloud-keys.webp",
+      "alt": "Models: Gemma 4 12B 사용 중, Browse models, Anthropic, OpenAI, Google Gemini의 Add key 버튼, 그리고 온디바이스 모델은 Mac에 머문다는 안내.",
+      "caption": "Models 화면. 개인정보 안내는 업체 주장입니다.",
+      "role": "gallery",
+      "width": 1314,
+      "height": 1138,
+      "bytes": 47866,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-model-catalogue-chat-and-coding",
+      "figure": 20,
+      "file": "loci-model-catalogue-chat-and-coding.webp",
+      "path": "images/loci-model-catalogue-chat-and-coding.webp",
+      "alt": "일상 대화와 글쓰기, 코딩용 모델 카탈로그 목록. 각 카드에 이름, 한 줄 설명, Get 버튼, 내려받기 크기가 있음.",
+      "caption": "모델 카탈로그. 크기는 측정.",
+      "role": "gallery",
+      "width": 1431,
+      "height": 742,
+      "bytes": 59506,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-recommended-for-this-mac-24-gb",
+      "figure": 21,
+      "file": "loci-recommended-for-this-mac-24-gb.webp",
+      "path": "images/loci-recommended-for-this-mac-24-gb.webp",
+      "alt": "배너 “Recommended for this Mac”, “Picked for its 24 GB of memory”.",
+      "caption": "Mac별 추천. 관찰.",
+      "role": "gallery",
+      "width": 974,
+      "height": 100,
+      "bytes": 7310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-context-meter-8-1k-of-64k",
+      "figure": 22,
+      "file": "loci-context-meter-8-1k-of-64k.webp",
+      "path": "images/loci-context-meter-8-1k-of-64k.webp",
+      "alt": "입력창 옆 컨텍스트 미터가 8.1k / 64k로 표시되며 지구본 아이콘이 있음.",
+      "caption": "벤치마크 채팅 후의 컨텍스트 미터. 측정.",
+      "role": "gallery",
+      "width": 310,
+      "height": 84,
+      "bytes": 1728,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-chat-search-bob-after-restart",
+      "figure": 23,
+      "file": "loci-chat-search-bob-after-restart.webp",
+      "path": "images/loci-chat-search-bob-after-restart.webp",
+      "alt": "“Bob” 채팅 검색이 Today 날짜의 채팅 “Online availability check”를 찾고, 스니펫에 거짓말쟁이 퍼즐 텍스트가 있음.",
+      "caption": "앱을 재시작한 뒤의 채팅 검색. 관찰.",
+      "role": "gallery",
+      "width": 1466,
+      "height": 616,
+      "bytes": 20744,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-connections-mail-calendar-reminders",
+      "figure": 24,
+      "file": "loci-connections-mail-calendar-reminders.webp",
+      "path": "images/loci-connections-mail-calendar-reminders.webp",
+      "alt": "Connections: Apple Mail은 연결 안 됨, Calendar and Reminders는 아직 요청 안 됨, Notifications, Connect Gmail 및 Outlook 버튼, 개인정보 문구.",
+      "caption": "Connections 페이지. “never leaves this Mac” 문구는 업체 주장입니다.",
+      "role": "gallery",
+      "width": 1382,
+      "height": 1366,
+      "bytes": 75388,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "chapter-settings"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-memories-import-panel",
+      "figure": 25,
+      "file": "loci-memories-import-panel.webp",
+      "path": "images/loci-memories-import-panel.webp",
+      "alt": "Memories 패널: Claude, ChatGPT, Gemini의 내보내기 붙여 넣기, 각 줄이 이 Mac에 저장되는 메모리가 됨, 붙여 넣기 상자와 Add memories 버튼.",
+      "caption": "Memories 가져오기, 시도하지 않음. “nothing is uploaded” 문구는 업체 주장입니다.",
+      "role": "gallery",
+      "width": 830,
+      "height": 1084,
+      "bytes": 23540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-phone-waiting-for-unmetered-network-bonsai",
+      "figure": 26,
+      "file": "loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "path": "images/loci-phone-waiting-for-unmetered-network-bonsai.webp",
+      "alt": "Android 화면: 0 percent, “Waiting for an unmetered network — Bonsai 2 4B”, Choose another model과 Use this metered connection 버튼.",
+      "caption": "휴대폰에서의 모델 내려받기. 관찰.",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 58108,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-phone-on-device-model-refuses-question-set",
+      "figure": 27,
+      "file": "loci-phone-on-device-model-refuses-question-set.webp",
+      "path": "images/loci-phone-on-device-model-refuses-question-set.webp",
+      "alt": "Android 채팅: 온디바이스 모델이 “I cannot answer these 20 questions…”라고 답하며 자신이 안전 지침의 적용을 받는 AI 어시스턴트라고 말함.",
+      "caption": "휴대폰, 온디바이스 모델, 어려운 질문 세트. 관찰.",
+      "role": "gallery",
+      "width": 582,
+      "height": 1280,
+      "bytes": 62556,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-phone"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "promptquorum-404-page-from-mcp-link",
+      "figure": 28,
+      "file": "promptquorum-404-page-from-mcp-link.webp",
+      "path": "images/promptquorum-404-page-from-mcp-link.webp",
+      "alt": "PromptQuorum 404 페이지: “The quorum couldn’t find this page.”",
+      "caption": "첫 번째 링크 세트의 존재하지 않는 링크. 주소 표시줄은 캡처에 없습니다. 관찰.",
+      "role": "gallery",
+      "width": 1429,
+      "height": 530,
+      "bytes": 30802,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-mcp-self-check-claims-links-still-incorrect",
+      "figure": 29,
+      "file": "loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "path": "images/loci-mcp-self-check-claims-links-still-incorrect.webp",
+      "alt": "채팅: 링크를 점검해 달라고 하자 모델이 아직도 틀렸다고 말한 뒤 도구 “search apps”를 실행함.",
+      "caption": "모델의 자체 점검 주장이며 점검 단계는 보이지 않습니다. 관찰.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 799,
+      "bytes": 81540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-mcp-final-links-download-install-review",
+      "figure": 30,
+      "file": "loci-mcp-final-links-download-install-review.webp",
+      "path": "images/loci-mcp-final-links-download-install-review.webp",
+      "alt": "도구 “search apps” 실행 뒤의 채팅: OpenMontage가 최고 선택으로 제시되고, 앱별 메모와 함께 Download/Install 및 Read the full review 링크가 있음.",
+      "caption": "링크가 포함된 최종 답변. 링크가 작동하는지는 캡처에 없습니다. 관찰.",
+      "role": "gallery",
+      "width": 1576,
+      "height": 962,
+      "bytes": 120834,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "loci-mcp-add-a-server-catalogue",
+      "figure": 31,
+      "file": "loci-mcp-add-a-server-catalogue.webp",
+      "path": "images/loci-mcp-add-a-server-catalogue.webp",
+      "alt": "Airtable부터 Zapier까지 서비스 24개가 있는 Add a Server 카탈로그와 Add your own: Web address 또는 Program on this Mac.",
+      "caption": "MCP 카탈로그. 관찰.",
+      "role": "gallery",
+      "width": 1236,
+      "height": 1126,
+      "bytes": 61094,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [],
+      "subject": "Loci 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "2026-11-11, 정확한 시각은 기록 없음"
+    }
+  ],
+  "figure_order": [
+    "loci-setup-step1-choose-what-loci-is-best-at",
+    "loci-gemma-4-12b-download-50-percent-time-estimate",
+    "loci-image-models-unavailable-video-model-best-for-this-mac",
+    "loci-german-dictation-garbled-text",
+    "loci-phone-linked-computers-macbook-pro-ready",
+    "loci-mcp-model-admits-hallucinated-links",
+    "loci-mcp-promptquorum-connected-27-tools",
+    "loci-download-page-four-platforms",
+    "loci-install-loci-app-macos-open-prompt",
+    "loci-welcome-your-ai-lives-here-text",
+    "loci-setup-step2-start-chatting-in-the-meantime",
+    "loci-english-dictation-fifteen-times-five",
+    "loci-german-question-model-says-yes",
+    "loci-german-dictation-works-after-language-setting",
+    "loci-settings-dictation-key-permission-warning",
+    "loci-settings-voice-spoken-replies",
+    "loci-settings-creativity-and-context-length",
+    "loci-settings-chat-and-memory-replies",
+    "loci-settings-models-and-cloud-keys",
+    "loci-model-catalogue-chat-and-coding",
+    "loci-recommended-for-this-mac-24-gb",
+    "loci-context-meter-8-1k-of-64k",
+    "loci-chat-search-bob-after-restart",
+    "loci-connections-mail-calendar-reminders",
+    "loci-memories-import-panel",
+    "loci-phone-waiting-for-unmetered-network-bonsai",
+    "loci-phone-on-device-model-refuses-question-set",
+    "promptquorum-404-page-from-mcp-link",
+    "loci-mcp-self-check-claims-links-still-incorrect",
+    "loci-mcp-final-links-download-install-review",
+    "loci-mcp-add-a-server-catalogue"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 11월 11일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "여섯 가지 순간",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "메모리",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 형성한 여섯 가지 순간",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "출처",
+      "확인한 내용",
+      "라벨"
+    ],
+    "fit_h": "내려받기 크기가 24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "앱",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정",
+      "Info": "정보"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
+  }
+}

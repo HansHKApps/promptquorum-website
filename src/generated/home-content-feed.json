@@ -23413,7 +23413,7 @@
     "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
     "excerpt": "Loci AI review: a free private AI app for iPhone, Android, iPad, Mac and Windows. Offline use, App Store privacy label and comparison with Private LLM.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23422,7 +23422,7 @@
     "title": "Loci AI Review (2026): Private Offline-KI für iPhone, Android, iPad, Mac und Windows",
     "excerpt": "Loci AI Review: kostenlose private KI-App für iPhone, Android, iPad, Mac und Windows. Offline-Nutzung, Datenschutzlabel, Vergleich mit Private LLM.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/de/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23431,7 +23431,7 @@
     "title": "Critique de Loci AI (2026) : IA hors ligne privée sur iPhone, Android, iPad, Mac et Windows",
     "excerpt": "Critique de Loci AI : appli d'IA privée gratuite pour iPhone, Android, iPad, Mac et Windows. Usage hors ligne, étiquette de confidentialité, comparaison.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/fr/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23440,7 +23440,7 @@
     "title": "Loci AI レビュー (2026): iPhone、Android、iPad、Mac、Windows 対応のオフラインAI",
     "excerpt": "Loci AI レビュー: iPhone・Android・iPad・Mac・Windows対応の無料プライベートAIアプリ。オフライン利用、プライバシーラベル、Private LLMとの比較。",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/ja/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23449,7 +23449,7 @@
     "title": "Loci AI 评测（2026）：iPhone、Android、iPad、Mac 和 Windows 上的离线 AI",
     "excerpt": "Loci AI 评测：iPhone、Android、iPad、Mac 和 Windows 上的免费私密 AI 应用。离线使用、隐私标签以及与 Private LLM 的比较。",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/zh/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23458,7 +23458,7 @@
     "title": "Reseña de Loci AI (2026): IA privada sin conexión para iPhone, Android, iPad, Mac y Windows",
     "excerpt": "Reseña de Loci AI: app de IA privada y gratuita para iPhone, Android, iPad, Mac y Windows. Uso sin conexión, etiqueta de privacidad y comparativa.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/es/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23467,7 +23467,7 @@
     "title": "Revisão do Loci AI (2026): IA Offline para iPhone, Android, iPad, Mac e Windows",
     "excerpt": "Revisão do Loci AI: app de IA privada e gratuito para iPhone, Android, iPad, Mac e Windows. Uso offline, rótulo de privacidade e comparação.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/pt/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23476,7 +23476,7 @@
     "title": "مراجعة Loci AI (2026): ذكاء اصطناعي خاص دون إنترنت عبر iPhone و Android و iPad و Mac و Windows",
     "excerpt": "مراجعة Loci AI: تطبيق ذكاء اصطناعي خاص ومجاني لأجهزة iPhone وAndroid وiPad وMac وWindows. الاستخدام دون إنترنت وملصق الخصوصية والمقارنة.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/ar/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -23485,7 +23485,7 @@
     "title": "Loci AI 리뷰 (2026): iPhone, Android, iPad, Mac, Windows용 오프라인 AI",
     "excerpt": "Loci AI 리뷰: iPhone, Android, iPad, Mac, Windows용 무료 프라이빗 AI 앱. 오프라인 사용, 개인정보 라벨, Private LLM 비교.",
     "publishDate": "2026-08-22",
-    "dateModified": "2026-11-08",
+    "dateModified": "2026-11-13",
     "url": "/ko/power-local-llm/loci-ai-review-offline-local-ai",
     "cluster": "power-local-llm"
   },
@@ -78405,6 +78405,87 @@
     "publishDate": "2026-10-24",
     "dateModified": "2026-10-24",
     "url": "/zh/power-local-llm/locally-uncensored-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Loci⁩ على جهاز ⁦Mac⁩ بمعالج ⁦M4 Pro⁩ وذاكرة ⁦24 GB⁩: دردشة محلية مع بحث على الويب وربط بالهاتف وخادم ⁦MCP⁩",
+    "excerpt": "جلسة أولى في ⁦11⁩ نوفمبر ⁦2026⁩: إعداد سلس، وبحث على الويب، وهاتف ⁦Android⁩ يستعير نموذج الـ ⁦Mac⁩، وروابط ميتة من النموذج عندما وصل المختبِر خادم ⁦MCP⁩ الخاص به.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ar/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Loci auf einem M4 Pro Mac mit 24 GB: Lokaler Chat mit Websuche, Handy-Verbindung und MCP-Server",
+    "excerpt": "Eine erste Sitzung am 11. November 2026: ein reibungsloses Setup, Websuche, ein Android-Handy, das das Modell des Macs mitnutzt, und tote Links vom Modell, als der Tester seinen eigenen MCP-Server anschloss.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/de/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Loci en un Mac M4 Pro de 24 GB: chat local con búsqueda web, enlace con el móvil y un servidor MCP",
+    "excerpt": "Una primera sesión el 11 de noviembre de 2026: una configuración fluida, búsqueda web, un móvil Android que usa el modelo del Mac y enlaces muertos del modelo cuando el evaluador conectó su propio servidor MCP.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/es/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Loci sur un Mac M4 Pro de 24 GB : chat local avec recherche web, liaison avec le téléphone et serveur MCP",
+    "excerpt": "Une première session le 11 novembre 2026 : une configuration fluide, la recherche web, un téléphone Android qui emprunte le modèle du Mac, et des liens morts fournis par le modèle quand le testeur a connecté son propre serveur MCP.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/fr/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのM4 Pro MacでのLoci：Web検索、スマートフォン連携、MCPサーバーに対応したローカルチャット",
+    "excerpt": "2026年11月11日の最初のセッション：スムーズなセットアップ、Web検索、Macのモデルを借りるAndroidスマートフォン、そしてテスターが自分のMCPサーバーを接続したときにモデルが返した無効なリンク。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ja/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Loci on an M4 Pro Mac with 24 GB: Local Chat With Web Search, a Phone Link and an MCP Server",
+    "excerpt": "A first session on 11 November 2026: a smooth setup, web search, an Android phone that borrows the Mac’s model, and dead links from the model when the tester connected his own MCP server.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB M4 Pro Mac에서 Loci 직접 사용: 웹 검색, 휴대폰 연결, MCP 서버를 갖춘 로컬 채팅",
+    "excerpt": "2026년 11월 11일의 첫 세션입니다. 매끄러운 설정, 웹 검색, Mac의 모델을 빌려 쓰는 Android 휴대폰이 눈에 띄었고, 테스터가 자신의 MCP 서버를 연결하자 모델이 존재하지 않는 링크를 내놓았습니다.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/ko/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Loci em um Mac M4 Pro com 24 GB: chat local com busca na web, vínculo com o celular e um servidor MCP",
+    "excerpt": "Uma primeira sessão em 11 de novembro de 2026: configuração tranquila, busca na web, um celular Android que usa o modelo do Mac e links mortos gerados pelo modelo quando o testador conectou o próprio servidor MCP.",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/pt/power-local-llm/loci-ai-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB 内存 M4 Pro Mac 上的 Loci：带联网搜索、手机互联和 MCP 服务器的本地聊天",
+    "excerpt": "2026年11月11日的首次试用：设置顺畅，联网搜索可用，一部 Android 手机借用了 Mac 上的模型；测试者连接自己的 MCP 服务器后，模型给出了打不开的链接。",
+    "publishDate": "2026-11-13",
+    "dateModified": "2026-11-13",
+    "url": "/zh/power-local-llm/loci-ai-hands-on-test",
     "cluster": "power-local-llm"
   },
   {
