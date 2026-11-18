@@ -28976,7 +28976,11 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   },
   {
     "id": "2236e619-3d0e-4a2f-ad5e-676c83ecafab",
@@ -28994,7 +28998,11 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   },
   {
     "id": "7715aa4a-627e-4c40-91ed-fb6e1de5229e",
@@ -29012,7 +29020,11 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   },
   {
     "id": "c0d10844-134a-4390-bd71-3244f23cd68f",
@@ -29030,7 +29042,11 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   },
   {
     "id": "f9bb0291-101f-422e-902e-b4739c8b7ee1",
@@ -29048,7 +29064,11 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   },
   {
     "id": "2f475900-1631-4793-9941-a8c8c80e7502",
@@ -29066,7 +29086,11 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   },
   {
     "id": "b65aa526-1f12-4376-abb8-d3d2856c87d2",
@@ -29084,6 +29108,10 @@
       "gpu prices local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-18",
+    "measure": {
+      "t14": "2026-12-02",
+      "t28": "2026-12-16"
+    }
   }
 ]
