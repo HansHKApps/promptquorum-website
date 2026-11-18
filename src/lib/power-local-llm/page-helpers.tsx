@@ -1191,6 +1191,7 @@ const HUB_THEMES: Array<{
       'toolneuron-review',
       'localai-apexcreator-review',
       'solair-ai-review',
+      'oriveo-review',
       'ollitert-review',
       'swiftlm-review',
     ],

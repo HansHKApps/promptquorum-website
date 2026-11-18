@@ -405,6 +405,7 @@ import { app as app_paios } from './apps/paios'
 import { app as app_ai_cutoutwerk } from './apps/ai-cutoutwerk'
 import { app as app_openmontage } from './apps/openmontage'
 import { app as app_ecc } from './apps/ecc'
+import { app as app_oriveo } from './apps/oriveo'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -800,6 +801,7 @@ export const localAiApps: ToolRecord[] = [
   app_secret_ai,
   app_swerve_ai,
   app_ecc,
+  app_oriveo,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
