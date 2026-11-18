@@ -1209,6 +1209,11 @@
     "urlSlug": "sokuji-review",
     "url": "/power-local-llm/sokuji-review"
   },
+  "aqbot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aqbot-review",
+    "url": "/power-local-llm/aqbot-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
