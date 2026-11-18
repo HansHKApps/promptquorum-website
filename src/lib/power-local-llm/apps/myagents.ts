@@ -122,7 +122,7 @@ export const app: ToolRecord = {
   // Comparison attributes (agents-automation group, no segment table defined yet — see compare-schema.ts):
   // verified against myagents.io, the bundled models-providers-runtimes.md doc, and github.com/hAcKlyc/MyAgents
   // on 2026-11-18; a missing key means not stated there, never false.
-  compare: { multiAgent: true, memory: true, scheduling: true, toolCalling: true },
+  compare: { multiAgent: true, memory: true, toolCalling: true },
   pqReview: {
     date: '2026-11-18',
     version: '0.5.13',
