@@ -11057,6 +11057,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Ultimate Vocal Remover": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ultimate-vocal-remover-review",
+        "title": "Ultimate Vocal Remover Review: Free Local Vocal and Stem Separation",
+        "url": "/power-local-llm/ultimate-vocal-remover-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Skales": {
     "articles": [
       {
@@ -11502,7 +11516,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 109,
+    "totalCount": 110,
     "capped": true
   },
   "Sokuji": {
@@ -13524,7 +13538,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 281,
+    "totalCount": 282,
     "capped": true
   },
   "Qdrant": {
