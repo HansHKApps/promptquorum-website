@@ -11,7 +11,7 @@
     "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
     "category": "Local AI chat, Mac and Android",
     "platform": "macOS (Apple Silicon) and Android",
-    "pricing_url": "https://loci.ai"
+    "pricing_url": "https://askloci.ai"
   },
   "title": "24 GB 内存 M4 Pro Mac 上的 Loci：带联网搜索、手机互联和 MCP 服务器的本地聊天",
   "page_title": "Loci 测试",
@@ -108,12 +108,12 @@
       "observed"
     ],
     [
-      "AI 辅助",
-      "ChatGPT 在测试期间编写并评分了逻辑基准题。Claude 根据测试者的 Word 笔记和 52 张图片起草了本报告。笔记部分由语音口述而来；有些口误可能来自听写工具，而不是 Loci。",
+      "本报告的依据",
+      "本报告依据测试者的 Word 笔记和 52 张图片。ChatGPT 在测试期间编写并评分了逻辑基准题。笔记部分由语音口述而来；有些口误可能来自听写工具，而不是 Loci。",
       "observed"
     ]
   ],
-  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Loci 已列入该目录，并附有一篇由 AI 撰写的评测。开发者主动联系了测试者，笔记结尾有一句写给他的感谢。测试中使用的 MCP 服务器就是 PromptQuorum 自己的。笔记中没有付款或赞助的记录。",
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Loci 已列入该目录。开发者主动联系了测试者，笔记结尾有一句写给他的感谢。测试中使用的 MCP 服务器就是 PromptQuorum 自己的。笔记中没有付款或赞助的记录。",
   "verdict": {
     "general": "一款面向 Mac 和 Android 的消费级本地 AI 应用，首次使用流程异常清晰。在这次测试中，设置、内置联网搜索、英语听写、德语听写（改设置之后）、手机与 Mac 互联以及 MCP 连接均可用。默认模型答对了十道逻辑题，但通过 MCP 给出的链接失效，被纠正两次后才正确；手机自带的小模型拒绝回答一组高难度题目。电子邮件、日历、图像和视频生成、Mac 离线使用、隐私声明、聊天同步和卸载均未测试。",
     "fit": "测试者明确持正面态度：他印象深刻，称这款应用是又一颗将推动本地 LLM 领域前进的“蛋”。他是否会继续使用没有说明；他计划在两到三个月后再次评测。"

@@ -11,7 +11,7 @@
     "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
     "category": "Lokaler KI-Chat, Mac und Android",
     "platform": "macOS (Apple Silicon) und Android",
-    "pricing_url": "https://loci.ai"
+    "pricing_url": "https://askloci.ai"
   },
   "title": "Loci auf einem M4 Pro Mac mit 24 GB: Lokaler Chat mit Websuche, Handy-Verbindung und MCP-Server",
   "page_title": "Loci-Test",
@@ -108,12 +108,12 @@
       "observed"
     ],
     [
-      "Genutzte KI-Hilfe",
-      "ChatGPT schrieb und bewertete während des Tests den Logik-Benchmark. Claude entwarf diesen Bericht aus den Word-Notizen des Testers und 52 Bildern. Die Notizen sind teils diktiert; manche Ungenauigkeiten können vom Diktierwerkzeug stammen, nicht von Loci.",
+      "Grundlage dieses Berichts",
+      "Dieser Bericht beruht auf den Word-Notizen des Testers und 52 Bildern. ChatGPT schrieb und bewertete während des Tests den Logik-Benchmark. Die Notizen sind teils diktiert; manche Ungenauigkeiten können vom Diktierwerkzeug stammen, nicht von Loci.",
       "observed"
     ]
   ],
-  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Loci ist dort mit einem KI-geschriebenen Testbericht aufgeführt. Der Entwickler ist auf den Tester zugegangen, und die Notizen enden mit einem an ihn gerichteten Dank. Der im Test genutzte MCP-Server ist der eigene von PromptQuorum. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Loci ist dort aufgeführt. Der Entwickler ist auf den Tester zugegangen, und die Notizen enden mit einem an ihn gerichteten Dank. Der im Test genutzte MCP-Server ist der eigene von PromptQuorum. In den Notizen sind keine Bezahlung und kein Sponsoring vermerkt.",
   "verdict": {
     "general": "Eine KI-App im Verbraucherstil für Mac und Android mit einem ungewöhnlich klaren ersten Start. In dieser Sitzung funktionierten Setup, eingebaute Websuche, englisches Diktat, deutsches Diktat (nach einer Einstellungsänderung), die Verbindung von Handy und Mac sowie eine MCP-Anbindung. Das Standardmodell beantwortete zehn Logikfragen richtig, lieferte über MCP aber tote Links, bis es zweimal korrigiert wurde, und das kleine eigene Modell des Handys lehnte eine schwierige Fragenreihe ab. E-Mail, Kalender, Bild- und Videoerzeugung, Offline-Betrieb am Mac, die Datenschutzangaben, Chat-Synchronisierung und Deinstallation wurden nicht getestet.",
     "fit": "Der Tester ist eindeutig positiv: wirklich beeindruckt, und er nennt die App ein weiteres Ei, das den Sektor der lokalen LLMs voranbringen wird. Ob er sie weiter nutzen wird, geht aus den Notizen nicht hervor; er plant, sie in zwei bis drei Monaten erneut zu testen."

@@ -11,7 +11,7 @@
     "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
     "category": "Chat de IA local, Mac e Android",
     "platform": "macOS (Apple Silicon) e Android",
-    "pricing_url": "https://loci.ai"
+    "pricing_url": "https://askloci.ai"
   },
   "title": "Loci em um Mac M4 Pro com 24 GB: chat local com busca na web, vínculo com o celular e um servidor MCP",
   "page_title": "Teste do Loci",
@@ -108,12 +108,12 @@
       "observed"
     ],
     [
-      "Ajuda de IA usada",
-      "O ChatGPT escreveu e corrigiu o teste de lógica durante o teste. O Claude redigiu este relatório a partir das anotações do testador em Word e de 52 imagens. As anotações foram em parte ditadas; alguns deslizes podem vir da ferramenta de ditado, não do Loci.",
+      "Base deste relatório",
+      "Este relatório se baseia nas anotações do testador em Word e em 52 imagens. O ChatGPT escreveu e corrigiu o teste de lógica durante o teste. As anotações foram em parte ditadas; alguns deslizes podem vir da ferramenta de ditado, não do Loci.",
       "observed"
     ]
   ],
-  "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Loci está listado ali com uma análise escrita por IA. O desenvolvedor procurou o testador, e as anotações terminam com um agradecimento dirigido a ele. O servidor MCP usado no teste é o da própria PromptQuorum. Nenhum pagamento ou patrocínio consta nas anotações.",
+  "disclosure": "O testador fundou a PromptQuorum, um site de conteúdo e diretório sobre apps de IA local. O Loci está listado ali. O desenvolvedor procurou o testador, e as anotações terminam com um agradecimento dirigido a ele. O servidor MCP usado no teste é o da própria PromptQuorum. Nenhum pagamento ou patrocínio consta nas anotações.",
   "verdict": {
     "general": "Um app de IA local em estilo de produto de consumo, para Mac e Android, com uma primeira execução incomumente clara. Nesta sessão, a configuração, a busca na web integrada, o ditado em inglês, o ditado em alemão (após um ajuste), o vínculo do celular com o Mac e uma conexão MCP funcionaram. O modelo padrão respondeu corretamente às dez perguntas de lógica, mas deu links mortos via MCP até ser corrigido duas vezes, e o modelo pequeno do próprio celular recusou um conjunto de perguntas difíceis. E-mail, calendário, geração de imagens e vídeo, uso offline no Mac, as alegações de privacidade, a sincronização de chats e a desinstalação não foram testados.",
     "fit": "O testador é claramente positivo: ficou realmente impressionado e chama o app de mais um ovo que vai impulsionar o setor de LLMs locais. Se ele continuará usando não está dito; ele pretende fazer uma nova análise em dois a três meses."

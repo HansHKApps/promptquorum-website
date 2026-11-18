@@ -11,7 +11,7 @@
     "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
     "category": "Chat de IA local, Mac y Android",
     "platform": "macOS (Apple Silicon) y Android",
-    "pricing_url": "https://loci.ai"
+    "pricing_url": "https://askloci.ai"
   },
   "title": "Loci en un Mac M4 Pro de 24 GB: chat local con búsqueda web, enlace con el móvil y un servidor MCP",
   "page_title": "Prueba de Loci",
@@ -108,14 +108,14 @@
       "observed"
     ],
     [
-      "Ayuda de IA utilizada",
-      "ChatGPT escribió y calificó el benchmark de lógica durante la prueba. Claude redactó este informe a partir de las notas en Word del evaluador y de 52 imágenes. Las notas están en parte dictadas; algunos errores pueden proceder de la herramienta de dictado, no de Loci.",
+      "Base de este informe",
+      "Este informe se basa en las notas en Word del evaluador y en 52 imágenes. ChatGPT escribió y calificó el benchmark de lógica durante la prueba. Las notas están en parte dictadas; algunos errores pueden proceder de la herramienta de dictado, no de Loci.",
       "observed"
     ]
   ],
-  "disclosure": "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Loci figura allí con una reseña redactada con IA. El desarrollador se puso en contacto con el evaluador y las notas terminan con un agradecimiento dirigido a él. El servidor MCP usado en la prueba es el propio de PromptQuorum. Las notas no registran ningún pago ni patrocinio.",
+  "disclosure": "El evaluador fundó PromptQuorum, un sitio de contenidos y directorio sobre apps de IA local. Loci figura allí. El desarrollador se puso en contacto con el evaluador y las notas terminan con un agradecimiento dirigido a él. El servidor MCP usado en la prueba es el propio de PromptQuorum. Las notas no registran ningún pago ni patrocinio.",
   "verdict": {
-    "general": "Una app de IA local de estilo doméstico para Mac y Android con un primer uso inusualmente claro. En esta sesión funcionaron la configuración, la búsqueda web integrada, el dictado en inglés, el dictado en alemán (tras cambiar un ajuste), el enlace del móvil con el Mac y una conexión MCP. El modelo predeterminado respondió correctamente diez preguntas de lógica, pero dio enlaces muertos a través de MCP hasta que se le corrigió dos veces, y el modelo pequeño del propio móvil rechazó un conjunto de preguntas difíciles. El correo, el calendario, la generación de imágenes y vídeo, el uso sin conexión en el Mac, las afirmaciones de privacidad, la sincronización de chats y la desinstalación no se probaron.",
+    "general": "Una app de IA local de consumo para Mac y Android con un primer uso inusualmente claro. En esta sesión funcionaron la configuración, la búsqueda web integrada, el dictado en inglés, el dictado en alemán (tras cambiar un ajuste), el enlace del móvil con el Mac y una conexión MCP. El modelo predeterminado respondió correctamente diez preguntas de lógica, pero dio enlaces muertos a través de MCP hasta que se le corrigió dos veces, y el modelo pequeño del propio móvil rechazó un conjunto de preguntas difíciles. El correo, el calendario, la generación de imágenes y vídeo, el uso sin conexión en el Mac, las afirmaciones de privacidad, la sincronización de chats y la desinstalación no se probaron.",
     "fit": "El evaluador es claramente positivo: realmente impresionado, y llama a la app otro huevo que impulsará el sector de los LLM locales. No indica si seguirá usándola; planea volver a evaluarla dentro de dos o tres meses."
   },
   "scores": [

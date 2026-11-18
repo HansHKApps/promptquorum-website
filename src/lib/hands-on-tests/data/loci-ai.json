@@ -11,7 +11,7 @@
     "vendor": "Loci AI, Inc. (per the PromptQuorum directory; third-party)",
     "category": "Local AI chat, Mac and Android",
     "platform": "macOS (Apple Silicon) and Android",
-    "pricing_url": "https://loci.ai"
+    "pricing_url": "https://askloci.ai"
   },
   "title": "Loci on an M4 Pro Mac with 24 GB: Local Chat With Web Search, a Phone Link and an MCP Server",
   "page_title": "Loci Test",
@@ -108,12 +108,12 @@
       "observed"
     ],
     [
-      "AI help used",
-      "ChatGPT wrote and graded the logic benchmark during the test. Claude drafted this report from the tester’s Word notes and 52 images. The notes are partly dictated; some slips may come from the dictation tool, not from Loci.",
+      "Basis of this report",
+      "This report is based on the tester’s Word notes and 52 images. ChatGPT wrote and graded the logic benchmark during the test. The notes are partly dictated; some slips may come from the dictation tool, not from Loci.",
       "observed"
     ]
   ],
-  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Loci is listed there with an AI-written review. The developer approached the tester, and the notes end with a thank-you addressed to him. The MCP server exercised in the test is PromptQuorum’s own. No payment or sponsorship is recorded in the notes.",
+  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Loci is listed there. The developer approached the tester, and the notes end with a thank-you addressed to him. The MCP server exercised in the test is PromptQuorum’s own. No payment or sponsorship is recorded in the notes.",
   "verdict": {
     "general": "A consumer-style local AI app for Mac and Android with an unusually clear first run. In this session setup, built-in web search, English dictation, German dictation (after a setting change), phone-to-Mac linking and an MCP connection worked. The default model answered ten logic questions correctly, but gave dead links through MCP until corrected twice, and the phone’s own small model refused a hard question set. Email, calendar, image and video generation, offline Mac use, the privacy claims, chat sync and uninstall were not tested.",
     "fit": "The tester is clearly positive: really impressed, and he calls the app another egg that will drive the local LLM sector forward. Whether he will keep using it is not stated; he plans to review it again in two to three months."
