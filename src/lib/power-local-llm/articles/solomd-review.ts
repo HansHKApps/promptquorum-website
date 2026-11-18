@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-en.webp',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'SoloMD is a free, MIT-licensed Markdown notes app for macOS, Windows, Linux, iPhone, iPad and Android. It keeps notes as plain .md files in a folder and adds AI chat over that folder, local-model auto-detection, 9-format export and a bundled MCP server. This review is based on the maker\'s website, privacy policy, the GitHub repository, its release page and the store listings, checked on 17 November 2026. PromptQuorum has not tested the app hands-on.',
     metaDescription:
-      'SoloMD is a free MIT Markdown notes app for 5 platforms with AI chat over your vault, Ollama and LM Studio detection, and an MCP server. Install, privacy, limits.',
+      'SoloMD is a free MIT Markdown notes app for 5 platforms with vault AI chat, Ollama and LM Studio detection and an MCP server. Install, privacy.',
     twitterDescription:
       'SoloMD keeps notes as Markdown files and adds vault chat, local-model detection, 9-format export and an MCP server. Free, MIT. What is confirmed and what is not.',
     audience:
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD is a free, open-source (MIT) Markdown notes app that stores notes as plain files and adds AI chat over your vault, local-model auto-detection and a bundled MCP server.** It runs on macOS, Windows, Linux, iPhone, iPad and Android, installs from a normal installer or app store, and talks to Ollama, LM Studio, Jan, vLLM, llama.cpp or a cloud provider with your own API key. It is young and maintained by one developer, and PromptQuorum has not tested it.',
+      '**SoloMD is a free, open-source (MIT) Markdown notes app that stores notes as plain files and adds AI chat over your vault, local-model auto-detection and a bundled MCP server.** It runs on macOS, Windows, Linux, iPhone, iPad and Android, installs from a normal installer or app store, and, according to its README, talks to Ollama, LM Studio, Jan, vLLM, llama.cpp or a cloud provider with your own API key. It is young and maintained by one developer, and PromptQuorum has not tested it.',
     quickAnswerTop: {
       en: {
         question: 'What is SoloMD and who is it for?',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free and MIT-licensed; macOS, Windows, Linux, iOS, iPadOS and Android.',
           'Notes are plain .md files; AutoGit saves a local Git snapshot on every save.',
           'AI chat over the vault and inline rewrite, using a local server such as Ollama or a cloud provider with your own key.',
-          'Bundled MCP server for Claude Desktop, Claude Code, Cursor and Windsurf; write tools are off unless you enable them.',
+          'Bundled MCP server for Claude Desktop, Claude Code, Cursor and Windsurf; the maker says write tools are off unless you enable them.',
           'One maintainer, repository created in April 2026; the maker\'s pages disagree on telemetry and feature counts.',
         ],
         updatedDate: '2026-11',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-de.webp',
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'SoloMD ist eine kostenlose, MIT-lizenzierte Markdown-Notiz-App für macOS, Windows, Linux, iPhone, iPad und Android. Sie speichert Notizen als einfache .md-Dateien in einem Ordner und ergänzt KI-Chat über diesen Ordner, automatische Erkennung lokaler Modelle, Export in 9 Formate und einen mitgelieferten MCP-Server. Diese Rezension stützt sich auf die Website des Entwicklers, die Datenschutzerklärung, das GitHub-Repository, die Release-Seite und die Store-Einträge, geprüft am 17. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'SoloMD ist eine kostenlose MIT-Markdown-Notiz-App für 5 Plattformen mit KI-Chat über Ihren Vault, Ollama- und LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.',
+      'SoloMD: kostenlose MIT-Markdown-Notiz-App für 5 Plattformen mit KI-Chat über den Vault, Ollama-/LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.',
     twitterDescription:
       'SoloMD speichert Notizen als Markdown-Dateien und ergänzt Vault-Chat, Erkennung lokaler Modelle, Export in 9 Formate und MCP-Server. Kostenlos, MIT. Was belegt ist und was nicht.',
     audience:
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD ist eine kostenlose, quelloffene (MIT) Markdown-Notiz-App, die Notizen als einfache Dateien speichert und KI-Chat über Ihren Vault, die automatische Erkennung lokaler Modelle und einen mitgelieferten MCP-Server ergänzt.** Sie läuft auf macOS, Windows, Linux, iPhone, iPad und Android, wird über ein normales Installationsprogramm oder einen App-Store installiert und spricht mit Ollama, LM Studio, Jan, vLLM, llama.cpp oder einem Cloud-Anbieter mit Ihrem eigenen API-Schlüssel. Sie ist jung und wird von einem einzelnen Entwickler gepflegt; PromptQuorum hat sie nicht getestet.',
+      '**SoloMD ist eine kostenlose, quelloffene (MIT) Markdown-Notiz-App, die Notizen als einfache Dateien speichert und KI-Chat über Ihren Vault, die automatische Erkennung lokaler Modelle und einen mitgelieferten MCP-Server ergänzt.** Sie läuft auf macOS, Windows, Linux, iPhone, iPad und Android, wird über ein normales Installationsprogramm oder einen App-Store installiert und spricht laut README mit Ollama, LM Studio, Jan, vLLM, llama.cpp oder einem Cloud-Anbieter mit Ihrem eigenen API-Schlüssel. Sie ist jung und wird von einem einzelnen Entwickler gepflegt; PromptQuorum hat sie nicht getestet.',
     quickAnswerTop: {
       de: {
         question: 'Was ist SoloMD, und für wen ist es gedacht?',
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos und MIT-lizenziert; macOS, Windows, Linux, iOS, iPadOS und Android.',
           'Notizen sind einfache .md-Dateien; AutoGit speichert bei jedem Speichern einen lokalen Git-Snapshot.',
           'KI-Chat über den Vault und Umschreiben im Text, mit einem lokalen Server wie Ollama oder einem Cloud-Anbieter mit Ihrem eigenen Schlüssel.',
-          'Mitgelieferter MCP-Server für Claude Desktop, Claude Code, Cursor und Windsurf; Schreibwerkzeuge sind aus, bis Sie sie aktivieren.',
+          'Mitgelieferter MCP-Server für Claude Desktop, Claude Code, Cursor und Windsurf; laut Entwickler sind Schreibwerkzeuge aus, bis Sie sie aktivieren.',
           'Ein Maintainer, Repository im April 2026 angelegt; die Seiten des Entwicklers widersprechen sich bei Telemetrie und Funktionszahlen.',
         ],
         updatedDate: '2026-11',
@@ -565,16 +565,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-es.webp',
     title: 'Reseña de SoloMD: app de notas en Markdown gratuita con chat de IA local y MCP',
-    seoTitle: 'Reseña de SoloMD: notas Markdown, IA local, MCP',
+    seoTitle: 'Reseña de SoloMD: notas Markdown, IA local y MCP',
     intro:
       'SoloMD es una app de notas en Markdown gratuita y con licencia MIT para macOS, Windows, Linux, iPhone, iPad y Android. Guarda las notas como archivos .md sencillos en una carpeta y añade chat de IA sobre esa carpeta, detección automática de modelos locales, exportación a 9 formatos y un servidor MCP incluido. Esta reseña se basa en el sitio web del desarrollador, su política de privacidad, el repositorio de GitHub, la página de versiones y las fichas de las tiendas, consultados el 17 de noviembre de 2026. PromptQuorum no ha probado la app personalmente.',
     metaDescription:
-      'SoloMD es una app de notas Markdown gratuita con licencia MIT para 5 plataformas, con chat de IA sobre tu bóveda, detección de Ollama y LM Studio y servidor MCP. Instalación y privacidad.',
+      'SoloMD: app de notas Markdown gratuita (MIT) con chat de IA sobre tu bóveda, detección de Ollama y LM Studio y servidor MCP. Instalación y privacidad.',
     twitterDescription:
       'SoloMD guarda las notas como archivos Markdown y añade chat con la bóveda, detección de modelos locales, exportación a 9 formatos y servidor MCP. Gratis, MIT. Qué está confirmado y qué no.',
     audience:
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD es una app de notas en Markdown gratuita y de código abierto (MIT) que guarda las notas como archivos sencillos y añade chat de IA sobre tu bóveda, detección automática de modelos locales y un servidor MCP incluido.** Funciona en macOS, Windows, Linux, iPhone, iPad y Android, se instala con un instalador normal o desde una tienda de apps y se conecta con Ollama, LM Studio, Jan, vLLM, llama.cpp o un proveedor en la nube con tu propia clave de API. Es un proyecto joven mantenido por un solo desarrollador, y PromptQuorum no lo ha probado.',
+      '**SoloMD es una app de notas en Markdown gratuita y de código abierto (MIT) que guarda las notas como archivos sencillos y añade chat de IA sobre tu bóveda, detección automática de modelos locales y un servidor MCP incluido.** Funciona en macOS, Windows, Linux, iPhone, iPad y Android, se instala con un instalador normal o desde una tienda de apps y, según su README, se conecta con Ollama, LM Studio, Jan, vLLM, llama.cpp o un proveedor en la nube con tu propia clave de API. Es un proyecto joven mantenido por un solo desarrollador, y PromptQuorum no lo ha probado.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es SoloMD y para quién es?',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratis y con licencia MIT; macOS, Windows, Linux, iOS, iPadOS y Android.',
           'Las notas son archivos .md sencillos; AutoGit guarda una instantánea local de Git en cada guardado.',
           'Chat de IA sobre la bóveda y reescritura en línea, con un servidor local como Ollama o un proveedor en la nube con tu propia clave.',
-          'Servidor MCP incluido para Claude Desktop, Claude Code, Cursor y Windsurf; las herramientas de escritura están desactivadas hasta que las actives.',
+          'Servidor MCP incluido para Claude Desktop, Claude Code, Cursor y Windsurf; según el desarrollador, las herramientas de escritura están desactivadas hasta que las actives.',
           'Un solo mantenedor, repositorio creado en abril de 2026; las páginas del desarrollador se contradicen en telemetría y número de funciones.',
         ],
         updatedDate: '2026-11',
@@ -840,16 +840,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-fr.webp',
-    title: 'Test de SoloMD : application de notes Markdown gratuite avec chat IA local et MCP',
-    seoTitle: 'Test de SoloMD : notes Markdown, IA locale, MCP',
+    title: 'Avis sur SoloMD : application de notes Markdown gratuite avec chat IA local et MCP',
+    seoTitle: 'Avis sur SoloMD : notes Markdown, IA locale et MCP',
     intro:
-      'SoloMD est une application de notes Markdown gratuite, sous licence MIT, pour macOS, Windows, Linux, iPhone, iPad et Android. Elle conserve les notes sous forme de simples fichiers .md dans un dossier et ajoute un chat IA sur ce dossier, la détection automatique des modèles locaux, l\'export en 9 formats et un serveur MCP intégré. Ce test s\'appuie sur le site du développeur, sa politique de confidentialité, le dépôt GitHub, la page des versions et les fiches des boutiques, consultés le 17 novembre 2026. PromptQuorum n\'a pas testé l\'application.',
+      'SoloMD est une application de notes Markdown gratuite, sous licence MIT, pour macOS, Windows, Linux, iPhone, iPad et Android. Elle conserve les notes sous forme de simples fichiers .md dans un dossier et ajoute un chat IA sur ce dossier, la détection automatique des modèles locaux, l\'export en 9 formats et un serveur MCP intégré. Cet avis s\'appuie sur le site du développeur, sa politique de confidentialité, le dépôt GitHub, la page des versions et les fiches des boutiques, consultés le 17 novembre 2026. PromptQuorum n\'a pas testé l\'application.',
     metaDescription:
-      'SoloMD est une application de notes Markdown gratuite sous licence MIT pour 5 plateformes, avec chat IA sur votre coffre, détection d\'Ollama et LM Studio et serveur MCP. Installation, confidentialité.',
+      'SoloMD : app de notes Markdown gratuite (MIT), chat IA sur votre coffre, détection d\'Ollama et LM Studio, serveur MCP. Installation, confidentialité.',
     twitterDescription:
       'SoloMD garde les notes en fichiers Markdown et ajoute chat sur le coffre, détection des modèles locaux, export en 9 formats et serveur MCP. Gratuit, MIT. Ce qui est confirmé et ce qui ne l\'est pas.',
     audience:
@@ -857,9 +857,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test de SoloMD',
+    primaryTerm: 'avis sur SoloMD',
     targetKeywords: [
-      'test SoloMD',
+      'avis SoloMD',
       'application de notes Markdown IA locale',
       'serveur MCP SoloMD',
       'alternative open source à Obsidian',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD est une application de notes Markdown gratuite et open source (MIT) qui conserve les notes sous forme de simples fichiers et ajoute un chat IA sur votre coffre, la détection automatique des modèles locaux et un serveur MCP intégré.** Elle fonctionne sur macOS, Windows, Linux, iPhone, iPad et Android, s\'installe avec un installateur classique ou depuis une boutique d\'applications, et dialogue avec Ollama, LM Studio, Jan, vLLM, llama.cpp ou un fournisseur cloud avec votre propre clé d\'API. Le projet est jeune et géré par un seul développeur, et PromptQuorum ne l\'a pas testé.',
+      '**SoloMD est une application de notes Markdown gratuite et open source (MIT) qui conserve les notes sous forme de simples fichiers et ajoute un chat IA sur votre coffre, la détection automatique des modèles locaux et un serveur MCP intégré.** Elle fonctionne sur macOS, Windows, Linux, iPhone, iPad et Android, s\'installe avec un installateur classique ou depuis une boutique d\'applications, et, selon son README, dialogue avec Ollama, LM Studio, Jan, vLLM, llama.cpp ou un fournisseur cloud avec votre propre clé d\'API. Le projet est jeune et géré par un seul développeur, et PromptQuorum ne l\'a pas testé.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que SoloMD et à qui s\'adresse-t-il ?',
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Non vérifié : qualité de l\'éditeur, fidélité de l\'export sur les 9 formats et qualité des réponses de l\'IA. PromptQuorum n\'a pas exécuté l\'application.',
           'Non vérifié : comportement de la synchronisation et du chiffrement de bout en bout. Les affirmations sont celles du développeur, et PromptQuorum n\'a ni audité le code ni testé la synchronisation.',
           'Non vérifié : si les événements d\'usage décrits dans la politique de confidentialité correspondent à ce que chaque version envoie, et comment l\'affirmation du README « aucun serveur hébergé » s\'y accorde.',
-          'Non vérifié : les décomptes de fonctions. La page de sécurité, plus ancienne, cite 14 fournisseurs d\'IA et 6 outils MCP par défaut, tandis que le README cite plus de 20 fournisseurs et 16 outils ; ce test suit le README.',
+          'Non vérifié : les décomptes de fonctions. La page de sécurité, plus ancienne, cite 14 fournisseurs d\'IA et 6 outils MCP par défaut, tandis que le README cite plus de 20 fournisseurs et 16 outils ; cet avis suit le README.',
           'Non vérifié : l\'entreprise ou le pays derrière le projet, le nombre d\'utilisateurs et les notes, ainsi que les tests indépendants. Aucun n\'a été trouvé, et les pages comparatives du développeur n\'ont pas été traitées comme indépendantes.',
           'Non vérifié : si les installateurs Windows sont signés. Le README décrit seulement la version macOS comme signée et notariée et ne dit rien des autres plateformes.',
         ],
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SoloMD face aux alternatives',
         itemHeadings: true,
         content: [
-          '**SoloMD est en concurrence avec d\'autres applications de notes locales d\'abord ; PromptQuorum ne les a pas comparées en pratique.** Les outils ci-dessous figurent dans l\'annuaire et sont décrits d\'après leurs propres tests.',
+          '**SoloMD est en concurrence avec d\'autres applications de notes locales d\'abord ; PromptQuorum ne les a pas comparées en pratique.** Les outils ci-dessous figurent dans l\'annuaire et sont décrits d\'après leurs propres avis.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
@@ -1102,10 +1102,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test de Hillnote](/fr/power-local-llm/hillnote-review) — notes Markdown locales d\'abord avec IA sur l\'appareil pour Mac, Windows et mobiles.',
-          '[Test de Tolaria](/fr/power-local-llm/tolaria-review) — une application de notes de bureau gratuite avec fichiers Markdown dans un coffre adossé à Git.',
-          '[Test de Logseq](/fr/power-local-llm/logseq-review) — un outliner open source, local d\'abord, avec serveur MCP facultatif.',
-          '[Test de SiYuan](/fr/power-local-llm/siyuan-review) — un espace de connaissances auto-hébergé avec agent IA intégré.',
+          '[Avis sur Hillnote](/fr/power-local-llm/hillnote-review) — notes Markdown locales d\'abord avec IA sur l\'appareil pour Mac, Windows et mobiles.',
+          '[Avis sur Tolaria](/fr/power-local-llm/tolaria-review) — une application de notes de bureau gratuite avec fichiers Markdown dans un coffre adossé à Git.',
+          '[Avis sur Logseq](/fr/power-local-llm/logseq-review) — un outliner open source, local d\'abord, avec serveur MCP facultatif.',
+          '[Avis sur SiYuan](/fr/power-local-llm/siyuan-review) — un espace de connaissances auto-hébergé avec agent IA intégré.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
       },
@@ -1115,12 +1115,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-ja.webp',
     title: 'SoloMDレビュー：ローカルAIチャットとMCPを備えた無料のMarkdownノートアプリ',
-    seoTitle: 'SoloMDレビュー：Markdownノート・ローカルAI・MCP',
+    seoTitle: 'SoloMDレビュー：Markdownノート・ローカルAI',
     intro:
       'SoloMDは、macOS、Windows、Linux、iPhone、iPad、Android向けの無料のMarkdownノートアプリで、MITライセンスで公開されています。ノートをフォルダ内の通常の.mdファイルとして保存し、そのフォルダに対するAIチャット、ローカルモデルの自動検出、9形式のエクスポート、同梱のMCPサーバーを追加します。このレビューは、開発者のウェブサイト、プライバシーポリシー、GitHubリポジトリ、リリースページ、ストアの掲載情報をもとに、2026年11月17日に確認したものです。PromptQuorumはこのアプリを実際には試していません。',
     metaDescription:
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMDは、ノートを通常のファイルとして保存し、ボルトに対するAIチャット、ローカルモデルの自動検出、同梱のMCPサーバーを追加する、無料のオープンソース（MIT）Markdownノートアプリです。** macOS、Windows、Linux、iPhone、iPad、Androidで動作し、通常のインストーラーまたはアプリストアから導入できます。Ollama、LM Studio、Jan、vLLM、llama.cpp、または自分のAPIキーを使ったクラウドサービスと連携します。公開から日が浅く、開発者は1人で、PromptQuorumは試していません。',
+      '**SoloMDは、ノートを通常のファイルとして保存し、ボルトに対するAIチャット、ローカルモデルの自動検出、同梱のMCPサーバーを追加する、無料のオープンソース（MIT）Markdownノートアプリです。** macOS、Windows、Linux、iPhone、iPad、Androidで動作し、通常のインストーラーまたはアプリストアから導入できます。READMEによると、Ollama、LM Studio、Jan、vLLM、llama.cpp、または自分のAPIキーを使ったクラウドサービスと連携します。公開から日が浅く、開発者は1人で、PromptQuorumは試していません。',
     quickAnswerTop: {
       ja: {
         question: 'SoloMDとは何で、誰に向いていますか？',
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '無料でMITライセンス。macOS、Windows、Linux、iOS、iPadOS、Androidに対応。',
           'ノートは通常の.mdファイル。AutoGitが保存のたびにローカルのGitスナップショットを作成。',
           'ボルトに対するAIチャットと選択範囲のリライト。Ollamaなどのローカルサーバーか、自分のキーによるクラウドサービスを利用。',
-          'Claude Desktop、Claude Code、Cursor、Windsurf向けMCPサーバーを同梱。書き込みツールは有効にしない限りオフ。',
+          'Claude Desktop、Claude Code、Cursor、Windsurf向けMCPサーバーを同梱。開発者によると、書き込みツールは有効にしない限りオフ。',
           '開発者は1人で、リポジトリは2026年4月に作成。テレメトリと機能数について、開発者のページ同士で記述が食い違う。',
         ],
         updatedDate: '2026-11',
@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-pt.webp',
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O SoloMD é um app de notas em Markdown gratuito, com licença MIT, para macOS, Windows, Linux, iPhone, iPad e Android. Ele guarda as notas como arquivos .md simples em uma pasta e acrescenta chat de IA sobre essa pasta, detecção automática de modelos locais, exportação em 9 formatos e um servidor MCP incluído. Esta análise se baseia no site do desenvolvedor, na política de privacidade, no repositório do GitHub, na página de versões e nas páginas das lojas, consultados em 17 de novembro de 2026. A PromptQuorum não testou o app.',
     metaDescription:
-      'O SoloMD é um app de notas Markdown gratuito com licença MIT para 5 plataformas, com chat de IA sobre o seu cofre, detecção de Ollama e LM Studio e servidor MCP. Instalação e privacidade.',
+      'SoloMD: app de notas Markdown gratuito (MIT), com chat de IA sobre o cofre, detecção de Ollama e LM Studio e servidor MCP. Instalação e privacidade.',
     twitterDescription:
       'O SoloMD guarda as notas como arquivos Markdown e acrescenta chat com o cofre, detecção de modelos locais, exportação em 9 formatos e servidor MCP. Grátis, MIT. O que está confirmado e o que não está.',
     audience:
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O SoloMD é um app de notas em Markdown gratuito e de código aberto (MIT) que guarda as notas como arquivos simples e acrescenta chat de IA sobre o seu cofre, detecção automática de modelos locais e um servidor MCP incluído.** Ele roda em macOS, Windows, Linux, iPhone, iPad e Android, instala por um instalador comum ou pela loja de apps e conversa com Ollama, LM Studio, Jan, vLLM, llama.cpp ou um provedor na nuvem com a sua própria chave de API. É um projeto jovem, mantido por um único desenvolvedor, e a PromptQuorum não o testou.',
+      '**O SoloMD é um app de notas em Markdown gratuito e de código aberto (MIT) que guarda as notas como arquivos simples e acrescenta chat de IA sobre o seu cofre, detecção automática de modelos locais e um servidor MCP incluído.** Ele roda em macOS, Windows, Linux, iPhone, iPad e Android, instala por um instalador comum ou pela loja de apps e, segundo o README, conversa com Ollama, LM Studio, Jan, vLLM, llama.cpp ou um provedor na nuvem com a sua própria chave de API. É um projeto jovem, mantido por um único desenvolvedor, e a PromptQuorum não o testou.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o SoloMD e para quem ele serve?',
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito e com licença MIT; macOS, Windows, Linux, iOS, iPadOS e Android.',
           'As notas são arquivos .md simples; o AutoGit salva um instantâneo local do Git a cada gravação.',
           'Chat de IA sobre o cofre e reescrita no texto, com um servidor local como o Ollama ou um provedor na nuvem com a sua própria chave.',
-          'Servidor MCP incluído para Claude Desktop, Claude Code, Cursor e Windsurf; as ferramentas de escrita ficam desligadas até você ativá-las.',
+          'Servidor MCP incluído para Claude Desktop, Claude Code, Cursor e Windsurf; segundo o desenvolvedor, as ferramentas de escrita ficam desligadas até você ativá-las.',
           'Um único mantenedor, repositório criado em abril de 2026; as páginas do desenvolvedor se contradizem em telemetria e número de recursos.',
         ],
         updatedDate: '2026-11',
@@ -1665,14 +1665,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-zh.webp',
-    title: 'SoloMD 评测：带本地 AI 对话与 MCP 的免费 Markdown 笔记应用',
-    seoTitle: 'SoloMD 评测：Markdown 笔记、本地 AI、MCP',
+    title: 'SoloMD 点评：带本地 AI 对话与 MCP 的免费 Markdown 笔记应用',
+    seoTitle: 'SoloMD 点评：Markdown 笔记、本地 AI、MCP',
     intro:
-      'SoloMD 是一款免费的 Markdown 笔记应用，采用 MIT 许可证，支持 macOS、Windows、Linux、iPhone、iPad 和 Android。它把笔记保存为文件夹里的普通 .md 文件，并在此基础上提供针对该文件夹的 AI 对话、本地模型自动发现、9 种格式导出和内置 MCP 服务器。本评测基于开发者网站、隐私政策、GitHub 仓库、发布页和各应用商店页面，核查日期为 2026 年 11 月 17 日。PromptQuorum 未亲自实测该应用。',
+      'SoloMD 是一款免费的 Markdown 笔记应用，采用 MIT 许可证，支持 macOS、Windows、Linux、iPhone、iPad 和 Android。它把笔记保存为文件夹里的普通 .md 文件，并在此基础上提供针对该文件夹的 AI 对话、本地模型自动发现、9 种格式导出和内置 MCP 服务器。本点评基于开发者网站、隐私政策、GitHub 仓库、发布页和各应用商店页面，核查日期为 2026 年 11 月 17 日。PromptQuorum 未亲自实测该应用。',
     metaDescription:
       'SoloMD 是 MIT 许可的免费 Markdown 笔记应用，支持 5 个平台，可与笔记库对话，自动发现 Ollama 和 LM Studio，并内置 MCP 服务器。安装与隐私说明。',
     twitterDescription:
@@ -1682,9 +1682,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'SoloMD 评测',
+    primaryTerm: 'SoloMD 点评',
     targetKeywords: [
-      'SoloMD 评测',
+      'SoloMD 点评',
       'Markdown 笔记应用 本地 AI',
       'SoloMD MCP 服务器',
       'Obsidian 开源替代',
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD 是一款免费开源（MIT）的 Markdown 笔记应用，把笔记保存为普通文件，并提供针对笔记库的 AI 对话、本地模型自动发现和内置 MCP 服务器。** 它支持 macOS、Windows、Linux、iPhone、iPad 和 Android，可通过常规安装包或应用商店安装，并能连接 Ollama、LM Studio、Jan、vLLM、llama.cpp，或使用你自己 API 密钥的云端服务。项目较新，由一位开发者维护，PromptQuorum 未实测。',
+      '**SoloMD 是一款免费开源（MIT）的 Markdown 笔记应用，把笔记保存为普通文件，并提供针对笔记库的 AI 对话、本地模型自动发现和内置 MCP 服务器。** 它支持 macOS、Windows、Linux、iPhone、iPad 和 Android，可通过常规安装包或应用商店安装，据 README，它能连接 Ollama、LM Studio、Jan、vLLM、llama.cpp，或使用你自己 API 密钥的云端服务。项目较新，由一位开发者维护，PromptQuorum 未实测。',
     quickAnswerTop: {
       zh: {
         question: 'SoloMD 是什么，适合谁用？',
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '免费，MIT 许可；支持 macOS、Windows、Linux、iOS、iPadOS 和 Android。',
           '笔记是普通 .md 文件；AutoGit 每次保存都会生成本地 Git 快照。',
           '可对笔记库进行 AI 对话并就地改写，使用 Ollama 等本地服务器，或使用自带密钥的云端服务。',
-          '内置面向 Claude Desktop、Claude Code、Cursor 和 Windsurf 的 MCP 服务器；写入工具默认关闭，需手动启用。',
+          '内置面向 Claude Desktop、Claude Code、Cursor 和 Windsurf 的 MCP 服务器；据开发者称，写入工具默认关闭，需手动启用。',
           '单人维护，仓库创建于 2026 年 4 月；开发者各页面在遥测和功能数量上说法不一。',
         ],
         updatedDate: '2026-11',
@@ -1788,15 +1788,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SoloMD 需要 Windows 10 或更高版本、macOS 10.15 或更高版本、当前主流 Linux、iOS 15 或更高版本，或 Android 7 或更高版本；AI 功能需要本地模型服务器或云端 API 密钥。**',
           '清单来自 README。README 给出的安装包大小约为 Windows 14 MB、Linux 16 MB、Android 21 MB、macOS 通用版 30 MB，PromptQuorum 未测量。未公布 RAM 或 GPU 下限，本地模型的需求取决于你运行的服务器。',
         ],
-        columns: ['项目', '官方给出的数据'],
+        columns: ['项目', 'README 中的说明'],
         rows: [
-          { '项目': 'Windows', '官方给出的数据': 'Windows 10+，x64 和 ARM64' },
-          { '项目': 'macOS', '官方给出的数据': 'macOS 10.15+，Apple Silicon 和 Intel' },
-          { '项目': 'Linux', '官方给出的数据': 'x64 和 ARM64' },
-          { '项目': 'iPhone / iPad', '官方给出的数据': 'iOS 15+（App Store 页面：15.0）' },
-          { '项目': 'Android', '官方给出的数据': 'Android 7+（API 24）' },
-          { '项目': '本地 AI', '官方给出的数据': 'Ollama、LM Studio、Jan、vLLM 或 llama.cpp' },
-          { '项目': '云端 AI', '官方给出的数据': '每个服务商使用你自己的 API 密钥' },
+          { '项目': 'Windows', 'README 中的说明': 'Windows 10+，x64 和 ARM64' },
+          { '项目': 'macOS', 'README 中的说明': 'macOS 10.15+，Apple Silicon 和 Intel' },
+          { '项目': 'Linux', 'README 中的说明': 'x64 和 ARM64' },
+          { '项目': 'iPhone / iPad', 'README 中的说明': 'iOS 15+（App Store 页面：15.0）' },
+          { '项目': 'Android', 'README 中的说明': 'Android 7+（API 24）' },
+          { '项目': '本地 AI', 'README 中的说明': 'Ollama、LM Studio、Jan、vLLM 或 llama.cpp' },
+          { '项目': '云端 AI', 'README 中的说明': '每个服务商使用你自己的 API 密钥' },
         ],
         note: 'RAM 和 GPU 需求取决于你加载的模型，应用本身没有公布下限。README 将 macOS 版本描述为已签名并公证，对其他平台则未作说明。',
       },
@@ -1852,7 +1852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '未核实：编辑器质量、9 种格式的导出保真度以及 AI 回答质量。PromptQuorum 未运行该应用。',
           '未核实：同步与端到端加密的行为。相关说法来自开发者，PromptQuorum 未审计代码，也未测试同步。',
           '未核实：隐私政策所述的使用事件是否与各版本实际发送的内容一致，以及 README 的“没有托管服务器”如何与之相容。',
-          '未核实：功能数量。较早的安全页面列出 14 家 AI 服务商和 6 个默认 MCP 工具，README 则列出 20 多家服务商和 16 个工具；本评测以 README 为准。',
+          '未核实：功能数量。较早的安全页面列出 14 家 AI 服务商和 6 个默认 MCP 工具，README 则列出 20 多家服务商和 16 个工具；本点评以 README 为准。',
           '未核实：项目背后的公司或国家、用户数量与评分，以及独立评测。均未找到，开发者自己的对比页面未被视为独立来源。',
           '未核实：Windows 安装包是否有代码签名。README 只把 macOS 版本描述为已签名并公证，对其他平台未作说明。',
         ],
@@ -1927,10 +1927,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Hillnote 评测](/zh/power-local-llm/hillnote-review) — 面向 Mac、Windows 和手机、带设备端 AI 的本地优先 Markdown 笔记。',
-          '[Tolaria 评测](/zh/power-local-llm/tolaria-review) — 一款免费桌面笔记应用，Markdown 文件存放在由 Git 支持的笔记库中。',
-          '[Logseq 评测](/zh/power-local-llm/logseq-review) — 一款开源、本地优先的大纲笔记，带可选 MCP 服务器。',
-          '[SiYuan 评测](/zh/power-local-llm/siyuan-review) — 一款自托管知识工作区，内置 AI 智能体。',
+          '[Hillnote 点评](/zh/power-local-llm/hillnote-review) — 面向 Mac、Windows 和手机、带设备端 AI 的本地优先 Markdown 笔记。',
+          '[Tolaria 点评](/zh/power-local-llm/tolaria-review) — 一款免费桌面笔记应用，Markdown 文件存放在由 Git 支持的笔记库中。',
+          '[Logseq 点评](/zh/power-local-llm/logseq-review) — 一款开源、本地优先的大纲笔记，带可选 MCP 服务器。',
+          '[SiYuan 点评](/zh/power-local-llm/siyuan-review) — 一款自托管知识工作区，内置 AI 智能体。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
       },
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-ar.webp',
@@ -1968,7 +1968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD تطبيق ملاحظات Markdown مجاني ومفتوح المصدر (MIT) يحفظ الملاحظات كملفات بسيطة ويضيف دردشة بالذكاء الاصطناعي حول مجلد ملاحظاتك واكتشافًا تلقائيًا للنماذج المحلية وخادم MCP مرفقًا.** يعمل على macOS وWindows وLinux وiPhone وiPad وAndroid، ويُثبَّت عبر مثبّت عادي أو متجر تطبيقات، ويتصل بـ Ollama أو LM Studio أو Jan أو vLLM أو llama.cpp أو بمزوّد سحابي بمفتاح API الخاص بك. المشروع حديث ويديره مطوّر واحد، ولم تختبره PromptQuorum.',
+      '**SoloMD تطبيق ملاحظات Markdown مجاني ومفتوح المصدر (MIT) يحفظ الملاحظات كملفات بسيطة ويضيف دردشة بالذكاء الاصطناعي حول مجلد ملاحظاتك واكتشافًا تلقائيًا للنماذج المحلية وخادم MCP مرفقًا.** يعمل على macOS وWindows وLinux وiPhone وiPad وAndroid، ويُثبَّت عبر مثبّت عادي أو متجر تطبيقات، وبحسب README يتصل بـ Ollama أو LM Studio أو Jan أو vLLM أو llama.cpp أو بمزوّد سحابي بمفتاح API الخاص بك. المشروع حديث ويديره مطوّر واحد، ولم تختبره PromptQuorum.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو SoloMD ولمن هو؟',
@@ -1978,7 +1978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مجاني وبرخصة MIT؛ يعمل على macOS وWindows وLinux وiOS وiPadOS وAndroid.',
           'الملاحظات ملفات .md بسيطة؛ ويحفظ AutoGit لقطة Git محلية عند كل حفظ.',
           'دردشة ذكاء اصطناعي حول المجلد وإعادة صياغة داخل النص، عبر خادم محلي مثل Ollama أو مزوّد سحابي بمفتاحك الخاص.',
-          'خادم MCP مرفق لـ Claude Desktop وClaude Code وCursor وWindsurf؛ وأدوات الكتابة معطّلة ما لم تفعّلها.',
+          'خادم MCP مرفق لـ Claude Desktop وClaude Code وCursor وWindsurf؛ وبحسب المطوّر فأدوات الكتابة معطّلة ما لم تفعّلها.',
           'مشرف واحد، وأُنشئ المستودع في أبريل 2026؛ وتتعارض صفحات المطوّر في التتبّع وعدد الميزات.',
         ],
         updatedDate: '2026-11',
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/solomd-review-hero-ko.webp',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**SoloMD는 노트를 일반 파일로 저장하고 보관함 대상 AI 채팅, 로컬 모델 자동 감지, 번들 MCP 서버를 더하는 무료 오픈소스(MIT) Markdown 노트 앱입니다.** macOS, Windows, Linux, iPhone, iPad, Android에서 실행되고, 일반 설치 프로그램이나 앱 스토어로 설치하며, Ollama, LM Studio, Jan, vLLM, llama.cpp 또는 본인의 API 키를 쓰는 클라우드 서비스와 연동됩니다. 출시된 지 얼마 안 됐고 개발자 한 명이 유지관리하며, PromptQuorum은 테스트하지 않았습니다.',
+      '**SoloMD는 노트를 일반 파일로 저장하고 보관함 대상 AI 채팅, 로컬 모델 자동 감지, 번들 MCP 서버를 더하는 무료 오픈소스(MIT) Markdown 노트 앱입니다.** macOS, Windows, Linux, iPhone, iPad, Android에서 실행되고, 일반 설치 프로그램이나 앱 스토어로 설치하며, README에 따르면 Ollama, LM Studio, Jan, vLLM, llama.cpp 또는 본인의 API 키를 쓰는 클라우드 서비스와 연동됩니다. 출시된 지 얼마 안 됐고 개발자 한 명이 유지관리하며, PromptQuorum은 테스트하지 않았습니다.',
     quickAnswerTop: {
       ko: {
         question: 'SoloMD는 무엇이며 누구에게 적합합니까?',
@@ -2253,7 +2253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '무료이며 MIT 라이선스입니다. macOS, Windows, Linux, iOS, iPadOS, Android를 지원합니다.',
           '노트는 일반 .md 파일이며, AutoGit이 저장할 때마다 로컬 Git 스냅샷을 만듭니다.',
           '보관함 대상 AI 채팅과 선택 영역 다시 쓰기를 지원하며, Ollama 같은 로컬 서버 또는 본인 키를 쓰는 클라우드 서비스를 사용합니다.',
-          'Claude Desktop, Claude Code, Cursor, Windsurf용 MCP 서버가 번들로 들어 있으며, 쓰기 도구는 켜기 전까지 꺼져 있습니다.',
+          'Claude Desktop, Claude Code, Cursor, Windsurf용 MCP 서버가 번들로 들어 있으며, 개발자에 따르면 쓰기 도구는 켜기 전까지 꺼져 있습니다.',
           '유지관리자는 한 명이고 저장소는 2026년 4월에 만들어졌습니다. 개발자의 페이지들은 원격 측정과 기능 수에 대해 서로 다르게 말합니다.',
         ],
         updatedDate: '2026-11',
