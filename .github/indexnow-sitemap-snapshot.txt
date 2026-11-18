@@ -252,6 +252,7 @@ https://www.promptquorum.com/power-local-llm/aichat-review
 https://www.promptquorum.com/power-local-llm/aiclient2api-review
 https://www.promptquorum.com/power-local-llm/aider-review
 https://www.promptquorum.com/power-local-llm/aiko-review
+https://www.promptquorum.com/power-local-llm/alpaca-review
 https://www.promptquorum.com/power-local-llm/amd-gaia-review
 https://www.promptquorum.com/power-local-llm/amical-review
 https://www.promptquorum.com/power-local-llm/anarlog-review
