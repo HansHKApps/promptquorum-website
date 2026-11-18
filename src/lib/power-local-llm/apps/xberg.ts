@@ -4,8 +4,11 @@
 // Xberg is the rebrand of Kreuzberg (README: "the next iteration of Kreuzberg ... rebuilt and rebranded under a
 // fresh v1 line"); the old kreuzberg-dev repo is the v4 LTS line. No Kreuzberg tile existed, so none was merged.
 // Local by default (Rust core, CPU-only, runs in-process / CLI / Docker); URL ingestion needs the network and
-// LLM/embedding features can use a local (Ollama, LM Studio, vLLM) or hosted provider. xberg.io also sells
-// Xberg Pro / Enterprise / Platform (no public prices) — the MIT library is the free part.
+// LLM/embedding features can use a local (Ollama, LM Studio, vLLM) or hosted provider. the MIT library is the free part.
+// Offers re-read 2026-11-18: xberg.io/pricing lists only the free open-source libraries (MIT) and an invitation-only Design Partner programme
+// (24-month locked pricing, pricing disclosed in the application conversation); docs.xberg.io still describes Xberg Pro (self-hosted single container) and
+// Xberg Enterprise (distributed on Kubernetes), the home page calls Xberg Platform a managed backend. No price is published for any managed offer.
+// HQ (read 2026-11-18, not set on the tile: existing tiles are backfilled later): imprint = Berlin, Germany; privacy policy cites GDPR and German law (§147 AO); no conflicting country.
 // compare, document-parsing segment (added 2026-11-15; localLlm/ollama/mcp are the older agent-framework attributes, verified 2026-10-30).
 // Read 2026-11-15 from the RAW README https://raw.githubusercontent.com/xberg-io/xberg/main/README.md, exact quotes:
 //   inputFormats  <- "PDFs, Office, images, HTML, email, e-books, scientific publications" (README says 107 formats; the count is not typed here).
@@ -29,9 +32,9 @@ export const app: ToolRecord = {
   worksWith: ['Ollama', 'LM Studio', 'vLLM', 'MCP'], // README "Structured extraction ... via local (Ollama, LM Studio, vLLM) or hosted LLMs" + MCP server, verified 2026-10-30
   engine: 'library',
   license: 'MIT', // GitHub API + LICENSE file, verified 2026-10-30
-  price: 'free', // MIT library is free; Pro / Enterprise / Platform exist with no public prices on xberg.io, verified 2026-10-30
+  price: 'free', // MIT library is free; no price is published for any managed offer (pricing page: Design Partner programme, pricing disclosed on application), re-verified 2026-11-18
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // docs: "CPU by default, no GPU required"; ONNX features need AVX/AVX2 on x86_64, verified 2026-10-30
-  stars: 9466, // github.com/xberg-io/xberg, verified via GitHub API 2026-10-30
+  stars: 9598, // github.com/xberg-io/xberg, GitHub API 2026-11-18
   addedDate: '2026-10-30',
   status: 'listed',
   uses: ['build', 'docs', 'agent'],
@@ -41,7 +44,7 @@ export const app: ToolRecord = {
     github: 'https://github.com/xberg-io/xberg',
   },
   installEffort: 'one-command', // see InstallEffortKey in ./types.ts
-  installEvidence: 'docs.xberg.io/getting-started/installation: pip install xberg, npm install @xberg-io/xberg, brew install xberg-io/tap/xberg, Docker image ghcr.io/xberg-io/xberg; GitHub Releases v1.3.10 ship only language-binding artifacts (NIF .so/.dll, PHP extensions), no desktop installer. checked 2026-10-30',
+  installEvidence: 'docs.xberg.io/getting-started/installation: pip install xberg, npm install @xberg-io/xberg, brew install xberg-io/tap/xberg, Docker image ghcr.io/xberg-io/xberg; GitHub Releases (v1.4.0: 64 assets) ship only language-binding artifacts (NIF .so/.dll, PHP extensions), v1.4.1 lists no assets; no desktop installer. checked 2026-11-18',
   tagline: {
     en: 'Open-source Rust document-intelligence engine that turns PDFs, Office files, scans, audio, URLs and code into clean Markdown, tables and structured data, with 15 language bindings, a CLI, REST API and MCP server',
     de: 'Quelloffene Dokumentenintelligenz-Engine in Rust, die PDFs, Office-Dateien, Scans, Audio, URLs und Code in sauberes Markdown, Tabellen und strukturierte Daten umwandelt, mit 15 Sprachanbindungen, CLI, REST-API und MCP-Server',
@@ -54,10 +57,10 @@ export const app: ToolRecord = {
     ko: 'PDF, Office 파일, 스캔본, 오디오, URL, 코드를 깔끔한 Markdown, 표, 구조화된 데이터로 변환하는 오픈소스 Rust 문서 인텔리전스 엔진으로, 15개 언어 바인딩, CLI, REST API, MCP 서버를 제공',
   },
   reviewSlug: 'xberg-review', // dedicated PromptQuorum review - added 2026-10-30
-  pqReview: { date: '2026-10-30', version: 'v1.3.10', versionSourceUrl: 'https://github.com/xberg-io/xberg/releases/tag/v1.3.10' },
+  pqReview: { date: '2026-11-18', version: 'v1.4.1', versionSourceUrl: 'https://github.com/xberg-io/xberg/releases/tag/v1.4.1' },
   mcpSupport: true, // built-in MCP server per README and docs.xberg.io, verified 2026-10-30
   compare: { localLlm: true, ollama: true, mcp: true, inputFormats: 'PDF, Office, images, HTML, email, e-books', outputFormats: ['Text', 'Markdown', 'Djot', 'HTML', 'JSON', 'DocTags'], ocr: true, tableExtraction: true, languageBindings: 15 }, // document-parsing values verified 2026-11-15 against the raw README, see header
-  lastVerifiedDate: '2026-10-30',
-  lastUpstreamUpdate: '2026-10-30', // GitHub API: latest release v1.3.10 on 2026-10-13; last commit 2026-10-30 (whichever is newer), read 2026-10-30
+  lastVerifiedDate: '2026-11-18',
+  lastUpstreamUpdate: '2026-11-18', // GitHub API: latest release v1.4.1 published 2026-11-16; last push 2026-11-18T04:18:57Z (whichever is newer), read 2026-11-18
   lastUpstreamUpdateSource: 'https://github.com/xberg-io/xberg',
 }
