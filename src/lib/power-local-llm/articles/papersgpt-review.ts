@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-en.webp',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'PapersGPT is an open-source (AGPL-3.0) plugin for the Zotero reference manager that chats with PDFs, searches a whole library, tracks new papers and saves results as Zotero notes. This review is based on the maker\'s website, the GitHub repository, its release page and its privacy policy, checked on 17 November 2026. PromptQuorum has not tested the plugin hands-on.',
     metaDescription:
-      'PapersGPT is an AGPL-3.0 Zotero plugin for PDF chat, whole-library search and paper tracking with cloud or local models, plus MCP. Install, privacy, limits.',
+      'PapersGPT is an AGPL-3.0 Zotero plugin for PDF chat, library-wide search and paper tracking with cloud or local models and MCP. Install, privacy, limits.',
     twitterDescription:
       'PapersGPT adds PDF chat, whole-library search and paper tracking to Zotero, with cloud or local models and an MCP server. Open source, freemium.',
     audience:
@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zotero plugin (.xpi) for Zotero 7 to 10 on macOS, Windows and Linux.',
           'Price: free tier plus paid plans; license AGPL-3.0.',
           'Chat with one PDF, several PDFs or the whole library; Literature Radar tracks new papers; AutoPilot batch-reads a collection into Zotero notes.',
-          'Works with 30+ cloud models, your own key, Ollama or built-in local models.',
+          'Per the maker, it works with 30+ cloud models, your own key, Ollama or built-in local models.',
           'The privacy policy dates from 2024; check the data flow of the built-in credits before using confidential papers.',
         ],
         updatedDate: '2026-11',
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Open source under AGPL-3.0; a free tier and paid plans exist, and the maker\'s pages list different prices, so check the pricing page before buying.',
           'Installs as an .xpi file inside Zotero 7 to 10 (macOS, Windows, Linux); Zotero must already be installed.',
-          'Models: 30+ cloud models, your own API key, a custom OpenAI-compatible endpoint, Ollama, or built-in local models downloaded from Hugging Face.',
+          'Models (per the maker): 30+ cloud models, your own API key, a custom OpenAI-compatible endpoint, Ollama, or built-in local models downloaded from Hugging Face.',
           'An MCP server connects your Zotero library to Claude Desktop, Claude Code, Cursor and other MCP clients.',
           'PromptQuorum has not tested the plugin. The privacy policy is dated May 2024 and predates the built-in AI credits added in v2.3.0.',
         ],
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Requirements',
         content: [
           '**PapersGPT needs Zotero 7, 8, 9 or 10 on macOS, Windows or Linux; hardware needs depend on the local model you choose.**',
-          'The compatibility list comes from the README. No minimum RAM, disk or GPU figure is published. The maker\'s scalability report was measured on one MacBook Pro with an Intel Core i9 and reports 10,000 PDFs indexed in about 7 minutes; PromptQuorum did not measure resource use.',
+          'The compatibility list comes from the README. No minimum RAM, disk or GPU figure is published. PromptQuorum did not measure resource use.',
         ],
         columns: ['Item', 'Stated figure'],
         rows: [
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Not a fit: people who want one clear price. The maker\'s pages list different prices and free-tier terms.',
           'Not a fit: organizations that cannot use AGPL-licensed software. AGPL-3.0 has source-sharing duties for modified versions offered over a network; ask your legal team.',
           'Unverified: answer quality, citation accuracy and AutoPilot results. PromptQuorum has not run the plugin.',
-          'Unverified: the speed figures. The maker\'s 10,000-PDF benchmark comes from one MacBook Pro with an Intel Core i9, not from an independent test.',
+          'Unverified: speed and resource use. PromptQuorum did not measure them and found no independent figures.',
           'Unverified: free-tier terms. The FAQ describes free local models with no time limit; the pricing page describes a trial with 20 single-PDF chats and limited runs.',
           'Unverified: prices. The pricing page, the FAQ and the site\'s structured data show different figures, so none is quoted here.',
           'Unverified: whether chats that use built-in credits pass through a PapersGPT server, and what the 2024 privacy policy covers after v2.3.0.',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-de.webp',
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'PapersGPT ist ein Open-Source-Plugin (AGPL-3.0) für die Literaturverwaltung Zotero, das mit PDFs chattet, eine ganze Bibliothek durchsucht, neue Paper verfolgt und Ergebnisse als Zotero-Notizen speichert. Diese Rezension stützt sich auf die Website des Entwicklers, das GitHub-Repository, die Release-Seite und die Datenschutzerklärung, geprüft am 17. November 2026. PromptQuorum hat das Plugin nicht selbst getestet.',
     metaDescription:
-      'PapersGPT ist ein AGPL-3.0-Zotero-Plugin für PDF-Chat, Bibliothekssuche und Paper-Tracking mit Cloud- oder lokalen Modellen, plus MCP. Installation, Datenschutz.',
+      'PapersGPT: AGPL-3.0-Zotero-Plugin für PDF-Chat, Bibliothekssuche und Paper-Tracking mit Cloud- oder lokalen Modellen und MCP. Installation, Datenschutz.',
     twitterDescription:
       'PapersGPT ergänzt Zotero um PDF-Chat, Bibliothekssuche und Paper-Tracking, mit Cloud- oder lokalen Modellen und MCP-Server. Open Source, Freemium.',
     audience:
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zotero-Plugin (.xpi) für Zotero 7 bis 10 unter macOS, Windows und Linux.',
           'Preis: kostenloser Tarif plus kostenpflichtige Pläne; Lizenz AGPL-3.0.',
           'Chat mit einem PDF, mehreren PDFs oder der ganzen Bibliothek; Literature Radar verfolgt neue Paper; AutoPilot liest eine Sammlung stapelweise in Zotero-Notizen ein.',
-          'Arbeitet mit über 30 Cloud-Modellen, Ihrem eigenen Schlüssel, Ollama oder integrierten lokalen Modellen.',
+          'Laut Entwickler arbeitet es mit über 30 Cloud-Modellen, Ihrem eigenen Schlüssel, Ollama oder integrierten lokalen Modellen.',
           'Die Datenschutzerklärung stammt von 2024; prüfen Sie den Datenfluss der integrierten Credits, bevor Sie vertrauliche Paper nutzen.',
         ],
         updatedDate: '2026-11',
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Open Source unter AGPL-3.0; es gibt einen kostenlosen Tarif und kostenpflichtige Pläne, und die Seiten des Entwicklers nennen unterschiedliche Preise – prüfen Sie die Preisseite vor dem Kauf.',
           'Wird als .xpi-Datei in Zotero 7 bis 10 installiert (macOS, Windows, Linux); Zotero muss bereits installiert sein.',
-          'Modelle: über 30 Cloud-Modelle, Ihr eigener API-Schlüssel, ein eigener OpenAI-kompatibler Endpunkt, Ollama oder integrierte lokale Modelle von Hugging Face.',
+          'Modelle (laut Entwickler): über 30 Cloud-Modelle, Ihr eigener API-Schlüssel, ein eigener OpenAI-kompatibler Endpunkt, Ollama oder integrierte lokale Modelle von Hugging Face.',
           'Ein MCP-Server verbindet Ihre Zotero-Bibliothek mit Claude Desktop, Claude Code, Cursor und anderen MCP-Clients.',
           'PromptQuorum hat das Plugin nicht getestet. Die Datenschutzerklärung stammt vom Mai 2024 und ist älter als die in v2.3.0 ergänzten integrierten KI-Credits.',
         ],
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anforderungen',
         content: [
           '**PapersGPT braucht Zotero 7, 8, 9 oder 10 unter macOS, Windows oder Linux; der Hardwarebedarf hängt vom gewählten lokalen Modell ab.**',
-          'Die Kompatibilitätsliste stammt aus der README. Mindestwerte für RAM, Speicherplatz oder GPU sind nicht veröffentlicht. Der Skalierungsbericht des Entwicklers wurde auf einem MacBook Pro mit Intel Core i9 gemessen und nennt 10.000 in etwa 7 Minuten indexierte PDFs; PromptQuorum hat den Ressourcenverbrauch nicht gemessen.',
+          'Die Kompatibilitätsliste stammt aus der README. Mindestwerte für RAM, Speicherplatz oder GPU sind nicht veröffentlicht. PromptQuorum hat den Ressourcenverbrauch nicht gemessen.',
         ],
         columns: ['Punkt', 'Angegebener Wert'],
         rows: [
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nicht geeignet: wer einen klaren Preis möchte. Die Seiten des Entwicklers nennen unterschiedliche Preise und Bedingungen für den kostenlosen Tarif.',
           'Nicht geeignet: Organisationen, die keine AGPL-lizenzierte Software einsetzen können. AGPL-3.0 verpflichtet bei geänderten, über ein Netzwerk angebotenen Versionen zur Offenlegung des Quellcodes; fragen Sie Ihre Rechtsabteilung.',
           'Ungeprüft: Antwortqualität, Genauigkeit der Quellenangaben und AutoPilot-Ergebnisse. PromptQuorum hat das Plugin nicht ausgeführt.',
-          'Ungeprüft: die Geschwindigkeitswerte. Der 10.000-PDF-Benchmark des Entwicklers stammt von einem MacBook Pro mit Intel Core i9, nicht von einem unabhängigen Test.',
+          'Ungeprüft: Geschwindigkeit und Ressourcenverbrauch. PromptQuorum hat sie nicht gemessen und keine unabhängigen Werte gefunden.',
           'Ungeprüft: die Bedingungen des kostenlosen Tarifs. Die FAQ beschreibt kostenlose lokale Modelle ohne Zeitlimit; die Preisseite beschreibt eine Testversion mit 20 Chats mit einem PDF und begrenzten Läufen.',
           'Ungeprüft: die Preise. Preisseite, FAQ und strukturierte Daten der Website zeigen unterschiedliche Beträge, daher wird hier keiner genannt.',
           'Ungeprüft: ob Chats mit integrierten Credits über einen PapersGPT-Server laufen und was die Datenschutzerklärung von 2024 nach v2.3.0 abdeckt.',
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-es.webp',
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'PapersGPT es un plugin de código abierto (AGPL-3.0) para el gestor bibliográfico Zotero que chatea con PDF, busca en toda la biblioteca, sigue artículos nuevos y guarda los resultados como notas de Zotero. Esta reseña se basa en el sitio web del desarrollador, el repositorio de GitHub, su página de versiones y su política de privacidad, revisados el 17 de noviembre de 2026. PromptQuorum no ha probado el plugin en la práctica.',
     metaDescription:
-      'PapersGPT es un plugin AGPL-3.0 de Zotero para chatear con PDF, buscar en la biblioteca y seguir artículos con modelos en la nube o locales, con MCP. Instalación y privacidad.',
+      'Plugin AGPL-3.0 de Zotero para chatear con PDF, buscar en la biblioteca y seguir artículos con modelos locales o en la nube y MCP. Instalación, privacidad.',
     twitterDescription:
       'PapersGPT añade a Zotero chat de PDF, búsqueda en toda la biblioteca y seguimiento de artículos, con modelos en la nube o locales y servidor MCP. Código abierto, freemium.',
     audience:
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plugin de Zotero (.xpi) para Zotero 7 a 10 en macOS, Windows y Linux.',
           'Precio: plan gratuito más planes de pago; licencia AGPL-3.0.',
           'Chat con un PDF, varios PDF o toda la biblioteca; Literature Radar sigue artículos nuevos; AutoPilot lee una colección por lotes y la vuelca en notas de Zotero.',
-          'Funciona con más de 30 modelos en la nube, tu propia clave, Ollama o modelos locales integrados.',
+          'Según el desarrollador, funciona con más de 30 modelos en la nube, tu propia clave, Ollama o modelos locales integrados.',
           'La política de privacidad es de 2024; revisa el flujo de datos de los créditos integrados antes de usar artículos confidenciales.',
         ],
         updatedDate: '2026-11',
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Código abierto bajo AGPL-3.0; hay un plan gratuito y planes de pago, y las páginas del desarrollador muestran precios distintos, así que consulta la página de precios antes de comprar.',
           'Se instala como archivo .xpi dentro de Zotero 7 a 10 (macOS, Windows, Linux); Zotero debe estar ya instalado.',
-          'Modelos: más de 30 modelos en la nube, tu propia clave de API, un endpoint compatible con OpenAI, Ollama o modelos locales integrados descargados de Hugging Face.',
+          'Modelos (según el desarrollador): más de 30 modelos en la nube, tu propia clave de API, un endpoint compatible con OpenAI, Ollama o modelos locales integrados descargados de Hugging Face.',
           'Un servidor MCP conecta tu biblioteca de Zotero con Claude Desktop, Claude Code, Cursor y otros clientes MCP.',
           'PromptQuorum no ha probado el plugin. La política de privacidad es de mayo de 2024 y es anterior a los créditos de IA integrados que llegaron con la v2.3.0.',
         ],
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Requisitos',
         content: [
           '**PapersGPT necesita Zotero 7, 8, 9 o 10 en macOS, Windows o Linux; los requisitos de hardware dependen del modelo local que elijas.**',
-          'La lista de compatibilidad procede del README. No se publica ninguna cifra mínima de RAM, disco o GPU. El informe de escalabilidad del desarrollador se midió en un MacBook Pro con Intel Core i9 y indica 10,000 PDF indexados en unos 7 minutos; PromptQuorum no midió el uso de recursos.',
+          'La lista de compatibilidad procede del README. No se publica ninguna cifra mínima de RAM, disco o GPU. PromptQuorum no midió el uso de recursos.',
         ],
         columns: ['Elemento', 'Dato indicado'],
         rows: [
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No encaja: quien quiere un precio claro. Las páginas del desarrollador muestran precios y condiciones del plan gratuito distintos.',
           'No encaja: organizaciones que no pueden usar software con licencia AGPL. AGPL-3.0 impone obligaciones de compartir el código de las versiones modificadas que se ofrecen por red; consulta con tu departamento jurídico.',
           'Sin verificar: calidad de las respuestas, exactitud de las citas y resultados de AutoPilot. PromptQuorum no ha ejecutado el plugin.',
-          'Sin verificar: las cifras de velocidad. El benchmark de 10,000 PDF del desarrollador procede de un MacBook Pro con Intel Core i9, no de una prueba independiente.',
+          'Sin verificar: velocidad y uso de recursos. PromptQuorum no los midió y no encontró cifras independientes.',
           'Sin verificar: las condiciones del plan gratuito. Las preguntas frecuentes describen modelos locales gratuitos sin límite de tiempo; la página de precios describe una prueba con 20 chats con un PDF y ejecuciones limitadas.',
           'Sin verificar: los precios. La página de precios, las preguntas frecuentes y los datos estructurados del sitio muestran cifras distintas, por lo que aquí no se cita ninguna.',
           'Sin verificar: si los chats que usan créditos integrados pasan por un servidor de PapersGPT y qué cubre la política de privacidad de 2024 tras la v2.3.0.',
@@ -842,16 +842,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-fr.webp',
-    title: 'Test de PapersGPT : plugin IA pour Zotero, chat PDF, recherche dans la bibliothèque et MCP',
-    seoTitle: 'Test de PapersGPT : plugin IA pour Zotero et MCP',
+    title: 'Avis sur PapersGPT : plugin IA pour Zotero, chat PDF, recherche dans la bibliothèque et MCP',
+    seoTitle: 'Avis sur PapersGPT : plugin IA pour Zotero et MCP',
     intro:
-      'PapersGPT est un plugin open source (AGPL-3.0) pour le gestionnaire de références Zotero qui dialogue avec des PDF, recherche dans toute la bibliothèque, suit les nouveaux articles et enregistre les résultats sous forme de notes Zotero. Ce test s\'appuie sur le site du développeur, le dépôt GitHub, sa page de versions et sa politique de confidentialité, consultés le 17 novembre 2026. PromptQuorum n\'a pas testé le plugin en pratique.',
+      'PapersGPT est un plugin open source (AGPL-3.0) pour le gestionnaire de références Zotero qui dialogue avec des PDF, recherche dans toute la bibliothèque, suit les nouveaux articles et enregistre les résultats sous forme de notes Zotero. Cet avis s\'appuie sur le site du développeur, le dépôt GitHub, sa page de versions et sa politique de confidentialité, consultés le 17 novembre 2026. PromptQuorum n\'a pas testé le plugin en pratique.',
     metaDescription:
-      'PapersGPT est un plugin Zotero AGPL-3.0 pour discuter avec des PDF, chercher dans la bibliothèque et suivre les articles, en cloud ou en local, avec MCP. Installation, confidentialité.',
+      'Plugin Zotero AGPL-3.0 : chat PDF, recherche dans la bibliothèque, suivi d\'articles, modèles cloud ou locaux et MCP. Installation et confidentialité.',
     twitterDescription:
       'PapersGPT ajoute à Zotero le chat PDF, la recherche dans toute la bibliothèque et le suivi d\'articles, avec modèles cloud ou locaux et serveur MCP. Open source, freemium.',
     audience:
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: false,
     primaryTerm: 'PapersGPT',
     targetKeywords: [
-      'test PapersGPT',
+      'avis PapersGPT',
       'plugin IA Zotero',
       'discuter avec un PDF dans Zotero',
       'serveur MCP Zotero',
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plugin Zotero (.xpi) pour Zotero 7 à 10 sous macOS, Windows et Linux.',
           'Prix : offre gratuite et forfaits payants ; licence AGPL-3.0.',
           'Chat avec un PDF, plusieurs PDF ou toute la bibliothèque ; Literature Radar suit les nouveaux articles ; AutoPilot lit une collection par lots et l\'enregistre dans des notes Zotero.',
-          'Fonctionne avec plus de 30 modèles cloud, votre propre clé, Ollama ou des modèles locaux intégrés.',
+          'Selon le développeur, fonctionne avec plus de 30 modèles cloud, votre propre clé, Ollama ou des modèles locaux intégrés.',
           'La politique de confidentialité date de 2024 ; vérifiez le flux de données des crédits intégrés avant d\'utiliser des articles confidentiels.',
         ],
         updatedDate: '2026-11',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Open source sous AGPL-3.0 ; il existe une offre gratuite et des forfaits payants, et les pages du développeur affichent des prix différents, donc consultez la page des tarifs avant d\'acheter.',
           'S\'installe sous forme de fichier .xpi dans Zotero 7 à 10 (macOS, Windows, Linux) ; Zotero doit déjà être installé.',
-          'Modèles : plus de 30 modèles cloud, votre propre clé d\'API, un point d\'accès compatible OpenAI, Ollama ou des modèles locaux intégrés téléchargés depuis Hugging Face.',
+          'Modèles (selon le développeur) : plus de 30 modèles cloud, votre propre clé d\'API, un point d\'accès compatible OpenAI, Ollama ou des modèles locaux intégrés téléchargés depuis Hugging Face.',
           'Un serveur MCP relie votre bibliothèque Zotero à Claude Desktop, Claude Code, Cursor et d\'autres clients MCP.',
           'PromptQuorum n\'a pas testé le plugin. La politique de confidentialité date de mai 2024 et précède les crédits d\'IA intégrés ajoutés dans la v2.3.0.',
         ],
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuration requise',
         content: [
           '**PapersGPT nécessite Zotero 7, 8, 9 ou 10 sous macOS, Windows ou Linux ; les besoins matériels dépendent du modèle local choisi.**',
-          'La liste de compatibilité provient du README. Aucun minimum de RAM, de disque ou de GPU n\'est publié. Le rapport de montée en charge du développeur a été mesuré sur un MacBook Pro à processeur Intel Core i9 et indique 10,000 PDF indexés en environ 7 minutes ; PromptQuorum n\'a pas mesuré la consommation de ressources.',
+          'La liste de compatibilité provient du README. Aucun minimum de RAM, de disque ou de GPU n\'est publié. PromptQuorum n\'a pas mesuré la consommation de ressources.',
         ],
         columns: ['Élément', 'Valeur indiquée'],
         rows: [
@@ -1026,12 +1026,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ne convient pas : à qui veut un prix clair. Les pages du développeur affichent des prix et des conditions d\'offre gratuite différents.',
           'Ne convient pas : aux organisations qui ne peuvent pas utiliser de logiciel sous licence AGPL. L\'AGPL-3.0 impose de partager le code source des versions modifiées proposées par réseau ; demandez à votre service juridique.',
           'Non vérifié : qualité des réponses, exactitude des citations et résultats d\'AutoPilot. PromptQuorum n\'a pas exécuté le plugin.',
-          'Non vérifié : les chiffres de rapidité. Le benchmark de 10,000 PDF du développeur provient d\'un MacBook Pro à processeur Intel Core i9, pas d\'un test indépendant.',
+          'Non vérifié : la rapidité et la consommation de ressources. PromptQuorum ne les a pas mesurées et n\'a trouvé aucun chiffre indépendant.',
           'Non vérifié : les conditions de l\'offre gratuite. La FAQ décrit des modèles locaux gratuits sans limite de durée ; la page des tarifs décrit un essai de 20 chats avec un seul PDF et des exécutions limitées.',
           'Non vérifié : les prix. La page des tarifs, la FAQ et les données structurées du site affichent des montants différents ; aucun n\'est donc cité ici.',
           'Non vérifié : si les chats qui utilisent les crédits intégrés passent par un serveur PapersGPT, et ce que couvre la politique de confidentialité de 2024 après la v2.3.0.',
           'Non vérifié : la société ou le pays derrière le projet, les nombres d\'utilisateurs et les notes affichés par le site, et les tests indépendants. Aucun n\'a été trouvé, et les pages comparatives du développeur n\'ont pas été considérées comme indépendantes.',
-          'Non vérifié : les informations de version. La page de journal des modifications du site s\'arrête à la v0.6.0 et ses données structurées indiquent 0.6.0, alors que les versions GitHub atteignent la v2.3.0 ; ce test suit GitHub.',
+          'Non vérifié : les informations de version. La page de journal des modifications du site s\'arrête à la v0.6.0 et ses données structurées indiquent 0.6.0, alors que les versions GitHub atteignent la v2.3.0 ; cet avis suit GitHub.',
         ],
       },
       vsAlternatives: {
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PapersGPT face aux alternatives',
         itemHeadings: true,
         content: [
-          '**PapersGPT est un plugin Zotero ; PromptQuorum ne l\'a pas comparé en pratique aux alternatives.** Les outils ci-dessous sont d\'autres outils de chat avec documents et de recherche de l\'annuaire, décrits d\'après leurs propres tests.',
+          '**PapersGPT est un plugin Zotero ; PromptQuorum ne l\'a pas comparé en pratique aux alternatives.** Les outils ci-dessous sont d\'autres outils de chat avec documents et de recherche de l\'annuaire, décrits d\'après leurs propres fiches.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
@@ -1105,9 +1105,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test de SurfSense](/fr/power-local-llm/surfsense-review) — une alternative open source de bureau à NotebookLM qui analyse et modifie vos documents sur votre propre machine.',
-          '[Test d\'AnythingLLM](/fr/power-local-llm/anythingllm-review) — un espace de travail de chat de documents et de RAG avec base vectorielle intégrée.',
-          '[Test de Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un second cerveau personnel IA qui se synchronise avec Obsidian et Notion.',
+          '[Avis sur SurfSense](/fr/power-local-llm/surfsense-review) — une alternative open source de bureau à NotebookLM qui analyse et modifie vos documents sur votre propre machine.',
+          '[Avis sur AnythingLLM](/fr/power-local-llm/anythingllm-review) — un espace de travail de chat de documents et de RAG avec base vectorielle intégrée.',
+          '[Avis sur Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un second cerveau personnel IA qui se synchronise avec Obsidian et Notion.',
           '[Récupération de connaissances avec des LLM locaux comparée](/fr/power-local-llm/local-llm-knowledge-retrieval-compared) — le comparatif de catégorie pour les outils de documents et de connaissances.',
           '[Annuaire des logiciels de LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-ja.webp',
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS、Windows、LinuxのZotero 7〜10向けプラグイン（.xpi）。',
           '価格：無料プランと有料プラン。ライセンスはAGPL-3.0。',
           '1つのPDF、複数のPDF、ライブラリ全体とチャット。Literature Radarが新着論文を追跡し、AutoPilotがコレクションを一括で読み込みZoteroノートに保存。',
-          '30以上のクラウドモデル、自分のキー、Ollama、内蔵ローカルモデルで動作。',
+          '開発元によると、30以上のクラウドモデル、自分のキー、Ollama、内蔵ローカルモデルで動作。',
           'プライバシーポリシーは2024年のものです。機密性の高い論文を使う前に、内蔵クレジットのデータの流れを確認してください。',
         ],
         updatedDate: '2026-11',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'AGPL-3.0のオープンソースです。無料プランと有料プランがありますが、開発元のページごとに価格が異なるため、購入前に料金ページを確認してください。',
           'Zotero 7〜10（macOS、Windows、Linux）の中に.xpiファイルとして導入します。Zoteroは事前にインストールが必要です。',
-          'モデル：30以上のクラウドモデル、自分のAPIキー、OpenAI互換のカスタムエンドポイント、Ollama、Hugging Faceから取得する内蔵ローカルモデル。',
+          'モデル（開発元の説明）：30以上のクラウドモデル、自分のAPIキー、OpenAI互換のカスタムエンドポイント、Ollama、Hugging Faceから取得する内蔵ローカルモデル。',
           'MCPサーバーが、ZoteroライブラリをClaude Desktop、Claude Code、Cursorなどのクライアントにつなぎます。',
           'PromptQuorumはこのプラグインを試していません。プライバシーポリシーは2024年5月付で、v2.3.0で加わった内蔵AIクレジットより前のものです。',
         ],
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '動作要件',
         content: [
           '**PapersGPTにはmacOS、Windows、LinuxのZotero 7、8、9または10が必要です。ハードウェア要件は選ぶローカルモデルによって変わります。**',
-          '対応環境の一覧はREADMEに基づきます。RAM、ディスク、GPUの最小値は公表されていません。開発元のスケーラビリティ報告はIntel Core i9搭載のMacBook Proで測定され、10,000件のPDFを約7分でインデックス化したとしています。PromptQuorumはリソース使用量を測定していません。',
+          '対応環境の一覧はREADMEに基づきます。RAM、ディスク、GPUの最小値は公表されていません。PromptQuorumはリソース使用量を測定していません。',
         ],
         columns: ['項目', '記載されている内容'],
         rows: [
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '向かない：価格がひとつにはっきりしてほしい人。開発元のページごとに価格や無料プランの条件が異なります。',
           '向かない：AGPLライセンスのソフトを使えない組織。AGPL-3.0では、改変版をネットワーク経由で提供する場合にソースを公開する義務があります。法務部門に確認してください。',
           '未確認：回答品質、引用の正確さ、AutoPilotの結果。PromptQuorumはプラグインを実行していません。',
-          '未確認：速度の数値。開発元の10,000件PDFのベンチマークはIntel Core i9搭載のMacBook Pro1台での測定で、独立した検証ではありません。',
+          '未確認：速度とリソース使用量。PromptQuorumは測定しておらず、独立した数値も見つかっていません。',
           '未確認：無料プランの条件。FAQは期限なしで無料のローカルモデルを説明し、料金ページは1つのPDFとのチャット20回と実行回数の限られたトライアルを説明しています。',
           '未確認：価格。料金ページ、FAQ、サイトの構造化データで金額が異なるため、ここでは金額を記載しません。',
           '未確認：内蔵クレジットを使うチャットがPapersGPTのサーバーを経由するか、およびv2.3.0以降について2024年のプライバシーポリシーが何をカバーするか。',
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-pt.webp',
@@ -1403,7 +1403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O PapersGPT é um plugin de código aberto (AGPL-3.0) para o gerenciador de referências Zotero que conversa com PDFs, pesquisa em toda a biblioteca, acompanha artigos novos e salva os resultados como notas do Zotero. Esta análise se baseia no site do desenvolvedor, no repositório do GitHub, na página de versões e na política de privacidade, verificados em 17 de novembro de 2026. A PromptQuorum não testou o plugin na prática.',
     metaDescription:
-      'O PapersGPT é um plugin AGPL-3.0 do Zotero para conversar com PDFs, pesquisar na biblioteca e acompanhar artigos com modelos na nuvem ou locais, com MCP. Instalação e privacidade.',
+      'Plugin AGPL-3.0 do Zotero para conversar com PDFs, buscar na biblioteca e acompanhar artigos com modelos na nuvem ou locais e MCP. Instalação, privacidade.',
     twitterDescription:
       'O PapersGPT adiciona ao Zotero chat de PDF, busca em toda a biblioteca e acompanhamento de artigos, com modelos na nuvem ou locais e servidor MCP. Código aberto, freemium.',
     audience:
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plugin do Zotero (.xpi) para Zotero 7 a 10 em macOS, Windows e Linux.',
           'Preço: plano gratuito mais planos pagos; licença AGPL-3.0.',
           'Chat com um PDF, vários PDFs ou toda a biblioteca; o Literature Radar acompanha artigos novos; o AutoPilot lê uma coleção em lote e grava em notas do Zotero.',
-          'Funciona com mais de 30 modelos na nuvem, sua própria chave, Ollama ou modelos locais integrados.',
+          'Segundo o desenvolvedor, funciona com mais de 30 modelos na nuvem, sua própria chave, Ollama ou modelos locais integrados.',
           'A política de privacidade é de 2024; verifique o fluxo de dados dos créditos integrados antes de usar artigos confidenciais.',
         ],
         updatedDate: '2026-11',
@@ -1471,7 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Código aberto sob AGPL-3.0; há um plano gratuito e planos pagos, e as páginas do desenvolvedor mostram preços diferentes, então confira a página de preços antes de comprar.',
           'É instalado como arquivo .xpi dentro do Zotero 7 a 10 (macOS, Windows, Linux); o Zotero precisa já estar instalado.',
-          'Modelos: mais de 30 modelos na nuvem, sua própria chave de API, um endpoint compatível com OpenAI, Ollama ou modelos locais integrados baixados do Hugging Face.',
+          'Modelos (segundo o desenvolvedor): mais de 30 modelos na nuvem, sua própria chave de API, um endpoint compatível com OpenAI, Ollama ou modelos locais integrados baixados do Hugging Face.',
           'Um servidor MCP conecta sua biblioteca do Zotero ao Claude Desktop, Claude Code, Cursor e outros clientes MCP.',
           'A PromptQuorum não testou o plugin. A política de privacidade é de maio de 2024 e anterior aos créditos de IA integrados adicionados na v2.3.0.',
         ],
@@ -1514,7 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Requisitos',
         content: [
           '**O PapersGPT precisa do Zotero 7, 8, 9 ou 10 em macOS, Windows ou Linux; as necessidades de hardware dependem do modelo local escolhido.**',
-          'A lista de compatibilidade vem do README. Nenhum mínimo de RAM, disco ou GPU é publicado. O relatório de escalabilidade do desenvolvedor foi medido em um MacBook Pro com Intel Core i9 e informa 10,000 PDFs indexados em cerca de 7 minutos; a PromptQuorum não mediu o uso de recursos.',
+          'A lista de compatibilidade vem do README. Nenhum mínimo de RAM, disco ou GPU é publicado. A PromptQuorum não mediu o uso de recursos.',
         ],
         columns: ['Item', 'Valor informado'],
         rows: [
@@ -1578,7 +1578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não serve: para quem quer um preço claro. As páginas do desenvolvedor mostram preços e condições do plano gratuito diferentes.',
           'Não serve: para organizações que não podem usar software com licença AGPL. A AGPL-3.0 impõe o compartilhamento do código de versões modificadas oferecidas pela rede; consulte seu jurídico.',
           'Não verificado: qualidade das respostas, precisão das citações e resultados do AutoPilot. A PromptQuorum não executou o plugin.',
-          'Não verificado: os números de velocidade. O benchmark de 10,000 PDFs do desenvolvedor vem de um MacBook Pro com Intel Core i9, não de um teste independente.',
+          'Não verificado: velocidade e uso de recursos. A PromptQuorum não os mediu e não encontrou números independentes.',
           'Não verificado: as condições do plano gratuito. O FAQ descreve modelos locais gratuitos sem limite de tempo; a página de preços descreve um teste com 20 chats com um PDF e execuções limitadas.',
           'Não verificado: os preços. A página de preços, o FAQ e os dados estruturados do site mostram valores diferentes, por isso nenhum é citado aqui.',
           'Não verificado: se os chats que usam créditos integrados passam por um servidor do PapersGPT e o que a política de privacidade de 2024 cobre depois da v2.3.0.',
@@ -1670,14 +1670,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-zh.webp',
-    title: 'PapersGPT 评测：支持 PDF 对话、文献库搜索与 MCP 的 Zotero AI 插件',
-    seoTitle: 'PapersGPT 评测：Zotero AI 插件与 MCP',
+    title: 'PapersGPT 解读：支持 PDF 对话、文献库搜索与 MCP 的 Zotero AI 插件',
+    seoTitle: 'PapersGPT 解读：Zotero AI 插件与 MCP',
     intro:
-      'PapersGPT 是文献管理软件 Zotero 的开源（AGPL-3.0）插件，可与 PDF 对话、搜索整个文献库、追踪新论文，并把结果保存为 Zotero 笔记。本评测基于开发者网站、GitHub 仓库、发布页面和隐私政策，核查日期为 2026 年 11 月 17 日。PromptQuorum 没有实际测试过该插件。',
+      'PapersGPT 是文献管理软件 Zotero 的开源（AGPL-3.0）插件，可与 PDF 对话、搜索整个文献库、追踪新论文，并把结果保存为 Zotero 笔记。本解读基于开发者网站、GitHub 仓库、发布页面和隐私政策，核查日期为 2026 年 11 月 17 日。PromptQuorum 没有实际测试过该插件。',
     metaDescription:
       'PapersGPT 是 AGPL-3.0 的 Zotero 插件，支持 PDF 对话、整库搜索和论文追踪，可用云端或本地模型并支持 MCP。安装、隐私与限制。',
     twitterDescription:
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: false,
     primaryTerm: 'PapersGPT',
     targetKeywords: [
-      'PapersGPT 评测',
+      'PapersGPT 解读',
       'Zotero AI 插件',
       'Zotero PDF 对话',
       'Zotero MCP 服务器',
@@ -1708,7 +1708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '适用于 macOS、Windows、Linux 上 Zotero 7 至 10 的插件（.xpi）。',
           '价格：免费版加付费方案；许可证 AGPL-3.0。',
           '可与单个 PDF、多个 PDF 或整个文献库对话；Literature Radar 追踪新论文；AutoPilot 批量阅读文献集并写入 Zotero 笔记。',
-          '可使用 30 多个云端模型、你自己的密钥、Ollama 或内置本地模型。',
+          '据开发者称，可使用 30 多个云端模型、你自己的密钥、Ollama 或内置本地模型。',
           '隐私政策发布于 2024 年；在处理机密论文前，请先确认内置额度的数据流向。',
         ],
         updatedDate: '2026-11',
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '基于 AGPL-3.0 开源；有免费版和付费方案，开发者各页面列出的价格不一致，购买前请查看定价页。',
           '以 .xpi 文件的形式安装在 Zotero 7 至 10 中（macOS、Windows、Linux）；必须先安装 Zotero。',
-          '模型：30 多个云端模型、你自己的 API 密钥、自定义 OpenAI 兼容端点、Ollama，或从 Hugging Face 下载的内置本地模型。',
+          '模型（据开发者称）：30 多个云端模型、你自己的 API 密钥、自定义 OpenAI 兼容端点、Ollama，或从 Hugging Face 下载的内置本地模型。',
           'MCP 服务器把你的 Zotero 文献库接入 Claude Desktop、Claude Code、Cursor 等 MCP 客户端。',
           'PromptQuorum 没有测试过该插件。隐私政策发布于 2024 年 5 月，早于 v2.3.0 新增的内置 AI 额度。',
         ],
@@ -1790,17 +1790,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '系统要求',
         content: [
           '**PapersGPT 需要 macOS、Windows 或 Linux 上的 Zotero 7、8、9 或 10；硬件需求取决于你选择的本地模型。**',
-          '兼容性列表来自 README。没有公布最低内存、磁盘或 GPU 数据。开发者的扩展性报告在一台搭载 Intel Core i9 的 MacBook Pro 上测得，称 10,000 个 PDF 约 7 分钟完成索引；PromptQuorum 没有测量资源占用。',
+          '兼容性列表来自 README。没有公布最低内存、磁盘或 GPU 数据。PromptQuorum 没有测量资源占用。',
         ],
-        columns: ['项目', '官方给出的数据'],
+        columns: ['项目', '资料中的说明'],
         rows: [
-          { '项目': 'Zotero', '官方给出的数据': '7、8、9 或 10（README）' },
-          { '项目': '操作系统', '官方给出的数据': 'macOS、Windows、Linux' },
-          { '项目': '插件文件', '官方给出的数据': '安装到 Zotero 的 .xpi' },
-          { '项目': '云端模型', '官方给出的数据': '联网；内置试用或自备密钥' },
-          { '项目': '本地模型', '官方给出的数据': '从 Hugging Face 一键下载' },
-          { '项目': '内存 / GPU / 磁盘', '官方给出的数据': '未说明；取决于模型' },
-          { '项目': 'MCP 服务器', '官方给出的数据': 'Node.js（npx）或 Python 3.10+' },
+          { '项目': 'Zotero', '资料中的说明': '7、8、9 或 10（README）' },
+          { '项目': '操作系统', '资料中的说明': 'macOS、Windows、Linux' },
+          { '项目': '插件文件', '资料中的说明': '安装到 Zotero 的 .xpi' },
+          { '项目': '云端模型', '资料中的说明': '联网；内置试用或自备密钥' },
+          { '项目': '本地模型', '资料中的说明': '从 Hugging Face 一键下载' },
+          { '项目': '内存 / GPU / 磁盘', '资料中的说明': '未说明；取决于模型' },
+          { '项目': 'MCP 服务器', '资料中的说明': 'Node.js（npx）或 Python 3.10+' },
         ],
         note: '据定价页，内置 AI 额度至少需要 PapersGPT v2.3.0。本地模型在你的电脑上运行，无需密钥；云端模型需要联网。',
       },
@@ -1854,12 +1854,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '不适合：想要一个明确价格的人。开发者各页面列出的价格和免费版条件并不一致。',
           '不适合：不能使用 AGPL 许可软件的组织。AGPL-3.0 要求对经网络提供的修改版公开源代码；请咨询法务。',
           '未核实：回答质量、引用准确性和 AutoPilot 的结果。PromptQuorum 没有运行过该插件。',
-          '未核实：速度数据。开发者的 10,000 个 PDF 基准来自一台搭载 Intel Core i9 的 MacBook Pro，并非独立测试。',
+          '未核实：速度和资源占用。PromptQuorum 没有测量，也没有找到独立数据。',
           '未核实：免费版条件。FAQ 描述的是不限时免费的本地模型；定价页描述的是含 20 次单 PDF 对话和有限运行次数的试用。',
           '未核实：价格。定价页、FAQ 和网站结构化数据显示的金额不同，因此本文不引用任何金额。',
           '未核实：使用内置额度的对话是否经过 PapersGPT 服务器，以及 2024 年的隐私政策在 v2.3.0 之后覆盖哪些内容。',
-          '未核实：项目背后的公司或国家、网站展示的用户数和评分，以及独立评测。均未找到，开发者自己的对比页面也未被视为独立来源。',
-          '未核实：版本信息。网站的更新日志页止于 v0.6.0，结构化数据也写 0.6.0，而 GitHub 发布已到 v2.3.0；本评测以 GitHub 为准。',
+          '未核实：项目背后的公司或国家、网站展示的用户数和评分，以及独立的第三方测试。均未找到，开发者自己的对比页面也未被视为独立来源。',
+          '未核实：版本信息。网站的更新日志页止于 v0.6.0，结构化数据也写 0.6.0，而 GitHub 发布已到 v2.3.0；本解读以 GitHub 为准。',
         ],
       },
       vsAlternatives: {
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PapersGPT 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**PapersGPT 是 Zotero 插件；PromptQuorum 没有与替代方案做过实际对比。**下列是目录中其他文档对话和研究工具，描述依据各自的评测。',
+          '**PapersGPT 是 Zotero 插件；PromptQuorum 没有与替代方案做过实际对比。**下列是目录中其他文档对话和研究工具，描述依据各自的页面。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
@@ -1933,9 +1933,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[SurfSense 评测](/zh/power-local-llm/surfsense-review) — 在你自己的电脑上研究和编辑文档的开源桌面版 NotebookLM 替代品。',
-          '[AnythingLLM 评测](/zh/power-local-llm/anythingllm-review) — 内置向量库的文档对话与 RAG 工作区。',
-          '[Khoj 评测](/zh/power-local-llm/khoj-ai-second-brain-review) — 可与 Obsidian 和 Notion 同步的个人 AI 第二大脑。',
+          '[SurfSense 解读](/zh/power-local-llm/surfsense-review) — 在你自己的电脑上研究和编辑文档的开源桌面版 NotebookLM 替代品。',
+          '[AnythingLLM 解读](/zh/power-local-llm/anythingllm-review) — 内置向量库的文档对话与 RAG 工作区。',
+          '[Khoj 解读](/zh/power-local-llm/khoj-ai-second-brain-review) — 可与 Obsidian 和 Notion 同步的个人 AI 第二大脑。',
           '[本地 LLM 知识检索工具对比](/zh/power-local-llm/local-llm-knowledge-retrieval-compared) — 文档与知识类工具的分类对比。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-ar.webp',
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'PapersGPT إضافة AGPL-3.0 لـ Zotero للدردشة مع PDF والبحث في المكتبة وتتبّع الأوراق بنماذج سحابية أو محلية، مع MCP. التثبيت والخصوصية والقيود.',
     twitterDescription:
-      'يضيف PapersGPT إلى Zotero الدردشة مع PDF والبحث في المكتبة كلها وتتبّع الأوراق، بنماذج سحابية أو محلية وخادم MCP. مفتوح المصدر وبنموذج freemium.',
+      'يضيف PapersGPT إلى Zotero الدردشة مع PDF والبحث في المكتبة كلها وتتبّع الأوراق، بنماذج سحابية أو محلية وخادم MCP. مفتوح المصدر مع خطط مجانية ومدفوعة.',
     audience:
       'الباحثون والطلاب الذين يديرون أوراقهم في Zotero، والمطوّرون الذين يربطون مكتبة أوراق بعملاء MCP، والفرق التي تقيّم أدوات الذكاء الاصطناعي للعمل على الأدبيات العلمية',
     readTime: '7 دقائق للقراءة',
@@ -1984,7 +1984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'إضافة لـ Zotero (.xpi) للإصدارات 7 إلى 10 على macOS وWindows وLinux.',
           'السعر: خطة مجانية إضافة إلى خطط مدفوعة؛ الترخيص AGPL-3.0.',
           'دردشة مع ملف PDF واحد أو عدة ملفات أو المكتبة كلها؛ يتتبّع Literature Radar الأوراق الجديدة؛ ويقرأ AutoPilot مجموعة كاملة دفعة واحدة ويحفظ النتائج في ملاحظات Zotero.',
-          'يعمل مع أكثر من 30 نموذجًا سحابيًا أو مفتاحك الخاص أو Ollama أو نماذج محلية مدمجة.',
+          'بحسب المطوّر، يعمل مع أكثر من 30 نموذجًا سحابيًا أو مفتاحك الخاص أو Ollama أو نماذج محلية مدمجة.',
           'سياسة الخصوصية تعود إلى 2024؛ تحقّق من تدفق بيانات الرصيد المدمج قبل استخدام أوراق سرية.',
         ],
         updatedDate: '2026-11',
@@ -2023,7 +2023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'مفتوح المصدر بترخيص AGPL-3.0؛ توجد خطة مجانية وخطط مدفوعة، وتعرض صفحات المطوّر أسعارًا مختلفة، لذا راجع صفحة الأسعار قبل الشراء.',
           'يُثبَّت كملف .xpi داخل Zotero من الإصدار 7 إلى 10 (macOS وWindows وLinux)؛ ويجب أن يكون Zotero مثبّتًا مسبقًا.',
-          'النماذج: أكثر من 30 نموذجًا سحابيًا، أو مفتاح API الخاص بك، أو نقطة نهاية مخصصة متوافقة مع OpenAI، أو Ollama، أو نماذج محلية مدمجة تُنزَّل من Hugging Face.',
+          'النماذج (بحسب المطوّر): أكثر من 30 نموذجًا سحابيًا، أو مفتاح API الخاص بك، أو نقطة نهاية مخصصة متوافقة مع OpenAI، أو Ollama، أو نماذج محلية مدمجة تُنزَّل من Hugging Face.',
           'يربط خادم MCP مكتبة Zotero بـ Claude Desktop وClaude Code وCursor وعملاء MCP الآخرين.',
           'لم تختبر PromptQuorum الإضافة. سياسة الخصوصية مؤرخة في مايو 2024 وتسبق رصيد الذكاء الاصطناعي المدمج الذي أُضيف في v2.3.0.',
         ],
@@ -2066,7 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المتطلبات',
         content: [
           '**يحتاج PapersGPT إلى Zotero 7 أو 8 أو 9 أو 10 على macOS أو Windows أو Linux؛ وتعتمد متطلبات العتاد على النموذج المحلي الذي تختاره.**',
-          'قائمة التوافق مأخوذة من README. لا تُنشر أرقام دنيا للذاكرة أو القرص أو GPU. قِيس تقرير قابلية التوسع لدى المطوّر على MacBook Pro بمعالج Intel Core i9 ويذكر فهرسة 10,000 ملف PDF في نحو 7 دقائق؛ ولم تقِس PromptQuorum استهلاك الموارد.',
+          'قائمة التوافق مأخوذة من README. لا تُنشر أرقام دنيا للذاكرة أو القرص أو GPU. ولم تقِس PromptQuorum استهلاك الموارد.',
         ],
         columns: ['البند', 'القيمة المعلنة'],
         rows: [
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'غير مناسب: لمن يريد سعرًا واضحًا واحدًا. تعرض صفحات المطوّر أسعارًا وشروطًا مختلفة للخطة المجانية.',
           'غير مناسب: للمؤسسات التي لا تستطيع استخدام برمجيات بترخيص AGPL. يفرض AGPL-3.0 واجب مشاركة المصدر للنسخ المعدَّلة المقدَّمة عبر الشبكة؛ اسأل فريقك القانوني.',
           'غير متحقَّق منه: جودة الإجابات ودقة الاقتباسات ونتائج AutoPilot. لم تشغّل PromptQuorum الإضافة.',
-          'غير متحقَّق منه: أرقام السرعة. اختبار المطوّر لـ 10,000 ملف PDF أُجري على MacBook Pro واحد بمعالج Intel Core i9 وليس اختبارًا مستقلًا.',
+          'غير متحقَّق منه: السرعة واستهلاك الموارد. لم تقِسهما PromptQuorum ولم تجد أرقامًا مستقلة.',
           'غير متحقَّق منه: شروط الخطة المجانية. تصف الأسئلة الشائعة نماذج محلية مجانية بلا حد زمني، وتصف صفحة الأسعار نسخة تجريبية بـ 20 دردشة مع ملف PDF واحد وعدد محدود من مرات التشغيل.',
           'غير متحقَّق منه: الأسعار. تعرض صفحة الأسعار والأسئلة الشائعة والبيانات المنظمة للموقع مبالغ مختلفة، لذا لا نذكر أيًّا منها هنا.',
           'غير متحقَّق منه: ما إذا كانت الدردشات التي تستخدم الرصيد المدمج تمر عبر خادم PapersGPT، وما الذي تغطيه سياسة الخصوصية لعام 2024 بعد v2.3.0.',
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-17',
-    dateModified: '2026-11-17',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-17',
     theme: 'RAG & Document Chat',
     heroImage: '/images/papersgpt-review-hero-ko.webp',
@@ -2260,7 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS, Windows, Linux의 Zotero 7~10용 플러그인(.xpi).',
           '가격: 무료 요금제와 유료 요금제, 라이선스 AGPL-3.0.',
           'PDF 한 개, 여러 개 또는 라이브러리 전체와 대화하며, Literature Radar가 새 논문을 추적하고 AutoPilot이 컬렉션을 일괄로 읽어 Zotero 노트에 저장합니다.',
-          '30개 이상의 클라우드 모델, 본인의 키, Ollama, 내장 로컬 모델과 함께 작동합니다.',
+          '개발자에 따르면 30개 이상의 클라우드 모델, 본인의 키, Ollama, 내장 로컬 모델과 함께 작동합니다.',
           '개인정보 처리방침은 2024년 문서입니다. 기밀 논문을 쓰기 전에 내장 크레딧의 데이터 흐름을 확인하십시오.',
         ],
         updatedDate: '2026-11',
@@ -2299,7 +2299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'AGPL-3.0 오픈소스입니다. 무료 요금제와 유료 요금제가 있으며 개발자 페이지마다 가격이 다르므로 구매 전에 요금 페이지를 확인하십시오.',
           'Zotero 7~10(macOS, Windows, Linux) 안에 .xpi 파일로 설치합니다. Zotero가 먼저 설치되어 있어야 합니다.',
-          '모델: 30개 이상의 클라우드 모델, 본인의 API 키, OpenAI 호환 사용자 지정 엔드포인트, Ollama, Hugging Face에서 받는 내장 로컬 모델.',
+          '모델(개발자 설명): 30개 이상의 클라우드 모델, 본인의 API 키, OpenAI 호환 사용자 지정 엔드포인트, Ollama, Hugging Face에서 받는 내장 로컬 모델.',
           'MCP 서버가 Zotero 라이브러리를 Claude Desktop, Claude Code, Cursor 및 다른 MCP 클라이언트에 연결합니다.',
           'PromptQuorum은 플러그인을 테스트하지 않았습니다. 개인정보 처리방침은 2024년 5월 문서로, v2.3.0에서 추가된 내장 AI 크레딧보다 앞섭니다.',
         ],
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '요구 사항',
         content: [
           '**PapersGPT에는 macOS, Windows, Linux의 Zotero 7, 8, 9 또는 10이 필요하며, 하드웨어 요구 사항은 선택하는 로컬 모델에 따라 달라집니다.**',
-          '호환 목록은 README에서 가져왔습니다. 최소 RAM, 디스크, GPU 수치는 공개되어 있지 않습니다. 개발자의 확장성 보고서는 Intel Core i9이 탑재된 MacBook Pro 한 대에서 측정되었으며, PDF 10,000개를 약 7분 만에 인덱싱했다고 밝힙니다. PromptQuorum은 리소스 사용량을 측정하지 않았습니다.',
+          '호환 목록은 README에서 가져왔습니다. 최소 RAM, 디스크, GPU 수치는 공개되어 있지 않습니다. PromptQuorum은 리소스 사용량을 측정하지 않았습니다.',
         ],
         columns: ['항목', '명시된 내용'],
         rows: [
@@ -2406,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '적합하지 않음: 명확한 단일 가격을 원하는 분. 개발자 페이지마다 가격과 무료 요금제 조건이 다릅니다.',
           '적합하지 않음: AGPL 라이선스 소프트웨어를 사용할 수 없는 조직. AGPL-3.0은 네트워크로 제공되는 수정 버전에 소스 공개 의무를 둡니다. 법무팀에 문의하십시오.',
           '미확인: 답변 품질, 인용 정확도, AutoPilot 결과. PromptQuorum은 플러그인을 실행하지 않았습니다.',
-          '미확인: 속도 수치. 개발자의 PDF 10,000개 벤치마크는 Intel Core i9이 탑재된 MacBook Pro 한 대에서 나온 것이며 독립 테스트가 아닙니다.',
+          '미확인: 속도와 리소스 사용량. PromptQuorum은 측정하지 않았고 독립적인 수치도 찾지 못했습니다.',
           '미확인: 무료 요금제 조건. FAQ는 기간 제한 없는 무료 로컬 모델을 설명하고, 요금 페이지는 PDF 한 개와의 채팅 20회와 실행 횟수 제한이 있는 체험판을 설명합니다.',
           '미확인: 가격. 요금 페이지, FAQ, 사이트의 구조화 데이터가 서로 다른 금액을 보여 주므로 여기서는 어떤 금액도 인용하지 않습니다.',
           '미확인: 내장 크레딧을 쓰는 채팅이 PapersGPT 서버를 거치는지, 그리고 2024년 개인정보 처리방침이 v2.3.0 이후에 무엇을 다루는지.',
