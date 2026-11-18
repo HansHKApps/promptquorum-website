@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-en.webp',
@@ -129,9 +129,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorum\'s dated first-hand record of Loci is the [hands-on test of 11 November 2026](/power-local-llm/loci-ai-hands-on-test), run on an M4 Pro Mac and an Android phone. The mobile notes below come from the August 2026 review and are not part of that dated record:',
         ],
         items: [
-          '**Model downloads work reliably.** Downloads of compact models (e.g., Gemma 4 E4B, ~4 GB) completed successfully on home WiFi with no truncation or corruption observed.',
-          '**Offline chat works as advertised.** Once a model is downloaded, inference runs without any internet connection, including in airplane mode. Chat remains responsive.',
-          '**Model quality depends on both parameter count and app-level tuning.** In the August test, the baseline 3B–4B models excelled at drafting, brainstorming, and summarization, but struggled with nuanced topics and multi-step reasoning — a ceiling inherent to parameter count that no app can change. What the app can change is everything surrounding the model: memory management, context-window handling, hallucination reduction, and OS-level stability. Loci implements context management (automatic compaction plus techniques for stretching usable context), which, in the tester\'s impression, produced fewer hallucinations and crashes than other apps running the identical model. PromptQuorum did not record the device model, OS version or app version for this test, so treat that comparison as an impression, not a measurement. Gemma 4 E2B and E4B were a genuine step above the 2025 generation of 3B–4B models. For complex analysis, live web queries, or high-stakes decisions, larger models — cloud-hosted or, per Loci AI, on a desktop — are the better fit.',
+          '**Model downloads (August mobile notes, impression only).** The tester downloaded a compact model (Gemma 4 E4B, about 4 GB) on home WiFi and noticed no truncation or corruption. The device, OS version, app version, date and download time were not recorded, so this is an impression, not a measurement.',
+          '**Offline chat (August mobile notes, impression only).** Loci AI says chat runs on the device without an internet connection once a model is downloaded. The tester used chat in airplane mode and found it responsive; the device, OS version, app version and response times were not recorded, and the 11 November test did not check offline use.',
+          '**Model quality depends on both parameter count and app-level tuning.** In the August test, the baseline 3B–4B models excelled at drafting, brainstorming, and summarization, but struggled with nuanced topics and multi-step reasoning — a ceiling inherent to parameter count that no app can change. What the app can change is everything surrounding the model: memory management, context-window handling, hallucination reduction, and OS-level stability. Loci implements context management (automatic compaction plus techniques for stretching usable context), which, in the tester\'s impression, produced fewer hallucinations and crashes than other apps running the identical model. PromptQuorum did not record the device model, OS version or app version for this test, so treat that comparison as an impression, not a measurement. In the tester\'s impression, Gemma 4 E2B and E4B were a step above the 2025 generation of 3B–4B models. For complex analysis, live web queries, or high-stakes decisions, larger models — cloud-hosted or, per Loci AI, on a desktop — are the better fit.',
           '**Optional features require connectivity.** Web search via DuckDuckGo, model downloads, and app updates all require internet access as documented.',
           '**Not tested.** The Windows build, the iPhone and iPad apps, the Loci Inference Engine, the agent harness and agent interface, the messaging-app integrations, automatic model selection and the current model lineup were introduced or described after the August notes and have not been tested by PromptQuorum. The 11 November hands-on test covered the Mac app and an Android phone link only in part; its page lists what was not tested.',
         ],
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Benefit': 'Offline-capable after setup',
-            'What it means in real use': 'Once the app and model are installed, chat works in airplane mode with no internet.',
+            'What it means in real use': 'Per Loci AI, once the app and a model are installed, chat does not need an internet connection.',
             'Limitation / caveat': 'Initial model download requires internet. Feature updates, model downloads, and backups may also need connectivity.',
           },
           {
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use Loci without Wi-Fi?',
-            a: 'Yes, for chat. Once the app and a model are installed, on-device inference works without any internet connection (airplane mode is fine). However, web search, Windows voice input, model downloads, app updates, and any cloud-connected features require internet. If you enable DuckDuckGo web search and use it, that feature will need connectivity.',
+            a: 'Yes, for chat, according to Loci AI: once the app and a model are installed, on-device inference does not need an internet connection. PromptQuorum\'s August phone notes found chat responsive in airplane mode (an impression; no device or version was recorded). However, web search, Windows voice input, model downloads, app updates, and any cloud-connected features require internet. If you enable DuckDuckGo web search and use it, that feature will need connectivity.',
           },
           {
             q: 'Does Loci work on older phones?',
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control. Several features stand out: automatic model selection for your hardware; Loci Link (desktop/phone linking to run powerful models from your phone via a connected Mac or PC); global memory across conversations and model switches; thermal management for extended sessions; and app stability that Loci AI attributes to its OS memory handling. PromptQuorum\'s August mobile test confirmed that downloads work reliably, offline chat functions as advertised, and, in the tester\'s experience, the app crashed less than competing local-LLM apps. The web RAG implementation is also distinctive: when online, answers ground in live sources; when offline, it falls back to on-device knowledge — and you control the behavior in settings. For users who want private offline chat without technical model-management friction, Loci excels. For users who want advanced model control and quantization flexibility, Private LLM (Apple) and PocketPal AI offer more depth; for Android users exploring experimental on-device options, Google AI Edge Gallery offers additional model discovery. What changed since August, according to Loci AI: desktop as a first-class platform running larger models, a benchmark result for Qwen3.8 27B on a Mac, the Loci Inference Engine (up to 7× faster than llama.cpp on certain models), an agent harness with web research, tool calling, image and video models and browser control, and connections to messaging apps. A Mac agent interface that lets coding agents use Loci\'s local models is also documented on the Loci website. The honest assessment: Loci succeeds at simplicity, stability, and cross-platform consistency on mobile; the desktop and agent features are described here as Loci AI presents them, and PromptQuorum\'s own testing covered mobile.',
+          'Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control. Several features stand out: automatic model selection for your hardware; Loci Link (desktop/phone linking to run powerful models from your phone via a connected Mac or PC); global memory across conversations and model switches; thermal management for extended sessions; and app stability that Loci AI attributes to its OS memory handling. In PromptQuorum\'s August mobile notes, the tester\'s impressions were that a compact model download completed without visible problems, offline chat in airplane mode stayed responsive and, in his experience, the app crashed less than competing local-LLM apps; the device, OS version and app version were not recorded, so these are impressions, not measurements. The web RAG implementation is also distinctive: when online, answers ground in live sources; when offline, it falls back to on-device knowledge — and you control the behavior in settings. For users who want private offline chat without technical model-management friction, Loci excels. For users who want advanced model control and quantization flexibility, Private LLM (Apple) and PocketPal AI offer more depth; for Android users exploring experimental on-device options, Google AI Edge Gallery offers additional model discovery. What changed since August, according to Loci AI: desktop as a first-class platform running larger models, a benchmark result for Qwen3.8 27B on a Mac, the Loci Inference Engine (up to 7× faster than llama.cpp on certain models), an agent harness with web research, tool calling, image and video models and browser control, and connections to messaging apps. A Mac agent interface that lets coding agents use Loci\'s local models is also documented on the Loci website. The honest assessment: the tester found Loci simple to use on mobile; its stability and cross-platform consistency rest on his impressions and on Loci AI\'s statements, not on measurements; the desktop and agent features are described here as Loci AI presents them, and PromptQuorum\'s own testing covered mobile.',
       },
       sources: {
         id: 'sources',
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-ar.webp',
@@ -554,9 +554,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السجل الأول المؤرَّخ لدى PromptQuorum عن Loci هو [اختبار عملي بتاريخ 11 نوفمبر 2026](/ar/power-local-llm/loci-ai-hands-on-test)، أُجري على Mac بمعالج M4 Pro وهاتف Android. وملاحظات الأجهزة المحمولة أدناه مأخوذة من مراجعة أغسطس 2026 وليست جزءاً من ذلك السجل المؤرَّخ:',
         ],
         items: [
-          '**تنزيلات النموذج تعمل بشكل موثوق.** تنزيلات النماذج المدمجة (على سبيل المثال Gemma 4 E4B ~4 GB) اكتملت بنجاح على WiFi المنزلي مع عدم ملاحظة أي انقطاع في الملف أو اكتمال جزئي له أو تلف.',
-          '**المحادثة المحلية تعمل كما هو معلن.** بمجرد تنزيل نموذج يعمل الاستدلال بدون أي اتصال بالإنترنت بما في ذلك في وضع الطائرة. تبقى المحادثة مستجيبة.',
-          '**تعتمد جودة النموذج على عدد المعاملات وعلى ضبط التطبيق معاً.** في اختبار أغسطس، أجادت النماذج الأساسية بحجم 3B–4B كتابة المسودات والعصف الذهني والتلخيص، لكنها واجهت صعوبة مع المواضيع الدقيقة والاستدلال متعدد الخطوات — وهو سقف مرتبط بعدد المعاملات لا يستطيع أي تطبيق تغييره. أما ما يستطيع التطبيق تغييره فهو كل ما يحيط بالنموذج: إدارة الذاكرة، والتعامل مع نافذة السياق، وتقليل الهلوسة، والاستقرار على مستوى نظام التشغيل. ينفذ Loci إدارة للسياق (ضغطاً تلقائياً مع تقنيات لتوسيع السياق القابل للاستخدام)، مما أنتج، بحسب انطباع المختبِر، هلوسة وانهيارات أقل من تطبيقات أخرى تشغّل النموذج نفسه. ولم تسجّل PromptQuorum طراز الجهاز ولا إصدار نظام التشغيل ولا إصدار التطبيق في هذا الاختبار، لذا تعامل مع هذه المقارنة على أنها انطباع وليست قياساً. وكان Gemma 4 E2B وE4B خطوة حقيقية إلى الأمام مقارنة بجيل 2025 من نماذج 3B–4B. وللتحليلات المعقدة أو استعلامات الويب الحية أو القرارات عالية المخاطر، فالنماذج الأكبر — السحابية أو، بحسب Loci AI، على سطح المكتب — أنسب.',
+          '**تنزيل النموذج (ملاحظات الهاتف في أغسطس، انطباع فقط).** نزّل المختبِر نموذجاً مدمجاً (Gemma 4 E4B، ~4 GB) عبر WiFi المنزلي ولم يلاحظ أي انقطاع في الملف أو تلفه. لم تُسجَّل بيانات الجهاز ولا إصدار نظام التشغيل ولا إصدار التطبيق ولا التاريخ ولا مدة التنزيل، لذا فهذا انطباع وليس قياساً.',
+          '**المحادثة دون اتصال (ملاحظات الهاتف في أغسطس، انطباع فقط).** بحسب Loci AI، بعد تنزيل نموذج تعمل المحادثة على الجهاز دون اتصال بالإنترنت. استخدم المختبِر المحادثة في وضع الطائرة ووجدها مستجيبة؛ لم يُسجَّل طراز الجهاز ولا إصدار نظام التشغيل ولا إصدار التطبيق ولا أوقات الاستجابة، ولم يتحقق اختبار 11 نوفمبر من الاستخدام دون اتصال.',
+          '**تعتمد جودة النموذج على عدد المعاملات وعلى ضبط التطبيق معاً.** في اختبار أغسطس، أجادت النماذج الأساسية بحجم 3B–4B كتابة المسودات والعصف الذهني والتلخيص، لكنها واجهت صعوبة مع المواضيع الدقيقة والاستدلال متعدد الخطوات — وهو سقف مرتبط بعدد المعاملات لا يستطيع أي تطبيق تغييره. أما ما يستطيع التطبيق تغييره فهو كل ما يحيط بالنموذج: إدارة الذاكرة، والتعامل مع نافذة السياق، وتقليل الهلوسة، والاستقرار على مستوى نظام التشغيل. ينفذ Loci إدارة للسياق (ضغطاً تلقائياً مع تقنيات لتوسيع السياق القابل للاستخدام)، مما أنتج، بحسب انطباع المختبِر، هلوسة وانهيارات أقل من تطبيقات أخرى تشغّل النموذج نفسه. ولم تسجّل PromptQuorum طراز الجهاز ولا إصدار نظام التشغيل ولا إصدار التطبيق في هذا الاختبار، لذا تعامل مع هذه المقارنة على أنها انطباع وليست قياساً. وبحسب انطباع المختبِر كان Gemma 4 E2B وE4B خطوة إلى الأمام مقارنة بجيل 2025 من نماذج 3B–4B. وللتحليلات المعقدة أو استعلامات الويب الحية أو القرارات عالية المخاطر، فالنماذج الأكبر — السحابية أو، بحسب Loci AI، على سطح المكتب — أنسب.',
           '**الميزات الاختيارية تتطلب الاتصال.** البحث عن الويب عبر DuckDuckGo وتنزيلات النموذج وتحديثات التطبيق جميعها تتطلب الوصول إلى الإنترنت كما موثق.',
           '**لم يُختبر.** نسخة Windows وتطبيقا iPhone وiPad ومحرك Loci Inference Engine وحزمة الوكلاء وواجهة الوكلاء وتكاملات المراسلة والاختيار التلقائي للنموذج وتشكيلة النماذج الحالية أُطلقت أو وُصفت بعد ملاحظات أغسطس، ولم تختبرها PromptQuorum. غطّى الاختبار العملي في 11 نوفمبر تطبيق Mac وربط هاتف Android جزئياً فقط؛ وتسرد صفحته ما لم يُختبر.',
         ],
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الفائدة': 'قابل للعمل بدون إنترنت بعد الإعداد',
-            'ما تعنيه في الاستخدام الفعلي': 'بمجرد تثبيت التطبيق والنموذج تعمل المحادثة في وضع الطائرة بدون إنترنت.',
+            'ما تعنيه في الاستخدام الفعلي': 'بحسب Loci AI، بعد تثبيت التطبيق والنموذج لا تحتاج المحادثة إلى اتصال بالإنترنت.',
             'القيد / التحذير': 'تنزيل النموذج الأولي يتطلب الإنترنت. تحديثات الميزات وتنزيلات النموذج والنسخ الاحتياطية قد تحتاج أيضاً إلى الاتصال.',
           },
           {
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام Loci بدون WiFi؟',
-            a: 'نعم للمحادثة. بمجرد تثبيت التطبيق والنموذج يعمل الاستدلال على الجهاز بدون أي اتصال بالإنترنت (وضع الطائرة بخير). ومع ذلك يتطلب البحث عن الويب وإدخال الصوت على Windows وتنزيلات النموذج وتحديثات التطبيق وأي ميزات متصلة بالسحابة الإنترنت. إذا قمت بتمكين بحث ويب DuckDuckGo واستخدامه فستحتاج هذه الميزة إلى الاتصال.',
+            a: 'نعم للمحادثة، بحسب Loci AI: بعد تثبيت التطبيق والنموذج لا يحتاج الاستدلال على الجهاز إلى اتصال بالإنترنت. وفي ملاحظات PromptQuorum على الهاتف في أغسطس بقيت المحادثة مستجيبة في وضع الطائرة (انطباع فقط؛ لم يُسجَّل الجهاز ولا الإصدارات). ومع ذلك يتطلب البحث عن الويب وإدخال الصوت على Windows وتنزيلات النموذج وتحديثات التطبيق وأي ميزات متصلة بالسحابة الإنترنت. إذا قمت بتمكين بحث ويب DuckDuckGo واستخدامه فستحتاج هذه الميزة إلى الاتصال.',
           },
           {
             q: 'هل يعمل Loci على الهواتف الأقدم؟',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم',
         content:
-          'يكون Loci الأكثر جاذبية إذا كانت أولويتك ذكاءً اصطناعياً على الجهاز بأقل قدر من العناء بدلاً من أقصى تحكم في النماذج. تبرز عدة ميزات: الاختيار التلقائي للنموذج لعتادك؛ وLoci Link (ربط سطح المكتب بالهاتف لتشغيل نماذج قوية من هاتفك عبر Mac أو PC متصل)؛ والذاكرة العامة عبر المحادثات وتبديل النماذج؛ والإدارة الحرارية للجلسات الطويلة؛ واستقرار التطبيق الذي تعزوه Loci AI إلى معالجتها لذاكرة نظام التشغيل. وأكد اختبار PromptQuorum على الهاتف في أغسطس أن التنزيلات تعمل بموثوقية، وأن المحادثة دون اتصال تعمل كما هو معلن، وأن التطبيق، بحسب تجربة المختبِر، انهار أقل من تطبيقات LLM المحلية المنافسة. كما أن تنفيذ RAG عبر الويب مميز: عند الاتصال تستند الإجابات إلى مصادر حية، وعند عدم الاتصال يعود إلى المعرفة المحلية — وأنت تتحكم في هذا السلوك من الإعدادات. لمن يريد محادثة خاصة دون اتصال وبلا عناء تقني في إدارة النماذج، يتفوق Loci. ولمن يريد تحكماً متقدماً في النماذج ومرونة في التكميم، يقدّم Private LLM (لأجهزة Apple) وPocketPal AI عمقاً أكبر؛ ولمستخدمي Android الذين يستكشفون خيارات تجريبية على الجهاز، يقدّم Google AI Edge Gallery اكتشافاً إضافياً للنماذج. ما تغيّر منذ أغسطس، بحسب Loci AI: سطح المكتب منصةً من الدرجة الأولى بنماذج أكبر، ونتيجة اختبار أداء لـ Qwen3.8 27B على Mac، ومحرك Loci Inference Engine (أسرع بما يصل إلى 7× من llama.cpp على نماذج معينة)، وحزمة وكلاء مع بحث على الويب واستدعاء الأدوات ونماذج الصور والفيديو والتحكم في المتصفح، واتصالات مع تطبيقات المراسلة. كما أن واجهة وكلاء على Mac تتيح لوكلاء البرمجة استخدام نماذج Loci المحلية موثّقة على موقع Loci. التقييم الصريح: ينجح Loci في البساطة والاستقرار والاتساق بين المنصات على الهاتف؛ أما ميزات سطح المكتب والوكلاء فتُعرض هنا كما تقدمها Loci AI، وقد غطّى اختبار PromptQuorum الخاص الهاتف.',
+          'يكون Loci الأكثر جاذبية إذا كانت أولويتك ذكاءً اصطناعياً على الجهاز بأقل قدر من العناء بدلاً من أقصى تحكم في النماذج. تبرز عدة ميزات: الاختيار التلقائي للنموذج لعتادك؛ وLoci Link (ربط سطح المكتب بالهاتف لتشغيل نماذج قوية من هاتفك عبر Mac أو PC متصل)؛ والذاكرة العامة عبر المحادثات وتبديل النماذج؛ والإدارة الحرارية للجلسات الطويلة؛ واستقرار التطبيق الذي تعزوه Loci AI إلى معالجتها لذاكرة نظام التشغيل. وفي ملاحظات PromptQuorum على الهاتف في أغسطس، وصف المختبِر كانطباعات أن تنزيل نموذج مدمج اكتمل دون مشكلات ظاهرة، وأن المحادثة دون اتصال بقيت مستجيبة في وضع الطائرة، وأن التطبيق، بحسب تجربته، انهار أقل من تطبيقات LLM المحلية المنافسة؛ ولم يُسجَّل الجهاز ولا إصدارات نظام التشغيل والتطبيق، لذا فهذه انطباعات وليست قياسات. كما أن تنفيذ RAG عبر الويب مميز: عند الاتصال تستند الإجابات إلى مصادر حية، وعند عدم الاتصال يعود إلى المعرفة المحلية — وأنت تتحكم في هذا السلوك من الإعدادات. لمن يريد محادثة خاصة دون اتصال وبلا عناء تقني في إدارة النماذج، يتفوق Loci. ولمن يريد تحكماً متقدماً في النماذج ومرونة في التكميم، يقدّم Private LLM (لأجهزة Apple) وPocketPal AI عمقاً أكبر؛ ولمستخدمي Android الذين يستكشفون خيارات تجريبية على الجهاز، يقدّم Google AI Edge Gallery اكتشافاً إضافياً للنماذج. ما تغيّر منذ أغسطس، بحسب Loci AI: سطح المكتب منصةً من الدرجة الأولى بنماذج أكبر، ونتيجة اختبار أداء لـ Qwen3.8 27B على Mac، ومحرك Loci Inference Engine (أسرع بما يصل إلى 7× من llama.cpp على نماذج معينة)، وحزمة وكلاء مع بحث على الويب واستدعاء الأدوات ونماذج الصور والفيديو والتحكم في المتصفح، واتصالات مع تطبيقات المراسلة. كما أن واجهة وكلاء على Mac تتيح لوكلاء البرمجة استخدام نماذج Loci المحلية موثّقة على موقع Loci. التقييم الصريح: وجد المختبِر أن Loci بسيط الاستخدام على الهاتف؛ واستقراره واتساقه بين المنصات يستندان إلى انطباعاته وإلى أقوال Loci AI لا إلى قياسات؛ أما ميزات سطح المكتب والوكلاء فتُعرض هنا كما تقدمها Loci AI، وقد غطّى اختبار PromptQuorum الخاص الهاتف.',
       },
       sources: {
         id: 'sources',
@@ -847,7 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-de.webp',
@@ -966,9 +966,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der datierte Erstbefund von PromptQuorum zu Loci ist der [Praxistest vom 11. November 2026](/de/power-local-llm/loci-ai-hands-on-test), durchgeführt auf einem M4-Pro-Mac und einem Android-Handy. Die folgenden Notizen zur mobilen Nutzung stammen aus dem Test vom August 2026 und gehören nicht zu diesem datierten Befund:',
         ],
         items: [
-          '**Modell-Downloads funktionieren zuverlässig.** Downloads kompakter Modelle (z. B. Gemma 4 E4B, ~4 GB) wurden erfolgreich über Heim-WLAN abgeschlossen, ohne Kürzung oder Beschädigung.',
-          '**Offline-Chat funktioniert wie versprochen.** Sobald ein Modell heruntergeladen ist, läuft die Inferenz ohne jegliche Internetverbindung, auch im Flugzeugmodus. Chat bleibt reaktionsschnell.',
-          '**Die Modellqualität hängt von Parameterzahl und App-Abstimmung ab.** Im Test im August beherrschten die Basismodelle mit 3B–4B Parametern Entwürfe, Brainstorming und Zusammenfassungen gut, taten sich aber mit differenzierten Themen und mehrstufigem Reasoning schwer – eine Grenze, die an der Parameterzahl hängt und die keine App ändern kann. Was die App beeinflussen kann, ist alles rund um das Modell: Speicherverwaltung, Kontextfenster, Reduktion von Halluzinationen und Stabilität auf Betriebssystemebene. Loci setzt ein Kontextmanagement ein (automatische Verdichtung plus Techniken zur Verlängerung des nutzbaren Kontexts), das bei identischem Modell nach dem Eindruck des Testers zu weniger Halluzinationen und Abstürzen führte als bei anderen Apps. PromptQuorum hat für diesen Test weder Gerätemodell noch Betriebssystem- oder App-Version erfasst; verstehen Sie diesen Vergleich daher als Eindruck, nicht als Messung. Gemma 4 E2B und E4B waren ein echter Schritt über der Modellgeneration von 2025 mit 3B–4B Parametern. Für komplexe Analysen, Live-Web-Abfragen oder folgenreiche Entscheidungen eignen sich größere Modelle besser – in der Cloud oder, laut Loci AI, auf einem Desktop.',
+          '**Modell-Download (Notizen zur mobilen Nutzung im August, nur Eindruck).** Der Tester lud ein kompaktes Modell (Gemma 4 E4B, rund 4 GB) über Heim-WLAN herunter und bemerkte keine Kürzung oder Beschädigung. Gerät, Betriebssystem- und App-Version, Datum und Download-Dauer wurden nicht erfasst; das ist daher ein Eindruck, keine Messung.',
+          '**Offline-Chat (Notizen zur mobilen Nutzung im August, nur Eindruck).** Laut Loci AI läuft der Chat nach dem Download eines Modells auf dem Gerät ohne Internetverbindung. Der Tester nutzte den Chat im Flugzeugmodus und empfand ihn als reaktionsschnell; Gerät, Betriebssystem- und App-Version sowie Antwortzeiten wurden nicht erfasst, und der Test vom 11. November hat die Offline-Nutzung nicht geprüft.',
+          '**Die Modellqualität hängt von Parameterzahl und App-Abstimmung ab.** Im Test im August beherrschten die Basismodelle mit 3B–4B Parametern Entwürfe, Brainstorming und Zusammenfassungen gut, taten sich aber mit differenzierten Themen und mehrstufigem Reasoning schwer – eine Grenze, die an der Parameterzahl hängt und die keine App ändern kann. Was die App beeinflussen kann, ist alles rund um das Modell: Speicherverwaltung, Kontextfenster, Reduktion von Halluzinationen und Stabilität auf Betriebssystemebene. Loci setzt ein Kontextmanagement ein (automatische Verdichtung plus Techniken zur Verlängerung des nutzbaren Kontexts), das bei identischem Modell nach dem Eindruck des Testers zu weniger Halluzinationen und Abstürzen führte als bei anderen Apps. PromptQuorum hat für diesen Test weder Gerätemodell noch Betriebssystem- oder App-Version erfasst; verstehen Sie diesen Vergleich daher als Eindruck, nicht als Messung. Nach dem Eindruck des Testers waren Gemma 4 E2B und E4B ein Schritt über der Modellgeneration von 2025 mit 3B–4B Parametern. Für komplexe Analysen, Live-Web-Abfragen oder folgenreiche Entscheidungen eignen sich größere Modelle besser – in der Cloud oder, laut Loci AI, auf einem Desktop.',
           '**Optionale Funktionen erfordern Konnektivität.** Web-Suche via DuckDuckGo, Modell-Downloads und App-Updates erfordern alle Internetzugang wie dokumentiert.',
           '**Nicht getestet.** Die Windows-Version, die iPhone- und iPad-Apps, die Loci Inference Engine, der Agent-Harness und die Agent-Schnittstelle, die Messaging-Integrationen, die automatische Modellauswahl und das aktuelle Modellangebot wurden nach den August-Notizen eingeführt oder beschrieben und von PromptQuorum nicht getestet. Der Praxistest vom 11. November deckte die Mac-App und eine Android-Handy-Verbindung nur teilweise ab; die zugehörige Seite listet auf, was nicht getestet wurde.',
         ],
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Vorteil': 'Offline-fähig nach Einrichtung',
-            'Was es in der Praxis bedeutet': 'Sobald App und Modell installiert sind, funktioniert Chat im Flugzeugmodus ohne Internet.',
+            'Was es in der Praxis bedeutet': 'Laut Loci AI braucht der Chat, sobald App und Modell installiert sind, keine Internetverbindung.',
             'Einschränkung / Vorbehalt': 'Der erste Modell-Download erfordert Internet. Funktions-Updates, Modell-Downloads und Backups benötigen möglicherweise auch Konnektivität.',
           },
           {
@@ -1163,7 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich Loci ohne WLAN verwenden?',
-            a: 'Ja, für Chat. Sobald die App und ein Modell installiert sind, funktioniert lokale Inferenz ohne Internetverbindung (Flugzeugmodus ist in Ordnung). Allerdings erfordern Web-Suche, Windows-Spracheingabe, Modell-Downloads, App-Updates und alle Cloud-verbundenen Funktionen Internet. Wenn Sie DuckDuckGo Web-Suche aktivieren und verwenden, benötigt diese Funktion Konnektivität.',
+            a: 'Ja, für Chat, laut Loci AI: Sobald die App und ein Modell installiert sind, braucht die lokale Inferenz keine Internetverbindung. In den Notizen von PromptQuorum zur mobilen Nutzung im August blieb der Chat im Flugzeugmodus reaktionsschnell (ein Eindruck; Gerät und Versionen wurden nicht erfasst). Allerdings erfordern Web-Suche, Windows-Spracheingabe, Modell-Downloads, App-Updates und alle Cloud-verbundenen Funktionen Internet. Wenn Sie DuckDuckGo Web-Suche aktivieren und verwenden, benötigt diese Funktion Konnektivität.',
           },
           {
             q: 'Funktioniert Loci auf älteren Telefonen?',
@@ -1226,7 +1226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Loci ist am überzeugendsten, wenn Ihre Priorität reibungslose, lokale KI statt maximaler Modellkontrolle ist. Mehrere Funktionen stechen hervor: automatische Modellauswahl für Ihre Hardware; Loci Link (Desktop-/Handy-Kopplung, um leistungsstarke Modelle über einen verbundenen Mac oder PC vom Handy aus zu nutzen); globaler Speicher über Gespräche und Modellwechsel hinweg; Thermal Management für lange Sitzungen; und App-Stabilität, die Loci AI seinem OS-Memory-Handling zuschreibt. Der mobile Test von PromptQuorum im August bestätigte, dass Downloads zuverlässig funktionieren, der Offline-Chat wie versprochen arbeitet und die App nach Erfahrung des Testers weniger abstürzte als konkurrierende lokale LLM-Apps. Auch die Web-RAG-Umsetzung ist besonders: online stützen sich Antworten auf Live-Quellen, offline fällt sie auf das lokale Wissen zurück – und Sie steuern das Verhalten in den Einstellungen. Für Nutzer, die privaten Offline-Chat ohne technische Modellverwaltung wollen, überzeugt Loci. Wer fortgeschrittene Modellkontrolle und Quantisierungsflexibilität sucht, findet bei Private LLM (Apple) und PocketPal AI mehr Tiefe; Android-Nutzer, die experimentelle Optionen auf dem Gerät erkunden, finden in Google AI Edge Gallery zusätzliche Modelle. Was sich seit August geändert hat, laut Loci AI: der Desktop als vollwertige Plattform mit größeren Modellen, eine Benchmark-Angabe für Qwen3.8 27B auf einem Mac, die Loci Inference Engine (bei bestimmten Modellen bis zu 7× schneller als llama.cpp), ein Agent-Harness mit Web-Recherche, Tool-Aufrufen, Bild- und Videomodellen und Browsersteuerung sowie Verbindungen zu Messaging-Apps. Eine Agent-Schnittstelle für den Mac, über die Coding-Agenten die lokalen Modelle von Loci nutzen können, ist zudem auf der Loci-Website dokumentiert. Das ehrliche Fazit: Loci überzeugt bei Einfachheit, Stabilität und plattformübergreifender Konsistenz auf dem Smartphone; die Desktop- und Agent-Funktionen werden hier so beschrieben, wie Loci AI sie darstellt, und die eigenen Tests von PromptQuorum betrafen die mobilen Versionen.',
+          'Loci ist am überzeugendsten, wenn Ihre Priorität reibungslose, lokale KI statt maximaler Modellkontrolle ist. Mehrere Funktionen stechen hervor: automatische Modellauswahl für Ihre Hardware; Loci Link (Desktop-/Handy-Kopplung, um leistungsstarke Modelle über einen verbundenen Mac oder PC vom Handy aus zu nutzen); globaler Speicher über Gespräche und Modellwechsel hinweg; Thermal Management für lange Sitzungen; und App-Stabilität, die Loci AI seinem OS-Memory-Handling zuschreibt. In den Notizen von PromptQuorum zur mobilen Nutzung im August beschrieb der Tester als Eindrücke, dass der Download eines kompakten Modells ohne sichtbare Probleme abgeschlossen wurde, der Offline-Chat im Flugzeugmodus reaktionsschnell blieb und die App nach seiner Erfahrung weniger abstürzte als konkurrierende lokale LLM-Apps; Gerät sowie Betriebssystem- und App-Version wurden nicht erfasst, es handelt sich also um Eindrücke, nicht um Messungen. Auch die Web-RAG-Umsetzung ist besonders: online stützen sich Antworten auf Live-Quellen, offline fällt sie auf das lokale Wissen zurück – und Sie steuern das Verhalten in den Einstellungen. Für Nutzer, die privaten Offline-Chat ohne technische Modellverwaltung wollen, überzeugt Loci. Wer fortgeschrittene Modellkontrolle und Quantisierungsflexibilität sucht, findet bei Private LLM (Apple) und PocketPal AI mehr Tiefe; Android-Nutzer, die experimentelle Optionen auf dem Gerät erkunden, finden in Google AI Edge Gallery zusätzliche Modelle. Was sich seit August geändert hat, laut Loci AI: der Desktop als vollwertige Plattform mit größeren Modellen, eine Benchmark-Angabe für Qwen3.8 27B auf einem Mac, die Loci Inference Engine (bei bestimmten Modellen bis zu 7× schneller als llama.cpp), ein Agent-Harness mit Web-Recherche, Tool-Aufrufen, Bild- und Videomodellen und Browsersteuerung sowie Verbindungen zu Messaging-Apps. Eine Agent-Schnittstelle für den Mac, über die Coding-Agenten die lokalen Modelle von Loci nutzen können, ist zudem auf der Loci-Website dokumentiert. Das ehrliche Fazit: Der Tester empfand Loci auf dem Smartphone als einfach in der Bedienung; Stabilität und plattformübergreifende Konsistenz beruhen auf seinen Eindrücken und auf Aussagen von Loci AI, nicht auf Messungen; die Desktop- und Agent-Funktionen werden hier so beschrieben, wie Loci AI sie darstellt, und die eigenen Tests von PromptQuorum betrafen die mobilen Versionen.',
       },
       sources: {
         id: 'sources',
@@ -1267,7 +1267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-es.webp',
@@ -1386,9 +1386,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El registro fechado de primera mano de PromptQuorum sobre Loci es la [prueba práctica del 11 de noviembre de 2026](/es/power-local-llm/loci-ai-hands-on-test), realizada en un Mac con M4 Pro y un teléfono Android. Las notas sobre móvil que siguen proceden de la reseña de agosto de 2026 y no forman parte de ese registro fechado:',
         ],
         items: [
-          '**Las descargas de modelos funcionan de manera confiable.** Las descargas de modelos compactos (ej. Gemma 4 E4B, ~4 GB) se completaron exitosamente en WiFi doméstico sin truncación o corrupción observada.',
-          '**El chat sin conexión funciona como se anuncia.** Una vez que un modelo se descarga, la inferencia se ejecuta sin ninguna conexión a internet, incluso en modo de avión. El chat permanece receptivo.',
-          '**La calidad del modelo depende tanto del número de parámetros como del ajuste de la app.** En la prueba de agosto, los modelos base de 3B–4B destacaron en borradores, lluvia de ideas y resúmenes, pero tuvieron dificultades con temas matizados y razonamiento de varios pasos: un techo propio del número de parámetros que ninguna app puede cambiar. Lo que sí puede cambiar la app es todo lo que rodea al modelo: gestión de memoria, ventana de contexto, reducción de alucinaciones y estabilidad a nivel de sistema. Loci aplica una gestión del contexto (compactación automática más técnicas para ampliar el contexto útil), que, según la impresión del probador, produjo menos alucinaciones y cierres inesperados que otras apps con el mismo modelo. PromptQuorum no registró el modelo del dispositivo, la versión del sistema operativo ni la versión de la app en esta prueba, así que trata esa comparación como una impresión, no como una medición. Gemma 4 E2B y E4B supusieron un salto real respecto a la generación de 2025 de modelos de 3B–4B. Para análisis complejos, consultas web en vivo o decisiones de alto riesgo, los modelos más grandes —en la nube o, según Loci AI, en un escritorio— son más adecuados.',
+          '**Descarga de modelos (notas móviles de agosto, solo impresión).** El probador descargó un modelo compacto (Gemma 4 E4B, ~4 GB) en WiFi doméstico y no observó truncamiento ni corrupción. No se registraron el dispositivo, la versión del sistema operativo, la versión de la app, la fecha ni la duración de la descarga, así que es una impresión, no una medición.',
+          '**Chat sin conexión (notas móviles de agosto, solo impresión).** Según Loci AI, una vez descargado un modelo, el chat se ejecuta en el dispositivo sin conexión a internet. El probador usó el chat en modo de avión y lo notó receptivo; no se registraron el dispositivo, la versión del sistema operativo, la versión de la app ni los tiempos de respuesta, y la prueba del 11 de noviembre no comprobó el uso sin conexión.',
+          '**La calidad del modelo depende tanto del número de parámetros como del ajuste de la app.** En la prueba de agosto, los modelos base de 3B–4B destacaron en borradores, lluvia de ideas y resúmenes, pero tuvieron dificultades con temas matizados y razonamiento de varios pasos: un techo propio del número de parámetros que ninguna app puede cambiar. Lo que sí puede cambiar la app es todo lo que rodea al modelo: gestión de memoria, ventana de contexto, reducción de alucinaciones y estabilidad a nivel de sistema. Loci aplica una gestión del contexto (compactación automática más técnicas para ampliar el contexto útil), que, según la impresión del probador, produjo menos alucinaciones y cierres inesperados que otras apps con el mismo modelo. PromptQuorum no registró el modelo del dispositivo, la versión del sistema operativo ni la versión de la app en esta prueba, así que trata esa comparación como una impresión, no como una medición. Según la impresión del probador, Gemma 4 E2B y E4B supusieron un avance respecto a la generación de 2025 de modelos de 3B–4B. Para análisis complejos, consultas web en vivo o decisiones de alto riesgo, los modelos más grandes —en la nube o, según Loci AI, en un escritorio— son más adecuados.',
           '**Las funciones opcionales requieren conectividad.** La búsqueda web a través de DuckDuckGo, descargas de modelos y actualizaciones de aplicaciones requieren acceso a internet como se documenta.',
           '**No probado.** La versión de Windows, las apps de iPhone y iPad, el Loci Inference Engine, el arnés de agentes y la interfaz de agentes, las integraciones de mensajería, la selección automática de modelos y la gama de modelos actual se introdujeron o describieron después de las notas de agosto y PromptQuorum no las ha probado. La prueba práctica del 11 de noviembre cubrió la app de Mac y un enlace con un teléfono Android solo en parte; su página enumera lo que no se probó.',
         ],
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Beneficio': 'Capaz de funcionar sin conexión después de configuración',
-            'Qué significa en uso real': 'Una vez que la aplicación y el modelo están instalados, el chat funciona en modo de avión sin internet.',
+            'Qué significa en uso real': 'Según Loci AI, una vez instalados la aplicación y un modelo, el chat no necesita conexión a internet.',
             'Limitación / salvedad': 'La descarga inicial del modelo requiere internet. Las actualizaciones de características, descargas de modelos y respaldos también pueden necesitar conectividad.',
           },
           {
@@ -1583,7 +1583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar Loci sin Wi-Fi?',
-            a: 'Sí, para chat. Una vez que la aplicación y un modelo estén instalados, la inferencia en el dispositivo funciona sin ninguna conexión a internet (el modo de avión está bien). Sin embargo, búsqueda web, entrada de voz de Windows, descargas de modelos, actualizaciones de aplicaciones y cualquier característica conectada a la nube requieren internet. Si habilitas búsqueda web de DuckDuckGo y la usas, esa característica necesitará conectividad.',
+            a: 'Sí, para chat, según Loci AI: una vez que la aplicación y un modelo estén instalados, la inferencia en el dispositivo no necesita conexión a internet. En las notas móviles de agosto de PromptQuorum, el chat se mantuvo receptivo en modo de avión (una impresión; no se registraron dispositivo ni versiones). Sin embargo, búsqueda web, entrada de voz de Windows, descargas de modelos, actualizaciones de aplicaciones y cualquier característica conectada a la nube requieren internet. Si habilitas búsqueda web de DuckDuckGo y la usas, esa característica necesitará conectividad.',
           },
           {
             q: '¿Funciona Loci en teléfonos antiguos?',
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Loci es más atractivo si tu prioridad es una IA en el dispositivo con poca fricción en lugar de un control máximo de los modelos. Destacan varias funciones: la selección automática de modelo para tu hardware; Loci Link (vinculación escritorio/teléfono para ejecutar modelos potentes desde tu teléfono mediante un Mac o PC conectado); la memoria global entre conversaciones y cambios de modelo; la gestión térmica para sesiones largas; y una estabilidad que Loci AI atribuye a su gestión de memoria del SO. La prueba móvil de agosto de PromptQuorum confirmó que las descargas funcionan de forma fiable, el chat sin conexión funciona como se anuncia y, según la experiencia del probador, la app se cerró de forma inesperada menos que las apps de IA local de la competencia. La implementación del RAG web también es distintiva: con conexión, las respuestas se apoyan en fuentes en vivo; sin conexión, vuelve al conocimiento local, y controlas ese comportamiento en los ajustes. Para quienes quieren chat privado sin conexión sin la fricción técnica de gestionar modelos, Loci destaca. Para quienes quieren control avanzado de modelos y flexibilidad de cuantización, Private LLM (Apple) y PocketPal AI ofrecen más profundidad; para usuarios de Android que exploran opciones experimentales en el dispositivo, Google AI Edge Gallery ofrece más descubrimiento de modelos. Lo que ha cambiado desde agosto, según Loci AI: el escritorio como plataforma de primera clase con modelos más grandes, una afirmación de benchmark para Qwen3.8 27B en un Mac, el Loci Inference Engine (hasta 7× más rápido que llama.cpp en ciertos modelos, según Loci AI), un arnés de agentes con control del navegador y conexiones con apps de mensajería. Una novedad sí está documentada en el propio sitio web de Loci: una interfaz de agentes para Mac que permite a los agentes de programación usar los modelos locales de Loci. La valoración honesta: Loci acierta en simplicidad, estabilidad y coherencia multiplataforma en móvil; las funciones de escritorio y de agentes se describen aquí tal como las presenta Loci AI, y las pruebas propias de PromptQuorum cubrieron el móvil.',
+          'Loci es más atractivo si tu prioridad es una IA en el dispositivo con poca fricción en lugar de un control máximo de los modelos. Destacan varias funciones: la selección automática de modelo para tu hardware; Loci Link (vinculación escritorio/teléfono para ejecutar modelos potentes desde tu teléfono mediante un Mac o PC conectado); la memoria global entre conversaciones y cambios de modelo; la gestión térmica para sesiones largas; y una estabilidad que Loci AI atribuye a su gestión de memoria del SO. En las notas móviles de agosto de PromptQuorum, el probador describe como impresiones que la descarga de un modelo compacto terminó sin problemas visibles, que el chat sin conexión se mantuvo receptivo en modo de avión y que, según su experiencia, la app se cerró de forma inesperada menos que las apps de IA local de la competencia; no se registraron el dispositivo ni las versiones del sistema operativo y de la app, así que son impresiones, no mediciones. La implementación del RAG web también es distintiva: con conexión, las respuestas se apoyan en fuentes en vivo; sin conexión, vuelve al conocimiento local, y controlas ese comportamiento en los ajustes. Para quienes quieren chat privado sin conexión sin la fricción técnica de gestionar modelos, Loci destaca. Para quienes quieren control avanzado de modelos y flexibilidad de cuantización, Private LLM (Apple) y PocketPal AI ofrecen más profundidad; para usuarios de Android que exploran opciones experimentales en el dispositivo, Google AI Edge Gallery ofrece más descubrimiento de modelos. Lo que ha cambiado desde agosto, según Loci AI: el escritorio como plataforma de primera clase con modelos más grandes, una afirmación de benchmark para Qwen3.8 27B en un Mac, el Loci Inference Engine (hasta 7× más rápido que llama.cpp en ciertos modelos, según Loci AI), un arnés de agentes con control del navegador y conexiones con apps de mensajería. Una novedad sí está documentada en el propio sitio web de Loci: una interfaz de agentes para Mac que permite a los agentes de programación usar los modelos locales de Loci. La valoración honesta: el probador encontró Loci sencilla de usar en móvil; su estabilidad y coherencia multiplataforma se basan en sus impresiones y en las afirmaciones de Loci AI, no en mediciones; las funciones de escritorio y de agentes se describen aquí tal como las presenta Loci AI, y las pruebas propias de PromptQuorum cubrieron el móvil.',
       },
       sources: {
         id: 'sources',
@@ -1679,7 +1679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
   freshness_tier: 'semi_annual',
   publishDate: '2026-08-22',
-  dateModified: '2026-11-13',
+  dateModified: '2026-11-18',
   next_refresh_due: '2027-05-08',
   theme: 'Mobile & Edge LLMs',
   heroImage: '/images/loci-ai-review-hero-fr.webp',
@@ -1798,9 +1798,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Le relevé daté de première main de PromptQuorum sur Loci est le [test pratique du 11 novembre 2026](/fr/power-local-llm/loci-ai-hands-on-test), réalisé sur un Mac M4 Pro et un téléphone Android. Les notes sur le mobile ci-dessous proviennent du test d\'août 2026 et ne font pas partie de ce relevé daté :',
       ],
       items: [
-        '**Les téléchargements de modèles fonctionnent de manière fiable.** Téléchargements de modèles compacts (p. ex. Gemma 4 E4B, ~4 GB) complétés avec succès sur WiFi domestique sans troncature ni corruption observée.',
-        '**Le chat hors ligne fonctionne comme annoncé.** Une fois un modèle téléchargé, l\'inférence s\'exécute sans connexion Internet, y compris en mode avion. Le chat reste réactif.',
-        '**La qualité des modèles dépend à la fois du nombre de paramètres et du réglage de l\'application.** Lors du test d\'août, les modèles de base de 3B–4B réussissaient bien la rédaction de brouillons, le brainstorming et les résumés, mais peinaient sur les sujets nuancés et le raisonnement en plusieurs étapes — un plafond lié au nombre de paramètres qu\'aucune application ne peut changer. Ce que l\'application peut modifier, c\'est tout ce qui entoure le modèle : gestion de la mémoire, fenêtre de contexte, réduction des hallucinations et stabilité au niveau du système. Loci met en œuvre une gestion du contexte (compactage automatique et techniques d\'extension du contexte utile), qui, selon l\'impression du testeur, a produit moins d\'hallucinations et de plantages que d\'autres applications exécutant le même modèle. PromptQuorum n\'a pas consigné le modèle d\'appareil, la version de l\'OS ni la version de l\'application pour ce test : cette comparaison relève donc de l\'impression, pas de la mesure. Gemma 4 E2B et E4B ont marqué un véritable progrès par rapport à la génération 2025 de modèles 3B–4B. Pour les analyses complexes, les requêtes web en direct ou les décisions à enjeux élevés, des modèles plus grands — dans le cloud ou, selon Loci AI, sur un ordinateur de bureau — conviennent mieux.',
+        '**Téléchargement de modèle (notes mobiles d\'août, simple impression).** Le testeur a téléchargé un modèle compact (Gemma 4 E4B, ~4 GB) sur le WiFi domestique sans remarquer de troncature ni de corruption. L\'appareil, la version de l\'OS, la version de l\'application, la date et la durée du téléchargement n\'ont pas été consignés : c\'est une impression, pas une mesure.',
+        '**Chat hors ligne (notes mobiles d\'août, simple impression).** Selon Loci AI, une fois un modèle téléchargé, le chat s\'exécute sur l\'appareil sans connexion Internet. Le testeur a utilisé le chat en mode avion et l\'a trouvé réactif ; l\'appareil, la version de l\'OS, la version de l\'application et les temps de réponse n\'ont pas été consignés, et le test du 11 novembre n\'a pas vérifié l\'usage hors ligne.',
+        '**La qualité des modèles dépend à la fois du nombre de paramètres et du réglage de l\'application.** Lors du test d\'août, les modèles de base de 3B–4B réussissaient bien la rédaction de brouillons, le brainstorming et les résumés, mais peinaient sur les sujets nuancés et le raisonnement en plusieurs étapes — un plafond lié au nombre de paramètres qu\'aucune application ne peut changer. Ce que l\'application peut modifier, c\'est tout ce qui entoure le modèle : gestion de la mémoire, fenêtre de contexte, réduction des hallucinations et stabilité au niveau du système. Loci met en œuvre une gestion du contexte (compactage automatique et techniques d\'extension du contexte utile), qui, selon l\'impression du testeur, a produit moins d\'hallucinations et de plantages que d\'autres applications exécutant le même modèle. PromptQuorum n\'a pas consigné le modèle d\'appareil, la version de l\'OS ni la version de l\'application pour ce test : cette comparaison relève donc de l\'impression, pas de la mesure. Selon l\'impression du testeur, Gemma 4 E2B et E4B ont marqué un progrès par rapport à la génération 2025 de modèles 3B–4B. Pour les analyses complexes, les requêtes web en direct ou les décisions à enjeux élevés, des modèles plus grands — dans le cloud ou, selon Loci AI, sur un ordinateur de bureau — conviennent mieux.',
         '**Les fonctionnalités optionnelles exigent la connectivité.** Recherche web via DuckDuckGo, téléchargements de modèles et mises à jour d\'application nécessitent tous l\'accès Internet comme documenté.',
         '**Non testé.** La version Windows, les applications iPhone et iPad, le Loci Inference Engine, le harnais d\'agents et l\'interface d\'agents, les intégrations de messagerie, la sélection automatique de modèle et la gamme de modèles actuelle ont été introduits ou décrits après les notes d\'août et n\'ont pas été testés par PromptQuorum. Le test pratique du 11 novembre n\'a couvert que partiellement l\'application Mac et un lien avec un téléphone Android ; sa page indique ce qui n\'a pas été testé.',
       ],
@@ -1818,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           'Avantage': 'Capable hors ligne après configuration',
-          'Ce que cela signifie en pratique': 'Une fois l\'application et le modèle installés, le chat fonctionne en mode avion sans Internet.',
+          'Ce que cela signifie en pratique': 'Selon Loci AI, une fois l\'application et un modèle installés, le chat n\'a pas besoin de connexion Internet.',
           'Limitation / avertissement': 'Le téléchargement initial du modèle exige Internet. Mises à jour de fonctionnalités, téléchargements de modèles et sauvegardes peuvent aussi exiger la connectivité.',
         },
         {
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Puis-je utiliser Loci sans Wi-Fi ?',
-          a: 'Oui, pour le chat. Une fois l\'application et un modèle installés, l\'inférence sur appareil fonctionne sans connexion Internet (mode avion c\'est bon). Cependant, recherche web, entrée vocale Windows, téléchargements de modèles, mises à jour d\'applications et toute fonctionnalité connectée cloud exigent Internet. Si vous activez la recherche web DuckDuckGo et l\'utilisez, cette fonctionnalité aura besoin de connectivité.',
+          a: 'Oui, pour le chat, selon Loci AI : une fois l\'application et un modèle installés, l\'inférence sur appareil n\'a pas besoin de connexion Internet. Dans les notes mobiles d\'août de PromptQuorum, le chat est resté réactif en mode avion (une impression ; ni l\'appareil ni les versions n\'ont été consignés). Cependant, recherche web, entrée vocale Windows, téléchargements de modèles, mises à jour d\'applications et toute fonctionnalité connectée cloud exigent Internet. Si vous activez la recherche web DuckDuckGo et l\'utilisez, cette fonctionnalité aura besoin de connectivité.',
         },
         {
           q: 'Loci fonctionne-t-il sur les anciens téléphones ?',
@@ -2050,7 +2050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'verdict',
       title: 'Verdict',
       content:
-        'Loci est le plus attrayant si votre priorité est une IA sur appareil sans friction plutôt qu\'un contrôle maximal des modèles. Plusieurs fonctions se distinguent : la sélection automatique du modèle pour votre matériel ; Loci Link (association bureau/téléphone pour exécuter des modèles puissants depuis votre téléphone via un Mac ou un PC connecté) ; la mémoire globale entre les conversations et les changements de modèle ; la gestion thermique pour les longues sessions ; et une stabilité que Loci AI attribue à sa gestion de la mémoire de l\'OS. Le test mobile d\'août de PromptQuorum a confirmé que les téléchargements fonctionnent de façon fiable, que le chat hors ligne fonctionne comme annoncé et que, d\'après l\'expérience du testeur, l\'application a moins planté que les applications d\'IA locale concurrentes. L\'implémentation du RAG web est aussi distinctive : en ligne, les réponses s\'appuient sur des sources en direct ; hors ligne, elle revient aux connaissances locales — et vous contrôlez ce comportement dans les paramètres. Pour ceux qui veulent un chat privé hors ligne sans friction technique de gestion de modèles, Loci excelle. Pour ceux qui veulent un contrôle avancé des modèles et de la quantification, Private LLM (Apple) et PocketPal AI offrent plus de profondeur ; pour les utilisateurs Android qui explorent des options expérimentales sur l\'appareil, Google AI Edge Gallery propose une découverte de modèles supplémentaire. Ce qui a changé depuis août, selon Loci AI : le bureau comme plateforme à part entière avec des modèles plus grands, un résultat de benchmark pour Qwen3.8 27B sur un Mac, le Loci Inference Engine (jusqu\'à 7× plus rapide que llama.cpp sur certains modèles), un harnais d\'agents avec recherche web, appel d\'outils, modèles d\'image et de vidéo et contrôle du navigateur, et des connexions à des applications de messagerie. Une interface d\'agents pour Mac qui permet à des agents de programmation d\'utiliser les modèles locaux de Loci est aussi documentée sur le site de Loci. Le bilan honnête : Loci réussit en simplicité, stabilité et cohérence multiplateforme sur mobile ; les fonctionnalités de bureau et d\'agents sont présentées ici telles que Loci AI les décrit, et les tests propres de PromptQuorum ont porté sur le mobile.',
+        'Loci est le plus attrayant si votre priorité est une IA sur appareil sans friction plutôt qu\'un contrôle maximal des modèles. Plusieurs fonctions se distinguent : la sélection automatique du modèle pour votre matériel ; Loci Link (association bureau/téléphone pour exécuter des modèles puissants depuis votre téléphone via un Mac ou un PC connecté) ; la mémoire globale entre les conversations et les changements de modèle ; la gestion thermique pour les longues sessions ; et une stabilité que Loci AI attribue à sa gestion de la mémoire de l\'OS. Dans les notes mobiles d\'août de PromptQuorum, le testeur décrit comme impressions que le téléchargement d\'un modèle compact s\'est terminé sans problème visible, que le chat hors ligne est resté réactif en mode avion et que, d\'après son expérience, l\'application a moins planté que les applications d\'IA locale concurrentes ; l\'appareil et les versions de l\'OS et de l\'application n\'ont pas été consignés : ce sont des impressions, pas des mesures. L\'implémentation du RAG web est aussi distinctive : en ligne, les réponses s\'appuient sur des sources en direct ; hors ligne, elle revient aux connaissances locales — et vous contrôlez ce comportement dans les paramètres. Pour ceux qui veulent un chat privé hors ligne sans friction technique de gestion de modèles, Loci excelle. Pour ceux qui veulent un contrôle avancé des modèles et de la quantification, Private LLM (Apple) et PocketPal AI offrent plus de profondeur ; pour les utilisateurs Android qui explorent des options expérimentales sur l\'appareil, Google AI Edge Gallery propose une découverte de modèles supplémentaire. Ce qui a changé depuis août, selon Loci AI : le bureau comme plateforme à part entière avec des modèles plus grands, un résultat de benchmark pour Qwen3.8 27B sur un Mac, le Loci Inference Engine (jusqu\'à 7× plus rapide que llama.cpp sur certains modèles), un harnais d\'agents avec recherche web, appel d\'outils, modèles d\'image et de vidéo et contrôle du navigateur, et des connexions à des applications de messagerie. Une interface d\'agents pour Mac qui permet à des agents de programmation d\'utiliser les modèles locaux de Loci est aussi documentée sur le site de Loci. Le bilan honnête : le testeur a trouvé Loci simple à utiliser sur mobile ; sa stabilité et sa cohérence multiplateforme reposent sur ses impressions et sur les déclarations de Loci AI, pas sur des mesures ; les fonctionnalités de bureau et d\'agents sont présentées ici telles que Loci AI les décrit, et les tests propres de PromptQuorum ont porté sur le mobile.',
     },
     sources: {
       id: 'sources',
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-ja.webp',
@@ -2210,9 +2210,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorumによるLociの日付付きの一次確認記録は[2026年11月11日の実機テスト](/ja/power-local-llm/loci-ai-hands-on-test)で、M4 Pro搭載MacとAndroidスマートフォンで実施しました。以下のモバイルに関するノートは2026年8月のレビューに基づくもので、その日付付き記録には含まれません:',
         ],
         items: [
-          '**モデルダウンロードは問題なく動作しました。** コンパクトモデル（例: Gemma 4 E4B、~4 GB）のダウンロードはホーム WiFi で正常に完了し、切断や破損は観察されませんでした。',
-          '**オフラインチャットは広告通りに機能します。** モデルがダウンロードされたら、推論はインターネット接続なしで実行（飛行機モード含む）。チャットは応答性を保ちます。',
-          '**モデルの品質は、パラメータ数とアプリ側のチューニングの両方に左右されます。** 8月のテストでは、3B〜4Bのベースモデルは下書き、ブレインストーミング、要約には優れていましたが、微妙なテーマや複数段階の推論は苦手でした。これはパラメータ数に由来する上限で、どのアプリも変えられません。アプリが変えられるのは、メモリ管理、コンテキストウィンドウの扱い、ハルシネーションの低減、OSレベルの安定性など、モデルを取り巻くすべてです。Lociはコンテキスト管理(自動圧縮と、実効コンテキストを広げる手法)を実装しており、テスターの体感では、同じモデルを動かす他のアプリよりハルシネーションとクラッシュが少ない結果でした。PromptQuorumはこのテストで端末のモデル、OSバージョン、アプリのバージョンを記録していないため、この比較は測定ではなく体感として扱ってください。Gemma 4 E2BとE4Bは、2025年世代の3B〜4Bモデルより確かに一段上でした。複雑な分析、ライブWebクエリ、重大な判断には、より大きなモデル(クラウド、またはLoci AIによればデスクトップ)のほうが適しています。',
+          '**モデルのダウンロード(8月のモバイルメモ、あくまで体感)。** テスターはコンパクトなモデル(Gemma 4 E4B、~4 GB)をホーム WiFi でダウンロードし、切断や破損には気づきませんでした。端末、OSバージョン、アプリのバージョン、日付、ダウンロード時間は記録していないため、これは測定ではなく体感です。',
+          '**オフラインチャット(8月のモバイルメモ、あくまで体感)。** Loci AIによれば、モデルをダウンロードした後は、インターネット接続なしでデバイス上でチャットが動作します。テスターは機内モードでチャットを使い、応答性は保たれていると感じました。端末、OSバージョン、アプリのバージョン、応答時間は記録しておらず、11月11日のテストではオフライン利用を確認していません。',
+          '**モデルの品質は、パラメータ数とアプリ側のチューニングの両方に左右されます。** 8月のテストでは、3B〜4Bのベースモデルは下書き、ブレインストーミング、要約には優れていましたが、微妙なテーマや複数段階の推論は苦手でした。これはパラメータ数に由来する上限で、どのアプリも変えられません。アプリが変えられるのは、メモリ管理、コンテキストウィンドウの扱い、ハルシネーションの低減、OSレベルの安定性など、モデルを取り巻くすべてです。Lociはコンテキスト管理(自動圧縮と、実効コンテキストを広げる手法)を実装しており、テスターの体感では、同じモデルを動かす他のアプリよりハルシネーションとクラッシュが少ない結果でした。PromptQuorumはこのテストで端末のモデル、OSバージョン、アプリのバージョンを記録していないため、この比較は測定ではなく体感として扱ってください。テスターの体感では、Gemma 4 E2BとE4Bは、2025年世代の3B〜4Bモデルより一段上でした。複雑な分析、ライブWebクエリ、重大な判断には、より大きなモデル(クラウド、またはLoci AIによればデスクトップ)のほうが適しています。',
           '**オプション機能は接続が必要です。** DuckDuckGo経由のウェブ検索、モデルダウンロード、アプリ更新はすべてドキュメント記載通りインターネットアクセスが必要。',
           '**未テスト。** Windows版、iPhone・iPadアプリ、Loci Inference Engine、エージェントハーネスとエージェントインターフェース、メッセージング連携、自動モデル選択、現在のモデルラインアップは、8月のノートの後に導入または説明されたもので、PromptQuorumはテストしていません。11月11日の実機テストがカバーしたのはMacアプリとAndroidスマートフォン連携の一部のみで、テストしていない項目は同ページに記載しています。',
         ],
@@ -2230,7 +2230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'メリット': 'セットアップ後オフライン対応',
-            '実使用での意味': 'アプリとモデルがインストールされたら、チャットは飛行機モードでインターネットなしで動作。',
+            '実使用での意味': 'Loci AIによれば、アプリとモデルがインストールされた後は、チャットにインターネット接続は不要です。',
             'デメリット/注意事項': '初期モデルダウンロードにはインターネットが必要。機能更新、モデルダウンロード、バックアップも接続が必要な場合があります。',
           },
           {
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci を WiFi なしで使用できますか?',
-            a: 'はい、チャットについて。アプリとモデルがインストールされたら、オンデバイス推論はインターネット接続なし（飛行機モードは大丈夫）で動作。ただし、ウェブ検索、Windows 音声入力、モデルダウンロード、アプリ更新、クラウド接続機能にはインターネットが必要。DuckDuckGo ウェブ検索を有効にして使用する場合、その機能は接続が必要。',
+            a: 'はい、チャットについては、Loci AIによれば、アプリとモデルがインストールされた後、オンデバイス推論にインターネット接続は不要です。PromptQuorumの8月のモバイルメモでは、機内モードでもチャットの応答性は保たれていました(体感であり、端末とバージョンは記録していません)。ただし、ウェブ検索、Windows 音声入力、モデルダウンロード、アプリ更新、クラウド接続機能にはインターネットが必要です。DuckDuckGo ウェブ検索を有効にして使用する場合、その機能は接続が必要です。',
           },
           {
             q: 'Loci は古いスマートフォンで動作しますか?',
@@ -2462,7 +2462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'Lociは、モデルを最大限に制御することよりも、手間の少ないオンデバイスAIを重視する方に最も向いています。際立つ機能は、ハードウェアに合わせた自動モデル選択、Loci Link(接続したMacやPC経由で強力なモデルをスマートフォンから実行するデスクトップとスマートフォンのリンク)、会話やモデルの切り替えをまたぐグローバルメモリ、長時間セッション向けの温度管理、そしてLoci AIがOSメモリ処理によるものとする安定性です。PromptQuorumの8月のモバイルテストでは、ダウンロードが確実に動作し、オフラインチャットが宣伝どおりに機能し、競合するローカルLLMアプリよりクラッシュが少ないことを(テスターの体感として)確認しました。Web RAGの実装も特徴的で、オンラインではライブの情報源に基づいて回答し、オフラインではローカルの知識に戻り、その動作は設定で制御できます。技術的なモデル管理の手間なしにプライベートなオフラインチャットを使いたい方には、Lociが最適です。高度なモデル制御や量子化の柔軟性を求める方には、Private LLM(Apple)とPocketPal AIのほうが奥深く、実験的なオンデバイスの選択肢を探すAndroidユーザーには、Google AI Edge Galleryがモデル探索の幅を広げます。8月以降の変更点(Loci AIによる):より大きなモデルが動く第一級のプラットフォームとしてのデスクトップ、Mac上のQwen3.8 27Bに関するベンチマーク結果、Loci Inference Engine(特定のモデルでllama.cppより最大7倍高速)、Webリサーチ、ツール呼び出し、画像・動画モデル、ブラウザ操作を備えたエージェントハーネス、そしてメッセージングアプリへの接続です。コーディングエージェントがLociのローカルモデルを使えるMac向けエージェントインターフェースも、Lociのウェブサイトに記載されています。率直な評価:Lociはモバイルでのシンプルさ、安定性、プラットフォーム間の一貫性に成功しています。デスクトップとエージェントの機能は、Loci AIの説明のとおりここに記載したもので、PromptQuorum自身のテストの対象はモバイルでした。',
+          'Lociは、モデルを最大限に制御することよりも、手間の少ないオンデバイスAIを重視する方に最も向いています。際立つ機能は、ハードウェアに合わせた自動モデル選択、Loci Link(接続したMacやPC経由で強力なモデルをスマートフォンから実行するデスクトップとスマートフォンのリンク)、会話やモデルの切り替えをまたぐグローバルメモリ、長時間セッション向けの温度管理、そしてLoci AIがOSメモリ処理によるものとする安定性です。PromptQuorumの8月のモバイルメモでは、テスターの体感として、コンパクトモデルのダウンロードは目立った問題なく完了し、オフラインチャットは機内モードでも応答性を保ち、競合するローカルLLMアプリよりクラッシュが少なかったとされています。端末とOS、アプリのバージョンは記録していないため、これは測定ではなく体感です。Web RAGの実装も特徴的で、オンラインではライブの情報源に基づいて回答し、オフラインではローカルの知識に戻り、その動作は設定で制御できます。技術的なモデル管理の手間なしにプライベートなオフラインチャットを使いたい方には、Lociが最適です。高度なモデル制御や量子化の柔軟性を求める方には、Private LLM(Apple)とPocketPal AIのほうが奥深く、実験的なオンデバイスの選択肢を探すAndroidユーザーには、Google AI Edge Galleryがモデル探索の幅を広げます。8月以降の変更点(Loci AIによる):より大きなモデルが動く第一級のプラットフォームとしてのデスクトップ、Mac上のQwen3.8 27Bに関するベンチマーク結果、Loci Inference Engine(特定のモデルでllama.cppより最大7倍高速)、Webリサーチ、ツール呼び出し、画像・動画モデル、ブラウザ操作を備えたエージェントハーネス、そしてメッセージングアプリへの接続です。コーディングエージェントがLociのローカルモデルを使えるMac向けエージェントインターフェースも、Lociのウェブサイトに記載されています。率直な評価:テスターはLociをモバイルでシンプルに使えると感じました。安定性とプラットフォーム間の一貫性は、測定ではなく、テスターの体感とLoci AIの説明に基づいています。デスクトップとエージェントの機能は、Loci AIの説明のとおりここに記載したもので、PromptQuorum自身のテストの対象はモバイルでした。',
       },
       sources: {
         id: 'sources',
@@ -2503,7 +2503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-ko.webp',
@@ -2622,9 +2622,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorum이 날짜를 명시해 직접 확인한 Loci 기록은 [2026년 11월 11일 실사용 테스트](/ko/power-local-llm/loci-ai-hands-on-test)이며, M4 Pro Mac과 Android 휴대폰에서 진행했습니다. 아래 모바일 노트는 2026년 8월 리뷰에서 가져온 것으로, 해당 날짜 기록에는 포함되지 않습니다:',
         ],
         items: [
-          '**모델 다운로드가 안정적으로 작동합니다.** 컴팩트 모델(예: Gemma 4 E4B, ~4 GB)의 다운로드는 손상이나 자르기 없이 홈 WiFi에서 성공적으로 완료되었습니다.',
-          '**오프라인 채팅이 광고대로 작동합니다.** 모델이 다운로드되면 인터넷 연결 없이도 추론이 실행되며, 비행기 모드를 포함합니다. 채팅은 반응성을 유지합니다.',
-          '**모델 품질은 파라미터 수와 앱 수준의 튜닝에 모두 좌우됩니다.** 8월 테스트에서 3B~4B 기본 모델은 초안 작성, 브레인스토밍, 요약에는 뛰어났지만 미묘한 주제와 다단계 추론에는 어려움을 보였습니다. 이는 파라미터 수에서 오는 한계로, 어떤 앱도 바꿀 수 없습니다. 앱이 바꿀 수 있는 것은 메모리 관리, 컨텍스트 창 처리, 환각 감소, OS 수준의 안정성 등 모델을 둘러싼 모든 것입니다. Loci는 컨텍스트 관리(자동 압축과 사용 가능한 컨텍스트를 늘리는 기법)를 구현했으며, 테스터의 인상으로는 동일한 모델을 실행하는 다른 앱보다 환각과 비정상 종료가 적었습니다. PromptQuorum은 이 테스트에서 기기 모델, OS 버전, 앱 버전을 기록하지 않았으므로 이 비교는 측정값이 아니라 인상으로 받아들여 주십시오. Gemma 4 E2B와 E4B는 2025년 세대의 3B~4B 모델보다 확실히 한 단계 위였습니다. 복잡한 분석, 실시간 웹 질의, 중대한 결정에는 더 큰 모델(클라우드 또는 Loci AI에 따르면 데스크톱)이 더 적합합니다.',
+          '**모델 다운로드(8월 모바일 메모, 인상에 불과함).** 테스터는 컴팩트 모델(Gemma 4 E4B, ~4 GB)을 홈 WiFi에서 다운로드했으며 잘림이나 손상을 알아차리지 못했습니다. 기기, OS 버전, 앱 버전, 날짜, 다운로드 시간은 기록하지 않았으므로 이는 측정값이 아니라 인상입니다.',
+          '**오프라인 채팅(8월 모바일 메모, 인상에 불과함).** Loci AI에 따르면 모델을 다운로드한 뒤에는 인터넷 연결 없이 기기에서 채팅이 실행됩니다. 테스터는 비행기 모드에서 채팅을 사용했고 반응이 빠르다고 느꼈습니다. 기기, OS 버전, 앱 버전, 응답 시간은 기록하지 않았으며 11월 11일 테스트에서는 오프라인 사용을 확인하지 않았습니다.',
+          '**모델 품질은 파라미터 수와 앱 수준의 튜닝에 모두 좌우됩니다.** 8월 테스트에서 3B~4B 기본 모델은 초안 작성, 브레인스토밍, 요약에는 뛰어났지만 미묘한 주제와 다단계 추론에는 어려움을 보였습니다. 이는 파라미터 수에서 오는 한계로, 어떤 앱도 바꿀 수 없습니다. 앱이 바꿀 수 있는 것은 메모리 관리, 컨텍스트 창 처리, 환각 감소, OS 수준의 안정성 등 모델을 둘러싼 모든 것입니다. Loci는 컨텍스트 관리(자동 압축과 사용 가능한 컨텍스트를 늘리는 기법)를 구현했으며, 테스터의 인상으로는 동일한 모델을 실행하는 다른 앱보다 환각과 비정상 종료가 적었습니다. PromptQuorum은 이 테스트에서 기기 모델, OS 버전, 앱 버전을 기록하지 않았으므로 이 비교는 측정값이 아니라 인상으로 받아들여 주십시오. 테스터의 인상으로는 Gemma 4 E2B와 E4B가 2025년 세대의 3B~4B 모델보다 한 단계 위였습니다. 복잡한 분석, 실시간 웹 질의, 중대한 결정에는 더 큰 모델(클라우드 또는 Loci AI에 따르면 데스크톱)이 더 적합합니다.',
           '**선택적 기능은 연결성이 필요합니다.** DuckDuckGo를 통한 웹 검색, 모델 다운로드, 앱 업데이트 모두 문서화된 대로 인터넷 접근이 필요합니다.',
           '**테스트하지 않음.** Windows 버전, iPhone 및 iPad 앱, Loci Inference Engine, 에이전트 하니스와 에이전트 인터페이스, 메시징 앱 연동, 자동 모델 선택, 현재 모델 라인업은 8월 노트 이후에 도입되었거나 설명된 것이며 PromptQuorum이 테스트하지 않았습니다. 11월 11일 실사용 테스트는 Mac 앱과 Android 휴대폰 연결을 일부만 다루었으며, 테스트하지 않은 항목은 해당 페이지에 나와 있습니다.',
         ],
@@ -2642,7 +2642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '장점': '설정 후 오프라인 가능',
-            '실제 사용에서의 의미': '앱과 모델이 설치되면 비행기 모드에서 인터넷 없이 채팅이 작동합니다.',
+            '실제 사용에서의 의미': 'Loci AI에 따르면 앱과 모델이 설치된 뒤에는 채팅에 인터넷 연결이 필요하지 않습니다.',
             '제한사항 / 주의사항': '초기 모델 다운로드에 인터넷이 필요합니다. 기능 업데이트, 모델 다운로드, 백업도 연결성이 필요할 수 있습니다.',
           },
           {
@@ -2819,7 +2819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wi-Fi 없이 Loci를 사용할 수 있나요?',
-            a: '네, 채팅의 경우. 앱과 모델이 설치되면 온디바이스 추론은 인터넷 연결 없이 작동합니다(비행기 모드도 괜찮습니다). 그러나 웹 검색, Windows 음성 입력, 모델 다운로드, 앱 업데이트, 클라우드 연결 기능은 인터넷이 필요합니다. DuckDuckGo 웹 검색을 활성화하고 사용하는 경우 해당 기능에 연결성이 필요합니다.',
+            a: '네, 채팅의 경우 Loci AI에 따르면 앱과 모델이 설치된 뒤에는 온디바이스 추론에 인터넷 연결이 필요하지 않습니다. PromptQuorum의 8월 모바일 메모에서는 비행기 모드에서도 채팅 반응이 유지되었습니다(인상이며 기기와 버전은 기록하지 않았습니다). 그러나 웹 검색, Windows 음성 입력, 모델 다운로드, 앱 업데이트, 클라우드 연결 기능은 인터넷이 필요합니다. DuckDuckGo 웹 검색을 활성화하고 사용하는 경우 해당 기능에 연결성이 필요합니다.',
           },
           {
             q: 'Loci는 구형 전화에서 작동하나요?',
@@ -2874,7 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '평가',
         content:
-          'Loci는 모델을 최대한 제어하기보다 번거로움 없는 온디바이스 AI를 우선하는 분께 가장 잘 맞습니다. 하드웨어에 맞춘 자동 모델 선택, Loci Link(연결된 Mac이나 PC를 통해 휴대폰에서 강력한 모델을 실행하는 데스크톱/휴대폰 연결), 대화와 모델 전환을 가로지르는 글로벌 메모리, 긴 세션을 위한 발열 관리, 그리고 Loci AI가 OS 메모리 처리 덕분이라고 설명하는 앱 안정성이 눈에 띕니다. PromptQuorum의 8월 모바일 테스트에서는 다운로드가 안정적으로 작동하고, 오프라인 채팅이 광고대로 동작하며, 테스터의 경험상 경쟁 로컬 LLM 앱보다 비정상 종료가 적다는 점을 확인했습니다. 웹 RAG 구현도 독특합니다. 온라인일 때는 실시간 출처를 근거로 답하고, 오프라인일 때는 온디바이스 지식으로 돌아가며, 그 동작은 설정에서 제어할 수 있습니다. 기술적인 모델 관리 없이 비공개 오프라인 채팅을 원하는 분께 Loci는 훌륭합니다. 고급 모델 제어와 양자화 유연성을 원한다면 Private LLM(Apple)과 PocketPal AI가 더 깊이가 있고, 실험적인 온디바이스 옵션을 탐색하는 Android 사용자에게는 Google AI Edge Gallery가 더 많은 모델 탐색을 제공합니다. Loci AI에 따른 8월 이후의 변경 사항은 다음과 같습니다. 더 큰 모델을 실행하는 일급 플랫폼으로서의 데스크톱, Mac에서의 Qwen3.8 27B 벤치마크 결과, Loci Inference Engine(일부 모델에서 llama.cpp보다 최대 7배 빠름), 웹 리서치, 도구 호출, 이미지 및 비디오 모델, 브라우저 제어를 갖춘 에이전트 하니스, 그리고 메시징 앱 연동입니다. 코딩 에이전트가 Loci의 로컬 모델을 사용할 수 있게 하는 Mac 에이전트 인터페이스도 Loci 웹사이트에 문서화되어 있습니다. 솔직한 평가: Loci는 모바일에서의 단순함, 안정성, 플랫폼 간 일관성에서 성공합니다. 데스크톱과 에이전트 기능은 Loci AI가 소개하는 대로 여기에 설명했으며, PromptQuorum의 자체 테스트는 모바일을 대상으로 했습니다.',
+          'Loci는 모델을 최대한 제어하기보다 번거로움 없는 온디바이스 AI를 우선하는 분께 가장 잘 맞습니다. 하드웨어에 맞춘 자동 모델 선택, Loci Link(연결된 Mac이나 PC를 통해 휴대폰에서 강력한 모델을 실행하는 데스크톱/휴대폰 연결), 대화와 모델 전환을 가로지르는 글로벌 메모리, 긴 세션을 위한 발열 관리, 그리고 Loci AI가 OS 메모리 처리 덕분이라고 설명하는 앱 안정성이 눈에 띕니다. PromptQuorum의 8월 모바일 메모에서 테스터는 인상으로, 컴팩트 모델 다운로드가 눈에 띄는 문제 없이 끝났고, 오프라인 채팅이 비행기 모드에서도 반응을 유지했으며, 자신의 경험상 경쟁 로컬 LLM 앱보다 비정상 종료가 적었다고 전했습니다. 기기와 OS·앱 버전은 기록하지 않았으므로 이는 측정값이 아니라 인상입니다. 웹 RAG 구현도 독특합니다. 온라인일 때는 실시간 출처를 근거로 답하고, 오프라인일 때는 온디바이스 지식으로 돌아가며, 그 동작은 설정에서 제어할 수 있습니다. 기술적인 모델 관리 없이 비공개 오프라인 채팅을 원하는 분께 Loci는 훌륭합니다. 고급 모델 제어와 양자화 유연성을 원한다면 Private LLM(Apple)과 PocketPal AI가 더 깊이가 있고, 실험적인 온디바이스 옵션을 탐색하는 Android 사용자에게는 Google AI Edge Gallery가 더 많은 모델 탐색을 제공합니다. Loci AI에 따른 8월 이후의 변경 사항은 다음과 같습니다. 더 큰 모델을 실행하는 일급 플랫폼으로서의 데스크톱, Mac에서의 Qwen3.8 27B 벤치마크 결과, Loci Inference Engine(일부 모델에서 llama.cpp보다 최대 7배 빠름), 웹 리서치, 도구 호출, 이미지 및 비디오 모델, 브라우저 제어를 갖춘 에이전트 하니스, 그리고 메시징 앱 연동입니다. 코딩 에이전트가 Loci의 로컬 모델을 사용할 수 있게 하는 Mac 에이전트 인터페이스도 Loci 웹사이트에 문서화되어 있습니다. 솔직한 평가: 테스터는 Loci가 모바일에서 사용하기 간단하다고 느꼈습니다. 안정성과 플랫폼 간 일관성은 측정값이 아니라 테스터의 인상과 Loci AI의 설명에 근거합니다. 데스크톱과 에이전트 기능은 Loci AI가 소개하는 대로 여기에 설명했으며, PromptQuorum의 자체 테스트는 모바일을 대상으로 했습니다.',
       },
       sources: {
         id: 'sources',
@@ -2915,7 +2915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
   freshness_tier: 'semi_annual',
   publishDate: '2026-08-22',
-  dateModified: '2026-11-13',
+  dateModified: '2026-11-18',
   next_refresh_due: '2027-05-08',
   theme: 'Mobile & Edge LLMs',
   heroImage: '/images/loci-ai-review-hero-pt.webp',
@@ -3034,9 +3034,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'O registro datado de primeira mão da PromptQuorum sobre o Loci é o [teste prático de 11 de novembro de 2026](/pt/power-local-llm/loci-ai-hands-on-test), feito em um Mac com M4 Pro e um celular Android. As notas sobre celular abaixo vêm da análise de agosto de 2026 e não fazem parte desse registro datado:',
       ],
       items: [
-        '**Downloads de modelo funcionam de forma confiável.** Downloads de modelos compactos (por exemplo, Gemma 4 E4B, ~4 GB) foram concluídos com sucesso em WiFi doméstico sem truncamento ou corrupção observados.',
-        '**Chat offline funciona conforme anunciado.** Uma vez que um modelo é baixado, a inferência funciona sem qualquer conexão com a internet, incluindo em modo avião. O chat permanece responsivo.',
-        '**A qualidade do modelo depende tanto do número de parâmetros quanto do ajuste do app.** No teste de agosto, os modelos básicos de 3B–4B foram bem em rascunhos, brainstorming e resumos, mas tiveram dificuldade com temas sutis e raciocínio em várias etapas — um teto ligado ao número de parâmetros que nenhum app pode mudar. O que o app pode mudar é tudo ao redor do modelo: gerenciamento de memória, janela de contexto, redução de alucinações e estabilidade no nível do sistema. O Loci implementa gerenciamento de contexto (compactação automática mais técnicas para ampliar o contexto útil), que, na impressão do testador, gerou menos alucinações e travamentos do que outros apps com o mesmo modelo. A PromptQuorum não registrou o modelo do dispositivo, a versão do SO nem a versão do app neste teste; portanto, trate essa comparação como uma impressão, não como uma medição. O Gemma 4 E2B e o E4B foram um avanço real em relação à geração de 2025 de modelos de 3B–4B. Para análises complexas, consultas web em tempo real ou decisões de alto risco, modelos maiores — na nuvem ou, segundo a Loci AI, em um desktop — são mais adequados.',
+        '**Download de modelo (notas móveis de agosto, apenas impressão).** O testador baixou um modelo compacto (Gemma 4 E4B, ~4 GB) em WiFi doméstico e não notou truncamento nem corrupção. Dispositivo, versão do SO, versão do app, data e duração do download não foram registrados; portanto, é uma impressão, não uma medição.',
+        '**Chat offline (notas móveis de agosto, apenas impressão).** Segundo a Loci AI, depois que um modelo é baixado, o chat roda no dispositivo sem conexão com a internet. O testador usou o chat em modo avião e o achou responsivo; dispositivo, versão do SO, versão do app e tempos de resposta não foram registrados, e o teste de 11 de novembro não verificou o uso offline.',
+        '**A qualidade do modelo depende tanto do número de parâmetros quanto do ajuste do app.** No teste de agosto, os modelos básicos de 3B–4B foram bem em rascunhos, brainstorming e resumos, mas tiveram dificuldade com temas sutis e raciocínio em várias etapas — um teto ligado ao número de parâmetros que nenhum app pode mudar. O que o app pode mudar é tudo ao redor do modelo: gerenciamento de memória, janela de contexto, redução de alucinações e estabilidade no nível do sistema. O Loci implementa gerenciamento de contexto (compactação automática mais técnicas para ampliar o contexto útil), que, na impressão do testador, gerou menos alucinações e travamentos do que outros apps com o mesmo modelo. A PromptQuorum não registrou o modelo do dispositivo, a versão do SO nem a versão do app neste teste; portanto, trate essa comparação como uma impressão, não como uma medição. Na impressão do testador, o Gemma 4 E2B e o E4B foram um avanço em relação à geração de 2025 de modelos de 3B–4B. Para análises complexas, consultas web em tempo real ou decisões de alto risco, modelos maiores — na nuvem ou, segundo a Loci AI, em um desktop — são mais adequados.',
         '**Recursos opcionais requerem conectividade.** Pesquisa web via DuckDuckGo, downloads de modelo e atualizações de app todas requerem acesso com a internet conforme documentado.',
         '**Não testado.** A versão para Windows, os apps para iPhone e iPad, o Loci Inference Engine, o arcabouço de agentes e a interface de agentes, as integrações de mensagens, a seleção automática de modelos e a linha de modelos atual foram introduzidas ou descritas depois das notas de agosto e não foram testadas pela PromptQuorum. O teste prático de 11 de novembro cobriu o app para Mac e o link com um celular Android apenas em parte; a página dele lista o que não foi testado.',
       ],
@@ -3054,7 +3054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           'Benefício': 'Compatível com offline após configuração',
-          'O que significa no uso real': 'Uma vez que o app e modelo estão instalados, o chat funciona em modo avião sem internet.',
+          'O que significa no uso real': 'Segundo a Loci AI, depois que o app e um modelo estão instalados, o chat não precisa de conexão com a internet.',
           'Limitação / ressalva': 'Download inicial de modelo requer internet. Atualizações de recurso, downloads de modelo e backups também podem precisar de conectividade.',
         },
         {
@@ -3231,7 +3231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Posso usar Loci sem WiFi?',
-          a: 'Sim, para conversar. Uma vez que o app e modelo estão instalados, a inferência no dispositivo funciona sem qualquer conexão com a internet (modo avião é bom). No entanto, pesquisa web, entrada de voz do Windows, downloads de modelo, atualizações de app e qualquer recurso conectado à nuvem requerem internet. Se você habilitar pesquisa web DuckDuckGo e usá-la, esse recurso precisará de conectividade.',
+          a: 'Sim, para conversar, segundo a Loci AI: depois que o app e um modelo estão instalados, a inferência no dispositivo não precisa de conexão com a internet. Nas notas móveis de agosto da PromptQuorum, o chat permaneceu responsivo em modo avião (uma impressão; dispositivo e versões não foram registrados). No entanto, pesquisa web, entrada de voz do Windows, downloads de modelo, atualizações de app e qualquer recurso conectado à nuvem requerem internet. Se você habilitar pesquisa web DuckDuckGo e usá-la, esse recurso precisará de conectividade.',
         },
         {
           q: 'Loci funciona em telefones antigos?',
@@ -3285,7 +3285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'verdict',
       title: 'Veredicto',
       content:
-        'O Loci é mais atraente se a sua prioridade é uma IA no dispositivo com pouca fricção, em vez de controle máximo sobre os modelos. Vários recursos se destacam: a seleção automática de modelo para o seu hardware; o Loci Link (pareamento desktop/celular para executar modelos potentes a partir do celular por meio de um Mac ou PC conectado); a memória global entre conversas e trocas de modelo; o gerenciamento térmico para sessões longas; e uma estabilidade que a Loci AI atribui ao seu tratamento de memória do SO. O teste móvel de agosto da PromptQuorum confirmou que os downloads funcionam de forma confiável, o chat offline funciona como anunciado e, na experiência do testador, o app travou menos do que os apps de IA local concorrentes. A implementação do RAG web também é diferenciada: online, as respostas se apoiam em fontes ao vivo; offline, volta ao conhecimento local — e você controla esse comportamento nas configurações. Para quem quer chat privado offline sem a fricção técnica de gerenciar modelos, o Loci se destaca. Para quem quer controle avançado de modelos e flexibilidade de quantização, Private LLM (Apple) e PocketPal AI oferecem mais profundidade; para usuários de Android que exploram opções experimentais no dispositivo, o Google AI Edge Gallery oferece mais descoberta de modelos. O que mudou desde agosto, segundo a Loci AI: o desktop como plataforma de primeira classe com modelos maiores, um resultado de benchmark para o Qwen3.8 27B em um Mac, o Loci Inference Engine (até 7× mais rápido que o llama.cpp em certos modelos), um arcabouço de agentes com pesquisa na web, chamada de ferramentas, modelos de imagem e vídeo e controle de navegador, e conexões com apps de mensagens. Uma interface de agentes para Mac que permite que agentes de programação usem os modelos locais do Loci também está documentada no site do Loci. A avaliação honesta: o Loci acerta em simplicidade, estabilidade e consistência entre plataformas no celular; os recursos de desktop e de agentes são descritos aqui como a Loci AI os apresenta, e os testes próprios da PromptQuorum cobriram o celular.',
+        'O Loci é mais atraente se a sua prioridade é uma IA no dispositivo com pouca fricção, em vez de controle máximo sobre os modelos. Vários recursos se destacam: a seleção automática de modelo para o seu hardware; o Loci Link (pareamento desktop/celular para executar modelos potentes a partir do celular por meio de um Mac ou PC conectado); a memória global entre conversas e trocas de modelo; o gerenciamento térmico para sessões longas; e uma estabilidade que a Loci AI atribui ao seu tratamento de memória do SO. Nas notas móveis de agosto da PromptQuorum, o testador descreve como impressões que o download de um modelo compacto foi concluído sem problemas visíveis, que o chat offline permaneceu responsivo em modo avião e que, na experiência dele, o app travou menos do que os apps de IA local concorrentes; dispositivo e versões do SO e do app não foram registrados, então são impressões, não medições. A implementação do RAG web também é diferenciada: online, as respostas se apoiam em fontes ao vivo; offline, volta ao conhecimento local — e você controla esse comportamento nas configurações. Para quem quer chat privado offline sem a fricção técnica de gerenciar modelos, o Loci se destaca. Para quem quer controle avançado de modelos e flexibilidade de quantização, Private LLM (Apple) e PocketPal AI oferecem mais profundidade; para usuários de Android que exploram opções experimentais no dispositivo, o Google AI Edge Gallery oferece mais descoberta de modelos. O que mudou desde agosto, segundo a Loci AI: o desktop como plataforma de primeira classe com modelos maiores, um resultado de benchmark para o Qwen3.8 27B em um Mac, o Loci Inference Engine (até 7× mais rápido que o llama.cpp em certos modelos), um arcabouço de agentes com pesquisa na web, chamada de ferramentas, modelos de imagem e vídeo e controle de navegador, e conexões com apps de mensagens. Uma interface de agentes para Mac que permite que agentes de programação usem os modelos locais do Loci também está documentada no site do Loci. A avaliação honesta: o testador achou o Loci simples de usar no celular; a estabilidade e a consistência entre plataformas se baseiam nas impressões dele e em afirmações da Loci AI, não em medições; os recursos de desktop e de agentes são descritos aqui como a Loci AI os apresenta, e os testes próprios da PromptQuorum cobriram o celular.',
     },
     sources: {
       id: 'sources',
@@ -3326,7 +3326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-18',
     next_refresh_due: '2027-05-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-zh.webp',
@@ -3445,9 +3445,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorum 对 Loci 有日期的第一手记录是[2026 年 11 月 11 日的实测](/zh/power-local-llm/loci-ai-hands-on-test),在 M4 Pro Mac 和一部 Android 手机上进行。下面的移动端笔记来自 2026 年 8 月的评测,不属于那份有日期的记录:',
         ],
         items: [
-          '**模型下载工作可靠。** 紧凑模型（例如 Gemma 4 E4B，~4 GB）的下载在家庭 WiFi 上成功完成，没有观察到截断或损坏。',
-          '**离线聊天按宣传工作。** 一旦模型被下载，推理无需任何互联网连接即可运行，包括在飞行模式中。聊天保持响应。',
-          '**模型质量同时取决于参数量和应用层调优。** 在 8 月的测试中,基础的 3B–4B 模型擅长起草、头脑风暴和摘要,但在细致话题和多步推理上表现吃力——这是参数量决定的上限,任何应用都无法改变。应用能改变的是模型周围的一切:内存管理、上下文窗口处理、减少幻觉以及系统级稳定性。Loci 实现了上下文管理(自动压缩加上扩展可用上下文的技术),在运行相同模型时,据测试者的印象,其幻觉和崩溃比其他应用更少。PromptQuorum 未记录此次测试所用的设备型号、操作系统版本和应用版本,因此请将这一比较视为印象,而非测量结果。Gemma 4 E2B 和 E4B 比 2025 年一代的 3B–4B 模型确实更进一步。对于复杂分析、实时网络查询或高风险决策,更大的模型——云端模型,或按 Loci AI 所说的桌面端模型——更合适。',
+          '**模型下载（8 月移动端笔记，仅为印象）。** 测试者在家庭 WiFi 上下载了一个紧凑模型（Gemma 4 E4B，~4 GB），未发现截断或损坏。设备、操作系统版本、应用版本、日期和下载时长均未记录，因此这是印象，而非测量结果。',
+          '**离线聊天（8 月移动端笔记，仅为印象）。** 据 Loci AI 称，模型下载后，聊天无需互联网连接即可在设备上运行。测试者在飞行模式下使用了聊天，感觉响应正常；设备、操作系统版本、应用版本和响应时间均未记录，11 月 11 日的测试也未检查离线使用。',
+          '**模型质量同时取决于参数量和应用层调优。** 在 8 月的测试中,基础的 3B–4B 模型擅长起草、头脑风暴和摘要,但在细致话题和多步推理上表现吃力——这是参数量决定的上限,任何应用都无法改变。应用能改变的是模型周围的一切:内存管理、上下文窗口处理、减少幻觉以及系统级稳定性。Loci 实现了上下文管理(自动压缩加上扩展可用上下文的技术),在运行相同模型时,据测试者的印象,其幻觉和崩溃比其他应用更少。PromptQuorum 未记录此次测试所用的设备型号、操作系统版本和应用版本,因此请将这一比较视为印象,而非测量结果。据测试者的印象，Gemma 4 E2B 和 E4B 比 2025 年一代的 3B–4B 模型更进一步。对于复杂分析、实时网络查询或高风险决策,更大的模型——云端模型,或按 Loci AI 所说的桌面端模型——更合适。',
           '**可选功能需要连接。** DuckDuckGo 网络搜索、模型下载和应用更新都需要互联网访问，如文档所述。',
           '**未测试。** Windows 版、iPhone 和 iPad 应用、Loci Inference Engine、智能体框架和智能体接口、消息应用集成、自动模型选择以及当前的模型阵容,均在 8 月笔记之后推出或说明,PromptQuorum 未对其进行测试。11 月 11 日的实测仅部分覆盖了 Mac 应用和 Android 手机连接;其页面列出了未测试的内容。',
         ],
@@ -3465,7 +3465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '优点': '设置后离线可行',
-            '在实际使用中的含义': '一旦应用和模型安装，聊天在飞行模式中无互联网工作。',
+            '在实际使用中的含义': '据 Loci AI 称，应用和模型安装后，聊天无需互联网连接。',
             '局限 / 注意': '初始模型下载需要互联网。功能更新、模型下载和备份也可能需要连接。',
           },
           {
@@ -3642,7 +3642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以在没有 Wi-Fi 的情况下使用 Loci 吗？',
-            a: '是的，聊天可以。一旦应用和模型安装，设备推理无需任何互联网连接即可工作（飞行模式可以）。然而，网络搜索、Windows 语音输入、模型下载、应用更新和任何云连接功能需要互联网。如果你启用 DuckDuckGo 网络搜索并使用它，该功能将需要连接。',
+            a: '是的，聊天可以。据 Loci AI 称，应用和模型安装后，设备上的推理无需互联网连接。在 PromptQuorum 的 8 月移动端笔记中，聊天在飞行模式下保持响应（仅为印象，未记录设备和版本）。然而，网络搜索、Windows 语音输入、模型下载、应用更新和任何云连接功能需要互联网。如果你启用 DuckDuckGo 网络搜索并使用它，该功能将需要连接。',
           },
           {
             q: 'Loci 在旧手机上工作吗？',
@@ -3697,7 +3697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '如果您更看重省心的设备端 AI,而不是对模型的最大控制,Loci 最值得考虑。几项功能尤为突出:针对您硬件的自动模型选择;Loci Link(桌面与手机联动,通过相连的 Mac 或 PC 在手机上运行强大模型);跨对话和模型切换的全局记忆;适合长时间会话的温控管理;以及 Loci AI 归功于其操作系统内存处理的应用稳定性。PromptQuorum 8 月的移动端测试确认下载可靠、离线聊天如宣传所述,且据测试者的体验,应用崩溃次数少于竞争的本地 LLM 应用。其网络 RAG 实现也很有特色:联网时回答以实时来源为依据,离线时回退到本地知识,并且您可在设置中控制该行为。对于想要私密离线聊天、又不想承担技术性模型管理的用户,Loci 表现出色。对于想要高级模型控制和量化灵活性的用户,Private LLM(Apple)和 PocketPal AI 更深入;对于探索实验性设备端选项的 Android 用户,Google AI Edge Gallery 提供更多模型探索。据 Loci AI 称,自 8 月以来的变化包括:桌面端成为运行更大模型的一等平台、Qwen3.8 27B 在 Mac 上的基准测试结果、Loci Inference Engine(在某些模型上比 llama.cpp 快最高 7×)、带有网络研究、工具调用、图像和视频模型以及浏览器控制的智能体框架,以及与消息应用的连接。让编码智能体使用 Loci 本地模型的 Mac 智能体接口,Loci 网站上也有记录。坦率的评价:Loci 在移动端的简洁性、稳定性和跨平台一致性上做得很好;桌面端和智能体功能在此按 Loci AI 的介绍呈现,PromptQuorum 自己的测试覆盖的是移动端。',
+          '如果您更看重省心的设备端 AI,而不是对模型的最大控制,Loci 最值得考虑。几项功能尤为突出:针对您硬件的自动模型选择;Loci Link(桌面与手机联动,通过相连的 Mac 或 PC 在手机上运行强大模型);跨对话和模型切换的全局记忆;适合长时间会话的温控管理;以及 Loci AI 归功于其操作系统内存处理的应用稳定性。PromptQuorum 8 月的移动端笔记中，测试者的印象是：紧凑模型的下载顺利完成，离线聊天在飞行模式下保持响应，且据其体验，应用崩溃次数少于竞争的本地 LLM 应用；设备、操作系统版本和应用版本均未记录，因此这些是印象，而非测量结果。其网络 RAG 实现也很有特色:联网时回答以实时来源为依据,离线时回退到本地知识,并且您可在设置中控制该行为。对于想要私密离线聊天、又不想承担技术性模型管理的用户,Loci 表现出色。对于想要高级模型控制和量化灵活性的用户,Private LLM(Apple)和 PocketPal AI 更深入;对于探索实验性设备端选项的 Android 用户,Google AI Edge Gallery 提供更多模型探索。据 Loci AI 称,自 8 月以来的变化包括:桌面端成为运行更大模型的一等平台、Qwen3.8 27B 在 Mac 上的基准测试结果、Loci Inference Engine(在某些模型上比 llama.cpp 快最高 7×)、带有网络研究、工具调用、图像和视频模型以及浏览器控制的智能体框架,以及与消息应用的连接。让编码智能体使用 Loci 本地模型的 Mac 智能体接口,Loci 网站上也有记录。坦率的评价：测试者觉得 Loci 在移动端使用简单；其稳定性和跨平台一致性来自测试者的印象和 Loci AI 的说明，而非测量结果；桌面端和智能体功能在此按 Loci AI 的介绍呈现,PromptQuorum 自己的测试覆盖的是移动端。',
       },
       sources: {
         id: 'sources',
