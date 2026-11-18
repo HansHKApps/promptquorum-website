@@ -165,7 +165,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** last upstream update ${formatDisplayDate('2026-11-15', 'en')}.`,
           `**Unstructured:** last upstream update ${formatDisplayDate('2026-11-17', 'en')}.`,
           `**Xberg:** last upstream update ${formatDisplayDate('2026-10-30', 'en')}.`,
-          `None of the dates above is older than three months.`,
         ],
       },
       limitations: {
@@ -339,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       formatDifferences: {
         id: 'format-differences',
         title: `Formate: die Unterschiede`,
-        content: `Jede Zeile nennt die Tools, deren Dokumentation das Ein- oder Ausgabeformat angibt. Ein Tool, das in einer Zeile fehlt, kann es nicht zwingend nicht; siehe „Was dieser Vergleich nicht sagen kann“.`,
+        content: `Jede Zeile nennt die Tools, deren Dokumentation das Ein- oder Ausgabeformat angibt. Fehlt ein Tool in einer Zeile, heißt das nicht zwangsläufig, dass es die Funktion nicht beherrscht; siehe „Was dieser Vergleich nicht sagen kann“.`,
         items: [
           `**Liest nur PDF:** [OpenDataLoader PDF](/de/power-local-llm/opendataloader-pdf-review).`,
           `**Liest Office-Dateien (DOCX, PPTX oder XLSX):** [Docling](/de/power-local-llm/docling-review), [Marker](/de/power-local-llm/marker-review), [MinerU](/de/power-local-llm/mineru-review), [Nutrient](/de/power-local-llm/nutrient-review), [Unstructured](/de/power-local-llm/unstructured-review) und [Xberg](/de/power-local-llm/xberg-review).`,
@@ -390,7 +389,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** letztes Upstream-Update ${formatDisplayDate('2026-11-15', 'de')}.`,
           `**Unstructured:** letztes Upstream-Update ${formatDisplayDate('2026-11-17', 'de')}.`,
           `**Xberg:** letztes Upstream-Update ${formatDisplayDate('2026-10-30', 'de')}.`,
-          `Keines der obigen Daten liegt mehr als drei Monate zurück.`,
         ],
       },
       limitations: {
@@ -399,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `Er vergleicht dokumentierte Fähigkeiten, nicht Qualität. PromptQuorum hat Parsing-Genauigkeit, Geschwindigkeit, Layouttreue oder Ressourcenbedarf keines aufgeführten Tools gemessen; ein Haken in der Tabelle sagt also nichts darüber, wie gut die Funktion arbeitet.`,
           `Ein Strich ist eine Lücke in der geprüften Dokumentation, kein negativer Befund. Ein Tool kann eine Funktion unterstützen, die seine README oder Website nicht erwähnt.`,
-          `Optionale Modi verändern den Datenfluss. Mehrere Tools dokumentieren gehostete Dienste, Hybridmodi oder KI-Backends, die nach dem Einschalten Inhalte erhalten können; die Spalte „Läuft“ und jede Rezension nennen, was Ihren Rechner wann verlässt.`,
+          `Optionale Modi verändern den Datenfluss. Mehrere Tools dokumentieren gehostete Dienste, Hybridmodi oder KI-Backends, die nach dem Einschalten Inhalte erhalten können; die Spalte „Ausführung“ und jede Rezension nennen, was Ihren Rechner wann verlässt.`,
           `Tools ändern sich schnell. Jede Rezension nennt die geprüfte Version, und dieser Leitfaden wird aktualisiert, wenn eine Rezension aktualisiert wird.`,
         ],
       },
@@ -409,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: `Was ist der Unterschied zwischen PDF-Parser, PDF-Editor und PDF-SDK?`, a: `Ein Parser oder eine Extraktionsbibliothek liest Dokumente und liefert strukturierten Text, Markdown oder JSON für andere Software. Ein PDF-Editor wie Stirling PDF dient dem Ändern und Konvertieren von PDFs und bietet auch OCR. Ein SDK wie Nutrient ist ein kommerzielles Toolkit, das Entwickler in eigene Anwendungen einbauen. Sie erfüllen verschiedene Aufgaben, deshalb nennt der Leitfaden vor dem Vergleich die Art jedes Tools.` },
           { q: `Was bedeutet ein Strich in der Vergleichstabelle?`, a: `Er bedeutet, dass die Dokumentation des Projekts das Attribut nicht angibt. Er bedeutet nicht, dass die Funktion fehlt; prüfen Sie die Rezension des Tools oder sein Repository.` },
-          { q: `Heißt „lokal“ in der Tabelle, dass meine Dokumente meinen Rechner nie verlassen?`, a: `Nein. Die Spalte „Läuft“ gibt wieder, was die Dokumentation des jeweiligen Projekts sagt. Mehrere Tools dokumentieren außerdem optionale gehostete Dienste, KI-Backends oder LLM-Anbieter, die nach dem Einschalten Inhalte erhalten können, und bei manchen Tools ist der Datenfluss optionaler Funktionen nicht dokumentiert. Lesen Sie den Abschnitt zum Datenfluss jeder Rezension, bevor Sie vertrauliche Dokumente verarbeiten.` },
+          { q: `Heißt „lokal“ in der Tabelle, dass meine Dokumente meinen Rechner nie verlassen?`, a: `Nein. Die Spalte „Ausführung“ gibt wieder, was die Dokumentation des jeweiligen Projekts sagt. Mehrere Tools dokumentieren außerdem optionale gehostete Dienste, KI-Backends oder LLM-Anbieter, die nach dem Einschalten Inhalte erhalten können, und bei manchen Tools ist der Datenfluss optionaler Funktionen nicht dokumentiert. Lesen Sie den Abschnitt zum Datenfluss jeder Rezension, bevor Sie vertrauliche Dokumente verarbeiten.` },
           { q: `Welche dieser Tools dokumentieren MCP-Unterstützung?`, a: `Docling und Xberg dokumentieren MCP-Unterstützung. Für die übrigen Tools erfasst dieser Leitfaden keine MCP-Unterstützung: Entweder erwähnt die geprüfte Dokumentation sie nicht, oder die Angabe ist eingeschränkt, etwa ein gehosteter MCP-Server statt des Tools selbst. Prüfen Sie die jeweilige Rezension.` },
           { q: `Welche Tools dokumentieren OCR, Tabellenextraktion und Bounding Boxes?`, a: `OCR: Docling, Marker, MinerU, Nutrient, Stirling PDF, Unstructured und Xberg. Tabellenextraktion: Docling, Marker, MinerU, Nutrient, OpenDataLoader PDF, Unstructured und Xberg. Bounding Boxes: Docling, Marker, MinerU und OpenDataLoader PDF. Ein Strich in der Tabelle bedeutet, dass die Dokumentation die Angabe nicht enthält.` },
           { q: `Kann ich diese Tools kostenlos kommerziell nutzen?`, a: `Das hängt von der Lizenz und vom genutzten Teil ab. Manche Tools stehen unter MIT oder Apache-2.0, andere knüpfen Bedingungen daran, etwa Modellgewichte mit kommerziellen Einschränkungen, Nutzungs- oder Umsatzschwellen, eigene Lizenzen für einzelne Verzeichnisse oder kostenpflichtige Stufen. Lesen Sie vor kommerzieller Nutzung jede Lizenzdatei; dieser Leitfaden ist keine Rechtsberatung.` },
@@ -477,8 +475,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-pdf-parsers-compared-hero-fr.webp',
-    title: `Analyseurs PDF locaux comparés (2026) : Docling, Marker, MinerU, OpenDataLoader PDF et plus`,
-    seoTitle: `Analyseurs PDF locaux comparés 2026 : formats, OCR, licences`,
+    title: `Analyseurs PDF locaux comparés (2026) : Docling, Marker, MinerU, OpenDataLoader PDF et plus`,
+    seoTitle: `Analyseurs PDF locaux comparés 2026 : formats, OCR, licences`,
     intro: `Les outils qui transforment des PDF et des documents bureautiques en texte exploitable par un modèle de langage ne sont pas tous du même type : certains sont des bibliothèques d’analyse, d’autres des éditeurs PDF ou des SDK commerciaux. Ce guide compare ${PP_TOTAL} outils dans un seul tableau, généré à partir des mêmes données que l’avis PromptQuorum de chaque outil : formats d’entrée et de sortie, OCR, extraction de tableaux, boîtes englobantes, langages pris en charge et MCP, tels que chaque projet les documente. PromptQuorum n’a testé ni mesuré aucun d’entre eux.`,
     metaDescription: `${PP_TOTAL} analyseurs PDF locaux comparés : Docling, Marker, MinerU, OpenDataLoader PDF et plus. Formats, OCR, tableaux et licences d’après les docs officielles.`,
     twitterDescription: `Analyseurs PDF locaux comparés : formats d’entrée et de sortie, OCR, extraction de tableaux, boîtes englobantes, MCP et licences, d’après la documentation de chaque projet.`,
@@ -615,7 +613,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** dernière mise à jour en amont ${formatDisplayDate('2026-11-15', 'fr')}.`,
           `**Unstructured:** dernière mise à jour en amont ${formatDisplayDate('2026-11-17', 'fr')}.`,
           `**Xberg:** dernière mise à jour en amont ${formatDisplayDate('2026-10-30', 'fr')}.`,
-          `Aucune des dates ci-dessus n’a plus de trois mois.`,
         ],
       },
       limitations: {
@@ -664,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: `Analyseurs PDF locaux comparés (2026) : Docling, Marker, MinerU, OpenDataLoader PDF et plus`,
+      headline: `Analyseurs PDF locaux comparés (2026) : Docling, Marker, MinerU, OpenDataLoader PDF et plus`,
       description: `${PP_TOTAL} analyseurs PDF et outils documentaires locaux comparés : formats, OCR, tableaux, boîtes englobantes, MCP et licences, d’après la documentation officielle.`,
       url: 'https://www.promptquorum.com/fr/power-local-llm/local-pdf-parsers-compared',
       inLanguage: 'fr',
@@ -840,7 +837,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** 最終アップストリーム更新 ${formatDisplayDate('2026-11-15', 'ja')}.`,
           `**Unstructured:** 最終アップストリーム更新 ${formatDisplayDate('2026-11-17', 'ja')}.`,
           `**Xberg:** 最終アップストリーム更新 ${formatDisplayDate('2026-10-30', 'ja')}.`,
-          `上記の日付で3か月より古いものはありません。`,
         ],
       },
       limitations: {
@@ -849,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `比較するのは文書化された機能であり、品質ではありません。PromptQuorumはどのツールの解析精度・速度・レイアウトの再現性・リソース使用量も測定していないため、表で機能がある印はその機能の出来を示しません。`,
           `ダッシュは確認したドキュメントの空白であり、否定的な結果ではありません。READMEやサイトに記載がなくても、機能に対応している場合があります。`,
-          `任意のモードはデータの流れを変えます。複数のツールが、オンにするとコンテンツを受け取る可能性のあるホスト型サービス、ハイブリッドモード、AIバックエンドを文書化しています。「実行場所」列と各レビューが、何がいつ手元のマシンを離れるかを示します。`,
+          `任意のモードはデータの流れを変えます。複数のツールが、オンにするとコンテンツを受け取る可能性のあるホスト型サービス、ハイブリッドモード、AIバックエンドを文書化しています。「動作環境」列と各レビューが、何がいつ手元のマシンを離れるかを示します。`,
           `ツールは急速に変化します。各レビューには確認したバージョンを記載しており、このガイドはレビューの更新に合わせて更新します。`,
         ],
       },
@@ -859,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: `PDFパーサー、PDFエディター、PDF SDKの違いは何ですか？`, a: `パーサーや抽出ライブラリは、文書を読み取り、他のソフトウェアが使える構造化テキスト、Markdown、JSONを返します。Stirling PDFのようなPDFエディターは、PDFの編集と変換のためのツールで、OCRも備えています。NutrientのようなSDKは、開発者が自分のアプリに組み込む商用ツールキットです。役割が異なるため、このガイドでは比較の前に各ツールの種類を示しています。` },
           { q: `比較表のダッシュは何を意味しますか？`, a: `プロジェクト自身のドキュメントにその属性の記載がないという意味です。機能がないという意味ではありません。ツールのレビューやリポジトリを確認してください。` },
-          { q: `表の「ローカル」は、文書が手元のマシンから出ないという意味ですか？`, a: `いいえ。「実行場所」列は、各プロジェクトのドキュメントの内容を反映しています。複数のツールは、オンにするとコンテンツを受け取る可能性のあるホスト型サービス、AIバックエンド、LLMプロバイダーを任意機能として文書化しており、任意機能のデータの流れが文書化されていないツールもあります。機密文書を処理する前に、各レビューのデータの流れの項目をお読みください。` },
+          { q: `表の「ローカル」は、文書が手元のマシンから出ないという意味ですか？`, a: `いいえ。「動作環境」列は、各プロジェクトのドキュメントの内容を反映しています。複数のツールは、オンにするとコンテンツを受け取る可能性のあるホスト型サービス、AIバックエンド、LLMプロバイダーを任意機能として文書化しており、任意機能のデータの流れが文書化されていないツールもあります。機密文書を処理する前に、各レビューのデータの流れの項目をお読みください。` },
           { q: `MCP対応をドキュメントに記載しているツールはどれですか？`, a: `Docling、XbergがMCP対応を記載しています。それ以外のツールについては、このガイドはMCP対応を記録していません。確認したドキュメントに記載がないか、ホスト型MCPサーバーでありツール自体ではないなど条件付きの記載です。各レビューをご確認ください。` },
           { q: `OCR、表抽出、バウンディングボックスを記載しているツールはどれですか？`, a: `OCR：Docling、Marker、MinerU、Nutrient、Stirling PDF、Unstructured、Xberg。表抽出：Docling、Marker、MinerU、Nutrient、OpenDataLoader PDF、Unstructured、Xberg。バウンディングボックス：Docling、Marker、MinerU、OpenDataLoader PDF。表のダッシュは、ドキュメントに記載がないという意味です。` },
           { q: `これらのツールは商用でも無料で使えますか？`, a: `ライセンスと、使用する部分によります。MITやApache-2.0のツールもありますが、商用制限のあるモデルの重み、利用規模や売上のしきい値、一部ディレクトリの別ライセンス、有料プランなどの条件が付くものもあります。商用利用の前に各ライセンスファイルをお読みください。このガイドは法的助言ではありません。` },
@@ -1065,7 +1061,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** 最近一次上游更新 ${formatDisplayDate('2026-11-15', 'zh')}.`,
           `**Unstructured:** 最近一次上游更新 ${formatDisplayDate('2026-11-17', 'zh')}.`,
           `**Xberg:** 最近一次上游更新 ${formatDisplayDate('2026-10-30', 'zh')}.`,
-          `以上日期均未超过三个月。`,
         ],
       },
       limitations: {
@@ -1290,7 +1285,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** última actualización upstream ${formatDisplayDate('2026-11-15', 'es')}.`,
           `**Unstructured:** última actualización upstream ${formatDisplayDate('2026-11-17', 'es')}.`,
           `**Xberg:** última actualización upstream ${formatDisplayDate('2026-10-30', 'es')}.`,
-          `Ninguna de las fechas anteriores supera los tres meses.`,
         ],
       },
       limitations: {
@@ -1299,7 +1293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `Compara capacidades documentadas, no calidad. PromptQuorum no ha medido la precisión de análisis, la velocidad, la fidelidad de maquetación ni el consumo de recursos de ninguna herramienta, así que una función marcada en la tabla no dice nada sobre lo bien que funciona.`,
           `Un guion es un hueco en la documentación revisada, no un resultado negativo. Una herramienta puede admitir una función que su README o su sitio no mencionan.`,
-          `Los modos opcionales cambian el flujo de datos. Varias herramientas documentan servicios alojados, modos híbridos o motores de IA que pueden recibir contenido al activarse; la columna «Se ejecuta» y cada reseña indican qué sale de tu equipo y cuándo.`,
+          `Los modos opcionales cambian el flujo de datos. Varias herramientas documentan servicios alojados, modos híbridos o motores de IA que pueden recibir contenido al activarse; la columna «Ejecución» y cada reseña indican qué sale de tu equipo y cuándo.`,
           `Las herramientas cambian rápido. Cada reseña indica la versión revisada, y esta guía se actualiza cuando se actualiza una reseña.`,
         ],
       },
@@ -1309,7 +1303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: `¿Cuál es la diferencia entre un analizador de PDF, un editor de PDF y un SDK de PDF?`, a: `Un analizador o biblioteca de extracción lee documentos y devuelve texto estructurado, Markdown o JSON para que lo use otro software. Un editor de PDF como Stirling PDF sirve para modificar y convertir PDF y también ofrece OCR. Un SDK como Nutrient es un conjunto de herramientas comercial que los desarrolladores incorporan a sus propias aplicaciones. Hacen trabajos distintos, por eso la guía indica el tipo de cada herramienta antes de comparar.` },
           { q: `¿Qué significa un guion en la tabla comparativa?`, a: `Significa que la documentación del propio proyecto no indica ese atributo. No significa que la función falte; consulta la reseña de la herramienta o su repositorio.` },
-          { q: `¿«Local» en la tabla significa que mis documentos nunca salen de mi equipo?`, a: `No. La columna «Se ejecuta» refleja lo que dice la documentación de cada proyecto. Varias herramientas también documentan servicios alojados, motores de IA o proveedores de LLM opcionales que pueden recibir contenido cuando los activas, y en algunas herramientas el flujo de datos de las funciones opcionales no está documentado. Lee la sección de flujo de datos de cada reseña antes de procesar documentos confidenciales.` },
+          { q: `¿«Local» en la tabla significa que mis documentos nunca salen de mi equipo?`, a: `No. La columna «Ejecución» refleja lo que dice la documentación de cada proyecto. Varias herramientas también documentan servicios alojados, motores de IA o proveedores de LLM opcionales que pueden recibir contenido cuando los activas, y en algunas herramientas el flujo de datos de las funciones opcionales no está documentado. Lee la sección de flujo de datos de cada reseña antes de procesar documentos confidenciales.` },
           { q: `¿Cuáles de estas herramientas documentan compatibilidad con MCP?`, a: `Docling y Xberg documentan compatibilidad con MCP. Para las demás herramientas, esta guía no registra compatibilidad con MCP: o bien la documentación revisada no la menciona, o bien la mención tiene condiciones, por ejemplo un servidor MCP alojado en lugar de la herramienta en sí. Consulta cada reseña.` },
           { q: `¿Qué herramientas documentan OCR, extracción de tablas y cajas delimitadoras?`, a: `OCR: Docling, Marker, MinerU, Nutrient, Stirling PDF, Unstructured y Xberg. Extracción de tablas: Docling, Marker, MinerU, Nutrient, OpenDataLoader PDF, Unstructured y Xberg. Cajas delimitadoras: Docling, Marker, MinerU y OpenDataLoader PDF. Un guion en la tabla significa que la documentación no lo indica.` },
           { q: `¿Puedo usar estas herramientas comercialmente de forma gratuita?`, a: `Depende de la licencia y de la parte que uses. Algunas herramientas son MIT o Apache-2.0; otras añaden condiciones, como pesos de modelo con límites comerciales, umbrales de uso o ingresos, licencias distintas para algunos directorios o planes de pago. Lee cada archivo de licencia antes del uso comercial; esta guía no es asesoramiento legal.` },
@@ -1515,7 +1509,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** última atualização upstream ${formatDisplayDate('2026-11-15', 'pt')}.`,
           `**Unstructured:** última atualização upstream ${formatDisplayDate('2026-11-17', 'pt')}.`,
           `**Xberg:** última atualização upstream ${formatDisplayDate('2026-10-30', 'pt')}.`,
-          `Nenhuma das datas acima tem mais de três meses.`,
         ],
       },
       limitations: {
@@ -1524,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `Ela compara capacidades documentadas, não qualidade. O PromptQuorum não mediu a precisão de análise, a velocidade, a fidelidade de layout nem o uso de recursos de nenhuma ferramenta, então um recurso marcado na tabela não diz nada sobre o quão bem ele funciona.`,
           `Um traço é uma lacuna na documentação consultada, não um resultado negativo. Uma ferramenta pode oferecer um recurso que seu README ou site não menciona.`,
-          `Modos opcionais mudam o fluxo de dados. Várias ferramentas documentam serviços hospedados, modos híbridos ou back-ends de IA que podem receber conteúdo quando ativados; a coluna "Executa" e cada avaliação dizem o que sai da sua máquina e quando.`,
+          `Modos opcionais mudam o fluxo de dados. Várias ferramentas documentam serviços hospedados, modos híbridos ou back-ends de IA que podem receber conteúdo quando ativados; a coluna "Execução" e cada avaliação dizem o que sai da sua máquina e quando.`,
           `As ferramentas mudam rápido. Cada avaliação informa a versão conferida, e este guia é atualizado quando uma avaliação é atualizada.`,
         ],
       },
@@ -1534,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: `Qual é a diferença entre um analisador de PDF, um editor de PDF e um SDK de PDF?`, a: `Um analisador ou biblioteca de extração lê documentos e devolve texto estruturado, Markdown ou JSON para outro software usar. Um editor de PDF como o Stirling PDF serve para alterar e converter PDFs e também oferece OCR. Um SDK como o Nutrient é um conjunto de ferramentas comercial que desenvolvedores embutem em seus próprios aplicativos. Eles fazem trabalhos diferentes, por isso o guia indica o tipo de cada ferramenta antes de comparar.` },
           { q: `O que significa um traço na tabela comparativa?`, a: `Significa que a documentação do próprio projeto não informa esse atributo. Não significa que o recurso não exista; consulte a avaliação da ferramenta ou seu repositório.` },
-          { q: `"Local" na tabela significa que meus documentos nunca saem da minha máquina?`, a: `Não. A coluna "Executa" reflete o que a documentação de cada projeto diz. Várias ferramentas também documentam serviços hospedados, back-ends de IA ou provedores de LLM opcionais que podem receber conteúdo quando você os ativa, e em algumas ferramentas o fluxo de dados dos recursos opcionais não está documentado. Leia a seção de fluxo de dados de cada avaliação antes de processar documentos confidenciais.` },
+          { q: `"Local" na tabela significa que meus documentos nunca saem da minha máquina?`, a: `Não. A coluna "Execução" reflete o que a documentação de cada projeto diz. Várias ferramentas também documentam serviços hospedados, back-ends de IA ou provedores de LLM opcionais que podem receber conteúdo quando você os ativa, e em algumas ferramentas o fluxo de dados dos recursos opcionais não está documentado. Leia a seção de fluxo de dados de cada avaliação antes de processar documentos confidenciais.` },
           { q: `Quais dessas ferramentas documentam suporte a MCP?`, a: `Docling e Xberg documentam suporte a MCP. Para as demais ferramentas, este guia não registra suporte a MCP: ou a documentação consultada não o menciona, ou a menção tem ressalvas, por exemplo um servidor MCP hospedado em vez da própria ferramenta. Consulte cada avaliação.` },
           { q: `Quais ferramentas documentam OCR, extração de tabelas e caixas delimitadoras?`, a: `OCR: Docling, Marker, MinerU, Nutrient, Stirling PDF, Unstructured e Xberg. Extração de tabelas: Docling, Marker, MinerU, Nutrient, OpenDataLoader PDF, Unstructured e Xberg. Caixas delimitadoras: Docling, Marker, MinerU e OpenDataLoader PDF. Um traço na tabela significa que a documentação não informa.` },
           { q: `Posso usar essas ferramentas comercialmente de graça?`, a: `Depende da licença e da parte que você usa. Algumas ferramentas são MIT ou Apache-2.0; outras acrescentam condições, como pesos de modelo com limites comerciais, limites de uso ou receita, licenças separadas para alguns diretórios ou planos pagos. Leia cada arquivo de licença antes do uso comercial; este guia não é aconselhamento jurídico.` },
@@ -1740,7 +1733,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** آخر تحديث من المصدر ${formatDisplayDate('2026-11-15', 'ar')}.`,
           `**Unstructured:** آخر تحديث من المصدر ${formatDisplayDate('2026-11-17', 'ar')}.`,
           `**Xberg:** آخر تحديث من المصدر ${formatDisplayDate('2026-10-30', 'ar')}.`,
-          `لا يتجاوز أي من التواريخ أعلاه ثلاثة أشهر.`,
         ],
       },
       limitations: {
@@ -1891,9 +1883,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'kinds',
         title: `각 도구의 종류`,
         items: [
-          `**파싱·추출 라이브러리.** [Docling](/ko/power-local-llm/docling-review), [Marker](/ko/power-local-llm/marker-review), [MinerU](/ko/power-local-llm/mineru-review), [OpenDataLoader PDF](/ko/power-local-llm/opendataloader-pdf-review), [Unstructured](/ko/power-local-llm/unstructured-review), [Xberg](/ko/power-local-llm/xberg-review)은(는) 문서를 AI 파이프라인용 구조화 출력으로 바꾸는 라이브러리 또는 명령줄 도구입니다.`,
-          `**PDF 편집기와 툴킷.** [Stirling PDF](/ko/power-local-llm/stirling-pdf-review)은(는) OCR을 포함한 50개 이상의 도구와 REST API를 갖춘 PDF 편집 플랫폼이라고 스스로 설명합니다. 문서에 OCR이 언급되어 여기에 포함했으며, README는 AI 파이프라인용 파서로 설명하지 않습니다.`,
-          `**상용 PDF 소프트웨어.** [Nutrient](/ko/power-local-llm/nutrient-review)은(는) 자체 호스팅 Document Engine을 갖춘 라이선스형 PDF SDK, 사용량 기반 클라우드 API, 무료 Standard 모드가 있는 PDF-Markdown 명령줄 변환기를 보기·편집·서명·OCR·데이터 추출용으로 판매합니다. SDK는 비공개 소스입니다.`,
+          `**파싱·추출 라이브러리.** [Docling](/ko/power-local-llm/docling-review), [Marker](/ko/power-local-llm/marker-review), [MinerU](/ko/power-local-llm/mineru-review), [OpenDataLoader PDF](/ko/power-local-llm/opendataloader-pdf-review), [Unstructured](/ko/power-local-llm/unstructured-review), [Xberg](/ko/power-local-llm/xberg-review)는 문서를 AI 파이프라인용 구조화 출력으로 바꾸는 라이브러리 또는 명령줄 도구입니다.`,
+          `**PDF 편집기와 툴킷.** [Stirling PDF](/ko/power-local-llm/stirling-pdf-review)는 OCR을 포함한 50개 이상의 도구와 REST API를 갖춘 PDF 편집 플랫폼이라고 스스로 설명합니다. 문서에 OCR이 언급되어 여기에 포함했으며, README는 AI 파이프라인용 파서로 설명하지 않습니다.`,
+          `**상용 PDF 소프트웨어.** [Nutrient](/ko/power-local-llm/nutrient-review)는 자체 호스팅 Document Engine을 갖춘 라이선스형 PDF SDK, 사용량 기반 클라우드 API, 무료 Standard 모드가 있는 PDF-Markdown 명령줄 변환기를 보기·편집·서명·OCR·데이터 추출용으로 판매합니다. SDK는 비공개 소스입니다.`,
         ],
       },
       howWeCompared: {
@@ -1946,10 +1938,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: `이 메모는 각 도구의 디렉터리 기록과 리뷰에 적힌 내용을 되풀이한 것입니다. 법률 자문이 아니므로 상업적 이용 전에 라이선스 파일을 읽어 보세요.`,
         items: [
           `**오픈 소스:** [Docling](/ko/power-local-llm/docling-review)(MIT)와 [Xberg](/ko/power-local-llm/xberg-review)(MIT, Pro·Enterprise·Platform 상품이 있으나 가격은 비공개).`,
-          `**Apache-2.0이지만 유료이거나 제한된 부분이 있는 경우:** [Marker](/ko/power-local-llm/marker-review)은(는) 코드가 Apache-2.0이지만 모델 가중치는 상업적 제한이 있는 수정된 AI Pubs Open RAIL-M 라이선스이므로 상업적 이용 전에 확인하세요. [Unstructured](/ko/power-local-llm/unstructured-review)은(는) 로컬에서 무료로 실행되는 Apache-2.0 라이브러리이며 유료 클라우드 API를 선택적으로 쓸 수 있습니다. [OpenDataLoader PDF](/ko/power-local-llm/opendataloader-pdf-review)은(는) Apache-2.0이며 핵심 기능은 무료이고 엔터프라이즈 등급의 가격은 공개되지 않습니다.`,
-          `**자체 라이선스:** [MinerU](/ko/power-local-llm/mineru-review)은(는) MinerU Open Source License(Apache 2.0에 추가 조건)를 사용합니다. 명시된 사용량·매출 기준치를 넘는 상업적 이용에는 별도 라이선스가 필요하며, 온라인 서비스는 MinerU를 사용한다고 밝혀야 합니다.`,
-          `**오픈 코어:** [Stirling PDF](/ko/power-local-llm/stirling-pdf-review)은(는) 예외가 있는 MIT입니다. 일부 디렉터리는 별도 라이선스이며, 유료 플랜이 있지만 가격은 공개되지 않습니다.`,
-          `**상용:** [Nutrient](/ko/power-local-llm/nutrient-review)은(는) 비공개 소스 상용 소프트웨어입니다. SDK 라이선스는 견적으로 판매되고, 클라우드 API는 월간 무료 사용량이 있는 사용량 기반이며, 명령줄 변환기의 Standard 모드는 조건이 붙은 독점 라이선스로 무료입니다. 자세한 내용은 리뷰를 참고하세요.`,
+          `**Apache-2.0이지만 유료이거나 제한된 부분이 있는 경우:** [Marker](/ko/power-local-llm/marker-review)는 코드가 Apache-2.0이지만 모델 가중치는 상업적 제한이 있는 수정된 AI Pubs Open RAIL-M 라이선스이므로 상업적 이용 전에 확인하세요. [Unstructured](/ko/power-local-llm/unstructured-review)는 로컬에서 무료로 실행되는 Apache-2.0 라이브러리이며 유료 클라우드 API를 선택적으로 쓸 수 있습니다. [OpenDataLoader PDF](/ko/power-local-llm/opendataloader-pdf-review)는 Apache-2.0이며 핵심 기능은 무료이고 엔터프라이즈 등급의 가격은 공개되지 않습니다.`,
+          `**자체 라이선스:** [MinerU](/ko/power-local-llm/mineru-review)는 MinerU Open Source License(Apache 2.0에 추가 조건)를 사용합니다. 명시된 사용량·매출 기준치를 넘는 상업적 이용에는 별도 라이선스가 필요하며, 온라인 서비스는 MinerU를 사용한다고 밝혀야 합니다.`,
+          `**오픈 코어:** [Stirling PDF](/ko/power-local-llm/stirling-pdf-review)는 예외가 있는 MIT입니다. 일부 디렉터리는 별도 라이선스이며, 유료 플랜이 있지만 가격은 공개되지 않습니다.`,
+          `**상용:** [Nutrient](/ko/power-local-llm/nutrient-review)는 비공개 소스 상용 소프트웨어입니다. SDK 라이선스는 견적으로 판매되고, 클라우드 API는 월간 무료 사용량이 있는 사용량 기반이며, 명령줄 변환기의 Standard 모드는 조건이 붙은 독점 라이선스로 무료입니다. 자세한 내용은 리뷰를 참고하세요.`,
         ],
       },
       activity: {
@@ -1965,7 +1957,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           `**Stirling PDF:** 마지막 업스트림 업데이트 ${formatDisplayDate('2026-11-15', 'ko')}.`,
           `**Unstructured:** 마지막 업스트림 업데이트 ${formatDisplayDate('2026-11-17', 'ko')}.`,
           `**Xberg:** 마지막 업스트림 업데이트 ${formatDisplayDate('2026-10-30', 'ko')}.`,
-          `위 날짜 중 3개월을 넘은 것은 없습니다.`,
         ],
       },
       limitations: {
@@ -1974,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           `이 비교는 문서화된 기능을 비교할 뿐 품질을 비교하지 않습니다. PromptQuorum은 어떤 도구의 파싱 정확도, 속도, 레이아웃 재현성, 자원 사용량도 측정하지 않았으므로 표에서 기능이 표시되어 있어도 그 기능이 얼마나 잘 동작하는지는 알 수 없습니다.`,
           `대시는 확인한 문서의 공백일 뿐 부정적인 결과가 아닙니다. README나 사이트에 언급이 없어도 도구가 기능을 지원할 수 있습니다.`,
-          `선택 모드는 데이터 흐름을 바꿉니다. 여러 도구가 켜면 콘텐츠를 받을 수 있는 호스팅 서비스, 하이브리드 모드, AI 백엔드를 문서화하고 있으며, "실행 위치" 열과 각 리뷰가 무엇이 언제 내 컴퓨터를 떠나는지 설명합니다.`,
+          `선택 모드는 데이터 흐름을 바꿉니다. 여러 도구가 켜면 콘텐츠를 받을 수 있는 호스팅 서비스, 하이브리드 모드, AI 백엔드를 문서화하고 있으며, "실행 방식" 열과 각 리뷰가 무엇이 언제 내 컴퓨터를 떠나는지 설명합니다.`,
           `도구는 빠르게 바뀝니다. 각 리뷰에는 확인한 버전이 적혀 있고, 이 가이드는 리뷰가 갱신될 때 함께 갱신됩니다.`,
         ],
       },
@@ -1984,8 +1975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: `PDF 파서, PDF 편집기, PDF SDK의 차이는 무엇인가요?`, a: `파서나 추출 라이브러리는 문서를 읽어 다른 소프트웨어가 쓸 수 있는 구조화 텍스트, Markdown, JSON을 반환합니다. Stirling PDF 같은 PDF 편집기는 PDF를 수정하고 변환하는 도구이며 OCR도 제공합니다. Nutrient 같은 SDK는 개발자가 자신의 애플리케이션에 넣는 상용 툴킷입니다. 역할이 다르기 때문에 이 가이드는 비교에 앞서 각 도구의 종류를 밝힙니다.` },
           { q: `비교 표의 대시는 무슨 뜻인가요?`, a: `프로젝트 자체 문서에 그 속성이 기재되어 있지 않다는 뜻입니다. 기능이 없다는 뜻이 아니므로 도구의 리뷰나 저장소를 확인하세요.` },
-          { q: `표의 "로컬"은 내 문서가 내 컴퓨터를 절대 떠나지 않는다는 뜻인가요?`, a: `아니요. "실행 위치" 열은 각 프로젝트 문서의 내용을 반영합니다. 여러 도구가 켜면 콘텐츠를 받을 수 있는 선택적 호스팅 서비스, AI 백엔드, LLM 제공자를 문서화하고 있으며, 일부 도구는 선택 기능의 데이터 흐름이 문서화되어 있지 않습니다. 기밀 문서를 처리하기 전에 각 리뷰의 데이터 흐름 항목을 읽어 보세요.` },
-          { q: `이 도구들 중 MCP 지원을 문서화한 것은 무엇인가요?`, a: `Docling, Xberg이(가) MCP 지원을 문서화합니다. 나머지 도구에 대해서는 이 가이드가 MCP 지원을 기록하지 않습니다. 확인한 문서에 언급이 없거나, 도구 자체가 아닌 호스팅 MCP 서버처럼 조건이 붙은 언급이기 때문입니다. 각 리뷰를 확인하세요.` },
+          { q: `표의 "로컬"은 내 문서가 내 컴퓨터를 절대 떠나지 않는다는 뜻인가요?`, a: `아니요. "실행 방식" 열은 각 프로젝트 문서의 내용을 반영합니다. 여러 도구가 켜면 콘텐츠를 받을 수 있는 선택적 호스팅 서비스, AI 백엔드, LLM 제공자를 문서화하고 있으며, 일부 도구는 선택 기능의 데이터 흐름이 문서화되어 있지 않습니다. 기밀 문서를 처리하기 전에 각 리뷰의 데이터 흐름 항목을 읽어 보세요.` },
+          { q: `이 도구들 중 MCP 지원을 문서화한 것은 무엇인가요?`, a: `Docling, Xberg가 MCP 지원을 문서화합니다. 나머지 도구에 대해서는 이 가이드가 MCP 지원을 기록하지 않습니다. 확인한 문서에 언급이 없거나, 도구 자체가 아닌 호스팅 MCP 서버처럼 조건이 붙은 언급이기 때문입니다. 각 리뷰를 확인하세요.` },
           { q: `OCR, 표 추출, 바운딩박스를 문서화한 도구는 무엇인가요?`, a: `OCR: Docling, Marker, MinerU, Nutrient, Stirling PDF, Unstructured, Xberg. 표 추출: Docling, Marker, MinerU, Nutrient, OpenDataLoader PDF, Unstructured, Xberg. 바운딩박스: Docling, Marker, MinerU, OpenDataLoader PDF. 표의 대시는 문서에 기재가 없다는 뜻입니다.` },
           { q: `이 도구들을 상업적으로 무료로 쓸 수 있나요?`, a: `라이선스와 사용하는 부분에 따라 다릅니다. MIT나 Apache-2.0인 도구도 있지만, 상업적 제한이 있는 모델 가중치, 사용량·매출 기준치, 일부 디렉터리의 별도 라이선스, 유료 등급 같은 조건이 붙는 도구도 있습니다. 상업적 이용 전에 각 라이선스 파일을 읽어 보세요. 이 가이드는 법률 자문이 아닙니다.` },
           { q: `이 도구들에 제휴 링크가 있나요?`, a: `아니요. PromptQuorum은 작성 시점에 이 비교의 어떤 도구와도 제휴 관계가 없으며, 여기 있는 어떤 링크도 수수료를 발생시키지 않습니다.` },
