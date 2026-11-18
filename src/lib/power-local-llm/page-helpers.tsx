@@ -1070,6 +1070,7 @@ const HUB_THEMES: Array<{
       'self-hosted-ai-starter-kit-review',
       'local-deep-research-review',
       'open-science-desktop-review',
+      'oleafly-review',
       'agentic-inbox-review',
       'dreamserver-review',
       'intentkit-review',
