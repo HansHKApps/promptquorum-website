@@ -545,6 +545,7 @@ https://www.promptquorum.com/power-local-llm/metagpt-review
 https://www.promptquorum.com/power-local-llm/microsoft-agent-framework-review
 https://www.promptquorum.com/power-local-llm/milvus-review
 https://www.promptquorum.com/power-local-llm/mineru-review
+https://www.promptquorum.com/power-local-llm/minutes-review
 https://www.promptquorum.com/power-local-llm/mission-control-review
 https://www.promptquorum.com/power-local-llm/mlc-chat-review
 https://www.promptquorum.com/power-local-llm/mlc-llm-explained
