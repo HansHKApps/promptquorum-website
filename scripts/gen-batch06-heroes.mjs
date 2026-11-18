@@ -1,53 +1,6 @@
 #!/usr/bin/env node
 const BASE = 'http://localhost:3063';
 const SPECS = {
-  "local-llm-pc-build-1000-overview": {
-    "en": {
-      "title": "Local LLM PC Build Under $1,000 (2026): Full Parts List and Performance",
-      "subtitle": "$1,000 local LLM PC build: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. Runs 7B at 55-65 tok/s, 14B ",
-      "footer": "PromptQuorum Guide"
-    },
-    "de": {
-      "title": "Lokaler LLM-PC-Build für unter 1.000 € (2026): Vollständige Teileliste und Leistung",
-      "subtitle": "Lokaler LLM-PC-Build für unter 1.000 €: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. Läuft mit 7B be",
-      "footer": "PromptQuorum-Leitfaden"
-    },
-    "fr": {
-      "title": "Configuration PC pour LLM local à moins de $1,000 (2026) : liste de pièces complète et performances",
-      "subtitle": "Configuration PC LLM local à $1,000 : RTX 5060 Ti 16 Go + Ryzen 5 7600 + 32 Go DDR5. 7B à 55-65 tok/",
-      "footer": "Guide PromptQuorum"
-    },
-    "ja": {
-      "title": "$1,000以下のローカルLLM PCビルド（2026年）：完全パーツリストと性能",
-      "subtitle": "$1,000のローカルLLM PCビルド：RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5。7Bを55〜65 tok/s、14Bを28〜35 tok/s、32Bを",
-      "footer": "PromptQuorumガイド"
-    },
-    "zh": {
-      "title": "2026年$1,000以下本地LLM PC构建：完整配件清单与性能表现",
-      "subtitle": "$1,000本地LLM PC构建：RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5。7B达55-65 tok/s，14B达28-35 tok/s，32B达12-1",
-      "footer": "PromptQuorum 指南"
-    },
-    "es": {
-      "title": "Build de PC para LLM Local por Menos de $1,000 (2026): Lista de Componentes Completa y Rendimiento",
-      "subtitle": "Build de PC para LLM local por $1,000: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. Ejecuta 7B a 55-",
-      "footer": "Guía de PromptQuorum"
-    },
-    "pt": {
-      "title": "Build de PC para LLM Local Por Menos de $1.000 (2026): Lista Completa de Peças e Desempenho",
-      "subtitle": "Build de PC para LLM local por $1.000: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. Executa 7B a 55-",
-      "footer": "Guia PromptQuorum"
-    },
-    "ar": {
-      "title": "تجميع كمبيوتر لنماذج LLM محلية بأقل من 1,000 دولار (2026): قائمة القطع الكاملة والأداء",
-      "subtitle": "تجميع كمبيوتر LLM محلي بـ 1,000 دولار: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. يشغّل 7B بسرعة 5",
-      "footer": "دليل PromptQuorum"
-    },
-    "ko": {
-      "title": "$1,000 미만 로컬 LLM PC 빌드(2026): 전체 부품 목록과 성능",
-      "subtitle": "$1,000 로컬 LLM PC 빌드: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. 7B는 초당 55~65토큰, 14B는 초당 28~35토큰, 3",
-      "footer": "PromptQuorum 가이드"
-    }
-  },
   "local-llm-pc-build-2000-overview": {
     "en": {
       "title": "Local LLM PC Build for $2,000 (2026): Dual-GPU 32GB VRAM Parts List",
