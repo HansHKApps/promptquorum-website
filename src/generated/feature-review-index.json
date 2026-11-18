@@ -1329,6 +1329,11 @@
     "urlSlug": "fablecut-review",
     "url": "/power-local-llm/fablecut-review"
   },
+  "lexora": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lexora-review",
+    "url": "/power-local-llm/lexora-review"
+  },
   "funclip": {
     "cluster": "power-local-llm",
     "urlSlug": "funclip-review",

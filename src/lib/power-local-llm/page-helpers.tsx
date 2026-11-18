@@ -1079,6 +1079,7 @@ const HUB_THEMES: Array<{
       'snug-protocol-review',
       'localghost-review',
       'nekoni-review',
+      'lexora-review',
     ],
   },
   {

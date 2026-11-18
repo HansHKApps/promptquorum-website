@@ -55,7 +55,7 @@
       "images": []
     },
     "local-llm-pc-build-2000": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -70,20 +70,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/pc-build-vram-by-model.svg",
-          "title": "VRAM required by model size at Q4 quantization: 7B needs ~5GB, 14B ~9GB, and 32B ~15GB — all fitting the $1,000 build's 16GB card. 70B needs ~40GB, which requires the $2,000 build's 32GB combined dual-GPU VRAM."
-        },
-        {
-          "url": "/images/pc-build-psu-headroom.svg",
-          "title": "Estimated system power draw vs. PSU capacity: the $1,000 single-GPU build draws ~285W from a 650W PSU (56% headroom); the $2,000 dual-GPU build draws ~475W from an 850W PSU (44% headroom)."
-        },
-        {
-          "url": "/images/pc-build-performance-comparison.svg",
-          "title": "Tokens/sec by model size, Q4 quantization: both builds match at 7B (~60 tok/s) and 14B (~31 tok/s), but the $2,000 dual-GPU build pulls ahead at 32B via tensor-split (~34 vs ~13 tok/s) and is the only one that runs 70B at all (~15 tok/s)."
-        }
-      ]
+      "images": []
     },
     "what-are-local-llms": {
       "dateModified": "2026-11-09",
@@ -6758,7 +6745,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 387 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 388 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -15242,6 +15229,24 @@
       "images": []
     },
     "fablecut-review": {
+      "dateModified": "2026-11-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "lexora-review": {
       "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-11-18",

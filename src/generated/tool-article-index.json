@@ -27,6 +27,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-pc-build-2000",
+        "title": "Dual-GPU Local LLM PC Build (2026): 2x RTX 5060 Ti 16GB, About $2,400",
+        "url": "/local-llms/local-llm-pc-build-2000",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "multi-gpu-local-llms",
         "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
         "url": "/local-llms/multi-gpu-local-llms",
@@ -72,14 +80,6 @@
         "url": "/local-llms/best-local-llms-for-creative-writing",
         "dateModified": "2026-11-17",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-vs-llama-vs-mistral",
-        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
-        "url": "/local-llms/qwen-vs-llama-vs-mistral",
-        "dateModified": "2026-11-17",
-        "tier": "about"
       }
     ],
     "totalCount": 370,
@@ -108,6 +108,14 @@
         "slug": "local-llm-pc-build-1000",
         "title": "Local LLM PC Build Under $1,000 With a Used GPU (2026)",
         "url": "/local-llms/local-llm-pc-build-1000",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-pc-build-2000",
+        "title": "Dual-GPU Local LLM PC Build (2026): 2x RTX 5060 Ti 16GB, About $2,400",
+        "url": "/local-llms/local-llm-pc-build-2000",
         "dateModified": "2026-11-18",
         "tier": "about"
       },
@@ -156,14 +164,6 @@
         "slug": "best-gpus-for-local-llms",
         "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
         "url": "/local-llms/best-gpus-for-local-llms",
-        "dateModified": "2026-11-15",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "rtx-5090-vs-rtx-4090-local-llm",
-        "title": "RTX 5090 vs RTX 4090 for Local LLM Inference",
-        "url": "/local-llms/rtx-5090-vs-rtx-4090-local-llm",
         "dateModified": "2026-11-15",
         "tier": "about"
       }
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 108,
+    "totalCount": 107,
     "capped": true
   },
   "LocalAI": {
@@ -4755,6 +4755,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lexora-review",
+        "title": "Lexora Review: The Open-Source Desktop AI Agent",
+        "url": "/power-local-llm/lexora-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phoneclaw-review",
         "title": "PhoneClaw Review: The On-Device iPhone AI Agent",
         "url": "/power-local-llm/phoneclaw-review",
@@ -4770,7 +4778,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Agent Zero": {
@@ -8967,6 +8975,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lexora-review",
+        "title": "Lexora Review: The Open-Source Desktop AI Agent",
+        "url": "/power-local-llm/lexora-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "localghost-review",
         "title": "LocalGhost Review: A Personal AI Server You Host Yourself",
         "url": "/power-local-llm/localghost-review",
@@ -8974,7 +8990,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "exo": {
@@ -10944,9 +10960,17 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lexora-review",
+        "title": "Lexora Review: The Open-Source Desktop AI Agent",
+        "url": "/power-local-llm/lexora-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Halo": {
@@ -12144,6 +12168,20 @@
         "slug": "fablecut-review",
         "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
         "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Lexora": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lexora-review",
+        "title": "Lexora Review: The Open-Source Desktop AI Agent",
+        "url": "/power-local-llm/lexora-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
