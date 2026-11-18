@@ -9013,6 +9013,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pooled-review",
+        "title": "Pooled Review: Peer-to-Peer LLM Inference in the Browser",
+        "url": "/power-local-llm/pooled-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -9020,7 +9028,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "GPUStack": {
@@ -9059,6 +9067,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pooled-review",
+        "title": "Pooled Review: Peer-to-Peer LLM Inference in the Browser",
+        "url": "/power-local-llm/pooled-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "exo-review",
         "title": "exo Review: Distributed AI Inference Across Multiple Devices",
         "url": "/power-local-llm/exo-review",
@@ -9066,7 +9082,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Onyx": {
@@ -12357,6 +12373,28 @@
     "totalCount": 1,
     "capped": false
   },
+  "Pooled": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pooled-review",
+        "title": "Pooled Review: Peer-to-Peer LLM Inference in the Browser",
+        "url": "/power-local-llm/pooled-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "gpustack-review",
+        "title": "GPUStack Review: Open-Source GPU Cluster Manager for Local AI",
+        "url": "/power-local-llm/gpustack-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "FunClip": {
     "articles": [
       {
@@ -13313,6 +13351,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pooled-review",
+        "title": "Pooled Review: Peer-to-Peer LLM Inference in the Browser",
+        "url": "/power-local-llm/pooled-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "rtx-3090-local-llm-buy-or-rent",
         "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
         "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
@@ -13326,17 +13372,9 @@
         "url": "/power-local-llm/stirling-pdf-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "xberg-review",
-        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
-        "url": "/power-local-llm/xberg-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 277,
+    "totalCount": 278,
     "capped": true
   },
   "Qdrant": {
