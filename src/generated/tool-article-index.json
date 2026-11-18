@@ -5256,7 +5256,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 32,
     "capped": true
   },
   "faster-whisper": {
@@ -8717,22 +8717,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "oleafly-review",
-        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
-        "url": "/power-local-llm/oleafly-review",
+        "slug": "minutes-review",
+        "title": "Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents",
+        "url": "/power-local-llm/minutes-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "open-science-desktop-review",
-        "title": "Open Science Desktop Review: Free AI Research Workbench for Your Own Files",
-        "url": "/power-local-llm/open-science-desktop-review",
-        "dateModified": "2026-11-17",
+        "slug": "oleafly-review",
+        "title": "Oleafly Review: Free Open-Source LaTeX and Typst Editor with AI Agents",
+        "url": "/power-local-llm/oleafly-review",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "MaxKB": {
@@ -10387,6 +10387,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "minutes-review",
+        "title": "Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents",
+        "url": "/power-local-llm/minutes-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -10432,17 +10440,9 @@
         "url": "/power-local-llm/weesper-neon-flow-review",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-11-07",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 25,
     "capped": true
   },
   "FluidVoice": {
@@ -11265,6 +11265,92 @@
     "totalCount": 1,
     "capped": false
   },
+  "Minutes": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "minutes-review",
+        "title": "Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents",
+        "url": "/power-local-llm/minutes-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "how-to-install-ollama",
+        "title": "Download & Install Ollama on macOS, Windows & Linux",
+        "url": "/local-llms/how-to-install-ollama",
+        "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-ai-coding-assistant-local-llm",
+        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
+        "url": "/local-llms/best-ai-coding-assistant-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-beginner-local-llm-models",
+        "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
+        "url": "/local-llms/best-beginner-local-llm-models",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-limitations",
+        "title": "Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)",
+        "url": "/local-llms/local-llm-limitations",
+        "dateModified": "2026-11-09",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 109,
+    "capped": true
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -11405,6 +11491,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "minutes-review",
+        "title": "Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents",
+        "url": "/power-local-llm/minutes-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -11418,17 +11512,9 @@
         "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "blinko-review",
-        "title": "Blinko Review: Self-Hosted AI Notes with RAG Search",
-        "url": "/power-local-llm/blinko-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Anarlog": {

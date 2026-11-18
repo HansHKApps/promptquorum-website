@@ -48034,6 +48034,87 @@
   },
   {
     "lang": "en",
+    "title": "Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents",
+    "excerpt": "Minutes is a free MIT app that records meetings, voice memos and dictation as Markdown files that MCP clients can search. What is confirmed.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Minutes-Rezension: Kostenloses Open-Source-Gedächtnis für Meetings, Sprachmemos und Diktate für KI-Agenten",
+    "excerpt": "Minutes ist eine kostenlose MIT-App, die Meetings, Sprachmemos und Diktate als Markdown-Dateien ablegt, die MCP-Clients durchsuchen können. Was belegt ist.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/de/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Minutes : mémoire open source et gratuite pour réunions, mémos vocaux et dictée destinée aux agents IA",
+    "excerpt": "Minutes est une application MIT gratuite qui enregistre réunions, mémos vocaux et dictées en fichiers Markdown, interrogeables par les clients MCP. Ce qui est confirmé.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/fr/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Minutesレビュー：会議・ボイスメモ・音声入力をAIエージェント向けの記憶にする無料オープンソースアプリ",
+    "excerpt": "Minutesは会議・ボイスメモ・音声入力をMarkdownファイルとして保存し、MCPクライアントから検索できる無料のMITアプリです。確認できた内容を整理しました。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ja/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Minutes 评测：把会议、语音备忘和听写变成 AI 智能体记忆的免费开源应用",
+    "excerpt": "Minutes 是免费的 MIT 应用，把会议、语音备忘和听写保存为 Markdown 文件，MCP 客户端可检索。已确认的内容。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/zh/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Minutes: memoria gratuita y de código abierto para reuniones, notas de voz y dictado destinada a agentes de IA",
+    "excerpt": "Minutes es una app MIT gratuita que graba reuniones, notas de voz y dictados como archivos Markdown en los que los clientes MCP pueden buscar. Lo que está confirmado.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/es/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Minutes: memória gratuita e de código aberto para reuniões, memos de voz e ditado voltada a agentes de IA",
+    "excerpt": "O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados como arquivos Markdown que clientes MCP podem pesquisar. O que está confirmado.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/pt/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Minutes: ذاكرة مجانية مفتوحة المصدر للاجتماعات والمذكرات الصوتية والإملاء لوكلاء الذكاء الاصطناعي",
+    "excerpt": "Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP. ما تأكد منه.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ar/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Minutes 리뷰: 회의·음성 메모·받아쓰기를 AI 에이전트 기억으로 만드는 무료 오픈소스 앱",
+    "excerpt": "Minutes는 회의, 음성 메모, 받아쓰기를 Markdown 파일로 저장해 MCP 클라이언트가 검색하게 하는 무료 MIT 앱입니다. 확인된 내용입니다.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ko/power-local-llm/minutes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Lyonesse Review: Offline AI Transcription and Meeting Notes for iPhone and Mac",
     "excerpt": "Lyonesse review: iPhone, iPad and Mac app for offline AI transcription, meeting notes and document chat. Free first recording, lifetime option; untested.",
     "publishDate": "2026-10-26",
