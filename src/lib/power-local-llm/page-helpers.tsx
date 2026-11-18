@@ -1081,6 +1081,7 @@ const HUB_THEMES: Array<{
       'localghost-review',
       'nekoni-review',
       'lexora-review',
+      'kition-review',
     ],
   },
   {
