@@ -76,9 +76,11 @@ import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-f
 import { article as a_sablate_review } from './articles/sablate-review'
 import { article as a_cocoindex_review } from './articles/cocoindex-review'
 import { article as a_opendataloader_pdf_review } from './articles/opendataloader-pdf-review'
+import { article as a_nutrient_review } from './articles/nutrient-review'
 import { article as a_docling_review } from './articles/docling-review'
 import { article as a_marker_review } from './articles/marker-review'
 import { article as a_mineru_review } from './articles/mineru-review'
+import { article as a_unstructured_review } from './articles/unstructured-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -198,6 +200,7 @@ import { article as a_local_llm_voice_audio_compared } from './articles/local-ll
 import { article as a_local_llm_images_video_compared } from './articles/local-llm-images-video-compared'
 import { article as a_local_llm_run_serve_compared } from './articles/local-llm-run-serve-compared'
 import { article as a_local_llm_knowledge_retrieval_compared } from './articles/local-llm-knowledge-retrieval-compared'
+import { article as a_local_pdf_parsers_compared } from './articles/local-pdf-parsers-compared'
 import { article as a_local_llm_chat_assistants_compared } from './articles/local-llm-chat-assistants-compared'
 import { article as a_local_llm_code_development_compared } from './articles/local-llm-code-development-compared'
 import { article as a_local_llm_train_operate_compared } from './articles/local-llm-train-operate-compared'
@@ -698,6 +701,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-images-video-compared':                a_local_llm_images_video_compared,
   'local-llm-run-serve-compared':                   a_local_llm_run_serve_compared,
   'local-llm-knowledge-retrieval-compared':         a_local_llm_knowledge_retrieval_compared,
+  'local-pdf-parsers-compared':                     a_local_pdf_parsers_compared,
   'local-llm-chat-assistants-compared':             a_local_llm_chat_assistants_compared,
   'local-llm-code-development-compared':            a_local_llm_code_development_compared,
   'local-llm-train-operate-compared':               a_local_llm_train_operate_compared,
@@ -813,7 +817,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'opendataloader-pdf-review':                     a_opendataloader_pdf_review,
   'docling-review':                                a_docling_review,
   'marker-review':                                 a_marker_review,
+  'nutrient-review':                               a_nutrient_review,
   'mineru-review':                                 a_mineru_review,
+  'unstructured-review':                           a_unstructured_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,

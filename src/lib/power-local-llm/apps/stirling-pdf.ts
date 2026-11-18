@@ -52,6 +52,10 @@ export const app: ToolRecord = {
     version: '3.3.0',
     versionSourceUrl: 'https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0',
   },
+  // compare (document-parsing segment), read 2026-11-17 from the RAW README (raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/README.md):
+  //   ocr true <- "50+ PDF tools - Edit, merge, split, sign, redact, convert, OCR, compress, and more."
+  //   inputFormats, outputFormats, tableExtraction, boundingBoxes, languageBindings, mcp omitted: the README states none of them (shown as "—", never "no").
+  compare: { ocr: true },
   lastVerifiedDate: '2026-11-16',
   lastUpstreamUpdate: '2026-11-15', // package: GitHub last commit
   lastUpstreamUpdateSource: 'https://github.com/Stirling-Tools/Stirling-PDF',

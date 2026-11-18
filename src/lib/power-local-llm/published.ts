@@ -344,6 +344,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-chat-assistants-compared',
   // Category comparison guide for code-development (all 9 locales) — generated table, see apps/compare-schema.ts
   'local-llm-code-development-compared',
+  // Category comparison guide for documents-research / document parsing (all 9 locales, risk gate PASS 10/10) — generated table, see apps/compare-schema.ts
+  'local-pdf-parsers-compared',
   // Category comparison guide for train-operate (all 9 locales) — generated table, see apps/compare-schema.ts
   'local-llm-train-operate-compared',
   'coqui-tts-review',
@@ -786,7 +788,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'marker-review',
   'docling-review',
   'opendataloader-pdf-review',
+  'nutrient-review',
   'mineru-review',
+  'unstructured-review',
 
 ])
 
