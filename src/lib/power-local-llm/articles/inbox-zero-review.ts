@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         en: {
           question: 'What is Inbox Zero and who is it for?',
           answer:
-            'Inbox Zero is an AI assistant that works inside your Gmail or Outlook account and, optionally, an email app of its own. It suits people with a high email volume who accept a cloud AI processing their mail, and technical teams that want to run the open-source code themselves.',
+            'Inbox Zero is an AI assistant that works inside your Gmail or Outlook account and, optionally, an email app of its own. It suits people with a high email volume who accept a cloud AI processing their mail, and technical teams that want to run the published code themselves.',
           bullets: [
             'Works with Gmail, Google Workspace and Microsoft Outlook accounts.',
             'Access: hosted web app, desktop email app, iPhone app, Android app, or self-hosting with Docker.',
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero is a Gmail and Outlook assistant plus an optional email client, made by Inbox Zero Inc.**',
             'The privacy policy gives the company\'s address in Newark, Delaware, United States. The GitHub repository was last pushed to on 18 November 2026, and the latest GitHub release is Inbox Zero Desktop 0.1.28 from 17 November 2026, so development is active and no stale-project warning applies.',
-            'Per the README, the product has two parts that work on their own: an AI assistant that runs against your mailbox, and an email client with a split inbox, several accounts in one place and team comments. The web and desktop code is open source (the desktop app uses Electron). The iPhone app is a native Swift app that is not open source yet, and the Android app is described as an older React Native app.',
+            'Per the README, the product has two parts that work on their own: an AI assistant that runs against your mailbox, and an email client with a split inbox, several accounts in one place and team comments. The web and desktop code is published on GitHub under the license described below (the desktop app uses Electron). The iPhone app is a native Swift app that is not open source yet, and the Android app is described as an older React Native app.',
             'The README calls Inbox Zero an open source alternative to Fyxer, and its email app an open source alternative to Superhuman. These are the maker\'s descriptions; PromptQuorum has not compared the products hands-on.',
           ],
         },
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         de: {
           question: 'Was ist Inbox Zero, und für wen ist es gedacht?',
           answer:
-            'Inbox Zero ist ein KI-Assistent, der in Ihrem Gmail- oder Outlook-Konto arbeitet und optional als eigene E-Mail-App zur Verfügung steht. Er eignet sich für Menschen mit hohem Mailaufkommen, die akzeptieren, dass eine Cloud-KI ihre Mails verarbeitet, sowie für technische Teams, die den Open-Source-Code selbst betreiben wollen.',
+            'Inbox Zero ist ein KI-Assistent, der in Ihrem Gmail- oder Outlook-Konto arbeitet und optional als eigene E-Mail-App zur Verfügung steht. Er eignet sich für Menschen mit hohem Mailaufkommen, die akzeptieren, dass eine Cloud-KI ihre Mails verarbeitet, sowie für technische Teams, die den veröffentlichten Code selbst betreiben wollen.',
           bullets: [
             'Funktioniert mit Gmail, Google Workspace und Microsoft-Outlook-Konten.',
             'Zugang: gehostete Web-App, E-Mail-App für den Desktop, iPhone-App, Android-App oder Self-Hosting mit Docker.',
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero ist ein Assistent für Gmail und Outlook plus ein optionaler E-Mail-Client der Inbox Zero Inc.**',
             'Die Datenschutzerklärung nennt als Firmenadresse einen Ort in Newark, Delaware, USA. Das GitHub-Repository erhielt den letzten Push am 18. November 2026, und das neueste GitHub-Release ist Inbox Zero Desktop 0.1.28 vom 17. November 2026; die Entwicklung ist also aktiv, und es gibt keine Warnung vor einem veralteten Projekt.',
-            'Laut README besteht das Produkt aus zwei Teilen, die jeweils eigenständig funktionieren: einem KI-Assistenten, der auf Ihr Postfach zugreift, und einem E-Mail-Client mit geteiltem Posteingang, mehreren Konten an einem Ort und Team-Kommentaren. Der Web- und Desktop-Code ist Open Source (die Desktop-App nutzt Electron). Die iPhone-App ist eine native Swift-App, die noch nicht quelloffen ist, und die Android-App wird als ältere React-Native-App beschrieben.',
+            'Laut README besteht das Produkt aus zwei Teilen, die jeweils eigenständig funktionieren: einem KI-Assistenten, der auf Ihr Postfach zugreift, und einem E-Mail-Client mit geteiltem Posteingang, mehreren Konten an einem Ort und Team-Kommentaren. Der Web- und Desktop-Code ist auf GitHub veröffentlicht, unter der weiter unten beschriebenen Lizenz (die Desktop-App nutzt Electron). Die iPhone-App ist eine native Swift-App, die noch nicht quelloffen ist, und die Android-App wird als ältere React-Native-App beschrieben.',
             'Die README nennt Inbox Zero eine Open-Source-Alternative zu Fyxer und die E-Mail-App eine Open-Source-Alternative zu Superhuman. Das sind Beschreibungen des Herstellers; PromptQuorum hat die Produkte nicht selbst verglichen.',
           ],
         },
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         es: {
           question: '¿Qué es Inbox Zero y para quién es?',
           answer:
-            'Inbox Zero es un asistente de IA que funciona dentro de tu cuenta de Gmail u Outlook y, de forma opcional, una app de correo propia. Encaja con personas que reciben mucho correo y aceptan que una IA en la nube procese sus mensajes, y con equipos técnicos que quieren ejecutar el código abierto por su cuenta.',
+            'Inbox Zero es un asistente de IA que funciona dentro de tu cuenta de Gmail u Outlook y, de forma opcional, una app de correo propia. Encaja con personas que reciben mucho correo y aceptan que una IA en la nube procese sus mensajes, y con equipos técnicos que quieren ejecutar el código publicado por su cuenta.',
           bullets: [
             'Funciona con cuentas de Gmail, Google Workspace y Microsoft Outlook.',
             'Acceso: app web alojada, app de correo de escritorio, app para iPhone, app para Android o autoalojamiento con Docker.',
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero es un asistente para Gmail y Outlook más un cliente de correo opcional, creado por Inbox Zero Inc.**',
             'La política de privacidad indica la dirección de la empresa en Newark, Delaware, Estados Unidos. El repositorio de GitHub recibió su último push el 18 de noviembre de 2026 y la versión más reciente en GitHub es Inbox Zero Desktop 0.1.28, del 17 de noviembre de 2026, así que el desarrollo está activo y no se aplica ninguna advertencia de proyecto abandonado.',
-            'Según el README, el producto tiene dos partes que funcionan por separado: un asistente de IA que actúa sobre tu buzón y un cliente de correo con bandeja dividida, varias cuentas en un solo lugar y comentarios en equipo. El código web y de escritorio es de código abierto (la app de escritorio usa Electron). La app para iPhone es una app nativa en Swift que aún no es de código abierto, y la app para Android se describe como una app antigua en React Native.',
+            'Según el README, el producto tiene dos partes que funcionan por separado: un asistente de IA que actúa sobre tu buzón y un cliente de correo con bandeja dividida, varias cuentas en un solo lugar y comentarios en equipo. El código web y de escritorio está publicado en GitHub bajo la licencia descrita más abajo (la app de escritorio usa Electron). La app para iPhone es una app nativa en Swift que aún no es de código abierto, y la app para Android se describe como una app antigua en React Native.',
             'El README presenta Inbox Zero como una alternativa de código abierto a Fyxer, y su app de correo como una alternativa de código abierto a Superhuman. Son descripciones del desarrollador; PromptQuorum no ha comparado los productos en la práctica.',
           ],
         },
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         fr: {
           question: 'Qu\'est-ce qu\'Inbox Zero et à qui s\'adresse-t-il ?',
           answer:
-            'Inbox Zero est un assistant IA qui agit dans votre compte Gmail ou Outlook et, en option, une application de messagerie à part entière. Il convient aux personnes qui reçoivent beaucoup d\'e-mails et acceptent qu\'une IA dans le cloud traite leur courrier, ainsi qu\'aux équipes techniques qui veulent exécuter elles-mêmes le code open source.',
+            'Inbox Zero est un assistant IA qui agit dans votre compte Gmail ou Outlook et, en option, une application de messagerie à part entière. Il convient aux personnes qui reçoivent beaucoup d\'e-mails et acceptent qu\'une IA dans le cloud traite leur courrier, ainsi qu\'aux équipes techniques qui veulent exécuter elles-mêmes le code publié.',
           bullets: [
             'Fonctionne avec les comptes Gmail, Google Workspace et Microsoft Outlook.',
             'Accès : application web hébergée, application de messagerie de bureau, application iPhone, application Android ou auto-hébergement avec Docker.',
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero est un assistant pour Gmail et Outlook, accompagné d\'un client de messagerie facultatif, édité par Inbox Zero Inc.**',
             'La politique de confidentialité indique l\'adresse de l\'entreprise à Newark, Delaware, États-Unis. Le dépôt GitHub a reçu son dernier push le 18 novembre 2026, et la dernière version publiée sur GitHub est Inbox Zero Desktop 0.1.28 du 17 novembre 2026 : le développement est actif et aucun avertissement de projet abandonné ne s\'applique.',
-            'Selon le README, le produit comporte deux parties qui fonctionnent chacune seule : un assistant IA qui agit sur votre boîte, et un client de messagerie avec boîte divisée, plusieurs comptes au même endroit et commentaires d\'équipe. Le code web et de bureau est open source (l\'application de bureau utilise Electron). L\'application iPhone est une application native en Swift qui n\'est pas encore open source, et l\'application Android est décrite comme une ancienne application React Native.',
+            'Selon le README, le produit comporte deux parties qui fonctionnent chacune seule : un assistant IA qui agit sur votre boîte, et un client de messagerie avec boîte divisée, plusieurs comptes au même endroit et commentaires d\'équipe. Le code web et de bureau est publié sur GitHub sous la licence décrite plus bas (l\'application de bureau utilise Electron). L\'application iPhone est une application native en Swift qui n\'est pas encore open source, et l\'application Android est décrite comme une ancienne application React Native.',
             'Le README présente Inbox Zero comme une alternative open source à Fyxer, et son application de messagerie comme une alternative open source à Superhuman. Ce sont des descriptions de l\'éditeur ; PromptQuorum n\'a pas comparé les produits.',
           ],
         },
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ja: {
           question: 'Inbox Zeroとは何で、誰に向いていますか。',
           answer:
-            'Inbox Zeroは、GmailまたはOutlookのアカウント内で動作するAIアシスタントで、任意で専用のメールアプリも使えます。メール量が多く、クラウドのAIにメールを処理させてよい人や、オープンソースのコードを自分で運用したい技術チームに向いています。',
+            'Inbox Zeroは、GmailまたはOutlookのアカウント内で動作するAIアシスタントで、任意で専用のメールアプリも使えます。メール量が多く、クラウドのAIにメールを処理させてよい人や、公開されているコードを自分で運用したい技術チームに向いています。',
           bullets: [
             'Gmail、Google Workspace、Microsoft Outlookのアカウントに対応します。',
             '利用方法：ホスト型Webアプリ、デスクトップ版メールアプリ、iPhoneアプリ、Androidアプリ、またはDockerでのセルフホスト。',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zeroは、GmailとOutlook向けのアシスタントに、任意のメールクライアントを加えたもので、Inbox Zero Inc.が開発しています。**',
             'プライバシーポリシーには、会社の住所として米国デラウェア州ニューアークが記載されています。GitHubリポジトリの最終プッシュは2026年11月18日、GitHubの最新リリースは2026年11月17日のInbox Zero Desktop 0.1.28で、開発は活発であり、放棄プロジェクトの警告は該当しません。',
-            'READMEによると、製品は単独でも動作する2つの部分で構成されています。メールボックスに対して動作するAIアシスタントと、分割受信トレイ、複数アカウントの一元管理、チームコメントを備えたメールクライアントです。WebとデスクトップのコードはオープンソースでElectronを使っています。iPhoneアプリはSwift製のネイティブアプリでまだオープンソースではなく、Androidアプリは古いReact Nativeアプリとされています。',
+            'READMEによると、製品は単独でも動作する2つの部分で構成されています。メールボックスに対して動作するAIアシスタントと、分割受信トレイ、複数アカウントの一元管理、チームコメントを備えたメールクライアントです。Webとデスクトップのコードは、後述のライセンスの下でGitHubに公開されており、デスクトップアプリはElectronを使っています。iPhoneアプリはSwift製のネイティブアプリでまだオープンソースではなく、Androidアプリは古いReact Nativeアプリとされています。',
             'READMEは、Inbox ZeroをFyxerのオープンソース代替、メールアプリをSuperhumanのオープンソース代替と説明しています。これらは開発元の説明であり、PromptQuorumは製品を実際に比較していません。',
           ],
         },
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         pt: {
           question: 'O que é o Inbox Zero e para quem ele serve?',
           answer:
-            'O Inbox Zero é um assistente de IA que atua dentro da sua conta do Gmail ou do Outlook e, opcionalmente, um app de e-mail próprio. Serve para quem recebe muitos e-mails e aceita que uma IA na nuvem processe suas mensagens, e para equipes técnicas que querem rodar o código aberto por conta própria.',
+            'O Inbox Zero é um assistente de IA que atua dentro da sua conta do Gmail ou do Outlook e, opcionalmente, um app de e-mail próprio. Serve para quem recebe muitos e-mails e aceita que uma IA na nuvem processe suas mensagens, e para equipes técnicas que querem rodar o código publicado por conta própria.',
           bullets: [
             'Funciona com contas do Gmail, do Google Workspace e do Microsoft Outlook.',
             'Acesso: app web hospedado, app de e-mail para desktop, app para iPhone, app para Android ou auto-hospedagem com Docker.',
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**O Inbox Zero é um assistente para Gmail e Outlook mais um cliente de e-mail opcional, feito pela Inbox Zero Inc.**',
             'A política de privacidade informa o endereço da empresa em Newark, Delaware, Estados Unidos. O repositório do GitHub recebeu seu último push em 18 de novembro de 2026, e a versão mais recente no GitHub é o Inbox Zero Desktop 0.1.28, de 17 de novembro de 2026; portanto o desenvolvimento está ativo e nenhum aviso de projeto abandonado se aplica.',
-            'Segundo o README, o produto tem duas partes que funcionam isoladamente: um assistente de IA que atua sobre sua caixa de entrada e um cliente de e-mail com caixa dividida, várias contas em um só lugar e comentários em equipe. O código web e desktop é aberto (o app desktop usa Electron). O app para iPhone é um app nativo em Swift que ainda não é de código aberto, e o app para Android é descrito como um app mais antigo em React Native.',
+            'Segundo o README, o produto tem duas partes que funcionam isoladamente: um assistente de IA que atua sobre sua caixa de entrada e um cliente de e-mail com caixa dividida, várias contas em um só lugar e comentários em equipe. O código web e desktop está publicado no GitHub sob a licença descrita mais abaixo (o app desktop usa Electron). O app para iPhone é um app nativo em Swift que ainda não é de código aberto, e o app para Android é descrito como um app mais antigo em React Native.',
             'O README apresenta o Inbox Zero como uma alternativa de código aberto ao Fyxer e seu app de e-mail como uma alternativa de código aberto ao Superhuman. São descrições do desenvolvedor; a PromptQuorum não comparou os produtos na prática.',
           ],
         },
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         zh: {
           question: 'Inbox Zero 是什么，适合谁？',
           answer:
-            'Inbox Zero 是在您的 Gmail 或 Outlook 账户内工作的 AI 助手，也可选用其自带的邮件应用。适合邮件量大、接受云端 AI 处理邮件的人，以及想自己运行开源代码的技术团队。',
+            'Inbox Zero 是在您的 Gmail 或 Outlook 账户内工作的 AI 助手，也可选用其自带的邮件应用。适合邮件量大、接受云端 AI 处理邮件的人，以及想自己运行已公开代码的技术团队。',
           bullets: [
             '支持 Gmail、Google Workspace 和 Microsoft Outlook 账户。',
             '使用方式：托管网页应用、桌面邮件应用、iPhone 应用、Android 应用，或用 Docker 自建。',
@@ -1707,7 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero 是适用于 Gmail 和 Outlook 的助手，外加可选的邮件客户端，由 Inbox Zero Inc. 开发。**',
             '隐私政策给出的公司地址位于美国特拉华州纽瓦克。GitHub 仓库最近一次推送是 2026 年 11 月 18 日，GitHub 上的最新发布是 2026 年 11 月 17 日的 Inbox Zero Desktop 0.1.28，因此开发仍在进行，不适用项目停更警告。',
-            '按 README 的说法，产品由两个可各自独立使用的部分组成：对您的邮箱运行的 AI 助手，以及带分栏收件箱、多账户集中管理和团队评论的邮件客户端。网页和桌面代码是开源的（桌面应用使用 Electron）。iPhone 应用是 Swift 原生应用，尚未开源；Android 应用被描述为较旧的 React Native 应用。',
+            '按 README 的说法，产品由两个可各自独立使用的部分组成：对您的邮箱运行的 AI 助手，以及带分栏收件箱、多账户集中管理和团队评论的邮件客户端。网页和桌面代码按下文所述的许可证发布在 GitHub 上（桌面应用使用 Electron）。iPhone 应用是 Swift 原生应用，尚未开源；Android 应用被描述为较旧的 React Native 应用。',
             'README 称 Inbox Zero 是 Fyxer 的开源替代品，其邮件应用是 Superhuman 的开源替代品。这些是开发者的说法；PromptQuorum 没有实际比较这些产品。',
           ],
         },
@@ -1923,7 +1923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ar: {
           question: 'ما هو Inbox Zero ولمن يناسب؟',
           answer:
-            'Inbox Zero مساعد ذكاء اصطناعي يعمل داخل حسابك في Gmail أو Outlook، ويتوفر اختياريًا تطبيق بريد خاص به. يناسب من يستقبلون كمًّا كبيرًا من البريد ويقبلون أن يعالج ذكاء اصطناعي سحابي رسائلهم، والفرق التقنية التي تريد تشغيل الشيفرة المفتوحة بنفسها.',
+            'Inbox Zero مساعد ذكاء اصطناعي يعمل داخل حسابك في Gmail أو Outlook، ويتوفر اختياريًا تطبيق بريد خاص به. يناسب من يستقبلون كمًّا كبيرًا من البريد ويقبلون أن يعالج ذكاء اصطناعي سحابي رسائلهم، والفرق التقنية التي تريد تشغيل الشيفرة المنشورة بنفسها.',
           bullets: [
             'يعمل مع حسابات Gmail وGoogle Workspace وMicrosoft Outlook.',
             'طرق الاستخدام: تطبيق ويب مستضاف، أو تطبيق بريد لسطح المكتب، أو تطبيق iPhone، أو تطبيق Android، أو الاستضافة الذاتية عبر Docker.',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero مساعد لـ Gmail وOutlook مع عميل بريد اختياري، تطوّره Inbox Zero Inc.**',
             'تذكر سياسة الخصوصية عنوان الشركة في نيوارك بولاية ديلاوير في الولايات المتحدة. آخر دفعة (push) إلى مستودع GitHub كانت في 18 نوفمبر 2026، وأحدث إصدار على GitHub هو Inbox Zero Desktop 0.1.28 بتاريخ 17 نوفمبر 2026، فالتطوير نشط ولا ينطبق تحذير المشروع المتوقف.',
-            'بحسب ملف README، يتكوّن المنتج من جزأين يعمل كل منهما وحده: مساعد ذكاء اصطناعي يعمل على صندوق بريدك، وعميل بريد بصندوق وارد مقسّم وحسابات متعددة في مكان واحد وتعليقات للفريق. شيفرة الويب وسطح المكتب مفتوحة المصدر (ويستخدم تطبيق سطح المكتب Electron). أما تطبيق iPhone فتطبيق أصلي بلغة Swift لم يُفتح مصدره بعد، ويوصف تطبيق Android بأنه تطبيق أقدم بإطار React Native.',
+            'بحسب ملف README، يتكوّن المنتج من جزأين يعمل كل منهما وحده: مساعد ذكاء اصطناعي يعمل على صندوق بريدك، وعميل بريد بصندوق وارد مقسّم وحسابات متعددة في مكان واحد وتعليقات للفريق. شيفرة الويب وسطح المكتب منشورة على GitHub بموجب الرخصة الموضحة أدناه (ويستخدم تطبيق سطح المكتب Electron). أما تطبيق iPhone فتطبيق أصلي بلغة Swift لم يُفتح مصدره بعد، ويوصف تطبيق Android بأنه تطبيق أقدم بإطار React Native.',
             'يصف README منتج Inbox Zero بأنه بديل مفتوح المصدر لـ Fyxer، وتطبيق البريد فيه بأنه بديل مفتوح المصدر لـ Superhuman. هذه أوصاف الجهة المطوّرة؛ ولم تقارن PromptQuorum المنتجات عمليًا.',
           ],
         },
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ko: {
           question: 'Inbox Zero는 무엇이며 누구에게 적합합니까?',
           answer:
-            'Inbox Zero는 Gmail 또는 Outlook 계정 안에서 동작하는 AI 어시스턴트이며, 선택적으로 자체 이메일 앱도 쓸 수 있습니다. 메일량이 많고 클라우드 AI가 메일을 처리하는 것을 받아들이는 사람과, 오픈소스 코드를 직접 운영하려는 기술 팀에 적합합니다.',
+            'Inbox Zero는 Gmail 또는 Outlook 계정 안에서 동작하는 AI 어시스턴트이며, 선택적으로 자체 이메일 앱도 쓸 수 있습니다. 메일량이 많고 클라우드 AI가 메일을 처리하는 것을 받아들이는 사람과, 공개된 코드를 직접 운영하려는 기술 팀에 적합합니다.',
           bullets: [
             'Gmail, Google Workspace, Microsoft Outlook 계정과 함께 작동합니다.',
             '이용 방식: 호스팅 웹 앱, 데스크톱 이메일 앱, iPhone 앱, Android 앱, 또는 Docker를 이용한 자체 호스팅.',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Inbox Zero는 Gmail·Outlook용 어시스턴트에 선택형 이메일 클라이언트를 더한 제품으로, Inbox Zero Inc.가 만듭니다.**',
             '개인정보 처리방침에는 회사 주소가 미국 델라웨어주 뉴어크로 기재되어 있습니다. GitHub 저장소의 마지막 푸시는 2026년 11월 18일이고 GitHub의 최신 릴리스는 2026년 11월 17일의 Inbox Zero Desktop 0.1.28이므로 개발은 활발하며 방치 프로젝트 경고는 해당되지 않습니다.',
-            'README에 따르면 제품은 각각 단독으로 동작하는 두 부분으로 이루어져 있습니다. 메일함에서 동작하는 AI 어시스턴트와, 분할 받은편지함, 여러 계정의 통합 관리, 팀 댓글을 갖춘 이메일 클라이언트입니다. 웹과 데스크톱 코드는 오픈소스이며 데스크톱 앱은 Electron을 사용합니다. iPhone 앱은 Swift로 만든 네이티브 앱으로 아직 오픈소스가 아니고, Android 앱은 오래된 React Native 앱으로 설명됩니다.',
+            'README에 따르면 제품은 각각 단독으로 동작하는 두 부분으로 이루어져 있습니다. 메일함에서 동작하는 AI 어시스턴트와, 분할 받은편지함, 여러 계정의 통합 관리, 팀 댓글을 갖춘 이메일 클라이언트입니다. 웹과 데스크톱 코드는 아래에 설명한 라이선스에 따라 GitHub에 공개되어 있으며 데스크톱 앱은 Electron을 사용합니다. iPhone 앱은 Swift로 만든 네이티브 앱으로 아직 오픈소스가 아니고, Android 앱은 오래된 React Native 앱으로 설명됩니다.',
             'README는 Inbox Zero를 Fyxer의 오픈소스 대안, 이메일 앱을 Superhuman의 오픈소스 대안이라고 설명합니다. 이는 제작사의 설명이며 PromptQuorum은 제품을 직접 비교하지 않았습니다.',
           ],
         },
