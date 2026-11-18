@@ -436,6 +436,7 @@ https://www.promptquorum.com/power-local-llm/karakeep-review
 https://www.promptquorum.com/power-local-llm/kernelai-review
 https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
 https://www.promptquorum.com/power-local-llm/kilo-code-review
+https://www.promptquorum.com/power-local-llm/kition-review
 https://www.promptquorum.com/power-local-llm/koboldcpp-review
 https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs
 https://www.promptquorum.com/power-local-llm/krita-ai-diffusion-review
@@ -670,6 +671,7 @@ https://www.promptquorum.com/power-local-llm/siyuan-review
 https://www.promptquorum.com/power-local-llm/skales-review
 https://www.promptquorum.com/power-local-llm/smart-connections-review
 https://www.promptquorum.com/power-local-llm/snug-protocol-review
+https://www.promptquorum.com/power-local-llm/sokuji-review
 https://www.promptquorum.com/power-local-llm/solair-ai-review
 https://www.promptquorum.com/power-local-llm/solomd-review
 https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
