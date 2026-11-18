@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 373,
+    "totalCount": 374,
     "capped": true
   },
   "llama.cpp": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 186,
+    "totalCount": 187,
     "capped": true
   },
   "Atomic Chat": {
@@ -10971,6 +10971,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Dyad": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dyad-review",
+        "title": "Dyad Review: Local Open-Source AI App Builder for Your Desktop",
+        "url": "/power-local-llm/dyad-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Skales": {

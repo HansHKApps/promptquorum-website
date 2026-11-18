@@ -621,6 +621,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'scrypted-review':                          'scrypted-review',
   'screenpipe-review':                        'screenpipe-review',
   'openhuman-review':                         'openhuman-review',
+  'dyad-review':                              'dyad-review',
   'skales-review':                           'skales-review',
   'halo-review':                              'halo-review',
   'yovoice-review':                           'yovoice-review',

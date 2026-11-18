@@ -131,6 +131,7 @@ import { article as a_llm_vision_review } from './articles/llm-vision-review'
 import { article as a_picoclaw_review } from './articles/picoclaw-review'
 import { article as a_scrypted_review } from './articles/scrypted-review'
 import { article as a_screenpipe_review } from './articles/screenpipe-review'
+import { article as a_dyad_review } from './articles/dyad-review'
 import { article as a_skales_review } from './articles/skales-review'
 import { article as a_halo_review } from './articles/halo-review'
 import { article as a_yovoice_review } from './articles/yovoice-review'
@@ -885,6 +886,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'picoclaw-review':                               a_picoclaw_review,
   'scrypted-review':                               a_scrypted_review,
   'screenpipe-review':                             a_screenpipe_review,
+  'dyad-review':                                   a_dyad_review,
   'skales-review':                                 a_skales_review,
   'halo-review':                                   a_halo_review,
   'yovoice-review':                                a_yovoice_review,
