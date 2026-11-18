@@ -313,6 +313,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'dyad':                                    'dyad',
   'open-generative-ai':                      'open-generative-ai',
   'labelme':                                 'labelme',
+  'openwork':                                'openwork',
   'skales':                                  'skales',
   'halo':                                    'halo',
   'yovoice':                                 'yovoice',

@@ -643,6 +643,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Open Generative AI review (image/video studio, Muapi API + local engines) — 2026-11-18
   'open-generative-ai-review',
   'labelme-review',
+  'openwork-review',
   'skales-review',
   'halo-review',
   'yovoice-review',
