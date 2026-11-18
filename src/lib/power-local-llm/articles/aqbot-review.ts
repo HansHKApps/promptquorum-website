@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           '**AQBot is worth a look if you juggle several AI providers and want one open-source desktop client with agents, MCP, document search and a local gateway for your coding tools.**',
-          'On paper it covers a lot for a free app: multi-model chat, two kinds of agents, a knowledge base, Skills management and a gateway that speaks the OpenAI, Claude and Gemini formats. The last three releases came 7 to 10 days apart, and the code is public.',
+          'On paper it covers a lot for an app the maker calls free: multi-model chat, two kinds of agents, a knowledge base, Skills management and a gateway that speaks the OpenAI, Claude and Gemini formats. The last three releases came 7 to 10 days apart, and the code is public.',
           'The trade-offs are real: PromptQuorum found no privacy policy, terms or named company on the website, the maker says the macOS build uses the project’s own certificate, the version numbers are below 1.0, and PromptQuorum has not tested anything. Start with a throwaway API key and a test folder, and check what the app does on your network before you rely on it.',
         ],
       },
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client) — a multi-provider desktop client with document chat.',
-          '[Jan Review](/power-local-llm/jan-review) — an open-source, offline-first desktop chat app.',
+          '[Jan Review](/power-local-llm/jan-review) — an open-source desktop chat app that, per its own review, focuses on offline use.',
           '[Newelle Review](/power-local-llm/newelle-review) — a Linux assistant with cloud providers, local models and MCP.',
           '[Local LLM Chat Assistants Compared](/power-local-llm/local-llm-chat-assistants-compared) — chat clients side by side.',
           '[Local LLM Software Directory](/directory) — the full catalogue of local AI tools.',
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           '**AQBot lohnt einen Blick, wenn Sie mehrere KI-Anbieter nutzen und einen quelloffenen Desktop-Client mit Agenten, MCP, Dokumentensuche und lokalem Gateway für Ihre Coding-Tools wünschen.**',
-          'Auf dem Papier deckt er für eine kostenlose App viel ab: Chat mit mehreren Modellen, zwei Arten von Agenten, eine Wissensbasis, Skills-Verwaltung und ein Gateway, das die Formate von OpenAI, Claude und Gemini spricht. Die letzten drei Releases lagen 7 bis 10 Tage auseinander, und der Code ist öffentlich.',
+          'Auf dem Papier deckt er für eine App, die der Hersteller als kostenlos bezeichnet, viel ab: Chat mit mehreren Modellen, zwei Arten von Agenten, eine Wissensbasis, Skills-Verwaltung und ein Gateway, das die Formate von OpenAI, Claude und Gemini spricht. Die letzten drei Releases lagen 7 bis 10 Tage auseinander, und der Code ist öffentlich.',
           'Die Nachteile sind real: PromptQuorum fand auf der Website weder Datenschutzerklärung noch Nutzungsbedingungen oder ein benanntes Unternehmen, laut Hersteller nutzt die macOS-Version ein eigenes Zertifikat des Projekts, die Versionsnummern liegen unter 1.0, und PromptQuorum hat nichts getestet. Beginnen Sie mit einem Wegwerf-API-Schlüssel und einem Testordner, und prüfen Sie, was die App in Ihrem Netzwerk tut, bevor Sie sich darauf verlassen.',
         ],
       },
@@ -569,7 +569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Cherry-Studio-Rezension](/de/local-llms/cherry-studio-ai-desktop-client) — ein Desktop-Client für mehrere Anbieter mit Dokumenten-Chat.',
-          '[Jan-Rezension](/de/power-local-llm/jan-review) — eine quelloffene Desktop-Chat-App mit Offline-Fokus.',
+          '[Jan-Rezension](/de/power-local-llm/jan-review) — eine quelloffene Desktop-Chat-App, die laut eigener Rezension auf die Offline-Nutzung ausgerichtet ist.',
           '[Newelle-Rezension](/de/power-local-llm/newelle-review) — ein Linux-Assistent mit Cloud-Anbietern, lokalen Modellen und MCP.',
           '[Lokale LLM-Chat-Assistenten im Vergleich](/de/power-local-llm/local-llm-chat-assistants-compared) — Chat-Clients nebeneinander.',
           '[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Werkzeuge.',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Avis sur AQBot : client IA de bureau avec agents et passerelle API locale',
     seoTitle: 'Avis sur AQBot : client IA de bureau, passerelle locale',
     intro:
-      'AQBot 0.0.165 est un client IA de bureau à code source ouvert pour macOS, Windows et Linux, qui réunit la discussion avec plusieurs fournisseurs, des agents, des outils MCP, une base de connaissances documentaire et une passerelle API locale pour les outils de programmation. La licence est AGPL-3.0. Ce test s’appuie sur le site officiel et sur le dépôt GitHub avec son README et ses versions, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application en pratique.',
+      'AQBot 0.0.165 est un client IA de bureau à code source ouvert pour macOS, Windows et Linux, qui réunit la discussion avec plusieurs fournisseurs, des agents, des outils MCP, une base de connaissances documentaire et une passerelle API locale pour les outils de programmation. La licence est AGPL-3.0. Cet avis s’appuie sur le site officiel et sur le dépôt GitHub avec son README et ses versions, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application en pratique.',
     metaDescription:
       'AQBot est un client IA de bureau open source avec agents, MCP, discussion sur documents et passerelle API locale. Ce qui est confirmé, ou non.',
     twitterDescription:
@@ -828,8 +828,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           '**AQBot mérite un coup d’œil si vous jonglez avec plusieurs fournisseurs d’IA et voulez un seul client de bureau open source avec agents, MCP, recherche documentaire et passerelle locale pour vos outils de programmation.**',
-          'Sur le papier, il couvre beaucoup pour une application gratuite : discussion multi-modèles, deux types d’agents, une base de connaissances, la gestion des Skills et une passerelle qui parle les formats OpenAI, Claude et Gemini. Les trois dernières versions sont sorties à 7 à 10 jours d’intervalle, et le code est public.',
-          'Les contreparties sont réelles : PromptQuorum n’a trouvé sur le site ni politique de confidentialité, ni conditions d’utilisation, ni société nommée, selon l’éditeur la version macOS utilise un certificat propre au projet, les numéros de version sont inférieurs à 1.0, et PromptQuorum n’a rien testé. Commencez avec une clé API jetable et un dossier de test, et vérifiez ce que l’application fait sur votre réseau avant de vous y fier.',
+          'Sur le papier, il couvre beaucoup pour une application que l’éditeur dit gratuite : discussion multi-modèles, deux types d’agents, une base de connaissances, la gestion des Skills et une passerelle qui parle les formats OpenAI, Claude et Gemini. Les trois dernières versions sont sorties à 7 à 10 jours d’intervalle, et le code est public.',
+          'Les contreparties sont réelles : PromptQuorum n’a trouvé sur le site ni politique de confidentialité, ni conditions d’utilisation, ni société nommée ; selon l’éditeur, la version macOS utilise un certificat propre au projet, les numéros de version sont inférieurs à 1.0, et PromptQuorum n’a rien testé. Commencez avec une clé API jetable et un dossier de test, et vérifiez ce que l’application fait sur votre réseau avant de vous y fier.',
         ],
       },
       sources: {
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures associées',
         items: [
           '[Avis sur Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client) — un client de bureau multi-fournisseurs avec discussion sur documents.',
-          '[Avis sur Jan](/fr/power-local-llm/jan-review) — une application de discussion de bureau open source, pensée pour le hors ligne.',
+          '[Avis sur Jan](/fr/power-local-llm/jan-review) — une application de discussion de bureau open source qui, selon son propre avis, se concentre sur l’usage hors ligne.',
           '[Avis sur Newelle](/fr/power-local-llm/newelle-review) — un assistant Linux avec fournisseurs cloud, modèles locaux et MCP.',
           '[Assistants de discussion LLM locaux comparés](/fr/power-local-llm/local-llm-chat-assistants-compared) — clients de discussion côte à côte.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locaux.',
@@ -1110,8 +1110,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           '**AQBot merece una mirada si manejas varios proveedores de IA y quieres un solo cliente de escritorio de código abierto con agentes, MCP, búsqueda en documentos y una pasarela local para tus herramientas de programación.**',
-          'Sobre el papel cubre mucho para una aplicación gratuita: chat multimodelo, dos tipos de agentes, una base de conocimiento, gestión de Skills y una pasarela que habla los formatos de OpenAI, Claude y Gemini. Las tres últimas versiones salieron con 7 a 10 días de diferencia, y el código es público.',
-          'Las contrapartidas son reales: PromptQuorum no encontró en el sitio web política de privacidad, términos ni empresa con nombre, según el desarrollador la versión de macOS usa un certificado propio del proyecto, los números de versión son inferiores a 1.0 y PromptQuorum no ha probado nada. Empieza con una clave API desechable y una carpeta de prueba, y comprueba qué hace la aplicación en tu red antes de depender de ella.',
+          'Sobre el papel cubre mucho para una aplicación que el desarrollador califica de gratuita: chat multimodelo, dos tipos de agentes, una base de conocimiento, gestión de Skills y una pasarela que habla los formatos de OpenAI, Claude y Gemini. Las tres últimas versiones salieron con 7 a 10 días de diferencia, y el código es público.',
+          'Las contrapartidas son reales: PromptQuorum no encontró en el sitio web política de privacidad, términos ni empresa con nombre; según el desarrollador, la versión de macOS usa un certificado propio del proyecto, los números de versión son inferiores a 1.0 y PromptQuorum no ha probado nada. Empieza con una clave API desechable y una carpeta de prueba, y comprueba qué hace la aplicación en tu red antes de depender de ella.',
         ],
       },
       sources: {
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Reseña de Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client) — un cliente de escritorio multiproveedor con chat con documentos.',
-          '[Reseña de Jan](/es/power-local-llm/jan-review) — una aplicación de chat de escritorio de código abierto, pensada para uso sin conexión.',
+          '[Reseña de Jan](/es/power-local-llm/jan-review) — una aplicación de chat de escritorio de código abierto que, según su propia reseña, se centra en el uso sin conexión.',
           '[Reseña de Newelle](/es/power-local-llm/newelle-review) — un asistente para Linux con proveedores en la nube, modelos locales y MCP.',
           '[Asistentes de chat con LLM locales comparados](/es/power-local-llm/local-llm-chat-assistants-compared) — clientes de chat lado a lado.',
           '[Directorio de software de LLM locales](/es/directory) — el catálogo completo de herramientas de IA locales.',
@@ -1392,8 +1392,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           '**O AQBot vale uma olhada se você alterna entre vários provedores de IA e quer um único cliente para desktop de código aberto com agentes, MCP, busca em documentos e um gateway local para as suas ferramentas de programação.**',
-          'No papel, ele cobre muita coisa para um aplicativo gratuito: chat com vários modelos, dois tipos de agentes, uma base de conhecimento, gerenciamento de Skills e um gateway que fala os formatos da OpenAI, Claude e Gemini. As três últimas versões saíram com 7 a 10 dias de intervalo, e o código é público.',
-          'As contrapartidas são reais: a PromptQuorum não encontrou no site política de privacidade, termos nem empresa identificada, segundo o desenvolvedor a versão para macOS usa um certificado próprio do projeto, os números de versão estão abaixo de 1.0 e a PromptQuorum não testou nada. Comece com uma chave de API descartável e uma pasta de teste, e verifique o que o aplicativo faz na sua rede antes de depender dele.',
+          'No papel, ele cobre muita coisa para um aplicativo que o desenvolvedor chama de gratuito: chat com vários modelos, dois tipos de agentes, uma base de conhecimento, gerenciamento de Skills e um gateway que fala os formatos da OpenAI, Claude e Gemini. As três últimas versões saíram com 7 a 10 dias de intervalo, e o código é público.',
+          'As contrapartidas são reais: a PromptQuorum não encontrou no site política de privacidade, termos nem empresa identificada; segundo o desenvolvedor, a versão para macOS usa um certificado próprio do projeto, os números de versão estão abaixo de 1.0 e a PromptQuorum não testou nada. Comece com uma chave de API descartável e uma pasta de teste, e verifique o que o aplicativo faz na sua rede antes de depender dele.',
         ],
       },
       sources: {
@@ -1415,7 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Análise do Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client) — um cliente para desktop multiprovedor com chat com documentos.',
-          '[Análise do Jan](/pt/power-local-llm/jan-review) — um aplicativo de chat para desktop de código aberto, pensado para uso offline.',
+          '[Análise do Jan](/pt/power-local-llm/jan-review) — um aplicativo de chat para desktop de código aberto que, segundo a própria análise, se concentra no uso offline.',
           '[Análise do Newelle](/pt/power-local-llm/newelle-review) — um assistente para Linux com provedores na nuvem, modelos locais e MCP.',
           '[Assistentes de chat com LLMs locais comparados](/pt/power-local-llm/local-llm-chat-assistants-compared) — clientes de chat lado a lado.',
           '[Diretório de software de LLMs locais](/pt/directory) — o catálogo completo de ferramentas de IA locais.',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '総評',
         content: [
           '**複数のAIプロバイダーを使い分けていて、エージェント、MCP、ドキュメント検索、コーディングツール向けのローカルゲートウェイを備えたオープンソースのデスクトップクライアントが欲しいなら、AQBotは試す価値があります。**',
-          '無料のアプリとしては、紙の上では多くをカバーしています。マルチモデルのチャット、2種類のエージェント、ナレッジベース、Skills管理、OpenAI、Claude、Gemini形式に対応したゲートウェイです。直近3回のリリースは7〜10日間隔で、コードは公開されています。',
+          '開発元が無料としているアプリにしては、紙の上では多くをカバーしています。マルチモデルのチャット、2種類のエージェント、ナレッジベース、Skills管理、OpenAI、Claude、Gemini形式に対応したゲートウェイです。直近3回のリリースは7〜10日間隔で、コードは公開されています。',
           'トレードオフも現実的です。PromptQuorumはサイトでプライバシーポリシー、利用規約、会社名を見つけられず、開発元によるとmacOS版はプロジェクト独自の証明書を使い、バージョン番号は1.0未満で、PromptQuorumは何も試していません。使い捨てのAPIキーとテスト用フォルダで始め、頼る前にアプリがネットワーク上で何をするか確認してください。',
         ],
       },
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Cherry Studioレビュー](/ja/local-llms/cherry-studio-ai-desktop-client) — ドキュメントチャットを備えた、複数プロバイダー対応のデスクトップクライアント。',
-          '[Janレビュー](/ja/power-local-llm/jan-review) — オフライン重視のオープンソースのデスクトップチャットアプリ。',
+          '[Janレビュー](/ja/power-local-llm/jan-review) — オープンソースのデスクトップチャットアプリで、そのレビューによればオフライン利用に重点を置いています。',
           '[Newelleレビュー](/ja/power-local-llm/newelle-review) — クラウドのプロバイダー、ローカルモデル、MCPに対応したLinux向けアシスタント。',
           '[ローカルLLMチャットアシスタント比較](/ja/power-local-llm/local-llm-chat-assistants-compared) — チャットクライアントを並べて比較。',
           '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。',
@@ -1882,8 +1882,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '在多个服务商之间切换，希望在一个应用里并排查看回答、使用分支和消息版本的人。',
-          '使用 Claude Code、Codex CLI、Gemini CLI 或 OpenCode，并希望据开发者称在一处管理密钥、路由和用量日志的开发者。',
-          '希望据开发者称通过本地知识库与私有文档对话的用户。',
+          '使用 Claude Code、Codex CLI、Gemini CLI 或 OpenCode，并希望在一处管理密钥、路由和用量日志（据开发者称可以做到）的开发者。',
+          '希望通过本地知识库与私有文档对话（据开发者称可以做到）的用户。',
           '从 ChatGPT 导出文件，或从 AQBot 可导入备份的 Cherry Studio 和 Kelivo 迁移过来的人。',
           '偏好代码以 AGPL-3.0 公开的客户端的读者。',
         ],
@@ -1956,7 +1956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '**如果你同时使用多个 AI 服务商，想要一个带智能体、MCP、文档搜索和编程工具本地网关的开源桌面客户端，AQBot 值得一看。**',
-          '就一款免费应用而言，它在纸面上覆盖很广：多模型对话、两种智能体、知识库、Skills 管理，以及支持 OpenAI、Claude 和 Gemini 格式的网关。最近三个版本的发布间隔为 7 至 10 天，代码公开。',
+          '就一款开发者称免费的应用而言，它在纸面上覆盖很广：多模型对话、两种智能体、知识库、Skills 管理，以及支持 OpenAI、Claude 和 Gemini 格式的网关。最近三个版本的发布间隔为 7 至 10 天，代码公开。',
           '取舍同样真实：PromptQuorum 在官网上没有找到隐私政策、使用条款或具名公司，据开发者称 macOS 版使用项目自有证书，版本号低于 1.0，PromptQuorum 也没有测试过任何内容。建议先用一次性的 API 密钥和测试文件夹，并在依赖它之前检查应用在你的网络上做了什么。',
         ],
       },
@@ -1979,7 +1979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Cherry Studio 点评](/zh/local-llms/cherry-studio-ai-desktop-client) — 支持文档对话的多服务商桌面客户端。',
-          '[Jan 点评](/zh/power-local-llm/jan-review) — 注重离线使用的开源桌面对话应用。',
+          '[Jan 点评](/zh/power-local-llm/jan-review) — 开源桌面对话应用，据其点评，侧重离线使用。',
           '[Newelle 点评](/zh/power-local-llm/newelle-review) — 支持云端服务商、本地模型和 MCP 的 Linux 助手。',
           '[本地 LLM 对话助手对比](/zh/power-local-llm/local-llm-chat-assistants-compared) — 并排比较各类对话客户端。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
@@ -2238,7 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           '**여러 AI 제공업체를 오가며 쓰고, 에이전트, MCP, 문서 검색, 코딩 도구용 로컬 게이트웨이를 갖춘 오픈소스 데스크톱 클라이언트를 원한다면 AQBot은 살펴볼 만합니다.**',
-          '무료 앱치고는 문서상으로 많은 것을 다룹니다. 멀티 모델 채팅, 두 종류의 에이전트, 지식 베이스, Skills 관리, OpenAI, Claude, Gemini 형식을 지원하는 게이트웨이입니다. 최근 세 번의 릴리스는 7~10일 간격이었고, 코드는 공개되어 있습니다.',
+          '개발사가 무료라고 밝힌 앱치고는 문서상으로 많은 것을 다룹니다. 멀티 모델 채팅, 두 종류의 에이전트, 지식 베이스, Skills 관리, OpenAI, Claude, Gemini 형식을 지원하는 게이트웨이입니다. 최근 세 번의 릴리스는 7~10일 간격이었고, 코드는 공개되어 있습니다.',
           '단점도 분명합니다. PromptQuorum은 웹사이트에서 개인정보 처리방침, 이용 약관, 회사 이름을 찾지 못했고, 개발사에 따르면 macOS 버전은 프로젝트 자체 인증서를 사용하며, 버전 번호는 1.0 미만이고, PromptQuorum은 아무것도 테스트하지 않았습니다. 일회용 API 키와 테스트용 폴더로 시작하고, 의존하기 전에 앱이 네트워크에서 무엇을 하는지 확인하세요.',
         ],
       },
@@ -2261,7 +2261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 글',
         items: [
           '[Cherry Studio 리뷰](/ko/local-llms/cherry-studio-ai-desktop-client) — 문서 채팅을 갖춘 멀티 제공업체 데스크톱 클라이언트.',
-          '[Jan 리뷰](/ko/power-local-llm/jan-review) — 오프라인 중심의 오픈소스 데스크톱 채팅 앱.',
+          '[Jan 리뷰](/ko/power-local-llm/jan-review) — 오픈소스 데스크톱 채팅 앱으로, 해당 리뷰에 따르면 오프라인 사용에 중점을 둡니다.',
           '[Newelle 리뷰](/ko/power-local-llm/newelle-review) — 클라우드 제공업체, 로컬 모델, MCP를 지원하는 Linux 어시스턴트.',
           '[로컬 LLM 채팅 어시스턴트 비교](/ko/power-local-llm/local-llm-chat-assistants-compared) — 채팅 클라이언트를 나란히 비교.',
           '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 카탈로그.',
@@ -2520,7 +2520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           '**يستحق AQBot النظر إذا كنت تتنقل بين عدة مزوّدين للذكاء الاصطناعي وتريد عميلًا مفتوح المصدر لسطح المكتب مع وكلاء وMCP وبحث في المستندات وبوابة محلية لأدوات البرمجة.**',
-          'على الورق يغطي الكثير بالنسبة إلى تطبيق مجاني: دردشة متعددة النماذج، ونوعان من الوكلاء، وقاعدة معرفة، وإدارة Skills، وبوابة تدعم صيغ OpenAI وClaude وGemini. وجاءت الإصدارات الثلاثة الأخيرة بفارق 7 إلى 10 أيام، والشيفرة علنية.',
+          'على الورق يغطي الكثير بالنسبة إلى تطبيق تصفه الشركة المطوّرة بأنه مجاني: دردشة متعددة النماذج، ونوعان من الوكلاء، وقاعدة معرفة، وإدارة Skills، وبوابة تدعم صيغ OpenAI وClaude وGemini. وجاءت الإصدارات الثلاثة الأخيرة بفارق 7 إلى 10 أيام، والشيفرة علنية.',
           'المقايضات حقيقية: لم تجد PromptQuorum على الموقع سياسة خصوصية ولا شروطًا ولا شركة مسمّاة، وبحسب المطوّر تستخدم نسخة macOS شهادة خاصة بالمشروع، وأرقام الإصدارات أقل من 1.0، ولم تجرّب PromptQuorum أي شيء. ابدأ بمفتاح API مؤقت ومجلد تجريبي، وتحقق مما يفعله التطبيق على شبكتك قبل أن تعتمد عليه.',
         ],
       },
@@ -2543,7 +2543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[مراجعة Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client) — عميل لسطح المكتب متعدد المزوّدين مع دردشة مع المستندات.',
-          '[مراجعة Jan](/ar/power-local-llm/jan-review) — تطبيق دردشة مفتوح المصدر لسطح المكتب يركّز على العمل دون اتصال.',
+          '[مراجعة Jan](/ar/power-local-llm/jan-review) — تطبيق دردشة مفتوح المصدر لسطح المكتب يركّز، بحسب مراجعته، على العمل دون اتصال.',
           '[مراجعة Newelle](/ar/power-local-llm/newelle-review) — مساعد لنظام Linux مع مزوّدين سحابيين ونماذج محلية وMCP.',
           '[مساعدو دردشة LLM المحليون مقارنةً](/ar/power-local-llm/local-llm-chat-assistants-compared) — عملاء الدردشة جنبًا إلى جنب.',
           '[دليل برمجيات LLM المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية.',
