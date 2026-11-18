@@ -59,6 +59,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aqbot-review",
+        "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
+        "url": "/power-local-llm/aqbot-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "memex-review",
         "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
         "url": "/power-local-llm/memex-review",
@@ -70,14 +78,6 @@
         "slug": "newelle-review",
         "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
         "url": "/power-local-llm/newelle-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "next-ai-draw-io-review",
-        "title": "Next AI Draw.io Review: Chat-Driven draw.io Diagrams on the Web, Desktop and MCP",
-        "url": "/power-local-llm/next-ai-draw-io-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
@@ -1368,6 +1368,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "aqbot-review",
+        "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
+        "url": "/power-local-llm/aqbot-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
@@ -1408,7 +1416,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Backyard AI": {
@@ -2912,7 +2920,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 48,
+    "totalCount": 49,
     "capped": true
   },
   "Atlarix": {
@@ -8675,6 +8683,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aqbot-review",
+        "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
+        "url": "/power-local-llm/aqbot-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "fablecut-review",
         "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
         "url": "/power-local-llm/fablecut-review",
@@ -8736,17 +8752,9 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "minutes-review",
-        "title": "Minutes Review: Free Open-Source Meeting, Voice Memo and Dictation Memory for AI Agents",
-        "url": "/power-local-llm/minutes-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "MaxKB": {
@@ -11526,6 +11534,20 @@
         "slug": "sokuji-review",
         "title": "Sokuji Review: Live Two-Way Speech Translation for Meetings",
         "url": "/power-local-llm/sokuji-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "AQBot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aqbot-review",
+        "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
+        "url": "/power-local-llm/aqbot-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
