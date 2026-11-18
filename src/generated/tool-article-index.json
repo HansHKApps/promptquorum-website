@@ -2912,7 +2912,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 47,
+    "totalCount": 48,
     "capped": true
   },
   "Atlarix": {
@@ -3323,6 +3323,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -3384,17 +3392,9 @@
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-llm-models",
-        "title": "Uncensored AI Models 2026: The Complete Guide to Unfiltered, Unaligned and Abliterated LLMs",
-        "url": "/power-local-llm/uncensored-llm-models",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 39,
+    "totalCount": 40,
     "capped": true
   },
   "ShellGPT": {
@@ -4999,6 +4999,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "papersgpt-review",
         "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
         "url": "/power-local-llm/papersgpt-review",
@@ -5020,17 +5028,9 @@
         "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-review",
-        "title": "Ollama Review: The One-Command Local LLM Runtime",
-        "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Hermes Agent": {
@@ -8333,6 +8333,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -8396,7 +8404,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Zed": {
@@ -8427,6 +8435,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "stratosort-review",
         "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
         "url": "/power-local-llm/stratosort-review",
@@ -8442,7 +8458,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Lemonade": {
@@ -8637,6 +8653,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ollama-review",
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
@@ -8698,17 +8722,9 @@
         "url": "/power-local-llm/ramen-review",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tolaria-review",
-        "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
-        "url": "/power-local-llm/tolaria-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "MaxKB": {
@@ -10287,6 +10303,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vllm-mlx-review",
         "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
         "url": "/power-local-llm/vllm-mlx-review",
@@ -10294,7 +10318,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "SpeechBrain": {
@@ -11042,6 +11066,92 @@
     ],
     "totalCount": 1,
     "capped": false
+  },
+  "Nativ": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-vs-llama-vs-mistral",
+        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
+        "url": "/local-llms/qwen-vs-llama-vs-mistral",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-amd-mini-pc-local-llm-2026",
+        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
+        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
+        "dateModified": "2026-11-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-android-guide",
+        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-android-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-ai-coding-assistant-local-llm",
+        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
+        "url": "/local-llms/best-ai-coding-assistant-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-beginner-local-llm-models",
+        "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
+        "url": "/local-llms/best-beginner-local-llm-models",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-mini-pcs-local-llm",
+        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
+        "url": "/local-llms/best-mini-pcs-local-llm",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "wechat-bot-local-llm-personal-assistant-2026",
+        "title": "WeChat Bot with Local LLM: Build a Private AI Personal Assistant (2026)",
+        "url": "/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 70,
+    "capped": true
   },
   "Lyonesse": {
     "articles": [

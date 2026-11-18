@@ -887,6 +887,7 @@ const HUB_THEMES: Array<{
       'greencube-review',
       'hanoki-review',
       'jan-review',
+      'nativ-review',
       'iimagine-desktop-review',
       'jarvis-mac-review',
       'llama-app-review',
