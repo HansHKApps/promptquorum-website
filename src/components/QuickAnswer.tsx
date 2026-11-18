@@ -9,6 +9,16 @@ type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 // Content in article data follows GEO Rule 1 (bold-wrapped lead sentence) and
 // occasionally links — this must render them, not print the raw markdown.
 function renderRichText(text: string, lang: Language): ReactNode {
+  // Backtick code spans first, so brackets inside code (`pkg[extra]`) are never cut by the link split below.
+  const codeSegments = text.split(/(`[^`]+`)/g)
+  return codeSegments.map((seg, ci) =>
+    seg.length > 2 && seg.startsWith('`') && seg.endsWith('`')
+      ? <code key={ci} className="bg-slate-800 text-teal-200 px-1 py-0.5 rounded font-mono text-[0.85em] break-all">{seg.slice(1, -1)}</code>
+      : <Fragment key={ci}>{renderRichTextNoCode(seg, lang)}</Fragment>
+  )
+}
+
+function renderRichTextNoCode(text: string, lang: Language): ReactNode {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g)
   return parts.map((part, i) => {
     const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
