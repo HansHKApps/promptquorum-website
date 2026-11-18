@@ -37,7 +37,7 @@
       "images": []
     },
     "local-llm-pc-build-1000": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -52,20 +52,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/pc-build-psu-headroom.svg",
-          "title": "Estimated system power draw vs. PSU capacity: the $1,000 single-GPU build draws ~285W from a 650W PSU (56% headroom); the $2,000 dual-GPU build draws ~475W from an 850W PSU (44% headroom)."
-        },
-        {
-          "url": "/images/pc-build-vram-by-model.svg",
-          "title": "VRAM required by model size at Q4 quantization: 7B needs ~5GB, 14B ~9GB, and 32B ~15GB — all fitting the $1,000 build's 16GB card. 70B needs ~40GB, which requires the $2,000 build's 32GB combined dual-GPU VRAM."
-        },
-        {
-          "url": "/images/pc-build-performance-comparison.svg",
-          "title": "Tokens/sec by model size, Q4 quantization: both builds match at 7B (~60 tok/s) and 14B (~31 tok/s), but the $2,000 dual-GPU build pulls ahead at 32B via tensor-split (~34 vs ~13 tok/s) and is the only one that runs 70B at all (~15 tok/s)."
-        }
-      ]
+      "images": []
     },
     "local-llm-pc-build-2000": {
       "dateModified": "2026-09-01",
@@ -1408,7 +1395,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1533,7 +1520,7 @@
       ]
     },
     "multi-gpu-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1548,24 +1535,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/multi-gpu-local-llms-layer-splitting-en.svg",
-          "title": "Layer splitting across 2 GPUs: 80-layer 70B model distributed (layers 1–40 on GPU 1, layers 41–80 on GPU 2), with PCIe inter-GPU communication adding ~10% overhead (~100 tok/sec on dual RTX 4090)."
-        },
-        {
-          "url": "/images/multi-gpu-local-llms-vllm-setup-en.svg",
-          "title": "vLLM 4-step multi-GPU setup: verify both GPUs visible (nvidia-smi), install vLLM, launch with --tensor-parallel-size 2 flag, verify both GPUs loaded and achieving ~100 tok/sec throughput."
-        },
-        {
-          "url": "/images/multi-gpu-local-llms-performance-table-en.svg",
-          "title": "8-row GPU performance comparison for 70B models: single RTX 4090 cannot fit 70B, dual RTX 4090 delivers 100 tok/sec ($4,600), RTX 5090 32GB runs 70B Q4 at 40–50 tok/sec ($2,000), dual RTX 5090 handles 405B Q4 at 25–35 tok/sec ($4,000)."
-        },
-        {
-          "url": "/images/multi-gpu-local-llms-when-to-use-en.svg",
-          "title": "Multi-GPU decision matrix: use if running 70B+ models, serving 50+ concurrent users, or needing 100+ tok/sec for production; skip if not yet purchased 2nd GPU or doing experimentation."
-        }
-      ]
+      "images": []
     },
     "laptop-vs-desktop-local-llm": {
       "dateModified": "2026-11-06",
@@ -7119,7 +7089,7 @@
       ]
     },
     "rtx-3090-local-llm-buy-or-rent": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-09-01",
       "hasSections": true,
@@ -15923,7 +15893,7 @@
       "images": []
     },
     "bestGpuUnder600LocalLlm": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -16553,7 +16523,7 @@
       "images": []
     },
     "bestGpuUnder1000LocalLlm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
