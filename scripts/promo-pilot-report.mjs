@@ -5,11 +5,12 @@
 // page-group pairs. Winner rule: see scripts/lib/promo-report-core.mjs (analyse).
 //
 // Inputs (pick one):
-//   --input file.json   normalized counts: {"pilot":{"pageviews":{"/path":n},"events":{"promo_view":{"/path":n},...}},
-//                       "baseline":{...same shape...}}   (events keyed by their `page` / `source_page` prop)
+//   --input file.json   normalized counts: {"pilot":{"pageviews":{"/path":n},"events":{"directory_promo_view":{"/path":n},"directory_promo_landing":{"P1":n},...}},
+//                       "baseline":{...same shape...}}   (events keyed by their `page` / `source_page` prop; *_promo_landing keyed by their `placement` prop)
 //   --umami             read the counts from the Umami Cloud API. Needs env UMAMI_API_KEY (+ optional UMAMI_WEBSITE_ID,
 //                       UMAMI_API_URL). UNVERIFIED against the live API: no API key was available when this was written.
-// Options: --launch YYYY-MM-DD (default 2026-11-07) --end YYYY-MM-DD (default today, capped at launch+21d)
+// Options: --launch YYYY-MM-DD (the DEPLOY date of the renamed events: the window restarts there; default 2026-11-07 is the old launch)
+//          --end YYYY-MM-DD (default today, capped at launch+56d: Ask Hans runs 8 weeks, MCP / Power Mode / Directory are read at 4 weeks = --end launch+28d)
 //          --baseline-days 28  --min-views 1000  --min-clicks 20  --out report.md  --json out.json  --reps 2000
 import fs from 'node:fs'
 import path from 'node:path'
@@ -25,7 +26,7 @@ const addDays = (d, n) => new Date(d.getTime() + n * 86400000)
 
 const launch = String(arg('launch', '2026-11-07'))
 const today = iso(new Date())
-const endCap = iso(addDays(day(launch), 21))
+const endCap = iso(addDays(day(launch), 56))
 const end = String(arg('end', today < endCap ? today : endCap))
 const baseDays = Number(arg('baseline-days', 28))
 const baseStart = iso(addDays(day(launch), -baseDays)), baseEnd = iso(addDays(day(launch), -1))
@@ -38,8 +39,12 @@ const groups = Object.entries(PILOT_GROUPS).map(([p, e]) => ({ path: p, placemen
 const paths = [...new Set(groups.flatMap((g) => [g.path, g.control].filter(Boolean)))]
 
 // ---- data ---------------------------------------------------------------------------------------------------------
+// Promo events are `<target>_promo_<view|click|open|landing>`; the old promo_view/promo_click/promo_open are retired and not read.
+const TARGETS = ['ask_hans', 'power_mode', 'directory', 'mcp']
 const EVENTS = [
-  ['promo_view', 'page'], ['promo_click', 'page'], ['promo_open', 'page'],
+  ...TARGETS.flatMap((t) => [[`${t}_promo_view`, 'page'], [`${t}_promo_click`, 'page']]),
+  ['ask_hans_promo_open', 'page'], ['power_mode_promo_open', 'page'],
+  ['directory_promo_landing', 'placement'], ['mcp_promo_landing', 'placement'],
   ['ask_hans_question', 'source_page'], ['power_report_started', 'source_page'], ['power_report_completed', 'source_page'], ['directory_app_view', 'source_page'],
 ]
 
@@ -90,12 +95,13 @@ const L = []
 L.push(`# Promo pilot report`, '', `Pilot window: ${launch} to ${end}. Baseline: ${baseStart} to ${baseEnd} (${baseDays} days before launch). Generated ${today}.`, '',
   `Thresholds: at least ${minViews} views and ${minClicks} clicks per cell (MCP and Power Mode are judged pooled over placements). Intervals: 95% bootstrap over matched page-group pairs (${reps} resamples). Median CTR of eligible cells: ${pct(res.medianCtr)}.`, '',
   '## Cells (target / placement)', '',
-  '| Cell | Groups (pairs) | Page views | Slot views | Clicks | Reach | CTR | Open rate | Usage / click | Usage / view | Verdict |', '|--|--|--|--|--|--|--|--|--|--|--|')
-for (const c of res.cells) L.push(`| ${c.key} | ${c.groups} (${c.pairs}) | ${c.pv} | ${c.views} | ${c.clicks} | ${pct(c.reach)} | ${pct(c.ctr)} | ${pct(c.openRate)} | ${f(c.usagePerClick, 3)} | ${f(c.usagePerView, 4)} | ${c.verdict} |`)
+  '| Cell | Groups (pairs) | Page views | Slot views | Clicks | Landings | Landing / click | Reach | CTR | Open rate | Usage / click | Usage / view | Verdict |', '|--|--|--|--|--|--|--|--|--|--|--|--|--|')
+for (const c of res.cells) L.push(`| ${c.key} | ${c.groups} (${c.pairs}) | ${c.pv} | ${c.views} | ${c.clicks} | ${c.landings ?? 'n/a'} | ${pct(c.landingRate)} | ${pct(c.reach)} | ${pct(c.ctr)} | ${pct(c.openRate)} | ${f(c.usagePerClick, 3)} | ${f(c.usagePerView, 4)} | ${c.verdict} |`)
 L.push('', '## Headline: incremental adoption (usage events per 1,000 page views, treatment minus matched control)', '',
   '| Cell | Pilot window | 28 days before launch | Pilot minus before (difference in differences) |', '|--|--|--|--|')
 for (const c of res.cells) L.push(`| ${c.key} | ${ci(c.incr)} | ${ci(c.incrBase)} | ${c.did ? `${f(c.did.est)} [${f(c.did.lo)}, ${f(c.did.hi)}] (n=${c.did.n})` : 'n/a'} |`)
-L.push('', 'Usage event per product: Ask Hans = `ask_hans_question`, Power Mode = `power_report_started`, Directory = `directory_app_view`. MCP has no usage event on the site (MCP calls happen in the visitor\'s own AI): MCP is judged on reach and CTR only.', '',
+L.push('', 'Landings (Directory and MCP only) = `directory_promo_landing` / `mcp_promo_landing`, fired on /directory and /mcp-stats when the URL has `via=promo_<target>_<placement>`; Landing / click = landings / clicks of the same cell (MCP pooled over placements). Ask Hans and Power Mode open in place (see Open rate).', '',
+  'Usage event per product: Ask Hans = `ask_hans_question`, Power Mode = `power_report_started`, Directory = `directory_app_view`. MCP has no usage event on the site (MCP calls happen in the visitor\'s own AI): MCP is judged on reach and CTR only.', '',
   '## Per locale (cells with at least 100 slot views; the rest pooled)', '', '| Locale | Slot views | Clicks | CTR |', '|--|--|--|--|')
 const lt = localeTable(groups, pilot)
 for (const r of lt.rows.sort((a, b) => b.views - a.views)) L.push(`| ${r.locale} | ${r.views} | ${r.clicks} | ${pct(r.ctr)} |`)

@@ -69,11 +69,16 @@ import { article as a_dayflow_review } from './articles/dayflow-review'
 import { article as a_ai_notebook_review } from './articles/ai-notebook-review'
 import { article as a_univocal_review } from './articles/univocal-review'
 import { article as a_openmausbot_review } from './articles/openmausbot-review'
+import { article as a_stirling_pdf_review } from './articles/stirling-pdf-review'
 import { article as a_stratosort_review } from './articles/stratosort-review'
 import { article as a_sprich_review } from './articles/sprich-review'
 import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-flow-review'
 import { article as a_sablate_review } from './articles/sablate-review'
 import { article as a_cocoindex_review } from './articles/cocoindex-review'
+import { article as a_opendataloader_pdf_review } from './articles/opendataloader-pdf-review'
+import { article as a_docling_review } from './articles/docling-review'
+import { article as a_marker_review } from './articles/marker-review'
+import { article as a_mineru_review } from './articles/mineru-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -114,6 +119,7 @@ import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_fullmoon_review } from './articles/fullmoon-review'
 import { article as a_reins_review } from './articles/reins-review'
+import { article as a_conduit_review } from './articles/conduit-review'
 import { article as a_phantasm_review } from './articles/phantasm-review'
 import { article as a_openvoiceos_review } from './articles/openvoiceos-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
@@ -122,6 +128,14 @@ import { article as a_ramen_review } from './articles/ramen-review'
 import { article as a_llm_vision_review } from './articles/llm-vision-review'
 import { article as a_picoclaw_review } from './articles/picoclaw-review'
 import { article as a_scrypted_review } from './articles/scrypted-review'
+import { article as a_screenpipe_review } from './articles/screenpipe-review'
+import { article as a_skales_review } from './articles/skales-review'
+import { article as a_halo_review } from './articles/halo-review'
+import { article as a_yovoice_review } from './articles/yovoice-review'
+import { article as a_open_science_desktop_review } from './articles/open-science-desktop-review'
+import { article as a_cozyclay_review } from './articles/cozyclay-review'
+import { article as a_papersgpt_review } from './articles/papersgpt-review'
+import { article as a_solomd_review } from './articles/solomd-review'
 import { article as a_lyonesse_review } from './articles/lyonesse-review'
 import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
@@ -790,11 +804,16 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ai-notebook-review':                            a_ai_notebook_review,
   'univocal-review':                               a_univocal_review,
   'openmausbot-review':                            a_openmausbot_review,
+  'stirling-pdf-review':                           a_stirling_pdf_review,
   'stratosort-review':                             a_stratosort_review,
   'sprich-review':                                 a_sprich_review,
   'weesper-neon-flow-review':                      a_weesper_neon_flow_review,
   'sablate-review':                                a_sablate_review,
   'cocoindex-review':                              a_cocoindex_review,
+  'opendataloader-pdf-review':                     a_opendataloader_pdf_review,
+  'docling-review':                                a_docling_review,
+  'marker-review':                                 a_marker_review,
+  'mineru-review':                                 a_mineru_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
@@ -835,6 +854,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'murmur-review':                                 a_murmur_review,
   'fullmoon-review':                               a_fullmoon_review,
   'reins-review':                                  a_reins_review,
+  'conduit-review':                                a_conduit_review,
   'phantasm-review':                               a_phantasm_review,
   'openvoiceos-review':                            a_openvoiceos_review,
   'hillnote-review':                               a_hillnote_review,
@@ -843,6 +863,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llm-vision-review':                             a_llm_vision_review,
   'picoclaw-review':                               a_picoclaw_review,
   'scrypted-review':                               a_scrypted_review,
+  'screenpipe-review':                             a_screenpipe_review,
+  'skales-review':                                 a_skales_review,
+  'halo-review':                                   a_halo_review,
+  'yovoice-review':                                a_yovoice_review,
+  'open-science-desktop-review':                   a_open_science_desktop_review,
+  'cozyclay-review':                              a_cozyclay_review,
+  'papersgpt-review':                             a_papersgpt_review,
+  'solomd-review':                                a_solomd_review,
   'lyonesse-review':                               a_lyonesse_review,
   'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,

@@ -1,0 +1,1532 @@
+{
+  "id": "pq-test-stratosort-2026-11-17",
+  "hero": "stratosort-welcome-screen-guided-mode",
+  "date_human": "2026年11月17日",
+  "captured": "测试日期和结束时间未记录；截图中的文件在新名称里带有日期 2026-11-17，因此测试是在当天或之后进行的；本页的 ID 和日期使用草稿日期 2026-11-17",
+  "standard_version": "0.2",
+  "locale": "zh",
+  "app": {
+    "name": "StratoSort",
+    "slug": "stratosort",
+    "vendor": "Ben Kennedy (per the founder statement in the directory)",
+    "category": "本地 AI 文件整理工具，Mac",
+    "platform": "macOS（Apple 芯片）",
+    "pricing_url": "https://stratosort.com"
+  },
+  "title": "24 GB 内存 M4 Pro Mac 上的 StratoSort：移动文件之前的试运行、参差不齐的匹配，以及通过 MCP 连接另一款本地 AI 应用",
+  "page_title": "StratoSort 测试",
+  "dek": "测试者第一次尝试没有成功之后的第二次测试：引导式设置、试运行、逐个文件审核和完整的整理运行，一份被读成 300 个字符的电子表格，以及从另一款本地 AI 应用通过 MCP 查询文档索引。",
+  "seo": {
+    "title": "StratoSort 实测：Mac 文件整理与 MCP",
+    "description": "StratoSort 在 24 GB M4 Pro Mac 上的实测：试运行、逐个审核、286 个文件的移动、参差不齐的匹配，以及通过 MCP 连接 Loci。"
+  },
+  "faq": [
+    [
+      "StratoSort 会在你批准之前移动文件吗？",
+      "在这次测试中不会。五个文件的试运行显示“Nothing has moved”，移动之前每个文件都有一张审核卡片。286 个文件移动之前是否每个文件都审核过，未记录。",
+      "observed"
+    ],
+    [
+      "StratoSort 对测试文件的整理效果如何？",
+      "参差不齐。试运行中五个文件里有两个被分到了文件夹；在审核步骤中，一个横幅统计出 126 个未分类文件；两个 Search Console 导出文件进入了兜底类别，尽管最接近的文件夹已经指明。没有做准确度统计。",
+      "measured"
+    ],
+    [
+      "其他 AI 应用能通过 MCP 查询 StratoSort 吗？",
+      "能，在这次测试中如此。Loci 应用连接成功，列出了四个工具，并从 list_smart_folders 和 search_documents 返回了结果。测试者不得不自己摸索出连接方式；get_document_summary 和 chat_with_documents 没有被调用。",
+      "observed"
+    ],
+    [
+      "StratoSort 会重命名文件吗？",
+      "会，在移动列表中如此：原来的文件名被带日期的小写文件名取代。结果没有在磁盘上核对，改写功能也没有试用。",
+      "observed"
+    ],
+    [
+      "StratoSort 是私密且可离线使用的吗？",
+      "欢迎界面说它是私密的、在设备本地运行，创始人的说明称无需账号、无遥测。没有检查网络流量，也没有试过离线运行，因此这一点未经核实。",
+      "vendor-claim"
+    ],
+    [
+      "哪些内容没有测试？",
+      "撤销、复制模式、Dashboard 模式、AI 与模型设置、文档对话工具、用时、内存、离线使用和卸载。应用版本和所用模型没有记录。",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-17",
+  "started": "2026-11-17",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "StratoSort。安装程序上的标签是“StratoSort Stack”；窗口标题是“StratoSort”。",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录。PromptQuorum 目录列出 5.1.2（2026-11-01 的 GitHub 发布），核查于 2026-11-10；测试者使用的版本可能不同。",
+      null
+    ],
+    [
+      "来源",
+      "未记录。目录列出 stratosort.com 和 GitHub 仓库 iLevyTate/StratoSortStack。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans（PromptQuorum 创始人）",
+      "observed"
+    ],
+    [
+      "开始 / 结束",
+      "未写明。截图中的文件在新名称里带有日期 2026-11-17，因此测试是在当天或之后进行的；草稿日期与之相同（推断）。结束时间未记录。",
+      "assumption"
+    ],
+    [
+      "硬件",
+      "Apple M4 Pro，24 GB 统一内存，据测试者所述。",
+      "tester-view"
+    ],
+    [
+      "系统",
+      "macOS 27，据测试者所述。",
+      "tester-view"
+    ],
+    [
+      "测试原因",
+      "第一次尝试没有成功。测试者写信给开发者，然后按引导步骤再试一次。他称该应用偏向商务用途，并关注自己打算创办的公司的文件整理。",
+      "tester-view"
+    ],
+    [
+      "目标",
+      "没有写明目标。笔记显示的是把一组准备好的测试文件整理到输出文件夹，审核并移动这些文件，以及把应用连接到另一款本地 AI 应用 Loci。",
+      null
+    ],
+    [
+      "测试数据",
+      "约 286 个文件（试运行 5 个，之后分析了 281 个）。出现的内容类型：Search Console Excel 导出文件、Clarity CSV 导出文件、Word 测试笔记、图片。出现的智能文件夹：Pictures、Leftovers、excel GSc、Clarity，以及兜底的 Uncategorized。输出到外置 SSD。",
+      "observed"
+    ],
+    [
+      "第二个应用",
+      "MCP 客户端是 Loci，据测试者所述（口述的笔记里写成“Low key”和“Loki”）。客户端界面没有显示它的名称。",
+      "tester-view"
+    ],
+    [
+      "AI 辅助",
+      "本报告由 Claude 根据测试者的 Word 笔记和 22 张截图起草。笔记很可能是语音口述的（假设）。",
+      "assumption"
+    ],
+    [
+      "利益披露",
+      "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。StratoSort 于 2026-11-10 加入目录，附有一篇依据厂商页面和开发者提供的创始人说明、由 AI 撰写的评测，并非来自上手测试。测试者与开发者保持联系，开发者回应了测试者的第一次尝试。StratoSort 从本站获得点击。笔记中没有付款或赞助的记录。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。StratoSort 于 2026-11-10 加入目录，附有一篇依据厂商页面和开发者提供的创始人说明、由 AI 撰写的评测，并非来自上手测试。测试者与开发者保持联系，开发者回应了测试者的第一次尝试。StratoSort 从本站获得点击。笔记中没有付款或赞助的记录。",
+  "verdict": {
+    "general": "按其自身描述，这是一款在设备本地运行的文件整理工具，带有测试者看得到的保护措施：试运行、任何文件移动之前的逐个审核，以及应用称只读的 MCP 连接。在这次测试中，分析、审核和文件移动都运行了（移动的结束情况未记录），MCP 连接也能从另一款本地 AI 应用使用，但匹配结果参差不齐，需要调整。撤销、复制模式、文档对话工具、所用模型、离线运行、隐私声明和卸载均未测试。",
+    "fit": "测试者认为它是一款有前景的工具，需要小规模测试和反复微调，并打算明年有更多商务文档时再测一次。他认为 MCP 连接（也许再加上一层检索）是值得关注的方向。没有写明是否继续使用的决定。"
+  },
+  "scores": [
+    [
+      "安装",
+      null,
+      "看到了安装窗口；大小、模型下载和设置用时未记录。"
+    ],
+    [
+      "引导与模型选择",
+      3,
+      "引导模式和试运行有帮助；测试者不清楚文件夹的概念，读取整个文件夹失败。"
+    ],
+    [
+      "核心功能",
+      3,
+      "逐个审核、重命名和移动可用；匹配参差不齐，电子表格只读到一部分。"
+    ],
+    [
+      "引导与迭代",
+      3,
+      "有文件夹描述提示、Details 视图和逐个文件的选择；预览步骤不能交互。"
+    ],
+    [
+      "集成（MCP）",
+      3,
+      "已连接，两个读取工具可用；设置需要反向摸索。"
+    ],
+    [
+      "性能",
+      null,
+      "分析和移动用时未记录。"
+    ],
+    [
+      "文档",
+      null,
+      "只有应用内的文字和测试者提到的开发者指引；两者都没有细读。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是报告作者根据测试者的证据提出的建议；n/a 表示未测试，不是零分。",
+  "tldr": [
+    [
+      "observed",
+      "StratoSort 是一款桌面应用，为文件建议名称和文件夹，并让用户在任何文件移动之前审核。测试者在 24 GB 的 Apple M4 Pro 上运行它，这是第一次尝试没有成功之后的第二次测试。"
+    ],
+    [
+      "measured",
+      "五个文件的试运行没有移动任何文件，并把两个文件分到了文件夹，置信度分别为 43 % 和 65 %。再分析 281 个文件之后，一个横幅统计出 126 个未分类文件。"
+    ],
+    [
+      "observed",
+      "一个 Excel 文件被读成 300 个字符，两个 Search Console 导出文件最终进入兜底类别，尽管最接近的文件夹已经指明。"
+    ],
+    [
+      "observed",
+      "把 286 个文件移动到外置 SSD 时，文件被重命名为带日期的小写文件名。移动的结束情况未记录。"
+    ],
+    [
+      "observed",
+      "通过 MCP，Loci 应用列出了智能文件夹，并按“Clarity data”搜索了文档；测试者不得不自己摸索出连接方式。"
+    ],
+    [
+      "vendor-claim",
+      "应用称它是私密的、在设备本地运行，并称其 MCP 工具只读。网络流量、离线使用、撤销、复制模式、内存、用时和卸载均未测试。"
+    ]
+  ],
+  "quotes": [
+    "You need to start small with some files and then check it, check it, check it, and fine-tune all the rules.",
+    "Having worked in consulting, I know the worst thing is always keeping an order in file systems, and then afterwards finding something."
+  ],
+  "quote_note": "测试者笔记，由语音口述略作整理。两句都是他的个人判断，不是测量结果。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "先试运行",
+      "五个文件，没有移动任何文件。",
+      "stratosort-five-file-dry-run-where-files-would-go",
+      "chapter-dryrun"
+    ],
+    [
+      "被读成 300 个字符的电子表格",
+      "一个 Excel 文件的 Details 视图。",
+      "stratosort-extracted-text-300-characters",
+      "chapter-review"
+    ],
+    [
+      "指明了最接近的匹配，文件仍未分类",
+      "兜底类别中的两个 Excel 导出文件。",
+      "stratosort-review-cards-fallback-no-folder-match",
+      "chapter-review"
+    ],
+    [
+      "根据网站名称建议的文件夹",
+      "审核步骤中的横幅。",
+      "stratosort-126-files-uncategorized-banner",
+      "chapter-review"
+    ],
+    [
+      "移动列表中的新名称",
+      "移动的计划操作。",
+      "stratosort-organize-286-files-planned-operations",
+      "chapter-move"
+    ],
+    [
+      "另一款本地应用向 Strato 提问",
+      "通过 MCP 得到的搜索结果。",
+      "stratosort-mcp-search-result-clarity-folder-files",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "此前的尝试、安装程序与首次启动",
+      "items": [
+        [
+          "observed",
+          "这是测试者的第二次测试。第一次他没有读指引就一路点过去，觉得应用不言自明，并认为自己在设置上犯了错误。具体哪里出了问题未记录。",
+          null
+        ],
+        [
+          "observed",
+          "随后他写信给开发者；据他所说，开发者审阅了这些意见，并在几天内处理了一些问题。没有显示任何消息；问题和版本均未记录。",
+          null
+        ],
+        [
+          "observed",
+          "安装窗口显示应用图标，标签是“StratoSort Stack”，旁边是“应用程序”的快捷方式。安装包大小未记录。",
+          "stratosort-dmg-window-app-and-applications"
+        ],
+        [
+          "observed",
+          "应用打开后是欢迎界面：“Step 1 of 5, Start securely”，有 Guided 和 Dashboard 两种模式，主按钮是“Organize files now, recommended for a first session”，侧边按钮用于 AI 与模型设置和智能文件夹。他这次想跟着说明走，所以选了引导步骤。通知铃铛显示一个数字；其内容未记录。",
+          "stratosort-welcome-screen-guided-mode"
+        ],
+        [
+          "observed",
+          "两张卡片提供其他起点：Guided steps 和 Dashboard。",
+          "stratosort-start-options-guided-steps-or-dashboard"
+        ],
+        [
+          "third-party",
+          "提供、选择和下载了哪些模型，以及它们的大小和设置用时，均未记录。目录列出基础模型约 7 GB。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-dryrun",
+      "title": "文件夹与试运行",
+      "items": [
+        [
+          "observed",
+          "测试者让应用读取整个文件夹，它没有读取，于是他改为逐个提供文件。文件夹、任何提示信息和原因均未记录；没有截图。",
+          null
+        ],
+        [
+          "tester-view",
+          "他在 Finder 中建好了文件夹结构，即一个输入文件夹加若干输出文件夹，并觉得这比在应用里做更容易。应用讲的是带描述的智能文件夹，而他想的是输入和输出文件夹。应用内确实可以创建文件夹（见审核步骤中的横幅）。",
+          null
+        ],
+        [
+          "observed",
+          "输出文件夹在外置 SSD 上，移动列表和 MCP 表格都显示了这一点。测试者说第一次尝试时它没有被接受；原因未记录。",
+          null
+        ],
+        [
+          "measured",
+          "对五个文件做的第一次测试显示了每个文件会去哪里；屏幕上写着“Nothing has moved”。两个文件被分配了：一个 Clarity CSV 分到 Clarity，置信度 43 %；一张图片分到 Pictures，置信度 65 %。三个进入 Uncategorized，每个都指明了最接近的文件夹：Clarity、Leftovers 和 excel GSc。他自己的审核笔记文件就在这三个之中。",
+          "stratosort-five-file-dry-run-where-files-would-go"
+        ],
+        [
+          "tester-view",
+          "他并不满意，希望在这一步有一个表单来确认或否决每个结果，而不是回去编辑文件夹再重新运行。屏幕提供“Edit Smart Folders”和“Analyze the other 281 files”；逐个文件的选择出现在后面的审核步骤中。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-review",
+      "title": "分析与审核",
+      "items": [
+        [
+          "measured",
+          "另外 281 个文件已被分析。进度卡片显示“Analyzing 5 of 281 files, 2 % complete”、正在处理的文件和一个 Stop 按钮。分析总用时未记录。",
+          "stratosort-analysis-progress-5-of-281-files"
+        ],
+        [
+          "observed",
+          "在审核步骤中，每个文件有一张卡片，包含复选框、可编辑的建议名称、类别下拉菜单（最佳匹配加其他建议）、带原因的“Needs review”说明、置信度条和 Details 链接。移动之前是否审核了每个文件，未记录。",
+          "stratosort-category-dropdown-suggested-folders"
+        ],
+        [
+          "observed",
+          "Details 显示项目、用途、日期、文档类型、方法、长度、摘要、关键词、推理和提取的文本。测试者把这看作微调整理结果的途径，并说有些数据被提取出来，保存在他所说的数据库里；屏幕上只显示了提取出的字段。",
+          "stratosort-file-analysis-details-metadata"
+        ],
+        [
+          "observed",
+          "对于一个 Excel 文件，提取的文本是 300 个字符，在列标题和几行数据之后以省略号结尾。这个限制是否适用于其他文件类型或分类步骤，不得而知（假设：它可能解释了电子表格上匹配较弱的原因）。",
+          "stratosort-extracted-text-300-characters"
+        ],
+        [
+          "observed",
+          "两个各 6 KB、以网站 URL 命名的 Search Console Excel 导出文件得到了描述性的建议名称，却进入了兜底类别，尽管说明里指明测试者为它们建的文件夹“excel GSc”是最接近的。原因没有查明。",
+          "stratosort-review-cards-fallback-no-folder-match"
+        ],
+        [
+          "measured",
+          "一个横幅写着“126 files are uncategorized”和“103 are from Promptquorum. Want a Smart Folder for them?”，带有 Create folder、Different folder 和 Reanalyze 按钮。这个建议似乎是依据文件名中的网站名称，而不是内容类型（假设）。",
+          "stratosort-126-files-uncategorized-banner"
+        ],
+        [
+          "tester-estimate",
+          "测试者起初觉得匹配度有 70% 到 80%，看到未分类数量后改为约 40% 未匹配。以 286 个文件为基数，126 个相当于 44 %；这是计算结果，并假设两个数字指的是同一批文件。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-move",
+      "title": "移动文件",
+      "items": [
+        [
+          "observed",
+          "“Organize 286 files, moving files to their destinations”列出了带绿色对勾的计划操作和外置 SSD 上的路径；在移动完成或被取消之前，步骤导航处于暂停状态。测试者自己的测试笔记文档也在这些文件之中。移动的结束情况未记录。",
+          "stratosort-organize-286-files-planned-operations"
+        ],
+        [
+          "observed",
+          "移动列表把原来的文件名换成了带日期的小写文件名，例如“Gesamtansicht.jpeg”变成了“gesamtansicht-2026-10-20.jpeg”，“StratoSort hands on review.docx”变成了“stratosort-review-2026-11-12.docx”。测试者写道没有试过重命名；列表显示这次运行中已经应用了重命名。结果没有在磁盘上核对，日期的来源也没有显示。",
+          null
+        ],
+        [
+          "measured",
+          "一张 126 KB 的 WhatsApp 图片被单独添加，得到一张卡片，包含建议名称、最佳匹配 Pictures 和 64 % 的置信度。测试者说，电脑上任何位置的单个文件都可以添加并和其他文件一起整理，他很看重这一点。",
+          "stratosort-single-file-card-whatsapp-image-64-confidence"
+        ],
+        [
+          "observed",
+          "第二张截图写着“Organize 75 files”；它与 286 个文件那次运行的关系未记录，两者的结束情况也都没有显示。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "通过 MCP 连接另一款本地 AI 应用",
+      "items": [
+        [
+          "observed",
+          "应用有一个 MCP 界面，列出四个工具：search_documents、chat_with_documents、get_document_summary 和 list_smart_folders，并有按钮可复制适用于 Claude Desktop、Cursor 和 Zed 的设置。",
+          "stratosort-mcp-tool-list-and-client-setup"
+        ],
+        [
+          "vendor-claim",
+          "该界面上的一行文字写道：“These tools only read. None of them moves, renames or deletes files.”",
+          null
+        ],
+        [
+          "observed",
+          "测试者说，他不得不“backwards engineer”（反向摸索）与另一款本地 AI 应用的连接。哪里失败了、他改了什么，均未记录。",
+          null
+        ],
+        [
+          "observed",
+          "客户端 Loci 在一个本地地址上报告“Strato is connected and offers 4 tools”，并对每个工具说明它没有说明是否能更改内容。这些工具没有只读标记是一个假设；应用称它们只读。",
+          "stratosort-mcp-connected-in-client-four-tools"
+        ],
+        [
+          "observed",
+          "Loci 的服务器列表显示 PromptQuorum 有 27 个工具，Strato 有 4 个工具，两者都已连接。",
+          "stratosort-mcp-servers-list-in-client"
+        ],
+        [
+          "measured",
+          "list_smart_folders 返回了一张表，包含文件夹、文件数、描述和目标路径。可见的行：Uncategorized 53、Pictures 8、excel GSc 196。这个 53 与之前在审核步骤中看到的 126 不一致；两者之间相隔多久未记录，因此没有对账。",
+          "stratosort-mcp-list-smart-folders-result-table"
+        ],
+        [
+          "observed",
+          "搜索之前，Loci 询问“Allow Strato to run search_documents?”，查询词为“Clarity data”，并显示一个本地地址，按钮为 Allow once 和 Decline。",
+          "stratosort-mcp-search-documents-permission-prompt"
+        ],
+        [
+          "observed",
+          "以“Clarity data”为查询词的 search_documents 返回了 Clarity 文件夹中的四个 CSV 文件，每个都有一行描述。客户端的回复猜测来源是 Microsoft Clarity 或类似工具。与文件内容对照的正确性没有核对；回复在可见区域下方继续。",
+          "stratosort-mcp-search-result-clarity-folder-files"
+        ],
+        [
+          "tester-view",
+          "他说它看起来还不像检索系统，而是朝着可供外部工具查询的数据集发展。他只调用了四个工具中的两个；get_document_summary 和 chat_with_documents 没有被调用。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "observed",
+          "笔记以一段总体看法结束，没有写明是否继续使用的决定。",
+          null
+        ],
+        [
+          "tester-view",
+          "在他的理解中，这款应用用来整理文件，需要时间微调，最适合从小规模开始、反复检查，并随时调整智能文件夹。他使用的是移动而不是复制，也没有试用改写和重命名功能。",
+          null
+        ],
+        [
+          "tester-view",
+          "他打算明年成立一家公司，并用更多文档重复这次测试，看它能否让他的文件夹体系保持有序。他感兴趣的是这与 MCP 的结合，也许再加上一层检索。",
+          null
+        ],
+        [
+          "tester-view",
+          "“You need to start small with some files and then check it, check it, check it, and fine-tune all the rules.”",
+          null
+        ],
+        [
+          "tester-view",
+          "“Having worked in consulting, I know the worst thing is always keeping an order in file systems, and then afterwards finding something.”",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "欢迎界面：私密、在设备本地运行，任何文件移动之前由你审核。",
+      "欢迎界面",
+      "看到了审核卡片和“Nothing has moved”；在设备本地运行未经核实。",
+      "vendor-claim"
+    ],
+    [
+      "“Review, rename, and organize files with local AI.”",
+      "欢迎界面",
+      "看到了审核、重命名和整理；运行的是哪些模型、是否在本地运行，未记录。",
+      "vendor-claim"
+    ],
+    [
+      "“These tools only read. None of them moves, renames or deletes files.”",
+      "MCP 界面",
+      "只做了两次读取调用；没有尝试写入。客户端说这些工具没有说明是否能更改内容。",
+      "vendor-claim"
+    ],
+    [
+      "混合语义与关键词搜索，带排序结果、片段和分数。",
+      "MCP 工具文字",
+      "运行了一次搜索；可见的回复是文件列表；分数和片段不可见。",
+      "vendor-claim"
+    ],
+    [
+      "建议名称和文件夹，可审核并撤销；另有语义搜索和文档对话。",
+      "PromptQuorum 目录条目",
+      "看到了名称、文件夹和审核；撤销和文档对话未测试。",
+      "third-party"
+    ],
+    [
+      "适用于 Claude Desktop、Cursor 和 Zed。",
+      "PromptQuorum 目录条目",
+      "看到了这三者的复制配置按钮；连接是从另一个客户端建立的。",
+      "third-party"
+    ],
+    [
+      "安装后需下载约 7 GB 的基础模型。",
+      "PromptQuorum 目录条目",
+      "未记录。",
+      "third-party"
+    ],
+    [
+      "无需账号、无遥测；关闭更新检查且没有云端密钥时没有对外请求。",
+      "创始人说明",
+      "截图中没有账号界面；流量未检查。",
+      "vendor-claim"
+    ],
+    [
+      "开发者处理了第一次尝试之后提出的一些问题。",
+      "测试者笔记",
+      "具体是哪些问题、哪个版本，未记录。",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "第一次尝试，没有读指引一路点过去",
+      "StratoSort",
+      "据测试者所说没有成功；细节未记录",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "以引导模式启动",
+      "StratoSort",
+      "到达文件夹步骤",
+      "未记录",
+      "Pass",
+      [
+        "stratosort-welcome-screen-guided-mode"
+      ]
+    ],
+    [
+      "在应用中读取整个文件夹",
+      "StratoSort",
+      "据测试者所说文件夹没有被读取；没有截图",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "添加单个文件",
+      "StratoSort",
+      "据测试者所说可用",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "对 5 个文件试运行",
+      "StratoSort",
+      "2 个匹配到文件夹，3 个进入 Uncategorized",
+      "未记录",
+      "Partial",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "分析另外 281 个文件",
+      "StratoSort",
+      "已开始；结束情况和用时未记录",
+      "未记录",
+      "Partial",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "打开一个电子表格的 Details",
+      "StratoSort",
+      "显示了字段；文本在 300 个字符处被截断",
+      "未记录",
+      "Pass",
+      [
+        "stratosort-extracted-text-300-characters",
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "把两个 Search Console 导出文件归入“excel GSc”",
+      "StratoSort",
+      "进入了兜底类别",
+      "未记录",
+      "Fail",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "添加一张 WhatsApp 图片",
+      "StratoSort",
+      "准备归入 Pictures，64 %",
+      "未记录",
+      "Pass",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "把 286 个文件移动到外置 SSD",
+      "StratoSort",
+      "截图时进行中；结束情况未记录",
+      "未记录",
+      "Partial",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "第二次移动，75 个文件",
+      "StratoSort",
+      "只有一张进度截图",
+      "未记录",
+      "Partial",
+      []
+    ],
+    [
+      "在移动过程中重命名文件",
+      "StratoSort",
+      "移动列表中有新名称",
+      "未记录",
+      "Pass",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "通过 MCP 连接另一款本地 AI 应用",
+      "Loci",
+      "测试者自己摸索出设置之后连接成功",
+      "未记录",
+      "Partial",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "list_smart_folders",
+      "Loci",
+      "返回了一张表",
+      "未记录",
+      "Pass",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "search_documents，查询词“Clarity data”",
+      "Loci",
+      "列出了四个文件",
+      "未记录",
+      "Pass",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "get_document_summary、chat_with_documents",
+      "不适用",
+      "没有调用",
+      "未记录",
+      "Not completed",
+      []
+    ],
+    [
+      "撤销、复制模式、Dashboard 模式、AI 与模型设置、离线使用、卸载",
+      "不适用",
+      "未测试",
+      "未记录",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "他写道没有试过重命名。移动列表显示了新名称（例如一张图片和一个 Word 文件，都是带日期的小写名称）和绿色对勾，所以这次运行中已经应用了重命名。没有在磁盘上核对。"
+    ],
+    [
+      "tester-error",
+      "第一次尝试时他没有读指引就一路点过去，并认为自己在设置上犯了错误。具体哪里出了问题未记录。"
+    ],
+    [
+      "tester-error",
+      "他只调用了 list_smart_folders 和 search_documents，就判断它看起来不像检索系统。工具列表里还有 get_document_summary 和 chat_with_documents，它们没有被调用。"
+    ],
+    [
+      "assumption",
+      "他估计的“40 % 未匹配”，是把审核章节中的 44 % 取了整，前提是这 126 个文件属于那 286 个文件。较早的“70 到 80 %”只是一种感觉，不是计数。"
+    ],
+    [
+      "tester-error",
+      "记录中的缺口：应用版本、模型及其下载、输入文件夹的内容、他写的文件夹描述、分析用时、移动之前是否审核了每个文件、286 个和 75 个文件的移动是否完成、MCP 连接是怎么建立的、开发者改了什么、撤销、卸载。语音转文字的小错误已经规范化：“Stratosorgstack”是 StratoSort Stack，“SST”是 SSD，“M C Ps”是 MCPs。“Low key”和“Loki”被理解为 Loci，已由测试者确认。“Some AI mechanism picked up that”被理解为审核步骤中的横幅（假设）。"
+    ]
+  ],
+  "findings": [
+    [
+      "SS-01",
+      "安装窗口显示应用图标，标签是“StratoSort Stack”，旁边是“应用程序”的快捷方式。安装包大小未记录。",
+      "安装",
+      "observed",
+      "Info",
+      [
+        "stratosort-dmg-window-app-and-applications"
+      ]
+    ],
+    [
+      "SS-02",
+      "欢迎界面写着“Step 1 of 5, Start securely”，提供 Guided 和 Dashboard 两种模式，主按钮是“Organize files now, recommended for a first session”，侧边按钮用于 AI 与模型设置和智能文件夹。测试者在第一次尝试之后选择了引导步骤。通知铃铛显示一个数字；其内容未记录。",
+      "引导",
+      "observed",
+      "Positive",
+      [
+        "stratosort-welcome-screen-guided-mode",
+        "stratosort-start-options-guided-steps-or-dashboard"
+      ]
+    ],
+    [
+      "SS-03",
+      "提供、选择和下载了哪些模型，以及它们的大小和设置用时，均未记录。目录列出基础模型约 7 GB（第三方信息）。",
+      "引导",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "SS-04",
+      "据测试者的笔记，开发者审阅了他第一次尝试后提出的意见，并在几天内处理了一些问题。没有显示任何消息；问题和版本均未记录。",
+      "支持",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SS-05",
+      "测试者让应用读取整个文件夹，它没有读取；随后他改为逐个提供文件。文件夹、任何提示信息和原因均未记录；没有截图。",
+      "文件夹",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-06",
+      "对测试者来说，在 Finder 里创建输入文件夹和输出文件夹比在应用里更容易，他觉得应用在这一点上不够清楚。应用讲的是带描述的智能文件夹，而测试者想的是输入和输出文件夹（测试者观点）。应用内确实可以创建文件夹（见审核步骤中的横幅）。",
+      "文件夹",
+      "tester-view",
+      "Medium",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-07",
+      "这次运行使用了外置 SSD 上的输出文件夹，移动列表和 MCP 表格都显示了这一点。测试者说第一次尝试时它没有接受外置 SSD；原因未记录。",
+      "文件夹",
+      "observed",
+      "Positive",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-08",
+      "“Trying your Smart Folders”分析几个文件，并显示“No files are moved”。结果界面重复“Nothing has moved”，并告诉用户，如果某个文件会被放错位置，就编辑文件夹的描述。",
+      "试运行",
+      "observed",
+      "Positive",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-09",
+      "五个文件中有两个被分配了：一个 Clarity CSV 分到 Clarity，置信度 43 %；一张图片分到 Pictures，置信度 65 %。三个进入 Uncategorized，每个都指明了最接近的文件夹：Clarity、Leftovers 和 excel GSc。测试者自己的审核笔记文件就在这三个之中。",
+      "试运行",
+      "measured",
+      "Medium",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-10",
+      "在预览步骤，测试者希望有一个表单来确认或否决每个结果（测试者观点）。屏幕提供“Edit Smart Folders”和“Analyze the other 281 files”。逐个文件的选择出现在后面的审核步骤中。",
+      "试运行",
+      "tester-view",
+      "Low",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-11",
+      "进度卡片显示“Analyzing 5 of 281 files, 2 % complete”、正在处理的文件和一个 Stop 按钮。分析总用时未记录。",
+      "分析",
+      "measured",
+      "Info",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "SS-12",
+      "每个文件有一张卡片，包含复选框、可编辑的建议名称、类别下拉菜单（最佳匹配加其他建议）、带原因的“Needs review”说明、置信度条和 Details 链接。移动之前是否审核了每个文件，未记录。",
+      "审核",
+      "observed",
+      "Positive",
+      [
+        "stratosort-category-dropdown-suggested-folders",
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-13",
+      "Details 显示项目、用途、日期、文档类型、方法、长度、摘要、关键词、推理和提取的文本。这些内容保存在数据库中是测试者的理解；MCP 工具文字提到的是缓存的分析结果（厂商声明）。",
+      "审核",
+      "observed",
+      "Positive",
+      [
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "SS-14",
+      "对于一个 Excel 文件，提取的文本是 300 个字符，在列标题和几行数据之后以省略号结尾。这个限制是否适用于其他文件类型或分类步骤，不得而知（假设：它可能解释了电子表格上匹配较弱的原因）。",
+      "审核",
+      "observed",
+      "Medium",
+      [
+        "stratosort-extracted-text-300-characters"
+      ]
+    ],
+    [
+      "SS-15",
+      "两个各 6 KB、以网站 URL 命名的 Search Console Excel 导出文件得到了描述性的建议名称，却进入了兜底类别，尽管说明里指明测试者为它们建的文件夹“excel GSc”是最接近的。原因没有查明。",
+      "审核",
+      "observed",
+      "Medium",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-16",
+      "一个横幅写着“126 files are uncategorized”和“103 are from Promptquorum. Want a Smart Folder for them?”，带有 Create folder、Different folder 和 Reanalyze 按钮。这个建议似乎是依据文件名中的网站名称，而不是内容类型（测试者观点和假设）。把 126 看作 286 的 44 % 是计算结果（假设）。",
+      "审核",
+      "measured",
+      "Low",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-17",
+      "“Organize 286 files, moving files to their destinations”列出了带绿色对勾的计划操作和外置 SSD 上的路径；在移动完成或被取消之前，步骤导航处于暂停状态。测试者自己的测试笔记文档也在这些文件之中。第二张截图写着“Organize 75 files”；它与第一次的关系未记录，两者的结束情况也都没有显示。",
+      "移动",
+      "observed",
+      "Info",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-18",
+      "移动列表把原来的文件名换成了带日期的小写文件名，例如“Gesamtansicht.jpeg”变成了“gesamtansicht-2026-10-20.jpeg”，“StratoSort hands on review.docx”变成了“stratosort-review-2026-11-12.docx”。日期的来源没有显示。",
+      "移动",
+      "observed",
+      "Medium",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-19",
+      "一张 126 KB 的 WhatsApp 图片被单独添加，得到一张卡片，包含建议名称、最佳匹配 Pictures 和 64 % 的置信度。测试者说，任何位置的单个文件都可以添加。",
+      "移动",
+      "measured",
+      "Positive",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "SS-20",
+      "应用有一个 MCP 界面，列出四个工具：search_documents、chat_with_documents、get_document_summary 和 list_smart_folders。一行文字说它们只读，不会移动、重命名或删除文件（厂商声明）。按钮可复制适用于 Claude Desktop、Cursor 和 Zed 的设置。",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-tool-list-and-client-setup"
+      ]
+    ],
+    [
+      "SS-21",
+      "测试者说，他不得不“backwards engineer”（反向摸索）与另一款本地 AI 应用的连接。哪里失败了、他改了什么，均未记录。",
+      "MCP",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-22",
+      "客户端在一个本地地址上报告“Strato is connected and offers 4 tools”，并对每个工具说明它没有说明是否能更改内容。这些工具没有只读标记是一个假设；应用称它们只读。",
+      "MCP",
+      "observed",
+      "Low",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "SS-23",
+      "list_smart_folders 返回了一张表，包含文件夹、文件数、描述和目标路径。可见的行：Uncategorized 53、Pictures 8、excel GSc 196。这个 53 与之前在审核步骤中看到的 126 不一致；两者之间相隔多久未记录，因此没有对账。",
+      "MCP",
+      "measured",
+      "Positive",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "SS-24",
+      "以“Clarity data”为查询词的 search_documents 返回了 Clarity 文件夹中的四个 CSV 文件，每个都有一行描述。客户端的回复猜测来源是 Microsoft Clarity 或类似工具。与文件内容对照的正确性没有核对；回复在可见区域下方继续。",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "SS-25",
+      "欢迎界面说它是私密的、在设备本地运行，创始人说无需账号、无遥测（厂商声明）。没有检查流量，没有试过离线运行，截图中没有账号界面，所用模型也没有记录。",
+      "信任",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SS-26",
+      "未测试或未记录：撤销、复制模式、Dashboard 模式、AI 与模型设置、get_document_summary、chat_with_documents、改写功能、用时、内存、离线使用、卸载、Windows 和 Linux。",
+      "范围",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现；Positive 表示表现良好的地方。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "使用 Mac、文档文件夹内容混杂且私密、愿意从小规模开始、经常检查并调整文件夹描述的用户（基于一次测试的假设）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "期望第一次整理就很准确的人。"
+      ],
+      [
+        "third-party",
+        "需要商业使用却不核对许可的人：目录列出的是非商业许可，以及商业使用需要的按席位付费许可。"
+      ]
+    ],
+    "retest": "在新的主要版本发布后、开发者处理的问题发布之后，或明年测试者拿到公司文档时复测。覆盖：记录应用版本和所用模型；用一组已知的测试文件运行，统计已匹配与未分类的数量；电子表格的文本限制；撤销；复制模式；get_document_summary 和 chat_with_documents；检查流量后的离线使用；运行时内存；卸载；许可条款。"
+  },
+  "background_intro": "第三方信息，未经核实。与测试内容分开列出。",
+  "background": [
+    [
+      "third-party",
+      "开发者：Ben Kennedy 博士，他称自己用约 17 个月的业余时间独自开发了它（厂商声明，2026-11-10 的创始人说明）。"
+    ],
+    [
+      "third-party",
+      "源码公开，采用 PolyForm Noncommercial 1.0.0 许可，免费增值；目录指出，商业使用需要按席位付费的许可，项目非常年轻，更新检查默认开启，其隐私声明未经测试。2026-11-01 的 5.1.2 版，提供 Mac、Windows 和 Linux 安装包。来源：PromptQuorum 目录条目，核查于 2026-11-10。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和截图（原始 Word 笔记；原始笔记 PDF 待补充）。",
+    "PromptQuorum 目录中 StratoSort 的条目和评测（slug：stratosort），核实于 2026-11-10。",
+    "厂商网站 stratosort.com（厂商声明）和源码仓库 iLevyTate/StratoSortStack，均在目录中列出，本次测试没有打开。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "stratosort-welcome-screen-guided-mode",
+      "figure": 1,
+      "file": "stratosort-welcome-screen-guided-mode.webp",
+      "path": "images/stratosort-welcome-screen-guided-mode.webp",
+      "alt": "StratoSort 欢迎界面：Step 1 of 5，Guided 模式已开启，一个黄色的 Organize files now 按钮，以及用于 AI 与模型设置和 Smart folders 的按钮。",
+      "caption": "引导模式下的欢迎界面。隐私说明是厂商声明。观察所得。",
+      "role": "hero",
+      "width": 1432,
+      "height": 791,
+      "bytes": 47780,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-install"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-five-file-dry-run-where-files-would-go",
+      "figure": 2,
+      "file": "stratosort-five-file-dry-run-where-files-would-go.webp",
+      "path": "images/stratosort-five-file-dry-run-where-files-would-go.webp",
+      "alt": "标题为 Where these files would go 的预览：五个文件，三个在 Uncategorized，一个 Clarity CSV 置信度 43 %，一张图片置信度 65 %。",
+      "caption": "五个文件的试运行，没有移动任何文件。置信度数值读自应用。测量所得。",
+      "role": "moment",
+      "width": 1312,
+      "height": 992,
+      "bytes": 85956,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-dryrun"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-extracted-text-300-characters",
+      "figure": 3,
+      "file": "stratosort-extracted-text-300-characters.webp",
+      "path": "images/stratosort-extracted-text-300-characters.webp",
+      "alt": "Details 面板：关键词 sites、linking、page，以及来自一个电子表格的 300 个字符的 Extracted text，在几个域名之后被截断。",
+      "caption": "一个 Excel 文件的提取文本在 300 个字符之后结束。观察所得。",
+      "role": "moment",
+      "width": 928,
+      "height": 792,
+      "bytes": 29322,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-review-cards-fallback-no-folder-match",
+      "figure": 4,
+      "file": "stratosort-review-cards-fallback-no-folder-match.webp",
+      "path": "images/stratosort-review-cards-fallback-no-folder-match.webp",
+      "alt": "两张 Search Console Excel 导出文件的审核卡片，带有建议名称、类别 Fallback no folder match，以及一条指明 excel GSc 最接近的说明。",
+      "caption": "两个 Excel 导出文件留在兜底类别，尽管“excel GSc”是最接近的文件夹。观察所得。",
+      "role": "moment",
+      "width": 1600,
+      "height": 773,
+      "bytes": 64930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-126-files-uncategorized-banner",
+      "figure": 5,
+      "file": "stratosort-126-files-uncategorized-banner.webp",
+      "path": "images/stratosort-126-files-uncategorized-banner.webp",
+      "alt": "横幅：126 files are uncategorized，103 are from Promptquorum，按钮为 Create folder for Promptquorum、Different folder 和 Reanalyze 126。",
+      "caption": "审核步骤中的未分类横幅。应用给出的数值，测量所得。",
+      "role": "moment",
+      "width": 1600,
+      "height": 355,
+      "bytes": 23238,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-organize-286-files-planned-operations",
+      "figure": 6,
+      "file": "stratosort-organize-286-files-planned-operations.webp",
+      "path": "images/stratosort-organize-286-files-planned-operations.webp",
+      "alt": "Organize 286 files, moving files to their destinations，列出计划操作，显示新的小写文件名和外置 SSD 路径。",
+      "caption": "移动初期带有重命名文件的计划操作。观察所得。",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 62550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-mcp-search-result-clarity-folder-files",
+      "figure": 7,
+      "file": "stratosort-mcp-search-result-clarity-folder-files.webp",
+      "path": "images/stratosort-mcp-search-result-clarity-folder-files.webp",
+      "alt": "Loci 引用 Strato 的回答：列出 Clarity 文件夹中的四个 CSV 文件和简短描述，回复在可见区域下方继续。",
+      "caption": "在 Loci 中调用 search_documents、查询词“Clarity data”的结果。观察所得。",
+      "role": "moment",
+      "width": 1558,
+      "height": 946,
+      "bytes": 123930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 应用（MCP 客户端）的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-dmg-window-app-and-applications",
+      "figure": 8,
+      "file": "stratosort-dmg-window-app-and-applications.webp",
+      "path": "images/stratosort-dmg-window-app-and-applications.webp",
+      "alt": "安装窗口：StratoSort Stack 应用图标（金色、蓝色和深蓝色三条条纹），旁边是“应用程序”文件夹的快捷方式。",
+      "caption": "安装窗口。观察所得。",
+      "role": "gallery",
+      "width": 1374,
+      "height": 858,
+      "bytes": 21362,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-start-options-guided-steps-or-dashboard",
+      "figure": 9,
+      "file": "stratosort-start-options-guided-steps-or-dashboard.webp",
+      "path": "images/stratosort-start-options-guided-steps-or-dashboard.webp",
+      "alt": "Prefer a different starting point 下的两张卡片：Guided steps 和 Dashboard，各带一行描述。",
+      "caption": "其他起点。观察所得。",
+      "role": "gallery",
+      "width": 1428,
+      "height": 364,
+      "bytes": 17060,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-analysis-progress-5-of-281-files",
+      "figure": 10,
+      "file": "stratosort-analysis-progress-5-of-281-files.webp",
+      "path": "images/stratosort-analysis-progress-5-of-281-files.webp",
+      "alt": "进度卡片：Analyzing 5 of 281 files，2 % complete，正在处理名为 Loci app test.docx 的文件，带有 Stop analysis 按钮。",
+      "caption": "分析进度。总用时未记录。测量所得。",
+      "role": "gallery",
+      "width": 1431,
+      "height": 287,
+      "bytes": 11658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-category-dropdown-suggested-folders",
+      "figure": 11,
+      "file": "stratosort-category-dropdown-suggested-folders.webp",
+      "path": "images/stratosort-category-dropdown-suggested-folders.webp",
+      "alt": "类别下拉菜单，Suggested 分组：Pictures（best match）、Leftovers、excel GSc 和 Clarity。",
+      "caption": "审核步骤中逐个文件的类别选择。观察所得。",
+      "role": "gallery",
+      "width": 844,
+      "height": 596,
+      "bytes": 14336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-file-analysis-details-metadata",
+      "figure": 12,
+      "file": "stratosort-file-analysis-details-metadata.webp",
+      "path": "images/stratosort-file-analysis-details-metadata.webp",
+      "alt": "文件分析详情：项目 Top sites linking，日期 2026-08-08，文档类型 Excel Spreadsheet，方法 content，长度 300 chars，以及一段摘要。",
+      "caption": "一个电子表格的 Details 视图。观察所得。",
+      "role": "gallery",
+      "width": 1012,
+      "height": 1024,
+      "bytes": 38536,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-single-file-card-whatsapp-image-64-confidence",
+      "figure": 13,
+      "file": "stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "path": "images/stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "alt": "一张 126 KB 的 WhatsApp 图片的审核卡片，建议名称 whatsapp-image-2026-11-10.jpeg，类别 Pictures（best match），置信度 64 %。",
+      "caption": "从测试文件夹之外添加的单个文件。测量所得。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 772,
+      "bytes": 26640,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-mcp-tool-list-and-client-setup",
+      "figure": 14,
+      "file": "stratosort-mcp-tool-list-and-client-setup.webp",
+      "path": "images/stratosort-mcp-tool-list-and-client-setup.webp",
+      "alt": "MCP 界面，列出四个工具：search_documents、chat_with_documents、get_document_summary、list_smart_folders，一条只读说明和 Copy config 按钮。",
+      "caption": "应用中的 MCP 界面。只读那一行是厂商声明。观察所得。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 689,
+      "bytes": 54658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-mcp-connected-in-client-four-tools",
+      "figure": 15,
+      "file": "stratosort-mcp-connected-in-client-four-tools.webp",
+      "path": "images/stratosort-mcp-connected-in-client-four-tools.webp",
+      "alt": "Loci 对话框：Strato is connected and offers 4 tools，每个都标有 Doesn't say whether it can change things，并列出了 search_documents 的输入项。",
+      "caption": "Loci 显示的工具列表。观察所得。",
+      "role": "gallery",
+      "width": 1348,
+      "height": 1272,
+      "bytes": 80732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 应用（MCP 客户端）的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-mcp-servers-list-in-client",
+      "figure": 16,
+      "file": "stratosort-mcp-servers-list-in-client.webp",
+      "path": "images/stratosort-mcp-servers-list-in-client.webp",
+      "alt": "Loci 的 MCP 服务器列表：PromptQuorum 有 27 个工具，Strato 有 4 个工具，两者都已连接，另有一行 Add a server。",
+      "caption": "Loci 中的服务器列表。观察所得。",
+      "role": "gallery",
+      "width": 1216,
+      "height": 492,
+      "bytes": 18196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 应用（MCP 客户端）的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-mcp-list-smart-folders-result-table",
+      "figure": 17,
+      "file": "stratosort-mcp-list-smart-folders-result-table.webp",
+      "path": "images/stratosort-mcp-list-smart-folders-result-table.webp",
+      "alt": "Loci 的智能文件夹表：Uncategorized 53 个文件，Pictures 8，excel GSc 196，带有描述和外置 SSD 上的目标路径。",
+      "caption": "list_smart_folders 的结果。数量如界面所示；后面的行不可见。测量所得。",
+      "role": "gallery",
+      "width": 1586,
+      "height": 1040,
+      "bytes": 72116,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 应用（MCP 客户端）的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-mcp-search-documents-permission-prompt",
+      "figure": 18,
+      "file": "stratosort-mcp-search-documents-permission-prompt.webp",
+      "path": "images/stratosort-mcp-search-documents-permission-prompt.webp",
+      "alt": "权限提示：Allow Strato to run search_documents，查询词 Clarity data，本地地址 127.0.0.1，按钮为 Allow once 和 Decline。",
+      "caption": "搜索之前的权限提示。观察所得。",
+      "role": "gallery",
+      "width": 1558,
+      "height": 1002,
+      "bytes": 53140,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 应用（MCP 客户端）的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "测试日期未记录；具体时间未记录"
+    }
+  ],
+  "figure_order": [
+    "stratosort-welcome-screen-guided-mode",
+    "stratosort-five-file-dry-run-where-files-would-go",
+    "stratosort-extracted-text-300-characters",
+    "stratosort-review-cards-fallback-no-folder-match",
+    "stratosort-126-files-uncategorized-banner",
+    "stratosort-organize-286-files-planned-operations",
+    "stratosort-mcp-search-result-clarity-folder-files",
+    "stratosort-dmg-window-app-and-applications",
+    "stratosort-start-options-guided-steps-or-dashboard",
+    "stratosort-analysis-progress-5-of-281-files",
+    "stratosort-category-dropdown-suggested-folders",
+    "stratosort-file-analysis-details-metadata",
+    "stratosort-single-file-card-whatsapp-image-64-confidence",
+    "stratosort-mcp-tool-list-and-client-setup",
+    "stratosort-mcp-connected-in-client-four-tools",
+    "stratosort-mcp-servers-list-in-client",
+    "stratosort-mcp-list-smart-folders-result-table",
+    "stratosort-mcp-search-documents-permission-prompt"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年11月17日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "内存",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "应用",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面",
+      "Info": "提示"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}

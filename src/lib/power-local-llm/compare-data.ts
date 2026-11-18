@@ -159,6 +159,11 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   chatNotes: 'colChatNotes',
   webSearch: 'colWebSearch',
   privateDocs: 'colPrivateDocs',
+  inputFormats: 'colInputFormats',
+  outputFormats: 'colOutputFormats',
+  tableExtraction: 'colTableExtraction',
+  boundingBoxes: 'colBoundingBoxes',
+  languageBindings: 'colLanguageBindings',
 }
 const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'text-to-speech': 'segTts',
@@ -174,6 +179,7 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'vector-databases': 'segVector',
   'notes-integrations': 'segNotes',
   'local-search': 'segSearch',
+  'document-parsing': 'segDocParsing',
   'desktop-chat': 'segDesktop',
   'mobile-chat': 'segMobile',
   'web-chat': 'segWebSelf',

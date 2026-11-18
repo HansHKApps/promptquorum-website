@@ -165,7 +165,7 @@ export function AskHansRoot() {
       ctaVia.current = null
       // Totals are consent-only (privacy decision 2026-11-07). A promo slot adds only its fixed source name.
       if (consentRef.current?.value === 'yes') logEvent(openSource.current ? { type: 'open', source: openSource.current } : { type: 'open' })
-      // Promo opens are also counted in Umami (cookieless, anonymous, listed under "Necessary", same as promo_click),
+      // Promo opens are also counted in Umami (cookieless, anonymous, listed under "Necessary", same as <target>_promo_click),
       // so first-time visitors who open the tool before answering the consent step are not lost from the pilot numbers.
       if (openSource.current) trackPromoOpen(openSource.current)
       openSource.current = null

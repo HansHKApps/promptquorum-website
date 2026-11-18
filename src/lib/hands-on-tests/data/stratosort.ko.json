@@ -1,0 +1,1532 @@
+{
+  "id": "pq-test-stratosort-2026-11-17",
+  "hero": "stratosort-welcome-screen-guided-mode",
+  "date_human": "2026년 11월 17일",
+  "captured": "테스트 날짜와 종료 시각은 기록 없음. 스크린샷 파일의 새 이름에 날짜 2026-11-17이 있으므로 세션은 그날 또는 그 이후에 진행되었으며, 이 페이지의 ID와 날짜는 초안 작성일 2026-11-17을 사용함",
+  "standard_version": "0.2",
+  "locale": "ko",
+  "app": {
+    "name": "StratoSort",
+    "slug": "stratosort",
+    "vendor": "Ben Kennedy (per the founder statement in the directory)",
+    "category": "로컬 AI 파일 정리 도구, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://stratosort.com"
+  },
+  "title": "24 GB M4 Pro Mac에서 StratoSort 직접 사용: 파일을 옮기기 전의 시험 실행, 엇갈린 매칭, 그리고 MCP로 다른 로컬 AI 앱과의 연결",
+  "page_title": "StratoSort 테스트",
+  "dek": "테스터의 첫 시도가 잘 풀리지 않은 뒤 진행한 두 번째 세션입니다. 안내형 설정, 시험 실행, 파일별 검토와 전체 정리 실행, 300자로 읽힌 스프레드시트, 그리고 MCP로 두 번째 로컬 AI 앱에서 조회한 문서 색인을 다룹니다.",
+  "seo": {
+    "title": "StratoSort 직접 테스트: Mac 파일 정리와 MCP",
+    "description": "24 GB M4 Pro Mac에서 StratoSort를 직접 테스트했습니다. 시험 실행, 파일별 검토, 286개 파일 이동, 엇갈린 매칭, MCP를 통한 Loci 연결을 다룹니다."
+  },
+  "faq": [
+    [
+      "StratoSort는 승인하기 전에 파일을 옮기나요?",
+      "이번 세션에서는 아니었습니다. 5개 파일 시험 실행 화면에는 “Nothing has moved”라고 표시되었고, 이동 전에 파일마다 검토 카드가 나왔습니다. 286개 파일을 옮기기 전에 모든 파일을 검토했는지는 기록되어 있지 않습니다.",
+      "observed"
+    ],
+    [
+      "StratoSort는 테스트 파일을 얼마나 잘 분류했나요?",
+      "엇갈렸습니다. 시험 실행에서는 5개 파일 중 2개만 폴더에 배정되었고, 검토 단계에서는 배너가 분류되지 않은 파일 126개를 집계했으며, Search Console 내보내기 파일 2개는 가장 가까운 폴더가 지목되었는데도 대체 폴더로 갔습니다. 정확도 집계는 하지 않았습니다.",
+      "measured"
+    ],
+    [
+      "다른 AI 앱이 MCP로 StratoSort에 질의할 수 있나요?",
+      "네, 이번 세션에서는 가능했습니다. Loci 앱이 연결되어 도구 4개를 나열했고 list_smart_folders와 search_documents에서 결과를 받았습니다. 테스터는 연결 방법을 스스로 알아내야 했고, get_document_summary와 chat_with_documents는 호출하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "StratoSort는 파일 이름을 바꾸나요?",
+      "네, 이동 목록에서는 원래 이름이 날짜가 붙은 소문자 이름으로 바뀌었습니다. 결과는 디스크에서 확인하지 않았고 문구 다시 쓰기 기능은 사용해 보지 않았습니다.",
+      "observed"
+    ],
+    [
+      "StratoSort는 개인정보를 보호하며 오프라인으로 작동하나요?",
+      "환영 화면은 비공개이며 기기 안에서 처리된다고 밝히고, 설립자 설명은 계정과 원격 측정이 없다고 밝힙니다. 네트워크 트래픽은 점검하지 않았고 오프라인 실행도 시도하지 않았으므로 확인되지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "무엇을 테스트하지 않았나요?",
+      "실행 취소, 복사 모드, Dashboard 모드, AI 및 모델 설정, 문서 채팅 도구, 소요 시간, 메모리, 오프라인 사용, 삭제입니다. 앱 버전과 사용한 모델은 기록되어 있지 않습니다.",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-17",
+  "started": "2026-11-17",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "StratoSort. 설치 프로그램 라벨은 “StratoSort Stack”이고, 창 머리글은 “StratoSort”입니다.",
+      "observed"
+    ],
+    [
+      "Version",
+      "기록 없음. PromptQuorum 디렉터리는 5.1.2(2026-11-01 GitHub 릴리스)를 기재하며 2026-11-10에 확인했습니다. 테스터의 빌드는 다를 수 있습니다.",
+      null
+    ],
+    [
+      "Source",
+      "기록 없음. 디렉터리는 stratosort.com과 GitHub 저장소 iLevyTate/StratoSortStack을 기재합니다.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans(PromptQuorum 설립자)",
+      "observed"
+    ],
+    [
+      "Start / end",
+      "기재 없음. 스크린샷 파일의 새 이름에 날짜 2026-11-17이 있으므로 세션은 그날 또는 그 이후에 진행되었으며, 초안 작성일도 같습니다(추론). 종료 시각은 기록 없음.",
+      "assumption"
+    ],
+    [
+      "Hardware",
+      "Apple M4 Pro, 24 GB 통합 메모리(테스터의 진술).",
+      "tester-view"
+    ],
+    [
+      "System",
+      "macOS 27(테스터의 진술).",
+      "tester-view"
+    ],
+    [
+      "Why tested",
+      "첫 시도가 잘 풀리지 않았습니다. 테스터는 개발자에게 글을 보낸 뒤 안내 단계를 따라 다시 시도했습니다. 그는 이 앱이 비즈니스 지향이라고 보며, 설립할 계획인 회사의 파일 정돈에 관심이 있습니다.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "목표로 명시되어 있지 않습니다. 메모에는 준비한 테스트 세트를 출력 폴더로 정리하고, 파일을 검토해 옮기고, 앱을 다른 로컬 AI 앱인 Loci에 연결한 과정이 담겨 있습니다.",
+      null
+    ],
+    [
+      "Test data",
+      "약 286개 파일(시험 실행 5개와 이후 분석한 281개). 확인된 콘텐츠 유형: Search Console Excel 내보내기, Clarity CSV 내보내기, Word 테스트 메모, 이미지. 확인된 스마트 폴더: Pictures, Leftovers, excel GSc, Clarity, 그리고 대체 폴더 Uncategorized. 출력은 외장 SSD에 저장했습니다.",
+      "observed"
+    ],
+    [
+      "Second app",
+      "MCP 클라이언트는 Loci입니다(테스터의 진술이며, 받아쓰기 메모에는 “Low key”와 “Loki”로 적혀 있습니다). 클라이언트 화면에는 이름이 나오지 않습니다.",
+      "tester-view"
+    ],
+    [
+      "AI help used",
+      "Claude가 테스터의 Word 메모와 스크린샷 22장을 바탕으로 이 보고서를 작성했습니다. 메모는 아마 음성으로 받아쓴 것으로 보입니다(가정).",
+      "assumption"
+    ],
+    [
+      "Disclosure",
+      "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. StratoSort는 2026-11-10에 개발자가 제공한 설립자 설명과 개발사 페이지를 바탕으로 한 AI 작성 리뷰와 함께 디렉터리에 등재되었으며, 직접 사용을 바탕으로 한 것이 아니었습니다. 테스터는 개발자와 연락하고 있으며, 개발자는 테스터의 첫 시도에 응답했습니다. StratoSort는 이 사이트로부터 클릭을 받습니다. 메모에는 결제나 후원이 기록되어 있지 않습니다.",
+      "observed"
+    ]
+  ],
+  "disclosure": "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. StratoSort는 2026-11-10에 개발자가 제공한 설립자 설명과 개발사 페이지를 바탕으로 한 AI 작성 리뷰와 함께 디렉터리에 등재되었으며, 직접 사용을 바탕으로 한 것이 아니었습니다. 테스터는 개발자와 연락하고 있으며, 개발자는 테스터의 첫 시도에 응답했습니다. StratoSort는 이 사이트로부터 클릭을 받습니다. 메모에는 결제나 후원이 기록되어 있지 않습니다.",
+  "verdict": {
+    "general": "자체 설명에 따르면 기기 안에서 작동하는 파일 정리 도구이며, 테스터가 확인한 안전장치가 있습니다. 시험 실행, 이동 전의 파일별 검토, 그리고 읽기만 한다고 앱이 밝히는 MCP 연결입니다. 이번 세션에서는 분석, 검토, 파일 이동이 실행되었고(이동의 종료는 기록 없음) MCP 연결은 다른 로컬 AI 앱에서 작동했으나, 매칭은 엇갈렸고 조정이 필요합니다. 실행 취소, 복사 모드, 문서 채팅 도구, 사용한 모델, 오프라인 작동, 개인정보 보호 주장, 삭제는 테스트하지 않았습니다.",
+    "fit": "테스터는 작은 테스트와 반복적인 미세 조정이 필요한 유망한 도구로 보며, 업무 문서가 더 많아지는 내년에 다시 테스트할 계획입니다. 그는 MCP 연결, 가능하면 그 위에 검색 계층을 얹는 방향이 흥미롭다고 봅니다. 계속 사용할지에 대한 결정은 없습니다."
+  },
+  "scores": [
+    [
+      "설치",
+      null,
+      "설치 창은 확인했으나 용량, 모델 내려받기, 설정 소요 시간은 기록 없음."
+    ],
+    [
+      "온보딩과 모델 선택",
+      3,
+      "안내 모드와 시험 실행이 도움이 되었으나, 테스터는 폴더 개념이 불분명했고 폴더 전체 읽기는 실패했습니다."
+    ],
+    [
+      "핵심 기능",
+      3,
+      "파일별 검토, 이름 변경, 이동은 작동했으나 매칭은 엇갈렸고 스프레드시트는 일부만 읽혔습니다."
+    ],
+    [
+      "안내와 반복 작업",
+      3,
+      "폴더 설명 힌트, Details 화면, 파일별 선택이 있으나 미리 보기 단계는 상호작용이 되지 않습니다."
+    ],
+    [
+      "연동(MCP)",
+      3,
+      "연결되었고 읽기 도구 두 개가 작동했으나 설정에는 역공학이 필요했습니다."
+    ],
+    [
+      "성능",
+      null,
+      "분석과 이동 소요 시간은 기록 없음."
+    ],
+    [
+      "문서",
+      null,
+      "앱 내 문구와 테스터가 언급한 개발자의 안내만 있으며, 어느 쪽도 자세히 읽지 않았습니다."
+    ],
+    [
+      "신뢰와 개인정보 보호",
+      null,
+      "감사하지 않았습니다."
+    ],
+    [
+      "삭제",
+      null,
+      "테스트하지 않았습니다."
+    ]
+  ],
+  "scores_note": "점수는 보고서 작성자가 테스터의 근거를 바탕으로 제안한 것입니다. n/a는 0점이 아니라 테스트하지 않았다는 뜻입니다.",
+  "tldr": [
+    [
+      "observed",
+      "StratoSort는 파일의 이름과 폴더를 제안하고 아무것도 옮기기 전에 사용자가 검토하게 해 주는 데스크톱 앱입니다. 테스터는 첫 시도가 잘 풀리지 않은 뒤의 두 번째 세션에서 24 GB의 Apple M4 Pro로 실행했습니다."
+    ],
+    [
+      "measured",
+      "5개 파일 시험 실행에서는 아무것도 옮겨지지 않았고 2개 파일이 신뢰도 43 %와 65 %로 폴더에 배정되었습니다. 281개 파일을 추가로 분석한 뒤에는 배너가 분류되지 않은 파일 126개를 집계했습니다."
+    ],
+    [
+      "observed",
+      "Excel 파일은 300자로 읽혔고, Search Console 내보내기 파일 2개는 가장 가까운 폴더가 지목되었는데도 대체 폴더에 들어갔습니다."
+    ],
+    [
+      "observed",
+      "외장 SSD로 한 286개 파일 이동에서는 파일 이름이 날짜가 붙은 소문자 이름으로 바뀌었습니다. 이동의 종료는 기록되어 있지 않습니다."
+    ],
+    [
+      "observed",
+      "MCP를 통해 Loci 앱이 스마트 폴더를 나열하고 “Clarity data”로 문서를 검색했으며, 테스터는 연결 방법을 스스로 알아내야 했습니다."
+    ],
+    [
+      "vendor-claim",
+      "앱은 비공개이며 기기 안에서 처리되고 MCP 도구는 읽기만 한다고 밝힙니다. 네트워크 트래픽, 오프라인 사용, 실행 취소, 복사 모드, 메모리, 소요 시간, 삭제는 테스트하지 않았습니다."
+    ]
+  ],
+  "quotes": [
+    "작은 파일 몇 개로 시작해서 확인하고, 확인하고, 또 확인하면서 모든 규칙을 미세 조정해야 합니다.",
+    "컨설팅 업계에서 일해 보니, 가장 힘든 일은 늘 파일 시스템의 질서를 유지하는 것이고, 그다음에는 나중에 무언가를 찾는 일입니다."
+  ],
+  "quote_note": "받아쓰기에서 가볍게 다듬은 테스터의 메모입니다. 둘 다 그의 판단이며 측정값이 아닙니다.",
+  "moments_title": "이 테스트를 형성한 여섯 가지 순간",
+  "moments_nav": "여섯 가지 순간",
+  "moments": [
+    [
+      "먼저 시험 실행",
+      "파일 5개, 아무것도 옮겨지지 않았습니다.",
+      "stratosort-five-file-dry-run-where-files-would-go",
+      "chapter-dryrun"
+    ],
+    [
+      "300자로 읽힌 스프레드시트",
+      "Excel 파일 하나의 Details 화면입니다.",
+      "stratosort-extracted-text-300-characters",
+      "chapter-review"
+    ],
+    [
+      "가장 가까운 일치는 지목되었으나 파일은 미분류",
+      "대체 폴더에 남은 Excel 내보내기 파일 2개입니다.",
+      "stratosort-review-cards-fallback-no-folder-match",
+      "chapter-review"
+    ],
+    [
+      "사이트 이름에서 제안된 폴더",
+      "검토 단계의 배너입니다.",
+      "stratosort-126-files-uncategorized-banner",
+      "chapter-review"
+    ],
+    [
+      "이동 목록의 새 이름",
+      "이동의 계획된 작업 목록입니다.",
+      "stratosort-organize-286-files-planned-operations",
+      "chapter-move"
+    ],
+    [
+      "다른 로컬 앱이 Strato에 묻다",
+      "MCP를 통한 검색 결과입니다.",
+      "stratosort-mcp-search-result-clarity-folder-files",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "이전 시도, 설치 프로그램, 첫 실행",
+      "items": [
+        [
+          "observed",
+          "이번이 테스터의 두 번째 세션이었습니다. 첫 번째에서는 안내를 읽지 않고 클릭해 넘어갔고, 앱이 직관적이지 않다고 느꼈으며 설정에서 실수를 했다고 생각합니다. 무엇이 잘못되었는지는 기록되어 있지 않습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그 뒤 그는 개발자에게 글을 보냈고, 그의 설명에 따르면 개발자는 의견을 검토해 며칠 안에 일부 문제를 해결했습니다. 메시지는 보이지 않으며, 문제와 버전은 기록되어 있지 않습니다.",
+          null
+        ],
+        [
+          "observed",
+          "설치 창에는 “StratoSort Stack”이라는 라벨이 붙은 앱 아이콘이 응용 프로그램 바로 가기 옆에 표시됩니다. 설치 프로그램 용량은 기록 없음.",
+          "stratosort-dmg-window-app-and-applications"
+        ],
+        [
+          "observed",
+          "앱은 환영 화면으로 열립니다. “Step 1 of 5, Start securely”, Guided와 Dashboard 모드, 그리고 주 버튼 “Organize files now, recommended for a first session”이 있고, AI 및 모델 설정과 스마트 폴더용 보조 버튼이 있습니다. 이번에는 안내를 따라가고 싶어서 안내 단계를 선택했습니다. 알림 벨에는 숫자가 표시되며 그 내용은 기록되어 있지 않습니다.",
+          "stratosort-welcome-screen-guided-mode"
+        ],
+        [
+          "observed",
+          "카드 두 장이 다른 시작 방법을 제시합니다. Guided steps와 Dashboard입니다.",
+          "stratosort-start-options-guided-steps-or-dashboard"
+        ],
+        [
+          "third-party",
+          "제공된 모델, 선택한 모델, 내려받은 모델, 용량, 설정 소요 시간은 기록되어 있지 않습니다. 디렉터리는 기본 모델에 약 7 GB를 기재합니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-dryrun",
+      "title": "폴더와 시험 실행",
+      "items": [
+        [
+          "observed",
+          "테스터가 앱에 폴더 전체를 읽으라고 했으나 읽지 않아서 개별 파일을 지정했습니다. 해당 폴더, 메시지, 원인은 기록되어 있지 않으며 스크린샷은 없습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "그는 Finder에서 입력 폴더와 출력 폴더로 폴더 구조를 직접 만들었고, 앱 안에서 하는 것보다 쉽다고 느꼈습니다. 앱은 설명이 있는 스마트 폴더를 말하는데, 그는 입력 폴더와 출력 폴더로 생각합니다. 앱 안에서 폴더를 만드는 기능은 있습니다(검토 단계의 배너 참조).",
+          null
+        ],
+        [
+          "observed",
+          "출력 폴더는 이동 목록과 MCP 표에서 보이듯 외장 SSD에 있었습니다. 테스터는 첫 시도에서는 이를 받아들이지 않았다고 말하며, 원인은 기록되어 있지 않습니다.",
+          null
+        ],
+        [
+          "measured",
+          "파일 5개로 한 첫 테스트는 각 파일이 어디로 갈지 보여 주었고, 화면에는 “Nothing has moved”라고 표시됩니다. 2개 파일이 배정되었습니다. Clarity CSV는 신뢰도 43 %로 Clarity에, 사진은 65 %로 Pictures에 배정되었습니다. 3개는 Uncategorized로 갔고 각각 가장 가까운 폴더가 지목되었습니다. Clarity, Leftovers, excel GSc입니다. 그 자신의 검토 메모 파일도 이 셋에 들어 있었습니다.",
+          "stratosort-five-file-dry-run-where-files-would-go"
+        ],
+        [
+          "tester-view",
+          "그는 확신하지 못했고, 폴더를 수정한 뒤 다시 실행하러 돌아가는 대신 이 단계에서 각 결과를 확인하거나 거부하는 양식을 원했습니다. 화면에는 “Edit Smart Folders”와 “Analyze the other 281 files”가 있으며, 파일별 선택은 이후 검토 단계에서 나타납니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-review",
+      "title": "분석과 검토",
+      "items": [
+        [
+          "measured",
+          "나머지 281개 파일을 분석했습니다. 진행 카드에는 “Analyzing 5 of 281 files, 2 % complete”, 처리 중인 파일, Stop 버튼이 표시됩니다. 전체 분석 소요 시간은 기록 없음.",
+          "stratosort-analysis-progress-5-of-281-files"
+        ],
+        [
+          "observed",
+          "검토 단계에서는 파일마다 카드가 있고, 체크박스, 수정 가능한 제안 이름, 카테고리 드롭다운(가장 잘 맞는 항목과 다른 제안), 이유가 적힌 “Needs review” 메모, 신뢰도 막대, Details 링크가 있습니다. 이동 전에 모든 파일을 검토했는지는 기록되어 있지 않습니다.",
+          "stratosort-category-dropdown-suggested-folders"
+        ],
+        [
+          "observed",
+          "Details에는 프로젝트, 목적, 날짜, 문서 유형, 방식, 길이, 요약, 키워드, 추론, 추출된 텍스트가 표시됩니다. 테스터는 이를 정리를 미세 조정하는 방법으로 읽으며, 일부 데이터가 그가 데이터베이스라고 부르는 곳에 추출되어 저장된다고 말합니다. 화면에는 추출된 필드만 나타납니다.",
+          "stratosort-file-analysis-details-metadata"
+        ],
+        [
+          "observed",
+          "Excel 파일의 추출된 텍스트는 300자이며 열 머리글과 몇 개의 행 뒤에서 줄임표로 끝납니다. 이 한도가 다른 파일 유형이나 분류 단계에도 적용되는지는 알 수 없습니다(가정: 스프레드시트에서 매칭이 약한 이유일 수 있음).",
+          "stratosort-extracted-text-300-characters"
+        ],
+        [
+          "observed",
+          "사이트 URL을 딴 이름의 6 KB짜리 Search Console Excel 내보내기 파일 2개는 설명적인 제안 이름을 받았지만, 메모가 테스터가 이 파일들을 위해 만든 폴더인 “excel GSc”를 가장 가까운 폴더로 지목했는데도 대체 폴더로 갔습니다. 원인은 분리해 확인하지 못했습니다.",
+          "stratosort-review-cards-fallback-no-folder-match"
+        ],
+        [
+          "measured",
+          "배너에는 “126 files are uncategorized”와 “103 are from Promptquorum. Want a Smart Folder for them?”가 표시되며, Create folder, Different folder, Reanalyze 버튼이 있습니다. 제안은 콘텐츠 유형이 아니라 파일 이름에 들어 있는 사이트 이름을 따른 것으로 보입니다(가정).",
+          "stratosort-126-files-uncategorized-banner"
+        ],
+        [
+          "tester-estimate",
+          "테스터는 처음에는 일치율을 70~80 퍼센트로 느꼈다가, 분류되지 않은 파일 수를 보고 약 40 퍼센트가 일치하지 않는 것으로 수정했습니다. 286개 파일 대비 126개는 44 %이며, 이는 계산이고 두 숫자가 같은 파일을 가리킨다고 가정합니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-move",
+      "title": "파일 이동",
+      "items": [
+        [
+          "observed",
+          "“Organize 286 files, moving files to their destinations”에는 녹색 체크 표시와 외장 SSD의 경로가 있는 계획된 작업이 나열되며, 이동이 끝나거나 취소될 때까지 단계 이동은 일시 중지됩니다. 테스터 자신의 테스트 메모 문서도 파일에 들어 있었습니다. 이동의 종료는 기록되어 있지 않습니다.",
+          "stratosort-organize-286-files-planned-operations"
+        ],
+        [
+          "observed",
+          "이동 목록은 원래 이름을 날짜가 붙은 소문자 이름으로 바꾸었습니다. 예를 들어 “Gesamtansicht.jpeg”는 “gesamtansicht-2026-10-20.jpeg”가, “StratoSort hands on review.docx”는 “stratosort-review-2026-11-12.docx”가 되었습니다. 테스터는 이름 변경은 시도하지 않았다고 적었으나, 목록에는 이번 실행에서 적용된 것으로 나타납니다. 결과는 디스크에서 확인하지 않았고 날짜의 출처는 표시되지 않습니다.",
+          null
+        ],
+        [
+          "measured",
+          "126 KB짜리 WhatsApp 이미지 하나를 따로 추가하자 제안 이름, 가장 잘 맞는 항목 Pictures, 신뢰도 64 %가 표시된 카드가 나왔습니다. 테스터는 컴퓨터 어디에 있든 개별 파일을 추가해 나머지와 함께 정리할 수 있다고 말하며 이를 높이 평가합니다.",
+          "stratosort-single-file-card-whatsapp-image-64-confidence"
+        ],
+        [
+          "observed",
+          "두 번째 캡처에는 “Organize 75 files”라고 되어 있습니다. 286개 파일 실행과의 관계는 기록되어 있지 않으며, 어느 쪽의 끝도 보이지 않습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "MCP로 다른 로컬 AI 앱과 연결",
+      "items": [
+        [
+          "observed",
+          "앱에는 도구 4개를 나열한 MCP 화면이 있습니다. search_documents, chat_with_documents, get_document_summary, list_smart_folders이며, Claude Desktop, Cursor, Zed용 설정을 복사하는 버튼이 있습니다.",
+          "stratosort-mcp-tool-list-and-client-setup"
+        ],
+        [
+          "vendor-claim",
+          "그 화면의 한 줄은 이렇게 밝힙니다. “These tools only read. None of them moves, renames or deletes files.”",
+          null
+        ],
+        [
+          "observed",
+          "테스터는 다른 로컬 AI 앱과의 연결을 “backwards engineer” 해야 했다고 말합니다. 무엇이 실패했고 무엇을 바꾸었는지는 기록되어 있지 않습니다.",
+          null
+        ],
+        [
+          "observed",
+          "클라이언트인 Loci는 로컬 주소에서 “Strato is connected and offers 4 tools”라고 보고하며, 도구마다 변경할 수 있는지 밝히지 않는다고 표시합니다. 도구에 읽기 전용 표시가 없다는 것은 가정이며, 앱은 읽기만 한다고 밝힙니다.",
+          "stratosort-mcp-connected-in-client-four-tools"
+        ],
+        [
+          "observed",
+          "Loci의 서버 목록에는 도구 27개의 PromptQuorum과 도구 4개의 Strato가 모두 연결된 상태로 표시됩니다.",
+          "stratosort-mcp-servers-list-in-client"
+        ],
+        [
+          "measured",
+          "list_smart_folders는 폴더, 파일 수, 설명, 대상 경로가 있는 표를 반환했습니다. 보이는 행: Uncategorized 53, Pictures 8, excel GSc 196. 53은 앞서 검토 단계에서 본 126과 맞지 않으며, 두 시점 사이의 시간은 기록되어 있지 않으므로 맞추지 않았습니다.",
+          "stratosort-mcp-list-smart-folders-result-table"
+        ],
+        [
+          "observed",
+          "검색에 앞서 Loci는 쿼리 “Clarity data”, 로컬 주소, 버튼 Allow once와 Decline과 함께 “Allow Strato to run search_documents?”라고 물었습니다.",
+          "stratosort-mcp-search-documents-permission-prompt"
+        ],
+        [
+          "observed",
+          "쿼리 “Clarity data”로 한 search_documents는 Clarity 폴더의 CSV 파일 4개를 각각 한 줄 설명과 함께 반환했습니다. 클라이언트의 답변은 출처가 Microsoft Clarity 또는 비슷한 도구일 것으로 추측합니다. 파일 내용과의 일치 여부는 확인하지 않았으며, 답변은 보이는 영역 아래로 이어집니다.",
+          "stratosort-mcp-search-result-clarity-folder-files"
+        ],
+        [
+          "tester-view",
+          "그는 아직 검색 시스템처럼 보이지는 않고 외부 도구가 질의할 수 있는 데이터 세트에 가까워지는 중이라고 말합니다. 그가 호출한 도구는 4개 중 2개뿐이며, get_document_summary와 chat_with_documents는 호출하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "결정",
+      "items": [
+        [
+          "observed",
+          "메모는 전반적인 견해로 끝나며 계속 사용할지에 대한 결정은 없습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "그의 이해로는 이 앱은 파일을 정리하고, 미세 조정할 시간이 필요하며, 작게 시작해 반복해서 확인하고 스마트 폴더를 그때그때 조정할 때 가장 잘 작동합니다. 그는 복사가 아니라 이동을 사용했고, 문구 다시 쓰기와 이름 변경 기능은 시도하지 않았습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "그는 내년에 법인을 설립할 계획이며, 더 많은 문서로 테스트를 반복해 자신의 폴더 체계를 정돈된 상태로 유지할 수 있는지 확인할 계획입니다. 그의 관심은 MCP, 그리고 어쩌면 그 위의 검색 계층과의 결합입니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "“작은 파일 몇 개로 시작해서 확인하고, 확인하고, 또 확인하면서 모든 규칙을 미세 조정해야 합니다.”",
+          null
+        ],
+        [
+          "tester-view",
+          "“컨설팅 업계에서 일해 보니, 가장 힘든 일은 늘 파일 시스템의 질서를 유지하는 것이고, 그다음에는 나중에 무언가를 찾는 일입니다.”",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "환영 화면: 비공개, 기기 안 처리, 파일을 옮기기 전에 검토합니다.",
+      "환영 화면",
+      "검토 카드와 “Nothing has moved”는 확인했으며, 기기 안 작동은 확인하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "“Review, rename, and organize files with local AI.”",
+      "환영 화면",
+      "검토, 이름 변경, 정리는 확인했으며, 어떤 모델이 실행되었는지와 로컬에서 실행되었는지는 기록 없음.",
+      "vendor-claim"
+    ],
+    [
+      "“These tools only read. None of them moves, renames or deletes files.”",
+      "MCP 화면",
+      "읽기 호출 2건만 했으며 쓰기 시도는 없었습니다. 클라이언트는 도구가 변경 가능 여부를 밝히지 않는다고 표시합니다.",
+      "vendor-claim"
+    ],
+    [
+      "의미 기반과 키워드 기반을 결합한 검색으로, 순위가 매겨진 결과, 스니펫, 점수를 제공합니다.",
+      "MCP 도구 설명",
+      "검색을 한 번 실행했으며 보이는 답변은 파일 목록이고, 점수와 스니펫은 보이지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "검토하고 실행 취소할 수 있는 이름과 폴더를 제안하며, 의미 기반 검색과 문서 채팅을 더합니다.",
+      "PromptQuorum 디렉터리 항목",
+      "이름, 폴더, 검토는 확인했으며 실행 취소와 문서 채팅은 테스트하지 않았습니다.",
+      "third-party"
+    ],
+    [
+      "Claude Desktop, Cursor, Zed와 함께 작동합니다.",
+      "PromptQuorum 디렉터리 항목",
+      "세 앱용 설정 복사 버튼은 확인했으며, 연결은 다른 클라이언트에서 했습니다.",
+      "third-party"
+    ],
+    [
+      "설치 후 기본 모델 내려받기 약 7 GB.",
+      "PromptQuorum 디렉터리 항목",
+      "기록 없음.",
+      "third-party"
+    ],
+    [
+      "계정 없음, 원격 측정 없음, 업데이트 확인을 끄고 클라우드 키가 없으면 외부 요청 없음.",
+      "설립자 설명",
+      "스크린샷 중에는 계정 화면이 없으며, 트래픽은 점검하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "개발자는 첫 시도 이후 제기된 문제 중 일부를 해결했습니다.",
+      "테스터의 메모",
+      "어떤 문제인지와 어떤 버전인지는 기록 없음.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "안내 없이 클릭해 넘긴 첫 시도",
+      "StratoSort",
+      "테스터에 따르면 잘 풀리지 않음, 세부 내용은 기록 없음",
+      "기록 없음",
+      "Fail",
+      []
+    ],
+    [
+      "Guided 모드로 실행",
+      "StratoSort",
+      "폴더 단계에 도달함",
+      "기록 없음",
+      "Pass",
+      [
+        "stratosort-welcome-screen-guided-mode"
+      ]
+    ],
+    [
+      "앱에서 폴더 전체 읽기",
+      "StratoSort",
+      "테스터에 따르면 폴더가 읽히지 않음, 스크린샷 없음",
+      "기록 없음",
+      "Fail",
+      []
+    ],
+    [
+      "개별 파일 추가",
+      "StratoSort",
+      "테스터에 따르면 작동함",
+      "기록 없음",
+      "Pass",
+      []
+    ],
+    [
+      "파일 5개 시험 실행",
+      "StratoSort",
+      "2개가 폴더에 매칭, 3개는 Uncategorized로 감",
+      "기록 없음",
+      "Partial",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "나머지 281개 파일 분석",
+      "StratoSort",
+      "시작됨, 종료와 소요 시간은 기록 없음",
+      "기록 없음",
+      "Partial",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "스프레드시트 한 개의 Details 열기",
+      "StratoSort",
+      "필드가 표시됨, 텍스트가 300자에서 잘림",
+      "기록 없음",
+      "Pass",
+      [
+        "stratosort-extracted-text-300-characters",
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "Search Console 내보내기 파일 2개를 “excel GSc”로 분류",
+      "StratoSort",
+      "대신 대체 폴더로 감",
+      "기록 없음",
+      "Fail",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "WhatsApp 이미지 하나 추가",
+      "StratoSort",
+      "Pictures로 준비됨, 64 %",
+      "기록 없음",
+      "Pass",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "외장 SSD로 286개 파일 이동",
+      "StratoSort",
+      "캡처 시점에 진행 중, 종료는 기록 없음",
+      "기록 없음",
+      "Partial",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "두 번째 이동, 파일 75개",
+      "StratoSort",
+      "진행 캡처 한 장뿐",
+      "기록 없음",
+      "Partial",
+      []
+    ],
+    [
+      "이동의 일부로 파일 이름 변경",
+      "StratoSort",
+      "이동 목록에 새 이름이 있음",
+      "기록 없음",
+      "Pass",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "MCP로 다른 로컬 AI 앱 연결",
+      "Loci",
+      "테스터가 설정을 스스로 알아낸 뒤 연결됨",
+      "기록 없음",
+      "Partial",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "list_smart_folders",
+      "Loci",
+      "표가 반환됨",
+      "기록 없음",
+      "Pass",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "search_documents, 쿼리 “Clarity data”",
+      "Loci",
+      "파일 4개가 나열됨",
+      "기록 없음",
+      "Pass",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "get_document_summary, chat_with_documents",
+      "해당 없음",
+      "호출하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ],
+    [
+      "실행 취소, 복사 모드, Dashboard 모드, AI 및 모델 설정, 오프라인 사용, 삭제",
+      "해당 없음",
+      "테스트하지 않음",
+      "기록 없음",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "이름 변경은 시도하지 않았다고 적었습니다. 이동 목록에는 새 이름(예를 들어 날짜가 붙은 소문자 이름의 사진 파일과 Word 파일)과 녹색 체크 표시가 있으므로, 이번 실행에서 이름 변경이 적용되었습니다. 디스크에서는 확인하지 않았습니다."
+    ],
+    [
+      "tester-error",
+      "첫 시도에서는 안내를 읽지 않고 클릭해 넘어갔으며, 설정에서 실수를 했다고 생각합니다. 무엇이 잘못되었는지는 기록되어 있지 않습니다."
+    ],
+    [
+      "tester-error",
+      "list_smart_folders와 search_documents만 호출한 뒤 검색 시스템처럼 보이지 않는다고 판단했습니다. 도구 목록에는 호출하지 않은 get_document_summary와 chat_with_documents도 있습니다."
+    ],
+    [
+      "assumption",
+      "그의 “40 % 불일치” 추정은 126개 파일이 286개에 속한다면 검토 장의 44 %를 반올림한 값입니다. 앞선 “70~80 %”는 집계가 아니라 느낌이었습니다."
+    ],
+    [
+      "tester-error",
+      "기록의 빈틈: 앱 버전, 모델과 그 내려받기, 입력 폴더의 내용, 그가 쓴 폴더 설명, 분석 소요 시간, 이동 전에 모든 파일을 검토했는지, 286개와 75개 파일 이동이 끝났는지, MCP 연결을 어떻게 했는지, 개발자가 무엇을 바꾸었는지, 실행 취소, 삭제. 음성을 텍스트로 옮기며 생긴 오류는 바로잡았습니다. “Stratosorgstack”은 StratoSort Stack, “SST”는 SSD, “M C Ps”는 MCP입니다. “Low key”와 “Loki”는 테스터가 확인한 대로 Loci로 읽었습니다. “Some AI mechanism picked up that”은 검토 단계의 배너로 읽었습니다(가정)."
+    ]
+  ],
+  "findings": [
+    [
+      "SS-01",
+      "설치 창에는 “StratoSort Stack”이라는 라벨이 붙은 앱 아이콘이 응용 프로그램 바로 가기 옆에 표시됩니다. 설치 프로그램 용량은 기록 없음.",
+      "설치",
+      "observed",
+      "Info",
+      [
+        "stratosort-dmg-window-app-and-applications"
+      ]
+    ],
+    [
+      "SS-02",
+      "환영 화면에는 “Step 1 of 5, Start securely”가 표시되고, Guided와 Dashboard 모드, 그리고 주 버튼 “Organize files now, recommended for a first session”이 있으며, AI 및 모델 설정과 스마트 폴더용 보조 버튼이 있습니다. 테스터는 첫 시도 이후 안내 단계를 선택했습니다. 알림 벨에는 숫자가 표시되며 그 내용은 기록되어 있지 않습니다.",
+      "온보딩",
+      "observed",
+      "Positive",
+      [
+        "stratosort-welcome-screen-guided-mode",
+        "stratosort-start-options-guided-steps-or-dashboard"
+      ]
+    ],
+    [
+      "SS-03",
+      "제공된 모델, 선택한 모델, 내려받은 모델, 용량, 설정 소요 시간은 기록되어 있지 않습니다. 디렉터리는 기본 모델에 약 7 GB를 기재합니다(제3자).",
+      "온보딩",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "SS-04",
+      "테스터의 메모에 따르면 개발자는 첫 시도에서 나온 그의 의견을 검토해 며칠 안에 일부 문제를 해결했습니다. 메시지는 보이지 않으며, 문제와 버전은 기록되어 있지 않습니다.",
+      "지원",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SS-05",
+      "테스터가 앱에 폴더 전체를 읽으라고 했으나 읽지 않았고, 그래서 개별 파일을 지정했습니다. 해당 폴더, 메시지, 원인은 기록되어 있지 않으며 스크린샷은 없습니다.",
+      "폴더",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-06",
+      "테스터에게는 입력 폴더와 출력 폴더를 만드는 것이 앱보다 Finder에서 더 쉬웠고, 그는 이 부분이 불분명하다고 느꼈습니다. 앱은 설명이 있는 스마트 폴더를 말하는데, 테스터는 입력 폴더와 출력 폴더로 생각합니다(테스터 의견). 앱 안에서 폴더를 만드는 기능은 있습니다(검토 단계의 배너 참조).",
+      "폴더",
+      "tester-view",
+      "Medium",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-07",
+      "이번 실행에서는 이동 목록과 MCP 표에서 보이듯 외장 SSD의 출력 폴더를 사용했습니다. 테스터는 첫 시도에서는 외장 SSD를 받아들이지 않았다고 말하며, 원인은 기록되어 있지 않습니다.",
+      "폴더",
+      "observed",
+      "Positive",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-08",
+      "“Trying your Smart Folders”는 파일 몇 개를 분석하며 “No files are moved”라고 표시합니다. 결과 화면은 “Nothing has moved”를 반복하고, 파일이 잘못 배정될 경우 폴더 설명을 수정하라고 안내합니다.",
+      "시험 실행",
+      "observed",
+      "Positive",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-09",
+      "5개 파일 중 2개가 배정되었습니다. Clarity CSV는 신뢰도 43 %로 Clarity에, 사진은 65 %로 Pictures에 배정되었습니다. 3개는 Uncategorized로 갔고 각각 가장 가까운 폴더가 지목되었습니다. Clarity, Leftovers, excel GSc입니다. 테스터 자신의 검토 메모 파일도 이 셋에 들어 있었습니다.",
+      "시험 실행",
+      "measured",
+      "Medium",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-10",
+      "미리 보기 단계에서 테스터는 각 결과를 확인하거나 거부하는 양식을 원했습니다(테스터 의견). 화면에는 “Edit Smart Folders”와 “Analyze the other 281 files”가 있으며, 파일별 선택은 이후 검토 단계에서 나타납니다.",
+      "시험 실행",
+      "tester-view",
+      "Low",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-11",
+      "진행 카드에는 “Analyzing 5 of 281 files, 2 % complete”, 처리 중인 파일, Stop 버튼이 표시됩니다. 전체 분석 소요 시간은 기록 없음.",
+      "분석",
+      "measured",
+      "Info",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "SS-12",
+      "파일마다 카드가 있고, 체크박스, 수정 가능한 제안 이름, 카테고리 드롭다운(가장 잘 맞는 항목과 다른 제안), 이유가 적힌 “Needs review” 메모, 신뢰도 막대, Details 링크가 있습니다. 이동 전에 모든 파일을 검토했는지는 기록되어 있지 않습니다.",
+      "검토",
+      "observed",
+      "Positive",
+      [
+        "stratosort-category-dropdown-suggested-folders",
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-13",
+      "Details에는 프로젝트, 목적, 날짜, 문서 유형, 방식, 길이, 요약, 키워드, 추론, 추출된 텍스트가 표시됩니다. 이것이 데이터베이스에 보관된다는 것은 테스터의 해석이며, MCP 도구 설명은 캐시된 분석을 언급합니다(업체 주장).",
+      "검토",
+      "observed",
+      "Positive",
+      [
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "SS-14",
+      "Excel 파일의 추출된 텍스트는 300자이며 열 머리글과 몇 개의 행 뒤에서 줄임표로 끝납니다. 이 한도가 다른 파일 유형이나 분류 단계에도 적용되는지는 알 수 없습니다(가정: 스프레드시트에서 매칭이 약한 이유일 수 있음).",
+      "검토",
+      "observed",
+      "Medium",
+      [
+        "stratosort-extracted-text-300-characters"
+      ]
+    ],
+    [
+      "SS-15",
+      "사이트 URL을 딴 이름의 6 KB짜리 Search Console Excel 내보내기 파일 2개는 설명적인 제안 이름을 받았지만, 메모가 테스터의 폴더인 “excel GSc”를 가장 가까운 폴더로 지목했는데도 대체 폴더로 갔습니다. 원인은 분리해 확인하지 못했습니다.",
+      "검토",
+      "observed",
+      "Medium",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-16",
+      "배너에는 “126 files are uncategorized”와 “103 are from Promptquorum. Want a Smart Folder for them?”가 표시되며, Create folder, Different folder, Reanalyze 버튼이 있습니다. 제안은 콘텐츠 유형이 아니라 파일 이름의 사이트 이름을 따른 것으로 보입니다(테스터 의견과 가정). 126을 286의 44 %로 읽는 것은 계산입니다(가정).",
+      "검토",
+      "measured",
+      "Low",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-17",
+      "“Organize 286 files, moving files to their destinations”에는 녹색 체크 표시와 외장 SSD의 경로가 있는 계획된 작업이 나열되며, 이동이 끝나거나 취소될 때까지 단계 이동은 일시 중지됩니다. 테스터 자신의 테스트 메모 문서도 파일에 들어 있었습니다. 두 번째 캡처에는 “Organize 75 files”라고 되어 있으며, 첫 번째와의 관계는 기록되어 있지 않고 어느 쪽의 끝도 보이지 않습니다.",
+      "이동",
+      "observed",
+      "Info",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-18",
+      "이동 목록에서 원래 이름이 날짜가 붙은 소문자 이름으로 바뀌었습니다. 예를 들어 “Gesamtansicht.jpeg”는 “gesamtansicht-2026-10-20.jpeg”가, “StratoSort hands on review.docx”는 “stratosort-review-2026-11-12.docx”가 되었습니다. 날짜의 출처는 표시되지 않습니다.",
+      "이동",
+      "observed",
+      "Medium",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-19",
+      "126 KB짜리 WhatsApp 이미지 하나를 따로 추가하자 제안 이름, 가장 잘 맞는 항목 Pictures, 신뢰도 64 %가 표시된 카드가 나왔습니다. 테스터는 어디에 있든 개별 파일을 추가할 수 있다고 말합니다.",
+      "이동",
+      "measured",
+      "Positive",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "SS-20",
+      "앱에는 도구 4개를 나열한 MCP 화면이 있습니다. search_documents, chat_with_documents, get_document_summary, list_smart_folders입니다. 한 줄은 이 도구들이 읽기만 하며 파일을 옮기거나 이름을 바꾸거나 삭제하지 않는다고 밝힙니다(업체 주장). 버튼으로 Claude Desktop, Cursor, Zed용 설정을 복사할 수 있습니다.",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-tool-list-and-client-setup"
+      ]
+    ],
+    [
+      "SS-21",
+      "테스터는 다른 로컬 AI 앱과의 연결을 “backwards engineer” 해야 했다고 말합니다. 무엇이 실패했고 무엇을 바꾸었는지는 기록되어 있지 않습니다.",
+      "MCP",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-22",
+      "클라이언트는 로컬 주소에서 “Strato is connected and offers 4 tools”라고 보고하며, 도구마다 변경할 수 있는지 밝히지 않는다고 표시합니다. 도구에 읽기 전용 표시가 없다는 것은 가정이며, 앱은 읽기만 한다고 밝힙니다.",
+      "MCP",
+      "observed",
+      "Low",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "SS-23",
+      "list_smart_folders는 폴더, 파일 수, 설명, 대상 경로가 있는 표를 반환했습니다. 보이는 행: Uncategorized 53, Pictures 8, excel GSc 196. 53은 앞서 검토 단계에서 본 126과 맞지 않으며, 두 시점 사이의 시간은 기록되어 있지 않으므로 맞추지 않았습니다.",
+      "MCP",
+      "measured",
+      "Positive",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "SS-24",
+      "쿼리 “Clarity data”로 한 search_documents는 Clarity 폴더의 CSV 파일 4개를 각각 한 줄 설명과 함께 반환했습니다. 클라이언트의 답변은 출처가 Microsoft Clarity 또는 비슷한 도구일 것으로 추측합니다. 파일 내용과의 일치 여부는 확인하지 않았으며, 답변은 보이는 영역 아래로 이어집니다.",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "SS-25",
+      "환영 화면은 비공개이며 기기 안에서 처리된다고 밝히고, 설립자는 계정과 원격 측정이 없다고 밝힙니다(업체 주장). 트래픽은 점검하지 않았고, 오프라인 실행도 시도하지 않았으며, 스크린샷 중에는 계정 화면이 없고, 사용한 모델은 기록되어 있지 않습니다.",
+      "신뢰",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SS-26",
+      "테스트하지 않았거나 기록되지 않은 항목: 실행 취소, 복사 모드, Dashboard 모드, AI 및 모델 설정, get_document_summary, chat_with_documents, 문구 다시 쓰기 기능, 소요 시간, 메모리, 오프라인 사용, 삭제, Windows와 Linux.",
+      "범위",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "심각도는 처음 사용하는 사용자에게 미치는 영향입니다. 측정값이 아니라 제안입니다. Info는 문제도 장점도 아닌 발견 사항을, Positive는 잘 작동한 부분을 뜻합니다.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "혼합된 비공개 문서 폴더가 있으며, 작게 시작하고 자주 확인하고 폴더 설명을 조정하는 것을 받아들이는 Mac 사용자(한 번의 세션에서 나온 가정)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "첫 번째 처리부터 정확한 분류를 기대하는 사람."
+      ],
+      [
+        "third-party",
+        "라이선스를 확인하지 않고 상업적으로 사용해야 하는 사람. 디렉터리는 비상업 라이선스와, 상업적 사용을 위한 좌석당 유료 라이선스를 기재합니다."
+      ]
+    ],
+    "retest": "새 메이저 버전이 나오거나, 개발자가 해결했다는 문제가 배포되거나, 테스터가 내년에 회사 문서를 갖게 되면 다시 테스트합니다. 범위: 앱 버전과 모델 기록, 알려진 테스트 세트를 실행해 매칭과 미분류 집계, 스프레드시트 텍스트 한도, 실행 취소, 복사 모드, get_document_summary와 chat_with_documents, 트래픽을 점검한 오프라인 사용, 실행 중 메모리, 삭제, 라이선스 조건."
+  },
+  "background_intro": "제3자 정보이며 확인되지 않았습니다. 테스트와는 따로 구분했습니다.",
+  "background": [
+    [
+      "third-party",
+      "개발자: Ben Kennedy 박사. 약 17개월의 파트타임 작업으로 혼자 만들었다고 밝힙니다(업체 주장, 2026-11-10의 설립자 설명)."
+    ],
+    [
+      "third-party",
+      "PolyForm Noncommercial 1.0.0에 따른 소스 공개(source-available), 프리미엄 모델이며, 디렉터리는 상업적 사용에 좌석당 유료 라이선스가 필요하고, 프로젝트가 매우 젊으며, 업데이트 확인이 기본으로 켜져 있고, 개인정보 보호 주장은 테스트되지 않았다고 기재합니다. 2026-11-01의 릴리스 5.1.2에는 Mac, Windows, Linux용 설치 프로그램이 있습니다. 출처: PromptQuorum 디렉터리 항목, 2026-11-10 확인."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 사용 메모와 스크린샷(원본 Word 메모, 원본 메모 PDF는 추가 예정).",
+    "StratoSort의 PromptQuorum 디렉터리 항목과 리뷰(슬러그: stratosort), 2026-11-10 확인.",
+    "공급업체 사이트 stratosort.com(업체 주장)과 소스 저장소 iLevyTate/StratoSortStack. 디렉터리에 기재되어 있으며 이 테스트를 위해 열어 보지 않았습니다."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 메모에서 직접 확인한 내용입니다."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 숫자를 함께 제시합니다."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 자신의 추정이며, 시간을 재거나 세지 않았습니다."
+    },
+    "vendor-claim": {
+      "label": "업체 주장",
+      "meaning": "앱, 스토어 등록 정보 또는 웹사이트가 밝힌 내용이며 검증하지 않았습니다."
+    },
+    "third-party": {
+      "label": "제3자",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 나온 내용이며 여기서는 검증하지 않았습니다."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견입니다."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분입니다."
+    }
+  },
+  "images": [
+    {
+      "id": "stratosort-welcome-screen-guided-mode",
+      "figure": 1,
+      "file": "stratosort-welcome-screen-guided-mode.webp",
+      "path": "images/stratosort-welcome-screen-guided-mode.webp",
+      "alt": "StratoSort 환영 화면: Step 1 of 5, Guided 모드 켜짐, 노란색 Organize files now 버튼, AI 및 모델 설정과 Smart folders 버튼.",
+      "caption": "Guided 모드의 환영 화면. 비공개 문구는 업체 주장. 관찰.",
+      "role": "hero",
+      "width": 1432,
+      "height": 791,
+      "bytes": 47780,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-install"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-five-file-dry-run-where-files-would-go",
+      "figure": 2,
+      "file": "stratosort-five-file-dry-run-where-files-would-go.webp",
+      "path": "images/stratosort-five-file-dry-run-where-files-would-go.webp",
+      "alt": "Where these files would go라는 제목의 미리 보기: 파일 5개, 3개는 Uncategorized, Clarity CSV 하나는 신뢰도 43퍼센트, 사진 하나는 65퍼센트.",
+      "caption": "5개 파일 시험 실행, 아무것도 옮겨지지 않음. 신뢰도 값은 앱에서 읽음. 측정.",
+      "role": "moment",
+      "width": 1312,
+      "height": 992,
+      "bytes": 85956,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-dryrun"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-extracted-text-300-characters",
+      "figure": 3,
+      "file": "stratosort-extracted-text-300-characters.webp",
+      "path": "images/stratosort-extracted-text-300-characters.webp",
+      "alt": "키워드 sites, linking, page가 있는 Details 패널과, 도메인 이름 몇 개 뒤에서 잘린 스프레드시트의 추출된 텍스트 300자.",
+      "caption": "Excel 파일의 추출된 텍스트가 300자 뒤에서 끝남. 관찰.",
+      "role": "moment",
+      "width": 928,
+      "height": 792,
+      "bytes": 29322,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-review-cards-fallback-no-folder-match",
+      "figure": 4,
+      "file": "stratosort-review-cards-fallback-no-folder-match.webp",
+      "path": "images/stratosort-review-cards-fallback-no-folder-match.webp",
+      "alt": "Search Console Excel 내보내기 파일 2개의 검토 카드: 제안 이름, 카테고리 Fallback no folder match, 가장 가까운 폴더로 excel GSc를 지목한 메모.",
+      "caption": "“excel GSc”가 가장 가까운 폴더였는데도 대체 폴더에 남은 Excel 내보내기 파일 2개. 관찰.",
+      "role": "moment",
+      "width": 1600,
+      "height": 773,
+      "bytes": 64930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-126-files-uncategorized-banner",
+      "figure": 5,
+      "file": "stratosort-126-files-uncategorized-banner.webp",
+      "path": "images/stratosort-126-files-uncategorized-banner.webp",
+      "alt": "배너: 126 files are uncategorized, 103 are from Promptquorum, 버튼 Create folder for Promptquorum, Different folder, Reanalyze 126.",
+      "caption": "검토 단계의 미분류 배너. 앱이 측정.",
+      "role": "moment",
+      "width": 1600,
+      "height": 355,
+      "bytes": 23238,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-organize-286-files-planned-operations",
+      "figure": 6,
+      "file": "stratosort-organize-286-files-planned-operations.webp",
+      "path": "images/stratosort-organize-286-files-planned-operations.webp",
+      "alt": "Organize 286 files, moving files to their destinations 화면과, 소문자로 된 새 파일 이름과 외장 SSD 경로를 보여 주는 계획된 작업 목록.",
+      "caption": "이동 초반, 이름이 바뀐 파일이 있는 계획된 작업 목록. 관찰.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 62550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-mcp-search-result-clarity-folder-files",
+      "figure": 7,
+      "file": "stratosort-mcp-search-result-clarity-folder-files.webp",
+      "path": "images/stratosort-mcp-search-result-clarity-folder-files.webp",
+      "alt": "Strato에서 가져온 Loci의 답변: Clarity 폴더의 CSV 파일 4개가 짧은 설명과 함께 나열되고, 답변은 보이는 영역 아래로 이어짐.",
+      "caption": "Loci에서 search_documents 호출 “Clarity data”의 결과. 관찰.",
+      "role": "moment",
+      "width": 1558,
+      "height": 946,
+      "bytes": 123930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱(MCP 클라이언트)의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-dmg-window-app-and-applications",
+      "figure": 8,
+      "file": "stratosort-dmg-window-app-and-applications.webp",
+      "path": "images/stratosort-dmg-window-app-and-applications.webp",
+      "alt": "금색, 파란색, 남색의 줄무늬 세 개가 있는 StratoSort Stack 앱 아이콘이 응용 프로그램 폴더 바로 가기 옆에 있는 설치 창.",
+      "caption": "설치 창. 관찰.",
+      "role": "gallery",
+      "width": 1374,
+      "height": 858,
+      "bytes": 21362,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-start-options-guided-steps-or-dashboard",
+      "figure": 9,
+      "file": "stratosort-start-options-guided-steps-or-dashboard.webp",
+      "path": "images/stratosort-start-options-guided-steps-or-dashboard.webp",
+      "alt": "Prefer a different starting point 아래의 카드 두 장: Guided steps와 Dashboard, 각각 한 줄 설명이 있음.",
+      "caption": "다른 시작 방법. 관찰.",
+      "role": "gallery",
+      "width": 1428,
+      "height": 364,
+      "bytes": 17060,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-analysis-progress-5-of-281-files",
+      "figure": 10,
+      "file": "stratosort-analysis-progress-5-of-281-files.webp",
+      "path": "images/stratosort-analysis-progress-5-of-281-files.webp",
+      "alt": "진행 카드: Analyzing 5 of 281 files, 2 percent complete, 현재 Loci app test.docx 파일을 처리 중, Stop analysis 버튼.",
+      "caption": "분석 진행 상황. 전체 소요 시간은 기록 없음. 측정.",
+      "role": "gallery",
+      "width": 1431,
+      "height": 287,
+      "bytes": 11658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-category-dropdown-suggested-folders",
+      "figure": 11,
+      "file": "stratosort-category-dropdown-suggested-folders.webp",
+      "path": "images/stratosort-category-dropdown-suggested-folders.webp",
+      "alt": "Suggested 그룹이 있는 카테고리 드롭다운: Pictures(best match), Leftovers, excel GSc, Clarity.",
+      "caption": "검토 단계의 파일별 카테고리 선택. 관찰.",
+      "role": "gallery",
+      "width": 844,
+      "height": 596,
+      "bytes": 14336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-file-analysis-details-metadata",
+      "figure": 12,
+      "file": "stratosort-file-analysis-details-metadata.webp",
+      "path": "images/stratosort-file-analysis-details-metadata.webp",
+      "alt": "파일 분석 Details: 프로젝트 Top sites linking, 날짜 2026-08-08, 문서 유형 Excel Spreadsheet, 방식 content, 길이 300 chars, 요약.",
+      "caption": "스프레드시트 하나의 Details 화면. 관찰.",
+      "role": "gallery",
+      "width": 1012,
+      "height": 1024,
+      "bytes": 38536,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-single-file-card-whatsapp-image-64-confidence",
+      "figure": 13,
+      "file": "stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "path": "images/stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "alt": "126 KB짜리 WhatsApp 이미지의 검토 카드: 제안 이름 whatsapp-image-2026-11-10.jpeg, 카테고리 Pictures best match, 신뢰도 64퍼센트.",
+      "caption": "테스트 폴더 밖에서 추가한 개별 파일. 측정.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 772,
+      "bytes": 26640,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-mcp-tool-list-and-client-setup",
+      "figure": 14,
+      "file": "stratosort-mcp-tool-list-and-client-setup.webp",
+      "path": "images/stratosort-mcp-tool-list-and-client-setup.webp",
+      "alt": "도구 4개를 나열한 MCP 화면: search_documents, chat_with_documents, get_document_summary, list_smart_folders, 읽기 전용 안내, Copy config 버튼.",
+      "caption": "앱의 MCP 화면. 읽기 전용 문구는 업체 주장. 관찰.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 689,
+      "bytes": 54658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "StratoSort 앱의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-mcp-connected-in-client-four-tools",
+      "figure": 15,
+      "file": "stratosort-mcp-connected-in-client-four-tools.webp",
+      "path": "images/stratosort-mcp-connected-in-client-four-tools.webp",
+      "alt": "Loci 대화 상자: Strato is connected and offers 4 tools, 각 도구에 Doesn't say whether it can change things 표시, search_documents의 입력값이 나열됨.",
+      "caption": "Loci가 보여 준 도구 목록. 관찰.",
+      "role": "gallery",
+      "width": 1348,
+      "height": 1272,
+      "bytes": 80732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱(MCP 클라이언트)의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-mcp-servers-list-in-client",
+      "figure": 16,
+      "file": "stratosort-mcp-servers-list-in-client.webp",
+      "path": "images/stratosort-mcp-servers-list-in-client.webp",
+      "alt": "Loci의 MCP 서버 목록: 도구 27개의 PromptQuorum와 도구 4개의 Strato가 모두 연결됨, 그리고 Add a server 행.",
+      "caption": "Loci의 서버 목록. 관찰.",
+      "role": "gallery",
+      "width": 1216,
+      "height": 492,
+      "bytes": 18196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱(MCP 클라이언트)의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-mcp-list-smart-folders-result-table",
+      "figure": 17,
+      "file": "stratosort-mcp-list-smart-folders-result-table.webp",
+      "path": "images/stratosort-mcp-list-smart-folders-result-table.webp",
+      "alt": "스마트 폴더의 Loci 표: Uncategorized 파일 53개, Pictures 8개, excel GSc 196개, 설명과 외장 SSD의 대상 경로.",
+      "caption": "list_smart_folders의 결과. 표시된 대로의 수치이며 이후 행은 보이지 않음. 측정.",
+      "role": "gallery",
+      "width": 1586,
+      "height": 1040,
+      "bytes": 72116,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱(MCP 클라이언트)의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    },
+    {
+      "id": "stratosort-mcp-search-documents-permission-prompt",
+      "figure": 18,
+      "file": "stratosort-mcp-search-documents-permission-prompt.webp",
+      "path": "images/stratosort-mcp-search-documents-permission-prompt.webp",
+      "alt": "권한 요청: Allow Strato to run search_documents, 쿼리 Clarity data, 로컬 주소 127.0.0.1, 버튼 Allow once와 Decline.",
+      "caption": "검색 전의 권한 요청. 관찰.",
+      "role": "gallery",
+      "width": 1558,
+      "height": 1002,
+      "bytes": 53140,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Loci 앱(MCP 클라이언트)의 스크린샷",
+      "rights": "제3자 소프트웨어 UI를 담은 테스터 본인의 스크린샷입니다.",
+      "captured": "테스트 날짜 기록 없음, 정확한 시각은 기록 없음"
+    }
+  ],
+  "figure_order": [
+    "stratosort-welcome-screen-guided-mode",
+    "stratosort-five-file-dry-run-where-files-would-go",
+    "stratosort-extracted-text-300-characters",
+    "stratosort-review-cards-fallback-no-folder-match",
+    "stratosort-126-files-uncategorized-banner",
+    "stratosort-organize-286-files-planned-operations",
+    "stratosort-mcp-search-result-clarity-folder-files",
+    "stratosort-dmg-window-app-and-applications",
+    "stratosort-start-options-guided-steps-or-dashboard",
+    "stratosort-analysis-progress-5-of-281-files",
+    "stratosort-category-dropdown-suggested-folders",
+    "stratosort-file-analysis-details-metadata",
+    "stratosort-single-file-card-whatsapp-image-64-confidence",
+    "stratosort-mcp-tool-list-and-client-setup",
+    "stratosort-mcp-connected-in-client-four-tools",
+    "stratosort-mcp-servers-list-in-client",
+    "stratosort-mcp-list-smart-folders-result-table",
+    "stratosort-mcp-search-documents-permission-prompt"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 11월 17일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "여섯 가지 순간",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "메모리",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 형성한 여섯 가지 순간",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "출처",
+      "확인한 내용",
+      "라벨"
+    ],
+    "fit_h": "24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "앱",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정",
+      "Info": "정보"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
+  }
+}

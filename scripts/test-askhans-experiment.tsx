@@ -2,8 +2,8 @@
 // Pure logic only (assignment, page category, copy coverage, statistics); no Redis, no browser.
 import assert from 'node:assert/strict'
 import { pickVariant } from '../src/lib/askhans/experiment/variant'
-import { CTA_VARIANTS, CTA_LANGS, CTA_MIN_DAYS, pageCategory } from '../src/lib/askhans/experiment/config'
-import { analyse, decide, mulberry32 } from '../src/lib/askhans/experiment/stats'
+import { CTA_VARIANTS, CTA_LANGS, CTA_EVENTS, CTA_MIN_DAYS, CTA_MIN_CLICKS_PER_VARIANT, pageCategory } from '../src/lib/askhans/experiment/config'
+import { analyse, decide, exposurePerVariant, mulberry32 } from '../src/lib/askhans/experiment/stats'
 import { ASK_COPY } from '../src/components/askhans/copy'
 import { reserveEm } from '../src/components/askhans/experiment/useCta'
 
@@ -85,6 +85,31 @@ t('decision rule refuses early or small data, accepts a real difference', () => 
   assert.equal(decide(tie, 30).state, 'insufficient')
   const small = analyse({ A: { k: 100, n: 5000 }, B: { k: 101, n: 5000 }, C: { k: 109, n: 5000 } })
   assert.notEqual(decide(small, 30).state, 'leader', 'a +9% lift is below the practical threshold')
+})
+
+t('exposure = tracked page loads / 3; no impression event exists', () => {
+  assert.equal(exposurePerVariant(9000), 3000)
+  assert.equal(exposurePerVariant(10000), 3333)
+  assert.equal(exposurePerVariant(null), 0)
+  assert.equal(exposurePerVariant(-5), 0)
+  assert.equal(exposurePerVariant(Number.NaN), 0)
+  assert.ok(!('ask_hans_button_impression' in CTA_EVENTS), 'impression event must stay removed (Umami quota)')
+})
+
+t('leader needs enough clicks per variant and a page-load total', () => {
+  // clear difference but too few clicks: no leader
+  const fewClicks = analyse({ A: { k: 20, n: 6000 }, B: { k: 20, n: 6000 }, C: { k: 60, n: 6000 } })
+  const d1 = decide(fewClicks, 30)
+  assert.notEqual(d1.state, 'leader')
+  assert.ok(d1.reasons.some((x) => x.includes('button clicks')), 'names the click guard')
+  // same rates, enough clicks: leader
+  const enough = analyse({ A: { k: CTA_MIN_CLICKS_PER_VARIANT, n: 6000 }, B: { k: CTA_MIN_CLICKS_PER_VARIANT, n: 6000 }, C: { k: 200, n: 6000 } })
+  assert.equal(decide(enough, 30).leader, 'C')
+  // page-load total missing (exposure 0): never a leader, tells the owner how to fix it
+  const none = analyse({ A: { k: 150, n: 0 }, B: { k: 150, n: 0 }, C: { k: 300, n: 0 } })
+  const d2 = decide(none, 30)
+  assert.notEqual(d2.state, 'leader')
+  assert.ok(d2.reasons.some((x) => x.includes('?pageviews=N')))
 })
 
 if (failed) {

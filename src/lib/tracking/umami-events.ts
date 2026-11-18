@@ -1,6 +1,6 @@
 // Sitewide Umami helpers.
 //   - localeAndCluster(): shared by the affiliate_click payload (src/lib/tracking/affiliate.ts)
-//   - adblock_check: once-per-session bait-element probe, sampled at 25% of sessions, mounted by
+//   - adblock_check: once-per-session bait-element probe, sampled at 5% of sessions, mounted by
 //     <AdblockCheck /> in layout.tsx.
 // Every custom event counts against the plan's monthly event quota, so both stay sparse.
 // No personal data, no cookies. Nothing here throws when Umami is missing (blocked or not loaded).
@@ -8,7 +8,7 @@
 import { ALL_LANGS } from '@/lib/i18n/constants'
 
 const LOCALES: readonly string[] = ALL_LANGS
-const SAMPLE_RATE = 0.25
+const SAMPLE_RATE = 0.05 // ~2,000 samples / 28 days is enough for +-2 points (see docs/adblock-measurement.md)
 const SAMPLE_KEY = 'pq_adblock_sampled' // sessionStorage: '1' = sampled, '0' = not; set on first pageview
 const BAIT_DELAY_MS = 150
 
@@ -29,7 +29,7 @@ function send(name: string, data: Record<string, unknown>): void {
 }
 
 /**
- * Decide ONCE per session, on its first pageview, whether to probe (25% sample). The decision is
+ * Decide ONCE per session, on its first pageview, whether to probe (5% sample). The decision is
  * stored in sessionStorage, so later pageviews find it and stop: at most one probe per session.
  * No storage = no probe (once-per-session cannot be guaranteed).
  */

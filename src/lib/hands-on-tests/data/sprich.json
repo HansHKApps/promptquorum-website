@@ -15,10 +15,10 @@
   },
   "title": "Sprich on an M4 Pro Mac with 24 GB: Local Dictation That Types Into Any App",
   "page_title": "Sprich Test",
-  "dek": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers despite poor room sound, a German-only interface, and several side features not tried.",
+  "dek": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers (accuracy not scored; the tester calls the room sound poor), a German-only interface, and several side features not tried.",
   "seo": {
     "title": "Sprich Hands-on Test: Local Dictation on an M4 Pro Mac",
-    "description": "Hands-on test of Sprich on a 24 GB M4 Pro Mac: dictation in Word, WhatsApp and Telegram, plus a 6-minute meeting with two speakers. Russian failed."
+    "description": "Hands-on test of Sprich on a 24 GB M4 Pro Mac: dictation in Word, WhatsApp and Telegram, plus a 6-minute meeting with two speakers."
   },
   "faq": [
     [
@@ -28,7 +28,7 @@
     ],
     [
       "Which languages did Sprich handle in the test?",
-      "English and German worked. A French sentence was dictated and its text is in the notes, but accuracy was not judged. A Russian test failed: the output was garbled. The dictation language set at that time is not recorded.",
+      "English and German worked. A French sentence was dictated and its text is in the notes, but accuracy was not judged. A Russian test produced garbled output. The dictation language set at that time is not recorded.",
       "observed"
     ],
     [
@@ -53,7 +53,7 @@
     ],
     [
       "Does Sprich’s meeting mode work?",
-      "In one short test, yes. On 13 November the tester recorded a 6-minute meeting with two people. The room sound was very bad, but Sprich still transcribed it and assigned two speakers. It then offers summary, minutes, follow-up e-mail and doctor’s letter formats. Accuracy was not scored and which format was generated is not recorded.",
+      "One short test, no verdict on quality. On 13 November the tester recorded a 6-minute meeting with two people in a room whose sound he calls very bad; Sprich still produced a transcript with two speakers assigned. It then offers summary, minutes, follow-up e-mail and doctor’s letter formats. Accuracy was not scored and which format was generated is not recorded.",
       "observed"
     ]
   ],
@@ -118,20 +118,20 @@
       "observed"
     ],
     [
-      "AI help used",
-      "Claude drafted this report from the tester's Word notes and 15 screenshots, and the Meeting mode chapter from the tester's message of 13 November and 2 further screenshots. The dictated parts of the notes appear to come from Sprich itself (assumption: the history entries match the notes' text), so some slips in the notes may be app output.",
+      "Basis of this report",
+      "This report is based on the tester's Word notes and 15 screenshots, and the Meeting mode chapter on the tester's message of 13 November and 2 further screenshots. The dictated parts of the notes appear to come from Sprich itself (assumption: the history entries match the notes' text), so some slips in the notes may be app output.",
       "assumption"
     ],
     [
       "Disclosure",
-      "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+      "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
       "observed"
     ]
   ],
-  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test, with an AI-written review. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Sprich was added to the directory on 2026-11-09, the same day as this test. The developer replied to the tester after the test; the date is not stated, and whether he had these notes is not recorded. Sprich receives clicks from the site. No payment or sponsorship is recorded in the notes.",
   "verdict": {
-    "general": "A carefully built, German-first dictation app for Apple Silicon Macs. In this session dictation worked in Word, WhatsApp and Telegram in English and German; Russian did not. In a second session on 13 November a 6-minute meeting with two people was recorded and transcribed, with the speakers told apart, despite very poor room sound; the tester says the meeting function works well. File transcription, text rewriting, offline operation, the privacy claims and uninstall were not tested.",
-    "fit": "The tester is impressed, gives it five out of five and recommended it to a contact. He rates it as fast as his cloud dictation tool, though nothing was timed. Whether he will keep using it is not stated in his notes. He also finds it really great that the meeting notes run locally."
+    "general": "A carefully built, German-first dictation app for Apple Silicon Macs. In this session dictation worked in Word, WhatsApp and Telegram in English and German; Russian was not recognised in one test. In a second session on 13 November a 6-minute meeting with two people was recorded and transcribed, with two speakers assigned (accuracy not scored), in a room the tester calls very poor for sound; the tester says the meeting function works well. File transcription, text rewriting, offline operation, the privacy claims and uninstall were not tested.",
+    "fit": "The tester is impressed, gives it five out of five and recommended it to a contact. He rates it as fast as his cloud dictation tool, though nothing was timed. Whether he will keep using it is not stated in his notes. He also finds it really great that the meeting notes run locally, as the app states; PromptQuorum did not test this."
   },
   "scores": [
     [
@@ -147,7 +147,7 @@
     [
       "Core function",
       4,
-      "Dictation worked in three apps in English and German; Russian failed."
+      "Dictation worked in three apps in English and German; Russian was not recognised in one test, and the dictation language setting was not recorded."
     ],
     [
       "Guidance and iteration",
@@ -183,7 +183,7 @@
     ],
     [
       "observed",
-      "Dictation worked in Microsoft Word, WhatsApp and Telegram, in English and German. A Russian test failed. A product name came out as \"Sprich Ae\" in the history."
+      "Dictation worked in Microsoft Word, WhatsApp and Telegram, in English and German. A Russian test was not recognised; the dictation language setting was not recorded. A product name came out as \"Sprich Ae\" in the history."
     ],
     [
       "tester-error",
@@ -199,7 +199,7 @@
     ],
     [
       "observed",
-      "In a second session on 13 November the tester recorded a 6-minute meeting with two people. The room sound was very bad; Sprich still transcribed it and assigned two speakers. A follow-up dialog offers Zusammenfassung, Protokoll, Follow-up-E-Mail and Arztbrief. The tester says the meeting function works well."
+      "In a second session on 13 November the tester recorded a 6-minute meeting with two people. The tester describes the room sound as very bad; Sprich still transcribed it and assigned two speakers. A follow-up dialog offers Zusammenfassung, Protokoll, Follow-up-E-Mail and Arztbrief. The tester says the meeting function works well."
     ],
     [
       "observed",
@@ -391,7 +391,7 @@
       "items": [
         [
           "observed",
-          "On 13 November 2026 the tester recorded a meeting with the Meetings tab. The header of the saved meeting reads “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (utterances). Which app version he used is not recorded.",
+          "On 13 November 2026 the tester recorded a meeting with the Meetings tab. The header of the saved meeting reads “Meeting vom 13. November”, 12:24, Mikrofon, 6 min, 2 Personen, 28 Wortmeldungen (utterances). Which app version he used is not recorded. The other participant consented to the recording and to the excerpt being published.",
           "sprich-meeting-transcript-two-speakers"
         ],
         [
@@ -421,7 +421,7 @@
         ],
         [
           "tester-view",
-          "The tester finds it really great that this runs locally.",
+          "The tester finds it really great that this runs locally, as the app states; PromptQuorum did not test this.",
           null
         ],
         [
@@ -447,7 +447,7 @@
         ],
         [
           "tester-view",
-          "From his 30 years in consulting he values writing meeting notes himself. He then recorded a meeting in a room with the app and finds it really great that it runs locally.",
+          "From his 30 years in consulting he values writing meeting notes himself. He then recorded a meeting in a room with the app and finds it really great that it runs locally, as the app states; PromptQuorum did not test this.",
           null
         ]
       ]
@@ -499,7 +499,7 @@
     [
       "Dictation is optimised for German; Parakeet understands about 25 European languages.",
       "Developer message",
-      "English and German worked, Russian failed; file transcription not tried.",
+      "English and German worked; Russian was not recognised in one test; file transcription not tried.",
       "vendor-claim"
     ],
     [
@@ -602,9 +602,9 @@
     [
       "Russian words",
       "Not recorded",
-      "Garbled, not recognised",
+      "Garbled output in one test; dictation language setting not recorded",
       "Not recorded",
-      "Fail",
+      "Not completed",
       []
     ],
     [
@@ -630,7 +630,7 @@
       "Meetings",
       "6 min, 2 persons, 28 utterances; room sound very bad (tester); transcript with two speakers produced",
       "12:24 (13 Nov)",
-      "Pass",
+      "Partial",
       [
         "sprich-meeting-transcript-two-speakers"
       ]
@@ -985,7 +985,7 @@
     "not_fits": [
       [
         "assumption",
-        "Anyone who needs Russian or a non-German interface today, or an Intel Mac (the directory lists Apple Silicon only)."
+        "Anyone who needs Russian today (one test, dictation language setting not recorded, was not recognised) or a non-German interface, or an Intel Mac (the directory lists Apple Silicon only)."
       ]
     ],
     "retest": "Retest on a new major version, a published English interface or confirmed language list. Cover: record the app and macOS versions; time the delay; Russian with the language set; file transcription; longer meetings with each evaluation format generated and timed; the rewrite menu; offline use with traffic inspected; runtime memory; uninstall."
@@ -1009,8 +1009,8 @@
       "meaning": "Seen first-hand in the app, a screenshot or the tester's notes."
     },
     "measured": {
-      "label": "Measured",
-      "meaning": "A value read from a dialog, counter or tool, with the number given."
+      "label": "Read from the app",
+      "meaning": "A value the app displayed in a dialog, counter or tool, with the number given. PromptQuorum did not measure it."
     },
     "tester-estimate": {
       "label": "Tester estimate",
@@ -1086,7 +1086,7 @@
       "file": "sprich-setup-two-models-download-3-3-gb.webp",
       "path": "images/sprich-setup-two-models-download-3-3-gb.webp",
       "alt": "Setup step 2 of 5: two models are downloaded once, Sprich Transcribe v3 at about 480 MB and Sprich Turbo v3 at about 2.8 GB, together about 3.3 GB.",
-      "caption": "Model step of the setup. Sizes are the app's own figures (measured); \"works fully offline\" is a vendor-claim.",
+      "caption": "Model step of the setup. Sizes are the app's own figures (read from the app); \"works fully offline\" is a vendor-claim.",
       "role": "moment",
       "width": 1386,
       "height": 1306,
@@ -1128,7 +1128,7 @@
       "file": "sprich-setup-final-step-models-still-loading.webp",
       "path": "images/sprich-setup-final-step-models-still-loading.webp",
       "alt": "Setup step 5 of 5, \"Fast geschafft\": speech recognition download at 72 percent and text improvement at 12 percent, with steps 1 to 4 ticked.",
-      "caption": "Models still downloading at the end of setup. Time not recorded. Measured.",
+      "caption": "Models still downloading at the end of setup. Time not recorded. Read from the app.",
       "role": "moment",
       "width": 1376,
       "height": 1174,

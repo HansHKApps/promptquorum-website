@@ -8,20 +8,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'Best Smart Home Devices 2026: The Local-First Buying Guide',
-    seoTitle: 'Best Smart Home Devices 2026: Local-First Buyer Guide',
+    seoTitle: 'Best Motion Sensor 2026 & Smart Home Devices: Local Picks',
     intro:
-      'The best smart home devices in 2026 span a hub, a Zigbee/Thread coordinator, lighting, locks, sensors, cameras, and plugs — and the highest-leverage decision is picking your architecture first: local-first, cloud-first, or hybrid. This guide gives a specific pick per category (checked August 25, 2026), a starter kit and a serious kit with real prices, a "what not to buy" list, and a decision tree that maps what you want to what to buy.',
+      'The best smart home devices in 2026 span a hub, a Zigbee/Thread coordinator, lighting, locks, sensors, cameras, and plugs — and the highest-leverage decision is picking your architecture first: local-first, cloud-first, or hybrid. This guide gives a specific pick per category (checked at the time of the last refresh), a starter kit and a serious kit with real prices, a "what not to buy" list, and a decision tree that maps what you want to what to buy.',
     metaDescription:
-      'Best smart home devices 2026: hub, Zigbee/Thread, lighting, locks, sensors, cameras, plugs — one pick per category, real prices (Aug 2026), starter kits, decision tree.',
+      'Best motion sensor for a local smart home: Aqara P1 (~$25–30) for lights, Aqara FP2 (~$85) for presence. Plus hub, lock and camera picks with real prices.',
     twitterDescription:
-      'Best smart home devices 2026, by category: hub, Zigbee/Thread coordinator, lighting, locks, sensors, cameras, plugs. Real prices, starter + serious kits, decision tree.',
+      'Best motion sensor 2026 for a local smart home (Aqara P1, Aqara FP2), plus hub, Zigbee/Thread, lighting, locks and cameras. Real prices, kits, decision tree.',
     readTime: '12 min read',
     educationalLevel: 'Intermediate',
     audience: 'Buyers assembling a local-capable smart home',
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'privacy smart home devices',
     ],
     leadAnswerBlock:
-      '**Pick your architecture first, then buy by category: Home Assistant Green ($199/€179) as the hub, a Zigbee/Thread coordinator like the [Home Assistant Connect ZBT-2](/smart-home/best-zigbee-thread-dongles-2027) ($49/€45), Zigbee sensors and plugs, and local RTSP cameras with [Frigate](/smart-home/local-ai-security-camera) instead of a cloud subscription.** PromptQuorum\'s recommendation, based on current specs and pricing (checked August 25, 2026), not a hands-on lab test of every product: local-first or hybrid for a serious build, cloud-first only if ease-of-setup matters more than long-term cost and privacy. → [See today\'s Home Assistant Green price](https://www.home-assistant.io/green/)',
+      '**Pick your architecture first, then buy by category: Home Assistant Green ($199/€179) as hub, a Zigbee/Thread coordinator like the [Home Assistant Connect ZBT-2](/smart-home/best-zigbee-thread-dongles-2027), and local cameras with [Frigate](/smart-home/local-ai-security-camera).** Specs and prices checked at last refresh; not hands-on lab tests. Local-first or hybrid suits serious builds. → [Green price](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       en: {
         question: 'What are the best smart home devices to buy in 2026?',
@@ -74,15 +74,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'The best 2026 smart home devices are local-capable ones — Zigbee, Z-Wave, Matter, or local Wi-Fi — tied together by a local hub like Home Assistant, with one clear pick per category.' },
-      { type: 'plain-terms', content: 'When buying smart home gear, the most important question is not the brand — it is whether the device can run locally. Devices that speak Zigbee, Z-Wave, or Matter, or that offer a local API, keep working without the cloud and keep your data at home. Cloud-only devices are convenient but lock you in and can add monthly fees.' },
+      { type: 'one-sentence', content: 'A strong 2026 smart home setup is built from local-capable devices — Zigbee, Z-Wave, Matter, or local Wi-Fi — tied together by a local hub like Home Assistant, with one clear pick per category.' },
+      { type: 'plain-terms', content: 'When buying smart home gear, the most important question is not the brand — it is whether the device can run locally. Devices that speak Zigbee, Z-Wave, or Matter, or that offer a local API, keep working without the cloud and can keep your data at home for core functions. Cloud-only devices are convenient but lock you in and can add monthly fees.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'Quick Picks — One Product Per Category',
         highlight: true,
-        content: 'Skip the reading — here is the specific product PromptQuorum would buy in each category, checked August 25, 2026.',
+        content: 'Skip the reading — here is the specific product PromptQuorum would buy in each category, checked at the time of the last refresh.',
         columns: ['Category', 'Our pick', 'Best for'],
         rows: [
           { Category: '🧠 Hub', 'Our pick': 'Home Assistant Green', 'Best for': 'Easiest local setup, no server to build' },
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Choose your architecture first: local-first (Home Assistant + Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google/vendor hubs), or hybrid',
           'Hub: Home Assistant Green ($199/€179) for the easiest local setup; a mini PC if you also want local AI',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/smart-home/best-zigbee-thread-dongles-2027) ($49/€45) or SONOFF ZBDongle-E (~$20–27, budget)',
-          'Cameras: local RTSP cameras + [Frigate](/smart-home/local-ai-security-camera) avoid subscriptions and keep footage home',
+          'Cameras: local RTSP cameras + [Frigate](/smart-home/local-ai-security-camera) avoid subscriptions and can keep footage at home for core functions',
           'Locks: prioritize local reliability (Z-Wave/Matter) over AI features — never let an LLM be the sole authority on your door lock',
           'A slightly more expensive local device is often cheaper than a cloud one over 3–5 years once subscriptions are counted',
         ],
@@ -135,12 +135,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: 'How We Pick: Local-Capable First',
         content:
-          '**The selection rule is local capability first: a device must work through a local hub without depending on a vendor cloud.** Local-capable devices protect privacy, keep working offline, and avoid subscriptions. This page has not been built from PromptQuorum physically testing every product — picks are based on current specifications, documented local-API/protocol support, and independent reviews, checked August 25, 2026.',
+          '**The selection rule is local capability first: a device must work through a local hub without depending on a vendor cloud.** Local-capable devices protect privacy, keep working offline, and avoid subscriptions. This page has not been built from PromptQuorum physically testing every product — picks are based on current specifications, documented local-API/protocol support, and independent reviews, checked at the time of the last refresh.',
         items: [
           '**Local protocol or API:** Zigbee, Z-Wave, Matter, or a documented local Wi-Fi API.',
           '**No mandatory cloud account:** the device must function through a local hub.',
           '**No subscription for core features:** recording or automation should not require a fee.',
-          '**Current pricing:** every price below was checked against manufacturer or major-retailer listings on August 25, 2026 — always verify the live price before buying.',
+          '**Current pricing:** every price below was checked against manufacturer or major-retailer listings at the time of the last refresh; prices move with component costs, so always verify the live price before buying.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
         imageCaption: 'Local-capable devices — Zigbee, Z-Wave, Matter, or a local API — compared against cloud-only devices across 5 factors including subscriptions and offline reliability.',
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 Our pick: Home Assistant Green ($199/€179).** If you want a genuinely local-first smart home without building a server yourself, Green is the easiest starting point — it speaks Zigbee (with a coordinator), Z-Wave, Matter, and Thread, and runs automations, dashboards, and energy monitoring entirely offline.',
         items: [
-          '**Note on price:** Home Assistant Green\'s price rose from its original $99 launch price to $199/€179 in April 2026, driven by rising RAM/component costs — worth knowing before you budget, since older reviews still cite the outdated $99 figure.',
+          '**Note on price:** Home Assistant Green\'s price is now $199/€179 (see the [vendor page](https://www.home-assistant.io/green/)), up from the original $99 launch price — worth knowing before you budget, since older reviews still cite the outdated $99 figure.',
           '**Best for:** beginners who want local control without building or maintaining a server themselves.',
           '**Upgrade path:** if you later want local LLMs, Frigate camera AI, many cameras, Docker containers, or a database, move Home Assistant to a mini PC instead — see the [Best Mini PC](#mini-pc) section below.',
           'Add a Zigbee coordinator and, separately, a Z-Wave controller (USB sticks) for those protocols — see [Best Zigbee & Thread Coordinator](#zigbee-thread).',
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 Best premium: Philips Hue (~$54+ per color bulb).** Buy if reliability matters, you want a mature ecosystem, a large product range, and don\'t mind paying more.',
           '**🥇 Best budget: IKEA TRÅDFRI.** Buy if price matters, plain Zigbee control is sufficient, and you\'re integrating with Home Assistant — significantly cheaper per bulb than Hue.',
-          'Wall switches that control existing fixtures are often more reliable than smart bulbs alone, and avoid the "someone turned the physical switch off" failure mode.',
+          'Wall switches that control existing fixtures are often more reliable than smart bulbs alone (installing them means mains wiring, which belongs with a qualified electrician), and avoid the "someone turned the physical switch off" failure mode.',
           '**What we don\'t recommend:** bulbs that require cloud access for basic operation, become useless when the vendor shuts down its servers, or need a subscription for basic automation.',
         ],
         affiliateLinks: [
@@ -256,6 +256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Why we prefer local cameras:** a cloud camera creates a recurring monthly cost for something your own hardware can do once, paid for. The local architecture is: camera → local network → Frigate → local AI detection → Home Assistant, with no cloud AI subscription required for the basic setup.',
           'RTSP and PoE support matter more than brand — any camera with documented RTSP output and no forced cloud gate works with Frigate.',
           'Full setup guide: [Local AI Security Cameras with Frigate](/smart-home/local-ai-security-camera).',
+          '**Privacy note:** cameras that record people can trigger privacy and data-protection rules (for example GDPR in the EU). Point cameras only at your own property, avoid covering neighbors or public areas, tell visitors and household members about recording, and secure the recording server with strong passwords and updates. This is general information, not legal advice.',
         ],
         affiliateLinks: [
           { label: 'Check current Reolink prices →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
@@ -280,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'The Local Smart Home Starter Kit',
         content:
-          '**Budget: roughly $290–360 total (checked August 25, 2026). Start with a local hub, a Zigbee coordinator, and a few local devices in one room, then expand.**',
+          '**Budget: roughly $320–380 total (checked at the time of the last refresh). Start with a local hub, a Zigbee coordinator, and a few local devices in one room, then expand.**',
         columns: ['Category', 'Device', 'Approx. price'],
         rows: [
           { Category: 'Hub', Device: 'Home Assistant Green', 'Approx. price': '$199/€179' },
@@ -290,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Category: 'Plugs', Device: '2 Zigbee smart plugs', 'Approx. price': '~$30–40' },
         ],
         items: [
-          'This gives a private, reliable base you can grow room by room — every device here works offline once paired, and none require a subscription.',
+          'This gives a private, reliable base you can grow room by room — the core functions of every device here work offline once paired and need no subscription (check each product for optional cloud features).',
         ],
         affiliateLinks: [
           { label: 'Build this starter kit → check Home Assistant Green price', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199/€179' },
@@ -386,11 +387,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What is the best provider if I want to outfit my whole house with smart home devices?', a: 'There is no single "provider" for a local-first setup — that\'s the point. Home Assistant is the hub, and you mix and match Zigbee/Z-Wave/Matter devices from any brand (Aqara, SONOFF, Philips Hue, IKEA, Reolink, etc.) rather than being locked to one vendor\'s ecosystem and price list.' },
             { q: 'Which networked household devices are best controlled via an app?', a: 'Devices with a documented local API — Zigbee, Z-Wave, and Matter devices paired through Home Assistant all get app control (the Home Assistant app) without routing your data through a vendor cloud. Cloud-only devices also offer app control, but through the vendor\'s own app and servers.' },
             { q: 'How much do local-capable devices cost compared to cloud-only devices?', a: 'Local-capable devices (Zigbee, Z-Wave, Matter) typically cost the same or less than cloud-only equivalents at purchase, since the difference is protocol support, not hardware quality. The real savings show up over time: cloud-only cameras and hubs often add monthly subscription fees for recording or advanced automation, while a local hub and local devices have no recurring cost after the initial purchase.' },
-            { q: 'Is my data safer with local-capable devices than cloud-only devices?', a: 'Yes. Local-capable devices paired to a local hub keep voice recordings, camera footage, and automation routines on your own network, with no data sent to a manufacturer\'s server. Cloud-only devices route that same data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes.' },
+            { q: 'Is my data safer with local-capable devices than cloud-only devices?', a: 'Usually, with caveats. Local-capable devices paired to a local hub can keep voice recordings, camera footage, and automation routines on your own network for core functions, with no data sent to a manufacturer\'s server. Some devices still contact vendor servers for firmware updates or optional cloud features, so check each device\'s settings. Cloud-only devices route that same data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes. Local storage also makes you responsible for securing and updating your own hub.' },
             { q: 'Do local-capable devices work with HomeKit, Google Home, and Amazon Alexa?', a: 'Most do. Matter-certified devices work natively with HomeKit, Google Home, and Alexa alongside a local hub. Zigbee and Z-Wave devices connect through Home Assistant, which can then expose them to HomeKit, Google Home, or Alexa as a bridge — so you keep local control while still using those voice assistants if you want to.' },
             { q: 'Is Matter compatible with my existing Zigbee or Z-Wave devices?', a: 'Matter runs alongside Zigbee and Z-Wave rather than replacing them — a hub like Home Assistant can control Matter, Zigbee, and Z-Wave devices at the same time. You do not need to replace working Zigbee or Z-Wave gear to add Matter devices; a Thread border router is needed only for Matter-over-Thread devices specifically.' },
             { q: 'Are there budget-friendly ways to add smart home features to an existing house?', a: 'Yes — Zigbee bulbs, plugs, and sensors are the cheapest entry point and don\'t require rewiring. Start with a $199 hub and a $20–27 Zigbee dongle, then add a handful of $15–30 devices in one room before expanding — see the starter kit table above for exact costs.' },
-            { q: 'How hard is it for a complete beginner to set up a local-first smart home?', a: 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices takes under an hour for most beginners, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.' },
+            { q: 'How hard is it for a complete beginner to set up a local-first smart home?', a: 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices often takes about an hour or less, depending on experience, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.' },
           ],
       },
       relatedReading: {
@@ -413,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Smart Home Devices 2026: The Local-First Buying Guide',
-      description: 'Best smart home devices 2026 by category — hub, Zigbee/Thread, lighting, locks, sensors, cameras, plugs — one pick per category with real prices checked August 25, 2026.',
+      description: 'Best smart home devices 2026 by category — hub, Zigbee/Thread, lighting, locks, sensors, cameras, plugs — one pick per category with real prices checked at the time of the last refresh.',
       url: 'https://www.promptquorum.com/smart-home/best-smart-home-devices-2026',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -498,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is my data safer with local-capable devices than cloud-only devices?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Local-capable devices paired to a local hub keep voice recordings, camera footage, and automation routines on your own network, with no data sent to a manufacturer\'s server. Cloud-only devices route that same data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes.',
+              'text': 'Usually, with caveats. Local-capable devices paired to a local hub can keep voice recordings, camera footage, and automation routines on your own network for core functions, though some devices still contact vendor servers for firmware updates or optional cloud features. Cloud-only devices route that data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes.',
             },
           },
           {
@@ -530,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'How hard is it for a complete beginner to set up a local-first smart home?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices takes under an hour for most beginners, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.',
+              'text': 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices often takes about an hour or less, depending on experience, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.',
             },
           },
         ],
@@ -543,20 +544,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'أفضل أجهزة المنزل الذكي 2026: دليل الشراء المحلي أولًا',
-    seoTitle: 'أفضل أجهزة المنزل الذكي 2026: دليل المشتري المحلي أولًا',
+    seoTitle: 'أفضل حساس حركة 2026 وأجهزة المنزل الذكي المحلية',
     intro:
-      'تمتد أفضل أجهزة المنزل الذكي لعام 2026 من المركز (Hub) ومنسّق Zigbee/Thread إلى الإضاءة والأقفال والمستشعرات والكاميرات والمقابس — وأهم قرار قبل الشراء هو اختيار البنية المعمارية أولًا: محلي أولًا، أو سحابي أولًا، أو هجين. يقدّم هذا الدليل اختيارًا محددًا لكل فئة (تم التحقق منه في 25 أغسطس 2026)، ومجموعة بداية ومجموعة متقدمة بأسعار حقيقية، وقائمة "ما لا يجب شراؤه"، وشجرة قرار تربط ما تريده بما يجب شراؤه.',
+      'تمتد أفضل أجهزة المنزل الذكي لعام 2026 من المركز (Hub) ومنسّق Zigbee/Thread إلى الإضاءة والأقفال والمستشعرات والكاميرات والمقابس — وأهم قرار قبل الشراء هو اختيار البنية المعمارية أولًا: محلي أولًا، أو سحابي أولًا، أو هجين. يقدّم هذا الدليل اختيارًا محددًا لكل فئة (تم التحقق منه عند آخر تحديث للصفحة)، ومجموعة بداية ومجموعة متقدمة بأسعار حقيقية، وقائمة "ما لا يجب شراؤه"، وشجرة قرار تربط ما تريده بما يجب شراؤه.',
     metaDescription:
-      'أفضل أجهزة المنزل الذكي 2026: المركز وZigbee/Thread والإضاءة والأقفال والمستشعرات والكاميرات والمقابس — اختيار واحد لكل فئة، أسعار حقيقية (أغسطس 2026)، مجموعات بداية، وشجرة قرار.',
+      'أفضل حساس حركة لمنزل ذكي محلي: Aqara P1 للإضاءة وAqara FP2 لاستشعار التواجد، مع اختيارات المركز والأقفال والكاميرات بأسعار حقيقية.',
     twitterDescription:
-      'أفضل أجهزة المنزل الذكي 2026 حسب الفئة: المركز، منسّق Zigbee/Thread، الإضاءة، الأقفال، المستشعرات، الكاميرات، المقابس. أسعار حقيقية، مجموعات بداية ومتقدمة، وشجرة قرار.',
+      'أفضل حساس حركة 2026 لمنزل ذكي محلي (Aqara P1 وAqara FP2) مع المركز وZigbee/Thread والإضاءة والأقفال والكاميرات. أسعار حقيقية ومجموعات وشجرة قرار.',
     readTime: '12 دقيقة للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المشترون الذين يجمّعون منزلًا ذكيًا قادرًا على العمل محليًا',
@@ -571,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أجهزة المنزل الذكي للخصوصية',
     ],
     leadAnswerBlock:
-      '**اختر بنيتك المعمارية أولًا، ثم اشترِ حسب الفئة: Home Assistant Green ($199) كمركز، ومنسّق Zigbee/Thread مثل [Home Assistant Connect ZBT-2](/ar/smart-home/best-zigbee-thread-dongles-2027) ($49)، ومستشعرات ومقابس Zigbee، وكاميرات RTSP محلية مع [Frigate](/ar/smart-home/local-ai-security-camera) بدلًا من اشتراك سحابي.** هذه توصية PromptQuorum، مبنية على المواصفات والأسعار الحالية (تم التحقق منها في 25 أغسطس 2026)، وليست اختبارًا مخبريًا عمليًا لكل منتج: اختر محلي أولًا أو هجين لبناء جاد، واختر سحابي أولًا فقط إذا كانت سهولة الإعداد أهم لديك من التكلفة والخصوصية على المدى الطويل. ← [تحقق من سعر Home Assistant Green اليوم](https://www.home-assistant.io/green/)',
+      '**اختر بنيتك المعمارية أولًا، ثم اشترِ حسب الفئة: Home Assistant Green ($199) كمركز، ومنسّق Zigbee/Thread مثل [Home Assistant Connect ZBT-2](/ar/smart-home/best-zigbee-thread-dongles-2027)، وكاميرات محلية مع [Frigate](/ar/smart-home/local-ai-security-camera).** المواصفات والأسعار تم التحقق منها عند آخر تحديث للصفحة، وليست اختبارًا مخبريًا عمليًا. النهج المحلي أولًا أو الهجين يناسب البناء الجاد. ← [سعر Green](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل أجهزة المنزل الذكي للشراء في 2026؟',
@@ -609,15 +610,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أسئلة شائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'أفضل أجهزة المنزل الذكي لعام 2026 هي الأجهزة القادرة على العمل محليًا — Zigbee أو Z-Wave أو Matter أو Wi-Fi محلي — مترابطة عبر مركز محلي مثل Home Assistant، مع اختيار واضح واحد لكل فئة.' },
-      { type: 'plain-terms', content: 'عند شراء أجهزة المنزل الذكي، أهم سؤال ليس العلامة التجارية — بل هل يستطيع الجهاز العمل محليًا. الأجهزة التي تتحدث Zigbee أو Z-Wave أو Matter، أو تتيح واجهة برمجية محلية، تستمر في العمل دون سحابة وتحافظ على بياناتك في المنزل. الأجهزة التي تعمل بالسحابة فقط مريحة لكنها تقيّدك وقد تضيف رسومًا شهرية.' },
+      { type: 'one-sentence', content: 'يقوم المنزل الذكي المتين في 2026 على الأجهزة القادرة على العمل محليًا — Zigbee أو Z-Wave أو Matter أو Wi-Fi محلي — مترابطة عبر مركز محلي مثل Home Assistant، مع اختيار واضح واحد لكل فئة.' },
+      { type: 'plain-terms', content: 'عند شراء أجهزة المنزل الذكي، أهم سؤال ليس العلامة التجارية — بل هل يستطيع الجهاز العمل محليًا. الأجهزة التي تتحدث Zigbee أو Z-Wave أو Matter، أو تتيح واجهة برمجية محلية، تستمر في العمل دون سحابة ويمكنها إبقاء بياناتك في المنزل في الوظائف الأساسية. الأجهزة التي تعمل بالسحابة فقط مريحة لكنها تقيّدك وقد تضيف رسومًا شهرية.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'اختيارات سريعة — منتج واحد لكل فئة',
         highlight: true,
-        content: 'تخطَّ القراءة — إليك المنتج المحدد الذي كانت PromptQuorum لتشتريه في كل فئة، تم التحقق منه في 25 أغسطس 2026.',
+        content: 'تخطَّ القراءة — إليك المنتج المحدد الذي كانت PromptQuorum لتشتريه في كل فئة، تم التحقق منه عند آخر تحديث للصفحة.',
         columns: ['الفئة', 'اختيارنا', 'الأفضل لـ'],
         rows: [
           { 'الفئة': '🧠 المركز', 'اختيارنا': 'Home Assistant Green', 'الأفضل لـ': 'أسهل إعداد محلي، بلا خادم يُبنى' },
@@ -650,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'اختر بنيتك المعمارية أولًا: محلي أولًا (Home Assistant + Zigbee/Z-Wave/Matter)، أو سحابي أولًا (Alexa/Google/مراكز الشركات المصنّعة)، أو هجين',
           'المركز: Home Assistant Green ($199) لأسهل إعداد محلي؛ أو جهاز mini PC إذا أردت أيضًا ذكاءً اصطناعيًا محليًا',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/ar/smart-home/best-zigbee-thread-dongles-2027) ($49) أو SONOFF ZBDongle-E (~$20–27، اقتصادي)',
-          'الكاميرات: كاميرات RTSP محلية + [Frigate](/ar/smart-home/local-ai-security-camera) تتجنب الاشتراكات وتحافظ على اللقطات في المنزل',
+          'الكاميرات: كاميرات RTSP محلية + [Frigate](/ar/smart-home/local-ai-security-camera) تتجنب الاشتراكات ويمكنها إبقاء اللقطات في المنزل في الوظائف الأساسية',
           'الأقفال: أعطِ الأولوية للموثوقية المحلية (Z-Wave/Matter) على ميزات الذكاء الاصطناعي — لا تجعل نموذج LLM أبدًا السلطة الوحيدة على قفل بابك',
           'الجهاز المحلي الأغلى قليلًا غالبًا أرخص من الجهاز السحابي على مدى 3–5 سنوات عند احتساب الاشتراكات',
         ],
@@ -670,12 +671,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: 'كيف نختار: القدرة المحلية أولًا',
         content:
-          '**قاعدة الاختيار هي القدرة المحلية أولًا: يجب أن يعمل الجهاز عبر مركز محلي دون الاعتماد على سحابة البائع.** الأجهزة القادرة على العمل محليًا تحمي الخصوصية وتستمر في العمل دون إنترنت وتتجنب الاشتراكات. هذه الصفحة لم تُبنَ من اختبار PromptQuorum الفعلي لكل منتج — الاختيارات مبنية على المواصفات الحالية، والدعم الموثّق للواجهة البرمجية/البروتوكول المحلي، والمراجعات المستقلة، تم التحقق منها في 25 أغسطس 2026.',
+          '**قاعدة الاختيار هي القدرة المحلية أولًا: يجب أن يعمل الجهاز عبر مركز محلي دون الاعتماد على سحابة البائع.** الأجهزة القادرة على العمل محليًا تحمي الخصوصية وتستمر في العمل دون إنترنت وتتجنب الاشتراكات. هذه الصفحة لم تُبنَ من اختبار PromptQuorum الفعلي لكل منتج — الاختيارات مبنية على المواصفات الحالية، والدعم الموثّق للواجهة البرمجية/البروتوكول المحلي، والمراجعات المستقلة، تم التحقق منها عند آخر تحديث للصفحة.',
         items: [
           '**بروتوكول أو واجهة برمجية محلية:** Zigbee أو Z-Wave أو Matter أو واجهة Wi-Fi محلية موثّقة.',
           '**لا حساب سحابي إلزامي:** يجب أن يعمل الجهاز عبر مركز محلي.',
           '**لا اشتراك للميزات الأساسية:** يجب ألا يتطلب التسجيل أو الأتمتة رسومًا.',
-          '**أسعار حالية:** تم التحقق من كل سعر أدناه مقابل قوائم الشركة المصنّعة أو كبار التجار في 25 أغسطس 2026 — تحقق دائمًا من السعر الحي قبل الشراء.',
+          '**أسعار حالية:** تم التحقق من كل سعر أدناه مقابل قوائم الشركة المصنّعة أو كبار التجار عند آخر تحديث للصفحة — تحقق دائمًا من السعر الحي قبل الشراء.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-ar.svg',
         imageCaption: 'مقارنة الأجهزة القادرة على العمل محليًا — Zigbee أو Z-Wave أو Matter أو واجهة برمجية محلية — بالأجهزة التي تعمل بالسحابة فقط عبر 5 عوامل، منها الاشتراكات والموثوقية دون إنترنت.',
@@ -686,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 اختيارنا: Home Assistant Green ($199).** إذا أردت منزلًا ذكيًا محليًا أولًا فعليًا دون بناء خادم بنفسك، فإن Green هو نقطة البداية الأسهل — يتحدث Zigbee (مع منسّق)، وZ-Wave، وMatter، وThread، ويشغّل الأتمتة ولوحات المعلومات ومراقبة الطاقة دون إنترنت بالكامل.',
         items: [
-          '**ملاحظة حول السعر:** ارتفع سعر Home Assistant Green من سعر الإطلاق الأصلي 99$ إلى 199$ في أبريل 2026، بسبب ارتفاع تكاليف الذاكرة والمكونات — من المفيد معرفة ذلك قبل وضع الميزانية، لأن المراجعات القديمة ما زالت تذكر الرقم القديم 99$.',
+          '**ملاحظة حول السعر:** سعر Home Assistant Green الحالي هو 199$ (راجع [صفحة الشركة المصنّعة](https://www.home-assistant.io/green/))، مقابل 99$ عند الإطلاق — من المفيد معرفة ذلك قبل وضع الميزانية، لأن المراجعات القديمة ما زالت تذكر الرقم القديم 99$.',
           '**الأفضل لـ:** المبتدئين الذين يريدون تحكمًا محليًا دون بناء خادم أو صيانته بأنفسهم.',
           '**مسار الترقية:** إذا أردت لاحقًا نماذج LLM محلية، أو ذكاء اصطناعي لكاميرات Frigate، أو عدة كاميرات، أو حاويات Docker، أو قاعدة بيانات، انقل Home Assistant إلى جهاز mini PC بدلًا من ذلك — راجع قسم [أفضل جهاز Mini PC](#mini-pc) أدناه.',
           'أضف منسّق Zigbee، وبشكل منفصل، وحدة تحكم Z-Wave (عصي USB) لهذه البروتوكولات — راجع [أفضل منسّق Zigbee وThread](#zigbee-thread).',
@@ -738,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 الأفضل من الفئة الفاخرة: Philips Hue (~$54+ للمصباح الملوّن).** اشترِ إذا كانت الموثوقية مهمة، وتريد منظومة ناضجة، ومجموعة منتجات واسعة، ولا تمانع دفع سعر أعلى.',
           '**🥇 الأفضل اقتصاديًا: IKEA TRÅDFRI.** اشترِ إذا كان السعر مهمًا، والتحكم البسيط عبر Zigbee كافٍ، وتدمجه مع Home Assistant — أرخص بكثير للمصباح الواحد من Hue.',
-          'مفاتيح الحائط التي تتحكم في التركيبات الموجودة غالبًا أكثر موثوقية من المصابيح الذكية وحدها، وتتجنب حالة فشل "شخص ما أطفأ المفتاح الفعلي".',
+          'مفاتيح الحائط التي تتحكم في التركيبات الموجودة غالبًا أكثر موثوقية من المصابيح الذكية وحدها (التركيب يتعلق بتمديدات الكهرباء ويجب أن يتولاه كهربائي مؤهل)، وتتجنب حالة فشل "شخص ما أطفأ المفتاح الفعلي".',
           '**ما لا نوصي به:** المصابيح التي تتطلب وصولًا سحابيًا للتشغيل الأساسي، أو تصبح عديمة الفائدة عند إغلاق خوادم الشركة المصنّعة، أو تحتاج اشتراكًا للأتمتة الأساسية.',
         ],
         affiliateLinks: [
@@ -791,6 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**لماذا نفضّل الكاميرات المحلية:** الكاميرا السحابية تخلق تكلفة شهرية متكررة لشيء يمكن لجهازك الخاص فعله مرة واحدة مدفوعة الثمن. البنية المحلية هي: الكاميرا ← الشبكة المحلية ← Frigate ← كشف ذكاء اصطناعي محلي ← Home Assistant، دون الحاجة لأي اشتراك ذكاء اصطناعي سحابي للإعداد الأساسي.',
           'دعم RTSP وPoE أهم من العلامة التجارية — أي كاميرا بمخرج RTSP موثّق ودون بوابة سحابية إجبارية تعمل مع Frigate.',
           'دليل الإعداد الكامل: [كاميرات الأمان بالذكاء الاصطناعي المحلي مع Frigate](/ar/smart-home/local-ai-security-camera).',
+          '**ملاحظة خصوصية:** الكاميرات التي تسجّل أشخاصًا قد تخضع لقواعد الخصوصية وحماية البيانات (مثل GDPR في الاتحاد الأوروبي). وجّه الكاميرات إلى ملكيتك فقط، وتجنب تصوير الجيران أو الأماكن العامة، وأبلغ الزوار وأفراد الأسرة بالتسجيل، وأمّن خادم التسجيل بكلمات مرور قوية وتحديثات منتظمة. هذه معلومات عامة وليست استشارة قانونية.',
         ],
         affiliateLinks: [
           { label: 'تحقق من أسعار Reolink الحالية ←', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
@@ -815,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'مجموعة البداية للمنزل الذكي المحلي',
         content:
-          '**الميزانية: نحو 290$–360$ إجمالًا (تم التحقق منها في 25 أغسطس 2026). ابدأ بمركز محلي، ومنسّق Zigbee، وبضعة أجهزة محلية في غرفة واحدة، ثم وسّع.**',
+          '**الميزانية: نحو 320$–380$ إجمالًا (تم التحقق منها عند آخر تحديث للصفحة). ابدأ بمركز محلي، ومنسّق Zigbee، وبضعة أجهزة محلية في غرفة واحدة، ثم وسّع.**',
         columns: ['الفئة', 'الجهاز', 'السعر التقريبي'],
         rows: [
           { 'الفئة': 'المركز', 'الجهاز': 'Home Assistant Green', 'السعر التقريبي': '$199' },
@@ -825,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الفئة': 'المقابس', 'الجهاز': 'مقبسا Zigbee ذكيان', 'السعر التقريبي': '~$30–40' },
         ],
         items: [
-          'هذا يمنحك قاعدة خاصة وموثوقة يمكنك توسيعها غرفة بغرفة — كل جهاز هنا يعمل دون إنترنت بعد الاقتران، ولا يتطلب أي منها اشتراكًا.',
+          'هذا يمنحك قاعدة خاصة وموثوقة يمكنك توسيعها غرفة بغرفة — الوظائف الأساسية لكل جهاز هنا تعمل دون إنترنت بعد الاقتران ولا تتطلب اشتراكًا (راجع الميزات السحابية الاختيارية لكل منتج).',
         ],
         affiliateLinks: [
           { label: 'ابنِ مجموعة البداية هذه ← تحقق من سعر Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
@@ -921,11 +923,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما أفضل مزوّد إذا أردت تجهيز منزلي بالكامل بأجهزة منزل ذكي؟', a: 'لا يوجد "مزوّد" واحد لإعداد محلي أولًا — هذا هو بيت القصيد. Home Assistant هو المركز، وأنت تمزج وتطابق أجهزة Zigbee/Z-Wave/Matter من أي علامة تجارية (Aqara وSONOFF وPhilips Hue وIKEA وReolink وغيرها) بدلًا من أن تكون مقيّدًا بمنظومة قائمة أسعار بائع واحد.' },
           { q: 'ما أجهزة المنزل الشبكية الأفضل للتحكم بها عبر تطبيق؟', a: 'الأجهزة ذات الواجهة البرمجية المحلية الموثّقة — أجهزة Zigbee وZ-Wave وMatter المقترنة عبر Home Assistant تحصل جميعها على تحكم بتطبيق (تطبيق Home Assistant) دون توجيه بياناتك عبر سحابة البائع. الأجهزة التي تعمل بالسحابة فقط تقدّم أيضًا تحكمًا بالتطبيق، لكن عبر تطبيق البائع وخوادمه الخاصة.' },
           { q: 'كم تكلّف الأجهزة القادرة على العمل محليًا مقارنة بالأجهزة السحابية فقط؟', a: 'الأجهزة القادرة على العمل محليًا (Zigbee وZ-Wave وMatter) تكلّف عادةً نفس سعر ما يعادلها من الأجهزة السحابية فقط عند الشراء أو أقل، لأن الفرق يكمن في دعم البروتوكول لا في جودة الأجهزة. الوفورات الحقيقية تظهر مع الوقت: غالبًا ما تضيف الكاميرات والمراكز السحابية فقط رسوم اشتراك شهرية للتسجيل أو الأتمتة المتقدمة، بينما لا يترتب على المركز المحلي والأجهزة المحلية أي تكلفة متكررة بعد الشراء الأولي.' },
-          { q: 'هل بياناتي أكثر أمانًا مع الأجهزة القادرة على العمل محليًا مقارنة بالأجهزة السحابية فقط؟', a: 'نعم. الأجهزة القادرة على العمل محليًا المقترنة بمركز محلي تحتفظ بالتسجيلات الصوتية ولقطات الكاميرا وروتينات الأتمتة على شبكتك الخاصة، دون إرسال أي بيانات إلى خادم الشركة المصنّعة. أما الأجهزة السحابية فقط فتوجّه هذه البيانات نفسها عبر سحابة البائع، حيث تخضع لسياسة الاحتفاظ بالبيانات الخاصة بتلك الشركة، ولخطر تسرب البيانات، ولتغييرات شروط الخدمة.' },
+          { q: 'هل بياناتي أكثر أمانًا مع الأجهزة القادرة على العمل محليًا مقارنة بالأجهزة السحابية فقط؟', a: 'غالبًا نعم، مع تحفظات. يمكن للأجهزة القادرة على العمل محليًا والمقترنة بمركز محلي أن تحتفظ بالتسجيلات الصوتية ولقطات الكاميرا وروتينات الأتمتة على شبكتك الخاصة في الوظائف الأساسية، دون إرسال بيانات إلى خادم الشركة المصنّعة. لكن بعض الأجهزة لا تزال تتصل بخوادم الشركة لتحديثات البرامج الثابتة أو لميزات سحابية اختيارية، فراجع إعدادات كل جهاز. أما الأجهزة السحابية فقط فتوجّه هذه البيانات نفسها عبر سحابة البائع، حيث تخضع لسياسة الاحتفاظ بالبيانات الخاصة بتلك الشركة، ولخطر تسرب البيانات، ولتغييرات شروط الخدمة. كما أن التخزين المحلي يجعلك مسؤولًا عن تأمين المركز وتحديثه.' },
           { q: 'هل تعمل الأجهزة القادرة على العمل محليًا مع HomeKit وGoogle Home وAmazon Alexa؟', a: 'معظمها يعمل. الأجهزة المعتمدة من Matter تعمل بشكل أصلي مع HomeKit وGoogle Home وAlexa إلى جانب مركز محلي. تتصل أجهزة Zigbee وZ-Wave عبر Home Assistant، الذي يمكنه بعد ذلك عرضها على HomeKit أو Google Home أو Alexa كجسر — بحيث تحتفظ بالتحكم المحلي مع الاستمرار في استخدام مساعدات الصوت هذه إن أردت.' },
           { q: 'هل Matter متوافق مع أجهزة Zigbee أو Z-Wave الموجودة لدي؟', a: 'يعمل Matter جنبًا إلى جنب مع Zigbee وZ-Wave بدلًا من استبدالهما — يمكن لمركز مثل Home Assistant التحكم في أجهزة Matter وZigbee وZ-Wave في الوقت نفسه. لست بحاجة إلى استبدال أجهزة Zigbee أو Z-Wave العاملة لإضافة أجهزة Matter؛ موجّه Thread الحدودي مطلوب فقط لأجهزة Matter عبر Thread تحديدًا.' },
           { q: 'هل هناك طرق اقتصادية لإضافة ميزات المنزل الذكي إلى منزل قائم؟', a: 'نعم — مصابيح ومقابس ومستشعرات Zigbee هي أرخص نقطة دخول ولا تتطلب إعادة توصيل أسلاك. ابدأ بمركز بسعر 199$ ودونجل Zigbee بسعر 20$–27$، ثم أضف بضعة أجهزة بسعر 15$–30$ في غرفة واحدة قبل التوسع — راجع جدول مجموعة البداية أعلاه لمعرفة التكاليف الدقيقة.' },
-          { q: 'ما مدى صعوبة إعداد منزل ذكي محلي أولًا لمبتدئ تمامًا؟', a: 'يستغرق إعداد مركز محلي واحد (مثل Home Assistant Green) وعدد قليل من أجهزة Zigbee أقل من ساعة لدى معظم المبتدئين، لأن معالج الإعداد يتولى الاقتران عبر واجهة ويب. أما بناء نظام كامل متعدد الغرف بكاميرات وأقفال وأتمتة مخصصة فهو مشروع يستغرق عدة عطلات أسبوعية، لكن يمكنك إضافة الأجهزة تدريجيًا بالوتيرة التي تناسبك.' },
+          { q: 'ما مدى صعوبة إعداد منزل ذكي محلي أولًا لمبتدئ تمامًا؟', a: 'يستغرق إعداد مركز محلي واحد (مثل Home Assistant Green) وعدد قليل من أجهزة Zigbee غالبًا نحو ساعة أو أقل بحسب الخبرة، لأن معالج الإعداد يتولى الاقتران عبر واجهة ويب. أما بناء نظام كامل متعدد الغرف بكاميرات وأقفال وأتمتة مخصصة فهو مشروع يستغرق عدة عطلات أسبوعية، لكن يمكنك إضافة الأجهزة تدريجيًا بالوتيرة التي تناسبك.' },
         ],
       },
       relatedReading: {
@@ -948,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل أجهزة المنزل الذكي 2026: دليل الشراء المحلي أولًا',
-      description: 'أفضل أجهزة المنزل الذكي لعام 2026 حسب الفئة — المركز وZigbee/Thread والإضاءة والأقفال والمستشعرات والكاميرات والمقابس — اختيار واحد لكل فئة بأسعار حقيقية تم التحقق منها في 25 أغسطس 2026.',
+      description: 'أفضل أجهزة المنزل الذكي لعام 2026 حسب الفئة — المركز وZigbee/Thread والإضاءة والأقفال والمستشعرات والكاميرات والمقابس — اختيار واحد لكل فئة بأسعار حقيقية تم التحقق منها عند آخر تحديث للصفحة.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-smart-home-devices-2026',
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -972,11 +974,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'ما أفضل مزوّد إذا أردت تجهيز منزلي بالكامل بأجهزة منزل ذكي؟', acceptedAnswer: { '@type': 'Answer', text: 'لا يوجد مزوّد واحد لإعداد محلي أولًا — Home Assistant هو المركز، وأنت تمزج وتطابق أجهزة Zigbee/Z-Wave/Matter من أي علامة تجارية بدلًا من أن تكون مقيّدًا ببائع واحد.' } },
         { '@type': 'Question', name: 'ما أجهزة المنزل الشبكية الأفضل للتحكم بها عبر تطبيق؟', acceptedAnswer: { '@type': 'Answer', text: 'الأجهزة ذات الواجهة البرمجية المحلية الموثّقة — أجهزة Zigbee وZ-Wave وMatter المقترنة عبر Home Assistant تحصل جميعها على تحكم بتطبيق دون توجيه البيانات عبر سحابة البائع.' } },
         { '@type': 'Question', name: 'كم تكلّف الأجهزة القادرة على العمل محليًا مقارنة بالأجهزة السحابية فقط؟', acceptedAnswer: { '@type': 'Answer', text: 'تكلّف الأجهزة القادرة على العمل محليًا عادةً نفس السعر أو أقل عند الشراء. الوفورات الحقيقية تظهر مع الوقت: غالبًا ما تضيف الأجهزة السحابية فقط رسوم اشتراك شهرية، بينما لا تترتب على الأجهزة المحلية أي تكلفة متكررة.' } },
-        { '@type': 'Question', name: 'هل بياناتي أكثر أمانًا مع الأجهزة القادرة على العمل محليًا مقارنة بالأجهزة السحابية فقط؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. الأجهزة القادرة على العمل محليًا المقترنة بمركز محلي تحتفظ بالتسجيلات الصوتية ولقطات الكاميرا والروتينات على شبكتك الخاصة. أما الأجهزة السحابية فقط فتوجّه هذه البيانات عبر سحابة البائع.' } },
+        { '@type': 'Question', name: 'هل بياناتي أكثر أمانًا مع الأجهزة القادرة على العمل محليًا مقارنة بالأجهزة السحابية فقط؟', acceptedAnswer: { '@type': 'Answer', text: 'غالبًا نعم، مع تحفظات. يمكن للأجهزة القادرة على العمل محليًا والمقترنة بمركز محلي أن تحتفظ بالتسجيلات الصوتية ولقطات الكاميرا والروتينات على شبكتك الخاصة في الوظائف الأساسية، لكن بعضها يتصل بخوادم الشركة لتحديثات البرامج الثابتة أو لميزات سحابية اختيارية. أما الأجهزة السحابية فقط فتوجّه هذه البيانات عبر سحابة البائع.' } },
         { '@type': 'Question', name: 'هل تعمل الأجهزة القادرة على العمل محليًا مع HomeKit وGoogle Home وAmazon Alexa؟', acceptedAnswer: { '@type': 'Answer', text: 'معظمها يعمل. الأجهزة المعتمدة من Matter تعمل بشكل أصلي مع الثلاثة جميعًا. تتصل أجهزة Zigbee وZ-Wave عبر Home Assistant، الذي يمكنه ربطها بـ HomeKit أو Google Home أو Alexa مع الحفاظ على التحكم المحلي.' } },
         { '@type': 'Question', name: 'هل Matter متوافق مع أجهزة Zigbee أو Z-Wave الموجودة لدي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يعمل Matter جنبًا إلى جنب مع Zigbee وZ-Wave بدلًا من استبدالهما — يمكن لمركز مثل Home Assistant التحكم في البروتوكولات الثلاثة في الوقت نفسه.' } },
         { '@type': 'Question', name: 'هل هناك طرق اقتصادية لإضافة ميزات المنزل الذكي إلى منزل قائم؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — مصابيح ومقابس ومستشعرات Zigbee هي أرخص نقطة دخول ولا تتطلب إعادة توصيل أسلاك. ابدأ بمركز ودونجل Zigbee، ثم أضف بضعة أجهزة في غرفة واحدة قبل التوسع.' } },
-        { '@type': 'Question', name: 'ما مدى صعوبة إعداد منزل ذكي محلي أولًا لمبتدئ تمامًا؟', acceptedAnswer: { '@type': 'Answer', text: 'يستغرق إعداد مركز محلي واحد وعدد قليل من أجهزة Zigbee أقل من ساعة لدى معظم المبتدئين. بناء نظام كامل متعدد الغرف مشروع يستغرق عدة عطلات أسبوعية، لكن يمكن إضافة الأجهزة تدريجيًا.' } },
+        { '@type': 'Question', name: 'ما مدى صعوبة إعداد منزل ذكي محلي أولًا لمبتدئ تمامًا؟', acceptedAnswer: { '@type': 'Answer', text: 'يستغرق إعداد مركز محلي واحد وعدد قليل من أجهزة Zigbee غالبًا نحو ساعة أو أقل بحسب الخبرة. بناء نظام كامل متعدد الغرف مشروع يستغرق عدة عطلات أسبوعية، لكن يمكن إضافة الأجهزة تدريجيًا.' } },
       ],
     },
   },
@@ -989,13 +991,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Smart Home Foundations',
     affiliateDisclosure: true,
     title: 'Beste Smart-Home-Geräte 2026: Der Local-First-Kaufratgeber',
-    seoTitle: 'Beste Smart-Home-Geräte 2026: Local-First-Kaufratgeber',
+    seoTitle: 'Bester Bewegungsmelder 2026 & Smart-Home-Geräte: Local',
     intro:
-      'Die besten Smart-Home-Geräte 2026 umfassen einen Hub, einen Zigbee/Thread-Koordinator, Beleuchtung, Schlösser, Sensoren, Kameras und Steckdosen – und die wichtigste Entscheidung treffen Sie zuerst bei der Architektur: local-first, cloud-first oder hybrid. Dieser Ratgeber nennt eine konkrete Empfehlung pro Kategorie (geprüft am 25. August 2026), ein Starter- und ein ernsthaftes Set mit echten Preisen, eine Liste mit Kaufwarnungen und einen Entscheidungsbaum, der Ihr Ziel dem passenden Gerät zuordnet.',
+      'Die besten Smart-Home-Geräte 2026 umfassen einen Hub, einen Zigbee/Thread-Koordinator, Beleuchtung, Schlösser, Sensoren, Kameras und Steckdosen – und die wichtigste Entscheidung treffen Sie zuerst bei der Architektur: local-first, cloud-first oder hybrid. Dieser Ratgeber nennt eine konkrete Empfehlung pro Kategorie (geprüft zum Zeitpunkt der letzten Aktualisierung), ein Starter- und ein ernsthaftes Set mit echten Preisen, eine Liste mit Kaufwarnungen und einen Entscheidungsbaum, der Ihr Ziel dem passenden Gerät zuordnet.',
     metaDescription:
-      'Beste Smart-Home-Geräte 2026: Hub, Zigbee/Thread, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen – eine Empfehlung pro Kategorie, echte Preise (Aug. 2026), Starter-Sets, Entscheidungsbaum.',
+      'Bester Bewegungsmelder fürs lokale Smart Home: Aqara P1 (ca. 22–26 €) für Licht, Aqara FP2 für Anwesenheit. Dazu Hub-, Schloss- und Kamera-Tipps.',
     twitterDescription:
-      'Beste Smart-Home-Geräte 2026, nach Kategorie: Hub, Zigbee/Thread-Koordinator, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen. Echte Preise, Starter- und ernsthaftes Set, Entscheidungsbaum.',
+      'Bester Bewegungsmelder 2026 fürs lokale Smart Home (Aqara P1, Aqara FP2) plus Hub, Zigbee/Thread, Beleuchtung, Schlösser, Kameras. Echte Preise, Sets, Entscheidungsbaum.',
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die ein lokal-fähiges Smart Home zusammenstellen',
@@ -1010,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datenschutz smart home geräte',
     ],
     leadAnswerBlock:
-      '**Legen Sie zuerst Ihre Architektur fest, dann kaufen Sie kategorienweise: Home Assistant Green (179 €) als Hub, ein Zigbee/Thread-Koordinator wie der [Home Assistant Connect ZBT-2](/de/smart-home/best-zigbee-thread-dongles-2027) (45 €), Zigbee-Sensoren und -Steckdosen sowie lokale RTSP-Kameras mit [Frigate](/de/smart-home/local-ai-security-camera) statt Cloud-Abonnement.** Empfehlung von PromptQuorum, basierend auf aktuellen Spezifikationen und Preisen (geprüft am 25. August 2026), kein praktischer Labortest jedes Produkts: local-first oder hybrid für einen ernsthaften Aufbau, cloud-first nur, wenn einfache Einrichtung Ihnen wichtiger ist als langfristige Kosten und Datenschutz. → [Aktuellen Home-Assistant-Green-Preis prüfen](https://www.home-assistant.io/green/)',
+      '**Wählen Sie zuerst die Architektur, dann kategorienweise: Home Assistant Green (179 €) als Hub, ein Zigbee/Thread-Koordinator wie der [Home Assistant Connect ZBT-2](/de/smart-home/best-zigbee-thread-dongles-2027) und lokale Kameras mit [Frigate](/de/smart-home/local-ai-security-camera).** Spezifikationen und Preise geprüft zum Zeitpunkt der letzten Aktualisierung, kein praktischer Labortest. Local-first oder hybrid eignet sich für ernsthafte Aufbauten. → [Green-Preis](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       de: {
         question: 'Welche Smart-Home-Geräte sollte man 2026 kaufen?',
@@ -1048,15 +1050,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Die besten Smart-Home-Geräte 2026 sind lokal-fähige Geräte – Zigbee, Z-Wave, Matter oder lokales WLAN –, verbunden durch einen lokalen Hub wie Home Assistant, mit einer klaren Empfehlung pro Kategorie.' },
-      { type: 'plain-terms', content: 'Beim Kauf von Smart-Home-Technik ist nicht die Marke die wichtigste Frage, sondern ob das Gerät lokal laufen kann. Geräte mit Zigbee, Z-Wave oder Matter oder mit lokaler API funktionieren ohne Cloud weiter und halten Ihre Daten zu Hause. Nur-Cloud-Geräte sind bequem, binden Sie aber und können monatliche Gebühren mit sich bringen.' },
+      { type: 'one-sentence', content: 'Ein starkes Smart Home 2026 besteht aus lokal-fähigen Geräten – Zigbee, Z-Wave, Matter oder lokales WLAN –, verbunden durch einen lokalen Hub wie Home Assistant, mit einer klaren Empfehlung pro Kategorie.' },
+      { type: 'plain-terms', content: 'Beim Kauf von Smart-Home-Technik ist nicht die Marke die wichtigste Frage, sondern ob das Gerät lokal laufen kann. Geräte mit Zigbee, Z-Wave oder Matter oder mit lokaler API funktionieren ohne Cloud weiter und können Ihre Daten für die Kernfunktionen zu Hause halten. Nur-Cloud-Geräte sind bequem, binden Sie aber und können monatliche Gebühren mit sich bringen.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'Schnellauswahl — Ein Produkt pro Kategorie',
         highlight: true,
-        content: 'Sparen Sie sich das Lesen — hier ist das konkrete Produkt, das PromptQuorum in jeder Kategorie kaufen würde, geprüft am 25. August 2026.',
+        content: 'Sparen Sie sich das Lesen — hier ist das konkrete Produkt, das PromptQuorum in jeder Kategorie kaufen würde, geprüft zum Zeitpunkt der letzten Aktualisierung.',
         columns: ['Kategorie', 'Unsere Wahl', 'Am besten für'],
         rows: [
           { Kategorie: '🧠 Hub', 'Unsere Wahl': 'Home Assistant Green', 'Am besten für': 'Einfachste lokale Einrichtung, kein eigener Server' },
@@ -1086,10 +1088,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung',
         isTldr: true,
         items: [
-          'Legen Sie zuerst Ihre Architektur fest: local-first (Home Assistant + Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google/Hersteller-Hubs) oder hybrid',
+          'Erst die Architektur wählen: local-first (Home Assistant, Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google) oder hybrid',
           'Hub: Home Assistant Green (179 €) für die einfachste lokale Einrichtung; ein Mini-PC, wenn Sie auch lokale KI wollen',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/de/smart-home/best-zigbee-thread-dongles-2027) (45 €) oder SONOFF ZBDongle-E (ca. 20–25 €, Budget)',
-          'Kameras: lokale RTSP-Kameras + [Frigate](/de/smart-home/local-ai-security-camera) vermeiden Abonnements und halten Aufnahmen zu Hause',
+          'Kameras: lokale RTSP-Kameras + [Frigate](/de/smart-home/local-ai-security-camera) vermeiden Abonnements und können Aufnahmen für die Kernfunktionen zu Hause halten',
           'Schlösser: lokale Zuverlässigkeit (Z-Wave/Matter) hat Vorrang vor KI-Funktionen — lassen Sie nie ein LLM allein über Ihre Tür entscheiden',
           'Ein etwas teureres lokales Gerät ist über 3–5 Jahre oft günstiger als ein Cloud-Gerät, sobald Sie Abonnements mitrechnen',
         ],
@@ -1109,12 +1111,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: 'Wie wir auswählen: lokal-fähig zuerst',
         content:
-          '**Die Auswahlregel ist lokale Fähigkeit zuerst: Ein Gerät muss über einen lokalen Hub funktionieren, ohne von einer Hersteller-Cloud abzuhängen.** Lokal-fähige Geräte schützen die Privatsphäre, funktionieren offline weiter und vermeiden Abonnements. Diese Seite entstand nicht durch einen praktischen Test jedes Produkts durch PromptQuorum — die Empfehlungen basieren auf aktuellen Spezifikationen, dokumentierter lokaler API-/Protokollunterstützung und unabhängigen Testberichten, geprüft am 25. August 2026.',
+          '**Die Auswahlregel ist lokale Fähigkeit zuerst: Ein Gerät muss über einen lokalen Hub funktionieren, ohne von einer Hersteller-Cloud abzuhängen.** Lokal-fähige Geräte schützen die Privatsphäre, funktionieren offline weiter und vermeiden Abonnements. Diese Seite entstand nicht durch einen praktischen Test jedes Produkts durch PromptQuorum — die Empfehlungen basieren auf aktuellen Spezifikationen, dokumentierter lokaler API-/Protokollunterstützung und unabhängigen Testberichten, geprüft zum Zeitpunkt der letzten Aktualisierung.',
         items: [
           '**Lokales Protokoll oder API:** Zigbee, Z-Wave, Matter oder eine dokumentierte lokale WLAN-API.',
           '**Kein verpflichtendes Cloud-Konto:** Das Gerät muss über einen lokalen Hub funktionieren.',
           '**Kein Abonnement für Kernfunktionen:** Aufzeichnung oder Automatisierung sollten keine Gebühr erfordern.',
-          '**Aktuelle Preise:** Jeder Preis unten wurde am 25. August 2026 gegen Hersteller- oder große Händlerlisten geprüft — verifizieren Sie vor dem Kauf stets den aktuellen Preis.',
+          '**Aktuelle Preise:** Die meisten Preise unten wurden zum Zeitpunkt der letzten Aktualisierung gegen Hersteller- oder Händlerlisten geprüft; als „ca.“ oder „geschätzt“ gekennzeichnete Werte (z. B. Yale Assure Lock 2) sind Umrechnungen und nicht geprüft — verifizieren Sie vor dem Kauf stets den aktuellen Preis.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-de.svg',
         imageCaption: 'Lokal-fähige Geräte — Zigbee, Z-Wave, Matter oder eine lokale API — im Vergleich zu Cloud-only-Geräten anhand von 5 Kriterien, darunter Abonnements und Offline-Zuverlässigkeit.',
@@ -1125,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 Unsere Wahl: Home Assistant Green (179 €).** Wenn Sie ein wirklich local-first Smart Home wollen, ohne selbst einen Server aufzubauen, ist Green der einfachste Einstieg — er spricht Zigbee (mit Koordinator), Z-Wave, Matter und Thread und führt Automatisierungen, Dashboards und Energie-Monitoring komplett offline aus.',
         items: [
-          '**Hinweis zum Preis:** Der Preis von Home Assistant Green stieg von ursprünglich 99 $ beim Launch auf 199 $/179 € im April 2026, getrieben von steigenden RAM-/Komponentenkosten — gut zu wissen, bevor Sie budgetieren, denn ältere Reviews zitieren noch die veraltete 99-$-Zahl.',
+          '**Hinweis zum Preis:** Der Preis von Home Assistant Green liegt jetzt bei 199 $/179 € (siehe [Herstellerseite](https://www.home-assistant.io/green/)), gegenüber ursprünglich 99 $ beim Launch — gut zu wissen, bevor Sie budgetieren, denn ältere Reviews zitieren noch die veraltete 99-$-Zahl.',
           '**Am besten für:** Einsteiger, die lokale Steuerung wollen, ohne selbst einen Server zu bauen oder zu pflegen.',
           '**Upgrade-Pfad:** Wenn Sie später lokale LLMs, Frigate-Kamera-KI, viele Kameras, Docker-Container oder eine Datenbank wollen, verlegen Sie Home Assistant auf einen Mini-PC — siehe den Abschnitt [Bester Mini-PC](#mini-pc) unten.',
           'Ergänzen Sie einen Zigbee-Koordinator und separat einen Z-Wave-Controller (USB-Sticks) für diese Protokolle — siehe [Bester Zigbee- und Thread-Koordinator](#zigbee-thread).',
@@ -1177,7 +1179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 Bestes Premium: Philips Hue (ab ca. 65 € pro Farbleuchtmittel).** Kaufen, wenn Zuverlässigkeit zählt, Sie ein ausgereiftes Ökosystem und eine große Produktpalette wollen und der höhere Preis kein Problem ist.',
           '**🥇 Bestes Budget: IKEA TRÅDFRI (ca. 8–13 € pro Leuchtmittel).** Kaufen, wenn der Preis zählt, einfache Zigbee-Steuerung ausreicht und Sie mit Home Assistant integrieren — deutlich günstiger pro Leuchtmittel als Hue.',
-          'Wandschalter, die vorhandene Leuchten steuern, sind oft zuverlässiger als smarte Leuchtmittel allein und vermeiden das Problem "jemand hat den physischen Schalter ausgeschaltet".',
+          'Wandschalter, die vorhandene Leuchten steuern, sind oft zuverlässiger als smarte Leuchtmittel allein (der Einbau betrifft die Netzspannung und gehört in die Hände einer Elektrofachkraft) und vermeiden das Problem "jemand hat den physischen Schalter ausgeschaltet".',
           '**Was wir nicht empfehlen:** Leuchtmittel, die für die Grundfunktion Cloud-Zugriff brauchen, unbrauchbar werden, wenn der Hersteller seine Server abschaltet, oder ein Abonnement für einfache Automatisierung verlangen.',
         ],
         affiliateLinks: [
@@ -1230,6 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Warum wir lokale Kameras bevorzugen:** Eine Cloud-Kamera erzeugt eine laufende monatliche Kostenposition für etwas, das Ihre eigene Hardware einmalig bezahlt erledigen kann. Die lokale Architektur ist: Kamera → lokales Netzwerk → Frigate → lokale KI-Erkennung → Home Assistant, ohne Cloud-KI-Abonnement für die Basiseinrichtung.',
           'RTSP- und PoE-Unterstützung zählen mehr als die Marke — jede Kamera mit dokumentiertem RTSP-Ausgang und ohne erzwungene Cloud-Sperre funktioniert mit Frigate.',
           'Vollständige Einrichtungsanleitung: [Lokale KI-Sicherheitskameras mit Frigate](/de/smart-home/local-ai-security-camera).',
+          '**Datenschutzhinweis:** Kameras, die Personen aufzeichnen, können datenschutzrechtlichen Pflichten unterliegen (in der EU etwa der DSGVO). Richten Sie Kameras nur auf Ihr eigenes Grundstück, vermeiden Sie Nachbarn und öffentliche Bereiche, informieren Sie Besucher und Haushaltsmitglieder über die Aufzeichnung und sichern Sie den Aufzeichnungsserver mit starken Passwörtern und Updates. Dies ist eine allgemeine Information, keine Rechtsberatung.',
         ],
         affiliateLinks: [
           { label: 'Aktuelle Reolink-Preise prüfen →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: 'ca. 70–90 €' },
@@ -1254,7 +1257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'Das lokale Smart-Home-Starter-Set',
         content:
-          '**Budget: ungefähr 290–370 € insgesamt (geprüft am 25. August 2026). Beginnen Sie mit einem lokalen Hub, einem Zigbee-Koordinator und ein paar lokalen Geräten in einem Raum, dann erweitern Sie.**',
+          '**Budget: ungefähr 290–370 € insgesamt (geprüft zum Zeitpunkt der letzten Aktualisierung). Beginnen Sie mit einem lokalen Hub, einem Zigbee-Koordinator und ein paar lokalen Geräten in einem Raum, dann erweitern Sie.**',
         columns: ['Kategorie', 'Gerät', 'Ca. Preis'],
         rows: [
           { Kategorie: 'Hub', Gerät: 'Home Assistant Green', 'Ca. Preis': '179 €' },
@@ -1264,7 +1267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Kategorie: 'Steckdosen', Gerät: '2 Zigbee-Steckdosen', 'Ca. Preis': 'ca. 30–40 €' },
         ],
         items: [
-          'Das ergibt eine private, zuverlässige Basis, die Sie Raum für Raum erweitern können — jedes Gerät hier funktioniert nach der Kopplung offline, und keines braucht ein Abonnement.',
+          'Das ergibt eine private, zuverlässige Basis, die Sie Raum für Raum erweitern können — die Kernfunktionen jedes Geräts hier funktionieren nach der Kopplung offline und brauchen kein Abonnement (optionale Cloud-Funktionen pro Produkt prüfen).',
         ],
         affiliateLinks: [
           { label: 'Dieses Starter-Set bauen → Home-Assistant-Green-Preis prüfen', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '179 €' },
@@ -1360,13 +1363,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist die beste Smart-Home-Plattform, wenn ich mein ganzes Haus ausstatten möchte?', a: 'Es gibt keine einzelne "Plattform" für einen local-first Aufbau — das ist der Punkt. Home Assistant ist der Hub, und Sie kombinieren Zigbee-/Z-Wave-/Matter-Geräte beliebiger Marken (Aqara, SONOFF, Philips Hue, IKEA, Reolink usw.), statt an das Ökosystem und die Preisliste eines einzigen Anbieters gebunden zu sein.' },
           { q: 'Welche vernetzten Haushaltsgeräte lassen sich am besten per App steuern?', a: 'Geräte mit dokumentierter lokaler API — Zigbee-, Z-Wave- und Matter-Geräte, die über Home Assistant gekoppelt sind, erhalten alle App-Steuerung (die Home-Assistant-App), ohne Ihre Daten über eine Hersteller-Cloud zu leiten. Nur-Cloud-Geräte bieten ebenfalls App-Steuerung, aber über die App und Server des jeweiligen Anbieters.' },
           { q: 'Wie teuer sind lokal-fähige Geräte im Vergleich zu Nur-Cloud-Geräten?', a: 'Lokal-fähige Geräte (Zigbee, Z-Wave, Matter) kosten beim Kauf meist gleich viel oder weniger als nur-Cloud-Äquivalente, da der Unterschied im Protokoll liegt, nicht in der Hardware-Qualität. Die eigentliche Ersparnis zeigt sich über die Zeit: Nur-Cloud-Kameras und -Hubs verlangen oft monatliche Abogebühren für Aufzeichnung oder erweiterte Automatisierung, während ein lokaler Hub mit lokalen Geräten nach dem Kauf keine laufenden Kosten verursacht.' },
-          { q: 'Sind meine Daten bei lokal-fähigen Geräten sicherer als bei Nur-Cloud-Geräten?', a: 'Ja. Lokal-fähige Geräte, die an einen lokalen Hub gekoppelt sind, halten Sprachaufnahmen, Kamerabilder und Automatisierungsroutinen im eigenen Netzwerk – es werden keine Daten an einen Hersteller-Server gesendet. Nur-Cloud-Geräte leiten dieselben Daten über die Cloud des Anbieters, wo sie dessen Aufbewahrungsrichtlinie, Risiko von Datenlecks und Änderungen der Nutzungsbedingungen unterliegen.' },
+          { q: 'Sind meine Daten bei lokal-fähigen Geräten sicherer als bei Nur-Cloud-Geräten?', a: 'In der Regel ja, mit Einschränkungen. Lokal-fähige Geräte, die an einen lokalen Hub gekoppelt sind, können Sprachaufnahmen, Kamerabilder und Automatisierungsroutinen für die Kernfunktionen im eigenen Netzwerk halten – dann werden dafür keine Daten an einen Hersteller-Server gesendet. Manche Geräte kontaktieren dennoch Hersteller-Server für Firmware-Updates oder optionale Cloud-Funktionen; prüfen Sie daher die Einstellungen jedes Geräts. Nur-Cloud-Geräte leiten dieselben Daten über die Cloud des Anbieters, wo sie dessen Aufbewahrungsrichtlinie, Risiko von Datenlecks und Änderungen der Nutzungsbedingungen unterliegen. Lokale Speicherung macht Sie zudem selbst für Absicherung und Updates Ihres Hubs verantwortlich.' },
           { q: 'Funktionieren lokal-fähige Geräte mit HomeKit, Google Home und Amazon Alexa?', a: 'Die meisten schon. Matter-zertifizierte Geräte funktionieren nativ mit HomeKit, Google Home und Alexa neben einem lokalen Hub. Zigbee- und Z-Wave-Geräte verbinden sich über Home Assistant, das sie dann als Brücke an HomeKit, Google Home oder Alexa weitergeben kann – Sie behalten also die lokale Steuerung, können diese Sprachassistenten aber trotzdem nutzen.' },
           { q: 'Ist Matter mit meinen vorhandenen Zigbee- oder Z-Wave-Geräten kompatibel?', a: 'Matter läuft neben Zigbee und Z-Wave, statt sie zu ersetzen – ein Hub wie Home Assistant kann Matter-, Zigbee- und Z-Wave-Geräte gleichzeitig steuern. Sie müssen funktionierende Zigbee- oder Z-Wave-Geräte nicht ersetzen, um Matter-Geräte hinzuzufügen; ein Thread-Border-Router wird nur speziell für Matter-über-Thread-Geräte benötigt.' },
           { q: 'Gibt es günstige Möglichkeiten, ein bestehendes Haus mit Smart-Home-Funktionen nachzurüsten?', a: 'Ja — Zigbee-Leuchtmittel, -Steckdosen und -Sensoren sind der günstigste Einstieg und erfordern keine Verkabelung. Starten Sie mit einem 179-€-Hub und einem 20–25-€-Zigbee-Dongle, dann ergänzen Sie eine Handvoll 15–30-€-Geräte in einem Raum, bevor Sie erweitern – siehe die Starter-Set-Tabelle oben für genaue Kosten.' },
-          { q: 'Wie schwer ist es für einen kompletten Anfänger, ein local-first Smart Home einzurichten?', a: 'Die Einrichtung eines einzelnen lokalen Hubs (zum Beispiel Home Assistant Green) und einer Handvoll Zigbee-Geräte dauert bei den meisten Anfängern unter einer Stunde, da der Einrichtungsassistent das Koppeln über eine Weboberfläche übernimmt. Ein vollständiges Mehrraum-System mit Kameras, Schlössern und individuellen Automatisierungen aufzubauen ist ein Projekt für mehrere Wochenenden, aber Geräte lassen sich schrittweise im eigenen Tempo ergänzen.' },
-          { q: 'Muss ich bei der Verwendung von Home Assistant und lokalen Smart-Home-Geräten die DSGVO beachten?', a: 'Ein local-first Aufbau erleichtert die DSGVO-Einhaltung eher, als sie zu erschweren: Sprachaufnahmen, Kamerabilder und Automatisierungsdaten bleiben auf Ihrem eigenen Home-Assistant-Server statt bei einem externen Auftragsverarbeiter, was die Anforderungen aus Art. 28 DSGVO an Auftragsverarbeitungsverträge für die Kernfunktionen entfallen lässt. Für ein Smart Home im gewerblichen Kontext (z. B. Praxis, Kanzlei, Ferienwohnung) orientieren sich Betreiber zusätzlich an den BSI-Grundschutz-Katalogen für Netzwerksegmentierung und Update-Management – für ein rein privates Zuhause ist das lokale Setup selbst bereits die wirksamste Datenschutzmaßnahme aus diesem Ratgeber.' },
-          { q: 'Ist dieser Local-First-Ansatz auch für den deutschen Mittelstand geeignet?', a: 'Ja, mit Einschränkungen: Die einzelnen Consumer-Geräte in diesem Ratgeber (Home Assistant Green, Zigbee-Sensoren, Reolink-Kameras) eignen sich für kleine Standorte, Nebenräume oder Pilotprojekte, nicht aber als Ersatz für eine zertifizierte Gebäudeleittechnik in größeren Betrieben. Für den Mittelstand ist der eigentliche Vorteil der gleiche wie im Privatbereich: keine Cloud-Abhängigkeit von einem einzelnen Anbieter, volle Kontrolle über Firmware-Updates und Netzwerksegmentierung nach BSI-Empfehlungen, und keine laufenden Abo-Kosten pro Kamera oder Sensor, die bei mehreren Standorten schnell skalieren.' },
+          { q: 'Wie schwer ist es für einen kompletten Anfänger, ein local-first Smart Home einzurichten?', a: 'Die Einrichtung eines einzelnen lokalen Hubs (zum Beispiel Home Assistant Green) und einer Handvoll Zigbee-Geräte dauert je nach Erfahrung oft etwa eine Stunde oder weniger, da der Einrichtungsassistent das Koppeln über eine Weboberfläche übernimmt. Ein vollständiges Mehrraum-System mit Kameras, Schlössern und individuellen Automatisierungen aufzubauen ist ein Projekt für mehrere Wochenenden, aber Geräte lassen sich schrittweise im eigenen Tempo ergänzen.' },
+          { q: 'Muss ich bei der Verwendung von Home Assistant und lokalen Smart-Home-Geräten die DSGVO beachten?', a: 'Ein local-first Aufbau kann den Datenschutz erleichtern, ersetzt aber keine rechtliche Prüfung: Bleiben Sprachaufnahmen, Kamerabilder und Automatisierungsdaten auf Ihrem eigenen Home-Assistant-Server, sind in der Regel weniger externe Dienstleister beteiligt. Ob und welche DSGVO-Pflichten gelten, hängt vom Einzelfall ab – etwa bei Kameras, die Gäste, Nachbarn oder öffentliche Bereiche erfassen, oder bei gewerblicher Nutzung (z. B. Praxis, Kanzlei, Ferienwohnung). Im gewerblichen Kontext sind zusätzlich Netzwerksegmentierung und Update-Management sinnvoll; lassen Sie sich im Zweifel von einem Datenschutzbeauftragten oder Rechtsanwalt beraten. Dies ist keine Rechtsberatung.' },
+          { q: 'Ist dieser Local-First-Ansatz auch für den deutschen Mittelstand geeignet?', a: 'Ja, mit Einschränkungen: Die einzelnen Consumer-Geräte in diesem Ratgeber (Home Assistant Green, Zigbee-Sensoren, Reolink-Kameras) eignen sich für kleine Standorte, Nebenräume oder Pilotprojekte, nicht aber als Ersatz für eine zertifizierte Gebäudeleittechnik in größeren Betrieben. Für den Mittelstand ist der eigentliche Vorteil der gleiche wie im Privatbereich: keine Cloud-Abhängigkeit von einem einzelnen Anbieter, volle Kontrolle über Firmware-Updates und Netzwerksegmentierung (orientiert an BSI-Empfehlungen, je nach Einsatz zu prüfen), und keine laufenden Abo-Kosten pro Kamera oder Sensor, die bei mehreren Standorten schnell skalieren.' },
         ],
       },
       relatedReading: {
@@ -1389,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Smart-Home-Geräte 2026: Der Local-First-Kaufratgeber',
-      description: 'Beste Smart-Home-Geräte 2026 nach Kategorie — Hub, Zigbee/Thread, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen — eine Empfehlung pro Kategorie mit echten Preisen, geprüft am 25.',
+      description: 'Beste Smart-Home-Geräte 2026 nach Kategorie — Hub, Zigbee/Thread, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen — eine Empfehlung pro Kategorie mit Preisen, geprüft zum Zeitpunkt der letzten Aktualisierung.',
       url: 'https://www.promptquorum.com/de/smart-home/best-smart-home-devices-2026',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1413,13 +1416,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Was ist die beste Smart-Home-Plattform, wenn ich mein ganzes Haus ausstatten möchte?', acceptedAnswer: { '@type': 'Answer', text: 'Es gibt keine einzelne Plattform für einen local-first Aufbau – Home Assistant ist der Hub, und Sie kombinieren Zigbee-/Z-Wave-/Matter-Geräte beliebiger Marken, statt an einen einzigen Anbieter gebunden zu sein.' } },
         { '@type': 'Question', name: 'Welche vernetzten Haushaltsgeräte lassen sich am besten per App steuern?', acceptedAnswer: { '@type': 'Answer', text: 'Geräte mit dokumentierter lokaler API – Zigbee-, Z-Wave- und Matter-Geräte, die über Home Assistant gekoppelt sind, erhalten App-Steuerung ohne Ihre Daten über eine Hersteller-Cloud zu leiten.' } },
         { '@type': 'Question', name: 'Wie teuer sind lokal-fähige Geräte im Vergleich zu Nur-Cloud-Geräten?', acceptedAnswer: { '@type': 'Answer', text: 'Meist gleich viel oder weniger beim Kauf. Die eigentliche Ersparnis zeigt sich über die Zeit: Nur-Cloud-Geräte verlangen oft monatliche Abogebühren, während lokale Geräte keine laufenden Kosten verursachen.' } },
-        { '@type': 'Question', name: 'Sind meine Daten bei lokal-fähigen Geräten sicherer als bei Nur-Cloud-Geräten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Lokal-fähige Geräte an einem lokalen Hub halten Sprachaufnahmen, Kamerabilder und Routinen im eigenen Netzwerk. Nur-Cloud-Geräte leiten diese Daten über die Cloud des Anbieters.' } },
+        { '@type': 'Question', name: 'Sind meine Daten bei lokal-fähigen Geräten sicherer als bei Nur-Cloud-Geräten?', acceptedAnswer: { '@type': 'Answer', text: 'In der Regel ja, mit Einschränkungen. Lokal-fähige Geräte an einem lokalen Hub können Sprachaufnahmen, Kamerabilder und Routinen für die Kernfunktionen im eigenen Netzwerk halten; manche kontaktieren dennoch Hersteller-Server für Updates oder optionale Cloud-Funktionen. Nur-Cloud-Geräte leiten diese Daten über die Cloud des Anbieters.' } },
         { '@type': 'Question', name: 'Funktionieren lokal-fähige Geräte mit HomeKit, Google Home und Amazon Alexa?', acceptedAnswer: { '@type': 'Answer', text: 'Die meisten schon. Matter-zertifizierte Geräte funktionieren nativ mit allen dreien. Zigbee- und Z-Wave-Geräte verbinden sich über Home Assistant, das sie an HomeKit, Google Home oder Alexa weitergeben kann, während die lokale Steuerung erhalten bleibt.' } },
         { '@type': 'Question', name: 'Ist Matter mit meinen vorhandenen Zigbee- oder Z-Wave-Geräten kompatibel?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Matter läuft neben Zigbee und Z-Wave, statt sie zu ersetzen – ein Hub wie Home Assistant kann alle drei Protokolle gleichzeitig steuern.' } },
         { '@type': 'Question', name: 'Gibt es günstige Möglichkeiten, ein bestehendes Haus mit Smart-Home-Funktionen nachzurüsten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja – Zigbee-Leuchtmittel, -Steckdosen und -Sensoren sind der günstigste Einstieg und erfordern keine Verkabelung. Starten Sie mit einem Hub und einem Zigbee-Dongle, dann ergänzen Sie eine Handvoll Geräte in einem Raum, bevor Sie erweitern.' } },
-        { '@type': 'Question', name: 'Wie schwer ist es für einen kompletten Anfänger, ein local-first Smart Home einzurichten?', acceptedAnswer: { '@type': 'Answer', text: 'Die Einrichtung eines einzelnen lokalen Hubs und einer Handvoll Zigbee-Geräte dauert bei den meisten Anfängern unter einer Stunde. Ein vollständiges Mehrraum-System ist ein Projekt für mehrere Wochenenden, aber Geräte lassen sich schrittweise ergänzen.' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Home Assistant und lokalen Smart-Home-Geräten die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ein local-first Aufbau erleichtert die DSGVO-Einhaltung: Daten bleiben auf dem eigenen Home-Assistant-Server statt bei einem externen Auftragsverarbeiter, was die Anforderungen aus Art. 28 DSGVO für die Kernfunktionen entfallen lässt. Im gewerblichen Kontext orientieren sich Betreiber zusätzlich an den BSI-Grundschutz-Katalogen.' } },
-        { '@type': 'Question', name: 'Ist dieser Local-First-Ansatz auch für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit Einschränkungen: Die Consumer-Geräte in diesem Ratgeber eignen sich für kleine Standorte oder Pilotprojekte, nicht als Ersatz für zertifizierte Gebäudeleittechnik. Der Vorteil ist volle Kontrolle über Updates und Netzwerksegmentierung nach BSI-Empfehlungen, ohne laufende Abo-Kosten pro Standort.' } },
+        { '@type': 'Question', name: 'Wie schwer ist es für einen kompletten Anfänger, ein local-first Smart Home einzurichten?', acceptedAnswer: { '@type': 'Answer', text: 'Die Einrichtung eines einzelnen lokalen Hubs und einer Handvoll Zigbee-Geräte dauert je nach Erfahrung oft etwa eine Stunde oder weniger. Ein vollständiges Mehrraum-System ist ein Projekt für mehrere Wochenenden, aber Geräte lassen sich schrittweise ergänzen.' } },
+        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Home Assistant und lokalen Smart-Home-Geräten die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ein local-first Aufbau kann den Datenschutz erleichtern, ersetzt aber keine rechtliche Prüfung: Bleiben die Daten auf dem eigenen Home-Assistant-Server, sind in der Regel weniger externe Dienstleister beteiligt. Ob DSGVO-Pflichten gelten, hängt vom Einzelfall ab, etwa bei Kameras, die Gäste, Nachbarn oder öffentliche Bereiche erfassen, oder bei gewerblicher Nutzung. Dies ist keine Rechtsberatung.' } },
+        { '@type': 'Question', name: 'Ist dieser Local-First-Ansatz auch für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit Einschränkungen: Die Consumer-Geräte in diesem Ratgeber eignen sich für kleine Standorte oder Pilotprojekte, nicht als Ersatz für zertifizierte Gebäudeleittechnik. Der Vorteil ist volle Kontrolle über Updates und Netzwerksegmentierung (orientiert an BSI-Empfehlungen, je nach Einsatz zu prüfen), ohne laufende Abo-Kosten pro Standort.' } },
       ],
     },
   },
@@ -1430,20 +1433,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-es.webp',
     affiliateDisclosure: true,
     title: 'Mejores Dispositivos Smart Home 2026: La Guía de Compra Local-First',
-    seoTitle: 'Mejores Dispositivos Smart Home 2026: Guía Local-First',
+    seoTitle: 'Mejor sensor de movimiento 2026 y dispositivos smart home',
     intro:
-      'Los mejores dispositivos de smart home de 2026 abarcan un hub, un coordinador Zigbee/Thread, iluminación, cerraduras, sensores, cámaras y enchufes — y la decisión de mayor impacto es elegir primero tu arquitectura: local-first, cloud-first o híbrida. Esta guía te da una recomendación concreta por categoría (comprobado el 25 de agosto de 2026), un kit inicial y un kit avanzado con precios reales, una lista de "qué no comprar" y un árbol de decisión que conecta lo que quieres con lo que debes comprar.',
+      'Los mejores dispositivos de smart home de 2026 abarcan un hub, un coordinador Zigbee/Thread, iluminación, cerraduras, sensores, cámaras y enchufes — y la decisión de mayor impacto es elegir primero tu arquitectura: local-first, cloud-first o híbrida. Esta guía te da una recomendación concreta por categoría (comprobado en la última actualización), un kit inicial y un kit avanzado con precios reales, una lista de "qué no comprar" y un árbol de decisión que conecta lo que quieres con lo que debes comprar.',
     metaDescription:
-      'Mejores dispositivos smart home 2026: hub, Zigbee/Thread, iluminación, cerraduras, sensores, cámaras, enchufes — una recomendación por categoría, precios reales (ago. 2026), kits y árbol de decisión.',
+      'Mejor sensor de movimiento para un hogar inteligente local: Aqara P1 (~28–30 €) para luces y Aqara FP2 para presencia, más hub, cerradura y cámara.',
     twitterDescription:
-      'Mejores dispositivos smart home 2026, por categoría: hub, coordinador Zigbee/Thread, iluminación, cerraduras, sensores, cámaras, enchufes. Precios reales, kit inicial + avanzado, árbol de decisión.',
+      'Mejor sensor de movimiento 2026 para un hogar inteligente local (Aqara P1, Aqara FP2), más hub, Zigbee/Thread, iluminación, cerraduras, cámaras. Precios reales, kits, árbol de decisión.',
     readTime: '12 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores que arman un smart home con capacidad local',
@@ -1458,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'smart home local-first',
     ],
     leadAnswerBlock:
-      '**Elige primero tu arquitectura y luego compra por categoría: Home Assistant Green (€179) como hub, un coordinador Zigbee/Thread como el [Home Assistant Connect ZBT-2](/es/smart-home/best-zigbee-thread-dongles-2027) ($49/€45), sensores y enchufes Zigbee, y cámaras RTSP locales con [Frigate](/es/smart-home/local-ai-security-camera) en vez de una suscripción en la nube.** Recomendación de PromptQuorum, basada en especificaciones y precios actuales (comprobado el 25 de agosto de 2026), no en una prueba práctica de laboratorio de cada producto: local-first o híbrido para un montaje serio, cloud-first solo si la facilidad de instalación te importa más que el coste a largo plazo y la privacidad. → [Consulta el precio actual de Home Assistant Green](https://www.home-assistant.io/green/)',
+      '**Elige la arquitectura y compra por categoría: Home Assistant Green (€179) como hub, un coordinador Zigbee/Thread como el [Home Assistant Connect ZBT-2](/es/smart-home/best-zigbee-thread-dongles-2027) y cámaras locales con [Frigate](/es/smart-home/local-ai-security-camera).** Datos y precios comprobados en la última actualización, sin prueba práctica de laboratorio. Local-first o híbrido para montajes serios. → [Precio](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son los mejores dispositivos smart home para comprar en 2026?',
@@ -1496,15 +1499,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Los mejores dispositivos smart home de 2026 son los que tienen capacidad local — Zigbee, Z-Wave, Matter o Wi-Fi local — conectados por un hub local como Home Assistant, con una recomendación clara por categoría.' },
-      { type: 'plain-terms', content: 'Al comprar dispositivos para tu smart home, la pregunta más importante no es la marca, sino si el dispositivo puede funcionar localmente. Los que usan Zigbee, Z-Wave o Matter, o que ofrecen una API local, siguen funcionando sin conexión a internet y mantienen tus datos en casa. Los dispositivos solo-nube son cómodos, pero te atan a un proveedor y pueden añadir cuotas mensuales.' },
+      { type: 'one-sentence', content: 'Un buen smart home en 2026 se construye con dispositivos con capacidad local — Zigbee, Z-Wave, Matter o Wi-Fi local — conectados por un hub local como Home Assistant, con una recomendación clara por categoría.' },
+      { type: 'plain-terms', content: 'Al comprar dispositivos para tu smart home, la pregunta más importante no es la marca, sino si el dispositivo puede funcionar localmente. Los que usan Zigbee, Z-Wave o Matter, o que ofrecen una API local, siguen funcionando sin conexión a internet y pueden mantener tus datos en casa en las funciones básicas. Los dispositivos solo-nube son cómodos, pero te atan a un proveedor y pueden añadir cuotas mensuales.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'Recomendaciones rápidas — un producto por categoría',
         highlight: true,
-        content: 'Sáltate la lectura — este es el producto concreto que compraría PromptQuorum en cada categoría, comprobado el 25 de agosto de 2026.',
+        content: 'Sáltate la lectura — este es el producto concreto que compraría PromptQuorum en cada categoría, comprobado en la última actualización.',
         columns: ['Categoría', 'Nuestra recomendación', 'Mejor para'],
         rows: [
           { Categoría: '🧠 Hub', 'Nuestra recomendación': 'Home Assistant Green', 'Mejor para': 'Instalación local más sencilla, sin servidor' },
@@ -1537,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Elige primero tu arquitectura: local-first (Home Assistant + Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google/hubs de marca) o híbrida',
           'Hub: Home Assistant Green (€179) para la instalación local más sencilla; una mini PC si también quieres IA local',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/es/smart-home/best-zigbee-thread-dongles-2027) ($49/€45) o SONOFF ZBDongle-E (~$20–27, económico)',
-          'Cámaras: cámaras RTSP locales + [Frigate](/es/smart-home/local-ai-security-camera) evitan suscripciones y mantienen las grabaciones en casa',
+          'Cámaras: cámaras RTSP locales + [Frigate](/es/smart-home/local-ai-security-camera) evitan suscripciones y pueden mantener las grabaciones en casa en las funciones básicas',
           'Cerraduras: prioriza la fiabilidad local (Z-Wave/Matter) por encima de funciones con IA — nunca dejes que un LLM sea la única autoridad sobre tu cerradura',
           'Un dispositivo local ligeramente más caro suele salir más barato a 3–5 años una vez que cuentas las suscripciones',
         ],
@@ -1557,12 +1560,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: 'Cómo elegimos: capacidad local primero',
         content:
-          '**La regla de selección es la capacidad local primero: un dispositivo debe funcionar a través de un hub local sin depender de la nube del fabricante.** Los dispositivos con capacidad local protegen tu privacidad, siguen funcionando sin conexión y evitan suscripciones. Esta página no se ha construido a partir de pruebas físicas de PromptQuorum en cada producto — las recomendaciones se basan en especificaciones actuales, soporte documentado de protocolo/API local, y análisis independientes, comprobado el 25 de agosto de 2026.',
+          '**La regla de selección es la capacidad local primero: un dispositivo debe funcionar a través de un hub local sin depender de la nube del fabricante.** Los dispositivos con capacidad local protegen tu privacidad, siguen funcionando sin conexión y evitan suscripciones. Esta página no se ha construido a partir de pruebas físicas de PromptQuorum en cada producto — las recomendaciones se basan en especificaciones actuales, soporte documentado de protocolo/API local, y análisis independientes, comprobado en la última actualización.',
         items: [
           '**Protocolo o API local:** Zigbee, Z-Wave, Matter, o una API Wi-Fi local documentada.',
           '**Sin cuenta en la nube obligatoria:** el dispositivo debe funcionar a través de un hub local.',
           '**Sin suscripción para funciones básicas:** la grabación o la automatización no deberían requerir una cuota.',
-          '**Precios actuales:** cada precio de abajo se comprobó frente a anuncios del fabricante o de grandes minoristas el 25 de agosto de 2026 — verifica siempre el precio en vivo antes de comprar.',
+          '**Precios actuales:** la mayoría de los precios de abajo se comprobaron frente a anuncios del fabricante o de grandes minoristas (los marcados como «estimado» no están verificados en euros) en la última actualización — verifica siempre el precio en vivo antes de comprar.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-es.svg',
         imageCaption: 'Dispositivos con capacidad local — Zigbee, Z-Wave, Matter o una API local — comparados con dispositivos solo-nube en 5 factores, incluidas las suscripciones y la fiabilidad sin conexión.',
@@ -1573,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 Nuestra recomendación: Home Assistant Green (€179).** Si quieres un smart home genuinamente local-first sin montar tú mismo un servidor, Green es el punto de partida más sencillo — habla Zigbee (con un coordinador), Z-Wave, Matter y Thread, y ejecuta automatizaciones, paneles y monitorización de energía completamente sin conexión.',
         items: [
-          '**Nota sobre el precio:** el precio de Home Assistant Green subió desde su precio de lanzamiento original de $99 a $199/€179 en abril de 2026, debido al aumento del coste de la RAM y otros componentes — vale la pena saberlo antes de presupuestar, ya que análisis antiguos todavía citan la cifra de $99 desactualizada.',
+          '**Nota sobre el precio:** el precio de Home Assistant Green es ahora de $199/€179 (consulta la [página del fabricante](https://www.home-assistant.io/green/)), frente a los $99 originales de lanzamiento — vale la pena saberlo antes de presupuestar, ya que análisis antiguos todavía citan la cifra de $99 desactualizada.',
           '**Ideal para:** principiantes que quieren control local sin montar ni mantener un servidor ellos mismos.',
           '**Ruta de ampliación:** si más adelante quieres LLM locales, IA de cámara con Frigate, muchas cámaras, contenedores Docker o una base de datos, mueve Home Assistant a una mini PC en su lugar — ve la sección [Mejor mini PC](#mini-pc) más abajo.',
           'Añade un coordinador Zigbee y, por separado, un controlador Z-Wave (sticks USB) para esos protocolos — ve [Mejor coordinador Zigbee y Thread](#zigbee-thread).',
@@ -1625,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 Mejor gama premium: Philips Hue (~55 €+ por bombilla de color).** Cómprala si la fiabilidad te importa, quieres un ecosistema maduro, una gama amplia de productos, y no te importa pagar más.',
           '**🥇 Mejor económica: IKEA TRÅDFRI (desde ~10 €).** Cómprala si el precio te importa, con control Zigbee básico te basta, y estás integrando con Home Assistant — bastante más barata por bombilla que Hue.',
-          'Los interruptores de pared que controlan las luminarias existentes suelen ser más fiables que solo bombillas inteligentes, y evitan el fallo de "alguien apagó el interruptor físico".',
+          'Los interruptores de pared que controlan las luminarias existentes suelen ser más fiables que solo bombillas inteligentes (instalarlos implica la red eléctrica y debe hacerlo un electricista cualificado), y evitan el fallo de "alguien apagó el interruptor físico".',
           '**Lo que no recomendamos:** bombillas que requieren acceso a la nube para el funcionamiento básico, que se vuelven inútiles si el fabricante cierra sus servidores, o que necesitan una suscripción para la automatización básica.',
         ],
         affiliateLinks: [
@@ -1678,6 +1681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Por qué preferimos cámaras locales:** una cámara en la nube crea un coste mensual recurrente por algo que tu propio hardware puede hacer una sola vez, ya pagado. La arquitectura local es: cámara → red local → Frigate → detección de IA local → Home Assistant, sin necesitar ninguna suscripción de IA en la nube para la instalación básica.',
           'El soporte de RTSP y PoE importa más que la marca — cualquier cámara con salida RTSP documentada y sin bloqueo forzoso a la nube funciona con Frigate.',
           'Guía de instalación completa: [Cámaras de seguridad con IA local con Frigate](/es/smart-home/local-ai-security-camera).',
+          '**Nota de privacidad:** las cámaras que graban a personas pueden estar sujetas a normas de privacidad y protección de datos (por ejemplo, el RGPD en la UE). Apunta las cámaras solo a tu propiedad, evita vecinos y zonas públicas, informa a visitas y convivientes de la grabación y protege el servidor de grabación con contraseñas seguras y actualizaciones. Es información general, no asesoramiento legal.',
         ],
         affiliateLinks: [
           { label: 'Consulta precios actuales de Reolink →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~90–140 €' },
@@ -1702,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'El kit inicial de smart home local',
         content:
-          '**Presupuesto: unos 270–330 € en total (comprobado el 25 de agosto de 2026). Empieza con un hub local, un coordinador Zigbee y unos pocos dispositivos locales en una habitación, y luego expande.**',
+          '**Presupuesto: unos 270–330 € en total (comprobado en la última actualización). Empieza con un hub local, un coordinador Zigbee y unos pocos dispositivos locales en una habitación, y luego expande.**',
         columns: ['Categoría', 'Dispositivo', 'Precio aprox.'],
         rows: [
           { Categoría: 'Hub', Dispositivo: 'Home Assistant Green', 'Precio aprox.': '€179' },
@@ -1712,7 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Categoría: 'Enchufes', Dispositivo: '2 enchufes inteligentes Zigbee', 'Precio aprox.': '~25–35 €' },
         ],
         items: [
-          'Esto te da una base privada y fiable que puedes ampliar habitación por habitación — cada dispositivo de aquí funciona sin conexión una vez emparejado, y ninguno requiere suscripción.',
+          'Esto te da una base privada y fiable que puedes ampliar habitación por habitación — las funciones básicas de cada dispositivo de aquí funcionan sin conexión una vez emparejado y no requieren suscripción (revisa las funciones opcionales en la nube de cada producto).',
         ],
         affiliateLinks: [
           { label: 'Monta este kit inicial → consulta el precio de Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '€179' },
@@ -1808,11 +1812,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuál es el mejor proveedor si quiero equipar toda la casa con dispositivos smart home?', a: 'No hay un único "proveedor" para una instalación local-first — esa es la idea. Home Assistant es el hub, y combinas dispositivos Zigbee/Z-Wave/Matter de cualquier marca (Aqara, SONOFF, Philips Hue, IKEA, Reolink, etc.) en vez de estar atado al ecosistema y a la lista de precios de un solo fabricante.' },
           { q: '¿Qué dispositivos domésticos conectados se controlan mejor con una app?', a: 'Los dispositivos con una API local documentada — los dispositivos Zigbee, Z-Wave y Matter emparejados a través de Home Assistant obtienen control por app (la app de Home Assistant) sin que tus datos pasen por la nube de un fabricante. Los dispositivos solo-nube también ofrecen control por app, pero a través de la app y los servidores propios del fabricante.' },
           { q: '¿Cuánto cuestan los dispositivos con capacidad local comparados con los solo-nube?', a: 'Los dispositivos con capacidad local (Zigbee, Z-Wave, Matter) suelen costar lo mismo o menos que sus equivalentes solo-nube en el momento de la compra, ya que la diferencia está en el soporte de protocolo, no en la calidad del hardware. El verdadero ahorro se nota con el tiempo: las cámaras y hubs solo-nube suelen añadir cuotas mensuales por grabación o automatización avanzada, mientras que un hub y dispositivos locales no tienen coste recurrente tras la compra inicial.' },
-          { q: '¿Mis datos están más seguros con dispositivos con capacidad local que con los solo-nube?', a: 'Sí. Los dispositivos con capacidad local emparejados a un hub local mantienen las grabaciones de voz, el vídeo de las cámaras y las rutinas de automatización en tu propia red, sin enviar datos a los servidores de un fabricante. Los dispositivos solo-nube envían esos mismos datos a través de la nube del proveedor, sujetos a su política de retención, riesgo de filtración y cambios en las condiciones de servicio.' },
+          { q: '¿Mis datos están más seguros con dispositivos con capacidad local que con los solo-nube?', a: 'Normalmente sí, con matices. Los dispositivos con capacidad local emparejados a un hub local pueden mantener las grabaciones de voz, el vídeo de las cámaras y las rutinas de automatización en tu propia red para las funciones básicas, sin enviar datos a los servidores de un fabricante. Algunos dispositivos aún contactan con servidores del fabricante para actualizaciones de firmware o funciones opcionales en la nube, así que revisa los ajustes de cada uno. Los dispositivos solo-nube envían esos mismos datos a través de la nube del proveedor, sujetos a su política de retención, riesgo de filtración y cambios en las condiciones de servicio. Además, el almacenamiento local te hace responsable de proteger y actualizar tu propio hub.' },
           { q: '¿Los dispositivos con capacidad local funcionan con HomeKit, Google Home y Amazon Alexa?', a: 'La mayoría sí. Los dispositivos certificados Matter funcionan de forma nativa con HomeKit, Google Home y Alexa junto a un hub local. Los dispositivos Zigbee y Z-Wave se conectan a través de Home Assistant, que luego puede exponerlos a HomeKit, Google Home o Alexa como puente — así mantienes el control local y sigues usando esos asistentes de voz si quieres.' },
           { q: '¿Matter es compatible con mis dispositivos Zigbee o Z-Wave existentes?', a: 'Matter funciona junto a Zigbee y Z-Wave en vez de sustituirlos — un hub como Home Assistant puede controlar dispositivos Matter, Zigbee y Z-Wave al mismo tiempo. No necesitas reemplazar tus dispositivos Zigbee o Z-Wave que ya funcionan para añadir dispositivos Matter; un router de borde Thread solo hace falta para los dispositivos Matter-over-Thread específicamente.' },
           { q: '¿Hay formas económicas de añadir funciones smart home a una casa ya existente?', a: 'Sí — las bombillas, enchufes y sensores Zigbee son la entrada más barata y no requieren obra. Empieza con un hub de €179 y un dongle Zigbee de $20–27, y luego añade un puñado de dispositivos de 9–30 € en una habitación antes de expandir — ve la tabla del kit inicial de arriba para los costes exactos.' },
-          { q: '¿Qué tan difícil es para un principiante total montar un smart home local-first?', a: 'Configurar un único hub local (por ejemplo, Home Assistant Green) y un puñado de dispositivos Zigbee lleva menos de una hora para la mayoría de principiantes, ya que el asistente de configuración gestiona el emparejamiento a través de una interfaz web. Montar un sistema completo de varias habitaciones con cámaras, cerraduras y automatizaciones personalizadas es un proyecto de varios fines de semana, pero puedes añadir dispositivos poco a poco a tu ritmo.' },
+          { q: '¿Qué tan difícil es para un principiante total montar un smart home local-first?', a: 'Configurar un único hub local (por ejemplo, Home Assistant Green) y un puñado de dispositivos Zigbee suele llevar una hora o menos, según la experiencia, ya que el asistente de configuración gestiona el emparejamiento a través de una interfaz web. Montar un sistema completo de varias habitaciones con cámaras, cerraduras y automatizaciones personalizadas es un proyecto de varios fines de semana, pero puedes añadir dispositivos poco a poco a tu ritmo.' },
         ],
       },
       relatedReading: {
@@ -1835,7 +1839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores Dispositivos Smart Home 2026: La Guía de Compra Local-First',
-      description: 'Mejores dispositivos smart home 2026 por categoría — hub, Zigbee/Thread, iluminación, cerraduras, sensores, cámaras, enchufes — una recomendación por categoría con precios reales comprobados el 25 de agosto de 2026.',
+      description: 'Mejores dispositivos smart home 2026 por categoría — hub, Zigbee/Thread, iluminación, cerraduras, sensores, cámaras, enchufes — una recomendación por categoría con precios reales comprobados en la última actualización.',
       url: 'https://www.promptquorum.com/es/smart-home/best-smart-home-devices-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1859,11 +1863,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Cuál es el mejor proveedor si quiero equipar toda la casa con dispositivos smart home?', acceptedAnswer: { '@type': 'Answer', text: 'No hay un único proveedor para una instalación local-first — Home Assistant es el hub, y combinas dispositivos Zigbee/Z-Wave/Matter de cualquier marca en vez de estar atado a un solo fabricante.' } },
         { '@type': 'Question', name: '¿Qué dispositivos domésticos conectados se controlan mejor con una app?', acceptedAnswer: { '@type': 'Answer', text: 'Los dispositivos con una API local documentada — los dispositivos Zigbee, Z-Wave y Matter emparejados a través de Home Assistant obtienen control por app sin que tus datos pasen por la nube de un fabricante.' } },
         { '@type': 'Question', name: '¿Cuánto cuestan los dispositivos con capacidad local comparados con los solo-nube?', acceptedAnswer: { '@type': 'Answer', text: 'Los dispositivos con capacidad local suelen costar lo mismo o menos en el momento de la compra. El verdadero ahorro se nota con el tiempo: las cámaras y hubs solo-nube suelen añadir cuotas mensuales, mientras que los dispositivos locales no tienen coste recurrente.' } },
-        { '@type': 'Question', name: '¿Mis datos están más seguros con dispositivos con capacidad local que con los solo-nube?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los dispositivos con capacidad local emparejados a un hub local mantienen las grabaciones de voz, el vídeo de las cámaras y las rutinas en tu propia red. Los dispositivos solo-nube envían esos datos a través de la nube del proveedor.' } },
+        { '@type': 'Question', name: '¿Mis datos están más seguros con dispositivos con capacidad local que con los solo-nube?', acceptedAnswer: { '@type': 'Answer', text: 'Normalmente sí, con matices. Los dispositivos con capacidad local emparejados a un hub local pueden mantener las grabaciones de voz, el vídeo de las cámaras y las rutinas en tu propia red para las funciones básicas, aunque algunos contactan con servidores del fabricante para actualizaciones u opciones en la nube. Los dispositivos solo-nube envían esos datos a través de la nube del proveedor.' } },
         { '@type': 'Question', name: '¿Los dispositivos con capacidad local funcionan con HomeKit, Google Home y Amazon Alexa?', acceptedAnswer: { '@type': 'Answer', text: 'La mayoría sí. Los dispositivos certificados Matter funcionan de forma nativa con los tres. Los dispositivos Zigbee y Z-Wave se conectan a través de Home Assistant, que puede exponerlos a HomeKit, Google Home o Alexa manteniendo el control local.' } },
         { '@type': 'Question', name: '¿Matter es compatible con mis dispositivos Zigbee o Z-Wave existentes?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Matter funciona junto a Zigbee y Z-Wave en vez de sustituirlos — un hub como Home Assistant puede controlar los tres protocolos al mismo tiempo.' } },
         { '@type': 'Question', name: '¿Hay formas económicas de añadir funciones smart home a una casa ya existente?', acceptedAnswer: { '@type': 'Answer', text: 'Sí — las bombillas, enchufes y sensores Zigbee son la entrada más barata y no requieren obra. Empieza con un hub y un dongle Zigbee, y luego añade un puñado de dispositivos en una habitación antes de expandir.' } },
-        { '@type': 'Question', name: '¿Qué tan difícil es para un principiante total montar un smart home local-first?', acceptedAnswer: { '@type': 'Answer', text: 'Configurar un único hub local y un puñado de dispositivos Zigbee lleva menos de una hora para la mayoría de principiantes. Montar un sistema completo de varias habitaciones es un proyecto de varios fines de semana, pero los dispositivos se pueden añadir poco a poco.' } },
+        { '@type': 'Question', name: '¿Qué tan difícil es para un principiante total montar un smart home local-first?', acceptedAnswer: { '@type': 'Answer', text: 'Configurar un único hub local y un puñado de dispositivos Zigbee suele llevar una hora o menos, según la experiencia. Montar un sistema completo de varias habitaciones es un proyecto de varios fines de semana, pero los dispositivos se pueden añadir poco a poco.' } },
       ],
     },
   },
@@ -1874,20 +1878,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: '2026년 최고의 스마트 홈 기기: 로컬 퍼스트 구매 가이드',
-    seoTitle: '2026년 최고의 스마트 홈 기기: 로컬 퍼스트 가이드',
+    seoTitle: '2026 모션 센서 추천과 스마트 홈 기기 구매 가이드',
     intro:
-      '2026년 최고의 스마트 홈 기기는 허브, Zigbee/Thread 코디네이터, 조명, 잠금장치, 센서, 카메라, 플러그로 구성되며, 가장 중요한 결정은 아키텍처를 먼저 정하는 것입니다: 로컬 퍼스트, 클라우드 퍼스트, 또는 하이브리드입니다. 이 가이드는 카테고리별 구체적인 추천 제품(2026년 8월 25일 확인 기준), 실제 가격이 포함된 스타터 세트와 상급 세트, "구매하지 말아야 할 것" 목록, 그리고 원하는 것을 구매할 제품에 매핑하는 결정 트리를 제공합니다.',
+      '2026년 최고의 스마트 홈 기기는 허브, Zigbee/Thread 코디네이터, 조명, 잠금장치, 센서, 카메라, 플러그로 구성되며, 가장 중요한 결정은 아키텍처를 먼저 정하는 것입니다: 로컬 퍼스트, 클라우드 퍼스트, 또는 하이브리드입니다. 이 가이드는 카테고리별 구체적인 추천 제품(마지막 업데이트 시점 확인 기준), 실제 가격이 포함된 스타터 세트와 상급 세트, "구매하지 말아야 할 것" 목록, 그리고 원하는 것을 구매할 제품에 매핑하는 결정 트리를 제공합니다.',
     metaDescription:
-      '2026년 최고의 스마트 홈 기기: 허브, Zigbee/Thread, 조명, 잠금장치, 센서, 카메라, 플러그. 카테고리별 추천 제품, 실제 가격, 스타터 세트, 결정 트리.',
+      '로컬 스마트 홈에 맞는 모션 센서 추천: 조명 연동은 Aqara P1, 재실 감지는 Aqara FP2. 허브·잠금장치·카메라 추천도 실제 가격과 함께 소개합니다.',
     twitterDescription:
-      '2026년 최고의 스마트 홈 기기, 카테고리별: 허브, Zigbee/Thread 코디네이터, 조명, 잠금장치, 센서, 카메라, 플러그. 실제 가격, 스타터/상급 세트, 결정 트리.',
+      '2026년 모션 센서 추천(Aqara P1, Aqara FP2)과 허브, Zigbee/Thread, 조명, 잠금장치, 카메라를 카테고리별로 소개합니다. 실제 가격, 키트, 결정 트리 포함.',
     readTime: '12분 읽기',
     educationalLevel: 'Intermediate',
     audience: '로컬 제어 가능한 스마트 홈을 구성하는 구매자',
@@ -1902,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '프라이버시 스마트 홈 기기',
     ],
     leadAnswerBlock:
-      '**먼저 아키텍처를 선택한 다음 카테고리별로 구매하십시오: 허브로 Home Assistant Green($199), Zigbee/Thread 코디네이터로 [Home Assistant Connect ZBT-2](/ko/smart-home/best-zigbee-thread-dongles-2027)($49), Zigbee 센서와 플러그, 그리고 클라우드 구독 대신 [Frigate](/ko/smart-home/local-ai-security-camera)를 사용하는 로컬 RTSP 카메라입니다.** PromptQuorum의 추천은 현재 사양과 가격(2026년 8월 25일 확인)을 기준으로 하며, 모든 제품을 직접 실사용 테스트한 결과가 아닙니다. 진지한 구성이라면 로컬 퍼스트 또는 하이브리드를 선택하고, 장기 비용과 프라이버시보다 설치 편의성이 중요한 경우에만 클라우드 퍼스트를 선택하십시오. → [Home Assistant Green의 현재 가격 확인](https://www.home-assistant.io/green/)',
+      '**먼저 아키텍처를 선택한 다음 카테고리별로 구매하십시오: 허브로 Home Assistant Green($199), Zigbee/Thread 코디네이터로 [Home Assistant Connect ZBT-2](/ko/smart-home/best-zigbee-thread-dongles-2027)($49), Zigbee 센서와 플러그, 그리고 클라우드 구독 대신 [Frigate](/ko/smart-home/local-ai-security-camera)를 사용하는 로컬 RTSP 카메라입니다.** PromptQuorum의 추천은 현재 사양과 가격(마지막 업데이트 시점 확인)을 기준으로 하며, 모든 제품을 직접 실사용 테스트한 결과가 아닙니다. 진지한 구성이라면 로컬 퍼스트 또는 하이브리드를 선택하고, 장기 비용과 프라이버시보다 설치 편의성이 중요한 경우에만 클라우드 퍼스트를 선택하십시오. → [Home Assistant Green의 현재 가격 확인](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       ko: {
         question: '2026년에 구매할 최고의 스마트 홈 기기는 무엇입니까?',
@@ -1940,15 +1944,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2026년 최고의 스마트 홈 기기는 Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi 등 로컬 제어가 가능한 기기이며, Home Assistant 같은 로컬 허브로 통합되고 카테고리별로 명확한 추천 제품이 있습니다.' },
-      { type: 'plain-terms', content: '스마트 홈 기기를 구매할 때 가장 중요한 질문은 브랜드가 아니라 그 기기가 로컬에서 작동할 수 있는지입니다. Zigbee, Z-Wave, Matter를 지원하거나 로컬 API를 제공하는 기기는 클라우드 없이도 계속 작동하고 데이터를 집 안에 보관합니다. 클라우드 전용 기기는 편리하지만 종속성을 만들고 월 구독료가 추가될 수 있습니다.' },
+      { type: 'one-sentence', content: '2026년의 탄탄한 스마트 홈은 Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi 등 로컬 제어가 가능한 기기로 구성되며, Home Assistant 같은 로컬 허브로 통합되고 카테고리별로 명확한 추천 제품이 있습니다.' },
+      { type: 'plain-terms', content: '스마트 홈 기기를 구매할 때 가장 중요한 질문은 브랜드가 아니라 그 기기가 로컬에서 작동할 수 있는지입니다. Zigbee, Z-Wave, Matter를 지원하거나 로컬 API를 제공하는 기기는 클라우드 없이도 계속 작동하며 핵심 기능에서는 데이터를 집 안에 보관할 수 있습니다. 클라우드 전용 기기는 편리하지만 종속성을 만들고 월 구독료가 추가될 수 있습니다.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: '빠른 추천 — 카테고리별 제품 하나',
         highlight: true,
-        content: '전체 내용을 읽지 않아도 됩니다 — PromptQuorum이 각 카테고리에서 구매할 구체적인 제품입니다(2026년 8월 25일 확인).',
+        content: '전체 내용을 읽지 않아도 됩니다 — PromptQuorum이 각 카테고리에서 구매할 구체적인 제품입니다(마지막 업데이트 시점 확인).',
         columns: ['카테고리', '추천 제품', '적합한 대상'],
         rows: [
           { '카테고리': '🧠 허브', '추천 제품': 'Home Assistant Green', '적합한 대상': '가장 쉬운 로컬 설치, 서버 구축 불필요' },
@@ -1981,7 +1985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '아키텍처를 먼저 선택하십시오: 로컬 퍼스트(Home Assistant + Zigbee/Z-Wave/Matter), 클라우드 퍼스트(Alexa/Google/제조사 허브), 또는 하이브리드',
           '허브: 가장 쉬운 로컬 설치를 원하면 Home Assistant Green($199); 로컬 AI도 원하면 미니 PC',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/ko/smart-home/best-zigbee-thread-dongles-2027)($49) 또는 SONOFF ZBDongle-E(약 $20–27, 저가형)',
-          '카메라: 로컬 RTSP 카메라와 [Frigate](/ko/smart-home/local-ai-security-camera)는 구독료를 피하고 영상을 집 안에 보관합니다',
+          '카메라: 로컬 RTSP 카메라와 [Frigate](/ko/smart-home/local-ai-security-camera)는 구독료를 피하고 핵심 기능에서는 영상을 집 안에 보관할 수 있습니다',
           '잠금장치: AI 기능보다 로컬 신뢰성(Z-Wave/Matter)을 우선시하십시오 — LLM이 도어락의 단독 권한을 갖게 하지 마십시오',
           '약간 더 비싼 로컬 기기가 3~5년 동안 구독료를 합산하면 클라우드 기기보다 저렴한 경우가 많습니다',
         ],
@@ -2001,12 +2005,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: '선정 기준: 로컬 제어 가능성 우선',
         content:
-          '**선정 원칙은 로컬 제어 가능성을 최우선으로 하는 것입니다: 기기는 제조사 클라우드에 의존하지 않고 로컬 허브를 통해 작동해야 합니다.** 로컬 제어 가능 기기는 프라이버시를 보호하고, 오프라인 상태에서도 계속 작동하며, 구독료를 피할 수 있습니다. 이 페이지는 PromptQuorum이 모든 제품을 직접 실사용 테스트하여 작성한 것이 아니라, 현재 사양, 문서화된 로컬 API/프로토콜 지원, 독립적인 리뷰를 기준으로 하며 2026년 8월 25일 기준으로 확인되었습니다.',
+          '**선정 원칙은 로컬 제어 가능성을 최우선으로 하는 것입니다: 기기는 제조사 클라우드에 의존하지 않고 로컬 허브를 통해 작동해야 합니다.** 로컬 제어 가능 기기는 프라이버시를 보호하고, 오프라인 상태에서도 계속 작동하며, 구독료를 피할 수 있습니다. 이 페이지는 PromptQuorum이 모든 제품을 직접 실사용 테스트하여 작성한 것이 아니라, 현재 사양, 문서화된 로컬 API/프로토콜 지원, 독립적인 리뷰를 기준으로 하며 마지막 업데이트 시점 기준으로 확인되었습니다.',
         items: [
           '**로컬 프로토콜 또는 API:** Zigbee, Z-Wave, Matter, 또는 문서화된 로컬 Wi-Fi API.',
           '**필수 클라우드 계정 없음:** 기기는 로컬 허브를 통해 작동해야 합니다.',
           '**핵심 기능에 구독 불필요:** 녹화나 자동화에 요금이 필요하지 않아야 합니다.',
-          '**현재 가격:** 아래 모든 가격은 2026년 8월 25일에 제조사 또는 주요 소매업체 목록을 기준으로 확인했습니다 — 구매 전에 항상 실시간 가격을 확인하십시오.',
+          '**현재 가격:** 아래 모든 가격은 마지막 업데이트 시점에 제조사 또는 주요 소매업체 목록을 기준으로 확인했습니다 — 구매 전에 항상 실시간 가격을 확인하십시오.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-ko.svg',
         imageCaption: '로컬 제어 가능 기기(Zigbee, Z-Wave, Matter 또는 로컬 API)와 클라우드 전용 기기를 구독료와 오프라인 신뢰성을 포함한 5가지 요소로 비교합니다.',
@@ -2017,7 +2021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 추천 제품: Home Assistant Green($199).** 직접 서버를 구축하지 않고 진정한 로컬 퍼스트 스마트 홈을 원한다면 Green이 가장 쉬운 출발점입니다 — 코디네이터와 함께 Zigbee, Z-Wave, Matter, Thread를 지원하며 자동화, 대시보드, 에너지 모니터링을 완전히 오프라인에서 실행합니다.',
         items: [
-          '**가격 관련 참고:** Home Assistant Green의 가격은 초기 출시가 $99에서 2026년 4월에 $199로 인상되었으며, RAM/부품 비용 상승이 원인입니다 — 예산을 세우기 전에 알아두어야 합니다. 오래된 리뷰는 여전히 이전 $99 가격을 인용하는 경우가 많기 때문입니다.',
+          '**가격 관련 참고:** Home Assistant Green의 가격은 현재 $199이며([제조사 페이지](https://www.home-assistant.io/green/) 참조), 초기 출시가는 $99였습니다 — 예산을 세우기 전에 알아두어야 합니다. 오래된 리뷰는 여전히 이전 $99 가격을 인용하는 경우가 많기 때문입니다.',
           '**적합한 대상:** 서버를 직접 구축하거나 유지 관리하지 않고 로컬 제어를 원하는 초보자.',
           '**업그레이드 경로:** 이후 로컬 LLM, Frigate 카메라 AI, 다수의 카메라, Docker 컨테이너, 데이터베이스가 필요하다면 Home Assistant를 미니 PC로 옮기십시오 — 아래 [최고의 미니 PC](#mini-pc) 섹션을 참조하십시오.',
           '이러한 프로토콜을 위해 Zigbee 코디네이터와 별도로 Z-Wave 컨트롤러(USB 동글)를 추가하십시오 — [최고의 Zigbee 및 Thread 코디네이터](#zigbee-thread)를 참조하십시오.',
@@ -2069,7 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 최고의 프리미엄: Philips Hue(컬러 전구 개당 약 $54+).** 신뢰성이 중요하고, 성숙한 생태계와 넓은 제품군을 원하며, 더 높은 가격을 감수할 수 있다면 구매하십시오.',
           '**🥇 최고의 저가형: IKEA TRÅDFRI.** 가격이 중요하고, 단순한 Zigbee 제어로 충분하며, Home Assistant와 통합할 계획이라면 구매하십시오 — Hue보다 전구당 훨씬 저렴합니다.',
-          '기존 조명기구를 제어하는 벽면 스위치는 스마트 전구만 사용하는 것보다 대체로 더 신뢰할 수 있으며, "누군가 물리적 스위치를 껐다"는 오작동 상황을 피할 수 있습니다.',
+          '기존 조명기구를 제어하는 벽면 스위치는 스마트 전구만 사용하는 것보다 대체로 더 신뢰할 수 있으며(설치는 전기 배선 작업이므로 자격을 갖춘 전기 기술자에게 맡기십시오), "누군가 물리적 스위치를 껐다"는 오작동 상황을 피할 수 있습니다.',
           '**추천하지 않는 것:** 기본 작동에 클라우드 접근이 필요하거나, 제조사가 서버를 종료하면 쓸모없어지거나, 기본 자동화에 구독이 필요한 전구.',
         ],
         affiliateLinks: [
@@ -2122,6 +2126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**로컬 카메라를 선호하는 이유:** 클라우드 카메라는 자체 하드웨어로 한 번만 지불하면 되는 기능에 대해 반복되는 월간 비용을 만듭니다. 로컬 아키텍처는 다음과 같습니다: 카메라 → 로컬 네트워크 → Frigate → 로컬 AI 감지 → Home Assistant, 기본 구성에는 클라우드 AI 구독이 필요하지 않습니다.',
           'RTSP와 PoE 지원이 브랜드보다 더 중요합니다 — 문서화된 RTSP 출력이 있고 강제 클라우드 게이트가 없는 카메라라면 어느 것이든 Frigate와 작동합니다.',
           '전체 설정 가이드: [Frigate를 사용한 로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera).',
+          '**개인정보 안내:** 사람을 녹화하는 카메라는 개인정보 보호 규정(예: EU의 GDPR)의 적용을 받을 수 있습니다. 카메라는 본인 소유 공간만 향하게 하고, 이웃이나 공공장소가 찍히지 않도록 하며, 방문자와 가족 구성원에게 녹화 사실을 알리고, 녹화 서버를 강력한 비밀번호와 업데이트로 보호하십시오. 이는 일반 정보이며 법률 자문이 아닙니다.',
         ],
         affiliateLinks: [
           { label: 'Reolink 현재 가격 확인 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
@@ -2146,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: '로컬 스마트 홈 스타터 세트',
         content:
-          '**예산: 총 약 $290–360(2026년 8월 25일 확인 기준). 로컬 허브, Zigbee 코디네이터, 한 방의 몇 가지 로컬 기기로 시작한 다음 확장하십시오.**',
+          '**예산: 총 약 $320–380(마지막 업데이트 시점 확인 기준). 로컬 허브, Zigbee 코디네이터, 한 방의 몇 가지 로컬 기기로 시작한 다음 확장하십시오.**',
         columns: ['카테고리', '기기', '대략적인 가격'],
         rows: [
           { '카테고리': '허브', '기기': 'Home Assistant Green', '대략적인 가격': '$199' },
@@ -2156,7 +2161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '카테고리': '플러그', '기기': 'Zigbee 스마트 플러그 2개', '대략적인 가격': '~$30–40' },
         ],
         items: [
-          '이 구성은 방 단위로 확장할 수 있는 프라이빗하고 신뢰할 수 있는 기반을 제공합니다 — 여기 있는 모든 기기는 페어링 후 오프라인에서 작동하며 구독이 필요하지 않습니다.',
+          '이 구성은 방 단위로 확장할 수 있는 프라이빗하고 신뢰할 수 있는 기반을 제공합니다 — 여기 있는 모든 기기의 핵심 기능은 페어링 후 오프라인에서 작동하며 구독이 필요하지 않습니다(선택적 클라우드 기능은 제품별로 확인하십시오).',
         ],
         affiliateLinks: [
           { label: '이 스타터 세트 구성하기 → Home Assistant Green 가격 확인', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
@@ -2252,11 +2257,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '집 전체를 스마트 홈 기기로 갖추고 싶다면 어떤 제공업체가 최선입니까?', a: '로컬 퍼스트 구성에는 단일 "제공업체"가 없습니다 — 그것이 핵심입니다. Home Assistant가 허브이며, 하나의 벤더 생태계와 가격표에 종속되는 대신 어떤 브랜드(Aqara, SONOFF, Philips Hue, IKEA, Reolink 등)의 Zigbee/Z-Wave/Matter 기기든 자유롭게 혼합할 수 있습니다.' },
           { q: '앱으로 제어하기 가장 좋은 네트워크 연결 가정용 기기는 무엇입니까?', a: '문서화된 로컬 API가 있는 기기입니다 — Home Assistant를 통해 페어링된 Zigbee, Z-Wave, Matter 기기는 모두 벤더 클라우드로 데이터를 보내지 않고 Home Assistant 앱으로 앱 제어를 제공합니다. 클라우드 전용 기기도 앱 제어를 제공하지만 벤더 자체 앱과 서버를 거칩니다.' },
           { q: '로컬 제어 가능 기기는 클라우드 전용 기기보다 비용이 얼마나 듭니까?', a: '로컬 제어 가능 기기(Zigbee, Z-Wave, Matter)는 구매 시점에서 보통 클라우드 전용 동급 기기와 비슷하거나 더 저렴합니다. 차이는 하드웨어 품질이 아니라 프로토콜 지원에 있기 때문입니다. 실제 절감 효과는 시간이 지나면서 나타납니다: 클라우드 전용 카메라와 허브는 녹화나 고급 자동화에 월 구독료를 부과하는 경우가 많지만, 로컬 허브와 로컬 기기는 초기 구매 이후 반복 비용이 없습니다.' },
-          { q: '로컬 제어 가능 기기가 클라우드 전용 기기보다 데이터가 더 안전합니까?', a: '예. 로컬 허브와 페어링된 로컬 제어 가능 기기는 음성 녹음, 카메라 영상, 자동화 루틴을 자체 네트워크에 보관하며 제조사 서버로 데이터를 전송하지 않습니다. 클라우드 전용 기기는 동일한 데이터를 벤더의 클라우드로 전송하며, 이는 그 회사의 보존 정책, 유출 위험, 서비스 약관 변경의 대상이 됩니다.' },
+          { q: '로컬 제어 가능 기기가 클라우드 전용 기기보다 데이터가 더 안전합니까?', a: '대체로 그렇지만 전제가 있습니다. 로컬 허브와 페어링된 로컬 제어 가능 기기는 핵심 기능에 대해 음성 녹음, 카메라 영상, 자동화 루틴을 자체 네트워크에 보관할 수 있으며, 이 경우 제조사 서버로 데이터를 전송하지 않습니다. 다만 일부 기기는 펌웨어 업데이트나 선택적 클라우드 기능을 위해 여전히 제조사 서버에 접속하므로 기기별 설정을 확인하십시오. 클라우드 전용 기기는 동일한 데이터를 벤더의 클라우드로 전송하며, 이는 그 회사의 보존 정책, 유출 위험, 서비스 약관 변경의 대상이 됩니다. 또한 로컬 저장은 허브의 보안 및 업데이트 책임이 사용자에게 있음을 의미합니다.' },
           { q: '로컬 제어 가능 기기는 HomeKit, Google Home, Amazon Alexa와 함께 작동합니까?', a: '대부분 작동합니다. Matter 인증 기기는 로컬 허브와 함께 HomeKit, Google Home, Alexa와 기본적으로 작동합니다. Zigbee와 Z-Wave 기기는 Home Assistant를 통해 연결되며, Home Assistant는 이를 브리지로 HomeKit, Google Home, Alexa에 노출할 수 있습니다 — 원한다면 이러한 음성 비서를 계속 사용하면서도 로컬 제어를 유지할 수 있습니다.' },
           { q: 'Matter는 기존 Zigbee 또는 Z-Wave 기기와 호환됩니까?', a: 'Matter는 Zigbee와 Z-Wave를 대체하는 대신 함께 작동합니다 — Home Assistant 같은 허브는 Matter, Zigbee, Z-Wave 기기를 동시에 제어할 수 있습니다. Matter 기기를 추가하기 위해 작동 중인 Zigbee나 Z-Wave 기기를 교체할 필요는 없으며, Thread 경계 라우터는 특히 Matter-오버-Thread 기기에만 필요합니다.' },
           { q: '기존 주택에 저렴하게 스마트 홈 기능을 추가할 방법이 있습니까?', a: '예 — Zigbee 전구, 플러그, 센서가 가장 저렴한 진입점이며 배선 공사가 필요하지 않습니다. $199 허브와 $20–27 Zigbee 동글로 시작한 다음, 한 방에 $15–30대의 기기 몇 개를 추가하고 확장하십시오 — 정확한 비용은 위의 스타터 세트 표를 참조하십시오.' },
-          { q: '완전한 초보자가 로컬 퍼스트 스마트 홈을 구성하는 것이 얼마나 어렵습니까?', a: '단일 로컬 허브(예: Home Assistant Green)와 몇 가지 Zigbee 기기를 설정하는 데는 대부분의 초보자에게 한 시간이 채 걸리지 않습니다. 설정 마법사가 웹 인터페이스를 통해 페어링을 처리하기 때문입니다. 카메라, 잠금장치, 맞춤 자동화가 포함된 전체 다중 방 시스템을 구축하는 것은 여러 주말이 걸리는 프로젝트이지만, 자신의 속도에 맞춰 기기를 점진적으로 추가할 수 있습니다.' },
+          { q: '완전한 초보자가 로컬 퍼스트 스마트 홈을 구성하는 것이 얼마나 어렵습니까?', a: '단일 로컬 허브(예: Home Assistant Green)와 몇 가지 Zigbee 기기를 설정하는 데는 경험에 따라 다르지만 대개 한 시간 안팎이 걸립니다. 설정 마법사가 웹 인터페이스를 통해 페어링을 처리하기 때문입니다. 카메라, 잠금장치, 맞춤 자동화가 포함된 전체 다중 방 시스템을 구축하는 것은 여러 주말이 걸리는 프로젝트이지만, 자신의 속도에 맞춰 기기를 점진적으로 추가할 수 있습니다.' },
         ],
       },
       relatedReading: {
@@ -2279,7 +2284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 최고의 스마트 홈 기기: 로컬 퍼스트 구매 가이드',
-      description: '2026년 최고의 스마트 홈 기기 카테고리별 — 허브, Zigbee/Thread, 조명, 잠금장치, 센서, 카메라, 플러그 — 2026년 8월 25일 확인된 실제 가격과 함께 카테고리별 추천 제품.',
+      description: '2026년 최고의 스마트 홈 기기 카테고리별 — 허브, Zigbee/Thread, 조명, 잠금장치, 센서, 카메라, 플러그 — 마지막 업데이트 시점 확인된 실제 가격과 함께 카테고리별 추천 제품.',
       url: 'https://www.promptquorum.com/ko/smart-home/best-smart-home-devices-2026',
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2303,11 +2308,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '집 전체를 스마트 홈 기기로 갖추고 싶다면 어떤 제공업체가 최선입니까?', acceptedAnswer: { '@type': 'Answer', text: '로컬 퍼스트 구성에는 단일 제공업체가 없습니다 — Home Assistant가 허브이며, 하나의 벤더 생태계에 종속되는 대신 어떤 브랜드의 Zigbee/Z-Wave/Matter 기기든 혼합할 수 있습니다.' } },
         { '@type': 'Question', name: '앱으로 제어하기 가장 좋은 네트워크 연결 가정용 기기는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '문서화된 로컬 API가 있는 기기입니다 — Home Assistant를 통해 페어링된 Zigbee, Z-Wave, Matter 기기는 벤더 클라우드로 데이터를 보내지 않고 앱 제어를 제공합니다.' } },
         { '@type': 'Question', name: '로컬 제어 가능 기기는 클라우드 전용 기기보다 비용이 얼마나 듭니까?', acceptedAnswer: { '@type': 'Answer', text: '로컬 제어 가능 기기는 구매 시점에서 보통 동일하거나 더 저렴합니다. 실제 절감 효과는 시간이 지나면서 나타납니다: 클라우드 전용 카메라와 허브는 월 구독료를 부과하는 경우가 많지만, 로컬 기기는 반복 비용이 없습니다.' } },
-        { '@type': 'Question', name: '로컬 제어 가능 기기가 클라우드 전용 기기보다 데이터가 더 안전합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 로컬 제어 가능 기기는 음성 녹음, 카메라 영상, 루틴을 자체 네트워크에 보관합니다. 클라우드 전용 기기는 동일한 데이터를 벤더의 클라우드로 전송합니다.' } },
+        { '@type': 'Question', name: '로컬 제어 가능 기기가 클라우드 전용 기기보다 데이터가 더 안전합니까?', acceptedAnswer: { '@type': 'Answer', text: '대체로 그렇지만 전제가 있습니다. 로컬 제어 가능 기기는 핵심 기능에 대해 음성 녹음, 카메라 영상, 루틴을 자체 네트워크에 보관할 수 있으나, 일부는 펌웨어 업데이트나 선택적 클라우드 기능을 위해 제조사 서버에 접속합니다. 클라우드 전용 기기는 동일한 데이터를 벤더의 클라우드로 전송합니다.' } },
         { '@type': 'Question', name: '로컬 제어 가능 기기는 HomeKit, Google Home, Amazon Alexa와 함께 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '대부분 작동합니다. Matter 인증 기기는 세 가지 모두와 기본적으로 작동합니다. Zigbee와 Z-Wave 기기는 Home Assistant를 통해 연결되며, 로컬 제어를 유지하면서 이들에 브리지될 수 있습니다.' } },
         { '@type': 'Question', name: 'Matter는 기존 Zigbee 또는 Z-Wave 기기와 호환됩니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Matter는 Zigbee와 Z-Wave를 대체하는 대신 함께 작동합니다 — Home Assistant 같은 허브는 세 프로토콜을 동시에 제어할 수 있습니다.' } },
         { '@type': 'Question', name: '기존 주택에 저렴하게 스마트 홈 기능을 추가할 방법이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예 — Zigbee 전구, 플러그, 센서가 가장 저렴한 진입점이며 배선 공사가 필요하지 않습니다. 허브와 Zigbee 동글로 시작한 다음 한 방에 기기 몇 개를 추가하고 확장하십시오.' } },
-        { '@type': 'Question', name: '완전한 초보자가 로컬 퍼스트 스마트 홈을 구성하는 것이 얼마나 어렵습니까?', acceptedAnswer: { '@type': 'Answer', text: '단일 로컬 허브와 몇 가지 Zigbee 기기를 설정하는 데는 대부분의 초보자에게 한 시간이 채 걸리지 않습니다. 전체 다중 방 시스템은 여러 주말이 걸리는 프로젝트이지만, 기기는 점진적으로 추가할 수 있습니다.' } },
+        { '@type': 'Question', name: '완전한 초보자가 로컬 퍼스트 스마트 홈을 구성하는 것이 얼마나 어렵습니까?', acceptedAnswer: { '@type': 'Answer', text: '단일 로컬 허브와 몇 가지 Zigbee 기기를 설정하는 데는 경험에 따라 다르지만 대개 한 시간 안팎이 걸립니다. 전체 다중 방 시스템은 여러 주말이 걸리는 프로젝트이지만, 기기는 점진적으로 추가할 수 있습니다.' } },
       ],
     },
   },
@@ -2318,19 +2323,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     affiliateDisclosure: true,
     title: 'Meilleurs Appareils de Maison Connectée 2026 : Le Guide d\'Achat Local-First',
-    seoTitle: 'Meilleurs Appareils Maison Connectée 2026 : Guide Local',
+    seoTitle: 'Meilleur détecteur de mouvement 2026 et maison connectée',
     intro:
-      'Les meilleurs appareils de maison connectée 2026 couvrent un hub, un coordinateur Zigbee/Thread, l\'éclairage, les serrures, les capteurs, les caméras et les prises — et la décision la plus stratégique est de choisir d\'abord votre architecture : local-first, cloud-first ou hybride. Ce guide propose un choix précis par catégorie (vérifié le 25 août 2026), un kit de départ et un kit sérieux avec des prix réels, une liste « à ne pas acheter » et un arbre de décision qui relie vos besoins à l\'achat correspondant.',
+      'Les meilleurs appareils de maison connectée 2026 couvrent un hub, un coordinateur Zigbee/Thread, l\'éclairage, les serrures, les capteurs, les caméras et les prises — et la décision la plus stratégique est de choisir d\'abord votre architecture : local-first, cloud-first ou hybride. Ce guide propose un choix précis par catégorie (vérifié lors de la dernière mise à jour), un kit de départ et un kit sérieux avec des prix réels, une liste « à ne pas acheter » et un arbre de décision qui relie vos besoins à l\'achat correspondant.',
     metaDescription:
-      'Meilleurs appareils maison connectée 2026 : hub, Zigbee/Thread, éclairage, serrures, capteurs, caméras, prises — un choix par catégorie, prix réels (août 2026), kits de départ, arbre de décision.',
+      'Meilleur détecteur de mouvement pour une maison connectée locale : Aqara P1 (~25–30 €) pour l\'éclairage, Aqara FP2 pour la présence, plus hub et serrure.',
     twitterDescription:
-      'Meilleurs appareils de maison connectée 2026, par catégorie : hub, coordinateur Zigbee/Thread, éclairage, serrures, capteurs, caméras, prises. Prix réels, kits de départ et sérieux, arbre de décision.',
+      'Meilleur détecteur de mouvement 2026 pour une maison connectée locale (Aqara P1, Aqara FP2), plus hub, Zigbee/Thread, éclairage, serrures, caméras. Prix réels, kits, arbre de décision.',
     readTime: '11 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs assemblant une maison connectée à capacité locale',
@@ -2345,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'hub Home Assistant 2026',
     ],
     leadAnswerBlock:
-      '**Choisissez d\'abord votre architecture, puis achetez par catégorie : Home Assistant Green (€179) comme hub, un coordinateur Zigbee/Thread comme le [Home Assistant Connect ZBT-2](/fr/smart-home/best-zigbee-thread-dongles-2027) ($49/€45), des capteurs et prises Zigbee, et des caméras RTSP locales avec [Frigate](/fr/smart-home/local-ai-security-camera) plutôt qu\'un abonnement cloud.** Recommandation de PromptQuorum, fondée sur les spécifications et les prix actuels (vérifiés le 25 août 2026), pas un test en laboratoire de chaque produit : local-first ou hybride pour une installation sérieuse, cloud-first uniquement si la facilité de configuration compte plus que le coût et la confidentialité à long terme. → [Voir le prix actuel du Home Assistant Green](https://www.home-assistant.io/green/)',
+      '**Choisissez l\'architecture, puis achetez par catégorie : Home Assistant Green (€179) comme hub, un coordinateur Zigbee/Thread comme le [Home Assistant Connect ZBT-2](/fr/smart-home/best-zigbee-thread-dongles-2027) et caméras locales avec [Frigate](/fr/smart-home/local-ai-security-camera).** Prix vérifiés lors de la dernière mise à jour, pas de test en laboratoire. Local-first ou hybride pour les installations sérieuses. → [Prix](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       fr: {
         question: 'Quels sont les meilleurs appareils de maison connectée à acheter en 2026 ?',
@@ -2383,15 +2388,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Les meilleurs appareils de maison connectée de 2026 sont à capacité locale — Zigbee, Z-Wave, Matter ou Wi-Fi local — reliés par un hub local comme Home Assistant, avec un choix précis par catégorie.' },
-      { type: 'plain-terms', content: 'À l\'achat de matériel domotique, la question la plus importante n\'est pas la marque, mais si l\'appareil peut fonctionner localement. Les appareils qui parlent Zigbee, Z-Wave ou Matter, ou qui offrent une API locale, continuent de fonctionner sans le cloud et gardent vos données à la maison. Les appareils tout-cloud sont pratiques mais vous verrouillent et peuvent ajouter des frais mensuels.' },
+      { type: 'one-sentence', content: 'Une maison connectée solide en 2026 repose sur des appareils à capacité locale — Zigbee, Z-Wave, Matter ou Wi-Fi local — reliés par un hub local comme Home Assistant, avec un choix précis par catégorie.' },
+      { type: 'plain-terms', content: 'À l\'achat de matériel domotique, la question la plus importante n\'est pas la marque, mais si l\'appareil peut fonctionner localement. Les appareils qui parlent Zigbee, Z-Wave ou Matter, ou qui offrent une API locale, continuent de fonctionner sans le cloud et peuvent garder vos données à la maison pour les fonctions de base. Les appareils tout-cloud sont pratiques mais vous verrouillent et peuvent ajouter des frais mensuels.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'Choix Rapides — Un Produit Par Catégorie',
         highlight: true,
-        content: 'Passez la lecture — voici le produit précis que PromptQuorum achèterait dans chaque catégorie, vérifié le 25 août 2026.',
+        content: 'Passez la lecture — voici le produit précis que PromptQuorum achèterait dans chaque catégorie, vérifié lors de la dernière mise à jour.',
         columns: ['Catégorie', 'Notre choix', 'Idéal pour'],
         rows: [
           { Catégorie: '🧠 Hub', 'Notre choix': 'Home Assistant Green', 'Idéal pour': 'Configuration locale la plus simple, aucun serveur à monter' },
@@ -2424,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Choisissez d\'abord votre architecture : local-first (Home Assistant + Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google/hubs propriétaires) ou hybride',
           'Hub : Home Assistant Green (€179) pour la configuration locale la plus simple ; un mini-PC si vous voulez aussi de l\'IA locale',
           'Zigbee/Thread : [Home Assistant Connect ZBT-2](/fr/smart-home/best-zigbee-thread-dongles-2027) ($49/€45) ou SONOFF ZBDongle-E (~21–25 €, économique)',
-          'Caméras : les caméras RTSP locales + [Frigate](/fr/smart-home/local-ai-security-camera) évitent les abonnements et gardent les images à la maison',
+          'Caméras : les caméras RTSP locales + [Frigate](/fr/smart-home/local-ai-security-camera) évitent les abonnements et peuvent garder les images à la maison pour les fonctions de base',
           'Serrures : privilégiez la fiabilité locale (Z-Wave/Matter) plutôt que les fonctions IA — ne laissez jamais un LLM être la seule autorité sur votre serrure',
           'Un appareil local légèrement plus cher revient souvent moins cher qu\'un appareil cloud sur 3 à 5 ans, une fois les abonnements comptés',
         ],
@@ -2444,12 +2449,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: 'Comment nous choisissons : la capacité locale d\'abord',
         content:
-          '**La règle de sélection est la capacité locale d\'abord : un appareil doit fonctionner via un hub local sans dépendre du cloud d\'un fabricant.** Les appareils à capacité locale protègent la vie privée, continuent de fonctionner hors ligne et évitent les abonnements. Cette page n\'a pas été construite à partir d\'un test physique de chaque produit par PromptQuorum — les choix reposent sur les spécifications actuelles, la prise en charge documentée des protocoles/API locaux, et des avis indépendants, vérifiés le 25 août 2026.',
+          '**La règle de sélection est la capacité locale d\'abord : un appareil doit fonctionner via un hub local sans dépendre du cloud d\'un fabricant.** Les appareils à capacité locale protègent la vie privée, continuent de fonctionner hors ligne et évitent les abonnements. Cette page n\'a pas été construite à partir d\'un test physique de chaque produit par PromptQuorum — les choix reposent sur les spécifications actuelles, la prise en charge documentée des protocoles/API locaux, et des avis indépendants, vérifiés lors de la dernière mise à jour.',
         items: [
           '**Protocole ou API locale :** Zigbee, Z-Wave, Matter, ou une API Wi-Fi locale documentée.',
           '**Aucun compte cloud obligatoire :** l\'appareil doit fonctionner via un hub local.',
           '**Aucun abonnement pour les fonctions clés :** l\'enregistrement ou l\'automatisation ne devraient pas exiger de frais.',
-          '**Prix actuels :** chaque prix ci-dessous a été vérifié auprès du fabricant ou de grands revendeurs le 25 août 2026 — vérifiez toujours le prix en direct avant d\'acheter.',
+          '**Prix actuels :** la plupart des prix ci-dessous ont été vérifiés auprès du fabricant ou de grands revendeurs lors de la dernière mise à jour ; les montants précédés de « ~ » ou de « env. » sont des conversions estimées et non vérifiées — vérifiez toujours le prix en direct avant d\'acheter.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-fr.svg',
         imageCaption: 'Appareils à capacité locale — Zigbee, Z-Wave, Matter ou une API locale — comparés aux appareils tout-cloud selon 5 critères, dont les abonnements et la fiabilité hors ligne.',
@@ -2460,7 +2465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 Notre choix : Home Assistant Green (€179).** Si vous voulez une maison connectée réellement local-first sans monter vous-même un serveur, Green est le point de départ le plus simple — il parle Zigbee (avec un coordinateur), Z-Wave, Matter et Thread, et exécute automatisations, tableaux de bord et suivi énergétique entièrement hors ligne.',
         items: [
-          '**Remarque sur le prix :** le prix du Home Assistant Green est passé de son prix de lancement de 99 $ à 199 $/€179 en avril 2026, en raison de la hausse des coûts de RAM et de composants — à noter avant de budgétiser, car d\'anciens avis citent encore le chiffre obsolète de 99 $.',
+          '**Remarque sur le prix :** le prix du Home Assistant Green est désormais de 199 $/€179 (voir la [page du fabricant](https://www.home-assistant.io/green/)), contre 99 $ au lancement — à noter avant de budgétiser, car d\'anciens avis citent encore le chiffre obsolète de 99 $.',
           '**Idéal pour :** les débutants qui veulent un contrôle local sans monter ni maintenir un serveur eux-mêmes.',
           '**Voie de montée en gamme :** si vous voulez plus tard des LLM locaux, l\'IA caméra de Frigate, de nombreuses caméras, des conteneurs Docker ou une base de données, passez Home Assistant sur un mini-PC — voir la section [Meilleur mini-PC](#mini-pc) ci-dessous.',
           'Ajoutez un coordinateur Zigbee et, séparément, un contrôleur Z-Wave (clés USB) pour ces protocoles — voir [Meilleur coordinateur Zigbee et Thread](#zigbee-thread).',
@@ -2512,7 +2517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 Meilleur premium : Philips Hue (~40–60 €/ampoule couleur).** À acheter si la fiabilité compte, que vous voulez un écosystème mature, une large gamme, et que le prix n\'est pas un frein.',
           '**🥇 Meilleur économique : IKEA TRÅDFRI.** À acheter si le prix compte, qu\'un simple contrôle Zigbee suffit, et que vous intégrez avec Home Assistant — nettement moins cher par ampoule que Hue.',
-          'Les interrupteurs muraux qui commandent des luminaires existants sont souvent plus fiables que les ampoules connectées seules, et évitent le cas « quelqu\'un a coupé l\'interrupteur physique ».',
+          'Les interrupteurs muraux qui commandent des luminaires existants sont souvent plus fiables que les ampoules connectées seules (leur pose touche au réseau électrique et revient à un électricien qualifié), et évitent le cas « quelqu\'un a coupé l\'interrupteur physique ».',
           '**Ce que nous ne recommandons pas :** les ampoules qui exigent un accès cloud pour un fonctionnement de base, deviennent inutilisables si les serveurs du fabricant ferment, ou nécessitent un abonnement pour une automatisation basique.',
         ],
         affiliateLinks: [
@@ -2565,6 +2570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pourquoi nous préférons les caméras locales :** une caméra cloud crée un coût mensuel récurrent pour quelque chose que votre propre matériel peut faire une fois, payé. L\'architecture locale est : caméra → réseau local → Frigate → détection IA locale → Home Assistant, sans abonnement IA cloud requis pour la configuration de base.',
           'Le support RTSP et PoE compte plus que la marque — toute caméra avec une sortie RTSP documentée et sans verrou cloud forcé fonctionne avec Frigate.',
           'Guide complet d\'installation : [Caméras de sécurité à IA locale avec Frigate](/fr/smart-home/local-ai-security-camera).',
+          '**Note de confidentialité :** les caméras qui filment des personnes peuvent relever des règles de protection des données (par exemple le RGPD dans l\'UE). Orientez les caméras uniquement vers votre propriété, évitez les voisins et les espaces publics, informez visiteurs et occupants de l\'enregistrement et protégez le serveur d\'enregistrement par des mots de passe robustes et des mises à jour. Information générale, pas un conseil juridique.',
         ],
         affiliateLinks: [
           { label: 'Vérifier les prix Reolink actuels →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~70–100 €' },
@@ -2589,7 +2595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'Le kit de départ maison connectée locale',
         content:
-          '**Budget : environ 280–335 € au total (vérifié le 25 août 2026). Commencez par un hub local, un coordinateur Zigbee et quelques appareils locaux dans une pièce, puis étendez.**',
+          '**Budget : environ 280–335 € au total (vérifié lors de la dernière mise à jour). Commencez par un hub local, un coordinateur Zigbee et quelques appareils locaux dans une pièce, puis étendez.**',
         columns: ['Catégorie', 'Appareil', 'Prix approx.'],
         rows: [
           { Catégorie: 'Hub', Appareil: 'Home Assistant Green', 'Prix approx.': '€179' },
@@ -2599,7 +2605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Catégorie: 'Prises', Appareil: '2 prises Zigbee', 'Prix approx.': '~25–35 €' },
         ],
         items: [
-          'Cela donne une base privée et fiable que vous pouvez développer pièce par pièce — chaque appareil ici fonctionne hors ligne une fois associé, et aucun ne nécessite d\'abonnement.',
+          'Cela donne une base privée et fiable que vous pouvez développer pièce par pièce — les fonctions de base de chaque appareil ici fonctionnent hors ligne une fois associé et ne nécessitent pas d’abonnement (vérifiez les fonctions cloud optionnelles de chaque produit).',
         ],
         affiliateLinks: [
           { label: 'Construire ce kit de départ → vérifier le prix du Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '€179' },
@@ -2695,11 +2701,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quel est le meilleur fournisseur pour équiper toute ma maison en appareils connectés ?', a: 'Il n\'existe pas de « fournisseur » unique pour une configuration local-first — c\'est précisément le principe. Home Assistant est le hub, et vous combinez des appareils Zigbee/Z-Wave/Matter de n\'importe quelle marque (Aqara, SONOFF, Philips Hue, IKEA, Reolink, etc.) plutôt que d\'être enfermé dans l\'écosystème et la grille tarifaire d\'un seul fournisseur.' },
           { q: 'Quels appareils domestiques connectés se contrôlent le mieux via une application ?', a: 'Les appareils avec une API locale documentée — les appareils Zigbee, Z-Wave et Matter associés via Home Assistant obtiennent tous un contrôle par application (l\'application Home Assistant) sans faire transiter vos données par un cloud du fabricant. Les appareils tout-cloud offrent aussi un contrôle par application, mais via l\'application et les serveurs propres du fabricant.' },
           { q: 'Combien coûtent les appareils à capacité locale par rapport aux appareils tout-cloud ?', a: 'Les appareils à capacité locale (Zigbee, Z-Wave, Matter) coûtent généralement autant, voire moins, que leurs équivalents tout-cloud à l\'achat, car la différence porte sur la prise en charge du protocole, pas sur la qualité du matériel. La vraie économie apparaît avec le temps : les caméras et hubs tout-cloud ajoutent souvent des frais d\'abonnement mensuels pour l\'enregistrement ou l\'automatisation avancée, alors qu\'un hub local et des appareils locaux n\'entraînent aucun coût récurrent après l\'achat initial.' },
-          { q: 'Mes données sont-elles plus sûres avec des appareils à capacité locale qu\'avec des appareils tout-cloud ?', a: 'Oui. Les appareils à capacité locale associés à un hub local conservent les enregistrements vocaux, les images de caméra et les routines d\'automatisation sur votre propre réseau, sans envoyer de données au serveur d\'un fabricant. Les appareils tout-cloud font transiter ces mêmes données par le cloud du fournisseur, où elles sont soumises à sa politique de conservation, au risque de fuite de données et aux changements de conditions d\'utilisation — la CNIL recommande d\'ailleurs de privilégier un traitement local pour les données professionnelles sensibles (financières, médicales, juridiques) captées par des capteurs ou des caméras, lorsque c\'est possible.' },
+          { q: 'Mes données sont-elles plus sûres avec des appareils à capacité locale qu\'avec des appareils tout-cloud ?', a: 'En général oui, avec des réserves. Les appareils à capacité locale associés à un hub local peuvent conserver les enregistrements vocaux, les images de caméra et les routines d\'automatisation sur votre propre réseau pour les fonctions de base, sans envoyer de données au serveur d\'un fabricant. Certains appareils contactent toutefois les serveurs du fabricant pour les mises à jour de firmware ou des fonctions cloud optionnelles : vérifiez les réglages de chacun. Les appareils tout-cloud font transiter ces mêmes données par le cloud du fournisseur, où elles sont soumises à sa politique de conservation, au risque de fuite de données et aux changements de conditions d\'utilisation. Pour des données professionnelles sensibles (financières, médicales, juridiques), il est prudent de privilégier un traitement local lorsque c\'est possible ; en cas de doute, renseignez-vous auprès de la CNIL ou d\'un juriste. Le stockage local vous rend aussi responsable de la sécurité et des mises à jour de votre hub.' },
           { q: 'Les appareils à capacité locale fonctionnent-ils avec HomeKit, Google Home et Amazon Alexa ?', a: 'La plupart, oui. Les appareils certifiés Matter fonctionnent nativement avec HomeKit, Google Home et Alexa aux côtés d\'un hub local. Les appareils Zigbee et Z-Wave se connectent via Home Assistant, qui peut ensuite les exposer à HomeKit, Google Home ou Alexa comme passerelle — vous gardez ainsi le contrôle local tout en pouvant utiliser ces assistants vocaux si vous le souhaitez.' },
           { q: 'Matter est-il compatible avec mes appareils Zigbee ou Z-Wave existants ?', a: 'Matter fonctionne aux côtés de Zigbee et Z-Wave plutôt que de les remplacer — un hub comme Home Assistant peut contrôler des appareils Matter, Zigbee et Z-Wave en même temps. Vous n\'avez pas besoin de remplacer vos appareils Zigbee ou Z-Wave fonctionnels pour ajouter des appareils Matter ; un routeur de bordure Thread n\'est nécessaire que pour les appareils Matter-sur-Thread spécifiquement.' },
           { q: 'Existe-t-il des moyens économiques d\'ajouter des fonctions connectées à une maison existante ?', a: 'Oui — les ampoules, prises et capteurs Zigbee sont le point d\'entrée le moins cher et ne nécessitent aucun câblage. Commencez avec un hub à €179 et un dongle Zigbee à ~21–25 €, puis ajoutez une poignée d\'appareils à 15–30 € dans une pièce avant d\'étendre — voir le tableau du kit de départ ci-dessus pour les coûts exacts.' },
-          { q: 'Est-il difficile pour un débutant complet de mettre en place une maison connectée local-first ?', a: 'Configurer un seul hub local (par exemple Home Assistant Green) et une poignée d\'appareils Zigbee prend moins d\'une heure pour la plupart des débutants, car l\'assistant de configuration gère l\'association via une interface web. Construire un système complet multi-pièces avec caméras, serrures et automatisations personnalisées est un projet de plusieurs week-ends, mais vous pouvez ajouter des appareils progressivement, à votre rythme.' },
+          { q: 'Est-il difficile pour un débutant complet de mettre en place une maison connectée local-first ?', a: 'Configurer un seul hub local (par exemple Home Assistant Green) et une poignée d\'appareils Zigbee prend souvent environ une heure ou moins, selon l\'expérience, car l\'assistant de configuration gère l\'association via une interface web. Construire un système complet multi-pièces avec caméras, serrures et automatisations personnalisées est un projet de plusieurs week-ends, mais vous pouvez ajouter des appareils progressivement, à votre rythme.' },
         ],
       },
       relatedReading: {
@@ -2722,7 +2728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs Appareils de Maison Connectée 2026 : Le Guide d\'Achat Local-First',
-      description: 'Meilleurs appareils maison connectée 2026 par catégorie — hub, Zigbee/Thread, éclairage, serrures, capteurs, caméras, prises — un choix par catégorie avec prix réels vérifiés le 25 août 2026.',
+      description: 'Meilleurs appareils maison connectée 2026 par catégorie — hub, Zigbee/Thread, éclairage, serrures, capteurs, caméras, prises — un choix par catégorie avec prix réels vérifiés lors de la dernière mise à jour.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-smart-home-devices-2026',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2746,11 +2752,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Quel est le meilleur fournisseur pour équiper toute ma maison en appareils connectés ?', acceptedAnswer: { '@type': 'Answer', text: 'Il n\'existe pas de fournisseur unique pour une configuration local-first — Home Assistant est le hub, et vous combinez des appareils Zigbee/Z-Wave/Matter de n\'importe quelle marque plutôt que d\'être enfermé dans l\'écosystème d\'un seul fournisseur.' } },
         { '@type': 'Question', name: 'Quels appareils domestiques connectés se contrôlent le mieux via une application ?', acceptedAnswer: { '@type': 'Answer', text: 'Les appareils avec une API locale documentée — les appareils Zigbee, Z-Wave et Matter associés via Home Assistant obtiennent tous un contrôle par application sans faire transiter les données par un cloud du fabricant.' } },
         { '@type': 'Question', name: 'Combien coûtent les appareils à capacité locale par rapport aux appareils tout-cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Les appareils à capacité locale coûtent généralement autant ou moins à l\'achat. La vraie économie apparaît avec le temps : les appareils tout-cloud ajoutent souvent des frais d\'abonnement mensuels, alors que les appareils locaux n\'entraînent aucun coût récurrent.' } },
-        { '@type': 'Question', name: 'Mes données sont-elles plus sûres avec des appareils à capacité locale qu\'avec des appareils tout-cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Les appareils à capacité locale associés à un hub local conservent enregistrements, images et routines sur votre propre réseau. Les appareils tout-cloud font transiter ces données par le cloud du fournisseur.' } },
+        { '@type': 'Question', name: 'Mes données sont-elles plus sûres avec des appareils à capacité locale qu\'avec des appareils tout-cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'En général oui, avec des réserves. Les appareils à capacité locale associés à un hub local peuvent conserver enregistrements, images et routines sur votre propre réseau pour les fonctions de base, mais certains contactent les serveurs du fabricant pour des mises à jour ou des fonctions cloud optionnelles. Les appareils tout-cloud font transiter ces données par le cloud du fournisseur.' } },
         { '@type': 'Question', name: 'Les appareils à capacité locale fonctionnent-ils avec HomeKit, Google Home et Amazon Alexa ?', acceptedAnswer: { '@type': 'Answer', text: 'La plupart, oui. Les appareils certifiés Matter fonctionnent nativement avec les trois. Les appareils Zigbee et Z-Wave se connectent via Home Assistant, qui peut les exposer à HomeKit, Google Home ou Alexa tout en gardant le contrôle local.' } },
         { '@type': 'Question', name: 'Matter est-il compatible avec mes appareils Zigbee ou Z-Wave existants ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Matter fonctionne aux côtés de Zigbee et Z-Wave plutôt que de les remplacer — un hub comme Home Assistant peut contrôler les trois protocoles en même temps.' } },
         { '@type': 'Question', name: 'Existe-t-il des moyens économiques d\'ajouter des fonctions connectées à une maison existante ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — les ampoules, prises et capteurs Zigbee sont le point d\'entrée le moins cher et ne nécessitent aucun câblage. Commencez avec un hub et un dongle Zigbee, puis ajoutez une poignée d\'appareils dans une pièce avant d\'étendre.' } },
-        { '@type': 'Question', name: 'Est-il difficile pour un débutant complet de mettre en place une maison connectée local-first ?', acceptedAnswer: { '@type': 'Answer', text: 'Configurer un seul hub local et une poignée d\'appareils Zigbee prend moins d\'une heure pour la plupart des débutants. Construire un système complet multi-pièces est un projet de plusieurs week-ends, mais les appareils peuvent être ajoutés progressivement.' } },
+        { '@type': 'Question', name: 'Est-il difficile pour un débutant complet de mettre en place une maison connectée local-first ?', acceptedAnswer: { '@type': 'Answer', text: 'Configurer un seul hub local et une poignée d\'appareils Zigbee prend souvent environ une heure ou moins, selon l\'expérience. Construire un système complet multi-pièces est un projet de plusieurs week-ends, mais les appareils peuvent être ajoutés progressivement.' } },
       ],
     },
   },
@@ -2761,20 +2767,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: '2026年 最適なスマートホーム機器：ローカルファースト購入ガイド',
-    seoTitle: 'スマートホーム機器2026年版：ローカルファースト購入ガイド',
+    seoTitle: '人感センサーおすすめ2026｜スマートホーム機器ガイド',
     intro:
-      '2026年の最適なスマートホーム機器は、ハブ、Zigbee/Thread コーディネーター、照明、ロック、センサー、カメラ、プラグに及びます——そして最も重要な判断は、最初にアーキテクチャを選ぶことです：ローカルファースト、クラウドファースト、あるいはハイブリッド。本ガイドはカテゴリーごとに具体的なおすすめ製品を提示し（2026年8月25日確認）、実際の価格を伴うスターターキットと本格キット、「買うべきでない製品」リスト、そして欲しいものから買うべきものへ導く決定フローを提供します。',
+      '2026年の最適なスマートホーム機器は、ハブ、Zigbee/Thread コーディネーター、照明、ロック、センサー、カメラ、プラグに及びます——そして最も重要な判断は、最初にアーキテクチャを選ぶことです：ローカルファースト、クラウドファースト、あるいはハイブリッド。本ガイドはカテゴリーごとに具体的なおすすめ製品を提示し（最終更新時点で確認）、実際の価格を伴うスターターキットと本格キット、「買うべきでない製品」リスト、そして欲しいものから買うべきものへ導く決定フローを提供します。',
     metaDescription:
-      '2026年の最適なスマートホーム機器：ハブ・Zigbee/Thread・照明・ロック・センサー・カメラ・プラグをカテゴリー別に一製品ずつ厳選。実際の価格（確認済み）、スターターキット、決定フロー付き。',
+      'ローカル運用のスマートホームに向く人感センサーは、照明連動のAqara P1（¥3,480〜3,920）と在室検知のAqara FP2。ハブ・ロック・カメラの推奨も実際の価格つきで紹介。',
     twitterDescription:
-      '2026年のスマートホーム機器をカテゴリー別に厳選：ハブ、Zigbee/Thread コーディネーター、照明、ロック、センサー、カメラ、プラグ。実際の価格、スターター＋本格キット、決定フロー付き。',
+      '2026年の人感センサーおすすめ（Aqara P1・Aqara FP2）に加え、ハブ、Zigbee/Thread、照明、ロック、カメラをカテゴリー別に紹介。実際の価格、キット、決定フロー付き。',
     readTime: '12分で読める',
     educationalLevel: 'Intermediate',
     audience: 'ローカル対応のスマートホームを組み立てる購入者',
@@ -2789,7 +2795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'プライバシー スマートホーム機器',
     ],
     leadAnswerBlock:
-      '**まずアーキテクチャを選び、その後カテゴリーごとに購入しましょう：ハブには Home Assistant Green（約¥33,000〜38,000相当、$199/€179を基準とした推定値）、Zigbee/Thread コーディネーターには[Home Assistant Connect ZBT-2](/ja/smart-home/best-zigbee-thread-dongles-2027)（約¥7,500〜8,500相当、日本での正式販売は未確認）のような機器、Zigbee のセンサーとプラグ、そしてクラウドサブスクの代わりに[Frigate](/ja/smart-home/local-ai-security-camera)と組み合わせるローカル RTSP カメラを。** PromptQuorum のおすすめは、現在の仕様と価格（2026年8月25日確認）に基づくものであり、すべての製品を実機でハンズオンテストしたものではありません：本格的な構築にはローカルファーストまたはハイブリッドを、セットアップの手軽さがコストやプライバシーより重要な場合にのみクラウドファーストを選んでください。→ [Home Assistant Green の現在価格を確認](https://www.home-assistant.io/green/)',
+      '**まずアーキテクチャを選び、その後カテゴリーごとに購入しましょう：ハブには Home Assistant Green（$199/€179を基準とした推定）、Zigbee/Thread コーディネーターには[Home Assistant Connect ZBT-2](/ja/smart-home/best-zigbee-thread-dongles-2027)（日本での正式販売は未確認）のような機器、Zigbee センサー、[Frigate](/ja/smart-home/local-ai-security-camera)と組むローカル RTSP カメラを。** PromptQuorum のおすすめは仕様と価格（最終更新時点で確認）に基づくもので、実機ハンズオンテストではありません：本格的な構築にはローカルファーストかハイブリッドを。選んでください。→ [Home Assistant Green の現在価格を確認](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       ja: {
         question: '2026年に買うべき最適なスマートホーム機器は？',
@@ -2827,15 +2833,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2026年の最適なスマートホーム機器はローカル対応品——Zigbee、Z-Wave、Matter、またはローカル Wi-Fi——であり、Home Assistant のようなローカルハブでまとめ、カテゴリーごとに明確な一製品を選びます。' },
-      { type: 'plain-terms', content: 'スマートホーム機器を買うとき最も重要な問いはブランドではなく、その機器がローカルで動作できるかどうかです。Zigbee、Z-Wave、Matter を話す機器、あるいはローカル API を備える機器は、クラウドなしでも動き続け、データを家に保ちます。クラウド専用機器は便利ですが、あなたを縛り、月額料金が加算されることがあります。' },
+      { type: 'one-sentence', content: '2026年の堅実なスマートホームはローカル対応機器——Zigbee、Z-Wave、Matter、またはローカル Wi-Fi——で構成し、Home Assistant のようなローカルハブでまとめ、カテゴリーごとに明確な一製品を選びます。' },
+      { type: 'plain-terms', content: 'スマートホーム機器を買うとき最も重要な問いはブランドではなく、その機器がローカルで動作できるかどうかです。Zigbee、Z-Wave、Matter を話す機器、あるいはローカル API を備える機器は、クラウドなしでも動き続け、基本機能ではデータを家に保てます。クラウド専用機器は便利ですが、あなたを縛り、月額料金が加算されることがあります。' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'クイックピック——カテゴリーごとの一押し製品',
         highlight: true,
-        content: '読む時間がない方へ——各カテゴリーで PromptQuorum が実際に買う製品はこちらです（2026年8月25日確認）。',
+        content: '読む時間がない方へ——各カテゴリーで PromptQuorum が購入するとしたら選ぶ製品はこちらです（最終更新時点で確認。実機テストは行っていません）。',
         columns: ['カテゴリー', 'おすすめ', '最適な用途'],
         rows: [
           { 'カテゴリー': '🧠 ハブ', 'おすすめ': 'Home Assistant Green', '最適な用途': '最も手軽なローカルセットアップ、サーバー構築不要' },
@@ -2865,10 +2871,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点まとめ',
         isTldr: true,
         items: [
-          'まずアーキテクチャを選ぶ：ローカルファースト（Home Assistant＋Zigbee/Z-Wave/Matter）、クラウドファースト（Alexa/Google/ベンダーハブ）、またはハイブリッド',
+          'まずアーキテクチャを選ぶ：ローカルファースト、クラウドファースト、またはハイブリッド',
           'ハブ：最も手軽なローカルセットアップには Home Assistant Green（約¥33,000〜38,000相当）；ローカル AI も欲しいならミニPC',
           'Zigbee/Thread：[Home Assistant Connect ZBT-2](/ja/smart-home/best-zigbee-thread-dongles-2027)（約¥7,500〜8,500相当）または SONOFF ZBDongle-E（約¥3,000〜4,500相当、予算重視）',
-          'カメラ：ローカル RTSP カメラ＋[Frigate](/ja/smart-home/local-ai-security-camera)ならサブスクを避け、映像を家に保てる',
+          'カメラ：ローカル RTSP カメラ＋[Frigate](/ja/smart-home/local-ai-security-camera)ならサブスクを避け、基本機能では映像を家に保てる',
           'ロック：AI 機能よりローカルの信頼性（Z-Wave/Matter）を優先——ドアロックの唯一の権限を LLM に委ねてはいけない',
           'ローカル機器は購入時にやや高くても、サブスクを含めた3〜5年トータルではクラウド機器より安くなることが多い',
         ],
@@ -2888,12 +2894,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: '選び方：まずローカル対応を優先',
         content:
-          '**選定ルールはまずローカル対応：機器はベンダーのクラウドに依存せず、ローカルハブ経由で動作しなければなりません。** ローカル対応機器はプライバシーを守り、オフラインでも動き続け、サブスクを避けます。本ページは PromptQuorum がすべての製品を実機テストして作成したものではありません——選定は現在の仕様、文書化されたローカル API／プロトコル対応、独立系レビューに基づいており、2026年8月25日に確認しています。',
+          '**選定ルールはまずローカル対応：機器はベンダーのクラウドに依存せず、ローカルハブ経由で動作しなければなりません。** ローカル対応機器はプライバシーを守り、オフラインでも動き続け、サブスクを避けます。本ページは PromptQuorum がすべての製品を実機テストして作成したものではありません——選定は現在の仕様、文書化されたローカル API／プロトコル対応、独立系レビューに基づいており、最終更新時点で確認しています。',
         items: [
           '**ローカルプロトコルまたは API：** Zigbee、Z-Wave、Matter、あるいは文書化されたローカル Wi-Fi API。',
           '**必須のクラウドアカウントなし：** 機器はローカルハブ経由で機能すること。',
           '**コア機能にサブスクなし：** 録画や自動化に料金を要しないこと。',
-          '**現在の価格：** 以下の価格はすべて2026年8月25日にメーカーまたは大手小売店のリスティングと照合したものです——購入前には必ず最新価格を確認してください。',
+          '**現在の価格：** 以下の価格の多くは最終更新時点でメーカーまたは大手小売店のリスティングと照合したものですが、「相当」「推定」と記した金額は換算値で未確認です——購入前には必ず最新価格を確認してください。',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-ja.svg',
         imageCaption: 'ローカル対応機器（Zigbee、Z-Wave、Matter、ローカル API）とクラウド専用機器を、サブスクやオフライン時の信頼性を含む5つの観点で比較。',
@@ -2904,7 +2910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 おすすめ：Home Assistant Green（約¥33,000〜38,000相当）。** 自分でサーバーを構築せずに本当にローカルファーストなスマートホームを実現したいなら、Green が最も手軽な出発点です——（コーディネーターを追加すれば）Zigbee、Z-Wave、Matter、Thread を話し、自動化、ダッシュボード、エネルギー監視を完全にオフラインで実行します。',
         items: [
-          '**価格についての注記：** Home Assistant Green の価格は、RAM／部品コストの上昇を受けて、当初の発売価格$99から2026年4月に$199/€179へ値上がりしました——古いレビューは今も$99という古い数字を引用していることがあるため、予算を組む前に知っておく価値があります。',
+          '**価格についての注記：** Home Assistant Green の価格は現在$199/€179です（[メーカーページ](https://www.home-assistant.io/green/)）。当初の発売価格は$99でした——古いレビューは今も$99という古い数字を引用していることがあるため、予算を組む前に知っておく価値があります。',
           '**最適な人：** 自分でサーバーを構築・保守せずにローカル制御を手に入れたい初心者。',
           '**アップグレード経路：** 後からローカル LLM、Frigate のカメラ AI、多数のカメラ、Docker コンテナ、データベースが欲しくなったら、Home Assistant をミニPCに移行しましょう——下記の[最適なミニPC](#mini-pc)セクションを参照。',
           'それらのプロトコル用に、Zigbee コーディネーターと、別途 Z-Wave コントローラー（USB スティック）を追加しましょう——[最適な Zigbee & Thread コーディネーター](#zigbee-thread)を参照。',
@@ -2956,7 +2962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 プレミアムベスト：Philips Hue（カラー電球1個あたり約¥7,000〜9,000相当）。** 信頼性を重視し、成熟したエコシステムと幅広い製品ラインナップを求め、より高い価格を気にしないなら選びましょう。',
           '**🥇 予算重視ベスト：IKEA TRÅDFRI（¥899〜1,899）。** 価格を重視し、シンプルな Zigbee 制御で十分、Home Assistant と統合するなら選びましょう——1個あたりの価格は Hue より大幅に安いです。',
-          '既存の照明器具を制御する壁スイッチは、スマート電球単体よりしばしば信頼でき、「誰かが物理スイッチを切ってしまった」という失敗モードを避けられます。',
+          '既存の照明器具を制御する壁スイッチは、スマート電球単体よりしばしば信頼でき（設置は屋内配線工事を伴うため、有資格の電気工事士に依頼してください）、「誰かが物理スイッチを切ってしまった」という失敗モードを避けられます。',
           '**推奨しないもの：** 基本操作にクラウドアクセスを要する電球、ベンダーがサーバーを停止すると使えなくなる電球、基本的な自動化にサブスクを要する電球。',
         ],
         affiliateLinks: [
@@ -3009,6 +3015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ローカルカメラを推奨する理由：** クラウドカメラは、自分のハードウェアで一度支払えば済むことに毎月の継続コストを発生させます。ローカルアーキテクチャは：カメラ→ローカルネットワーク→Frigate→ローカル AI 検出→Home Assistant であり、基本セットアップにクラウド AI サブスクは不要です。',
           'RTSP と PoE への対応はブランドより重要です——文書化された RTSP 出力を備え、クラウドゲートを強制しないカメラであれば、Frigate と連携できます。',
           '完全なセットアップガイド：[Frigate によるローカル AI セキュリティカメラ](/ja/smart-home/local-ai-security-camera)。',
+          '**プライバシーに関する注意：** 人物を録画するカメラは、個人情報保護に関する規則（EU では GDPR など）の対象になる場合があります。カメラは自分の敷地のみに向け、隣家や公共の場所が映らないようにし、来訪者や同居人に録画していることを知らせ、録画サーバーは強力なパスワードと更新で保護してください。これは一般的な情報であり、法的助言ではありません。',
         ],
         affiliateLinks: [
           { label: 'Reolink の現在価格を確認 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '約¥15,000〜20,000相当' },
@@ -3033,7 +3040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'ローカルスマートホーム スターターキット',
         content:
-          '**予算目安：合計で約¥53,000〜69,000相当（2026年8月25日確認）。ローカルハブ、Zigbee コーディネーター、そして一部屋分の少数のローカル機器から始め、その後拡張しましょう。**',
+          '**予算目安：合計で約¥53,000〜69,000相当（最終更新時点で確認）。ローカルハブ、Zigbee コーディネーター、そして一部屋分の少数のローカル機器から始め、その後拡張しましょう。**',
         columns: ['カテゴリー', '機器', '価格目安'],
         rows: [
           { 'カテゴリー': 'ハブ', '機器': 'Home Assistant Green', '価格目安': '約¥33,000〜38,000相当' },
@@ -3043,7 +3050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'カテゴリー': 'プラグ', '機器': 'Zigbee スマートプラグ2個', '価格目安': '約¥4,000〜6,000相当' },
         ],
         items: [
-          'これで、部屋ごとに拡張できるプライベートで信頼できる基盤が手に入ります——ここに挙げたすべての機器はペアリング後オフラインで動作し、いずれもサブスクを必要としません。',
+          'これで、部屋ごとに拡張できるプライベートで信頼できる基盤が手に入ります——ここに挙げたすべての機器のコア機能はペアリング後オフラインで動作し、サブスクを必要としません（オプションのクラウド機能は製品ごとに確認してください）。',
         ],
         affiliateLinks: [
           { label: 'このスターターキットを組む → Home Assistant Green の価格を確認', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '約¥33,000〜38,000相当' },
@@ -3139,11 +3146,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '家全体をスマートホーム機器で揃えるなら最適なプロバイダーは？', a: 'ローカルファーストのセットアップには単一の「プロバイダー」は存在しません——それがポイントです。Home Assistant がハブとなり、1社のエコシステムや価格表に縛られる代わりに、任意のブランド（Aqara、SONOFF、Philips Hue、IKEA、Reolink など）の Zigbee/Z-Wave/Matter 機器を自由に組み合わせられます。' },
           { q: 'ネットワーク接続された家庭内機器のうち、アプリで制御するのに最適なのは？', a: '文書化されたローカル API を備える機器です——Home Assistant 経由でペアリングされた Zigbee、Z-Wave、Matter の機器はすべて、データをベンダーのクラウドに送ることなく（Home Assistant アプリで）アプリ制御を得られます。クラウド専用機器もアプリ制御を提供しますが、ベンダー自身のアプリとサーバー経由になります。' },
           { q: 'ローカル対応機器はクラウド専用機器と比べてどのくらいの費用がかかりますか？', a: 'ローカル対応機器（Zigbee、Z-Wave、Matter）は、購入時にはクラウド専用の同等品と同程度か、それより安いことが多いです。違いはハードウェアの品質ではなくプロトコル対応にあるためです。本当の節約効果は時間とともに現れます——クラウド専用のカメラやハブは録画や高度な自動化に月額サブスクを課すことが多い一方、ローカルハブとローカル機器は初期購入後に継続的な費用が発生しません。' },
-          { q: 'ローカル対応機器はクラウド専用機器よりデータが安全ですか？', a: 'はい。ローカルハブに接続されたローカル対応機器は、音声録音、カメラ映像、自動化ルーチンを自宅のネットワーク内に保ち、メーカーのサーバーにデータを送信しません。クラウド専用機器は同じデータをベンダーのクラウド経由で送るため、そのクラウドの保持ポリシー、漏洩リスク、利用規約の変更の影響を受けます。' },
+          { q: 'ローカル対応機器はクラウド専用機器よりデータが安全ですか？', a: 'おおむね「はい」ですが、条件があります。ローカルハブに接続されたローカル対応機器は、基本機能については音声録音、カメラ映像、自動化ルーチンを自宅のネットワーク内に保てるため、その分についてメーカーのサーバーにデータは送信されません。ただし、一部の機器はファームウェア更新やオプションのクラウド機能のためにメーカーのサーバーへ接続するため、機器ごとの設定を確認してください。クラウド専用機器は同じデータをベンダーのクラウド経由で送るため、そのクラウドの保持ポリシー、漏洩リスク、利用規約の変更の影響を受けます。また、ローカル保存では、ハブの保護と更新の責任は利用者自身にあります。' },
           { q: 'ローカル対応機器は HomeKit、Google Home、Amazon Alexa と連携しますか？', a: 'たいてい連携します。Matter 認証機器は、ローカルハブと組み合わせて HomeKit、Google Home、Alexa とネイティブに動作します。Zigbee と Z-Wave の機器は Home Assistant 経由で接続され、Home Assistant がブリッジとして HomeKit、Google Home、Alexa に公開できるため、これらの音声アシスタントを使いたい場合もローカル制御を維持したまま利用できます。' },
           { q: 'Matter は既存の Zigbee や Z-Wave 機器と互換性がありますか？', a: 'Matter は Zigbee や Z-Wave を置き換えるのではなく、それらと並行して動作します——Home Assistant のようなハブは Matter、Zigbee、Z-Wave の機器を同時に制御できます。Matter 機器を追加するために、動作中の Zigbee や Z-Wave 機器を置き換える必要はありません。Thread ボーダールーターが必要になるのは、特に Matter-over-Thread 機器の場合のみです。' },
           { q: '既存の住宅にスマートホーム機能を追加する予算に優しい方法はありますか？', a: 'あります——Zigbee の電球、プラグ、センサーが最も安価な入り口で、配線工事は不要です。約¥33,000〜38,000相当のハブと約¥3,000〜4,500相当の Zigbee ドングルから始め、一部屋分の数個の機器（1個あたり約¥2,000〜4,000程度）を追加してから拡張しましょう——正確な費用は上記のスターターキット表を参照してください。' },
-          { q: 'まったくの初心者がローカルファーストのスマートホームを構築するのはどのくらい難しいですか？', a: '単一のローカルハブ（例：Home Assistant Green）と少数の Zigbee 機器のセットアップは、多くの初心者にとって1時間もかかりません。セットアップウィザードが Web インターフェース経由でペアリングを処理するためです。カメラ、ロック、カスタム自動化を含む本格的な複数部屋のシステムを構築するのは数週末にわたるプロジェクトですが、自分のペースで機器を段階的に追加できます。' },
+          { q: 'まったくの初心者がローカルファーストのスマートホームを構築するのはどのくらい難しいですか？', a: '単一のローカルハブ（例：Home Assistant Green）と少数の Zigbee 機器のセットアップは、経験によりますが、1時間前後で済むことが多いです。セットアップウィザードが Web インターフェース経由でペアリングを処理するためです。カメラ、ロック、カスタム自動化を含む本格的な複数部屋のシステムを構築するのは数週末にわたるプロジェクトですが、自分のペースで機器を段階的に追加できます。' },
         ],
       },
       relatedReading: {
@@ -3166,7 +3173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026年 最適なスマートホーム機器：ローカルファースト購入ガイド',
-      description: '2026年のスマートホーム機器をカテゴリー別に徹底比較——ハブ・Zigbee/Thread・照明・ロック・センサー・カメラ・プラグ。カテゴリーごとに一製品を厳選し、実際の価格を2026年8月25日に確認。',
+      description: '2026年のスマートホーム機器をカテゴリー別に徹底比較——ハブ・Zigbee/Thread・照明・ロック・センサー・カメラ・プラグ。カテゴリーごとに一製品を厳選し、実際の価格を最終更新時点で確認。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-smart-home-devices-2026',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -3190,11 +3197,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '家全体をスマートホーム機器で揃えるなら最適なプロバイダーは？', acceptedAnswer: { '@type': 'Answer', text: 'ローカルファーストのセットアップには単一の「プロバイダー」は存在しません——Home Assistant がハブとなり、1社のエコシステムに縛られる代わりに、任意のブランドの Zigbee/Z-Wave/Matter 機器を自由に組み合わせられます。' } },
         { '@type': 'Question', name: 'ネットワーク接続された家庭内機器のうち、アプリで制御するのに最適なのは？', acceptedAnswer: { '@type': 'Answer', text: '文書化されたローカル API を備える機器——Home Assistant 経由でペアリングされた Zigbee、Z-Wave、Matter の機器はすべて、ベンダーのクラウドを経由せずにアプリ制御を得られます。' } },
         { '@type': 'Question', name: 'ローカル対応機器はクラウド専用機器と比べてどのくらいの費用がかかりますか？', acceptedAnswer: { '@type': 'Answer', text: 'ローカル対応機器は購入時にクラウド専用の同等品と同程度か、それより安いことが多いです。本当の節約効果は時間とともに現れます。クラウド専用機器は月額サブスクを課すことが多い一方、ローカル機器は継続費用がかかりません。' } },
-        { '@type': 'Question', name: 'ローカル対応機器はクラウド専用機器よりデータが安全ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ローカルハブに接続されたローカル対応機器は、音声録音・映像・ルーチンを自宅のネットワーク内に保ちます。クラウド専用機器は同じデータをベンダーのクラウド経由で送ります。' } },
+        { '@type': 'Question', name: 'ローカル対応機器はクラウド専用機器よりデータが安全ですか？', acceptedAnswer: { '@type': 'Answer', text: 'おおむね「はい」ですが、条件があります。ローカル対応機器は、基本機能については音声録音・映像・ルーチンを自宅のネットワーク内に保てますが、一部の機器はファームウェア更新やオプションのクラウド機能のためにメーカーのサーバーへ接続します。クラウド専用機器は同じデータをベンダーのクラウド経由で送ります。' } },
         { '@type': 'Question', name: 'ローカル対応機器は HomeKit、Google Home、Amazon Alexa と連携しますか？', acceptedAnswer: { '@type': 'Answer', text: 'たいてい連携します。Matter 認証機器は3つすべてとネイティブに動作します。Zigbee と Z-Wave の機器は Home Assistant 経由で接続され、ローカル制御を維持したまま HomeKit、Google Home、Alexa に公開できます。' } },
         { '@type': 'Question', name: 'Matter は既存の Zigbee や Z-Wave 機器と互換性がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Matter は Zigbee や Z-Wave を置き換えるのではなく並行して動作します——Home Assistant のようなハブは3つのプロトコルを同時に制御できます。' } },
         { '@type': 'Question', name: '既存の住宅にスマートホーム機能を追加する予算に優しい方法はありますか？', acceptedAnswer: { '@type': 'Answer', text: 'あります——Zigbee の電球、プラグ、センサーが最も安価な入り口で、配線工事は不要です。ハブと Zigbee ドングルから始め、一部屋分の数個の機器を追加してから拡張しましょう。' } },
-        { '@type': 'Question', name: 'まったくの初心者がローカルファーストのスマートホームを構築するのはどのくらい難しいですか？', acceptedAnswer: { '@type': 'Answer', text: '単一のローカルハブと少数の Zigbee 機器のセットアップは、多くの初心者にとって1時間もかかりません。本格的な複数部屋のシステムは数週末にわたるプロジェクトですが、機器は段階的に追加できます。' } },
+        { '@type': 'Question', name: 'まったくの初心者がローカルファーストのスマートホームを構築するのはどのくらい難しいですか？', acceptedAnswer: { '@type': 'Answer', text: '単一のローカルハブと少数の Zigbee 機器のセットアップは、経験によりますが、1時間前後で済むことが多いです。本格的な複数部屋のシステムは数週末にわたるプロジェクトですが、機器は段階的に追加できます。' } },
       ],
     },
   },
@@ -3205,20 +3212,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-pt.webp',
     affiliateDisclosure: true,
     title: 'Melhores Dispositivos de Casa Inteligente 2026: Guia Local-First',
-    seoTitle: 'Melhores Dispositivos Casa Inteligente 2026: Guia',
+    seoTitle: 'Melhor sensor de movimento 2026 e casa inteligente local',
     intro:
-      'Os melhores dispositivos de casa inteligente em 2026 abrangem um hub, um coordenador Zigbee/Thread, iluminação, fechaduras, sensores, câmeras e tomadas — e a decisão de maior impacto é escolher sua arquitetura primeiro: local-first, cloud-first ou híbrida. Este guia traz uma escolha específica por categoria (conferida em 25 de agosto de 2026), um kit inicial e um kit avançado com preços reais, uma lista de "o que não comprar" e uma árvore de decisão que liga o que você quer ao que comprar.',
+      'Os melhores dispositivos de casa inteligente em 2026 abrangem um hub, um coordenador Zigbee/Thread, iluminação, fechaduras, sensores, câmeras e tomadas — e a decisão de maior impacto é escolher sua arquitetura primeiro: local-first, cloud-first ou híbrida. Este guia traz uma escolha específica por categoria (conferida na última atualização), um kit inicial e um kit avançado com preços reais, uma lista de "o que não comprar" e uma árvore de decisão que liga o que você quer ao que comprar.',
     metaDescription:
-      'Melhores dispositivos de casa inteligente 2026: hub, Zigbee/Thread, iluminação, fechaduras, sensores, câmeras, tomadas — uma escolha por categoria, preços reais (ago. 2026), kits e árvore de decisão.',
+      'Melhor sensor de movimento para casa inteligente local: Aqara P1 para luzes e Aqara FP2 para presença, mais hub, fechadura e câmera com preços reais.',
     twitterDescription:
-      'Melhores dispositivos de casa inteligente 2026, por categoria: hub, coordenador Zigbee/Thread, iluminação, fechaduras, sensores, câmeras, tomadas. Preços reais, kit inicial e avançado, árvore de decisão.',
+      'Melhor sensor de movimento 2026 para casa inteligente local (Aqara P1, Aqara FP2), mais hub, Zigbee/Thread, iluminação, fechaduras, câmeras. Preços reais, kits, árvore de decisão.',
     readTime: '12 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores montando uma casa inteligente com capacidade local',
@@ -3232,7 +3239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dispositivos casa inteligente privacidade',
     ],
     leadAnswerBlock:
-      '**Escolha sua arquitetura primeiro e depois compre por categoria: Home Assistant Green (R$ 1.900–2.200) como hub, um coordenador Zigbee/Thread como o [Home Assistant Connect ZBT-2](/pt/smart-home/best-zigbee-thread-dongles-2027) ($49/€45), sensores e tomadas Zigbee, e câmeras RTSP locais com [Frigate](/pt/smart-home/local-ai-security-camera) em vez de uma assinatura na nuvem.** Recomendação da PromptQuorum, baseada em especificações e preços atuais (conferidos em 25 de agosto de 2026), não em um teste prático de bancada de cada produto: local-first ou híbrida para uma montagem séria, cloud-first apenas se a facilidade de configuração importar mais para você do que o custo de longo prazo e a privacidade. → [Veja o preço atual do Home Assistant Green](https://www.home-assistant.io/green/)',
+      '**Escolha a arquitetura e compre por categoria: Home Assistant Green (R$ 1.900–2.200) como hub, coordenador Zigbee/Thread como o [Home Assistant Connect ZBT-2](/pt/smart-home/best-zigbee-thread-dongles-2027) e câmeras locais com [Frigate](/pt/smart-home/local-ai-security-camera).** Preços conferidos na última atualização, sem teste prático de bancada. Local-first ou híbrida para montagens sérias. → [Preço](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       pt: {
         question: 'Quais são os melhores dispositivos de casa inteligente para comprar em 2026?',
@@ -3270,15 +3277,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Perguntas Frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Os melhores dispositivos de casa inteligente de 2026 são os com capacidade local — Zigbee, Z-Wave, Matter ou Wi-Fi local — unidos por um hub local como o Home Assistant, com uma escolha clara por categoria.' },
-      { type: 'plain-terms', content: 'Ao comprar equipamento de casa inteligente, a pergunta mais importante não é a marca — é se o dispositivo consegue rodar localmente. Dispositivos que falam Zigbee, Z-Wave ou Matter, ou que oferecem uma API local, continuam funcionando sem a nuvem e mantêm seus dados em casa. Dispositivos só-nuvem são cômodos, mas prendem você e podem somar mensalidades.' },
+      { type: 'one-sentence', content: 'Uma boa casa inteligente em 2026 é feita de dispositivos com capacidade local — Zigbee, Z-Wave, Matter ou Wi-Fi local — unidos por um hub local como o Home Assistant, com uma escolha clara por categoria.' },
+      { type: 'plain-terms', content: 'Ao comprar equipamento de casa inteligente, a pergunta mais importante não é a marca — é se o dispositivo consegue rodar localmente. Dispositivos que falam Zigbee, Z-Wave ou Matter, ou que oferecem uma API local, continuam funcionando sem a nuvem e podem manter seus dados em casa nas funções básicas. Dispositivos só-nuvem são cômodos, mas prendem você e podem somar mensalidades.' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: 'Escolhas Rápidas — Um Produto Por Categoria',
         highlight: true,
-        content: 'Pule a leitura — aqui está o produto específico que a PromptQuorum compraria em cada categoria, conferido em 25 de agosto de 2026.',
+        content: 'Pule a leitura — aqui está o produto específico que a PromptQuorum compraria em cada categoria, conferido na última atualização.',
         columns: ['Categoria', 'Nossa escolha', 'Melhor para'],
         rows: [
           { Categoria: '🧠 Hub', 'Nossa escolha': 'Home Assistant Green', 'Melhor para': 'Configuração local mais fácil, sem montar servidor' },
@@ -3311,7 +3318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Escolha sua arquitetura primeiro: local-first (Home Assistant + Zigbee/Z-Wave/Matter), cloud-first (Alexa/Google/hubs de fabricante) ou híbrida',
           'Hub: Home Assistant Green (R$ 1.900–2.200) para a configuração local mais fácil; um mini PC se você também quer IA local',
           'Zigbee/Thread: [Home Assistant Connect ZBT-2](/pt/smart-home/best-zigbee-thread-dongles-2027) ($49/€45) ou SONOFF ZBDongle-E (~$20–27, econômico)',
-          'Câmeras: câmeras RTSP locais + [Frigate](/pt/smart-home/local-ai-security-camera) evitam assinaturas e mantêm as gravações em casa',
+          'Câmeras: câmeras RTSP locais + [Frigate](/pt/smart-home/local-ai-security-camera) evitam assinaturas e podem manter as gravações em casa nas funções básicas',
           'Fechaduras: priorize a confiabilidade local (Z-Wave/Matter) acima de recursos de IA — nunca deixe um LLM ser a única autoridade sobre a fechadura da sua porta',
           'Um dispositivo local um pouco mais caro costuma sair mais barato que um dispositivo na nuvem em 3–5 anos, quando você conta as assinaturas',
         ],
@@ -3331,12 +3338,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: 'Como Escolhemos: Capacidade Local Primeiro',
         content:
-          '**A regra de seleção é capacidade local primeiro: um dispositivo precisa funcionar por meio de um hub local, sem depender da nuvem de um fabricante.** Dispositivos com capacidade local protegem a privacidade, continuam funcionando offline e evitam assinaturas. Esta página não foi construída com a PromptQuorum testando fisicamente cada produto — as escolhas se baseiam em especificações atuais, suporte documentado a API/protocolo local e análises independentes, conferidas em 25 de agosto de 2026.',
+          '**A regra de seleção é capacidade local primeiro: um dispositivo precisa funcionar por meio de um hub local, sem depender da nuvem de um fabricante.** Dispositivos com capacidade local protegem a privacidade, continuam funcionando offline e evitam assinaturas. Esta página não foi construída com a PromptQuorum testando fisicamente cada produto — as escolhas se baseiam em especificações atuais, suporte documentado a API/protocolo local e análises independentes, conferidas na última atualização.',
         items: [
           '**Protocolo ou API local:** Zigbee, Z-Wave, Matter ou uma API de Wi-Fi local documentada.',
           '**Sem conta na nuvem obrigatória:** o dispositivo precisa funcionar por meio de um hub local.',
           '**Sem assinatura para funções principais:** gravação ou automação não deveriam exigir uma taxa.',
-          '**Preço atual:** cada preço abaixo foi conferido em listagens de fabricantes ou grandes varejistas em 25 de agosto de 2026 — sempre confirme o preço ao vivo antes de comprar.',
+          '**Preço atual:** a maioria dos preços abaixo foi conferida em listagens de fabricantes ou grandes varejistas (os marcados como estimativa usam outra variante como referência) na última atualização — sempre confirme o preço ao vivo antes de comprar.',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-pt.svg',
         imageCaption: 'Dispositivos com capacidade local — Zigbee, Z-Wave, Matter ou uma API local — comparados a dispositivos só-nuvem em 5 fatores, incluindo assinaturas e confiabilidade offline.',
@@ -3347,7 +3354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 Nossa escolha: Home Assistant Green (R$ 1.900–2.200).** Se você quer uma casa inteligente genuinamente local-first sem montar um servidor você mesmo, o Green é o ponto de partida mais fácil — ele fala Zigbee (com um coordenador), Z-Wave, Matter e Thread, e roda automações, painéis e monitoramento de energia inteiramente offline.',
         items: [
-          '**Nota sobre o preço:** o preço internacional do Home Assistant Green subiu do lançamento original de $99 para $199/€179 em abril de 2026, puxado pelo aumento nos custos de RAM/componentes — vale saber antes de planejar o orçamento, já que análises antigas ainda citam o valor defasado de $99. No Brasil, com impostos de importação, o preço pesquisado em revendedores em 25 de agosto de 2026 fica em torno de R$ 1.900–2.200 — confirme o preço ao vivo antes de comprar, pois ele varia bastante por vendedor.',
+          '**Nota sobre o preço:** o preço internacional do Home Assistant Green hoje é $199/€179 (veja a [página do fabricante](https://www.home-assistant.io/green/)), contra os $99 do lançamento original — vale saber antes de planejar o orçamento, já que análises antigas ainda citam o valor defasado de $99. No Brasil, com impostos de importação, o preço pesquisado em revendedores na última atualização fica em torno de R$ 1.900–2.200 — confirme o preço ao vivo antes de comprar, pois ele varia bastante por vendedor.',
           '**Ideal para:** iniciantes que querem controle local sem construir ou manter um servidor eles mesmos.',
           '**Caminho de upgrade:** se depois você quiser LLMs locais, IA de câmera com Frigate, muitas câmeras, contêineres Docker ou um banco de dados, mude o Home Assistant para um mini PC — veja a seção [Melhor Mini PC](#mini-pc) abaixo.',
           'Adicione um coordenador Zigbee e, separadamente, um controlador Z-Wave (pen drives USB) para esses protocolos — veja [Melhor Coordenador Zigbee e Thread](#zigbee-thread).',
@@ -3399,7 +3406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 Melhor premium: Philips Hue (a partir de R$ 349 por lâmpada colorida, preço sugerido oficial).** Compre se confiabilidade importa, você quer um ecossistema maduro, uma linha de produtos ampla e não se importa em pagar mais.',
           '**🥇 Melhor econômico: IKEA TRÅDFRI.** Compre se o preço importa, controle Zigbee simples é suficiente, e você está integrando com o Home Assistant — bem mais barato por lâmpada do que a Hue.',
-          'Interruptores de parede que controlam luminárias existentes costumam ser mais confiáveis do que lâmpadas inteligentes sozinhas, e evitam o problema de "alguém desligou o interruptor físico".',
+          'Interruptores de parede que controlam luminárias existentes costumam ser mais confiáveis do que lâmpadas inteligentes sozinhas (a instalação envolve a rede elétrica e cabe a um eletricista qualificado), e evitam o problema de "alguém desligou o interruptor físico".',
           '**O que não recomendamos:** lâmpadas que exigem acesso à nuvem para operação básica, que ficam inúteis se o fabricante desligar os servidores, ou que precisam de assinatura para automação básica.',
         ],
         affiliateLinks: [
@@ -3437,7 +3444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Prefira fechaduras Z-Wave ou Matter com controle local, chave física de emergência, aviso de bateria fraca e operação offline. Fechaduras Z-Wave são a escolha local comprovada de longa data; fechaduras Matter são mais novas e ainda estão amadurecendo.',
           '**Posição da PromptQuorum: use IA para sugerir ações, nunca deixe um LLM se tornar a única autoridade que controla a fechadura da sua porta.** Mantenha as automações de fechadura determinísticas (um estado específico de sensor dispara uma ação específica), não roteadas pelo julgamento de um modelo.',
-          'Exemplo: Yale Assure Lock 2 com Z-Wave (~R$ 1.650–1.950, pesquisado em revendedores brasileiros em 25 de agosto de 2026 — variante Wi-Fi como referência de preço) — controle local confiável, sem dependência de nuvem para travar/destravar.',
+          'Exemplo: Yale Assure Lock 2 com Z-Wave (~R$ 1.650–1.950, pesquisado em revendedores brasileiros na última atualização — variante Wi-Fi como referência de preço) — controle local confiável, sem dependência de nuvem para travar/destravar.',
         ],
         affiliateLinks: [
           { label: 'Veja fechaduras inteligentes locais recomendadas →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~R$ 1.650–1.950' },
@@ -3452,6 +3459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Por que preferimos câmeras locais:** uma câmera na nuvem cria um custo mensal recorrente por algo que o seu próprio hardware pode fazer uma vez, pago. A arquitetura local é: câmera → rede local → Frigate → detecção por IA local → Home Assistant, sem exigir assinatura de IA na nuvem para a configuração básica.',
           'Suporte a RTSP e PoE importa mais do que a marca — qualquer câmera com saída RTSP documentada e sem bloqueio forçado de nuvem funciona com o Frigate.',
           'Guia completo de configuração: [Câmeras de Segurança com IA Local com Frigate](/pt/smart-home/local-ai-security-camera).',
+          '**Nota de privacidade:** câmeras que gravam pessoas podem estar sujeitas a regras de privacidade e proteção de dados (por exemplo, a LGPD no Brasil e o GDPR na UE). Aponte as câmeras só para a sua propriedade, evite vizinhos e áreas públicas, avise visitantes e moradores sobre a gravação e proteja o servidor de gravação com senhas fortes e atualizações. Informação geral, não aconselhamento jurídico.',
         ],
         affiliateLinks: [
           { label: 'Confira os preços atuais da Reolink →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~R$ 400–750' },
@@ -3476,7 +3484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: 'O Kit Inicial de Casa Inteligente Local',
         content:
-          '**Orçamento: aproximadamente R$ 2.400–3.100 no total (conferido em 25 de agosto de 2026). Comece com um hub local, um coordenador Zigbee e alguns dispositivos locais em um cômodo, e depois expanda.**',
+          '**Orçamento: aproximadamente R$ 2.400–3.100 no total (conferido na última atualização). Comece com um hub local, um coordenador Zigbee e alguns dispositivos locais em um cômodo, e depois expanda.**',
         columns: ['Categoria', 'Dispositivo', 'Preço aprox.'],
         rows: [
           { Categoria: 'Hub', Dispositivo: 'Home Assistant Green', 'Preço aprox.': 'R$ 1.900–2.200' },
@@ -3486,7 +3494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Categoria: 'Tomadas', Dispositivo: '2 tomadas inteligentes Zigbee', 'Preço aprox.': '~R$ 220–280' },
         ],
         items: [
-          'Isso dá uma base privada e confiável para você crescer cômodo por cômodo — todo dispositivo aqui funciona offline depois de pareado, e nenhum exige assinatura.',
+          'Isso dá uma base privada e confiável para você crescer cômodo por cômodo — as funções principais de cada dispositivo aqui funcionam offline depois de pareado e não exigem assinatura (confira os recursos opcionais de nuvem de cada produto).',
         ],
         affiliateLinks: [
           { label: 'Monte este kit inicial → confira o preço do Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'R$ 1.900–2.200' },
@@ -3582,11 +3590,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qual é o melhor fornecedor se eu quiser equipar a casa toda com dispositivos de casa inteligente?', a: 'Não existe um único "fornecedor" para uma configuração local-first — esse é o ponto. O Home Assistant é o hub, e você mistura dispositivos Zigbee/Z-Wave/Matter de qualquer marca (Aqara, SONOFF, Philips Hue, IKEA, Reolink etc.) em vez de ficar preso ao ecossistema e à lista de preços de um único fornecedor.' },
           { q: 'Quais dispositivos domésticos em rede são melhor controlados por um app?', a: 'Dispositivos com uma API local documentada — dispositivos Zigbee, Z-Wave e Matter pareados pelo Home Assistant recebem controle por app (o app do Home Assistant) sem rotear seus dados pela nuvem de um fabricante. Dispositivos só-nuvem também oferecem controle por app, mas pelo app e pelos servidores do próprio fabricante.' },
           { q: 'Quanto custam os dispositivos com capacidade local em comparação aos dispositivos só-nuvem?', a: 'Dispositivos com capacidade local (Zigbee, Z-Wave, Matter) costumam custar o mesmo ou menos que equivalentes só-nuvem na compra, já que a diferença está no suporte ao protocolo, não na qualidade do hardware. A economia real aparece com o tempo: câmeras e hubs só-nuvem costumam somar mensalidades para gravação ou automação avançada, enquanto um hub local e dispositivos locais não têm custo recorrente depois da compra inicial.' },
-          { q: 'Meus dados ficam mais seguros com dispositivos com capacidade local do que com dispositivos só-nuvem?', a: 'Sim. Dispositivos com capacidade local pareados a um hub local mantêm gravações de voz, imagens de câmera e rotinas de automação na sua própria rede, sem enviar dados a um servidor de fabricante. Dispositivos só-nuvem levam esses mesmos dados pela nuvem do fornecedor, onde ficam sujeitos à política de retenção, ao risco de vazamento e a mudanças nos termos de serviço dessa empresa.' },
+          { q: 'Meus dados ficam mais seguros com dispositivos com capacidade local do que com dispositivos só-nuvem?', a: 'Em geral sim, com ressalvas. Dispositivos com capacidade local pareados a um hub local podem manter gravações de voz, imagens de câmera e rotinas de automação na sua própria rede nas funções básicas, sem enviar dados a um servidor de fabricante. Alguns dispositivos ainda contatam servidores do fabricante para atualizações de firmware ou recursos opcionais na nuvem, então confira as configurações de cada um. Dispositivos só-nuvem levam esses mesmos dados pela nuvem do fornecedor, onde ficam sujeitos à política de retenção, ao risco de vazamento e a mudanças nos termos de serviço dessa empresa. O armazenamento local também torna você responsável por proteger e atualizar seu próprio hub.' },
           { q: 'Dispositivos com capacidade local funcionam com HomeKit, Google Home e Amazon Alexa?', a: 'A maioria funciona. Dispositivos certificados Matter funcionam nativamente com HomeKit, Google Home e Alexa junto com um hub local. Dispositivos Zigbee e Z-Wave se conectam pelo Home Assistant, que pode então expô-los à HomeKit, Google Home ou Alexa como ponte — assim você mantém o controle local e ainda pode usar esses assistentes de voz se quiser.' },
           { q: 'O Matter é compatível com meus dispositivos Zigbee ou Z-Wave existentes?', a: 'O Matter roda junto com Zigbee e Z-Wave em vez de substituí-los — um hub como o Home Assistant pode controlar dispositivos Matter, Zigbee e Z-Wave ao mesmo tempo. Você não precisa substituir hardware Zigbee ou Z-Wave que já funciona para adicionar dispositivos Matter; um Thread border router só é necessário especificamente para dispositivos Matter-sobre-Thread.' },
           { q: 'Existem formas econômicas de adicionar recursos de casa inteligente a uma casa já construída?', a: 'Sim — lâmpadas, tomadas e sensores Zigbee são o ponto de entrada mais barato e não exigem refazer a fiação. Comece com um hub de R$ 1.900–2.200 e um dongle Zigbee de ~$20–27, depois adicione alguns dispositivos em um cômodo antes de expandir — veja a tabela do kit inicial acima para custos exatos.' },
-          { q: 'Quão difícil é para um iniciante completo montar uma casa inteligente local-first?', a: 'Configurar um único hub local (por exemplo, o Home Assistant Green) e alguns dispositivos Zigbee leva menos de uma hora para a maioria dos iniciantes, já que o assistente de configuração cuida do pareamento por uma interface web. Montar um sistema completo de vários cômodos, com câmeras, fechaduras e automações personalizadas, é um projeto de vários fins de semana, mas você pode adicionar dispositivos aos poucos, no seu ritmo.' },
+          { q: 'Quão difícil é para um iniciante completo montar uma casa inteligente local-first?', a: 'Configurar um único hub local (por exemplo, o Home Assistant Green) e alguns dispositivos Zigbee costuma levar cerca de uma hora ou menos, conforme a experiência, já que o assistente de configuração cuida do pareamento por uma interface web. Montar um sistema completo de vários cômodos, com câmeras, fechaduras e automações personalizadas, é um projeto de vários fins de semana, mas você pode adicionar dispositivos aos poucos, no seu ritmo.' },
         ],
       },
       relatedReading: {
@@ -3609,7 +3617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores Dispositivos de Casa Inteligente 2026: Guia Local-First',
-      description: 'Melhores dispositivos de casa inteligente 2026 por categoria — hub, Zigbee/Thread, iluminação, fechaduras, sensores, câmeras, tomadas — uma escolha por categoria com preços reais conferidos em 25 de agosto de 2026.',
+      description: 'Melhores dispositivos de casa inteligente 2026 por categoria — hub, Zigbee/Thread, iluminação, fechaduras, sensores, câmeras, tomadas — uma escolha por categoria com preços reais conferidos na última atualização.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-smart-home-devices-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -3633,11 +3641,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Qual é o melhor fornecedor se eu quiser equipar a casa toda com dispositivos de casa inteligente?', acceptedAnswer: { '@type': 'Answer', text: 'Não existe um único fornecedor para uma configuração local-first — o Home Assistant é o hub, e você mistura dispositivos Zigbee/Z-Wave/Matter de qualquer marca em vez de ficar preso ao ecossistema de um único fornecedor.' } },
         { '@type': 'Question', name: 'Quais dispositivos domésticos em rede são melhor controlados por um app?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos com uma API local documentada — dispositivos Zigbee, Z-Wave e Matter pareados pelo Home Assistant recebem controle por app sem rotear os dados pela nuvem de um fabricante.' } },
         { '@type': 'Question', name: 'Quanto custam os dispositivos com capacidade local em comparação aos dispositivos só-nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos com capacidade local costumam custar o mesmo ou menos na compra. A economia real aparece com o tempo: câmeras e hubs só-nuvem costumam somar mensalidades, enquanto dispositivos locais não têm custo recorrente.' } },
-        { '@type': 'Question', name: 'Meus dados ficam mais seguros com dispositivos com capacidade local do que com dispositivos só-nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Dispositivos com capacidade local pareados a um hub local mantêm gravações de voz, imagens de câmera e rotinas na sua própria rede. Dispositivos só-nuvem levam esses dados pela nuvem do fornecedor.' } },
+        { '@type': 'Question', name: 'Meus dados ficam mais seguros com dispositivos com capacidade local do que com dispositivos só-nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Em geral sim, com ressalvas. Dispositivos com capacidade local pareados a um hub local podem manter gravações de voz, imagens de câmera e rotinas na sua própria rede nas funções básicas, mas alguns contatam servidores do fabricante para atualizações ou recursos opcionais na nuvem. Dispositivos só-nuvem levam esses dados pela nuvem do fornecedor.' } },
         { '@type': 'Question', name: 'Dispositivos com capacidade local funcionam com HomeKit, Google Home e Amazon Alexa?', acceptedAnswer: { '@type': 'Answer', text: 'A maioria funciona. Dispositivos certificados Matter funcionam nativamente com os três. Dispositivos Zigbee e Z-Wave se conectam pelo Home Assistant, que pode conectá-los à HomeKit, Google Home ou Alexa mantendo o controle local.' } },
         { '@type': 'Question', name: 'O Matter é compatível com meus dispositivos Zigbee ou Z-Wave existentes?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Matter roda junto com Zigbee e Z-Wave em vez de substituí-los — um hub como o Home Assistant pode controlar os três protocolos ao mesmo tempo.' } },
         { '@type': 'Question', name: 'Existem formas econômicas de adicionar recursos de casa inteligente a uma casa já construída?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — lâmpadas, tomadas e sensores Zigbee são o ponto de entrada mais barato e não exigem refazer a fiação. Comece com um hub e um dongle Zigbee, depois adicione alguns dispositivos em um cômodo antes de expandir.' } },
-        { '@type': 'Question', name: 'Quão difícil é para um iniciante completo montar uma casa inteligente local-first?', acceptedAnswer: { '@type': 'Answer', text: 'Configurar um único hub local e alguns dispositivos Zigbee leva menos de uma hora para a maioria dos iniciantes. Montar um sistema completo de vários cômodos é um projeto de vários fins de semana, mas dispositivos podem ser adicionados aos poucos.' } },
+        { '@type': 'Question', name: 'Quão difícil é para um iniciante completo montar uma casa inteligente local-first?', acceptedAnswer: { '@type': 'Answer', text: 'Configurar um único hub local e alguns dispositivos Zigbee costuma levar cerca de uma hora ou menos, conforme a experiência. Montar um sistema completo de vários cômodos é um projeto de vários fins de semana, mas dispositivos podem ser adicionados aos poucos.' } },
       ],
     },
   },
@@ -3648,20 +3656,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-25',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-11-14',
     current_hardware_mentioned: ['Home Assistant Green', 'Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro', 'Home Assistant Connect ZBT-2', 'SONOFF ZBDongle-E', 'Philips Hue', 'IKEA TRÅDFRI', 'Aqara P1', 'Aqara FP2', 'SONOFF SNZB-04P', 'Reolink RLC-810A', 'Yale Assure Lock 2'],
     theme: 'Smart Home Foundations',
     heroImage: '/images/best-smart-home-devices-2026-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: '2026 年最佳智能家居设备：本地优先购买指南',
-    seoTitle: '2026年最佳智能家居设备：本地优先购买指南',
+    seoTitle: '2026年最佳人体传感器推荐与智能家居设备选购指南',
     intro:
-      '2026 年最佳智能家居设备涵盖中枢、Zigbee/Thread 协调器、照明、门锁、传感器、摄像头和插座——而杠杆最大的决定是先确定你的架构：本地优先、云端优先，还是混合方案。本指南为每个类别给出具体推荐（核实于 2026 年 8 月 25 日）、附真实价格的入门套件和进阶套件、一份"不该购买"的清单，以及一张把你想要的东西对应到该买什么的决策树。',
+      '2026 年最佳智能家居设备涵盖中枢、Zigbee/Thread 协调器、照明、门锁、传感器、摄像头和插座——而杠杆最大的决定是先确定你的架构：本地优先、云端优先，还是混合方案。本指南为每个类别给出具体推荐（核实于 上次更新时）、附真实价格的入门套件和进阶套件、一份"不该购买"的清单，以及一张把你想要的东西对应到该买什么的决策树。',
     metaDescription:
-      '2026年最佳智能家居设备：中枢、Zigbee/Thread、照明、门锁、传感器、摄像头、插座——每个类别一款推荐产品，真实价格（已核实），入门套件，决策树。',
+      '本地优先智能家居的人体传感器推荐：Aqara P1用于灯光联动，Aqara FP2用于静止人体存在检测，另附中枢、门锁、摄像头的真实价格推荐。',
     twitterDescription:
-      '2026年最佳智能家居设备，按类别分类：中枢、Zigbee/Thread 协调器、照明、门锁、传感器、摄像头、插座。真实价格、入门套件+进阶套件、决策树。',
+      '2026年最佳人体传感器推荐（Aqara P1、Aqara FP2），另含中枢、Zigbee/Thread、照明、门锁、摄像头。真实价格、套件、决策树。',
     readTime: '阅读约12分钟',
     educationalLevel: 'Intermediate',
     audience: '正在搭建支持本地能力的智能家居的购买者',
@@ -3676,7 +3684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地优先智能家居',
     ],
     leadAnswerBlock:
-      '**先确定架构，再按类别购买：中枢用 Home Assistant Green（$199），Zigbee/Thread 协调器用 [Home Assistant Connect ZBT-2](/zh/smart-home/best-zigbee-thread-dongles-2027)（$49），Zigbee 传感器和插座，以及搭配 [Frigate](/zh/smart-home/local-ai-security-camera) 的本地 RTSP 摄像头，而不是云端订阅。** 这是 PromptQuorum 基于当前规格与价格给出的推荐（核实于 2026 年 8 月 25 日），并非对每款产品的实机测试评测：认真搭建选本地优先或混合方案；如果易用性比长期成本和隐私对你更重要，云端优先也是可行选择。→ [查看 Home Assistant Green 今日价格](https://www.home-assistant.io/green/)',
+      '**先确定架构，再按类别购买：中枢用 Home Assistant Green（$199），Zigbee/Thread 协调器用 [Home Assistant Connect ZBT-2](/zh/smart-home/best-zigbee-thread-dongles-2027)（$49），Zigbee 传感器和插座，以及搭配 [Frigate](/zh/smart-home/local-ai-security-camera) 的本地 RTSP 摄像头，而不是云端订阅。** 这是 PromptQuorum 基于当前规格与价格给出的推荐（核实于 上次更新时），并非对每款产品的实机测试评测：认真搭建选本地优先或混合方案；如果易用性比长期成本和隐私对你更重要，云端优先也是可行选择。→ [查看 Home Assistant Green 今日价格](https://www.home-assistant.io/green/)',
     quickAnswerTop: {
       zh: {
         question: '2026 年应该购买哪些最佳智能家居设备？',
@@ -3714,15 +3722,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2026 年最佳智能家居设备是支持本地的产品——Zigbee、Z-Wave、Matter 或本地 Wi-Fi——由像 Home Assistant 这样的本地中枢连接在一起，每个类别都有明确的推荐产品。' },
-      { type: 'plain-terms', content: '购买智能家居设备时，最重要的问题不是品牌，而是设备能否本地运行。会说 Zigbee、Z-Wave 或 Matter，或提供本地 API 的设备，在没有云端时仍可运行，并把数据留在家中。仅限云端的设备虽然方便，却会造成锁定，还可能增加每月费用。' },
+      { type: 'one-sentence', content: '2026 年扎实的智能家居由支持本地的产品组成——Zigbee、Z-Wave、Matter 或本地 Wi-Fi——由像 Home Assistant 这样的本地中枢连接在一起，每个类别都有明确的推荐产品。' },
+      { type: 'plain-terms', content: '购买智能家居设备时，最重要的问题不是品牌，而是设备能否本地运行。会说 Zigbee、Z-Wave 或 Matter，或提供本地 API 的设备，在没有云端时仍可运行，并可在核心功能上把数据留在家中。仅限云端的设备虽然方便，却会造成锁定，还可能增加每月费用。' },
     ],
     sections: {
       quickPicks: {
         id: 'quick-picks',
         title: '快速推荐——每个类别一款产品',
         highlight: true,
-        content: '跳过阅读——以下是 PromptQuorum 在每个类别中会购买的具体产品，核实于 2026 年 8 月 25 日。',
+        content: '跳过阅读——以下是 PromptQuorum 在每个类别中会购买的具体产品，核实于 上次更新时。',
         columns: ['类别', '推荐', '适合'],
         rows: [
           { 类别: '🧠 中枢', 推荐: 'Home Assistant Green', 适合: '最简单的本地方案，无需自建服务器' },
@@ -3755,7 +3763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '先选定你的架构：本地优先（Home Assistant + Zigbee/Z-Wave/Matter）、云端优先（Alexa/Google/厂商中枢），或混合方案',
           '中枢：Home Assistant Green（$199）是最简单的本地方案；若还想要本地 AI，可选迷你 PC',
           'Zigbee/Thread：[Home Assistant Connect ZBT-2](/zh/smart-home/best-zigbee-thread-dongles-2027)（$49）或 SONOFF ZBDongle-E（约 $20–27，预算型）',
-          '摄像头：本地 RTSP 摄像头 + [Frigate](/zh/smart-home/local-ai-security-camera) 可避免订阅，并把录像留在家中',
+          '摄像头：本地 RTSP 摄像头 + [Frigate](/zh/smart-home/local-ai-security-camera) 可避免订阅，并可在核心功能上把录像留在家中',
           '门锁：优先考虑本地可靠性（Z-Wave/Matter）而非 AI 功能——绝不能让 LLM 成为门锁的唯一决策者',
           '略贵一点的本地设备，一旦算上订阅费，往往在 3–5 年内比云端设备更便宜',
         ],
@@ -3775,12 +3783,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-pick',
         title: '我们如何挑选：本地能力优先',
         content:
-          '**挑选原则是本地能力优先：设备必须能经由本地中枢工作，而不依赖厂商云端。** 支持本地的设备能保护隐私、离线仍可工作，并避免订阅。本页并非 PromptQuorum 对每款产品的实机测试结果——推荐基于当前规格、有文档记录的本地 API/协议支持，以及独立评测，核实于 2026 年 8 月 25 日。',
+          '**挑选原则是本地能力优先：设备必须能经由本地中枢工作，而不依赖厂商云端。** 支持本地的设备能保护隐私、离线仍可工作，并避免订阅。本页并非 PromptQuorum 对每款产品的实机测试结果——推荐基于当前规格、有文档记录的本地 API/协议支持，以及独立评测，核实于 上次更新时。',
         items: [
           '**本地协议或 API：** Zigbee、Z-Wave、Matter，或有文档记录的本地 Wi-Fi API。',
           '**无强制云端账户：** 设备必须能经由本地中枢工作。',
           '**核心功能无订阅：** 录制或自动化不应要求付费。',
-          '**当前定价：** 以下每个价格均已对照厂商或主要零售商的挂牌价核实于 2026 年 8 月 25 日——购买前请务必核实实时价格。',
+          '**当前定价：** 以下每个价格均已对照厂商或主要零售商的挂牌价核实于 上次更新时——购买前请务必核实实时价格。',
         ],
         image: '/images/best-smart-home-devices-2026-local-vs-cloud-zh.svg',
         imageCaption: '支持本地的设备——Zigbee、Z-Wave、Matter 或本地 API——与仅限云端的设备在订阅、离线可靠性等 5 项因素上的对比。',
@@ -3791,7 +3799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**🏆 我们的推荐：Home Assistant Green（$199）。** 如果你想要一个真正本地优先、又不想自建服务器的智能家居，Green 是最简单的起点——它支持 Zigbee（配合协调器）、Z-Wave、Matter 和 Thread，可完全离线运行自动化、仪表盘和能耗监测。',
         items: [
-          '**价格说明：** Home Assistant Green 的价格已从最初发售的 $99 上涨到 2026 年 4 月起的 $199，原因是内存/元器件成本上涨——这一点值得了解，因为一些旧评测仍引用过时的 $99 数字。',
+          '**价格说明：** Home Assistant Green 的价格现为 $199（见[厂商页面](https://www.home-assistant.io/green/)），最初发售价为 $99——这一点值得了解，因为一些旧评测仍引用过时的 $99 数字。',
           '**适合人群：** 想要本地控制、又不想自己搭建或维护服务器的初学者。',
           '**升级路径：** 如果之后想要本地 LLM、Frigate 摄像头 AI、更多摄像头、Docker 容器或数据库，可把 Home Assistant 迁移到迷你 PC——参见下方的[最佳迷你 PC](#mini-pc)部分。',
           '为这些协议添加一个 Zigbee 协调器，并单独添加一个 Z-Wave 控制器（USB 接收器）——参见[最佳 Zigbee 与 Thread 协调器](#zigbee-thread)。',
@@ -3843,7 +3851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**🥇 最佳高端之选：Philips Hue（每个彩色灯泡约 $54 起）。** 如果可靠性对你很重要、你想要成熟的生态系统和丰富的产品线，且不介意多花钱，可以选它。',
           '**🥇 最佳预算之选：IKEA TRÅDFRI。** 如果价格是重点、纯 Zigbee 控制已经够用，并且你要与 Home Assistant 集成，可以选它——每个灯泡比 Hue 便宜得多。',
-          '控制现有灯具的墙面开关往往比单独的智能灯泡更可靠，还能避免"有人把物理开关关掉了"这种失效模式。',
+          '控制现有灯具的墙面开关往往比单独的智能灯泡更可靠（安装涉及市电布线，应交由有资质的电工），还能避免"有人把物理开关关掉了"这种失效模式。',
           '**我们不推荐：** 基本操作就需要云端访问、厂商服务器一旦关闭就变成废物，或者基础自动化就要收订阅费的灯泡。',
         ],
         affiliateLinks: [
@@ -3896,6 +3904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**为什么我们偏好本地摄像头：** 云端摄像头会为一件你自己的硬件付费一次就能做到的事情，产生持续的每月费用。本地架构是：摄像头 → 本地网络 → Frigate → 本地 AI 检测 → Home Assistant，基础搭建不需要任何云端 AI 订阅。',
           'RTSP 和 PoE 支持比品牌更重要——任何有文档记录的 RTSP 输出、且没有强制云端门槛的摄像头都能配合 Frigate 工作。',
           '完整搭建指南：[用 Frigate 搭建本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)。',
+          '**隐私提示：** 拍摄人物的摄像头可能受个人信息和数据保护规则约束（例如欧盟的 GDPR）。请只让摄像头对准自己的物业，避免拍到邻居和公共区域，告知访客和家人正在录像，并用强密码和及时更新保护录像服务器。以上为一般信息，不构成法律意见。',
         ],
         affiliateLinks: [
           { label: '查看 Reolink 当前价格 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: '安防摄像头', priceRange: '约 $80–130' },
@@ -3920,7 +3929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'starter-kit',
         title: '本地智能家居入门套件',
         content:
-          '**预算：总计约 $290–360（核实于 2026 年 8 月 25 日）。从一个本地中枢、一个 Zigbee 协调器和一个房间里的几件本地设备开始，然后再扩展。**',
+          '**预算：总计约 $320–380（核实于 上次更新时）。从一个本地中枢、一个 Zigbee 协调器和一个房间里的几件本地设备开始，然后再扩展。**',
         columns: ['类别', '设备', '大致价格'],
         rows: [
           { 类别: '中枢', 设备: 'Home Assistant Green', 大致价格: '$199' },
@@ -3930,7 +3939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 类别: '插座', 设备: '2 个 Zigbee 智能插座', 大致价格: '约 $30–40' },
         ],
         items: [
-          '这套装备能带来一个私密、可靠的基础，你可以逐个房间地扩展——这里的每个设备一旦配对就能离线工作，也都不需要订阅。',
+          '这套装备能带来一个私密、可靠的基础，你可以逐个房间地扩展——这里每个设备的核心功能一旦配对就能离线工作，也不需要订阅（请逐一确认可选的云功能）。',
         ],
         affiliateLinks: [
           { label: '搭建这套入门套件 → 查看 Home Assistant Green 价格', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: '智能家居中枢', priceRange: '$199' },
@@ -4026,11 +4035,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '如果我想给整个家配齐智能家居设备，最好的提供商是谁？', a: '本地优先方案没有单一"提供商"——这正是它的意义所在。Home Assistant 是中枢，你可以混搭来自任意品牌（Aqara、SONOFF、Philips Hue、IKEA、Reolink 等）的 Zigbee/Z-Wave/Matter 设备，而不是被锁定在某一家厂商的生态和价目表里。' },
           { q: '哪些联网的家用设备最适合用 App 控制？', a: '带有文档记录的本地 API 的设备——通过 Home Assistant 配对的 Zigbee、Z-Wave 和 Matter 设备都能获得 App 控制（Home Assistant 应用），而不需要把数据经由厂商云端传输。仅限云端的设备也提供 App 控制，但要经过厂商自己的应用和服务器。' },
           { q: '支持本地的设备与仅限云端的设备相比，价格如何？', a: '支持本地的设备（Zigbee、Z-Wave、Matter）在购买时通常与仅限云端的同类产品价格相同甚至更低，因为区别在于协议支持，而不是硬件品质。真正的节省体现在长期使用中：仅限云端的摄像头和中枢经常为录制或高级自动化收取月度订阅费，而本地中枢和本地设备在初次购买后没有持续费用。' },
-          { q: '支持本地的设备是否比仅限云端的设备更能保护我的数据安全？', a: '是的。配对到本地中枢的支持本地设备会把语音录音、摄像头画面和自动化例程留在你自己的网络里，不会把数据发送到厂商服务器。仅限云端的设备会把同样的数据通过厂商云端传输，受该公司的数据保留政策、数据泄露风险以及服务条款变更的影响。' },
+          { q: '支持本地的设备是否比仅限云端的设备更能保护我的数据安全？', a: '通常是，但有前提。配对到本地中枢的支持本地设备，在核心功能上可以把语音录音、摄像头画面和自动化例程留在你自己的网络里，不会把这部分数据发送到厂商服务器。不过部分设备仍会为固件更新或可选的云功能连接厂商服务器，请检查每台设备的设置。仅限云端的设备会把同样的数据通过厂商云端传输，受该公司的数据保留政策、数据泄露风险以及服务条款变更的影响。此外，本地存储意味着中枢的安全防护和更新由你自己负责。' },
           { q: '支持本地的设备能与 HomeKit、Google Home 和 Amazon Alexa 配合使用吗？', a: '大多数可以。经过 Matter 认证的设备可以在配合本地中枢的同时原生支持 HomeKit、Google Home 和 Alexa。Zigbee 和 Z-Wave 设备通过 Home Assistant 连接，Home Assistant 随后可以把它们作为桥梁暴露给 HomeKit、Google Home 或 Alexa——这样你既能保留本地控制，又能在需要时继续使用这些语音助手。' },
           { q: 'Matter 与我现有的 Zigbee 或 Z-Wave 设备兼容吗？', a: 'Matter 与 Zigbee、Z-Wave 并行运行，而不是取代它们——像 Home Assistant 这样的中枢可以同时控制 Matter、Zigbee 和 Z-Wave 设备。添加 Matter 设备无需更换正常工作的 Zigbee 或 Z-Wave 设备；只有专门使用 Matter-over-Thread 设备时才需要 Thread 边界路由器。' },
           { q: '有没有经济实惠的方式为现有住宅添加智能家居功能？', a: '有——Zigbee 灯泡、插座和传感器是最便宜的入门方式，也不需要重新布线。从一个 $199 的中枢和一个 $20–27 的 Zigbee 加密狗开始，然后在一个房间里添加几件 $15–30 的设备，再逐步扩展——具体价格参见上方的入门套件表。' },
-          { q: '对于完全的新手来说，搭建一套本地优先的智能家居有多难？', a: '对大多数新手来说，配置单个本地中枢（例如 Home Assistant Green）和几件 Zigbee 设备，用不到一小时就能完成，因为设置向导会通过网页界面处理配对。搭建一套包含摄像头、门锁和自定义自动化的完整多房间系统，则是一个需要数个周末的项目，但你可以按照自己的节奏逐步添加设备。' },
+          { q: '对于完全的新手来说，搭建一套本地优先的智能家居有多难？', a: '配置单个本地中枢（例如 Home Assistant Green）和几件 Zigbee 设备，视经验而定，通常约一小时或更短即可完成，因为设置向导会通过网页界面处理配对。搭建一套包含摄像头、门锁和自定义自动化的完整多房间系统，则是一个需要数个周末的项目，但你可以按照自己的节奏逐步添加设备。' },
         ],
       },
       relatedReading: {
@@ -4053,7 +4062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026 年最佳智能家居设备：本地优先购买指南',
-      description: '2026年最佳智能家居设备，按类别分类——中枢、Zigbee/Thread、照明、门锁、传感器、摄像头、插座——每个类别一款推荐产品，真实价格核实于 2026 年 8 月 25 日。',
+      description: '2026年最佳智能家居设备，按类别分类——中枢、Zigbee/Thread、照明、门锁、传感器、摄像头、插座——每个类别一款推荐产品，真实价格核实于 上次更新时。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-smart-home-devices-2026',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -4077,11 +4086,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '如果我想给整个家配齐智能家居设备，最好的提供商是谁？', acceptedAnswer: { '@type': 'Answer', text: '本地优先方案没有单一提供商——Home Assistant 是中枢，你可以混搭来自任意品牌的 Zigbee/Z-Wave/Matter 设备，而不是被锁定在某一家厂商的生态里。' } },
         { '@type': 'Question', name: '哪些联网的家用设备最适合用 App 控制？', acceptedAnswer: { '@type': 'Answer', text: '带有文档记录的本地 API 的设备——通过 Home Assistant 配对的 Zigbee、Z-Wave 和 Matter 设备都能获得 App 控制，而不需要把数据经由厂商云端传输。' } },
         { '@type': 'Question', name: '支持本地的设备与仅限云端的设备相比，价格如何？', acceptedAnswer: { '@type': 'Answer', text: '支持本地的设备在购买时通常价格相同甚至更低。真正的节省体现在长期使用中：仅限云端的设备常常收取月度订阅费，而本地设备没有持续费用。' } },
-        { '@type': 'Question', name: '支持本地的设备是否比仅限云端的设备更能保护我的数据安全？', acceptedAnswer: { '@type': 'Answer', text: '是的。配对到本地中枢的支持本地设备会把录音、画面和例程保留在自己的网络内。仅限云端的设备会把这些数据通过厂商云端传输。' } },
+        { '@type': 'Question', name: '支持本地的设备是否比仅限云端的设备更能保护我的数据安全？', acceptedAnswer: { '@type': 'Answer', text: '通常是，但有前提。支持本地的设备在核心功能上可以把录音、画面和例程保留在自己的网络内，但部分设备仍会为固件更新或可选的云功能连接厂商服务器。仅限云端的设备会把这些数据通过厂商云端传输。' } },
         { '@type': 'Question', name: '支持本地的设备能与 HomeKit、Google Home 和 Amazon Alexa 配合使用吗？', acceptedAnswer: { '@type': 'Answer', text: '大多数可以。经过 Matter 认证的设备原生支持三者。Zigbee 和 Z-Wave 设备通过 Home Assistant 连接，可以在保留本地控制的同时暴露给 HomeKit、Google Home 或 Alexa。' } },
         { '@type': 'Question', name: 'Matter 与我现有的 Zigbee 或 Z-Wave 设备兼容吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Matter 与 Zigbee、Z-Wave 并行运行，而不是取代它们——像 Home Assistant 这样的中枢可以同时控制这三种协议。' } },
         { '@type': 'Question', name: '有没有经济实惠的方式为现有住宅添加智能家居功能？', acceptedAnswer: { '@type': 'Answer', text: '有——Zigbee 灯泡、插座和传感器是最便宜的入门方式，也不需要重新布线。从一个中枢和一个 Zigbee 加密狗开始，然后在一个房间里添加几件设备，再逐步扩展。' } },
-        { '@type': 'Question', name: '对于完全的新手来说，搭建一套本地优先的智能家居有多难？', acceptedAnswer: { '@type': 'Answer', text: '配置单个本地中枢和几件 Zigbee 设备对大多数新手来说不到一小时即可完成。完整的多房间系统是一个需要数个周末的项目，但设备可以逐步添加。' } },
+        { '@type': 'Question', name: '对于完全的新手来说，搭建一套本地优先的智能家居有多难？', acceptedAnswer: { '@type': 'Answer', text: '配置单个本地中枢和几件 Zigbee 设备，视经验而定，通常约一小时或更短即可完成。完整的多房间系统是一个需要数个周末的项目，但设备可以逐步添加。' } },
       ],
     },
   },

@@ -1,0 +1,1532 @@
+{
+  "id": "pq-test-stratosort-2026-11-17",
+  "hero": "stratosort-welcome-screen-guided-mode",
+  "date_human": "2026年11月17日",
+  "captured": "テスト日と終了時刻は記録なし。スクリーンショットのファイルは新しい名前に日付2026-11-17が入っているため、セッションはその日かそれ以降に行われた。このページのIDと日付は下書きの日付2026-11-17を使用",
+  "standard_version": "0.2",
+  "locale": "ja",
+  "app": {
+    "name": "StratoSort",
+    "slug": "stratosort",
+    "vendor": "Ben Kennedy (per the founder statement in the directory)",
+    "category": "Local AI file organizer, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://stratosort.com"
+  },
+  "title": "24 GBのM4 Pro MacでのStratoSort：ファイルを動かす前のドライラン、混在した振り分け、MCP経由での別のローカルAIアプリとの連携",
+  "page_title": "StratoSortテスト",
+  "dek": "テスターの最初の試行がうまくいかなかったあとの2回目のセッション：ガイド付きセットアップ、ドライラン、ファイルごとの確認と全体の振り分け、300文字として読まれたスプレッドシート、そして2つ目のローカルAIアプリからMCP経由で照会したドキュメントインデックス。",
+  "seo": {
+    "title": "StratoSort実機テスト：Macのファイル整理とMCP",
+    "description": "24 GBのM4 ProのMacでのStratoSort実機テスト。ドライラン、ファイルごとの確認、286ファイルの移動、混在した振り分け、MCP経由でのLociとの連携。"
+  },
+  "faq": [
+    [
+      "StratoSortは承認前にファイルを移動しますか？",
+      "セッションでは移動しませんでした。5ファイルのドライランには「Nothing has moved」と表示され、移動の前に各ファイルに確認カードが出ました。286ファイルの移動の前にすべてのファイルを確認したかどうかは記録なしです。",
+      "observed"
+    ],
+    [
+      "StratoSortはテスト用ファイルをどの程度うまく振り分けましたか？",
+      "混在した結果でした。ドライランでは5ファイル中2つがフォルダに割り当てられ、確認のステップではバナーが未分類のファイル126件を示し、Search Consoleのエクスポート2つは、最も近いフォルダが示されていたにもかかわらずフォールバックに入りました。精度の集計はしていません。",
+      "measured"
+    ],
+    [
+      "ほかのAIアプリはMCP経由でStratoSortに照会できますか？",
+      "セッションではできました。Lociアプリが接続し、4つのツールを一覧表示し、list_smart_foldersとsearch_documentsから結果を返しました。テスターは接続方法を自分で突き止める必要があり、get_document_summaryとchat_with_documentsは呼び出していません。",
+      "observed"
+    ],
+    [
+      "StratoSortはファイル名を変更しますか？",
+      "移動リストでは変更されていました。元の名前が、日付付きの小文字の名前に置き換えられていました。結果はディスク上では確認しておらず、言い換え機能も試していません。",
+      "observed"
+    ],
+    [
+      "StratoSortはプライベートでオフラインで使えますか？",
+      "ウェルカム画面にはプライベートでオンデバイスと表示され、創設者のコメントにはアカウントもテレメトリもないと書かれています。ネットワーク通信は調べておらず、オフラインでの実行も試していないため、これは未検証です。",
+      "vendor-claim"
+    ],
+    [
+      "テストしていないことは何ですか？",
+      "元に戻す、コピーモード、Dashboardモード、AIとモデルの設定、ドキュメントチャットのツール、計時、メモリ、オフライン利用、アンインストール。アプリのバージョンと使用したモデルは記録なしです。",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-17",
+  "started": "2026-11-17",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "StratoSort。インストーラーのラベルは「StratoSort Stack」、ウィンドウのヘッダーは「StratoSort」。",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし。PromptQuorumディレクトリには5.1.2（2026-11-01のGitHubリリース）と記載され、2026-11-10に確認済み。テスターのビルドは異なる可能性があります。",
+      null
+    ],
+    [
+      "入手元",
+      "記録なし。ディレクトリにはstratosort.comとGitHubリポジトリiLevyTate/StratoSortStackが掲載されています。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans（PromptQuorum創設者）",
+      "observed"
+    ],
+    [
+      "開始・終了",
+      "記載なし。スクリーンショットのファイルは新しい名前に日付2026-11-17が入っているため、セッションはその日かそれ以降に行われた。下書きの日付も同じ（推測）。終了時刻は記録なし。",
+      "assumption"
+    ],
+    [
+      "ハードウェア",
+      "Apple M4 Pro、24 GBユニファイドメモリ（テスターの記述による）。",
+      "tester-view"
+    ],
+    [
+      "システム",
+      "macOS 27（テスターの記述による）。",
+      "tester-view"
+    ],
+    [
+      "テストの理由",
+      "最初の試行はうまくいかなかった。テスターは開発者に連絡し、ガイド付きの手順で再度試した。彼はこのアプリをビジネス向けと見ており、これから立ち上げる会社のファイル整理に関心がある。",
+      "tester-view"
+    ],
+    [
+      "目的",
+      "目標としては示されていません。メモには、用意したテストセットを出力フォルダへ振り分け、ファイルを確認して移動し、アプリを別のローカルAIアプリであるLociに接続することが記されています。",
+      null
+    ],
+    [
+      "テストデータ",
+      "約286ファイル（ドライランの5ファイルと、その後に分析した281ファイル）。確認できた内容の種類：Search ConsoleのExcelエクスポート、ClarityのCSVエクスポート、Wordのテストメモ、画像。確認できたスマートフォルダ：Pictures、Leftovers、excel GSc、Clarity、およびフォールバックのUncategorized。出力は外付けSSD。",
+      "observed"
+    ],
+    [
+      "2つ目のアプリ",
+      "MCPクライアントはLoci（テスターの記述による。音声入力のメモでは「Low key」と「Loki」と表記）。クライアントの画面には名前が表示されていません。",
+      "tester-view"
+    ],
+    [
+      "使用したAI支援",
+      "Claudeが、テスターのWordメモと22枚のスクリーンショットからこのレポートを下書きしました。メモはおそらく音声入力で作成されたものです（推測）。",
+      "assumption"
+    ],
+    [
+      "開示事項",
+      "テスターは、ローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。StratoSortは、2026-11-10に、ハンズオンテストではなく開発元のページと開発者から提供された創設者コメントに基づくAI作成のレビュー付きでディレクトリに追加されました。テスターは開発者と連絡を取っており、開発者はテスターの最初の試行に応答しました。StratoSortはサイトからのクリックを受けています。支払いやスポンサーシップはメモに記録されていません。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターは、ローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。StratoSortは、2026-11-10に、ハンズオンテストではなく開発元のページと開発者から提供された創設者コメントに基づくAI作成のレビュー付きでディレクトリに追加されました。テスターは開発者と連絡を取っており、開発者はテスターの最初の試行に応答しました。StratoSortはサイトからのクリックを受けています。支払いやスポンサーシップはメモに記録されていません。",
+  "verdict": {
+    "general": "自己紹介によればオンデバイスのファイル整理アプリで、テスターが確認できた安全策があります。ドライラン、何かを動かす前のファイルごとの確認、そしてアプリが読み取り専用だと述べるMCP連携です。このセッションでは、分析、確認、ファイルの移動を実行し（移動の終了は記録なし）、MCP連携は別のローカルAIアプリから動作しましたが、振り分けは混在した結果で、調整が必要です。元に戻す、コピーモード、ドキュメントチャットのツール、使用したモデル、オフライン動作、プライバシーに関する主張、アンインストールはテストしていません。",
+    "fit": "テスターは、小さなテストと繰り返しの微調整が必要な有望なツールと見ており、来年、ビジネス文書が増えた時点で再テストする予定です。MCP連携、場合によってはその上に検索の層を重ねることを、興味深い方向と見ています。使い続けるかどうかの決定は記されていません。"
+  },
+  "scores": [
+    [
+      "インストール",
+      null,
+      "インストーラーのウィンドウは確認。サイズ、モデルのダウンロード、セットアップ時間は記録なし。"
+    ],
+    [
+      "オンボーディングとモデル選び",
+      3,
+      "ガイドモードとドライランは役立ったが、フォルダの概念はテスターには分かりにくく、フォルダ全体の読み込みは失敗した。"
+    ],
+    [
+      "中核機能",
+      3,
+      "ファイルごとの確認、名前の変更、移動は動作したが、振り分けは混在した結果で、スプレッドシートは一部しか読まれなかった。"
+    ],
+    [
+      "ガイダンスと試行錯誤",
+      3,
+      "フォルダの説明のヒント、Detailsビュー、ファイルごとの選択はあるが、プレビューのステップは操作できない。"
+    ],
+    [
+      "連携（MCP）",
+      3,
+      "接続でき、読み取りツール2つが動作したが、セットアップにはリバースエンジニアリングが必要だった。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "分析と移動の時間は記録なし。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "アプリ内の文言と、テスターが触れた開発者の案内のみ。どちらも詳しくは読んでいない。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していない。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、テスターが示した根拠からレポート作成者が案として付けたものです。該当なしは「未テスト」を意味し、ゼロ点ではありません。",
+  "tldr": [
+    [
+      "observed",
+      "StratoSortは、ファイルの名前とフォルダを提案し、何かを動かす前にユーザーが確認できるデスクトップアプリです。テスターは24 GBのApple M4 Proで、最初の試行がうまくいかなかったあとの2回目のセッションとして実行しました。"
+    ],
+    [
+      "measured",
+      "5ファイルのドライランでは何も移動せず、2つのファイルがそれぞれ信頼度43 %と65 %でフォルダに割り当てられました。さらに281ファイルを分析すると、バナーは未分類126件を示しました。"
+    ],
+    [
+      "observed",
+      "Excelファイルは300文字として読まれ、Search Consoleのエクスポート2つは、最も近いフォルダが示されていたにもかかわらずフォールバックに入りました。"
+    ],
+    [
+      "observed",
+      "外付けSSDへの286ファイルの移動では、ファイル名が日付付きの小文字の名前に変更されました。移動の終了は記録なしです。"
+    ],
+    [
+      "observed",
+      "MCP経由で、Lociアプリはスマートフォルダを一覧表示し、「Clarity data」でドキュメントを検索しました。テスターは接続方法を自分で突き止める必要がありました。"
+    ],
+    [
+      "vendor-claim",
+      "アプリは、プライベートでオンデバイスであり、MCPツールは読み取りのみだと述べています。ネットワーク通信、オフライン利用、元に戻す、コピーモード、メモリ、計時、アンインストールはテストしていません。"
+    ]
+  ],
+  "quotes": [
+    "まず少数のファイルで小さく始めて、確認して、確認して、確認して、すべてのルールを微調整する必要があります。",
+    "コンサルティングの仕事をしていたので、いちばん厄介なのは、いつもファイルシステムの整理を保つことと、そのあとで何かを見つけることだと分かっています。"
+  ],
+  "quote_note": "テスターのメモ。音声入力から軽く編集。2つとも本人の判断であり、測定値ではありません。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "まずドライラン",
+      "5ファイル、何も移動せず。",
+      "stratosort-five-file-dry-run-where-files-would-go",
+      "chapter-dryrun"
+    ],
+    [
+      "300文字として読まれたスプレッドシート",
+      "Excelファイル1つのDetailsビュー。",
+      "stratosort-extracted-text-300-characters",
+      "chapter-review"
+    ],
+    [
+      "最も近い一致は示されたが、ファイルは未整理のまま",
+      "フォールバックに入ったExcelエクスポート2つ。",
+      "stratosort-review-cards-fallback-no-folder-match",
+      "chapter-review"
+    ],
+    [
+      "サイト名から提案されたフォルダ",
+      "確認のステップのバナー。",
+      "stratosort-126-files-uncategorized-banner",
+      "chapter-review"
+    ],
+    [
+      "移動リストの新しい名前",
+      "移動の予定された操作。",
+      "stratosort-organize-286-files-planned-operations",
+      "chapter-move"
+    ],
+    [
+      "別のローカルアプリがStratoに尋ねる",
+      "MCP経由の検索結果。",
+      "stratosort-mcp-search-result-clarity-folder-files",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "以前の試行、インストーラー、初回起動",
+      "items": [
+        [
+          "observed",
+          "これはテスターの2回目のセッションです。最初のセッションでは、案内を読まずに進め、アプリは見ただけでは分かりにくいと感じ、セットアップでミスをしたと考えています。何がうまくいかなかったかは記録なしです。",
+          null
+        ],
+        [
+          "observed",
+          "その後、彼は開発者に連絡し、開発者は彼の説明によればコメントを確認して、数日以内にいくつかの問題に対応しました。メッセージは示されておらず、問題とバージョンは記録なしです。",
+          null
+        ],
+        [
+          "observed",
+          "インストーラーのウィンドウには、「StratoSort Stack」というラベルのアプリアイコンが、Applicationsのショートカットの隣に表示されています。インストーラーのサイズは記録なしです。",
+          "stratosort-dmg-window-app-and-applications"
+        ],
+        [
+          "observed",
+          "アプリはウェルカム画面で開きます。「Step 1 of 5, Start securely」、GuidedとDashboardのモード、メインボタン「Organize files now, recommended for a first session」、そしてAIとモデルの設定とスマートフォルダのためのサイドボタンがあります。今回は案内に従いたかったため、彼はガイド付きの手順を選びました。通知のベルには件数が表示されていますが、内容は記録なしです。",
+          "stratosort-welcome-screen-guided-mode"
+        ],
+        [
+          "observed",
+          "2つのカードが、ほかの始め方を提示しています。Guided stepsとDashboardです。",
+          "stratosort-start-options-guided-steps-or-dashboard"
+        ],
+        [
+          "third-party",
+          "提示されたモデル、選択したモデル、ダウンロードしたモデル、そのサイズ、セットアップ時間は記録なしです。ディレクトリには、ベースモデルで約7 GBと記載されています。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-dryrun",
+      "title": "フォルダとドライラン",
+      "items": [
+        [
+          "observed",
+          "テスターはアプリにフォルダ全体を読み込ませようとしましたが、読み込まれなかったため、個別のファイルを渡しました。フォルダ、メッセージの有無、原因は記録なしで、スクリーンショットはありません。",
+          null
+        ],
+        [
+          "tester-view",
+          "彼はFinderで、入力フォルダと出力フォルダというフォルダ構成を作り、アプリ内で作るよりも簡単だと感じました。アプリは説明付きのスマートフォルダという言い方をしますが、彼は入力フォルダと出力フォルダで考えています。アプリ内でのフォルダ作成は存在します（確認のステップのバナーを参照）。",
+          null
+        ],
+        [
+          "observed",
+          "出力フォルダは外付けSSD上にあり、移動リストとMCPの表からも分かります。テスターによれば、最初の試行では受け付けられなかったとのことですが、原因は記録なしです。",
+          null
+        ],
+        [
+          "measured",
+          "5ファイルでの最初のテストでは、各ファイルがどこへ行くかが表示され、画面には「Nothing has moved」とあります。2つのファイルが割り当てられました。ClarityのCSVが信頼度43 %でClarityへ、画像が65 %でPicturesへ。3つはUncategorizedへ行き、それぞれ最も近いフォルダが示されました。Clarity、Leftovers、excel GScです。3つのうちの1つは、彼自身の確認メモのファイルでした。",
+          "stratosort-five-file-dry-run-where-files-would-go"
+        ],
+        [
+          "tester-view",
+          "彼は納得せず、このステップで、フォルダを編集してやり直すのではなく、各結果を承認または却下するフォームがほしいと考えました。画面には「Edit Smart Folders」と「Analyze the other 281 files」があり、ファイルごとの選択は後の確認のステップで表示されます。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-review",
+      "title": "分析と確認",
+      "items": [
+        [
+          "measured",
+          "残りの281ファイルを分析しました。進行カードには「Analyzing 5 of 281 files, 2 % complete」、処理中のファイル、Stopボタンが表示されます。分析の総時間は記録なしです。",
+          "stratosort-analysis-progress-5-of-281-files"
+        ],
+        [
+          "observed",
+          "確認のステップでは、各ファイルにカードがあり、チェックボックス、編集できる提案名、カテゴリのドロップダウン（最も近い一致とその他の提案）、理由付きの「Needs review」の注記、信頼度のバー、Detailsのリンクが付いています。移動の前にすべてのファイルを確認したかどうかは記録なしです。",
+          "stratosort-category-dropdown-suggested-folders"
+        ],
+        [
+          "observed",
+          "Detailsには、プロジェクト、目的、日付、文書の種類、方法、長さ、要約、キーワード、判断の根拠、抽出されたテキストが表示されます。テスターはこれを振り分けを微調整する手段と読み、一部のデータは抽出されて、彼がデータベースと呼ぶものに保存されていると述べていますが、画面で確認できるのは抽出されたフィールドだけです。",
+          "stratosort-file-analysis-details-metadata"
+        ],
+        [
+          "observed",
+          "Excelファイルでは、抽出されたテキストは300文字で、列見出しと数行のあとに省略記号で終わっています。この制限がほかのファイルの種類や分類のステップにも当てはまるかどうかは不明です（推測：スプレッドシートでの弱い一致の説明になる可能性）。",
+          "stratosort-extracted-text-300-characters"
+        ],
+        [
+          "observed",
+          "サイトのURLにちなんだ名前の、6 KBずつのSearch ConsoleのExcelエクスポート2つは、説明的な提案名を得ましたが、フォールバックに入りました。注記ではテスターがそれ用に作ったフォルダ「excel GSc」が最も近いとされていたにもかかわらずです。原因は切り分けていません。",
+          "stratosort-review-cards-fallback-no-folder-match"
+        ],
+        [
+          "measured",
+          "バナーには「126 files are uncategorized」と「103 are from Promptquorum. Want a Smart Folder for them?」とあり、Create folder、Different folder、Reanalyzeのボタンが付いています。この提案は、内容の種類ではなく、ファイル名に含まれるサイト名に従っているようです（推測）。",
+          "stratosort-126-files-uncategorized-banner"
+        ],
+        [
+          "tester-estimate",
+          "テスターは、最初は一致が70〜80 %と感じていましたが、未分類の件数を見たあと、約40 %が不一致と修正しました。286ファイルに対して126は44 %にあたります。これは計算であり、両方の件数が同じファイルを指していることを前提としています。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-move",
+      "title": "ファイルの移動",
+      "items": [
+        [
+          "observed",
+          "「Organize 286 files, moving files to their destinations」には、緑のチェックと外付けSSD上のパスが付いた予定の操作が一覧表示され、移動が完了またはキャンセルされるまでステップの移動は一時停止されます。テスター自身のテストメモの文書もファイルに含まれていました。移動の終了は記録なしです。",
+          "stratosort-organize-286-files-planned-operations"
+        ],
+        [
+          "observed",
+          "移動リストでは、元の名前が日付付きの小文字の名前に置き換えられていました。たとえば「Gesamtansicht.jpeg」は「gesamtansicht-2026-10-20.jpeg」に、「StratoSort hands on review.docx」は「stratosort-review-2026-11-12.docx」になりました。テスターは名前の変更は試していないと書いていましたが、リストを見ると今回の実行で適用されていました。結果はディスク上では確認しておらず、日付の由来は示されていません。",
+          null
+        ],
+        [
+          "measured",
+          "126 KBのWhatsApp画像1枚が単独で追加され、提案名、最も近い一致のPictures、信頼度64 %のカードが表示されました。テスターは、コンピューター上のどこにあるファイルでも1つずつ追加して残りと一緒に振り分けられると述べ、これを評価しています。",
+          "stratosort-single-file-card-whatsapp-image-64-confidence"
+        ],
+        [
+          "observed",
+          "2つ目のキャプチャには「Organize 75 files」とあります。286ファイルの実行との関係は記録なしで、どちらの終了も示されていません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "MCP経由での別のローカルAIアプリとの連携",
+      "items": [
+        [
+          "observed",
+          "アプリにはMCPの画面があり、4つのツールが一覧表示されています。search_documents、chat_with_documents、get_document_summary、list_smart_foldersで、Claude Desktop、Cursor、Zed向けのセットアップをコピーするボタンもあります。",
+          "stratosort-mcp-tool-list-and-client-setup"
+        ],
+        [
+          "vendor-claim",
+          "その画面の1行には、「These tools only read. None of them moves, renames or deletes files.」と書かれています。",
+          null
+        ],
+        [
+          "observed",
+          "テスターは、別のローカルAIアプリへの接続を「backwards engineer」する必要があったと述べています。何が失敗し、何を変更したかは記録なしです。",
+          null
+        ],
+        [
+          "observed",
+          "クライアントのLociは、ローカルアドレスで「Strato is connected and offers 4 tools」と表示し、各ツールについて、変更できるかどうかは示されていないと表示しています。ツールに読み取り専用の印が付いていないというのは推測で、アプリは読み取りのみだと述べています。",
+          "stratosort-mcp-connected-in-client-four-tools"
+        ],
+        [
+          "observed",
+          "Lociのサーバー一覧には、27ツールのPromptQuorumと4ツールのStratoが、どちらも接続済みで表示されています。",
+          "stratosort-mcp-servers-list-in-client"
+        ],
+        [
+          "measured",
+          "list_smart_foldersは、フォルダ、ファイル数、説明、保存先パスの表を返しました。見えている行：Uncategorized 53、Pictures 8、excel GSc 196。53は、先に確認のステップで見た126とは一致しません。2つの間の経過時間は記録なしのため、突き合わせはしていません。",
+          "stratosort-mcp-list-smart-folders-result-table"
+        ],
+        [
+          "observed",
+          "検索の前に、Lociは「Allow Strato to run search_documents?」と尋ね、クエリ「Clarity data」、ローカルアドレス、Allow onceとDeclineのボタンを表示しました。",
+          "stratosort-mcp-search-documents-permission-prompt"
+        ],
+        [
+          "observed",
+          "クエリ「Clarity data」でのsearch_documentsは、Clarityフォルダにある4つのCSVファイルを、それぞれ1行の説明付きで返しました。クライアントの返答は、出典はMicrosoft Clarityか類似のツールだろうと推測しています。ファイルの内容に照らした正確さは確認しておらず、返答は見えている範囲の下に続いています。",
+          "stratosort-mcp-search-result-clarity-folder-files"
+        ],
+        [
+          "tester-view",
+          "彼は、まだ検索システムのようには見えないが、外部のツールが照会できるデータセットに近づいていると述べています。呼び出したのは4つのツールのうち2つだけで、get_document_summaryとchat_with_documentsは呼び出していません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "判断",
+      "items": [
+        [
+          "observed",
+          "メモは全体的な見解で終わっており、使い続けるかどうかの決定は記されていません。",
+          null
+        ],
+        [
+          "tester-view",
+          "彼の理解では、このアプリはファイルを振り分け、微調整に時間が必要で、小さく始めて繰り返し確認し、進めながらスマートフォルダを調整するのが最も効果的です。彼は、コピーではなく移動を使い、言い換えと名前変更の機能は試していません。",
+          null
+        ],
+        [
+          "tester-view",
+          "彼は来年、法人を設立する予定で、より多くの文書でテストを繰り返し、フォルダ構成を整った状態に保てるかどうかを確かめるつもりです。彼の関心は、MCPと、場合によってはその上の検索の層との組み合わせにあります。",
+          null
+        ],
+        [
+          "tester-view",
+          "「まず少数のファイルで小さく始めて、確認して、確認して、確認して、すべてのルールを微調整する必要があります。」",
+          null
+        ],
+        [
+          "tester-view",
+          "「コンサルティングの仕事をしていたので、いちばん厄介なのは、いつもファイルシステムの整理を保つことと、そのあとで何かを見つけることだと分かっています。」",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "ウェルカム画面：プライベートでオンデバイス、ファイルが動く前に確認する。",
+      "ウェルカム画面",
+      "確認カードと「Nothing has moved」は確認。オンデバイス動作は未検証。",
+      "vendor-claim"
+    ],
+    [
+      "「Review, rename, and organize files with local AI.」",
+      "ウェルカム画面",
+      "確認、名前変更、整理は確認。どのモデルが動き、ローカルだったかどうかは記録なし。",
+      "vendor-claim"
+    ],
+    [
+      "「These tools only read. None of them moves, renames or deletes files.」",
+      "MCPの画面",
+      "読み取りの呼び出しを2回行っただけで、書き込みの試行はなし。クライアントは、ツールが変更できるかどうかは示していないと表示している。",
+      "vendor-claim"
+    ],
+    [
+      "ランク付けされた結果、スニペット、スコアを伴うハイブリッドのセマンティック・キーワード検索。",
+      "MCPツールの文言",
+      "検索を1回実行。見えている返答はファイルの一覧で、スコアとスニペットは見えない。",
+      "vendor-claim"
+    ],
+    [
+      "確認して元に戻せる名前とフォルダを提案し、セマンティック検索とドキュメントチャットを追加する。",
+      "PromptQuorumディレクトリの項目",
+      "名前、フォルダ、確認は確認。元に戻すとドキュメントチャットは未テスト。",
+      "third-party"
+    ],
+    [
+      "Claude Desktop、Cursor、Zedで動作する。",
+      "PromptQuorumディレクトリの項目",
+      "その3つ向けの設定コピーのボタンは確認。接続は別のクライアントから行った。",
+      "third-party"
+    ],
+    [
+      "インストール後に約7 GBのベースモデルをダウンロード。",
+      "PromptQuorumディレクトリの項目",
+      "記録なし。",
+      "third-party"
+    ],
+    [
+      "アカウントなし、テレメトリなし、アップデート確認をオフにしてクラウドキーなしなら外部へのリクエストなし。",
+      "創設者のコメント",
+      "スクリーンショットの中にアカウント画面は見当たらず。通信は調べていない。",
+      "vendor-claim"
+    ],
+    [
+      "開発者は、最初の試行のあとに挙げられた問題のいくつかに対応した。",
+      "テスターのメモ",
+      "どの問題か、どのバージョンかは記録なし。",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "最初の試行、案内なしで進めた",
+      "StratoSort",
+      "テスターによればうまくいかなかった。詳細は記録なし",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "Guidedモードで起動",
+      "StratoSort",
+      "フォルダのステップに到達",
+      "記録なし",
+      "Pass",
+      [
+        "stratosort-welcome-screen-guided-mode"
+      ]
+    ],
+    [
+      "アプリでフォルダ全体を読み込む",
+      "StratoSort",
+      "テスターによればフォルダは読み込まれなかった。スクリーンショットなし",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "個別のファイルを追加",
+      "StratoSort",
+      "テスターによれば動作した",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "5ファイルでのドライラン",
+      "StratoSort",
+      "2つがフォルダに一致、3つはUncategorizedへ",
+      "記録なし",
+      "Partial",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "残りの281ファイルを分析",
+      "StratoSort",
+      "開始。終了と所要時間は記録なし",
+      "記録なし",
+      "Partial",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "スプレッドシート1つのDetailsを開く",
+      "StratoSort",
+      "フィールドが表示された。テキストは300文字で切れていた",
+      "記録なし",
+      "Pass",
+      [
+        "stratosort-extracted-text-300-characters",
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "Search Consoleのエクスポート2つを「excel GSc」に振り分ける",
+      "StratoSort",
+      "代わりにフォールバック",
+      "記録なし",
+      "Fail",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "WhatsApp画像を1枚追加",
+      "StratoSort",
+      "Pictures行きの準備完了、64 %",
+      "記録なし",
+      "Pass",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "286ファイルを外付けSSDへ移動",
+      "StratoSort",
+      "キャプチャ時点で進行中。終了は記録なし",
+      "記録なし",
+      "Partial",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "2回目の移動、75ファイル",
+      "StratoSort",
+      "進行のキャプチャが1枚のみ",
+      "記録なし",
+      "Partial",
+      []
+    ],
+    [
+      "移動の一部としてファイル名を変更",
+      "StratoSort",
+      "移動リストに新しい名前",
+      "記録なし",
+      "Pass",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "MCP経由で別のローカルAIアプリを接続",
+      "Loci",
+      "テスターがセットアップを自分で突き止めたあとに接続",
+      "記録なし",
+      "Partial",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "list_smart_folders",
+      "Loci",
+      "表が返された",
+      "記録なし",
+      "Pass",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "search_documents、クエリ「Clarity data」",
+      "Loci",
+      "4つのファイルが一覧表示された",
+      "記録なし",
+      "Pass",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "get_document_summary、chat_with_documents",
+      "該当なし",
+      "呼び出していない",
+      "記録なし",
+      "Not completed",
+      []
+    ],
+    [
+      "元に戻す、コピーモード、Dashboardモード、AIとモデルの設定、オフライン利用、アンインストール",
+      "該当なし",
+      "未テスト",
+      "記録なし",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "名前の変更は試していないと書きました。移動リストには新しい名前（たとえば、画像とWordファイルが日付付きの小文字）と緑のチェックが表示されており、今回の実行で名前の変更は適用されていました。ディスク上では未確認。"
+    ],
+    [
+      "tester-error",
+      "最初の試行では、案内を読まずに進め、セットアップでミスをしたと考えています。何がうまくいかなかったかは記録なしです。"
+    ],
+    [
+      "tester-error",
+      "list_smart_foldersとsearch_documentsだけを呼び出したあとで、検索システムのようには見えないと判断しました。ツール一覧にはget_document_summaryとchat_with_documentsも含まれていますが、これらは呼び出していません。"
+    ],
+    [
+      "assumption",
+      "彼の「40 %が不一致」という見積もりは、126ファイルが286ファイルに含まれる場合の、確認の章の44 %の丸めです。先の「70〜80 %」は感覚であり、数えたものではありません。"
+    ],
+    [
+      "tester-error",
+      "記録の欠落：アプリのバージョン、モデルとそのダウンロード、入力フォルダの内容、彼が書いたフォルダの説明、分析時間、移動の前にすべてのファイルを確認したかどうか、286ファイルと75ファイルの移動が完了したかどうか、MCP接続の方法、開発者が変更した内容、元に戻す、アンインストール。音声からテキストへの誤変換は正規化しました。「Stratosorgstack」はStratoSort Stack、「SST」はSSD、「M C Ps」はMCPsです。「Low key」と「Loki」はLociと読み替えており、テスターに確認済みです。「Some AI mechanism picked up that」は確認のステップのバナーと読み替えています（推測）。"
+    ]
+  ],
+  "findings": [
+    [
+      "SS-01",
+      "インストーラーのウィンドウには、「StratoSort Stack」というラベルのアプリアイコンが、Applicationsのショートカットの隣に表示されています。インストーラーのサイズは記録なし。",
+      "インストール",
+      "observed",
+      "Info",
+      [
+        "stratosort-dmg-window-app-and-applications"
+      ]
+    ],
+    [
+      "SS-02",
+      "ウェルカム画面には「Step 1 of 5, Start securely」とあり、GuidedとDashboardのモード、メインボタン「Organize files now, recommended for a first session」、そしてAIとモデルの設定とスマートフォルダのためのサイドボタンがあります。テスターは最初の試行のあと、ガイド付きの手順を選びました。通知のベルには件数が表示されていますが、内容は記録なしです。",
+      "オンボーディング",
+      "observed",
+      "Positive",
+      [
+        "stratosort-welcome-screen-guided-mode",
+        "stratosort-start-options-guided-steps-or-dashboard"
+      ]
+    ],
+    [
+      "SS-03",
+      "提示されたモデル、選択したモデル、ダウンロードしたモデル、そのサイズ、セットアップ時間は記録なしです。ディレクトリには、ベースモデルで約7 GBと記載されています（第三者情報）。",
+      "オンボーディング",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "SS-04",
+      "テスターのメモによれば、開発者は最初の試行に対する彼のコメントを確認し、数日以内にいくつかの問題に対応しました。メッセージは示されておらず、問題とバージョンは記録なしです。",
+      "サポート",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SS-05",
+      "テスターはアプリにフォルダ全体を読み込ませようとしましたが、読み込まれず、そのあと個別のファイルを渡しました。フォルダ、メッセージの有無、原因は記録なしで、スクリーンショットはありません。",
+      "フォルダ",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-06",
+      "入力フォルダと出力フォルダの作成は、テスターにとってアプリ内よりFinderのほうが簡単で、彼はこの点でアプリを分かりにくいと感じました。アプリは説明付きのスマートフォルダという言い方をしますが、テスターは入力フォルダと出力フォルダで考えています（テスターの見解）。アプリ内でのフォルダ作成は存在します（確認のステップのバナーを参照）。",
+      "フォルダ",
+      "tester-view",
+      "Medium",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-07",
+      "今回の実行では外付けSSD上の出力フォルダが使われ、移動リストとMCPの表からも分かります。テスターによれば、最初の試行では外付けSSDが受け付けられなかったとのことですが、原因は記録なしです。",
+      "フォルダ",
+      "observed",
+      "Positive",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-08",
+      "「Trying your Smart Folders」は少数のファイルを分析し、「No files are moved」と表示します。結果画面にも「Nothing has moved」と繰り返し表示され、ファイルが誤った場所に入りそうな場合はフォルダの説明を編集するよう案内されます。",
+      "ドライラン",
+      "observed",
+      "Positive",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-09",
+      "5ファイルのうち、2つが割り当てられました。ClarityのCSVが信頼度43 %でClarityへ、画像が65 %でPicturesへ。3つはUncategorizedへ行き、それぞれ最も近いフォルダが示されました。Clarity、Leftovers、excel GScです。3つのうちの1つは、テスター自身の確認メモのファイルでした。",
+      "ドライラン",
+      "measured",
+      "Medium",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-10",
+      "プレビューのステップで、テスターは各結果を承認または却下するフォームがほしいと考えました（テスターの見解）。画面には「Edit Smart Folders」と「Analyze the other 281 files」があります。ファイルごとの選択は後の確認のステップで表示されます。",
+      "ドライラン",
+      "tester-view",
+      "Low",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-11",
+      "進行カードには「Analyzing 5 of 281 files, 2 % complete」、処理中のファイル、Stopボタンが表示されます。分析の総時間は記録なしです。",
+      "分析",
+      "measured",
+      "Info",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "SS-12",
+      "各ファイルにカードがあり、チェックボックス、編集できる提案名、カテゴリのドロップダウン（最も近い一致とその他の提案）、理由付きの「Needs review」の注記、信頼度のバー、Detailsのリンクが付いています。移動の前にすべてのファイルを確認したかどうかは記録なしです。",
+      "確認",
+      "observed",
+      "Positive",
+      [
+        "stratosort-category-dropdown-suggested-folders",
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-13",
+      "Detailsには、プロジェクト、目的、日付、文書の種類、方法、長さ、要約、キーワード、判断の根拠、抽出されたテキストが表示されます。これがデータベースに保存されているというのはテスターの解釈で、MCPツールの文言ではキャッシュされた分析に触れています（ベンダーの主張）。",
+      "確認",
+      "observed",
+      "Positive",
+      [
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "SS-14",
+      "Excelファイルでは、抽出されたテキストは300文字で、列見出しと数行のあとに省略記号で終わっています。この制限がほかのファイルの種類や分類のステップにも当てはまるかどうかは不明です（推測：スプレッドシートでの弱い一致の説明になる可能性）。",
+      "確認",
+      "observed",
+      "Medium",
+      [
+        "stratosort-extracted-text-300-characters"
+      ]
+    ],
+    [
+      "SS-15",
+      "サイトのURLにちなんだ名前の、6 KBずつのSearch ConsoleのExcelエクスポート2つは、説明的な提案名を得ましたが、フォールバックに入りました。注記ではテスターがそれ用に作ったフォルダ「excel GSc」が最も近いとされていたにもかかわらずです。原因は切り分けていません。",
+      "確認",
+      "observed",
+      "Medium",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-16",
+      "バナーには「126 files are uncategorized」と「103 are from Promptquorum. Want a Smart Folder for them?」とあり、Create folder、Different folder、Reanalyzeのボタンが付いています。この提案は、内容の種類ではなく、ファイル名に含まれるサイト名に従っているようです（テスターの見解と推測）。126を286の44 %と読むのは計算です（推測）。",
+      "確認",
+      "measured",
+      "Low",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-17",
+      "「Organize 286 files, moving files to their destinations」には、緑のチェックと外付けSSD上のパスが付いた予定の操作が一覧表示され、移動が完了またはキャンセルされるまでステップの移動は一時停止されます。テスター自身のテストメモの文書もファイルに含まれていました。2つ目のキャプチャには「Organize 75 files」とあり、最初のものとの関係は記録なしで、どちらの終了も示されていません。",
+      "移動",
+      "observed",
+      "Info",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-18",
+      "移動リストでは、元の名前が日付付きの小文字の名前に置き換えられていました。たとえば「Gesamtansicht.jpeg」は「gesamtansicht-2026-10-20.jpeg」に、「StratoSort hands on review.docx」は「stratosort-review-2026-11-12.docx」になりました。日付の由来は示されていません。",
+      "移動",
+      "observed",
+      "Medium",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-19",
+      "126 KBのWhatsApp画像1枚が単独で追加され、提案名、最も近い一致のPictures、信頼度64 %のカードが表示されました。テスターは、どこにあるファイルでも1つずつ追加できると述べています。",
+      "移動",
+      "measured",
+      "Positive",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "SS-20",
+      "アプリにはMCPの画面があり、4つのツールが一覧表示されています。search_documents、chat_with_documents、get_document_summary、list_smart_foldersです。1行で、読み取りのみで、ファイルを移動、名前変更、削除しないと書かれています（ベンダーの主張）。ボタンでClaude Desktop、Cursor、Zed向けのセットアップをコピーできます。",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-tool-list-and-client-setup"
+      ]
+    ],
+    [
+      "SS-21",
+      "テスターは、別のローカルAIアプリへの接続を「backwards engineer」する必要があったと述べています。何が失敗し、何を変更したかは記録なしです。",
+      "MCP",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-22",
+      "クライアントは、ローカルアドレスで「Strato is connected and offers 4 tools」と表示し、各ツールについて、変更できるかどうかは示されていないと表示しています。ツールに読み取り専用の印が付いていないというのは推測で、アプリは読み取りのみだと述べています。",
+      "MCP",
+      "observed",
+      "Low",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "SS-23",
+      "list_smart_foldersは、フォルダ、ファイル数、説明、保存先パスの表を返しました。見えている行：Uncategorized 53、Pictures 8、excel GSc 196。53は、先に確認のステップで見た126とは一致しません。2つの間の経過時間は記録なしのため、突き合わせはしていません。",
+      "MCP",
+      "measured",
+      "Positive",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "SS-24",
+      "クエリ「Clarity data」でのsearch_documentsは、Clarityフォルダにある4つのCSVファイルを、それぞれ1行の説明付きで返しました。クライアントの返答は、出典はMicrosoft Clarityか類似のツールだろうと推測しています。ファイルの内容に照らした正確さは確認しておらず、返答は見えている範囲の下に続いています。",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "SS-25",
+      "ウェルカム画面にはプライベートでオンデバイスと表示され、創設者はアカウントもテレメトリもないと述べています（ベンダーの主張）。通信は調べておらず、オフラインでの実行も試しておらず、スクリーンショットの中にアカウント画面は見当たらず、使用したモデルは記録なしです。",
+      "信頼性",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SS-26",
+      "未テストまたは記録なし：元に戻す、コピーモード、Dashboardモード、AIとモデルの設定、get_document_summary、chat_with_documents、言い換え機能、計時、メモリ、オフライン利用、アンインストール、WindowsとLinux。",
+      "範囲",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "重要度は、初めて使う人への影響度です。案であり、実測値ではありません。Infoは、問題でも長所でもない所見を示します。Positiveは、うまく動作したことを示します。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "混在したプライベートな文書フォルダを持ち、小さく始めて、頻繁に確認し、フォルダの説明を調整することを受け入れられるMacユーザー（1回のセッションからの推測）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "最初の1回で正確な振り分けを期待する人。"
+      ],
+      [
+        "third-party",
+        "ライセンスを確認せずに商用利用したい人：ディレクトリには、非商用ライセンスと、商用利用向けの席数単位の有料ライセンスが記載されています。"
+      ]
+    ],
+    "retest": "新しいメジャーバージョンが出たとき、開発者が対応した問題が反映されたあと、または来年テスターが会社の文書を用意できたときに再テストしてください。対象：アプリのバージョンとモデルの記録、既知のテストセットを実行して一致と未分類を数えること、スプレッドシートのテキスト制限、元に戻す、コピーモード、get_document_summaryとchat_with_documents、通信を調べたオフライン利用、実行時のメモリ、アンインストール、ライセンス条件。"
+  },
+  "background_intro": "第三者情報で、未検証です。テストとは分けて記載しています。",
+  "background": [
+    [
+      "third-party",
+      "開発者：Ben Kennedy博士。約17か月のパートタイム作業で単独で作ったと述べています（ベンダーの主張、2026-11-10の創設者コメント）。"
+    ],
+    [
+      "third-party",
+      "PolyForm Noncommercial 1.0.0によるソース公開、フリーミアム。ディレクトリには、商用利用には席数単位の有料ライセンスが必要なこと、プロジェクトがまだ非常に新しいこと、アップデート確認が既定でオンであること、プライバシーに関する主張はテストしていないことが記されています。2026-11-01のリリース5.1.2で、Mac、Windows、Linux向けのインストーラーがあります。出典：PromptQuorumディレクトリ項目、2026-11-10確認。"
+    ]
+  ],
+  "sources": [
+    "テスターのハンズオンのメモとスクリーンショット（元のWordメモ。生のメモのPDFは追加予定）。",
+    "StratoSortのPromptQuorumディレクトリ項目とレビュー（slug: stratosort）、2026-11-10確認。",
+    "ベンダーサイトstratosort.com（ベンダーの主張）とソースリポジトリiLevyTate/StratoSortStack。どちらもディレクトリに記載されており、このテストでは開いていません。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "stratosort-welcome-screen-guided-mode",
+      "figure": 1,
+      "file": "stratosort-welcome-screen-guided-mode.webp",
+      "path": "images/stratosort-welcome-screen-guided-mode.webp",
+      "alt": "StratoSortのウェルカム画面：Step 1 of 5、Guidedモードがオン、黄色のOrganize files nowボタン、AIとモデルの設定およびSmart foldersのボタン。",
+      "caption": "Guidedモードのウェルカム画面。プライバシーに関する一文はベンダーの主張。観察。",
+      "role": "hero",
+      "width": 1432,
+      "height": 791,
+      "bytes": 47780,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-install"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-five-file-dry-run-where-files-would-go",
+      "figure": 2,
+      "file": "stratosort-five-file-dry-run-where-files-would-go.webp",
+      "path": "images/stratosort-five-file-dry-run-where-files-would-go.webp",
+      "alt": "「Where these files would go」というタイトルのプレビュー：5ファイル、3つはUncategorized、ClarityのCSV1つは信頼度43パーセント、画像1つは65パーセント。",
+      "caption": "5ファイルのドライラン、何も移動せず。信頼度の値はアプリから読み取り。実測。",
+      "role": "moment",
+      "width": 1312,
+      "height": 992,
+      "bytes": 85956,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-dryrun"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-extracted-text-300-characters",
+      "figure": 3,
+      "file": "stratosort-extracted-text-300-characters.webp",
+      "path": "images/stratosort-extracted-text-300-characters.webp",
+      "alt": "Detailsパネル：キーワードはsites、linking、page。スプレッドシートから抽出された300文字のテキストが、いくつかのドメイン名のあとで途切れている。",
+      "caption": "Excelファイルの抽出テキストは300文字で終わる。観察。",
+      "role": "moment",
+      "width": 928,
+      "height": 792,
+      "bytes": 29322,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-review-cards-fallback-no-folder-match",
+      "figure": 4,
+      "file": "stratosort-review-cards-fallback-no-folder-match.webp",
+      "path": "images/stratosort-review-cards-fallback-no-folder-match.webp",
+      "alt": "Search ConsoleのExcelエクスポート2つの確認カード：提案名、カテゴリ「Fallback no folder match」、最も近いフォルダとしてexcel GScを挙げる注記。",
+      "caption": "「excel GSc」が最も近いフォルダだったにもかかわらず、フォールバックに残ったExcelエクスポート2つ。観察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 773,
+      "bytes": 64930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-126-files-uncategorized-banner",
+      "figure": 5,
+      "file": "stratosort-126-files-uncategorized-banner.webp",
+      "path": "images/stratosort-126-files-uncategorized-banner.webp",
+      "alt": "バナー：126 files are uncategorized、103 are from Promptquorum。ボタンはCreate folder for Promptquorum、Different folder、Reanalyze 126。",
+      "caption": "確認のステップの未分類バナー。アプリによる実測。",
+      "role": "moment",
+      "width": 1600,
+      "height": 355,
+      "bytes": 23238,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-organize-286-files-planned-operations",
+      "figure": 6,
+      "file": "stratosort-organize-286-files-planned-operations.webp",
+      "path": "images/stratosort-organize-286-files-planned-operations.webp",
+      "alt": "「Organize 286 files, moving files to their destinations」：小文字の新しいファイル名と外付けSSDのパスを示す、予定の操作の一覧。",
+      "caption": "移動の序盤の、名前が変更されたファイルを含む予定の操作。観察。",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 62550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-mcp-search-result-clarity-folder-files",
+      "figure": 7,
+      "file": "stratosort-mcp-search-result-clarity-folder-files.webp",
+      "path": "images/stratosort-mcp-search-result-clarity-folder-files.webp",
+      "alt": "LociがStratoから受け取った回答：Clarityフォルダにある4つのCSVファイルが短い説明付きで一覧表示され、返答は見えている範囲の下に続いている。",
+      "caption": "Lociでのsearch_documents呼び出し「Clarity data」の結果。観察。",
+      "role": "moment",
+      "width": 1558,
+      "height": 946,
+      "bytes": 123930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリ（MCPクライアント）のスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-dmg-window-app-and-applications",
+      "figure": 8,
+      "file": "stratosort-dmg-window-app-and-applications.webp",
+      "path": "images/stratosort-dmg-window-app-and-applications.webp",
+      "alt": "金、青、紺の3本の縞のStratoSort Stackアプリアイコンが、Applicationsフォルダのショートカットの隣に表示されたインストーラーのウィンドウ。",
+      "caption": "インストーラーのウィンドウ。観察。",
+      "role": "gallery",
+      "width": 1374,
+      "height": 858,
+      "bytes": 21362,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-start-options-guided-steps-or-dashboard",
+      "figure": 9,
+      "file": "stratosort-start-options-guided-steps-or-dashboard.webp",
+      "path": "images/stratosort-start-options-guided-steps-or-dashboard.webp",
+      "alt": "「Prefer a different starting point」の下の2つのカード：Guided stepsとDashboard。それぞれ1行の説明付き。",
+      "caption": "ほかの始め方。観察。",
+      "role": "gallery",
+      "width": 1428,
+      "height": 364,
+      "bytes": 17060,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-analysis-progress-5-of-281-files",
+      "figure": 10,
+      "file": "stratosort-analysis-progress-5-of-281-files.webp",
+      "path": "images/stratosort-analysis-progress-5-of-281-files.webp",
+      "alt": "進行カード：Analyzing 5 of 281 files、2パーセント完了、現在Loci app test.docxというファイルを処理中。Stop analysisボタン付き。",
+      "caption": "分析の進行。総所要時間は記録なし。実測。",
+      "role": "gallery",
+      "width": 1431,
+      "height": 287,
+      "bytes": 11658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-category-dropdown-suggested-folders",
+      "figure": 11,
+      "file": "stratosort-category-dropdown-suggested-folders.webp",
+      "path": "images/stratosort-category-dropdown-suggested-folders.webp",
+      "alt": "Suggestedグループ付きのカテゴリのドロップダウン：Pictures（最も近い一致）、Leftovers、excel GSc、Clarity。",
+      "caption": "確認のステップでのファイルごとのカテゴリ選択。観察。",
+      "role": "gallery",
+      "width": 844,
+      "height": 596,
+      "bytes": 14336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-file-analysis-details-metadata",
+      "figure": 12,
+      "file": "stratosort-file-analysis-details-metadata.webp",
+      "path": "images/stratosort-file-analysis-details-metadata.webp",
+      "alt": "ファイル分析のDetails：プロジェクトはTop sites linking、日付は2026-08-08、文書の種類はExcel Spreadsheet、方法はcontent、長さは300 chars、そして要約。",
+      "caption": "スプレッドシート1つのDetailsビュー。観察。",
+      "role": "gallery",
+      "width": 1012,
+      "height": 1024,
+      "bytes": 38536,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-single-file-card-whatsapp-image-64-confidence",
+      "figure": 13,
+      "file": "stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "path": "images/stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "alt": "126 KBのWhatsApp画像の確認カード：提案名はwhatsapp-image-2026-11-10.jpeg、カテゴリはPicturesが最も近い一致、信頼度64パーセント。",
+      "caption": "テスト用フォルダの外から追加した単独のファイル。実測。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 772,
+      "bytes": 26640,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-mcp-tool-list-and-client-setup",
+      "figure": 14,
+      "file": "stratosort-mcp-tool-list-and-client-setup.webp",
+      "path": "images/stratosort-mcp-tool-list-and-client-setup.webp",
+      "alt": "4つのツールを一覧表示したMCPの画面：search_documents、chat_with_documents、get_document_summary、list_smart_folders、読み取り専用の注記、Copy configボタン。",
+      "caption": "アプリ内のMCPの画面。読み取り専用の一文はベンダーの主張。観察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 689,
+      "bytes": 54658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-mcp-connected-in-client-four-tools",
+      "figure": 15,
+      "file": "stratosort-mcp-connected-in-client-four-tools.webp",
+      "path": "images/stratosort-mcp-connected-in-client-four-tools.webp",
+      "alt": "Lociのダイアログ：Strato is connected and offers 4 tools。各ツールに「Doesn't say whether it can change things」の表示があり、search_documentsの入力が一覧表示されている。",
+      "caption": "Lociに表示されたツール一覧。観察。",
+      "role": "gallery",
+      "width": 1348,
+      "height": 1272,
+      "bytes": 80732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリ（MCPクライアント）のスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-mcp-servers-list-in-client",
+      "figure": 16,
+      "file": "stratosort-mcp-servers-list-in-client.webp",
+      "path": "images/stratosort-mcp-servers-list-in-client.webp",
+      "alt": "LociのMCPサーバー一覧：27ツールのPromptQuorumと4ツールのStrato、どちらも接続済み。「Add a server」の行もある。",
+      "caption": "Lociのサーバー一覧。観察。",
+      "role": "gallery",
+      "width": 1216,
+      "height": 492,
+      "bytes": 18196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリ（MCPクライアント）のスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-mcp-list-smart-folders-result-table",
+      "figure": 17,
+      "file": "stratosort-mcp-list-smart-folders-result-table.webp",
+      "path": "images/stratosort-mcp-list-smart-folders-result-table.webp",
+      "alt": "Lociのスマートフォルダの表：Uncategorized 53ファイル、Pictures 8、excel GSc 196。説明と外付けSSD上の保存先パス付き。",
+      "caption": "list_smart_foldersの結果。件数は表示のとおりで、後ろの行は見えない。実測。",
+      "role": "gallery",
+      "width": 1586,
+      "height": 1040,
+      "bytes": 72116,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリ（MCPクライアント）のスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-mcp-search-documents-permission-prompt",
+      "figure": 18,
+      "file": "stratosort-mcp-search-documents-permission-prompt.webp",
+      "path": "images/stratosort-mcp-search-documents-permission-prompt.webp",
+      "alt": "許可のプロンプト：Allow Strato to run search_documents、クエリはClarity data、ローカルアドレス127.0.0.1、ボタンはAllow onceとDecline。",
+      "caption": "検索の前の許可のプロンプト。観察。",
+      "role": "gallery",
+      "width": 1558,
+      "height": 1002,
+      "bytes": 53140,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Lociアプリ（MCPクライアント）のスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    }
+  ],
+  "figure_order": [
+    "stratosort-welcome-screen-guided-mode",
+    "stratosort-five-file-dry-run-where-files-would-go",
+    "stratosort-extracted-text-300-characters",
+    "stratosort-review-cards-fallback-no-folder-match",
+    "stratosort-126-files-uncategorized-banner",
+    "stratosort-organize-286-files-planned-operations",
+    "stratosort-mcp-search-result-clarity-folder-files",
+    "stratosort-dmg-window-app-and-applications",
+    "stratosort-start-options-guided-steps-or-dashboard",
+    "stratosort-analysis-progress-5-of-281-files",
+    "stratosort-category-dropdown-suggested-folders",
+    "stratosort-file-analysis-details-metadata",
+    "stratosort-single-file-card-whatsapp-image-64-confidence",
+    "stratosort-mcp-tool-list-and-client-setup",
+    "stratosort-mcp-connected-in-client-four-tools",
+    "stratosort-mcp-servers-list-in-client",
+    "stratosort-mcp-list-smart-folders-result-table",
+    "stratosort-mcp-search-documents-permission-prompt"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年11月17日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "メモリ",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "アプリ",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好",
+      "Info": "情報"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

@@ -4,7 +4,7 @@
 // Storage: Upstash Redis (already used). Nothing personal is stored:
 //   - no IP address (it is only hashed with a salt as a short-lived rate-limit key), no free text, no visitor or session ID;
 //   - only aggregated counters per variant, language, device type and page category.
-// Consent: ask_hans_button_impression / _click / _opened are sent without consent, like Umami (cookieless,
+// Consent: ask_hans_button_click / _opened are sent without consent, like Umami (cookieless,
 // anonymous). All funnel events after the first question are sent by the client only after "Yes" (see CTA_EVENTS).
 //
 // Keys (all expire after 120 days):
