@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-budget-gpus-local-llm",
+        "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
+        "url": "/local-llms/best-budget-gpus-local-llm",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "newelle-review",
         "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
@@ -72,17 +80,9 @@
         "url": "/local-llms/local-llm-security-privacy-checklist",
         "dateModified": "2026-11-15",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "run-qwen-locally-guide-2026",
-        "title": "How to Run Qwen 3.6 and Qwen 3.8 Locally in 2026: Ollama and LM Studio Setup Guide",
-        "url": "/local-llms/run-qwen-locally-guide-2026",
-        "dateModified": "2026-11-15",
-        "tier": "about"
       }
     ],
-    "totalCount": 364,
+    "totalCount": 368,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -137,38 +145,30 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "rtx-5090-vs-rtx-4090-local-llm",
+        "title": "RTX 5090 vs RTX 4090 for Local LLM Inference",
+        "url": "/local-llms/rtx-5090-vs-rtx-4090-local-llm",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-gpu-buying-guide-local-llm-2026",
+        "title": "Best Graphics Card for Local LLMs: GPU Buying Guide 2026",
+        "url": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
+        "dateModified": "2026-11-15",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "koboldcpp-review",
-        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-        "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-review",
-        "title": "LM Studio Review: The GUI-First Local AI Desktop App",
-        "url": "/power-local-llm/lm-studio-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 194,
+    "totalCount": 196,
     "capped": true
   },
   "vLLM": {
@@ -6017,6 +6017,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -6061,14 +6069,6 @@
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
         "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
         "tier": "about"
       },
       {
@@ -6141,6 +6141,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -6161,14 +6169,6 @@
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
         "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
         "tier": "about"
       },
       {
@@ -6278,7 +6278,7 @@
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -6980,7 +6980,7 @@
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -10363,6 +10363,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -10407,14 +10415,6 @@
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
         "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-08",
         "tier": "mentioned"
       },
       {
@@ -11103,6 +11103,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llms-vs-claude-pro",
+        "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
+        "url": "/local-llms/local-llms-vs-claude-pro",
+        "dateModified": "2026-11-15",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-amd-mini-pc-local-llm-2026",
         "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
         "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
@@ -11146,14 +11154,6 @@
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "wechat-bot-local-llm-personal-assistant-2026",
-        "title": "WeChat Bot with Local LLM: Build a Private AI Personal Assistant (2026)",
-        "url": "/power-local-llm/wechat-bot-local-llm-personal-assistant-2026",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
@@ -12971,6 +12971,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -13032,17 +13040,9 @@
         "url": "/power-local-llm/nutrient-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "open-science-desktop-review",
-        "title": "Open Science Desktop Review: Free AI Research Workbench for Your Own Files",
-        "url": "/power-local-llm/open-science-desktop-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 272,
+    "totalCount": 274,
     "capped": true
   },
   "Qdrant": {
