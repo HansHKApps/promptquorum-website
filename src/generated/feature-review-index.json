@@ -1119,6 +1119,11 @@
     "urlSlug": "open-generative-ai-review",
     "url": "/power-local-llm/open-generative-ai-review"
   },
+  "labelme": {
+    "cluster": "power-local-llm",
+    "urlSlug": "labelme-review",
+    "url": "/power-local-llm/labelme-review"
+  },
   "skales": {
     "cluster": "power-local-llm",
     "urlSlug": "skales-review",

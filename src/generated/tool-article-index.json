@@ -11001,6 +11001,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Labelme": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "labelme-review",
+        "title": "Labelme Review: Image Annotation with Offline AI Models and AI Agent Access",
+        "url": "/power-local-llm/labelme-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Skales": {
     "articles": [
       {
