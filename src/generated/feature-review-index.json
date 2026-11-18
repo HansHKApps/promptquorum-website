@@ -1364,6 +1364,11 @@
     "urlSlug": "pooled-review",
     "url": "/power-local-llm/pooled-review"
   },
+  "reactive-resume": {
+    "cluster": "power-local-llm",
+    "urlSlug": "reactive-resume-review",
+    "url": "/power-local-llm/reactive-resume-review"
+  },
   "funclip": {
     "cluster": "power-local-llm",
     "urlSlug": "funclip-review",

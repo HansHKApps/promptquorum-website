@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 372,
+    "totalCount": 373,
     "capped": true
   },
   "llama.cpp": {
@@ -10027,6 +10027,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "reactive-resume-review",
+        "title": "Reactive Resume Review: Free Open-Source Resume Builder",
+        "url": "/power-local-llm/reactive-resume-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-mail-review",
         "title": "Local AI Mail Review: Brand-New Android Email Client with an On-Device AI",
         "url": "/power-local-llm/local-ai-mail-review",
@@ -10042,7 +10050,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "AIClient2API": {
@@ -11300,9 +11308,17 @@
         "url": "/power-local-llm/oleafly-review",
         "dateModified": "2026-11-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "reactive-resume-review",
+        "title": "Reactive Resume Review: Free Open-Source Resume Builder",
+        "url": "/power-local-llm/reactive-resume-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Rescript": {
@@ -12409,6 +12425,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Reactive Resume": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "reactive-resume-review",
+        "title": "Reactive Resume Review: Free Open-Source Resume Builder",
+        "url": "/power-local-llm/reactive-resume-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "FunClip": {
     "articles": [
       {
@@ -13373,22 +13403,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "rtx-3090-local-llm-buy-or-rent",
-        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
-        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+        "slug": "reactive-resume-review",
+        "title": "Reactive Resume Review: Free Open-Source Resume Builder",
+        "url": "/power-local-llm/reactive-resume-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "stirling-pdf-review",
-        "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
-        "url": "/power-local-llm/stirling-pdf-review",
+        "slug": "rtx-3090-local-llm-buy-or-rent",
+        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
+        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 278,
+    "totalCount": 279,
     "capped": true
   },
   "Qdrant": {
@@ -15857,6 +15887,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "reactive-resume-review",
+        "title": "Reactive Resume Review: Free Open-Source Resume Builder",
+        "url": "/power-local-llm/reactive-resume-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -15864,7 +15902,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "pcAI Photo Retouch": {

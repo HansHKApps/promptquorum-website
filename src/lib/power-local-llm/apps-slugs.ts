@@ -328,6 +328,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'kition':                                 'kition',
   'sokuji':                                 'sokuji',
   'pooled':                                 'pooled',
+  'reactive-resume':                        'reactive-resume',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
