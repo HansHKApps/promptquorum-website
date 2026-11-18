@@ -1139,6 +1139,11 @@
     "urlSlug": "nativ-review",
     "url": "/power-local-llm/nativ-review"
   },
+  "newelle": {
+    "cluster": "power-local-llm",
+    "urlSlug": "newelle-review",
+    "url": "/power-local-llm/newelle-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
