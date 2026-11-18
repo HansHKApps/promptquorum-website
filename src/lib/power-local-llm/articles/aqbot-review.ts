@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot is an open-source (AGPL-3.0) desktop AI client that puts chat with many providers, agents, MCP tools, document search and a local API gateway into one app.** It runs on macOS, Windows and Linux and is free; you pay only the model providers you connect. PromptQuorum found no privacy policy, terms page or named company on the website, and has not tested the app.',
+      '**AQBot is an open-source (AGPL-3.0) desktop AI client that puts chat with many providers, agents, MCP tools, document search and a local API gateway into one app.** It runs on macOS, Windows and Linux and, according to the maker, is free; you pay only the model providers you connect. PromptQuorum found no privacy policy, terms page or named company on the website, and has not tested the app.',
     quickAnswerTop: {
       en: {
         question: 'What is AQBot and who is it for?',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': 'AQBot', 'Noted in sources': 'AGPL-3.0; Mac/Windows/Linux; providers, agents, gateway' },
           { 'Tool': '[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client)', 'Noted in sources': 'AGPL 3.0; Mac/Windows/Linux; chat + document chat' },
-          { 'Tool': '[Jan](/power-local-llm/jan-review)', 'Noted in sources': 'Apache 2.0 (variant); Mac/Windows/Linux; local models' },
+          { 'Tool': '[Jan](/power-local-llm/jan-review)', 'Noted in sources': 'Apache 2.0 (see Jan review); Mac/Windows/Linux; local models' },
           { 'Tool': '[Newelle](/power-local-llm/newelle-review)', 'Noted in sources': 'GPL-3.0; Linux + macOS beta; providers or local models' },
           { 'Tool': '[Msty](/power-local-llm/msty-review)', 'Noted in sources': 'Closed source; Mac/Windows/Linux; freemium' },
         ],
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot ist ein quelloffener (AGPL-3.0) Desktop-KI-Client, der Chat mit vielen Anbietern, Agenten, MCP-Werkzeuge, Dokumentensuche und ein lokales API-Gateway in einer App vereint.** Er läuft unter macOS, Windows und Linux und ist kostenlos; Sie bezahlen nur die Modellanbieter, die Sie anbinden. PromptQuorum fand auf der Website weder eine Datenschutzerklärung noch Nutzungsbedingungen oder ein benanntes Unternehmen und hat die App nicht getestet.',
+      '**AQBot ist ein quelloffener (AGPL-3.0) Desktop-KI-Client, der Chat mit vielen Anbietern, Agenten, MCP-Werkzeuge, Dokumentensuche und ein lokales API-Gateway in einer App vereint.** Er läuft unter macOS, Windows und Linux und ist laut Hersteller kostenlos; Sie bezahlen nur die Modellanbieter, die Sie anbinden. PromptQuorum fand auf der Website weder eine Datenschutzerklärung noch Nutzungsbedingungen oder ein benanntes Unternehmen und hat die App nicht getestet.',
     quickAnswerTop: {
       de: {
         question: 'Was ist AQBot, und für wen ist es gedacht?',
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Werkzeug': 'AQBot', 'In Quellen genannt': 'AGPL-3.0; Mac/Windows/Linux; Anbieter, Agenten, Gateway' },
           { 'Werkzeug': '[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client)', 'In Quellen genannt': 'AGPL 3.0; Mac/Windows/Linux; Chat + Dokumenten-Chat' },
-          { 'Werkzeug': '[Jan](/de/power-local-llm/jan-review)', 'In Quellen genannt': 'Apache 2.0 (Variante); Mac/Windows/Linux; lokale Modelle' },
+          { 'Werkzeug': '[Jan](/de/power-local-llm/jan-review)', 'In Quellen genannt': 'Apache 2.0 (siehe Jan-Rezension); Mac/Windows/Linux; lokale Modelle' },
           { 'Werkzeug': '[Newelle](/de/power-local-llm/newelle-review)', 'In Quellen genannt': 'GPL-3.0; Linux + macOS-Beta; Anbieter oder lokale Modelle' },
           { 'Werkzeug': '[Msty](/de/power-local-llm/msty-review)', 'In Quellen genannt': 'Closed Source; Mac/Windows/Linux; Freemium' },
         ],
@@ -585,8 +585,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/aqbot-review-hero-fr.webp',
-    title: 'Test d’AQBot : client IA de bureau avec agents et passerelle API locale',
-    seoTitle: 'Test d’AQBot : client IA de bureau, passerelle locale',
+    title: 'Avis sur AQBot : client IA de bureau avec agents et passerelle API locale',
+    seoTitle: 'Avis sur AQBot : client IA de bureau, passerelle locale',
     intro:
       'AQBot 0.0.165 est un client IA de bureau à code source ouvert pour macOS, Windows et Linux, qui réunit la discussion avec plusieurs fournisseurs, des agents, des outils MCP, une base de connaissances documentaire et une passerelle API locale pour les outils de programmation. La licence est AGPL-3.0. Ce test s’appuie sur le site officiel et sur le dépôt GitHub avec son README et ses versions, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application en pratique.',
     metaDescription:
@@ -598,9 +598,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test AQBot',
+    primaryTerm: 'avis AQBot',
     targetKeywords: [
-      'test AQBot',
+      'avis AQBot',
       'client IA de bureau AQBot',
       'client IA de bureau open source',
       'passerelle API locale pour Claude Code',
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot est un client IA de bureau open source (AGPL-3.0) qui réunit dans une seule application la discussion avec de nombreux fournisseurs, des agents, des outils MCP, la recherche dans vos documents et une passerelle API locale.** Il fonctionne sous macOS, Windows et Linux et il est gratuit ; vous ne payez que les fournisseurs de modèles que vous connectez. PromptQuorum n’a trouvé sur le site ni politique de confidentialité, ni conditions d’utilisation, ni société nommée, et n’a pas testé l’application.',
+      '**AQBot est un client IA de bureau open source (AGPL-3.0) qui réunit dans une seule application la discussion avec de nombreux fournisseurs, des agents, des outils MCP, la recherche dans vos documents et une passerelle API locale.** Il fonctionne sous macOS, Windows et Linux et, selon l’éditeur, il est gratuit ; vous ne payez que les fournisseurs de modèles que vous connectez. PromptQuorum n’a trouvé sur le site ni politique de confidentialité, ni conditions d’utilisation, ni société nommée, et n’a pas testé l’application.',
     quickAnswerTop: {
       fr: {
         question: 'Qu’est-ce qu’AQBot et à qui s’adresse-t-il ?',
@@ -782,13 +782,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AQBot face aux alternatives',
         itemHeadings: true,
         content: [
-          '**AQBot recoupe d’autres clients de discussion IA de bureau ; PromptQuorum ne les a pas comparés en pratique.** Les outils ci-dessous figurent dans l’annuaire et sont décrits d’après leurs propres tests.',
+          '**AQBot recoupe d’autres clients de discussion IA de bureau ; PromptQuorum ne les a pas comparés en pratique.** Les outils ci-dessous figurent dans l’annuaire et sont décrits d’après leurs propres avis.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
           { 'Outil': 'AQBot', 'Selon les sources': 'AGPL-3.0; Mac/Windows/Linux; agents et passerelle API' },
           { 'Outil': '[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client)', 'Selon les sources': 'AGPL 3.0; Mac/Windows/Linux; discussion + documents' },
-          { 'Outil': '[Jan](/fr/power-local-llm/jan-review)', 'Selon les sources': 'Apache 2.0 (variante); Mac/Windows/Linux; modèles locaux' },
+          { 'Outil': '[Jan](/fr/power-local-llm/jan-review)', 'Selon les sources': 'Apache 2.0 (voir l’avis sur Jan); Mac/Windows/Linux; modèles locaux' },
           { 'Outil': '[Newelle](/fr/power-local-llm/newelle-review)', 'Selon les sources': 'GPL-3.0; Linux + macOS bêta; fournisseurs ou modèles locaux' },
           { 'Outil': '[Msty](/fr/power-local-llm/msty-review)', 'Selon les sources': 'Code fermé; Mac/Windows/Linux; freemium' },
         ],
@@ -850,9 +850,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test de Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client) — un client de bureau multi-fournisseurs avec discussion sur documents.',
-          '[Test de Jan](/fr/power-local-llm/jan-review) — une application de discussion de bureau open source, pensée pour le hors ligne.',
-          '[Test de Newelle](/fr/power-local-llm/newelle-review) — un assistant Linux avec fournisseurs cloud, modèles locaux et MCP.',
+          '[Avis sur Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client) — un client de bureau multi-fournisseurs avec discussion sur documents.',
+          '[Avis sur Jan](/fr/power-local-llm/jan-review) — une application de discussion de bureau open source, pensée pour le hors ligne.',
+          '[Avis sur Newelle](/fr/power-local-llm/newelle-review) — un assistant Linux avec fournisseurs cloud, modèles locaux et MCP.',
           '[Assistants de discussion LLM locaux comparés](/fr/power-local-llm/local-llm-chat-assistants-compared) — clients de discussion côte à côte.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locaux.',
         ],
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot es un cliente de IA de escritorio de código abierto (AGPL-3.0) que reúne en una sola aplicación el chat con muchos proveedores, agentes, herramientas MCP, búsqueda en documentos y una pasarela API local.** Funciona en macOS, Windows y Linux y es gratuito; solo pagas a los proveedores de modelos que conectes. PromptQuorum no encontró en el sitio web ninguna política de privacidad, términos ni empresa con nombre, y no ha probado la aplicación.',
+      '**AQBot es un cliente de IA de escritorio de código abierto (AGPL-3.0) que reúne en una sola aplicación el chat con muchos proveedores, agentes, herramientas MCP, búsqueda en documentos y una pasarela API local.** Funciona en macOS, Windows y Linux y, según el desarrollador, es gratuito; solo pagas a los proveedores de modelos que conectes. PromptQuorum no encontró en el sitio web ninguna política de privacidad, términos ni empresa con nombre, y no ha probado la aplicación.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es AQBot y para quién es?',
@@ -1070,7 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Herramienta': 'AQBot', 'Según las fuentes': 'AGPL-3.0; Mac/Windows/Linux; proveedores, agentes, pasarela' },
           { 'Herramienta': '[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client)', 'Según las fuentes': 'AGPL 3.0; Mac/Windows/Linux; chat + chat con documentos' },
-          { 'Herramienta': '[Jan](/es/power-local-llm/jan-review)', 'Según las fuentes': 'Apache 2.0 (variante); Mac/Windows/Linux; modelos locales' },
+          { 'Herramienta': '[Jan](/es/power-local-llm/jan-review)', 'Según las fuentes': 'Apache 2.0 (ver reseña de Jan); Mac/Windows/Linux; modelos locales' },
           { 'Herramienta': '[Newelle](/es/power-local-llm/newelle-review)', 'Según las fuentes': 'GPL-3.0; Linux + macOS beta; proveedores o modelos locales' },
           { 'Herramienta': '[Msty](/es/power-local-llm/msty-review)', 'Según las fuentes': 'Código cerrado; Mac/Windows/Linux; freemium' },
         ],
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O AQBot é um cliente de IA para desktop de código aberto (AGPL-3.0) que reúne em um só aplicativo chat com muitos provedores, agentes, ferramentas MCP, busca em documentos e um gateway de API local.** Ele roda em macOS, Windows e Linux e é gratuito; você paga apenas os provedores de modelos que conectar. A PromptQuorum não encontrou no site política de privacidade, termos de uso nem empresa identificada, e não testou o aplicativo.',
+      '**O AQBot é um cliente de IA para desktop de código aberto (AGPL-3.0) que reúne em um só aplicativo chat com muitos provedores, agentes, ferramentas MCP, busca em documentos e um gateway de API local.** Ele roda em macOS, Windows e Linux e, segundo o desenvolvedor, é gratuito; você paga apenas os provedores de modelos que conectar. A PromptQuorum não encontrou no site política de privacidade, termos de uso nem empresa identificada, e não testou o aplicativo.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o AQBot e para quem ele serve?',
@@ -1352,7 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ferramenta': 'AQBot', 'Segundo as fontes': 'AGPL-3.0; Mac/Windows/Linux; provedores, agentes, gateway' },
           { 'Ferramenta': '[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client)', 'Segundo as fontes': 'AGPL 3.0; Mac/Windows/Linux; chat + chat com documentos' },
-          { 'Ferramenta': '[Jan](/pt/power-local-llm/jan-review)', 'Segundo as fontes': 'Apache 2.0 (variante); Mac/Windows/Linux; modelos locais' },
+          { 'Ferramenta': '[Jan](/pt/power-local-llm/jan-review)', 'Segundo as fontes': 'Apache 2.0 (veja a análise do Jan); Mac/Windows/Linux; modelos locais' },
           { 'Ferramenta': '[Newelle](/pt/power-local-llm/newelle-review)', 'Segundo as fontes': 'GPL-3.0; Linux + macOS beta; provedores ou modelos locais' },
           { 'Ferramenta': '[Msty](/pt/power-local-llm/msty-review)', 'Segundo as fontes': 'Código fechado; Mac/Windows/Linux; freemium' },
         ],
@@ -1455,7 +1455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBotは、多数のプロバイダーとのチャット、エージェント、MCPツール、ドキュメント検索、ローカルAPIゲートウェイを1つのアプリにまとめた、オープンソース（AGPL-3.0）のデスクトップAIクライアントです。**macOS、Windows、Linuxで動作し、無料で使えます。支払うのは接続するモデルプロバイダーの利用料だけです。PromptQuorumは、公式サイトにプライバシーポリシー、利用規約、会社名が見当たらないことを確認しており、アプリは試していません。',
+      '**AQBotは、多数のプロバイダーとのチャット、エージェント、MCPツール、ドキュメント検索、ローカルAPIゲートウェイを1つのアプリにまとめた、オープンソース（AGPL-3.0）のデスクトップAIクライアントです。**macOS、Windows、Linuxで動作し、開発元によると無料で使えます。支払うのは接続するモデルプロバイダーの利用料だけです。PromptQuorumは、公式サイトにプライバシーポリシー、利用規約、会社名が見当たらないことを確認しており、アプリは試していません。',
     quickAnswerTop: {
       ja: {
         question: 'AQBotとは何で、誰に向いていますか？',
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'ツール': 'AQBot', '情報源での記載': 'AGPL-3.0、Mac/Windows/Linux、プロバイダー・エージェント・ゲートウェイ' },
           { 'ツール': '[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)', '情報源での記載': 'AGPL 3.0、Mac/Windows/Linux、チャット＋ドキュメントチャット' },
-          { 'ツール': '[Jan](/ja/power-local-llm/jan-review)', '情報源での記載': 'Apache 2.0（派生）、Mac/Windows/Linux、ローカルモデル' },
+          { 'ツール': '[Jan](/ja/power-local-llm/jan-review)', '情報源での記載': 'Apache 2.0（Janのレビュー参照）、Mac/Windows/Linux、ローカルモデル' },
           { 'ツール': '[Newelle](/ja/power-local-llm/newelle-review)', '情報源での記載': 'GPL-3.0、Linux＋macOSベータ、プロバイダーまたはローカルモデル' },
           { 'ツール': '[Msty](/ja/power-local-llm/msty-review)', '情報源での記載': 'クローズドソース、Mac/Windows/Linux、フリーミアム' },
         ],
@@ -1713,10 +1713,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/aqbot-review-hero-zh.webp',
-    title: 'AQBot 评测：带智能体和本地 API 网关的桌面 AI 客户端',
-    seoTitle: 'AQBot 评测：带本地网关与智能体的桌面 AI 客户端',
+    title: 'AQBot 点评：带智能体和本地 API 网关的桌面 AI 客户端',
+    seoTitle: 'AQBot 点评：带本地网关与智能体的桌面 AI 客户端',
     intro:
-      'AQBot 0.0.165 是一款开源桌面 AI 客户端，支持 macOS、Windows 和 Linux，把多服务商对话、智能体、MCP 工具、文档知识库和面向编程工具的本地 API 网关整合在一起。许可证为 AGPL-3.0。本评测基于官方网站以及 GitHub 仓库（含 README 和发布版本），核查日期为 2026年11月18日。PromptQuorum 没有亲自测试过该应用。',
+      'AQBot 0.0.165 是一款开源桌面 AI 客户端，支持 macOS、Windows 和 Linux，把多服务商对话、智能体、MCP 工具、文档知识库和面向编程工具的本地 API 网关整合在一起。许可证为 AGPL-3.0。本点评基于官方网站以及 GitHub 仓库（含 README 和发布版本），核查日期为 2026年11月18日。PromptQuorum 没有亲自测试过该应用。',
     metaDescription:
       'AQBot 是支持 macOS、Windows 和 Linux 的开源桌面 AI 客户端，带智能体、MCP、文档对话和本地 API 网关。已确认和未确认的内容一览。',
     twitterDescription:
@@ -1726,9 +1726,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'AQBot 评测',
+    primaryTerm: 'AQBot 点评',
     targetKeywords: [
-      'AQBot 评测',
+      'AQBot 点评',
       'AQBot 桌面 AI 客户端',
       '开源桌面 AI 客户端',
       'Claude Code 本地 API 网关',
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot 是一款开源（AGPL-3.0）桌面 AI 客户端，把与众多服务商的对话、智能体、MCP 工具、文档搜索和本地 API 网关放进同一个应用。**它支持 macOS、Windows 和 Linux，免费使用；你只需向所连接的模型服务商付费。PromptQuorum 在官网上没有找到隐私政策、使用条款或具名公司，也没有测试过该应用。',
+      '**AQBot 是一款开源（AGPL-3.0）桌面 AI 客户端，把与众多服务商的对话、智能体、MCP 工具、文档搜索和本地 API 网关放进同一个应用。**它支持 macOS、Windows 和 Linux，据开发者称免费使用；你只需向所连接的模型服务商付费。PromptQuorum 在官网上没有找到隐私政策、使用条款或具名公司，也没有测试过该应用。',
     quickAnswerTop: {
       zh: {
         question: 'AQBot 是什么，适合谁？',
@@ -1910,13 +1910,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AQBot 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**AQBot 与其他桌面 AI 对话客户端功能有重叠；PromptQuorum 没有亲自对它们做过对比。**下面的工具都在目录中，描述依据它们各自的评测。',
+          '**AQBot 与其他桌面 AI 对话客户端功能有重叠；PromptQuorum 没有亲自对它们做过对比。**下面的工具都在目录中，描述依据它们各自的点评。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
           { '工具': 'AQBot', '来源中的记载': 'AGPL-3.0；Mac/Windows/Linux；服务商、智能体、网关' },
           { '工具': '[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)', '来源中的记载': 'AGPL 3.0；Mac/Windows/Linux；对话 + 文档对话' },
-          { '工具': '[Jan](/zh/power-local-llm/jan-review)', '来源中的记载': 'Apache 2.0（变体）；Mac/Windows/Linux；本地模型' },
+          { '工具': '[Jan](/zh/power-local-llm/jan-review)', '来源中的记载': 'Apache 2.0（详见 Jan 点评）；Mac/Windows/Linux；本地模型' },
           { '工具': '[Newelle](/zh/power-local-llm/newelle-review)', '来源中的记载': 'GPL-3.0；Linux + macOS 测试版；服务商或本地模型' },
           { '工具': '[Msty](/zh/power-local-llm/msty-review)', '来源中的记载': '闭源；Mac/Windows/Linux；免费增值' },
         ],
@@ -1978,9 +1978,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Cherry Studio 评测](/zh/local-llms/cherry-studio-ai-desktop-client) — 支持文档对话的多服务商桌面客户端。',
-          '[Jan 评测](/zh/power-local-llm/jan-review) — 注重离线使用的开源桌面对话应用。',
-          '[Newelle 评测](/zh/power-local-llm/newelle-review) — 支持云端服务商、本地模型和 MCP 的 Linux 助手。',
+          '[Cherry Studio 点评](/zh/local-llms/cherry-studio-ai-desktop-client) — 支持文档对话的多服务商桌面客户端。',
+          '[Jan 点评](/zh/power-local-llm/jan-review) — 注重离线使用的开源桌面对话应用。',
+          '[Newelle 点评](/zh/power-local-llm/newelle-review) — 支持云端服务商、本地模型和 MCP 的 Linux 助手。',
           '[本地 LLM 对话助手对比](/zh/power-local-llm/local-llm-chat-assistants-compared) — 并排比较各类对话客户端。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
@@ -2019,7 +2019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot은 여러 제공업체와의 채팅, 에이전트, MCP 도구, 문서 검색, 로컬 API 게이트웨이를 하나의 앱에 담은 오픈소스(AGPL-3.0) 데스크톱 AI 클라이언트입니다.** macOS, Windows, Linux에서 실행되며 무료입니다. 연결하는 모델 제공업체에만 비용을 지불하면 됩니다. PromptQuorum은 공식 웹사이트에서 개인정보 처리방침, 이용 약관, 회사 이름을 찾지 못했으며 앱을 테스트하지 않았습니다.',
+      '**AQBot은 여러 제공업체와의 채팅, 에이전트, MCP 도구, 문서 검색, 로컬 API 게이트웨이를 하나의 앱에 담은 오픈소스(AGPL-3.0) 데스크톱 AI 클라이언트입니다.** macOS, Windows, Linux에서 실행되며 개발사에 따르면 무료입니다. 연결하는 모델 제공업체에만 비용을 지불하면 됩니다. PromptQuorum은 공식 웹사이트에서 개인정보 처리방침, 이용 약관, 회사 이름을 찾지 못했으며 앱을 테스트하지 않았습니다.',
     quickAnswerTop: {
       ko: {
         question: 'AQBot은 무엇이며 누구에게 적합합니까?',
@@ -2198,9 +2198,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '도구': 'AQBot', '출처에 기재된 내용': 'AGPL-3.0; Mac/Windows/Linux; 제공업체, 에이전트, 게이트웨이' },
           { '도구': '[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client)', '출처에 기재된 내용': 'AGPL 3.0; Mac/Windows/Linux; 채팅 + 문서 채팅' },
-          { '도구': '[Jan](/ko/power-local-llm/jan-review)', '출처에 기재된 내용': 'Apache 2.0(변형); Mac/Windows/Linux; 로컬 모델' },
+          { '도구': '[Jan](/ko/power-local-llm/jan-review)', '출처에 기재된 내용': 'Apache 2.0(Jan 리뷰 참조); Mac/Windows/Linux; 로컬 모델' },
           { '도구': '[Newelle](/ko/power-local-llm/newelle-review)', '출처에 기재된 내용': 'GPL-3.0; Linux + macOS 베타; 제공업체 또는 로컬 모델' },
-          { '도구': '[Msty](/ko/power-local-llm/msty-review)', '출처에 기재된 내용': '비공개 소스; Mac/Windows/Linux; 프리미엄' },
+          { '도구': '[Msty](/ko/power-local-llm/msty-review)', '출처에 기재된 내용': '비공개 소스; Mac/Windows/Linux; 무료+유료(프리미엄 모델)' },
         ],
       },
       faq: {
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/aqbot-review-hero-ar.webp',
     title: 'مراجعة AQBot: عميل ذكاء اصطناعي لسطح المكتب مع وكلاء وبوابة API محلية',
-    seoTitle: 'مراجعة AQBot: عميل ذكاء اصطناعي لسطح المكتب مع بوابة محلية',
+    seoTitle: 'مراجعة AQBot: عميل ذكاء اصطناعي مع بوابة محلية',
     intro:
       'AQBot 0.0.165 عميل ذكاء اصطناعي مفتوح المصدر لسطح المكتب على macOS وWindows وLinux، يجمع الدردشة مع عدة مزوّدين والوكلاء وأدوات MCP وقاعدة معرفة للمستندات وبوابة API محلية لأدوات البرمجة. الترخيص هو AGPL-3.0. تستند هذه المراجعة إلى الموقع الرسمي ومستودع GitHub مع ملف README والإصدارات، وتاريخ التحقق هو 18 نوفمبر 2026. لم تجرّب PromptQuorum التطبيق عمليًا.',
     metaDescription:
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**AQBot عميل ذكاء اصطناعي مفتوح المصدر (AGPL-3.0) لسطح المكتب يضع الدردشة مع مزوّدين كثيرين والوكلاء وأدوات MCP والبحث في المستندات وبوابة API محلية في تطبيق واحد.** يعمل على macOS وWindows وLinux وهو مجاني؛ تدفع فقط لمزوّدي النماذج الذين تربطهم به. لم تجد PromptQuorum على الموقع سياسة خصوصية ولا شروط استخدام ولا شركة مسمّاة، ولم تجرّب التطبيق.',
+      '**AQBot عميل ذكاء اصطناعي مفتوح المصدر (AGPL-3.0) لسطح المكتب يضع الدردشة مع مزوّدين كثيرين والوكلاء وأدوات MCP والبحث في المستندات وبوابة API محلية في تطبيق واحد.** يعمل على macOS وWindows وLinux وهو مجاني بحسب الشركة المطوّرة؛ تدفع فقط لمزوّدي النماذج الذين تربطهم به. لم تجد PromptQuorum على الموقع سياسة خصوصية ولا شروط استخدام ولا شركة مسمّاة، ولم تجرّب التطبيق.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو AQBot ولمن هو؟',
@@ -2480,7 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الأداة': 'AQBot', 'المذكور في المصادر': 'AGPL-3.0؛ Mac/Windows/Linux؛ مزوّدون ووكلاء وبوابة' },
           { 'الأداة': '[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)', 'المذكور في المصادر': 'AGPL 3.0؛ Mac/Windows/Linux؛ دردشة + دردشة مع المستندات' },
-          { 'الأداة': '[Jan](/ar/power-local-llm/jan-review)', 'المذكور في المصادر': 'Apache 2.0 (نسخة معدّلة)؛ Mac/Windows/Linux؛ نماذج محلية' },
+          { 'الأداة': '[Jan](/ar/power-local-llm/jan-review)', 'المذكور في المصادر': 'Apache 2.0 (انظر مراجعة Jan)؛ Mac/Windows/Linux؛ نماذج محلية' },
           { 'الأداة': '[Newelle](/ar/power-local-llm/newelle-review)', 'المذكور في المصادر': 'GPL-3.0؛ Linux + macOS تجريبي؛ مزوّدون أو نماذج محلية' },
           { 'الأداة': '[Msty](/ar/power-local-llm/msty-review)', 'المذكور في المصادر': 'مغلق المصدر؛ Mac/Windows/Linux؛ فريميوم' },
         ],
