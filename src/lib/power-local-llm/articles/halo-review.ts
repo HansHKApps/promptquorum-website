@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Platform': 'Mac (Apple silicon)', 'Get It': '[.dmg installer](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 or later, notarized per the docs' },
           { 'Platform': 'Mac (Intel)', 'Get It': '[.dmg installer](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 or later' },
-          { 'Platform': 'Windows (x64)', 'Get It': '[.exe installer](https://github.com/openkursar/hello-halo/releases/latest) — not code-signed yet, SmartScreen may warn' },
+          { 'Platform': 'Windows (x64)', 'Get It': '[.exe installer](https://github.com/openkursar/hello-halo/releases/latest) — not code-signed yet per the maker\'s 3.0.4 release notes, SmartScreen may warn' },
           { 'Platform': 'Linux (x64)', 'Get It': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+, no AI terminal' },
           { 'Platform': 'Android', 'Get It': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — remote client for your computer\'s Halo' },
           { 'Platform': 'iOS', 'Get It': 'Remote client, build from source (README)' },
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Permissions: trust mode ("automatically execute all operations") is always on, so the AI runs commands and edits files without asking.',
           'Remote Access: Halo listens on all network interfaces on port 3456, anyone with the password has full control, local network traffic is unencrypted HTTP, and internet access goes through a Cloudflare tunnel and Halo\'s address service.',
           'Other traffic: update checks against GitHub, store-source checks every 6 hours, web search through Bing or Baidu, and IM platforms when a bot is connected.',
-          'Personal WeChat bots have no permission control, so anyone who messages one gets owner access.',
+          'Personal WeChat bots: per the maker\'s security page for the 3.0.4 public build, they have no permission control, so anyone who messages one gets owner access.',
         ],
       },
       vsAlternatives: {
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plattform': 'Mac (Apple Silicon)', 'Bezugsquelle': '[.dmg-Installer](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 oder neuer, laut Doku notarisiert' },
           { 'Plattform': 'Mac (Intel)', 'Bezugsquelle': '[.dmg-Installer](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 oder neuer' },
-          { 'Plattform': 'Windows (x64)', 'Bezugsquelle': '[.exe-Installer](https://github.com/openkursar/hello-halo/releases/latest) — noch nicht signiert, SmartScreen kann warnen' },
+          { 'Plattform': 'Windows (x64)', 'Bezugsquelle': '[.exe-Installer](https://github.com/openkursar/hello-halo/releases/latest) — laut Hersteller-Versionshinweisen zu 3.0.4 noch nicht signiert, SmartScreen kann warnen' },
           { 'Plattform': 'Linux (x64)', 'Bezugsquelle': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+, ohne KI-Terminal' },
           { 'Plattform': 'Android', 'Bezugsquelle': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — Fernsteuerung für Halo auf Ihrem Computer' },
           { 'Plattform': 'iOS', 'Bezugsquelle': 'Fernsteuerung, Build aus dem Quellcode (README)' },
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Berechtigungen: Der Vertrauensmodus („alle Aktionen automatisch ausführen“) ist immer aktiv, die KI führt also Befehle aus und bearbeitet Dateien, ohne zu fragen.',
           'Remote Access: Halo lauscht auf allen Netzwerkschnittstellen an Port 3456, jeder mit dem Passwort hat volle Kontrolle, der Verkehr im lokalen Netz ist unverschlüsseltes HTTP, und der Internetzugang läuft über einen Cloudflare-Tunnel und den Adressdienst von Halo.',
           'Weiterer Datenverkehr: Update-Prüfungen bei GitHub, Prüfung der Store-Quellen alle 6 Stunden, Websuche über Bing oder Baidu und IM-Plattformen, sobald ein Bot verbunden ist.',
-          'Persönliche WeChat-Bots haben keine Berechtigungskontrolle, sodass jeder, der ihnen schreibt, Besitzerzugriff erhält.',
+          'Persönliche WeChat-Bots: Laut der Sicherheitsseite des Herstellers für den öffentlichen Build 3.0.4 haben sie keine Berechtigungskontrolle, sodass jeder, der ihnen schreibt, Besitzerzugriff erhält.',
         ],
       },
       vsAlternatives: {
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plataforma': 'Mac (Apple silicon)', 'Cómo obtenerlo': '[instalador .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 o posterior, notarizado según la documentación' },
           { 'Plataforma': 'Mac (Intel)', 'Cómo obtenerlo': '[instalador .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 o posterior' },
-          { 'Plataforma': 'Windows (x64)', 'Cómo obtenerlo': '[instalador .exe](https://github.com/openkursar/hello-halo/releases/latest) — aún sin firma de código, SmartScreen puede avisar' },
+          { 'Plataforma': 'Windows (x64)', 'Cómo obtenerlo': '[instalador .exe](https://github.com/openkursar/hello-halo/releases/latest) — según las notas 3.0.4 del fabricante, aún sin firma de código; SmartScreen puede avisar' },
           { 'Plataforma': 'Linux (x64)', 'Cómo obtenerlo': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+, sin terminal de IA' },
           { 'Plataforma': 'Android', 'Cómo obtenerlo': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — cliente remoto del Halo de tu equipo' },
           { 'Plataforma': 'iOS', 'Cómo obtenerlo': 'Cliente remoto, compilar desde el código fuente (README)' },
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Permisos: el modo de confianza («ejecutar todas las operaciones automáticamente») está siempre activo, así que la IA ejecuta comandos y edita archivos sin preguntar.',
           'Acceso remoto: Halo escucha en todas las interfaces de red en el puerto 3456, cualquiera con la contraseña tiene control total, el tráfico de la red local es HTTP sin cifrar y el acceso por internet pasa por un túnel de Cloudflare y el servicio de direcciones de Halo.',
           'Otro tráfico: comprobaciones de actualización en GitHub, comprobación de las fuentes de la tienda cada 6 horas, búsqueda web con Bing o Baidu y plataformas de mensajería cuando se conecta un bot.',
-          'Los bots personales de WeChat no tienen control de permisos, así que cualquiera que les escriba obtiene acceso de propietario.',
+          'Bots personales de WeChat: según la página de seguridad del fabricante para la versión pública 3.0.4, no tienen control de permisos, así que cualquiera que les escriba obtiene acceso de propietario.',
         ],
       },
       vsAlternatives: {
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plateforme': 'Mac (Apple silicon)', 'Où l\'obtenir': '[installeur .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 ou ultérieur, notarisé selon la doc' },
           { 'Plateforme': 'Mac (Intel)', 'Où l\'obtenir': '[installeur .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 ou ultérieur' },
-          { 'Plateforme': 'Windows (x64)', 'Où l\'obtenir': '[installeur .exe](https://github.com/openkursar/hello-halo/releases/latest) — pas encore signé, SmartScreen peut alerter' },
+          { 'Plateforme': 'Windows (x64)', 'Où l\'obtenir': '[installeur .exe](https://github.com/openkursar/hello-halo/releases/latest) — pas encore signé selon les notes de version 3.0.4 de l\'éditeur, SmartScreen peut alerter' },
           { 'Plateforme': 'Linux (x64)', 'Où l\'obtenir': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+, sans terminal IA' },
           { 'Plateforme': 'Android', 'Où l\'obtenir': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — client distant du Halo de votre ordinateur' },
           { 'Plateforme': 'iOS', 'Où l\'obtenir': 'Client distant, compilation depuis les sources (README)' },
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Autorisations : le mode de confiance (« exécuter automatiquement toutes les opérations ») est toujours actif, donc l\'IA exécute des commandes et modifie des fichiers sans demander.',
           'Accès à distance : Halo écoute sur toutes les interfaces réseau au port 3456, quiconque a le mot de passe a le contrôle total, le trafic du réseau local est du HTTP non chiffré et l\'accès par internet passe par un tunnel Cloudflare et le service d\'adresses de Halo.',
           'Autre trafic : vérifications de mise à jour auprès de GitHub, vérification des sources de la boutique toutes les 6 heures, recherche web via Bing ou Baidu et plateformes de messagerie quand un bot est connecté.',
-          'Les bots WeChat personnels n\'ont aucun contrôle d\'autorisations : quiconque leur écrit obtient un accès propriétaire.',
+          'Bots WeChat personnels : selon la page de sécurité de l\'éditeur pour la version publique 3.0.4, ils n\'ont aucun contrôle d\'autorisations ; quiconque leur écrit obtient un accès propriétaire.',
         ],
       },
       vsAlternatives: {
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'プラットフォーム': 'Mac（Apple silicon）', '入手先': '[.dmgインストーラー](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12以降、ドキュメントでは公証済み' },
           { 'プラットフォーム': 'Mac（Intel）', '入手先': '[.dmgインストーラー](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12以降' },
-          { 'プラットフォーム': 'Windows（x64）', '入手先': '[.exeインストーラー](https://github.com/openkursar/hello-halo/releases/latest) — 未署名、SmartScreenが警告する場合あり' },
+          { 'プラットフォーム': 'Windows（x64）', '入手先': '[.exeインストーラー](https://github.com/openkursar/hello-halo/releases/latest) — 開発元の3.0.4リリースノートによると未署名、SmartScreenが警告する場合あり' },
           { 'プラットフォーム': 'Linux（x64）', '入手先': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34以降、AIターミナルなし' },
           { 'プラットフォーム': 'Android', '入手先': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — お使いのPCのHalo用リモートクライアント' },
           { 'プラットフォーム': 'iOS', '入手先': 'リモートクライアント、ソースからビルド（README）' },
@@ -1219,7 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '権限：信頼モード（「すべての操作を自動実行」）は常にオンで、AIは確認なしにコマンドを実行しファイルを編集します。',
           'リモートアクセス：Haloはすべてのネットワークインターフェースのポート3456で待ち受け、パスワードを知る人は全権限を持ち、ローカルネットワークの通信は暗号化されないHTTPで、インターネット経由はCloudflareトンネルとHaloのアドレスサービスを通ります。',
           'その他の通信：GitHubへの更新確認、6時間ごとのストアソース確認、BingまたはBaiduによるWeb検索、ボット接続時のメッセージングプラットフォーム。',
-          '個人のWeChatボットには権限制御がなく、メッセージを送った人は誰でも所有者権限を得ます。',
+          '個人のWeChatボット：開発元のセキュリティページ（公開版3.0.4）によると、権限制御がなく、メッセージを送った人は誰でも所有者権限を得ます。',
         ],
       },
       vsAlternatives: {
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plataforma': 'Mac (Apple silicon)', 'Como obter': '[instalador .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 ou posterior, notarizado segundo a documentação' },
           { 'Plataforma': 'Mac (Intel)', 'Como obter': '[instalador .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 ou posterior' },
-          { 'Plataforma': 'Windows (x64)', 'Como obter': '[instalador .exe](https://github.com/openkursar/hello-halo/releases/latest) — ainda sem assinatura, o SmartScreen pode avisar' },
+          { 'Plataforma': 'Windows (x64)', 'Como obter': '[instalador .exe](https://github.com/openkursar/hello-halo/releases/latest) — segundo as notas 3.0.4 do fabricante, ainda sem assinatura; o SmartScreen pode avisar' },
           { 'Plataforma': 'Linux (x64)', 'Como obter': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+, sem terminal de IA' },
           { 'Plataforma': 'Android', 'Como obter': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — cliente remoto do Halo do seu computador' },
           { 'Plataforma': 'iOS', 'Como obter': 'Cliente remoto, compilar a partir do código-fonte (README)' },
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Permissões: o modo de confiança («executar todas as operações automaticamente») está sempre ativo, então a IA executa comandos e edita arquivos sem perguntar.',
           'Acesso remoto: o Halo escuta em todas as interfaces de rede na porta 3456, qualquer pessoa com a senha tem controle total, o tráfego da rede local é HTTP sem criptografia e o acesso pela internet passa por um túnel da Cloudflare e pelo serviço de endereços do Halo.',
           'Outro tráfego: verificações de atualização no GitHub, verificação das fontes da loja a cada 6 horas, busca na web por Bing ou Baidu e plataformas de mensagens quando um bot está conectado.',
-          'Bots pessoais do WeChat não têm controle de permissões, então qualquer pessoa que lhes escreva obtém acesso de proprietário.',
+          'Bots pessoais do WeChat: segundo a página de segurança do fabricante para a versão pública 3.0.4, não têm controle de permissões, então qualquer pessoa que lhes escreva obtém acesso de proprietário.',
         ],
       },
       vsAlternatives: {
@@ -1665,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '平台': 'Mac（Apple silicon）', '获取方式': '[.dmg 安装包](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 或更高，文档称已公证' },
           { '平台': 'Mac（Intel）', '获取方式': '[.dmg 安装包](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 或更高' },
-          { '平台': 'Windows（x64）', '获取方式': '[.exe 安装程序](https://github.com/openkursar/hello-halo/releases/latest) — 尚未代码签名，SmartScreen 可能提示' },
+          { '平台': 'Windows（x64）', '获取方式': '[.exe 安装程序](https://github.com/openkursar/hello-halo/releases/latest) — 据开发方 3.0.4 版本说明尚未代码签名，SmartScreen 可能提示' },
           { '平台': 'Linux（x64）', '获取方式': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+，无 AI 终端' },
           { '平台': 'Android', '获取方式': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — 连接您电脑上 Halo 的远程客户端' },
           { '平台': 'iOS', '获取方式': '远程客户端，需从源码构建（README）' },
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '权限：信任模式（“自动执行所有操作”）始终开启，因此 AI 会不经询问就运行命令并编辑文件。',
           '远程访问：Halo 在所有网络接口的 3456 端口监听，任何知道密码的人都拥有完全控制权，局域网流量为未加密的 HTTP，互联网访问经由 Cloudflare 隧道和 Halo 的地址服务。',
           '其他流量：向 GitHub 检查更新、每 6 小时检查商店来源、通过必应或百度进行网页搜索，以及连接机器人后的即时通讯平台。',
-          '个人微信机器人没有权限控制，任何给它发消息的人都能获得所有者权限。',
+          '个人微信机器人：据开发方安全页面（公开版 3.0.4），它们没有权限控制，任何给它发消息的人都能获得所有者权限。',
         ],
       },
       vsAlternatives: {
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Halo تطبيق سطح مكتب مجاني ومفتوح المصدر للعمل مع الذكاء الاصطناعي: دردشة، ووكلاء برمجة، ومتصفح يتحكم فيه الذكاء الاصطناعي، وملفات Word وExcel وPowerPoint وPDF، وقاعدة معرفة. يضيف الإصدار 3.0 ميزة «Digital Humans»، وهم أعضاء ذكاء اصطناعي يبقون في الخدمة ويمكنهم العمل ضمن فرق عبر عدة أجهزة. تعتمد هذه المراجعة على الموقع الرسمي ووثائقه ومستودع GitHub وصفحة الإصدارات. لم تثبّت PromptQuorum تطبيق Halo ولم تختبره عمليًا.',
     metaDescription:
-      'مراجعة Halo: محطة عمل ذكاء اصطناعي مجانية بترخيص MIT مع دردشة ووكلاء برمجة ومتصفح ذكي وDigital Humans. تعرّف على النماذج والخصوصية والحدود قبل التثبيت.',
+      'مراجعة Halo: محطة عمل ذكاء اصطناعي مجانية بترخيص MIT مع دردشة ووكلاء برمجة ومتصفح ذكي وDigital Humans. النماذج والخصوصية والحدود قبل التثبيت.',
     twitterDescription:
       'Halo محطة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر لسطح المكتب مع دردشة ووكلاء برمجة ومتصفح ذكي وDigital Humans. شرح للخصوصية والحدود.',
     audience:
@@ -1924,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'المنصة': 'Mac (Apple silicon)', 'طريقة الحصول': '[مثبّت .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 أو أحدث، وموثَّق (notarized) بحسب الوثائق' },
           { 'المنصة': 'Mac (Intel)', 'طريقة الحصول': '[مثبّت .dmg](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 أو أحدث' },
-          { 'المنصة': 'Windows (x64)', 'طريقة الحصول': '[مثبّت .exe](https://github.com/openkursar/hello-halo/releases/latest) — غير موقَّع بعد، وقد يحذّر SmartScreen' },
+          { 'المنصة': 'Windows (x64)', 'طريقة الحصول': '[مثبّت .exe](https://github.com/openkursar/hello-halo/releases/latest) — غير موقَّع بعد بحسب ملاحظات إصدار 3.0.4 لدى المطوّر، وقد يحذّر SmartScreen' },
           { 'المنصة': 'Linux (x64)', 'طريقة الحصول': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34+، بلا طرفية ذكاء اصطناعي' },
           { 'المنصة': 'Android', 'طريقة الحصول': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — عميل بعيد لتطبيق Halo على حاسوبك' },
           { 'المنصة': 'iOS', 'طريقة الحصول': 'عميل بعيد، يُبنى من الشيفرة المصدرية (README)' },
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الصلاحيات: وضع الثقة («تنفيذ جميع العمليات تلقائيًا») مفعّل دائمًا، فينفّذ الذكاء الاصطناعي الأوامر ويعدّل الملفات دون سؤال.',
           'الوصول عن بُعد: يستمع Halo على جميع واجهات الشبكة عند المنفذ 3456، ولكل من يعرف كلمة المرور تحكم كامل، وحركة الشبكة المحلية HTTP غير مشفّر، ويمر الوصول عبر الإنترنت عبر نفق Cloudflare وخدمة العناوين الخاصة بـ Halo.',
           'حركة أخرى: فحوص التحديث لدى GitHub، وفحص مصادر المتجر كل 6 ساعات، وبحث الويب عبر Bing أو Baidu، ومنصات المراسلة عند ربط روبوت.',
-          'ليس لروبوتات WeChat الشخصية أي تحكم في الصلاحيات، فكل من يراسل أحدها يحصل على صلاحيات المالك.',
+          'روبوتات WeChat الشخصية: بحسب صفحة الأمان لدى المطوّر للإصدار العام 3.0.4، ليس لها أي تحكم في الصلاحيات، فكل من يراسل أحدها يحصل على صلاحيات المالك.',
         ],
       },
       vsAlternatives: {
@@ -2183,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '플랫폼': 'Mac(Apple silicon)', '받는 방법': '[.dmg 설치 파일](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 이상, 문서에 따르면 공증됨' },
           { '플랫폼': 'Mac(Intel)', '받는 방법': '[.dmg 설치 파일](https://github.com/openkursar/hello-halo/releases/latest) — macOS 12 이상' },
-          { '플랫폼': 'Windows(x64)', '받는 방법': '[.exe 설치 파일](https://github.com/openkursar/hello-halo/releases/latest) — 아직 코드 서명 없음, SmartScreen 경고 가능' },
+          { '플랫폼': 'Windows(x64)', '받는 방법': '[.exe 설치 파일](https://github.com/openkursar/hello-halo/releases/latest) — 개발사의 3.0.4 릴리스 노트에 따르면 아직 코드 서명 없음, SmartScreen 경고 가능' },
           { '플랫폼': 'Linux(x64)', '받는 방법': '[.AppImage](https://github.com/openkursar/hello-halo/releases/latest) — glibc 2.34 이상, AI 터미널 없음' },
           { '플랫폼': 'Android', '받는 방법': '[.apk](https://github.com/openkursar/hello-halo/releases/latest) — 내 컴퓨터의 Halo용 원격 클라이언트' },
           { '플랫폼': 'iOS', '받는 방법': '원격 클라이언트, 소스에서 빌드(README)' },
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '권한: 신뢰 모드("모든 작업 자동 실행")가 항상 켜져 있어 AI가 묻지 않고 명령을 실행하고 파일을 편집합니다.',
           '원격 접속: Halo는 모든 네트워크 인터페이스의 3456번 포트에서 대기하고, 비밀번호를 아는 사람은 누구나 전체 제어권을 가지며, 로컬 네트워크 트래픽은 암호화되지 않은 HTTP이고, 인터넷 접속은 Cloudflare 터널과 Halo의 주소 서비스를 거칩니다.',
           '기타 트래픽: GitHub에 대한 업데이트 확인, 6시간마다 스토어 소스 확인, Bing 또는 Baidu를 통한 웹 검색, 봇이 연결된 경우 메신저 플랫폼.',
-          '개인 WeChat 봇에는 권한 제어가 없어 메시지를 보내는 누구나 소유자 권한을 얻습니다.',
+          '개인 WeChat 봇: 개발사의 보안 페이지(공개 빌드 3.0.4)에 따르면 권한 제어가 없어 메시지를 보내는 누구나 소유자 권한을 얻습니다.',
         ],
       },
       vsAlternatives: {
