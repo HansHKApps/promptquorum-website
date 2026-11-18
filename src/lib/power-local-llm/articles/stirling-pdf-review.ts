@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF is a PDF editor and document-processing platform that you run yourself, on a desktop or on a server.** The maker is Stirling PDF Inc., which calls itself a U.S. company in its privacy policy.",
           "Per the maker, it offers 60+ tools on desktop or server, including edit, merge, split, sign, redact, convert, OCR and compress. The README says 50+, so the tool count is inconsistent between sources.",
           "Beyond the editor, the maker describes no-code pipelines, a REST API, an MCP interface, webhooks and an AI assistant. The project is described as open-core: the README links to Server Plan and Enterprise offerings.",
-          "Independent coverage is mixed. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) published a positive review. XDA Developers published a first-person piece, “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 November 2025), in which the writer says they left for BentoPDF after concerns about a cookie banner and analytics cookies and a “tracking pixel” that, according to the article, were on by default and later made optional. PromptQuorum has not verified these claims; the maker's privacy policy is the primary source.",
+          "Independent coverage is mixed. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) published a positive review. XDA Developers published a first-person piece, “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 November 2025), in which the writer says they left for BentoPDF after concerns about a cookie banner and analytics cookies and a “tracking pixel” that, according to the article, were on by default and later made optional. PromptQuorum has not verified these claims; the maker's privacy policy is the primary source.",
           "This review is not hands-on. It summarises the maker's pages and public sources, and maker statements are attributed as such."
         ]
       },
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "How to get Stirling PDF",
         "content": [
-          "**You can install Stirling PDF with a native installer, a single Docker command, Helm or a manual .jar.** The [download page](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) lists the options, and the [GitHub v3.3.0 release](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) carries the installer files."
+          "**You can install Stirling PDF with a native installer, a single Docker command, Helm or a manual .jar.** The [download page](https://www.stirlingpdf.com/download) lists the options, and the [GitHub v3.3.0 release](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0) carries the installer files."
         ],
         "columns": [
           "Platform",
@@ -145,11 +145,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Platform": "Windows",
-            "How to get it": "Standalone .exe per the [download page](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Release assets: Stirling-PDF-windows-x86_64.msi and Stirling-PDF-windows-arm64-setup.exe."
+            "How to get it": "Standalone .exe per the [download page](https://www.stirlingpdf.com/download). Release assets: Stirling-PDF-windows-x86_64.msi and Stirling-PDF-windows-arm64-setup.exe."
           },
           {
             "Platform": "macOS",
-            "How to get it": "Native app from the download page. Release assets: Stirling-PDF-macos-universal.dmg and a .app.tar.gz ([release](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "How to get it": "Native app from the download page. Release assets: Stirling-PDF-macos-universal.dmg and a .app.tar.gz ([release](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "Platform": "Linux",
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Platform": "Docker",
-            "How to get it": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, then open http://localhost:8080 (per the [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "How to get it": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, then open http://localhost:8080 (per the [README](https://github.com/Stirling-Tools/Stirling-PDF))."
           },
           {
             "Platform": "Kubernetes",
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**The maker says the editor runs on your own machine or server and documents are not sent to external services.** This is a maker claim. The source code is public, so it can be checked.",
           "The data flow of the AI features is not documented in the sources, and the sources do not say whether they run locally or call external services.",
-          "On telemetry, Contabo reports an analytics feature that was on by default in the past and later made configurable. A Gnoppix forum test found no telemetry. Neither statement is confirmed against the current code or policy text. The maker's [privacy policy](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) is the primary source to read.",
+          "On telemetry, Contabo reports an analytics feature that was on by default in the past and later made configurable. A Gnoppix forum test found no telemetry. Neither statement is confirmed against the current code or policy text. The maker's [privacy policy](https://www.stirling.com/legal/privacy-policy) is the primary source to read.",
           "Whether the desktop or Docker versions need an account is not stated. The site has Log in and Sign up links, and a with-login .jar exists."
         ]
       },
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Alternative": "BentoPDF",
-            "What the sources say": "Self-hosted PDF toolkit compared directly with Stirling PDF in a [Contabo article](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Contabo is a hosting provider."
+            "What the sources say": "Self-hosted PDF toolkit compared directly with Stirling PDF in a [Contabo article](https://contabo.com/blog/bentopdf-vs-stirling-pdf/). Contabo is a hosting provider."
           },
           {
             "Alternative": "Adobe Acrobat",
@@ -325,16 +325,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "Sources",
         "items": [
-          "[Stirling PDF website](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Download page](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Pricing page](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub repository and README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Privacy policy](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Pocket-lint review](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers: replaced Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Stirling PDF website](https://www.stirlingpdf.com)",
+          "[Download page](https://www.stirlingpdf.com/download)",
+          "[Pricing page](https://www.stirlingpdf.com/pricing)",
+          "[GitHub repository and README](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[GitHub release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[Privacy policy](https://www.stirling.com/legal/privacy-policy)",
+          "[Pocket-lint review](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers: replaced Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF ist ein PDF-Editor und eine Plattform zur Dokumentenverarbeitung, die Sie selbst betreiben – auf dem Desktop oder auf einem Server.** Hersteller ist Stirling PDF Inc., die sich in ihrer Datenschutzerklärung als US-Unternehmen bezeichnet.",
           "Laut Hersteller bietet es mehr als 60 Werkzeuge für Desktop oder Server, darunter Bearbeiten, Zusammenführen, Teilen, Signieren, Schwärzen, Konvertieren, OCR und Komprimieren. Die README nennt mehr als 50, die Werkzeugzahl ist zwischen den Quellen also uneinheitlich.",
           "Über den Editor hinaus beschreibt der Hersteller No-Code-Pipelines, eine REST API, eine MCP-Schnittstelle, Webhooks und einen KI-Assistenten. Das Projekt wird als Open-Core beschrieben: Die README verweist auf Angebote für Server Plan und Enterprise.",
-          "Die unabhängige Berichterstattung ist gemischt. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) hat eine positive Besprechung veröffentlicht. XDA Developers veröffentlichte einen Ich-Bericht, „I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it“ (5. November 2025), in dem der Autor schreibt, er sei nach Bedenken wegen eines Cookie-Banners sowie Analyse-Cookies und eines „Tracking-Pixels“, die laut Artikel standardmäßig aktiv waren und später optional wurden, zu BentoPDF gewechselt. PromptQuorum hat diese Aussagen nicht geprüft; die Datenschutzerklärung des Herstellers ist die Primärquelle.",
+          "Die unabhängige Berichterstattung ist gemischt. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) hat eine positive Besprechung veröffentlicht. XDA Developers veröffentlichte einen Ich-Bericht, „I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it“ (5. November 2025), in dem der Autor schreibt, er sei nach Bedenken wegen eines Cookie-Banners sowie Analyse-Cookies und eines „Tracking-Pixels“, die laut Artikel standardmäßig aktiv waren und später optional wurden, zu BentoPDF gewechselt. PromptQuorum hat diese Aussagen nicht geprüft; die Datenschutzerklärung des Herstellers ist die Primärquelle.",
           "Dieser Überblick beruht nicht auf eigenen Tests. Er fasst die Seiten des Herstellers und öffentliche Quellen zusammen; Herstelleraussagen sind als solche gekennzeichnet."
         ]
       },
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "So erhalten Sie Stirling PDF",
         "content": [
-          "**Sie können Stirling PDF mit einem nativen Installer, einem einzelnen Docker-Befehl, Helm oder einer manuellen .jar-Datei installieren.** Die [Download-Seite](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) listet die Optionen auf, und das [GitHub-Release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) enthält die Installationsdateien."
+          "**Sie können Stirling PDF mit einem nativen Installer, einem einzelnen Docker-Befehl, Helm oder einer manuellen .jar-Datei installieren.** Die [Download-Seite](https://www.stirlingpdf.com/download) listet die Optionen auf, und das [GitHub-Release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0) enthält die Installationsdateien."
         ],
         "columns": [
           "Plattform",
@@ -484,11 +484,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Plattform": "Windows",
-            "Bezugsquelle": "Eigenständige .exe laut [Download-Seite](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Release-Dateien: Stirling-PDF-windows-x86_64.msi und Stirling-PDF-windows-arm64-setup.exe."
+            "Bezugsquelle": "Eigenständige .exe laut [Download-Seite](https://www.stirlingpdf.com/download). Release-Dateien: Stirling-PDF-windows-x86_64.msi und Stirling-PDF-windows-arm64-setup.exe."
           },
           {
             "Plattform": "macOS",
-            "Bezugsquelle": "Native App von der Download-Seite. Release-Dateien: Stirling-PDF-macos-universal.dmg und eine .app.tar.gz ([Release](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Bezugsquelle": "Native App von der Download-Seite. Release-Dateien: Stirling-PDF-macos-universal.dmg und eine .app.tar.gz ([Release](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "Plattform": "Linux",
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Plattform": "Docker",
-            "Bezugsquelle": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, danach http://localhost:8080 öffnen (laut [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Bezugsquelle": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, danach http://localhost:8080 öffnen (laut [README](https://github.com/Stirling-Tools/Stirling-PDF))."
           },
           {
             "Plattform": "Kubernetes",
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**Der Hersteller sagt, der Editor laufe auf Ihrem eigenen Rechner oder Server und Dokumente würden nicht an externe Dienste gesendet.** Das ist eine Herstelleraussage. Der Quellcode ist öffentlich und lässt sich daher prüfen.",
           "Der Datenfluss der KI-Funktionen ist in den Quellen nicht dokumentiert, und die Quellen sagen nicht, ob sie lokal laufen oder externe Dienste aufrufen.",
-          "Zur Telemetrie berichtet Contabo von einer Analysefunktion, die in der Vergangenheit standardmäßig aktiv war und später konfigurierbar wurde. Ein Test im Gnoppix-Forum fand keine Telemetrie. Keine der beiden Aussagen ist anhand des aktuellen Codes oder Richtlinientexts bestätigt. Die [Datenschutzerklärung](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) des Herstellers ist die maßgebliche Quelle.",
+          "Zur Telemetrie berichtet Contabo von einer Analysefunktion, die in der Vergangenheit standardmäßig aktiv war und später konfigurierbar wurde. Ein Test im Gnoppix-Forum fand keine Telemetrie. Keine der beiden Aussagen ist anhand des aktuellen Codes oder Richtlinientexts bestätigt. Die [Datenschutzerklärung](https://www.stirling.com/legal/privacy-policy) des Herstellers ist die maßgebliche Quelle.",
           "Ob für die Desktop- oder Docker-Versionen ein Konto nötig ist, ist nicht angegeben. Die Website hat Links zu Anmelden und Registrieren, und es gibt eine .jar-Variante mit Login."
         ]
       },
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Alternative": "BentoPDF",
-            "Aussage der Quellen": "Selbst gehostetes PDF-Toolkit, in einem [Contabo-Artikel](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) direkt mit Stirling PDF verglichen. Contabo ist ein Hosting-Anbieter."
+            "Aussage der Quellen": "Selbst gehostetes PDF-Toolkit, in einem [Contabo-Artikel](https://contabo.com/blog/bentopdf-vs-stirling-pdf/) direkt mit Stirling PDF verglichen. Contabo ist ein Hosting-Anbieter."
           },
           {
             "Alternative": "Adobe Acrobat",
@@ -664,16 +664,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "Quellen",
         "items": [
-          "[Stirling-PDF-Website](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Download-Seite](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Preisseite](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub-Repository und README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub-Release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Datenschutzerklärung](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Pocket-lint-Besprechung](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers: Stirling PDF ersetzt](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Stirling-PDF-Website](https://www.stirlingpdf.com)",
+          "[Download-Seite](https://www.stirlingpdf.com/download)",
+          "[Preisseite](https://www.stirlingpdf.com/pricing)",
+          "[GitHub-Repository und README](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[GitHub-Release v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[Datenschutzerklärung](https://www.stirling.com/legal/privacy-policy)",
+          "[Pocket-lint-Besprechung](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers: Stirling PDF ersetzt](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF est un éditeur PDF et une plateforme de traitement de documents que vous exécutez vous-même, sur un poste ou sur un serveur.** L'éditeur est Stirling PDF Inc., qui se présente comme une société américaine dans sa politique de confidentialité.",
           "Selon l'éditeur, elle propose plus de 60 outils sur poste ou serveur, dont modifier, fusionner, scinder, signer, caviarder, convertir, OCR et compresser. Le README parle de plus de 50, le nombre d'outils diffère donc selon les sources.",
           "Au-delà de l'éditeur de PDF, l'éditeur du logiciel décrit des pipelines sans code, une API REST, une interface MCP, des webhooks et un assistant IA. Le projet est décrit comme open-core : le README renvoie vers les offres Server Plan et Enterprise.",
-          "La couverture indépendante est partagée. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) a publié un avis positif. XDA Developers a publié un article à la première personne, « I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it » (5 novembre 2025), où le rédacteur dit être passé à BentoPDF après des inquiétudes concernant une bannière de cookies, des cookies d'analyse et un « tracking pixel » qui, selon l'article, étaient activés par défaut avant de devenir optionnels. PromptQuorum n'a pas vérifié ces affirmations ; la politique de confidentialité de l'éditeur est la source primaire.",
+          "La couverture indépendante est partagée. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) a publié un avis positif. XDA Developers a publié un article à la première personne, « I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it » (5 novembre 2025), où le rédacteur dit être passé à BentoPDF après des inquiétudes concernant une bannière de cookies, des cookies d'analyse et un « tracking pixel » qui, selon l'article, étaient activés par défaut avant de devenir optionnels. PromptQuorum n'a pas vérifié ces affirmations ; la politique de confidentialité de l'éditeur est la source primaire.",
           "Cet avis ne repose pas sur un test pratique. Il résume les pages de l'éditeur et des sources publiques, et les déclarations de l'éditeur sont présentées comme telles."
         ]
       },
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "Comment obtenir Stirling PDF",
         "content": [
-          "**Vous pouvez installer Stirling PDF avec un installateur natif, une seule commande Docker, Helm ou un .jar manuel.** La [page de téléchargement](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) liste les options, et la [version GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) contient les fichiers d'installation."
+          "**Vous pouvez installer Stirling PDF avec un installateur natif, une seule commande Docker, Helm ou un .jar manuel.** La [page de téléchargement](https://www.stirlingpdf.com/download) liste les options, et la [version GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0) contient les fichiers d'installation."
         ],
         "columns": [
           "Plateforme",
@@ -824,11 +824,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Plateforme": "Windows",
-            "Comment l'obtenir": ".exe autonome selon la [page de téléchargement](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Fichiers de la version : Stirling-PDF-windows-x86_64.msi et Stirling-PDF-windows-arm64-setup.exe."
+            "Comment l'obtenir": ".exe autonome selon la [page de téléchargement](https://www.stirlingpdf.com/download). Fichiers de la version : Stirling-PDF-windows-x86_64.msi et Stirling-PDF-windows-arm64-setup.exe."
           },
           {
             "Plateforme": "macOS",
-            "Comment l'obtenir": "Application native sur la page de téléchargement. Fichiers de la version : Stirling-PDF-macos-universal.dmg et un .app.tar.gz ([version](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Comment l'obtenir": "Application native sur la page de téléchargement. Fichiers de la version : Stirling-PDF-macos-universal.dmg et un .app.tar.gz ([version](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "Plateforme": "Linux",
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Plateforme": "Docker",
-            "Comment l'obtenir": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, puis ouvrir http://localhost:8080 (selon le [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Comment l'obtenir": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, puis ouvrir http://localhost:8080 (selon le [README](https://github.com/Stirling-Tools/Stirling-PDF))."
           },
           {
             "Plateforme": "Kubernetes",
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**L'éditeur affirme que l'éditeur de PDF s'exécute sur votre propre machine ou serveur et que les documents ne sont pas envoyés à des services externes.** C'est une affirmation de l'éditeur. Le code source est public, il peut donc être vérifié.",
           "Le flux de données des fonctions d'IA n'est pas documenté dans les sources, et celles-ci ne précisent pas si elles s'exécutent en local ou font appel à des services externes.",
-          "Sur la télémétrie, Contabo signale une fonction d'analyse activée par défaut par le passé, puis rendue configurable. Un test sur le forum Gnoppix n'a trouvé aucune télémétrie. Aucune de ces deux affirmations n'est confirmée par rapport au code actuel ou au texte de la politique. La [politique de confidentialité](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) de l'éditeur est la source primaire à lire.",
+          "Sur la télémétrie, Contabo signale une fonction d'analyse activée par défaut par le passé, puis rendue configurable. Un test sur le forum Gnoppix n'a trouvé aucune télémétrie. Aucune de ces deux affirmations n'est confirmée par rapport au code actuel ou au texte de la politique. La [politique de confidentialité](https://www.stirling.com/legal/privacy-policy) de l'éditeur est la source primaire à lire.",
           "La nécessité d'un compte pour les versions de bureau ou Docker n'est pas précisée. Le site propose des liens de connexion et d'inscription, et un .jar avec connexion existe."
         ]
       },
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Alternative": "BentoPDF",
-            "Ce que disent les sources": "Boîte à outils PDF auto-hébergée comparée directement à Stirling PDF dans un [article de Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Contabo est un hébergeur."
+            "Ce que disent les sources": "Boîte à outils PDF auto-hébergée comparée directement à Stirling PDF dans un [article de Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/). Contabo est un hébergeur."
           },
           {
             "Alternative": "Adobe Acrobat",
@@ -1004,16 +1004,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "Sources",
         "items": [
-          "[Site web de Stirling PDF](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Page de téléchargement](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Page de tarifs](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Dépôt GitHub et README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Version GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Politique de confidentialité](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Avis de Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo : BentoPDF contre Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers : Stirling PDF remplacé](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Site web de Stirling PDF](https://www.stirlingpdf.com)",
+          "[Page de téléchargement](https://www.stirlingpdf.com/download)",
+          "[Page de tarifs](https://www.stirlingpdf.com/pricing)",
+          "[Dépôt GitHub et README](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[Version GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[Politique de confidentialité](https://www.stirling.com/legal/privacy-policy)",
+          "[Avis de Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo : BentoPDF contre Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers : Stirling PDF remplacé](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDFは、デスクトップまたはサーバー上で自分で運用するPDFエディタ兼ドキュメント処理プラットフォームです。**開発元はStirling PDF Inc.で、プライバシーポリシーでは米国の企業と称しています。",
           "開発元によると、デスクトップまたはサーバーで60以上のツールを提供し、編集、結合、分割、署名、墨消し、変換、OCR、圧縮などに対応します。READMEでは50以上とされており、ツール数は情報源によって食い違っています。",
           "エディタのほかに、開発元はノーコードのパイプライン、REST API、MCPインターフェース、Webhook、AIアシスタントを挙げています。プロジェクトはオープンコアとされ、READMEにはServer PlanとEnterpriseへのリンクがあります。",
-          "第三者による報道は評価が分かれています。[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)は肯定的なレビューを公開しました。XDA Developersは一人称の記事「I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it」（2025年11月5日）を公開し、筆者はCookieバナーと、記事によれば既定で有効だった分析用Cookieおよび「トラッキングピクセル」（のちに任意設定になったとされる）への懸念を受けてBentoPDFに乗り換えたと述べています。PromptQuorumはこれらの主張を確認しておらず、メーカーのプライバシーポリシーが一次情報です。",
+          "第三者による報道は評価が分かれています。[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)は肯定的なレビューを公開しました。XDA Developersは一人称の記事「I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it」（2025年11月5日）を公開し、筆者はCookieバナーと、記事によれば既定で有効だった分析用Cookieおよび「トラッキングピクセル」（のちに任意設定になったとされる）への懸念を受けてBentoPDFに乗り換えたと述べています。PromptQuorumはこれらの主張を確認しておらず、メーカーのプライバシーポリシーが一次情報です。",
           "このレビューは実機での検証に基づくものではありません。開発元のページと公開情報をまとめたもので、開発元の主張はそのように明記しています。"
         ]
       },
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "Stirling PDFの入手方法",
         "content": [
-          "**Stirling PDFは、ネイティブのインストーラー、Dockerコマンド1つ、Helm、手動の.jarのいずれかで導入できます。**選択肢は[ダウンロードページ](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)に一覧があり、インストーラーのファイルは[GitHubのv3.3.0リリース](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)に含まれています。"
+          "**Stirling PDFは、ネイティブのインストーラー、Dockerコマンド1つ、Helm、手動の.jarのいずれかで導入できます。**選択肢は[ダウンロードページ](https://www.stirlingpdf.com/download)に一覧があり、インストーラーのファイルは[GitHubのv3.3.0リリース](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)に含まれています。"
         ],
         "columns": [
           "プラットフォーム",
@@ -1164,11 +1164,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "プラットフォーム": "Windows",
-            "入手方法": "[ダウンロードページ](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)によるとスタンドアロンの.exe。リリースのファイル：Stirling-PDF-windows-x86_64.msiとStirling-PDF-windows-arm64-setup.exe。"
+            "入手方法": "[ダウンロードページ](https://www.stirlingpdf.com/download)によるとスタンドアロンの.exe。リリースのファイル：Stirling-PDF-windows-x86_64.msiとStirling-PDF-windows-arm64-setup.exe。"
           },
           {
             "プラットフォーム": "macOS",
-            "入手方法": "ダウンロードページのネイティブアプリ。リリースのファイル：Stirling-PDF-macos-universal.dmgと.app.tar.gz（[リリース](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)）。"
+            "入手方法": "ダウンロードページのネイティブアプリ。リリースのファイル：Stirling-PDF-macos-universal.dmgと.app.tar.gz（[リリース](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)）。"
           },
           {
             "プラットフォーム": "Linux",
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "プラットフォーム": "Docker",
-            "入手方法": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`を実行し、http://localhost:8080 を開きます（[README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)より）。"
+            "入手方法": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`を実行し、http://localhost:8080 を開きます（[README](https://github.com/Stirling-Tools/Stirling-PDF)より）。"
           },
           {
             "プラットフォーム": "Kubernetes",
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**開発元は、エディタは自分のマシンまたはサーバー上で動作し、ドキュメントは外部サービスに送信されないとしています。**これは開発元の主張です。ソースコードは公開されているため、確認できます。",
           "AI機能のデータの流れは情報源に記載がなく、ローカルで動くのか外部サービスを呼び出すのかも述べられていません。",
-          "テレメトリについては、Contaboが、過去に初期状態で有効だった分析機能が後に設定可能になったと報告しています。Gnoppixのフォーラムでの検証ではテレメトリは見つかりませんでした。いずれも現行のコードやポリシー本文との照合は取れていません。開発元の[プライバシーポリシー](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)が、確認すべき一次情報です。",
+          "テレメトリについては、Contaboが、過去に初期状態で有効だった分析機能が後に設定可能になったと報告しています。Gnoppixのフォーラムでの検証ではテレメトリは見つかりませんでした。いずれも現行のコードやポリシー本文との照合は取れていません。開発元の[プライバシーポリシー](https://www.stirling.com/legal/privacy-policy)が、確認すべき一次情報です。",
           "デスクトップ版やDocker版でアカウントが必要かどうかは記載されていません。サイトにはログインとサインアップのリンクがあり、ログイン付きの.jarも存在します。"
         ]
       },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "代替ツール": "BentoPDF",
-            "情報源の記載": "[Contaboの記事](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)でStirling PDFと直接比較されているセルフホスト型のPDFツールキット。Contaboはホスティング事業者です。"
+            "情報源の記載": "[Contaboの記事](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)でStirling PDFと直接比較されているセルフホスト型のPDFツールキット。Contaboはホスティング事業者です。"
           },
           {
             "代替ツール": "Adobe Acrobat",
@@ -1344,16 +1344,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "情報源",
         "items": [
-          "[Stirling PDF公式サイト](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[ダウンロードページ](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[料金ページ](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHubリポジトリとREADME](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHubリリースv3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[プライバシーポリシー](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Pocket-lintのレビュー](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo：BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers：Stirling PDFから乗り換え](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Stirling PDF公式サイト](https://www.stirlingpdf.com)",
+          "[ダウンロードページ](https://www.stirlingpdf.com/download)",
+          "[料金ページ](https://www.stirlingpdf.com/pricing)",
+          "[GitHubリポジトリとREADME](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[GitHubリリースv3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[プライバシーポリシー](https://www.stirling.com/legal/privacy-policy)",
+          "[Pocket-lintのレビュー](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo：BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers：Stirling PDFから乗り換え](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF 是一个由你自己在桌面或服务器上运行的 PDF 编辑与文档处理平台。** 开发方为 Stirling PDF Inc.，其隐私政策中自称是一家美国公司。",
           "据开发方称，它在桌面或服务器上提供 60 多种工具，包括编辑、合并、拆分、签名、涂黑脱敏、转换、OCR 和压缩。README 写的是 50 多种，因此各来源对工具数量的说法不一致。",
           "除编辑器外，开发方还介绍了无代码流水线、REST API、MCP 接口、Webhook 和 AI 助手。该项目被描述为开放核心：README 中链接了 Server Plan 和 Enterprise 方案。",
-          "独立媒体的报道褒贬不一。[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) 发表了一篇正面评价。XDA Developers 发表了一篇第一人称文章《I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it》（2025 年 11 月 5 日），作者称自己因对 Cookie 横幅、以及据该文章称默认开启（后来改为可选）的分析 Cookie 和“tracking pixel”的担忧而改用 BentoPDF。PromptQuorum 未核实这些说法；厂商的隐私政策是一手来源。",
+          "独立媒体的报道褒贬不一。[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) 发表了一篇正面评价。XDA Developers 发表了一篇第一人称文章《I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it》（2025 年 11 月 5 日），作者称自己因对 Cookie 横幅、以及据该文章称默认开启（后来改为可选）的分析 Cookie 和“tracking pixel”的担忧而改用 BentoPDF。PromptQuorum 未核实这些说法；厂商的隐私政策是一手来源。",
           "本评测并非亲身实测。内容汇总自开发方页面和公开来源，开发方的说法均已注明出处。"
         ]
       },
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "如何获取 Stirling PDF",
         "content": [
-          "**你可以通过原生安装程序、一条 Docker 命令、Helm 或手动 .jar 安装 Stirling PDF。** [下载页面](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)列出了各种方式，[GitHub v3.3.0 发布页](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)提供安装文件。"
+          "**你可以通过原生安装程序、一条 Docker 命令、Helm 或手动 .jar 安装 Stirling PDF。** [下载页面](https://www.stirlingpdf.com/download)列出了各种方式，[GitHub v3.3.0 发布页](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)提供安装文件。"
         ],
         "columns": [
           "平台",
@@ -1504,11 +1504,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "平台": "Windows",
-            "获取方式": "根据[下载页面](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)为独立 .exe。发布文件：Stirling-PDF-windows-x86_64.msi 和 Stirling-PDF-windows-arm64-setup.exe。"
+            "获取方式": "根据[下载页面](https://www.stirlingpdf.com/download)为独立 .exe。发布文件：Stirling-PDF-windows-x86_64.msi 和 Stirling-PDF-windows-arm64-setup.exe。"
           },
           {
             "平台": "macOS",
-            "获取方式": "下载页面提供原生应用。发布文件：Stirling-PDF-macos-universal.dmg 和 .app.tar.gz（[发布页](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)）。"
+            "获取方式": "下载页面提供原生应用。发布文件：Stirling-PDF-macos-universal.dmg 和 .app.tar.gz（[发布页](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)）。"
           },
           {
             "平台": "Linux",
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "平台": "Docker",
-            "获取方式": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`，然后打开 http://localhost:8080（据 [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)）。"
+            "获取方式": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`，然后打开 http://localhost:8080（据 [README](https://github.com/Stirling-Tools/Stirling-PDF)）。"
           },
           {
             "平台": "Kubernetes",
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**开发方称编辑器在你自己的机器或服务器上运行，文档不会发送到外部服务。** 这是开发方的说法。源代码是公开的，因此可以自行核查。",
           "来源中未记录 AI 功能的数据流向，也未说明它们是在本地运行还是调用外部服务。",
-          "关于遥测，Contabo 报告称有一项分析功能过去默认开启，后来改为可配置。Gnoppix 论坛的一次测试未发现遥测。这两种说法均未对照当前代码或政策文本得到确认。开发方的[隐私政策](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)是应阅读的第一手来源。",
+          "关于遥测，Contabo 报告称有一项分析功能过去默认开启，后来改为可配置。Gnoppix 论坛的一次测试未发现遥测。这两种说法均未对照当前代码或政策文本得到确认。开发方的[隐私政策](https://www.stirling.com/legal/privacy-policy)是应阅读的第一手来源。",
           "来源中未说明桌面版或 Docker 版是否需要账号。官网有登录和注册链接，另有带登录功能的 .jar。"
         ]
       },
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "替代品": "BentoPDF",
-            "来源所述": "自托管 PDF 工具包，在 [Contabo 的文章](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)中与 Stirling PDF 直接对比。Contabo 是主机服务商。"
+            "来源所述": "自托管 PDF 工具包，在 [Contabo 的文章](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)中与 Stirling PDF 直接对比。Contabo 是主机服务商。"
           },
           {
             "替代品": "Adobe Acrobat",
@@ -1684,16 +1684,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "来源",
         "items": [
-          "[Stirling PDF 官网](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[下载页面](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[定价页面](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub 仓库和 README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub 发布页 v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[隐私政策](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Pocket-lint 评测](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo：BentoPDF 对比 Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers：替换 Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Stirling PDF 官网](https://www.stirlingpdf.com)",
+          "[下载页面](https://www.stirlingpdf.com/download)",
+          "[定价页面](https://www.stirlingpdf.com/pricing)",
+          "[GitHub 仓库和 README](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[GitHub 发布页 v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[隐私政策](https://www.stirling.com/legal/privacy-policy)",
+          "[Pocket-lint 评测](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo：BentoPDF 对比 Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers：替换 Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -1827,7 +1827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF es un editor de PDF y plataforma de procesamiento de documentos que tú mismo ejecutas, en un equipo de escritorio o en un servidor.** El fabricante es Stirling PDF Inc., que en su política de privacidad se describe como una empresa estadounidense.",
           "Según el fabricante, ofrece más de 60 herramientas en escritorio o servidor, entre ellas editar, combinar, dividir, firmar, censurar, convertir, OCR y comprimir. El README indica más de 50, por lo que el número de herramientas no coincide entre fuentes.",
           "Además del editor, el fabricante describe pipelines sin código, una API REST, una interfaz MCP, webhooks y un asistente de IA. El proyecto se describe como open-core: el README enlaza a las ofertas Server Plan y Enterprise.",
-          "La cobertura independiente es mixta. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) publicó una reseña positiva. XDA Developers publicó un artículo en primera persona, «I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it» (5 de noviembre de 2025), en el que el redactor dice que cambió a BentoPDF por su preocupación ante un banner de cookies y unas cookies de análisis y un «tracking pixel» que, según el artículo, estaban activados por defecto y después pasaron a ser opcionales. PromptQuorum no ha verificado estas afirmaciones; la política de privacidad del fabricante es la fuente primaria.",
+          "La cobertura independiente es mixta. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) publicó una reseña positiva. XDA Developers publicó un artículo en primera persona, «I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it» (5 de noviembre de 2025), en el que el redactor dice que cambió a BentoPDF por su preocupación ante un banner de cookies y unas cookies de análisis y un «tracking pixel» que, según el artículo, estaban activados por defecto y después pasaron a ser opcionales. PromptQuorum no ha verificado estas afirmaciones; la política de privacidad del fabricante es la fuente primaria.",
           "Esta reseña no se basa en una prueba práctica. Resume las páginas del fabricante y fuentes públicas, y las afirmaciones del fabricante se atribuyen como tales."
         ]
       },
@@ -1835,7 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "Cómo obtener Stirling PDF",
         "content": [
-          "**Stirling PDF puede instalarse con un instalador nativo, un único comando de Docker, Helm o un .jar manual.** La [página de descarga](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) enumera las opciones, y la [versión v3.3.0 en GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) incluye los archivos de instalación."
+          "**Stirling PDF puede instalarse con un instalador nativo, un único comando de Docker, Helm o un .jar manual.** La [página de descarga](https://www.stirlingpdf.com/download) enumera las opciones, y la [versión v3.3.0 en GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0) incluye los archivos de instalación."
         ],
         "columns": [
           "Plataforma",
@@ -1844,11 +1844,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Plataforma": "Windows",
-            "Cómo obtenerlo": ".exe independiente según la [página de descarga](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Archivos de la versión: Stirling-PDF-windows-x86_64.msi y Stirling-PDF-windows-arm64-setup.exe."
+            "Cómo obtenerlo": ".exe independiente según la [página de descarga](https://www.stirlingpdf.com/download). Archivos de la versión: Stirling-PDF-windows-x86_64.msi y Stirling-PDF-windows-arm64-setup.exe."
           },
           {
             "Plataforma": "macOS",
-            "Cómo obtenerlo": "Aplicación nativa desde la página de descarga. Archivos de la versión: Stirling-PDF-macos-universal.dmg y un .app.tar.gz ([versión](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Cómo obtenerlo": "Aplicación nativa desde la página de descarga. Archivos de la versión: Stirling-PDF-macos-universal.dmg y un .app.tar.gz ([versión](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "Plataforma": "Linux",
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Plataforma": "Docker",
-            "Cómo obtenerlo": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf` y luego abrir http://localhost:8080 (según el [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Cómo obtenerlo": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf` y luego abrir http://localhost:8080 (según el [README](https://github.com/Stirling-Tools/Stirling-PDF))."
           },
           {
             "Plataforma": "Kubernetes",
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**El fabricante afirma que el editor se ejecuta en tu propio equipo o servidor y que los documentos no se envían a servicios externos.** Es una afirmación del fabricante. El código fuente es público, por lo que puede comprobarse.",
           "El flujo de datos de las funciones de IA no está documentado en las fuentes, y estas no indican si se ejecutan en local o llaman a servicios externos.",
-          "Sobre la telemetría, Contabo señala una función de analítica que estuvo activada por defecto en el pasado y que después se hizo configurable. Una prueba en un foro de Gnoppix no encontró telemetría. Ninguna de las dos afirmaciones está confirmada con el código o el texto de la política actuales. La [política de privacidad](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) del fabricante es la fuente primaria que conviene leer.",
+          "Sobre la telemetría, Contabo señala una función de analítica que estuvo activada por defecto en el pasado y que después se hizo configurable. Una prueba en un foro de Gnoppix no encontró telemetría. Ninguna de las dos afirmaciones está confirmada con el código o el texto de la política actuales. La [política de privacidad](https://www.stirling.com/legal/privacy-policy) del fabricante es la fuente primaria que conviene leer.",
           "No se indica si las versiones de escritorio o Docker requieren una cuenta. El sitio tiene enlaces de Log in y Sign up, y existe un .jar con inicio de sesión."
         ]
       },
@@ -1978,7 +1978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Alternativa": "BentoPDF",
-            "Qué indican las fuentes": "Kit de herramientas PDF autoalojado, comparado directamente con Stirling PDF en un [artículo de Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Contabo es un proveedor de hosting."
+            "Qué indican las fuentes": "Kit de herramientas PDF autoalojado, comparado directamente con Stirling PDF en un [artículo de Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/). Contabo es un proveedor de hosting."
           },
           {
             "Alternativa": "Adobe Acrobat",
@@ -2024,16 +2024,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "Fuentes",
         "items": [
-          "[Sitio web de Stirling PDF](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Página de descarga](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Página de precios](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Repositorio de GitHub y README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Versión v3.3.0 en GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Política de privacidad](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Reseña de Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo: BentoPDF frente a Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers: sustituir Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Sitio web de Stirling PDF](https://www.stirlingpdf.com)",
+          "[Página de descarga](https://www.stirlingpdf.com/download)",
+          "[Página de precios](https://www.stirlingpdf.com/pricing)",
+          "[Repositorio de GitHub y README](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[Versión v3.3.0 en GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[Política de privacidad](https://www.stirling.com/legal/privacy-policy)",
+          "[Reseña de Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo: BentoPDF frente a Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers: sustituir Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -2167,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**O Stirling PDF é um editor de PDF e plataforma de processamento de documentos que você mesmo executa, em um desktop ou em um servidor.** O fabricante é a Stirling PDF Inc., que se descreve como uma empresa dos EUA em sua política de privacidade.",
           "Segundo o fabricante, são mais de 60 ferramentas no desktop ou no servidor, incluindo editar, mesclar, dividir, assinar, ocultar dados sensíveis, converter, OCR e compactar. O README diz mais de 50, portanto a contagem de ferramentas é inconsistente entre as fontes.",
           "Além do editor, o fabricante descreve pipelines no-code, uma API REST, uma interface MCP, webhooks e um assistente de IA. O projeto é descrito como open-core: o README aponta para as ofertas Server Plan e Enterprise.",
-          "A cobertura independente é mista. A [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) publicou uma análise positiva. A XDA Developers publicou um texto em primeira pessoa, “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 de novembro de 2025), em que o redator diz ter migrado para o BentoPDF após preocupações com um banner de cookies e com cookies de análise e um “tracking pixel” que, segundo o artigo, estavam ativados por padrão e depois passaram a ser opcionais. A PromptQuorum não verificou essas afirmações; a política de privacidade do fabricante é a fonte primária.",
+          "A cobertura independente é mista. A [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) publicou uma análise positiva. A XDA Developers publicou um texto em primeira pessoa, “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 de novembro de 2025), em que o redator diz ter migrado para o BentoPDF após preocupações com um banner de cookies e com cookies de análise e um “tracking pixel” que, segundo o artigo, estavam ativados por padrão e depois passaram a ser opcionais. A PromptQuorum não verificou essas afirmações; a política de privacidade do fabricante é a fonte primária.",
           "Esta análise não é prática. Ela resume as páginas do fabricante e fontes públicas, e as declarações do fabricante são atribuídas como tal."
         ]
       },
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "Como obter o Stirling PDF",
         "content": [
-          "**Você pode instalar o Stirling PDF com um instalador nativo, um único comando Docker, Helm ou um .jar manual.** A [página de download](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) lista as opções, e a [versão v3.3.0 no GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) traz os arquivos de instalação."
+          "**Você pode instalar o Stirling PDF com um instalador nativo, um único comando Docker, Helm ou um .jar manual.** A [página de download](https://www.stirlingpdf.com/download) lista as opções, e a [versão v3.3.0 no GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0) traz os arquivos de instalação."
         ],
         "columns": [
           "Plataforma",
@@ -2184,11 +2184,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Plataforma": "Windows",
-            "Como obter": "Arquivo .exe independente, segundo a [página de download](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Arquivos da versão: Stirling-PDF-windows-x86_64.msi e Stirling-PDF-windows-arm64-setup.exe."
+            "Como obter": "Arquivo .exe independente, segundo a [página de download](https://www.stirlingpdf.com/download). Arquivos da versão: Stirling-PDF-windows-x86_64.msi e Stirling-PDF-windows-arm64-setup.exe."
           },
           {
             "Plataforma": "macOS",
-            "Como obter": "Aplicativo nativo na página de download. Arquivos da versão: Stirling-PDF-macos-universal.dmg e um .app.tar.gz ([versão](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Como obter": "Aplicativo nativo na página de download. Arquivos da versão: Stirling-PDF-macos-universal.dmg e um .app.tar.gz ([versão](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "Plataforma": "Linux",
@@ -2196,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Plataforma": "Docker",
-            "Como obter": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, depois abra http://localhost:8080 (segundo o [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "Como obter": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf`, depois abra http://localhost:8080 (segundo o [README](https://github.com/Stirling-Tools/Stirling-PDF))."
           },
           {
             "Plataforma": "Kubernetes",
@@ -2273,7 +2273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**O fabricante diz que o editor roda na sua própria máquina ou servidor e que os documentos não são enviados a serviços externos.** Essa é uma afirmação do fabricante. O código-fonte é público, então pode ser conferido.",
           "O fluxo de dados dos recursos de IA não está documentado nas fontes, e elas não dizem se rodam localmente ou chamam serviços externos.",
-          "Sobre telemetria, a Contabo relata um recurso de análise que esteve ativado por padrão no passado e depois passou a ser configurável. Um teste em um fórum da Gnoppix não encontrou telemetria. Nenhuma das afirmações foi confirmada com o código ou o texto da política atuais. A [política de privacidade](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) do fabricante é a fonte primária a ler.",
+          "Sobre telemetria, a Contabo relata um recurso de análise que esteve ativado por padrão no passado e depois passou a ser configurável. Um teste em um fórum da Gnoppix não encontrou telemetria. Nenhuma das afirmações foi confirmada com o código ou o texto da política atuais. A [política de privacidade](https://www.stirling.com/legal/privacy-policy) do fabricante é a fonte primária a ler.",
           "Não está informado se as versões desktop ou Docker exigem uma conta. O site tem links de login e de cadastro, e existe um .jar com login."
         ]
       },
@@ -2318,7 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "Alternativa": "BentoPDF",
-            "O que as fontes dizem": "Kit PDF auto-hospedado comparado diretamente com o Stirling PDF em um [artigo da Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). A Contabo é um provedor de hospedagem."
+            "O que as fontes dizem": "Kit PDF auto-hospedado comparado diretamente com o Stirling PDF em um [artigo da Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/). A Contabo é um provedor de hospedagem."
           },
           {
             "Alternativa": "Adobe Acrobat",
@@ -2364,16 +2364,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "Fontes",
         "items": [
-          "[Site do Stirling PDF](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Página de download](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Página de preços](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Repositório e README no GitHub](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Versão v3.3.0 no GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Política de privacidade](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Análise da Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers: substituiu o Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Site do Stirling PDF](https://www.stirlingpdf.com)",
+          "[Página de download](https://www.stirlingpdf.com/download)",
+          "[Página de preços](https://www.stirlingpdf.com/pricing)",
+          "[Repositório e README no GitHub](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[Versão v3.3.0 no GitHub](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[Política de privacidade](https://www.stirling.com/legal/privacy-policy)",
+          "[Análise da Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers: substituiu o Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -2507,7 +2507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF محرر PDF ومنصة لمعالجة المستندات تشغّلها بنفسك، على سطح المكتب أو على خادم.** الجهة المطوِّرة هي Stirling PDF Inc.، وتصف نفسها في سياسة الخصوصية بأنها شركة أمريكية.",
           "بحسب الجهة المطوِّرة، يقدّم أكثر من 60 أداة على سطح المكتب أو الخادم، منها التحرير والدمج والتقسيم والتوقيع وحجب البيانات والتحويل وOCR والضغط. يذكر ملف README أكثر من 50 أداة، لذا فإن عدد الأدوات غير متسق بين المصادر.",
           "إلى جانب المحرر، تصف الجهة المطوِّرة مسارات عمل بلا كتابة شيفرة (no-code pipelines) وواجهة REST API وواجهة MCP وwebhooks ومساعداً يعمل بالذكاء الاصطناعي. يوصف المشروع بأنه مفتوح النواة: يربط README بعروض Server Plan وEnterprise.",
-          "التغطية المستقلة متباينة. نشر [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) مراجعة إيجابية. ونشر XDA Developers مقالاً بصيغة المتكلم بعنوان “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 نوفمبر 2025)، يقول فيه الكاتب إنه انتقل إلى BentoPDF بعد مخاوف بشأن شريط ملفات تعريف الارتباط وملفات تعريف ارتباط التحليلات و«tracking pixel» كانت، بحسب المقال، مفعّلة افتراضياً ثم صارت اختيارية لاحقاً. لم تتحقق PromptQuorum من هذه الادعاءات؛ وسياسة الخصوصية لدى الجهة المطوّرة هي المصدر الأولي.",
+          "التغطية المستقلة متباينة. نشر [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/) مراجعة إيجابية. ونشر XDA Developers مقالاً بصيغة المتكلم بعنوان “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 نوفمبر 2025)، يقول فيه الكاتب إنه انتقل إلى BentoPDF بعد مخاوف بشأن شريط ملفات تعريف الارتباط وملفات تعريف ارتباط التحليلات و«tracking pixel» كانت، بحسب المقال، مفعّلة افتراضياً ثم صارت اختيارية لاحقاً. لم تتحقق PromptQuorum من هذه الادعاءات؛ وسياسة الخصوصية لدى الجهة المطوّرة هي المصدر الأولي.",
           "هذه المراجعة ليست تجربة عملية. هي تلخّص صفحات الجهة المطوِّرة والمصادر العامة، وتُنسب أقوال المطوِّر إليه صراحةً."
         ]
       },
@@ -2515,7 +2515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "كيفية الحصول على Stirling PDF",
         "content": [
-          "**يمكنك تثبيت Stirling PDF عبر مثبّت أصلي أو أمر Docker واحد أو Helm أو ملف .jar يدوي.** تعرض [صفحة التنزيل](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) الخيارات، وتحتوي [إصدار GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) على ملفات التثبيت."
+          "**يمكنك تثبيت Stirling PDF عبر مثبّت أصلي أو أمر Docker واحد أو Helm أو ملف .jar يدوي.** تعرض [صفحة التنزيل](https://www.stirlingpdf.com/download) الخيارات، وتحتوي [إصدار GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0) على ملفات التثبيت."
         ],
         "columns": [
           "المنصة",
@@ -2524,11 +2524,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "المنصة": "Windows",
-            "طريقة الحصول عليه": "ملف .exe مستقل بحسب [صفحة التنزيل](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). ملفات الإصدار: Stirling-PDF-windows-x86_64.msi وStirling-PDF-windows-arm64-setup.exe."
+            "طريقة الحصول عليه": "ملف .exe مستقل بحسب [صفحة التنزيل](https://www.stirlingpdf.com/download). ملفات الإصدار: Stirling-PDF-windows-x86_64.msi وStirling-PDF-windows-arm64-setup.exe."
           },
           {
             "المنصة": "macOS",
-            "طريقة الحصول عليه": "تطبيق أصلي من صفحة التنزيل. ملفات الإصدار: Stirling-PDF-macos-universal.dmg وملف .app.tar.gz ([الإصدار](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "طريقة الحصول عليه": "تطبيق أصلي من صفحة التنزيل. ملفات الإصدار: Stirling-PDF-macos-universal.dmg وملف .app.tar.gz ([الإصدار](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "المنصة": "Linux",
@@ -2536,7 +2536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "المنصة": "Docker",
-            "طريقة الحصول عليه": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf` ثم افتح http://localhost:8080 (بحسب [README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "طريقة الحصول عليه": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf` ثم افتح http://localhost:8080 (بحسب [README](https://github.com/Stirling-Tools/Stirling-PDF))."
           },
           {
             "المنصة": "Kubernetes",
@@ -2613,7 +2613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**تقول الجهة المطوِّرة إن المحرر يعمل على جهازك أو خادمك وإن المستندات لا تُرسل إلى خدمات خارجية.** هذا ادعاء من المطوِّر. الشيفرة المصدرية عامة، لذا يمكن التحقق منه.",
           "تدفق بيانات ميزات الذكاء الاصطناعي غير موثّق في المصادر، ولا تذكر المصادر ما إذا كانت تعمل محلياً أو تستدعي خدمات خارجية.",
-          "بخصوص القياس عن بُعد (telemetry)، تذكر Contabo ميزة تحليلات كانت مفعّلة افتراضياً في الماضي ثم أصبحت قابلة للضبط لاحقاً. ولم يجد اختبار في منتدى Gnoppix أي telemetry. لم يتأكد أي من القولين مقابل الشيفرة الحالية أو نص السياسة. [سياسة الخصوصية](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) لدى الجهة المطوِّرة هي المصدر الأساسي الذي ينبغي قراءته.",
+          "بخصوص القياس عن بُعد (telemetry)، تذكر Contabo ميزة تحليلات كانت مفعّلة افتراضياً في الماضي ثم أصبحت قابلة للضبط لاحقاً. ولم يجد اختبار في منتدى Gnoppix أي telemetry. لم يتأكد أي من القولين مقابل الشيفرة الحالية أو نص السياسة. [سياسة الخصوصية](https://www.stirling.com/legal/privacy-policy) لدى الجهة المطوِّرة هي المصدر الأساسي الذي ينبغي قراءته.",
           "لا يُذكر ما إذا كانت نسختا سطح المكتب أو Docker تتطلبان حساباً. يعرض الموقع روابط تسجيل الدخول والتسجيل، ويوجد ملف .jar مع تسجيل دخول."
         ]
       },
@@ -2658,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "البديل": "BentoPDF",
-            "ما تذكره المصادر": "مجموعة أدوات PDF مستضافة ذاتياً قورنت مباشرة بـ Stirling PDF في [مقال Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review). Contabo مزوّد استضافة."
+            "ما تذكره المصادر": "مجموعة أدوات PDF مستضافة ذاتياً قورنت مباشرة بـ Stirling PDF في [مقال Contabo](https://contabo.com/blog/bentopdf-vs-stirling-pdf/). Contabo مزوّد استضافة."
           },
           {
             "البديل": "Adobe Acrobat",
@@ -2704,16 +2704,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "المصادر",
         "items": [
-          "[موقع Stirling PDF](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[صفحة التنزيل](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[صفحة الأسعار](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[مستودع GitHub وREADME](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[إصدار GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[سياسة الخصوصية](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[مراجعة Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo: BentoPDF مقابل Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers: استبدال Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[موقع Stirling PDF](https://www.stirlingpdf.com)",
+          "[صفحة التنزيل](https://www.stirlingpdf.com/download)",
+          "[صفحة الأسعار](https://www.stirlingpdf.com/pricing)",
+          "[مستودع GitHub وREADME](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[إصدار GitHub v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[سياسة الخصوصية](https://www.stirling.com/legal/privacy-policy)",
+          "[مراجعة Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo: BentoPDF مقابل Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers: استبدال Stirling PDF](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
@@ -2847,7 +2847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF는 데스크톱이나 서버에서 직접 운영하는 PDF 편집기이자 문서 처리 플랫폼입니다.** 제작사는 Stirling PDF Inc.이며, 개인정보 처리방침에서 스스로를 미국 기업이라고 밝히고 있습니다.",
           "제작사에 따르면 데스크톱 또는 서버에서 편집, 병합, 분할, 서명, 가림 처리, 변환, OCR, 압축 등 60개 이상의 도구를 제공합니다. README에는 50개 이상이라고 되어 있어, 출처마다 도구 수가 일치하지 않습니다.",
           "제작사는 편집기 외에도 노코드 파이프라인, REST API, MCP 인터페이스, 웹훅, AI 어시스턴트를 설명합니다. 프로젝트는 오픈코어로 소개되며, README에는 Server Plan과 Enterprise 상품 링크가 있습니다.",
-          "독립적인 보도는 엇갈립니다. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)는 긍정적인 리뷰를 게재했습니다. XDA Developers는 1인칭 기사 “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it”(2025년 11월 5일)를 게재했으며, 필자는 쿠키 배너와 기사에 따르면 기본으로 켜져 있다가 나중에 선택 사항이 된 분석 쿠키 및 “tracking pixel”에 대한 우려로 BentoPDF로 옮겼다고 밝힙니다. PromptQuorum은 이러한 주장을 확인하지 않았으며, 제조사의 개인정보 처리방침이 1차 출처입니다.",
+          "독립적인 보도는 엇갈립니다. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)는 긍정적인 리뷰를 게재했습니다. XDA Developers는 1인칭 기사 “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it”(2025년 11월 5일)를 게재했으며, 필자는 쿠키 배너와 기사에 따르면 기본으로 켜져 있다가 나중에 선택 사항이 된 분석 쿠키 및 “tracking pixel”에 대한 우려로 BentoPDF로 옮겼다고 밝힙니다. PromptQuorum은 이러한 주장을 확인하지 않았으며, 제조사의 개인정보 처리방침이 1차 출처입니다.",
           "이 리뷰는 직접 사용해 본 결과가 아닙니다. 제작사 페이지와 공개 자료를 정리한 것이며, 제작사의 설명은 그렇게 표시했습니다."
         ]
       },
@@ -2855,7 +2855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "get-it",
         "title": "Stirling PDF 설치 방법",
         "content": [
-          "**Stirling PDF는 네이티브 설치 프로그램, Docker 명령어 한 줄, Helm, 수동 .jar로 설치할 수 있습니다.** [다운로드 페이지](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)에 선택지가 나와 있고, 설치 파일은 [GitHub v3.3.0 릴리스](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)에 있습니다."
+          "**Stirling PDF는 네이티브 설치 프로그램, Docker 명령어 한 줄, Helm, 수동 .jar로 설치할 수 있습니다.** [다운로드 페이지](https://www.stirlingpdf.com/download)에 선택지가 나와 있고, 설치 파일은 [GitHub v3.3.0 릴리스](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)에 있습니다."
         ],
         "columns": [
           "플랫폼",
@@ -2864,11 +2864,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "플랫폼": "Windows",
-            "받는 방법": "[다운로드 페이지](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)의 독립 실행형 .exe. 릴리스 파일: Stirling-PDF-windows-x86_64.msi, Stirling-PDF-windows-arm64-setup.exe."
+            "받는 방법": "[다운로드 페이지](https://www.stirlingpdf.com/download)의 독립 실행형 .exe. 릴리스 파일: Stirling-PDF-windows-x86_64.msi, Stirling-PDF-windows-arm64-setup.exe."
           },
           {
             "플랫폼": "macOS",
-            "받는 방법": "다운로드 페이지의 네이티브 앱. 릴리스 파일: Stirling-PDF-macos-universal.dmg와 .app.tar.gz([릴리스](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review))."
+            "받는 방법": "다운로드 페이지의 네이티브 앱. 릴리스 파일: Stirling-PDF-macos-universal.dmg와 .app.tar.gz([릴리스](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0))."
           },
           {
             "플랫폼": "Linux",
@@ -2876,7 +2876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "플랫폼": "Docker",
-            "받는 방법": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf` 실행 후 http://localhost:8080 접속([README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) 기준)."
+            "받는 방법": "`docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf` 실행 후 http://localhost:8080 접속([README](https://github.com/Stirling-Tools/Stirling-PDF) 기준)."
           },
           {
             "플랫폼": "Kubernetes",
@@ -2953,7 +2953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**제작사는 편집기가 사용자의 컴퓨터나 서버에서 실행되며 문서가 외부 서비스로 전송되지 않는다고 밝힙니다.** 이는 제작사의 주장입니다. 소스 코드가 공개되어 있어 확인할 수 있습니다.",
           "AI 기능의 데이터 흐름은 출처에 문서화되어 있지 않으며, 로컬에서 실행되는지 외부 서비스를 호출하는지도 나와 있지 않습니다.",
-          "텔레메트리에 관해서는, Contabo가 과거에 분석 기능이 기본으로 켜져 있었고 이후 설정 가능하게 바뀌었다고 보고합니다. Gnoppix 포럼의 테스트에서는 텔레메트리가 발견되지 않았습니다. 두 주장 모두 현재 코드나 정책 문구와 대조해 확인된 것은 아닙니다. 제작사의 [개인정보 처리방침](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)이 읽어야 할 1차 출처입니다.",
+          "텔레메트리에 관해서는, Contabo가 과거에 분석 기능이 기본으로 켜져 있었고 이후 설정 가능하게 바뀌었다고 보고합니다. Gnoppix 포럼의 테스트에서는 텔레메트리가 발견되지 않았습니다. 두 주장 모두 현재 코드나 정책 문구와 대조해 확인된 것은 아닙니다. 제작사의 [개인정보 처리방침](https://www.stirling.com/legal/privacy-policy)이 읽어야 할 1차 출처입니다.",
           "데스크톱 또는 Docker 버전에 계정이 필요한지는 명시되어 있지 않습니다. 사이트에는 로그인과 회원가입 링크가 있고, 로그인 포함 .jar도 존재합니다."
         ]
       },
@@ -2998,7 +2998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "rows": [
           {
             "대안": "BentoPDF",
-            "출처에 나온 내용": "[Contabo 기사](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)에서 Stirling PDF와 직접 비교된 셀프 호스팅 PDF 툴킷. Contabo는 호스팅 업체입니다."
+            "출처에 나온 내용": "[Contabo 기사](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)에서 Stirling PDF와 직접 비교된 셀프 호스팅 PDF 툴킷. Contabo는 호스팅 업체입니다."
           },
           {
             "대안": "Adobe Acrobat",
@@ -3044,16 +3044,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "sources",
         "title": "출처",
         "items": [
-          "[Stirling PDF 웹사이트](https://www.stirlingpdf.com?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[다운로드 페이지](https://www.stirlingpdf.com/download?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[가격 페이지](https://www.stirlingpdf.com/pricing?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub 저장소 및 README](https://github.com/Stirling-Tools/Stirling-PDF?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[GitHub 릴리스 v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[개인정보 처리방침](https://www.stirling.com/legal/privacy-policy?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Pocket-lint 리뷰](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)",
-          "[XDA Developers: Stirling PDF를 대체한 사례](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)"
+          "[Stirling PDF 웹사이트](https://www.stirlingpdf.com)",
+          "[다운로드 페이지](https://www.stirlingpdf.com/download)",
+          "[가격 페이지](https://www.stirlingpdf.com/pricing)",
+          "[GitHub 저장소 및 README](https://github.com/Stirling-Tools/Stirling-PDF)",
+          "[GitHub 릴리스 v3.3.0](https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.3.0)",
+          "[LICENSE](https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/LICENSE)",
+          "[개인정보 처리방침](https://www.stirling.com/legal/privacy-policy)",
+          "[Pocket-lint 리뷰](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/)",
+          "[Contabo: BentoPDF vs Stirling PDF](https://contabo.com/blog/bentopdf-vs-stirling-pdf/)",
+          "[XDA Developers: Stirling PDF를 대체한 사례](https://www.xda-developers.com/replaced-stirling-pdf-with-this-self-hosted-pdf-toolkit/)"
         ]
       },
       "relatedReading": {
