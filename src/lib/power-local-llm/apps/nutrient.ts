@@ -55,8 +55,8 @@ export const app: ToolRecord = {
   installEffort: 'installer', // easiest official path = Nutrient Extract Studio DMG for Apple silicon Macs; every other route is terminal/developer setup
   installOn: ['mac'],
   installEvidence: 'nutrient.io/api/data-extraction-api/macos-desktop-app (read 2026-11-17): "Download the DMG installer, install the app, and sign in through the browser. A free Nutrient account is enough."; Apple silicon, macOS Tahoe 26.4 or later; DMG at extract-studio.cdn.nutrient.io returned HTTP 200 (~142 MB). Other routes: npm install -g @pspdfkit/pdf-to-markdown, SDK package managers, Document Engine container.',
-  hqCountry: 'US', // unchanged; CONFLICT with Austria (PSPDFKit GmbH controller/licensor) reported to the owner 2026-11-17, see header
-  hqCountrySource: 'https://www.nutrient.io/legal/',
+  hqCountry: 'US', // OWNER DECISION 2026-11-18: sources conflict (impressum lists the US entity first; privacy policy and CLI licence name PSPDFKit GmbH d/b/a Nutrient, Vienna, Austria); owner chose US
+  hqCountrySource: 'https://www.nutrient.io/legal/impressum/',
   tagline: {
     en: 'Commercial multi-platform PDF SDK for viewing, editing, signing, OCR and data extraction; supports iOS, Android, Web (WebAssembly), .NET, Java, Python, Node.js and self-hosted Document Engine deployment',
     de: 'Kommerzielles Multiplattform-PDF-SDK für Anzeige, Bearbeitung, Signierung, OCR und Datenextraktion; unterstützt iOS, Android, Web (WebAssembly), .NET, Java, Python, Node.js und selbst gehostetes Document Engine Deployment',
