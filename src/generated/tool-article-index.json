@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "newelle-review",
+        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
+        "url": "/power-local-llm/newelle-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llms-for-creative-writing",
         "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
@@ -72,17 +80,9 @@
         "url": "/local-llms/run-qwen-locally-guide-2026",
         "dateModified": "2026-11-15",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-mini-pc-local-llm-2026",
-        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
-        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 363,
+    "totalCount": 364,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "newelle-review",
+        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
+        "url": "/power-local-llm/newelle-review",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "whisper-cpp-review",
-        "title": "Whisper.cpp Review: Local Speech-to-Text in Pure C/C++",
-        "url": "/power-local-llm/whisper-cpp-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 193,
+    "totalCount": 194,
     "capped": true
   },
   "vLLM": {
@@ -7132,7 +7132,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 37,
+    "totalCount": 38,
     "capped": true
   },
   "ComfyUI": {
@@ -11160,6 +11160,20 @@
     ],
     "totalCount": 70,
     "capped": true
+  },
+  "Newelle": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "newelle-review",
+        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
+        "url": "/power-local-llm/newelle-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "Lyonesse": {
     "articles": [

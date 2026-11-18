@@ -888,6 +888,7 @@ const HUB_THEMES: Array<{
       'hanoki-review',
       'jan-review',
       'nativ-review',
+      'newelle-review',
       'iimagine-desktop-review',
       'jarvis-mac-review',
       'llama-app-review',
