@@ -137,6 +137,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "solomd-review",
+        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
+        "url": "/power-local-llm/solomd-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -148,14 +156,6 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
-        "url": "/power-local-llm/solomd-review",
         "dateModified": "2026-11-17",
         "tier": "about"
       },
@@ -199,17 +199,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-11-17",
+        "slug": "solomd-review",
+        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
+        "url": "/power-local-llm/solomd-review",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
-        "url": "/power-local-llm/solomd-review",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-17",
         "tier": "about"
       },
@@ -893,6 +893,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "solomd-review",
+        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
+        "url": "/power-local-llm/solomd-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -904,14 +912,6 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
-        "url": "/power-local-llm/solomd-review",
         "dateModified": "2026-11-17",
         "tier": "about"
       },
@@ -1020,7 +1020,7 @@
         "slug": "solomd-review",
         "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
         "url": "/power-local-llm/solomd-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -3014,7 +3014,7 @@
         "slug": "solomd-review",
         "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
         "url": "/power-local-llm/solomd-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -5026,7 +5026,7 @@
         "slug": "papersgpt-review",
         "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
         "url": "/power-local-llm/papersgpt-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -11246,7 +11246,7 @@
         "slug": "cozyclay-review",
         "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
         "url": "/power-local-llm/cozyclay-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -11276,7 +11276,7 @@
         "slug": "papersgpt-review",
         "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
         "url": "/power-local-llm/papersgpt-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -11298,7 +11298,7 @@
         "slug": "solomd-review",
         "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
         "url": "/power-local-llm/solomd-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       }
     ],
@@ -11524,7 +11524,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 110,
+    "totalCount": 109,
     "capped": true
   },
   "Sokuji": {
@@ -13497,6 +13497,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cozyclay-review",
+        "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
+        "url": "/power-local-llm/cozyclay-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
@@ -13548,14 +13556,6 @@
         "slug": "openwork-review",
         "title": "OpenWork Review: Open-Source Desktop AI Agent for Your Files",
         "url": "/power-local-llm/openwork-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pooled-review",
-        "title": "Pooled Review: Peer-to-Peer LLM Inference in the Browser",
-        "url": "/power-local-llm/pooled-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
