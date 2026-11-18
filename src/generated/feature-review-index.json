@@ -2013,5 +2013,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "ecc-review",
     "url": "/power-local-llm/ecc-review"
+  },
+  "oriveo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "oriveo-review",
+    "url": "/power-local-llm/oriveo-review"
   }
 }

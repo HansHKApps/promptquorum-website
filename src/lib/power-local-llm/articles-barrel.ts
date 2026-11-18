@@ -518,6 +518,7 @@ import { article as a_kition_review } from './articles/kition-review'
 import { article as a_pooled_review } from './articles/pooled-review'
 import { article as a_reactive_resume_review } from './articles/reactive-resume-review'
 import { article as a_next_ai_draw_io_review } from './articles/next-ai-draw-io-review'
+import { article as a_oriveo_review } from './articles/oriveo-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -1075,6 +1076,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pooled-review':                                       a_pooled_review,
   'reactive-resume-review':                              a_reactive_resume_review,
   'next-ai-draw-io-review':                              a_next_ai_draw_io_review,
+  'oriveo-review':                                       a_oriveo_review,
 }
 
 // The directory page's "Last updated" date follows the tool list: every 5 tools added after the article's own

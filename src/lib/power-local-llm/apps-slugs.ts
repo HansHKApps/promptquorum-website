@@ -338,6 +338,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'next-ai-draw-io':                        'next-ai-draw-io',
   'inbox-zero':                             'inbox-zero',
   'aqbot':                                  'aqbot',
+  'oriveo':                                 'oriveo',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

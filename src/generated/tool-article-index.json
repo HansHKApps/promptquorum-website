@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 379,
+    "totalCount": 380,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 196,
+    "totalCount": 197,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 109,
+    "totalCount": 110,
     "capped": true
   },
   "LocalAI": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 188,
+    "totalCount": 189,
     "capped": true
   },
   "Atomic Chat": {
@@ -1346,7 +1346,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "Cherry Studio": {
@@ -2200,7 +2200,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 64,
+    "totalCount": 65,
     "capped": true
   },
   "LibreChat": {
@@ -2211,6 +2211,14 @@
         "title": "LibreChat Review: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "oriveo-review",
+        "title": "Oriveo Review: Bring-Your-Own-Key Multi-Model AI Chat",
+        "url": "/power-local-llm/oriveo-review",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -2276,17 +2284,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "odysseus-review",
-        "title": "Odysseus Review: The Self-Hosted AI Workspace",
-        "url": "/power-local-llm/odysseus-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "text-generation-webui": {
@@ -9639,6 +9639,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "oriveo-review",
+        "title": "Oriveo Review: Bring-Your-Own-Key Multi-Model AI Chat",
+        "url": "/power-local-llm/oriveo-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-iphone-guide",
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
@@ -9662,7 +9670,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Aori": {
@@ -13560,7 +13568,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 282,
+    "totalCount": 283,
     "capped": true
   },
   "Qdrant": {
@@ -16007,6 +16015,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "oriveo-review",
+        "title": "Oriveo Review: Bring-Your-Own-Key Multi-Model AI Chat",
+        "url": "/power-local-llm/oriveo-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -16014,7 +16030,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Local AI Mail": {
@@ -16157,6 +16173,20 @@
       }
     ],
     "totalCount": 5,
+    "capped": false
+  },
+  "Oriveo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "oriveo-review",
+        "title": "Oriveo Review: Bring-Your-Own-Key Multi-Model AI Chat",
+        "url": "/power-local-llm/oriveo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   }
 }
