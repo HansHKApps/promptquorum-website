@@ -645,6 +645,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'labelme-review',
   'openwork-review',
   'airi-review',
+  'inbox-zero-review',
   'skales-review',
   'halo-review',
   'yovoice-review',

@@ -1134,6 +1134,11 @@
     "urlSlug": "airi-review",
     "url": "/power-local-llm/airi-review"
   },
+  "inbox-zero": {
+    "cluster": "power-local-llm",
+    "urlSlug": "inbox-zero-review",
+    "url": "/power-local-llm/inbox-zero-review"
+  },
   "skales": {
     "cluster": "power-local-llm",
     "urlSlug": "skales-review",
