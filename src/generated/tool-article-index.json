@@ -67,22 +67,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "memex-review",
-        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
-        "url": "/power-local-llm/memex-review",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "newelle-review",
-        "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
-        "url": "/power-local-llm/newelle-review",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
     ],
-    "totalCount": 380,
+    "totalCount": 381,
     "capped": true
   },
   "llama.cpp": {
@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -330,17 +338,9 @@
         "url": "/power-local-llm/localai-apexcreator-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-review",
-        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
-        "url": "/power-local-llm/anythingllm-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "TensorRT-LLM": {
@@ -885,6 +885,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "rtx-3090-local-llm-buy-or-rent",
         "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
         "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
@@ -938,17 +946,9 @@
         "url": "/local-llms/how-to-install-lm-studio",
         "dateModified": "2026-11-14",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "sillytavern-review",
-        "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
-        "url": "/local-llms/sillytavern-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 189,
+    "totalCount": 190,
     "capped": true
   },
   "Atomic Chat": {
@@ -1260,7 +1260,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 46,
+    "totalCount": 47,
     "capped": true
   },
   "Msty": {
@@ -1361,6 +1361,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1416,7 +1424,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Backyard AI": {
@@ -2733,6 +2741,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "boltai-review",
         "title": "BoltAI Review: Native Mac AI App, Ollama Ready",
         "url": "/power-local-llm/boltai-review",
@@ -2748,7 +2764,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Continue.dev": {
@@ -9946,7 +9962,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "multica": {
@@ -12551,6 +12567,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Askimo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Reactive Resume": {
