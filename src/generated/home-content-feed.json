@@ -48277,7 +48277,7 @@
   },
   {
     "lang": "en",
-    "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
+    "title": "SoloMD Review: Free Markdown Notes App with AI Chat for Local Models and MCP",
     "excerpt": "SoloMD is a free MIT Markdown notes app for 5 platforms with vault AI chat, Ollama and LM Studio detection and an MCP server. Install, privacy.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48286,8 +48286,8 @@
   },
   {
     "lang": "de",
-    "title": "SoloMD-Rezension: Kostenlose Markdown-Notiz-App mit lokalem KI-Chat und MCP",
-    "excerpt": "SoloMD: kostenlose MIT-Markdown-Notiz-App für 5 Plattformen mit KI-Chat über den Vault, Ollama-/LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.",
+    "title": "SoloMD-Rezension: Kostenlose Markdown-Notiz-App mit KI-Chat für lokale Modelle und MCP",
+    "excerpt": "SoloMD: kostenlose MIT-Markdown-Notiz-App mit KI-Chat über den Vault, Ollama-/LM-Studio-Erkennung und MCP-Server. Installation, Datenschutz.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
     "url": "/de/power-local-llm/solomd-review",
@@ -48295,7 +48295,7 @@
   },
   {
     "lang": "fr",
-    "title": "Avis sur SoloMD : application de notes Markdown gratuite avec chat IA local et MCP",
+    "title": "Avis sur SoloMD : application de notes Markdown gratuite avec chat IA pour modèles locaux et MCP",
     "excerpt": "SoloMD : app de notes Markdown gratuite (MIT), chat IA sur votre coffre, détection d'Ollama et LM Studio, serveur MCP. Installation, confidentialité.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48304,7 +48304,7 @@
   },
   {
     "lang": "ja",
-    "title": "SoloMDレビュー：ローカルAIチャットとMCPを備えた無料のMarkdownノートアプリ",
+    "title": "SoloMDレビュー：ローカルモデル向けAIチャットとMCPを備えた無料のMarkdownノートアプリ",
     "excerpt": "SoloMDはMITライセンスの無料Markdownノートアプリ。5プラットフォーム対応で、ボルトとのAIチャット、OllamaやLM Studioの検出、MCPサーバーを備えます。導入とプライバシー。",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48313,7 +48313,7 @@
   },
   {
     "lang": "zh",
-    "title": "SoloMD 点评：带本地 AI 对话与 MCP 的免费 Markdown 笔记应用",
+    "title": "SoloMD 点评：支持本地模型 AI 对话与 MCP 的免费 Markdown 笔记应用",
     "excerpt": "SoloMD 是 MIT 许可的免费 Markdown 笔记应用，支持 5 个平台，可与笔记库对话，自动发现 Ollama 和 LM Studio，并内置 MCP 服务器。安装与隐私说明。",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48322,7 +48322,7 @@
   },
   {
     "lang": "es",
-    "title": "Reseña de SoloMD: app de notas en Markdown gratuita con chat de IA local y MCP",
+    "title": "Reseña de SoloMD: app de notas en Markdown gratuita con chat de IA para modelos locales y MCP",
     "excerpt": "SoloMD: app de notas Markdown gratuita (MIT) con chat de IA sobre tu bóveda, detección de Ollama y LM Studio y servidor MCP. Instalación y privacidad.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48331,7 +48331,7 @@
   },
   {
     "lang": "pt",
-    "title": "Análise do SoloMD: app de notas em Markdown gratuito com chat de IA local e MCP",
+    "title": "Análise do SoloMD: app de notas em Markdown gratuito com chat de IA para modelos locais e MCP",
     "excerpt": "SoloMD: app de notas Markdown gratuito (MIT), com chat de IA sobre o cofre, detecção de Ollama e LM Studio e servidor MCP. Instalação e privacidade.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48340,7 +48340,7 @@
   },
   {
     "lang": "ar",
-    "title": "مراجعة SoloMD: تطبيق ملاحظات Markdown مجاني مع دردشة ذكاء اصطناعي محلية وخادم MCP",
+    "title": "مراجعة SoloMD: تطبيق ملاحظات Markdown مجاني مع دردشة ذكاء اصطناعي للنماذج المحلية وخادم MCP",
     "excerpt": "SoloMD تطبيق ملاحظات Markdown مجاني برخصة MIT لخمس منصات، مع دردشة ذكاء اصطناعي حول مجلد ملاحظاتك واكتشاف Ollama وLM Studio وخادم MCP. التثبيت والخصوصية.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48349,7 +48349,7 @@
   },
   {
     "lang": "ko",
-    "title": "SoloMD 리뷰: 로컬 AI 채팅과 MCP를 갖춘 무료 Markdown 노트 앱",
+    "title": "SoloMD 리뷰: 로컬 모델용 AI 채팅과 MCP를 갖춘 무료 Markdown 노트 앱",
     "excerpt": "SoloMD는 MIT 라이선스의 무료 Markdown 노트 앱으로 5개 플랫폼을 지원하며 보관함 AI 채팅, Ollama·LM Studio 감지, MCP 서버를 제공합니다. 설치와 개인정보.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-18",
@@ -48611,7 +48611,7 @@
   {
     "lang": "de",
     "title": "Rescript-Rezension: Video und Audio über das Transkript schneiden",
-    "excerpt": "Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Was belegt ist, laut Hersteller auch lokal.",
+    "excerpt": "Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Das ist belegt.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/de/power-local-llm/rescript-review",
@@ -48647,7 +48647,7 @@
   {
     "lang": "es",
     "title": "Reseña de Rescript: edita vídeo y audio editando la transcripción",
-    "excerpt": "Rescript es un editor de código disponible que corta vídeo y audio al borrar palabras de una transcripción de Whisper. Gratis para uso no comercial.",
+    "excerpt": "Rescript es un editor con código fuente disponible que corta vídeo y audio borrando palabras de una transcripción de Whisper. Gratis para uso no comercial.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/es/power-local-llm/rescript-review",
@@ -48656,7 +48656,7 @@
   {
     "lang": "pt",
     "title": "Análise do Rescript: edite vídeo e áudio editando a transcrição",
-    "excerpt": "O Rescript é um editor de código disponível que corta vídeo e áudio ao apagar palavras de uma transcrição do Whisper. Grátis para uso não comercial.",
+    "excerpt": "O Rescript é um editor com código-fonte disponível que corta vídeo e áudio ao apagar palavras de uma transcrição do Whisper. Grátis para uso não comercial.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/pt/power-local-llm/rescript-review",
@@ -48665,7 +48665,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Rescript: تحرير الفيديو والصوت بتعديل النص المفرَّغ",
-    "excerpt": "Rescript محرر متاح الشيفرة المصدرية يقصّ الفيديو والصوت بحذف كلمات من نص Whisper المفرَّغ. مجاني للاستخدام غير التجاري. ما تم تأكيده.",
+    "excerpt": "Rescript محرر متاح الشيفرة المصدرية يقصّ الفيديو والصوت بحذف كلمات من نص Whisper المفرَّغ. مجاني للاستخدام غير التجاري وبترخيص PolyForm. ما تم تأكيده.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/ar/power-local-llm/rescript-review",
@@ -48737,7 +48737,7 @@
   {
     "lang": "pt",
     "title": "Análise do Minutes: memória gratuita e de código aberto para reuniões, memos de voz e ditado voltada a agentes de IA",
-    "excerpt": "O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados como arquivos Markdown que clientes MCP podem pesquisar. Conforme a documentação; sem testes.",
+    "excerpt": "O Minutes é um app MIT gratuito que grava reuniões, memos de voz e ditados em Markdown pesquisável por MCP. Conforme a documentação; sem testes.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/pt/power-local-llm/minutes-review",
@@ -48746,7 +48746,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Minutes: ذاكرة مجانية مفتوحة المصدر للاجتماعات والمذكرات الصوتية والإملاء لوكلاء الذكاء الاصطناعي",
-    "excerpt": "Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP. بحسب وثائقه، دون اختبار.",
+    "excerpt": "Minutes تطبيق مجاني برخصة MIT يحفظ الاجتماعات والمذكرات الصوتية والإملاء كملفات Markdown يبحث فيها عملاء MCP عبر الخادم. بحسب وثائقه، دون اختبار.",
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/ar/power-local-llm/minutes-review",
