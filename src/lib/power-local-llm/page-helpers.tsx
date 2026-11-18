@@ -1297,6 +1297,7 @@ const HUB_THEMES: Array<{
       'transcriptionsuite-review',
       'whisper-notes-review',
       'aiko-review',
+      'rescript-review',
       'amical-review',
       'univocal-review',
       'sprich-review',

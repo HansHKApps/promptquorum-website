@@ -11227,6 +11227,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Rescript": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "rescript-review",
+        "title": "Rescript Review: Edit Video and Audio by Editing the Transcript",
+        "url": "/power-local-llm/rescript-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {

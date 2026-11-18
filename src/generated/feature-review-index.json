@@ -1154,6 +1154,11 @@
     "urlSlug": "oleafly-review",
     "url": "/power-local-llm/oleafly-review"
   },
+  "rescript": {
+    "cluster": "power-local-llm",
+    "urlSlug": "rescript-review",
+    "url": "/power-local-llm/rescript-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
