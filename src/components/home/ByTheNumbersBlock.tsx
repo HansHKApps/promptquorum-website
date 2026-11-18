@@ -3,6 +3,7 @@ import { getHomeStats } from '@/lib/home/stats'
 import { getFounderVerifiedApps, getHandsOnTestedApps } from '@/lib/home/statDetails'
 import { getMcpUsageSnapshotCached } from '@/lib/mcp/usage'
 import { getAskHansTotals } from '@/lib/askhans/totals'
+import { getUmamiStat } from '@/lib/partners/umami'
 import { HomeIcon, type HomeIconName } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
 import { StatTilesClient, type StatTileItem } from './StatTilesClient'
@@ -15,6 +16,7 @@ import { t } from './home-i18n'
 export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang?: Language; layout?: 'card' | 'bar' }) {
   const stats = getHomeStats(lang)
   const mcpUsage = await getMcpUsageSnapshotCached()
+  const umami = await getUmamiStat()
   const askHansOn = process.env.ASK_HANS_ENABLED === 'true'
   const askHansTotals = askHansOn ? await getAskHansTotals() : null
   const founderVerifiedApps = getFounderVerifiedApps(lang)
@@ -61,6 +63,13 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
           icon: 'mcp' as const,
           href: askHansHref,
           hint: t('statAskHansCallsHint', lang),
+        }]
+      : []),
+    ...(umami
+      ? [{
+          label: t('statPageViews', lang),
+          value: umami.pageviews.toLocaleString(),
+          icon: 'stats' as const,
         }]
       : []),
   ]

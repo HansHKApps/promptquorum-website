@@ -377,6 +377,12 @@ const HOME_UI = {
     ja: 'Ask Hansの回答数', zh: 'Ask Hans 回答数', es: 'Respuestas de Ask Hans',
     pt: 'Respostas do Ask Hans', ar: 'إجابات Ask Hans', ko: 'Ask Hans 답변 수',
   },
+  /** Page counter tile — same 24 h Umami page-view number and the same reviewed wording as the Partners page (src/lib/partners/content.ts viewsLabel). Shown only when the Umami lookup returns a value. */
+  statPageViews: {
+    en: 'Page views, last 24 hours', de: 'Seitenaufrufe, letzte 24 Stunden', fr: 'Pages vues, dernières 24 heures',
+    ja: 'ページビュー（直近24時間）', zh: '页面浏览量（最近 24 小时）', es: 'Páginas vistas, últimas 24 horas',
+    pt: 'Visualizações de página, últimas 24 horas', ar: 'مشاهدات الصفحات، آخر 24 ساعة', ko: '페이지뷰, 최근 24시간',
+  },
   statAskHansCallsHint: {
     en: 'See how Ask Hans is used →', de: 'So wird Ask Hans genutzt →',
     fr: 'Comment Ask Hans est utilisé →', ja: 'Ask Hansの利用状況を見る →',
