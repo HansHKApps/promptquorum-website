@@ -93,6 +93,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'taskweaver':                              'taskweaver',
   'dspy':                                    'dspy',
   'openclaw':                                'openclaw',
+  'openhuman':                               'openhuman',
   'hermes-agent':                            'hermes-agent',
   'msty-go':                                 'msty-go',
   'whisper-cpp':                             'whisper-cpp',

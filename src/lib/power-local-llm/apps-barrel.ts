@@ -97,6 +97,7 @@ import { app as app_camel } from './apps/camel'
 import { app as app_taskweaver } from './apps/taskweaver'
 import { app as app_dspy } from './apps/dspy'
 import { app as app_openclaw } from './apps/openclaw'
+import { app as app_openhuman } from './apps/openhuman'
 import { app as app_hermes_agent } from './apps/hermes-agent'
 import { app as app_msty_go } from './apps/msty-go'
 import { app as app_whisper_cpp } from './apps/whisper-cpp'
@@ -494,6 +495,7 @@ export const localAiApps: ToolRecord[] = [
   app_taskweaver,
   app_dspy,
   app_openclaw,
+  app_openhuman,
   app_hermes_agent,
   app_msty_go,
   app_whisper_cpp,
