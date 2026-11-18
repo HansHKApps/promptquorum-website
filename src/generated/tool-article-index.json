@@ -80,17 +80,9 @@
         "url": "/power-local-llm/papersgpt-review",
         "dateModified": "2026-11-17",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with Local AI Chat and MCP",
-        "url": "/power-local-llm/solomd-review",
-        "dateModified": "2026-11-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 369,
+    "totalCount": 370,
     "capped": true
   },
   "llama.cpp": {
