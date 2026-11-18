@@ -804,7 +804,7 @@
     ],
     [
       "SP-13",
-      "Una prueba en ruso \"got lost\" según el relato del evaluador: la app no entendió las palabras y el resultado salió ininteligible. La frase dicha y el idioma de dictado en ese momento no están registrados.",
+      "Una prueba en ruso \"se perdió\" según el relato del evaluador: la app no entendió las palabras y el resultado salió ininteligible. La frase dicha y el idioma de dictado en ese momento no están registrados.",
       "Idiomas",
       "observed",
       "Medium",
