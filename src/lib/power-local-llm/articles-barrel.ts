@@ -499,6 +499,7 @@ import { article as a_ai_cutoutwerk_review } from './articles/ai-cutoutwerk-revi
 import { article as a_openmontage_review } from './articles/openmontage-review'
 import { article as a_ecc_review } from './articles/ecc-review'
 import { article as a_memex_review } from './articles/memex-review'
+import { article as a_fablecut_review } from './articles/fablecut-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -1037,6 +1038,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'openmontage-review':                                  a_openmontage_review,
   'ecc-review':                                          a_ecc_review,
   'memex-review':                                        a_memex_review,
+  'fablecut-review':                                     a_fablecut_review,
 }
 
 // The directory page's "Last updated" date follows the tool list: every 5 tools added after the article's own

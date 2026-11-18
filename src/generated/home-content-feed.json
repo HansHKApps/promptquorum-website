@@ -59212,6 +59212,87 @@
   },
   {
     "lang": "en",
+    "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+    "excerpt": "FableCut is a free, open-source browser video editor that AI agents can drive over MCP or REST, editing one project.json timeline while clips stay on your disk.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "FableCut Review: Der Browser-Videoeditor, den KI-Agenten steuern können",
+    "excerpt": "FableCut ist ein kostenloser, quelloffener Browser-Videoeditor, den KI-Agenten über MCP oder REST steuern können, mit einer project.json-Timeline, während Clips auf Ihrer Festplatte bleiben.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/de/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "FableCut : l'éditeur vidéo dans le navigateur que des agents IA peuvent piloter",
+    "excerpt": "FableCut est un éditeur vidéo gratuit et open source dans le navigateur, piloté par des agents IA via MCP ou REST, avec une timeline project.json et des clips qui restent sur votre disque.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/fr/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "FableCutレビュー：AIエージェントが操作できるブラウザ動画エディタ",
+    "excerpt": "FableCutは無料・オープンソースのブラウザ動画エディタで、AIエージェントがMCPやRESTで操作でき、project.jsonタイムラインを編集してもクリップは自分のディスクに残ります。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ja/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "FableCut 评测：AI 智能体可驱动的浏览器视频编辑器",
+    "excerpt": "FableCut 是一款免费开源的浏览器视频编辑器，AI 智能体可通过 MCP 或 REST 驱动，编辑 project.json 时间线时剪辑文件始终保留在你自己的磁盘上。",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/zh/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "FableCut: el editor de vídeo en el navegador que pueden manejar agentes de IA",
+    "excerpt": "FableCut es un editor de vídeo gratuito y de código abierto en el navegador que los agentes de IA pueden manejar vía MCP o REST, con una línea de tiempo project.json y clips en tu disco.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/es/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "FableCut: o editor de vídeo no navegador que agentes de IA podem controlar",
+    "excerpt": "FableCut é um editor de vídeo gratuito e de código aberto no navegador que agentes de IA podem controlar via MCP ou REST, com uma linha do tempo project.json e clipes no seu disco.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/pt/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة FableCut: محرر الفيديو في المتصفح الذي يمكن لوكلاء الذكاء الاصطناعي التحكم فيه",
+    "excerpt": "FableCut محرر فيديو مجاني ومفتوح المصدر في المتصفح يمكن لوكلاء الذكاء الاصطناعي التحكم فيه عبر MCP أو REST، مع خط زمني project.json بينما تبقى الملفات على قرصك.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ar/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "FableCut 리뷰: AI 에이전트가 직접 조작할 수 있는 브라우저 영상 편집기",
+    "excerpt": "FableCut은 AI 에이전트가 MCP나 REST로 조작할 수 있는 무료 오픈소스 브라우저 영상 편집기로, project.json 타임라인을 편집해도 클립은 본인 디스크에 그대로 남습니다.",
+    "publishDate": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "url": "/ko/power-local-llm/fablecut-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "How Much VRAM Do You Need for a Local LLM?",
     "excerpt": "4 GB runs Llama 3.2 3B Q4. 6 GB handles Llama 3.1 8B Q4_K_M. 12 GB unlocks Qwen3 14B. Formula: params × 0.6 = GB at Q4. VRAM tier guide from PromptQuorum.",
     "publishDate": "2026-05-18",

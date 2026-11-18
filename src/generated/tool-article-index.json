@@ -8653,6 +8653,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nativ-review",
         "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
         "url": "/power-local-llm/nativ-review",
@@ -11072,9 +11080,17 @@
         "url": "/power-local-llm/cozyclay-review",
         "dateModified": "2026-11-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "PapersGPT": {
@@ -12115,6 +12131,20 @@
     "totalCount": 3,
     "capped": false
   },
+  "FableCut": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "FunClip": {
     "articles": [
       {
@@ -12124,6 +12154,14 @@
         "url": "/power-local-llm/funclip-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -12142,7 +12180,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "IntentKit": {
@@ -13023,6 +13061,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
@@ -13076,17 +13122,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "conduit-review",
-        "title": "Conduit Review: Mobile Client for Open WebUI and Your Own Models",
-        "url": "/power-local-llm/conduit-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 275,
+    "totalCount": 276,
     "capped": true
   },
   "Qdrant": {
@@ -13772,9 +13810,17 @@
         "url": "/power-local-llm/openmontage-review",
         "dateModified": "2026-10-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Private Mind": {
@@ -15339,6 +15385,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mineru-review",
         "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
         "url": "/power-local-llm/mineru-review",
@@ -15378,7 +15432,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "MinerU": {
