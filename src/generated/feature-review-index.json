@@ -1129,6 +1129,11 @@
     "urlSlug": "papersgpt-review",
     "url": "/power-local-llm/papersgpt-review"
   },
+  "solomd": {
+    "cluster": "power-local-llm",
+    "urlSlug": "solomd-review",
+    "url": "/power-local-llm/solomd-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

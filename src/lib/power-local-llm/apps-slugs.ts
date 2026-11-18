@@ -313,6 +313,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'open-science-desktop':                    'open-science-desktop',
   'cozyclay':                                'cozyclay',
   'papersgpt':                               'papersgpt',
+  'solomd':                                  'solomd',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
