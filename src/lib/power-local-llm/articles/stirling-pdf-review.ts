@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF is a widely starred open-core PDF toolkit.** The project is actively maintained: latest release 3.3.0 (2026-11-05), last commit 2026-11-15.",
+          "**Stirling PDF is an open-core PDF toolkit.** The project is actively maintained: latest release 3.3.0 (2026-11-05), last commit 2026-11-15.",
           "It runs as a desktop app on Windows, macOS and Linux, or as a self-hosted server via Docker, Kubernetes or a .jar.",
           "Per the maker's pricing page, the Free plan ('The private PDF editor for individuals') costs $0 per month and includes 1,000 monthly credits; Team costs $99 per month for 100 users; Enterprise has custom pricing and terms; the PDF Processor costs 1¢ per credit.",
           "The MIT license has exceptions: some directories fall under separate licenses.",
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "Privacy",
         "content": [
-          "**The maker says the editor runs on your own machine or server and documents are not sent to external services.** This is a maker claim. The source code is public, so it can be checked.",
+          "**The maker says the editor runs on your own machine or server and documents are not sent to external services.** This is a maker claim. The code is hosted publicly on GitHub, so the public parts can be checked; some directories are under separate licenses.",
           "The data flow of the AI features is not documented in the sources, and the sources do not say whether they run locally or call external services.",
           "On telemetry, Contabo reports an analytics feature that was on by default in the past and later made configurable. A Gnoppix forum test found no telemetry. Neither statement is confirmed against the current code or policy text. The maker's [privacy policy](https://www.stirling.com/legal/privacy-policy) is the primary source to read.",
           "Whether the desktop or Docker versions need an account is not stated. The site has Log in and Sign up links, and a with-login .jar exists."
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**It suits people who want PDFs processed on their own hardware.**",
           "People who want to edit PDFs locally instead of uploading them to online converters.",
           "IT and dev teams that want a self-hosted PDF API or batch pipelines on Docker or Kubernetes.",
-          "Users who want a free desktop PDF editor with OCR and redaction."
+          "Users who want a desktop PDF editor with OCR and redaction; the maker offers a Free plan, and its credit limits are on the [pricing page](https://www.stirlingpdf.com/pricing)."
         ]
       },
       "whoShouldNotUse": {
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Verdict",
         "content": [
-          "**Stirling PDF looks like a well-maintained, widely used option for local or self-hosted PDF work, with open questions about licensing and the AI features.** It has many installer formats, an API and active development (last commit 2026-11-15).",
+          "**Stirling PDF looks like a well-maintained option for local or self-hosted PDF work, with open questions about licensing and the AI features.** It has many installer formats, an API and active development (last commit 2026-11-15).",
           "Before relying on it, read the LICENSE, check the pricing page for current terms and check how the AI features handle data. PromptQuorum has not tested the app, so this verdict rests on the maker's statements and public sources."
         ]
       },
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF ist ein vielfach mit Sternen markiertes Open-Core-PDF-Toolkit.** Das Projekt wird aktiv gepflegt: neueste Version 3.3.0 (5. November 2026), letzter Commit am 15. November 2026.",
+          "**Stirling PDF ist ein Open-Core-PDF-Toolkit.** Das Projekt wird aktiv gepflegt: neueste Version 3.3.0 (5. November 2026), letzter Commit am 15. November 2026.",
           "Es läuft als Desktop-App unter Windows, macOS und Linux oder als selbst gehosteter Server über Docker, Kubernetes oder eine .jar-Datei.",
           "Laut Preisseite des Herstellers kostet der Tarif Free (für Einzelpersonen gedacht) 0 US-Dollar pro Monat und enthält 1.000 Credits pro Monat; Team kostet 99 US-Dollar pro Monat für 100 Nutzer; Enterprise hat individuelle Preise und Konditionen; der PDF Processor kostet 1 US-Cent pro Credit.",
           "Die MIT-Lizenz hat Ausnahmen: Einige Verzeichnisse fallen unter gesonderte Lizenzen.",
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "Datenschutz",
         "content": [
-          "**Der Hersteller sagt, der Editor laufe auf Ihrem eigenen Rechner oder Server und Dokumente würden nicht an externe Dienste gesendet.** Das ist eine Herstelleraussage. Der Quellcode ist öffentlich und lässt sich daher prüfen.",
+          "**Der Hersteller sagt, der Editor laufe auf Ihrem eigenen Rechner oder Server und Dokumente würden nicht an externe Dienste gesendet.** Das ist eine Herstelleraussage. Der Code ist öffentlich auf GitHub einsehbar, sodass sich die öffentlichen Teile prüfen lassen; einige Verzeichnisse fallen unter gesonderte Lizenzen.",
           "Der Datenfluss der KI-Funktionen ist in den Quellen nicht dokumentiert, und die Quellen sagen nicht, ob sie lokal laufen oder externe Dienste aufrufen.",
           "Zur Telemetrie berichtet Contabo von einer Analysefunktion, die in der Vergangenheit standardmäßig aktiv war und später konfigurierbar wurde. Ein Test im Gnoppix-Forum fand keine Telemetrie. Keine der beiden Aussagen ist anhand des aktuellen Codes oder Richtlinientexts bestätigt. Die [Datenschutzerklärung](https://www.stirling.com/legal/privacy-policy) des Herstellers ist die maßgebliche Quelle.",
           "Ob für die Desktop- oder Docker-Versionen ein Konto nötig ist, ist nicht angegeben. Die Website hat Links zu Anmelden und Registrieren, und es gibt eine .jar-Variante mit Login."
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Es eignet sich für Personen, die PDFs auf der eigenen Hardware verarbeiten möchten.**",
           "Personen, die PDFs lokal bearbeiten möchten, statt sie bei Online-Konvertern hochzuladen.",
           "IT- und Entwicklerteams, die eine selbst gehostete PDF-API oder Stapel-Pipelines auf Docker oder Kubernetes wünschen.",
-          "Nutzer, die einen kostenlosen Desktop-PDF-Editor mit OCR und Schwärzen suchen."
+          "Nutzer, die einen Desktop-PDF-Editor mit OCR und Schwärzen suchen; der Hersteller bietet einen Free-Tarif an, dessen Credit-Grenzen auf der [Preisseite](https://www.stirlingpdf.com/pricing) stehen."
         ]
       },
       "whoShouldNotUse": {
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Fazit",
         "content": [
-          "**Stirling PDF wirkt wie eine gut gepflegte, weit verbreitete Option für lokale oder selbst gehostete PDF-Arbeit, mit offenen Fragen zu Lizenzierung und den KI-Funktionen.** Es bietet viele Installationsformate, eine API und aktive Entwicklung (letzter Commit am 15. November 2026).",
+          "**Stirling PDF wirkt wie eine gut gepflegte Option für lokale oder selbst gehostete PDF-Arbeit, mit offenen Fragen zu Lizenzierung und den KI-Funktionen.** Es bietet viele Installationsformate, eine API und aktive Entwicklung (letzter Commit am 15. November 2026).",
           "Lesen Sie vor dem Einsatz die LICENSE, prüfen Sie auf der Preisseite die aktuellen Konditionen und prüfen Sie, wie die KI-Funktionen mit Daten umgehen. PromptQuorum hat die App nicht getestet; dieses Fazit beruht daher auf Herstelleraussagen und öffentlichen Quellen."
         ]
       },
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF est une boîte à outils PDF open-core très suivie.** Le projet est activement maintenu : dernière version 3.3.0 (5 novembre 2026), dernier commit le 15 novembre 2026.",
+          "**Stirling PDF est une boîte à outils PDF open-core.** Le projet est activement maintenu : dernière version 3.3.0 (5 novembre 2026), dernier commit le 15 novembre 2026.",
           "Elle fonctionne comme application de bureau sous Windows, macOS et Linux, ou comme serveur auto-hébergé via Docker, Kubernetes ou un .jar.",
           "Selon la page de tarifs de l'éditeur, l'offre Free (destinée aux particuliers) coûte 0 $ US par mois et inclut 1 000 crédits mensuels ; Team coûte 99 $ US par mois pour 100 utilisateurs ; Enterprise a des prix et conditions sur mesure ; le PDF Processor coûte 1 cent US par crédit.",
           "La licence MIT comporte des exceptions : certains répertoires relèvent de licences distinctes.",
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "Vie privée",
         "content": [
-          "**L'éditeur affirme que l'éditeur de PDF s'exécute sur votre propre machine ou serveur et que les documents ne sont pas envoyés à des services externes.** C'est une affirmation de l'éditeur. Le code source est public, il peut donc être vérifié.",
+          "**L'éditeur affirme que l'éditeur de PDF s'exécute sur votre propre machine ou serveur et que les documents ne sont pas envoyés à des services externes.** C'est une affirmation de l'éditeur. Le code est hébergé publiquement sur GitHub, les parties publiques peuvent donc être vérifiées ; certains répertoires relèvent de licences distinctes.",
           "Le flux de données des fonctions d'IA n'est pas documenté dans les sources, et celles-ci ne précisent pas si elles s'exécutent en local ou font appel à des services externes.",
           "Sur la télémétrie, Contabo signale une fonction d'analyse activée par défaut par le passé, puis rendue configurable. Un test sur le forum Gnoppix n'a trouvé aucune télémétrie. Aucune de ces deux affirmations n'est confirmée par rapport au code actuel ou au texte de la politique. La [politique de confidentialité](https://www.stirling.com/legal/privacy-policy) de l'éditeur est la source primaire à lire.",
           "La nécessité d'un compte pour les versions de bureau ou Docker n'est pas précisée. Le site propose des liens de connexion et d'inscription, et un .jar avec connexion existe."
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Elle convient à ceux qui veulent traiter leurs PDF sur leur propre matériel.**",
           "Les personnes qui veulent modifier des PDF en local plutôt que de les envoyer à des convertisseurs en ligne.",
           "Les équipes IT et développeurs qui veulent une API PDF auto-hébergée ou des pipelines par lots sur Docker ou Kubernetes.",
-          "Les utilisateurs qui veulent un éditeur PDF de bureau gratuit avec OCR et caviardage."
+          "Les utilisateurs qui veulent un éditeur PDF de bureau avec OCR et caviardage ; l'éditeur propose une offre Free, dont les limites de crédits figurent sur la [page des tarifs](https://www.stirlingpdf.com/pricing)."
         ]
       },
       "whoShouldNotUse": {
@@ -996,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Verdict",
         "content": [
-          "**Stirling PDF semble être une option bien maintenue et très utilisée pour le travail PDF local ou auto-hébergé, avec des questions ouvertes sur la licence et les fonctions d'IA.** Elle propose de nombreux formats d'installation, une API et un développement actif (dernier commit le 15 novembre 2026).",
+          "**Stirling PDF semble être une option bien maintenue pour le travail PDF local ou auto-hébergé, avec des questions ouvertes sur la licence et les fonctions d'IA.** Elle propose de nombreux formats d'installation, une API et un développement actif (dernier commit le 15 novembre 2026).",
           "Avant de vous y fier, lisez la LICENSE, consultez la page de tarifs pour les conditions actuelles et vérifiez comment les fonctions d'IA traitent les données. PromptQuorum n'a pas testé l'application : ce verdict repose sur les déclarations de l'éditeur et sur des sources publiques."
         ]
       },
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDFは、多くのスターを集めているオープンコアのPDFツールキットです。**プロジェクトは活発に保守されており、最新リリースは3.3.0（2026年11月5日）、最終コミットは2026年11月15日です。",
+          "**Stirling PDFは、オープンコアのPDFツールキットです。**プロジェクトは活発に保守されており、最新リリースは3.3.0（2026年11月5日）、最終コミットは2026年11月15日です。",
           "Windows、macOS、Linuxのデスクトップアプリとして、またはDocker、Kubernetes、.jarによるセルフホストサーバーとして動作します。",
           "開発元の料金ページによると、Freeプラン（個人向け）は月額0米ドルで毎月1,000クレジットが含まれ、Teamは100ユーザー分で月額99米ドル、Enterpriseは価格と条件がカスタム、PDF Processorは1クレジットあたり1セントです。",
           "MITライセンスには例外があり、一部のディレクトリは別のライセンスの対象です。",
@@ -1251,7 +1251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "プライバシー",
         "content": [
-          "**開発元は、エディタは自分のマシンまたはサーバー上で動作し、ドキュメントは外部サービスに送信されないとしています。**これは開発元の主張です。ソースコードは公開されているため、確認できます。",
+          "**開発元は、エディタは自分のマシンまたはサーバー上で動作し、ドキュメントは外部サービスに送信されないとしています。**これは開発元の主張です。コードはGitHubで公開されているため、公開部分は確認できます。一部のディレクトリは別のライセンスの対象です。",
           "AI機能のデータの流れは情報源に記載がなく、ローカルで動くのか外部サービスを呼び出すのかも述べられていません。",
           "テレメトリについては、Contaboが、過去に初期状態で有効だった分析機能が後に設定可能になったと報告しています。Gnoppixのフォーラムでの検証ではテレメトリは見つかりませんでした。いずれも現行のコードやポリシー本文との照合は取れていません。開発元の[プライバシーポリシー](https://www.stirling.com/legal/privacy-policy)が、確認すべき一次情報です。",
           "デスクトップ版やDocker版でアカウントが必要かどうかは記載されていません。サイトにはログインとサインアップのリンクがあり、ログイン付きの.jarも存在します。"
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**PDFを自分のハードウェア上で処理したい方に向いています。**",
           "オンライン変換サービスにアップロードせず、PDFをローカルで編集したい方。",
           "DockerやKubernetes上でセルフホストのPDF APIや一括処理パイプラインを使いたいITチーム・開発チーム。",
-          "OCRと墨消しを備えた無料のデスクトップPDFエディタを使いたい方。"
+          "OCRと墨消しを備えたデスクトップPDFエディタを使いたい方。開発元はFreeプランを提供しており、クレジットの上限は[料金ページ](https://www.stirlingpdf.com/pricing)に記載されています。"
         ]
       },
       "whoShouldNotUse": {
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "総評",
         "content": [
-          "**Stirling PDFは、ローカルまたはセルフホストでのPDF作業向けに、保守が行き届き広く使われている選択肢に見えますが、ライセンスとAI機能については未解決の点があります。**多様なインストーラー形式、API、活発な開発（最終コミットは2026年11月15日）を備えています。",
+          "**Stirling PDFは、ローカルまたはセルフホストでのPDF作業向けに、保守が行き届いている選択肢に見えますが、ライセンスとAI機能については未解決の点があります。**多様なインストーラー形式、API、活発な開発（最終コミットは2026年11月15日）を備えています。",
           "頼る前に、LICENSEを読み、料金ページで最新の条件を確認し、AI機能のデータの扱いを調べてください。PromptQuorumはこのアプリを検証していないため、この総評は開発元の主張と公開情報に基づいています。"
         ]
       },
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF 是一款获得大量星标的开放核心 PDF 工具包。** 项目维护活跃：最新版本 3.3.0（2026年11月5日），最近一次提交为 2026年11月15日。",
+          "**Stirling PDF 是一款开放核心 PDF 工具包。** 项目维护活跃：最新版本 3.3.0（2026年11月5日），最近一次提交为 2026年11月15日。",
           "它可作为 Windows、macOS 和 Linux 上的桌面应用运行，也可通过 Docker、Kubernetes 或 .jar 作为自托管服务器运行。",
           "据开发方定价页面，Free 方案（面向个人）为每月 0 美元，每月含 1,000 积分（credits）；Team 为每月 99 美元，含 100 名用户；Enterprise 为定制价格与条款；PDF Processor 每积分 1 美分。",
           "MIT 许可证带有例外：部分目录适用单独的许可证。",
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "隐私",
         "content": [
-          "**开发方称编辑器在你自己的机器或服务器上运行，文档不会发送到外部服务。** 这是开发方的说法。源代码是公开的，因此可以自行核查。",
+          "**开发方称编辑器在你自己的机器或服务器上运行，文档不会发送到外部服务。** 这是开发方的说法。代码公开托管在 GitHub 上，因此公开部分可以自行核查；部分目录适用单独的许可。",
           "来源中未记录 AI 功能的数据流向，也未说明它们是在本地运行还是调用外部服务。",
           "关于遥测，Contabo 报告称有一项分析功能过去默认开启，后来改为可配置。Gnoppix 论坛的一次测试未发现遥测。这两种说法均未对照当前代码或政策文本得到确认。开发方的[隐私政策](https://www.stirling.com/legal/privacy-policy)是应阅读的第一手来源。",
           "来源中未说明桌面版或 Docker 版是否需要账号。官网有登录和注册链接，另有带登录功能的 .jar。"
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**适合希望在自己的硬件上处理 PDF 的人。**",
           "希望在本地编辑 PDF、而不是上传到在线转换网站的人。",
           "希望在 Docker 或 Kubernetes 上使用自托管 PDF API 或批处理流水线的 IT 和开发团队。",
-          "想要带 OCR 和涂黑脱敏功能的免费桌面 PDF 编辑器的用户。"
+          "想要带 OCR 和涂黑脱敏功能的桌面 PDF 编辑器的用户；开发方提供 Free 方案，额度限制见[价格页面](https://www.stirlingpdf.com/pricing)。"
         ]
       },
       "whoShouldNotUse": {
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "结论",
         "content": [
-          "**对于本地或自托管的 PDF 处理，Stirling PDF 看起来是一个维护良好、使用广泛的选择，但在许可和 AI 功能方面仍有未解问题。** 它提供多种安装格式和 API，且开发活跃（最近一次提交为 2026年11月15日）。",
+          "**对于本地或自托管的 PDF 处理，Stirling PDF 看起来是一个维护良好的选择，但在许可和 AI 功能方面仍有未解问题。** 它提供多种安装格式和 API，且开发活跃（最近一次提交为 2026年11月15日）。",
           "在依赖它之前，请阅读 LICENSE，在定价页面核对最新条款，并核查 AI 功能如何处理数据。PromptQuorum 未测试过该应用，因此本结论基于开发方的说法和公开来源。"
         ]
       },
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF es un kit de herramientas PDF open-core con muchas estrellas en GitHub.** El proyecto se mantiene activamente: última versión 3.3.0 (5 de noviembre de 2026), último commit el 15 de noviembre de 2026.",
+          "**Stirling PDF es un kit de herramientas PDF open-core.** El proyecto se mantiene activamente: última versión 3.3.0 (5 de noviembre de 2026), último commit el 15 de noviembre de 2026.",
           "Funciona como aplicación de escritorio en Windows, macOS y Linux, o como servidor autoalojado mediante Docker, Kubernetes o un .jar.",
           "Según la página de precios del fabricante, el plan Free (pensado para particulares) cuesta 0 USD al mes e incluye 1000 créditos mensuales; Team cuesta 99 USD al mes para 100 usuarios; Enterprise tiene precios y condiciones personalizados; el PDF Processor cuesta 1 centavo de dólar por crédito.",
           "La licencia MIT tiene excepciones: algunos directorios están bajo licencias independientes.",
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "Privacidad",
         "content": [
-          "**El fabricante afirma que el editor se ejecuta en tu propio equipo o servidor y que los documentos no se envían a servicios externos.** Es una afirmación del fabricante. El código fuente es público, por lo que puede comprobarse.",
+          "**El fabricante afirma que el editor se ejecuta en tu propio equipo o servidor y que los documentos no se envían a servicios externos.** Es una afirmación del fabricante. El código está alojado públicamente en GitHub, por lo que las partes públicas pueden comprobarse; algunos directorios tienen licencias independientes.",
           "El flujo de datos de las funciones de IA no está documentado en las fuentes, y estas no indican si se ejecutan en local o llaman a servicios externos.",
           "Sobre la telemetría, Contabo señala una función de analítica que estuvo activada por defecto en el pasado y que después se hizo configurable. Una prueba en un foro de Gnoppix no encontró telemetría. Ninguna de las dos afirmaciones está confirmada con el código o el texto de la política actuales. La [política de privacidad](https://www.stirling.com/legal/privacy-policy) del fabricante es la fuente primaria que conviene leer.",
           "No se indica si las versiones de escritorio o Docker requieren una cuenta. El sitio tiene enlaces de Log in y Sign up, y existe un .jar con inicio de sesión."
@@ -1944,7 +1944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Resulta adecuado para quienes quieren procesar PDF en tu propio hardware.**",
           "Personas que quieren editar PDF en local en lugar de subirlos a conversores en línea.",
           "Equipos de TI y desarrollo que buscan una API de PDF autoalojada o pipelines por lotes en Docker o Kubernetes.",
-          "Usuarios que quieren un editor de PDF de escritorio gratuito con OCR y censura."
+          "Usuarios que quieren un editor de PDF de escritorio con OCR y censura; el fabricante ofrece un plan Free y sus límites de créditos están en la [página de precios](https://www.stirlingpdf.com/pricing)."
         ]
       },
       "whoShouldNotUse": {
@@ -2016,7 +2016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Veredicto",
         "content": [
-          "**Stirling PDF parece una opción bien mantenida y muy utilizada para trabajar con PDF en local o autoalojado, con dudas abiertas sobre licencia y funciones de IA.** Ofrece muchos formatos de instalador, una API y desarrollo activo (último commit el 15 de noviembre de 2026).",
+          "**Stirling PDF parece una opción bien mantenida para trabajar con PDF en local o autoalojado, con dudas abiertas sobre licencia y funciones de IA.** Ofrece muchos formatos de instalador, una API y desarrollo activo (último commit el 15 de noviembre de 2026).",
           "Antes de depender de ella, conviene leer el LICENSE, consultar la página de precios para ver las condiciones actuales y comprobar cómo tratan los datos las funciones de IA. PromptQuorum no ha probado la aplicación, por lo que este veredicto se basa en las afirmaciones del fabricante y en fuentes públicas."
         ]
       },
@@ -2152,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**O Stirling PDF é um kit PDF open-core com muitas estrelas no GitHub.** O projeto é mantido ativamente: versão mais recente 3.3.0 (05/11/2026), último commit em 15/11/2026.",
+          "**O Stirling PDF é um kit PDF open-core.** O projeto é mantido ativamente: versão mais recente 3.3.0 (05/11/2026), último commit em 15/11/2026.",
           "Roda como aplicativo desktop no Windows, macOS e Linux, ou como servidor próprio via Docker, Kubernetes ou um .jar.",
           "Segundo a página de preços do fabricante, o plano Free (voltado a pessoas físicas) custa US$ 0 por mês e inclui 1.000 créditos mensais; o Team custa US$ 99 por mês para 100 usuários; o Enterprise tem preços e condições personalizados; o PDF Processor custa US$ 0,01 por crédito.",
           "A licença MIT tem exceções: alguns diretórios estão sob licenças separadas.",
@@ -2271,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "Privacidade",
         "content": [
-          "**O fabricante diz que o editor roda na sua própria máquina ou servidor e que os documentos não são enviados a serviços externos.** Essa é uma afirmação do fabricante. O código-fonte é público, então pode ser conferido.",
+          "**O fabricante diz que o editor roda na sua própria máquina ou servidor e que os documentos não são enviados a serviços externos.** Essa é uma afirmação do fabricante. O código está hospedado publicamente no GitHub, então as partes públicas podem ser conferidas; alguns diretórios têm licenças separadas.",
           "O fluxo de dados dos recursos de IA não está documentado nas fontes, e elas não dizem se rodam localmente ou chamam serviços externos.",
           "Sobre telemetria, a Contabo relata um recurso de análise que esteve ativado por padrão no passado e depois passou a ser configurável. Um teste em um fórum da Gnoppix não encontrou telemetria. Nenhuma das afirmações foi confirmada com o código ou o texto da política atuais. A [política de privacidade](https://www.stirling.com/legal/privacy-policy) do fabricante é a fonte primária a ler.",
           "Não está informado se as versões desktop ou Docker exigem uma conta. O site tem links de login e de cadastro, e existe um .jar com login."
@@ -2284,7 +2284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**É indicado para quem quer processar PDFs no próprio hardware.**",
           "Pessoas que querem editar PDFs localmente em vez de enviá-los a conversores online.",
           "Equipes de TI e desenvolvimento que querem uma API de PDF auto-hospedada ou pipelines em lote no Docker ou Kubernetes.",
-          "Usuários que querem um editor de PDF desktop gratuito com OCR e ocultação de dados sensíveis."
+          "Usuários que querem um editor de PDF desktop com OCR e ocultação de dados sensíveis; o fabricante oferece um plano Free, e os limites de créditos estão na [página de preços](https://www.stirlingpdf.com/pricing)."
         ]
       },
       "whoShouldNotUse": {
@@ -2356,7 +2356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "Veredito",
         "content": [
-          "**O Stirling PDF parece uma opção bem mantida e amplamente usada para trabalho com PDF local ou auto-hospedado, com dúvidas em aberto sobre licenciamento e os recursos de IA.** Tem muitos formatos de instalador, uma API e desenvolvimento ativo (último commit em 15/11/2026).",
+          "**O Stirling PDF parece uma opção bem mantida para trabalho com PDF local ou auto-hospedado, com dúvidas em aberto sobre licenciamento e os recursos de IA.** Tem muitos formatos de instalador, uma API e desenvolvimento ativo (último commit em 15/11/2026).",
           "Antes de depender dele, leia a LICENSE, confira as condições atuais na página de preços e verifique como os recursos de IA tratam os dados. A PromptQuorum não testou o aplicativo, então este veredito se baseia nas declarações do fabricante e em fontes públicas."
         ]
       },
@@ -2492,7 +2492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF مجموعة أدوات PDF مفتوحة النواة حاصلة على عدد كبير من النجوم.** المشروع قيد الصيانة النشطة: أحدث إصدار 3.3.0 (5 نوفمبر 2026)، وآخر commit بتاريخ 15 نوفمبر 2026.",
+          "**Stirling PDF مجموعة أدوات PDF مفتوحة النواة.** المشروع قيد الصيانة النشطة: أحدث إصدار 3.3.0 (5 نوفمبر 2026)، وآخر commit بتاريخ 15 نوفمبر 2026.",
           "يعمل كتطبيق لسطح المكتب على Windows وmacOS وLinux، أو كخادم مستضاف ذاتياً عبر Docker أو Kubernetes أو ملف .jar.",
           "بحسب صفحة أسعار الجهة المطوِّرة، تبلغ تكلفة خطة Free (الموجهة للأفراد) 0 دولار أمريكي شهرياً وتتضمن 1,000 credit شهرياً؛ وتبلغ تكلفة Team 99 دولاراً أمريكياً شهرياً لـ100 مستخدم؛ وEnterprise بأسعار وشروط مخصصة؛ وتبلغ تكلفة PDF Processor سنتاً أمريكياً واحداً لكل credit.",
           "ترخيص MIT له استثناءات: بعض المجلدات تخضع لتراخيص منفصلة.",
@@ -2611,7 +2611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "الخصوصية",
         "content": [
-          "**تقول الجهة المطوِّرة إن المحرر يعمل على جهازك أو خادمك وإن المستندات لا تُرسل إلى خدمات خارجية.** هذا ادعاء من المطوِّر. الشيفرة المصدرية عامة، لذا يمكن التحقق منه.",
+          "**تقول الجهة المطوِّرة إن المحرر يعمل على جهازك أو خادمك وإن المستندات لا تُرسل إلى خدمات خارجية.** هذا ادعاء من المطوِّر. الشيفرة مستضافة علناً على GitHub، لذا يمكن التحقق من الأجزاء العامة منها؛ وتخضع بعض المجلدات لتراخيص منفصلة.",
           "تدفق بيانات ميزات الذكاء الاصطناعي غير موثّق في المصادر، ولا تذكر المصادر ما إذا كانت تعمل محلياً أو تستدعي خدمات خارجية.",
           "بخصوص القياس عن بُعد (telemetry)، تذكر Contabo ميزة تحليلات كانت مفعّلة افتراضياً في الماضي ثم أصبحت قابلة للضبط لاحقاً. ولم يجد اختبار في منتدى Gnoppix أي telemetry. لم يتأكد أي من القولين مقابل الشيفرة الحالية أو نص السياسة. [سياسة الخصوصية](https://www.stirling.com/legal/privacy-policy) لدى الجهة المطوِّرة هي المصدر الأساسي الذي ينبغي قراءته.",
           "لا يُذكر ما إذا كانت نسختا سطح المكتب أو Docker تتطلبان حساباً. يعرض الموقع روابط تسجيل الدخول والتسجيل، ويوجد ملف .jar مع تسجيل دخول."
@@ -2624,7 +2624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**يناسب من يريدون معالجة ملفات PDF على أجهزتهم الخاصة.**",
           "من يريدون تحرير ملفات PDF محلياً بدلاً من رفعها إلى محوّلات عبر الإنترنت.",
           "فرق تقنية المعلومات والتطوير التي تريد واجهة API لـ PDF مستضافة ذاتياً أو مسارات معالجة دفعية على Docker أو Kubernetes.",
-          "المستخدمون الذين يريدون محرر PDF مجانياً لسطح المكتب مع OCR وحجب البيانات."
+          "المستخدمون الذين يريدون محرر PDF لسطح المكتب مع OCR وحجب البيانات؛ تقدم الجهة المطوِّرة خطة Free، وحدود الرصيد مذكورة في [صفحة الأسعار](https://www.stirlingpdf.com/pricing)."
         ]
       },
       "whoShouldNotUse": {
@@ -2696,7 +2696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "الخلاصة",
         "content": [
-          "**يبدو Stirling PDF خياراً جيد الصيانة وواسع الاستخدام للعمل على PDF محلياً أو بالاستضافة الذاتية، مع أسئلة مفتوحة حول الترخيص وميزات الذكاء الاصطناعي.** يوفر صيغ تثبيت كثيرة وواجهة API وتطويراً نشطاً (آخر commit بتاريخ 15 نوفمبر 2026).",
+          "**يبدو Stirling PDF خياراً جيد الصيانة للعمل على PDF محلياً أو بالاستضافة الذاتية، مع أسئلة مفتوحة حول الترخيص وميزات الذكاء الاصطناعي.** يوفر صيغ تثبيت كثيرة وواجهة API وتطويراً نشطاً (آخر commit بتاريخ 15 نوفمبر 2026).",
           "قبل الاعتماد عليه، اقرأ LICENSE وراجع صفحة الأسعار للاطلاع على الشروط الحالية وتحقق من كيفية تعامل ميزات الذكاء الاصطناعي مع البيانات. لم تختبر PromptQuorum التطبيق، لذا تستند هذه الخلاصة إلى أقوال الجهة المطوِّرة والمصادر العامة."
         ]
       },
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ],
         "items": [
-          "**Stirling PDF는 별을 많이 받은 오픈코어 PDF 툴킷입니다.** 프로젝트는 활발히 관리되고 있으며, 최신 릴리스는 3.3.0(2026년 11월 5일), 마지막 커밋은 2026년 11월 15일입니다.",
+          "**Stirling PDF는 오픈코어 PDF 툴킷입니다.** 프로젝트는 활발히 관리되고 있으며, 최신 릴리스는 3.3.0(2026년 11월 5일), 마지막 커밋은 2026년 11월 15일입니다.",
           "Windows, macOS, Linux 데스크톱 앱으로 실행하거나, Docker, Kubernetes, .jar를 통한 셀프 호스팅 서버로 실행할 수 있습니다.",
           "제작사 가격 페이지에 따르면 Free 요금제(개인용)는 월 0 USD이며 매월 1,000 크레딧이 포함됩니다. Team은 100명 기준 월 99 USD, Enterprise는 맞춤 가격과 조건, PDF Processor는 크레딧당 1센트입니다.",
           "MIT 라이선스에는 예외가 있으며, 일부 디렉터리는 별도 라이선스를 따릅니다.",
@@ -2951,7 +2951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "privacy",
         "title": "개인정보",
         "content": [
-          "**제작사는 편집기가 사용자의 컴퓨터나 서버에서 실행되며 문서가 외부 서비스로 전송되지 않는다고 밝힙니다.** 이는 제작사의 주장입니다. 소스 코드가 공개되어 있어 확인할 수 있습니다.",
+          "**제작사는 편집기가 사용자의 컴퓨터나 서버에서 실행되며 문서가 외부 서비스로 전송되지 않는다고 밝힙니다.** 이는 제작사의 주장입니다. 코드가 GitHub에 공개되어 있어 공개된 부분은 확인할 수 있습니다. 일부 디렉터리는 별도 라이선스가 적용됩니다.",
           "AI 기능의 데이터 흐름은 출처에 문서화되어 있지 않으며, 로컬에서 실행되는지 외부 서비스를 호출하는지도 나와 있지 않습니다.",
           "텔레메트리에 관해서는, Contabo가 과거에 분석 기능이 기본으로 켜져 있었고 이후 설정 가능하게 바뀌었다고 보고합니다. Gnoppix 포럼의 테스트에서는 텔레메트리가 발견되지 않았습니다. 두 주장 모두 현재 코드나 정책 문구와 대조해 확인된 것은 아닙니다. 제작사의 [개인정보 처리방침](https://www.stirling.com/legal/privacy-policy)이 읽어야 할 1차 출처입니다.",
           "데스크톱 또는 Docker 버전에 계정이 필요한지는 명시되어 있지 않습니다. 사이트에는 로그인과 회원가입 링크가 있고, 로그인 포함 .jar도 존재합니다."
@@ -2964,7 +2964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**PDF를 자신의 하드웨어에서 처리하려는 사용자에게 적합합니다.**",
           "PDF를 온라인 변환 사이트에 업로드하지 않고 로컬에서 편집하려는 사용자.",
           "Docker나 Kubernetes에서 셀프 호스팅 PDF API 또는 일괄 처리 파이프라인을 운영하려는 IT·개발 팀.",
-          "OCR과 가림 처리 기능이 있는 무료 데스크톱 PDF 편집기를 원하는 사용자."
+          "OCR과 가림 처리 기능이 있는 데스크톱 PDF 편집기를 원하는 사용자. 제작사는 Free 요금제를 제공하며, 크레딧 한도는 [가격 페이지](https://www.stirlingpdf.com/pricing)에 있습니다."
         ]
       },
       "whoShouldNotUse": {
@@ -3036,7 +3036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "verdict",
         "title": "결론",
         "content": [
-          "**Stirling PDF는 로컬 또는 셀프 호스팅 PDF 작업에 잘 관리되고 널리 쓰이는 선택지로 보이지만, 라이선스와 AI 기능에는 풀리지 않은 의문이 있습니다.** 설치 파일 형식이 다양하고 API를 제공하며 개발이 활발합니다(마지막 커밋 2026년 11월 15일).",
+          "**Stirling PDF는 로컬 또는 셀프 호스팅 PDF 작업에 잘 관리되는 선택지로 보이지만, 라이선스와 AI 기능에는 풀리지 않은 의문이 있습니다.** 설치 파일 형식이 다양하고 API를 제공하며 개발이 활발합니다(마지막 커밋 2026년 11월 15일).",
           "의존하기 전에 LICENSE를 읽고, 가격 페이지에서 최신 조건을 확인하고, AI 기능의 데이터 처리 방식을 확인하십시오. PromptQuorum은 이 앱을 테스트하지 않았으므로, 이 결론은 제작사의 설명과 공개 자료에 근거합니다."
         ]
       },
