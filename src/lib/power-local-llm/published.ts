@@ -645,6 +645,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'cozyclay-review',
   'papersgpt-review',
   'solomd-review',
+  'nativ-review',
   // Lyonesse review (Voice, Speech & Multimodal, iPhone/iPad/Mac transcription) — 2026-10-26
   'lyonesse-review',
   'open-llm-vtuber-review',

@@ -1134,6 +1134,11 @@
     "urlSlug": "solomd-review",
     "url": "/power-local-llm/solomd-review"
   },
+  "nativ": {
+    "cluster": "power-local-llm",
+    "urlSlug": "nativ-review",
+    "url": "/power-local-llm/nativ-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
@@ -1834,6 +1839,11 @@
     "urlSlug": "opendataloader-pdf-review",
     "url": "/power-local-llm/opendataloader-pdf-review"
   },
+  "nutrient": {
+    "cluster": "power-local-llm",
+    "urlSlug": "nutrient-review",
+    "url": "/power-local-llm/nutrient-review"
+  },
   "docling": {
     "cluster": "power-local-llm",
     "urlSlug": "docling-review",
@@ -1848,6 +1858,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "mineru-review",
     "url": "/power-local-llm/mineru-review"
+  },
+  "unstructured": {
+    "cluster": "power-local-llm",
+    "urlSlug": "unstructured-review",
+    "url": "/power-local-llm/unstructured-review"
   },
   "anyllm": {
     "cluster": "power-local-llm",
