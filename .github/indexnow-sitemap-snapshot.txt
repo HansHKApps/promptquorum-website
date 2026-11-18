@@ -506,6 +506,7 @@ https://www.promptquorum.com/power-local-llm/local-llm-with-logseq-and-joplin
 https://www.promptquorum.com/power-local-llm/local-llm-with-obsidian-2026
 https://www.promptquorum.com/power-local-llm/local-multimodal-pipeline-voice-vision-text
 https://www.promptquorum.com/power-local-llm/local-operator-review
+https://www.promptquorum.com/power-local-llm/local-pdf-parsers-compared
 https://www.promptquorum.com/power-local-llm/local-rag-for-private-business-data
 https://www.promptquorum.com/power-local-llm/local-rag-on-your-pdfs-step-by-step
 https://www.promptquorum.com/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts
@@ -520,6 +521,7 @@ https://www.promptquorum.com/power-local-llm/locally-uncensored-review
 https://www.promptquorum.com/power-local-llm/localmcp-review
 https://www.promptquorum.com/power-local-llm/localmind-review
 https://www.promptquorum.com/power-local-llm/localmindai-review
+https://www.promptquorum.com/power-local-llm/loci-ai-hands-on-test
 https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/logseq-copilot-review
 https://www.promptquorum.com/power-local-llm/logseq-review
@@ -534,6 +536,7 @@ https://www.promptquorum.com/power-local-llm/marker-review
 https://www.promptquorum.com/power-local-llm/maxkb-review
 https://www.promptquorum.com/power-local-llm/meetily-review
 https://www.promptquorum.com/power-local-llm/meetini-review
+https://www.promptquorum.com/power-local-llm/memex-review
 https://www.promptquorum.com/power-local-llm/memoryai-review
 https://www.promptquorum.com/power-local-llm/metagpt-agnai-risuai-explained
 https://www.promptquorum.com/power-local-llm/metagpt-review
@@ -557,8 +560,11 @@ https://www.promptquorum.com/power-local-llm/murmur-review
 https://www.promptquorum.com/power-local-llm/mylio-photos-review
 https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/nanobot-review
+https://www.promptquorum.com/power-local-llm/nativ-review
 https://www.promptquorum.com/power-local-llm/nekoni-review
+https://www.promptquorum.com/power-local-llm/newelle-review
 https://www.promptquorum.com/power-local-llm/noema-review
+https://www.promptquorum.com/power-local-llm/nutrient-review
 https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
 https://www.promptquorum.com/power-local-llm/obscurify-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
@@ -702,6 +708,7 @@ https://www.promptquorum.com/power-local-llm/univocal-hands-on-test
 https://www.promptquorum.com/power-local-llm/univocal-review
 https://www.promptquorum.com/power-local-llm/unsloth-hands-on-test
 https://www.promptquorum.com/power-local-llm/unsloth-review
+https://www.promptquorum.com/power-local-llm/unstructured-review
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance
 https://www.promptquorum.com/power-local-llm/vane-review
 https://www.promptquorum.com/power-local-llm/vla-models-robots-local-inference
