@@ -312,6 +312,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'screenpipe':                              'screenpipe',
   'dyad':                                    'dyad',
   'open-generative-ai':                      'open-generative-ai',
+  'labelme':                                 'labelme',
   'skales':                                  'skales',
   'halo':                                    'halo',
   'yovoice':                                 'yovoice',

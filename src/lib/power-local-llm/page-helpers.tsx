@@ -1241,6 +1241,7 @@ const HUB_THEMES: Array<{
       'presenton-review',
       'screenpipe-review',
       'reactive-resume-review',
+      'labelme-review',
     ],
   },
   {
