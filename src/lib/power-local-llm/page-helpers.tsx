@@ -1218,6 +1218,7 @@ const HUB_THEMES: Array<{
       'hillnote-review',
       'solomd-review',
       'trilium-notes-review',
+      'memex-review',
       'karakeep-review',
       'evershelf-review',
       'ai-file-sorter-review',

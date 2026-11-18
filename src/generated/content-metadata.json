@@ -6788,7 +6788,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 383 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 384 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -9800,7 +9800,7 @@
       "images": []
     },
     "local-pdf-parsers-compared": {
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-11-17",
       "hasSections": true,
@@ -11456,7 +11456,7 @@
       "images": []
     },
     "stirling-pdf-review": {
-      "dateModified": "2026-11-16",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-11-16",
       "hasSections": true,
@@ -11582,7 +11582,7 @@
       "images": []
     },
     "docling-review": {
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-11-15",
       "hasSections": true,
@@ -14678,7 +14678,7 @@
       "images": []
     },
     "xberg-review": {
-      "dateModified": "2026-10-30",
+      "dateModified": "2026-11-18",
       "lastFactChecked": null,
       "publishDate": "2026-10-30",
       "hasSections": true,
@@ -15203,6 +15203,24 @@
       "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-23",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "memex-review": {
+      "dateModified": "2026-11-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-18",
       "hasSections": true,
       "langs": [
         "en",

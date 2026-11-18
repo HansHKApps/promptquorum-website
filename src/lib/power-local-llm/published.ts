@@ -793,6 +793,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'nutrient-review',
   'mineru-review',
   'unstructured-review',
+  'memex-review',
 
 ])
 

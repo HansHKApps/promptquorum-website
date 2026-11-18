@@ -301,6 +301,7 @@ import { app as app_conduit } from './apps/conduit'
 import { app as app_phantasm } from './apps/phantasm'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
+import { app as app_memex } from './apps/memex'
 import { app as app_trilium_notes } from './apps/trilium-notes'
 import { app as app_ramen } from './apps/ramen'
 import { app as app_llm_vision } from './apps/llm-vision'
@@ -611,6 +612,7 @@ export const localAiApps: ToolRecord[] = [
   app_phantasm,
   app_openvoiceos,
   app_hillnote,
+  app_memex,
   app_trilium_notes,
   app_ramen,
   app_llm_vision,

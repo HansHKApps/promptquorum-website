@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "newelle-review",
         "title": "Newelle Review: Free Open-Source AI Assistant for Linux with Local Models",
         "url": "/power-local-llm/newelle-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/solomd-review",
         "dateModified": "2026-11-17",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-security-privacy-checklist",
-        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
-        "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-11-15",
-        "tier": "about"
       }
     ],
-    "totalCount": 368,
+    "totalCount": 369,
     "capped": true
   },
   "llama.cpp": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 184,
+    "totalCount": 185,
     "capped": true
   },
   "Atomic Chat": {
@@ -10088,7 +10088,7 @@
         "slug": "xberg-review",
         "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
         "url": "/power-local-llm/xberg-review",
-        "dateModified": "2026-10-30",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -10096,7 +10096,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -10104,7 +10104,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -10771,6 +10771,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -10778,7 +10786,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
+    "capped": false
+  },
+  "Memex": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Trilium Notes": {
@@ -10790,9 +10812,17 @@
         "url": "/power-local-llm/trilium-notes-review",
         "dateModified": "2026-11-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "RAMen": {
@@ -12971,9 +13001,49 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stirling-pdf-review",
+        "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
+        "url": "/power-local-llm/stirling-pdf-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "xberg-review",
+        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
+        "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
@@ -13000,49 +13070,9 @@
         "url": "/power-local-llm/conduit-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cozyclay-review",
-        "title": "CozyClay Review: Free Browser Previs Studio for AI Video, With an MCP Server",
-        "url": "/power-local-llm/cozyclay-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "docling-review",
-        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
-        "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "halo-review",
-        "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
-        "url": "/power-local-llm/halo-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-pdf-parsers-compared",
-        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
-        "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nutrient-review",
-        "title": "Nutrient Review: Commercial PDF SDK With a Markdown Converter",
-        "url": "/power-local-llm/nutrient-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 274,
+    "totalCount": 275,
     "capped": true
   },
   "Qdrant": {
@@ -14908,9 +14938,17 @@
         "url": "/power-local-llm/surf-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memex-review",
+        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
+        "url": "/power-local-llm/memex-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Univocal": {
@@ -14956,7 +14994,7 @@
         "slug": "stirling-pdf-review",
         "title": "Stirling PDF Review: Open-Core PDF Toolkit for Desktop and Self-Hosting",
         "url": "/power-local-llm/stirling-pdf-review",
-        "dateModified": "2026-11-16",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -14964,7 +15002,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       }
     ],
@@ -15088,7 +15126,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15096,7 +15134,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -15134,7 +15172,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15142,7 +15180,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -15180,7 +15218,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15188,7 +15226,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15206,6 +15244,14 @@
         "url": "/power-local-llm/openrag-review",
         "dateModified": "2026-11-06",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "xberg-review",
+        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
+        "url": "/power-local-llm/xberg-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -15229,14 +15275,6 @@
         "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
         "url": "/power-local-llm/opendataloader-pdf-review",
         "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "xberg-review",
-        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
-        "url": "/power-local-llm/xberg-review",
-        "dateModified": "2026-10-30",
         "tier": "mentioned"
       },
       {
@@ -15274,7 +15312,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15282,7 +15320,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -15344,7 +15382,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15352,7 +15390,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -15382,7 +15420,7 @@
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "about"
       },
       {
@@ -15390,7 +15428,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {

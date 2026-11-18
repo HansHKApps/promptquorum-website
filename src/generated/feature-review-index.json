@@ -1069,6 +1069,11 @@
     "urlSlug": "hillnote-review",
     "url": "/power-local-llm/hillnote-review"
   },
+  "memex": {
+    "cluster": "power-local-llm",
+    "urlSlug": "memex-review",
+    "url": "/power-local-llm/memex-review"
+  },
   "trilium-notes": {
     "cluster": "power-local-llm",
     "urlSlug": "trilium-notes-review",
