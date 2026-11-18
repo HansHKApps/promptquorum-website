@@ -10093,10 +10093,18 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -10104,11 +10112,11 @@
         "slug": "opendataloader-pdf-review",
         "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
         "url": "/power-local-llm/opendataloader-pdf-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Blinko": {
@@ -12981,9 +12989,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "halo-review",
         "title": "Halo Review: Open-Source Desktop AI Workstation with Digital Humans",
         "url": "/power-local-llm/halo-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nutrient-review",
+        "title": "Nutrient Review: Commercial PDF SDK With a Markdown Converter",
+        "url": "/power-local-llm/nutrient-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
@@ -12994,33 +13026,9 @@
         "url": "/power-local-llm/open-science-desktop-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "papersgpt-review",
-        "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
-        "url": "/power-local-llm/papersgpt-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "skales-review",
-        "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
-        "url": "/power-local-llm/skales-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "yovoice-review",
-        "title": "YoVoice Review: Local Voice Cloning and Music Studio",
-        "url": "/power-local-llm/yovoice-review",
-        "dateModified": "2026-11-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 268,
+    "totalCount": 272,
     "capped": true
   },
   "Qdrant": {
@@ -14936,9 +14944,17 @@
         "url": "/power-local-llm/stirling-pdf-review",
         "dateModified": "2026-11-16",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "StratoSort": {
@@ -15050,7 +15066,15 @@
         "slug": "opendataloader-pdf-review",
         "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
         "url": "/power-local-llm/opendataloader-pdf-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
         "tier": "about"
       },
       {
@@ -15058,7 +15082,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15066,7 +15090,7 @@
         "slug": "marker-review",
         "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
         "url": "/power-local-llm/marker-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15074,11 +15098,65 @@
         "slug": "mineru-review",
         "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
         "url": "/power-local-llm/mineru-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "Nutrient": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "nutrient-review",
+        "title": "Nutrient Review: Commercial PDF SDK With a Markdown Converter",
+        "url": "/power-local-llm/nutrient-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "marker-review",
+        "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
+        "url": "/power-local-llm/marker-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mineru-review",
+        "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
+        "url": "/power-local-llm/mineru-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "opendataloader-pdf-review",
+        "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
+        "url": "/power-local-llm/opendataloader-pdf-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 6,
     "capped": false
   },
   "Docling": {
@@ -15088,7 +15166,23 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nutrient-review",
+        "title": "Nutrient Review: Commercial PDF SDK With a Markdown Converter",
+        "url": "/power-local-llm/nutrient-review",
+        "dateModified": "2026-11-17",
         "tier": "about"
       },
       {
@@ -15104,7 +15198,7 @@
         "slug": "marker-review",
         "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
         "url": "/power-local-llm/marker-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15112,7 +15206,7 @@
         "slug": "mineru-review",
         "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
         "url": "/power-local-llm/mineru-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15120,7 +15214,7 @@
         "slug": "opendataloader-pdf-review",
         "title": "OpenDataLoader PDF Review: Open-Source PDF Parser for RAG",
         "url": "/power-local-llm/opendataloader-pdf-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15148,7 +15242,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 10,
     "capped": false
   },
   "Marker": {
@@ -15158,7 +15252,15 @@
         "slug": "marker-review",
         "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
         "url": "/power-local-llm/marker-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
         "tier": "about"
       },
       {
@@ -15166,7 +15268,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15174,7 +15276,15 @@
         "slug": "mineru-review",
         "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
         "url": "/power-local-llm/mineru-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nutrient-review",
+        "title": "Nutrient Review: Commercial PDF SDK With a Markdown Converter",
+        "url": "/power-local-llm/nutrient-review",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15202,7 +15312,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 8,
     "capped": false
   },
   "MinerU": {
@@ -15212,7 +15322,15 @@
         "slug": "mineru-review",
         "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
         "url": "/power-local-llm/mineru-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
         "tier": "about"
       },
       {
@@ -15220,7 +15338,7 @@
         "slug": "docling-review",
         "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
         "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -15228,12 +15346,98 @@
         "slug": "marker-review",
         "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
         "url": "/power-local-llm/marker-review",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
+  },
+  "Unstructured": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "unstructured-review",
+        "title": "Unstructured Review: Open-Source Document ETL Library for RAG",
+        "url": "/power-local-llm/unstructured-review",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-pdf-parsers-compared",
+        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
+        "url": "/power-local-llm/local-pdf-parsers-compared",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "docling-review",
+        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
+        "url": "/power-local-llm/docling-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "marker-review",
+        "title": "Marker Review: PDF-to-Markdown Converter with OCR and Table Extraction",
+        "url": "/power-local-llm/marker-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mineru-review",
+        "title": "MinerU Review: Source-Available Document Parser for Markdown, LaTeX and RAG",
+        "url": "/power-local-llm/mineru-review",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cognee-review",
+        "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
+        "url": "/power-local-llm/cognee-review",
+        "dateModified": "2026-09-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "metagpt-review",
+        "title": "MetaGPT Review: The Multi-Agent Software Company Framework",
+        "url": "/power-local-llm/metagpt-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "prompt-engineering-for-local-models",
+        "title": "Prompt Engineering for Local LLMs 2026: CoT & Few-Shot",
+        "url": "/local-llms/prompt-engineering-for-local-models",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 11,
+    "capped": true
   },
   "AnyLLM": {
     "articles": [
