@@ -953,6 +953,7 @@ const HUB_THEMES: Array<{
       'docling-review',
       'opendataloader-pdf-review',
       'mineru-review',
+      'nutrient-review',
       'unstructured-review',
       'stirling-pdf-review',
     ],

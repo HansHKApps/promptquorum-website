@@ -76,6 +76,7 @@ import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-f
 import { article as a_sablate_review } from './articles/sablate-review'
 import { article as a_cocoindex_review } from './articles/cocoindex-review'
 import { article as a_opendataloader_pdf_review } from './articles/opendataloader-pdf-review'
+import { article as a_nutrient_review } from './articles/nutrient-review'
 import { article as a_docling_review } from './articles/docling-review'
 import { article as a_marker_review } from './articles/marker-review'
 import { article as a_mineru_review } from './articles/mineru-review'
@@ -807,6 +808,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'opendataloader-pdf-review':                     a_opendataloader_pdf_review,
   'docling-review':                                a_docling_review,
   'marker-review':                                 a_marker_review,
+  'nutrient-review':                               a_nutrient_review,
   'mineru-review':                                 a_mineru_review,
   'unstructured-review':                           a_unstructured_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,

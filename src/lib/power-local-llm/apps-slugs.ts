@@ -232,6 +232,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'sablate':                                 'sablate',
   'cocoindex':                               'cocoindex',
   'opendataloader-pdf':                      'opendataloader-pdf',
+  'nutrient':                                'nutrient',
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',

@@ -180,6 +180,7 @@ import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
 import { app as app_sablate } from './apps/sablate'
 import { app as app_cocoindex } from './apps/cocoindex'
 import { app as app_opendataloader_pdf } from './apps/opendataloader-pdf'
+import { app as app_nutrient } from './apps/nutrient'
 import { app as app_docling } from './apps/docling'
 import { app as app_marker } from './apps/marker'
 import { app as app_mineru } from './apps/mineru'
@@ -748,6 +749,7 @@ export const localAiApps: ToolRecord[] = [
   app_sablate,
   app_cocoindex,
   app_opendataloader_pdf,
+  app_nutrient,
   app_docling,
   app_marker,
   app_mineru,

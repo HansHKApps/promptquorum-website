@@ -442,6 +442,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'cocoindex-review':                       'cocoindex-review',
   'opendataloader-pdf-review':              'opendataloader-pdf-review',
   'docling-review':                         'docling-review',
+  'nutrient-review':                        'nutrient-review',
   'marker-review':                          'marker-review',
   'mineru-review':                          'mineru-review',
   'unstructured-review':                    'unstructured-review',
